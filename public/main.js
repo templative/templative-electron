@@ -1,5 +1,5 @@
 const { app, BrowserWindow } = require('electron')
-
+const { spawn } = require('child_process');
 
 const createWindow = () => {
     const win = new BrowserWindow({
@@ -14,7 +14,9 @@ const createWindow = () => {
     win.webContents.openDevTools()
   }
 
-app.whenReady().then(() => {
+app.whenReady().then(async () => {
+    
+    spawn(`python ./flask/app.py 3001`, { detached: true, shell: true, stdio: 'inherit' });
     createWindow()
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) createWindow()

@@ -1,8 +1,12 @@
 import React from "react";
+import axios from 'axios';
 
 export default class TemplativeButton extends React.Component {    
     runTempaltive() {
-        console.log("hello")
+        axios.get(`http://localhost:3001/example`)
+        .then(res => {
+            console.log(res)
+        })
     }
     render() {
         return <button onClick={()=>this.runTempaltive()}>Hello?</button>        
