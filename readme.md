@@ -1,0 +1,4 @@
+- pip install -r requirements.txt --user
+- npm start
+- new tab
+- npm run electron-dev

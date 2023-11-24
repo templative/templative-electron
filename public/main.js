@@ -16,7 +16,8 @@ const createWindow = () => {
 
 app.whenReady().then(async () => {
     
-    spawn(`python ./flask/app.py 3001`, { detached: true, shell: true, stdio: 'inherit' });
+    var pythonServer = spawn(`python ./app.py 3001`, { detached: true, shell: true, stdio: 'inherit' });
+    
     createWindow()
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) createWindow()

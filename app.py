@@ -1,6 +1,7 @@
 import sys
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+import templative
 
 app = Flask(__name__)
 app_config = {"host": "0.0.0.0", "port": sys.argv[1]}
@@ -28,8 +29,9 @@ if "app.py" in sys.argv[0]:
 """
 # Remove and replace with your own
 @app.route("/example")
-def example():
-
+async def example():
+  # print(templative.cli())
+  await templative.produce.gameProducer.produceGame("C:/Users/User/Documents/git/nextdaygames/apcw-defines", None, False, False, "en")
   # See /src/components/App.js for frontend call
   return jsonify("Example response from Flask! Learn more in /app.py & /src/components/App.js")
 
