@@ -8,7 +8,7 @@ const openFolder = async() => {
         return
     }
     var chosenDirectory = result.filePaths[0]
-    BrowserWindow.getFocusedWindow().webContents.send(channels.GET_DATA, chosenDirectory)
+    BrowserWindow.getFocusedWindow().webContents.send(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, chosenDirectory)
 }
 
 const template = [

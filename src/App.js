@@ -1,5 +1,6 @@
 import './App.css';
 import TemplativeButton from './components/TemplativeButton';
+import TemplativeProjectRenderer from "./components/TemplativeProjectRenderer"
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
       <div className="container-fluid">
         <div className='row'>
           <div className='col'>
+            <TemplativeProjectRenderer/>
           </div>
           <div className='col'>
             
