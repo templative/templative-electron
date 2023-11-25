@@ -9,6 +9,6 @@ export default class TemplativeButton extends React.Component {
         })
     }
     render() {
-        return <button onClick={()=>this.runTempaltive()}>Produce Caps and Hammers</button>        
+        return <button className="btn btn-light" onClick={()=>this.runTempaltive()}>Produce Caps and Hammers</button>        
     }
 }

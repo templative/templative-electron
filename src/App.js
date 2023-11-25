@@ -2,11 +2,21 @@ import './App.css';
 import TemplativeButton from './components/TemplativeButton';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <TemplativeButton/>
-      </header>
+      <div className="container-fluid">
+        <div className='row'>
+          <div className='col'>
+          </div>
+          <div className='col'>
+            
+          </div>
+          <div className='col'>
+            <TemplativeButton/>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
