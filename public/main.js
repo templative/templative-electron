@@ -1,6 +1,7 @@
 const { app, BrowserWindow, Menu, ipcMain  } = require('electron')
 const { spawn } = require('child_process');
 const {mainMenu} = require("./menuMaker")
+var kill  = require('tree-kill');
 
 const { channels } = require('../src/shared/constants');
 
@@ -28,11 +29,14 @@ const createWindow = () => {
 
 app.whenReady().then(async () => {
     
-    spawn(`python ./app.py 3001`, { detached: true, shell: true, stdio: 'inherit' });
+    var pythonServer = spawn(`python ./app.py 3001`, { detached: true, shell: true, stdio: 'inherit' });
     
     createWindow()
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) createWindow()
+    })
+    app.on("before-quit", ()=> {
+      kill(pythonServer.pid)
     })
 })
 
