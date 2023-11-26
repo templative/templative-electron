@@ -1,0 +1,9 @@
+.componentItemTitle {
+    font-size:small;
+    margin: 0;
+    text-align: left;
+}
+.componentWrapper {
+    margin-left: 1em;
+    margin-bottom: 0.25em !important;
+}

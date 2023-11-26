@@ -12,6 +12,7 @@ html, body {
   height: 100%; /* cross-browser */
   min-height: 100vh;
   display: flex;
+  padding:0 !important;
   flex-direction: column;
   /* align-items: center;
   justify-content: center; */

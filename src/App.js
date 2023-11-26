@@ -1,23 +1,40 @@
 import './App.css';
-import TemplativeButton from './components/TemplativeButton';
-import TemplativeProjectRenderer from "./components/TemplativeProjectRenderer"
+
+import TopNavbar from './components/TopNavbar';
+import MainBody from './components/MainBody';
 
 function App() {
-
+  const topNavbarItems = [
+    {
+      name:"Edit",
+      callback: ()=>{}
+    },
+    {
+      name:"Render",
+      callback: ()=>{}
+    },
+    {
+      name:"Print",
+      callback: ()=>{}
+    },
+    {
+      name:"Playtest",
+      callback: ()=>{}
+    },
+    {
+      name:"Upload",
+      callback: ()=>{}
+    },
+    {
+      name:"Animate",
+      callback: ()=>{}
+    }
+  ]
   return (
     <div className="App">
       <div className="container-fluid">
-        <div className='row'>
-          <div className='col'>
-            <TemplativeProjectRenderer/>
-          </div>
-          <div className='col'>
-            
-          </div>
-          <div className='col'>
-            <TemplativeButton/>
-          </div>
-        </div>
+        <TopNavbar topNavbarItems={topNavbarItems}/>
+        <MainBody/>
       </div>
     </div>
   );

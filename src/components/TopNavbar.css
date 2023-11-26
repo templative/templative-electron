@@ -1,0 +1,12 @@
+.topNavbar {
+    min-height: 1.5em;
+    padding-top: 0.2em;
+    background-color: #262931;
+    width: 100%;
+    border-bottom: solid #313540;
+    border-width: 1px;
+}
+.nav-link {
+    color:#cfcfcf !important;
+    font-size: small !important;
+}
