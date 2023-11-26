@@ -1,0 +1,28 @@
+.artItemWrapper {
+    margin-left: 1em;
+    margin-bottom: 0.16em !important;
+    padding-right: 0.25em;
+    
+}
+.artItemWrapper:hover {
+    background-color: #2b3037;
+    cursor: pointer;
+}
+.artItem {
+    font-size: small;
+    margin:0;
+    text-align: left;
+    min-height: 1em;
+}
+
+.goto {
+    float:right;
+    padding:0 !important;
+    height:20px;
+    border: 0 !important;
+    background-color: #2b3037 !important;
+}
+.goto:hover {
+    background-color: #343941 !important;
+
+}

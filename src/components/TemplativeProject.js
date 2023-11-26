@@ -12,7 +12,27 @@ export default class TemplativeProject {
         return JSON.parse(fs.readFileSync(filepath, 'utf8'));
     }
 
+    getArtdataFilenames() {
+        return this.getFilenamesForField(this.gameCompose.artdataDirectory)
+    }
+    getTemplateFilenames() {
+        return this.getFilenamesForField(this.gameCompose.artTemplatesDirectory)
+    }
+    getOverlayFilenames() {
+        return this.getFilenamesForField(this.gameCompose.artInsertsDirectory)
+    }
+    getFilenamesForField(field) {
+        var fieldPath = path.join(this.templativeRootDirectoryPath, field);
+        var fileNames = fs.readdirSync(fieldPath)
+        var filepaths = []
+        fileNames.forEach(element => {
+            filepaths.push(path.join(this.templativeRootDirectoryPath, field, element))
+        });
+        return filepaths;
+    }
+
     constructor(templativeRootDirectoryPath) {
+        this.templativeRootDirectoryPath = templativeRootDirectoryPath
         this.componentCompose = TemplativeProject.readFile(templativeRootDirectoryPath, "component-compose.json");
         this.gameCompose = TemplativeProject.readFile(templativeRootDirectoryPath, "game-compose.json");
         this.gameFile = TemplativeProject.readFile(templativeRootDirectoryPath, "game.json");

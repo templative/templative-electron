@@ -9,7 +9,7 @@ html, body {
 .container-fluid {
   min-height: 100%;
   height:auto !important; /* cross-browser */
-  height: 100%; /* cross-browser */
+  height: 100% !important; /* cross-browser */
   min-height: 100vh;
   display: flex;
   padding:0 !important;
@@ -17,5 +17,5 @@ html, body {
   /* align-items: center;
   justify-content: center; */
   font-size: calc(10px + 2vmin);
-  color: white;
+  color:#cfcfcf !important;
 }

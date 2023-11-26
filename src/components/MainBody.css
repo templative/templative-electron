@@ -1,3 +1,11 @@
 .mainBody {
-    padding:0.25em;
+    /* padding:0.25em; */
+    height: 100% !important;
+}
+.left-column {
+    height:100%;
+    border-right: solid #313540;
+    border-width: 1px;
+    padding-top:0.25em;
+    padding-right: 0 !important;
 }
