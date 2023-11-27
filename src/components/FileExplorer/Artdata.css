@@ -2,6 +2,10 @@
     margin-left: 1em;
     margin-bottom: 0.16em !important;
 }
+.artdataItemWrapper:hover {
+    background-color: #2b3037;
+    cursor: pointer;
+}
 .artdataItem {
     font-size: small;
     margin:0;

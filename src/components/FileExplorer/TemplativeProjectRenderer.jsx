@@ -1,7 +1,7 @@
 import React from "react";
-import { channels } from '../shared/constants';
+import { channels } from '../../shared/constants';
 import ComponentItem from "./ComponentItem"
-import TemplativeProject from "./TemplativeProject"
+import TemplativeProject from "../TemplativeProject"
 import ResourceHeader from "./ResourceHeader"
 import ArtdataList from "./ArtdataList"
 import ArtList from "./ArtList"

@@ -1,6 +1,6 @@
 import React from "react";
 import TemplativeButton from './TemplativeButton';
-import TemplativeProjectRenderer from "./TemplativeProjectRenderer"
+import TemplativeProjectRenderer from "./FileExplorer/TemplativeProjectRenderer"
 import "./MainBody.css"
 
 export default class MainBody extends React.Component {   
