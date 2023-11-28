@@ -2,6 +2,7 @@ import React from "react";
 import TextReplacement from "./TextReplacement";
 import StyleUpdate from "./StyleUpdate";
 import Overlay from "./Overlay";
+import ArtdataAddButton from "./ArtdataAddButton"
 
 export default class ArtdataViewer extends React.Component {   
     render() {
@@ -11,18 +12,23 @@ export default class ArtdataViewer extends React.Component {
                 overlays.push(<Overlay key={element.scope + element.source} overlay={element}/>)
             });
         }
+        overlays.push(<ArtdataAddButton/>)
+
         var textReplacements = []
         if(this.props.fileContents !== undefined) {
             this.props.fileContents.textReplacements.forEach(element => {
                 textReplacements.push(<TextReplacement key={element.scope + element.id + element.source} textReplacement={element}/>)
             });
         }
+        textReplacements.push(<ArtdataAddButton/>)
+        
         var styleUpdates = []
         if(this.props.fileContents !== undefined) {
             this.props.fileContents.styleUpdates.forEach(element => {
                 styleUpdates.push(<StyleUpdate key={element.scope + element.key + element.source} styleUpdate={element}/>)
             });
         }
+        styleUpdates.push(<ArtdataAddButton/>)
 
         return <div className="row">
             <div className="col">

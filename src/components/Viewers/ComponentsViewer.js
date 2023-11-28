@@ -9,6 +9,11 @@ export default class ComponentsViewer extends React.Component {
         this.props.components.forEach(component => {
             componentItems.push(<ComponentItemEditable key={component.name} component={component}/>)
         });
+        componentItems.push(<div className="row" key="➕">
+            <div className="input-group mb-3"  data-bs-theme="dark">
+                <button className="btn btn-outline-secondary" type="button" id="button-addon1">➕</button>
+            </div>
+        </div> )
 
         return <div className="row componentViewer">
             <div className="col">
