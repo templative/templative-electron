@@ -1,24 +1,16 @@
 import React from "react";
-// import "./Artdata.css"
-const path = window.require("path");
+import "./Artdata.css"
+import GamedataItem from "./GamedataItem"
 
 export default class GamedataList extends React.Component {   
     render() {
         var divs = [];
-        for(var i = 0; i < this.props.gamedataFilenames.length; i++) {
-            divs.push(
-                <div className="gamedataItemWrapper" key={this.props.gamedataFilenames[i]}>
-                    <p className="gamedataItem">{path.parse(this.props.gamedataFilenames[i]).name}</p>
-                </div>
-            )
+        for(var i = 0; i < this.props.filenames.length; i++) {
+            var filepath = this.props.filenames[i]
+            var isSelected = this.props.currentFilepath === filepath
+            divs.push(<GamedataItem gamedataType={this.props.gamedataType} isSelected={isSelected} key={this.props.filepath} updateViewedFileCallback={this.props.updateViewedFileCallback} filepath={filepath}/>)
         }
-        return <div className="gamedata">
-            <div className="gamedataItemWrapper" key="game">
-                <p className="gamedataItem">Studio</p>
-            </div>
-            <div className="gamedataItemWrapper" key="game">
-                <p className="gamedataItem">Game</p>
-            </div>
+        return <div className="artdata">
             {divs}
         </div> 
     }

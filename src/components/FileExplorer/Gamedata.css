@@ -1,0 +1,19 @@
+.gamedataItemWrapper {
+    margin-left: 1em;
+    margin-bottom: 0.16em !important;
+}
+.gamedataItemWrapper:hover {
+    background-color: #2b3037;
+    cursor: pointer;
+}
+.selected {
+    background-color: #333942;
+}
+.selected:hover {
+    background-color: #373e48;
+}
+.gamedataItem {
+    font-size: small;
+    margin:0;
+    text-align: left;
+}

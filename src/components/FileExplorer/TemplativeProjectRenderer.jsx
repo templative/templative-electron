@@ -4,6 +4,7 @@ import ComponentItem from "./ComponentItem"
 import TemplativeProject from "../TemplativeProject"
 import ResourceHeader from "./ResourceHeader"
 import ArtdataList from "./ArtdataList"
+import GamedataList from "./GamedataList"
 import ArtList from "./ArtList"
 const { ipcRenderer } = window.require('electron');
 
@@ -49,7 +50,18 @@ export default class TemplativeProjectRenderer extends React.Component {
             { this.state.templativeProject !== undefined  &&
                 <ArtdataList currentFilepath={this.props.currentFilepath} updateViewedFileCallback={this.props.updateViewedFileCallback} filenames={this.state.templativeProject.getArtdataFilenames()}/>
             }
-            <ResourceHeader header="Gamedata"/>
+            <ResourceHeader header="Project Gamedata"/>
+            { this.state.templativeProject !== undefined  &&
+                <GamedataList gamedataType="KEYVALUE_GAMEDATA" currentFilepath={this.props.currentFilepath} updateViewedFileCallback={this.props.updateViewedFileCallback} filenames={this.state.templativeProject.getStudioAndGamedataFilenames()}/>
+            }
+            <ResourceHeader header="Component Gamedata"/>
+            { this.state.templativeProject !== undefined  &&
+                <GamedataList gamedataType="KEYVALUE_GAMEDATA" currentFilepath={this.props.currentFilepath} updateViewedFileCallback={this.props.updateViewedFileCallback} filenames={this.state.templativeProject.getComponentGamedataFilenames()}/>
+            }
+            <ResourceHeader header="Piece Gamedata"/>
+            { this.state.templativeProject !== undefined  &&
+                <GamedataList gamedataType="PIECE_GAMEDATA" currentFilepath={this.props.currentFilepath} updateViewedFileCallback={this.props.updateViewedFileCallback} filenames={this.state.templativeProject.getPieceGamedataFilenames()}/>
+            }
             <ResourceHeader header="Components"/>
             {componentDivs}
         </div>        

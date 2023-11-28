@@ -21,6 +21,18 @@ export default class TemplativeProject {
     getOverlayFilenames() {
         return this.getFilenamesForField(this.gameCompose.artInsertsDirectory)
     }
+    getPieceGamedataFilenames() {
+        return this.getFilenamesForField(this.gameCompose.piecesGamedataDirectory)
+    }
+    getComponentGamedataFilenames() {
+        return this.getFilenamesForField(this.gameCompose.componentGamedataDirectory)
+    }
+    getStudioAndGamedataFilenames() {
+        return [
+            path.join(this.templativeRootDirectoryPath, "studio.json"),
+            path.join(this.templativeRootDirectoryPath, "game.json")
+        ]
+    }
     getFilenamesForField(field) {
         var fieldPath = path.join(this.templativeRootDirectoryPath, field);
         var fileNames = fs.readdirSync(fieldPath)
