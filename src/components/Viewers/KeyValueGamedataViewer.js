@@ -4,7 +4,7 @@ import "./GamedataViewer.css"
 export default class KeyValueGamedataViewer extends React.Component {   
     render() {
         var rows = Object.keys(this.props.fileContents).map((key) => {
-            return <tr>
+            return <tr key={key}>
                 <th>{key}</th>
                 <td>{this.props.fileContents[key]}</td>
           </tr>
