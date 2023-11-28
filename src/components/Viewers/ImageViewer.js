@@ -1,8 +1,8 @@
 import React from "react";
+import "./ImageViewer.css"
 
 export default class ImageViewer extends React.Component {   
     render() {
-        
         return <div className="row">
             <div className="col">
                 <div className="row">
