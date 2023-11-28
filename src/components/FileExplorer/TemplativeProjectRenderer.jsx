@@ -16,7 +16,6 @@ export default class TemplativeProjectRenderer extends React.Component {
         //     this.setState({templativeProject: templativeProject})
         // });
         var templativeProject = new TemplativeProject("C:/Users/User/Documents/git/nextdaygames/apcw-defines");
-        console.log(templativeProject)
         this.setState({templativeProject: templativeProject})
     } 
     componentWillUnmount() {
@@ -30,7 +29,7 @@ export default class TemplativeProjectRenderer extends React.Component {
         var divs = [];
         for(var i = 0; i < this.state.templativeProject.componentCompose.length; i++) {
             var component = this.state.templativeProject.componentCompose[i]
-            divs.push(<ComponentItem key={component.name} component={component}/>)
+            divs.push(<ComponentItem currentFilepath={this.props.currentFilepath} updateViewedFileCallback={this.props.updateViewedFileCallback} key={component.name} component={component}/>)
         }
         return divs;
     }
@@ -40,15 +39,15 @@ export default class TemplativeProjectRenderer extends React.Component {
         return <div>
             <ResourceHeader header="Templates"/>
             { this.state.templativeProject !== undefined  &&
-                <ArtList filenames={this.state.templativeProject.getTemplateFilenames()}/>
+                <ArtList currentFilepath={this.props.currentFilepath} updateViewedFileCallback={this.props.updateViewedFileCallback} filenames={this.state.templativeProject.getTemplateFilenames()}/>
             }
             <ResourceHeader header="Overlays"/>
             { this.state.templativeProject !== undefined  &&
-                <ArtList filenames={this.state.templativeProject.getOverlayFilenames()}/>
+                <ArtList currentFilepath={this.props.currentFilepath} updateViewedFileCallback={this.props.updateViewedFileCallback} filenames={this.state.templativeProject.getOverlayFilenames()}/>
             }
             <ResourceHeader header="Artdata"/>
             { this.state.templativeProject !== undefined  &&
-                <ArtdataList filenames={this.state.templativeProject.getArtdataFilenames()}/>
+                <ArtdataList currentFilepath={this.props.currentFilepath} updateViewedFileCallback={this.props.updateViewedFileCallback} filenames={this.state.templativeProject.getArtdataFilenames()}/>
             }
             <ResourceHeader header="Gamedata"/>
             <ResourceHeader header="Components"/>

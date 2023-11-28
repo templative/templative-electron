@@ -6,6 +6,12 @@
     background-color: #2b3037;
     cursor: pointer;
 }
+.selected {
+    background-color: #333942;
+}
+.selected:hover {
+    background-color: #373e48;
+}
 .artdataItem {
     font-size: small;
     margin:0;

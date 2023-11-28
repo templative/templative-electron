@@ -1,15 +1,14 @@
 import React from "react";
 import "./Artdata.css"
-const path = window.require("path");
+import ArtdataItem from "./ArtdataItem"
 
 export default class ArtdataList extends React.Component {   
     render() {
         var divs = [];
         for(var i = 0; i < this.props.filenames.length; i++) {
-            divs.push(
-                <div className="artdataItemWrapper">
-                <p className="artdataItem" key={this.props.filenames[i]}>{path.parse(this.props.filenames[i]).name}</p>
-            </div>)
+            var filepath = this.props.filenames[i]
+            var isSelected = this.props.currentFilepath === filepath
+            divs.push(<ArtdataItem isSelected={isSelected} key={this.props.filepath} updateViewedFileCallback={this.props.updateViewedFileCallback} filepath={filepath}/>)
         }
         return <div className="artdata">
             {divs}

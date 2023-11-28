@@ -11,11 +11,12 @@ export default class ArtItem extends React.Component {
         this.setState({isHovering: false})
     }
     render() {
+        var callback = () => this.props.updateViewedFileCallback("ART", this.props.filepath)
         return <div className="artItemWrapper"
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}
         >
-            <p className="artItem">
+            <p className="artItem" onClick={callback}>
                 {path.parse(this.props.filename).name} {this.state.isHovering && <button className="btn btn-dark goto">🡭</button>}
             </p>
         </div>
