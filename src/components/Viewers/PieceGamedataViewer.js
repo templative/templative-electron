@@ -4,13 +4,13 @@ import "./GamedataViewer.css"
 export default class PieceGamedataViewer extends React.Component {   
     render() {
         var headers = Object.keys(this.props.fileContents[0]).map((header)=> {
-            return <th scope="col">{header}</th>
+            return <th className="col">{header}</th>
         })
         var rows = this.props.fileContents.map((element) => {
             var columns = Object.keys(element).map((key) => {
-                return <td>{element[key]}</td>
+                return <td className="col">{element[key]}</td>
             });
-            return <tr>
+            return <tr className="d-flex">
                 {columns}
             </tr>
         })
@@ -20,16 +20,22 @@ export default class PieceGamedataViewer extends React.Component {
                 <div className="row">
                     <h1>{this.props.filename}</h1>
                 </div>
-                <table className="table table-striped table-dark">
-                    <thead>
-                        <tr>
-                            {headers}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {rows}
-                    </tbody>
-                </table>
+                <div className="row">
+            <div className="col">
+                <div class="table-responsive">
+                    <table className="table table-striped table-dark">
+                        <thead>
+                            <tr className="d-flex">
+                                {headers}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {rows}
+                        </tbody>
+                    </table>
+                        </div> 
+                    </div> 
+                </div> 
             </div> 
         </div> 
     }

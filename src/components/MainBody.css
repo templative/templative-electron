@@ -1,11 +1,17 @@
 .mainBody {
-    /* padding:0.25em; */
-    height: 100% !important;
+    height: calc(100% - 50px) !important;
 }
 .left-column {
+    
+    overflow-y: scroll;
     height:100%;
     border-right: solid #313540;
     border-width: 1px;
     padding-top:0.25em;
     padding-right: 0 !important;
+}
+.viewer {
+    height:100%;
+    overflow-y: scroll;
+    padding-bottom:2em;
 }

@@ -5,6 +5,8 @@ import ArtdataList from "./ArtdataList"
 import GamedataList from "./GamedataList"
 import ArtList from "./ArtList"
 
+import "./TemplativeProjectRenderer.css"
+
 export default class TemplativeProjectRenderer extends React.Component {   
     
 
@@ -22,7 +24,7 @@ export default class TemplativeProjectRenderer extends React.Component {
 
     render() {
         var componentDivs = this.renderComponentDivs()
-        return <div>
+        return <div className="resources">
             <ResourceHeader header="Templates"/>
             { this.props.templativeProject !== undefined  &&
                 <ArtList currentFilepath={this.props.currentFilepath} updateViewedFileCallback={this.props.updateViewedFileCallback} filenames={this.props.templativeProject.getTemplateFilenames()}/>

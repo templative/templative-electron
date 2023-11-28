@@ -4,6 +4,9 @@ th {
 tr {
     font-size: 13px;
 }
-.tableContainer{
+.table,table {
+    width: 100% !important;
+}
+.tableContainer {
     padding-right:0.4em;
 }

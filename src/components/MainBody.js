@@ -74,7 +74,7 @@ export default class MainBody extends React.Component {
             <div className='col-4 left-column'>
                 <TemplativeProjectRenderer templativeProject={this.state.templativeProject} currentFilepath={this.state.currentFilepath} updateViewedFileCallback={this.updateViewedFileCallback}/>
             </div>
-            <div className='col-8'>
+            <div className='col-8 viewer'>
                 {this.state.currentFileType === "ARTDATA" &&
                     <ArtdataViewer filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
                 }

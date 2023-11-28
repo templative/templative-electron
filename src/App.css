@@ -1,19 +1,39 @@
 .App {
   /* text-align: center; */
   background-color: #282c34;
+  height: 100% !important;
 }
 
 html, body {
   height: 100%;
 }
+html {
+  scrollbar-color: #373c48 #2f333c;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 8px;
+  background-color: #2f333c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #373c48;
+  border-radius: 5px;
+}
+
+#root {
+  height: 100vh;
+}
 .container-fluid {
-  min-height: 100%;
-  height:auto !important; /* cross-browser */
-  height: 100% !important; /* cross-browser */
-  min-height: 100vh;
-  display: flex;
+  /* height: 100vh !important; */
+  height: 100vh !important;
+  /* min-height: 100vh; */
+  /* overflow: hidden; */
+  overflow:hidden;
+  /* display: flex; */
+  /* flex-direction: column; */
   padding:0 !important;
-  flex-direction: column;
   /* align-items: center;
   justify-content: center; */
   font-size: calc(10px + 2vmin);
