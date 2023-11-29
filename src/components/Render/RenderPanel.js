@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import OutputExplorer from "./OutputExplorer"
 import RenderButton from "./RenderButton"
 import "./RenderPanel.css"
 
@@ -61,8 +62,12 @@ export default class RenderPanel extends React.Component {
                 <p className="directory-item">{component.name}</p>
             </div>
         })
+        var componentDirectories = []
+        if (this.state.selectedDirectory !== undefined) {
+            componentDirectories = this.props.templativeProject.getOutputDirectoriesComponentDirectories(this.state.selectedDirectory)
+        } 
         return <div className='renderPanel row'>
-            <div className="col-6 directoryPanel">
+            <div className="col-4 directoryPanel">
                 <div className="headerWrapper">
                     <p className="resourcesHeader">Components</p>
                 </div>
@@ -85,8 +90,8 @@ export default class RenderPanel extends React.Component {
                 </div> 
                 {outputDirectoryDivs}
             </div>  
-            <div className="col">
-                
+            <div className="col-8">
+                <OutputExplorer outputFolderPath={this.state.selectedDirectory} componentDirectories={componentDirectories}/>
             </div>        
         </div>
     }

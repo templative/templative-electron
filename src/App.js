@@ -63,11 +63,14 @@ class App extends React.Component {
         {
             name:"Upload",
             route:"/upload"
-            
         },
         {
             name:"Animate",
             route:"/animate"
+        },
+        {
+            name:"Market",
+            route:"/market"
         }
         ]
         
