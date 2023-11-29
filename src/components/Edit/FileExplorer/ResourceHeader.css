@@ -1,9 +1,10 @@
 .resourcesHeaderWrapper {
     width: 100%;
     /* background-color: #262b31; */
-    padding-left:0.5em;
+    padding-left:0.5em !important;
     border-bottom: solid #313540;
     border-width: 1px;
+    /* margin-left:0.5em; */
     margin-bottom:0.2em;
 }
 .resourcesHeader {

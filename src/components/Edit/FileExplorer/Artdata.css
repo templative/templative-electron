@@ -10,7 +10,7 @@
     background-color: #333942;
 }
 .selected:hover {
-    background-color: #373e48;
+    background-color: #373e48 !important;
 }
 .artdataItem {
     font-size: small;

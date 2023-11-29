@@ -4,12 +4,9 @@ import ArtdataViewer from "./Viewers/ArtdataViewer"
 import ComponentsViewer from "./Viewers/ComponentsViewer"
 import PieceGamedataViewer from "./Viewers/PieceGamedataViewer"
 import KeyValueGamedataViewer from "./Viewers/KeyValueGamedataViewer"
-import { channels } from '../../shared/constants';
-import TemplativeProject from "../TemplativeProject"
 import "./EditPanel.css"
 import ImageViewer from "./Viewers/ImageViewer";
 
-const { ipcRenderer } = window.require('electron');
 const path = window.require("path");
 const fs = window.require("fs");
 
@@ -17,21 +14,7 @@ export default class EditPanel extends React.Component {
     state = {
         currentFileType: undefined,
         currentFilepath: undefined,
-        templativeProject: undefined
     }
-
-    componentDidMount() {
-        // this.renderer = ipcRenderer.on(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, (event, templativeRootDirectoryPath) => {
-        //     var templativeProject = new TemplativeProject(templativeRootDirectoryPath)
-        //     this.setState({templativeProject: templativeProject})
-        // });
-        var templativeProject = new TemplativeProject("C:/Users/User/Documents/git/nextdaygames/apcw-defines");
-        this.setState({templativeProject: templativeProject})
-    } 
-    componentWillUnmount() {
-        ipcRenderer.removeAllListeners(channels.GIVE_TEMPLATIVE_ROOT_FOLDER);
-    }
-
     csvToJSON(csv) {
         var lines = csv.split("\n");
         var result = [];
@@ -72,7 +55,7 @@ export default class EditPanel extends React.Component {
     render() {
         return <div className='mainBody row '>
             <div className='col-4 left-column'>
-                <TemplativeProjectRenderer templativeProject={this.state.templativeProject} currentFilepath={this.state.currentFilepath} updateViewedFileCallback={this.updateViewedFileCallback}/>
+                <TemplativeProjectRenderer templativeProject={this.props.templativeProject} currentFilepath={this.state.currentFilepath} updateViewedFileCallback={this.updateViewedFileCallback}/>
             </div>
             <div className='col-8 viewer'>
                 {this.state.currentFileType === "ARTDATA" &&

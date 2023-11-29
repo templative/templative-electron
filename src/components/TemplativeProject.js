@@ -27,6 +27,14 @@ export default class TemplativeProject {
     getComponentGamedataFilenames() {
         return this.getFilenamesForField(this.gameCompose.componentGamedataDirectory)
     }
+    getOutputDirectories() {
+        var outputDirectory = path.join(this.templativeRootDirectoryPath, this.gameCompose.outputDirectory)
+
+        var directories = fs.readdirSync(outputDirectory, { withFileTypes: true })
+            .filter(dirent => dirent.isDirectory())
+            .map(dirent => dirent.name)
+        return directories;
+    }
     getStudioAndGamedataFilenames() {
         return [
             path.join(this.templativeRootDirectoryPath, "studio.json"),
