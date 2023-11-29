@@ -4,16 +4,16 @@ import ArtdataViewer from "./Viewers/ArtdataViewer"
 import ComponentsViewer from "./Viewers/ComponentsViewer"
 import PieceGamedataViewer from "./Viewers/PieceGamedataViewer"
 import KeyValueGamedataViewer from "./Viewers/KeyValueGamedataViewer"
-import { channels } from '../shared/constants';
-import TemplativeProject from "./TemplativeProject"
-import "./MainBody.css"
+import { channels } from '../../shared/constants';
+import TemplativeProject from "../TemplativeProject"
+import "./EditPanel.css"
 import ImageViewer from "./Viewers/ImageViewer";
 
 const { ipcRenderer } = window.require('electron');
 const path = window.require("path");
 const fs = window.require("fs");
 
-export default class MainBody extends React.Component {   
+export default class EditPanel extends React.Component {   
     state = {
         currentFileType: undefined,
         currentFilepath: undefined,
