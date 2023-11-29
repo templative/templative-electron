@@ -25,9 +25,12 @@ if "app.py" in sys.argv[0]:
 # Remove and replace with your own
 @app.route("/render", methods = ['POST']) 
 async def render():
-  await templative.produce.gameProducer.produceGame("C:/Users/User/Documents/git/nextdaygames/apcw-defines", None, False, False, "en")
-  # See /src/components/App.js for frontend call
-  return jsonify("Example response from Flask! Learn more in /app.py & /src/components/App.js")
+  isDebug = request.args.get('isDebug')
+  isComplex = request.args.get('isComplex')
+  componentFilter = request.args.get('componentFilter')
+  language = request.args.get('language')
+  await templative.produce.gameProducer.produceGame("C:/Users/User/Documents/git/nextdaygames/apcw-defines", componentFilter, not isComplex, not isDebug, language)
+  return jsonify("Render")
 
 
 # Quits Flask on Electron exit
