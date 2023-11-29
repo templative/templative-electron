@@ -1,7 +1,7 @@
 const { app, BrowserWindow, Menu, ipcMain  } = require('electron')
 const { spawn } = require('child_process');
 const {mainMenu} = require("./menuMaker")
-var kill  = require('tree-kill');
+var axios  = require('axios');
 
 const { channels } = require('../src/shared/constants');
 
@@ -37,7 +37,7 @@ app.whenReady().then(async () => {
         if (BrowserWindow.getAllWindows().length === 0) createWindow()
     })
     app.on("before-quit", ()=> {
-      kill(pythonServer.pid)
+      axios.get(`http://127.0.0.1:3001/quit`)
     })
 })
 
