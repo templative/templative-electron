@@ -22,7 +22,7 @@ export default class PieceGamedataViewer extends React.Component {
                 </div>
                 <div className="row">
             <div className="col">
-                <div class="table-responsive">
+                <div className="table-responsive">
                     <table className="table table-striped table-dark">
                         <thead>
                             <tr className="d-flex">

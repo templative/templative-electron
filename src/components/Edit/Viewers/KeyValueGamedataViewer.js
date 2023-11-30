@@ -15,7 +15,7 @@ export default class KeyValueGamedataViewer extends React.Component {
                 <div className="row">
                     <h1>{this.props.filename}</h1>
                 </div>
-                <div class="table-responsive">
+                <div className="table-responsive">
                 <table className="table table-striped table-dark">
                     <thead>
                         <tr className="d-flex">
