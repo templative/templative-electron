@@ -1,0 +1,33 @@
+.scope-select {
+    max-width:9em;
+}
+.trash-button, .add-button {
+    background-color: rgb(43, 48, 53)!important;
+    border-color: rgb(73, 80, 87) !important;
+}
+.vertical-input-group .input-group:first-child {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+.vertical-input-group .input-group:first-child *:not(.form-check-input) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;    
+}
+.vertical-input-group .input-group:last-child {
+    padding-top: 0 !important;
+}
+.vertical-input-group .input-group:last-child *:not(.form-check-input) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.vertical-input-group .input-group:not(:last-child):not(:first-child) {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom:0 !important
+}
+.vertical-input-group .input-group:not(:last-child):not(:first-child) *:not(.form-check-input) {
+    border-radius: 0;
+}  
+.vertical-input-group .input-group:not(:first-child) :not(.form-check-input) {
+    border-top: 0 !important;
+}
