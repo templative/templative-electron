@@ -23,6 +23,8 @@ export default class TextReplacement extends React.Component {
                 isComplex={isComplex}
                 index={this.props.index} 
             />
+            <button onClick={() => this.props.updateArtdataItemOrderCallback(this.props.index,this.props.index-1)} className="btn btn-outline-secondary trash-button" type="button" id="button-addon1">🡹</button>
+            <button onClick={() => this.props.updateArtdataItemOrderCallback(this.props.index,this.props.index+1)} className="btn btn-outline-secondary trash-button" type="button" id="button-addon1">🡻</button>
             <DeleteArtdataButton index={this.props.index} deleteCallback={this.props.deleteCallback}/>
         </div> 
     }

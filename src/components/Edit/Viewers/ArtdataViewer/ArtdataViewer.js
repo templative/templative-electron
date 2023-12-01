@@ -3,8 +3,7 @@ import TextReplacement from "./ArtdataTypes/TextReplacement";
 import StyleUpdate from "./ArtdataTypes/StyleUpdate";
 import Overlay from "./ArtdataTypes/Overlay";
 import ArtdataAddButton from "./ArtdataAddButton"
-
-const fs = window.require("fs")
+// const fs = window.require("fs")
 
 const DEFAULT_ARTDATA_ITEMS = {
     "overlays": {
@@ -17,41 +16,6 @@ const DEFAULT_ARTDATA_ITEMS = {
         id: "", cssValue: "", scope: "piece", source: "", isComplex: false, isDebug: false
     } 
 }
-function areObjectsEqual(x, y) {
-    if ( x === y ) return true;
-      // if both x and y are null or undefined and exactly the same
-  
-    if ( ! ( x instanceof Object ) || ! ( y instanceof Object ) ) return false;
-      // if they are not strictly equal, they both need to be Objects
-  
-    if ( x.constructor !== y.constructor ) return false;
-      // they must have the exact same prototype chain, the closest we can do is
-      // test there constructor.
-  
-    for ( var p in x ) {
-      if ( ! x.hasOwnProperty( p ) ) continue;
-        // other properties were tested using x.constructor === y.constructor
-  
-      if ( ! y.hasOwnProperty( p ) ) return false;
-        // allows to compare x[ p ] and y[ p ] when set to undefined
-  
-      if ( x[ p ] === y[ p ] ) continue;
-        // if they have the same strict value or identity then they are equal
-  
-      if ( typeof( x[ p ] ) !== "object" ) return false;
-        // Numbers, Strings, Functions, Booleans must be strictly equal
-  
-      if ( ! areObjectsEqual( x[ p ],  y[ p ] ) ) return false;
-        // Objects and Arrays must be tested recursively
-    }
-  
-    for ( p in y )
-      if ( y.hasOwnProperty( p ) && ! x.hasOwnProperty( p ) )
-        return false;
-          // allows x[ p ] to be set to undefined
-  
-    return true;
-  }
 
 export default class ArtdataViewer extends React.Component {   
     state = {
@@ -70,7 +34,7 @@ export default class ArtdataViewer extends React.Component {
     }
 
     saveDocument(filepath, fileContents) {
-        var newFileContents = JSON.stringify(fileContents, null, 4)
+        // var newFileContents = JSON.stringify(fileContents, null, 4)
         // fs.writeFileSync(filepath, newFileContents, 'utf-8')
     }
     componentWillUnmount(){
@@ -104,6 +68,22 @@ export default class ArtdataViewer extends React.Component {
             artdataFile: newArtdataContents
         })
     }
+
+    updateArtdataItemOrder = (type, from, to) => {
+        if (to === -1 || to === this.state.artdataFile[type].length) {
+            return;
+        }
+        var newArtdataContents = this.state.artdataFile
+
+        var temp = newArtdataContents[type][to]
+        newArtdataContents[type][to] = newArtdataContents[type][from]
+        newArtdataContents[type][from] = temp
+
+        this.setState({
+            artdataFile: newArtdataContents
+        })
+    };
+
     render() {
         var overlays = []
         if(this.state.artdataFile !== undefined) {
@@ -111,6 +91,7 @@ export default class ArtdataViewer extends React.Component {
                 overlays.push(<Overlay index={i} key={i} artdataItem={this.state.artdataFile.overlays[i]} 
                     deleteCallback={(index) => this.deleteArtdata("overlays", index)}
                     updateArtdataFieldCallback={(artdataType, index, field, value)=>this.updateArtdataField(artdataType, index, field, value)}
+                    updateArtdataItemOrderCallback={(from,to) => this.updateArtdataItemOrder("overlays", from, to)}
                 />)
             };
         }
@@ -118,10 +99,11 @@ export default class ArtdataViewer extends React.Component {
 
         var textReplacements = []
         if(this.state.artdataFile !== undefined) {
-            for(var t = 0 ; t < this.state.artdataFile.textReplacements.length; t++){
+            for(var t = 0 ; t < this.state.artdataFile.textReplacements.length; t++) {
                 textReplacements.push(<TextReplacement index={t} key={t} artdataItem={this.state.artdataFile.textReplacements[t]} 
                     deleteCallback={(index)=> this.deleteArtdata("textReplacements", index)} 
                     updateArtdataFieldCallback={(artdataType, index, field, value)=>this.updateArtdataField(artdataType, index, field, value)}
+                    updateArtdataItemOrderCallback={(from,to) => this.updateArtdataItemOrder("textReplacements", from, to)}
                 />)
             };
         }
@@ -133,6 +115,7 @@ export default class ArtdataViewer extends React.Component {
                 styleUpdates.push(<StyleUpdate index={s} key={s} 
                     artdataItem={this.state.artdataFile.styleUpdates[s]} 
                     updateArtdataFieldCallback={(artdataType, index, field, value)=>this.updateArtdataField(artdataType, index, field, value)}
+                    updateArtdataItemOrderCallback={(from,to) => this.updateArtdataItemOrder("styleUpdates", from, to)}
                     deleteCallback={(index)=> this.deleteArtdata("styleUpdates", index)}/>)
             };
         }
@@ -181,8 +164,6 @@ export default class ArtdataViewer extends React.Component {
                         </div>
                     </div>
                 </div>
-
-                
             </div>
         </div> 
     }
