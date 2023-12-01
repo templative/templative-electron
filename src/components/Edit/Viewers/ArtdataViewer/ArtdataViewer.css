@@ -34,3 +34,9 @@
 .vertical-input-group .input-group:not(:first-child) :not(.form-check-input) {
     border-top: 0 !important;
 }
+.vertical-input-group .input-group:nth-child(odd) .form-control  {
+    background-color: #1a1e20!important;
+}
+.vertical-input-group .input-group:nth-child(odd) .form-select  {
+    background-color: #1a1e20!important;
+}
