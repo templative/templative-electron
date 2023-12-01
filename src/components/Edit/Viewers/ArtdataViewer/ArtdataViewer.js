@@ -75,11 +75,17 @@ export default class ArtdataViewer extends React.Component {
             };
         }
         styleUpdates.push(<ArtdataAddButton key="addStyleUpdate" addArtdataCallback={()=>this.addStyleUpdate()}/>)
-
+        
         return <div className="row">
             <div className="col">
                 <div className="row">
                     <h1>{this.props.filename}</h1>
+                </div>
+                <div className="row">
+                    <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
+                    <span className="input-group-text">Template</span>
+                        <input type="text" className="form-control" onChange={()=>{}} aria-label="What key to get from the scope..." value={this.state.artdataFile.templateFilename}/>
+                    </div>
                 </div>
                 <div className="row">
                     <div className="col-12">
