@@ -1,6 +1,9 @@
 .scope-select {
     max-width:9em;
 }
+.add-button {
+    width:100%;
+}
 .trash-button, .add-button {
     background-color: rgb(43, 48, 53)!important;
     border-color: rgb(73, 80, 87) !important;
