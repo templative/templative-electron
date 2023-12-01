@@ -19,13 +19,21 @@ const template = [
                 label: "Open Folder...",
                 click: openFolder
             },
-            {role:"toggleDevTools"},
+            {
+                label: "Save File",
+                click: ()=>{}
+            },
+            {
+                label: "Close Project",
+                click: ()=>{}
+            },
             {role:"quit"}
         ]
     },
     {
         label: "View",
         submenu: [
+            {role:"toggleDevTools"},
             {role: "reload"},
             {role: "forceReload"}
         ]
