@@ -8,9 +8,12 @@ export default class ArtdataViewer extends React.Component {
     state = {
         artdataFile: this.props.fileContents
     }
-    // componentDidMount() {
-    //     this.setState({})
-    // }
+    componentDidUpdate(prevProps) {
+        if (this.props.filename === prevProps.filename) {
+          return;
+        }
+        this.setState({artdataFile: this.props.fileContents})
+    }
     addOverlay(){
         this.state.artdataFile.overlays.push({
             scope:"piece", source: "", isComplex: false, isDebug: false
