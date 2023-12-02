@@ -10,3 +10,10 @@ tr {
 .tableContainer {
     padding-right:0.4em;
 }
+
+.key-field {
+    max-width: 15em;
+}
+.locked-key-text {
+    min-width: 15em;
+}

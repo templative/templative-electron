@@ -3,7 +3,7 @@ import TextReplacement from "./ArtdataTypes/TextReplacement";
 import StyleUpdate from "./ArtdataTypes/StyleUpdate";
 import Overlay from "./ArtdataTypes/Overlay";
 import ArtdataAddButton from "./ArtdataAddButton"
-// const fs = window.require("fs")
+const fs = window.require("fs")
 
 const DEFAULT_ARTDATA_ITEMS = {
     "overlays": {
@@ -34,8 +34,8 @@ export default class ArtdataViewer extends React.Component {
     }
 
     saveDocument(filepath, fileContents) {
-        // var newFileContents = JSON.stringify(fileContents, null, 4)
-        // fs.writeFileSync(filepath, newFileContents, 'utf-8')
+        var newFileContents = JSON.stringify(fileContents, null, 4)
+        fs.writeFileSync(filepath, newFileContents, 'utf-8')
     }
     componentWillUnmount(){
         this.saveDocument(this.props.currentFilepath, this.state.artdataFile)
