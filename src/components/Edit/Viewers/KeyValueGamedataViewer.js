@@ -21,7 +21,7 @@ export default class KeyValueGamedataViewer extends React.Component {
 
     saveDocument(filepath, fileContents) {
         var newFileContents = JSON.stringify(fileContents, null, 4)
-        // fs.writeFileSync(filepath, newFileContents, 'utf-8')
+        fs.writeFileSync(filepath, newFileContents, 'utf-8')
     }
     componentWillUnmount(){
         this.saveDocument(this.props.currentFilepath, this.state.gamedataFile)
