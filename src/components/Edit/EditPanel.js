@@ -2,8 +2,8 @@ import React from "react";
 import TemplativeProjectRenderer from "./FileExplorer/TemplativeProjectRenderer"
 import ArtdataViewer from "./Viewers/ArtdataViewer/ArtdataViewer"
 import ComponentsViewer from "./Viewers/ComponentsViewer"
-import PieceGamedataViewer from "./Viewers/PieceGamedataViewer"
-import KeyValueGamedataViewer from "./Viewers/KeyValueGamedataViewer"
+import PieceGamedataViewer from "./Viewers/GamedataViewer/PieceGamedataViewer"
+import KeyValueGamedataViewer from "./Viewers/GamedataViewer/KeyValueGamedataViewer"
 import "./EditPanel.css"
 import ImageViewer from "./Viewers/ImageViewer";
 
@@ -15,22 +15,26 @@ export default class EditPanel extends React.Component {
         currentFileType: undefined,
         currentFilepath: undefined,
     }
-    csvToJSON(csv) {
+    csvToJS(csv) {
         var lines = csv.split("\n");
         var result = [];
         var headers=lines[0].split(",");
         
         for(var i=1;i<lines.length;i++){
+            if (lines[i].trim().length === 0) {
+                continue;
+            }
             var obj = {};
+            // THis doesnt handle ,"Add this, then add that",
             var currentline=lines[i].split(",");
         
             for(var j=0;j<headers.length;j++){
-                obj[headers[j]] = currentline[j];
+                obj[headers[j].trim()] = currentline[j];
             }
         
             result.push(obj);
         }
-        
+        // console.log(result)
         return result;
     }
 
@@ -41,7 +45,7 @@ export default class EditPanel extends React.Component {
             fileContents = JSON.parse(fileContents)
         }
         if (extension === "csv") {
-            fileContents = this.csvToJSON(fileContents)
+            fileContents = this.csvToJS(fileContents)
         }
         var filename = path.parse(filepath).name
         this.setState({

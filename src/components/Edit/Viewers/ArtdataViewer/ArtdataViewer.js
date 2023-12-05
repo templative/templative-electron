@@ -19,8 +19,7 @@ const DEFAULT_ARTDATA_ITEMS = {
 
 export default class ArtdataViewer extends React.Component {   
     state = {
-        artdataFile: Object.assign({}, this.props.fileContents),
-        originalFile: Object.assign({}, this.props.fileContents)
+        artdataFile: this.props.fileContents
     }
     componentDidUpdate(prevProps) {
         if (this.props.filename === prevProps.filename) {
@@ -35,6 +34,10 @@ export default class ArtdataViewer extends React.Component {
 
     saveDocument(filepath, fileContents) {
         var newFileContents = JSON.stringify(fileContents, null, 4)
+        if (filepath.split('.').pop() !== "json") {
+            console.log(`No saving this file as its not json ${filepath}`)
+            return
+        }
         fs.writeFileSync(filepath, newFileContents, 'utf-8')
     }
     componentWillUnmount(){

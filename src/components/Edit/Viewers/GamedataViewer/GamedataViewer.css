@@ -17,3 +17,9 @@ tr {
 .locked-key-text {
     min-width: 15em;
 }
+.add-piece-button {
+    margin-bottom: 3em;
+}
+.piece-control-input > * { 
+    border-bottom: 3px solid #535962 !important;
+}

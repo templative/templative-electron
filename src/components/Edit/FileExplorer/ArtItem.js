@@ -19,7 +19,6 @@ export default class ArtItem extends React.Component {
         return new Date().getTime()
     }
     openFile = () => {
-        console.log(this.getCurrentTime() - this.state.lastLaunchTime)
         if (this.getCurrentTime() - this.state.lastLaunchTime < debounceDurationMilliseconds) {
             return
         }
