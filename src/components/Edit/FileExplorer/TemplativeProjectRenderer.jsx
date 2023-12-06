@@ -1,7 +1,7 @@
 import React from "react";
-import ArtdataList from "./ArtdataList"
-import GamedataList from "./GamedataList"
-import ArtList from "./ArtList"
+import ArtdataList from "./Artdata/ArtdataList"
+import GamedataList from "./Gamedata/GamedataList"
+import ArtList from "./Art/ArtList"
 
 import "./TemplativeProjectRenderer.css"
 

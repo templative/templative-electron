@@ -1,6 +1,6 @@
 import React from "react";
 import ArtItem from "./ArtItem";
-import ResourceHeader from "./ResourceHeader";
+import ResourceHeader from "../ResourceHeader";
 
 export default class ArtList extends React.Component {   
     render() {

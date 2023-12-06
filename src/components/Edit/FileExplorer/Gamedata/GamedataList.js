@@ -1,7 +1,7 @@
 import React from "react";
 import "./Artdata.css"
 import GamedataItem from "./GamedataItem"
-import ResourceHeader from "./ResourceHeader";
+import ResourceHeader from "../ResourceHeader";
 
 export default class GamedataList extends React.Component {   
     render() {

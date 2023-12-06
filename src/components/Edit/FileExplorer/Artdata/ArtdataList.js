@@ -1,7 +1,7 @@
 import React from "react";
 import "./Artdata.css"
 import ArtdataItem from "./ArtdataItem"
-import ResourceHeader from "./ResourceHeader"
+import ResourceHeader from "../ResourceHeader"
 
 export default class ArtdataList extends React.Component {   
     render() {
