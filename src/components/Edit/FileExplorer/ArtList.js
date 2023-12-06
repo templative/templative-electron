@@ -1,5 +1,6 @@
 import React from "react";
 import ArtItem from "./ArtItem";
+import ResourceHeader from "./ResourceHeader";
 
 export default class ArtList extends React.Component {   
     render() {
@@ -8,11 +9,14 @@ export default class ArtList extends React.Component {
             var filepath = this.props.filenames[i]
             var isSelected = this.props.currentFilepath === filepath
             divs.push(
-                <ArtItem isSelected={isSelected} updateViewedFileCallback={this.props.updateViewedFileCallback} key={filepath} filename={filepath} filepath={filepath}/>    
+                <ArtItem baseFilepath={this.props.baseFilepath} isSelected={isSelected} updateViewedFileCallback={this.props.updateViewedFileCallback} key={filepath} filename={filepath} filepath={filepath}/>    
             )
         }
-        return <div className="artList">
-            {divs}
-        </div> 
+        return <React.Fragment>
+            <ResourceHeader header={this.props.header} directory={this.props.directoryPath}/>
+            <div className="artList">
+                {divs}
+            </div> 
+        </React.Fragment>
     }
 }

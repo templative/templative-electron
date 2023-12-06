@@ -3,7 +3,6 @@ import "./GamedataViewer.css"
 
 export default class PieceControlInput extends React.Component {   
     render() {
-        Object.keys(this.props.piece).forEach(element => console.log(element))
         return <div key="main-row" className="input-group input-group-sm mb-3 piece-control-input" data-bs-theme="dark">
             <span className="input-group-text">name</span>
             <input type="text" className="form-control value-field" 

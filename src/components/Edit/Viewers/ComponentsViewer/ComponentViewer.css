@@ -7,3 +7,9 @@
     background-color: #2c303a;
     border-radius: 8px;
 }
+.component-left-bumper {
+    width: 11.5em;
+}
+.component-left-bumper-content {
+    width: 11.5em !important;
+}

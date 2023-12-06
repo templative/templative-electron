@@ -1,6 +1,6 @@
 .artdataItemWrapper {
-    margin-left: 1em;
-    margin-bottom: 0.16em !important;
+    padding-left: 1em;
+    margin-bottom: 0.1em;
 }
 .artdataItemWrapper:hover {
     background-color: #2b3037;
@@ -13,6 +13,7 @@
     background-color: #373e48 !important;
 }
 .artdataItem {
+    padding-bottom: 0.16em !important;
     font-size: small;
     margin:0;
     text-align: left;

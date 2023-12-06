@@ -1,31 +1,22 @@
 const { channels } = require("../src/shared/constants");
-const { Menu, dialog, BrowserWindow  } = require('electron')
+const { Menu, BrowserWindow  } = require('electron')
+const { createProject, openFolder } = require("./dialogMaker")
 
-const openFolder = async() => {
-    var result = await dialog.showOpenDialog({ properties: ['openDirectory'] })
-    if (result === undefined) {
-        console.log("Chose nothing!")
-        return
-    }
-    var chosenDirectory = result.filePaths[0]
-    BrowserWindow.getFocusedWindow().webContents.send(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, chosenDirectory)
-}
-
-const template = [
+const templates = [
     {
         label: "File",
         submenu: [
             { 
-                label: "Open Folder...",
+                label: "Create Project",
+                click: createProject
+            },
+            { 
+                label: "Open Project",
                 click: openFolder
             },
             {
-                label: "Save File",
-                click: ()=>{}
-            },
-            {
                 label: "Close Project",
-                click: ()=>{}
+                click: ()=>BrowserWindow.getFocusedWindow().webContents.send(channels.GIVE_CLOSE_PROJECT)
             },
             {role:"quit"}
         ]
@@ -40,4 +31,4 @@ const template = [
     }
 ]
 
-module.exports.mainMenu = Menu.buildFromTemplate(template);
+module.exports.mainMenu = Menu.buildFromTemplate(templates);

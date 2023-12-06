@@ -27,6 +27,9 @@ export default class ArtItem extends React.Component {
             lastLaunchTime: this.getCurrentTime()
         })
     }
+    parsePathForCommonPath() {
+        return path.relative(this.props.baseFilepath, this.props.filepath).split(".")[0]
+    }
     render() {
         var callback = () => this.props.updateViewedFileCallback("ART", this.props.filepath)
         return <div className="artItemWrapper"
@@ -34,7 +37,7 @@ export default class ArtItem extends React.Component {
             onMouseLeave={this.handleMouseOut}
         >
             <p className="artItem" onClick={callback}>
-                {path.parse(this.props.filename).name} 
+                {this.parsePathForCommonPath()} 
                 {this.state.isHovering &&
                     <button onClick={()=> this.openFile()}className="btn btn-dark goto">🡭</button>
                 }

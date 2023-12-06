@@ -1,96 +1,87 @@
 import React from "react";
 
-import TopNavbar from './components/TopNavbar';
-import EditPanel from './components/Edit/EditPanel';
-import RenderPanel from './components/Render/RenderPanel';
-import PrintPanel from './components/Print/PrintPanel';
-import AnimatePanel from './components/Animate/AnimatePanel';
-import UploadPanel from './components/Upload/UploadPanel';
-import PlaytestPanel from './components/Playtest/PlaytestPanel';
 import { channels } from './shared/constants';
 import TemplativeProject from "./components/TemplativeProject"
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import StartView from "./components/StartView";
+import EditProjectView from "./components/EditProjectView";
 import './App.css';
+
+const os = window.require('os')
+const path = window.require('path')
+const fs = window.require("fs")
+var getDirName = require('path').dirname;
+
 const { ipcRenderer } = window.require('electron');
 
 class App extends React.Component {
   
     state = {
-        currentRoute: "/",
         templativeProject: undefined
     }
     componentWillUnmount() {
         ipcRenderer.removeAllListeners(channels.GIVE_TEMPLATIVE_ROOT_FOLDER);
     }
+    async openTemplativeDirectoryPicker() {
+        await ipcRenderer.invoke(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG)
+    }
+    async openCreateTemplativeProjectDirectoryPicker() {
+        await ipcRenderer.invoke(channels.TO_SERVER_OPEN_CREATE_PROJECT_DIALOG)
+    }
 
-    getCurrentRoute() {
-      var location = window.location.href
-      return location.split("http://localhost:3000")[1]
+    attemptToGetLastProjectDirectory() {
+        var homeDirectory = os.homedir() 
+        var templativeSettingsDirectoryPath = path.join(homeDirectory, "Documents/templative")
+        if (!fs.existsSync(templativeSettingsDirectoryPath)) {
+            return undefined
+        }
+        var templativeSettingsPath = path.join(templativeSettingsDirectoryPath, "settings.json")
+        if (!fs.existsSync(templativeSettingsPath)) {
+            return undefined
+        } 
+        var settings = JSON.parse(fs.readFileSync(templativeSettingsPath, 'utf8'));
+        return settings["lastProjectDirectory"]
+    }
+    writeLastOpenedProject(lastProjectDirectory) {
+        var homeDirectory = os.homedir() 
+        var templativeSettingsPath = path.join(homeDirectory, "Documents/Templative/settings.json")
+        var newFileContents = JSON.stringify({lastProjectDirectory: lastProjectDirectory}, null, 4)
+        
+        fs.mkdir(getDirName(templativeSettingsPath), { recursive: true}, (err) => {});
+        fs.writeFileSync(templativeSettingsPath, newFileContents, 'utf-8');
+    }
+    attemptToLoadLastTemplativeProject() {
+        var lastProjectDirectory = this.attemptToGetLastProjectDirectory()
+        if (lastProjectDirectory === undefined) {
+            return
+        }
+        var templativeProject = new TemplativeProject(lastProjectDirectory)
+        this.setState({templativeProject: templativeProject})
     }
     componentDidMount() {
-        this.renderer = ipcRenderer.on(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, (event, templativeRootDirectoryPath) => {
+        ipcRenderer.on(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, (event, templativeRootDirectoryPath) => {
             var templativeProject = new TemplativeProject(templativeRootDirectoryPath)
+            this.writeLastOpenedProject(templativeRootDirectoryPath)
             this.setState({templativeProject: templativeProject})
         });
-        var templativeProject = new TemplativeProject("C:/Users/User/Documents/git/nextdaygames/apcw-defines");
-        
-        this.setState({
-            templativeProject: templativeProject, 
-            currentRoute: this.getCurrentRoute()
+        ipcRenderer.on(channels.GIVE_CLOSE_PROJECT, (_) => {
+            this.setState({templativeProject: undefined})
         })
+        this.attemptToLoadLastTemplativeProject()
     }
     updateRoute = (route) => {
         this.setState({currentRoute: route})
     }
     render() {
-        const topNavbarItems = [
-        {
-            name:"Edit",
-            route:"/"
-        },
-        {
-            name:"Render",
-            route:"/render"
-        },
-        {
-            name:"Print",
-            route:"/print"
-        },
-        {
-            name:"Playtest",
-            route:"/playtest"
-        },
-        {
-            name:"Upload",
-            route:"/upload"
-        },
-        {
-            name:"Animate",
-            route:"/animate"
-        },
-        {
-            name:"Market",
-            route:"/market"
-        }
-        ]
-        
-        return (
-        <div className="App">
+        return <div className="App">
             <div className="container-fluid">
-            <BrowserRouter>
-                <TopNavbar topNavbarItems={topNavbarItems} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
-                <Routes>
-                <Route path='/' element={ <EditPanel templativeProject={this.state.templativeProject}/> } />
-                <Route path='/render' element={ <RenderPanel templativeProject={this.state.templativeProject}/> } />
-                <Route path='/print' element={ <PrintPanel/> } />
-                <Route path='/playtest' element={ <PlaytestPanel/> } />
-                <Route path='/upload' element={ <UploadPanel/> } />
-                <Route path='/animate' element={ <AnimatePanel/> } />
-                </Routes>
-            </BrowserRouter>
+                { this.state.templativeProject !== undefined ? 
+                    <EditProjectView templativeProject={this.state.templativeProject}/> :
+                    <StartView 
+                        openCreateTemplativeProjectDirectoryPickerCallback={()=> this.openCreateTemplativeProjectDirectoryPicker()}
+                        openTemplativeDirectoryPickerCallback={() => this.openTemplativeDirectoryPicker()}/>
+                }
             </div>
         </div>
-        );
     }
 }
 

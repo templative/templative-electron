@@ -1,7 +1,7 @@
 import React from "react";
 import TemplativeProjectRenderer from "./FileExplorer/TemplativeProjectRenderer"
 import ArtdataViewer from "./Viewers/ArtdataViewer/ArtdataViewer"
-import ComponentsViewer from "./Viewers/ComponentsViewer"
+import ComponentsViewer from "./Viewers/ComponentsViewer/ComponentsViewer"
 import PieceGamedataViewer from "./Viewers/GamedataViewer/PieceGamedataViewer"
 import KeyValueGamedataViewer from "./Viewers/GamedataViewer/KeyValueGamedataViewer"
 import "./EditPanel.css"
@@ -34,11 +34,10 @@ export default class EditPanel extends React.Component {
         
             result.push(obj);
         }
-        // console.log(result)
         return result;
     }
 
-    updateViewedFileCallback = (filetype, filepath) => {          
+    updateViewedFile = (filetype, filepath) => {     
         var fileContents = fs.readFileSync(filepath, 'utf8');
         var extension = filepath.split('.').pop()
         if (extension === "json") {
@@ -55,11 +54,21 @@ export default class EditPanel extends React.Component {
             fileContents: fileContents
         })
     } 
+    openComponents = () => {
+        this.setState({
+            currentFileType: undefined,
+            currentFilepath: undefined,
+        })
+    }
     
     render() {
         return <div className='mainBody row '>
             <div className='col-4 left-column'>
-                <TemplativeProjectRenderer templativeProject={this.props.templativeProject} currentFilepath={this.state.currentFilepath} updateViewedFileCallback={this.updateViewedFileCallback}/>
+                <TemplativeProjectRenderer 
+                    templativeProject={this.props.templativeProject} 
+                    currentFilepath={this.state.currentFilepath} 
+                    updateViewedFileCallback={this.updateViewedFile}
+                    openComponentsCallback={this.openComponents}/>
             </div>
             <div className='col-8 viewer'>
                 {this.state.currentFileType === "ARTDATA" &&
@@ -74,8 +83,8 @@ export default class EditPanel extends React.Component {
                 {this.state.currentFileType === "KEYVALUE_GAMEDATA" &&
                     <KeyValueGamedataViewer filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
                 }
-                {this.state.currentFileType === undefined && this.state.templativeProject !== undefined && 
-                    <ComponentsViewer components={this.state.templativeProject.componentCompose}/>
+                {this.state.currentFileType === undefined && this.props.templativeProject !== undefined && 
+                    <ComponentsViewer componentsFilepath={this.props.templativeProject.getComponentComposeFilepath()} components={this.props.templativeProject.componentCompose}/>
                 }
             </div>
             

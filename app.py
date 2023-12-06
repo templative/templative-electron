@@ -21,8 +21,16 @@ if "app.py" in sys.argv[0]:
   # CORS headers
   app.config["CORS_HEADERS"] = "Content-Type"
 
-
-# Remove and replace with your own
+@app.route("/project", methods = ['POST']) 
+async def createProject():
+  data = request.json
+  print(data)
+  if data["directoryPath"] == None:
+    return "Missing directoryPath", 400
+  
+  result = await templative.create.projectCreator.createProjectInDirectory(data["directoryPath"])
+  return 200 if result == 1 else 500
+  
 @app.route("/render", methods = ['POST']) 
 async def render():
   isDebug = request.args.get('isDebug')
@@ -40,6 +48,7 @@ def quit():
   # if shutdown is None:
   #   raise RuntimeError('Not running with the Werkzeug Server')
   # shutdown()
+  print("Killing")
   os.kill(os.getpid(), signal.SIGINT)
   return "Killed server"
 

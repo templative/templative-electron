@@ -2,3 +2,7 @@
     /* overflow-y: scroll; */
     padding-bottom:2em
 }
+.open-components-button {
+    margin: 0 1em 0.5em 1em;
+    color:#cfcfcf !important;
+}
