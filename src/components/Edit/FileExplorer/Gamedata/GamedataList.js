@@ -1,5 +1,5 @@
 import React from "react";
-import "./Artdata.css"
+import "../Artdata/Artdata.css"
 import GamedataItem from "./GamedataItem"
 import ResourceHeader from "../ResourceHeader";
 
