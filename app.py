@@ -1,18 +1,15 @@
-import sys
-from flask import Flask, jsonify, request
-from flask_cors import CORS
-import templative
-import os, signal
-import time, json
-from flask_socketio import SocketIO, emit, send
+from aiohttp import web
+import socketio
+import aiohttp_cors
+import json
+import templative 
+from EmitPrintStatements import EmitPrintStatements
 
-app = Flask(__name__)
-CORS(app,resources={r"/*":{"origins":"*"}})
-socketio = SocketIO(app, async_mode='threading',cors_allowed_origins="*")
+routes = web.RouteTableDef()
 
-@app.route("/project", methods = ['POST']) 
-async def createProject():
-  data = request.json
+@routes.post("/project") 
+async def createProject(request):
+  data = await request.json()
   if data["directoryPath"] == None:
     return "Missing directoryPath", 400
   
@@ -21,9 +18,10 @@ async def createProject():
     return json.dumps({'success':False}), 500, {'ContentType':'application/json'}
   return json.dumps({'success':True}), 200, {'ContentType':'application/json'}
 
-@app.route("/component", methods = ['POST']) 
-async def createComponent():
-  data = request.json
+@routes.post("/component") 
+async def createComponent(request):
+  data = await request.json()
+  print(data)
   if data["componentName"] == None:
     return "Missing componentName", 400
   if data["componentType"] == None:
@@ -35,41 +33,39 @@ async def createComponent():
 
   return json.dumps({'success':True}), 200, {'ContentType':'application/json'}
 
-@socketio.on("connect")
-def connected():
-    """event listener when client connects to the server"""
-    print(request.sid)
-    print("client has connected")
+sio = socketio.AsyncServer(cors_allowed_origins="*")
+app = web.Application()
+app.add_routes(routes)
+cors = aiohttp_cors.setup(app, defaults={
+   "*": aiohttp_cors.ResourceOptions(
+        allow_credentials=True,
+        expose_headers="*",
+        allow_headers="*"
+    )
+  })
+sio.attach(app)
 
-@socketio.on('data')
-def handle_message(data):
-    """event listener when client types a message"""
-    print("data from the front end: ",str(data))
-    emit("data",{'data':data,'id':request.sid},broadcast=True)
+@sio.event
+def connect(sid, environ):
+    # print("connect ", sid)
+    pass
+@sio.event
+def disconnect(sid):
+    # print('disconnect ', sid)
+    pass
 
-@socketio.on("disconnect")
-def disconnected():
-    """event listener when client disconnects to the server"""
-    print("user disconnected")
-    # emit("disconnect",f"user {request.sid} disconnected",broadcast=True)
 
-@socketio.on('produceGame')
-def produceGame(renderData):
-  isDebug = renderData['isDebug']
-  isComplex = renderData['isComplex']
-  componentFilter = 'componentFilter' in renderData and renderData['componentFilter'] or None
-  language = renderData['language']
-  print(isDebug, isComplex, componentFilter, language)
-  # await templative.produce.gameProducer.produceGame("C:/Users/User/Documents/git/nextdaygames/apcw-defines", componentFilter, not isComplex, not isDebug, language)
-  for thing in range(0,10):
-    time.sleep(1)
-    emit("data", {'data': 'Hello!'}, broadcast=True)
 
-@app.route("/quit")
-def quit():
-  print("Killing")
-  os.kill(os.getpid(), signal.SIGINT)
-  return "Killed server"
+@sio.on("produceGame")
+async def produceGame(sid, data):
+    isDebug = data['isDebug']
+    isComplex = data['isComplex']
+    componentFilter = 'componentFilter' in data and data['componentFilter'] or None
+    language = data['language']
 
-if __name__ == "__main__":    
-  socketio.run(app, host="localhost", port=3001, debug=False)
+    with EmitPrintStatements(sio, "printStatement"):
+        await templative.produce.gameProducer.produceGame("C:/Users/User/Documents/git/nextdaygames/apcw-defines", componentFilter, not isComplex, not isDebug, language)
+
+if __name__ == '__main__':
+    web.run_app(app)
+
