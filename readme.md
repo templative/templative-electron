@@ -1,4 +1,14 @@
-- pip install -r requirements.txt --user
-- npm start
-- new tab
-- npm run electron-dev
+# Setup
+
+# Launching the python server
+- `pipenv install`
+- `pipenv run python app.py`
+
+## Launch React
+- `npm start`
+
+## Launch 
+- `npm run electron-dev`
+
+
+templative = {file = "file:///C:/Users/User/Documents/git/nextdaygames/templative"}

@@ -4,23 +4,11 @@ from flask_cors import CORS
 import templative
 import os, signal
 import time, json
+from flask_socketio import SocketIO, emit, send
 
 app = Flask(__name__)
-app_config = {"host": "0.0.0.0", "port": sys.argv[1]}
-
-# Developer mode uses app.py
-if "app.py" in sys.argv[0]:
-  # Update app config
-  app_config["debug"] = True
-
-  # CORS settings
-  cors = CORS(
-    app,
-    resources={r"/*": {"origins": "http://localhost*"}},
-  )
-
-  # CORS headers
-  app.config["CORS_HEADERS"] = "Content-Type"
+CORS(app,resources={r"/*":{"origins":"*"}})
+socketio = SocketIO(app, async_mode='threading',cors_allowed_origins="*")
 
 @app.route("/project", methods = ['POST']) 
 async def createProject():
@@ -31,15 +19,6 @@ async def createProject():
   result = await templative.create.projectCreator.createProjectInDirectory(data["directoryPath"])
   if result != 1:
     return json.dumps({'success':False}), 500, {'ContentType':'application/json'}
-  return json.dumps({'success':True}), 200, {'ContentType':'application/json'}
-  
-@app.route("/render", methods = ['POST']) 
-async def render():
-  isDebug = request.args.get('isDebug')
-  isComplex = request.args.get('isComplex')
-  componentFilter = request.args.get('componentFilter')
-  language = request.args.get('language')
-  await templative.produce.gameProducer.produceGame("C:/Users/User/Documents/git/nextdaygames/apcw-defines", componentFilter, not isComplex, not isDebug, language)
   return json.dumps({'success':True}), 200, {'ContentType':'application/json'}
 
 @app.route("/component", methods = ['POST']) 
@@ -56,16 +35,41 @@ async def createComponent():
 
   return json.dumps({'success':True}), 200, {'ContentType':'application/json'}
 
-# Quits Flask on Electron exit
+@socketio.on("connect")
+def connected():
+    """event listener when client connects to the server"""
+    print(request.sid)
+    print("client has connected")
+
+@socketio.on('data')
+def handle_message(data):
+    """event listener when client types a message"""
+    print("data from the front end: ",str(data))
+    emit("data",{'data':data,'id':request.sid},broadcast=True)
+
+@socketio.on("disconnect")
+def disconnected():
+    """event listener when client disconnects to the server"""
+    print("user disconnected")
+    # emit("disconnect",f"user {request.sid} disconnected",broadcast=True)
+
+@socketio.on('produceGame')
+def produceGame(renderData):
+  isDebug = renderData['isDebug']
+  isComplex = renderData['isComplex']
+  componentFilter = 'componentFilter' in renderData and renderData['componentFilter'] or None
+  language = renderData['language']
+  print(isDebug, isComplex, componentFilter, language)
+  # await templative.produce.gameProducer.produceGame("C:/Users/User/Documents/git/nextdaygames/apcw-defines", componentFilter, not isComplex, not isDebug, language)
+  for thing in range(0,10):
+    time.sleep(1)
+    emit("data", {'data': 'Hello!'}, broadcast=True)
+
 @app.route("/quit")
 def quit():
-  # shutdown = request.environ.get("werkzeug.server.shutdown")
-  # if shutdown is None:
-  #   raise RuntimeError('Not running with the Werkzeug Server')
-  # shutdown()
   print("Killing")
   os.kill(os.getpid(), signal.SIGINT)
   return "Killed server"
 
-if __name__ == "__main__":
-  app.run(**app_config)
+if __name__ == "__main__":    
+  socketio.run(app, host="localhost", port=3001, debug=False)

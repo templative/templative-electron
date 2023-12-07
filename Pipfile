@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+python-socketio = "*"
+aiohttp = "*"
+aiohttp-cors = "*"
+setuptools = "*"
+templative = {file = "file:///C:/Users/User/Documents/git/nextdaygames/templative"}
+gitpython = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"

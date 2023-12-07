@@ -24,7 +24,7 @@ export default class RenderButton extends React.Component {
                 </div>
                 <div className="input-group input-group-sm mb-3 renderInputGroup" data-bs-theme="dark">
                     {/* <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span */}
-                    <button type="button" className="btn btn-outline-secondary renderButton" onClick={() => this.props.runTempaltiveCallback()}>
+                    <button type="button" className="btn btn-outline-secondary renderButton" onClick={() => this.props.renderTemplativeProjectCallback()}>
                         Render {this.props.selectedComponent !== undefined ? this.props.selectedComponent : "All"}</button>
                     
                 </div>

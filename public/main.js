@@ -23,7 +23,7 @@ const createWindow = () => {
 
 app.whenReady().then(async () => {
     
-    spawn(`python ./app.py 3001`, { detached: true, shell: true, stdio: 'inherit' });
+    // spawn(`python ./app.py 3001`, { detached: true, shell: true, stdio: 'inherit' });
     
     createWindow()
     app.on('activate', () => {
@@ -32,7 +32,7 @@ app.whenReady().then(async () => {
 
 })
 const shutdown = () => {
-  axios.get(`http://localhost:3001/quit`)
+  axios.get(`http://localhost:8080/quit`)
     .then(app.quit)
     .catch(app.quit);
 };

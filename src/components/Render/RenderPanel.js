@@ -1,8 +1,9 @@
 import React from "react";
-import axios from "axios";
 import OutputExplorer from "./OutputExplorer"
 import RenderButton from "./RenderButton"
 import "./RenderPanel.css"
+import {socket} from "../../socket"
+import RenderOutput from "./RenderOutput"
 
 export default class RenderPanel extends React.Component {   
     state={
@@ -10,8 +11,27 @@ export default class RenderPanel extends React.Component {
         selectedComponent: undefined,
         isDebugRendering: false,
         isComplexRendering: true,
-        selectedLanguage: "en"
+        selectedLanguage: "en",
+        isConnectedToTemplative: false,
+        isProcessing: false,
+        messages: []
     }
+
+    componentDidMount() {
+        socket.connect();
+        socket.on('printStatement', (message) => this.addMessage(message));
+    }
+    componentWillUnmount() {
+        socket.off("printStatement");
+        socket.disconnect()
+    }
+
+    addMessage(message) {
+        var newMessages = this.state.messages
+        newMessages.push(message)
+        this.setState({messages: newMessages})
+    }
+
     selectDirectory = (directory) => {
         this.setState({selectedDirectory:directory})
     }
@@ -31,16 +51,18 @@ export default class RenderPanel extends React.Component {
     setLanguage = (event) => {
         this.setState({selectedLanguage: event.target.value})
     }
-    runTempaltive = () => {
-        axios.post(`http://localhost:3001/render`, null, { params: {
+    renderTemplativeProject = () => {
+        var request = {
             isDebug: this.state.isDebugRendering,
             isComplex: this.state.isComplexRendering,
             componentFilter: this.state.selectedComponent,
             language: this.state.selectedLanguage
-        }})
-        .then(res => {
-            console.log(res)
-        })
+        }
+        this.setState({isProcessing: true})
+        
+        socket.emit('produceGame', request, () => {
+            this.setState({isProcessing: false, isConnectedToTemplative: socket.connected,})
+        });
     }
     render() {
         var directories = []
@@ -81,9 +103,11 @@ export default class RenderPanel extends React.Component {
                     isComplexRendering={this.state.isComplexRendering}
                     toggleDebugCallback={this.setDebugCheckbox}
                     toggleComplexCallback={this.setComplexCheckbox}
-                    runTempaltiveCallback={this.runTempaltive}
+                    renderTemplativeProjectCallback={this.renderTemplativeProject}
                     setLanguageCallback={this.setLanguage}
                 />
+
+                <RenderOutput messages={this.state.messages}/>
                 
                 <div className="headerWrapper">
                     <p className="resourcesHeader">Output</p>
