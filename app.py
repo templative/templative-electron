@@ -15,13 +15,12 @@ async def createProject(request):
   
   result = await templative.create.projectCreator.createProjectInDirectory(data["directoryPath"])
   if result != 1:
-    return json.dumps({'success':False}), 500, {'ContentType':'application/json'}
-  return json.dumps({'success':True}), 200, {'ContentType':'application/json'}
+    return web.Response(status=500)
+  return web.Response(status=200)
 
 @routes.post("/component") 
 async def createComponent(request):
   data = await request.json()
-  print(data)
   if data["componentName"] == None:
     return "Missing componentName", 400
   if data["componentType"] == None:
@@ -31,7 +30,7 @@ async def createComponent(request):
   
   await templative.create.componentCreator.createCustomComponent(data["directoryPath"], data["componentName"], data["componentType"])
 
-  return json.dumps({'success':True}), 200, {'ContentType':'application/json'}
+  return web.Response(status=200)
 
 sio = socketio.AsyncServer(cors_allowed_origins="*")
 app = web.Application()
