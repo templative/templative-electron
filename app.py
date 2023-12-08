@@ -61,9 +61,10 @@ async def produceGame(sid, data):
     isComplex = data['isComplex']
     componentFilter = 'componentFilter' in data and data['componentFilter'] or None
     language = data['language']
+    directoryPath = data["directoryPath"]
 
     with EmitPrintStatements(sio, "printStatement"):
-        await templative.produce.gameProducer.produceGame("C:/Users/User/Documents/git/nextdaygames/apcw-defines", componentFilter, not isComplex, not isDebug, language)
+        await templative.produce.gameProducer.produceGame(directoryPath, componentFilter, not isComplex, not isDebug, language)
 
 if __name__ == '__main__':
     web.run_app(app)
