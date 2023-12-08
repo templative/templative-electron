@@ -2,10 +2,13 @@ import React from "react";
 import KeyValueInput from "./KeyValueInput"
 import PieceControlInput from "./PieceControlInput"
 import "./GamedataViewer.css"
+
 const fs = window.require("fs")
+
 const ignoredControlGamedataKeys = [
     "name", "displayName", "quantity"
 ]
+
 export default class PieceGamedataViewer extends React.Component {   
     state = {
         gamedataFile: this.props.fileContents,
@@ -48,7 +51,7 @@ export default class PieceGamedataViewer extends React.Component {
     addBlankKeyValuePair() {
         var newGamedataFileContents = this.state.gamedataFile
         this.state.gamedataFile.forEach((element, index) => {
-            newGamedataFileContents[index][" "] = ""
+            newGamedataFileContents[index][""] = ""
         });
         
         this.setState({
@@ -79,9 +82,11 @@ export default class PieceGamedataViewer extends React.Component {
         })
     }
     updateKey(oldKey, newKey) {
+        console.log(`"${oldKey}"`, `"${newKey}"`)
+
         var newGamedataFileContents = this.state.gamedataFile
         this.state.gamedataFile.forEach((element, index) => {
-            newGamedataFileContents[index][newKey] = newGamedataFileContents[oldKey]
+            newGamedataFileContents[index][newKey] = newGamedataFileContents[index][oldKey] !== undefined ? newGamedataFileContents[index][oldKey] : ""
             delete newGamedataFileContents[index][oldKey]
         });
         

@@ -33,7 +33,7 @@ export default class KeyValueGamedataViewer extends React.Component {
     }
     addBlankKeyValuePair() {
         var newGamedataFileContents = this.state.gamedataFile
-        newGamedataFileContents[" "] = ""
+        newGamedataFileContents[""] = ""
         this.setState({
             gamedataFile: newGamedataFileContents
         })

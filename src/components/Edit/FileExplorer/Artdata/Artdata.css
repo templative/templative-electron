@@ -1,6 +1,7 @@
 .artdataItemWrapper {
     padding-left: 1em;
     margin-bottom: 0.1em;
+    height:0.75em;
 }
 .artdataItemWrapper:hover {
     background-color: #2b3037;
@@ -17,4 +18,25 @@
     font-size: small;
     margin:0;
     text-align: left;
+}
+.filename-content {
+    width: calc(100% - 1em);
+    vertical-align: top !important;
+    display: inline-block;
+}
+.file-controls {
+    vertical-align: top !important;
+    display: inline-block;
+    height: 100%;
+    width: 1em;
+}
+.removeArtdataButton {
+    vertical-align: top !important;
+    align-items: right;
+    text-align: center;
+    padding:0 !important;
+    border: 0 !important;
+    background-color: #2b3037 !important;
+    width: 1.5em;
+    height: 100%;
 }

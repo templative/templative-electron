@@ -57,7 +57,8 @@ export default class RenderPanel extends React.Component {
             isDebug: this.state.isDebugRendering,
             isComplex: this.state.isComplexRendering,
             componentFilter: this.state.selectedComponent,
-            language: this.state.selectedLanguage
+            language: this.state.selectedLanguage,
+            directoryPath: this.props.templativeRootDirectoryPath,
         }
         this.setState({isProcessing: true})
         

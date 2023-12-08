@@ -54,6 +54,14 @@ export default class EditPanel extends React.Component {
             fileContents: fileContents
         })
     } 
+    clearViewedFile() {
+        this.setState({
+            currentFileType: undefined,
+            currentFilepath: undefined,
+            filename: undefined,
+            fileContents: undefined
+        })
+    }
     openComponents = () => {
         this.setState({
             currentFileType: undefined,
@@ -70,6 +78,7 @@ export default class EditPanel extends React.Component {
                     templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
                     currentFilepath={this.state.currentFilepath} 
                     updateViewedFileCallback={this.updateViewedFile}
+                    clearViewedFileCallback={()=>this.clearViewedFile()}
                     openComponentsCallback={this.openComponents}/>
             </div>
             <div className='col-8 viewer'>

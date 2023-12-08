@@ -6,54 +6,123 @@ import TemplativeAccessTools from "../../TemplativeAccessTools";
 import "./TemplativeProjectRenderer.css"
 
 const path = window.require("path")
+const fs = window.require("fs")
 
 export default class TemplativeFileExplorers extends React.Component {   
+    state = {
+        gameCompose: undefined,
+        templateFilenames: [],
+        overlayFilenames: [],
+        artdataFilenames: [],
+        globalGamedataFilenames: [],
+        componentGamedataFilenames: [],
+        pieceGamedataFilenames: [],
+        templatesDirectory: "./",
+        overlaysDirectory: "./",
+    }
+
+    createFile(filepath, contents) {
+        fs.writeFileSync(filepath, contents)
+        
+        this.setState({
+            templateFilenames: TemplativeAccessTools.getTemplateFilenames(this.props.templativeRootDirectoryPath),
+            overlayFilenames: TemplativeAccessTools.getOverlayFilenames(this.props.templativeRootDirectoryPath),
+            artdataFilenames: TemplativeAccessTools.getArtdataFilenames(this.props.templativeRootDirectoryPath),
+            globalGamedataFilenames: TemplativeAccessTools.getStudioAndGamedataFilenames(this.props.templativeRootDirectoryPath),
+            componentGamedataFilenames: TemplativeAccessTools.getComponentGamedataFilenames(this.props.templativeRootDirectoryPath),
+            pieceGamedataFilenames: TemplativeAccessTools.getPieceGamedataFilenames(this.props.templativeRootDirectoryPath)
+        })
+    }
+    deleteFile(filepath) {
+        if (this.props.currentFilepath === filepath) {
+            this.props.clearViewedFileCallback()
+        }
+        fs.unlinkSync(filepath)
+        this.setState({
+            templateFilenames: TemplativeAccessTools.getTemplateFilenames(this.props.templativeRootDirectoryPath),
+            overlayFilenames: TemplativeAccessTools.getOverlayFilenames(this.props.templativeRootDirectoryPath),
+            artdataFilenames: TemplativeAccessTools.getArtdataFilenames(this.props.templativeRootDirectoryPath),
+            globalGamedataFilenames: TemplativeAccessTools.getStudioAndGamedataFilenames(this.props.templativeRootDirectoryPath),
+            componentGamedataFilenames: TemplativeAccessTools.getComponentGamedataFilenames(this.props.templativeRootDirectoryPath),
+            pieceGamedataFilenames: TemplativeAccessTools.getPieceGamedataFilenames(this.props.templativeRootDirectoryPath)
+        })
+    }
+    
+    componentDidMount() {
+        var gameCompose = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "game-compose.json");
+        
+        this.setState({
+            gameCompose: gameCompose,
+
+            templatesDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.artTemplatesDirectory),
+            overlaysDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.artInsertsDirectory),
+            artdataDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.artdataDirectory),
+            piecesGamedataDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.piecesGamedataDirectory),
+            componentGamedataDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.componentGamedataDirectory),
+
+            templateFilenames: TemplativeAccessTools.getTemplateFilenames(this.props.templativeRootDirectoryPath),
+            overlayFilenames: TemplativeAccessTools.getOverlayFilenames(this.props.templativeRootDirectoryPath),
+            artdataFilenames: TemplativeAccessTools.getArtdataFilenames(this.props.templativeRootDirectoryPath),
+            globalGamedataFilenames: TemplativeAccessTools.getStudioAndGamedataFilenames(this.props.templativeRootDirectoryPath),
+            componentGamedataFilenames: TemplativeAccessTools.getComponentGamedataFilenames(this.props.templativeRootDirectoryPath),
+            pieceGamedataFilenames: TemplativeAccessTools.getPieceGamedataFilenames(this.props.templativeRootDirectoryPath)
+        })
+    }
+
     render() {
-        console.log(this.props.gameCompose)
-        var templatesDirectory = path.join(this.props.templativeRootDirectoryPath, this.props.gameCompose.artTemplatesDirectory)
-        var overlaysDirectory = path.join(this.props.templativeRootDirectoryPath, this.props.gameCompose.artInsertsDirectory)
-        console.log(templatesDirectory)
         return <React.Fragment>
             <ArtList 
                 header="Templates" 
                 currentFilepath={this.props.currentFilepath} 
                 updateViewedFileCallback={this.props.updateViewedFileCallback} 
-                directoryPath={templatesDirectory}
-                filenames={TemplativeAccessTools.getTemplateFilenames(this.props.templativeRootDirectoryPath)}
+                directoryPath={this.state.templatesDirectory}
+                filenames={this.state.templateFilenames}
             />
             <ArtList 
                 header="Overlays" 
                 currentFilepath={this.props.currentFilepath} 
                 updateViewedFileCallback={this.props.updateViewedFileCallback} 
-                directoryPath={overlaysDirectory}
-                filenames={TemplativeAccessTools.getOverlayFilenames(this.props.templativeRootDirectoryPath)}
+                directoryPath={this.state.overlaysDirectory}
+                filenames={this.state.overlayFilenames}
+                deleteFileCallback={(filepath) => this.deleteFile(filepath)}
             />
             <ArtdataList 
                 currentFilepath={this.props.currentFilepath} 
                 updateViewedFileCallback={this.props.updateViewedFileCallback} 
-                baseFilepath={this.props.gameCompose.artdataDirectory}
-                filenames={TemplativeAccessTools.getArtdataFilenames(this.props.templativeRootDirectoryPath)}
+                baseFilepath={this.state.artdataDirectory}
+                filenames={this.state.artdataFilenames}
+                createFileCallback={(filepath, contents)=>this.createFile(filepath, contents)}
+                deleteFileCallback={(filepath) => this.deleteFile(filepath)}
             />
             <GamedataList 
                 header="Global Gamedata" 
                 gamedataType="KEYVALUE_GAMEDATA" 
                 currentFilepath={this.props.currentFilepath} 
                 updateViewedFileCallback={this.props.updateViewedFileCallback} 
-                filenames={TemplativeAccessTools.getStudioAndGamedataFilenames(this.props.templativeRootDirectoryPath)}
+                canCreateNewFiles={false}
+                filenames={this.state.globalGamedataFilenames}
             />
             <GamedataList 
                 header="Components Gamedata" 
                 gamedataType="KEYVALUE_GAMEDATA" 
+                baseFilepath={this.state.componentGamedataDirectory}
                 currentFilepath={this.props.currentFilepath} 
                 updateViewedFileCallback={this.props.updateViewedFileCallback} 
-                filenames={TemplativeAccessTools.getComponentGamedataFilenames(this.props.templativeRootDirectoryPath)}
+                filenames={this.state.componentGamedataFilenames}
+                canCreateNewFiles={true}
+                createFileCallback={(filepath, contents)=>this.createFile(filepath, contents)}
+                deleteFileCallback={(filepath) => this.deleteFile(filepath)}
             />
             <GamedataList 
                 header="Piece Gamedata" 
                 gamedataType="PIECE_GAMEDATA" 
+                baseFilepath={this.state.piecesGamedataDirectory}
                 currentFilepath={this.props.currentFilepath} 
                 updateViewedFileCallback={this.props.updateViewedFileCallback} 
-                filenames={TemplativeAccessTools.getPieceGamedataFilenames(this.props.templativeRootDirectoryPath)}
+                filenames={this.state.pieceGamedataFilenames}
+                canCreateNewFiles={true}
+                createFileCallback={(filepath, contents)=>this.createFile(filepath, contents)}
+                deleteFileCallback={(filepath) => this.deleteFile(filepath)}
             />
         </React.Fragment>        
     }

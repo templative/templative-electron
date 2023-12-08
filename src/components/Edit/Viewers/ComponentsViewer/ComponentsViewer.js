@@ -20,18 +20,23 @@ const sortComponents = (a, b) => {
 export default class ComponentsViewer extends React.Component {   
     state = {
         components: [],
+        hasLoaded: false,
         floatingName: undefined,
         floatingNameIndex: undefined
     }
 
     saveDocument() {
+        if(!this.state.hasLoaded) {
+            return
+        }
         var newFileContents = JSON.stringify(this.state.components, null, 4)
 
         var componentComposeFilepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json")
-        // fs.writeFileSync(componentComposeFilepath, newFileContents, 'utf-8')
+        fs.writeFileSync(componentComposeFilepath, newFileContents, 'utf-8')
     }
     componentDidMount() {
-        this.setState({components: TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")})
+        var components = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")
+        this.setState({components: components, hasLoaded: true})
     }
     componentWillUnmount(){
         this.saveDocument()
@@ -66,16 +71,6 @@ export default class ComponentsViewer extends React.Component {
             components: newComponents.sort(sortComponents),
         })
     }
-    addComponent() {
-        var newComponents = this.state.components
-        // newComponents.unshift({
-        //     name: "",
-        // })
-        console.log("We need to create all the files for you. This must be more sophisticated.")
-        this.setState({
-            components: newComponents.sort(sortComponents),
-        })
-    }
 
     render() {
         var componentItems = []
@@ -96,11 +91,6 @@ export default class ComponentsViewer extends React.Component {
             <div className="col">
                 <div className="row">
                     <h1>Components</h1>
-                </div>
-                <div className="row">
-                    <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
-                        <button onClick={() => this.addComponent()} className="btn btn-outline-secondary add-button" type="button" id="button-addon1">➕</button>
-                    </div>
                 </div>
                 <div className="row">
                     <div className="col">
