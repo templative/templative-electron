@@ -19,7 +19,6 @@ export default class ArtdataList extends React.Component {
             return;
         }
         var filepath = path.join(this.props.baseFilepath, `${filename}.json`)
-        console.log(filepath)
         this.props.createFileCallback(filepath, `{ "name":"${filename}", "templateFilename": "", "overlays": [], "textReplacements": [], "styleUpdates": [] }`)
     }
     render() {
