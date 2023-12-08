@@ -1,7 +1,7 @@
 import React from "react";
 
 import { channels } from './shared/constants';
-import TemplativeProject from "./components/TemplativeProject"
+import TemplativeAccessTools from "./components/TemplativeAccessTools"
 import StartView from "./components/StartView";
 import EditProjectView from "./components/EditProjectView";
 import './App.css';
@@ -16,7 +16,7 @@ const { ipcRenderer } = window.require('electron');
 class App extends React.Component {
   
     state = {
-        templativeProject: undefined
+        templativeRootDirectoryPath: undefined
     }
     componentWillUnmount() {
         ipcRenderer.removeAllListeners(channels.GIVE_TEMPLATIVE_ROOT_FOLDER);
@@ -24,7 +24,7 @@ class App extends React.Component {
     async openTemplativeDirectoryPicker() {
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG)
     }
-    async openCreateTemplativeProjectDirectoryPicker() {
+    async openCreateTemplativeAccessToolsDirectoryPicker() {
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_CREATE_PROJECT_DIALOG)
     }
 
@@ -49,24 +49,34 @@ class App extends React.Component {
         fs.mkdir(getDirName(templativeSettingsPath), { recursive: true}, (err) => {});
         fs.writeFileSync(templativeSettingsPath, newFileContents, 'utf-8');
     }
-    attemptToLoadLastTemplativeProject() {
+
+    processTemplativeAccessToolsForDirectory(templativeRootDirectoryPath) {
+        var componentCompose = TemplativeAccessTools.readFile(templativeRootDirectoryPath, "component-compose.json");
+        var gameCompose = TemplativeAccessTools.readFile(templativeRootDirectoryPath, "game-compose.json");
+        TemplativeAccessTools.hydrateGameComposeFile(templativeRootDirectoryPath, gameCompose)
+        
+        var gameFile = TemplativeAccessTools.readFile(templativeRootDirectoryPath, "game.json");
+        var studioFile = TemplativeAccessTools.readFile(templativeRootDirectoryPath, "studio.json");
+    }
+
+    attemptToLoadLastTemplativeAccessTools() {
         var lastProjectDirectory = this.attemptToGetLastProjectDirectory()
         if (lastProjectDirectory === undefined) {
             return
         }
-        var templativeProject = new TemplativeProject(lastProjectDirectory)
-        this.setState({templativeProject: templativeProject})
+        this.processTemplativeAccessToolsForDirectory(lastProjectDirectory)
+        this.setState({templativeRootDirectoryPath: lastProjectDirectory})
     }
     componentDidMount() {
         ipcRenderer.on(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, (event, templativeRootDirectoryPath) => {
-            var templativeProject = new TemplativeProject(templativeRootDirectoryPath)
+            this.processTemplativeAccessToolsForDirectory(templativeRootDirectoryPath)
             this.writeLastOpenedProject(templativeRootDirectoryPath)
-            this.setState({templativeProject: templativeProject})
+            this.setState({templativeRootDirectoryPath: templativeRootDirectoryPath})
         });
         ipcRenderer.on(channels.GIVE_CLOSE_PROJECT, (_) => {
-            this.setState({templativeProject: undefined})
+            this.setState({templativeRootDirectoryPath: undefined})
         })
-        this.attemptToLoadLastTemplativeProject()
+        this.attemptToLoadLastTemplativeAccessTools()
     }
     updateRoute = (route) => {
         this.setState({currentRoute: route})
@@ -74,10 +84,10 @@ class App extends React.Component {
     render() {
         return <div className="App">
             <div className="container-fluid">
-                { this.state.templativeProject !== undefined ? 
-                    <EditProjectView templativeProject={this.state.templativeProject}/> :
+                { this.state.templativeRootDirectoryPath !== undefined ? 
+                    <EditProjectView templativeRootDirectoryPath={this.state.templativeRootDirectoryPath}/> :
                     <StartView 
-                        openCreateTemplativeProjectDirectoryPickerCallback={()=> this.openCreateTemplativeProjectDirectoryPicker()}
+                        openCreateTemplativeAccessToolsDirectoryPickerCallback={()=> this.openCreateTemplativeAccessToolsDirectoryPicker()}
                         openTemplativeDirectoryPickerCallback={() => this.openTemplativeDirectoryPicker()}/>
                 }
             </div>

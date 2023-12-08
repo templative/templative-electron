@@ -1,6 +1,7 @@
 import React from "react";
 import "./CreatePanel.css"
 import ComponentType from "./ComponentType";
+import TemplativeAccessTools from "../TemplativeAccessTools";
 var axios  = window.require('axios');
 
 const ComponentInfo = require("./componentInfo.json")
@@ -29,7 +30,11 @@ export default class CreatePanel extends React.Component {
     state = {
         selectedComponentType: undefined,
         componentName: "",
+        components: [],
         isProcessing: false
+    }
+    componentDidMount() {
+        this.setState({components: TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")})
     }
     selectComponent(type) {
         if (this.state.selectedComponentType === type) {
@@ -45,7 +50,7 @@ export default class CreatePanel extends React.Component {
         var data = { 
             componentName: this.state.componentName,
             componentType: this.state.selectedComponentType,
-            directoryPath: this.props.templativeProject.templativeRootDirectoryPath
+            directoryPath: this.props.templativeRootDirectoryPath
         }
         await axios.post(`http://127.0.0.1:8080/component`, data)
         this.setState({isProcessing: false})
@@ -53,7 +58,7 @@ export default class CreatePanel extends React.Component {
 
     render() {
         var componentTypeQuantities = []
-        this.props.templativeProject.componentCompose.forEach(element => {
+        this.state.components.forEach(element => {
             var currentValue = componentTypeQuantities[element.type] !== undefined ? componentTypeQuantities[element.type] : 0
             componentTypeQuantities[element.type] = 1 + currentValue
         });

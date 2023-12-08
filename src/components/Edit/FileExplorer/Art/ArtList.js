@@ -9,7 +9,14 @@ export default class ArtList extends React.Component {
             var filepath = this.props.filenames[i]
             var isSelected = this.props.currentFilepath === filepath
             divs.push(
-                <ArtItem baseFilepath={this.props.baseFilepath} isSelected={isSelected} updateViewedFileCallback={this.props.updateViewedFileCallback} key={filepath} filename={filepath} filepath={filepath}/>    
+                <ArtItem 
+                    directoryPath={this.props.directoryPath} 
+                    isSelected={isSelected} 
+                    updateViewedFileCallback={this.props.updateViewedFileCallback} 
+                    key={filepath} 
+                    filename={filepath} 
+                    filepath={filepath}
+                />    
             )
         }
         return <React.Fragment>

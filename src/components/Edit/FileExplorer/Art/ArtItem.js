@@ -28,7 +28,7 @@ export default class ArtItem extends React.Component {
         })
     }
     parsePathForCommonPath() {
-        return path.relative(this.props.baseFilepath, this.props.filepath).split(".")[0]
+        return path.relative(this.props.directoryPath, this.props.filepath).split(".")[0]
     }
     render() {
         var callback = () => this.props.updateViewedFileCallback("ART", this.props.filepath)

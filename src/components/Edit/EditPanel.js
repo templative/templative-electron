@@ -6,7 +6,7 @@ import PieceGamedataViewer from "./Viewers/GamedataViewer/PieceGamedataViewer"
 import KeyValueGamedataViewer from "./Viewers/GamedataViewer/KeyValueGamedataViewer"
 import "./EditPanel.css"
 import ImageViewer from "./Viewers/ImageViewer";
-
+import TemplativeAccessTools from "../TemplativeAccessTools"
 const path = window.require("path");
 const fs = window.require("fs");
 
@@ -62,10 +62,12 @@ export default class EditPanel extends React.Component {
     }
     
     render() {
+        var components = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")
+        
         return <div className='mainBody row '>
             <div className='col-4 left-column'>
                 <TemplativeProjectRenderer 
-                    templativeProject={this.props.templativeProject} 
+                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
                     currentFilepath={this.state.currentFilepath} 
                     updateViewedFileCallback={this.updateViewedFile}
                     openComponentsCallback={this.openComponents}/>
@@ -83,8 +85,12 @@ export default class EditPanel extends React.Component {
                 {this.state.currentFileType === "KEYVALUE_GAMEDATA" &&
                     <KeyValueGamedataViewer filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
                 }
-                {this.state.currentFileType === undefined && this.props.templativeProject !== undefined && 
-                    <ComponentsViewer componentsFilepath={this.props.templativeProject.getComponentComposeFilepath()} components={this.props.templativeProject.componentCompose}/>
+                {this.state.currentFileType === undefined && this.props.templativeRootDirectoryPath !== undefined && 
+                    <ComponentsViewer 
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        componentsFilepath={TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath)} 
+                        components={components}
+                    />
                 }
             </div>
             

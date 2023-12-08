@@ -67,13 +67,13 @@ export default class EditProjectView extends React.Component {
         return <BrowserRouter>
             <TopNavbar topNavbarItems={topNavbarItems} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
             <Routes>
-            <Route path='/create' element={ <CreatePanel templativeProject={this.props.templativeProject}/> } />
-            <Route path='/' element={ <EditPanel templativeProject={this.props.templativeProject}/> } />
-            <Route path='/render' element={ <RenderPanel templativeProject={this.props.templativeProject}/> } />
-            <Route path='/print' element={ <PrintPanel templativeProject={this.props.templativeProject}/> } />
-            <Route path='/playtest' element={ <PlaytestPanel templativeProject={this.props.templativeProject}/> } />
-            <Route path='/upload' element={ <UploadPanel templativeProject={this.props.templativeProject}/> } />
-            <Route path='/animate' element={ <AnimatePanel templativeProject={this.props.templativeProject}/> } />
+            <Route path='/create' element={ <CreatePanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+            <Route path='/' element={ <EditPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+            <Route path='/render' element={ <RenderPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+            <Route path='/print' element={ <PrintPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+            <Route path='/playtest' element={ <PlaytestPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+            <Route path='/upload' element={ <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+            <Route path='/animate' element={ <AnimatePanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
             </Routes>
         </BrowserRouter>
         

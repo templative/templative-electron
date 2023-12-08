@@ -4,6 +4,7 @@ import RenderButton from "./RenderButton"
 import "./RenderPanel.css"
 import {socket} from "../../socket"
 import RenderOutput from "./RenderOutput"
+import TemplativeAccessTools from "../TemplativeAccessTools";
 
 export default class RenderPanel extends React.Component {   
     state={
@@ -66,8 +67,8 @@ export default class RenderPanel extends React.Component {
     }
     render() {
         var directories = []
-        if (this.props.templativeProject !== undefined) {
-            directories = this.props.templativeProject.getOutputDirectories()
+        if (this.props.templativeRootDirectoryPath !== undefined) {
+            directories = TemplativeAccessTools.getOutputDirectories(this.props.templativeRootDirectoryPath)
         }
         var outputDirectoryDivs = directories.map((directory) => {
             return <div onClick={()=>this.selectDirectory(directory)} className={this.state.selectedDirectory === directory ? "directory selected" : "directory"} key={directory}> 
@@ -76,8 +77,8 @@ export default class RenderPanel extends React.Component {
         })
 
         var components = []
-        if (this.props.templativeProject !== undefined) {
-            components = this.props.templativeProject.componentCompose
+        if (this.props.templativeRootDirectoryPath !== undefined) {
+            components = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")
         }
         var componentDirectoryDivs = components.map((component) => {
             return <div onClick={()=>this.toggleComponent(component.name)} className={this.state.selectedComponent === component.name ? "directory selected" : "directory"} key={component.name}> 
@@ -86,7 +87,7 @@ export default class RenderPanel extends React.Component {
         })
         var componentDirectories = []
         if (this.state.selectedDirectory !== undefined) {
-            componentDirectories = this.props.templativeProject.getOutputDirectoriesComponentDirectories(this.state.selectedDirectory)
+            componentDirectories = TemplativeAccessTools.getOutputDirectoriesComponentDirectories(this.props.templativeRootDirectoryPath, this.state.selectedDirectory)
         } 
         return <div className='renderPanel row'>
             <div className="col-4 directoryPanel">

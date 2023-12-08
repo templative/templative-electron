@@ -3,7 +3,7 @@ import "./ResourceHeader.css"
 
 export default class ResourceHeader extends React.Component {   
     state = {
-        isHovering: true
+        isHovering: false
     }
     handleMouseOver = () => {
         this.setState({isHovering: true})

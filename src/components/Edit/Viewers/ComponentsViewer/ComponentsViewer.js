@@ -1,7 +1,9 @@
 import React from "react";
 import ComponentItemEditable from "./ComponentItemEditable"
 import "./ComponentViewer.css"
+import TemplativeAccessTools from "../../../TemplativeAccessTools";
 const fs = window.require("fs")
+const path = window.require("path")
 
 const sortComponents = (a, b) => {
     var aCode = `${a.type}${a.name}`
@@ -17,14 +19,19 @@ const sortComponents = (a, b) => {
 
 export default class ComponentsViewer extends React.Component {   
     state = {
-        components: this.props.components.sort(sortComponents),
+        components: [],
         floatingName: undefined,
         floatingNameIndex: undefined
     }
 
     saveDocument() {
         var newFileContents = JSON.stringify(this.state.components, null, 4)
-        fs.writeFileSync(this.props.componentsFilepath, newFileContents, 'utf-8')
+
+        var componentComposeFilepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json")
+        // fs.writeFileSync(componentComposeFilepath, newFileContents, 'utf-8')
+    }
+    componentDidMount() {
+        this.setState({components: TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")})
     }
     componentWillUnmount(){
         this.saveDocument()
