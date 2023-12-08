@@ -6,3 +6,20 @@
     margin: 0 1em 0.5em 1em;
     color:#cfcfcf !important;
 }
+
+.new-file-wrapper {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.new-file-input-group {
+    margin-bottom: 0.15em !important; 
+}
+.new-file-input {
+    height: 24px;
+    outline: none;
+}
+.new-file-input, .new-file-input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border:0px !important;
+}

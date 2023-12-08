@@ -1,24 +1,37 @@
 .resourcesHeaderWrapper {
     width: 100%;
-    /* background-color: #262b31; */
-    padding: 0em 0.1em 0em 0.5em !important;
+    padding: 0.1em 0.2em 0.1em 0.5em !important;
     border-bottom: solid #313540;
     border-width: 1px;
-    height: 1em !important;
-    /* margin-left:0.5em; */
+    height:1em !important;
     margin-bottom:0.2em;
 }
 .resourcesHeader {
     font-size:14px;
-    /* float:left; */
     text-align: left;
+    height: 100%;
     margin:0;
 }
+.resourceHeaderContent {
+    vertical-align: top;
+    display: inline-block;
+    height: 100%;
+    width: calc(100% - 1em);
+}
+.resourceHeaderControls {
+    vertical-align: top;
+    display: inline-block;
+    height: 100%;
+    width: 1em;
+    align-items: right;
+}
 .add-file-button {
-    float:right;
-    height: 20px;
+    vertical-align: top;
+    height: 100%;
+    width:1em;
+    float: right;
+    text-align: right;
     padding:0 !important;
-    /* height:20px; */
     border: 0 !important;
     background-color: #2b3037 !important;
 }

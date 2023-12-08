@@ -3,7 +3,7 @@ import "./ResourceHeader.css"
 
 export default class ResourceHeader extends React.Component {   
     state = {
-        isHovering: false
+        isHovering: true
     }
     handleMouseOver = () => {
         this.setState({isHovering: true})
@@ -17,17 +17,23 @@ export default class ResourceHeader extends React.Component {
     render() {
         return <div className="resourcesHeaderWrapper" onMouseOver={this.handleMouseOver}
         onMouseLeave={this.handleMouseOut}>
-            <p className="resourcesHeader">
-                {this.props.header}
-            </p>
-            {this.state.isHovering &&
-                <>
-                {this.props.directory !== undefined &&
-                    <button onClick={()=> this.openFolder()}className="btn btn-dark add-file-button">🡭</button>
+            <div className="resourceHeaderContent" >
+                <p className="resourcesHeader">
+                    {this.props.header}
+                </p>
+            </div>
+            <div className="resourceHeaderControls" >
+                {this.state.isHovering &&
+                    <>
+                    {this.props.directory !== undefined &&
+                        <button onClick={()=> this.openFolder()}className="btn btn-dark add-file-button">🡭</button>
+                    }
+                    {this.props.createFileCallback !== undefined &&
+                        <button onClick={()=> this.props.createFileCallback()}className="btn btn-dark add-file-button">+</button>
+                    }
+                    </>
                 }
-                <button onClick={()=> this.props.createFileCallback()}className="btn btn-dark add-file-button">+</button>
-                </>
-            }
+            </div>
         </div> 
     }
 }
