@@ -1,5 +1,5 @@
 const { app, BrowserWindow, Menu, ipcMain  } = require('electron')
-// const { spawn } = require('child_process');
+const { spawn } = require('child_process');
 const {mainMenu} = require("./menuMaker")
 const {listenForRenderEvents} = require("./listenForRenderEvents")
 var axios  = require('axios');
@@ -12,7 +12,8 @@ const createWindow = () => {
         nodeIntegration: true,
         contextIsolation: false,
         webSecurity: false
-      }
+      },
+      icon: __dirname + "/favicon.ico"
     })
   
     Menu.setApplicationMenu(mainMenu);
@@ -23,7 +24,7 @@ const createWindow = () => {
 
 app.whenReady().then(async () => {
     
-    // spawn(`python ./app.py 3001`, { detached: true, shell: true, stdio: 'inherit' });
+    spawn(`python ./app.py 3001`, { detached: true, shell: false, stdio: 'inherit' });
     
     createWindow()
     app.on('activate', () => {
