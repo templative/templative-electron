@@ -45,7 +45,8 @@ export default class ArtdataViewer extends React.Component {
     }
     addArtdataItem(artdataType){
         var newArtdataContents = this.state.artdataFile
-        newArtdataContents[artdataType].push(DEFAULT_ARTDATA_ITEMS[artdataType])
+        var newArtdataItem = structuredClone(DEFAULT_ARTDATA_ITEMS[artdataType])
+        newArtdataContents[artdataType].push(newArtdataItem)
         this.setState({
             artdataFile: newArtdataContents
         })
@@ -53,6 +54,7 @@ export default class ArtdataViewer extends React.Component {
     deleteArtdata(artdataType, index) {
         var newArtdataContents = this.state.artdataFile
         newArtdataContents[artdataType].splice(index, 1)
+        console.log(newArtdataContents)
         this.setState({
             artdataFile: newArtdataContents
         })
