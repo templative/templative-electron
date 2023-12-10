@@ -1,11 +1,15 @@
 const { app, BrowserWindow, Menu, ipcMain  } = require('electron')
+var kill  = require('tree-kill');
 const { spawn } = require('child_process');
 const {mainMenu} = require("./menuMaker")
 const {listenForRenderEvents} = require("./listenForRenderEvents")
 var axios  = require('axios');
 
+var pythonProcess = undefined
+var templativeWindow = undefined
+
 const createWindow = () => {
-    const win = new BrowserWindow({
+    templativeWindow = new BrowserWindow({
       width: 1920,
       height: 1080,
       webPreferences: {
@@ -17,15 +21,15 @@ const createWindow = () => {
     })
   
     Menu.setApplicationMenu(mainMenu);
-    win.loadURL('http://localhost:3000');
-    win.webContents.openDevTools()
-    ipcMain.on('app-quit', (_event, _arg) => shutdown());
-  }
+    templativeWindow.loadURL('http://localhost:3000');
+    templativeWindow.webContents.openDevTools()
+    templativeWindow.on("close", () => {
+        shutdown()
+    })
+}
 
 app.whenReady().then(async () => {
-    
-    spawn(`python ./app.py 3001`, { detached: true, shell: false, stdio: 'inherit' });
-    
+    pythonProcess = spawn(`python ./app.py`, { detached: false, shell: true, stdio: 'inherit' });
     createWindow()
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) createWindow()
@@ -33,14 +37,13 @@ app.whenReady().then(async () => {
 
 })
 const shutdown = () => {
-  axios.get(`http://localhost:8080/quit`)
-    .then(app.quit)
-    .catch(app.quit);
+    kill(pythonProcess.pid)
 };
 app.on('window-all-closed', async () => {
     if (process.platform !== 'darwin') {
       shutdown()
     }
 })
+
 
 listenForRenderEvents()
