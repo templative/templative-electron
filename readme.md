@@ -1,6 +1,6 @@
-# Setup
+# Development
 
-# Launching the python server
+## Launching the python server
 - `pipenv install`
 - `pipenv run python app.py`
 
@@ -14,5 +14,9 @@
 - `pipenv install`
 - `pipenv run python app.py`
 
+# Outputing
+
+- `npm run make`
+- Check the `./out` folder
 
 templative = {file = "file:///C:/Users/User/Documents/git/nextdaygames/templative"}

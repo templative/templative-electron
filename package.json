@@ -1,8 +1,14 @@
 {
-  "name": "templative-react",
+  "name": "templative-frontend",
+  "description": "Electron frontend for the Templative CLI.",
   "version": "0.1.0",
   "private": true,
   "main": "public/main.js",
+  "author": {
+    "name": "Oliver Barnum",
+    "email": "obarnum@nextday.games",
+    "url": "https://www.nextday.games"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -10,7 +16,7 @@
     "axios": "^1.6.2",
     "bootstrap": "^5.3.2",
     "death": "^1.1.0",
-    "electron": "^27.1.2",
+    "electron-squirrel-startup": "^1.0.0",
     "fs": "^0.0.1-security",
     "get-port": "^7.0.0",
     "os": "^0.1.2",
@@ -30,7 +36,9 @@
     "react-test": "react-scripts test",
     "react-eject": "react-scripts eject",
     "templative": "python app.py",
-    "electron": "electron ."
+    "electron": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "eslintConfig": {
     "extends": [
@@ -49,5 +57,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.2.0",
+    "@electron-forge/maker-deb": "^7.2.0",
+    "@electron-forge/maker-rpm": "^7.2.0",
+    "@electron-forge/maker-squirrel": "^7.2.0",
+    "@electron-forge/maker-zip": "^7.2.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
+    "electron": "^27.1.3"
   }
 }
