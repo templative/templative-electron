@@ -1,10 +1,10 @@
-const { app, BrowserWindow, Menu, ipcMain  } = require('electron')
+const { app, BrowserWindow, Menu } = require('electron')
 var kill  = require('tree-kill');
 const { spawn } = require('child_process');
 const {mainMenu} = require("./menuMaker")
 const {listenForRenderEvents} = require("./listenForRenderEvents")
-var axios  = require('axios');
 
+var reactProcess = undefined
 var pythonProcess = undefined
 var templativeWindow = undefined
 
@@ -29,6 +29,7 @@ const createWindow = () => {
 }
 
 app.whenReady().then(async () => {
+    reactProcess = spawn(`react-scripts start`, { detached: false, shell: true, stdio: 'inherit' });
     pythonProcess = spawn(`python ./app.py`, { detached: false, shell: true, stdio: 'inherit' });
     createWindow()
     app.on('activate', () => {
@@ -37,6 +38,7 @@ app.whenReady().then(async () => {
 
 })
 const shutdown = () => {
+    kill(reactProcess.pid)
     kill(pythonProcess.pid)
 };
 app.on('window-all-closed', async () => {
