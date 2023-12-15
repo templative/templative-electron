@@ -8,8 +8,21 @@ python-socketio = "*"
 aiohttp = "*"
 aiohttp-cors = "*"
 setuptools = "*"
-templative = {file = "file:///C:/Users/User/Documents/git/nextdaygames/templative"}
 gitpython = "*"
+templative = {path = "./dependencies/templative-0.0.1.tar.gz"}
+aiofile = "*"
+asyncclick = "*"
+fpdf = "*"
+fpdf2 = "*"
+markdown2 = "*"
+pillow = "*"
+svgmanip = "*"
+svgutils = "*"
+tabulate = "*"
+wand = "*"
+weasyprint = "*"
+cairosvg = "*"
+anyio = "*"
 
 [dev-packages]
 
