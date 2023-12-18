@@ -7,6 +7,10 @@ from EmitPrintStatements import EmitPrintStatements
 
 routes = web.RouteTableDef()
 
+@routes.get("/status")
+async def getStatus(request):
+  return web.Response(status=200)
+
 @routes.post("/project") 
 async def createProject(request):
   data = await request.json()
