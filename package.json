@@ -28,7 +28,7 @@
     "socket.io": "^4.5.1",
     "socket.io-client": "^4.5.1",
     "tree-kill": "^1.2.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^3.5.0"
   },
   "scripts": {
     "react": "react-scripts start",
