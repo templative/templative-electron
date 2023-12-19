@@ -39,7 +39,7 @@ export default class ArtItem extends React.Component {
             <p className="artItem" onClick={callback}>
                 {this.parsePathForCommonPath()} 
                 {this.state.isHovering &&
-                    <button onClick={()=> this.openFile()}className="btn btn-dark goto">🡭</button>
+                    <button onClick={()=> this.openFile()}className="btn btn-dark goto">↗️</button>
                 }
             </p>
         </div>

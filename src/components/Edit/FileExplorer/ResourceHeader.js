@@ -26,7 +26,7 @@ export default class ResourceHeader extends React.Component {
                 {this.state.isHovering &&
                     <>
                     {this.props.directory !== undefined &&
-                        <button onClick={()=> this.openFolder()}className="btn btn-dark add-file-button">🡭</button>
+                        <button onClick={()=> this.openFolder()}className="btn btn-dark add-file-button">↗️</button>
                     }
                     {this.props.createFileCallback !== undefined &&
                         <button onClick={()=> this.props.createFileCallback()}className="btn btn-dark add-file-button">+</button>
