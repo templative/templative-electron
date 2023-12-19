@@ -32,7 +32,7 @@ class App extends React.Component {
         var homeDirectory = os.homedir() 
         var templativeSettingsDirectoryPath = path.join(homeDirectory, "Documents/templative")
         if (!fs.existsSync(templativeSettingsDirectoryPath)) {
-            fs.mkdir(getDirName(templativeSettingsPath), { recursive: true }, (err) => {});
+            fs.mkdir(getDirName(templativeSettingsDirectoryPath), { recursive: true }, (err) => {});
         }
         var templativeSettingsPath = path.join(templativeSettingsDirectoryPath, "settings.json")
         if (!fs.existsSync(templativeSettingsPath)) {

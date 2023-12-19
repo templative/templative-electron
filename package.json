@@ -9,6 +9,17 @@
     "email": "obarnum@nextday.games",
     "url": "https://www.nextday.games"
   },
+  "scripts": {
+    "react": "react-scripts start",
+    "react-test": "react-scripts test",
+    "react-eject": "react-scripts eject",
+    "python": "python ./python/app.py",
+    "electron": "electron-forge start",
+    "package": "electron-forge package",
+    "react-build": "react-scripts build",
+    "make": "electron-forge make",
+    "exe": "npm run react-build && npm run make"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -25,20 +36,21 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.0",
     "react-scripts": "5.0.1",
+    "serve": "^14.2.1",
     "socket.io": "^4.5.1",
     "socket.io-client": "^4.5.1",
     "tree-kill": "^1.2.2",
     "web-vitals": "^3.5.0"
   },
-  "scripts": {
-    "react": "react-scripts start",
-    "react-build": "react-scripts build",
-    "react-test": "react-scripts test",
-    "react-eject": "react-scripts eject",
-    "python": "python ./python/app.py",
-    "electron": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make"
+  "devDependencies": {
+    "@electron-forge/cli": "^7.2.0",
+    "@electron-forge/maker-deb": "^7.2.0",
+    "@electron-forge/maker-rpm": "^7.2.0",
+    "@electron-forge/maker-squirrel": "^7.2.0",
+    "@electron-forge/maker-zip": "^7.2.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
+    "electron": "^27.1.3",
+    "electron-prebuilt-compile": "8.2.0"
   },
   "eslintConfig": {
     "extends": [
@@ -57,14 +69,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@electron-forge/cli": "^7.2.0",
-    "@electron-forge/maker-deb": "^7.2.0",
-    "@electron-forge/maker-rpm": "^7.2.0",
-    "@electron-forge/maker-squirrel": "^7.2.0",
-    "@electron-forge/maker-zip": "^7.2.0",
-    "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
-    "electron": "^27.1.3"
   }
 }

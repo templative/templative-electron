@@ -63,7 +63,7 @@ const launchServers = async () => {
     var pythonServerCommand = `python3 ${app.isPackaged ? process.resourcesPath : "."}/python/app.py`
     pythonProcess = spawn(pythonServerCommand, { detached: false, shell: true, stdio: 'inherit' });
     
-    var reactServerCommand = app.isPackaged ? `serve -s ${process.resourcesPath}/build` : `react-scripts start`
+    var reactServerCommand = app.isPackaged ? `npx run serve -s ${process.resourcesPath}/build` : `react-scripts start`
     reactProcess = spawn(reactServerCommand, { detached: false, shell: true, stdio: 'inherit' });
     await waitforhost("http://localhost:8080/status", 2000, 10)
     await waitforhost("http://127.0.0.1:3000", 2000, 10)

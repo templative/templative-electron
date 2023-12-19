@@ -1,6 +1,10 @@
 module.exports = {
   packagerConfig: {
     asar: true,
+    extraResource: [
+      "./build",
+      "./python"
+     ]
   },
   rebuildConfig: {},
   makers: [
