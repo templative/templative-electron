@@ -3,7 +3,6 @@ var kill  = require('tree-kill');
 const { spawn } = require('child_process');
 const {mainMenu} = require("./menuMaker")
 const {listenForRenderEvents} = require("./listenForRenderEvents")
-var axios  = require('axios');
 
 var reactProcess = undefined
 var pythonProcess = undefined
@@ -60,11 +59,14 @@ const waitforhost = async (url, interval = 1000, attempts = 10) => {
   })
 }
 const launchServers = async () => {
-  reactProcess = spawn(`react-scripts start`, { detached: false, shell: true, stdio: 'inherit' });
-  pythonProcess = spawn(`python3 ./python/app.py`, { detached: false, shell: true, stdio: 'inherit' });
   try {
-    await waitforhost("http://127.0.0.1:3000", 2000, 10)
+    var pythonServerCommand = `python3 ${app.isPackaged ? process.resourcesPath : "."}/python/app.py`
+    pythonProcess = spawn(pythonServerCommand, { detached: false, shell: true, stdio: 'inherit' });
+    
+    var reactServerCommand = app.isPackaged ? `serve -s ${process.resourcesPath}/build` : `react-scripts start`
+    reactProcess = spawn(reactServerCommand, { detached: false, shell: true, stdio: 'inherit' });
     await waitforhost("http://localhost:8080/status", 2000, 10)
+    await waitforhost("http://127.0.0.1:3000", 2000, 10)
     
     console.log(`Servers are up`)
     return 1
@@ -78,7 +80,7 @@ app.whenReady().then(async () => {
   var serverStartResult = await launchServers()
   if (serverStartResult == 0) {
     console.log("Failure!")
-    // shutdown()
+    shutdown()
     return
   }
   createWindow()
