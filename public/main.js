@@ -61,7 +61,7 @@ const waitforhost = async (url, interval = 1000, attempts = 10) => {
 }
 const launchServers = async () => {
   reactProcess = spawn(`react-scripts start`, { detached: false, shell: true, stdio: 'inherit' });
-  pythonProcess = spawn(`python ./app.py`, { detached: false, shell: true, stdio: 'inherit' });
+  pythonProcess = spawn(`python3 ./python/app.py`, { detached: false, shell: true, stdio: 'inherit' });
   try {
     await waitforhost("http://127.0.0.1:3000", 2000, 10)
     await waitforhost("http://localhost:8080/status", 2000, 10)

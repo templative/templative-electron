@@ -11,6 +11,7 @@
 - `npm run electron-dev`
 
 ## Server
+- `cd python`
 - `pipenv install`
 - `pipenv run python app.py`
 
