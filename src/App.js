@@ -32,10 +32,11 @@ class App extends React.Component {
         var homeDirectory = os.homedir() 
         var templativeSettingsDirectoryPath = path.join(homeDirectory, "Documents/templative")
         if (!fs.existsSync(templativeSettingsDirectoryPath)) {
-            return undefined
+            fs.mkdir(getDirName(templativeSettingsPath), { recursive: true }, (err) => {});
         }
         var templativeSettingsPath = path.join(templativeSettingsDirectoryPath, "settings.json")
         if (!fs.existsSync(templativeSettingsPath)) {
+            this.writeLastOpenedProject(undefined)
             return undefined
         } 
         var settings = JSON.parse(fs.readFileSync(templativeSettingsPath, 'utf8'));
@@ -46,7 +47,7 @@ class App extends React.Component {
         var templativeSettingsPath = path.join(homeDirectory, "Documents/Templative/settings.json")
         var newFileContents = JSON.stringify({lastProjectDirectory: lastProjectDirectory}, null, 4)
         
-        fs.mkdir(getDirName(templativeSettingsPath), { recursive: true}, (err) => {});
+        fs.mkdir(getDirName(templativeSettingsPath), { recursive: true }, (err) => {});
         fs.writeFileSync(templativeSettingsPath, newFileContents, 'utf-8');
     }
 
