@@ -44,10 +44,13 @@ class App extends React.Component {
     }
     writeLastOpenedProject(lastProjectDirectory) {
         var homeDirectory = os.homedir() 
-        var templativeSettingsPath = path.join(homeDirectory, "Documents/Templative/settings.json")
-        var newFileContents = JSON.stringify({lastProjectDirectory: lastProjectDirectory}, null, 4)
+        var templativeSettingsDirectoryPath = path.join(homeDirectory, "Documents/Templative")
+        if (!fs.existsSync(templativeSettingsDirectoryPath)) {
+            fs.mkdir(getDirName(templativeSettingsDirectoryPath), { recursive: true }, (err) => {});
+        }
         
-        fs.mkdir(getDirName(templativeSettingsPath), { recursive: true }, (err) => {});
+        var templativeSettingsPath = path.join(templativeSettingsDirectoryPath, "settings.json")
+        var newFileContents = JSON.stringify({lastProjectDirectory: lastProjectDirectory}, null, 4)
         fs.writeFileSync(templativeSettingsPath, newFileContents, 'utf-8');
     }
 
