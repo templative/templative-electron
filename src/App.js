@@ -24,7 +24,7 @@ class App extends React.Component {
     async openTemplativeDirectoryPicker() {
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG)
     }
-    async openCreateTemplativeAccessToolsDirectoryPicker() {
+    async openCreateTemplativeProjectDirectoryPicker() {
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_CREATE_PROJECT_DIALOG)
     }
 
@@ -88,7 +88,7 @@ class App extends React.Component {
                 { this.state.templativeRootDirectoryPath !== undefined ? 
                     <EditProjectView templativeRootDirectoryPath={this.state.templativeRootDirectoryPath}/> :
                     <StartView 
-                        openCreateTemplativeAccessToolsDirectoryPickerCallback={()=> this.openCreateTemplativeAccessToolsDirectoryPicker()}
+                        openCreateTemplativeProjectDirectoryPickerCallback={()=> this.openCreateTemplativeProjectDirectoryPicker()}
                         openTemplativeDirectoryPickerCallback={() => this.openTemplativeDirectoryPicker()}/>
                 }
             </div>
