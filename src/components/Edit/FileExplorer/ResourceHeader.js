@@ -1,5 +1,6 @@
 import React from "react";
 import "./ResourceHeader.css"
+const {shell} = window.require('electron')
 
 export default class ResourceHeader extends React.Component {   
     state = {
@@ -12,7 +13,7 @@ export default class ResourceHeader extends React.Component {
         this.setState({isHovering: false})
     }
     openFolder() {
-        window.require('child_process').exec(`start "" "${this.props.directory}"`);
+        shell.openPath(this.props.directory);
     }
     render() {
         return <div className="resourcesHeaderWrapper" onMouseOver={this.handleMouseOver}
