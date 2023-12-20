@@ -5,6 +5,7 @@ import "./RenderPanel.css"
 import {socket} from "../../socket"
 import RenderOutput from "./RenderOutput"
 import TemplativeAccessTools from "../TemplativeAccessTools";
+import RenderOutputOption from "./RenderOutputOption";
 
 export default class RenderPanel extends React.Component {   
     state={
@@ -72,9 +73,7 @@ export default class RenderPanel extends React.Component {
             directories = TemplativeAccessTools.getOutputDirectories(this.props.templativeRootDirectoryPath)
         }
         var outputDirectoryDivs = directories.map((directory) => {
-            return <div onClick={()=>this.selectDirectory(directory)} className={this.state.selectedDirectory === directory ? "directory selected" : "directory"} key={directory}> 
-                <p className="directory-item">{directory}</p>
-            </div>
+            return <RenderOutputOption directory={directory} key={directory.name} selectDirectory={this.selectDirectory}/>
         })
 
         var components = []

@@ -33,7 +33,7 @@ export default class TemplativeAccessTools {
         var outputDirectory = path.join(templativeRootDirectoryPath, gameCompose["outputDirectory"])
         var directories = fs.readdirSync(outputDirectory, { withFileTypes: true })
             .filter(dirent => dirent.isDirectory())
-            .map(dirent => dirent.name)
+            .map(dirent => dirent)
         return directories;
     }
     static getOutputDirectoriesComponentDirectories(templativeRootDirectoryPath, individualOutputDirectoryPath) {
