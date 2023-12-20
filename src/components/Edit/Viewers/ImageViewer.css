@@ -2,3 +2,13 @@ img {
     border: 1px solid #313540;
     width:100%;
 }
+.stretchedImage {
+    width: calc(100% - 2em) !important;
+    height: calc(100% - 2em) !important;
+    object-fit: cover;
+    overflow: hidden;
+    margin:1em 1em 1em 1em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #313540;
+}

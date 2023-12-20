@@ -8,7 +8,9 @@ export default class ImageViewer extends React.Component {
                 <div className="row">
                     <h1>{this.props.filename}</h1>
                 </div>
-                <img src={this.props.currentFilepath} alt=""/>
+                <div className="row">
+                    <img className="stretchedImage" src={`file://${this.props.currentFilepath}`} alt=""/>
+                </div>
             </div>
         </div> 
     }
