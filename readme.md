@@ -10,11 +10,14 @@ electron forge packages both servers into the resources included with the electr
 node code running teh electron app spins up both servers locally to serve react and templative stuff
 the user doesnt need to install the templative electron app, python, node, or etc
 
+![Systems Diagram](SystemsDiagram.png)
+
 ## Loading Templative Into
 
-Go to templative, run `python -m build`
-Copy the `/dist` folder into `/python/dependencies` of templative electron
-In `/python` run `pyinstaller --onefile app.py --paths ./dependencies --hidden-import engineio.async_drivers.aiohttp --hidden-import engineio.async_aiohttp`
+- Go to templative, run `python -m build`
+- Copy the `/dist` folder into `/python/dependencies` of templative electron
+- In `/python` run `pyinstaller --onefile app.py --paths ./dependencies --hidden-import engineio.async_drivers.aiohttp --hidden-import engineio.async_aiohttp`
+- Test it by running `python/dist/app`
 
 ## Running Production React Server
 
