@@ -64,12 +64,14 @@ const launchServers = async () => {
     var pythonDevServerCommand = `python3 ./python/app.py`
     var pythonServerCommand = app.isPackaged ? pythonProductionServerCommand : pythonDevServerCommand
     pythonProcess = spawn(pythonServerCommand, { detached: false, shell: true, stdio: 'inherit' });
+    console.log(pythonServerCommand)
+    await waitforhost("http://localhost:8080/status", 2000, 20)
     
     var reactProductionServerCommand = `npx serve -s ${process.resourcesPath}/build`
     var reactDevServerCommand = `react-scripts start`
     var reactServerCommand = app.isPackaged ? reactProductionServerCommand : reactDevServerCommand
     reactProcess = spawn(reactServerCommand, { detached: false, shell: true, stdio: 'inherit' });
-    await waitforhost("http://localhost:8080/status", 2000, 20)
+    console.log(reactServerCommand)
     await waitforhost("http://127.0.0.1:3000", 2000, 20)
     
     console.log(`Servers are up`)
