@@ -2,6 +2,20 @@
 
 - `npm install`
 
+## How to Get a Standalone package
+
+templative -> build a whl file -> python server installs whl file -> pyinstaller packages python and pip dependencies in a all-in-one python server file
+react build a production server
+electron forge packages both servers into the resources included with the electron pkg
+node code running teh electron app spins up both servers locally to serve react and templative stuff
+the user doesnt need to install the templative electron app, python, node, or etc
+
+## Loading Templative Into
+
+Go to templative, run `python -m build`
+Copy the `/dist` folder into `/python/dependencies` of templative electron
+In `/python` run `pyinstaller --onefile app.py --paths ./dependencies --hidden-import engineio.async_drivers.aiohttp --hidden-import engineio.async_aiohttp`
+
 ## Running Production React Server
 
 ```

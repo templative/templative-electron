@@ -60,13 +60,17 @@ const waitforhost = async (url, interval = 1000, attempts = 10) => {
 }
 const launchServers = async () => {
   try {
-    var pythonServerCommand = `python3 ${app.isPackaged ? process.resourcesPath : "."}/python/app.py`
+    var pythonProductionServerCommand = `${process.resourcesPath}/python/dist/app`
+    var pythonDevServerCommand = `python3 ./python/app.py`
+    var pythonServerCommand = app.isPackaged ? pythonProductionServerCommand : pythonDevServerCommand
     pythonProcess = spawn(pythonServerCommand, { detached: false, shell: true, stdio: 'inherit' });
     
-    var reactServerCommand = app.isPackaged ? `npx run serve -s ${process.resourcesPath}/build` : `react-scripts start`
+    var reactProductionServerCommand = `npx serve -s ${process.resourcesPath}/build`
+    var reactDevServerCommand = `react-scripts start`
+    var reactServerCommand = app.isPackaged ? reactProductionServerCommand : reactDevServerCommand
     reactProcess = spawn(reactServerCommand, { detached: false, shell: true, stdio: 'inherit' });
-    await waitforhost("http://localhost:8080/status", 2000, 10)
-    await waitforhost("http://127.0.0.1:3000", 2000, 10)
+    await waitforhost("http://localhost:8080/status", 2000, 20)
+    await waitforhost("http://127.0.0.1:3000", 2000, 20)
     
     console.log(`Servers are up`)
     return 1
