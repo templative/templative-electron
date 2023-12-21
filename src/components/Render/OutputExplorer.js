@@ -15,7 +15,8 @@ export default class OutputExplorer extends React.Component {
                         var imagePath = path.join(dirent.path, dirent.name)
                         return <img className="outputImage" alt="" key={imagePath} src={`file://${imagePath}`}/>
                     })
-                var directoryName = dirent.substring(dirent.lastIndexOf('\\') + 1)
+                var directoryName = dirent.replace("\\", "/")
+                directoryName = dirent.substring(dirent.lastIndexOf('/') + 1)
                 return <div key={dirent} className="renderedComponent">
                     <p className="renderedComponentTitle">{directoryName}</p>
                     {imageDivs}
@@ -27,7 +28,8 @@ export default class OutputExplorer extends React.Component {
                 <div className="row">
                     <h3 className="outputFolderName">{this.props.outputFolderPath}</h3>
                 </div>
-                <div className="row">
+                <div className="row renderedComponentsRow">
+                    {/* <div className="testDiv"/> */}
                     {componentDirectoryDivs}
                 </div>
             </div>

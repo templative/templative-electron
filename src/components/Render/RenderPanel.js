@@ -113,9 +113,11 @@ export default class RenderPanel extends React.Component {
                 <div className="headerWrapper">
                     <p className="resourcesHeader">Output</p>
                 </div> 
-                {outputDirectoryDivs}
+                <div className="outputFolderOptions">
+                    {outputDirectoryDivs}
+                </div>
             </div>  
-            <div className="col-8">
+            <div className="col-8 outputPanel">
                 <OutputExplorer outputFolderPath={this.state.selectedDirectory} componentDirectories={componentDirectories}/>
             </div>        
         </div>
