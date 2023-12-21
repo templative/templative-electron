@@ -13,7 +13,7 @@ export default class OutputExplorer extends React.Component {
                     .filter(dirent => !dirent.isDirectory() && dirent.name.split(".").pop() === "png")
                     .map(dirent => {
                         var imagePath = path.join(dirent.path, dirent.name)
-                        return <img className="outputImage" alt="" key={imagePath} src={imagePath}/>
+                        return <img className="outputImage" alt="" key={imagePath} src={`file://${imagePath}`}/>
                     })
                 var directoryName = dirent.substring(dirent.lastIndexOf('\\') + 1)
                 return <div key={dirent} className="renderedComponent">
