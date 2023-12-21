@@ -13,12 +13,13 @@
     "react": "react-scripts start",
     "react-test": "react-scripts test",
     "react-eject": "react-scripts eject",
+    "react-build": "react-scripts build",
     "python": "python ./python/app.py",
+    "python-build": "pyinstaller --onefile ./python/app.py --paths ./python/dependencies --hidden-import engineio.async_drivers.aiohttp --hidden-import engineio.async_aiohttp",
     "electron": "electron-forge start",
     "package": "electron-forge package",
-    "react-build": "react-scripts build",
     "make": "electron-forge make",
-    "exe": "npm run react-build && npm run make"
+    "exe": "npm run python-build && npm run react-build && npm run make"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
