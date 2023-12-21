@@ -46,7 +46,13 @@ serve -s build
 
 # Clean dev env
 
+## Removing installed packages
 - `npm ls -gp --depth=0 | awk -F/ '/node_modules/ && !/\/npm$/ {print $NF}' | sudo xargs npm -g rm`
 - `pip freeze | cut -d "@" -f1 | xargs pip uninstall -y`
+
+## Remove stuff at port
+
+- `lsof -i tcp:3000`
+- `lsof -i tcp:8080`
 
 templative = {file = "file:///C:/Users/User/Documents/git/nextdaygames/templative"}
