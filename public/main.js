@@ -61,7 +61,8 @@ const waitforhost = async (url, interval = 1000, attempts = 10) => {
 const launchServers = async () => {
   try {
     var pythonProductionServerCommand = `${process.resourcesPath}/python/__main__ serve --port 8080`
-    var pythonDevServerCommand = `templative serve --port 8080`
+    var pythonGlobalDevServerCommand = `templative serve --port 8080`
+    var pythonDevServerCommand = `./python/__main__ serve --port 8080`
     // var pythonBuiltServerCommand = `/Users/oliverbarnum/Documents/git/templative-electron/python/dist/app/app` 
     var pythonServerCommand = app.isPackaged ? pythonProductionServerCommand : pythonDevServerCommand
     pythonProcess = spawn(pythonServerCommand, { detached: false, shell: true, stdio: 'inherit' });
@@ -69,6 +70,7 @@ const launchServers = async () => {
     await waitforhost("http://localhost:8080/status", 2000, 20)
     
     var reactProductionServerCommand = `npx serve -s ${process.resourcesPath}/build`
+    var reactBuiltServerCommand = `npx serve -s ./build`
     var reactDevServerCommand = `react-scripts start`
     var reactServerCommand = app.isPackaged ? reactProductionServerCommand : reactDevServerCommand
     reactProcess = spawn(reactServerCommand, { detached: false, shell: true, stdio: 'inherit' });
@@ -94,7 +96,6 @@ app.whenReady().then(async () => {
   app.on('activate', () => {
       if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
-
 })
 const shutdown = () => {
     kill(reactProcess.pid)
