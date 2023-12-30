@@ -60,8 +60,9 @@ const waitforhost = async (url, interval = 1000, attempts = 10) => {
 }
 const launchServers = async () => {
   try {
-    var pythonProductionServerCommand = `${process.resourcesPath}/python/dist/app`
-    var pythonDevServerCommand = `python3 ./python/app.py`
+    var pythonProductionServerCommand = `${process.resourcesPath}/python/__main__ serve --port 8080`
+    var pythonDevServerCommand = `templative serve --port 8080`
+    // var pythonBuiltServerCommand = `/Users/oliverbarnum/Documents/git/templative-electron/python/dist/app/app` 
     var pythonServerCommand = app.isPackaged ? pythonProductionServerCommand : pythonDevServerCommand
     pythonProcess = spawn(pythonServerCommand, { detached: false, shell: true, stdio: 'inherit' });
     console.log(pythonServerCommand)
