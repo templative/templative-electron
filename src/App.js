@@ -30,7 +30,7 @@ class App extends React.Component {
 
     attemptToGetLastProjectDirectory() {
         var homeDirectory = os.homedir() 
-        var templativeSettingsDirectoryPath = path.join(homeDirectory, "Documents/templative")
+        var templativeSettingsDirectoryPath = path.join(homeDirectory, "Documents/Templative")
         if (!fs.existsSync(templativeSettingsDirectoryPath)) {
             fs.mkdir(templativeSettingsDirectoryPath, { recursive: true }, (err) => {});
         }
