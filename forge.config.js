@@ -3,6 +3,7 @@ module.exports = {
     asar: true,
     extraResource: [
       "./build",
+      "./bin",
       "./python"
      ]
   },
