@@ -93,8 +93,8 @@ const launchServers = async () => {
     console.log(pythonServerCommand)
     await waitforhost("http://localhost:8080/status", 2000, 20)
     
-    var reactProductionServerCommand = `npx serve -s ${process.resourcesPath}/build`
-    var reactBuiltServerCommand = `npx serve -s ./build`
+    var reactProductionServerCommand = `npx --yes serve -s ${process.resourcesPath}/build`
+    var reactBuiltServerCommand = `npx --yes serve -s ./build`
     var reactDevServerCommand = `react-scripts start`
     var reactServerCommand = app.isPackaged ? reactProductionServerCommand : reactDevServerCommand
     reactProcess = spawn(reactServerCommand, { detached: false, shell: true, stdio: 'inherit' });
