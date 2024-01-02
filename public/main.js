@@ -92,9 +92,9 @@ const launchServers = async () => {
     var pythonDevServerCommand = `./python/__main__ serve --port 8080`
     // var pythonBuiltServerCommand = `/Users/oliverbarnum/Documents/git/templative-electron/python/dist/app/app` 
     var pythonServerCommand = app.isPackaged ? pythonProductionServerCommand : pythonDevServerCommand
-    pythonProcess = spawn(pythonServerCommand, { detached: false, shell: true, stdio: 'inherit' });
-    console.log(pythonServerCommand)
-    await waitforhost("http://localhost:8080/status", 2000, 20)
+    // pythonProcess = spawn(pythonServerCommand, { detached: false, shell: true, stdio: 'inherit' });
+    // console.log(pythonServerCommand)
+    // await waitforhost("http://localhost:8080/status", 2000, 20)
     
     var reactProductionServerCommand = `npx --yes serve -s ${process.resourcesPath}/build`
     var reactBuiltServerCommand = `npx --yes serve -s ./build`
@@ -128,7 +128,7 @@ app.whenReady().then(async () => {
 })
 const shutdown = () => {
     kill(reactProcess.pid)
-    kill(pythonProcess.pid)
+    // kill(pythonProcess.pid)
 };
 app.on('window-all-closed', async () => {
     if (process.platform !== 'darwin') {

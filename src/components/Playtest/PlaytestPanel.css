@@ -1,3 +1,19 @@
 .mainBody {
     height: calc(100% - 50px) !important;
 }
+.create-button-container {
+    width: 100%;
+    padding: 0.5em;
+}
+.playground-package-controls {
+    width: 100%;
+}
+.create-playground-button {
+    width: 100%;
+    background-color: #2b3035 !important;
+    border-color:#495357 !important;
+    color:#cfcfcf !important;
+}
+.create-playground-button:hover {
+    background-color: #30353a !important;
+}
