@@ -13,6 +13,12 @@
     background-color: #2b3037;
     cursor: pointer;
 }
+.selected {
+    background-color: hsl(215, 12%, 21%);
+}
+.selected:hover {
+    background-color: hsl(215, 12%, 22%);
+}
 .testDiv {
     height: 1000px;
     width: 100%;

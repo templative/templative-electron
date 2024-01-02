@@ -1,5 +1,5 @@
 import React from "react";
-import "./RenderPanel.css"
+import "../Render/RenderPanel.css"
 const {shell} = window.require('electron')
 const path = window.require("path")
 
@@ -17,7 +17,7 @@ export default class RenderOutputOption extends React.Component {
         shell.openPath(path.join(this.props.directory.path, this.props.directory.name));
     }
     render() {
-        return <div className={`resourceHeaderWrapper directory ${this.state.selectedDirectory === this.props.directory && "selected"}`} 
+        return <div className={`resourceHeaderWrapper directory ${this.props.selectedDirectory === this.props.directory.name && "selected"}`} 
                 onClick={()=>this.props.selectDirectory(this.props.directory.name)}
                 onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseOut}
             >

@@ -5,7 +5,7 @@ import "./RenderPanel.css"
 import {socket} from "../../socket"
 import RenderOutput from "./RenderOutput"
 import TemplativeAccessTools from "../TemplativeAccessTools";
-import RenderOutputOption from "./RenderOutputOption";
+import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 
 export default class RenderPanel extends React.Component {   
     state={
@@ -68,14 +68,6 @@ export default class RenderPanel extends React.Component {
         });
     }
     render() {
-        var directories = []
-        if (this.props.templativeRootDirectoryPath !== undefined) {
-            directories = TemplativeAccessTools.getOutputDirectories(this.props.templativeRootDirectoryPath)
-        }
-        var outputDirectoryDivs = directories.map((directory) => {
-            return <RenderOutputOption directory={directory} key={directory.name} selectDirectory={this.selectDirectory}/>
-        })
-
         var components = []
         if (this.props.templativeRootDirectoryPath !== undefined) {
             components = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")
@@ -110,12 +102,7 @@ export default class RenderPanel extends React.Component {
 
                 <RenderOutput messages={this.state.messages}/>
                 
-                <div className="headerWrapper">
-                    <p className="resourcesHeader">Output</p>
-                </div> 
-                <div className="outputFolderOptions">
-                    {outputDirectoryDivs}
-                </div>
+                <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectory={this.selectDirectory}/>
             </div>  
             <div className="col-8 outputPanel">
                 <OutputExplorer outputFolderPath={this.state.selectedDirectory} componentDirectories={componentDirectories}/>

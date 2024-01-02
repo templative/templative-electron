@@ -1,3 +1,53 @@
 .mainBody {
     height: calc(100% - 50px) !important;
 }
+.print-control-col-left {
+    border-right: solid #313540;
+    border-width: 1px;
+    /* padding-left: 0.75em !important; */
+    padding-right: 0;
+}
+.print-control-col-left, .print-control-col-right { 
+    height: 100% !important;
+    overflow-y: hidden;
+}
+.print-control-col-right {
+    padding: 0 !important;
+}
+.print-controls-row {
+    background-color: rgb(42, 46, 54);
+    height: 2em;
+    padding-top: 4px;
+    padding-bottom: 8px;
+    padding-right:0.5em;
+    text-align: right;
+}
+.print-control-button {
+    height: 100%;
+}
+.print-pdf-viewer-row {
+    height: calc(100% - 2em) !important;
+    overflow-y: hidden;
+}
+.fake-pdf {
+    height: 2000px;
+    /* background-color: white; */
+}
+.pdf {
+    height: 100%;
+}
+.create-printout-button-container {
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    width: 100%;
+    margin-top:0.5em;
+}
+.create-printout-button {
+    width: calc(100%);
+    background-color: #2b3035 !important;
+    border-color:#495357 !important;
+    color:#cfcfcf !important;
+}
+.selectedDirectory { 
+    margin-bottom:0 !important;
+}
