@@ -33,7 +33,6 @@ export default class PrintPanel extends React.Component {
             size: this.state.size,
             areMarginsIncluded: this.state.areMarginsDrawn
         }
-        console.log(data)
         try {
             this.setState({isCreatingPrintout: true})
             await axios.post(`http://localhost:8080/printout`, data)
