@@ -1,5 +1,5 @@
 {
-  "name": "templative-frontend",
+  "name": "Templative",
   "description": "Electron frontend for the Templative CLI.",
   "version": "0.1.0",
   "private": true,

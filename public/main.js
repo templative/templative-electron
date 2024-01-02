@@ -5,6 +5,8 @@ const fs = require("fs")
 const {mainMenu} = require("./menuMaker")
 const {listenForRenderEvents} = require("./listenForRenderEvents")
 
+app.setName('Templative');
+
 var reactProcess = undefined
 var pythonProcess = undefined
 var templativeWindow = undefined
@@ -13,6 +15,7 @@ const createWindow = () => {
     templativeWindow = new BrowserWindow({
       width: 1920,
       height: 1080,
+      title: "Templative",
       webPreferences: {
         nodeIntegration: true,
         contextIsolation: false,
