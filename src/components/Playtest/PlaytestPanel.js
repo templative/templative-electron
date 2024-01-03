@@ -7,8 +7,6 @@ import { channels } from "../../shared/constants";
 const axios = window.require("axios")
 const { ipcRenderer } = window.require('electron');
 
-const packagesPath = "/Users/oliverbarnum/Documents/git/apcw-defines/packages"
-
 export default class PlaytestPanel extends React.Component {   
     state={
         selectedOutputDirectory: undefined,
