@@ -6,6 +6,7 @@ import RenderPanel from './Render/RenderPanel';
 import PrintPanel from './Print/PrintPanel';
 import AnimatePanel from './Animate/AnimatePanel';
 import UploadPanel from './Upload/UploadPanel';
+import PlanPanel from './Plan/PlanPanel';
 import PlaytestPanel from './Playtest/PlaytestPanel';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import '../App.css';
@@ -31,6 +32,10 @@ export default class EditProjectView extends React.Component {
     }
     render() {
         const topNavbarItems = [
+        {
+            name:"Plan",
+            route:"/plan"
+        },
         {
             name:"Create",
             route:"/create"
@@ -67,6 +72,7 @@ export default class EditProjectView extends React.Component {
         return <BrowserRouter>
             <TopNavbar topNavbarItems={topNavbarItems} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
             <Routes>
+            <Route path='/plan' element={ <PlanPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
             <Route path='/create' element={ <CreatePanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
             <Route path='/' element={ <EditPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
             <Route path='/render' element={ <RenderPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
