@@ -3,7 +3,7 @@ import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 import "./PlaytestPanel.css"
 import SelectDirectoryInDirectory from "../SelectDirectory/SelectDirectoryInDirectory";
 import { channels } from "../../shared/constants";
-
+import {writeLastUseTableTopPlaygroundDirectory, getLastUsedTableTopPlaygroundDirectory} from "../../settings/SettingsManager"
 const axios = window.require("axios")
 const { ipcRenderer } = window.require('electron');
 
@@ -16,8 +16,13 @@ export default class PlaytestPanel extends React.Component {
     }
     componentDidMount() {
         ipcRenderer.on(channels.GIVE_PLAYGROUND_FOLDER, (event, playgroundFolder) => {
+            writeLastUseTableTopPlaygroundDirectory(playgroundFolder)
+            console.log(playgroundFolder)
             this.setState({playgroundDirectory: playgroundFolder})
         });
+        var lastUsedTableTopPlaygroundDirectory = getLastUsedTableTopPlaygroundDirectory()
+        if (lastUsedTableTopPlaygroundDirectory != undefined)
+            this.setState({playgroundDirectory: lastUsedTableTopPlaygroundDirectory})
     }
     componentWillUnmount() {
         ipcRenderer.removeAllListeners(channels.GIVE_PLAYGROUND_FOLDER);

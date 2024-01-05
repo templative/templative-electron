@@ -54,3 +54,14 @@ export function writeLastUseGameCrafterApiKey (lastGameCrafterApiKey) {
     var newFileContents = JSON.stringify(settings, null, 4)
     writeToSettingsFile(newFileContents)
 }
+
+export function getLastUsedTableTopPlaygroundDirectory () {
+    var settings = readOrCreateSettingsFile()
+    return settings["lastTableTopPlaygroundDirectory"]
+}
+export function writeLastUseTableTopPlaygroundDirectory (lastTableTopPlaygroundDirectory) {
+    var settings = readOrCreateSettingsFile()
+    settings["lastTableTopPlaygroundDirectory"] = lastTableTopPlaygroundDirectory
+    var newFileContents = JSON.stringify(settings, null, 4)
+    writeToSettingsFile(newFileContents)
+}
