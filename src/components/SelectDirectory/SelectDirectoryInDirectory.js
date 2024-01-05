@@ -20,7 +20,7 @@ export default class SelectDirectoryInDirectory extends React.Component {
     
         return <div>
             <div className="headerWrapper">
-                <p className="resourcesHeader">{this.props.title} {this.props.directoryPath}</p>
+                <p className="resourcesHeader">{this.props.title}</p>
             </div> 
             <div className="outputFolderOptions">
                 {directories}
