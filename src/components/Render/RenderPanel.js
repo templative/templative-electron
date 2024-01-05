@@ -3,7 +3,7 @@ import OutputExplorer from "./OutputExplorer"
 import RenderButton from "./RenderButton"
 import "./RenderPanel.css"
 import {socket} from "../../socket"
-import RenderOutput from "./RenderOutput"
+import LoggedMessages from "../SocketedConsole/LoggedMessages"
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 
@@ -15,23 +15,7 @@ export default class RenderPanel extends React.Component {
         isComplexRendering: true,
         selectedLanguage: "en",
         isConnectedToTemplative: false,
-        isProcessing: false,
-        messages: []
-    }
-
-    componentDidMount() {
-        socket.connect();
-        socket.on('printStatement', (message) => this.addMessage(message));
-    }
-    componentWillUnmount() {
-        socket.off("printStatement");
-        socket.disconnect()
-    }
-
-    addMessage(message) {
-        var newMessages = this.state.messages
-        newMessages.push(message)
-        this.setState({messages: newMessages})
+        isProcessing: false
     }
 
     selectDirectory = (directory) => {
@@ -100,7 +84,7 @@ export default class RenderPanel extends React.Component {
                     setLanguageCallback={this.setLanguage}
                 />
 
-                <RenderOutput messages={this.state.messages}/>
+                <LoggedMessages/>
                 
                 <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectory={this.selectDirectory}/>
             </div>  

@@ -1,13 +1,118 @@
 import React from "react";
+import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 import "./UploadPanel.css"
+import SelectDirectoryInDirectory from "../SelectDirectory/SelectDirectoryInDirectory";
+import { channels } from "../../shared/constants";
+import UploadControls from "./UploadControls";
+import LoggedMessages from "../SocketedConsole/LoggedMessages";
+import {socket} from "../../socket"
+
+const axios = window.require("axios")
+const { ipcRenderer } = window.require('electron');
 
 export default class UploadPanel extends React.Component {   
-        
+    state={
+        selectedOutputDirectory: undefined,
+        selectedPackageDirectory: undefined,
+        isCreating: false,
+        playgroundDirectory: "",
+        apiKey: "",
+        username: "",
+        password: "",
+        isAsync: true,
+        isPublish: false,
+        isProofed: true,
+        isIncludingStock: true,
+    }
+    componentDidMount() {
+        ipcRenderer.on(channels.GIVE_PLAYGROUND_FOLDER, (event, playgroundFolder) => {
+            this.setState({playgroundDirectory: playgroundFolder})
+        });
+    }
+    componentWillUnmount() {
+        ipcRenderer.removeAllListeners(channels.GIVE_PLAYGROUND_FOLDER);
+    }
+    updateApiKey = (apiKey) => {
+        this.setState({apiKey: apiKey})
+    }
+    updateUsername = (username) => {
+        this.setState({username: username})
+    }
+    updatePassword = (password) => {
+        this.setState({password: password})
+    }
+    updateIsAsync = (isAsync) => {
+        this.setState({isAsync: isAsync})
+    }
+    toggleIsPublish = () => {
+        this.setState({isPublish: !this.state.isPublish})
+    }
+    toggleIsProofed = () => {
+        this.setState({isProofed: !this.state.isProofed})
+    }
+    toggleIsIncludingStock = () => {
+        this.setState({isIncludingStock: !this.state.isIncludingStock})
+    }
+    selectDirectory = (directory) => {
+        this.setState({selectedOutputDirectory:directory})
+    }
+    selectPackageDirectory = (directory) => {
+        this.setState({selectedPackageDirectory:directory})
+    }
+    openPlaygroundDirectoryPicker = async () => {
+        await ipcRenderer.invoke(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG_FOR_PLAYGROUND)
+    }
+    upload = async () => {
+        var data = { 
+            outputDirectorypath: `${this.props.templativeRootDirectoryPath}/output/${this.state.selectedOutputDirectory}`,
+            playgroundPackagesDirectorypath: this.state.playgroundDirectory,
+            username: this.state.username,
+            password: this.state.password,
+            apiKey: this.state.apiKey,
+            isPublish: this.state.isPublish,
+            isIncludingStock: this.state.isIncludingStock,
+            isAsync: this.state.isAsync,
+            isProofed: this.state.isProofed ? 1:0
+        }
+        console.log(data)
+        try {
+            this.setState({isCreating: true})
+            socket.emit('upload', data, () => {
+                this.setState({isCreating: false})
+            });
+        }
+        catch(e) {
+            console.log(e)
+        }
+    }
     render() {
-        return <div className='mainBody row '>
-            <div className="col">
-                <h1>Upload</h1>
-            </div>     
+        return <div className='mainBody row'>
+            <div className="col-4">
+                <RenderOutputOptions selectedDirectory={this.state.selectedOutputDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectory={this.selectDirectory}/>
+                <UploadControls 
+                    isCreating={this.state.isCreating}
+                    selectedOutputDirectory={this.state.selectedOutputDirectory}
+                    apiKey={this.state.apiKey}
+                    username={this.state.username}
+                    password={this.state.password}
+                    isAsync={this.state.isAsync}
+                    isPublish={this.state.isPublish}
+                    isProofed={this.state.isProofed}
+                    isIncludingStock={this.state.isIncludingStock}
+                    uploadCallback={this.upload}
+                    updateApiKeyCallback={this.updateApiKey}
+                    updateUsernameCallback={this.updateUsername}
+                    updatePasswordCallback={this.updatePassword}
+                    updateIsAsyncCallback={this.updateIsAsync}
+                    toggleIsPublishCallback={this.toggleIsPublish}
+                    toggleIsProofedCallback={this.toggleIsProofed}
+                    toggleIsIncludingStockCallback={this.toggleIsIncludingStock}
+                />
+            </div>
+            <div className="col logging">
+                <LoggedMessages/>
+                
+            </div>
         </div>
     }
 }
