@@ -5,12 +5,7 @@ import TemplativeAccessTools from "./components/TemplativeAccessTools"
 import StartView from "./components/StartView";
 import EditProjectView from "./components/EditProjectView";
 import './App.css';
-
-const os = window.require('os')
-const path = window.require('path')
-const fs = window.require("fs")
-var getDirName = require('path').dirname;
-
+import {writeLastOpenedProject, getLastProjectDirectory} from "./settings/SettingsManager"
 const { ipcRenderer } = window.require('electron');
 
 class App extends React.Component {
@@ -28,34 +23,6 @@ class App extends React.Component {
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_CREATE_PROJECT_DIALOG)
     }
 
-    attemptToGetLastProjectDirectory() {
-        var homeDirectory = os.homedir() 
-        var templativeSettingsDirectoryPath = path.join(homeDirectory, "Documents/Templative")
-        if (!fs.existsSync(templativeSettingsDirectoryPath)) {
-            fs.mkdir(templativeSettingsDirectoryPath, { recursive: true }, (err) => {});
-        }
-        var templativeSettingsPath = path.join(templativeSettingsDirectoryPath, "settings.json")
-        if (!fs.existsSync(templativeSettingsPath)) {
-            this.writeLastOpenedProject(undefined)
-            return undefined
-        } 
-        var settings = JSON.parse(fs.readFileSync(templativeSettingsPath, 'utf8'));
-        return settings["lastProjectDirectory"]
-    }
-    writeLastOpenedProject(lastProjectDirectory) {
-        var homeDirectory = os.homedir() 
-        var templativeSettingsDirectoryPath = path.join(homeDirectory, "Documents/Templative")
-        if (!fs.existsSync(templativeSettingsDirectoryPath)) {
-            fs.mkdir(templativeSettingsDirectoryPath, { recursive: true }, (err) => {});
-        }
-        if (!fs.existsSync(templativeSettingsDirectoryPath)) {
-            console.log("IT still isn't here", templativeSettingsDirectoryPath)
-        }
-        var templativeSettingsPath = path.join(templativeSettingsDirectoryPath, "settings.json")
-        var newFileContents = JSON.stringify({lastProjectDirectory: lastProjectDirectory}, null, 4)
-        fs.writeFileSync(templativeSettingsPath, newFileContents, 'utf-8');
-    }
-
     processTemplativeAccessToolsForDirectory(templativeRootDirectoryPath) {
         var componentCompose = TemplativeAccessTools.readFile(templativeRootDirectoryPath, "component-compose.json");
         var gameCompose = TemplativeAccessTools.readFile(templativeRootDirectoryPath, "game-compose.json");
@@ -66,7 +33,7 @@ class App extends React.Component {
     }
 
     attemptToLoadLastTemplativeAccessTools() {
-        var lastProjectDirectory = this.attemptToGetLastProjectDirectory()
+        var lastProjectDirectory = getLastProjectDirectory()
         if (lastProjectDirectory === undefined) {
             return
         }
@@ -76,7 +43,7 @@ class App extends React.Component {
     componentDidMount() {
         ipcRenderer.on(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, (event, templativeRootDirectoryPath) => {
             this.processTemplativeAccessToolsForDirectory(templativeRootDirectoryPath)
-            this.writeLastOpenedProject(templativeRootDirectoryPath)
+            writeLastOpenedProject(templativeRootDirectoryPath)
             this.setState({templativeRootDirectoryPath: templativeRootDirectoryPath})
         });
         ipcRenderer.on(channels.GIVE_CLOSE_PROJECT, (_) => {

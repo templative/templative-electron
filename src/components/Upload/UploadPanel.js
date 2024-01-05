@@ -6,6 +6,7 @@ import { channels } from "../../shared/constants";
 import UploadControls from "./UploadControls";
 import LoggedMessages from "../SocketedConsole/LoggedMessages";
 import {socket} from "../../socket"
+import {getLastUsedGameCrafterUsername, writeLastUseGameCrafterUsername, getLastUsedGameCrafterApiKey, writeLastUseGameCrafterApiKey} from "../../settings/SettingsManager"
 
 const axios = window.require("axios")
 const { ipcRenderer } = window.require('electron');
@@ -28,14 +29,20 @@ export default class UploadPanel extends React.Component {
         ipcRenderer.on(channels.GIVE_PLAYGROUND_FOLDER, (event, playgroundFolder) => {
             this.setState({playgroundDirectory: playgroundFolder})
         });
+        this.setState({
+            apiKey: getLastUsedGameCrafterApiKey(),
+            username: getLastUsedGameCrafterUsername(),
+        })
     }
     componentWillUnmount() {
         ipcRenderer.removeAllListeners(channels.GIVE_PLAYGROUND_FOLDER);
     }
     updateApiKey = (apiKey) => {
+        writeLastUseGameCrafterApiKey(apiKey);
         this.setState({apiKey: apiKey})
     }
     updateUsername = (username) => {
+        writeLastUseGameCrafterUsername(username);
         this.setState({username: username})
     }
     updatePassword = (password) => {
