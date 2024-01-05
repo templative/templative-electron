@@ -37,6 +37,10 @@ export default class EditProjectView extends React.Component {
             route:"/plan"
         },
         {
+            name:"Prototype",
+            route:"/create"
+        },
+        {
             name:"Create",
             route:"/create"
         },
@@ -66,6 +70,10 @@ export default class EditProjectView extends React.Component {
         },
         {
             name:"Market",
+            route:"/market"
+        },
+        {
+            name:"Attend",
             route:"/market"
         }
         ]
