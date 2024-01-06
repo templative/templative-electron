@@ -32,14 +32,14 @@ export default class EditProjectView extends React.Component {
     }
     render() {
         const topNavbarItems = [
-        {
-            name:"Plan",
-            route:"/plan"
-        },
-        {
-            name:"Prototype",
-            route:"/create"
-        },
+        // {
+        //     name:"Plan",
+        //     route:"/plan"
+        // },
+        // {
+        //     name:"Prototype",
+        //     route:"/create"
+        // },
         {
             name:"Create",
             route:"/create"
@@ -68,14 +68,14 @@ export default class EditProjectView extends React.Component {
             name:"Animate",
             route:"/animate"
         },
-        {
-            name:"Market",
-            route:"/market"
-        },
-        {
-            name:"Attend",
-            route:"/market"
-        }
+        // {ß
+        //     name:"Market",
+        //     route:"/market"
+        // },
+        // {
+        //     name:"Attend",
+        //     route:"/market"
+        // }
         ]
         return <BrowserRouter>
             <TopNavbar topNavbarItems={topNavbarItems} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
