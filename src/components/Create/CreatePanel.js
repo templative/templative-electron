@@ -53,7 +53,7 @@ export default class CreatePanel extends React.Component {
             directoryPath: this.props.templativeRootDirectoryPath
         }
         await axios.post(`http://127.0.0.1:8080/component`, data)
-        this.setState({isProcessing: false})
+        this.setState({isProcessing: false, componentName: "", selectedComponentType: undefined})
     }
 
     render() {
@@ -66,7 +66,8 @@ export default class CreatePanel extends React.Component {
         var componentTypeKeys = Object.keys(components).sort((a,b) => sortComponentTypes(componentTypeQuantities, a,b))
         var componentDivs = componentTypeKeys.map((key) => {
             var existingQuantity = componentTypeQuantities[key] !== undefined ? componentTypeQuantities[key] : 0
-            return <ComponentType key={key} name={key} 
+            return <ComponentType key={key} 
+                name={key} componentInfo={components[key]}
                 selectTypeCallback={() => this.selectComponent(key)}
                 selectedComponentType={this.state.selectedComponentType} 
                 existingQuantity={existingQuantity}/>

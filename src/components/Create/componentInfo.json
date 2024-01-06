@@ -2,491 +2,230 @@
     "D4Plastic": {
         "DisplayName": "Plastic D4",
         "DimensionsPixels": [300, 300],
-        "DimensionsInches": [0.76, 0.68],
-        "GameCrafterUploadTask": "CustomColorD4",
-        "GameCrafterPackagingDepthMillimeters": 17,
-        "HasPieceData": true,
-        "HasPieceQuantity": false,
-        "ArtDataTypeNames": ["Front"]
+        "DimensionsInches": [0.76, 0.68]
     },
     "D6Plastic": {
+        "DisplayName": "Plastic D6",
         "DimensionsPixels": [180, 180],
-        "DimensionsInches": [0.63, 0.63],
-        "GameCrafterUploadTask": "CustomColorD6",
-        "GameCrafterPackagingDepthMillimeters": 16,
-        "HasPieceData": true,
-        "HasPieceQuantity": false,
-        "ArtDataTypeNames": ["Front"]
+        "DimensionsInches": [0.63, 0.63]
     },
     "D8Plastic": {
+        "DisplayName": "Plastic D8",
         "DimensionsPixels": [300, 300],
-        "DimensionsInches": [0.92, 0.69],
-        "GameCrafterUploadTask": "CustomColorD6",
-        "GameCrafterPackagingDepthMillimeters": 17,
-        "HasPieceData": true,
-        "HasPieceQuantity": false,
-        "ArtDataTypeNames": ["Front"]
+        "DimensionsInches": [0.92, 0.69]
     },
     "D6Wooden": {
+        "DisplayName": "Wooden D6",
         "DimensionsPixels": [180, 180],
-        "DimensionsInches": [0.63, 0.63],
-        "GameCrafterUploadTask": "CustomWoodD6",
-        "GameCrafterPackagingDepthMillimeters": 16,
-        "HasPieceData": true,
-        "HasPieceQuantity": false,
-        "ArtDataTypeNames": ["Front"]
+        "DimensionsInches": [0.63, 0.63]
     },
     "HexShard": {
+        "DisplayName": "Hex Shard",
         "DimensionsPixels": [300, 300],
-        "DimensionsInches": [2, 3.5],
-        "PlaygroundThickness": 0.2,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Hexagonal",
-        "GameCrafterUploadTask": "DECK",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [2, 3.5]
     },
     "CircleShard": {
+        "DisplayName": "Circle Shard",
         "DimensionsPixels": [300, 300],
-        "DimensionsInches": [2, 3.5],
-        "PlaygroundThickness": 0.05,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "DECK",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [2, 3.5]
     },
     "SquareShard": {
+        "DisplayName": "Square Shard",
         "DimensionsPixels": [300, 300],
-        "DimensionsInches": [2, 3.5],
-        "PlaygroundThickness": 0.05,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "DECK",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [2, 3.5]
     },
     "BusinessDeck": {
+        "DisplayName": "Business Deck",
         "DimensionsPixels": [675, 1125],
-        "DimensionsInches": [2, 3.5],
-        "PlaygroundThickness": 0.05,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "DECK",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [2, 3.5]
     },
     "PokerDeck": {
+        "DisplayName": "Poker Deck",
         "DimensionsPixels": [825, 1125],
         "MarginsPixels": [40,40],
-        "DimensionsInches": [2.45, 3.45],
-        "PlaygroundThickness": 0.05,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "DECK",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [2.45, 3.45]
     },
     "JumboDeck": {
+        "DisplayName": "Jumbo Deck",
         "DimensionsPixels": [1125, 1725],
-        "DimensionsInches": [3.5, 5.5],
-        "PlaygroundThickness": 0.05,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "DECK",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [3.5, 5.5]
     },
     "MiniDeck": {
+        "DisplayName": "Mini Deck",
         "DimensionsPixels": [600, 825],
-        "DimensionsInches": [1.75, 2.5],
-        "PlaygroundThickness": 0.05,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "DECK",
-        "GameCrafterPackagingDepthMillimeters": 0.3,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [1.75, 2.5]
     },
     "MicroDeck": {
+        "DisplayName": "Micro Deck",
         "DimensionsPixels": [450, 600],
         "MarginsPixels": [40,40],
-        "DimensionsInches": [1.25, 1.75],
-        "PlaygroundThickness": 0.05,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "DECK",
-        "GameCrafterPackagingDepthMillimeters": 0.15,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [1.25, 1.75]
     },
     "MintTinDeck": {
+        "DisplayName": "Mint Tin Deck",
         "DimensionsPixels": [750, 1125],
         "MarginsPixels": [70,50],
-        "DimensionsInches": [2.05, 3.43],
-        "PlaygroundThickness": 0.05,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "DECK",
-        "GameCrafterPackagingDepthMillimeters": 0.3,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [2.05, 3.43]
     },
     "HexDeck": {
+        "DisplayName": "Hex Deck",
         "DimensionsPixels": [1200, 1050],
-        "DimensionsInches": [3.75, 3.25],
-        "PlaygroundThickness": 0.05,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Hexagonal",
-        "GameCrafterUploadTask": "DECK",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [3.75, 3.25]
     },
     "SmallSquareChit": {
+        "DisplayName": "Small Square Chit",
         "DimensionsPixels": [225, 225],
-        "DimensionsInches": [0.5, 0.5],
-        "PlaygroundThickness": 0.2,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "TWOSIDEDSLUG",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [0.5, 0.5]
     },
     "MediumSquareChit": {
+        "DisplayName": "Medium Square Chit",
         "DimensionsPixels": [300, 300],
-        "DimensionsInches": [0.75, 0.75],
-        "PlaygroundThickness": 0.2,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "TWOSIDEDSLUG",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [0.75, 0.75]
     },
     "LargeSquareChit": {
+        "DisplayName": "Large Square Chit",
         "DimensionsPixels": [375, 375],
-        "DimensionsInches": [1, 1],
-        "PlaygroundThickness": 0.2,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "TWOSIDEDSLUG",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [1, 1]
     },
     "SmallRingChit": {
+        "DisplayName": "Small Ring Chit",
         "DimensionsPixels": [300, 300],
-        "DimensionsInches": [0.5, 0.5],
-        "PlaygroundThickness": 0.2,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "TWOSIDEDSLUG",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [0.5, 0.5]
     },
     "MediumRingChit": {
+        "DisplayName": "Medium Ring Chit",
         "DimensionsPixels": [375, 375],
-        "DimensionsInches": [0.75, 0.75],
-        "PlaygroundThickness": 0.2,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "TWOSIDEDSLUG",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [0.75, 0.75]
     },
     "LargeRingChit": {
+        "DisplayName": "Large Ring Chit",
         "DimensionsPixels": [450, 450],
-        "DimensionsInches": [1, 1],
-        "PlaygroundThickness": 0.2,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "TWOSIDEDSLUG",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [1, 1]
     },
     "SmallCircleChit": {
+        "DisplayName": "Small Circle Chit",
         "DimensionsPixels": [225, 225],
-        "DimensionsInches": [0.5,0.5],
-        "PlaygroundThickness": 0.2,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "TWOSIDEDSLUG",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [0.5,0.5]
     },
     "MediumCircleChit": {
+        "DisplayName": "Medium Circle Chit",
         "DimensionsPixels": [300, 300],
-        "DimensionsInches": [0.75,0.75],
-        "PlaygroundThickness": 0.2,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "TWOSIDEDSLUG",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [0.75,0.75]
     },
     "LargeCircleChit": {
+        "DisplayName": "Large Circle Chit",
         "DimensionsPixels": [375, 375],
-        "DimensionsInches": [1,1],
-        "PlaygroundThickness": 0.2,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "TWOSIDEDSLUG",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [1,1]
     },
     "MiniHexTile": {
+        "DisplayName": "Mini Hex Tile",
         "DimensionsPixels": [450, 450],
-        "DimensionsInches": [1.25, 1.08],
-        "PlaygroundThickness": 0.4,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Hexagonal",
-        "GameCrafterUploadTask": "TWOSIDEDSLUG",
-        "GameCrafterPackagingDepthMillimeters": 2,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [1.25, 1.08]
     },
     "SmallHexTile": {
+        "DisplayName": "Small Hex Tile",
         "DimensionsPixels": [675, 600],
-        "DimensionsInches": [2, 1.75],
-        "PlaygroundThickness": 0.4,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Hexagonal",
-        "GameCrafterUploadTask": "TWOSIDEDSLUG",
-        "GameCrafterPackagingDepthMillimeters": 2,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [2, 1.75]
     },
     "MediumHexTile": {
+        "DisplayName": "Medium Hex Tile",
         "DimensionsPixels": [825, 750],
-        "DimensionsInches": [2.5, 2.22],
-        "PlaygroundThickness": 0.4,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Hexagonal",
-        "GameCrafterUploadTask": "TWOSIDEDSLUG",
-        "GameCrafterPackagingDepthMillimeters": 2,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [2.5, 2.22]
     },
     "LargeHexTile": {
         "DisplayName": "Large Hex Tile",
         "DimensionsPixels": [1200, 1050],
-        "DimensionsInches": [3.75, 3.25],
-        "PlaygroundThickness": 0.4,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Hexagonal",
-        "GameCrafterUploadTask": "TWOSIDEDSLUG",
-        "GameCrafterPackagingDepthMillimeters": 2,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
-    },
-    "MintTinAccordion4": {
-        "DimensionsPixels": [2550, 1125],
-        "DimensionsInches": [8.19, 3.43],
-        "PlaygroundThickness": 0.05,
-        "PlaygroundCreationTask": "BOARD",
-        "GameCrafterUploadTask": "TWOSIDED",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [3.75, 3.25]
     },
     "BiFoldMat": {
+        "DisplayName": "Bi-Fold Mat",
         "DimensionsPixels": [2475, 2475],
-        "DimensionsInches": [8, 8],
-        "PlaygroundThickness": 0.05,
-        "PlaygroundCreationTask": "BOARD",
-        "GameCrafterUploadTask": "TWOSIDED",
-        "GameCrafterPackagingDepthMillimeters": 2,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [8, 8]
     },
     "DominoMat": {
+        "DisplayName": "Domino Mat",
         "DimensionsPixels": [1275, 2475],
-        "DimensionsInches": [4, 8],
-        "PlaygroundThickness": 0.05,
-        "PlaygroundCreationTask": "BOARD",
-        "GameCrafterUploadTask": "TWOSIDED",
-        "GameCrafterPackagingDepthMillimeters": 2,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [4, 8]
+    },
+    "MintTinAccordion4": {
+        "DisplayName": "Mint Tin Accordion w/ 4 Pages",
+        "DimensionsPixels": [2550, 1125],
+        "DimensionsInches": [8.19, 3.43]
     },
     "MintTinAccordion6": {
+        "DisplayName": "Mint Tin Accordion w/ 6 Pages",
         "DimensionsPixels": [3825, 1125],
-        "DimensionsInches": [8.19, 3.43],
-        "PlaygroundThickness": 0.05,
-        "PlaygroundCreationTask": "BOARD",
-        "GameCrafterUploadTask": "TWOSIDED",
-        "GameCrafterPackagingDepthMillimeters": 2,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [8.19, 3.43]
     },
     "MintTinAccordion8": {
+        "DisplayName": "Mint Tin Accordion w/ 8 Pages",
         "DimensionsPixels": [5025, 1125],
-        "DimensionsInches": [8.19, 3.43],
-        "PlaygroundThickness": 0.05,
-        "PlaygroundCreationTask": "BOARD",
-        "GameCrafterUploadTask": "TWOSIDED",
-        "GameCrafterPackagingDepthMillimeters": 2,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [8.19, 3.43]
     },
     "PokerFolio": {
+        "DisplayName": "Poker Folio",
         "DimensionsPixels": [3075,1125],
-        "DimensionsInches": [10, 3.5],
-        "PlaygroundThickness": 0.05,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "TWOSIDED",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [10, 3.5]
     },
     "MintTinFolio": {
+        "DisplayName": "Mint Tin Folio",
         "DimensionsPixels": [2625, 1050],
         "MarginsPixels": [45, 40],
-        "DimensionsInches": [8.5, 3.13],
-        "PlaygroundThickness": 0.05,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "TWOSIDED",
-        "GameCrafterPackagingDepthMillimeters": 1,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [8.5, 3.13]
     },
     "DominoBoard": {
+        "DisplayName": "Domino Board",
         "DimensionsPixels": [1275, 2475],
-        "DimensionsInches": [4, 8],
-        "PlaygroundThickness": 0.4,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "TWOSIDED",
-        "GameCrafterPackagingDepthMillimeters": 2,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DimensionsInches": [4, 8]
     },
     "PunchoutCustomSmall": {
+        "DisplayName": "Small Custom Punchout",
         "DimensionsPixels": [975,1575],
-        "DimensionsInches": [3.25, 5.25],
-        "PlaygroundThickness": 0.4,
-        "PlaygroundCreationTask": "DECK",
-        "PlaygroundModel": "Rounded",
-        "GameCrafterUploadTask": "CUSTOMCUTTWOSIDEDSLUGGED",
-        "GameCrafterPackagingDepthMillimeters": 2,
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back", "Overlay"]
+        "DimensionsInches": [3.25, 5.25]
     },
     "PokerHookbox36": {
-        "DimensionsPixels": [2700, 1125],
-        "GameCrafterUploadTask": "HOOKBOX",
-        "HasPieceData": false,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DisplayName": "Poker Hookbox for 36 Cards",
+        "DimensionsPixels": [2700, 1125]
     },
     "MintTin": {
-        "DimensionsPixels": [750, 1125],
-        "GameCrafterUploadTask": "TWOSIDEDBOX",
-        "HasPieceData": false,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DisplayName": "Mint Tin",
+        "DimensionsPixels": [750, 1125]
     },
     "SmallStoutBox": {
-        "DimensionsPixels": [3600, 3000],
-        "GameCrafterUploadTask": "TWOSIDEDBOX",
-        "HasPieceData": false,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DisplayName": "Small Stout Box",
+        "DimensionsPixels": [3600, 3000]
     },
     "MediumStoutBox": {
-        "DimensionsPixels": [3675, 4575],
-        "GameCrafterUploadTask": "TWOSIDEDBOX",
-        "HasPieceData": false,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DisplayName": "Medium Stout Box",
+        "DimensionsPixels": [3675, 4575]
     },
     "LargeStoutBox": {
-        "DimensionsPixels": [5925, 5925],
-        "GameCrafterUploadTask": "TWOSIDEDBOX",
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DisplayName": "Large Stout Box",
+        "DimensionsPixels": [5925, 5925]
     },
     "PokerBooster": {
-        "DimensionsPixels": [975, 1350],
-        "GameCrafterUploadTask": "BOXFACE",
-        "HasPieceData": true,
-        "HasPieceQuantity": true,
-        "ArtDataTypeNames": ["Front", "Back"]
+        "DisplayName": "Poker Booster",
+        "DimensionsPixels": [975, 1350]
     },
     "PokerTuckBox36": {
+        "DisplayName": "Poker Tuck Box for 36 Cards",
         "DimensionsPixels": [2100, 1800],
-        "DimensionsInches": [8.1,6.9],
-        "GameCrafterUploadTask": "TUCKBOX",
-        "HasPieceData": true,
-        "ArtDataTypeNames": ["Front"]
+        "DimensionsInches": [8.1,6.9]
     },
     "PokerTuckBox54": {
-        "DimensionsPixels": [2325, 1950],
-        "GameCrafterUploadTask": "TUCKBOX",
-        "HasPieceData": false,
-        "ArtDataTypeNames": ["Front"]
+        "DisplayName": "Poker Tuck Box for 54 Cards",
+        "DimensionsPixels": [2325, 1950]
     },
     "PokerTuckBox72": {
-        "DimensionsPixels": [2550, 1950],
-        "GameCrafterUploadTask": "TUCKBOX",
-        "HasPieceData": false,
-        "ArtDataTypeNames": ["Front"]
+        "DisplayName": "Poker Tuck Box for 72 Cards",
+        "DimensionsPixels": [2550, 1950]
     },
     "PokerTuckBox90": {
-        "DimensionsPixels": [2775, 2100],
-        "GameCrafterUploadTask": "TUCKBOX",
-        "HasPieceData": false,
-        "ArtDataTypeNames": ["Front"]
+        "DisplayName": "Poker Tuck Box for 90 Cards",
+        "DimensionsPixels": [2775, 2100]
     },
     "PokerTuckBox108": {
-        "DimensionsPixels": [3075, 2250],
-        "GameCrafterUploadTask": "TUCKBOX",
-        "HasPieceData": false,
-        "ArtDataTypeNames": ["Front"]
+        "DisplayName": "Poker Tuck Box for 108 Cards",
+        "DimensionsPixels": [3075, 2250]
     }
 }

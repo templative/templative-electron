@@ -15,25 +15,26 @@
     height: 3em;
 }
 .create-component-by-type-choices {
-    padding: 0.5em 0em 2em 0em;
+    padding: 0.5em 0em 0em 0em !important;
     height: calc(100% - 1em);
 }
 .component-type-list {
-    padding:0 20% 0 20%;
+    padding:0 5em 0 5em !important;
     overflow-y: scroll;
     height:100%;
 }
 .component-type-card {
-    margin: 0 0.2em 0em 0.2em;
+    margin: 0 0.2em 0.5em 0.2em;
     width: 10em;
-    height: 1.5em;
+    height: 5em;
+    font-size: 11px !important;
     background-color: #323843;
     border-radius: 6px;
-    padding: 0.1em;
+    padding: 0.05em;
     display: inline-block;
+    
 }
 .component-type-card p {
-    font-size: 13px;    
     text-align: center;
     line-height: 1.6em;
     margin:0;
