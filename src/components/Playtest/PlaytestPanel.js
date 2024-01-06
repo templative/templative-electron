@@ -21,7 +21,7 @@ export default class PlaytestPanel extends React.Component {
             this.setState({playgroundDirectory: playgroundFolder})
         });
         var lastUsedTableTopPlaygroundDirectory = getLastUsedTableTopPlaygroundDirectory()
-        if (lastUsedTableTopPlaygroundDirectory != undefined)
+        if (lastUsedTableTopPlaygroundDirectory !== undefined)
             this.setState({playgroundDirectory: lastUsedTableTopPlaygroundDirectory})
     }
     componentWillUnmount() {

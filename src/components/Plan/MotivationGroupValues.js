@@ -1,4 +1,4 @@
-export default [
+const motivationGroups = [
     {
         name: "Relatedness",
         sourcesOfMeaning: [
@@ -27,3 +27,4 @@ export default [
         ]
     },
 ]
+export default motivationGroups

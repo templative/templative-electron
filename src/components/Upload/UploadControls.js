@@ -10,7 +10,7 @@ export default class UploadControls extends React.Component {
         else if (this.props.selectedOutputDirectory !== undefined) {
             buttonMessage = "Upload to TheGameCrafter"
         }
-        var canUpload = this.props.apiKey != "" && this.props.username != "" && this.props.password != "" && !this.props.isCreating && this.props.selectedOutputDirectory != undefined
+        var canUpload = this.props.apiKey !== "" && this.props.username !== "" && this.props.password !== "" && !this.props.isCreating && this.props.selectedOutputDirectory !== undefined
         
         return <div className="create-button-container">
             <p className="tgc-password-warning">Templative will never store your password and never will send it to our servers. This app communicates directly with TheGameCrafter.</p>
