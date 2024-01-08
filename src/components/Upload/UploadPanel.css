@@ -4,3 +4,6 @@
 .tgc-password-warning {
     font-size: 12px;
 }
+.logging-col {
+    padding: 0.5em 1em 0.5em 0.5em !important;
+}

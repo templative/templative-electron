@@ -1,14 +1,17 @@
-.messageRow {
+.message-row {
     padding-left: 1.5em;
     padding-right:1em;
     margin-bottom: 0.5em;
+    height: 7em;
+}
+.full-height-messages-row { 
+    height:100%;
 }
 .messageArea {
     border-radius: 8px;
     background-color: #131517;
     padding: 0.25em;
     overflow-y: scroll;
-    height: 7em;
 }
 .outputMessage {
     font-size: 14px;

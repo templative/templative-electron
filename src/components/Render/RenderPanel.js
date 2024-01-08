@@ -3,7 +3,7 @@ import OutputExplorer from "./OutputExplorer"
 import RenderButton from "./RenderButton"
 import "./RenderPanel.css"
 import {socket} from "../../socket"
-import LoggedMessages from "../SocketedConsole/LoggedMessages"
+import { LimitedHeightConsole } from "../SocketedConsole/LoggedMessages"
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 
@@ -84,7 +84,7 @@ export default class RenderPanel extends React.Component {
                     setLanguageCallback={this.setLanguage}
                 />
 
-                <LoggedMessages/>
+                <LimitedHeightConsole/>
                 
                 <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectory={this.selectDirectory}/>
             </div>  

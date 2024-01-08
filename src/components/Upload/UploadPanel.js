@@ -4,7 +4,7 @@ import "./UploadPanel.css"
 import SelectDirectoryInDirectory from "../SelectDirectory/SelectDirectoryInDirectory";
 import { channels } from "../../shared/constants";
 import UploadControls from "./UploadControls";
-import LoggedMessages from "../SocketedConsole/LoggedMessages";
+import { FullHeightConsole } from "../SocketedConsole/LoggedMessages"
 import {socket} from "../../socket"
 import {getLastUsedGameCrafterUsername, writeLastUseGameCrafterUsername, getLastUsedGameCrafterApiKey, writeLastUseGameCrafterApiKey} from "../../settings/SettingsManager"
 
@@ -116,9 +116,8 @@ export default class UploadPanel extends React.Component {
                     toggleIsIncludingStockCallback={this.toggleIsIncludingStock}
                 />
             </div>
-            <div className="col logging">
-                <LoggedMessages/>
-                
+            <div className="col logging-col">
+                <FullHeightConsole/>
             </div>
         </div>
     }

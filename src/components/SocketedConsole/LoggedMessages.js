@@ -2,18 +2,16 @@ import React from "react";
 import {socket} from "../../socket"
 import "./LoggedMessages.css"
 
-export default class LoggedMessages extends React.Component {  
+export class LoggedMessages extends React.Component {  
     state = {
         messages: []
     }
 
     componentDidMount() {
         socket.connect();
-        console.log("connect")
         socket.on('printStatement', (message) => this.addMessage(message));
     }
     componentWillUnmount() {
-        console.log("disconnect")
         socket.off("printStatement");
         socket.disconnect()
     }
@@ -25,14 +23,25 @@ export default class LoggedMessages extends React.Component {
     }
 
     render() {
-        console.log("render")
         var messageDivs = this.state.messages.map((message, index)=> {
             return <p key={index} className="outputMessage">{message}</p>
         })
-        return <div className='row messageRow'>
-            <div className="messageArea">
-                {messageDivs}
-            </div>
+        return <div className="messageArea">
+            {messageDivs}
+        </div>
+    }
+}
+export class FullHeightConsole extends React.Component {
+    render() {
+        return <div className='row full-height-messages-row'>
+            <LoggedMessages/>
+        </div>
+    }
+}
+export class LimitedHeightConsole extends React.Component {
+    render() {
+        return <div className='row message-row'>
+            <LoggedMessages/>
         </div>
     }
 }
