@@ -64,11 +64,11 @@ export default class EditProjectView extends React.Component {
             name:"Upload",
             route:"/upload"
         },
-        {
-            name:"Animate",
-            route:"/animate"
-        },
-        // {ß
+        // {
+        //     name:"Animate",
+        //     route:"/animate"
+        // },
+        // {
         //     name:"Market",
         //     route:"/market"
         // },
