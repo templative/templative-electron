@@ -24,12 +24,6 @@ const sortComponentTypes = (componentTypeQuantities, a, b) => {
 
 export default class ComponentTypeList extends React.Component {   
     render() {
-        var componentTypeQuantities = []
-        // this.props.components.forEach(element => {
-        //     var currentValue = componentTypeQuantities[element.type] !== undefined ? componentTypeQuantities[element.type] : 0
-        //     componentTypeQuantities[element.type] = 1 + currentValue
-        // });
-        // var componentTypeKeys = Object.keys(components).sort((a,b) => sortComponentTypes(componentTypeQuantities, a,b))
         var componentDivs = Object.keys(this.props.componentTypeOptions)
             .filter((key) => {
                 return componentTypeHasAllFilteredTags(this.props.selectedTags, this.props.componentTypeOptions[key]["Tags"])
