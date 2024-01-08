@@ -1,7 +1,8 @@
 import React from "react";
 import "./CreatePanel.css"
-import ComponentType from "./ComponentType";
+import ComponentTypeTagPicker from "./ComponentTypeTagPicker";
 import TemplativeAccessTools from "../TemplativeAccessTools";
+import ComponentTypeList from "./ComponentTypeList";
 var axios  = window.require('axios');
 
 const ComponentInfo = require("./componentInfo.json")
@@ -31,6 +32,7 @@ export default class CreatePanel extends React.Component {
         selectedComponentType: undefined,
         componentName: "",
         components: [],
+        tagFilters: new Set(),
         isProcessing: false
     }
     componentDidMount() {
@@ -45,6 +47,11 @@ export default class CreatePanel extends React.Component {
     updateComponentName(name) {
         this.setState({componentName: name})
     }
+    toggleTagFilter = (tag) => {
+        var newTagFilters = this.state.tagFilters
+        newTagFilters.has(tag) ? newTagFilters.delete(tag) : newTagFilters.add(tag)
+        this.setState({tagFilters: newTagFilters})
+    }
     async createComponent() {
         this.setState({isProcessing: true})
         var data = { 
@@ -57,22 +64,7 @@ export default class CreatePanel extends React.Component {
     }
 
     render() {
-        var componentTypeQuantities = []
-        this.state.components.forEach(element => {
-            var currentValue = componentTypeQuantities[element.type] !== undefined ? componentTypeQuantities[element.type] : 0
-            componentTypeQuantities[element.type] = 1 + currentValue
-        });
-        var components = Object.assign({}, StockComponentInfo, ComponentInfo)
-        var componentTypeKeys = Object.keys(components).sort((a,b) => sortComponentTypes(componentTypeQuantities, a,b))
-        var componentDivs = componentTypeKeys.map((key) => {
-            var existingQuantity = componentTypeQuantities[key] !== undefined ? componentTypeQuantities[key] : 0
-            return <ComponentType key={key} 
-                name={key} componentInfo={components[key]}
-                selectTypeCallback={() => this.selectComponent(key)}
-                selectedComponentType={this.state.selectedComponentType} 
-                existingQuantity={existingQuantity}/>
-        })
-
+        var componentTypeOptions = Object.assign({}, StockComponentInfo, ComponentInfo)
         var isCreateButtonDisabled = this.state.componentName === "" || this.state.selectedComponentType === undefined
         return <div className='mainBody row'>
             <div className="col main-col">
@@ -94,10 +86,16 @@ export default class CreatePanel extends React.Component {
                         </button>
                     </div>
                 </div>
+                <div className="row tag-choices">
+                    <ComponentTypeTagPicker 
+                        componentTypeOptions={componentTypeOptions} 
+                        selectedTags={this.state.tagFilters}
+                        toggleTagFilterCallback={this.toggleTagFilter}/>
+                </div>
                 <div className="row create-component-by-type-choices">
-                    <div className="component-type-list">
-                        {componentDivs}
-                    </div>
+                    <ComponentTypeList 
+                        selectedTags={this.state.tagFilters}
+                        componentTypeOptions={componentTypeOptions}/>
                 </div>
             </div>     
         </div>

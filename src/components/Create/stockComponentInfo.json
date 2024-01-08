@@ -1,138 +1,263 @@
 {
     "StickerPawnTransparent": {
-        "DisplayName": "Transparent Stick Pawn"
+        "DisplayName": "Transparent Stick Pawn",
+        "Tags": [
+            "stock", "pawn", "transparent"
+        ]
     },
     "StickerPawnYellow": {
-        "DisplayName": "Yellow Sticker Pawn"
+        "DisplayName": "Yellow Sticker Pawn",
+        "Tags": [
+            "stock", "pawn", "yellow"
+        ]
     },
     "StickerPawnOrange": {
-        "DisplayName": "Orange Sticker Pawn"
+        "DisplayName": "Orange Sticker Pawn",
+        "Tags": [
+            "stock", "pawn", "orange"
+        ]
     },
     "MarkerDryEraseBlack": {
-        "DisplayName": "Black Dry Erase Marker"
+        "DisplayName": "Black Dry Erase Marker",
+        "Tags": [
+            "stock", "black", "writing"
+        ]
     },
     "Flame": {
-        "DisplayName": "Flame"
+        "DisplayName": "Flame",
+        "Tags": [
+            "stock", "token", "red"
+        ]
     },
     "CardStandWhite": {
-        "DisplayName": "White Card Stand"
+        "DisplayName": "White Card Stand",
+        "Tags": [
+            "stock", "cardstand", "white"
+        ]
     },
     "JewelClear": {
-        "DisplayName": "Clear Jewel"
+        "DisplayName": "Clear Jewel",
+        "Tags": [
+            "stock", "jewel", "transparent"
+        ]
     },
     "JewelYellow": {
-        "DisplayName": "Yellow Jewel"
+        "DisplayName": "Yellow Jewel",
+        "Tags": [
+            "stock", "jewel", "yellow"
+        ]
     },
     "JewelGreen": {
-        "DisplayName": "Green Jewel"
+        "DisplayName": "Green Jewel",
+        "Tags": [
+            "stock", "jewel", "green"
+        ]
     },
     "Dubloon": {
-        "DisplayName": "Dubloon"
+        "DisplayName": "Dubloon",
+        "Tags": [
+            "stock", "coin"
+        ]
     },
     "CoinTimelessOne": {
-        "DisplayName": "1 Timeless Coin"
+        "DisplayName": "1 Timeless Coin",
+        "Tags": [
+            "stock", "coin"
+        ]
     },
     "D616mmWhitePearl": {
-        "DisplayName": "16mm White Pearl D6"
+        "DisplayName": "16mm White Pearl D6",
+        "Tags": [
+            "stock", "white", "d6", "16mm", "dice"
+        ]
     },
     "D616mmBrownPearl": {
-        "DisplayName": "16mm Brown D6"
+        "DisplayName": "16mm Brown D6",
+        "Tags": [
+            "stock", "brown", "d6", "dice"
+        ]
     },
     
     "Cube12mmTransparentBlue": {
-        "DisplayName": "12mm Blue Transparent Cube"
+        "DisplayName": "12mm Blue Transparent Cube",
+        "Tags": [
+            "stock", "transparent", "blue", "cube", "12mm"
+        ]
     },
     "Cube12mmTransparentYellow": {
-        "DisplayName": "12mm Yellow Transparent Cube"
+        "DisplayName": "12mm Yellow Transparent Cube",
+        "Tags": [
+            "stock", "transparent", "yellow", "cube", "12mm"
+        ]
     },
     "Cube8mmGreen": {
-        "DisplayName": "8mm Green Cube"
+        "DisplayName": "8mm Green Cube",
+        "Tags": [
+            "stock", "cube", "8mm", "green" 
+        ]
     },
     "Cube8mmOrange": {
-        "DisplayName": "8mm Orange Cube"
+        "DisplayName": "8mm Orange Cube",
+        "Tags": [
+            "stock", "cube", "8mm", "orange" 
+        ]
     },
     "Cube8mmBlack": {
-        "DisplayName": "8mm Black Cube"
+        "DisplayName": "8mm Black Cube",
+        "Tags": [
+            "stock", "cube", "8mm", "black" 
+        ]
     },
     "Cube8mmBlue": {
-        "DisplayName": "8mm Blue Cube"
+        "DisplayName": "8mm Blue Cube",
+        "Tags": [
+            "stock", "cube", "8mm", "blue" 
+        ]
     },
     "Cube8mmWhite": {
-        "DisplayName": "8mm White Cube"
+        "DisplayName": "8mm White Cube",
+        "Tags": [
+            "stock", "cube", "8mm", "white" 
+        ]
     },
     "Cube8mmRed": {
-        "DisplayName": "8mm Red Cube"
+        "DisplayName": "8mm Red Cube",
+        "Tags": [
+            "stock", "cube", "8mm", "red" 
+        ]
     },
     "Cube8mmPurple": {
-        "DisplayName": "8mm Purple Cube"
+        "DisplayName": "8mm Purple Cube",
+        "Tags": [
+            "stock", "cube", "8mm", "purple" 
+        ]
     },
-
-
-
     "VictorianMiniatureYellow": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "Yellow Victorian House",
+        "Tags": [
+            "stock", "house", "victorian", "yellow" 
+        ]
     },
     "D68mmWhite": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "White 8mm D6",
+        "Tags": [
+            "stock", "d6", "dice", "white", "8mm"
+        ]
     },
     "D616mmYellow": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "Yellow 16mm D6",
+        "Tags": [
+            "stock", "d6", "dice", "yellow", "8mm"
+        ]
     },
     "D616mmBlue": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "Blue 16mm D6",
+        "Tags": [
+            "stock", "d6", "dice", "blue", "8mm"
+        ]
     },
     "D612mmClear": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "Clear 12mm D6",
+        "Tags": [
+            "stock", "d6", "dice", "transparent", "8mm"
+        ]
     },
 
     "D12White": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "White D12",
+        "Tags": [
+            "stock", "dice", "d12", "white", "plastic"
+        ]
     },
     "D20Black": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "Black D20",
+        "Tags": [
+            "stock", "dice", "d20", "black", "plastic"
+        ]
     },
     "D20Yellow": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "Yellow D20",
+        "Tags": [
+            "stock", "dice", "d20", "yellow", "plastic"
+        ]
     },
     "D20White": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "White D20",
+        "Tags": [
+            "stock", "dice", "d20", "white"
+        ]
     },
-
     "HouseWoodBlack": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "Black Wooden House",
+        "Tags": [
+            "stock", "house", "black" 
+        ]
     },
     "HouseWoodBlue": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "Blue Wooden House",
+        "Tags": [
+            "stock", "house", "blue"
+        ]
     },
     "HouseWoodGreen": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "Green Wooden House",
+        "Tags": [
+            "stock", "house", "green"
+        ]
     },
     "HouseWoodOrange": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "Orange Wooden House",
+        "Tags": [
+            "stock", "house", "orange" 
+        ]
     },
     "HouseWoodWhite": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "White Wooden House",
+        "Tags": [
+            "stock", "house", "white"
+        ]
     },
     "HouseWoodRed": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "Red Wooden House",
+        "Tags": [
+            "stock", "house", "red"
+        ]
     },
     "HouseWoodPurple": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "Purple Wooden House",
+        "Tags": [
+            "stock", "house", "purple"
+        ]
     },
     "BagSmallBlack": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "Small Black Bag",
+        "Tags": [
+            "stock",  "packaging"
+        ]
     },
 
     "StoutBoxBlankLarge": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "Large Blank Stout Box",
+        "Tags": [
+            "stock",  "packaging",  "blank"
+        ]
     },
     "RetailBoxBlankLarge": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "Large Blank Retail Box",
+        "Tags": [
+            "stock", "packaging", "blank"
+        ]
     },
     "ChurchSilver": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "Silver Church",
+        "Tags": [
+            "stock", "silver", "silver", "plastic"
+        ]
     },
     "HouseSilver": {
-        "DisplayName": "Plastic D4"
+        "DisplayName": "Silver House",
+        "Tags": [
+            "stock", "silver", "house", "plastic"
+        ]
     }
 }
