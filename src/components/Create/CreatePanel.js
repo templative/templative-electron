@@ -38,13 +38,13 @@ export default class CreatePanel extends React.Component {
     componentDidMount() {
         this.setState({components: TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")})
     }
-    selectComponent(type) {
+    selectComponent = (type) => {
         if (this.state.selectedComponentType === type) {
             type = undefined
         }
         this.setState({ selectedComponentType: type })
     }
-    updateComponentName(name) {
+    updateComponentName = (name) => {
         this.setState({componentName: name})
     }
     toggleTagFilter = (tag) => {
@@ -95,6 +95,8 @@ export default class CreatePanel extends React.Component {
                 <div className="row create-component-by-type-choices">
                     <ComponentTypeList 
                         selectedTags={this.state.tagFilters}
+                        selectTypeCallback={this.selectComponent}
+                        selectedComponentType={this.state.selectedComponentType}
                         componentTypeOptions={componentTypeOptions}/>
                 </div>
             </div>     
