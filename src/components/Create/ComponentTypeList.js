@@ -28,7 +28,7 @@ export default class ComponentTypeList extends React.Component {
             .filter((key) => {
                 return componentTypeHasAllFilteredTags(this.props.selectedTags, this.props.componentTypeOptions[key]["Tags"])
             }).map((key) => {
-                var existingQuantity = componentTypeQuantities[key] !== undefined ? componentTypeQuantities[key] : 0
+                var existingQuantity = 0
                 return <ComponentType key={key} 
                     name={key} componentInfo={this.props.componentTypeOptions[key]}
                     selectTypeCallback={() => this.selectComponent(key)}
