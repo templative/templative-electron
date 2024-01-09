@@ -14,7 +14,7 @@
     "react-test": "react-scripts test",
     "react-eject": "react-scripts eject",
     "react-build": "react-scripts build",
-    "python": "python ./python/app.py",
+    "python": "./python/__main__ serve --port 8080",
     "python-build": "pyinstaller --distpath ./python -y --onefile /Users/oliverbarnum/Documents/git/templative/templative/__main__.py --hidden-import engineio.async_drivers.aiohttp --hidden-import engineio.async_aiohttp --collect-all templative",
     "electron": "electron-forge start",
     "package": "electron-forge package",
