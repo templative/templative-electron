@@ -17,6 +17,8 @@ const createWindow = () => {
       title: "Templative",
       webPreferences: {
         nodeIntegration: true,
+        // preload: "absPath",
+        devTools: true,
         contextIsolation: false,
         webSecurity: false,
       },
@@ -26,7 +28,6 @@ const createWindow = () => {
     
     Menu.setApplicationMenu(mainMenu);
     templativeWindow.loadURL('http://localhost:3000');
-    templativeWindow.webContents.openDevTools()
     templativeWindow.on("close", async () => {
         await shutdown()
     })
