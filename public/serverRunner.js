@@ -71,10 +71,7 @@ module.exports = class ServerRunner {
             log(`${this.serverName} is launching ${command}.`)
             var spawnedProcess = spawn(command, { detached: false, shell: true, stdio:["pipe", "pipe", "pipe"]  });
             
-            spawnedProcess.stdout.pipe(process.stdout);
-            const serverLogLocation = `${os.homedir()}/Documents/Templative/${this.serverName}.log`
-            // spawnedProcess.stdout.pipe(fs.createWriteStream(serverLogLocation));
-            
+            spawnedProcess.stdout.pipe(process.stdout);            
             this.#serverProcess = spawnedProcess
             
             await this.#waitforhost(this.#pingUrl, pingCooldownMilliseconds, retries)
@@ -84,7 +81,7 @@ module.exports = class ServerRunner {
         return 0
         }
     }
-    attemptToStartServer = async (environment, retries=20, pingCooldownMilliseconds=2000) => {
+    attemptToStartServer = async (environment, retries=30, pingCooldownMilliseconds=2000) => {
         var serverStartResult = await this.#launchServer(environment, retries, pingCooldownMilliseconds)
         if (serverStartResult == 0) {
             error(`${this.serverName} failed to start`)

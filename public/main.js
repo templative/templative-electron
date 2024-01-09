@@ -55,7 +55,7 @@ const createStartupWindow = () => {
 const createServerManager = () => {
   var templativeServerCommandsByEnvironment = {
     "PROD": `${process.resourcesPath}/python/__main__ serve --port 8080`,
-    "TEST_BUILT": `/Users/oliverbarnum/Documents/git/templative-electron/python/dist/app/app`,
+    "TEST_BUILT": `./out/Templative-darwin-x64/Templative.app/Contents/Resources/python/__main__ serve --port 8080`,
     "GLOBALLY_INSTALLED": `templative serve --port 8080`,
     "DEV": `./python/__main__ serve --port 8080`
   }
@@ -64,10 +64,10 @@ const createServerManager = () => {
   var reactServerCommandsByEnvironment = {
     "PROD": `npx --yes serve -s ${process.resourcesPath}/build`,
     "TEST_BUILT": `npx --yes serve -s ./build`,
-    "GLOBALLY_INSTALLED": `templative serve --port 8080`,
+    "GLOBALLY_INSTALLED": `react-scripts start`,
     "DEV": `react-scripts start`
   }
-  var reactServerRunner = new ServerRunner("reactServer", "http://127.0.0.1:3000", reactServerCommandsByEnvironment)
+  var reactServerRunner = new ServerRunner("reactServer", "http://localhost:3000", reactServerCommandsByEnvironment)
   var servers = [templativeServerRunner, reactServerRunner]
   return new ServerManager(servers)
 }
@@ -75,7 +75,7 @@ var serverManager = createServerManager()
 
 const launchServers = async () => {
   try {
-    var environment = "DEV"
+    var environment = "TEST_BUILT"
     if (app.isPackaged) {
       environment = "PROD"
     }
@@ -89,15 +89,15 @@ const launchServers = async () => {
 app.whenReady().then(async () => {
   log("Starting Templative")
   var startupWindow = createStartupWindow()
-  var serverStartResult = await launchServers()
-  if (serverStartResult == 0) {
-    warn("Failed to start servers!")
-    await shutdown()
-    return
-  }
-  createWindow()
+  // var serverStartResult = await launchServers()
+  // if (serverStartResult == 0) {
+  //   warn("Failed to start servers!")
+  //   await shutdown()
+  //   return
+  // }
+  // createWindow()
   startupWindow.closable=true
-  startupWindow.close()
+  // startupWindow.close()
   app.on('activate', () => {
       if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
