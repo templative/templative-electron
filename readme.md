@@ -55,5 +55,6 @@ serve -s build
 
 - `lsof -i tcp:3000`
 - `lsof -i tcp:8080`
+- `kill PID`
 
 templative = {file = "file:///C:/Users/User/Documents/git/nextdaygames/templative"}
