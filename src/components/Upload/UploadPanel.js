@@ -1,14 +1,12 @@
 import React from "react";
 import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 import "./UploadPanel.css"
-import SelectDirectoryInDirectory from "../SelectDirectory/SelectDirectoryInDirectory";
 import { channels } from "../../shared/constants";
 import UploadControls from "./UploadControls";
 import { FullHeightConsole } from "../SocketedConsole/LoggedMessages"
 import {socket} from "../../socket"
 import {getLastUsedGameCrafterUsername, writeLastUseGameCrafterUsername, getLastUsedGameCrafterApiKey, writeLastUseGameCrafterApiKey} from "../../settings/SettingsManager"
 
-const axios = window.require("axios")
 const { ipcRenderer } = window.require('electron');
 
 export default class UploadPanel extends React.Component {   
