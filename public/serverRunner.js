@@ -1,6 +1,9 @@
 
 var kill  = require('tree-kill');
 const { spawn } = require('child_process');
+const {log, error, warn} = require("./logger")
+const fs = require('fs')
+const os = require('os')
 
 module.exports = class ServerRunner {
     serverName = undefined
@@ -48,7 +51,7 @@ module.exports = class ServerRunner {
             }
             } catch (e) {
             count++
-            console.log(`${this.serverName} ${url} ping failed with ${e}. Trying ${count} of ${attempts}`)
+            log(`${this.serverName} ${url} ping failed with ${e}. Trying ${count} of ${attempts}`)
             }
         }
     
@@ -62,21 +65,29 @@ module.exports = class ServerRunner {
         try {
             var command = this.#commandListByEnvironment[environment]
             if (command === undefined) {
-                console.log("")
+                error(`No command for ${environment} env of ${this.serverName}.`)
                 return 0
             }
-            this.#serverProcess = spawn(command, { detached: false, shell: true, stdio: 'inherit' });
+            log(`${this.serverName} is launching ${command}.`)
+            var spawnedProcess = spawn(command, { detached: false, shell: true, stdio:["pipe", "pipe", "pipe"]  });
+            
+            spawnedProcess.stdout.pipe(process.stdout);
+            const serverLogLocation = `${os.homedir()}/Documents/Templative/${this.serverName}.log`
+            // spawnedProcess.stdout.pipe(fs.createWriteStream(serverLogLocation));
+            
+            this.#serverProcess = spawnedProcess
+            
             await this.#waitforhost(this.#pingUrl, pingCooldownMilliseconds, retries)
             return 1
         } catch (err) {
-            console.log(err)
+            error(`${this.serverName} command ${command} failed due to: \n${err}.`)
         return 0
         }
     }
     attemptToStartServer = async (environment, retries=20, pingCooldownMilliseconds=2000) => {
         var serverStartResult = await this.#launchServer(environment, retries, pingCooldownMilliseconds)
         if (serverStartResult == 0) {
-            console.log(`${this.serverName} failed to start`)
+            error(`${this.serverName} failed to start`)
             this.shutdownServerIfRunning()
             return 0
         }

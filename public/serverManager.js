@@ -1,3 +1,5 @@
+const {log, error, warn} = require("./logger")
+
 module.exports = class ServerManager {
     #serverRunners = []
     constructor(serverRunners) {
@@ -5,14 +7,13 @@ module.exports = class ServerManager {
             throw "An array of serverRunners must be provided."
         }
         if (serverRunners.length === 0) {
-            console.log("No server runners were provided.")
+            warn("No server runners were provided.")
         }
         this.#serverRunners = serverRunners
     }
     async runServers(environment) {
         for(var s = 0 ; s < this.#serverRunners.length ; s++) {
             var server = this.#serverRunners[s]
-            console.log(server.serverName)
             var startupSuccess = await server.attemptToStartServer(environment)
             if (startupSuccess === 0) {
                 await this.shutDownServers()

@@ -1,11 +1,9 @@
 const { app, BrowserWindow, Menu } = require('electron')
-var kill  = require('tree-kill');
-const { spawn } = require('child_process');
-const fs = require("fs")
 const {mainMenu} = require("./menuMaker")
 const {listenForRenderEvents} = require("./listenForRenderEvents")
 const ServerManager = require("./serverManager")
 const ServerRunner = require("./serverRunner")
+const {log, error, warn} = require("./logger")
 
 app.setName('Templative');
 var templativeWindow = undefined
@@ -83,16 +81,17 @@ const launchServers = async () => {
     }
     return await serverManager.runServers(environment)
   } catch (err) {
-    console.log(err)
+    error(err)
     return 0
   }
 }
 
 app.whenReady().then(async () => {
+  log("Starting Templative")
   var startupWindow = createStartupWindow()
   var serverStartResult = await launchServers()
   if (serverStartResult == 0) {
-    console.log("Failure!")
+    warn("Failed to start servers!")
     await shutdown()
     return
   }
