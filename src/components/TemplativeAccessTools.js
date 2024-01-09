@@ -63,6 +63,10 @@ export default class TemplativeAccessTools {
             if (filepath.split(".").pop() === "md") {
                 return;
             }
+            console.log(filepath.split(".").pop())
+            if (filepath.split(".").pop() === "DS_Store") {
+                return;
+            }
             filepaths.push(path.join(templativeRootDirectoryPath, filepath))
         });
         return filepaths;
