@@ -19,11 +19,12 @@ const createWindow = () => {
       webPreferences: {
         nodeIntegration: true,
         contextIsolation: false,
-        webSecurity: false
+        webSecurity: false,
       },
+      backgroundColor: '#282c34',
       icon: __dirname + "/favicon.ico"
     })
-  
+    
     Menu.setApplicationMenu(mainMenu);
     templativeWindow.loadURL('http://localhost:3000');
     templativeWindow.webContents.openDevTools()
