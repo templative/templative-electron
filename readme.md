@@ -12,12 +12,10 @@ the user doesnt need to install the templative electron app, python, node, or et
 
 ![Systems Diagram](SystemsDiagram.png)
 
-## Loading Templative Into
+## Loading Templative Changes
 
-- Go to templative, run `python -m build`
-- Copy the `/dist` folder into `/python/dependencies` of templative electron
-- In `/python` run `pyinstaller --onefile app.py --paths ./dependencies --hidden-import engineio.async_drivers.aiohttp --hidden-import engineio.async_aiohttp`
-- Test it by running `python/dist/app`
+- Go to templative, run `pip install -e .`. Without this, images aren't included.
+- Go to templative electron `npm run python-build`
 
 ## Running Production React Server
 
