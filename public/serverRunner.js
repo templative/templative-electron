@@ -1,19 +1,23 @@
 
 var kill  = require('tree-kill');
-const { spawn } = require('child_process');
+const { spawn, execSync } = require('child_process');
 const {log, error, warn} = require("./logger")
 const fs = require('fs')
 const os = require('os')
 
 module.exports = class ServerRunner {
     serverName = undefined
+    #port = undefined
     #commandListByEnvironment = {}
     #pingUrl = undefined
     #serverProcess = undefined
 
-    constructor(serverName, pingUrl, commandListByEnvironment) {
+    constructor(serverName, port, pingUrl, commandListByEnvironment) {
         if (serverName === undefined) {
             throw "serverName cannot be undefined."
+        }
+        if (port === undefined) {
+            throw "port cannot be undefined."
         }
         if (pingUrl === undefined) {
             throw "pingUrl cannot be undefined."
@@ -26,6 +30,7 @@ module.exports = class ServerRunner {
         }
         this.serverName = serverName
         this.#pingUrl = pingUrl
+        this.#port = port
         this.#commandListByEnvironment = commandListByEnvironment
     }
     
@@ -68,6 +73,9 @@ module.exports = class ServerRunner {
                 error(`No command for ${environment} env of ${this.serverName}.`)
                 return 0
             }
+            log(`Killing any process at port ${this.#port}...`)
+            execSync(`npx kill-port ${this.#port}`);
+            
             log(`${this.serverName} is launching ${command}.`)
             var spawnedProcess = spawn(command, { detached: false, shell: true, stdio:["pipe", "pipe", "pipe"]  });
             
