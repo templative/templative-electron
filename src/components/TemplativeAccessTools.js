@@ -51,6 +51,12 @@ export default class TemplativeAccessTools {
             path.join(templativeRootDirectoryPath, "game.json")
         ]
     }
+    static getStudioGamedataFilename(templativeRootDirectoryPath) {
+        return path.join(templativeRootDirectoryPath, "studio.json")
+    }
+    static getGameGamedataFilenames(templativeRootDirectoryPath) {
+        return path.join(templativeRootDirectoryPath, "game.json")
+    }
     static getComponentComposeFilepath(templativeRootDirectoryPath) {
         return path.join(templativeRootDirectoryPath, "component-compose.json")
     }
@@ -63,7 +69,6 @@ export default class TemplativeAccessTools {
             if (filepath.split(".").pop() === "md") {
                 return;
             }
-            console.log(filepath.split(".").pop())
             if (filepath.split(".").pop() === "DS_Store") {
                 return;
             }

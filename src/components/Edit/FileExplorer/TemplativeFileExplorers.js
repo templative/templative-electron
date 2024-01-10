@@ -70,7 +70,7 @@ export default class TemplativeFileExplorers extends React.Component {
     }
 
     render() {
-        return <React.Fragment>
+        return <div className="row file-explorer-row">
             <ArtList 
                 header="Templates" 
                 currentFilepath={this.props.currentFilepath} 
@@ -94,14 +94,14 @@ export default class TemplativeFileExplorers extends React.Component {
                 createFileCallback={(filepath, contents)=>this.createFile(filepath, contents)}
                 deleteFileCallback={(filepath) => this.deleteFile(filepath)}
             />
-            <GamedataList 
+            {/* <GamedataList 
                 header="Global Gamedata" 
                 gamedataType="KEYVALUE_GAMEDATA" 
                 currentFilepath={this.props.currentFilepath} 
                 updateViewedFileCallback={this.props.updateViewedFileCallback} 
                 canCreateNewFiles={false}
                 filenames={this.state.globalGamedataFilenames}
-            />
+            /> */}
             <GamedataList 
                 header="Components Gamedata" 
                 gamedataType="KEYVALUE_GAMEDATA" 
@@ -124,6 +124,6 @@ export default class TemplativeFileExplorers extends React.Component {
                 createFileCallback={(filepath, contents)=>this.createFile(filepath, contents)}
                 deleteFileCallback={(filepath) => this.deleteFile(filepath)}
             />
-        </React.Fragment>        
+        </div>        
     }
 }

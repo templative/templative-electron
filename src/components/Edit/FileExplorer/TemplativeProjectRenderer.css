@@ -2,9 +2,16 @@
     /* overflow-y: scroll; */
     padding-bottom:2em
 }
-.open-components-button {
-    margin: 0 1em 0.5em 1em;
+.main-game-button-row {
+    padding-left: 1em;
+    padding-right: 0.5em;
+    padding-bottom: 0.25em;
+    height: 1.5em;
+}
+.main-game-button {
+    margin: 0 0.3% 0em 0em;
     color:#cfcfcf !important;
+    width: 32% !important;
 }
 
 .new-file-wrapper {
@@ -22,4 +29,13 @@
     outline: none !important;
     box-shadow: none !important;
     border:0px !important;
+}
+.file-explorer-row { 
+    height: calc(100% - 1.5em);
+    width: 100%;
+    margin: 0 0 0 0 !important;
+    padding: 0 0 0 0 !important;
+    /* background-color: red; */
+    overflow-y: scroll;
+    overflow-x: hidden;
 }

@@ -1,9 +1,7 @@
 
 var kill  = require('tree-kill');
 const { spawn, execSync } = require('child_process');
-const {log, error, warn} = require("./logger")
-const fs = require('fs')
-const os = require('os')
+const {log, error} = require("./logger")
 
 module.exports = class ServerRunner {
     serverName = undefined
@@ -75,7 +73,7 @@ module.exports = class ServerRunner {
             }
             log(`Killing any process at port ${this.#port}...`)
             execSync(`npx kill-port ${this.#port}`);
-            
+
             log(`${this.serverName} is launching ${command}.`)
             var spawnedProcess = spawn(command, { detached: false, shell: true, stdio:["pipe", "pipe", "pipe"]  });
             

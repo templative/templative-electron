@@ -38,6 +38,7 @@ export default class EditPanel extends React.Component {
     }
 
     updateViewedFile = (filetype, filepath) => {     
+        console.log(filetype, filepath)
         var fileContents = fs.readFileSync(filepath, 'utf8');
         var extension = filepath.split('.').pop()
         if (extension === "json") {
@@ -68,6 +69,12 @@ export default class EditPanel extends React.Component {
             currentFilepath: undefined,
         })
     }
+    openStudioGamedata = () => {
+        this.updateViewedFile("KEYVALUE_GAMEDATA", TemplativeAccessTools.getStudioGamedataFilename(this.props.templativeRootDirectoryPath))
+    }
+    openGameGamedata = () => {
+        this.updateViewedFile("KEYVALUE_GAMEDATA", TemplativeAccessTools.getGameGamedataFilenames(this.props.templativeRootDirectoryPath))
+    }
     
     render() {
         var components = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")
@@ -79,7 +86,10 @@ export default class EditPanel extends React.Component {
                     currentFilepath={this.state.currentFilepath} 
                     updateViewedFileCallback={this.updateViewedFile}
                     clearViewedFileCallback={()=>this.clearViewedFile()}
-                    openComponentsCallback={this.openComponents}/>
+                    openComponentsCallback={this.openComponents}
+                    openStudioGamedataCallback={this.openStudioGamedata}
+                    openGameGamedataCallback={this.openGameGamedata}
+                />
             </div>
             <div className='col-8 viewer'>
                 {this.state.currentFileType === "ARTDATA" &&

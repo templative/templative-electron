@@ -4,9 +4,11 @@ import "./TemplativeProjectRenderer.css"
 
 export default class TemplativeProjectRenderer extends React.Component {   
     render() {
-        return <div className="resources">
-            <div className="d-grid gap-2">
-                <button className="btn btn-outline-secondary open-components-button" onClick={this.props.openComponentsCallback}>Components</button>
+        return <React.Fragment>
+            <div className="row main-game-button-row">
+                <button className={`btn btn-outline-secondary main-game-button`} onClick={() => this.props.openStudioGamedataCallback()}>Studio</button>
+                <button className={`btn btn-outline-secondary main-game-button`} onClick={() => this.props.openGameGamedataCallback()}>Game</button>
+                <button className={`btn btn-outline-secondary main-game-button`} onClick={() => this.props.openComponentsCallback()}>Components</button>
             </div>
             
             <TemplativeFileExplorers 
@@ -15,6 +17,6 @@ export default class TemplativeProjectRenderer extends React.Component {
                 updateViewedFileCallback={this.props.updateViewedFileCallback}
                 clearViewedFileCallback={this.props.clearViewedFileCallback}
             />
-        </div>        
+        </React.Fragment>        
     }
 }
