@@ -7,6 +7,7 @@ const {log, error, warn} = require("./logger")
 
 app.setName('Templative');
 var templativeWindow = undefined
+var startupWindow = undefined
 
 const createWindow = () => {
     templativeWindow = new BrowserWindow({
@@ -92,7 +93,7 @@ const launchServers = async () => {
 
 app.whenReady().then(async () => {
   log("Starting Templative")
-  var startupWindow = createStartupWindow()
+  startupWindow = createStartupWindow()
   var serverStartResult = await launchServers()
   if (serverStartResult == 0) {
     warn("Failed to start servers!")
@@ -108,6 +109,10 @@ app.whenReady().then(async () => {
 })
 const shutdown = async () => {
     await serverManager.shutDownServers()
+    if (startupWindow !== undefined && startupWindow) {
+      startupWindow.closable=true
+      startupWindow.close()
+    }
 };
 app.on('window-all-closed', async () => {
     if (process.platform !== 'darwin') {
