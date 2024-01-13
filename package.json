@@ -13,7 +13,8 @@
     "react": "react-scripts start",
     "react-test": "react-scripts test",
     "react-eject": "react-scripts eject",
-    "react-build": "react-scripts build",
+    "create-static-react": "pkg ./react/app.js --out-path ./build -t node18-macos-x64",
+    "react-build": "react-scripts build && npm run create-static-react",
     "python": "./python/__main__ serve --port 8080",
     "python-build": "pyinstaller --distpath ./python -y --onefile /Users/oliverbarnum/Documents/git/templative/templative/__main__.py --hidden-import engineio.async_drivers.aiohttp --hidden-import engineio.async_aiohttp --collect-all templative",
     "electron": "electron-forge start",
@@ -53,7 +54,8 @@
     "@electron-forge/maker-zip": "^7.2.0",
     "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
     "electron": "^27.1.3",
-    "electron-prebuilt-compile": "8.2.0"
+    "electron-prebuilt-compile": "8.2.0",
+    "pkg": "^5.8.1"
   },
   "eslintConfig": {
     "extends": [

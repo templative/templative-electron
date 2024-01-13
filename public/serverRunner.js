@@ -72,6 +72,7 @@ module.exports = class ServerRunner {
                 return 0
             }
             log(`Killing any process at port ${this.#port}...`)
+            // Cant use npx
             execSync(`npx kill-port ${this.#port}`);
 
             log(`${this.serverName} is launching ${command}.`)

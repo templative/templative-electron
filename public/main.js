@@ -63,16 +63,12 @@ const createServerManager = () => {
   var templativeServerRunner = new ServerRunner("templativeServer", 8080, "http://localhost:8080/status", templativeServerCommandsByEnvironment)
 
   var reactServerCommandsByEnvironment = {
-    "PROD": `npx --yes serve -s ${process.resourcesPath}/build`,
-    "TEST_BUILT": `npx --yes serve -s ./build`,
+    "PROD": `${process.resourcesPath}/build/app`,
+    "TEST_BUILT": `./build/app`,
     "GLOBALLY_INSTALLED": `react-scripts start`,
     "DEV": `react-scripts start`
   }
-  var reactServerPingUrl = {
-    "PROD": "http://localhost:3000",
-    "DEV": "http://127.0.0.1:3000"
-  }
-  var reactServerRunner = new ServerRunner("reactServer", 3000, reactServerPingUrl[app.isPackaged ? "PROD" : "DEV"], reactServerCommandsByEnvironment)
+  var reactServerRunner = new ServerRunner("reactServer", 3000, "http://localhost:3000", reactServerCommandsByEnvironment)
   var servers = [templativeServerRunner, reactServerRunner]
   return new ServerManager(servers)
 }
@@ -80,7 +76,7 @@ var serverManager = createServerManager()
 
 const launchServers = async () => {
   try {
-    var environment = "DEV"
+    var environment = "TEST_BUILT"
     if (app.isPackaged) {
       environment = "PROD"
     }
