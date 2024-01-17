@@ -1,0 +1,51 @@
+.rules-title {
+    height: 1.7em;
+}
+.rules-body {
+    height: calc(100% - 1.7em) !important;
+    /* overflow-y: scroll !important; */
+    /* background-color: hsl(220, 13%, 16%); */
+    /* padding: 0.5em 0.25em 3em 0.5em; */
+}
+.rules-body > .col {
+    padding: 0;
+    height:100%;
+    overflow-y: hidden;
+}
+.md-editor { 
+    height: 100%;
+}
+.rules-text-controls {
+    padding: 0;
+}
+.rules-text-control-input-group {
+    padding:0 !important;
+}
+.text-control-button {
+    border-top-width: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+.text-control-button:first {
+    border-left-width: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+.rules-line {
+    margin:0 0 1em 0;
+    font-size:14px;
+}
+.cm-scroller {
+    overflow-x: hidden !important;
+}
+.cm-content {
+    width: calc(100% - 70px) !important;
+    overflow-x: hidden !important;
+}
+.cm-line {
+    font-size: 10px !important;
+    padding-right:1em !important;
+    text-wrap: wrap;
+}
+.cm-gutterElement {
+    font-size: 12px !important;
+}

@@ -7,6 +7,10 @@ export default class TemplativeAccessTools {
         var filepath = path.join(templativeRootDirectoryPath, fileName);            
         return JSON.parse(fs.readFileSync(filepath, 'utf8'));
     }
+    static readFileContents(templativeRootDirectoryPath, fileName) {
+        var filepath = path.join(templativeRootDirectoryPath, fileName);            
+        return fs.readFileSync(filepath, 'utf8')
+    }
 
     static getArtdataFilenames(templativeRootDirectoryPath) {
         var gameCompose = TemplativeAccessTools.readFile(templativeRootDirectoryPath, "game-compose.json")
@@ -50,6 +54,9 @@ export default class TemplativeAccessTools {
             path.join(templativeRootDirectoryPath, "studio.json"),
             path.join(templativeRootDirectoryPath, "game.json")
         ]
+    }
+    static getRulesFilepath(templativeRootDirectoryPath) {
+        return path.join(templativeRootDirectoryPath, "rules.md")
     }
     static getStudioGamedataFilename(templativeRootDirectoryPath) {
         return path.join(templativeRootDirectoryPath, "studio.json")

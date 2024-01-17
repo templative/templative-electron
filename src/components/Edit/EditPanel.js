@@ -7,6 +7,7 @@ import KeyValueGamedataViewer from "./Viewers/GamedataViewer/KeyValueGamedataVie
 import "./EditPanel.css"
 import ImageViewer from "./Viewers/ImageViewer";
 import TemplativeAccessTools from "../TemplativeAccessTools"
+import RulesEditor from "./Viewers/RulesEditor";
 const path = window.require("path");
 const fs = window.require("fs");
 
@@ -75,6 +76,9 @@ export default class EditPanel extends React.Component {
     openGameGamedata = () => {
         this.updateViewedFile("KEYVALUE_GAMEDATA", TemplativeAccessTools.getGameGamedataFilenames(this.props.templativeRootDirectoryPath))
     }
+    openRules = () => {
+        this.updateViewedFile("RULES", TemplativeAccessTools.getRulesFilepath(this.props.templativeRootDirectoryPath))
+    }
     
     render() {
         var components = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")
@@ -89,9 +93,15 @@ export default class EditPanel extends React.Component {
                     openComponentsCallback={this.openComponents}
                     openStudioGamedataCallback={this.openStudioGamedata}
                     openGameGamedataCallback={this.openGameGamedata}
+                    openRulesCallback={this.openRules}
                 />
             </div>
             <div className='col-8 viewer'>
+                {this.state.currentFileType === "RULES" &&
+                    <RulesEditor 
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
+                }
                 {this.state.currentFileType === "ARTDATA" &&
                     <ArtdataViewer filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
                 }
