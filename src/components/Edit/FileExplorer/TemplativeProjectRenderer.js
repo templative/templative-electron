@@ -1,14 +1,12 @@
 import React from "react";
-import ArtdataList from "./Artdata/ArtdataList"
-import GamedataList from "./Gamedata/GamedataList"
-import ArtList from "./Art/ArtList"
 import TemplativeAccessTools from "../../TemplativeAccessTools";
+import ContentFileList from "./ContentFiles/ContentFileList";
 import "./TemplativeProjectRenderer.css"
 
 const path = window.require("path")
 const fs = window.require("fs")
 
-export default class TemplativeFileExplorers extends React.Component {   
+export default class TemplativeProjectRenderer extends React.Component {   
     state = {
         gameCompose: undefined,
         templateFilenames: [],
@@ -21,7 +19,7 @@ export default class TemplativeFileExplorers extends React.Component {
         overlaysDirectory: "./",
     }
 
-    createFile(filepath, contents) {
+    createFile = (filepath, contents) => {
         fs.writeFileSync(filepath, contents)
         
         this.setState({
@@ -33,14 +31,12 @@ export default class TemplativeFileExplorers extends React.Component {
             pieceGamedataFilenames: TemplativeAccessTools.getPieceGamedataFilenames(this.props.templativeRootDirectoryPath)
         })
     }
-    deleteFile(filepath) {
-        console.log(TemplativeAccessTools.getArtdataFilenames(this.props.templativeRootDirectoryPath))
+    deleteFile = (filepath) => {
         fs.unlink(filepath, (err) => {
             if (err !== null) {
                 console.log(err);
                 return
             }
-            console.log(TemplativeAccessTools.getArtdataFilenames(this.props.templativeRootDirectoryPath))
             this.setState({
                 templateFilenames: TemplativeAccessTools.getTemplateFilenames(this.props.templativeRootDirectoryPath),
                 overlayFilenames: TemplativeAccessTools.getOverlayFilenames(this.props.templativeRootDirectoryPath),
@@ -81,13 +77,11 @@ export default class TemplativeFileExplorers extends React.Component {
         const originalDirectory = path.parse(originalFilepath).dir
         const filenameWithExtension = `${newFilename}.${originalFilepath.split('.').pop()}` 
         const newFilepath = path.join(originalDirectory, filenameWithExtension)
-        console.log(TemplativeAccessTools.getArtdataFilenames(this.props.templativeRootDirectoryPath))
         fs.rename(originalFilepath, newFilepath, (err) => {
             if (err !== null) {
                 console.log(err);
                 return
             }
-            console.log(TemplativeAccessTools.getArtdataFilenames(this.props.templativeRootDirectoryPath))
             this.setState({
                 templateFilenames: TemplativeAccessTools.getTemplateFilenames(this.props.templativeRootDirectoryPath),
                 overlayFilenames: TemplativeAccessTools.getOverlayFilenames(this.props.templativeRootDirectoryPath),
@@ -97,75 +91,99 @@ export default class TemplativeFileExplorers extends React.Component {
                 pieceGamedataFilenames: TemplativeAccessTools.getPieceGamedataFilenames(this.props.templativeRootDirectoryPath)
             })
             if (this.props.currentFilepath === originalFilepath) {
-                console.log(this.props.currentFileType, newFilepath)
                 this.props.updateViewedFileCallback(this.props.currentFileType, newFilepath)
             }
             this.forceUpdate()
         });
+    }
+    getDefaultContentForFileBasedOnFilename = (filetype, filename) => {
+        switch (filetype) {
+            case "PIECE_GAMEDATA":
+                return `{"displayName": "${filename}", "pieceDisplayName": "${filename}" }`
+            case "KEYVALUE_GAMEDATA":
+                return "[]"
+            case "ARTDATA":
+                return `{ "name":"${filename}", "templateFilename": "", "overlays": [], "textReplacements": [], "styleUpdates": [] }`
+            default:
+                return "";
+        }
         
     }
-
     render() {
-        return <div className="row file-explorer-row">
-            <ArtList 
-                header="Templates" 
-                currentFilepath={this.props.currentFilepath} 
-                updateViewedFileCallback={this.props.updateViewedFileCallback} 
-                directoryPath={this.state.templatesDirectory}
-                filenames={this.state.templateFilenames}
-                deleteFileCallback={(filepath) => this.deleteFile(filepath)}
-                renameFileCallback={this.renameFile}
-            />
-            <ArtList 
-                header="Overlays" 
-                currentFilepath={this.props.currentFilepath} 
-                updateViewedFileCallback={this.props.updateViewedFileCallback} 
-                directoryPath={this.state.overlaysDirectory}
-                filenames={this.state.overlayFilenames}
-                deleteFileCallback={(filepath) => this.deleteFile(filepath)}
-                renameFileCallback={this.renameFile}
-            />
-            <ArtdataList 
-                currentFilepath={this.props.currentFilepath} 
-                updateViewedFileCallback={this.props.updateViewedFileCallback} 
-                baseFilepath={this.state.artdataDirectory}
-                filenames={this.state.artdataFilenames}
-                createFileCallback={(filepath, contents)=>this.createFile(filepath, contents)}
-                deleteFileCallback={(filepath) => this.deleteFile(filepath)}
-                renameFileCallback={this.renameFile}
-            />
-            {/* <GamedataList 
-                header="Global Gamedata" 
-                gamedataType="KEYVALUE_GAMEDATA" 
-                currentFilepath={this.props.currentFilepath} 
-                updateViewedFileCallback={this.props.updateViewedFileCallback} 
-                canCreateNewFiles={false}
-                filenames={this.state.globalGamedataFilenames}
-            /> */}
-            <GamedataList 
-                header="Components Gamedata" 
-                gamedataType="KEYVALUE_GAMEDATA" 
-                baseFilepath={this.state.componentGamedataDirectory}
-                currentFilepath={this.props.currentFilepath} 
-                updateViewedFileCallback={this.props.updateViewedFileCallback} 
-                filenames={this.state.componentGamedataFilenames}
-                canCreateNewFiles={true}
-                createFileCallback={(filepath, contents)=>this.createFile(filepath, contents)}
-                deleteFileCallback={(filepath) => this.deleteFile(filepath)}
-                renameFileCallback={(originalFilepath, newFilename) => this.renameFile(originalFilepath, newFilename)}
-            />
-            <GamedataList 
-                header="Piece Gamedata" 
-                gamedataType="PIECE_GAMEDATA" 
-                baseFilepath={this.state.piecesGamedataDirectory}
-                currentFilepath={this.props.currentFilepath} 
-                updateViewedFileCallback={this.props.updateViewedFileCallback} 
-                filenames={this.state.pieceGamedataFilenames}
-                canCreateNewFiles={true}
-                createFileCallback={(filepath, contents)=>this.createFile(filepath, contents)}
-                deleteFileCallback={(filepath) => this.deleteFile(filepath)}
-                renameFileCallback={this.renameFile}
-            />
-        </div>        
+        return <React.Fragment>
+            <div className="row main-game-button-row">
+                <button className={`btn btn-outline-secondary main-game-button`} onClick={() => this.props.openStudioGamedataCallback()}>Studio</button>
+                <button className={`btn btn-outline-secondary main-game-button`} onClick={() => this.props.openGameGamedataCallback()}>Game</button>
+                <button className={`btn btn-outline-secondary main-game-button`} onClick={() => this.props.openComponentsCallback()}>Components</button>
+                <button className={`btn btn-outline-secondary main-game-button`} onClick={() => this.props.openRulesCallback()}>Rules</button>
+            </div>
+            
+            <div className="row file-explorer-row">
+                <ContentFileList
+                    header="Templates" 
+                    contentType="ART" 
+                    baseFilepath={this.state.templatesDirectory}
+                    currentFilepath={this.props.currentFilepath} 
+                    updateViewedFileCallback={this.props.updateViewedFileCallback} 
+                    filenames={this.state.templateFilenames}
+                    createFileCallback={this.createFile}
+                    deleteFileCallback={this.deleteFile}
+                    renameFileCallback={this.renameFile}
+                />
+                <ContentFileList
+                    header="Overlays" 
+                    contentType="ART" 
+                    baseFilepath={this.state.overlaysDirectory}
+                    currentFilepath={this.props.currentFilepath} 
+                    updateViewedFileCallback={this.props.updateViewedFileCallback} 
+                    filenames={this.state.overlayFilenames}
+                    createFileCallback={this.createFile}
+                    deleteFileCallback={this.deleteFile}
+                    renameFileCallback={this.renameFile}
+                />
+                <ContentFileList
+                    header="Artdata" 
+                    contentType="ARTDATA" 
+                    baseFilepath={this.state.artdataDirectory}
+                    currentFilepath={this.props.currentFilepath} 
+                    updateViewedFileCallback={this.props.updateViewedFileCallback} 
+                    filenames={this.state.artdataFilenames}
+                    canCreateNewFiles={true}
+                    newFileExtension="json"
+                    getDefaultContentForFileBasedOnFilenameCallback={this.getDefaultContentForFileBasedOnFilename}
+                    createFileCallback={this.createFile}
+                    deleteFileCallback={this.deleteFile}
+                    renameFileCallback={this.renameFile}
+                />
+                <ContentFileList
+                    header="Component Gamedata" 
+                    contentType="KEYVALUE_GAMEDATA" 
+                    baseFilepath={this.state.componentGamedataDirectory}
+                    currentFilepath={this.props.currentFilepath} 
+                    updateViewedFileCallback={this.props.updateViewedFileCallback} 
+                    filenames={this.state.componentGamedataFilenames}
+                    canCreateNewFiles={true}
+                    newFileExtension="json"
+                    getDefaultContentForFileBasedOnFilenameCallback={this.getDefaultContentForFileBasedOnFilename}
+                    createFileCallback={this.createFile}
+                    deleteFileCallback={this.deleteFile}
+                    renameFileCallback={this.renameFile}
+                />
+                <ContentFileList
+                    header="Piece Gamedata" 
+                    contentType="PIECE_GAMEDATA" 
+                    baseFilepath={this.state.piecesGamedataDirectory}
+                    currentFilepath={this.props.currentFilepath} 
+                    updateViewedFileCallback={this.props.updateViewedFileCallback} 
+                    filenames={this.state.pieceGamedataFilenames}
+                    canCreateNewFiles={true}
+                    newFileExtension="json"
+                    getDefaultContentForFileBasedOnFilenameCallback={this.getDefaultContentForFileBasedOnFilename}
+                    createFileCallback={this.createFile}
+                    deleteFileCallback={this.deleteFile}
+                    renameFileCallback={this.renameFile}
+                />
+            </div>       
+        </React.Fragment>        
     }
 }

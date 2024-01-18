@@ -84,7 +84,7 @@ export default class EditPanel extends React.Component {
         var components = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")
         
         return <div className='mainBody row '>
-            <div className='col-4 left-column'>
+            <div className='col-3 left-column'>
                 <TemplativeProjectRenderer 
                     templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
                     currentFileType={this.state.currentFileType}
@@ -97,7 +97,7 @@ export default class EditPanel extends React.Component {
                     openRulesCallback={this.openRules}
                 />
             </div>
-            <div className='col-8 viewer'>
+            <div className='col-9 viewer'>
                 {this.state.currentFileType === "RULES" &&
                     <RulesEditor 
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}

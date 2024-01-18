@@ -7,22 +7,24 @@
     padding-right: 0.5em;
     padding-bottom: 0.25em;
     height: 1.5em;
+    margin-bottom: 0.5em;
 }
 .main-game-button {
-    margin: 0 0.24% 0em 0em;
+    margin: 0 1% 0em 0em;
     color:#cfcfcf !important;
     width: 24% !important;
 }
-
 .new-file-wrapper {
     padding-left: 1em;
     padding-right: 1em;
+    height:0.75em;
+    margin-bottom: 0.15em;
 }
 .new-file-input-group {
-    margin-bottom: 0.15em !important; 
+    height: 100%;
 }
 .new-file-input {
-    height: 24px;
+    height: 100%;
     outline: none;
 }
 .new-file-input, .new-file-input:focus {
@@ -35,7 +37,6 @@
     width: 100%;
     margin: 0 0 0 0 !important;
     padding: 0 0 0 0 !important;
-    /* background-color: red; */
     overflow-y: scroll;
     overflow-x: hidden;
 }

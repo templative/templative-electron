@@ -1,5 +1,5 @@
 import React from "react";
-import "./TemplativeProjectRenderer.css"
+import "../TemplativeProjectRenderer.css"
 
 export default class NewFileInput extends React.Component { 
     state = {
@@ -13,7 +13,7 @@ export default class NewFileInput extends React.Component {
             <div className="input-group input-group-sm new-file-input-group"  data-bs-theme="dark">
                 <input autoFocus type="text" className="form-control shadow-none new-file-input" 
                     onChange={(event)=>this.updateFilename(event.target.value)}
-                    onBlur={() => this.props.submitNewFilenameCallback(this.state.filename)}
+                    // onBlur={() => this.props.submitNewFilenameCallback(this.state.filename)}
                     onKeyDown={(e) => {
                         if (e.key === 'Enter') {
                             this.props.submitNewFilenameCallback(this.state.filename)

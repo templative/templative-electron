@@ -1,6 +1,5 @@
 import React from "react";
 import "./RenameableFile.css"
-import { toHaveStyle } from "@testing-library/jest-dom/matchers";
 
 export default class RenameableFile extends React.Component {  
     state = {
@@ -12,13 +11,13 @@ export default class RenameableFile extends React.Component {
     render() {
         return <div className="renameable-file-wrapper" onClick={this.props.onClickCallback}>
             {this.props.isRenaming ? 
-                <div className="input-group input-group-sm new-file-input-group"  data-bs-theme="dark">
+                <div className="input-group input-group-sm"  data-bs-theme="dark">
                     <input 
                         autoFocus 
                         type="text" 
-                        className="form-control shadow-none new-file-input" 
+                        className="form-control shadow-none renamed-file-input" 
                         onChange={(event)=>this.updateFilename(event.target.value)}
-                        onBlur={() => this.props.renameFileCallback(this.props.filepath, this.state.filename)} 
+                        // onBlur={() => this.props.renameFileCallback(this.props.filepath, this.state.filename)} 
                         onKeyDown={(e) => {
                             if (e.key === 'Enter') {
                                 this.props.renameFileCallback(this.props.filepath, this.state.filename)

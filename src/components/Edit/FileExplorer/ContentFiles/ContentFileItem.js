@@ -1,15 +1,15 @@
 import React from "react";
-import "./Art.css"
 import ContextMenu from "../../../ContextMenu";
-import RenameableFile from "../RenameableFile";
+import RenameableFile from "./RenameableFile";
+
+import "./ContentFiles.css"
+
 const path = window.require("path");
 const shell = window.require('electron').shell;
-var debounceDurationMilliseconds = 3000
 
-export default class ArtItem extends React.Component {   
+export default class ContentFileItem extends React.Component {   
     state = {
         isHovering: false,
-        lastLaunchTime: this.getCurrentTime(),
         isShowingContextMenu: false,
         contextCoordinatesX: 0,
         contextCoordinatesY: 0,
@@ -20,21 +20,6 @@ export default class ArtItem extends React.Component {
     }
     handleMouseOut = () => {
         this.setState({isHovering: false})
-    }
-    getCurrentTime() {
-        return new Date().getTime()
-    }
-    openFile = () => {
-        if (this.getCurrentTime() - this.state.lastLaunchTime < debounceDurationMilliseconds) {
-            return
-        }
-        shell.openPath(this.props.filepath);
-        this.setState({
-            lastLaunchTime: this.getCurrentTime()
-        })
-    }
-    parsePathForCommonPath() {
-        return path.relative(this.props.directoryPath, this.props.filepath).split(".")[0]
     }
     handleRightClick = (e) => {
         if (this.state.isRenamingFile) {
@@ -63,14 +48,22 @@ export default class ArtItem extends React.Component {
             isRenamingFile: false
         })
     }
+    parsePathForCommonPath() {
+        return path.relative(this.props.directoryPath, this.props.filepath).split(".")[0]
+    }
     cancelRenamingFile = () => {
         this.setState({
             isRenamingFile: false
         })
     }
+    openInDefaultApp = () => {
+        shell.openPath(this.props.filepath);
+    }
     render() {
-        var callback = () => this.props.updateViewedFileCallback("ART", this.props.filepath)
-        return <div className="artItemWrapper"
+        var callback = () => this.props.updateViewedFileCallback(this.props.contentType, this.props.filepath)
+        return <div 
+            className={`content-file-item-wrapper ${this.props.isSelected && "selected-content-file-item-wrapper"}`} 
+            key={this.props.filepath} 
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}
             onContextMenu={this.handleRightClick}
@@ -81,7 +74,7 @@ export default class ArtItem extends React.Component {
                     top={this.state.contextCoordinatesY}
                     commands={[
                         {name: "Open", callback: callback},
-                        {name: "Open in Default SVG Viewer", callback: this.openFile},
+                        {name: "Open in Default App", callback: this.openInDefaultApp},
                         {name: "Rename", callback: this.startRenamingFile},
                         {name: "Delete", callback: () => this.props.deleteFileCallback(this.props.filepath)},
                     ]}
@@ -94,7 +87,7 @@ export default class ArtItem extends React.Component {
                 filepath={this.props.filepath}
                 isRenaming={this.state.isRenamingFile}
                 onClickCallback={callback} 
-                filename={this.parsePathForCommonPath()}
+                filename={path.parse(this.props.filepath).name}
             />
         </div>
     }

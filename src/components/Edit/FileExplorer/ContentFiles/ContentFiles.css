@@ -1,0 +1,20 @@
+
+
+.content-file-item-wrapper {
+    padding-left: 1em;
+    margin-bottom: 0.1em;
+    height:0.75em;
+}
+.content-file-item-wrapper:hover {
+    background-color: #2b3037;
+    cursor: pointer;
+}
+.selected-content-file-item-wrapper {
+    background-color: #333942;
+}
+.selected-content-file-item-wrapper:hover {
+    background-color: #373e48;
+}
+.content-file-list {
+    padding: 0 !important;
+}
