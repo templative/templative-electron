@@ -34,18 +34,26 @@ export default class TemplativeFileExplorers extends React.Component {
         })
     }
     deleteFile(filepath) {
-        if (this.props.currentFilepath === filepath) {
-            this.props.clearViewedFileCallback()
-        }
-        fs.unlinkSync(filepath)
-        this.setState({
-            templateFilenames: TemplativeAccessTools.getTemplateFilenames(this.props.templativeRootDirectoryPath),
-            overlayFilenames: TemplativeAccessTools.getOverlayFilenames(this.props.templativeRootDirectoryPath),
-            artdataFilenames: TemplativeAccessTools.getArtdataFilenames(this.props.templativeRootDirectoryPath),
-            globalGamedataFilenames: TemplativeAccessTools.getStudioAndGamedataFilenames(this.props.templativeRootDirectoryPath),
-            componentGamedataFilenames: TemplativeAccessTools.getComponentGamedataFilenames(this.props.templativeRootDirectoryPath),
-            pieceGamedataFilenames: TemplativeAccessTools.getPieceGamedataFilenames(this.props.templativeRootDirectoryPath)
-        })
+        console.log(TemplativeAccessTools.getArtdataFilenames(this.props.templativeRootDirectoryPath))
+        fs.unlink(filepath, (err) => {
+            if (err !== null) {
+                console.log(err);
+                return
+            }
+            console.log(TemplativeAccessTools.getArtdataFilenames(this.props.templativeRootDirectoryPath))
+            this.setState({
+                templateFilenames: TemplativeAccessTools.getTemplateFilenames(this.props.templativeRootDirectoryPath),
+                overlayFilenames: TemplativeAccessTools.getOverlayFilenames(this.props.templativeRootDirectoryPath),
+                artdataFilenames: TemplativeAccessTools.getArtdataFilenames(this.props.templativeRootDirectoryPath),
+                globalGamedataFilenames: TemplativeAccessTools.getStudioAndGamedataFilenames(this.props.templativeRootDirectoryPath),
+                componentGamedataFilenames: TemplativeAccessTools.getComponentGamedataFilenames(this.props.templativeRootDirectoryPath),
+                pieceGamedataFilenames: TemplativeAccessTools.getPieceGamedataFilenames(this.props.templativeRootDirectoryPath)
+            })
+            if (this.props.currentFilepath === filepath) {
+                this.props.clearViewedFileCallback()
+            }
+            this.forceUpdate()
+        });
     }
     
     componentDidMount() {
@@ -68,6 +76,34 @@ export default class TemplativeFileExplorers extends React.Component {
             pieceGamedataFilenames: TemplativeAccessTools.getPieceGamedataFilenames(this.props.templativeRootDirectoryPath)
         })
     }
+    renameFile = (originalFilepath, newFilename) => {
+        
+        const originalDirectory = path.parse(originalFilepath).dir
+        const filenameWithExtension = `${newFilename}.${originalFilepath.split('.').pop()}` 
+        const newFilepath = path.join(originalDirectory, filenameWithExtension)
+        console.log(TemplativeAccessTools.getArtdataFilenames(this.props.templativeRootDirectoryPath))
+        fs.rename(originalFilepath, newFilepath, (err) => {
+            if (err !== null) {
+                console.log(err);
+                return
+            }
+            console.log(TemplativeAccessTools.getArtdataFilenames(this.props.templativeRootDirectoryPath))
+            this.setState({
+                templateFilenames: TemplativeAccessTools.getTemplateFilenames(this.props.templativeRootDirectoryPath),
+                overlayFilenames: TemplativeAccessTools.getOverlayFilenames(this.props.templativeRootDirectoryPath),
+                artdataFilenames: TemplativeAccessTools.getArtdataFilenames(this.props.templativeRootDirectoryPath),
+                globalGamedataFilenames: TemplativeAccessTools.getStudioAndGamedataFilenames(this.props.templativeRootDirectoryPath),
+                componentGamedataFilenames: TemplativeAccessTools.getComponentGamedataFilenames(this.props.templativeRootDirectoryPath),
+                pieceGamedataFilenames: TemplativeAccessTools.getPieceGamedataFilenames(this.props.templativeRootDirectoryPath)
+            })
+            if (this.props.currentFilepath === originalFilepath) {
+                console.log(this.props.currentFileType, newFilepath)
+                this.props.updateViewedFileCallback(this.props.currentFileType, newFilepath)
+            }
+            this.forceUpdate()
+        });
+        
+    }
 
     render() {
         return <div className="row file-explorer-row">
@@ -77,6 +113,8 @@ export default class TemplativeFileExplorers extends React.Component {
                 updateViewedFileCallback={this.props.updateViewedFileCallback} 
                 directoryPath={this.state.templatesDirectory}
                 filenames={this.state.templateFilenames}
+                deleteFileCallback={(filepath) => this.deleteFile(filepath)}
+                renameFileCallback={this.renameFile}
             />
             <ArtList 
                 header="Overlays" 
@@ -85,6 +123,7 @@ export default class TemplativeFileExplorers extends React.Component {
                 directoryPath={this.state.overlaysDirectory}
                 filenames={this.state.overlayFilenames}
                 deleteFileCallback={(filepath) => this.deleteFile(filepath)}
+                renameFileCallback={this.renameFile}
             />
             <ArtdataList 
                 currentFilepath={this.props.currentFilepath} 
@@ -93,6 +132,7 @@ export default class TemplativeFileExplorers extends React.Component {
                 filenames={this.state.artdataFilenames}
                 createFileCallback={(filepath, contents)=>this.createFile(filepath, contents)}
                 deleteFileCallback={(filepath) => this.deleteFile(filepath)}
+                renameFileCallback={this.renameFile}
             />
             {/* <GamedataList 
                 header="Global Gamedata" 
@@ -112,6 +152,7 @@ export default class TemplativeFileExplorers extends React.Component {
                 canCreateNewFiles={true}
                 createFileCallback={(filepath, contents)=>this.createFile(filepath, contents)}
                 deleteFileCallback={(filepath) => this.deleteFile(filepath)}
+                renameFileCallback={(originalFilepath, newFilename) => this.renameFile(originalFilepath, newFilename)}
             />
             <GamedataList 
                 header="Piece Gamedata" 
@@ -123,6 +164,7 @@ export default class TemplativeFileExplorers extends React.Component {
                 canCreateNewFiles={true}
                 createFileCallback={(filepath, contents)=>this.createFile(filepath, contents)}
                 deleteFileCallback={(filepath) => this.deleteFile(filepath)}
+                renameFileCallback={this.renameFile}
             />
         </div>        
     }

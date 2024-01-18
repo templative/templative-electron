@@ -13,21 +13,27 @@ export default class GamedataList extends React.Component {
     createGamedataFile() {
         this.setState({doesNewGamedataFileExist: true})
     }
-    submitNewFilename(filename) {
+    submitNewFilename = (filename) => {
         this.setState({doesNewGamedataFileExist: false})
         var filepath = path.join(this.props.baseFilepath, `${filename}.json`)
         console.log(filepath)
         const data = this.props.gamedataType === "PIECE_GAMEDATA" ? `[]` : `{"displayName": "${filename}", "pieceDisplayName": "${filename}" }`
         this.props.createFileCallback(filepath, data)
     }
+    cancelFileCreation = () => {
+        this.setState({doesNewGamedataFileExist: false})
+    }
 
     render() {
         var divs = [];
-
         if (this.state.doesNewGamedataFileExist) {
             divs.push(this.state.doesNewGamedataFileExist && 
-                <NewFileInput key="newFileInput" submitNewFilenameCallback={(filename)=> this.submitNewFilename(filename)}
-            />)
+                <NewFileInput 
+                    key="newFileInput" 
+                    cancelFileCreationCallback={this.cancelFileCreation}
+                    submitNewFilenameCallback={this.submitNewFilename}
+                />
+            )
         }
 
         for(var i = 0; i < this.props.filenames.length; i++) {
@@ -40,6 +46,7 @@ export default class GamedataList extends React.Component {
                 updateViewedFileCallback={this.props.updateViewedFileCallback} 
                 filepath={filepath}
                 deleteFileCallback={this.props.deleteFileCallback}
+                renameFileCallback={this.props.renameFileCallback}
             />)
         }
 

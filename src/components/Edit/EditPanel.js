@@ -87,6 +87,7 @@ export default class EditPanel extends React.Component {
             <div className='col-4 left-column'>
                 <TemplativeProjectRenderer 
                     templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
+                    currentFileType={this.state.currentFileType}
                     currentFilepath={this.state.currentFilepath} 
                     updateViewedFileCallback={this.updateViewedFile}
                     clearViewedFileCallback={()=>this.clearViewedFile()}

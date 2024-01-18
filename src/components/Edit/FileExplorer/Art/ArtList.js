@@ -16,6 +16,8 @@ export default class ArtList extends React.Component {
                     key={filepath} 
                     filename={filepath} 
                     filepath={filepath}
+                    deleteFileCallback={this.props.deleteFileCallback}
+                    renameFileCallback={this.props.renameFileCallback}
                 />    
             )
         }

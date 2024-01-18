@@ -13,7 +13,7 @@ export default class ArtdataList extends React.Component {
     createArtdataFile() {
         this.setState({doesNewArtdataFileExist: true})
     }
-    submitNewFilename(filename) {
+    submitNewFilename = (filename) => {
         this.setState({doesNewArtdataFileExist: false})
         if (filename === "") {
             return;
@@ -21,12 +21,19 @@ export default class ArtdataList extends React.Component {
         var filepath = path.join(this.props.baseFilepath, `${filename}.json`)
         this.props.createFileCallback(filepath, `{ "name":"${filename}", "templateFilename": "", "overlays": [], "textReplacements": [], "styleUpdates": [] }`)
     }
+    cancelFileCreation = () => {
+        this.setState({doesNewArtdataFileExist: false})
+    }
     render() {
         var divs = [];
         if (this.state.doesNewArtdataFileExist) {
             divs.push(this.state.doesNewArtdataFileExist && 
-                <NewFileInput key="newFileInput" submitNewFilenameCallback={(filename)=> this.submitNewFilename(filename)}
-            />)
+                <NewFileInput 
+                    key="newFileInput" 
+                    cancelFileCreationCallback={this.cancelFileCreation}
+                    submitNewFilenameCallback={this.submitNewFilename}
+                />
+            )
         }
         for(var i = 0; i < this.props.filenames.length; i++) {
             var filepath = this.props.filenames[i]
@@ -37,6 +44,7 @@ export default class ArtdataList extends React.Component {
                 updateViewedFileCallback={this.props.updateViewedFileCallback} 
                 filepath={filepath}
                 deleteFileCallback={this.props.deleteFileCallback}
+                renameFileCallback={this.props.renameFileCallback}
             />)
         }
         return <React.Fragment>

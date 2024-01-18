@@ -13,6 +13,7 @@ export default class TemplativeProjectRenderer extends React.Component {
             </div>
             
             <TemplativeFileExplorers 
+                currentFileType={this.props.currentFileType}
                 templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                 currentFilepath={this.props.currentFilepath}
                 updateViewedFileCallback={this.props.updateViewedFileCallback}
