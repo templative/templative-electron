@@ -39,7 +39,7 @@ export default class EditPanel extends React.Component {
     }
 
     updateViewedFile = (filetype, filepath) => {     
-        console.log(filetype, filepath)
+        // console.log(filetype, filepath)
         var fileContents = fs.readFileSync(filepath, 'utf8');
         var extension = filepath.split('.').pop()
         if (extension === "json") {
