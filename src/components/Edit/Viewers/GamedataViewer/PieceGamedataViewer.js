@@ -1,13 +1,11 @@
 import React from "react";
-import KeyValueInput from "./KeyValueInput"
-import PieceControlInput from "./PieceControlInput"
+
 import "./GamedataViewer.css"
+import Piece from "./Piece";
 
 const fs = window.require("fs")
 
-const ignoredControlGamedataKeys = [
-    "name", "displayName", "quantity"
-]
+
 
 export default class PieceGamedataViewer extends React.Component {   
     state = {
@@ -48,7 +46,7 @@ export default class PieceGamedataViewer extends React.Component {
         this.saveDocument(this.props.currentFilepath, this.state.gamedataFile)
     }
 
-    addBlankKeyValuePair() {
+    addBlankKeyValuePair = () => {
         var newGamedataFileContents = this.state.gamedataFile
         this.state.gamedataFile.forEach((element, index) => {
             newGamedataFileContents[index][""] = ""
@@ -59,14 +57,14 @@ export default class PieceGamedataViewer extends React.Component {
         })
     }
     
-    updateValue(index, key, newValue) {
+    updateValue = (index, key, newValue) => {
         var newGamedataFileContents = this.state.gamedataFile
         newGamedataFileContents[index][key] = newValue
         this.setState({
             gamedataFile: newGamedataFileContents
         })
     }
-    removeKeyValuePairFromAllPieces(key) {
+    removeKeyValuePairFromAllPieces = (key) => {
         var newGamedataFileContents = this.state.gamedataFile
         this.state.gamedataFile.forEach((element, index) => {
             delete newGamedataFileContents[index][key]
@@ -75,13 +73,13 @@ export default class PieceGamedataViewer extends React.Component {
             gamedataFile: newGamedataFileContents
         })
     }
-    trackChangedKey(key, value) {
+    trackChangedKey = (key, value) => {
         this.setState({
             trackedKey: key,
             currentUpdateValue: value
         })
     }
-    updateKey(oldKey, newKey) {
+    updateKey = (oldKey, newKey) => {
         console.log(`"${oldKey}"`, `"${newKey}"`)
 
         var newGamedataFileContents = this.state.gamedataFile
@@ -97,14 +95,14 @@ export default class PieceGamedataViewer extends React.Component {
         })
     }
 
-    freeTrackedChangedKey() {
+    freeTrackedChangedKey = () => {
         if (this.state.trackedKey === undefined || this.state.currentUpdateValue === undefined) {
             return
         }
         this.updateKey(this.state.trackedKey, this.state.currentUpdateValue)
     }
 
-    addPiece() {
+    addPiece = () => {
         var newPiece = { }
 
         if (this.state.gamedataFile.length > 0) {
@@ -119,7 +117,7 @@ export default class PieceGamedataViewer extends React.Component {
         })
     }
 
-    deletePiece(index) {
+    deletePiece = (index) => {
         var newGamedataFileContents = this.state.gamedataFile
         newGamedataFileContents.splice(index,1)
         this.setState({
@@ -129,36 +127,20 @@ export default class PieceGamedataViewer extends React.Component {
 
     render() {
         var rows = this.state.gamedataFile.map((piece, index) => {
-            var pieceKeys = Object.keys(piece).sort()
-            var columns = pieceKeys
-                .filter((key) => {
-                    for(var c = 0; c < ignoredControlGamedataKeys.length; c++) {
-                        if (key === ignoredControlGamedataKeys[c]) {
-                            return false
-                        }
-                    };
-                    return true
-                }).map((key) => {
-                    return <KeyValueInput 
-                        key={key}
-                        gamedataKey={key} value={this.state.gamedataFile[index][key]} 
-                        trackedKey={this.state.trackedKey} currentUpdateValue={this.state.currentUpdateValue}
-                        trackChangedKeyCallback={(key, value) => this.trackChangedKey(key, value)}
-                        updateValueCallback={(key, value)=>this.updateValue(index, key, value)}
-                        removeKeyValuePairCallback={(key)=>this.removeKeyValuePairFromAllPieces(key)}
-                        freeTrackedChangedKeyCallback={()=> this.freeTrackedChangedKey()}
-                    />
-            });
-            return <div className="row" key={index}>
-                <PieceControlInput 
-                    piece={this.state.gamedataFile[index]}
-                    updateValueCallback={(key, value)=>this.updateValue(index, key, value)}
-                    deleteCallback={() => this.deletePiece(index)}/>
-                {columns}
-                <div key="addBlankKeyValuePairButton" className="input-group input-group-sm mb-3 add-piece-key" data-bs-theme="dark">
-                    <button onClick={() => this.addBlankKeyValuePair()} className="btn btn-outline-secondary add-button" type="button" id="button-addon1">➕</button>
-                </div>
-            </div>
+            return <Piece 
+                key={index} 
+                currentUpdateValue={this.state.currentUpdateValue}
+                gamedataFile={this.state.gamedataFile} 
+                trackedKey={this.state.trackedKey} 
+                index={index} 
+                piece={piece}
+                addBlankKeyValuePairCallback={this.addBlankKeyValuePair}
+                deletePieceCallback={this.deletePiece}
+                trackChangedKeyCallback={this.trackChangedKey}
+                updateValueCallback={this.updateValue}
+                removeKeyValuePairFromAllPiecesCallback={this.removeKeyValuePairFromAllPieces}
+                freeTrackedChangedKeyCallback={this.freeTrackedChangedKey}
+            />
         })
         
         return <div className="row">
@@ -168,7 +150,7 @@ export default class PieceGamedataViewer extends React.Component {
                 </div>
                 <div className="row">
                     <div key="addPieceButton" className="input-group input-group-sm mb-3 add-piece-button" data-bs-theme="dark">
-                        <button onClick={() => this.addPiece()} className="btn btn-outline-secondary add-button" type="button" id="button-addon1">➕</button>
+                        <button onClick={() => this.addPiece()} className="btn btn-outline-secondary add-button" type="button" id="button-addon1">Create a new Piece</button>
                     </div>
                     <div className="vertical-input-group">
                         {rows}

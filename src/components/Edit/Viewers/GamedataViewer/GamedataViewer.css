@@ -10,15 +10,17 @@ tr {
 .tableContainer {
     padding-right:0.4em;
 }
-
+.piece-control-input.mb-3:last-child {
+    margin-bottom: 0 !important;
+}
 .key-field {
     max-width: 15em;
 }
 .locked-key-text {
     min-width: 15em;
 }
-.add-piece-button {
-    margin-bottom: 3em;
+.piece-row {
+    margin-bottom: 0.1em;
 }
 .piece-control-input > * { 
     border-bottom: 3px solid #535962 !important;
