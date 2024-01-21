@@ -15,7 +15,7 @@ export const addComponentTypeTagsToComponentTagOptions = (componentTagOptions, c
 export default class ComponentTypeTagPicker extends React.Component {   
     render() {
         var componentTagOptions = {}
-        Object.keys(this.props.componentTypeOptions).map((key) => {
+        Object.keys(this.props.componentTypeOptions).forEach((key) => {
             var componentOption = this.props.componentTypeOptions[key]
             if (componentOption["Tags"] === undefined) {
                 return
@@ -25,21 +25,28 @@ export default class ComponentTypeTagPicker extends React.Component {
             }
             addComponentTypeTagsToComponentTagOptions(componentTagOptions, componentOption["Tags"])
         })
-        var tagDivs = []
-        for (const tag in componentTagOptions) {
-            if (componentTagOptions[tag] <= 1) {
-                continue
-            }
-            tagDivs.push(<button 
-                key={tag} 
-                onClick={()=> this.props.toggleTagFilterCallback(tag)} 
-                className={`btn tag-button ${this.props.selectedTags.has(tag) && "selected-tag"}`}>
-                    {tag}
-            </button>)
-        }
+        var sortedTags = Object.keys(componentTagOptions)
+            .filter((tag) => componentTagOptions[tag] >= 1)
+            .sort((a, b) => {
+                if (a < b) {
+                    return -1;
+                }
+                if (a > b) {
+                    return 1;
+                }
+                return 0;
+            })
+            .map((tag) => {
+                return <button 
+                    key={tag} 
+                    onClick={()=> this.props.toggleTagFilterCallback(tag)} 
+                    className={`btn tag-button ${this.props.selectedTags.has(tag) && "selected-tag"}`}>
+                        {tag}
+                </button>
+            })
 
         return <div className="component-tag-options">
-            {tagDivs}
+            {sortedTags}
         </div>
     }
 }
