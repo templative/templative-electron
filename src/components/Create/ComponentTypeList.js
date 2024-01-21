@@ -3,25 +3,6 @@ import "./CreatePanel.css"
 import ComponentType from "./ComponentType";
 import {componentTypeHasAllFilteredTags} from "./TagFilter"
 
-const sortComponentTypes = (componentTypeQuantities, a, b) => {
-    var aHasExisting = componentTypeQuantities[a] !== undefined
-    var bHasExisting = componentTypeQuantities[b] !== undefined
-
-    if (aHasExisting && !bHasExisting) {
-        return -1;
-    }
-    if (bHasExisting && !aHasExisting) {
-        return 1
-    }
-    if (a < b) {
-        return -1;
-    }
-    if (a > b) {
-        return 1;
-    }
-    return 0;
-}
-
 export default class ComponentTypeList extends React.Component {   
     render() {
         var componentDivs = Object.keys(this.props.componentTypeOptions)

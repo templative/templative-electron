@@ -8,24 +8,24 @@ var axios  = window.require('axios');
 const ComponentInfo = require("./componentInfo.json")
 const StockComponentInfo = require("./stockComponentInfo.json")
 
-const sortComponentTypes = (componentTypeQuantities, a, b) => {
-    var aHasExisting = componentTypeQuantities[a] !== undefined
-    var bHasExisting = componentTypeQuantities[b] !== undefined
+// const sortComponentTypes = (componentTypeQuantities, a, b) => {
+//     var aHasExisting = componentTypeQuantities[a] !== undefined
+//     var bHasExisting = componentTypeQuantities[b] !== undefined
 
-    if (aHasExisting && !bHasExisting) {
-        return -1;
-    }
-    if (bHasExisting && !aHasExisting) {
-        return 1
-    }
-    if (a < b) {
-        return -1;
-    }
-    if (a > b) {
-        return 1;
-    }
-    return 0;
-}
+//     if (aHasExisting && !bHasExisting) {
+//         return -1;
+//     }
+//     if (bHasExisting && !aHasExisting) {
+//         return 1
+//     }
+//     if (a < b) {
+//         return -1;
+//     }
+//     if (a > b) {
+//         return 1;
+//     }
+//     return 0;
+// }
 
 export default class CreatePanel extends React.Component {   
     state = {
@@ -57,7 +57,7 @@ export default class CreatePanel extends React.Component {
         var data = { 
             componentName: this.state.componentName,
             componentType: this.state.selectedComponentType,
-            directoryPath: this.props.templativeRootDirectoryPath
+            directoryPath: this.props.templativeRootDirectoryPath,
         }
         await axios.post(`http://127.0.0.1:8080/component`, data)
         this.setState({isProcessing: false, componentName: "", selectedComponentType: undefined})
