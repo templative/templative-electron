@@ -73,12 +73,12 @@ module.exports = class ServerRunner {
             }
             log(`Killing any process at port ${this.#port}...`)
             // Cant use npx
-            execSync(`npx kill-port ${this.#port}`);
+            // execSync(`npx kill-port ${this.#port}`);
 
             log(`${this.serverName} is launching ${command}.`)
-            var spawnedProcess = spawn(command, { detached: false, shell: true, stdio:["pipe", "pipe", "pipe"]  });
+            var spawnedProcess = spawn(command, { detached: false, shell: true, stdio:"inherit"  });//["pipe", "pipe", "pipe"]
             
-            spawnedProcess.stdout.pipe(process.stdout);            
+            // spawnedProcess.stdout.pipe(process.stdout);            
             this.#serverProcess = spawnedProcess
             
             await this.#waitforhost(this.#pingUrl, pingCooldownMilliseconds, retries)

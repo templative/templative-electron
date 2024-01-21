@@ -63,20 +63,23 @@ const createServerManager = () => {
   var templativeServerRunner = new ServerRunner("templativeServer", 8080, "http://localhost:8080/status", templativeServerCommandsByEnvironment)
 
   var reactServerCommandsByEnvironment = {
-    "PROD": `${process.resourcesPath}/build/app`,
-    "TEST_BUILT": `./build/app`,
-    "GLOBALLY_INSTALLED": `react-scripts start`,
-    "DEV": `react-scripts start`
+    "PROD": `${process.resourcesPath}/build/app ./build`, // uses localhost
+    "TEST_BUILT": `./build/app ./build`, // uses 127.0.0.1
+    "GLOBALLY_INSTALLED": `react-scripts start`, // uses 127.0.0.1
+    "DEV": `react-scripts start` // uses 127.0.0.1
   }
-  var reactServerRunner = new ServerRunner("reactServer", 3000, "http://localhost:3000", reactServerCommandsByEnvironment)
-  var servers = [templativeServerRunner, reactServerRunner]
+  var reactServerRunner = new ServerRunner("reactServer", 3000, "http://127.0.0.1:3000", reactServerCommandsByEnvironment)
+  var servers = [
+    reactServerRunner,
+    templativeServerRunner
+  ]
   return new ServerManager(servers)
 }
 var serverManager = createServerManager()
 
 const launchServers = async () => {
   try {
-    var environment = "TEST_BUILT"
+    var environment = "DEV"
     if (app.isPackaged) {
       environment = "PROD"
     }
