@@ -90,6 +90,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                     <ContentFileList
                         header="Templates" 
                         contentType="ART" 
+                        directoryPath={this.state.templatesDirectory}
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         baseFilepath={this.state.templatesDirectory}
                         currentFilepath={this.props.currentFilepath} 
@@ -101,6 +102,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                     <ContentFileList
                         header="Overlays" 
                         contentType="ART" 
+                        directoryPath={this.state.overlaysDirectory}
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         baseFilepath={this.state.overlaysDirectory}
                         currentFilepath={this.props.currentFilepath} 
@@ -112,6 +114,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                     <ContentFileList
                         header="Artdata" 
                         contentType="ARTDATA" 
+                        directoryPath={this.state.artdataDirectory}
                         baseFilepath={this.state.artdataDirectory}
                         currentFilepath={this.props.currentFilepath} 
                         updateViewedFileCallback={this.props.updateViewedFileCallback} 
@@ -126,6 +129,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                     <ContentFileList
                         header="Component Gamedata" 
                         contentType="KEYVALUE_GAMEDATA" 
+                        directoryPath={this.state.componentGamedataDirectory}
                         baseFilepath={this.state.componentGamedataDirectory}
                         currentFilepath={this.props.currentFilepath} 
                         updateViewedFileCallback={this.props.updateViewedFileCallback} 
@@ -140,6 +144,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                     <ContentFileList
                         header="Piece Gamedata" 
                         contentType="PIECE_GAMEDATA" 
+                        directoryPath={this.state.piecesGamedataDirectory}
                         baseFilepath={this.state.piecesGamedataDirectory}
                         currentFilepath={this.props.currentFilepath} 
                         updateViewedFileCallback={this.props.updateViewedFileCallback} 
