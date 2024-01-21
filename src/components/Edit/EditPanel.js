@@ -4,17 +4,35 @@ import ArtdataViewer from "./Viewers/ArtdataViewer/ArtdataViewer"
 import ComponentsViewer from "./Viewers/ComponentsViewer/ComponentsViewer"
 import PieceGamedataViewer from "./Viewers/GamedataViewer/PieceGamedataViewer"
 import KeyValueGamedataViewer from "./Viewers/GamedataViewer/KeyValueGamedataViewer"
-import "./EditPanel.css"
 import ImageViewer from "./Viewers/ImageViewer";
 import TemplativeAccessTools from "../TemplativeAccessTools"
 import RulesEditor from "./Viewers/RulesEditor";
+
+import "./EditPanel.css"
+import "./EditPanelTabs.css"
+
 const path = window.require("path");
 const fs = window.require("fs");
 
+class TabbedFile {
+    filepath
+    filetype
+    constructor(filetype, filepath) {
+        this.filepath = filepath
+        this.filetype = filetype
+    }
+}
+
 export default class EditPanel extends React.Component {   
     state = {
-        currentFileType: undefined,
-        currentFilepath: undefined,
+        currentFileType: "COMPONENTS",
+        currentFilepath: TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath),
+        tabbedFiles: [
+            new TabbedFile("KEYVALUE_GAMEDATA", TemplativeAccessTools.getStudioGamedataFilename(this.props.templativeRootDirectoryPath)),
+            new TabbedFile("KEYVALUE_GAMEDATA", TemplativeAccessTools.getGameGamedataFilenames(this.props.templativeRootDirectoryPath)),
+            new TabbedFile("COMPONENTS", TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath)),
+            new TabbedFile("RULES", TemplativeAccessTools.getRulesFilepath(this.props.templativeRootDirectoryPath)),
+        ]
     }
     csvToJS(csv) {
         var lines = csv.split("\n");
@@ -38,6 +56,17 @@ export default class EditPanel extends React.Component {
         return result;
     }
 
+    addTabbedFile(filetype, filepath, tabbedFiles) {
+        for (let index = 0; index < tabbedFiles.length; index++) {
+            const tabbedFile = tabbedFiles[index];
+            if (tabbedFile.filepath === filepath) {
+                return tabbedFiles
+            }
+        }
+        tabbedFiles.push(new TabbedFile(filetype, filepath))
+        return tabbedFiles
+    }
+
     updateViewedFile = (filetype, filepath) => {     
         // console.log(filetype, filepath)
         var fileContents = fs.readFileSync(filepath, 'utf8');
@@ -49,17 +78,19 @@ export default class EditPanel extends React.Component {
             fileContents = this.csvToJS(fileContents)
         }
         var filename = path.parse(filepath).name
+
         this.setState({
             currentFileType: filetype,
             currentFilepath: filepath,
             filename: filename,
-            fileContents: fileContents
+            fileContents: fileContents,
+            tabbedFiles: this.addTabbedFile(filetype, filepath, this.state.tabbedFiles)
         })
     } 
     clearViewedFile() {
         this.setState({
-            currentFileType: undefined,
-            currentFilepath: undefined,
+            currentFileType: "COMPONENTS",
+            currentFilepath: TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath),
             filename: undefined,
             fileContents: undefined
         })
@@ -98,30 +129,41 @@ export default class EditPanel extends React.Component {
                 />
             </div>
             <div className='col-9 viewer'>
-                {this.state.currentFileType === "RULES" &&
-                    <RulesEditor 
-                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                        filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
-                }
-                {this.state.currentFileType === "ARTDATA" &&
-                    <ArtdataViewer filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
-                }
-                {this.state.currentFileType === "ART" &&
-                    <ImageViewer filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
-                }
-                {this.state.currentFileType === "PIECE_GAMEDATA" &&
-                    <PieceGamedataViewer filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
-                }
-                {this.state.currentFileType === "KEYVALUE_GAMEDATA" &&
-                    <KeyValueGamedataViewer filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
-                }
-                {this.state.currentFileType === undefined && this.props.templativeRootDirectoryPath !== undefined && 
-                    <ComponentsViewer 
-                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                        componentsFilepath={TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath)} 
-                        components={components}
-                    />
-                }
+                <div className="nav nav-tabs">
+                    {this.state.tabbedFiles.map((tabbedFile) => {
+                        var isSelected = tabbedFile.filepath === this.state.currentFilepath
+                        return <li className="nav-item" onClick={() => this.updateViewedFile(tabbedFile.filetype, tabbedFile.filepath)}>
+                            <a className={`nav-link ${isSelected && "active"}`}>{path.parse(tabbedFile.filepath).name} x</a>
+                        </li>
+                    })}
+                </div>
+                <div className="file-contents">
+
+                    {this.state.currentFileType === "RULES" &&
+                        <RulesEditor 
+                            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                            filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
+                    }
+                    {this.state.currentFileType === "ARTDATA" &&
+                        <ArtdataViewer filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
+                    }
+                    {this.state.currentFileType === "ART" &&
+                        <ImageViewer filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
+                    }
+                    {this.state.currentFileType === "PIECE_GAMEDATA" &&
+                        <PieceGamedataViewer filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
+                    }
+                    {this.state.currentFileType === "KEYVALUE_GAMEDATA" &&
+                        <KeyValueGamedataViewer filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
+                    }
+                    {this.state.currentFileType === "COMPONENTS" && 
+                        <ComponentsViewer 
+                            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                            componentsFilepath={this.props.currentFilepath} 
+                            components={components}
+                        />
+                    }
+                </div>
             </div>
             
       </div>

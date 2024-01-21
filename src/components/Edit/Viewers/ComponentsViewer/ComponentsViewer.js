@@ -90,9 +90,6 @@ export default class ComponentsViewer extends React.Component {
         return <div className="row componentViewer">
             <div className="col">
                 <div className="row">
-                    <h1>Components</h1>
-                </div>
-                <div className="row">
                     <div className="col">
                         {componentItems}
                     </div>

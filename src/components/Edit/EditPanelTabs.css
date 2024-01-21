@@ -1,0 +1,25 @@
+.nav-tabs {
+    border-bottom-color: hsl(224, 13%, 30%) !important;
+    padding-top:0.2em;
+    margin-bottom: 0.25em !important;
+    background-color: #262931;
+}
+.nav-link {
+    border-radius: 0px !important;
+    border-color: hsl(224, 13%, 30%) !important;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    cursor: pointer;
+}
+.nav-item:first-of-type {
+    margin-left: 0.25em !important; 
+}
+.nav-link.active { 
+    cursor:default;
+    background-color: hsl(193, 9%, 22%) !important;
+    z-index: 999;
+    box-shadow: 0px 2px 0px 0px #8990c4 inset;
+    border-radius: 0px;
+    border-right-width: 0;
+}

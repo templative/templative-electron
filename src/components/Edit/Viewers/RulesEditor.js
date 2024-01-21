@@ -31,11 +31,6 @@ export default class RulesEditor extends React.Component {
     }
     render() {
         return <React.Fragment>
-            <div className="row rules-title">
-                <div className="col">
-                    <h1>Rules</h1>
-                </div>
-            </div>
             <div className="row rules-body">
                 <div className="col">
                     <MarkdownEditor 

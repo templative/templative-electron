@@ -146,9 +146,6 @@ export default class PieceGamedataViewer extends React.Component {
         return <div className="row">
             <div className="col">
                 <div className="row">
-                    <h1>{this.props.filename}</h1>
-                </div>
-                <div className="row">
                     <div key="addPieceButton" className="input-group input-group-sm mb-3 add-piece-button" data-bs-theme="dark">
                         <button onClick={() => this.addPiece()} className="btn btn-outline-secondary add-button" type="button" id="button-addon1">Create a new Piece</button>
                     </div>

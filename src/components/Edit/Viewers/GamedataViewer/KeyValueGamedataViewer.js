@@ -92,9 +92,6 @@ export default class KeyValueGamedataViewer extends React.Component {
         
         return <div className="row tableContainer">
             <div className="col">
-                <div className="row">
-                    <h1>{this.props.filename}</h1>
-                </div>
                 <div className="vertical-input-group">
                     {rows}
                     <div className="input-group input-group-sm mb-3" data-bs-theme="dark">

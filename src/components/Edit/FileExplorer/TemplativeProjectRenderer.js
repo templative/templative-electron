@@ -78,12 +78,12 @@ export default class TemplativeProjectRenderer extends React.Component {
     }
     render() {
         return <React.Fragment>
-            <div className="row main-game-button-row">
+            {/* <div className="row main-game-button-row">
                 <button className={`btn btn-outline-secondary main-game-button`} onClick={() => this.props.openStudioGamedataCallback()}>Studio</button>
                 <button className={`btn btn-outline-secondary main-game-button`} onClick={() => this.props.openGameGamedataCallback()}>Game</button>
                 <button className={`btn btn-outline-secondary main-game-button`} onClick={() => this.props.openComponentsCallback()}>Components</button>
                 <button className={`btn btn-outline-secondary main-game-button`} onClick={() => this.props.openRulesCallback()}>Rules</button>
-            </div>
+            </div> */}
             
             { this.state.gameCompose !== undefined &&
                 <div className="row file-explorer-row">

@@ -11,9 +11,6 @@ export default class FileViewer extends React.Component {
     })
         return <div className="row">
             <div className="col">
-                <div className="row">
-                    <h1>{this.props.filename}</h1>
-                </div>
                 {elements}
             </div>
         </div> 
