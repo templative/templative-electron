@@ -54,17 +54,17 @@ export default class Piece extends React.Component {
             
             {keyValueRows}
             
-            {this.state.isHovering &&
-                <div key="addBlankKeyValuePairButton" className="input-group input-group-sm mb-3 add-piece-key" data-bs-theme="dark">
-                    <button 
-                        onClick={() => this.props.addBlankKeyValuePairCallback()} 
-                        className="btn btn-outline-secondary add-button" 
-                        type="button"
-                    >
-                        ➕
-                    </button>
-                </div>
-            }
+            
+            <div key="addBlankKeyValuePairButton" className={`input-group input-group-sm mb-3 add-piece-key ${this.state.isHovering && "show-add-piece-key"}`} data-bs-theme="dark">
+                <button 
+                    onClick={() => this.props.addBlankKeyValuePairCallback()} 
+                    className="btn btn-outline-secondary add-button" 
+                    type="button"
+                >
+                    ➕
+                </button>
+            </div>
+            
         </div>
     }
 }

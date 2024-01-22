@@ -25,3 +25,11 @@ tr {
 .piece-control-input > * { 
     border-bottom: 3px solid #535962 !important;
 }
+.add-piece-key {
+    height: 0px !important;
+    transition: height 300ms ease-in;
+    overflow: hidden;
+}
+.show-add-piece-key {
+    height: 30px !important;
+}

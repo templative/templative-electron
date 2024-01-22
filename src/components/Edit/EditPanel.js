@@ -7,6 +7,7 @@ import KeyValueGamedataViewer from "./Viewers/GamedataViewer/KeyValueGamedataVie
 import ImageViewer from "./Viewers/ImageViewer";
 import TemplativeAccessTools from "../TemplativeAccessTools"
 import RulesEditor from "./Viewers/RulesEditor";
+import EditPanelTabs from "./EditPanelTabs";
 
 import "./EditPanel.css"
 import "./EditPanelTabs.css"
@@ -17,9 +18,11 @@ const fs = window.require("fs");
 class TabbedFile {
     filepath
     filetype
-    constructor(filetype, filepath) {
+    canClose
+    constructor(filetype, filepath, canClose=true) {
         this.filepath = filepath
         this.filetype = filetype
+        this.canClose = canClose 
     }
 }
 
@@ -28,11 +31,11 @@ export default class EditPanel extends React.Component {
         currentFileType: "COMPONENTS",
         currentFilepath: TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath),
         tabbedFiles: [
-            new TabbedFile("KEYVALUE_GAMEDATA", TemplativeAccessTools.getStudioGamedataFilename(this.props.templativeRootDirectoryPath)),
-            new TabbedFile("KEYVALUE_GAMEDATA", TemplativeAccessTools.getGameGamedataFilenames(this.props.templativeRootDirectoryPath)),
-            new TabbedFile("COMPONENTS", TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath)),
-            new TabbedFile("RULES", TemplativeAccessTools.getRulesFilepath(this.props.templativeRootDirectoryPath)),
-        ]
+            new TabbedFile("KEYVALUE_GAMEDATA", TemplativeAccessTools.getStudioGamedataFilename(this.props.templativeRootDirectoryPath), false),
+            new TabbedFile("KEYVALUE_GAMEDATA", TemplativeAccessTools.getGameGamedataFilenames(this.props.templativeRootDirectoryPath), false),
+            new TabbedFile("COMPONENTS", TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath), false),
+            new TabbedFile("RULES", TemplativeAccessTools.getRulesFilepath(this.props.templativeRootDirectoryPath), false),
+        ],
     }
     csvToJS(csv) {
         var lines = csv.split("\n");
@@ -78,13 +81,13 @@ export default class EditPanel extends React.Component {
             fileContents = this.csvToJS(fileContents)
         }
         var filename = path.parse(filepath).name
-
+        var tabbedFiles = this.addTabbedFile(filetype, filepath, this.state.tabbedFiles)
         this.setState({
             currentFileType: filetype,
             currentFilepath: filepath,
             filename: filename,
             fileContents: fileContents,
-            tabbedFiles: this.addTabbedFile(filetype, filepath, this.state.tabbedFiles)
+            tabbedFiles: tabbedFiles
         })
     } 
     clearViewedFile() {
@@ -95,25 +98,25 @@ export default class EditPanel extends React.Component {
             fileContents: undefined
         })
     }
-    openComponents = () => {
-        this.setState({
-            currentFileType: undefined,
-            currentFilepath: undefined,
-        })
+    closeTabAtIndex = (index) => {
+        var newTabbedFiles = Object.assign(this.state.tabbedFiles)
+        if (index < 0 || index >= newTabbedFiles.length) {
+            return
+        }
+        var removedTab = newTabbedFiles[index]
+        if (this.state.currentFilepath === removedTab.filepath) {
+            this.clearViewedFile()
+        }
+        newTabbedFiles.splice(index, 1)
+        this.setState({tabbedFiles: newTabbedFiles}, () => console.log(this.state.tabbedFiles));
     }
-    openStudioGamedata = () => {
-        this.updateViewedFile("KEYVALUE_GAMEDATA", TemplativeAccessTools.getStudioGamedataFilename(this.props.templativeRootDirectoryPath))
+    closeTabs = () => {
+        var newTabbedFiles = Object.assign(this.state.tabbedFiles)
+        newTabbedFiles.splice(4, this.state.tabbedFiles.length)
+        this.setState({tabbedFiles: newTabbedFiles}, () => console.log(this.state.tabbedFiles));
     }
-    openGameGamedata = () => {
-        this.updateViewedFile("KEYVALUE_GAMEDATA", TemplativeAccessTools.getGameGamedataFilenames(this.props.templativeRootDirectoryPath))
-    }
-    openRules = () => {
-        this.updateViewedFile("RULES", TemplativeAccessTools.getRulesFilepath(this.props.templativeRootDirectoryPath))
-    }
-    
     render() {
         var components = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")
-        
         return <div className='mainBody row '>
             <div className='col-3 left-column'>
                 <TemplativeProjectRenderer 
@@ -129,14 +132,13 @@ export default class EditPanel extends React.Component {
                 />
             </div>
             <div className='col-9 viewer'>
-                <div className="nav nav-tabs">
-                    {this.state.tabbedFiles.map((tabbedFile) => {
-                        var isSelected = tabbedFile.filepath === this.state.currentFilepath
-                        return <li className="nav-item" onClick={() => this.updateViewedFile(tabbedFile.filetype, tabbedFile.filepath)}>
-                            <a className={`nav-link ${isSelected && "active"}`}>{path.parse(tabbedFile.filepath).name} x</a>
-                        </li>
-                    })}
-                </div>
+                <EditPanelTabs 
+                    currentFilepath={this.state.currentFilepath} 
+                    tabbedFiles={this.state.tabbedFiles}
+                    closeTabsCallback={this.closeTabs}
+                    closeTabAtIndexCallback={this.closeTabAtIndex}
+                    updateViewedFileCallback={this.updateViewedFile}
+                />
                 <div className="file-contents">
 
                     {this.state.currentFileType === "RULES" &&
