@@ -6,7 +6,7 @@ const path = window.require("path");
 
 export default class EditPanelTabs extends React.Component {       
     render() {
-        return <div className="nav nav-tabs">
+        return <div className="nav nav-tabs d-flex flex-nowrap">
             {this.props.tabbedFiles.map((tabbedFile, index) => {
                 return <EditPanelTab 
                     key={tabbedFile.filepath} 
