@@ -39,7 +39,7 @@ export default class EditPanelTab extends React.Component {
         this.setState({isHoveringX: false})
     }
     viewTabFile = () => {
-        if (this.state.isHoveringX) {
+        if (this.state.isHoveringX || this.state.isShowingContextMenu) {
             return
         }
         this.props.updateViewedFileCallback(this.props.tabbedFile.filetype, this.props.tabbedFile.filepath)

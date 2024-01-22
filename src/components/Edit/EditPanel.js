@@ -98,36 +98,48 @@ export default class EditPanel extends React.Component {
             fileContents: undefined
         })
     }
+    checkForCurrentTabRemoved = () => {
+        for (let index = 0; index < this.state.tabbedFiles.length; index++) {
+            const tabbedFile = this.state.tabbedFiles[index];
+            if (tabbedFile.filepath === this.state.currentFilepath) {
+                return
+            }
+        }
+        this.clearViewedFile()
+    }
     closeTabAtIndex = (index) => {
         var newTabbedFiles = Object.assign(this.state.tabbedFiles)
         if (index < 0 || index >= newTabbedFiles.length) {
             return
         }
-        var removedTab = newTabbedFiles[index]
-        if (this.state.currentFilepath === removedTab.filepath) {
-            this.clearViewedFile()
-        }
         newTabbedFiles.splice(index, 1)
-        this.setState({tabbedFiles: newTabbedFiles}, () => console.log(this.state.tabbedFiles));
+        this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());
     }
     closeTabs = () => {
         var newTabbedFiles = Object.assign(this.state.tabbedFiles)
         newTabbedFiles.splice(4, this.state.tabbedFiles.length)
-        this.setState({tabbedFiles: newTabbedFiles}, () => console.log(this.state.tabbedFiles));
+        this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());
+                
     }
     closeTabsToLeft = (index) => {
         var newTabbedFiles = Object.assign(this.state.tabbedFiles)
         newTabbedFiles.splice(4, Math.max(0,index-4))
-        this.setState({tabbedFiles: newTabbedFiles}, () => console.log(this.state.tabbedFiles));
+        this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());
     }
     closeTabsToRight = (index) => {
         var newTabbedFiles = Object.assign(this.state.tabbedFiles)
         newTabbedFiles.splice(index+1, Math.max(0,this.state.tabbedFiles.length-(index+1)))
-        this.setState({tabbedFiles: newTabbedFiles}, () => console.log(this.state.tabbedFiles));
+        this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());
     }
     closeAllTabsButIndex = (butIndex) => {
-        var newTabbedFiles = this.state.tabbedFiles.filter((tabbedFile, index) => index === butIndex || index <= 3)
-        this.setState({tabbedFiles: newTabbedFiles}, () => console.log(this.state.tabbedFiles));
+        var newTabbedFiles = []
+        for (let index = 0; index < this.state.tabbedFiles.length; index++) {
+            const tabbedFile = this.state.tabbedFiles[index];
+            if (index <= 3 || index === butIndex) {
+                newTabbedFiles.push(tabbedFile)
+            }
+        }
+        this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());
     }
     render() {
         var components = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")
