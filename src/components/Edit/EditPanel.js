@@ -131,6 +131,7 @@ export default class EditPanel extends React.Component {
     }
     render() {
         var components = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")
+        var filepathSplit = this.state.currentFilepath.replace(/\\/g,"/").replace(/^\/|\/$/g, '').split("/").join(" > ")
         return <div className='mainBody row '>
             <div className='col-3 left-column'>
                 <TemplativeProjectRenderer 
@@ -156,8 +157,10 @@ export default class EditPanel extends React.Component {
                     closeTabsToRightCallback={this.closeTabsToRight}
                     closeAllTabsButIndexCallback={this.closeAllTabsButIndex}
                 />
+                <div className="filename-row">
+                    <p className="filename-title">{filepathSplit}</p>
+                </div>
                 <div className="file-contents">
-
                     {this.state.currentFileType === "RULES" &&
                         <RulesEditor 
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
