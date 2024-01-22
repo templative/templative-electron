@@ -55,7 +55,7 @@ export default class EditPanelTab extends React.Component {
         var shouldShowX = (this.state.isHovering || isSelected) && this.props.tabbedFile.canClose
         return <li 
             className="nav-item"
-            onClick={this.openFile}
+            onClick={this.viewTabFile}
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}
             onContextMenu={this.handleRightClick}
