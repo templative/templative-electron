@@ -115,6 +115,20 @@ export default class EditPanel extends React.Component {
         newTabbedFiles.splice(4, this.state.tabbedFiles.length)
         this.setState({tabbedFiles: newTabbedFiles}, () => console.log(this.state.tabbedFiles));
     }
+    closeTabsToLeft = (index) => {
+        var newTabbedFiles = Object.assign(this.state.tabbedFiles)
+        newTabbedFiles.splice(4, Math.max(0,index-4))
+        this.setState({tabbedFiles: newTabbedFiles}, () => console.log(this.state.tabbedFiles));
+    }
+    closeTabsToRight = (index) => {
+        var newTabbedFiles = Object.assign(this.state.tabbedFiles)
+        newTabbedFiles.splice(index+1, Math.max(0,this.state.tabbedFiles.length-(index+1)))
+        this.setState({tabbedFiles: newTabbedFiles}, () => console.log(this.state.tabbedFiles));
+    }
+    closeAllTabsButIndex = (butIndex) => {
+        var newTabbedFiles = this.state.tabbedFiles.filter((tabbedFile, index) => index === butIndex || index <= 3)
+        this.setState({tabbedFiles: newTabbedFiles}, () => console.log(this.state.tabbedFiles));
+    }
     render() {
         var components = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")
         return <div className='mainBody row '>
@@ -135,9 +149,12 @@ export default class EditPanel extends React.Component {
                 <EditPanelTabs 
                     currentFilepath={this.state.currentFilepath} 
                     tabbedFiles={this.state.tabbedFiles}
-                    closeTabsCallback={this.closeTabs}
-                    closeTabAtIndexCallback={this.closeTabAtIndex}
                     updateViewedFileCallback={this.updateViewedFile}
+                    closeAllTabsCallback={this.closeTabs}
+                    closeTabAtIndexCallback={this.closeTabAtIndex}
+                    closeTabsToLeftCallback={this.closeTabsToLeft}
+                    closeTabsToRightCallback={this.closeTabsToRight}
+                    closeAllTabsButIndexCallback={this.closeAllTabsButIndex}
                 />
                 <div className="file-contents">
 

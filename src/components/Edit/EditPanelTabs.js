@@ -11,8 +11,11 @@ export default class EditPanelTabs extends React.Component {
                 return <EditPanelTab 
                     key={tabbedFile.filepath} 
                     index={index}
-                    closeTabsCallback={this.props.closeTabsCallback}
+                    closeAllTabsCallback={this.props.closeAllTabsCallback}
                     closeTabAtIndexCallback={this.props.closeTabAtIndexCallback}
+                    closeTabsToLeftCallback={this.props.closeTabsToLeftCallback}
+                    closeTabsToRightCallback={this.props.closeTabsToRightCallback}
+                    closeAllTabsButIndexCallback={this.props.closeAllTabsButIndexCallback}
                     updateViewedFileCallback={this.props.updateViewedFileCallback}
                     tabbedFile={tabbedFile} 
                     currentFilepath={this.props.currentFilepath}
