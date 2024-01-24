@@ -67,9 +67,9 @@ export default class TemplativeProjectRenderer extends React.Component {
     getDefaultContentForFileBasedOnFilename = (filetype, filename) => {
         switch (filetype) {
             case "PIECE_GAMEDATA":
-                return `{"displayName": "${filename}", "pieceDisplayName": "${filename}" }`
-            case "KEYVALUE_GAMEDATA":
                 return "[]"
+            case "KEYVALUE_GAMEDATA":
+                return `{"displayName": "${filename}", "pieceDisplayName": "${filename}" }`
             case "ARTDATA":
                 return `{ "name":"${filename}", "templateFilename": "", "overlays": [], "textReplacements": [], "styleUpdates": [] }`
             default:
