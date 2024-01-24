@@ -22,7 +22,7 @@
     background-color: #282c35;
     overflow-y: scroll;
     height: calc(100% - 0.85em - 45px);
-    padding: 0.25em 0.25em 0.25em 0.25em;
+    padding: 0 0.25em 0.25em 0.25em;
 }
 .filename-row {
     /* 0.85em height */
