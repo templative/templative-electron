@@ -2,7 +2,6 @@ import React from "react";
 import "./EditPanel.css"
 import "./EditPanelTabs.css"
 import EditPanelTab from "./EditPanelTab";
-const path = window.require("path");
 
 export default class EditPanelTabs extends React.Component {       
     render() {
