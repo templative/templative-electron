@@ -71,6 +71,18 @@ export default class ComponentsViewer extends React.Component {
             components: newComponents.sort(sortComponents),
         })
     }
+    duplicateComponent(index) {
+        var newComponents = this.state.components
+        var newComponent = {}
+        for (const [key, value] of Object.entries(this.state.components[index])) {
+            newComponent[key] = value
+        }
+        newComponent["name"] = `${newComponent["name"]}_Copy`
+        newComponents.push(newComponent)
+        this.setState({
+            components: newComponents.sort(sortComponents),
+        })
+    }
 
     render() {
         var componentItems = []
@@ -80,6 +92,7 @@ export default class ComponentsViewer extends React.Component {
                 key={component.name} 
                 component={component} 
                 deleteComponentCallback={()=> this.deleteComponent(index)}
+                duplicateComponentCallback={() => this.duplicateComponent(index)}
                 isFloatingName={isFloatingName}
                 floatingName={this.state.floatingName}
                 updateFloatingNameCallback={(value) => this.updateFloatingName(index, value)}

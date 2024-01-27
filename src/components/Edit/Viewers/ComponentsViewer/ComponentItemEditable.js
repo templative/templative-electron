@@ -23,7 +23,12 @@ export default class ComponentItemEditable extends React.Component {
                     onChange={(event) => this.props.updateFloatingNameCallback(event.target.value)}
                     onBlur={() => this.props.releaseFloatingNameCallback()}
                     value={this.props.isFloatingName ? this.props.floatingName : this.props.component.name}/> 
-                {this.state.isHovering && <button onClick={()=>this.props.deleteComponentCallback()} className="btn btn-outline-secondary trash-button" type="button" id="button-addon1">🗑️</button>}               
+                {this.state.isHovering && 
+                    <React.Fragment>
+                        <button onClick={()=>this.props.duplicateComponentCallback()} className="btn btn-outline-secondary trash-button" type="button" id="button-addon1">Duplicate</button>
+                        <button onClick={()=>this.props.deleteComponentCallback()} className="btn btn-outline-secondary trash-button" type="button" id="button-addon1">🗑️</button>
+                    </React.Fragment>
+                }               
             </div>
             <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
                 <span className="input-group-text component-left-bumper">Type</span>
