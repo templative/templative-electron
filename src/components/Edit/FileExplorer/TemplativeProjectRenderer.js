@@ -64,6 +64,30 @@ export default class TemplativeProjectRenderer extends React.Component {
             this.forceUpdate()
         });
     }
+    static #getCopiedFilepath(filepath) {
+        const parsedPath = path.parse(filepath)
+        var newFilepath = path.join(parsedPath.dir, `${parsedPath.name}_Copy${path.extname(filepath)}`)
+        if (fs.existsSync(newFilepath)) {
+            return TemplativeProjectRenderer.#getCopiedFilepath(newFilepath)
+        }
+        return newFilepath 
+    }
+    duplicateFile = (filepath) => {
+        const newFilepath = TemplativeProjectRenderer.#getCopiedFilepath(filepath)
+        
+        fs.readFile(filepath, (readError, data) => {
+            if (readError) {
+                console.log(`Error duplicating ${path.parse(filepath).name} during read: ${readError}`)
+                return
+            }
+            fs.writeFile(newFilepath, data, (writeError) => {
+                if (writeError) {
+                    console.log(`Error writing ${path.parse(newFilepath).name} ${writeError}`)
+                }
+            })
+        })
+        
+    }
     getDefaultContentForFileBasedOnFilename = (filetype, filename) => {
         switch (filetype) {
             case "PIECE_GAMEDATA":
@@ -77,14 +101,7 @@ export default class TemplativeProjectRenderer extends React.Component {
         }
     }
     render() {
-        return <React.Fragment>
-            {/* <div className="row main-game-button-row">
-                <button className={`btn btn-outline-secondary main-game-button`} onClick={() => this.props.openStudioGamedataCallback()}>Studio</button>
-                <button className={`btn btn-outline-secondary main-game-button`} onClick={() => this.props.openGameGamedataCallback()}>Game</button>
-                <button className={`btn btn-outline-secondary main-game-button`} onClick={() => this.props.openComponentsCallback()}>Components</button>
-                <button className={`btn btn-outline-secondary main-game-button`} onClick={() => this.props.openRulesCallback()}>Rules</button>
-            </div> */}
-            
+        return <React.Fragment>            
             { this.state.gameCompose !== undefined &&
                 <div className="row file-explorer-row">
                     <ContentFileList
@@ -98,6 +115,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                         createFileCallback={this.createFile}
                         deleteFileCallback={this.deleteFile}
                         renameFileCallback={this.renameFile}
+                        duplicateFileCallback={this.duplicateFile}
                     />
                     <ContentFileList
                         header="Overlays" 
@@ -110,6 +128,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                         createFileCallback={this.createFile}
                         deleteFileCallback={this.deleteFile}
                         renameFileCallback={this.renameFile}
+                        duplicateFileCallback={this.duplicateFile}
                     />
                     <ContentFileList
                         header="Artdata" 
@@ -125,6 +144,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                         createFileCallback={this.createFile}
                         deleteFileCallback={this.deleteFile}
                         renameFileCallback={this.renameFile}
+                        duplicateFileCallback={this.duplicateFile}
                     />
                     <ContentFileList
                         header="Component Gamedata" 
@@ -140,6 +160,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                         createFileCallback={this.createFile}
                         deleteFileCallback={this.deleteFile}
                         renameFileCallback={this.renameFile}
+                        duplicateFileCallback={this.duplicateFile}
                     />
                     <ContentFileList
                         header="Piece Gamedata" 
@@ -155,6 +176,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                         createFileCallback={this.createFile}
                         deleteFileCallback={this.deleteFile}
                         renameFileCallback={this.renameFile}
+                        duplicateFileCallback={this.duplicateFile}
                     />
                 </div>       
             }

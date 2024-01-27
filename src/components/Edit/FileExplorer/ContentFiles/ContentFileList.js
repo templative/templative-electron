@@ -85,6 +85,7 @@ export default class ContentFileList extends React.Component {
                 isSelected={isSelected} 
                 key={filepath} 
                 filepath={filepath}
+                duplicateFileCallback={this.props.duplicateFileCallback}
                 updateViewedFileCallback={this.props.updateViewedFileCallback} 
                 deleteFileCallback={this.props.deleteFileCallback}
                 renameFileCallback={this.props.renameFileCallback}

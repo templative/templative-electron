@@ -75,6 +75,7 @@ export default class ContentFileItem extends React.Component {
                     commands={[
                         {name: "Open", callback: callback},
                         {name: "Open in Default App", callback: this.openInDefaultApp},
+                        {name: "Duplicate", callback: () => this.props.duplicateFileCallback(this.props.filepath)},
                         {name: "Rename", callback: this.startRenamingFile},
                         {name: "Delete", callback: () => this.props.deleteFileCallback(this.props.filepath)},
                     ]}
