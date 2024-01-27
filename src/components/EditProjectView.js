@@ -54,14 +54,20 @@ export default class EditProjectView extends React.Component {
         return result;
     }
     updateViewedFileUsingTab = (filetype, filepath) => {
-        this.#updateViewedFile(filetype, filepath)
+        this.setState({
+            currentFileType: filetype,
+            currentFilepath: filepath,
+            filename: path.parse(filepath).name,
+            fileContents: EditProjectView.#loadFileContents(filepath),
+            tabbedFiles: EditProjectView.#addTabbedFile(filetype, filepath, this.state.tabbedFiles),
+        })
     }
     updateViewedFileUsingExplorer = (filetype, filepath) => {
         const hasItalicsFile = this.state.italicsTabFilepath !== undefined
         const isAddingItalicsFile = this.state.italicsTabFilepath === filepath
         const isSolidifyingItalicsTab = hasItalicsFile && isAddingItalicsFile
         if (isSolidifyingItalicsTab) {
-            console.log("solidifying italics tab", hasItalicsFile, isAddingItalicsFile)
+            // console.log("solidifying italics tab", hasItalicsFile, isAddingItalicsFile)
             this.setState({
                 currentFileType: filetype,
                 currentFilepath: filepath,
@@ -74,7 +80,7 @@ export default class EditProjectView extends React.Component {
         const hasTabAlready = EditProjectView.#hasTabAlready(filetype, filepath, this.state.tabbedFiles)
         const isChangingItalicsTab = hasItalicsFile && !hasTabAlready
         if (isChangingItalicsTab) {
-            console.log("Changing italics tab", hasItalicsFile, isAddingItalicsFile, hasTabAlready)
+            // console.log("Changing italics tab", hasItalicsFile, isAddingItalicsFile, hasTabAlready)
             this.setState({
                 currentFileType: filetype,
                 currentFilepath: filepath,
@@ -85,12 +91,15 @@ export default class EditProjectView extends React.Component {
             })
             return
         }
-        console.log("Default tab behavior", hasItalicsFile, isAddingItalicsFile, hasTabAlready)
-        // Adding new italics file
-        this.#updateViewedFile(filetype, filepath)
-        if (!hasTabAlready) {
-            this.setState({italicsTabFilepath:filepath})
-        }
+        // console.log("Default tab behavior", hasItalicsFile, isAddingItalicsFile, hasTabAlready)
+        this.setState({
+            currentFileType: filetype,
+            currentFilepath: filepath,
+            filename: path.parse(filepath).name,
+            fileContents: EditProjectView.#loadFileContents(filepath),
+            tabbedFiles: EditProjectView.#addTabbedFile(filetype, filepath, this.state.tabbedFiles),
+            italicsTabFilepath: !hasTabAlready ? filepath : this.state.italicsTabFilepath
+        })
     }
     clickIntoFile = () => {
         if (this.state.italicsTabFilepath !== this.state.currentFilepath) {
@@ -111,19 +120,7 @@ export default class EditProjectView extends React.Component {
         }
         return fileContents
     }
-    #updateViewedFile = (filetype, filepath) => {     
-        // console.log(filetype, filepath)
-        const newFileContents = EditProjectView.#loadFileContents(filepath)
-        var filename = path.parse(filepath).name
-        var tabbedFiles = EditProjectView.#addTabbedFile(filetype, filepath, this.state.tabbedFiles)
-        this.setState({
-            currentFileType: filetype,
-            currentFilepath: filepath,
-            filename: filename,
-            fileContents: newFileContents,
-            tabbedFiles: tabbedFiles,
-        })
-    } 
+    
     clearViewedFile = () => {
         this.setState({
             currentFileType: "COMPONENTS",
