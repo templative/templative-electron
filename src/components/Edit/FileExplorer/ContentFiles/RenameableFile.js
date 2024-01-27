@@ -9,6 +9,7 @@ export default class RenameableFile extends React.Component {
         this.setState({filename: filename})
     }
     render() {
+        var shouldDarkenName = this.props.contentType !== "ART" && this.props.referenceCount === 0
         return <div className="renameable-file-wrapper" onClick={this.props.onClickCallback}>
             {this.props.isRenaming ? 
                 <div className="input-group input-group-sm"  data-bs-theme="dark">
@@ -30,7 +31,7 @@ export default class RenameableFile extends React.Component {
                     />
                 </div>
                 :
-                <p className="renameable-file">{this.props.filename}</p>
+                <p className={`renameable-file ${shouldDarkenName && "unused-file"}`}>{this.props.filename}</p>
             }
         </div>
     }

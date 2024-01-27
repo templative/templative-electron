@@ -9,6 +9,7 @@ const fs = window.require("fs")
 export default class TemplativeProjectRenderer extends React.Component {   
     state = {
         gameCompose: undefined,
+        filenameReferenceCounts: {},
         templatesDirectory: undefined,
         overlaysDirectory: undefined,
         artdataDirectory: undefined,
@@ -34,19 +35,58 @@ export default class TemplativeProjectRenderer extends React.Component {
             this.forceUpdate()
         });
     }
-    
+    #attemptAddFileReferenceCount(filenameReferenceCounts, filepath) {
+        if (!fs.existsSync(filepath)) {
+            return filenameReferenceCounts
+        }
+        if (filenameReferenceCounts[filepath] === undefined) {
+            filenameReferenceCounts[filepath] = 0
+        }
+        filenameReferenceCounts[filepath] = filenameReferenceCounts[filepath] + 1
+        return filenameReferenceCounts
+    }
+    #addComponentComposeReferences(filenameReferenceCounts, gameCompose, gameComposeField, component, componentKey) {
+        const referencedFilename = component[componentKey]
+        if (referencedFilename === undefined) {
+            return filenameReferenceCounts
+        }
+        var filepath = path.join(this.props.templativeRootDirectoryPath, gameCompose[gameComposeField], `${referencedFilename}.json`)
+        filenameReferenceCounts = this.#attemptAddFileReferenceCount(filenameReferenceCounts, filepath)
+        return filenameReferenceCounts
+    }
+    #saveComponentComposeFileCount = () => {
+        var componentCompose = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json");
+        var gameCompose = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "game-compose.json")
+        var filenameReferenceCounts = {}
+        for (let index = 0; index < componentCompose.length; index++) {
+            const component = componentCompose[index];
+            filenameReferenceCounts = this.#addComponentComposeReferences(filenameReferenceCounts, gameCompose, "componentGamedataDirectory", component, "componentGamedataFilename")
+            filenameReferenceCounts = this.#addComponentComposeReferences(filenameReferenceCounts, gameCompose, "piecesGamedataDirectory", component, "piecesGamedataFilename")
+            filenameReferenceCounts = this.#addComponentComposeReferences(filenameReferenceCounts, gameCompose, "artdataDirectory", component, "artdataFrontFilename")
+            filenameReferenceCounts = this.#addComponentComposeReferences(filenameReferenceCounts, gameCompose, "artdataDirectory", component, "artdataBackFilename")
+        }
+        this.setState({filenameReferenceCounts: filenameReferenceCounts})
+    }
     componentDidMount() {
         var gameCompose = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "game-compose.json");
-        
+        this.#saveComponentComposeFileCount()
+        this.componentComposeWatcher = fs.watch(path.join(this.props.templativeRootDirectoryPath, "component-compose.json"), {}, (_, fileName) => { 
+            this.#saveComponentComposeFileCount()
+        }); 
         this.setState({
             gameCompose: gameCompose,
-
             templatesDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.artTemplatesDirectory),
             overlaysDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.artInsertsDirectory),
             artdataDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.artdataDirectory),
             piecesGamedataDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.piecesGamedataDirectory),
             componentGamedataDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.componentGamedataDirectory),
         })
+    }
+    componentWillUnmount = () => {
+        if (this.componentComposeWatcher !== undefined) {
+            this.componentComposeWatcher.close();
+            this.componentComposeWatcher = undefined;
+        }
     }
     renameFile = (originalFilepath, newFilename) => {
         
@@ -107,6 +147,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                     <ContentFileList
                         header="Templates" 
                         contentType="ART" 
+                        filenameReferenceCounts={this.state.filenameReferenceCounts}
                         directoryPath={this.state.templatesDirectory}
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         baseFilepath={this.state.templatesDirectory}
@@ -120,6 +161,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                     <ContentFileList
                         header="Overlays" 
                         contentType="ART" 
+                        filenameReferenceCounts={this.state.filenameReferenceCounts}
                         directoryPath={this.state.overlaysDirectory}
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         baseFilepath={this.state.overlaysDirectory}
@@ -133,6 +175,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                     <ContentFileList
                         header="Artdata" 
                         contentType="ARTDATA" 
+                        filenameReferenceCounts={this.state.filenameReferenceCounts}
                         directoryPath={this.state.artdataDirectory}
                         baseFilepath={this.state.artdataDirectory}
                         currentFilepath={this.props.currentFilepath} 
@@ -149,6 +192,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                     <ContentFileList
                         header="Component Gamedata" 
                         contentType="KEYVALUE_GAMEDATA" 
+                        filenameReferenceCounts={this.state.filenameReferenceCounts}
                         directoryPath={this.state.componentGamedataDirectory}
                         baseFilepath={this.state.componentGamedataDirectory}
                         currentFilepath={this.props.currentFilepath} 
@@ -165,6 +209,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                     <ContentFileList
                         header="Piece Gamedata" 
                         contentType="PIECE_GAMEDATA" 
+                        filenameReferenceCounts={this.state.filenameReferenceCounts}
                         directoryPath={this.state.piecesGamedataDirectory}
                         baseFilepath={this.state.piecesGamedataDirectory}
                         currentFilepath={this.props.currentFilepath} 

@@ -80,8 +80,13 @@ export default class ContentFileList extends React.Component {
         for(var i = 0; i < this.state.filenames.length; i++) {
             var filepath = this.state.filenames[i]
             var isSelected = this.props.currentFilepath === filepath
+            var referenceCount = this.props.filenameReferenceCounts[filepath]
+            if (referenceCount === undefined) {
+                referenceCount = 0
+            }
             divs.push(<ContentFileItem 
                 contentType={this.props.contentType} 
+                referenceCount={referenceCount}
                 isSelected={isSelected} 
                 key={filepath} 
                 filepath={filepath}
