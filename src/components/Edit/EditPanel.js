@@ -12,185 +12,57 @@ import EditPanelTabs from "./EditPanelTabs";
 import "./EditPanel.css"
 import "./EditPanelTabs.css"
 
-const path = window.require("path");
-const fs = window.require("fs");
-
-class TabbedFile {
-    filepath
-    filetype
-    canClose
-    constructor(filetype, filepath, canClose=true) {
-        this.filepath = filepath
-        this.filetype = filetype
-        this.canClose = canClose 
-    }
-}
-
-export default class EditPanel extends React.Component {   
-    state = {
-        currentFileType: "COMPONENTS",
-        currentFilepath: TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath),
-        tabbedFiles: [
-            new TabbedFile("KEYVALUE_GAMEDATA", TemplativeAccessTools.getStudioGamedataFilename(this.props.templativeRootDirectoryPath), false),
-            new TabbedFile("KEYVALUE_GAMEDATA", TemplativeAccessTools.getGameGamedataFilenames(this.props.templativeRootDirectoryPath), false),
-            new TabbedFile("COMPONENTS", TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath), false),
-            new TabbedFile("RULES", TemplativeAccessTools.getRulesFilepath(this.props.templativeRootDirectoryPath), false),
-        ],
-    }
-    csvToJS(csv) {
-        var lines = csv.split("\n");
-        var result = [];
-        var headers=lines[0].split(",");
-        
-        for(var i=1;i<lines.length;i++){
-            if (lines[i].trim().length === 0) {
-                continue;
-            }
-            var obj = {};
-            // THis doesnt handle ,"Add this, then add that",
-            var currentline=lines[i].split(",");
-        
-            for(var j=0;j<headers.length;j++){
-                obj[headers[j].trim()] = currentline[j];
-            }
-        
-            result.push(obj);
-        }
-        return result;
-    }
-
-    addTabbedFile(filetype, filepath, tabbedFiles) {
-        for (let index = 0; index < tabbedFiles.length; index++) {
-            const tabbedFile = tabbedFiles[index];
-            if (tabbedFile.filepath === filepath) {
-                return tabbedFiles
-            }
-        }
-        tabbedFiles.push(new TabbedFile(filetype, filepath))
-        return tabbedFiles
-    }
-
-    updateViewedFile = (filetype, filepath) => {     
-        // console.log(filetype, filepath)
-        var fileContents = fs.readFileSync(filepath, 'utf8');
-        var extension = filepath.split('.').pop()
-        if (extension === "json") {
-            fileContents = JSON.parse(fileContents)
-        }
-        if (extension === "csv") {
-            fileContents = this.csvToJS(fileContents)
-        }
-        var filename = path.parse(filepath).name
-        var tabbedFiles = this.addTabbedFile(filetype, filepath, this.state.tabbedFiles)
-        this.setState({
-            currentFileType: filetype,
-            currentFilepath: filepath,
-            filename: filename,
-            fileContents: fileContents,
-            tabbedFiles: tabbedFiles
-        })
-    } 
-    clearViewedFile() {
-        this.setState({
-            currentFileType: "COMPONENTS",
-            currentFilepath: TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath),
-            filename: undefined,
-            fileContents: undefined
-        })
-    }
-    checkForCurrentTabRemoved = () => {
-        for (let index = 0; index < this.state.tabbedFiles.length; index++) {
-            const tabbedFile = this.state.tabbedFiles[index];
-            if (tabbedFile.filepath === this.state.currentFilepath) {
-                return
-            }
-        }
-        this.clearViewedFile()
-    }
-    closeTabAtIndex = (index) => {
-        var newTabbedFiles = Object.assign(this.state.tabbedFiles)
-        if (index < 0 || index >= newTabbedFiles.length) {
-            return
-        }
-        newTabbedFiles.splice(index, 1)
-        this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());
-    }
-    closeTabs = () => {
-        var newTabbedFiles = Object.assign(this.state.tabbedFiles)
-        newTabbedFiles.splice(4, this.state.tabbedFiles.length)
-        this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());
-                
-    }
-    closeTabsToLeft = (index) => {
-        var newTabbedFiles = Object.assign(this.state.tabbedFiles)
-        newTabbedFiles.splice(4, Math.max(0,index-4))
-        this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());
-    }
-    closeTabsToRight = (index) => {
-        var newTabbedFiles = Object.assign(this.state.tabbedFiles)
-        newTabbedFiles.splice(index+1, Math.max(0,this.state.tabbedFiles.length-(index+1)))
-        this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());
-    }
-    closeAllTabsButIndex = (butIndex) => {
-        var newTabbedFiles = []
-        for (let index = 0; index < this.state.tabbedFiles.length; index++) {
-            const tabbedFile = this.state.tabbedFiles[index];
-            if (index <= 3 || index === butIndex) {
-                newTabbedFiles.push(tabbedFile)
-            }
-        }
-        this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());
-    }
+export default class EditPanel extends React.Component {       
     render() {
         var components = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")
-        var filepathSplit = this.state.currentFilepath.replace(/\\/g,"/").replace(/^\/|\/$/g, '').split("/").join(" > ")
+        var filepathSplit = this.props.currentFilepath.replace(/\\/g,"/").replace(/^\/|\/$/g, '').split("/").join(" > ")
         return <div className='mainBody row '>
             <div className='col-3 left-column'>
                 <TemplativeProjectRenderer 
                     templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
-                    currentFileType={this.state.currentFileType}
-                    currentFilepath={this.state.currentFilepath} 
-                    updateViewedFileCallback={this.updateViewedFile}
-                    clearViewedFileCallback={()=>this.clearViewedFile()}
-                    openComponentsCallback={this.openComponents}
-                    openStudioGamedataCallback={this.openStudioGamedata}
-                    openGameGamedataCallback={this.openGameGamedata}
-                    openRulesCallback={this.openRules}
+                    currentFileType={this.props.currentFileType}
+                    currentFilepath={this.props.currentFilepath} 
+                    clearViewedFileCallback={this.props.clearViewedFileCallback}
+                    updateViewedFileCallback={this.props.updateViewedFileCallback}
+                    openComponentsCallback={this.props.openComponentsCallback}
+                    openStudioGamedataCallback={this.props.openStudioGamedataCallback}
+                    openGameGamedataCallback={this.props.openGameGamedataCallback}
+                    openRulesCallback={this.props.openRulesCallback}
                 />
             </div>
             <div className='col-9 viewer'>
                 <EditPanelTabs 
-                    currentFilepath={this.state.currentFilepath} 
-                    tabbedFiles={this.state.tabbedFiles}
-                    updateViewedFileCallback={this.updateViewedFile}
-                    closeAllTabsCallback={this.closeTabs}
-                    closeTabAtIndexCallback={this.closeTabAtIndex}
-                    closeTabsToLeftCallback={this.closeTabsToLeft}
-                    closeTabsToRightCallback={this.closeTabsToRight}
-                    closeAllTabsButIndexCallback={this.closeAllTabsButIndex}
+                    currentFilepath={this.props.currentFilepath} 
+                    tabbedFiles={this.props.tabbedFiles}
+                    updateViewedFileCallback={this.props.updateViewedFileCallback}
+                    closeAllTabsCallback={this.props.closeAllTabsCallback}
+                    closeTabAtIndexCallback={this.props.closeTabAtIndexCallback}
+                    closeTabsToLeftCallback={this.props.closeTabsToLeftCallback}
+                    closeTabsToRightCallback={this.props.closeTabsToRightCallback}
+                    closeAllTabsButIndexCallback={this.props.closeAllTabsButIndexCallback}
                 />
                 <div className="filename-row">
                     <p className="filename-title">{filepathSplit}</p>
                 </div>
                 <div className="file-contents">
-                    {this.state.currentFileType === "RULES" &&
+                    {this.props.currentFileType === "RULES" &&
                         <RulesEditor 
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                            filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
+                            filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath}/>
                     }
-                    {this.state.currentFileType === "ARTDATA" &&
-                        <ArtdataViewer filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
+                    {this.props.currentFileType === "ARTDATA" &&
+                        <ArtdataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath}/>
                     }
-                    {this.state.currentFileType === "ART" &&
-                        <ImageViewer filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
+                    {this.props.currentFileType === "ART" &&
+                        <ImageViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath}/>
                     }
-                    {this.state.currentFileType === "PIECE_GAMEDATA" &&
-                        <PieceGamedataViewer filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
+                    {this.props.currentFileType === "PIECE_GAMEDATA" &&
+                        <PieceGamedataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath}/>
                     }
-                    {this.state.currentFileType === "KEYVALUE_GAMEDATA" &&
-                        <KeyValueGamedataViewer filename={this.state.filename} fileContents={this.state.fileContents} currentFilepath={this.state.currentFilepath}/>
+                    {this.props.currentFileType === "KEYVALUE_GAMEDATA" &&
+                        <KeyValueGamedataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath}/>
                     }
-                    {this.state.currentFileType === "COMPONENTS" && 
+                    {this.props.currentFileType === "COMPONENTS" && 
                         <ComponentsViewer 
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                             componentsFilepath={this.props.currentFilepath} 
