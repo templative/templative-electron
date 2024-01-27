@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./EditPanel.css"
 import "./EditPanelTabs.css"
@@ -42,7 +43,7 @@ export default class EditPanelTab extends React.Component {
         if (this.state.isHoveringX || this.state.isShowingContextMenu) {
             return
         }
-        this.props.updateViewedFileCallback(this.props.tabbedFile.filetype, this.props.tabbedFile.filepath)
+        this.props.updateViewedFileUsingTabCallback(this.props.tabbedFile.filetype, this.props.tabbedFile.filepath)
     }
     openInDefaultApplication = () => {
         shell.openPath(this.props.tabbedFile.filepath);
@@ -79,14 +80,14 @@ export default class EditPanelTab extends React.Component {
                     closeContextMenuCallback={this.closeContextMenu}
                 />
             }
-            <a className={`nav-link ${isSelected && "active"}`}>
+            <a className={`nav-link ${isSelected && "active"} ${this.props.isItalics && "italics-tab"}`}>
                 {path.parse(this.props.tabbedFile.filepath).name}
                 {this.props.tabbedFile.canClose && 
                     <button 
                         onMouseOver={this.handleMouseOverX}
                         onMouseLeave={this.handleMouseOutX}
                         type="button" 
-                        class={`btn-close btn-close-white tab-x-button ${shouldShowX && "visible-x-button"}`}
+                        className={`btn-close btn-close-white tab-x-button ${shouldShowX && "visible-x-button"}`}
                         aria-label="Close"
                         onClick={() => this.props.closeTabAtIndexCallback(this.props.index)}
                     />

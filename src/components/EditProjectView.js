@@ -27,6 +27,7 @@ export default class EditProjectView extends React.Component {
             new TabbedFile("COMPONENTS", TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath), false),
             new TabbedFile("RULES", TemplativeAccessTools.getRulesFilepath(this.props.templativeRootDirectoryPath), false),
         ],
+        italicsTabFilepath: undefined,
         fileContents: undefined,
         currentFileType: "COMPONENTS",
         currentFilepath: TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath),
@@ -52,25 +53,75 @@ export default class EditProjectView extends React.Component {
         }
         return result;
     }
-
-    updateViewedFile = (filetype, filepath) => {     
-        // console.log(filetype, filepath)
+    updateViewedFileUsingTab = (filetype, filepath) => {
+        this.#updateViewedFile(filetype, filepath)
+    }
+    updateViewedFileUsingExplorer = (filetype, filepath) => {
+        const hasItalicsFile = this.state.italicsTabFilepath !== undefined
+        const isAddingItalicsFile = this.state.italicsTabFilepath === filepath
+        const isSolidifyingItalicsTab = hasItalicsFile && isAddingItalicsFile
+        if (isSolidifyingItalicsTab) {
+            console.log("solidifying italics tab", hasItalicsFile, isAddingItalicsFile)
+            this.setState({
+                currentFileType: filetype,
+                currentFilepath: filepath,
+                filename: path.parse(filepath).name,
+                fileContents: EditProjectView.#loadFileContents(filepath),
+                italicsTabFilepath: undefined
+            })
+            return
+        }
+        const hasTabAlready = EditProjectView.#hasTabAlready(filetype, filepath, this.state.tabbedFiles)
+        const isChangingItalicsTab = hasItalicsFile && !hasTabAlready
+        if (isChangingItalicsTab) {
+            console.log("Changing italics tab", hasItalicsFile, isAddingItalicsFile, hasTabAlready)
+            this.setState({
+                currentFileType: filetype,
+                currentFilepath: filepath,
+                filename: path.parse(filepath).name,
+                fileContents: EditProjectView.#loadFileContents(filepath),
+                tabbedFiles: EditProjectView.#replaceItalicsTabWithTab(this.state.italicsTabFilepath, filetype, filepath, this.state.tabbedFiles),
+                italicsTabFilepath: filepath
+            })
+            return
+        }
+        console.log("Default tab behavior", hasItalicsFile, isAddingItalicsFile, hasTabAlready)
+        // Adding new italics file
+        this.#updateViewedFile(filetype, filepath)
+        if (!hasTabAlready) {
+            this.setState({italicsTabFilepath:filepath})
+        }
+    }
+    clickIntoFile = () => {
+        if (this.state.italicsTabFilepath !== this.state.currentFilepath) {
+            return
+        }
+        this.setState({
+            italicsTabFilepath: undefined
+        })
+    }
+    static #loadFileContents = (filepath) => {
         var fileContents = fs.readFileSync(filepath, 'utf8');
         var extension = filepath.split('.').pop()
         if (extension === "json") {
-            fileContents = JSON.parse(fileContents)
+            return JSON.parse(fileContents)
         }
         if (extension === "csv") {
-            fileContents = EditProjectView.#csvToJS(fileContents)
+            return EditProjectView.#csvToJS(fileContents)
         }
+        return fileContents
+    }
+    #updateViewedFile = (filetype, filepath) => {     
+        // console.log(filetype, filepath)
+        const newFileContents = EditProjectView.#loadFileContents(filepath)
         var filename = path.parse(filepath).name
-        var tabbedFiles = this.addTabbedFile(filetype, filepath, this.state.tabbedFiles)
+        var tabbedFiles = EditProjectView.#addTabbedFile(filetype, filepath, this.state.tabbedFiles)
         this.setState({
             currentFileType: filetype,
             currentFilepath: filepath,
             filename: filename,
-            fileContents: fileContents,
-            tabbedFiles: tabbedFiles
+            fileContents: newFileContents,
+            tabbedFiles: tabbedFiles,
         })
     } 
     clearViewedFile = () => {
@@ -94,24 +145,54 @@ export default class EditProjectView extends React.Component {
     updateRoute = (route) => {
         this.setState({currentRoute: route})
     }
-    addTabbedFile(filetype, filepath, tabbedFiles) {
+
+    static #hasTabAlready = (filetype, filepath, tabbedFiles) => {
         for (let index = 0; index < tabbedFiles.length; index++) {
             const tabbedFile = tabbedFiles[index];
-            if (tabbedFile.filepath === filepath) {
-                return tabbedFiles
+            if (tabbedFile.filetype === filetype && tabbedFile.filepath === filepath) {
+                return true
             }
+        }
+        return false
+    }
+    static #addTabbedFile(filetype, filepath, tabbedFiles) {
+        if (EditProjectView.#hasTabAlready(filetype, filepath, tabbedFiles)) {
+            return tabbedFiles
         }
         tabbedFiles.push(new TabbedFile(filetype, filepath))
         return tabbedFiles
     }
+    static #replaceItalicsTabWithTab(italicsTabFilepath, filetype, filepath, tabbedFiles) {
+        for (let index = 0; index < tabbedFiles.length; index++) {
+            const tabbedFile = tabbedFiles[index];
+            const isItalicsTab = tabbedFile.filepath === italicsTabFilepath
+            if (!isItalicsTab) {
+                continue
+            }
+            tabbedFiles[index]["filepath"] = filepath
+            tabbedFiles[index]["filetype"] = filetype
+            return tabbedFiles
+        }
+        return tabbedFiles
+    }
     checkForCurrentTabRemoved = () => {
+        var hasItalicsFileStill = false
+        var hasCurrentFileStill = false
         for (let index = 0; index < this.state.tabbedFiles.length; index++) {
             const tabbedFile = this.state.tabbedFiles[index];
             if (tabbedFile.filepath === this.state.currentFilepath) {
-                return
+                hasCurrentFileStill = true
+            }
+            if (tabbedFile.filepath === this.state.italicsTabFilepath) {
+                hasItalicsFileStill = true
             }
         }
-        this.clearViewedFile()
+        if (!hasCurrentFileStill) {
+            this.clearViewedFile()
+        }
+        if (!hasItalicsFileStill) {
+            this.setState({italicsTabFilepath: undefined})
+        }
     }
     closeTabAtIndex = (index) => {
         var newTabbedFiles = Object.assign(this.state.tabbedFiles)
@@ -156,6 +237,7 @@ export default class EditProjectView extends React.Component {
             <Route path='/create' element={ <CreatePanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
             <Route path='/' element={ 
                 <EditPanel 
+                    italicsTabFilepath={this.state.italicsTabFilepath}
                     templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                     closeAllTabsButIndexCallback={this.closeAllTabsButIndex}
                     closeTabsToRightCallback={this.closeTabsToRight}
@@ -163,9 +245,10 @@ export default class EditProjectView extends React.Component {
                     closeTabsCallback={this.closeTabs}
                     closeTabAtIndexCallback={this.closeTabAtIndex}
                     checkForCurrentTabRemovedCallback={this.checkForCurrentTabRemoved}
-                    addTabbedFileCallback={this.addTabbedFile}
                     clearViewedFileCallback={this.clearViewedFile}
-                    updateViewedFileCallback={this.updateViewedFile}
+                    clickIntoFileCallback={this.clickIntoFile}
+                    updateViewedFileUsingTabCallback={this.updateViewedFileUsingTab}
+                    updateViewedFileUsingExplorerCallback={this.updateViewedFileUsingExplorer}
                     tabbedFiles={this.state.tabbedFiles}
                     currentFileType={this.state.currentFileType}
                     currentFilepath={this.state.currentFilepath}

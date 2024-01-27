@@ -59,7 +59,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                 return
             }
             if (this.props.currentFilepath === originalFilepath) {
-                this.props.updateViewedFileCallback(this.props.currentFileType, newFilepath)
+                this.props.updateViewedFileUsingExplorerCallback(this.props.currentFileType, newFilepath)
             }
             this.forceUpdate()
         });
@@ -111,7 +111,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         baseFilepath={this.state.templatesDirectory}
                         currentFilepath={this.props.currentFilepath} 
-                        updateViewedFileCallback={this.props.updateViewedFileCallback} 
+                        updateViewedFileUsingExplorerCallback={this.props.updateViewedFileUsingExplorerCallback} 
                         createFileCallback={this.createFile}
                         deleteFileCallback={this.deleteFile}
                         renameFileCallback={this.renameFile}
@@ -124,7 +124,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         baseFilepath={this.state.overlaysDirectory}
                         currentFilepath={this.props.currentFilepath} 
-                        updateViewedFileCallback={this.props.updateViewedFileCallback} 
+                        updateViewedFileUsingExplorerCallback={this.props.updateViewedFileUsingExplorerCallback} 
                         createFileCallback={this.createFile}
                         deleteFileCallback={this.deleteFile}
                         renameFileCallback={this.renameFile}
@@ -136,7 +136,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                         directoryPath={this.state.artdataDirectory}
                         baseFilepath={this.state.artdataDirectory}
                         currentFilepath={this.props.currentFilepath} 
-                        updateViewedFileCallback={this.props.updateViewedFileCallback} 
+                        updateViewedFileUsingExplorerCallback={this.props.updateViewedFileUsingExplorerCallback} 
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         canCreateNewFiles={true}
                         newFileExtension="json"
@@ -152,7 +152,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                         directoryPath={this.state.componentGamedataDirectory}
                         baseFilepath={this.state.componentGamedataDirectory}
                         currentFilepath={this.props.currentFilepath} 
-                        updateViewedFileCallback={this.props.updateViewedFileCallback} 
+                        updateViewedFileUsingExplorerCallback={this.props.updateViewedFileUsingExplorerCallback} 
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         canCreateNewFiles={true}
                         newFileExtension="json"
@@ -168,7 +168,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                         directoryPath={this.state.piecesGamedataDirectory}
                         baseFilepath={this.state.piecesGamedataDirectory}
                         currentFilepath={this.props.currentFilepath} 
-                        updateViewedFileCallback={this.props.updateViewedFileCallback} 
+                        updateViewedFileUsingExplorerCallback={this.props.updateViewedFileUsingExplorerCallback} 
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         canCreateNewFiles={true}
                         newFileExtension="json"

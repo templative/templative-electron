@@ -60,7 +60,7 @@ export default class ContentFileItem extends React.Component {
         shell.openPath(this.props.filepath);
     }
     render() {
-        var callback = () => this.props.updateViewedFileCallback(this.props.contentType, this.props.filepath)
+        var callback = () => this.props.updateViewedFileUsingExplorerCallback(this.props.contentType, this.props.filepath)
         return <div 
             className={`content-file-item-wrapper ${this.props.isSelected && "selected-content-file-item-wrapper"}`} 
             key={this.props.filepath} 

@@ -21,12 +21,13 @@
 .file-contents {
     background-color: #282c35;
     overflow-y: scroll;
+    overflow-x: hidden;
     height: calc(100% - 0.85em - 45px);
     padding: 0 0.25em 0.25em 0.25em;
 }
 .filename-row {
     /* 0.85em height */
-    height: 0.6em;
+    height: 0.85em;
     margin-bottom: 0.25em;
     background-color: #282c34;
     padding: 0 0 0 0.4em;

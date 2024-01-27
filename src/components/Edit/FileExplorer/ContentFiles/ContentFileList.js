@@ -86,7 +86,7 @@ export default class ContentFileList extends React.Component {
                 key={filepath} 
                 filepath={filepath}
                 duplicateFileCallback={this.props.duplicateFileCallback}
-                updateViewedFileCallback={this.props.updateViewedFileCallback} 
+                updateViewedFileUsingExplorerCallback={this.props.updateViewedFileUsingExplorerCallback} 
                 deleteFileCallback={this.props.deleteFileCallback}
                 renameFileCallback={this.props.renameFileCallback}
             />)

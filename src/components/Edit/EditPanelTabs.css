@@ -49,3 +49,6 @@
 .visible-x-button {
     visibility: inherit
 }
+.italics-tab {
+    font-style: italic;
+}

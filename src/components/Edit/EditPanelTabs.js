@@ -8,6 +8,7 @@ export default class EditPanelTabs extends React.Component {
         return <div className="nav nav-tabs d-flex flex-nowrap">
             {this.props.tabbedFiles.map((tabbedFile, index) => {
                 return <EditPanelTab 
+                    isItalics={this.props.italicsTabFilepath === tabbedFile.filepath}
                     key={tabbedFile.filepath} 
                     index={index}
                     closeAllTabsCallback={this.props.closeAllTabsCallback}
@@ -15,7 +16,7 @@ export default class EditPanelTabs extends React.Component {
                     closeTabsToLeftCallback={this.props.closeTabsToLeftCallback}
                     closeTabsToRightCallback={this.props.closeTabsToRightCallback}
                     closeAllTabsButIndexCallback={this.props.closeAllTabsButIndexCallback}
-                    updateViewedFileCallback={this.props.updateViewedFileCallback}
+                    updateViewedFileUsingTabCallback={this.props.updateViewedFileUsingTabCallback}
                     tabbedFile={tabbedFile} 
                     currentFilepath={this.props.currentFilepath}
                 />

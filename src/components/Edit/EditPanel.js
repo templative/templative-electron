@@ -12,7 +12,13 @@ import EditPanelTabs from "./EditPanelTabs";
 import "./EditPanel.css"
 import "./EditPanelTabs.css"
 
-export default class EditPanel extends React.Component {       
+export default class EditPanel extends React.Component { 
+    clickIntoFile = () => {
+        if (this.props.italicsTabFilepath !== this.props.currentFilepath) {
+            return
+        }
+        this.props.clickIntoFileCallback()
+    }      
     render() {
         var components = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")
         var filepathSplit = this.props.currentFilepath.replace(/\\/g,"/").replace(/^\/|\/$/g, '').split("/").join(" > ")
@@ -23,7 +29,7 @@ export default class EditPanel extends React.Component {
                     currentFileType={this.props.currentFileType}
                     currentFilepath={this.props.currentFilepath} 
                     clearViewedFileCallback={this.props.clearViewedFileCallback}
-                    updateViewedFileCallback={this.props.updateViewedFileCallback}
+                    updateViewedFileUsingExplorerCallback={this.props.updateViewedFileUsingExplorerCallback}
                     openComponentsCallback={this.props.openComponentsCallback}
                     openStudioGamedataCallback={this.props.openStudioGamedataCallback}
                     openGameGamedataCallback={this.props.openGameGamedataCallback}
@@ -32,9 +38,10 @@ export default class EditPanel extends React.Component {
             </div>
             <div className='col-9 viewer'>
                 <EditPanelTabs 
+                    italicsTabFilepath={this.props.italicsTabFilepath}
                     currentFilepath={this.props.currentFilepath} 
                     tabbedFiles={this.props.tabbedFiles}
-                    updateViewedFileCallback={this.props.updateViewedFileCallback}
+                    updateViewedFileUsingTabCallback={this.props.updateViewedFileUsingTabCallback}
                     closeAllTabsCallback={this.props.closeAllTabsCallback}
                     closeTabAtIndexCallback={this.props.closeTabAtIndexCallback}
                     closeTabsToLeftCallback={this.props.closeTabsToLeftCallback}
@@ -44,7 +51,7 @@ export default class EditPanel extends React.Component {
                 <div className="filename-row">
                     <p className="filename-title">{filepathSplit}</p>
                 </div>
-                <div className="file-contents">
+                <div className="file-contents" onClick={this.clickIntoFile}>
                     {this.props.currentFileType === "RULES" &&
                         <RulesEditor 
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
