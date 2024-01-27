@@ -53,14 +53,14 @@ const createStartupWindow = () => {
   startupWindow.show()
   return startupWindow
 }
-
+var servers = [
+    new ServerRunner("templativeServer", 8080, serverEnvironmentConfiguration.templativeServerCommandsByEnvironment),
+    new ServerRunner("reactServer", 3000, serverEnvironmentConfiguration.reactServerCommandsByEnvironment),
+]
+var serverManager = new ServerManager(servers)
 const launchServers = async () => {
     try {
-        var servers = [
-            new ServerRunner("templativeServer", 8080, serverEnvironmentConfiguration.templativeServerCommandsByEnvironment),
-            new ServerRunner("reactServer", 3000, serverEnvironmentConfiguration.reactServerCommandsByEnvironment),
-        ]
-        var serverManager = new ServerManager(servers)
+        
         var environment = app.isPackaged ? "PROD" : "DEV"
         return await serverManager.runServers(environment)
     } 
