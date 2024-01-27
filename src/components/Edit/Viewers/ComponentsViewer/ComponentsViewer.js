@@ -77,7 +77,7 @@ export default class ComponentsViewer extends React.Component {
         for (const [key, value] of Object.entries(this.state.components[index])) {
             newComponent[key] = value
         }
-        newComponent["name"] = `${newComponent["name"]}_Copy`
+        newComponent["name"] = `${newComponent["name"]}Copy`
         newComponents.push(newComponent)
         this.setState({
             components: newComponents.sort(sortComponents),
