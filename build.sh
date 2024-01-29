@@ -35,33 +35,32 @@ function createTemplativeApp() {
         --collect-all templative
 }
 
-function getOSTarget() {
-    echo $(uname -m)
-    echo "$OSTYPE"
-    
-    return ""
-}
-
 # Notes on architecture https://stackoverflow.com/questions/48678152/how-to-detect-386-amd64-arm-or-arm64-os-architecture-via-shell-bash
 function createStaticReactServerApp() {
     osIdentifer=""
+    # echo $OSTYPE
+    # echo $(uname -m)
     if [[ "$OSTYPE" == "darwin"* ]]; then
-        if [[ $(uname -m) == "arm" ]]; then
-            osIdentifer="-t node18-macos-arm64"
-        else
-            osIdentifer="-t node18-macos-x64"
-        fi
+        osIdentifer="-t node18-macos-arm64"
+        # if [[ $(uname -m) == "arm" ]]; then
+            # osIdentifer="-t node18-macos-arm64"
+        # elif [[ $(uname -m) == "x86_64" ]]; then
+        osIdentifer="-t node18-macos-x64"
+        # else
+            # echo "!!! Using default os for MacOS!"
+        # fi
     fi
     if [[ "$OSTYPE" == "win32" || "$OSTYPE" == "msys"  ]]; then
         osIdentifer="-t node18-win"
     fi
+    echo $osIdentifer
     react-scripts build
     pkg ./react/app.js --out-path ./build $osIdentifer
 }
 function make() {
     osIdentifer=""
     if [[ "$OSTYPE" == "darwin"* ]]; then
-        osIdentifer="--arch=arm64,universal,x86 --platform darwin"
+        osIdentifer="--arch=x64 --platform darwin" #arm64,universal,x64,
     elif [[ "$OSTYPE" == "win32" || "$OSTYPE" == "msys"  ]]; then
         osIdentifer="--platform win32"
     fi
