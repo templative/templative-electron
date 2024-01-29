@@ -1,6 +1,10 @@
 
 const TEMPLATIVE_SERVER_COMMANDS_BY_ENVIRONMENT = {
-    "PROD": {
+    "win32_PROD": {
+        command: `${process.resourcesPath}/python/__main__.exe serve --port 8080`,
+        testEndpoint: "http://localhost:8080/status"
+    },
+    "darwin_PROD": {
         command: `${process.resourcesPath}/python/__main__ serve --port 8080`,
         testEndpoint: "http://localhost:8080/status"
     },
@@ -26,10 +30,14 @@ const TEMPLATIVE_SERVER_COMMANDS_BY_ENVIRONMENT = {
     },
 }
 const REACT_SERVER_COMMANDS_BY_ENVIRONMENT = {
-    "PROD": {
-      command:`${process.resourcesPath}/build/app ./build`,
+    "win32_PROD": {
+      command:`${process.resourcesPath}/build/app.exe ${process.resourcesPath}/build`,
       testEndpoint: "http://localhost:3000"
     },
+    "darwin_PROD": {
+        command:`${process.resourcesPath}/build/app ${process.resourcesPath}/build`,
+        testEndpoint: "http://localhost:3000"
+      },
     "TEST_BUILT": {
       command:`./build/app ./build`,
       testEndpoint: "http://127.0.0.1:3000"
