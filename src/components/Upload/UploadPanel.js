@@ -64,9 +64,6 @@ export default class UploadPanel extends React.Component {
     selectPackageDirectory = (directory) => {
         this.setState({selectedPackageDirectory:directory})
     }
-    openPlaygroundDirectoryPicker = async () => {
-        await ipcRenderer.invoke(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG_FOR_PLAYGROUND)
-    }
     upload = async () => {
         var data = { 
             outputDirectorypath: `${this.props.templativeRootDirectoryPath}/output/${this.state.selectedOutputDirectory}`,

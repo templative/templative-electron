@@ -1,5 +1,6 @@
 import React from "react";
 import "../Render/RenderPanel.css"
+import "./OutputDirectories.css"
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import RenderOutputOption from "./RenderOutputOption";
 

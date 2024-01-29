@@ -12,7 +12,7 @@ export default class UploadControls extends React.Component {
         }
         var canUpload = this.props.apiKey !== "" && this.props.username !== "" && this.props.password !== "" && !this.props.isCreating && this.props.selectedOutputDirectory !== undefined
         
-        return <div className="create-button-container">
+        return <div className="gamecrafter-upload-controls">
             <p className="tgc-password-warning">Templative will never store your password and never will send it to our servers. This app communicates directly with TheGameCrafter.</p>
             <div className="input-group input-group-sm" data-bs-theme="dark">
                 <span className="input-group-text" id="basic-addon3">TGC ApiKey</span>
