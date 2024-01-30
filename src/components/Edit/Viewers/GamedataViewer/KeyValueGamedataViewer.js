@@ -10,7 +10,7 @@ export default class KeyValueGamedataViewer extends React.Component {
         currentUpdateValue: undefined
     }
     componentDidUpdate(prevProps) {
-        if (this.props.filename === prevProps.filename) {
+        if (this.props.currentFilepath === prevProps.currentFilepath) {
           return;
         }
         this.saveDocument(prevProps.currentFilepath, this.state.gamedataFile)

@@ -226,7 +226,6 @@ export default class EditProjectView extends React.Component {
         this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());
     }
     render() {
-        
         return <BrowserRouter>
             <TopNavbar topNavbarItems={TOP_NAVBAR_ITEMS} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
             <Routes>

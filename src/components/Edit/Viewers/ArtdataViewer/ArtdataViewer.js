@@ -22,8 +22,8 @@ export default class ArtdataViewer extends React.Component {
         artdataFile: this.props.fileContents
     }
     componentDidUpdate(prevProps) {
-        if (this.props.filename === prevProps.filename) {
-          return;
+        if (this.props.currentFilepath === prevProps.currentFilepath) {
+            return;
         }
         this.saveDocument(prevProps.currentFilepath, this.state.artdataFile)
 

@@ -14,8 +14,8 @@ export default class PieceGamedataViewer extends React.Component {
         currentUpdateValue: undefined
     }
     componentDidUpdate(prevProps) {
-        if (this.props.filename === prevProps.filename) {
-          return;
+        if (this.props.currentFilepath === prevProps.currentFilepath) {
+            return;
         }
         this.saveDocument(prevProps.currentFilepath, this.state.gamedataFile)
 
