@@ -29,6 +29,7 @@ function createTemplativeApp() {
     pyinstaller \
         --distpath ./python \
         -y \
+        -n templative \
         --onefile $pythonPath \
         --hidden-import engineio.async_drivers.aiohttp \
         --hidden-import engineio.async_aiohttp \
