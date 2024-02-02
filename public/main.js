@@ -54,7 +54,7 @@ const createStartupWindow = () => {
   return startupWindow
 }
 var servers = [
-    new ServerRunner("templativeServer", 8080, serverEnvironmentConfiguration.templativeServerCommandsByEnvironment),
+    // new ServerRunner("templativeServer", 8080, serverEnvironmentConfiguration.templativeServerCommandsByEnvironment),
     new ServerRunner("reactServer", 3000, serverEnvironmentConfiguration.reactServerCommandsByEnvironment),
 ]
 var serverManager = new ServerManager(servers)

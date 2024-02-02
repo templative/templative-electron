@@ -8,34 +8,24 @@ var axios  = window.require('axios');
 const ComponentInfo = require("./componentInfo.json")
 const StockComponentInfo = require("./stockComponentInfo.json")
 
-// const sortComponentTypes = (componentTypeQuantities, a, b) => {
-//     var aHasExisting = componentTypeQuantities[a] !== undefined
-//     var bHasExisting = componentTypeQuantities[b] !== undefined
-
-//     if (aHasExisting && !bHasExisting) {
-//         return -1;
-//     }
-//     if (bHasExisting && !aHasExisting) {
-//         return 1
-//     }
-//     if (a < b) {
-//         return -1;
-//     }
-//     if (a > b) {
-//         return 1;
-//     }
-//     return 0;
-// }
-
 export default class CreatePanel extends React.Component {   
     state = {
         selectedComponentType: undefined,
         componentName: "",
+        componentTypes: {},
+        stockComponentTypes: {},
         components: [],
         tagFilters: new Set(),
         isProcessing: false
     }
-    componentDidMount() {
+    async componentDidMount() {
+        await axios.get(`http://127.0.0.1:8080/component-info`).then((response) => {
+            console.log(response.data)
+            this.setState({componentTypes: response.data})
+        })
+        await axios.get(`http://127.0.0.1:8080/stock-info`).then((response) => {
+            this.setState({stockComponentTypes: response.data})
+        })
         this.setState({components: TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")})
     }
     selectComponent = (type) => {
