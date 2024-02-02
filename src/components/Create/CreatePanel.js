@@ -5,9 +5,6 @@ import TemplativeAccessTools from "../TemplativeAccessTools";
 import ComponentTypeList from "./ComponentTypeList";
 var axios  = window.require('axios');
 
-const ComponentInfo = require("./componentInfo.json")
-const StockComponentInfo = require("./stockComponentInfo.json")
-
 export default class CreatePanel extends React.Component {   
     state = {
         selectedComponentType: undefined,
@@ -20,7 +17,6 @@ export default class CreatePanel extends React.Component {
     }
     async componentDidMount() {
         await axios.get(`http://127.0.0.1:8080/component-info`).then((response) => {
-            console.log(response.data)
             this.setState({componentTypes: response.data})
         })
         await axios.get(`http://127.0.0.1:8080/stock-info`).then((response) => {
@@ -54,7 +50,7 @@ export default class CreatePanel extends React.Component {
     }
 
     render() {
-        var componentTypeOptions = Object.assign({}, StockComponentInfo, ComponentInfo)
+        var componentTypeOptions = Object.assign({}, this.state.stockComponentTypes, this.state.componentTypes)
         var isCreateButtonDisabled = this.state.componentName === "" || this.state.selectedComponentType === undefined
         return <div className='mainBody row'>
             <div className="col main-col">
