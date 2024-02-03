@@ -11,6 +11,7 @@ export default class CreatePanel extends React.Component {
         componentName: "",
         componentTypes: {},
         stockComponentTypes: {},
+        isToggledToComponents: true,
         components: [],
         tagFilters: new Set(),
         isProcessing: false
@@ -48,9 +49,12 @@ export default class CreatePanel extends React.Component {
         await axios.post(`http://127.0.0.1:8080/component`, data)
         this.setState({isProcessing: false, componentName: "", selectedComponentType: undefined})
     }
-
+    toggleCustomOrStock = () => {
+        this.setState({isToggledToComponents: !this.state.isToggledToComponents})
+    }
     render() {
-        var componentTypeOptions = Object.assign({}, this.state.stockComponentTypes, this.state.componentTypes)
+        var componentTypes = this.state.isToggledToComponents ? this.state.componentTypes : this.state.stockComponentTypes
+        var componentTypeOptions = Object.assign({}, componentTypes)
         var isCreateButtonDisabled = this.state.componentName === "" || this.state.selectedComponentType === undefined
         return <div className='mainBody row'>
             <div className="col main-col">
@@ -70,6 +74,12 @@ export default class CreatePanel extends React.Component {
                             { this.state.isProcessing && <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>}
                             Create
                         </button>
+                    </div>
+                </div>
+                <div className="row custom-or-stock-row">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked={this.state.isToggledToComponents} onClick={this.toggleCustomOrStock}/>
+                        <label class="form-check-label" for="flexSwitchCheckDefault">{this.state.isToggledToComponents ? "Custom" : "Stock"} Components</label>
                     </div>
                 </div>
                 <div className="row tag-choices">
