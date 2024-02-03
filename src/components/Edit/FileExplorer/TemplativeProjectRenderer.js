@@ -68,8 +68,12 @@ export default class TemplativeProjectRenderer extends React.Component {
         this.setState({filenameReferenceCounts: filenameReferenceCounts})
     }
     componentDidMount() {
+        this.#parseComponentCompose()
+    }
+    #parseComponentCompose = () => {
         var gameCompose = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "game-compose.json");
         this.#saveComponentComposeFileCount()
+        this.#closeComponentComposeListener()
         this.componentComposeWatcher = fs.watch(path.join(this.props.templativeRootDirectoryPath, "component-compose.json"), {}, (_, fileName) => { 
             this.#saveComponentComposeFileCount()
         }); 
@@ -82,12 +86,26 @@ export default class TemplativeProjectRenderer extends React.Component {
             componentGamedataDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.componentGamedataDirectory),
         })
     }
-    componentWillUnmount = () => {
-        if (this.componentComposeWatcher !== undefined) {
-            this.componentComposeWatcher.close();
-            this.componentComposeWatcher = undefined;
+
+    componentDidUpdate = (prevProps, prevState) => {
+        if (prevProps.templativeRootDirectoryPath === this.props.templativeRootDirectoryPath) {
+            return
         }
+        this.#parseComponentCompose()
     }
+
+    #closeComponentComposeListener = () => {
+        if (this.componentComposeWatcher === undefined) {
+            return
+        }
+        this.componentComposeWatcher.close();
+        this.componentComposeWatcher = undefined;
+    }
+
+    componentWillUnmount = () => {
+        this.#closeComponentComposeListener()
+    }
+
     renameFile = (originalFilepath, newFilename) => {
         
         const originalDirectory = path.parse(originalFilepath).dir

@@ -43,18 +43,38 @@ export default class ContentFileList extends React.Component {
     }
 
     componentDidMount = () => {
+        this.#watchBasepath()
+    }
+
+    #watchBasepath = () => {
+        this.#stopWatchingBasepath()
         this.watcher = fs.watch(this.props.baseFilepath, {recursive: true}, (eventType, filename) => { 
             console.log(`The file ${filename} was ${eventType}!`); 
             this.requestNewFilesNames()
           }); 
         this.requestNewFilesNames()
     }
-    componentWillUnmount = () => {
-        if (this.watcher !== undefined) {
-            this.watcher.close();
-            this.watcher = undefined;
+    componentDidUpdate = (prevProps, prevState) => {
+        const isSameBaseFilepath = prevProps.baseFilepath === this.props.baseFilepath
+        if (isSameBaseFilepath) {
+            return
         }
+        
+        this.#watchBasepath()
     }
+
+    componentWillUnmount = () => {
+        this.#stopWatchingBasepath()
+    }
+
+    #stopWatchingBasepath = ()=> {
+        if (this.watcher === undefined) {
+            return
+        }
+        this.watcher.close();
+        this.watcher = undefined;
+    }
+
     startCreatingNewFile() {
         this.setState({doesNewFileExist: true})
     }

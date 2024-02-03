@@ -139,6 +139,23 @@ export default class EditProjectView extends React.Component {
             currentRoute: this.getCurrentRoute()
         })
     }
+    componentDidUpdate = (prevProps) => {
+        if (prevProps.templativeRootDirectoryPath === this.props.templativeRootDirectoryPath) {
+            return
+        }
+        this.setState({
+            tabbedFiles: [
+                new TabbedFile("KEYVALUE_GAMEDATA", TemplativeAccessTools.getStudioGamedataFilename(this.props.templativeRootDirectoryPath), false),
+                new TabbedFile("KEYVALUE_GAMEDATA", TemplativeAccessTools.getGameGamedataFilenames(this.props.templativeRootDirectoryPath), false),
+                new TabbedFile("COMPONENTS", TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath), false),
+                new TabbedFile("RULES", TemplativeAccessTools.getRulesFilepath(this.props.templativeRootDirectoryPath), false),
+            ],
+            italicsTabFilepath: undefined,
+            fileContents: undefined,
+            currentFileType: "COMPONENTS",
+            currentFilepath: TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath),
+        })
+    }
     updateRoute = (route) => {
         this.setState({currentRoute: route})
     }
