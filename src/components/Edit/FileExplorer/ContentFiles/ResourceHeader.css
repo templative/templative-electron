@@ -19,13 +19,13 @@
     vertical-align: top;
     display: inline-block;
     height: 100%;
-    width: calc(100% - 1em);
+    width: calc(100% - 2em);
 }
 .resourceHeaderControls {
     vertical-align: top;
     display: inline-block;
     height: 100%;
-    width: 1em;
+    width: 2em;
     align-items: right;
 }
 .add-file-button {

@@ -128,7 +128,7 @@ export default class ContentFileList extends React.Component {
             iconSource = artDataIcon
         }
 
-        return <React.Fragment>
+        return <div className="content-file-list">
             <ResourceHeader 
                 iconSource={iconSource}
                 header={this.props.header} 
@@ -137,6 +137,6 @@ export default class ContentFileList extends React.Component {
             <div className="content-file-list">
                 {divs}
             </div> 
-        </React.Fragment>
+        </div>
     }
 }
