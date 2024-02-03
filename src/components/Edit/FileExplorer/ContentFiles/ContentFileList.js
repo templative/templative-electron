@@ -4,6 +4,12 @@ import ContentFileItem from "./ContentFileItem"
 import ResourceHeader from "./ResourceHeader";
 import NewFileInput from "./NewFileInput"
 
+import artDataIcon from "../../Icons/artDataIcon.svg"
+import artIcon from "../../Icons/artIcon.svg"
+import componentComposeIcon from "../../Icons/componentComposeIcon.svg"
+import pieceIcon from "../../Icons/pieceIcon.svg"
+import rulesIcon from "../../Icons/rulesIcon.svg"
+
 const fs = window.require("fs")
 const path = window.require("path")
 
@@ -102,8 +108,29 @@ export default class ContentFileList extends React.Component {
             createFileCallback = () => this.startCreatingNewFile()
         }
 
+        var iconSource = componentComposeIcon
+        if (this.props.contentType === "RULES") {
+            iconSource = rulesIcon
+        }
+        if (this.props.contentType === "COMPONENTS") {
+            iconSource = componentComposeIcon
+        }
+        if (this.props.contentType === "KEYVALUE_GAMEDATA") {
+            iconSource = pieceIcon
+        }
+        if (this.props.contentType === "KEYVALUE_GAMEDATA" || this.props.contentType === "PIECE_GAMEDATA") {
+            iconSource = pieceIcon
+        }
+        if (this.props.contentType === "ART") {
+            iconSource = artIcon
+        }
+        if (this.props.contentType === "ARTDATA") {
+            iconSource = artDataIcon
+        }
+
         return <React.Fragment>
             <ResourceHeader 
+                iconSource={iconSource}
                 header={this.props.header} 
                 directory={this.props.directoryPath} 
                 createFileCallback={createFileCallback}/> 

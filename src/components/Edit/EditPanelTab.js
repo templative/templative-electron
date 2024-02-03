@@ -3,6 +3,13 @@ import React from "react";
 import "./EditPanel.css"
 import "./EditPanelTabs.css"
 import ContextMenu from "../ContextMenu";
+
+import artDataIcon from "./Icons/artDataIcon.svg"
+import artIcon from "./Icons/artIcon.svg"
+import componentComposeIcon from "./Icons/componentComposeIcon.svg"
+import pieceIcon from "./Icons/pieceIcon.svg"
+import rulesIcon from "./Icons/rulesIcon.svg"
+
 const path = window.require("path");
 const shell = window.require('electron').shell;
 
@@ -52,6 +59,22 @@ export default class EditPanelTab extends React.Component {
         shell.openPath(path.parse(this.props.tabbedFile.filepath).dir)
     }
     render() {
+        var iconSource = componentComposeIcon
+        if (this.props.tabbedFile.filetype === "RULES") {
+            iconSource = rulesIcon
+        }
+        if (this.props.tabbedFile.filetype === "COMPONENTS") {
+            iconSource = componentComposeIcon
+        }
+        if (this.props.tabbedFile.filetype === "KEYVALUE_GAMEDATA" || this.props.tabbedFile.filepath === "PIECE_GAMEDATA") {
+            iconSource = pieceIcon
+        }
+        if (this.props.tabbedFile.filetype === "ART") {
+            iconSource = artIcon
+        }
+        if (this.props.tabbedFile.filetype === "ARTDATA") {
+            iconSource = artDataIcon
+        }
         var isSelected = this.props.tabbedFile.filepath === this.props.currentFilepath
         var shouldShowX = (this.state.isHovering || isSelected) && this.props.tabbedFile.canClose
         return <li 
@@ -80,7 +103,9 @@ export default class EditPanelTab extends React.Component {
                     closeContextMenuCallback={this.closeContextMenu}
                 />
             }
+            
             <a className={`nav-link ${isSelected && "active"} ${this.props.isItalics && "italics-tab"}`}>
+                <img className="tab-icon" src={iconSource} alt="Tab icon"/>
                 {path.parse(this.props.tabbedFile.filepath).name}
                 {this.props.tabbedFile.canClose && 
                     <button 

@@ -1,5 +1,6 @@
 import React from "react";
 import "./ResourceHeader.css"
+
 const {shell} = window.require('electron')
 
 export default class ResourceHeader extends React.Component {   
@@ -20,7 +21,7 @@ export default class ResourceHeader extends React.Component {
         onMouseLeave={this.handleMouseOut}>
             <div className="resourceHeaderContent" >
                 <p className="resourcesHeader">
-                    {this.props.header}
+                <img className="tab-icon" src={this.props.iconSource} alt="Tab icon"/>{this.props.header}
                 </p>
             </div>
             <div className="resourceHeaderControls" >

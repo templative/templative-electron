@@ -52,3 +52,11 @@
 .italics-tab {
     font-style: italic;
 }
+.tab-icon {
+    width: 15px;
+    height: 15px;
+    margin-right:5px;
+    border: none;
+    background-color: none;
+    margin-bottom: 3px;
+}
