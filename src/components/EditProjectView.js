@@ -135,7 +135,7 @@ export default class EditProjectView extends React.Component {
                 return;
             }
             fs.writeFile(filepath, contents, 'utf-8', ()=>{
-                console.log(path.parse(filepath).name,"saved!")
+                // console.log(path.parse(filepath).name,"saved!")
             })
         })
     }

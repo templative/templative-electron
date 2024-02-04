@@ -49,7 +49,7 @@ export default class ContentFileList extends React.Component {
     #watchBasepath = () => {
         this.#stopWatchingBasepath()
         this.watcher = fs.watch(this.props.baseFilepath, {recursive: true}, (eventType, filename) => { 
-            console.log(`The file ${filename} was ${eventType}!`); 
+            // console.log(`The file ${filename} was ${eventType}!`); 
             this.requestNewFilesNames()
           }); 
         this.requestNewFilesNames()
