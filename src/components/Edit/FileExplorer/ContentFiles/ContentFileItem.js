@@ -85,12 +85,12 @@ export default class ContentFileItem extends React.Component {
             <RenameableFile 
                 renameFileCallback={this.submitFileRename}
                 contentType={this.props.contentType}
+                directoryPath={this.props.directoryPath}
                 referenceCount={this.props.referenceCount}
                 cancelRenamingCallback={this.cancelRenamingFile}
                 filepath={this.props.filepath}
                 isRenaming={this.state.isRenamingFile}
                 onClickCallback={callback} 
-                filename={path.parse(this.props.filepath).name}
             />
         </div>
     }

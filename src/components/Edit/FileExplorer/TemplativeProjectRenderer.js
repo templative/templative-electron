@@ -106,21 +106,28 @@ export default class TemplativeProjectRenderer extends React.Component {
         this.#closeComponentComposeListener()
     }
 
-    renameFile = (originalFilepath, newFilename) => {
-        
-        const originalDirectory = path.parse(originalFilepath).dir
-        const filenameWithExtension = `${newFilename}.${originalFilepath.split('.').pop()}` 
-        const newFilepath = path.join(originalDirectory, filenameWithExtension)
-        fs.rename(originalFilepath, newFilepath, (err) => {
-            if (err !== null) {
+    renameFile = (originalFilepath, newFilepath) => {
+        // TODO doesnt create directories
+        const possibleCreatedDirectory = path.parse(newFilepath).dir
+        const renameFileCallback = (err, path) => {
+            if (err) {
                 console.log(err);
                 return
             }
-            if (this.props.currentFilepath === originalFilepath) {
-                this.props.updateViewedFileUsingExplorerCallback(this.props.currentFileType, newFilepath)
-            }
-            this.forceUpdate()
-        });
+            fs.rename(originalFilepath, newFilepath, (err) => {
+                if (err) {
+                    console.log(err);
+                    return
+                }
+                if (this.props.currentFilepath === originalFilepath) {
+                    this.props.updateViewedFileUsingExplorerCallback(this.props.currentFileType, newFilepath)
+                }
+                this.forceUpdate()
+            });
+        }
+
+        fs.mkdir(possibleCreatedDirectory, {recursive: true}, renameFileCallback)
+        
     }
     static #getCopiedFilepath(filepath) {
         const parsedPath = path.parse(filepath)

@@ -83,7 +83,6 @@ export default class ContentFileList extends React.Component {
         this.setState({doesNewFileExist: false})
         var filepath = path.join(this.props.baseFilepath, `${filename}.${this.props.newFileExtension}`)
         const content = this.props.getDefaultContentForFileBasedOnFilenameCallback(this.props.contentType, filename)
-        console.log(content)
         this.props.createFileCallback(filepath, content)
     }
 
@@ -110,11 +109,16 @@ export default class ContentFileList extends React.Component {
             if (referenceCount === undefined) {
                 referenceCount = 0
             }
+            const isDirectory = fs.lstatSync(filepath).isDirectory() 
+            if (isDirectory) {
+                continue
+            }
             divs.push(<ContentFileItem 
                 contentType={this.props.contentType} 
                 referenceCount={referenceCount}
                 isSelected={isSelected} 
                 key={filepath} 
+                directoryPath={this.props.directoryPath}
                 filepath={filepath}
                 duplicateFileCallback={this.props.duplicateFileCallback}
                 updateViewedFileUsingExplorerCallback={this.props.updateViewedFileUsingExplorerCallback} 
