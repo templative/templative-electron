@@ -60,7 +60,6 @@ export default class EditPanelTab extends React.Component {
     }
     render() {
         var iconSource = componentComposeIcon
-        console.log(this.props.tabbedFile)
         if (this.props.tabbedFile.filetype === "RULES") {
             iconSource = rulesIcon
         }
