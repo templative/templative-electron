@@ -60,13 +60,14 @@ export default class EditPanelTab extends React.Component {
     }
     render() {
         var iconSource = componentComposeIcon
+        console.log(this.props.tabbedFile)
         if (this.props.tabbedFile.filetype === "RULES") {
             iconSource = rulesIcon
         }
         if (this.props.tabbedFile.filetype === "COMPONENTS") {
             iconSource = componentComposeIcon
         }
-        if (this.props.tabbedFile.filetype === "KEYVALUE_GAMEDATA" || this.props.tabbedFile.filepath === "PIECE_GAMEDATA") {
+        if (this.props.tabbedFile.filetype === "KEYVALUE_GAMEDATA" || this.props.tabbedFile.filetype === "PIECE_GAMEDATA") {
             iconSource = pieceIcon
         }
         if (this.props.tabbedFile.filetype === "ART") {
