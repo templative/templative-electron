@@ -22,7 +22,7 @@ export default class ContentFileList extends React.Component {
     requestNewFilesNames = () => {
         fs.readdir(this.props.baseFilepath, { recursive: true }, (err, filenames) => {
             if (err) {
-                console.log(err, this.props.baseFilepath)
+                console.error(err, this.props.baseFilepath)
                 return;
             }
             var filepaths = []

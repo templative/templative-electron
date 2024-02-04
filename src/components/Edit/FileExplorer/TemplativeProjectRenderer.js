@@ -26,7 +26,7 @@ export default class TemplativeProjectRenderer extends React.Component {
         console.log(`Deleting ${filepath}`)
         fs.unlink(filepath, (err) => {
             if (err !== null) {
-                console.log(err);
+                console.error(err);
                 return
             }
             if (this.props.currentFilepath === filepath) {
@@ -111,12 +111,12 @@ export default class TemplativeProjectRenderer extends React.Component {
         const possibleCreatedDirectory = path.parse(newFilepath).dir
         const renameFileCallback = (err, path) => {
             if (err) {
-                console.log(err);
+                console.error(err);
                 return
             }
             fs.rename(originalFilepath, newFilepath, (err) => {
                 if (err) {
-                    console.log(err);
+                    console.error(err);
                     return
                 }
                 if (this.props.currentFilepath === originalFilepath) {

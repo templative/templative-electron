@@ -15,7 +15,7 @@ export default class AdvertisementFileList extends React.Component {
     requestNewFilesNames = () => {
         fs.readdir(this.props.baseFilepath, { recursive: true }, (err, filenames) => {
             if (err) {
-                console.log(err, this.props.baseFilepath)
+                console.error(err, this.props.baseFilepath)
                 return;
             }
             var filepaths = []
