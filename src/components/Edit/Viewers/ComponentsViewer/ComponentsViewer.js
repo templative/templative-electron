@@ -1,8 +1,9 @@
 import React from "react";
 import ComponentItemEditable from "./ComponentItemEditable"
-import "./ComponentViewer.css"
 import TemplativeAccessTools from "../../../TemplativeAccessTools";
-const fs = window.require("fs")
+
+import "./ComponentViewer.css"
+
 const path = window.require("path")
 
 const sortComponents = (a, b) => {
@@ -32,7 +33,7 @@ export default class ComponentsViewer extends React.Component {
         var newFileContents = JSON.stringify(this.state.components, null, 4)
 
         var componentComposeFilepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json")
-        fs.writeFileSync(componentComposeFilepath, newFileContents, 'utf-8')
+        this.props.saveFileCallback(componentComposeFilepath, newFileContents)
     }
     componentDidMount() {
         var components = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")

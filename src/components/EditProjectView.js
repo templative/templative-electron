@@ -129,7 +129,26 @@ export default class EditProjectView extends React.Component {
             fileContents: undefined
         })
     }
-    
+    saveFile = (filepath, contents) => {
+        fs.exists(filepath, (exists) => {
+            if (!exists) {
+                return;
+            }
+            fs.writeFile(filepath, contents, 'utf-8', ()=>{
+                console.log(path.parse(filepath).name,"saved!")
+            })
+        })
+    }
+    deleteFile = (filepath) => {
+        for (let index = 0; index < this.state.tabbedFiles.length; index++) {
+            const tabbedFile = this.state.tabbedFiles[index];
+            if (tabbedFile.filepath !== filepath) {
+                continue
+            }
+            this.closeTabAtIndex(index)
+            return
+        }
+    }
     getCurrentRoute = () => {
       var location = window.location.href
       return location.split("http://localhost:3000")[1]
@@ -219,8 +238,7 @@ export default class EditProjectView extends React.Component {
     closeTabs = () => {
         var newTabbedFiles = Object.assign(this.state.tabbedFiles)
         newTabbedFiles.splice(4, this.state.tabbedFiles.length)
-        this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());
-                
+        this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());   
     }
     closeTabsToLeft = (index) => {
         var newTabbedFiles = Object.assign(this.state.tabbedFiles)
@@ -266,6 +284,8 @@ export default class EditProjectView extends React.Component {
                     currentFileType={this.state.currentFileType}
                     currentFilepath={this.state.currentFilepath}
                     fileContents={this.state.fileContents}
+                    saveFileCallback={this.saveFile}
+                    deleteFileCallback={this.deleteFile}
                 /> 
             }/>
             <Route path='/render' element={ <RenderPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />

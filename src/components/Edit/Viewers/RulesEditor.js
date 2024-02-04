@@ -1,8 +1,9 @@
 import React from "react";
-import "./RulesEditor.css"
 import MarkdownEditor from '@uiw/react-markdown-editor';
 import TemplativeAccessTools from "../../TemplativeAccessTools";
-const fs = window.require("fs")
+
+import "./RulesEditor.css"
+
 const path = window.require("path")
 
 export default class RulesEditor extends React.Component {   
@@ -20,7 +21,7 @@ export default class RulesEditor extends React.Component {
         }
 
         var rulesFilepath = path.join(this.props.templativeRootDirectoryPath, "rules.md")
-        fs.writeFileSync(rulesFilepath, this.state.rulesMd, 'utf-8')
+        this.props.saveFileCallback(rulesFilepath, this.state.rulesMd)
     }
     componentDidMount() {
         var rulesMd = TemplativeAccessTools.readFileContents(this.props.templativeRootDirectoryPath, "rules.md")

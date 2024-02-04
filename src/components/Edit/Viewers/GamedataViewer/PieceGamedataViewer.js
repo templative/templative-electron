@@ -3,10 +3,6 @@ import React from "react";
 import "./GamedataViewer.css"
 import Piece from "./Piece";
 
-const fs = window.require("fs")
-
-
-
 export default class PieceGamedataViewer extends React.Component {   
     state = {
         gamedataFile: this.props.fileContents,
@@ -30,7 +26,7 @@ export default class PieceGamedataViewer extends React.Component {
             return
         }
         var newFileContents = JSON.stringify(fileContents, null, 4)
-        fs.writeFileSync(filepath, newFileContents, 'utf-8')
+        this.props.saveFileCallback(filepath, newFileContents)
     }
     jsToCsv(javascriptObject) {
         // https://stackoverflow.com/questions/8847766/how-to-convert-json-to-csv-format-and-store-in-a-variable

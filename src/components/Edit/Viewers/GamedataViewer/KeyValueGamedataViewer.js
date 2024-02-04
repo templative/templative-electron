@@ -1,7 +1,7 @@
 import React from "react";
 import KeyValueInput from "./KeyValueInput"
+
 import "./GamedataViewer.css"
-const fs = window.require("fs")
 
 export default class KeyValueGamedataViewer extends React.Component {   
     state = {
@@ -26,7 +26,7 @@ export default class KeyValueGamedataViewer extends React.Component {
             console.log(`No saving this file as its not json ${filepath}`)
             return
         }
-        fs.writeFileSync(filepath, newFileContents, 'utf-8')
+        this.props.saveFileCallback(filepath, newFileContents)
     }
     componentWillUnmount(){
         this.saveDocument(this.props.currentFilepath, this.state.gamedataFile)

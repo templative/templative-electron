@@ -32,7 +32,7 @@ export default class TemplativeProjectRenderer extends React.Component {
             if (this.props.currentFilepath === filepath) {
                 this.props.clearViewedFileCallback()
             }
-            this.forceUpdate()
+            this.props.deleteFileCallback(filepath)
         });
     }
     #attemptAddFileReferenceCount(filenameReferenceCounts, filepath) {

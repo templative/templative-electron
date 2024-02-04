@@ -34,6 +34,7 @@ export default class EditPanel extends React.Component {
                     openStudioGamedataCallback={this.props.openStudioGamedataCallback}
                     openGameGamedataCallback={this.props.openGameGamedataCallback}
                     openRulesCallback={this.props.openRulesCallback}
+                    deleteFileCallback={this.props.deleteFileCallback}
                 />
             </div>
             <div className='col-9 viewer'>
@@ -55,25 +56,26 @@ export default class EditPanel extends React.Component {
                     {this.props.currentFileType === "RULES" &&
                         <RulesEditor 
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                            filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath}/>
+                            filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath} saveFileCallback={this.props.saveFileCallback}/>
                     }
                     {this.props.currentFileType === "ARTDATA" &&
-                        <ArtdataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath}/>
+                        <ArtdataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath} saveFileCallback={this.props.saveFileCallback}/>
                     }
                     {this.props.currentFileType === "ART" &&
                         <ImageViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath}/>
                     }
                     {this.props.currentFileType === "PIECE_GAMEDATA" &&
-                        <PieceGamedataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath}/>
+                        <PieceGamedataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath} saveFileCallback={this.props.saveFileCallback}/>
                     }
                     {this.props.currentFileType === "KEYVALUE_GAMEDATA" &&
-                        <KeyValueGamedataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath}/>
+                        <KeyValueGamedataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath} saveFileCallback={this.props.saveFileCallback}/>
                     }
                     {this.props.currentFileType === "COMPONENTS" && 
                         <ComponentsViewer 
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                             componentsFilepath={this.props.currentFilepath} 
-                            components={components}
+                            components={components} 
+                            saveFileCallback={this.props.saveFileCallback}
                         />
                     }
                 </div>
