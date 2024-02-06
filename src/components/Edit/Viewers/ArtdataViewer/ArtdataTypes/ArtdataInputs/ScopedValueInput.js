@@ -1,5 +1,6 @@
 import React from "react";
 import "../../ArtdataViewer.css"
+import pieceIcon from "../../../../Icons/pieceIcon.svg"
 
 export default class ScopedValueInput extends React.Component {   
     createSelectionOption = (scope) => {
@@ -20,14 +21,14 @@ export default class ScopedValueInput extends React.Component {
     render() {
         const selectionOption = this.createSelectionOption(this.props.scope)
         return <React.Fragment>
-                <span className="input-group-text darkened-label">❔</span>
+                <span className="input-group-text darkened-label"><img className="tab-icon input-icon" src={pieceIcon} alt="Tab icon"/></span>
                 <select value={this.props.scope} onChange={(event)=>this.props.updateArtdataFieldCallback(this.props.index, "scope", event.target.value)} className="form-select scope-select no-left-border" id="inputGroupSelect01">
                     <option value="global">Global</option>
                     <option value="studio">Studio</option>
                     <option value="game">Game</option>
                     <option value="component">Component</option>
                     <option value="piece">Piece</option>
-                    <option value="utility">Utility</option>
+                    {/* <option value="utility">Utility</option> */}
                 </select>
                 {selectionOption}
             </React.Fragment>
