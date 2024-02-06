@@ -5,7 +5,7 @@
     width:100%;
 }
 .trash-button, .add-button {
-    background-color: rgb(43, 48, 53)!important;
+    background-color: #2b3035!important;
     border-color: rgb(73, 80, 87) !important;
 }
 .vertical-input-group .input-group:first-child {
@@ -39,4 +39,18 @@
 }
 .vertical-input-group .input-group:nth-child(odd) .form-select  {
     background-color: #1a1e20!important;
+}
+.darkened-label {
+    background-color: rgb(33, 37, 41)  !important;
+    border-right-width: 0 !important;
+}
+.vertical-input-group .input-group:nth-child(odd) .darkened-label {
+    background-color: #1a1e20!important;
+}
+.no-left-border {
+    border-left-width: 0 !important;
+}
+.radio-icon {
+    margin-left: 0.2em;
+    /* padding-bottom: 0.2em; */
 }

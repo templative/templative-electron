@@ -13,3 +13,11 @@
 .component-left-bumper-content {
     width: 11.5em !important;
 }
+.editable-components {
+    padding-top: 0.5em;
+}
+.editable-component {
+    max-width: 725px;
+    margin-left: auto;
+    margin-right: auto
+}

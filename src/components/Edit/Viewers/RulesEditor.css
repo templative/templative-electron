@@ -50,3 +50,8 @@
 .cm-gutterElement {
     font-size: 14px !important;
 }
+.md-editor-content-editor {
+    max-width: 725px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}

@@ -29,10 +29,10 @@ export default class StyleUpdate extends React.Component {
                 isComplex={isComplex}
                 index={this.props.index} 
             />
-            <span className="input-group-text">ID</span>
-            <input type="text" className="form-control" onChange={(event)=>this.props.updateArtdataFieldCallback("styleUpdates", this.props.index, "id", event.target.value)} aria-label="What key to replace..." value={this.props.artdataItem.id}/>
-            <span className="input-group-text">CSS</span>
-            <input type="text" className="form-control" onChange={(event)=>this.props.updateArtdataFieldCallback("styleUpdates", this.props.index, "cssValue", event.target.value)} aria-label="What key to replace..." value={this.props.artdataItem.cssValue}/>
+            <span className="input-group-text darkened-label">ID</span>
+            <input type="text" className="form-control no-left-border" onChange={(event)=>this.props.updateArtdataFieldCallback("styleUpdates", this.props.index, "id", event.target.value)} aria-label="What key to replace..." value={this.props.artdataItem.id}/>
+            <span className="input-group-text darkened-label">CSS</span>
+            <input type="text" className="form-control no-left-border" onChange={(event)=>this.props.updateArtdataFieldCallback("styleUpdates", this.props.index, "cssValue", event.target.value)} aria-label="What key to replace..." value={this.props.artdataItem.cssValue}/>
             
             
             <ScopedValueInput 

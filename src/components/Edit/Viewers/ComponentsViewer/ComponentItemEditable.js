@@ -14,7 +14,7 @@ export default class ComponentItemEditable extends React.Component {
     render() {
         var isDebug = this.props.component.isDebugInfo === true
         var isStock = this.props.component.type.split("_").shift() === "STOCK"
-        return <div className="vertical-input-group" 
+        return <div className="vertical-input-group editable-component" 
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}>
             <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
