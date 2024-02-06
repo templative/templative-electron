@@ -20,7 +20,8 @@ export default class SelectDirectoryInDirectory extends React.Component {
         if (this.props.directoryPath === undefined) {
             return
         }
-        var directories = await fs.readdir(this.props.directoryPath, { withFileTypes: true }).filter(dirent => dirent.isDirectory())
+        var directories = await fs.readdir(this.props.directoryPath, { withFileTypes: true })
+        directories = directories.filter(dirent => dirent.isDirectory())
         this.setState({directories: directories})
     }
     render() {

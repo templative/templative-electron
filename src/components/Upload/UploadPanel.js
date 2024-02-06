@@ -58,7 +58,7 @@ export default class UploadPanel extends React.Component {
     toggleIsIncludingStock = () => {
         this.setState({isIncludingStock: !this.state.isIncludingStock})
     }
-    selectDirectory = (directory) => {
+    selectDirectoryAsync = async (directory) => {
         this.setState({selectedOutputDirectory:directory})
     }
     selectPackageDirectory = (directory) => {
@@ -90,7 +90,7 @@ export default class UploadPanel extends React.Component {
     render() {
         return <div className='mainBody row'>
             <div className="col-4">
-                <RenderOutputOptions selectedDirectory={this.state.selectedOutputDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectory={this.selectDirectory}/>
+                <RenderOutputOptions selectedDirectory={this.state.selectedOutputDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
                 <UploadControls 
                     isCreating={this.state.isCreating}
                     selectedOutputDirectory={this.state.selectedOutputDirectory}

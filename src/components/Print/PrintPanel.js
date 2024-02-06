@@ -14,7 +14,7 @@ export default class PrintPanel extends React.Component {
         rerenderIframeKey: 0,
         isCreatingPrintout: false
     }
-    selectDirectory = (directory) => {
+    selectDirectoryAsync = async (directory) => {
         this.setState({selectedDirectory:directory})
     }
     setSize = (size) => {
@@ -47,7 +47,7 @@ export default class PrintPanel extends React.Component {
         var showPDF = this.state.selectedDirectory !== undefined && fs.existsSync(printoutFilepath)
         return <div className='mainBody row '>
             <div className="col-4 print-control-col-left">
-                <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectory={this.selectDirectory}/>
+                <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
                 <CreatePrintoutButton 
                     isCreatingPrintout={this.state.isCreatingPrintout}
                     hasOutputDirectoryValue={this.state.selectedDirectory !== undefined}

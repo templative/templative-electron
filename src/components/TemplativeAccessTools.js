@@ -22,6 +22,7 @@ export default class TemplativeAccessTools {
         var gameCompose = await TemplativeAccessTools.readFileContentsAsJsonAsync(templativeRootDirectoryPath, "game-compose.json")
         var outputDirectory = path.join(templativeRootDirectoryPath, gameCompose["outputDirectory"])
         var directories = await fs.readdir(outputDirectory, { withFileTypes: true })
+        directories = directories
             .filter(dirent => dirent.isDirectory())
             .map(dirent => dirent)
         return directories;
@@ -29,11 +30,12 @@ export default class TemplativeAccessTools {
     static getOutputDirectoriesComponentDirectoriesAsync = async (templativeRootDirectoryPath, individualOutputDirectoryPath) => {
         var gameCompose = await TemplativeAccessTools.readFileContentsAsJsonAsync(templativeRootDirectoryPath, "game-compose.json")
         var outputDirectory = path.join(templativeRootDirectoryPath, gameCompose["outputDirectory"], individualOutputDirectoryPath)
-        
-        return await fs.readdir(outputDirectory, { withFileTypes: true })
+        var outputDirectories = await fs.readdir(outputDirectory, { withFileTypes: true })
+        outputDirectories = outputDirectories
             .filter(dirent => dirent.isDirectory())
             .map(dirent => {
                 return path.join(dirent.path, dirent.name)})
+        return outputDirectories
     }
     static getStudioAndGamedataFilenames(templativeRootDirectoryPath) {
         return [

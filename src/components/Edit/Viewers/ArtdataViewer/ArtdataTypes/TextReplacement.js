@@ -36,7 +36,7 @@ export default class TextReplacement extends React.Component {
                 source={this.props.artdataItem.source} scope={this.props.artdataItem.scope}/>
             
             { this.state.isHovering && 
-                <ArtdataItemControls index={this.props.index} deleteCallback={this.props.deleteCallback}/>
+                <ArtdataItemControls index={this.props.index} deleteCallback={this.props.deleteCallback} updateArtdataItemOrderCallback={this.props.updateArtdataItemOrderCallback}/>
             }
         </div> 
     }

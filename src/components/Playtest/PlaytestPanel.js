@@ -12,7 +12,7 @@ export default class PlaytestPanel extends React.Component {
         selectedOutputDirectory: undefined,
         selectedPackageDirectory: undefined,
         isCreating: false,
-        playgroundDirectory: ""
+        playgroundDirectory: undefined
     }
     componentDidMount() {
         ipcRenderer.on(channels.GIVE_PLAYGROUND_FOLDER, (event, playgroundFolder) => {
@@ -27,7 +27,7 @@ export default class PlaytestPanel extends React.Component {
     componentWillUnmount() {
         ipcRenderer.removeAllListeners(channels.GIVE_PLAYGROUND_FOLDER);
     }
-    selectDirectory = (directory) => {
+    selectDirectoryAsync = async (directory) => {
         this.setState({selectedOutputDirectory:directory})
     }
     selectPackageDirectory = (directory) => {
@@ -61,16 +61,18 @@ export default class PlaytestPanel extends React.Component {
         
         return <div className='mainBody row'>
             <div className="col-4">
-                <RenderOutputOptions selectedDirectory={this.state.selectedOutputDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectory={this.selectDirectory}/>
+                
                 <div className="create-button-container">
                     <div className="input-group input-group-sm playground-package-controls" data-bs-theme="dark">
                         <span className="input-group-text" id="basic-addon3">TTP Package Directory</span>
                         <input className="form-control" value={this.state.playgroundDirectory} readOnly placeholder="TTP Package Directory" aria-label="Tabletop Playground Package Directory"/>
                         <button onClick={async () => await this.openPlaygroundDirectoryPicker()} className="btn btn-outline-secondary" type="button" id="button-addon1">↗</button>
                     </div>
-                    <button disabled={this.state.isCreating || this.state.selectedOutputDirectory === undefined} type="button" className="btn btn-outline-secondary create-playground-button" onClick={() => this.createPlayground()}>{buttonMessage}</button>
                 </div>
                 <SelectDirectoryInDirectory directoryPath={this.state.playgroundDirectory} selectDirectoryCallback={this.selectPackageDirectory} selectedDirectory={this.state.selectedPackageDirectory} title="Tabletop Playground Packages"/>
+                <RenderOutputOptions selectedDirectory={this.state.selectedOutputDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
+                <button disabled={this.state.isCreating || this.state.selectedOutputDirectory === undefined} type="button" className="btn btn-outline-secondary create-playground-button" onClick={() => this.createPlayground()}>{buttonMessage}</button>
+                
             </div>
             <div className="col ">
                 

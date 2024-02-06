@@ -9,11 +9,13 @@ export default class OutputExplorer extends React.Component {
     }  
     #parseComponentDirectoryImageFilepathsAsync = async () => {
         var componentDirectoryImageFilepaths = {}
-        this.props.componentDirectories.foreach(async (dirent) => {
-            var imageFilepaths = await fs.readdir(dirent, { withFileTypes: true })
+        for (let index = 0; index < this.props.componentDirectories.length; index++) {
+            const componentDirectory = this.props.componentDirectories[index];
+            var imageFilepaths = await fs.readdir(componentDirectory, { withFileTypes: true })
+            imageFilepaths = imageFilepaths
                 .filter(dirent => !dirent.isDirectory() && dirent.name.split(".").pop() === "png")
-            componentDirectoryImageFilepaths[dirent] = imageFilepaths
-        })
+            componentDirectoryImageFilepaths[componentDirectory] = imageFilepaths
+        }
         this.setState({componentDirectoryImageFilepaths: componentDirectoryImageFilepaths})
     }
     componentDidMount = async () => {

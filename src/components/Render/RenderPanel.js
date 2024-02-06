@@ -21,7 +21,7 @@ export default class RenderPanel extends React.Component {
     }
 
     selectDirectoryAsync = async (directory) => {
-        var componentDirectories = await TemplativeAccessTools.getOutputDirectoriesComponentDirectoriesAsync(this.props.templativeRootDirectoryPath, this.state.selectedDirectory)
+        var componentDirectories = await TemplativeAccessTools.getOutputDirectoriesComponentDirectoriesAsync(this.props.templativeRootDirectoryPath, directory)
         this.setState({selectedDirectory:directory, componentDirectories: componentDirectories})
     }
     toggleComponent = (component) => {

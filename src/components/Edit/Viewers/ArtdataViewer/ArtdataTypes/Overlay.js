@@ -37,7 +37,7 @@ export default class StyleUpdate extends React.Component {
             />
             
             { this.state.isHovering && 
-                <ArtdataItemControls index={this.props.index} deleteCallback={this.props.deleteCallback}/>
+                <ArtdataItemControls index={this.props.index} deleteCallback={this.props.deleteCallback} updateArtdataItemOrderCallback={this.props.updateArtdataItemOrderCallback}/>
             }
         </div>
     }

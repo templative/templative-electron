@@ -149,7 +149,6 @@ export default class EditProjectView extends React.Component {
         if (existingContent === contents) {
             return
         }
-        console.log(existingContent, contents)
         await fs.writeFile(filepath, contents, 'utf-8')
     }
     closeTabIfOpenByFilepath = (filepath) => {
