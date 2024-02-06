@@ -64,7 +64,6 @@ export default class TemplativeProjectRenderer extends React.Component {
             filenameReferenceCounts = await this.#addComponentComposeReferencesAsync(filenameReferenceCounts, gameCompose, "artdataDirectory", component, "artdataFrontFilename")
             filenameReferenceCounts = await this.#addComponentComposeReferencesAsync(filenameReferenceCounts, gameCompose, "artdataDirectory", component, "artdataBackFilename")
         }
-        console.log(filenameReferenceCounts)
         this.setState({filenameReferenceCounts: filenameReferenceCounts})
     }
     componentDidMount = async () => {
