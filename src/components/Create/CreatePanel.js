@@ -16,14 +16,22 @@ export default class CreatePanel extends React.Component {
         tagFilters: new Set(),
         isProcessing: false
     }
-    async componentDidMount() {
+    componentDidMount = async () => {
         await axios.get(`http://127.0.0.1:8080/component-info`).then((response) => {
             this.setState({componentTypes: response.data})
         })
         await axios.get(`http://127.0.0.1:8080/stock-info`).then((response) => {
             this.setState({stockComponentTypes: response.data})
         })
-        this.setState({components: TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")})
+        var components = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
+        this.setState({components: components})
+    }
+    componentDidUpdate = async (prevProps, prevState) => {
+        if (prevProps.templativeRootDirectoryPath === this.props.templativeRootDirectoryPath) {
+            return
+        }
+        var components = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
+        this.setState({components: components})
     }
     selectComponent = (type) => {
         if (this.state.selectedComponentType === type) {

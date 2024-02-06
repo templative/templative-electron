@@ -10,7 +10,8 @@ import componentComposeIcon from "../../Icons/componentComposeIcon.svg"
 import pieceIcon from "../../Icons/pieceIcon.svg"
 import rulesIcon from "../../Icons/rulesIcon.svg"
 
-const fs = window.require("fs")
+const fsOld = window.require('fs');
+const fs = window.require("fs/promises")
 const path = window.require("path")
 
 export default class ContentFileList extends React.Component {
@@ -19,60 +20,74 @@ export default class ContentFileList extends React.Component {
         doesNewFileExist: false,
         filenames: []
     }
-    requestNewFilesNames = () => {
-        fs.readdir(this.props.baseFilepath, { recursive: true }, (err, filenames) => {
-            if (err) {
-                console.error(err, this.props.baseFilepath)
-                return;
+    static #filterNonContentFiles = async (filepaths) => {
+        // return filepaths
+        var filteredFilepaths = []
+        for (let index = 0; index < filepaths.length; index++) {
+            const filepath = filepaths[index];
+            var filepathStats = await fs.lstat(filepath)
+            const isDirectory = filepathStats.isDirectory()
+            if (isDirectory) {
+                continue
             }
-            var filepaths = []
-            filenames.forEach(element => {
-                var filepath = path.join(this.props.baseFilepath, element)
-                if (filepath.split(".").pop() === "md") {
-                    return;
-                }
-                if (filepath.split(".").pop() === "DS_Store") {
-                    return;
-                }
-                filepaths.push(filepath)
-            });
-            this.setState({filenames: filepaths})
-            this.forceUpdate()
+            const isReadMe = filepath.split(".").pop() === "md"
+            const isMacFolderInfo = filepath.split(".").pop() === "DS_Store"
+            if (isReadMe || isMacFolderInfo) {
+                continue;
+            }
+            filteredFilepaths.push(filepath)
+        }
+        return filteredFilepaths
+    }
+    static #sortAlphabetically = (a, b) => {
+        if (a < b) {
+            return -1;
+        }
+        if (a > b) {
+            return 1;
+        }
+        return 0;
+    }
+    #requestNewFilesNamesAsync = async () => {
+        var filenamesRelativeToBasepath = await fs.readdir(this.props.baseFilepath, { recursive: true })
+        var filepaths = filenamesRelativeToBasepath
+            .sort(ContentFileList.#sortAlphabetically)
+            .map((filenameRelativeToBasepath) => path.join(this.props.baseFilepath, filenameRelativeToBasepath))        
+        filepaths = await ContentFileList.#filterNonContentFiles(filepaths)
+        this.setState({filenames: filepaths})
+    }
+    componentDidMount = async () => {
+        await this.#watchBasepathAsync()
+    }
+    #watchBasepathAsync = async () => {
+        this.#stopWatchingBasepath()                
+        this.componentComposeWatcher = fsOld.watch(this.props.baseFilepath, {recursive: true}, async (event, filename) => {
+            console.log(event, filename)
+            await this.#requestNewFilesNamesAsync()
         })
-        
+            
+        await this.#requestNewFilesNamesAsync()
     }
-
-    componentDidMount = () => {
-        this.#watchBasepath()
-    }
-
-    #watchBasepath = () => {
-        this.#stopWatchingBasepath()
-        this.watcher = fs.watch(this.props.baseFilepath, {recursive: true}, (eventType, filename) => { 
-            // console.log(`The file ${filename} was ${eventType}!`); 
-            this.requestNewFilesNames()
-          }); 
-        this.requestNewFilesNames()
-    }
-    componentDidUpdate = (prevProps, prevState) => {
+    
+    componentDidUpdate = async (prevProps, prevState) => {
         const isSameBaseFilepath = prevProps.baseFilepath === this.props.baseFilepath
         if (isSameBaseFilepath) {
             return
         }
-        
-        this.#watchBasepath()
+
+        await this.#watchBasepathAsync()
     }
 
     componentWillUnmount = () => {
         this.#stopWatchingBasepath()
     }
 
-    #stopWatchingBasepath = ()=> {
-        if (this.watcher === undefined) {
+    #stopWatchingBasepath = () => {
+        if (this.componentComposeWatcher === undefined) {
             return
         }
-        this.watcher.close();
-        this.watcher = undefined;
+        this.componentComposeWatcher.close();
+        this.componentComposeWatcher = undefined;
     }
 
     startCreatingNewFile() {
@@ -101,18 +116,16 @@ export default class ContentFileList extends React.Component {
                 />
             )
         }
-
+        // console.log(this.state)
         for(var i = 0; i < this.state.filenames.length; i++) {
             var filepath = this.state.filenames[i]
+            // console.log(filepath)
             var isSelected = this.props.currentFilepath === filepath
             var referenceCount = this.props.filenameReferenceCounts[filepath]
             if (referenceCount === undefined) {
                 referenceCount = 0
             }
-            const isDirectory = fs.lstatSync(filepath).isDirectory() 
-            if (isDirectory) {
-                continue
-            }
+            
             divs.push(<ContentFileItem 
                 contentType={this.props.contentType} 
                 referenceCount={referenceCount}
@@ -120,10 +133,10 @@ export default class ContentFileList extends React.Component {
                 key={filepath} 
                 directoryPath={this.props.directoryPath}
                 filepath={filepath}
-                duplicateFileCallback={this.props.duplicateFileCallback}
-                updateViewedFileUsingExplorerCallback={this.props.updateViewedFileUsingExplorerCallback} 
-                deleteFileCallback={this.props.deleteFileCallback}
-                renameFileCallback={this.props.renameFileCallback}
+                duplicateFileAsyncCallback={this.props.duplicateFileAsyncCallback}
+                updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
+                deleteFileAsyncCallback={this.props.deleteFileAsyncCallback}
+                renameFileAsyncCallback={this.props.renameFileAsyncCallback}
             />)
         }
 

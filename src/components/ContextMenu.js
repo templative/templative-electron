@@ -7,13 +7,12 @@ class ContextMenu extends React.Component {
         this.props.closeContextMenuCallback()
     } 
     render() {
-
         var elements = this.props.commands.map((command) => {
             return <p 
                 key={command.name} 
                 className="context-menu-item" 
-                onClick={() => {
-                    command.callback()
+                onClick={async () => {
+                    await command.callback()
                     this.props.closeContextMenuCallback()
                 }}
             >

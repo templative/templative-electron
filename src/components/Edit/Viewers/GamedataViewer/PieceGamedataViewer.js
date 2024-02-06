@@ -9,24 +9,24 @@ export default class PieceGamedataViewer extends React.Component {
         trackedKey: undefined,
         currentUpdateValue: undefined
     }
-    componentDidUpdate(prevProps) {
+    componentDidUpdate = async (prevProps) => {
         if (this.props.currentFilepath === prevProps.currentFilepath) {
             return;
         }
-        this.saveDocument(prevProps.currentFilepath, this.state.gamedataFile)
+        await this.saveDocumentAsync(prevProps.currentFilepath, this.state.gamedataFile)
 
         this.setState({
             gamedataFile: this.props.fileContents
         })
     }
 
-    saveDocument(filepath, fileContents) {
+    saveDocumentAsync = async (filepath, fileContents) => {
         if (filepath.split('.').pop() !== "json") {
             console.log(`No saving this file as its not json ${filepath}`)
             return
         }
         var newFileContents = JSON.stringify(fileContents, null, 4)
-        this.props.saveFileCallback(filepath, newFileContents)
+        await this.props.saveFileAsyncCallback(filepath, newFileContents)
     }
     jsToCsv(javascriptObject) {
         // https://stackoverflow.com/questions/8847766/how-to-convert-json-to-csv-format-and-store-in-a-variable
@@ -38,8 +38,8 @@ export default class PieceGamedataViewer extends React.Component {
         csv = csv.join('\n')
         return csv
     }
-    componentWillUnmount(){
-        this.saveDocument(this.props.currentFilepath, this.state.gamedataFile)
+    componentWillUnmount = async () => {
+        await this.saveDocumentAsync(this.props.currentFilepath, this.state.gamedataFile)
     }
 
     addBlankKeyValuePair = () => {

@@ -3,8 +3,9 @@ import TemplativeAccessTools from "../../TemplativeAccessTools";
 import ContentFileList from "./ContentFiles/ContentFileList";
 import "./TemplativeProjectRenderer.css"
 
+const fsOld = window.require('fs');
 const path = window.require("path")
-const fs = window.require("fs")
+const fs = window.require("fs/promises")
 
 export default class TemplativeProjectRenderer extends React.Component {   
     state = {
@@ -22,9 +23,9 @@ export default class TemplativeProjectRenderer extends React.Component {
             this.forceUpdate()
         })
     }
-    deleteFile = (filepath) => {
+    deleteFileAsync = async (filepath) => {
         console.log(`Deleting ${filepath}`)
-        fs.unlink(filepath, (err) => {
+        await fs.unlink(filepath, (err) => {
             if (err !== null) {
                 console.error(err);
                 return
@@ -32,51 +33,53 @@ export default class TemplativeProjectRenderer extends React.Component {
             if (this.props.currentFilepath === filepath) {
                 this.props.clearViewedFileCallback()
             }
-            this.props.deleteFileCallback(filepath)
+            this.props.closeTabIfOpenByFilepathCallback(filepath)
         });
     }
-    #attemptAddFileReferenceCount(filenameReferenceCounts, filepath) {
-        if (!fs.existsSync(filepath)) {
+    #attemptAddFileReferenceCountAsync = async (filenameReferenceCounts, filepath) => {
+        var fileExists = TemplativeProjectRenderer.#doesFileExist(filepath)
+        if (!fileExists) {
             return filenameReferenceCounts
         }
-        if (filenameReferenceCounts[filepath] === undefined) {
-            filenameReferenceCounts[filepath] = 0
-        }
-        filenameReferenceCounts[filepath] = filenameReferenceCounts[filepath] + 1
+        var count = (filenameReferenceCounts[filepath] !== undefined ? filenameReferenceCounts[filepath] : 0) + 1
+        filenameReferenceCounts[filepath] = count
         return filenameReferenceCounts
     }
-    #addComponentComposeReferences(filenameReferenceCounts, gameCompose, gameComposeField, component, componentKey) {
+    #addComponentComposeReferencesAsync = async (filenameReferenceCounts, gameCompose, gameComposeField, component, componentKey) => {
         const referencedFilename = component[componentKey]
         if (referencedFilename === undefined) {
             return filenameReferenceCounts
         }
         var filepath = path.join(this.props.templativeRootDirectoryPath, gameCompose[gameComposeField], `${referencedFilename}.json`)
-        filenameReferenceCounts = this.#attemptAddFileReferenceCount(filenameReferenceCounts, filepath)
-        return filenameReferenceCounts
+        return await this.#attemptAddFileReferenceCountAsync(filenameReferenceCounts, filepath)
     }
-    #saveComponentComposeFileCount = () => {
-        var componentCompose = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json");
-        var gameCompose = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "game-compose.json")
+    #saveComponentComposeFileCountAsync = async () => {
+        var componentCompose = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json");
+        var gameCompose = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json")
         var filenameReferenceCounts = {}
         for (let index = 0; index < componentCompose.length; index++) {
             const component = componentCompose[index];
-            filenameReferenceCounts = this.#addComponentComposeReferences(filenameReferenceCounts, gameCompose, "componentGamedataDirectory", component, "componentGamedataFilename")
-            filenameReferenceCounts = this.#addComponentComposeReferences(filenameReferenceCounts, gameCompose, "piecesGamedataDirectory", component, "piecesGamedataFilename")
-            filenameReferenceCounts = this.#addComponentComposeReferences(filenameReferenceCounts, gameCompose, "artdataDirectory", component, "artdataFrontFilename")
-            filenameReferenceCounts = this.#addComponentComposeReferences(filenameReferenceCounts, gameCompose, "artdataDirectory", component, "artdataBackFilename")
+            filenameReferenceCounts = await this.#addComponentComposeReferencesAsync(filenameReferenceCounts, gameCompose, "componentGamedataDirectory", component, "componentGamedataFilename")
+            filenameReferenceCounts = await this.#addComponentComposeReferencesAsync(filenameReferenceCounts, gameCompose, "piecesGamedataDirectory", component, "piecesGamedataFilename")
+            filenameReferenceCounts = await this.#addComponentComposeReferencesAsync(filenameReferenceCounts, gameCompose, "artdataDirectory", component, "artdataFrontFilename")
+            filenameReferenceCounts = await this.#addComponentComposeReferencesAsync(filenameReferenceCounts, gameCompose, "artdataDirectory", component, "artdataBackFilename")
         }
+        console.log(filenameReferenceCounts)
         this.setState({filenameReferenceCounts: filenameReferenceCounts})
     }
-    componentDidMount() {
-        this.#parseComponentCompose()
+    componentDidMount = async () => {
+        await this.#parseComponentComposeAsync()
     }
-    #parseComponentCompose = () => {
-        var gameCompose = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "game-compose.json");
-        this.#saveComponentComposeFileCount()
+    #parseComponentComposeAsync = async () => {
+        var gameCompose = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json");
+        await this.#saveComponentComposeFileCountAsync()
+        
         this.#closeComponentComposeListener()
-        this.componentComposeWatcher = fs.watch(path.join(this.props.templativeRootDirectoryPath, "component-compose.json"), {}, (_, fileName) => { 
-            this.#saveComponentComposeFileCount()
-        }); 
+        var componentComposeFilepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json")        
+        this.componentComposeWatcher = fsOld.watch(componentComposeFilepath, {}, async () => {
+            await this.#saveComponentComposeFileCountAsync()
+        });
+        
         this.setState({
             gameCompose: gameCompose,
             templatesDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.artTemplatesDirectory),
@@ -87,11 +90,11 @@ export default class TemplativeProjectRenderer extends React.Component {
         })
     }
 
-    componentDidUpdate = (prevProps, prevState) => {
+    componentDidUpdate = async (prevProps, prevState) => {
         if (prevProps.templativeRootDirectoryPath === this.props.templativeRootDirectoryPath) {
             return
         }
-        this.#parseComponentCompose()
+        await this.#parseComponentComposeAsync()
     }
 
     #closeComponentComposeListener = () => {
@@ -106,52 +109,43 @@ export default class TemplativeProjectRenderer extends React.Component {
         this.#closeComponentComposeListener()
     }
 
-    renameFile = (originalFilepath, newFilepath) => {
-        // TODO doesnt create directories
-        const possibleCreatedDirectory = path.parse(newFilepath).dir
-        const renameFileCallback = (err, path) => {
-            if (err) {
-                console.error(err);
-                return
-            }
-            fs.rename(originalFilepath, newFilepath, (err) => {
-                if (err) {
-                    console.error(err);
-                    return
-                }
-                if (this.props.currentFilepath === originalFilepath) {
-                    this.props.updateViewedFileUsingExplorerCallback(this.props.currentFileType, newFilepath)
-                }
-                this.forceUpdate()
-            });
+    renameFileAsync = async (originalFilepath, newFilepath) => {
+        if (await TemplativeProjectRenderer.#doesFileExist(newFilepath)) {
+            return
         }
-
-        fs.mkdir(possibleCreatedDirectory, {recursive: true}, renameFileCallback)
-        
+        const possibleCreatedDirectory = path.parse(newFilepath).dir
+        await fs.mkdir(possibleCreatedDirectory, {recursive: true})
+        await fs.rename(originalFilepath, newFilepath)
+            
+        if (this.props.currentFilepath === originalFilepath) {
+            await this.props.updateViewedFileUsingExplorerAsyncCallback(this.props.currentFileType, newFilepath)
+        }
+        this.forceUpdate()        
     }
-    static #getCopiedFilepath(filepath) {
+    static #doesFileExist = async (filepath) => {
+        try {
+            await fs.access(filepath, fs.constants.F_OK)
+            return true
+        }
+        catch {
+            return false
+        }
+    }
+    static #getCopiedFilepathAsync = async (filepath) => {
         const parsedPath = path.parse(filepath)
         var newFilepath = path.join(parsedPath.dir, `${parsedPath.name}_Copy${path.extname(filepath)}`)
-        if (fs.existsSync(newFilepath)) {
-            return TemplativeProjectRenderer.#getCopiedFilepath(newFilepath)
+        const fileExists = await TemplativeProjectRenderer.#doesFileExist(newFilepath)
+        if (fileExists) {
+            return await TemplativeProjectRenderer.#getCopiedFilepathAsync(newFilepath)
         }
         return newFilepath 
+        
+        
     }
-    duplicateFile = (filepath) => {
-        const newFilepath = TemplativeProjectRenderer.#getCopiedFilepath(filepath)
-        
-        fs.readFile(filepath, (readError, data) => {
-            if (readError) {
-                console.log(`Error duplicating ${path.parse(filepath).name} during read: ${readError}`)
-                return
-            }
-            fs.writeFile(newFilepath, data, (writeError) => {
-                if (writeError) {
-                    console.log(`Error writing ${path.parse(newFilepath).name} ${writeError}`)
-                }
-            })
-        })
-        
+    duplicateFileAsync = async (filepath) => {
+        const newFilepath = await TemplativeProjectRenderer.#getCopiedFilepathAsync(filepath)
+        var contentsBuffer = await fs.readFile(filepath)
+        await fs.writeFile(newFilepath, contentsBuffer.toString(), "utf-8")        
     }
     getDefaultContentForFileBasedOnFilename = (filetype, filename) => {
         switch (filetype) {
@@ -178,11 +172,11 @@ export default class TemplativeProjectRenderer extends React.Component {
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                             baseFilepath={this.state.templatesDirectory}
                             currentFilepath={this.props.currentFilepath} 
-                            updateViewedFileUsingExplorerCallback={this.props.updateViewedFileUsingExplorerCallback} 
+                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
                             createFileCallback={this.createFile}
-                            deleteFileCallback={this.deleteFile}
-                            renameFileCallback={this.renameFile}
-                            duplicateFileCallback={this.duplicateFile}
+                            deleteFileAsyncCallback={this.deleteFileAsync}
+                            renameFileAsyncCallback={this.renameFileAsync}
+                            duplicateFileAsyncCallback={this.duplicateFileAsync}
                         />
                         <ContentFileList
                             header="Overlays" 
@@ -192,11 +186,11 @@ export default class TemplativeProjectRenderer extends React.Component {
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                             baseFilepath={this.state.overlaysDirectory}
                             currentFilepath={this.props.currentFilepath} 
-                            updateViewedFileUsingExplorerCallback={this.props.updateViewedFileUsingExplorerCallback} 
+                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
                             createFileCallback={this.createFile}
-                            deleteFileCallback={this.deleteFile}
-                            renameFileCallback={this.renameFile}
-                            duplicateFileCallback={this.duplicateFile}
+                            deleteFileAsyncCallback={this.deleteFileAsync}
+                            renameFileAsyncCallback={this.renameFileAsync}
+                            duplicateFileAsyncCallback={this.duplicateFileAsync}
                         />
                         <ContentFileList
                             header="Artdata" 
@@ -205,15 +199,15 @@ export default class TemplativeProjectRenderer extends React.Component {
                             directoryPath={this.state.artdataDirectory}
                             baseFilepath={this.state.artdataDirectory}
                             currentFilepath={this.props.currentFilepath} 
-                            updateViewedFileUsingExplorerCallback={this.props.updateViewedFileUsingExplorerCallback} 
+                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                             canCreateNewFiles={true}
                             newFileExtension="json"
                             getDefaultContentForFileBasedOnFilenameCallback={this.getDefaultContentForFileBasedOnFilename}
                             createFileCallback={this.createFile}
-                            deleteFileCallback={this.deleteFile}
-                            renameFileCallback={this.renameFile}
-                            duplicateFileCallback={this.duplicateFile}
+                            deleteFileAsyncCallback={this.deleteFileAsync}
+                            renameFileAsyncCallback={this.renameFileAsync}
+                            duplicateFileAsyncCallback={this.duplicateFileAsync}
                         />
                         <ContentFileList
                             header="Component Gamedata" 
@@ -222,15 +216,15 @@ export default class TemplativeProjectRenderer extends React.Component {
                             directoryPath={this.state.componentGamedataDirectory}
                             baseFilepath={this.state.componentGamedataDirectory}
                             currentFilepath={this.props.currentFilepath} 
-                            updateViewedFileUsingExplorerCallback={this.props.updateViewedFileUsingExplorerCallback} 
+                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                             canCreateNewFiles={true}
                             newFileExtension="json"
                             getDefaultContentForFileBasedOnFilenameCallback={this.getDefaultContentForFileBasedOnFilename}
                             createFileCallback={this.createFile}
-                            deleteFileCallback={this.deleteFile}
-                            renameFileCallback={this.renameFile}
-                            duplicateFileCallback={this.duplicateFile}
+                            deleteFileAsyncCallback={this.deleteFileAsync}
+                            renameFileAsyncCallback={this.renameFileAsync}
+                            duplicateFileAsyncCallback={this.duplicateFileAsync}
                         />
                         <ContentFileList
                             header="Piece Gamedata" 
@@ -239,15 +233,15 @@ export default class TemplativeProjectRenderer extends React.Component {
                             directoryPath={this.state.piecesGamedataDirectory}
                             baseFilepath={this.state.piecesGamedataDirectory}
                             currentFilepath={this.props.currentFilepath} 
-                            updateViewedFileUsingExplorerCallback={this.props.updateViewedFileUsingExplorerCallback} 
+                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                             canCreateNewFiles={true}
                             newFileExtension="json"
                             getDefaultContentForFileBasedOnFilenameCallback={this.getDefaultContentForFileBasedOnFilename}
                             createFileCallback={this.createFile}
-                            deleteFileCallback={this.deleteFile}
-                            renameFileCallback={this.renameFile}
-                            duplicateFileCallback={this.duplicateFile}
+                            deleteFileAsyncCallback={this.deleteFileAsync}
+                            renameFileAsyncCallback={this.renameFileAsync}
+                            duplicateFileAsyncCallback={this.duplicateFileAsync}
                         />
                 </div>
             </div>       

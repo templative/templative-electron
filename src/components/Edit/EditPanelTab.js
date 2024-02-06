@@ -46,16 +46,16 @@ export default class EditPanelTab extends React.Component {
     handleMouseOutX = () => {
         this.setState({isHoveringX: false})
     }
-    viewTabFile = () => {
+    viewTabFileAsync = async () => {
         if (this.state.isHoveringX || this.state.isShowingContextMenu) {
             return
         }
-        this.props.updateViewedFileUsingTabCallback(this.props.tabbedFile.filetype, this.props.tabbedFile.filepath)
+        await this.props.updateViewedFileUsingTabAsyncCallback(this.props.tabbedFile.filetype, this.props.tabbedFile.filepath)
     }
-    openInDefaultApplication = () => {
+    openInDefaultApplicationAsync = async () => {
         shell.openPath(this.props.tabbedFile.filepath);
     }
-    openDirectory = () => {
+    openDirectoryAsync = async () => {
         shell.openPath(path.parse(this.props.tabbedFile.filepath).dir)
     }
     render() {
@@ -79,7 +79,7 @@ export default class EditPanelTab extends React.Component {
         var shouldShowX = (this.state.isHovering || isSelected) && this.props.tabbedFile.canClose
         return <li 
             className="nav-item"
-            onClick={this.viewTabFile}
+            onClick={this.viewTabFileAsync}
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}
             onContextMenu={this.handleRightClick}
@@ -89,16 +89,16 @@ export default class EditPanelTab extends React.Component {
                     left={this.state.contextCoordinatesX} 
                     top={this.state.contextCoordinatesY}
                     commands={this.props.tabbedFile.canClose ? [
-                        {name: "Open in Default App", callback: this.openInDefaultApplication}, 
-                        {name: "Open Container Directory", callback: this.openDirectory}, 
-                        {name: "Close", callback: () => this.props.closeTabAtIndexCallback(this.props.index)},
-                        {name: "Close Others", callback: ()=>this.props.closeAllTabsButIndexCallback(this.props.index)},
-                        {name: "Close to the Left", callback: ()=>this.props.closeTabsToLeftCallback(this.props.index)},
-                        {name: "Close to the Right", callback: ()=>this.props.closeTabsToRightCallback(this.props.index)},
-                        {name: "Close All", callback: ()=>this.props.closeAllTabsCallback()},
+                        {name: "Open in Default App", callback: this.openInDefaultApplicationAsync}, 
+                        {name: "Open Container Directory", callback: this.openDirectoryAsync}, 
+                        {name: "Close", callback: async () => await this.props.closeTabAtIndexAsyncCallback(this.props.index)},
+                        {name: "Close Others", callback: async () => await this.props.closeAllTabsButIndexAsyncCallback(this.props.index)},
+                        {name: "Close to the Left", callback: async () => await this.props.closeTabsToLeftAsyncCallback(this.props.index)},
+                        {name: "Close to the Right", callback: async () => await this.props.closeTabsToRightAsyncCallback(this.props.index)},
+                        {name: "Close All", callback: async () => await this.props.closeAllTabsAsyncCallback()},
                     ] : [
-                        {name: "Open in Default App", callback: this.openInDefaultApplication}, 
-                        {name: "Open Container Directory", callback: this.openDirectory}
+                        {name: "Open in Default App", callback: this.openInDefaultApplicationAsync}, 
+                        {name: "Open Container Directory", callback: this.openDirectoryAsync}
                     ]}
                     closeContextMenuCallback={this.closeContextMenu}
                 />
@@ -114,7 +114,7 @@ export default class EditPanelTab extends React.Component {
                         type="button" 
                         className={`btn-close btn-close-white tab-x-button ${shouldShowX && "visible-x-button"}`}
                         aria-label="Close"
-                        onClick={() => this.props.closeTabAtIndexCallback(this.props.index)}
+                        onClick={() => this.props.closeTabAtIndexAsyncCallback(this.props.index)}
                     />
                 } 
                 

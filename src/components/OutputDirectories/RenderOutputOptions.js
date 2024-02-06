@@ -5,13 +5,24 @@ import TemplativeAccessTools from "../TemplativeAccessTools";
 import RenderOutputOption from "./RenderOutputOption";
 
 export default class RenderOutputOptions extends React.Component {   
-    render() {
-        var directories = []
-        if (this.props.templativeRootDirectoryPath !== undefined) {
-            directories = TemplativeAccessTools.getOutputDirectories(this.props.templativeRootDirectoryPath)
+    state = {
+        directories: []
+    }
+    componentDidMount = async () => {
+        if (this.props.templativeRootDirectoryPath === undefined) {
+            return
         }
-        var outputDirectoryDivs = directories.map((directory) => {
-            return <RenderOutputOption selectedDirectory={this.props.selectedDirectory} directory={directory} key={directory.name} selectDirectory={this.props.selectDirectory}/>
+        this.setState({directories: await TemplativeAccessTools.getOutputDirectoriesAsync(this.props.templativeRootDirectoryPath)})
+    }
+    componentDidUpdate = async (prevProps, prevState) => {
+        if (this.props.templativeRootDirectoryPath === prevProps.templativeRootDirectoryPath) {
+            return
+        }
+        this.setState({directories: await TemplativeAccessTools.getOutputDirectoriesAsync(this.props.templativeRootDirectoryPath)})
+    }
+    render() {        
+        var outputDirectoryDivs = this.state.directories.map((directory) => {
+            return <RenderOutputOption selectedDirectory={this.props.selectedDirectory} directory={directory} key={directory.name} selectDirectoryAsyncCallback={this.props.selectDirectoryAsyncCallback}/>
         })
         return <React.Fragment>
             <div className="headerWrapper">

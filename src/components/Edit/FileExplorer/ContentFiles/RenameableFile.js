@@ -11,9 +11,9 @@ export default class RenameableFile extends React.Component {
     updateFilename(filename) {
         this.setState({filename: filename})
     }
-    renameFile(filename) {
+    renameFileAsync = async (filename) => {
         const newFilepath =  path.join(this.props.directoryPath, `${filename}${path.extname(this.props.filepath)}`)
-        this.props.renameFileCallback(this.props.filepath, newFilepath)
+        await this.props.renameFileCallback(this.props.filepath, newFilepath)
     }
     render() {
         var shouldDarkenName = this.props.contentType !== "ART" && this.props.referenceCount === 0
@@ -26,9 +26,9 @@ export default class RenameableFile extends React.Component {
                         className="form-control shadow-none renamed-file-input" 
                         onChange={(event)=>this.updateFilename(event.target.value)}
                         onBlur={() => this.props.cancelRenamingCallback()} 
-                        onKeyDown={(e) => {
+                        onKeyDown={async (e) => {
                             if (e.key === 'Enter') {
-                                this.renameFile(this.state.filename)
+                                await this.renameFileAsync(this.state.filename)
                             }
                             if (e.key === "Escape") {
                                 this.props.cancelRenamingCallback()

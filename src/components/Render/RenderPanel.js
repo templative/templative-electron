@@ -9,6 +9,8 @@ import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 
 export default class RenderPanel extends React.Component {   
     state={
+        componentDirectories: [],
+        components: [],
         selectedDirectory: undefined,
         selectedComponent: undefined,
         isDebugRendering: false,
@@ -18,8 +20,9 @@ export default class RenderPanel extends React.Component {
         isProcessing: false
     }
 
-    selectDirectory = (directory) => {
-        this.setState({selectedDirectory:directory})
+    selectDirectoryAsync = async (directory) => {
+        var componentDirectories = await TemplativeAccessTools.getOutputDirectoriesComponentDirectoriesAsync(this.props.templativeRootDirectoryPath, this.state.selectedDirectory)
+        this.setState({selectedDirectory:directory, componentDirectories: componentDirectories})
     }
     toggleComponent = (component) => {
         if (this.state.selectedComponent === component) {
@@ -37,6 +40,22 @@ export default class RenderPanel extends React.Component {
     setLanguage = (event) => {
         this.setState({selectedLanguage: event.target.value})
     }
+    componentDidMount = async () => {
+        if (this.props.templativeRootDirectoryPath !== undefined) {
+            var components = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
+            this.setState({components: components})
+        }
+        if (this.state.selectedDirectory !== undefined) {
+            var componentDirectories = await TemplativeAccessTools.getOutputDirectoriesComponentDirectoriesAsync(this.props.templativeRootDirectoryPath, this.state.selectedDirectory)
+            this.setState({componentDirectories: componentDirectories})
+        } 
+    }
+    componentDidUpdate = async (prevProps, prevState) => {
+        if (this.props.templativeRootDirectoryPath !== prevProps.templativeRootDirectoryPath) {
+            var components = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
+            this.setState({components: components})
+        }
+    }
     renderTemplativeProject = () => {
         var request = {
             isDebug: this.state.isDebugRendering,
@@ -52,19 +71,12 @@ export default class RenderPanel extends React.Component {
         });
     }
     render() {
-        var components = []
-        if (this.props.templativeRootDirectoryPath !== undefined) {
-            components = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")
-        }
-        var componentDirectoryDivs = components.map((component) => {
+        var componentDirectoryDivs = this.state.components.map((component) => {
             return <div onClick={()=>this.toggleComponent(component.name)} className={this.state.selectedComponent === component.name ? "directory selected" : "directory"} key={component.name}> 
                 <p className="directory-item">{component.name}</p>
             </div>
         })
-        var componentDirectories = []
-        if (this.state.selectedDirectory !== undefined) {
-            componentDirectories = TemplativeAccessTools.getOutputDirectoriesComponentDirectories(this.props.templativeRootDirectoryPath, this.state.selectedDirectory)
-        } 
+        
         return <div className='renderPanel row'>
             <div className="col-4 directoryPanel">
                 <div className="headerWrapper">
@@ -86,10 +98,10 @@ export default class RenderPanel extends React.Component {
 
                 <LimitedHeightConsole/>
                 
-                <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectory={this.selectDirectory}/>
+                <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
             </div>  
             <div className="col-8 outputPanel">
-                <OutputExplorer outputFolderPath={this.state.selectedDirectory} componentDirectories={componentDirectories}/>
+                <OutputExplorer outputFolderPath={this.state.selectedDirectory} componentDirectories={this.state.componentDirectories}/>
             </div>        
         </div>
     }

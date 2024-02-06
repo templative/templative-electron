@@ -18,7 +18,7 @@ export default class RenderOutputOption extends React.Component {
     }
     render() {
         return <div className={`resourceHeaderWrapper directory ${this.props.selectedDirectory === this.props.directory.name && "selected"}`} 
-                onClick={()=>this.props.selectDirectory(this.props.directory.name)}
+                onClick={async () => await this.props.selectDirectoryAsyncCallback(this.props.directory.name)}
                 onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseOut}
             >
             <div className="resourceHeaderContent" >

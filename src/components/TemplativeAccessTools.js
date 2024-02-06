@@ -1,50 +1,36 @@
-const fs = window.require('fs');
+const fs = window.require('fs/promises');
 const path = window.require("path");
 
 export default class TemplativeAccessTools {
 
-    static readFile(templativeRootDirectoryPath, fileName) {
-        var filepath = path.join(templativeRootDirectoryPath, fileName);            
-        return JSON.parse(fs.readFileSync(filepath, 'utf8'));
+    static readFileContentsAsJsonAsync = async (templativeRootDirectoryPath, fileName) => {
+        var filepath = path.join(templativeRootDirectoryPath, fileName);
+        var fileContentsBuffer = await fs.readFile(filepath, 'utf8')     
+        var fileContents = fileContentsBuffer.toString()
+        if (fileContents.trim() === "") {
+            console.error(`${fileName} is invalid json: ${fileContents.trim()}`)
+            return undefined;
+        }        
+        return JSON.parse(fileContents);
     }
-    static readFileContents(templativeRootDirectoryPath, fileName) {
-        var filepath = path.join(templativeRootDirectoryPath, fileName);            
-        return fs.readFileSync(filepath, 'utf8')
+    static readFileContentsAsync = async (templativeRootDirectoryPath, fileName) => {
+        var filepath = path.join(templativeRootDirectoryPath, fileName);      
+        var fileContentsBuffer = await fs.readFile(filepath, 'utf8')      
+        return fileContentsBuffer.toString()
     }
-
-    static getArtdataFilenames(templativeRootDirectoryPath) {
-        var gameCompose = TemplativeAccessTools.readFile(templativeRootDirectoryPath, "game-compose.json")
-        return TemplativeAccessTools.getRecursiveFilenamesInDirectory(templativeRootDirectoryPath, gameCompose.artdataDirectory)
-    }
-    static getTemplateFilenames(templativeRootDirectoryPath) {
-        var gameCompose = TemplativeAccessTools.readFile(templativeRootDirectoryPath, "game-compose.json")
-        return TemplativeAccessTools.getRecursiveFilenamesInDirectory(templativeRootDirectoryPath, gameCompose.artTemplatesDirectory)
-    }
-    static getOverlayFilenames(templativeRootDirectoryPath) {
-        var gameCompose = TemplativeAccessTools.readFile(templativeRootDirectoryPath, "game-compose.json")
-        return TemplativeAccessTools.getRecursiveFilenamesInDirectory(templativeRootDirectoryPath, gameCompose.artInsertsDirectory)
-    }
-    static getPieceGamedataFilenames(templativeRootDirectoryPath) {
-        var gameCompose = TemplativeAccessTools.readFile(templativeRootDirectoryPath, "game-compose.json")
-        return TemplativeAccessTools.getRecursiveFilenamesInDirectory(templativeRootDirectoryPath, gameCompose.piecesGamedataDirectory)
-    }
-    static getComponentGamedataFilenames(templativeRootDirectoryPath) {
-        var gameCompose = TemplativeAccessTools.readFile(templativeRootDirectoryPath, "game-compose.json")
-        return TemplativeAccessTools.getRecursiveFilenamesInDirectory(templativeRootDirectoryPath, gameCompose.componentGamedataDirectory)
-    }
-    static getOutputDirectories(templativeRootDirectoryPath) {
-        var gameCompose = TemplativeAccessTools.readFile(templativeRootDirectoryPath, "game-compose.json")
+    static getOutputDirectoriesAsync = async (templativeRootDirectoryPath) => {
+        var gameCompose = await TemplativeAccessTools.readFileContentsAsJsonAsync(templativeRootDirectoryPath, "game-compose.json")
         var outputDirectory = path.join(templativeRootDirectoryPath, gameCompose["outputDirectory"])
-        var directories = fs.readdirSync(outputDirectory, { withFileTypes: true })
+        var directories = await fs.readdir(outputDirectory, { withFileTypes: true })
             .filter(dirent => dirent.isDirectory())
             .map(dirent => dirent)
         return directories;
     }
-    static getOutputDirectoriesComponentDirectories(templativeRootDirectoryPath, individualOutputDirectoryPath) {
-        var gameCompose = TemplativeAccessTools.readFile(templativeRootDirectoryPath, "game-compose.json")
+    static getOutputDirectoriesComponentDirectoriesAsync = async (templativeRootDirectoryPath, individualOutputDirectoryPath) => {
+        var gameCompose = await TemplativeAccessTools.readFileContentsAsJsonAsync(templativeRootDirectoryPath, "game-compose.json")
         var outputDirectory = path.join(templativeRootDirectoryPath, gameCompose["outputDirectory"], individualOutputDirectoryPath)
         
-        return fs.readdirSync(outputDirectory, { withFileTypes: true })
+        return await fs.readdir(outputDirectory, { withFileTypes: true })
             .filter(dirent => dirent.isDirectory())
             .map(dirent => {
                 return path.join(dirent.path, dirent.name)})
@@ -66,26 +52,5 @@ export default class TemplativeAccessTools {
     }
     static getComponentComposeFilepath(templativeRootDirectoryPath) {
         return path.join(templativeRootDirectoryPath, "component-compose.json")
-    }
-    static getRecursiveFilenamesInDirectory(templativeRootDirectoryPath, directory) {
-        var directoryPath = path.join(templativeRootDirectoryPath, directory)
-        var fileNames = fs.readdirSync(directoryPath, { recursive: true })
-        var filepaths = []
-        fileNames.forEach(element => {
-            var filepath = path.join(directory, element)
-            if (filepath.split(".").pop() === "md") {
-                return;
-            }
-            if (filepath.split(".").pop() === "DS_Store") {
-                return;
-            }
-            filepaths.push(path.join(templativeRootDirectoryPath, filepath))
-        });
-        return filepaths;
-    }
-    static hydrateGameComposeFile(templativeRootDirectoryPath, gameCompose) {
-        Object.keys(gameCompose).forEach((key) => {
-            gameCompose[key] = path.join(templativeRootDirectoryPath, gameCompose[key])
-        })
     }
 }

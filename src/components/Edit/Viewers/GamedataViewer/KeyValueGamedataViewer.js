@@ -9,27 +9,27 @@ export default class KeyValueGamedataViewer extends React.Component {
         trackedKey: undefined,
         currentUpdateValue: undefined
     }
-    componentDidUpdate(prevProps) {
+    componentDidUpdate = async (prevProps) => {
         if (this.props.currentFilepath === prevProps.currentFilepath) {
           return;
         }
-        this.saveDocument(prevProps.currentFilepath, this.state.gamedataFile)
+        await this.saveDocumentAsync(prevProps.currentFilepath, this.state.gamedataFile)
 
         this.setState({
             gamedataFile: this.props.fileContents
         })
     }
 
-    saveDocument(filepath, fileContents) {
+    saveDocumentAsync = async (filepath, fileContents) =>  {
         var newFileContents = JSON.stringify(fileContents, null, 4)
         if (filepath.split('.').pop() !== "json") {
             console.log(`No saving this file as its not json ${filepath}`)
             return
         }
-        this.props.saveFileCallback(filepath, newFileContents)
+        await this.props.saveFileAsyncCallback(filepath, newFileContents)
     }
-    componentWillUnmount(){
-        this.saveDocument(this.props.currentFilepath, this.state.gamedataFile)
+    componentWillUnmount = async () => {
+        await this.saveDocumentAsync(this.props.currentFilepath, this.state.gamedataFile)
     }
     addBlankKeyValuePair() {
         var newGamedataFileContents = this.state.gamedataFile

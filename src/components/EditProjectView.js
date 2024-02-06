@@ -15,7 +15,7 @@ import TemplativeAccessTools from "./TemplativeAccessTools";
 import '../App.css';
 
 const path = window.require("path");
-const fs = window.require("fs");
+const fs = window.require("fs/promises");
 
 export default class EditProjectView extends React.Component {
   
@@ -53,16 +53,16 @@ export default class EditProjectView extends React.Component {
         }
         return result;
     }
-    updateViewedFileUsingTab = (filetype, filepath) => {
+    updateViewedFileUsingTabAsync = async (filetype, filepath) => {
         this.setState({
             currentFileType: filetype,
             currentFilepath: filepath,
             filename: path.parse(filepath).name,
-            fileContents: EditProjectView.#loadFileContents(filepath),
+            fileContents: await EditProjectView.#loadFileContentsAsync(filepath),
             tabbedFiles: EditProjectView.#addTabbedFile(filetype, filepath, this.state.tabbedFiles),
         })
     }
-    updateViewedFileUsingExplorer = (filetype, filepath) => {
+    updateViewedFileUsingExplorerAsync = async (filetype, filepath) => {
         const hasItalicsFile = this.state.italicsTabFilepath !== undefined
         const isAddingItalicsFile = this.state.italicsTabFilepath === filepath
         const isSolidifyingItalicsTab = hasItalicsFile && isAddingItalicsFile
@@ -72,7 +72,7 @@ export default class EditProjectView extends React.Component {
                 currentFileType: filetype,
                 currentFilepath: filepath,
                 filename: path.parse(filepath).name,
-                fileContents: EditProjectView.#loadFileContents(filepath),
+                fileContents: await EditProjectView.#loadFileContentsAsync(filepath),
                 italicsTabFilepath: undefined
             })
             return
@@ -85,7 +85,7 @@ export default class EditProjectView extends React.Component {
                 currentFileType: filetype,
                 currentFilepath: filepath,
                 filename: path.parse(filepath).name,
-                fileContents: EditProjectView.#loadFileContents(filepath),
+                fileContents: await EditProjectView.#loadFileContentsAsync(filepath),
                 tabbedFiles: EditProjectView.#replaceItalicsTabWithTab(this.state.italicsTabFilepath, filetype, filepath, this.state.tabbedFiles),
                 italicsTabFilepath: filepath
             })
@@ -96,7 +96,7 @@ export default class EditProjectView extends React.Component {
             currentFileType: filetype,
             currentFilepath: filepath,
             filename: path.parse(filepath).name,
-            fileContents: EditProjectView.#loadFileContents(filepath),
+            fileContents: await EditProjectView.#loadFileContentsAsync(filepath),
             tabbedFiles: EditProjectView.#addTabbedFile(filetype, filepath, this.state.tabbedFiles),
             italicsTabFilepath: !hasTabAlready ? filepath : this.state.italicsTabFilepath
         })
@@ -109,8 +109,9 @@ export default class EditProjectView extends React.Component {
             italicsTabFilepath: undefined
         })
     }
-    static #loadFileContents = (filepath) => {
-        var fileContents = fs.readFileSync(filepath, 'utf8');
+    static #loadFileContentsAsync = async (filepath) => {
+        var fileContentsBuffer = await fs.readFile(filepath, 'utf8');
+        var fileContents = fileContentsBuffer.toString()
         var extension = filepath.split('.').pop()
         if (extension === "json") {
             return JSON.parse(fileContents)
@@ -129,17 +130,29 @@ export default class EditProjectView extends React.Component {
             fileContents: undefined
         })
     }
-    saveFile = (filepath, contents) => {
-        fs.exists(filepath, (exists) => {
-            if (!exists) {
-                return;
-            }
-            fs.writeFile(filepath, contents, 'utf-8', ()=>{
-                // console.log(path.parse(filepath).name,"saved!")
-            })
-        })
+    static doesFileExist = async (filepath) => {
+        try {
+            await fs.access(filepath, fs.constants.F_OK)
+            return true
+        }
+        catch {
+            return false
+        }
     }
-    deleteFile = (filepath) => {
+    saveFileAsync = async (filepath, contents) => {
+        var fileExists = await EditProjectView.doesFileExist(filepath)
+        if (!fileExists) {
+            return
+        }
+        var existingContents = await fs.readFile(filepath)
+        var existingContent = existingContents.toString()
+        if (existingContent === contents) {
+            return
+        }
+        console.log(existingContent, contents)
+        await fs.writeFile(filepath, contents, 'utf-8')
+    }
+    closeTabIfOpenByFilepath = (filepath) => {
         for (let index = 0; index < this.state.tabbedFiles.length; index++) {
             const tabbedFile = this.state.tabbedFiles[index];
             if (tabbedFile.filepath !== filepath) {
@@ -227,7 +240,7 @@ export default class EditProjectView extends React.Component {
             this.setState({italicsTabFilepath: undefined})
         }
     }
-    closeTabAtIndex = (index) => {
+    closeTabAtIndexAsync = (index) => {
         var newTabbedFiles = Object.assign(this.state.tabbedFiles)
         if (index < 0 || index >= newTabbedFiles.length) {
             return
@@ -235,26 +248,31 @@ export default class EditProjectView extends React.Component {
         newTabbedFiles.splice(index, 1)
         this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());
     }
-    closeTabs = () => {
-        var newTabbedFiles = Object.assign(this.state.tabbedFiles)
-        newTabbedFiles.splice(4, this.state.tabbedFiles.length)
-        this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());   
-    }
-    closeTabsToLeft = (index) => {
+    closeTabsToLeftAsync = async (index) => {
         var newTabbedFiles = Object.assign(this.state.tabbedFiles)
         newTabbedFiles.splice(4, Math.max(0,index-4))
         this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());
     }
-    closeTabsToRight = (index) => {
+    closeTabsToRightAsync = async (index) => {
         var newTabbedFiles = Object.assign(this.state.tabbedFiles)
         newTabbedFiles.splice(index+1, Math.max(0,this.state.tabbedFiles.length-(index+1)))
         this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());
     }
-    closeAllTabsButIndex = (butIndex) => {
+    closeAllTabsButIndexAsync = async (butIndex) => {
         var newTabbedFiles = []
         for (let index = 0; index < this.state.tabbedFiles.length; index++) {
             const tabbedFile = this.state.tabbedFiles[index];
             if (index <= 3 || index === butIndex) {
+                newTabbedFiles.push(tabbedFile)
+            }
+        }
+        this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());
+    }
+    closeAllTabsAsync = async () => {
+        var newTabbedFiles = []
+        for (let index = 0; index < this.state.tabbedFiles.length; index++) {
+            const tabbedFile = this.state.tabbedFiles[index];
+            if (index <= 3) {
                 newTabbedFiles.push(tabbedFile)
             }
         }
@@ -270,22 +288,23 @@ export default class EditProjectView extends React.Component {
                 <EditPanel 
                     italicsTabFilepath={this.state.italicsTabFilepath}
                     templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                    closeAllTabsButIndexCallback={this.closeAllTabsButIndex}
-                    closeTabsToRightCallback={this.closeTabsToRight}
-                    closeTabsToLeftCallback={this.closeTabsToLeft}
-                    closeTabsCallback={this.closeTabs}
-                    closeTabAtIndexCallback={this.closeTabAtIndex}
-                    checkForCurrentTabRemovedCallback={this.checkForCurrentTabRemoved}
-                    clearViewedFileCallback={this.clearViewedFile}
-                    clickIntoFileCallback={this.clickIntoFile}
-                    updateViewedFileUsingTabCallback={this.updateViewedFileUsingTab}
-                    updateViewedFileUsingExplorerCallback={this.updateViewedFileUsingExplorer}
                     tabbedFiles={this.state.tabbedFiles}
                     currentFileType={this.state.currentFileType}
                     currentFilepath={this.state.currentFilepath}
                     fileContents={this.state.fileContents}
-                    saveFileCallback={this.saveFile}
-                    deleteFileCallback={this.deleteFile}
+                    closeAllTabsButIndexAsyncCallback={this.closeAllTabsButIndexAsync}
+                    closeAllTabsAsyncCallback={this.closeAllTabsAsync}
+                    closeTabsToRightAsyncCallback={this.closeTabsToRightAsync}
+                    closeTabsToLeftAsyncCallback={this.closeTabsToLeftAsync}
+                    closeTabAtIndexAsyncCallback={this.closeTabAtIndexAsync}
+                    checkForCurrentTabRemovedCallback={this.checkForCurrentTabRemoved}
+                    clearViewedFileCallback={this.clearViewedFile}
+                    clickIntoFileCallback={this.clickIntoFile}
+                    updateViewedFileUsingTabAsyncCallback={this.updateViewedFileUsingTabAsync}
+                    updateViewedFileUsingExplorerAsyncCallback={this.updateViewedFileUsingExplorerAsync}
+                    saveFileAsyncCallback={this.saveFileAsync}
+                    closeTabIfOpenByFilepathCallback={this.closeTabIfOpenByFilepath}
+
                 /> 
             }/>
             <Route path='/render' element={ <RenderPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />

@@ -5,7 +5,6 @@ import ComponentsViewer from "./Viewers/ComponentsViewer/ComponentsViewer"
 import PieceGamedataViewer from "./Viewers/GamedataViewer/PieceGamedataViewer"
 import KeyValueGamedataViewer from "./Viewers/GamedataViewer/KeyValueGamedataViewer"
 import ImageViewer from "./Viewers/ImageViewer";
-import TemplativeAccessTools from "../TemplativeAccessTools"
 import RulesEditor from "./Viewers/RulesEditor";
 import EditPanelTabs from "./EditPanelTabs";
 
@@ -19,8 +18,7 @@ export default class EditPanel extends React.Component {
         }
         this.props.clickIntoFileCallback()
     }      
-    render() {
-        var components = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")
+    render () {
         var filepathSplit = this.props.currentFilepath.replace(/\\/g,"/").replace(/^\/|\/$/g, '').split("/").join(" > ")
         return <div className='mainBody row '>
             <div className='col-3 left-column'>
@@ -29,12 +27,12 @@ export default class EditPanel extends React.Component {
                     currentFileType={this.props.currentFileType}
                     currentFilepath={this.props.currentFilepath} 
                     clearViewedFileCallback={this.props.clearViewedFileCallback}
-                    updateViewedFileUsingExplorerCallback={this.props.updateViewedFileUsingExplorerCallback}
+                    updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
                     openComponentsCallback={this.props.openComponentsCallback}
                     openStudioGamedataCallback={this.props.openStudioGamedataCallback}
                     openGameGamedataCallback={this.props.openGameGamedataCallback}
                     openRulesCallback={this.props.openRulesCallback}
-                    deleteFileCallback={this.props.deleteFileCallback}
+                    closeTabIfOpenByFilepathCallback={this.props.closeTabIfOpenByFilepathCallback}
                 />
             </div>
             <div className='col-9 viewer'>
@@ -42,12 +40,12 @@ export default class EditPanel extends React.Component {
                     italicsTabFilepath={this.props.italicsTabFilepath}
                     currentFilepath={this.props.currentFilepath} 
                     tabbedFiles={this.props.tabbedFiles}
-                    updateViewedFileUsingTabCallback={this.props.updateViewedFileUsingTabCallback}
-                    closeAllTabsCallback={this.props.closeAllTabsCallback}
-                    closeTabAtIndexCallback={this.props.closeTabAtIndexCallback}
-                    closeTabsToLeftCallback={this.props.closeTabsToLeftCallback}
-                    closeTabsToRightCallback={this.props.closeTabsToRightCallback}
-                    closeAllTabsButIndexCallback={this.props.closeAllTabsButIndexCallback}
+                    updateViewedFileUsingTabAsyncCallback={this.props.updateViewedFileUsingTabAsyncCallback}
+                    closeAllTabsAsyncCallback={this.props.closeAllTabsAsyncCallback}
+                    closeTabAtIndexAsyncCallback={this.props.closeTabAtIndexAsyncCallback}
+                    closeTabsToLeftAsyncCallback={this.props.closeTabsToLeftAsyncCallback}
+                    closeTabsToRightAsyncCallback={this.props.closeTabsToRightAsyncCallback}
+                    closeAllTabsButIndexAsyncCallback={this.props.closeAllTabsButIndexAsyncCallback}
                 />
                 <div className="filename-row">
                     <p className="filename-title">{filepathSplit}</p>
@@ -56,26 +54,25 @@ export default class EditPanel extends React.Component {
                     {this.props.currentFileType === "RULES" &&
                         <RulesEditor 
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                            filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath} saveFileCallback={this.props.saveFileCallback}/>
+                            filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
                     }
                     {this.props.currentFileType === "ARTDATA" &&
-                        <ArtdataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath} saveFileCallback={this.props.saveFileCallback}/>
+                        <ArtdataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
                     }
                     {this.props.currentFileType === "ART" &&
                         <ImageViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath}/>
                     }
                     {this.props.currentFileType === "PIECE_GAMEDATA" &&
-                        <PieceGamedataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath} saveFileCallback={this.props.saveFileCallback}/>
+                        <PieceGamedataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
                     }
                     {this.props.currentFileType === "KEYVALUE_GAMEDATA" &&
-                        <KeyValueGamedataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath} saveFileCallback={this.props.saveFileCallback}/>
+                        <KeyValueGamedataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
                     }
                     {this.props.currentFileType === "COMPONENTS" && 
                         <ComponentsViewer 
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                             componentsFilepath={this.props.currentFilepath} 
-                            components={components} 
-                            saveFileCallback={this.props.saveFileCallback}
+                            saveFileAsyncCallback={this.props.saveFileAsyncCallback}
                         />
                     }
                 </div>

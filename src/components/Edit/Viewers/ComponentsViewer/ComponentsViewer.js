@@ -26,21 +26,28 @@ export default class ComponentsViewer extends React.Component {
         floatingNameIndex: undefined
     }
 
-    saveDocument() {
+    saveDocumentAsync = async () => {
         if(!this.state.hasLoaded) {
             return
         }
         var newFileContents = JSON.stringify(this.state.components, null, 4)
 
         var componentComposeFilepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json")
-        this.props.saveFileCallback(componentComposeFilepath, newFileContents)
+        await this.props.saveFileAsyncCallback(componentComposeFilepath, newFileContents)
     }
-    componentDidMount() {
-        var components = TemplativeAccessTools.readFile(this.props.templativeRootDirectoryPath, "component-compose.json")
+    componentDidMount = async () => {
+        var components = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
         this.setState({components: components, hasLoaded: true})
     }
-    componentWillUnmount(){
-        this.saveDocument()
+    componentDidUpdate = async (prevProps, prevState) => {
+        if (prevProps.templativeRootDirectoryPath === this.props.templativeRootDirectoryPath) {
+            return
+        }
+        var components = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
+        this.setState({components: components})
+    }
+    componentWillUnmount = async () => {
+        await this.saveDocumentAsync()
     }
 
     updateComponentField(index, field, value) {

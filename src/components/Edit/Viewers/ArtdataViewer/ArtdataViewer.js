@@ -20,27 +20,27 @@ export default class ArtdataViewer extends React.Component {
     state = {
         artdataFile: this.props.fileContents
     }
-    componentDidUpdate(prevProps) {
+    componentDidUpdate = async (prevProps) => {
         if (this.props.currentFilepath === prevProps.currentFilepath) {
             return;
         }
-        this.saveDocument(prevProps.currentFilepath, this.state.artdataFile)
+        await this.saveDocumentAsync(prevProps.currentFilepath, this.state.artdataFile)
 
         this.setState({
             artdataFile: this.props.fileContents
         })
     }
 
-    saveDocument(filepath, fileContents) {
+    saveDocumentAsync = async (filepath, fileContents) => {
         var newFileContents = JSON.stringify(fileContents, null, 4)
         if (filepath.split('.').pop() !== "json") {
             console.log(`No saving this file as its not json ${filepath}`)
             return
         }
-        this.props.saveFileCallback(filepath, newFileContents)
+        await this.props.saveFileAsyncCallback(filepath, newFileContents)
     }
-    componentWillUnmount(){
-        this.saveDocument(this.props.currentFilepath, this.state.artdataFile)
+    componentWillUnmount = async () => {
+        this.saveDocumentAsync(this.props.currentFilepath, this.state.artdataFile)
     }
     addArtdataItem(artdataType){
         var newArtdataContents = this.state.artdataFile
@@ -90,6 +90,8 @@ export default class ArtdataViewer extends React.Component {
 
     render() {
         var overlays = []
+        var textReplacements = []
+        var styleUpdates = []
         if(this.state.artdataFile !== undefined) {
             for(var i = 0 ; i < this.state.artdataFile.overlays.length; i++){
                 overlays.push(<Overlay index={i} key={i} artdataItem={this.state.artdataFile.overlays[i]} 
@@ -98,11 +100,6 @@ export default class ArtdataViewer extends React.Component {
                     updateArtdataItemOrderCallback={(from,to) => this.updateArtdataItemOrder("overlays", from, to)}
                 />)
             };
-        }
-        overlays.push(<ArtdataAddButton key="addOverlay" addArtdataCallback={()=>this.addArtdataItem("overlays")}/>)
-
-        var textReplacements = []
-        if(this.state.artdataFile !== undefined) {
             for(var t = 0 ; t < this.state.artdataFile.textReplacements.length; t++) {
                 textReplacements.push(<TextReplacement index={t} key={t} artdataItem={this.state.artdataFile.textReplacements[t]} 
                     deleteCallback={(index)=> this.deleteArtdata("textReplacements", index)} 
@@ -110,11 +107,6 @@ export default class ArtdataViewer extends React.Component {
                     updateArtdataItemOrderCallback={(from,to) => this.updateArtdataItemOrder("textReplacements", from, to)}
                 />)
             };
-        }
-        textReplacements.push(<ArtdataAddButton key="addTextReplacement" addArtdataCallback={()=>this.addArtdataItem("textReplacements")}/>)
-        
-        var styleUpdates = []
-        if(this.state.artdataFile !== undefined) {
             for(var s = 0 ; s < this.state.artdataFile.styleUpdates.length; s++){
                 styleUpdates.push(<StyleUpdate index={s} key={s} 
                     artdataItem={this.state.artdataFile.styleUpdates[s]} 
@@ -123,6 +115,8 @@ export default class ArtdataViewer extends React.Component {
                     deleteCallback={(index)=> this.deleteArtdata("styleUpdates", index)}/>)
             };
         }
+        overlays.push(<ArtdataAddButton key="addOverlay" addArtdataCallback={()=>this.addArtdataItem("overlays")}/>)
+        textReplacements.push(<ArtdataAddButton key="addTextReplacement" addArtdataCallback={()=>this.addArtdataItem("textReplacements")}/>)
         styleUpdates.push(<ArtdataAddButton key="addStyleUpdate" addArtdataCallback={()=>this.addArtdataItem("styleUpdates")}/>)
         
         return <div className="row">

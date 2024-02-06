@@ -11,12 +11,12 @@ export default class EditPanelTabs extends React.Component {
                     isItalics={this.props.italicsTabFilepath === tabbedFile.filepath}
                     key={tabbedFile.filepath} 
                     index={index}
-                    closeAllTabsCallback={this.props.closeAllTabsCallback}
-                    closeTabAtIndexCallback={this.props.closeTabAtIndexCallback}
-                    closeTabsToLeftCallback={this.props.closeTabsToLeftCallback}
-                    closeTabsToRightCallback={this.props.closeTabsToRightCallback}
-                    closeAllTabsButIndexCallback={this.props.closeAllTabsButIndexCallback}
-                    updateViewedFileUsingTabCallback={this.props.updateViewedFileUsingTabCallback}
+                    closeAllTabsAsyncCallback={this.props.closeAllTabsAsyncCallback}
+                    closeTabAtIndexAsyncCallback={this.props.closeTabAtIndexAsyncCallback}
+                    closeTabsToLeftAsyncCallback={this.props.closeTabsToLeftAsyncCallback}
+                    closeTabsToRightAsyncCallback={this.props.closeTabsToRightAsyncCallback}
+                    closeAllTabsButIndexAsyncCallback={this.props.closeAllTabsButIndexAsyncCallback}
+                    updateViewedFileUsingTabAsyncCallback={this.props.updateViewedFileUsingTabAsyncCallback}
                     tabbedFile={tabbedFile} 
                     currentFilepath={this.props.currentFilepath}
                 />

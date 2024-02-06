@@ -36,14 +36,14 @@ export default class ContentFileItem extends React.Component {
             isShowingContextMenu: false
         })
     }
-    startRenamingFile = () => {
+    startRenamingFileAsync = async () => {
         this.setState({
             isShowingContextMenu: false,
             isRenamingFile: true
         })
     }
-    submitFileRename = (originalFilepath, newFilename) => {
-        this.props.renameFileCallback(originalFilepath, newFilename)
+    submitFileRenameAsync = async (originalFilepath, newFilename) => {
+        await this.props.renameFileAsyncCallback(originalFilepath, newFilename)
         this.setState({
             isRenamingFile: false
         })
@@ -56,11 +56,11 @@ export default class ContentFileItem extends React.Component {
             isRenamingFile: false
         })
     }
-    openInDefaultApp = () => {
+    openInDefaultAppAsync = async () => {
         shell.openPath(this.props.filepath);
     }
     render() {
-        var callback = () => this.props.updateViewedFileUsingExplorerCallback(this.props.contentType, this.props.filepath)
+        var openFileAsyncCallback = async () => await this.props.updateViewedFileUsingExplorerAsyncCallback(this.props.contentType, this.props.filepath)
         return <div 
             className={`content-file-item-wrapper ${this.props.isSelected && "selected-content-file-item-wrapper"}`} 
             key={this.props.filepath} 
@@ -73,24 +73,24 @@ export default class ContentFileItem extends React.Component {
                     left={this.state.contextCoordinatesX} 
                     top={this.state.contextCoordinatesY}
                     commands={[
-                        {name: "Open", callback: callback},
-                        {name: "Open in Default App", callback: this.openInDefaultApp},
-                        {name: "Duplicate", callback: () => this.props.duplicateFileCallback(this.props.filepath)},
-                        {name: "Rename", callback: this.startRenamingFile},
-                        {name: "Delete", callback: () => this.props.deleteFileCallback(this.props.filepath)},
+                        {name: "Open", callback: openFileAsyncCallback},
+                        {name: "Open in Default App", callback: this.openInDefaultAppAsync},
+                        {name: "Duplicate", callback: async () => await this.props.duplicateFileAsyncCallback(this.props.filepath)},
+                        {name: "Rename", callback: this.startRenamingFileAsync},
+                        {name: "Delete", callback: async () => await this.props.deleteFileAsyncCallback(this.props.filepath)},
                     ]}
                     closeContextMenuCallback={this.closeContextMenu}
                 />
             }
             <RenameableFile 
-                renameFileCallback={this.submitFileRename}
+                renameFileCallback={this.submitFileRenameAsync}
                 contentType={this.props.contentType}
                 directoryPath={this.props.directoryPath}
                 referenceCount={this.props.referenceCount}
                 cancelRenamingCallback={this.cancelRenamingFile}
                 filepath={this.props.filepath}
                 isRenaming={this.state.isRenamingFile}
-                onClickCallback={callback} 
+                onClickCallback={openFileAsyncCallback} 
             />
         </div>
     }

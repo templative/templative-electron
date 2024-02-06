@@ -15,20 +15,27 @@ export default class RulesEditor extends React.Component {
     updateRulesFile = (value, viewUpdate) => {
         this.setState({rulesMd: value})
     }
-    saveDocument() {
+    saveDocumentAsync = async () => {
         if(!this.state.hasLoaded) {
             return
         }
 
         var rulesFilepath = path.join(this.props.templativeRootDirectoryPath, "rules.md")
-        this.props.saveFileCallback(rulesFilepath, this.state.rulesMd)
+        await this.props.saveFileAsyncCallback(rulesFilepath, this.state.rulesMd)
     }
-    componentDidMount() {
-        var rulesMd = TemplativeAccessTools.readFileContents(this.props.templativeRootDirectoryPath, "rules.md")
+    componentDidMount = async () => {
+        var rulesMd = await TemplativeAccessTools.readFileContentsAsync(this.props.templativeRootDirectoryPath, "rules.md")
         this.setState({rulesMd: rulesMd, hasLoaded: true})
     }
-    componentWillUnmount(){
-        this.saveDocument()
+    componentDidUpdate = async (prevProps, prevState) => {
+        if (prevProps.templativeRootDirectoryPath === this.props.templativeRootDirectoryPath) {
+            return
+        }
+        var rulesMd = await TemplativeAccessTools.readFileContentsAsync(this.props.templativeRootDirectoryPath, "rules.md")
+        this.setState({rulesMd: rulesMd})
+    }
+    componentWillUnmount = async () => {
+        await this.saveDocumentAsync()
     }
     render() {
         return <React.Fragment>
