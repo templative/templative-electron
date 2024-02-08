@@ -45,7 +45,7 @@ jobs:
 
       - name: Zip Templative Server OSX
         if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-        run: zip templative_${{matrix.os}}.zip dist/
+        run: zip -r templative_${{matrix.os}}.zip dist/
 
       - name: Upload Artifact
         uses: actions/upload-artifact@master
@@ -83,7 +83,7 @@ jobs:
 
       - name: Zip React Server OSX
         if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-        run: zip react_${{matrix.os}}.zip build/
+        run: zip -r react_${{matrix.os}}.zip build/
 
       - name: Upload Artifact
         uses: actions/upload-artifact@master
@@ -158,7 +158,7 @@ jobs:
 
       - name: Zip Output MacOS
         if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-        run: zip ./templative_app_${{matrix.os}}.zip out/ 
+        run: zip -r ./templative_app_${{matrix.os}}.zip out/ 
 
       - name: Upload Artifact
         uses: actions/upload-artifact@master
