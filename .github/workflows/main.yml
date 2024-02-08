@@ -47,13 +47,18 @@ jobs:
       run: npm install
 
     - name: Build React Files
-      run: react-scripts build
+      run: npm run react-build
+      
+    - name: Create Electron Application
+      run: npm run make
+    # - name: Build React Files
+    #   run: react-scripts build
 
-    - name: Package React Files
-      run: pkg ./react/app.js --out-path ./build -t node18-win
+    # - name: Package React Files
+    #   run: pkg ./react/app.js --out-path ./build -t node18-win
 
-    - name: Create exe for Electron
-      run: electron-forge make --platform win32
+    # - name: Create exe for Electron
+    #   run: electron-forge make --platform win32
 
     - name: Zip Output
       uses: montudor/action-zip@v1
