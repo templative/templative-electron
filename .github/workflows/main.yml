@@ -63,7 +63,7 @@ jobs:
           path: ./out
 
   release:
-    if: false
+    if: true
     permissions:
       contents: write
     needs: [templative]
@@ -91,7 +91,7 @@ jobs:
           tag_name: ${{ github.run_number }}
 
   artifacts:
-    if: false
+    if: true
     needs: [release]
     runs-on: ${{ matrix.os }}
     strategy:
