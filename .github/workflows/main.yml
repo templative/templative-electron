@@ -45,6 +45,10 @@ jobs:
           name: templative-server-windows
           path: ./templative.exe
 
+      - name: Check file
+        if: runner.os == 'macOS'
+        run: ls
+
       - name: Upload Artifact OSX
         if: runner.os == 'macOS'
         uses: actions/upload-artifact@v4
@@ -52,141 +56,141 @@ jobs:
           name: templative-server-osx
           path: ./templative
 
-  react:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          - windows-latest
-          - macos-latest
-        node:
-          - 18
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node }}
-      - name: Install Node Packages
-        run: npm install
+  # react:
+  #   runs-on: ${{ matrix.os }}
+  #   strategy:
+  #     fail-fast: false
+  #     matrix:
+  #       os:
+  #         - windows-latest
+  #         - macos-latest
+  #       node:
+  #         - 18
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: ${{ matrix.node }}
+  #     - name: Install Node Packages
+  #       run: npm install
 
-      - name: Build React Files
-        run: npm run react-build
+  #     - name: Build React Files
+  #       run: npm run react-build
 
-      - name: Zip React Server Windows
-        if: runner.os == 'Windows'
-        run: Compress-Archive -Path build/* -Destination react.zip
+  #     - name: Zip React Server Windows
+  #       if: runner.os == 'Windows'
+  #       run: Compress-Archive -Path build/* -Destination react.zip
 
-      - name: Zip React Server OSX
-        if: runner.os == 'macOS'
-        run: zip react.zip build/
+  #     - name: Zip React Server OSX
+  #       if: runner.os == 'macOS'
+  #       run: zip react.zip build/
 
-      - name: Upload Artifact Windows
-        if: runner.os == 'Windows'
-        uses: actions/upload-artifact@v4
-        with:
-          name: react-server-windows
-          path: ./react.zip
+  #     - name: Upload Artifact Windows
+  #       if: runner.os == 'Windows'
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: react-server-windows
+  #         path: ./react.zip
 
-      - name: Upload Artifact OSX
-        if: runner.os == 'macOS'
-        uses: actions/upload-artifact@v4
-        with:
-          name: react-server-osx
-          path: ./react.zip
+  #     - name: Upload Artifact OSX
+  #       if: runner.os == 'macOS'
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: react-server-osx
+  #         path: ./react.zip
 
-  electron:
-    needs: [react, templative]
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          - windows-latest
-          - macos-latest
-        node:
-          - 18
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node }}
+  # electron:
+  #   needs: [react, templative]
+  #   runs-on: ${{ matrix.os }}
+  #   strategy:
+  #     fail-fast: false
+  #     matrix:
+  #       os:
+  #         - windows-latest
+  #         - macos-latest
+  #       node:
+  #         - 18
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: ${{ matrix.node }}
 
-      - name: Download React Server Windows 
-        if: runner.os == 'Windows'
-        uses: actions/download-artifact@v4
-        with:
-          name: react-server-windows
-          path: ./
+  #     - name: Download React Server Windows 
+  #       if: runner.os == 'Windows'
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: react-server-windows
+  #         path: ./
       
-      - name: Download React Server OSX
-        if: runner.os == 'macOS'
-        uses: actions/download-artifact@v4
-        with:
-          name: react-server-osx
-          path: ./
+  #     - name: Download React Server OSX
+  #       if: runner.os == 'macOS'
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: react-server-osx
+  #         path: ./
 
-      - name: Download Templative Server Windows
-        if: runner.os == 'Windows'
-        uses: actions/download-artifact@v4
-        with:
-          name: templative-server-windows
-          path: ./python
+  #     - name: Download Templative Server Windows
+  #       if: runner.os == 'Windows'
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: templative-server-windows
+  #         path: ./python
 
-      - name: Download Templative Server OSX
-        if: runner.os == 'macOS'
-        uses: actions/download-artifact@v4
-        with:
-          name: templative-server-osx
-          path: ./python
+  #     - name: Download Templative Server OSX
+  #       if: runner.os == 'macOS'
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: templative-server-osx
+  #         path: ./python
 
-      - name: Unzip React Windows
-        if: runner.os == 'Windows'
-        run: Expand-Archive -LiteralPath "D:\a\templative-electron\templative-electron\react.zip" -DestinationPath "./build"
+  #     - name: Unzip React Windows
+  #       if: runner.os == 'Windows'
+  #       run: Expand-Archive -LiteralPath "D:\a\templative-electron\templative-electron\react.zip" -DestinationPath "./build"
     
-      - name: Unzip React OSX
-        if: runner.os == 'macOS'
-        run: unzip "./react.zip" -d "./build"
+  #     - name: Unzip React OSX
+  #       if: runner.os == 'macOS'
+  #       run: unzip "./react.zip" -d "./build"
           
-      - name: Install Node Packages
-        run: npm install
+  #     - name: Install Node Packages
+  #       run: npm install
 
-      - name: Create Electron Application
-        run: npm run make
+  #     - name: Create Electron Application
+  #       run: npm run make
 
-      - name: Zip Output Windows
-        if: runner.os == 'Windows'
-        run: Compress-Archive -Path out/* -Destination templative.zip
+  #     - name: Zip Output Windows
+  #       if: runner.os == 'Windows'
+  #       run: Compress-Archive -Path out/* -Destination templative.zip
 
-      - name: Zip Output MacOS
-        if: runner.os == 'macOS'
-        run: zip templative.zip out/ 
+  #     - name: Zip Output MacOS
+  #       if: runner.os == 'macOS'
+  #       run: zip templative.zip out/ 
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@master
-        with:
-          name: templative-app
-          path: ./templative.zip
+  #     - name: Upload Artifact
+  #       uses: actions/upload-artifact@master
+  #       with:
+  #         name: templative-app
+  #         path: ./templative.zip
 
-      - name: Release
-        id: create_release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.ref_name }}
-        uses: actions/create-release@v1
-        with:
-          draft: false
-          prerelease: false
-          release_name: Release ${{runner.os}} ${{ github.run_number }}
-          tag_name: ${{ github.run_number }}
+  #     - name: Release
+  #       id: create_release
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #         tag: ${{ github.ref_name }}
+  #       uses: actions/create-release@v1
+  #       with:
+  #         draft: false
+  #         prerelease: false
+  #         release_name: Release ${{runner.os}} ${{ github.run_number }}
+  #         tag_name: ${{ github.run_number }}
 
-      - name: Upload Artifact
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{steps.create_release.outputs.upload_url}}
-          asset_path: ./templative.zip
-          asset_name: templative.zip
-          asset_content_type: application/zip
+  #     - name: Upload Artifact
+  #       uses: actions/upload-release-asset@v1
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       with:
+  #         upload_url: ${{steps.create_release.outputs.upload_url}}
+  #         asset_path: ./templative.zip
+  #         asset_name: templative.zip
+  #         asset_content_type: application/zip
           
