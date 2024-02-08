@@ -13,6 +13,7 @@ jobs:
         os:
           - windows-latest
           - macos-latest
+          # - macos-latest-xlarge
         node:
           - 18
     steps:
@@ -68,6 +69,7 @@ jobs:
         os:
           - windows-latest
           - macos-latest
+          # - macos-latest-xlarge
         node:
           - 18
     steps:
@@ -112,6 +114,7 @@ jobs:
         os:
           - windows-latest
           - macos-latest
+          # - macos-latest-xlarge
         node:
           - 18
     steps:
@@ -173,18 +176,35 @@ jobs:
 
       - name: Zip Output Windows
         if: runner.os == 'Windows'
-        run: Compress-Archive -Path out/* -Destination templative.zip
+        run: Compress-Archive -Path out/* -Destination ./templative_windows.zip
 
       - name: Zip Output MacOS
         if: runner.os == 'macOS'
-        run: zip templative.zip out/ 
+        run: zip ./templative_osx.zip out/ 
 
-      - name: Upload Artifact
+      - name: Upload Artifact OSX
         uses: actions/upload-artifact@master
         with:
-          name: templative-app
-          path: ./templative.zip
+          name: templative-app-osx
+          path: ./templative_osx.zip
 
+      - name: Upload Artifact Windows
+        uses: actions/upload-artifact@master
+        with:
+          name: templative-app-windows
+          path: ./templative_windows.zip
+
+  release:
+    needs: [electron]
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - macos-latest
+        node:
+          - 18
+    steps:
       - name: Release
         id: create_release
         env:
@@ -194,16 +214,40 @@ jobs:
         with:
           draft: false
           prerelease: false
-          release_name: Release ${{runner.os}} ${{ github.run_number }}
+          release_name: Release ${{ github.run_number }}
           tag_name: ${{ github.run_number }}
 
-      - name: Upload Artifact
+      - name: Download Templative App Windows 
+        if: runner.os == 'Windows'
+        uses: actions/download-artifact@master
+        with:
+          name: templative-app-windows
+          path: ./
+      
+      - name: Download Templative App OSX
+        if: runner.os == 'macOS'
+        uses: actions/download-artifact@master
+        with:
+          name: templative-app-osx
+          path: ./
+
+      - name: Upload Artifact Windows
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{steps.create_release.outputs.upload_url}}
-          asset_path: ./templative.zip
-          asset_name: templative.zip
+          asset_path: ./templative_windows.zip
+          asset_name: templative_windows.zip
+          asset_content_type: application/zip
+
+      - name: Upload Artifact OSX
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{steps.create_release.outputs.upload_url}}
+          asset_path: ./templative_osx.zip
+          asset_name: templative_osx.zip
           asset_content_type: application/zip
           
