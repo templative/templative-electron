@@ -59,6 +59,7 @@ jobs:
       matrix:
         os:
           - windows-latest
+          - macos-latest
         node:
           - 18
     steps:
@@ -93,7 +94,7 @@ jobs:
         with:
           name: react-server-osx
           path: ./react.zip
-          
+
   electron:
     needs: [react, templative]
     runs-on: ${{ matrix.os }}
