@@ -137,7 +137,7 @@ jobs:
     
       - name: Unzip Templative OSX
         if: runner.os == 'macOS'
-        run: unzip "./templative.zip" -d "./python" -j
+        run: unzip -j "./templative.zip" -d "./python" 
 
       - name: Download React Server Windows 
         if: runner.os == 'Windows'
