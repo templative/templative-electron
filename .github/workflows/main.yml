@@ -1,0 +1,72 @@
+on:
+  push:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    outputs:
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
+    runs-on: "ubuntu-latest"
+    steps: 
+    - name: Release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        tag: ${{ github.ref_name }}
+      uses: actions/create-release@v1
+      id: create_release
+      with:
+        draft: false
+        prerelease: false
+        release_name: Release ${{ github.run_number }}
+        tag_name: ${{ github.run_number }}
+    - name: Output Upload Url
+      run: |
+        upload_url=[${{steps.create_release.outputs.upload_url}}]
+        echo "upload_url=$upload_url"
+        echo "upload_url=$upload_url" >> "$GITHUB_OUTPUT"
+
+  build:
+    needs: release
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ['windows-latest'] #, 'macos-latest'
+        node: [18]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run linting rules and tests
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node }}
+        
+    - name: Install Node Packages 
+      run: npm install
+
+    - name: Build React Files
+      run: react-scripts build
+
+    - name: Package React Files
+      run: pkg ./react/app.js --out-path ./build -t node18-win
+
+    - name: Create exe for Electron
+      run: electron-forge make --platform win32
+
+    - name: Zip Output
+      uses: montudor/action-zip@v1
+      with:
+        args: zip -qq -r ./templative.zip ./out
+    
+    - name: Upload Artifact
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{needs.release.outputs.upload_url}}
+        asset_path: ./templative.zip
+        asset_name: templative.zip
+        asset_content_type: application/zip
+    
