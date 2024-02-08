@@ -102,10 +102,10 @@ jobs:
           path: ./react.zip
 
       - name: Check if File Exists
-        run: Test-Path "D:\a\templative-electron\templative-electron\react.zip" -PathType Leaf
-
-      - name: Check if Local File Exists
-        run: Test-Path ".\react.zip" -PathType Leaf
+        run: | 
+          Test-Path "D:\a\templative-electron\templative-electron\react.zip" -PathType Leaf
+          Test-Path ".\react.zip" -PathType Leaf
+          dir
 
       - name: Unzip React
         run: Expand-Archive -LiteralPath "D:\a\templative-electron\templative-electron\react.zip" -DestinationPath "./build"
