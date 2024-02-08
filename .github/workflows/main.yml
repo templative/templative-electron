@@ -1,76 +1,154 @@
 on:
-  push:
+  push: null
 
 permissions:
   contents: write
 
 jobs:
-  build:
+  templative:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        os: ['windows-latest'] #, 'macos-latest'
-        node: [18]
-
+        os:
+          - windows-latest
+          # - macos-latest
+        node:
+          - 18
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.11
 
-    - uses: actions/setup-python@v2
-      with:
-        python-version: 3.11
-    
-    
-    - name: Install pipenv
-      run: pip install pipenv pyinstaller
-      
-    - name: Create Templative App/Exe
-      run: |
-        cd python
-        pipenv install
-        pipenv requirements > req.txt
-        pip install -r req.txt
-        pyinstaller --distpath ./ -y -n templative --onefile ./templative/__main__.py --hidden-import engineio.async_drivers.aiohttp --hidden-import engineio.async_aiohttp --collect-all templative
-        cd ..
-    
-    - uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node }}
-        
-    - name: Install Node Packages 
-      run: npm install
+      - name: Install pipenv
+        run: pip install pipenv pyinstaller
 
-    - name: Build React Files
-      run: npm run react-build
+      - name: Install Requirements
+        run: |
+          cd python
+          pipenv install
+          pipenv requirements > req.txt
+          pip install -r req.txt
+          cd ..
 
-    - name: Create Electron Application
-      run: npm run make
+      - name: Create Templative App/Exe
+        run: pyinstaller --distpath ./ -y -n templative --onefile
+          ./python/templative/__main__.py --hidden-import
+          engineio.async_drivers.aiohttp --hidden-import engineio.async_aiohttp
+          --collect-all templative
 
-    - name: Zip Output
-      run: Compress-Archive -Path out/* -Destination templative.zip
+      - name: Upload Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: templative-server
+          path: ./templative.exe
 
-    - name: Release
-      id: create_release
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        tag: ${{ github.ref_name }}
-      uses: actions/create-release@v1
-      with:
-        draft: false
-        prerelease: false
-        release_name: Release ${{ github.run_number }}
-        tag_name: ${{ github.run_number }}
-            
-    - name: Upload Artifact
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{steps.create_release.outputs.upload_url}}
-        asset_path: ./templative.zip
-        asset_name: templative.zip
-        asset_content_type: application/zip
-      
-    
-    
-    
+  react:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - windows-latest
+        node:
+          - 18
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Install Node Packages
+        run: npm install
+
+      - name: Build React Files
+        run: npm run react-build
+
+      - name: Zip React Server
+        run: Compress-Archive -Path build/* -Destination react.zip
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: react-server
+          path: ./react.zip
+
+  electron:
+    needs: [react, templative]
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - windows-latest
+        node:
+          - 18
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Download Templative Server
+        uses: actions/download-artifact@master
+        with:
+          name: templative-server
+          path: ./python/templative.exe
+
+      - name: Download React Server
+        uses: actions/download-artifact@master
+        with:
+          name: react-server
+          path: ./react.zip
+
+      - name: Unzip React
+        run: 7z x -o ./build ./react.zip
+
+      - name: Install Node Packages
+        run: npm install
+
+      - name: Build React Files
+        run: npm run react-build
+
+      - name: Create Electron Application
+        run: npm run make
+
+      - name: Zip Output
+        run: Compress-Archive -Path out/* -Destination templative.zip
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: templative-app
+          path: ./templative.zip
+          
+  release:
+    needs: []
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - windows-latest
+        node:
+          - 18
+    steps:
+      - name: Release
+        id: create_release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref_name }}
+        uses: actions/create-release@v1
+        with:
+          draft: false
+          prerelease: false
+          release_name: Release ${{ github.run_number }}
+          tag_name: ${{ github.run_number }}
+
+      - name: Upload Artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{steps.create_release.outputs.upload_url}}
+          asset_path: ./templative.zip
+          asset_name: templative.zip
+          asset_content_type: application/zip
