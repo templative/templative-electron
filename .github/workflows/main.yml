@@ -50,11 +50,9 @@ jobs:
       run: react-scripts build
 
     - name: Package React Files
-      if: runner.os == "Windows"
       run: pkg ./react/app.js --out-path ./build -t node18-win
 
     - name: Create exe for Electron
-      if: runner.os == "Windows"
       run: electron-forge make --platform win32
 
     - name: Zip Output
@@ -64,7 +62,6 @@ jobs:
     
     - name: Upload Artifact
       uses: actions/upload-release-asset@v1
-      if: runner.os == 'Windows'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
