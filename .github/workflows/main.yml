@@ -118,7 +118,7 @@ jobs:
     
       - name: Unzip Templative OSX
         if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-        run: unzip -j "./templative_${{matrix.os}}.zip" -d "./python" 
+        run: unzip -j -o "./templative_${{matrix.os}}.zip" -d "./python" 
 
       - name: Download React Server 
         uses: actions/download-artifact@master
@@ -133,7 +133,7 @@ jobs:
 
       - name: Unzip React OSX
         if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-        run: unzip -j "./react_${{matrix.os}}.zip" -d "./build"
+        run: unzip -j -o "./react_${{matrix.os}}.zip" -d "./build"
       
       - uses: actions/setup-node@v3
         with:
