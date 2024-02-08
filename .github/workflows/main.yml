@@ -40,22 +40,22 @@ jobs:
           engineio.async_drivers.aiohttp --hidden-import engineio.async_aiohttp
           --collect-all templative
 
-      - name: Zip Templative Server Windows
-        if: matrix.os == 'windows-latest'
-        run: Compress-Archive -Path dist/* -Destination templative_${{matrix.os}}.zip
+      # - name: Zip Templative Server Windows
+      #   if: matrix.os == 'windows-latest'
+      #   run: Compress-Archive -Path dist/* -Destination templative_${{matrix.os}}.zip
 
-      - name: Zip Templative Server OSX
-        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-        run: zip -j -r templative_${{matrix.os}}.zip dist/*
+      # - name: Zip Templative Server OSX
+      #   if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
+      #   run: zip -j -r templative_${{matrix.os}}.zip dist/*
 
       - name: Upload Artifact
         uses: actions/upload-artifact@master
         with:
           name: templative-server-${{matrix.os}}
-          path: ./templative_${{matrix.os}}.zip
+          path: ./dist
 
   react:
-    if: true
+    if: false
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
