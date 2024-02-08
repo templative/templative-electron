@@ -152,19 +152,19 @@ jobs:
           cd ..
 
 
-      # - name: Zip Output Windows
-      #   if: matrix.os == 'windows-latest'
-      #   run: Compress-Archive -Path out/* -Destination ./templative_app_${{matrix.os}}.zip
+      - name: Zip Output Windows
+        if: matrix.os == 'windows-latest'
+        run: Compress-Archive -Path out/* -Destination ./templative_app_${{matrix.os}}.zip
 
-      # - name: Zip Output MacOS
-      #   if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-      #   run: zip ./templative_app_${{matrix.os}}.zip out/ 
+      - name: Zip Output MacOS
+        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
+        run: zip ./templative_app_${{matrix.os}}.zip out/ 
 
-      # - name: Upload Artifact
-      #   uses: actions/upload-artifact@master
-      #   with:
-      #     name: templative-app-${{matrix.os}}
-      #     path: ./templative_app_${{matrix.os}}.zip
+      - name: Upload Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: templative-app-${{matrix.os}}
+          path: ./templative_app_${{matrix.os}}.zip
 
 
   # release:
