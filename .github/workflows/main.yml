@@ -79,29 +79,21 @@ jobs:
       - name: Build React Files
         run: npm run react-build
 
-      - name: Zip React Server Windows
-        if: matrix.os == 'windows-latest'
-        run: Compress-Archive -Path build/* -Destination react_${{matrix.os}}.zip
-
-      - name: Zip React Server OSX
-        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-        run: zip -j -r react_${{matrix.os}}.zip build/*
-
       - name: Upload Artifact
         uses: actions/upload-artifact@master
         with:
           name: react-server-${{matrix.os}}
-          path: ./react_${{matrix.os}}.zip
+          path: ./build
 
   electron:
-    if: false
+    if: true
     needs: [react, templative]
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         os:
-          # - windows-latest
+          - windows-latest
           - macos-latest
           # - macos-13-xlarge
         node:
@@ -113,60 +105,78 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: templative-server-${{matrix.os}}
-          path: ./
+          path: ./python
 
-      - name: Unzip Templative Windows
-        if: matrix.os == 'windows-latest'
-        run: Expand-Archive -LiteralPath "templative_${{matrix.os}}.zip" -DestinationPath "./python"
+      # - name: Unzip Templative Windows
+      #   if: matrix.os == 'windows-latest'
+      #   run: Expand-Archive -LiteralPath "templative_${{matrix.os}}.zip" -DestinationPath "./python"
     
-      - name: Unzip Templative OSX
-        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-        run: unzip -j -o "./templative_${{matrix.os}}.zip" -d "./python" 
+      # - name: Unzip Templative OSX
+      #   if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
+      #   run: unzip -j -o "./templative_${{matrix.os}}.zip" -d "./python" 
 
       - name: Download React Server 
         uses: actions/download-artifact@master
         with:
           name: react-server-${{matrix.os}}
-          path: ./
+          path: ./build
 
-      - name: Unzip React Windows
-        if: matrix.os == 'windows-latest'
-        run: Expand-Archive -LiteralPath "react_${{matrix.os}}.zip" -DestinationPath "./build"
+      # - name: Unzip React Windows
+      #   if: matrix.os == 'windows-latest'
+      #   run: Expand-Archive -LiteralPath "react_${{matrix.os}}.zip" -DestinationPath "./build"
     
-      - name: Unzip React OSX
-        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-        run: unzip -j -o "./react_${{matrix.os}}.zip" -d "./build"
+      # - name: Unzip React OSX
+      #   if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
+      #   run: unzip -j -o "./react_${{matrix.os}}.zip" -d "./build"
       
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node }}
-
-      - name: Install Node Packages
-        run: npm install
-
-      - name: Create Electron Application
-        run: npm run make
-
-      - name: Contents
+      - name: Check Downloaded Files Contents OSX
+        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
         run: |
-          cd out
+          cd python
+          ls
+          cd ../build
           ls
           cd ..
 
-
-      - name: Zip Output Windows
+      - name: Check Downloaded Files Contents Windows
         if: matrix.os == 'windows-latest'
-        run: Compress-Archive -Path out/* -Destination ./templative_app_${{matrix.os}}.zip
+        run: |
+          cd python
+          dir
+          cd ../build
+          dir 
+          cd ..
 
-      - name: Zip Output MacOS
-        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-        run: zip -r ./templative_app_${{matrix.os}}.zip out/ 
+      # - uses: actions/setup-node@v3
+      #   with:
+      #     node-version: ${{ matrix.node }}
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@master
-        with:
-          name: templative-app-${{matrix.os}}
-          path: ./templative_app_${{matrix.os}}.zip
+      # - name: Install Node Packages
+      #   run: npm install
+
+      # - name: Create Electron Application
+      #   run: npm run make
+
+      # - name: Contents
+      #   run: |
+      #     cd out
+      #     ls
+      #     cd ..
+
+
+      # - name: Zip Output Windows
+      #   if: matrix.os == 'windows-latest'
+      #   run: Compress-Archive -Path out/* -Destination ./templative_app_${{matrix.os}}.zip
+
+      # - name: Zip Output MacOS
+      #   if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
+      #   run: zip -r ./templative_app_${{matrix.os}}.zip out/ 
+
+      # - name: Upload Artifact
+      #   uses: actions/upload-artifact@master
+      #   with:
+      #     name: templative-app-${{matrix.os}}
+      #     path: ./out
 
 
   release:
@@ -216,7 +226,7 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: templative-app-${{matrix.os}}
-          path: ./
+          path: ./out
 
       - name: Upload Artifact
         uses: actions/upload-release-asset@v1
