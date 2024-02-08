@@ -53,43 +53,43 @@ jobs:
           name: templative-server-${{matrix.os}}
           path: ./templative_${{matrix.os}}.zip
 
-  # react:
-  #   runs-on: ${{ matrix.os }}
-  #   strategy:
-  #     fail-fast: false
-  #     matrix:
-  #       os:
-  #         # - windows-latest
-  #         - macos-latest
-  #         # - macos-13-xlarge
-  #       node:
-  #         - 18
-  #   steps:
-  #     - uses: actions/checkout@v2
+  react:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          # - windows-latest
+          - macos-latest
+          # - macos-13-xlarge
+        node:
+          - 18
+    steps:
+      - uses: actions/checkout@v2
 
-  #     - uses: actions/setup-node@v3
-  #       with:
-  #         node-version: ${{ matrix.node }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
 
-  #     - name: Install Node Packages
-  #       run: npm install
+      - name: Install Node Packages
+        run: npm install
 
-  #     - name: Build React Files
-  #       run: npm run react-build
+      - name: Build React Files
+        run: npm run react-build
 
-  #     - name: Zip React Server Windows
-  #       if: matrix.os == 'windows-latest'
-  #       run: Compress-Archive -Path build/* -Destination react_${{matrix.os}}.zip
+      - name: Zip React Server Windows
+        if: matrix.os == 'windows-latest'
+        run: Compress-Archive -Path build/* -Destination react_${{matrix.os}}.zip
 
-  #     - name: Zip React Server OSX
-  #       if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-  #       run: zip -r react_${{matrix.os}}.zip build/
+      - name: Zip React Server OSX
+        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
+        run: zip -r react_${{matrix.os}}.zip build/
 
-  #     - name: Upload Artifact
-  #       uses: actions/upload-artifact@master
-  #       with:
-  #         name: react-server-${{matrix.os}}
-  #         path: ./react_${{matrix.os}}.zip
+      - name: Upload Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: react-server-${{matrix.os}}
+          path: ./react_${{matrix.os}}.zip
 
   # electron:
   #   needs: [react, templative]
