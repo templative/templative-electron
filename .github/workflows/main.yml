@@ -13,7 +13,7 @@ jobs:
         os:
           - windows-latest
           - macos-latest
-          - macos-latest-xlarge
+          # - macos-latest-xlarge
         node:
           - 18
     steps:
@@ -69,7 +69,7 @@ jobs:
         os:
           - windows-latest
           - macos-latest
-          - macos-latest-xlarge
+          # - macos-latest-xlarge
         node:
           - 18
     steps:
@@ -114,7 +114,7 @@ jobs:
         os:
           - windows-latest
           - macos-latest
-          - macos-latest-xlarge
+          # - macos-latest-xlarge
         node:
           - 18
     steps:
@@ -228,7 +228,7 @@ jobs:
         os:
           - windows-latest
           - macos-latest
-          - macos-latest-xlarge
+          # - macos-latest-xlarge
         node:
           - 18
     steps:   
