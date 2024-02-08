@@ -100,16 +100,12 @@ jobs:
         with:
           name: react-server
           path: ./react.zip
-
+          
+      - name: Unzip React
+        run: Expand-Archive -LiteralPath "D:\a\templative-electron\templative-electron\react.zip" -DestinationPath "./build"
+          
       - name: Install Node Packages
         run: npm install
-
-      # This happens after node packages because there seems to be race condition with downloading and unzipping
-      - name: Unzip React
-        run: Expand-Archive -Path react.zip -DestinationPath "./build"
-
-      - name: Build React Files
-        run: npm run react-build
 
       - name: Create Electron Application
         run: npm run make
