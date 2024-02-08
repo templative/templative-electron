@@ -47,15 +47,7 @@ jobs:
         if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
         run: zip templative_${{matrix.os}}.zip dist/
 
-      - name: Upload Artifact Windows
-        if: matrix.os == 'windows-latest'
-        uses: actions/upload-artifact@master
-        with:
-          name: templative-server-${{matrix.os}}
-          path: ./templative_${{matrix.os}}.zip
-
-      - name: Upload Artifact OSX
-        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
+      - name: Upload Artifact
         uses: actions/upload-artifact@master
         with:
           name: templative-server-${{matrix.os}}
@@ -92,14 +84,6 @@ jobs:
         run: zip react_${{matrix.os}}.zip build/
 
       - name: Upload Artifact Windows
-        if: matrix.os == 'windows-latest'
-        uses: actions/upload-artifact@master
-        with:
-          name: react-server-${{matrix.os}}
-          path: ./react_${{matrix.os}}.zip
-
-      - name: Upload Artifact OSX
-        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
         uses: actions/upload-artifact@master
         with:
           name: react-server-${{matrix.os}}
@@ -120,15 +104,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Download Templative Server Windows
-        if: matrix.os == 'windows-latest'
-        uses: actions/download-artifact@master
-        with:
-          name: templative-server-${{matrix.os}}
-          path: ./
-
-      - name: Download Templative Server OSX
-        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
+      - name: Download Templative Server
         uses: actions/download-artifact@master
         with:
           name: templative-server-${{matrix.os}}
@@ -142,15 +118,7 @@ jobs:
         if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
         run: unzip -j "./templative_${{matrix.os}}.zip" -d "./python" 
 
-      - name: Download React Server Windows 
-        if: matrix.os == 'windows-latest'
-        uses: actions/download-artifact@master
-        with:
-          name: react-server-${{matrix.os}}
-          path: ./
-      
-      - name: Download React Server OSX
-        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
+      - name: Download React Server 
         uses: actions/download-artifact@master
         with:
           name: react-server-${{matrix.os}}
