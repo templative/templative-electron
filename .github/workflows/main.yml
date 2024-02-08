@@ -100,7 +100,13 @@ jobs:
         with:
           name: react-server
           path: ./react.zip
-          
+
+      - name: Check if File Exists
+        run: Test-Path "D:\a\templative-electron\templative-electron\react.zip" -PathType Leaf
+
+      - name: Check if Local File Exists
+        run: Test-Path ".\react.zip" -PathType Leaf
+
       - name: Unzip React
         run: Expand-Archive -LiteralPath "D:\a\templative-electron\templative-electron\react.zip" -DestinationPath "./build"
           
