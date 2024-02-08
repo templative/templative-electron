@@ -119,9 +119,9 @@ jobs:
         with:
           name: templative-app
           path: ./templative.zip
-          
+
   release:
-    needs: []
+    needs: [electron]
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
