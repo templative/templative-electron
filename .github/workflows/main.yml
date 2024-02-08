@@ -11,7 +11,7 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          # - windows-latest
+          - windows-latest
           - macos-latest
         node:
           - 18
@@ -66,42 +66,42 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          # - windows-latest
+          - windows-latest
           - macos-latest
         node:
           - 18
     steps:
       - uses: actions/checkout@v2
-      # - uses: actions/setup-node@v3
-      #   with:
-      #     node-version: ${{ matrix.node }}
-      # - name: Install Node Packages
-      #   run: npm install
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Install Node Packages
+        run: npm install
 
-      # - name: Build React Files
-      #   run: npm run react-build
+      - name: Build React Files
+        run: npm run react-build
 
-      # - name: Zip React Server Windows
-      #   if: runner.os == 'Windows'
-      #   run: Compress-Archive -Path build/* -Destination react.zip
+      - name: Zip React Server Windows
+        if: runner.os == 'Windows'
+        run: Compress-Archive -Path build/* -Destination react.zip
 
-      # - name: Zip React Server OSX
-      #   if: runner.os == 'macOS'
-      #   run: zip react.zip build/
+      - name: Zip React Server OSX
+        if: runner.os == 'macOS'
+        run: zip react.zip build/
 
-      # - name: Upload Artifact Windows
-      #   if: runner.os == 'Windows'
-      #   uses: actions/upload-artifact@master
-      #   with:
-      #     name: react-server-windows
-      #     path: ./react.zip
+      - name: Upload Artifact Windows
+        if: runner.os == 'Windows'
+        uses: actions/upload-artifact@master
+        with:
+          name: react-server-windows
+          path: ./react.zip
 
-      # - name: Upload Artifact OSX
-      #   if: runner.os == 'macOS'
-      #   uses: actions/upload-artifact@master
-      #   with:
-      #     name: react-server-osx
-      #     path: ./react.zip
+      - name: Upload Artifact OSX
+        if: runner.os == 'macOS'
+        uses: actions/upload-artifact@master
+        with:
+          name: react-server-osx
+          path: ./react.zip
 
   electron:
     needs: [react, templative]
@@ -110,26 +110,12 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          # - windows-latest
+          - windows-latest
           - macos-latest
         node:
           - 18
     steps:
       - uses: actions/checkout@v2
-
-      # - name: Download React Server Windows 
-      #   if: runner.os == 'Windows'
-      #   uses: actions/download-artifact@master
-      #   with:
-      #     name: react-server-windows
-      #     path: ./
-      
-      # - name: Download React Server OSX
-      #   if: runner.os == 'macOS'
-      #   uses: actions/download-artifact@master
-      #   with:
-      #     name: react-server-osx
-      #     path: ./
 
       - name: Download Templative Server Windows
         if: runner.os == 'Windows'
@@ -153,13 +139,27 @@ jobs:
         if: runner.os == 'macOS'
         run: unzip "./templative.zip" -d "./python"
 
-      # - name: Unzip React Windows
-      #   if: runner.os == 'Windows'
-      #   run: Expand-Archive -LiteralPath "D:\a\templative-electron\templative-electron\react.zip" -DestinationPath "./build"
+      - name: Download React Server Windows 
+        if: runner.os == 'Windows'
+        uses: actions/download-artifact@master
+        with:
+          name: react-server-windows
+          path: ./
+      
+      - name: Download React Server OSX
+        if: runner.os == 'macOS'
+        uses: actions/download-artifact@master
+        with:
+          name: react-server-osx
+          path: ./
+
+      - name: Unzip React Windows
+        if: runner.os == 'Windows'
+        run: Expand-Archive -LiteralPath "D:\a\templative-electron\templative-electron\react.zip" -DestinationPath "./build"
     
-      # - name: Unzip React OSX
-      #   if: runner.os == 'macOS'
-      #   run: unzip "./react.zip" -d "./build"
+      - name: Unzip React OSX
+        if: runner.os == 'macOS'
+        run: unzip "./react.zip" -d "./build"
       
       - uses: actions/setup-node@v3
         with:
