@@ -53,118 +53,117 @@ jobs:
           name: templative-server-${{matrix.os}}
           path: ./templative_${{matrix.os}}.zip
 
-  react:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          # - windows-latest
-          - macos-latest
-          # - macos-13-xlarge
-        node:
-          - 18
-    steps:
-      - uses: actions/checkout@v2
+  # react:
+  #   runs-on: ${{ matrix.os }}
+  #   strategy:
+  #     fail-fast: false
+  #     matrix:
+  #       os:
+  #         # - windows-latest
+  #         - macos-latest
+  #         # - macos-13-xlarge
+  #       node:
+  #         - 18
+  #   steps:
+  #     - uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node }}
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: ${{ matrix.node }}
 
-      - name: Install Node Packages
-        run: npm install
+  #     - name: Install Node Packages
+  #       run: npm install
 
-      - name: Build React Files
-        run: npm run react-build
+  #     - name: Build React Files
+  #       run: npm run react-build
 
-      - name: Zip React Server Windows
-        if: matrix.os == 'windows-latest'
-        run: Compress-Archive -Path build/* -Destination react_${{matrix.os}}.zip
+  #     - name: Zip React Server Windows
+  #       if: matrix.os == 'windows-latest'
+  #       run: Compress-Archive -Path build/* -Destination react_${{matrix.os}}.zip
 
-      - name: Zip React Server OSX
-        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-        run: zip -r react_${{matrix.os}}.zip build/
+  #     - name: Zip React Server OSX
+  #       if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
+  #       run: zip -r react_${{matrix.os}}.zip build/
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@master
-        with:
-          name: react-server-${{matrix.os}}
-          path: ./react_${{matrix.os}}.zip
+  #     - name: Upload Artifact
+  #       uses: actions/upload-artifact@master
+  #       with:
+  #         name: react-server-${{matrix.os}}
+  #         path: ./react_${{matrix.os}}.zip
 
-  electron:
-    needs: [react, templative]
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          # - windows-latest
-          - macos-latest
-          # - macos-13-xlarge
-        node:
-          - 18
-    steps:
-      - uses: actions/checkout@v2
+  # electron:
+  #   needs: [react, templative]
+  #   runs-on: ${{ matrix.os }}
+  #   strategy:
+  #     fail-fast: false
+  #     matrix:
+  #       os:
+  #         # - windows-latest
+  #         - macos-latest
+  #         # - macos-13-xlarge
+  #       node:
+  #         - 18
+  #   steps:
+  #     - uses: actions/checkout@v2
 
-      - name: Download Templative Server
-        uses: actions/download-artifact@master
-        with:
-          name: templative-server-${{matrix.os}}
-          path: ./
+  #     - name: Download Templative Server
+  #       uses: actions/download-artifact@master
+  #       with:
+  #         name: templative-server-${{matrix.os}}
+  #         path: ./
 
-      - name: Unzip Templative Windows
-        if: matrix.os == 'windows-latest'
-        run: Expand-Archive -LiteralPath "templative_${{matrix.os}}.zip" -DestinationPath "./python"
+  #     - name: Unzip Templative Windows
+  #       if: matrix.os == 'windows-latest'
+  #       run: Expand-Archive -LiteralPath "templative_${{matrix.os}}.zip" -DestinationPath "./python"
     
-      - name: Unzip Templative OSX
-        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-        run: unzip -j -o "./templative_${{matrix.os}}.zip" -d "./python" 
+  #     - name: Unzip Templative OSX
+  #       if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
+  #       run: unzip -j -o "./templative_${{matrix.os}}.zip" -d "./python" 
 
-      - name: Download React Server 
-        uses: actions/download-artifact@master
-        with:
-          name: react-server-${{matrix.os}}
-          path: ./
+  #     - name: Download React Server 
+  #       uses: actions/download-artifact@master
+  #       with:
+  #         name: react-server-${{matrix.os}}
+  #         path: ./
 
-      - name: Unzip React Windows
-        if: matrix.os == 'windows-latest'
-        run: Expand-Archive -LiteralPath "react_${{matrix.os}}.zip" -DestinationPath "./build"
+  #     - name: Unzip React Windows
+  #       if: matrix.os == 'windows-latest'
+  #       run: Expand-Archive -LiteralPath "react_${{matrix.os}}.zip" -DestinationPath "./build"
     
-
-      - name: Unzip React OSX
-        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-        run: unzip -j -o "./react_${{matrix.os}}.zip" -d "./build"
+  #     - name: Unzip React OSX
+  #       if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
+  #       run: unzip -j -o "./react_${{matrix.os}}.zip" -d "./build"
       
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node }}
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: ${{ matrix.node }}
 
-      - name: Install Node Packages
-        run: npm install
+  #     - name: Install Node Packages
+  #       run: npm install
 
-      - name: Create Electron Application
-        run: npm run make
+  #     - name: Create Electron Application
+  #       run: npm run make
 
-      - name: Contents
-        run: |
-          cd out
-          ls
-          cd ..
+  #     - name: Contents
+  #       run: |
+  #         cd out
+  #         ls
+  #         cd ..
 
 
-      - name: Zip Output Windows
-        if: matrix.os == 'windows-latest'
-        run: Compress-Archive -Path out/* -Destination ./templative_app_${{matrix.os}}.zip
+  #     - name: Zip Output Windows
+  #       if: matrix.os == 'windows-latest'
+  #       run: Compress-Archive -Path out/* -Destination ./templative_app_${{matrix.os}}.zip
 
-      - name: Zip Output MacOS
-        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-        run: zip -r ./templative_app_${{matrix.os}}.zip out/ 
+  #     - name: Zip Output MacOS
+  #       if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
+  #       run: zip -r ./templative_app_${{matrix.os}}.zip out/ 
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@master
-        with:
-          name: templative-app-${{matrix.os}}
-          path: ./templative_app_${{matrix.os}}.zip
+  #     - name: Upload Artifact
+  #       uses: actions/upload-artifact@master
+  #       with:
+  #         name: templative-app-${{matrix.os}}
+  #         path: ./templative_app_${{matrix.os}}.zip
 
 
   # release:
