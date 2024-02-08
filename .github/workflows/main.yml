@@ -102,7 +102,7 @@ jobs:
           path: ./react.zip
 
       - name: Unzip React
-        run: 7z x -o ./build ./react.zip
+        run: Expand-Archive -Path react.zip -DestinationPath "./build"
 
       - name: Install Node Packages
         run: npm install
@@ -133,7 +133,7 @@ jobs:
           prerelease: false
           release_name: Release ${{ github.run_number }}
           tag_name: ${{ github.run_number }}
-          
+
       - name: Upload Artifact
         uses: actions/upload-release-asset@v1
         env:
