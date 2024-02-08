@@ -1,0 +1,13 @@
+.past-feedback-col {
+    
+    background-color: #2b2f37;
+}
+.feedback {
+    margin-top: 1em;
+    padding: 1em 1em 1em 1em;
+    background-color: #2b2f37;
+    max-width: 725px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 6px;
+}

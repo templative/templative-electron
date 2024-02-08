@@ -31,6 +31,10 @@ export const TOP_NAVBAR_ITEMS = [
         name:"Upload",
         route:"/upload"
     },
+    {
+        name:"Feedback",
+        route:"/feedback"
+    },
     // {
     //     name:"Animate",
     //     route:"/animate"

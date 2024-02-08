@@ -13,6 +13,7 @@ import { TOP_NAVBAR_ITEMS } from "./Routes";
 import { TabbedFile } from "./Edit/TabbedFile";
 import TemplativeAccessTools from "./TemplativeAccessTools";
 import '../App.css';
+import FeedbackPanel from "./Feedback/FeedbackPanel";
 
 const path = window.require("path");
 const fs = window.require("fs/promises");
@@ -311,6 +312,7 @@ export default class EditProjectView extends React.Component {
             <Route path='/playtest' element={ <PlaytestPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
             <Route path='/upload' element={ <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
             <Route path='/animate' element={ <AnimatePanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+            <Route path='/feedback' element={ <FeedbackPanel/>}/>
             </Routes>
         </BrowserRouter>
         
