@@ -55,7 +55,7 @@ jobs:
           path: ./dist
 
   react:
-    if: false
+    if: true
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
