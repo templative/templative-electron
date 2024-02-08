@@ -58,7 +58,7 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - macos-latest
+          - windows-latest
         node:
           - 18
     steps:
@@ -72,15 +72,28 @@ jobs:
       - name: Build React Files
         run: npm run react-build
 
-      - name: Zip React Server
+      - name: Zip React Server Windows
+        if: runner.os == 'Windows'
         run: Compress-Archive -Path build/* -Destination react.zip
 
-      - name: Upload Artifact
+      - name: Zip React Server OSX
+        if: runner.os == 'macOS'
+        run: zip react.zip build/
+
+      - name: Upload Artifact Windows
+        if: runner.os == 'Windows'
         uses: actions/upload-artifact@master
         with:
-          name: react-server
+          name: react-server-windows
           path: ./react.zip
 
+      - name: Upload Artifact OSX
+        if: runner.os == 'macOS'
+        uses: actions/upload-artifact@master
+        with:
+          name: react-server-osx
+          path: ./react.zip
+          
   electron:
     needs: [react, templative]
     runs-on: ${{ matrix.os }}
@@ -99,21 +112,31 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Download Templative Server Windows
+        if: runner.os == 'Windows'
         uses: actions/download-artifact@master
         with:
           name: templative-server-windows
           path: ./python
 
       - name: Download Templative Server OSX
+        if: runner.os == 'macOS'
         uses: actions/download-artifact@master
         with:
           name: templative-server-osx
           path: ./python
 
-      - name: Download React Server
+      - name: Download React Server Windows 
+        if: runner.os == 'Windows'
         uses: actions/download-artifact@master
         with:
-          name: react-server
+          name: react-server-windows
+          path: ./
+      
+      - name: Download React Server OSX
+        if: runner.os == 'macOS'
+        uses: actions/download-artifact@master
+        with:
+          name: react-server-osx
           path: ./
 
       - name: Unzip React Windows
