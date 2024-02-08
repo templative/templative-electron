@@ -93,13 +93,13 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: templative-server
-          path: ./python/templative.exe
+          path: ./python
 
       - name: Download React Server
         uses: actions/download-artifact@master
         with:
           name: react-server
-          path: ./react.zip
+          path: ./
 
       - name: Check if File Exists
         run: | 
