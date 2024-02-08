@@ -38,19 +38,27 @@ jobs:
           engineio.async_drivers.aiohttp --hidden-import engineio.async_aiohttp
           --collect-all templative
 
+      - name: Zip Templative Server Windows
+        if: runner.os == 'Windows'
+        run: Compress-Archive -Path dist/* -Destination templative.zip
+
+      - name: Zip Templative Server OSX
+        if: runner.os == 'macOS'
+        run: zip templative.zip dist/
+
       - name: Upload Artifact Windows
         if: runner.os == 'Windows'
         uses: actions/upload-artifact@master
         with:
           name: templative-server-windows
-          path: ./dist/templative.exe
+          path: ./templative.zip
 
       - name: Upload Artifact OSX
         if: runner.os == 'macOS'
         uses: actions/upload-artifact@master
         with:
           name: templative-server-osx
-          path: ./dist/templative
+          path: ./templative.zip
 
   react:
     runs-on: ${{ matrix.os }}
@@ -128,16 +136,22 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: templative-server-windows
-          path: ./python/
+          path: ./
 
-      - name: Download Artifact OSX
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download Templative Server OSX
         if: runner.os == 'macOS'
         uses: actions/download-artifact@master
         with:
           name: templative-server-osx
-          path: ./python/
+          path: ./
+
+      - name: Unzip Templative Windows
+        if: runner.os == 'Windows'
+        run: Expand-Archive -LiteralPath "templative.zip" -DestinationPath "./python"
+    
+      - name: Unzip Templative OSX
+        if: runner.os == 'macOS'
+        run: unzip "./templative.zip" -d "./python"
 
       # - name: Unzip React Windows
       #   if: runner.os == 'Windows'
