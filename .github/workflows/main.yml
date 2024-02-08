@@ -146,9 +146,6 @@ jobs:
       - name: Create dummy data
         run: |
           mkdir out
-          cd out
-          echo.> your_file.txt
-          cd ..
 
       - name: Zip Output Windows
         if: matrix.os == 'windows-latest'
