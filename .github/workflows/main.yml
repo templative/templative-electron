@@ -147,7 +147,7 @@ jobs:
         run: |
           mkdir out
           cd out
-          type nul > your_file.txt
+          echo.> your_file.txt
           cd ..
 
       - name: Zip Output Windows
