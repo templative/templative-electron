@@ -54,6 +54,7 @@ jobs:
         node:
           - 18
     steps:
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
@@ -83,6 +84,7 @@ jobs:
         node:
           - 18
     steps:
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
@@ -120,17 +122,6 @@ jobs:
           name: templative-app
           path: ./templative.zip
 
-  release:
-    needs: [electron]
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          - windows-latest
-        node:
-          - 18
-    steps:
       - name: Release
         id: create_release
         env:
@@ -142,7 +133,7 @@ jobs:
           prerelease: false
           release_name: Release ${{ github.run_number }}
           tag_name: ${{ github.run_number }}
-
+          
       - name: Upload Artifact
         uses: actions/upload-release-asset@v1
         env:
