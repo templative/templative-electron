@@ -56,11 +56,26 @@ jobs:
       - name: Create Electron Application
         run: npm run make
 
-      - name: Upload Artifact
+      - name: Upload Artifact Windows
+        if: matrix.os == 'windows-latest'
         uses: actions/upload-artifact@master
         with:
           name: templative-app-${{matrix.os}}
-          path: ./out
+          path: ./out/Templative-win32-x64
+
+      - name: Upload Artifact OSX x64
+        if: matrix.os == 'macos-latest' || matrix.os == 'macos-13-xlarge'
+        uses: actions/upload-artifact@master
+        with:
+          name: templative-app-${{matrix.os}}
+          path: ./out/Templative-darwin-x64
+
+      - name: Upload Artifact OSX Arm64
+        if: matrix.os == 'macos-13-xlarge'
+        uses: actions/upload-artifact@master
+        with:
+          name: templative-app-${{matrix.os}}
+          path: ./out/Templative-darwin-arm64
 
   release:
     if: true
@@ -114,11 +129,19 @@ jobs:
 
       - name: Zip Templative Windows
         if: matrix.os == 'windows-latest'
-        run: Compress-Archive -Path out/* -Destination templative_${{matrix.os}}.zip
+        run: Compress-Archive -Path Templative-win32-x64/* -Destination templative_${{matrix.os}}.zip
 
-      - name: Zip Templative OSX
-        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-        run: zip -r templative_${{matrix.os}}.zip out/*
+      - name: Zip Templative OSX x64
+        if: matrix.os == 'macos-latest'
+        run: zip -r templative_${{matrix.os}}.zip Templative-darwin-x64/*
+    
+      - name: Zip Templative OSX arm64
+        if: matrix.os == 'macos-latest-xlarge'
+        run: zip -r templative_${{matrix.os}}.zip Templative-darwin-arm64/*
+
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
 
       - name: Upload Artifact
         uses: actions/upload-release-asset@v1

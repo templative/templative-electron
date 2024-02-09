@@ -65,7 +65,7 @@ function make() {
     elif [[ "$OSTYPE" == "win32" || "$OSTYPE" == "msys"  ]]; then
         osIdentifer="--platform win32"
     fi
-    electron-forge make $osIdentifer
+    electron-forge package
 }
 
 function exe() {

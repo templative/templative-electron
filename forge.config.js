@@ -9,7 +9,6 @@ module.exports = {
     extraResource: [
       "assets/images/icon.icns",
       "./build",
-      "./bin",
       "./python"
      ],
     icon: "assets/images/icon",
