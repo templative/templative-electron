@@ -118,7 +118,7 @@ jobs:
 
       - name: Zip Templative OSX
         if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
-        run: zip -j -r templative_${{matrix.os}}.zip out/*
+        run: zip -r templative_${{matrix.os}}.zip out/*
 
       - name: Upload Artifact
         uses: actions/upload-release-asset@v1
