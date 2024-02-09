@@ -137,13 +137,11 @@ jobs:
           name: templative-app-macos-latest
           path: ./
 
-      - name: Zip Templative Windows
-        if: matrix.os == 'windows-latest'
-        run: Compress-Archive -Path Templative-win32-x64/* -Destination templative_windows-latest.zip
-
-      - name: Zip Templative OSX x64
-        if: matrix.os == 'macos-latest'
-        run: zip -r templative_macos-latest.zip Templative-darwin-x64/*
+      - name: Zip Templative
+        run: |
+          echo ls
+          zip -r templative_win32-latest.zip ./Templative-win32-x64/*
+          zip -r templative_macos-latest.zip ./Templative-darwin-x64/*
 
       - name: get-npm-version
         id: package-version
