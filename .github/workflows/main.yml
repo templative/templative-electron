@@ -112,12 +112,20 @@ jobs:
           name: templative-app-${{matrix.os}}
           path: ./
 
+      - name: Zip Templative Server Windows
+        if: matrix.os == 'windows-latest'
+        run: Compress-Archive -Path out/* -Destination templative_${{matrix.os}}.zip
+
+      - name: Zip Templative Server OSX
+        if: matrix.os == 'macos-latest' || matrix.os == 'macos-latest-xlarge'
+        run: zip -j -r templative_${{matrix.os}}.zip out/*
+
       - name: Upload Artifact
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{needs.release.outputs.upload_url}}
-          asset_path: ./out
+          asset_path: ./templative_${{matrix.os}}.zip
           asset_name: templative_${{matrix.os}}.zip
           asset_content_type: application/zip
