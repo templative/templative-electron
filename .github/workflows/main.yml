@@ -211,13 +211,13 @@ jobs:
       - name: Create Osx Artifact Records
         uses: fjogeleit/http-request-action@v1
         with:
-          url: 'https://templative.net/updates?semanticVersionNumber=${{steps.package-version.outputs.current-version}}&processPlatform=darwin'
+          url: 'https://www.templative.net/updates?semanticVersionNumber=${{steps.package-version.outputs.current-version}}&processPlatform=darwin'
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
 
       - name: Create Windows Artifact Records
         uses: fjogeleit/http-request-action@v1
         with:
-          url: 'https://templative.net/updates?semanticVersionNumber=${{steps.package-version.outputs.current-version}}&processPlatform=win32'
+          url: 'https://www.templative.net/updates?semanticVersionNumber=${{steps.package-version.outputs.current-version}}&processPlatform=win32'
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
