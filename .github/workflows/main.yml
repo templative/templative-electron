@@ -137,7 +137,7 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: templative-app-macos-latest
-          path: ./macos/
+          path: ./darwin/
 
       - name: List Directories
         run: |
@@ -145,7 +145,7 @@ jobs:
 
       - name: List OSX Directories
         run: |
-          cd ./macos
+          cd ./darwin
           ls
           cd ..
 
@@ -157,7 +157,7 @@ jobs:
 
       - name: List OSX Directories Rec
         run: |
-          cd ./macos
+          cd ./darwin
           ls -R
           cd ..
   
@@ -166,16 +166,20 @@ jobs:
           cd ./win32
           ls -R
           cd ..
-          
+
       - name: get-npm-version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@v1.3.1
 
-      - name: Zip Templative
-        run:
-          zip -r ${{steps.package-version.outputs.current-version}}_win32.zip ${{steps.templative-download-windows.outputs.download-path}}/*
-          zip -r ${{steps.package-version.outputs.current-version}}_darwin.zip ${{steps.templative-download-osx.outputs.download-path}}/*      
+      - name: Zip Templative Windows
+        run: zip -r ./${{steps.package-version.outputs.current-version}}_win32.zip ./win32/*
 
+      - name: Zip Templative Darwin
+        run: zip -r ./${{steps.package-version.outputs.current-version}}_darwin.zip ./darwin/*
+
+      - name: List Directories after Zip
+        run: ls
+      
       - name: Upload Artifact Windows
         uses: actions/upload-release-asset@v1
         env:
