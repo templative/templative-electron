@@ -1,7 +1,7 @@
 {
   "name": "Templative",
   "description": "Electron frontend for the Templative CLI.",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "private": true,
   "main": "public/main.js",
   "author": {
@@ -17,7 +17,9 @@
     "react-build": "bash ./build.sh createStaticReactServerApp",
     "templative-build": "bash ./build.sh createTemplativeApp",
     "make": "bash ./build.sh make",
-    "exe": "bash ./build.sh exe"
+    "package": "bash ./build.sh package",
+    "fullPackage": "bash ./build.sh fullPackage",
+    "fullExe": "bash ./build.sh fullExe"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

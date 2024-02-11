@@ -58,7 +58,7 @@ function createStaticReactServerApp() {
     react-scripts build
     pkg ./react/app.js --out-path ./build $osIdentifer
 }
-function make() {
+function package() {
     osIdentifer=""
     if [[ "$OSTYPE" == "darwin"* ]]; then
         osIdentifer="--arch=x64 --platform darwin" #arm64,universal,x64,
@@ -67,8 +67,20 @@ function make() {
     fi
     electron-forge package
 }
+function make() {
+    osIdentifer=""
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        osIdentifer="--arch=x64 --platform darwin" #arm64,universal,x64,
+    elif [[ "$OSTYPE" == "win32" || "$OSTYPE" == "msys"  ]]; then
+        osIdentifer="--platform win32"
+    fi
+    electron-forge make
+}
 
-function exe() {
+function fullPackage() {
+    createTemplativeApp && createStaticReactServerApp && package
+}
+function fullExe() {
     createTemplativeApp && createStaticReactServerApp && make
 }
 

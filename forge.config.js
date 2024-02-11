@@ -15,8 +15,22 @@ module.exports = {
   },
   rebuildConfig: {},
   makers: [
+    // {
+    //   name: '@electron-forge/maker-dmg',
+    //   config: {
+    //     background: './assets/dmg-background.png',
+    //     format: 'ULFO'
+    //   }
+    // },
     {
       name: '@electron-forge/maker-zip'
+    },
+    {
+      name: '@electron-forge/maker-squirrel',
+      config: {
+        certificateFile: './cert.pfx',
+        certificatePassword: process.env.CERTIFICATE_PASSWORD
+      }
     }
   ],
   plugins: [

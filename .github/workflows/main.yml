@@ -54,14 +54,14 @@ jobs:
         run: npm run react-build
 
       - name: Create Electron Application
-        run: npm run make
+        run: npm run package
 
       - name: Upload Artifact Windows
         if: matrix.os == 'windows-latest'
         uses: actions/upload-artifact@master
         with:
           name: templative-app-${{matrix.os}}
-          path: ./out/Templative-win32-x64
+          path: ./out/make/squirrel.windows/x64
 
       - name: Upload Artifact OSX x64
         if: matrix.os == 'macos-latest' || matrix.os == 'macos-13-xlarge'
