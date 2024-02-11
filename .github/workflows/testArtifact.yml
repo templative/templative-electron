@@ -1,0 +1,37 @@
+on:
+  push: null
+
+permissions:
+  contents: write
+
+jobs:
+  artifacts:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+        node:
+          - 18
+    steps:
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
+      
+      - name: Create file
+        run: touch ./${{steps.package-version.outputs.current-version}}.txt
+
+      - name: Deploy to S3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          aws s3 cp ./${{steps.package-version.outputs.current-version}}.txt s3://templative-artifacts
+      
+      - name: Create Osx Artifact Records
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://www.templative.net/updates?semanticVersionNumber=${{steps.package-version.outputs.current-version}}&processPlatform=darwin'
+          method: 'POST'
+          customHeaders: '{"Content-Type": "application/json"}'

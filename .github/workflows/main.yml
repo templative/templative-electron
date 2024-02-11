@@ -137,15 +137,15 @@ jobs:
           name: templative-app-macos-latest
           path: ./
 
-      - name: Zip Templative
-        run: |
-          echo ls
-          zip -r templative_win32-latest.zip ./Templative-win32-x64/*
-          zip -r templative_macos-latest.zip ./Templative-darwin-x64/*
-
       - name: get-npm-version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@v1.3.1
+
+      - name: Zip Templative
+        run: |
+          echo ls
+          zip -r ${{steps.package-version.outputs.current-version}}_win32.zip ./Templative-win32-x64/*
+          zip -r ${{steps.package-version.outputs.current-version}}_darwin.zip ./Templative-darwin-x64/*      
 
       - name: Upload Artifact Windows
         uses: actions/upload-release-asset@v1
@@ -153,8 +153,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{needs.release.outputs.upload_url}}
-          asset_path: ./templative_windows-latest.zip
-          asset_name: templative_windows-latest_${{steps.package-version.outputs.current-version}}.zip
+          asset_path: ./${{steps.package-version.outputs.current-version}}_win32.zip
+          asset_name: templative_windows_${{steps.package-version.outputs.current-version}}.zip
           asset_content_type: application/zip
 
       - name: Upload Artifact OSX
@@ -163,6 +163,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{needs.release.outputs.upload_url}}
-          asset_path: ./templative_macos-latest.zip
-          asset_name: templative_macos-latest_${{steps.package-version.outputs.current-version}}.zip
+          asset_path: ./${{steps.package-version.outputs.current-version}}_darwin.zip
+          asset_name: templative_darwin_${{steps.package-version.outputs.current-version}}.zip
           asset_content_type: application/zip
