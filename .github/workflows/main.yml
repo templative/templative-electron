@@ -6,7 +6,7 @@ permissions:
 
 jobs:
   templative:
-    if: true
+    if: false
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -78,7 +78,7 @@ jobs:
           path: ./out/Templative-darwin-arm64
 
   release:
-    if: true
+    if: false
     permissions:
       contents: write
     needs: [templative]
@@ -112,7 +112,7 @@ jobs:
           tag_name: ${{steps.package-version.outputs.current-version}}
 
   artifacts:
-    if: true
+    if: false
     needs: [release]
     runs-on: ${{ matrix.os }}
     strategy:
