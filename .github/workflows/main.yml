@@ -130,18 +130,43 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: templative-app-windows-latest
-          path: ./
+          path: ./win32/
 
       - name: Download Templative App OSX
         id: templative-download-osx
         uses: actions/download-artifact@master
         with:
           name: templative-app-macos-latest
-          path: ./
+          path: ./macos/
 
-      - name: List directories
-        run: ls -R
+      - name: List Directories
+        run: |
+          ls
 
+      - name: List OSX Directories
+        run: |
+          cd ./macos
+          ls
+          cd ..
+
+      - name: List Windows Directories
+        run: |
+          cd ./win32
+          ls
+          cd ..
+
+      - name: List OSX Directories Rec
+        run: |
+          cd ./macos
+          ls -R
+          cd ..
+  
+      - name: List Windows Directories Rec
+        run: |
+          cd ./win32
+          ls -R
+          cd ..
+          
       - name: get-npm-version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@v1.3.1
