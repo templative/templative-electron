@@ -172,11 +172,16 @@ jobs:
         uses: martinbeentjes/npm-get-version-action@v1.3.1
 
       - name: Zip Templative Windows
-        run: zip -r ./${{steps.package-version.outputs.current-version}}_win32.zip ./win32/*
-
+        run: |
+          cd ./win32
+          zip -r ../${{steps.package-version.outputs.current-version}}_win32.zip ./*
+          cd ..
       - name: Zip Templative Darwin
-        run: zip -r ./${{steps.package-version.outputs.current-version}}_darwin.zip ./darwin/*
-
+        run: |
+          cd ./darwin
+          zip -r ../${{steps.package-version.outputs.current-version}}_darwin.zip ./*
+          cd ..
+          
       - name: List Directories after Zip
         run: ls
       
