@@ -205,8 +205,8 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          aws s3 cp ./${{steps.package-version.outputs.current-version}}_win32.zip s3://templative-artifacts
-          aws s3 cp ./${{steps.package-version.outputs.current-version}}_darwin.zip s3://templative-artifacts
+          aws s3 cp ./${{steps.package-version.outputs.current-version}}_win32.zip s3://templative-artifacts --region us-west-2
+          aws s3 cp ./${{steps.package-version.outputs.current-version}}_darwin.zip s3://templative-artifacts --region us-west-2
       
       - name: Create Osx Artifact Records
         uses: fjogeleit/http-request-action@v1
