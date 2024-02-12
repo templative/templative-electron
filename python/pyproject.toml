@@ -2,7 +2,7 @@
 name = "templative"
 version = "0.0.1"
 authors = [
-  { name="Oliver Barnum", email="obarnum@nextday.games" },
+  { name="Next Day Games", email="obarnum@nextday.games" },
 ]
 description = "Collaborate on making board games."
 readme = "README.md"

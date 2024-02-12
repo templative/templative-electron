@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name = "templative",
     version = "0.3.10",
-    author = "Oliver Barnum",
+    author = "Next Day Games",
     author_email = "obarnum@nextday.games",
     description = "Create board games based on art templates, json, and csvs.",
     url = "",

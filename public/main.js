@@ -5,6 +5,9 @@ const serverEnvironmentConfiguration = require("./serverEnvironmentConfiguration
 const {log, error, warn} = require("./logger")
 const ServerManager = require("./serverManager")
 const ServerRunner = require("./serverRunner")
+const { setupAppUpdateListener } = require("./appUpdater")
+
+if (require('electron-squirrel-startup')) app.quit();
 
 app.setName('Templative');
 var templativeWindow = undefined
@@ -80,6 +83,7 @@ app.whenReady().then(async () => {
     return
   }
   createWindow()
+  setupAppUpdateListener()
   startupWindow.closable=true
   startupWindow.close()
   app.on('activate', () => {

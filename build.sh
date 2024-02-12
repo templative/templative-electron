@@ -76,12 +76,18 @@ function make() {
     fi
     electron-forge make
 }
+function publish() {
+    electron-forge publish
+}
 
 function fullPackage() {
     createTemplativeApp && createStaticReactServerApp && package
 }
-function fullExe() {
+function fullMake() {
     createTemplativeApp && createStaticReactServerApp && make
+}
+function fullPublish() {
+    createTemplativeApp && createStaticReactServerApp && electron-forge publish
 }
 
 # Run a function name in the context of this script
