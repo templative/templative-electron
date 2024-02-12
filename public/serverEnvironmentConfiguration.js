@@ -1,19 +1,19 @@
 
 const TEMPLATIVE_SERVER_COMMANDS_BY_ENVIRONMENT = {
     "win32_PROD": {
-        command: `${process.resourcesPath}/python/templative.exe serve --port 8080`,
+        command: `${process.resourcesPath}/bin/templative.exe serve --port 8080`,
         testEndpoint: "http://localhost:8080/status"
     },
     "darwin_PROD": {
-        command: `${process.resourcesPath}/python/templative serve --port 8080`,
+        command: `${process.resourcesPath}/bin/templative serve --port 8080`,
         testEndpoint: "http://localhost:8080/status"
     },
     "darwin_TEST_BUILT": {
-        command: `./out/Templative-darwin-x64/Templative.app/Contents/Resources/python/templative serve --port 8080`,
+        command: `./out/Templative-darwin-x64/Templative.app/Contents/Resources/bin/templative serve --port 8080`,
         testEndpoint: "http://localhost:8080/status"
     },
     "win32_TEST_BUILT": {
-        command: `C:/Users/User/Documents/git/templative-frontend/out/Templative-win32-x64/resources/python/templative serve --port 8080`,
+        command: `C:/Users/User/Documents/git/templative-frontend/out/Templative-win32-x64/resources/bin/templative serve --port 8080`,
         testEndpoint: "http://localhost:8080/status"
     },
     "GLOBALLY_INSTALLED": {
@@ -21,25 +21,25 @@ const TEMPLATIVE_SERVER_COMMANDS_BY_ENVIRONMENT = {
         testEndpoint: "http://localhost:8080/status"
     },
     "win32_DEV":{
-        command: `C:/Users/User/Documents/git/templative-frontend/python/templative.exe serve --port 8080`,
+        command: `C:/Users/User/Documents/git/templative-frontend/bin/templative.exe serve --port 8080`,
         testEndpoint: "http://localhost:8080/status"
     },
     "darwin_DEV":{
-        command: `C:/Users/User/Documents/git/templative-frontend/python/templative serve --port 8080`,
+        command: `/Users/oliverbarnum/Documents/git/templative-electron/bin/templative serve --port 8080`,
         testEndpoint: "http://localhost:8080/status"
     },
 }
 const REACT_SERVER_COMMANDS_BY_ENVIRONMENT = {
     "win32_PROD": {
-      command:`${process.resourcesPath}/build/app.exe ${process.resourcesPath}/build`,
+      command:`${process.resourcesPath}/bin/app.exe ${process.resourcesPath}/build`,
       testEndpoint: "http://localhost:3000"
     },
     "darwin_PROD": {
-        command:`${process.resourcesPath}/build/app ${process.resourcesPath}/build`,
+        command:`${process.resourcesPath}/bin/app ${process.resourcesPath}/build`,
         testEndpoint: "http://localhost:3000"
       },
     "TEST_BUILT": {
-      command:`./build/app ./build`,
+      command:`./bin/app ./build`,
       testEndpoint: "http://127.0.0.1:3000"
     },
     "GLOBALLY_INSTALLED": {

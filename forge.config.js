@@ -8,8 +8,7 @@ module.exports = {
     },
     extraResource: [
       "assets/images/icon.icns",
-      "./build",
-      "./python"
+      "./bin"
      ],
     icon: "assets/images/icon",
   },

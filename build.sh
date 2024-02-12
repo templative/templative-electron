@@ -17,20 +17,11 @@ function templative() {
 }
 
 function createTemplativeApp() {
-    pythonPath=""
-    if [[ "$OSTYPE" == "darwin"* ]]; then
-        pythonPath="/Users/oliverbarnum/Documents/git/templative/templative/__main__.py"
-    elif [[ "$OSTYPE" == "win32" || "$OSTYPE" == "msys" ]]; then
-        pythonPath="C:/Users/User/Documents/git/nextdaygames/templative/templative/__main__.py"
-    else
-        echo "Cannot create Templative app for unknown OS" 
-        return
-    fi
     pyinstaller \
-        --distpath ./python \
+        --distpath ./bin \
         -y \
         -n templative \
-        --onefile $pythonPath \
+        --onefile ./python/templative/__main__.py \
         --hidden-import engineio.async_drivers.aiohttp \
         --hidden-import engineio.async_aiohttp \
         --collect-all templative
@@ -56,7 +47,7 @@ function createStaticReactServerApp() {
     fi
     echo $osIdentifer
     react-scripts build
-    pkg ./react/app.js --out-path ./build $osIdentifer
+    pkg ./react/app.js --out-path ./bin $osIdentifer
 }
 function package() {
     osIdentifer=""
