@@ -29,35 +29,7 @@ module.exports = class ServerRunner {
         this.#port = port
         this.#commandListByEnvironment = commandListByEnvironment
     }
-    
-    #waitforhost = async (url, interval = 1000, attempts = 10) => {
-        
-        let count = 1
-    
-        return new Promise(async (resolve, reject) => {
-        while (count < attempts) {
-    
-            await sleep(interval)
-    
-            try {
-            const response = await fetch(url)
-            if (response !== undefined && response.ok) {
-                if (response.status === 200) {
-                    resolve()
-                    break
-                }
-            } else {
-                count++
-            }
-            } catch (e) {
-                count++
-                log(`${this.serverName} ${url} ping failed with ${e}. Trying ${count} of ${attempts}`)
-            }
-        }
-    
-        reject(new Error(`${url} is down: ${count} attempts tried`))
-        })
-    }
+
     #getCommandConfigurationForEnvironmentAndOs = (environment) => {
         var os = process.platform
         var commandConfiguration = this.#commandListByEnvironment[`${os}_${environment}`]
@@ -66,7 +38,34 @@ module.exports = class ServerRunner {
         }
         return this.#commandListByEnvironment[environment]
     }
+    #attemptStart = async (commandConfiguration, retries, pingCooldownMilliseconds)=> {
+        log(`Killing any process at port ${this.#port}...`)
+        await killPortProcess(this.#port);
 
+        log(`${this.serverName} is launching ${commandConfiguration.command}.`)
+        var spawnedProcess = spawn(commandConfiguration.command, { detached: false, shell: true, stdio: ["pipe", "pipe", "pipe"]});
+        spawnedProcess.stdout.pipe(process.stdout);            
+        this.#serverProcess = spawnedProcess
+        
+        var count = 1
+        while (count < retries) {
+
+            await sleep(pingCooldownMilliseconds)
+    
+            try {
+                const response = await fetch(commandConfiguration.testEndpoint)
+                if (response === undefined || !response.ok) {
+                    count++
+                    continue
+                }
+                return 1
+            } catch (e) {
+                count++
+                log(`${this.serverName} ${commandConfiguration.testEndpoint} ping failed with ${e}. Trying ${count} of ${retries}`)
+            }
+        }
+        return 0
+    }
     #launchServer = async (environment, retries=20, pingCooldownMilliseconds=2000) => {
         if (this.#serverProcess !== undefined) {
             throw new Error("Server is already running.")
@@ -77,20 +76,15 @@ module.exports = class ServerRunner {
                 error(`No command for ${environment} env of ${this.serverName}.`)
                 return 0
             }
-            log(`Killing any process at port ${this.#port}...`)
-            await killPortProcess(this.#port);
-
-            log(`${this.serverName} is launching ${commandConfiguration.command}.`)
-            var spawnedProcess = spawn(commandConfiguration.command, { detached: false, shell: true, stdio: ["pipe", "pipe", "pipe"]});
-            spawnedProcess.stdout.pipe(process.stdout);            
-            this.#serverProcess = spawnedProcess
-            
-            await this.#waitforhost(commandConfiguration.testEndpoint, pingCooldownMilliseconds, retries)
+            var result = await this.#attemptStart(commandConfiguration, retries, pingCooldownMilliseconds)
+            if (result === 0) {
+                return 0
+            }
             log(`${this.serverName} connection established.`)
             return 1
         } catch (err) {
             error(`${commandConfiguration.command}\n${this.serverName} command failed due to: \n${err}.`)
-        return 0
+            return 0
         }
     }
     attemptToStartServer = async (environment, retries=30, pingCooldownMilliseconds=2000) => {
@@ -106,6 +100,7 @@ module.exports = class ServerRunner {
         if (this.#serverProcess === undefined) {
             return
         }
+        this.#serverProcess.kill()
         kill(this.#serverProcess.pid)
     }
 }

@@ -63,7 +63,6 @@ var servers = [
 var serverManager = new ServerManager(servers)
 const launchServers = async () => {
     try {
-        
         var environment = app.isPackaged ? "PROD" : "DEV"
         return await serverManager.runServers(environment)
     } 
@@ -72,8 +71,7 @@ const launchServers = async () => {
         return 0
     }
 }
-
-app.whenReady().then(async () => {
+const onReady = async () => {
   log("Starting Templative")
   startupWindow = createStartupWindow()
   var serverStartResult = await launchServers()
@@ -83,25 +81,22 @@ app.whenReady().then(async () => {
     return
   }
   createWindow()
-  setupAppUpdateListener()
+  // setupAppUpdateListener()
   startupWindow.closable=true
   startupWindow.close()
   app.on('activate', () => {
       if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
-})
+}
 const shutdown = async () => {
     await serverManager.shutDownServers()
     if (startupWindow !== undefined && startupWindow) {
       startupWindow.closable=true
       startupWindow.close()
     }
+    app.exit(0)
 };
-app.on('window-all-closed', async () => {
-    if (process.platform !== 'darwin') {
-      await shutdown()
-    }
-})
-
+app.on("ready", onReady)
+app.on('window-all-closed', shutdown)
 
 listenForRenderEvents()

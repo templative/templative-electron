@@ -1,5 +1,5 @@
 const { app, autoUpdater, dialog } = require('electron')
-const { updateElectronApp, UpdateSourceType } = require('update-electron-app');
+// const { updateElectronApp, UpdateSourceType } = require('update-electron-app');
 
 const onUpdateRecieved = (event, releaseNotes, releaseName, updateURL) => {
     console.log(event, releaseName, releaseNotes, updateURL)
@@ -37,12 +37,12 @@ const setupAppUpdateListener = () => {
         return
     }
 
-    updateElectronApp({
-      updateSource: {
-        type: UpdateSourceType.StaticStorage,
-        baseUrl: `https://templative-artifacts.s3.us-west-2.amazonaws.com/${process.platform}/${process.arch}`
-      }
-    });
+    // updateElectronApp({
+    //   updateSource: {
+    //     type: UpdateSourceType.StaticStorage,
+    //     baseUrl: `https://templative-artifacts.s3.us-west-2.amazonaws.com/${process.platform}/${process.arch}`
+    //   }
+    // });
     // const baseUrl = `http://127.0.0.1:5000`// `https://www.templative.net`
     // const url = `${baseUrl}/updates?processplatform=${process.platform}`
     // console.log(`Listening for updates at ${url}.`)
