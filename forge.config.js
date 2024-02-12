@@ -23,20 +23,20 @@ module.exports = {
     },
     {
       name: '@electron-forge/maker-zip',
-      config: (arch) => ({
-        macUpdateManifestBaseUrl: `https://templative-artifacts.s3.us-west-2.amazonaws.com/darwin/${arch}`
-      })
-    },
-    {
-      name: '@electron-forge/maker-squirrel',
-      // config: {
-      //   certificateFile: './cert.pfx',
-      //   certificatePassword: process.env.CERTIFICATE_PASSWORD
-      // },
-      config: (arch) => ({
-        remoteReleases: `https://templative-artifacts.s3.us-west-2.amazonaws.com/win32/${arch}`
-      })
+      // config: (arch) => ({
+      //   macUpdateManifestBaseUrl: `https://templative-artifacts.s3.us-west-2.amazonaws.com/darwin/${arch}`
+      // })
     }
+    // {
+    //   name: '@electron-forge/maker-squirrel',
+    //   // config: {
+    //   //   certificateFile: './cert.pfx',
+    //   //   certificatePassword: process.env.CERTIFICATE_PASSWORD
+    //   // },
+    //   config: (arch) => ({
+    //     remoteReleases: `https://templative-artifacts.s3.us-west-2.amazonaws.com/win32/${arch}`
+    //   })
+    // }
   ],
   plugins: [
     {

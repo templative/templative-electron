@@ -54,7 +54,7 @@ jobs:
         run: npm run react-build
 
       - name: Create Electron Application and Upload it S3
-        run: npm run publish
+        run: npm run make
         
 
       - name: Upload Artifact Windows
