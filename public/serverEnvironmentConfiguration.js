@@ -31,17 +31,21 @@ const TEMPLATIVE_SERVER_COMMANDS_BY_ENVIRONMENT = {
 }
 const REACT_SERVER_COMMANDS_BY_ENVIRONMENT = {
     "win32_PROD": {
-      command:`${process.resourcesPath}/bin/app.exe ${process.resourcesPath}/build`,
+      command:`${process.resourcesPath}/bin/reactServer.exe ${process.resourcesPath}/build`,
       testEndpoint: "http://localhost:3000"
     },
     "darwin_PROD": {
-        command:`${process.resourcesPath}/bin/app ${process.resourcesPath}/build`,
+        command:`${process.resourcesPath}/bin/reactServer ${process.resourcesPath}/build`,
         testEndpoint: "http://localhost:3000"
-      },
-    "TEST_BUILT": {
-      command:`./bin/app ./build`,
+    },
+    "win32_TEST_BUILT": {
+      command:`./bin/reactServer.exe ./build`,
       testEndpoint: "http://127.0.0.1:3000"
     },
+    "darwin_TEST_BUILT": {
+        command:`./bin/reactServer ./build`,
+        testEndpoint: "http://127.0.0.1:3000"
+      },
     "GLOBALLY_INSTALLED": {
       command:`react-scripts start`,
       testEndpoint: "http://127.0.0.1:3000"

@@ -47,7 +47,7 @@ function createStaticReactServerApp() {
     fi
     echo $osIdentifer
     react-scripts build
-    pkg ./react/app.js --out-path ./bin $osIdentifer
+    pkg ./react/reactServer.js --out-path ./bin $osIdentifer
 }
 function package() {
     osIdentifer=""
