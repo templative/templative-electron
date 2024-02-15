@@ -55,3 +55,6 @@ jobs:
 
       - name: Create Electron Application and Upload it S3
         run: npm run publish
+        env: 
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
