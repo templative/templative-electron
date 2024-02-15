@@ -37,6 +37,12 @@ jobs:
           pip install -r req.txt
           cd ..
 
+      - name: Create Templative App/Exe
+        run: pyinstaller --distpath ./bin -y -n templative --onefile
+          ./python/templative/__main__.py --hidden-import
+          engineio.async_drivers.aiohttp --hidden-import engineio.async_aiohttp
+          --collect-all templative
+
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
@@ -44,5 +50,8 @@ jobs:
       - name: Install Node Packages
         run: npm install
 
+      - name: Build React Files
+        run: npm run react-build
+
       - name: Create Electron Application and Upload it S3
-        run: npm run fullPublish
+        run: npm run publish
