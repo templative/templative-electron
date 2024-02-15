@@ -53,7 +53,10 @@ jobs:
 
       - name: get-npm-version
         id: package-version
-        uses: martinbeentjes/npm-get-version-action@v1.3.1
+        run: |
+          PACKAGE_VERSION=$(npm pkg get version --workspaces=false | tr -d \")
+          echo $PACKAGE_VERSION
+          echo "current-version=$PACKAGE_VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Create Electron Application and Upload it S3
         run: npm run publish
