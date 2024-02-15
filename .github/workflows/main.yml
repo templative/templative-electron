@@ -51,8 +51,12 @@ jobs:
       - name: Build React Files
         run: npm run react-build
 
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
       - name: Create Electron Application and Upload it S3
         run: npm run publish
         env: 
           AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}

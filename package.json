@@ -1,7 +1,7 @@
 {
   "name": "Templative",
   "description": "Electron frontend for the Templative CLI.",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "private": true,
   "main": "public/main.js",
   "author": {
