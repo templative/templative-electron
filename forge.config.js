@@ -16,21 +16,11 @@ module.exports = {
   rebuildConfig: {},
   makers: [
     {
-      name: '@electron-forge/maker-dmg',
-      // config: {
-      //   background: './assets/dmg-background.png',
-      //   format: 'ULFO'
-      // }
-      config: (arch) => ({
-        // Note that we must provide this S3 URL here
-        // in order to support smooth version transitions
-        // especially when using a CDN to front your updates
-        // macUpdateManifestBaseUrl: `https://templative-artifacts.s3.us-west-2.amazonaws.com//darwin/${arch}`
-      })
-    },
-    {
       name: '@electron-forge/maker-zip',
       platforms: ['darwin'],
+      config: (arch) => ({
+        macUpdateManifestBaseUrl: `https://templative-artifacts.s3.amazonaws.com/darwin/${arch}`
+      })
     },
     {
       name: '@electron-forge/maker-squirrel',
@@ -38,14 +28,8 @@ module.exports = {
         name: "templative",
         authors: "Next Day Games",
         noMsi: true,
+        remoteReleases: `https://templative-artifacts.s3.amazonaws.com/win32/${arch}`
       })
-      // config: {
-      //   certificateFile: './cert.pfx',
-      //   certificatePassword: process.env.CERTIFICATE_PASSWORD
-      // },
-      // config: (arch) => ({
-      //   remoteReleases: `https://templative-artifacts.s3.amazonaws.com/win32/${arch}`
-      // })
     }
   ],
   plugins: [
@@ -60,7 +44,7 @@ module.exports = {
       platforms: ['darwin', 'win32'],
       config: {
         bucket: 'templative-artifacts',
-        folder: '', // We prefix to add to all files like 'artifacts' to create ./artifacts/fileName
+        folder: '',
         region: 'us-west-2',
         accessKeyId: process.env.AWS_ACCESS_KEY,
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
