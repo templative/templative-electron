@@ -29,6 +29,7 @@ jobs:
       - name: Install pipenv
         run: pip install pipenv pyinstaller
 
+      # This pipenv requirements stuff can be avoided by `pipenv run pyinstaller`ing
       - name: Install Requirements
         run: |
           cd python
@@ -38,10 +39,7 @@ jobs:
           cd ..
 
       - name: Create Templative App/Exe
-        run: pyinstaller --distpath ./bin -y -n templative --onefile
-          ./python/templative/__main__.py --hidden-import
-          engineio.async_drivers.aiohttp --hidden-import engineio.async_aiohttp
-          --collect-all templative
+        run: npm run templative-build
 
       - uses: actions/setup-node@v3
         with:
