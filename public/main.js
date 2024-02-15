@@ -81,7 +81,7 @@ const onReady = async () => {
     return
   }
   createWindow()
-  // setupAppUpdateListener()
+  setupAppUpdateListener()
   startupWindow.closable=true
   startupWindow.close()
   app.on('activate', () => {

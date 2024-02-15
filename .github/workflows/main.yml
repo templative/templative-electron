@@ -54,176 +54,175 @@ jobs:
         run: npm run react-build
 
       - name: Create Electron Application and Upload it S3
-        run: npm run make
-        
+        run: npm run publish
 
-      - name: Upload Artifact Windows
-        if: matrix.os == 'windows-latest'
-        uses: actions/upload-artifact@master
-        with:
-          name: templative-app-${{matrix.os}}
-          path: ./out/make/squirrel.windows/x64
+      # - name: Upload Artifact Windows
+      #   if: matrix.os == 'windows-latest'
+      #   uses: actions/upload-artifact@master
+      #   with:
+      #     name: templative-app-${{matrix.os}}
+      #     path: ./out/make/squirrel.windows/x64
 
-      - name: Upload Artifact OSX x64
-        if: matrix.os == 'macos-latest' || matrix.os == 'macos-13-xlarge'
-        uses: actions/upload-artifact@master
-        with:
-          name: templative-app-${{matrix.os}}
-          path: ./out/Templative-darwin-x64
+      # - name: Upload Artifact OSX x64
+      #   if: matrix.os == 'macos-latest' || matrix.os == 'macos-13-xlarge'
+      #   uses: actions/upload-artifact@master
+      #   with:
+      #     name: templative-app-${{matrix.os}}
+      #     path: ./out/Templative-darwin-x64
 
-      - name: Upload Artifact OSX Arm64
-        if: matrix.os == 'macos-13-xlarge'
-        uses: actions/upload-artifact@master
-        with:
-          name: templative-app-${{matrix.os}}
-          path: ./out/Templative-darwin-arm64
+      # - name: Upload Artifact OSX Arm64
+      #   if: matrix.os == 'macos-13-xlarge'
+      #   uses: actions/upload-artifact@master
+      #   with:
+      #     name: templative-app-${{matrix.os}}
+      #     path: ./out/Templative-darwin-arm64
 
-  release:
-    if: true
-    permissions:
-      contents: write
-    needs: [templative]
-    outputs:
-      upload_url: ${{ steps.create_release.outputs.upload_url }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          - ubuntu-latest
-        node:
-          - 18
-    steps:
-      - uses: actions/checkout@v2
+  # release:
+  #   if: true
+  #   permissions:
+  #     contents: write
+  #   needs: [templative]
+  #   outputs:
+  #     upload_url: ${{ steps.create_release.outputs.upload_url }}
+  #   runs-on: ${{ matrix.os }}
+  #   strategy:
+  #     fail-fast: false
+  #     matrix:
+  #       os:
+  #         - ubuntu-latest
+  #       node:
+  #         - 18
+  #   steps:
+  #     - uses: actions/checkout@v2
 
-      - name: get-npm-version
-        id: package-version
-        uses: martinbeentjes/npm-get-version-action@v1.3.1
+  #     - name: get-npm-version
+  #       id: package-version
+  #       uses: martinbeentjes/npm-get-version-action@v1.3.1
 
-      - name: Release
-        id: create_release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.ref_name }}
-        uses: actions/create-release@v1
-        with:
-          draft: false
-          prerelease: false
-          release_name: Release ${{steps.package-version.outputs.current-version}}
-          tag_name: ${{steps.package-version.outputs.current-version}}
+  #     - name: Release
+  #       id: create_release
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #         tag: ${{ github.ref_name }}
+  #       uses: actions/create-release@v1
+  #       with:
+  #         draft: false
+  #         prerelease: false
+  #         release_name: Release ${{steps.package-version.outputs.current-version}}
+  #         tag_name: ${{steps.package-version.outputs.current-version}}
 
-  artifacts:
-    if: true
-    needs: [release]
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          - ubuntu-latest
-        node:
-          - 18
-    steps:   
-      - uses: actions/checkout@v2
+  # artifacts:
+  #   if: true
+  #   needs: [release]
+  #   runs-on: ${{ matrix.os }}
+  #   strategy:
+  #     fail-fast: false
+  #     matrix:
+  #       os:
+  #         - ubuntu-latest
+  #       node:
+  #         - 18
+  #   steps:   
+  #     - uses: actions/checkout@v2
 
-      - name: Download Templative App Windows
-        id: templative-download-windows
-        uses: actions/download-artifact@master
-        with:
-          name: templative-app-windows-latest
-          path: ./win32/
+  #     - name: Download Templative App Windows
+  #       id: templative-download-windows
+  #       uses: actions/download-artifact@master
+  #       with:
+  #         name: templative-app-windows-latest
+  #         path: ./win32/
 
-      - name: Download Templative App OSX
-        id: templative-download-osx
-        uses: actions/download-artifact@master
-        with:
-          name: templative-app-macos-latest
-          path: ./darwin/
+  #     - name: Download Templative App OSX
+  #       id: templative-download-osx
+  #       uses: actions/download-artifact@master
+  #       with:
+  #         name: templative-app-macos-latest
+  #         path: ./darwin/
 
-      - name: List Directories
-        run: |
-          ls
+  #     - name: List Directories
+  #       run: |
+  #         ls
 
-      - name: List OSX Directories
-        run: |
-          cd ./darwin
-          ls
-          cd ..
+  #     - name: List OSX Directories
+  #       run: |
+  #         cd ./darwin
+  #         ls
+  #         cd ..
 
-      - name: List Windows Directories
-        run: |
-          cd ./win32
-          ls
-          cd ..
+  #     - name: List Windows Directories
+  #       run: |
+  #         cd ./win32
+  #         ls
+  #         cd ..
 
-      - name: List OSX Directories Rec
-        run: |
-          cd ./darwin
-          ls -R
-          cd ..
+  #     - name: List OSX Directories Rec
+  #       run: |
+  #         cd ./darwin
+  #         ls -R
+  #         cd ..
   
-      - name: List Windows Directories Rec
-        run: |
-          cd ./win32
-          ls -R
-          cd ..
+  #     - name: List Windows Directories Rec
+  #       run: |
+  #         cd ./win32
+  #         ls -R
+  #         cd ..
 
-      - name: get-npm-version
-        id: package-version
-        uses: martinbeentjes/npm-get-version-action@v1.3.1
+  #     - name: get-npm-version
+  #       id: package-version
+  #       uses: martinbeentjes/npm-get-version-action@v1.3.1
 
-      - name: Zip Templative Windows
-        run: |
-          cd ./win32
-          zip -r ../${{steps.package-version.outputs.current-version}}_win32.zip ./*
-          cd ..
-      - name: Zip Templative Darwin
-        run: |
-          cd ./darwin
-          zip -r ../${{steps.package-version.outputs.current-version}}_darwin.zip ./*
-          cd ..
+  #     - name: Zip Templative Windows
+  #       run: |
+  #         cd ./win32
+  #         zip -r ../${{steps.package-version.outputs.current-version}}_win32.zip ./*
+  #         cd ..
+  #     - name: Zip Templative Darwin
+  #       run: |
+  #         cd ./darwin
+  #         zip -r ../${{steps.package-version.outputs.current-version}}_darwin.zip ./*
+  #         cd ..
 
-      - name: List Directories after Zip
-        run: ls
+  #     - name: List Directories after Zip
+  #       run: ls
       
-      - name: Upload Artifact Windows
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{needs.release.outputs.upload_url}}
-          asset_path: ./${{steps.package-version.outputs.current-version}}_win32.zip
-          asset_name: templative_windows_${{steps.package-version.outputs.current-version}}.zip
-          asset_content_type: application/zip
+  #     - name: Upload Artifact Windows
+  #       uses: actions/upload-release-asset@v1
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       with:
+  #         upload_url: ${{needs.release.outputs.upload_url}}
+  #         asset_path: ./${{steps.package-version.outputs.current-version}}_win32.zip
+  #         asset_name: templative_windows_${{steps.package-version.outputs.current-version}}.zip
+  #         asset_content_type: application/zip
 
-      - name: Upload Artifact OSX
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{needs.release.outputs.upload_url}}
-          asset_path: ./${{steps.package-version.outputs.current-version}}_darwin.zip
-          asset_name: templative_darwin_${{steps.package-version.outputs.current-version}}.zip
-          asset_content_type: application/zip
+  #     - name: Upload Artifact OSX
+  #       uses: actions/upload-release-asset@v1
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       with:
+  #         upload_url: ${{needs.release.outputs.upload_url}}
+  #         asset_path: ./${{steps.package-version.outputs.current-version}}_darwin.zip
+  #         asset_name: templative_darwin_${{steps.package-version.outputs.current-version}}.zip
+  #         asset_content_type: application/zip
 
-      # - name: Deploy to S3
-      #   env:
-      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
-      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #   run: |
-      #     aws s3 cp ./${{steps.package-version.outputs.current-version}}_win32.zip s3://templative-artifacts --region us-west-2
-      #     aws s3 cp ./${{steps.package-version.outputs.current-version}}_darwin.zip s3://templative-artifacts --region us-west-2
+  #     # - name: Deploy to S3
+  #     #   env:
+  #     #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+  #     #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  #     #   run: |
+  #     #     aws s3 cp ./${{steps.package-version.outputs.current-version}}_win32.zip s3://templative-artifacts --region us-west-2
+  #     #     aws s3 cp ./${{steps.package-version.outputs.current-version}}_darwin.zip s3://templative-artifacts --region us-west-2
       
-      # - name: Create Osx Artifact Records
-      #   uses: fjogeleit/http-request-action@v1
-      #   with:
-      #     url: 'https://www.templative.net/updates?semanticVersionNumber=${{steps.package-version.outputs.current-version}}&processPlatform=darwin'
-      #     method: 'POST'
-      #     customHeaders: '{"Content-Type": "application/json"}'
+  #     # - name: Create Osx Artifact Records
+  #     #   uses: fjogeleit/http-request-action@v1
+  #     #   with:
+  #     #     url: 'https://www.templative.net/updates?semanticVersionNumber=${{steps.package-version.outputs.current-version}}&processPlatform=darwin'
+  #     #     method: 'POST'
+  #     #     customHeaders: '{"Content-Type": "application/json"}'
 
-      # - name: Create Windows Artifact Records
-      #   uses: fjogeleit/http-request-action@v1
-      #   with:
-      #     url: 'https://www.templative.net/updates?semanticVersionNumber=${{steps.package-version.outputs.current-version}}&processPlatform=win32'
-      #     method: 'POST'
-      #     customHeaders: '{"Content-Type": "application/json"}'
+  #     # - name: Create Windows Artifact Records
+  #     #   uses: fjogeleit/http-request-action@v1
+  #     #   with:
+  #     #     url: 'https://www.templative.net/updates?semanticVersionNumber=${{steps.package-version.outputs.current-version}}&processPlatform=win32'
+  #     #     method: 'POST'
+  #     #     customHeaders: '{"Content-Type": "application/json"}'

@@ -21,6 +21,12 @@ module.exports = {
       //   background: './assets/dmg-background.png',
       //   format: 'ULFO'
       // }
+      config: (arch) => ({
+        // Note that we must provide this S3 URL here
+        // in order to support smooth version transitions
+        // especially when using a CDN to front your updates
+        macUpdateManifestBaseUrl: `https://templative-artifacts.s3.us-west-2.amazonaws.com//darwin/${arch}`
+      })
     },
     {
       name: '@electron-forge/maker-zip',
@@ -34,9 +40,9 @@ module.exports = {
       //   certificateFile: './cert.pfx',
       //   certificatePassword: process.env.CERTIFICATE_PASSWORD
       // },
-      // config: (arch) => ({
-      //   remoteReleases: `https://templative-artifacts.s3.us-west-2.amazonaws.com/win32/${arch}`
-      // })
+      config: (arch) => ({
+        remoteReleases: `https://templative-artifacts.s3.us-west-2.amazonaws.com/win32/${arch}`
+      })
     }
   ],
   plugins: [
