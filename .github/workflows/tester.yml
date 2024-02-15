@@ -50,4 +50,4 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip s3://templative-artifacts/win32/x64 --region us-west-2
+          aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip s3://templative-artifacts/win32/x64/Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip --region us-west-2
