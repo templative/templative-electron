@@ -41,7 +41,8 @@ export default class Piece extends React.Component {
                     freeTrackedChangedKeyCallback={()=> this.props.freeTrackedChangedKeyCallback()}
                 />
         });
-
+        var shouldShowPlusSign = this.state.isHovering
+        shouldShowPlusSign = true // I dont like the hover
         return <div className="row piece-row" 
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}
@@ -54,8 +55,7 @@ export default class Piece extends React.Component {
             
             {keyValueRows}
             
-            
-            <div key="addBlankKeyValuePairButton" className={`input-group input-group-sm mb-3 add-piece-key ${this.state.isHovering && "show-add-piece-key"}`} data-bs-theme="dark">
+            <div key="addBlankKeyValuePairButton" className={`input-group input-group-sm mb-3 add-piece-key ${shouldShowPlusSign && "show-add-piece-key"}`} data-bs-theme="dark">
                 <button 
                     onClick={() => this.props.addBlankKeyValuePairCallback()} 
                     className="btn btn-outline-secondary add-button" 
