@@ -2,7 +2,7 @@
 var kill  = require('tree-kill');
 const { spawn } = require('child_process');
 const {log, error} = require("./logger")
-const { killPortProcess } = require('kill-port-process');
+const killPort = require('kill-port');
 
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 
@@ -40,11 +40,23 @@ module.exports = class ServerRunner {
     }
     #attemptStart = async (commandConfiguration, retries, pingCooldownMilliseconds)=> {
         log(`Killing any process at port ${this.#port}...`)
-        await killPortProcess(this.#port);
+        killPort(this.#port,"tcp");
 
         log(`${this.serverName} is launching ${commandConfiguration.command}.`)
-        var spawnedProcess = spawn(commandConfiguration.command, { detached: false, shell: true, stdio: ["pipe", "pipe", "pipe"]});
-        spawnedProcess.stdout.pipe(process.stdout);            
+        var spawnedProcess = spawn(commandConfiguration.command, { detached: false, shell: true});
+        spawnedProcess.stdout.setEncoding('utf8');
+        spawnedProcess.stdout.on('data', function(data) {
+            log(`${data}`);
+        });
+
+        spawnedProcess.stderr.setEncoding('utf8');
+        spawnedProcess.stderr.on('data', function(data) {
+            error(`${data}`);
+        });
+
+        spawnedProcess.on('close', function(code) {
+            log(`Closing with code ${code}.`);
+        });          
         this.#serverProcess = spawnedProcess
         
         var count = 1

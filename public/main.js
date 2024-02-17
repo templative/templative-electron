@@ -1,14 +1,13 @@
 const { app, BrowserWindow, Menu } = require('electron')
-const {mainMenu} = require("./menuMaker")
-const {listenForRenderEvents} = require("./listenForRenderEvents")
-const serverEnvironmentConfiguration = require("./serverEnvironmentConfiguration")
-const {log, error, warn} = require("./logger")
-const ServerManager = require("./serverManager")
-const ServerRunner = require("./serverRunner")
-const { setupAppUpdateListener } = require("./appUpdater")
+const {mainMenu} = require("./src/menuMaker")
+const {listenForRenderEvents} = require("./src/listenForRenderEvents")
+const serverEnvironmentConfiguration = require("./src/serverEnvironmentConfiguration")
+const {log, error, warn} = require("./src/logger")
+const ServerManager = require("./src/serverManager")
+const ServerRunner = require("./src/serverRunner")
+const { setupAppUpdateListener } = require("./src/appUpdater")
 
 if (require('electron-squirrel-startup')) app.quit();
-
 app.setName('Templative');
 var templativeWindow = undefined
 var startupWindow = undefined
@@ -61,6 +60,7 @@ var servers = [
     new ServerRunner("reactServer", 3000, serverEnvironmentConfiguration.reactServerCommandsByEnvironment),
 ]
 var serverManager = new ServerManager(servers)
+
 const launchServers = async () => {
     try {
         var environment = app.isPackaged ? "PROD" : "DEV"
@@ -74,18 +74,25 @@ const launchServers = async () => {
 const onReady = async () => {
   log("Starting Templative")
   startupWindow = createStartupWindow()
-  var serverStartResult = await launchServers()
-  if (serverStartResult === 0) {
-    warn("Failed to start servers!")
-    await shutdown()
-    return
+  try {
+    var serverStartResult = await launchServers()
+    if (serverStartResult === 0) {
+      warn("Failed to start servers!")
+      await shutdown()
+      return
+    }
+    createWindow()
+    // setupAppUpdateListener()
+    listenForRenderEvents()
   }
-  createWindow()
-  setupAppUpdateListener()
+  catch(err) {
+    error(err)
+    shutdown()
+  }
   startupWindow.closable=true
   startupWindow.close()
   app.on('activate', () => {
-      if (BrowserWindow.getAllWindows().length === 0) createWindow()
+    if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
 }
 const shutdown = async () => {
@@ -94,9 +101,11 @@ const shutdown = async () => {
       startupWindow.closable=true
       startupWindow.close()
     }
+    if (templativeWindow !== undefined && templativeWindow) {
+      templativeWindow.closable=true
+      templativeWindow.close()
+    }
     app.exit(0)
 };
 app.on("ready", onReady)
 app.on('window-all-closed', shutdown)
-
-listenForRenderEvents()
