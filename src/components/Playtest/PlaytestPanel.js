@@ -4,8 +4,8 @@ import "./PlaytestPanel.css"
 import SelectDirectoryInDirectory from "../SelectDirectory/SelectDirectoryInDirectory";
 import { channels } from "../../shared/constants";
 import {writeLastUseTableTopPlaygroundDirectory, getLastUsedTableTopPlaygroundDirectory} from "../../settings/SettingsManager"
-const axios = window.require("axios")
-const { ipcRenderer } = window.require('electron');
+import axios from "axios"
+const { ipcRenderer } = require('electron');
 
 export default class PlaytestPanel extends React.Component {   
     state={

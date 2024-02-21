@@ -10,9 +10,9 @@ import componentComposeIcon from "../../Icons/componentComposeIcon.svg"
 import pieceIcon from "../../Icons/pieceIcon.svg"
 import rulesIcon from "../../Icons/rulesIcon.svg"
 
-const fsOld = window.require('fs');
-const fs = window.require("fs/promises")
-const path = window.require("path")
+const fsOld = require('fs');
+const fs = require("fs/promises")
+const path = require("path")
 
 export default class ContentFileList extends React.Component {
     watcher = undefined

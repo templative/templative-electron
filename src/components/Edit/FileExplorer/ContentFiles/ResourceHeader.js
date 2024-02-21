@@ -1,7 +1,7 @@
 import React from "react";
 import "./ResourceHeader.css"
 
-const {shell} = window.require('electron')
+const {shell} = require('electron')
 
 export default class ResourceHeader extends React.Component {   
     state = {

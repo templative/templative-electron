@@ -1,7 +1,7 @@
 import React from "react";
 import "./SelectDirectory.css"
-const {shell} = window.require('electron')
-const path = window.require("path")
+const {shell} = require('electron')
+const path = require("path")
 
 export default class DirectoryOption extends React.Component {  
     state = {

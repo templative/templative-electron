@@ -1,6 +1,6 @@
-const os = window.require('os')
-const path = window.require('path')
-const fs = window.require("fs")
+const os = require('os')
+const path = require('path')
+const fs = require("fs")
 
 function readOrCreateSettingsFile() {
     var templativeSettingsDirectoryPath = path.join(os.homedir() , "Documents/Templative")

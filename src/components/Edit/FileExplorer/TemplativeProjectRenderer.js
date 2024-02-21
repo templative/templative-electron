@@ -3,9 +3,9 @@ import TemplativeAccessTools from "../../TemplativeAccessTools";
 import ContentFileList from "./ContentFiles/ContentFileList";
 import "./TemplativeProjectRenderer.css"
 
-const fsOld = window.require('fs');
-const path = window.require("path")
-const fs = window.require("fs/promises")
+const fsOld = require('fs');
+const path = require("path")
+const fs = require("fs/promises")
 
 export default class TemplativeProjectRenderer extends React.Component {   
     state = {

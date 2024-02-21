@@ -1,5 +1,5 @@
-const fs = window.require('fs/promises');
-const path = window.require("path");
+const fs = require('fs/promises');
+const path = require("path");
 
 export default class TemplativeAccessTools {
 

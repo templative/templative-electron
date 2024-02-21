@@ -4,7 +4,7 @@ import TemplativeAccessTools from "../../TemplativeAccessTools";
 
 import "./RulesEditor.css"
 
-const path = window.require("path")
+const path = require("path")
 
 export default class RulesEditor extends React.Component {   
     

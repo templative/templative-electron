@@ -1,4 +1,4 @@
-const { channels } = require("../../src/shared/constants");
+const { channels } = require("../shared/constants");
 const { dialog, BrowserWindow  } = require('electron')
 var axios  = require('axios');
 

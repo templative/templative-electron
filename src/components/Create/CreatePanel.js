@@ -3,7 +3,7 @@ import "./CreatePanel.css"
 import ComponentTypeTagPicker from "./ComponentTypeTagPicker";
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import ComponentTypeList from "./ComponentTypeList";
-var axios  = window.require('axios');
+var axios = require('axios');
 
 export default class CreatePanel extends React.Component {   
     state = {

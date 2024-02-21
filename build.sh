@@ -24,13 +24,10 @@ function createTemplativeApp() {
         --onefile ./python/templative/__main__.py \
         --hidden-import engineio.async_drivers.aiohttp \
         --hidden-import engineio.async_aiohttp \
-        --collect-all templative
+        --collect-all templative \
+        --codesign-identity "Developer ID Application: Next Day Games LLC (Y9RWBVMY7R)"
 }
 
-function createStaticReactServerApp() {
-    react-scripts build
-    pkg ./react/reactServer.js --out-path ./bin
-}
 function package() {
     electron-forge package
 }
@@ -42,13 +39,13 @@ function publish() {
 }
 
 function fullPackage() {
-    createTemplativeApp && createStaticReactServerApp && package
+    createTemplativeApp && package
 }
 function fullMake() {
-    createTemplativeApp && createStaticReactServerApp && make
+    createTemplativeApp && make
 }
 function fullPublish() {
-    createTemplativeApp && createStaticReactServerApp && publish
+    createTemplativeApp && publish
 }
 
 # Run a function name in the context of this script

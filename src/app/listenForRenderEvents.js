@@ -1,6 +1,6 @@
 const { ipcMain  } = require('electron')
 const { openFolder, createProject, openPlaygroundFolder} = require("./dialogMaker")
-const { channels } = require('../../src/shared/constants');
+const { channels } = require('../shared/constants');
 
 function listenForRenderEvents() {
     ipcMain.handle(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG_FOR_PLAYGROUND, openPlaygroundFolder);

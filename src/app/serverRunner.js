@@ -78,7 +78,7 @@ module.exports = class ServerRunner {
         }
         return 0
     }
-    #launchServer = async (environment, retries=20, pingCooldownMilliseconds=2000) => {
+    #launchServer = async (environment, retries=10, pingCooldownMilliseconds=2000) => {
         if (this.#serverProcess !== undefined) {
             throw new Error("Server is already running.")
         }
@@ -99,7 +99,7 @@ module.exports = class ServerRunner {
             return 0
         }
     }
-    attemptToStartServer = async (environment, retries=30, pingCooldownMilliseconds=2000) => {
+    attemptToStartServer = async (environment, retries=10, pingCooldownMilliseconds=2000) => {
         var serverStartResult = await this.#launchServer(environment, retries, pingCooldownMilliseconds)
         if (serverStartResult === 0) {
             error(`${this.serverName} failed to start`)

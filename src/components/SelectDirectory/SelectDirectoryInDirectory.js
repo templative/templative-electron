@@ -1,7 +1,7 @@
 import React from "react";
 import "./SelectDirectory.css"
 import DirectoryOption from "./DirectoryOption";
-const fs = window.require("fs/promises")
+const fs = require("fs/promises")
 
 export default class SelectDirectoryInDirectory extends React.Component { 
     state = {

@@ -1,5 +1,5 @@
 import React from "react";
-import {socket} from "../../socket"
+import socket from "../../socket"
 import "./LoggedMessages.css"
 
 export class LoggedMessages extends React.Component {  

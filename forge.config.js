@@ -12,6 +12,19 @@ module.exports = {
       "./build"
      ],
     icon: "assets/images/icon",
+    osxSign: {
+      'identity': "Developer ID Application: Next Day Games LLC (Y9RWBVMY7R)",
+      'hardened-runtime': true,
+      'gatekeeper-assess': false,
+      'entitlements': 'entitlements.plist',
+      'entitlements-inherit': 'entitlements.plist',
+    },
+    osxNotarize: {
+      tool: 'notarytool',
+      appleId: process.env.APPLE_ID,
+      appleIdPassword: process.env.TEMPLATIVE_APP_SPECIFIC_PASSWORD,
+      teamId: process.env.APPLE_TEAM_ID,
+    },
   },
   rebuildConfig: {},
   makers: [
@@ -36,6 +49,27 @@ module.exports = {
     {
       name: '@electron-forge/plugin-auto-unpack-natives',
       config: {},
+    },
+    {
+      name: '@electron-forge/plugin-webpack',
+      config: {
+        mainConfig: './webpack.main.config.js',
+        devContentSecurityPolicy: "connect-src 'self' * 'unsafe-eval'",
+        renderer: {
+          nodeIntegration: true,
+          config: './webpack.renderer.config.js',
+          entryPoints: [
+            {
+              html: './src/index.html',
+              js: './src/renderer.js',
+              name: 'main_window',
+              preload: {
+                js: './src/preload.js',
+              },
+            },
+          ],
+        },
+      },
     },
   ],
   publishers: [

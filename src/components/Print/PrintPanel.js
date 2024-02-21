@@ -2,8 +2,8 @@ import React from "react";
 import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 import "./PrintPanel.css"
 import CreatePrintoutButton from "./CreatePrintoutButton";
-const axios = window.require("axios")
-const fs = window.require("fs")
+import axios from "axios"
+const fs = require("fs")
 
 export default class PrintPanel extends React.Component {   
     state={

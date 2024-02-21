@@ -7,7 +7,7 @@ import AnimatePanel from './Animate/AnimatePanel';
 import UploadPanel from './Upload/UploadPanel';
 import PlanPanel from './Plan/PlanPanel';
 import PlaytestPanel from './Playtest/PlaytestPanel';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import {HashRouter, Routes, Route } from "react-router-dom";
 import CreatePanel from "./Create/CreatePanel";
 import { TOP_NAVBAR_ITEMS } from "./Routes";
 import { TabbedFile } from "./Edit/TabbedFile";
@@ -15,8 +15,8 @@ import TemplativeAccessTools from "./TemplativeAccessTools";
 import '../App.css';
 import FeedbackPanel from "./Feedback/FeedbackPanel";
 
-const path = window.require("path");
-const fs = window.require("fs/promises");
+const path = require("path");
+const fs = require("fs/promises");
 
 export default class EditProjectView extends React.Component {
   
@@ -279,42 +279,42 @@ export default class EditProjectView extends React.Component {
         this.setState({tabbedFiles: newTabbedFiles}, ()=>this.checkForCurrentTabRemoved());
     }
     render() {
-        return <BrowserRouter>
+        return <HashRouter>
             <TopNavbar topNavbarItems={TOP_NAVBAR_ITEMS} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
             <Routes>
-            <Route path='/plan' element={ <PlanPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
-            <Route path='/create' element={ <CreatePanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
-            <Route path='/' element={ 
-                <EditPanel 
-                    italicsTabFilepath={this.state.italicsTabFilepath}
-                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                    tabbedFiles={this.state.tabbedFiles}
-                    currentFileType={this.state.currentFileType}
-                    currentFilepath={this.state.currentFilepath}
-                    fileContents={this.state.fileContents}
-                    closeAllTabsButIndexAsyncCallback={this.closeAllTabsButIndexAsync}
-                    closeAllTabsAsyncCallback={this.closeAllTabsAsync}
-                    closeTabsToRightAsyncCallback={this.closeTabsToRightAsync}
-                    closeTabsToLeftAsyncCallback={this.closeTabsToLeftAsync}
-                    closeTabAtIndexAsyncCallback={this.closeTabAtIndexAsync}
-                    checkForCurrentTabRemovedCallback={this.checkForCurrentTabRemoved}
-                    clearViewedFileCallback={this.clearViewedFile}
-                    clickIntoFileCallback={this.clickIntoFile}
-                    updateViewedFileUsingTabAsyncCallback={this.updateViewedFileUsingTabAsync}
-                    updateViewedFileUsingExplorerAsyncCallback={this.updateViewedFileUsingExplorerAsync}
-                    saveFileAsyncCallback={this.saveFileAsync}
-                    closeTabIfOpenByFilepathCallback={this.closeTabIfOpenByFilepath}
+                <Route path='/plan' element={ <PlanPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+                <Route path='/create' element={ <CreatePanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+                <Route path='/' element={ 
+                    <EditPanel 
+                        italicsTabFilepath={this.state.italicsTabFilepath}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        tabbedFiles={this.state.tabbedFiles}
+                        currentFileType={this.state.currentFileType}
+                        currentFilepath={this.state.currentFilepath}
+                        fileContents={this.state.fileContents}
+                        closeAllTabsButIndexAsyncCallback={this.closeAllTabsButIndexAsync}
+                        closeAllTabsAsyncCallback={this.closeAllTabsAsync}
+                        closeTabsToRightAsyncCallback={this.closeTabsToRightAsync}
+                        closeTabsToLeftAsyncCallback={this.closeTabsToLeftAsync}
+                        closeTabAtIndexAsyncCallback={this.closeTabAtIndexAsync}
+                        checkForCurrentTabRemovedCallback={this.checkForCurrentTabRemoved}
+                        clearViewedFileCallback={this.clearViewedFile}
+                        clickIntoFileCallback={this.clickIntoFile}
+                        updateViewedFileUsingTabAsyncCallback={this.updateViewedFileUsingTabAsync}
+                        updateViewedFileUsingExplorerAsyncCallback={this.updateViewedFileUsingExplorerAsync}
+                        saveFileAsyncCallback={this.saveFileAsync}
+                        closeTabIfOpenByFilepathCallback={this.closeTabIfOpenByFilepath}
 
-                /> 
-            }/>
-            <Route path='/render' element={ <RenderPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
-            <Route path='/print' element={ <PrintPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
-            <Route path='/playtest' element={ <PlaytestPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
-            <Route path='/upload' element={ <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
-            <Route path='/animate' element={ <AnimatePanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
-            <Route path='/feedback' element={ <FeedbackPanel/>}/>
+                    /> 
+                }/>
+                <Route path='/render' element={ <RenderPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+                <Route path='/print' element={ <PrintPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+                <Route path='/playtest' element={ <PlaytestPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+                <Route path='/upload' element={ <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+                <Route path='/animate' element={ <AnimatePanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+                <Route path='/feedback' element={ <FeedbackPanel/>}/>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
         
     }
 }

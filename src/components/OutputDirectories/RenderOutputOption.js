@@ -1,7 +1,7 @@
 import React from "react";
 import "../Render/RenderPanel.css"
-const {shell} = window.require('electron')
-const path = window.require("path")
+const {shell} = require('electron')
+const path = require("path")
 
 export default class RenderOutputOption extends React.Component {  
     state = {

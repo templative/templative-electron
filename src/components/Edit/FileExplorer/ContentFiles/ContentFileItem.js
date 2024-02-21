@@ -4,8 +4,8 @@ import RenameableFile from "./RenameableFile";
 
 import "./ContentFiles.css"
 
-const path = window.require("path");
-const shell = window.require('electron').shell;
+const path = require("path");
+const shell = require('electron').shell;
 
 export default class ContentFileItem extends React.Component {   
     state = {

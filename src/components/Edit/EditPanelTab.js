@@ -10,8 +10,8 @@ import componentComposeIcon from "./Icons/componentComposeIcon.svg"
 import pieceIcon from "./Icons/pieceIcon.svg"
 import rulesIcon from "./Icons/rulesIcon.svg"
 
-const path = window.require("path");
-const shell = window.require('electron').shell;
+const path = require("path");
+const shell = require('electron').shell;
 
 export default class EditPanelTab extends React.Component {       
     state = {

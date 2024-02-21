@@ -2,7 +2,7 @@ import React from "react";
 import OutputExplorer from "./OutputExplorer"
 import RenderButton from "./RenderButton"
 import "./RenderPanel.css"
-import {socket} from "../../socket"
+import socket from "../../socket"
 import { LimitedHeightConsole } from "../SocketedConsole/LoggedMessages"
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";

@@ -1,11 +1,11 @@
 const { app, BrowserWindow, Menu } = require('electron')
-const {mainMenu} = require("./src/menuMaker")
-const {listenForRenderEvents} = require("./src/listenForRenderEvents")
-const serverEnvironmentConfiguration = require("./src/serverEnvironmentConfiguration")
-const {log, error, warn} = require("./src/logger")
-const ServerManager = require("./src/serverManager")
-const ServerRunner = require("./src/serverRunner")
-const { setupAppUpdateListener } = require("./src/appUpdater")
+const {mainMenu} = require("./app/menuMaker")
+const {listenForRenderEvents} = require("./app/listenForRenderEvents")
+const serverEnvironmentConfiguration = require("./app/serverEnvironmentConfiguration")
+const {log, error, warn} = require("./app/logger")
+const ServerManager = require("./app/serverManager")
+const ServerRunner = require("./app/serverRunner")
+const { setupAppUpdateListener } = require("./app/appUpdater")
 
 if (require('electron-squirrel-startup')) app.quit();
 app.setName('Templative');
@@ -19,9 +19,8 @@ const createWindow = () => {
       title: "Templative",
       webPreferences: {
         nodeIntegration: true,
-        // preload: "absPath",
-        devTools: true,
         contextIsolation: false,
+        devTools: true,
         webSecurity: false,
       },
       backgroundColor: '#282c34',
@@ -29,7 +28,8 @@ const createWindow = () => {
     })
     
     Menu.setApplicationMenu(mainMenu);
-    templativeWindow.loadURL('http://localhost:3000');
+    templativeWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
+    templativeWindow.webContents.openDevTools();
     templativeWindow.on("close", async () => {
         await shutdown()
     })
@@ -56,8 +56,7 @@ const createStartupWindow = () => {
   return startupWindow
 }
 var servers = [
-    new ServerRunner("templativeServer", 8080, serverEnvironmentConfiguration.templativeServerCommandsByEnvironment),
-    new ServerRunner("reactServer", 3000, serverEnvironmentConfiguration.reactServerCommandsByEnvironment),
+  new ServerRunner("templativeServer", 8080, serverEnvironmentConfiguration.templativeServerCommandsByEnvironment),
 ]
 var serverManager = new ServerManager(servers)
 
@@ -82,7 +81,7 @@ const onReady = async () => {
       return
     }
     createWindow()
-    // setupAppUpdateListener()
+    setupAppUpdateListener()
     listenForRenderEvents()
   }
   catch(err) {

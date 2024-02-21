@@ -1,4 +1,4 @@
-const { channels } = require("../../src/shared/constants");
+const { channels } = require("../shared/constants");
 const { Menu, BrowserWindow  } = require('electron')
 const { createProject, openFolder } = require("./dialogMaker")
 

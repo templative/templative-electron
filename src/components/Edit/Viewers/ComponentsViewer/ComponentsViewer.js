@@ -4,7 +4,7 @@ import TemplativeAccessTools from "../../../TemplativeAccessTools";
 
 import "./ComponentViewer.css"
 
-const path = window.require("path")
+const path = require("path")
 
 const sortComponents = (a, b) => {
     var aCode = `${a.type}${a.name}`

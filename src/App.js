@@ -5,7 +5,7 @@ import StartView from "./components/StartView";
 import EditProjectView from "./components/EditProjectView";
 import './App.css';
 import {writeLastOpenedProject, getLastProjectDirectory} from "./settings/SettingsManager"
-const { ipcRenderer } = window.require('electron');
+const { ipcRenderer } = require('electron');
 
 class App extends React.Component {
   
