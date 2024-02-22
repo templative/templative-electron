@@ -1,0 +1,6 @@
+- [Signing Windows](https://www.electronforge.io/guides/code-signing/code-signing-windows)
+- [Sectigo Order](https://secure.trust-provider.com/products/PostPayment1a?SID=Imw0pRpVM3jUyyWw&orderNumber=2136736837&certificateID=)
+- [Sign my Code Order](https://signmycode.com/dashboard/order-detail?odid=B1XX)
+- [Sectigo Fix Case](https://mail.google.com/mail/u/1/#inbox/FMfcgzGxRndgjFzTHZFDcJVVQFdJfSWT)
+- [Valid Yubikeys](https://support.yubico.com/hc/en-us/articles/360016614840-Code-Signing-with-the-YubiKey-on-Windows?gad_source=1&gclid=CjwKCAiArLyuBhA7EiwA-qo80Hjbh5am6MvnpYjOnFS1P-hPFOZCvLXlYZket7A2Tu8TA-bfY3qXQhoCYI0QAvD_BwE)
+- [Adding Yubikey Certificate](https://www.youtube.com/watch?v=4pO_-Yw_hQY)
