@@ -3,13 +3,26 @@
 
 - Create an Apple Developer Account
 - Install XCode
-- [What is app signing?](https://help.apple.com/xcode/mac/current/#/dev3a05256b8)
-- [Code Signing](https://help.apple.com/xcode/mac/current/#/devfbe995ebf)
 - Create a [Signing Request](https://developer.apple.com/help/account/create-certificates/create-a-certificate-signing-request). Save it to disk.
-- Create a [Developer Id Certificates](https://developer.apple.com/help/account/create-certificates/create-developer-id-certificates/) using the CSRequest generated above.
+  - Launch Keychain Access located in /Applications/Utilities.
+  - Choose Keychain Access > Certificate Assistant > Request a Certificate from a Certificate Authority.
+  - In the Certificate Assistant dialog, enter an email address in the User Email Address field.
+  - In the Common Name field, enter a name for the key (for example, Gita Kumar Dev Key).
+  - Leave the CA Email Address field empty.
+  - Choose “Saved to disk,” then click Continue.
+- Create a [Developer Id Certificate](https://developer.apple.com/help/account/create-certificates/create-developer-id-certificates/)
+  - In [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources), click Certificates in the sidebar.
+  - On the top left, click the add button (+).
+  - Under Software, select Developer ID, then click Continue.
+  - Developer ID Application: A certificate used to sign a Mac app.
+  - Click Choose File.
+  - In the dialog that appears, select the certificate request file (a file with a .certSigningRequest file extension), then click Choose.
+  - Click Continue.
+  - Click Download.
+  - The certificate file (a file with a .cer file extension) appears in your Downloads folder.
+  - To install the certificate in your keychain, double-click the downloaded certificate file. The certificate appears in the My Certificates category in Keychain Access.
 - Download it, double click, add it to your keychain at the System level.
 - Confirm its there under your LLC using `security find-identity -p codesigning -v`
-- Templative uses Python 
 
 # Notarizing
 
@@ -50,6 +63,8 @@ packagerConfig: {
 ```
 
 Reference:
+- [What is app signing?](https://help.apple.com/xcode/mac/current/#/dev3a05256b8)
+- [Code Signing](https://help.apple.com/xcode/mac/current/#/devfbe995ebf)
 - [Getting it to work with continuous integration](https://shipshape.io/blog/signing-electron-apps-with-github-actions/)
 - [How to Create Developer Certificates](https://developer.apple.com/help/account/create-certificates/create-developer-id-certificates/)
 - [Creating a Certificate Request](https://developer.apple.com/help/account/create-certificates/create-a-certificate-signing-request)
