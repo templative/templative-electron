@@ -16,7 +16,7 @@ const createWindow = () => {
     templativeWindow = new BrowserWindow({
       width: 1920,
       height: 1080,
-      title: "Templative",
+      title: `Templative v${app.getVersion()}`,
       webPreferences: {
         nodeIntegration: true,
         contextIsolation: false,
@@ -29,7 +29,7 @@ const createWindow = () => {
     
     Menu.setApplicationMenu(mainMenu);
     templativeWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
-    templativeWindow.webContents.openDevTools();
+    // templativeWindow.webContents.openDevTools();
     templativeWindow.on("close", async () => {
         await shutdown()
     })
