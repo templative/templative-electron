@@ -14,7 +14,6 @@
     "templative": "bash ./build.sh templative",
     "templative-build": "bash ./build.sh createTemplativeApp",
     "make": "bash ./build.sh make",
-    "osx-certification": "bash ./build.sh pullCertifications",
     "package": "bash ./build.sh package",
     "publish": "bash ./build.sh publish",
     "fullPackage": "bash ./build.sh fullPackage",
