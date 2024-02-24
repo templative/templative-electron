@@ -1,7 +1,7 @@
 {
   "name": "Templative",
   "description": "Electron frontend for the Templative CLI.",
-  "version": "1.0.47",
+  "version": "1.0.48",
   "private": true,
   "main": ".webpack/main",
   "author": {
@@ -16,6 +16,9 @@
     "make": "bash ./build.sh make",
     "package": "bash ./build.sh package",
     "publish": "bash ./build.sh publish",
+    "makeFromPackage": "bash ./build.sh makeFromPackage",
+    "createPublishDryRun": "bash ./build.sh createPublishDryRun",
+    "publishDryRun": "bash ./build.sh publishDryRun",
     "fullPackage": "bash ./build.sh fullPackage",
     "fullMake": "bash ./build.sh fullMake",
     "fullPublish": "bash ./build.sh fullPublish"

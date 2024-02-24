@@ -34,8 +34,17 @@ function package() {
 function make() {
     electron-forge make
 }
+function makeFromPackage() {
+    electron-forge make --skip-package
+}
 function publish() {
     electron-forge publish
+}
+function createPublishDryRun() {
+    electron-forge publish --dry-run
+}
+function publishDryRun() {
+    electron-forge publish --from-dry-run
 }
 
 function fullPackage() {

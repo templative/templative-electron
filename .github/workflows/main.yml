@@ -75,8 +75,38 @@ jobs:
       - name: Use debugging electron
         run: export DEBUG=electron*
 
-      - name: Create Electron Application and Upload it S3
-        run: npm run publish
+      - name: Create Package
+        run: npm run package
+        env: 
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_ID_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+
+      - name: Make Distributable
+        run: npm run makeFromPackage
+        env: 
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_ID_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+
+      - name: Create Publish Dry Run
+        run: npm run createPublishDryRun
+        env: 
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_ID_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+
+      - name: Publish Dry Run
+        run: npm run publishDryRun
         env: 
           AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
