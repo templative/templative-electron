@@ -5,6 +5,26 @@ permissions:
   contents: write
 
 jobs:
+  certifications:
+    if: true
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - macos-latest
+        node:
+          - 18
+    steps:
+      - uses: actions/checkout@v2
+      - name: Add OSX Certifications
+        run: |
+          chmod +x build.sh
+          npm run osx-certification
+        env:
+          CERTIFICATE_OSX_APPLICATION: ${{secrets.CERTIFICATE_OSX_APPLICATION}}
+          CERTIFICATE_PASSWORD: ${{secrets.CERTIFICATE_PASSWORD}}
+
   templative:
     if: false
     runs-on: ${{ matrix.os }}

@@ -48,5 +48,17 @@ function fullPublish() {
     createTemplativeApp && publish
 }
 
+function pullCertifications() {
+    KEY_CHAIN=build.keychain
+    CERTIFICATION_P12=certificate.p12
+    echo $CERTIFICATION_OSX_APPLICATION | base64 --decode > $CERTIFICATE_P12
+    security create-keychain -p actions $KEY_CHAIN
+    security default-keychain -s $KEY_CHAIN
+    security unlock-keychain -p actions $KEY_CHAIN
+    security import $CERTIFICATE_P12 -k $KEY_CHAIN -P $CERTIFICATE_PASSWORD -T /usr/bin/codesign;
+    secruity set-key-partition-list -S apple-tool:,apple: -s -k actions $KEY_CHAIN
+    rm -fr *.p12
+}
+
 # Run a function name in the context of this script
 eval "$@"
