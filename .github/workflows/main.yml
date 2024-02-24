@@ -64,9 +64,6 @@ jobs:
       - name: Install Node Packages
         run: npm install
 
-      - name: Build React Files
-        run: npm run react-build
-
       - name: get-npm-version
         id: package-version
         shell: bash
