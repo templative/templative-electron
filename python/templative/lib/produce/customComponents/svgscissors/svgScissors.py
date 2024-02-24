@@ -3,6 +3,7 @@ from xml.etree import ElementTree
 from aiofile import AIOFile
 import svgmanip
 import svgutils
+import sys
 
 from templative.lib.componentInfo import COMPONENT_INFO
 from templative.lib.manage.models.produceProperties import ProduceProperties
@@ -275,8 +276,20 @@ async def exportSvgToImage(filepath, imageSizePixels, name, outputDirectory):
     absoluteOutputDirectory = os.path.abspath(outputDirectory)
     pngFilepath = os.path.join(absoluteOutputDirectory, "%s.png" % (name))
     
+    inkscapePaths = {
+        "win32": "C:/Program Files/Inkscape/bin/inkscape.exe",
+        'darwin': "/Applications/Inkscape.app/Contents/MacOS/inkscape"
+    }
+    if not sys.platform in inkscapePaths:
+        print("No inkscape version for this os.")
+        return
+    inkscapePath = inkscapePaths[sys.platform]
+    if not os.path.isfile(inkscapePath):
+        print("Inkscape missing from path: %s" % inkscapePath)
+        return
+    
     createPngCommands = [
-        "inkscape", 
+        '"%s"' % inkscapePath, 
         absoluteSvgFilepath,
         '--export-filename=%s' % pngFilepath, 
         # "--with-gui",
