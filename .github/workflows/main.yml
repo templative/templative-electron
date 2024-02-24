@@ -58,6 +58,9 @@ jobs:
           PACKAGE_VERSION=$(npm pkg get version --workspaces=false | tr -d \")
           echo $PACKAGE_VERSION
           echo "current-version=$PACKAGE_VERSION" >> "$GITHUB_OUTPUT"
+      
+      - name: Use debugging electron
+        run: export DEBUG=electron*
 
       - name: Create Electron Application and Upload it S3
         run: npm run publish
