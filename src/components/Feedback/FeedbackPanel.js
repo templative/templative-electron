@@ -1,83 +1,110 @@
 import React from "react";
 import "./FeedbackPanel.css"
+import FeedbackForm from "./FeedbackForm";
+import FeedbackViewer from "./FeedbackViewer";
+import FeedbackPostChoices from "./FeedbackPostChoices";
+
+const axios = require("axios");
+
+const FeedbackMode = {
+    "VIEWING": "VIEWING",
+    "POSTING": "POSTING"
+}
 
 export default class FeedbackPanel extends React.Component {   
     constructor(props) {
         super(props);
         this.fileInput = React.createRef();
-      }
-    post = () => {
-        console.log(this.fileInput.current.files)
-        console.log(this.state)
-    }
+    }  
     state = {
-        feedbackType: "Bug",
-        postBody:"",
-        title:""
+        feedbackPosts: [],
+        selectedFeedbackPost: undefined,
+        feedbackMode: FeedbackMode.POSTING,
+        body:"",
+        title:"",
     }
-    updateTitle = (event) => {
+    componentDidMount = async () => {
+        try {
+            var response = await axios.get("https://www.templative.net/feedback?userGuid=oliver")
+            this.setState({feedbackPosts: response.data.feedback})
+        }
+        catch(error) {
+            console.error(error)
+        }
+        
+    }
+    uploadFeedbackAsync = async () => {
+        // const files = this.fileInput.current.files
+
+        axios.post("https://www.templative.net/feedback", {
+            title: this.state.title,
+            body: this.state.body,
+            userGuid: "oliver"
+        })
+        try {
+            var response = await axios.get("https://www.templative.net/feedback?userGuid=oliver")
+            this.fileInput.current.value = []
+            this.setState({
+                feedbackPosts: response.data.feedback, 
+                title: "",
+                body: "",
+            })
+        }
+        catch(error) {
+            console.error(error)
+        }
+        
+    }
+    updatePostTitle = (event) => {
         var value = event.target.value
         this.setState({title: value})
     }
     updatePostBody = (event) => {
         var value = event.target.value
-        this.setState({postBody: value})
+        this.setState({body: value})
     }
-    updateFeedbackType = (event) => {
-        var value = event.target.value
-        this.setState({feedbackType: value})
+    createFeedbackPost = () => {
+        this.setState({
+            feedbackMode: FeedbackMode.POSTING,
+            selectedFeedbackPost: undefined
+        })
+    }
+    selectFeedbackPost = (feedbackPost) => {
+        this.setState({
+            feedbackMode: FeedbackMode.VIEWING,
+            selectedFeedbackPost: feedbackPost
+        })
     }
     render() {
         return <div className='mainBody row'>
             <div className="col-2 past-feedback-col">
-                
+                <button type="button" 
+                    className="btn btn-outline-secondary create-feedback-post-button" 
+                    onClick={this.createFeedbackPost}
+                    disabled={this.state.feedbackMode===FeedbackMode.POSTING}
+                >
+                    Create Feedback Post
+                </button>
+                <FeedbackPostChoices 
+                    selectPostCallback={this.selectFeedbackPost}
+                    feedbackPosts={this.state.feedbackPosts} 
+                    selectedFeedbackPost={this.state.selectedFeedbackPost}
+                />
             </div>
             <div className="col">
-                <div className="feedback">
-                    <p>Thanks for providing feedback!</p>
-                    <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
-                        <span className="input-group-text">Title</span>
-                        <input 
-                            type="text" 
-                            className="form-control" 
-                            onChange={this.updateTitle} 
-                            placeholder="Fix the / Add a / Remove every"
-                            value={this.state.title}
-                        />
-                        <select 
-                            value={this.state.feedbackType} 
-                            onChange={this.updateFeedbackType} 
-                            className="form-select scope-select no-left-border"
-                        >
-                            <option value="feedback">Feedback</option>
-                            <option value="bug">Bug</option>
-                            <option value="feature">Feature Request</option>
-                        </select>
-                    </div>
-                    <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
-                        <textarea 
-                            className="form-control"
-                            onChange={this.updatePostBody} 
-                            rows="3"
-                            placeholder="I think that..."
-                        >
-                            {this.state.textArea}
-                        </textarea>
-                    </div>
-                    <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
-                        <input className="form-control" type="file" id="formFile" data-bs-theme="dark" ref={this.fileInput} multiple="multiple" />
-                    </div>
-                    <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
-                        <button 
-                            type="submit"
-                            disabled={false}
-                            onClick={this.post}
-                            className="btn btn-outline-secondary btn-lg btn-block"                            
-                        >
-                            Post
-                        </button>
-                    </div>
-                </div>
+                { this.state.feedbackMode === FeedbackMode.POSTING && 
+                    <FeedbackForm 
+                        title={this.state.title}
+                        body={this.state.body}
+                        fileInput={this.fileInput}
+                        updatePostTitleCallback={this.updatePostTitle}
+                        updatePostBodyCallback={this.updatePostBody}
+                        uploadFeedbackAsyncCallback={this.uploadFeedbackAsync}
+                    />
+                }
+                { this.state.feedbackMode === FeedbackMode.VIEWING && 
+                    <FeedbackViewer post={this.state.selectedFeedbackPost}/>
+                }
             </div>
         </div>
     }
