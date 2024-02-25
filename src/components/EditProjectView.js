@@ -55,6 +55,10 @@ export default class EditProjectView extends React.Component {
         return result;
     }
     updateViewedFileUsingTabAsync = async (filetype, filepath) => {
+        var fileExists = await EditProjectView.doesFileExist(filepath)
+        if (!fileExists) {
+            return
+        }
         this.setState({
             currentFileType: filetype,
             currentFilepath: filepath,
@@ -64,6 +68,10 @@ export default class EditProjectView extends React.Component {
         })
     }
     updateViewedFileUsingExplorerAsync = async (filetype, filepath) => {
+        var fileExists = await EditProjectView.doesFileExist(filepath)
+        if (!fileExists) {
+            return
+        }
         const hasItalicsFile = this.state.italicsTabFilepath !== undefined
         const isAddingItalicsFile = this.state.italicsTabFilepath === filepath
         const isSolidifyingItalicsTab = hasItalicsFile && isAddingItalicsFile
