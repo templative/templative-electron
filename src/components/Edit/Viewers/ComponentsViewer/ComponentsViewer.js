@@ -1,10 +1,10 @@
 import React from "react";
 import ComponentItemEditable from "./ComponentItemEditable"
 import TemplativeAccessTools from "../../../TemplativeAccessTools";
-
 import "./ComponentViewer.css"
 
 const path = require("path")
+const { setIntervalAsync, clearIntervalAsync } = require('set-interval-async');
 
 const sortComponents = (a, b) => {
     var aCode = `${a.type}${a.name}`
@@ -20,34 +20,40 @@ const sortComponents = (a, b) => {
 
 export default class ComponentsViewer extends React.Component {   
     state = {
-        components: [],
-        hasLoaded: false,
+        components: undefined,
         floatingName: undefined,
         floatingNameIndex: undefined
     }
 
-    saveDocumentAsync = async () => {
-        if(!this.state.hasLoaded) {
-            return
-        }
-        var newFileContents = JSON.stringify(this.state.components, null, 4)
-
-        var componentComposeFilepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json")
-        await this.props.saveFileAsyncCallback(componentComposeFilepath, newFileContents)
+    saveDocumentAsync = async (filepath, components) => {
+        var newFileContents = JSON.stringify(components, null, 4)
+        await this.props.saveFileAsyncCallback(filepath, newFileContents)
     }
-    componentDidMount = async () => {
-        var components = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
-        this.setState({components: components, hasLoaded: true})
+    autosave = async () => {
+        var filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json")
+        await this.saveDocumentAsync(filepath, this.state.components)
+    }
+    componentDidMount = async () => { 
+        this.setState({components: await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")})
+        this.saveIntervalId = setIntervalAsync(this.autosave, 10*1000)
     }
     componentDidUpdate = async (prevProps, prevState) => {
         if (prevProps.templativeRootDirectoryPath === this.props.templativeRootDirectoryPath) {
             return
         }
-        var components = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
-        this.setState({components: components})
+        var filepath = path.join(prevProps.templativeRootDirectoryPath, "component-compose.json")
+        await this.saveDocumentAsync(filepath, this.state.components)
+
+        this.setState({
+            components: await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
+        })
     }
     componentWillUnmount = async () => {
-        await this.saveDocumentAsync()
+        if (this.saveIntervalId !== undefined) {
+            await clearIntervalAsync(this.saveIntervalId)
+            this.saveIntervalId = undefined
+        }
+        await this.autosave()
     }
 
     updateComponentField(index, field, value) {
@@ -94,19 +100,21 @@ export default class ComponentsViewer extends React.Component {
 
     render() {
         var componentItems = []
-        this.state.components.forEach((component, index) => {
-            var isFloatingName = this.state.floatingNameIndex === index
-            componentItems.push(<ComponentItemEditable 
-                key={component.name} 
-                component={component} 
-                deleteComponentCallback={()=> this.deleteComponent(index)}
-                duplicateComponentCallback={() => this.duplicateComponent(index)}
-                isFloatingName={isFloatingName}
-                floatingName={this.state.floatingName}
-                updateFloatingNameCallback={(value) => this.updateFloatingName(index, value)}
-                releaseFloatingNameCallback={() => this.releaseFloatingName()}
-                updateComponentFieldCallback={(field, value)=> {this.updateComponentField(index, field, value)}}/>)
-        });
+        if (this.state.components !== undefined) {
+            this.state.components.forEach((component, index) => {
+                var isFloatingName = this.state.floatingNameIndex === index
+                componentItems.push(<ComponentItemEditable 
+                    key={component.name} 
+                    component={component} 
+                    deleteComponentCallback={()=> this.deleteComponent(index)}
+                    duplicateComponentCallback={() => this.duplicateComponent(index)}
+                    isFloatingName={isFloatingName}
+                    floatingName={this.state.floatingName}
+                    updateFloatingNameCallback={(value) => this.updateFloatingName(index, value)}
+                    releaseFloatingNameCallback={() => this.releaseFloatingName()}
+                    updateComponentFieldCallback={(field, value)=> {this.updateComponentField(index, field, value)}}/>)
+            });
+        }
 
         return <div className="row componentViewer">
             <div className="col">

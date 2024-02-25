@@ -3,16 +3,21 @@ const path = require("path");
 
 export default class TemplativeAccessTools {
 
-    static readFileContentsAsJsonAsync = async (templativeRootDirectoryPath, fileName) => {
-        var filepath = path.join(templativeRootDirectoryPath, fileName);
+    static loadFileContentsAsJson = async (filepath) => {
         var fileContentsBuffer = await fs.readFile(filepath, 'utf8')     
         var fileContents = fileContentsBuffer.toString()
         if (fileContents.trim() === "") {
-            console.error(`${fileName} is invalid json: ${fileContents.trim()}`)
+            console.error(`${filepath} is invalid json: ${fileContents.trim()}`)
             return undefined;
         }        
         return JSON.parse(fileContents);
     }
+
+    static readFileContentsAsJsonAsync = async (templativeRootDirectoryPath, fileName) => {
+        var filepath = path.join(templativeRootDirectoryPath, fileName);
+        return await this.loadFileContentsAsJson(filepath)
+    }
+    
     static readFileContentsAsync = async (templativeRootDirectoryPath, fileName) => {
         var filepath = path.join(templativeRootDirectoryPath, fileName);      
         var fileContentsBuffer = await fs.readFile(filepath, 'utf8')      

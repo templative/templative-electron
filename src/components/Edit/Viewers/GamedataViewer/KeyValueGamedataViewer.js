@@ -1,7 +1,9 @@
 import React from "react";
 import KeyValueInput from "./KeyValueInput"
-
 import "./GamedataViewer.css"
+import TemplativeAccessTools from "../../../TemplativeAccessTools";
+
+const { setIntervalAsync, clearIntervalAsync } = require('set-interval-async');
 
 export default class KeyValueGamedataViewer extends React.Component {   
     state = {
@@ -10,13 +12,16 @@ export default class KeyValueGamedataViewer extends React.Component {
         currentUpdateValue: undefined
     }
     componentDidUpdate = async (prevProps) => {
-        if (this.props.currentFilepath === prevProps.currentFilepath) {
+        if (this.props.filepath === prevProps.filepath) {
           return;
         }
-        await this.saveDocumentAsync(prevProps.currentFilepath, this.state.gamedataFile)
+        console.log(prevProps.filepath, this.state.gamedataFile)
+        await this.saveDocumentAsync(prevProps.filepath, this.state.gamedataFile)
 
+        const newFileContents = await TemplativeAccessTools.loadFileContentsAsJson(this.props.filepath)
+        console.log(this.props.filepath, newFileContents)
         this.setState({
-            gamedataFile: this.props.fileContents
+            gamedataFile: newFileContents
         })
     }
 
@@ -28,8 +33,21 @@ export default class KeyValueGamedataViewer extends React.Component {
         }
         await this.props.saveFileAsyncCallback(filepath, newFileContents)
     }
+    autosave = async () => {
+        await this.saveDocumentAsync(this.props.filepath, this.state.gamedataFile)
+    }
+    componentDidMount = async () => {
+        this.setState({
+            gamedataFile: await TemplativeAccessTools.loadFileContentsAsJson(this.props.filepath)
+        })
+        this.saveIntervalId = setIntervalAsync(this.autosave, 10*1000)
+    }
     componentWillUnmount = async () => {
-        await this.saveDocumentAsync(this.props.currentFilepath, this.state.gamedataFile)
+        if (this.saveIntervalId !== undefined) {
+            await clearIntervalAsync(this.saveIntervalId)
+            this.saveIntervalId = undefined
+        }
+        await this.autosave()
     }
     addBlankKeyValuePair() {
         var newGamedataFileContents = this.state.gamedataFile
@@ -76,19 +94,23 @@ export default class KeyValueGamedataViewer extends React.Component {
         this.updateKey(this.state.trackedKey, this.state.currentUpdateValue)
     }
     render() {
-        var keys = Object.keys(this.state.gamedataFile)
-        keys = keys.sort()
-        var rows = keys.map((key) => {
-            return <KeyValueInput 
-                key={key}
-                gamedataKey={key} value={this.state.gamedataFile[key]} 
-                trackedKey={this.state.trackedKey} currentUpdateValue={this.state.currentUpdateValue}
-                trackChangedKeyCallback={(key, value) => this.trackChangedKey(key, value)}
-                updateValueCallback={(key, value)=>this.updateValue(key, value)}
-                removeKeyValuePairCallback={(key)=>this.removeKeyValuePair(key)}
-                freeTrackedChangedKeyCallback={()=> this.freeTrackedChangedKey()}
-            />
-        });
+        var rows = []
+        if (this.state.gamedataFile !== undefined) {
+            var keys = Object.keys(this.state.gamedataFile)
+            keys = keys.sort()
+            rows = keys.map((key) => {
+                return <KeyValueInput 
+                    key={key}
+                    gamedataKey={key} value={this.state.gamedataFile[key]} 
+                    trackedKey={this.state.trackedKey} currentUpdateValue={this.state.currentUpdateValue}
+                    trackChangedKeyCallback={(key, value) => this.trackChangedKey(key, value)}
+                    updateValueCallback={(key, value)=>this.updateValue(key, value)}
+                    removeKeyValuePairCallback={(key)=>this.removeKeyValuePair(key)}
+                    freeTrackedChangedKeyCallback={()=> this.freeTrackedChangedKey()}
+                />
+            });
+        }
+        
         
         return <div className="row tableContainer">
             <div className="col">

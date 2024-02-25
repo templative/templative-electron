@@ -3,6 +3,9 @@ import TextReplacement from "./ArtdataTypes/TextReplacement";
 import StyleUpdate from "./ArtdataTypes/StyleUpdate";
 import Overlay from "./ArtdataTypes/Overlay";
 import ArtdataAddButton from "./ArtdataAddButton"
+import TemplativeAccessTools from "../../../TemplativeAccessTools";
+
+const { setIntervalAsync, clearIntervalAsync } = require('set-interval-async');
 
 const DEFAULT_ARTDATA_ITEMS = {
     "overlays": {
@@ -18,17 +21,21 @@ const DEFAULT_ARTDATA_ITEMS = {
 
 export default class ArtdataViewer extends React.Component {   
     state = {
-        artdataFile: this.props.fileContents
+        artdataFile: undefined,
+        hasLoaded: false
     }
     componentDidUpdate = async (prevProps) => {
-        if (this.props.currentFilepath === prevProps.currentFilepath) {
+        if (this.props.filepath === prevProps.filepath) {
             return;
         }
-        await this.saveDocumentAsync(prevProps.currentFilepath, this.state.artdataFile)
+        await this.saveDocumentAsync(prevProps.filepath, this.state.artdataFile)
 
         this.setState({
-            artdataFile: this.props.fileContents
+            artdataFile: await TemplativeAccessTools.loadFileContentsAsJson(this.props.filepath)
         })
+    }
+    autosave = async () => {
+        await this.saveDocumentAsync(this.props.filepath, this.state.artdataFile)
     }
 
     saveDocumentAsync = async (filepath, fileContents) => {
@@ -39,8 +46,18 @@ export default class ArtdataViewer extends React.Component {
         }
         await this.props.saveFileAsyncCallback(filepath, newFileContents)
     }
+    componentDidMount = async () => {
+        this.setState({
+            artdataFile: await TemplativeAccessTools.loadFileContentsAsJson(this.props.filepath)
+        })
+        this.saveIntervalId = setIntervalAsync(this.autosave, 10*1000)
+    }
     componentWillUnmount = async () => {
-        this.saveDocumentAsync(this.props.currentFilepath, this.state.artdataFile)
+        if (this.saveIntervalId !== undefined) {
+            await clearIntervalAsync(this.saveIntervalId)
+            this.saveIntervalId = undefined
+        }
+        await this.autosave()
     }
     addArtdataItem(artdataType){
         var newArtdataContents = this.state.artdataFile
@@ -66,6 +83,9 @@ export default class ArtdataViewer extends React.Component {
         })
     }
     updateTemplate(newTemplate) {
+        if (this.state.artdataFile === undefined) {
+            return
+        }
         var newArtdataContents = this.state.artdataFile
         newArtdataContents.templateFilename = newTemplate
         this.setState({
@@ -89,10 +109,13 @@ export default class ArtdataViewer extends React.Component {
     };
 
     render() {
+        var templateFilename = ""
         var overlays = []
         var textReplacements = []
         var styleUpdates = []
         if(this.state.artdataFile !== undefined) {
+            templateFilename = this.state.artdataFile.templateFilename
+
             for(var i = 0 ; i < this.state.artdataFile.overlays.length; i++){
                 overlays.push(<Overlay index={i} key={i} artdataItem={this.state.artdataFile.overlays[i]} 
                     deleteCallback={(index) => this.deleteArtdata("overlays", index)}
@@ -118,13 +141,12 @@ export default class ArtdataViewer extends React.Component {
         overlays.push(<ArtdataAddButton key="addOverlay" addArtdataCallback={()=>this.addArtdataItem("overlays")}/>)
         textReplacements.push(<ArtdataAddButton key="addTextReplacement" addArtdataCallback={()=>this.addArtdataItem("textReplacements")}/>)
         styleUpdates.push(<ArtdataAddButton key="addStyleUpdate" addArtdataCallback={()=>this.addArtdataItem("styleUpdates")}/>)
-        
         return <div className="row">
             <div className="col">
                 <div className="row">
                     <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
                     <span className="input-group-text">Template</span>
-                        <input type="text" className="form-control" onChange={(event)=>this.updateTemplate(event.target.value)} aria-label="What key to get from the scope..." value={this.state.artdataFile.templateFilename}/>
+                        <input type="text" className="form-control" onChange={(event)=>this.updateTemplate(event.target.value)} aria-label="What key to get from the scope..." value={templateFilename}/>
                     </div>
                 </div>
                 <div className="row">

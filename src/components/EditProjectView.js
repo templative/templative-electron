@@ -148,17 +148,20 @@ export default class EditProjectView extends React.Component {
             return false
         }
     }
-    saveFileAsync = async (filepath, contents) => {
+    saveFileAsync = async (filepath, stringFileContents) => {
+        if (filepath === undefined || stringFileContents === undefined) {
+            return
+        }
         var fileExists = await EditProjectView.doesFileExist(filepath)
         if (!fileExists) {
             return
         }
         var existingContents = await fs.readFile(filepath)
         var existingContent = existingContents.toString()
-        if (existingContent === contents) {
+        if (existingContent === stringFileContents) {
             return
         }
-        await fs.writeFile(filepath, contents, 'utf-8')
+        await fs.writeFile(filepath, stringFileContents, 'utf-8')
     }
     closeTabIfOpenByFilepath = (filepath) => {
         for (let index = 0; index < this.state.tabbedFiles.length; index++) {
@@ -174,11 +177,13 @@ export default class EditProjectView extends React.Component {
       var location = window.location.href
       return location.split("http://localhost:3000")[1]
     }
-    componentDidMount() {
+    
+    componentDidMount = () => {
         this.setState({
             currentRoute: this.getCurrentRoute()
         })
     }
+
     componentDidUpdate = (prevProps) => {
         if (prevProps.templativeRootDirectoryPath === this.props.templativeRootDirectoryPath) {
             return

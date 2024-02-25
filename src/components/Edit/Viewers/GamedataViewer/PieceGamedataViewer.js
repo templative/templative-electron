@@ -1,7 +1,9 @@
 import React from "react";
-
-import "./GamedataViewer.css"
 import Piece from "./Piece";
+import "./GamedataViewer.css"
+import TemplativeAccessTools from "../../../TemplativeAccessTools";
+
+const { setIntervalAsync, clearIntervalAsync } = require('set-interval-async');
 
 export default class PieceGamedataViewer extends React.Component {   
     state = {
@@ -10,13 +12,13 @@ export default class PieceGamedataViewer extends React.Component {
         currentUpdateValue: undefined
     }
     componentDidUpdate = async (prevProps) => {
-        if (this.props.currentFilepath === prevProps.currentFilepath) {
+        if (this.props.filepath === prevProps.filepath) {
             return;
         }
-        await this.saveDocumentAsync(prevProps.currentFilepath, this.state.gamedataFile)
+        await this.saveDocumentAsync(prevProps.filepath, this.state.gamedataFile)
 
         this.setState({
-            gamedataFile: this.props.fileContents
+            gamedataFile: await TemplativeAccessTools.loadFileContentsAsJson(this.props.filepath)
         })
     }
 
@@ -28,18 +30,21 @@ export default class PieceGamedataViewer extends React.Component {
         var newFileContents = JSON.stringify(fileContents, null, 4)
         await this.props.saveFileAsyncCallback(filepath, newFileContents)
     }
-    jsToCsv(javascriptObject) {
-        // https://stackoverflow.com/questions/8847766/how-to-convert-json-to-csv-format-and-store-in-a-variable
-        const keys = Object.keys(javascriptObject[0])
-        var csv = [
-            keys.join(','),
-            ...javascriptObject.map(row => keys.map(fieldName => row[fieldName]).join(','))
-        ]
-        csv = csv.join('\n')
-        return csv
+    autosave = async () => {
+        await this.saveDocumentAsync(this.props.filepath, this.state.gamedataFile)
+    }
+    componentDidMount = async () => {
+        this.setState({
+            gamedataFile: await TemplativeAccessTools.loadFileContentsAsJson(this.props.filepath)
+        })
+        this.saveIntervalId = setIntervalAsync(this.autosave, 10*1000)
     }
     componentWillUnmount = async () => {
-        await this.saveDocumentAsync(this.props.currentFilepath, this.state.gamedataFile)
+        if (this.saveIntervalId !== undefined) {
+            await clearIntervalAsync(this.saveIntervalId)
+            this.saveIntervalId = undefined
+        }
+        await this.autosave()
     }
 
     addBlankKeyValuePair = () => {
@@ -122,22 +127,25 @@ export default class PieceGamedataViewer extends React.Component {
     }
 
     render() {
-        var rows = this.state.gamedataFile.map((piece, index) => {
-            return <Piece 
-                key={index} 
-                currentUpdateValue={this.state.currentUpdateValue}
-                gamedataFile={this.state.gamedataFile} 
-                trackedKey={this.state.trackedKey} 
-                index={index} 
-                piece={piece}
-                addBlankKeyValuePairCallback={this.addBlankKeyValuePair}
-                deletePieceCallback={this.deletePiece}
-                trackChangedKeyCallback={this.trackChangedKey}
-                updateValueCallback={this.updateValue}
-                removeKeyValuePairFromAllPiecesCallback={this.removeKeyValuePairFromAllPieces}
-                freeTrackedChangedKeyCallback={this.freeTrackedChangedKey}
-            />
-        })
+        var rows = []
+        if (this.state.gamedataFile !== undefined) {
+            rows = this.state.gamedataFile.map((piece, index) => {
+                return <Piece 
+                    key={index} 
+                    currentUpdateValue={this.state.currentUpdateValue}
+                    gamedataFile={this.state.gamedataFile} 
+                    trackedKey={this.state.trackedKey} 
+                    index={index} 
+                    piece={piece}
+                    addBlankKeyValuePairCallback={this.addBlankKeyValuePair}
+                    deletePieceCallback={this.deletePiece}
+                    trackChangedKeyCallback={this.trackChangedKey}
+                    updateValueCallback={this.updateValue}
+                    removeKeyValuePairFromAllPiecesCallback={this.removeKeyValuePairFromAllPieces}
+                    freeTrackedChangedKeyCallback={this.freeTrackedChangedKey}
+                />
+            })
+        }
         
         return <div className="row">
             <div className="col">

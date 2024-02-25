@@ -54,24 +54,24 @@ export default class EditPanel extends React.Component {
                     {this.props.currentFileType === "RULES" &&
                         <RulesEditor 
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                            filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
+                            saveFileAsyncCallback={this.props.saveFileAsyncCallback}
+                        />
                     }
                     {this.props.currentFileType === "ARTDATA" &&
-                        <ArtdataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
+                        <ArtdataViewer filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
                     }
                     {this.props.currentFileType === "ART" &&
-                        <ImageViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath}/>
+                        <ImageViewer filepath={this.props.currentFilepath}/>
                     }
                     {this.props.currentFileType === "PIECE_GAMEDATA" &&
-                        <PieceGamedataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
+                        <PieceGamedataViewer filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
                     }
                     {this.props.currentFileType === "KEYVALUE_GAMEDATA" &&
-                        <KeyValueGamedataViewer filename={this.props.filename} fileContents={this.props.fileContents} currentFilepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
+                        <KeyValueGamedataViewer filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
                     }
                     {this.props.currentFileType === "COMPONENTS" && 
                         <ComponentsViewer 
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                            componentsFilepath={this.props.currentFilepath} 
                             saveFileAsyncCallback={this.props.saveFileAsyncCallback}
                         />
                     }
