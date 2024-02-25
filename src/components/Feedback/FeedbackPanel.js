@@ -5,6 +5,7 @@ import FeedbackViewer from "./FeedbackViewer";
 import FeedbackPostChoices from "./FeedbackPostChoices";
 
 const axios = require("axios");
+const {machineIdSync} = require('node-machine-id');
 
 const FeedbackMode = {
     "VIEWING": "VIEWING",
@@ -12,10 +13,10 @@ const FeedbackMode = {
 }
 
 export default class FeedbackPanel extends React.Component {   
-    constructor(props) {
-        super(props);
-        this.fileInput = React.createRef();
-    }  
+    // constructor(props) {
+    //     super(props);
+    //     this.fileInput = React.createRef();
+    // }  
     state = {
         feedbackPosts: [],
         selectedFeedbackPost: undefined,
@@ -25,7 +26,7 @@ export default class FeedbackPanel extends React.Component {
     }
     componentDidMount = async () => {
         try {
-            var response = await axios.get("https://www.templative.net/feedback?userGuid=oliver")
+            var response = await axios.get(`https://www.templative.net/feedback?userGuid=${FeedbackPanel.getMachineId()}`)
             this.setState({feedbackPosts: response.data.feedback})
         }
         catch(error) {
@@ -33,17 +34,20 @@ export default class FeedbackPanel extends React.Component {
         }
         
     }
+    static getMachineId = () => {
+        return encodeURIComponent(machineIdSync())
+    }
     uploadFeedbackAsync = async () => {
         // const files = this.fileInput.current.files
 
         axios.post("https://www.templative.net/feedback", {
             title: this.state.title,
             body: this.state.body,
-            userGuid: "oliver"
+            userGuid: FeedbackPanel.getMachineId()
         })
         try {
-            var response = await axios.get("https://www.templative.net/feedback?userGuid=oliver")
-            this.fileInput.current.value = []
+            var response = await axios.get(`https://www.templative.net/feedback?userGuid=${FeedbackPanel.getMachineId()}`)
+            // this.fileInput.current.value = []
             this.setState({
                 feedbackPosts: response.data.feedback, 
                 title: "",
@@ -96,7 +100,7 @@ export default class FeedbackPanel extends React.Component {
                     <FeedbackForm 
                         title={this.state.title}
                         body={this.state.body}
-                        fileInput={this.fileInput}
+                        // fileInput={this.fileInput}
                         updatePostTitleCallback={this.updatePostTitle}
                         updatePostBodyCallback={this.updatePostBody}
                         uploadFeedbackAsyncCallback={this.uploadFeedbackAsync}
