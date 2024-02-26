@@ -5,6 +5,8 @@ import StartView from "./components/StartView";
 import EditProjectView from "./components/EditProjectView";
 import './App.css';
 import {writeLastOpenedProject, getLastProjectDirectory} from "./settings/SettingsManager"
+import { trackEvent } from "@aptabase/electron/renderer";
+
 const { ipcRenderer } = require('electron');
 
 class App extends React.Component {
@@ -16,12 +18,13 @@ class App extends React.Component {
         ipcRenderer.removeAllListeners(channels.GIVE_TEMPLATIVE_ROOT_FOLDER);
     }
     async openTemplativeDirectoryPicker() {
+        trackEvent("project_change")
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG)
     }
     async openCreateTemplativeProjectDirectoryPicker() {
+        trackEvent("project_create")
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_CREATE_PROJECT_DIALOG)
     }
-
 
     attemptToLoadLastTemplativeAccessTools() {
         var lastProjectDirectory = getLastProjectDirectory()

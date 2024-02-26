@@ -3,6 +3,7 @@ import "./FeedbackPanel.css"
 import FeedbackForm from "./FeedbackForm";
 import FeedbackViewer from "./FeedbackViewer";
 import FeedbackPostChoices from "./FeedbackPostChoices";
+import { trackEvent } from "@aptabase/electron/renderer";
 
 const axios = require("axios");
 const {machineIdSync} = require('node-machine-id');
@@ -25,6 +26,8 @@ export default class FeedbackPanel extends React.Component {
         title:"",
     }
     componentDidMount = async () => {
+        trackEvent("view_feedbackPanel")
+
         try {
             var response = await axios.get(`https://www.templative.net/feedback?userGuid=${FeedbackPanel.getMachineId()}`)
             this.setState({feedbackPosts: response.data.feedback})
@@ -40,6 +43,7 @@ export default class FeedbackPanel extends React.Component {
     uploadFeedbackAsync = async () => {
         // const files = this.fileInput.current.files
 
+        trackEvent("feedback_create")
         axios.post("https://www.templative.net/feedback", {
             title: this.state.title,
             body: this.state.body,

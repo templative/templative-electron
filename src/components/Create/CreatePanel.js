@@ -3,6 +3,7 @@ import "./CreatePanel.css"
 import ComponentTypeTagPicker from "./ComponentTypeTagPicker";
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import ComponentTypeList from "./ComponentTypeList";
+import { trackEvent } from "@aptabase/electron/renderer";
 var axios = require('axios');
 
 export default class CreatePanel extends React.Component {   
@@ -17,6 +18,8 @@ export default class CreatePanel extends React.Component {
         isProcessing: false
     }
     componentDidMount = async () => {
+        trackEvent("view_createPanel")
+
         await axios.get(`http://127.0.0.1:8080/component-info`).then((response) => {
             this.setState({componentTypes: response.data})
         })
@@ -48,6 +51,7 @@ export default class CreatePanel extends React.Component {
         this.setState({tagFilters: newTagFilters})
     }
     async createComponent() {
+        trackEvent("component_create")
         this.setState({isProcessing: true})
         var data = { 
             componentName: this.state.componentName,

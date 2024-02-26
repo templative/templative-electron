@@ -6,11 +6,14 @@ const {log, error, warn} = require("./app/logger")
 const ServerManager = require("./app/serverManager")
 const ServerRunner = require("./app/serverRunner")
 const { setupAppUpdateListener } = require("./app/appUpdater")
+const { initialize } = require("@aptabase/electron/main");
 
 if (require('electron-squirrel-startup')) app.quit();
 app.setName('Templative');
 var templativeWindow = undefined
 var startupWindow = undefined
+
+initialize("A-US-9521417167");
 
 const createWindow = () => {
     templativeWindow = new BrowserWindow({

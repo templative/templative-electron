@@ -4,6 +4,7 @@ import "./PlaytestPanel.css"
 import SelectDirectoryInDirectory from "../SelectDirectory/SelectDirectoryInDirectory";
 import { channels } from "../../shared/constants";
 import {writeLastUseTableTopPlaygroundDirectory, getLastUsedTableTopPlaygroundDirectory} from "../../settings/SettingsManager"
+import { trackEvent } from "@aptabase/electron/renderer";
 import axios from "axios"
 const { ipcRenderer } = require('electron');
 
@@ -15,6 +16,8 @@ export default class PlaytestPanel extends React.Component {
         playgroundDirectory: undefined
     }
     componentDidMount() {
+        trackEvent("view_playtestPanel")
+
         ipcRenderer.on(channels.GIVE_PLAYGROUND_FOLDER, (event, playgroundFolder) => {
             writeLastUseTableTopPlaygroundDirectory(playgroundFolder)
             console.log(playgroundFolder)
@@ -37,6 +40,7 @@ export default class PlaytestPanel extends React.Component {
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG_FOR_PLAYGROUND)
     }
     createPlayground = async () => {
+        trackEvent("playtest_create")
         var data = { 
             outputDirectorypath: `${this.props.templativeRootDirectoryPath}/output/${this.state.selectedOutputDirectory}`,
             playgroundPackagesDirectorypath: this.state.playgroundDirectory

@@ -2,6 +2,7 @@ import React from "react";
 import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 import "./PrintPanel.css"
 import CreatePrintoutButton from "./CreatePrintoutButton";
+import { trackEvent } from "@aptabase/electron/renderer";
 import axios from "axios"
 const fs = require("fs")
 
@@ -13,6 +14,9 @@ export default class PrintPanel extends React.Component {
         areMarginsDrawn: false,
         rerenderIframeKey: 0,
         isCreatingPrintout: false
+    }
+    componentDidMount() {
+        trackEvent("view_printPanel")
     }
     selectDirectoryAsync = async (directory) => {
         this.setState({selectedDirectory:directory})
@@ -27,6 +31,7 @@ export default class PrintPanel extends React.Component {
         this.setState({isBackIncluded: !this.state.isBackIncluded})
     }
     createPrintout = async () => {
+        trackEvent("print")
         var data = { 
             outputDirectorypath: `${this.props.templativeRootDirectoryPath}/output/${this.state.selectedDirectory}`,
             isBackIncluded: this.state.isBackIncluded,

@@ -7,6 +7,7 @@ import KeyValueGamedataViewer from "./Viewers/GamedataViewer/KeyValueGamedataVie
 import ImageViewer from "./Viewers/ImageViewer";
 import RulesEditor from "./Viewers/RulesEditor";
 import EditPanelTabs from "./EditPanelTabs";
+import { trackEvent } from "@aptabase/electron/renderer";
 
 import "./EditPanel.css"
 import "./EditPanelTabs.css"
@@ -18,6 +19,9 @@ export default class EditPanel extends React.Component {
         }
         this.props.clickIntoFileCallback()
     }      
+    componentDidMount() {
+        trackEvent("view_editPanel")
+    }
     render () {
         var filepathSplit = this.props.currentFilepath.replace(/\\/g,"/").replace(/^\/|\/$/g, '').split("/").join(" > ")
         return <div className='mainBody row '>

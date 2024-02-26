@@ -6,6 +6,7 @@ import UploadControls from "./UploadControls";
 import { FullHeightConsole } from "../SocketedConsole/LoggedMessages"
 import socket from "../../socket"
 import {getLastUsedGameCrafterUsername, writeLastUseGameCrafterUsername, getLastUsedGameCrafterApiKey, writeLastUseGameCrafterApiKey} from "../../settings/SettingsManager"
+import { trackEvent } from "@aptabase/electron/renderer";
 
 const { ipcRenderer } = require('electron');
 
@@ -24,6 +25,7 @@ export default class UploadPanel extends React.Component {
         isIncludingStock: true,
     }
     componentDidMount() {
+        trackEvent("view_uploadPanel")
         ipcRenderer.on(channels.GIVE_PLAYGROUND_FOLDER, (event, playgroundFolder) => {
             this.setState({playgroundDirectory: playgroundFolder})
         });
@@ -65,6 +67,7 @@ export default class UploadPanel extends React.Component {
         this.setState({selectedPackageDirectory:directory})
     }
     upload = async () => {
+        trackEvent("upload")
         var data = { 
             outputDirectorypath: `${this.props.templativeRootDirectoryPath}/output/${this.state.selectedOutputDirectory}`,
             playgroundPackagesDirectorypath: this.state.playgroundDirectory,

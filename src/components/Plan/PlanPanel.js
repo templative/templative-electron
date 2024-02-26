@@ -4,6 +4,7 @@ import MotivationGroupValues from "./MotivationGroupValues"
 import MotivationGroup from "./MotivationGroup"
 import WordOptions from "./WordOptions";
 import GameExplanation from "./GameExplanation";
+import { trackEvent } from "@aptabase/electron/renderer";
 
 export default class PlanPanel extends React.Component {   
     state={
@@ -12,6 +13,10 @@ export default class PlanPanel extends React.Component {
         gameName: "Space Off",
         gameObject: "compete in alien olympics with your friends",
         gameSetting: "Oh no! You're stuck in the alien ghetto and have to dance your way out! Are you a bad enough dood to rebuild your ship?"
+    }
+
+    componentDidMount() {
+        trackEvent("view_planPanel")
     }
 
     toggleMeaningSelected = (meaning) => {

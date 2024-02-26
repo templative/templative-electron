@@ -6,6 +6,7 @@ import socket from "../../socket"
 import { LimitedHeightConsole } from "../SocketedConsole/LoggedMessages"
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
+import { trackEvent } from "@aptabase/electron/renderer";
 
 export default class RenderPanel extends React.Component {   
     state={
@@ -41,6 +42,7 @@ export default class RenderPanel extends React.Component {
         this.setState({selectedLanguage: event.target.value})
     }
     componentDidMount = async () => {
+        trackEvent("view_renderPanel")
         if (this.props.templativeRootDirectoryPath !== undefined) {
             var components = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
             this.setState({components: components})
@@ -65,6 +67,7 @@ export default class RenderPanel extends React.Component {
             directoryPath: this.props.templativeRootDirectoryPath,
         }
         this.setState({isProcessing: true})
+        trackEvent("render")
         
         socket.emit('produceGame', request, () => {
             this.setState({isProcessing: false, isConnectedToTemplative: socket.connected,})
