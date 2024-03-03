@@ -5,7 +5,6 @@ import RenderPanel from './Render/RenderPanel';
 import PrintPanel from './Print/PrintPanel';
 import AnimatePanel from './Animate/AnimatePanel';
 import UploadPanel from './Upload/UploadPanel';
-import PlanPanel from './Plan/PlanPanel';
 import PlaytestPanel from './Playtest/PlaytestPanel';
 import {HashRouter, Routes, Route } from "react-router-dom";
 import CreatePanel from "./Create/CreatePanel";
@@ -295,7 +294,7 @@ export default class EditProjectView extends React.Component {
         return <HashRouter>
             <TopNavbar topNavbarItems={TOP_NAVBAR_ITEMS} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
             <Routes>
-                <Route path='/plan' element={ <PlanPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+
                 <Route path='/create' element={ <CreatePanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
                 <Route path='/' element={ 
                     <EditPanel 
