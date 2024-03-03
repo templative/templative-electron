@@ -73,6 +73,7 @@ jobs:
           echo "current-version=$PACKAGE_VERSION" >> "$GITHUB_OUTPUT"
       
       - name: Use debugging electron
+        if: matrix.os == 'macos-latest'
         run: export DEBUG=electron*
 
       - name: Create Package
