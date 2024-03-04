@@ -121,7 +121,9 @@ export default class ComponentsViewer extends React.Component {
             <div className="col">
                 <div className="row">
                     <div className="col editable-components">
-                        <button className="btn btn-primary add-components-button d-block m-x-auto">Add Components</button>
+                        <Link to="/create">
+                            <button className="btn btn-primary add-components-button">Add Components</button>
+                        </Link>
                         {componentItems}
                     </div>
                 </div>
