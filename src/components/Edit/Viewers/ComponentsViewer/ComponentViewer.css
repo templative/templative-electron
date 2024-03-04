@@ -19,5 +19,13 @@
 .editable-component {
     max-width: 725px;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+}
+.add-components-button {
+    width: min(725px, 100%);
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 1em;
+    background-color: hsl(210, 10%, 22%) !important;
+    border-color: hsl(210, 10%, 22%) !important;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import ComponentItemEditable from "./ComponentItemEditable"
 import TemplativeAccessTools from "../../../TemplativeAccessTools";
 import "./ComponentViewer.css"
+import { Link } from "react-router-dom";
 
 const path = require("path")
 const { setIntervalAsync, clearIntervalAsync } = require('set-interval-async');
@@ -120,6 +121,7 @@ export default class ComponentsViewer extends React.Component {
             <div className="col">
                 <div className="row">
                     <div className="col editable-components">
+                        <button className="btn btn-primary add-components-button d-block m-x-auto">Add Components</button>
                         {componentItems}
                     </div>
                 </div>
