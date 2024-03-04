@@ -1,77 +1,43 @@
 import React from "react";
 import Piece from "./Piece";
 import "./GamedataViewer.css"
-import TemplativeAccessTools from "../../../TemplativeAccessTools";
+import EditableViewerJson from "../EditableViewerJson";
 
-const { setIntervalAsync, clearIntervalAsync } = require('set-interval-async');
-
-export default class PieceGamedataViewer extends React.Component {   
+export default class PieceGamedataViewer extends EditableViewerJson {   
     state = {
-        gamedataFile: this.props.fileContents,
         trackedKey: undefined,
         currentUpdateValue: undefined
     }
-    componentDidUpdate = async (prevProps) => {
-        if (this.props.filepath === prevProps.filepath) {
-            return;
-        }
-        await this.saveDocumentAsync(prevProps.filepath, this.state.gamedataFile)
 
-        this.setState({
-            gamedataFile: await TemplativeAccessTools.loadFileContentsAsJson(this.props.filepath)
-        })
+    getFilePath = (props) => {
+        return props.filepath
     }
-
-    saveDocumentAsync = async (filepath, fileContents) => {
-        if (filepath.split('.').pop() !== "json") {
-            console.log(`No saving this file as its not json ${filepath}`)
-            return
-        }
-        var newFileContents = JSON.stringify(fileContents, null, 4)
-        await this.props.saveFileAsyncCallback(filepath, newFileContents)
-    }
-    autosave = async () => {
-        await this.saveDocumentAsync(this.props.filepath, this.state.gamedataFile)
-    }
-    componentDidMount = async () => {
-        this.setState({
-            gamedataFile: await TemplativeAccessTools.loadFileContentsAsJson(this.props.filepath)
-        })
-        this.saveIntervalId = setIntervalAsync(this.autosave, 10*1000)
-    }
-    componentWillUnmount = async () => {
-        if (this.saveIntervalId !== undefined) {
-            await clearIntervalAsync(this.saveIntervalId)
-            this.saveIntervalId = undefined
-        }
-        await this.autosave()
-    }
-
+    
     addBlankKeyValuePair = () => {
-        var newGamedataFileContents = this.state.gamedataFile
-        this.state.gamedataFile.forEach((element, index) => {
-            newGamedataFileContents[index][""] = ""
+        var newContents = this.state.content
+        this.state.content.forEach((element, index) => {
+            newContents[index][""] = ""
         });
         
         this.setState({
-            gamedataFile: newGamedataFileContents
+            content: newContents
         })
     }
     
     updateValue = (index, key, newValue) => {
-        var newGamedataFileContents = this.state.gamedataFile
-        newGamedataFileContents[index][key] = newValue
+        var newContents = this.state.content
+        newContents[index][key] = newValue
         this.setState({
-            gamedataFile: newGamedataFileContents
+            content: newContents
         })
     }
     removeKeyValuePairFromAllPieces = (key) => {
-        var newGamedataFileContents = this.state.gamedataFile
-        this.state.gamedataFile.forEach((element, index) => {
-            delete newGamedataFileContents[index][key]
+        var newContents = this.state.content
+        this.state.content.forEach((element, index) => {
+            delete newContents[index][key]
         });
         this.setState({
-            gamedataFile: newGamedataFileContents
+            content: newContents
         })
     }
     trackChangedKey = (key, value) => {
@@ -83,14 +49,14 @@ export default class PieceGamedataViewer extends React.Component {
     updateKey = (oldKey, newKey) => {
         console.log(`"${oldKey}"`, `"${newKey}"`)
 
-        var newGamedataFileContents = this.state.gamedataFile
-        this.state.gamedataFile.forEach((element, index) => {
-            newGamedataFileContents[index][newKey] = newGamedataFileContents[index][oldKey] !== undefined ? newGamedataFileContents[index][oldKey] : ""
-            delete newGamedataFileContents[index][oldKey]
+        var newContents = this.state.content
+        this.state.content.forEach((element, index) => {
+            newContents[index][newKey] = newContents[index][oldKey] !== undefined ? newContents[index][oldKey] : ""
+            delete newContents[index][oldKey]
         });
         
         this.setState({
-            gamedataFile: newGamedataFileContents,
+            content: newContents,
             trackedKey: undefined,
             currentUpdateValue: undefined
         })
@@ -106,34 +72,34 @@ export default class PieceGamedataViewer extends React.Component {
     addPiece = () => {
         var newPiece = { }
 
-        if (this.state.gamedataFile.length > 0) {
-            Object.keys(this.state.gamedataFile[0]).forEach((key) => {
+        if (this.state.content.length > 0) {
+            Object.keys(this.state.content[0]).forEach((key) => {
                 newPiece[key] = key === "quantity" ? 1 : ""
             });
         }
-        var newGamedataFileContents = this.state.gamedataFile
-        newGamedataFileContents.unshift(newPiece)
+        var newContents = this.state.content
+        newContents.unshift(newPiece)
         this.setState({
-            gamedataFile: newGamedataFileContents
+            content: newContents
         })
     }
 
     deletePiece = (index) => {
-        var newGamedataFileContents = this.state.gamedataFile
-        newGamedataFileContents.splice(index,1)
+        var newContents = this.state.content
+        newContents.splice(index,1)
         this.setState({
-            gamedataFile: newGamedataFileContents
+            content: newContents
         })
     }
 
     render() {
         var rows = []
-        if (this.state.gamedataFile !== undefined) {
-            rows = this.state.gamedataFile.map((piece, index) => {
+        if (this.state.hasLoaded && this.state.content !== undefined) {
+            rows = this.state.content.map((piece, index) => {
                 return <Piece 
                     key={index} 
                     currentUpdateValue={this.state.currentUpdateValue}
-                    gamedataFile={this.state.gamedataFile} 
+                    gamedataFile={this.state.content} 
                     trackedKey={this.state.trackedKey} 
                     index={index} 
                     piece={piece}

@@ -54,8 +54,8 @@ export default class TemplativeProjectRenderer extends React.Component {
         return await this.#attemptAddFileReferenceCountAsync(filenameReferenceCounts, filepath)
     }
     #saveComponentComposeFileCountAsync = async () => {
-        var componentCompose = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json");
-        var gameCompose = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json")
+        var componentCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json");
+        var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json")
         var filenameReferenceCounts = {}
         for (let index = 0; index < componentCompose.length; index++) {
             const component = componentCompose[index];
@@ -70,7 +70,7 @@ export default class TemplativeProjectRenderer extends React.Component {
         await this.#parseComponentComposeAsync()
     }
     #parseComponentComposeAsync = async () => {
-        var gameCompose = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json");
+        var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json");
         await this.#saveComponentComposeFileCountAsync()
         
         this.#closeComponentComposeListener()

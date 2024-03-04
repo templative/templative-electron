@@ -3,9 +3,7 @@ import TextReplacement from "./ArtdataTypes/TextReplacement";
 import StyleUpdate from "./ArtdataTypes/StyleUpdate";
 import Overlay from "./ArtdataTypes/Overlay";
 import ArtdataAddButton from "./ArtdataAddButton"
-import TemplativeAccessTools from "../../../TemplativeAccessTools";
-
-const { setIntervalAsync, clearIntervalAsync } = require('set-interval-async');
+import EditableViewerJson from "../EditableViewerJson";
 
 const DEFAULT_ARTDATA_ITEMS = {
     "overlays": {
@@ -19,92 +17,56 @@ const DEFAULT_ARTDATA_ITEMS = {
     } 
 }
 
-export default class ArtdataViewer extends React.Component {   
-    state = {
-        artdataFile: undefined,
-        hasLoaded: false
-    }
-    componentDidUpdate = async (prevProps) => {
-        if (this.props.filepath === prevProps.filepath) {
-            return;
-        }
-        await this.saveDocumentAsync(prevProps.filepath, this.state.artdataFile)
-
-        this.setState({
-            artdataFile: await TemplativeAccessTools.loadFileContentsAsJson(this.props.filepath)
-        })
-    }
-    autosave = async () => {
-        await this.saveDocumentAsync(this.props.filepath, this.state.artdataFile)
-    }
-
-    saveDocumentAsync = async (filepath, fileContents) => {
-        var newFileContents = JSON.stringify(fileContents, null, 4)
-        if (filepath.split('.').pop() !== "json") {
-            console.log(`No saving this file as its not json ${filepath}`)
-            return
-        }
-        await this.props.saveFileAsyncCallback(filepath, newFileContents)
-    }
-    componentDidMount = async () => {
-        this.setState({
-            artdataFile: await TemplativeAccessTools.loadFileContentsAsJson(this.props.filepath)
-        })
-        this.saveIntervalId = setIntervalAsync(this.autosave, 10*1000)
-    }
-    componentWillUnmount = async () => {
-        if (this.saveIntervalId !== undefined) {
-            await clearIntervalAsync(this.saveIntervalId)
-            this.saveIntervalId = undefined
-        }
-        await this.autosave()
+export default class ArtdataViewer extends EditableViewerJson {   
+    getFilePath = (props) => {
+        return props.filepath
     }
     addArtdataItem(artdataType){
-        var newArtdataContents = this.state.artdataFile
+        var newArtdataContents = this.state.content
         var newArtdataItem = structuredClone(DEFAULT_ARTDATA_ITEMS[artdataType])
         newArtdataContents[artdataType].push(newArtdataItem)
         this.setState({
-            artdataFile: newArtdataContents
+            content: newArtdataContents
         })
     }
     deleteArtdata(artdataType, index) {
-        var newArtdataContents = this.state.artdataFile
+        var newArtdataContents = this.state.content
         newArtdataContents[artdataType].splice(index, 1)
         console.log(newArtdataContents)
         this.setState({
-            artdataFile: newArtdataContents
+            content: newArtdataContents
         })
     }
     updateArtdataField(artdataType, index, field, value) {
-        var newArtdataContents = this.state.artdataFile
+        var newArtdataContents = this.state.content
         newArtdataContents[artdataType][index][field] = value
         this.setState({
-            artdataFile: newArtdataContents
+            content: newArtdataContents
         })
     }
     updateTemplate(newTemplate) {
-        if (this.state.artdataFile === undefined) {
+        if (this.state.content === undefined) {
             return
         }
-        var newArtdataContents = this.state.artdataFile
+        var newArtdataContents = this.state.content
         newArtdataContents.templateFilename = newTemplate
         this.setState({
-            artdataFile: newArtdataContents
+            content: newArtdataContents
         })
     }
 
     updateArtdataItemOrder = (type, from, to) => {
-        if (to === -1 || to === this.state.artdataFile[type].length) {
+        if (to === -1 || to === this.state.content[type].length) {
             return;
         }
-        var newArtdataContents = this.state.artdataFile
+        var newArtdataContents = this.state.content
 
         var temp = newArtdataContents[type][to]
         newArtdataContents[type][to] = newArtdataContents[type][from]
         newArtdataContents[type][from] = temp
 
         this.setState({
-            artdataFile: newArtdataContents
+            content: newArtdataContents
         })
     };
 
@@ -113,26 +75,26 @@ export default class ArtdataViewer extends React.Component {
         var overlays = []
         var textReplacements = []
         var styleUpdates = []
-        if(this.state.artdataFile !== undefined) {
-            templateFilename = this.state.artdataFile.templateFilename
+        if(this.state.hasLoaded && this.state.content !== undefined) {
+            templateFilename = this.state.content.templateFilename
 
-            for(var i = 0 ; i < this.state.artdataFile.overlays.length; i++){
-                overlays.push(<Overlay index={i} key={i} artdataItem={this.state.artdataFile.overlays[i]} 
+            for(var i = 0 ; i < this.state.content.overlays.length; i++){
+                overlays.push(<Overlay index={i} key={i} artdataItem={this.state.content.overlays[i]} 
                     deleteCallback={(index) => this.deleteArtdata("overlays", index)}
                     updateArtdataFieldCallback={(artdataType, index, field, value)=>this.updateArtdataField(artdataType, index, field, value)}
                     updateArtdataItemOrderCallback={(from,to) => this.updateArtdataItemOrder("overlays", from, to)}
                 />)
             };
-            for(var t = 0 ; t < this.state.artdataFile.textReplacements.length; t++) {
-                textReplacements.push(<TextReplacement index={t} key={t} artdataItem={this.state.artdataFile.textReplacements[t]} 
+            for(var t = 0 ; t < this.state.content.textReplacements.length; t++) {
+                textReplacements.push(<TextReplacement index={t} key={t} artdataItem={this.state.content.textReplacements[t]} 
                     deleteCallback={(index)=> this.deleteArtdata("textReplacements", index)} 
                     updateArtdataFieldCallback={(artdataType, index, field, value)=>this.updateArtdataField(artdataType, index, field, value)}
                     updateArtdataItemOrderCallback={(from,to) => this.updateArtdataItemOrder("textReplacements", from, to)}
                 />)
             };
-            for(var s = 0 ; s < this.state.artdataFile.styleUpdates.length; s++){
+            for(var s = 0 ; s < this.state.content.styleUpdates.length; s++){
                 styleUpdates.push(<StyleUpdate index={s} key={s} 
-                    artdataItem={this.state.artdataFile.styleUpdates[s]} 
+                    artdataItem={this.state.content.styleUpdates[s]} 
                     updateArtdataFieldCallback={(artdataType, index, field, value)=>this.updateArtdataField(artdataType, index, field, value)}
                     updateArtdataItemOrderCallback={(from,to) => this.updateArtdataItemOrder("styleUpdates", from, to)}
                     deleteCallback={(index)=> this.deleteArtdata("styleUpdates", index)}/>)

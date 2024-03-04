@@ -26,14 +26,14 @@ export default class CreatePanel extends React.Component {
         await axios.get(`http://127.0.0.1:8080/stock-info`).then((response) => {
             this.setState({stockComponentTypes: response.data})
         })
-        var components = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
+        var components = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
         this.setState({components: components})
     }
     componentDidUpdate = async (prevProps, prevState) => {
         if (prevProps.templativeRootDirectoryPath === this.props.templativeRootDirectoryPath) {
             return
         }
-        var components = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
+        var components = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
         this.setState({components: components})
     }
     selectComponent = (type) => {

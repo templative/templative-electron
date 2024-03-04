@@ -44,7 +44,7 @@ export default class RenderPanel extends React.Component {
     componentDidMount = async () => {
         trackEvent("view_renderPanel")
         if (this.props.templativeRootDirectoryPath !== undefined) {
-            var components = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
+            var components = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
             this.setState({components: components})
         }
         if (this.state.selectedDirectory !== undefined) {
@@ -54,7 +54,7 @@ export default class RenderPanel extends React.Component {
     }
     componentDidUpdate = async (prevProps, prevState) => {
         if (this.props.templativeRootDirectoryPath !== prevProps.templativeRootDirectoryPath) {
-            var components = await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
+            var components = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
             this.setState({components: components})
         }
     }

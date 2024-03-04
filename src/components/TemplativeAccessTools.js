@@ -4,6 +4,9 @@ const path = require("path");
 export default class TemplativeAccessTools {
 
     static loadFileContentsAsJson = async (filepath) => {
+        if (filepath === undefined || filepath.trim() === "") {
+            console.error("No filepath given to loadFileContentsAsJson.")
+        }
         var fileContentsBuffer = await fs.readFile(filepath, 'utf8')     
         var fileContents = fileContentsBuffer.toString()
         if (fileContents.trim() === "") {
@@ -13,18 +16,37 @@ export default class TemplativeAccessTools {
         return JSON.parse(fileContents);
     }
 
-    static readFileContentsAsJsonAsync = async (templativeRootDirectoryPath, fileName) => {
+    static readFileContentsFromTemplativeProjectAsJsonAsync = async (templativeRootDirectoryPath, fileName) => {
+        if (templativeRootDirectoryPath === undefined || templativeRootDirectoryPath.trim() === "") {
+            console.error("No templativeRootDirectoryPath given to readFileContentsFromTemplativeProjectAsJsonAsync.")
+        }
+        if (fileName === undefined || fileName.trim() === "") {
+            console.error("No fileName given to readFileContentsFromTemplativeProjectAsJsonAsync.")
+        }
         var filepath = path.join(templativeRootDirectoryPath, fileName);
         return await this.loadFileContentsAsJson(filepath)
     }
     
-    static readFileContentsAsync = async (templativeRootDirectoryPath, fileName) => {
-        var filepath = path.join(templativeRootDirectoryPath, fileName);      
+    static readFileContentsAsync = async (filepath) => {
+        if (filepath === undefined || filepath.trim() === "") {
+            console.error("No filepath given to readFileContentsAsync.")
+        }
         var fileContentsBuffer = await fs.readFile(filepath, 'utf8')      
         return fileContentsBuffer.toString()
     }
+
+    static readFileContentsFromTemplativeProjectAsync = async (templativeRootDirectoryPath, fileName) => {
+        if (templativeRootDirectoryPath === undefined || templativeRootDirectoryPath.trim() === "") {
+            console.error("No templativeRootDirectoryPath given to readFileContentsFromTemplativeProjectAsync.")
+        }
+        if (fileName === undefined || fileName.trim() === "") {
+            console.error("No fileName given to readFileContentsFromTemplativeProjectAsync.")
+        }
+        var filepath = path.join(templativeRootDirectoryPath, fileName);      
+        return await TemplativeAccessTools.readFileContentsAsync(filepath)
+    }
     static getOutputDirectoriesAsync = async (templativeRootDirectoryPath) => {
-        var gameCompose = await TemplativeAccessTools.readFileContentsAsJsonAsync(templativeRootDirectoryPath, "game-compose.json")
+        var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(templativeRootDirectoryPath, "game-compose.json")
         var outputDirectory = path.join(templativeRootDirectoryPath, gameCompose["outputDirectory"])
         var directories = await fs.readdir(outputDirectory, { withFileTypes: true })
         directories = directories
@@ -33,7 +55,7 @@ export default class TemplativeAccessTools {
         return directories;
     }
     static getOutputDirectoriesComponentDirectoriesAsync = async (templativeRootDirectoryPath, individualOutputDirectoryPath) => {
-        var gameCompose = await TemplativeAccessTools.readFileContentsAsJsonAsync(templativeRootDirectoryPath, "game-compose.json")
+        var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(templativeRootDirectoryPath, "game-compose.json")
         var outputDirectory = path.join(templativeRootDirectoryPath, gameCompose["outputDirectory"], individualOutputDirectoryPath)
         var outputDirectories = await fs.readdir(outputDirectory, { withFileTypes: true })
         outputDirectories = outputDirectories

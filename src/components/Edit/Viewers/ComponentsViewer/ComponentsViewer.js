@@ -1,11 +1,10 @@
 import React from "react";
 import ComponentItemEditable from "./ComponentItemEditable"
-import TemplativeAccessTools from "../../../TemplativeAccessTools";
 import "./ComponentViewer.css"
 import { Link } from "react-router-dom";
+import EditableViewerJson from "../EditableViewerJson";
 
 const path = require("path")
-const { setIntervalAsync, clearIntervalAsync } = require('set-interval-async');
 
 const sortComponents = (a, b) => {
     var aCode = `${a.type}${a.name}`
@@ -19,49 +18,21 @@ const sortComponents = (a, b) => {
       return 0;
 }
 
-export default class ComponentsViewer extends React.Component {   
+export default class ComponentsViewer extends EditableViewerJson {   
     state = {
-        components: undefined,
         floatingName: undefined,
         floatingNameIndex: undefined
     }
 
-    saveDocumentAsync = async (filepath, components) => {
-        var newFileContents = JSON.stringify(components, null, 4)
-        await this.props.saveFileAsyncCallback(filepath, newFileContents)
-    }
-    autosave = async () => {
-        var filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json")
-        await this.saveDocumentAsync(filepath, this.state.components)
-    }
-    componentDidMount = async () => { 
-        this.setState({components: await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")})
-        this.saveIntervalId = setIntervalAsync(this.autosave, 10*1000)
-    }
-    componentDidUpdate = async (prevProps, prevState) => {
-        if (prevProps.templativeRootDirectoryPath === this.props.templativeRootDirectoryPath) {
-            return
-        }
-        var filepath = path.join(prevProps.templativeRootDirectoryPath, "component-compose.json")
-        await this.saveDocumentAsync(filepath, this.state.components)
-
-        this.setState({
-            components: await TemplativeAccessTools.readFileContentsAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
-        })
-    }
-    componentWillUnmount = async () => {
-        if (this.saveIntervalId !== undefined) {
-            await clearIntervalAsync(this.saveIntervalId)
-            this.saveIntervalId = undefined
-        }
-        await this.autosave()
+    getFilePath = (props) => {
+        return path.join(props.templativeRootDirectoryPath, "component-compose.json")
     }
 
     updateComponentField(index, field, value) {
-        var newComponents = this.state.components
+        var newComponents = this.state.content
         newComponents[index][field] = value
         this.setState({
-            components: newComponents
+            content: newComponents
         })
     }
     updateFloatingName(index, value) {
@@ -71,38 +42,38 @@ export default class ComponentsViewer extends React.Component {
         if (this.state.floatingName === undefined || this.state.floatingNameIndex === undefined) {
             return
         }
-        var newComponents = this.state.components
+        var newComponents = this.state.content
         newComponents[this.state.floatingNameIndex]["name"] = this.state.floatingName
         this.setState({
-            components: newComponents.sort(sortComponents),
+            content: newComponents.sort(sortComponents),
             floatingName: undefined,
             floatingNameIndex: undefined
         })
     }
     deleteComponent(index) {
-        var newComponents = this.state.components
+        var newComponents = this.state.content
         newComponents.splice(index,1)
         this.setState({
-            components: newComponents.sort(sortComponents),
+            content: newComponents.sort(sortComponents),
         })
     }
     duplicateComponent(index) {
-        var newComponents = this.state.components
+        var newComponents = this.state.content
         var newComponent = {}
-        for (const [key, value] of Object.entries(this.state.components[index])) {
+        for (const [key, value] of Object.entries(this.state.content[index])) {
             newComponent[key] = value
         }
         newComponent["name"] = `${newComponent["name"]}Copy`
         newComponents.push(newComponent)
         this.setState({
-            components: newComponents.sort(sortComponents),
+            content: newComponents.sort(sortComponents),
         })
     }
 
     render() {
         var componentItems = []
-        if (this.state.components !== undefined) {
-            this.state.components.forEach((component, index) => {
+        if (this.state.hasLoaded && this.state.content !== undefined) {
+            this.state.content.forEach((component, index) => {
                 var isFloatingName = this.state.floatingNameIndex === index
                 componentItems.push(<ComponentItemEditable 
                     key={component.name} 
