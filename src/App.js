@@ -26,7 +26,7 @@ class App extends React.Component {
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_CREATE_PROJECT_DIALOG)
     }
 
-    attemptToLoadLastTemplativeAccessTools() {
+    attemptToLoadLastTemplativeProject() {
         var lastProjectDirectory = getLastProjectDirectory()
         if (lastProjectDirectory === undefined) {
             return
@@ -41,7 +41,7 @@ class App extends React.Component {
         ipcRenderer.on(channels.GIVE_CLOSE_PROJECT, (_) => {
             this.setState({templativeRootDirectoryPath: undefined})
         })
-        this.attemptToLoadLastTemplativeAccessTools()
+        this.attemptToLoadLastTemplativeProject()
     }
     updateRoute = (route) => {
         this.setState({currentRoute: route})

@@ -23,7 +23,11 @@ function writeToSettingsFile(newFileContents) {
 
 export function getLastProjectDirectory () {
     var settings = readOrCreateSettingsFile()
-    return settings["lastProjectDirectory"]
+    const lastProjectDirectory = settings["lastProjectDirectory"]
+    if (!fs.existsSync(lastProjectDirectory)) {
+        return undefined
+    }
+    return lastProjectDirectory
 }
 
 export function writeLastOpenedProject (lastProjectDirectory) {
