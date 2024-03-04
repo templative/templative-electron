@@ -17,7 +17,8 @@ setup(
         "svgmanip",
         "svgutils",
         "tabulate",
-        "Wand"
+        "Wand",
+        "numpy"
     ],
     entry_points = {
         "console_scripts": [

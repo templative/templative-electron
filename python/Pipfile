@@ -19,6 +19,7 @@ svgmanip = "*"
 setuptools = "*"
 aiohttp-cors = "*"
 python-socketio = "*"
+numpy = "*"
 
 [requires]
 python_version = "3"

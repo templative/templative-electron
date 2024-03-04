@@ -17,7 +17,7 @@ async def createProject(request):
   if data["directoryPath"] == None:
     return "Missing directoryPath", 400
   
-  result = await projectCreator.createProjectInDirectory(data["directoryPath"])
+  result = projectCreator.createProjectInDirectory(data["directoryPath"])
   if result != 1:
     return web.Response(status=500)
   return web.Response(status=200)
