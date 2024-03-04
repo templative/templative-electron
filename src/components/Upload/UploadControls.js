@@ -16,7 +16,7 @@ export default class UploadControls extends React.Component {
             <p className="tgc-password-warning">Templative will never store your password and never will send it to our servers. This app communicates directly with TheGameCrafter.</p>
             <div className="input-group input-group-sm" data-bs-theme="dark">
                 <span className="input-group-text" id="basic-addon3">TGC ApiKey</span>
-                <input className="form-control" value={this.props.apiKey} onChange={(e)=> this.props.updateApiKeyCallback(e.target.value)} placeholder=""/>
+                <input type="password" className="form-control" value={this.props.apiKey} onChange={(e)=> this.props.updateApiKeyCallback(e.target.value)} placeholder=""/>
             </div>
             <div className="input-group input-group-sm" data-bs-theme="dark">
                 <span className="input-group-text" id="basic-addon3">TGC Username</span>
@@ -24,7 +24,7 @@ export default class UploadControls extends React.Component {
             </div>
             <div className="input-group input-group-sm" data-bs-theme="dark">
                 <span className="input-group-text" id="basic-addon3">TGC Password</span>
-                <input className="form-control" value={this.props.password} onChange={(e)=> this.props.updatePasswordCallback(e.target.value)} placeholder=""/>
+                <input type="password" className="form-control" value={this.props.password} onChange={(e)=> this.props.updatePasswordCallback(e.target.value)} placeholder=""/>
             </div>
             <div className="input-group input-group-sm" data-bs-theme="dark">
                 <span className="input-group-text">Cadence</span>
