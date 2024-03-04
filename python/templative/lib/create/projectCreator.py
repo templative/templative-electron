@@ -66,7 +66,7 @@ def createGame(directory):
         "minPlayers": "2",
         "maxPlayers": "2"
     }
-    with open(path.join(directory, "game-compose.json"), "w") as file:
+    with open(path.join(directory, "game.json"), "w") as file:
         file.write(json.dumps(game, indent=4))
 
 def createImage(directory, name, width, height):
