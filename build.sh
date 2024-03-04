@@ -17,15 +17,19 @@ function templative() {
 }
 
 function createTemplativeApp() {
-    pyinstaller \
-        --distpath ./bin \
+    cd ./python
+    pipenv --rm
+    pipenv install
+    pipenv run pyinstaller \
+        --distpath ../bin \
         -y \
         -n templative \
-        --onefile ./python/templative/__main__.py \
+        --onefile ./templative/__main__.py \
         --hidden-import engineio.async_drivers.aiohttp \
         --hidden-import engineio.async_aiohttp \
         --collect-all templative \
         --codesign-identity "Developer ID Application: Next Day Games LLC (Y9RWBVMY7R)"
+    cd ..
 }
 
 function package() {

@@ -45,15 +45,6 @@ jobs:
       - name: Install pipenv
         run: pip install pipenv pyinstaller
 
-      # This pipenv requirements stuff can be avoided by `pipenv run pyinstaller`ing
-      - name: Install Requirements
-        run: |
-          cd python
-          pipenv install
-          pipenv requirements > req.txt
-          pip install -r req.txt
-          cd ..
-
       - name: Create Templative App/Exe
         run: npm run templative-build
 
