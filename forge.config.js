@@ -8,8 +8,7 @@ module.exports = {
     },
     extraResource: [
       "assets/images/icon.icns",
-      "./bin",
-      "./build"
+      "./bin"
      ],
     icon: "assets/images/icon",
     osxSign: {
