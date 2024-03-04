@@ -13,10 +13,10 @@ export default class EditableViewerRaw extends React.Component {
     }
     saveAsync = async (filepath, fileContents) => {
         if (!this.state.hasLoaded || fileContents === undefined) {
-            console.log("Skipping saving due to not being loaded yet.")
+            // console.log("Skipping saving due to not being loaded yet.")
             return
         }
-        console.log(`Saving ${filepath}`)//\n${fileContents}`)
+        // console.log(`Saving ${filepath}`)//\n${fileContents}`)
         await this.props.saveFileAsyncCallback(filepath, fileContents)
     }
     getFilePath = (props) => {
@@ -24,23 +24,23 @@ export default class EditableViewerRaw extends React.Component {
         return "" // Define this
     }
     autosave = async () => {
-        console.log("Autosave")
+        // console.log("Autosave")
         await this.saveAsync(this.getFilePath(this.props), this.state.content)
     }
     loadFileContent = async () => {
         const filepath = this.getFilePath(this.props)
-        console.log(`Loading ${filepath}`)
+        // console.log(`Loading ${filepath}`)
         const content = await TemplativeAccessTools.readFileContentsAsync(filepath)
         // console.log(`Loaded ${filepath}\n${content}`)
         return content
     }
     startAutoSave = async () => {
         if (this.saveIntervalId !== undefined) {
-            console.warn("Needed to clear autosave before starting it!")
+            // console.warn("Needed to clear autosave before starting it!")
             await clearIntervalAsync(this.saveIntervalId)
             this.saveIntervalId = undefined
         }
-        console.log("Starting autosave.")
+        // console.log("Starting autosave.")
         this.saveIntervalId = setIntervalAsync(this.autosave, 10*1000)
     }
     componentDidMount = async () => {
@@ -55,12 +55,12 @@ export default class EditableViewerRaw extends React.Component {
         if (areFilepathsUnchanged) {
             return
         }
-        console.log(`Filepaths changed ${this.getFilePath(prevProps)} ${this.getFilePath(this.props)}`)
+        // console.log(`Filepaths changed ${this.getFilePath(prevProps)} ${this.getFilePath(this.props)}`)
         var previousFilepath = this.getFilePath(prevProps)
-        console.log("Saving due to templative project changing.")
+        // console.log("Saving due to templative project changing.")
         await this.saveAsync(previousFilepath, this.state.content)
         
-        console.log("Loading file content due to templative project changing.")
+        // console.log("Loading file content due to templative project changing.")
         this.setState({content: await this.loadFileContent() }, async () => {
             await this.startAutoSave()
         })
@@ -70,7 +70,7 @@ export default class EditableViewerRaw extends React.Component {
             await clearIntervalAsync(this.saveIntervalId)
             this.saveIntervalId = undefined
         }
-        console.log("Autosave on close")
+        // console.log("Autosave on close")
         await this.autosave()
     }
 }
