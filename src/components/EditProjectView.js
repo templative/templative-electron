@@ -316,7 +316,6 @@ export default class EditProjectView extends React.Component {
                         updateViewedFileUsingExplorerAsyncCallback={this.updateViewedFileUsingExplorerAsync}
                         saveFileAsyncCallback={this.saveFileAsync}
                         closeTabIfOpenByFilepathCallback={this.closeTabIfOpenByFilepath}
-
                     /> 
                 }/>
                 <Route path='/render' element={ <RenderPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />

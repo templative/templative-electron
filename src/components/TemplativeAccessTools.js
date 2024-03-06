@@ -35,6 +35,16 @@ export default class TemplativeAccessTools {
         return fileContentsBuffer.toString()
     }
 
+    static doesFileExistAsync = async (filepath) => {
+        try {
+            await fs.access(filepath, fs.constants.F_OK)
+            return true
+        }
+        catch {
+            return false
+        }
+    }
+
     static readFileContentsFromTemplativeProjectAsync = async (templativeRootDirectoryPath, fileName) => {
         if (templativeRootDirectoryPath === undefined || templativeRootDirectoryPath.trim() === "") {
             console.error("No templativeRootDirectoryPath given to readFileContentsFromTemplativeProjectAsync.")

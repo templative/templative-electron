@@ -3,6 +3,7 @@ import ComponentItemEditable from "./ComponentItemEditable"
 import "./ComponentViewer.css"
 import { Link } from "react-router-dom";
 import EditableViewerJson from "../EditableViewerJson";
+import ComponentItemEditableStock from "./ComponentItemEditableStock";
 
 const path = require("path")
 
@@ -70,24 +71,57 @@ export default class ComponentsViewer extends EditableViewerJson {
         })
     }
 
-    render() {
-        var componentItems = []
-        if (this.state.hasLoaded && this.state.content !== undefined) {
-            this.state.content.forEach((component, index) => {
-                var isFloatingName = this.state.floatingNameIndex === index
-                componentItems.push(<ComponentItemEditable 
-                    key={component.name} 
-                    component={component} 
-                    deleteComponentCallback={()=> this.deleteComponent(index)}
-                    duplicateComponentCallback={() => this.duplicateComponent(index)}
-                    isFloatingName={isFloatingName}
-                    floatingName={this.state.floatingName}
-                    updateFloatingNameCallback={(value) => this.updateFloatingName(index, value)}
-                    releaseFloatingNameCallback={() => this.releaseFloatingName()}
-                    updateComponentFieldCallback={(field, value)=> {this.updateComponentField(index, field, value)}}/>)
-            });
+    loadComponent = (component, index) => {
+        var isFloatingName = this.state.floatingNameIndex === index
+        var isStock = component.type.split("_").shift() === "STOCK"
+        if (isStock) {
+            return <ComponentItemEditableStock 
+                updateViewedFileUsingExplorerAsyncCallback ={this.props.updateViewedFileUsingExplorerAsyncCallback }
+                templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                key={component.name} 
+                component={component} 
+                deleteComponentCallback={()=> this.deleteComponent(index)}
+                duplicateComponentCallback={() => this.duplicateComponent(index)}
+                isFloatingName={isFloatingName}
+                floatingName={this.state.floatingName}
+                updateFloatingNameCallback={(value) => this.updateFloatingName(index, value)}
+                releaseFloatingNameCallback={() => this.releaseFloatingName()}
+                updateComponentFieldCallback={(field, value)=> {this.updateComponentField(index, field, value)}}
+            />
         }
+        
+        return <ComponentItemEditable 
+            updateViewedFileUsingExplorerAsyncCallback ={this.props.updateViewedFileUsingExplorerAsyncCallback }
+            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+            key={component.name} 
+            componentName={component.name}
+            componentType={component.type}
+            componentGamedataFilename={component.componentGamedataFilename}
+            piecesGamedataFilename={component.piecesGamedataFilename}
+            artdataFrontFilename={component.artdataFrontFilename}
+            artdataBackFilename={component.artdataBackFilename}
+            isDebugInfo={component.isDebugInfo}
+            disabled={component.disabled}
+            quantity={component.quantity}
+            deleteComponentCallback={()=> this.deleteComponent(index)}
+            duplicateComponentCallback={() => this.duplicateComponent(index)}
+            isFloatingName={isFloatingName}
+            floatingName={this.state.floatingName}
+            updateFloatingNameCallback={(value) => this.updateFloatingName(index, value)}
+            releaseFloatingNameCallback={() => this.releaseFloatingName()}
+            updateComponentFieldCallback={(field, value)=> {this.updateComponentField(index, field, value)}}
+        />
+    }
 
+    loadComponentItems = () => {
+        if (!this.state.hasLoaded || this.state.content === undefined) {
+            return []
+        }
+        return this.state.content.map((component, index) => this.loadComponent(component, index));
+    }
+
+    render() {
+        var componentItems = this.loadComponentItems()
         return <div className="row componentViewer">
             <div className="col">
                 <div className="row">

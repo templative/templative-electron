@@ -10,6 +10,12 @@ html, body {
 html {
   scrollbar-color: #373c48 #2f333c;
 }
+.no-right-border {
+  border-right-width: 0px !important;
+}
+.no-left-border {
+  border-left-width: 0px !important;
+}
 
 ::-webkit-scrollbar {
   width: 9px;

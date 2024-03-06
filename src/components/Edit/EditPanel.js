@@ -62,7 +62,12 @@ export default class EditPanel extends React.Component {
                         />
                     }
                     {this.props.currentFileType === "ARTDATA" &&
-                        <ArtdataViewer filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
+                        <ArtdataViewer 
+                            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                            filepath={this.props.currentFilepath} 
+                            saveFileAsyncCallback={this.props.saveFileAsyncCallback}
+                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                        />
                     }
                     {this.props.currentFileType === "ART" &&
                         <ImageViewer filepath={this.props.currentFilepath}/>
@@ -75,6 +80,7 @@ export default class EditPanel extends React.Component {
                     }
                     {this.props.currentFileType === "COMPONENTS" && 
                         <ComponentsViewer 
+                            updateViewedFileUsingExplorerAsyncCallback ={this.props.updateViewedFileUsingExplorerAsyncCallback}
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                             saveFileAsyncCallback={this.props.saveFileAsyncCallback}
                         />

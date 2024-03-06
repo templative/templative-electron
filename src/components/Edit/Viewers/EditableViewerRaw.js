@@ -50,7 +50,7 @@ export default class EditableViewerRaw extends React.Component {
             await this.startAutoSave()
         })
     }
-    componentDidUpdate = async (prevProps, prevState) => {
+    async componentDidUpdate (prevProps, prevState) {
         const areFilepathsUnchanged = this.getFilePath(prevProps) === this.getFilePath(this.props)
         if (areFilepathsUnchanged) {
             return

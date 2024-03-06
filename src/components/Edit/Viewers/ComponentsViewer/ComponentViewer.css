@@ -8,10 +8,11 @@
     border-radius: 8px;
 }
 .component-left-bumper {
-    width: 11.5em;
+    width: 14em;
+    text-align: left !important;
 }
 .component-left-bumper-content {
-    width: 11.5em !important;
+    width: 14em !important;
 }
 .editable-components {
     padding-top: 0.5em;
