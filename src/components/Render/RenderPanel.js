@@ -7,10 +7,10 @@ import { LimitedHeightConsole } from "../SocketedConsole/LoggedMessages"
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 import { trackEvent } from "@aptabase/electron/renderer";
+const path = require('path');
 
 export default class RenderPanel extends React.Component {   
     state={
-        componentDirectories: [],
         components: [],
         selectedDirectory: undefined,
         selectedComponent: undefined,
@@ -22,8 +22,9 @@ export default class RenderPanel extends React.Component {
     }
 
     selectDirectoryAsync = async (directory) => {
-        var componentDirectories = await TemplativeAccessTools.getOutputDirectoriesComponentDirectoriesAsync(this.props.templativeRootDirectoryPath, directory)
-        this.setState({selectedDirectory:directory, componentDirectories: componentDirectories})
+        var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json")
+        var outputDirectory = path.join(this.props.templativeRootDirectoryPath, gameCompose["outputDirectory"], directory)
+        this.setState({selectedDirectory: outputDirectory})
     }
     toggleComponent = (component) => {
         if (this.state.selectedComponent === component) {
@@ -47,10 +48,6 @@ export default class RenderPanel extends React.Component {
             var components = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
             this.setState({components: components})
         }
-        if (this.state.selectedDirectory !== undefined) {
-            var componentDirectories = await TemplativeAccessTools.getOutputDirectoriesComponentDirectoriesAsync(this.props.templativeRootDirectoryPath, this.state.selectedDirectory)
-            this.setState({componentDirectories: componentDirectories})
-        } 
     }
     componentDidUpdate = async (prevProps, prevState) => {
         if (this.props.templativeRootDirectoryPath !== prevProps.templativeRootDirectoryPath) {
@@ -104,7 +101,7 @@ export default class RenderPanel extends React.Component {
                 <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
             </div>  
             <div className="col-8 outputPanel">
-                <OutputExplorer outputFolderPath={this.state.selectedDirectory} componentDirectories={this.state.componentDirectories}/>
+                <OutputExplorer outputFolderPath={this.state.selectedDirectory}/>
             </div>        
         </div>
     }

@@ -1,3 +1,6 @@
 .outputFolderOptions {
     height: 10em;
 }
+.selected-output-directory {
+    background-color: #3f454c;
+}

@@ -25,7 +25,8 @@
     background-color: white;
 }
 .outputPanel {
-    padding-bottom:2em;
+    padding-bottom:3px;
+    padding-left: 0em !important;
 }
 .outputPanel, .outputPanel>.row, .outputPanel>.row>.col {
     height: 100%;
@@ -72,7 +73,7 @@
 .renderedComponentsRow {
     padding: 0.5em 1em 1em 1em;
     overflow-y: scroll;
-    height:100%;
+    height: calc(100% - 2em) !important;
 }
 .renderComponents {
     margin-bottom:0.75em;
@@ -103,4 +104,16 @@
 }
 .bug-margin {
     margin-right: 0.5em;
+}
+.renderedComponentTitle {
+    padding-left: 0.25em;
+}
+.output-name-container {
+    height: 2em;
+    padding-top:0.4em;
+    padding-left:0.5em;
+    background-color: #2b3035;
+}
+.outputFolderName {
+    font-size: 24px;
 }

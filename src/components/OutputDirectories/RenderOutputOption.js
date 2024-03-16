@@ -17,7 +17,7 @@ export default class RenderOutputOption extends React.Component {
         shell.openPath(path.join(this.props.directory.path, this.props.directory.name));
     }
     render() {
-        return <div className={`resourceHeaderWrapper directory ${this.props.selectedDirectory === this.props.directory.name && "selected"}`} 
+        return <div className={`resourceHeaderWrapper directory ${this.props.selectedDirectory === path.join(this.props.directory.path, this.props.directory.name) && "selected-output-directory"}`} 
                 onClick={async () => await this.props.selectDirectoryAsyncCallback(this.props.directory.name)}
                 onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseOut}
             >
