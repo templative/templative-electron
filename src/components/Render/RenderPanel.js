@@ -4,9 +4,9 @@ import RenderButton from "./RenderButton"
 import "./RenderPanel.css"
 import socket from "../../socket"
 import { LimitedHeightConsole } from "../SocketedConsole/LoggedMessages"
-import TemplativeAccessTools from "../TemplativeAccessTools";
 import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 import { trackEvent } from "@aptabase/electron/renderer";
+import TemplativeAccessTools from "../TemplativeAccessTools";
 const path = require('path');
 
 export default class RenderPanel extends React.Component {   

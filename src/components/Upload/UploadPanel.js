@@ -6,7 +6,9 @@ import UploadControls from "./UploadControls";
 import { FullHeightConsole } from "../SocketedConsole/LoggedMessages"
 import socket from "../../socket"
 import {getLastUsedGameCrafterUsername, writeLastUseGameCrafterUsername, getLastUsedGameCrafterApiKey, writeLastUseGameCrafterApiKey} from "../../settings/SettingsManager"
+import TemplativeAccessTools from "../TemplativeAccessTools";
 import { trackEvent } from "@aptabase/electron/renderer";
+const path = require('path');
 
 const { ipcRenderer } = require('electron');
 
@@ -61,7 +63,9 @@ export default class UploadPanel extends React.Component {
         this.setState({isIncludingStock: !this.state.isIncludingStock})
     }
     selectDirectoryAsync = async (directory) => {
-        this.setState({selectedOutputDirectory:directory})
+        var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json")
+        var outputDirectory = path.join(this.props.templativeRootDirectoryPath, gameCompose["outputDirectory"], directory)
+        this.setState({selectedOutputDirectory:outputDirectory})
     }
     selectPackageDirectory = (directory) => {
         this.setState({selectedPackageDirectory:directory})

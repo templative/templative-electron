@@ -4,6 +4,8 @@ import "./PrintPanel.css"
 import CreatePrintoutButton from "./CreatePrintoutButton";
 import { trackEvent } from "@aptabase/electron/renderer";
 import axios from "axios"
+import TemplativeAccessTools from "../TemplativeAccessTools";
+const path = require('path');
 const fs = require("fs")
 
 export default class PrintPanel extends React.Component {   
@@ -19,7 +21,9 @@ export default class PrintPanel extends React.Component {
         trackEvent("view_printPanel")
     }
     selectDirectoryAsync = async (directory) => {
-        this.setState({selectedDirectory:directory})
+        var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json")
+        var outputDirectory = path.join(this.props.templativeRootDirectoryPath, gameCompose["outputDirectory"], directory)
+        this.setState({selectedDirectory:outputDirectory})
     }
     setSize = (size) => {
         this.setState({size: size})

@@ -28,7 +28,6 @@ export default class ComponentItemEditable extends React.Component {
         const pieceGameDataFilePath = path.join(this.props.templativeRootDirectoryPath, gameCompose["piecesGamedataDirectory"], `${this.props.piecesGamedataFilename}.json`)
         const artdataFrontFilePath = path.join(this.props.templativeRootDirectoryPath, gameCompose["artdataDirectory"], `${this.props.artdataFrontFilename}.json`)
         const artdataBackFilePath = path.join(this.props.templativeRootDirectoryPath, gameCompose["artdataDirectory"], `${this.props.artdataBackFilename}.json`)
-        console.log(componentGameDataFilePath)
         this.setState({
             isStock: false,
             componentGameDataFilePath: componentGameDataFilePath,

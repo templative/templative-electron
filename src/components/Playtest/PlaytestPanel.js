@@ -6,6 +6,9 @@ import { channels } from "../../shared/constants";
 import {writeLastUseTableTopPlaygroundDirectory, getLastUsedTableTopPlaygroundDirectory} from "../../settings/SettingsManager"
 import { trackEvent } from "@aptabase/electron/renderer";
 import axios from "axios"
+import TemplativeAccessTools from "../TemplativeAccessTools";
+const path = require('path');
+
 const { ipcRenderer } = require('electron');
 
 export default class PlaytestPanel extends React.Component {   
@@ -31,7 +34,9 @@ export default class PlaytestPanel extends React.Component {
         ipcRenderer.removeAllListeners(channels.GIVE_PLAYGROUND_FOLDER);
     }
     selectDirectoryAsync = async (directory) => {
-        this.setState({selectedOutputDirectory:directory})
+        var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json")
+        var outputDirectory = path.join(this.props.templativeRootDirectoryPath, gameCompose["outputDirectory"], directory)
+        this.setState({selectedOutputDirectory:outputDirectory})
     }
     selectPackageDirectory = (directory) => {
         this.setState({selectedPackageDirectory:directory})
