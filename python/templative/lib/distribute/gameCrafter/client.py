@@ -21,7 +21,7 @@ async def uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirectory,
 
     cloudGameFolder = await createFolderAtRoot(gameCrafterSession, game["name"])
     
-    logoImageFileId, backdropImageFileId, advertisementImageFileId, actionShotImageFileId = await createAdvertisments(gameCrafterSession, cloudGameFolder["id"])
+    logoImageFileId, backdropImageFileId, advertisementImageFileId, actionShotImageFileId = await createAdvertisments(gameCrafterSession, gameRootDirectoryPath, cloudGameFolder["id"])
 
     shortDescription = await pullAdvertDataFromGameJsonButAllowDefault(game, "shortDescription", "It was a good game.")
     longDescription = await pullAdvertDataFromGameJsonButAllowDefault(game, "longDescription", "Generated using templative.lib.")
@@ -51,29 +51,29 @@ async def pullAdvertDataFromGameJsonButAllowDefault(gameData, key, defaultValue)
     print("!!! Missing \"%s\" in game.json. Using default value of \"%s\"." % (key, defaultValue))
     return defaultValue
 
-async def createAdvertisments(gameCrafterSession, cloudGameFolderId):
+async def createAdvertisments(gameCrafterSession, gameRootDirectoryPath, cloudGameFolderId):
     advertismentFolderId = await advertisementCreator.createAdvertisementFolder(gameCrafterSession, cloudGameFolderId)
     "testImages/actionShot.png",
 
     backupFilesDirectoryPath = os.path.join(os.path.dirname(__file__),"testImages")
     
     logoImageFileId = await advertisementCreator.createAdvertismentImageInFolder(gameCrafterSession, 
-        "gamecrafter/logo.png", 
+        os.path.abspath(os.path.join(gameRootDirectoryPath, "gamecrafter/logo.png")), 
         os.path.join(backupFilesDirectoryPath, "logo.png"), 
         advertismentFolderId)
     
     backdropImageFileId = await advertisementCreator.createAdvertismentImageInFolder(gameCrafterSession, 
-        "./gamecrafter/backdrop.png",
+        os.path.abspath(os.path.join(gameRootDirectoryPath, "./gamecrafter/backdrop.png")),
         os.path.join(backupFilesDirectoryPath, "backdrop.png"), 
         advertismentFolderId)
 
     advertisementImageFileId = await advertisementCreator.createAdvertismentImageInFolder(gameCrafterSession, 
-        "./gamecrafter/advertisement.png",
+        os.path.abspath(os.path.join(gameRootDirectoryPath, "./gamecrafter/advertisement.png")),
         os.path.join(backupFilesDirectoryPath, "advertisement.png"), 
         advertismentFolderId)
 
     actionShotImageFileId = await advertisementCreator.createAdvertismentImageInFolder(gameCrafterSession, 
-        "./gamecrafter/actionShot.png",
+        os.path.abspath(os.path.join(gameRootDirectoryPath, "./gamecrafter/actionShot.png")),
         os.path.join(backupFilesDirectoryPath, "actionShot.png"), 
         advertismentFolderId)
     
