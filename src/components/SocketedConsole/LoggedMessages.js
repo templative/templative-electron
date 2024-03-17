@@ -24,7 +24,7 @@ export class LoggedMessages extends React.Component {
 
     render() {
         var messageDivs = this.state.messages.map((message, index)=> {
-            return <p key={index} className="outputMessage">{index+1}.   {message}</p>
+            return <p key={index} className={`outputMessage ${message.startsWith("!!!") && "output-warning"}`}>{index+1}.   {message}</p>
         })
         return <div className="messageArea">
             {messageDivs.reverse()}
