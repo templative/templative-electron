@@ -69,6 +69,7 @@ export default class UploadPanel extends React.Component {
     upload = async () => {
         trackEvent("upload")
         var data = { 
+            gameDirectoryRootPath: `${this.props.templativeRootDirectoryPath}`,
             outputDirectorypath: `${this.props.templativeRootDirectoryPath}/output/${this.state.selectedOutputDirectory}`,
             playgroundPackagesDirectorypath: this.state.playgroundDirectory,
             username: this.state.username,

@@ -19,12 +19,12 @@ async def createComponents(gameCrafterSession, outputDirectory, cloudGame, cloud
     for directoryPath in next(os.walk(outputDirectory))[1]:
         componentDirectoryPath = "%s/%s" % (outputDirectory, directoryPath)
 
-        creationTask = asyncio.create_task(createComponent(gameCrafterSession, componentDirectoryPath, cloudGame, cloudGameFolderId, isPublish, isStock, isProofed))
+        await createComponent(gameCrafterSession, componentDirectoryPath, cloudGame, cloudGameFolderId, isPublish, isStock, isProofed)
 
-        if isAsynchronous:
-            tasks.append(creationTask)
-        else:
-            await creationTask
+        # if isAsynchronous:
+        #     tasks.append(creationTask)
+        # else:
+        #     await creationTask
             
     res = await asyncio.gather(*tasks, return_exceptions=True)
 
@@ -72,7 +72,7 @@ async def createCustomComponent(gameCrafterSession, componentType, componentFile
     createCustomPlasticDieTask = createCustomPlasticDie
     createHookboxTask = createHookbox
     createBoxFaceTask = createBoxface
-    componentTasks : {        
+    componentTasks = {        
         "deck": createDeckTask,
         "twosidedbox": createTwoSidedBoxTask,
         "twosidedsluggedset": createTwoSidedSluggedTask,

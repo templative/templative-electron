@@ -6,7 +6,7 @@ from templative.lib.distribute.gameCrafter.fileFolderManager import createGame, 
 
 gameCrafterBaseUrl = "https://www.thegamecrafter.com"
 
-async def uploadGame(gameCrafterSession, gameRootDirectoryPath, isPublish, isStock, isAsynchronous, isProofed):
+async def uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirectory, isPublish, isStock, isAsynchronous, isProofed):
     if not gameRootDirectoryPath:
         raise Exception("Game root directory path cannot be None")
 
@@ -37,10 +37,8 @@ async def uploadGame(gameCrafterSession, gameRootDirectoryPath, isPublish, isSto
 
     await advertisementCreator.createActionShot(gameCrafterSession, cloudGame["id"], actionShotImageFileId)
 
-    tasks = []
-    tasks.append(asyncio.create_task(createComponents(gameCrafterSession, gameRootDirectoryPath, cloudGame, cloudGameFolder["id"], isPublish, isStock, isAsynchronous, isProofed)))
-    tasks.append(asyncio.create_task(createRules(gameCrafterSession, gameRootDirectoryPath, cloudGame, cloudGameFolder["id"])))
-    res = await asyncio.gather(*tasks, return_exceptions=True)
+    # await createRules(gameCrafterSession, outputDirectory, cloudGame, cloudGameFolder["id"])
+    await createComponents(gameCrafterSession, outputDirectory, cloudGame, cloudGameFolder["id"], isPublish, isStock, isAsynchronous, isProofed)
 
     gameUrl = "%s%s%s"%(gameCrafterBaseUrl, "/make/games/", cloudGame["id"])
     print("Uploads finished for %s, visit %s" % (cloudGame["name"], gameUrl))

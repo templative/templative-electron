@@ -51,13 +51,17 @@ async def upload(sid, data):
     if outputDirectorypath == None:
         raise Exception("Missing outputDirectorypath.")
     
+    gameDirectoryRootPath = data['gameDirectoryRootPath']
+    if gameDirectoryRootPath == None:
+        raise Exception("Missing gameDirectoryRootPath.")
+    
     session = await login(apiKey, username, password)
 
     if session is None:
         raise Exception("You must provide a Game Crafter session.")
 
     with EmitPrintStatements(sio, "printStatement"):
-        await uploadGame(session, outputDirectorypath, isPublish, isIncludingStock, isAsync, isProofed)
+        await uploadGame(session, gameDirectoryRootPath, outputDirectorypath, isPublish, isIncludingStock, isAsync, isProofed)
     await logout(session)
 
 @sio.on("produceGame")
