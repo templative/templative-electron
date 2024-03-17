@@ -15,18 +15,17 @@ async def createComponents(gameCrafterSession, outputDirectory, cloudGame, cloud
     if not outputDirectory:
         raise Exception("outputDirectory cannot be None")
 
-    tasks = []
+    # tasks = []
     for directoryPath in next(os.walk(outputDirectory))[1]:
         componentDirectoryPath = "%s/%s" % (outputDirectory, directoryPath)
-
         await createComponent(gameCrafterSession, componentDirectoryPath, cloudGame, cloudGameFolderId, isPublish, isStock, isProofed)
 
         # if isAsynchronous:
         #     tasks.append(creationTask)
         # else:
         #     await creationTask
-            
-    res = await asyncio.gather(*tasks, return_exceptions=True)
+    
+    # res = await asyncio.gather(*tasks, return_exceptions=True)
 
 async def createComponent(gameCrafterSession, componentDirectoryPath, cloudGame, cloudGameFolderId, isPublish, isStock, isProofed):
     if not componentDirectoryPath:
@@ -61,9 +60,7 @@ async def createCustomComponent(gameCrafterSession, componentType, componentFile
         print("Missing component info for %s." % componentType)
         return
     
-    
     component = COMPONENT_INFO[componentType]
-
     createDeckTask = createDeck
     createTwoSidedSluggedTask = createTwoSidedSlugged
     createTwoSidedBoxTask = createTwoSidedBox

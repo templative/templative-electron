@@ -74,7 +74,7 @@ export default class UploadPanel extends React.Component {
         trackEvent("upload")
         var data = { 
             gameDirectoryRootPath: `${this.props.templativeRootDirectoryPath}`,
-            outputDirectorypath: `${this.props.templativeRootDirectoryPath}/output/${this.state.selectedOutputDirectory}`,
+            outputDirectorypath: `${this.state.selectedOutputDirectory}`,
             playgroundPackagesDirectorypath: this.state.playgroundDirectory,
             username: this.state.username,
             password: this.state.password,
