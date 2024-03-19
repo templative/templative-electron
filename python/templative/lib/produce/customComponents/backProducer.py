@@ -110,7 +110,7 @@ class BackProducer(Producer):
             if not isPieceInComponentBack:
                 continue
             filename = "%s-%s.png" % (componentBackName, pieceGamedata["name"])
-            artFilepath = os.path.join(componentBackFilepath, filename)
+            artFilepath = os.path.abspath(os.path.join(componentBackFilepath, filename))
             instructionSets.append({"name": pieceGamedata["name"], "filepath": artFilepath, "quantity": pieceGamedata["quantity"]})
 
         return instructionSets
@@ -118,5 +118,5 @@ class BackProducer(Producer):
     @staticmethod
     async def getBackInstructionSetFilepath(componentName, componentFilepath):
         filename = "%s-back.png" % componentName
-        backFilepath = os.path.join(componentFilepath, filename)
+        backFilepath = os.path.abspath(os.path.join(componentFilepath, filename))
         return {"name": filename, "filepath": backFilepath}

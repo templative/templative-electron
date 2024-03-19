@@ -39,6 +39,11 @@ def createTemplateSvgFileAtDimensionsIfMissing(filename, widthPixels, heightPixe
 
 def parseArtdataTypes(allArtdataTypes, sides):
     ardataTypes = set()
+    isDie = sides[0]["label"].startswith("Side")
+    if isDie:
+        allArtdataTypes.add("DieFace")
+        return ardataTypes
+    
     for side in sides:
         ardataType = side["label"]
         isFront = ardataType == "Face" or ardataType == "Top" or ardataType == "Image" or ardataType == "Face(Exposed)" or ardataType == "Outside" or ardataType.startswith("Side")

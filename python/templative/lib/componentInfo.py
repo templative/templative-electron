@@ -1540,7 +1540,7 @@ COMPONENT_INFO = {
         "HasPieceData": True,
         "HasPieceQuantity": False,
         "ArtDataTypeNames": [
-            "Front"
+            "DieFace"
         ],
         "Tags": [
             "plastic",
@@ -1563,7 +1563,7 @@ COMPONENT_INFO = {
         "HasPieceData": True,
         "HasPieceQuantity": False,
         "ArtDataTypeNames": [
-            "Front"
+            "DieFace"
         ],
         "Tags": [
             "plastic",
@@ -1586,7 +1586,7 @@ COMPONENT_INFO = {
         "HasPieceData": True,
         "HasPieceQuantity": False,
         "ArtDataTypeNames": [
-            "Front"
+            "DieFace"
         ],
         "Tags": [
             "d8",
@@ -1881,7 +1881,7 @@ COMPONENT_INFO = {
         "HasPieceData": True,
         "HasPieceQuantity": False,
         "ArtDataTypeNames": [
-            "Front"
+            "DieFace"
         ],
         "Tags": [
             "die",
@@ -1927,7 +1927,7 @@ COMPONENT_INFO = {
         "GameCrafterUploadTask": "boxtop",
         "GameCrafterPackagingDepthMillimeters": 80.772,
         "HasPieceData": True,
-        "HasPieceQuantity": True,
+        "HasPieceQuantity": False,
         "ArtDataTypeNames": [
             "Front"
         ],
@@ -1950,9 +1950,9 @@ COMPONENT_INFO = {
         "GameCrafterUploadTask": "onesidedsluggedset",
         "GameCrafterPackagingDepthMillimeters": 0.2794,
         "HasPieceData": True,
-        "HasPieceQuantity": True,
+        "HasPieceQuantity": False,
         "ArtDataTypeNames": [
-            "Front"
+            "DieFace"
         ],
         "Tags": [
             "sticker",

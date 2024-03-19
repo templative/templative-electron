@@ -12,7 +12,7 @@ from templative.lib.manage import defineLoader
 
 from templative.lib.componentInfo import COMPONENT_INFO
 
-class DiceProducer(Producer):
+class FrontOnlyProducer(Producer):
     @staticmethod
     async def createComponent(produceProperties:ProduceProperties, componentComposition:ComponentComposition, componentData:ComponentData, componentArtdata:ComponentArtdata):
         piecesDataBlob = await defineLoader.loadPiecesGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"])
@@ -20,14 +20,14 @@ class DiceProducer(Producer):
             print("Skipping %s component due to missing pieces gamedata." % componentComposition.componentCompose["name"])
             return
 
-        await DiceProducer.createComponentBackDataPieces(produceProperties, componentComposition, componentData, componentArtdata, piecesDataBlob)
+        await FrontOnlyProducer.createComponentPieces(produceProperties, componentComposition, componentData, componentArtdata, piecesDataBlob)
 
     @staticmethod
-    async def createComponentBackDataPieces(produceProperties:ProduceProperties, componentComposition:ComponentComposition, componentData:ComponentData, componentArtdata:ComponentArtdata, piecesDataBlob: [any]):
+    async def createComponentPieces(produceProperties:ProduceProperties, componentComposition:ComponentComposition, componentData:ComponentData, componentArtdata:ComponentArtdata, piecesDataBlob: [any]):
         componentFolderName = componentComposition.componentCompose["name"]
         
         componentBackOutputDirectory = await outputWriter.createComponentFolder(componentFolderName, produceProperties.outputDirectoryPath)
-        await DiceProducer.writeComponentInstructions(componentComposition, componentBackOutputDirectory, componentFolderName, piecesDataBlob)
+        await FrontOnlyProducer.writeComponentInstructions(componentComposition, componentBackOutputDirectory, componentFolderName, piecesDataBlob)
         
         # We use a component back that has no unique data. It has the same info within it as a componentData.
         componentBackData = ComponentBackData(componentData.studioDataBlob, componentData.gameDataBlob, componentData.componentDataBlob)
@@ -36,23 +36,23 @@ class DiceProducer(Producer):
     @staticmethod
     async def writeComponentInstructions(compositions: ComponentComposition, componentBackOutputDirectory: str, componentFolderName: str, piecesGamedata: any) -> None:
         componentInstructionFilepath = os.path.join(componentBackOutputDirectory, "component.json")
-        dieFaceFilepaths = await DiceProducer.getDieFaceFilepaths(componentFolderName, piecesGamedata, componentBackOutputDirectory)
+        frontInstructions = await FrontOnlyProducer.getInstructionSetsForFilesForBackArtdataHash(componentFolderName, piecesGamedata, componentBackOutputDirectory)
         
         componentInstructions = {
             "name": componentFolderName,
             "isDebugInfo": False if not "isDebugInfo" in compositions.componentCompose else compositions.componentCompose["isDebugInfo"],
             "type": compositions.componentCompose["type"],
             "quantity": compositions.componentCompose["quantity"],
-            "dieFaceFilepaths": dieFaceFilepaths
+            "frontInstructions": frontInstructions
         }
         await outputWriter.dumpInstructions(componentInstructionFilepath, componentInstructions)
 
     @staticmethod
-    async def getDieFaceFilepaths(componentName:str, piecesGamedata:[any], componentArtDirectoryPath:str):
-        filepaths = []
-        for pieceGamedata in piecesGamedata:
+    async def getInstructionSetsForFilesForBackArtdataHash(componentName:str, piecesGamedataBlog:[any], componentFilepath:str):
+        instructionSets = []
+        for pieceGamedata in piecesGamedataBlog:
             filename = "%s-%s.png" % (componentName, pieceGamedata["name"])
-            artFilepath = os.path.abspath(os.path.join(componentArtDirectoryPath, filename))
-            filepaths.append(artFilepath)
+            artFilepath = os.path.abspath(os.path.join(componentFilepath, filename))
+            instructionSets.append({"name": pieceGamedata["name"], "filepath": artFilepath, "quantity": pieceGamedata["quantity"]})
 
-        return filepaths
+        return instructionSets

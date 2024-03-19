@@ -138,15 +138,15 @@ async def postHookBox(gameCrafterSession, name, identity, quantity, gameId, imag
         has_proofed_outside = isProofed,
     )
 
-async def postBoxFace(gameCrafterSession,gameId, name, identity, quantity,  frontImageId, isProofed):
+async def postBoxFace(gameCrafterSession, gameId, name, identity, quantity, frontImageId, isProofed):
     url = "%s/boxface" % (gameCrafterBaseUrl)
     return await httpClient.post(gameCrafterSession, url,
         session_id = gameCrafterSession.sessionId,
         name = name,
         game_id = gameId,
         quantity = quantity,
-        top_id = frontImageId,
-        has_proofed_top = isProofed,
+        face_id = frontImageId,
+        has_proofed_face = isProofed,
         identity = identity,
     )
 

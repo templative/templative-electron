@@ -11,6 +11,7 @@ from templative.lib.manage import defineLoader
 from templative.lib.componentInfo import COMPONENT_INFO
 
 from templative.lib.produce.customComponents.backProducer import BackProducer
+from templative.lib.produce.customComponents.frontOnlyProducer import FrontOnlyProducer
 from templative.lib.produce.customComponents.diceProducer import DiceProducer
 
 async def getComponentArtdata(componentName, inputDirectoryPath, componentComposition) -> ComponentArtdata:
@@ -40,16 +41,18 @@ async def produceCustomComponent(produceProperties:ProduceProperties, gamedata:G
     componentData = ComponentData(gamedata.studioDataBlob, gamedata.gameDataBlob, componentDataBlob)
 
     # THere are front, frontback, front back overlay, front back front overlay back overylay
-
-    createdComponent = False
-    if "Back" in componentArtdata.artDataBlobDictionary: 
-        await BackProducer.createComponent(produceProperties, componentComposition, componentData, componentArtdata)
-
-    elif "Front" in componentArtdata.artDataBlobDictionary and len(componentArtdata.artDataBlobDictionary) == 1:
-        await DiceProducer.createComponent(produceProperties, componentComposition, componentData, componentArtdata)
+    producer = None
+    if "Front" in componentArtdata.artDataBlobDictionary and len(componentArtdata.artDataBlobDictionary) == 1:
+        producer = FrontOnlyProducer
+    elif "Back" in componentArtdata.artDataBlobDictionary:
+        producer = BackProducer
+    elif "DieFace" in componentArtdata.artDataBlobDictionary and len(componentArtdata.artDataBlobDictionary) == 1:
+        producer = DiceProducer
     else:
         print("No production instructions for %s %s." % (componentComposition.componentCompose["type"], componentComposition.componentCompose["name"]))
-
+        return
+    
+    await producer.createComponent(produceProperties, componentComposition, componentData, componentArtdata)
     print("Creating art assets for %s component." % (componentName))
 
 
