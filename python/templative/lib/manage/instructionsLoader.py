@@ -6,8 +6,7 @@ async def loadGameInstructions(gameRootDirectoryPath):
     if not gameRootDirectoryPath:
         raise Exception("Game root directory path cannot be None")
     
-    gameComposeFilepath = os.path.join(gameRootDirectoryPath, "game.json")
-    async with AIOFile(gameComposeFilepath) as game:
+    async with AIOFile(os.path.join(gameRootDirectoryPath, "game.json")) as game:
         return json.loads(await game.read())
 
 async def loadStudioInstructions(gameRootDirectoryPath):

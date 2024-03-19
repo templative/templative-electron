@@ -47,7 +47,7 @@ export default class PlaytestPanel extends React.Component {
     createPlayground = async () => {
         trackEvent("playtest_create")
         var data = { 
-            outputDirectorypath: `${this.props.templativeRootDirectoryPath}/output/${this.state.selectedOutputDirectory}`,
+            outputDirectorypath: this.state.selectedOutputDirectory,
             playgroundPackagesDirectorypath: this.state.playgroundDirectory
         }
         try {
