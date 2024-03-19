@@ -145,6 +145,8 @@ async def textReplaceInFile(filepath, textReplacements, gamedata:PieceData|Compo
         for textReplacement in textReplacements:
             key = "{%s}" % textReplacement["key"]
             value = await getScopedValue(textReplacement, gamedata)
+            if (isinstance(value, str)):
+                value = value.replace("\\\\n", "\n")
             value = await processValueFilters(value, textReplacement)
 
             isComplex = textReplacement["isComplex"] if "isComplex" in textReplacement else False
