@@ -6,7 +6,7 @@ from templative.lib.componentInfo import COMPONENT_INFO
 import time
 import re
 
-blankSvgFileContents = '<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg version="1.1" id="template" x="0px" y="0px" width="%s" height="%s" viewBox="0 0 1125 1725" enable-background="new 0 0 270 414" xml:space="preserve" sodipodi:docname="blank.svg" inkscape:version="1.2.2 (b0a8486, 2022-12-01)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"> <defs id="defs728" /> <sodipodi:namedview id="namedview726" pagecolor="#ffffff" bordercolor="#999999" borderopacity="1" showgrid="false" /></svg>'
+blankSvgFileContents = '<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg version="1.1" id="template" x="0px" y="0px" width="%s" height="%s" viewBox="0 0 %s %s" enable-background="new 0 0 270 414" xml:space="preserve" sodipodi:docname="blank.svg" inkscape:version="1.2.2 (b0a8486, 2022-12-01)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"> <defs id="defs728" /> <sodipodi:namedview id="namedview726" pagecolor="#ffffff" bordercolor="#999999" borderopacity="1" showgrid="false" /></svg>'
 componentsDirectoryPath = "C:/Users/User/Documents/git/nextdaygames/templative/templative/lib/create/componentTemplates"
 
 INCH_TO_MILLIMETERS = 25.4
@@ -30,7 +30,7 @@ def convertVarNameIntoTagSet(varname):
     return varNameTagSet
 
 def createTemplateSvgFileAtDimensionsIfMissing(filename, widthPixels, heightPixels):
-    templateFileContents = blankSvgFileContents % (widthPixels, heightPixels)
+    templateFileContents = blankSvgFileContents % (widthPixels, heightPixels, widthPixels, heightPixels)
     templateFilepath = path.join(componentsDirectoryPath, "%s.svg" % filename)
     if path.exists(templateFilepath):
         return
