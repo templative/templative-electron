@@ -8,6 +8,7 @@ import socket from "../../socket"
 import {getLastUsedGameCrafterUsername, writeLastUseGameCrafterUsername, getLastUsedGameCrafterApiKey, writeLastUseGameCrafterApiKey} from "../../settings/SettingsManager"
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import { trackEvent } from "@aptabase/electron/renderer";
+import AdPanel from "./AdPanel";
 const path = require('path');
 
 const { ipcRenderer } = require('electron');
@@ -118,9 +119,11 @@ export default class UploadPanel extends React.Component {
                     toggleIsProofedCallback={this.toggleIsProofed}
                     toggleIsIncludingStockCallback={this.toggleIsIncludingStock}
                 />
+                
+                <AdPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
             </div>
             <div className="col logging-col">
-                <FullHeightConsole/>
+                <FullHeightConsole />
             </div>
         </div>
     }
