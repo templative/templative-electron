@@ -10,8 +10,6 @@ export default class CreatePanel extends React.Component {
     state = {
         selectedComponentType: undefined,
         componentName: "",
-        componentTypes: {},
-        stockComponentTypes: {},
         isToggledToComponents: true,
         components: [],
         tagFilters: new Set(),
@@ -19,13 +17,6 @@ export default class CreatePanel extends React.Component {
     }
     componentDidMount = async () => {
         trackEvent("view_createPanel")
-
-        await axios.get(`http://127.0.0.1:8080/component-info`).then((response) => {
-            this.setState({componentTypes: response.data})
-        })
-        await axios.get(`http://127.0.0.1:8080/stock-info`).then((response) => {
-            this.setState({stockComponentTypes: response.data})
-        })
         var components = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
         this.setState({components: components})
     }
@@ -65,7 +56,7 @@ export default class CreatePanel extends React.Component {
         this.setState({isToggledToComponents: !this.state.isToggledToComponents})
     }
     render() {
-        var componentTypes = this.state.isToggledToComponents ? this.state.componentTypes : this.state.stockComponentTypes
+        var componentTypes = this.state.isToggledToComponents ? this.props.componentTypesCustomInfo : this.props.componentTypesStockInfo
         var componentTypeOptions = Object.assign({}, componentTypes)
         var isCreateButtonDisabled = this.state.componentName === "" || this.state.selectedComponentType === undefined
         return <div className='mainBody row'>

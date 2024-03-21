@@ -83,6 +83,8 @@ export default class EditPanel extends React.Component {
                             updateViewedFileUsingExplorerAsyncCallback ={this.props.updateViewedFileUsingExplorerAsyncCallback}
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                             saveFileAsyncCallback={this.props.saveFileAsyncCallback}
+                            componentTypesCustomInfo={this.props.componentTypesCustomInfo}
+                            componentTypesStockInfo={this.props.componentTypesStockInfo}
                         />
                     }
                 </div>

@@ -16,7 +16,13 @@ async def createArtFilesForComponent(compositions:ComponentComposition, componen
         if pieceHash != uniqueComponentBackData.pieceUniqueBackHash:
             continue
         pieceData = PieceData(uniqueComponentBackData.studioDataBlob, uniqueComponentBackData.gameDataBlob, uniqueComponentBackData.componentDataBlob, uniqueComponentBackData.componentBackDataBlob, uniqueComponentBackData.sourcedVariableNamesSpecificToPieceOnBackArtData, uniqueComponentBackData.pieceUniqueBackHash, pieceGamedata)
-        tasks.append(asyncio.create_task(createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Front"], pieceData, componentBackOutputDirectory, produceProperties)))
+
+        if "Front" in componentArtdata.artDataBlobDictionary:
+            task = asyncio.create_task(createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Front"], pieceData, componentBackOutputDirectory, produceProperties))
+            tasks.append(task)
+        if "DieFace" in componentArtdata.artDataBlobDictionary:
+            task = asyncio.create_task(createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["DieFace"], pieceData, componentBackOutputDirectory, produceProperties))
+            tasks.append(task)
 
     uniqueComponentBackData.componentBackDataBlob["name"] = "back"
     if "Back" in componentArtdata.artDataBlobDictionary:

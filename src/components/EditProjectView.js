@@ -16,6 +16,7 @@ import FeedbackPanel from "./Feedback/FeedbackPanel";
 
 const path = require("path");
 const fs = require("fs/promises");
+const axios = require("axios");
 
 export default class EditProjectView extends React.Component {
   
@@ -30,6 +31,8 @@ export default class EditProjectView extends React.Component {
         italicsTabFilepath: undefined,
         fileContents: undefined,
         currentFileType: "COMPONENTS",
+        componentTypesCustomInfo: {},
+        componentTypesStockInfo: {},
         currentFilepath: TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath),
     }
     static #csvToJS = (csv) => {
@@ -177,7 +180,14 @@ export default class EditProjectView extends React.Component {
       return location.split("http://localhost:3000")[1]
     }
     
-    componentDidMount = () => {
+    componentDidMount = async () => {
+        await axios.get(`http://127.0.0.1:8080/component-info`).then((response) => {
+            // console.log(response.data)    
+            this.setState({componentTypesCustomInfo: response.data})
+        })
+        await axios.get(`http://127.0.0.1:8080/stock-info`).then((response) => {
+            this.setState({componentTypesStockInfo: response.data})
+        })
         this.setState({
             currentRoute: this.getCurrentRoute()
         })
@@ -295,9 +305,16 @@ export default class EditProjectView extends React.Component {
             <TopNavbar topNavbarItems={TOP_NAVBAR_ITEMS} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
             <Routes>
 
-                <Route path='/create' element={ <CreatePanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+                <Route path='/create' element={ 
+                    <CreatePanel 
+                        componentTypesCustomInfo={this.state.componentTypesCustomInfo}
+                        componentTypesStockInfo={this.state.componentTypesStockInfo}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } 
+                    />
                 <Route path='/' element={ 
                     <EditPanel 
+                        componentTypesCustomInfo={this.state.componentTypesCustomInfo}
+                        componentTypesStockInfo={this.state.componentTypesStockInfo}
                         italicsTabFilepath={this.state.italicsTabFilepath}
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         tabbedFiles={this.state.tabbedFiles}

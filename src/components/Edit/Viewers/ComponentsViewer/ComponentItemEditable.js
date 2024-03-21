@@ -8,6 +8,7 @@ export default class ComponentItemEditable extends React.Component {
         componentGameDataFilePath: undefined,
         pieceGameDataFilePath: undefined,
         artdataFrontFilePath: undefined,
+        artdataDieFaceFilePath: undefined,
         artdataBackFilePath: undefined,
         componentGameDataExists: false,
         pieceGamedataExists: false,
@@ -27,16 +28,19 @@ export default class ComponentItemEditable extends React.Component {
         const componentGameDataFilePath = path.join(this.props.templativeRootDirectoryPath, gameCompose["componentGamedataDirectory"], `${this.props.componentGamedataFilename}.json`)
         const pieceGameDataFilePath = path.join(this.props.templativeRootDirectoryPath, gameCompose["piecesGamedataDirectory"], `${this.props.piecesGamedataFilename}.json`)
         const artdataFrontFilePath = path.join(this.props.templativeRootDirectoryPath, gameCompose["artdataDirectory"], `${this.props.artdataFrontFilename}.json`)
+        const artdataDieFaceFilePath = path.join(this.props.templativeRootDirectoryPath, gameCompose["artdataDirectory"], `${this.props.artdataDieFaceFilename}.json`)
         const artdataBackFilePath = path.join(this.props.templativeRootDirectoryPath, gameCompose["artdataDirectory"], `${this.props.artdataBackFilename}.json`)
         this.setState({
             isStock: false,
             componentGameDataFilePath: componentGameDataFilePath,
             pieceGameDataFilePath: pieceGameDataFilePath,
             artdataFrontFilePath: artdataFrontFilePath,
+            artdataDieFaceFilePath: artdataDieFaceFilePath,
             artdataBackFilePath: artdataBackFilePath,
             componentGameDataExists: await TemplativeAccessTools.doesFileExistAsync(componentGameDataFilePath),
             pieceGamedataExists: await TemplativeAccessTools.doesFileExistAsync(pieceGameDataFilePath),
             frontArtdataExists: await TemplativeAccessTools.doesFileExistAsync(artdataFrontFilePath),
+            dieFaceArtdataExists: await TemplativeAccessTools.doesFileExistAsync(artdataBackFilePath),
             backArtdataExists: await TemplativeAccessTools.doesFileExistAsync(artdataBackFilePath),
         })
     }
@@ -53,9 +57,21 @@ export default class ComponentItemEditable extends React.Component {
         console.log(filepath)
         await this.props.updateViewedFileUsingExplorerAsyncCallback(filetype, filepath)
     }
+    static arrayHasValue = (array, value) => {
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+            if (value == element) {
+                return true
+            }
+        }
+        return false
+    }
     render() {
         var isDebug = this.props.isDebugInfo === true
-
+        const hasCustomComponentInfo = this.props.componentTypesCustomInfo[this.props.componentType] != null
+        var hasFrontArtdata = hasCustomComponentInfo && ComponentItemEditable.arrayHasValue(this.props.componentTypesCustomInfo[this.props.componentType]["ArtDataTypeNames"], "Front")
+        var hasDieFaceArtdata = hasCustomComponentInfo && ComponentItemEditable.arrayHasValue(this.props.componentTypesCustomInfo[this.props.componentType]["ArtDataTypeNames"], "DieFace")
+        var hasBackArtdata = hasCustomComponentInfo && ComponentItemEditable.arrayHasValue(this.props.componentTypesCustomInfo[this.props.componentType]["ArtDataTypeNames"], "Back")
         return <div className="vertical-input-group editable-component" 
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}>
@@ -98,6 +114,7 @@ export default class ComponentItemEditable extends React.Component {
                     value={this.props.piecesGamedataFilename}/>
             </div>
 
+            { hasFrontArtdata &&
             <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
                 { this.state.frontArtdataExists ? 
                     <button onClick={async () => await this.goToFile("ARTDATA", this.state.artdataFrontFilePath)} className="btn btn-outline-secondary go-to-template-button component-left-bumper" type="button">Front Artdata ↗</button> :
@@ -108,6 +125,26 @@ export default class ComponentItemEditable extends React.Component {
                     onChange={(event)=>this.props.updateComponentFieldCallback("artdataFrontFilename", event.target.value)}
                     value={this.props.artdataFrontFilename}/>
             </div>
+            }
+            { hasDieFaceArtdata &&
+            <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
+                { this.state.dieFaceArtdataExists ? 
+                    <button 
+                        onClick={async () => await this.goToFile("ARTDATA", this.state.artdataDieFaceFilePath)} 
+                        className="btn btn-outline-secondary go-to-template-button component-left-bumper" 
+                        type="button"
+                    >
+                        Die Face Artdata ↗
+                    </button> :
+                    <span className="input-group-text component-left-bumper">Die Face Artdata</span>
+                }
+                
+                <input type="text" aria-label="First name" className="form-control" 
+                    onChange={(event)=>this.props.updateComponentFieldCallback("artdataDieFaceFilename", event.target.value)}
+                    value={this.props.artdataDieFaceFilename}/>
+            </div>
+            }
+            { hasBackArtdata &&
             <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
                 { this.state.backArtdataExists ? 
                     <button onClick={async () => await this.goToFile("ARTDATA", this.state.artdataBackFilePath)} className="btn btn-outline-secondary go-to-template-button component-left-bumper" type="button">Back Artdata ↗</button> :
@@ -117,7 +154,7 @@ export default class ComponentItemEditable extends React.Component {
                     onChange={(event)=>this.props.updateComponentFieldCallback("artdataBackFilename", event.target.value)}
                     value={this.props.artdataBackFilename}/>
             </div>
-                
+            }
 
             <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
                 

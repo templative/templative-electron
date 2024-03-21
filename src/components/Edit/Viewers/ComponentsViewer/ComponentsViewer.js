@@ -94,11 +94,14 @@ export default class ComponentsViewer extends EditableViewerJson {
             updateViewedFileUsingExplorerAsyncCallback ={this.props.updateViewedFileUsingExplorerAsyncCallback }
             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
             key={component.name} 
+            componentTypesCustomInfo={this.props.componentTypesCustomInfo}
+            componentTypesStockInfo={this.props.componentTypesStockInfo}
             componentName={component.name}
             componentType={component.type}
             componentGamedataFilename={component.componentGamedataFilename}
             piecesGamedataFilename={component.piecesGamedataFilename}
             artdataFrontFilename={component.artdataFrontFilename}
+            artdataDieFaceFilename={component.artdataDieFaceFilename}
             artdataBackFilename={component.artdataBackFilename}
             isDebugInfo={component.isDebugInfo}
             disabled={component.disabled}
