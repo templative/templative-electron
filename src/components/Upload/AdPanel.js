@@ -21,8 +21,8 @@ export default class AdPanel extends React.Component {
             </div>
             <div className="ads-images">
                 
-                <LabelledImage path={`${this.props.templativeRootDirectoryPath}/gamecrafter/backdrop.png`} name="GameCrafter Store Backdrop"/>
                 <LabelledImage path={`${this.props.templativeRootDirectoryPath}/gamecrafter/advertisement.png`} name="GameCrafter Store Advertisement"/>
+                <LabelledImage path={`${this.props.templativeRootDirectoryPath}/gamecrafter/backdrop.png`} name="GameCrafter Store Backdrop"/>
                 <LabelledImage path={`${this.props.templativeRootDirectoryPath}/gamecrafter/logo.png`} name="GameCrafter Store Logo"/>
                 <LabelledImage path={`${this.props.templativeRootDirectoryPath}/gamecrafter/actionShot.png`} name="GameCrafter Store Action Shot"/>
             </div>
