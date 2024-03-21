@@ -1,5 +1,5 @@
 import React from "react";
-import "./SelectDirectory.css"
+import "../Render/RenderPanel.css"
 const {shell} = require('electron')
 const path = require("path")
 
@@ -16,9 +16,12 @@ export default class DirectoryOption extends React.Component {
     openFolder() {
         shell.openPath(path.join(this.props.directory.path, this.props.directory.name));
     }
+    getDirectoryPath = () => path.join(this.props.directory.path, this.props.directory.name)
+
     render() {
-        return <div className={`resourceHeaderWrapper directory ${this.props.selectedDirectory === this.props.directory.name && "selected"}`} 
-                onClick={()=>this.props.selectDirectoryCallback(this.props.directory.name)}
+        const isSelected = this.props.selectedDirectory === this.props.directory.name
+        return <div className={`resourceHeaderWrapper directory ${isSelected && "selected-directory"}`} 
+                onClick={async () => await this.props.selectDirectoryAsyncCallback(this.props.directory.name)}
                 onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseOut}
             >
             <div className="resourceHeaderContent" >

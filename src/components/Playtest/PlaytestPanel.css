@@ -17,3 +17,21 @@
 .create-playground-button:hover {
     background-color: #30353a !important;
 }
+.playground-directory-header, .ttp-directory-label {
+    width: 100% !important;
+}
+.ttp-directory-label {
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-width: 0px !important;
+}
+.tabletop-playground-folder-input {
+    text-align: right !important;
+}
+.cornered-top {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+.lookup-playground-button {
+    border-color: rgb(73, 80, 87) !important;
+}
