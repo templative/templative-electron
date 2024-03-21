@@ -37,7 +37,7 @@ export default class PrintPanel extends React.Component {
     createPrintout = async () => {
         trackEvent("print")
         var data = { 
-            outputDirectorypath: `${this.props.templativeRootDirectoryPath}/output/${this.state.selectedDirectory}`,
+            outputDirectorypath: `${this.state.selectedDirectory}`,
             isBackIncluded: this.state.isBackIncluded,
             size: this.state.size,
             areMarginsIncluded: this.state.areMarginsDrawn
