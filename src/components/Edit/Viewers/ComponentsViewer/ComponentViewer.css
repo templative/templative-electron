@@ -22,10 +22,13 @@
     margin-left: auto;
     margin-right: auto;
 }
+.link-to-components{
+    text-decoration-thickness: 0px !important;
+    text-decoration: none !important;
+}
 .add-components-button {
     width: min(725px, 100%);
-    margin-left: auto !important;
-    margin-right: auto !important;
+    text-decoration-thickness: 0px !important;
     margin-bottom: 1em;
     background-color: hsl(210, 10%, 22%) !important;
     border-color: hsl(210, 10%, 22%) !important;

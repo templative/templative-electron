@@ -126,7 +126,7 @@ export default class ComponentsViewer extends EditableViewerJson {
             <div className="col">
                 <div className="row">
                     <div className="col editable-components">
-                        <Link to="/create">
+                        <Link className="d-flex justify-content-center link-to-components" to="/create">
                             <button className="btn btn-primary add-components-button">Add Components</button>
                         </Link>
                         {componentItems}
