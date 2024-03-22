@@ -33,3 +33,34 @@
     background-color: hsl(210, 10%, 22%) !important;
     border-color: hsl(210, 10%, 22%) !important;
 }
+
+.auto-complete {
+    position: absolute;
+    top: 30px;
+    left: 0.5em;
+    z-index: 999;
+    background-color: hsl(210, 10%, 22%);
+    width: calc(100% - 1em);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-color: rgb(73, 80, 87);
+    border-width: 1px;
+    border-style:solid;
+    border-top-width: 0;
+    padding: 0.1em;
+}
+.auto-complete > p {
+    font-size: 14px;
+    margin:0px;
+}
+/* .auto-complete > p:hover {
+    background-color: hsl(210, 10%, 30%) !important;
+    cursor: pointer;
+} */
+.already-written-autocomplete {
+    color: hsl(210, 14%, 50%)
+}
+
+.auto-complete > p:nth-child(even) {
+    background-color: hsl(210, 10%, 19%);
+}

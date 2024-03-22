@@ -1,5 +1,6 @@
 import React from "react";
 import "./ComponentViewer.css"
+import AutocompleteInput from "./AutocompleteInput";
 
 export default class ComponentItemEditableStock extends React.Component {   
     state = {
@@ -12,6 +13,8 @@ export default class ComponentItemEditableStock extends React.Component {
         this.setState({isHovering: false})
     }
     render() {
+        var stockOptions = Object.keys(this.props.componentTypesStockInfo).map(key => "STOCK_" + key)
+        var typeOptions = Object.keys(this.props.componentTypesCustomInfo).concat(stockOptions)
 
         return <div className="vertical-input-group editable-component" 
             onMouseOver={this.handleMouseOver}
@@ -29,12 +32,12 @@ export default class ComponentItemEditableStock extends React.Component {
                     </React.Fragment>
                 }               
             </div>
-            <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
-                <span className="input-group-text component-left-bumper">Type</span>
-                <input type="text" aria-label="First name" className="form-control" 
-                    onChange={(event)=>this.props.updateComponentFieldCallback("type", event.target.value)} 
-                    value={this.props.component.type}/>
-            </div>             
+            <AutocompleteInput 
+                value={this.props.component.type} 
+                onChange={(value)=> this.props.updateComponentFieldCallback("type", value)}
+                ariaLabel="Type"
+                options={typeOptions}
+            />             
 
             <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
                 

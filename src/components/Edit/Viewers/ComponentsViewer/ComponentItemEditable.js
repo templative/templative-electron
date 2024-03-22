@@ -1,6 +1,7 @@
 import React from "react";
 import "./ComponentViewer.css"
 import TemplativeAccessTools from "../../../TemplativeAccessTools";
+import AutocompleteInput from "./AutocompleteInput";
 const path = require("path")
 export default class ComponentItemEditable extends React.Component {   
     state = {
@@ -60,7 +61,7 @@ export default class ComponentItemEditable extends React.Component {
     static arrayHasValue = (array, value) => {
         for (let index = 0; index < array.length; index++) {
             const element = array[index];
-            if (value == element) {
+            if (value === element) {
                 return true
             }
         }
@@ -69,9 +70,14 @@ export default class ComponentItemEditable extends React.Component {
     render() {
         var isDebug = this.props.isDebugInfo === true
         const hasCustomComponentInfo = this.props.componentTypesCustomInfo[this.props.componentType] != null
+
         var hasFrontArtdata = hasCustomComponentInfo && ComponentItemEditable.arrayHasValue(this.props.componentTypesCustomInfo[this.props.componentType]["ArtDataTypeNames"], "Front")
         var hasDieFaceArtdata = hasCustomComponentInfo && ComponentItemEditable.arrayHasValue(this.props.componentTypesCustomInfo[this.props.componentType]["ArtDataTypeNames"], "DieFace")
         var hasBackArtdata = hasCustomComponentInfo && ComponentItemEditable.arrayHasValue(this.props.componentTypesCustomInfo[this.props.componentType]["ArtDataTypeNames"], "Back")
+
+        var stockOptions = Object.keys(this.props.componentTypesStockInfo).map(key => "STOCK_" + key)
+        var typeOptions = Object.keys(this.props.componentTypesCustomInfo).concat(stockOptions)
+    
         return <div className="vertical-input-group editable-component" 
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}>
@@ -88,12 +94,12 @@ export default class ComponentItemEditable extends React.Component {
                     </React.Fragment>
                 }               
             </div>
-            <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
-                <span className="input-group-text component-left-bumper">Type</span>
-                <input type="text" aria-label="First name" className="form-control" 
-                    onChange={(event)=>this.props.updateComponentFieldCallback("type", event.target.value)} 
-                    value={this.props.componentType}/>
-            </div> 
+            <AutocompleteInput 
+                value={this.props.componentType} 
+                onChange={(value)=> this.props.updateComponentFieldCallback("type", value)}
+                ariaLabel="Type"
+                options={typeOptions}
+            />
             
             <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
             { this.state.componentGameDataExists ? 

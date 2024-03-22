@@ -80,6 +80,8 @@ export default class ComponentsViewer extends EditableViewerJson {
                 templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                 key={component.name} 
                 component={component} 
+                componentTypesCustomInfo={this.props.componentTypesCustomInfo}
+                componentTypesStockInfo={this.props.componentTypesStockInfo}
                 deleteComponentCallback={()=> this.deleteComponent(index)}
                 duplicateComponentCallback={() => this.duplicateComponent(index)}
                 isFloatingName={isFloatingName}
