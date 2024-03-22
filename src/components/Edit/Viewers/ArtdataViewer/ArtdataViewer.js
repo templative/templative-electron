@@ -5,6 +5,7 @@ import Overlay from "./ArtdataTypes/Overlay";
 import ArtdataAddButton from "./ArtdataAddButton"
 import EditableViewerJson from "../EditableViewerJson";
 import TemplativeAccessTools from "../../../TemplativeAccessTools";
+import FilepathsAutocompleteInput from "../ComponentsViewer/FilepathsAutocompleteInput";
 const path = require("path")
 
 const DEFAULT_ARTDATA_ITEMS = {
@@ -200,7 +201,13 @@ export default class ArtdataViewer extends EditableViewerJson {
                         <button onClick={async () => await this.goToTemplateFile(templateFilename)} className="btn btn-outline-secondary go-to-template-button" type="button">Template ↗</button> :
                         <span className="input-group-text templative-label">Template</span> 
                     }
-                    <input type="text" className="form-control" onChange={(event)=>this.updateTemplate(event.target.value)} aria-label="What key to get from the scope..." value={templateFilename}/>
+                    <FilepathsAutocompleteInput 
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        value={templateFilename} 
+                        onChange={(value)=> this.updateTemplate(value)}
+                        ariaLabel="Template Filename"
+                        gameComposeDirectory="artTemplatesDirectory"
+                    />
                 </div>
 
                 <h3>Overlays</h3>

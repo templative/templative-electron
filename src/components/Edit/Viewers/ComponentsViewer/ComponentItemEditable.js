@@ -119,7 +119,6 @@ export default class ComponentItemEditable extends React.Component {
                     onChange={(value)=> this.props.updateComponentFieldCallback("componentGamedataFilename", value)}
                     ariaLabel="Component Gamedata Filename"
                     gameComposeDirectory="componentGamedataDirectory"
-
                 />
             </div>
             <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
