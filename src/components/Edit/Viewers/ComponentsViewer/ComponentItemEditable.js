@@ -40,7 +40,7 @@ export default class ComponentItemEditable extends React.Component {
             componentGameDataExists: await TemplativeAccessTools.doesFileExistAsync(componentGameDataFilePath),
             pieceGamedataExists: await TemplativeAccessTools.doesFileExistAsync(pieceGameDataFilePath),
             frontArtdataExists: await TemplativeAccessTools.doesFileExistAsync(artdataFrontFilePath),
-            dieFaceArtdataExists: await TemplativeAccessTools.doesFileExistAsync(artdataBackFilePath),
+            dieFaceArtdataExists: await TemplativeAccessTools.doesFileExistAsync(artdataDieFaceFilePath),
             backArtdataExists: await TemplativeAccessTools.doesFileExistAsync(artdataBackFilePath),
         })
     }
