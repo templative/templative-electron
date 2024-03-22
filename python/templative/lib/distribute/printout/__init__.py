@@ -66,14 +66,15 @@ async def collectFilepathQuantitiesForComponent(componentTypeFilepathAndQuantity
     if not "frontInstructions" in componentInstructions:
         print("Skipping %s for lacking frontInstructions" % componentInstructions["name"])
         return
-
+    
     for instruction in componentInstructions["frontInstructions"]:
         frontBack = {
             "filepath": instruction["filepath"],
-            "backFilepath": componentInstructions["backInstructions"]["filepath"],
             "quantity":  int(instruction["quantity"]) * int(componentInstructions["quantity"]),
-
         }
+        if "backInstructions" in componentInstructions:
+            frontBack["backFilepath"] = componentInstructions["backInstructions"]["filepath"]
+        
         componentTypeFilepathAndQuantity[componentInstructions["type"]].append(frontBack)
 
 async def addPageImagesToPdf(pdf, componentType, pageImages, printoutPlayAreaInches):
@@ -145,7 +146,7 @@ async def createPageImagesForComponentTypeImages(componentType, componentTypeIma
 
 async def drawPieceForQuantities(pageImages, instruction, totalImagesDrawn, printBack, columns, rows, isImageRotated, resizedSizePixels, halfAreaPixels, pieceSizeInches, dimensionsPixels, marginsPixels):
     frontImage = Image.open(instruction["filepath"])
-    backImage = Image.open(instruction["backFilepath"])
+    backImage = Image.open(instruction["backFilepath"]) if "backFilepath" in instruction else frontImage
 
     if isImageRotated:
         frontImage = frontImage.rotate(-90, expand=True)
