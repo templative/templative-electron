@@ -71,7 +71,7 @@ export default class SelectDirectoryInDirectory extends React.Component {
                 <p className="resourcesHeader">{this.props.title}</p>
             </div> 
             <div className="outputFolderOptions">
-                {outputDirectoryDivs}
+                {outputDirectoryDivs.reverse()}
             </div>
         </React.Fragment>
     }
