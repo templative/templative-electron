@@ -52,7 +52,7 @@ export default class PrintPanel extends React.Component {
         }
     }
     render() {
-        var printoutFilepath = `${this.props.templativeRootDirectoryPath}/output/${this.state.selectedDirectory}/printout.pdf`
+        var printoutFilepath = `${this.state.selectedDirectory}/printout.pdf`
         var showPDF = this.state.selectedDirectory !== undefined && fs.existsSync(printoutFilepath)
         return <div className='mainBody row '>
             <div className="col-4 print-control-col-left">
