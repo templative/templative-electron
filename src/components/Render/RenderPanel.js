@@ -71,11 +71,14 @@ export default class RenderPanel extends React.Component {
         });
     }
     render() {
-        var componentDirectoryDivs = this.state.components.map((component) => {
-            return <div onClick={()=>this.toggleComponent(component.name)} className={this.state.selectedComponent === component.name ? "directory selected" : "directory"} key={component.name}> 
-                <p className="directory-item">{component.name}</p>
-            </div>
-        })
+        var componentDirectoryDivs = this.state.components
+            .filter(component => !component.type.startsWith("STOCK_"))
+            .map((component) => {
+                return <div onClick={()=>this.toggleComponent(component.name)} className={this.state.selectedComponent === component.name ? "directory selected" : "directory"} key={component.name}> 
+                    <p className="directory-item">{component.name}</p>
+                </div>
+            }
+        )
         
         return <div className='renderPanel row'>
             <div className="col-4 directoryPanel">
