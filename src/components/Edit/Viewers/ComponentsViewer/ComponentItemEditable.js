@@ -2,7 +2,10 @@ import React from "react";
 import "./ComponentViewer.css"
 import TemplativeAccessTools from "../../../TemplativeAccessTools";
 import AutocompleteInput from "./AutocompleteInput";
+import FilepathsAutocompleteInput from "./FilepathsAutocompleteInput";
+
 const path = require("path")
+
 export default class ComponentItemEditable extends React.Component {   
     state = {
         isHovering: false,
@@ -20,7 +23,8 @@ export default class ComponentItemEditable extends React.Component {
     componentDidUpdate = async (prevProps, prevState) => {
         await this.loadComponentData()
     }
-    componentDidMount = async () => {        
+
+    componentDidMount = async () => { 
         await this.loadComponentData()
     }
     loadComponentData = async () => {    
@@ -94,30 +98,44 @@ export default class ComponentItemEditable extends React.Component {
                     </React.Fragment>
                 }               
             </div>
-            <AutocompleteInput 
-                value={this.props.componentType} 
-                onChange={(value)=> this.props.updateComponentFieldCallback("type", value)}
-                ariaLabel="Type"
-                options={typeOptions}
-            />
+            <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
+                <span className="input-group-text component-left-bumper">Type</span>
+                <AutocompleteInput 
+                    value={this.props.componentType} 
+                    onChange={(value)=> this.props.updateComponentFieldCallback("type", value)}
+                    ariaLabel="Type"
+                    options={typeOptions}
+                />
+            </div>
             
             <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
-            { this.state.componentGameDataExists ? 
-                <button onClick={async () => await this.goToFile("KEYVALUE_GAMEDATA", this.state.componentGameDataFilePath)} className="btn btn-outline-secondary go-to-template-button component-left-bumper" type="button">Component Gamedata ↗</button> :
-                <span className="input-group-text component-left-bumper">Component Gamedata</span>
-            }
-            <input type="text" aria-label="First name" className="form-control"                     
-                onChange={(event)=>this.props.updateComponentFieldCallback("componentGamedataFilename", event.target.value)} 
-                value={this.props.componentGamedataFilename}/>
+                { this.state.componentGameDataExists ? 
+                    <button onClick={async () => await this.goToFile("KEYVALUE_GAMEDATA", this.state.componentGameDataFilePath)} className="btn btn-outline-secondary go-to-template-button component-left-bumper" type="button">Component Gamedata ↗</button> :
+                    <span className="input-group-text component-left-bumper">Component Gamedata</span>
+                }
+                <FilepathsAutocompleteInput 
+                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    value={this.props.componentGamedataFilename} 
+                    onChange={(value)=> this.props.updateComponentFieldCallback("componentGamedataFilename", value)}
+                    ariaLabel="Component Gamedata Filename"
+                    gameComposeDirectory="componentGamedataDirectory"
+
+                />
             </div>
             <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
                 { this.state.pieceGamedataExists ? 
                     <button onClick={async () => await this.goToFile("PIECE_GAMEDATA", this.state.pieceGameDataFilePath)} className="btn btn-outline-secondary go-to-template-button component-left-bumper" type="button">Piece Gamedata ↗</button> :
                     <span className="input-group-text component-left-bumper">Piece Gamedata</span>
                 }
-                <input type="text" aria-label="First name" className="form-control" 
-                    onChange={(event)=>this.props.updateComponentFieldCallback("piecesGamedataFilename", event.target.value)} 
-                    value={this.props.piecesGamedataFilename}/>
+                
+                <FilepathsAutocompleteInput 
+                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    value={this.props.piecesGamedataFilename} 
+                    onChange={(value)=> this.props.updateComponentFieldCallback("piecesGamedataFilename", value)}
+                    ariaLabel="Pieces Gamedata Filename"
+                    gameComposeDirectory="piecesGamedataDirectory"
+
+                />
             </div>
 
             { hasFrontArtdata &&
@@ -127,9 +145,13 @@ export default class ComponentItemEditable extends React.Component {
                     <span className="input-group-text component-left-bumper">Front Artdata</span>
                 }
                 
-                <input type="text" aria-label="First name" className="form-control" 
-                    onChange={(event)=>this.props.updateComponentFieldCallback("artdataFrontFilename", event.target.value)}
-                    value={this.props.artdataFrontFilename}/>
+                <FilepathsAutocompleteInput 
+                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    value={this.props.artdataFrontFilename} 
+                    onChange={(value)=> this.props.updateComponentFieldCallback("artdataFrontFilename", value)}
+                    ariaLabel="Front Artdata Filename"
+                    gameComposeDirectory="artdataDirectory"
+                />
             </div>
             }
             { hasDieFaceArtdata &&
@@ -145,9 +167,13 @@ export default class ComponentItemEditable extends React.Component {
                     <span className="input-group-text component-left-bumper">Die Face Artdata</span>
                 }
                 
-                <input type="text" aria-label="First name" className="form-control" 
-                    onChange={(event)=>this.props.updateComponentFieldCallback("artdataDieFaceFilename", event.target.value)}
-                    value={this.props.artdataDieFaceFilename}/>
+                <FilepathsAutocompleteInput 
+                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    value={this.props.artdataDieFaceFilename} 
+                    onChange={(value)=> this.props.updateComponentFieldCallback("artdataDieFaceFilename", value)}
+                    ariaLabel="Die Face Artdata Filename"
+                    gameComposeDirectory="artdataDirectory"
+                />
             </div>
             }
             { hasBackArtdata &&
@@ -156,9 +182,13 @@ export default class ComponentItemEditable extends React.Component {
                     <button onClick={async () => await this.goToFile("ARTDATA", this.state.artdataBackFilePath)} className="btn btn-outline-secondary go-to-template-button component-left-bumper" type="button">Back Artdata ↗</button> :
                     <span className="input-group-text component-left-bumper">Back Artdata</span>
                 }
-                <input type="text" aria-label="First name" className="form-control" 
-                    onChange={(event)=>this.props.updateComponentFieldCallback("artdataBackFilename", event.target.value)}
-                    value={this.props.artdataBackFilename}/>
+                <FilepathsAutocompleteInput 
+                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    value={this.props.artdataBackFilename} 
+                    onChange={(value)=> this.props.updateComponentFieldCallback("artdataBackFilename", value)}
+                    ariaLabel="Back Artdata Filename"
+                    gameComposeDirectory="artdataDirectory"
+                />
             </div>
             }
 
