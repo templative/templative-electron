@@ -28,7 +28,6 @@ export default class AutocompleteInput extends React.Component {
                     {option.replace(this.props.value, "")}
                 </p>
             })
-            .slice(0, 10)
 
         const shouldShowAutocomplete = options.length > 0 && this.state.isFocused
         return <React.Fragment>

@@ -41,6 +41,8 @@
     z-index: 999;
     background-color: hsl(210, 10%, 22%);
     width: calc(100% - 1em);
+    max-height: 300px;
+    overflow-y: scroll;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     border-color: rgb(73, 80, 87);
