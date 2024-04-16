@@ -45,3 +45,6 @@ html {
   font-size: calc(10px + 2vmin);
   color:#cfcfcf !important;
 }
+.hidden-visibility{
+  visibility: hidden;
+}
