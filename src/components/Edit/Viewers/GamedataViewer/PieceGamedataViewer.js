@@ -6,7 +6,8 @@ import EditableViewerJson from "../EditableViewerJson";
 export default class PieceGamedataViewer extends EditableViewerJson {   
     state = {
         trackedKey: undefined,
-        currentUpdateValue: undefined
+        currentUpdateValue: undefined,
+        lockedKey: undefined
     }
 
     getFilePath = (props) => {
@@ -66,6 +67,9 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         if (this.state.trackedKey === undefined || this.state.currentUpdateValue === undefined) {
             return
         }
+        if (this.state.lockedKey !== undefined && this.state.trackedKey === this.state.lockedKey) {
+            this.setState({lockedKey: this.state.currentUpdateValue})
+        }
         this.updateKey(this.state.trackedKey, this.state.currentUpdateValue)
     }
 
@@ -111,6 +115,13 @@ export default class PieceGamedataViewer extends EditableViewerJson {
             content: newContents
         })
     }
+    toggleLock = (key) => {
+        if (this.state.lockedKey !== undefined) {
+            this.setState({lockedKey: undefined})
+            return
+        }
+        this.setState({lockedKey: key})
+    }
 
     render() {
         var rows = []
@@ -123,6 +134,8 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                     trackedKey={this.state.trackedKey} 
                     index={index} 
                     piece={piece}
+                    toggleLockCallback={this.toggleLock}
+                    lockedKey={this.state.lockedKey}
                     addBlankKeyValuePairCallback={this.addBlankKeyValuePair}
                     deletePieceCallback={()=>this.deletePiece(index)}
                     duplicatePieceByIndexCallback={()=>this.duplicatePieceByIndex(index)}

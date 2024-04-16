@@ -64,6 +64,7 @@ export default class KeyValueGamedataViewer extends EditableViewerJson {
             rows = keys.map((key) => {
                 return <KeyValueInput 
                     key={key}
+                    hasLockPotential={false}
                     gamedataKey={key} value={this.state.content[key]} 
                     trackedKey={this.state.trackedKey} currentUpdateValue={this.state.currentUpdateValue}
                     trackChangedKeyCallback={(key, value) => this.trackChangedKey(key, value)}

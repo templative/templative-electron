@@ -30,9 +30,16 @@ export default class Piece extends React.Component {
                     }
                 };
                 return true
-            }).map((key) => {
+            })
+            .filter((key) => {
+                return this.props.lockedKey === undefined || key === this.props.lockedKey
+            })
+            .map((key) => {
                 return <KeyValueInput 
                     key={key}
+                    hasLockPotential={true}
+                    isLocked={this.props.lockedKey !== undefined}
+                    toggleLockCallback={this.props.toggleLockCallback}
                     gamedataKey={key} value={this.props.gamedataFile[this.props.index][key]} 
                     trackedKey={this.props.trackedKey} currentUpdateValue={this.props.currentUpdateValue}
                     trackChangedKeyCallback={(key, value) => this.props.trackChangedKeyCallback(key, value)}
@@ -56,15 +63,18 @@ export default class Piece extends React.Component {
             
             {keyValueRows}
             
-            <div key="addBlankKeyValuePairButton" className={`input-group input-group-sm mb-3 add-piece-key ${shouldShowPlusSign && "show-add-piece-key"}`} data-bs-theme="dark">
-                <button 
-                    onClick={() => this.props.addBlankKeyValuePairCallback()} 
-                    className="btn btn-outline-secondary add-button" 
-                    type="button"
-                >
-                    ➕
-                </button>
-            </div>
+            {this.props.lockedKey === undefined && 
+                <div key="addBlankKeyValuePairButton" className={`input-group input-group-sm mb-3 add-piece-key ${shouldShowPlusSign && "show-add-piece-key"}`} data-bs-theme="dark">
+                    <button 
+                        onClick={() => this.props.addBlankKeyValuePairCallback()} 
+                        className="btn btn-outline-secondary add-button" 
+                        type="button"
+                    >
+                        ➕
+                    </button>
+                </div>
+            }
+            
             
         </div>
     }
