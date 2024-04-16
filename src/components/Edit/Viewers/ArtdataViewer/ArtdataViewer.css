@@ -1,5 +1,5 @@
 .scope-select {
-    max-width:10em;
+    max-width:10em !important;
 }
 .add-button {
     width:100%;
@@ -73,5 +73,19 @@
 }
 .go-to-template-button:hover {
     background-color: hsl(210, 10%, 22%) !important;
-
 }
+
+.text-replacement-debugging-label {
+    width: 34px !important;
+}
+/* .text-replacement-key-label {
+
+} */
+.text-replacement-source-type-label {
+    max-width:10em !important;
+}
+.text-replacement-controls-label {
+    width: 100px;
+}
+/* .text-replacement-source-label {
+} */

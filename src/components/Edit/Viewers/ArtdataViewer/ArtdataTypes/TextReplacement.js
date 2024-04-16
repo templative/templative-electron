@@ -29,7 +29,6 @@ export default class TextReplacement extends React.Component {
                 isComplex={isComplex}
                 index={this.props.index} 
             />
-            <span className="input-group-text darkened-label">🔑</span>
             <input type="text" className="form-control no-left-border" onChange={(event)=>this.props.updateArtdataFieldCallback("textReplacements", this.props.index, "key", event.target.value)} aria-label="What key to replace..." value={this.props.artdataItem.key}/>
             <ScopedValueInput index={this.props.index} 
                 updateArtdataFieldCallback={(index, field, value) => this.props.updateArtdataFieldCallback("textReplacements", index, field, value)} 
