@@ -50,7 +50,8 @@ export default class Piece extends React.Component {
             <PieceControlInput 
                 piece={this.props.piece}
                 updateValueCallback={(key, value)=>this.props.updateValueCallback(this.props.index, key, value)}
-                deleteCallback={() => this.props.deletePieceCallback(this.props.index)}
+                deleteCallback={this.props.deletePieceCallback}
+                duplicatePieceByIndexCallback={this.props.duplicatePieceByIndexCallback}
             />
             
             {keyValueRows}
