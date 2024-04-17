@@ -97,7 +97,7 @@ export default class UploadPanel extends React.Component {
         }
     }
     render() {
-        return <div className='mainBody row'>
+        return <div className='mainBody'>
             <div className="col-4">
                 <RenderOutputOptions selectedDirectory={this.state.selectedOutputDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
                 <UploadControls 

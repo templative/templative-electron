@@ -5,7 +5,7 @@ import EditPanelTab from "./EditPanelTab";
 
 export default class EditPanelTabs extends React.Component {       
     render() {
-        return <div className="nav nav-tabs d-flex flex-nowrap">
+        return <div className="nav nav-tabs d-flex flex-nowrap edit-panel-tabs">
             {this.props.tabbedFiles.map((tabbedFile, index) => {
                 return <EditPanelTab 
                     isItalics={this.props.italicsTabFilepath === tabbedFile.filepath}

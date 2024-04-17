@@ -25,10 +25,10 @@
     user-select: none; /* Standard syntax */
     cursor: pointer;
 }
-.nav-item:first-of-type {
+.edit-panel-tabs > .nav-item:first-of-type {
     margin-left: 0.25em !important; 
 }
-.nav-item:last-of-type {
+.edit-panel-tabs .nav-item:last-of-type {
     margin-right: 0.25em !important;
 }
 .nav-link.active { 

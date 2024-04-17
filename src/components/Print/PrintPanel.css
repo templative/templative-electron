@@ -1,6 +1,4 @@
-.mainBody {
-    height: calc(100% - 50px) !important;
-}
+
 .print-control-col-left {
     border-right: solid #313540;
     border-width: 1px;

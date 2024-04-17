@@ -80,32 +80,34 @@ export default class RenderPanel extends React.Component {
             }
         )
         
-        return <div className='renderPanel row'>
-            <div className="col-4 directoryPanel">
-                <div className="headerWrapper">
-                    <p className="resourcesHeader">Components</p>
-                </div>
-                <div className="renderComponents">
-                    {componentDirectoryDivs}
-                </div>
-                <RenderButton 
-                    selectedComponent={this.state.selectedComponent} 
-                    selectedLanguage={this.state.selectedLanguage} 
-                    isDebugRendering={this.state.isDebugRendering}
-                    isComplexRendering={this.state.isComplexRendering}
-                    toggleDebugCallback={this.setDebugCheckbox}
-                    toggleComplexCallback={this.setComplexCheckbox}
-                    renderTemplativeProjectCallback={this.renderTemplativeProject}
-                    setLanguageCallback={this.setLanguage}
-                />
+        return <div className='mainBody'>
+            <div className="row">
+                <div className="col-4 directoryPanel">
+                    <div className="headerWrapper">
+                        <p className="resourcesHeader">Components</p>
+                    </div>
+                    <div className="renderComponents">
+                        {componentDirectoryDivs}
+                    </div>
+                    <RenderButton 
+                        selectedComponent={this.state.selectedComponent} 
+                        selectedLanguage={this.state.selectedLanguage} 
+                        isDebugRendering={this.state.isDebugRendering}
+                        isComplexRendering={this.state.isComplexRendering}
+                        toggleDebugCallback={this.setDebugCheckbox}
+                        toggleComplexCallback={this.setComplexCheckbox}
+                        renderTemplativeProjectCallback={this.renderTemplativeProject}
+                        setLanguageCallback={this.setLanguage}
+                    />
 
-                <LimitedHeightConsole/>
-                
-                <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
-            </div>  
-            <div className="col-8 outputPanel">
-                <OutputExplorer outputFolderPath={this.state.selectedDirectory}/>
-            </div>        
+                    <LimitedHeightConsole/>
+                    
+                    <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
+                </div>  
+                <div className="col-8 outputPanel">
+                    <OutputExplorer outputFolderPath={this.state.selectedDirectory}/>
+                </div>        
+            </div>
         </div>
     }
 }

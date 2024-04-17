@@ -188,9 +188,7 @@ export default class EditProjectView extends React.Component {
         await axios.get(`http://127.0.0.1:8080/stock-info`).then((response) => {
             this.setState({componentTypesStockInfo: response.data})
         })
-        this.setState({
-            currentRoute: this.getCurrentRoute()
-        })
+        // this.updateRoute(this.getCurrentRoute())
     }
 
     componentDidUpdate = (prevProps) => {
@@ -211,6 +209,7 @@ export default class EditProjectView extends React.Component {
         })
     }
     updateRoute = (route) => {
+        console.log(this.state.currentRoute, "->", route)
         this.setState({currentRoute: route})
     }
 

@@ -84,35 +84,37 @@ export default class FeedbackPanel extends React.Component {
         })
     }
     render() {
-        return <div className='mainBody row'>
-            <div className="col-2 past-feedback-col">
-                <button type="button" 
-                    className="btn btn-outline-secondary create-feedback-post-button" 
-                    onClick={this.createFeedbackPost}
-                    disabled={this.state.feedbackMode===FeedbackMode.POSTING}
-                >
-                    Create Feedback Post
-                </button>
-                <FeedbackPostChoices 
-                    selectPostCallback={this.selectFeedbackPost}
-                    feedbackPosts={this.state.feedbackPosts} 
-                    selectedFeedbackPost={this.state.selectedFeedbackPost}
-                />
-            </div>
-            <div className="col">
-                { this.state.feedbackMode === FeedbackMode.POSTING && 
-                    <FeedbackForm 
-                        title={this.state.title}
-                        body={this.state.body}
-                        // fileInput={this.fileInput}
-                        updatePostTitleCallback={this.updatePostTitle}
-                        updatePostBodyCallback={this.updatePostBody}
-                        uploadFeedbackAsyncCallback={this.uploadFeedbackAsync}
+        return <div className='mainBody'>
+            <div className="row feedbackRow">
+                <div className="col-2 past-feedback-col">
+                    <button type="button" 
+                        className="btn btn-outline-secondary create-feedback-post-button" 
+                        onClick={this.createFeedbackPost}
+                        disabled={this.state.feedbackMode===FeedbackMode.POSTING}
+                    >
+                        Create Feedback Post
+                    </button>
+                    <FeedbackPostChoices 
+                        selectPostCallback={this.selectFeedbackPost}
+                        feedbackPosts={this.state.feedbackPosts} 
+                        selectedFeedbackPost={this.state.selectedFeedbackPost}
                     />
-                }
-                { this.state.feedbackMode === FeedbackMode.VIEWING && 
-                    <FeedbackViewer post={this.state.selectedFeedbackPost}/>
-                }
+                </div>
+                <div className="col">
+                    { this.state.feedbackMode === FeedbackMode.POSTING && 
+                        <FeedbackForm 
+                            title={this.state.title}
+                            body={this.state.body}
+                            // fileInput={this.fileInput}
+                            updatePostTitleCallback={this.updatePostTitle}
+                            updatePostBodyCallback={this.updatePostBody}
+                            uploadFeedbackAsyncCallback={this.uploadFeedbackAsync}
+                        />
+                    }
+                    { this.state.feedbackMode === FeedbackMode.VIEWING && 
+                        <FeedbackViewer post={this.state.selectedFeedbackPost}/>
+                    }
+                </div>
             </div>
         </div>
     }

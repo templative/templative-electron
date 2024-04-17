@@ -54,7 +54,7 @@ export default class PrintPanel extends React.Component {
     render() {
         var printoutFilepath = `${this.state.selectedDirectory}/printout.pdf`
         var showPDF = this.state.selectedDirectory !== undefined && fs.existsSync(printoutFilepath)
-        return <div className='mainBody row '>
+        return <div className='mainBody '>
             <div className="col-4 print-control-col-left">
                 <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
                 <CreatePrintoutButton 

@@ -17,6 +17,9 @@
     margin-right: auto;
     border-radius: 6px;
 }
+.feedbackRow {
+    height: 100%;
+}
 .feedback-post-choices > h4 {
     margin-left: 0.25em;;
 }

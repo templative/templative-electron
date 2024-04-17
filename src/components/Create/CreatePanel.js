@@ -59,7 +59,7 @@ export default class CreatePanel extends React.Component {
         var componentTypes = this.state.isToggledToComponents ? this.props.componentTypesCustomInfo : this.props.componentTypesStockInfo
         var componentTypeOptions = Object.assign({}, componentTypes)
         var isCreateButtonDisabled = this.state.componentName === "" || this.state.selectedComponentType === undefined
-        return <div className='mainBody row'>
+        return <div className='mainBody'>
             <div className="col main-col">
                 <div className="row create-row">
                     <div className="input-group input-group-sm mb-3 create-component-input-group"  data-bs-theme="dark">

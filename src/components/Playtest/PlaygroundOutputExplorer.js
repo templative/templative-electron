@@ -30,7 +30,7 @@ export default class PlaygroundOutputExplorer extends React.Component {
             buttonMessage = "Create Playground Package"
         }
         
-        return <div className='mainBody row'>
+        return <div className='mainBody'>
             <div className="col-4">
                 
                 <div className="create-button-container">

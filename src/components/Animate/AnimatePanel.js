@@ -7,7 +7,7 @@ export default class AnimatePanel extends React.Component {
         trackEvent("view_animatePanel")
     }
     render() {
-        return <div className='mainBody row '>
+        return <div className='mainBody '>
             <div className="col">
                 <h1>Animate</h1>
             </div>     

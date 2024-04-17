@@ -24,7 +24,7 @@ export default class EditPanel extends React.Component {
     }
     render () {
         var filepathSplit = this.props.currentFilepath.replace(/\\/g,"/").replace(/^\/|\/$/g, '').split("/").join(" > ")
-        return <div className='mainBody row '>
+        return <div className='mainBody'>
             <div className='col-3 left-column'>
                 <TemplativeProjectRenderer 
                     templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
