@@ -9,6 +9,7 @@ import artIcon from "../../Icons/artIcon.svg"
 import componentComposeIcon from "../../Icons/componentComposeIcon.svg"
 import pieceIcon from "../../Icons/pieceIcon.svg"
 import rulesIcon from "../../Icons/rulesIcon.svg"
+import ContentFolderItem from "./ContentFolderItem";
 
 const fsOld = require('fs');
 const fs = require("fs/promises")
@@ -18,26 +19,7 @@ export default class ContentFileList extends React.Component {
     watcher = undefined
     state = {
         doesNewFileExist: false,
-        filenames: []
-    }
-    static #filterNonContentFiles = async (filepaths) => {
-        // return filepaths
-        var filteredFilepaths = []
-        for (let index = 0; index < filepaths.length; index++) {
-            const filepath = filepaths[index];
-            var filepathStats = await fs.lstat(filepath)
-            const isDirectory = filepathStats.isDirectory()
-            if (isDirectory) {
-                continue
-            }
-            const isReadMe = filepath.split(".").pop() === "md"
-            const isMacFolderInfo = filepath.split(".").pop() === "DS_Store"
-            if (isReadMe || isMacFolderInfo) {
-                continue;
-            }
-            filteredFilepaths.push(filepath)
-        }
-        return filteredFilepaths
+        fileItems: [],
     }
     static #sortAlphabetically = (a, b) => {
         if (a < b) {
@@ -49,12 +31,29 @@ export default class ContentFileList extends React.Component {
         return 0;
     }
     #requestNewFilesNamesAsync = async () => {
+        var baseFilePathDepth = this.props.baseFilepath.replace(/\\/g, '/').split("/").length
         var filenamesRelativeToBasepath = await fs.readdir(this.props.baseFilepath, { recursive: true })
         var filepaths = filenamesRelativeToBasepath
+            .filter((filepath) => {
+                const isReadMe = filepath.split(".").pop() === "md"
+                const isMacFolderInfo = filepath.split(".").pop() === "DS_Store"
+                return !(isReadMe || isMacFolderInfo)
+            })
+            .map(filenameRelativeToBasepath => path.normalize(path.join(this.props.baseFilepath, filenameRelativeToBasepath)).replace(/\\/g, '/'))  
             .sort(ContentFileList.#sortAlphabetically)
-            .map((filenameRelativeToBasepath) => path.join(this.props.baseFilepath, filenameRelativeToBasepath))        
-        filepaths = await ContentFileList.#filterNonContentFiles(filepaths)
-        this.setState({filenames: filepaths})
+        
+            var fileItems = await Promise.all(
+            filepaths.map(async (absoluteFilepath) => {
+                var filepathStats = await fs.lstat(absoluteFilepath)
+                const isDirectory = filepathStats.isDirectory()
+                const depth = path.normalize(absoluteFilepath).split(path.sep).length
+                return {
+                    depthRelativeToBasepath: depth - baseFilePathDepth,
+                    absoluteFilepath: absoluteFilepath,
+                    isDirectory: isDirectory
+                }
+            }))
+        this.setState({fileItems: fileItems})
     }
     componentDidMount = async () => {
         await this.#watchBasepathAsync()
@@ -90,19 +89,23 @@ export default class ContentFileList extends React.Component {
         this.componentComposeWatcher = undefined;
     }
 
-    startCreatingNewFile() {
+    startCreatingNewFileAsync() {
         this.setState({doesNewFileExist: true})
     }
 
-    submitNewFilename = (filename) => {
+    submitNewFilenameAsync = async (filename) => {
+        console.log(filename)
         this.setState({doesNewFileExist: false})
         var filepath = path.join(this.props.baseFilepath, `${filename}.${this.props.newFileExtension}`)
         const content = this.props.getDefaultContentForFileBasedOnFilenameCallback(this.props.contentType, filename)
-        this.props.createFileCallback(filepath, content)
+        await this.props.createFileAsyncCallback(filepath, content)
     }
 
     cancelFileCreation = () => {
         this.setState({doesNewFileExist: false})
+    }
+    toggleExtendedAsync = async () => {
+        await this.props.changeExtendedFileTypeAsyncCallback(!this.props.extendedFileTypes.has(this.props.filetype), this.props.filetype);
     }
 
     render() {
@@ -112,27 +115,55 @@ export default class ContentFileList extends React.Component {
                 <NewFileInput 
                     key="newFileInput" 
                     cancelFileCreationCallback={this.cancelFileCreation}
-                    submitNewFilenameCallback={this.submitNewFilename}
+                    submitNewFilenameAsyncCallback={this.submitNewFilenameAsync}
                 />
             )
         }
-        // console.log(this.state)
-        for(var i = 0; i < this.state.filenames.length; i++) {
-            var filepath = this.state.filenames[i]
-            // console.log(filepath)
-            var isSelected = this.props.currentFilepath === filepath
-            var referenceCount = this.props.filenameReferenceCounts[filepath]
+        for(var i = 0; i < this.state.fileItems.length; i++) {
+            var fileItem = this.state.fileItems[i]
+            
+            var isVisible = false
+            if (fileItem.depthRelativeToBasepath === 1) {
+                isVisible = true
+            }
+            else {
+                if (this.props.extendedDirectories.has(path.dirname(fileItem.absoluteFilepath))){
+                    isVisible = true
+                }
+            }
+            if (!isVisible) {
+                continue
+            }
+            var isSelected = path.normalize(this.props.currentFilepath) === path.normalize(fileItem.absoluteFilepath)
+            if (fileItem.isDirectory) {
+                divs.push(<ContentFolderItem 
+                    contentType={this.props.contentType}
+                    isSelected={isSelected} 
+                    key={fileItem.absoluteFilepath} 
+                    directoryPath={this.props.directoryPath}
+                    filepath={fileItem.absoluteFilepath}
+                    depth={fileItem.depthRelativeToBasepath}
+                    duplicateFileAsyncCallback={this.props.duplicateFileAsyncCallback}
+                    updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
+                    deleteFolderAsyncCallback={this.props.deleteFileAsyncCallback}
+                    renameFileAsyncCallback={this.props.renameFileAsyncCallback}
+                    isExtended={this.props.extendedDirectories.has(fileItem.absoluteFilepath)}
+                    changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
+                />)
+                continue
+            }
+            var referenceCount = this.props.filenameReferenceCounts[path.normalize(fileItem.absoluteFilepath)]
             if (referenceCount === undefined) {
                 referenceCount = 0
             }
-            
             divs.push(<ContentFileItem 
                 contentType={this.props.contentType} 
                 referenceCount={referenceCount}
                 isSelected={isSelected} 
-                key={filepath} 
+                key={fileItem.absoluteFilepath} 
                 directoryPath={this.props.directoryPath}
-                filepath={filepath}
+                filepath={fileItem.absoluteFilepath}
+                depth={fileItem.depthRelativeToBasepath}
                 duplicateFileAsyncCallback={this.props.duplicateFileAsyncCallback}
                 updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
                 deleteFileAsyncCallback={this.props.deleteFileAsyncCallback}
@@ -140,9 +171,9 @@ export default class ContentFileList extends React.Component {
             />)
         }
 
-        var createFileCallback = undefined
+        var startCreatingNewFileAsyncCallback = undefined
         if (this.props.canCreateNewFiles) {
-            createFileCallback = () => this.startCreatingNewFile()
+            startCreatingNewFileAsyncCallback = async () => await this.startCreatingNewFileAsync()
         }
 
         var iconSource = componentComposeIcon
@@ -164,16 +195,20 @@ export default class ContentFileList extends React.Component {
         if (this.props.contentType === "ARTDATA") {
             iconSource = artDataIcon
         }
-
+        var isExtended = this.props.extendedFileTypes.has(this.props.filetype)
         return <div className="content-file-list">
             <ResourceHeader 
                 iconSource={iconSource}
                 header={this.props.header} 
                 directory={this.props.directoryPath} 
-                createFileCallback={createFileCallback}/> 
-            <div className="content-file-list">
-                {divs}
-            </div> 
+                isExtended={isExtended}
+                toggleExtendedAsyncCallback={this.toggleExtendedAsync}
+                startCreatingNewFileAsyncCallback={startCreatingNewFileAsyncCallback}/>
+            {isExtended &&
+                <div className="content-file-list">
+                    {divs}
+                </div> 
+            } 
         </div>
     }
 }

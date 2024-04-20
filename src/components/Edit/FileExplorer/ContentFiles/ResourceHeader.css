@@ -6,6 +6,10 @@
     height:0.8em !important;
     margin-bottom:0.1em;
 }
+.resourcesHeaderWrapper:hover {
+    background-color: #333741;
+    cursor: pointer;
+}
 .resourcesHeader {
     font-size:14px;
     text-align: left;
@@ -37,4 +41,8 @@
     padding:0 !important;
     border: 0 !important;
     background-color: #2b3037 !important;
+}
+.resource-header-chevron {
+    margin-right: 0.5em;
+    margin-bottom: 0.3em;
 }

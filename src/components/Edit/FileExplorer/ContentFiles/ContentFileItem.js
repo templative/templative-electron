@@ -87,6 +87,7 @@ export default class ContentFileItem extends React.Component {
                 contentType={this.props.contentType}
                 directoryPath={this.props.directoryPath}
                 referenceCount={this.props.referenceCount}
+                depth={this.props.depth}
                 cancelRenamingCallback={this.cancelRenamingFile}
                 filepath={this.props.filepath}
                 isRenaming={this.state.isRenamingFile}

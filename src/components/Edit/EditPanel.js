@@ -37,6 +37,10 @@ export default class EditPanel extends React.Component {
                     openGameGamedataCallback={this.props.openGameGamedataCallback}
                     openRulesCallback={this.props.openRulesCallback}
                     closeTabIfOpenByFilepathCallback={this.props.closeTabIfOpenByFilepathCallback}
+                    extendedFileTypes={this.props.extendedFileTypes}    
+                    changeExtendedFileTypeAsyncCallback={this.props.changeExtendedFileTypeAsyncCallback}
+                    extendedDirectories={this.props.extendedDirectories}
+                    changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
                 />
             </div>
             <div className='col-9 viewer'>

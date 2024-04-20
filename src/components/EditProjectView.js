@@ -34,7 +34,34 @@ export default class EditProjectView extends React.Component {
         componentTypesCustomInfo: {},
         componentTypesStockInfo: {},
         currentFilepath: TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath),
+
+        extendedFileTypes: new Set(),
+        extendedDirectories: new Set(),
     }
+    changeExtendedDirectoryAsync = (isExtended, directory) => {
+        var isAlreadyExtended = this.state.extendedDirectories.has(directory)
+        
+        var copiedExtendedDirectories = this.state.extendedDirectories
+        if (isAlreadyExtended && !isExtended) {
+            copiedExtendedDirectories.delete(directory)
+        }
+        if (!isAlreadyExtended && isExtended) {
+            copiedExtendedDirectories.add(directory)
+        }
+        this.setState({extendedDirectories: copiedExtendedDirectories})
+    }
+    changeExtendedFileTypeAsync = (isExtended, filetype) => {
+        var isAlreadyExtended = this.state.extendedFileTypes.has(filetype)
+        var copiedExtendedFileTypes = this.state.extendedFileTypes
+        if (isAlreadyExtended && !isExtended) {
+            copiedExtendedFileTypes.delete(filetype)
+        }
+        if (!isAlreadyExtended && isExtended) {
+            copiedExtendedFileTypes.add(filetype)
+        }
+        this.setState({extendedFileTypes: copiedExtendedFileTypes})
+    }
+
     static #csvToJS = (csv) => {
         var lines = csv.split("\n");
         var result = [];
@@ -332,6 +359,10 @@ export default class EditProjectView extends React.Component {
                         updateViewedFileUsingExplorerAsyncCallback={this.updateViewedFileUsingExplorerAsync}
                         saveFileAsyncCallback={this.saveFileAsync}
                         closeTabIfOpenByFilepathCallback={this.closeTabIfOpenByFilepath}
+                        extendedDirectories={this.state.extendedDirectories}
+                        changeExtendedDirectoryAsyncCallback={this.changeExtendedDirectoryAsync}
+                        extendedFileTypes={this.state.extendedFileTypes}    
+                        changeExtendedFileTypeAsyncCallback={this.changeExtendedFileTypeAsync}
                     /> 
                 }/>
                 <Route path='/render' element={ <RenderPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />

@@ -18,13 +18,20 @@ export default class TemplativeProjectRenderer extends React.Component {
         componentGamedataDirectory: undefined
     }
 
-    createFile = (filepath, contents) => {
-        fs.writeFile(filepath, contents, {}, () => {
+    createFileAsync = async (filepath, contents) => {
+        const directory = path.dirname(filepath)
+        await fs.mkdir(directory, { recursive: true });
+        await fs.writeFile(filepath, contents, {}, () => {
             this.forceUpdate()
         })
     }
     deleteFileAsync = async (filepath) => {
-        console.log(`Deleting ${filepath}`)
+        var filepathStats = await fs.lstat(filepath)
+        const isDirectory = filepathStats.isDirectory()
+        if (isDirectory) {
+            await fs.rm(filepath, { recursive: true, force: true });
+            return
+        }
         await fs.unlink(filepath, (err) => {
             if (err !== null) {
                 console.error(err);
@@ -173,10 +180,15 @@ export default class TemplativeProjectRenderer extends React.Component {
                             baseFilepath={this.state.templatesDirectory}
                             currentFilepath={this.props.currentFilepath} 
                             updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
-                            createFileCallback={this.createFile}
+                            createFileAsyncCallback={this.createFileAsync}
                             deleteFileAsyncCallback={this.deleteFileAsync}
                             renameFileAsyncCallback={this.renameFileAsync}
                             duplicateFileAsyncCallback={this.duplicateFileAsync}
+                            filetype={"TEMPLATES"}    
+                            extendedFileTypes={this.props.extendedFileTypes}    
+                            changeExtendedFileTypeAsyncCallback={this.props.changeExtendedFileTypeAsyncCallback}
+                            extendedDirectories={this.props.extendedDirectories}
+                            changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
                         />
                         <ContentFileList
                             header="Overlays" 
@@ -187,10 +199,15 @@ export default class TemplativeProjectRenderer extends React.Component {
                             baseFilepath={this.state.overlaysDirectory}
                             currentFilepath={this.props.currentFilepath} 
                             updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
-                            createFileCallback={this.createFile}
+                            createFileAsyncCallback={this.createFileAsync}
                             deleteFileAsyncCallback={this.deleteFileAsync}
                             renameFileAsyncCallback={this.renameFileAsync}
                             duplicateFileAsyncCallback={this.duplicateFileAsync}
+                            filetype={"OVERLAYS"}    
+                            extendedFileTypes={this.props.extendedFileTypes}    
+                            changeExtendedFileTypeAsyncCallback={this.props.changeExtendedFileTypeAsyncCallback}
+                            extendedDirectories={this.props.extendedDirectories}
+                            changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
                         />
                         <ContentFileList
                             header="Artdata" 
@@ -204,10 +221,15 @@ export default class TemplativeProjectRenderer extends React.Component {
                             canCreateNewFiles={true}
                             newFileExtension="json"
                             getDefaultContentForFileBasedOnFilenameCallback={this.getDefaultContentForFileBasedOnFilename}
-                            createFileCallback={this.createFile}
+                            createFileAsyncCallback={this.createFileAsync}
                             deleteFileAsyncCallback={this.deleteFileAsync}
                             renameFileAsyncCallback={this.renameFileAsync}
                             duplicateFileAsyncCallback={this.duplicateFileAsync}
+                            filetype={"ARTDATA"}    
+                            extendedFileTypes={this.props.extendedFileTypes}    
+                            changeExtendedFileTypeAsyncCallback={this.props.changeExtendedFileTypeAsyncCallback}
+                            extendedDirectories={this.props.extendedDirectories}
+                            changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
                         />
                         <ContentFileList
                             header="Component Gamedata" 
@@ -221,10 +243,15 @@ export default class TemplativeProjectRenderer extends React.Component {
                             canCreateNewFiles={true}
                             newFileExtension="json"
                             getDefaultContentForFileBasedOnFilenameCallback={this.getDefaultContentForFileBasedOnFilename}
-                            createFileCallback={this.createFile}
+                            createFileAsyncCallback={this.createFileAsync}
                             deleteFileAsyncCallback={this.deleteFileAsync}
                             renameFileAsyncCallback={this.renameFileAsync}
                             duplicateFileAsyncCallback={this.duplicateFileAsync}
+                            filetype={"COMPONENT_GAMEDATA"}    
+                            extendedFileTypes={this.props.extendedFileTypes}    
+                            changeExtendedFileTypeAsyncCallback={this.props.changeExtendedFileTypeAsyncCallback}
+                            extendedDirectories={this.props.extendedDirectories}
+                            changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
                         />
                         <ContentFileList
                             header="Piece Gamedata" 
@@ -238,10 +265,15 @@ export default class TemplativeProjectRenderer extends React.Component {
                             canCreateNewFiles={true}
                             newFileExtension="json"
                             getDefaultContentForFileBasedOnFilenameCallback={this.getDefaultContentForFileBasedOnFilename}
-                            createFileCallback={this.createFile}
+                            createFileAsyncCallback={this.createFileAsync}
                             deleteFileAsyncCallback={this.deleteFileAsync}
                             renameFileAsyncCallback={this.renameFileAsync}
                             duplicateFileAsyncCallback={this.duplicateFileAsync}
+                            filetype={"PIECE_GAMEDATA"}    
+                            extendedFileTypes={this.props.extendedFileTypes}    
+                            changeExtendedFileTypeAsyncCallback={this.props.changeExtendedFileTypeAsyncCallback}
+                            extendedDirectories={this.props.extendedDirectories}
+                            changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
                         />
                 </div>
             </div>       
