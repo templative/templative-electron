@@ -9,15 +9,18 @@
     margin-bottom: 0.16em !important;
     padding-left:1em;
 }
+.directory:nth-child(even) {
+    background-color: hsl(224, 13%, 17.5%);
+}
 .directory:hover {
-    background-color: #2b3037;
+    background-color: #333942;
     cursor: pointer;
 }
-.selected {
-    background-color: hsl(215, 12%, 21%);
+.component-selected-for-rendering {
+    background-color: #333942 !important;
 }
-.selected:hover {
-    background-color: hsl(215, 12%, 22%);
+.component-selected-for-rendering:hover {
+    background-color: #333942!important;
 }
 .testDiv {
     height: 1000px;

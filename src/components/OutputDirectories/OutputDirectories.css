@@ -4,3 +4,6 @@
 .selected-output-directory {
     background-color: #3f454c;
 }
+.resourceHeaderWrapper:nth-child(even) {
+    background-color: hsl(224, 13%, 17.5%);
+}

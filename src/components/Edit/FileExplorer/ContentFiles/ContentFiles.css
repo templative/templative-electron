@@ -5,6 +5,9 @@
     margin-bottom: 0.1em;
     height:0.75em;
 }
+.content-file-item-wrapper:nth-child(even) {
+    background-color: hsl(224, 13%, 17.5%);
+}
 .content-file-item-wrapper:hover {
     background-color: #2b3037;
     cursor: pointer;
