@@ -8,8 +8,10 @@ export default class LabelledImage extends React.Component {
     }
     componentDidMount = () => {
         this.#closeWatcher()
+        if (!fsOld.existsSync(this.props.path)) {
+            return
+        }
         this.watcher = fsOld.watch(this.props.path, {}, async () => {
-            console.log("AH!")
             this.setState({key: this.state.key + 1})
         });
     }
