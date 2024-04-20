@@ -32,12 +32,16 @@ export default class ComponentItemEditableStock extends React.Component {
                     </React.Fragment>
                 }               
             </div>
-            <AutocompleteInput 
-                value={this.props.component.type} 
-                onChange={(value)=> this.props.updateComponentFieldCallback("type", value)}
-                ariaLabel="Type"
-                options={typeOptions}
-            />             
+            <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
+                <span className="input-group-text component-left-bumper">Type</span>
+                <AutocompleteInput 
+                    value={this.props.component.type} 
+                    onChange={(value)=> this.props.updateComponentFieldCallback("type", value)}
+                    ariaLabel="Type"
+                    options={typeOptions}
+                />   
+            </div>
+                      
 
             <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
                 
