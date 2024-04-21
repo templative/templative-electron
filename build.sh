@@ -29,6 +29,7 @@ function createTemplativeApp() {
         -n templative \
         --onefile ./templative/__main__.py \
         --debug=imports \
+        --log-level=DEBUG \
         --hidden-import=engineio.async_drivers.aiohttp \
         --hidden-import=engineio.async_aiohttp \
         --collect-all templative \
