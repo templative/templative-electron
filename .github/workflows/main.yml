@@ -60,11 +60,15 @@ jobs:
           name: xref
           path: ./python/build/templative/xref-templative.html
 
+      - name: Upload Templative Exe as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: exe
+          path: ./bin/templative.exe
+
       - name: Test Templative App
         run: |
-          cd bin
-          "./templative.exe"
-          cd ..
+          "./bin/templative.exe"
 
       - uses: actions/setup-node@v3
         with:
