@@ -12,8 +12,8 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          # - windows-latest
-          - macos-latest
+          - windows-latest
+          # - macos-latest
           # - macos-13-xlarge
         node:
           - 18
@@ -51,7 +51,7 @@ jobs:
       - name: Upload Templative as Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: templativeApp
+          name: container-state
           path: ./
       
       - name: Upload Templative Xref as Artifact
@@ -63,12 +63,12 @@ jobs:
       - name: Test Templative App
         run: |
           cd bin
-          ls
-          ./templative
+          "./templative.exe"
           cd ..
-      # - uses: actions/setup-node@v3
-      #   with:
-      #     node-version: ${{ matrix.node }}
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
 
       # - name: Install Node Packages
       #   run: npm install
