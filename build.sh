@@ -28,31 +28,11 @@ function createTemplativeApp() {
         -y \
         -n templative \
         --onefile ./templative/__main__.py \
-        --debug=all \
+        --debug=imports \
         --hidden-import=engineio.async_drivers.aiohttp \
         --hidden-import=engineio.async_aiohttp \
-        --hidden-import=asyncclick \
-        --hidden-import=anyio \
-        --hidden-import=aiofile \
-        --hidden-import=aiohttp \
-        --hidden-import=tabulate \
-        --hidden-import=pillow \
-        --hidden-import=fpdf \
-        --hidden-import=markdown2 \
-        --hidden-import=svgmanip \
-        --hidden-import=setuptools \
-        --hidden-import=aiohttp-cors \
-        --hidden-import=python-socketio \
-        --hidden-import=numpy \
         --collect-all templative \
         --codesign-identity "Developer ID Application: Next Day Games LLC (Y9RWBVMY7R)"
-    cd ..
-}
-
-function testMacApp() {
-    cd ./bin
-    ls
-    ./templative
     cd ..
 }
 
