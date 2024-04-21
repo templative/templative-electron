@@ -13,11 +13,11 @@ sio = socketio.AsyncServer(
 
 @sio.event
 def connect(sid, environ):
-    # print("connect ", sid)
+    print("connect ", sid)
     pass
 @sio.event
 def disconnect(sid):
-    # print('disconnect ', sid)
+    print('disconnect ', sid)
     pass
 
 @sio.on("upload")

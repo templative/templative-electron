@@ -8,7 +8,12 @@ async def emit(sio, emitTarget, message):
         return
     if message == "\n":
         return
-    await sio.emit(emitTarget, message)
+    try:
+        await sio.emit(emitTarget, message)
+    except socketio.exceptions.ConnectionError as e:
+        print(f"Yo! ConnectionError: {e} - Likely the client disconnected just before sending.")
+    except ConnectionResetError as e:
+        print(f"Yo! ConnectionResetError: {e}.")
 
 class EmitPrintStatements():
     def __init__(self, sio, emitTarget):
@@ -19,12 +24,8 @@ class EmitPrintStatements():
         self.oldStdOutWrite = sys.stdout.write
         def printAndPushToArray(message):
             self.oldStdOutWrite(message)
-            try:
-                asyncio.run_coroutine_threadsafe(emit(self.sio, self.emitTarget, message), loop=asyncio.get_event_loop())
-            except socketio.exceptions.ConnectionError as e:
-                print(f"ConnectionError: {e} - Likely the client disconnected just before sending.")
-            except ConnectionResetError as e:
-                print(f"ConnectionResetError: {e}.")
+            asyncio.run_coroutine_threadsafe(emit(self.sio, self.emitTarget, message), loop=asyncio.get_event_loop())
+            
         sys.stdout.write = printAndPushToArray
 
     def __exit__(self, *args):
