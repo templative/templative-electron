@@ -48,6 +48,12 @@ jobs:
       - name: Create Templative App/Exe
         run: npm run templative-build
       
+      - name: Upload Templative as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: templativeApp
+          path: ./bin
+
       - name: Test Templative App
         run: |
           cd bin
