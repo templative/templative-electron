@@ -7,16 +7,37 @@ const fsOld = require('fs');
 
 export default class OutputExplorer extends React.Component { 
     state = {
-        componentDirectories: []
+        componentDirectories: [],
+        totalFiles: 1,
+        doneFiles: 1,
     }  
    
     #getOutputComponentDirectories = async () => {
-        var componentDirectories = await fs.readdir(this.props.outputFolderPath, { withFileTypes: true })
+        var componentDirectories = await fs.readdir(this.props.outputFolderPath, { withFileTypes: true, })
         componentDirectories = componentDirectories
             .filter(dirent => dirent.isDirectory())
             .map(dirent => path.join(dirent.path, dirent.name))
 
-        this.setState({componentDirectories: componentDirectories})
+        var totalFiles = 0
+        var doneFiles = 0
+        for(var i in componentDirectories) {
+            var componentDirectory = componentDirectories[i]
+            var fileExtensions = await fs.readdir(componentDirectory, { withFileTypes: true, })
+            fileExtensions = fileExtensions    
+                .filter(dirent => dirent.isFile())
+                .map(dirent => path.extname(dirent.name))
+
+            var needed = fileExtensions.filter(extension => extension === '.svg')
+            totalFiles += needed.length
+            var done = fileExtensions.filter(extension => extension === '.png')
+            doneFiles += done.length
+        }
+        
+        this.setState({
+            componentDirectories: componentDirectories,
+            totalFiles: totalFiles,
+            doneFiles: doneFiles,
+        })
     }
     #stopWatchingOutputPath = () => {
         if (this.outputFolderWatcher === undefined) {
@@ -60,13 +81,30 @@ export default class OutputExplorer extends React.Component {
             outputName = this.props.outputFolderPath.replaceAll("\\", "/")
             outputName = outputName.substring(outputName.lastIndexOf("/") + 1, outputName.length)
         }
+        var percentageDone = this.state.doneFiles/this.state.totalFiles * 100
+        var style = {"width": `${percentageDone}%`} 
         return <React.Fragment>
-            <div className="output-name-container">
-                <h3 className="outputFolderName">{outputName}</h3>
+            <div className="row render-progress-row">
+                <div className="col">
+                    <div className="output-name-container">
+                        <h3 className="outputFolderName">{outputName}</h3>
+                    </div>
+                    <div className="progress render-progress-bar-outer"><div 
+                        className={`progress-bar render-progress-bar-inner ${percentageDone!==100 && "progress-bar-striped progress-bar-animated"}`} 
+                        role="progressbar" 
+                        style={style}
+                        aria-valuenow={percentageDone.toString()} 
+                        aria-valuemin="0" 
+                        aria-valuemax="100"/>
+                    </div>
+                </div>
             </div>
-            <div className="renderedComponentsRow">
-                {componentDirectoryDivs}
+            <div className="row render-output-row">
+                <div className="col">
+                    {componentDirectoryDivs}
+                </div>
             </div>
+            
         </React.Fragment>
     }
 }

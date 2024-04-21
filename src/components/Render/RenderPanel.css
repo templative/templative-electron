@@ -27,13 +27,6 @@
     width: 100%;
     background-color: white;
 }
-.outputPanel {
-    padding-bottom:3px;
-    padding-left: 0em !important;
-}
-.outputPanel, .outputPanel>.row, .outputPanel>.row>.col {
-    height: 100%;
-}
 .directoryPanel {
     height: 100%;
     overflow-y: hidden;
@@ -83,6 +76,9 @@
     height: 5em;
     overflow-y: scroll;
 }
+.outputPanel {
+    height: 100%;
+}
 .outputFolderOptions {
     height: calc(100% - 17.5em);
     overflow-y: scroll;
@@ -119,4 +115,19 @@
 }
 .outputFolderName {
     font-size: 24px;
+}
+.render-progress-row {
+    height: 3em;
+    overflow: hidden;
+}
+.render-output-row {
+    height: calc(100% - 3em);
+    overflow: scroll;
+}
+.render-progress-bar-outer {
+    background-color: #212529 !important;
+    margin: 0em 1em 0em 1em;
+}
+.render-progress-bar-inner {
+    background-color: #efb521 !important;
 }
