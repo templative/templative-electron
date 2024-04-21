@@ -20,17 +20,15 @@ function createTemplativeApp() {
     cd ./python
     pipenv --rm
     pipenv install
-    pipenv lock -r > requirements.txt 
-    pip install -r requirements.txt
     echo asyncclick
-    pip show asyncclick
-    pyinstaller \
+    pipenv run pip show asyncclick
+
+    pipenv run pyinstaller \
         --distpath ../bin \
         -y \
         -n templative \
         --onefile ./templative/__main__.py \
         --debug=imports \
-        --log-level=DEBUG \
         --hidden-import=engineio.async_drivers.aiohttp \
         --hidden-import=engineio.async_aiohttp \
         --collect-all templative \
