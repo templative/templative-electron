@@ -1,5 +1,5 @@
 import React from "react";
-import "./ComponentViewer.css"
+import "../ComponentViewer.css"
 
 export default class AutocompleteInput extends React.Component {   
     state = {

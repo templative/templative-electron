@@ -1,6 +1,35 @@
 .componentViewer {
-    padding: 0 0.75em 0 0.25em
+    padding: 0 0.1em 0 0.1em;
+    height: 100%;
+    overflow-y: hidden;
 }
+.componentViewer > .col {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.component-filters-row {
+    height: 3em;
+    overflow-y: scroll;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.3em;
+    border-color: hsl(210, 10%, 22%) !important;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    line-height: 1em;
+}
+.component-items-row {
+    height: calc(100% - 3.3em);
+    overflow-y: hidden;
+}
+.component-filters-row > .col {
+    height: 100%;
+}
+.component-items-row > .col {
+    height: 100%;
+    overflow-y: scroll;
+}
+
 .componentEditable {
     padding: 0.6em 0.5em 0.15em 0.25em;
     margin-bottom: 1em;
@@ -32,6 +61,12 @@
     margin-bottom: 1em;
     background-color: hsl(210, 10%, 22%) !important;
     border-color: hsl(210, 10%, 22%) !important;
+    color: rgb(222, 226, 230) !important;
+}
+
+.add-components-button:hover {
+    color: rgb(222, 226, 230) !important;
+    background-color: hsl(210, 10%, 24%) !important;
 }
 
 .auto-complete {
@@ -65,4 +100,16 @@
 
 .auto-complete > p:nth-child(even) {
     background-color: hsl(210, 10%, 19%);
+}
+
+.render-specific-component-button {
+    border-color: rgb(73, 80, 87) !important;
+    border-width: 1px !important;
+    border-style:solid !important;
+    color: rgb(222, 226, 230) !important;
+    background-color: rgb(43, 48, 53) !important;
+}
+.render-specific-component-button:hover {
+    color: rgb(222, 226, 230) !important;
+    background-color: hsl(210, 10%, 21%) !important;
 }

@@ -1,9 +1,10 @@
 import React from "react";
-import ComponentItemEditable from "./ComponentItemEditable"
+import ComponentItemEditable from "./ComponentItems/ComponentItemEditable"
 import "./ComponentViewer.css"
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import EditableViewerJson from "../EditableViewerJson";
-import ComponentItemEditableStock from "./ComponentItemEditableStock";
+import ComponentItemEditableStock from "./ComponentItems/ComponentItemEditableStock";
+import ComponentFilters from "./ComponentFilters/ComponentFilters";
 
 const path = require("path")
 
@@ -22,7 +23,8 @@ const sortComponents = (a, b) => {
 export default class ComponentsViewer extends EditableViewerJson {   
     state = {
         floatingName: undefined,
-        floatingNameIndex: undefined
+        floatingNameIndex: undefined,
+        filteredComponentType: undefined,
     }
 
     getFilePath = (props) => {
@@ -51,14 +53,15 @@ export default class ComponentsViewer extends EditableViewerJson {
             floatingNameIndex: undefined
         })
     }
-    deleteComponent(index) {
+    deleteComponent = (index) => {
+        console.log(index)
         var newComponents = this.state.content
         newComponents.splice(index,1)
         this.setState({
             content: newComponents.sort(sortComponents),
         })
     }
-    duplicateComponent(index) {
+    duplicateComponent = (index) => {
         var newComponents = this.state.content
         var newComponent = {}
         for (const [key, value] of Object.entries(this.state.content[index])) {
@@ -118,22 +121,45 @@ export default class ComponentsViewer extends EditableViewerJson {
         />
     }
 
+    filterByComponentType = (componentType) => {
+        this.setState({filteredComponentType: componentType})
+    }
+
+    removedFilteredComponentType = () => {
+        this.setState({filteredComponentType: undefined})
+    }
+
     loadComponentItems = () => {
         if (!this.state.hasLoaded || this.state.content === undefined) {
             return []
         }
-        return this.state.content.map((component, index) => this.loadComponent(component, index));
+        var componentItems = []
+        this.state.content.forEach((component, index) => {
+            if (this.state.filteredComponentType !== undefined && this.state.filteredComponentType !== component.type) {
+                return
+            }
+            componentItems.push(this.loadComponent(component, index))
+        });
+        return componentItems
     }
 
     render() {
         var componentItems = this.loadComponentItems()
-        return <div className="row componentViewer">
-            <div className="col">
-                <div className="row">
-                    <div className="col editable-components">
-                        <Link className="d-flex justify-content-center link-to-components" to="/create">
-                            <button className="btn btn-primary add-components-button">Add Components</button>
-                        </Link>
+        var components = !this.state.hasLoaded || this.state.content === undefined ? [] : this.state.content
+        return <div className="row componentViewer no-gutters">
+            <div className="col no-gutters">
+                <div className="row component-filters-row">
+                    <div className="col no-gutters">
+                        <ComponentFilters 
+                            components={components}
+                            componentTypeFilter={this.state.filteredComponentType}
+                            filterByComponentTypeCallback={this.filterByComponentType}
+                            removedFilteredComponentTypeCallback={this.removedFilteredComponentType}
+                        />
+                    </div>
+                </div>
+                <div className="row component-items-row">
+                    <div className="col no-gutters">
                         {componentItems}
                     </div>
                 </div>

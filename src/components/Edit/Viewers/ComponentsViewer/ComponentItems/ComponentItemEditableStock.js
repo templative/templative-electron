@@ -1,5 +1,5 @@
 import React from "react";
-import "./ComponentViewer.css"
+import "../ComponentViewer.css"
 import AutocompleteInput from "./AutocompleteInput";
 
 export default class ComponentItemEditableStock extends React.Component {   

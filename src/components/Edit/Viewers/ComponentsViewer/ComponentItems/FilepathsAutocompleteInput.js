@@ -1,6 +1,6 @@
 import React from "react";
-import "./ComponentViewer.css"
-import TemplativeAccessTools from "../../../TemplativeAccessTools";
+import "../ComponentViewer.css"
+import TemplativeAccessTools from "../../../../TemplativeAccessTools";
 
 const { resolve } = require('path');
 const fs = require('fs/promises');

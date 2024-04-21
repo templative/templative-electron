@@ -147,12 +147,14 @@ export default class PieceGamedataViewer extends EditableViewerJson {
             })
         }
         
-        return <div className="row">
+        return <div className="row pieces-viewer">
             <div className="col">
-                <div className="row">
+                <div className="row add-pieces-gamedata-row">
                     <div key="addPieceButton" className="input-group input-group-sm mb-3 add-piece-button" data-bs-theme="dark">
                         <button onClick={() => this.addPiece()} className="btn btn-outline-secondary add-button" type="button" id="button-addon1">Create a new Piece</button>
                     </div>
+                </div>
+                <div className="row pieces-gamedata-row">
                     <div className="vertical-input-group">
                         {rows}
                     </div> 

@@ -1,3 +1,21 @@
+.pieces-viewer {
+    height: 100%;
+}
+.pieces-viewer > .col {
+    height: 100%;
+    overflow-y: hidden;
+}
+.add-pieces-gamedata-row {
+    height: 40px;
+    border-color: hsl(210, 10%, 22%) !important;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+.pieces-gamedata-row {
+    height: calc(100% - 40px);
+    overflow-y: scroll;
+}
+
 th {
     font-size: 13px;
 }
@@ -9,6 +27,11 @@ tr {
 }
 .tableContainer {
     padding-right:0.4em;
+    height: 100%;
+    overflow-y: scroll;
+}
+.tableContainer > .col { 
+    height: 100%;
 }
 .piece-control-input.mb-3:last-child {
     margin-bottom: 0 !important;

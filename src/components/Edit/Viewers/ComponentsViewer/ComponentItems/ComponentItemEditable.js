@@ -1,6 +1,6 @@
 import React from "react";
-import "./ComponentViewer.css"
-import TemplativeAccessTools from "../../../TemplativeAccessTools";
+import "../ComponentViewer.css"
+import TemplativeAccessTools from "../../../../TemplativeAccessTools";
 import AutocompleteInput from "./AutocompleteInput";
 import FilepathsAutocompleteInput from "./FilepathsAutocompleteInput";
 
@@ -91,6 +91,7 @@ export default class ComponentItemEditable extends React.Component {
                     onChange={(event) => this.props.updateFloatingNameCallback(event.target.value)}
                     onBlur={() => this.props.releaseFloatingNameCallback()}
                     value={this.props.isFloatingName ? this.props.floatingName : this.props.componentName}/> 
+
                 {this.state.isHovering && 
                     <React.Fragment>
                         <button onClick={()=>this.props.duplicateComponentCallback()} className="btn btn-outline-secondary trash-button" type="button" id="button-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-copy" viewBox="0 0 16 16"><path fillRule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/></svg></button>
@@ -215,6 +216,10 @@ export default class ComponentItemEditable extends React.Component {
                 </div>
 
             </div>
+            
+            {/* <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
+                <button type="button" className="w-100 btn btn-outline-secondary render-specific-component-button">Render {this.props.isFloatingName ? this.props.floatingName : this.props.componentName}</button>
+            </div> */}
         </div> 
     }
 }
