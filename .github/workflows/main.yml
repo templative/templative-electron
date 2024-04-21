@@ -50,11 +50,9 @@ jobs:
       
       - name: Test Templative App
         run: |
-          ls  
-          cd .\bin
+          cd bin
           ls
-          .\templative
-          .\Templative
+          templative
           cd ..
       # - uses: actions/setup-node@v3
       #   with:
