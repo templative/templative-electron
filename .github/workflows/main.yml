@@ -18,7 +18,7 @@ jobs:
         node:
           - 18
         python:
-          - 3.11
+          - 3.11.6
     steps:
       - uses: actions/checkout@v2
 
@@ -53,6 +53,12 @@ jobs:
         with:
           name: templativeApp
           path: ./
+      
+      - name: Upload Templative Xref as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: xref
+          path: ./python/build/templative/xref-templative.html
 
       - name: Test Templative App
         run: |
