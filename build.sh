@@ -20,6 +20,45 @@ function createTemplativeApp() {
     cd ./python
     pipenv --rm
     pipenv install
+    echo asyncclick
+    pip show asyncclick
+
+    echo anyio
+    pip show anyio
+
+    echo aiofile
+    pip show aiofile
+
+    echo aiohttp
+    pip show aiohttp
+
+    echo tabulate
+    pip show tabulate
+
+    echo pillow
+    pip show pillow
+
+    echo fpdf
+    pip show fpdf
+
+    echo markdown2
+    pip show markdown2
+
+    echo svgmanip
+    pip show svgmanip
+
+    echo setuptools
+    pip show setuptools
+
+    echo aiohttp-cors
+    pip show aiohttp-cors
+
+    echo python-socketio
+    pip show python-socketio
+
+    echo numpy
+    pip show numpy
+
     pipenv run pyinstaller \
         --distpath ../bin \
         -y \
