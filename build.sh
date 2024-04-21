@@ -25,6 +25,7 @@ function createTemplativeApp() {
         -y \
         -n templative \
         --onefile ./templative/__main__.py \
+        --debug=all \
         --hidden-import engineio.async_drivers.aiohttp \
         --hidden-import engineio.async_aiohttp \
         --hidden-import asyncclick \
