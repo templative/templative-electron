@@ -27,6 +27,7 @@ function createTemplativeApp() {
         --onefile ./templative/__main__.py \
         --hidden-import engineio.async_drivers.aiohttp \
         --hidden-import engineio.async_aiohttp \
+        --hidden-import asyncclick \
         --collect-all templative \
         --codesign-identity "Developer ID Application: Next Day Games LLC (Y9RWBVMY7R)"
     cd ..
