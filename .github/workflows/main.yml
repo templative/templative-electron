@@ -52,7 +52,7 @@ jobs:
         run: |
           cd bin
           ls
-          templative
+          ./templative
           cd ..
       # - uses: actions/setup-node@v3
       #   with:
