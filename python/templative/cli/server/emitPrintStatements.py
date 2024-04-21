@@ -1,5 +1,6 @@
 from io import StringIO 
 import sys
+import socketio
 import asyncio
 
 async def emit(sio, emitTarget, message):
@@ -20,8 +21,10 @@ class EmitPrintStatements():
             self.oldStdOutWrite(message)
             try:
                 asyncio.run_coroutine_threadsafe(emit(self.sio, self.emitTarget, message), loop=asyncio.get_event_loop())
+            except socketio.exceptions.ConnectionError as e:
+                print(f"ConnectionError: {e} - Likely the client disconnected just before sending.")
             except ConnectionResetError as e:
-                pass
+                print(f"ConnectionResetError: {e}.")
         sys.stdout.write = printAndPushToArray
 
     def __exit__(self, *args):

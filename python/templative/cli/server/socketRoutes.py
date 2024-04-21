@@ -6,7 +6,10 @@ from templative.lib.distribute.gameCrafter.client import uploadGame
 from templative.lib.distribute.gameCrafter.accountManagement import listGames, deletePageOfGames
 from templative.lib.distribute.gameCrafter.util.gameCrafterSession import login, logout
 
-sio = socketio.AsyncServer(cors_allowed_origins="*")
+sio = socketio.AsyncServer(
+    cors_allowed_origins="*",
+    ping_interval=1,#seconds
+    ping_timeout=10)
 
 @sio.event
 def connect(sid, environ):
