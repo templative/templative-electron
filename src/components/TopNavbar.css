@@ -20,6 +20,7 @@
 }
 .mainBody > * {
     display:inherit;
+    height: 100%;
 }
 .nav-link {
     color:#cfcfcf !important;
