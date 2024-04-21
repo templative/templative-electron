@@ -20,10 +20,11 @@ function createTemplativeApp() {
     cd ./python
     pipenv --rm
     pipenv install
+    pipenv lock -r > requirements.txt 
+    pip install -r requirements.txt
     echo asyncclick
-    pipenv run pip show asyncclick
-
-    pipenv run pyinstaller \
+    pip show asyncclick
+    pyinstaller \
         --distpath ../bin \
         -y \
         -n templative \
