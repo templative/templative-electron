@@ -83,14 +83,17 @@ jobs:
           path: ./bin
 
       - name: Test Templative Exe
-        if: matrix.os == 'windows-latest'
-        run: ./bin/templative.exe
-
-      - name: Test Templative App
-        if: matrix.os == 'macos-latest'
+        shell: bash
         run: |
-          ls ./bin
-          ./bin/templative
+          if [ $RUNNER_OS == 'Windows' ]; then
+            ./bin/templative.exe
+          else
+            ./bin/templative
+          fi
+          if [ $? -ne 0 ]; then
+            echo "The application exited with an error"
+            exit 1
+          fi
 
       - uses: actions/setup-node@v3
         with:
@@ -150,6 +153,19 @@ jobs:
           TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+
+      - name: Test Electron Exe
+        shell: bash
+        run: |
+          if [ $RUNNER_OS == 'Windows' ]; then
+            ./out/Templative-win32-x64/Templative.exe
+          else
+            ./out/Templative-macos-x64/Templative
+          fi
+          if [ $? -ne 0 ]; then
+            echo "The application exited with an error"
+            exit 1
+          fi
       
       - name: Move Windows Squirrel Files into directory 
         if: matrix.os == 'windows-latest'
