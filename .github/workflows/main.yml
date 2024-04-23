@@ -13,7 +13,7 @@ jobs:
       matrix:
         os:
           - windows-latest
-          # - macos-latest
+          - macos-latest
           # - macos-13-xlarge
         node:
           - 18
@@ -62,26 +62,35 @@ jobs:
           cd ./python
           pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG --onefile ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --codesign-identity "Developer ID Application: Next Day Games LLC (Y9RWBVMY7R)"      
       
-      # - name: Upload Templative as Artifact
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: container-state
-      #     path: ./
-      
       - name: Upload Templative Xref as Artifact
         uses: actions/upload-artifact@v3
         with:
           name: xref
           path: ./python/build/templative/xref-templative.html
 
-      # - name: Upload Templative Exe as Artifact
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: exe
-      #     path: ./bin/templative.exe
+      - name: Upload Templative as Artifact
+        uses: actions/upload-artifact@v3
+        if: matrix.os == 'windows-latest'
+        with:
+          name: templative-exe
+          path: ./bin
+    
+      - name: Upload Templative as Artifact
+        uses: actions/upload-artifact@v3
+        if: matrix.os == 'macos-latest'
+        with:
+          name: templative-app
+          path: ./bin
+
+      - name: Test Templative Exe
+        if: matrix.os == 'windows-latest'
+        run: ./bin/templative.exe
 
       - name: Test Templative App
-        run: ./bin/templative.exe
+        if: matrix.os == 'macos-latest'
+        run: |
+          ls ./bin
+          ./bin/templative
 
       - uses: actions/setup-node@v3
         with:
