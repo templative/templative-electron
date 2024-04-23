@@ -75,7 +75,7 @@ const launchServers = async () => {
 }
 const onReady = async () => {
   log("Starting Templative")
-  startupWindow = createStartupWindow()
+  // startupWindow = createStartupWindow()
   try {
     var serverStartResult = await launchServers()
     if (serverStartResult === 0) {
@@ -91,8 +91,8 @@ const onReady = async () => {
     error(err)
     shutdown()
   }
-  startupWindow.closable=true
-  startupWindow.close()
+  // startupWindow.closable=true
+  // startupWindow.close()
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
