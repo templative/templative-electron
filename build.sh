@@ -20,18 +20,9 @@ function createTemplativeApp() {
     cd ./python
     pipenv --rm
     pipenv install
-    echo asyncclick
-    pipenv run pip show asyncclick
+    pipenv run pip show
 
-    pipenv run pyinstaller \
-        --distpath ../bin \
-        -y \
-        -n templative \
-        --onefile ./templative/__main__.py \
-        --hidden-import=engineio.async_drivers.aiohttp \
-        --hidden-import=engineio.async_aiohttp \
-        --collect-all templative \
-        --codesign-identity "Developer ID Application: Next Day Games LLC (Y9RWBVMY7R)"
+    pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG --onefile ./templative/__main__.py --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --codesign-identity "Developer ID Application: Next Day Games LLC (Y9RWBVMY7R)"
     cd ..
 }
 

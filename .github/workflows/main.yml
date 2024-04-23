@@ -96,84 +96,84 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      # - name: Install Node Packages
-      #   run: npm install
+      - name: Install Node Packages
+        run: npm install
 
-      # - name: get-npm-version
-      #   id: package-version
-      #   shell: bash
-      #   run: |
-      #     PACKAGE_VERSION=$(npm pkg get version --workspaces=false | tr -d \")
-      #     echo $PACKAGE_VERSION
-      #     echo "current-version=$PACKAGE_VERSION" >> "$GITHUB_OUTPUT"
+      - name: get-npm-version
+        id: package-version
+        shell: bash
+        run: |
+          PACKAGE_VERSION=$(npm pkg get version --workspaces=false | tr -d \")
+          echo $PACKAGE_VERSION
+          echo "current-version=$PACKAGE_VERSION" >> "$GITHUB_OUTPUT"
       
-      # - name: Use debugging electron
-      #   if: matrix.os == 'macos-latest'
-      #   run: export DEBUG=electron*
+      - name: Use debugging electron
+        if: matrix.os == 'macos-latest'
+        run: export DEBUG=electron*
 
-      # - name: Create Package
-      #   run: npm run package
-      #   env: 
-      #     AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
-      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     APPLE_ID: ${{ secrets.APPLE_ID }}
-      #     TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
-      #     APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-      #     CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+      - name: Create Package
+        run: npm run package
+        env: 
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
 
-      # - name: Make Distributable
-      #   run: npm run makeFromPackage
-      #   env: 
-      #     AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
-      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     APPLE_ID: ${{ secrets.APPLE_ID }}
-      #     TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
-      #     APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-      #     CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+      - name: Make Distributable
+        run: npm run makeFromPackage
+        env: 
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
 
-      # - name: Create Publish Dry Run
-      #   run: npm run createPublishDryRun
-      #   env: 
-      #     AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
-      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     APPLE_ID: ${{ secrets.APPLE_ID }}
-      #     TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
-      #     APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-      #     CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+      - name: Create Publish Dry Run
+        run: npm run createPublishDryRun
+        env: 
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
 
-      # - name: Publish Dry Run
-      #   run: npm run publishDryRun
-      #   env: 
-      #     AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
-      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     APPLE_ID: ${{ secrets.APPLE_ID }}
-      #     TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
-      #     APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-      #     CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+      - name: Publish Dry Run
+        run: npm run publishDryRun
+        env: 
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
       
-      # - name: Move Windows Squirrel Files into directory 
-      #   if: matrix.os == 'windows-latest'
-      #   shell: bash
-      #   run: |
-      #     ls
-      #     mkdir ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
-      #     mv ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}-full.nupkg ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}-full.nupkg
-      #     mv ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe
-      #     mv ./out/make/squirrel.windows/x64/RELEASES ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/RELEASES
-      #     cd ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
-      #     ls
-      #     cd ..
+      - name: Move Windows Squirrel Files into directory 
+        if: matrix.os == 'windows-latest'
+        shell: bash
+        run: |
+          ls
+          mkdir ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
+          mv ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}-full.nupkg ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}-full.nupkg
+          mv ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe
+          mv ./out/make/squirrel.windows/x64/RELEASES ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/RELEASES
+          cd ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
+          ls
+          cd ..
 
-      # - name: Zip Windows Squirrel Files
-      #   if: matrix.os == 'windows-latest' 
-      #   run: |
-      #     Compress-Archive -Path ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/* ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip 
-      #     dir
+      - name: Zip Windows Squirrel Files
+        if: matrix.os == 'windows-latest' 
+        run: |
+          Compress-Archive -Path ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/* ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip 
+          dir
 
-      # - name: Deploy Windows to S3
-      #   if: matrix.os == 'windows-latest'
-      #   env:
-      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
-      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #   run: |
-      #     aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip s3://templative-artifacts/win32/x64/Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip --region us-west-2
+      - name: Deploy Windows to S3
+        if: matrix.os == 'windows-latest'
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip s3://templative-artifacts/win32/x64/Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip --region us-west-2
