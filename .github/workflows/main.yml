@@ -42,15 +42,20 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
 
-      - name: Install pipenv
-        run: pip install pipenv pyinstaller
-
-      - name: Create Templative App/Exe
+      - name: Install pipenv and pyinstaller
         run: |
           cd ./python
           pipenv --rm
-          pipenv install
-          pipenv run pip show
+          pip install pipenv pyinstaller
+
+      - name: Install Project Python Dependencies
+        run: pipenv install
+
+      - name: Show Python Packages
+        run: pipenv run pip show
+      
+      - name: Create Templative App/Exe
+        run: |    
           pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG --onefile ./templative/__main__.py --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --codesign-identity "Developer ID Application: Next Day Games LLC (Y9RWBVMY7R)"
           cd ..
       
