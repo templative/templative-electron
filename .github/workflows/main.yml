@@ -55,6 +55,7 @@ jobs:
         run: |
           cd ./python
           pipenv run pip list
+          pip list
       
       - name: Create Templative App/Exe
         run: |
