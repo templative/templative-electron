@@ -52,13 +52,14 @@ jobs:
           pipenv install
 
       - name: Show Python Packages
-        run: pipenv run pip show
+        run: |
+          cd ./python
+          pipenv run pip show
       
       - name: Create Templative App/Exe
-        run: |    
-          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG --onefile ./templative/__main__.py --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --codesign-identity "Developer ID Application: Next Day Games LLC (Y9RWBVMY7R)"
-          cd ..
-      
+        run: |
+          cd ./python
+          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG --onefile ./templative/__main__.py --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --codesign-identity "Developer ID Application: Next Day Games LLC (Y9RWBVMY7R)"      
       
       - name: Upload Templative as Artifact
         uses: actions/upload-artifact@v3
