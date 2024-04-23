@@ -62,11 +62,11 @@ jobs:
           cd ./python
           pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG --onefile ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --codesign-identity "Developer ID Application: Next Day Games LLC (Y9RWBVMY7R)"      
       
-      - name: Upload Templative as Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: container-state
-          path: ./
+      # - name: Upload Templative as Artifact
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: container-state
+      #     path: ./
       
       - name: Upload Templative Xref as Artifact
         uses: actions/upload-artifact@v3
@@ -74,17 +74,11 @@ jobs:
           name: xref
           path: ./python/build/templative/xref-templative.html
 
-      - name: Upload Templative Exe as Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: exe
-          path: ./bin/templative.exe
-
-      - name: List output for debug
-        run: ls ./bin
-
-      - name: Test Exe
-        run: pyi-archive_viewer ./bin/templative.exe
+      # - name: Upload Templative Exe as Artifact
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: exe
+      #     path: ./bin/templative.exe
 
       - name: Test Templative App
         run: ./bin/templative.exe
