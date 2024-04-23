@@ -53,7 +53,7 @@ jobs:
       - name: Show Python Packages
         run: |
           cd ./python
-          pipenv run pip show
+          pipenv run pip list
       
       - name: Create Templative App/Exe
         run: |
