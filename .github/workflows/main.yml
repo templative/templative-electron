@@ -43,13 +43,13 @@ jobs:
           python-version: ${{ matrix.python }}
 
       - name: Install pipenv and pyinstaller
+        run: pip install pipenv pyinstaller
+
+      - name: Install Project Python Dependencies
         run: |
           cd ./python
           pipenv --rm
-          pip install pipenv pyinstaller
-
-      - name: Install Project Python Dependencies
-        run: pipenv install
+          pipenv install
 
       - name: Show Python Packages
         run: pipenv run pip show
@@ -58,6 +58,7 @@ jobs:
         run: |    
           pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG --onefile ./templative/__main__.py --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --codesign-identity "Developer ID Application: Next Day Games LLC (Y9RWBVMY7R)"
           cd ..
+      
       
       - name: Upload Templative as Artifact
         uses: actions/upload-artifact@v3
