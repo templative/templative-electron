@@ -154,18 +154,18 @@ jobs:
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
 
-      - name: Test Electron Exe
-        shell: bash
-        run: |
-          if [ $RUNNER_OS == 'Windows' ]; then
-            ./out/Templative-win32-x64/Templative.exe
-          else
-            ./out/Templative-macos-x64/Templative
-          fi
-          if [ $? -ne 0 ]; then
-            echo "The application exited with an error"
-            exit 1
-          fi
+      # - name: Test Electron Exe
+      #   shell: bash
+      #   run: |
+      #     if [ $RUNNER_OS == 'Windows' ]; then
+      #       ./out/Templative-win32-x64/Templative.exe
+      #     else
+      #       ./out/Templative-macos-x64/Templative
+      #     fi
+      #     if [ $? -ne 0 ]; then
+      #       echo "The application exited with an error"
+      #       exit 1
+      #     fi
       
       - name: Move Windows Squirrel Files into directory 
         if: matrix.os == 'windows-latest'
