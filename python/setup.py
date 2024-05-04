@@ -4,7 +4,7 @@ setup(
     name = "templative",
     version = "1.0.0",
     author = "Next Day Games",
-    author_email = "obarnum@nextday.games",
+    author_email = "oliver@gonextgames.com",
     description = "Create board games based on art templates, json, and csvs.",
     url = "",
     install_requires=[

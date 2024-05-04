@@ -6,8 +6,8 @@
   "main": ".webpack/main",
   "author": {
     "name": "Next Day Games",
-    "email": "obarnum@nextday.games",
-    "url": "https://www.nextday.games"
+    "email": "oliver@gonextgames.com",
+    "url": "https://www.gonextgames.com"
   },
   "scripts": {
     "start": "electron-forge start",
