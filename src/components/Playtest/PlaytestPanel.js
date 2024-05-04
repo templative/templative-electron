@@ -69,7 +69,7 @@ export default class PlaytestPanel extends React.Component {
         }
         
         return <div className='mainBody'>
-            <div className="col-4">
+            <div className="col playtest-controls" align="center">
                 
                 <div className="create-button-container">
                     <div className="input-group input-group-sm playground-directory-header" data-bs-theme="dark">
@@ -96,9 +96,6 @@ export default class PlaytestPanel extends React.Component {
                     selectDirectoryAsyncCallback={this.selectDirectoryAsync}
                 />
                 <button disabled={this.state.isCreating || this.state.selectedOutputDirectory === undefined} type="button" className="btn btn-outline-secondary create-playground-button" onClick={() => this.createPlayground()}>{buttonMessage}</button>
-                
-            </div>
-            <div className="col ">
                 
             </div>
         </div>

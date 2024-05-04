@@ -33,3 +33,6 @@
 .lookup-playground-button {
     border-color: rgb(73, 80, 87) !important;
 }
+.playtest-controls > .render-output-options-container { 
+    height: calc(100% - 400px);
+}

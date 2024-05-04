@@ -128,7 +128,7 @@ export default class RenderOutputOption extends React.Component {
                     />
                 }
             <p className="render-output-name">{this.state.gameDisplayName}</p>
-            <p className="render-output-version-name">{this.state.versionName}</p>
+            <p className="render-output-version-name">- {this.state.versionName}</p>
             <p className="render-output-version">v{this.state.versionNumber}</p>
             <p className="render-output-component-filter">{this.state.componentFilter}</p>
             <p className="render-output-date">{this.state.timestamp}</p>

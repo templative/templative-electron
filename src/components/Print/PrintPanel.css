@@ -49,3 +49,31 @@
 .selectedDirectory { 
     margin-bottom:0 !important;
 }
+.print-control-col-left >.render-output-options-container{
+    height: calc(100% - 150px);
+}
+.printout-flex-checkbox {
+    flex:1;
+}
+.no-pdf {
+    padding-left: 1em;
+}
+.create-printout-button-container > * {
+    margin:0px !important;
+}
+.create-printout-button-container > .input-group > * {
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-top-width: 0px !important;
+}
+.create-printout-button-container > .input-group:first-child > * {
+    border-top-left-radius: 6px !important;
+    border-top-right-radius: 6px !important;
+    border-top-width: 1px !important;
+}
+.create-printout-button-container > .input-group:last-child > * {
+    border-bottom-left-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+}

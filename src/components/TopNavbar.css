@@ -6,9 +6,7 @@
     background-color: #282C35;
     /* margin-right: 5px; */
     vertical-align: top;
-    border-right: #3c414d;
-    border-right-width: 1px;
-    border-right-style: solid;
+    border-right: #3c414d 1px solid;
 }
 .topNavbar > * {
     display:inherit;

@@ -8,7 +8,7 @@ html, body {
   height: 100%;
 }
 html {
-  scrollbar-color: #373c48 #2f333c;
+  scrollbar-color: hsl(222, 13%, 28%) #2f333c;
 }
 .no-right-border {
   border-right-width: 0px !important;

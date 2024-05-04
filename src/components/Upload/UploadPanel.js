@@ -3,7 +3,7 @@ import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 import "./UploadPanel.css"
 import { channels } from "../../shared/constants";
 import UploadControls from "./UploadControls";
-import { FullHeightConsole } from "../SocketedConsole/LoggedMessages"
+import { LoggedMessages } from "../SocketedConsole/LoggedMessages"
 import socket from "../../socket"
 import {getLastUsedGameCrafterUsername, writeLastUseGameCrafterUsername, getLastUsedGameCrafterApiKey, writeLastUseGameCrafterApiKey} from "../../settings/SettingsManager"
 import TemplativeAccessTools from "../TemplativeAccessTools";
@@ -98,32 +98,36 @@ export default class UploadPanel extends React.Component {
     }
     render() {
         return <div className='mainBody'>
-            <div className="col-4">
-                <RenderOutputOptions selectedDirectory={this.state.selectedOutputDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
-                <UploadControls 
-                    isCreating={this.state.isCreating}
-                    selectedOutputDirectory={this.state.selectedOutputDirectory}
-                    apiKey={this.state.apiKey}
-                    username={this.state.username}
-                    password={this.state.password}
-                    isAsync={this.state.isAsync}
-                    isPublish={this.state.isPublish}
-                    isProofed={this.state.isProofed}
-                    isIncludingStock={this.state.isIncludingStock}
-                    uploadCallback={this.upload}
-                    updateApiKeyCallback={this.updateApiKey}
-                    updateUsernameCallback={this.updateUsername}
-                    updatePasswordCallback={this.updatePassword}
-                    updateIsAsyncCallback={this.updateIsAsync}
-                    toggleIsPublishCallback={this.toggleIsPublish}
-                    toggleIsProofedCallback={this.toggleIsProofed}
-                    toggleIsIncludingStockCallback={this.toggleIsIncludingStock}
-                />
+            <div className="row">
+
                 
-                <AdPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
-            </div>
-            <div className="col logging-col">
-                <FullHeightConsole />
+                <div className="col-4 upload-column">
+                    <RenderOutputOptions selectedDirectory={this.state.selectedOutputDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
+                    <UploadControls 
+                        isCreating={this.state.isCreating}
+                        selectedOutputDirectory={this.state.selectedOutputDirectory}
+                        apiKey={this.state.apiKey}
+                        username={this.state.username}
+                        password={this.state.password}
+                        isAsync={this.state.isAsync}
+                        isPublish={this.state.isPublish}
+                        isProofed={this.state.isProofed}
+                        isIncludingStock={this.state.isIncludingStock}
+                        uploadCallback={this.upload}
+                        updateApiKeyCallback={this.updateApiKey}
+                        updateUsernameCallback={this.updateUsername}
+                        updatePasswordCallback={this.updatePassword}
+                        updateIsAsyncCallback={this.updateIsAsync}
+                        toggleIsPublishCallback={this.toggleIsPublish}
+                        toggleIsProofedCallback={this.toggleIsProofed}
+                        toggleIsIncludingStockCallback={this.toggleIsIncludingStock}
+                    />
+                    
+                    <AdPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
+                </div>
+                <div className="col logging-col">
+                    <LoggedMessages />
+                </div>
             </div>
         </div>
     }

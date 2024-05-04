@@ -7,8 +7,8 @@ export default class RenderButton extends React.Component {
         var languageOptions = langaugeInfo.map((language) => {
             return <option key={language.code} value={language.code}>{language.name}</option>
         })
-        return <div>
-                <div className="input-group input-group-sm mb-3 renderInputGroup" data-bs-theme="dark">
+        return <div className="render-controls">
+                <div className="input-group input-group-sm render-input-group" data-bs-theme="dark">
                     <span className="input-group-text">🎙️</span>
                     <select value={this.props.selectedLanguage} onChange={(language)=>{this.props.setLanguageCallback(language)}} className="form-select" id="inputGroupSelect01">
                         {languageOptions}
@@ -25,11 +25,10 @@ export default class RenderButton extends React.Component {
                         <input className="form-check-input mt-0" type="checkbox" value="" onChange={()=>{ this.props.toggleComplexCallback()}} checked={this.props.isComplexRendering} aria-label="Checkbox for following text input"/>
                     </div> */}
                 </div>
-                <div className="input-group input-group-sm mb-3 renderInputGroup" data-bs-theme="dark">
+                <div className="input-group input-group-sm render-input-group" data-bs-theme="dark">
                     {/* <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span */}
                     <button type="button" className="btn btn-outline-secondary renderButton" onClick={() => this.props.renderTemplativeProjectCallback()}>
                         Render {this.props.selectedComponent !== undefined ? this.props.selectedComponent : "All"}</button>
-                    
                 </div>
         </div>
     }

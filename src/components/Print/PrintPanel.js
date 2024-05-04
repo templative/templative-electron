@@ -73,7 +73,7 @@ export default class PrintPanel extends React.Component {
                 {(showPDF) ? 
                     <iframe key={this.state.rerenderIframeKey} title="printout.pdf" src={`file://${printoutFilepath}`} width="100%" height="100%" />
                 :
-                <p>{`No pdf to display.`}</p>
+                <p className="no-pdf">{`No pdf to display.`}</p>
                 }
             </div>
         </div>

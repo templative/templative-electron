@@ -66,13 +66,13 @@ export default class SelectDirectoryInDirectory extends React.Component {
         })
         outputDirectoryDivs = outputDirectoryDivs.reverse()
 
-        return <React.Fragment>
+        return <div className="playtest-packages">
             <div className="headerWrapper">
                 <p className="resourcesHeader">{this.props.title}</p>
             </div> 
-            <div className="outputFolderOptions">
+            <div className="directory-select-options">
                 {outputDirectoryDivs.reverse()}
             </div>
-        </React.Fragment>
+        </div>
     }
 }

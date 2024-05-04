@@ -4,17 +4,14 @@
     margin-bottom: 0.5em;
     height: 7em !important;
 }
-.full-height-messages-row { 
-    height:100%;
-}
-.messageArea {
-    border-radius: 8px;
+
+.console-messages {
+    border-radius: 3px;
     background-color: #131517;
     padding: 0.25em;
     overflow-y: scroll;
     overflow-x:hidden;
     text-wrap: wrap;
-    height:100%;
 }
 .outputMessage {
     font-size: 14px;

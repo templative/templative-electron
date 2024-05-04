@@ -3,8 +3,53 @@
     font-size: 12px;
 }
 .logging-col {
-    padding: 0.5em 1em 0.5em 0.5em !important;
+    padding: 0.5em 1em 1em 0.5em !important;
+    height: 100%;
 }
 .gamecrafter-upload-controls {
     padding-left:0.5em;
+    height: 275px;
+    overflow:hidden;
+}
+.gamecrafter-upload-controls > .input-group > * {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-top-width: 0px;
+}
+.gamecrafter-upload-controls > .input-group:first-of-type > * {
+    border-top-width: 1px;
+}
+.gamecrafter-upload-controls > .input-group:first-of-type > *:first-child {
+    border-top-left-radius: 6px !important;
+}
+.gamecrafter-upload-controls > .input-group:first-of-type > *:last-child {
+    border-top-right-radius: 6px !important;
+}
+.gamecrafter-upload-controls > .input-group:last-of-type > * {
+    border-bottom-left-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+}
+.upload-column {
+    height: 100%;
+}
+.upload-column >.render-output-options-container{
+    height: 300px;
+}
+.upload-control-column-field {
+    width: 8em;
+}
+.gamecrafter-ads-container {
+    height: calc(100% - 615px);
+}
+.upload-credentials-label {
+    flex: 1;
+}
+.upload-publish-checkbox {
+    flex: 1 !important;
+}
+.logging-col > .console-messages {
+    height: 100%;
+    width: 100%;
 }

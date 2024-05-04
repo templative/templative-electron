@@ -60,8 +60,8 @@ export default class CreatePanel extends React.Component {
         var componentTypeOptions = Object.assign({}, componentTypes)
         var isCreateButtonDisabled = this.state.componentName === "" || this.state.selectedComponentType === undefined
         return <div className='mainBody'>
-            <div className="col main-col">
-                <div className="row create-row">
+            <div className="main-col">
+                <div className="create-row">
                     <div className="input-group input-group-sm mb-3 create-component-input-group"  data-bs-theme="dark">
                         <span className="input-group-text">Component Name</span>
                         <input type="text" className="form-control" 
@@ -78,20 +78,23 @@ export default class CreatePanel extends React.Component {
                             Create
                         </button>
                     </div>
+                    
                 </div>
-                <div className="row custom-or-stock-row">
-                    <div className="form-check form-switch">
+                <div className="tag-choices">
+                    <div className="tag-choices-label">
+                        <p >Filter by Tags</p>
+                    </div>
+                    <div className="form-check form-switch custom-or-stock">
                         <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked={this.state.isToggledToComponents} onClick={this.toggleCustomOrStock}/>
                         <label className="form-check-label" for="flexSwitchCheckDefault">{this.state.isToggledToComponents ? "Custom" : "Stock"} Components</label>
                     </div>
-                </div>
-                <div className="row tag-choices">
                     <ComponentTypeTagPicker 
                         componentTypeOptions={componentTypeOptions} 
                         selectedTags={this.state.tagFilters}
                         toggleTagFilterCallback={this.toggleTagFilter}/>
+                    
                 </div>
-                <div className="row create-component-by-type-choices">
+                <div className="create-component-by-type-choices">
                     <ComponentTypeList 
                         selectedTags={this.state.tagFilters}
                         selectTypeCallback={this.selectComponent}

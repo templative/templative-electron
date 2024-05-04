@@ -57,13 +57,13 @@ export default class RenderOutputOptions extends React.Component {
         })
         outputDirectoryDivs = outputDirectoryDivs.reverse()
 
-        return <React.Fragment>
+        return <div className="render-output-options-container">
             <div className="headerWrapper">
-                <p className="resourcesHeader">Output</p>
+                <p className="resourcesHeader">Rendered Output</p>
             </div> 
-            <div className="outputFolderOptions">
+            <div className="output-folder-options">
                 {outputDirectoryDivs}
             </div>
-        </React.Fragment>
+        </div>
     }
 }

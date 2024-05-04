@@ -15,28 +15,33 @@ export default class UploadControls extends React.Component {
         return <div className="gamecrafter-upload-controls">
             <p className="tgc-password-warning">Templative will never store your password and never will send it to our servers. This app communicates directly with TheGameCrafter.</p>
             <div className="input-group input-group-sm" data-bs-theme="dark">
-                <span className="input-group-text" id="basic-addon3">TGC ApiKey</span>
+                <span className="input-group-text upload-credentials-label" id="basic-addon3">TheGameCrafter Credentials</span>
+                
+            </div>
+            <div className="input-group input-group-sm" data-bs-theme="dark">
+                <span className="input-group-text upload-control-column-field" id="basic-addon3">ApiKey</span>
                 <input type="password" className="form-control" value={this.props.apiKey} onChange={(e)=> this.props.updateApiKeyCallback(e.target.value)} placeholder=""/>
             </div>
             <div className="input-group input-group-sm" data-bs-theme="dark">
-                <span className="input-group-text" id="basic-addon3">TGC Username</span>
+                <span className="input-group-text upload-control-column-field"  id="basic-addon3">Username</span>
                 <input className="form-control" value={this.props.username} onChange={(e)=> this.props.updateUsernameCallback(e.target.value)} placeholder=""/>
             </div>
             <div className="input-group input-group-sm" data-bs-theme="dark">
-                <span className="input-group-text" id="basic-addon3">TGC Password</span>
+                <span className="input-group-text upload-control-column-field" id="basic-addon3">Password</span>
                 <input type="password" className="form-control" value={this.props.password} onChange={(e)=> this.props.updatePasswordCallback(e.target.value)} placeholder=""/>
             </div>
             <div className="input-group input-group-sm" data-bs-theme="dark">
-                <span className="input-group-text">Cadence</span>
+                <span className="input-group-text upload-control-column-field">Cadence</span>
                 <select value={this.props.isAsync} onChange={(e)=>{this.props.updateIsAsyncCallback(e.target.value)}} className="form-select" id="inputGroupSelect01">
                     <option value={true}>All at Once</option>
                     <option value={false}>Sequentially</option>
                 </select>
-                <span className="input-group-text">Publish?</span>
+            </div>
+            <div className="input-group input-group-sm upload-checkbox-controls" data-bs-theme="dark">
+                <span className="input-group-text upload-publish-checkbox">Publish?</span>
                 <div className="input-group-text">
                     <input className="form-check-input mt-0" type="checkbox" value="" onChange={()=>{ this.props.toggleIsPublishCallback()}} checked={this.props.isPublish} aria-label="Checkbox for following text input"/>
                 </div>
-                
                 <span className="input-group-text">Proofed?</span>
                 <div className="input-group-text">
                     <input className="form-check-input mt-0" type="checkbox" value="" onChange={()=>{ this.props.toggleIsProofedCallback()}} checked={this.props.isProofed} aria-label="Checkbox for following text input"/>
@@ -47,10 +52,8 @@ export default class UploadControls extends React.Component {
                 </div>
             </div>
             <div className="input-group input-group-sm" data-bs-theme="dark">
-                
-                
+                <button disabled={!canUpload} type="button" className="btn btn-outline-secondary create-playground-button" onClick={async () => await this.props.uploadCallback()}>{buttonMessage}</button>
             </div>
-            <button disabled={!canUpload} type="button" className="btn btn-outline-secondary create-playground-button" onClick={async () => await this.props.uploadCallback()}>{buttonMessage}</button>
         </div>
     }
 }

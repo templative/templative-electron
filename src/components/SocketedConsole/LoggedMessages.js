@@ -26,22 +26,8 @@ export class LoggedMessages extends React.Component {
         var messageDivs = this.state.messages.map((message, index)=> {
             return <p key={index} className={`outputMessage ${message.startsWith("!!!") && "output-warning"}`}>{index+1}.   {message}</p>
         })
-        return <div className="messageArea">
+        return <div className="console-messages">
             {messageDivs.reverse()}
-        </div>
-    }
-}
-export class FullHeightConsole extends React.Component {
-    render() {
-        return <div className='row full-height-messages-row'>
-            <LoggedMessages/>
-        </div>
-    }
-}
-export class LimitedHeightConsole extends React.Component {
-    render() {
-        return <div className='row message-row'>
-            <LoggedMessages/>
         </div>
     }
 }
