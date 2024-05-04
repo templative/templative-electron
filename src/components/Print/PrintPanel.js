@@ -55,26 +55,28 @@ export default class PrintPanel extends React.Component {
         var printoutFilepath = `${this.state.selectedDirectory}/printout.pdf`
         var showPDF = this.state.selectedDirectory !== undefined && fs.existsSync(printoutFilepath)
         return <div className='mainBody '>
-            <div className="col-4 print-control-col-left">
-                <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
-                <CreatePrintoutButton 
-                    isCreatingPrintout={this.state.isCreatingPrintout}
-                    hasOutputDirectoryValue={this.state.selectedDirectory !== undefined}
-                    areMarginsIncluded={this.state.areMarginsIncluded}
-                    size={this.state.size}
-                    isBackIncluded={this.state.isBackIncluded}
-                    createPrintoutCallback={this.createPrintout}
-                    toggleAreMarginsDrawnCallback={this.toggleAreMarginsDrawn}
-                    toggleIsBackIncludedCallback={this.toggleIsBackIncluded}
-                    setSizeCallback={this.setSize}
-                />
-            </div>
-            <div className="col print-control-col-right">
-                {(showPDF) ? 
-                    <iframe key={this.state.rerenderIframeKey} title="printout.pdf" src={`file://${printoutFilepath}`} width="100%" height="100%" />
-                :
-                <p className="no-pdf">{`No pdf to display.`}</p>
-                }
+            <div className="row">
+                <div className="col-4 print-control-col-left">
+                    <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
+                    <CreatePrintoutButton 
+                        isCreatingPrintout={this.state.isCreatingPrintout}
+                        hasOutputDirectoryValue={this.state.selectedDirectory !== undefined}
+                        areMarginsIncluded={this.state.areMarginsIncluded}
+                        size={this.state.size}
+                        isBackIncluded={this.state.isBackIncluded}
+                        createPrintoutCallback={this.createPrintout}
+                        toggleAreMarginsDrawnCallback={this.toggleAreMarginsDrawn}
+                        toggleIsBackIncludedCallback={this.toggleIsBackIncluded}
+                        setSizeCallback={this.setSize}
+                    />
+                </div>
+                <div className="col print-control-col-right">
+                    {(showPDF) ? 
+                        <iframe key={this.state.rerenderIframeKey} title="printout.pdf" src={`file://${printoutFilepath}`} width="100%" height="100%" />
+                    :
+                    <p className="no-pdf">{`No pdf to display.`}</p>
+                    }
+                </div>
             </div>
         </div>
     }
