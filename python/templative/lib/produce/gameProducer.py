@@ -21,13 +21,14 @@ async def produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublis
     uniqueGameName = ("%s_%s_%s" % (gameDataBlob["name"], gameDataBlob["version"], timestamp)).replace(" ", "")
     if (componentFilter != None):
         uniqueGameName = "%s_%s" % (uniqueGameName, componentFilter)
-    gameDataBlob["name"] = uniqueGameName
+        gameDataBlob["componentFilter"] = componentFilter
+    gameDataBlob["timestamp"] = timestamp
 
     gameCompose = await defineLoader.loadGameCompose(gameRootDirectoryPath)
     
-    outputDirectoryPath = await outputWriter.createGameFolder(gameRootDirectoryPath, gameCompose["outputDirectory"], gameDataBlob["name"])
+    outputDirectoryPath = await outputWriter.createGameFolder(gameRootDirectoryPath, gameCompose["outputDirectory"], uniqueGameName)
     await outputWriter.updateLastOutputFolder(gameRootDirectoryPath, gameCompose["outputDirectory"], outputDirectoryPath)
-    print("Producing %s" % outputDirectoryPath)
+    print("Producing %s" % os.path.normpath(outputDirectoryPath))
 
     tasks = []
     tasks.append(asyncio.create_task(outputWriter.copyGameFromGameFolderToOutput(gameDataBlob, outputDirectoryPath)))

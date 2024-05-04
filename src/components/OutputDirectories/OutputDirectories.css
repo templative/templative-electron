@@ -7,3 +7,38 @@
 .resourceHeaderWrapper:nth-child(even) {
     background-color: hsl(224, 13%, 17.5%);
 }
+.render-output-option {
+    display: flex;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 0.4em;
+    padding-right: 0.2em;
+}
+.render-output-option:nth-child(even) {
+    background-color: hsl(224, 13%, 17.5%);
+}
+.render-output-option:hover {
+    background-color: #333942;
+    cursor: pointer;
+}
+.render-output-option p {
+    display: flex;
+    margin-bottom: 0px;
+    font-size: 12px;
+}
+.render-output-name { 
+    margin-right: 0.5em;
+}
+.render-output-version { 
+    margin-right: 0.5em;
+}
+.render-output-version-name {
+    margin-right: 0.25em;
+}
+.render-output-component-filter {
+    color: gray;
+}
+.render-output-date { 
+    margin-left: auto;
+    color: gray;
+}
