@@ -8,7 +8,9 @@ export default class ComponentTypeList extends React.Component {
         var componentDivs = Object.keys(this.props.componentTypeOptions)
             .filter((key) => {
                 return this.props.selectedComponentType === key || componentTypeHasAllFilteredTags(this.props.selectedTags, this.props.componentTypeOptions[key]["Tags"])
-            }).map((key) => {
+            })
+            .sort()
+            .map((key) => {
                 var existingQuantity = 0
                 return <ComponentType key={key} 
                     name={key} componentInfo={this.props.componentTypeOptions[key]}
@@ -16,6 +18,7 @@ export default class ComponentTypeList extends React.Component {
                     selectedComponentType={this.props.selectedComponentType} 
                     existingQuantity={existingQuantity}/>
             })
+            
 
         return <div className="component-type-list">
             {componentDivs}
