@@ -48,7 +48,6 @@ export default class RenderOutputOption extends React.Component {
         return dateTime.toLocaleDateString('en-us', { year:"numeric", month:"short", day:"numeric", hour: '2-digit', minute:'2-digit'}) 
     }
     static doesFileExist = async (filepath) => {
-        console.log(filepath)
         try {
           await fs.stat(filepath);
           return true;

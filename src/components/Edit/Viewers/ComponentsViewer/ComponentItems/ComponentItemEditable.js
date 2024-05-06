@@ -59,7 +59,6 @@ export default class ComponentItemEditable extends React.Component {
         if (filepath === undefined) {
             return
         }
-        console.log(filepath)
         await this.props.updateViewedFileUsingExplorerAsyncCallback(filetype, filepath)
     }
     static arrayHasValue = (array, value) => {
