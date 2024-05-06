@@ -9,7 +9,7 @@ const openFolder = async(event, args) => {
         return
     }
     var chosenDirectory = result.filePaths[0]
-    BrowserWindow.getFocusedWindow().webContents.send(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, chosenDirectory)
+    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, chosenDirectory)
 }
 
 const openPlaygroundFolder = async(event, args) => {
@@ -19,7 +19,7 @@ const openPlaygroundFolder = async(event, args) => {
         return
     }
     var chosenDirectory = result.filePaths[0]
-    BrowserWindow.getFocusedWindow().webContents.send(channels.GIVE_PLAYGROUND_FOLDER, chosenDirectory)
+    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_PLAYGROUND_FOLDER, chosenDirectory)
 }
 
 const createProject = async(event, args) => {
@@ -32,7 +32,7 @@ const createProject = async(event, args) => {
     console.log(chosenDirectory)
     var creationResult = await axios.post(`http://127.0.0.1:8080/project`, { directoryPath: chosenDirectory})
     console.log(creationResult)
-    BrowserWindow.getFocusedWindow().webContents.send(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, chosenDirectory)
+    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, chosenDirectory)
 }
 
 module.exports = { 

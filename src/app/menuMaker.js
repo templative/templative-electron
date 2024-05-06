@@ -16,7 +16,7 @@ const templates = [
             },
             {
                 label: "Close Project",
-                click: ()=>BrowserWindow.getFocusedWindow().webContents.send(channels.GIVE_CLOSE_PROJECT)
+                click: ()=>BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_CLOSE_PROJECT)
             },
             {role:"quit"}
         ]
