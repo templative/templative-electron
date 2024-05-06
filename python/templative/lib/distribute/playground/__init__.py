@@ -39,13 +39,15 @@ async def convertToTabletopPlayground(producedDirectoryPath, playgroundPackagesD
 
     print("Convert %s into a Tabletop Playground package for %s." % (game["displayName"], studio["displayName"]))
 
-    packageDirectoryPath = await createPackageDirectories(game["name"], playgroundPackagesDirectory)
-    packageGuid = await createManifest(game["name"], packageDirectoryPath)
+    uniqueGameName = "%s_%s_%s_%s" % (game["name"], game["versionName"], game["version"], game["timestamp"])
+
+    packageDirectoryPath = await createPackageDirectories(uniqueGameName, playgroundPackagesDirectory)
+    packageGuid = await createManifest(uniqueGameName, packageDirectoryPath)
     templates = await copyComponentsToPackage(producedDirectoryPath, packageDirectoryPath)
 
     print("!!! Using default player count 2.")
     defaultPlayerCount = 2
-    gameStateJson = await createGameStateVts(game["name"], packageGuid, templates, defaultPlayerCount, packageDirectoryPath)
+    gameStateJson = await createGameStateVts(uniqueGameName, packageGuid, templates, defaultPlayerCount, packageDirectoryPath)
     return 1
 
 async def createPackageDirectories(gameName, packagesDirectoryPath):

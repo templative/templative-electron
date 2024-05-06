@@ -10,8 +10,8 @@ async def uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirectory,
     if not gameRootDirectoryPath:
         raise Exception("Game root directory path cannot be None")
 
-    game = await instructionsLoader.loadGameInstructions(gameRootDirectoryPath)
-    studio = await instructionsLoader.loadStudioInstructions(gameRootDirectoryPath)
+    game = await instructionsLoader.loadGameInstructions(outputDirectory)
+    studio = await instructionsLoader.loadStudioInstructions(outputDirectory)
 
     if not "gameCrafterDesignerId" in studio or studio["gameCrafterDesignerId"] == "":
         print("!!! Missing 'gameCrafterDesignerId' in outputted studio.json.", studio)
@@ -19,7 +19,9 @@ async def uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirectory,
 
     print("Uploading %s for %s." % (game["displayName"], studio["displayName"]))
 
-    cloudGameFolder = await createFolderAtRoot(gameCrafterSession, game["name"])
+    uniqueGameName = "%s_%s_%s_%s" % (game["name"], game["versionName"], game["version"], game["timestamp"])
+
+    cloudGameFolder = await createFolderAtRoot(gameCrafterSession, uniqueGameName)
     
     logoImageFileId, backdropImageFileId, advertisementImageFileId, actionShotImageFileId = await createAdvertisments(gameCrafterSession, gameRootDirectoryPath, cloudGameFolder["id"])
 
