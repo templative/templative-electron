@@ -110,7 +110,7 @@ export default class RenderPanel extends React.Component {
                             setLanguageCallback={this.setLanguage}
                         />
                     </div>
-                    <LoggedMessages/>
+                    {/* <LoggedMessages/> */}
     
                     <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
                 </div>  

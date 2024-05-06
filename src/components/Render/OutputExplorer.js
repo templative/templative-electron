@@ -16,6 +16,9 @@ export default class OutputExplorer extends React.Component {
         doneFiles: 1,
     }  
     static #parseTimeStamp = (timestamp) => {
+        if (timestamp === undefined) {
+            return undefined
+        }
         var timestampComponents = timestamp.split("_")
         var timeOfDayComponents = timestampComponents[1].split("-")
         var dateTime = new Date(`${timestampComponents[0]}T${timeOfDayComponents[0]}:${timeOfDayComponents[1]}:${timeOfDayComponents[2]}`)
@@ -113,7 +116,9 @@ export default class OutputExplorer extends React.Component {
                             <p className="outputFolderName">{this.state.gameDisplayName} · </p>
                             <p className="outputFolderName">{this.state.versionName}</p>
                             <p className="outputFolderName">v{this.state.versionNumber}</p>
-                            <p className="outputFolderName output-folder-date">{this.state.timestamp}</p>
+                            {this.state.timestamp !== undefined && 
+                                <p className="outputFolderName output-folder-date">{this.state.timestamp}</p>
+                            } 
                         </div>
                         { percentageDone !== 100 && 
                             <div className="progress render-progress-bar-outer">

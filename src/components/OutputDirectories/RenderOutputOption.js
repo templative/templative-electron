@@ -42,6 +42,9 @@ export default class RenderOutputOption extends React.Component {
     getDirectoryPath = () => path.join(this.props.directory.path, this.props.directory.name)
 
     static #parseTimeStamp = (timestamp) => {
+        if (timestamp === undefined) {
+            return undefined
+        }
         var timestampComponents = timestamp.split("_")
         var timeOfDayComponents = timestampComponents[1].split("-")
         var dateTime = new Date(`${timestampComponents[0]}T${timeOfDayComponents[0]}:${timeOfDayComponents[1]}:${timeOfDayComponents[2]}`)
@@ -130,7 +133,9 @@ export default class RenderOutputOption extends React.Component {
             <p className="render-output-version-name">- {this.state.versionName}</p>
             <p className="render-output-version">v{this.state.versionNumber}</p>
             <p className="render-output-component-filter">{this.state.componentFilter}</p>
-            <p className="render-output-date">{this.state.timestamp}</p>
+            {this.state.timestamp !== undefined && 
+                <p className="render-output-date">{this.state.timestamp}</p>
+            }
         </div>
         
     }

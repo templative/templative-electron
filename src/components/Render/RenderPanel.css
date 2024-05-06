@@ -38,7 +38,7 @@
     padding-bottom:0.3em;
 }
 .directoryPanel > .render-output-options-container{
-    height: calc(100% - 450px);
+    height: calc(100% - 260px);
 }
 .directoryPanel > .console-messages {
     margin-top: 0.5em !important;
