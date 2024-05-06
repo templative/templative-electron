@@ -16,7 +16,7 @@ async def createArtFileOfPiece(compositions:ComponentComposition, artdata:any, g
     
     templateFilesDirectory = compositions.gameCompose["artTemplatesDirectory"]
     artFilename = "%s.svg" % (artdata["templateFilename"])
-    artFilepath = os.path.join(produceProperties.inputDirectoryPath, templateFilesDirectory, artFilename)
+    artFilepath = os.path.normpath(os.path.join(produceProperties.inputDirectoryPath, templateFilesDirectory, artFilename))
     if not os.path.exists(artFilepath):
         print("!!! Template art file %s does not exist." % artFilepath)
         return
@@ -115,7 +115,7 @@ async def addOverlays(artFile, overlays, compositions:ComponentComposition, piec
     
         overlaysFilepath = os.path.abspath(os.path.join(produceProperties.inputDirectoryPath, overlayFilesDirectory))
         overlayFilename = "%s.svg" % (overlayName)
-        overlayFilepath = os.path.join(overlaysFilepath, overlayFilename)
+        overlayFilepath = os.path.normpath(os.path.join(overlaysFilepath, overlayFilename))
 
         if not os.path.exists(overlayFilepath):
             print("!!! Overlay %s does not exist." % overlayFilepath)

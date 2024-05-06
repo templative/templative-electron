@@ -67,7 +67,7 @@ async def produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublis
     for task in tasks:
         await task
 
-    print("Done producing %s" % outputDirectoryPath)
+    print("Done producing %s" % os.path.normpath(outputDirectoryPath))
 
     return outputDirectoryPath
 
