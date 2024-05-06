@@ -1,0 +1,16 @@
+.need-templative-account {
+    font-size: 14px;
+}
+.register-now {
+    text-decoration: underline;
+    color: #ffa500;
+}
+.register-now:hover {
+    cursor: pointer;
+    color: hsl(39, 100%, 60%);
+}
+.login-status {
+    color:palevioletred;
+    font-size: 12px;
+    margin-bottom: 0px;
+}

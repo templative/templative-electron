@@ -1,7 +1,7 @@
 const { channels } = require("../shared/constants");
 const { Menu, BrowserWindow  } = require('electron')
 const { createProject, openFolder } = require("./dialogMaker")
-
+const { giveLogout, goToAccount} = require("./accountManager")
 const templates = [
     {
         label: "File",
@@ -40,7 +40,20 @@ const templates = [
             {role: "reload"},
             {role: "forceReload"}
         ]
-    }
+    },
+    {
+        label: "Account",
+        submenu: [
+            { 
+                label: "Go to Account",
+                click: goToAccount
+            },
+            { 
+                label: "Logout",
+                click: giveLogout
+            }
+        ]
+    },
 ]
 
 module.exports.mainMenu = Menu.buildFromTemplate(templates);

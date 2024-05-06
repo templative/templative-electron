@@ -1,7 +1,7 @@
 {
   "name": "Templative",
   "description": "Electron frontend for the Templative CLI.",
-  "version": "1.0.76",
+  "version": "1.0.77",
   "private": true,
   "main": ".webpack/main",
   "author": {
@@ -36,6 +36,7 @@
     "electron-squirrel-startup": "^1.0.0",
     "fs": "^0.0.1-security",
     "get-port": "^7.0.0",
+    "keytar": "^7.9.0",
     "kill-port": "^2.0.1",
     "node-machine-id": "^1.1.12",
     "os": "^0.1.2",
