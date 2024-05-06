@@ -7,6 +7,7 @@ import {writeLastUseTableTopPlaygroundDirectory, getLastUsedTableTopPlaygroundDi
 import { trackEvent } from "@aptabase/electron/renderer";
 import axios from "axios"
 import TemplativeAccessTools from "../TemplativeAccessTools";
+import PlaygroundOutputExplorer from "./PlaygroundOutputExplorer";
 const path = require('path');
 
 const { ipcRenderer } = require('electron');
@@ -69,35 +70,43 @@ export default class PlaytestPanel extends React.Component {
         }
         
         return <div className='mainBody'>
-            <div className="col playtest-controls" align="center">
-                
-                <div className="create-button-container">
-                    <div className="input-group input-group-sm playground-directory-header" data-bs-theme="dark">
-                        <span className="input-group-text ttp-directory-label" id="basic-addon3">TTP Package Directory</span>
+            <div className="row playground-row">
+                <div className="col-4 playtest-controls" align="center">
+                    
+                    <div className="create-button-container">
+                        <div className="input-group input-group-sm playground-directory-header" data-bs-theme="dark">
+                            <span className="input-group-text ttp-directory-label" id="basic-addon3">TTP Package Directory</span>
+                        </div>
+                        <div className="input-group input-group-sm playground-package-controls" data-bs-theme="dark">
+                            <input className="form-control text-right cornered-top" value={this.state.playgroundDirectory} readOnly placeholder="TTP Package Directory" aria-label="Tabletop Playground Package Directory"/>
+                            <button onClick={async () => await this.openPlaygroundDirectoryPicker()} className="btn btn-outline-secondary lookup-playground-button cornered-top" type="button" id="button-addon1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
+                                <path 
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                                />
+                            </svg>
+                            </button>
+                        </div>
                     </div>
-                    <div className="input-group input-group-sm playground-package-controls" data-bs-theme="dark">
-                        <input className="form-control text-right cornered-top" value={this.state.playgroundDirectory} readOnly placeholder="TTP Package Directory" aria-label="Tabletop Playground Package Directory"/>
-                        <button onClick={async () => await this.openPlaygroundDirectoryPicker()} className="btn btn-outline-secondary lookup-playground-button cornered-top" type="button" id="button-addon1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
-                            <path 
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
-                            />
-                        </svg>
-                        </button>
-                    </div>
+                    <SelectDirectoryInDirectory directoryPath={this.state.playgroundDirectory} 
+                        selectDirectoryAsyncCallback={this.selectPackageDirectoryAsync} 
+                        selectedDirectory={this.state.selectedPackageDirectory} title="Tabletop Playground Packages"
+                    />
+                    <RenderOutputOptions 
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
+                        selectedDirectory={this.state.selectedOutputDirectory} 
+                        selectDirectoryAsyncCallback={this.selectDirectoryAsync}
+                    />
+                    <button disabled={this.state.isCreating || this.state.selectedOutputDirectory === undefined} type="button" className="btn btn-outline-secondary create-playground-button" onClick={() => this.createPlayground()}>{buttonMessage}</button>
+                    
                 </div>
-                <SelectDirectoryInDirectory directoryPath={this.state.playgroundDirectory} 
-                    selectDirectoryAsyncCallback={this.selectPackageDirectoryAsync} 
-                    selectedDirectory={this.state.selectedPackageDirectory} title="Tabletop Playground Packages"
-                />
-                <RenderOutputOptions 
-                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
-                    selectedDirectory={this.state.selectedOutputDirectory} 
-                    selectDirectoryAsyncCallback={this.selectDirectoryAsync}
-                />
-                <button disabled={this.state.isCreating || this.state.selectedOutputDirectory === undefined} type="button" className="btn btn-outline-secondary create-playground-button" onClick={() => this.createPlayground()}>{buttonMessage}</button>
-                
+                <div className="col">
+                    {(this.state.playgroundDirectory !== undefined && this.state.selectedPackageDirectory !== undefined) &&
+                        <PlaygroundOutputExplorer packageDirectory={path.join(this.state.playgroundDirectory, this.state.selectedPackageDirectory)}/>
+                    }
+                </div>
             </div>
         </div>
+        
     }
 }

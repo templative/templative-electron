@@ -1,4 +1,7 @@
-
+.playground-row {
+    flex-wrap: nowrap !important;
+    padding-right: 0.5em;
+}
 .create-button-container {
     width: 100%;
     padding: 0.5em;
@@ -34,5 +37,5 @@
     border-color: rgb(73, 80, 87) !important;
 }
 .playtest-controls > .render-output-options-container { 
-    height: calc(100% - 400px);
+    height: calc(100% - 450px);
 }

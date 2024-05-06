@@ -1,55 +1,89 @@
 import React from "react";
-import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
-import "./PlaytestPanel.css"
-import SelectDirectoryInDirectory from "../SelectDirectory/SelectDirectoryInDirectory";
-import { channels } from "../../shared/constants";
+import "./PlaygroundOutputExplorer.css"
 
-const { ipcRenderer } = require('electron');
+const fs = require("fs/promises");
+const path = require('path');
+const fsOld = require('fs');
 
 export default class PlaygroundOutputExplorer extends React.Component {   
     state={
-        
+        thumbnailFilepaths: [],
+        textureFilepaths: [],
+        packageName: undefined
     }
-    componentDidMount() {
-        
+    getThumbnailFilepaths = async(packageDirectory) => {
+        const thumbnailsPath = path.join(packageDirectory, "Thumbnails");
+        var thumbnailFilepaths = await fs.readdir(thumbnailsPath, { withFileTypes: true, })
+        thumbnailFilepaths = thumbnailFilepaths
+            .filter(dirent => !dirent.isDirectory())
+            .map(dirent => path.join(dirent.path, dirent.name))
+        return thumbnailFilepaths
     }
-    componentWillUnmount() {
-
+    getTextureFilepaths = async(packageDirectory) => {
+        const texturesPath = path.join(packageDirectory, "Textures");
+        var textureFilepaths = await fs.readdir(texturesPath, { withFileTypes: true, })
+        textureFilepaths = textureFilepaths
+            .filter(dirent => !dirent.isDirectory())
+            .map(dirent => path.join(dirent.path, dirent.name))
+        return textureFilepaths
+    }
+    loadPackageName = async (packageDirectory) => {
+        return JSON.parse(await fs.readFile(path.join(packageDirectory, "manifest.json")))["Name"]
+    }
+    loadPackageInformation = async (packageDirectory) => {
+        const thumbnailFilepaths = await this.getThumbnailFilepaths(packageDirectory)
+        const textureFilepaths = await this.getTextureFilepaths(packageDirectory)
+        const packageName = await this.loadPackageName(packageDirectory)
+        this.setState({
+            packageName: packageName,
+            thumbnailFilepaths: thumbnailFilepaths,
+            textureFilepaths: textureFilepaths,
+        })
+    }
+    componentDidUpdate = async (prevProps, prevState) => {
+        if (this.props.packageDirectory === prevProps.packageDirectory) {
+            return
+        }
+        if (this.props.packageDirectory === undefined) {
+            return
+        }
+        await this.loadPackageInformation(this.props.packageDirectory)
+    }
+    componentDidMount = async () => {
+        if (this.props.packageDirectory === undefined) {
+            return
+        }
+        await this.loadPackageInformation(this.props.packageDirectory)
     }
     
-    openPlaygroundDirectoryPicker = async () => {
-        await ipcRenderer.invoke(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG_FOR_PLAYGROUND)
-    }
-    
-    render() {
-        var buttonMessage = "Select an Output Directory"
-        if (this.state.isCreating) {
-            buttonMessage = "Creating Playground Package..."
-        }
-        else if (this.state.selectedOutputDirectory !== undefined) {
-            buttonMessage = "Create Playground Package"
-        }
-        
-        return <div className='mainBody'>
-            <div className="col-4">
-                
-                <div className="create-button-container">
-                    <div className="input-group input-group-sm playground-directory-header" data-bs-theme="dark">
-                        <span className="input-group-text ttp-directory-label" id="basic-addon3">TTP Package Directory</span>
-                    </div>
-                    <div className="input-group input-group-sm playground-package-controls" data-bs-theme="dark">
-                        <input className="form-control cornered-top" value={this.state.playgroundDirectory} readOnly placeholder="TTP Package Directory" aria-label="Tabletop Playground Package Directory"/>
-                        <button onClick={async () => await this.openPlaygroundDirectoryPicker()} className="btn btn-outline-secondary cornered-top" type="button" id="button-addon1">↗</button>
-                    </div>
+    render() {      
+        var thumbnailImages = this.state.thumbnailFilepaths.map(imageFilepath => 
+            <img className="playground-component-thumbnail" alt="" key={imageFilepath} src={`file://${imageFilepath}`}/>
+        )
+        var textureImages = this.state.textureFilepaths.map(imageFilepath => 
+            <React.Fragment key={imageFilepath}>
+                <p className="playground-texture-name">{path.parse(imageFilepath).name}</p>
+                <img className="playground-texture" alt="" key={imageFilepath} src={`file://${imageFilepath}`}/>
+            </React.Fragment>
+        )
+        return <React.Fragment>
+            <div className="playground-package-header">
+                <p className="playground-package-name">{this.state.packageName}</p>
+            </div>
+            
+            <p className="playground-content-type-header">Component Thumbnails</p>
+            <div className="playground-thumbnails">
+                <div className="playground-thumnbails-list">
+                    {thumbnailImages}
                 </div>
-                <SelectDirectoryInDirectory directoryPath={this.state.playgroundDirectory} selectDirectoryCallback={this.selectPackageDirectory} selectedDirectory={this.state.selectedPackageDirectory} title="Tabletop Playground Packages"/>
-                <RenderOutputOptions selectedDirectory={this.state.selectedOutputDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
-                <button disabled={this.state.isCreating || this.state.selectedOutputDirectory === undefined} type="button" className="btn btn-outline-secondary create-playground-button" onClick={() => this.createPlayground()}>{buttonMessage}</button>
-                
             </div>
-            <div className="col ">
-                
+            <p className="playground-content-type-header">Textures</p>
+            <div className="playground-textures">
+                <div className="playground-textures-list">
+                    {textureImages}
+                </div>
             </div>
-        </div>
+            
+        </React.Fragment>
     }
 }

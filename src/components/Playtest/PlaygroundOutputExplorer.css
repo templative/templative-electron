@@ -1,0 +1,40 @@
+.playground-package-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+.playground-thumnbails-list {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 5em;
+    background-color: #131517;
+    padding: 0.25em 0.25em 0.25em 0.25em;
+    margin-bottom: 0.3em;
+}
+.playground-thumnbails-list > img {
+    width: 4em;
+    height: 4em;
+    margin-right: 0.1em;
+    border: none !important;
+}
+.playground-content-type-header {
+    font-size: 14px;
+    margin-bottom:0.1em;
+}
+.playground-textures {
+    padding: 0.1em 0.1em 0.1em 0.1em;
+    width: 100%;
+    height: calc(100% - 300px);
+    background-color: #131517;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.playground-textures {
+    margin-bottom: 0.1em;
+}
+.playground-texture-name {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
