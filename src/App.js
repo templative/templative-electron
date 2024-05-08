@@ -52,10 +52,10 @@ class App extends React.Component {
             this.setState({templativeRootDirectoryPath: undefined})
         })
         ipcRenderer.on(channels.GIVE_LOGOUT, (_) => {
-            this.setState({loggedIn: false, email: "", password: ""})
+            this.setState({loggedIn: false, email: "", password: "", status: ""})
         })
         ipcRenderer.on(channels.GIVE_LOGGED_IN, (_) => {
-            this.setState({loggedIn: true, email: "", password: ""})
+            this.setState({loggedIn: true, email: "", password: "", status: ""})
         })
         ipcRenderer.on(channels.GIVE_NOT_LOGGED_IN, (_) => {
             this.setState({loggedIn: false})
@@ -76,7 +76,7 @@ class App extends React.Component {
         await ipcRenderer.invoke(channels.TO_SERVER_LOGIN, this.state.email, this.state.password)
     }
     goToRegisterWebpage = async()=>{
-        await ipcRenderer.invoke(channels.TO_SERVER_OPEN_URL, "https://www.templative.net")
+        await ipcRenderer.invoke(channels.TO_SERVER_OPEN_URL, "https://www.templative.net/register")
     }
     render() {
         var element = <></>

@@ -1,28 +1,41 @@
 const axios = require("axios");
 
+var baseurl = "https://www.templative.net"
+// baseurl = "http://127.0.0.1:5000"
 const verifyCredentials = async (email, password) => {
-    return {status: axios.HttpStatusCode.Ok, token: "493439479"} 
     try {
-        var response = await axios.post(`https://www.templative.net/login`, { email, password })
-        return { statusCode: response.status, token: response.data.token };
+        var response = await axios.post(`${baseurl}/login`, { email: email, password: password })
+        return { statusCode: response.status, error: response.data.error, token: response.data.token };
     }
     catch(error) {
-        console.error(error);
-        return { statusCode: error.response ? error.response.status : 500, token: null };
-    }
+        if (error.response) {
+            console.log(`Error status code: ${error.response.status}`);
+            console.log(`Error details: ${error.response.data}`);
+        } else if (error.request) {
+            console.log("No response was received from the server.");
+        } else {
+            console.log('Error', error.message);
+        }
+            return { statusCode: error.response ? error.response.status : 500, token: null };
+        }
 }
 const isTokenValid = async (token) => {
-    // {status: axios.HttpStatusCode.BadGateway, token: "493439479"}
-    return {isValid: true, status: axios.HttpStatusCode.Ok} 
     try {
-        const response = await axios.post(`https://www.templative.net/validate_token`, { token }, {
+        const response = await axios.post(`${baseurl}/validate-token`, { token }, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
         });
         return { isValid: response.data.isValid, statusCode: response.status };
     } catch (error) {
-        console.error(error);
+        if (error.response) {
+        console.log(`Error status code: ${error.response.status}`);
+        console.log(`Error details: ${error.response.data}`);
+    } else if (error.request) {
+        console.log("No response was received from the server.");
+    } else {
+        console.log('Error', error.message);
+    }
         return { isValid: false, statusCode: error.response ? error.response.status : 500 };
     }
 }

@@ -11,13 +11,13 @@ const giveLogout = async (event, args) => {
     await clearSessionToken()
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGOUT);
 }
-const login = async (email, password) => {
+const login = async (_, email, password) => {
     var response = await verifyCredentials(email, password)
-    if (response.status === axios.HttpStatusCode.Unauthorized || response.status === axios.HttpStatusCode.Forbidden ) {
+    if (response.statusCode === axios.HttpStatusCode.Unauthorized || response.statusCode === axios.HttpStatusCode.Forbidden ) {
         BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_INVALID_LOGIN_CREDENTIALS);
         return
     }
-    if (response.status !== axios.HttpStatusCode.Ok) {
+    if (response.statusCode !== axios.HttpStatusCode.Ok) {
         BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_UNABLE_TO_LOG_IN);
         return
     }
@@ -33,7 +33,7 @@ const giveLoginInformation = async () => {
         return
     }
     var response = await isTokenValid(token)
-    if (response.status !== axios.HttpStatusCode.Ok) {
+    if (response.statusCode !== axios.HttpStatusCode.Ok) {
         // console.log("GIVE_NOT_LOGGED_IN because bad status code checking token validity", response.status)
         BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_NOT_LOGGED_IN);
         return
