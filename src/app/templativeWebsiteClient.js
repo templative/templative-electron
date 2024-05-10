@@ -19,9 +19,9 @@ const verifyCredentials = async (email, password) => {
             return { statusCode: error.response ? error.response.status : 500, token: null };
         }
 }
-const isTokenValid = async (token) => {
+const isTokenValid = async (email, token) => {
     try {
-        const response = await axios.post(`${baseurl}/validate-token`, { token }, {
+        const response = await axios.post(`${baseurl}/validate-token`, { email, token }, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

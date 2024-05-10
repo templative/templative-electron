@@ -1,7 +1,7 @@
 const {  shell, BrowserWindow } = require('electron')
 const { channels } = require("../shared/constants");
 const { verifyCredentials, isTokenValid } = require("./templativeWebsiteClient")
-const { clearSessionToken, saveSessionToken, getSessionToken } = require("./sessionStore")
+const { clearSessionToken, clearSessionEmail, saveSessionToken, saveSessionEmail, getSessionToken, getSessionEmail } = require("./sessionStore")
 const axios = require("axios");
 
 const goToAccount = async(event, args) => {
@@ -9,6 +9,7 @@ const goToAccount = async(event, args) => {
 }
 const giveLogout = async (event, args) => {
     await clearSessionToken()
+    await clearSessionEmail()
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGOUT);
 }
 const login = async (_, email, password) => {
@@ -22,17 +23,19 @@ const login = async (_, email, password) => {
         return
     }
     await saveSessionToken(response.token);
+    await saveSessionEmail(email)
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN);
 }
 
 const giveLoginInformation = async () => {
     var token = await getSessionToken()
-    if (!token) {
+    var email = await getSessionEmail()
+    if (!token || !email) {
         // console.log("GIVE_NOT_LOGGED_IN because no saved token")
         BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_NOT_LOGGED_IN);
         return
     }
-    var response = await isTokenValid(token)
+    var response = await isTokenValid(email, token)
     if (response.statusCode !== axios.HttpStatusCode.Ok) {
         // console.log("GIVE_NOT_LOGGED_IN because bad status code checking token validity", response.status)
         BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_NOT_LOGGED_IN);
@@ -41,6 +44,7 @@ const giveLoginInformation = async () => {
     if (!response.isValid) {
         // console.log("GIVE_NOT_LOGGED_IN because invalid token, clear session token")
         await clearSessionToken()
+        await clearSessionEmail()
         BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_NOT_LOGGED_IN);
         return
     }
