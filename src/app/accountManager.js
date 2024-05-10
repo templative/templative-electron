@@ -1,7 +1,7 @@
 const {  shell, BrowserWindow } = require('electron')
 const { channels } = require("../shared/constants");
 const { verifyCredentials, isTokenValid } = require("./templativeWebsiteClient")
-const { clearSessionToken, clearSessionEmail, saveSessionToken, saveSessionEmail, getSessionToken, getSessionEmail } = require("./sessionStore")
+const { clearSessionToken, clearEmail, saveSessionToken, saveEmail, getSessionToken, getEmail } = require("./sessionStore")
 const axios = require("axios");
 
 const goToAccount = async(event, args) => {
@@ -9,7 +9,7 @@ const goToAccount = async(event, args) => {
 }
 const giveLogout = async (event, args) => {
     await clearSessionToken()
-    await clearSessionEmail()
+    await clearEmail()
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGOUT);
 }
 const login = async (_, email, password) => {
@@ -23,13 +23,13 @@ const login = async (_, email, password) => {
         return
     }
     await saveSessionToken(response.token);
-    await saveSessionEmail(email)
-    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN);
+    await saveEmail(email)
+    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, response.token, email);
 }
 
 const giveLoginInformation = async () => {
     var token = await getSessionToken()
-    var email = await getSessionEmail()
+    var email = await getEmail()
     if (!token || !email) {
         // console.log("GIVE_NOT_LOGGED_IN because no saved token")
         BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_NOT_LOGGED_IN);
@@ -44,11 +44,11 @@ const giveLoginInformation = async () => {
     if (!response.isValid) {
         // console.log("GIVE_NOT_LOGGED_IN because invalid token, clear session token")
         await clearSessionToken()
-        await clearSessionEmail()
+        await clearEmail()
         BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_NOT_LOGGED_IN);
         return
     }
-    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN);
+    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, token, email);
 }
 
 module.exports = {

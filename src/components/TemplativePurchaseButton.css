@@ -1,0 +1,31 @@
+.templative-purchase-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 1em);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: hsl(39, 100%, 50%) !important;
+    border-color: orange !important;
+    color: #2b3035 !important;
+    padding: 10px; /* Ensures there's some space inside the button */
+}
+.templative-purchase-button:hover {
+    background-color: hsl(39, 100%, 60%) !important;
+    border-color: hsl(39, 100%, 60%) !important;
+    cursor: pointer;
+}
+.templative-purchase-lock {
+    flex-shrink: 0; /* Prevents the SVG from shrinking */
+    height: 18px; /* Specifies a fixed height */
+    margin-bottom: 4px;
+    width: auto; /* Width adjusts based on height to maintain aspect ratio */
+    margin-right: 5px; /* Space between the icon and text */
+}
+
+.templative-purchase-text {
+    font-size: 12px;
+    margin-top: 15px;
+    flex-grow: 1; /* Allows the text to take up any remaining space */
+    text-align: left; /* Aligns the text to the left side of its container */
+}

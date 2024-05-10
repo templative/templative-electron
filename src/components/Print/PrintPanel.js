@@ -5,6 +5,8 @@ import CreatePrintoutButton from "./CreatePrintoutButton";
 import { trackEvent } from "@aptabase/electron/renderer";
 import axios from "axios"
 import TemplativeAccessTools from "../TemplativeAccessTools";
+import TemplativeClient from "../../TemplativeClient"
+import TemplativePurchaseButton from "../TemplativePurchaseButton";
 const path = require('path');
 const fs = require("fs")
 
@@ -15,9 +17,15 @@ export default class PrintPanel extends React.Component {
         isBackIncluded: false,
         areMarginsDrawn: false,
         rerenderIframeKey: 0,
-        isCreatingPrintout: false
+        isCreatingPrintout: false,
+        doesUserOwnTemplative: false,
     }
-    componentDidMount() {
+    checkIfOwnsTemplative = async () => {
+        var ownsTemplative = await TemplativeClient.doesUserOwnTemplative(this.props.email, this.props.token)
+        this.setState({ doesUserOwnTemplative: ownsTemplative})
+    }
+    componentDidMount = async () => {
+        await this.checkIfOwnsTemplative()
         trackEvent("view_printPanel")
     }
     selectDirectoryAsync = async (directory) => {
@@ -58,17 +66,22 @@ export default class PrintPanel extends React.Component {
             <div className="row">
                 <div className="col-4 print-control-col-left">
                     <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
-                    <CreatePrintoutButton 
-                        isCreatingPrintout={this.state.isCreatingPrintout}
-                        hasOutputDirectoryValue={this.state.selectedDirectory !== undefined}
-                        areMarginsIncluded={this.state.areMarginsIncluded}
-                        size={this.state.size}
-                        isBackIncluded={this.state.isBackIncluded}
-                        createPrintoutCallback={this.createPrintout}
-                        toggleAreMarginsDrawnCallback={this.toggleAreMarginsDrawn}
-                        toggleIsBackIncludedCallback={this.toggleIsBackIncluded}
-                        setSizeCallback={this.setSize}
-                    />
+                    {this.state.doesUserOwnTemplative ? 
+                        <CreatePrintoutButton 
+                            isCreatingPrintout={this.state.isCreatingPrintout}
+                            hasOutputDirectoryValue={this.state.selectedDirectory !== undefined}
+                            areMarginsIncluded={this.state.areMarginsIncluded}
+                            size={this.state.size}
+                            isBackIncluded={this.state.isBackIncluded}
+                            createPrintoutCallback={this.createPrintout}
+                            toggleAreMarginsDrawnCallback={this.toggleAreMarginsDrawn}
+                            toggleIsBackIncludedCallback={this.toggleIsBackIncluded}
+                            setSizeCallback={this.setSize}
+                        />
+                        :
+                        <TemplativePurchaseButton action="Creating Printouts"/>
+                    }
+                    
                 </div>
                 <div className="col print-control-col-right">
                     {(showPDF) ? 

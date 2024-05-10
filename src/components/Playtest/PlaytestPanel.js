@@ -8,6 +8,8 @@ import { trackEvent } from "@aptabase/electron/renderer";
 import axios from "axios"
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import PlaygroundOutputExplorer from "./PlaygroundOutputExplorer";
+import TemplativeClient from "../../TemplativeClient";
+import TemplativePurchaseButton from "../TemplativePurchaseButton";
 const path = require('path');
 
 const { ipcRenderer } = require('electron');
@@ -17,9 +19,15 @@ export default class PlaytestPanel extends React.Component {
         selectedOutputDirectory: undefined,
         selectedPackageDirectory: undefined,
         isCreating: false,
-        playgroundDirectory: ""
+        playgroundDirectory: "",
+        doesUserOwnTemplative: false,
     }
-    componentDidMount() {
+    checkIfOwnsTemplative = async () => {
+        var ownsTemplative = await TemplativeClient.doesUserOwnTemplative(this.props.email, this.props.token)
+        this.setState({ doesUserOwnTemplative: ownsTemplative})
+    }
+    componentDidMount = async () => {
+        await this.checkIfOwnsTemplative()
         trackEvent("view_playtestPanel")
 
         ipcRenderer.on(channels.GIVE_PLAYGROUND_FOLDER, (event, playgroundFolder) => {
@@ -68,6 +76,7 @@ export default class PlaytestPanel extends React.Component {
         else if (this.state.selectedOutputDirectory !== undefined) {
             buttonMessage = "Create Playground Package"
         }
+        var isCreateDisabled = this.state.isCreating || this.state.selectedOutputDirectory === undefined
         
         return <div className='mainBody'>
             <div className="row playground-row">
@@ -97,7 +106,11 @@ export default class PlaytestPanel extends React.Component {
                         selectedDirectory={this.state.selectedOutputDirectory} 
                         selectDirectoryAsyncCallback={this.selectDirectoryAsync}
                     />
-                    <button disabled={this.state.isCreating || this.state.selectedOutputDirectory === undefined} type="button" className="btn btn-outline-secondary create-playground-button" onClick={() => this.createPlayground()}>{buttonMessage}</button>
+                    {this.state.doesUserOwnTemplative ? 
+                        <button disabled={isCreateDisabled} type="button" className="btn btn-outline-secondary create-playground-button" onClick={() => this.createPlayground()}>{buttonMessage}</button>
+                        :
+                        <TemplativePurchaseButton action="Creating Tabletop Playground Packages"/>
+                    }
                     
                 </div>
                 <div className="col">

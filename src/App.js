@@ -17,6 +17,7 @@ class App extends React.Component {
         loggedIn: false,
         email: "",
         password: "",
+        token: undefined,
         loginStatus: undefined
     }
     componentWillUnmount() {
@@ -54,8 +55,8 @@ class App extends React.Component {
         ipcRenderer.on(channels.GIVE_LOGOUT, (_) => {
             this.setState({loggedIn: false, email: "", password: "", status: ""})
         })
-        ipcRenderer.on(channels.GIVE_LOGGED_IN, (_) => {
-            this.setState({loggedIn: true, email: "", password: "", status: ""})
+        ipcRenderer.on(channels.GIVE_LOGGED_IN, (_, token, email) => {
+            this.setState({loggedIn: true, token: token, email: email, password: "", status: ""})
         })
         ipcRenderer.on(channels.GIVE_NOT_LOGGED_IN, (_) => {
             this.setState({loggedIn: false})
@@ -97,8 +98,12 @@ class App extends React.Component {
                 openTemplativeDirectoryPickerCallback={() => this.openTemplativeDirectoryPicker()}
             />
         }
-        else  {
-            element = <EditProjectView templativeRootDirectoryPath={this.state.templativeRootDirectoryPath}/>
+        else  { 
+            element = <EditProjectView 
+                token={this.state.token}
+                email={this.state.email}    
+                templativeRootDirectoryPath={this.state.templativeRootDirectoryPath}
+            />
         }
         return <div className="App">
             <div className="container-fluid">

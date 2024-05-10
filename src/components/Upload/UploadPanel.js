@@ -9,6 +9,8 @@ import {getLastUsedGameCrafterUsername, writeLastUseGameCrafterUsername, getLast
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import { trackEvent } from "@aptabase/electron/renderer";
 import AdPanel from "./AdPanel";
+import TemplativeClient from "../../TemplativeClient"
+import TemplativePurchaseButton from "../TemplativePurchaseButton";
 const path = require('path');
 
 const { ipcRenderer } = require('electron');
@@ -26,8 +28,14 @@ export default class UploadPanel extends React.Component {
         isPublish: false,
         isProofed: true,
         isIncludingStock: true,
+        doesUserOwnTemplative: false,
     }
-    componentDidMount() {
+    checkIfOwnsTemplative = async () => {
+        var ownsTemplative = await TemplativeClient.doesUserOwnTemplative(this.props.email, this.props.token)
+        this.setState({ doesUserOwnTemplative: ownsTemplative})
+    }
+    componentDidMount = async () => {
+        await this.checkIfOwnsTemplative()
         trackEvent("view_uploadPanel")
         ipcRenderer.on(channels.GIVE_PLAYGROUND_FOLDER, (event, playgroundFolder) => {
             this.setState({playgroundDirectory: playgroundFolder})
@@ -103,25 +111,30 @@ export default class UploadPanel extends React.Component {
                 
                 <div className="col-4 upload-column">
                     <RenderOutputOptions selectedDirectory={this.state.selectedOutputDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
-                    <UploadControls 
-                        isCreating={this.state.isCreating}
-                        selectedOutputDirectory={this.state.selectedOutputDirectory}
-                        apiKey={this.state.apiKey}
-                        username={this.state.username}
-                        password={this.state.password}
-                        isAsync={this.state.isAsync}
-                        isPublish={this.state.isPublish}
-                        isProofed={this.state.isProofed}
-                        isIncludingStock={this.state.isIncludingStock}
-                        uploadCallback={this.upload}
-                        updateApiKeyCallback={this.updateApiKey}
-                        updateUsernameCallback={this.updateUsername}
-                        updatePasswordCallback={this.updatePassword}
-                        updateIsAsyncCallback={this.updateIsAsync}
-                        toggleIsPublishCallback={this.toggleIsPublish}
-                        toggleIsProofedCallback={this.toggleIsProofed}
-                        toggleIsIncludingStockCallback={this.toggleIsIncludingStock}
-                    />
+                    
+                    {this.state.doesUserOwnTemplative ? 
+                        <UploadControls 
+                            isCreating={this.state.isCreating}
+                            selectedOutputDirectory={this.state.selectedOutputDirectory}
+                            apiKey={this.state.apiKey}
+                            username={this.state.username}
+                            password={this.state.password}
+                            isAsync={this.state.isAsync}
+                            isPublish={this.state.isPublish}
+                            isProofed={this.state.isProofed}
+                            isIncludingStock={this.state.isIncludingStock}
+                            uploadCallback={this.upload}
+                            updateApiKeyCallback={this.updateApiKey}
+                            updateUsernameCallback={this.updateUsername}
+                            updatePasswordCallback={this.updatePassword}
+                            updateIsAsyncCallback={this.updateIsAsync}
+                            toggleIsPublishCallback={this.toggleIsPublish}
+                            toggleIsProofedCallback={this.toggleIsProofed}
+                            toggleIsIncludingStockCallback={this.toggleIsIncludingStock}
+                        />
+                        :
+                        <TemplativePurchaseButton action="Uploading to the GameCrafter"/>
+                    }
                     
                     <AdPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
                 </div>

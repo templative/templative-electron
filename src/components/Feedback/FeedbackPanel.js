@@ -4,6 +4,7 @@ import FeedbackForm from "./FeedbackForm";
 import FeedbackViewer from "./FeedbackViewer";
 import FeedbackPostChoices from "./FeedbackPostChoices";
 import { trackEvent } from "@aptabase/electron/renderer";
+import TemplativeClient from "../../TemplativeClient"
 
 const axios = require("axios");
 const {machineIdSync} = require('node-machine-id');
@@ -24,8 +25,14 @@ export default class FeedbackPanel extends React.Component {
         feedbackMode: FeedbackMode.POSTING,
         body:"",
         title:"",
+        doesUserOwnTemplative: false,
+    }
+    checkIfOwnsTemplative = async () => {
+        var ownsTemplative = await TemplativeClient.doesUserOwnTemplative(this.props.email, this.props.token)
+        this.setState({ doesUserOwnTemplative: ownsTemplative})
     }
     componentDidMount = async () => {
+        await this.checkIfOwnsTemplative()
         trackEvent("view_feedbackPanel")
 
         try {

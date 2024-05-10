@@ -3,10 +3,13 @@ import OutputExplorer from "./OutputExplorer"
 import RenderButton from "./RenderButton"
 import "./RenderPanel.css"
 import socket from "../../socket"
-import { LoggedMessages } from "../SocketedConsole/LoggedMessages"
+// import { LoggedMessages } from "../SocketedConsole/LoggedMessages"
 import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 import { trackEvent } from "@aptabase/electron/renderer";
 import TemplativeAccessTools from "../TemplativeAccessTools";
+import TemplativeClient from "../../TemplativeClient"
+import TemplativePurchaseButton from "../TemplativePurchaseButton";
+
 const path = require('path');
 
 export default class RenderPanel extends React.Component {   
@@ -18,7 +21,12 @@ export default class RenderPanel extends React.Component {
         isComplexRendering: true,
         selectedLanguage: "en",
         isConnectedToTemplative: false,
-        isProcessing: false
+        isProcessing: false,
+        doesUserOwnTemplative: false,
+    }
+    checkIfOwnsTemplative = async () => {
+        var ownsTemplative = await TemplativeClient.doesUserOwnTemplative(this.props.email, this.props.token)
+        this.setState({ doesUserOwnTemplative: ownsTemplative})
     }
 
     selectDirectoryAsync = async (directory) => {
@@ -44,6 +52,7 @@ export default class RenderPanel extends React.Component {
     }
     componentDidMount = async () => {
         trackEvent("view_renderPanel")
+        await this.checkIfOwnsTemplative()
         if (this.props.templativeRootDirectoryPath !== undefined) {
             var components = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
             this.setState({components: components})
@@ -99,16 +108,21 @@ export default class RenderPanel extends React.Component {
                         <div className="component-filter-options">
                             {componentDirectoryDivs}
                         </div>
-                        <RenderButton 
-                            selectedComponent={this.state.selectedComponent} 
-                            selectedLanguage={this.state.selectedLanguage} 
-                            isDebugRendering={this.state.isDebugRendering}
-                            isComplexRendering={this.state.isComplexRendering}
-                            toggleDebugCallback={this.setDebugCheckbox}
-                            toggleComplexCallback={this.setComplexCheckbox}
-                            renderTemplativeProjectCallback={this.renderTemplativeProject}
-                            setLanguageCallback={this.setLanguage}
-                        />
+                        {this.state.doesUserOwnTemplative ? 
+                            <RenderButton 
+                                selectedComponent={this.state.selectedComponent} 
+                                selectedLanguage={this.state.selectedLanguage} 
+                                isDebugRendering={this.state.isDebugRendering}
+                                isComplexRendering={this.state.isComplexRendering}
+                                toggleDebugCallback={this.setDebugCheckbox}
+                                toggleComplexCallback={this.setComplexCheckbox}
+                                renderTemplativeProjectCallback={this.renderTemplativeProject}
+                                setLanguageCallback={this.setLanguage}
+                            />
+                            :
+                            <TemplativePurchaseButton action="Rendering your Game"/>
+                        }
+                        
                     </div>
                     {/* <LoggedMessages/> */}
     

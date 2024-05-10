@@ -330,7 +330,6 @@ export default class EditProjectView extends React.Component {
         return <HashRouter>
             <TopNavbar topNavbarItems={TOP_NAVBAR_ITEMS} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
             <Routes>
-
                 <Route path='/create' element={ 
                     <CreatePanel 
                         componentTypesCustomInfo={this.state.componentTypesCustomInfo}
@@ -365,12 +364,12 @@ export default class EditProjectView extends React.Component {
                         changeExtendedFileTypeAsyncCallback={this.changeExtendedFileTypeAsync}
                     /> 
                 }/>
-                <Route path='/render' element={ <RenderPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
-                <Route path='/print' element={ <PrintPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
-                <Route path='/playtest' element={ <PlaytestPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
-                <Route path='/upload' element={ <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
-                <Route path='/animate' element={ <AnimatePanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
-                <Route path='/feedback' element={ <FeedbackPanel/>}/>
+                <Route path='/render' element={ <RenderPanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+                <Route path='/print' element={ <PrintPanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+                <Route path='/playtest' element={ <PlaytestPanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+                <Route path='/upload' element={ <UploadPanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+                <Route path='/animate' element={ <AnimatePanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+                <Route path='/feedback' element={ <FeedbackPanel email={this.props.email} token={this.props.token}/>}/>
             </Routes>
         </HashRouter>
         
