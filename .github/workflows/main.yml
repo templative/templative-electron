@@ -100,7 +100,7 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Install Node Packages
-        run: npm install
+        run: npm ci
 
       - name: List npm packages
         run: npm list -g --depth=0
