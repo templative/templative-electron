@@ -19,6 +19,7 @@ svgmanip = "0.0.12"
 aiohttp-cors = "0.7.0"
 python-socketio = "5.11.2"
 numpy = "1.26.4"
+pyinstaller = "*"
 
 [requires]
-python_version = "3.11.6"
+python_version = "3.12.3"
