@@ -44,7 +44,8 @@ module.exports = {
         name: "templative",
         authors: "Next Day Games",
         noMsi: true,
-        remoteReleases: `https://templative-artifacts.s3.amazonaws.com/win32/${arch}`
+        remoteReleases: `https://templative-artifacts.s3.amazonaws.com/win32/${arch}`,
+        setupIcon: path.resolve(__dirname, 'assets/images/favicon.ico'),
       })
     }
   ],
