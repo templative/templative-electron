@@ -99,6 +99,11 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
+      - name: Force remove node_modules
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+
       - name: Install Node Packages
         run: npm ci
 
