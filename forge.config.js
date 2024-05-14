@@ -8,9 +8,11 @@ module.exports = {
     },
     extraResource: [
       "assets/images/icon.icns",
+      "assets/images/icon.png",
+      "assets/images/favicon.ico",
       "./bin"
      ],
-    icon: "assets/images/icon",
+    icon: "assets/images/favicon",
     osxSign: {
       'identity': "Developer ID Application: Next Day Games LLC (Y9RWBVMY7R)",
       'hardened-runtime': true,
