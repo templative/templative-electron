@@ -106,7 +106,7 @@ jobs:
           rm -f package-lock.json
 
       - name: Install Node Packages
-        run: npm ci
+        run: npm install
 
       - name: List npm packages
         run: npm list -g --depth=0
