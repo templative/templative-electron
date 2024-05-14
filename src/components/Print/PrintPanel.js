@@ -3,12 +3,12 @@ import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 import "./PrintPanel.css"
 import CreatePrintoutButton from "./CreatePrintoutButton";
 import { trackEvent } from "@aptabase/electron/renderer";
-import axios from "axios"
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import TemplativeClient from "../../TemplativeClient"
 import TemplativePurchaseButton from "../TemplativePurchaseButton";
 const path = require('path');
-const fs = require("fs")
+const axios = require("axios");
+const fs = require("fs");
 
 export default class PrintPanel extends React.Component {   
     state={
