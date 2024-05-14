@@ -47,14 +47,17 @@ module.exports = class ServerRunner {
         spawnedProcess.stdout.setEncoding('utf8');
         spawnedProcess.stdout.on('data', function(data) {
             log(`${data}`);
+            console.log(`${data}`);
         });
 
         spawnedProcess.stderr.setEncoding('utf8');
         spawnedProcess.stderr.on('data', function(data) {
             error(`${data}`);
-        });
+            console.log(`${data}`);
+        });       
 
         spawnedProcess.on('close', function(code) {
+            console.log(`${code}`);
             log(`Closing with code ${code}.`);
         });          
         this.#serverProcess = spawnedProcess
@@ -112,7 +115,6 @@ module.exports = class ServerRunner {
         if (this.#serverProcess === undefined) {
             return
         }
-        this.#serverProcess.kill()
-        kill(this.#serverProcess.pid)
+        this.#serverProcess.kill('SIGINT');
     }
 }
