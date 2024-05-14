@@ -27,7 +27,7 @@ const createWindow = () => {
         webSecurity: false,
       },
       backgroundColor: '#282c34',
-      icon: __dirname + "/favicon.ico"
+      icon: __dirname + "assets/images/icon.png"
     })
     
     Menu.setApplicationMenu(mainMenu);
