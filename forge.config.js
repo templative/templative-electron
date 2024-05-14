@@ -49,7 +49,8 @@ module.exports = {
         authors: "Next Day Games",
         noMsi: true,
         remoteReleases: `https://templative-artifacts.s3.amazonaws.com/win32/${arch}`,
-        setupIcon: path.resolve(__dirname, 'assets/images/favicon.ico'),
+        setupIcon: path.resolve(__dirname, 'assets/images/favicon.ico'),        
+        iconUrl: 'https://drive.google.com/uc?export=download&id=1kZ7VRV_A_cwG6mPIS1HUXKFWViW5y3-J', 
       })
     }
   ],
