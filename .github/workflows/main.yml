@@ -13,14 +13,16 @@ jobs:
       matrix:
         os:
           - windows-latest
-          - macos-12
+          - macos-14
           - macos-latest
-          # - macos-13-xlarge
         node:
           - 18
         python:
           - 3.12.3
     steps:
+      - name: Print architecture
+        shell: bash
+        run: uname -m
 
       - uses: actions/checkout@v2
 
