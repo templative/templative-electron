@@ -27,7 +27,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Add OSX Certifications
-        if: matrix.os == 'macos-latest'
+        if: matrix.os != 'windows-latest'
         run: |
           KEY_CHAIN=build.keychain
           CERTIFICATE_P12=certificate.p12
@@ -83,7 +83,7 @@ jobs:
     
       - name: Upload Templative as Artifact
         uses: actions/upload-artifact@v3
-        if: matrix.os == 'macos-latest'
+        if: matrix.os != 'windows-latest'
         with:
           name: templative-app
           path: ./bin
@@ -126,7 +126,7 @@ jobs:
           echo "current-version=$PACKAGE_VERSION" >> "$GITHUB_OUTPUT"
       
       - name: Use debugging electron
-        if: matrix.os == 'macos-latest'
+        if: matrix.os != 'windows-latest'
         run: export DEBUG=electron*
 
       - name: Create Package
