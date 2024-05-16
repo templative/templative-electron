@@ -12,16 +12,15 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          # - windows-latest
+          - windows-latest
           - macos-12
+          - macos-latest
           # - macos-13-xlarge
         node:
           - 18
         python:
           - 3.12.3
     steps:
-      - name: Print architecture
-        run: uname -m
 
       - uses: actions/checkout@v2
 
