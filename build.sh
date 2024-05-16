@@ -22,7 +22,7 @@ function createTemplativeApp() {
     pipenv install
     pipenv run pip show
 
-    pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG --onefile ./templative/__main__.py --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data "./templative/lib/create/componentTemplates;templative/lib/create/componentTemplates" # --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"
+    pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG --onefile ./templative/__main__.py --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data "./templative/lib/create/componentTemplates;templative/lib/create/componentTemplates" --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"
     cd ..
 }
 

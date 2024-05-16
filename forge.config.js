@@ -15,19 +15,19 @@ module.exports = {
       "./bin"
      ],
     icon: "assets/images/favicon",
-    // osxSign: {
-    //   'identity': "Developer ID Application: Go Next Games LLC (829PN2W7LK)",
-    //   'hardened-runtime': true,
-    //   'gatekeeper-assess': false,
-    //   'entitlements': 'entitlements.plist',
-    //   'entitlements-inherit': 'entitlements.plist',
-    // },
-    // osxNotarize: {
-    //   tool: 'notarytool',
-    //   appleId: process.env.APPLE_ID,
-    //   appleIdPassword: process.env.TEMPLATIVE_APP_SPECIFIC_PASSWORD,
-    //   teamId: process.env.APPLE_TEAM_ID,
-    // },
+    osxSign: {
+      'identity': "Developer ID Application: Go Next Games LLC (829PN2W7LK)",
+      'hardened-runtime': true,
+      'gatekeeper-assess': false,
+      'entitlements': 'entitlements.plist',
+      'entitlements-inherit': 'entitlements.plist',
+    },
+    osxNotarize: {
+      tool: 'notarytool',
+      appleId: process.env.APPLE_ID,
+      appleIdPassword: process.env.TEMPLATIVE_APP_SPECIFIC_PASSWORD,
+      teamId: process.env.APPLE_TEAM_ID,
+    },
   },
   rebuildConfig: {},
   makers: [
