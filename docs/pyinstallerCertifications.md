@@ -11,7 +11,7 @@ The upshot is we need to add an entitlement:
 <key>com.apple.security.cs.allow-unsigned-executable-memory</key>
 <true/>
 ```
-And sign the pysintaller `--codesign-identity "Developer ID Application: Next Day Games LLC (Y9RWBVMY7R)"`
+And sign the pysintaller `--codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"`
 
 To prevent this error:
 ```
