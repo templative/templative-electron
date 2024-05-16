@@ -28,6 +28,8 @@ jobs:
           KEY_CHAIN=build.keychain
           CERTIFICATE_P12=certificate.p12
           echo $CERTIFICATE_OSX_APPLICATION | base64 --decode > $CERTIFICATE_P12
+          echo "First few lines of the decoded certificate file:"
+          head -n 10 $CERTIFICATE_P12
           security create-keychain -p actions $KEY_CHAIN
           security default-keychain -s $KEY_CHAIN
           security unlock-keychain -p actions $KEY_CHAIN
