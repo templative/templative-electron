@@ -1,17 +1,17 @@
 module.exports = [
   {
-    test: /native_modules[/\\].+\.node$/,
+    test: /native_modules\/.+\.node$/,
     use: 'node-loader',
   },
   {
-    test: /\.(png|jp(e*)g|svg|gif)$/,
+    test: /\.(png|jpe?g|svg|gif)$/,
     type: 'asset/resource',
   },
   {
-    test: /[/\\]node_modules[/\\].+\.(m?js|node)$/,
+    test: /\.(m?js|node)$/,
     parser: { amd: false },
     use: {
-      loader: '@vercel/webpack-asset-relocator-loader',
+      loader: '@zeit/webpack-asset-relocator-loader',
       options: {
         outputAssetBase: 'native_modules',
       },
@@ -23,8 +23,8 @@ module.exports = [
       loader: 'babel-loader',
       options: {
         exclude: /node_modules/,
-        presets: ['@babel/preset-react'],
-      },
-    },
+        presets: ['@babel/preset-react']
+      }
+    }
   }
 ];
