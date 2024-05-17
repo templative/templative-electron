@@ -6,7 +6,7 @@ permissions:
 
 jobs:
   templative:
-    if: false
+    if: true
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -31,6 +31,7 @@ jobs:
         run: |
           KEY_CHAIN=build.keychain
           CERTIFICATE_P12=certificate.p12
+          echo $CERTIFICATE_PASSWORD
           echo $CERTIFICATE_OSX_APPLICATION | base64 --decode > $CERTIFICATE_P12
           echo "First few lines of the decoded certificate file:"
           head -n 10 $CERTIFICATE_P12

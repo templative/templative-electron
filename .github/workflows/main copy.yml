@@ -18,6 +18,10 @@ jobs:
         python:
           - 3.12.3
     steps:
+      - name: Print architecture
+        shell: bash
+        run: uname -m
+
       - uses: actions/checkout@v2
 
       - name: Add OSX Certifications
