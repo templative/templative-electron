@@ -1,32 +1,24 @@
 module.exports = [
-    {
-        // We're specifying native_modules in the test because the asset relocator loader generates a
-        // "fake" .node file which is really a cjs file.
-        test: /native_modules[/\\].+\.node$/,
-        use: 'node-loader',
-    },
-    {
-      test: /\.(png|jp(e*)g|svg|gif)$/,
-      type: "asset/resource",
-    },
-    {
-      test: /[/\\]node_modules[/\\].+\.(m?js|node)$/,
-      parser: { amd: false },
-      use: {
-          loader: '@vercel/webpack-asset-relocator-loader',
-          options: {
-          outputAssetBase: 'native_modules',
-          },
-      },
-    },
-    {
+  {
+    // Specify native_modules in the test because the asset relocator loader generates a
+    // "fake" .node file which is really a cjs file.
+    test: /native_modules[/\\].+\.node$/,
+    use: 'node-loader',
+  },
+  {
+    // Handle image assets
+    test: /\.(png|jp(e*)g|svg|gif)$/,
+    type: 'asset/resource',
+  },
+  {
+    // Handle JavaScript and JSX files with Babel loader
     test: /\.jsx?$/,
+    exclude: /node_modules/,
     use: {
       loader: 'babel-loader',
       options: {
-        exclude: /node_modules/,
-        presets: ['@babel/preset-react']
-      }
-    }
-  }
+        presets: ['@babel/preset-react'],
+      },
+    },
+  },
 ];
