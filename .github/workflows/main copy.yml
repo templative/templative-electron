@@ -1,0 +1,30 @@
+on:
+  push: null
+
+permissions:
+  contents: write
+
+jobs:
+  templative:
+    if: true
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - macos-latest
+        node:
+          - 18
+        python:
+          - 3.12.3
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Add OSX Certifications
+        if: matrix.os != 'windows-latest'
+        run: |
+          echo $CERTIFICATE_OSX_APPLICATION
+        env:
+          CERTIFICATE_OSX_APPLICATION: ${{secrets.CERTIFICATE_OSX_APPLICATION}}
+          CERTIFICATE_PASSWORD: ${{secrets.CERTIFICATE_PASSWORD}}
+      
