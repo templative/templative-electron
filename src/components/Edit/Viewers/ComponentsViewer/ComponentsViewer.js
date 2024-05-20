@@ -1,10 +1,10 @@
 import React from "react";
 import ComponentItemEditable from "./ComponentItems/ComponentItemEditable"
 import "./ComponentViewer.css"
-// import { Link } from "react-router-dom";
 import EditableViewerJson from "../EditableViewerJson";
 import ComponentItemEditableStock from "./ComponentItems/ComponentItemEditableStock";
 import ComponentFilters from "./ComponentFilters/ComponentFilters";
+import NoComponentsSVG from "./noComponents.svg"
 
 const path = require("path")
 
@@ -160,6 +160,9 @@ export default class ComponentsViewer extends EditableViewerJson {
                 </div>
                 <div className="row component-items-row">
                     <div className="col no-gutters">
+                        { componentItems.length === 0 &&
+                            <img className="no-components-svg" src={NoComponentsSVG} alt="Suggestion to create a component with the create components tab"/>
+                        }
                         {componentItems}
                     </div>
                 </div>
