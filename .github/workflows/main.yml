@@ -13,21 +13,28 @@ jobs:
       matrix:
         os:
           - windows-latest
+          - macos-11
           - macos-latest
-          # - macos-13-xlarge
         node:
           - 18
         python:
-          - 3.11.6
+          - 3.12.3
     steps:
+      - name: Print architecture
+        shell: bash
+        run: uname -m
+
       - uses: actions/checkout@v2
 
       - name: Add OSX Certifications
-        if: matrix.os == 'macos-latest'
+        if: matrix.os != 'windows-latest'
         run: |
           KEY_CHAIN=build.keychain
           CERTIFICATE_P12=certificate.p12
+          echo $CERTIFICATE_PASSWORD
           echo $CERTIFICATE_OSX_APPLICATION | base64 --decode > $CERTIFICATE_P12
+          echo "First few lines of the decoded certificate file:"
+          head -n 10 $CERTIFICATE_P12
           security create-keychain -p actions $KEY_CHAIN
           security default-keychain -s $KEY_CHAIN
           security unlock-keychain -p actions $KEY_CHAIN
@@ -60,7 +67,7 @@ jobs:
       - name: Create Templative App/Exe
         run: |
           cd ./python
-          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG --onefile ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --codesign-identity "Developer ID Application: Next Day Games LLC (Y9RWBVMY7R)"      
+          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG --onefile ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"      
       
       - name: Upload Templative Xref as Artifact
         uses: actions/upload-artifact@v3
@@ -77,7 +84,7 @@ jobs:
     
       - name: Upload Templative as Artifact
         uses: actions/upload-artifact@v3
-        if: matrix.os == 'macos-latest'
+        if: matrix.os != 'windows-latest'
         with:
           name: templative-app
           path: ./bin
@@ -99,8 +106,17 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
+      - name: Force remove node_modules
+        shell: bash
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+
       - name: Install Node Packages
         run: npm install
+
+      - name: List npm packages
+        run: npm list -g --depth=0
 
       - name: get-npm-version
         id: package-version
@@ -111,7 +127,7 @@ jobs:
           echo "current-version=$PACKAGE_VERSION" >> "$GITHUB_OUTPUT"
       
       - name: Use debugging electron
-        if: matrix.os == 'macos-latest'
+        if: matrix.os != 'windows-latest'
         run: export DEBUG=electron*
 
       - name: Create Package

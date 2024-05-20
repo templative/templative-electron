@@ -27,7 +27,7 @@ const createWindow = () => {
         webSecurity: false,
       },
       backgroundColor: '#282c34',
-      icon: __dirname + "/favicon.ico"
+      icon: __dirname + "assets/images/icon.png"
     })
     
     Menu.setApplicationMenu(mainMenu);
@@ -109,5 +109,10 @@ const shutdown = async () => {
     }
     app.exit(0)
 };
+
+app.on('before-quit', async () => {
+  await serverManager.shutDownServers()
+});
+
 app.on("ready", onReady)
 app.on('window-all-closed', shutdown)

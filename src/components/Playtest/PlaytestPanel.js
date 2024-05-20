@@ -5,11 +5,11 @@ import SelectDirectoryInDirectory from "../SelectDirectory/SelectDirectoryInDire
 import { channels } from "../../shared/constants";
 import {writeLastUseTableTopPlaygroundDirectory, getLastUsedTableTopPlaygroundDirectory} from "../../settings/SettingsManager"
 import { trackEvent } from "@aptabase/electron/renderer";
-import axios from "axios"
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import PlaygroundOutputExplorer from "./PlaygroundOutputExplorer";
 import TemplativeClient from "../../TemplativeClient";
 import TemplativePurchaseButton from "../TemplativePurchaseButton";
+const axios = require("axios");
 const path = require('path');
 
 const { ipcRenderer } = require('electron');

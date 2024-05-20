@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   packagerConfig: {
     name: 'Templative',
@@ -8,11 +10,13 @@ module.exports = {
     },
     extraResource: [
       "assets/images/icon.icns",
+      "assets/images/icon.png",
+      "assets/images/favicon.ico",
       "./bin"
      ],
-    icon: "assets/images/icon",
+    icon: "assets/images/favicon",
     osxSign: {
-      'identity': "Developer ID Application: Next Day Games LLC (Y9RWBVMY7R)",
+      'identity': "Developer ID Application: Go Next Games LLC (829PN2W7LK)",
       'hardened-runtime': true,
       'gatekeeper-assess': false,
       'entitlements': 'entitlements.plist',
@@ -44,7 +48,9 @@ module.exports = {
         name: "templative",
         authors: "Next Day Games",
         noMsi: true,
-        remoteReleases: `https://templative-artifacts.s3.amazonaws.com/win32/${arch}`
+        remoteReleases: `https://templative-artifacts.s3.amazonaws.com/win32/${arch}`,
+        setupIcon: path.resolve(__dirname, 'assets/images/favicon.ico'),        
+        iconUrl: 'https://drive.google.com/uc?export=download&id=1kZ7VRV_A_cwG6mPIS1HUXKFWViW5y3-J', 
       })
     }
   ],

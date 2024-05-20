@@ -1,4 +1,4 @@
-const axios = window.require("axios")
+const axios = require("axios")
 
 const doesUserOwnTemplative = async(email, token) => {
     if (email === undefined) {
