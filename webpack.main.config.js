@@ -5,6 +5,9 @@ module.exports = {
   module: {
     rules: require('./webpack.rules'),
   },
+  externals: {
+    keytar: 'commonjs2 keytar',
+  },
   resolve: {
     extensions: ['.js', '.jsx', '.css', '.json']
   },
