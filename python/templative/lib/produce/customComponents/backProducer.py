@@ -71,7 +71,6 @@ class BackProducer(Producer):
     @staticmethod
     def createUniqueBackHashForPiece(pieceSpecificBackArtDataSources, pieceGamedata: any) -> str:
         pieceBackSourceHash = ""
-        print(pieceSpecificBackArtDataSources)
         for pieceSpecificSource in pieceSpecificBackArtDataSources:
             if not pieceSpecificSource in pieceGamedata:
                 print("Piece %s does not define the field %s as the backartdata expects" % (pieceGamedata["varname"], pieceSpecificSource))
