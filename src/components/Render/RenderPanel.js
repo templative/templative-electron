@@ -3,7 +3,7 @@ import OutputExplorer from "./OutputExplorer"
 import RenderButton from "./RenderButton"
 import "./RenderPanel.css"
 import socket from "../../socket"
-// import { LoggedMessages } from "../SocketedConsole/LoggedMessages"
+import { LoggedMessages } from "../SocketedConsole/LoggedMessages"
 import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 import { trackEvent } from "@aptabase/electron/renderer";
 import TemplativeAccessTools from "../TemplativeAccessTools";
@@ -124,7 +124,7 @@ export default class RenderPanel extends React.Component {
                         }
                         
                     </div>
-                    {/* <LoggedMessages/> */}
+                    <LoggedMessages/>
     
                     <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
                 </div>  
