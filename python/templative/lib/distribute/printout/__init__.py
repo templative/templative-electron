@@ -3,69 +3,75 @@ from PIL import Image, ImageDraw
 from os import path, walk
 from json import dump, load
 import math
+import os
+import tempfile
+from pprint import pprint
 from fpdf import FPDF
 from templative.lib.componentInfo import COMPONENT_INFO
 from templative.lib.manage.instructionsLoader import getLastOutputFileDirectory
 
-marginsInches = 0.5 # or 0.25
+marginInches = 0.5 # or 0.25
 inchToPixelConversion = 96
 pieceMarginInches = 0.11811 * 1/3
+fpdfSizes = {
+    "Letter": "letter",
+    "Tabloid": "a3",
+}
+printoutPlayAreaChoices = {
+    "Letter": (8.5-(marginInches*2), 11-(marginInches*2)),
+    "Tabloid": (11-(marginInches*2), 17-(marginInches*2))
+}
 
 async def createPdfForPrinting(producedDirectoryPath, isBackIncluded, size, areMarginsIncluded):
-    fpdfSizes = {
-        "Letter": "letter",
-        "Tabloid": "a3",
-    }
-    if not size in fpdfSizes:
+    if not size in fpdfSizes or not size in printoutPlayAreaChoices:
         print("Cannot create size %s." % size)
         return
-    
+
     pdf = FPDF("P", "in", fpdfSizes[size])
 
-    componentTypeFilepathAndQuantity = {}
-    print(producedDirectoryPath)
-    for directoryPath in next(walk(producedDirectoryPath))[1]:
-        await loadFilepathsForComponent(componentTypeFilepathAndQuantity, producedDirectoryPath, directoryPath)
-    
-    printoutPlayAreaChoices = {
-        "Letter": (8.5-(marginsInches*2), 11-(marginsInches*2)),
-        "Tabloid": (11-(marginsInches*2), 17-(marginsInches*2))
-    }
-
-    if not size in printoutPlayAreaChoices:
-        print("Cannot create size %s." % size)
-        return
+    componentTypeFilepathsAndQuantity = await getDictionaryOfImageFilepathsAndQuantityGroupedByComponentType(producedDirectoryPath)
     
     printoutPlayAreaChoice = printoutPlayAreaChoices[size]
 
-    for componentType in componentTypeFilepathAndQuantity.keys():
-        createdPageImages = await createPageImagesForComponentTypeImages(componentType, componentTypeFilepathAndQuantity[componentType], isBackIncluded, printoutPlayAreaChoice, areMarginsIncluded)
-        await addPageImagesToPdf(pdf, componentType, createdPageImages, printoutPlayAreaChoice)
+    for componentType in componentTypeFilepathsAndQuantity.keys():
+        dictionaryOfImageFilepathsAndTheirQuantities = componentTypeFilepathsAndQuantity[componentType]
+        createdPageImages = await createPageImagesForComponentTypeImages(componentType, dictionaryOfImageFilepathsAndTheirQuantities, isBackIncluded, printoutPlayAreaChoice, areMarginsIncluded)
+        await addPageImagesToPdf(pdf, createdPageImages, printoutPlayAreaChoice)
     
     outputPath = path.abspath(path.join(producedDirectoryPath, "printout.pdf"))
     print("Writing to", outputPath)
     pdf.output(outputPath, "F")
     return 1
 
-async def loadFilepathsForComponent(componentTypeFilepathAndQuantity, producedDirectoryPath, directoryPath):
+async def getDictionaryOfImageFilepathsAndQuantityGroupedByComponentType(producedDirectoryPath):
+    componentTypeFilepathAndQuantity = {}
+    directoryPathsInOutputFolder = next(walk(producedDirectoryPath))[1]
+    for directoryPath in directoryPathsInOutputFolder:
+        directoryComponentTypeFilepathAndQuantity = await loadFilepathsForComponent(producedDirectoryPath, directoryPath)
+        componentTypeFilepathAndQuantity.update(directoryComponentTypeFilepathAndQuantity)
+    return componentTypeFilepathAndQuantity
+
+async def loadFilepathsForComponent(producedDirectoryPath, directoryPath):
     componentDirectoryPath = "%s/%s" % (producedDirectoryPath, directoryPath)
     componentInstructionsFilepath = path.join(componentDirectoryPath, "component.json")
     componentInstructionsFile = open(componentInstructionsFilepath, "r")
     componentInstructions = load(componentInstructionsFile)
-
-    await collectFilepathQuantitiesForComponent(componentTypeFilepathAndQuantity, componentInstructions)
+    
+    componentTypeFilepathAndQuantity = await collectFilepathQuantitiesForComponent(componentInstructions)
     componentInstructionsFile.close()
+    return componentTypeFilepathAndQuantity
 
-async def collectFilepathQuantitiesForComponent(componentTypeFilepathAndQuantity, componentInstructions):    
+async def collectFilepathQuantitiesForComponent(componentInstructions):    
+    componentTypeFilepathAndQuantity = {}
     if not componentInstructions["type"] in componentTypeFilepathAndQuantity:
         componentTypeFilepathAndQuantity[componentInstructions["type"]] = []
     
     if "STOCK_" in componentInstructions["type"]:
-        return 
+        return componentTypeFilepathAndQuantity
 
     if not "frontInstructions" in componentInstructions:
         print("Skipping %s for lacking frontInstructions" % componentInstructions["name"])
-        return
+        return componentTypeFilepathAndQuantity
     
     for instruction in componentInstructions["frontInstructions"]:
         frontBack = {
@@ -77,11 +83,19 @@ async def collectFilepathQuantitiesForComponent(componentTypeFilepathAndQuantity
         
         componentTypeFilepathAndQuantity[componentInstructions["type"]].append(frontBack)
 
-async def addPageImagesToPdf(pdf, componentType, pageImages, printoutPlayAreaInches):
+    return componentTypeFilepathAndQuantity
+
+async def addPageImagesToPdf(pdf, pageImages, printoutPlayAreaInches):
     for image in pageImages:
         pdf.add_page()
         pdf.line(1,0,1,1)
-        pdf.image(image,marginsInches,marginsInches,printoutPlayAreaInches[0],printoutPlayAreaInches[1])
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".png") as tmpfile:
+            image.save(tmpfile, format='PNG')
+            tmpfile_path = tmpfile.name
+        try:
+            pdf.image(tmpfile_path, marginInches, marginInches, printoutPlayAreaInches[0], printoutPlayAreaInches[1])
+        finally:
+            os.remove(tmpfile_path)
 
 async def createPageImagesForComponentTypeImages(componentType, componentTypeImageList, printBack, printoutPlayAreaInches, areMarginsIncluded):
     if "STOCK_" in componentType:
