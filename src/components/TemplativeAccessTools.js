@@ -61,7 +61,10 @@ export default class TemplativeAccessTools {
         var directories = await fs.readdir(outputDirectory, { withFileTypes: true })
         directories = directories
             .filter(dirent => dirent.isDirectory())
-            .map(dirent => dirent)
+            .map(dirent => ({
+                name: dirent.name,
+                path: path.join(outputDirectory)
+            }))
         return directories;
     }
     static getOutputDirectoriesComponentDirectoriesAsync = async (templativeRootDirectoryPath, individualOutputDirectoryPath) => {

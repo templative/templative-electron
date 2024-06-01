@@ -16,7 +16,9 @@ export default class ComponentOutputDirectory extends React.Component {
     #getComponentImageFilepaths = async () => {        
         var filepaths = await fs.readdir(this.props.componentDirectory, { withFileTypes: true })
         var imageFilepaths = filepaths.filter(dirent => !dirent.isDirectory() && dirent.name.split(".").pop() === "png")
+            .map(dirent => ({path: this.props.componentDirectory, name: dirent.name}))
         var svgFilepaths = filepaths.filter(dirent => !dirent.isDirectory() && dirent.name.split(".").pop() === "svg")
+            .map(dirent => ({path: this.props.componentDirectory, name: dirent.name}))
         
         this.setState({imageFilepaths: imageFilepaths, svgFilepaths: svgFilepaths, remountKey: this.state.remountKey+1})
 
@@ -74,6 +76,7 @@ export default class ComponentOutputDirectory extends React.Component {
     render = () => {
         
         var imageDivs = this.state.imageFilepaths.map((dirent, index) => {
+            console.log(dirent)
             var imagePath = path.join(dirent.path, dirent.name)
             return <img className="output-image" alt="" key={imagePath} src={`file://${imagePath}`}/>
         })

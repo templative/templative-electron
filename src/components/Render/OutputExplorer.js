@@ -39,7 +39,7 @@ export default class OutputExplorer extends React.Component {
         var componentDirectories = await fs.readdir(this.props.outputFolderPath, { withFileTypes: true, })
         componentDirectories = componentDirectories
             .filter(dirent => dirent.isDirectory())
-            .map(dirent => path.join(dirent.path, dirent.name))
+            .map(dirent => path.join(this.props.outputFolderPath, dirent.name))
 
         var totalFiles = 0
         var doneFiles = 0

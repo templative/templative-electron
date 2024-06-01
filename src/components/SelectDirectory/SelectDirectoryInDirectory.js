@@ -15,7 +15,9 @@ export default class SelectDirectoryInDirectory extends React.Component {
             return
         }
         var directories = await fs.readdir(this.props.directoryPath, { withFileTypes: true })
-        directories = directories.filter(dirent => dirent.isDirectory())
+        directories = directories
+            .filter(dirent => dirent.isDirectory())
+            .map(dirent => ({path: this.props.directoryPath, name: dirent.name }))
         this.setState({directories: directories})
     }
     #stopWatchingBasepath = () => {

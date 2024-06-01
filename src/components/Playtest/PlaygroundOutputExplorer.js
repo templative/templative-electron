@@ -16,7 +16,7 @@ export default class PlaygroundOutputExplorer extends React.Component {
         var thumbnailFilepaths = await fs.readdir(thumbnailsPath, { withFileTypes: true, })
         thumbnailFilepaths = thumbnailFilepaths
             .filter(dirent => !dirent.isDirectory())
-            .map(dirent => path.join(dirent.path, dirent.name))
+            .map(dirent => path.join(thumbnailsPath, dirent.name))
         return thumbnailFilepaths
     }
     getTextureFilepaths = async(packageDirectory) => {
@@ -24,7 +24,7 @@ export default class PlaygroundOutputExplorer extends React.Component {
         var textureFilepaths = await fs.readdir(texturesPath, { withFileTypes: true, })
         textureFilepaths = textureFilepaths
             .filter(dirent => !dirent.isDirectory())
-            .map(dirent => path.join(dirent.path, dirent.name))
+            .map(dirent => path.join(texturesPath, dirent.name))
         return textureFilepaths
     }
     loadPackageName = async (packageDirectory) => {
