@@ -69,9 +69,13 @@ class BackProducer(Producer):
         return uniqueComponentBackDatas
 
     @staticmethod
-    def createUniqueBackHashForPiece(pieceSpecificBackArtDataSources: [str], pieceGamedata: any) -> str:
+    def createUniqueBackHashForPiece(pieceSpecificBackArtDataSources, pieceGamedata: any) -> str:
         pieceBackSourceHash = ""
+        print(pieceSpecificBackArtDataSources)
         for pieceSpecificSource in pieceSpecificBackArtDataSources:
+            if not pieceSpecificSource in pieceGamedata:
+                print("Piece %s does not define the field %s as the backartdata expects" % (pieceGamedata["varname"], pieceSpecificSource))
+                continue
             pieceBackSourceHash += pieceGamedata[pieceSpecificSource].replace(" ","")
         if pieceBackSourceHash == "":
             return pieceBackSourceHash
