@@ -12,6 +12,7 @@ bin/*
 /build
 
 # misc
+/temp
 .DS_Store
 .env.local
 .env.development.local
