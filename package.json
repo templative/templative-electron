@@ -1,11 +1,11 @@
 {
     "name": "Templative",
     "description": "Electron frontend for the Templative CLI.",
-    "version": "1.1.30",
+    "version": "1.1.31",
     "private": true,
     "main": ".webpack/main",
     "author": {
-        "name": "Next Day Games",
+        "name": "Go Next Games",
         "email": "oliver@gonextgames.com",
         "url": "https://www.gonextgames.com"
     },

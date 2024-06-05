@@ -46,7 +46,7 @@ module.exports = {
       name: '@electron-forge/maker-squirrel',
       config: (arch) => ({
         name: "templative",
-        authors: "Next Day Games",
+        authors: "Go Next Games",
         noMsi: true,
         remoteReleases: `https://templative-artifacts.s3.amazonaws.com/win32/${arch}`,
         setupIcon: path.resolve(__dirname, 'assets/images/favicon.ico'),        
