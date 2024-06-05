@@ -1,7 +1,7 @@
 {
     "name": "Templative",
     "description": "Electron frontend for the Templative CLI.",
-    "version": "1.1.32",
+    "version": "1.1.33",
     "private": true,
     "main": ".webpack/main",
     "author": {
@@ -21,7 +21,7 @@
         "publishDryRun": "bash ./build.sh publishDryRun",
         "fullPackage": "bash ./build.sh fullPackage",
         "sign": "bash ./build.sh sign",
-        "signS3": "bash ./s3Processing.sh",
+        "signS3": "bash ./signWindowsInS3.sh",
         "fullMake": "bash ./build.sh fullMake",
         "fullPublish": "bash ./build.sh fullPublish"
     },
