@@ -53,7 +53,12 @@ process_setup_file() {
 
     version=$(echo "$setup_file" | grep -oP '(?<=Templative-).*')
 
-    echo "Found $setup_file version $version."
+    echo "Considering $version..."
+    
+    if aws s3api head-object --bucket "templative-artifacts" --key "win32/x64/Templative-$version Setup.exe" >/dev/null 2>&1; then
+        echo "templative-artifacts/win32/x64/Templative-$version Setup.exe already exists so we are skipping."
+        return 1
+    fi
 
     download_files "$version"
     if [ $? -ne 0 ]; then
