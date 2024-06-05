@@ -59,7 +59,8 @@ process_setup_file() {
             upload_signed_files "$version"
             if [ $? -eq 0 ]; then
                 echo "Uploaded signed files for version $version to $FINAL_BUCKET."
-                remove_unsigned_aws_files
+                # Signed files are used to create packages deltas in the unsigned folder
+                # remove_unsigned_aws_files
                 remove_local_files
             else
                 echo "Failed to upload signed files for version $version to $FINAL_BUCKET."
@@ -71,7 +72,10 @@ process_setup_file() {
         echo "Failed to download files for version $version."
     fi
 }
-
+# The releases file is used to manage versions, I think both post and getting versions relies on this.
+copy_releases_file() {
+    aws s3 cp s3://$TEMP_BUCKET/RELEASES s3://$FINAL_BUCKET/RELEASES
+}
 check_for_new_files() {
     echo "Checking for new setup.exe in $TEMP_BUCKET..."
 
@@ -80,5 +84,6 @@ check_for_new_files() {
     for setup_file in $setup_files; do
         process_setup_file "$setup_file"
     done
+    copy_releases_file
 }
 check_for_new_files
