@@ -51,6 +51,17 @@ function publishDryRun() {
     electron-forge publish --from-dry-run
 }
 
+function sign() {
+    EXE_PATH="C:\Users\User\Documents\git\templative-frontend\out\make\squirrel.windows\x64\Templative-1.1.31 Setup.exe"
+    TIMESTAMP_SERVER="http://timestamp.sectigo.com"
+    echo "Signing..."
+    signtool sign -sha1 "$GONEXTGAMES_CODESIGNINGCERTIFICATE_THUMBPRINT" -tr "$TIMESTAMP_SERVER" -td sha256 -fd sha256 "$EXE_PATH"
+    echo "Executable signed successfully."
+
+    echo "Verifying the signed executable..."
+    signtool verify -pa -v "$EXE_PATH"
+}
+
 function fullPackage() {
     createTemplativeApp && package
 }

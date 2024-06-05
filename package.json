@@ -20,6 +20,8 @@
         "createPublishDryRun": "bash ./build.sh createPublishDryRun",
         "publishDryRun": "bash ./build.sh publishDryRun",
         "fullPackage": "bash ./build.sh fullPackage",
+        "sign": "bash ./build.sh sign",
+        "signS3": "bash ./s3Processing.sh",
         "fullMake": "bash ./build.sh fullMake",
         "fullPublish": "bash ./build.sh fullPublish"
     },
