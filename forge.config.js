@@ -48,7 +48,7 @@ module.exports = {
         name: "templative",
         authors: "Go Next Games",
         noMsi: true,
-        remoteReleases: `https://templative-artifacts.s3.amazonaws.com/win32/unsigned/${arch}`,
+        remoteReleases: `https://templative-artifacts.s3.amazonaws.com/win32/${arch}`,
         setupIcon: path.resolve(__dirname, 'assets/images/favicon.ico'),        
         iconUrl: 'https://drive.google.com/uc?export=download&id=1kZ7VRV_A_cwG6mPIS1HUXKFWViW5y3-J', 
       })
@@ -84,7 +84,7 @@ module.exports = {
   publishers: [
     {
       name: '@electron-forge/publisher-s3',
-      platforms: ['darwin', 'win32'],
+      platforms: ['darwin'],
       config: {
         bucket: 'templative-artifacts',
         folder: '',
@@ -93,6 +93,20 @@ module.exports = {
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
         keyResolver: (fileName, platform, arch) => {
           return `${platform}/${arch}/${fileName}`
+        }
+      }
+    },
+    {
+      name: '@electron-forge/publisher-s3',
+      platforms: [ 'win32'],
+      config: {
+        bucket: 'templative-artifacts',
+        folder: '',
+        region: 'us-west-2',
+        accessKeyId: process.env.AWS_ACCESS_KEY,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+        keyResolver: (fileName, platform, arch) => {
+          return `${platform}/unsigned/${arch}/${fileName}`
         }
       }
     }
