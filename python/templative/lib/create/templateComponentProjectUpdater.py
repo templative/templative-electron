@@ -1,6 +1,7 @@
 from json import dump
 from os import path
 from shutil import copyfile
+import sys
 
 async def addToComponentCompose(name, type, gameRootDirectoryPath, componentComposeData, componentInfo):    
     for component in componentComposeData:
@@ -77,10 +78,18 @@ async def createBlankArtDataFile(artDataDirectoryPath, name, artDataTypeName):
         ]
     }, artDataJsonFile, indent=4)
 
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = path.abspath(".")
+
+    return path.join(base_path, relative_path)
+
 async def createArtFiles(artTemplatesDirectoryPath, name, type, artDataTypeNames):
-    currentDirectory = path.dirname(path.realpath(__file__))
-    componentDirectoryPath = path.join(currentDirectory, "componentTemplates")
-    componentTemplateFilepath = path.join(componentDirectoryPath, "%s.svg" % type)
+    componentTemplateFilepath = resource_path(f"templative/lib/create/componentTemplates/{type}.svg")
     for artDataTypeName in artDataTypeNames:
         artSideName = '%s%s' % (name,artDataTypeName)
         artSideNameFilepath = path.join(artTemplatesDirectoryPath, "%s.svg" % artSideName)
