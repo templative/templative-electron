@@ -185,7 +185,14 @@ jobs:
           else
             echo "ARCH=${{ steps.arch.outputs.arch }}" >> $GITHUB_ENV
           fi
-
+      
+      - name: Set up AWS CLI
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+    
       - name: Move signed OSX files
         if: matrix.os == 'macos-11' || matrix.os == 'macos-latest'
         run: |
