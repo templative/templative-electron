@@ -26,9 +26,7 @@ const createWindow = () => {
         devTools: true,
         webSecurity: false,
       },
-      backgroundColor: '#282c34',
-      icon: process.platform === 'win32' ? path.join(__dirname, 'assets/images/favicon.ico') : null,
-
+      backgroundColor: '#282c34'
     })
     
     Menu.setApplicationMenu(mainMenu);
