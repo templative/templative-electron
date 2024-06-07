@@ -90,6 +90,7 @@ def resource_path(relative_path):
 
 async def createArtFiles(artTemplatesDirectoryPath, name, type, artDataTypeNames):
     componentTemplateFilepath = resource_path(f"templative/lib/create/componentTemplates/{type}.svg")
+    print("Grabbed template from %s" % componentTemplateFilepath)
     for artDataTypeName in artDataTypeNames:
         artSideName = '%s%s' % (name,artDataTypeName)
         artSideNameFilepath = path.join(artTemplatesDirectoryPath, "%s.svg" % artSideName)
