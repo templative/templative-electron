@@ -14,7 +14,7 @@ module.exports = {
       "assets/images/favicon.ico",
       "./bin"
      ],
-    icon: "assets/images/favicon",
+    icon: "assets/images/icon.icns",
     osxSign: {
       'identity': "Developer ID Application: Go Next Games LLC (829PN2W7LK)",
       'hardened-runtime': true,
