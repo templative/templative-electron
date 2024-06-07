@@ -4,7 +4,7 @@ module.exports = [
     use: 'node-loader',
   },
   {
-    test: /\.(png|jpe?g|svg|gif)$/,
+    test: /\.(png|jpe?g|svg|gif|icns|ico)$/,
     type: 'asset/resource',
   },
   {
