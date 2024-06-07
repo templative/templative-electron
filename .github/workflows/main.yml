@@ -153,6 +153,7 @@ jobs:
       - name: Create Publish Dry Run
         run: npm run createPublishDryRun
         env: 
+          DEBUG: 'electron-forge:*'
           AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           APPLE_ID: ${{ secrets.APPLE_ID }}
@@ -163,6 +164,7 @@ jobs:
       - name: Publish Dry Run
         run: npm run publishDryRun
         env: 
+          DEBUG: 'electron-forge:*'
           AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           APPLE_ID: ${{ secrets.APPLE_ID }}
