@@ -176,12 +176,21 @@ jobs:
         if: matrix.os == 'macos-11' || matrix.os == 'macos-latest'
         id: arch
         run: echo "::set-output name=arch::$(uname -m)"
+    
+      - name: Convert architecture to x64
+        if: matrix.os == 'macos-11' || matrix.os == 'macos-latest'
+        run: |
+          if [ "${{ steps.arch.outputs.arch }}" == "x86_64" ] || [ "${{ steps.arch.outputs.arch }}" == "AMD64" ]; then
+            echo "ARCH=x64" >> $GITHUB_ENV
+          else
+            echo "ARCH=${{ steps.arch.outputs.arch }}" >> $GITHUB_ENV
+          fi
 
       - name: Move signed OSX files
         if: matrix.os == 'macos-11' || matrix.os == 'macos-latest'
         run: |
-          source ./moveSignedOsxFiles.sh
-          moveSignedOsxFiles ${{ steps.arch.outputs.arch }} ${{ env.CURRENT_VERSION }}
+          source ./build.sh
+          moveSignedOsxFiles ${{ env.ARCH }} ${{ env.CURRENT_VERSION }}
         env:
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
           AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
