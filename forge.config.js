@@ -14,7 +14,6 @@ module.exports = {
       "assets/images/favicon.ico",
       "./bin"
      ],
-    icon: "assets/images/icon.icns",
     osxSign: {
       'identity': "Developer ID Application: Go Next Games LLC (829PN2W7LK)",
       'hardened-runtime': true,
@@ -39,8 +38,9 @@ module.exports = {
       name: '@electron-forge/maker-zip',
       platforms: ['darwin'],
       config: (arch) => ({
-        macUpdateManifestBaseUrl: `https://templative-artifacts.s3.amazonaws.com/darwin/${arch}`
-      })
+        macUpdateManifestBaseUrl: `https://templative-artifacts.s3.amazonaws.com/darwin/${arch}`,
+        icon: "assets/images/icon.icns",
+      }),
     },
     {
       name: '@electron-forge/maker-squirrel',
@@ -48,11 +48,12 @@ module.exports = {
         name: "templative",
         authors: "Go Next Games",
         noMsi: true,
+        // noDelta: true,
         remoteReleases: `https://templative-artifacts.s3.amazonaws.com/win32/${arch}`,
-        setupIcon: path.resolve(__dirname, 'assets/images/favicon.ico'),        
-        iconUrl: 'https://drive.google.com/uc?export=download&id=1kZ7VRV_A_cwG6mPIS1HUXKFWViW5y3-J', 
-      })
-    }
+        setupIcon: path.resolve(__dirname, 'assets/images/favicon.ico'),
+        iconUrl: 'https://drive.google.com/uc?export=download&id=1kZ7VRV_A_cwG6mPIS1HUXKFWViW5y3-J',
+      }),
+    },
   ],
   plugins: [
     {
