@@ -7,7 +7,7 @@ const ServerManager = require("./app/serverManager")
 const ServerRunner = require("./app/serverRunner")
 const { setupAppUpdateListener } = require("./app/appUpdater")
 const { initialize } = require("@aptabase/electron/main");
-
+const path = require('path');
 if (require('electron-squirrel-startup')) app.quit();
 app.setName('Templative');
 var templativeWindow = undefined
@@ -27,7 +27,8 @@ const createWindow = () => {
         webSecurity: false,
       },
       backgroundColor: '#282c34',
-      icon: __dirname + "assets/images/icon.png"
+      icon: process.platform === 'win32' ? path.join(__dirname, 'assets/images/favicon.ico') : null,
+
     })
     
     Menu.setApplicationMenu(mainMenu);
@@ -74,6 +75,9 @@ const launchServers = async () => {
     }
 }
 const onReady = async () => {
+  if (process.platform === 'darwin') {
+    app.dock.setIcon(path.join(__dirname, 'assets/images/icon.icns'));
+  }
   log("Starting Templative")
   // startupWindow = createStartupWindow()
   try {
