@@ -16,6 +16,16 @@ function templative() {
     $pythonPath serve --port 8080
 }
 
+function moveSignedOsxFiles() {
+    arch=$1
+    version=$2
+    TEMP_BUCKET="s3://templative-artifacts/darwin/unsigned/$arch"
+    FINAL_BUCKET="s3://templative-artifacts/darwin/$arch"
+
+    aws s3 cp $TEMP_BUCKET/Templative-darwin-$arch-$version.zip $FINAL_BUCKET/Templative-darwin-$arch-$version.zip
+    aws s3 cp $TEMP_BUCKET/RELEASES.json $FINAL_BUCKET/RELEASES.json
+}
+
 function createTemplativeApp() {
     cd ./python
     pipenv --rm

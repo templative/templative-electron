@@ -84,21 +84,7 @@ module.exports = {
   publishers: [
     {
       name: '@electron-forge/publisher-s3',
-      platforms: ['darwin'],
-      config: {
-        bucket: 'templative-artifacts',
-        folder: '',
-        region: 'us-west-2',
-        accessKeyId: process.env.AWS_ACCESS_KEY,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-        keyResolver: (fileName, platform, arch) => {
-          return `${platform}/${arch}/${fileName}`
-        }
-      }
-    },
-    {
-      name: '@electron-forge/publisher-s3',
-      platforms: [ 'win32'],
+      platforms: [ 'darwin', 'win32'],
       config: {
         bucket: 'templative-artifacts',
         folder: '',

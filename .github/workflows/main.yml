@@ -13,8 +13,8 @@ jobs:
       matrix:
         os:
           - windows-latest
-          # - macos-11
-          # - macos-latest
+          - macos-11
+          - macos-latest
         node:
           - 18
         python:
@@ -171,6 +171,21 @@ jobs:
           TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+
+      - name: Get runner architecture
+        if: matrix.os == 'macos-11' || matrix.os == 'macos-latest'
+        id: arch
+        run: echo "::set-output name=arch::$(uname -m)"
+
+      - name: Move signed OSX files
+        if: matrix.os == 'macos-11' || matrix.os == 'macos-latest'
+        run: |
+          source ./moveSignedOsxFiles.sh
+          moveSignedOsxFiles ${{ steps.arch.outputs.arch }} ${{ env.CURRENT_VERSION }}
+        env:
+          CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       
       - name: Move Windows Squirrel Files into directory 
         if: matrix.os == 'windows-latest'
