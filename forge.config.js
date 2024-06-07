@@ -40,7 +40,6 @@ module.exports = {
       platforms: ['darwin'],
       config: (arch) => ({
         macUpdateManifestBaseUrl: `https://templative-artifacts.s3.amazonaws.com/darwin/${arch}`,
-        icon: "assets/images/icon.icns",
       }),
     },
     {
