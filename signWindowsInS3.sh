@@ -54,8 +54,9 @@ process_setup_file() {
     version=$(echo "$setup_file" | grep -oP '(?<=Templative-).*')
 
     echo "Considering $version..."
-    
-    if aws s3api head-object --bucket "templative-artifacts" --key "win32/x64/Templative-$version Setup.exe" >/dev/null 2>&1; then
+    # The setup exe and nupkg files are posted in the signed area without being signed, does that mean they will download hte signed verison?
+    # The only reason we create this the zip file is so that new downloads dont wait as the zip of the nupkg are assembled.
+    if aws s3api head-object --bucket "templative-artifacts" --key "win32/x64/Templative-win32-x64-$version.zip" >/dev/null 2>&1; then
         echo "templative-artifacts/win32/x64/Templative-$version Setup.exe already exists so we are skipping."
         return 1
     fi
