@@ -11,9 +11,10 @@ module.exports = {
     extraResource: [
       "assets/images/icon.icns",
       "assets/images/icon.png",
-      "assets/images/favicon.ico",
-      "./bin"
-     ],
+      "assets/images/icon.ico",
+      "./bin",
+    ],
+    icon: "assets/images/icon",
     osxSign: {
       'identity': "Developer ID Application: Go Next Games LLC (829PN2W7LK)",
       'hardened-runtime': true,
@@ -50,8 +51,8 @@ module.exports = {
         noMsi: true,
         // noDelta: true,
         remoteReleases: `https://templative-artifacts.s3.amazonaws.com/win32/${arch}`,
-        setupIcon: path.resolve(__dirname, 'assets/images/favicon.ico'),
-        iconUrl: 'https://drive.google.com/uc?export=download&id=1kZ7VRV_A_cwG6mPIS1HUXKFWViW5y3-J',
+        setupIcon: 'assets/images/icon.ico',        
+        iconUrl: 'https://drive.google.com/uc?export=download&id=1kZ7VRV_A_cwG6mPIS1HUXKFWViW5y3-J', 
       }),
     },
   ],
