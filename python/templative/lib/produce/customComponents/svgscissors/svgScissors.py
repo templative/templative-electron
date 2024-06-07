@@ -4,6 +4,7 @@ from aiofile import AIOFile
 import svgmanip
 import svgutils
 import sys
+import shutil
 
 from templative.lib.componentInfo import COMPONENT_INFO
 from templative.lib.manage.models.produceProperties import ProduceProperties
@@ -272,33 +273,56 @@ def runCommands(commands):
     # print(message)
     # subprocess.run(commands)
     os.system(message)
+    # try:
+    #     result = subprocess.run(commands, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    #     print(result.stdout.decode())
+    # except subprocess.CalledProcessError as e:
+    #     print(f"Error executing command: {e.cmd}\nExit code: {e.returncode}\nOutput: {e.output.decode()}\nError: {e.stderr.decode()}")
+
+def findInkscape():
+    common_paths = {
+        "win32": [
+            "C:/Program Files/Inkscape/bin/inkscape.exe",
+            "C:/Program Files (x86)/Inkscape/bin/inkscape.exe"
+        ],
+        "darwin": [
+            "/Applications/Inkscape.app/Contents/MacOS/inkscape"
+        ]
+    }
+
+    inkscape_path = shutil.which("inkscape")
+    if inkscape_path and os.path.isfile(inkscape_path):
+        return inkscape_path
+
+    if not sys.platform in common_paths:
+        return None
+
+    for path in common_paths[sys.platform]:
+        if os.path.isfile(path):
+            return path
+
+    return None
 
 async def exportSvgToImage(filepath, imageSizePixels, name, outputDirectory):
     absoluteSvgFilepath = os.path.abspath(filepath)
     absoluteOutputDirectory = os.path.abspath(outputDirectory)
     pngFilepath = os.path.join(absoluteOutputDirectory, "%s.png" % (name))
     
-    inkscapePaths = {
-        "win32": "C:/Program Files/Inkscape/bin/inkscape.exe",
-        'darwin': "/Applications/Inkscape.app/Contents/MacOS/inkscape"
-    }
-    if not sys.platform in inkscapePaths:
-        print("No inkscape version for this os.")
-        return
-    inkscapePath = inkscapePaths[sys.platform]
-    if not os.path.isfile(inkscapePath):
-        print("Inkscape missing from path: %s" % inkscapePath)
+    inkscapePath = findInkscape()
+    if not inkscapePath:
+        print("Inkscape is not installed or not found in common paths.")
         return
     
     createPngCommands = [
         '"%s"' % inkscapePath, 
         absoluteSvgFilepath,
         '--export-filename=%s' % pngFilepath, 
-        # "--with-gui",
         "--export-dpi=%s" % 300, 
+        "--export-background-opacity=0" 
+        # "--with-gui",
         # "--export-width=%s" % imageSizePixels[0], 
         # "--export-height=%s" % imageSizePixels[1],
-        "--export-background-opacity=0" ]
+    ]
     
     runCommands(createPngCommands)
     # jpgFilepath = os.path.join(absoluteOutputDirectory, "%s.jpg" % (name))
