@@ -73,9 +73,6 @@ const launchServers = async () => {
     }
 }
 const onReady = async () => {
-  if (process.platform === 'darwin') {
-    app.dock.setIcon(path.join(__dirname, 'assets/images/icon.icns'));
-  }
   log("Starting Templative")
   // startupWindow = createStartupWindow()
   try {

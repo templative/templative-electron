@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   packagerConfig: {
     name: 'Templative',
@@ -8,13 +6,11 @@ module.exports = {
     osxUniversal: { // config options for `@electron/universal`
       x64ArchFiles: '*' // replace with any relevant glob pattern
     },
+    
     extraResource: [
-      "assets/images/icon.icns",
-      "assets/images/icon.png",
-      "assets/images/icon.ico",
       "./bin",
     ],
-    icon: "assets/images/icon",
+    icon: "src/assets/images/icon",
     osxSign: {
       'identity': "Developer ID Application: Go Next Games LLC (829PN2W7LK)",
       'hardened-runtime': true,
@@ -50,7 +46,7 @@ module.exports = {
         noMsi: true,
         // noDelta: true,
         remoteReleases: `https://templative-artifacts.s3.amazonaws.com/win32/${arch}`,
-        setupIcon: 'assets/images/icon.ico',        
+        setupIcon: 'src/assets/images/icon.ico',        
         iconUrl: 'https://drive.google.com/uc?export=download&id=1kZ7VRV_A_cwG6mPIS1HUXKFWViW5y3-J', 
       }),
     },
