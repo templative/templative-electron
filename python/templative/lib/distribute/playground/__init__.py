@@ -110,6 +110,13 @@ async def copyComponentToPackage(componentDirectoryPath, packageDirectoryPath):
         return None
     playgroundTask = component["PlaygroundCreationTask"]
 
+    totalCount = 0
+    for instruction in componentInstructions["frontInstructions"]:
+        totalCount += int(instruction["quantity"])
+
+    if totalCount == 0:
+        return None
+    
     if not playgroundTask in supportedInstructionTypes:
         print("Skipping unsupported %s." % playgroundTask)
         return None
@@ -159,6 +166,9 @@ async def createCompositeImageInTextures(componentName, componentType, frontInst
     for instruction in frontInstructions:
         totalCount += int(instruction["quantity"])
 
+    if totalCount == 0:
+        return 0,0,0
+
     columns = math.floor(math.sqrt(totalCount))
     rows = columns
     while columns * rows < totalCount:
@@ -166,12 +176,12 @@ async def createCompositeImageInTextures(componentName, componentType, frontInst
 
     if not componentType in COMPONENT_INFO:
         print("Missing component info for %s." % componentType)
-        return None
+        return 0,0,0
     component = COMPONENT_INFO[componentType]
 
     if not "DimensionsPixels" in component:
         print("Skipping %s that has no DimensionsPixels." % componentType)
-        return None
+        return 0,0,0
     pixelDimensions = COMPONENT_INFO[componentType]["DimensionsPixels"]
 
     tiledImage = Image.new('RGB',(pixelDimensions[0]*columns, pixelDimensions[1]*rows))
