@@ -1,11 +1,11 @@
 
 const TEMPLATIVE_SERVER_COMMANDS_BY_ENVIRONMENT = {
     "win32_PROD": {
-        command: `${process.resourcesPath}/bin/templative.exe serve --port 8080`,
+        command: `"${process.resourcesPath}/bin/templative.exe" serve --port 8080`,
         testEndpoint: "http://localhost:8080/status"
     },
     "darwin_PROD": {
-        command: `${process.resourcesPath}/bin/templative serve --port 8080`,
+        command: `"${process.resourcesPath}/bin/templative" serve --port 8080`,
         testEndpoint: "http://localhost:8080/status"
     },
     "darwin_TEST_BUILT": {
