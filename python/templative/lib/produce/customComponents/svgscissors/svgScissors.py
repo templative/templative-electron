@@ -109,7 +109,9 @@ async def addOverlays(artFile, overlays, compositions:ComponentComposition, piec
         isDebug = overlay["isDebugInfo"] if "isDebugInfo" in overlay else False
         if isDebug and produceProperties.isPublish:
             continue
-
+        
+        positionX = overlay["positionX"] if "positionX" in overlay else 0
+        positionY = overlay["positionY"] if "positionY" in overlay else 0
         overlayName = await getScopedValue(overlay, pieceGamedata)
         if overlayName == None or overlayName == "":
             continue
@@ -129,7 +131,7 @@ async def addOverlays(artFile, overlays, compositions:ComponentComposition, piec
             print("!!! Cannot parse %s." % overlayFilepath)
             continue
 
-        artFile.placeat(graphicsInsert, 0.0, 0.0)
+        artFile.placeat(graphicsInsert, positionX, positionY)
 
 async def textReplaceInFile(filepath, textReplacements, gamedata:PieceData|ComponentBackData, produceProperties: ProduceProperties):
     if filepath == None:
