@@ -11,7 +11,7 @@ const path = require("path")
 
 const DEFAULT_ARTDATA_ITEMS = {
     "overlays": {
-        scope:"piece", source: "", isComplex: false, isDebug: false
+        scope:"piece", source: "", isComplex: false, isDebug: false, positionX: 0, positionY: 0,
     },
     "textReplacements": {
         key: "", scope:"piece", source: "", isComplex: false, isDebug: false
@@ -221,6 +221,8 @@ export default class ArtdataViewer extends EditableViewerJson {
                         </span>
                         <span className="input-group-text text-replacement-source-type-label flex-grow-1"><img className="tab-icon input-icon" src={pieceIcon} alt="Tab icon"/> Data Source</span>
                         <span className="input-group-text text-replacement-source-label flex-grow-1">Which value from data source?</span>
+                        <span className="input-group-text text-replacement-source-label flex-grow-1">X Position</span>
+                        <span className="input-group-text text-replacement-source-label flex-grow-1">Y Position</span>
                     </div>
                     {overlays}
                     <ArtdataAddButton addArtdataCallback={()=>this.addArtdataItem("overlays")}/>

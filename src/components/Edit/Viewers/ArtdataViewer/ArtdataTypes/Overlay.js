@@ -35,7 +35,8 @@ export default class StyleUpdate extends React.Component {
                 source={this.props.artdataItem.source} 
                 scope={this.props.artdataItem.scope}
             />
-            
+            <input type="number" className="form-control no-left-border" onChange={(event)=>this.props.updateArtdataFieldCallback("overlays", this.props.index, "positionX", event.target.value)} aria-label="What key to replace..." value={this.props.artdataItem.positionX}/>
+            <input type="number" className="form-control no-left-border" onChange={(event)=>this.props.updateArtdataFieldCallback("overlays", this.props.index, "positionY", event.target.value)} aria-label="What key to replace..." value={this.props.artdataItem.positionY}/>
             {/* { this.state.isHovering &&  */}
                 <ArtdataItemControls index={this.props.index} deleteCallback={this.props.deleteCallback} updateArtdataItemOrderCallback={this.props.updateArtdataItemOrderCallback}/>
             {/* } */}
