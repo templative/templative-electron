@@ -34,7 +34,7 @@ export default class PieceControlInput extends React.Component {
                 value={this.props.piece["displayName"]}/>
 
             <span className="input-group-text">quantity</span>
-            <input type="text" className="form-control value-field" 
+            <input type="number" className="form-control value-field" 
                 onKeyDown={(e) => PieceControlInput.preventNonNumbers(e)}
                 onChange={(event)=>this.props.updateValueCallback("quantity", event.target.value)} 
                 aria-label="What key to get from the scope..." 

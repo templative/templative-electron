@@ -46,7 +46,7 @@ export default class ComponentItemEditableStock extends React.Component {
             <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
                 
                 <span className="input-group-text component-left-bumper">Quantity</span>
-                <input type="text" aria-label="First name" className="form-control" 
+                <input type="number" aria-label="Quantity" className="form-control" 
                     onChange={(event)=>this.props.updateComponentFieldCallback("quantity", event.target.value)}
                     value={this.props.component.quantity}/>
 
