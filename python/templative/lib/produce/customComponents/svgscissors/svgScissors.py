@@ -110,8 +110,8 @@ async def addOverlays(artFile, overlays, compositions:ComponentComposition, piec
         if isDebug and produceProperties.isPublish:
             continue
         
-        positionX = overlay["positionX"] if "positionX" in overlay else 0
-        positionY = overlay["positionY"] if "positionY" in overlay else 0
+        positionX = float(overlay["positionX"]) if "positionX" in overlay else 0
+        positionY = float(overlay["positionY"]) if "positionY" in overlay else 0
         overlayName = await getScopedValue(overlay, pieceGamedata)
         if overlayName == None or overlayName == "":
             continue
