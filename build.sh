@@ -38,8 +38,6 @@ function createTemplativeApp() {
         --hidden-import=engineio.async_aiohttp --collect-all templative \
         --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" \
         --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"
-    # python -c "import os; os.system(r'aplay C:/Users/olive/Music/ding.wav' if os.name == 'posix' else r'afplay C:/Users/olive/Music/ding.wav' if os.name == 'darwin' else 'powershell.exe -c (New-Object Media.SoundPlayer \"C:/Users/olive/Music/ding.wav\").PlaySync()')"
-    
     cd ..
 }
 
