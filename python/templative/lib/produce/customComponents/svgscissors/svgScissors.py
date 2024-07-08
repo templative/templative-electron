@@ -318,7 +318,7 @@ async def exportSvgToImage(filepath, imageSizePixels, name, outputDirectory):
     createPngCommands = [
         '"%s"' % inkscapePath, 
         absoluteSvgFilepath,
-        '--export-filename=%s' % pngFilepath, 
+        '--export-filename="%s"' % pngFilepath, 
         "--export-dpi=%s" % 300, 
         "--export-background-opacity=0" 
         # "--with-gui",
