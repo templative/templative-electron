@@ -93,7 +93,7 @@ jobs:
         shell: bash
         run: |
           if [ $RUNNER_OS == 'Windows' ]; then
-            ./bin/templative/templative/.exe
+            ./bin/templative/templative.exe
           else
             ./bin/templative/templative
           fi
