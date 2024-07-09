@@ -13,7 +13,7 @@ jobs:
       matrix:
         os:
           - windows-latest
-          - macos-11
+          - macos-12
           - macos-latest
         node:
           - 18
