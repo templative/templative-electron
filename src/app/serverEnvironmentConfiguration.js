@@ -1,19 +1,19 @@
 
 const TEMPLATIVE_SERVER_COMMANDS_BY_ENVIRONMENT = {
     "win32_PROD": {
-        command: `"${process.resourcesPath}/bin/templative.exe" serve --port 8080`,
+        command: `"${process.resourcesPath}/bin/templative/templative.exe" serve --port 8080`,
         testEndpoint: "http://localhost:8080/status"
     },
     "darwin_PROD": {
-        command: `"${process.resourcesPath}/bin/templative" serve --port 8080`,
+        command: `"${process.resourcesPath}/bin/templative/templative" serve --port 8080`,
         testEndpoint: "http://localhost:8080/status"
     },
     "darwin_TEST_BUILT": {
-        command: `./out/Templative-darwin-x64/Templative.app/Contents/Resources/bin/templative serve --port 8080`,
+        command: `./out/Templative-darwin-x64/Templative.app/Contents/Resources/bin/templative/templative serve --port 8080`,
         testEndpoint: "http://localhost:8080/status"
     },
     "win32_TEST_BUILT": {
-        command: `C:/Users/User/Documents/git/templative-frontend/out/Templative-win32-x64/resources/bin/templative serve --port 8080`,
+        command: `C:/Users/User/Documents/git/templative-frontend/out/Templative-win32-x64/resources/bin/templative/templative serve --port 8080`,
         testEndpoint: "http://localhost:8080/status"
     },
     "GLOBALLY_INSTALLED": {
@@ -21,11 +21,11 @@ const TEMPLATIVE_SERVER_COMMANDS_BY_ENVIRONMENT = {
         testEndpoint: "http://localhost:8080/status"
     },
     "win32_DEV":{
-        command: `C:/Users/olive/Documents/git/templative-electron/bin/templative.exe serve --port 8080`,
+        command: `C:/Users/olive/Documents/git/templative-electron/bin/templative/templative.exe serve --port 8080`,
         testEndpoint: "http://localhost:8080/status"
     },
     "darwin_DEV":{
-        command: `/Users/oliverbarnum/Documents/git/templative-electron/bin/templative serve --port 8080`,
+        command: `/Users/oliverbarnum/Documents/git/templative-electron/bin/templative/templative serve --port 8080`,
         testEndpoint: "http://localhost:8080/status"
     },
 }

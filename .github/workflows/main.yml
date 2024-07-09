@@ -67,7 +67,7 @@ jobs:
       - name: Create Templative App/Exe
         run: |
           cd ./python
-          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG --onefile ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"      
+          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"      
       
       - name: Upload Templative Xref as Artifact
         uses: actions/upload-artifact@v3
@@ -93,9 +93,9 @@ jobs:
         shell: bash
         run: |
           if [ $RUNNER_OS == 'Windows' ]; then
-            ./bin/templative.exe
+            ./bin/templative/templative/.exe
           else
-            ./bin/templative
+            ./bin/templative/templative
           fi
           if [ $? -ne 0 ]; then
             echo "The application exited with an error"

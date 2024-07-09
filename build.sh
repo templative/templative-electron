@@ -31,10 +31,9 @@ function createTemplativeApp() {
     pipenv --rm
     pipenv install
     pipenv run pip show
-    rm ../bin/templative.exe
-    rm ../bin/templative
+    rm -rf ../bin/templative
     pipenv run pyinstaller --distpath ../bin -y -n templative \
-        --log-level=DEBUG --onefile ./templative/__main__.py \
+        --log-level=DEBUG ./templative/__main__.py \
         --hidden-import=engineio.async_drivers.aiohttp \
         --hidden-import=engineio.async_aiohttp --collect-all templative \
         --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" \
