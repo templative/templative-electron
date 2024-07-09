@@ -5,6 +5,8 @@ import svgmanip
 import svgutils
 import sys
 import shutil
+import shlex
+import subprocess
 
 from templative.lib.componentInfo import COMPONENT_INFO
 from templative.lib.manage.models.produceProperties import ProduceProperties
@@ -57,7 +59,7 @@ async def addNewlines(artFileOutputFilepath):
     if fixedContents == contents:
         return
     async with AIOFile(artFileOutputFilepath, 'w') as f:
-        f.write(fixedContents)
+        await f.write(fixedContents)
 
 async def scaleContent(artFileOutputFilepath, imageSizePixels, scale):
     async with AIOFile(artFileOutputFilepath, encoding='utf-8') as svgFile:
@@ -269,12 +271,10 @@ async def getScopedValue(scopedValue, pieceGameData: PieceData|ComponentBackData
     return scopeData[source]
 
 def runCommands(commands):   
-    message = ""
-    for command in commands:
-        message = message + command + " "
+    command = " ".join(commands)
+    subprocess.run(shlex.split(command), shell=True)
     # print(message)
-    # subprocess.run(commands)
-    os.system(message)
+    # os.system(message)
     # try:
     #     result = subprocess.run(commands, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     #     print(result.stdout.decode())
@@ -306,9 +306,9 @@ def findInkscape():
     return None
 
 async def exportSvgToImage(filepath, imageSizePixels, name, outputDirectory):
-    absoluteSvgFilepath = os.path.abspath(filepath)
-    absoluteOutputDirectory = os.path.abspath(outputDirectory)
-    pngFilepath = os.path.join(absoluteOutputDirectory, "%s.png" % (name))
+    absoluteSvgFilepath = os.path.normpath(os.path.abspath(filepath))
+    absoluteOutputDirectory = os.path.normpath(os.path.abspath(outputDirectory))
+    pngFilepath = os.path.normpath(os.path.join(absoluteOutputDirectory, f"{name}.png"))
     
     inkscapePath = findInkscape()
     if not inkscapePath:
@@ -317,14 +317,16 @@ async def exportSvgToImage(filepath, imageSizePixels, name, outputDirectory):
     
     createPngCommands = [
         '"%s"' % inkscapePath, 
-        absoluteSvgFilepath,
+        '"%s"' % absoluteSvgFilepath,
         '--export-filename="%s"' % pngFilepath, 
-        "--export-dpi=%s" % 300, 
+        "--export-dpi=300", 
         "--export-background-opacity=0" 
         # "--with-gui",
         # "--export-width=%s" % imageSizePixels[0], 
         # "--export-height=%s" % imageSizePixels[1],
     ]
+    # print(createPngCommands)
+    # print(command)
     
     runCommands(createPngCommands)
     # jpgFilepath = os.path.join(absoluteOutputDirectory, "%s.jpg" % (name))
