@@ -21,7 +21,7 @@ const TEMPLATIVE_SERVER_COMMANDS_BY_ENVIRONMENT = {
         testEndpoint: "http://localhost:8080/status"
     },
     "win32_DEV":{
-        command: `C:/Users/User/Documents/git/templative-frontend/bin/templative.exe serve --port 8080`,
+        command: `C:/Users/olive/Documents/git/templative-electron/bin/templative.exe serve --port 8080`,
         testEndpoint: "http://localhost:8080/status"
     },
     "darwin_DEV":{
