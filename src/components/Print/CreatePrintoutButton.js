@@ -29,7 +29,7 @@ export default class CreatePrintoutButton extends React.Component {
                     <input className="form-check-input mt-0" type="checkbox" value="" onChange={()=>{ this.props.toggleAreMarginsDrawnCallback()}} checked={this.props.areMarginsDrawn} aria-label="Checkbox for following text input"/>
                 </div>
             </div>
-            <div className="input-group input-group-sm printout-button-controls" data-bs-theme="dark">
+            <div className="input-group input-group-sm printout-button-controls " data-bs-theme="dark">
                 <button disabled={this.props.isCreatingPrintout || !this.props.hasOutputDirectoryValue} type="button" className="btn btn-outline-secondary create-printout-button" onClick={() => this.props.createPrintoutCallback()}>{buttonMessage}</button>            
             </div>
         </div>

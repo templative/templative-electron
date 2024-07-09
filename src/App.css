@@ -48,3 +48,6 @@ html {
 .hidden-visibility{
   visibility: hidden;
 }
+.locked:hover {
+  cursor: not-allowed !important;
+}
