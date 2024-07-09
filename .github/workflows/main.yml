@@ -182,12 +182,12 @@ jobs:
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
 
       - name: Get runner architecture
-        if: matrix.os == 'macos-11' || matrix.os == 'macos-latest'
+        if: matrix.os == 'maco-12' || matrix.os == 'macos-latest'
         id: arch
         run: echo "::set-output name=arch::$(uname -m)"
     
       - name: Convert architecture to x64
-        if: matrix.os == 'macos-11' || matrix.os == 'macos-latest'
+        if: matrix.os == 'maco-12' || matrix.os == 'macos-latest'
         run: |
           if [ "${{ steps.arch.outputs.arch }}" == "x86_64" ] || [ "${{ steps.arch.outputs.arch }}" == "AMD64" ]; then
             echo "ARCH=x64" >> $GITHUB_ENV
@@ -198,7 +198,7 @@ jobs:
       
     
       - name: Move signed OSX files
-        if: matrix.os == 'macos-11' || matrix.os == 'macos-latest'
+        if: matrix.os == 'maco-12' || matrix.os == 'macos-latest'
         run: |
           source ./build.sh
           moveSignedOsxFiles ${{ env.ARCH }} ${{ env.CURRENT_VERSION }}
