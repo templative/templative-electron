@@ -22,7 +22,7 @@ export default class ScopedValueInput extends React.Component {
         const selectionOption = this.createSelectionOption(this.props.scope)
         return <React.Fragment>
             <select value={this.props.scope} onChange={(event)=>this.props.updateArtdataFieldCallback(this.props.index, "scope", event.target.value)} className="form-select scope-select no-left-border" id="inputGroupSelect01">
-                <option value="global">Global</option>
+                <option value="global">Static Value</option>
                 <option value="studio">Studio</option>
                 <option value="game">Game</option>
                 <option value="component">Component</option>

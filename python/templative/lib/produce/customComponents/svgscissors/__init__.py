@@ -1,5 +1,5 @@
 import asyncio
-import hashlib 
+import hashlib
 
 from .svgScissors import createArtFileOfPiece
 
@@ -27,6 +27,5 @@ async def createArtFilesForComponent(compositions:ComponentComposition, componen
     uniqueComponentBackData.componentBackDataBlob["name"] = "back"
     if "Back" in componentArtdata.artDataBlobDictionary:
         tasks.append(asyncio.create_task(createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Back"], uniqueComponentBackData, componentBackOutputDirectory, produceProperties)))
-    
-    for task in tasks:
-        await task
+
+    await asyncio.gather(*tasks)

@@ -25,7 +25,7 @@ async def produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublis
     gameDataBlob["timestamp"] = timestamp
 
     gameCompose = await defineLoader.loadGameCompose(gameRootDirectoryPath)
-    
+
     outputDirectoryPath = await outputWriter.createGameFolder(gameRootDirectoryPath, gameCompose["outputDirectory"], uniqueGameName)
     await outputWriter.updateLastOutputFolder(gameRootDirectoryPath, gameCompose["outputDirectory"], outputDirectoryPath)
     print("Producing %s" % os.path.normpath(outputDirectoryPath))
@@ -48,7 +48,7 @@ async def produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublis
             if not isProducingOneComponent:
                 print("Skipping disabled %s component." % (componentCompose["name"]))
             continue
-        
+
         isDebugInfo = False if not "isDebugInfo" in componentCompose else componentCompose["isDebugInfo"]
         if isDebugInfo and isPublish:
             print("Skipping debug only %s component as we are publishing." % (componentCompose["name"]))
@@ -64,8 +64,7 @@ async def produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublis
     rules = await defineLoader.loadRules(gameRootDirectoryPath)
     tasks.append(asyncio.create_task(rulesMarkdownProcessor.produceRulebook(rules, outputDirectoryPath)))
 
-    for task in tasks:
-        await task
+    await asyncio.gather(*tasks)
 
     print("Done producing %s" % os.path.normpath(outputDirectoryPath))
 
@@ -75,14 +74,14 @@ async def produceGameComponent(produceProperties: ProduceProperties, gamedata:Ga
 
     componentType = componentComposition.componentCompose["type"]
     componentTypeTokens = componentType.split("_")
-    isStockComponent = componentTypeTokens[0].upper() == "STOCK" 
-    
+    isStockComponent = componentTypeTokens[0].upper() == "STOCK"
+
     if isStockComponent:
         await produceStockComponent(componentComposition.componentCompose, produceProperties.outputDirectoryPath)
         return
-    
+
     await customComponents.produceCustomComponent(produceProperties, gamedata, componentComposition)
-        
+
 async def produceStockComponent(componentCompose, outputDirectory):
     componentName = componentCompose["name"]
 
