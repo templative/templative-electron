@@ -30,16 +30,35 @@ export default class ContentFileList extends React.Component {
         }
         return 0;
     }
+    
+    readDirectoryRecursively = async (dir, basepath) => {
+        let results = [];
+        const list = await fs.readdir(dir);
+
+        for (const file of list) {
+            const filePath = path.resolve(dir, file);
+            const stat = await fs.stat(filePath);
+
+            if (stat.isDirectory()) {
+                results = results.concat(await this.readDirectoryRecursively(filePath, basepath));
+            }
+            results.push(filePath);
+            
+        }
+        return results;
+    }
     #requestNewFilesNamesAsync = async () => {
+        if (this.props.baseFilepath === undefined) {
+            return
+        }
         var baseFilePathDepth = this.props.baseFilepath.replace(/\\/g, '/').split("/").length
-        var filenamesRelativeToBasepath = await fs.readdir(this.props.baseFilepath, { recursive: true })
-        var filepaths = filenamesRelativeToBasepath
+        var absoluteFilepathsWithinBasepath = await this.readDirectoryRecursively(this.props.baseFilepath, this.props.baseFilepath)
+        var filepaths = absoluteFilepathsWithinBasepath
             .filter((filepath) => {
                 const isReadMe = filepath.split(".").pop() === "md"
                 const isMacFolderInfo = filepath.split(".").pop() === "DS_Store"
                 return !(isReadMe || isMacFolderInfo)
             })
-            .map(filenameRelativeToBasepath => path.normalize(path.join(this.props.baseFilepath, filenameRelativeToBasepath)).replace(/\\/g, '/'))  
             .sort(ContentFileList.#sortAlphabetically)
         
             var fileItems = await Promise.all(
@@ -52,7 +71,8 @@ export default class ContentFileList extends React.Component {
                     absoluteFilepath: absoluteFilepath,
                     isDirectory: isDirectory
                 }
-            }))
+                })
+            )
         this.setState({fileItems: fileItems})
     }
     componentDidMount = async () => {
