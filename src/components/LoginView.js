@@ -1,7 +1,10 @@
 import React from "react";
+import { GoogleOAuthProvider, GoogleLogin, useGoogleLogin } from '@react-oauth/google';
 import "./LoginView.css"
 const strongPasswordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const CLIENT_ID = '683633354752-kgdc1pdb36sjiptugpep8ih754eslacc.apps.googleusercontent.com';
+
 export default class LoginView extends React.Component {   
     render() {
         var isLoginValid = emailPattern.test(this.props.email) && strongPasswordPattern.test(this.props.password)
@@ -9,6 +12,15 @@ export default class LoginView extends React.Component {
             <div className="welcome-modal">
                 <div className="d-grid gap-2">
                     <p>Login</p>
+                    <GoogleOAuthProvider clientId={CLIENT_ID}>
+                        
+                        <GoogleLogin 
+                            onSuccess={this.props.onGoogleSuccessCallback}
+                            onError={() => {
+                                console.log('Login Failed');
+                            }}
+                        />
+                    </GoogleOAuthProvider>
                     <div className="input-group input-group-sm" data-bs-theme="dark">
                         <span className="input-group-text" id="basic-addon3">Email Address</span>
                         <input type="email" className="form-control" placeholder="john-smith@mail.com" 

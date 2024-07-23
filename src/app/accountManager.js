@@ -1,6 +1,6 @@
 const {  shell, BrowserWindow } = require('electron')
 const { channels } = require("../shared/constants");
-const { verifyCredentials, isTokenValid } = require("./templativeWebsiteClient")
+const { verifyCredentials, isTokenValid, verifyCredentialsGoogle } = require("./templativeWebsiteClient")
 const { clearSessionToken, clearEmail, saveSessionToken, saveEmail, getSessionToken, getEmail } = require("./sessionStore")
 const axios = require("axios");
 
@@ -25,6 +25,20 @@ const login = async (_, email, password) => {
     await saveSessionToken(response.token);
     await saveEmail(email)
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, response.token, email);
+}
+const loginGoogle = async (_, token) => {
+    var response = await verifyCredentialsGoogle(token)
+    if (response.statusCode === axios.HttpStatusCode.Unauthorized || response.statusCode === axios.HttpStatusCode.Forbidden ) {
+        BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_INVALID_LOGIN_CREDENTIALS);
+        return
+    }
+    if (response.statusCode !== axios.HttpStatusCode.Ok) {
+        BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_UNABLE_TO_LOG_IN);
+        return
+    }
+    await saveSessionToken(response.token);
+    await saveEmail(response.email)
+    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, response.token, response.email);
 }
 
 const giveLoginInformation = async () => {
@@ -53,6 +67,7 @@ const giveLoginInformation = async () => {
 
 module.exports = {
     login,  
+    loginGoogle,
     goToAccount,
     giveLogout,
     giveLoginInformation

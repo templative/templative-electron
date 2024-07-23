@@ -19,6 +19,23 @@ const verifyCredentials = async (email, password) => {
             return { statusCode: error.response ? error.response.status : 500, token: null };
         }
 }
+const verifyCredentialsGoogle = async (token) => {
+    try {
+        var response = await axios.post(`${baseurl}/login/google`, { token: token })
+        return { statusCode: response.status, error: response.data.message, token: response.data.token, email: response.data.email };
+    }
+    catch(error) {
+        if (error.response) {
+            console.log(`Error status code: ${error.response.status}`);
+            console.log(`Error details: ${error.response.data}`);
+        } else if (error.request) {
+            console.log("No response was received from the server.");
+        } else {
+            console.log('Error', error.message);
+        }
+            return { statusCode: error.response ? error.response.status : 500, token: null };
+        }
+}
 const isTokenValid = async (email, token) => {
     try {
         const response = await axios.post(`${baseurl}/validate-token`, { email }, {
@@ -40,5 +57,5 @@ const isTokenValid = async (email, token) => {
     }
 }
 module.exports = {
-    verifyCredentials, isTokenValid
+    verifyCredentials, isTokenValid, verifyCredentialsGoogle
 }
