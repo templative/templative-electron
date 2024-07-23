@@ -35,8 +35,8 @@ sign_setup_exe() {
     TIMESTAMP_SERVER="http://timestamp.sectigo.com"
 
     echo "Signing Setup.exe"
-    signtool sign -sha1 "$GONEXTGAMES_CODESIGNINGCERTIFICATE_THUMBPRINT" -tr "$TIMESTAMP_SERVER" -td sha256 -fd sha256 /p "$GONEXTGAMES_CODESIGNINGCERTIFICATE_PASSWORD" "$LOCAL_DIR/Templative-$version Setup.exe"
-    signtool sign -sha1 "$GONEXTGAMES_CODESIGNINGCERTIFICATE_THUMBPRINT" -tr "$TIMESTAMP_SERVER" -td sha256 -fd sha256 /p "$GONEXTGAMES_CODESIGNINGCERTIFICATE_PASSWORD" "$LOCAL_DIR/Templative-win32-x64-$version/templative-$version Setup.exe"
+    signtool sign -sha1 "$GONEXTGAMES_CODESIGNINGCERTIFICATE_THUMBPRINT" -tr "$TIMESTAMP_SERVER" -td sha256 -fd sha256 "$LOCAL_DIR/Templative-$version Setup.exe"
+    signtool sign -sha1 "$GONEXTGAMES_CODESIGNINGCERTIFICATE_THUMBPRINT" -tr "$TIMESTAMP_SERVER" -td sha256 -fd sha256 "$LOCAL_DIR/Templative-win32-x64-$version/templative-$version Setup.exe"
 }
 
 upload_signed_files() {
