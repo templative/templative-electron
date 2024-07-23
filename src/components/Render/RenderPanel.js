@@ -108,20 +108,16 @@ export default class RenderPanel extends React.Component {
                         <div className="component-filter-options">
                             {componentDirectoryDivs}
                         </div>
-                        {this.state.doesUserOwnTemplative ? 
-                            <RenderButton 
-                                selectedComponent={this.state.selectedComponent} 
-                                selectedLanguage={this.state.selectedLanguage} 
-                                isDebugRendering={this.state.isDebugRendering}
-                                isComplexRendering={this.state.isComplexRendering}
-                                toggleDebugCallback={this.setDebugCheckbox}
-                                toggleComplexCallback={this.setComplexCheckbox}
-                                renderTemplativeProjectCallback={this.renderTemplativeProject}
-                                setLanguageCallback={this.setLanguage}
-                            />
-                            :
-                            <TemplativePurchaseButton action="Rendering your Game"/>
-                        }
+                        <RenderButton 
+                            selectedComponent={this.state.selectedComponent} 
+                            selectedLanguage={this.state.selectedLanguage} 
+                            isDebugRendering={this.state.isDebugRendering}
+                            isComplexRendering={this.state.isComplexRendering}
+                            toggleDebugCallback={this.setDebugCheckbox}
+                            toggleComplexCallback={this.setComplexCheckbox}
+                            renderTemplativeProjectCallback={this.renderTemplativeProject}
+                            setLanguageCallback={this.setLanguage}
+                        />
                         
                     </div>
                     <LoggedMessages/>
