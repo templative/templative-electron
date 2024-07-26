@@ -18,7 +18,8 @@ setup(
         "svgutils",
         "tabulate",
         "Wand",
-        "numpy"
+        "numpy",
+        "requests"
     ],
     entry_points = {
         "console_scripts": [

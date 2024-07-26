@@ -20,6 +20,7 @@ aiohttp-cors = "0.7.0"
 python-socketio = "5.11.2"
 numpy = "1.26.4"
 pyinstaller = "*"
+requests = "*"
 
 [requires]
 python_version = "3.12.3"
