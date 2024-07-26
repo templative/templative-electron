@@ -1,15 +1,15 @@
+/* TopNavbar.css */
 .topNavbar {
     height: 100%;
     display: inline-block;
-    width:75px !important;
+    width: 75px !important;
     padding-top: 0.2em;
     background-color: #282C35;
-    /* margin-right: 5px; */
     vertical-align: top;
     border-right: #3c414d 1px solid;
 }
 .topNavbar > * {
-    display:inherit;
+    display: inherit;
 }
 .mainBody {
     display: inline-block;
@@ -17,24 +17,24 @@
     height: 100%;
 }
 .mainBody > * {
-    display:inherit;
+    display: inherit;
     height: 100%;
 }
 .nav-link {
-    color:#cfcfcf !important;
+    color: #cfcfcf !important;
     font-size: small !important;
-    padding: 0
+    padding: 0;
 }
 
-.sidebar-buttons > .nav-item  {
+.sidebar-buttons > .nav-item {
     margin-left: 15px;
+    position: relative; /* Add this line to position the tooltip correctly */
 }
 .sidebar-buttons > .nav-item > .nav-link {
     padding: 0px;
-    padding-bottom: 5px
+    padding-bottom: 5px;
 }
 .sidebar-buttons > .nav-item > .nav-link > .btn {
-    
     background-color: #353a46;
     border-width: 0px !important;
     border-style: none !important;
@@ -46,4 +46,31 @@
 }
 .currentRoute {
     background-color: #282C35 !important;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 45%;
+    transform: translateY(-50%);
+    margin-left: 15px;
+    padding: 5px 10px;
+    background-color: #282c34;
+    border-top: hsl(222, 13%, 28%) solid 1px;
+    border-right: hsl(222, 13%, 28%) solid 2px;
+    border-bottom: hsl(222, 13%, 28%) solid 2px;
+    color: white;
+    border-radius: 3px;
+    white-space: nowrap;
+    z-index: 1000;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.nav-item:hover .tooltip {
+    display: block;
+    opacity: 100;
 }
