@@ -3,10 +3,7 @@ from xml.etree import ElementTree
 from aiofile import AIOFile
 import svgmanip
 import svgutils
-import sys
-import shutil
-import shlex
-import subprocess
+
 
 from templative.lib.componentInfo import COMPONENT_INFO
 from templative.lib.manage.models.produceProperties import ProduceProperties
@@ -14,9 +11,13 @@ from templative.lib.manage.models.gamedata import StudioData, GameData, Componen
 from templative.lib.produce.translation import getTranslation
 from templative.lib.manage.models.composition import ComponentComposition
 from templative.lib.manage.models.artdata import ComponentArtdata
+from templative.lib.produce.customComponents.svgscissors.inkscapeProcessor import exportSvgToImage
 
 async def createArtFileOfPiece(compositions: ComponentComposition, artdata: any, gamedata: PieceData | ComponentBackData, componentBackOutputDirectory: str, produceProperties: ProduceProperties) -> None:
     templateFilesDirectory = compositions.gameCompose["artTemplatesDirectory"]
+    if artdata == None: 
+        print("!!! Missing artdata %s" % gamedata.componentDataBlob["displayName"])
+        return
     artFilename = "%s.svg" % (artdata["templateFilename"])
     artFilepath = os.path.normpath(os.path.join(produceProperties.inputDirectoryPath, templateFilesDirectory, artFilename))
     if not os.path.exists(artFilepath):
@@ -259,73 +260,6 @@ async def getScopedValue(scopedValue, pieceGameData: PieceData | ComponentBackDa
 
     return scopeData[source]
 
-def runCommands(commands):
-    command = " ".join(commands)
-    subprocess.run(shlex.split(command), shell=True)
-    # print(message)
-    # os.system(message)
-    # try:
-    #     result = subprocess.run(commands, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    #     print(result.stdout.decode())
-    # except subprocess.CalledProcessError as e:
-    #     print(f"Error executing command: {e.cmd}\nExit code: {e.returncode}\nOutput: {e.output.decode()}\nError: {e.stderr.decode()}")
-
-def findInkscape():
-    common_paths = {
-        "win32": [
-            "C:/Program Files/Inkscape/bin/inkscape.exe",
-            "C:/Program Files (x86)/Inkscape/bin/inkscape.exe"
-        ],
-        "darwin": [
-            "/Applications/Inkscape.app/Contents/MacOS/inkscape"
-        ]
-    }
-
-    inkscape_path = shutil.which("inkscape")
-    if inkscape_path and os.path.isfile(inkscape_path):
-        return inkscape_path
-
-    if sys.platform not in common_paths:
-        return None
-
-    for path in common_paths[sys.platform]:
-        if os.path.isfile(path):
-            return path
-
-    return None
-
-async def exportSvgToImage(filepath, imageSizePixels, name, outputDirectory):
-    absoluteSvgFilepath = os.path.normpath(os.path.abspath(filepath))
-    absoluteOutputDirectory = os.path.normpath(os.path.abspath(outputDirectory))
-    pngFilepath = os.path.normpath(os.path.join(absoluteOutputDirectory, f"{name}.png"))
-
-    inkscapePath = findInkscape()
-    if not inkscapePath:
-        print("Inkscape is not installed or not found in common paths.")
-        return
-
-    createPngCommands = [
-        '"%s"' % inkscapePath,
-        '"%s"' % absoluteSvgFilepath,
-        '--export-filename="%s"' % pngFilepath,
-        "--export-dpi=300",
-        "--export-background-opacity=0"
-        # "--with-gui",
-        # "--export-width=%s" % imageSizePixels[0],
-        # "--export-height=%s" % imageSizePixels[1],
-    ]
-    # print(createPngCommands)
-    # print(command)
-
-    runCommands(createPngCommands)
-    # jpgFilepath = os.path.join(absoluteOutputDirectory, "%s.jpg" % (name))
-    # convertCommands = [
-    #     "magick convert",
-    #     '"%s"' % pngFilepath,
-    #     '"%s"' % jpgFilepath ]
-    # runCommands(convertCommands)
-
-    # os.remove(pngFilepath)
 
 # def getCurrentGitSha():
 #     repo = git.Repo(search_parent_directories=True)
