@@ -69,3 +69,13 @@ export function writeLastUseTableTopPlaygroundDirectory (lastTableTopPlaygroundD
     var newFileContents = JSON.stringify(settings, null, 4)
     writeToSettingsFile(newFileContents)
 }
+export function getLastUsedTableTopSimulatorDirectory () {
+    var settings = readOrCreateSettingsFile()
+    return settings["lastTableTopSimulatorDirectory"]
+}
+export function writeLastUseTableTopSimulatorDirectory (lastTableTopSimulatorDirectory) {
+    var settings = readOrCreateSettingsFile()
+    settings["lastTableTopSimulatorDirectory"] = lastTableTopSimulatorDirectory
+    var newFileContents = JSON.stringify(settings, null, 4)
+    writeToSettingsFile(newFileContents)
+}

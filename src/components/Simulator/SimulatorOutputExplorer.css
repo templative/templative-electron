@@ -1,0 +1,42 @@
+.simulator-package-header {
+    height: 2em;
+    margin-bottom: 1em;
+}
+.simulator-package-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+.simulator-content-type-header {
+    font-size: 14px;
+    margin-bottom:0.1em;
+}
+
+.simulator-texture-name {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+.object-states {
+    height: calc(100% - 4em);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #1F2329;
+}
+.object-state {
+    padding: 6px;
+    margin-bottom:0.5em;
+}
+.object-state-header {
+    font-size: 14px;
+}
+.object-state-guid {
+    color: #848484;
+    font-style: italic;
+    font-size: 11px;
+}
+.object-state-image {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+}

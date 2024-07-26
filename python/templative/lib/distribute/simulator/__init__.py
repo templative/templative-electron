@@ -113,7 +113,7 @@ async def createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPa
 
 async def createDeck(tabletopSimulatorDirectoryPath, componentInstructions):
     tabletopSimulatorImageDirectoryPath = path.join(tabletopSimulatorDirectoryPath, "Mods/Images")
-    imgurUrl, totalCount, cardColumnCount, cardRowCount = await createCompositeImage(componentInstructions["name"], componentInstructions["type"], componentInstructions["frontInstructions"], tabletopSimulatorImageDirectoryPath)
+    imgurUrl, totalCount, cardColumnCount, cardRowCount = await createCompositeImage(componentInstructions["name"], componentInstructions["type"], componentInstructions["frontInstructions"],componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
     backImageImgurUrl = await placeAndUploadBackImage(componentInstructions["name"], componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
     componentGuid = md5(componentInstructions["name"].encode()).hexdigest()
     return objectState.createDeckObjectState(componentGuid, componentInstructions["name"], imgurUrl, backImageImgurUrl, totalCount, cardColumnCount, cardRowCount)
@@ -121,20 +121,23 @@ async def createDeck(tabletopSimulatorDirectoryPath, componentInstructions):
 async def createStock(tabletopSimulatorDirectoryPath, componentInstructions, stockPartInfo):   
     return None
 
-async def createCompositeImage(componentName, componentType, frontInstructions, tabletopSimulatorImageDirectoryPath):
+async def createCompositeImage(componentName, componentType, frontInstructions, backInstructions, tabletopSimulatorImageDirectoryPath):
 
     totalCount = 0
     
     for instruction in frontInstructions:
         totalCount += int(instruction["quantity"])
-
-    if totalCount == 0:
+    
+    if totalCount > 69:
+        print("!!! Components larger than 69 cards aren't parsed correctly at the moment.")
         return None, 0,0,0
 
-    columns = math.floor(math.sqrt(totalCount))
-    rows = columns
-    while columns * rows < totalCount:
-        rows += 1
+    if totalCount == 0:
+        print("Skipping %s as it has no pieces that have a nonzero quantity.")
+        return None, 0,0,0
+
+    columns = 10
+    rows = 7
 
     if not componentType in COMPONENT_INFO:
         print("Missing component info for %s." % componentType)
@@ -158,6 +161,10 @@ async def createCompositeImage(componentName, componentType, frontInstructions, 
             if xIndex == columns:
                 xIndex = 0
                 yIndex +=1
+                
+    # Place hidden card in last spot
+    backImage = Image.open(backInstructions["filepath"])
+    tiledImage.paste(backImage,(9*pixelDimensions[0],6*pixelDimensions[1]))
 
     frontImageName = "%s-front.jpeg" % componentName
     frontImageFilepath = path.join(tabletopSimulatorImageDirectoryPath, frontImageName)
@@ -175,7 +182,9 @@ async def uploadToImgur(image):
     buffered.seek(0)
     
     files = {'image': buffered}
-    response = requests.post('http://127.0.0.1:5000/imgur/upload', files=files)
+    isDev = False
+    baseUrl = "http://127.0.0.1:5000" if isDev else "https://www.templative.net"
+    response = requests.post('%s/imgur/upload' % baseUrl, files=files)
     
     if response.status_code == 200:
         return response.json()['url']

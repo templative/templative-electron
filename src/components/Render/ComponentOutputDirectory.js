@@ -76,7 +76,7 @@ export default class ComponentOutputDirectory extends React.Component {
     render = () => {
         
         var imageDivs = this.state.imageFilepaths.map((dirent, index) => {
-            console.log(dirent)
+            // console.log(dirent)
             var imagePath = path.join(dirent.path, dirent.name)
             return <img className="output-image" alt="" key={imagePath} src={`file://${imagePath}`}/>
         })

@@ -40,6 +40,11 @@ export const TOP_NAVBAR_ITEMS = [
             <path d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>
         </svg>
     },
+    // {
+    //     name:"Simulator",
+    //     route:"/simulator",
+    //     svg: <img src={tabletopSimulator}/>
+    // },
     {
         name:"Playground",
         route:"/playground",

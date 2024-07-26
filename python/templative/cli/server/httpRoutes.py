@@ -2,6 +2,7 @@ from aiohttp import web
 from templative.lib.create import projectCreator, componentCreator
 from templative.lib.distribute.printout import createPdfForPrinting
 from templative.lib.distribute.playground import convertToTabletopPlayground
+from templative.lib.distribute.simulator import convertToTabletopSimulator
 from templative.lib.componentInfo import COMPONENT_INFO
 from templative.lib.stockComponentInfo import STOCK_COMPONENT_INFO
 
@@ -45,8 +46,20 @@ async def playground(request):
   if data["outputDirectorypath"] == None:
     return "Missing outputDirectorypath", 400
   if data["playgroundPackagesDirectorypath"] == None:
-    return "Missing outputDirectorypath", 400
+    return "Missing playgroundPackagesDirectorypath", 400
   result = await convertToTabletopPlayground(data["outputDirectorypath"], data["playgroundPackagesDirectorypath"])
+  if result != 1:
+    return web.Response(status=500)
+  return web.Response(status=200)
+
+@routes.post("/simulator")
+async def simulator(request):
+  data = await request.json()
+  if data["outputDirectorypath"] == None:
+    return "Missing outputDirectorypath", 400
+  if data["tabletopSimulatorDocumentsDirectorypath"] == None:
+    return "Missing tabletopSimulatorDocumentsDirectorypath", 400
+  result = await convertToTabletopSimulator(data["outputDirectorypath"], data["tabletopSimulatorDocumentsDirectorypath"])
   if result != 1:
     return web.Response(status=500)
   return web.Response(status=200)

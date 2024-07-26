@@ -1,0 +1,66 @@
+.simulator-row {
+    flex-wrap: nowrap !important;
+    padding-right: 0.5em;
+}
+.create-button-container {
+    width: 100%;
+    padding: 0.5em;
+}
+.simulator-package-controls {
+    width: 100%;
+}
+.create-simulator-button {
+    width: 100%;
+    background-color: orange !important;
+    color:#313540 !important;
+    font-weight: bold !important;
+}
+.create-simulator-button:hover {
+    background-color: #30353a !important;
+}
+.simulator-directory-header, .tts-directory-label {
+    width: 100% !important;
+}
+.tts-directory-label {
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-width: 0px !important;
+}
+.tabletop-simulator-folder-input {
+    text-align: right !important;
+}
+.cornered-top {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+.lookup-simulator-button {
+    border-color: rgb(73, 80, 87) !important;
+}
+.simulator-controls > .render-output-options-container { 
+    height: calc(100% - 450px);
+}
+.tabletop-simulator-saves {
+    height: 9em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.tabletop-simulator-save {
+    font-size: 14px;
+    text-align: left;
+    padding-left: 12px;
+    height:24px;
+    margin-bottom: 3px;
+}
+.tabletop-simulator-save:nth-child(even) {
+    background-color: hsl(224, 13%, 17.5%);
+}
+.tabletop-simulator-save:hover {
+    background-color: #333942;
+    cursor: pointer;
+}
+.tabletop-simulator-save.selected-save {
+    background-color: rgb(63, 69, 76);
+}
+/* .tabletop-simulator-saves.selected:hover {
+    background-color: #333942;
+} */
