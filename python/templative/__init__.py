@@ -4,6 +4,7 @@ from templative.cli.distribute import zettelkastenCommands
 from templative.cli.distribute import animationCommands
 from templative.cli.distribute import gameCrafterCommands
 from templative.cli.distribute import playgroundCommands
+from templative.cli.distribute import simulatorCommands
 from templative.cli.distribute import printoutCommands
 from templative.cli.manage import componentAnalysisCommands
 from templative.cli.manage import rulesCommands
@@ -34,3 +35,4 @@ cli.add_command(create.create)
 cli.add_command(zettelkastenCommands.zk)
 cli.add_command(printoutCommands.printout)
 cli.add_command(playgroundCommands.playground)
+cli.add_command(simulatorCommands.simulator)
