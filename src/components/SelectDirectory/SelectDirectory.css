@@ -1,7 +1,7 @@
 .selected-directory {
     background-color: #3f454c;
 }
-.playtest-packages {
+.selecteable-directories {
     height: 300px;
     display: flex;
     flex-direction: column;

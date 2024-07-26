@@ -1,6 +1,6 @@
 import React from "react";
 import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
-import "./PlaytestPanel.css"
+import "./PlaygroundPanel.css"
 import SelectDirectoryInDirectory from "../SelectDirectory/SelectDirectoryInDirectory";
 import { channels } from "../../shared/constants";
 import {writeLastUseTableTopPlaygroundDirectory, getLastUsedTableTopPlaygroundDirectory} from "../../settings/SettingsManager"
@@ -14,7 +14,7 @@ const path = require('path');
 
 const { ipcRenderer } = require('electron');
 
-export default class PlaytestPanel extends React.Component {   
+export default class PlaygroundPanel extends React.Component {   
     state={
         selectedOutputDirectory: undefined,
         selectedPackageDirectory: undefined,
@@ -28,7 +28,7 @@ export default class PlaytestPanel extends React.Component {
     }
     componentDidMount = async () => {
         await this.checkIfOwnsTemplative()
-        trackEvent("view_playtestPanel")
+        trackEvent("view_playgroundPanel")
 
         ipcRenderer.on(channels.GIVE_PLAYGROUND_FOLDER, (event, playgroundFolder) => {
             writeLastUseTableTopPlaygroundDirectory(playgroundFolder)
@@ -54,7 +54,7 @@ export default class PlaytestPanel extends React.Component {
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG_FOR_PLAYGROUND)
     }
     createPlayground = async () => {
-        trackEvent("playtest_create")
+        trackEvent("playground_create")
         var data = { 
             outputDirectorypath: this.state.selectedOutputDirectory,
             playgroundPackagesDirectorypath: this.state.playgroundDirectory
@@ -80,7 +80,7 @@ export default class PlaytestPanel extends React.Component {
         
         return <div className='mainBody'>
             <div className="row playground-row">
-                <div className="col-4 playtest-controls" align="center">
+                <div className="col-4 playground-controls" align="center">
                     
                     <div className="create-button-container">
                         <div className="input-group input-group-sm playground-directory-header" data-bs-theme="dark">
