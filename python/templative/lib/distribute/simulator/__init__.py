@@ -14,6 +14,7 @@ import math
 from aiofile import AIOFile
 from templative.lib.componentInfo import COMPONENT_INFO
 from templative.lib.stockComponentInfo import STOCK_COMPONENT_INFO
+from .structs import SimulatorTilesetUrls, SimulatorComponentPlacement, SimulatorDimensions, SimulatorTilesetLayout
 
 IMGUR_CLIENT_ID = 'your_client_id_here'
 
@@ -57,15 +58,18 @@ async def createSave(uniqueGameName, objectStates, tabletopSimulatorDirectoryPat
 
 async def createObjectStates(producedDirectoryPath, tabletopSimulatorDirectoryPath):
     objectStates = []
-    for directoryPath in next(walk(producedDirectoryPath))[1]:
+    index = 0
+    directories = next(walk(producedDirectoryPath))[1]
+    for directoryPath in directories:
         componentDirectoryPath = "%s/%s" % (producedDirectoryPath, directoryPath)
-        objectState = await createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPath)
+        objectState = await createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPath, index, len(directories))
+        index = index + 1
         if objectState == None:
             continue
         objectStates.append(objectState)
     return objectStates
 
-async def createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPath):
+async def createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPath, componentIndex, componentCountTotal):
     componentInstructions = None
     componentInstructionsFilepath = path.join(componentDirectoryPath, "component.json")
     with open(componentInstructionsFilepath, "r") as componentInstructionsFile:
@@ -90,12 +94,12 @@ async def createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPa
     if not componentInstructions["type"] in COMPONENT_INFO:
         print("Missing component info for %s." % componentInstructions["type"])
         return None
-    component = COMPONENT_INFO[componentInstructions["type"]]
+    componentInfo = COMPONENT_INFO[componentInstructions["type"]]
 
-    if not "SimulatorCreationTask" in component:
+    if not "SimulatorCreationTask" in componentInfo:
         print("Skipping %s that has no SimulatorCreationTask." % componentInstructions["type"])
         return None
-    simulatorTask = component["SimulatorCreationTask"]
+    simulatorTask = componentInfo["SimulatorCreationTask"]
 
     totalCount = 0
     for instruction in componentInstructions["frontInstructions"]:
@@ -109,14 +113,42 @@ async def createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPa
         return None
     instruction = supportedInstructionTypes[simulatorTask]
 
-    return await instruction(tabletopSimulatorDirectoryPath, componentInstructions)
+    return await instruction(tabletopSimulatorDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal)
 
-async def createDeck(tabletopSimulatorDirectoryPath, componentInstructions):
+def findBoxiestShape(total_count):
+    if total_count <= 0:
+        return (0, 0)  # Handle the edge case for non-positive counts
+
+    # Start with the square root of the total count
+    side_length = int(math.sqrt(total_count))
+
+    # Find the closest factors
+    for i in range(side_length, 0, -1):
+        if total_count % i == 0:
+            return (i, total_count // i)
+
+    # Fallback (should never be reached for positive integers)
+    return (1, total_count)
+
+async def createDeck(tabletopSimulatorDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal):
     tabletopSimulatorImageDirectoryPath = path.join(tabletopSimulatorDirectoryPath, "Mods/Images")
     imgurUrl, totalCount, cardColumnCount, cardRowCount = await createCompositeImage(componentInstructions["name"], componentInstructions["type"], componentInstructions["frontInstructions"],componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
     backImageImgurUrl = await placeAndUploadBackImage(componentInstructions["name"], componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
     componentGuid = md5(componentInstructions["name"].encode()).hexdigest()
-    return objectState.createDeckObjectState(componentGuid, componentInstructions["name"], imgurUrl, backImageImgurUrl, totalCount, cardColumnCount, cardRowCount)
+    relativeWidth = componentInfo["DimensionsInches"][0] / 2.5
+    relativeHeight = componentInfo["DimensionsInches"][1] / 3.5
+    thickness = 1.0
+    imageUrls = SimulatorTilesetUrls(face=imgurUrl, back=backImageImgurUrl)
+    columns, rows = findBoxiestShape(componentCountTotal)
+    boxPositionIndexX=componentIndex % columns
+    boxPositionIndexZ=int(math.floor(componentIndex / columns))
+    height=1.5
+    print(f"ComponentIndex: {componentIndex} boxPositionIndex ({boxPositionIndexX}, {boxPositionIndexZ}) of ({columns}, {rows})")
+    simulatorComponentPlacement = SimulatorComponentPlacement(boxPositionIndexX,height,boxPositionIndexZ,columns, rows)
+    dimensions = SimulatorDimensions(relativeWidth, relativeHeight, thickness)
+    layout = SimulatorTilesetLayout(totalCount, cardColumnCount, cardRowCount)
+
+    return objectState.createDeckObjectState(componentGuid, componentInstructions["name"], imageUrls, simulatorComponentPlacement, dimensions, layout)
 
 async def createStock(tabletopSimulatorDirectoryPath, componentInstructions, stockPartInfo):   
     return None
