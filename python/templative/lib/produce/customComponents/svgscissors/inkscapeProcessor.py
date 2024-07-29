@@ -1,4 +1,3 @@
-import winreg
 from os import path
 import sys
 import shutil
@@ -7,6 +6,7 @@ import subprocess
 
 def searchWindowsRegistryForInkscape():
     try:
+        import winreg
         registry_path = r"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"
         registry_key = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, registry_path)
         
