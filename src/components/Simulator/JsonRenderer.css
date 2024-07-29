@@ -1,0 +1,25 @@
+.json-data {
+    padding: 1em;
+    font-size: 14px;
+    width: 100% !important;
+    height: 100%;
+}
+.json-data ul {
+    list-style-type: none;
+}
+.json-list, .json-object {
+    width: 100% !important;
+    overflow-x: hidden;
+}
+.json-list ul, .json-list li {
+    max-width: 100% !important;
+}
+.json-value {
+    display: block; /* Makes the span behave like a block element */
+    max-width: 100%; /* Ensures the span doesn't exceed the width of the parent */
+    white-space: nowrap; /* Prevents the text from wrapping to a new line */
+    overflow: hidden; /* Hides any overflow content */
+    text-overflow: ellipsis; /* Adds ellipsis (...) for overflowing text */
+    word-break: break-all; /* Breaks words to fit within the container */
+    overflow-wrap: break-word; /* Breaks words to fit within the container */
+}

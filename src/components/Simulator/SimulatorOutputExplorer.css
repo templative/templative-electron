@@ -1,5 +1,12 @@
+.simulator-output-explorer {
+    width: 100% !important;
+    height: 100% !important;
+    overflow-y: hidden;
+}
 .simulator-package-header {
     height: 2em;
+    width: 100%;
+    overflow-x: hidden;
     margin-bottom: 1em;
 }
 .simulator-package-name {
@@ -8,9 +15,8 @@
 }
 .simulator-content-type-header {
     font-size: 14px;
-    margin-bottom:0.1em;
+    margin-bottom: 0.1em;
 }
-
 .simulator-texture-name {
     color: white;
     font-weight: bold;
@@ -18,14 +24,21 @@
     margin-bottom: 0px;
 }
 .object-states {
-    height: calc(100% - 4em);
+    width: 100% !important;
+    height: 10em;
     overflow-y: scroll;
-    overflow-x: hidden;
+    background-color: #1F2329;
+    margin-bottom:1em;
+}
+.simulator-json-content {
+    width: 100% !important;
+    height: calc(100% - 15em) !important;
+    overflow-y: scroll;
     background-color: #1F2329;
 }
 .object-state {
     padding: 6px;
-    margin-bottom:0.5em;
+    margin-bottom: 0.5em;
 }
 .object-state-header {
     font-size: 14px;
@@ -35,8 +48,25 @@
     font-style: italic;
     font-size: 11px;
 }
-.object-state-image {
-    display: inline-block;
-    width: 50%;
+.simulator-tiled-container {
+    display: flex;
+    width: 100%;
+    align-items: center; /* Ensures both images align at the same height */
+}
+
+.simulator-tiled-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-container {
+    display: flex;
+    width: 100%;
     height: auto;
+}
+
+.object-state-image {
+    height: auto;
+    width: 50%;
+    object-fit: cover;
 }
