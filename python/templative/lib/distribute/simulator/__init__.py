@@ -216,7 +216,7 @@ async def uploadToImgur(image):
     files = {'image': buffered}
     isDev = False
     baseUrl = "http://127.0.0.1:5000" if isDev else "https://www.templative.net"
-    response = requests.post('%s/imgur/upload' % baseUrl, files=files)
+    response = requests.post('%s/simulator/image' % baseUrl, files=files)
     
     if response.status_code == 200:
         return response.json()['url']
