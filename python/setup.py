@@ -19,7 +19,8 @@ setup(
         "tabulate",
         "Wand",
         "numpy",
-        "requests"
+        "requests",
+        "winreg"
     ],
     entry_points = {
         "console_scripts": [
