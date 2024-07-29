@@ -21,7 +21,6 @@ python-socketio = "5.11.2"
 numpy = "1.26.4"
 pyinstaller = "*"
 requests = "*"
-winreg = "*"
 
 [requires]
 python_version = "3.12.3"
