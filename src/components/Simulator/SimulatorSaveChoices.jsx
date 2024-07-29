@@ -83,15 +83,31 @@ export default class SimulatorSaveChoices extends React.Component {
     }
     
     render() {      
+        var bannedWords = [
+            "SaveFileInfos",
+            "TS_Save_",
+            "TS_AutoSave",
+            "steam_autocloud"
+        ]
+        var filteredAbsoluteFilepaths = this.state.saveAbsoluteFilepaths.filter(absoluteFilepath => {
+            for (let index = 0; index < bannedWords.length; index++) {
+                const element = bannedWords[index];
+                if (absoluteFilepath.includes(element)) {
+                    return false
+                }
+            }
+            return true;
+        })
+        var options = filteredAbsoluteFilepaths.map(absoluteFilepath => {
+            var className = "tabletop-simulator-save " + (this.props.selectedSaveFilepath === absoluteFilepath && "selected-save") 
+            return <p onClick={async () => this.props.selectSaveAsyncCallback(absoluteFilepath)} key={absoluteFilepath} className={className}>{path.parse(absoluteFilepath).name}</p>
+        })
         return <div className="selectable-directories">
             <div className="headerWrapper">
                 <p className="resourcesHeader">Tabletop Simulator Saves</p>
             </div> 
             <div className="tabletop-simulator-saves">
-                {this.state.saveAbsoluteFilepaths.map(absoluteFilepath => {
-                    var className = "tabletop-simulator-save " + (this.props.selectedSaveFilepath === absoluteFilepath && "selected-save") 
-                    return <p onClick={async () => this.props.selectSaveAsyncCallback(absoluteFilepath)} key={absoluteFilepath} className={className}>{path.parse(absoluteFilepath).name}</p>
-                })}
+                {options}
             </div>
     </div>
     }
