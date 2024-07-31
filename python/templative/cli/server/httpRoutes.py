@@ -5,7 +5,7 @@ from templative.lib.distribute.playground import convertToTabletopPlayground
 from templative.lib.distribute.simulator import convertToTabletopSimulator
 from templative.lib.componentInfo import COMPONENT_INFO
 from templative.lib.stockComponentInfo import STOCK_COMPONENT_INFO
-
+from templative.lib.produce import gameProducer
 routes = web.RouteTableDef()
 
 @routes.get("/status")
@@ -84,3 +84,22 @@ async def getComponentInfo(request):
 @routes.get("/stock-info")
 async def getStockInfo(request):
   return web.json_response(STOCK_COMPONENT_INFO)
+
+@routes.post("/preview-piece")
+async def previewPiece(request):
+  data = await request.json()
+  if data["componentFilter"] == None:
+    return "Missing componentFilter", 400
+  if data["pieceFilter"] == None:
+    return "Missing pieceFilter", 400
+  if data["language"] == None:
+    return "Missing language", 400
+  if data["directoryPath"] == None:
+    return "Missing directoryPath", 400
+
+  await gameProducer.producePiecePreview(data["directoryPath"], data["componentFilter"], data["pieceFilter"], data["language"])
+  return web.Response(status=200)
+
+@routes.get("/previews")
+async def previewPiece(request):
+  return web.json_response({"previewsDirectory": gameProducer.getPreviewsPath()})

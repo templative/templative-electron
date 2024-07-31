@@ -1,0 +1,26 @@
+.preview-select {
+    width:100%;
+    margin-bottom: 0px !important;
+}
+.preview-button {
+    width: 100%;
+    border-color:#495357 !important;
+    background-color: orange !important;
+    color:#313540 !important;
+    font-weight: bold !important;
+    margin-top:1em;
+    margin-bottom: 1em;
+}
+
+.preview-button:hover {
+    background-color: #ffc14e !important;
+}
+.preview-images {
+    height: calc(100% - 8em);
+    /* background: red; */
+    overflow-y: scroll;
+}
+.preview-filter-label {
+    font-size: 14px;
+    margin-bottom:0px;
+}

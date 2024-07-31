@@ -2,112 +2,114 @@ import os
 from xml.etree import ElementTree
 from aiofile import AIOFile
 import svgmanip
+from svgmanip import Element
 import svgutils
-
+from lxml import etree
+from datetime import datetime
 
 from templative.lib.componentInfo import COMPONENT_INFO
-from templative.lib.manage.models.produceProperties import ProduceProperties
-from templative.lib.manage.models.gamedata import StudioData, GameData, ComponentData, ComponentBackData, PieceData
+from templative.lib.manage.models.produceProperties import ProduceProperties, PreviewProperties
+from templative.lib.manage.models.gamedata import PieceData, ComponentBackData
 from templative.lib.produce.translation import getTranslation
 from templative.lib.manage.models.composition import ComponentComposition
 from templative.lib.manage.models.artdata import ComponentArtdata
 from templative.lib.produce.customComponents.svgscissors.inkscapeProcessor import exportSvgToImage
 
-async def createArtFileOfPiece(compositions: ComponentComposition, artdata: any, gamedata: PieceData | ComponentBackData, componentBackOutputDirectory: str, produceProperties: ProduceProperties) -> None:
+async def convertElementToString(element) -> str:
+    out = etree.tostring(element.root, xml_declaration=True, standalone=True)
+    return out.decode('utf-8')
+
+async def createArtFileOfPiece(compositions: ComponentComposition, artdata: any, gamedata: PieceData | ComponentBackData, componentBackOutputDirectory: str, productionProperties: ProduceProperties | PreviewProperties) -> None:
     templateFilesDirectory = compositions.gameCompose["artTemplatesDirectory"]
-    if artdata == None: 
+    if artdata is None: 
         print("!!! Missing artdata %s" % gamedata.componentDataBlob["displayName"])
         return
     artFilename = "%s.svg" % (artdata["templateFilename"])
-    artFilepath = os.path.normpath(os.path.join(produceProperties.inputDirectoryPath, templateFilesDirectory, artFilename))
+    artFilepath = os.path.normpath(os.path.join(productionProperties.inputDirectoryPath, templateFilesDirectory, artFilename))
     if not os.path.exists(artFilepath):
         print("!!! Template art file %s does not exist." % artFilepath)
         return
-
-    artFile = None
-    try:
-        artFile = svgmanip.Element(artFilepath)
-    except:
-        print("!!! Template art file %s cannot be parsed." % artFilepath)
-        return
-
-    await addOverlays(artFile, artdata["overlays"], compositions, gamedata, produceProperties)
-    pieceName = gamedata.pieceData["name"] if isinstance(gamedata, PieceData) else gamedata.componentBackDataBlob["name"]
-
-    artFileOutputName = ("%s%s-%s" % (compositions.componentCompose["name"], gamedata.pieceUniqueBackHash, pieceName))
-    artFileOutputFilepath = await createArtfile(artFile, artFileOutputName, componentBackOutputDirectory)
-
-    await textReplaceInFile(artFileOutputFilepath, artdata["textReplacements"], gamedata, produceProperties)
-    await updateStylesInFile(artFileOutputFilepath, artdata["styleUpdates"], gamedata)
-
+    
     if not compositions.componentCompose["type"] in COMPONENT_INFO:
         raise Exception("No image size for %s", compositions.componentCompose["type"])
     component = COMPONENT_INFO[compositions.componentCompose["type"]]
 
-    imageSizePixels = component["DimensionsPixels"]
-    await scaleContent(artFileOutputFilepath, imageSizePixels, 0.3203944444444444)
-    await assignSize(artFileOutputFilepath, imageSizePixels)
-    await addNewlines(artFileOutputFilepath)
-    await exportSvgToImage(artFileOutputFilepath, imageSizePixels, artFileOutputName, componentBackOutputDirectory)
-    print("Produced %s." % (pieceName))
-
-async def addNewlines(artFileOutputFilepath):
-    async with AIOFile(artFileOutputFilepath, 'r') as f:
-        contents = await f.read()
-    fixedContents = contents.replace("NEWLINE", "\n")
-    if fixedContents == contents:
+    contents = None
+    try:
+        async with AIOFile(artFilepath, 'r') as f:
+            contents = await f.read()
+    except Exception as e:
+        print(f"!!! Template art file {artFilepath} cannot be parsed. Error: {e}")
         return
-    async with AIOFile(artFileOutputFilepath, 'w') as f:
-        await f.write(fixedContents)
 
-async def scaleContent(artFileOutputFilepath, imageSizePixels, scale):
-    async with AIOFile(artFileOutputFilepath, encoding='utf-8') as svgFile:
-        original = svgutils.transform.fromstring(await svgFile.read())
-        newSvgDocument = svgutils.transform.SVGFigure(imageSizePixels[0] * scale, imageSizePixels[1] * scale)
+    pieceName = gamedata.pieceData["name"] if isinstance(gamedata, PieceData) else gamedata.componentBackDataBlob["name"]
+    imageSizePixels = component["DimensionsPixels"]
+    
+    contents = await addOverlays(contents, artdata["overlays"], compositions, gamedata, productionProperties)
+    contents = await textReplaceInFile(contents, artdata["textReplacements"], gamedata, productionProperties)
+    contents = await updateStylesInFile(contents, artdata["styleUpdates"], gamedata)
+    contents = await scaleContent(contents, imageSizePixels, 0.3203944444444444)
+    contents = await assignSize(contents, imageSizePixels)
+    contents = await addNewlines(contents)
+    artFileOutputName = ("%s%s-%s" % (compositions.componentCompose["name"], gamedata.pieceUniqueBackHash, pieceName))
+    artFileOutputFilepath = await createArtfile(contents, artFileOutputName, componentBackOutputDirectory)
+    await exportSvgToImage(artFileOutputFilepath, imageSizePixels, artFileOutputName, componentBackOutputDirectory)
+    print(f"Produced {pieceName}.")
 
-        svg = original.getroot()
-        svg.scale(scale)
-        newSvgDocument.append(svg)
+async def addNewlines(contents):
+    if contents is None:
+        raise Exception("contents cannot be None")
+    return contents.replace("NEWLINE", "\n")
 
-        newSvgDocument.save(artFileOutputFilepath)
+async def scaleContent(contents, imageSizePixels, scale):
+    if contents is None:
+        raise Exception("contents cannot be None")
+    original = svgutils.transform.fromstring(contents)
+    newSvgDocument = svgutils.transform.SVGFigure(imageSizePixels[0] * scale, imageSizePixels[1] * scale)
 
-async def assignSize(artFileOutputFilepath, imageSizePixels):
-    parser = ElementTree.XMLParser(encoding="utf-8")
-    elementTree = ElementTree.parse(artFileOutputFilepath, parser=parser)
+    svg = original.getroot()
+    svg.scale(scale)
+    newSvgDocument.append(svg)
+
+    return newSvgDocument.to_str().decode("utf-8")
+
+async def assignSize(contents, imageSizePixels):
+    elementTree = ElementTree.ElementTree(ElementTree.fromstring(contents))
     root = elementTree.getroot()
+
     toThreeHundredDpi = 0.319975619047619
     shrunkWidth = (imageSizePixels[0] * toThreeHundredDpi, imageSizePixels[1] * toThreeHundredDpi)
     root.set("width", "%spx" % shrunkWidth[0])
     root.set("height", "%spx" % shrunkWidth[1])
+    root.set("viewBox", "0 0 %s %s" % (shrunkWidth[0], shrunkWidth[1]))
 
-    root.set("viewbox", "0 0 %s %s" % (shrunkWidth[0], shrunkWidth[1]))
-    async with AIOFile(artFileOutputFilepath, 'wb') as f:
-        await f.write(ElementTree.tostring(root))
+    return ElementTree.tostring(root, encoding='unicode')
 
-async def createArtfile(artFile, artFileOutputName, outputDirectory):
+async def createArtfile(contents, artFileOutputName, outputDirectory):
+    if contents is None:
+        raise Exception("Contents cannot be None")
     artFileOutputFileName = "%s.svg" % (artFileOutputName)
     artFileOutputFilepath = os.path.join(outputDirectory, artFileOutputFileName)
-    artFile.dump(artFileOutputFilepath)
+    async with AIOFile(artFileOutputFilepath, mode="w", encoding="utf-8") as file:
+        await file.write(contents)
     return artFileOutputFilepath
 
-async def addOverlays(artFile, overlays, compositions:ComponentComposition, pieceGamedata:PieceData, produceProperties:ProduceProperties):
-    if artFile is None:
-        print("artFile cannot be None.")
-        return
+async def addOverlays(contents, overlays, compositions: ComponentComposition, pieceGamedata: PieceData, productionProperties: ProduceProperties | PreviewProperties):
+    if contents is None:
+        raise Exception("contents cannot be None")
 
     if overlays is None:
-        print("overlays cannot be None.")
-        return
+        raise Exception("overlays cannot be None")
 
     overlayFilesDirectory = compositions.gameCompose["artInsertsDirectory"]
 
     for overlay in overlays:
         isComplex = overlay.get("isComplex", False)
-        if isComplex and produceProperties.isSimple:
+        if isComplex and productionProperties.isSimple:
             continue
 
         isDebug = overlay.get("isDebugInfo", False)
-        if isDebug and produceProperties.isPublish:
+        if isDebug and productionProperties.isPublish:
             continue
 
         positionX = float(overlay.get("positionX", 0))
@@ -116,7 +118,7 @@ async def addOverlays(artFile, overlays, compositions:ComponentComposition, piec
         if not overlayName:
             continue
 
-        overlaysFilepath = os.path.abspath(os.path.join(produceProperties.inputDirectoryPath, overlayFilesDirectory))
+        overlaysFilepath = os.path.abspath(os.path.join(productionProperties.inputDirectoryPath, overlayFilesDirectory))
         overlayFilename = "%s.svg" % (overlayName)
         overlayFilepath = os.path.normpath(os.path.join(overlaysFilepath, overlayFilename))
 
@@ -124,27 +126,27 @@ async def addOverlays(artFile, overlays, compositions:ComponentComposition, piec
             print("!!! Overlay %s does not exist." % overlayFilepath)
             continue
 
-        await placeOverlay(artFile, overlayFilepath, positionX, positionY)
+        contents = await placeOverlay(contents, overlayFilepath, positionX, positionY)
+    return contents
 
+async def placeOverlay(contents:str, overlayFilepath, positionX, positionY) -> str:
+    main_svg = ElementTree.ElementTree(ElementTree.fromstring(contents))
+    main_svg_root = main_svg.getroot()
+    
+    async with AIOFile(overlayFilepath, 'r') as afp:
+        overlay_contents = await afp.read()
+    overlay_svg_root = ElementTree.fromstring(overlay_contents)
+    
+    group = ElementTree.Element('g', attrib={'transform': f'translate({positionX},{positionY})'})
+    
+    for element in overlay_svg_root:
+        group.append(element)
+    
+    main_svg_root.append(group)
+    
+    return ElementTree.tostring(main_svg_root, encoding='unicode')
 
-async def placeOverlay(artFile, overlayFilepath, positionX, positionY):
-    try:
-        graphicsInsert = svgmanip.Element(overlayFilepath)
-        artFile.placeat(graphicsInsert, positionX, positionY)
-    except:
-        print("!!! Cannot parse %s." % overlayFilepath)
-
-async def textReplaceInFile(filepath, textReplacements, gamedata:PieceData|ComponentBackData, produceProperties: ProduceProperties):
-    if filepath is None:
-        print("filepath cannot be None")
-        return
-    if textReplacements is None:
-        print("textReplacements cannot be None.")
-        return
-
-    contents = ""
-    async with AIOFile(filepath, 'r') as f:
-        contents = await f.read()
+async def textReplaceInFile(contents: str, textReplacements, gamedata: PieceData | ComponentBackData, productionProperties: ProduceProperties | PreviewProperties):
     for textReplacement in textReplacements:
         key = "{%s}" % textReplacement["key"]
         value = await getScopedValue(textReplacement, gamedata)
@@ -153,23 +155,22 @@ async def textReplaceInFile(filepath, textReplacements, gamedata:PieceData|Compo
         value = await processValueFilters(value, textReplacement)
 
         isComplex = textReplacement.get("isComplex", False)
-        if isComplex and produceProperties.isSimple:
+        if isComplex and productionProperties.isSimple:
             value = ""
 
         isDebug = textReplacement.get("isDebugInfo", False)
-        if isDebug and produceProperties.isPublish:
+        if isDebug and productionProperties.isPublish:
             value = ""
 
-        if produceProperties.targetLanguage != "en" and textReplacement.get("isTranslateable", False) and value:
-            translation = getTranslation("./", value, produceProperties.targetLanguage)
+        if productionProperties.targetLanguage != "en" and textReplacement.get("isTranslateable", False) and value:
+            translation = getTranslation("./", value, productionProperties.targetLanguage)
             if translation:
                 value = translation
             else:
                 print("Could not translate %s" % value)
 
         contents = contents.replace(key, value)
-    async with AIOFile(filepath,'w') as f:
-        await f.write(contents)
+    return contents
 
 async def processValueFilters(value, textReplacement):
     if "filters" in textReplacement:
@@ -178,34 +179,28 @@ async def processValueFilters(value, textReplacement):
                 value = value.upper()
     return str(value)
 
-async def updateStylesInFile(filepath, styleUpdates, pieceGamedata: PieceData):
-    if filepath is None:
-        print("filepath cannot be None.")
-        return
+async def updateStylesInFile(contents, styleUpdates, pieceGamedata: PieceData):
+    if contents is None:
+        raise Exception("contents cannot be None.")
 
     if styleUpdates is None:
-        print("styleUpdates cannot be None.")
-        return
-
+        raise Exception("styleUpdates cannot be None.")
+    
+    elementTree = ElementTree.ElementTree(ElementTree.fromstring(contents))
     try:
-        async with AIOFile(filepath, encoding='utf-8') as svgFile:
-            tree = ElementTree.fromstring(await svgFile.read())
-
-            for styleUpdate in styleUpdates:
-                findById = styleUpdate["id"]
-                elementToUpdate = tree.find(".//*[@id='%s']" % findById)
-                if elementToUpdate is not None:
-                    value = await getScopedValue(styleUpdate, pieceGamedata)
-                    await replaceStyleAttributeForElement(elementToUpdate, "style", styleUpdate["cssValue"], value)
-                else:
-                    print("Could not find element with id [%s]." % (findById))
-
-            async with AIOFile(filepath, 'wb', encoding='utf-8') as f:
-                await f.write(ElementTree.tostring(tree))
+        for styleUpdate in styleUpdates:
+            findById = styleUpdate["id"]
+            elementToUpdate = elementTree.find(".//*[@id='%s']" % findById)
+            if elementToUpdate is not None:
+                value = await getScopedValue(styleUpdate, pieceGamedata)
+                await replaceStyleAttributeForElement(elementToUpdate, "style", styleUpdate["cssValue"], value)
+            else:
+                print("Could not find element with id [%s]." % (findById))
+        return ElementTree.tostring(elementTree.getroot(), encoding='unicode')
     except ElementTree.ParseError as pe:
-        print("Production failed!", pe, filepath)
+        print("Production failed!", pe)
 
-async def replaceStyleAttributeForElement(element, attribute, key, value):
+async def replaceStyleAttributeForElement(element:Element, attribute, key, value):
     attributeValue = element.get(attribute, "")
     replaceStyleWith = ""
     found = False
@@ -214,22 +209,21 @@ async def replaceStyleAttributeForElement(element, attribute, key, value):
     for cssKeyValuePair in cssKeyValuePairs:
         keyAndPair = cssKeyValuePair.split(':')
         if keyAndPair[0] == key:
-            replaceStyleWith += "%s:%s;" % (key, value)
+            replaceStyleWith += f"{key}:{value};"
             found = True
         else:
             replaceStyleWith += cssKeyValuePair + ';'
 
     if not found:
-        replaceStyleWith += "%s:%s;" % (key, value)
+        replaceStyleWith += f"{key}:{value};"
 
-    if replaceStyleWith[-1] == ";":
+    if replaceStyleWith.endswith(";"):
         replaceStyleWith = replaceStyleWith[:-1]
     element.set(attribute, replaceStyleWith)
 
 async def getScopedValue(scopedValue, pieceGameData: PieceData | ComponentBackData):
     if scopedValue is None:
-        print("scopedValue cannot be None.")
-        return
+        raise Exception("scopedValue cannot be None.")
 
     scope = scopedValue["scope"]
     source = scopedValue["source"]
@@ -254,12 +248,11 @@ async def getScopedValue(scopedValue, pieceGameData: PieceData | ComponentBackDa
             return source
         return utilityFunctions[source]()
 
-    if not source in scopeData:
+    if source not in scopeData:
         print("Missing key %s not found in %s scope." % (source, scope))
         return source
 
     return scopeData[source]
-
 
 # def getCurrentGitSha():
 #     repo = git.Repo(search_parent_directories=True)

@@ -19,6 +19,7 @@ setup(
         "tabulate",
         "Wand",
         "numpy",
+        "aiofiles",
         "requests"
     ],
     entry_points = {

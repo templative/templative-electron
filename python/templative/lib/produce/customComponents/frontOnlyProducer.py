@@ -4,7 +4,7 @@ from .. import outputWriter
 from . import svgscissors
 import os 
 
-from templative.lib.manage.models.produceProperties import ProduceProperties
+from templative.lib.manage.models.produceProperties import ProduceProperties, PreviewProperties
 from templative.lib.manage.models.gamedata import StudioData, GameData, ComponentData, ComponentBackData, PieceData
 from templative.lib.manage.models.composition import ComponentComposition
 from templative.lib.manage.models.artdata import ComponentArtdata
@@ -13,6 +13,19 @@ from templative.lib.manage import defineLoader
 from templative.lib.componentInfo import COMPONENT_INFO
 
 class FrontOnlyProducer(Producer):
+    @staticmethod
+    async def createPiecePreview(previewProperties:PreviewProperties, componentComposition:ComponentComposition, componentData:ComponentData, componentArtdata:ComponentArtdata):
+        piecesDataBlob = await defineLoader.loadPiecesGamedata(previewProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"])
+        if not piecesDataBlob or piecesDataBlob == {}:
+            print("Skipping %s component due to missing pieces gamedata." % componentComposition.componentCompose["name"])
+            return
+        await FrontOnlyProducer.createPiece(previewProperties, componentComposition, componentData, componentArtdata, piecesDataBlob)
+    
+    @staticmethod
+    async def createPiece(previewProperties:PreviewProperties, componentComposition:ComponentComposition, componentData:ComponentData, componentArtdata:ComponentArtdata, piecesDataBlob: [any]):        
+        componentBackData = ComponentBackData(componentData.studioDataBlob, componentData.gameDataBlob, componentData.componentDataBlob)
+        await svgscissors.createArtFileForPiece(componentComposition, componentArtdata, componentBackData, piecesDataBlob, previewProperties)
+
     @staticmethod
     async def createComponent(produceProperties:ProduceProperties, componentComposition:ComponentComposition, componentData:ComponentData, componentArtdata:ComponentArtdata):
         piecesDataBlob = await defineLoader.loadPiecesGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"])

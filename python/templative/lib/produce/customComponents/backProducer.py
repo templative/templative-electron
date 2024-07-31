@@ -5,8 +5,8 @@ from . import svgscissors
 import os 
 from hashlib import md5
 
-from templative.lib.manage.models.produceProperties import ProduceProperties
-from templative.lib.manage.models.gamedata import StudioData, GameData, ComponentData, ComponentBackData, PieceData
+from templative.lib.manage.models.produceProperties import ProduceProperties, PreviewProperties
+from templative.lib.manage.models.gamedata import ComponentData, ComponentBackData
 from templative.lib.manage.models.composition import ComponentComposition
 from templative.lib.manage.models.artdata import ComponentArtdata
 from templative.lib.manage import defineLoader
@@ -14,6 +14,35 @@ from templative.lib.manage import defineLoader
 from templative.lib.componentInfo import COMPONENT_INFO
 
 class BackProducer(Producer):
+    @staticmethod
+    async def createPiecePreview(previewProperties:PreviewProperties, componentComposition:ComponentComposition, componentData:ComponentData, componentArtdata:ComponentArtdata):
+        componentTypeInfo = COMPONENT_INFO[componentComposition.componentCompose["type"]]
+        defaultPieceGamedataBlob = [{ 
+            "name": componentComposition.componentCompose["name"], 
+            "displayName": componentComposition.componentCompose["name"], 
+            "quantity": 1, 
+        }]
+        piecesDataBlob = defaultPieceGamedataBlob
+        if componentTypeInfo["HasPieceData"]:
+            piecesDataBlob = await defineLoader.loadPiecesGamedata(previewProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"])
+            if not piecesDataBlob or piecesDataBlob == {}:
+                print("Skipping %s component due to missing pieces gamedata." % componentComposition.componentCompose["name"])
+                return
+
+        sourcedVariableNamesSpecificToPieceOnBackArtData = BackProducer.getSourcedVariableNamesSpecificToPieceOnBackArtdata(componentArtdata.artDataBlobDictionary["Back"])
+                
+        uniqueComponentBackData = {}
+        for pieceGamedata in piecesDataBlob:
+            if pieceGamedata["name"] != previewProperties.pieceName:
+                continue
+            uniqueHashOfSourceData = BackProducer.createUniqueBackHashForPiece(sourcedVariableNamesSpecificToPieceOnBackArtData, pieceGamedata)
+            componentBackDataBlob = {}
+            for sourcedVariable in sourcedVariableNamesSpecificToPieceOnBackArtData:
+                componentBackDataBlob[sourcedVariable] = pieceGamedata[sourcedVariable]
+
+            uniqueComponentBackData = ComponentBackData(componentData.studioDataBlob, componentData.gameDataBlob, componentData.componentDataBlob, componentBackDataBlob, sourcedVariableNamesSpecificToPieceOnBackArtData, uniqueHashOfSourceData)
+            await svgscissors.createArtFileForPiece(componentComposition, componentArtdata, uniqueComponentBackData, piecesDataBlob, previewProperties.outputDirectoryPath, previewProperties)
+    
     @staticmethod
     async def createComponent(produceProperties:ProduceProperties, componentComposition:ComponentComposition, componentData:ComponentData, componentArtdata:ComponentArtdata):
         componentTypeInfo = COMPONENT_INFO[componentComposition.componentCompose["type"]]

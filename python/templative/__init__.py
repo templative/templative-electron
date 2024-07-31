@@ -27,6 +27,7 @@ cli.add_command(animationCommands.animation)
 cli.add_command(create.init)
 cli.add_command(server.serve)
 cli.add_command(produce.produce)
+cli.add_command(produce.preview)
 cli.add_command(componentAnalysisCommands.depth)
 cli.add_command(componentAnalysisCommands.components)
 
