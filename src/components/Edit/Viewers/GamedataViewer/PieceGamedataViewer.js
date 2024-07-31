@@ -22,7 +22,7 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         
         this.setState({
             content: newContents
-        })
+        },this.autosave)
     }
     
     updateValue = (index, key, newValue) => {
@@ -30,7 +30,7 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         newContents[index][key] = newValue
         this.setState({
             content: newContents
-        })
+        },this.autosave)
     }
     removeKeyValuePairFromAllPieces = (key) => {
         var newContents = this.state.content
@@ -39,7 +39,7 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         });
         this.setState({
             content: newContents
-        })
+        },this.autosave)
     }
     trackChangedKey = (key, value) => {
         this.setState({
@@ -60,7 +60,7 @@ export default class PieceGamedataViewer extends EditableViewerJson {
             content: newContents,
             trackedKey: undefined,
             currentUpdateValue: undefined
-        })
+        },this.autosave)
     }
 
     freeTrackedChangedKey = () => {
@@ -85,7 +85,7 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         newContents.unshift(newPiece)
         this.setState({
             content: newContents
-        })
+        },this.autosave)
     }
     duplicatePieceByIndex = (index) => {
         var duplicate = Object.assign({},this.state.content[index])
@@ -105,7 +105,7 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         newContents.unshift(duplicate)
         this.setState({
             content: newContents
-        })
+        },this.autosave)
     }
 
     deletePiece = (index) => {

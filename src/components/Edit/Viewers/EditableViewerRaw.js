@@ -9,7 +9,7 @@ export default class EditableViewerRaw extends React.Component {
         hasLoaded: false
     }
     updateContent = (value) => {
-        this.setState({content: value})
+        this.setState({content: value},this.autosave)
     }
     saveAsync = async (filepath, fileContents) => {
         if (!this.state.hasLoaded || fileContents === undefined) {

@@ -92,7 +92,7 @@ export default class ArtdataViewer extends EditableViewerJson {
         newArtdataContents[artdataType].push(newArtdataItem)
         this.setState({
             content: newArtdataContents
-        })
+        },this.autosave)
     }
     deleteArtdata(artdataType, index) {
         var newArtdataContents = this.state.content
@@ -100,14 +100,14 @@ export default class ArtdataViewer extends EditableViewerJson {
         console.log(newArtdataContents)
         this.setState({
             content: newArtdataContents
-        })
+        },this.autosave)
     }
     updateArtdataField(artdataType, index, field, value) {
         var newArtdataContents = this.state.content
         newArtdataContents[artdataType][index][field] = value
         this.setState({
             content: newArtdataContents
-        })
+        },this.autosave)
     }
     updateTemplate(newTemplate) {
         if (this.state.content === undefined) {
@@ -117,7 +117,10 @@ export default class ArtdataViewer extends EditableViewerJson {
         newArtdataContents.templateFilename = newTemplate
         this.setState({
             content: newArtdataContents
-        }, this.parseTemplateFileForUsefulSuggestions)
+        }, async() => {
+            await this.autosave()
+            await this.parseTemplateFileForUsefulSuggestions()
+        })
     }
 
     updateArtdataItemOrder = (type, from, to) => {
@@ -132,7 +135,7 @@ export default class ArtdataViewer extends EditableViewerJson {
 
         this.setState({
             content: newArtdataContents
-        })
+        }, this.autosave)
     };
 
     addTextSuggestion = (suggestion) => {
@@ -143,7 +146,7 @@ export default class ArtdataViewer extends EditableViewerJson {
         newArtdataContents["textReplacements"].push(newArtdataItem)
         this.setState({
             content: newArtdataContents
-        })
+        }, this.autosave)
     }
 
     goToTemplateFile = async (templateFilename) => {
