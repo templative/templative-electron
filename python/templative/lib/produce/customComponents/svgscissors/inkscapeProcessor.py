@@ -1,8 +1,12 @@
-from os import path
+
+import os
 import sys
 import shutil
 import shlex
 import subprocess
+import asyncio
+from os import path
+import tempfile
 
 def searchWindowsRegistryForInkscape():
     try:
@@ -59,24 +63,30 @@ def findInkscape():
 
     return None
 
-
-def runCommands(commands):
+async def runCommands(commands):
     command = " ".join(commands)
-    
-    # Async version -> https://chatgpt.com/c/a88a5976-8e5b-484f-a6dc-a1221a039620
-    subprocess.run(shlex.split(command), shell=True)
-    # print(message)
-    # os.system(message)
-    # try:
-    #     result = subprocess.run(commands, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    #     print(result.stdout.decode())
-    # except subprocess.CalledProcessError as e:
-    #     print(f"Error executing command: {e.cmd}\nExit code: {e.returncode}\nOutput: {e.output.decode()}\nError: {e.stderr.decode()}")
+    # Create a temporary directory
+    with tempfile.TemporaryDirectory() as temp_dir:
+        # Set environment variable for temporary directory
+        env = os.environ.copy()
+        env["XDG_DATA_HOME"] = temp_dir
+        env["DBUS_SESSION_BUS_ADDRESS"] = "/dev/null"  # Disable DBus
+        # Run the command
+        process = await asyncio.create_subprocess_shell(
+            command,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
+            env=env
+        )
+        stdout, stderr = await process.communicate()
+        
+        if stdout:
+            print(f"[stdout]\n{stdout.decode()}")
+        if stderr:
+            print(f"!!! Error {command} exporting to png: {stderr.decode()}")
 
-
-
-async def exportSvgToImage(filepath, imageSizePixels, name, outputDirectory):
-    absoluteSvgFilepath = path.normpath(path.abspath(filepath))
+async def exportSvgToImage(artFileOutputFilepath, imageSizePixels, name, outputDirectory):
+    absoluteSvgFilepath = path.normpath(path.abspath(artFileOutputFilepath))
     absoluteOutputDirectory = path.normpath(path.abspath(outputDirectory))
     pngFilepath = path.normpath(path.join(absoluteOutputDirectory, f"{name}.png"))
 
@@ -95,10 +105,7 @@ async def exportSvgToImage(filepath, imageSizePixels, name, outputDirectory):
         # "--export-width=%s" % imageSizePixels[0],
         # "--export-height=%s" % imageSizePixels[1],
     ]
-    # print(createPngCommands)
-    # print(command)
-
-    runCommands(createPngCommands)
+    await runCommands(createPngCommands)
     # jpgFilepath = os.path.join(absoluteOutputDirectory, "%s.jpg" % (name))
     # convertCommands = [
     #     "magick convert",
