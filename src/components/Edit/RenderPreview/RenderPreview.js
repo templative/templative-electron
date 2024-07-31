@@ -19,39 +19,41 @@ export default class RenderPreview extends React.Component {
         loadingImages: true,
         imageHash: Date.now(),
     }
+    setupPreviewWatcher = async () => {
+        await this.#loadImages(this.state.previewsDirectory);
+        this.#closePreviewImagesWatcher()
+        this.previewImagesWatcher = fsOld.watch(this.state.previewsDirectory, {}, async () => {
+            console.log(`${this.state.previewsDirectory} changed.`);
+            await this.#loadImages(this.state.previewsDirectory);
+        });
+    }
 
     componentDidMount = async () => {
-        try {
-            const response = await axios.get(`http://127.0.0.1:8080/previews`);
-            this.setState({ previewsDirectory: response.data.previewsDirectory });
-            await this.#loadImages(response.data.previewsDirectory);
-
-            this.previewImagesWatcher = fsOld.watch(response.data.previewsDirectory, {}, async () => {
-                await this.#loadImages(this.state.previewsDirectory);
-                this.#triggerImageRefresh();
-            });
+        // try {
             await this.#parseComponentComposeAsync();
-        } catch (error) {
-            console.error("Error in componentDidMount:", error);
-        }
+            const response = await axios.get(`http://127.0.0.1:8080/previews`);
+            this.setState({ previewsDirectory: response.data.previewsDirectory }, this.setupPreviewWatcher);
+        // } catch (error) {
+        //     console.error("Error in componentDidMount:", error);
+        // }
     }
 
     #loadImages = async (directory) => {
-        try {
+        // try { 
             let filepaths = await fs.readdir(directory, { withFileTypes: true });
             filepaths = filepaths.filter(filepath => filepath.name.endsWith(".png")).map(filepath => path.join(directory, filepath.name));
 
-            const preloadImages = filepaths.map(src => this.#preloadImage(src));
-            await Promise.all(preloadImages);
-
+            // const preloadImages = filepaths.map(src => this.#preloadImage(src));
+            // await Promise.all(preloadImages);
+            console.log(filepaths)
             this.setState({
                 imageSources: filepaths,
                 loadingImages: false,
                 imageHash: Date.now()
             });
-        } catch (error) {
-            console.error("Error in #loadImages:", error);
-        }
+        // } catch (error) {
+        //     console.error("Error in #loadImages:", error);
+        // }
     }
 
     #preloadImage = (src) => {
@@ -64,7 +66,7 @@ export default class RenderPreview extends React.Component {
     }
 
     #parseComponentCompose = async () => {
-        try {
+        // try {
             const componentCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json");
             const gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json");
             const componentOptions = componentCompose.map(component => component.name);
@@ -86,23 +88,23 @@ export default class RenderPreview extends React.Component {
                 chosenPieceName: chosenPieceName,
                 piecesOptions: piecesOptions
             }, this.preview);
-        } catch (error) {
-            console.error("Error in #parseComponentCompose:", error);
-        }
+        // } catch (error) {
+        //     console.error("Error in #parseComponentCompose:", error);
+        // }
     }
 
     #parseComponentComposeAsync = async () => {
-        try {
+        // try {
             await this.#parseComponentCompose();
-            this.#closeListeners();
+            this.#closeComponentComposeWatcher();
 
             const componentComposeFilepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
             this.componentComposeWatcher = fsOld.watch(componentComposeFilepath, {}, async () => {
                 await this.#parseComponentCompose();
             });
-        } catch (error) {
-            console.error("Error in #parseComponentComposeAsync:", error);
-        }
+        // } catch (error) {
+        //     console.error("Error in #parseComponentComposeAsync:", error);
+        // }
     }
 
     componentDidUpdate = async (prevProps) => {
@@ -111,11 +113,13 @@ export default class RenderPreview extends React.Component {
         }
     }
 
-    #closeListeners = () => {
+    #closeComponentComposeWatcher = () => {
         if (this.componentComposeWatcher) {
             this.componentComposeWatcher.close();
             this.componentComposeWatcher = undefined;
         }
+    }
+    #closePreviewImagesWatcher = () => {
         if (this.previewImagesWatcher) {
             this.previewImagesWatcher.close();
             this.previewImagesWatcher = undefined;
@@ -123,7 +127,8 @@ export default class RenderPreview extends React.Component {
     }
 
     componentWillUnmount = () => {
-        this.#closeListeners();
+        this.#closeComponentComposeWatcher();
+        this.#closePreviewImagesWatcher();
     }
 
     preview = async () => {
@@ -169,10 +174,6 @@ export default class RenderPreview extends React.Component {
 
     updateChosenPieceName = async (e) => {
         this.setState({ chosenPieceName: e.target.value }, this.preview);
-    }
-
-    #triggerImageRefresh = () => {
-        this.setState({ imageHash: Date.now() });
     }
 
     render() {
