@@ -143,7 +143,7 @@ async def createDeck(tabletopSimulatorDirectoryPath, componentInstructions, comp
     boxPositionIndexX=componentIndex % columns
     boxPositionIndexZ=int(math.floor(componentIndex / columns))
     height=1.5
-    print(f"ComponentIndex: {componentIndex} boxPositionIndex ({boxPositionIndexX}, {boxPositionIndexZ}) of ({columns}, {rows})")
+    
     simulatorComponentPlacement = SimulatorComponentPlacement(boxPositionIndexX,height,boxPositionIndexZ,columns, rows)
     dimensions = SimulatorDimensions(relativeWidth, relativeHeight, thickness)
     layout = SimulatorTilesetLayout(totalCount, cardColumnCount, cardRowCount)
@@ -198,14 +198,20 @@ async def createCompositeImage(componentName, componentType, frontInstructions, 
     backImage = Image.open(backInstructions["filepath"])
     tiledImage.paste(backImage,(9*pixelDimensions[0],6*pixelDimensions[1]))
 
+    max_width = 1920
+    width, height = tiledImage.size
+    if width > max_width:
+        new_height = int((max_width / width) * height)
+        tiledImage = tiledImage.resize((max_width, new_height), Image.LANCZOS)
+
     frontImageName = "%s-front.jpeg" % componentName
     frontImageFilepath = path.join(tabletopSimulatorImageDirectoryPath, frontImageName)
     print(frontImageFilepath)
     tiledImage.save(frontImageFilepath,"JPEG")
-    imgurUrl = await uploadToImgur(tiledImage)
+    imgurUrl = await uploadToS3(tiledImage)
     return imgurUrl, totalCount, columns, rows
 
-async def uploadToImgur(image):
+async def uploadToS3(image):
     if image.mode == 'RGBA':
         image = image.convert('RGB')
     
@@ -232,7 +238,7 @@ async def copyFrontImageToTextures(componentName, frontInstructions, textureDire
 async def placeAndUploadBackImage(name, backInstructions, tabletopSimulatorImageDirectoryPath):
     await copyBackImageToImages(name, backInstructions, tabletopSimulatorImageDirectoryPath)
     image = Image.open(backInstructions["filepath"])
-    return await uploadToImgur(image)
+    return await uploadToS3(image)
 
 async def copyBackImageToImages(componentName, backInstructions, tabletopSimulatorImageDirectoryPath):
     backImageName = "%s-back.jpeg" % componentName

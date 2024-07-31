@@ -24,7 +24,7 @@ export default class SimulatorOutputExplorer extends EditableViewerJson {
                     {this.state.content["ObjectStates"].map(objectState => {
                         return <div className="object-state" key={objectState["GUID"]}>
                             <p className="object-state-header">{objectState["Nickname"]} · {objectState["Name"]} <span className="object-state-guid">{objectState["GUID"]}</span></p>     
-                            <FrontBackImages frontImageUrl={objectState["CustomDeck"][1]["FaceURL"]} backImageUrl={objectState["CustomDeck"][1]["BackURL"]}/>
+                            <FrontBackImages frontImageUrl={objectState["CustomDeck"][2]["FaceURL"]} backImageUrl={objectState["CustomDeck"][2]["BackURL"]}/>
                         </div>
                     })}         
                 </div>

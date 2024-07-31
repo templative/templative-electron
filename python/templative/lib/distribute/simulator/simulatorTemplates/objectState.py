@@ -11,7 +11,6 @@ def createDeckObjectState(guid: str, name: str, imageUrls: SimulatorTilesetUrls,
     
     positionX = (-tableLength/2) + (simulatorComponentPlacement.boxPositionIndexX * tableLength/simulatorComponentPlacement.boxColumnCount*2)
     positionZ = (-tableLength/2) + (simulatorComponentPlacement.boxPositionIndexZ * tableLength/simulatorComponentPlacement.boxRowCount*2)
-    print(f"Position: {positionX}, {positionZ}")
     return {
       "Name": "DeckCustom",
       "Transform": {
