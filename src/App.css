@@ -51,3 +51,43 @@ html {
 .locked:hover {
   cursor: not-allowed !important;
 }
+
+.vertical-input-group .input-group:first-child {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+.vertical-input-group .input-group:first-child *:not(.form-check-input) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;    
+}
+.vertical-input-group .input-group:last-child {
+  padding-top: 0 !important;
+}
+.vertical-input-group .input-group:last-child *:not(.form-check-input) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.vertical-input-group .input-group:not(:last-child):not(:first-child) {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom:0 !important
+}
+.vertical-input-group .input-group:not(:last-child):not(:first-child) *:not(.form-check-input) {
+  border-radius: 0;
+}  
+.vertical-input-group .input-group:not(:first-child) :not(.form-check-input) {
+  border-top: 0 !important;
+}
+.vertical-input-group .input-group:nth-child(odd) .form-control  {
+  background-color: #1a1e20!important;
+}
+.vertical-input-group .input-group:nth-child(odd) .form-select  {
+  background-color: #1a1e20!important;
+}
+.darkened-label {
+  background-color: rgb(33, 37, 41)  !important;
+  border-right-width: 0 !important;
+}
+.vertical-input-group .input-group:nth-child(odd) .darkened-label {
+  background-color: #1a1e20!important;
+}

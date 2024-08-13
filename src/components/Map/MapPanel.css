@@ -1,0 +1,44 @@
+.leaflet-container {
+    background: #282c34 !important;
+}
+
+.leaflet-tile {
+    outline: none;
+}
+.leaflet-container .leaflet-marker-icon,
+.leaflet-container .leaflet-marker-shadow {
+    border: none;
+    box-shadow: none;
+}
+.publisher-popup, .publisher-marker, .convention-marker, .convention-popup {
+    border: 0px !important;
+}
+
+.publisher-marker {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+.publisher-popup {
+    border: none;
+    background-color: transparent;
+    box-shadow: none; /* Remove any default box shadow */
+    padding: 5px; /* Adjust as needed */
+    margin: 0;
+    font-size: 14px; /* Adjust text size if needed */
+}
+.convention-link, .publisher-link {
+    color:#363680;
+    text-decoration: underline;
+}
+.convention-link:hover, .publisher-link:hover {
+    cursor: pointer;
+}
+.important-convention-info {
+    font-weight: bold;
+}
+.map-search-column, .map-column {
+    height: 100%;
+}
