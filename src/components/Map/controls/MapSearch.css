@@ -15,6 +15,10 @@
 .map-search-output {
     height: calc(100% - 15em);
 }
+.preview-filter-label {
+    font-size: 20px;
+    font-weight: bold;
+}
 .map-search-message-output {
     font-size: 14px;
     padding: 6px;

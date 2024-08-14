@@ -82,12 +82,18 @@ export default class Map extends React.Component {
                 {publishers.map(publisher => {
                     return <Marker className="publisher-marker" key={publisher.name} position={[publisher.coordinates[0], publisher.coordinates[1]]}>
                         <Popup className="publisher-popup" >
-                            {publisher.name}<br/>
-                            <br/>
-                            {publisher.submissionBrief}<br/>
-                            <br/>
-                            Located in {publisher.location}<br/>
-                            Often attends {publisher.conventionsRegularlyAttended}<br/>
+                            {this.props.doesUserOwnTemplative ? 
+                                <React.Fragment>
+                                {publisher.name}<br/>
+                                <br/>
+                                {publisher.submissionBrief}<br/>
+                                <br/>
+                                Located in {publisher.location}<br/>
+                                Often attends {publisher.conventionsRegularlyAttended}<br/>
+                            </React.Fragment>
+                            :
+                                <p>Buy Templative to Unlock Publisher Data</p>
+                            }
                         </Popup>
                     </Marker>
                 })}
@@ -117,13 +123,19 @@ export default class Map extends React.Component {
                 
                     return <Marker icon={customMarkerIcon} className="convention-marker" key={convention.name} position={[convention.coordinates[0], convention.coordinates[1]]}>
                         <Popup className="convention-popup">
-                            <span onClick={()=>this.goToLink(convention['url'])} className="convention-link">
-                                {convention.name}
-                            </span>
-                            <br/>
-                            <span className="important-convention-info">{convention.date}</span> in <span className="important-convention-info">{convention.location} ({daysUntilConvention} days)</span>
-                            <br/><br/>
-                            {convention.description}
+                            {this.props.doesUserOwnTemplative ? 
+                                <React.Fragment>
+                                    <span onClick={()=>this.goToLink(convention['url'])} className="convention-link">
+                                        {convention.name}
+                                    </span>
+                                    <br/>
+                                    <span className="important-convention-info">{convention.date}</span> in <span className="important-convention-info">{convention.location} ({daysUntilConvention} days)</span>
+                                    <br/><br/>
+                                    {convention.description}
+                                </React.Fragment>
+                                :
+                                <p>Buy Templative to Unlock Convention Data</p>
+                            }
                         </Popup>
                     </Marker>
                 })}

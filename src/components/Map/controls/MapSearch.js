@@ -1,8 +1,9 @@
 import React from "react";
 import ReactMarkdown from 'react-markdown';
 import "./MapSearch.css"
-
+import TemplativePurchaseButton from "../../TemplativePurchaseButton";
 import TemplativeClient from "../../../TemplativeClient"
+
 const settings = {
     "weight": ["Light", "Medium Light", "Medium", "Medium Heavy", "Heavy"],
     "audience": ["Everyone", "Hardcore Gamers", "Kids"],
@@ -35,8 +36,8 @@ export default class MapSearch extends React.Component {
         response:"",
         isLoading: false,
         started: Date.now(), 
-        ended: Date.now()
-    }    
+        ended: Date.now(),
+    }
     setFieldOption = async (field, value) => {
         var newState = {}
         newState[field] = value
@@ -78,7 +79,7 @@ export default class MapSearch extends React.Component {
         return <div className="map-search">
             <div className="map-search-controls">
                 
-                <p className="preview-filter-label">Describe your game:</p>
+                <p className="preview-filter-label">Search for a Publisher for your Game</p>
                 <div className="vertical-input-group">
                     <div className="input-group input-group-sm" data-bs-theme="dark">
                         <span className="input-group-text">Pitch</span>
@@ -105,13 +106,18 @@ export default class MapSearch extends React.Component {
                         </div>
                     })}
                 </div>
-                <button 
-                    className="btn btn-outline-warning publisher-search-button" 
-                    disabled={disabled} 
-                    onClick={this.searchForAPublisher}
-                >
-                    Search for a Publisher
-                </button>
+                {this.props.doesUserOwnTemplative ? 
+                    <button 
+                        className="btn btn-outline-warning publisher-search-button" 
+                        disabled={disabled} 
+                        onClick={this.searchForAPublisher}
+                    >
+                        Search for a Publisher
+                    </button>
+                    :
+                    <TemplativePurchaseButton action="Searching for a Publisher"/>
+                }
+                
             </div>
             <div className="map-search-output">
                 <div className="map-search-message-output">

@@ -372,7 +372,7 @@ export default class EditProjectView extends React.Component {
                 <Route path='/playground' element={ <PlaygroundPanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
                 <Route path='/upload' element={ <UploadPanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
                 <Route path='/animate' element={ <AnimatePanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
-                {/* <Route path='/map' element={ <MapPanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>}/> */}
+                <Route path='/map' element={ <MapPanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>}/>
                 <Route path='/feedback' element={ <FeedbackPanel email={this.props.email} token={this.props.token}/>}/>
             </Routes>
         </HashRouter>
