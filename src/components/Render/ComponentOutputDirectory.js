@@ -1,5 +1,6 @@
 import React from "react";
 import "./RenderPanel.css"
+import RenderOutputImage from "./RenderedOutputImage";
 const fs = require("fs/promises");
 const path = require('path');
 const fsOld = require('fs');
@@ -78,7 +79,7 @@ export default class ComponentOutputDirectory extends React.Component {
         var imageDivs = this.state.imageFilepaths.map((dirent, index) => {
             // console.log(dirent)
             var imagePath = path.join(dirent.path, dirent.name)
-            return <img className="output-image" alt="" key={imagePath} src={`file://${imagePath}`}/>
+            return <RenderOutputImage key={imagePath} imagePath={imagePath}/>
         })
         var componentDirectory = this.props.componentDirectory.replaceAll("\\", "/")
         componentDirectory = componentDirectory.substring(componentDirectory.lastIndexOf("/") + 1, componentDirectory.length)

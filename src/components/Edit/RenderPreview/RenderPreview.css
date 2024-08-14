@@ -2,6 +2,10 @@
     width:100%;
     margin-bottom: 0px !important;
 }
+.preview-title {
+    font-size:18px;
+    margin-bottom:0px;
+}
 .preview-button {
     width: 100%;
     border-color:#495357 !important;
@@ -16,11 +20,25 @@
     background-color: #ffc14e !important;
 }
 .preview-images {
-    height: calc(100% - 8em);
+    height: calc(100% - 6em);
     /* background: red; */
     overflow-y: scroll;
 }
 .preview-filter-label {
     font-size: 14px;
     margin-bottom:0px;
+}
+.preview-image:hover {
+    cursor:pointer;
+}
+.preview-image-giganto {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: calc(100vh - 2em);
+    z-index: 1000;
+    pointer-events: none;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.9);
 }

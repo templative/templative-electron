@@ -156,16 +156,34 @@
     background-color: rgb(9, 108, 0);
     color:rgb(17, 201, 0);
 }
-.output-image {
+.output-image-container {
+    position:relative;
+    display: inline-block;
     max-width:calc(32%) !important;
-    height: auto !important;
     overflow: hidden !important;
+}
+.output-image {
+    
+    height: auto !important;
     margin-right: 6px;
     margin-bottom:6px;
     border-style: solid;
     border-radius: 6px;
     border-width: 1px;
     border-color: #313540;
+    cursor: pointer;
+}
+
+.output-image-giganto {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: calc(100vh - 2em);
+    z-index: 1000;
+    pointer-events: none;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.9);
 }
 .bug-margin {
     margin-right: 0.5em;

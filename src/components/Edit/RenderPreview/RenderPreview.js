@@ -2,6 +2,7 @@ import React from "react";
 import TemplativeAccessTools from "../../TemplativeAccessTools";
 
 import "./RenderPreview.css"
+import RenderImage from "./RenderImage";
 
 const fsOld = require('fs');
 const path = require("path");
@@ -87,7 +88,7 @@ export default class RenderPreview extends React.Component {
                 chosenComponentName: chosenComponentName,
                 chosenPieceName: chosenPieceName,
                 piecesOptions: piecesOptions
-            }, this.preview);
+            });
         // } catch (error) {
         //     console.error("Error in #parseComponentCompose:", error);
         // }
@@ -166,41 +167,43 @@ export default class RenderPreview extends React.Component {
                 chosenComponentName: componentName,
                 chosenPieceName: pieceName,
                 piecesOptions: piecesOptions
-            }, this.preview);
+            });
         } catch (error) {
             console.error("Error in updateChosenComponentName:", error);
         }
     }
 
     updateChosenPieceName = async (e) => {
-        this.setState({ chosenPieceName: e.target.value }, this.preview);
+        this.setState({ chosenPieceName: e.target.value });
     }
 
     render() {
         return (
             <React.Fragment>
-                <p>Preview</p>
-                <p className="preview-filter-label">Component:</p>
-                <div className="input-group input-group-sm preview-select" data-bs-theme="dark">
-                    <select value={this.state.chosenComponentName} onChange={this.updateChosenComponentName} className="form-select" id="inputGroupSelect01">
-                        {this.state.componentOptions.map(componentOption => (
-                            <option key={componentOption} value={componentOption}>{componentOption}</option>
-                        ))}
-                    </select>
-                </div>
-                <p className="preview-filter-label">Piece:</p>
-                <div className="input-group input-group-sm preview-select" data-bs-theme="dark">
-                    <select value={this.state.chosenPieceName} onChange={this.updateChosenPieceName} className="form-select" id="inputGroupSelect01">
-                        {this.state.piecesOptions.map(piecesOption => (
-                            <option key={piecesOption} value={piecesOption}>{piecesOption}</option>
-                        ))}
-                    </select>
+                <p className="preview-title">Preview a Piece</p>
+                <div class="vertical-input-group">
+                    <div className="input-group input-group-sm preview-select" data-bs-theme="dark">
+                        <span className="input-group-text">Component</span>
+                        <select value={this.state.chosenComponentName} onChange={this.updateChosenComponentName} className="form-select" id="inputGroupSelect01">
+                            {this.state.componentOptions.map(componentOption => (
+                                <option key={componentOption} value={componentOption}>{componentOption}</option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className="input-group input-group-sm preview-select" data-bs-theme="dark">
+                        <span className="input-group-text">Piece</span>
+                        <select value={this.state.chosenPieceName} onChange={this.updateChosenPieceName} className="form-select" id="inputGroupSelect01">
+                            {this.state.piecesOptions.map(piecesOption => (
+                                <option key={piecesOption} value={piecesOption}>{piecesOption}</option>
+                            ))}
+                        </select>
+                    </div>
                 </div>
                 <button className="btn preview-button" onClick={this.preview}>Preview</button>
                 <div className="preview-images">
                     {this.state.loadingImages ? <p>Loading images...</p> : 
                         this.state.imageSources.map(filepath => (
-                            <img key={filepath} className="preview-image" src={`file://${filepath}?${this.state.imageHash}`} />
+                            <RenderImage key={filepath} filepath={filepath} imageHash={this.state.imageHash}/>
                         ))
                     }
                 </div>
