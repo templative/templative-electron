@@ -85,7 +85,7 @@ export default class CreatePanel extends React.Component {
                         <p >Filter by Tags</p>
                     </div>
                     <div className="form-check form-switch custom-or-stock">
-                        <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked={this.state.isToggledToComponents} onClick={this.toggleCustomOrStock}/>
+                        <input className="form-check-input stock-toggle" type="checkbox" role="switch" checked={this.state.isToggledToComponents} onClick={this.toggleCustomOrStock}/>
                         <label className="form-check-label" for="flexSwitchCheckDefault">{this.state.isToggledToComponents ? "Custom" : "Stock"} Components</label>
                     </div>
                     <ComponentTypeTagPicker 

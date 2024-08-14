@@ -75,6 +75,27 @@
     line-height: 1.6em;
     margin:0;
 }
+.stock-toggle {
+    background-color: #524429 !important;
+    border-color: #524429 !important;
+}
+.stock-toggle:checked {
+    background-color: #ffa500 !important;
+    border-color: #ffa500 !important;
+}
+.stock-toggle:disabled, .stock-toggle:checked:disabled {
+    opacity: 0.5;
+}
+.stock-toggle:focus, .stock-toggle:active {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0) !important;
+}
+.stock-toggle:hover {
+    background-color: #79643c !important;
+}
+.stock-toggle:checked:hover {
+    background-color: #ffc75e !important;
+}
 
 .selected-component-type {
     background-color: #ea9800 !important;
