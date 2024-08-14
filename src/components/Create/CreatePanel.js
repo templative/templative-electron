@@ -1,11 +1,16 @@
 import React from "react";
 import "./CreatePanel.css"
-import ComponentTypeTagPicker from "./ComponentTypeTagPicker";
+import ComponentTypeTagPicker from "./TypeSelection/ComponentTypeTagPicker";
 import TemplativeAccessTools from "../TemplativeAccessTools";
-import ComponentTypeList from "./ComponentTypeList";
+import ComponentTypeList from "./TypeSelection/ComponentTypeList";
 import { trackEvent } from "@aptabase/electron/renderer";
 var axios = require('axios');
-
+const addSpaces = (str) => {
+    return str
+        .replace(/([a-z])([A-Z])/g, '$1 $2')  // Add space between lowercase and uppercase
+        .replace(/([a-zA-Z])(\d)/g, '$1 $2')  // Add space between letters and numbers
+        .replace(/(\d)([a-zA-Z])/g, '$1 $2'); // Add space between numbers and letters
+}
 export default class CreatePanel extends React.Component {   
     state = {
         selectedComponentType: undefined,
@@ -61,25 +66,6 @@ export default class CreatePanel extends React.Component {
         var isCreateButtonDisabled = this.state.componentName === "" || this.state.selectedComponentType === undefined
         return <div className='mainBody'>
             <div className="main-col">
-                <div className="create-row">
-                    <div className="input-group input-group-sm mb-3 create-component-input-group"  data-bs-theme="dark">
-                        <span className="input-group-text">Component Name</span>
-                        <input type="text" className="form-control" 
-                            onChange={(event)=>this.updateComponentName(event.target.value)} 
-                            aria-label="What key to replace..." 
-                            value={this.state.componentName}
-                        />
-                        <button 
-                            disabled={isCreateButtonDisabled}
-                            className="btn btn-outline-secondary create-component-button" type="button" id="button-addon1"
-                            onClick={()=>this.createComponent()}
-                        >
-                            { this.state.isProcessing && <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>}
-                            Create
-                        </button>
-                    </div>
-                    
-                </div>
                 <div className="tag-choices">
                     <div className="tag-choices-label">
                         <p >Filter by Tags</p>
@@ -100,6 +86,28 @@ export default class CreatePanel extends React.Component {
                         selectTypeCallback={this.selectComponent}
                         selectedComponentType={this.state.selectedComponentType}
                         componentTypeOptions={componentTypeOptions}/>
+                </div>
+                <div className="create-row">
+                    <div className="input-group input-group-sm mb-3 create-component-input-group"  data-bs-theme="dark">
+                        <span className="input-group-text">Component Name</span>
+                        <input type="text" className="form-control" 
+                            onChange={(event)=>this.updateComponentName(event.target.value)} 
+                            aria-label="What key to replace..." 
+                            value={this.state.componentName}
+                        />
+                        <button 
+                            disabled={isCreateButtonDisabled}
+                            className="btn btn-outline-secondary create-component-button" type="button" id="button-addon1"
+                            onClick={()=>this.createComponent()}
+                        >
+                            { this.state.isProcessing && <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>}
+                            Create
+                        </button>
+                    </div>
+                    { !isCreateButtonDisabled && 
+                        <p className="creation-explanation">A {addSpaces(this.state.selectedComponentType)} named {this.state.componentName}...</p>
+                    }
+                    
                 </div>
             </div>     
         </div>

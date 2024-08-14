@@ -1,7 +1,7 @@
 import React from "react";
-import "./CreatePanel.css"
+import "./ComponentType.css"
 import ComponentType from "./ComponentType";
-import {componentTypeHasAllFilteredTags} from "./TagFilter"
+import {componentTypeHasAllFilteredTags} from "../TagFilter"
 
 export default class ComponentTypeList extends React.Component {   
     render() {

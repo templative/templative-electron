@@ -1,6 +1,6 @@
 import React from "react";
-import "./CreatePanel.css"
-import {componentTypeHasAllFilteredTags} from "./TagFilter"
+import "./ComponentTypeTags.css"
+import {componentTypeHasAllFilteredTags} from "../TagFilter"
 
 export const addComponentTypeTagsToComponentTagOptions = (componentTagOptions, componentTypeTags) => {
     for (var i = 0 ; i < componentTypeTags.length ; i++) {

@@ -1,5 +1,4 @@
 import React from "react";
-import "./CreatePanel.css"
 
 export default class ComponentType extends React.Component {      
     addSpaces = (str) => {
