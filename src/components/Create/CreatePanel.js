@@ -4,6 +4,7 @@ import ComponentTypeTagPicker from "./TypeSelection/ComponentTypeTagPicker";
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import ComponentTypeList from "./TypeSelection/ComponentTypeList";
 import { trackEvent } from "@aptabase/electron/renderer";
+import DocumentationButton from "../Documentation/DocumentationButton";
 var axios = require('axios');
 const addSpaces = (str) => {
     return str
@@ -65,6 +66,7 @@ export default class CreatePanel extends React.Component {
         var componentTypeOptions = Object.assign({}, componentTypes)
         var isCreateButtonDisabled = this.state.componentName === "" || this.state.selectedComponentType === undefined
         return <div className='mainBody'>
+            {/* <DocumentationButton endpoint="/1-making-your-game/creating-components" articleName="Go to 'How to Create Components' Documentation"/> */}
             <div className="main-col">
                 <div className="tag-choices">
                     <div className="tag-choices-label">
