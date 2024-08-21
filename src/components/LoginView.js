@@ -6,7 +6,10 @@ const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const CLIENT_ID = '683633354752-kgdc1pdb36sjiptugpep8ih754eslacc.apps.googleusercontent.com';
 
 export default class LoginView extends React.Component {   
+    
     render() {
+        console.log("Origin:", window.location.origin);
+
         var isLoginValid = emailPattern.test(this.props.email) && strongPasswordPattern.test(this.props.password)
         return <div className="start-view" data-bs-theme="dark">
             <div className="welcome-modal">
