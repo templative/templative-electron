@@ -79,9 +79,6 @@ class App extends React.Component {
     goToRegisterWebpage = async()=>{
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_URL, "https://www.templative.net/register")
     }
-    onGoogleSuccess = async (googleResponse) => {
-        await ipcRenderer.invoke(channels.TO_SERVER_LOGIN_GOOGLE, googleResponse.credential)
-    }
     render() {
         var element = <></>
         if (!this.state.loggedIn) {
@@ -93,7 +90,6 @@ class App extends React.Component {
                 password={this.state.password}
                 attemptLoginCallback={this.attemptLogin}
                 loginStatus={this.state.loginStatus}
-                onGoogleSuccessCallback={this.onGoogleSuccess}
             />
         }
         else if (this.state.templativeRootDirectoryPath === undefined) {

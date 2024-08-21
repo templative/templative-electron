@@ -63,7 +63,7 @@ const onReady = async () => {
     }
     createWindow()
     setupAppUpdateListener()
-    listenForRenderEvents()
+    listenForRenderEvents(templativeWindow)
   }
   catch(err) {
     error(err)
