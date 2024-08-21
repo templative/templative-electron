@@ -36,27 +36,7 @@ const createWindow = () => {
         await shutdown()
     })
 }
-const createStartupWindow = () => {
-  var startupWindow = new BrowserWindow({
-    width: 125 * 2, height: 100 * 2,
-    title: "Templative Startup",
-    center:true, resizable:false, movable: true, minimizable: false,
-    maximizable: false, closable: false, focusable: false, alwaysOnTop: false,
-    fullscreenable: false, skipTaskbar: true, frame: false, hiddenInMissionControl: true,
-    titleBarStyle: "hidden", backgroundColor: '#282c34',
-    show: false,
-    icon: __dirname + "/favicon.ico",
-    webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false,
-      devTools: true,
-      webSecurity: false,
-    },
-  })
-  startupWindow.loadURL(`file://${__dirname}/startup.html`);
-  startupWindow.show()
-  return startupWindow
-}
+
 var servers = [
   new ServerRunner("templativeServer", 8080, serverEnvironmentConfiguration.templativeServerCommandsByEnvironment),
 ]
@@ -74,7 +54,6 @@ const launchServers = async () => {
 }
 const onReady = async () => {
   log("Starting Templative")
-  // startupWindow = createStartupWindow()
   try {
     var serverStartResult = await launchServers()
     if (serverStartResult === 0) {
@@ -90,8 +69,6 @@ const onReady = async () => {
     error(err)
     shutdown()
   }
-  // startupWindow.closable=true
-  // startupWindow.close()
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
