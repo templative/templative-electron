@@ -43,12 +43,31 @@ async def createPdfForPrinting(producedDirectoryPath, isBackIncluded, size, areM
     pdf.output(outputPath, "F")
     return 1
 
+def mergeDictsRecursive(dict1, dict2):
+    for key, value in dict2.items():
+        if key in dict1:
+            if isinstance(dict1[key], dict) and isinstance(value, dict):
+                # Both values are dictionaries, recurse into them
+                mergeDictsRecursive(dict1[key], value)
+            elif isinstance(dict1[key], list) and isinstance(value, list):
+                # Both values are lists, combine them
+                dict1[key].extend(value)
+            else:
+                # If the values are not both dicts or lists, you may choose to overwrite or handle differently
+                # For now, we'll just overwrite
+                dict1[key] = value
+        else:
+            # If the key doesn't exist in dict1, add it
+            dict1[key] = value
+
+    return dict1
+
 async def getDictionaryOfImageFilepathsAndQuantityGroupedByComponentType(producedDirectoryPath):
     componentTypeFilepathAndQuantity = {}
     directoryPathsInOutputFolder = next(walk(producedDirectoryPath))[1]
     for directoryPath in directoryPathsInOutputFolder:
         directoryComponentTypeFilepathAndQuantity = await loadFilepathsForComponent(producedDirectoryPath, directoryPath)
-        componentTypeFilepathAndQuantity.update(directoryComponentTypeFilepathAndQuantity)
+        componentTypeFilepathAndQuantity = mergeDictsRecursive(componentTypeFilepathAndQuantity, directoryComponentTypeFilepathAndQuantity)
     return componentTypeFilepathAndQuantity
 
 async def loadFilepathsForComponent(producedDirectoryPath, directoryPath):
