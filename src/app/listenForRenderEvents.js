@@ -13,7 +13,6 @@ function listenForRenderEvents() {
     ipcMain.handle(channels.TO_SERVER_OPEN_CREATE_PROJECT_DIALOG, createProject);
     ipcMain.handle(channels.TO_SERVER_OPEN_URL, openUrl)
     
-    ipcMain.handle(channels.TO_SERVER_LOGIN_GOOGLE, loginGoogle)
     ipcMain.handle(channels.TO_SERVER_LOGIN, login)
     ipcMain.handle(channels.TO_SERVER_IS_LOGGED_IN, giveLoginInformation)
 }
