@@ -181,7 +181,7 @@ export default class RenderPreview extends React.Component {
         return (
             <React.Fragment>
                 <p className="preview-title">Preview a Piece</p>
-                <div class="vertical-input-group">
+                <div className="vertical-input-group">
                     <div className="input-group input-group-sm preview-select" data-bs-theme="dark">
                         <span className="input-group-text">Component</span>
                         <select value={this.state.chosenComponentName} onChange={this.updateChosenComponentName} className="form-select" id="inputGroupSelect01">
