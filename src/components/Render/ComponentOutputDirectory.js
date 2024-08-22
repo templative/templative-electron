@@ -11,7 +11,8 @@ export default class ComponentOutputDirectory extends React.Component {
         svgFilepaths: [],
         remountKey: 0,
         isExtended: true,
-        rotationLeftQuantity: 0
+        rotationLeftQuantity: 0,
+        imageHash: Date.now(),
     }  
    
     #getComponentImageFilepaths = async () => {        
@@ -21,7 +22,7 @@ export default class ComponentOutputDirectory extends React.Component {
         var svgFilepaths = filepaths.filter(dirent => !dirent.isDirectory() && dirent.name.split(".").pop() === "svg")
             .map(dirent => ({path: this.props.componentDirectory, name: dirent.name}))
         
-        this.setState({imageFilepaths: imageFilepaths, svgFilepaths: svgFilepaths, remountKey: this.state.remountKey+1})
+        this.setState({imageFilepaths: imageFilepaths, svgFilepaths: svgFilepaths, remountKey: this.state.remountKey+1, imageHash: Date.now()})
 
     }
     #stopWatchingComponentDirectoryFolderForChanges = () => {
@@ -79,7 +80,7 @@ export default class ComponentOutputDirectory extends React.Component {
         var imageDivs = this.state.imageFilepaths.map((dirent, index) => {
             // console.log(dirent)
             var imagePath = path.join(dirent.path, dirent.name)
-            return <RenderOutputImage key={imagePath} imagePath={imagePath}/>
+            return <RenderOutputImage key={imagePath} imagePath={imagePath} imageHash={this.state.imageHash}/>
         })
         var componentDirectory = this.props.componentDirectory.replaceAll("\\", "/")
         componentDirectory = componentDirectory.substring(componentDirectory.lastIndexOf("/") + 1, componentDirectory.length)

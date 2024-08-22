@@ -57,7 +57,7 @@ export default class RenderOutputImage extends React.Component {
             {this.state.isHovering && (
                 <img 
                     className="output-image-giganto" 
-                    src={`file://${this.props.imagePath}`}
+                    src={`file://${this.props.imagePath}?${this.props.imageHash}`}
                 />
             )}
         </React.Fragment>
