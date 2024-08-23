@@ -46,7 +46,7 @@ export default class RenderPreview extends React.Component {
 
             // const preloadImages = filepaths.map(src => this.#preloadImage(src));
             // await Promise.all(preloadImages);
-            console.log(filepaths)
+            // console.log(filepaths)
             this.setState({
                 imageSources: filepaths,
                 loadingImages: false,
