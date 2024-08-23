@@ -52,7 +52,7 @@ export default class UploadControls extends React.Component {
                 </div>
             </div>
             <div className="input-group input-group-sm" data-bs-theme="dark">
-                <button disabled={!canUpload} type="button" className="btn btn-outline-secondary create-playground-button" onClick={async () => await this.props.uploadCallback()}>{buttonMessage}</button>
+                <button disabled={!canUpload} type="button" className="btn btn-outline-secondary upload-tgc-button" onClick={async () => await this.props.uploadCallback()}>{buttonMessage}</button>
             </div>
         </div>
     }

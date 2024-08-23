@@ -53,3 +53,12 @@
     height: 100%;
     width: 100%;
 }
+.upload-tgc-button {
+    width: 100%;
+    background-color: orange !important;
+    color:#313540 !important;
+    font-weight: bold !important;
+}
+.upload-tgc-button:hover {
+    background-color: #30353a !important;
+}
