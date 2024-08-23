@@ -30,13 +30,6 @@ export default class UploadControls extends React.Component {
                 <span className="input-group-text upload-control-column-field" id="basic-addon3">Password</span>
                 <input type="password" className="form-control" value={this.props.password} onChange={(e)=> this.props.updatePasswordCallback(e.target.value)} placeholder=""/>
             </div>
-            <div className="input-group input-group-sm" data-bs-theme="dark">
-                <span className="input-group-text upload-control-column-field">Cadence</span>
-                <select value={this.props.isAsync} onChange={(e)=>{this.props.updateIsAsyncCallback(e.target.value)}} className="form-select" id="inputGroupSelect01">
-                    <option value={true}>All at Once</option>
-                    <option value={false}>Sequentially</option>
-                </select>
-            </div>
             <div className="input-group input-group-sm upload-checkbox-controls" data-bs-theme="dark">
                 <span className="input-group-text upload-publish-checkbox">Publish?</span>
                 <div className="input-group-text">
