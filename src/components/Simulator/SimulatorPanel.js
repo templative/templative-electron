@@ -73,10 +73,10 @@ export default class SimulatorPanel extends React.Component {
     render() {
         var buttonMessage = "Select an Output Directory"
         if (this.state.isCreating) {
-            buttonMessage = "Creating Simulator Package..."
+            buttonMessage = "Creating Simulator Save..."
         }
         else if (this.state.selectedOutputDirectory !== undefined) {
-            buttonMessage = "Create Simulator Package"
+            buttonMessage = "Create Simulator Save"
         }
         var isCreateDisabled = this.state.isCreating || this.state.selectedOutputDirectory === undefined
         
