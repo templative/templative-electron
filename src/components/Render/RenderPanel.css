@@ -8,6 +8,7 @@
 .directory {
     margin-bottom: 0.16em !important;
     padding-left:1em;
+    height: 30px;
 }
 .directory:nth-child(even) {
     background-color: hsl(224, 13%, 17.5%);
@@ -93,6 +94,9 @@
 .component-filter-options {
     height: 5em;
     overflow-y: scroll;
+}
+.component-filter-options>.directory {
+    height: 18px;
 }
 .outputPanel {
     height: 100%;

@@ -10,7 +10,7 @@
     width: 100%;
 }
 .create-playground-button {
-    width: 100%;
+    width: 95%;
     background-color: orange !important;
     color:#313540 !important;
     font-weight: bold !important;
@@ -38,4 +38,7 @@
 }
 .playground-controls > .render-output-options-container { 
     height: calc(100% - 450px);
+}
+.playground-controls > .selectable-directories {
+    height: 10em !important;
 }

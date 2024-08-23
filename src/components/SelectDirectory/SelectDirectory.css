@@ -2,12 +2,16 @@
     background-color: #3f454c;
 }
 .selecteable-directories {
-    height: 300px;
+    /* height: 300px; */
     display: flex;
     flex-direction: column;
 }
 .directory-select-options {
     flex: 1;
+    height: calc(100% - 24px);
     overflow-y: scroll;
     overflow-x: hidden;
+}
+.directory-item {
+    text-align: left;
 }
