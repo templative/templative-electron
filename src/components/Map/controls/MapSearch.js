@@ -21,8 +21,8 @@ const camelCaseToTitleCase = (str) => {
   }
 export default class MapSearch extends React.Component {  
     state = {
-        pitch: "In Caps and Hammers, battle your opponent for ideological dominance of the planet using your spies, diplomats, soldiers, guerillas, and nukes. Avoid causes a nuclear crisis, navigate hidden information, and win the Cold War your way.",
-        theme: "Cold War",
+        pitch: "",
+        theme: "",
         weight: "Light",
         size: "Small",
         customComponents: "Standard Components",
