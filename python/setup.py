@@ -12,7 +12,7 @@ setup(
         "aiohttp",
         "asyncclick",
         "fpdf2",
-        "markdown2",
+        "reportlab"
         "Pillow",
         "svgmanip",
         "svgutils",
