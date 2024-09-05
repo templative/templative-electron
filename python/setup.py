@@ -8,19 +8,20 @@ setup(
     description = "Create board games based on art templates, json, and csvs.",
     url = "",
     install_requires=[
+        "asyncclick",
+        "anyio",
         "aiofile",
         "aiohttp",
-        "asyncclick",
-        "fpdf2",
-        "reportlab"
-        "Pillow",
-        "svgmanip",
-        "svgutils",
         "tabulate",
-        "Wand",
+        "aiohttp-cors",
+        "pillow",
+        "fpdf",
+        "svgmanip",
+        "python-socketio",
         "numpy",
+        "pyinstaller",
+        "requests",
         "aiofiles",
-        "requests"
     ],
     entry_points = {
         "console_scripts": [
@@ -44,5 +45,5 @@ setup(
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=3.7",
+    python_requires="==3.11.9",
 )
