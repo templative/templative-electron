@@ -7,7 +7,7 @@ export default class RenderButton extends React.Component {
             return <option key={language.code} value={language.code}>{language.name}</option>
         })
         return <div className="render-controls">
-                <div className="input-group input-group-sm render-input-group" data-bs-theme="dark">
+                {/* <div className="input-group input-group-sm render-input-group" data-bs-theme="dark">
                     <span className="input-group-text locked">🎙️</span>
                     <select disabled value={this.props.selectedLanguage} onChange={(language)=>{this.props.setLanguageCallback(language)}} className="form-select locked" id="inputGroupSelect01">
                         {languageOptions}
@@ -19,11 +19,11 @@ export default class RenderButton extends React.Component {
                         </svg>
                         <input disabled className="form-check-input mt-0 " type="checkbox" value="" onChange={()=>{ this.props.toggleDebugCallback()}} checked={this.props.isDebugRendering} />
                     </div>
-                    {/* <span className="input-group-text">🔎</span>
+                    <span className="input-group-text">🔎</span>
                     <div className="input-group-text">
                         <input className="form-check-input mt-0" type="checkbox" value="" onChange={()=>{ this.props.toggleComplexCallback()}} checked={this.props.isComplexRendering} aria-label="Checkbox for following text input"/>
-                    </div> */}
-                </div>
+                    </div>
+                </div> */}
                 <div className="input-group input-group-sm render-input-group" data-bs-theme="dark">
                     {/* <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span */}
                     <button type="button" className="btn btn-outline-secondary renderButton" onClick={() => this.props.renderTemplativeProjectCallback()}>
