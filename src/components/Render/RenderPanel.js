@@ -99,7 +99,7 @@ export default class RenderPanel extends React.Component {
         
         return <div className='mainBody'>
             <div className="row">
-                <div className="col-4 directoryPanel">
+                <div className="col-xs-12 col-md-7 col-lg-6 col-xl-3 directoryPanel">
                     <div className="component-filter-container">
                         <div className="headerWrapper">
                             <p className="resourcesHeader">Render Specific Component?</p>
@@ -123,7 +123,7 @@ export default class RenderPanel extends React.Component {
     
                     <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
                 </div>  
-                <div className="col-8 outputPanel">
+                <div className="col-xs-12 col-md-5 col-lg-6 col-xl-9 outputPanel">
                     <OutputExplorer outputFolderPath={this.state.selectedDirectory}/>
                 </div>        
             </div>
