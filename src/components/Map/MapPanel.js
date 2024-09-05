@@ -21,10 +21,10 @@ export default class MapPanel extends React.Component {
             <div className="row">
                 <div className="col map-column">
                     <Map doesUserOwnTemplative={this.state.doesUserOwnTemplative}/>
-                </div>
-                <div className="col-4 map-search-column">
+                </div>                    
+                {/* <div className="col-4 map-search-column">
                     <MapSearch doesUserOwnTemplative={this.state.doesUserOwnTemplative} email={this.props.email} token={this.props.token}/>
-                </div>
+                </div> */}
             </div>
         </div>
     }
