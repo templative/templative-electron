@@ -14,7 +14,7 @@ async def createPackage(input, output):
     packageNames = await createComponentPackages(input, newPackageDirectoryPath)
 
     mainPackageContents = await assembleMainPackageContents(gameVersionName, packageNames)
-    await createFile(newPackageDirectoryPath, "package.tsx", mainPackageContents)
+    await createFile(newPackageDirectoryPath, "package.jsx", mainPackageContents)
 
 async def assembleMainPackageContents(gameVersionName, packageNames):
     componentPackageExports = ""
@@ -73,7 +73,7 @@ async def createComponentPackage(componentSourceDirectoryPath, outputDirectoryPa
     componentPackageExports = componentPackageExports + "\tback: back, \n"
 
     contents = "//\n// %s\n//\n\n%s\n\nexport default {\n%s}" % (componentName, componentImageInclusions, componentPackageExports)
-    await createFile(componentOutputDirectory, "%s.tsx" % componentName, contents) 
+    await createFile(componentOutputDirectory, "%s.jsx" % componentName, contents) 
     return componentName   
 
 async def createFile(outputDirectory, filename, contents):
