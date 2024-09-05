@@ -1,6 +1,5 @@
 import React from "react";
 import langaugeInfo from "./languageOptions";
-import "./RenderPanel.css"
 
 export default class RenderButton extends React.Component {   
     render() {

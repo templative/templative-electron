@@ -18,7 +18,7 @@ export default class RenderOutputImage extends React.Component {
             <div className="output-image-container">
                 <img 
                     className="output-image" 
-                    src={`file://${this.props.imagePath}`} 
+                    src={`file://${this.props.imagePath}?${this.props.imageHash}`} 
                 />
                 <div 
                     onMouseEnter={this.handleMouseEnter}

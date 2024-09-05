@@ -1,5 +1,4 @@
 import React from "react";
-import "./RenderPanel.css"
 import ComponentOutputDirectory from "./ComponentOutputDirectory";
 const fs = require("fs/promises");
 const path = require('path');

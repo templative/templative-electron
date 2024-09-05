@@ -1,6 +1,6 @@
 import React from "react";
-import OutputExplorer from "./OutputExplorer"
-import RenderButton from "./RenderButton"
+import OutputExplorer from "./RenderedOutput/OutputExplorer"
+import RenderButton from "./RenderControls/RenderButton"
 import "./RenderPanel.css"
 import socket from "../../socket"
 import { LoggedMessages } from "../SocketedConsole/LoggedMessages"
@@ -8,7 +8,6 @@ import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 import { trackEvent } from "@aptabase/electron/renderer";
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import TemplativeClient from "../../TemplativeClient"
-import TemplativePurchaseButton from "../TemplativePurchaseButton";
 
 const path = require('path');
 

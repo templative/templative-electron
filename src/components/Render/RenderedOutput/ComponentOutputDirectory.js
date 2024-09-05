@@ -1,5 +1,4 @@
 import React from "react";
-import "./RenderPanel.css"
 import RenderOutputImage from "./RenderedOutputImage";
 const fs = require("fs/promises");
 const path = require('path');
@@ -22,7 +21,7 @@ export default class ComponentOutputDirectory extends React.Component {
         var svgFilepaths = filepaths.filter(dirent => !dirent.isDirectory() && dirent.name.split(".").pop() === "svg")
             .map(dirent => ({path: this.props.componentDirectory, name: dirent.name}))
         
-        this.setState({imageFilepaths: imageFilepaths, svgFilepaths: svgFilepaths, remountKey: this.state.remountKey+1, imageHash: Date.now()})
+        this.setState({imageFilepaths: imageFilepaths, svgFilepaths: svgFilepaths, remountKey: this.state.remountKey+1, imageHash: Math.floor(Date.now()/1000)})
 
     }
     #stopWatchingComponentDirectoryFolderForChanges = () => {
