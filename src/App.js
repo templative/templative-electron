@@ -7,6 +7,7 @@ import './App.css';
 import {writeLastOpenedProject, getLastProjectDirectory} from "./settings/SettingsManager"
 import { trackEvent } from "@aptabase/electron/renderer";
 import LoginView from "./components/LoginView";
+import BootstrapSizeIndicator from "./SizeIndicator";
 
 const { ipcRenderer } = require('electron');
 
@@ -106,6 +107,7 @@ class App extends React.Component {
             />
         }
         return <div className="App">
+            {/* <BootstrapSizeIndicator/> */}
             <div className="container-fluid">
                 {element}
             </div>
