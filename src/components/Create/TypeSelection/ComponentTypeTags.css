@@ -28,6 +28,7 @@
 }
 .component-tag-options {
     overflow-y: scroll;
+    height: 100%;
 }
 
 .stock-toggle {

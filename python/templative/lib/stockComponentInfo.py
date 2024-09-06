@@ -5899,6 +5899,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "packaging",
       "example",
       "model",
       "template",
@@ -5923,6 +5924,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "packaging",
       "example",
       "model",
       "template",
@@ -5947,6 +5949,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "packaging",
       "example",
       "model",
       "template",
@@ -5971,6 +5974,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "packaging",
       "example",
       "model",
       "template",
@@ -5995,6 +5999,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "packaging",
       "example",
       "model",
       "template",
@@ -6019,6 +6024,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "packaging",
       "example",
       "model",
       "template",
@@ -6043,6 +6049,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "packaging",
       "example",
       "model",
       "template",
@@ -6067,6 +6074,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "packaging",
       "example",
       "model",
       "template",
@@ -6091,6 +6099,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "packaging",
       "example",
       "model",
       "template",
@@ -6115,6 +6124,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "packaging",
       "example",
       "model",
       "template",
@@ -6139,6 +6149,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "packaging",
       "example",
       "model",
       "template",
@@ -6163,6 +6174,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "packaging",
       "example",
       "model",
       "template",
@@ -6187,6 +6199,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "packaging",
       "example",
       "model",
       "template",
@@ -6211,6 +6224,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "packaging",
       "example",
       "model",
       "template",
@@ -7187,6 +7201,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "document",
       "example",
       "model",
       "template",
@@ -7210,6 +7225,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "document",
       "example",
       "model",
       "template",
@@ -7233,6 +7249,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "document",
       "example",
       "model",
       "template",
@@ -7256,6 +7273,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "document",
       "example",
       "model",
       "template",
@@ -7279,6 +7297,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
+      "document",
       "example",
       "model",
       "template",
@@ -7304,6 +7323,7 @@ STOCK_COMPONENT_INFO = {
       "blank",
       "prototype",
       "example",
+      "document",
       "model",
       "template",
       "design",
@@ -7328,6 +7348,7 @@ STOCK_COMPONENT_INFO = {
       "prototype",
       "example",
       "model",
+      "document",
       "template",
       "design",
       "sample",
@@ -15449,6 +15470,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "poker",
       "pack",
+      "packaging",
       "card",
       "protector",
       "trading",
@@ -15473,6 +15495,7 @@ STOCK_COMPONENT_INFO = {
       "poker",
       "pack",
       "card",
+      "packaging",
       "protector",
       "trading",
       "magic the gathering",
@@ -15496,6 +15519,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "poker",
       "pack",
+      "packaging",
       "card",
       "protector",
       "trading",
@@ -55578,6 +55602,7 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "17A06EF0-254D-11ED-91D6-27B279D8BDFD",
     "Tags": [
       "blank",
+      "packaging",
       "prototype",
       "example",
       "model",
@@ -55603,6 +55628,7 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "B2C9C2C8-2548-11ED-91D6-E67A79D8BDFD",
     "Tags": [
       "blank",
+      "packaging",
       "prototype",
       "example",
       "model",

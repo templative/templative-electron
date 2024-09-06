@@ -55,6 +55,15 @@ export default class ComponentTypeTagPicker extends React.Component {
                 }
                 return 0;
             })
+            .filter(tag => {
+                for (let index = 0; index < this.props.majorCategories.length; index++) {
+                    const majorCategory = this.props.majorCategories[index];
+                    if (tag === majorCategory) {
+                        return false
+                    }
+                }
+                return true
+            })
             .map((tag) => {
                 return <button 
                     key={tag} 

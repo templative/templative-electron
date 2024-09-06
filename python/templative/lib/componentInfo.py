@@ -22,6 +22,7 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "HexShard",
         "Tags": [
+            "token",
             "shard",
             "hex"
         ]
@@ -49,6 +50,7 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "CircleShard",
         "Tags": [
+            "token",
             "circle",
             "shard"
         ]
@@ -76,6 +78,7 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "SquareShard",
         "Tags": [
+            "token",
             "shard",
             "square"
         ]
@@ -251,8 +254,7 @@ COMPONENT_INFO = {
         "DisplayName": "MintTinDeck",
         "Tags": [
             "deck",
-            "mint",
-            "tin"
+            "mint"
         ]
     },
     "HexDeck": {
@@ -307,6 +309,7 @@ COMPONENT_INFO = {
         "Tags": [
             "small",
             "square",
+            "token",
             "chit"
         ]
     },
@@ -334,6 +337,7 @@ COMPONENT_INFO = {
         "DisplayName": "MediumSquareChit",
         "Tags": [
             "chit",
+            "token",
             "square",
             "medium"
         ]
@@ -363,6 +367,7 @@ COMPONENT_INFO = {
         "Tags": [
             "chit",
             "square",
+            "token",
             "large"
         ]
     },
@@ -391,6 +396,7 @@ COMPONENT_INFO = {
         "Tags": [
             "small",
             "ring",
+            "token",
             "chit"
         ]
     },
@@ -419,6 +425,7 @@ COMPONENT_INFO = {
         "Tags": [
             "medium",
             "ring",
+            "token",
             "chit"
         ]
     },
@@ -447,6 +454,7 @@ COMPONENT_INFO = {
         "Tags": [
             "large",
             "ring",
+            "token",
             "chit"
         ]
     },
@@ -475,6 +483,7 @@ COMPONENT_INFO = {
         "Tags": [
             "circle",
             "small",
+            "token",
             "chit"
         ]
     },
@@ -503,6 +512,7 @@ COMPONENT_INFO = {
         "Tags": [
             "circle",
             "medium",
+            "token",
             "chit"
         ]
     },
@@ -531,6 +541,7 @@ COMPONENT_INFO = {
         "Tags": [
             "circle",
             "large",
+            "token",
             "chit"
         ]
     },
@@ -560,6 +571,7 @@ COMPONENT_INFO = {
             "mini",
             "tile",
             "hex",
+            "token",
             "chit"
         ]
     },
@@ -589,6 +601,7 @@ COMPONENT_INFO = {
             "tile",
             "small",
             "hex",
+            "token",
             "chit"
         ]
     },
@@ -618,6 +631,7 @@ COMPONENT_INFO = {
             "tile",
             "hex",
             "medium",
+            "token",
             "chit"
         ]
     },
@@ -647,6 +661,7 @@ COMPONENT_INFO = {
             "tile",
             "hex",
             "large",
+            "token",
             "chit"
         ]
     },
@@ -672,8 +687,8 @@ COMPONENT_INFO = {
         "DisplayName": "MintTinAccordion4",
         "Tags": [
             "mint",
-            "accordion",
-            "tin"
+            "document",
+            "accordion"
         ]
     },
     "BiFoldMat": {
@@ -750,7 +765,7 @@ COMPONENT_INFO = {
         "Tags": [
             "mint",
             "accordion",
-            "tin"
+            "document"
         ]
     },
     "MintTinAccordion8": {
@@ -775,8 +790,8 @@ COMPONENT_INFO = {
         "DisplayName": "MintTinAccordion8",
         "Tags": [
             "mint",
-            "accordion",
-            "tin"
+            "document",
+            "accordion"
         ]
     },
     "PokerFolio": {
@@ -803,6 +818,7 @@ COMPONENT_INFO = {
         "DisplayName": "PokerFolio",
         "Tags": [
             "poker",
+            "document",
             "folio"
         ]
     },
@@ -834,7 +850,7 @@ COMPONENT_INFO = {
         "DisplayName": "MintTinFolio",
         "Tags": [
             "mint",
-            "tin",
+            "document",
             "folio"
         ]
     },
@@ -906,6 +922,7 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "PokerHookbox36",
         "Tags": [
+            "packaging",
             "hookbox",
             "poker"
         ]
@@ -930,7 +947,6 @@ COMPONENT_INFO = {
         "HasPieceQuantity": True,
         "Tags": [
             "mint",
-            "tin",
             "packaging"
         ]
     },
@@ -1239,6 +1255,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "arrow",
+            "token",
             "chit"
         ]
     },
@@ -1331,6 +1348,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "bridge",
+            "document",
             "folio"
         ]
     },
@@ -1354,6 +1372,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "bridge",
+            "packaging",
             "box",
             "hookbox",
             "hook"
@@ -1379,6 +1398,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "bridge",
+            "packaging",
             "box",
             "hookbox",
             "hook"
@@ -1402,6 +1422,7 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
+            "packaging",
             "tuck",
             "box",
             "hookbox",
@@ -1427,6 +1448,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "tuck",
+            "packaging",
             "box",
             "hookbox",
             "bridge"
@@ -1452,6 +1474,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "bullseye",
+            "token",
             "chit"
         ]
     },
@@ -2079,6 +2102,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "chit",
+            "token",
             "domino"
         ]
     },
@@ -2125,6 +2149,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "tile",
+            "token",
             "chit",
             "domino"
         ]
@@ -2455,6 +2480,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "box",
+            "packaging",
             "jumbo",
             "hook",
             "hookbox"
@@ -2480,6 +2506,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "box",
+            "packaging",
             "jumbo",
             "hook",
             "hookbox"
@@ -2505,6 +2532,7 @@ COMPONENT_INFO = {
         "Tags": [
             "tuckbox",
             "tuck",
+            "packaging",
             "box",
             "jumbo"
         ]
@@ -2648,6 +2676,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "ring",
+            "token",
             "large",
             "chit"
         ]
@@ -2767,6 +2796,7 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
+            "token",
             "tile",
             "chit",
             "square",
@@ -2938,6 +2968,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "medium",
+            "document",
             "folio"
         ]
     },
@@ -3059,6 +3090,7 @@ COMPONENT_INFO = {
         "Tags": [
             "ring",
             "medium",
+            "token",
             "chit"
         ]
     },
@@ -3153,6 +3185,7 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
+            "token",
             "tile",
             "chit",
             "square",
@@ -3225,6 +3258,7 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
+            "token",
             "triangle",
             "chit",
             "medium"
@@ -3274,6 +3308,7 @@ COMPONENT_INFO = {
             "tile",
             "circle",
             "mini",
+            "token",
             "chit"
         ]
     },
@@ -3296,6 +3331,7 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
+            "token",
             "tile",
             "mini",
             "square"
@@ -3321,7 +3357,6 @@ COMPONENT_INFO = {
         "Tags": [
             "sticker",
             "mint",
-            "tin",
             "packaging"
         ]
     },
@@ -3941,6 +3976,7 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
+            "document",
             "small",
             "folio"
         ]
@@ -4011,6 +4047,7 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
+            "deck",
             "tarot",
             "insert",
             "small",
@@ -4085,6 +4122,7 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
+            "token",
             "small",
             "chit",
             "ring"
@@ -4229,6 +4267,7 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
+            "token",
             "tile",
             "small",
             "square"
@@ -4276,6 +4315,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "stout",
+            "deck",
             "small",
             "tarot",
             "insert"
@@ -4369,6 +4409,7 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
+            "document",
             "square",
             "folio"
         ]
@@ -4394,6 +4435,7 @@ COMPONENT_INFO = {
         "Tags": [
             "box",
             "square",
+            "packaging",
             "hook"
         ]
     },
@@ -4418,6 +4460,7 @@ COMPONENT_INFO = {
         "Tags": [
             "box",
             "square",
+            "packaging",
             "hook"
         ]
     },
@@ -4464,6 +4507,7 @@ COMPONENT_INFO = {
         "Tags": [
             "tuck",
             "box",
+            "packaging",
             "square"
         ]
     },
@@ -4486,6 +4530,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "tuck",
+            "packaging",
             "box",
             "square"
         ]
@@ -4532,6 +4577,7 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
+            "token",
             "chit",
             "strip"
         ]
@@ -4578,6 +4624,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "tall",
+            "document",
             "booklet"
         ]
     },
@@ -4600,6 +4647,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "booklet",
+            "document",
             "tarot"
         ]
     },
@@ -4645,6 +4693,7 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
+            "document",
             "tarot",
             "folio"
         ]
@@ -4669,6 +4718,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "tarot",
+            "packaging",
             "box",
             "hook"
         ]
@@ -4694,6 +4744,7 @@ COMPONENT_INFO = {
         "Tags": [
             "tarot",
             "box",
+            "packaging",
             "hook"
         ]
     },
@@ -4716,6 +4767,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "tuck",
+            "packaging",
             "box",
             "tarot"
         ]
@@ -4740,6 +4792,7 @@ COMPONENT_INFO = {
         "Tags": [
             "tuck",
             "box",
+            "packaging",
             "tarot"
         ]
     },
@@ -4785,6 +4838,7 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "tombstone",
+            "token",
             "shard"
         ]
     },
@@ -4830,6 +4884,7 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
+            "token",
             "tile",
             "triangle"
         ]
