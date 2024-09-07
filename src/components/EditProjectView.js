@@ -205,8 +205,9 @@ export default class EditProjectView extends React.Component {
         }
     }
     getCurrentRoute = () => {
-      var location = window.location.href
-      return location.split("http://localhost:3000")[1]
+      var location = window.location.href.split("http://localhost:3000")[1]
+      location = location.replace('/main_window#','')
+      return location
     }
     
     componentDidMount = async () => {
@@ -238,7 +239,7 @@ export default class EditProjectView extends React.Component {
         })
     }
     updateRoute = (route) => {
-        console.log(this.state.currentRoute, "->", route)
+        route = route.replace('"/main_window#"','')
         this.setState({currentRoute: route})
     }
 
@@ -330,7 +331,7 @@ export default class EditProjectView extends React.Component {
     }
     render() {
         return <HashRouter>
-            <TopNavbar topNavbarItems={TOP_NAVBAR_ITEMS} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
+            <TopNavbar topNavbarItems={TOP_NAVBAR_ITEMS} currentRoute={this.getCurrentRoute()} updateRouteCallback={this.updateRoute}/>
             <Routes>
                 <Route path='/create' element={ 
                     <CreatePanel 
