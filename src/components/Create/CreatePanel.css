@@ -8,7 +8,10 @@
     height: 3em;
     width:100%;
 }
-
+.custom-or-stock {
+    margin-right: 2em;
+    margin-top: 0.8em;
+}
 .component-type-list-col {
     padding-bottom: 0.1em;
 }

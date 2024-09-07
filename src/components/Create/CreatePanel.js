@@ -17,13 +17,8 @@ const addSpaces = (str) => {
 }
 
 const majorCategories = [
-    "deck",
-    "die",
-    "board",
-    "token",
-    "mat",
-    "packaging",
-    "document",
+    "deck", "die", "board","token","mat","packaging","box", "document",
+    "animal", "blank", "building", "minifig", "vehicle"
 ]
 
 export default class CreatePanel extends React.Component {   
@@ -79,7 +74,7 @@ export default class CreatePanel extends React.Component {
         this.setState({isProcessing: false, componentName: "", selectedComponentType: undefined})
     }
     toggleCustomOrStock = () => {
-        this.setState({isToggledToComponents: !this.state.isToggledToComponents})
+        this.setState({isToggledToComponents: !this.state.isToggledToComponents, selectedComponentType: undefined})
     }
     render() {
         var componentTypes = this.state.isToggledToComponents ? this.props.componentTypesCustomInfo : this.props.componentTypesStockInfo
@@ -88,6 +83,10 @@ export default class CreatePanel extends React.Component {
         return <div className='mainBody'>
             <div className="create-component-name-row">
                 <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
+                    <div className="form-check form-switch custom-or-stock">
+                        <input className="form-check-input stock-toggle" type="checkbox" role="switch" checked={this.state.isToggledToComponents} onClick={this.toggleCustomOrStock}/>
+                        <label className="form-check-label">{this.state.isToggledToComponents ? "Custom" : "Stock"} Components</label>
+                    </div>
                     <span className="input-group-text">Component Name</span>
                     <input type="text" className="form-control" 
                         onChange={(event)=>this.updateComponentName(event.target.value)} 
@@ -107,10 +106,7 @@ export default class CreatePanel extends React.Component {
                     <p className="creation-explanation">A {addSpaces(this.state.selectedComponentType)} named {this.state.componentName}...</p>
                 }
             </div>
-            {/* <div className="form-check form-switch custom-or-stock">
-                <input className="form-check-input stock-toggle" type="checkbox" role="switch" checked={this.state.isToggledToComponents} onClick={this.toggleCustomOrStock}/>
-                <label className="form-check-label" for="flexSwitchCheckDefault">{this.state.isToggledToComponents ? "Custom" : "Stock"} Components</label>
-            </div> */}
+            
             <div className="row component-type-picking-row g-0">
                 <div className={`col-3 tag-picker-container ${ this.state.isPickerVisible ? "expanded" : "collapsed"}`}>
                     <ComponentTypeTagPicker 

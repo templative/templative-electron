@@ -8,13 +8,17 @@ export default class ComponentType extends React.Component {
             .replace(/(\d)([a-zA-Z])/g, '$1 $2'); // Add space between numbers and letters
     }
     render() {
-        var pixelSize = `${this.props.componentInfo["DimensionsPixels"][0]}x${this.props.componentInfo["DimensionsPixels"][1]}px`
+        var subtitle = <></>
+        if (this.props.componentInfo["DimensionsPixels"] !== undefined) {
+            var pixelSize = `${this.props.componentInfo["DimensionsPixels"][0]}x${this.props.componentInfo["DimensionsPixels"][1]}px`
+            subtitle =<p className="component-type-dimensions">{pixelSize}</p>
+        }
         return <button type="button" 
             className={`btn btn-dark component-type-card ${this.props.selectedComponentType === this.props.name && "selected-component-type"}`} 
             onClick={()=>this.props.selectTypeCallback(this.props.name)}
         >
             <p><strong> {this.props.existingQuantity !== 0 && `${this.props.existingQuantity}x `}{this.addSpaces(this.props.componentInfo["DisplayName"])}</strong></p>
-            <p className="component-type-dimensions">{pixelSize}</p>
+            {subtitle}
         </button>
     }
 }
