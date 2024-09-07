@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    width="200mm"
    height="200mm"
-   version="1.1"
+   fill="currentColor"
+   class="bi bi-easel"
    viewBox="0 0 200 200"
-   xmlSpace="preserve"
-   id="svg3"
+   version="1.1"
+   id="svg1"
    sodipodi:docname="artDataIcon.svg"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -15,9 +14,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs3" />
+     id="defs1" />
   <sodipodi:namedview
-     id="namedview3"
+     id="namedview1"
      pagecolor="#ffffff"
      bordercolor="#000000"
      borderopacity="0.25"
@@ -25,36 +24,19 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="mm"
-     inkscape:zoom="0.27010927"
-     inkscape:cx="405.3915"
-     inkscape:cy="372.07165"
+     inkscape:zoom="0.56396485"
+     inkscape:cx="261.54112"
+     inkscape:cy="220.75844"
      inkscape:window-width="2560"
      inkscape:window-height="1351"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg3" />
-  <g
-     id="g3">
-    <g
-       transform="translate(379.995,-39.52)"
-       id="g2">
-      <path
-         fill="none"
-         fillOpacity="0"
-         strokeLinecap="round"
-         strokeLinejoin="round"
-         strokeWidth="0.265"
-         d="m -379.995,39.52 h 200 v 200 h -200 z"
-         paintOrder="markers stroke fill"
-         id="path1" />
-      <path
-         fill="#65a0ff"
-         fillOpacity="1"
-         strokeWidth="0.398"
-         d="m -360.14,49.575 a 9.467,9.467 0 0 0 -0.479,0.005 c -1.864,0.062 -3.147,0.69 -4.021,1.564 -1.166,1.166 -1.893,3.058 -1.427,6.086 0.467,3.028 2.26,7.06 6.073,11.508 26.996,31.495 52.857,61.853 73.044,84.283 4.88,5.422 9.42,10.37 13.568,14.765 4.81,-12.685 13.746,-21.528 25.012,-25.732 a 864.987,864.987 0 0 0 -14.393,-13.22 c -22.43,-20.186 -52.788,-46.049 -84.283,-73.045 -4.448,-3.813 -8.48,-5.606 -11.508,-6.072 a 11.752,11.752 0 0 0 -1.586,-0.141 z m 117.609,98.07 c -12.112,3.032 -21.17,11.604 -25.292,25.932 2.247,2.3 4.356,4.407 6.275,6.245 3.014,2.888 5.604,5.172 7.638,6.742 0.706,-6.849 3.994,-13.146 8.606,-17.77 4.216,-4.225 9.74,-7.16 15.557,-7.59 -1.539,-1.924 -3.634,-4.276 -6.215,-6.969 a 279.447,279.447 0 0 0 -6.57,-6.59 z m 14.056,20.656 c -4.134,0.054 -8.322,2.1 -11.762,5.548 -4.588,4.599 -7.425,11.472 -6.468,18.172 2.12,14.848 9.443,26.167 19.666,32.301 9.037,5.422 20.458,6.899 33.258,2.777 -9.631,-1.595 -18.48,-12.21 -19.164,-20.14 4.227,5.095 9.519,9.76 15.279,12.625 -3.929,-8.978 -3.659,-18.073 -4.409,-25.576 -0.537,-5.376 -1.547,-9.933 -4.524,-13.98 -2.976,-4.049 -8.12,-7.874 -17.79,-11.097 a 12.35,12.35 0 0 0 -4.086,-0.63 z"
-         id="path2" />
-    </g>
-  </g>
+     inkscape:current-layer="svg1"
+     inkscape:document-units="mm" />
+  <path
+     d="m 99.999993,11.271037 c 2.747257,-0.0015 5.192717,1.548138 6.088327,3.858148 l 7.37551,19.038873 h 63.76645 c 7.10885,6e-6 12.8717,5.125677 12.8717,11.448511 V 125.7561 c 1e-5,6.32284 -5.76285,11.44852 -12.8717,11.44853 H 153.4176 l 17.0293,43.92792 c 1.15909,2.9908 -0.62738,6.25103 -3.99007,7.28171 -3.36269,1.03068 -7.02806,-0.55852 -8.1866,-3.54949 l -18.4709,-47.66014 h -33.36347 v 34.34552 c -0.003,3.15949 -2.8836,5.71932 -6.435861,5.71932 -3.552259,0 -6.432793,-2.55983 -6.435861,-5.71932 V 137.20463 H 60.200663 l -18.470906,47.66014 c -1.158461,2.99106 -4.823893,4.58034 -8.186645,3.54964 -3.362751,-1.03071 -5.149206,-4.29103 -3.989993,-7.28186 L 46.582392,137.20463 H 22.769726 c -7.108858,0 -12.8717221,-5.12569 -12.8717103,-11.44853 V 45.616569 c 0,-6.322837 5.7628603,-11.44851 12.8717103,-11.448511 h 63.766456 l 7.375491,-19.038873 c 0.895605,-2.310008 3.341065,-3.859688 6.08832,-3.858148"
+     id="path1"
+     style="fill:#e8b24e;fill-opacity:1;stroke:none;stroke-width:17.8723;stroke-dasharray:none;stroke-opacity:1"
+     sodipodi:nodetypes="ccccscsccsccccsccccsccscssccc" />
 </svg>
