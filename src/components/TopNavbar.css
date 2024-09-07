@@ -47,7 +47,6 @@
 .currentRoute {
     background-color: #282C35 !important;
 }
-
 .tooltip {
     display: none;
     position: absolute;
@@ -68,9 +67,10 @@
     border-top-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
+    pointer-events: none;
 }
 
-.nav-item:hover .tooltip {
+button:hover .tooltip {
     display: block;
     opacity: 100;
 }

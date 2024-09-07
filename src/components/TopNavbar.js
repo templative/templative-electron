@@ -13,8 +13,8 @@ class TopNavbar extends React.Component {
                     <Link onClick={() => { this.props.updateRouteCallback(topNavbarItem.route) }} to={topNavbarItem.route} className={"nav-link"}>
                         <button className={buttonClasses}>
                             {topNavbarItem.svg}
+                            <div className="tooltip">{topNavbarItem.name}</div>
                         </button>
-                        <div className="tooltip">{topNavbarItem.name}</div>
                     </Link>
                 </li>
             );
