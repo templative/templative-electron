@@ -65,7 +65,7 @@ export default class EditPanelTab extends React.Component {
         var icons = {
             "RULES": rulesIcon,
             "COMPONENTS": componentComposeIcon,
-            "KEYVALUE_GAMEDATA": componentIcon,
+            "COMPONENT_GAMEDATA": componentIcon,
             "PIECE_GAMEDATA": pieceIcon,
             "ART": artIcon,
             "ARTDATA": artDataIcon,

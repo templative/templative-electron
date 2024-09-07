@@ -87,7 +87,6 @@ export default class GameGamedataViewer extends EditableViewerJson {
         var rows = []
         if (this.state.hasLoaded && this.state.content !== undefined) {        
             var keys = Object.keys(this.state.content)
-            console.log(this.state.content, keys)
             keys = keys.sort()
             keys = keys.filter((key) => {
                 for(var c = 0; c < ignoredControlGamedataKeys.length; c++) {
@@ -198,7 +197,7 @@ export default class GameGamedataViewer extends EditableViewerJson {
                         <span className="input-group-text">coolFactors (comma seperated)</span>
                         <input type="text" className="form-control value-field" 
                             // onKeyDown={GameGamedataViewer.preventSpaces}
-                            // onChange={(event)=> this.updateValue("shortDescription", event.target.value)} 
+                            onChange={(event)=> this.updateValue("coolFactors", event.target.value)} 
                             value={this.state.content["coolFactors"]}/>
                     </div>
                 </div>

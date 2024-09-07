@@ -158,7 +158,7 @@ export default class TemplativeProjectRenderer extends React.Component {
         switch (filetype) {
             case "PIECE_GAMEDATA":
                 return "[]"
-            case "KEYVALUE_GAMEDATA":
+            case "COMPONENT_GAMEDATA":
                 return `{"displayName": "${filename}", "pieceDisplayName": "${filename}" }`
             case "ARTDATA":
                 return `{ "name":"${filename}", "templateFilename": "", "overlays": [], "textReplacements": [], "styleUpdates": [] }`
@@ -233,7 +233,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                         />
                         <ContentFileList
                             header="Component Gamedata" 
-                            contentType="KEYVALUE_GAMEDATA" 
+                            contentType="COMPONENT_GAMEDATA" 
                             filenameReferenceCounts={this.state.filenameReferenceCounts}
                             directoryPath={this.state.componentGamedataDirectory}
                             baseFilepath={this.state.componentGamedataDirectory}

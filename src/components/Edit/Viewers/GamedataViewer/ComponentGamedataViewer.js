@@ -2,8 +2,10 @@ import React from "react";
 import KeyValueInput from "./KeyValueInput"
 import EditableViewerJson from "../EditableViewerJson";
 import "./GamedataViewer.css"
-
-export default class KeyValueGamedataViewer extends EditableViewerJson {   
+const ignoredControlGamedataKeys = [
+    "displayName"
+]
+export default class ComponentGamedataViewer extends EditableViewerJson {   
     state = {
         trackedKey: undefined,
         currentUpdateValue: undefined
@@ -56,11 +58,44 @@ export default class KeyValueGamedataViewer extends EditableViewerJson {
         }
         this.updateKey(this.state.trackedKey, this.state.currentUpdateValue)
     }
+    
+    static preventSpaces = (e) => {
+        if (/[\s]/.test(e.key)) {
+            e.preventDefault();
+        }
+    }
+    static preventCommas = (e) => {
+        if (/,/.test(e.key)) {
+            e.preventDefault();
+        }
+    }
+    static preventNonNumbers = (e) => {
+        if (e.key === "Backspace" || e.key === "Tab") {
+            return
+        }
+        if(/[0-9\b]/.test(e.key)) {
+            return
+        }
+        e.preventDefault();
+    }
+    
+    static updateCoolFactors = (index, value) => {
+        
+    }
+    
     render() {
         var rows = []
-        if (this.state.hasLoaded && this.state.content !== undefined) {
+        if (this.state.hasLoaded && this.state.content !== undefined) {        
             var keys = Object.keys(this.state.content)
             keys = keys.sort()
+            keys = keys.filter((key) => {
+                for(var c = 0; c < ignoredControlGamedataKeys.length; c++) {
+                    if (key === ignoredControlGamedataKeys[c]) {
+                        return false
+                    }
+                };
+                return true
+            })
             rows = keys.map((key) => {
                 return <KeyValueInput 
                     key={key}
@@ -77,14 +112,22 @@ export default class KeyValueGamedataViewer extends EditableViewerJson {
         
         
         return <div className="row tableContainer">
+            {this.state.content !== undefined &&
             <div className="col">
                 <div className="vertical-input-group">
+                    <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
+                        <span className="input-group-text">displayName</span>
+                        <input type="text" className="form-control value-field" 
+                            onChange={(event)=>this.updateValue("displayName", event.target.value)} 
+                            value={this.state.content["displayName"]}/>                            
+                    </div>
                     {rows}
                     <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
                         <button onClick={() => this.addBlankKeyValuePair()} className="btn btn-outline-secondary add-button" type="button" id="button-addon1">➕</button>
                     </div>
                 </div>
             </div>
+            }
         </div>
     }
 }

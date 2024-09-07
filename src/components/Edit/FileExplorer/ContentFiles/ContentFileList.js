@@ -204,7 +204,7 @@ export default class ContentFileList extends React.Component {
         if (this.props.contentType === "COMPONENTS") {
             iconSource = componentComposeIcon
         }
-        if (this.props.contentType === "KEYVALUE_GAMEDATA") {
+        if (this.props.contentType === "COMPONENT_GAMEDATA") {
             iconSource = componentIcon
         }
         if (this.props.contentType === "PIECE_GAMEDATA") {

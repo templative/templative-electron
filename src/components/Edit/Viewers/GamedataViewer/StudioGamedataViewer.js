@@ -87,7 +87,6 @@ export default class StudioGamedataViewer extends EditableViewerJson {
         var rows = []
         if (this.state.hasLoaded && this.state.content !== undefined) {        
             var keys = Object.keys(this.state.content)
-            console.log(this.state.content, keys)
             keys = keys.sort()
             keys = keys.filter((key) => {
                 for(var c = 0; c < ignoredControlGamedataKeys.length; c++) {

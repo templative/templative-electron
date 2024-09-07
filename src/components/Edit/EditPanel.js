@@ -3,7 +3,7 @@ import TemplativeProjectRenderer from "./FileExplorer/TemplativeProjectRenderer"
 import ArtdataViewer from "./Viewers/ArtdataViewer/ArtdataViewer"
 import ComponentsViewer from "./Viewers/ComponentsViewer/ComponentsViewer"
 import PieceGamedataViewer from "./Viewers/GamedataViewer/PieceGamedataViewer"
-import KeyValueGamedataViewer from "./Viewers/GamedataViewer/KeyValueGamedataViewer"
+import ComponentGamedataViewer from "./Viewers/GamedataViewer/ComponentGamedataViewer"
 import GameGamedataViewer from "./Viewers/GamedataViewer/GameGamedataViewer";
 import ImageViewer from "./Viewers/ImageViewer";
 import RulesEditor from "./Viewers/RulesEditor";
@@ -83,8 +83,8 @@ export default class EditPanel extends React.Component {
                         {this.props.currentFileType === "PIECE_GAMEDATA" &&
                             <PieceGamedataViewer filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
                         }
-                        {this.props.currentFileType === "KEYVALUE_GAMEDATA" &&
-                            <KeyValueGamedataViewer filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
+                        {this.props.currentFileType === "COMPONENT_GAMEDATA" &&
+                            <ComponentGamedataViewer filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
                         }
                         {this.props.currentFileType === "STUDIO_GAMEDATA" &&
                             <StudioGamedataViewer filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>

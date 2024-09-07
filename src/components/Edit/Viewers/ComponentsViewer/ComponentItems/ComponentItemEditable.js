@@ -110,7 +110,7 @@ export default class ComponentItemEditable extends React.Component {
             
             <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
                 { this.state.componentGameDataExists ? 
-                    <button onClick={async () => await this.goToFile("KEYVALUE_GAMEDATA", this.state.componentGameDataFilePath)} className="btn btn-outline-secondary go-to-template-button component-left-bumper" type="button">Component Gamedata ↗</button> :
+                    <button onClick={async () => await this.goToFile("COMPONENT_GAMEDATA", this.state.componentGameDataFilePath)} className="btn btn-outline-secondary go-to-template-button component-left-bumper" type="button">Component Gamedata ↗</button> :
                     <span className="input-group-text component-left-bumper">Component Gamedata</span>
                 }
                 <FilepathsAutocompleteInput 
