@@ -22,7 +22,6 @@ export default class ComponentTypeList extends React.Component {
         var folders = this.props.majorCategories.map(category => 
             <ComponentTypeFolder key={category} selectTypeCallback={this.props.selectTypeCallback} category={category} selectedTags={this.props.selectedTags} componentTypeOptions={this.props.componentTypeOptions} selectedComponentType={this.props.selectedComponentType}/>
         )
-        console.log(this.props.componentTypeOptions)
         return <div className="component-type-list">
             {folders}
             {/* {folders.length !== 0 && <p>Other {folders.length}</p>}  */}
