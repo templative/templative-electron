@@ -6,6 +6,7 @@ import NewFileInput from "./NewFileInput"
 
 import artDataIcon from "../../Icons/artDataIcon.svg"
 import artIcon from "../../Icons/artIcon.svg"
+import componentIcon from "../../Icons/componentIcon.svg"
 import componentComposeIcon from "../../Icons/componentComposeIcon.svg"
 import pieceIcon from "../../Icons/pieceIcon.svg"
 import rulesIcon from "../../Icons/rulesIcon.svg"
@@ -204,9 +205,9 @@ export default class ContentFileList extends React.Component {
             iconSource = componentComposeIcon
         }
         if (this.props.contentType === "KEYVALUE_GAMEDATA") {
-            iconSource = pieceIcon
+            iconSource = componentIcon
         }
-        if (this.props.contentType === "KEYVALUE_GAMEDATA" || this.props.contentType === "PIECE_GAMEDATA") {
+        if (this.props.contentType === "PIECE_GAMEDATA") {
             iconSource = pieceIcon
         }
         if (this.props.contentType === "ART") {

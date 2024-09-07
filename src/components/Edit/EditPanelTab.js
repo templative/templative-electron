@@ -8,6 +8,9 @@ import artDataIcon from "./Icons/artDataIcon.svg"
 import artIcon from "./Icons/artIcon.svg"
 import componentComposeIcon from "./Icons/componentComposeIcon.svg"
 import pieceIcon from "./Icons/pieceIcon.svg"
+import gameIcon from "./Icons/gameIcon.svg"
+import studioIcon from "./Icons/studioIcon.svg"
+import componentIcon from "./Icons/componentIcon.svg"
 import rulesIcon from "./Icons/rulesIcon.svg"
 
 const path = require("path");
@@ -59,22 +62,18 @@ export default class EditPanelTab extends React.Component {
         shell.openPath(path.parse(this.props.tabbedFile.filepath).dir)
     }
     render() {
-        var iconSource = componentComposeIcon
-        if (this.props.tabbedFile.filetype === "RULES") {
-            iconSource = rulesIcon
+        var icons = {
+            "RULES": rulesIcon,
+            "COMPONENTS": componentComposeIcon,
+            "KEYVALUE_GAMEDATA": componentIcon,
+            "PIECE_GAMEDATA": pieceIcon,
+            "ART": artIcon,
+            "ARTDATA": artDataIcon,
+            "STUDIO_GAMEDATA": studioIcon,
+            "GAME_GAMEDATA": gameIcon,
         }
-        if (this.props.tabbedFile.filetype === "COMPONENTS") {
-            iconSource = componentComposeIcon
-        }
-        if (this.props.tabbedFile.filetype === "KEYVALUE_GAMEDATA" || this.props.tabbedFile.filetype === "PIECE_GAMEDATA") {
-            iconSource = pieceIcon
-        }
-        if (this.props.tabbedFile.filetype === "ART") {
-            iconSource = artIcon
-        }
-        if (this.props.tabbedFile.filetype === "ARTDATA") {
-            iconSource = artDataIcon
-        }
+        var iconSource = icons[this.props.tabbedFile.filetype]
+        
         var isSelected = this.props.tabbedFile.filepath === this.props.currentFilepath
         var shouldShowX = (this.state.isHovering || isSelected) && this.props.tabbedFile.canClose
         return <li 
