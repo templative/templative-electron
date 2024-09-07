@@ -4,6 +4,7 @@ import ArtdataViewer from "./Viewers/ArtdataViewer/ArtdataViewer"
 import ComponentsViewer from "./Viewers/ComponentsViewer/ComponentsViewer"
 import PieceGamedataViewer from "./Viewers/GamedataViewer/PieceGamedataViewer"
 import KeyValueGamedataViewer from "./Viewers/GamedataViewer/KeyValueGamedataViewer"
+import GameGamedataViewer from "./Viewers/GamedataViewer/GameGamedataViewer";
 import ImageViewer from "./Viewers/ImageViewer";
 import RulesEditor from "./Viewers/RulesEditor";
 import EditPanelTabs from "./EditPanelTabs";
@@ -12,6 +13,7 @@ import { trackEvent } from "@aptabase/electron/renderer";
 
 import "./EditPanel.css"
 import "./EditPanelTabs.css"
+import StudioGamedataViewer from "./Viewers/GamedataViewer/StudioGamedataViewer";
 
 export default class EditPanel extends React.Component { 
     clickIntoFile = () => {
@@ -83,6 +85,12 @@ export default class EditPanel extends React.Component {
                         }
                         {this.props.currentFileType === "KEYVALUE_GAMEDATA" &&
                             <KeyValueGamedataViewer filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
+                        }
+                        {this.props.currentFileType === "STUDIO_GAMEDATA" &&
+                            <StudioGamedataViewer filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
+                        }
+                        {this.props.currentFileType === "GAME_GAMEDATA" &&
+                            <GameGamedataViewer filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
                         }
                         {this.props.currentFileType === "COMPONENTS" && 
                             <ComponentsViewer 
