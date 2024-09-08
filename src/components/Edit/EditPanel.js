@@ -10,7 +10,7 @@ import RulesEditor from "./Viewers/RulesEditor";
 import EditPanelTabs from "./EditPanelTabs";
 import RenderPreview from "./RenderPreview/RenderPreview";
 import { trackEvent } from "@aptabase/electron/renderer";
-
+import noFileIcon from "./noFileIcon.svg"
 import "./EditPanel.css"
 import "./EditPanelTabs.css"
 import StudioGamedataViewer from "./Viewers/GamedataViewer/StudioGamedataViewer";
@@ -26,7 +26,7 @@ export default class EditPanel extends React.Component {
         trackEvent("view_editPanel")
     }
     render () {
-        var filepathSplit = this.props.currentFilepath.replace(/\\/g,"/").replace(/^\/|\/$/g, '').split("/").join(" > ")
+        var filepathSplit = this.props.currentFilepath !== undefined ? this.props.currentFilepath.replace(/\\/g,"/").replace(/^\/|\/$/g, '').split("/").join(" > ") : ""
         return <div className='mainBody'>
             <div className="row g-0">
                 <div className='col-3 left-column'>
@@ -100,6 +100,11 @@ export default class EditPanel extends React.Component {
                                 componentTypesCustomInfo={this.props.componentTypesCustomInfo}
                                 componentTypesStockInfo={this.props.componentTypesStockInfo}
                             />
+                        }
+                        {this.props.currentFileType === undefined && 
+                            <div className="no-file-icon-container">
+                                <img src={noFileIcon} className="no-file-icon"/>
+                            </div>
                         }
                     </div>
                 </div>

@@ -25,17 +25,14 @@ export default class EditProjectView extends React.Component {
     state = {
         currentRoute: "/",
         tabbedFiles: [
-            new TabbedFile("STUDIO_GAMEDATA", TemplativeAccessTools.getStudioGamedataFilename(this.props.templativeRootDirectoryPath), false),
-            new TabbedFile("GAME_GAMEDATA", TemplativeAccessTools.getGameGamedataFilenames(this.props.templativeRootDirectoryPath), false),
-            new TabbedFile("COMPONENTS", TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath), false),
-            new TabbedFile("RULES", TemplativeAccessTools.getRulesFilepath(this.props.templativeRootDirectoryPath), false),
+            
         ],
         italicsTabFilepath: undefined,
         fileContents: undefined,
-        currentFileType: "COMPONENTS",
+        currentFileType: undefined,
         componentTypesCustomInfo: {},
         componentTypesStockInfo: {},
-        currentFilepath: TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath),
+        currentFilepath: undefined,
 
         extendedFileTypes: new Set(),
         extendedDirectories: new Set(),
@@ -164,8 +161,8 @@ export default class EditProjectView extends React.Component {
     
     clearViewedFile = () => {
         this.setState({
-            currentFileType: "COMPONENTS",
-            currentFilepath: TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath),
+            currentFileType: undefined,
+            currentFilepath: undefined,
             filename: undefined,
             fileContents: undefined
         })
@@ -226,16 +223,11 @@ export default class EditProjectView extends React.Component {
             return
         }
         this.setState({
-            tabbedFiles: [
-                new TabbedFile("STUDIO_GAMEDATA", TemplativeAccessTools.getStudioGamedataFilename(this.props.templativeRootDirectoryPath), false),
-                new TabbedFile("GAME_GAMEDATA", TemplativeAccessTools.getGameGamedataFilenames(this.props.templativeRootDirectoryPath), false),
-                new TabbedFile("COMPONENTS", TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath), false),
-                new TabbedFile("RULES", TemplativeAccessTools.getRulesFilepath(this.props.templativeRootDirectoryPath), false),
-            ],
+            tabbedFiles: [],
             italicsTabFilepath: undefined,
             fileContents: undefined,
-            currentFileType: "COMPONENTS",
-            currentFilepath: TemplativeAccessTools.getComponentComposeFilepath(this.props.templativeRootDirectoryPath),
+            currentFileType: undefined,
+            currentFilepath: undefined,
         })
     }
     updateRoute = (route) => {

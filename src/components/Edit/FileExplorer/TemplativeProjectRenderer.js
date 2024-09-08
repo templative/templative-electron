@@ -2,6 +2,7 @@ import React from "react";
 import TemplativeAccessTools from "../../TemplativeAccessTools";
 import ContentFileList from "./ContentFiles/ContentFileList";
 import "./TemplativeProjectRenderer.css"
+import IconContentFileItem from "./ContentFiles/IconContentFileItem";
 
 const fsOld = require('fs');
 const path = require("path")
@@ -275,6 +276,30 @@ export default class TemplativeProjectRenderer extends React.Component {
                             extendedDirectories={this.props.extendedDirectories}
                             changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
                         />
+                    <IconContentFileItem
+                        contentType={"STUDIO_GAMEDATA"}
+                        currentFilepath={this.props.currentFilepath}
+                        filepath={path.join(this.props.templativeRootDirectoryPath, "studio.json")}
+                        updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                    />
+                    <IconContentFileItem
+                        contentType={"GAME_GAMEDATA"}
+                        currentFilepath={this.props.currentFilepath}
+                        filepath={path.join(this.props.templativeRootDirectoryPath, "game.json")}
+                        updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                    />
+                    <IconContentFileItem
+                        contentType={"COMPONENTS"}
+                        currentFilepath={this.props.currentFilepath}
+                        filepath={path.join(this.props.templativeRootDirectoryPath, "component-compose.json")}
+                        updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                    />
+                    <IconContentFileItem
+                        contentType={"RULES"}
+                        currentFilepath={this.props.currentFilepath}
+                        filepath={path.join(this.props.templativeRootDirectoryPath, "rules.md")}
+                        updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                    />                    
                 </div>
             </div>       
             }

@@ -48,3 +48,16 @@
     padding-left: 8px !important;
     padding-right: 8px !important;
 }
+.no-file-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.no-file-icon {
+    max-width: 350px;
+    height: auto;
+    border: 0px;
+}

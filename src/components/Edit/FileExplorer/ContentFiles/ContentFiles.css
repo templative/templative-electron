@@ -1,14 +1,21 @@
-
-
-.content-file-item-wrapper {
-    padding-left: 1em;
+.content-file-item-wrapper, .icon-content-file-item-wrapper {
     margin-bottom: 0.1em;
     height:0.75em;
 }
-.content-file-item-wrapper:nth-child(even) {
+
+.content-file-item-wrapper {
+    padding-left: 1em;
+}
+
+.icon-content-file-item-wrapper {
+    padding-left: 0.5em;
+    margin-bottom: 0.1em;
+    height:0.75em;
+}
+.icon-content-file-item-wrapper:n-child(even), .content-file-item-wrapper:nth-child(even) {
     background-color: hsl(224, 13%, 17.5%);
 }
-.content-file-item-wrapper:hover {
+.icon-content-file-item-wrapper:hover, .content-file-item-wrapper:hover {
     background-color: #2b3037;
     cursor: pointer;
 }

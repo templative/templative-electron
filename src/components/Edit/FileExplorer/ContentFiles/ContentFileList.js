@@ -155,7 +155,7 @@ export default class ContentFileList extends React.Component {
             if (!isVisible) {
                 continue
             }
-            var isSelected = path.normalize(this.props.currentFilepath) === path.normalize(fileItem.absoluteFilepath)
+            var isSelected = this.props.currentFilepath !== undefined && path.normalize(this.props.currentFilepath) === path.normalize(fileItem.absoluteFilepath)
             if (fileItem.isDirectory) {
                 divs.push(<ContentFolderItem 
                     contentType={this.props.contentType}
