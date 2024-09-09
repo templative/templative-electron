@@ -1,8 +1,7 @@
 import os
 from templative.lib.distribute.gameCrafter.util import httpOperations
 
-async def createGame(gameCrafterSession, gameInfo, designerId, isPublish, shortDescription, longDescription, coolFactors, logoFileId, backdropFileId, advertisementFileId, websiteUrl, category, minAge:str, playTime:str, minPlayers:str, maxPlayers:str):
-    uniqueGameName = "%s_%s_%s_%s" % (gameInfo["name"], gameInfo["versionName"], gameInfo["version"], gameInfo["timestamp"])
+async def createGame(gameCrafterSession, uniqueGameName, gameInfo, designerId, isPublish, shortDescription, longDescription, coolFactors, logoFileId, backdropFileId, advertisementFileId, websiteUrl, category, minAge:str, playTime:str, minPlayers:str, maxPlayers:str):
     gameName = gameInfo["displayName"] if isPublish else uniqueGameName
     uploadedGame = await httpOperations.postGame(gameCrafterSession, gameName, designerId, shortDescription, longDescription, coolFactors, logoFileId, backdropFileId, advertisementFileId, websiteUrl, category, minAge, playTime, minPlayers, maxPlayers)
     gameId = uploadedGame["id"]

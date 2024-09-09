@@ -39,7 +39,7 @@ async def convertToTabletopPlayground(producedDirectoryPath, playgroundPackagesD
 
     print("Convert %s into a Tabletop Playground package for %s." % (game["displayName"], studio["displayName"]))
 
-    uniqueGameName = "%s_%s_%s_%s" % (game["name"], game["versionName"], game["version"], game["timestamp"])
+    uniqueGameName = path.basename(producedDirectoryPath)
 
     packageDirectoryPath = await createPackageDirectories(uniqueGameName, playgroundPackagesDirectory)
     packageGuid = await createManifest(uniqueGameName, packageDirectoryPath)

@@ -19,7 +19,7 @@ async def uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirectory,
 
     print("Uploading %s for %s." % (game["displayName"], studio["displayName"]))
 
-    uniqueGameName = "%s_%s_%s_%s" % (game["name"], game["versionName"], game["version"], game["timestamp"])
+    uniqueGameName = os.path.basename(outputDirectory)
 
     cloudGameFolder = await createFolderAtRoot(gameCrafterSession, uniqueGameName)
     
@@ -35,7 +35,7 @@ async def uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirectory,
     minPlayers = await pullAdvertDataFromGameJsonButAllowDefault(game, "minPlayers", "4")
     maxPlayers = await pullAdvertDataFromGameJsonButAllowDefault(game, "maxPlayers", "4")
 
-    cloudGame = await createGame(gameCrafterSession, game, studio["gameCrafterDesignerId"], isPublish, shortDescription, longDescription, coolFactors, logoImageFileId, backdropImageFileId, advertisementImageFileId, websiteUrl, category, minAge, playTime, minPlayers, maxPlayers)
+    cloudGame = await createGame(gameCrafterSession, uniqueGameName, game, studio["gameCrafterDesignerId"], isPublish, shortDescription, longDescription, coolFactors, logoImageFileId, backdropImageFileId, advertisementImageFileId, websiteUrl, category, minAge, playTime, minPlayers, maxPlayers)
 
     await advertisementCreator.createActionShot(gameCrafterSession, cloudGame["id"], actionShotImageFileId)
 

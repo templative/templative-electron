@@ -44,7 +44,7 @@ async def convertToTabletopSimulator(producedDirectoryPath, tabletopSimulatorDir
 
     print("Convert %s into a Tabletop Simulator package for %s." % (game["displayName"], studio["displayName"]))
 
-    uniqueGameName = "%s_%s_%s_%s" % (game["name"], game["versionName"], game["version"], game["timestamp"])
+    uniqueGameName = path.basename(producedDirectoryPath)
 
     objectStates = await createObjectStates(producedDirectoryPath, tabletopSimulatorDirectoryPath)
     await createSave(uniqueGameName, objectStates, tabletopSimulatorDirectoryPath)
