@@ -16,7 +16,8 @@
     font-weight: bold !important;
 }
 .create-simulator-button:hover {
-    background-color: #30353a !important;
+    background-color: #EFB521 !important;
+    border-color: rgb(73, 80, 87) !important;
 }
 .simulator-directory-header, .tts-directory-label {
     width: 100% !important;

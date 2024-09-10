@@ -2,12 +2,8 @@ import React from "react";
 import TopNavbar from './TopNavbar';
 import EditPanel from './Edit/EditPanel';
 import RenderPanel from './Render/RenderPanel';
-import PrintPanel from './Print/PrintPanel';
 import MapPanel from './Map/MapPanel';
 import AnimatePanel from './Animate/AnimatePanel';
-import UploadPanel from './Upload/UploadPanel';
-import SimulatorPanel from './Simulator/SimulatorPanel'
-import PlaygroundPanel from './Playground/PlaygroundPanel';
 import {HashRouter, Routes, Route } from "react-router-dom";
 import CreatePanel from "./Create/CreatePanel";
 import { TOP_NAVBAR_ITEMS } from "./Routes";
@@ -359,11 +355,7 @@ export default class EditProjectView extends React.Component {
                         changeExtendedFileTypeAsyncCallback={this.changeExtendedFileTypeAsync}
                     /> 
                 }/>
-                <Route path='/render' element={ <RenderPanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
-                <Route path='/print' element={ <PrintPanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
-                <Route path='/simulator' element={ <SimulatorPanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
-                <Route path='/playground' element={ <PlaygroundPanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
-                <Route path='/upload' element={ <UploadPanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
+                <Route path='/render' element={ <RenderPanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} templativeMessages={this.props.templativeMessages}/> } />
                 <Route path='/animate' element={ <AnimatePanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> } />
                 <Route path='/map' element={ <MapPanel email={this.props.email} token={this.props.token} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>}/>
                 <Route path='/feedback' element={ <FeedbackPanel email={this.props.email} token={this.props.token}/>}/>

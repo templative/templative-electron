@@ -1,5 +1,5 @@
 import React from "react";
-
+import socket from "./socket";
 import { channels } from './shared/constants';
 import StartView from "./components/StartView";
 import EditProjectView from "./components/EditProjectView";
@@ -19,10 +19,13 @@ class App extends React.Component {
         email: "",
         password: "",
         token: undefined,
-        loginStatus: undefined
-    }
+        loginStatus: undefined,
+        templativeMessages: []
+    }    
     componentWillUnmount() {
         ipcRenderer.removeAllListeners(channels.GIVE_TEMPLATIVE_ROOT_FOLDER);
+        socket.off("printStatement");
+        socket.disconnect()
     }
     async openTemplativeDirectoryPicker() {
         trackEvent("project_change")
@@ -68,6 +71,10 @@ class App extends React.Component {
         ipcRenderer.on(channels.GIVE_INVALID_LOGIN_CREDENTIALS, (_) => {
             this.setState({loggedIn: false, loginStatus: "Invalid login credentials."})
         })
+        socket.connect();
+        socket.on('printStatement', (message) => {
+            this.setState({templativeMessages:  [...this.state.templativeMessages, message]})
+        });
         this.attemptToLoadLastTemplativeProject()
         await ipcRenderer.invoke(channels.TO_SERVER_IS_LOGGED_IN)
     }
@@ -104,6 +111,7 @@ class App extends React.Component {
                 token={this.state.token}
                 email={this.state.email}    
                 templativeRootDirectoryPath={this.state.templativeRootDirectoryPath}
+                templativeMessages={this.state.templativeMessages}
             />
         }
         return <div className="App">

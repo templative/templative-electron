@@ -24,7 +24,7 @@
 .playground-textures {
     padding: 0.1em 0.1em 0.1em 0.1em;
     width: 100%;
-    height: calc(100% - 300px);
+    height: calc(100% - 220px);
     background-color: #131517;
     overflow-x: hidden;
     overflow-y: scroll;

@@ -12,6 +12,9 @@
 }
 .gamecrafter-ad-wrapper {
     position: relative;
+    width: 24%;
+    height: auto;
+    display: inline-block;
 }
 .gamecrafter-ad-label {
     position: absolute;
@@ -32,10 +35,7 @@
     padding: 0.1em;
 }
 .ads-images {
-    height: calc(100% - 1em) !important;
-    width: 100%;
     background-color: rgb(33, 37, 41);
-    overflow-y: scroll;
 }
 .ads-folder-button {
     float:right;
@@ -44,4 +44,8 @@
     padding: 0em 0em 0em 0em !important;
     font-size: 12px;
     vertical-align: center;
+}
+
+.gamecrafter-ad-image {
+    border: 0px;
 }

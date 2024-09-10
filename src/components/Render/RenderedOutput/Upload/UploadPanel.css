@@ -1,6 +1,8 @@
 
 .tgc-password-warning {
     font-size: 12px;
+    margin-bottom: 0px;
+    margin-top: 12px;
 }
 .logging-col {
     padding: 0.5em 1em 1em 0.5em !important;
@@ -8,8 +10,6 @@
 }
 .gamecrafter-upload-controls {
     padding-left:0.5em;
-    height: 275px;
-    overflow:hidden;
 }
 .gamecrafter-upload-controls > .input-group > * {
     border-top-left-radius: 0px !important;
@@ -60,5 +60,13 @@
     font-weight: bold !important;
 }
 .upload-tgc-button:hover {
-    background-color: #30353a !important;
+    background-color: #EFB521 !important;
+    border-color: rgb(73, 80, 87) !important;
+}
+.logged-messages-container {
+    width: 100%;
+    height: calc(100% - 550px);
+}
+.logged-messages-container > .console-messages {
+    height:100%;
 }

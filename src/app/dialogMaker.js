@@ -21,6 +21,15 @@ const openPlaygroundFolder = async(event, args) => {
     var chosenDirectory = result.filePaths[0]
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_PLAYGROUND_FOLDER, chosenDirectory)
 }
+const openSimulatorFolder = async(event, args) => {
+    var result = await dialog.showOpenDialog({ properties: ['openDirectory'] })
+    if (result.filePaths.length === 0) {
+        console.log("Chose nothing!")
+        return
+    }
+    var chosenDirectory = result.filePaths[0]
+    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_SIMULATOR_FOLDER, chosenDirectory)
+}
 
 const createProject = async(event, args) => {
     var result = await dialog.showOpenDialog({  title:"Create new Templative Project",  buttonLabel: "Create", properties: [ 'openDirectory', 'createDirectory', "promptToCreate"] })
@@ -37,6 +46,7 @@ const createProject = async(event, args) => {
 
 module.exports = { 
     openPlaygroundFolder,
+    openSimulatorFolder,
     createProject,
     openFolder
 }

@@ -66,11 +66,7 @@ export default class PlaygroundOutputExplorer extends React.Component {
                 <img className="playground-texture" alt="" key={imageFilepath} src={`file://${imageFilepath}`}/>
             </React.Fragment>
         )
-        return <React.Fragment>
-            <div className="playground-package-header">
-                <p className="playground-package-name">{this.state.packageName}</p>
-            </div>
-            
+        return <React.Fragment>            
             <p className="playground-content-type-header">Component Thumbnails</p>
             <div className="playground-thumbnails">
                 <div className="playground-thumnbails-list">

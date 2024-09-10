@@ -1,5 +1,5 @@
 const { ipcMain, shell } = require('electron')
-const { openFolder, createProject, openPlaygroundFolder} = require("./dialogMaker")
+const { openFolder, createProject, openPlaygroundFolder, openSimulatorFolder} = require("./dialogMaker")
 const { channels } = require('../shared/constants');
 const { login, giveLoginInformation, setupOauthListener } = require("./accountManager")
 
@@ -9,6 +9,7 @@ var openUrl = async (event, url) => {
 
 function listenForRenderEvents(window) {
     ipcMain.handle(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG_FOR_PLAYGROUND, openPlaygroundFolder);
+    ipcMain.handle(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG_FOR_SIMULATOR, openSimulatorFolder);
     ipcMain.handle(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG, openFolder);
     ipcMain.handle(channels.TO_SERVER_OPEN_CREATE_PROJECT_DIALOG, createProject);
     ipcMain.handle(channels.TO_SERVER_OPEN_URL, openUrl)

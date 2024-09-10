@@ -7,18 +7,6 @@ const path = require('path');
 const { shell } = window.require('electron');
 
 export class LoggedMessages extends React.Component {  
-    state = {
-        messages: []
-    }
-
-    componentDidMount() {
-        socket.connect();
-        socket.on('printStatement', (message) => this.addMessage(message));
-    }
-    componentWillUnmount() {
-        socket.off("printStatement");
-        socket.disconnect()
-    }
     static visitLink = async (link) => {
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_URL, link)
     }
@@ -53,22 +41,15 @@ export class LoggedMessages extends React.Component {
         });
     }
 
-    addMessage(message) {
-        var newMessages = this.state.messages
-        const hyperlinkedMessage = LoggedMessages.replaceUrlsWithLinks(message)
-        const className = `outputMessage ${message.startsWith("!!!") && "output-warning"}`
-        const newElement = <p key={this.state.messages.length} className={className}>
-            {this.state.messages.length}.   {hyperlinkedMessage}
-        </p>
-        newMessages.push(newElement)
-        this.setState({messages: newMessages})
-    }
-
     render() {
-        const messagesCopy = [...this.state.messages];
-        const reversedElements = messagesCopy.reverse();
+        var messageElements = this.props.messages === undefined ? [] : this.props.messages.map((message, index) => {
+            const className = `outputMessage ${message.startsWith("!!!") && "output-warning"} ${index % 2 === 0 && "odd-output-child"}`
+            var contents = message.replace("!!!", "")
+            var hyperlinkedMessage = LoggedMessages.replaceUrlsWithLinks(contents)
+            return <p key={index} className={className}>{hyperlinkedMessage}</p>
+        }).reverse();
         return <div className="console-messages">
-            {reversedElements}
+            {messageElements}
         </div>
     }
 }

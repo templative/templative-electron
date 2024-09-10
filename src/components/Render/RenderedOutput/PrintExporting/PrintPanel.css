@@ -1,16 +1,9 @@
-
-.print-control-col-left {
-    border-right: solid #313540;
-    border-width: 1px;
-    /* padding-left: 0.75em !important; */
-    padding-right: 0;
-}
-.print-control-col-left, .print-control-col-right { 
+.print-control { 
     height: 100% !important;
     overflow-y: hidden;
-}
-.print-control-col-right {
-    padding: 0 !important;
+    padding-bottom: 0.5em;
+    display: flex;
+    flex-direction: column-reverse;
 }
 .print-controls-row {
     background-color: rgb(42, 46, 54);
@@ -19,6 +12,11 @@
     padding-bottom: 8px;
     padding-right:0.5em;
     text-align: right;
+}
+.printout-controls {
+    /* max-width: 715px;
+    margin-left:auto;
+    margin-right: auto; */
 }
 .print-control-button {
     height: 100%;
@@ -35,16 +33,18 @@
     height: 100%;
 }
 .create-printout-button-container {
-    padding-left: 0.75em;
-    padding-right: 0.75em;
     width: 100%;
     margin-top:0.5em;
 }
 .create-printout-button {
-    width: calc(100%);
+    width: 100%;
     background-color: orange !important;
     color:#313540 !important;
     font-weight: bold !important;
+}
+.create-printout-button:hover {
+    background-color: #EFB521 !important;
+    border-color: rgb(73, 80, 87) !important;
 }
 .selectedDirectory { 
     margin-bottom:0 !important;
@@ -76,4 +76,9 @@
 .create-printout-button-container > .input-group:last-child > * {
     border-bottom-left-radius: 6px !important;
     border-bottom-right-radius: 6px !important;
+}
+.printout-pdf-iframe {
+    margin-bottom:0.5em;
+    width: 100%;
+    height: calc(100% - 100px);
 }

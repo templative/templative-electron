@@ -11,7 +11,7 @@ export default class CreatePrintoutButton extends React.Component {
         else if (this.props.hasOutputDirectoryValue) {
             buttonMessage = "Create Printout"
         }
-        return <div className='create-printout-button-container'>
+        return <div className='vertical-input-group printout-controls'>
             <div className="input-group input-group-sm printout-button-controls" data-bs-theme="dark">
                 <select value={this.props.size} onChange={(e)=>{this.props.setSizeCallback(e.target.value)}} className="form-select" id="inputGroupSelect01">
                     <option value="Letter">Letter</option>

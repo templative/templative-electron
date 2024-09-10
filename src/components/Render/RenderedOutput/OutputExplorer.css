@@ -1,0 +1,34 @@
+.post-render-options {
+    display: flex;
+    justify-content: center;
+    width: fit-content; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px
+}
+.post-render-options > p {
+    display: inline;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 2em;
+    margin-bottom: 0px;
+}
+.post-render-options > p:hover {
+    /* font-weight: bold; */
+}
+.selected-post-render-option {
+    border-bottom: orange 1px solid;
+    /* font-weight: bold; */
+}
+.component-count-list {
+    margin-bottom: 1em;
+}
+.component-count-list-item {
+    margin-bottom:0px;
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 1em;
+    padding: 1em;
+    background: #2c303a;
+    border-radius: 24px;
+}

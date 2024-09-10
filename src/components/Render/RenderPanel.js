@@ -119,12 +119,12 @@ export default class RenderPanel extends React.Component {
                         />
                         
                     </div>
-                    <LoggedMessages/>
+                    <LoggedMessages messages={this.props.templativeMessages}/>
     
                     <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
                 </div>  
                 <div className="col-xs-12 col-md-5 col-lg-6 col-xl-9 outputPanel">
-                    <OutputExplorer outputFolderPath={this.state.selectedDirectory}/>
+                    <OutputExplorer templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} outputFolderPath={this.state.selectedDirectory} doesUserOwnTemplative={this.state.doesUserOwnTemplative} templativeMessages={this.props.templativeMessages}/>
                 </div>        
             </div>
         </div>
