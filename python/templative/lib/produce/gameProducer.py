@@ -66,7 +66,7 @@ async def produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublis
     componentFilterString = ""
     if (componentFilter != None):
         componentFilterString = f"_{componentFilter}"
-    uniqueGameName = f"{gameDataBlob['name']}_{gameDataBlob['versionName']}_{gameDataBlob['version']}{componentFilterString}_{timestamp}".replace(" ", "")
+    uniqueGameName = f"{gameDataBlob['name']}_{gameDataBlob['versionName']}_{gameDataBlob['version']}_{timestamp}{componentFilterString}".replace(" ", "")
     
     # This stuff isnt typically stored in the game.json, but it is for exporting
     gameDataBlob["timestamp"] = timestamp
