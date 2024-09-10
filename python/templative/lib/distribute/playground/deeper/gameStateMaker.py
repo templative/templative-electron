@@ -1,5 +1,5 @@
 import math, uuid, os, json, random
-from templative.lib.distribute.playground.playgroundTemplates import table, gameState, deck, cardHolder
+from templative.lib.distribute.playground.playgroundTemplates import table, gameState, deck, cardHolder, board, stockModel, savedStockModel
 
 playerColors = []
 for i in range(20):
@@ -24,17 +24,29 @@ def getQuaternionFromEuler(roll, pitch, yaw):
   return [qx, qy, qz, qw]
 
 def createCardHolder(playerIndex, totalPlayerCount):
-    ownerColor = {"r": playerIndex/totalPlayerCount*255, "g": 50, "b": 50, "a": 255 }
-    distanceFromCenter = 60 + (max(0, totalPlayerCount-2)*20)
-    locationX = math.cos(playerIndex/totalPlayerCount*math.pi*2) * distanceFromCenter
-    locationY = math.sin(playerIndex/totalPlayerCount*math.pi*2) * distanceFromCenter
+    ownerColor = {
+        "r": (playerIndex / totalPlayerCount) * 255, 
+        "g": 50, 
+        "b": 50, 
+        "a": 255
+    }
 
-    zRotation = (playerIndex/totalPlayerCount*math.pi*2)-math.pi
-    rotationQuaternion = getQuaternionFromEuler(0,0,zRotation)
+    distanceFromCenter = 120 + (max(0, totalPlayerCount - 2) * 30)
     
+    angle = (playerIndex / totalPlayerCount) * math.pi * 2 + (1/180)
+
+    locationX = math.cos(angle) * distanceFromCenter
+    locationY = math.sin(angle) * distanceFromCenter
+
+    zRotation = angle - math.pi
+    rotationQuaternion = getQuaternionFromEuler(0, 0, zRotation)
+    # distanceFromOrigin = math.sqrt(locationX**2 + locationY**2)
+    # print(f"Player {playerIndex}: LocationX = {locationX}, LocationY = {locationY}, Distance from (0, 0) = {distanceFromOrigin}")
+
     return cardHolder.createCardHolder(playerIndex, ownerColor, locationX, locationY, rotationQuaternion)
 
-def createPokerDeck(name, componentId,  componentTemplateGuid, ownerIndex, translation, totalPieceQuantity):
+
+def createPokerDeck(name, componentTemplateGuid, ownerIndex, translation, totalPieceQuantity):
     stackSerialization = []
     for q in range(totalPieceQuantity-1):
         piece = {
@@ -46,32 +58,54 @@ def createPokerDeck(name, componentId,  componentTemplateGuid, ownerIndex, trans
         stackSerialization.append(piece)
     return deck.createDeck(name, componentTemplateGuid, ownerIndex, translation, stackSerialization)
 
+def createBoard(guid, name, quantity, frontTextureName, backTextureName, dimensions):
+    return board.createBoard(guid, name, quantity, frontTextureName, backTextureName, dimensions)
+
 def createGameObjects(components, totalPlayerCount):
     gameObjects = [
-        table.createTable()
+        # table.createTable()
     ]
 
     for p in range(totalPlayerCount):
         gameObjects.append(createCardHolder(p, totalPlayerCount))
 
-    startingYTranslation = 0
-    yTranslationEachComponent = 15
+    xTranslationEachComponent = 30  
+    yTranslationEachComponent = 30  
     noOwnerConstant = -1
-
+    
+    totalComponents = len([c for c in components if c is not None])  
+    columns = math.ceil(math.sqrt(totalComponents))  
+    rows = math.ceil(totalComponents / columns)  
+    halfWidth = (columns * xTranslationEachComponent) / 2
+    halfHeight = (rows * yTranslationEachComponent) / 2
     skippedGameStateComponents = []
     for c, component in enumerate(components):
-        if component == None:
+        if component is None:
             continue
-        newYPosition = startingYTranslation + (c*yTranslationEachComponent) - (len(components)*yTranslationEachComponent/2)
-        gameObjectTranslation = { "x": -5, "y": newYPosition, "z": 90 }
-        # print(component)
-        if not "Indices" in component:
+
+        row = c // columns
+        column = c % columns
+
+        newXPosition = (column * xTranslationEachComponent) - halfWidth
+        newYPosition = (row * yTranslationEachComponent) - halfHeight
+
+        gameObjectTranslation = {"x": newXPosition, "y": newYPosition, "z": 5}
+        
+        if "Indices" in component:
+            totalPieceQuantity = len(component["Indices"])
+        elif "Quantity" in component:
+            totalPieceQuantity = component["Quantity"]
+        else: 
             skippedGameStateComponents.append(component["Name"])
             continue
-        totalPieceQuantity = len(component["Indices"])
-        # print(totalPieceQuantity)
-        gameObject = createPokerDeck(component["Name"], c, component["GUID"], noOwnerConstant, gameObjectTranslation, totalPieceQuantity)
-        gameObjects.append(gameObject)
+        if component["Type"] == "Card":
+            gameObject = createPokerDeck(component["Name"], component["GUID"], noOwnerConstant, gameObjectTranslation, totalPieceQuantity)
+            gameObjects.append(gameObject)
+        else: 
+            # for i in range(totalPieceQuantity):
+                # gameObjectTranslation["z"] = 5 + (i * 15)
+            gameObject = savedStockModel.createSavedStockModel(component, noOwnerConstant, gameObjectTranslation)
+            gameObjects.append(gameObject)
 
     if len(skippedGameStateComponents) > 0: 
         print("Skipping components for missing indices:", skippedGameStateComponents)

@@ -14,7 +14,7 @@ def createCardHolder(playerIndex, ownerColor, locationX, locationY, rotationQuat
 
         "transform":
         {
-            "translation": { "x": locationX, "y": locationY, "z": 100 },
+            "translation": { "x": locationX, "y": locationY, "z": 5 },
             "rotation": { "x": rotationQuaternion[0], "y": rotationQuaternion[1], "z": rotationQuaternion[2], "w": rotationQuaternion[3] },
             "scale3D": { "x": 1.7715610265731812, "y": 1.7715610265731812, "z": 1.7715610265731812 }
         },

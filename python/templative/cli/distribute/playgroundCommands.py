@@ -1,5 +1,6 @@
 from templative.lib.manage import instructionsLoader
-from templative.lib.distribute.playground import getPlaygroundDirectory, writePlaygroundFile, convertToTabletopPlayground
+from templative.lib.distribute.playground.playgroundSettingsManagement import getPlaygroundDirectory, writePlaygroundFile
+from templative.lib.distribute.playground import convertToTabletopPlayground
 import asyncclick as click
 
 @click.command()

@@ -234,9 +234,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "5E179AEA-8335-11E1-B714-C692DC194F78",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/Cube.Cube'",
     "PlaygroundColor": {
-      "R": 0,
-      "G": 255,
-      "B": 0
+      "r": 0,
+      "g": 255,
+      "b": 0
     },
     "DisplayName": "Cube, 8mm, Green",
     "Description": "",
@@ -265,9 +265,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "B97995AA-8335-11E1-A7B5-C692DC194F78",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/Cube.Cube'",
     "PlaygroundColor": {
-      "R": 255,
-      "G": 165,
-      "B": 0
+      "r": 255,
+      "g": 165,
+      "b": 0
     },
     "DisplayName": "Cube, 8mm, Orange",
     "Description": "A wooden 8mm x 8mm cube, which can be used as a resource in euro-style games.",
@@ -296,9 +296,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "7EB543EC-4D3E-11E1-A14C-40B1921A1C03",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/Cube.Cube'",
     "PlaygroundColor": {
-      "R": 0,
-      "G": 0,
-      "B": 0
+      "r": 0,
+      "g": 0,
+      "b": 0
     },
     "DisplayName": "Cube, 8mm, Black",
     "Description": "A wooden 8mm x 8mm cube, which can be used as a resource in euro-style games.",
@@ -327,9 +327,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "F40968BC-8335-11E1-A7B5-C692DC194F78",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/Cube.Cube'",
     "PlaygroundColor": {
-      "R": 0,
-      "G": 0,
-      "B": 255
+      "r": 0,
+      "g": 0,
+      "b": 255
     },
     "DisplayName": "Cube, 8mm, Blue",
     "Description": "A wooden 8mm x 8mm cube, which can be used as a resource in euro-style games.",
@@ -358,9 +358,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "B7F3D54C-4D3E-11E1-A14C-40B1921A1C03",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/Cube.Cube'",
     "PlaygroundColor": {
-      "R": 255,
-      "G": 255,
-      "B": 255
+      "r": 255,
+      "g": 255,
+      "b": 255
     },
     "DisplayName": "Cube, 8mm, White",
     "Description": "A wooden 8mm x 8mm cube, which can be used as a resource in euro-style games.",
@@ -389,9 +389,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "A664456E-8335-11E1-9143-C692DC194F78",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/Cube.Cube'",
     "PlaygroundColor": {
-      "R": 255,
-      "G": 0,
-      "B": 0
+      "r": 255,
+      "g": 0,
+      "b": 0
     },
     "DisplayName": "Cube, 8mm, Red",
     "Description": "A wooden 8mm x 8mm cube, which can be used as a resource in euro-style games.",
@@ -420,9 +420,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "4045BFC4-4D3E-11E1-A14C-40B1921A1C03",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/Cube.Cube'",
     "PlaygroundColor": {
-      "R": 128,
-      "G": 0,
-      "B": 128
+      "r": 128,
+      "g": 0,
+      "b": 128
     },
     "DisplayName": "Cube, 8mm, Purple",
     "Description": "A wooden 8mm x 8mm cube, which can be used as a resource in euro-style games.",
@@ -451,9 +451,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "75DF064C-2EC7-11ED-9CBC-E8F95EE382A3",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/Pyramid.Pyramid'",
     "PlaygroundColor": {
-      "R": 255,
-      "G": 255,
-      "B": 0
+      "r": 255,
+      "g": 255,
+      "b": 0
     },
     "PlaygroundNormalMap": "Texture2D'/Game/Textures/Dice/T_D12_N.T_D12_N'",
     "PlaygroundExtraMap": "Texture2D'/Game/Textures/Dice/T_D12.T_D12'",
@@ -490,9 +490,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "251A0858-59C0-11EA-A896-F5FE59BF7666",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Dice/Dice_D6.Dice_D6'",
     "PlaygroundColor": {
-      "R": 255,
-      "G": 255,
-      "B": 255
+      "r": 255,
+      "g": 255,
+      "b": 255
     },
     "PlaygroundNormalMap": "Texture2D'/Game/Textures/Dice/T_D6_N.T_D6_N'",
     "PlaygroundExtraMap": "Texture2D'/Game/Textures/Dice/T_D6.T_D6'",
@@ -580,9 +580,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "E4F90956-9A04-11E0-AACC-432941C43697",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Dice/Dice_D6.Dice_D6'",
     "PlaygroundColor": {
-      "R": 255,
-      "G": 255,
-      "B": 0
+      "r": 255,
+      "g": 255,
+      "b": 0
     },
     "PlaygroundNormalMap": "Texture2D'/Game/Textures/Dice/T_D6_N.T_D6_N'",
     "PlaygroundExtraMap": "Texture2D'/Game/Textures/Dice/T_D6.T_D6'",
@@ -669,9 +669,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "E4D68318-9A04-11E0-AACC-432941C43697",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Dice/Dice_D6.Dice_D6'",
     "PlaygroundColor": {
-      "R": 255,
-      "G": 255,
-      "B": 0
+      "r": 255,
+      "g": 255,
+      "b": 0
     },
     "PlaygroundNormalMap": "Texture2D'/Game/Textures/Dice/T_D6_N.T_D6_N'",
     "PlaygroundExtraMap": "Texture2D'/Game/Textures/Dice/T_D6.T_D6'",
@@ -758,9 +758,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "6099FFB0-215A-11EC-B773-76004B5CF84F",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Dice/Dice_D6.Dice_D6'",
     "PlaygroundColor": {
-      "R": 255,
-      "G": 255,
-      "B": 0
+      "r": 255,
+      "g": 255,
+      "b": 0
     },
     "PlaygroundNormalMap": "Texture2D'/Game/Textures/Dice/T_D6_N.T_D6_N'",
     "PlaygroundExtraMap": "Texture2D'/Game/Textures/Dice/T_D6.T_D6'",
@@ -849,9 +849,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "08162C04-09D7-11E3-B696-40087740BD4B",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Dice/Dice_D12.Dice_D12'",
     "PlaygroundColor": {
-      "R": 255,
-      "G": 255,
-      "B": 255
+      "r": 255,
+      "g": 255,
+      "b": 255
     },
     "PlaygroundNormalMap": "Texture2D'/Game/Textures/Dice/T_D12_N.T_D12_N'",
     "PlaygroundExtraMap": "Texture2D'/Game/Textures/Dice/T_D12.T_D12'",
@@ -967,9 +967,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "E52E1696-9A04-11E0-AACC-432941C43697",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Dice/Dice_D20.Dice_D20'",
     "PlaygroundColor": {
-      "R": 0,
-      "G": 0,
-      "B": 0
+      "r": 0,
+      "g": 0,
+      "b": 0
     },
     "PlaygroundNormalMap": "Texture2D'/Game/Textures/Dice/T_D20_N.T_D20_N'",
     "PlaygroundExtraMap": "Texture2D'/Game/Textures/Dice/T_D20.T_D20'",
@@ -1140,9 +1140,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "5F1BF8EA-09D6-11E3-A83D-40087740BD4B",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Dice/Dice_D20.Dice_D20'",
     "PlaygroundColor": {
-      "R": 206,
-      "G": 163,
-      "B": 38
+      "r": 206,
+      "g": 163,
+      "b": 38
     },
     "PlaygroundNormalMap": "Texture2D'/Game/Textures/Dice/T_D20_N.T_D20_N'",
     "PlaygroundExtraMap": "Texture2D'/Game/Textures/Dice/T_D20.T_D20'",
@@ -1313,9 +1313,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "49849758-09D6-11E3-AE02-40087740BD4B",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Dice/Dice_D20.Dice_D20'",
     "PlaygroundColor": {
-      "R": 255,
-      "G": 255,
-      "B": 255
+      "r": 255,
+      "g": 255,
+      "b": 255
     },
     "PlaygroundNormalMap": "Texture2D'/Game/Textures/Dice/T_D20_N.T_D20_N'",
     "PlaygroundExtraMap": "Texture2D'/Game/Textures/Dice/T_D20.T_D20'",
@@ -1486,9 +1486,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "FD85F422-2EA2-11E8-B873-9D2AC78910BA",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/House.House'",
     "PlaygroundColor": {
-      "R": 0,
-      "G": 0,
-      "B": 0
+      "r": 0,
+      "g": 0,
+      "b": 0
     },
     "DisplayName": "House, Wood, Black",
     "Description": "A simple wooden house.",
@@ -1522,9 +1522,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "EA86962C-221F-11E8-A201-E5F993A6FE1D",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/House.House'",
     "PlaygroundColor": {
-      "R": 0,
-      "G": 0,
-      "B": 255
+      "r": 0,
+      "g": 0,
+      "b": 255
     },
     "DisplayName": "House, Wood, Blue",
     "Description": "A simple wooden house.",
@@ -1558,9 +1558,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "CFE86DC2-4EFC-11E8-80AE-900DCB137816",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/House.House'",
     "PlaygroundColor": {
-      "R": 0,
-      "G": 255,
-      "B": 0
+      "r": 0,
+      "g": 255,
+      "b": 0
     },
     "DisplayName": "House, Wood, Green",
     "Description": "A simple wooden house.",
@@ -1594,9 +1594,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "FDEDF34A-4A24-11E8-8009-E69A584C442A",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/House.House'",
     "PlaygroundColor": {
-      "R": 255,
-      "G": 165,
-      "B": 0
+      "r": 255,
+      "g": 165,
+      "b": 0
     },
     "DisplayName": "House, Wood, Orange",
     "Description": "A simple wooden house.",
@@ -1630,9 +1630,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "C8616066-48B9-11E8-BA56-8DBB1EA37D3B",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/House.House'",
     "PlaygroundColor": {
-      "R": 255,
-      "G": 255,
-      "B": 255
+      "r": 255,
+      "g": 255,
+      "b": 255
     },
     "DisplayName": "House, Wood, White",
     "Description": "",
@@ -1666,9 +1666,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "B6949542-48B9-11E8-BA56-3DBB1EA37D3B",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/House.House'",
     "PlaygroundColor": {
-      "R": 255,
-      "G": 0,
-      "B": 0
+      "r": 255,
+      "g": 0,
+      "b": 0
     },
     "DisplayName": "House, Wood, Red",
     "Description": "A simple wooden house.",
@@ -1702,9 +1702,9 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "E36B2C18-4EFC-11E8-8111-F6A03D012D85",
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/House.House'",
     "PlaygroundColor": {
-      "R": 128,
-      "G": 0,
-      "B": 128
+      "r": 128,
+      "g": 0,
+      "b": 128
     },
     "DisplayName": "House, Wood, Purple",
     "Description": "A simple wooden house.",
@@ -14755,9 +14755,9 @@ STOCK_COMPONENT_INFO = {
     ],
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/Pyramid.Pyramid'",
     "PlaygroundColor": {
-      "R": 192,
-      "G": 192,
-      "B": 192
+      "r": 192,
+      "g": 192,
+      "b": 192
     }
   },
   "ChurchAcrylicOpaqueWhite": {
@@ -16522,9 +16522,9 @@ STOCK_COMPONENT_INFO = {
     ],
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Poker_Chip_Whole.Poker_Chip_Whole'",
     "PlaygroundColor": {
-      "R": 255,
-      "G": 255,
-      "B": 0
+      "r": 255,
+      "g": 255,
+      "b": 0
     }
   },
   "CoinTimeless10": {
@@ -21265,9 +21265,9 @@ STOCK_COMPONENT_INFO = {
     ],
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Dice/Dice_D6.Dice_D6'",
     "PlaygroundColor": {
-      "R": 159,
-      "G": 109,
-      "B": 37
+      "r": 159,
+      "g": 109,
+      "b": 37
     },
     "PlaygroundNormalMap": "Texture2D'/Game/Textures/Dice/T_D6_N.T_D6_N'",
     "PlaygroundExtraMap": "Texture2D'/Game/Textures/Dice/T_D6.T_D6'",
@@ -21428,9 +21428,9 @@ STOCK_COMPONENT_INFO = {
     ],
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Dice/Dice_D6.Dice_D6'",
     "PlaygroundColor": {
-      "R": 193,
-      "G": 187,
-      "B": 163
+      "r": 193,
+      "g": 187,
+      "b": 163
     },
     "PlaygroundNormalMap": "Texture2D'/Game/Textures/Dice/T_D6_N.T_D6_N'",
     "PlaygroundExtraMap": "Texture2D'/Game/Textures/Dice/T_D6.T_D6'",
@@ -26415,9 +26415,9 @@ STOCK_COMPONENT_INFO = {
     ],
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Poker_Chip_Whole.Poker_Chip_Whole'",
     "PlaygroundColor": {
-      "R": 255,
-      "G": 255,
-      "B": 0
+      "r": 255,
+      "g": 255,
+      "b": 0
     }
   },
   "DoubloonMetalSilver": {
@@ -35632,9 +35632,9 @@ STOCK_COMPONENT_INFO = {
     ],
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/House.House'",
     "PlaygroundColor": {
-      "R": 192,
-      "G": 192,
-      "B": 192
+      "r": 192,
+      "g": 192,
+      "b": 192
     }
   },
   "HouseAcrylicOpaqueWhite": {
@@ -36917,9 +36917,9 @@ STOCK_COMPONENT_INFO = {
     ],
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/Cube.Cube'",
     "PlaygroundColor": {
-      "R": 0,
-      "G": 0,
-      "B": 255
+      "r": 0,
+      "g": 0,
+      "b": 255
     }
   },
   "IceCube12mmTransparentClear": {
@@ -37105,9 +37105,9 @@ STOCK_COMPONENT_INFO = {
     ],
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/Cube.Cube'",
     "PlaygroundColor": {
-      "R": 255,
-      "G": 242,
-      "B": 0
+      "r": 255,
+      "g": 242,
+      "b": 0
     }
   },
   "IceCube8mmCopper": {

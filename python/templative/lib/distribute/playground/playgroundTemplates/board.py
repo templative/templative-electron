@@ -1,4 +1,4 @@
-def createBoard(guid, name, frontTextureName, backTextureName, dimensions):
+def createBoard(guid, name, quantity, frontTextureName, backTextureName, dimensions):
     return {
         "Type": "Generic",
         "GUID": guid,
@@ -135,6 +135,8 @@ def createBoard(guid, name, frontTextureName, backTextureName, dimensions):
             }
         ],
         "Collision": [],
+        "Quantity": quantity,
+        # "Indices": indices,
         "SnapPointsGlobal": False,
         "SnapPoints": [],
         "ZoomViewDirection":

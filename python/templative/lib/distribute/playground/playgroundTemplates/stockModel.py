@@ -1,8 +1,9 @@
-def createStockModel(name, guid, mesh, color, normalMap, extraMap):
+def createStockModel(name, guid, mesh, color, normalMap, extraMap, quantity):
     return {
         "Name": name,
         "GUID": guid,
         "Type": "Generic",
+        "Quantity": quantity,
         "Metadata": "",
         "CollisionType": "Regular",
         "Friction": 0.7,
@@ -12,7 +13,7 @@ def createStockModel(name, guid, mesh, color, normalMap, extraMap):
         "Roughness": 0.2,
         "Metallic": 0,
         "PrimaryColor": color,
-        "SecondaryColor": { "R": 0, "G": 0, "B": 0 },
+        "SecondaryColor": { "r": 0, "g": 0, "b": 0, "a": 255 },
         "Flippable": False,
         "AutoStraighten": False,
         "ShouldSnap": True,
