@@ -70,9 +70,9 @@ jobs:
       - name: Determine Cairo Path
         if: matrix.os == 'windows-latest'
         run: |
-          CAIRO_PATH="${{ env.VCPKG_ROOT }}/installed/x64-windows/bin/libcairo-2.dll"
-          echo "Cairo installed at: $CAIRO_PATH"
-          echo "CAIRO_PATH=$CAIRO_PATH" >> $GITHUB_ENV
+          $cairoPath = "${{ env.VCPKG_ROOT }}\installed\x64-windows\bin\libcairo-2.dll"
+          echo "Cairo installed at: $cairoPath"
+          echo "CAIRO_PATH=$cairoPath" >> $env:GITHUB_ENV
 
       - uses: actions/setup-python@v2
         with:
