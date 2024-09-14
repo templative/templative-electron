@@ -67,12 +67,16 @@ export default class PlaygroundOutputExplorer extends React.Component {
             </React.Fragment>
         )
         return <React.Fragment>            
-            <p className="playground-content-type-header">Component Thumbnails</p>
-            <div className="playground-thumbnails">
-                <div className="playground-thumnbails-list">
-                    {thumbnailImages}
+            {thumbnailImages.length !== 0 && 
+            <React.Fragment>
+                    <p className="playground-content-type-header">Component Thumbnails</p>
+                <div className="playground-thumbnails">
+                    <div className="playground-thumnbails-list">
+                        {thumbnailImages}
+                    </div>
                 </div>
-            </div>
+                </React.Fragment>
+            }
             <p className="playground-content-type-header">Textures</p>
             <div className="playground-textures">
                 <div className="playground-textures-list">

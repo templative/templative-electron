@@ -82,3 +82,7 @@
     width: 100%;
     height: calc(100% - 100px);
 }
+.rules-pdf-iframe {
+    width: 100%;
+    height: 99%;
+}

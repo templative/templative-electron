@@ -2,12 +2,17 @@
     font-size: 24px;
     font-weight: bold;
 }
-.playground-thumnbails-list {
+.playground-thumbnails {
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     height: 5em;
-    background-color: #131517;
+}
+.playground-thumnbails-list {
+    height: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    /* background-color: #131517; */
     padding: 0.25em 0.25em 0.25em 0.25em;
     margin-bottom: 0.3em;
 }
