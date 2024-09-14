@@ -103,6 +103,14 @@ jobs:
       - name: Create Templative App/Exe (macOS)
         if: matrix.os != 'windows-latest'
         run: |
+          CAIRO_PREFIX=$(brew --prefix cairo)
+          LIBPNG_PREFIX=$(brew --prefix libpng)
+          ZLIB_PREFIX=$(brew --prefix zlib)
+
+          ls "$CAIRO_PREFIX/lib"
+          ls "$LIBPNG_PREFIX/lib"
+          ls "$ZLIB_PREFIX/lib"
+          
           cd ./python
           pipenv run pyinstaller --distpath ../bin -y -n templative \
             --log-level=DEBUG ./templative/__main__.py \
@@ -111,9 +119,9 @@ jobs:
             --hidden-import=engineio.async_aiohttp \
             --collect-all templative \
             --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" \
-            --add-binary="/opt/homebrew/lib/libcairo.2.dylib:lib" \
-            --add-binary="/opt/homebrew/lib/libpng16.16.dylib:lib" \
-            --add-binary="/opt/homebrew/lib/libz.1.dylib:lib" \
+            --add-binary="$CAIRO_PREFIX/lib/libcairo.2.dylib:lib" \
+            --add-binary="$LIBPNG_PREFIX/lib/libpng16.16.dylib:lib" \
+            --add-binary="$ZLIB_PREFIX/lib/libz.1.dylib:lib" \
             --additional-hooks-dir=./python/pyinstallerHooks \
             --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"
       
