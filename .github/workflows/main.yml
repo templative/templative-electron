@@ -56,18 +56,17 @@ jobs:
         uses: lukka/run-vcpkg@v11
         with:
           vcpkgGitCommitId: '86fba13068f1e8111e7d885de2aef11378435139'
-          
-      - name: Install Cairo via vcpkg
-        if: matrix.os == 'windows-latest'
-        run: |
-          ./vcpkg install cairo:x64-windows
-          ./vcpkg integrate install
-          
+
       - name: Add vcpkg to PATH
         if: matrix.os == 'windows-latest'
         run: |
-          echo "::add-path::$(pwd)/vcpkg/installed/x64-windows/bin"
-          
+          echo "${{ env.VCPKG_ROOT }}" >> $GITHUB_PATH
+
+      - name: Install Cairo via vcpkg
+        if: matrix.os == 'windows-latest'
+        run: |
+          ${{ env.VCPKG_ROOT }}/vcpkg.exe install cairo:x64-windows
+
       - uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python }}
