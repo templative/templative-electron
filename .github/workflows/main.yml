@@ -86,7 +86,8 @@ jobs:
           pipenv run pip list
           pip list
       
-      - name: Create Templative App/Exe
+      - name: Create Templative App/Exe (Windows)
+        if: matrix.os == 'windows-latest'
         run: |
           cd ./python
           pipenv run pyinstaller --distpath ../bin -y -n templative \
@@ -97,7 +98,32 @@ jobs:
             --collect-all templative \
             --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" \
             --additional-hooks-dir=./python/pyinstallerHooks \
-            --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"    
+            --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"   
+            
+      - name: Create Templative App/Exe (macOS)
+        if: matrix.os != 'windows-latest'
+        run: |
+          cd ./python
+          pipenv run pyinstaller --distpath ../bin -y -n templative \
+            --log-level=DEBUG ./templative/__main__.py \
+            --hidden-import=asyncclick \
+            --hidden-import=engineio.async_drivers.aiohttp \
+            --hidden-import=engineio.async_aiohttp \
+            --collect-all templative \
+            --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" \
+            --add-binary="/opt/homebrew/lib/libcairo.2.dylib:lib" \
+            --add-binary="/opt/homebrew/lib/libpng16.16.dylib:lib" \
+            --add-binary="/opt/homebrew/lib/libz.1.dylib:lib" \
+            --additional-hooks-dir=./python/pyinstallerHooks \
+            --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"
+      
+      - name: Adjust Library Paths with install_name_tool (macOS)
+        if: matrix.os != 'windows-latest'
+        run: |
+          cd ./bin/templative
+          install_name_tool -change /opt/homebrew/lib/libcairo.2.dylib @executable_path/../lib/libcairo.2.dylib ./templative
+          install_name_tool -change /opt/homebrew/lib/libpng16.16.dylib @executable_path/../lib/libpng16.16.dylib ./templative
+          install_name_tool -change /opt/homebrew/lib/libz.1.dylib @executable_path/../lib/libz.1.dylib ./templative
       
       - name: Upload Templative Xref as Artifact
         uses: actions/upload-artifact@v3
