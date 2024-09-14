@@ -53,7 +53,7 @@ jobs:
       
       - name: Install vcpkg
         if: matrix.os == 'windows-latest'
-        uses: lukka/run-vcpkg@v12
+        uses: lukka/run-vcpkg@v11
         with:
           vcpkgVersion: '2023-09-01'
           
