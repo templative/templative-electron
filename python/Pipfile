@@ -24,7 +24,7 @@ aiofiles = "*"
 python-socketio = {extras = ["asyncio"], version = "*"}
 templative = {file = ".", editable = true}
 matplotlib = "*"
-cairocffi = "*"
+cairosvg = "*"
 
 [requires]
 python_version = "3.11.9"
