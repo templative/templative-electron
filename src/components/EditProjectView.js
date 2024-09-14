@@ -200,6 +200,7 @@ export default class EditProjectView extends React.Component {
     getCurrentRoute = () => {
       var location = window.location.href.split("http://localhost:3000")[1]
       location = location.replace('/main_window#','')
+      location = location.replace('/main_window','/')
       return location
     }
     
