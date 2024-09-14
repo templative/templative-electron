@@ -99,8 +99,10 @@ def createGameObjects(components, totalPlayerCount):
             skippedGameStateComponents.append(component["Name"])
             continue
         if component["Type"] == "Card":
-            gameObject = createPokerDeck(component["Name"], component["GUID"], noOwnerConstant, gameObjectTranslation, totalPieceQuantity)
-            gameObjects.append(gameObject)
+            for i in range(component["Quantity"]):
+                gameObjectTranslation["z"] = 5 + (i * 15)
+                gameObject = createPokerDeck(component["Name"], component["GUID"], noOwnerConstant, gameObjectTranslation, totalPieceQuantity)
+                gameObjects.append(gameObject)
         else: 
             # for i in range(totalPieceQuantity):
                 # gameObjectTranslation["z"] = 5 + (i * 15)

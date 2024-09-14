@@ -40,18 +40,18 @@ async def createDeck(packageDirectoryPath, componentInstructions, componentTypeI
     await copyBackImageToTextures(componentInstructions["name"], componentInstructions["backInstructions"], textureDirectory)
     componentGuid = md5(componentInstructions["name"].encode()).hexdigest()
     templateDirectory = path.join(packageDirectoryPath, "Templates")
-    return await createCardTemplateFile(templateDirectory, componentGuid, componentInstructions["name"], componentTypeInfo, totalCount, cardColumnCount, cardRowCount)
+    return await createCardTemplateFile(templateDirectory, componentGuid, componentInstructions["name"], componentTypeInfo, componentInstructions["quantity"], totalCount, cardColumnCount, cardRowCount)
 
-async def createCardTemplateFile(templateDirectoryPath, guid, name, componentTypeInfo, totalCount, cardColumnCount, cardRowCount):
+async def createCardTemplateFile(templateDirectoryPath, guid, name, componentTypeInfo, componentQuantity, totalCount, cardColumnCount, cardRowCount):
     frontTextureName = "%s-front.jpeg" % name
     backTextureName = "%s-back.jpeg" % name
-    cardTemplateData = createCardTemplateData(guid, name, componentTypeInfo, frontTextureName, totalCount, cardColumnCount, cardRowCount, backTextureName)
+    cardTemplateData = createCardTemplateData(guid, name, componentTypeInfo, frontTextureName, componentQuantity, totalCount, cardColumnCount, cardRowCount, backTextureName)
     templateFilepath = path.join(templateDirectoryPath, "%s.json" % guid)
     with open(templateFilepath, "w") as templateFile:
         dump(cardTemplateData, templateFile, indent=2)
     return cardTemplateData
 
-def createCardTemplateData(guid, name, componentTypeInfo, frontTextureName, totalCount, cardColumnCount, cardRowCount, backTextureName):    
+def createCardTemplateData(guid, name, componentTypeInfo, frontTextureName, componentQuantity, totalCount, cardColumnCount, cardRowCount, backTextureName):    
     dimensions = (
         componentTypeInfo["DimensionsPixels"][0] * gameCrafterScaleToPlaygroundScale, 
         componentTypeInfo["DimensionsPixels"][1] * gameCrafterScaleToPlaygroundScale, 
@@ -61,7 +61,7 @@ def createCardTemplateData(guid, name, componentTypeInfo, frontTextureName, tota
     for i in range(totalCount):
         indices.append(i)
 
-    return card.createCard(guid, name, frontTextureName, backTextureName, cardColumnCount, cardRowCount, dimensions, componentTypeInfo["PlaygroundModel"], indices)
+    return card.createCard(guid, name, frontTextureName, backTextureName, componentQuantity, cardColumnCount, cardRowCount, dimensions, componentTypeInfo["PlaygroundModel"], indices)
 
 async def createStock(packageDirectoryPath, componentInstructions, stockPartInfo):
     guid = md5(componentInstructions["name"].encode()).hexdigest()

@@ -1,8 +1,9 @@
-def createCard(guid, name, frontTextureName, backTextureName, cardColumnCount, cardRowCount, dimensions, model, indices):
+def createCard(guid, name, frontTextureName, backTextureName, quantity, cardColumnCount, cardRowCount, dimensions, model, indices):
     return {
         "Type": "Card",
         "GUID": guid,
         "Name": name,
+        "Quantity": quantity,
         "Metadata": "",
         "CollisionType": "Regular",
         "Friction": 0.7,
