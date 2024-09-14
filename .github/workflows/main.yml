@@ -55,8 +55,7 @@ jobs:
         if: matrix.os == 'windows-latest'
         uses: lukka/run-vcpkg@v11
         with:
-          vcpkgGitCommitId: 'master'  # Get the latest version from the vcpkg repository
-          vcpkgGitURL: 'https://github.com/microsoft/vcpkg.git'
+          vcpkgGitCommitId: '86fba13068f1e8111e7d885de2aef11378435139'
           
       - name: Install Cairo via vcpkg
         if: matrix.os == 'windows-latest'
