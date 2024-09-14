@@ -14,6 +14,7 @@ from templative.lib.produce.translation import getTranslation
 from templative.lib.manage.models.composition import ComponentComposition
 from templative.lib.manage.models.artdata import ComponentArtdata
 from templative.lib.produce.customComponents.svgscissors.inkscapeProcessor import exportSvgToImage
+from templative.lib.produce.customComponents.svgscissors.inkscapeToCairo import convertShapeInsideTextToWrappedText
 
 async def convertElementToString(element) -> str:
     out = etree.tostring(element.root, xml_declaration=True, standalone=True)
@@ -51,6 +52,8 @@ async def createArtFileOfPiece(compositions: ComponentComposition, artdata: any,
     contents = await scaleContent(contents, imageSizePixels, 0.3203944444444444)
     contents = await assignSize(contents, imageSizePixels)
     contents = await addNewlines(contents)
+    contents = convertShapeInsideTextToWrappedText(contents)
+    
     artFileOutputName = ("%s%s-%s" % (compositions.componentCompose["name"], gamedata.pieceUniqueBackHash, pieceName))
     artFileOutputFilepath = await createArtfile(contents, artFileOutputName, componentBackOutputDirectory)
     await exportSvgToImage(artFileOutputFilepath, imageSizePixels, artFileOutputName, componentBackOutputDirectory)

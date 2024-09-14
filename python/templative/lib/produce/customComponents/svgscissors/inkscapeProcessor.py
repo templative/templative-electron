@@ -7,6 +7,7 @@ import subprocess
 import asyncio
 from os import path
 import tempfile
+import cairosvg
 
 def searchWindowsRegistryForInkscape():
     try:
@@ -63,49 +64,49 @@ def findInkscape():
 
     return None
 
-async def runCommands(commands):
-    command = " ".join(commands)
-    # Create a temporary directory
-    with tempfile.TemporaryDirectory() as temp_dir:
-        # Set environment variable for temporary directory
-        env = os.environ.copy()
-        env["XDG_DATA_HOME"] = temp_dir
-        env["DBUS_SESSION_BUS_ADDRESS"] = "/dev/null"  # Disable DBus
-        # Run the command
-        process = await asyncio.create_subprocess_shell(
-            command,
-            stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.PIPE,
-            env=env
-        )
-        stdout, stderr = await process.communicate()
+# async def runCommands(commands):
+#     command = " ".join(commands)
+#     # Create a temporary directory
+#     with tempfile.TemporaryDirectory() as temp_dir:
+#         # Set environment variable for temporary directory
+#         env = os.environ.copy()
+#         env["XDG_DATA_HOME"] = temp_dir
+#         env["DBUS_SESSION_BUS_ADDRESS"] = "/dev/null"  # Disable DBus
+#         # Run the command
+#         process = await asyncio.create_subprocess_shell(
+#             command,
+#             stdout=asyncio.subprocess.PIPE,
+#             stderr=asyncio.subprocess.PIPE,
+#             env=env
+#         )
+#         stdout, stderr = await process.communicate()
         
-        if stdout:
-            print(f"[stdout]\n{stdout.decode()}")
-        if stderr:
-            print(f"!!! Error {command} exporting to png: {stderr.decode()}")
+#         if stdout:
+#             print(f"[stdout]\n{stdout.decode()}")
+#         if stderr:
+#             print(f"!!! Error {command} exporting to png: {stderr.decode()}")
 
 async def exportSvgToImage(artFileOutputFilepath, imageSizePixels, name, outputDirectory):
     absoluteSvgFilepath = path.normpath(path.abspath(artFileOutputFilepath))
     absoluteOutputDirectory = path.normpath(path.abspath(outputDirectory))
     pngFilepath = path.normpath(path.join(absoluteOutputDirectory, f"{name}.png"))
 
-    inkscapePath = findInkscape()
-    if not inkscapePath:
-        print("Inkscape is not installed or not found in common paths.")
-        return
+    # inkscapePath = findInkscape()
+    # if not inkscapePath:
+    #     print("Inkscape is not installed or not found in common paths.")
+    #     return
 
-    createPngCommands = [
-        '"%s"' % inkscapePath,
-        '"%s"' % absoluteSvgFilepath,
-        '--export-filename="%s"' % pngFilepath,
-        "--export-dpi=300",
-        "--export-background-opacity=0"
-        # "--with-gui",
-        # "--export-width=%s" % imageSizePixels[0],
-        # "--export-height=%s" % imageSizePixels[1],
-    ]
-    await runCommands(createPngCommands)
+    # createPngCommands = [
+    #     '"%s"' % inkscapePath,
+    #     '"%s"' % absoluteSvgFilepath,
+    #     '--export-filename="%s"' % pngFilepath,
+    #     "--export-dpi=300",
+    #     "--export-background-opacity=0"
+    #     # "--with-gui",
+    #     # "--export-width=%s" % imageSizePixels[0],
+    #     # "--export-height=%s" % imageSizePixels[1],
+    # ]
+    # await runCommands(createPngCommands)
     # jpgFilepath = os.path.join(absoluteOutputDirectory, "%s.jpg" % (name))
     # convertCommands = [
     #     "magick convert",
@@ -114,3 +115,12 @@ async def exportSvgToImage(artFileOutputFilepath, imageSizePixels, name, outputD
     # runCommands(convertCommands)
 
     # os.remove(pngFilepath)
+    cairosvg.svg2png(
+        url=absoluteSvgFilepath,
+        write_to=pngFilepath,
+        output_width=imageSizePixels[0],
+        output_height=imageSizePixels[1],
+        dpi=300,
+        background_color='transparent',
+    )
+    # print(f"Converted {absoluteSvgFilepath} to {pngFilepath}")

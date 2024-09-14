@@ -23,6 +23,8 @@ requests = "*"
 aiofiles = "*"
 python-socketio = {extras = ["asyncio"], version = "*"}
 templative = {file = ".", editable = true}
+matplotlib = "*"
+cairocffi = "*"
 
 [requires]
 python_version = "3.11.9"

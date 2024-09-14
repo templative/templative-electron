@@ -9,7 +9,7 @@ jobs:
     if: true
     runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
         os:
           - windows-latest
@@ -44,7 +44,30 @@ jobs:
         env:
           CERTIFICATE_OSX_APPLICATION: ${{secrets.CERTIFICATE_OSX_APPLICATION}}
           CERTIFICATE_PASSWORD: ${{secrets.CERTIFICATE_PASSWORD}}
-
+          
+      - name: Install Cairo via Homebrew
+        if: matrix.os != 'windows-latest'
+        run: |
+          brew update
+          brew install cairo
+      
+      - name: Install vcpkg
+        if: matrix.os == 'windows-latest'
+        uses: lukka/run-vcpkg@v12
+        with:
+          vcpkgVersion: '2023-09-01'
+          
+      - name: Install Cairo via vcpkg
+        if: matrix.os == 'windows-latest'
+        run: |
+          ./vcpkg install cairo:x64-windows
+          ./vcpkg integrate install
+          
+      - name: Add vcpkg to PATH
+        if: matrix.os == 'windows-latest'
+        run: |
+          echo "::add-path::$(pwd)/vcpkg/installed/x64-windows/bin"
+          
       - uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python }}
@@ -67,7 +90,15 @@ jobs:
       - name: Create Templative App/Exe
         run: |
           cd ./python
-          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"      
+          pipenv run pyinstaller --distpath ../bin -y -n templative \
+            --log-level=DEBUG ./templative/__main__.py \
+            --hidden-import=asyncclick \
+            --hidden-import=engineio.async_drivers.aiohttp \
+            --hidden-import=engineio.async_aiohttp \
+            --collect-all templative \
+            --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" \
+            --additional-hooks-dir=./python/pyinstallerHooks \
+            --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"    
       
       - name: Upload Templative Xref as Artifact
         uses: actions/upload-artifact@v3
@@ -194,8 +225,6 @@ jobs:
           else
             echo "ARCH=${{ steps.arch.outputs.arch }}" >> $GITHUB_ENV
           fi
-      
-      
     
       - name: Move signed OSX files
         if: matrix.os == 'macos-12' || matrix.os == 'macos-latest'
