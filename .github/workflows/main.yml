@@ -9,12 +9,12 @@ jobs:
     if: true
     runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         os:
           - windows-latest
           - macos-12
-          - macos-latest
+          # - macos-latest
         node:
           - 18
         python:
@@ -105,12 +105,11 @@ jobs:
         run: |
           CAIRO_PREFIX=$(brew --prefix cairo)
           LIBPNG_PREFIX=$(brew --prefix libpng)
-          ZLIB_PREFIX=$(brew --prefix zlib)
+          ZLIB_PREFIX=$(brew --prefix zlib || echo "/usr/lib") 
 
           ls "$CAIRO_PREFIX/lib"
           ls "$LIBPNG_PREFIX/lib"
-          ls "$ZLIB_PREFIX/lib"
-          
+          ls "$ZLIB_PREFIX/lib" || ls "$ZLIB_PREFIX"
           cd ./python
           pipenv run pyinstaller --distpath ../bin -y -n templative \
             --log-level=DEBUG ./templative/__main__.py \
@@ -121,7 +120,7 @@ jobs:
             --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" \
             --add-binary="$CAIRO_PREFIX/lib/libcairo.2.dylib:lib" \
             --add-binary="$LIBPNG_PREFIX/lib/libpng16.16.dylib:lib" \
-            --add-binary="$ZLIB_PREFIX/lib/libz.1.dylib:lib" \
+            --add-binary="$ZLIB_PREFIX/lib/libz.1.dylib:lib" || --add-binary="/usr/lib/libz.dylib:lib" \
             --additional-hooks-dir=./python/pyinstallerHooks \
             --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"
       
