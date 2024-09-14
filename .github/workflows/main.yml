@@ -76,9 +76,19 @@ jobs:
       - name: Determine Cairo Path
         if: matrix.os == 'windows-latest'
         run: |
-          $cairoPath = "${{ env.VCPKG_ROOT }}\installed\x64-windows\bin\libcairo-2.dll"
+          $cairoPath = "${{ env.VCPKG_ROOT }}/installed/x64-windows/bin/libcairo-2.dll"
           echo "Cairo installed at: $cairoPath"
           echo "CAIRO_PATH=$cairoPath" >> $env:GITHUB_ENV
+      
+      - name: Verify Cairo DLL Path
+        if: matrix.os == 'windows-latest'
+        run: |
+          if (Test-Path -Path "${{ env.VCPKG_ROOT }}\installed\x64-windows\bin\libcairo-2.dll") {
+            Write-Host "Cairo DLL exists at $cairoPath"
+          } else {
+            Write-Host "Cairo DLL not found"
+            exit 1
+          }
 
       - uses: actions/setup-python@v2
         with:
@@ -98,12 +108,12 @@ jobs:
           cd ./python
           pipenv run pip list
           pip list
-      
+          
       - name: Create Templative App/Exe (Windows)
         if: matrix.os == 'windows-latest'
         run: |
           cd ./python
-          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" --additional-hooks-dir=./python/pyinstallerHooks --add-binary="${{ env.VCPKG_ROOT }}/installed/x64-windows/bin/libcairo-2.dll:."
+          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" --additional-hooks-dir=./python/pyinstallerHooks --add-binary="${{ env.CAIRO_PATH }}:."
             
       - name: Create Templative App/Exe (macOS)
         if: matrix.os != 'windows-latest'
