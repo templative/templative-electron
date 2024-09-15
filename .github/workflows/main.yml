@@ -76,7 +76,8 @@ jobs:
       - name: Search for libcairo DLL
         if: matrix.os == 'windows-latest'
         run: |
-          dir /s D:\a\templative-electron\templative-electron\vcpkg\installed\x64-windows\*cairo*
+          Get-ChildItem -Path "D:\a\templative-electron\templative-electron\vcpkg\installed\x64-windows" -Filter "*cairo*" -Recurse
+
 
       - name: Determine Cairo Path
         if: matrix.os == 'windows-latest'
