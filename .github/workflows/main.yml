@@ -76,7 +76,7 @@ jobs:
           ls "${{ env.VCPKG_ROOT }}/installed/x64-windows/bin"
         shell: bash
 
-      - name: Search for libcairo DLL
+      - name: Search for Cairo DLL
         if: matrix.os == 'windows-latest'
         run: |
           find "${{ env.VCPKG_ROOT }}/installed/x64-windows/bin" -name "*cairo*"
@@ -85,7 +85,7 @@ jobs:
       - name: Determine Cairo Path
         if: matrix.os == 'windows-latest'
         run: |
-          cairoPath="${{ env.VCPKG_ROOT }}/installed/x64-windows/bin/libcairo-2.dll"
+          cairoPath="${{ env.VCPKG_ROOT }}/installed/x64-windows/bin/cairo-2.dll"
           echo "Cairo installed at: $cairoPath"
           echo "CAIRO_PATH=$cairoPath" >> $GITHUB_ENV
         shell: bash
@@ -93,14 +93,13 @@ jobs:
       - name: Verify Cairo DLL Exists
         if: matrix.os == 'windows-latest'
         run: |
-          if [ -f "${{ env.VCPKG_ROOT }}/installed/x64-windows/bin/libcairo-2.dll" ]; then
+          if [ -f "${{ env.VCPKG_ROOT }}/installed/x64-windows/bin/cairo-2.dll" ]; then
             echo "Cairo DLL exists at $cairoPath"
           else
             echo "Cairo DLL not found"
             exit 1
           fi
         shell: bash
-
 
       - uses: actions/setup-python@v2
         with:
@@ -125,7 +124,7 @@ jobs:
         if: matrix.os == 'windows-latest'
         run: |
           cd ./python
-          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" --additional-hooks-dir=./python/pyinstallerHooks --add-binary="D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\libcairo-2.dll:."
+          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" --additional-hooks-dir=./python/pyinstallerHooks --add-binary="D:\\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll:."
             
       - name: Create Templative App/Exe (macOS)
         if: matrix.os != 'windows-latest'
