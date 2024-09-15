@@ -61,45 +61,40 @@ jobs:
         if: matrix.os == 'windows-latest'
         run: |
           echo "${{ env.VCPKG_ROOT }}" >> $GITHUB_PATH
-        shell: bash
 
       - name: Install Cairo via vcpkg
         if: matrix.os == 'windows-latest'
         run: |
           ${{ env.VCPKG_ROOT }}/vcpkg.exe install cairo:x64-windows
           ${{ env.VCPKG_ROOT }}/vcpkg.exe list
-        shell: bash
-
+          
       - name: Verify Cairo Installation
         if: matrix.os == 'windows-latest'
         run: |
           ls "${{ env.VCPKG_ROOT }}/installed/x64-windows/bin"
-        shell: bash
-
-      - name: Search for Cairo DLL
+          
+      - name: Search for cairo DLL
         if: matrix.os == 'windows-latest'
         run: |
-          find "${{ env.VCPKG_ROOT }}/installed/x64-windows/bin" -name "*cairo*"
-        shell: bash
+          Get-ChildItem -Path "D:\a\templative-electron\templative-electron\vcpkg\installed\x64-windows" -Filter "*cairo*" -Recurse
+
 
       - name: Determine Cairo Path
         if: matrix.os == 'windows-latest'
         run: |
-          cairoPath="${{ env.VCPKG_ROOT }}/installed/x64-windows/bin/cairo-2.dll"
+          $cairoPath = "D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll"
           echo "Cairo installed at: $cairoPath"
-          echo "CAIRO_PATH=$cairoPath" >> $GITHUB_ENV
-        shell: bash
+          echo "CAIRO_PATH=$cairoPath" >> $env:GITHUB_ENV
 
       - name: Verify Cairo DLL Exists
         if: matrix.os == 'windows-latest'
         run: |
-          if [ -f "${{ env.VCPKG_ROOT }}/installed/x64-windows/bin/cairo-2.dll" ]; then
-            echo "Cairo DLL exists at $cairoPath"
-          else
-            echo "Cairo DLL not found"
+          if (Test-Path -Path "D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll") {
+            Write-Host "Cairo DLL exists at $cairoPath"
+          } else {
+            Write-Host "Cairo DLL not found"
             exit 1
-          fi
-        shell: bash
+          }
 
       - uses: actions/setup-python@v2
         with:
@@ -124,7 +119,7 @@ jobs:
         if: matrix.os == 'windows-latest'
         run: |
           cd ./python
-          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" --additional-hooks-dir=./python/pyinstallerHooks --add-binary="D:\\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll:."
+          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" --additional-hooks-dir=./python/pyinstallerHooks --add-binary="D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll:."
             
       - name: Create Templative App/Exe (macOS)
         if: matrix.os != 'windows-latest'
