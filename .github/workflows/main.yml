@@ -72,6 +72,11 @@ jobs:
         if: matrix.os == 'windows-latest'
         run: |
           ls "${{ env.VCPKG_ROOT }}/installed/x64-windows/bin"
+          
+      - name: Search for libcairo DLL
+        if: matrix.os == 'windows-latest'
+        run: |
+          dir /s D:\a\templative-electron\templative-electron\vcpkg\installed\x64-windows\*cairo*
 
       - name: Determine Cairo Path
         if: matrix.os == 'windows-latest'
