@@ -61,40 +61,46 @@ jobs:
         if: matrix.os == 'windows-latest'
         run: |
           echo "${{ env.VCPKG_ROOT }}" >> $GITHUB_PATH
+        shell: bash
 
       - name: Install Cairo via vcpkg
         if: matrix.os == 'windows-latest'
         run: |
           ${{ env.VCPKG_ROOT }}/vcpkg.exe install cairo:x64-windows
           ${{ env.VCPKG_ROOT }}/vcpkg.exe list
-          
+        shell: bash
+
       - name: Verify Cairo Installation
         if: matrix.os == 'windows-latest'
         run: |
           ls "${{ env.VCPKG_ROOT }}/installed/x64-windows/bin"
-          
+        shell: bash
+
       - name: Search for libcairo DLL
         if: matrix.os == 'windows-latest'
         run: |
-          Get-ChildItem -Path "D:\a\templative-electron\templative-electron\vcpkg\installed\x64-windows" -Filter "*cairo*" -Recurse
-
+          find "${{ env.VCPKG_ROOT }}/installed/x64-windows/bin" -name "*cairo*"
+        shell: bash
 
       - name: Determine Cairo Path
         if: matrix.os == 'windows-latest'
         run: |
-          $cairoPath = "D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\libcairo-2.dll"
+          cairoPath="${{ env.VCPKG_ROOT }}/installed/x64-windows/bin/libcairo-2.dll"
           echo "Cairo installed at: $cairoPath"
-          echo "CAIRO_PATH=$cairoPath" >> $env:GITHUB_ENV
+          echo "CAIRO_PATH=$cairoPath" >> $GITHUB_ENV
+        shell: bash
 
       - name: Verify Cairo DLL Exists
         if: matrix.os == 'windows-latest'
         run: |
-          if (Test-Path -Path "D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\libcairo-2.dll") {
-            Write-Host "Cairo DLL exists at $cairoPath"
-          } else {
-            Write-Host "Cairo DLL not found"
+          if [ -f "${{ env.VCPKG_ROOT }}/installed/x64-windows/bin/libcairo-2.dll" ]; then
+            echo "Cairo DLL exists at $cairoPath"
+          else
+            echo "Cairo DLL not found"
             exit 1
-          }
+          fi
+        shell: bash
+
 
       - uses: actions/setup-python@v2
         with:
