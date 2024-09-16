@@ -173,7 +173,13 @@ jobs:
             --runtime-hook=./hooks/dylib.py \
             --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"
       
-      
+      # - name: List Bundled Libraries
+      #   if: matrix.os != 'windows-latest'
+      #   run: |
+      #     echo "Listing contents of ./bin:"
+      #     ls -la ./bin
+      #     echo "Listing contents of ./bin/lib:"
+      #     ls -la ./bin/lib
 
       - name: Adjust Library Paths with install_name_tool (macOS)
         if: matrix.os != 'windows-latest'
@@ -222,14 +228,12 @@ jobs:
             exit 1
           fi
 
-      - name: Sign bundled dylibs
-        if: matrix.os != 'windows-latest'
-        run: |
-          codesign --force --verify --verbose --sign "Developer ID Application: Go Next Games LLC (829PN2W7LK)" ./bin/lib/libcairo.2.dylib
-          codesign --force --verify --verbose --sign "Developer ID Application: Go Next Games LLC (829PN2W7LK)" ./bin/lib/libpng16.16.dylib
-          codesign --force --verify --verbose --sign "Developer ID Application: Go Next Games LLC (829PN2W7LK)" ./bin/lib/libz.1.dylib
-
-
+      # - name: Sign bundled dylibs
+      #   if: matrix.os != 'windows-latest'
+      #   run: |
+      #     codesign --force --verify --verbose --sign "Developer ID Application: Go Next Games LLC (829PN2W7LK)" ./bin/lib/libcairo.2.dylib
+      #     codesign --force --verify --verbose --sign "Developer ID Application: Go Next Games LLC (829PN2W7LK)" ./bin/lib/libpng16.16.dylib
+      #     codesign --force --verify --verbose --sign "Developer ID Application: Go Next Games LLC (829PN2W7LK)" ./bin/lib/libz.1.dylib
       - name: Configure AWS credentials
         env:
           AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
