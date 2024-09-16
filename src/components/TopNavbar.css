@@ -30,17 +30,10 @@
     margin-left: 15px;
     position: relative; /* Add this line to position the tooltip correctly */
 }
-.sidebar-buttons > .nav-item > .nav-link {
-    padding: 0px;
+
+.page-button {
     padding-bottom: 5px;
-}
-.sidebar-buttons > .nav-item > .nav-link > .btn {
-    background-color: #353a46;
-    border-width: 0px !important;
-    border-style: none !important;
-}
-.sidebar-buttons > .nav-item > .nav-link > .btn:hover {
-    background-color: #424854;
+    background-color: #353a46 !important;
     border-width: 0px !important;
     border-style: none !important;
 }

@@ -7,15 +7,14 @@ class TopNavbar extends React.Component {
     render() {
         var elements = this.props.topNavbarItems.map((topNavbarItem) => {
             var isSelectedRoute = this.props.currentRoute === topNavbarItem.route;
-            var buttonClasses = "btn btn-secondary " + (isSelectedRoute ? "currentRoute" : "");
+            var buttonClasses = "btn btn-secondary page-button " + (isSelectedRoute ? "currentRoute" : "");
             return (
                 <li key={topNavbarItem.name} className="nav-item">
-                    <Link onClick={() => { this.props.updateRouteCallback(topNavbarItem.route) }} to={topNavbarItem.route} className={"nav-link"}>
-                        <button className={buttonClasses}>
-                            {topNavbarItem.svg}
-                            <div className="tooltip">{topNavbarItem.name}</div>
-                        </button>
-                    </Link>
+                    
+                    <button className={buttonClasses} onClick={() => { this.props.updateRouteCallback(topNavbarItem.route) }}>
+                        {topNavbarItem.svg}
+                        <div className="tooltip">{topNavbarItem.name}</div>
+                    </button>
                 </li>
             );
         });
