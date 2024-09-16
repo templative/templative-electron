@@ -52,6 +52,7 @@ jobs:
           brew install cairo
           brew install zlib
           brew install pango
+          brew install libffi
       
       - name: Install vcpkg
         if: matrix.os == 'windows-latest'
