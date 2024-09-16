@@ -159,7 +159,8 @@ jobs:
             --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" \
             --add-binary="$CAIRO_PREFIX/lib/libcairo.2.dylib:lib" \
             --add-binary="$LIBPNG_PREFIX/lib/libpng16.16.dylib:lib" \
-            --add-binary="$ZLIB_PREFIX/lib/libz.1.dylib:lib" || --add-binary="/usr/lib/libz.dylib:lib" \
+            --add-binary="$ZLIB_PREFIX/lib/libz.1.dylib:lib" \
+            --add-binary="/usr/lib/libz.dylib:lib" \
             --additional-hooks-dir=./python/pyinstallerHooks \
             --runtime-hook=./python/hooks/dylib.py \
             --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"
