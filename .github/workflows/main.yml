@@ -192,6 +192,12 @@ jobs:
           name: templative-app
           path: ./bin
 
+      - name: List Bundled Libraries
+        if: matrix.os != 'windows-latest'
+        run: |
+          echo "Listing contents of ./bin/lib:"
+          ls -la ./bin/lib
+
       - name: Test Templative Exe
         shell: bash
         run: |
@@ -204,7 +210,7 @@ jobs:
             echo "The application exited with an error"
             exit 1
           fi
-          
+
       - name: Sign bundled dylibs
         if: matrix.os != 'windows-latest'
         run: |
