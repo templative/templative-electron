@@ -169,8 +169,8 @@ jobs:
             --add-binary="$CAIRO_PREFIX/lib/libcairo.2.dylib:lib" \
             --add-binary="$LIBPNG_PREFIX/lib/libpng16.16.dylib:lib" \
             --add-binary="$ZLIB_PREFIX/lib/libz.1.dylib:lib" \
-            --additional-hooks-dir=./python/pyinstallerHooks \
-            --runtime-hook=./python/hooks/dylib.py \
+            --additional-hooks-dir=./pyinstallerHooks \
+            --runtime-hook=./hooks/dylib.py \
             --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"
       
       - name: List Bundled Libraries
