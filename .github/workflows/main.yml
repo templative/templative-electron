@@ -49,7 +49,6 @@ jobs:
         if: matrix.os != 'windows-latest'
         run: |
           brew update
-          brew install python
           brew install cairo
           brew install zlib
           brew install pango
@@ -162,6 +161,7 @@ jobs:
             --add-binary="$LIBPNG_PREFIX/lib/libpng16.16.dylib:lib" \
             --add-binary="$ZLIB_PREFIX/lib/libz.1.dylib:lib" || --add-binary="/usr/lib/libz.dylib:lib" \
             --additional-hooks-dir=./python/pyinstallerHooks \
+            --runtime-hook=./python/hooks/dylib.py \
             --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"
       
       - name: Adjust Library Paths with install_name_tool (macOS)
@@ -204,6 +204,14 @@ jobs:
             echo "The application exited with an error"
             exit 1
           fi
+          
+      - name: Sign bundled dylibs
+        if: matrix.os != 'windows-latest'
+        run: |
+          codesign --force --verify --verbose --sign "Developer ID Application: Go Next Games LLC (829PN2W7LK)" ./bin/lib/libcairo.2.dylib
+          codesign --force --verify --verbose --sign "Developer ID Application: Go Next Games LLC (829PN2W7LK)" ./bin/lib/libpng16.16.dylib
+          codesign --force --verify --verbose --sign "Developer ID Application: Go Next Games LLC (829PN2W7LK)" ./bin/lib/libz.1.dylib
+
 
       - name: Configure AWS credentials
         env:
