@@ -12,7 +12,7 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - windows-latest
+          # - windows-latest
           - macos-12
           - macos-latest
         node:
@@ -50,6 +50,7 @@ jobs:
         run: |
           brew update
           brew install cairo
+          brew install zlib
       
       - name: Install vcpkg
         if: matrix.os == 'windows-latest'
@@ -126,11 +127,16 @@ jobs:
         run: |
           CAIRO_PREFIX=$(brew --prefix cairo)
           LIBPNG_PREFIX=$(brew --prefix libpng)
-          ZLIB_PREFIX=$(brew --prefix zlib || echo "/usr/lib") 
+          ZLIB_PREFIX=$(brew --prefix zlib || echo "/usr/lib")
+
+          echo "Cairo prefix: $CAIRO_PREFIX"
+          echo "LibPNG prefix: $LIBPNG_PREFIX"
+          echo "Zlib prefix: $ZLIB_PREFIX"
 
           ls "$CAIRO_PREFIX/lib"
           ls "$LIBPNG_PREFIX/lib"
           ls "$ZLIB_PREFIX/lib" || ls "$ZLIB_PREFIX"
+
           cd ./python
           pipenv run pyinstaller --distpath ../bin -y -n templative \
             --log-level=DEBUG ./templative/__main__.py \
