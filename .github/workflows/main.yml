@@ -173,13 +173,7 @@ jobs:
             --runtime-hook=./hooks/dylib.py \
             --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"
       
-      - name: List Bundled Libraries
-        if: matrix.os != 'windows-latest'
-        run: |
-          echo "Listing contents of ./bin:"
-          ls -la ./bin
-          echo "Listing contents of ./bin/lib:"
-          ls -la ./bin/lib
+      
 
       - name: Adjust Library Paths with install_name_tool (macOS)
         if: matrix.os != 'windows-latest'
