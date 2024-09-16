@@ -105,7 +105,7 @@ jobs:
           python-version: ${{ matrix.python }}
 
       - name: Install pipenv
-        run: 
+        run: |
           export PATH="$(brew --prefix python)/libexec/bin:$PATH"
           python3 -m pip install pipenv
           which python3
