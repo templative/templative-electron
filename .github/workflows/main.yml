@@ -104,7 +104,7 @@ jobs:
           python-version: ${{ matrix.python }}
 
       - name: Install pipenv
-        run: pip install pipenv
+        run: python3 -m pip install pipenv
 
       - name: Install Project Python Dependencies
         run: |
