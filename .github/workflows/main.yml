@@ -49,6 +49,7 @@ jobs:
         if: matrix.os != 'windows-latest'
         run: |
           brew update
+          brew install python
           brew install cairo
           brew install zlib
           brew install pango
@@ -104,7 +105,11 @@ jobs:
           python-version: ${{ matrix.python }}
 
       - name: Install pipenv
-        run: python3 -m pip install pipenv
+        run: 
+          export PATH="$(brew --prefix python)/libexec/bin:$PATH"
+          python3 -m pip install pipenv
+          which python3
+          python3 --version
 
       - name: Install Project Python Dependencies
         run: |
@@ -130,10 +135,16 @@ jobs:
           CAIRO_PREFIX=$(brew --prefix cairo)
           LIBPNG_PREFIX=$(brew --prefix libpng)
           ZLIB_PREFIX=$(brew --prefix zlib || echo "/usr/lib")
+          LIBFFI_PREFIX=$(brew --prefix libffi)
 
           echo "Cairo prefix: $CAIRO_PREFIX"
           echo "LibPNG prefix: $LIBPNG_PREFIX"
           echo "Zlib prefix: $ZLIB_PREFIX"
+          echo "Libffi prefix: $LIBFFI_PREFIX"
+
+          export LDFLAGS="-L$CAIRO_PREFIX/lib -L$LIBPNG_PREFIX/lib -L$ZLIB_PREFIX/lib -L$LIBFFI_PREFIX/lib"
+          export CPPFLAGS="-I$CAIRO_PREFIX/include -I$LIBPNG_PREFIX/include -I$ZLIB_PREFIX/include -I$LIBFFI_PREFIX/include"
+          export PKG_CONFIG_PATH="$CAIRO_PREFIX/lib/pkgconfig:$LIBPNG_PREFIX/lib/pkgconfig:$ZLIB_PREFIX/lib/pkgconfig:$LIBFFI_PREFIX/lib/pkgconfig"
 
           ls "$CAIRO_PREFIX/lib"
           ls "$LIBPNG_PREFIX/lib"
