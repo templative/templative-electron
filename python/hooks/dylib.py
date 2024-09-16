@@ -1,3 +1,4 @@
+# hook-dylib_paths.py
 import os
 import sys
 
@@ -9,4 +10,5 @@ def get_lib_path():
 
 lib_path = get_lib_path()
 if lib_path:
-    os.environ['DYLD_LIBRARY_PATH'] = lib_path + ':' + os.environ.get('DYLD_LIBRARY_PATH', '')
+    existing_dylibs = os.environ.get('DYLD_LIBRARY_PATH', '')
+    os.environ['DYLD_LIBRARY_PATH'] = f"{lib_path}:{existing_dylibs}"
