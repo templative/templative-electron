@@ -1,7 +1,7 @@
 const { ipcMain, shell } = require('electron')
 const { openFolder, createProject, openPlaygroundFolder, openSimulatorFolder} = require("./dialogMaker")
 const { channels } = require('../shared/constants');
-const { login, giveLoginInformation, setupOauthListener } = require("./accountManager")
+const { login, giveLoginInformation } = require("./accountManager")
 
 var openUrl = async (event, url) => {
     shell.openExternal(url);
@@ -16,6 +16,5 @@ function listenForRenderEvents(window) {
     
     ipcMain.handle(channels.TO_SERVER_LOGIN, login)
     ipcMain.handle(channels.TO_SERVER_IS_LOGGED_IN, giveLoginInformation)
-    setupOauthListener(window)
 }
 module.exports = { listenForRenderEvents }

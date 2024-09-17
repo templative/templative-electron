@@ -10,6 +10,8 @@ const { initialize } = require("@aptabase/electron/main");
 const path = require('path');
 if (require('electron-squirrel-startup')) app.quit();
 app.setName('Templative');
+const { setupOauthListener, handleDeepLink } = require("./app/accountManager")
+
 var templativeWindow = undefined
 var startupWindow = undefined
 
@@ -64,6 +66,7 @@ const onReady = async () => {
     createWindow()
     setupAppUpdateListener()
     listenForRenderEvents(templativeWindow)
+    setupOauthListener(templativeWindow)
   }
   catch(err) {
     error(err)
@@ -92,3 +95,8 @@ app.on('before-quit', async () => {
 
 app.on("ready", onReady)
 app.on('window-all-closed', shutdown)
+
+app.on('open-url', async (event, url) => {
+  event.preventDefault();
+  await handleDeepLink(url);
+});

@@ -16,5 +16,17 @@
     <true/>
     <key>com.apple.security.cs.allow-unsigned-executable-memory</key>
     <true/>
+
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>com.yourapp.templative</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>templative</string>
+            </array>
+        </dict>
+    </array>
   </dict>
 </plist>
