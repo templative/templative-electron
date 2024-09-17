@@ -32,14 +32,54 @@ function createTemplativeApp() {
     pipenv install
     pipenv run pip show
     rm -rf ../bin/templative
-    # You need to install cairo dlls using mysys64 locally
-    pipenv run pyinstaller --distpath ../bin -y -n templative \
+
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        CAIRO_PREFIX=$(brew --prefix cairo)
+        LIBPNG_PREFIX=$(brew --prefix libpng)
+        ZLIB_PREFIX=$(brew --prefix zlib || echo "/usr/lib")
+        LIBFFI_PREFIX=$(brew --prefix libffi)
+
+        echo "Cairo prefix: $CAIRO_PREFIX"
+        echo "LibPNG prefix: $LIBPNG_PREFIX"
+        echo "Zlib prefix: $ZLIB_PREFIX"
+        echo "Libffi prefix: $LIBFFI_PREFIX"
+
+        export LDFLAGS="-L$CAIRO_PREFIX/lib -L$LIBPNG_PREFIX/lib -L$ZLIB_PREFIX/lib -L$LIBFFI_PREFIX/lib"
+        export CPPFLAGS="-I$CAIRO_PREFIX/include -I$LIBPNG_PREFIX/include -I$ZLIB_PREFIX/include -I$LIBFFI_PREFIX/include"
+        export PKG_CONFIG_PATH="$CAIRO_PREFIX/lib/pkgconfig:$LIBPNG_PREFIX/lib/pkgconfig:$ZLIB_PREFIX/lib/pkgconfig:$LIBFFI_PREFIX/lib/pkgconfig"
+
+        ls "$CAIRO_PREFIX/lib"
+        ls "$LIBPNG_PREFIX/lib"
+        ls "$ZLIB_PREFIX/lib" || ls "$ZLIB_PREFIX"
+
+        pipenv run pyinstaller --distpath ../bin -y -n templative \
+        --log-level=DEBUG ./templative/__main__.py \
+        --hidden-import=asyncclick \
+        --hidden-import=engineio.async_drivers.aiohttp \
+        --hidden-import=engineio.async_aiohttp \
+        --collect-all templative \
+        --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" \
+        --add-binary="$CAIRO_PREFIX/lib/libcairo.2.dylib:lib" \
+        --add-binary="$LIBPNG_PREFIX/lib/libpng16.16.dylib:lib" \
+        --add-binary="$ZLIB_PREFIX/lib/libz.1.dylib:lib" \
+        --additional-hooks-dir=./pyinstallerHooks \
+        --runtime-hook=./hooks/dylib.py \
+        --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"
+
+    elif [[ "$OSTYPE" == "win32" || "$OSTYPE" == "msys" ]]; then
+        # You need to install cairo dlls using mysys64 locally
+        pipenv run pyinstaller --distpath ../bin -y -n templative \
         --log-level=DEBUG ./templative/__main__.py \
         --hidden-import=engineio.async_drivers.aiohttp \
         --hidden-import=engineio.async_aiohttp --collect-all templative \
         --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" \
         --additional-hooks-dir=./python/pyinstallerHooks \
         --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"
+    else
+        echo "Cannot create Templative app for unknown OS" 
+        cd ..
+        return
+    fi
     cd ..
 }
 

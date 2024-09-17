@@ -96,7 +96,7 @@ app.on('before-quit', async () => {
 app.on("ready", onReady)
 app.on('window-all-closed', shutdown)
 
-app.on('open-url', async (event, url) => {
-  event.preventDefault();
-  await handleDeepLink(url);
-});
+// app.on('open-url', async (event, url) => {
+//   event.preventDefault();
+//   await handleDeepLink(url);
+// });
