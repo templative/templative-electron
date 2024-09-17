@@ -1,5 +1,6 @@
 const path = require("path")
 const axios = require("axios");
+const os = require("os");
 const {  shell, BrowserWindow,BrowserView, app } = require('electron')
 const { channels } = require("../shared/constants");
 const { verifyCredentials, isTokenValid, verifyCredentialsGoogle } = require("./templativeWebsiteClient")
@@ -97,8 +98,9 @@ function grabTokenAndEmail(data) {
 }
 
 async function handleDeepLink(url) {
-    // console.log(url)
-    var url = url + "="
+    if (os.platform() === "win32") {
+        url = url + "="
+    }
     const parsedUrl = new URL(url);
     const data = parsedUrl.searchParams.get('data');
     
