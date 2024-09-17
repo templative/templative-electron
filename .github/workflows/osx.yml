@@ -7,13 +7,12 @@ permissions:
 jobs:
   templative:
     if: true
-    timeout-minutes: 30
+    timeout-minutes: 45
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         os:
-          - windows-latest
           - macos-12
           - macos-latest
         node:
@@ -28,7 +27,6 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Add OSX Certifications
-        if: matrix.os != 'windows-latest'
         run: |
           KEY_CHAIN=build.keychain
           CERTIFICATE_P12=certificate.p12
@@ -47,75 +45,23 @@ jobs:
           CERTIFICATE_PASSWORD: ${{secrets.CERTIFICATE_PASSWORD}}
           
       - name: Install Cairo via Homebrew
-        if: matrix.os != 'windows-latest'
         run: |
           brew update
           brew install cairo
           brew install zlib
           brew install pango
           brew install libffi
-      
-      - name: Install vcpkg
-        if: matrix.os == 'windows-latest'
-        uses: lukka/run-vcpkg@v11
-        with:
-          vcpkgGitCommitId: '86fba13068f1e8111e7d885de2aef11378435139'
-
-      - name: Add vcpkg to PATH
-        if: matrix.os == 'windows-latest'
-        run: |
-          echo "${{ env.VCPKG_ROOT }}" >> $GITHUB_PATH
-
-      - name: Install Cairo via vcpkg
-        if: matrix.os == 'windows-latest'
-        run: |
-          ${{ env.VCPKG_ROOT }}/vcpkg.exe install cairo:x64-windows
-          ${{ env.VCPKG_ROOT }}/vcpkg.exe list
-          
-      - name: Verify Cairo Installation
-        if: matrix.os == 'windows-latest'
-        run: |
-          ls "${{ env.VCPKG_ROOT }}/installed/x64-windows/bin"
-          
-      - name: Search for cairo DLL
-        if: matrix.os == 'windows-latest'
-        run: |
-          Get-ChildItem -Path "D:\a\templative-electron\templative-electron\vcpkg\installed\x64-windows" -Filter "*cairo*" -Recurse
-
-
-      - name: Determine Cairo Path
-        if: matrix.os == 'windows-latest'
-        run: |
-          $cairoPath = "D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll"
-          echo "Cairo installed at: $cairoPath"
-          echo "CAIRO_PATH=$cairoPath" >> $env:GITHUB_ENV
-
-      - name: Verify Cairo DLL Exists
-        if: matrix.os == 'windows-latest'
-        run: |
-          if (Test-Path -Path "D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll") {
-            Write-Host "Cairo DLL exists at $cairoPath"
-          } else {
-            Write-Host "Cairo DLL not found"
-            exit 1
-          }
 
       - uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python }}
 
       - name: Install pipenv osx
-        if: matrix.os != 'windows-latest'
         run: |
           export PATH="$(brew --prefix python)/libexec/bin:$PATH"
           python3 -m pip install pipenv
           which python3
           python3 --version
-          
-      - name: Install pipenv windows
-        if: matrix.os == 'windows-latest'
-        run: |
-          pip install pipenv
 
       - name: Install Project Python Dependencies
         run: |
@@ -128,15 +74,8 @@ jobs:
           cd ./python
           pipenv run pip list
           pip list
-          
-      - name: Create Templative App/Exe (Windows)
-        if: matrix.os == 'windows-latest'
-        run: |
-          cd ./python
-          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" --additional-hooks-dir=./python/pyinstallerHooks --add-binary="D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll:."
       
       - name: Verify libz.dylib
-        if: matrix.os != 'windows-latest'
         run: |
           echo "Checking /usr/lib/libz.dylib:"
           ls -la /usr/lib/libz.dylib || echo "/usr/lib/libz.dylib does not exist."
@@ -145,7 +84,6 @@ jobs:
           ls -la "$(brew --prefix zlib)/lib/libz.1.dylib" || echo "$(brew --prefix zlib)/lib/libz.1.dylib does not exist."
 
       - name: Create Templative App/Exe (macOS)
-        if: matrix.os != 'windows-latest'
         run: |
           CAIRO_PREFIX=$(brew --prefix cairo)
           LIBPNG_PREFIX=$(brew --prefix libpng)
@@ -181,7 +119,6 @@ jobs:
             --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"
       
       # - name: List Bundled Libraries
-      #   if: matrix.os != 'windows-latest'
       #   run: |
       #     echo "Listing contents of ./bin:"
       #     ls -la ./bin
@@ -189,7 +126,6 @@ jobs:
       #     ls -la ./bin/lib
 
       - name: Adjust Library Paths with install_name_tool (macOS)
-        if: matrix.os != 'windows-latest'
         run: |
           cd ./bin/templative
           install_name_tool -change /opt/homebrew/lib/libcairo.2.dylib @executable_path/../lib/libcairo.2.dylib ./templative
@@ -204,20 +140,11 @@ jobs:
 
       - name: Upload Templative as Artifact
         uses: actions/upload-artifact@v3
-        if: matrix.os == 'windows-latest'
-        with:
-          name: templative-exe
-          path: ./bin
-    
-      - name: Upload Templative as Artifact
-        uses: actions/upload-artifact@v3
-        if: matrix.os != 'windows-latest'
         with:
           name: templative-app
           path: ./bin
 
       - name: Confirm libz.1.dylib
-        if: matrix.os != 'windows-latest'
         run: |
           echo "Confirming libz.1.dylib presence:"
           ls -la "$(brew --prefix zlib)/lib/libz.1.dylib"
@@ -225,11 +152,7 @@ jobs:
       - name: Test Templative Exe
         shell: bash
         run: |
-          if [ $RUNNER_OS == 'Windows' ]; then
-            ./bin/templative/templative.exe
-          else
-            ./bin/templative/templative
-          fi
+          ./bin/templative/templative
           if [ $? -ne 0 ]; then
             echo "The application exited with an error"
             exit 1
@@ -241,6 +164,7 @@ jobs:
       #     codesign --force --verify --verbose --sign "Developer ID Application: Go Next Games LLC (829PN2W7LK)" ./bin/lib/libcairo.2.dylib
       #     codesign --force --verify --verbose --sign "Developer ID Application: Go Next Games LLC (829PN2W7LK)" ./bin/lib/libpng16.16.dylib
       #     codesign --force --verify --verbose --sign "Developer ID Application: Go Next Games LLC (829PN2W7LK)" ./bin/lib/libz.1.dylib
+      
       - name: Configure AWS credentials
         env:
           AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
@@ -275,7 +199,6 @@ jobs:
           echo "current-version=$PACKAGE_VERSION" >> "$GITHUB_OUTPUT"
       
       - name: Use debugging electron
-        if: matrix.os != 'windows-latest'
         run: export DEBUG=electron*
 
       - name: Create Package
@@ -321,12 +244,10 @@ jobs:
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
 
       - name: Get runner architecture
-        if: matrix.os == 'macos-12' || matrix.os == 'macos-latest'
         id: arch
         run: echo "::set-output name=arch::$(uname -m)"
     
       - name: Convert architecture to x64
-        if: matrix.os == 'macos-12' || matrix.os == 'macos-latest'
         run: |
           if [ "${{ steps.arch.outputs.arch }}" == "x86_64" ] || [ "${{ steps.arch.outputs.arch }}" == "AMD64" ]; then
             echo "ARCH=x64" >> $GITHUB_ENV
@@ -335,7 +256,6 @@ jobs:
           fi
     
       - name: Move signed OSX files
-        if: matrix.os == 'macos-12' || matrix.os == 'macos-latest'
         run: |
           source ./build.sh
           moveSignedOsxFiles ${{ env.ARCH }} ${{ env.CURRENT_VERSION }}
@@ -343,38 +263,3 @@ jobs:
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
           AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      
-      - name: Move Windows Squirrel Files into directory 
-        if: matrix.os == 'windows-latest'
-        shell: bash
-        run: |
-          ls
-          mkdir ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
-          mv ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}-full.nupkg ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}-full.nupkg
-          mv ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe
-          mv ./out/make/squirrel.windows/x64/RELEASES ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/RELEASES
-          cd ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
-          ls
-          cd ..
-
-      - name: Upload Releases
-        if: matrix.os == 'windows-latest'
-        shell: bash
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/RELEASES s3://templative-artifacts/win32/unsigned/x64/RELEASES --region us-west-2
-
-      - name: Zip Windows Squirrel Files
-        if: matrix.os == 'windows-latest' 
-        run: |
-          Compress-Archive -Path ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/* ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip 
-          dir
-
-      - name: Deploy Windows to S3
-        if: matrix.os == 'windows-latest'
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: |
-          aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip s3://templative-artifacts/win32/unsigned/x64/Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip --region us-west-2

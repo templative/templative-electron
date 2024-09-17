@@ -96,7 +96,7 @@ function publish() {
     electron-forge publish
 }
 function createPublishDryRun() {
-    electron-forge publish --dry-run
+    electron-forge publish --dry-run --enable-logging
 }
 function publishDryRun() {
     electron-forge publish --from-dry-run
