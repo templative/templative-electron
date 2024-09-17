@@ -5,7 +5,221 @@ permissions:
   contents: write
 
 jobs:
-  templative:
+on:
+  push: null
+
+permissions:
+  contents: write
+
+jobs:
+  templative-windows:
+    if: true
+    timeout-minutes: 30
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - windows-latest
+        node:
+          - 18
+        python:
+          - 3.11.9
+    steps:
+      - name: Print architecture
+        shell: bash
+        run: uname -m
+
+      - uses: actions/checkout@v2
+      
+      - name: Install vcpkg
+        uses: lukka/run-vcpkg@v11
+        with:
+          vcpkgGitCommitId: '86fba13068f1e8111e7d885de2aef11378435139'
+
+      - name: Add vcpkg to PATH
+        run: |
+          echo "${{ env.VCPKG_ROOT }}" >> $GITHUB_PATH
+
+      - name: Install Cairo via vcpkg
+        run: |
+          ${{ env.VCPKG_ROOT }}/vcpkg.exe install cairo:x64-windows
+          ${{ env.VCPKG_ROOT }}/vcpkg.exe list
+          
+      - name: Verify Cairo Installation
+        run: |
+          ls "${{ env.VCPKG_ROOT }}/installed/x64-windows/bin"
+          
+      - name: Search for cairo DLL
+        run: |
+          Get-ChildItem -Path "D:\a\templative-electron\templative-electron\vcpkg\installed\x64-windows" -Filter "*cairo*" -Recurse
+
+
+      - name: Determine Cairo Path
+        run: |
+          $cairoPath = "D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll"
+          echo "Cairo installed at: $cairoPath"
+          echo "CAIRO_PATH=$cairoPath" >> $env:GITHUB_ENV
+
+      - name: Verify Cairo DLL Exists
+        run: |
+          if (Test-Path -Path "D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll") {
+            Write-Host "Cairo DLL exists at $cairoPath"
+          } else {
+            Write-Host "Cairo DLL not found"
+            exit 1
+          }
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Install Project Python Dependencies
+        run: |
+          cd ./python
+          pip install pipenv
+          pipenv install
+          pipenv install pyinstaller
+
+      - name: Show Python Packages
+        run: |
+          cd ./python
+          pipenv run pip list
+          pip list
+          
+      - name: Create Templative Exe
+        run: |
+          cd ./python
+          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" --additional-hooks-dir=./python/pyinstallerHooks --add-binary="D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll:."
+            
+      - name: Upload Templative Xref as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: xref
+          path: ./python/build/templative/xref-templative.html
+
+      - name: Upload Templative as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: templative-exe
+          path: ./bin
+
+      - name: Test Templative Exe
+        shell: bash
+        run: |
+          ./bin/templative/templative.exe
+          if [ $? -ne 0 ]; then
+            echo "The application exited with an error"
+            exit 1
+          fi
+
+      - name: Configure AWS credentials
+        env:
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          aws configure set aws_access_key_id $AWS_ACCESS_KEY
+          aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+          aws configure set region us-west-2
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Force remove node_modules
+        shell: bash
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+
+      - name: Install Node Packages
+        run: npm install
+
+      - name: List npm packages
+        run: npm list -g --depth=0
+
+      - name: get-npm-version
+        id: package-version
+        shell: bash
+        run: |
+          PACKAGE_VERSION=$(npm pkg get version --workspaces=false | tr -d \")
+          echo $PACKAGE_VERSION
+          echo "current-version=$PACKAGE_VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Create Package
+        run: npm run package
+        env: 
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+
+      - name: Make Distributable
+        run: npm run makeFromPackage
+        env: 
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+
+      - name: Create Publish Dry Run
+        run: npm run createPublishDryRun
+        env: 
+          DEBUG: 'electron-forge:*'
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+
+      - name: Publish Dry Run
+        run: npm run publishDryRun
+        env: 
+          DEBUG: 'electron-forge:*'
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+      
+      - name: Move Windows Squirrel Files into directory 
+        shell: bash
+        run: |
+          ls
+          mkdir ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
+          mv ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}-full.nupkg ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}-full.nupkg
+          mv ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe
+          mv ./out/make/squirrel.windows/x64/RELEASES ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/RELEASES
+          cd ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
+          ls
+          cd ..
+
+      - name: Upload Releases
+        shell: bash
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/RELEASES s3://templative-artifacts/win32/unsigned/x64/RELEASES --region us-west-2
+
+      - name: Zip Windows Squirrel Files 
+        run: |
+          Compress-Archive -Path ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/* ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip 
+          dir
+
+      - name: Deploy Windows to S3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip s3://templative-artifacts/win32/unsigned/x64/Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip --region us-west-2
+          
+  templative-osx:
     if: true
     timeout-minutes: 45
     runs-on: ${{ matrix.os }}
