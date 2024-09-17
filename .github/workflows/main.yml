@@ -1,12 +1,5 @@
 on:
-  push: null
-
-permissions:
-  contents: write
-
-jobs:
-on:
-  push: null
+  push: {}
 
 permissions:
   contents: write
@@ -53,8 +46,6 @@ jobs:
       - name: Search for cairo DLL
         run: |
           Get-ChildItem -Path "D:\a\templative-electron\templative-electron\vcpkg\installed\x64-windows" -Filter "*cairo*" -Recurse
-
-
       - name: Determine Cairo Path
         run: |
           $cairoPath = "D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll"
