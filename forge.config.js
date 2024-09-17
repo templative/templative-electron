@@ -2,11 +2,12 @@ module.exports = {
   packagerConfig: {
     name: 'Templative',
 		executableName: 'Templative',
-    asar: true,
+    "asar": {
+      "unpack": "**/*.node"
+    },
     osxUniversal: { // config options for `@electron/universal`
       x64ArchFiles: '*' // replace with any relevant glob pattern
     },
-    
     extraResource: [
       "./bin",
     ],

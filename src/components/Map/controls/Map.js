@@ -1,7 +1,7 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import {publishers, conventions} from "../mapInfo"
+// import {publishers, conventions} from "../mapInfo"
 import dayjs from 'dayjs';
 const {  shell } = require('electron');
 
@@ -74,71 +74,72 @@ export default class Map extends React.Component {
         // }
         // console.log(mentionedConventions)
         
-        return <MapContainer center={[37.8, -96]} zoom={4} style={{ height: "100%", width: "100%" }}>
-                <TileLayer
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                {publishers.map(publisher => {
-                    return <Marker className="publisher-marker" key={publisher.name} position={[publisher.coordinates[0], publisher.coordinates[1]]}>
-                        <Popup className="publisher-popup" >
-                            {this.props.doesUserOwnTemplative ? 
-                                <React.Fragment>
-                                {publisher.name}<br/>
-                                <br/>
-                                {publisher.submissionBrief}<br/>
-                                <br/>
-                                Located in {publisher.location}<br/>
-                                Often attends {publisher.conventionsRegularlyAttended}<br/>
-                            </React.Fragment>
-                            :
-                                <p>Buy Templative to Unlock Publisher Data</p>
-                            }
-                        </Popup>
-                    </Marker>
-                })}
-                {conventions
-                    .filter(convention => dayjs(convention.date).isAfter(currentDate)) // Filter out past conventions
-                    .map(convention => {
-                    const daysUntilConvention = dayjs(convention.date).diff(currentDate, 'day'); // Calculate days until the convention
+        return <React.Fragment></React.Fragment>
+            // <MapContainer center={[37.8, -96]} zoom={4} style={{ height: "100%", width: "100%" }}>
+            //     <TileLayer
+            //         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            //         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            //     />
+            //     {publishers.map(publisher => {
+            //         return <Marker className="publisher-marker" key={publisher.name} position={[publisher.coordinates[0], publisher.coordinates[1]]}>
+            //             <Popup className="publisher-popup" >
+            //                 {this.props.doesUserOwnTemplative ? 
+            //                     <React.Fragment>
+            //                     {publisher.name}<br/>
+            //                     <br/>
+            //                     {publisher.submissionBrief}<br/>
+            //                     <br/>
+            //                     Located in {publisher.location}<br/>
+            //                     Often attends {publisher.conventionsRegularlyAttended}<br/>
+            //                 </React.Fragment>
+            //                 :
+            //                     <p>Buy Templative to Unlock Publisher Data</p>
+            //                 }
+            //             </Popup>
+            //         </Marker>
+            //     })}
+            //     {conventions
+            //         .filter(convention => dayjs(convention.date).isAfter(currentDate)) // Filter out past conventions
+            //         .map(convention => {
+            //         const daysUntilConvention = dayjs(convention.date).diff(currentDate, 'day'); // Calculate days until the convention
 
-                    // Determine size based on proximity to the convention date
-                    var sizeFactor = 0.25;
-                    if (daysUntilConvention < 30) {
-                        sizeFactor = 1
-                    }
-                    else if (daysUntilConvention < 30*6) {
-                        sizeFactor = 0.5
-                    }
+            //         // Determine size based on proximity to the convention date
+            //         var sizeFactor = 0.25;
+            //         if (daysUntilConvention < 30) {
+            //             sizeFactor = 1
+            //         }
+            //         else if (daysUntilConvention < 30*6) {
+            //             sizeFactor = 0.5
+            //         }
 
-                    const iconSize = [24*sizeFactor, 40*sizeFactor]; // Maintain aspect ratio
+            //         const iconSize = [24*sizeFactor, 40*sizeFactor]; // Maintain aspect ratio
                 
-                    const customMarkerIcon = new L.Icon({
-                        iconUrl: conventionMarkerImage,
-                    //   shadowUrl: markerShadow,
-                        iconSize: iconSize,
-                        iconAnchor: [iconSize[0] / 2, iconSize[1]], // Adjust anchor based on size
-                        popupAnchor: [0, -iconSize[1]] // Adjust popup position based on size
-                    });
+            //         const customMarkerIcon = new L.Icon({
+            //             iconUrl: conventionMarkerImage,
+            //         //   shadowUrl: markerShadow,
+            //             iconSize: iconSize,
+            //             iconAnchor: [iconSize[0] / 2, iconSize[1]], // Adjust anchor based on size
+            //             popupAnchor: [0, -iconSize[1]] // Adjust popup position based on size
+            //         });
                 
-                    return <Marker icon={customMarkerIcon} className="convention-marker" key={convention.name} position={[convention.coordinates[0], convention.coordinates[1]]}>
-                        <Popup className="convention-popup">
-                            {this.props.doesUserOwnTemplative ? 
-                                <React.Fragment>
-                                    <span onClick={()=>this.goToLink(convention['url'])} className="convention-link">
-                                        {convention.name}
-                                    </span>
-                                    <br/>
-                                    <span className="important-convention-info">{convention.date}</span> in <span className="important-convention-info">{convention.location} ({daysUntilConvention} days)</span>
-                                    <br/><br/>
-                                    {convention.description}
-                                </React.Fragment>
-                                :
-                                <p>Buy Templative to Unlock Convention Data</p>
-                            }
-                        </Popup>
-                    </Marker>
-                })}
-            </MapContainer>
+            //         return <Marker icon={customMarkerIcon} className="convention-marker" key={convention.name} position={[convention.coordinates[0], convention.coordinates[1]]}>
+            //             <Popup className="convention-popup">
+            //                 {this.props.doesUserOwnTemplative ? 
+            //                     <React.Fragment>
+            //                         <span onClick={()=>this.goToLink(convention['url'])} className="convention-link">
+            //                             {convention.name}
+            //                         </span>
+            //                         <br/>
+            //                         <span className="important-convention-info">{convention.date}</span> in <span className="important-convention-info">{convention.location} ({daysUntilConvention} days)</span>
+            //                         <br/><br/>
+            //                         {convention.description}
+            //                     </React.Fragment>
+            //                     :
+            //                     <p>Buy Templative to Unlock Convention Data</p>
+            //                 }
+            //             </Popup>
+            //         </Marker>
+            //     })}
+            // </MapContainer>
     }
 }

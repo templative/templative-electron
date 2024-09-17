@@ -2,7 +2,7 @@ import React from "react";
 import TopNavbar from './TopNavbar';
 import EditPanel from './Edit/EditPanel';
 import RenderPanel from './Render/RenderPanel';
-import MapPanel from './Map/MapPanel';
+// import MapPanel from './Map/MapPanel';
 import AnimatePanel from './Animate/AnimatePanel';
 import {HashRouter, Routes, Route } from "react-router-dom";
 import CreatePanel from "./Create/CreatePanel";
@@ -368,13 +368,13 @@ export default class EditProjectView extends React.Component {
                 />
             )}
 
-            {this.state.currentRoute === 'map' && (
+            {/* {this.state.currentRoute === 'map' && (
                 <MapPanel
                     email={this.props.email}
                     token={this.props.token}
                     templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                 />
-            )}
+            )} */}
 
             {this.state.currentRoute === 'feedback' && (
                 <FeedbackPanel
