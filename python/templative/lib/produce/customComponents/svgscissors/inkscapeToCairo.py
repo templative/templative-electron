@@ -3,6 +3,7 @@ from lxml import etree
 from PIL import ImageFont
 import itertools
 import re
+from templative.lib.produce.customComponents.svgscissors.fontCache import FontCache
 
 nsMap = {
     'svg': 'http://www.w3.org/2000/svg',
@@ -11,49 +12,57 @@ nsMap = {
 }
 svgNs = '{http://www.w3.org/2000/svg}'
 
-fontsCache = {}
-fontPathsCache = {} 
-
-def findFontPath(fontFamily):
-    if fontFamily in fontPathsCache:
-        return fontPathsCache[fontFamily]
+def findFontPath(fontFamily, fontCache:FontCache):
+    if fontFamily in fontCache.fontPathsCache:
+        return fontCache.fontPathsCache[fontFamily]
+    
     fontPaths = font_manager.findSystemFonts(fontpaths=None, fontext='ttf')
     for fontPath in fontPaths:
         fontProperties = font_manager.FontProperties(fname=fontPath)
-        if fontProperties.get_name() == fontFamily:
-            fontPathsCache[fontFamily] = fontPath
-            return fontPath
+        try:
+            # print(fontProperties.get_name())
+            if fontProperties.get_name() == fontFamily:
+                fontCache.fontPathsCache[fontFamily] = fontPath
+                return fontPath
+        except:
+            return None
     return None
 
-def getFont(fontFamily, fontSize):
+def getFont(fontFamily, fontSize, fontCache:FontCache):
     fontKey = f"{fontFamily}_{fontSize}"
-    if fontKey in fontsCache:
-        return fontsCache[fontKey]
-    fontPath = findFontPath(fontFamily)
+    if fontKey in fontCache.fontsCache:
+        return fontCache.fontsCache[fontKey]
+    if fontFamily in fontCache.missingFonts:
+        return ImageFont.load_default()
+    fontPath = findFontPath(fontFamily, fontCache)
     if fontPath:
         try:
             font = ImageFont.truetype(fontPath, int(fontSize))
-            fontsCache[fontKey] = font
+            fontCache.fontsCache[fontKey] = font
             return font
-        except IOError:
-            print(f"!!! Font '{fontFamily}' not found. Using default font.")
+        except IOError as e:
+            print(f"!!! Error loading font '{fontFamily}' from {fontPath}: {e}. Using default font.")
+            fontCache.missingFonts.add(fontFamily)
             return ImageFont.load_default()
-    else:
-        print(f"!!! Font '{fontFamily}' not found in system. Using default font.")
-        return ImageFont.load_default()
+
+    print(f"!!! Font {fontFamily} not found in system. Using default font.")
+    fontCache.missingFonts.add(fontFamily)
+    return ImageFont.load_default()
     
-def getFontInfo(currentStyles):
+def getFontInfo(currentStyles, fontCache:FontCache):
     fontSize = currentStyles.get('font-size', '16px')
     fontFamily = currentStyles.get('font-family', 'Arial').strip("'")
     lineHeight = float(currentStyles.get('line-height', 1.2))
 
     try:
         fontSize = float(fontSize.replace('px', ''))
+        if fontSize <= 0:
+            raise ValueError(f"Invalid font size: {fontSize}. Using default size of 16px.")
     except ValueError:
         print(f"!!! Invalid font size '{fontSize}' encountered. Using default size of 16px.")
         fontSize = 16
 
-    font = getFont(fontFamily, fontSize)
+    font = getFont(fontFamily, fontSize, fontCache)
     
     return font, fontSize, lineHeight
 
@@ -143,7 +152,7 @@ def getInheritedStyle(element, attribute, default=None):
     
     return default
 
-def convertShapeInsideTextToWrappedText(svgContent):
+def convertShapeInsideTextToWrappedText(svgContent, fontCache:FontCache):
     parser = etree.XMLParser(remove_blank_text=True)
     root = etree.fromstring(svgContent.encode('utf-8'), parser)
     tree = etree.ElementTree(root)
@@ -154,12 +163,12 @@ def convertShapeInsideTextToWrappedText(svgContent):
         shapeInside = getInheritedStyle(textElem, 'shape-inside')
         if not shapeInside:
             continue
-        convertTextElement(root, textElem)
+        convertTextElement(root, textElem, fontCache)
 
     modifiedSvgContent = etree.tostring(tree, pretty_print=True, xml_declaration=True, encoding='UTF-8').decode('utf-8')
     return modifiedSvgContent
 
-def wrapTextWithTspans(textElem, maxWidth, inheritedStyles={}, xPos=0, yPos=0):
+def wrapTextWithTspans(textElem, maxWidth, fontCache:FontCache, inheritedStyles={}, xPos=0, yPos=0):
     """
     Processes the text element and its children in document order,
     wrapping text and calculating y positions correctly.
@@ -245,7 +254,7 @@ def wrapTextWithTspans(textElem, maxWidth, inheritedStyles={}, xPos=0, yPos=0):
                 if token == '':
                     continue
                 # Update font based on styles
-                font, fontSize, lineHeight = getFontInfo(styles)
+                font, fontSize, lineHeight = getFontInfo(styles, fontCache)
                 tokenWidth = font.getbbox(token)[2]
                 # Update maximum font size and line height for the current line
                 currentLineMaxFontSize = max(currentLineMaxFontSize, fontSize)
@@ -279,7 +288,7 @@ def wrapTextWithTspans(textElem, maxWidth, inheritedStyles={}, xPos=0, yPos=0):
                     # Empty line due to consecutive newlines
                     # Use default font size and line height if maximums are zero
                     if currentLineMaxFontSize == 0:
-                        font, fontSize, lineHeight = getFontInfo(styles)
+                        font, fontSize, lineHeight = getFontInfo(styles, fontCache)
                         currentLineMaxFontSize = fontSize
                         currentLineMaxLineHeight = lineHeight
                     lines.append(([], yOffset, currentLineMaxFontSize, currentLineMaxLineHeight))
@@ -337,7 +346,7 @@ def wrapTextWithTspans(textElem, maxWidth, inheritedStyles={}, xPos=0, yPos=0):
 
     return newTextElem
 
-def convertTextElement(root, textElem):
+def convertTextElement(root, textElem, fontCache: FontCache):
     # Extract the 'shape-inside' style from the element
     shapeInside = getInheritedStyle(textElem, 'shape-inside')
     if not shapeInside:
@@ -363,7 +372,7 @@ def convertTextElement(root, textElem):
     maxWidth = float(rect.attrib.get('width'))
     xPos = rect.attrib.get('x')
     yPos = rect.attrib.get('y')
-    wrappedTextElem = wrapTextWithTspans(textElem, maxWidth, parentStyles, xPos, yPos)
+    wrappedTextElem = wrapTextWithTspans(textElem, maxWidth, fontCache, parentStyles, xPos, yPos)
 
     # Replace the original text element in the root with the wrapped text element
     parent = textElem.getparent()

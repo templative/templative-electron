@@ -15,12 +15,12 @@ from templative.lib.manage.models.composition import ComponentComposition
 from templative.lib.manage.models.artdata import ComponentArtdata
 from templative.lib.produce.customComponents.svgscissors.inkscapeProcessor import exportSvgToImage
 from templative.lib.produce.customComponents.svgscissors.inkscapeToCairo import convertShapeInsideTextToWrappedText
-
+from templative.lib.produce.customComponents.svgscissors.fontCache import FontCache
 async def convertElementToString(element) -> str:
     out = etree.tostring(element.root, xml_declaration=True, standalone=True)
     return out.decode('utf-8')
 
-async def createArtFileOfPiece(compositions: ComponentComposition, artdata: any, gamedata: PieceData | ComponentBackData, componentBackOutputDirectory: str, productionProperties: ProduceProperties | PreviewProperties) -> None:
+async def createArtFileOfPiece(compositions: ComponentComposition, artdata: any, gamedata: PieceData | ComponentBackData, componentBackOutputDirectory: str, productionProperties: ProduceProperties | PreviewProperties, fontCache:FontCache) -> None:
     templateFilesDirectory = compositions.gameCompose["artTemplatesDirectory"]
     if artdata is None: 
         print("!!! Missing artdata %s" % gamedata.componentDataBlob["displayName"])
@@ -52,7 +52,7 @@ async def createArtFileOfPiece(compositions: ComponentComposition, artdata: any,
     contents = await scaleContent(contents, imageSizePixels, 0.3203944444444444)
     contents = await assignSize(contents, imageSizePixels)
     contents = await addNewlines(contents)
-    contents = convertShapeInsideTextToWrappedText(contents)
+    contents = convertShapeInsideTextToWrappedText(contents, fontCache)
     
     artFileOutputName = ("%s%s-%s" % (compositions.componentCompose["name"], gamedata.pieceUniqueBackHash, pieceName))
     artFileOutputFilepath = await createArtfile(contents, artFileOutputName, componentBackOutputDirectory)

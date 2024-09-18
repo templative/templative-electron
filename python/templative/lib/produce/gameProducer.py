@@ -14,6 +14,7 @@ from templative.lib.produce import customComponents
 from templative.lib.manage.models.produceProperties import ProduceProperties, PreviewProperties
 from templative.lib.manage.models.gamedata import GameData
 from templative.lib.manage.models.composition import ComponentComposition
+from templative.lib.produce.customComponents.svgscissors.fontCache import FontCache
 
 def getPreviewsPath():
     try:
@@ -54,7 +55,8 @@ async def producePiecePreview(gameRootDirectoryPath, componentName, pieceName, l
     outputDirectoryPath = getPreviewsPath()
     await clearPreviews(outputDirectoryPath)
     previewProperties = PreviewProperties(gameRootDirectoryPath, outputDirectoryPath, pieceName, langauge)
-    await customComponents.produceCustomComponentPreview(previewProperties, gameData, componentComposition)
+    fontCache = FontCache()
+    await customComponents.produceCustomComponentPreview(previewProperties, gameData, componentComposition, fontCache)
         
 async def produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage):
     if not gameRootDirectoryPath:
@@ -88,7 +90,7 @@ async def produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublis
 
     gameData = GameData(studioDataBlob, gameDataBlob)
     produceProperties = ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage)
-
+    fontCache = FontCache()
     for componentCompose in componentsCompose:
         isProducingOneComponent = componentFilter != None
         isMatchingComponentFilter = isProducingOneComponent and componentCompose["name"] == componentFilter
@@ -107,7 +109,7 @@ async def produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublis
 
         componentComposition = ComponentComposition(gameCompose, componentCompose)
 
-        tasks.append(asyncio.create_task(produceGameComponent(produceProperties, gameData, componentComposition)))
+        tasks.append(asyncio.create_task(produceGameComponent(produceProperties, gameData, componentComposition, fontCache)))
 
     rules = await defineLoader.loadRules(gameRootDirectoryPath)
     tasks.append(asyncio.create_task(rulesMarkdownProcessor.produceRulebook(rules, outputDirectoryPath)))
@@ -118,7 +120,7 @@ async def produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublis
 
     return outputDirectoryPath
 
-async def produceGameComponent(produceProperties: ProduceProperties, gamedata:GameData, componentComposition:ComponentComposition) -> None:
+async def produceGameComponent(produceProperties: ProduceProperties, gamedata:GameData, componentComposition:ComponentComposition, fontCache:FontCache) -> None:
 
     componentType = componentComposition.componentCompose["type"]
     componentTypeTokens = componentType.split("_")
@@ -128,7 +130,7 @@ async def produceGameComponent(produceProperties: ProduceProperties, gamedata:Ga
         await produceStockComponent(componentComposition.componentCompose, produceProperties.outputDirectoryPath)
         return
 
-    await customComponents.produceCustomComponent(produceProperties, gamedata, componentComposition)
+    await customComponents.produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache)
 
 async def produceStockComponent(componentCompose, outputDirectory):
     componentName = componentCompose["name"]

@@ -13,6 +13,7 @@ from templative.lib.componentInfo import COMPONENT_INFO
 from templative.lib.produce.customComponents.backProducer import BackProducer
 from templative.lib.produce.customComponents.frontOnlyProducer import FrontOnlyProducer
 from templative.lib.produce.customComponents.diceProducer import DiceProducer
+from templative.lib.produce.customComponents.svgscissors.fontCache import FontCache
 
 async def getComponentArtdata(componentName, inputDirectoryPath, componentComposition) -> ComponentArtdata:
     artDatas = {}
@@ -26,7 +27,7 @@ async def getComponentArtdata(componentName, inputDirectoryPath, componentCompos
     
     return ComponentArtdata(artDatas)
 
-async def produceCustomComponent(produceProperties:ProduceProperties, gamedata:GameData, componentComposition:ComponentComposition) -> None:
+async def produceCustomComponent(produceProperties:ProduceProperties, gamedata:GameData, componentComposition:ComponentComposition, fontCache:FontCache) -> None:
     componentName = componentComposition.componentCompose["name"]
     
     componentDataBlob = await defineLoader.loadComponentGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["componentGamedataFilename"])
@@ -53,10 +54,10 @@ async def produceCustomComponent(produceProperties:ProduceProperties, gamedata:G
         return
     
     print("Creating art assets for %s component." % (componentName))
-    await producer.createComponent(produceProperties, componentComposition, componentData, componentArtdata)
+    await producer.createComponent(produceProperties, componentComposition, componentData, componentArtdata, fontCache)
 
 
-async def produceCustomComponentPreview(previewProperties:PreviewProperties, gamedata:GameData, componentComposition:ComponentComposition) -> None:
+async def produceCustomComponentPreview(previewProperties:PreviewProperties, gamedata:GameData, componentComposition:ComponentComposition, fontCache:FontCache) -> None:
     componentName = componentComposition.componentCompose["name"]
     
     componentDataBlob = await defineLoader.loadComponentGamedata(previewProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["componentGamedataFilename"])
@@ -84,6 +85,6 @@ async def produceCustomComponentPreview(previewProperties:PreviewProperties, gam
         print("No production instructions for %s %s." % (componentComposition.componentCompose["type"], componentComposition.componentCompose["name"]))
         return
     print(f"Creating art assets for {componentName} component {previewProperties.pieceName}.")
-    await producer.createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata)
+    await producer.createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata, fontCache)
 
 

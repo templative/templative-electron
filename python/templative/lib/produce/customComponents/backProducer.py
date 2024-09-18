@@ -10,12 +10,13 @@ from templative.lib.manage.models.gamedata import ComponentData, ComponentBackDa
 from templative.lib.manage.models.composition import ComponentComposition
 from templative.lib.manage.models.artdata import ComponentArtdata
 from templative.lib.manage import defineLoader
+from templative.lib.produce.customComponents.svgscissors.fontCache import FontCache
 
 from templative.lib.componentInfo import COMPONENT_INFO
 
 class BackProducer(Producer):
     @staticmethod
-    async def createPiecePreview(previewProperties:PreviewProperties, componentComposition:ComponentComposition, componentData:ComponentData, componentArtdata:ComponentArtdata):
+    async def createPiecePreview(previewProperties:PreviewProperties, componentComposition:ComponentComposition, componentData:ComponentData, componentArtdata:ComponentArtdata, fontCache:FontCache):
         componentTypeInfo = COMPONENT_INFO[componentComposition.componentCompose["type"]]
         defaultPieceGamedataBlob = [{ 
             "name": componentComposition.componentCompose["name"], 
@@ -41,10 +42,10 @@ class BackProducer(Producer):
                 componentBackDataBlob[sourcedVariable] = pieceGamedata[sourcedVariable]
 
             uniqueComponentBackData = ComponentBackData(componentData.studioDataBlob, componentData.gameDataBlob, componentData.componentDataBlob, componentBackDataBlob, sourcedVariableNamesSpecificToPieceOnBackArtData, uniqueHashOfSourceData)
-            await svgscissors.createArtFileForPiece(componentComposition, componentArtdata, uniqueComponentBackData, piecesDataBlob, previewProperties.outputDirectoryPath, previewProperties)
+            await svgscissors.createArtFileForPiece(componentComposition, componentArtdata, uniqueComponentBackData, piecesDataBlob, previewProperties.outputDirectoryPath, previewProperties, fontCache)
     
     @staticmethod
-    async def createComponent(produceProperties:ProduceProperties, componentComposition:ComponentComposition, componentData:ComponentData, componentArtdata:ComponentArtdata):
+    async def createComponent(produceProperties:ProduceProperties, componentComposition:ComponentComposition, componentData:ComponentData, componentArtdata:ComponentArtdata, fontCache:FontCache):
         componentTypeInfo = COMPONENT_INFO[componentComposition.componentCompose["type"]]
         defaultPieceGamedataBlob = [{ 
             "name": componentComposition.componentCompose["name"], 
@@ -64,7 +65,7 @@ class BackProducer(Producer):
         uniqueComponentBackDatas = BackProducer.createNewComponentBackPerUniqueBackGamedata(sourcedVariableNamesSpecificToPieceOnBackArtData, componentData, piecesDataBlob)
         
         for uniqueComponentBackData in uniqueComponentBackDatas:
-            await BackProducer.createComponentBackDataPieces(uniqueComponentBackDatas[uniqueComponentBackData], sourcedVariableNamesSpecificToPieceOnBackArtData, componentComposition, produceProperties, componentArtdata, piecesDataBlob)
+            await BackProducer.createComponentBackDataPieces(uniqueComponentBackDatas[uniqueComponentBackData], sourcedVariableNamesSpecificToPieceOnBackArtData, componentComposition, produceProperties, componentArtdata, piecesDataBlob, fontCache)
         
     # If the back art data needs data from the piece, that means our component has unique backs. Unique backs are handled as seperate components during manufacturing, so we'll output multiple componennts, one per unqiue back.
     @staticmethod
@@ -110,12 +111,12 @@ class BackProducer(Producer):
         return md5(pieceBackSourceHash.encode()).hexdigest()[:8]
 
     @staticmethod
-    async def createComponentBackDataPieces(uniqueComponentBackData:ComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData: [str], compositions:ComponentComposition, produceProperties:ProduceProperties, componentArtdata:ComponentArtdata, piecesDataBlob: [any]):
+    async def createComponentBackDataPieces(uniqueComponentBackData:ComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData: [str], compositions:ComponentComposition, produceProperties:ProduceProperties, componentArtdata:ComponentArtdata, piecesDataBlob: [any], fontCache:FontCache):
         componentFolderName = compositions.componentCompose["name"] + uniqueComponentBackData.pieceUniqueBackHash
         
         componentBackOutputDirectory = await outputWriter.createComponentFolder(componentFolderName, produceProperties.outputDirectoryPath)
         await BackProducer.createUniqueComponentBackInstructions(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, compositions, componentBackOutputDirectory, componentFolderName, piecesDataBlob)
-        await svgscissors.createArtFilesForComponent(compositions, componentArtdata, uniqueComponentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties)
+        await svgscissors.createArtFilesForComponent(compositions, componentArtdata, uniqueComponentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties, fontCache)
 
     @staticmethod
     async def createUniqueComponentBackInstructions(uniqueComponentBackData:ComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData: [str], compositions: ComponentComposition, componentBackOutputDirectory: str, componentFolderName: str, piecesGamedata: any) -> None:

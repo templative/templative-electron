@@ -9,6 +9,7 @@ from templative.lib.manage.models.gamedata import StudioData, GameData, Componen
 from templative.lib.manage.models.composition import ComponentComposition
 from templative.lib.manage.models.artdata import ComponentArtdata
 from templative.lib.manage import defineLoader
+from templative.lib.produce.customComponents.svgscissors.fontCache import FontCache
 
 from templative.lib.componentInfo import COMPONENT_INFO
 
@@ -27,16 +28,16 @@ class FrontOnlyProducer(Producer):
         await svgscissors.createArtFileForPiece(componentComposition, componentArtdata, componentBackData, piecesDataBlob, previewProperties)
 
     @staticmethod
-    async def createComponent(produceProperties:ProduceProperties, componentComposition:ComponentComposition, componentData:ComponentData, componentArtdata:ComponentArtdata):
+    async def createComponent(produceProperties:ProduceProperties, componentComposition:ComponentComposition, componentData:ComponentData, componentArtdata:ComponentArtdata, fontCache:FontCache):
         piecesDataBlob = await defineLoader.loadPiecesGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"])
         if not piecesDataBlob or piecesDataBlob == {}:
             print("Skipping %s component due to missing pieces gamedata." % componentComposition.componentCompose["name"])
             return
 
-        await FrontOnlyProducer.createComponentPieces(produceProperties, componentComposition, componentData, componentArtdata, piecesDataBlob)
+        await FrontOnlyProducer.createComponentPieces(produceProperties, componentComposition, componentData, componentArtdata, piecesDataBlob, fontCache)
 
     @staticmethod
-    async def createComponentPieces(produceProperties:ProduceProperties, componentComposition:ComponentComposition, componentData:ComponentData, componentArtdata:ComponentArtdata, piecesDataBlob: [any]):
+    async def createComponentPieces(produceProperties:ProduceProperties, componentComposition:ComponentComposition, componentData:ComponentData, componentArtdata:ComponentArtdata, piecesDataBlob: [any], fontCache:FontCache):
         componentFolderName = componentComposition.componentCompose["name"]
         
         componentBackOutputDirectory = await outputWriter.createComponentFolder(componentFolderName, produceProperties.outputDirectoryPath)
@@ -44,7 +45,7 @@ class FrontOnlyProducer(Producer):
         
         # We use a component back that has no unique data. It has the same info within it as a componentData.
         componentBackData = ComponentBackData(componentData.studioDataBlob, componentData.gameDataBlob, componentData.componentDataBlob)
-        await svgscissors.createArtFilesForComponent(componentComposition, componentArtdata, componentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties)
+        await svgscissors.createArtFilesForComponent(componentComposition, componentArtdata, componentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties, fontCache)
 
     @staticmethod
     async def writeComponentInstructions(compositions: ComponentComposition, componentBackOutputDirectory: str, componentFolderName: str, piecesGamedata: any) -> None:
