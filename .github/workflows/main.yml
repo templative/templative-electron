@@ -7,7 +7,7 @@ permissions:
 jobs:
   templative-windows:
     if: true
-    timeout-minutes: 45
+    # timeout-minutes: 30
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -212,7 +212,7 @@ jobs:
           
   templative-osx:
     if: true
-    timeout-minutes: 45
+    # timeout-minutes: 45
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -388,6 +388,14 @@ jobs:
         run: |
           rm -rf node_modules
           rm -f package-lock.json
+
+      - name: Cache Electron binaries
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/electron
+          key: ${{ runner.os }}-electron-${{ hashFiles('package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-electron-
 
       - name: Install Node Packages
         run: npm install
