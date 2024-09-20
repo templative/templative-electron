@@ -76,8 +76,11 @@ export default class RenderPreview extends React.Component {
             if (componentCompose.length > 0) {
                 chosenComponentName = componentCompose[0].name;
                 const piecesFilepath = path.join(this.props.templativeRootDirectoryPath, gameCompose.piecesGamedataDirectory, `${componentCompose[0].piecesGamedataFilename}.json`);
-                const piecesGamedata = await TemplativeAccessTools.loadFileContentsAsJson(piecesFilepath);
-                piecesOptions = piecesGamedata.map(piece => piece.name);
+                
+                if (await TemplativeAccessTools.doesFileExistAsync(piecesFilepath)) {
+                    const piecesGamedata = await TemplativeAccessTools.loadFileContentsAsJson(piecesFilepath);
+                    piecesOptions = piecesGamedata.map(piece => piece.name);
+                }
                 chosenPieceName = piecesOptions[0];
             }
 
