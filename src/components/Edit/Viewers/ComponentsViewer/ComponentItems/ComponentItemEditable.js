@@ -22,10 +22,142 @@ export default class ComponentItemEditable extends React.Component {
     }
     componentDidUpdate = async (prevProps, prevState) => {
         await this.loadComponentData()
+        
+        var changed = [
+            "componentGameDataFilePath",
+            "pieceGameDataFilePath",
+            "artdataFrontFilePath",
+            "artdataDieFaceFilePath",
+            "artdataBackFilePath",
+            "componentGameDataExists",
+            "pieceGamedataExists",
+            "frontArtdataExists",
+            "dieFaceArtdataExists",
+            "backArtdataExists"
+        ]
+        for (let index = 0; index < changed.length; index++) {
+            const change = changed[index];
+            if (prevState[change] != this.state[change]) {
+                await this.processUpshot()
+            }
+        }
     }
 
     componentDidMount = async () => { 
         await this.loadComponentData()
+        await this.processUpshot()
+    }
+    static capitalizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    static describeOverlays = (artdataType,artdata) => {
+        var overlayMessages = []
+        for (var o = 0; o < artdata.overlays.length; o++) {
+            var overlay = artdata.overlays[o]
+            var scope = ComponentItemEditable.capitalizeFirstLetter(overlay.scope)
+            if (scope !== "Global") {
+                overlayMessages.push(`the ${scope}'s ${overlay.source} file`)
+            }
+            else {
+                overlayMessages.push(`${overlay.source}.svg`)
+            }
+        }
+        if (overlayMessages.length > 0) {
+            const formatedOverlays = overlayMessages.length > 1 
+                ? `${overlayMessages.slice(0, -1).join(", ")}, and then finally ${overlayMessages.slice(-1)}` 
+                : overlayMessages.join("");
+            return `On the ${artdataType} it starts with the ${artdata.templateFilename}.svg and then it overlays ${formatedOverlays}. `
+        }
+        return `The ${artdataType} uses the ${artdata.templateFilename}.svg file. `
+    }
+    static describeTextReplacements = (artdata) => {
+        var textReplacementsUpshot = ""
+        var scopes = {}
+        var globalReplacements = []
+        for (var o = 0; o < artdata.textReplacements.length; o++) {
+            var textReplacement = artdata.textReplacements[o]
+            var scope = ComponentItemEditable.capitalizeFirstLetter(textReplacement.scope)
+            if (scope === "Global") {
+                globalReplacements.push(`${textReplacement.key} with ${textReplacement.source}`)
+                continue
+            }
+            if (scopes[textReplacement.scope] === undefined) {
+                scopes[textReplacement.scope] = []
+            }
+            if (textReplacement.key === textReplacement.source) {
+                scopes[textReplacement.scope].push(`{${textReplacement.key}}`)
+            }
+            else {
+                scopes[textReplacement.scope].push(`{${textReplacement.key}} with ${textReplacement.source}`)
+            }
+        }
+        if (Object.keys(scopes).length > 0) {
+            Object.keys(scopes).forEach(scope => {
+                const replacements = scopes[scope];
+                const replacementValues = Object.values(replacements);
+                const formatedReplacements = replacementValues.length > 1 
+                    ? `${replacementValues.slice(0, -1).join(", ")}, and ${replacementValues.slice(-1)}` 
+                    : replacementValues.join("");
+                textReplacementsUpshot = `${textReplacementsUpshot}It updates ${formatedReplacements} using the ${ComponentItemEditable.capitalizeFirstLetter(scope)}. `
+            });
+            return textReplacementsUpshot
+        }
+        return ""
+    }
+    static describeStyleUpdates = (artdata) => {
+        var styleUpdatesUpshot = ""
+        var scopes = {}
+        var globalReplacements = []
+        for (var o = 0; o < artdata.styleUpdates.length; o++) {
+            var styleUpdate = artdata.styleUpdates[o]
+            var scope = ComponentItemEditable.capitalizeFirstLetter(styleUpdate.scope)
+            if (scope === "Global") {
+                globalReplacements.push(`${styleUpdate.key} with ${styleUpdate.source}`)
+                continue
+            }
+            if (scopes[styleUpdate.scope] === undefined) {
+                scopes[styleUpdate.scope] = []
+            }
+            if (styleUpdate.key === styleUpdate.source) {
+                scopes[styleUpdate.scope].push(`the ${styleUpdate.id} element's ${styleUpdate.cssValue}`)
+            }
+            else {
+                scopes[styleUpdate.scope].push(`the ${styleUpdate.id} element's ${styleUpdate.cssValue} with ${styleUpdate.source}`)
+            }
+        }
+        if (Object.keys(scopes).length > 0) {
+            Object.keys(scopes).forEach(scope => {
+                const replacements = scopes[scope];
+                const replacementValues = Object.values(replacements);
+                const formatedReplacements = replacementValues.length > 1 
+                    ? `${replacementValues.slice(0, -1).join(", ")}, and ${replacementValues.slice(-1)}` 
+                    : replacementValues.join("");
+                styleUpdatesUpshot = `${styleUpdatesUpshot}It updates ${formatedReplacements} using the ${ComponentItemEditable.capitalizeFirstLetter(scope)}. `
+            });
+            return styleUpdatesUpshot
+        }
+        return ""
+    }
+    static describeArtdataFile = (artdataType, artdata) => {
+        var overlays = ComponentItemEditable.describeOverlays(artdataType, artdata)
+        var text = ComponentItemEditable.describeTextReplacements(artdata)
+        var css = ComponentItemEditable.describeStyleUpdates(artdata)
+        var describePieces = ""
+        return `${overlays}${text}${css}${describePieces}`
+    }
+    processUpshot = async() => {
+        var name = this.props.isFloatingName ? this.props.floatingName : this.props.componentName
+        var componentType = this.props.componentType
+        var upshot = `${name} is a ${componentType}. `
+        if (this.state.frontArtdataExists) {
+            var frontArtdata = JSON.parse(await TemplativeAccessTools.readFileContentsAsync(this.state.artdataFrontFilePath))
+            upshot = `${upshot}${ComponentItemEditable.describeArtdataFile("front", frontArtdata)}`
+        }
+        if (this.state.backArtdataExists) {
+            var backArtdata = JSON.parse(await TemplativeAccessTools.readFileContentsAsync(this.state.artdataBackFilePath))
+            upshot = `${upshot}${ComponentItemEditable.describeArtdataFile("back", backArtdata)}`
+        }
+        this.setState({upshot: upshot})
     }
     loadComponentData = async () => {    
         const gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json")
@@ -215,7 +347,11 @@ export default class ComponentItemEditable extends React.Component {
                 </div> */}
 
             </div>
-            
+            {this.state.upshot &&
+                <div className="input-group mb-3 input-group-sm mb-3 upshot-input-group" data-bs-theme="dark">
+                    <textarea className="form-control value-field" readOnly={true} rows={5} value={this.state.upshot}/>
+                </div>
+            }
             {/* <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
                 <button type="button" className="w-100 btn btn-outline-secondary render-specific-component-button">Render {this.props.isFloatingName ? this.props.floatingName : this.props.componentName}</button>
             </div> */}
