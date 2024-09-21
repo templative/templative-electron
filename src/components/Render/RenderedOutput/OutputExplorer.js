@@ -12,8 +12,8 @@ const path = require('path');
 const fsOld = require('fs');
 
 const postRenderOptions = [
-    "View Rendered Images",
-    "View the Rules",
+    "Images",
+    "Rules",
     "Export to Tabletop Simulator Save",
     "Export Tabletop Playground Package",
     "Create Print & Play",
