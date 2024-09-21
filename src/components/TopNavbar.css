@@ -1,9 +1,7 @@
-/* TopNavbar.css */
 .topNavbar {
     height: 100%;
     display: inline-block;
-    width: 75px !important;
-    padding-top: 0.2em;
+    width: 80px !important;
     background-color: #282C35;
     vertical-align: top;
     border-right: #3c414d 1px solid;
@@ -20,50 +18,29 @@
     display: inherit;
     height: 100%;
 }
-.nav-link {
-    color: #cfcfcf !important;
-    font-size: small !important;
-    padding: 0;
-}
 
-.sidebar-buttons > .nav-item {
-    margin-left: 15px;
-    position: relative; /* Add this line to position the tooltip correctly */
-}
 
-.page-button {
-    padding-bottom: 5px;
-    background-color: #353a46 !important;
+.sidebar-button {
+    position: relative;
+    height:80px;
+    width: 100%;
+    background-color: transparent !important;
     border-width: 0px !important;
-    border-style: none !important;
+    border-radius: 0px !important;
 }
-.currentRoute {
-    background-color: #282C35 !important;
-}
-.tooltip {
-    display: none;
-    position: absolute;
-    left: 100%;
-    top: 45%;
-    transform: translateY(-50%);
-    margin-left: 15px;
-    padding: 5px 10px;
-    background-color: #282c34;
-    border-top: hsl(222, 13%, 28%) solid 1px;
-    border-right: hsl(222, 13%, 28%) solid 2px;
-    border-bottom: hsl(222, 13%, 28%) solid 2px;
-    color: white;
-    border-radius: 3px;
-    white-space: nowrap;
-    z-index: 1000;
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    pointer-events: none;
+.sidebar-button:hover, .sidebar-button:active {
+    background-color: hsl(222, 14%, 23%) !important;
+    cursor: pointer;
 }
 
-button:hover .tooltip {
-    display: block;
-    opacity: 100;
+.current-sidebar-button {
+    background-color: hsl(222, 14%, 16%) !important;
+}
+.current-sidebar-button:hover {
+    background-color: hsl(222, 14%, 16%) !important;
+    cursor: default !important;
+}
+.top-navbar-item-label {
+    font-size: 12px;
+    color: rgb(207, 207, 207);
 }
