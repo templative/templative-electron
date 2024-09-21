@@ -34,10 +34,10 @@
 }
 
 .current-sidebar-button {
-    background-color: hsl(222, 14%, 16%) !important;
+    background-color: hsl(222, 14%, 15.5%) !important;
 }
 .current-sidebar-button:hover {
-    background-color: hsl(222, 14%, 16%) !important;
+    background-color: hsl(222, 14%, 15.5%) !important;
     cursor: default !important;
 }
 .top-navbar-item-label {
