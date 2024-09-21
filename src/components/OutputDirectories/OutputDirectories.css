@@ -1,5 +1,6 @@
 .selected-output-directory {
     background-color: #3f454c !important;
+    border-right:#d9a41d solid 1px !important;
 }
 .resourceHeaderWrapper:nth-child(even) {
     background-color: hsl(224, 13%, 17.5%);
@@ -10,6 +11,7 @@
     padding-bottom: 0.2em;
     padding-left: 0.4em;
     padding-right: 0.2em;
+    border-right: transparent solid 1px;
 }
 .render-output-option:nth-child(even) {
     background-color: hsl(224, 13%, 17.5%);
@@ -46,7 +48,7 @@
 }
 .output-folder-options {
     flex: 1;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 .render-output-options-container{
