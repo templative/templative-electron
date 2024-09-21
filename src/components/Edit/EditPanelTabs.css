@@ -16,7 +16,11 @@
     width: 8px;
     height: 8px;
 }
+
 .nav-link {
+    color: #cfcfcf !important;
+    font-size: small !important;
+    padding: 0;
     white-space: nowrap;
     border-radius: 0px !important;
     border-color: hsl(224, 13%, 30%) !important;
