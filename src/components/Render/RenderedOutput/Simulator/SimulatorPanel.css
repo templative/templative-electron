@@ -65,3 +65,14 @@
 /* .tabletop-simulator-saves.selected:hover {
     background-color: #333942;
 } */
+ 
+.simulator-save-controls {
+    max-width: 715px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

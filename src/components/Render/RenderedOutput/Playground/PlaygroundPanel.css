@@ -43,3 +43,13 @@
 .playground-controls > .selectable-directories {
     height: 10em !important;
 }
+.playground-save-controls {
+    max-width: 715px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

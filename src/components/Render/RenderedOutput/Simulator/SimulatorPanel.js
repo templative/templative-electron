@@ -80,7 +80,7 @@ export default class SimulatorPanel extends React.Component {
             {isSaveCreated ?
                 <SimulatorOutputExplorer saveFileAsyncCallback={async ()=> {}} selectedSaveFilepath={this.state.selectedSaveFilepath}/>
             :
-                <div className="vertical-input-group">
+                <div className="vertical-input-group simulator-save-controls">
                     <div className="input-group input-group-sm simulator-directory-header" data-bs-theme="dark">
                         <span className="input-group-text tts-directory-label" id="basic-addon3">Tabletop Simulator Documents Directory</span>
                     </div>

@@ -85,7 +85,7 @@ export default class PlaygroundPanel extends React.Component {
             { isPackageCreated ?
                 <PlaygroundOutputExplorer packageDirectory={this.state.selectedPackageDirectory}/>
                 :
-                <div className="vertical-input-group">
+                <div className="vertical-input-group playground-save-controls">
                     <div className="input-group input-group-sm playground-directory-header" data-bs-theme="dark">
                         <span className="input-group-text ttp-directory-label" id="basic-addon3">Tabletop Playground Package Directory</span>
                     </div>
