@@ -16,6 +16,12 @@ import "./EditPanelTabs.css"
 import StudioGamedataViewer from "./Viewers/GamedataViewer/StudioGamedataViewer";
 
 export default class EditPanel extends React.Component { 
+    state = {
+        isPreviewVisible: false,
+    }
+    togglePreviewVisibility = () => {
+        this.setState({isPreviewVisible: !this.state.isPreviewVisible})
+    }
     clickIntoFile = () => {
         if (this.props.italicsTabFilepath !== this.props.currentFilepath) {
             return
@@ -47,7 +53,7 @@ export default class EditPanel extends React.Component {
                         changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
                     />
                 </div>
-                <div className='col-7 viewer'>
+                <div className='col viewer'>
                     <EditPanelTabs 
                         italicsTabFilepath={this.props.italicsTabFilepath}
                         currentFilepath={this.props.currentFilepath} 
@@ -108,9 +114,22 @@ export default class EditPanel extends React.Component {
                         }
                     </div>
                 </div>
-                <div className="col-2 render-preview-column">
-                    <RenderPreview templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
+                <div className="preview-vertical-bar" onClick={this.togglePreviewVisibility}>
+                    <span>Preview {this.state.isPreviewVisible ? 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-down tags-chevron" viewBox="0 0 16 16">
+                            <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                        </svg>
+                        :
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-up tags-chevron" viewBox="0 0 16 16">
+                            <path fillRule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                            </svg>
+                    }</span>
                 </div>
+                {this.state.isPreviewVisible &&
+                    <div className="col-2 render-preview-column">
+                        <RenderPreview templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
+                    </div>
+                }
             </div>
       </div>
     }
