@@ -2,13 +2,44 @@ const fs = require('fs/promises');
 const path = require("path");
 
 export default class TemplativeAccessTools {
-
+    static getMostRecentComponentImage = async(templativeRootDirectoryPath, componentName) => {
+        if (templativeRootDirectoryPath === undefined || templativeRootDirectoryPath.trim() === "") {
+            console.error("No templativeRootDirectoryPath given to readFileContentsFromTemplativeProjectAsJsonAsync.")
+        }
+        var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(templativeRootDirectoryPath, "game-compose.json")
+        var outputDirectory = path.join(templativeRootDirectoryPath, gameCompose["outputDirectory"])
+        var outputDirectories = await fs.readdir(outputDirectory, { withFileTypes: true })
+        outputDirectories = outputDirectories
+            .filter(dirent => dirent.isDirectory())
+            .map(dirent => {
+                return path.join(outputDirectory, dirent.name)}
+            )
+        for (let index = 0; index < outputDirectories.length; index++) {
+            const outputDirectoryPath = outputDirectories[index];
+            var componentDirectories = await fs.readdir(outputDirectoryPath, { withFileTypes: true })
+            var directoryNames = componentDirectories.filter(dirent => dirent.isDirectory()).map(dirent => dirent.name)
+            componentDirectories = new Set(directoryNames)
+            if(componentDirectories.has(componentName)) {
+                var componentInstructionsFilepath = path.join(outputDirectoryPath, componentName, "component.json")
+                var instructions = await TemplativeAccessTools.loadFileContentsAsJson(componentInstructionsFilepath)
+                if (instructions["backInstructions"] !== undefined && instructions["backInstructions"]["filepath"] !== undefined) {
+                    return `file://${instructions["backInstructions"]["filepath"]}`
+                }
+            }
+        }
+        return undefined
+    }
     static loadFileContentsAsJson = async (filepath) => {
         if (filepath === undefined || filepath.trim() === "") {
             console.error("No filepath given to loadFileContentsAsJson.")
         }
+        if (!await this.doesFileExistAsync(filepath)) {
+            console.error(`Does not exist ${filepath}.`)
+        }
         var fileContentsBuffer = await fs.readFile(filepath, 'utf8')     
         var fileContents = fileContentsBuffer.toString()
+        // console.log(fileContentsBuffer)
+        // console.log(fileContents)
         if (fileContents.trim() === "") {
             console.error(`${filepath} is invalid json: ${fileContents.trim()}`)
             return undefined;

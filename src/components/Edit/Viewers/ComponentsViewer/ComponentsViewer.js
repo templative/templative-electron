@@ -1,10 +1,10 @@
 import React from "react";
-import ComponentItemEditable from "./ComponentItems/ComponentItemEditable"
 import "./ComponentViewer.css"
 import EditableViewerJson from "../EditableViewerJson";
 import ComponentItemEditableStock from "./ComponentItems/ComponentItemEditableStock";
 import ComponentFilters from "./ComponentFilters/ComponentFilters";
 import NoComponentsSVG from "./noComponents.svg"
+import ComponentItem from "./ComponentItems/ComponentItem";
 
 const path = require("path")
 
@@ -95,7 +95,7 @@ export default class ComponentsViewer extends EditableViewerJson {
             />
         }
         
-        return <ComponentItemEditable 
+        return <ComponentItem
             updateViewedFileUsingExplorerAsyncCallback ={this.props.updateViewedFileUsingExplorerAsyncCallback }
             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
             key={component.name} 

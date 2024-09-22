@@ -102,7 +102,7 @@ export default class RenderPanel extends React.Component {
                 <div className="col-xs-12 col-md-7 col-lg-6 col-xl-3 directoryPanel">
                     <div className="component-filter-container">
                         <div className="headerWrapper">
-                            <p className="resourcesHeader">Render Specific Component?</p>
+                            <p className="resourcesHeader">Component Filter</p>
                         </div>
                         <div className="component-filter-options">
                             {componentDirectoryDivs}

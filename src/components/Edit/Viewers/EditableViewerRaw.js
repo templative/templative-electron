@@ -57,7 +57,7 @@ export default class EditableViewerRaw extends React.Component {
         }
         // console.log(`Filepaths changed ${this.getFilePath(prevProps)} ${this.getFilePath(this.props)}`)
         var previousFilepath = this.getFilePath(prevProps)
-        // console.log("Saving due to templative project changing.")
+        // console.log(`Saving due to templative project changing. ${previousFilepath}`)
         await this.saveAsync(previousFilepath, this.state.content)
         
         // console.log("Loading file content due to templative project changing.")
