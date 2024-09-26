@@ -41,11 +41,12 @@ class App extends React.Component {
     updateEmail = (email) => {
         this.setState({email: email, loginStatus: undefined})
     }
-    attemptToLoadLastTemplativeProject() {
+    attemptToLoadLastTemplativeProject = async () => {
         var lastProjectDirectory = getLastProjectDirectory()
         if (lastProjectDirectory === undefined) {
             return
         }
+        await ipcRenderer.invoke(channels.TO_SERVER_GIVE_CURRENT_PROJECT, lastProjectDirectory)
         this.setState({templativeRootDirectoryPath: lastProjectDirectory})
     }
     componentDidMount = async () => {
@@ -75,7 +76,7 @@ class App extends React.Component {
         socket.on('printStatement', (message) => {
             this.setState({templativeMessages:  [...this.state.templativeMessages, message]})
         });
-        this.attemptToLoadLastTemplativeProject()
+        await this.attemptToLoadLastTemplativeProject()
         await ipcRenderer.invoke(channels.TO_SERVER_IS_LOGGED_IN)
     }
     updateRoute = (route) => {

@@ -1,5 +1,5 @@
 const { ipcMain, shell } = require('electron')
-const { openFolder, createProject, openPlaygroundFolder, openSimulatorFolder} = require("./dialogMaker")
+const { setCurrentFolder, openFolder, createProject, openPlaygroundFolder, openSimulatorFolder} = require("./dialogMaker")
 const { channels } = require('../shared/constants');
 const { login, giveLoginInformation } = require("./accountManager")
 
@@ -11,6 +11,7 @@ function listenForRenderEvents(window) {
     ipcMain.handle(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG_FOR_PLAYGROUND, openPlaygroundFolder);
     ipcMain.handle(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG_FOR_SIMULATOR, openSimulatorFolder);
     ipcMain.handle(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG, openFolder);
+    ipcMain.handle(channels.TO_SERVER_GIVE_CURRENT_PROJECT, setCurrentFolder);
     ipcMain.handle(channels.TO_SERVER_OPEN_CREATE_PROJECT_DIALOG, createProject);
     ipcMain.handle(channels.TO_SERVER_OPEN_URL, openUrl)
     

@@ -1,6 +1,13 @@
 const { channels } = require("../shared/constants");
-const { dialog, BrowserWindow  } = require('electron')
+const { dialog, BrowserWindow, app  } = require('electron')
 var axios  = require('axios');
+var path = require('path');
+
+const setCurrentFolder = async (event, projectDirectory) => {
+    let mainWindow = BrowserWindow.getAllWindows()[0];
+    var directoryName = path.basename(projectDirectory);
+    mainWindow.setTitle(`Templative v${app.getVersion()} - ${directoryName}`);
+}
 
 const openFolder = async(event, args) => {
     var result = await dialog.showOpenDialog({ properties: ['openDirectory'] })
@@ -9,6 +16,9 @@ const openFolder = async(event, args) => {
         return
     }
     var chosenDirectory = result.filePaths[0]
+    var directoryName = path.basename(chosenDirectory);
+    let mainWindow = BrowserWindow.getAllWindows()[0];
+    mainWindow.setTitle(`Templative v${app.getVersion()} - ${directoryName}`);
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, chosenDirectory)
 }
 
@@ -46,6 +56,7 @@ const createProject = async(event, args) => {
 
 module.exports = { 
     openPlaygroundFolder,
+    setCurrentFolder,
     openSimulatorFolder,
     createProject,
     openFolder
