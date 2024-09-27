@@ -36,7 +36,7 @@ export default class ComponentsViewer extends EditableViewerJson {
         newComponents[index][field] = value
         this.setState({
             content: newComponents
-        },this.autosave)
+        }, async () => this.autosave())
     }
     updateFloatingName(index, value) {
         this.setState({floatingName: value, floatingNameIndex: index})
@@ -51,7 +51,7 @@ export default class ComponentsViewer extends EditableViewerJson {
             content: newComponents.sort(sortComponents),
             floatingName: undefined,
             floatingNameIndex: undefined
-        },this.autosave)
+        }, async () => this.autosave())
     }
     deleteComponent = (index) => {
         console.log(index)
@@ -59,7 +59,7 @@ export default class ComponentsViewer extends EditableViewerJson {
         newComponents.splice(index,1)
         this.setState({
             content: newComponents.sort(sortComponents),
-        },this.autosave)
+        }, async () => this.autosave())
     }
     duplicateComponent = (index) => {
         var newComponents = this.state.content
@@ -71,7 +71,7 @@ export default class ComponentsViewer extends EditableViewerJson {
         newComponents.push(newComponent)
         this.setState({
             content: newComponents.sort(sortComponents),
-        },this.autosave)
+        }, async () => this.autosave())
     }
 
     loadComponent = (component, index) => {

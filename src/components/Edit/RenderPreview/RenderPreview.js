@@ -33,7 +33,7 @@ export default class RenderPreview extends React.Component {
         // try {
             await this.#parseComponentComposeAsync();
             const response = await axios.get(`http://127.0.0.1:8080/previews`);
-            this.setState({ previewsDirectory: response.data.previewsDirectory }, this.setupPreviewWatcher);
+            this.setState({ previewsDirectory: response.data.previewsDirectory }, async () => await this.setupPreviewWatcher());
         // } catch (error) {
         //     console.error("Error in componentDidMount:", error);
         // }

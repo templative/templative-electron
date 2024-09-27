@@ -66,7 +66,7 @@ export default class MapSearch extends React.Component {
         if (disabled) {
             return
         }
-        this.setState({isLoading: true, response: "", started: Date.now()}, this.submitSearch)
+        this.setState({isLoading: true, response: "", started: Date.now()}, async () => await  this.submitSearch())
     }
     updatePitch = async (event) => {
         this.setState({pitch: event.target.value})

@@ -19,7 +19,7 @@ export default class ComponentGamedataViewer extends EditableViewerJson {
         newGamedataFileContents[""] = ""
         this.setState({
             content: newGamedataFileContents
-        },this.autosave)
+        }, async () => this.autosave())
     }
     
     updateValue(key, newValue) {
@@ -27,14 +27,14 @@ export default class ComponentGamedataViewer extends EditableViewerJson {
         newGamedataFileContents[key] = newValue
         this.setState({
             content: newGamedataFileContents
-        },this.autosave)
+        }, async () => this.autosave())
     }
     removeKeyValuePair(key) {
         var newGamedataFileContents = this.state.content
         delete newGamedataFileContents[key]
         this.setState({
             content: newGamedataFileContents
-        },this.autosave)
+        }, async () => this.autosave())
     }
     trackChangedKey(key, value) {
         this.setState({
@@ -50,7 +50,7 @@ export default class ComponentGamedataViewer extends EditableViewerJson {
             content: newGamedataFileContents,
             trackedKey: undefined,
             currentUpdateValue: undefined
-        },this.autosave)
+        }, async () => this.autosave())
     }
     freeTrackedChangedKey() {
         if (this.state.trackedKey === undefined) {
