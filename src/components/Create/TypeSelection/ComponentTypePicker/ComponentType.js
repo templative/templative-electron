@@ -5,7 +5,12 @@ export default class ComponentType extends React.Component {
         return str
             .replace(/([a-z])([A-Z])/g, '$1 $2')  // Add space between lowercase and uppercase
             .replace(/([a-zA-Z])(\d)/g, '$1 $2')  // Add space between letters and numbers
-            .replace(/(\d)([a-zA-Z])/g, '$1 $2'); // Add space between numbers and letters
+            .replace(/(\d)([a-zA-Z])/g, '$1 $2')
+            .replace("D 4", "D4")
+            .replace("D 6", "D6")
+            .replace("D 8", "D8")
+            .replace("D 12", "D12")
+            .replace("D 20", "D20")
     }
     render() {
         var subtitle = <></>
