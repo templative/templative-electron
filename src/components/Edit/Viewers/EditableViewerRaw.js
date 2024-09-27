@@ -6,14 +6,15 @@ const { setIntervalAsync, clearIntervalAsync } = require('set-interval-async');
 export default class EditableViewerRaw extends React.Component {   
     state = {
         content: undefined,
-        hasLoaded: false
+        hasLoaded: false,
+        filepath: undefined
     }
     updateContent = (value) => {
-        this.setState({content: value},this.autosave)
+        this.setState({content: value, hasLoaded: true}, async () => await this.autosave())
     }
     saveAsync = async (filepath, fileContents) => {
-        if (!this.state.hasLoaded || fileContents === undefined) {
-            // console.log("Skipping saving due to not being loaded yet.")
+        if (filepath === undefined || fileContents === undefined) {
+            console.log("Skipping saving due to not being loaded yet.")
             return
         }
         // console.log(`Saving ${filepath}`)//\n${fileContents}`)
@@ -24,53 +25,54 @@ export default class EditableViewerRaw extends React.Component {
         return "" // Define this
     }
     autosave = async () => {
-        // console.log("Autosave")
-        await this.saveAsync(this.getFilePath(this.props), this.state.content)
+        await this.saveAsync(this.state.filepath, this.state.content)
     }
-    loadFileContent = async () => {
-        const filepath = this.getFilePath(this.props)
-        // console.log(`Loading ${filepath}`)
-        const content = await TemplativeAccessTools.readFileContentsAsync(filepath)
-        // console.log(`Loaded ${filepath}\n${content}`)
-        return content
+    loadFileContent = async (filepath) => {
+        return await TemplativeAccessTools.readFileContentsAsync(filepath)
     }
     startAutoSave = async () => {
         if (this.saveIntervalId !== undefined) {
-            // console.warn("Needed to clear autosave before starting it!")
             await clearIntervalAsync(this.saveIntervalId)
             this.saveIntervalId = undefined
         }
         // console.log("Starting autosave.")
         this.saveIntervalId = setIntervalAsync(this.autosave, 10*1000)
     }
+    loadContentAndStartAutoSave = async () => {
+        const filepath = this.getFilePath(this.props)
+        const content = await this.loadFileContent(filepath)
+        this.setState({ content: content, hasLoaded: true, filepath: filepath }, async () => await this.startAutoSave());
+    };
+    
     componentDidMount = async () => {
-        var content = await this.loadFileContent()
-        this.setState({content: content, hasLoaded: true}, async () => {
-            // console.log(content)
-            await this.startAutoSave()
-        })
+        await this.loadContentAndStartAutoSave()
     }
-    async componentDidUpdate (prevProps, prevState) {
-        const areFilepathsUnchanged = this.getFilePath(prevProps) === this.getFilePath(this.props)
-        if (areFilepathsUnchanged) {
+    componentDidUpdate = async (prevProps) => {
+        const filePathsUnchanged = this.getFilePath(prevProps) === this.getFilePath(this.props);
+        if (filePathsUnchanged) {
+            return;
+        }
+        const previousFilepath = this.getFilePath(prevProps)
+        const previousContent = this.state.content
+    
+        // console.log(`EditableViewerRaw Filepaths changed from ${this.getFilePath(prevProps)} to ${this.getFilePath(this.props)}`);
+        if (this.saveIntervalId !== undefined) {
+            await clearIntervalAsync(this.saveIntervalId);
+            this.saveIntervalId = undefined;
+        }
+        this.setState({ hasLoaded: false, content: undefined, filepath: undefined }, async () => {
+            await this.saveAsync(previousFilepath, previousContent);
+            await this.loadContentAndStartAutoSave()
+        });
+    };
+    
+    componentWillUnmount = async () => {
+        if (this.saveIntervalId === undefined) {
             return
         }
-        // console.log(`Filepaths changed ${this.getFilePath(prevProps)} ${this.getFilePath(this.props)}`)
-        var previousFilepath = this.getFilePath(prevProps)
-        // console.log(`Saving due to templative project changing. ${previousFilepath}`)
-        await this.saveAsync(previousFilepath, this.state.content)
-        
-        // console.log("Loading file content due to templative project changing.")
-        this.setState({content: await this.loadFileContent() }, async () => {
-            await this.startAutoSave()
-        })
-    }
-    componentWillUnmount = async () => {
-        if (this.saveIntervalId !== undefined) {
-            await clearIntervalAsync(this.saveIntervalId)
-            this.saveIntervalId = undefined
-        }
         // console.log("Autosave on close")
+        await clearIntervalAsync(this.saveIntervalId)
+        this.saveIntervalId = undefined
         await this.autosave()
     }
 }
