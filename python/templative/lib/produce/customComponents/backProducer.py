@@ -112,7 +112,7 @@ class BackProducer(Producer):
 
     @staticmethod
     async def createComponentBackDataPieces(uniqueComponentBackData:ComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData: [str], compositions:ComponentComposition, produceProperties:ProduceProperties, componentArtdata:ComponentArtdata, piecesDataBlob: [any], fontCache:FontCache):
-        componentFolderName = compositions.componentCompose["name"] + uniqueComponentBackData.pieceUniqueBackHash
+        componentFolderName = f"{compositions.componentCompose['name']}_{uniqueComponentBackData.pieceUniqueBackHash}"
         
         componentBackOutputDirectory = await outputWriter.createComponentFolder(componentFolderName, produceProperties.outputDirectoryPath)
         await BackProducer.createUniqueComponentBackInstructions(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, compositions, componentBackOutputDirectory, componentFolderName, piecesDataBlob)
@@ -125,7 +125,8 @@ class BackProducer(Producer):
         backInstructionSetFilepath = await BackProducer.getBackInstructionSetFilepath(componentFolderName, componentBackOutputDirectory)
         
         componentInstructions = {
-            "name": componentFolderName,
+            "name": compositions.componentCompose["name"],
+            "uniqueName": componentFolderName,
             "isDebugInfo": False if not "isDebugInfo" in compositions.componentCompose else compositions.componentCompose["isDebugInfo"],
             "type": compositions.componentCompose["type"],
             "quantity": compositions.componentCompose["quantity"],
