@@ -112,7 +112,10 @@ class BackProducer(Producer):
 
     @staticmethod
     async def createComponentBackDataPieces(uniqueComponentBackData:ComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData: [str], compositions:ComponentComposition, produceProperties:ProduceProperties, componentArtdata:ComponentArtdata, piecesDataBlob: [any], fontCache:FontCache):
-        componentFolderName = f"{compositions.componentCompose['name']}_{uniqueComponentBackData.pieceUniqueBackHash}"
+        # Correctly using curly braces for variable interpolation
+        pieceUniqueBackHash = f"_{uniqueComponentBackData.pieceUniqueBackHash}" if uniqueComponentBackData.pieceUniqueBackHash else ''
+        componentFolderName = f"{compositions.componentCompose['name']}{pieceUniqueBackHash}"
+
         
         componentBackOutputDirectory = await outputWriter.createComponentFolder(componentFolderName, produceProperties.outputDirectoryPath)
         await BackProducer.createUniqueComponentBackInstructions(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, compositions, componentBackOutputDirectory, componentFolderName, piecesDataBlob)

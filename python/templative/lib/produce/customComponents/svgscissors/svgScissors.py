@@ -54,7 +54,8 @@ async def createArtFileOfPiece(compositions: ComponentComposition, artdata: any,
     contents = await addNewlines(contents)
     contents = convertShapeInsideTextToWrappedText(contents, fontCache)
     
-    artFileOutputName = ("%s%s-%s" % (compositions.componentCompose["name"], gamedata.pieceUniqueBackHash, pieceName))
+    pieceUniqueHash = f"_{gamedata.pieceUniqueBackHash}" if gamedata.pieceUniqueBackHash != '' else ''
+    artFileOutputName = f"{compositions.componentCompose['name']}{pieceUniqueHash}-{pieceName}"
     artFileOutputFilepath = await createArtfile(contents, artFileOutputName, componentBackOutputDirectory)
     await exportSvgToImage(artFileOutputFilepath, imageSizePixels, artFileOutputName, componentBackOutputDirectory)
     print(f"Produced {pieceName}.")
