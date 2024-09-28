@@ -68,6 +68,7 @@ function createTemplativeApp() {
 
     elif [[ "$OSTYPE" == "win32" || "$OSTYPE" == "msys" ]]; then
         # You need to install cairo dlls using mysys64 locally
+        # pacman -S mingw-w64-x86_64-cairo mingw-w64-x86_64-pango mingw-w64-x86_64-libffi mingw-w64-x86_64-zlib
         pipenv run pyinstaller --distpath ../bin -y -n templative \
         --log-level=DEBUG ./templative/__main__.py \
         --hidden-import=engineio.async_drivers.aiohttp \
