@@ -133,14 +133,24 @@ export default class ComponentsViewer extends EditableViewerJson {
         if (!this.state.hasLoaded || this.state.content === undefined) {
             return []
         }
-        var componentItems = []
+        let enabledComponents = [];
+        let disabledComponents = [];
+
         this.state.content.forEach((component, index) => {
             if (this.state.filteredComponentType !== undefined && this.state.filteredComponentType !== component.type) {
-                return
+                return;
             }
-            componentItems.push(this.loadComponent(component, index))
+            let isStock = component.type.split("_").shift() === "STOCK";
+            let isDisabled = component.disabled;
+
+            if (isDisabled) {
+                disabledComponents.push(this.loadComponent(component, index));
+            } else {
+                enabledComponents.push(this.loadComponent(component, index));
+            }
         });
-        return componentItems
+
+        return [...enabledComponents, ...disabledComponents];
     }
 
     render() {

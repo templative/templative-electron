@@ -80,3 +80,10 @@
 .component-edit-toggle:hover {
     cursor: pointer;
 }
+.disabled-title {
+    color: gray;
+}
+.disabled-component-icon {
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
