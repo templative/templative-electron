@@ -21,10 +21,14 @@ const sortComponents = (a, b) => {
 }
 
 export default class ComponentsViewer extends EditableViewerJson {   
-    state = {
-        floatingName: undefined,
-        floatingNameIndex: undefined,
-        filteredComponentType: undefined,
+    constructor(props) {
+        super(props);
+        this.state = {
+            floatingName: undefined,
+            floatingNameIndex: undefined,
+            filteredComponentType: undefined,
+        }
+        this.scrollableDivRef = React.createRef();
     }
 
     getFilePath = (props) => {
@@ -152,6 +156,33 @@ export default class ComponentsViewer extends EditableViewerJson {
 
         return [...enabledComponents, ...disabledComponents];
     }
+    async componentDidMount() {
+        if (this.scrollableDivRef.current) {
+          this.scrollableDivRef.current.addEventListener('scroll', this.handleScroll);
+          console.log(this.props.componentComposeScollPosition)
+          this.scrollableDivRef.current.scrollTop = this.props.componentComposeScollPosition || 0;
+        }
+        await super.componentDidMount()
+    }
+    async componentDidUpdate (prevProps, prevState) {
+        if (this.scrollableDivRef.current) {
+            this.scrollableDivRef.current.scrollTop = this.props.componentComposeScollPosition || 0;
+        }
+        await super.componentDidUpdate(prevProps, prevState)
+    }
+    
+    async componentWillUnmount() {
+        if (this.scrollableDivRef.current) {
+            this.scrollableDivRef.current.removeEventListener('scroll', this.handleScroll);
+        }
+        await super.componentWillUnmount()
+    }
+    handleScroll = () => {
+        if (this.scrollableDivRef.current) {
+            const scrollTop = this.scrollableDivRef.current.scrollTop;
+            this.props.updateComponentComposeScrollPositionCallback(scrollTop)
+        }
+    };
 
     render() {
         var componentItems = this.loadComponentItems()
@@ -169,7 +200,7 @@ export default class ComponentsViewer extends EditableViewerJson {
                     </div>
                 </div>
                 <div className="row component-items-row">
-                    <div className="col no-gutters">
+                    <div className="col no-gutters" ref={this.scrollableDivRef}>
                         { componentItems.length === 0 &&
                             <img className="no-components-svg" src={NoComponentsSVG} alt="Suggestion to create a component with the create components tab"/>
                         }

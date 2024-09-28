@@ -44,10 +44,10 @@ export default class EditableViewerRaw extends React.Component {
         this.setState({ content: content, hasLoaded: true, filepath: filepath }, async () => await this.startAutoSave());
     };
     
-    componentDidMount = async () => {
+    async componentDidMount() {
         await this.loadContentAndStartAutoSave()
     }
-    componentDidUpdate = async (prevProps) => {
+    async componentDidUpdate(prevProps) {
         const filePathsUnchanged = this.getFilePath(prevProps) === this.getFilePath(this.props);
         if (filePathsUnchanged) {
             return;
@@ -66,7 +66,7 @@ export default class EditableViewerRaw extends React.Component {
         });
     };
     
-    componentWillUnmount = async () => {
+    async componentWillUnmount() {
         if (this.saveIntervalId === undefined) {
             return
         }

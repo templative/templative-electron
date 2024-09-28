@@ -18,6 +18,7 @@ import StudioGamedataViewer from "./Viewers/GamedataViewer/StudioGamedataViewer"
 export default class EditPanel extends React.Component { 
     state = {
         isPreviewVisible: false,
+        componentComposeScollPosition: 0
     }
     togglePreviewVisibility = () => {
         this.setState({isPreviewVisible: !this.state.isPreviewVisible})
@@ -30,6 +31,9 @@ export default class EditPanel extends React.Component {
     }      
     componentDidMount() {
         trackEvent("view_editPanel")
+    }
+    updateComponentComposeScrollPosition = (scrollPosition) => {
+        this.setState({ componentComposeScollPosition: scrollPosition });
     }
     render () {
         var filepathSplit = this.props.currentFilepath !== undefined ? this.props.currentFilepath.replace(/\\/g,"/").replace(/^\/|\/$/g, '').split("/").join(" > ") : ""
@@ -105,6 +109,8 @@ export default class EditPanel extends React.Component {
                                 saveFileAsyncCallback={this.props.saveFileAsyncCallback}
                                 componentTypesCustomInfo={this.props.componentTypesCustomInfo}
                                 componentTypesStockInfo={this.props.componentTypesStockInfo}
+                                componentComposeScollPosition={this.state.componentComposeScollPosition}     
+                                updateComponentComposeScrollPositionCallback={this.updateComponentComposeScrollPosition}                           
                             />
                         }
                         {this.props.currentFileType === undefined && 
