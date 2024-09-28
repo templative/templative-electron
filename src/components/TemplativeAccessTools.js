@@ -12,19 +12,27 @@ export default class TemplativeAccessTools {
         outputDirectories = outputDirectories
             .filter(dirent => dirent.isDirectory())
             .map(dirent => {
+                // console.log(`Output Directory ${dirent.name}`)
                 return path.join(outputDirectory, dirent.name)}
             )
         for (let index = 0; index < outputDirectories.length; index++) {
             const outputDirectoryPath = outputDirectories[index];
-            var componentDirectories = await fs.readdir(outputDirectoryPath, { withFileTypes: true })
-            var directoryNames = componentDirectories.filter(dirent => dirent.isDirectory()).map(dirent => dirent.name)
-            componentDirectories = new Set(directoryNames)
-            if(componentDirectories.has(componentName)) {
-                var componentInstructionsFilepath = path.join(outputDirectoryPath, componentName, "component.json")
+            var outputDirectoryComponentDirectories = await fs.readdir(outputDirectoryPath, { withFileTypes: true })
+            outputDirectoryComponentDirectories = outputDirectoryComponentDirectories
+                .filter(dirent => dirent.isDirectory())
+                .map(dirent => {
+                    // console.log(`Component Directory ${dirent.name}`)
+                    return path.join(outputDirectoryPath, dirent.name)}
+                )
+            for (let index = 0; index < outputDirectoryComponentDirectories.length; index++) {
+                const componentDirectoryPath = outputDirectoryComponentDirectories[index];
+                
+                var componentInstructionsFilepath = path.join(componentDirectoryPath, "component.json")
                 var instructions = await TemplativeAccessTools.loadFileContentsAsJson(componentInstructionsFilepath)
-                if (instructions["backInstructions"] !== undefined && instructions["backInstructions"]["filepath"] !== undefined) {
-                    return `file://${instructions["backInstructions"]["filepath"]}`
+                if (instructions["name"] !== componentName) {
+                    continue;
                 }
+                return componentDirectoryPath
             }
         }
         return undefined

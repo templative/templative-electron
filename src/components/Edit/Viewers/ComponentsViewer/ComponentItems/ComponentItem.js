@@ -6,6 +6,7 @@ import componentIcon from "../../../Icons/componentIcon.svg"
 import pieceIcon from "../../../Icons/pieceIcon.svg"
 import ComponentUpshotControls from "./ComponentItem/ComponentUpshotControls";
 import EditComponentControls from "./ComponentItem/EditComponentControls";
+import ComponentThumbnail from "./ComponentThumbnail";
 const path = require("path")
 
 export default class ComponentItem extends React.Component {   
@@ -33,6 +34,7 @@ export default class ComponentItem extends React.Component {
     }
     loadThumbnail = async () => {
         var thumbnailSource = await TemplativeAccessTools.getMostRecentComponentImage(this.props.templativeRootDirectoryPath, this.props.componentName)
+        // console.log(`${this.props.componentName} ${thumbnailSource}`)
         this.setState({thumbnailSource: thumbnailSource})
     }
     componentDidMount = async () => { 
@@ -95,11 +97,10 @@ export default class ComponentItem extends React.Component {
         var typeOptions = Object.keys(this.props.componentTypesCustomInfo).concat(stockOptions)
         var Controls = this.state.isEditing ? EditComponentControls : ComponentUpshotControls
         return <div className="component-quick-glance-container row g-0">
-            <div className="component-thumbnail-wrapper">
-                {/* {this.state.thumbnailSource !== undefined &&
-                    <img className="component-thumbnail" src={this.state.thumbnailSource}/>
-                } */}
-            </div>
+            
+            {this.state.thumbnailSource !== undefined &&
+                <ComponentThumbnail outputFolderDirectoryPath={this.state.thumbnailSource}/>
+            }
             <div className="component-quick-glance" 
                 onMouseOver={this.handleMouseOver}
                 onMouseLeave={this.handleMouseOut}>
