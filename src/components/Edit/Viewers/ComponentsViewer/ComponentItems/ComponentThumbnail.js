@@ -20,14 +20,15 @@ export default class ComponentThumbnail extends React.Component {
         var componentInstructionsFilepath = path.join(this.props.outputFolderDirectoryPath, "component.json")
         var instructions = await TemplativeAccessTools.loadFileContentsAsJson(componentInstructionsFilepath)
         var images = []
-        if (instructions["backInstructions"] !== undefined && instructions["backInstructions"]["filepath"] !== undefined) {
-            images.push(`file://${instructions["backInstructions"]["filepath"]}`)
-        }
+        
         if (instructions["frontInstructions"] !== undefined) {
             images = [...images, ...instructions["frontInstructions"].map(instruction => `file://${instruction.filepath}`)]
         }
         if (instructions["dieFaceFilepaths"] !== undefined) {
             images = [...images, ...instructions["dieFaceFilepaths"].map(filepath => `file://${filepath}`)]
+        }
+        if (instructions["backInstructions"] !== undefined && instructions["backInstructions"]["filepath"] !== undefined) {
+            images.push(`file://${instructions["backInstructions"]["filepath"]}`)
         }
         this.setState({images})
     }
