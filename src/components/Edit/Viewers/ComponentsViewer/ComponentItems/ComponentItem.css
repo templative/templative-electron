@@ -33,7 +33,7 @@
 }
 .component-file-goto-button {
     display: inline-block;
-    width:25%;
+    width:50%;
     height: 48px;
     border:0px;
     padding: 6px;
@@ -86,4 +86,7 @@
 .disabled-component-icon {
     margin-right: 3px;
     margin-bottom: 3px;
+}
+.change-files-icon {
+    margin-bottom:3px;
 }

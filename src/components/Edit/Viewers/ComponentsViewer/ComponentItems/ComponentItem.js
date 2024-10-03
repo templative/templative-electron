@@ -1,9 +1,6 @@
 import React from "react";
 import "./ComponentItem.css"
 import TemplativeAccessTools from "../../../../TemplativeAccessTools";
-import artdataIcon from "../../../Icons/artDataIcon.svg"
-import componentIcon from "../../../Icons/componentIcon.svg"
-import pieceIcon from "../../../Icons/pieceIcon.svg"
 import ComponentUpshotControls from "./ComponentItem/ComponentUpshotControls";
 import EditComponentControls from "./ComponentItem/EditComponentControls";
 import ComponentThumbnail from "./ComponentThumbnail";
@@ -76,6 +73,9 @@ export default class ComponentItem extends React.Component {
         }
         await this.props.updateViewedFileUsingExplorerAsyncCallback(filetype, filepath)
     }
+    openUnifiedComponentView = async (componentName) => {
+        await this.props.updateViewedFileToUnifiedAsyncCallback(componentName)
+    }
     static arrayHasValue = (array, value) => {
         for (let index = 0; index < array.length; index++) {
             const element = array[index];
@@ -123,6 +123,7 @@ export default class ComponentItem extends React.Component {
                     backArtdataExists={this.state.backArtdataExists}
                     dieFaceArtdataExists={this.state.dieFaceArtdataExists}
                     goToFileCallback={this.goToFile}
+                    openUnifiedComponentViewCallback={this.openUnifiedComponentView}
                     toggleIsEditingCallback={this.toggleIsEditing}
                     
                     updateViewedFileUsingExplorerAsyncCallback ={this.props.updateViewedFileUsingExplorerAsyncCallback }

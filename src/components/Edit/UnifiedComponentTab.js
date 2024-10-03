@@ -17,7 +17,7 @@ import rulesIcon from "./Icons/rulesIcon.svg"
 const path = require("path");
 const shell = require('electron').shell;
 
-export default class EditPanelTab extends React.Component {       
+export default class UnifiedComponentTab extends React.Component {       
     state = {
         isHovering: false,
         isHoveringX: false,
@@ -54,32 +54,16 @@ export default class EditPanelTab extends React.Component {
         if (this.state.isHoveringX || this.state.isShowingContextMenu) {
             return
         }
-        await this.props.updateViewedFileUsingTabAsyncCallback(this.props.tabbedFile.filetype, this.props.tabbedFile.filepath)
-    }
-    openInDefaultApplicationAsync = async () => {
-        shell.openPath(this.props.tabbedFile.filepath);
-    }
-    openDirectoryAsync = async () => {
-        shell.openPath(path.parse(this.props.tabbedFile.filepath).dir)
+        const componentName = this.props.tabbedFile.filepath.split("#")[1]
+        console.log(componentName)
+        await this.props.updateViewedFileToUnifiedAsyncCallback(componentName)
     }
     render() {
-        var icons = {
-            "RULES": rulesIcon,
-            "COMPONENTS": componentComposeIcon,
-            "COMPONENT_GAMEDATA": componentIcon,
-            "PIECE_GAMEDATA": pieceIcon,
-            "ART": artIcon,
-            "ARTDATA": artDataIcon,
-            "STUDIO_GAMEDATA": studioIcon,
-            "GAME_GAMEDATA": gameIcon,
-        }
-        var iconSource = icons[this.props.tabbedFile.filetype]
-        
         var isSelected = this.props.tabbedFile.filepath === this.props.currentFilepath
         var shouldShowX = (this.state.isHovering || isSelected) && this.props.tabbedFile.canClose
         
-        var tabName = path.parse(this.props.tabbedFile.filepath).name
-        
+        var tabName = this.props.tabbedFile.filepath.split("#")[1]
+                
         return <li 
             className="nav-item"
             onClick={this.viewTabFileAsync}
@@ -91,24 +75,19 @@ export default class EditPanelTab extends React.Component {
                 <ContextMenu 
                     left={this.state.contextCoordinatesX} 
                     top={this.state.contextCoordinatesY}
-                    commands={this.props.tabbedFile.canClose ? [
-                        {name: "Open in Default App", callback: this.openInDefaultApplicationAsync}, 
-                        {name: "Open Container Directory", callback: this.openDirectoryAsync}, 
+                    commands={[
                         {name: "Close", callback: async () => await this.props.closeTabAtIndexAsyncCallback(this.props.index)},
                         {name: "Close Others", callback: async () => await this.props.closeAllTabsButIndexAsyncCallback(this.props.index)},
                         {name: "Close to the Left", callback: async () => await this.props.closeTabsToLeftAsyncCallback(this.props.index)},
                         {name: "Close to the Right", callback: async () => await this.props.closeTabsToRightAsyncCallback(this.props.index)},
                         {name: "Close All", callback: async () => await this.props.closeAllTabsAsyncCallback()},
-                    ] : [
-                        {name: "Open in Default App", callback: this.openInDefaultApplicationAsync}, 
-                        {name: "Open Container Directory", callback: this.openDirectoryAsync}
                     ]}
                     closeContextMenuCallback={this.closeContextMenu}
                 />
             }
             
             <a className={`nav-link ${isSelected && "active"} ${this.props.isItalics && "italics-tab"}`}>
-                <img className="tab-icon" src={iconSource} alt="Tab icon"/>
+                <img className="tab-icon" src={unifiedComponentIcon} alt="Tab icon"/>
                 {tabName}
                 {this.props.tabbedFile.canClose && 
                     <button 

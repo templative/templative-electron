@@ -101,6 +101,7 @@ export default class ComponentsViewer extends EditableViewerJson {
         
         return <ComponentItem
             updateViewedFileUsingExplorerAsyncCallback ={this.props.updateViewedFileUsingExplorerAsyncCallback }
+            updateViewedFileToUnifiedAsyncCallback={this.props.updateViewedFileToUnifiedAsyncCallback}
             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
             key={component.name} 
             componentTypesCustomInfo={this.props.componentTypesCustomInfo}
@@ -159,7 +160,6 @@ export default class ComponentsViewer extends EditableViewerJson {
     async componentDidMount() {
         if (this.scrollableDivRef.current) {
           this.scrollableDivRef.current.addEventListener('scroll', this.handleScroll);
-          console.log(this.props.componentComposeScollPosition)
           this.scrollableDivRef.current.scrollTop = this.props.componentComposeScollPosition || 0;
         }
         await super.componentDidMount()

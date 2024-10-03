@@ -221,7 +221,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                             extendedDirectories={this.props.extendedDirectories}
                             changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
                         />
-                        <ContentFileList
+                        {/* <ContentFileList
                             header="Artdata" 
                             contentType="ARTDATA" 
                             filenameReferenceCounts={this.state.filenameReferenceCounts}
@@ -286,8 +286,8 @@ export default class TemplativeProjectRenderer extends React.Component {
                             changeExtendedFileTypeAsyncCallback={this.props.changeExtendedFileTypeAsyncCallback}
                             extendedDirectories={this.props.extendedDirectories}
                             changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
-                        />
-                    <IconContentFileItem
+                        /> */}
+                    {/* <IconContentFileItem
                         contentType={"STUDIO_GAMEDATA"}
                         currentFilepath={this.props.currentFilepath}
                         filepath={path.join(this.props.templativeRootDirectoryPath, "studio.json")}
@@ -298,7 +298,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                         currentFilepath={this.props.currentFilepath}
                         filepath={path.join(this.props.templativeRootDirectoryPath, "game.json")}
                         updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                    />
+                    /> */}
                     <IconContentFileItem
                         contentType={"COMPONENTS"}
                         currentFilepath={this.props.currentFilepath}

@@ -13,7 +13,7 @@
 }
 .pieces-gamedata-row {
     height: calc(100% - 40px);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 th {
@@ -28,7 +28,7 @@ tr {
 .tableContainer {
     padding-right:0.4em;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .tableContainer > .col { 
     height: 100%;
@@ -55,4 +55,8 @@ tr {
 }
 .show-add-piece-key {
     height: 30px !important;
+}
+.add-field-plus {
+    margin-bottom:4px;
+    margin-right: 4px;
 }

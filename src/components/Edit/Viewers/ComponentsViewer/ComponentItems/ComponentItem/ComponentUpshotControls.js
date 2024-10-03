@@ -3,6 +3,7 @@ import React from "react";
 import artdataIcon from "../../../../Icons/artDataIcon.svg"
 import componentIcon from "../../../../Icons/componentIcon.svg"
 import pieceIcon from "../../../../Icons/pieceIcon.svg"
+import unifiedComponentIcon from "../../../../Icons/unifiedComponentIcon.svg"
 const path = require("path")
 
 export default class ComponentUpshotControls extends React.Component {  
@@ -18,13 +19,7 @@ export default class ComponentUpshotControls extends React.Component {
             .replace("D 20", "D20")
     }     
     render() {
-        return <React.Fragment>
-            {this.props.isHovering && 
-                
-                <svg onClick={this.props.toggleIsEditingCallback} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-pencil-square component-edit-toggle" viewBox="0 0 16 16">
-                    <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z"/>
-              </svg>
-            }                
+        return <React.Fragment>             
             <p className={`component-name ${this.props.disabled && "disabled-title"}`}>
                 {this.props.disabled && 
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" className="bi bi-slash-circle disabled-component-icon" viewBox="0 0 16 16">
@@ -36,7 +31,17 @@ export default class ComponentUpshotControls extends React.Component {
                 <span className="component-type"> - {this.addSpaces(this.props.componentType)}</span>
                 </p>    
             <div className="goto-buttons">
-                {this.props.pieceGamedataExists && 
+                <div className="component-file-goto-button" onClick={async () => await this.props.openUnifiedComponentViewCallback(this.props.componentName)}>
+                    <span><img src={unifiedComponentIcon} className="component-file-goto-img"/> Edit Component</span>
+                </div>
+                <div className="component-file-goto-button" onClick={this.props.toggleIsEditingCallback}>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-file-code change-files-icon" viewBox="0 0 16 16">
+                            <path d="M6.646 5.646a.5.5 0 1 1 .708.708L5.707 8l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708zm2.708 0a.5.5 0 1 0-.708.708L10.293 8 8.646 9.646a.5.5 0 0 0 .708.708l2-2a.5.5 0 0 0 0-.708z"/>
+                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1"/>
+                        </svg> Change Files</span>
+                </div>
+                {/* {this.props.pieceGamedataExists && 
                     <div className="component-file-goto-button" onClick={async () => await this.props.goToFileCallback("PIECE_GAMEDATA", this.props.pieceGameDataFilePath)}>
                         <span><img src={pieceIcon} className="component-file-goto-img"/> Piece Gamedata</span>
                     </div>
@@ -60,7 +65,7 @@ export default class ComponentUpshotControls extends React.Component {
                     <div className="component-file-goto-button" onClick={async () => await this.props.goToFileCallback("ARTDATA", this.props.artdataBackFilePath)}>
                         <span><img src={artdataIcon} className="component-file-goto-img"/> Back Artdata</span>
                     </div>
-                }
+                } */}
             </div>
         </React.Fragment>
     }

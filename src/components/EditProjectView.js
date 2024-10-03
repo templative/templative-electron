@@ -89,6 +89,46 @@ export default class EditProjectView extends React.Component {
             tabbedFiles: EditProjectView.#addTabbedFile(filetype, filepath, this.state.tabbedFiles),
         })
     }
+    updateViewedFileToUnifiedAsync = async(componentName) => {
+        console.log(componentName)
+        const filetype = "UNIFIED_COMPONENT"
+        const filepath = path.join(this.props.templativeRootDirectoryPath, `component-compose.json#${componentName}`)
+        const hasItalicsFile = this.state.italicsTabFilepath !== undefined
+        const isAddingItalicsFile = this.state.italicsTabFilepath === filepath
+        const isSolidifyingItalicsTab = hasItalicsFile && isAddingItalicsFile
+                
+        if (isSolidifyingItalicsTab) {
+            // console.log("solidifying italics tab", hasItalicsFile, isAddingItalicsFile)
+            this.setState({
+                currentFileType: filetype,
+                currentFilepath: filepath,
+                filename: componentName,
+                italicsTabFilepath: undefined
+            })
+            return
+        }
+        const hasTabAlready = EditProjectView.#hasTabAlready(filetype, filepath, this.state.tabbedFiles)
+        const isChangingItalicsTab = hasItalicsFile && !hasTabAlready
+        if (isChangingItalicsTab) {
+            // console.log("Changing italics tab", hasItalicsFile, isAddingItalicsFile, hasTabAlready)
+            this.setState({
+                currentFileType: filetype,
+                currentFilepath: filepath,
+                filename: componentName,
+                tabbedFiles: EditProjectView.#replaceItalicsTabWithTab(this.state.italicsTabFilepath, filetype, filepath, this.state.tabbedFiles),
+                italicsTabFilepath: filepath
+            })
+            return
+        }
+        // console.log("Default tab behavior", hasItalicsFile, isAddingItalicsFile, hasTabAlready)
+        this.setState({
+            currentFileType: filetype,
+            currentFilepath: filepath,
+            filename: componentName,
+            tabbedFiles: EditProjectView.#addTabbedFile(filetype, filepath, this.state.tabbedFiles),
+            italicsTabFilepath: !hasTabAlready ? filepath : this.state.italicsTabFilepath
+        })
+    }
     updateViewedFileUsingExplorerAsync = async (filetype, filepath) => {
         var fileExists = await EditProjectView.doesFileExist(filepath)
         if (!fileExists) {
@@ -322,6 +362,7 @@ export default class EditProjectView extends React.Component {
                     clickIntoFileCallback={this.clickIntoFile}
                     updateViewedFileUsingTabAsyncCallback={this.updateViewedFileUsingTabAsync}
                     updateViewedFileUsingExplorerAsyncCallback={this.updateViewedFileUsingExplorerAsync}
+                    updateViewedFileToUnifiedAsyncCallback={this.updateViewedFileToUnifiedAsync}
                     saveFileAsyncCallback={this.saveFileAsync}
                     closeTabIfOpenByFilepathCallback={this.closeTabIfOpenByFilepath}
                     extendedDirectories={this.state.extendedDirectories}

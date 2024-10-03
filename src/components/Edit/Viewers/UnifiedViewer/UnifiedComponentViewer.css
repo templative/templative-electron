@@ -1,0 +1,21 @@
+.unified-viewer {
+    height: 100%;
+    overflow-y: hidden;
+}
+.unified-viewer > .col {
+    height: 100%;
+    overflow-y: scroll;
+}
+.artdata-column > .row > p, .gamedata-column > .row > p {
+    border-bottom: 1px hsl(210, 10%, 22%) solid;
+    font-size: 18px;
+}
+.artdata-column > .row:not(.unselecteable-artdata) > p:hover,
+.gamedata-column > .row:not(.unselecteable-artdata) > p:hover {
+    cursor: pointer;
+    background-color: hsl(222, 14%, 20%);
+}
+.subfile-filepath {
+    color: gray;
+    font-size:12px;
+}

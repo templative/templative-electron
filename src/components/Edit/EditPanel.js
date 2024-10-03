@@ -14,6 +14,7 @@ import noFileIcon from "./noFileIcon.svg"
 import "./EditPanel.css"
 import "./EditPanelTabs.css"
 import StudioGamedataViewer from "./Viewers/GamedataViewer/StudioGamedataViewer";
+import UnifiedComponentViewer from "./Viewers/UnifiedViewer/UnifiedComponentViewer";
 
 export default class EditPanel extends React.Component { 
     state = {
@@ -39,7 +40,7 @@ export default class EditPanel extends React.Component {
         var filepathSplit = this.props.currentFilepath !== undefined ? this.props.currentFilepath.replace(/\\/g,"/").replace(/^\/|\/$/g, '').split("/").join(" > ") : ""
         return <div className='mainBody'>
             <div className="row g-0">
-                <div className='col-3 left-column'>
+                <div className='col-3 col-xl-2 left-column'>
                     <TemplativeProjectRenderer 
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
                         currentFileType={this.props.currentFileType}
@@ -62,6 +63,7 @@ export default class EditPanel extends React.Component {
                         italicsTabFilepath={this.props.italicsTabFilepath}
                         currentFilepath={this.props.currentFilepath} 
                         tabbedFiles={this.props.tabbedFiles}
+                        updateViewedFileToUnifiedAsyncCallback={this.props.updateViewedFileToUnifiedAsyncCallback}
                         updateViewedFileUsingTabAsyncCallback={this.props.updateViewedFileUsingTabAsyncCallback}
                         closeAllTabsAsyncCallback={this.props.closeAllTabsAsyncCallback}
                         closeTabAtIndexAsyncCallback={this.props.closeTabAtIndexAsyncCallback}
@@ -105,12 +107,21 @@ export default class EditPanel extends React.Component {
                         {this.props.currentFileType === "COMPONENTS" && 
                             <ComponentsViewer 
                                 updateViewedFileUsingExplorerAsyncCallback ={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                                updateViewedFileToUnifiedAsyncCallback={this.props.updateViewedFileToUnifiedAsyncCallback}
                                 templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                                 saveFileAsyncCallback={this.props.saveFileAsyncCallback}
                                 componentTypesCustomInfo={this.props.componentTypesCustomInfo}
                                 componentTypesStockInfo={this.props.componentTypesStockInfo}
                                 componentComposeScollPosition={this.state.componentComposeScollPosition}     
                                 updateComponentComposeScrollPositionCallback={this.updateComponentComposeScrollPosition}                           
+                            />
+                        }
+                        {this.props.currentFileType === "UNIFIED_COMPONENT" && 
+                            <UnifiedComponentViewer 
+                                componentName={this.props.currentFilepath.split("#")[1]}
+                                templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}      
+                                saveFileAsyncCallback={this.props.saveFileAsyncCallback}  
+                                updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}                 
                             />
                         }
                         {this.props.currentFileType === undefined && 
