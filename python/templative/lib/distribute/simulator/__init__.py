@@ -134,7 +134,7 @@ async def createDeck(tabletopSimulatorDirectoryPath, componentInstructions, comp
     tabletopSimulatorImageDirectoryPath = path.join(tabletopSimulatorDirectoryPath, "Mods/Images")
     imgurUrl, totalCount, cardColumnCount, cardRowCount = await createCompositeImage(componentInstructions["name"], componentInstructions["type"], componentInstructions["frontInstructions"],componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
     backImageImgurUrl = await placeAndUploadBackImage(componentInstructions["name"], componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
-    componentGuid = md5(componentInstructions["name"].encode()).hexdigest()
+    componentGuid = md5(componentInstructions["uniqueName"].encode()).hexdigest()
     relativeWidth = componentInfo["DimensionsInches"][0] / 2.5
     relativeHeight = componentInfo["DimensionsInches"][1] / 3.5
     thickness = 1.0
@@ -148,7 +148,7 @@ async def createDeck(tabletopSimulatorDirectoryPath, componentInstructions, comp
     dimensions = SimulatorDimensions(relativeWidth, relativeHeight, thickness)
     layout = SimulatorTilesetLayout(totalCount, cardColumnCount, cardRowCount)
 
-    return objectState.createDeckObjectState(componentGuid, componentInstructions["name"], imageUrls, simulatorComponentPlacement, dimensions, layout)
+    return objectState.createDeckObjectState(componentGuid, componentInstructions["uniqueName"], imageUrls, simulatorComponentPlacement, dimensions, layout)
 
 async def createStock(tabletopSimulatorDirectoryPath, componentInstructions, stockPartInfo):   
     return None

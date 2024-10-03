@@ -47,17 +47,12 @@ def mergeDictsRecursive(dict1, dict2):
     for key, value in dict2.items():
         if key in dict1:
             if isinstance(dict1[key], dict) and isinstance(value, dict):
-                # Both values are dictionaries, recurse into them
                 mergeDictsRecursive(dict1[key], value)
             elif isinstance(dict1[key], list) and isinstance(value, list):
-                # Both values are lists, combine them
                 dict1[key].extend(value)
             else:
-                # If the values are not both dicts or lists, you may choose to overwrite or handle differently
-                # For now, we'll just overwrite
                 dict1[key] = value
         else:
-            # If the key doesn't exist in dict1, add it
             dict1[key] = value
 
     return dict1
@@ -89,7 +84,7 @@ async def collectFilepathQuantitiesForComponent(componentInstructions):
         return componentTypeFilepathAndQuantity
 
     if not "frontInstructions" in componentInstructions:
-        print("Skipping %s for lacking frontInstructions" % componentInstructions["name"])
+        print("Skipping %s for lacking frontInstructions" % componentInstructions["uniqueName"])
         return componentTypeFilepathAndQuantity
     
     for instruction in componentInstructions["frontInstructions"]:

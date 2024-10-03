@@ -103,7 +103,7 @@ class BackProducer(Producer):
         pieceBackSourceHash = ""
         for pieceSpecificSource in pieceSpecificBackArtDataSources:
             if not pieceSpecificSource in pieceGamedata:
-                print("Piece %s does not define the field %s as the backartdata expects" % (pieceGamedata["varname"], pieceSpecificSource))
+                print("Piece %s does not define the field %s as the backartdata expects" % (pieceGamedata["name"], pieceSpecificSource))
                 continue
             pieceBackSourceHash += pieceGamedata[pieceSpecificSource].replace(" ","")
         if pieceBackSourceHash == "":
