@@ -175,7 +175,7 @@ export default class OutputExplorer extends React.Component {
                             }
                         </div>
                     
-                        { percentageDone !== 100 ?
+                        { percentageDone < 100 ?
                             <div className="progress render-progress-bar-outer">
                                 <div 
                                     className={`progress-bar render-progress-bar-inner ${percentageDone!==100 && "progress-bar-striped progress-bar-animated"}`} 
