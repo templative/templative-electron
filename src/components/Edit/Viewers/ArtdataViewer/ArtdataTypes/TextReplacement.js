@@ -1,7 +1,6 @@
 import React from "react";
 
 import ScopedValueInput from "./ArtdataInputs/ScopedValueInput"
-import RenderOptionsInput from "./ArtdataInputs/RenderOptionsInput"
 import ArtdataItemControls from "./ArtdataInputs/ArtdataItemControls"
 
 import "../ArtdataViewer.css"
@@ -23,17 +22,11 @@ export default class TextReplacement extends React.Component {
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}
             >
-            <RenderOptionsInput 
-                updateArtdataFieldCallback={(index, field, value) => this.props.updateArtdataFieldCallback("textReplacements", index, field, value)}
-                isDebug={isDebug} 
-                isComplex={isComplex}
-                index={this.props.index} 
-            />
-            <input type="text" className="form-control no-left-border" onChange={(event)=>this.props.updateArtdataFieldCallback("textReplacements", this.props.index, "key", event.target.value)} aria-label="What key to replace..." value={this.props.artdataItem.key}/>
             <ScopedValueInput index={this.props.index} 
                 updateArtdataFieldCallback={(index, field, value) => this.props.updateArtdataFieldCallback("textReplacements", index, field, value)} 
                 source={this.props.artdataItem.source} scope={this.props.artdataItem.scope}/>
             
+            <input type="text" className="form-control" onChange={(event)=>this.props.updateArtdataFieldCallback("textReplacements", this.props.index, "key", event.target.value)} value={this.props.artdataItem.key}/>
             <ArtdataItemControls index={this.props.index} deleteCallback={this.props.deleteCallback} updateArtdataItemOrderCallback={this.props.updateArtdataItemOrderCallback}/>
         </div> 
     }

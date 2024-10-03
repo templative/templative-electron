@@ -1,7 +1,6 @@
 import React from "react";
 
 import ScopedValueInput from "./ArtdataInputs/ScopedValueInput"
-import RenderOptionsInput from "./ArtdataInputs/RenderOptionsInput"
 import ArtdataItemControls from "./ArtdataInputs/ArtdataItemControls"
 
 import "../ArtdataViewer.css"
@@ -23,12 +22,6 @@ export default class StyleUpdate extends React.Component {
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}
             >
-            <RenderOptionsInput 
-                updateArtdataFieldCallback={(index, field, value) => this.props.updateArtdataFieldCallback("overlays", index, field, value)} 
-                isDebug={isDebug} 
-                isComplex={isComplex}
-                index={this.props.index} 
-            />
             <ScopedValueInput 
                 index={this.props.index}
                 updateArtdataFieldCallback={(index, field, value) => this.props.updateArtdataFieldCallback("overlays", index, field, value)} 

@@ -1,7 +1,6 @@
 import React from "react";
 
 import ScopedValueInput from "./ArtdataInputs/ScopedValueInput"
-import RenderOptionsInput from "./ArtdataInputs/RenderOptionsInput"
 import ArtdataItemControls from "./ArtdataInputs/ArtdataItemControls"
 
 import "../ArtdataViewer.css"
@@ -23,14 +22,6 @@ export default class StyleUpdate extends React.Component {
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}
             >
-            <RenderOptionsInput 
-                updateArtdataFieldCallback={(index, field, value) => this.props.updateArtdataFieldCallback("styleUpdates", index, field, value)}
-                isDebug={isDebug} 
-                isComplex={isComplex}
-                index={this.props.index} 
-            />
-            <input type="text" className="form-control no-left-border" onChange={(event)=>this.props.updateArtdataFieldCallback("styleUpdates", this.props.index, "id", event.target.value)} aria-label="What key to replace..." value={this.props.artdataItem.id}/>
-            <input type="text" className="form-control" onChange={(event)=>this.props.updateArtdataFieldCallback("styleUpdates", this.props.index, "cssValue", event.target.value)} aria-label="What key to replace..." value={this.props.artdataItem.cssValue}/>
             
             
             <ScopedValueInput 
@@ -39,6 +30,8 @@ export default class StyleUpdate extends React.Component {
                 source={this.props.artdataItem.source} 
                 scope={this.props.artdataItem.scope}
             />
+            <input type="text" className="form-control" onChange={(event)=>this.props.updateArtdataFieldCallback("styleUpdates", this.props.index, "id", event.target.value)} aria-label="What key to replace..." value={this.props.artdataItem.id}/>
+            <input type="text" className="form-control" onChange={(event)=>this.props.updateArtdataFieldCallback("styleUpdates", this.props.index, "cssValue", event.target.value)} aria-label="What key to replace..." value={this.props.artdataItem.cssValue}/>
             
             {/* { this.state.isHovering &&  */}
                 <ArtdataItemControls index={this.props.index} deleteCallback={this.props.deleteCallback} updateArtdataItemOrderCallback={this.props.updateArtdataItemOrderCallback}/>
