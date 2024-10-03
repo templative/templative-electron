@@ -24,7 +24,6 @@ export default class EditProjectView extends React.Component {
             
         ],
         italicsTabFilepath: undefined,
-        fileContents: undefined,
         currentFileType: undefined,
         componentTypesCustomInfo: {},
         componentTypesStockInfo: {},
@@ -87,7 +86,6 @@ export default class EditProjectView extends React.Component {
             currentFileType: filetype,
             currentFilepath: filepath,
             filename: path.parse(filepath).name,
-            fileContents: await EditProjectView.#loadFileContentsAsync(filepath),
             tabbedFiles: EditProjectView.#addTabbedFile(filetype, filepath, this.state.tabbedFiles),
         })
     }
@@ -105,7 +103,6 @@ export default class EditProjectView extends React.Component {
                 currentFileType: filetype,
                 currentFilepath: filepath,
                 filename: path.parse(filepath).name,
-                fileContents: await EditProjectView.#loadFileContentsAsync(filepath),
                 italicsTabFilepath: undefined
             })
             return
@@ -118,7 +115,6 @@ export default class EditProjectView extends React.Component {
                 currentFileType: filetype,
                 currentFilepath: filepath,
                 filename: path.parse(filepath).name,
-                fileContents: await EditProjectView.#loadFileContentsAsync(filepath),
                 tabbedFiles: EditProjectView.#replaceItalicsTabWithTab(this.state.italicsTabFilepath, filetype, filepath, this.state.tabbedFiles),
                 italicsTabFilepath: filepath
             })
@@ -129,7 +125,6 @@ export default class EditProjectView extends React.Component {
             currentFileType: filetype,
             currentFilepath: filepath,
             filename: path.parse(filepath).name,
-            fileContents: await EditProjectView.#loadFileContentsAsync(filepath),
             tabbedFiles: EditProjectView.#addTabbedFile(filetype, filepath, this.state.tabbedFiles),
             italicsTabFilepath: !hasTabAlready ? filepath : this.state.italicsTabFilepath
         })
@@ -142,25 +137,12 @@ export default class EditProjectView extends React.Component {
             italicsTabFilepath: undefined
         })
     }
-    static #loadFileContentsAsync = async (filepath) => {
-        var fileContentsBuffer = await fs.readFile(filepath, 'utf8');
-        var fileContents = fileContentsBuffer.toString()
-        var extension = filepath.split('.').pop()
-        if (extension === "json") {
-            return JSON.parse(fileContents)
-        }
-        if (extension === "csv") {
-            return EditProjectView.#csvToJS(fileContents)
-        }
-        return fileContents
-    }
     
     clearViewedFile = () => {
         this.setState({
             currentFileType: undefined,
             currentFilepath: undefined,
-            filename: undefined,
-            fileContents: undefined
+            filename: undefined
         })
     }
     static doesFileExist = async (filepath) => {
@@ -216,7 +198,6 @@ export default class EditProjectView extends React.Component {
         this.setState({
             tabbedFiles: [],
             italicsTabFilepath: undefined,
-            fileContents: undefined,
             currentFileType: undefined,
             currentFilepath: undefined,
         })
@@ -331,7 +312,6 @@ export default class EditProjectView extends React.Component {
                     tabbedFiles={this.state.tabbedFiles}
                     currentFileType={this.state.currentFileType}
                     currentFilepath={this.state.currentFilepath}
-                    fileContents={this.state.fileContents}
                     closeAllTabsButIndexAsyncCallback={this.closeAllTabsButIndexAsync}
                     closeAllTabsAsyncCallback={this.closeAllTabsAsync}
                     closeTabsToRightAsyncCallback={this.closeTabsToRightAsync}
