@@ -117,7 +117,7 @@ export default class EditPanelTab extends React.Component {
                         type="button" 
                         className={`btn-close btn-close-white tab-x-button ${shouldShowX && "visible-x-button"}`}
                         aria-label="Close"
-                        onClick={() => this.props.closeTabAtIndexAsyncCallback(this.props.index)}
+                        onClick={async () => await this.props.closeTabAtIndexAsyncCallback(this.props.index)}
                     />
                 } 
                 
