@@ -2,6 +2,7 @@ from matplotlib import font_manager
 from lxml import etree
 from PIL import ImageFont
 import itertools
+import copy
 import re
 from templative.lib.produce.customComponents.svgscissors.fontCache import FontCache
 
@@ -151,6 +152,159 @@ def getInheritedStyle(element, attribute, default=None):
         element = element.getparent()
     
     return default
+
+def getAllStylesIncludingInheritance(element):
+    finalStyling = {}
+    while element is not None:
+        style = element.attrib.get('style', '')
+        if style == '':
+            element = element.getparent()
+            continue
+        styleDict = dict(item.strip().split(':', 1) for item in style.split(';') if ':' in item)
+        for attribute in styleDict:
+            if attribute in finalStyling:
+                continue
+            value = styleDict[attribute].strip()
+            value = value.strip("'\"")
+            finalStyling[attribute] = value 
+            
+        element = element.getparent()
+    return finalStyling
+
+def determinePaintOrder(style_dict):
+    paint_order = 'paint-order' in style_dict and style_dict['paint-order'].lower() or 'fill stroke markers'
+            
+    if 'stroke' in paint_order and 'fill' in paint_order:
+        first_paint = None
+        for paint in paint_order.split():
+            if paint in ['fill', 'stroke']:
+                first_paint = paint
+                break
+        if first_paint == 'stroke':
+            return ['stroke', 'fill']
+        
+        return ['fill', 'stroke']
+    return ['fill', 'stroke']
+
+def processSvgStrokeOrder(svgContent):
+    """
+    Preprocess SVG content to ensure that strokes are rendered after fills.
+    
+    This function splits elements with both fill and stroke into separate elements,
+    placing the stroke element after the fill element to maintain correct rendering order.
+    
+    Args:
+        svgContent (str): The original SVG content as a string.
+    
+    Returns:
+        str: The modified SVG content with corrected paint order.
+        
+    The x,cx,y,cy arent respected when duplicating
+    """
+    parser = etree.XMLParser(remove_blank_text=True)
+    root = etree.fromstring(svgContent.encode('utf-8'), parser)
+    tree = etree.ElementTree(root)
+    
+    # Define SVG elements that can have fill and stroke
+    svg_elements = ["tspan", 'path', 'circle', 'rect', 'ellipse', 'line', 'polyline', 'polygon', 'text']
+    TEXT_TAG = f'{{{nsMap["svg"]}}}text'
+    TSPAN_TAG = f'{{{nsMap["svg"]}}}tspan'
+    
+    for elem_tag in svg_elements:
+        # Find all elements of this type
+        elements = root.findall(f'.//svg:{elem_tag}', namespaces=nsMap)
+        
+        for elem in elements:
+            style_dict = getAllStylesIncludingInheritance(elem)
+            has_fill = "fill" in style_dict
+            has_stroke = "stroke" in style_dict
+            if not (has_fill and has_stroke):
+                continue
+        
+            if elem.tag in [TEXT_TAG, TSPAN_TAG]:
+                # Determine if the element has direct text content
+                has_direct_text = bool(elem.text and elem.text.strip())
+                
+                # Determine if any child has direct text content
+                has_child_text = any(child.text and child.text.strip() for child in elem)
+                
+                # If neither the element nor its children have text, skip splitting
+                if not (has_direct_text or has_child_text):
+                    continue  # Skip to the next element without splitting
+        
+            # Create a copy for fill
+            
+            fill_elem = etree.Element(elem.tag, nsmap=elem.nsmap)
+            for attrib_key, attrib_val in elem.attrib.items():
+                if attrib_key in ['stroke', 'stroke-width', 'stroke-linecap', 'stroke-linejoin', 'stroke-miterlimit', 'stroke-dasharray', 'stroke-dashoffset', 'stroke-opacity', 'stroke-width']:
+                    # Remove stroke-related attributes
+                    continue
+                fill_elem.set(attrib_key, attrib_val)
+            
+            # Handle style attribute for fill
+            if 'stroke' in style_dict:
+                fill_style_dict = copy.deepcopy(style_dict)  # Create a copy for fill
+                del fill_style_dict['stroke']
+            else:
+                fill_style_dict = style_dict.copy()
+            fill_style = ';'.join([f"{k}:{v}" for k, v in fill_style_dict.items() if k != 'stroke']) + ';stroke:none' if fill_style_dict else 'stroke:none'
+            fill_elem.set('style', fill_style)
+            
+            # Create a copy for stroke
+            stroke_elem = etree.Element(elem.tag, nsmap=elem.nsmap)
+            for attrib_key, attrib_val in elem.attrib.items():
+                if attrib_key in ['fill', 'fill-opacity', 'fill-rule']:
+                    # Remove fill-related attributes
+                    continue
+                stroke_elem.set(attrib_key, attrib_val)
+            
+            # Handle style attribute for stroke
+            if 'fill' in style_dict:
+                stroke_style_dict = copy.deepcopy(style_dict)  # Create a copy for stroke
+                del stroke_style_dict['fill']
+            else:
+                stroke_style_dict = style_dict.copy()
+            stroke_style = ';'.join([f"{k}:{v}" for k, v in stroke_style_dict.items() if k != 'fill']) + ';fill:none' if stroke_style_dict else 'fill:none'
+            stroke_elem.set('style', stroke_style)
+            
+            if elem.tag in [TEXT_TAG, TSPAN_TAG]:
+                # Preserve the text content in both fill and stroke elements
+                fill_elem.text = elem.text
+                stroke_elem.text = elem.text
+                
+                # Iterate through child elements (e.g., <tspan>)
+                for child in elem:
+                    # Create corresponding fill child
+                    fill_child = etree.SubElement(fill_elem, child.tag, child.attrib)
+                    fill_child.text = child.text
+                    fill_child.tail = None  # Remove tail to prevent whitespace
+                    
+                    # Create corresponding stroke child
+                    stroke_child = etree.SubElement(stroke_elem, child.tag, child.attrib)
+                    stroke_child.text = child.text
+                    stroke_child.tail = child.tail  # Assi
+            
+            # Insert fill and stroke elements
+            parent = elem.getparent()
+            if parent is None:
+                continue
+            
+            index = parent.index(elem)
+            insertion_order = determinePaintOrder(style_dict)
+            for order in insertion_order:
+                if order == 'fill':
+                    parent.insert(index, fill_elem)
+                    index += 1
+                elif order == 'stroke':
+                    parent.insert(index, stroke_elem)
+                    index += 1
+            # Remove the original element
+            parent.remove(elem)
+                
+    
+    # Serialize the modified SVG back to string
+    modifiedSvgContent = etree.tostring(tree, pretty_print=True, xml_declaration=True, encoding='UTF-8').decode('utf-8')
+    return modifiedSvgContent
 
 def convertShapeInsideTextToWrappedText(svgContent, fontCache:FontCache):
     parser = etree.XMLParser(remove_blank_text=True)
