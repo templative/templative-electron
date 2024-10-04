@@ -14,10 +14,10 @@ const fsOld = require('fs');
 const postRenderOptions = [
     "Images",
     "Rules",
-    "Export to Tabletop Simulator Save",
-    "Export Tabletop Playground Package",
+    // "Export to Tabletop Simulator Save",
+    // "Export Tabletop Playground Package",
     "Create Print & Play",
-    "Upload to TheGameCrafter",
+    // "Upload to TheGameCrafter",
     // "Assemble Animation Library"
 ]
 export default class OutputExplorer extends React.Component { 
@@ -155,10 +155,10 @@ export default class OutputExplorer extends React.Component {
         const views = [
             <RenderedImages componentDirectories={this.state.componentDirectories} typeQuantities={this.state.typeQuantities}/>,
             <RulesViewer outputFolderPath={this.props.outputFolderPath} />,
-            <SimulatorPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
-            <PlaygroundPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
+            // <SimulatorPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
+            // <PlaygroundPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
             <PrintPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
-            <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath} templativeMessages={this.props.templativeMessages}/>
+            // <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath} templativeMessages={this.props.templativeMessages}/>
         ]
         
         return <React.Fragment>
