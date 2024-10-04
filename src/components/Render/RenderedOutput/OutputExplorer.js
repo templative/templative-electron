@@ -16,7 +16,7 @@ const postRenderOptions = [
     "Rules",
     // "Export to Tabletop Simulator Save",
     // "Export Tabletop Playground Package",
-    "Create Print & Play",
+    // "Create Print & Play",
     // "Upload to TheGameCrafter",
     // "Assemble Animation Library"
 ]
@@ -157,7 +157,7 @@ export default class OutputExplorer extends React.Component {
             <RulesViewer outputFolderPath={this.props.outputFolderPath} />,
             // <SimulatorPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
             // <PlaygroundPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
-            <PrintPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
+            // <PrintPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
             // <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath} templativeMessages={this.props.templativeMessages}/>
         ]
         
