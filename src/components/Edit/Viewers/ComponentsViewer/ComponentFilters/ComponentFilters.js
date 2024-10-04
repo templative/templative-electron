@@ -25,6 +25,9 @@ export default class ComponentFilters extends React.Component {
             if (this.props.componentTypeFilter !== undefined && this.props.componentTypeFilter !== component.type) {
                 return;
             }
+            if (this.props.filteredNameSubstring !== undefined && !component.name.startsWith(this.props.filteredNameSubstring)) {
+                return
+            }
             typeCounts[component.type] = typeCounts[component.type] === undefined ? 1 : typeCounts[component.type] + 1
         });
 

@@ -189,3 +189,24 @@
   -moz-user-select: none;     /* Firefox */
   -ms-user-select: none;      /* IE10+/Edge */
 }
+.component-headers {
+    height: 100%;
+    overflow-y: auto;
+}
+.component-headers-header {
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+.component-header {
+    padding-left: 4px;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+.component-header:hover {
+    cursor: pointer;
+    background-color: hsl(210, 10%, 24%);
+}
+.selected-component-header {
+    font-weight: bold;
+    background-color: hsl(210, 10%, 22%);
+}

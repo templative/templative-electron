@@ -27,6 +27,7 @@ export default class ComponentsViewer extends EditableViewerJson {
             floatingName: undefined,
             floatingNameIndex: undefined,
             filteredComponentType: undefined,
+            filteredNameSubstring: undefined
         }
         this.scrollableDivRef = React.createRef();
     }
@@ -133,7 +134,102 @@ export default class ComponentsViewer extends EditableViewerJson {
     removedFilteredComponentType = () => {
         this.setState({filteredComponentType: undefined})
     }
+    getCommonPrefixes(names) {
+        // This will store the valid prefixes and their occurrences
+        let prefixCounts = {};
 
+        // Iterate through the names and compare each name with every other name
+        for (let i = 0; i < names.length; i++) {
+            for (let j = i + 1; j < names.length; j++) {
+                let prefix = this.getPrefix(names[i], names[j]);
+                if (prefix.length <= 2) {
+                    continue
+                }
+                // If the prefix already exists, increment its count
+                if (prefixCounts[prefix]) {
+                    prefixCounts[prefix]++;
+                    continue
+                } 
+                let isSubPrefix = false;
+
+                // Check if this prefix is already part of a longer or shorter prefix
+                for (let existingPrefix in prefixCounts) {
+                    if (existingPrefix.startsWith(prefix) || prefix.startsWith(existingPrefix)) {
+                        isSubPrefix = true;
+                        // If the current prefix is shorter, replace the longer one
+                        if (prefix.length < existingPrefix.length) {
+                            delete prefixCounts[existingPrefix];
+                            prefixCounts[prefix] = 2;
+                        }
+                        break;
+                    }
+                }
+
+                if (!isSubPrefix) {
+                    prefixCounts[prefix] = 2;  // Initialize with 2 since it's found in two names
+                }
+                
+            }
+        }
+
+        // Filter out prefixes that occur less than twice
+        return Object.keys(prefixCounts).filter(prefix => prefixCounts[prefix] >= 2);
+    }
+    
+    // Helper function to get prefix between two strings
+    getPrefix(str1, str2) {
+        let minLength = Math.min(str1.length, str2.length);
+        let prefix = "";
+    
+        var lastCase = undefined
+        for (let i = 0; i < minLength; i++) {
+            let char1 = str1[i];
+            let char2 = str2[i];
+    
+            var isTheSameChar = char1 !== char2
+            if (isTheSameChar) {
+                break;
+            }
+            var isSpace = /[\s]/.test(char1)
+            var isSpecialCharacter = /[\W]/.test(char1)
+            var isChangeInCaseFromLastCharacter = lastCase !== undefined && this.isUpperCase(char1) !== lastCase
+            if (isSpace || isSpecialCharacter || isChangeInCaseFromLastCharacter) {
+                break;
+            }
+            if (!isSpecialCharacter) {
+                lastCase = this.isUpperCase(char1)
+            }
+            prefix += char1;
+        }
+        if (str1.startsWith("council")) {
+            console.log(str1, str2, prefix)
+        }
+        return prefix;
+    }
+    isUpperCase(char) {
+        return char === char.toUpperCase();
+    }
+    loadComponentHeaders = () => {
+        if (!this.state.hasLoaded || this.state.content === undefined) {
+            return []
+        }
+        
+        let componentHeaders = [];
+        this.state.content.forEach((component) => {
+            if (this.state.filteredComponentType === undefined || this.state.filteredComponentType === component.type) {
+                componentHeaders.push(component.name);
+            }
+        });
+        console.log(componentHeaders)
+        return this.getCommonPrefixes(componentHeaders);
+    }
+    setFilteredNameSubstring = (filteredNameSubstring) => {
+        if (filteredNameSubstring !== undefined && this.state.filteredNameSubstring === filteredNameSubstring) {
+            this.setState({filteredNameSubstring: undefined})
+            return
+        }
+        this.setState({filteredNameSubstring})
+    }
     loadComponentItems = () => {
         if (!this.state.hasLoaded || this.state.content === undefined) {
             return []
@@ -143,6 +239,9 @@ export default class ComponentsViewer extends EditableViewerJson {
 
         this.state.content.forEach((component, index) => {
             if (this.state.filteredComponentType !== undefined && this.state.filteredComponentType !== component.type) {
+                return;
+            }
+            if (this.state.filteredNameSubstring !== undefined && !component.name.startsWith(this.state.filteredNameSubstring)) {
                 return;
             }
             let isStock = component.type.split("_").shift() === "STOCK";
@@ -186,13 +285,28 @@ export default class ComponentsViewer extends EditableViewerJson {
 
     render() {
         var componentItems = this.loadComponentItems()
+        var componentHeaders = this.loadComponentHeaders()
+        
         var components = !this.state.hasLoaded || this.state.content === undefined ? [] : this.state.content
+        var hasFilteredAwaySelectedHeader = componentHeaders.length === 0 && this.state.filteredNameSubstring !== undefined
         return <div className="row componentViewer no-gutters">
+            {(componentHeaders.length > 0 || hasFilteredAwaySelectedHeader) && 
+                <div className="col-0 col-xl-2">
+                    <div className="component-headers">
+                        <p className="component-headers-header">Component Categories</p>
+                        {componentHeaders.map(header => <p key={header} className={`component-header ${header === this.state.filteredNameSubstring && "selected-component-header"}`} onClick={() => this.setFilteredNameSubstring(header)}>{header}</p>)}
+                        {componentHeaders.length === 0 &&
+                            <p className="component-header selected-component-header" onClick={() => this.setFilteredNameSubstring(this.state.filteredNameSubstring)}>{this.state.filteredNameSubstring}</p>
+                        }
+                    </div>
+                </div>
+            }
             <div className="col no-gutters">
                 <div className="row component-filters-row">
                     <div className="col no-gutters">
                         <ComponentFilters 
                             components={components}
+                            filteredNameSubstring={this.state.filteredNameSubstring}
                             componentTypeFilter={this.state.filteredComponentType}
                             filterByComponentTypeCallback={this.filterByComponentType}
                             removedFilteredComponentTypeCallback={this.removedFilteredComponentType}
