@@ -16,7 +16,7 @@
     height: calc(100% - 15em);
 }
 .preview-filter-label {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
 }
 .map-search-message-output {

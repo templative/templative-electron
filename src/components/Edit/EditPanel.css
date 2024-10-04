@@ -78,7 +78,7 @@
     background-color: #323742!important;
 }
 .preview-vertical-bar span {
-    font-size: 20px;
+    font-size: 24px;
     color: #b6b6b6;
     transform: rotate(180deg); /* Flip text back to readable orientation */
 }

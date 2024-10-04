@@ -6,23 +6,25 @@
     height: 100%;
 }
 .component-type-list {
-    padding:0.2em 0.1em 0.1em 0.1em !important;
+    padding:1em 1em 1em 1em !important;
     overflow-y: scroll;
     height: 100% !important;
-    background-color: hsl(217, 14%, 17%);
+    /* background-color: hsl(217, 14%, 17%); */
 }
 .component-type-card {
     margin: 0 0.2em 0.5em 0.2em;
     /* width: 10em; */
     /* height: 3em; */
     text-align: left !important;
-    font-size: 14px !important;
     background-color: #323843 !important;
     color: #d9d9d9!important;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     padding: 0.05em;
     display: inline-block;
+}
+.component-type-card > strong {
+    font-size: 14px !important;
 }
 .component-type-dimensions {
     color: #b6b6b6 !important;

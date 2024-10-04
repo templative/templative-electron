@@ -27,6 +27,7 @@
     margin-bottom: 0em;
 }
 .component-tag-options {
+    padding: 1em;
     overflow-y: scroll;
     height: 100%;
 }

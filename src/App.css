@@ -42,7 +42,7 @@ html {
   padding:0 !important;
   /* align-items: center;
   justify-content: center; */
-  font-size: calc(10px + 2vmin);
+  font-size: 24px;
   color:#cfcfcf !important;
 }
 .hidden-visibility{
