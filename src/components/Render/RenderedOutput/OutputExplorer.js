@@ -6,21 +6,15 @@ import SimulatorPanel from "./Simulator/SimulatorPanel"
 import PlaygroundPanel from "./Playground/PlaygroundPanel";
 import RenderedImages from "./RenderedImages/RenderedImages";
 import RulesViewer from "./Rules/RulesViewer";
+import { PostRenderOptions, RenderingWorkspaceContext } from "../RenderingWorkspaceProvider";
 
 const fs = require("fs/promises");
 const path = require('path');
 const fsOld = require('fs');
 
-const postRenderOptions = [
-    "Images",
-    "Rules",
-    // "Export to Tabletop Simulator Save",
-    // "Export Tabletop Playground Package",
-    // "Create Print & Play",
-    // "Upload to TheGameCrafter",
-    // "Assemble Animation Library"
-]
+
 export default class OutputExplorer extends React.Component { 
+    static contextType = RenderingWorkspaceContext; 
     state = {
         gameName: "",
         versionName: "",
@@ -29,7 +23,6 @@ export default class OutputExplorer extends React.Component {
         componentDirectories: [],
         totalFiles: 1,
         doneFiles: 1,
-        exportOptionIndex: 0,
         typeQuantities: {}
     }  
     static #parseTimeStamp = (timestamp) => {
@@ -139,10 +132,7 @@ export default class OutputExplorer extends React.Component {
     componentWillUnmount = () => {
         this.#stopWatchingOutputPath()
     }
-    selectPostRenderOption = (exportOptionIndex) => {
-        this.setState({exportOptionIndex: exportOptionIndex})
-    }
-    
+        
     render = () => {
         var outputName = ""
         if (this.props.outputFolderPath !== undefined) {
@@ -155,10 +145,10 @@ export default class OutputExplorer extends React.Component {
         const views = [
             <RenderedImages componentDirectories={this.state.componentDirectories} typeQuantities={this.state.typeQuantities}/>,
             <RulesViewer outputFolderPath={this.props.outputFolderPath} />,
-            // <SimulatorPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
-            // <PlaygroundPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
-            // <PrintPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
-            // <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath} templativeMessages={this.props.templativeMessages}/>
+            <SimulatorPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
+            <PlaygroundPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
+            <PrintPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
+            <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath} templativeMessages={this.props.templativeMessages}/>
         ]
         
         return <React.Fragment>
@@ -188,10 +178,10 @@ export default class OutputExplorer extends React.Component {
                             </div>
                             :
                             <div className="post-render-options">
-                                {postRenderOptions.map((postRenderOption, index) => {
+                                {PostRenderOptions.map((postRenderOption, index) => {
                                     var key = `tab-${postRenderOption}`
-                                    var selectedClass = this.state.exportOptionIndex === index ? "selected-post-render-option" : ""
-                                    return <p key={key} className={selectedClass} onClick={() => this.selectPostRenderOption(index)}>{postRenderOption}</p>
+                                    var selectedClass = this.context.exportOptionIndex === index ? "selected-post-render-option" : ""
+                                    return <p key={key} className={selectedClass} onClick={() => this.context.setExportOptionIndex(index)}>{postRenderOption}</p>
                                 })}
                             </div>
                         }
@@ -200,7 +190,7 @@ export default class OutputExplorer extends React.Component {
             </div>
             <div className="row render-output-row">
                 <div className="col">
-                    { views[this.state.exportOptionIndex] }
+                    { views[this.context.exportOptionIndex] }
                 </div>
             </div>
             

@@ -11,6 +11,7 @@ import { TabbedFile } from "./Edit/TabbedFile";
 import TemplativeAccessTools from "./TemplativeAccessTools";
 import '../App.css';
 import FeedbackPanel from "./Feedback/FeedbackPanel";
+import { RenderingWorkspaceProvider } from "./Render/RenderingWorkspaceProvider";
 
 const path = require("path");
 const fs = require("fs/promises");
@@ -319,7 +320,7 @@ export default class EditProjectView extends React.Component {
         this.setState({tabbedFiles: newTabbedFiles}, async () => await this.checkForCurrentTabRemovedAsync());
     }
     render() {
-        return <React.Fragment>
+        return <RenderingWorkspaceProvider>
             <TopNavbar topNavbarItems={TOP_NAVBAR_ITEMS} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
             {this.state.currentRoute === 'create' && (
                 <CreatePanel
@@ -388,7 +389,7 @@ export default class EditProjectView extends React.Component {
                     token={this.props.token}
                 />
             )}
-        </React.Fragment>
+        </RenderingWorkspaceProvider>
         
     }
 }

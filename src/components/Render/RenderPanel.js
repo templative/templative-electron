@@ -8,20 +8,23 @@ import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 import { trackEvent } from "@aptabase/electron/renderer";
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import TemplativeClient from "../../TemplativeClient"
+import { RenderingWorkspaceContext } from "./RenderingWorkspaceProvider";
 
 const path = require('path');
 
-export default class RenderPanel extends React.Component {   
+
+
+export default class RenderPanel extends React.Component {  
+    static contextType = RenderingWorkspaceContext; 
     state={
         components: [],
-        selectedDirectory: undefined,
-        selectedComponent: undefined,
         isDebugRendering: false,
         isComplexRendering: true,
         selectedLanguage: "en",
         isConnectedToTemplative: false,
         isProcessing: false,
         doesUserOwnTemplative: false,
+        
     }
     checkIfOwnsTemplative = async () => {
         var ownsTemplative = await TemplativeClient.doesUserOwnTemplative(this.props.email, this.props.token)
@@ -31,14 +34,15 @@ export default class RenderPanel extends React.Component {
     selectDirectoryAsync = async (directory) => {
         var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json")
         var outputDirectory = path.join(this.props.templativeRootDirectoryPath, gameCompose["outputDirectory"], directory)
-        this.setState({selectedDirectory: outputDirectory})
+        this.setState({selectedOutputDirectory: outputDirectory})
+        this.context.setSelectedOutputFolder(outputDirectory)
     }
-    toggleComponent = (component) => {
-        if (this.state.selectedComponent === component) {
-            this.setState({selectedComponent:undefined})
+    toggleComponent = (componentName) => {
+        if (this.context.selectedComponentFilter === componentName) {
+            this.context.setSelectedComponentFilter(undefined)
             return
         }
-        this.setState({selectedComponent:component})
+        this.context.setSelectedComponentFilter(componentName)
     }
     setDebugCheckbox = () => { 
         this.setState({isDebugRendering: !this.state.isDebugRendering})
@@ -67,7 +71,7 @@ export default class RenderPanel extends React.Component {
         var request = {
             isDebug: this.state.isDebugRendering,
             isComplex: this.state.isComplexRendering,
-            componentFilter: this.state.selectedComponent,
+            componentFilter: this.context.selectedComponentFilter,
             language: this.state.selectedLanguage,
             directoryPath: this.props.templativeRootDirectoryPath,
         }
@@ -91,7 +95,7 @@ export default class RenderPanel extends React.Component {
                 return 0;
               })
             .map((component) => {
-                return <div onClick={()=>this.toggleComponent(component.name)} className={this.state.selectedComponent === component.name ? "directory component-selected-for-rendering" : "directory"} key={component.name}> 
+                return <div onClick={()=>this.toggleComponent(component.name)} className={this.context.selectedComponentFilter === component.name ? "directory component-selected-for-rendering" : "directory"} key={component.name}> 
                     <p className="directory-item">{component.name}</p>
                 </div>
             }
@@ -108,7 +112,7 @@ export default class RenderPanel extends React.Component {
                             {componentDirectoryDivs}
                         </div>
                         <RenderButton 
-                            selectedComponent={this.state.selectedComponent} 
+                            selectedComponent={this.context.selectedComponentFilter} 
                             selectedLanguage={this.state.selectedLanguage} 
                             isDebugRendering={this.state.isDebugRendering}
                             isComplexRendering={this.state.isComplexRendering}
@@ -120,11 +124,10 @@ export default class RenderPanel extends React.Component {
                         
                     </div>
                     <LoggedMessages messages={this.props.templativeMessages}/>
-    
-                    <RenderOutputOptions selectedDirectory={this.state.selectedDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
+                    <RenderOutputOptions selectedDirectory={this.context.selectedOutputDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
                 </div>  
                 <div className="col-xs-12 col-md-5 col-lg-6 col-xl-9 outputPanel">
-                    <OutputExplorer templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} outputFolderPath={this.state.selectedDirectory} doesUserOwnTemplative={this.state.doesUserOwnTemplative} templativeMessages={this.props.templativeMessages}/>
+                    <OutputExplorer templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} outputFolderPath={this.context.selectedOutputDirectory} doesUserOwnTemplative={this.state.doesUserOwnTemplative} templativeMessages={this.props.templativeMessages}/>
                 </div>        
             </div>
         </div>
