@@ -106,6 +106,10 @@ async def produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublis
 
         if isProducingOneComponent and not isMatchingComponentFilter:
             continue
+        
+        if componentCompose["quantity"] == 0 and not isMatchingComponentFilter:
+            print("Skipping %s component as it has a quantity of 0." % (componentCompose["name"]))
+            continue
 
         componentComposition = ComponentComposition(gameCompose, componentCompose)
 

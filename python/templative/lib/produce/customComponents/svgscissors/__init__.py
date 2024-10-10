@@ -37,6 +37,11 @@ async def createArtFilesForComponent(compositions:ComponentComposition, componen
         pieceHash = BackProducer.createUniqueBackHashForPiece(uniqueComponentBackData.sourcedVariableNamesSpecificToPieceOnBackArtData, pieceGamedata)
         if pieceHash != uniqueComponentBackData.pieceUniqueBackHash:
             continue
+        
+        if pieceGamedata["quantity"] == 0:
+            print(f"Skipping {pieceData['name']} as it has a quantity of 0.")
+            continue
+        
         pieceData = PieceData(uniqueComponentBackData.studioDataBlob, uniqueComponentBackData.gameDataBlob, uniqueComponentBackData.componentDataBlob, uniqueComponentBackData.componentBackDataBlob, uniqueComponentBackData.sourcedVariableNamesSpecificToPieceOnBackArtData, uniqueComponentBackData.pieceUniqueBackHash, pieceGamedata)
 
         if "Front" in componentArtdata.artDataBlobDictionary:
