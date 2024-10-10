@@ -2,7 +2,8 @@ import React from "react";
 
 export default class RenderOutputImage extends React.Component {
     state = {
-        isHovering: false
+        isHovering: false,
+        isHoveringOverMagnifyingGlass: false,
     }
 
     handleMouseEnter = () => {
@@ -13,16 +14,33 @@ export default class RenderOutputImage extends React.Component {
         this.setState({isHovering: false});
 
     };
+    handleMouseEnterMagnifyingGlass = () => {
+        this.setState({isHoveringOverMagnifyingGlass: true});
+    };
+
+    handleMouseLeaveMagnifyingGlass = () => {
+        this.setState({isHoveringOverMagnifyingGlass: false});
+
+    };
     render() {
+        if (this.props.imagePath.endsWith('_temp.png')){
+            console.log("Caught a unrendered image!")
+            return <></>
+        }
         return <React.Fragment>
-            <div className="output-image-container">
+            <div className="output-image-container"
+                onMouseEnter={this.handleMouseEnter}
+                onMouseLeave={this.handleMouseLeave}
+            >
                 <img 
                     className="output-image" 
                     src={`file://${this.props.imagePath}`} 
                 />
+                {this.state.isHovering && 
+                
                 <div 
-                    onMouseEnter={this.handleMouseEnter}
-                    onMouseLeave={this.handleMouseLeave}
+                    onMouseEnter={this.handleMouseEnterMagnifyingGlass}
+                    onMouseLeave={this.handleMouseLeaveMagnifyingGlass}
                     style={{
                         position: 'absolute',
                         bottom: '10px',
@@ -53,8 +71,9 @@ export default class RenderOutputImage extends React.Component {
                         />
                     </svg>
                 </div>
+                }
             </div>
-            {this.state.isHovering && (
+            {this.state.isHoveringOverMagnifyingGlass && (
                 <img 
                     className="output-image-giganto" 
                     src={`file://${this.props.imagePath}`}
