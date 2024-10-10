@@ -43,5 +43,5 @@ async def printGameComponentDepth(gameRootDirectoryPath, gameCompose, componentC
 
         depthOfPiece = component["GameCrafterPackagingDepthMillimeters"]
         for piece in piecesGamedata:
-            depthMillimeters += int(piece["quantity"]) * depthOfPiece      
+            depthMillimeters += piece["quantity"] * depthOfPiece      
     print("%smm" % round(depthMillimeters, 2))

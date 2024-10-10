@@ -61,7 +61,7 @@ async def copyComponentToPackage(componentDirectoryPath, packageDirectoryPath):
 
     totalCount = 0
     for instruction in componentInstructions["frontInstructions"]:
-        totalCount += int(instruction["quantity"])
+        totalCount += instruction["quantity"]
 
     if totalCount == 0:
         print(f"Skipping {componentInstructions['name']} that has 0 total pieces.")

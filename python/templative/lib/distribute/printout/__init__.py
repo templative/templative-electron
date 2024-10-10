@@ -90,7 +90,7 @@ async def collectFilepathQuantitiesForComponent(componentInstructions):
     for instruction in componentInstructions["frontInstructions"]:
         frontBack = {
             "filepath": instruction["filepath"],
-            "quantity":  int(instruction["quantity"]) * int(componentInstructions["quantity"]),
+            "quantity":  instruction["quantity"] * componentInstructions["quantity"],
         }
         if "backInstructions" in componentInstructions:
             frontBack["backFilepath"] = componentInstructions["backInstructions"]["filepath"]
@@ -186,13 +186,13 @@ async def drawPieceForQuantities(pageImages, instruction, totalImagesDrawn, prin
     pieceIndex = totalImagesDrawn
     marginsToDimensionsRatio = (marginsPixels[0]/dimensionsPixels[0], marginsPixels[1]/dimensionsPixels[1]) if marginsPixels != None else None
 
-    for _ in range(int(instruction["quantity"])):
+    for _ in range(instruction["quantity"]):
         await drawPiece(pageImages, frontImage, backImage, pieceIndex, printBack, columns, rows, resizedSizePixels, halfAreaPixels, pieceSizeInches, isImageRotated, marginsToDimensionsRatio)
         pieceIndex += 1
 
     frontImage.close()
     backImage.close()
-    imagesDrawnCount = int(instruction["quantity"])
+    imagesDrawnCount = instruction["quantity"]
     return imagesDrawnCount
 
 async def drawPiece(pageImages, frontImage, backImage, pieceIndex, printBack, columns, rows, resizedSizePixels, halfAreaPixels, pieceSizeInches, isImageRotated, marginsToDimensionsRatio):
@@ -264,7 +264,7 @@ async def createBlankImagesForComponent(imageFilepaths, columns, rows, printBack
 
     totalCount = 0
     for instruction in imageFilepaths:
-        totalCount += int(instruction["quantity"])
+        totalCount += instruction["quantity"]
     
     itemsPerPage = columns * rows
     totalPages = math.ceil(totalCount/itemsPerPage) * (2 if printBack else 1)

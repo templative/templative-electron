@@ -6,7 +6,7 @@ from templative.lib.componentInfo import COMPONENT_INFO
 async def createCompositeImageInTextures(componentName, componentTypeInfo, frontInstructions, textureDirectoryFilepath):
     totalCount = 0
     for instruction in frontInstructions:
-        totalCount += int(instruction["quantity"])
+        totalCount += instruction["quantity"]
 
     if totalCount == 0:
         return 0,0,0
@@ -23,7 +23,7 @@ async def createCompositeImageInTextures(componentName, componentTypeInfo, front
     yIndex = 0
     for instruction in frontInstructions:
         image = Image.open(instruction["filepath"])
-        for _ in range(int(instruction["quantity"])):
+        for _ in range(instruction["quantity"]):
             tiledImage.paste(image,(xIndex*pixelDimensions[0],yIndex*pixelDimensions[1]))
             xIndex += 1
             if xIndex == columns:

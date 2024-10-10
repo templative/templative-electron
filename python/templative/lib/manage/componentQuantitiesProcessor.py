@@ -62,7 +62,7 @@ async def addComponentQuantities(componentQuantities, component, piecesGamedata)
     for piece in piecesGamedata:
         if not "quantity" in piece:
             continue
-        quantity += int(piece["quantity"])
+        quantity += piece["quantity"]
     
     componentQuantities[component["type"]].append({
         "name":component["name"], "componentQuantity": component["quantity"], "pieceQuantity": quantity
