@@ -110,7 +110,27 @@ async def produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublis
         if componentCompose["quantity"] == 0 and not isMatchingComponentFilter:
             print("Skipping %s component as it has a quantity of 0." % (componentCompose["name"]))
             continue
-
+        
+        # Skip components that dont have fronts
+        # This doesnt handle uniqueBacks
+        componentType = componentCompose["type"]
+        componentTypeTokens = componentType.split("_")
+        isCustomComponent = componentTypeTokens[0].upper() != "STOCK"
+        isDie = not "piecesGamedataFilename" in componentCompose
+        print(componentType, isCustomComponent, isDie)
+        if isCustomComponent and not isDie:
+            needsToProduceAPiece = False
+            
+            piecesGamedata = await defineLoader.loadPiecesGamedata(gameRootDirectoryPath, gameCompose, componentCompose["piecesGamedataFilename"])
+            for piece in piecesGamedata:
+                print(piece["name"])
+                if "quantity" in piece and piece["quantity"] > 0:
+                    needsToProduceAPiece = True
+                    break 
+                
+            if not needsToProduceAPiece:
+                print(f"Skipping {componentCompose['name']} due to not have pieces to make.")
+                continue
         componentComposition = ComponentComposition(gameCompose, componentCompose)
 
         tasks.append(asyncio.create_task(produceGameComponent(produceProperties, gameData, componentComposition, fontCache)))

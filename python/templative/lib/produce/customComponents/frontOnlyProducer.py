@@ -65,6 +65,8 @@ class FrontOnlyProducer(Producer):
     async def getInstructionSetsForFilesForBackArtdataHash(componentName:str, piecesGamedataBlog:[any], componentFilepath:str):
         instructionSets = []
         for pieceGamedata in piecesGamedataBlog:
+            if pieceGamedata["quantity"] == 0:
+                continue
             filename = "%s-%s.png" % (componentName, pieceGamedata["name"])
             artFilepath = os.path.abspath(os.path.join(componentFilepath, filename))
             instructionSets.append({"name": pieceGamedata["name"], "filepath": artFilepath, "quantity": pieceGamedata["quantity"]})

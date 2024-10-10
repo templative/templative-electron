@@ -38,7 +38,7 @@ async def createArtFilesForComponent(compositions:ComponentComposition, componen
         if pieceHash != uniqueComponentBackData.pieceUniqueBackHash:
             continue
         
-        if pieceGamedata["quantity"] == 0:
+        if "quantity" in pieceGamedata and pieceGamedata["quantity"] == 0:
             print(f"Skipping {pieceGamedata['name']} as it has a quantity of 0.")
             continue
         

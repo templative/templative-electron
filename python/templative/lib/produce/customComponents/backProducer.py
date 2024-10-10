@@ -63,9 +63,26 @@ class BackProducer(Producer):
         sourcedVariableNamesSpecificToPieceOnBackArtData = BackProducer.getSourcedVariableNamesSpecificToPieceOnBackArtdata(componentArtdata.artDataBlobDictionary["Back"])
         
         uniqueComponentBackDatas = BackProducer.createNewComponentBackPerUniqueBackGamedata(sourcedVariableNamesSpecificToPieceOnBackArtData, componentData, piecesDataBlob)
-        
-        for uniqueComponentBackData in uniqueComponentBackDatas:
-            await BackProducer.createComponentBackDataPieces(uniqueComponentBackDatas[uniqueComponentBackData], sourcedVariableNamesSpecificToPieceOnBackArtData, componentComposition, produceProperties, componentArtdata, piecesDataBlob, fontCache)
+       
+        for key in uniqueComponentBackDatas:
+            uniqueComponentBackData = uniqueComponentBackDatas[key]
+            needsToProduceAPiece = False
+            for piece in piecesDataBlob:
+                pass
+                pieceHash = BackProducer.createUniqueBackHashForPiece(sourcedVariableNamesSpecificToPieceOnBackArtData, piece)
+                if pieceHash == uniqueComponentBackData.pieceUniqueBackHash and "quantity" in piece and piece["quantity"] > 0:
+                    needsToProduceAPiece = True
+                    break 
+            if not needsToProduceAPiece:
+                skippedPieces = []
+                for piece in piecesDataBlob:
+                    pieceHash = BackProducer.createUniqueBackHashForPiece(sourcedVariableNamesSpecificToPieceOnBackArtData, piece)
+                    if pieceHash != uniqueComponentBackData.pieceUniqueBackHash:
+                        continue
+                    skippedPieces.append(piece["name"])
+                print(f"Skipping {componentComposition.componentCompose['name']}{uniqueComponentBackData.pieceUniqueBackHash} due to not have pieces to make. Skipped the following peices: {skippedPieces}")
+                continue
+            await BackProducer.createComponentBackDataPieces(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, componentComposition, produceProperties, componentArtdata, piecesDataBlob, fontCache)
         
     # If the back art data needs data from the piece, that means our component has unique backs. Unique backs are handled as seperate components during manufacturing, so we'll output multiple componennts, one per unqiue back.
     @staticmethod
@@ -142,6 +159,8 @@ class BackProducer(Producer):
     async def getInstructionSetsForFilesForBackArtdataHash(uniqueComponentBackHash: str, sourcedVariableNamesSpecificToPieceOnBackArtData: [str],  componentBackName:str, piecesGamedataBlog:[any], componentBackFilepath:str):
         instructionSets = []
         for pieceGamedata in piecesGamedataBlog:
+            if pieceGamedata["quantity"] == 0:
+                continue
             pieceUniqueBackHash = BackProducer.createUniqueBackHashForPiece(sourcedVariableNamesSpecificToPieceOnBackArtData, pieceGamedata)
             isPieceInComponentBack = uniqueComponentBackHash == pieceUniqueBackHash
             if not isPieceInComponentBack:
