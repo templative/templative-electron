@@ -18,7 +18,7 @@ export default class RenderOutputImage extends React.Component {
             <div className="output-image-container">
                 <img 
                     className="output-image" 
-                    src={`file://${this.props.imagePath}?${this.props.imageHash}`} 
+                    src={`file://${this.props.imagePath}`} 
                 />
                 <div 
                     onMouseEnter={this.handleMouseEnter}
@@ -57,7 +57,7 @@ export default class RenderOutputImage extends React.Component {
             {this.state.isHovering && (
                 <img 
                     className="output-image-giganto" 
-                    src={`file://${this.props.imagePath}?${this.props.imageHash}`}
+                    src={`file://${this.props.imagePath}`}
                 />
             )}
         </React.Fragment>

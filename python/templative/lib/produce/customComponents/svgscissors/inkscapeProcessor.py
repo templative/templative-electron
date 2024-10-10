@@ -89,8 +89,9 @@ def findInkscape():
 async def exportSvgToImage(artFileOutputFilepath, imageSizePixels, name, outputDirectory):
     absoluteSvgFilepath = path.normpath(path.abspath(artFileOutputFilepath))
     absoluteOutputDirectory = path.normpath(path.abspath(outputDirectory))
-    pngFilepath = path.normpath(path.join(absoluteOutputDirectory, f"{name}.png"))
-
+    pngTempFilepath = path.normpath(path.join(absoluteOutputDirectory, f"{name}_temp.png"))
+    pngFinalFilepath = path.normpath(path.join(absoluteOutputDirectory, f"{name}.png"))
+    
     # inkscapePath = findInkscape()
     # if not inkscapePath:
     #     print("Inkscape is not installed or not found in common paths.")
@@ -117,10 +118,12 @@ async def exportSvgToImage(artFileOutputFilepath, imageSizePixels, name, outputD
     # os.remove(pngFilepath)
     cairosvg.svg2png(
         url=absoluteSvgFilepath,
-        write_to=pngFilepath,
+        write_to=pngTempFilepath,
         output_width=imageSizePixels[0],
         output_height=imageSizePixels[1],
         dpi=300,
         background_color='transparent',
     )
+    # We dont want to render the temp file as it is being written, so we rename it to the complete version.
+    os.rename(pngTempFilepath, pngFinalFilepath)
     # print(f"Converted {absoluteSvgFilepath} to {pngFilepath}")

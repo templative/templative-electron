@@ -8,10 +8,8 @@ export default class ComponentOutputDirectory extends React.Component {
     state = {
         imageFilepaths: [],
         svgFilepaths: [],
-        remountKey: 0,
         isExtended: true,
         rotationLeftQuantity: 0,
-        imageHash: Date.now(),
     }  
    
     #getComponentImageFilepaths = async () => {        
@@ -21,7 +19,7 @@ export default class ComponentOutputDirectory extends React.Component {
         var svgFilepaths = filepaths.filter(dirent => !dirent.isDirectory() && dirent.name.split(".").pop() === "svg")
             .map(dirent => ({path: this.props.componentDirectory, name: dirent.name}))
         
-        this.setState({imageFilepaths: imageFilepaths, svgFilepaths: svgFilepaths, remountKey: this.state.remountKey+1, imageHash: Math.floor(Date.now()/1000)})
+        this.setState({imageFilepaths: imageFilepaths, svgFilepaths: svgFilepaths})
 
     }
     #stopWatchingComponentDirectoryFolderForChanges = () => {
@@ -79,12 +77,12 @@ export default class ComponentOutputDirectory extends React.Component {
         var imageDivs = this.state.imageFilepaths.map((dirent, index) => {
             // console.log(dirent)
             var imagePath = path.join(dirent.path, dirent.name)
-            return <RenderOutputImage key={imagePath} imagePath={imagePath} imageHash={this.state.imageHash}/>
+            return <RenderOutputImage key={imagePath} imagePath={imagePath}/>
         })
         var componentDirectory = this.props.componentDirectory.replaceAll("\\", "/")
         componentDirectory = componentDirectory.substring(componentDirectory.lastIndexOf("/") + 1, componentDirectory.length)
         var isComplete = this.state.imageFilepaths.length === this.state.svgFilepaths.length
-        return <div className="renderedComponent" key={this.state.remountKey}>
+        return <div className="renderedComponent">
             <div className="component-output-header" onClick={this.toggleExtended}>
                 <div className={`component-progess ${isComplete && "component-progress-completed"}`}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" className="bi bi-card-image progress-image" viewBox="0 0 16 16">
