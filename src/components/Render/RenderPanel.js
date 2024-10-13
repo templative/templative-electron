@@ -75,6 +75,7 @@ export default class RenderPanel extends React.Component {
             language: this.state.selectedLanguage,
             directoryPath: this.props.templativeRootDirectoryPath,
         }
+        this.context.setExportOptionIndex(0)
         this.setState({isProcessing: true})
         trackEvent("render")
         

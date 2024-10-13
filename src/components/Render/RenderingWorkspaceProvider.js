@@ -9,7 +9,7 @@ const PostRenderOptions = [
     "Export Tabletop Playground Package",
     "Create Print & Play",
     "Upload to TheGameCrafter",
-    "Assemble Animation Library"
+    // "Assemble Animation Library"
 ]
 
 class RenderingWorkspaceProvider extends React.Component {
