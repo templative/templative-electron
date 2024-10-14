@@ -1,5 +1,6 @@
 import React from "react";
-import fs from "fs";
+const fs = require('fs');
+
 import "./ImageViewer.css";
 
 export default class ImageViewer extends React.Component {

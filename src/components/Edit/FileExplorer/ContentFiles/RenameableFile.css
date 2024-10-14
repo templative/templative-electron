@@ -13,7 +13,7 @@
     margin-bottom: 0.05em;
 }
 .renameable-file {
-    padding-bottom: 0.16em !important;
+    padding-bottom: 4px !important;
     font-size: 14px;
     margin: 0 !important;;
     text-align: left;

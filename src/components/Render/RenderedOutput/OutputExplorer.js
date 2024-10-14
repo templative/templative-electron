@@ -62,18 +62,16 @@ export default class OutputExplorer extends React.Component {
             componentInstructions = JSON.parse(componentInstructions);
             var quantity = Number(componentInstructions["quantity"])
             var uniquePieceCount = 0
-            var thisComponentFileCountForCompleteRender = 0
+            
             if (componentInstructions["frontInstructions"] !== undefined) {
                 for (var index in componentInstructions["frontInstructions"]) {
                     var pieceQuantity = Number(componentInstructions["frontInstructions"][index]["quantity"])
                     uniquePieceCount += pieceQuantity * quantity
                 }
-                fileCountForCompleteRender += componentInstructions["frontInstructions"].length
-                thisComponentFileCountForCompleteRender += componentInstructions["frontInstructions"].length
+                fileCountForCompleteRender += 1
             }
             if (componentInstructions["backInstructions"] !== undefined) {
                 fileCountForCompleteRender += 1
-                thisComponentFileCountForCompleteRender += 1
             }
             if (componentInstructions["type"].startsWith("STOCK")) {
                 uniquePieceCount = quantity
