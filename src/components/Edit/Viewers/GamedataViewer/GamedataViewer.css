@@ -60,3 +60,7 @@ tr {
     margin-bottom:4px;
     margin-right: 4px;
 }
+.value-text-area {
+    padding-top:6px !important;
+    padding-bottom: 0px !important;
+}

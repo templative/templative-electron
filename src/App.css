@@ -22,6 +22,9 @@ html {
   height: 8px;
   background-color: #2f333c;
 }
+textarea::-webkit-scrollbar-corner {
+  background-color: #2f333c; /* Color of the corner */
+}
 
 ::-webkit-scrollbar-thumb {
   background: #373c48;
