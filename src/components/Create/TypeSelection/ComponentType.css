@@ -5,6 +5,9 @@
     margin-right:auto;
     height: 100%;
 }
+.search-components-box {
+    margin-bottom:24px;
+}
 .component-type-list {
     padding:1em 1em 1em 1em !important;
     overflow-y: scroll;

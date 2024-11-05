@@ -1,3 +1,11 @@
+export const matchesSearch = (search, possibleMatch) => {
+    if (search === "") {
+        return true
+    }
+    var upperPossibleMatch = possibleMatch.toUpperCase().replace(" ", "")
+    var upperSearch = search.toUpperCase().replace(" ", "")
+    return upperPossibleMatch.includes(upperSearch)
+}
 export const componentTypeHasAllFilteredTags = (mustHaveTags, componentTypeTags, mustNotHave) => {
     for(const tagToFilterBy of mustHaveTags) {
         var hasTag = false

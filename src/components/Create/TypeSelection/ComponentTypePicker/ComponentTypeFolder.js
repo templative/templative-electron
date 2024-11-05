@@ -1,5 +1,5 @@
 import React from "react";
-import {componentTypeHasAllFilteredTags} from "../../TagFilter"
+import {componentTypeHasAllFilteredTags, matchesSearch} from "../../TagFilter"
 import ComponentType from "./ComponentType";
 
 export default class ComponentTypeFolder extends React.Component { 
@@ -14,6 +14,7 @@ export default class ComponentTypeFolder extends React.Component {
         var componentDivs = Object.keys(this.props.componentTypeOptions)
             .filter((key) => {                
                 return componentTypeHasAllFilteredTags(this.props.selectedTags, this.props.componentTypeOptions[key]["Tags"]) && componentTypeHasAllFilteredTags([this.props.category], this.props.componentTypeOptions[key]["Tags"])
+                && matchesSearch(this.props.search, key)
             })
             .sort()
             .map((key) => {
@@ -22,7 +23,9 @@ export default class ComponentTypeFolder extends React.Component {
                     name={key} componentInfo={this.props.componentTypeOptions[key]}
                     selectTypeCallback={this.props.selectTypeCallback}
                     selectedComponentType={this.props.selectedComponentType} 
-                    existingQuantity={existingQuantity}/>
+                    existingQuantity={existingQuantity}
+                    search={this.props.search}    
+                />
             })
             
         var folder = <div className="renderedComponent">
