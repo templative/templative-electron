@@ -1,5 +1,14 @@
+import time
 def createSave(name, objectStates):
     return {
+        # Add missing fields
+        "EpochTime": int(time.time()),  # Need to import time at top
+        "VersionNumber": "v13.3",
+        "GameType": "",
+        "GameComplexity": "",
+        "Tags": [],
+        "Gravity": 0.5,
+        "PlayArea": 0.5,
         
         "SaveName": name,
         "GameMode": name,
@@ -9,148 +18,87 @@ def createSave(name, objectStates):
         "Note": "",
         "Rules": "",
         "PlayerTurn": "",
+        
+        # Update Grid to include missing fields
         "Grid": {
             "Type": 0,
             "Lines": False,
+            "Color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0
+            },
+            "Opacity": 0.75,
+            "ThickLines": False,
             "Snapping": False,
             "Offset": False,
             "BothSnapping": False,
             "xSize": 2.0,
             "ySize": 2.0,
             "PosOffset": {
-            "x": 0.0,
-            "y": 1.0,
-            "z": 0.0
+                "x": 0.0,
+                "y": 1.0,
+                "z": 0.0
             }
         },
+
+        # Add missing sections
+        "Lighting": {
+            "LightIntensity": 0.54,
+            "LightColor": {
+                "r": 1.0,
+                "g": 0.9804,
+                "b": 0.8902
+            },
+            "AmbientIntensity": 1.3,
+            "AmbientType": 0,
+            "AmbientSkyColor": {
+                "r": 0.5,
+                "g": 0.5,
+                "b": 0.5
+            },
+            "AmbientEquatorColor": {
+                "r": 0.5,
+                "g": 0.5,
+                "b": 0.5
+            },
+            "AmbientGroundColor": {
+                "r": 0.5,
+                "g": 0.5,
+                "b": 0.5
+            },
+            "ReflectionIntensity": 1.0,
+            "LutIndex": 0,
+            "LutContribution": 1.0
+        },
+
+        # Simplify Hands structure
         "Hands": {
             "Enable": True,
             "DisableUnused": False,
-            "Hidding": 0,
-            "HandTransforms": [
-            {
-                "Color": "Red",
-                "Transform": {
-                "posX": -15.1107731,
-                "posY": 4.81034231,
-                "posZ": -20.1076221,
-                "rotX": 1.7155658E-09,
-                "rotY": 3.359887E-09,
-                "rotZ": -1.06581666E-09,
-                "scaleX": 11.771986,
-                "scaleY": 9.174497,
-                "scaleZ": 4.87123871
-                },
-                "GameMaster": False
-            },
-            {
-                "Color": "Yellow",
-                "Transform": {
-                "posX": -30.2150211,
-                "posY": 4.81034231,
-                "posZ": 10.17524,
-                "rotX": 1.06581621E-09,
-                "rotY": 90.00007,
-                "rotZ": 1.71556691E-09,
-                "scaleX": 11.6554251,
-                "scaleY": 9.174497,
-                "scaleZ": 4.91995
-                },
-                "GameMaster": False
-            },
-            {
-                "Color": "Purple",
-                "Transform": {
-                "posX": 30.2511711,
-                "posY": 4.81034231,
-                "posZ": 9.59069252,
-                "rotX": -1.06581743E-09,
-                "rotY": 270.0,
-                "rotZ": -1.71556691E-09,
-                "scaleX": 11.6554193,
-                "scaleY": 9.174497,
-                "scaleZ": 4.919951
-                },
-                "GameMaster": False
-            },
-            {
-                "Color": "Blue",
-                "Transform": {
-                "posX": 15.4749184,
-                "posY": 4.81034231,
-                "posZ": 19.8365288,
-                "rotX": -1.71183556E-09,
-                "rotY": 179.8,
-                "rotZ": 1.07179887E-09,
-                "scaleX": 11.7719727,
-                "scaleY": 9.174497,
-                "scaleZ": 4.87123775
-                },
-                "GameMaster": False
-            },
-            {
-                "Color": "White",
-                "Transform": {
-                "posX": 15.1961212,
-                "posY": 4.81034231,
-                "posZ": -20.1400986,
-                "rotX": 1.7155658E-09,
-                "rotY": 3.359887E-09,
-                "rotZ": -1.06581666E-09,
-                "scaleX": 11.7719679,
-                "scaleY": 9.17449951,
-                "scaleZ": 4.87123871
-                },
-                "GameMaster": False
-            },
-            {
-                "Color": "Green",
-                "Transform": {
-                "posX": -15.1927719,
-                "posY": 4.81034231,
-                "posZ": 19.787817,
-                "rotX": -1.7155668E-09,
-                "rotY": 180.0001,
-                "rotZ": 1.06581521E-09,
-                "scaleX": 11.7719679,
-                "scaleY": 9.174497,
-                "scaleZ": 4.87123871
-                },
-                "GameMaster": False
-            },
-            {
-                "Color": "Pink",
-                "Transform": {
-                "posX": 30.1035728,
-                "posY": 4.81034231,
-                "posZ": -8.449126,
-                "rotX": -1.06581743E-09,
-                "rotY": 270.0,
-                "rotZ": -1.71556691E-09,
-                "scaleX": 11.6554174,
-                "scaleY": 9.174497,
-                "scaleZ": 4.919951
-                },
-                "GameMaster": False
-            },
-            {
-                "Color": "Orange",
-                "Transform": {
-                "posX": -30.247818,
-                "posY": 4.81034231,
-                "posZ": -8.822588,
-                "rotX": 1.06581621E-09,
-                "rotY": 90.00007,
-                "rotZ": 1.71556691E-09,
-                "scaleX": 11.65543,
-                "scaleY": 9.174497,
-                "scaleZ": 4.91995
-                },
-                "GameMaster": False
-            }
-            ]
+            "Hiding": 0
         },
-        "DrawImage": "iVBORw0KGgoAAAANSUhEUgAAAWAAAADQCAYAAAA53LuNAAAFFElEQVR4Ae3QgQAAAADDoPlTH+SFUGHAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgy8DQx5DAABHyNK3wAAAABJRU5ErkJggg==",
+
+        # Add missing sections
+        "ComponentTags": {
+            "labels": []
+        },
+        "Turns": {
+            "Enable": False,
+            "Type": 0,
+            "TurnOrder": [],
+            "Reverse": False,
+            "SkipEmpty": False,
+            "DisableInteractions": False,
+            "PassTurns": True,
+            "TurnColor": ""
+        },
+        "DecalPallet": [],
+        "LuaScript": "--[[ Lua code. See documentation: https://api.tabletopsimulator.com/ --]]\n\n--[[ The onLoad event is called after the game save finishes loading. --]]\nfunction onLoad()\n    --[[ print('onLoad!') --]]\nend\n\n--[[ The onUpdate event is called once per frame. --]]\nfunction onUpdate()\n    --[[ print('onUpdate loop!') --]]\nend",
+        "LuaScriptState": "",
+        "XmlUI": "<!-- Xml UI. See documentation: https://api.tabletopsimulator.com/ui/introUI/ -->",
+        
+        "DrawImage": "iVBORw0KGgoAAAANSUhEUgAAAWAAAADQCAYAAAA53LuNAAAFFElEQVR4Ae3QgQAAAADDoPlTH+SFUGHAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgy8DQx5DAABHyNK3wAAAABJRU5ErkJggg==",
         "VectorLines": [],
         "ObjectStates": objectStates,
         "TabStates": {
@@ -255,5 +203,4 @@ def createSave(name, objectStates):
             "id": 9
             }
         }
-
-}
+    }

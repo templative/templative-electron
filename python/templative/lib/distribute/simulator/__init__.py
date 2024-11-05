@@ -38,7 +38,10 @@ async def getSimulatorDirectory(inputedSimulatorDirectory):
     return await lookForSimulatorFile()  
 
 async def convertToTabletopSimulator(producedDirectoryPath, tabletopSimulatorDirectoryPath):
-
+    # Expand the tilde to the user's home directory
+    producedDirectoryPath = path.expanduser(producedDirectoryPath)
+    tabletopSimulatorDirectoryPath = path.expanduser(tabletopSimulatorDirectoryPath)
+    
     game = await instructionsLoader.loadGameInstructions(producedDirectoryPath)
     studio = await instructionsLoader.loadStudioInstructions(producedDirectoryPath)
 
@@ -47,12 +50,53 @@ async def convertToTabletopSimulator(producedDirectoryPath, tabletopSimulatorDir
     uniqueGameName = path.basename(producedDirectoryPath)
 
     objectStates = await createObjectStates(producedDirectoryPath, tabletopSimulatorDirectoryPath)
-    await createSave(uniqueGameName, objectStates, tabletopSimulatorDirectoryPath)
+    
+    componentLibraryChest = createComponentLibraryChest(objectStates)
+    await createSave(uniqueGameName, [componentLibraryChest], tabletopSimulatorDirectoryPath)
     return 1
+
+def createComponentLibraryChest(componentStates):
+    return {
+        "Name": "Bag",
+        "Transform": {
+            "posX": 0,
+            "posY": 3,
+            "posZ": -20,
+            "rotX": 0,
+            "rotY": 180,
+            "rotZ": 0,
+            "scaleX": 3,
+            "scaleY": 3,
+            "scaleZ": 3
+        },
+        "Nickname": "Component Library",
+        "Description": "Contains all game components for respawning",
+        "GMNotes": "",
+        "ColorDiffuse": {
+            "r": 0.7132782,
+            "g": 0.7132782,
+            "b": 0.7132782
+        },
+        "Locked": True,
+        "Grid": True,
+        "Snap": True,
+        "IgnoreFoW": False,
+        "MeasureMovement": False,
+        "DragSelectable": True,
+        "Autoraise": True,
+        "Sticky": True,
+        "Tooltip": True,
+        "GridProjection": False,
+        "HideWhenFaceDown": False,
+        "Hands": False,
+        "ContainedObjects": componentStates,
+        "GUID": "chest" + md5("ComponentLibrary".encode()).hexdigest()[:6]
+    }
 
 async def createSave(uniqueGameName, objectStates, tabletopSimulatorDirectoryPath):
     gameSave = save.createSave(uniqueGameName, objectStates)
     saveFilepath = path.join(tabletopSimulatorDirectoryPath, "Saves", "%s.json" % uniqueGameName)
+    print("Saved file at %s" % saveFilepath)
     with open(saveFilepath, "w") as gameStateVtsFile:
         dump(gameSave, gameStateVtsFile, indent=2)
 
@@ -61,12 +105,14 @@ async def createObjectStates(producedDirectoryPath, tabletopSimulatorDirectoryPa
     index = 0
     directories = next(walk(producedDirectoryPath))[1]
     for directoryPath in directories:
-        componentDirectoryPath = "%s/%s" % (producedDirectoryPath, directoryPath)
+        componentDirectoryPath = path.join(producedDirectoryPath, directoryPath)
+        
         objectState = await createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPath, index, len(directories))
         index = index + 1
         if objectState == None:
             continue
         objectStates.append(objectState)
+        
     return objectStates
 
 async def createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPath, componentIndex, componentCountTotal):
@@ -112,7 +158,7 @@ async def createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPa
         print("Skipping unsupported %s." % simulatorTask)
         return None
     instruction = supportedInstructionTypes[simulatorTask]
-
+    print("Creating %s" % componentInstructions["uniqueName"])
     return await instruction(tabletopSimulatorDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal)
 
 def findBoxiestShape(total_count):
@@ -131,14 +177,25 @@ def findBoxiestShape(total_count):
     return (1, total_count)
 
 async def createDeck(tabletopSimulatorDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal):
+    # Add check for hexagonal components
+    isHexagonal = "hex" in componentInfo["Tags"]
+    
     tabletopSimulatorImageDirectoryPath = path.join(tabletopSimulatorDirectoryPath, "Mods/Images")
-    imgurUrl, totalCount, cardColumnCount, cardRowCount = await createCompositeImage(componentInstructions["name"], componentInstructions["type"], componentInstructions["frontInstructions"],componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
-    backImageImgurUrl = await placeAndUploadBackImage(componentInstructions["name"], componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
-    componentGuid = md5(componentInstructions["uniqueName"].encode()).hexdigest()
+
+    componentUniqueName = componentInstructions["uniqueName"]
+
+    imgurUrl, totalCount, cardColumnCount, cardRowCount = await createCompositeImage(componentUniqueName, componentInstructions["type"],componentInstructions["quantity"], componentInstructions["frontInstructions"],componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
+
+    backImageImgurUrl = await placeAndUploadBackImage(componentUniqueName, componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
+
+    componentGuid = md5(componentInstructions["uniqueName"].encode()).hexdigest()[:6]
+    
     relativeWidth = componentInfo["DimensionsInches"][0] / 2.5
     relativeHeight = componentInfo["DimensionsInches"][1] / 3.5
     thickness = 1.0
+    
     imageUrls = SimulatorTilesetUrls(face=imgurUrl, back=backImageImgurUrl)
+    
     columns, rows = findBoxiestShape(componentCountTotal)
     boxPositionIndexX=componentIndex % columns
     boxPositionIndexZ=int(math.floor(componentIndex / columns))
@@ -148,67 +205,80 @@ async def createDeck(tabletopSimulatorDirectoryPath, componentInstructions, comp
     dimensions = SimulatorDimensions(relativeWidth, relativeHeight, thickness)
     layout = SimulatorTilesetLayout(totalCount, cardColumnCount, cardRowCount)
 
-    return objectState.createDeckObjectState(componentGuid, componentInstructions["uniqueName"], imageUrls, simulatorComponentPlacement, dimensions, layout)
+    # Pass the quantities array to createDeckObjectState
+    cardQuantities = []
+    for instruction in componentInstructions["frontInstructions"]:
+        cardQuantities.append(instruction["quantity"] * componentInstructions["quantity"])
+
+    return objectState.createDeckObjectState(
+        componentGuid, 
+        componentIndex+1, 
+        componentInstructions["uniqueName"], 
+        imageUrls, 
+        simulatorComponentPlacement, 
+        dimensions, 
+        layout, 
+        cardQuantities, 
+        isHexagonal
+    )
 
 async def createStock(tabletopSimulatorDirectoryPath, componentInstructions, stockPartInfo):   
     return None
 
-async def createCompositeImage(componentName, componentType, frontInstructions, backInstructions, tabletopSimulatorImageDirectoryPath):
-
-    totalCount = 0
+async def createCompositeImage(componentName, componentType, quantity, frontInstructions, backInstructions, tabletopSimulatorImageDirectoryPath):
+    # Calculate total unique cards (not including duplicates)
+    uniqueCardCount = len(frontInstructions)
     
-    for instruction in frontInstructions:
-        totalCount += instruction["quantity"]
-    
-    if totalCount > 69:
-        print("!!! Components larger than 69 cards aren't parsed correctly at the moment.")
-        return None, 0,0,0
-
-    if totalCount == 0:
-        print("Skipping %s as it has no pieces that have a nonzero quantity.")
-        return None, 0,0,0
+    if uniqueCardCount > 69:
+        print("!!! Components larger than 69 unique cards aren't parsed correctly at the moment.")
+        return None, 0, 0, 0
 
     columns = 10
     rows = 7
 
     if not componentType in COMPONENT_INFO:
         print("Missing component info for %s." % componentType)
-        return None, 0,0,0
+        return None, 0, 0, 0
     component = COMPONENT_INFO[componentType]
 
     if not "DimensionsPixels" in component:
         print("Skipping %s that has no DimensionsPixels." % componentType)
-        return None, 0,0,0
+        return None, 0, 0, 0
     pixelDimensions = COMPONENT_INFO[componentType]["DimensionsPixels"]
 
-    tiledImage = Image.new('RGB',(pixelDimensions[0]*columns, pixelDimensions[1]*rows))
+    tiledImage = Image.new('RGB', (pixelDimensions[0]*columns, pixelDimensions[1]*rows))
     
+    # Place each unique card image only once
     xIndex = 0
     yIndex = 0
     for instruction in frontInstructions:
         image = Image.open(instruction["filepath"])
-        for _ in range(instruction["quantity"]):
-            tiledImage.paste(image,(xIndex*pixelDimensions[0],yIndex*pixelDimensions[1]))
-            xIndex += 1
-            if xIndex == columns:
-                xIndex = 0
-                yIndex +=1
+        tiledImage.paste(image, (xIndex*pixelDimensions[0], yIndex*pixelDimensions[1]))
+        xIndex += 1
+        if xIndex == columns:
+            xIndex = 0
+            yIndex += 1
                 
     # Place hidden card in last spot
     backImage = Image.open(backInstructions["filepath"])
-    tiledImage.paste(backImage,(9*pixelDimensions[0],6*pixelDimensions[1]))
+    tiledImage.paste(backImage, (9*pixelDimensions[0], 6*pixelDimensions[1]))
 
-    max_width = 1920
+    max_width = 1024
     width, height = tiledImage.size
     if width > max_width:
         new_height = int((max_width / width) * height)
         tiledImage = tiledImage.resize((max_width, new_height), Image.LANCZOS)
 
-    frontImageName = "%s-front.jpeg" % componentName
+    frontImageName = "%s-front.png" % componentName
     frontImageFilepath = path.join(tabletopSimulatorImageDirectoryPath, frontImageName)
-    print(frontImageFilepath)
-    tiledImage.save(frontImageFilepath,"JPEG")
+    if tiledImage.mode == 'RGBA':
+        tiledImage = tiledImage.convert('RGB')
+    tiledImage.save(frontImageFilepath, "PNG", optimize=True, quality=95)
     imgurUrl = await uploadToS3(tiledImage)
+
+    # Calculate total cards including duplicates
+    totalCount = sum(instruction["quantity"] * quantity for instruction in frontInstructions)
+    
     return imgurUrl, totalCount, columns, rows
 
 async def uploadToS3(image):
@@ -216,7 +286,7 @@ async def uploadToS3(image):
         image = image.convert('RGB')
     
     buffered = BytesIO()
-    image.save(buffered, format="JPEG")
+    image.save(buffered, format="PNG", optimize=True, quality=95)
     buffered.seek(0)
     
     files = {'image': buffered}
@@ -227,7 +297,7 @@ async def uploadToS3(image):
     if response.status_code == 200:
         return response.json()['url']
     else:
-        print("Failed to upload image to Flask server.")
+        print("Failed to upload image to server.")
         return None
 
 async def copyFrontImageToTextures(componentName, frontInstructions, textureDirectoryFilepath):
@@ -238,6 +308,8 @@ async def copyFrontImageToTextures(componentName, frontInstructions, textureDire
 async def placeAndUploadBackImage(name, backInstructions, tabletopSimulatorImageDirectoryPath):
     await copyBackImageToImages(name, backInstructions, tabletopSimulatorImageDirectoryPath)
     image = Image.open(backInstructions["filepath"])
+    if image.mode == 'RGBA':
+        image = image.convert('RGB')
     return await uploadToS3(image)
 
 async def copyBackImageToImages(componentName, backInstructions, tabletopSimulatorImageDirectoryPath):
