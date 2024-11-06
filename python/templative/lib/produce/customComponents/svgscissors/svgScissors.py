@@ -52,8 +52,8 @@ async def createArtFileOfPiece(compositions: ComponentComposition, artdata: any,
     contents = await scaleContent(contents, imageSizePixels, 0.3203944444444444)
     contents = await assignSize(contents, imageSizePixels)
     contents = await addNewlines(contents)
-    contents = convertShapeInsideTextToWrappedText(contents, fontCache)
-    contents = processSvgStrokeOrder(contents)
+    # contents = convertShapeInsideTextToWrappedText(contents, fontCache)
+    # contents = processSvgStrokeOrder(contents)
     
     pieceUniqueHash = f"_{gamedata.pieceUniqueBackHash}" if gamedata.pieceUniqueBackHash != '' else ''
     artFileOutputName = f"{compositions.componentCompose['name']}{pieceUniqueHash}-{pieceName}"
@@ -142,6 +142,12 @@ async def placeOverlay(contents:str, overlayFilepath, positionX, positionY) -> s
         overlay_contents = await afp.read()
     overlay_svg_root = ElementTree.fromstring(overlay_contents)
     
+    # Clean up text elements in the overlay
+    for text_elem in overlay_svg_root.findall(".//*[@{http://www.w3.org/XML/1998/namespace}space='preserve']"):
+        if text_elem.text:
+            text_elem.text = text_elem.text.strip()
+        text_elem.attrib.pop('{http://www.w3.org/XML/1998/namespace}space', None)
+    
     group = ElementTree.Element('g', attrib={'transform': f'translate({positionX},{positionY})'})
     
     for element in overlay_svg_root:
@@ -173,7 +179,6 @@ async def textReplaceInFile(contents: str, textReplacements, gamedata: PieceData
                 value = translation
             else:
                 print("Could not translate %s" % value)
-
         contents = contents.replace(key, value)
     return contents
 
