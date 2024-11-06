@@ -51,47 +51,9 @@ async def convertToTabletopSimulator(producedDirectoryPath, tabletopSimulatorDir
 
     objectStates = await createObjectStates(producedDirectoryPath, tabletopSimulatorDirectoryPath)
     
-    componentLibraryChest = createComponentLibraryChest(objectStates)
+    componentLibraryChest = objectState.createComponentLibraryChest(objectStates)
     await createSave(uniqueGameName, [componentLibraryChest], tabletopSimulatorDirectoryPath)
     return 1
-
-def createComponentLibraryChest(componentStates):
-    return {
-        "Name": "Bag",
-        "Transform": {
-            "posX": 0,
-            "posY": 3,
-            "posZ": -20,
-            "rotX": 0,
-            "rotY": 180,
-            "rotZ": 0,
-            "scaleX": 3,
-            "scaleY": 3,
-            "scaleZ": 3
-        },
-        "Nickname": "Component Library",
-        "Description": "Contains all game components for respawning",
-        "GMNotes": "",
-        "ColorDiffuse": {
-            "r": 0.7132782,
-            "g": 0.7132782,
-            "b": 0.7132782
-        },
-        "Locked": True,
-        "Grid": True,
-        "Snap": True,
-        "IgnoreFoW": False,
-        "MeasureMovement": False,
-        "DragSelectable": True,
-        "Autoraise": True,
-        "Sticky": True,
-        "Tooltip": True,
-        "GridProjection": False,
-        "HideWhenFaceDown": False,
-        "Hands": False,
-        "ContainedObjects": componentStates,
-        "GUID": "chest" + md5("ComponentLibrary".encode()).hexdigest()[:6]
-    }
 
 async def createSave(uniqueGameName, objectStates, tabletopSimulatorDirectoryPath):
     gameSave = save.createSave(uniqueGameName, objectStates)
@@ -122,7 +84,8 @@ async def createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPa
         componentInstructions = load(componentInstructionsFile)
     
     supportedInstructionTypes = {
-        "DECK": createDeck
+        "DECK": createDeck,
+        "BOARD": createDeck,
     }
 
     componentTypeTokens = componentInstructions["type"].split("_")
@@ -177,16 +140,27 @@ def findBoxiestShape(total_count):
     return (1, total_count)
 
 async def createDeck(tabletopSimulatorDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal):
-    # Add check for hexagonal components
-    isHexagonal = "hex" in componentInfo["Tags"]
+    # Check if this is a single card
+    totalUniqueCards = len(componentInstructions["frontInstructions"])
+    isSingleCard = totalUniqueCards == 1 and (componentInstructions["frontInstructions"][0]["quantity"] * componentInstructions["quantity"]) == 1
     
+    if isSingleCard:
+        return await createSingleCard(tabletopSimulatorDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal)
+    
+    # Determine component type based on tags
+    deckType = 0  # default type
+    if "hex" in componentInfo["Tags"]:
+        deckType = 3
+    elif "circle" in componentInfo["Tags"]:
+        deckType = 4
+
     tabletopSimulatorImageDirectoryPath = path.join(tabletopSimulatorDirectoryPath, "Mods/Images")
 
     componentUniqueName = componentInstructions["uniqueName"]
 
     imgurUrl, totalCount, cardColumnCount, cardRowCount = await createCompositeImage(componentUniqueName, componentInstructions["type"],componentInstructions["quantity"], componentInstructions["frontInstructions"],componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
 
-    backImageImgurUrl = await placeAndUploadBackImage(componentUniqueName, componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
+    backImageImgurUrl = await placeAndUploadBackImage(componentUniqueName, componentInstructions["frontInstructions"], componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
 
     componentGuid = md5(componentInstructions["uniqueName"].encode()).hexdigest()[:6]
     
@@ -219,7 +193,7 @@ async def createDeck(tabletopSimulatorDirectoryPath, componentInstructions, comp
         dimensions, 
         layout, 
         cardQuantities, 
-        isHexagonal
+        deckType
     )
 
 async def createStock(tabletopSimulatorDirectoryPath, componentInstructions, stockPartInfo):   
@@ -233,12 +207,18 @@ async def createCompositeImage(componentName, componentType, quantity, frontInst
         print("!!! Components larger than 69 unique cards aren't parsed correctly at the moment.")
         return None, 0, 0, 0
 
-    columns = 10
-    rows = 7
+    # Calculate optimal grid size based on card count (including 1 back card)
+    total_cards = uniqueCardCount + 1  # Add 1 for the back card
+    columns, rows = findBoxiestShape(total_cards)
+    
+    # Ensure minimum dimensions for TTS compatibility
+    columns = max(columns, 2)  # Minimum 2 columns for TTS
+    rows = max(rows, 2)    # Minimum 2 rows for TTS
 
     if not componentType in COMPONENT_INFO:
         print("Missing component info for %s." % componentType)
         return None, 0, 0, 0
+
     component = COMPONENT_INFO[componentType]
 
     if not "DimensionsPixels" in component:
@@ -246,34 +226,84 @@ async def createCompositeImage(componentName, componentType, quantity, frontInst
         return None, 0, 0, 0
     pixelDimensions = COMPONENT_INFO[componentType]["DimensionsPixels"]
 
-    tiledImage = Image.new('RGB', (pixelDimensions[0]*columns, pixelDimensions[1]*rows))
+    # Calculate initial dimensions
+    total_width = pixelDimensions[0] * columns
+    total_height = pixelDimensions[1] * rows
     
-    # Place each unique card image only once
-    xIndex = 0
-    yIndex = 0
+    # If dimensions exceed 10k pixels, adjust the layout or resize
+    MAX_DIMENSION = 10000
+    scale_factor = 1.0
+    
+    if total_width > MAX_DIMENSION or total_height > MAX_DIMENSION:
+        # First try to adjust columns and rows while maintaining total cells
+        aspect_ratio = pixelDimensions[0] / pixelDimensions[1]
+        max_columns = math.floor(MAX_DIMENSION / pixelDimensions[0])
+        max_rows = math.floor(MAX_DIMENSION / pixelDimensions[1])
+        
+        # Recalculate columns and rows within limits
+        if total_cards <= max_columns * max_rows:
+            columns = min(columns, max_columns)
+            rows = math.ceil(total_cards / columns)
+            
+            # Adjust if rows exceed max
+            if rows > max_rows:
+                rows = max_rows
+                columns = math.ceil(total_cards / rows)
+        
+        # If still too large, need to scale the image
+        total_width = pixelDimensions[0] * columns
+        total_height = pixelDimensions[1] * rows
+        if total_width > MAX_DIMENSION or total_height > MAX_DIMENSION:
+            width_scale = MAX_DIMENSION / total_width if total_width > MAX_DIMENSION else 1
+            height_scale = MAX_DIMENSION / total_height if total_height > MAX_DIMENSION else 1
+            scale_factor = min(width_scale, height_scale)
+            
+    # Create the composite image with potentially scaled dimensions
+    scaled_width = int(pixelDimensions[0] * columns * scale_factor)
+    scaled_height = int(pixelDimensions[1] * rows * scale_factor)
+    tiledImage = Image.new('RGB', (scaled_width, scaled_height))
+
+    # Place each unique card image with scaling if necessary
+    cardIndex = 0
     for instruction in frontInstructions:
+        xIndex = cardIndex % columns
+        yIndex = cardIndex // columns
         image = Image.open(instruction["filepath"])
-        tiledImage.paste(image, (xIndex*pixelDimensions[0], yIndex*pixelDimensions[1]))
-        xIndex += 1
-        if xIndex == columns:
-            xIndex = 0
-            yIndex += 1
-                
-    # Place hidden card in last spot
-    backImage = Image.open(backInstructions["filepath"])
-    tiledImage.paste(backImage, (9*pixelDimensions[0], 6*pixelDimensions[1]))
+        if scale_factor != 1.0:
+            new_size = (int(pixelDimensions[0] * scale_factor), int(pixelDimensions[1] * scale_factor))
+            image = image.resize(new_size, Image.Resampling.LANCZOS)
+        tiledImage.paste(image, (
+            int(xIndex * pixelDimensions[0] * scale_factor), 
+            int(yIndex * pixelDimensions[1] * scale_factor)
+        ))
+        cardIndex += 1
 
-    max_width = 1024
-    width, height = tiledImage.size
-    if width > max_width:
-        new_height = int((max_width / width) * height)
-        tiledImage = tiledImage.resize((max_width, new_height), Image.LANCZOS)
+    # Create or use back image
+    if backInstructions:
+        backImage = Image.open(backInstructions["filepath"])
+    else:
+        # Create a black image with the same dimensions as the front cards
+        backImage = Image.new('RGB', (pixelDimensions[0], pixelDimensions[1]), 'black')
 
-    frontImageName = "%s-front.png" % componentName
-    frontImageFilepath = path.join(tabletopSimulatorImageDirectoryPath, frontImageName)
+    if scale_factor != 1.0:
+        new_size = (int(pixelDimensions[0] * scale_factor), int(pixelDimensions[1] * scale_factor))
+        backImage = backImage.resize(new_size, Image.Resampling.LANCZOS)
+
+    # Place back image in bottom right corner
+    xIndex = columns - 1  # Rightmost column
+    yIndex = rows - 1     # Bottom row
+    tiledImage.paste(backImage, (
+        int(xIndex * pixelDimensions[0] * scale_factor),
+        int(yIndex * pixelDimensions[1] * scale_factor)
+    ))
+
+    # Ensure image is in RGB mode
     if tiledImage.mode == 'RGBA':
         tiledImage = tiledImage.convert('RGB')
-    tiledImage.save(frontImageFilepath, "PNG", optimize=True, quality=95)
+    
+    frontImageName = "%s-front.png" % componentName
+    frontImageFilepath = path.join(tabletopSimulatorImageDirectoryPath, frontImageName)
+    tiledImage.save(frontImageFilepath, "PNG", optimize=False, quality=100)
     imgurUrl = await uploadToS3(tiledImage)
 
     # Calculate total cards including duplicates
@@ -305,9 +335,15 @@ async def copyFrontImageToTextures(componentName, frontInstructions, textureDire
     frontImageFilepath = path.join(textureDirectoryFilepath, frontImageName)
     copyfile(frontInstructions["filepath"], frontImageFilepath)
     
-async def placeAndUploadBackImage(name, backInstructions, tabletopSimulatorImageDirectoryPath):
-    await copyBackImageToImages(name, backInstructions, tabletopSimulatorImageDirectoryPath)
-    image = Image.open(backInstructions["filepath"])
+async def placeAndUploadBackImage(name, frontInstructions, backInstructions, tabletopSimulatorImageDirectoryPath):
+    if backInstructions:
+        await copyBackImageToImages(name, backInstructions, tabletopSimulatorImageDirectoryPath)
+        image = Image.open(backInstructions["filepath"])
+    else:
+        # Get dimensions from the first front instruction to match card size
+        frontImage = Image.open(frontInstructions[0]["filepath"])
+        image = Image.new('RGB', frontImage.size, 'black')
+    
     if image.mode == 'RGBA':
         image = image.convert('RGB')
     return await uploadToS3(image)
@@ -316,3 +352,46 @@ async def copyBackImageToImages(componentName, backInstructions, tabletopSimulat
     backImageName = "%s-back.jpeg" % componentName
     backImageFilepath = path.join(tabletopSimulatorImageDirectoryPath, backImageName)
     copyfile(backInstructions["filepath"], backImageFilepath)
+
+async def createSingleCard(tabletopSimulatorDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal):
+    # Determine component type based on tags
+    deckType = 0  # default type
+    if "hex" in componentInfo["Tags"]:
+        deckType = 3
+    elif "circle" in componentInfo["Tags"]:
+        deckType = 4
+
+    tabletopSimulatorImageDirectoryPath = path.join(tabletopSimulatorDirectoryPath, "Mods/Images")
+    
+    # Upload front and back images directly without tiling
+    frontImage = Image.open(componentInstructions["frontInstructions"][0]["filepath"])
+    backImage = Image.open(componentInstructions["backInstructions"]["filepath"])
+    
+    frontImgurUrl = await uploadToS3(frontImage)
+    backImgurUrl = await uploadToS3(backImage)
+    
+    componentGuid = md5(componentInstructions["uniqueName"].encode()).hexdigest()[:6]
+    
+    relativeWidth = componentInfo["DimensionsInches"][0] / 2.5
+    relativeHeight = componentInfo["DimensionsInches"][1] / 3.5
+    thickness = 1.0
+    
+    imageUrls = SimulatorTilesetUrls(face=frontImgurUrl, back=backImgurUrl)
+    
+    columns, rows = findBoxiestShape(componentCountTotal)
+    boxPositionIndexX = componentIndex % columns
+    boxPositionIndexZ = int(math.floor(componentIndex / columns))
+    height = 1.5
+    
+    simulatorComponentPlacement = SimulatorComponentPlacement(boxPositionIndexX, height, boxPositionIndexZ, columns, rows)
+    dimensions = SimulatorDimensions(relativeWidth, relativeHeight, thickness)
+    
+    return objectState.createCardObjectState(
+        componentGuid,
+        componentIndex+1,
+        componentInstructions["uniqueName"],
+        imageUrls,
+        simulatorComponentPlacement,
+        dimensions,
+        deckType
+    )

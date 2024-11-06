@@ -25,6 +25,7 @@ python-socketio = {extras = ["asyncio"], version = "*"}
 templative = {file = ".", editable = true}
 matplotlib = "*"
 cairosvg = "*"
+snakeviz = "*"
 
 [requires]
 python_version = "3.11.9"

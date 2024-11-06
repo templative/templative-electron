@@ -676,6 +676,7 @@ COMPONENT_INFO = {
         ],
         "PlaygroundThickness": 0.05,
         "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "PlaygroundModel": "Rounded",
         "GameCrafterUploadTask": "twosidedset",
         "GameCrafterPackagingDepthMillimeters": 0.3302,
@@ -703,6 +704,7 @@ COMPONENT_INFO = {
         ],
         "PlaygroundThickness": 0.05,
         "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "PlaygroundModel": "Rounded",
         "GameCrafterUploadTask": "twosidedset",
         "GameCrafterPackagingDepthMillimeters": 0.3302,
@@ -730,6 +732,7 @@ COMPONENT_INFO = {
         ],
         "PlaygroundThickness": 0.05,
         "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "PlaygroundModel": "Rounded",
         "GameCrafterUploadTask": "twosidedset",
         "GameCrafterPackagingDepthMillimeters": 0.3302,
@@ -756,6 +759,7 @@ COMPONENT_INFO = {
         ],
         "PlaygroundThickness": 0.05,
         "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "PlaygroundModel": "Rounded",
         "GameCrafterUploadTask": "twosidedset",
         "GameCrafterPackagingDepthMillimeters": 0.3302,
@@ -783,6 +787,7 @@ COMPONENT_INFO = {
         ],
         "PlaygroundThickness": 0.05,
         "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "PlaygroundModel": "Rounded",
         "GameCrafterUploadTask": "twosidedset",
         "GameCrafterPackagingDepthMillimeters": 0.3302,
@@ -869,8 +874,8 @@ COMPONENT_INFO = {
             8.0
         ],
         "PlaygroundThickness": 0.4,
-        "PlaygroundCreationTask": "DECK",
-        "SimulatorCreationTask": "DECK",
+        "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "PlaygroundModel": "Rounded",
         "GameCrafterUploadTask": "twosidedset",
         "GameCrafterPackagingDepthMillimeters": 1.651,
@@ -1183,6 +1188,8 @@ COMPONENT_INFO = {
             8.0,
             16.0
         ],
+        "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "GameCrafterUploadTask": "twosidedset",
         "GameCrafterPackagingDepthMillimeters": 1.651,
         "HasPieceData": True,
@@ -1274,6 +1281,8 @@ COMPONENT_INFO = {
             9.0,
             18.0
         ],
+        "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "GameCrafterUploadTask": "onesidedgloss",
         "GameCrafterPackagingDepthMillimeters": 1.651,
         "HasPieceData": True,
@@ -2335,6 +2344,8 @@ COMPONENT_INFO = {
             5.0,
             10.0
         ],
+        "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "GameCrafterUploadTask": "twosidedset",
         "GameCrafterPackagingDepthMillimeters": 1.651,
         "HasPieceData": True,
@@ -2744,6 +2755,8 @@ COMPONENT_INFO = {
             10.0,
             10.0
         ],
+        "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "GameCrafterUploadTask": "twosidedset",
         "GameCrafterPackagingDepthMillimeters": 1.651,
         "HasPieceData": True,
@@ -3157,6 +3170,8 @@ COMPONENT_INFO = {
             16.0,
             16.0
         ],
+        "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "GameCrafterUploadTask": "onesidedgloss",
         "GameCrafterPackagingDepthMillimeters": 1.651,
         "HasPieceData": True,
@@ -3669,6 +3684,8 @@ COMPONENT_INFO = {
             18.0,
             18.0
         ],
+        "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "GameCrafterUploadTask": "onesidedgloss",
         "GameCrafterPackagingDepthMillimeters": 1.651,
         "HasPieceData": True,
@@ -3716,6 +3733,8 @@ COMPONENT_INFO = {
             5.0,
             5.0
         ],
+        "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "GameCrafterUploadTask": "twosidedset",
         "GameCrafterPackagingDepthMillimeters": 1.651,
         "HasPieceData": True,
@@ -3762,6 +3781,8 @@ COMPONENT_INFO = {
             27.0,
             18.0
         ],
+        "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "GameCrafterUploadTask": "onesidedgloss",
         "GameCrafterPackagingDepthMillimeters": 1.651,
         "HasPieceData": True,
@@ -3785,6 +3806,8 @@ COMPONENT_INFO = {
             4.0,
             10.0
         ],
+        "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "GameCrafterUploadTask": "twosidedset",
         "GameCrafterPackagingDepthMillimeters": 1.651,
         "HasPieceData": True,
@@ -3831,6 +3854,8 @@ COMPONENT_INFO = {
             2.0,
             8.0
         ],
+        "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "GameCrafterUploadTask": "twosidedset",
         "GameCrafterPackagingDepthMillimeters": 1.651,
         "HasPieceData": True,
@@ -4191,6 +4216,8 @@ COMPONENT_INFO = {
             4.0,
             4.0
         ],
+        "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "GameCrafterUploadTask": "twosidedset",
         "GameCrafterPackagingDepthMillimeters": 1.651,
         "HasPieceData": True,
@@ -4359,6 +4386,8 @@ COMPONENT_INFO = {
             8.0,
             8.0
         ],
+        "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "GameCrafterUploadTask": "twosidedset",
         "GameCrafterPackagingDepthMillimeters": 1.651,
         "HasPieceData": True,
@@ -4550,6 +4579,8 @@ COMPONENT_INFO = {
             2.0,
             10.0
         ],
+        "PlaygroundCreationTask": "BOARD",
+        "SimulatorCreationTask": "BOARD",
         "GameCrafterUploadTask": "twosidedset",
         "GameCrafterPackagingDepthMillimeters": 1.651,
         "HasPieceData": True,

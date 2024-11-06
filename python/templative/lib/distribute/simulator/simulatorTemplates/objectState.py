@@ -1,8 +1,9 @@
 from ..structs import SimulatorTilesetUrls, SimulatorComponentPlacement, SimulatorDimensions, SimulatorTilesetLayout
+from hashlib import md5
 
 tableLength = 7.5
 
-def createDeckObjectState(guid: str, deckPrefix: int, name: str, imageUrls: SimulatorTilesetUrls, simulatorComponentPlacement: SimulatorComponentPlacement, dimensions: SimulatorDimensions, layout: SimulatorTilesetLayout, cardQuantities: list[int], isHexagonal: bool = False):
+def createDeckObjectState(guid: str, deckPrefix: int, name: str, imageUrls: SimulatorTilesetUrls, simulatorComponentPlacement: SimulatorComponentPlacement, dimensions: SimulatorDimensions, layout: SimulatorTilesetLayout, cardQuantities: list[int], deckType: int = 0):
     
     deckIds = []
     cardIndex = 0
@@ -26,9 +27,9 @@ def createDeckObjectState(guid: str, deckPrefix: int, name: str, imageUrls: Simu
         "rotX": 1.46591833E-06,
         "rotY": 180.0,
         "rotZ": 180.0,
-        "scaleX": 1.0, #dimensions.width,
-        "scaleY": 1.0, #dimensions.thickness,
-        "scaleZ": 1.0 #dimensions.height
+        "scaleX": dimensions.width,
+        "scaleY": dimensions.thickness,
+        "scaleZ": dimensions.height
     }
 
     containedObjects = []
@@ -110,14 +111,14 @@ def createDeckObjectState(guid: str, deckPrefix: int, name: str, imageUrls: Simu
         "SidewaysCard": False,
         "DeckIDs": deckIds,
         "CustomDeck": {
-            deckPrefix: {
+            int(deckPrefix): {
                 "FaceURL": imageUrls.face,
                 "BackURL": imageUrls.back,
                 "NumWidth": layout.columns,
                 "NumHeight": layout.rows,
                 "BackIsHidden": False,
                 "UniqueBack": False,
-                "Type": 3 if isHexagonal else 0  # 3 for hexagonal components, 0 for regular decks
+                "Type": deckType
             }
         },
         "GUID": guid,
@@ -129,5 +130,107 @@ def createDeckObjectState(guid: str, deckPrefix: int, name: str, imageUrls: Simu
     
     return deckState
 
+def createCardObjectState(guid: str, cardPrefix: int, name: str, imageUrls: SimulatorTilesetUrls, simulatorComponentPlacement: SimulatorComponentPlacement, dimensions: SimulatorDimensions, deckType: int = 0):
+    positionX = (-tableLength/2) + (simulatorComponentPlacement.boxPositionIndexX * tableLength/simulatorComponentPlacement.boxColumnCount*2)
+    positionZ = (-tableLength/2) + (simulatorComponentPlacement.boxPositionIndexZ * tableLength/simulatorComponentPlacement.boxRowCount*2)
+    transform = {
+        "posX": positionX,
+        "posY": simulatorComponentPlacement.height,
+        "posZ": positionZ,
+        "rotX": 1.46591833E-06,
+        "rotY": 180.0,
+        "rotZ": 180.0,
+        "scaleX": dimensions.width,
+        "scaleY": dimensions.thickness,
+        "scaleZ": dimensions.height
+    }
+    
+    return {
+        "Name": "CardCustom",
+        "Transform": transform,
+        "Nickname": name,
+        "Description": "",
+        "GMNotes": "",
+        "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+        },
+        "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+        },
+        "LayoutGroupSortIndex": 0,
+        "Value": 0,
+        "Locked": False,
+        "Grid": True,
+        "Snap": True,
+        "IgnoreFoW": False,
+        "MeasureMovement": False,
+        "DragSelectable": True,
+        "Autoraise": True,
+        "Sticky": True,
+        "Tooltip": True,
+        "GridProjection": False,
+        "HideWhenFaceDown": True,
+        "Hands": True,
+        "CardID": int(f"{cardPrefix}00"),
+        "SidewaysCard": False,
+        "CustomDeck": {
+            cardPrefix: {
+                "FaceURL": imageUrls.face,
+                "BackURL": imageUrls.back,
+                "NumWidth": 1,
+                "NumHeight": 1,
+                "BackIsHidden": False,
+                "UniqueBack": False,
+                "Type": deckType
+            }
+        },
+        "XmlUI": "",
+        "GUID": guid,
+        "States": {},
+        "ContainedObjects": [],
+        "LuaScript": "",
+        "LuaScriptState": ""
+    }
+
       
-      
+def createComponentLibraryChest(componentStates):
+    return {
+        "Name": "Bag",
+        "Transform": {
+            "posX": 0,
+            "posY": 3,
+            "posZ": -20,
+            "rotX": 0,
+            "rotY": 180,
+            "rotZ": 0,
+            "scaleX": 3,
+            "scaleY": 3,
+            "scaleZ": 3
+        },
+        "Nickname": "Component Library",
+        "Description": "Contains all game components for respawning",
+        "GMNotes": "",
+        "ColorDiffuse": {
+            "r": 0.7132782,
+            "g": 0.7132782,
+            "b": 0.7132782
+        },
+        "Locked": True,
+        "Grid": True,
+        "Snap": True,
+        "IgnoreFoW": False,
+        "MeasureMovement": False,
+        "DragSelectable": True,
+        "Autoraise": True,
+        "Sticky": True,
+        "Tooltip": True,
+        "GridProjection": False,
+        "HideWhenFaceDown": False,
+        "Hands": False,
+        "ContainedObjects": componentStates,
+        "GUID": "chest" + md5("ComponentLibrary".encode()).hexdigest()[:6]
+    }
