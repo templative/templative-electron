@@ -165,7 +165,7 @@ async def createDeck(tabletopSimulatorDirectoryPath, componentInstructions, comp
     componentGuid = md5(componentInstructions["uniqueName"].encode()).hexdigest()[:6]
     
     relativeWidth = componentInfo["DimensionsInches"][0] / 2.5
-    relativeHeight = componentInfo["DimensionsInches"][1] / 3.5
+    relativeHeight = relativeWidth# componentInfo["DimensionsInches"][1] / 3.5
     thickness = 1.0
     
     imageUrls = SimulatorTilesetUrls(face=imgurUrl, back=backImageImgurUrl)

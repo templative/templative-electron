@@ -17,8 +17,6 @@ def createDeckObjectState(guid: str, deckPrefix: int, name: str, imageUrls: Simu
     
     positionX = (-tableLength/2) + (simulatorComponentPlacement.boxPositionIndexX * tableLength/simulatorComponentPlacement.boxColumnCount*2)
     positionZ = (-tableLength/2) + (simulatorComponentPlacement.boxPositionIndexZ * tableLength/simulatorComponentPlacement.boxRowCount*2)
-    
-    print(name, deckPrefix, layout.count)
 
     transform = {
         "posX": positionX,
