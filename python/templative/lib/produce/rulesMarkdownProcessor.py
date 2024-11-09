@@ -1,6 +1,7 @@
 from fpdf import FPDF
 import re
 from os import path
+from aiofile import AIOFile
 
 fontSizes = {
         1: 22,
@@ -93,3 +94,7 @@ def process_markdown_text(pdf, text):
 async def produceRulebook(rules, gameFolderPath):
     outputFilepath = path.join(gameFolderPath, "rules.pdf")
     markdown_to_pdf(rules, outputFilepath)
+
+    rulesMarkdownPath = path.join(gameFolderPath, "rules.md")
+    async with AIOFile(rulesMarkdownPath, "w") as rulesFile:
+        await rulesFile.write(rules)

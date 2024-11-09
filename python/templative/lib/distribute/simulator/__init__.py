@@ -51,12 +51,21 @@ async def convertToTabletopSimulator(producedDirectoryPath, tabletopSimulatorDir
 
     objectStates = await createObjectStates(producedDirectoryPath, tabletopSimulatorDirectoryPath)
     
+    # Read rules.md if it exists
+    rulesContent = ""
+    rulesPath = path.join(producedDirectoryPath, "rules.md")
+    if path.exists(rulesPath):
+        async with AIOFile(rulesPath, "r") as rulesFile:
+            rulesContent = await rulesFile.read()   
+    
+    playerCount = 8
+
     componentLibraryChest = objectState.createComponentLibraryChest(objectStates)
-    await createSave(uniqueGameName, [componentLibraryChest], tabletopSimulatorDirectoryPath)
+    await createSave(uniqueGameName, [componentLibraryChest], tabletopSimulatorDirectoryPath, playerCount, rulesContent)
     return 1
 
-async def createSave(uniqueGameName, objectStates, tabletopSimulatorDirectoryPath):
-    gameSave = save.createSave(uniqueGameName, objectStates)
+async def createSave(uniqueGameName, objectStates, tabletopSimulatorDirectoryPath, playerCount=8, rulesMd=""):
+    gameSave = save.createSave(uniqueGameName, objectStates, playerCount, rulesMd)
     saveFilepath = path.join(tabletopSimulatorDirectoryPath, "Saves", "%s.json" % uniqueGameName)
     print("Saved file at %s" % saveFilepath)
     with open(saveFilepath, "w") as gameStateVtsFile:
@@ -95,10 +104,10 @@ async def createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPa
             print("Missing stock info for %s." % componentTypeTokens[1])
             return None
         stockComponentInfo = STOCK_COMPONENT_INFO[componentTypeTokens[1]]
-        if not "SimulatorModelFile" in stockComponentInfo:
-            print("Skipping %s as it doesn't have a SimulatorModelFile." % componentTypeTokens[1])
-            return None
-        return await createStock(tabletopSimulatorDirectoryPath, componentInstructions, stockComponentInfo)
+        # if not "SimulatorModelFile" in stockComponentInfo:
+        #     print("Skipping %s as it doesn't have a SimulatorModelFile." % componentTypeTokens[1])
+        #     return None
+        return await createStock(componentInstructions, stockComponentInfo)
 
     if not componentInstructions["type"] in COMPONENT_INFO:
         print("Missing component info for %s." % componentInstructions["type"])
@@ -196,8 +205,48 @@ async def createDeck(tabletopSimulatorDirectoryPath, componentInstructions, comp
         deckType
     )
 
-async def createStock(tabletopSimulatorDirectoryPath, componentInstructions, stockPartInfo):   
-    return None
+async def createStock(componentInstructions, stockPartInfo):
+    componentTypeTokens = componentInstructions["type"].split("_")
+    stockType = componentTypeTokens[1]
+    
+    # Skip if no color info available
+    if not "PlaygroundColor" in stockPartInfo:
+        print(f"Missing PlaygroundColor for {stockType}")
+        return None
+        
+    # Determine if this is a die or cube
+    isDie = stockType.startswith("D6")
+    isCube = stockType.startswith("Cube")
+    
+    if not (isDie or isCube):
+        print(f"Unsupported stock type: {stockType}")
+        return None
+    
+    # Get color from stock info
+    color = stockPartInfo["PlaygroundColor"]
+    
+    # Parse size from type name (e.g. "16mm" from "D616mm" or "8mm" from "Cube8mm")
+    sizeStr = ""
+    if isDie:
+        sizeStr = stockType[2:].split("mm")[0]
+    elif isCube:
+        sizeStr = stockType[4:].split("mm")[0]
+    
+    size = float(sizeStr) / 25.4  # Convert mm to inches
+    
+    # Create appropriate object state
+    if isDie:
+        return objectState.createStockDie(
+            componentInstructions["name"],
+            size,
+            color
+        )
+    else:
+        return objectState.createStockCube(
+            componentInstructions["name"],
+            size, 
+            color
+        )
 
 async def createCompositeImage(componentName, componentType, quantity, frontInstructions, backInstructions, tabletopSimulatorImageDirectoryPath):
     # Calculate total unique cards (not including duplicates)

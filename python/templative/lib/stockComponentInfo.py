@@ -17987,6 +17987,11 @@ STOCK_COMPONENT_INFO = {
   "Cube10mmBlack": {
     "DisplayName": "Cube, 10mm, Black",
     "Description": "A wooden 10mm x 10mm cube, which can be used as a resource in euro-style games.\n",
+    "PlaygroundColor": {
+      "r": 0,
+      "g": 0,
+      "b": 0
+    },
     "GameCrafterGuid": "DFFDFDA8-9A04-11E0-AACC-432941C43697",
     "GameCrafterSkuId": "DFFE0726-9A04-11E0-AACC-432941C43697",
     "Tags": [
@@ -18012,6 +18017,11 @@ STOCK_COMPONENT_INFO = {
   "Cube10mmBlue": {
     "DisplayName": "Cube, 10mm, Blue",
     "Description": "A wooden 10mm x 10mm cube, which can be used as a resource in euro-style games.\n",
+    "PlaygroundColor": {
+      "r": 0,
+      "g": 0,
+      "b": 255
+    },
     "GameCrafterGuid": "E0042BE2-9A04-11E0-AACC-432941C43697",
     "GameCrafterSkuId": "E0043722-9A04-11E0-AACC-432941C43697",
     "Tags": [
@@ -18037,6 +18047,11 @@ STOCK_COMPONENT_INFO = {
   "Cube10mmBrown": {
     "DisplayName": "Cube, 10mm, Brown",
     "Description": "A wooden 10mm x 10mm cube, which can be used as a resource in euro-style games.",
+    "PlaygroundColor": {
+      "r": 139,
+      "g": 69,
+      "b": 19
+    },
     "GameCrafterGuid": "3A85139A-FC84-11E7-97EA-CA259A84CECA",
     "GameCrafterSkuId": "3A897CB4-FC84-11E7-97EA-CA259A84CECA",
     "Tags": [
@@ -18062,11 +18077,16 @@ STOCK_COMPONENT_INFO = {
   "Cube10mmGreen": {
     "DisplayName": "Cube, 10mm, Green",
     "Description": "A wooden 10mm x 10mm cube, which can be used as a resource in euro-style games.\n",
-    "GameCrafterGuid": "E00A5652-9A04-11E0-AACC-432941C43697",
+    "GameCrafterGuid": "E00A5652-9A04-11E0-AACC-432941C43697", 
     "GameCrafterSkuId": "E00A5FC6-9A04-11E0-AACC-432941C43697",
+    "PlaygroundColor": {
+      "r": 0,
+      "g": 255,
+      "b": 0
+    },
     "Tags": [
       "square",
-      "box",
+      "box", 
       "block",
       "hexahedron",
       "cuboid",
@@ -18089,6 +18109,11 @@ STOCK_COMPONENT_INFO = {
     "Description": "A wooden 10mm x 10mm cube, which can be used as a resource in euro-style games.",
     "GameCrafterGuid": "60BB1C0A-FC87-11E7-97EA-C507784C1864",
     "GameCrafterSkuId": "60BDD454-FC87-11E7-97EA-C507784C1864",
+    "PlaygroundColor": {
+      "r": 128,
+      "g": 128,
+      "b": 128
+    },
     "Tags": [
       "square",
       "box",
@@ -18114,10 +18139,15 @@ STOCK_COMPONENT_INFO = {
     "Description": "A wooden 10mm x 10mm cube, which can be used as a resource in euro-style games.",
     "GameCrafterGuid": "397744FC-556E-11E9-89FC-CAD4BE9D83F6",
     "GameCrafterSkuId": "39B463DC-556E-11E9-89FC-CAD4BE9D83F6",
+    "PlaygroundColor": {
+      "r": 255,
+      "g": 219,
+      "b": 88
+    },
     "Tags": [
       "square",
       "box",
-      "block",
+      "block", 
       "hexahedron",
       "cuboid",
       "cubical",
@@ -18139,6 +18169,11 @@ STOCK_COMPONENT_INFO = {
     "Description": "A wooden 10mm x 10mm cube, which can be used as a resource in euro-style games.\n",
     "GameCrafterGuid": "E0103900-9A04-11E0-AACC-432941C43697",
     "GameCrafterSkuId": "E01041D4-9A04-11E0-AACC-432941C43697",
+    "PlaygroundColor": {
+      "r": 255,
+      "g": 165,
+      "b": 0
+    },
     "Tags": [
       "square",
       "box",
@@ -18164,6 +18199,11 @@ STOCK_COMPONENT_INFO = {
     "Description": "A wooden 10mm x 10mm cube, which can be used as a resource in euro-style games.",
     "GameCrafterGuid": "FC94DA7C-FB0F-11E7-8A8F-C1944AB73899",
     "GameCrafterSkuId": "FC9712C4-FB0F-11E7-8A8F-C1944AB73899",
+    "PlaygroundColor": {
+      "r": 255,
+      "g": 192,
+      "b": 203
+    },
     "Tags": [
       "square",
       "box",
@@ -18189,6 +18229,11 @@ STOCK_COMPONENT_INFO = {
     "Description": "A wooden 10mm x 10mm cube, which can be used as a resource in euro-style games.\n",
     "GameCrafterGuid": "E015E90E-9A04-11E0-AACC-432941C43697",
     "GameCrafterSkuId": "E015F296-9A04-11E0-AACC-432941C43697",
+    "PlaygroundColor": {
+      "r": 128,
+      "g": 0,
+      "b": 128
+    },
     "Tags": [
       "square",
       "box",
@@ -18210,6 +18255,11 @@ STOCK_COMPONENT_INFO = {
     ]
   },
   "Cube10mmRed": {
+    "PlaygroundColor": {
+      "r": 255,
+      "g": 0,
+      "b": 0
+    },
     "DisplayName": "Cube, 10mm, Red",
     "Description": "A wooden 10mm x 10mm cube, which can be used as a resource in euro-style games.\n",
     "GameCrafterGuid": "E01BFE52-9A04-11E0-AACC-432941C43697",
@@ -18235,6 +18285,11 @@ STOCK_COMPONENT_INFO = {
     ]
   },
   "Cube10mmWhite": {
+    "PlaygroundColor": {
+      "r": 255,
+      "g": 255,
+      "b": 255
+    },
     "DisplayName": "Cube, 10mm, White",
     "Description": "A wooden 10mm x 10mm cube, which can be used as a resource in euro-style games.\n",
     "GameCrafterGuid": "E021E9DE-9A04-11E0-AACC-432941C43697",
@@ -18264,6 +18319,11 @@ STOCK_COMPONENT_INFO = {
     "Description": "A wooden 10mm x 10mm cube, which can be used as a resource in euro-style games.\n",
     "GameCrafterGuid": "E02782EA-9A04-11E0-AACC-432941C43697",
     "GameCrafterSkuId": "E0278CE0-9A04-11E0-AACC-432941C43697",
+    "PlaygroundColor": {
+      "r": 255,
+      "g": 255,
+      "b": 0
+    },
     "Tags": [
       "square",
       "box",
@@ -18285,6 +18345,11 @@ STOCK_COMPONENT_INFO = {
     ]
   },
   "Cube15mmRed": {
+    "PlaygroundColor": {
+      "r": 255,
+      "g": 0,
+      "b": 0
+    },
     "DisplayName": "Cube, 15mm, Red",
     "Description": "A wooden 15mm x 15mm cube, which can be used as a resource in euro-style games.",
     "GameCrafterGuid": "B91934FC-5183-11E9-85A4-E390BE9D83F6",
@@ -18310,6 +18375,11 @@ STOCK_COMPONENT_INFO = {
     ]
   },
   "Cube8mmBrightYellow": {
+    "PlaygroundColor": {
+      "r": 255,
+      "g": 255,
+      "b": 0
+    },
     "DisplayName": "Cube, 8mm, Bright Yellow",
     "Description": "A wooden 8mm x 8mm cube, which can be used as a resource in euro-style games.",
     "GameCrafterGuid": "54B39C8C-762D-11E8-9964-E02543ABB976",
@@ -18335,6 +18405,11 @@ STOCK_COMPONENT_INFO = {
     ]
   },
   "Cube8mmBrown": {
+    "PlaygroundColor": {
+      "r": 139,
+      "g": 69,
+      "b": 19
+    },
     "DisplayName": "Cube, 8mm, Brown",
     "Description": "A wooden 8mm x 8mm cube, which can be used as a resource in euro-style games.",
     "GameCrafterGuid": "AE872E94-FC8F-11E7-A5C0-AF4367F5382D",
@@ -18360,6 +18435,11 @@ STOCK_COMPONENT_INFO = {
     ]
   },
   "Cube8mmGrey": {
+    "PlaygroundColor": {
+      "r": 128,
+      "g": 128,
+      "b": 128
+    },
     "DisplayName": "Cube, 8mm, Grey",
     "Description": "A wooden 8mm x 8mm cube, which can be used as a resource in euro-style games.",
     "GameCrafterGuid": "A7F13DDE-FC91-11E7-A5C0-BCF19CCCF3F0",
@@ -18385,6 +18465,11 @@ STOCK_COMPONENT_INFO = {
     ]
   },
   "Cube8mmLightPink": {
+    "PlaygroundColor": {
+      "r": 255,
+      "g": 192,
+      "b": 203
+    },
     "DisplayName": "Cube, 8mm, Light Pink",
     "Description": "A wooden 8mm x 8mm cube, which can be used as a resource in euro-style games.",
     "GameCrafterGuid": "A9761C82-2604-11E8-A307-9377F5366F78",
@@ -18410,6 +18495,11 @@ STOCK_COMPONENT_INFO = {
     ]
   },
   "Cube8mmNatural": {
+    "PlaygroundColor": {
+      "r": 222,
+      "g": 184,
+      "b": 135
+    },
     "DisplayName": "Cube, 8mm, Natural",
     "Description": "A wooden 8mm x 8mm cube, which can be used as a resource in euro-style games.",
     "GameCrafterGuid": "3F4C12A8-2604-11E8-8C8A-92398BFEA426",
@@ -18435,6 +18525,11 @@ STOCK_COMPONENT_INFO = {
     ]
   },
   "Cube8mmPink": {
+    "PlaygroundColor": {
+      "r": 255,
+      "g": 192,
+      "b": 203
+    },
     "DisplayName": "Cube, 8mm, Pink",
     "Description": "A wooden 8mm x 8mm cube, which can be used as a resource in euro-style games.",
     "GameCrafterGuid": "695C1182-FC8E-11E7-A5C0-B4C4F75B1B7D",
@@ -18460,6 +18555,11 @@ STOCK_COMPONENT_INFO = {
     ]
   },
   "Cube8mmYellow": {
+    "PlaygroundColor": {
+      "r": 255,
+      "g": 255,
+      "b": 0
+    },
     "DisplayName": "Cube, 8mm, Yellow",
     "Description": "A wooden 8mm x 8mm cube, which can be used as a resource in euro-style games.",
     "GameCrafterGuid": "D1CCAC6E-8335-11E1-960D-C692DC194F78",
@@ -18485,6 +18585,11 @@ STOCK_COMPONENT_INFO = {
     ]
   },
   "CubeMetalBronze8mm": {
+    "PlaygroundColor": {
+      "r": 205,
+      "g": 127,
+      "b": 50
+    },
     "DisplayName": "Cube, Metal, Bronze, 8mm",
     "Description": "A metal 8mm x 8mm cube, which can be used as a resource in euro-style games.",
     "GameCrafterGuid": "68C64B3A-0CF5-11E8-BDAE-D55994A6FE1D",
@@ -18511,6 +18616,11 @@ STOCK_COMPONENT_INFO = {
     ]
   },
   "CubeMetalGold8mm": {
+    "PlaygroundColor": {
+      "r": 255,
+      "g": 215,
+      "b": 0
+    },
     "DisplayName": "Cube, Metal, Gold, 8mm",
     "Description": "A metal 8mm x 8mm cube, which can be used as a resource in euro-style games.",
     "GameCrafterGuid": "3F1CA8B0-0CF5-11E8-BD5F-284B94A6FE1D",
@@ -18537,6 +18647,11 @@ STOCK_COMPONENT_INFO = {
     ]
   },
   "CubeMetalSilver8mm": {
+    "PlaygroundColor": {
+      "r": 192,
+      "g": 192,
+      "b": 192
+    },
     "DisplayName": "Cube, Metal, Silver, 8mm",
     "Description": "A metal 8mm x 8mm cube, which can be used as a resource in euro-style games.",
     "GameCrafterGuid": "473694D4-0CF5-11E8-BDAE-A35994A6FE1D",

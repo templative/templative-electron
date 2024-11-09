@@ -1,5 +1,75 @@
 import time
-def createSave(name, objectStates):
+import math
+import uuid 
+
+def createSave(name, objectStates, playerCount=8, rulesMd=""):
+    hands = []
+    colors = ["White", "Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Pink"]
+    colorDiffuses = [
+        {"r": 1.0, "g": 1.0, "b": 1.0, "a": 0.5},  # White
+        {"r": 0.856, "g": 0.1, "b": 0.094, "a": 0.5},  # Red
+        {"r": 0.882, "g": 0.517, "b": 0.219, "a": 0.5},  # Orange
+        {"r": 0.905, "g": 0.898, "b": 0.172, "a": 0.5},  # Yellow
+        {"r": 0.192, "g": 0.701, "b": 0.168, "a": 0.5},  # Green
+        {"r": 0.118, "g": 0.53, "b": 1.0, "a": 0.5},  # Blue
+        {"r": 0.627, "g": 0.125, "b": 0.941, "a": 0.5},  # Purple
+        {"r": 0.96, "g": 0.439, "b": 0.807, "a": 0.5}  # Pink
+    ]
+    
+    radius = 40
+    for i in range(playerCount):
+        angleIncrement = 360 / playerCount
+        angle = -math.radians(i * angleIncrement)
+        x = radius * math.cos(angle)
+        z = radius * math.sin(angle)
+        
+        rotation = (math.degrees(angle) - 90)
+        if i % 2 == 1:
+            rotation -= 90
+            
+        hands.append({
+            "GUID": str(uuid.uuid4()),
+            "Name": "HandTrigger",
+            "Nickname": f"{colors[i]} Hand",
+            "Description": "",
+            "GMNotes": "",
+            "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "ColorDiffuse": colorDiffuses[i],
+            "Transform": {
+                "posX": x,
+                "posY": 3,  # Slight elevation
+                "posZ": z,
+                "rotX": 0,
+                "rotY": rotation,
+                "rotZ": 0,
+                "scaleX": 15.3268814,
+                "scaleY": 11.8970528,
+                "scaleZ": 6.35014772
+            },
+            "LayoutGroupSortIndex": 0,
+            "Value": 0,
+            "Locked": True,
+            "Grid": False,
+            "Snap": True,
+            "IgnoreFoW": False,
+            "MeasureMovement": False,
+            "DragSelectable": True,
+            "Autoraise": True,
+            "Sticky": True,
+            "Tooltip": True,
+            "GridProjection": False,
+            "HideWhenFaceDown": False,
+            "Hands": False,
+            "FogColor": colors[i],
+            "LuaScript": "",
+            "LuaScriptState": "",
+            "XmlUI": ""
+        })
+    objectStates.extend(hands)
     return {
         # Add missing fields
         "EpochTime": int(time.time()),  # Need to import time at top
@@ -8,7 +78,7 @@ def createSave(name, objectStates):
         "GameComplexity": "",
         "Tags": [],
         "Gravity": 0.5,
-        "PlayArea": 0.5,
+        "PlayArea": 2,
         
         "SaveName": name,
         "GameMode": name,
@@ -19,7 +89,6 @@ def createSave(name, objectStates):
         "Rules": "",
         "PlayerTurn": "",
         
-        # Update Grid to include missing fields
         "Grid": {
             "Type": 0,
             "Lines": False,
@@ -42,7 +111,6 @@ def createSave(name, objectStates):
             }
         },
 
-        # Add missing sections
         "Lighting": {
             "LightIntensity": 0.54,
             "LightColor": {
@@ -72,14 +140,12 @@ def createSave(name, objectStates):
             "LutContribution": 1.0
         },
 
-        # Simplify Hands structure
         "Hands": {
             "Enable": True,
             "DisableUnused": False,
             "Hiding": 0
         },
 
-        # Add missing sections
         "ComponentTags": {
             "labels": []
         },
@@ -98,13 +164,13 @@ def createSave(name, objectStates):
         "LuaScriptState": "",
         "XmlUI": "<!-- Xml UI. See documentation: https://api.tabletopsimulator.com/ui/introUI/ -->",
         
-        "DrawImage": "iVBORw0KGgoAAAANSUhEUgAAAWAAAADQCAYAAAA53LuNAAAFFElEQVR4Ae3QgQAAAADDoPlTH+SFUGHAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgy8DQx5DAABHyNK3wAAAABJRU5ErkJggg==",
+        "DrawImage": "iVBORw0KGgoAAAANSUhEUgAAAWAAAADQCAYAAAA53LuNAAAFFElEQVR4Ae3QgQAAAADDoPlTH+SFUGHAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgy8DQx5DAABHyNK3wAAAABJRU5ErkJggg==",
         "VectorLines": [],
         "ObjectStates": objectStates,
         "TabStates": {
             "0": {
             "title": "Rules",
-            "body": "",
+            "body": rulesMd,
             "visibleColor": {
                 "r": 0.5,
                 "g": 0.5,

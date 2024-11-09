@@ -3,6 +3,8 @@ from hashlib import md5
 
 tableLength = 7.5
 
+shrinkFactor = 0.75
+
 def createDeckObjectState(guid: str, deckPrefix: int, name: str, imageUrls: SimulatorTilesetUrls, simulatorComponentPlacement: SimulatorComponentPlacement, dimensions: SimulatorDimensions, layout: SimulatorTilesetLayout, cardQuantities: list[int], deckType: int = 0):
     
     deckIds = []
@@ -25,9 +27,9 @@ def createDeckObjectState(guid: str, deckPrefix: int, name: str, imageUrls: Simu
         "rotX": 1.46591833E-06,
         "rotY": 180.0,
         "rotZ": 180.0,
-        "scaleX": dimensions.width,
+        "scaleX": dimensions.width * shrinkFactor,
         "scaleY": dimensions.thickness,
-        "scaleZ": dimensions.height
+        "scaleZ": dimensions.height * shrinkFactor
     }
 
     containedObjects = []
@@ -195,9 +197,9 @@ def createCardObjectState(guid: str, cardPrefix: int, name: str, imageUrls: Simu
     }
 
       
-def createComponentLibraryChest(componentStates):
+def createComponentLibraryChest(componentStates, name="ComponentLibrary", isInfinite=False, colorDiffuse=None):
     return {
-        "Name": "Bag",
+        "Name": "Infinite_Bag" if isInfinite else "Bag",
         "Transform": {
             "posX": 0,
             "posY": 3,
@@ -205,14 +207,14 @@ def createComponentLibraryChest(componentStates):
             "rotX": 0,
             "rotY": 180,
             "rotZ": 0,
-            "scaleX": 3,
-            "scaleY": 3,
-            "scaleZ": 3
+            "scaleX": 1,
+            "scaleY": 1,
+            "scaleZ": 1
         },
-        "Nickname": "Component Library",
+        "Nickname": name,
         "Description": "Contains all game components for respawning",
         "GMNotes": "",
-        "ColorDiffuse": {
+        "ColorDiffuse": colorDiffuse if colorDiffuse else {
             "r": 0.7132782,
             "g": 0.7132782,
             "b": 0.7132782
@@ -230,5 +232,88 @@ def createComponentLibraryChest(componentStates):
         "HideWhenFaceDown": False,
         "Hands": False,
         "ContainedObjects": componentStates,
-        "GUID": "chest" + md5("ComponentLibrary".encode()).hexdigest()[:6]
+        "GUID": "chest" + md5(name.encode()).hexdigest()[:6],
     }
+
+def createStockDie(name: str, sizeInches: float, color: dict):
+    """Creates a TTS die object with specified size and color"""
+    guid = md5(name.encode()).hexdigest()[:6]
+    colorDiffuse = {
+        "r": color["r"] / 255.0,
+        "g": color["g"] / 255.0,
+        "b": color["b"] / 255.0
+    }
+    die = {
+        "Name": "Die_6",
+        "Transform": {
+            "posX": 0,
+            "posY": 2,
+            "posZ": 0,
+            "rotX": 0,
+            "rotY": 0,
+            "rotZ": 0,
+            "scaleX": sizeInches,
+            "scaleY": sizeInches,
+            "scaleZ": sizeInches
+        },
+        "Nickname": name,
+        "Description": "",
+        "ColorDiffuse": colorDiffuse,
+        "DieType": 0,  # Regular D6
+        "MaterialIndex": -1,
+        "MaterialType": 0,
+        "HideWhenFaceDown": False,
+        "Locked": False,
+        "Grid": True,
+        "Snap": True,
+        "IgnoreFoW": False,
+        "MeasureMovement": False,
+        "DragSelectable": True,
+        "Autoraise": True,
+        "Sticky": True,
+        "Tooltip": True,
+        "GridProjection": False,
+        "Hands": True,
+        "GUID": guid
+    }
+    return createComponentLibraryChest([die], f"{name} Bag",True, colorDiffuse)
+
+def createStockCube(name: str, sizeInches: float, color: dict):
+    """Creates a TTS cube object with specified size and color"""
+    guid = md5(name.encode()).hexdigest()[:6]
+    colorDiffuse = {
+        "r": color["r"] / 255.0,
+        "g": color["g"] / 255.0,
+        "b": color["b"] / 255.0
+    }
+    cube = {
+        "Name": "BlockSquare",
+        "Transform": {
+            "posX": 0,
+            "posY": 2,
+            "posZ": 0,
+            "rotX": 0,
+            "rotY": 0,
+            "rotZ": 0,
+            "scaleX": sizeInches,
+            "scaleY": sizeInches,
+            "scaleZ": sizeInches
+        },
+        "Nickname": name,
+        "Description": "",
+        "ColorDiffuse": colorDiffuse,
+        "Locked": False,
+        "Grid": True,
+        "Snap": True,
+        "IgnoreFoW": False,
+        "MeasureMovement": False,
+        "DragSelectable": True,
+        "Autoraise": True,
+        "Sticky": True,
+        "Tooltip": True,
+        "GridProjection": False,
+        "HideWhenFaceDown": False,
+        "Hands": True,
+        "GUID": guid
+    }
+    return createComponentLibraryChest([cube], f"{name} Bag", True, colorDiffuse)
