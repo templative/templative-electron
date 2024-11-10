@@ -79,8 +79,10 @@ export default class GameGamedataViewer extends EditableViewerJson {
         e.preventDefault();
     }
     
-    static updateCoolFactors = (index, value) => {
-        
+    updateCoolFactors = (index, value) => {
+        const factors = (this.state.content["coolFactors"] || "").split(",");
+        factors[index] = value.trim();
+        this.updateValue("coolFactors", factors.filter(f => f).join(","));
     }
     
     render() {
@@ -194,11 +196,21 @@ export default class GameGamedataViewer extends EditableViewerJson {
                         value={this.state.content["longDescription"]}/>
                 </div>
                 <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
-                    <span className="input-group-text">coolFactors (comma seperated)</span>
-                    <input type="text" className="form-control value-field" 
-                        // onKeyDown={GameGamedataViewer.preventSpaces}
-                        onChange={(event)=> this.updateValue("coolFactors", event.target.value)} 
-                        value={this.state.content["coolFactors"]}/>
+                    <span className="input-group-text">Cool Factors</span>
+                    {[0, 1, 2].map((index) => {
+                        const factors = (this.state.content["coolFactors"] || "").split(",");
+                        return (
+                            <input 
+                                key={index}
+                                type="text" 
+                                className="form-control value-field" 
+                                onKeyDown={GameGamedataViewer.preventCommas}
+                                onChange={(event) => this.updateCoolFactors(index, event.target.value)} 
+                                value={factors[index] || ""}
+                                placeholder={`Factor ${index + 1}`}
+                            />
+                        );
+                    })}
                 </div>
             </div>
             <div className="vertical-input-group">
