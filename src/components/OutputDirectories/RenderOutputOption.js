@@ -129,14 +129,20 @@ export default class RenderOutputOption extends React.Component {
                         closeContextMenuCallback={this.closeContextMenu}
                     />
                 }
-            <p className="render-output-name">{this.state.gameDisplayName}</p>
-            <p className="render-output-version-name">- {this.state.versionName}</p>
-            <p className="render-output-version">v{this.state.versionNumber}</p>
-            <p className="render-output-component-filter">{this.state.componentFilter}</p>
-            {this.state.timestamp !== undefined && 
-                <p className="render-output-date">{this.state.timestamp}</p>
-            }
-        </div>
+                
+                <p className="render-output-main-line">
+                    <span className="render-output-name">{this.state.gameDisplayName}</span>
+                    {this.state.componentFilter && 
+                        <span className="render-output-component-filter">- {this.state.componentFilter}</span>
+                    }
+                </p>
+                <p><span className="render-output-version-name">{this.state.versionName}</span>
+                <span className="render-output-version">v{this.state.versionNumber}</span></p>
+                
+                {this.state.timestamp !== undefined && 
+                    <p className="render-output-date">{this.state.timestamp}</p>
+                }
+            </div>
         
     }
 }

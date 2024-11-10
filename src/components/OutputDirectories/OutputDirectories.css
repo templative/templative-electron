@@ -6,11 +6,7 @@
     background-color: hsl(224, 13%, 17.5%);
 }
 .render-output-option {
-    display: flex;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    padding-left: 0.4em;
-    padding-right: 0.2em;
+    padding: 0.2em 0.2em 0.2em 0.4em;
     border-right: transparent solid 1px;
 }
 .render-output-option:nth-child(even) {
@@ -24,7 +20,6 @@
     cursor: pointer;
 }
 .render-output-option p {
-    display: flex;
     margin-bottom: 0px;
     font-size: 12px;
 }
@@ -39,11 +34,12 @@
 .render-output-version-name {
     margin-right: 0.25em;
 }
-.render-output-component-filter {
+.render-output-version-name, .render-output-version {
     color: gray;
 }
 .render-output-date { 
-    margin-left: auto;
+    display: block;
+    margin-top: 0.2em;
     color: gray;
 }
 .output-folder-options {
@@ -54,4 +50,12 @@
 .render-output-options-container{
     display: flex;
     flex-direction: column;
+}
+.render-output-main-line {
+    display: block;
+}
+.render-output-main-line p {
+    display: inline-block;
+    margin-bottom: 0px;
+    font-size: 12px;
 }
