@@ -89,7 +89,7 @@ export default class EditPanel extends React.Component {
                                 updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
                             />
                         }
-                        {this.props.currentFileType === "ART" &&
+                        {(this.props.currentFileType === "ART" || this.props.currentFileType === "GAMECRAFTER") &&
                             <ImageViewer filepath={this.props.currentFilepath}/>
                         }
                         {this.props.currentFileType === "PIECE_GAMEDATA" &&

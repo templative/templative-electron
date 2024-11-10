@@ -6,6 +6,7 @@ import "./ContentFiles.css"
 import componentComposeIcon from "../../Icons/componentComposeIcon.svg"
 import gameIcon from "../../Icons/gameIcon.svg"
 import studioIcon from "../../Icons/studioIcon.svg"
+import gamecrafterIcon from "../../Icons/gameCrafterIcon.svg"
 import rulesIcon from "../../Icons/rulesIcon.svg"
 
 const path = require("path");
@@ -55,6 +56,7 @@ export default class IconContentFileItem extends React.Component {
             "COMPONENTS": componentComposeIcon,
             "GAME_GAMEDATA": gameIcon,
             "STUDIO_GAMEDATA": studioIcon,
+            "GAMECRAFTER": gamecrafterIcon,
         }
         var icon = rulesIcon
         if (icons[this.props.contentType] !== undefined) {

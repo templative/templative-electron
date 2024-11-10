@@ -101,6 +101,7 @@ export default class TemplativeProjectRenderer extends React.Component {
         
         this.setState({
             gameCompose: gameCompose,
+            gameCrafterAdsDirectory: path.join(this.props.templativeRootDirectoryPath, "gamecrafter"),
             templatesDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.artTemplatesDirectory),
             overlaysDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.artInsertsDirectory),
             artdataDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.artdataDirectory),
@@ -310,7 +311,16 @@ export default class TemplativeProjectRenderer extends React.Component {
                         currentFilepath={this.props.currentFilepath}
                         filepath={path.join(this.props.templativeRootDirectoryPath, "rules.md")}
                         updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                    />                    
+                    />
+                    {["actionShot", "advertisement", "backdrop", "logo"].map(gamecrafterPath => (
+                        <IconContentFileItem
+                            key={gamecrafterPath}
+                            contentType={"GAMECRAFTER"}
+                            currentFilepath={this.props.currentFilepath}
+                            filepath={path.join(this.props.templativeRootDirectoryPath, "gamecrafter", `${gamecrafterPath}.png`)}
+                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                        />
+                    ))}
                 </div>
             </div>       
             }

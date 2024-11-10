@@ -8,7 +8,7 @@ import artDataIcon from "./Icons/artDataIcon.svg"
 import artIcon from "./Icons/artIcon.svg"
 import componentComposeIcon from "./Icons/componentComposeIcon.svg"
 import pieceIcon from "./Icons/pieceIcon.svg"
-import unifiedComponentIcon from "./Icons/unifiedComponentIcon.svg"
+import gameCrafterIcon from "./Icons/gameCrafterIcon.svg"
 import gameIcon from "./Icons/gameIcon.svg"
 import studioIcon from "./Icons/studioIcon.svg"
 import componentIcon from "./Icons/componentIcon.svg"
@@ -68,6 +68,7 @@ export default class EditPanelTab extends React.Component {
             "COMPONENTS": componentComposeIcon,
             "COMPONENT_GAMEDATA": componentIcon,
             "PIECE_GAMEDATA": pieceIcon,
+            "GAMECRAFTER": gameCrafterIcon,
             "ART": artIcon,
             "ARTDATA": artDataIcon,
             "STUDIO_GAMEDATA": studioIcon,
