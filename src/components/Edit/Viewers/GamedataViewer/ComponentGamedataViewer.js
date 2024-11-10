@@ -84,54 +84,54 @@ export default class ComponentGamedataViewer extends EditableViewerJson {
     }
     
     render() {
-        var rows = []
-        if (this.state.hasLoaded && this.state.content !== undefined) {        
-            var keys = Object.keys(this.state.content)
-            keys = keys.sort()
-            keys = keys.filter((key) => {
-                for(var c = 0; c < ignoredControlGamedataKeys.length; c++) {
-                    if (key === ignoredControlGamedataKeys[c]) {
-                        return false
-                    }
-                };
-                return true
-            })
-            rows = keys.map((key) => {
-                return <KeyValueInput 
-                    key={key}
-                    hasLockPotential={false}
-                    gamedataKey={key} value={this.state.content[key]} 
-                    trackedKey={this.state.trackedKey} currentUpdateValue={this.state.currentUpdateValue}
-                    trackChangedKeyCallback={(key, value) => this.trackChangedKey(key, value)}
-                    updateValueCallback={(key, value)=>this.updateValue(key, value)}
-                    removeKeyValuePairCallback={(key)=>this.removeKeyValuePair(key)}
-                    freeTrackedChangedKeyCallback={()=> this.freeTrackedChangedKey()}
-                />
-            });
+        if (!this.state.hasLoaded || this.state.content === undefined) {
+            return null;
         }
+
+        var rows = [];
+        var keys = Object.keys(this.state.content)
+        keys = keys.sort()
+        keys = keys.filter((key) => {
+            for(var c = 0; c < ignoredControlGamedataKeys.length; c++) {
+                if (key === ignoredControlGamedataKeys[c]) {
+                    return false
+                }
+            };
+            return true
+        })
+        rows = keys.map((key) => {
+            return <KeyValueInput 
+                key={key}
+                hasLockPotential={false}
+                gamedataKey={key} 
+                value={this.state.content[key]} 
+                trackedKey={this.state.trackedKey} 
+                currentUpdateValue={this.state.currentUpdateValue}
+                trackChangedKeyCallback={(key, value) => this.trackChangedKey(key, value)}
+                updateValueCallback={(key, value)=>this.updateValue(key, value)}
+                removeKeyValuePairCallback={(key)=>this.removeKeyValuePair(key)}
+                freeTrackedChangedKeyCallback={()=> this.freeTrackedChangedKey()}
+            />
+        });
         
-        
-        return <div className="row tableContainer">
-            {this.state.content !== undefined &&
-            <div className="col">
-                <div className="vertical-input-group">
-                    <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
-                        <span className="input-group-text">displayName</span>
-                        <input type="text" className="form-control value-field" 
-                            onChange={(event)=>this.updateValue("displayName", event.target.value)} 
-                            value={this.state.content["displayName"]}/>                            
-                    </div>
-                    {rows}
-                    <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
-                        <button onClick={() => this.addBlankKeyValuePair()} className="btn btn-outline-secondary add-button" type="button" id="button-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg add-field-plus" viewBox="0 0 16 16">
-                                <path fillRule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                            </svg>
-                            Add Field to Component
-                        </button>
-                    </div>
+        return <div className="tableContainer">
+            <div className="vertical-input-group">
+                <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
+                    <span className="input-group-text">displayName</span>
+                    <input type="text" className="form-control value-field" 
+                        onChange={(event)=>this.updateValue("displayName", event.target.value)} 
+                        value={this.state.content["displayName"]}/>                            
+                </div>
+                {rows}
+                <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
+                    <button onClick={() => this.addBlankKeyValuePair()} className="btn btn-outline-secondary add-button" type="button" id="button-addon1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg add-field-plus" viewBox="0 0 16 16">
+                            <path fillRule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                        </svg>
+                        Add Field to Component
+                    </button>
                 </div>
             </div>
-            }
         </div>
     }
 }

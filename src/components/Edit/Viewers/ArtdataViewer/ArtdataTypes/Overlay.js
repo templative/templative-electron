@@ -22,17 +22,48 @@ export default class StyleUpdate extends React.Component {
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}
             >
+            <span className="input-group-text">X</span>
+
+            <input type="number" className="form-control no-left-border scoped-value-coordinate-input" 
+                onChange={(event) => {
+                    const value = event.target.value;
+                    if (value === '-' || value === '') {
+                        this.props.updateArtdataFieldCallback("overlays", this.props.index, "positionX", value)
+                    } else {
+                        const numValue = parseInt(value);
+                        if (!isNaN(numValue)) {
+                            this.props.updateArtdataFieldCallback("overlays", this.props.index, "positionX", numValue)
+                        }
+                    }
+                }} aria-label="X position..." value={this.props.artdataItem.positionX} placeholder="0"/>
+
+            <span className="input-group-text">Y</span>
+
+            <input type="number" className="form-control no-left-border scoped-value-coordinate-input" 
+                onChange={(event) => {
+                    const value = event.target.value;
+                    if (value === '-' || value === '') {
+                        this.props.updateArtdataFieldCallback("overlays", this.props.index, "positionY", value)
+                    } else {
+                        const numValue = parseInt(value);
+                        if (!isNaN(numValue)) {
+                            this.props.updateArtdataFieldCallback("overlays", this.props.index, "positionY", numValue)
+                        }
+                    }
+                }} aria-label="Y position..." value={this.props.artdataItem.positionY} placeholder="0"/>
+
             <ScopedValueInput 
                 index={this.props.index}
                 updateArtdataFieldCallback={(index, field, value) => this.props.updateArtdataFieldCallback("overlays", index, field, value)} 
                 source={this.props.artdataItem.source} 
                 scope={this.props.artdataItem.scope}
+                availableDataSources={this.props.availableDataSources}
             />
-            <input type="number" className="form-control no-left-border" onChange={(event)=>this.props.updateArtdataFieldCallback("overlays", this.props.index, "positionX", event.target.value)} aria-label="What key to replace..." value={this.props.artdataItem.positionX}/>
-            <input type="number" className="form-control no-left-border" onChange={(event)=>this.props.updateArtdataFieldCallback("overlays", this.props.index, "positionY", event.target.value)} aria-label="What key to replace..." value={this.props.artdataItem.positionY}/>
-            {/* { this.state.isHovering &&  */}
+            
+
+            { this.state.isHovering && 
                 <ArtdataItemControls index={this.props.index} deleteCallback={this.props.deleteCallback} updateArtdataItemOrderCallback={this.props.updateArtdataItemOrderCallback}/>
-            {/* } */}
+            }
         </div>
     }
 }

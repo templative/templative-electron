@@ -133,7 +133,17 @@ export default class EditComponentControls extends React.Component {
                 
                 <span className="input-group-text component-left-bumper">Quantity</span>
                 <input type="number" aria-label="Quantity" className="form-control" 
-                    onChange={(event)=>this.props.updateComponentFieldCallback("quantity", event.target.value)}
+                    onChange={(event) => {
+                        const value = event.target.value;
+                        if (value === '-' || value === '') {
+                            this.props.updateComponentFieldCallback("quantity", value)
+                        } else {
+                            const numValue = parseInt(value);
+                            if (!isNaN(numValue)) {
+                                this.props.updateComponentFieldCallback("quantity", numValue)
+                            }
+                        }
+                    }}
                     value={this.props.quantity}/>
 
                 <span className="input-group-text no-right-border">Disabled</span>

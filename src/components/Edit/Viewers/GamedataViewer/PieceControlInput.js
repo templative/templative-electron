@@ -36,9 +36,19 @@ export default class PieceControlInput extends React.Component {
                 value={this.props.piece["displayName"]}/>
 
             <span className="input-group-text">quantity</span>
-            <input type="number" className="form-control value-field" 
+            <input type="number" className="form-control value-field gamedata-quantity-input" 
                 onKeyDown={(e) => PieceControlInput.preventNonNumbers(e)}
-                onChange={(event)=>this.props.updateValueCallback("quantity", event.target.value)} 
+                onChange={(event) => {
+                    const value = event.target.value;
+                    if (value === '-' || value === '') {
+                        this.props.updateValueCallback("quantity", value)
+                    } else {
+                        const numValue = parseInt(value);
+                        if (!isNaN(numValue)) {
+                            this.props.updateValueCallback("quantity", numValue)
+                        }
+                    }
+                }}
                 aria-label="What key to get from the scope..." 
                 value={this.props.piece["quantity"]}/>
                 

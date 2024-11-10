@@ -1,6 +1,11 @@
 .pieces-viewer {
     height: 100%;
 }
+.add-piece-button {
+    width: 100%;
+    margin-top:6px;
+    margin-bottom: 12px;
+}
 .pieces-viewer > .col {
     height: 100%;
     overflow-y: hidden;
@@ -14,8 +19,11 @@
 .pieces-gamedata-row {
     height: calc(100% - 40px);
     overflow-y: auto;
+    padding-bottom: 12px;
 }
-
+.gamedata-quantity-input {
+    max-width: 7ch !important;
+}
 th {
     font-size: 12px;
 }
@@ -26,12 +34,8 @@ tr {
     width: 100% !important;
 }
 .tableContainer {
-    padding-right:0.4em;
     height: 100%;
     overflow-y: auto;
-}
-.tableContainer > .col { 
-    height: 100%;
 }
 .piece-control-input.mb-3:last-child {
     margin-bottom: 0 !important;
@@ -63,4 +67,36 @@ tr {
 .value-text-area {
     padding-top:6px !important;
     padding-bottom: 0px !important;
+}
+.table-responsive-horizontal {
+    overflow-x: auto;
+    overflow-y: visible;
+    margin-bottom: 1rem;
+}
+.table-responsive-horizontal .table {
+    margin-bottom: 0;
+}
+.table-responsive-horizontal th:first-child {
+    position: sticky;
+    left: 0;
+    background-color: var(--bs-table-bg);
+    z-index: 1;
+}
+.table-input-dark {
+    background-color: rgb(26, 30, 32) !important;
+    color: #cfcfcf !important;
+    border-color: #373b3e !important;
+    /* padding: 0 !important; */
+    border-radius: 0 !important;
+    margin: 0 !important;
+    /* border: none !important; */
+    width: 100% !important;
+    height: 100% !important;
+}
+.table-input-dark:focus {
+    background-color: rgb(26, 30, 32) !important;
+    color: #cfcfcf !important;
+}
+.table td {
+    padding: 0 !important;
 }

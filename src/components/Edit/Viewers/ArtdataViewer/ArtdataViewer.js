@@ -48,11 +48,9 @@ export default class ArtdataViewer extends EditableViewerJson {
     }
     async componentDidUpdate (prevProps, prevState) {
         await super.componentDidUpdate(prevProps, prevState)
-        if (!ArtdataViewer.hasFileNameChanged(prevState, this.state)) {
-            return
+        if (ArtdataViewer.hasFileNameChanged(prevState, this.state)) {
+            await this.parseTemplateFileForUsefulSuggestions()
         }
-    
-        await this.parseTemplateFileForUsefulSuggestions()
     }
 
     parseTemplateFileForUsefulSuggestions = async () => {
@@ -172,28 +170,40 @@ export default class ArtdataViewer extends EditableViewerJson {
             templateFilename = this.state.content.templateFilename
             var uniqueSuggestions = new Set(this.state.replacementSuggestions)
             for(var i = 0 ; i < this.state.content.overlays.length; i++){
-                overlays.push(<Overlay index={i} key={i} artdataItem={this.state.content.overlays[i]} 
+                overlays.push(<Overlay 
+                    index={i} 
+                    key={i} 
+                    artdataItem={this.state.content.overlays[i]} 
                     deleteCallback={(index) => this.deleteArtdata("overlays", index)}
                     updateArtdataFieldCallback={(artdataType, index, field, value)=>this.updateArtdataField(artdataType, index, field, value)}
                     updateArtdataItemOrderCallback={(from,to) => this.updateArtdataItemOrder("overlays", from, to)}
+                    availableDataSources={this.props.availableDataSources}
                 />)
             };
             for(var t = 0 ; t < this.state.content.textReplacements.length; t++) {
                 if (uniqueSuggestions.has(this.state.content.textReplacements[t]["key"])) {
                     uniqueSuggestions.delete(this.state.content.textReplacements[t]["key"])
                 }
-                textReplacements.push(<TextReplacement index={t} key={t} artdataItem={this.state.content.textReplacements[t]} 
+                textReplacements.push(<TextReplacement 
+                    index={t} 
+                    key={t} 
+                    artdataItem={this.state.content.textReplacements[t]} 
                     deleteCallback={(index)=> this.deleteArtdata("textReplacements", index)} 
                     updateArtdataFieldCallback={(artdataType, index, field, value)=>this.updateArtdataField(artdataType, index, field, value)}
                     updateArtdataItemOrderCallback={(from,to) => this.updateArtdataItemOrder("textReplacements", from, to)}
+                    availableDataSources={this.props.availableDataSources}
                 />)
             };
             for(var s = 0 ; s < this.state.content.styleUpdates.length; s++){
-                styleUpdates.push(<StyleUpdate index={s} key={s} 
+                styleUpdates.push(<StyleUpdate 
+                    index={s} 
+                    key={s} 
                     artdataItem={this.state.content.styleUpdates[s]} 
                     updateArtdataFieldCallback={(artdataType, index, field, value)=>this.updateArtdataField(artdataType, index, field, value)}
                     updateArtdataItemOrderCallback={(from,to) => this.updateArtdataItemOrder("styleUpdates", from, to)}
-                    deleteCallback={(index)=> this.deleteArtdata("styleUpdates", index)}/>)
+                    deleteCallback={(index)=> this.deleteArtdata("styleUpdates", index)}
+                    availableDataSources={this.props.availableDataSources}
+                />)
             };
             var textReplacementSuggestions = [...uniqueSuggestions]
             replacementSuggestionElements = textReplacementSuggestions.map((suggestion) => 
@@ -219,25 +229,13 @@ export default class ArtdataViewer extends EditableViewerJson {
 
                 <h3 className="artdata-type-header">Overlays</h3>
                 <div className="vertical-input-group">
-                    <div className="input-group mb-3 input-group-sm piece-control-input"  data-bs-theme="dark">
-                        <span className="input-group-text text-replacement-source-type-label flex-grow-1"> Data Source</span>
-                        <span className="input-group-text text-replacement-source-label flex-grow-1">Value</span>
-                        <span className="input-group-text text-replacement-source-label flex-grow-1">X Position</span>
-                        <span className="input-group-text text-replacement-source-label flex-grow-1">Y Position</span>
-                    </div>
+                    
                     {overlays}
                     <ArtdataAddButton addArtdataCallback={()=>this.addArtdataItem("overlays")} whatToAdd={"an Overlay"}/>
                 </div>
 
                 <h3 className="artdata-type-header">Style Updates</h3>
                 <div className="vertical-input-group">
-                    <div className="input-group mb-3 input-group-sm piece-control-input"  data-bs-theme="dark">
-                        <span className="input-group-text text-replacement-source-type-label flex-grow-1">Data Source</span>
-                        <span className="input-group-text text-replacement-source-label flex-grow-1">Value</span>
-                        <span className="input-group-text flex-grow-1">XML Entity ID</span>
-                        <span className="input-group-text flex-grow-1">CSS Field</span>
-                        <span className="input-group-text text-replacement-controls-label"><span className="hidden-visibility">Invisible</span></span>
-                    </div>
                     {styleUpdates}
                     <ArtdataAddButton addArtdataCallback={()=>this.addArtdataItem("styleUpdates")} whatToAdd={"a Style Update"}/>
                 </div>
@@ -249,12 +247,6 @@ export default class ArtdataViewer extends EditableViewerJson {
                     </div>
                 }
                 <div className="vertical-input-group">
-                    <div className="input-group mb-3 input-group-sm piece-control-input"  data-bs-theme="dark">
-                        <span className="input-group-text text-replacement-source-type-label flex-grow-1">Data Source</span>
-                        <span className="input-group-text text-replacement-source-label flex-grow-1">Value</span>
-                        <span className="input-group-text text-replacement-key-label flex-grow-1">Text to Replace</span>
-                        <span className="input-group-text text-replacement-controls-label"><span className="hidden-visibility">Invisible</span></span>
-                    </div>
                     {textReplacements}
                     <ArtdataAddButton addArtdataCallback={()=>this.addArtdataItem("textReplacements")} whatToAdd={"a Text Replacement"}/>
                 </div>

@@ -6,13 +6,14 @@
     height: 100%;
     overflow-y: scroll;
 }
-.artdata-column > .row > p, .gamedata-column > .row > p {
+.artdata-column > * > p, .gamedata-column > * > p {
     border-bottom: 1px hsl(210, 10%, 22%) solid;
     font-size: 18px;
 }
-.artdata-column > .row:not(.unselecteable-artdata) > p:hover,
-.gamedata-column > .row:not(.unselecteable-artdata) > p:hover {
+.artdata-column > *:not(.unselecteable-artdata) > p:hover,
+.gamedata-column > *:not(.unselecteable-artdata) > p:hover {
     cursor: pointer;
+    font-size: 18px;
     background-color: hsl(222, 14%, 20%);
 }
 .unselecteable-artdata > p {
@@ -21,4 +22,12 @@
 .subfile-filepath {
     color: gray;
     font-size:12px;
+}
+.universal-file-content {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.drop-down-chevron {
+    margin-left: 6px;
+    margin-right: 6px;
 }

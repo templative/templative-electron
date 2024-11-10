@@ -2,12 +2,15 @@ import React from "react";
 import Piece from "./Piece";
 import "./GamedataViewer.css"
 import EditableViewerJson from "../EditableViewerJson";
+import PieceTable from "./PieceTable";
+import TransposedTable from "./TransposedTable";
 
 export default class PieceGamedataViewer extends EditableViewerJson {   
     state = {
         trackedKey: undefined,
         currentUpdateValue: undefined,
-        lockedKey: undefined
+        lockedKey: undefined,
+        viewMode: 'list'
     }
 
     getFilePath = (props) => {
@@ -123,47 +126,91 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         this.setState({lockedKey: key})
     }
 
+    toggleViewMode = () => {
+        this.setState(prevState => ({
+            viewMode: prevState.viewMode === 'list' 
+                ? 'table' 
+                : prevState.viewMode === 'table' 
+                    ? 'transposed' 
+                    : 'list'
+        }));
+    }
+
     render() {
         var rows = []
         if (this.state.hasLoaded && this.state.content !== undefined) {
-            rows = this.state.content.map((piece, index) => {
-                return <Piece 
-                    key={index} 
-                    currentUpdateValue={this.state.currentUpdateValue}
-                    gamedataFile={this.state.content} 
-                    trackedKey={this.state.trackedKey} 
-                    index={index} 
-                    piece={piece}
-                    toggleLockCallback={this.toggleLock}
-                    lockedKey={this.state.lockedKey}
-                    addBlankKeyValuePairCallback={this.addBlankKeyValuePair}
-                    deletePieceCallback={()=>this.deletePiece(index)}
-                    duplicatePieceByIndexCallback={()=>this.duplicatePieceByIndex(index)}
-                    trackChangedKeyCallback={this.trackChangedKey}
-                    updateValueCallback={this.updateValue}
-                    removeKeyValuePairFromAllPiecesCallback={this.removeKeyValuePairFromAllPieces}
-                    freeTrackedChangedKeyCallback={this.freeTrackedChangedKey}
-                />
-            })
+            if (this.state.viewMode === 'list') {
+                rows = this.state.content.map((piece, index) => {
+                    return <Piece 
+                        key={index} 
+                        currentUpdateValue={this.state.currentUpdateValue}
+                        gamedataFile={this.state.content} 
+                        trackedKey={this.state.trackedKey} 
+                        index={index} 
+                        piece={piece}
+                        toggleLockCallback={this.toggleLock}
+                        lockedKey={this.state.lockedKey}
+                        addBlankKeyValuePairCallback={this.addBlankKeyValuePair}
+                        deletePieceCallback={()=>this.deletePiece(index)}
+                        duplicatePieceByIndexCallback={()=>this.duplicatePieceByIndex(index)}
+                        trackChangedKeyCallback={this.trackChangedKey}
+                        updateValueCallback={this.updateValue}
+                        removeKeyValuePairFromAllPiecesCallback={this.removeKeyValuePairFromAllPieces}
+                        freeTrackedChangedKeyCallback={this.freeTrackedChangedKey}
+                    />
+                })
+            }
         }
         
-        return <div className="row pieces-viewer">
-            <div className="col">
-                <div className="row add-pieces-gamedata-row">
-                    <div key="addPieceButton" className="input-group input-group-sm mb-3 add-piece-button" data-bs-theme="dark">
-                        <button onClick={() => this.addPiece()} className="btn btn-outline-secondary add-button" type="button" id="button-addon1">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg add-field-plus" viewBox="0 0 16 16">
-                                <path fillRule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                            </svg>
-                            Create a new Piece
-                        </button>
-                    </div>
-                </div>
-                <div className="row pieces-gamedata-row">
-                    <div className="vertical-input-group">
-                        {rows}
-                    </div> 
-                </div> 
+        return <div className="pieces-viewer">
+            <button 
+                onClick={() => this.addPiece()} 
+                className="btn btn-outline-secondary add-piece-button" 
+                type="button"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg add-field-plus" viewBox="0 0 16 16">
+                    <path fillRule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                </svg>
+                Create a new Piece
+            </button>
+            {/* <button 
+                onClick={this.toggleViewMode} 
+                className="btn btn-outline-secondary btn-sm" 
+                data-bs-theme="dark"
+            >
+                {this.state.viewMode === 'list' ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-table" viewBox="0 0 16 16">
+                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 2h-4v3h4zm0 4h-4v3h4zm0 4h-4v3h3a1 1 0 0 0 1-1zm-5 3v-3H6v3zm-5 0v-3H1v2a1 1 0 0 0 1 1zm-4-4h4V8H1zm0-4h4V4H1zm5-3v3h4V4zm4 4H6v3h4z"/>
+                    </svg>
+                ) : this.state.viewMode === 'table' ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                        <path fillRule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l3.146-3.147 3.146 3.147a.5.5 0 0 0 .708-.708l-3.146-3.147 3.146-3.146a.5.5 0 0 0-.708-.708l-3.146 3.146-3.147-3.146a.5.5 0 0 0-.708.708l3.147 3.146-3.146 3.147a.5.5 0 0 0-.708.708l-3.147-3.146z"/>
+                    </svg>
+                ) : (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
+                        <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                )}
+            </button> */}
+            <div className="pieces-gamedata-row">
+                {rows}
+                {/* {this.state.viewMode === 'list' ? (
+                    
+                ) : this.state.viewMode === 'table' ? (
+                    <PieceTable 
+                        content={this.state.content}
+                        updateValue={this.updateValue}
+                        deletePiece={this.deletePiece}
+                        duplicatePieceByIndex={this.duplicatePieceByIndex}
+                    />
+                ) : (
+                    <TransposedTable 
+                        content={this.state.content}
+                        updateValue={this.updateValue}
+                        deletePiece={this.deletePiece}
+                        duplicatePieceByIndex={this.duplicatePieceByIndex}
+                    />
+                )} */}
             </div> 
         </div> 
     }

@@ -20,7 +20,6 @@ export default class Piece extends React.Component {
     }
 
     render() {        
-    
         var pieceKeys = Object.keys(this.props.piece).sort()
         var keyValueRows = pieceKeys
             .filter((key) => {
@@ -50,7 +49,7 @@ export default class Piece extends React.Component {
         });
         var shouldShowPlusSign = this.state.isHovering
         shouldShowPlusSign = true // I dont like the hover
-        return <div className="row piece-row" 
+        return <div className="vertical-input-group" 
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}
         >        
@@ -67,7 +66,7 @@ export default class Piece extends React.Component {
                 <div key="addBlankKeyValuePairButton" className={`input-group input-group-sm mb-3 add-piece-key ${shouldShowPlusSign && "show-add-piece-key"}`} data-bs-theme="dark">
                     <button 
                         onClick={() => this.props.addBlankKeyValuePairCallback()} 
-                        className="btn btn-outline-secondary add-button" 
+                        className="btn btn-outline-secondary add-field-button" 
                         type="button"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg add-field-plus" viewBox="0 0 16 16">

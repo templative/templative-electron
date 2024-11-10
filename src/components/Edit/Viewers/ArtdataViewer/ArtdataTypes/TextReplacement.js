@@ -22,12 +22,21 @@ export default class TextReplacement extends React.Component {
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}
             >
+            <span className="input-group-text">Replace</span>
+
+            <input type="text" className="form-control text-replacement-key-field" onChange={(event)=>this.props.updateArtdataFieldCallback("textReplacements", this.props.index, "key", event.target.value)} value={this.props.artdataItem.key} placeholder="{some text}"/>
+
+            <span className="input-group-text">with the</span>
+
             <ScopedValueInput index={this.props.index} 
                 updateArtdataFieldCallback={(index, field, value) => this.props.updateArtdataFieldCallback("textReplacements", index, field, value)} 
-                source={this.props.artdataItem.source} scope={this.props.artdataItem.scope}/>
+                source={this.props.artdataItem.source} scope={this.props.artdataItem.scope}
+                availableDataSources={this.props.availableDataSources}    
+            />
             
-            <input type="text" className="form-control" onChange={(event)=>this.props.updateArtdataFieldCallback("textReplacements", this.props.index, "key", event.target.value)} value={this.props.artdataItem.key}/>
-            <ArtdataItemControls index={this.props.index} deleteCallback={this.props.deleteCallback} updateArtdataItemOrderCallback={this.props.updateArtdataItemOrderCallback}/>
+            { this.state.isHovering && 
+                <ArtdataItemControls index={this.props.index} deleteCallback={this.props.deleteCallback} updateArtdataItemOrderCallback={this.props.updateArtdataItemOrderCallback}/>
+            }
         </div> 
     }
 }

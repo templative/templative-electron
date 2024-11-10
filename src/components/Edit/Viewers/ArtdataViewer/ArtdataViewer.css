@@ -6,10 +6,17 @@
     height: 100%;
 }
 .scope-select {
-    max-width:10em !important;
+    max-width: 10em !important;
+    border-left: none !important;
 }
 .add-button {
     width:100%;
+}
+.add-field-button {
+    background-color: #2b3035!important;
+    width:100%;
+    border-color: rgb(73, 80, 87) !important;
+    border-bottom-width: 2px !important;
 }
 .trash-button, .add-button {
     background-color: #2b3035!important;
@@ -56,11 +63,34 @@
 .scope-icon {
     width: 16px;
     height: 16px;
-    /* margin-right:5px; */
     border: none;
-    background-color: none;
-    /* margin-bottom: 3px; */
+    background-color: transparent;
 }
 .artdata-type-header {
     font-size: 14px;
+}
+
+.scope-icon-container {
+    background-color: #1a1e20 !important;
+    border-color: rgb(73, 80, 87) !important;
+    color: rgb(222, 226, 230) !important;
+    border-right: none !important;
+}
+
+.scoped-value-coordinate-input {
+    max-width: 6ch !important;
+}
+.css-field {
+    max-width: 8ch !important;
+}
+.element-id-field {
+    max-width: 16ch !important;
+}
+.text-replacement-key-field {
+    max-width: 12ch !important;
+}
+
+.wide-scope-select {
+    max-width: none !important;
+    flex: 1 1 auto !important;
 }
