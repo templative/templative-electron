@@ -15,6 +15,10 @@ export default class SimulatorOutputExplorer extends EditableViewerJson {
     saveFileAsync = async () => {}
 
     renderObjectState = (objectState) => {
+        if (objectState["Name"] === "Card" || objectState["Name"] === "HandTrigger") {
+            return null;
+        }
+
         const customDeckKey = objectState["CustomDeck"] ? Object.keys(objectState["CustomDeck"])[0] : null;
         const customDeck = customDeckKey ? objectState["CustomDeck"][customDeckKey] : null;
         const containedObjects = objectState["ContainedObjects"] || [];
@@ -22,7 +26,7 @@ export default class SimulatorOutputExplorer extends EditableViewerJson {
         return <div className="object-state" key={objectState["GUID"]}>
             <p className="object-state-header">
                 {objectState["Nickname"]} · {objectState["Name"]} 
-                <span className="object-state-guid">{objectState["GUID"]}</span>
+                <span className="object-state-guid"> {objectState["GUID"]}</span>
             </p>     
             {customDeck && 
                 <FrontBackImages 
