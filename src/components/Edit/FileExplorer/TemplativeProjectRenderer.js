@@ -312,7 +312,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                         filepath={path.join(this.props.templativeRootDirectoryPath, "rules.md")}
                         updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
                     />
-                    {["actionShot", "advertisement", "backdrop", "logo"].map(gamecrafterPath => (
+                    {/* {["actionShot", "advertisement", "backdrop", "logo"].map(gamecrafterPath => (
                         <IconContentFileItem
                             key={gamecrafterPath}
                             contentType={"GAMECRAFTER"}
@@ -320,7 +320,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                             filepath={path.join(this.props.templativeRootDirectoryPath, "gamecrafter", `${gamecrafterPath}.png`)}
                             updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
                         />
-                    ))}
+                    ))} */}
                 </div>
             </div>       
             }
