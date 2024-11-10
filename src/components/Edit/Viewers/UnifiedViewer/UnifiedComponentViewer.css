@@ -15,6 +15,9 @@
     cursor: pointer;
     background-color: hsl(222, 14%, 20%);
 }
+.unselecteable-artdata > p {
+    color: gray;
+}
 .subfile-filepath {
     color: gray;
     font-size:12px;
