@@ -1,9 +1,21 @@
+
+var addSpaces = (str) => {
+    return str
+        .replace(/([a-z])([A-Z])/g, '$1 $2')  // Add space between lowercase and uppercase
+        .replace(/([a-zA-Z])(\d)/g, '$1 $2')  // Add space between letters and numbers
+        .replace(/(\d)([a-zA-Z])/g, '$1 $2')
+        .replace("D 4", "D4")
+        .replace("D 6", "D6")
+        .replace("D 8", "D8")
+        .replace("D 12", "D12")
+        .replace("D 20", "D20")
+}
 export const matchesSearch = (search, possibleMatch) => {
     if (search === "") {
         return true
     }
-    var upperPossibleMatch = possibleMatch.toUpperCase().replace(" ", "")
-    var upperSearch = search.toUpperCase().replace(" ", "")
+    var upperPossibleMatch = addSpaces(possibleMatch).toUpperCase().replace(/[^A-Z0-9]/g, "")
+    var upperSearch = addSpaces(search).toUpperCase().replace(/[^A-Z0-9]/g, "")
     return upperPossibleMatch.includes(upperSearch)
 }
 export const componentTypeHasAllFilteredTags = (mustHaveTags, componentTypeTags, mustNotHave) => {
