@@ -19,6 +19,9 @@ class RenderingWorkspaceProvider extends React.Component {
         selectedOutputDirectory: undefined,
         selectedComponentFilter: undefined,
         exportOptionIndex: 0,
+        componentName: "",
+        selectedComponentType: undefined,
+        isToggledToComponents: true,
     };
   }
 
@@ -34,6 +37,18 @@ class RenderingWorkspaceProvider extends React.Component {
     this.setState({ exportOptionIndex: index });
   };
 
+  setComponentName = (name) => {
+    this.setState({ componentName: name });
+  };
+
+  setSelectedComponentType = (type) => {
+    this.setState({ selectedComponentType: type });
+  };
+
+  setIsToggledToComponents = (isToggled) => {
+    this.setState({ isToggledToComponents: isToggled });
+  };
+
   render() {
     return (
       <RenderingWorkspaceContext.Provider
@@ -42,6 +57,9 @@ class RenderingWorkspaceProvider extends React.Component {
           setSelectedOutputFolder: this.setSelectedOutputFolder,
           setSelectedComponentFilter: this.setSelectedComponentFilter,
           setExportOptionIndex: this.setExportOptionIndex,
+          setComponentName: this.setComponentName,
+          setSelectedComponentType: this.setSelectedComponentType,
+          setIsToggledToComponents: this.setIsToggledToComponents,
         }}
       >
         {this.props.children}

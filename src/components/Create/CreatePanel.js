@@ -8,6 +8,7 @@ import TemplativeAccessTools from "../TemplativeAccessTools";
 import ComponentTypeList from "./TypeSelection/ComponentTypePicker/ComponentTypeList";
 import { trackEvent } from "@aptabase/electron/renderer";
 import DocumentationButton from "../Documentation/DocumentationButton";
+import { RenderingWorkspaceContext } from '../Render/RenderingWorkspaceProvider';
 var axios = require('axios');
 const addSpaces = (str) => {
     return str
@@ -27,25 +28,27 @@ const majorCategories = [
 ]
 
 export default class CreatePanel extends React.Component {   
+    static contextType = RenderingWorkspaceContext;
+
     state = {
-        selectedComponentType: undefined,
-        componentName: "",
-        isToggledToComponents: true,
         components: [],
         tagFilters: new Set(),
         isProcessing: false,
         isPickerVisible: false,
     }
+
     togglePickerVisibility = () => {
         this.setState({
           isPickerVisible: !this.state.isPickerVisible,
         });
       }
+
     componentDidMount = async () => {
         trackEvent("view_createPanel")
         var components = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
         this.setState({components: components})
     }
+
     componentDidUpdate = async (prevProps, prevState) => {
         if (prevProps.templativeRootDirectoryPath === this.props.templativeRootDirectoryPath) {
             return
@@ -53,50 +56,59 @@ export default class CreatePanel extends React.Component {
         var components = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
         this.setState({components: components})
     }
+
     selectComponent = (type) => {
-        if (this.state.selectedComponentType === type) {
+        if (this.context.selectedComponentType === type) {
             type = undefined
         }
-        this.setState({ selectedComponentType: type })
+        this.context.setSelectedComponentType(type);
     }
+
     updateComponentName = (name) => {
-        this.setState({componentName: name})
+        this.context.setComponentName(name);
     }
+
     toggleTagFilter = (tag) => {
         var newTagFilters = this.state.tagFilters
         newTagFilters.has(tag) ? newTagFilters.delete(tag) : newTagFilters.add(tag)
         this.setState({tagFilters: newTagFilters})
     }
+
     async createComponent() {
         trackEvent("component_create")
         this.setState({isProcessing: true})
         var data = { 
-            componentName: this.state.componentName,
-            componentType: this.state.selectedComponentType,
+            componentName: this.context.componentName,
+            componentType: this.context.selectedComponentType,
             directoryPath: this.props.templativeRootDirectoryPath,
         }
         await axios.post(`http://127.0.0.1:8080/component`, data)
-        this.setState({isProcessing: false, componentName: "", selectedComponentType: undefined})
+        this.setState({isProcessing: false})
+        this.context.setComponentName("");
+        this.context.setSelectedComponentType(undefined);
     }
+
     toggleCustomOrStock = () => {
-        this.setState({isToggledToComponents: !this.state.isToggledToComponents, selectedComponentType: undefined})
+        this.context.setIsToggledToComponents(!this.context.isToggledToComponents);
+        this.context.setSelectedComponentType(undefined);
     }
+
     render() {
-        var componentTypes = this.state.isToggledToComponents ? this.props.componentTypesCustomInfo : this.props.componentTypesStockInfo
+        var componentTypes = this.context.isToggledToComponents ? this.props.componentTypesCustomInfo : this.props.componentTypesStockInfo
         var componentTypeOptions = Object.assign({}, componentTypes)
-        var isCreateButtonDisabled = this.state.componentName === "" || this.state.selectedComponentType === undefined
+        var isCreateButtonDisabled = this.context.componentName === "" || this.context.selectedComponentType === undefined
         return <div className='mainBody'>
             <div className="create-component-name-row">
                 <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
                     <div className="form-check form-switch custom-or-stock">
-                        <input className="form-check-input stock-toggle" type="checkbox" role="switch" checked={this.state.isToggledToComponents} onChange={() => {}} onClick={this.toggleCustomOrStock}/>
-                        <label className="form-check-label">{this.state.isToggledToComponents ? "Custom" : "Stock"} Components</label>
+                        <input className="form-check-input stock-toggle" type="checkbox" role="switch" checked={this.context.isToggledToComponents} onChange={() => {}} onClick={this.toggleCustomOrStock}/>
+                        <label className="form-check-label">{this.context.isToggledToComponents ? "Custom" : "Stock"} Components</label>
                     </div>
                     <span className="input-group-text">Component Name</span>
                     <input type="text" className="form-control" 
                         onChange={(event)=>this.updateComponentName(event.target.value)} 
                         aria-label="What key to replace..." 
-                        value={this.state.componentName}
+                        value={this.context.componentName}
                     />
                     <button 
                         disabled={isCreateButtonDisabled}
@@ -108,8 +120,9 @@ export default class CreatePanel extends React.Component {
                     </button>
                 </div>
                 { !isCreateButtonDisabled && 
-                    <p className="creation-explanation">A {addSpaces(this.state.selectedComponentType)} named {this.state.componentName}...</p>
+                    <p className="creation-explanation">A {addSpaces(this.context.selectedComponentType)} named {this.context.componentName}...</p>
                 }
+                
             </div>
             
             <div className="row component-type-picking-row g-0">
@@ -136,7 +149,7 @@ export default class CreatePanel extends React.Component {
                         majorCategories={majorCategories}
                         selectedTags={this.state.tagFilters}  
                         selectTypeCallback={this.selectComponent}  
-                        selectedComponentType={this.state.selectedComponentType}  
+                        selectedComponentType={this.context.selectedComponentType}  
                         componentTypeOptions={componentTypeOptions}/>
                 </div>
             </div>     

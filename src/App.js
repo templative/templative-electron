@@ -15,10 +15,10 @@ class App extends React.Component {
   
     state = {
         templativeRootDirectoryPath: undefined,
-        loggedIn: false,
-        email: "",
-        password: "",
-        token: undefined,
+        loggedIn: process.env.NODE_ENV === 'development' ? true : false,
+        email: process.env.NODE_ENV === 'development' ? "dev@templative.net" : "",
+        password: process.env.NODE_ENV === 'development' ? "devpass123" : "",
+        token: process.env.NODE_ENV === 'development' ? "dev_tk_" + Math.random().toString(36).substring(2) : undefined,
         loginStatus: undefined,
         templativeMessages: []
     }    
@@ -77,7 +77,9 @@ class App extends React.Component {
             this.setState({templativeMessages:  [...this.state.templativeMessages, message]})
         });
         await this.attemptToLoadLastTemplativeProject()
-        await ipcRenderer.invoke(channels.TO_SERVER_IS_LOGGED_IN)
+        if (process.env.NODE_ENV !== 'development') {
+            await ipcRenderer.invoke(channels.TO_SERVER_IS_LOGGED_IN)
+        }
     }
     updateRoute = (route) => {
         this.setState({currentRoute: route})

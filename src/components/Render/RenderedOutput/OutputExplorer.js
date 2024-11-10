@@ -26,13 +26,39 @@ export default class OutputExplorer extends React.Component {
         typeQuantities: {}
     }  
     static #parseTimeStamp = (timestamp) => {
-        if (timestamp === undefined) {
-            return undefined
+        if (!timestamp) {
+            return undefined;
         }
-        var timestampComponents = timestamp.split("_")
-        var timeOfDayComponents = timestampComponents[1].split("-")
-        var dateTime = new Date(`${timestampComponents[0]}T${timeOfDayComponents[0]}:${timeOfDayComponents[1]}:${timeOfDayComponents[2]}`)
-        return dateTime.toLocaleDateString('en-us', { year:"numeric", month:"short", day:"numeric", hour: '2-digit', minute:'2-digit'}) 
+        try {
+            const timestampComponents = timestamp.split("_");
+            if (timestampComponents.length < 2) {
+                return undefined;
+            }
+            
+            const timeOfDayComponents = timestampComponents[1].split("-");
+            if (timeOfDayComponents.length < 3) {
+                return undefined;
+            }
+
+            const dateTime = new Date(
+                `${timestampComponents[0]}T${timeOfDayComponents[0]}:${timeOfDayComponents[1]}:${timeOfDayComponents[2]}`
+            );
+            
+            if (isNaN(dateTime.getTime())) {
+                return undefined;
+            }
+
+            return dateTime.toLocaleDateString('en-us', { 
+                year: "numeric", 
+                month: "short", 
+                day: "numeric", 
+                hour: '2-digit', 
+                minute: '2-digit'
+            });
+        } catch (error) {
+            console.warn("Error parsing timestamp:", error);
+            return undefined;
+        }
     }
     #getGameInformation = async () => {
         const gameJsonFilepath = path.join(this.props.outputFolderPath, "game.json")

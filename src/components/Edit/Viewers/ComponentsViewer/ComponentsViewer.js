@@ -59,7 +59,6 @@ export default class ComponentsViewer extends EditableViewerJson {
         }, async () => this.autosave())
     }
     deleteComponent = (index) => {
-        console.log(index)
         var newComponents = this.state.content
         newComponents.splice(index,1)
         this.setState({
@@ -201,9 +200,6 @@ export default class ComponentsViewer extends EditableViewerJson {
             }
             prefix += char1;
         }
-        if (str1.startsWith("council")) {
-            console.log(str1, str2, prefix)
-        }
         return prefix;
     }
     isUpperCase(char) {
@@ -220,7 +216,6 @@ export default class ComponentsViewer extends EditableViewerJson {
                 componentHeaders.push(component.name);
             }
         });
-        console.log(componentHeaders)
         return this.getCommonPrefixes(componentHeaders);
     }
     setFilteredNameSubstring = (filteredNameSubstring) => {

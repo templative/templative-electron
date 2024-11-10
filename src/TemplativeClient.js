@@ -1,6 +1,10 @@
 const axios = require("axios")
 
 const doesUserOwnTemplative = async(email, token) => {
+    if (process.env.NODE_ENV === 'development') {
+        return true
+    }
+    
     if (email === undefined) {
         console.error("email cannot be undefined")
         return false
