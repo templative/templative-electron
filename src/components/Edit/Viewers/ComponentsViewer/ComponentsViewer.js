@@ -5,6 +5,7 @@ import ComponentItemEditableStock from "./ComponentItems/ComponentItemEditableSt
 import ComponentFilters from "./ComponentFilters/ComponentFilters";
 import NoComponentsSVG from "./noComponents.svg"
 import ComponentItem from "./ComponentItems/ComponentItem";
+import TemplativeAccessTools from "../../../TemplativeAccessTools";
 
 const path = require("path")
 
@@ -27,7 +28,8 @@ export default class ComponentsViewer extends EditableViewerJson {
             floatingName: undefined,
             floatingNameIndex: undefined,
             filteredComponentType: undefined,
-            filteredNameSubstring: undefined
+            filteredNameSubstring: undefined,
+            componentThumbnails: {},
         }
         this.scrollableDivRef = React.createRef();
     }
@@ -78,7 +80,7 @@ export default class ComponentsViewer extends EditableViewerJson {
         }, async () => this.autosave())
     }
 
-    loadComponent = (component, index) => {
+    loadComponent = (component, index, thumbnailSource) => {
         var isFloatingName = this.state.floatingNameIndex === index
         var isStock = component.type.split("_").shift() === "STOCK"
         if (isStock) {
@@ -96,6 +98,7 @@ export default class ComponentsViewer extends EditableViewerJson {
                 updateFloatingNameCallback={(value) => this.updateFloatingName(index, value)}
                 releaseFloatingNameCallback={() => this.releaseFloatingName()}
                 updateComponentFieldCallback={(field, value)=> {this.updateComponentField(index, field, value)}}
+                thumbnailSource={thumbnailSource}
             />
         }
         
@@ -123,6 +126,7 @@ export default class ComponentsViewer extends EditableViewerJson {
             updateFloatingNameCallback={(value) => this.updateFloatingName(index, value)}
             releaseFloatingNameCallback={() => this.releaseFloatingName()}
             updateComponentFieldCallback={(field, value)=> {this.updateComponentField(index, field, value)}}
+            thumbnailSource={thumbnailSource}
         />
     }
 
@@ -242,10 +246,12 @@ export default class ComponentsViewer extends EditableViewerJson {
             let isStock = component.type.split("_").shift() === "STOCK";
             let isDisabled = component.disabled;
 
+            const thumbnailSource = this.state.componentThumbnails[component.name];
+            
             if (isDisabled) {
-                disabledComponents.push(this.loadComponent(component, index));
+                disabledComponents.push(this.loadComponent(component, index, thumbnailSource));
             } else {
-                enabledComponents.push(this.loadComponent(component, index));
+                enabledComponents.push(this.loadComponent(component, index, thumbnailSource));
             }
         });
 
@@ -257,6 +263,7 @@ export default class ComponentsViewer extends EditableViewerJson {
           this.scrollableDivRef.current.scrollTop = this.props.componentComposeScollPosition || 0;
         }
         await super.componentDidMount()
+        await this.loadAllThumbnails();
     }
     async componentDidUpdate (prevProps, prevState) {
         if (this.scrollableDivRef.current) {
@@ -277,6 +284,18 @@ export default class ComponentsViewer extends EditableViewerJson {
             this.props.updateComponentComposeScrollPositionCallback(scrollTop)
         }
     };
+
+    loadAllThumbnails = async () => {
+        if (!this.state.content) return;
+        
+        const componentNames = this.state.content.map(component => component.name);
+        const thumbnails = await TemplativeAccessTools.getAllComponentThumbnails(
+            this.props.templativeRootDirectoryPath,
+            componentNames
+        );
+        console.log(thumbnails)
+        this.setState({ componentThumbnails: thumbnails });
+    }
 
     render() {
         var componentItems = this.loadComponentItems()

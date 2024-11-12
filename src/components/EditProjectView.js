@@ -22,13 +22,13 @@ export default class EditProjectView extends React.Component {
     state = {
         currentRoute: "edit",
         tabbedFiles: [
-            
+            new TabbedFile("COMPONENTS", path.join(this.props.templativeRootDirectoryPath, "component-compose.json"), true),
         ],
         italicsTabFilepath: undefined,
-        currentFileType: undefined,
+        currentFileType: "COMPONENTS",
         componentTypesCustomInfo: {},
         componentTypesStockInfo: {},
-        currentFilepath: undefined,
+        currentFilepath: path.join(this.props.templativeRootDirectoryPath, "component-compose.json"),
 
         extendedFileTypes: new Set(),
         extendedDirectories: new Set(),

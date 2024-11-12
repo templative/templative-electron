@@ -2,41 +2,7 @@ const fs = require('fs/promises');
 const path = require("path");
 
 export default class TemplativeAccessTools {
-    static getMostRecentComponentImage = async(templativeRootDirectoryPath, componentName) => {
-        if (templativeRootDirectoryPath === undefined || templativeRootDirectoryPath.trim() === "") {
-            console.error("No templativeRootDirectoryPath given to readFileContentsFromTemplativeProjectAsJsonAsync.")
-        }
-        var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(templativeRootDirectoryPath, "game-compose.json")
-        var outputDirectory = path.join(templativeRootDirectoryPath, gameCompose["outputDirectory"])
-        var outputDirectories = await fs.readdir(outputDirectory, { withFileTypes: true })
-        outputDirectories = outputDirectories
-            .filter(dirent => dirent.isDirectory())
-            .map(dirent => {
-                // console.log(`Output Directory ${dirent.name}`)
-                return path.join(outputDirectory, dirent.name)}
-            )
-        for (let index = 0; index < outputDirectories.length; index++) {
-            const outputDirectoryPath = outputDirectories[index];
-            var outputDirectoryComponentDirectories = await fs.readdir(outputDirectoryPath, { withFileTypes: true })
-            outputDirectoryComponentDirectories = outputDirectoryComponentDirectories
-                .filter(dirent => dirent.isDirectory())
-                .map(dirent => {
-                    // console.log(`Component Directory ${dirent.name}`)
-                    return path.join(outputDirectoryPath, dirent.name)}
-                )
-            for (let index = 0; index < outputDirectoryComponentDirectories.length; index++) {
-                const componentDirectoryPath = outputDirectoryComponentDirectories[index];
-                
-                var componentInstructionsFilepath = path.join(componentDirectoryPath, "component.json")
-                var instructions = await TemplativeAccessTools.loadFileContentsAsJson(componentInstructionsFilepath)
-                if (instructions["name"] !== componentName) {
-                    continue;
-                }
-                return componentDirectoryPath
-            }
-        }
-        return undefined
-    }
+    
     static loadFileContentsAsJson = async (filepath) => {
         if (filepath === undefined || filepath.trim() === "") {
             console.error("No filepath given to loadFileContentsAsJson.")
@@ -133,5 +99,64 @@ export default class TemplativeAccessTools {
     }
     static getComponentComposeFilepath(templativeRootDirectoryPath) {
         return path.join(templativeRootDirectoryPath, "component-compose.json")
+    }
+    static getAllComponentThumbnails = async(templativeRootDirectoryPath, componentNames) => {
+        if (templativeRootDirectoryPath === undefined || templativeRootDirectoryPath.trim() === "") {
+            console.error("No templativeRootDirectoryPath given");
+            return {};
+        }
+
+        const gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(
+            templativeRootDirectoryPath, 
+            "game-compose.json"
+        );
+        const outputDirectory = path.join(templativeRootDirectoryPath, gameCompose["outputDirectory"]);
+        
+        // Get and sort output directories by most recent first
+        const outputDirents = await fs.readdir(outputDirectory, { withFileTypes: true });
+        const outputDirs = await Promise.all(
+            outputDirents
+                .filter(dirent => dirent.isDirectory())
+                .map(async dirent => {
+                    const fullPath = path.join(outputDirectory, dirent.name);
+                    const stats = await fs.stat(fullPath);
+                    return { path: fullPath, mtime: stats.mtime };
+                })
+        );
+        outputDirs.sort((a, b) => b.mtime - a.mtime);
+
+        // Create a map to store results
+        const thumbnailPaths = {};
+        
+        // Check the most recent output directory first
+        for (const outputDir of outputDirs) {
+            const componentDirents = await fs.readdir(outputDir.path, { withFileTypes: true });
+            const componentDirs = componentDirents
+                .filter(dirent => dirent.isDirectory())
+                .map(dirent => path.join(outputDir.path, dirent.name));
+                
+            // Process all components in this directory
+            await Promise.all(componentDirs.map(async componentDir => {
+                try {
+                    const instructionsPath = path.join(componentDir, "component.json");
+                    const instructions = await TemplativeAccessTools.loadFileContentsAsJson(instructionsPath);
+                    const componentName = instructions["name"];
+                    
+                    // Only process if we're looking for this component and haven't found it yet
+                    if (componentNames.includes(componentName) && !thumbnailPaths[componentName]) {
+                        thumbnailPaths[componentName] = componentDir;
+                    }
+                } catch (error) {
+                    // Skip if can't read instructions
+                }
+            }));
+            
+            // Break early if we've found all components
+            if (Object.keys(thumbnailPaths).length === componentNames.length) {
+                break;
+            }
+        }
+        
+        return thumbnailPaths;
     }
 }

@@ -29,14 +29,8 @@ export default class ComponentItem extends React.Component {
     componentDidUpdate = async (prevProps, prevState) => {
         await this.loadComponentData()
     }
-    loadThumbnail = async () => {
-        var thumbnailSource = await TemplativeAccessTools.getMostRecentComponentImage(this.props.templativeRootDirectoryPath, this.props.componentName)
-        // console.log(`${this.props.componentName} ${thumbnailSource}`)
-        this.setState({thumbnailSource: thumbnailSource})
-    }
     componentDidMount = async () => { 
         await this.loadComponentData()
-        await this.loadThumbnail()
     }  
     
     loadComponentData = async () => {    
@@ -98,8 +92,8 @@ export default class ComponentItem extends React.Component {
         var Controls = this.state.isEditing ? EditComponentControls : ComponentUpshotControls
         return <div className="component-quick-glance-container row g-0">
             
-            {this.state.thumbnailSource !== undefined &&
-                <ComponentThumbnail outputFolderDirectoryPath={this.state.thumbnailSource}/>
+            {this.props.thumbnailSource !== undefined &&
+                <ComponentThumbnail outputFolderDirectoryPath={this.props.thumbnailSource}/>
             }
             <div className="component-quick-glance" 
                 onMouseOver={this.handleMouseOver}
