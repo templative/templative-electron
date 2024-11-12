@@ -16,13 +16,16 @@ class RenderingWorkspaceProvider extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        selectedOutputDirectory: undefined,
+        // Render
+        selectedOutputDirectory: undefined, 
         selectedComponentFilter: undefined,
         exportOptionIndex: 0,
+        // Create
         componentName: "",
         selectedComponentType: undefined,
         isToggledToComponents: true,
         componentAIDescription: "",
+        componentTypeSearch: "",
     };
   }
 
@@ -54,6 +57,23 @@ class RenderingWorkspaceProvider extends React.Component {
     this.setState({ componentAIDescription: description });
   };
 
+  setComponentTypeSearch = (search) => {
+    this.setState({ componentTypeSearch: search });
+  };
+
+  toggleCustomOrStock = () => {
+    this.setState(prevState => ({
+      isToggledToComponents: !prevState.isToggledToComponents,
+      selectedComponentType: undefined
+    }));
+  };
+
+  selectComponent = (type) => {
+    this.setState(prevState => ({
+      selectedComponentType: prevState.selectedComponentType === type ? undefined : type
+    }));
+  };
+
   render() {
     return (
       <RenderingWorkspaceContext.Provider
@@ -66,6 +86,9 @@ class RenderingWorkspaceProvider extends React.Component {
           setSelectedComponentType: this.setSelectedComponentType,
           setIsToggledToComponents: this.setIsToggledToComponents,
           setComponentAIDescription: this.setComponentAIDescription,
+          setComponentTypeSearch: this.setComponentTypeSearch,
+          toggleCustomOrStock: this.toggleCustomOrStock,
+          selectComponent: this.selectComponent,
         }}
       >
         {this.props.children}

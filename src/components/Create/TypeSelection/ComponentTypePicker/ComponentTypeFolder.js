@@ -10,24 +10,7 @@ export default class ComponentTypeFolder extends React.Component {
     toggleExtended = () => {
         this.setState({isExtended: !this.state.isExtended})
     }
-    render = () => {
-        var componentDivs = Object.keys(this.props.componentTypeOptions)
-            .filter((key) => {                
-                return componentTypeHasAllFilteredTags(this.props.selectedTags, this.props.componentTypeOptions[key]["Tags"]) && componentTypeHasAllFilteredTags([this.props.category], this.props.componentTypeOptions[key]["Tags"])
-                && matchesSearch(this.props.search, key)
-            })
-            .sort()
-            .map((key) => {
-                var existingQuantity = 0
-                return <ComponentType key={key} 
-                    name={key} componentInfo={this.props.componentTypeOptions[key]}
-                    selectTypeCallback={this.props.selectTypeCallback}
-                    selectedComponentType={this.props.selectedComponentType} 
-                    existingQuantity={existingQuantity}
-                    search={this.props.search}    
-                />
-            })
-            
+    render = () => {            
         var folder = <div className="renderedComponent">
             <div className="component-output-header" onClick={this.toggleExtended}>
                 <p className="rendered-component-title">{this.props.category.charAt(0).toUpperCase() + this.props.category.slice(1)}</p>
@@ -45,11 +28,21 @@ export default class ComponentTypeFolder extends React.Component {
             </div>
             {this.state.isExtended && 
                 <div className="component-output-content">
-                    {componentDivs}
+                    {
+                        this.props.filteredComponentTypes.map(key =>
+                            <ComponentType key={key} 
+                                name={key} componentInfo={this.props.componentTypeOptions[key]}
+                                selectTypeCallback={this.props.selectTypeCallback}
+                                selectedComponentType={this.props.selectedComponentType} 
+                                existingQuantity={0}
+                                search={this.props.search}    
+                            />
+                        )
+                    }
                 </div>
             }
         </div>
-        return componentDivs.length !== 0 ? folder : <></>
+        return folder
             
     }
 }

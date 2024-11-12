@@ -57,17 +57,6 @@ export default class CreatePanel extends React.Component {
         this.setState({components: components})
     }
 
-    selectComponent = (type) => {
-        if (this.context.selectedComponentType === type) {
-            type = undefined
-        }
-        this.context.setSelectedComponentType(type);
-    }
-
-    updateComponentName = (name) => {
-        this.context.setComponentName(name);
-    }
-
     toggleTagFilter = (tag) => {
         var newTagFilters = this.state.tagFilters
         newTagFilters.has(tag) ? newTagFilters.delete(tag) : newTagFilters.add(tag)
@@ -85,33 +74,22 @@ export default class CreatePanel extends React.Component {
         }
         await axios.post(`http://127.0.0.1:8080/component`, data)
         this.setState({isProcessing: false})
-        this.context.setComponentName("");
-        this.context.setSelectedComponentType(undefined);
-        this.context.setComponentAIDescription("")
-    }
-
-    toggleCustomOrStock = () => {
-        this.context.setIsToggledToComponents(!this.context.isToggledToComponents);
-        this.context.setSelectedComponentType(undefined);
+        // this.context.setComponentName("");
+        // this.context.setSelectedComponentType(undefined);
+        // this.context.setComponentAIDescription("")
     }
 
     render() {
         var componentTypes = this.context.isToggledToComponents ? this.props.componentTypesCustomInfo : this.props.componentTypesStockInfo
         var componentTypeOptions = Object.assign({}, componentTypes)
-        var isCreateButtonDisabled = this.context.componentName === "" || this.context.selectedComponentType === undefined
+        var isCreateButtonDisabled = this.state.isProcessing || this.context.componentName === "" || this.context.selectedComponentType === undefined
         return <div className='mainBody'>
             <div className="create-component-name-row">
                 <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
-
-                    <div className="form-check form-switch custom-or-stock">
-                        <input className="form-check-input stock-toggle" type="checkbox" role="switch" checked={this.context.isToggledToComponents} onChange={() => {}} onClick={this.toggleCustomOrStock}/>
-                        <label className="form-check-label">{this.context.isToggledToComponents ? "Custom" : "Stock"} Components</label>
-                    </div>
-
                     <span className="input-group-text">Component Name</span>
                     <input type="text" className="form-control" 
-                        onChange={(event)=>this.updateComponentName(event.target.value)} 
-                        placeholder="The name of the component" 
+                        onChange={(event)=>this.context.setComponentName(event.target.value.replace(/[^a-zA-Z0-9-_]/g, ''))} 
+                        placeholder="nameOfTheComponent" 
                         value={this.context.componentName}
                     />
 
@@ -120,28 +98,34 @@ export default class CreatePanel extends React.Component {
                         className="btn btn-outline-secondary create-component-button" type="button" id="button-addon1"
                         onClick={()=>this.createComponent()}
                     >
-                        { this.state.isProcessing && <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>}
+                        { this.state.isProcessing && <span className="spinner-border spinner-border-sm creating-spinner"></span>}
                         Create
                     </button>
                 </div>
                 <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
                     <span className="input-group-text">Description</span>
-                    <textarea className="form-control" 
+                    <textarea className="form-control component-ai-description-textarea" 
                         rows="3"
                         onChange={(event)=>this.context.setComponentAIDescription(event.target.value)} 
                         placeholder="e.g. This a deck of foreign envoys. There is an envoy for Russia, Italy, France, Britain, and Sweden. Each card has a name and rules text. The background of the card matches the color of the country. Each card has an overlay that is a famous diplomat from that country..." 
                         value={this.context.componentAIDescription}
-                        disabled
                     />
                 </div>
-                { !isCreateButtonDisabled && 
-                    <p className="creation-explanation">A {addSpaces(this.context.selectedComponentType)} named {this.context.componentName}...</p>
-                }
+
+                {this.state.isProcessing ? (
+                    <p className="creation-instructions">Creating your component...</p>    
+                ) : (
+                    !isCreateButtonDisabled ? (
+                        <p className="creation-explanation">A {addSpaces(this.context.selectedComponentType)} named {this.context.componentName}...</p>
+                    ) : (
+                        <p className="creation-instructions">Pick a component type and give it a name.</p>
+                    )
+                )}
                 
             </div>
             
             <div className="row component-type-picking-row g-0">
-                <div className={`col-3 tag-picker-container ${ this.state.isPickerVisible ? "expanded" : "collapsed"}`}>
+                {/* <div className={`col-3 tag-picker-container ${ this.state.isPickerVisible ? "expanded" : "collapsed"}`}>
                     <ComponentTypeTagPicker 
                         majorCategories={majorCategories}
                         componentTypeOptions={componentTypeOptions} 
@@ -158,12 +142,30 @@ export default class CreatePanel extends React.Component {
                             <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
                         </svg>
                     }</span>
-                </div>
-                <div className="col component-type-list-col">
+                </div> */}
+                <div className="col">
+                    <div className="input-group input-group-sm search-components-box" data-bs-theme="dark">
+                        <div className="form-check form-switch custom-or-stock">
+                            <input 
+                                className="form-check-input stock-toggle" 
+                                type="checkbox" 
+                                role="switch" 
+                                checked={this.context.isToggledToComponents} 
+                                onChange={() => {}} 
+                                onClick={this.context.toggleCustomOrStock}
+                            />
+                            <label className="form-check-label">{this.context.isToggledToComponents ? "Custom" : "Stock"} Components</label>
+                        </div>
+                        <input type="text" className="form-control" placeholder={this.context.isToggledToComponents ? "Search Custom Component Types" : "Search Stock Components"} 
+                            value={this.context.componentTypeSearch} 
+                            onChange={(e)=> this.context.setComponentTypeSearch(e.target.value)}
+                        />
+                    </div>
                     <ComponentTypeList 
                         majorCategories={majorCategories}
                         selectedTags={this.state.tagFilters}  
-                        selectTypeCallback={this.selectComponent}  
+                        selectTypeCallback={this.context.selectComponent}
+                        search={this.context.componentTypeSearch}
                         selectedComponentType={this.context.selectedComponentType}  
                         componentTypeOptions={componentTypeOptions}/>
                 </div>

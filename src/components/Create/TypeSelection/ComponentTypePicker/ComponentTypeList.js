@@ -2,46 +2,77 @@ import React from "react";
 import {componentTypeHasAllFilteredTags, matchesSearch} from "../../TagFilter"
 import ComponentTypeFolder from "./ComponentTypeFolder";
 import ComponentType from "./ComponentType";
+import noFileIcon from "../../../Edit/noFileIcon.svg";
 
 export default class ComponentTypeList extends React.Component {   
-    state={search: ""}
-    updateSearch = async (search) => {
-        this.setState({search: search})
-    }
+    
     render() {
         var componentDivs = Object.keys(this.props.componentTypeOptions)
             .filter((key) => {
                 return componentTypeHasAllFilteredTags(this.props.selectedTags, this.props.componentTypeOptions[key]["Tags"], this.props.majorCategories)
             })
             .filter((key) => {
-                return matchesSearch(this.state.search, key)
+                return matchesSearch(this.props.search, key)
             })
             .sort()
             .map((key) => {
                 var existingQuantity = 0
-                return <ComponentType key={`${key}${this.state.search}`} 
+                return <ComponentType key={`${key}${this.props.search}`} 
                     name={key} componentInfo={this.props.componentTypeOptions[key]}
                     selectTypeCallback={this.props.selectTypeCallback}
                     selectedComponentType={this.props.selectedComponentType} 
                     existingQuantity={existingQuantity}
-                    search={this.state.search}    
+                    search={this.props.search}    
                 />
             })
         
-        var folders = this.props.majorCategories.map(category => 
-            <ComponentTypeFolder key={category} search={this.state.search} selectTypeCallback={this.props.selectTypeCallback} category={category} selectedTags={this.props.selectedTags} componentTypeOptions={this.props.componentTypeOptions} selectedComponentType={this.props.selectedComponentType}/>
-        )
+        var categoryToFilteredTypes = {}
+        this.props.majorCategories.forEach(category => {
+            var filteredComponentTypes = Object.keys(this.props.componentTypeOptions)
+                .filter((key) => {                
+                    var isMatchingTags = componentTypeHasAllFilteredTags(this.props.selectedTags, this.props.componentTypeOptions[key]["Tags"])
+                    var isMatchingCategory = componentTypeHasAllFilteredTags([category], this.props.componentTypeOptions[key]["Tags"])
+                    var isMatchingSearch = matchesSearch(this.props.search, key)
+                    // console.log(category, key, isMatchingTags, isMatchingCategory, isMatchingSearch)
+                    return isMatchingTags && isMatchingCategory && isMatchingSearch
+                })
+                .sort()
+            // console.log(category, filteredComponentTypes)
+            if (filteredComponentTypes.length > 0) {
+                categoryToFilteredTypes[category] = filteredComponentTypes
+            }
+        })
+
+        var folders = Object.entries(categoryToFilteredTypes).map(([category, filteredComponentTypes]) => {
+            return <ComponentTypeFolder 
+                key={category} 
+                search={this.props.search} 
+                selectTypeCallback={this.props.selectTypeCallback} 
+                category={category} 
+                selectedTags={this.props.selectedTags} 
+                componentTypeOptions={this.props.componentTypeOptions} 
+                selectedComponentType={this.props.selectedComponentType} 
+                filteredComponentTypes={filteredComponentTypes}
+            />
+        })
+        var isSearchTooNarrow = 
+            folders.length === 0 && 
+            componentDivs.length === 0 && 
+            Object.keys(this.props.componentTypeOptions).length > 0 && 
+            this.props.search.trim() !== ""
+
         return <div className="component-type-list">
-            <div className="input-group input-group-sm search-components-box" data-bs-theme="dark">
-                <input type="text" className="form-control" placeholder="Search Components" 
-                    value={this.state.search} 
-                    onChange={(e)=> this.updateSearch(e.target.value)}
-                />
-            </div>
+            {
+                isSearchTooNarrow && <p className="no-results-message">Your search returned no results.</p>
+            }
             {folders}
             {/* {folders.length !== 0 && <p>Other {folders.length}</p>}  */}
             {componentDivs}
-            
+            {(folders.length !== 0 || componentDivs.length !== 0) && 
+                <div className="end-of-component-types-icon-container">
+                    <img src={noFileIcon} className="end-of-component-types-icon"/>
+                </div>
+            }
         </div>
     }
 }

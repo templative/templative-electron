@@ -3,14 +3,18 @@
     width: 100%;
 }
 .custom-or-stock {
-    margin-right: 2em;
+    margin-right: 1em;
     margin-top: 0.8em;
+    margin-left: 1em;
 }
-.component-type-list-col {
-    padding-bottom: 0.1em;
+.component-type-list {
+    padding: 0px 8px 0px 8px !important;
+    overflow-y: scroll;
+    height: calc(100% - 25px);
+    margin: 5px 0px 5px 0px;
 }
 .create-component-name-row {
-    height: 8em;
+    height: 7.5em;
     display: block;
     padding-top:0.5em;
     width: 100%;
@@ -22,11 +26,12 @@
     margin-right:auto;
 }
 .component-type-picking-row {
-    padding-top:0em;
+    padding: 1em 1em 1em 1em !important;
     border-top: hsl(222, 13%, 28%) solid 1px;
+    height: calc(100% - 7.5em);
 }
 .component-type-picking-row > * {
-    height: calc(100% - 8em);
+    height: 100%;
 }
 .create-component-input-group {
     margin-left:auto;
@@ -37,6 +42,7 @@
     background-color: #ea9800 !important;
     color:#313540 !important;
     font-weight: bold !important;
+    min-width: 84px !important;
 }
 .create-component-button:disabled {
     background-color: #323843 !important;
@@ -46,10 +52,24 @@
     background-color: #ffa500 !important;
     color:#313540 !important;
 }
+.creating-spinner {
+    margin-right: 6px;
+    /* margin-top:3px; */
+    width: 0.8rem !important;
+    height: 0.8rem !important;
+}
 
 .creation-explanation {
     max-width: 715px;
     font-style: italic;
+    font-size: 12px;
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom:0px;
+}
+.creation-instructions {
+    max-width: 715px;
     font-size: 12px;
     text-align: center;
     margin-left: auto;
@@ -92,4 +112,7 @@
 }
 .tags-chevron {
     margin-right:14px;
+}
+.component-ai-description-textarea {
+    resize: none;
 }
