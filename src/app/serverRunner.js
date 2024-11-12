@@ -1,4 +1,3 @@
-
 var kill  = require('tree-kill');
 const { spawn } = require('child_process');
 const {log, error} = require("./logger")
@@ -8,7 +7,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms))
 
 module.exports = class ServerRunner {
     serverName = undefined
-    #port = undefined
+    port = undefined
     #commandListByEnvironment = {}
     #serverProcess = undefined
 
@@ -26,7 +25,7 @@ module.exports = class ServerRunner {
             throw new Error("commandListByEnvironment must have at least one environment command.")
         }
         this.serverName = serverName
-        this.#port = port
+        this.port = port
         this.#commandListByEnvironment = commandListByEnvironment
     }
 
@@ -39,8 +38,8 @@ module.exports = class ServerRunner {
         return this.#commandListByEnvironment[environment]
     }
     #attemptStart = async (commandConfiguration, retries, pingCooldownMilliseconds)=> {
-        log(`Killing any process at port ${this.#port}...`)
-        killPort(this.#port,"tcp");
+        log(`Killing any process at port ${this.port}...`)
+        killPort(this.port,"tcp");
 
         log(`${this.serverName} is launching ${commandConfiguration.command}.`)
         var spawnedProcess = spawn(commandConfiguration.command, { detached: false, shell: true});
@@ -102,7 +101,7 @@ module.exports = class ServerRunner {
             return 0
         }
     }
-    attemptToStartServer = async (environment, retries=20, pingCooldownMilliseconds=2000) => {
+    attemptToStartServer = async (environment, retries=30, pingCooldownMilliseconds=2000) => {
         var serverStartResult = await this.#launchServer(environment, retries, pingCooldownMilliseconds)
         if (serverStartResult === 0) {
             error(`${this.serverName} failed to start`)
@@ -111,10 +110,34 @@ module.exports = class ServerRunner {
         }
         return 1
     }
-    shutdownServerIfRunning = ()=> {
+    shutdownServerIfRunning = async () => {
         if (this.#serverProcess === undefined) {
-            return
+            return;
         }
-        this.#serverProcess.kill('SIGINT');
+        
+        return new Promise((resolve) => {
+            try {
+                // First try SIGTERM for graceful shutdown
+                kill(this.#serverProcess.pid, 'SIGTERM', async (err) => {
+                    if (err) {
+                        // If SIGTERM fails, try SIGINT
+                        kill(this.#serverProcess.pid, 'SIGINT', async (err) => {
+                            if (err) {
+                                // As a last resort, use SIGKILL
+                                kill(this.#serverProcess.pid, 'SIGKILL', () => {});
+                            }
+                        });
+                    }
+                    
+                    // Force kill the port just to be sure
+                    await killPort(this.port, "tcp").catch(() => {});
+                    this.#serverProcess = undefined;
+                    resolve();
+                });
+            } catch (err) {
+                error(`Error during shutdown of ${this.serverName}: ${err}`);
+                resolve();
+            }
+        });
     }
 }

@@ -1,4 +1,5 @@
 const { app, BrowserWindow, Menu } = require('electron')
+const killPort = require('kill-port');
 const {mainMenu} = require("./app/menuMaker")
 const {listenForRenderEvents} = require("./app/listenForRenderEvents")
 const serverEnvironmentConfiguration = require("./app/serverEnvironmentConfiguration")
@@ -77,24 +78,51 @@ const onReady = async () => {
   })
 }
 const shutdown = async () => {
-    await serverManager.shutDownServers()
-    if (startupWindow !== undefined && startupWindow) {
-      startupWindow.closable=true
-      startupWindow.close()
+    try {
+        // Prevent multiple shutdown attempts
+        if (app.isQuitting) {
+          return;
+        }
+        app.isQuitting = true;
+        
+        log("Initiating shutdown sequence");
+        
+        // Shutdown servers first
+        await serverManager.shutDownServers();
+        
+        // Force kill any remaining processes on the server ports
+        for (const server of servers) {
+            await killPort(server.port, "tcp").catch(() => {});
+        }
+        
+        // Close windows
+        if (startupWindow) {
+            startupWindow.closable = true;
+            startupWindow.destroy();
+        }
+        if (templativeWindow) {
+            templativeWindow.closable = true;
+            templativeWindow.destroy();
+        }
+        
+        // Exit the app
+        app.exit(0);
+    } catch (err) {
+        error(`Error during shutdown: ${err}`);
+        app.exit(1);
     }
-    if (templativeWindow !== undefined && templativeWindow) {
-      templativeWindow.closable=true
-      templativeWindow.close()
-    }
-    app.exit(0)
 };
 
-app.on('before-quit', async () => {
-  await serverManager.shutDownServers()
+// Ensure shutdown happens on all possible exit scenarios
+app.on('before-quit', async (event) => {
+    event.preventDefault();
+    await shutdown();
 });
 
 app.on("ready", onReady)
-app.on('window-all-closed', shutdown)
+app.on('window-all-closed', async () => {
+    await shutdown();
+});
 
 // app.on('open-url', async (event, url) => {
 //   event.preventDefault();

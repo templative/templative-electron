@@ -23,6 +23,14 @@ module.exports = class ServerManager {
         return 1
     }
     async shutDownServers() {
-        this.#serverRunners.forEach(serverRunner => serverRunner.shutdownServerIfRunning())
+        try {
+            // Wait for all servers to shut down
+            await Promise.all(
+                this.#serverRunners.map(serverRunner => serverRunner.shutdownServerIfRunning())
+            );
+            log("All servers shut down successfully");
+        } catch (err) {
+            error(`Error during server shutdown: ${err}`);
+        }
     }
 }
