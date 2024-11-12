@@ -74,9 +74,9 @@ export default class CreatePanel extends React.Component {
         }
         await axios.post(`http://127.0.0.1:8080/component`, data)
         this.setState({isProcessing: false})
-        // this.context.setComponentName("");
-        // this.context.setSelectedComponentType(undefined);
-        // this.context.setComponentAIDescription("")
+        this.context.setComponentName("");
+        this.context.setSelectedComponentType(undefined);
+        this.context.setComponentAIDescription("")
     }
 
     render() {

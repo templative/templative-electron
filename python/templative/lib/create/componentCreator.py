@@ -38,7 +38,9 @@ async def createCustomComponent(gameRootDirectoryPath, name, type, componentAIDe
     artdataDirectoryPath = join(gameRootDirectoryPath, gameCompose["artdataDirectory"])
     artTemplatesDirectoryPath = join(gameRootDirectoryPath, gameCompose["artTemplatesDirectory"])
     artOverlaysDirectoryPath = join(gameRootDirectoryPath, gameCompose["artInsertsDirectory"])
-    print(name)
+    
+    print(f"Creating {name} the {type}.")
+
     artdataFiles = await templateComponentProjectUpdater.createArtDataFiles(artdataDirectoryPath, name, componentInfo["ArtDataTypeNames"], componentAIDescription)
     # artdataFiles = {'Front': {'name': 'envoys', 'templateFilename': 'envoysFront', 'textReplacements': [{'key': 'name', 'scope': 'piece', 'source': 'name'}, {'key': 'rules', 'scope': 'component', 'source': 'rules'}], 'styleUpdates': [{'id': 'background', 'cssValue': 'fill', 'scope': 'piece', 'source': 'countryColor'}], 'overlays': [{'scope': 'piece', 'source': 'diplomatImage', 'positionX': 0, 'positionY': 0}]}}
     componentData = await templateComponentProjectUpdater.createComponentJson(componentGamedataDirectoryPath, name, componentAIDescription, artdataFiles)
