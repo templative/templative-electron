@@ -51,7 +51,6 @@ export default class ComponentOutputDirectory extends React.Component {
         }
         if (componentInstructions["backInstructions"] !== undefined && existingFilepaths.has(componentInstructions["backInstructions"]["filepath"])) {
             var filename = `${path.parse(componentInstructions["backInstructions"]["filepath"]).name}.png`
-            console.log(filename)
             imageFilepaths.push({path: this.props.componentDirectory, name: filename})
         }
         if (componentInstructions["dieFaceFilepaths"] !== undefined) {
@@ -132,19 +131,30 @@ export default class ComponentOutputDirectory extends React.Component {
         var componentDirectory = this.props.componentDirectory.replaceAll("\\", "/")
         componentDirectory = componentDirectory.substring(componentDirectory.lastIndexOf("/") + 1, componentDirectory.length)
         
-        var backImage = <></>
+        var backImage = null;
         var imageDivs = this.state.imageFilepaths.map((image, index) => {
-            // console.log(dirent)
             var imagePath = path.join(image.path, image.name)
-            var key = `${imagePath}${index}`
-            // console.log(key)
+            
             if (image.name.endsWith("-back.png")) {
-                backImage = <RenderOutputImage key={key} componentQuantity={this.state.componentQuantity} componentDirectoryName={componentDirectory} imagePath={imagePath} name={image.name}/>
-                return <></>
+                backImage = <RenderOutputImage 
+                    key={`back_${imagePath}`} 
+                    componentQuantity={this.state.componentQuantity} 
+                    componentDirectoryName={componentDirectory} 
+                    imagePath={imagePath} 
+                    name={image.name}
+                />
+                return null;
             }
             
-            return <RenderOutputImage key={key} componentQuantity={this.state.componentQuantity} componentDirectoryName={componentDirectory} imagePath={imagePath} name={image.name} quantity={image.quantity}/>
-        })
+            return <RenderOutputImage 
+                key={`front_${imagePath}`}
+                componentQuantity={this.state.componentQuantity} 
+                componentDirectoryName={componentDirectory} 
+                imagePath={imagePath} 
+                name={image.name} 
+                quantity={image.quantity}
+            />
+        }).filter(Boolean);
         
         var isComplete = this.state.imageFilepaths.length === this.state.totalImageFileCount
         return <div className="renderedComponent">
