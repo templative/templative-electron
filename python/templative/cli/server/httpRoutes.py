@@ -74,7 +74,7 @@ async def createComponent(request):
   if data["directoryPath"] == None:
     return "Missing directoryPath", 400
   
-  await componentCreator.createComponentByType(data["directoryPath"], data["componentName"], data["componentType"])
+  await componentCreator.createComponentByType(data["directoryPath"], data["componentName"], data["componentType"], data["componentAIDescription"])
   return web.Response(status=200)
 
 @routes.get("/component-info")

@@ -81,11 +81,13 @@ export default class CreatePanel extends React.Component {
             componentName: this.context.componentName,
             componentType: this.context.selectedComponentType,
             directoryPath: this.props.templativeRootDirectoryPath,
+            componentAIDescription: this.context.componentAIDescription
         }
         await axios.post(`http://127.0.0.1:8080/component`, data)
         this.setState({isProcessing: false})
         this.context.setComponentName("");
         this.context.setSelectedComponentType(undefined);
+        this.context.setComponentAIDescription("")
     }
 
     toggleCustomOrStock = () => {
@@ -100,16 +102,19 @@ export default class CreatePanel extends React.Component {
         return <div className='mainBody'>
             <div className="create-component-name-row">
                 <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
+
                     <div className="form-check form-switch custom-or-stock">
                         <input className="form-check-input stock-toggle" type="checkbox" role="switch" checked={this.context.isToggledToComponents} onChange={() => {}} onClick={this.toggleCustomOrStock}/>
                         <label className="form-check-label">{this.context.isToggledToComponents ? "Custom" : "Stock"} Components</label>
                     </div>
+
                     <span className="input-group-text">Component Name</span>
                     <input type="text" className="form-control" 
                         onChange={(event)=>this.updateComponentName(event.target.value)} 
-                        aria-label="What key to replace..." 
+                        placeholder="The name of the component" 
                         value={this.context.componentName}
                     />
+
                     <button 
                         disabled={isCreateButtonDisabled}
                         className="btn btn-outline-secondary create-component-button" type="button" id="button-addon1"
@@ -118,6 +123,16 @@ export default class CreatePanel extends React.Component {
                         { this.state.isProcessing && <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>}
                         Create
                     </button>
+                </div>
+                <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
+                    <span className="input-group-text">Description</span>
+                    <textarea className="form-control" 
+                        rows="3"
+                        onChange={(event)=>this.context.setComponentAIDescription(event.target.value)} 
+                        placeholder="e.g. This a deck of foreign envoys. There is an envoy for Russia, Italy, France, Britain, and Sweden. Each card has a name and rules text. The background of the card matches the color of the country. Each card has an overlay that is a famous diplomat from that country..." 
+                        value={this.context.componentAIDescription}
+                        disabled
+                    />
                 </div>
                 { !isCreateButtonDisabled && 
                     <p className="creation-explanation">A {addSpaces(this.context.selectedComponentType)} named {this.context.componentName}...</p>

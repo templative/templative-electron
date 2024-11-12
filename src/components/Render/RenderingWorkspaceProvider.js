@@ -22,6 +22,7 @@ class RenderingWorkspaceProvider extends React.Component {
         componentName: "",
         selectedComponentType: undefined,
         isToggledToComponents: true,
+        componentAIDescription: "",
     };
   }
 
@@ -49,6 +50,10 @@ class RenderingWorkspaceProvider extends React.Component {
     this.setState({ isToggledToComponents: isToggled });
   };
 
+  setComponentAIDescription = (description) => {
+    this.setState({ componentAIDescription: description });
+  };
+
   render() {
     return (
       <RenderingWorkspaceContext.Provider
@@ -60,6 +65,7 @@ class RenderingWorkspaceProvider extends React.Component {
           setComponentName: this.setComponentName,
           setSelectedComponentType: this.setSelectedComponentType,
           setIsToggledToComponents: this.setIsToggledToComponents,
+          setComponentAIDescription: this.setComponentAIDescription,
         }}
       >
         {this.props.children}
