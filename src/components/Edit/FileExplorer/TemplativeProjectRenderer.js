@@ -3,7 +3,9 @@ import TemplativeAccessTools from "../../TemplativeAccessTools";
 import ContentFileList from "./ContentFiles/ContentFileList";
 import "./TemplativeProjectRenderer.css"
 import IconContentFileItem from "./ContentFiles/IconContentFileItem";
-
+import artIcon from "../Icons/artIcon.svg"
+import gamedataIcon from "../Icons/gamedataIcon.svg"
+import ResourceHeader from "./ContentFiles/ResourceHeader";
 const fsOld = require('fs');
 const path = require("path")
 const fs = require("fs/promises")
@@ -180,48 +182,63 @@ export default class TemplativeProjectRenderer extends React.Component {
         }
     }
     render() {
+        const gamedataDirectory = path.join(this.props.templativeRootDirectoryPath, "gamedata")
+        const artDirectory = path.join(this.props.templativeRootDirectoryPath, "art")
+        const isGameDataExtended = this.props.extendedDirectories.has(gamedataDirectory);
+        const isArtExtended = this.props.extendedDirectories.has(artDirectory);
         return <React.Fragment>            
             { this.state.gameCompose !== undefined &&
                 <div className="row file-explorer-row g-0">
                     <div className="col">
-                        <ContentFileList
-                            header="Templates" 
-                            contentType="ART" 
-                            filenameReferenceCounts={this.state.filenameReferenceCounts}
-                            directoryPath={this.state.templatesDirectory}
-                            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                            baseFilepath={this.state.templatesDirectory}
-                            currentFilepath={this.props.currentFilepath} 
-                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
-                            createFileAsyncCallback={this.createFileAsync}
-                            deleteFileAsyncCallback={this.deleteFileAsync}
-                            renameFileAsyncCallback={this.renameFileAsync}
-                            duplicateFileAsyncCallback={this.duplicateFileAsync}
-                            filetype={"TEMPLATES"}    
-                            extendedFileTypes={this.props.extendedFileTypes}    
-                            changeExtendedFileTypeAsyncCallback={this.props.changeExtendedFileTypeAsyncCallback}
-                            extendedDirectories={this.props.extendedDirectories}
-                            changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
-                        />
-                        <ContentFileList
-                            header="Overlays" 
-                            contentType="ART" 
-                            filenameReferenceCounts={this.state.filenameReferenceCounts}
-                            directoryPath={this.state.overlaysDirectory}
-                            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                            baseFilepath={this.state.overlaysDirectory}
-                            currentFilepath={this.props.currentFilepath} 
-                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
-                            createFileAsyncCallback={this.createFileAsync}
-                            deleteFileAsyncCallback={this.deleteFileAsync}
-                            renameFileAsyncCallback={this.renameFileAsync}
-                            duplicateFileAsyncCallback={this.duplicateFileAsync}
-                            filetype={"OVERLAYS"}    
-                            extendedFileTypes={this.props.extendedFileTypes}    
-                            changeExtendedFileTypeAsyncCallback={this.props.changeExtendedFileTypeAsyncCallback}
-                            extendedDirectories={this.props.extendedDirectories}
-                            changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
-                        />
+                    <ResourceHeader 
+                            iconSource={artIcon}
+                            header="Templates and Overlays" 
+                            directory={artDirectory}
+                            isExtended={isArtExtended}
+                            toggleExtendedAsyncCallback={() => this.props.changeExtendedDirectoryAsyncCallback(!isArtExtended, artDirectory)}/>
+                        {isArtExtended &&
+                            <div className="gamedata-indent">
+                                <ContentFileList
+                                    header="Templates" 
+                                    contentType="ART" 
+                                    filenameReferenceCounts={this.state.filenameReferenceCounts}
+                                    directoryPath={this.state.templatesDirectory}
+                                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                                    baseFilepath={this.state.templatesDirectory}
+                                    currentFilepath={this.props.currentFilepath} 
+                                    updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
+                                    createFileAsyncCallback={this.createFileAsync}
+                                    deleteFileAsyncCallback={this.deleteFileAsync}
+                                    renameFileAsyncCallback={this.renameFileAsync}
+                                    duplicateFileAsyncCallback={this.duplicateFileAsync}
+                                    filetype={"TEMPLATES"}    
+                                    extendedFileTypes={this.props.extendedFileTypes}    
+                                    changeExtendedFileTypeAsyncCallback={this.props.changeExtendedFileTypeAsyncCallback}
+                                    extendedDirectories={this.props.extendedDirectories}
+                                    changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
+                                />
+                                <ContentFileList
+                                    header="Overlays" 
+                                    contentType="ART" 
+                                    filenameReferenceCounts={this.state.filenameReferenceCounts}
+                                    directoryPath={this.state.overlaysDirectory}
+                                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                                    baseFilepath={this.state.overlaysDirectory}
+                                    currentFilepath={this.props.currentFilepath} 
+                                    updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
+                                    createFileAsyncCallback={this.createFileAsync}
+                                    deleteFileAsyncCallback={this.deleteFileAsync}
+                                    renameFileAsyncCallback={this.renameFileAsync}
+                                    duplicateFileAsyncCallback={this.duplicateFileAsync}
+                                    filetype={"OVERLAYS"}    
+                                    extendedFileTypes={this.props.extendedFileTypes}    
+                                    changeExtendedFileTypeAsyncCallback={this.props.changeExtendedFileTypeAsyncCallback}
+                                    extendedDirectories={this.props.extendedDirectories}
+                                    changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
+                                />
+                            </div>
+                        }
+                        
                         <ContentFileList
                             header="Artdata" 
                             contentType="ARTDATA" 
@@ -244,62 +261,74 @@ export default class TemplativeProjectRenderer extends React.Component {
                             extendedDirectories={this.props.extendedDirectories}
                             changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
                         />
-                        <ContentFileList
-                            header="Component Gamedata" 
-                            contentType="COMPONENT_GAMEDATA" 
-                            filenameReferenceCounts={this.state.filenameReferenceCounts}
-                            directoryPath={this.state.componentGamedataDirectory}
-                            baseFilepath={this.state.componentGamedataDirectory}
-                            currentFilepath={this.props.currentFilepath} 
-                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
-                            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                            canCreateNewFiles={true}
-                            newFileExtension="json"
-                            getDefaultContentForFileBasedOnFilenameCallback={this.getDefaultContentForFileBasedOnFilename}
-                            createFileAsyncCallback={this.createFileAsync}
-                            deleteFileAsyncCallback={this.deleteFileAsync}
-                            renameFileAsyncCallback={this.renameFileAsync}
-                            duplicateFileAsyncCallback={this.duplicateFileAsync}
-                            filetype={"COMPONENT_GAMEDATA"}    
-                            extendedFileTypes={this.props.extendedFileTypes}    
-                            changeExtendedFileTypeAsyncCallback={this.props.changeExtendedFileTypeAsyncCallback}
-                            extendedDirectories={this.props.extendedDirectories}
-                            changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
+                        <ResourceHeader 
+                            iconSource={gamedataIcon}
+                            header="Gamedata" 
+                            directory={gamedataDirectory}
+                            isExtended={isGameDataExtended}
+                            toggleExtendedAsyncCallback={() => this.props.changeExtendedDirectoryAsyncCallback(!isGameDataExtended, gamedataDirectory)}/>
+                        {isGameDataExtended &&
+                            <div className="gamedata-indent">
+                                <ContentFileList
+                                header="Component Gamedata" 
+                                contentType="COMPONENT_GAMEDATA" 
+                                filenameReferenceCounts={this.state.filenameReferenceCounts}
+                                directoryPath={this.state.componentGamedataDirectory}
+                                baseFilepath={this.state.componentGamedataDirectory}
+                                currentFilepath={this.props.currentFilepath} 
+                                updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
+                                templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                                canCreateNewFiles={true}
+                                newFileExtension="json"
+                                getDefaultContentForFileBasedOnFilenameCallback={this.getDefaultContentForFileBasedOnFilename}
+                                createFileAsyncCallback={this.createFileAsync}
+                                deleteFileAsyncCallback={this.deleteFileAsync}
+                                renameFileAsyncCallback={this.renameFileAsync}
+                                duplicateFileAsyncCallback={this.duplicateFileAsync}
+                                filetype={"COMPONENT_GAMEDATA"}    
+                                extendedFileTypes={this.props.extendedFileTypes}    
+                                changeExtendedFileTypeAsyncCallback={this.props.changeExtendedFileTypeAsyncCallback}
+                                extendedDirectories={this.props.extendedDirectories}
+                                changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
+                            />
+                            <ContentFileList
+                                header="Piece Gamedata" 
+                                contentType="PIECE_GAMEDATA" 
+                                filenameReferenceCounts={this.state.filenameReferenceCounts}
+                                directoryPath={this.state.piecesGamedataDirectory}
+                                baseFilepath={this.state.piecesGamedataDirectory}
+                                currentFilepath={this.props.currentFilepath} 
+                                updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
+                                templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                                canCreateNewFiles={true}
+                                newFileExtension="json"
+                                getDefaultContentForFileBasedOnFilenameCallback={this.getDefaultContentForFileBasedOnFilename}
+                                createFileAsyncCallback={this.createFileAsync}
+                                deleteFileAsyncCallback={this.deleteFileAsync}
+                                renameFileAsyncCallback={this.renameFileAsync}
+                                duplicateFileAsyncCallback={this.duplicateFileAsync}
+                                filetype={"PIECE_GAMEDATA"}    
+                                extendedFileTypes={this.props.extendedFileTypes}    
+                                changeExtendedFileTypeAsyncCallback={this.props.changeExtendedFileTypeAsyncCallback}
+                                extendedDirectories={this.props.extendedDirectories}
+                                changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
+                            />
+                        <IconContentFileItem
+                            contentType={"STUDIO_GAMEDATA"}
+                            currentFilepath={this.props.currentFilepath}
+                            filepath={path.join(this.props.templativeRootDirectoryPath, "studio.json")}
+                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
                         />
-                        <ContentFileList
-                            header="Piece Gamedata" 
-                            contentType="PIECE_GAMEDATA" 
-                            filenameReferenceCounts={this.state.filenameReferenceCounts}
-                            directoryPath={this.state.piecesGamedataDirectory}
-                            baseFilepath={this.state.piecesGamedataDirectory}
-                            currentFilepath={this.props.currentFilepath} 
-                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
-                            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                            canCreateNewFiles={true}
-                            newFileExtension="json"
-                            getDefaultContentForFileBasedOnFilenameCallback={this.getDefaultContentForFileBasedOnFilename}
-                            createFileAsyncCallback={this.createFileAsync}
-                            deleteFileAsyncCallback={this.deleteFileAsync}
-                            renameFileAsyncCallback={this.renameFileAsync}
-                            duplicateFileAsyncCallback={this.duplicateFileAsync}
-                            filetype={"PIECE_GAMEDATA"}    
-                            extendedFileTypes={this.props.extendedFileTypes}    
-                            changeExtendedFileTypeAsyncCallback={this.props.changeExtendedFileTypeAsyncCallback}
-                            extendedDirectories={this.props.extendedDirectories}
-                            changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
-                        />
-                    <IconContentFileItem
-                        contentType={"STUDIO_GAMEDATA"}
-                        currentFilepath={this.props.currentFilepath}
-                        filepath={path.join(this.props.templativeRootDirectoryPath, "studio.json")}
-                        updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                    />
-                    <IconContentFileItem
-                        contentType={"GAME_GAMEDATA"}
-                        currentFilepath={this.props.currentFilepath}
-                        filepath={path.join(this.props.templativeRootDirectoryPath, "game.json")}
-                        updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                    />
+                        <IconContentFileItem
+                            contentType={"GAME_GAMEDATA"}
+                            currentFilepath={this.props.currentFilepath}
+                            filepath={path.join(this.props.templativeRootDirectoryPath, "game.json")}
+                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                            />
+                            </div>
+
+                        } 
+                        
                     <IconContentFileItem
                         contentType={"COMPONENTS"}
                         currentFilepath={this.props.currentFilepath}

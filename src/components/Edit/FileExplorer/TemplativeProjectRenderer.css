@@ -40,3 +40,6 @@
     overflow-y: scroll;
     overflow-x: hidden;
 }
+.gamedata-indent {
+    padding-left: 0.25em;
+}

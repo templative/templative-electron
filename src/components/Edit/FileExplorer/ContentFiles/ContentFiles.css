@@ -1,6 +1,5 @@
 .content-file-item-wrapper, .icon-content-file-item-wrapper {
-    margin-bottom: 0.1em;
-    height:0.75em;
+    height:0.9em;
 }
 
 .content-file-item-wrapper {
@@ -9,8 +8,7 @@
 
 .icon-content-file-item-wrapper {
     padding-left: 0.5em;
-    margin-bottom: 0.1em;
-    height:0.75em;
+    /* margin-bottom: 0.1em; */
 }
 .icon-content-file-item-wrapper:n-child(even), .content-file-item-wrapper:nth-child(even) {
     background-color: hsl(224, 13%, 17.5%);
