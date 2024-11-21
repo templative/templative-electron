@@ -42,3 +42,24 @@ async def updateTemplativeFileForDescription(
         ) as response:
             response_data = await response.json()
             return response_data, response.status
+        
+async def promptChatGPT(
+    prompt: str,
+) -> Tuple[Union[dict, str], int]:
+
+    headers = {
+        'Content-Type': 'application/json'
+    }
+    
+    payload = {
+        'prompt': prompt,
+    }
+    
+    async with aiohttp.ClientSession() as session:
+        async with session.post(
+            f'{baseUrl}/prompt',
+            headers=headers,
+            json=payload
+        ) as response:
+            response_data = await response.json()
+            return response_data, response.status

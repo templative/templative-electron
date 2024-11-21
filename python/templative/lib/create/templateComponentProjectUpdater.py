@@ -1,4 +1,4 @@
-from json import dump
+from json import dump, dumps
 from os import path
 from shutil import copyfile
 import sys
@@ -56,57 +56,71 @@ async def createPiecesJson(piecesDirectoryPath, name, hasPieceQuantity, componen
     if hasPieceQuantity:
         pieces[0]["quantity"] = 1
 
-    needsContent = False
-    if "Front" in artdataFiles:
-        artdata = artdataFiles["Front"]
-        for section in ["textReplacements", "styleUpdates", "overlays"]:
-            for item in artdata.get(section, []):
-                if item["scope"] != "piece":
-                    continue
-                source = item["source"]
-                if source == "displayName" or source == "name" or source == "quantity":
-                    continue
-                needsContent = True
-                pieces[0][source] = "Replace with reasonable content"
+    # needsContent = False
+    # if "Front" in artdataFiles:
+    #     artdata = artdataFiles["Front"]
+    #     for section in ["textReplacements", "styleUpdates", "overlays"]:
+    #         for item in artdata.get(section, []):
+    #             if item["scope"] != "piece":
+    #                 continue
+    #             source = item["source"]
+    #             if source == "displayName" or source == "name" or source == "quantity":
+    #                 continue
+    #             needsContent = True
+    #             pieces[0][source] = "Replace with reasonable content"
     
-    if needsContent and componentAIDescription != None:
-        pieces = await aiArtGenerator.enhancePiecesJson(pieces, componentAIDescription)
+    # if needsContent and componentAIDescription != None:
+    #     pieces = await aiArtGenerator.enhancePiecesJson(pieces, componentAIDescription)
 
     filepath = path.join(piecesDirectoryPath, f'{name}.json')
     with open(filepath, 'w') as piecesJsonFile:
         dump(pieces, piecesJsonFile, indent=4)
+    print(pieces)
     print(f"Created pieces {filepath}")
-    return pieces
+    return {
+        "type": f"pieces",
+        "filepath": filepath,
+        "contents": dumps(pieces)
+    }
+    # return pieces
 
-async def createComponentJson(componentDirectoryPath, name, componentAIDescription, artdataFiles):
+async def createComponentJson(componentDirectoryPath, name):#, componentAIDescription, artdataFiles):
     componentJsonData = {
         "displayName": name,
         "pieceDisplayName": name
     }
-    needsContent = False
-    for face in artdataFiles:
-        artdata = artdataFiles[face]
-        for section in ["textReplacements", "styleUpdates", "overlays"]:
-            for item in artdata.get(section, []):
-                if item["scope"] != "component":
-                    continue
-                if item["source"] == "displayName" or item["source"] == "pieceDisplayName":
-                    continue
-                componentJsonData[item["source"]] = "Replace with reasonable content"
-                needsContent = True
+    # needsContent = False
+    # for face in artdataFiles:
+    #     artdata = artdataFiles[face]
+    #     for section in ["textReplacements", "styleUpdates", "overlays"]:
+    #         for item in artdata.get(section, []):
+    #             if item["scope"] != "component":
+    #                 continue
+    #             if item["source"] == "displayName" or item["source"] == "pieceDisplayName":
+    #                 continue
+    #             componentJsonData[item["source"]] = "Replace with reasonable content"
+    #             needsContent = True
 
-    if needsContent and componentAIDescription != None:
-        componentJsonData = await aiArtGenerator.enhanceComponentJson(componentJsonData, componentAIDescription)
+    # if needsContent and componentAIDescription != None:
+    #     componentJsonData = await aiArtGenerator.enhanceComponentJson(componentJsonData, componentAIDescription)
     
     componentJsonFilepath = path.join(componentDirectoryPath, '%s.json' % name)
 
     with open(componentJsonFilepath, 'w') as componentJsonFile:
         dump(componentJsonData, componentJsonFile, indent=4)
+    print(componentJsonData)
     print(f"Created component json {componentJsonFilepath}")
-    return componentJsonData
 
-async def createArtDataFiles(artDataDirectoryPath, name, artDataTypeNames, componentAIDescription=None):
-    artdatas = {}
+    return {
+        "type": f"component",
+        "filepath": componentJsonFilepath,
+        "contents": dumps(componentJsonData)
+    }
+
+    # return componentJsonData
+
+async def createArtDataFiles(artDataDirectoryPath, name, artDataTypeNames): #, componentAIDescription=None):
+    artdataFiles = []
     for artDataTypeName in artDataTypeNames:
         artDataNameAndSide = f'{name}{artDataTypeName}'
         artdata = {
@@ -116,16 +130,20 @@ async def createArtDataFiles(artDataDirectoryPath, name, artDataTypeNames, compo
             "styleUpdates": [],
             "overlays": []
         }
-        if componentAIDescription and artDataTypeName == "Front":
-            artdata = await aiArtGenerator.enhanceArtdata(artdata, componentAIDescription)
-            
-        with open(path.join(artDataDirectoryPath, f'{artDataNameAndSide}.json'), 'w') as artDataJsonFile:
+        # if componentAIDescription and artDataTypeName == "Front":
+        #     artdata = await aiArtGenerator.enhanceArtdata(artdata, componentAIDescription)
+        filepath = path.join(artDataDirectoryPath, f'{artDataNameAndSide}.json')
+        with open(filepath, 'w') as artDataJsonFile:
             dump(artdata, artDataJsonFile, indent=4)
+        print(artdata)
         print(f"Created artdata {artDataNameAndSide}")
 
-        artdatas[artDataTypeName] = artdata
-
-    return artdatas
+        artdataFiles.append({
+            "type": f"artdata_{artDataTypeName}",
+            "filepath": filepath,
+            "contents": dumps(artdata)
+        })
+    return artdataFiles
 
 
 def resource_path(relative_path):
@@ -140,28 +158,36 @@ def resource_path(relative_path):
 
 async def createArtFiles(artTemplatesDirectoryPath, name, type, artDataTypeNames, componentAIDescription=None, artdataFiles=None):
     componentTemplateFilepath = resource_path(f"templative/lib/create/componentTemplates/{type}.svg")
+    contents = open(componentTemplateFilepath, 'r').read()
+
     print(f"Grabbed template from {componentTemplateFilepath}")
-    
+
+    artFiles = []
     for artDataTypeName in artDataTypeNames:
         artSideName = f'{name}{artDataTypeName}'
         artSideNameFilepath = path.join(artTemplatesDirectoryPath, f"{artSideName}.svg")
         
         print(f"Creating template at {artSideNameFilepath}")
         copyfile(componentTemplateFilepath, artSideNameFilepath)
-        
-        if componentAIDescription and artDataTypeName == "Front":
-            # Read the template SVG
-            with open(artSideNameFilepath, 'r') as svg_file:
-                svg_content = svg_file.read()
+        artFiles.append({
+            "type": f"art_{artDataTypeName}",
+            "filepath": artSideNameFilepath,
+            "contents": contents
+        })
+        # if componentAIDescription and artDataTypeName == "Front":
+        #     # Read the template SVG
+        #     with open(artSideNameFilepath, 'r') as svg_file:
+        #         svg_content = svg_file.read()
             
-            # Get AI-enhanced SVG
-            enhanced_svg = await aiArtGenerator.enhanceSvg(svg_content, componentAIDescription, artdataFiles["Front"])
+        #     # Get AI-enhanced SVG
+        #     enhanced_svg = await aiArtGenerator.enhanceSvg(svg_content, componentAIDescription, artdataFiles["Front"])
             
-            # Save the enhanced SVG
-            with open(artSideNameFilepath, 'w') as svg_file:
-                svg_file.write(enhanced_svg)
-
-            print("Updated template svg.")
+        #     # Save the enhanced SVG
+        #     with open(artSideNameFilepath, 'w') as svg_file:
+        #         svg_file.write(enhanced_svg)
+        #     print(enhanced_svg)
+        #     print("Enhanced template svg.")
+    return artFiles
 
 async def createOverlayFiles(artOverlaysDirectoryPath, type, componentData, piecesData):
     pixelDimensions = COMPONENT_INFO[type]["DimensionsPixels"]

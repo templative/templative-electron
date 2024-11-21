@@ -1,4 +1,5 @@
 from templative.lib.create import templateComponentProjectUpdater
+from templative.lib.ai import aiArtGenerator
 from templative.lib.manage import defineLoader
 from templative.lib.componentInfo import COMPONENT_INFO
 from templative.lib.stockComponentInfo import STOCK_COMPONENT_INFO
@@ -41,39 +42,40 @@ async def createCustomComponent(gameRootDirectoryPath, name, type, componentAIDe
     
     print(f"Creating {name} the {type}.")
 
-    artdataFiles = await templateComponentProjectUpdater.createArtDataFiles(artdataDirectoryPath, name, componentInfo["ArtDataTypeNames"], componentAIDescription)
-    # artdataFiles = {'Front': {'name': 'envoys', 'templateFilename': 'envoysFront', 'textReplacements': [{'key': 'name', 'scope': 'piece', 'source': 'name'}, {'key': 'rules', 'scope': 'component', 'source': 'rules'}], 'styleUpdates': [{'id': 'background', 'cssValue': 'fill', 'scope': 'piece', 'source': 'countryColor'}], 'overlays': [{'scope': 'piece', 'source': 'diplomatImage', 'positionX': 0, 'positionY': 0}]}}
-    componentData = await templateComponentProjectUpdater.createComponentJson(componentGamedataDirectoryPath, name, componentAIDescription, artdataFiles)
-    # componentData = {
-    #     "displayName": "Foreign Envoys",
-    #     "pieceDisplayName": "Envoy Card",
-    #     "rules": "Each card represents an envoy from Russia, Italy, France, Britain, or Sweden. Each card contains a name and rules text. The background of the card matches the color of the country it represents. Each card also features an overlay of a famous diplomat from the respective country."
-    # }
-    # piecesData = [{"name": "russianenvoy", "displayName": "Russian Envoy", "quantity": 1, "rules": "Replace with reasonable content", "countryColor": "Red", "diplomatImage": "russianDiplomat"},
-    # {"name": "italianenvoy", "displayName": "Italian Envoy", "quantity": 1, "rules": "Replace with reasonable content", "countryColor": "Green", "diplomatImage": "italianDiplomat"},
-    # {"name": "frenchenvoy", "displayName": "French Envoy", "quantity": 1, "rules": "Replace with reasonable content", "countryColor": "Blue", "diplomatImage": "frenchDiplomat"},
-    # {"name": "britishenvoy", "displayName": "British Envoy", "quantity": 1, "rules": "Replace with reasonable content", "countryColor": "Red", "diplomatImage": "britishDiplomat"},
-    # {"name": "swedishenvoy", "displayName": "Swedish Envoy", "quantity": 1, "rules": "Replace with reasonable content", "countryColor": "Blue", "diplomatImage": "swedishDiplomat"}]
-    piecesData = []
+    files = []
+
+    artdataFiles = await templateComponentProjectUpdater.createArtDataFiles(artdataDirectoryPath, name, componentInfo["ArtDataTypeNames"])#, componentAIDescription)
+    files.extend(artdataFiles)
+
+    componentFile = await templateComponentProjectUpdater.createComponentJson(componentGamedataDirectoryPath, name)#, componentAIDescription, artdataFiles)
+    files.append(componentFile)
+
+    
+    # piecesData = []
     if componentInfo["HasPieceData"]:
         hasPieceQuantity = componentInfo["HasPieceQuantity"]
-        piecesData = await templateComponentProjectUpdater.createPiecesJson(
+        piecesFile = await templateComponentProjectUpdater.createPiecesJson(
             piecesDirectoryPath, 
             name, 
-            hasPieceQuantity, 
-            componentAIDescription,  
-            artdataFiles
+            hasPieceQuantity#, 
+            # componentAIDescription,  
+            # artdataFiles
         )
+        files.append(piecesFile)
 
-    await templateComponentProjectUpdater.createArtFiles(
+    artFiles = await templateComponentProjectUpdater.createArtFiles(
         artTemplatesDirectoryPath, 
         name, 
         type, 
-        componentInfo["ArtDataTypeNames"], 
-        componentAIDescription, 
-        artdataFiles
+        componentInfo["ArtDataTypeNames"]#, 
+        # componentAIDescription, 
+        # artdataFiles
     )
-    await templateComponentProjectUpdater.createOverlayFiles(artOverlaysDirectoryPath, type, componentData, piecesData)
+    files.extend(artFiles)
+
+    result = await aiArtGenerator.wireUpComponent(componentAIDescription, files)
+    print(result)
+    # await templateComponentProjectUpdater.createOverlayFiles(artOverlaysDirectoryPath, type, componentData, piecesData)
 
 async def createStockComponent(gameRootDirectoryPath, name, stockPartId):
     if name == None or name == "":
