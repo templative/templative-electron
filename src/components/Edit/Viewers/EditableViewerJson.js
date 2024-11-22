@@ -7,9 +7,10 @@ export default class EditableViewerJson extends EditableViewerRaw {
             console.log("Skipping saving due to not being loaded yet.")
             return
         }
-        var newFileContents = JSON.stringify(content, null, 4)
-        // console.log(`Saving json ${filepath}`)//\n${newFileContents}`)
+        const newFileContents = JSON.stringify(content, null, 4)
+        console.log(`Saving json ${filepath}`)
         await this.props.saveFileAsyncCallback(filepath, newFileContents)
+        this.setState({ lastKnownFileContents: content })
     }
 
     loadFileContent = async (filepath) => {

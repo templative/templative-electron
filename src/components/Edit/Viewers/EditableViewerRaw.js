@@ -7,46 +7,93 @@ export default class EditableViewerRaw extends React.Component {
     state = {
         content: undefined,
         hasLoaded: false,
-        filepath: undefined
+        filepath: undefined,
+        lastKnownFileContents: undefined
     }
-    updateContent = (value) => {
-        this.setState({content: value, hasLoaded: true}, async () => await this.autosave())
-    }
-    saveAsync = async (filepath, fileContents) => {
-        if (filepath === undefined || fileContents === undefined) {
-            console.log("Skipping saving due to not being loaded yet.")
+
+    saveAsync = async (filepath, content) => {
+        if (filepath === undefined || content === undefined) {
             return
         }
-        // console.log(`Saving ${filepath}`)//\n${fileContents}`)
-        await this.props.saveFileAsyncCallback(filepath, fileContents)
+        await this.props.saveFileAsyncCallback(filepath, content)
+        console.log(`💾 Saved ${filepath}`);
+        this.setState({ lastKnownFileContents: content })
     }
+
     getFilePath = (props) => {
         console.error("getFilepath not defined!")
         return "" // Define this
     }
+
     autosave = async () => {
+        await this.checkForExternalChanges()
+
+        if (this.state.content === this.state.lastKnownFileContents) {
+            return;
+        }
         await this.saveAsync(this.state.filepath, this.state.content)
     }
+
     loadFileContent = async (filepath) => {
         return await TemplativeAccessTools.readFileContentsAsync(filepath)
     }
+
     startAutoSave = async () => {
         if (this.saveIntervalId !== undefined) {
             await clearIntervalAsync(this.saveIntervalId)
             this.saveIntervalId = undefined
         }
-        // console.log("Starting autosave.")
         this.saveIntervalId = setIntervalAsync(this.autosave, 10*1000)
     }
+
     loadContentAndStartAutoSave = async () => {
         const filepath = this.getFilePath(this.props)
         const content = await this.loadFileContent(filepath)
-        this.setState({ content: content, hasLoaded: true, filepath: filepath }, async () => await this.startAutoSave());
+        
+        this.setState({ 
+            content: content, 
+            hasLoaded: true, 
+            filepath: filepath,
+            lastKnownFileContents: content
+        }, async () => {
+            await this.startAutoSave()
+        });
     };
-    
+
+    checkForExternalChanges = async () => {
+        if (!this.state.filepath) return;
+        
+        try {
+            const currentFileContent = await this.loadFileContent(this.state.filepath)
+            
+            if (currentFileContent !== this.state.lastKnownFileContents) {
+                this.setState({ 
+                    lastKnownFileContents: currentFileContent
+                })
+                
+                if (this.state.content === this.state.lastKnownFileContents) {
+                    this.setState({
+                        content: currentFileContent
+                    })
+                }
+            }
+        } catch (error) {
+            console.error("Error checking for external changes:", error)
+        }
+    }
+
+    startExternalChangeCheck = () => {
+        if (this.externalCheckIntervalId !== undefined) {
+            clearInterval(this.externalCheckIntervalId)
+        }
+        this.externalCheckIntervalId = setInterval(this.checkForExternalChanges, 5000)
+    }
+
     async componentDidMount() {
         await this.loadContentAndStartAutoSave()
+        this.startExternalChangeCheck()
     }
+
     async componentDidUpdate(prevProps) {
         const filePathsUnchanged = this.getFilePath(prevProps) === this.getFilePath(this.props);
         if (filePathsUnchanged) {
@@ -55,7 +102,6 @@ export default class EditableViewerRaw extends React.Component {
         const previousFilepath = this.getFilePath(prevProps)
         const previousContent = this.state.content
     
-        // console.log(`EditableViewerRaw Filepaths changed from ${this.getFilePath(prevProps)} to ${this.getFilePath(this.props)}`);
         if (this.saveIntervalId !== undefined) {
             await clearIntervalAsync(this.saveIntervalId);
             this.saveIntervalId = undefined;
@@ -67,12 +113,14 @@ export default class EditableViewerRaw extends React.Component {
     };
     
     async componentWillUnmount() {
-        if (this.saveIntervalId === undefined) {
-            return
+        if (this.saveIntervalId !== undefined) {
+            await clearIntervalAsync(this.saveIntervalId)
+            this.saveIntervalId = undefined
         }
-        // console.log("Autosave on close")
-        await clearIntervalAsync(this.saveIntervalId)
-        this.saveIntervalId = undefined
+        if (this.externalCheckIntervalId !== undefined) {
+            clearInterval(this.externalCheckIntervalId)
+            this.externalCheckIntervalId = undefined
+        }
         await this.autosave()
     }
 }

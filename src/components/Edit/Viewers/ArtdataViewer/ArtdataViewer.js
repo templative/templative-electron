@@ -87,16 +87,16 @@ export default class ArtdataViewer extends EditableViewerJson {
     getFilePath = (props) => {
         return props.filepath
     }
-    addArtdataItem(artdataType){
-        var newArtdataContents = this.state.content
-        var newArtdataItem = structuredClone(DEFAULT_ARTDATA_ITEMS[artdataType])
+    addArtdataItem(artdataType) {
+        const newArtdataContents = { ...this.state.content }
+        const newArtdataItem = structuredClone(DEFAULT_ARTDATA_ITEMS[artdataType])
         newArtdataContents[artdataType].push(newArtdataItem)
         this.setState({
             content: newArtdataContents
         }, async () => this.autosave())
     }
     deleteArtdata(artdataType, index) {
-        var newArtdataContents = this.state.content
+        const newArtdataContents = { ...this.state.content }
         newArtdataContents[artdataType].splice(index, 1)
         console.log(newArtdataContents)
         this.setState({
@@ -104,7 +104,7 @@ export default class ArtdataViewer extends EditableViewerJson {
         }, async () => this.autosave())
     }
     updateArtdataField(artdataType, index, field, value) {
-        var newArtdataContents = this.state.content
+        const newArtdataContents = { ...this.state.content }
         newArtdataContents[artdataType][index][field] = value
         this.setState({
             content: newArtdataContents
@@ -114,7 +114,7 @@ export default class ArtdataViewer extends EditableViewerJson {
         if (this.state.content === undefined) {
             return
         }
-        var newArtdataContents = this.state.content
+        const newArtdataContents = { ...this.state.content }
         newArtdataContents.templateFilename = newTemplate
         this.setState({
             content: newArtdataContents
@@ -128,9 +128,9 @@ export default class ArtdataViewer extends EditableViewerJson {
         if (to === -1 || to === this.state.content[type].length) {
             return;
         }
-        var newArtdataContents = this.state.content
+        const newArtdataContents = { ...this.state.content }
 
-        var temp = newArtdataContents[type][to]
+        const temp = newArtdataContents[type][to]
         newArtdataContents[type][to] = newArtdataContents[type][from]
         newArtdataContents[type][from] = temp
 
@@ -140,8 +140,8 @@ export default class ArtdataViewer extends EditableViewerJson {
     };
 
     addTextSuggestion = (suggestion) => {
-        var newArtdataContents = this.state.content
-        var newArtdataItem = structuredClone(DEFAULT_ARTDATA_ITEMS["textReplacements"])
+        const newArtdataContents = { ...this.state.content }
+        const newArtdataItem = structuredClone(DEFAULT_ARTDATA_ITEMS["textReplacements"])
         newArtdataItem["key"] = suggestion
         newArtdataItem["source"] = suggestion
         newArtdataContents["textReplacements"].push(newArtdataItem)

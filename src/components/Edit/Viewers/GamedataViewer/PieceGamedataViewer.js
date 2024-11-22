@@ -18,9 +18,9 @@ export default class PieceGamedataViewer extends EditableViewerJson {
     }
     
     addBlankKeyValuePair = () => {
-        var newContents = this.state.content
-        this.state.content.forEach((element, index) => {
-            newContents[index][""] = ""
+        const newContents = [...this.state.content]
+        newContents.forEach((element, index) => {
+            newContents[index] = { ...newContents[index], "": "" }
         });
         
         this.setState({
@@ -29,17 +29,18 @@ export default class PieceGamedataViewer extends EditableViewerJson {
     }
     
     updateValue = (index, key, newValue) => {
-        var newContents = this.state.content
-        newContents[index][key] = newValue
+        const newContents = [...this.state.content]
+        newContents[index] = { ...newContents[index], [key]: newValue }
         this.setState({
             content: newContents
         }, async () => this.autosave())
     }
     removeKeyValuePairFromAllPieces = (key) => {
-        var newContents = this.state.content
-        this.state.content.forEach((element, index) => {
-            delete newContents[index][key]
-        });
+        const newContents = this.state.content.map(element => {
+            const newElement = { ...element }
+            delete newElement[key]
+            return newElement
+        })
         this.setState({
             content: newContents
         }, async () => this.autosave())
@@ -51,10 +52,9 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         })
     }
     updateKey = (oldKey, newKey) => {
-        console.log(`"${oldKey}"`, `"${newKey}"`)
-
-        var newContents = this.state.content
-        this.state.content.forEach((element, index) => {
+        const newContents = [...this.state.content]
+        newContents.forEach((element, index) => {
+            newContents[index] = { ...newContents[index] }
             newContents[index][newKey] = newContents[index][oldKey] !== undefined ? newContents[index][oldKey] : ""
             delete newContents[index][oldKey]
         });
@@ -77,24 +77,24 @@ export default class PieceGamedataViewer extends EditableViewerJson {
     }
 
     addPiece = () => {
-        var newPiece = { }
+        const newPiece = { }
 
         if (this.state.content.length > 0) {
             Object.keys(this.state.content[0]).forEach((key) => {
                 newPiece[key] = key === "quantity" ? 1 : ""
             });
         }
-        var newContents = this.state.content
+        const newContents = [...this.state.content]
         newContents.unshift(newPiece)
         this.setState({
             content: newContents
         }, async () => this.autosave())
     }
     duplicatePieceByIndex = (index) => {
-        var duplicate = Object.assign({},this.state.content[index])
+        const duplicate = { ...this.state.content[index] }
         do {
             duplicate["name"] = duplicate["name"] + "_copy"
-            var hasName = false
+            let hasName = false
             for (let index = 0; index < this.state.content.length; index++) {
                 const element = this.state.content[index];
                 if (duplicate["name"] === element["name"]) {
@@ -104,7 +104,7 @@ export default class PieceGamedataViewer extends EditableViewerJson {
             }
         } while (hasName);
 
-        var newContents = this.state.content
+        const newContents = [...this.state.content]
         newContents.unshift(duplicate)
         this.setState({
             content: newContents
@@ -112,7 +112,7 @@ export default class PieceGamedataViewer extends EditableViewerJson {
     }
 
     deletePiece = (index) => {
-        var newContents = this.state.content
+        const newContents = [...this.state.content]
         newContents.splice(index,1)
         this.setState({
             content: newContents

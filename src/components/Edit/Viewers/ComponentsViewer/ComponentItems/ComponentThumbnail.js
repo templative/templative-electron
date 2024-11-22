@@ -2,7 +2,7 @@ import React from "react";
 const path = require("path")
 import TemplativeAccessTools from "../../../../TemplativeAccessTools";
 
-export default class ComponentThumbnail extends React.Component {   
+export default React.memo(class ComponentThumbnail extends React.Component {   
     state = {
         images: [],
         currentImageIndex: 0,
@@ -71,4 +71,4 @@ export default class ComponentThumbnail extends React.Component {
             <img className="component-thumbnail" src={this.state.images[this.state.currentImageIndex]}/>
         </div> 
     }
-}
+})

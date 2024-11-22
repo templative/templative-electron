@@ -41,8 +41,9 @@ export default class ComponentsViewer extends EditableViewerJson {
     }
 
     updateComponentField(index, field, value) {
-        var newComponents = this.state.content
-        newComponents[index][field] = value
+        const newComponents = [...this.state.content];
+        newComponents[index] = { ...newComponents[index], [field]: value };
+        
         this.setState({
             content: newComponents
         }, async () => this.autosave())
@@ -54,7 +55,7 @@ export default class ComponentsViewer extends EditableViewerJson {
         if (this.state.floatingName === undefined || this.state.floatingNameIndex === undefined) {
             return
         }
-        var newComponents = this.state.content
+        const newComponents = [...this.state.content]
         newComponents[this.state.floatingNameIndex]["name"] = this.state.floatingName
         this.setState({
             content: newComponents.sort(sortComponents),
@@ -63,7 +64,7 @@ export default class ComponentsViewer extends EditableViewerJson {
         }, async () => this.autosave())
     }
     deleteComponent(index) {
-        var newComponents = this.state.content
+        const newComponents = [...this.state.content]
         newComponents.splice(index,1)
         this.setState({
             content: newComponents.sort(sortComponents),
@@ -72,11 +73,8 @@ export default class ComponentsViewer extends EditableViewerJson {
         }, async () => this.autosave())
     }
     duplicateComponent = (index) => {
-        var newComponents = this.state.content
-        var newComponent = {}
-        for (const [key, value] of Object.entries(this.state.content[index])) {
-            newComponent[key] = value
-        }
+        const newComponents = [...this.state.content]
+        const newComponent = { ...this.state.content[index] }
         newComponent["name"] = `${newComponent["name"]}Copy`
         newComponents.push(newComponent)
         this.setState({

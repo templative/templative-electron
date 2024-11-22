@@ -15,7 +15,7 @@ export default class StudioGamedataViewer extends EditableViewerJson {
     }
     
     addBlankKeyValuePair() {
-        var newGamedataFileContents = this.state.content
+        const newGamedataFileContents = { ...this.state.content }
         newGamedataFileContents[""] = ""
         this.setState({
             content: newGamedataFileContents
@@ -23,14 +23,14 @@ export default class StudioGamedataViewer extends EditableViewerJson {
     }
     
     updateValue(key, newValue) {
-        var newGamedataFileContents = this.state.content
+        const newGamedataFileContents = { ...this.state.content }
         newGamedataFileContents[key] = newValue
         this.setState({
             content: newGamedataFileContents
         }, async () => this.autosave())
     }
     removeKeyValuePair(key) {
-        var newGamedataFileContents = this.state.content
+        const newGamedataFileContents = { ...this.state.content }
         delete newGamedataFileContents[key]
         this.setState({
             content: newGamedataFileContents
@@ -43,7 +43,7 @@ export default class StudioGamedataViewer extends EditableViewerJson {
         })
     }
     updateKey(oldKey, newKey) {
-        var newGamedataFileContents = this.state.content
+        const newGamedataFileContents = { ...this.state.content }
         newGamedataFileContents[newKey] = newGamedataFileContents[oldKey]
         delete newGamedataFileContents[oldKey]
         this.setState({
