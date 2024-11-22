@@ -254,10 +254,6 @@
     background-color: #00000000 !important;
     padding: 2px 0px 2px 0px;
 }
-
-.branch-controls:hover {
-    /* background-color: rgba(0, 0, 0, 0) !important; */
-}
 .branch-status .ahead {
     color: hsl(205, 79%, 70%);  
 }

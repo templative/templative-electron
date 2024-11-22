@@ -75,24 +75,37 @@ export default class GitStatusViewer extends React.Component {
             status.split('\n').forEach(line => {
                 if (!line) return;
                 const [status, file] = [line.slice(0, 2), line.slice(3)];
-                const statusInfo = {
-                    path: file,
-                    type: status === '??' ? 'U' : 
-                          status.includes('R') ? 'R' : 
-                          status.includes('M') ? 'M' : 
-                          status.includes('A') ? 'A' : 
-                          status.includes('D') ? 'D' : 
-                          status === 'UU' || status === 'AA' ? 'C' : ''
+                
+                // Handle index and working tree status separately
+                const [indexStatus, workingStatus] = status.split('');
+                
+                const getStatusType = (status) => {
+                    return status === '?' ? 'U' : 
+                           status === 'R' ? 'R' : 
+                           status === 'M' ? 'M' : 
+                           status === 'A' ? 'A' : 
+                           status === 'D' ? 'D' : 
+                           status === 'U' ? 'C' : '';
                 };
 
                 if (status === 'UU' || status === 'AA') {
-                    mergeConflicts.push(statusInfo);
-                } else if (status === '??') {
-                    modifiedFiles.push(statusInfo);
-                } else if (status[0] === ' ' && status[1] !== ' ') {
-                    modifiedFiles.push(statusInfo);
-                } else if (status[0] !== ' ') {
-                    stagedFiles.push(statusInfo);
+                    mergeConflicts.push({ path: file, type: 'C' });
+                } else {
+                    // Handle staged changes (index)
+                    if (indexStatus !== ' ' && indexStatus !== '?') {
+                        stagedFiles.push({
+                            path: file,
+                            type: getStatusType(indexStatus)
+                        });
+                    }
+
+                    // Handle unstaged changes (working tree)
+                    if (workingStatus !== ' ') {
+                        modifiedFiles.push({
+                            path: file,
+                            type: status === '??' ? 'U' : getStatusType(workingStatus)
+                        });
+                    }
                 }
             });
 
@@ -201,7 +214,9 @@ export default class GitStatusViewer extends React.Component {
 
     revertFile = (filePath) => {
         try {
-            execSync(`git checkout -- "${filePath}"`, {
+            // Use git restore instead of git checkout
+            // --worktree flag ensures we only discard working tree changes
+            execSync(`git restore --worktree "${filePath}"`, {
                 cwd: this.props.templativeRootDirectoryPath
             });
             this.checkGitStatus();
@@ -212,7 +227,9 @@ export default class GitStatusViewer extends React.Component {
 
     unstageFile = (filePath) => {
         try {
-            execSync(`git reset HEAD "${filePath}"`, {
+            // Use git restore --staged instead of git reset HEAD
+            // This is the modern equivalent and handles combined changes better
+            execSync(`git restore --staged "${filePath}"`, {
                 cwd: this.props.templativeRootDirectoryPath
             });
             this.checkGitStatus();
@@ -234,7 +251,8 @@ export default class GitStatusViewer extends React.Component {
 
     unstageAllFiles = () => {
         try {
-            execSync('git reset HEAD .', {
+            // Update unstageAllFiles to use git restore as well
+            execSync('git restore --staged .', {
                 cwd: this.props.templativeRootDirectoryPath
             });
             this.checkGitStatus();
@@ -256,7 +274,8 @@ export default class GitStatusViewer extends React.Component {
 
     revertAllFiles = () => {
         try {
-            execSync('git checkout -- .', {
+            // Update revertAllFiles to use git restore as well
+            execSync('git restore --worktree .', {
                 cwd: this.props.templativeRootDirectoryPath
             });
             this.checkGitStatus();
@@ -388,6 +407,8 @@ export default class GitStatusViewer extends React.Component {
         // For rebase strategy, we can pull with local changes
         const canPull = this.state.branchStatus.behind > 0 && !hasLocalChanges;
 
+        const isCommitDisabled = (this.state.isRebasing && this.state.mergeConflicts.length > 0) || this.state.stagedFiles.length == 0 || !this.state.commitMessage
+
         return (
             <div className="git-status-viewer">
                 <div className="git-header">
@@ -466,7 +487,7 @@ export default class GitStatusViewer extends React.Component {
                         <div className="input-group input-group-sm" data-bs-theme="dark">
                             <button 
                                 onClick={this.state.isRebasing ? this.continueRebase : this.commitChanges}
-                                disabled={this.state.isRebasing && this.state.mergeConflicts.length > 0}
+                                disabled={isCommitDisabled}
                                 className={`btn btn-outline-secondary commit-button ${this.state.isRebasing && this.state.mergeConflicts.length > 0 ? 'has-conflicts' : ''}`}
                                 title={this.state.isRebasing && this.state.mergeConflicts.length > 0 
                                     ? "Resolve all conflicts before continuing rebase" 
