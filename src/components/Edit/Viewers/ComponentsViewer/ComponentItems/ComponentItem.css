@@ -3,21 +3,31 @@
     border: 1px solid rgb(73, 80, 87);
     width: 100%;
     border-radius: 4px;
-    /* padding-top: 1em; */
     margin-bottom: 1em;
+    display: flex;
+    align-items: center;
 }
+
+
 .component-quick-glance {
     /* height: 10em; */
-    width: calc(100% - 90px) !important;
     /* border-left: 1px solid rgb(73, 80, 87); */
-
+    width: 100%;
     display: inline-block;
     font-size: 14px;   
+}
+.thumbnaild-component-quick-glance {
+    width: calc(100% - 90px) !important;
+
 }
 .component-thumbnail-wrapper {
     display: inline-block;
     height: 90px;
     width: 90px !important;
+    display: flex;
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+    align-items: center;
 }
 .component-name {
     padding-left: 0.5em;
@@ -89,4 +99,21 @@
 }
 .change-files-icon {
     margin-bottom:3px;
+}
+.edit-component-button, .render-component-button {
+    /* 105px / 2 buttons */
+    width: calc(50% - 52.5px); 
+    background-color: hsl(210, 10%, 19%);
+    border:none !important;
+    border-left: 1px solid rgb(73, 80, 87) !important;
+}
+.edit-component-button:hover, .render-component-button:hover {
+    background-color: hsl(210, 10%, 19%) !important;
+}
+.disabled-header {
+    border-left: 1px solid rgb(73, 80, 87) !important;
+    z-index: 999;
+}
+.component-quantity-input {
+    max-width: 7ch !important;
 }

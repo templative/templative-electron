@@ -30,6 +30,8 @@ export default class ComponentsViewer extends EditableViewerJson {
             filteredComponentType: undefined,
             filteredNameSubstring: undefined,
             componentThumbnails: {},
+            showDeleteConfirm: false,
+            componentToDelete: null,
         }
         this.scrollableDivRef = React.createRef();
     }
@@ -60,11 +62,13 @@ export default class ComponentsViewer extends EditableViewerJson {
             floatingNameIndex: undefined
         }, async () => this.autosave())
     }
-    deleteComponent = (index) => {
+    deleteComponent(index) {
         var newComponents = this.state.content
         newComponents.splice(index,1)
         this.setState({
             content: newComponents.sort(sortComponents),
+            showDeleteConfirm: false,
+            componentToDelete: null
         }, async () => this.autosave())
     }
     duplicateComponent = (index) => {
@@ -91,7 +95,7 @@ export default class ComponentsViewer extends EditableViewerJson {
                 component={component} 
                 componentTypesCustomInfo={this.props.componentTypesCustomInfo}
                 componentTypesStockInfo={this.props.componentTypesStockInfo}
-                deleteComponentCallback={()=> this.deleteComponent(index)}
+                deleteComponentCallback={() => this.handleDelete(index)}
                 duplicateComponentCallback={() => this.duplicateComponent(index)}
                 isFloatingName={isFloatingName}
                 floatingName={this.state.floatingName}
@@ -119,7 +123,7 @@ export default class ComponentsViewer extends EditableViewerJson {
             isDebugInfo={component.isDebugInfo}
             disabled={component.disabled}
             quantity={component.quantity}
-            deleteComponentCallback={()=> this.deleteComponent(index)}
+            deleteComponentCallback={() => this.handleDelete(index)}
             duplicateComponentCallback={() => this.duplicateComponent(index)}
             isFloatingName={isFloatingName}
             floatingName={this.state.floatingName}
@@ -127,6 +131,7 @@ export default class ComponentsViewer extends EditableViewerJson {
             releaseFloatingNameCallback={() => this.releaseFloatingName()}
             updateComponentFieldCallback={(field, value)=> {this.updateComponentField(index, field, value)}}
             thumbnailSource={thumbnailSource}
+            updateRouteCallback={this.props.updateRouteCallback}
         />
     }
 
@@ -297,6 +302,24 @@ export default class ComponentsViewer extends EditableViewerJson {
         this.setState({ componentThumbnails: thumbnails });
     }
 
+    handleDelete = (index) => {
+        this.setState({ 
+            showDeleteConfirm: true,
+            componentToDelete: index
+        });
+    }
+
+    confirmDelete = () => {
+        this.deleteComponent(this.state.componentToDelete);
+    }
+
+    cancelDelete = () => {
+        this.setState({ 
+            showDeleteConfirm: false,
+            componentToDelete: null
+        });
+    }
+
     render() {
         var componentItems = this.loadComponentItems()
         var componentHeaders = this.loadComponentHeaders()
@@ -316,7 +339,7 @@ export default class ComponentsViewer extends EditableViewerJson {
                 </div>
             }
             <div className="col no-gutters">
-                <div className="row component-filters-row">
+                <div className={`row component-filters-row ${this.state.showDeleteConfirm ? 'pe-none' : ''}`}>
                     <div className="col no-gutters">
                         <ComponentFilters 
                             components={components}
@@ -327,7 +350,7 @@ export default class ComponentsViewer extends EditableViewerJson {
                         />
                     </div>
                 </div>
-                <div className="row component-items-row">
+                <div className={`row component-items-row ${this.state.showDeleteConfirm ? 'pe-none' : ''}`}>
                     <div className="col no-gutters" ref={this.scrollableDivRef}>
                         { componentItems.length === 0 &&
                             <img className="no-components-svg" src={NoComponentsSVG} alt="Suggestion to create a component with the create components tab"/>
@@ -336,6 +359,29 @@ export default class ComponentsViewer extends EditableViewerJson {
                     </div>
                 </div>
             </div>
+
+            {this.state.showDeleteConfirm && (
+                <>
+                    <div className="modal-backdrop show"></div>
+                    <div className="modal show d-block delete-modal" tabIndex="-1">
+                        <div className="modal-dialog">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h5 className="modal-title">Delete {this.state.content[this.state.componentToDelete].name}?</h5>
+                                </div>
+                                <div className="modal-body">
+                                    <p>Are you sure you want to delete the <span className="component-name-to-delete">{this.state.content[this.state.componentToDelete].name}</span>?</p>
+                                    <p className="deletion-disclaimer">This does not delete the art files, the artdata files, nor the gamedata files that this component currently uses.</p>
+                                </div>
+                                <div className="modal-footer">
+                                    <button type="button" className="btn btn-secondary" onClick={this.cancelDelete}>Cancel</button>
+                                    <button type="button" className="btn btn-danger" onClick={this.confirmDelete}>Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </>
+            )}
         </div> 
     }
 }

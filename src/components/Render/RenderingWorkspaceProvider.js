@@ -21,10 +21,10 @@ class RenderingWorkspaceProvider extends React.Component {
         selectedComponentFilter: undefined,
         exportOptionIndex: 0,
         // Create
-        componentName: "",
-        selectedComponentType: undefined,
+        componentName: "", //"citizens",
+        selectedComponentType: undefined, //"CustomPrintedMeeple",
         isToggledToComponents: true,
-        componentAIDescription: "",
+        componentAIDescription: "",//"This is a deck of people. There are thirty cards in it. Each card has a shirt color, hat color, and pants color. The background of the card is three rectangles stacked on top of each other, with the top taking the hat color, the middle taking the shirt color, and the bottom taking the pants color. The name of each card is a random first name.",
         componentTypeSearch: "",
     };
   }

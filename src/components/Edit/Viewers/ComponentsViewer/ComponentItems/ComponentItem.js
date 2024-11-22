@@ -1,7 +1,6 @@
 import React from "react";
 import "./ComponentItem.css"
 import TemplativeAccessTools from "../../../../TemplativeAccessTools";
-import ComponentUpshotControls from "./ComponentItem/ComponentUpshotControls";
 import EditComponentControls from "./ComponentItem/EditComponentControls";
 import ComponentThumbnail from "./ComponentThumbnail";
 const path = require("path")
@@ -20,7 +19,7 @@ export default class ComponentItem extends React.Component {
         backArtdataExists: false,
         dieFaceArtdataExists: false,
         thumbnailSource: undefined,
-        isEditing: false,
+        isEditing: true,
         isStock: false,
     }
     toggleIsEditing = () => {
@@ -79,6 +78,7 @@ export default class ComponentItem extends React.Component {
         }
         return false
     }
+    
     render() {
         var isDebug = this.props.isDebugInfo === true
         const hasCustomComponentInfo = this.props.componentTypesCustomInfo[this.props.componentType] != null
@@ -89,17 +89,16 @@ export default class ComponentItem extends React.Component {
 
         var stockOptions = Object.keys(this.props.componentTypesStockInfo).map(key => "STOCK_" + key)
         var typeOptions = Object.keys(this.props.componentTypesCustomInfo).concat(stockOptions)
-        var Controls = this.state.isEditing ? EditComponentControls : ComponentUpshotControls
-        return <div className="component-quick-glance-container row g-0">
+        return <div className={"component-quick-glance-container row g-0"}>
             
             {this.props.thumbnailSource !== undefined &&
                 <ComponentThumbnail outputFolderDirectoryPath={this.props.thumbnailSource}/>
             }
-            <div className="component-quick-glance" 
+            <div className={"component-quick-glance" + (this.props.thumbnailSource !== undefined ? " thumbnaild-component-quick-glance" : "")} 
                 onMouseOver={this.handleMouseOver}
                 onMouseLeave={this.handleMouseOut}>
                 
-                <Controls 
+                <EditComponentControls 
                     isHovering={this.state.isHovering}
                     hasFrontArtdata={hasFrontArtdata}
                     hasDieFaceArtdata={hasDieFaceArtdata}
@@ -142,6 +141,7 @@ export default class ComponentItem extends React.Component {
                     releaseFloatingNameCallback={this.props.releaseFloatingNameCallback}
                     updateComponentFieldCallback={this.props.updateComponentFieldCallback}
                     typeOptions={typeOptions}
+                    updateRouteCallback={this.props.updateRouteCallback}
                 />
             </div> 
         </div> 

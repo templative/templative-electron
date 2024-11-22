@@ -192,7 +192,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                     <div className="col">
                     <ResourceHeader 
                             iconSource={artIcon}
-                            header="Templates and Overlays" 
+                            header="Art Files" 
                             directory={artDirectory}
                             isExtended={isArtExtended}
                             toggleExtendedAsyncCallback={() => this.props.changeExtendedDirectoryAsyncCallback(!isArtExtended, artDirectory)}/>
@@ -240,7 +240,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                         }
                         
                         <ContentFileList
-                            header="Artdata" 
+                            header="Artdata Files" 
                             contentType="ARTDATA" 
                             filenameReferenceCounts={this.state.filenameReferenceCounts}
                             directoryPath={this.state.artdataDirectory}
@@ -263,7 +263,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                         />
                         <ResourceHeader 
                             iconSource={gamedataIcon}
-                            header="Gamedata" 
+                            header="Gamedata Files" 
                             directory={gamedataDirectory}
                             isExtended={isGameDataExtended}
                             toggleExtendedAsyncCallback={() => this.props.changeExtendedDirectoryAsyncCallback(!isGameDataExtended, gamedataDirectory)}/>

@@ -106,6 +106,7 @@ export default class CreatePanel extends React.Component {
                     <span className="input-group-text">Description</span>
                     <textarea className="form-control component-ai-description-textarea" 
                         rows="3"
+                        disabled
                         onChange={(event)=>this.context.setComponentAIDescription(event.target.value)} 
                         placeholder="e.g. This a deck of foreign envoys. There is an envoy for Russia, Italy, France, Britain, and Sweden. Each card has a name and rules text. The background of the card matches the color of the country. Each card has an overlay that is a famous diplomat from that country..." 
                         value={this.context.componentAIDescription}

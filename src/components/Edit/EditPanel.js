@@ -113,7 +113,8 @@ export default class EditPanel extends React.Component {
                                 componentTypesCustomInfo={this.props.componentTypesCustomInfo}
                                 componentTypesStockInfo={this.props.componentTypesStockInfo}
                                 componentComposeScollPosition={this.state.componentComposeScollPosition}     
-                                updateComponentComposeScrollPositionCallback={this.updateComponentComposeScrollPosition}                           
+                                updateComponentComposeScrollPositionCallback={this.updateComponentComposeScrollPosition}         
+                                updateRouteCallback={this.props.updateRouteCallback}
                             />
                         }
                         {this.props.currentFileType === "UNIFIED_COMPONENT" && 

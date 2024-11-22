@@ -355,6 +355,7 @@ export default class EditProjectView extends React.Component {
                     changeExtendedDirectoryAsyncCallback={this.changeExtendedDirectoryAsync}
                     extendedFileTypes={this.state.extendedFileTypes}
                     changeExtendedFileTypeAsyncCallback={this.changeExtendedFileTypeAsync}
+                    updateRouteCallback={this.updateRoute}
                 />
                 )}
 
