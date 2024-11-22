@@ -117,8 +117,8 @@ async def addOverlays(contents, overlays, compositions: ComponentComposition, pi
         if isDebug and productionProperties.isPublish:
             continue
 
-        positionX = float(overlay.get("positionX", 0))
-        positionY = float(overlay.get("positionY", 0))
+        positionX = overlay.get("positionX", 0)
+        positionY = overlay.get("positionY", 0)
         overlayName = await getScopedValue(overlay, pieceGamedata)
         if not overlayName:
             continue
