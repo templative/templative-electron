@@ -14,6 +14,7 @@ import studioIcon from "../../Icons/studioIcon.svg"
 import gameIcon from "../../Icons/gameIcon.svg"
 import componentIcon from "../../Icons/componentIcon.svg"
 import pieceIcon from "../../Icons/pieceIcon.svg"
+import artdataIcon from "../../Icons/artDataIcon.svg"
 
 export default class UnifiedComponentViewer extends EditableViewerJson { 
     state = {
@@ -213,14 +214,22 @@ export default class UnifiedComponentViewer extends EditableViewerJson {
                     </svg>
                     return <div className="unselecteable-artdata" key={`${this.props.componentName}_${face}`}>
                         <p>
-                            {rightChevron} {face} Artdata <span className="subfile-filepath">Same as Front Artdata</span>
+                            {rightChevron} <img 
+                                className="tab-icon" 
+                                src={artdataIcon} 
+                                alt="Tab icon"
+                            /> {face} Artdata <span className="subfile-filepath">Same as Front Artdata</span>
                         </p>
                     </div>
                 }
                 const extensionString = `is${face}Extended`
                 return <div className="" key={`${this.props.componentName}_${face}`}>
                     <p onClick={() => this.toggleExtension(extensionString)}>
-                        { this.state[extensionString] ? extendedChevron : unextendedChevron } {face} Artdata <span className="subfile-filepath">{path.parse(this.state[value]).name}.json</span> </p>
+                        { this.state[extensionString] ? extendedChevron : unextendedChevron } <img 
+                                className="tab-icon" 
+                                src={artdataIcon} 
+                                alt="Tab icon"
+                            /> {face} Artdata <span className="subfile-filepath">{path.parse(this.state[value]).name}.json</span> </p>
                     { this.state[extensionString] && 
                         <div className="universal-file-content">
                             <ArtdataViewer 
