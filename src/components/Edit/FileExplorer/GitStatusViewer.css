@@ -1,0 +1,321 @@
+.git-status-viewer {
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    padding-bottom:1em;
+    height: 400px; /* Fixed height for git section */
+    overflow-y: scroll;
+    min-height: 0; /* Important for proper flex behavior */
+}
+
+.git-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: rgb(207, 207, 207);
+    padding-left:14px;
+}
+
+.git-branch-status {
+    display: flex;
+}
+
+.git-sync-button {
+    padding: 2px 8px;
+    background-color: #444;
+    border: none;
+    border-radius: 3px;
+    color: rgb(207, 207, 207);
+    cursor: pointer;
+}
+
+.git-sync-button:hover {
+    background-color: #555;
+}
+
+.git-commit-section {
+    width: 100%;
+    padding: 0px 10px 0px 10px;
+}
+
+.git-commit-input {
+    flex: 1;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.git-commit-button {
+    padding: 4px 12px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.git-commit-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.git-section {
+    margin-bottom: 12px;
+}
+
+.git-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.git-section-header:hover {
+    background-color: #2b3037;
+}
+.git-section-header:hover .header-actions {
+    opacity: 1;
+}
+
+.header-actions {
+    display: flex;
+    gap: 4px;
+    opacity: 0;
+}
+
+.header-actions button {
+    padding: 0;
+    background: none;
+    border: none;
+    color: #ddd;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+.header-actions button:hover {
+    color: #fff;
+}
+
+.header-actions button.revert-button:hover {
+    color: #ff6b6b;
+}
+
+.header-actions svg {
+    width: 16px;
+    height: 16px;
+}
+
+.git-file {
+    
+    display: flex;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding: 2px 10px 0 14px;
+    margin: 2px 0;
+}
+
+.git-file span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 8px;
+    color: #ddd;
+}
+
+.git-status-letter {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.git-file-actions {
+    display: flex;
+    gap: 4px;
+    opacity: 0;
+}
+
+.git-file-actions button {
+    padding: 0;
+    background: none;
+    border: none;
+    color: #ddd;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+.git-file-actions button:hover {
+    background: none;
+    color: #fff;
+}
+
+.git-file-actions svg {
+    width: 16px;
+    height: 16px;
+}
+
+.commit-button{
+    background-color: hsl(39, 100%, 50%) !important;
+    width: 100%;
+    color: black !important;
+    font-weight: 800 !important;
+}
+
+.commit-button:disabled {
+    background-color: hsl(39, 100%, 45%);
+}
+
+.git-file:n-child(even) {
+    background-color: hsl(224, 13%, 17.5%);
+}
+.git-file:hover {
+    background-color: #2b3037;
+}
+.file-icon{
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+    border: none;
+    margin-bottom: 3px;
+}
+
+.git-file-actions button.revert-button:hover {
+    color: #ff6b6b;
+}
+
+.git-file:hover .git-file-actions {
+    opacity: 1;
+}
+
+/* Status letter colors */
+.git-status-letter {
+    margin-right: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Individual status colors */
+.git-status-M {
+    color: #7fb785 !important;  /* Green for Modified */
+}
+
+.git-status-A {
+    color: #e2c08d !important;  /* Yellow/Gold for Added */
+}
+
+.git-status-D {
+    color: #f59e0b !important;  /* Red for Deleted */
+}
+
+.git-status-R {
+    color: #a78bfa !important;  /* Purple for Renamed */
+}
+
+.git-status-U {
+    color: #63b3ed !important;  /* Blue for Untracked */
+}
+
+.git-header-content {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.branch-status {
+    display: flex;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.branch-controls {
+    border: none !important;
+    background-color: #00000000 !important;
+    padding: 2px 0px 2px 0px;
+}
+
+.branch-controls:hover {
+    /* background-color: rgba(0, 0, 0, 0) !important; */
+}
+.branch-status .ahead {
+    color: hsl(205, 79%, 70%);  
+}
+.branch-status .ahead:hover {
+    color: hsl(205, 79%, 90%);  
+}
+
+.branch-status .behind {
+    color: hsl(36, 100%, 70%);
+}
+.branch-status .behind:hover {
+    color: hsl(36, 100%, 90%);
+}
+
+.branch-name {
+    margin: 0 8px;
+    color: #ffa500;
+    font-size: 12px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.git-status-C {
+    color: #f5260b !important;  /* Amber color for Conflicts */
+}
+
+.git-file.conflict {
+    background-color: rgba(245, 158, 11, 0.1);
+}
+
+.git-file-actions .resolve-ours,
+.git-file-actions .resolve-theirs {
+    padding: 2px 8px !important;
+    font-size: 12px;
+    border-radius: 3px;
+    width: auto !important;
+    height: auto !important;
+}
+
+.git-file-actions .resolve-ours {
+    color: #10b981 !important;
+    border: 1px solid #10b981 !important;
+}
+
+.git-file-actions .resolve-theirs {
+    color: #3b82f6 !important;
+    border: 1px solid #3b82f6 !important;
+}
+
+.git-file-actions .resolve-ours:hover {
+    background-color: rgba(16, 185, 129, 0.1) !important;
+}
+
+.git-file-actions .resolve-theirs:hover {
+    background-color: rgba(59, 130, 246, 0.1) !important;
+}
+.sync-arrows {
+    margin-bottom: 2px;
+}

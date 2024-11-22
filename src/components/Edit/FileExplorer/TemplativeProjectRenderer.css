@@ -33,13 +33,23 @@
     border:0px !important;
 }
 .file-explorer-row { 
-    height: calc(100% - 0em);
+    height: 100%;
     width: 100%;
     margin: 0 0 0 0 !important;
     padding: 0 0 0 0 !important;
-    overflow-y: scroll;
-    overflow-x: hidden;
 }
+.file-explorer-col {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.content-files-container {
+    flex: 1;
+    overflow-y:scroll;
+    min-height: 0; /* Important for proper flex behavior */
+    padding-bottom: 1em;
+}
+
 .gamedata-indent {
     padding-left: 0.25em;
 }
