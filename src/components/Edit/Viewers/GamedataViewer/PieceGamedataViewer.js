@@ -150,29 +150,46 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                         piece={piece}
                         toggleLockCallback={this.toggleLock}
                         lockedKey={this.state.lockedKey}
-                        addBlankKeyValuePairCallback={this.addBlankKeyValuePair}
                         deletePieceCallback={()=>this.deletePiece(index)}
                         duplicatePieceByIndexCallback={()=>this.duplicatePieceByIndex(index)}
                         trackChangedKeyCallback={this.trackChangedKey}
                         updateValueCallback={this.updateValue}
                         removeKeyValuePairFromAllPiecesCallback={this.removeKeyValuePairFromAllPieces}
                         freeTrackedChangedKeyCallback={this.freeTrackedChangedKey}
+                        isPreviewEnabled={this.props.isPreviewEnabled}
+                        showPreviewCallback={this.props.showPreviewCallback}
+                        componentName={this.props.componentName}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                     />
                 })
             }
         }
         
         return <div className="pieces-viewer">
-            <button 
-                onClick={() => this.addPiece()} 
-                className="btn btn-outline-secondary add-piece-button" 
-                type="button"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg add-field-plus" viewBox="0 0 16 16">
-                    <path fillRule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                </svg>
-                Create a new Piece
-            </button>
+            <div className="input-group pieces-controls-input-group">
+                <button 
+                    onClick={() => this.addPiece()} 
+                    className="btn btn-outline-secondary add-field-button" 
+                    type="button"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg add-field-plus" viewBox="0 0 16 16">
+                        <path fillRule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                    </svg>
+                    Create a new Piece
+                </button>
+                {this.state.lockedKey === undefined &&
+                    <button 
+                        onClick={() => this.addBlankKeyValuePair()} 
+                        className="btn btn-outline-secondary add-field-button" 
+                        type="button"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg add-field-plus" viewBox="0 0 16 16">
+                            <path fillRule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                        </svg>
+                        Add Field to all Pieces
+                    </button>
+                }
+            </div>
             {/* <button 
                 onClick={this.toggleViewMode} 
                 className="btn btn-outline-secondary btn-sm" 

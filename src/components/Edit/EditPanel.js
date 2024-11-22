@@ -24,6 +24,9 @@ export default class EditPanel extends React.Component {
     togglePreviewVisibility = () => {
         this.setState({isPreviewVisible: !this.state.isPreviewVisible})
     }
+    showPreview = () => {
+        this.setState({isPreviewVisible: true})
+    }
     clickIntoFile = () => {
         if (this.props.italicsTabFilepath !== this.props.currentFilepath) {
             return
@@ -93,7 +96,14 @@ export default class EditPanel extends React.Component {
                             <ImageViewer filepath={this.props.currentFilepath}/>
                         }
                         {this.props.currentFileType === "PIECE_GAMEDATA" &&
-                            <PieceGamedataViewer filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
+                            <PieceGamedataViewer 
+                                componentName={undefined} // Reserved for use by previewing the piece
+                                showPreviewCallback={()=>{}}
+                                templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
+                                isPreviewEnabled={false} 
+                                filepath={this.props.currentFilepath} 
+                                saveFileAsyncCallback={this.props.saveFileAsyncCallback}
+                            />
                         }
                         {this.props.currentFileType === "COMPONENT_GAMEDATA" &&
                             <ComponentGamedataViewer filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
@@ -120,6 +130,7 @@ export default class EditPanel extends React.Component {
                         {this.props.currentFileType === "UNIFIED_COMPONENT" && 
                             <UnifiedComponentViewer 
                                 componentName={this.props.currentFilepath.split("#")[1]}
+                                showPreviewCallback={this.showPreview}
                                 templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}      
                                 saveFileAsyncCallback={this.props.saveFileAsyncCallback}  
                                 updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}                 

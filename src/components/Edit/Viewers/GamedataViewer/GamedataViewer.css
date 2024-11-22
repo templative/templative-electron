@@ -100,3 +100,16 @@ tr {
 .table td {
     padding: 0 !important;
 }
+.render-piece-icon {
+    margin-bottom: 3px;
+}
+.pieces-controls-input-group {
+    margin-bottom: 12px;
+    display: flex;
+    width: 100%;
+}
+
+.pieces-controls-input-group .btn {
+    flex: 1;
+    white-space: nowrap;
+}

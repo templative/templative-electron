@@ -74,18 +74,15 @@ export default class ScopedValueInputWithOptions extends React.Component {
                         </option>
                     ))}
                 </select>
-                {showManualInput && (
-                    <React.Fragment>
-                        <input 
-                            type="text" 
-                            className="form-control no-left-border scoped-value-manual-input" 
-                            onChange={(event) => this.props.updateArtdataFieldCallback(this.props.index, "source", event.target.value)} 
-                            value={this.props.source}
-                            placeholder="Field name..."
-                        />
-                        
-                    </React.Fragment>
-                )}
+                {showManualInput && 
+                    <input 
+                        type="text" 
+                        className="form-control no-left-border scoped-value-manual-input" 
+                        onChange={(event) => this.props.updateArtdataFieldCallback(this.props.index, "source", event.target.value)} 
+                        value={this.props.source}
+                        placeholder="value..."
+                    />
+                }
             </React.Fragment>
         );
     }

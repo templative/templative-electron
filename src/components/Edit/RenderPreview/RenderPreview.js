@@ -70,7 +70,7 @@ export default class RenderPreview extends React.Component {
         // try {
             const componentCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json");
             const gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json");
-            const componentOptions = componentCompose.map(component => component.name);
+            const componentOptions = componentCompose.filter(component => !component.type?.startsWith('STOCK_')).map(component => component.name);
             let chosenComponentName, chosenPieceName, piecesOptions = [];
 
             if (componentCompose.length > 0) {

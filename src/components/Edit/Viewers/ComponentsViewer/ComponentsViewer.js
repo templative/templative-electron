@@ -298,7 +298,6 @@ export default class ComponentsViewer extends EditableViewerJson {
             this.props.templativeRootDirectoryPath,
             componentNames
         );
-        console.log(thumbnails)
         this.setState({ componentThumbnails: thumbnails });
     }
 

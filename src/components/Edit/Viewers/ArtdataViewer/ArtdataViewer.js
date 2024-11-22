@@ -32,16 +32,16 @@ export default class ArtdataViewer extends EditableViewerJson {
         const currentHasTemplateFileName = currentState.content !== undefined && currentState.content.templateFilename !== undefined
         if (oldHasTemplateFileName) {
             if (!currentHasTemplateFileName) {
-                console.log("Old has filename, but current doesn't")
+                // console.log("Old has filename, but current doesn't")
                 return true
             }
             const isTemplateFileNameChanged = currentState.content.templateFilename !== prevState.content.templateFilename
-            console.log(`Old does, current does, they are ${isTemplateFileNameChanged ? "different" : "the same"}.${currentState.content.templateFilename}${prevState.content.templateFilename}`)
+            // console.log(`Old does, current does, they are ${isTemplateFileNameChanged ? "different" : "the same"}.${currentState.content.templateFilename}${prevState.content.templateFilename}`)
             
             return isTemplateFileNameChanged
         }
         else {
-            console.log(`Old doesn't, current ${currentHasTemplateFileName ? "does" : "doesn't"}.`)
+            // console.log(`Old doesn't, current ${currentHasTemplateFileName ? "does" : "doesn't"}.`)
             return currentHasTemplateFileName
         }
         
@@ -151,7 +151,6 @@ export default class ArtdataViewer extends EditableViewerJson {
     }
 
     goToTemplateFile = async (templateFilename) => {
-        console.log(templateFilename)
         if (templateFilename.trim() === "") {
             return
         }

@@ -1,6 +1,7 @@
 import React from "react";
 import KeyValueInput from "./KeyValueInput"
 import PieceControlInput from "./PieceControlInput"
+var axios = require('axios');
 
 import "./GamedataViewer.css"
 
@@ -18,7 +19,21 @@ export default class Piece extends React.Component {
     handleMouseOut = () => {
         this.setState({isHovering: false})
     }
-
+    previewPiece = async () => {
+        const data = {
+            componentFilter: this.props.componentName,
+            pieceFilter: this.props.piece["name"],
+            language: "en",
+            directoryPath: this.props.templativeRootDirectoryPath
+        }
+        try {
+            this.props.showPreviewCallback()
+            await axios.post(`http://localhost:8080/preview-piece`, data);
+        } catch (error) {
+            console.error("Error in preview:", error);
+        }
+    }
+    
     render() {        
         var pieceKeys = Object.keys(this.props.piece).sort()
         var keyValueRows = pieceKeys
@@ -54,29 +69,14 @@ export default class Piece extends React.Component {
             onMouseLeave={this.handleMouseOut}
         >        
             <PieceControlInput 
+                isPreviewEnabled={this.props.isPreviewEnabled}
+                previewPieceCallback={this.previewPiece}
                 piece={this.props.piece}
                 updateValueCallback={(key, value)=>this.props.updateValueCallback(this.props.index, key, value)}
                 deleteCallback={this.props.deletePieceCallback}
                 duplicatePieceByIndexCallback={this.props.duplicatePieceByIndexCallback}
-            />
-            
+            />            
             {keyValueRows}
-            
-            {this.props.lockedKey === undefined && 
-                <div key="addBlankKeyValuePairButton" className={`input-group input-group-sm mb-3 add-piece-key ${shouldShowPlusSign && "show-add-piece-key"}`} data-bs-theme="dark">
-                    <button 
-                        onClick={() => this.props.addBlankKeyValuePairCallback()} 
-                        className="btn btn-outline-secondary add-field-button" 
-                        type="button"
-                    >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg add-field-plus" viewBox="0 0 16 16">
-                            <path fillRule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                        </svg>
-                        Add Field to all Pieces
-                    </button>
-                </div>
-            }
-            
             
         </div>
     }
