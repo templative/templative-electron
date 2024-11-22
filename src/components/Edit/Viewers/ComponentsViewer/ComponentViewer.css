@@ -1,5 +1,5 @@
 .componentViewer {
-    padding: 0 0.1em 0 0.1em;
+    padding: 6px 0.1em 0 0.1em;
     height: 100%;
     overflow-y: hidden;
 }
@@ -19,7 +19,7 @@
     line-height: 1em;
 }
 .component-items-row {
-    height: calc(100% - 3.3em);
+    height: 100%;
     overflow-y: hidden;
 }
 .component-filters-row > .col {
@@ -195,7 +195,8 @@
 }
 .component-headers-header {
     margin-bottom: 4px;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 700;
 }
 .component-header {
     padding-left: 4px;
@@ -283,4 +284,13 @@
 .delete-modal .btn-danger:hover {
     background-color: #bb2d3b !important;
     border-color: #b02a37 !important;
+}
+.component-filters-main-header {
+    font-size:16px;
+    font-weight: 800;
+    margin-bottom: 3px;
+}
+.component-filters-header-icon{
+    margin-right: 8px;
+    margin-bottom: 3px;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "./ComponentItem.css"
 import TemplativeAccessTools from "../../../../TemplativeAccessTools";
-import EditComponentControls from "./ComponentItem/EditComponentControls";
+import EditComponentControls from "./EditComponentControls";
 import ComponentThumbnail from "./ComponentThumbnail";
 const path = require("path")
 

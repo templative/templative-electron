@@ -1,6 +1,21 @@
 import React from "react";
 import "./ComponentFilters.css"
-
+const addSpaces = (str) => {
+    return str
+        // First specifically handle D4, D6, D8, D10, D12, D20
+        .replace(/D(4|6|8|10|12|20)(\d+)/g, 'D$1 $2')
+        // Then handle measurement units, keeping them with their numbers
+        .replace(/(\d+)(mm|cm)/g, '$1$2')
+        // Add space between lowercase and uppercase
+        .replace(/([a-z])([A-Z])/g, '$1 $2')
+        // Add space between letters and numbers (except for measurement units)
+        .replace(/([a-zA-Z])(\d)/g, '$1 $2')
+        // Clean up any double spaces
+        .replace(/\s+/g, ' ')
+        // Fix dice notation
+        .replace(/D ?(4|6|8|10|12|20)/g, 'D$1')
+        .trim()
+}
 const stockIcon = <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" className="bi bi-dice-3-fill" viewBox="0 0 16 16">
     <path d="M3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3zm2.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m8 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0M8 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
 </svg>
@@ -66,15 +81,16 @@ export default class ComponentFilters extends React.Component {
         for (var i in sortedTypes) {
             var sortedType = sortedTypes[i]
             const type = sortedType.type
-            var button = <button 
-                type="button" 
-                key={sortedType.name} 
-                className="btn btn-outline-secondary btn-sm component-filter-button"
+            if (sortedType.count === 1) {
+                continue;
+            }
+            var option = <p key={sortedType.name} 
+                className={`component-header ${sortedType.type === this.props.componentTypeFilter && "selected-component-header"}`} 
                 onClick={() => this.handleClick(type)}
             >
-                {sortedType.isStock ? stockIcon : customIcon} {sortedType.count}x {sortedType.name} 
-            </button>
-            buttons.push(button)
+                {sortedType.count}x {addSpaces(sortedType.name)}
+            </p>
+            buttons.push(option)
         }
         return <div>
             {buttons}

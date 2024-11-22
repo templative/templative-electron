@@ -327,20 +327,36 @@ export default class ComponentsViewer extends EditableViewerJson {
         var components = !this.state.hasLoaded || this.state.content === undefined ? [] : this.state.content
         var hasFilteredAwaySelectedHeader = componentHeaders.length === 0 && this.state.filteredNameSubstring !== undefined
         return <div className="row componentViewer no-gutters">
-            {(componentHeaders.length > 0 || hasFilteredAwaySelectedHeader) && 
-                <div className="col-0 col-xl-2">
+                <div className="col-0 col-xl-2 component-filters-options-col">
                     <div className="component-headers">
-                        <p className="component-headers-header">Component Categories</p>
-                        {componentHeaders.map(header => <p key={header} className={`component-header ${header === this.state.filteredNameSubstring && "selected-component-header"}`} onClick={() => this.setFilteredNameSubstring(header)}>{header}</p>)}
-                        {componentHeaders.length === 0 &&
-                            <p className="component-header selected-component-header" onClick={() => this.setFilteredNameSubstring(this.state.filteredNameSubstring)}>{this.state.filteredNameSubstring}</p>
+                        <p className="component-filters-main-header">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="component-filters-header-icon" style={{marginRight: '8px'}}>
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" fill="currentColor"/>
+                            </svg>
+                            Filter Components...
+                        </p>
+                        {(componentHeaders.length > 0 || hasFilteredAwaySelectedHeader) && 
+                        <>
+                            <p className="component-headers-header">By prefix</p>
+
+                            {componentHeaders.map(header => 
+                                <p key={header} 
+                                    className={`component-header ${header === this.state.filteredNameSubstring && "selected-component-header"}`} 
+                                    onClick={() => this.setFilteredNameSubstring(header)}
+                                >
+                                    {header}
+                                </p>)}
+                            {componentHeaders.length === 0 &&
+                                <p className="component-header selected-component-header" 
+                                    onClick={() => this.setFilteredNameSubstring(this.state.filteredNameSubstring)}
+                                >
+                                    {this.state.filteredNameSubstring}
+                                </p>
+                            }
+                        </>
                         }
-                    </div>
-                </div>
-            }
-            <div className="col no-gutters">
-                <div className={`row component-filters-row ${this.state.showDeleteConfirm ? 'pe-none' : ''}`}>
-                    <div className="col no-gutters">
+
+                        <p className="component-headers-header">By type</p>
                         <ComponentFilters 
                             components={components}
                             filteredNameSubstring={this.state.filteredNameSubstring}
@@ -350,6 +366,7 @@ export default class ComponentsViewer extends EditableViewerJson {
                         />
                     </div>
                 </div>
+            <div className="col no-gutters">
                 <div className={`row component-items-row ${this.state.showDeleteConfirm ? 'pe-none' : ''}`}>
                     <div className="col no-gutters" ref={this.scrollableDivRef}>
                         { componentItems.length === 0 &&

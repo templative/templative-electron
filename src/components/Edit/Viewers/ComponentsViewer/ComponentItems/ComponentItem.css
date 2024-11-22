@@ -117,3 +117,6 @@
 .component-quantity-input {
     max-width: 7ch !important;
 }
+.component-use-icon {
+    margin-bottom:3px;
+}
