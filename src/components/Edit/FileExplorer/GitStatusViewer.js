@@ -9,6 +9,8 @@ import componentIcon from "../Icons/componentIcon.svg"
 import componentComposeIcon from "../Icons/componentComposeIcon.svg"
 import rulesIcon from "../Icons/rulesIcon.svg"
 import artIcon from "../Icons/artIcon.svg"
+import gameIcon from "../Icons/gameIcon.svg"
+import studioIcon from "../Icons/studioIcon.svg"
 
 export default class GitStatusViewer extends React.Component {
     state = {
@@ -184,6 +186,12 @@ export default class GitStatusViewer extends React.Component {
         }
         if (relativePath === 'rules.pdf') {
             return rulesIcon;
+        }
+        if (relativePath === 'studio.json') {
+            return studioIcon;
+        }
+        if (relativePath === 'game.json') {
+            return gameIcon;
         }
         
         return null;
