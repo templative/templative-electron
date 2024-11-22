@@ -189,7 +189,7 @@ export default class TemplativeProjectRenderer extends React.Component {
         return <React.Fragment>            
             { this.state.gameCompose !== undefined &&
                 <div className="row file-explorer-row g-0">
-                    <div className="col">
+                    <div className="col file-explorer-col">
                     <ResourceHeader 
                             iconSource={artIcon}
                             header="Art Files" 
@@ -238,7 +238,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                                 />
                             </div>
                         }
-                        
+                        <div className="file-explorer-spacing"/>
                         <ContentFileList
                             header="Artdata Files" 
                             contentType="ARTDATA" 
@@ -261,6 +261,8 @@ export default class TemplativeProjectRenderer extends React.Component {
                             extendedDirectories={this.props.extendedDirectories}
                             changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
                         />
+                        <div className="file-explorer-spacing"/>
+
                         <ResourceHeader 
                             iconSource={gamedataIcon}
                             header="Gamedata Files" 
@@ -328,7 +330,8 @@ export default class TemplativeProjectRenderer extends React.Component {
                             </div>
 
                         } 
-                        
+                    <div className="file-explorer-spacing"/>
+                    
                     <IconContentFileItem
                         contentType={"COMPONENTS"}
                         currentFilepath={this.props.currentFilepath}
