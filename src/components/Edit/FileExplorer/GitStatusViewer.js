@@ -1,6 +1,6 @@
 import React from "react";
 import "./GitStatusViewer.css";
-const { execSync } = require('child_process');
+const { exec } = require('child_process');
 const path = require("path");
 
 import artdataIcon from "../Icons/artDataIcon.svg"
@@ -14,7 +14,6 @@ import studioIcon from "../Icons/studioIcon.svg"
 
 export default class GitStatusViewer extends React.Component {
     state = {
-        hasGit: false,
         modifiedFiles: [],
         stagedFiles: [],
         commitMessage: "",
@@ -24,12 +23,14 @@ export default class GitStatusViewer extends React.Component {
         mergeConflicts: [],
         isRebasing: false,
         rebaseError: null,
+        isLoading: false,
+        error: null
     }
 
     componentDidMount = async () => {
         await this.checkGitStatus();
         // Start the watcher
-        const watcherInterval = setInterval(this.checkGitStatus, 10000); // Check every 2 seconds
+        const watcherInterval = setInterval(this.checkGitStatus, 2000); // Check every 2 seconds
         this.setState({ watcherInterval });
     }
 
@@ -46,123 +47,81 @@ export default class GitStatusViewer extends React.Component {
         }
     }
 
-    checkGitStatus = async () => {
-        try {
-            const gitPath = path.join(this.props.templativeRootDirectoryPath, '.git');
-            const hasGit = require('fs').existsSync(gitPath);
-
-            if (!hasGit) {
-                this.setState({ hasGit: false });
-                return;
-            }
-
-            // Add fetch before checking status
-            try {
-                execSync('git fetch', {
-                    cwd: this.props.templativeRootDirectoryPath
-                });
-            } catch (fetchError) {
-                console.error('Git fetch failed:', fetchError);
-                // Continue with status check even if fetch fails
-            }
-
-            const status = execSync('git status --porcelain', { 
-                cwd: this.props.templativeRootDirectoryPath 
-            }).toString();
-
-            const stagedFiles = [];
-            const modifiedFiles = [];
-            const mergeConflicts = [];
-
-            status.split('\n').forEach(line => {
-                if (!line) return;
-                const [status, file] = [line.slice(0, 2), line.slice(3)];
-                
-                // Handle index and working tree status separately
-                const [indexStatus, workingStatus] = status.split('');
-                
-                const getStatusType = (status) => {
-                    return status === '?' ? 'U' : 
-                           status === 'R' ? 'R' : 
-                           status === 'M' ? 'M' : 
-                           status === 'A' ? 'A' : 
-                           status === 'D' ? 'D' : 
-                           status === 'U' ? 'C' : '';
-                };
-
-                if (status === 'UU' || status === 'AA') {
-                    mergeConflicts.push({ path: file, type: 'C' });
-                } else {
-                    // Handle staged changes (index)
-                    if (indexStatus !== ' ' && indexStatus !== '?') {
-                        stagedFiles.push({
-                            path: file,
-                            type: getStatusType(indexStatus)
-                        });
-                    }
-
-                    // Handle unstaged changes (working tree)
-                    if (workingStatus !== ' ') {
-                        modifiedFiles.push({
-                            path: file,
-                            type: status === '??' ? 'U' : getStatusType(workingStatus)
-                        });
-                    }
-                }
+    // Add utility method for async exec
+    execAsync = (command) => {
+        return new Promise((resolve, reject) => {
+            exec(command, {
+                cwd: this.props.templativeRootDirectoryPath
+            }, (error, stdout, stderr) => {
+                if (error) reject(error);
+                else resolve(stdout.toString());
             });
+        });
+    }
 
-            // First check if we have an upstream branch
+    getPullStrategy = async () => {
+        try {
+            const rebaseConfig = await this.execAsync('git config --get pull.rebase');
+            const ffConfig = await this.execAsync('git config --get pull.ff');
+
+            if (rebaseConfig.trim() === 'true') return '--rebase';
+            if (rebaseConfig.trim() === 'false') return '--no-rebase';
+            if (ffConfig.trim() === 'only') return '--ff-only';
+            return '';
+        } catch (error) {
+            return '';
+        }
+    }
+
+    checkGitStatus = async () => {
+        if (this.state.isLoading) return;
+
+        try {
+            this.setState({ isLoading: true, error: null });
+
+            // Perform git operations in parallel where possible
+            await this.execAsync('git fetch');
+            const [status, currentBranch] = await Promise.all([
+                this.execAsync('git status --porcelain'),
+                this.execAsync('git rev-parse --abbrev-ref HEAD')
+            ]);
+
+            // Process status results
+            const { stagedFiles, modifiedFiles, mergeConflicts } = this.processGitStatus(status);
+
+            // Get branch status
             let branchStatus = { ahead: 0, behind: 0 };
             try {
-                const branchInfo = execSync('git rev-list --left-right --count HEAD...@{u}', {
-                    cwd: this.props.templativeRootDirectoryPath
-                }).toString().trim().split(/\s+/);
-                
-                branchStatus = {
-                    ahead: parseInt(branchInfo[0]) || 0,
-                    behind: parseInt(branchInfo[1]) || 0
-                };
+                const branchInfo = await this.execAsync('git rev-list --left-right --count HEAD...@{u}');
+                const [ahead, behind] = branchInfo.trim().split(/\s+/);
+                branchStatus = { ahead: parseInt(ahead) || 0, behind: parseInt(behind) || 0 };
             } catch (error) {
-                // If there's no upstream, we'll just show commits ahead
-                try {
-                    const aheadCount = execSync('git rev-list HEAD @{u}... --count 2>/dev/null || git rev-list HEAD --count', {
-                        cwd: this.props.templativeRootDirectoryPath
-                    }).toString().trim();
-                    
-                    branchStatus = {
-                        ahead: parseInt(aheadCount) || 0,
-                        behind: 0
-                    };
-                } catch (e) {
-                    // If this also fails, keep defaults of 0, 0
-                    console.log('Could not get commit counts:', e);
-                }
+                // Handle case with no upstream
+                const aheadCount = await this.execAsync('git rev-list HEAD @{u}... --count 2>/dev/null || git rev-list HEAD --count');
+                branchStatus = { ahead: parseInt(aheadCount) || 0, behind: 0 };
             }
 
-            // Get current branch name
-            const currentBranch = execSync('git rev-parse --abbrev-ref HEAD', {
-                cwd: this.props.templativeRootDirectoryPath
-            }).toString().trim();
-
-            // Check if we're in the middle of a rebase
             const isRebasing = require('fs').existsSync(
                 path.join(this.props.templativeRootDirectoryPath, '.git', 'rebase-merge')
             ) || require('fs').existsSync(
                 path.join(this.props.templativeRootDirectoryPath, '.git', 'rebase-apply')
             );
 
-            this.setState({ 
-                hasGit: true,
+            this.setState({
                 stagedFiles,
                 modifiedFiles,
                 branchStatus,
-                currentBranch,
+                currentBranch: currentBranch.trim(),
                 mergeConflicts,
                 isRebasing,
+                isLoading: false
             });
         } catch (error) {
             console.error('Git status check failed:', error);
-            this.setState({ hasGit: false });
+            this.setState({ 
+                isLoading: false,
+                error: error.message 
+            });
         }
     }
 
@@ -204,15 +163,13 @@ export default class GitStatusViewer extends React.Component {
         return icon ? filename.replace(/\.[^/.]+$/, '') : filename;
     }
 
-    commitChanges = () => {
+    commitChanges = async () => {
         try {
-            execSync(`git commit -m "${this.state.commitMessage}"`, {
-                cwd: this.props.templativeRootDirectoryPath
-            });
+            await this.execAsync(`git commit -m "${this.state.commitMessage}"`);
             this.setState({ commitMessage: '' });
-            this.checkGitStatus();
+            await this.checkGitStatus();
         } catch (error) {
-            console.error('Git commit failed:', error);
+            this.setState({ error: 'Git commit failed: ' + error.message });
         }
     }
 
@@ -220,154 +177,99 @@ export default class GitStatusViewer extends React.Component {
         this.setState({ commitMessage: event.target.value });
     }
 
-    revertFile = (filePath) => {
+    revertFile = async (filePath) => {
         try {
-            // Use git restore instead of git checkout
-            // --worktree flag ensures we only discard working tree changes
-            execSync(`git restore --worktree "${filePath}"`, {
-                cwd: this.props.templativeRootDirectoryPath
-            });
-            this.checkGitStatus();
+            await this.execAsync(`git restore --worktree "${filePath}"`);
+            await this.checkGitStatus();
         } catch (error) {
             console.error('Git revert failed:', error);
         }
     }
 
-    unstageFile = (filePath) => {
+    unstageFile = async (filePath) => {
         try {
-            // Use git restore --staged instead of git reset HEAD
-            // This is the modern equivalent and handles combined changes better
-            execSync(`git restore --staged "${filePath}"`, {
-                cwd: this.props.templativeRootDirectoryPath
-            });
-            this.checkGitStatus();
+            await this.execAsync(`git restore --staged "${filePath}"`);
+            await this.checkGitStatus();
         } catch (error) {
             console.error('Git unstage failed:', error);
         }
     }
 
-    stageFile = (filePath) => {
+    stageFile = async (filePath) => {
         try {
-            execSync(`git add "${filePath}"`, {
-                cwd: this.props.templativeRootDirectoryPath
-            });
-            this.checkGitStatus();
+            await this.execAsync(`git add "${filePath}"`);
+            await this.checkGitStatus();
         } catch (error) {
             console.error('Git stage failed:', error);
         }
     }
 
-    unstageAllFiles = () => {
+    unstageAllFiles = async () => {
         try {
-            // Update unstageAllFiles to use git restore as well
-            execSync('git restore --staged .', {
-                cwd: this.props.templativeRootDirectoryPath
-            });
-            this.checkGitStatus();
+            await this.execAsync('git restore --staged .');
+            await this.checkGitStatus();
         } catch (error) {
             console.error('Git unstage all failed:', error);
         }
     }
 
-    stageAllFiles = () => {
+    stageAllFiles = async () => {
         try {
-            execSync('git add .', {
-                cwd: this.props.templativeRootDirectoryPath
-            });
-            this.checkGitStatus();
+            await this.execAsync('git add .');
+            await this.checkGitStatus();
         } catch (error) {
             console.error('Git stage all failed:', error);
         }
     }
 
-    revertAllFiles = () => {
+    revertAllFiles = async () => {
         try {
-            // Update revertAllFiles to use git restore as well
-            execSync('git restore --worktree .', {
-                cwd: this.props.templativeRootDirectoryPath
-            });
-            this.checkGitStatus();
+            await this.execAsync('git restore --worktree .');
+            await this.checkGitStatus();
         } catch (error) {
             console.error('Git revert all failed:', error);
         }
     }
 
-    pushChanges = () => {
+    pushChanges = async () => {
         try {
-            execSync('git push', {
-                cwd: this.props.templativeRootDirectoryPath
-            });
-            this.checkGitStatus();
+            await this.execAsync('git push');
+            await this.checkGitStatus();
         } catch (error) {
             console.error('Git push failed:', error);
         }
     }
 
-    getPullStrategy = () => {
+    pullChanges = async () => {
         try {
-            // Check pull.rebase configuration
-            const rebaseConfig = execSync('git config --get pull.rebase', {
-                cwd: this.props.templativeRootDirectoryPath
-            }).toString().trim();
-
-            // Check pull.ff configuration
-            const ffConfig = execSync('git config --get pull.ff', {
-                cwd: this.props.templativeRootDirectoryPath
-            }).toString().trim();
-
-            if (rebaseConfig === 'true') {
-                return '--rebase';
-            } else if (rebaseConfig === 'false') {
-                return '--no-rebase';
-            } else if (ffConfig === 'only') {
-                return '--ff-only';
-            }
-            
-            // Default to merge if no specific configuration is found
-            return '';
-        } catch (error) {
-            // If configs aren't set, default to merge
-            return '';
-        }
-    }
-
-    pullChanges = () => {
-        try {
-            const pullStrategy = this.getPullStrategy();
-            execSync(`git pull ${pullStrategy}`, {
-                cwd: this.props.templativeRootDirectoryPath
-            });
-            this.checkGitStatus();
+            const pullStrategy = await this.getPullStrategy();
+            await this.execAsync(`git pull ${pullStrategy}`);
+            await this.checkGitStatus();
         } catch (error) {
             console.error('Git pull failed:', error);
         }
     }
 
-    resolveUsingOurs = (filePath) => {
+    resolveUsingOurs = async (filePath) => {
         try {
-            execSync(`git checkout --ours "${filePath}" && git add "${filePath}"`, {
-                cwd: this.props.templativeRootDirectoryPath
-            });
-            this.checkGitStatus();
+            await this.execAsync(`git checkout --ours "${filePath}" && git add "${filePath}"`);
+            await this.checkGitStatus();
         } catch (error) {
             console.error('Git resolve ours failed:', error);
         }
     }
 
-    resolveUsingTheirs = (filePath) => {
+    resolveUsingTheirs = async (filePath) => {
         try {
-            execSync(`git checkout --theirs "${filePath}" && git add "${filePath}"`, {
-                cwd: this.props.templativeRootDirectoryPath
-            });
-            this.checkGitStatus();
+            await this.execAsync(`git checkout --theirs "${filePath}" && git add "${filePath}"`);
+            await this.checkGitStatus();
         } catch (error) {
             console.error('Git resolve theirs failed:', error);
         }
     }
 
-    continueRebase = () => {
+    continueRebase = async () => {
         try {
-            // Check if there are any unresolved conflicts
             if (this.state.mergeConflicts.length > 0) {
                 this.setState({ 
                     rebaseError: 'Please resolve all conflicts before continuing the rebase'
@@ -375,18 +277,13 @@ export default class GitStatusViewer extends React.Component {
                 return;
             }
 
-            // If there are staged changes, commit them with a default message
             if (this.state.stagedFiles.length > 0) {
-                execSync('git commit --no-edit', {
-                    cwd: this.props.templativeRootDirectoryPath
-                });
+                await this.execAsync('git commit --no-edit');
             }
 
-            execSync('git rebase --continue', {
-                cwd: this.props.templativeRootDirectoryPath
-            });
+            await this.execAsync('git rebase --continue');
             this.setState({ rebaseError: null });
-            this.checkGitStatus();
+            await this.checkGitStatus();
         } catch (error) {
             console.error('Git rebase continue failed:', error);
             this.setState({ 
@@ -403,19 +300,87 @@ export default class GitStatusViewer extends React.Component {
         }
     }
 
+    // Add these helper methods
+    canPull = () => {
+        // Can't pull if we're rebasing
+        if (this.state.isRebasing) return false;
+        // Can't pull if we have uncommitted changes
+        if (this.state.stagedFiles.length > 0 || this.state.modifiedFiles.length > 0) return false;
+        // Can't pull if there's nothing to pull
+        if (this.state.branchStatus.behind === 0) return false;
+        return true;
+    }
+
+    canPush = () => {
+        // Can't push if we're rebasing
+        if (this.state.isRebasing) return false;
+        // Can't push if we have uncommitted changes
+        if (this.state.stagedFiles.length > 0 || this.state.modifiedFiles.length > 0) return false;
+        // Can't push if we're behind (need to pull first)
+        if (this.state.branchStatus.behind > 0) return false;
+        // Can't push if there's nothing to push
+        if (this.state.branchStatus.ahead === 0) return false;
+        return true;
+    }
+
+    isCommitDisabled = () => {
+        if (this.state.isRebasing) {
+            // During rebase, can only commit if there are staged changes
+            return this.state.stagedFiles.length === 0;
+        }
+        // Normal case - need both staged files and a commit message
+        return this.state.stagedFiles.length === 0 || !this.state.commitMessage.trim();
+    }
+
+    processGitStatus = (status) => {
+        const lines = status.split('\n').filter(line => line.trim());
+        const stagedFiles = [];
+        const modifiedFiles = [];
+        const mergeConflicts = [];
+
+        for (const line of lines) {
+            const [status, path] = [line.slice(0, 2), line.slice(3)];
+            const indexStatus = status[0];
+            const workTreeStatus = status[1];
+
+            if (indexStatus === 'U' || workTreeStatus === 'U' || status === 'AA' || status === 'DD') {
+                mergeConflicts.push({ path, type: 'C' });
+            } else {
+                // Check staged changes (changes in index)
+                if (indexStatus !== ' ' && indexStatus !== '?' && indexStatus !== 'U') {
+                    stagedFiles.push({ 
+                        path, 
+                        type: indexStatus === 'A' ? 'A' : 
+                              indexStatus === 'M' ? 'M' : 
+                              indexStatus === 'D' ? 'D' : 
+                              indexStatus === 'R' ? 'R' : 'M'
+                    });
+                }
+                // Check unstaged changes (changes in work tree)
+                if (workTreeStatus !== ' ' && workTreeStatus !== '?') {
+                    modifiedFiles.push({ 
+                        path, 
+                        type: workTreeStatus === 'A' ? 'A' : 
+                              workTreeStatus === 'M' ? 'M' : 
+                              workTreeStatus === 'D' ? 'D' : 
+                              workTreeStatus === 'R' ? 'R' : 'M'
+                    });
+                }
+                // Handle untracked files
+                if (indexStatus === '?' && workTreeStatus === '?') {
+                    modifiedFiles.push({ path, type: 'U' });
+                }
+            }
+        }
+
+        return { stagedFiles, modifiedFiles, mergeConflicts };
+    }
+
     render() {
-        if (!this.state.hasGit) return null;
-
+        const canPull = this.canPull();
+        const canPush = this.canPush();
+        const isCommitDisabled = this.isCommitDisabled();
         const pullStrategy = this.getPullStrategy();
-        const hasLocalChanges = this.state.modifiedFiles.length > 0 || this.state.stagedFiles.length > 0;
-        
-        // Prevent pushing when behind, regardless of strategy
-        const canPush = this.state.branchStatus.ahead > 0 && this.state.branchStatus.behind === 0;
-
-        // For rebase strategy, we can pull with local changes
-        const canPull = this.state.branchStatus.behind > 0 && !hasLocalChanges;
-
-        const isCommitDisabled = (this.state.isRebasing && this.state.mergeConflicts.length > 0) || this.state.stagedFiles.length == 0 || !this.state.commitMessage
 
         return (
             <div className="git-status-viewer">
@@ -646,6 +611,8 @@ export default class GitStatusViewer extends React.Component {
                         ))}
                     </div>
                 )}
+                {/* {this.state.isLoading && <div className="git-loading">Loading...</div>} */}
+                {this.state.error && <div className="git-error">{this.state.error}</div>}
             </div>
         );
     }

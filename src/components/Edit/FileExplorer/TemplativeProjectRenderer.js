@@ -19,7 +19,8 @@ export default class TemplativeProjectRenderer extends React.Component {
         overlaysDirectory: undefined,
         artdataDirectory: undefined,
         piecesGamedataDirectory: undefined,
-        componentGamedataDirectory: undefined
+        componentGamedataDirectory: undefined,
+        hasGit: false
     }
 
     createFileAsync = async (filepath, contents) => {
@@ -91,6 +92,7 @@ export default class TemplativeProjectRenderer extends React.Component {
     }
     componentDidMount = async () => {
         await this.#parseComponentComposeAsync()
+        await this.#checkGitStatus()
     }
     #parseComponentComposeAsync = async () => {
         var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json");
@@ -118,6 +120,7 @@ export default class TemplativeProjectRenderer extends React.Component {
             return
         }
         await this.#parseComponentComposeAsync()
+        await this.#checkGitStatus()
     }
 
     #closeComponentComposeListener = () => {
@@ -180,6 +183,16 @@ export default class TemplativeProjectRenderer extends React.Component {
                 return `{ "name":"${filename}", "templateFilename": "", "overlays": [], "textReplacements": [], "styleUpdates": [] }`
             default:
                 return "";
+        }
+    }
+    #checkGitStatus = async () => {
+        try {
+            const gitPath = path.join(this.props.templativeRootDirectoryPath, '.git');
+            const hasGit = fsOld.existsSync(gitPath);
+            this.setState({ hasGit });
+        } catch (error) {
+            console.error('Git check failed:', error);
+            this.setState({ hasGit: false });
         }
     }
     render() {
@@ -358,9 +371,11 @@ export default class TemplativeProjectRenderer extends React.Component {
                         ))} */}
                     </div>
                     
-                    <GitStatusViewer 
-                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                    />
+                    {this.state.hasGit && 
+                        <GitStatusViewer 
+                            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        />
+                    }
                 </div>
             </div>       
             }
