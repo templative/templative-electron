@@ -13,6 +13,11 @@ nsMap = {
 }
 svgNs = '{http://www.w3.org/2000/svg}'
 
+async def prepareForCairo(contents, fontCache):
+    contents = convertShapeInsideTextToWrappedText(contents, fontCache)
+    contents = processSvgStrokeOrder(contents)
+    return contents
+
 def findFontPath(fontFamily, fontCache:FontCache):
     if fontFamily in fontCache.fontPathsCache:
         return fontCache.fontPathsCache[fontFamily]

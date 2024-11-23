@@ -1,11 +1,8 @@
 import os
 from xml.etree import ElementTree
 from aiofile import AIOFile
-import svgmanip
 from svgmanip import Element
-import svgutils
 from lxml import etree
-from datetime import datetime
 
 from templative.lib.componentInfo import COMPONENT_INFO
 from templative.lib.manage.models.produceProperties import ProduceProperties, PreviewProperties
@@ -14,13 +11,13 @@ from templative.lib.produce.translation import getTranslation
 from templative.lib.manage.models.composition import ComponentComposition
 from templative.lib.manage.models.artdata import ComponentArtdata
 from templative.lib.produce.customComponents.svgscissors.inkscapeProcessor import exportSvgToImage
-from templative.lib.produce.customComponents.svgscissors.inkscapeToCairo import convertShapeInsideTextToWrappedText, processSvgStrokeOrder
 from templative.lib.produce.customComponents.svgscissors.fontCache import FontCache
+
 async def convertElementToString(element) -> str:
     out = etree.tostring(element.root, xml_declaration=True, standalone=True)
     return out.decode('utf-8')
 
-async def createArtFileOfPiece(compositions: ComponentComposition, artdata: any, gamedata: PieceData | ComponentBackData, componentBackOutputDirectory: str, productionProperties: ProduceProperties | PreviewProperties, fontCache:FontCache) -> None:
+async def createArtFileOfPiece(compositions: ComponentComposition, artdata: any, gamedata: PieceData | ComponentBackData, componentBackOutputDirectory: str, productionProperties: ProduceProperties | PreviewProperties, _:FontCache) -> None:
     templateFilesDirectory = compositions.gameCompose["artTemplatesDirectory"]
     if artdata is None: 
         print("!!! Missing artdata %s" % gamedata.componentDataBlob["displayName"])
@@ -49,15 +46,11 @@ async def createArtFileOfPiece(compositions: ComponentComposition, artdata: any,
     contents = await addOverlays(contents, artdata["overlays"], compositions, gamedata, productionProperties)
     contents = await textReplaceInFile(contents, artdata["textReplacements"], gamedata, productionProperties)
     contents = await updateStylesInFile(contents, artdata["styleUpdates"], gamedata)
-    contents = await scaleContent(contents, imageSizePixels, 0.3203944444444444)
-    contents = await assignSize(contents, imageSizePixels)
     contents = await addNewlines(contents)
-    # contents = convertShapeInsideTextToWrappedText(contents, fontCache)
-    # contents = processSvgStrokeOrder(contents)
     
     pieceUniqueHash = f"_{gamedata.pieceUniqueBackHash}" if gamedata.pieceUniqueBackHash != '' else ''
     artFileOutputName = f"{compositions.componentCompose['name']}{pieceUniqueHash}-{pieceName}"
-    artFileOutputFilepath = await createArtfile(contents, artFileOutputName, componentBackOutputDirectory)
+    artFileOutputFilepath = await createArtfile(contents, artFileOutputName,imageSizePixels, componentBackOutputDirectory)
     await exportSvgToImage(artFileOutputFilepath, imageSizePixels, artFileOutputName, componentBackOutputDirectory)
     print(f"Produced {pieceName}.")
 
@@ -66,33 +59,35 @@ async def addNewlines(contents):
         raise Exception("contents cannot be None")
     return contents.replace("NEWLINE", "\n")
 
-async def scaleContent(contents, imageSizePixels, scale):
-    if contents is None:
-        raise Exception("contents cannot be None")
-    original = svgutils.transform.fromstring(contents)
-    newSvgDocument = svgutils.transform.SVGFigure(imageSizePixels[0] * scale, imageSizePixels[1] * scale)
-
-    svg = original.getroot()
-    svg.scale(scale)
-    newSvgDocument.append(svg)
-
-    return newSvgDocument.to_str().decode("utf-8")
-
-async def assignSize(contents, imageSizePixels):
-    elementTree = ElementTree.ElementTree(ElementTree.fromstring(contents))
-    root = elementTree.getroot()
-
-    toThreeHundredDpi = 0.319975619047619
-    shrunkWidth = (imageSizePixels[0] * toThreeHundredDpi, imageSizePixels[1] * toThreeHundredDpi)
-    root.set("width", "%spx" % shrunkWidth[0])
-    root.set("height", "%spx" % shrunkWidth[1])
-    root.set("viewBox", "0 0 %s %s" % (shrunkWidth[0], shrunkWidth[1]))
-
-    return ElementTree.tostring(root, encoding='unicode')
-
-async def createArtfile(contents, artFileOutputName, outputDirectory):
+async def createArtfile(contents, artFileOutputName, imageSizePixels, outputDirectory):
     if contents is None:
         raise Exception("Contents cannot be None")
+
+    root = ElementTree.fromstring(contents)
+    
+    SVG_NS = "http://www.w3.org/2000/svg"
+    ElementTree.register_namespace('', SVG_NS)
+    ElementTree.register_namespace('svg', SVG_NS)
+    
+    scale_factor = 96/300
+    
+    root.set('width', f'{imageSizePixels[0]*scale_factor}')
+    root.set('height', f'{imageSizePixels[1]*scale_factor}')
+    
+    root.set('viewBox', f'0 0 {imageSizePixels[0]*scale_factor} {imageSizePixels[1]*scale_factor}')
+    
+    wrapper = ElementTree.Element(f'{{{SVG_NS}}}g')
+    wrapper.set('transform', f'scale({scale_factor})')
+    
+    for child in list(root):
+        wrapper.append(child)
+    
+    for child in list(root):
+        root.remove(child)
+    root.append(wrapper)
+    
+    contents = ElementTree.tostring(root, encoding='unicode')
+    
     artFileOutputFileName = "%s.svg" % (artFileOutputName)
     artFileOutputFilepath = os.path.join(outputDirectory, artFileOutputFileName)
     async with AIOFile(artFileOutputFilepath, mode="w", encoding="utf-8") as file:
@@ -135,6 +130,10 @@ async def addOverlays(contents, overlays, compositions: ComponentComposition, pi
     return contents
 
 async def placeOverlay(contents:str, overlayFilepath, positionX, positionY) -> str:
+    SVG_NS = "http://www.w3.org/2000/svg"
+    ElementTree.register_namespace('', SVG_NS)
+    ElementTree.register_namespace('svg', SVG_NS)
+    
     main_svg = ElementTree.ElementTree(ElementTree.fromstring(contents))
     main_svg_root = main_svg.getroot()
     
@@ -142,18 +141,43 @@ async def placeOverlay(contents:str, overlayFilepath, positionX, positionY) -> s
         overlay_contents = await afp.read()
     overlay_svg_root = ElementTree.fromstring(overlay_contents)
     
-    # Clean up text elements in the overlay
-    for text_elem in overlay_svg_root.findall(".//*[@{http://www.w3.org/XML/1998/namespace}space='preserve']"):
-        if text_elem.text:
-            text_elem.text = text_elem.text.strip()
-        text_elem.attrib.pop('{http://www.w3.org/XML/1998/namespace}space', None)
+    # Create group with proper namespace
+    group = ElementTree.Element(f'{{{SVG_NS}}}g')
     
-    group = ElementTree.Element('g', attrib={'transform': f'translate({positionX},{positionY})'})
+    # Get the scale from the main transform group, default to 1.0 if not found
+    transform_group = main_svg_root.find(f'.//{{{SVG_NS}}}g[@transform]')
+    scale_factor = 1.0
+    if transform_group is not None:
+        transform = transform_group.get('transform', '')
+        if 'scale(' in transform:
+            scale_part = transform[transform.index('scale('):].split('(')[1].split(')')[0]
+            try:
+                scale_factor = float(scale_part)
+            except ValueError:
+                print(f"Warning: Could not parse scale factor '{scale_part}', using default 1.0")
     
+    # First translate, then scale
+    group.set('transform', f'translate({positionX},{positionY}) scale({1/scale_factor})')
+    
+    # Copy all attributes from overlay root except transform-related ones
+    for key, value in overlay_svg_root.attrib.items():
+        if key not in ['width', 'height', 'viewBox', 'transform']:
+            group.set(key, value)
+    
+    # Copy all children from the overlay SVG, preserving their original transforms
     for element in overlay_svg_root:
-        group.append(element)
+        # Preserve existing transforms on elements
+        existing_transform = element.get('transform', '')
+        if existing_transform:
+            # If element already has a transform, we keep it
+            group.append(element)
+        else:
+            group.append(element)
     
-    main_svg_root.append(group)
+    if transform_group is not None:
+        transform_group.append(group)
+    else:
+        main_svg_root.append(group)
     
     return ElementTree.tostring(main_svg_root, encoding='unicode')
 

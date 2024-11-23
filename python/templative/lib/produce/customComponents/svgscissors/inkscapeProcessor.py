@@ -137,16 +137,24 @@ async def exportSvgToImage(artFileOutputFilepath, imageSizePixels, name, outputD
         print("Inkscape is not installed or not found in common paths.")
         return
 
-    createPngCommands = [
-        '"%s"' % inkscapePath,
-        '"%s"' % absoluteSvgFilepath,
-        '--export-filename="%s"' % pngTempFilepath,
-        "--export-dpi=300",
-        "--export-background-opacity=0",
-        # "--export-width=%s" % imageSizePixels[0],
-        # "--export-height=%s" % imageSizePixels[1],
-    ]
-    await runCommands(createPngCommands)
-
-    # We dont want to render the temp file as it is being written, so we rename it to the complete version.
-    os.rename(pngTempFilepath, pngFinalFilepath)
+    try:
+        createPngCommands = [
+            '"%s"' % inkscapePath,
+            '"%s"' % absoluteSvgFilepath,
+            '--export-filename="%s"' % pngTempFilepath,
+            "--export-dpi=300",
+            "--export-background-opacity=0",
+            # "--export-width=%s" % imageSizePixels[0],
+            # "--export-height=%s" % imageSizePixels[1],
+        ]
+        await runCommands(createPngCommands)
+        
+        # Check if the temp file was actually created
+        if not path.exists(pngTempFilepath):
+            print(f"Inkscape failed to export {path.basename(path.dirname(absoluteSvgFilepath))}/{path.basename(absoluteSvgFilepath)} to png.")
+            return
+            
+        os.rename(pngTempFilepath, pngFinalFilepath)
+    except Exception as e:
+        print(f"Inkscape export failed: {str(e)}")
+        raise
