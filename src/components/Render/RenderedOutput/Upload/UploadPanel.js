@@ -75,8 +75,6 @@ export default class UploadPanel extends React.Component {
     }
     render() {
         return <React.Fragment>
-            {this.props.doesUserOwnTemplative ? 
-                <React.Fragment>
                 <div className="logged-messages-container">
                     <LoggedMessages messages={this.props.templativeMessages}/>
                 </div>
@@ -102,10 +100,38 @@ export default class UploadPanel extends React.Component {
                 
                 <AdPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
             </React.Fragment>
-                :
-                <TemplativePurchaseButton action="Uploading to the GameCrafter"/>
-            }
+        // return <React.Fragment>
+        //     {this.props.doesUserOwnTemplative ? 
+        //         <React.Fragment>
+        //         <div className="logged-messages-container">
+        //             <LoggedMessages messages={this.props.templativeMessages}/>
+        //         </div>
+        //         <UploadControls 
+        //             isCreating={this.state.isCreating}
+        //             selectedOutputDirectory={this.props.outputFolderPath}
+        //             apiKey={this.state.apiKey}
+        //             username={this.state.username}
+        //             password={this.state.password}
+        //             isAsync={this.state.isAsync}
+        //             isPublish={this.state.isPublish}
+        //             isProofed={this.state.isProofed}
+        //             isIncludingStock={this.state.isIncludingStock}
+        //             uploadCallback={this.upload}
+        //             updateApiKeyCallback={this.updateApiKey}
+        //             updateUsernameCallback={this.updateUsername}
+        //             updatePasswordCallback={this.updatePassword}
+        //             updateIsAsyncCallback={this.updateIsAsync}
+        //             toggleIsPublishCallback={this.toggleIsPublish}
+        //             toggleIsProofedCallback={this.toggleIsProofed}
+        //             toggleIsIncludingStockCallback={this.toggleIsIncludingStock}
+        //         />
+                
+        //         <AdPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
+        //     </React.Fragment>
+        //         :
+        //         <TemplativePurchaseButton action="Uploading to the GameCrafter"/>
+        //     }
             
-        </React.Fragment>
+        // </React.Fragment>
     }
 }
