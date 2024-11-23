@@ -10,6 +10,7 @@ import GitStatusViewer from "./GitStatusViewer";
 const fsOld = require('fs');
 const path = require("path")
 const fs = require("fs/promises")
+const { exec } = require('child_process');
 
 export default class TemplativeProjectRenderer extends React.Component {   
     state = {
@@ -187,9 +188,21 @@ export default class TemplativeProjectRenderer extends React.Component {
     }
     #checkGitStatus = async () => {
         try {
-            const gitPath = path.join(this.props.templativeRootDirectoryPath, '.git');
-            const hasGit = fsOld.existsSync(gitPath);
-            this.setState({ hasGit });
+            // Check if git is installed using 'which' on Unix or 'where' on Windows
+            const gitCommand = process.platform === 'win32' ? 'where git' : 'which git';
+            
+            exec(gitCommand, async (error) => {
+                if (error) {
+                    console.error('Git is not installed:', error);
+                    this.setState({ hasGit: false });
+                    return;
+                }
+
+                // If git is installed, check for .git directory
+                const gitPath = path.join(this.props.templativeRootDirectoryPath, '.git');
+                const hasGit = fsOld.existsSync(gitPath);
+                this.setState({ hasGit });
+            });
         } catch (error) {
             console.error('Git check failed:', error);
             this.setState({ hasGit: false });
