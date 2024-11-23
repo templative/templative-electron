@@ -165,6 +165,7 @@ export default class GitStatusViewer extends React.Component {
 
     commitChanges = async () => {
         try {
+            this.setState({ error: null });
             await this.execAsync(`git commit -m "${this.state.commitMessage}"`);
             this.setState({ commitMessage: '' });
             await this.checkGitStatus();
@@ -179,97 +180,109 @@ export default class GitStatusViewer extends React.Component {
 
     revertFile = async (filePath) => {
         try {
+            this.setState({ error: null });
             await this.execAsync(`git restore --worktree "${filePath}"`);
             await this.checkGitStatus();
         } catch (error) {
-            console.error('Git revert failed:', error);
+            this.setState({ error: 'Git revert failed: ' + error.message });
         }
     }
 
     unstageFile = async (filePath) => {
         try {
+            this.setState({ error: null });
             await this.execAsync(`git restore --staged "${filePath}"`);
             await this.checkGitStatus();
         } catch (error) {
-            console.error('Git unstage failed:', error);
+            this.setState({ error: 'Git unstage failed: ' + error.message });
         }
     }
 
     stageFile = async (filePath) => {
         try {
+            this.setState({ error: null }); // Clear error before action
             await this.execAsync(`git add "${filePath}"`);
             await this.checkGitStatus();
         } catch (error) {
-            console.error('Git stage failed:', error);
+            this.setState({ error: 'Git stage failed: ' + error.message });
         }
     }
 
     unstageAllFiles = async () => {
         try {
+            this.setState({ error: null }); // Clear error before action
             await this.execAsync('git restore --staged .');
             await this.checkGitStatus();
         } catch (error) {
-            console.error('Git unstage all failed:', error);
+            this.setState({ error: 'Git unstage all failed: ' + error.message });
         }
     }
 
     stageAllFiles = async () => {
         try {
+            this.setState({ error: null }); // Clear error before action
             await this.execAsync('git add .');
             await this.checkGitStatus();
         } catch (error) {
-            console.error('Git stage all failed:', error);
+            this.setState({ error: 'Git stage all failed: ' + error.message });
         }
     }
 
     revertAllFiles = async () => {
         try {
+            this.setState({ error: null }); // Clear error before action
             await this.execAsync('git restore --worktree .');
             await this.checkGitStatus();
         } catch (error) {
-            console.error('Git revert all failed:', error);
+            this.setState({ error: 'Git revert all failed: ' + error.message });
         }
     }
 
     pushChanges = async () => {
         try {
+            this.setState({ error: null }); // Clear error before action
             await this.execAsync('git push');
             await this.checkGitStatus();
         } catch (error) {
-            console.error('Git push failed:', error);
+            this.setState({ error: 'Git push failed: ' + error.message });
         }
     }
 
     pullChanges = async () => {
         try {
+            this.setState({ error: null }); // Clear error before action
             const pullStrategy = await this.getPullStrategy();
             await this.execAsync(`git pull ${pullStrategy}`);
             await this.checkGitStatus();
         } catch (error) {
-            console.error('Git pull failed:', error);
+            this.setState({ error: 'Git pull failed: ' + error.message });
         }
     }
 
     resolveUsingOurs = async (filePath) => {
         try {
+            this.setState({ error: null }); // Clear error before action
             await this.execAsync(`git checkout --ours "${filePath}" && git add "${filePath}"`);
             await this.checkGitStatus();
         } catch (error) {
-            console.error('Git resolve ours failed:', error);
+            this.setState({ error: 'Git resolve ours failed: ' + error.message });
         }
     }
 
     resolveUsingTheirs = async (filePath) => {
         try {
+            this.setState({ error: null }); // Clear error before action
             await this.execAsync(`git checkout --theirs "${filePath}" && git add "${filePath}"`);
             await this.checkGitStatus();
         } catch (error) {
-            console.error('Git resolve theirs failed:', error);
+            this.setState({ error: 'Git resolve theirs failed: ' + error.message });
         }
     }
 
     continueRebase = async () => {
         try {
+            this.setState({ error: null });
+
             if (this.state.mergeConflicts.length > 0) {
                 this.setState({ 
                     rebaseError: 'Please resolve all conflicts before continuing the rebase'
@@ -294,9 +307,10 @@ export default class GitStatusViewer extends React.Component {
 
     syncChanges = async () => {
         try {
+            this.setState({ error: null }); // Clear error before action
             await this.checkGitStatus();
         } catch (error) {
-            console.error('Git sync failed:', error);
+            this.setState({ error: 'Git sync failed: ' + error.message });
         }
     }
 
@@ -611,8 +625,7 @@ export default class GitStatusViewer extends React.Component {
                         ))}
                     </div>
                 )}
-                {/* {this.state.isLoading && <div className="git-loading">Loading...</div>} */}
-                {this.state.error && <div className="git-error">{this.state.error}</div>}
+                {this.state.error && <div className="git-error">Git Error: {this.state.error}</div>}
             </div>
         );
     }
