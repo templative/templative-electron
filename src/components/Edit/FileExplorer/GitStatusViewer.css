@@ -2,9 +2,29 @@
     border-top: 1px solid #444;
     padding-top: 10px;
     padding-bottom:1em;
+    padding-right: 10px;
     height: 400px; /* Fixed height for git section */
     overflow-y: scroll;
     min-height: 0; /* Important for proper flex behavior */
+}
+
+/* Custom scrollbar styling */
+.git-status-viewer::-webkit-scrollbar {
+    width: 12px;  /* Wider scrollbar */
+}
+
+.git-status-viewer::-webkit-scrollbar-track {
+    background: #1e2127;  /* Dark background for track */
+}
+
+.git-status-viewer::-webkit-scrollbar-thumb {
+    background: #3f4450;  /* Slightly lighter than track for thumb */
+    border-radius: 6px;
+    border: 2px solid #1e2127;  /* Creates padding effect */
+}
+
+.git-status-viewer::-webkit-scrollbar-thumb:hover {
+    background: #4a4f5a;  /* Even lighter on hover */
 }
 
 .git-header {

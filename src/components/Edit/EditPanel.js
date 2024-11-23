@@ -19,7 +19,8 @@ import UnifiedComponentViewer from "./Viewers/UnifiedViewer/UnifiedComponentView
 export default class EditPanel extends React.Component { 
     state = {
         isPreviewVisible: false,
-        componentComposeScollPosition: 0
+        componentComposeScollPosition: 0,
+        leftColumnWidth: 20
     }
     togglePreviewVisibility = () => {
         this.setState({isPreviewVisible: !this.state.isPreviewVisible})
@@ -39,11 +40,32 @@ export default class EditPanel extends React.Component {
     updateComponentComposeScrollPosition = (scrollPosition) => {
         this.setState({ componentComposeScollPosition: scrollPosition });
     }
+    startResize = (e) => {
+        const startX = e.clientX;
+        const startWidth = this.state.leftColumnWidth;
+        const container = document.querySelector('.mainBody .row');
+        
+        const doDrag = (e) => {
+            const containerWidth = container.offsetWidth;
+            const difference = e.clientX - startX;
+            const newWidth = startWidth + (difference / containerWidth * 100);
+            this.setState({ leftColumnWidth: Math.min(Math.max(8, newWidth), 50) });
+        };
+
+        const stopResize = () => {
+            document.removeEventListener('mousemove', doDrag);
+            document.removeEventListener('mouseup', stopResize);
+        };
+
+        document.addEventListener('mousemove', doDrag);
+        document.addEventListener('mouseup', stopResize);
+    }
     render () {
         var filepathSplit = this.props.currentFilepath !== undefined ? this.props.currentFilepath.replace(/\\/g,"/").replace(/^\/|\/$/g, '').split("/").join(" > ") : ""
         return <div className='mainBody'>
             <div className="row g-0">
-                <div className='col-3 col-xl-2 left-column'>
+                <div className='col-3 col-xl-2 left-column' style={{width: `${this.state.leftColumnWidth}%`}}>
+                    <div className="resize-handle" onMouseDown={this.startResize}></div>
                     <TemplativeProjectRenderer 
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
                         currentFileType={this.props.currentFileType}
@@ -155,7 +177,8 @@ export default class EditPanel extends React.Component {
                     }</span>
                 </div>
                 {this.state.isPreviewVisible &&
-                    <div className="col-2 render-preview-column">
+                    <div className="col-2 render-preview-column" style={{width: `${this.state.previewColumnWidth}%`}}>
+                        <div className="resize-handle" onMouseDown={(e) => this.startResize('preview', e)}></div>
                         <RenderPreview templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
                     </div>
                 }

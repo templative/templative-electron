@@ -6,6 +6,9 @@
     margin-bottom: 1em;
     display: flex;
     align-items: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 
@@ -33,10 +36,16 @@
     padding-left: 0.5em;
     font-size: 24px;
     margin-bottom: 6px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .component-type {
     font-size: 18px;
     color: gray;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .goto-buttons {
     width: 100%;
