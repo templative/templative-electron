@@ -20,7 +20,8 @@
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
-    white-space: pre-wrap;
+    white-space: nowrap;  /* Add this */
+    flex-wrap: nowrap;
 }
 .new-file-input {
     outline: none;
