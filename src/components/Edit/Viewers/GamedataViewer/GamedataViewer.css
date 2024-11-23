@@ -113,3 +113,15 @@ tr {
     flex: 1;
     white-space: nowrap;
 }
+.key-value-control-button {
+    background-color: rgb(33, 37, 41) !important;
+    border-color: rgb(73, 80, 87) !important;
+    border-bottom-width: 1px !important;
+    border-left:none !important;
+}
+.key-value-control-button:first-of-type {
+    border-right:none !important;
+}
+.vertical-input-group .input-group:nth-child(odd) .key-value-control-button  {
+    background-color: hsl(200, 10%, 11%)!important;
+}

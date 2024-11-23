@@ -21,7 +21,16 @@
     background-color: #2b3035!important;
     border-color: rgb(73, 80, 87) !important;
 }
-
+.artdata-crud-control {
+    background-color: rgb(33, 37, 41) !important;
+    border-color: rgb(73, 80, 87) !important;
+    border-bottom-width: 1px !important;
+    border-left:none !important;
+    border-right-width: 0px;
+}
+.vertical-input-group .input-group:nth-child(odd) .artdata-crud-control  {
+    background-color: hsl(200, 10%, 11%)!important;
+}
 .no-left-border {
     border-left-width: 0 !important;
 }
