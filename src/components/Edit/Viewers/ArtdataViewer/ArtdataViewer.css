@@ -28,7 +28,16 @@
     border-left:none !important;
     border-right-width: 0px;
 }
+.artdata-crud-control:disabled {
+    border-left: none !important;
+    opacity: 1 !important;
+    border-right-width: 0px !important;
+    color: rgba(108, 117, 125, 0.65) !important;
+}
 .vertical-input-group .input-group:nth-child(odd) .artdata-crud-control  {
+    background-color: hsl(200, 10%, 11%)!important;
+}
+.vertical-input-group .input-group:nth-child(odd) .artdata-crud-control:disabled  {
     background-color: hsl(200, 10%, 11%)!important;
 }
 .no-left-border {
@@ -101,4 +110,7 @@
 .wide-scope-select {
     max-width: none !important;
     flex: 1 1 auto !important;
+}
+.artdata-viewer .input-group > span {
+    user-select: none;
 }

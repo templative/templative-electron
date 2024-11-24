@@ -64,7 +64,7 @@ export default class Piece extends React.Component {
         });
         var shouldShowPlusSign = this.state.isHovering
         shouldShowPlusSign = true // I dont like the hover
-        return <div className="vertical-input-group" 
+        return <div className="vertical-input-group piece-controls-and-keys" 
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}
         >        

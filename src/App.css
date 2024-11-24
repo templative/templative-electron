@@ -94,3 +94,11 @@ textarea::-webkit-scrollbar-corner {
 .vertical-input-group .input-group:nth-child(odd) .darkened-label {
   background-color: #1a1e20!important;
 }
+.bi-trash3 {
+  /* fill: inherit; */
+  transition: fill 0.2s ease !important;
+}
+
+button:not(:disabled):hover > .bi-trash3 {
+  fill: hsl(354, 80%, 54%);
+}

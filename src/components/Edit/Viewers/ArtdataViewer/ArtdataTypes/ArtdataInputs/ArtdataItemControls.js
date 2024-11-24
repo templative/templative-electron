@@ -4,12 +4,22 @@ export default class ArtdataItemControls extends React.Component {
     
     render() {
         return <React.Fragment>
-            <button onClick={() => this.props.updateArtdataItemOrderCallback(this.props.index,this.props.index-1)} className="btn btn-outline-secondary artdata-crud-control" type="button" id="button-addon1">
+            <button 
+                onClick={() => this.props.updateArtdataItemOrderCallback(this.props.index,this.props.index-1)} 
+                className="btn btn-outline-secondary artdata-crud-control" 
+                type="button" 
+                disabled={this.props.isFirst}
+                id="button-addon1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-up" viewBox="0 0 16 16">
                     <path fillRule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
                 </svg>
             </button>
-            <button onClick={() => this.props.updateArtdataItemOrderCallback(this.props.index,this.props.index+1)} className="btn btn-outline-secondary artdata-crud-control" type="button" id="button-addon1">
+            <button 
+                onClick={() => this.props.updateArtdataItemOrderCallback(this.props.index,this.props.index+1)} 
+                className="btn btn-outline-secondary artdata-crud-control" 
+                type="button"
+                disabled={this.props.isLast}
+                id="button-addon1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-down" viewBox="0 0 16 16">
                     <path fillRule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
                 </svg>

@@ -177,6 +177,7 @@ export default class ArtdataViewer extends EditableViewerJson {
                     updateArtdataFieldCallback={(artdataType, index, field, value)=>this.updateArtdataField(artdataType, index, field, value)}
                     updateArtdataItemOrderCallback={(from,to) => this.updateArtdataItemOrder("overlays", from, to)}
                     availableDataSources={this.props.availableDataSources}
+                    isLast={i === this.state.content.overlays.length - 1}
                 />)
             };
             for(var t = 0 ; t < this.state.content.textReplacements.length; t++) {
@@ -191,6 +192,7 @@ export default class ArtdataViewer extends EditableViewerJson {
                     updateArtdataFieldCallback={(artdataType, index, field, value)=>this.updateArtdataField(artdataType, index, field, value)}
                     updateArtdataItemOrderCallback={(from,to) => this.updateArtdataItemOrder("textReplacements", from, to)}
                     availableDataSources={this.props.availableDataSources}
+                    isLast={t === this.state.content.textReplacements.length - 1}
                 />)
             };
             for(var s = 0 ; s < this.state.content.styleUpdates.length; s++){
@@ -202,6 +204,7 @@ export default class ArtdataViewer extends EditableViewerJson {
                     updateArtdataItemOrderCallback={(from,to) => this.updateArtdataItemOrder("styleUpdates", from, to)}
                     deleteCallback={(index)=> this.deleteArtdata("styleUpdates", index)}
                     availableDataSources={this.props.availableDataSources}
+                    isLast={s === this.state.content.styleUpdates.length - 1}
                 />)
             };
             var textReplacementSuggestions = [...uniqueSuggestions]

@@ -37,9 +37,6 @@ tr {
     height: 100%;
     overflow-y: auto;
 }
-.piece-control-input.mb-3:last-child {
-    margin-bottom: 0 !important;
-}
 .key-field {
     max-width: 15em;
 }
@@ -124,4 +121,7 @@ tr {
 }
 .vertical-input-group .input-group:nth-child(odd) .key-value-control-button  {
     background-color: hsl(200, 10%, 11%)!important;
+}
+.piece-controls-and-keys:has(> .piece-control-input:only-child) {
+    margin-bottom: 1em;
 }
