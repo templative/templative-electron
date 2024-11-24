@@ -3,6 +3,7 @@ import TemplativeAccessTools from "../../TemplativeAccessTools";
 
 import "./RenderPreview.css"
 import RenderImage from "./RenderImage";
+import CoordinateImage from "./CoordinateImage";
 
 const fsOld = require('fs');
 const path = require("path");
@@ -197,7 +198,7 @@ export default class RenderPreview extends React.Component {
         });
 
         return sortedImages.map(filepath => (
-            <RenderImage 
+            <CoordinateImage 
                 key={filepath} 
                 filepath={filepath} 
                 imageHash={this.state.imageHash}
