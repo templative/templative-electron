@@ -86,6 +86,7 @@ export default class ComponentFilters extends React.Component {
             }
             var option = <p key={sortedType.name} 
                 className={`component-header ${sortedType.type === this.props.componentTypeFilter && "selected-component-header"}`} 
+                title={`Filter to only ${addSpaces(sortedType.name)} components.`}
                 onClick={() => this.handleClick(type)}
             >
                 {sortedType.count}x {addSpaces(sortedType.name)}

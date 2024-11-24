@@ -354,6 +354,7 @@ export default class ComponentsViewer extends EditableViewerJson {
                                     <p key={header} 
                                         className={`component-header ${header === this.state.filteredNameSubstring && "selected-component-header"}`} 
                                         onClick={() => this.setFilteredNameSubstring(header)}
+                                        title={`Filter to components that begin with ${header}...`}
                                     >
                                         {header}
                                     </p>)}
