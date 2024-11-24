@@ -61,21 +61,6 @@ export default class PrintPanel extends React.Component {
                     toggleIsBackIncludedCallback={this.toggleIsBackIncluded}
                     setSizeCallback={this.setSize}
                 />
-            {/* {this.props.doesUserOwnTemplative ? 
-                <CreatePrintoutButton 
-                    isCreatingPrintout={this.state.isCreatingPrintout}
-                    hasOutputDirectoryValue={this.props.outputFolderPath !== undefined}
-                    areMarginsIncluded={this.state.areMarginsIncluded}
-                    size={this.state.size}
-                    isBackIncluded={this.state.isBackIncluded}
-                    createPrintoutCallback={this.createPrintout}
-                    toggleAreMarginsDrawnCallback={this.toggleAreMarginsDrawn}
-                    toggleIsBackIncludedCallback={this.toggleIsBackIncluded}
-                    setSizeCallback={this.setSize}
-                />
-                :
-                <TemplativePurchaseButton action="Creating Printouts"/>
-            } */}
             {(showPDF) && 
                 <iframe key={this.state.rerenderIframeKey} title="printout.pdf" src={`file://${printoutFilepath}`} className="printout-pdf-iframe" />
             }

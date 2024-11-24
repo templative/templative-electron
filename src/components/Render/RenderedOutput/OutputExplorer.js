@@ -169,10 +169,10 @@ export default class OutputExplorer extends React.Component {
         const views = [
             <RenderedImages componentDirectories={this.state.componentDirectories} typeQuantities={this.state.typeQuantities}/>,
             <RulesViewer outputFolderPath={this.props.outputFolderPath} />,
-            <SimulatorPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
-            <PlaygroundPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
-            <PrintPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath}/>,
-            <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} doesUserOwnTemplative={this.props.doesUserOwnTemplative} outputFolderPath={this.props.outputFolderPath} templativeMessages={this.props.templativeMessages}/>
+            <SimulatorPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath}/>,
+            <PlaygroundPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath}/>,
+            <PrintPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath}/>,
+            <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath} templativeMessages={this.props.templativeMessages}/>
         ]
         
         return <React.Fragment>

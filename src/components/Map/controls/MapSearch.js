@@ -105,18 +105,15 @@ export default class MapSearch extends React.Component {
                             </select>
                         </div>
                     })}
-                </div>
-                {this.props.doesUserOwnTemplative ? 
-                    <button 
-                        className="btn btn-outline-warning publisher-search-button" 
-                        disabled={disabled} 
-                        onClick={this.searchForAPublisher}
-                    >
-                        Search for a Publisher
-                    </button>
-                    :
-                    <TemplativePurchaseButton action="Searching for a Publisher"/>
-                }
+                </div> 
+                <button 
+                    className="btn btn-outline-warning publisher-search-button" 
+                    disabled={disabled} 
+                    onClick={this.searchForAPublisher}
+                >
+                    Search for a Publisher
+                </button>
+                    
                 
             </div>
             <div className="map-search-output">

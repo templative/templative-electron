@@ -100,11 +100,6 @@ export default class PlaygroundPanel extends React.Component {
                         </button>
                     </div>
                     <button disabled={isCreateDisabled} type="button" className="btn btn-outline-secondary create-playground-button" onClick={() => this.createPlayground()}>{buttonMessage}</button>
-                    {/* {this.props.doesUserOwnTemplative ? 
-                        <button disabled={isCreateDisabled} type="button" className="btn btn-outline-secondary create-playground-button" onClick={() => this.createPlayground()}>{buttonMessage}</button>
-                        :
-                        <TemplativePurchaseButton action="Creating Tabletop Playground Packages"/>
-                    }  */}
                 </div>
         }                    
         </React.Fragment>

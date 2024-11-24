@@ -23,12 +23,7 @@ export default class RenderPanel extends React.Component {
         selectedLanguage: "en",
         isConnectedToTemplative: false,
         isProcessing: false,
-        doesUserOwnTemplative: false,
         
-    }
-    checkIfOwnsTemplative = async () => {
-        var ownsTemplative = await TemplativeClient.doesUserOwnTemplative(this.props.email, this.props.token)
-        this.setState({ doesUserOwnTemplative: ownsTemplative})
     }
 
     selectDirectoryAsync = async (directory) => {
@@ -55,7 +50,6 @@ export default class RenderPanel extends React.Component {
     }
     componentDidMount = async () => {
         trackEvent("view_renderPanel")
-        await this.checkIfOwnsTemplative()
         if (this.props.templativeRootDirectoryPath !== undefined) {
             var components = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
             this.setState({components: components})
@@ -128,7 +122,7 @@ export default class RenderPanel extends React.Component {
                     <RenderOutputOptions selectedDirectory={this.context.selectedOutputDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
                 </div>  
                 <div className="col-xs-12 col-md-5 col-lg-6 col-xl-9 outputPanel">
-                    <OutputExplorer templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} outputFolderPath={this.context.selectedOutputDirectory} doesUserOwnTemplative={this.state.doesUserOwnTemplative} templativeMessages={this.props.templativeMessages}/>
+                    <OutputExplorer templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} outputFolderPath={this.context.selectedOutputDirectory} templativeMessages={this.props.templativeMessages}/>
                 </div>        
             </div>
         </div>

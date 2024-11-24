@@ -95,11 +95,6 @@ export default class SimulatorPanel extends React.Component {
                         </button>
                     </div>
                     <button disabled={isCreateDisabled} type="button" className="btn btn-outline-secondary create-simulator-button" onClick={() => this.createSimulator()}>{buttonMessage}</button>
-                    {/* {this.props.doesUserOwnTemplative != "" ? 
-                    <button disabled={isCreateDisabled} type="button" className="btn btn-outline-secondary create-simulator-button" onClick={() => this.createSimulator()}>{buttonMessage}</button>
-                    :
-                    <TemplativePurchaseButton action="Creating Tabletop Simulator Packages"/> 
-                }*/}
                 </div>
             }
         </React.Fragment>
