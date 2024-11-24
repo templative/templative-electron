@@ -180,11 +180,36 @@ export default class RenderPreview extends React.Component {
         this.setState({ chosenPieceName: e.target.value });
     }
 
+    renderPreviewImages = () => {
+        if (this.state.loadingImages) {
+            return <p className="preview-loading">Loading images...</p>;
+        }
+        
+        if (this.state.imageSources.length === 0) {
+            return <p className="preview-loading">No preview images. Press the preview button on a piece from within the edit component view to preview it.</p>;
+        }
+
+        // Sort images so _back images appear last
+        const sortedImages = [...this.state.imageSources].sort((a, b) => {
+            const aIsBack = a.toLowerCase().includes('-back');
+            const bIsBack = b.toLowerCase().includes('-back');
+            return aIsBack ? 1 : bIsBack ? -1 : 0;
+        });
+
+        return sortedImages.map(filepath => (
+            <RenderImage 
+                key={filepath} 
+                filepath={filepath} 
+                imageHash={this.state.imageHash}
+            />
+        ));
+    }
+
     render() {
         return (
             <React.Fragment>
-                <p className="preview-title">Preview a Piece</p>
-                <div className="vertical-input-group">
+                <p className="preview-title">Preview</p>
+                {/* <div className="vertical-input-group">
                     <div className="input-group input-group-sm preview-select" data-bs-theme="dark">
                         <span className="input-group-text">Component</span>
                         <select value={this.state.chosenComponentName} onChange={this.updateChosenComponentName} className="form-select" id="inputGroupSelect01">
@@ -201,14 +226,10 @@ export default class RenderPreview extends React.Component {
                             ))}
                         </select>
                     </div>
-                </div>
-                <button className="btn preview-button" onClick={this.preview}>Preview</button>
+                </div> */}
+                {/* <button className="btn preview-button" onClick={this.preview}>Preview</button> */}
                 <div className="preview-images">
-                    {this.state.loadingImages ? <p>Loading images...</p> : 
-                        this.state.imageSources.map(filepath => (
-                            <RenderImage key={filepath} filepath={filepath} imageHash={this.state.imageHash}/>
-                        ))
-                    }
+                    {this.renderPreviewImages()}
                 </div>
             </React.Fragment>
         );

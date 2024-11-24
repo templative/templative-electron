@@ -177,8 +177,7 @@ export default class EditPanel extends React.Component {
                     }</span>
                 </div>
                 {this.state.isPreviewVisible &&
-                    <div className="col-2 render-preview-column" style={{width: `${this.state.previewColumnWidth}%`}}>
-                        <div className="resize-handle" onMouseDown={(e) => this.startResize('preview', e)}></div>
+                    <div className="col-2 render-preview-column">
                         <RenderPreview templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
                     </div>
                 }

@@ -15,6 +15,9 @@ export default class RenderImage extends React.Component {
     };
     render() {
         return <React.Fragment>
+            <div className="preview-image-filename">
+                {this.props.filepath.split('/').pop()}
+            </div>
             <img 
                 className="preview-image" 
                 src={`file://${this.props.filepath}?${this.props.imageHash}`} 
@@ -27,6 +30,7 @@ export default class RenderImage extends React.Component {
                     src={`file://${this.props.filepath}?${this.props.imageHash}`}
                 />
             )}
+
         </React.Fragment>
     }
 }
