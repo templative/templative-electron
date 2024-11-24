@@ -67,12 +67,6 @@
     border-top-left-radius: 0px !important;
     border-top-right-radius: 0px !important;
 }
-
-/* .render-input-group:last-child, .render-input-group:last-child > * {
-    border-top-width: 0px !important;
-    border-top-left-radius: 0px !important;
-    border-top-right-radius: 0px !important;
-} */
 .renderButton {
     width: calc(100%);
     border-color:#495357 !important;
@@ -280,17 +274,11 @@
     white-space: nowrap;
 }
 .render-controls-and-console {
-    /* padding-left: 0.25em;
-    padding-right: 0.25em; */
     display: flex;
     height: 300px;
     flex-direction: column;
 }
-.render-controls {
-    /* max-width: 350px;
-    margin-left: auto;
-    margin-right: auto; */
-}
+
 .render-controls > .input-group {
     margin-left: 0px;
     margin-right: 0px;
