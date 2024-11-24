@@ -5,8 +5,8 @@ const RenderingWorkspaceContext = React.createContext();
 const PostRenderOptions = [
     "Images",
     "Rules",
-    "Export to Tabletop Simulator Save",
-    "Export Tabletop Playground Package",
+    "Export to TTS Save",
+    "Export to TTP Package",
     "Create Print & Play",
     "Upload to TheGameCrafter",
     // "Assemble Animation Library"
