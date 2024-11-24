@@ -20,7 +20,7 @@ export default class UploadControls extends React.Component {
                     <input type="password" className="form-control" value={this.props.apiKey} onChange={(e)=> this.props.updateApiKeyCallback(e.target.value)} placeholder=""/>
                 </div>
                 <div className="input-group input-group-sm" data-bs-theme="dark">
-                    <span className="input-group-text upload-control-column-field"  id="basic-addon3">Username</span>
+                    <span className="input-group-text upload-control-column-field"  id="basic-addon3">Email</span>
                     <input className="form-control" value={this.props.username} onChange={(e)=> this.props.updateUsernameCallback(e.target.value)} placeholder=""/>
                 </div>
                 <div className="input-group input-group-sm" data-bs-theme="dark">
