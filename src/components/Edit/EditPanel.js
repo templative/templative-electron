@@ -148,7 +148,7 @@ export default class EditPanel extends React.Component {
                         {this.props.currentFileType === "UNIFIED_COMPONENT" && 
                             <UnifiedComponentViewer 
                                 componentName={this.props.currentFilepath.split("#")[1]}
-                                showPreviewCallback={this.context.togglePreviewVisibility}
+                                showPreviewCallback={this.context.showPreview}
                                 templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}      
                                 saveFileAsyncCallback={this.props.saveFileAsyncCallback}  
                                 updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}                 

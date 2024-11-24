@@ -83,6 +83,9 @@ class RenderingWorkspaceProvider extends React.Component {
   togglePreviewVisibility = () => {
     this.setState(prevState => ({ isPreviewVisible: !prevState.isPreviewVisible }));
   };
+  showPreview = () => {
+    this.setState({ isPreviewVisible: true });
+  }
 
   render() {
     return (
@@ -103,6 +106,7 @@ class RenderingWorkspaceProvider extends React.Component {
           isPreviewVisible: this.state.isPreviewVisible,
           setLeftColumnWidth: this.setLeftColumnWidth,
           togglePreviewVisibility: this.togglePreviewVisibility,
+          showPreview: this.showPreview
         }}
       >
         {this.props.children}
