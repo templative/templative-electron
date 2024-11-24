@@ -13,15 +13,20 @@ sio = socketio.AsyncServer(
     max_http_buffer_size=1e8
 )
 
+printStatements = {}
+
 @sio.event
 def connect(sid, environ):
     print("connect ", sid)
-    EmitPrintStatements(sio, "printStatement").__enter__()
+    printStatements[sid] = EmitPrintStatements(sio, "printStatement")
+    printStatements[sid].__enter__()
     pass
 
 @sio.event
 def disconnect(sid):
-    EmitPrintStatements(sio, "printStatement").__exit__(None, None, None)
+    if sid in printStatements:
+        printStatements[sid].__exit__(None, None, None)
+        del printStatements[sid]
     print('disconnect ', sid)
     pass
 
