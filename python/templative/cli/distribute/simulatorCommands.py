@@ -9,6 +9,9 @@ async def simulator(input, output):
     """Convert a produced game into a tabletop simulator game"""    
     if input is None:
         input = await instructionsLoader.getLastOutputFileDirectory()
+    
+    if input is None:
+        raise Exception("Missing --input directory.")
 
     simulatorDirectory = await getSimulatorDirectory(output)
     if simulatorDirectory == None:

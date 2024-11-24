@@ -42,7 +42,10 @@ async def upload(input, render, publish, stock, asynchronous, proofed):
 
     if render is None:
         render = await getLastOutputFileDirectory()
-
+    
+    if render is None:
+        raise Exception("Missing --render directory.")
+    
     await uploadGame(session, input, render, publish, stock, asynchronous, 1 if proofed else 0)
     await logout(session)
 

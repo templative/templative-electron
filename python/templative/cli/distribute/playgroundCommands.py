@@ -10,7 +10,9 @@ async def playground(input, output):
     """Convert a produced game into a tabletop playground game"""    
     if input is None:
         input = await instructionsLoader.getLastOutputFileDirectory()
-
+    if input is None:
+        raise Exception("Missing --input directory.")
+    
     playgroundDirectory = await getPlaygroundDirectory(output)
     if playgroundDirectory == None:
         print("Missing --output directory.")

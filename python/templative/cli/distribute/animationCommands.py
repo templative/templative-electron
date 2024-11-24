@@ -12,7 +12,10 @@ async def animation(input, output):
     """Create a typescript module for your board game."""
     if input is None:
         input = await getLastOutputFileDirectory()
-
+        
+    if input is None:
+        raise Exception("Missing --input directory.")
+    
     animationDirectory = await getAnimationDirectory(output)
     if animationDirectory == None:
         print("Missing --output directory.")

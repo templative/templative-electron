@@ -19,7 +19,9 @@ async def front(input, size, margins):
     """Create a pdf for printing on the front only"""
     if input is None:
         input = await getLastOutputFileDirectory()
-
+    if input is None:
+        raise Exception("Missing --input directory.")
+    
     if size != "Letter" and size != "Tabloid":
         print("You must choose either `Letter` or `Tabloid` for size.")
         return
@@ -34,7 +36,8 @@ async def frontback(input, size, margins):
     """Create a pdf for printing on the front and back"""
     if input is None:
         input = await getLastOutputFileDirectory()
-
+    if input is None:
+        raise Exception("Missing --input directory.")
     if size != "Letter" and size != "Tabloid":
         print("You must choose either `Letter` or `Tabloid` for size.")
         return

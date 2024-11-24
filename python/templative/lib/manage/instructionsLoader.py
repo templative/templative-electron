@@ -32,5 +32,8 @@ async def getLastOutputFileDirectory():
     outputDirectory = gameCompose["outputDirectory"]
     lastFileDirectory = os.path.join(outputDirectory, ".last")
 
+    if not os.path.exists(lastFileDirectory):
+        return None
+
     async with AIOFile(lastFileDirectory) as lastFile:
         return await lastFile.read()
