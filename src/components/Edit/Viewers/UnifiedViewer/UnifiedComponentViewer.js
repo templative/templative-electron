@@ -218,7 +218,7 @@ export default class UnifiedComponentViewer extends EditableViewerJson {
                                 className="tab-icon" 
                                 src={artdataIcon} 
                                 alt="Tab icon"
-                            /> {face} Artdata <span className="subfile-filepath">Same as Front Artdata</span>
+                            /> {face} Art Recipe <span className="subfile-filepath">Same as Front Art Recipe</span>
                         </p>
                     </div>
                 }
@@ -229,7 +229,7 @@ export default class UnifiedComponentViewer extends EditableViewerJson {
                                 className="tab-icon" 
                                 src={artdataIcon} 
                                 alt="Tab icon"
-                            /> {face} Artdata <span className="subfile-filepath">{path.parse(this.state[value]).name}.json</span> </p>
+                            /> {face} Art Recipe <span className="subfile-filepath">{path.parse(this.state[value]).name}.json</span> </p>
                     { this.state[extensionString] && 
                         <div className="universal-file-content">
                             <ArtdataViewer 

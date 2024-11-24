@@ -69,8 +69,8 @@ export default class EditComponentControls extends React.Component {
             </div>
             <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
                 { this.props.pieceGamedataExists ? 
-                    <button onClick={async () => await this.props.goToFileCallback("PIECE_GAMEDATA", this.props.pieceGameDataFilePath)} className="btn btn-outline-secondary go-to-template-button component-left-bumper" type="button"><img src={pieceIcon} className="component-file-goto-img"/> Piece Gamedata ↗</button> :
-                    <span className="input-group-text component-left-bumper"><img src={pieceIcon} className="component-file-goto-img"/> Piece Gamedata</span>
+                    <button onClick={async () => await this.props.goToFileCallback("PIECE_GAMEDATA", this.props.pieceGameDataFilePath)} className="btn btn-outline-secondary go-to-template-button component-left-bumper" type="button"><img src={pieceIcon} className="component-file-goto-img"/> Piece Content ↗</button> :
+                    <span className="input-group-text component-left-bumper"><img src={pieceIcon} className="component-file-goto-img"/> Piece Content</span>
                 }
                 
                 <FilepathsAutocompleteInput 
@@ -83,8 +83,8 @@ export default class EditComponentControls extends React.Component {
             </div>
             <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
                 { this.props.componentGameDataExists ? 
-                    <button onClick={async () => await this.props.goToFileCallback("COMPONENT_GAMEDATA", this.props.componentGameDataFilePath)} className="btn btn-outline-secondary go-to-template-button component-left-bumper" type="button"><img src={componentIcon} className="component-file-goto-img"/> Component Gamedata ↗</button> :
-                    <span className="input-group-text component-left-bumper"><img src={componentIcon} className="component-file-goto-img"/> Component Gamedata</span>
+                    <button onClick={async () => await this.props.goToFileCallback("COMPONENT_GAMEDATA", this.props.componentGameDataFilePath)} className="btn btn-outline-secondary go-to-template-button component-left-bumper" type="button"><img src={componentIcon} className="component-file-goto-img"/> Component Content ↗</button> :
+                    <span className="input-group-text component-left-bumper"><img src={componentIcon} className="component-file-goto-img"/> Component Content</span>
                 }
                 <FilepathsAutocompleteInput 
                     templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
@@ -99,8 +99,8 @@ export default class EditComponentControls extends React.Component {
             { this.props.hasFrontArtdata &&
                 <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
                     { this.props.frontArtdataExists ? 
-                        <button onClick={async () => await this.props.goToFileCallback("ARTDATA", this.props.artdataFrontFilePath)} className="btn btn-outline-secondary go-to-template-button component-left-bumper" type="button"><img src={artdataIcon} className="component-file-goto-img"/> Front Artdata ↗</button> :
-                        <span className="input-group-text component-left-bumper"><img src={artdataIcon} className="component-file-goto-img"/> Front Artdata</span>
+                        <button onClick={async () => await this.props.goToFileCallback("ARTDATA", this.props.artdataFrontFilePath)} className="btn btn-outline-secondary go-to-template-button component-left-bumper" type="button"><img src={artdataIcon} className="component-file-goto-img"/> Front Art Recipe ↗</button> :
+                        <span className="input-group-text component-left-bumper"><img src={artdataIcon} className="component-file-goto-img"/> Front Art Recipe</span>
                     }
                     
                     <FilepathsAutocompleteInput 
@@ -115,8 +115,8 @@ export default class EditComponentControls extends React.Component {
             { this.props.hasBackArtdata &&
             <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
                 { this.props.backArtdataExists ? 
-                        <button onClick={async () => await this.props.goToFileCallback("ARTDATA", this.props.artdataBackFilePath)} className="btn btn-outline-secondary go-to-template-button component-left-bumper" type="button"><img src={artdataIcon} className="component-file-goto-img"/> Back Artdata ↗</button> :
-                        <span className="input-group-text component-left-bumper"><img src={artdataIcon} className="component-file-goto-img"/> Back Artdata</span>
+                        <button onClick={async () => await this.props.goToFileCallback("ARTDATA", this.props.artdataBackFilePath)} className="btn btn-outline-secondary go-to-template-button component-left-bumper" type="button"><img src={artdataIcon} className="component-file-goto-img"/> Back Art Recipe ↗</button> :
+                        <span className="input-group-text component-left-bumper"><img src={artdataIcon} className="component-file-goto-img"/> Back Art Recipe</span>
                     }
                     <FilepathsAutocompleteInput 
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
@@ -138,7 +138,7 @@ export default class EditComponentControls extends React.Component {
                         >
                             <img src={artdataIcon} className="component-file-goto-img"/>Die Face Artdata ↗
                         </button> :
-                        <span className="input-group-text component-left-bumper"><img src={artdataIcon} className="component-file-goto-img"/> Die Face Artdata</span>
+                        <span className="input-group-text component-left-bumper"><img src={artdataIcon} className="component-file-goto-img"/> Die Face Art Recipe</span>
                     }
                     
                     <FilepathsAutocompleteInput 

@@ -399,7 +399,7 @@ export default class ComponentsViewer extends EditableViewerJson {
                                     <h5 className="modal-title">Delete {this.state.content[this.state.componentToDelete].name}?</h5>
                                 </div>
                                 <div className="modal-body">
-                                    <p>Are you sure you want to delete the <span className="component-name-to-delete">{this.state.content[this.state.componentToDelete].name}</span>?</p>
+                                    <p>Are you sure you want to delete <span className="component-name-to-delete">{this.state.content[this.state.componentToDelete].name}</span>?</p>
                                     <p className="deletion-disclaimer">This does not delete the art files, the artdata files, nor the gamedata files that this component currently uses.</p>
                                 </div>
                                 <div className="modal-footer">

@@ -268,7 +268,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                             }
                             <div className="file-explorer-spacing"/>
                             <ContentFileList
-                                header="Artdata Files" 
+                                header="Art Recipe Files" 
                                 contentType="ARTDATA" 
                                 filenameReferenceCounts={this.state.filenameReferenceCounts}
                                 directoryPath={this.state.artdataDirectory}
@@ -293,14 +293,14 @@ export default class TemplativeProjectRenderer extends React.Component {
 
                             <ResourceHeader 
                                 iconSource={gamedataIcon}
-                                header="Gamedata Files" 
+                                header="Content Files" 
                                 directory={gamedataDirectory}
                                 isExtended={isGameDataExtended}
                                 toggleExtendedAsyncCallback={() => this.props.changeExtendedDirectoryAsyncCallback(!isGameDataExtended, gamedataDirectory)}/>
                             {isGameDataExtended &&
                                 <div className="gamedata-indent">
                                     <ContentFileList
-                                    header="Component Gamedata" 
+                                    header="Component" 
                                     contentType="COMPONENT_GAMEDATA" 
                                     filenameReferenceCounts={this.state.filenameReferenceCounts}
                                     directoryPath={this.state.componentGamedataDirectory}
@@ -322,7 +322,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                                     changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
                                 />
                                 <ContentFileList
-                                    header="Piece Gamedata" 
+                                    header="Piece" 
                                     contentType="PIECE_GAMEDATA" 
                                     filenameReferenceCounts={this.state.filenameReferenceCounts}
                                     directoryPath={this.state.piecesGamedataDirectory}
