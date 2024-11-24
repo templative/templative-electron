@@ -112,25 +112,14 @@ export default class ComponentOutputDirectory extends React.Component {
     componentWillUnmount = () => {
         this.#stopWatchingComponentDirectoryFolderForChanges()
     }
-    toggleExtended = () => {
-        this.setState({isExtended: !this.state.isExtended})
-    }
-    // getRotationClassName = () => {
-    //     const rotationClasses = {
-    //         0: "",
-    //         1: "rotate90",
-    //         2: "rotate180",
-    //         3: "rotate270",
-    //     }
-    //     return rotationClasses[this.state.rotationLeftQuantity % 4]
-    // }
-    // rotateLeft = () => {
-    //     this.setState({rotationLeftQuantity: this.state.rotationLeftQuantity + 1})
-    // }
+    
     render = () => {
         var componentDirectory = this.props.componentDirectory.replaceAll("\\", "/")
         componentDirectory = componentDirectory.substring(componentDirectory.lastIndexOf("/") + 1, componentDirectory.length)
-        
+        var subdirectoryName = componentDirectory.split("_").pop()
+        if (componentDirectory === subdirectoryName) {
+            subdirectoryName = ""
+        }
         var backImage = null;
         var imageDivs = this.state.imageFilepaths.map((image, index) => {
             var imagePath = path.join(image.path, image.name)
@@ -157,8 +146,8 @@ export default class ComponentOutputDirectory extends React.Component {
         }).filter(Boolean);
         
         var isComplete = this.state.imageFilepaths.length === this.state.totalImageFileCount
-        return <div className="renderedComponent">
-            <div className="component-output-header" onClick={this.toggleExtended}>
+        return <div className="rendered-subcomponent">
+            <div className="subcomponent-output-header" onClick={this.toggleExtended}>
                 <div className={`component-progess ${isComplete && "component-progress-completed"}`}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" className="bi bi-card-image progress-image" viewBox="0 0 16 16">
                         <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
@@ -166,31 +155,13 @@ export default class ComponentOutputDirectory extends React.Component {
                     </svg>
                     {this.state.imageFilepaths.length}/{this.state.totalImageFileCount} Images
                     </div>
-                <p className="rendered-component-title">{componentDirectory} {this.state.componentType && <span className="rendered-component-type"> - {this.state.componentType}</span>}</p>
-                {/* <div className="component-output-rotate-left" onClick={this.rotateLeft}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
-                        <path fillRule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
-                        <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/>
-                    </svg>
-                </div> */}
-                <div className="component-output-extension-chevron">
-                    {this.state.isExtended ? 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-up" viewBox="0 0 16 16">
-                            <path fillRule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
-                        </svg>
-                        :
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-down" viewBox="0 0 16 16">
-                            <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-                        </svg>
-                    }
-                </div>
+                <p className="rendered-component-title">{subdirectoryName}</p>
+                
             </div>
-            {this.state.isExtended && 
-                <div className="component-output-content">
-                    {backImage}
-                    {imageDivs}
-                </div>
-            }
+            <div className="component-output-content">
+                {backImage}
+                {imageDivs}
+            </div>
         </div>
     }
 }

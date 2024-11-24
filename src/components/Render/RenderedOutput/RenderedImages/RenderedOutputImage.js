@@ -95,7 +95,7 @@ export default class RenderOutputImage extends React.Component {
                             className={`image-controls ${this.state.isHovering && "darker-image-controls"}`}
                         >
                             {this.props.name !== undefined &&
-                                <p className="rendered-output-image-name">{ this.props.quantity !== undefined && <span>{this.props.quantity*this.props.componentQuantity}x </span> }{this.props.name.split(".")[0].replace(`${this.props.componentDirectoryName}-`, "")}</p>
+                                <p className="rendered-output-image-name">{ this.props.quantity !== undefined && <span>{this.props.quantity}x </span> }{this.props.name.split(".")[0].replace(`${this.props.componentDirectoryName}-`, "")}</p>
                             } 
                             
                             <svg
