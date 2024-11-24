@@ -23,7 +23,6 @@ export default class RenameableFolder extends React.Component {
                 <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
             </svg>
         var basename = path.basename(this.props.filepath)
-        var numberSpaces = this.props.depth - 1
         return <div className="renameable-file-wrapper" onClick={this.props.onClickCallback}>
             {this.props.isRenaming ? 
                 <div className="input-group input-group-sm"  data-bs-theme="dark">
@@ -46,7 +45,7 @@ export default class RenameableFolder extends React.Component {
                 </div>
                 :
                 <p className="renameable-file">
-                    {`  `.repeat(numberSpaces)}{chevron}{basename}
+                    <span style={{ marginLeft: `${(this.props.depth * 16)+8}px` }}/>{chevron}{basename}
                 </p>
             }
         </div>

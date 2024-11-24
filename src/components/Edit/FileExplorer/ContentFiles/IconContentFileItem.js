@@ -62,6 +62,7 @@ export default class IconContentFileItem extends React.Component {
         if (icons[this.props.contentType] !== undefined) {
             icon = icons[this.props.contentType]
         }
+        var numberSpaces = this.props.depth || 0
         return <div 
             className={`icon-content-file-item-wrapper ${isSelected && "selected-content-file-item-wrapper"}`} 
             key={this.props.filepath} 
@@ -82,6 +83,7 @@ export default class IconContentFileItem extends React.Component {
                 />
             }
             <p className={`renameable-file`}>
+                <span style={{ marginLeft: `${(numberSpaces * 16) + 8}px` }}/>
                 <img src={icon} className="tab-icon"/>{path.parse(this.props.filepath).name}
             </p>
         </div>

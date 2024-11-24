@@ -143,6 +143,8 @@ export default class ContentFileList extends React.Component {
         for(var i = 0; i < this.state.fileItems.length; i++) {
             var fileItem = this.state.fileItems[i]
             
+            const effectiveDepth = fileItem.depthRelativeToBasepath + (this.props.baseDepth || 0);
+            
             var isVisible = false
             if (fileItem.depthRelativeToBasepath === 1) {
                 isVisible = true
@@ -163,7 +165,7 @@ export default class ContentFileList extends React.Component {
                     key={fileItem.absoluteFilepath} 
                     directoryPath={this.props.directoryPath}
                     filepath={fileItem.absoluteFilepath}
-                    depth={fileItem.depthRelativeToBasepath}
+                    depth={effectiveDepth}
                     duplicateFileAsyncCallback={this.props.duplicateFileAsyncCallback}
                     updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
                     deleteFolderAsyncCallback={this.props.deleteFileAsyncCallback}
@@ -184,7 +186,7 @@ export default class ContentFileList extends React.Component {
                 key={fileItem.absoluteFilepath} 
                 directoryPath={this.props.directoryPath}
                 filepath={fileItem.absoluteFilepath}
-                depth={fileItem.depthRelativeToBasepath}
+                depth={effectiveDepth}
                 duplicateFileAsyncCallback={this.props.duplicateFileAsyncCallback}
                 updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
                 deleteFileAsyncCallback={this.props.deleteFileAsyncCallback}
@@ -219,6 +221,7 @@ export default class ContentFileList extends React.Component {
         var isExtended = this.props.extendedFileTypes.has(this.props.filetype)
         return <div className="content-file-list">
             <ResourceHeader 
+                depth={this.props.baseDepth}
                 iconSource={iconSource}
                 header={this.props.header} 
                 directory={this.props.directoryPath} 
