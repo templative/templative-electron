@@ -26,6 +26,8 @@ class RenderingWorkspaceProvider extends React.Component {
         isToggledToComponents: true,
         componentAIDescription: "",//"This is a deck of people. There are thirty cards in it. Each card has a shirt color, hat color, and pants color. The background of the card is three rectangles stacked on top of each other, with the top taking the hat color, the middle taking the shirt color, and the bottom taking the pants color. The name of each card is a random first name.",
         componentTypeSearch: "",
+        leftColumnWidth: 20,
+        isPreviewVisible: false,
     };
   }
 
@@ -74,6 +76,14 @@ class RenderingWorkspaceProvider extends React.Component {
     }));
   };
 
+  setLeftColumnWidth = (width) => {
+    this.setState({ leftColumnWidth: width });
+  };
+
+  togglePreviewVisibility = () => {
+    this.setState(prevState => ({ isPreviewVisible: !prevState.isPreviewVisible }));
+  };
+
   render() {
     return (
       <RenderingWorkspaceContext.Provider
@@ -89,6 +99,10 @@ class RenderingWorkspaceProvider extends React.Component {
           setComponentTypeSearch: this.setComponentTypeSearch,
           toggleCustomOrStock: this.toggleCustomOrStock,
           selectComponent: this.selectComponent,
+          leftColumnWidth: this.state.leftColumnWidth,
+          isPreviewVisible: this.state.isPreviewVisible,
+          setLeftColumnWidth: this.setLeftColumnWidth,
+          togglePreviewVisibility: this.togglePreviewVisibility,
         }}
       >
         {this.props.children}

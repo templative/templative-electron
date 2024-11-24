@@ -15,19 +15,15 @@ import "./EditPanel.css"
 import "./EditPanelTabs.css"
 import StudioGamedataViewer from "./Viewers/GamedataViewer/StudioGamedataViewer";
 import UnifiedComponentViewer from "./Viewers/UnifiedViewer/UnifiedComponentViewer";
+import { RenderingWorkspaceContext } from '../Render/RenderingWorkspaceProvider';
 
 export default class EditPanel extends React.Component { 
+    static contextType = RenderingWorkspaceContext;
+
     state = {
-        isPreviewVisible: false,
-        componentComposeScollPosition: 0,
-        leftColumnWidth: 20
+        componentComposeScollPosition: 0
     }
-    togglePreviewVisibility = () => {
-        this.setState({isPreviewVisible: !this.state.isPreviewVisible})
-    }
-    showPreview = () => {
-        this.setState({isPreviewVisible: true})
-    }
+
     clickIntoFile = () => {
         if (this.props.italicsTabFilepath !== this.props.currentFilepath) {
             return
@@ -42,14 +38,14 @@ export default class EditPanel extends React.Component {
     }
     startResize = (e) => {
         const startX = e.clientX;
-        const startWidth = this.state.leftColumnWidth;
+        const startWidth = this.context.leftColumnWidth;
         const container = document.querySelector('.mainBody .row');
         
         const doDrag = (e) => {
             const containerWidth = container.offsetWidth;
             const difference = e.clientX - startX;
             const newWidth = startWidth + (difference / containerWidth * 100);
-            this.setState({ leftColumnWidth: Math.min(Math.max(8, newWidth), 50) });
+            this.context.setLeftColumnWidth(Math.min(Math.max(8, newWidth), 50));
         };
 
         const stopResize = () => {
@@ -64,7 +60,7 @@ export default class EditPanel extends React.Component {
         var filepathSplit = this.props.currentFilepath !== undefined ? this.props.currentFilepath.replace(/\\/g,"/").replace(/^\/|\/$/g, '').split("/").join(" > ") : ""
         return <div className='mainBody'>
             <div className="row g-0">
-                <div className='col-3 col-xl-2 left-column' style={{width: `${this.state.leftColumnWidth}%`}}>
+                <div className='col-3 col-xl-2 left-column' style={{width: `${this.context.leftColumnWidth}%`}}>
                     <div className="resize-handle" onMouseDown={this.startResize}></div>
                     <TemplativeProjectRenderer 
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
@@ -152,7 +148,7 @@ export default class EditPanel extends React.Component {
                         {this.props.currentFileType === "UNIFIED_COMPONENT" && 
                             <UnifiedComponentViewer 
                                 componentName={this.props.currentFilepath.split("#")[1]}
-                                showPreviewCallback={this.showPreview}
+                                showPreviewCallback={this.context.togglePreviewVisibility}
                                 templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}      
                                 saveFileAsyncCallback={this.props.saveFileAsyncCallback}  
                                 updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}                 
@@ -165,8 +161,8 @@ export default class EditPanel extends React.Component {
                         }
                     </div>
                 </div>
-                <div className="preview-vertical-bar" onClick={this.togglePreviewVisibility}>
-                    <span>Preview {this.state.isPreviewVisible ? 
+                <div className="preview-vertical-bar" onClick={this.context.togglePreviewVisibility}>
+                    <span>Preview {this.context.isPreviewVisible ? 
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-down tags-chevron" viewBox="0 0 16 16">
                             <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
                         </svg>
@@ -176,7 +172,7 @@ export default class EditPanel extends React.Component {
                             </svg>
                     }</span>
                 </div>
-                {this.state.isPreviewVisible &&
+                {this.context.isPreviewVisible &&
                     <div className="col-2 render-preview-column">
                         <RenderPreview templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
                     </div>
