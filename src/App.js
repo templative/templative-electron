@@ -73,8 +73,9 @@ class App extends React.Component {
             this.setState({loggedIn: false, loginStatus: "Invalid login credentials."})
         })
         socket.connect();
-        socket.on('printStatement', (message) => {
-            this.setState({templativeMessages:  [...this.state.templativeMessages, message]})
+        socket.on('printStatement', (messages) => {
+            var newMessages = messages.split('\n').map(message => message.trim()).filter(message => message !== "")
+            this.setState({templativeMessages:  [...this.state.templativeMessages, ...newMessages]})
         });
         await this.attemptToLoadLastTemplativeProject()
         if (process.env.NODE_ENV !== 'development') {

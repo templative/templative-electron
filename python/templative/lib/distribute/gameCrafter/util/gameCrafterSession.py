@@ -12,16 +12,25 @@ class GameCrafterSession:
         self.userId = userId
 
 async def login(publicApiKey, userName, userPassword):
-    # Create SSL context and explicitly tell it to use system certificates
-    ssl_context = ssl.create_default_context()
-    ssl_context.set_default_verify_paths()
+    connector = aiohttp.TCPConnector(
+        verify_ssl=False,
+        enable_cleanup_closed=True
+    )
     
-    connector = aiohttp.TCPConnector(ssl=ssl_context)
-    gameCrafterSession = GameCrafterSession(aiohttp.ClientSession(connector=connector))
+    gameCrafterSession = GameCrafterSession(
+        aiohttp.ClientSession(
+            connector=connector,
+            timeout=aiohttp.ClientTimeout(total=30)
+        )
+    )
     
-    login = await httpOperations.login(gameCrafterSession, publicApiKey, userName, userPassword)
-    gameCrafterSession.login(sessionId=login["id"], userId=login["user_id"])
-    return gameCrafterSession
+    try:
+        login = await httpOperations.login(gameCrafterSession, publicApiKey, userName, userPassword)
+        gameCrafterSession.login(sessionId=login["id"], userId=login["user_id"])
+        return gameCrafterSession
+    except Exception as e:
+        await gameCrafterSession.httpSession.close()
+        raise e
 
 async def logout(gameCrafterSession):
     await httpOperations.logout(gameCrafterSession)

@@ -16,19 +16,24 @@ sio = socketio.AsyncServer(
 printStatements = {}
 
 @sio.event
-def connect(sid, environ):
+async def connect(sid, environ):
     print("connect ", sid)
     printStatements[sid] = EmitPrintStatements(sio, "printStatement")
-    printStatements[sid].__enter__()
-    pass
+    await printStatements[sid].__aenter__()
 
 @sio.event
-def disconnect(sid):
+async def disconnect(sid):
     if sid in printStatements:
-        printStatements[sid].__exit__(None, None, None)
+        await printStatements[sid].__aexit__(None, None, None)
         del printStatements[sid]
     print('disconnect ', sid)
-    pass
+
+@sio.event
+async def error_handler(sid, error):
+    print(f"Socket error for {sid}: {error}")
+    if sid in printStatements:
+        await printStatements[sid].__aexit__(None, None, None)
+        del printStatements[sid]
 
 @sio.on("upload")
 async def upload(sid, data):

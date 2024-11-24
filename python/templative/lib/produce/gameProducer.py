@@ -117,13 +117,12 @@ async def produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublis
         componentTypeTokens = componentType.split("_")
         isCustomComponent = componentTypeTokens[0].upper() != "STOCK"
         isDie = not "piecesGamedataFilename" in componentCompose
-        print(componentType, isCustomComponent, isDie)
+        
         if isCustomComponent and not isDie:
             needsToProduceAPiece = False
             
             piecesGamedata = await defineLoader.loadPiecesGamedata(gameRootDirectoryPath, gameCompose, componentCompose["piecesGamedataFilename"])
             for piece in piecesGamedata:
-                print(piece["name"])
                 if "quantity" in piece and piece["quantity"] > 0:
                     needsToProduceAPiece = True
                     break 
