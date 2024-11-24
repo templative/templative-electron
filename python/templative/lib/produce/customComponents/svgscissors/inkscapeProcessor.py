@@ -11,52 +11,65 @@ import cairosvg
 def searchWindowsRegistryForInkscape():
     try:
         import winreg
-        registry_path = r"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"
-        registry_key = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, registry_path)
+        # Check both 32 and 64-bit registry locations
+        registry_paths = [
+            (r"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall", winreg.HKEY_LOCAL_MACHINE),
+            (r"SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall", winreg.HKEY_LOCAL_MACHINE),
+            (r"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall", winreg.HKEY_CURRENT_USER)
+        ]
         
-        for i in range(0, winreg.QueryInfoKey(registry_key)[0]):
-            subkey_name = winreg.EnumKey(registry_key, i)
-            subkey_path = f"{registry_path}\\{subkey_name}"
+        for reg_path, hkey in registry_paths:
             try:
-                subkey = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, subkey_path)
-                display_name, _ = winreg.QueryValueEx(subkey, "DisplayName")
-                if "Inkscape" in display_name:
-                    install_location, _ = winreg.QueryValueEx(subkey, "InstallLocation")
-                    inkscapeExecutablePath = path.normpath(path.join(install_location, "bin", "inkscape.exe"))
-                    return inkscapeExecutablePath if path.isfile(inkscapeExecutablePath) else None 
-            except FileNotFoundError:
-                pass
-            except WindowsError:
-                pass
-    except WindowsError as e:
-        print(e)
-        pass
-
+                registry_key = winreg.OpenKey(hkey, reg_path)
+                for i in range(0, winreg.QueryInfoKey(registry_key)[0]):
+                    try:
+                        subkey_name = winreg.EnumKey(registry_key, i)
+                        with winreg.OpenKey(hkey, f"{reg_path}\\{subkey_name}") as subkey:
+                            display_name, _ = winreg.QueryValueEx(subkey, "DisplayName")
+                            if "Inkscape" in display_name:
+                                install_location, _ = winreg.QueryValueEx(subkey, "InstallLocation")
+                                inkscapePath = path.normpath(path.join(install_location, "bin", "inkscape.exe"))
+                                if path.isfile(inkscapePath):
+                                    return inkscapePath
+                    except (FileNotFoundError, OSError):
+                        continue
+            except OSError:
+                continue
+    except OSError as e:
+        print(f"Registry search error: {e}")
     return None
 
 def findInkscape():
     common_paths = {
         "win32": [
             "C:/Program Files/Inkscape/bin/inkscape.exe",
-            "C:/Program Files (x86)/Inkscape/bin/inkscape.exe"
+            "C:/Program Files (x86)/Inkscape/bin/inkscape.exe",
+            path.expandvars("%LOCALAPPDATA%/Programs/Inkscape/bin/inkscape.exe"),
         ],
         "darwin": [
-            "/Applications/Inkscape.app/Contents/MacOS/inkscape"
+            "/Applications/Inkscape.app/Contents/MacOS/inkscape",
+            "/opt/homebrew/bin/inkscape",
+            "/usr/local/bin/inkscape"
         ]
     }
 
-    inkscape_path = shutil.which("inkscape")
-    if inkscape_path and path.isfile(inkscape_path):
-        return inkscape_path
+    # First try the PATH
+    inkscapePath = shutil.which("inkscape")
+    if inkscapePath and path.isfile(inkscapePath):
+        return inkscapePath
 
-    if sys.platform not in common_paths:
-        return None
+    # Then try common paths for the current platform
+    platform = sys.platform
+    if platform.startswith("linux"):
+        platform = "linux"
 
-    for likelyPath in common_paths[sys.platform]:
-        if path.isfile(likelyPath):
-            return likelyPath
-        
-    if sys.platform == "win32":
+    if platform in common_paths:
+        for possiblePath in common_paths[platform]:
+            if path.isfile(possiblePath):
+                return possiblePath
+
+    # Finally try Windows registry
+    if platform == "win32":
         inkscapePath = searchWindowsRegistryForInkscape()
         if inkscapePath:
             return inkscapePath
