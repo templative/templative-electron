@@ -188,20 +188,23 @@ export default class TemplativeProjectRenderer extends React.Component {
     }
     #checkGitStatus = async () => {
         try {
-            // Check if git is installed using 'which' on Unix or 'where' on Windows
-            const gitCommand = process.platform === 'win32' ? 'where git' : 'which git';
-            
-            exec(gitCommand, async (error) => {
+            // Try to execute a simple git command directly
+            exec('git --version', async (error) => {
                 if (error) {
-                    console.error('Git is not installed:', error);
                     this.setState({ hasGit: false });
                     return;
                 }
 
-                // If git is installed, check for .git directory
-                const gitPath = path.join(this.props.templativeRootDirectoryPath, '.git');
-                const hasGit = fsOld.existsSync(gitPath);
-                this.setState({ hasGit });
+                try {
+                    // If git is available, check for .git directory
+                    const gitPath = path.join(this.props.templativeRootDirectoryPath, '.git');
+                    // Use fs.access instead of existsSync for more reliable checking
+                    await fs.access(gitPath, fs.constants.F_OK);
+                    this.setState({ hasGit: true });
+                } catch {
+                    // .git directory doesn't exist
+                    this.setState({ hasGit: false });
+                }
             });
         } catch (error) {
             console.error('Git check failed:', error);
