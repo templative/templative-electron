@@ -144,40 +144,32 @@ async def placeOverlay(contents:str, overlayFilepath, positionX, positionY) -> s
     # Create group with proper namespace
     group = ElementTree.Element(f'{{{SVG_NS}}}g')
     
-    # Get the scale from the main transform group, default to 1.0 if not found
-    transform_group = main_svg_root.find(f'.//{{{SVG_NS}}}g[@transform]')
-    scale_factor = 1.0
-    if transform_group is not None:
-        transform = transform_group.get('transform', '')
-        if 'scale(' in transform:
-            scale_part = transform[transform.index('scale('):].split('(')[1].split(')')[0]
-            try:
-                scale_factor = float(scale_part)
-            except ValueError:
-                print(f"Warning: Could not parse scale factor '{scale_part}', using default 1.0")
+    # Instead of looking for the first transform group, add directly to root
+    # and compensate for the root viewBox scaling
+    viewBox = main_svg_root.get('viewBox', '').split()
+    if viewBox:
+        try:
+            _, _, width, height = map(float, viewBox)
+            actual_width = float(main_svg_root.get('width', width))
+            scale_factor = actual_width / width
+        except ValueError:
+            scale_factor = 1.0
+    else:
+        scale_factor = 1.0
     
-    # First translate, then scale
+    # Apply position and inverse of root scaling
     group.set('transform', f'translate({positionX},{positionY}) scale({1/scale_factor})')
     
-    # Copy all attributes from overlay root except transform-related ones
+    # Copy attributes and children from overlay
     for key, value in overlay_svg_root.attrib.items():
         if key not in ['width', 'height', 'viewBox', 'transform']:
             group.set(key, value)
     
-    # Copy all children from the overlay SVG, preserving their original transforms
     for element in overlay_svg_root:
-        # Preserve existing transforms on elements
-        existing_transform = element.get('transform', '')
-        if existing_transform:
-            # If element already has a transform, we keep it
-            group.append(element)
-        else:
-            group.append(element)
+        group.append(element)
     
-    if transform_group is not None:
-        transform_group.append(group)
-    else:
-        main_svg_root.append(group)
+    # Add directly to root SVG instead of nested transform group
+    main_svg_root.append(group)
     
     return ElementTree.tostring(main_svg_root, encoding='unicode')
 
