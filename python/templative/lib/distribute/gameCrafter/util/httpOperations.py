@@ -225,7 +225,7 @@ async def postTwoSidedSlugged(gameCrafterSession, name, setId, quantity, imageFi
         has_proofed_back = isProofed
     )
 
-async def postDownloadableDocument(gameCrafterSession, gameId, pdfFileId, isProofed):
+async def postDownloadableDocument(gameCrafterSession, gameId, pdfFileId):
     url = "%s/gamedownload" % gameCrafterBaseUrl
     return await httpClient.post(gameCrafterSession, url,
         session_id = gameCrafterSession.sessionId,

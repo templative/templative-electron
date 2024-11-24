@@ -7,6 +7,9 @@ from templative.lib.distribute.gameCrafter import fileFolderManager
 
 async def createRules(gameCrafterSession, gameRootDirectoryPath, cloudGame, folderId):
     filepath = os.path.join(gameRootDirectoryPath, "rules.pdf")
+    if not os.path.exists(filepath):
+        print("!!! Rules file does not exist at %s" % filepath)
+        return
     print("Uploading %s" % (filepath))
     cloudFile = await fileFolderManager.postFile(gameCrafterSession, filepath, folderId)
     document = await httpOperations.postDownloadableDocument(gameCrafterSession, cloudGame["id"], cloudFile["id"])
@@ -15,45 +18,49 @@ async def createComponents(gameCrafterSession, outputDirectory, cloudGame, cloud
     if not outputDirectory:
         raise Exception("outputDirectory cannot be None")
 
-    # tasks = []
     for directoryPath in next(os.walk(outputDirectory))[1]:
         componentDirectoryPath = "%s/%s" % (outputDirectory, directoryPath)
-        await createComponent(gameCrafterSession, componentDirectoryPath, cloudGame, cloudGameFolderId, isPublish, isStock, isProofed)
-
-        # if isAsynchronous:
-        #     tasks.append(creationTask)
-        # else:
-        #     await creationTask
-    
-    # res = await asyncio.gather(*tasks, return_exceptions=True)
+        try:
+            await createComponent(gameCrafterSession, componentDirectoryPath, cloudGame, cloudGameFolderId, isPublish, isStock, isProofed)
+        except Exception as e:
+            print(f"!!! Error creating component in {componentDirectoryPath}: {str(e)}")
 
 async def createComponent(gameCrafterSession, componentDirectoryPath, cloudGame, cloudGameFolderId, isPublish, isStock, isProofed):
     if not componentDirectoryPath:
         raise Exception("componentDirectoryPath cannot be None")
 
-    componentFile = await instructionsLoader.loadComponentInstructions(componentDirectoryPath)
+    try:
+        componentFile = await instructionsLoader.loadComponentInstructions(componentDirectoryPath)
 
-    isDebugInfo = False if not "isDebugInfo" in componentFile else componentFile["isDebugInfo"]
-    if isDebugInfo and isPublish:
-        print("!!! Skipping %s. It is debug only and we are publishing." % (componentFile["name"]))
-        return
-    
-    componentType = componentFile["type"]
-    if componentFile["quantity"] == 0:
-        print("%s has 0 quantity, skipping." % componentFile["name"])
-        return
-    
-    componentTypeTokens = componentType.split("_")
-    isStockComponent = componentTypeTokens[0].upper() == "STOCK" 
-
-    if isStockComponent:
-        if not isStock:
+        isDebugInfo = False if not "isDebugInfo" in componentFile else componentFile["isDebugInfo"]
+        if isDebugInfo and isPublish:
+            print("!!! Skipping %s. It is debug only and we are publishing." % (componentFile["name"]))
             return
-        await createStockPart(gameCrafterSession, componentFile, cloudGame["id"])
-        return
-
-    await createCustomComponent(gameCrafterSession, componentType, componentFile, cloudGame["id"], cloudGameFolderId, isProofed)
         
+        componentType = componentFile["type"]
+        if componentFile["quantity"] == 0:
+            print("%s has 0 quantity, skipping." % componentFile["name"])
+            return
+        
+        componentTypeTokens = componentType.split("_")
+        isStockComponent = componentTypeTokens[0].upper() == "STOCK" 
+
+        if isStockComponent:
+            if not isStock:
+                return
+            try:
+                await createStockPart(gameCrafterSession, componentFile, cloudGame["id"])
+            except Exception as e:
+                print(f"!!! Error creating stock part {componentFile['name']}: {str(e)}")
+            return
+
+        try:
+            await createCustomComponent(gameCrafterSession, componentType, componentFile, cloudGame["id"], cloudGameFolderId, isProofed)
+        except Exception as e:
+            print(f"!!! Error creating custom component {componentFile['name']}: {str(e)}")
+            
+    except Exception as e:
+        print(f"!!! Error processing component in {componentDirectoryPath}: {str(e)}")
 
 async def createCustomComponent(gameCrafterSession, componentType, componentFile, cloudGameId, cloudGameFolderId, isProofed):
     if not componentType in COMPONENT_INFO:
@@ -140,15 +147,18 @@ async def createTwoSided(gameCrafterSession, component, identity, cloudGameId, c
         return
     frontInstructions = component["frontInstructions"]
     backInstructions = component["backInstructions"]
-
+    if not os.path.isfile(backInstructions["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing {backInstructions['filepath']}")
+        return
     print("Uploading %s %s %s(s)" % (quantity, componentName, identity))
 
     cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
 
-    tasks = []
+    
     backImageId = await fileFolderManager.createFileInFolder(gameCrafterSession, backInstructions["name"], backInstructions["filepath"], cloudComponentFolder["id"])
     cloudPokerDeck = await httpOperations.postTwoSidedSet(gameCrafterSession, componentName, identity, quantity, cloudGameId, backImageId, isProofed)
 
+    tasks = []
     for instructions in frontInstructions:
         tasks.append(asyncio.create_task(createTwoSidedPiece(gameCrafterSession, instructions, cloudPokerDeck["id"], cloudComponentFolder["id"], isProofed)))
 
@@ -161,8 +171,10 @@ async def createTwoSidedPiece(gameCrafterSession, instructions, setId, cloudComp
     quantity = instructions["quantity"]
     if int(quantity) == 0:
         return
+    if not os.path.isfile(filepath):
+        print(f"!!! Cannot create two sided piece, no file at {filepath}")
+        return
     print("Uploading %s" % (filepath))
-
     cloudFile = await fileFolderManager.postFile(gameCrafterSession, filepath, cloudComponentFolderId)
     twoSided = await httpOperations.postTwoSided(gameCrafterSession, name, setId, quantity, cloudFile["id"], isProofed)
 
@@ -174,14 +186,18 @@ async def createTwoSidedSlugged(gameCrafterSession, component, identity, cloudGa
     frontInstructions = component["frontInstructions"]
     backInstructions = component["backInstructions"]
 
+    if not os.path.isfile(backInstructions["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing {backInstructions['filepath']}")
+        return
     print("Uploading %s %s %s(s)" % (quantity, componentName, identity))
 
     cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
 
-    tasks = []
+    
     backImageId = await fileFolderManager.createFileInFolder(gameCrafterSession, backInstructions["name"], backInstructions["filepath"], cloudComponentFolder["id"])
     cloudPokerDeck = await httpOperations.postTwoSidedSluggedSet(gameCrafterSession, componentName, identity, quantity, cloudGameId, backImageId, isProofed)
 
+    tasks = []
     for instructions in frontInstructions:
         tasks.append(asyncio.create_task(createTwoSidedSluggedPiece(gameCrafterSession, instructions, cloudPokerDeck["id"], cloudComponentFolder["id"], isProofed)))
 
@@ -193,8 +209,10 @@ async def createTwoSidedSluggedPiece(gameCrafterSession, instructions, setId, cl
     quantity = instructions["quantity"]
     if int(quantity) == 0:
         return
+    if not os.path.isfile(filepath):
+        print(f"!!! Cannot create two sided slugged piece, no file at {filepath}")
+        raise
     print("Uploading %s" % (filepath))
-
     cloudFile = await fileFolderManager.postFile(gameCrafterSession, filepath, cloudComponentFolderId)
     twoSidedSlugged = await httpOperations.postTwoSidedSlugged(gameCrafterSession, name, setId, quantity, cloudFile["id"], isProofed)
 
@@ -205,7 +223,12 @@ async def createTwoSidedBox(gameCrafterSession, component, identity, cloudGameId
         return
     frontInstructions = component["frontInstructions"]
     backInstructions = component["backInstructions"]
-
+    if not os.path.isfile(frontInstructions[0]["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing {frontInstructions[0]['filepath']}")
+        return
+    if not os.path.isfile(backInstructions["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing {backInstructions['filepath']}")
+        return
     print("Uploading %s %s %s(s)" % (quantity, componentName, component["type"]))
 
     cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
@@ -224,6 +247,12 @@ async def createHookbox(gameCrafterSession, component, identity, cloudGameId, cl
     frontInstructions = component["frontInstructions"]
     backInstructions = component["backInstructions"]
 
+    if not os.path.isfile(frontInstructions[0]["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing {frontInstructions[0]['filepath']}")
+        return
+    if not os.path.isfile(backInstructions["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing {backInstructions['filepath']}")
+        return
     print("Uploading %s %s %s(s)" % (quantity, componentName, component["type"]))
 
     cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
@@ -241,6 +270,9 @@ async def createBoxface(gameCrafterSession, component, identity, cloudGameId, cl
         return
     frontInstructions = component["frontInstructions"]
 
+    if not os.path.isfile(frontInstructions[0]["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing {frontInstructions[0]['filepath']}")
+        return
     print("Uploading %s %s %s(s)" % (quantity, componentName, component["type"]))
 
     cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
@@ -257,10 +289,13 @@ async def createTuckBox(gameCrafterSession, component, identity, cloudGameId, cl
         return
     frontInstructions = component["frontInstructions"]
 
+    if not os.path.isfile(frontInstructions[0]["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing {frontInstructions[0]['filepath']}")
+        return
     print("Uploading %s %s %s(s)" % (quantity, componentName, component["type"]))
 
     cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
-
+    
     imageId = await fileFolderManager.createFileInFolder(gameCrafterSession, frontInstructions[0]["name"], frontInstructions[0]["filepath"], cloudComponentFolder["id"])
     cloudPokerDeck = await httpOperations.postTuckBox(gameCrafterSession, componentName, identity, quantity, cloudGameId, imageId, isProofed)
 
@@ -274,14 +309,18 @@ async def createDeck(gameCrafterSession, component, identity, cloudGameId, cloud
     frontInstructions = component["frontInstructions"]
     backInstructions = component["backInstructions"]
 
+    if not os.path.isfile(backInstructions["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing {backInstructions['filepath']}")
+        return
     print("Uploading %s %s %s(s)" % (quantity, componentName, component["type"]))
 
     cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
 
-    tasks = []
+    
     backImageId = await fileFolderManager.createFileInFolder(gameCrafterSession, backInstructions["name"], backInstructions["filepath"], cloudComponentFolder["id"])
     cloudPokerDeck = await httpOperations.postDeck(gameCrafterSession, componentName, identity, quantity, cloudGameId, backImageId, isProofed)
 
+    tasks = []
     for instructions in frontInstructions:
         tasks.append(asyncio.create_task(createDeckCard(gameCrafterSession, instructions, cloudPokerDeck["id"], cloudComponentFolder["id"], isProofed)))
 
@@ -293,8 +332,10 @@ async def createDeckCard(gameCrafterSession, instructions, deckId, cloudComponen
     quantity = instructions["quantity"]
     if int(quantity) == 0:
         return
+    if not os.path.isfile(filepath):
+        print(f"!!! Cannot create deck card, no file at {filepath}")
+        return
     print("Uploading %s" % (filepath))
-
     cloudFile = await fileFolderManager.postFile(gameCrafterSession, filepath, cloudComponentFolderId)
     pokerCard = await httpOperations.postDeckCard(gameCrafterSession, name, deckId, quantity, cloudFile["id"], isProofed)
 
@@ -305,6 +346,10 @@ async def createCustomPlasticDie(gameCrafterSession, componentInstructionsOutput
         return
     dieFaceFilepaths = componentInstructionsOutput["dieFaceFilepaths"]
 
+    for dieFaceFilepath in dieFaceFilepaths:
+        if not os.path.isfile(dieFaceFilepath):
+            print(f"!!! Cannot create {componentName}, missing {dieFaceFilepath}")
+            return
     print("Uploading %s %s %s(s)" % (quantity, componentName, identity))
 
     cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)

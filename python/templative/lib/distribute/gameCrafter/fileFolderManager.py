@@ -6,7 +6,7 @@ async def createGame(gameCrafterSession, uniqueGameName, gameInfo, designerId, i
     uploadedGame = await httpOperations.postGame(gameCrafterSession, gameName, designerId, shortDescription, longDescription, coolFactors, logoFileId, backdropFileId, advertisementFileId, websiteUrl, category, minAge, playTime, minPlayers, maxPlayers)
     gameId = uploadedGame["id"]
     editUrl = "%s%s%s" % ("https://www.thegamecrafter.com", "/make/games/", gameId)
-    print("Created %s. Edit it here %s" % (gameName, editUrl))
+    print(f"Created {gameName}.")
 
     return uploadedGame
 

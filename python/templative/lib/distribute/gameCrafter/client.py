@@ -39,7 +39,7 @@ async def uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirectory,
 
     await advertisementCreator.createActionShot(gameCrafterSession, cloudGame["id"], actionShotImageFileId)
 
-    # await createRules(gameCrafterSession, outputDirectory, cloudGame, cloudGameFolder["id"])
+    await createRules(gameCrafterSession, outputDirectory, cloudGame, cloudGameFolder["id"])
     await createComponents(gameCrafterSession, outputDirectory, cloudGame, cloudGameFolder["id"], isPublish, isStock, isAsynchronous, isProofed)
 
     gameUrl = "%s%s%s"%(gameCrafterBaseUrl, "/make/games/", cloudGame["id"])
