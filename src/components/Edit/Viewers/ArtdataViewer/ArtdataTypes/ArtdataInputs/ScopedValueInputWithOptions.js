@@ -10,8 +10,11 @@ import staticValueIcon from "../../../../Icons/staticValueIcon.svg"
 export default class ScopedValueInputWithOptions extends React.Component {   
     getFlattenedOptions = () => {
         const options = [
-            { scope: 'global', value: '', label: 'Static Value', icon: staticValueIcon },
-            // { scope: 'utility', value: 'git-sha', label: 'Utility: Git Commit Hash' }
+            { scope: "global", label: "Static Value", icon: staticValueIcon },
+            { scope: "piece", label: "Piece's (Manual Input)", icon: pieceIcon },
+            { scope: "component", label: "Component's (Manual Input)", icon: componentIcon },
+            { scope: "studio", label: "Studio's (Manual Input)", icon: studioIcon },
+            { scope: "game", label: "Game's (Manual Input)", icon: gameIcon },
         ];
 
         const sources = {
@@ -48,15 +51,39 @@ export default class ScopedValueInputWithOptions extends React.Component {
         const currentOption = options.find(opt => 
             opt.scope === this.props.scope && opt.value === this.props.source
         );
-        const currentValue = `${this.props.scope}:${this.props.source}`;
-        const showManualInput = this.props.scope === 'global';
+        const showManualInput = this.props.scope === 'global' || !currentOption;
+
+        // Create a custom label for manual inputs that aren't 'global'
+        let currentValue, currentLabel;
+        if (showManualInput) {
+            const scopeInfo = {
+                studio: "Studio's",
+                game: "Game's",
+                component: "Component's",
+                piece: "Piece's"
+            }[this.props.scope];
+            currentValue = `${this.props.scope}`;
+            currentLabel = scopeInfo ? `${scopeInfo} ${this.props.source}` : 'Static Value';
+        } else {
+            currentValue = `${this.props.scope}:${this.props.source}`;
+            currentLabel = currentOption?.label || 'Static Value';
+        }
+        
+        const scopeIcons = {
+            studio: studioIcon,
+            game: gameIcon,
+            component: componentIcon,
+            piece: pieceIcon,
+            global: staticValueIcon
+        };
+        const iconToShow = scopeIcons[this.props.scope] || staticValueIcon;
         
         return (
             <React.Fragment>
                 <span className="input-group-text scope-icon-container">
                     <img 
                         className="scope-icon" 
-                        src={currentOption?.icon || staticValueIcon} 
+                        src={iconToShow} 
                         alt="Scope icon"
                     /> 
                 </span>
@@ -65,18 +92,20 @@ export default class ScopedValueInputWithOptions extends React.Component {
                     onChange={this.handleSelectionChange} 
                     className={`form-select scope-select ${!showManualInput && 'wide-scope-select'}`}
                 >
-                    {options.map(opt => (
-                        <option 
-                            key={`${opt.scope}:${opt.value}`} 
-                            value={`${opt.scope}:${opt.value}`}
+                    {options.map(opt => {
+                        var key = opt.value ? `${opt.scope}:${opt.value}` : opt.scope
+                        return <option 
+                            key={key} 
+                            value={key}
                         >
                             {opt.label}
                         </option>
-                    ))}
+                    })}
                 </select>
                 {showManualInput && 
                     <input 
                         type="text" 
+                        title={`${this.props.scope} ${this.props.source}`}
                         className="form-control no-left-border scoped-value-manual-input" 
                         onChange={(event) => this.props.updateArtdataFieldCallback(this.props.index, "source", event.target.value)} 
                         value={this.props.source}

@@ -11,13 +11,13 @@ const path = require("path")
 
 const DEFAULT_ARTDATA_ITEMS = {
     "overlays": {
-        scope:"piece", source: "", isComplex: false, isDebug: false, positionX: 0, positionY: 0,
+        scope:"global", source: "", isComplex: false, isDebug: false, positionX: 0, positionY: 0,
     },
     "textReplacements": {
-        key: "", scope:"piece", source: "", isComplex: false, isDebug: false
+        key: "", scope:"global", source: "", isComplex: false, isDebug: false
     },
     "styleUpdates": {
-        id: "", cssValue: "", scope: "piece", source: "", isComplex: false, isDebug: false
+        id: "", cssValue: "", scope: "global", source: "", isComplex: false, isDebug: false
     } 
 }
 
