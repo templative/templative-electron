@@ -8,15 +8,20 @@ from templative.lib.distribute.gameCrafter.util.gameCrafterSession import login,
 
 sio = socketio.AsyncServer(
     cors_allowed_origins="*",
-    ping_interval=1,#seconds
-    ping_timeout=10)
+    ping_interval=25,
+    ping_timeout=60,
+    max_http_buffer_size=1e8
+)
 
 @sio.event
 def connect(sid, environ):
     print("connect ", sid)
+    EmitPrintStatements(sio, "printStatement").__enter__()
     pass
+
 @sio.event
 def disconnect(sid):
+    EmitPrintStatements(sio, "printStatement").__exit__(None, None, None)
     print('disconnect ', sid)
     pass
 
@@ -63,8 +68,7 @@ async def upload(sid, data):
     if session is None:
         raise Exception("You must provide a Game Crafter session.")
 
-    with EmitPrintStatements(sio, "printStatement"):
-        await uploadGame(session, gameDirectoryRootPath, outputDirectorypath, isPublish, isIncludingStock, isAsync, isProofed)
+    await uploadGame(session, gameDirectoryRootPath, outputDirectorypath, isPublish, isIncludingStock, isAsync, isProofed)
     await logout(session)
 
 @sio.on("produceGame")
@@ -75,5 +79,4 @@ async def produceGame(sid, data):
     language = data['language']
     directoryPath = data["directoryPath"]
 
-    with EmitPrintStatements(sio, "printStatement"):
-        await gameProducer.produceGame(directoryPath, componentFilter, not isComplex, not isDebug, language)
+    await gameProducer.produceGame(directoryPath, componentFilter, not isComplex, not isDebug, language)

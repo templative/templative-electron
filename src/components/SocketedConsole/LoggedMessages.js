@@ -1,5 +1,4 @@
 import React from "react";
-import socket from "../../socket"
 import "./LoggedMessages.css"
 import { channels } from "../../shared/constants"
 const { ipcRenderer } = require('electron');
