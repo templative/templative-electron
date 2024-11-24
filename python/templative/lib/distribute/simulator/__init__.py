@@ -80,7 +80,8 @@ async def createObjectStates(producedDirectoryPath, tabletopSimulatorDirectoryPa
         
         objectState = await createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPath, index, len(directories))
         index = index + 1
-        if objectState == None:
+        if objectState is None:
+            print(f"Skipping {directoryPath} due to errors")
             continue
         objectStates.append(objectState)
         
@@ -167,10 +168,18 @@ async def createDeck(tabletopSimulatorDirectoryPath, componentInstructions, comp
 
     componentUniqueName = componentInstructions["uniqueName"]
 
-    imgurUrl, totalCount, cardColumnCount, cardRowCount = await createCompositeImage(componentUniqueName, componentInstructions["type"],componentInstructions["quantity"], componentInstructions["frontInstructions"],componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
-
-    backImageImgurUrl = await placeAndUploadBackImage(componentUniqueName, componentInstructions["frontInstructions"], componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
-
+    result = await createCompositeImage(componentUniqueName, componentInstructions["type"],componentInstructions["quantity"], componentInstructions["frontInstructions"],componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
+    if result is None:
+        print(f"Failed to create composite image for {componentUniqueName}")
+        return None
+        
+    imgurUrl, totalCount, cardColumnCount, cardRowCount = result
+    
+    backImageImgurUrl = await placeAndUploadBackImage(componentUniqueName, componentInstructions["type"], componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
+    if backImageImgurUrl is None:
+        print(f"Failed to upload back image for {componentUniqueName}")
+        return None
+        
     componentGuid = md5(componentInstructions["uniqueName"].encode()).hexdigest()[:6]
     
     relativeWidth = componentInfo["DimensionsInches"][0] / 2.5
@@ -317,7 +326,16 @@ async def createCompositeImage(componentName, componentType, quantity, frontInst
     for instruction in frontInstructions:
         xIndex = cardIndex % columns
         yIndex = cardIndex // columns
-        image = Image.open(instruction["filepath"])
+        try:
+            if not path.exists(instruction["filepath"]):
+                print(f"Warning: Image file not found: {instruction['filepath']}")
+                image = createPlaceholderImage(pixelDimensions[0], pixelDimensions[1])
+            else:
+                image = Image.open(instruction["filepath"])
+        except Exception as e:
+            print(f"Error loading image {instruction['filepath']}: {e}")
+            image = createPlaceholderImage(pixelDimensions[0], pixelDimensions[1])
+            
         if scale_factor != 1.0:
             new_size = (int(pixelDimensions[0] * scale_factor), int(pixelDimensions[1] * scale_factor))
             image = image.resize(new_size, Image.Resampling.LANCZOS)
@@ -329,7 +347,15 @@ async def createCompositeImage(componentName, componentType, quantity, frontInst
 
     # Create or use back image
     if backInstructions:
-        backImage = Image.open(backInstructions["filepath"])
+        try:
+            if not path.exists(backInstructions["filepath"]):
+                print(f"Warning: Back image file not found: {backInstructions['filepath']}")
+                backImage = createPlaceholderImage(pixelDimensions[0], pixelDimensions[1])
+            else:
+                backImage = Image.open(backInstructions["filepath"])
+        except Exception as e:
+            print(f"Error loading back image {backInstructions['filepath']}: {e}")
+            backImage = createPlaceholderImage(pixelDimensions[0], pixelDimensions[1])
     else:
         # Create a black image with the same dimensions as the front cards
         backImage = Image.new('RGB', (pixelDimensions[0], pixelDimensions[1]), 'black')
@@ -378,20 +404,31 @@ async def uploadToS3(image):
     else:
         print("Failed to upload image to server.")
         return None
-
-async def copyFrontImageToTextures(componentName, frontInstructions, textureDirectoryFilepath):
-    frontImageName = "%s-front.jpeg" % componentName
-    frontImageFilepath = path.join(textureDirectoryFilepath, frontImageName)
-    copyfile(frontInstructions["filepath"], frontImageFilepath)
     
-async def placeAndUploadBackImage(name, frontInstructions, backInstructions, tabletopSimulatorImageDirectoryPath):
+async def placeAndUploadBackImage(name, componentType, backInstructions, tabletopSimulatorImageDirectoryPath):
+    if not componentType in COMPONENT_INFO:
+        print("Missing component info for %s." % componentType)
+        return None
+        
+    component = COMPONENT_INFO[componentType]
+    if not "DimensionsPixels" in component:
+        print("Skipping %s that has no DimensionsPixels." % componentType)
+        return None
+        
+    pixelDimensions = COMPONENT_INFO[componentType]["DimensionsPixels"]
     if backInstructions:
-        await copyBackImageToImages(name, backInstructions, tabletopSimulatorImageDirectoryPath)
-        image = Image.open(backInstructions["filepath"])
+        try:
+            if not path.exists(backInstructions["filepath"]):
+                print(f"Warning: Back image file not found: {backInstructions['filepath']}")
+                image = createPlaceholderImage(pixelDimensions[0], pixelDimensions[1])
+            else:
+                await copyBackImageToImages(name, backInstructions, tabletopSimulatorImageDirectoryPath)
+                image = Image.open(backInstructions["filepath"])
+        except Exception as e:
+            print(f"Error loading back image {backInstructions['filepath']}: {e}")
+            image = createPlaceholderImage(pixelDimensions[0], pixelDimensions[1])
     else:
-        # Get dimensions from the first front instruction to match card size
-        frontImage = Image.open(frontInstructions[0]["filepath"])
-        image = Image.new('RGB', frontImage.size, 'black')
+        image = createPlaceholderImage(pixelDimensions[0], pixelDimensions[1])
     
     if image.mode == 'RGBA':
         image = image.convert('RGB')
@@ -413,8 +450,13 @@ async def createSingleCard(tabletopSimulatorDirectoryPath, componentInstructions
     tabletopSimulatorImageDirectoryPath = path.join(tabletopSimulatorDirectoryPath, "Mods/Images")
     
     # Upload front and back images directly without tiling
-    frontImage = Image.open(componentInstructions["frontInstructions"][0]["filepath"])
-    backImage = Image.open(componentInstructions["backInstructions"]["filepath"])
+    frontImage = safeLoadImage(componentInstructions["frontInstructions"][0]["filepath"])
+    if not frontImage:
+        return None
+
+    backImage = safeLoadImage(componentInstructions["backInstructions"]["filepath"])
+    if not backImage:
+        return None
     
     frontImgurUrl = await uploadToS3(frontImage)
     backImgurUrl = await uploadToS3(backImage)
@@ -444,3 +486,17 @@ async def createSingleCard(tabletopSimulatorDirectoryPath, componentInstructions
         dimensions,
         deckType
     )
+
+def safeLoadImage(filepath):
+    if not path.exists(filepath):
+        print(f"Warning: Image file not found: {filepath}")
+        return None
+    try:
+        return Image.open(filepath)
+    except Exception as e:
+        print(f"Error loading image {filepath}: {e}")
+        return None
+
+def createPlaceholderImage(width, height):
+    # Create a solid pink image
+    return Image.new('RGB', (width, height), 'pink')
