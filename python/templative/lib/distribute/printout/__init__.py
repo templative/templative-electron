@@ -173,8 +173,16 @@ async def createPageImagesForComponentTypeImages(componentType, componentTypeIma
     return pageImages
 
 async def drawPieceForQuantities(pageImages, instruction, totalImagesDrawn, printBack, columns, rows, isImageRotated, resizedSizePixels, halfAreaPixels, pieceSizeInches, dimensionsPixels, marginsPixels):
-    frontImage = Image.open(instruction["filepath"])
-    backImage = Image.open(instruction["backFilepath"]) if "backFilepath" in instruction else frontImage
+    try:
+        frontImage = Image.open(instruction["filepath"])
+    except (FileNotFoundError, IOError):
+        frontImage = createMissingImage(resizedSizePixels, instruction["filepath"])
+    
+    try:
+        backImage = Image.open(instruction["backFilepath"]) if "backFilepath" in instruction else frontImage
+    except (FileNotFoundError, IOError):
+        backFilepath = instruction.get("backFilepath", "No back filepath specified")
+        backImage = createMissingImage(resizedSizePixels, backFilepath)
 
     if isImageRotated:
         frontImage = frontImage.rotate(-90, expand=True)
@@ -276,3 +284,33 @@ async def createBlankImagesForComponent(imageFilepaths, columns, rows, printBack
         pageImages.append(createdImage)
 
     return pageImages
+
+def createMissingImage(size, filepath):
+    # Create a pink background
+    image = Image.new("RGB", size, (255, 192, 203))
+    draw = ImageDraw.Draw(image)
+    
+    # Get immediate parent directory and filename
+    parentDir = os.path.basename(os.path.dirname(filepath))
+    filename = os.path.basename(filepath)
+    text = f"Missing\n{parentDir}/\n{filename}"
+    
+    # Calculate appropriate font size (10% of image height)
+    fontSize = int(size[1] * 0.1)
+    from PIL import ImageFont
+    try:
+        font = ImageFont.truetype("arial.ttf", fontSize)
+    except:
+        font = ImageFont.load_default()
+    
+    # Calculate text size and position for centered multiline text
+    spacing = 1.5
+    textBbox = draw.multiline_textbbox((0, 0), text, font=font, align="center", spacing=spacing)
+    textWidth = textBbox[2] - textBbox[0]
+    textHeight = textBbox[3] - textBbox[1]
+    textPosition = ((size[0] - textWidth) // 2, (size[1] - textHeight) // 2)
+    
+    # Draw text in center
+    draw.multiline_text(textPosition, text, fill=(0, 0, 0), font=font, align="center", spacing=spacing)
+    
+    return image
