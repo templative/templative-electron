@@ -32,9 +32,12 @@ export default class ScopedValueInputBasic extends React.Component {
             "piece": pieceIcon,
             "global": staticValueIcon,
         }
+        var title = this.props.scope === 'global' ? 
+            `Use the value '${this.props.source}' directly.` :
+            `Use the '${this.props.source}' field in the ${this.props.scope[0].toUpperCase() + this.props.scope.slice(1)} Content.`
         return <React.Fragment>
-            <span className="input-group-text scope-icon-container"><img className="scope-icon" src={icons[this.props.scope]} alt="Tab icon"/> </span>
-            <select value={this.props.scope} onChange={(event)=>this.props.updateArtdataFieldCallback(this.props.index, "scope", event.target.value)} className="form-select scope-select">
+            <span className="input-group-text scope-icon-container" title={title}><img className="scope-icon" src={icons[this.props.scope]} alt="Tab icon"/> </span>
+            <select value={this.props.scope} onChange={(event)=>this.props.updateArtdataFieldCallback(this.props.index, "scope", event.target.value)} className="form-select scope-select" title={title}>
                 <option value="global">Static Value</option>
                 <option value="studio">Studio's</option>
                 <option value="game">Game's</option>

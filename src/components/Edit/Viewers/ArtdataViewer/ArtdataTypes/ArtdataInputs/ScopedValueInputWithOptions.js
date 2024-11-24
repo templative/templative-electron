@@ -78,9 +78,13 @@ export default class ScopedValueInputWithOptions extends React.Component {
         };
         const iconToShow = scopeIcons[this.props.scope] || staticValueIcon;
         
+        var title = this.props.scope === 'global' ? 
+            `Use the value '${this.props.source}' directly.` :
+            `Use the '${this.props.source}' field in the ${this.props.scope[0].toUpperCase() + this.props.scope.slice(1)} Content.`
+
         return (
             <React.Fragment>
-                <span className="input-group-text scope-icon-container">
+                <span className="input-group-text scope-icon-container" title={title}>
                     <img 
                         className="scope-icon" 
                         src={iconToShow} 
@@ -91,6 +95,7 @@ export default class ScopedValueInputWithOptions extends React.Component {
                     value={currentValue} 
                     onChange={this.handleSelectionChange} 
                     className={`form-select scope-select ${!showManualInput && 'wide-scope-select'}`}
+                    title={title}
                 >
                     {options.map(opt => {
                         var key = opt.value ? `${opt.scope}:${opt.value}` : opt.scope
@@ -105,7 +110,7 @@ export default class ScopedValueInputWithOptions extends React.Component {
                 {showManualInput && 
                     <input 
                         type="text" 
-                        title={`${this.props.scope} ${this.props.source}`}
+                        title={title}
                         className="form-control no-left-border scoped-value-manual-input" 
                         onChange={(event) => this.props.updateArtdataFieldCallback(this.props.index, "source", event.target.value)} 
                         value={this.props.source}

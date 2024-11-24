@@ -22,7 +22,7 @@ export default class StyleUpdate extends React.Component {
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}
             >
-            <span className="input-group-text">X</span>
+            <span className="input-group-text" title={`Update the X position of the overlay in pixels.`}>X</span>
 
             <input type="number" className="form-control no-left-border scoped-value-coordinate-input" 
                 onChange={(event) => {
@@ -35,9 +35,9 @@ export default class StyleUpdate extends React.Component {
                             this.props.updateArtdataFieldCallback("overlays", this.props.index, "positionX", numValue)
                         }
                     }
-                }} aria-label="X position..." value={this.props.artdataItem.positionX} placeholder="0"/>
+                }} title={`Update the X position of the overlay in pixels.`} aria-label="X position..." value={this.props.artdataItem.positionX} placeholder="0"/>
 
-            <span className="input-group-text">Y</span>
+            <span className="input-group-text" title={`Update the Y position of the overlay in pixels.`}>Y</span>
 
             <input type="number" className="form-control no-left-border scoped-value-coordinate-input" 
                 onChange={(event) => {
@@ -50,8 +50,8 @@ export default class StyleUpdate extends React.Component {
                             this.props.updateArtdataFieldCallback("overlays", this.props.index, "positionY", numValue)
                         }
                     }
-                }} aria-label="Y position..." value={this.props.artdataItem.positionY} placeholder="0"/>
-
+                }} title={`Update the Y position of the overlay in pixels.`} aria-label="Y position..." value={this.props.artdataItem.positionY} placeholder="0"/>
+            <span className="input-group-text" title={`Which file are you overlaying? This searches in the Overlays folder.`}>with the file in</span>
             <ScopedValueInput 
                 index={this.props.index}
                 updateArtdataFieldCallback={(index, field, value) => this.props.updateArtdataFieldCallback("overlays", index, field, value)} 
