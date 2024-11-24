@@ -2,12 +2,13 @@
     width: 300px;
     background-color: #373c48fa;
     border-radius: 6px;
-    position: absolute;
-    z-index: 999;
+    position: fixed;
+    z-index: 999999;
     padding: 0.15em 0.15em 0.15em 0.15em;
     border-style: solid;
     border-color: hsl(222, 13%, 32%);
     border-width: 1px;
+    pointer-events: auto;
 }
 .context-menu-item {
     font-size: 14px;
@@ -15,6 +16,10 @@
     padding: 0 0.25em 0 0.25em;
     margin-bottom: 0.25em;
     border-radius: 3px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 .context-menu-item:last-child {
     margin-bottom: 0px;

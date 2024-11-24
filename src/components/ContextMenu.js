@@ -1,30 +1,54 @@
 import React from "react";
-import onClickOutside from 'react-onclickoutside'
 import "./ContextMenu.css"
 
 class ContextMenu extends React.Component {  
-    handleClickOutside = () => {
-        this.props.closeContextMenuCallback()
-    } 
+    constructor(props) {
+        super(props);
+        this.menuRef = React.createRef();
+    }
+
+    componentDidMount() {
+        document.addEventListener('mousedown', this.handleClickOutside);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('mousedown', this.handleClickOutside);
+    }
+
+    handleClickOutside = (event) => {
+        if (this.menuRef.current && !this.menuRef.current.contains(event.target)) {
+            this.props.closeContextMenuCallback();
+        }
+    }
+
     render() {
-        var elements = this.props.commands.map((command) => {
-            return <p 
+        const { commands, left, top } = this.props;
+        const elements = commands.map((command) => (
+            <p 
                 key={command.name} 
                 className="context-menu-item" 
                 onClick={async () => {
-                    await command.callback()
-                    this.props.closeContextMenuCallback()
+                    await command.callback();
+                    this.props.closeContextMenuCallback();
                 }}
             >
                 {command.name}
             </p>
-        })
-        return <div className="context-menu"
-            onBlur={(e) => {console.log(e)}}
-            style={{left: `${this.props.left}px`, top: `${this.props.top}px`,}}
-        >
-            {elements}
-        </div>
+        ));
+
+        return (
+            <div 
+                ref={this.menuRef}
+                className="context-menu"
+                style={{
+                    left: `${left}px`,
+                    top: `${top}px`,
+                }}
+            >
+                {elements}
+            </div>
+        );
     }
 }
-export default onClickOutside(ContextMenu);
+
+export default ContextMenu;
