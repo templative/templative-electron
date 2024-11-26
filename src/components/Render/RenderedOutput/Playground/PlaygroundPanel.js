@@ -66,7 +66,7 @@ export default class PlaygroundPanel extends React.Component {
         }
         try {
             this.setState({isCreating: true})
-            await axios.post(`http://localhost:8080/playground`, data)
+            await axios.post(`http://localhost:8085/playground`, data)
             var outputName = path.basename(this.props.outputFolderPath);
             var selectedPackageDirectory = path.join(this.state.playgroundDirectory, outputName)
             var selectedPackageExists = fs.existsSync(selectedPackageDirectory)

@@ -33,7 +33,7 @@ export default class RenderPreview extends React.Component {
     componentDidMount = async () => {
         // try {
             await this.#parseComponentComposeAsync();
-            const response = await axios.get(`http://127.0.0.1:8080/previews`);
+            const response = await axios.get(`http://127.0.0.1:8085/previews`);
             this.setState({ previewsDirectory: response.data.previewsDirectory }, async () => await this.setupPreviewWatcher());
         // } catch (error) {
         //     console.error("Error in componentDidMount:", error);
@@ -145,7 +145,7 @@ export default class RenderPreview extends React.Component {
                 directoryPath: this.props.templativeRootDirectoryPath
             }
             try {
-                await axios.post(`http://localhost:8080/preview-piece`, data);
+                await axios.post(`http://localhost:8085/preview-piece`, data);
             } catch (error) {
                 console.error("Error in preview:", error);
             }

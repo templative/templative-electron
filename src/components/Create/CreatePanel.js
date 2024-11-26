@@ -72,7 +72,7 @@ export default class CreatePanel extends React.Component {
             directoryPath: this.props.templativeRootDirectoryPath,
             componentAIDescription: this.context.componentAIDescription
         }
-        await axios.post(`http://127.0.0.1:8080/component`, data)
+        await axios.post(`http://127.0.0.1:8085/component`, data)
         this.setState({isProcessing: false})
         this.context.setComponentName("");
         this.context.setSelectedComponentType(undefined);

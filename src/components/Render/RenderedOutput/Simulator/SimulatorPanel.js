@@ -62,7 +62,7 @@ export default class SimulatorPanel extends React.Component {
         }
         try {
             this.setState({isCreating: true})
-            await axios.post(`http://localhost:8080/simulator`, data)
+            await axios.post(`http://localhost:8085/simulator`, data)
             var selectedSaveFilepath = path.join(this.state.simulatorDirectory, "Saves", `${path.basename(this.props.outputFolderPath)}.json`)
             var selectedSaveExists = fs.existsSync(selectedSaveFilepath)
             this.setState({isCreating: false, selectedSaveFilepath: selectedSaveExists ? selectedSaveFilepath : undefined})

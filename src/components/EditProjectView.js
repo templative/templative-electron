@@ -194,11 +194,11 @@ export default class EditProjectView extends React.Component {
     
     
     componentDidMount = async () => {
-        await axios.get(`http://127.0.0.1:8080/component-info`).then((response) => {
+        await axios.get(`http://127.0.0.1:8085/component-info`).then((response) => {
             // console.log(response.data)    
             this.setState({componentTypesCustomInfo: response.data})
         })
-        await axios.get(`http://127.0.0.1:8080/stock-info`).then((response) => {
+        await axios.get(`http://127.0.0.1:8085/stock-info`).then((response) => {
             this.setState({componentTypesStockInfo: response.data})
         })
     }

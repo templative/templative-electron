@@ -28,7 +28,7 @@ export default class Piece extends React.Component {
         }
         try {
             this.props.showPreviewCallback()
-            await axios.post(`http://localhost:8080/preview-piece`, data);
+            await axios.post(`http://localhost:8085/preview-piece`, data);
         } catch (error) {
             console.error("Error in preview:", error);
         }
