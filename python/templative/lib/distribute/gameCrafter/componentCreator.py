@@ -64,7 +64,7 @@ async def createComponent(gameCrafterSession, componentDirectoryPath, cloudGame,
 
 async def createCustomComponent(gameCrafterSession, componentType, componentFile, cloudGameId, cloudGameFolderId, isProofed):
     if not componentType in COMPONENT_INFO:
-        print("Missing component info for %s." % componentType)
+        print("!!! Missing component info for %s." % componentType)
         return
     
     component = COMPONENT_INFO[componentType]
@@ -123,18 +123,18 @@ async def createStockPart(gameCrafterSession, component, cloudGameId):
     componentTypeTokens = componentType.split("_")
     isStockComponent = componentTypeTokens[0].upper() == "STOCK" 
     if not isStockComponent:
-        print("%s is not a stock part!" % componentName)
+        print("!!! %s is not a stock part!" % componentName)
         return
     stockPartId = componentTypeTokens[1]
     quantity = component["quantity"]
 
     if not stockPartId in STOCK_COMPONENT_INFO:
-        print("Skipping missing stock component %s." % stockPartId)
+        print("!!! Skipping missing stock component %s." % stockPartId)
         return
     stockComponentInfo = STOCK_COMPONENT_INFO[stockPartId]
 
     if not "GameCrafterGuid" in stockComponentInfo:
-        print("Skipping stock part %s with missing GameCrafterGuid." % stockPartId)
+        print("!!! Skipping stock part %s with missing GameCrafterGuid." % stockPartId)
         return
     gameCrafterGuid = stockComponentInfo["GameCrafterGuid"]
 
@@ -303,8 +303,7 @@ async def createDeck(gameCrafterSession, component, identity, cloudGameId, cloud
     componentName = component["name"]
     quantity = component["quantity"]
     if int(quantity) == 0:
-        print(component)
-        print("Deck has no quantity, skipping.")
+        print("!!! Deck has no quantity, skipping.")
         return
     frontInstructions = component["frontInstructions"]
     backInstructions = component["backInstructions"]

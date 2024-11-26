@@ -24,9 +24,9 @@ printoutPlayAreaChoices = {
 
 async def createPdfForPrinting(producedDirectoryPath, isBackIncluded, size, areMarginsIncluded):
     if not size in fpdfSizes or not size in printoutPlayAreaChoices:
-        print("Cannot create size %s." % size)
+        print(f"!!! Cannot create size {size}.")
         return
-
+    print(f"Creating printout for {producedDirectoryPath} {'with backs' if isBackIncluded else 'without backs'} on {size}.")
     pdf = FPDF("P", "in", fpdfSizes[size])
 
     componentTypeFilepathsAndQuantity = await getDictionaryOfImageFilepathsAndQuantityGroupedByComponentType(producedDirectoryPath)
@@ -39,7 +39,7 @@ async def createPdfForPrinting(producedDirectoryPath, isBackIncluded, size, areM
         await addPageImagesToPdf(pdf, createdPageImages, printoutPlayAreaChoice)
     
     outputPath = path.abspath(path.join(producedDirectoryPath, "printout.pdf"))
-    print("Writing to", outputPath)
+    print(f"Writing printout to {outputPath}")
     pdf.output(outputPath, "F")
     return 1
 
@@ -84,7 +84,7 @@ async def collectFilepathQuantitiesForComponent(componentInstructions):
         return componentTypeFilepathAndQuantity
 
     if not "frontInstructions" in componentInstructions:
-        print("Skipping %s for lacking frontInstructions" % componentInstructions["uniqueName"])
+        print(f"!!! Skipping {componentInstructions['uniqueName']} because it lacks 'frontInstructions'.")
         return componentTypeFilepathAndQuantity
     
     for instruction in componentInstructions["frontInstructions"]:
@@ -116,12 +116,12 @@ async def createPageImagesForComponentTypeImages(componentType, componentTypeIma
         return []
 
     if not componentType in COMPONENT_INFO:
-        print("Missing %s in COMPONENT_INFO" % componentType)
+        print(f"!!! Missing {componentType} type description, skipping.")
         return []
     componentInfo = COMPONENT_INFO[componentType]
 
     if not "DimensionsInches" in componentInfo:
-        print("Skipping %s because it's DimensionsInches isn't defined." %(componentType))
+        print(f"!!! Skipping {componentType} because it's inch size isn't defined.")
         return []
     
     dimensionsPixels = componentInfo["DimensionsPixels"]
@@ -149,7 +149,7 @@ async def createPageImagesForComponentTypeImages(componentType, componentTypeIma
         componentSizeInches = (componentSizeInches[1], componentSizeInches[0])
 
     if rows == 0 or columns == 0:
-        print("Skipping the %sx%s\" %s as it's too large for a %sx%s\" print space." % (pieceSizeInches[0], pieceSizeInches[1], componentType, printoutPlayAreaInches[0], printoutPlayAreaInches[1]))
+        print(f"Skipping the {pieceSizeInches[0]}x{pieceSizeInches[1]}inch {componentType} as it's too large for a {printoutPlayAreaInches[0]}x{printoutPlayAreaInches[1]}inch print space.")
         return []
     
     halfAreaPixels = (
@@ -276,7 +276,7 @@ async def createBlankImagesForComponent(imageFilepaths, columns, rows, printBack
     
     itemsPerPage = columns * rows
     totalPages = math.ceil(totalCount/itemsPerPage) * (2 if printBack else 1)
-    print("Because a page fits", columns*rows, "we need", totalPages, "(%s max)"%(columns*rows*totalPages), "to accomidate", totalCount * (2 if printBack else 1), "images", "frontback" if printBack else "")
+    # print("Because a page fits", columns*rows, "we need", totalPages, "(%s max)"%(columns*rows*totalPages), "to accomidate", totalCount * (2 if printBack else 1), "images", "frontback" if printBack else "")
     pageImages = []
     for _ in range(totalPages):
         imageSize = (int(printoutPlayAreaInches[0]*inchToPixelConversion), int(printoutPlayAreaInches[1]*inchToPixelConversion))

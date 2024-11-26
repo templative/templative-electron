@@ -45,7 +45,7 @@ async def convertToTabletopSimulator(producedDirectoryPath, tabletopSimulatorDir
     game = await instructionsLoader.loadGameInstructions(producedDirectoryPath)
     studio = await instructionsLoader.loadStudioInstructions(producedDirectoryPath)
 
-    print("Convert %s into a Tabletop Simulator package for %s." % (game["displayName"], studio["displayName"]))
+    print(f"Converting {game['displayName']} into a Tabletop Simulator save.")
 
     uniqueGameName = path.basename(producedDirectoryPath)
 
@@ -81,7 +81,7 @@ async def createObjectStates(producedDirectoryPath, tabletopSimulatorDirectoryPa
         objectState = await createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPath, index, len(directories))
         index = index + 1
         if objectState is None:
-            print(f"Skipping {directoryPath} due to errors")
+            print(f"!!! Skipping {directoryPath} due to errors.")
             continue
         objectStates.append(objectState)
         
@@ -102,7 +102,7 @@ async def createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPa
     isStockComponent = componentTypeTokens[0].upper() == "STOCK" 
     if isStockComponent:
         if not componentTypeTokens[1] in STOCK_COMPONENT_INFO:
-            print("Missing stock info for %s." % componentTypeTokens[1])
+            print("!!! Missing stock info for %s." % componentTypeTokens[1])
             return None
         stockComponentInfo = STOCK_COMPONENT_INFO[componentTypeTokens[1]]
         # if not "SimulatorModelFile" in stockComponentInfo:
@@ -111,7 +111,7 @@ async def createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPa
         return await createStock(componentInstructions, stockComponentInfo)
 
     if not componentInstructions["type"] in COMPONENT_INFO:
-        print("Missing component info for %s." % componentInstructions["type"])
+        print("!!! Missing component info for %s." % componentInstructions["type"])
         return None
     componentInfo = COMPONENT_INFO[componentInstructions["type"]]
 
@@ -128,7 +128,7 @@ async def createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPa
         return None
     
     if not simulatorTask in supportedInstructionTypes:
-        print("Skipping unsupported %s." % simulatorTask)
+        print("!!! Skipping unsupported %s." % simulatorTask)
         return None
     instruction = supportedInstructionTypes[simulatorTask]
     print("Creating %s" % componentInstructions["uniqueName"])
@@ -170,14 +170,14 @@ async def createDeck(tabletopSimulatorDirectoryPath, componentInstructions, comp
 
     result = await createCompositeImage(componentUniqueName, componentInstructions["type"],componentInstructions["quantity"], componentInstructions["frontInstructions"],componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
     if result is None:
-        print(f"Failed to create composite image for {componentUniqueName}")
+        print(f"!!! Failed to create composite image for {componentUniqueName}")
         return None
         
     imgurUrl, totalCount, cardColumnCount, cardRowCount = result
     
     backImageImgurUrl = await placeAndUploadBackImage(componentUniqueName, componentInstructions["type"], componentInstructions["backInstructions"], tabletopSimulatorImageDirectoryPath)
     if backImageImgurUrl is None:
-        print(f"Failed to upload back image for {componentUniqueName}")
+        print(f"!!! Failed to upload back image for {componentUniqueName}")
         return None
         
     componentGuid = md5(componentInstructions["uniqueName"].encode()).hexdigest()[:6]
@@ -220,7 +220,7 @@ async def createStock(componentInstructions, stockPartInfo):
     
     # Skip if no color info available
     if not "PlaygroundColor" in stockPartInfo:
-        print(f"Missing PlaygroundColor for {stockType}")
+        print(f"!!! Missing PlaygroundColor for {stockType}")
         return None
         
     # Determine if this is a die or cube
@@ -228,7 +228,7 @@ async def createStock(componentInstructions, stockPartInfo):
     isCube = stockType.startswith("Cube")
     
     if not (isDie or isCube):
-        print(f"Unsupported stock type: {stockType}")
+        print(f"!!! Unsupported stock type: {stockType}")
         return None
     
     # Get color from stock info
@@ -274,13 +274,13 @@ async def createCompositeImage(componentName, componentType, quantity, frontInst
     rows = max(rows, 2)    # Minimum 2 rows for TTS
 
     if not componentType in COMPONENT_INFO:
-        print("Missing component info for %s." % componentType)
+        print("!!! Missing component info for %s." % componentType)
         return None, 0, 0, 0
 
     component = COMPONENT_INFO[componentType]
 
     if not "DimensionsPixels" in component:
-        print("Skipping %s that has no DimensionsPixels." % componentType)
+        print("!!! Skipping %s that has no DimensionsPixels." % componentType)
         return None, 0, 0, 0
     pixelDimensions = COMPONENT_INFO[componentType]["DimensionsPixels"]
 
@@ -328,12 +328,12 @@ async def createCompositeImage(componentName, componentType, quantity, frontInst
         yIndex = cardIndex // columns
         try:
             if not path.exists(instruction["filepath"]):
-                print(f"Warning: Image file not found: {instruction['filepath']}")
+                print(f"!!! Image file not found: {instruction['filepath']}")
                 image = createPlaceholderImage(pixelDimensions[0], pixelDimensions[1])
             else:
                 image = Image.open(instruction["filepath"])
         except Exception as e:
-            print(f"Error loading image {instruction['filepath']}: {e}")
+            print(f"!!! Error loading image {instruction['filepath']}: {e}")
             image = createPlaceholderImage(pixelDimensions[0], pixelDimensions[1])
             
         if scale_factor != 1.0:
@@ -349,12 +349,12 @@ async def createCompositeImage(componentName, componentType, quantity, frontInst
     if backInstructions:
         try:
             if not path.exists(backInstructions["filepath"]):
-                print(f"Warning: Back image file not found: {backInstructions['filepath']}")
+                print(f"!!! Back image file not found: {backInstructions['filepath']}")
                 backImage = createPlaceholderImage(pixelDimensions[0], pixelDimensions[1])
             else:
                 backImage = Image.open(backInstructions["filepath"])
         except Exception as e:
-            print(f"Error loading back image {backInstructions['filepath']}: {e}")
+            print(f"!!! Error loading back image {backInstructions['filepath']}: {e}")
             backImage = createPlaceholderImage(pixelDimensions[0], pixelDimensions[1])
     else:
         # Create a black image with the same dimensions as the front cards
@@ -402,30 +402,30 @@ async def uploadToS3(image):
     if response.status_code == 200:
         return response.json()['url']
     else:
-        print("Failed to upload image to server.")
+        print("!!! Failed to upload image to server.")
         return None
     
 async def placeAndUploadBackImage(name, componentType, backInstructions, tabletopSimulatorImageDirectoryPath):
     if not componentType in COMPONENT_INFO:
-        print("Missing component info for %s." % componentType)
+        print("!!! Missing component info for %s." % componentType)
         return None
         
     component = COMPONENT_INFO[componentType]
     if not "DimensionsPixels" in component:
-        print("Skipping %s that has no DimensionsPixels." % componentType)
+        print("!!! Skipping %s that has no DimensionsPixels." % componentType)
         return None
         
     pixelDimensions = COMPONENT_INFO[componentType]["DimensionsPixels"]
     if backInstructions:
         try:
             if not path.exists(backInstructions["filepath"]):
-                print(f"Warning: Back image file not found: {backInstructions['filepath']}")
+                print(f"!!! Back image file not found: {backInstructions['filepath']}")
                 image = createPlaceholderImage(pixelDimensions[0], pixelDimensions[1])
             else:
                 await copyBackImageToImages(name, backInstructions, tabletopSimulatorImageDirectoryPath)
                 image = Image.open(backInstructions["filepath"])
         except Exception as e:
-            print(f"Error loading back image {backInstructions['filepath']}: {e}")
+            print(f"!!! Error loading back image {backInstructions['filepath']}: {e}")
             image = createPlaceholderImage(pixelDimensions[0], pixelDimensions[1])
     else:
         image = createPlaceholderImage(pixelDimensions[0], pixelDimensions[1])
@@ -489,12 +489,12 @@ async def createSingleCard(tabletopSimulatorDirectoryPath, componentInstructions
 
 def safeLoadImage(filepath):
     if not path.exists(filepath):
-        print(f"Warning: Image file not found: {filepath}")
+        print(f"!!! Image file not found: {filepath}")
         return None
     try:
         return Image.open(filepath)
     except Exception as e:
-        print(f"Error loading image {filepath}: {e}")
+        print(f"!!! Error loading image {filepath}: {e}")
         return None
 
 def createPlaceholderImage(width, height):

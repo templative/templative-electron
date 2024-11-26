@@ -69,7 +69,7 @@ async def produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublis
         raise Exception("Game root directory path is invalid.")
     
     if not findInkscape():
-        print("Inkscape is required to produce your game. Download it at https://inkscape.org/")
+        print("!!!Inkscape is required to produce your game. Download it at https://inkscape.org/")
         return
     
     gameDataBlob = await defineLoader.loadGame(gameRootDirectoryPath)
