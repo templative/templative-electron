@@ -13,7 +13,7 @@ function templative() {
         echo "Cannot create Templative app for unknown OS" 
         return
     fi
-    $pythonPath serve --port 8080
+    $pythonPath serve --port 8085
 }
 
 function moveSignedOsxFiles() {

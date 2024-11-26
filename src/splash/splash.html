@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style id="splash-styles"></style>
+</head>
+<body>
+    <div class="container">
+        <img id="loading-gif" width="100" height="100">
+        <h2>Templative</h2>
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div class="status" id="status">Initializing...</div>
+    </div>
+    <script>
+        const { ipcRenderer } = require('electron');
+        const fs = require('fs');
+        
+        // Get the paths from the additional arguments
+        const gifPath = process.argv.find(arg => arg.startsWith('--gif-path=')).split('=')[1];
+        const cssPath = process.argv.find(arg => arg.startsWith('--css-path=')).split('=')[1];
+        
+        // Set the gif source
+        document.getElementById('loading-gif').src = gifPath;
+        
+        // Load and apply CSS
+        try {
+            const cssContent = fs.readFileSync(cssPath, 'utf8');
+            document.getElementById('splash-styles').textContent = cssContent;
+        } catch (err) {
+            console.error('Failed to load CSS:', err);
+        }
+        
+        ipcRenderer.on('update-progress', (event, data) => {
+            document.getElementById('progress').style.width = `${data.percent}%`;
+            document.getElementById('status').textContent = data.message;
+        });
+    </script>
+</body>
+</html>

@@ -49,7 +49,7 @@ const createProject = async(event, args) => {
     }
     var chosenDirectory = result.filePaths[0]
     console.log(chosenDirectory)
-    var creationResult = await axios.post(`http://127.0.0.1:8080/project`, { directoryPath: chosenDirectory})
+    var creationResult = await axios.post(`http://127.0.0.1:8085/project`, { directoryPath: chosenDirectory})
     console.log(creationResult)
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, chosenDirectory)
 }

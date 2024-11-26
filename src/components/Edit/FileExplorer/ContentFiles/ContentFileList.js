@@ -34,47 +34,53 @@ export default class ContentFileList extends React.Component {
     
     readDirectoryRecursively = async (dir, basepath) => {
         let results = [];
-        const list = await fs.readdir(dir);
-
-        for (const file of list) {
-            const filePath = path.resolve(dir, file);
-            const stat = await fs.stat(filePath);
-
-            if (stat.isDirectory()) {
-                results = results.concat(await this.readDirectoryRecursively(filePath, basepath));
-            }
-            results.push(filePath);
+        
+        try {
+            const list = await fs.readdir(dir, { withFileTypes: true });
             
+            for (const dirent of list) {
+                const filePath = path.resolve(dir, dirent.name);
+                
+                if (dirent.isDirectory()) {
+                    results = results.concat(await this.readDirectoryRecursively(filePath, basepath));
+                }
+                results.push({ path: filePath, isDirectory: dirent.isDirectory() });
+            }
+            
+            return results;
+        } catch (error) {
+            console.error(`Error reading directory ${dir}:`, error);
+            return [];
         }
-        return results;
     }
     #requestNewFilesNamesAsync = async () => {
-        if (this.props.baseFilepath === undefined) {
-            return
-        }
-        var baseFilePathDepth = this.props.baseFilepath.replace(/\\/g, '/').split("/").length
-        var absoluteFilepathsWithinBasepath = await this.readDirectoryRecursively(this.props.baseFilepath, this.props.baseFilepath)
-        var filepaths = absoluteFilepathsWithinBasepath
-            .filter((filepath) => {
-                const isReadMe = filepath.split(".").pop() === "md"
-                const isMacFolderInfo = filepath.split(".").pop() === "DS_Store"
-                return !(isReadMe || isMacFolderInfo)
-            })
-            .sort(ContentFileList.#sortAlphabetically)
+        if (!this.props.baseFilepath) return;
         
-            var fileItems = await Promise.all(
-            filepaths.map(async (absoluteFilepath) => {
-                var filepathStats = await fs.lstat(absoluteFilepath)
-                const isDirectory = filepathStats.isDirectory()
-                const depth = path.normalize(absoluteFilepath).split(path.sep).length
-                return {
-                    depthRelativeToBasepath: depth - baseFilePathDepth,
-                    absoluteFilepath: absoluteFilepath,
-                    isDirectory: isDirectory
-                }
+        const baseFilePathDepth = this.props.baseFilepath.replace(/\\/g, '/').split("/").length;
+        
+        try {
+            const items = await this.readDirectoryRecursively(this.props.baseFilepath);
+            
+            const fileItems = items
+                .filter(item => {
+                    const filename = path.basename(item.path);
+                    const ext = path.extname(item.path);
+                    return ext !== '.md' && filename !== '.DS_Store';
                 })
-            )
-        this.setState({fileItems: fileItems})
+                .map(item => {
+                    const depth = path.normalize(item.path).split(path.sep).length;
+                    return {
+                        depthRelativeToBasepath: depth - baseFilePathDepth,
+                        absoluteFilepath: item.path,
+                        isDirectory: item.isDirectory
+                    };
+                })
+                .sort((a, b) => a.absoluteFilepath.localeCompare(b.absoluteFilepath));
+            this.setState({ fileItems });
+        } catch (error) {
+            console.error(`Error processing files in ${this.props.baseFilepath}:`, error);
+            this.setState({ fileItems: [] });
+        }
     }
     componentDidMount = async () => {
         await this.#watchBasepathAsync()

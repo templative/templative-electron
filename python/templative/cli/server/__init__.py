@@ -7,7 +7,7 @@ import sys
 import os
 
 @click.command()
-@click.option('--port', default=8080, required=False, help='The port of the local server.')
+@click.option('--port', default=8085, required=False, help='The port of the local server.')
 async def serve(port):
     """Serve Templative as a socket and http server"""
     try:

@@ -54,7 +54,7 @@ serve -s build
 ## Remove stuff at port
 
 - `lsof -i tcp:3000`
-- `lsof -i tcp:8080`
+- `lsof -i tcp:8085`
 - `kill PID`
 
 templative = {file = "file:///C:/Users/User/Documents/git/nextdaygames/templative"}

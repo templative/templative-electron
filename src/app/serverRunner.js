@@ -5,11 +5,14 @@ const killPort = require('kill-port');
 
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 
+const MAX_BACKOFF_DELAY = 10000; // 10 seconds maximum delay
+
 module.exports = class ServerRunner {
     serverName = undefined
     port = undefined
     #commandListByEnvironment = {}
     #serverProcess = undefined
+    #progressCallback = () => {};
 
     constructor(serverName, port, commandListByEnvironment) {
         if (serverName === undefined) {
@@ -29,6 +32,14 @@ module.exports = class ServerRunner {
         this.#commandListByEnvironment = commandListByEnvironment
     }
 
+    setProgressCallback(callback) {
+        this.#progressCallback = callback;
+    }
+
+    #calculateBackoff(attempt, baseDelay = 1000) {
+        return Math.min(baseDelay * Math.pow(2, attempt), MAX_BACKOFF_DELAY);
+    }
+
     #getCommandConfigurationForEnvironmentAndOs = (environment) => {
         var os = process.platform
         var commandConfiguration = this.#commandListByEnvironment[`${os}_${environment}`]
@@ -38,47 +49,91 @@ module.exports = class ServerRunner {
         return this.#commandListByEnvironment[environment]
     }
     #attemptStart = async (commandConfiguration, retries, pingCooldownMilliseconds)=> {
-        log(`Killing any process at port ${this.port}...`)
-        killPort(this.port,"tcp");
-
-        log(`${this.serverName} is launching ${commandConfiguration.command}.`)
-        var spawnedProcess = spawn(commandConfiguration.command, { detached: false, shell: true});
-        spawnedProcess.stdout.setEncoding('utf8');
-        spawnedProcess.stdout.on('data', function(data) {
-            log(`${data}`);
-            console.log(`${data}`);
-        });
-
-        spawnedProcess.stderr.setEncoding('utf8');
-        spawnedProcess.stderr.on('data', function(data) {
-            error(`${data}`);
-            console.log(`${data}`);
-        });       
-
-        spawnedProcess.on('close', function(code) {
-            console.log(`${code}`);
-            log(`Closing with code ${code}.`);
-        });          
-        this.#serverProcess = spawnedProcess
-        
-        var count = 1
-        while (count < retries) {
-
-            await sleep(pingCooldownMilliseconds)
-    
+        try {
+            // First check if port is in use
             try {
-                const response = await fetch(commandConfiguration.testEndpoint)
-                if (response === undefined || !response.ok) {
-                    count++
-                    continue
+                await killPort(this.port, "tcp");
+                // Add a small delay after killing the port
+                await new Promise(resolve => setTimeout(resolve, 1000));
+            } catch (err) {
+                // Ignore "No process running on port" error as it's expected
+                if (!err.message.includes('No process running on port')) {
+                    error(`Error killing port ${this.port}: ${err}`);
                 }
-                return 1
-            } catch (e) {
-                count++
-                log(`${this.serverName} ${commandConfiguration.testEndpoint} ping failed with ${e}. Trying ${count} of ${retries}`)
             }
+
+            // Double-check the port is actually free before starting
+            try {
+                const tcpServer = require('net').createServer();
+                await new Promise((resolve, reject) => {
+                    tcpServer.once('error', err => {
+                        tcpServer.close();
+                        if (err.code === 'EADDRINUSE') {
+                            reject(new Error(`Port ${this.port} is still in use`));
+                        } else {
+                            reject(err);
+                        }
+                    });
+                    tcpServer.once('listening', () => {
+                        tcpServer.close();
+                        resolve();
+                    });
+                    tcpServer.listen(this.port);
+                });
+            } catch (err) {
+                error(`Port ${this.port} is not available: ${err}`);
+                return 0;
+            }
+            
+            this.#progressCallback("Launching server...", 10);
+
+            log(`${this.serverName} is launching ${commandConfiguration.command}.`)
+            var spawnedProcess = spawn(commandConfiguration.command, { detached: false, shell: true});
+            spawnedProcess.stdout.setEncoding('utf8');
+            spawnedProcess.stdout.on('data', function(data) {
+                log(`${data}`);
+                console.log(`${data}`);
+            });
+
+            spawnedProcess.stderr.setEncoding('utf8');
+            spawnedProcess.stderr.on('data', function(data) {
+                error(`${data}`);
+                console.log(`${data}`);
+            });       
+
+            spawnedProcess.on('close', function(code) {
+                console.log(`${code}`);
+                log(`Closing with code ${code}.`);
+            });          
+            this.#serverProcess = spawnedProcess
+            
+            var attempt = 0;
+            while (attempt < retries) {
+                const progress = Math.min(10 + ((attempt + 1) / retries) * 80, 90);
+                this.#progressCallback(`Connecting to server (attempt ${attempt + 1}/${retries})...`, progress);
+
+                const backoffDelay = this.#calculateBackoff(attempt);
+                await sleep(backoffDelay);
+        
+                try {
+                    const response = await fetch(commandConfiguration.testEndpoint)
+                    if (response === undefined || !response.ok) {
+                        attempt++;
+                        continue;
+                    }
+                    this.#progressCallback("Server connected successfully!", 100);
+                    return 1;
+                } catch (e) {
+                    attempt++;
+                    log(`${this.serverName} ${commandConfiguration.testEndpoint} ping failed with ${e}. Trying ${attempt} of ${retries}`);
+                }
+            }
+            this.#progressCallback("Server failed to start", 100);
+            return 0;
+        } catch (err) {
+            error(`Error during start of ${this.serverName}: ${err}`);
+            return 0;
         }
-        return 0
     }
     #launchServer = async (environment, retries=20, pingCooldownMilliseconds=2000) => {
         if (this.#serverProcess !== undefined) {

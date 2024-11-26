@@ -9,12 +9,23 @@ const ServerRunner = require("./app/serverRunner")
 const { setupAppUpdateListener } = require("./app/appUpdater")
 const { initialize } = require("@aptabase/electron/main");
 const path = require('path');
-if (require('electron-squirrel-startup')) app.quit();
+const SplashScreen = require('./splash/splashScreen');
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+// Ensure we only try to quit once
+let isQuitting = false;
+
+if (require('electron-squirrel-startup')) {
+    app.quit();
+    process.exit(0);
+}
+
 app.setName('Templative');
 const { setupOauthListener, handleDeepLink } = require("./app/accountManager")
 
 var templativeWindow = undefined
-var startupWindow = undefined
+var splashScreen = undefined
 
 initialize("A-US-9521417167");
 
@@ -41,7 +52,7 @@ const createWindow = () => {
 }
 
 var servers = [
-  new ServerRunner("templativeServer", 8080, serverEnvironmentConfiguration.templativeServerCommandsByEnvironment),
+  new ServerRunner("templativeServer", 8085, serverEnvironmentConfiguration.templativeServerCommandsByEnvironment),
 ]
 var serverManager = new ServerManager(servers)
 
@@ -55,76 +66,130 @@ const launchServers = async () => {
         return 0
     }
 }
-const onReady = async () => {
-  log("Starting Templative")
-  try {
-    var serverStartResult = await launchServers()
-    if (serverStartResult === 0) {
-      warn("Failed to start servers!")
-      await shutdown()
-      return
-    }
-    createWindow()
-    setupAppUpdateListener()
-    listenForRenderEvents(templativeWindow)
-    setupOauthListener(templativeWindow)
-  }
-  catch(err) {
-    error(err)
-    shutdown()
-  }
-  app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0) createWindow()
-  })
-}
-const shutdown = async () => {
+
+const initializeApp = async () => {
+    splashScreen = new SplashScreen();
+    
+    // Set progress callback for server
+    servers.forEach(server => {
+        server.setProgressCallback((message, percent) => {
+            splashScreen.updateProgress(message, percent);
+        });
+    });
+
     try {
-        // Prevent multiple shutdown attempts
-        if (app.isQuitting) {
-          return;
+        splashScreen.updateProgress("Starting servers...", 0);
+        const serverStartResult = await launchServers();
+        
+        if (serverStartResult === 0) {
+            splashScreen.updateProgress("Failed to start servers!", 100);
+            await sleep(2000); // Show error message briefly
+            await shutdown();
+            return;
         }
-        app.isQuitting = true;
-        
-        log("Initiating shutdown sequence");
-        
-        // Shutdown servers first
-        await serverManager.shutDownServers();
-        
-        // Force kill any remaining processes on the server ports
-        for (const server of servers) {
-            await killPort(server.port, "tcp").catch(() => {});
-        }
-        
-        // Close windows
-        if (startupWindow) {
-            startupWindow.closable = true;
-            startupWindow.destroy();
-        }
-        if (templativeWindow) {
-            templativeWindow.closable = true;
-            templativeWindow.destroy();
-        }
-        
-        // Exit the app
-        app.exit(0);
+        splashScreen.updateProgress("Loading application...", 90);
+        createWindow();
+        setupAppUpdateListener();
+        listenForRenderEvents(templativeWindow);
+        setupOauthListener(templativeWindow);
+
+        // Close splash screen once main window is ready
+        templativeWindow.webContents.on('did-finish-load', () => {
+            splashScreen.close();
+        });
+
     } catch (err) {
-        error(`Error during shutdown: ${err}`);
-        app.exit(1);
+        error(err);
+        splashScreen.updateProgress(`Error: ${err.message}`, 100);
+        await sleep(2000); // Show error message briefly
+        await shutdown();
     }
 };
 
-// Ensure shutdown happens on all possible exit scenarios
+app.on('ready', initializeApp);
+
+const shutdown = async () => {
+    try {
+        // Prevent multiple shutdown attempts
+        if (isQuitting) {
+            return;
+        }
+        isQuitting = true;
+        
+        log("Initiating shutdown sequence");
+        
+        // If we're shutting down due to an error and splash screen is visible,
+        // wait before proceeding with shutdown
+        if (splashScreen && splashScreen.window) {
+            await sleep(2000); // Give users time to read error message
+        }
+        
+        try {
+            // Shutdown servers first
+            await serverManager.shutDownServers();
+        } catch (err) {
+            error(`Error shutting down servers: ${err}`);
+        }
+        
+        try {
+            // Force kill any remaining processes on the server ports
+            for (const server of servers) {
+                await killPort(server.port, "tcp").catch(() => {});
+            }
+        } catch (err) {
+            error(`Error killing ports: ${err}`);
+        }
+        
+        try {
+            // Close windows
+            if (splashScreen) {
+                splashScreen.close();
+                splashScreen = null;
+            }
+            if (templativeWindow) {
+                templativeWindow.destroy();
+                templativeWindow = null;
+            }
+        } catch (err) {
+            error(`Error closing windows: ${err}`);
+        }
+
+        // Force exit after a timeout if something is hanging
+        setTimeout(() => {
+            process.exit(0);
+        }, 2000);
+
+        app.quit();
+    } catch (err) {
+        error(`Critical error during shutdown: ${err}`);
+        await sleep(2000).catch(() => {});
+        process.exit(1);
+    }
+};
+
 app.on('before-quit', async (event) => {
     event.preventDefault();
     await shutdown();
 });
 
-app.on("ready", onReady)
 app.on('window-all-closed', async () => {
     await shutdown();
 });
 
-// app.on('open-url', async (event, url) => {
-//   event.preventDefault();
-//   await handleDeepLink(url);
-// });
+process.on('SIGTERM', async () => {
+    await shutdown();
+});
+
+process.on('SIGINT', async () => {
+    await shutdown();
+});
+
+process.on('uncaughtException', async (err) => {
+    error(`Uncaught Exception: ${err}`);
+    await shutdown();
+});
+
+process.on('unhandledRejection', async (err) => {
+    error(`Unhandled Rejection: ${err}`);
+    await shutdown();
+});
