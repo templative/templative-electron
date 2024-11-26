@@ -15,6 +15,7 @@ from templative.lib.manage.models.produceProperties import ProduceProperties, Pr
 from templative.lib.manage.models.gamedata import GameData
 from templative.lib.manage.models.composition import ComponentComposition
 from templative.lib.produce.customComponents.svgscissors.fontCache import FontCache
+from templative.lib.produce.customComponents.svgscissors.inkscapeProcessor import findInkscape
 
 def getPreviewsPath():
     try:
@@ -40,6 +41,11 @@ async def clearPreviews(directoryPath):
 async def producePiecePreview(gameRootDirectoryPath, componentName, pieceName, langauge):
     if not gameRootDirectoryPath:
         raise Exception("Game root directory path is invalid.")
+    
+    if not findInkscape():
+        print("Inkscape is required to render previews. Download it at https://inkscape.org/")
+        return
+    
     gameCompose = await defineLoader.loadGameCompose(gameRootDirectoryPath)
     gameDataBlob = await defineLoader.loadGame(gameRootDirectoryPath)
     studioDataBlob = await defineLoader.loadStudio(gameRootDirectoryPath)
@@ -61,7 +67,11 @@ async def producePiecePreview(gameRootDirectoryPath, componentName, pieceName, l
 async def produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage):
     if not gameRootDirectoryPath:
         raise Exception("Game root directory path is invalid.")
-
+    
+    if not findInkscape():
+        print("Inkscape is required to produce your game. Download it at https://inkscape.org/")
+        return
+    
     gameDataBlob = await defineLoader.loadGame(gameRootDirectoryPath)
 
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
