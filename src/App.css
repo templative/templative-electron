@@ -47,6 +47,7 @@ textarea::-webkit-scrollbar-corner {
   justify-content: center; */
   font-size: 24px;
   color:#cfcfcf !important;
+  user-select: none;
 }
 .hidden-visibility{
   visibility: hidden;
@@ -81,15 +82,24 @@ textarea::-webkit-scrollbar-corner {
 .vertical-input-group .input-group:not(:first-child) :not(.form-check-input) {
   border-top: 0 !important;
 }
-.vertical-input-group .input-group:nth-child(odd) .form-control  {
+.vertical-input-group .input-group:nth-child(odd) .form-control,
+.vertical-input-group .input-group:nth-child(odd) .form-select {
   background-color: #1a1e20!important;
 }
-.vertical-input-group .input-group:nth-child(odd) .form-select  {
-  background-color: #1a1e20!important;
+
+.vertical-input-group .input-group:nth-child(odd) .form-control:disabled,
+.vertical-input-group .input-group:nth-child(odd) .form-select:disabled {
+  background-color: hsl(204, 4%, 15%)!important;
 }
+
+.vertical-input-group .input-group:nth-child(even) .form-control:disabled,
+.vertical-input-group .input-group:nth-child(even) .form-select:disabled {
+  background-color: hsl(206, 4%, 15%)!important;
+}
+
 .darkened-label {
-  background-color: rgb(33, 37, 41)  !important;
-  border-right-width: 0 !important;
+  background-color: rgb(33, 37, 41)!important;
+  border-right-width: 0!important;
 }
 .vertical-input-group .input-group:nth-child(odd) .darkened-label {
   background-color: #1a1e20!important;
@@ -101,4 +111,8 @@ textarea::-webkit-scrollbar-corner {
 
 button:not(:disabled):hover > .bi-trash3 {
   fill: hsl(354, 80%, 54%);
+}
+
+input, textarea, select {
+  user-select: text;
 }

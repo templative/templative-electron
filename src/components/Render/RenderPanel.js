@@ -140,14 +140,17 @@ export default class RenderPanel extends React.Component {
                         />
                         
                     </div>
-                    <LoggedMessages messages={this.props.templativeMessages}/>
-                    <RenderOutputOptions selectedDirectory={this.context.selectedOutputDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
+                    <LoggedMessages 
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
+                        messages={this.props.templativeMessages}
+                    />
+                    <RenderOutputOptions 
+                        selectedDirectory={this.context.selectedOutputDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
                 </div>  
                 <div className="outputPanel">
                     <OutputExplorer 
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
-                        outputFolderPath={this.context.selectedOutputDirectory} 
-                        templativeMessages={this.props.templativeMessages}
+                        outputFolderPath={this.context.selectedOutputDirectory}
                     />
                 </div>        
             </div>

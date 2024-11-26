@@ -172,7 +172,7 @@
 .output-image-container {
     position:relative;
     display: inline-block;
-    max-width:calc(32%) !important;
+    max-width:calc(24%) !important;
     overflow: hidden !important;
 }
 .output-image {
