@@ -77,6 +77,26 @@ export default class RenderPanel extends React.Component {
             this.setState({isProcessing: false, isConnectedToTemplative: socket.connected,})
         });
     }
+    startResize = (e) => {
+        const startX = e.clientX;
+        const startWidth = this.context.renderControlsColumnWidth;
+        const container = document.querySelector('.mainBody .row');
+        
+        const doDrag = (e) => {
+            const containerWidth = container.offsetWidth;
+            const difference = e.clientX - startX;
+            const newWidth = startWidth + (difference / containerWidth * 100);
+            this.context.setRenderControlsColumnWidth(Math.min(Math.max(8, newWidth), 50));
+        };
+
+        const stopResize = () => {
+            document.removeEventListener('mousemove', doDrag);
+            document.removeEventListener('mouseup', stopResize);
+        };
+
+        document.addEventListener('mousemove', doDrag);
+        document.addEventListener('mouseup', stopResize);
+    }
     render() {
         var componentDirectoryDivs = this.state.components
             .filter(component => !component.type.startsWith("STOCK_"))
@@ -97,8 +117,10 @@ export default class RenderPanel extends React.Component {
         )
         
         return <div className='mainBody'>
-            <div className="row">
-                <div className="col-xs-12 col-md-7 col-lg-6 col-xl-3 directoryPanel">
+            <div className="row render-panel-row">
+                <div className="col-xs-12 col-md-7 col-lg-6 col-xl-3 directoryPanel" 
+                     style={{width: `${this.context.renderControlsColumnWidth}%`}}>
+                    <div className="resize-handle" onMouseDown={this.startResize}></div>
                     <div className="component-filter-container">
                         <div className="headerWrapper">
                             <p className="resourcesHeader">Component Filter</p>
@@ -121,8 +143,12 @@ export default class RenderPanel extends React.Component {
                     <LoggedMessages messages={this.props.templativeMessages}/>
                     <RenderOutputOptions selectedDirectory={this.context.selectedOutputDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
                 </div>  
-                <div className="col-xs-12 col-md-5 col-lg-6 col-xl-9 outputPanel">
-                    <OutputExplorer templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} outputFolderPath={this.context.selectedOutputDirectory} templativeMessages={this.props.templativeMessages}/>
+                <div className="outputPanel">
+                    <OutputExplorer 
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
+                        outputFolderPath={this.context.selectedOutputDirectory} 
+                        templativeMessages={this.props.templativeMessages}
+                    />
                 </div>        
             </div>
         </div>

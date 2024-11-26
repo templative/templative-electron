@@ -39,7 +39,7 @@ export default class StyleUpdate extends React.Component {
                     `Update the ${this.props.artdataItem.cssValue} style field of the element.`}
             />
 
-            <span className="input-group-text" title={`What value are you updating the style to?`}>with the</span>
+            <span className="input-group-text" title={`What value are you updating the style to?`}>with</span>
 
             <ScopedValueInput 
                 index={this.props.index} 

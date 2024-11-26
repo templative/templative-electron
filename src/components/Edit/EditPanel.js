@@ -38,14 +38,14 @@ export default class EditPanel extends React.Component {
     }
     startResize = (e) => {
         const startX = e.clientX;
-        const startWidth = this.context.leftColumnWidth;
+        const startWidth = this.context.fileExplorerColumnWidth;
         const container = document.querySelector('.mainBody .row');
         
         const doDrag = (e) => {
             const containerWidth = container.offsetWidth;
             const difference = e.clientX - startX;
             const newWidth = startWidth + (difference / containerWidth * 100);
-            this.context.setLeftColumnWidth(Math.min(Math.max(8, newWidth), 50));
+            this.context.setFileExplorerColumnWidth(Math.min(Math.max(8, newWidth), 50));
         };
 
         const stopResize = () => {
@@ -60,7 +60,7 @@ export default class EditPanel extends React.Component {
         var filepathSplit = this.props.currentFilepath !== undefined ? this.props.currentFilepath.replace(/\\/g,"/").replace(/^\/|\/$/g, '').split("/").join(" > ") : ""
         return <div className='mainBody'>
             <div className="row g-0">
-                <div className='col-3 col-xl-2 left-column' style={{width: `${this.context.leftColumnWidth}%`}}>
+                <div className='col-3 col-xl-2 left-column' style={{width: `${this.context.fileExplorerColumnWidth}%`}}>
                     <div className="resize-handle" onMouseDown={this.startResize}></div>
                     <TemplativeProjectRenderer 
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 

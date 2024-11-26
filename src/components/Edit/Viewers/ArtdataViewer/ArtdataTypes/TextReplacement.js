@@ -32,7 +32,7 @@ export default class TextReplacement extends React.Component {
                     "This looks for text wrapped in {} in the template and overlay files." :
                     `This looks for {${this.props.artdataItem.key}} in the template and overlay files.`}/>
 
-            <span className="input-group-text" title="What value are you replacing the text with?">with the</span>
+            <span className="input-group-text" title="What value are you replacing the text with?">with</span>
 
             <ScopedValueInput index={this.props.index} 
                 updateArtdataFieldCallback={(index, field, value) => this.props.updateArtdataFieldCallback("textReplacements", index, field, value)} 

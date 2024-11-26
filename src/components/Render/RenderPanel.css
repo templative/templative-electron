@@ -18,10 +18,11 @@
     cursor: pointer;
 }
 .component-selected-for-rendering {
-    background-color: #333942 !important;
+    background-color: hsl(212, 9%, 27%) !important;
+    border-right:#d9a41d solid 1px !important;
 }
 .component-selected-for-rendering:hover {
-    background-color: #333942!important;
+    background-color: hsl(212, 9%, 47%);
 }
 .testDiv {
     height: 1000px;
@@ -29,22 +30,32 @@
     background-color: white;
 }
 .directoryPanel {
+    position: relative;
     height: 100%;
     overflow-y: hidden;
     overflow-x:hidden;
     border-right: solid #313540;
     border-width: 1px;
     padding-top:0.25em;
-    padding-right: 0 !important;
+    padding-right: 0px !important;
     padding-bottom:0.3em;
+    flex: 0 0 auto;
+}
+.component-filter-container {
+    height: 270px;
+}
+.component-filter-options {
+    height: 215px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .directoryPanel > .render-output-options-container{
-    height: calc(100% - 325px);
+    height: calc(100% - 600px);
 }
 .directoryPanel > .console-messages {
     margin-top: 0.5em !important;
     margin-bottom: 0.5em !important;
-    height: 5em;
+    height: 305px;
 }
 .headerWrapper {
     width: 100%;
@@ -82,18 +93,18 @@
     overflow-y: scroll;
     height: calc(100% - 2em) !important;
 }
-.component-filter-container {
-    height: 170px;
-}
-.component-filter-options {
-    height: 5em;
-    overflow-y: scroll;
-}
 .component-filter-options>.directory {
     height: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .outputPanel {
     height: 100%;
+    flex: 1; /* Allow panel to grow/shrink */
+    min-width: 0; /* Allow panel to shrink below its content size */
+    width: auto !important; /* Override Bootstrap's width */
 }
 
 .renderedComponent {
@@ -283,4 +294,48 @@
     margin-left: 0px;
     margin-right: 0px;
     margin-bottom: 0px;
+}
+
+.resize-handle {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 10px;
+    height: 100%;
+    cursor: col-resize;
+    z-index: 10;
+    opacity: 0;
+}
+
+.resize-handle:hover {
+    background-color: orange;
+    opacity: 0.5;
+}
+
+.component-filter-options::-webkit-scrollbar,
+.output-folder-options::-webkit-scrollbar{
+    width: 12px;  /* Wider scrollbar */
+}
+
+.component-filter-options::-webkit-scrollbar-track,
+.output-folder-options::-webkit-scrollbar-track {
+    background: #1e2127;  /* Dark background for track */
+}
+
+.component-filter-options::-webkit-scrollbar-thumb,
+.output-folder-options::-webkit-scrollbar-thumb {
+    background: #3f4450;  /* Slightly lighter than track for thumb */
+    border-radius: 6px;
+    border: 2px solid #1e2127;  /* Creates padding effect */
+}
+
+.component-filter-options::-webkit-scrollbar-thumb:hover,
+.output-folder-options::-webkit-scrollbar-thumb {
+    background: #4a4f5a;  /* Even lighter on hover */
+}
+
+.render-panel-row {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping to new line */
+    height: 100%;
 }
