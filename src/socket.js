@@ -130,20 +130,20 @@ class SocketManager {
         }
     }
 
-    emit(event, data) {
+    emit(event, data, callback) {
         if (this.isConnected) {
-            this.socket.emit(event, data);
+            this.socket.emit(event, data, callback);
         } else {
             console.log('Buffering message:', event);
-            this.messageBuffer.push({ event, data });
+            this.messageBuffer.push({ event, data, callback });
         }
     }
 
     flushMessageBuffer() {
         while (this.messageBuffer.length > 0 && this.isConnected) {
-            const { event, data } = this.messageBuffer.shift();
+            const { event, data, callback } = this.messageBuffer.shift();
             console.log('Sending buffered message:', event);
-            this.socket.emit(event, data);
+            this.socket.emit(event, data, callback);
         }
     }
 
