@@ -73,11 +73,33 @@ const clearEmail = async () => {
     await storage.removeItem('Templative_email');
 }
 
+const saveTgcSession = async (id, userId) => {
+    await storage.setItem('tgcSessionId', id);
+    await storage.setItem('tgcUserId', userId);
+}
+
+const getTgcSession = async () => {
+    const id = await storage.getItem('tgcSessionId');
+    const userId = await storage.getItem('tgcUserId');
+    if (id === undefined || userId === undefined) {
+        return null;
+    }
+    return { id, userId };
+}
+
+const clearTgcSession = async () => {
+    await storage.removeItem('tgcSessionId');
+    await storage.removeItem('tgcUserId');
+}
+
 module.exports = {
     clearSessionToken,
     saveSessionToken,
     getSessionToken,
     getEmail,
     saveEmail,
-    clearEmail
+    clearEmail,
+    saveTgcSession,
+    getTgcSession,
+    clearTgcSession
 }

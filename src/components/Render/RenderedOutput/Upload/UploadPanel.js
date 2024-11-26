@@ -1,43 +1,92 @@
 import React from "react";
 import "./UploadPanel.css"
 import UploadControls from "./UploadControls";
-import { LoggedMessages } from "../../../SocketedConsole/LoggedMessages"
 import socket from "../../../../socket"
-import {getLastUsedGameCrafterUsername, writeLastUseGameCrafterUsername, getLastUsedGameCrafterApiKey, writeLastUseGameCrafterApiKey} from "../../../../settings/SettingsManager"
-import { trackEvent } from "@aptabase/electron/renderer";
 import AdPanel from "./AdPanel";
-import TemplativePurchaseButton from "../../../TemplativePurchaseButton";
+import { trackEvent } from "@aptabase/electron/renderer";
+import GameCrafterLoginControls from "./GameCrafterLogin";
+const { ipcRenderer } = require('electron');
+import { channels } from "../../../../shared/constants"
 
 export default class UploadPanel extends React.Component {   
-    state={
+    state = {
         isCreating: false,
-        apiKey: "",
-        username: "",
-        password: "",
+        isLoggedIn: false,
+        hasGottenFirstSessionPollResponse: false,
         isAsync: true,
+        designerId: undefined,
         isPublish: false,
         isProofed: true,
         isIncludingStock: true,
+        designers: []
     }
+
+    updateDesignerId = (designerId) => {
+        this.setState({designerId: designerId})
+    }
+
     componentDidMount = async () => {
         trackEvent("view_uploadPanel")
+        await this.checkTgcSession()
         
-        this.setState({
-            apiKey: getLastUsedGameCrafterApiKey(),
-            username: getLastUsedGameCrafterUsername(),
+        ipcRenderer.on(channels.GIVE_TGC_LOGIN_STATUS, async (_, data) => {
+            var newState = { 
+                isLoggedIn: data.isLoggedIn,
+                hasGottenFirstSessionPollResponse: true
+            }
+            if (data.isLoggedIn) {
+                var designersResult = await this.fetchDesigners()
+                newState["designers"] = designersResult.designers
+            } else {
+                newState["designers"] = []
+            }
+            if (newState.designers.length > 0) {
+                if (this.state.designerId === undefined || !newState.designers.find(d => d.id === this.state.designerId)) {
+                    newState.designerId = newState.designers[0].id
+                }
+            }
+            this.setState(newState)
+            
         })
     }
-    updateApiKey = (apiKey) => {
-        writeLastUseGameCrafterApiKey(apiKey);
-        this.setState({apiKey: apiKey})
+
+    componentWillUnmount() {
+        ipcRenderer.removeAllListeners(channels.TGC_LOGIN_STATUS_CHANGED)
     }
-    updateUsername = (username) => {
-        writeLastUseGameCrafterUsername(username);
-        this.setState({username: username})
+
+    fetchDesigners = async () => {
+        return await ipcRenderer.invoke(channels.TO_SERVER_GET_TGC_DESIGNERS)
     }
-    updatePassword = (password) => {
-        this.setState({password: password})
+
+    setSession = async (sessionStatus) => {
+        var isLoggedIn = sessionStatus.isLoggedIn
+        var designerResult = await this.fetchDesigners()
+        if (!designerResult.isLoggedIn) {
+            isLoggedIn = false
+        }
+        var newState = { 
+            isLoggedIn: isLoggedIn, 
+            designers: designerResult.designers,
+            hasGottenFirstSessionPollResponse: true 
+        }
+        if (newState.designers.length > 0) {
+            if (this.state.designerId === undefined || !newState.designers.find(d => d.id === this.state.designerId)) {
+                newState.designerId = newState.designers[0].id
+            }
+        }
+        this.setState(newState)
     }
+
+    checkTgcSession = async () => {
+        const sessionStatus = await ipcRenderer.invoke(channels.TO_SERVER_GET_TGC_SESSION)
+        console.log(sessionStatus)
+        if (!sessionStatus.isLoggedIn) {
+            this.setState({hasGottenFirstSessionPollResponse: true})
+            return
+        }
+        this.setSession(sessionStatus)
+    }
+
     updateIsAsync = (isAsync) => {
         this.setState({isAsync: isAsync})
     }
@@ -55,50 +104,53 @@ export default class UploadPanel extends React.Component {
         var data = { 
             gameDirectoryRootPath: this.props.templativeRootDirectoryPath,
             outputDirectorypath: this.props.outputFolderPath,
-            username: this.state.username,
-            password: this.state.password,
-            apiKey: this.state.apiKey,
             isPublish: this.state.isPublish,
             isIncludingStock: this.state.isIncludingStock,
             isAsync: this.state.isAsync,
-            isProofed: this.state.isProofed ? 1:0
+            isProofed: this.state.isProofed ? 1:0,
+            designerId: this.state.designerId
         }
         try {
             this.setState({isCreating: true})
-            socket.emit('upload', data, () => {
-                this.setState({isCreating: false})
-            });
+            const uploadStatus = await ipcRenderer.invoke(channels.TO_SERVER_UPLOAD_GAME, data)
+            this.setState({isCreating: false, isLoggedIn: uploadStatus.isLoggedIn})
         }
         catch(e) {
             console.log(e)
         }
     }
+
     render() {
+        // Show nothing until we get first response
+        if (!this.state.hasGottenFirstSessionPollResponse) {
+            return null
+        }
+
+        // Show login controls if not logged in
+        if (!this.state.isLoggedIn) {
+            return <GameCrafterLoginControls />
+        }
+        
+        // Show upload controls if we have a session
         return <React.Fragment>
-                <div className="logged-messages-container">
-                    <LoggedMessages messages={this.props.templativeMessages}/>
-                </div>
-                <UploadControls 
-                    isCreating={this.state.isCreating}
-                    selectedOutputDirectory={this.props.outputFolderPath}
-                    apiKey={this.state.apiKey}
-                    username={this.state.username}
-                    password={this.state.password}
-                    isAsync={this.state.isAsync}
-                    isPublish={this.state.isPublish}
-                    isProofed={this.state.isProofed}
-                    isIncludingStock={this.state.isIncludingStock}
-                    uploadCallback={this.upload}
-                    updateApiKeyCallback={this.updateApiKey}
-                    updateUsernameCallback={this.updateUsername}
-                    updatePasswordCallback={this.updatePassword}
-                    updateIsAsyncCallback={this.updateIsAsync}
-                    toggleIsPublishCallback={this.toggleIsPublish}
-                    toggleIsProofedCallback={this.toggleIsProofed}
-                    toggleIsIncludingStockCallback={this.toggleIsIncludingStock}
-                />
-                
-                <AdPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
-            </React.Fragment>
+            <AdPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
+            
+            <UploadControls 
+                isCreating={this.state.isCreating}
+                selectedOutputDirectory={this.props.outputFolderPath}
+                isAsync={this.state.isAsync}
+                isPublish={this.state.isPublish}
+                isProofed={this.state.isProofed}
+                isIncludingStock={this.state.isIncludingStock}
+                uploadCallback={this.upload}
+                updateIsAsyncCallback={this.updateIsAsync}
+                toggleIsPublishCallback={this.toggleIsPublish}
+                toggleIsProofedCallback={this.toggleIsProofed}
+                updateDesignerIdCallback={this.updateDesignerId}
+                toggleIsIncludingStockCallback={this.toggleIsIncludingStock}
+                designerId={this.state.designerId}
+                designers={this.state.designers}
+            />
+        </React.Fragment>
     }
 }

@@ -38,7 +38,7 @@
     height: 300px;
 }
 .upload-control-column-field {
-    width: 8em;
+    width: 10em;
 }
 .gamecrafter-ads-container {
     height: calc(100% - 615px);
@@ -69,4 +69,17 @@
 }
 .logged-messages-container > .console-messages {
     height:100%;
+}
+
+.go-to-tgc-button, .tgc-logout-button {
+    color: rgb(222, 226, 230) !important;
+    background-color: rgb(43, 48, 53) !important;
+    border-color: rgb(73, 80, 87) !important;
+}
+.go-to-tgc-button:hover {
+    background-color: hsl(210, 10%, 22%) !important;
+}
+.tgc-logout-button:hover {
+    border-color: rgb(198, 40, 40) !important;
+    /* color: rgb(198, 40, 40) !important; */
 }

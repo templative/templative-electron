@@ -4,7 +4,7 @@ const os = require("os");
 const {  shell, BrowserWindow,BrowserView, app } = require('electron')
 const { channels } = require("../shared/constants");
 const { verifyCredentials, isTokenValid, verifyCredentialsGoogle } = require("./templativeWebsiteClient")
-const { clearSessionToken, clearEmail, saveSessionToken, saveEmail, getSessionToken, getEmail } = require("./sessionStore")
+const { clearSessionToken, clearEmail, saveSessionToken, saveEmail, getSessionToken, getEmail, getTgcSession, saveTgcSession, clearTgcSession } = require("./sessionStore")
 let mainWindow;
 
 const goToAccount = async(event, args) => {
@@ -74,7 +74,6 @@ function setupOauthListener(window) {
                 if (mainWindow.isMinimized()) mainWindow.restore();
                 mainWindow.focus();
             }
-
             const deepLink = commandLine.pop().slice(0, -1);
             await handleDeepLink(deepLink);
         });
@@ -97,27 +96,132 @@ function grabTokenAndEmail(data) {
     return { token, email };
 }
 
+async function loginIntoGameCrafter(sso) {
+    try {
+        const response = await fetch(`https://templative-d1a3033da970.herokuapp.com/the-game-crafter/sso?sso=${sso}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to login into Game Crafter');
+        }
+        const data = await response.json();
+        await saveTgcSession(data["result"]["id"], data["result"]["user_id"]);
+        BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TGC_LOGIN_STATUS, { isLoggedIn: true });
+    } catch (error) {
+        console.error('Error fetching designers:', error);
+    }
+}
+
 async function handleDeepLink(url) {
     if (os.platform() === "win32") {
         url = url + "="
     }
     const parsedUrl = new URL(url);
+
+    // Handle TheGameCrafter SSO callback
+    if (parsedUrl.searchParams.has('sso_id')) {
+        const ssoId = parsedUrl.searchParams.get('sso_id');
+        if (!ssoId) {
+            console.error("No SSO ID found in TGC callback");
+            return;
+        }
+        await loginIntoGameCrafter(ssoId)
+        return;
+    }
+
+    // Handle Templative.net OAuth callback
     const data = parsedUrl.searchParams.get('data');
-    
     if (!data) {
         console.error("No data parameter found in the URL");
-        return
+        return;
     }
     const { token, email } = grabTokenAndEmail(data);
     if (!(token && email)) {
-        console.log("Missing info token and email.");
+        console.error("Missing info token and email.");
+        return;
     }
-    // console.log("Recieved deep link in accountManager.js:");
-    // console.log(token);
-    // console.log(email);
     await saveSessionToken(token);
-    await saveEmail(email)
+    await saveEmail(email);
     mainWindow.webContents.send(channels.GIVE_LOGGED_IN, token, email);
+}
+async function getTgcSessionFromStore() {
+    const session = await getTgcSession();
+    return { isLoggedIn: session !== null };
+}
+
+async function getDesigners() {
+    try {
+        var session = await getTgcSession()
+        if (!session) {
+            return { isLoggedIn: false, designers: [] }
+        }
+        
+        const response = await fetch(`http://localhost:8085/the-game-crafter/designers?id=${session.id}&userId=${session.userId}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        
+        if (response.status === 400) {
+            await clearTgcSession();
+            return { isLoggedIn: false, designers: [] };
+        }
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch designers');
+        }
+
+        const data = await response.json();
+        return { isLoggedIn: true, designers: data.designers };
+    } catch (error) {
+        console.error('Error fetching designers:', error);
+        return [];
+    }
+}
+
+async function uploadGame(_,data) {
+    try {
+        var session = await getTgcSession()
+        if (!session) {
+            return { isLoggedIn: false }
+        }
+        const response = await fetch('http://localhost:8085/the-game-crafter/upload', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                ...data,
+                sessionId: session.id,
+                userId: session.userId
+            })
+        });
+
+        if (response.status === 440) {
+            // Session is invalid/expired
+            await clearTgcSession();
+            return { isLoggedIn: false };
+        }
+
+        if (!response.ok) {
+            throw new Error('Upload failed');
+        }
+
+        return { isLoggedIn: true };
+    } catch (error) {
+        console.error('Error uploading game:', error);
+        return { isLoggedIn: true, error: error.message };
+    }
+}
+
+async function logoutTgc() {
+    await clearTgcSession()
+    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TGC_LOGIN_STATUS, { isLoggedIn: false });
 }
 
 module.exports = {
@@ -125,5 +229,9 @@ module.exports = {
     login,  
     goToAccount,
     giveLogout,
-    giveLoginInformation
+    giveLoginInformation,
+    getTgcSessionFromStore,
+    getDesigners,
+    uploadGame,
+    logoutTgc
 }

@@ -9,7 +9,7 @@ async def login(gameCrafterSession, publicApiKey, userName, userPassword):
         username = userName,
         password = userPassword
     )
-
+    
 async def logout(gameCrafterSession):
     url = "%s/session/%s" % (gameCrafterBaseUrl, gameCrafterSession.sessionId)
     await httpClient.delete(gameCrafterSession, url)
@@ -17,10 +17,11 @@ async def logout(gameCrafterSession):
 
 async def postFolder(gameCrafterSession, name, folderParentId):
     url = "%s/folder" % gameCrafterBaseUrl
+
     return await httpClient.post(gameCrafterSession, url,
         session_id = gameCrafterSession.sessionId,
         name=name,
-        user_Id=gameCrafterSession.userId,
+        user_id=gameCrafterSession.userId,
         parent_id=folderParentId,
     )
 
@@ -63,7 +64,6 @@ async def deleteGame(gameCrafterSession, id):
 
 async def getUser(gameCrafterSession):
     url = "%s/user/%s" % (gameCrafterBaseUrl, gameCrafterSession.userId)
-
     return await httpClient.get(gameCrafterSession, url,
         session_id = gameCrafterSession.sessionId
     )

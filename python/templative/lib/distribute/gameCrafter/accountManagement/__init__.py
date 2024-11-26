@@ -43,13 +43,4 @@ async def printGames(games):
 
 async def listDesigners(gameCrafterSession):
     designersResponse = await httpOperations.getDesigners(gameCrafterSession)
-
-    headers = ["name", "id"]
-    data = []
-    for designer in designersResponse["items"]:
-        print(designer)
-        name = designer["name"]
-        designerId = designer["id"]
-        data.append([name, designerId])
-
-    print(tabulate(data, headers=headers, tablefmt='orgtbl'))
+    return designersResponse["items"]

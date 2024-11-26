@@ -3,9 +3,13 @@ from templative.lib.create import projectCreator, componentCreator
 from templative.lib.distribute.printout import createPdfForPrinting
 from templative.lib.distribute.playground import convertToTabletopPlayground
 from templative.lib.distribute.simulator import convertToTabletopSimulator
+from templative.lib.distribute.gameCrafter.accountManagement import listDesigners
 from templative.lib.componentInfo import COMPONENT_INFO
 from templative.lib.stockComponentInfo import STOCK_COMPONENT_INFO
 from templative.lib.produce import gameProducer
+from templative.lib.distribute.gameCrafter.util.gameCrafterSession import createSessionFromLogin
+from templative.lib.distribute.gameCrafter.client import uploadGame
+
 routes = web.RouteTableDef()
 
 @routes.get("/status")
@@ -103,3 +107,64 @@ async def previewPiece(request):
 @routes.get("/previews")
 async def previewPiece(request):
   return web.json_response({"previewsDirectory": gameProducer.getPreviewsPath()})
+    
+@routes.get("/the-game-crafter/designers")
+async def getDesigners(request):
+    id = request.query.get('id')
+    if id == None:
+        print("Missing id")
+        return web.Response(text="Missing id.", status=400)
+    
+    userId = request.query.get('userId')
+    if userId == None:
+        print("Missing userId")
+        return web.Response(text="Missing userId.", status=400)
+    
+    try:
+        gameCrafterSession = await createSessionFromLogin(id, userId)
+        if gameCrafterSession is None:
+            print("Unable to log in.")
+            return web.Response(text="Unable to log in.", status=400)
+        
+        designers = await listDesigners(gameCrafterSession)
+        return web.json_response({"designers": designers})
+    finally:
+        if gameCrafterSession:
+            await gameCrafterSession.httpSession.close()
+    
+@routes.post("/the-game-crafter/upload")
+async def upload(request):
+    data = await request.json()
+    
+    # Validate required fields
+    required_fields = ['sessionId', 'userId', 'gameDirectoryRootPath', 'outputDirectorypath', 
+                      'isPublish', 'isIncludingStock', 'isAsync', 'isProofed', 'designerId']
+    
+    for field in required_fields:
+        if field not in data:
+            return web.Response(text=f"Missing {field}", status=400)
+    
+    try:
+        gameCrafterSession = await createSessionFromLogin(data['sessionId'], data['userId'])
+        if gameCrafterSession is None:
+            return web.Response(text="Unable to log in.", status=400)
+        
+        try:
+            await uploadGame(
+                gameCrafterSession, 
+                data['gameDirectoryRootPath'],
+                data['outputDirectorypath'],
+                data['isPublish'],
+                data['isIncludingStock'],
+                data['isAsync'],
+                data['isProofed'],
+                data['designerId']
+            )
+            return web.Response(status=200)
+        except Exception as e:
+            print(f"Error during upload: {str(e)}")
+            return web.Response(text=str(e), status=500)
+    finally:
+        if gameCrafterSession:
+            await gameCrafterSession.httpSession.close()
+    

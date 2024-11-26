@@ -16,19 +16,19 @@ async def delete(gameCrafterSession, url, **kwargs):
 async def handleResponse(url, response, **kwargs):
     statusCode = str(response.status)
     responseText = await response.text()
-    responseJson = json.loads(responseText)
+    
     if not statusCode.startswith('2'):
-        print('!!! Fail', url)
-        print(response)
-        print(responseJson)
-        print(kwargs)
-        print(**kwargs)
-        print(**kwargs.keys())
-        print(kwargs.keys())
+        print('!!! Request Failed:', url)
+        print('Status Code:', statusCode)
+        print('Response Text:', responseText)
+        print('Request kwargs:')
         pprint(kwargs)
-        pprint(**kwargs)
-        pprint(**kwargs.keys())
-        pprint(kwargs.keys())
-        raise Exception('%s Returned %s.' % (url, statusCode))
+        raise Exception(f'API Request Failed: {url}\nStatus: {statusCode}\nResponse: {responseText}')
 
-    return responseJson['result']
+    # Only try to parse JSON for successful responses
+    try:
+        responseJson = json.loads(responseText)
+        return responseJson['result']
+    except json.JSONDecodeError:
+        # For non-JSON successful responses, return the raw text
+        return responseText

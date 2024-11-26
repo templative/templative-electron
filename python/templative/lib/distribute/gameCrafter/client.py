@@ -6,16 +6,17 @@ from templative.lib.distribute.gameCrafter.fileFolderManager import createGame, 
 
 gameCrafterBaseUrl = "https://www.thegamecrafter.com"
 
-async def uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirectory, isPublish, isStock, isAsynchronous, isProofed):
+async def uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirectory, isPublish, isStock, isAsynchronous, isProofed, designerId):
     if not gameRootDirectoryPath:
         raise Exception("Game root directory path cannot be None")
 
     game = await instructionsLoader.loadGameInstructions(outputDirectory)
     studio = await instructionsLoader.loadStudioInstructions(outputDirectory)
-
-    if not "gameCrafterDesignerId" in studio or studio["gameCrafterDesignerId"] == "":
-        print("!!! Missing 'gameCrafterDesignerId' in outputted studio.json.", studio)
+    
+    if designerId is None and not "gameCrafterDesignerId" in studio and studio["gameCrafterDesignerId"] == "":
+        print("!!! Missing 'gameCrafterDesignerId' in studio.json.")
         return
+    gameCrafterDesignerId = designerId if designerId is not None else studio["gameCrafterDesignerId"]
 
     print("Uploading %s for %s." % (game["displayName"], studio["displayName"]))
 
@@ -35,7 +36,7 @@ async def uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirectory,
     minPlayers = await pullAdvertDataFromGameJsonButAllowDefault(game, "minPlayers", "4")
     maxPlayers = await pullAdvertDataFromGameJsonButAllowDefault(game, "maxPlayers", "4")
 
-    cloudGame = await createGame(gameCrafterSession, uniqueGameName, game, studio["gameCrafterDesignerId"], isPublish, shortDescription, longDescription, coolFactors, logoImageFileId, backdropImageFileId, advertisementImageFileId, websiteUrl, category, minAge, playTime, minPlayers, maxPlayers)
+    cloudGame = await createGame(gameCrafterSession, uniqueGameName, game, gameCrafterDesignerId, isPublish, shortDescription, longDescription, coolFactors, logoImageFileId, backdropImageFileId, advertisementImageFileId, websiteUrl, category, minAge, playTime, minPlayers, maxPlayers)
 
     await advertisementCreator.createActionShot(gameCrafterSession, cloudGame["id"], actionShotImageFileId)
 

@@ -29,7 +29,8 @@ def getCredentialsFromEnv():
 @click.option('-s/-n', '--stock/--nostock', default=True, required=False, type=bool, help='Whether stock parts are included -s or not -n.')
 @click.option('-a/-y', '--asynchronous/--synchronous', default=True, required=False, type=bool, help='Whether upload requests happen all at once -a or one after the other -y.')
 @click.option('-u/-o', '--proofed/--proof', default=True, required=False, type=bool, help='Whether images are considered proofed already -u or not -o.')
-async def upload(input, render, publish, stock, asynchronous, proofed):
+@click.option('-d', '--designerId', default=None, required=False, type=str, help='The Game Crafter Designer ID to use for this game.')
+async def upload(input, render, publish, stock, asynchronous, proofed, designerId):
     """Upload a produced game in a directory"""
     publicApiKey, userName, userPassword = getCredentialsFromEnv()
     session = await login(publicApiKey, userName, userPassword)
@@ -46,7 +47,7 @@ async def upload(input, render, publish, stock, asynchronous, proofed):
     if render is None:
         raise Exception("Missing --render directory.")
     
-    await uploadGame(session, input, render, publish, stock, asynchronous, 1 if proofed else 0)
+    await uploadGame(session, input, render, publish, stock, asynchronous, 1 if proofed else 0, designerId)
     await logout(session)
 
 @click.command()

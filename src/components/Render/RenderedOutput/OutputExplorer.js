@@ -172,7 +172,7 @@ export default class OutputExplorer extends React.Component {
             <SimulatorPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath}/>,
             <PlaygroundPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath}/>,
             <PrintPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath}/>,
-            <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath} templativeMessages={this.props.templativeMessages}/>
+            <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath}/>
         ]
         
         return <React.Fragment>
