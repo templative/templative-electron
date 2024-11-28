@@ -5,14 +5,19 @@ const path = require('path');
 const fsOld = require('fs');
 const addSpaces = (str) => {
     return str
-        .replace(/([a-z])([A-Z])/g, '$1 $2')  // Add space between lowercase and uppercase
-        .replace(/([a-zA-Z])(\d)/g, '$1 $2')  // Add space between letters and numbers
-        .replace(/(\d)([a-zA-Z])/g, '$1 $2')
-        .replace("D 4", "D4")
-        .replace("D 6", "D6")
-        .replace("D 8", "D8")
-        .replace("D 12", "D12")
-        .replace("D 20", "D20")
+        // First specifically handle D4, D6, D8, D10, D12, D20
+        .replace(/D(4|6|8|10|12|20)(\d+)/g, 'D$1 $2')
+        // Then handle measurement units, keeping them with their numbers
+        .replace(/(\d+)(mm|cm)/g, '$1$2')
+        // Add space between lowercase and uppercase
+        .replace(/([a-z])([A-Z])/g, '$1 $2')
+        // Add space between letters and numbers (except for measurement units)
+        .replace(/([a-zA-Z])(\d)/g, '$1 $2')
+        // Clean up any double spaces
+        .replace(/\s+/g, ' ')
+        // Fix dice notation
+        .replace(/D ?(4|6|8|10|12|20)/g, 'D$1')
+        .trim()
 }
 export default class ComponentOutputDirectory extends React.Component { 
     state = {
@@ -86,12 +91,16 @@ export default class ComponentOutputDirectory extends React.Component {
     }
     #watchComponentDirectoryFolderForChanges = async () => {
         this.#stopWatchingComponentDirectoryFolderForChanges()            
-        this.outputFolderWatcher = fsOld.watch(this.props.componentDirectory, {recursive: true}, async (event, filename) => {
-            // console.log(event, filename)
-            await this.#getComponentImageFilepaths()
-        })
+        
+        this.outputFolderWatcher = fsOld.watch(this.props.componentDirectory, async (event, filename) => {
+            // Force a small delay to ensure file operations are complete
+            await new Promise(resolve => setTimeout(resolve, 50));
             
-        await this.#getComponentImageFilepaths()
+            // Always refresh the entire directory listing
+            await this.#getComponentImageFilepaths();
+        });
+            
+        await this.#getComponentImageFilepaths();
     }
     componentDidMount = async () => {
         if (this.props.componentDirectory === undefined) {

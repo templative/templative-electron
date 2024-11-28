@@ -3,56 +3,9 @@ import "./RenderedOutputImage.css"
 const fsOld = require('fs');
 
 export default class RenderOutputImage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isHovering: false,
-            isHoveringOverMagnifyingGlass: false,
-            filepath: undefined
-        };
-        this.fileWatcher = null;
-    }
-
-    componentDidMount() {
-        // Start watching the file for changes
-        this.startFileWatcher();
-    }
-
-    componentDidUpdate(prevProps) {
-        if (prevProps.filepath !== this.props.filepath) {
-            // If the file path changes, restart the file watcher
-            this.startFileWatcher();
-        }
-    }
-
-    componentWillUnmount() {
-        // Clean up the file watcher when the component is unmounted
-        this.stopFileWatcher();
-    }
-
-    startFileWatcher() {
-        // Stop any existing watcher
-        this.stopFileWatcher();
-        // console.log(this.props.imagePath)
-        this.fileWatcher = fsOld.watch(this.props.imagePath, (eventType, filename) => {
-            if (!fsOld.existsSync(this.props.imagePath)) {
-                return
-            }
-            this.setState({
-                filepath: `${this.props.imagePath}?t=${Date.now()}`
-            });
-        });
-        this.setState({
-            filepath: `${this.props.imagePath}?t=${Date.now()}`
-        });
-    }
-
-    stopFileWatcher() {
-        // Stop watching the file if there's an active watcher
-        if (this.fileWatcher) {
-            this.fileWatcher.close();
-            this.fileWatcher = null;
-        }
+    state = {
+        isHovering: false,
+        isHoveringOverMagnifyingGlass: false
     }
 
     handleMouseEnter = () => {
@@ -61,24 +14,24 @@ export default class RenderOutputImage extends React.Component {
 
     handleMouseLeave = () => {
         this.setState({isHovering: false});
-
     };
+
     handleMouseEnterMagnifyingGlass = () => {
         this.setState({isHoveringOverMagnifyingGlass: true});
     };
 
     handleMouseLeaveMagnifyingGlass = () => {
         this.setState({isHoveringOverMagnifyingGlass: false});
-
     };
+
     render() {
         if (this.props.imagePath.endsWith('_temp.png')){
-            console.log("Caught a unrendered image!")
             return <></>
         }
-        if (!this.state.filepath) {
-            return <></>
-        }
+
+        // Add timestamp to force refresh when parent updates the path
+        const imageUrl = `file://${this.props.imagePath}?t=${Date.now()}`
+
         return <React.Fragment>
             <div className="output-image-container"
                 onMouseEnter={this.handleMouseEnter}
@@ -87,7 +40,7 @@ export default class RenderOutputImage extends React.Component {
                 <React.Fragment>
                     <img 
                         className="output-image" 
-                        src={`file://${this.state.filepath}`} 
+                        src={imageUrl} 
                     />
                     {/* {this.state.isHovering &&  */}
                         <div 
@@ -117,7 +70,7 @@ export default class RenderOutputImage extends React.Component {
                 </React.Fragment>
             </div>
             {this.state.isHoveringOverMagnifyingGlass && 
-                <img className="output-image-giganto" src={`file://${this.state.filepath}`}/>
+                <img className="output-image-giganto" src={imageUrl}/>
             }
             
         </React.Fragment>
