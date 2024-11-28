@@ -110,8 +110,8 @@ export default class OutputExplorer extends React.Component {
 
             fileExtensions = fileExtensions    
                 .filter(dirent => dirent.isFile())
-                .map(dirent => path.extname(dirent.name))
-            var done = fileExtensions.filter(extension => extension === '.png')
+                .map(dirent => dirent.name)
+            var done = fileExtensions.filter(filename => filename.endsWith('.png') && !filename.endsWith('_temp.png'))
             doneFiles += done.length
         }
         this.setState({
@@ -167,12 +167,12 @@ export default class OutputExplorer extends React.Component {
         var style = {"width": `${percentageDone}%`} 
         
         const views = [
-            <RenderedImages componentDirectories={this.state.componentDirectories} typeQuantities={this.state.typeQuantities}/>,
+            <RenderedImages componentDirectories={this.state.componentDirectories} typeQuantities={this.state.typeQuantities} changeTabsToEditAFileCallback={this.props.changeTabsToEditAFileCallback} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>,
             <RulesViewer outputFolderPath={this.props.outputFolderPath} />,
-            <SimulatorPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath}/>,
-            <PlaygroundPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath}/>,
+            <SimulatorPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath} changeTabsToEditAFileCallback={this.props.changeTabsToEditAFileCallback}/>,
+            <PlaygroundPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath} changeTabsToEditAFileCallback={this.props.changeTabsToEditAFileCallback}/>,
             <PrintPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath}/>,
-            <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath}/>
+            <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath} changeTabsToEditAFileCallback={this.props.changeTabsToEditAFileCallback}/>
         ]
         
         return <React.Fragment>
