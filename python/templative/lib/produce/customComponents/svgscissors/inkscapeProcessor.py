@@ -120,6 +120,7 @@ async def runCommands(commands):
         
         if stdout:
             print(f"[stdout]\n{stdout.decode()}")
+        return process.returncode
 
 async def convertToJpg(absoluteOutputDirectory, name, pngFilepath):
     jpgFilepath = os.path.join(absoluteOutputDirectory, "%s.jpg" % (name))
@@ -160,11 +161,11 @@ async def exportSvgToImage(artFileOutputFilepath, imageSizePixels, name, outputD
             # "--export-width=%s" % imageSizePixels[0],
             # "--export-height=%s" % imageSizePixels[1],
         ]
-        await runCommands(createPngCommands)
         
-        # Check if the temp file was actually created
-        if not path.exists(pngTempFilepath):
-            print(f"Inkscape failed to export {path.basename(path.dirname(absoluteSvgFilepath))}/{path.basename(absoluteSvgFilepath)} to png.")
+        returnCode = await runCommands(createPngCommands)
+        
+        if returnCode != 0 or not path.exists(pngTempFilepath):
+            print(f"Inkscape failed to export {path.basename(path.dirname(absoluteSvgFilepath))}/{path.basename(absoluteSvgFilepath)} to png. Return code: {returnCode}")
             return
             
         os.rename(pngTempFilepath, pngFinalFilepath)
