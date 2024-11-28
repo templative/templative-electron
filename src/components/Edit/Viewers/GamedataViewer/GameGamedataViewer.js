@@ -64,11 +64,6 @@ export default class GameGamedataViewer extends EditableViewerJson {
             e.preventDefault();
         }
     }
-    static preventCommas = (e) => {
-        if (/,/.test(e.key)) {
-            e.preventDefault();
-        }
-    }
     static preventNonNumbers = (e) => {
         if (e.key === "Backspace" || e.key === "Tab") {
             return
@@ -80,10 +75,12 @@ export default class GameGamedataViewer extends EditableViewerJson {
     }
     
     updateCoolFactors = (index, value) => {
-        const factors = (this.state.content["coolFactors"] || "").split(",");
-        const newFactors = [...factors];
-        newFactors[index] = value.trim();
-        this.updateValue("coolFactors", newFactors.filter(f => f).join(","));
+        const coolFactors = Array.isArray(this.state.content["coolFactors"]) 
+            ? [...this.state.content["coolFactors"]] 
+            : ["", "", ""];
+        
+        coolFactors[index] = value.trim();
+        this.updateValue("coolFactors", coolFactors);
     }
     
     render() {
@@ -199,15 +196,16 @@ export default class GameGamedataViewer extends EditableViewerJson {
                 <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
                     <span className="input-group-text">Cool Factors</span>
                     {[0, 1, 2].map((index) => {
-                        const factors = (this.state.content["coolFactors"] || "").split(",");
+                        const coolFactors = Array.isArray(this.state.content["coolFactors"])
+                            ? this.state.content["coolFactors"]
+                            : ["", "", ""];
                         return (
                             <input 
                                 key={index}
                                 type="text" 
                                 className="form-control value-field" 
-                                onKeyDown={GameGamedataViewer.preventCommas}
                                 onChange={(event) => this.updateCoolFactors(index, event.target.value)} 
-                                value={factors[index] || ""}
+                                value={coolFactors[index] || ""}
                                 placeholder={`Factor ${index + 1}`}
                             />
                         );
