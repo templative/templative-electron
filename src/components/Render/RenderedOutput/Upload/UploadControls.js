@@ -2,10 +2,65 @@ import React from "react";
 import "./UploadPanel.css"
 const { ipcRenderer } = require('electron');
 import { channels } from "../../../../shared/constants"
+import AdPanel from "./AdPanel";
+const fs = require('fs');
+const path = require('path');
 
 export default class UploadControls extends React.Component {   
+    state = {
+        gameCrafterUrl: undefined,
+        gameData: null
+    }
+    componentDidUpdate(prevProps) {
+        if (this.watcher && prevProps.selectedOutputDirectory !== this.props.selectedOutputDirectory) {
+            this.watcher.close();
+            this.watcher = null;
+        }
+
+        if (this.props.selectedOutputDirectory && !this.watcher) {
+            const gameJsonPath = path.join(this.props.selectedOutputDirectory, 'game.json');
+            
+            this.updateGameUrlFromFile(gameJsonPath);
+            
+            this.watcher = fs.watch(gameJsonPath, (eventType, filename) => {
+                if (filename) {
+                    this.updateGameUrlFromFile(gameJsonPath);
+                }
+            });
+        }
+    }
+
+    updateGameUrlFromFile = (gameJsonPath) => {
+        try {
+            const gameData = JSON.parse(fs.readFileSync(gameJsonPath, 'utf8'));
+            if (gameData.gameCrafterUrl !== this.state.gameCrafterUrl || 
+                JSON.stringify(gameData) !== JSON.stringify(this.state.gameData)) {
+                this.setState({ 
+                    gameCrafterUrl: gameData.gameCrafterUrl,
+                    gameData: gameData 
+                });
+            }
+        } catch (error) {
+            console.error('Error reading game.json:', error);
+        }
+    }
+
+    componentWillUnmount() {
+        if (this.watcher) {
+            this.watcher.close();
+            this.watcher = null;
+        }
+    }
+
     logout = async () => {
         await ipcRenderer.invoke(channels.TO_SERVER_TGC_LOGOUT);
+    }
+
+    componentDidMount() {
+        if (this.props.selectedOutputDirectory) {
+            const gameJsonPath = path.join(this.props.selectedOutputDirectory, 'game.json');
+            this.updateGameUrlFromFile(gameJsonPath);
+        }
     }
 
     render() {
@@ -20,6 +75,16 @@ export default class UploadControls extends React.Component {
         
         return <React.Fragment>
             
+            {this.state.gameData &&
+                <AdPanel 
+                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    game={this.state.gameData}
+                    gameCrafterUrl={this.state.gameCrafterUrl}
+                    isPublish={this.props.isPublish}
+                    isIncludingStock={this.props.isIncludingStock}
+                    selectedOutputDirectory={this.props.selectedOutputDirectory}
+                />
+            }
             <div className="vertical-input-group">
                 <div 
                     className="input-group input-group-sm" 

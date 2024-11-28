@@ -83,3 +83,14 @@
     border-color: rgb(198, 40, 40) !important;
     /* color: rgb(198, 40, 40) !important; */
 }
+.uploaded-game-text {
+    font-size:14px;
+}
+.game-url-text {
+    color: hsl(180, 100%, 35%);
+    text-decoration: underline;
+}
+.game-url-text:hover {
+    cursor:pointer;
+    color: hsl(180, 100%, 45%);
+}

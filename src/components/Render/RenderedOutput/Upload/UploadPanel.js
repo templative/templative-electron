@@ -1,8 +1,6 @@
 import React from "react";
 import "./UploadPanel.css"
 import UploadControls from "./UploadControls";
-import socket from "../../../../socket"
-import AdPanel from "./AdPanel";
 import { trackEvent } from "@aptabase/electron/renderer";
 import GameCrafterLoginControls from "./GameCrafterLogin";
 const { ipcRenderer } = require('electron');
@@ -15,8 +13,8 @@ export default class UploadPanel extends React.Component {
         hasGottenFirstSessionPollResponse: false,
         isAsync: true,
         designerId: undefined,
-        isPublish: false,
         isProofed: true,
+        isPublish: false,
         isIncludingStock: true,
         designers: []
     }
@@ -121,36 +119,30 @@ export default class UploadPanel extends React.Component {
     }
 
     render() {
-        // Show nothing until we get first response
         if (!this.state.hasGottenFirstSessionPollResponse) {
             return null
         }
 
-        // Show login controls if not logged in
         if (!this.state.isLoggedIn) {
             return <GameCrafterLoginControls />
         }
         
-        // Show upload controls if we have a session
-        return <React.Fragment>
-            <AdPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
-            
-            <UploadControls 
-                isCreating={this.state.isCreating}
-                selectedOutputDirectory={this.props.outputFolderPath}
-                isAsync={this.state.isAsync}
-                isPublish={this.state.isPublish}
-                isProofed={this.state.isProofed}
-                isIncludingStock={this.state.isIncludingStock}
-                uploadCallback={this.upload}
-                updateIsAsyncCallback={this.updateIsAsync}
-                toggleIsPublishCallback={this.toggleIsPublish}
-                toggleIsProofedCallback={this.toggleIsProofed}
-                updateDesignerIdCallback={this.updateDesignerId}
-                toggleIsIncludingStockCallback={this.toggleIsIncludingStock}
-                designerId={this.state.designerId}
-                designers={this.state.designers}
-            />
-        </React.Fragment>
+        return <UploadControls 
+            isCreating={this.state.isCreating}
+            selectedOutputDirectory={this.props.outputFolderPath}
+            isAsync={this.state.isAsync}
+            isPublish={this.state.isPublish}
+            isProofed={this.state.isProofed}
+            isIncludingStock={this.state.isIncludingStock}
+            uploadCallback={this.upload}
+            updateIsAsyncCallback={this.updateIsAsync}
+            toggleIsPublishCallback={this.toggleIsPublish}
+            toggleIsProofedCallback={this.toggleIsProofed}
+            updateDesignerIdCallback={this.updateDesignerId}
+            toggleIsIncludingStockCallback={this.toggleIsIncludingStock}
+            designerId={this.state.designerId}
+            designers={this.state.designers}
+            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+        />
     }
 }

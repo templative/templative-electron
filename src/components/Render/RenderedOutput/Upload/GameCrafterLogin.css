@@ -19,12 +19,10 @@
 }
 
 .login-tgc-button {
-    background-color: #8DC63F !important; /* GameCrafter lime green */
+    background-color: hsl(85, 54%, 51%) !important;
     border: none !important;
-    color: white !important;
     border-radius: 25px !important;
     padding: 8px 20px !important;
-    font-weight: 500;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -35,7 +33,7 @@
 }
 
 .login-tgc-button:hover {
-    background-color: #7ab32e !important; /* Slightly darker on hover */
+    background-color: hsl(85, 54%, 56%) !important;
     transform: translateY(-1px);
     filter: drop-shadow(2px 8px 6px rgba(0, 0, 0, 0.406));
 }
