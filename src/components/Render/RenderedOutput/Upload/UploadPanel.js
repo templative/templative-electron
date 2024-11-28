@@ -143,6 +143,7 @@ export default class UploadPanel extends React.Component {
             designerId={this.state.designerId}
             designers={this.state.designers}
             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+            changeTabsToEditAFileCallback={this.props.changeTabsToEditAFileCallback}
         />
     }
 }

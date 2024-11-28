@@ -15,6 +15,16 @@
     padding: 0.05em;
     display: inline-block;
 }
+.component-type-header {
+    padding: 0.3em;
+    border-bottom-color:rgb(49, 53, 64);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    display: flex;
+}
+.component-type-header:hover {
+    cursor:pointer;
+}
 .component-type-card > strong {
     font-size: 14px !important;
 }

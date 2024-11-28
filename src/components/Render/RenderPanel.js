@@ -149,6 +149,7 @@ export default class RenderPanel extends React.Component {
                 </div>  
                 <div className="outputPanel">
                     <OutputExplorer 
+                        changeTabsToEditAFileCallback={this.props.changeTabsToEditAFileCallback}
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
                         outputFolderPath={this.context.selectedOutputDirectory}
                     />

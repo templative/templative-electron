@@ -63,6 +63,10 @@ export default class UploadControls extends React.Component {
         }
     }
 
+    editGameJson = () => {
+        this.props.changeTabsToEditAFileCallback("GAME_GAMEDATA", path.join(this.props.templativeRootDirectoryPath, "game.json"))
+    }
+
     render() {
         var buttonMessage = "Select an Output Directory"
         if (this.props.isCreating) {
@@ -82,6 +86,7 @@ export default class UploadControls extends React.Component {
                     gameCrafterUrl={this.state.gameCrafterUrl}
                     isPublish={this.props.isPublish}
                     isIncludingStock={this.props.isIncludingStock}
+                    editGameJsonCallback={this.editGameJson}
                     selectedOutputDirectory={this.props.selectedOutputDirectory}
                 />
             }

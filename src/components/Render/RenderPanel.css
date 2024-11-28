@@ -124,9 +124,6 @@
     border-bottom-width: 1px;
     display: flex;
 }
-.component-output-header:hover {
-    cursor:pointer;
-}
 .subcomponent-output-header {
     padding: 0.3em;
     display: flex;
@@ -161,6 +158,9 @@
 .component-output-extension-chevron {
     display: flex;
     margin-left:auto;
+}
+.component-output-extension-chevron {
+    cursor:pointer;
 }
 /* .component-output-extension-chevron:hover {
     cursor:pointer;
@@ -198,6 +198,16 @@
 }
 .bug-margin {
     margin-right: 0.5em;
+}
+
+.editable-output-component-title:hover,
+.editable-output-component-title:hover .rendered-component-type,
+.editable-output-component-title:hover .edit-component-output-icon {
+    cursor: pointer;
+    color: #ffffff !important;
+}
+.edit-component-output-icon {
+    margin-right:6px;
 }
 .rendered-component-title {
     padding-left: 0.25em;

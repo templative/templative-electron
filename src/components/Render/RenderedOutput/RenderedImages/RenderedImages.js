@@ -74,6 +74,8 @@ export default class RenderedImages extends React.Component {
                     componentName={name}
                     componentType={data.type}
                     componentDirectories={data.directories}
+                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  
+                    changeTabsToEditAFileCallback={this.props.changeTabsToEditAFileCallback}
                 />
             )}
         

@@ -10,6 +10,7 @@ import { trackEvent } from "@aptabase/electron/renderer";
 import DocumentationButton from "../Documentation/DocumentationButton";
 import { RenderingWorkspaceContext } from '../Render/RenderingWorkspaceProvider';
 var axios = require('axios');
+var path = require('path');
 const addSpaces = (str) => {
     return str
         // First specifically handle D4, D6, D8, D10, D12, D20
@@ -79,11 +80,14 @@ export default class CreatePanel extends React.Component {
         }
         await axios.post(`http://127.0.0.1:8085/component`, data)
         this.setState({isProcessing: false})
+        var originalType = this.context.selectedComponentType
         this.context.setComponentName("");
         this.context.setSelectedComponentType(undefined);
-        this.context.setComponentAIDescription("")
+        this.context.setComponentAIDescription("");
+        if (!originalType.startsWith("STOCK_")) {
+            this.props.changeTabsToEditAFileCallback("UNIFIED_COMPONENT", path.join(this.props.templativeRootDirectoryPath, `component-compose.json#${this.context.componentName}`))
+        }
     }
-
     render() {
         var componentTypes = this.context.isToggledToComponents ? this.props.componentTypesCustomInfo : this.props.componentTypesStockInfo
         var componentTypeOptions = Object.assign({}, componentTypes)

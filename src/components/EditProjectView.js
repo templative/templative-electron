@@ -45,6 +45,17 @@ export default class EditProjectView extends React.Component {
         }
         this.setState({extendedDirectories: copiedExtendedDirectories})
     }
+    changeTabsToEditAFile = (type, filepath) => {
+        var tabbedFiles = [...this.state.tabbedFiles]
+        if (!EditProjectView.#hasTabAlready(type, filepath, tabbedFiles)) {
+            tabbedFiles.push(new TabbedFile(type, filepath))
+        }
+        this.setState({
+            currentRoute: "edit", 
+            currentFileType: type,
+            currentFilepath: filepath,
+            tabbedFiles: tabbedFiles})
+    }
     changeExtendedFileTypeAsync = (isExtended, filetype) => {
         var isAlreadyExtended = this.state.extendedFileTypes.has(filetype)
         var copiedExtendedFileTypes = this.state.extendedFileTypes
@@ -327,6 +338,7 @@ export default class EditProjectView extends React.Component {
                     componentTypesCustomInfo={this.state.componentTypesCustomInfo}
                     componentTypesStockInfo={this.state.componentTypesStockInfo}
                     templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    changeTabsToEditAFileCallback={this.changeTabsToEditAFile}
                 />
             )}
 
@@ -363,6 +375,7 @@ export default class EditProjectView extends React.Component {
                 <RenderPanel
                     email={this.props.email}
                     token={this.props.token}
+                    changeTabsToEditAFileCallback={this.changeTabsToEditAFile}
                     templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                     templativeMessages={this.props.templativeMessages}
                 />
