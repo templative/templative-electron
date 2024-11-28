@@ -1,4 +1,4 @@
-import asyncio, os
+import os, json
 from templative.lib.manage import instructionsLoader
 from templative.lib.distribute.gameCrafter import advertisementCreator
 from templative.lib.distribute.gameCrafter.componentCreator import createComponents, createRules
@@ -45,6 +45,9 @@ async def uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirectory,
 
     gameUrl = "%s%s%s"%(gameCrafterBaseUrl, "/make/games/", cloudGame["id"])
     print("Uploads finished for %s, visit %s" % (cloudGame["name"], gameUrl))
+    
+    await writeGameUrlToDirectory(game, gameUrl, outputDirectory)
+    
     return gameUrl
 
 async def pullAdvertDataFromGameJsonButAllowDefault(gameData, key, defaultValue):
@@ -82,5 +85,7 @@ async def createAdvertisments(gameCrafterSession, gameRootDirectoryPath, cloudGa
     
     return logoImageFileId, backdropImageFileId, advertisementImageFileId, actionShotImageFileId
 
-
-
+async def writeGameUrlToDirectory(gameJson, gameUrl, outputDirectory):
+    gameJson["gameCrafterUrl"] = gameUrl
+    with open(os.path.join(outputDirectory, "game.json"), 'w') as outfile:
+        json.dump(gameJson, outfile, indent=4)
