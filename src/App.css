@@ -116,3 +116,6 @@ button:not(:disabled):hover > .bi-trash3 {
 input, textarea, select {
   user-select: text;
 }
+.form-check-input {
+  cursor: pointer;
+}

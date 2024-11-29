@@ -94,3 +94,6 @@
     cursor:pointer;
     color: hsl(180, 100%, 45%);
 }
+.clickable-checkbox-label {
+    cursor: pointer;
+}

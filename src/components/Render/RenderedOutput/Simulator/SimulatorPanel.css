@@ -71,8 +71,22 @@
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    height: 100%;
+}
+
+.simulator-logo {
+    max-width: 715px;
+    height: auto;
+    display: block;
+    margin: auto;
+    position: relative;
+    filter: saturate(0%) brightness(50%);
+    opacity: 0.1;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+.simulator-logo-container {
+    height: calc(100% - 120px);
+    width: 100%;
 }

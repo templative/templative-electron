@@ -5,10 +5,10 @@ import {writeLastUseTableTopPlaygroundDirectory, getLastUsedTableTopPlaygroundDi
 import { trackEvent } from "@aptabase/electron/renderer";
 import TemplativePurchaseButton from "../../../TemplativePurchaseButton";
 import PlaygroundOutputExplorer from "./PlaygroundOutputExplorer";
+import playgroundLogo from "./playgroundLogo.png"
 const axios = require("axios");
 const path = require('path');
 const fs = require('fs');
-
 const { ipcRenderer } = require('electron');
 
 export default class PlaygroundPanel extends React.Component {   
@@ -85,23 +85,29 @@ export default class PlaygroundPanel extends React.Component {
             { isPackageCreated ?
                 <PlaygroundOutputExplorer packageDirectory={this.state.selectedPackageDirectory}/>
                 :
-                <div className="vertical-input-group playground-save-controls">
-                    <div className="input-group input-group-sm playground-directory-header" data-bs-theme="dark">
-                        <span className="input-group-text ttp-directory-label" id="basic-addon3">Tabletop Playground Package Directory</span>
+                <div className="playground-save-controls">
+                    <div className="playground-logo-container">
+                        <img src={playgroundLogo} alt="Playground Logo" className="playground-logo"/>
                     </div>
-                    <div className="input-group input-group-sm playground-package-controls" data-bs-theme="dark">
-                        <input className="form-control text-right cornered-top" value={this.state.playgroundDirectory} readOnly placeholder="Usually Steam/steamapps/common/TabletopPlayground/TabletopPlayground/PersistentDownloadDir" aria-label="Tabletop Playground Package Directory"/>
-                        <button onClick={async () => await this.openPlaygroundDirectoryPicker()} className="btn btn-outline-secondary lookup-playground-button cornered-top" type="button" id="button-addon1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
-                            <path 
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
-                            />
-                        </svg>
-                        </button>
+                    
+                    <div className="vertical-input-group">
+                        <div className="input-group input-group-sm playground-directory-header" data-bs-theme="dark">
+                            <span className="input-group-text ttp-directory-label" id="basic-addon3">Tabletop Playground Package Directory</span>
+                        </div>
+                        <div className="input-group input-group-sm playground-package-controls" data-bs-theme="dark">
+                            <input onClick={async () => await this.openPlaygroundDirectoryPicker()} className="form-control text-right cornered-top" value={this.state.playgroundDirectory} title="Usually Steam/steamapps/common/TabletopPlayground/TabletopPlayground/PersistentDownloadDir" readOnly placeholder="Usually Steam/steamapps/common/TabletopPlayground/TabletopPlayground/PersistentDownloadDir" aria-label="Tabletop Playground Package Directory"/>
+                            <button onClick={async () => await this.openPlaygroundDirectoryPicker()} className="btn btn-outline-secondary lookup-playground-button cornered-top" type="button" id="button-addon1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
+                                <path 
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                                />
+                            </svg>
+                            </button>
+                        </div>
+                        <button disabled={isCreateDisabled} type="button" className="btn btn-outline-secondary create-playground-button" onClick={() => this.createPlayground()}>{buttonMessage}</button>
                     </div>
-                    <button disabled={isCreateDisabled} type="button" className="btn btn-outline-secondary create-playground-button" onClick={() => this.createPlayground()}>{buttonMessage}</button>
                 </div>
-        }                    
+            }                    
         </React.Fragment>
         
     }

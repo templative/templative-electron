@@ -10,6 +10,7 @@ const path = require('path');
 const fs = require('fs');
 
 const { ipcRenderer } = require('electron');
+import simulatorLogo from "./simulatorLogo.png"
 
 export default class SimulatorPanel extends React.Component {   
     state={
@@ -80,21 +81,27 @@ export default class SimulatorPanel extends React.Component {
             {isSaveCreated ?
                 <SimulatorOutputExplorer saveFileAsyncCallback={async ()=> {}} selectedSaveFilepath={this.state.selectedSaveFilepath}/>
             :
-                <div className="vertical-input-group simulator-save-controls">
-                    <div className="input-group input-group-sm simulator-directory-header" data-bs-theme="dark">
-                        <span className="input-group-text tts-directory-label" id="basic-addon3">Tabletop Simulator Documents Directory</span>
+                <div className="simulator-save-controls">
+                    <div className="simulator-logo-container">
+                        <img src={simulatorLogo} alt="Simulator Logo" className="simulator-logo"/>
                     </div>
-                    <div className="input-group input-group-sm simulator-package-controls" data-bs-theme="dark">
-                        <input className="form-control text-right cornered-top" value={this.state.simulatorDirectory} readOnly placeholder="Usually like ~/Documents/My Games/Tabletop Simulator" aria-label="Tabletop Simulator Documents Directory"/>
-                        <button onClick={async () => await this.openSimulatorDirectoryPicker()} className="btn btn-outline-secondary lookup-simulator-button cornered-top" type="button" id="button-addon1">
-                        <svg xmlns="htts://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
-                            <path 
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
-                            />
-                        </svg>
-                        </button>
+                    
+                    <div className="vertical-input-group">
+                        <div className="input-group input-group-sm simulator-directory-header" data-bs-theme="dark">
+                            <span className="input-group-text tts-directory-label" id="basic-addon3">Tabletop Simulator Documents Directory</span>
+                        </div>
+                        <div className="input-group input-group-sm simulator-package-controls" data-bs-theme="dark">
+                            <input onClick={async () => await this.openSimulatorDirectoryPicker()}className="form-control text-right cornered-top" value={this.state.simulatorDirectory} title="Usually ~/Documents/My Games/Tabletop Simulator" readOnly placeholder="Usually ~/Documents/My Games/Tabletop Simulator" aria-label="Tabletop Simulator Documents Directory"/>
+                            <button onClick={async () => await this.openSimulatorDirectoryPicker()} className="btn btn-outline-secondary lookup-simulator-button cornered-top" type="button" id="button-addon1">
+                            <svg xmlns="htts://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
+                                <path 
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                                />
+                            </svg>
+                            </button>
+                        </div>
+                        <button disabled={isCreateDisabled} type="button" className="btn btn-outline-secondary create-simulator-button" onClick={() => this.createSimulator()}>{buttonMessage}</button>
                     </div>
-                    <button disabled={isCreateDisabled} type="button" className="btn btn-outline-secondary create-simulator-button" onClick={() => this.createSimulator()}>{buttonMessage}</button>
                 </div>
             }
         </React.Fragment>

@@ -122,33 +122,33 @@ export default class UploadControls extends React.Component {
                     className="input-group input-group-sm upload-checkbox-controls" 
                     data-bs-theme="dark"
                 >
-                    <span className="input-group-text upload-publish-checkbox" title="Whether or not you want to automatically publish the game on TheGameCrafter.">Publish?</span>
+                    <span className="input-group-text upload-publish-checkbox  clickable-checkbox-label" title="If checked, the displayName of the game will used, instead of the output folder, and the game's store page will be marked Published.." onClick={()=>{ this.props.toggleIsPublishCallback()}}>Mark as Published?</span>
                     <div className="input-group-text no-left-border">
                         <input 
                             className="form-check-input mt-0" 
                             type="checkbox" 
                             disabled={this.props.isCreating}
                             value=""
-                            title="Whether or not you want to automatically publish the game on TheGameCrafter."
+                            title="If checked, the displayName of the game will used, instead of the output folder, and the game's store page will be marked Published.."
                             onChange={()=>{ this.props.toggleIsPublishCallback()}} 
                             checked={this.props.isPublish} 
                             aria-label="Checkbox for following text input"
                         />
                     </div>
-                    <span className="input-group-text" title="Whether or not the the images are automatically considered Proofed. If no, then you will need to proof every single image manually once on TheGameCrafter.">Proofed?</span>
+                    <span className="input-group-text clickable-checkbox-label" title="Whether or not the the images are automatically considered Proofed. If not, then you will need to proof every single image manually once on TheGameCrafter." onClick={()=>{ this.props.toggleIsProofedCallback()}}>Proofed?</span>
                     <div className="input-group-text no-left-border">
                         <input 
                             className="form-check-input mt-0" 
                             type="checkbox" 
                             value="" 
-                            title="Whether or not the the images are automatically considered Proofed. If no, then you will need to proof every single image manually once on TheGameCrafter."
+                            title="Whether or not the the images are automatically considered Proofed. If not, then you will need to proof every single image manually once on TheGameCrafter."
                             disabled={this.props.isCreating}
                             onChange={()=>{ this.props.toggleIsProofedCallback()}} 
                             checked={this.props.isProofed} 
                             aria-label="Checkbox for following text input"
                         />
                     </div>
-                    <span className="input-group-text" title="Whether to upload stock components with your game. Saying 'no' is useful if you already own all the stock components and you just need the custom components.">Include Stock?</span>
+                    <span className="input-group-text clickable-checkbox-label" title="Whether to upload stock components with your game. Saying 'no' is useful if you already own all the stock components and you just need the custom components." onClick={()=>{ this.props.toggleIsIncludingStockCallback()}} >Include Stock?</span>
                     <div className="input-group-text no-left-border">
                         <input 
                             className="form-check-input mt-0" 
