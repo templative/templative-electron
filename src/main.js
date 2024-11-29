@@ -11,6 +11,8 @@ const { initialize } = require("@aptabase/electron/main");
 const path = require('path');
 const SplashScreen = require('./splash/splashScreen');
 
+const { setupGitCredentialHelper } = require('./app/gitCredentialManager');
+
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // Ensure we only try to quit once
@@ -80,6 +82,8 @@ const initializeApp = async () => {
     try {
         splashScreen.updateProgress("Starting servers...", 0);
         const serverStartResult = await launchServers();
+
+        await setupGitCredentialHelper()
         
         if (serverStartResult === 0) {
             splashScreen.updateProgress("Failed to start servers!", 100);

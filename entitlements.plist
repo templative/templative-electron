@@ -16,6 +16,8 @@
     <true/>
     <key>com.apple.security.cs.allow-unsigned-executable-memory</key>
     <true/>
+    <key>com.apple.security.keychain</key>
+    <true/>
 
     <key>CFBundleURLTypes</key>
     <array>

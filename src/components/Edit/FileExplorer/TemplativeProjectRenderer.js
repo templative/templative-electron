@@ -7,8 +7,10 @@ import artIcon from "../Icons/artIcon.svg"
 import gamedataIcon from "../Icons/gamedataIcon.svg"
 import ResourceHeader from "./ContentFiles/ResourceHeader";
 import GitStatusViewer from "./GitStatusViewer";
+
 const fsOld = require('fs');
 const path = require("path")
+const os = require("os")
 const fs = require("fs/promises")
 const { exec } = require('child_process');
 
@@ -93,7 +95,7 @@ export default class TemplativeProjectRenderer extends React.Component {
     }
     componentDidMount = async () => {
         await this.#parseComponentComposeAsync()
-        await this.#checkGitStatus()
+        await this.#checkHasGitAndGitProject()
     }
     #parseComponentComposeAsync = async () => {
         var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json");
@@ -121,7 +123,7 @@ export default class TemplativeProjectRenderer extends React.Component {
             return
         }
         await this.#parseComponentComposeAsync()
-        await this.#checkGitStatus()
+        await this.#checkHasGitAndGitProject()
     }
 
     #closeComponentComposeListener = () => {
@@ -186,28 +188,74 @@ export default class TemplativeProjectRenderer extends React.Component {
                 return "";
         }
     }
-    #checkGitStatus = async () => {
+    execAsync = (command) => {
+        return new Promise((resolve, reject) => {
+            exec(command, {
+                cwd: this.props.templativeRootDirectoryPath
+            }, (error, stdout, stderr) => {
+                if (error) reject(error);
+                else resolve(stdout.toString());
+            });
+        });
+    }
+    
+    isGitInstalled = async () => {
         try {
-            // Try to execute a simple git command directly
-            exec('git --version', async (error) => {
-                if (error) {
-                    this.setState({ hasGit: false });
-                    return;
-                }
-
-                try {
-                    // If git is available, check for .git directory
-                    const gitPath = path.join(this.props.templativeRootDirectoryPath, '.git');
-                    // Use fs.access instead of existsSync for more reliable checking
-                    await fs.access(gitPath, fs.constants.F_OK);
-                    this.setState({ hasGit: true });
-                } catch {
-                    // .git directory doesn't exist
-                    this.setState({ hasGit: false });
-                }
+            await this.execAsync('git --version');
+            console.log("Git is installed")
+            return true;
+        } catch (error) {
+            console.log(`Git is not installed: ${error}`)
+            return false;
+        }
+    };
+    
+    isGitProjectHere = async () => {
+        const gitPath = path.join(this.props.templativeRootDirectoryPath, '.git');
+        try {
+            await fs.access(gitPath, fs.constants.F_OK);
+            console.log("Git directory found")
+            return true;
+        } catch {
+            console.log("No .git directory found")
+            return false;
+        }
+    }
+    
+    isGitCredentialHelperSet = async () => {
+        try {
+            const platform = os.platform();
+            var configResults = await this.execAsync('git config --global credential.helper')
+            const helper = configResults.trim();
+            if (platform === 'win32') {
+                var isSet = helper === 'manager' || helper === 'manager-core';
+                console.log(`Git credential helper is set to ${helper} on Windows it should be manager or manager-core`)
+                return isSet;
+            } else if (platform === 'darwin') {
+                var isSet = helper === 'osxkeychain';
+                console.log(`Git credential helper is set to ${helper} on macOS it should be osxkeychain`)
+                return isSet;
+            }
+            console.log(`Git credential helper didn't match expectation, it is set to ${helper}.`)
+            return false;
+        } catch (err) {
+            console.error(`Failed to check git credential helper: ${err}`);
+            return false;
+        }
+    };
+    
+    #checkHasGitAndGitProject = async () => {
+        try {
+            const hasGit = 
+                await this.isGitProjectHere() && 
+                await this.isGitInstalled() && 
+                await this.isGitCredentialHelperSet();
+            
+            this.setState({ 
+                hasGit
             });
         } catch (error) {
-            console.error('Git check failed:', error);
+            console.error('Check has Git failed:', error);
             this.setState({ hasGit: false });
         }
     }

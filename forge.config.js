@@ -18,6 +18,7 @@ module.exports = {
       'gatekeeper-assess': false,
       'entitlements': 'entitlements.plist',
       'entitlements-inherit': 'entitlements.plist',
+      'signature-flags': 'library'
     },
     osxNotarize: {
       tool: 'notarytool',
