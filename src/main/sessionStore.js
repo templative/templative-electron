@@ -92,6 +92,20 @@ const clearTgcSession = async () => {
     await storage.removeItem('tgcUserId');
 }
 
+const saveGithubToken = async (token) => {
+    const encryptedToken = encrypt(token);
+    await storage.setItem('Templative_githubToken', encryptedToken);
+}
+
+const getGithubToken = async () => {
+    const encryptedToken = await storage.getItem('Templative_githubToken');
+    return encryptedToken ? decrypt(encryptedToken) : null;
+}
+
+const clearGithubToken = async () => {
+    await storage.removeItem('Templative_githubToken');
+}
+
 module.exports = {
     clearSessionToken,
     saveSessionToken,
@@ -101,5 +115,8 @@ module.exports = {
     clearEmail,
     saveTgcSession,
     getTgcSession,
-    clearTgcSession
+    clearTgcSession,
+    saveGithubToken,
+    getGithubToken,
+    clearGithubToken
 }

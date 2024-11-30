@@ -1,0 +1,110 @@
+.github-login-controls {
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    padding-bottom:1em;
+    padding-right: 10px;
+    height: 400px; /* Fixed height for git section */
+    overflow-y: hidden;
+    min-height: 0; /* Important for proper flex behavior */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+
+.github-logo {
+    height: 40px;
+    width: auto;
+}
+
+.login-github-button {
+    color: rgb(222, 226, 230) !important;
+    background-color: rgb(43, 48, 53) !important;
+    border-color: rgb(73, 80, 87) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.login-github-button:hover {
+    background-color: hsl(210, 10%, 22%) !important;
+}
+
+.verification-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #2b3035;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #495057;
+    position: relative;
+}
+
+.code-display {
+    font-family: monospace;
+    font-size: 24px;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #212529;
+    border-radius: 4px;
+    user-select: all;
+}
+
+.popup-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.popup-button {
+    color: rgb(222, 226, 230);
+    background-color: rgb(43, 48, 53);
+    border: 1px solid rgb(73, 80, 87);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.popup-button:hover {
+    background-color: hsl(210, 10%, 22%);
+}
+
+.error-message {
+    color: #ff6b6b;
+    margin-top: 1rem;
+    font-size: 14px;
+}
+
+.popup-close-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+    padding: 5px 10px;
+}
+
+.popup-close-button:hover {
+    color: #333;
+}

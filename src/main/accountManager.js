@@ -4,7 +4,7 @@ const os = require("os");
 const {  shell, BrowserWindow,BrowserView, app } = require('electron')
 const { channels } = require("../shared/constants");
 const { verifyCredentials, isTokenValid, verifyCredentialsGoogle } = require("./templativeWebsiteClient")
-const { clearSessionToken, clearEmail, saveSessionToken, saveEmail, getSessionToken, getEmail, getTgcSession, saveTgcSession, clearTgcSession } = require("./sessionStore")
+const { clearSessionToken, clearEmail, saveSessionToken, saveEmail, getSessionToken, getEmail, getTgcSession, saveTgcSession, clearTgcSession, getGithubToken, saveGithubToken, clearGithubToken } = require("./sessionStore")
 let mainWindow;
 
 const goToAccount = async(event, args) => {
@@ -52,7 +52,9 @@ const giveLoginInformation = async () => {
     }
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, token, email);
 }
-
+const giveGithubAuth = async (_) => {
+    return await getGithubToken();
+}
 function setupOauthListener(window) {
     mainWindow = window;
 
@@ -148,6 +150,7 @@ async function handleDeepLink(url) {
     await saveEmail(email);
     mainWindow.webContents.send(channels.GIVE_LOGGED_IN, token, email);
 }
+
 async function getTgcSessionFromStore() {
     const session = await getTgcSession();
     return { isLoggedIn: session !== null };
@@ -224,6 +227,72 @@ async function logoutTgc() {
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TGC_LOGIN_STATUS, { isLoggedIn: false });
 }
 
+async function clearGithubAuth(_) {
+    await clearGithubToken();
+}
+
+async function pollGithubAuth(_, deviceCode) {
+    let pollAttempts = 0;
+    const maxAttempts = 12; // 1 minute total polling time
+    const pollDelay = 10000; // 10 seconds between polls
+
+    // Wait 10 seconds before first poll
+    await new Promise(resolve => setTimeout(resolve, 10000));
+
+    const pollInterval = setInterval(async () => {
+        try {
+            const response = await fetch('https://github.com/login/oauth/access_token', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    client_id: "Ov23liv6aAD44ZpLEdPY",
+                    device_code: deviceCode,
+                    grant_type: 'urn:ietf:params:oauth:grant-type:device_code'
+                })
+            });
+
+            const data = await response.json();
+            pollAttempts++;
+
+            if (data.error) {
+                if (data.error === 'authorization_pending') {
+                    if (pollAttempts >= maxAttempts) {
+                        clearInterval(pollInterval);
+                        BrowserWindow.getAllWindows()[0].webContents.send(
+                            channels.GIVE_GITHUB_AUTH_ERROR, 
+                            'Authorization timeout. Please try again.'
+                        );
+                    }
+                    return;
+                }
+                clearInterval(pollInterval);
+                BrowserWindow.getAllWindows()[0].webContents.send(
+                    channels.GIVE_GITHUB_AUTH_ERROR, 
+                    data.error_description || 'Authorization failed'
+                );
+                return;
+            }
+
+            clearInterval(pollInterval);
+            await saveGithubToken(data.access_token)
+            BrowserWindow.getAllWindows()[0].webContents.send(
+                channels.GIVE_GITHUB_AUTH_SUCCESS, 
+                data.access_token
+            );
+
+        } catch (error) {
+            clearInterval(pollInterval);
+            BrowserWindow.getAllWindows()[0].webContents.send(
+                channels.GIVE_GITHUB_AUTH_ERROR, 
+                'Failed to connect to GitHub'
+            );
+        }
+    }, pollDelay);
+}
+
 module.exports = {
     setupOauthListener,
     login,  
@@ -233,5 +302,8 @@ module.exports = {
     getTgcSessionFromStore,
     getDesigners,
     uploadGame,
-    logoutTgc
+    logoutTgc,
+    pollGithubAuth,
+    giveGithubAuth,
+    clearGithubAuth
 }

@@ -1,16 +1,20 @@
 import React from "react";
+import ContextMenu from "../../../ContextMenu";
 import "./GitStatusViewer.css";
 const { exec } = require('child_process');
 const path = require("path");
+const os = require('os');
+import { channels } from '../../../../../../shared/constants';
+import { ipcRenderer } from 'electron';
 
-import artdataIcon from "../Icons/artDataIcon.svg"
-import pieceIcon from "../Icons/pieceIcon.svg"
-import componentIcon from "../Icons/componentIcon.svg"
-import componentComposeIcon from "../Icons/componentComposeIcon.svg"
-import rulesIcon from "../Icons/rulesIcon.svg"
-import artIcon from "../Icons/artIcon.svg"
-import gameIcon from "../Icons/gameIcon.svg"
-import studioIcon from "../Icons/studioIcon.svg"
+import artdataIcon from "../../Icons/artDataIcon.svg"
+import pieceIcon from "../../Icons/pieceIcon.svg"
+import componentIcon from "../../Icons/componentIcon.svg"
+import componentComposeIcon from "../../Icons/componentComposeIcon.svg"
+import rulesIcon from "../../Icons/rulesIcon.svg"
+import artIcon from "../../Icons/artIcon.svg"
+import gameIcon from "../../Icons/gameIcon.svg"
+import studioIcon from "../../Icons/studioIcon.svg"
 
 export default class GitStatusViewer extends React.Component {
     state = {
@@ -24,13 +28,14 @@ export default class GitStatusViewer extends React.Component {
         isRebasing: false,
         rebaseError: null,
         isLoading: false,
-        error: null
+        error: null,
+        showContextMenu: false,
+        contextMenuPosition: { left: 0, top: 0 }
     }
 
     componentDidMount = async () => {
         await this.checkGitStatus();
-        // Start the watcher
-        const watcherInterval = setInterval(this.checkGitStatus, 2000); // Check every 2 seconds
+        const watcherInterval = setInterval(this.checkGitStatus, 2000);
         this.setState({ watcherInterval });
     }
 
@@ -47,15 +52,36 @@ export default class GitStatusViewer extends React.Component {
         }
     }
 
-    // Add utility method for async exec
+
+    // Modify execAsync to handle credential prompts
     execAsync = (command) => {
+        const env = {
+            ...process.env,
+            GIT_TERMINAL_PROMPT: '0'
+        };
+
+        // Add GitHub token to environment if available
+        if (this.props.githubToken) {
+            env.GIT_ASKPASS = 'echo';
+            env.GIT_CREDENTIALS = this.props.githubToken;
+        }
+
         return new Promise((resolve, reject) => {
             exec(command, {
-                cwd: this.props.templativeRootDirectoryPath
+                cwd: this.props.templativeRootDirectoryPath,
+                env
             }, (error, stdout, stderr) => {
                 if (error) reject(error);
                 else resolve(stdout.toString());
             });
+        });
+    }
+
+    handleAuthenticationError = () => {
+        // You should implement your own authentication UI here
+        // This could be a modal dialog in your app asking for credentials
+        this.setState({ 
+            error: 'Authentication required. Please configure your Git credentials in Settings.'
         });
     }
 
@@ -390,7 +416,21 @@ export default class GitStatusViewer extends React.Component {
         return { stagedFiles, modifiedFiles, mergeConflicts };
     }
 
+    handleContextMenu = (event) => {
+        event.preventDefault();
+        this.setState({
+            showContextMenu: true,
+            contextMenuPosition: { left: event.clientX, top: event.clientY }
+        });
+    }
+
+    clearGithubLogin = async () => {
+        await ipcRenderer.invoke(channels.TO_SERVER_CLEAR_GITHUB_LOGIN);
+        this.props.clearGithubAuthTokenCallback();
+    }
+
     render() {
+        const { showContextMenu, contextMenuPosition } = this.state;
         const canPull = this.canPull();
         const canPush = this.canPush();
         const isCommitDisabled = this.isCommitDisabled();
@@ -452,8 +492,27 @@ export default class GitStatusViewer extends React.Component {
                                 </>
                             )}
                         </div>
+                        <button 
+                            className="btn btn-sm branch-controls btn-outline-secondary"
+                            onClick={this.handleContextMenu}
+                            title="GitHub Options"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
+                {showContextMenu && (
+                    <ContextMenu
+                        commands={[
+                            { name: "Clear Github Login", callback: this.clearGithubLogin }
+                        ]}
+                        left={contextMenuPosition.left}
+                        top={contextMenuPosition.top}
+                        closeContextMenuCallback={() => this.setState({ showContextMenu: false })}
+                    />
+                )}
                 <div className="git-commit-section">
                     <div className="vertical-input-group">
                         {this.state.rebaseError && (

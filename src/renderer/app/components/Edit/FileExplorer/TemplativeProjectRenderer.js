@@ -6,11 +6,13 @@ import IconContentFileItem from "./ContentFiles/IconContentFileItem";
 import artIcon from "../Icons/artIcon.svg"
 import gamedataIcon from "../Icons/gamedataIcon.svg"
 import ResourceHeader from "./ContentFiles/ResourceHeader";
-import GitStatusViewer from "./GitStatusViewer";
+import GitStatusViewer from "./Git/GitStatusViewer";
+import GithubLogin from "./Git/GithubLogin";
+import { ipcRenderer } from 'electron';
+import { channels } from '../../../../../shared/constants';
 
 const fsOld = require('fs');
 const path = require("path")
-const os = require("os")
 const fs = require("fs/promises")
 const { exec } = require('child_process');
 
@@ -23,7 +25,8 @@ export default class TemplativeProjectRenderer extends React.Component {
         artdataDirectory: undefined,
         piecesGamedataDirectory: undefined,
         componentGamedataDirectory: undefined,
-        hasGit: false
+        hasGit: false,
+        githubToken: false
     }
 
     createFileAsync = async (filepath, contents) => {
@@ -199,7 +202,7 @@ export default class TemplativeProjectRenderer extends React.Component {
         });
     }
     
-    isGitInstalled = async () => {
+    #isGitInstalled = async () => {
         try {
             await this.execAsync('git --version');
             console.log("Git is installed")
@@ -210,7 +213,7 @@ export default class TemplativeProjectRenderer extends React.Component {
         }
     };
     
-    isGitProjectHere = async () => {
+    #isGitProjectHere = async () => {
         const gitPath = path.join(this.props.templativeRootDirectoryPath, '.git');
         try {
             await fs.access(gitPath, fs.constants.F_OK);
@@ -222,43 +225,45 @@ export default class TemplativeProjectRenderer extends React.Component {
         }
     }
     
-    isGitCredentialHelperSet = async () => {
+    #isGithubRepo = async () => {
         try {
-            const platform = os.platform();
-            var configResults = await this.execAsync('git config --global credential.helper')
-            const helper = configResults.trim();
-            if (platform === 'win32') {
-                var isSet = helper === 'manager' || helper === 'manager-core';
-                console.log(`Git credential helper is set to ${helper} on Windows it should be manager or manager-core`)
-                return isSet;
-            } else if (platform === 'darwin') {
-                var isSet = helper === 'osxkeychain';
-                console.log(`Git credential helper is set to ${helper} on macOS it should be osxkeychain`)
-                return isSet;
-            }
-            console.log(`Git credential helper didn't match expectation, it is set to ${helper}.`)
-            return false;
-        } catch (err) {
-            console.error(`Failed to check git credential helper: ${err}`);
-            return false;
-        }
-    };
-    
-    #checkHasGitAndGitProject = async () => {
-        try {
-            const hasGit = 
-                await this.isGitProjectHere() && 
-                await this.isGitInstalled() && 
-                await this.isGitCredentialHelperSet();
-            
-            this.setState({ 
-                hasGit
-            });
+            const remoteUrl = await this.execAsync('git remote get-url origin');
+            return remoteUrl.toLowerCase().includes('github.com');
         } catch (error) {
-            console.error('Check has Git failed:', error);
-            this.setState({ hasGit: false });
+            console.error('Failed to check GitHub status:', error);
         }
     }
+    #getGithubAuth = async () => {
+        return await ipcRenderer.invoke(channels.TO_SERVER_IS_LOGGED_INTO_GITHUB)
+    }
+
+    #checkHasGitAndGitProject = async () => {
+        try {
+            const githubToken = await this.#getGithubAuth()
+            const hasGit = 
+                await this.#isGitProjectHere() && 
+                await this.#isGitInstalled() &&
+                await this.#isGithubRepo() &&
+                githubToken !== undefined;
+            
+            this.setState({ hasGit, githubToken });
+        } catch (error) {
+            console.error('Check has Git failed:', error);
+            this.setState({ 
+                hasGit: false
+            });
+        }
+    }
+    setGithubAuthToken = (token) => {
+        this.setState({ 
+            githubToken: token 
+        });
+    }
+
+    clearGithubAuthToken = () => {
+        this.setState({ githubToken: null });
+    }
+
     render() {
         if (this.state.gameCompose === undefined) {
             return null
@@ -397,23 +402,21 @@ export default class TemplativeProjectRenderer extends React.Component {
                         filepath={path.join(this.props.templativeRootDirectoryPath, "rules.md")}
                         updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
                     />
-                    
-                    {/* {["actionShot", "advertisement", "backdrop", "logo"].map(gamecrafterPath => (
-                        <IconContentFileItem
-                            key={gamecrafterPath}
-                            contentType={"GAMECRAFTER"}
-                            currentFilepath={this.props.currentFilepath}
-                            filepath={path.join(this.props.templativeRootDirectoryPath, "gamecrafter", `${gamecrafterPath}.png`)}
-                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                        />
-                    ))} */}
                 </div>
                 
-                {this.state.hasGit && 
+                {this.state.hasGit && !this.state.githubToken && (
+                    <GithubLogin 
+                        onAuthSuccessCallback={this.setGithubAuthToken} 
+                    />
+                )}
+                
+                {this.state.hasGit && this.state.githubToken && (
                     <GitStatusViewer 
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        githubToken={this.state.githubToken}
+                        clearGithubAuthTokenCallback={this.clearGithubAuthToken}
                     />
-                }
+                )}
             </div>
             
         </div>   

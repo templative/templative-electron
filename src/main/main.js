@@ -9,9 +9,7 @@ const ServerRunner = require("./serverRunner")
 const { setupAppUpdateListener } = require("./appUpdater")
 const { initialize } = require("@aptabase/electron/main");
 const SplashScreen = require('../renderer/splash/splashScreen');
-const { setupOauthListener, handleDeepLink } = require("./accountManager")
-
-const { setupGitCredentialHelper } = require('./gitCredentialManager');
+const { setupOauthListener } = require("./accountManager")
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
@@ -89,11 +87,9 @@ const initializeApp = async () => {
     try {
         splashScreen.updateProgress("Starting servers...", 0);
         const serverStartResult = await launchServers();
-
-        await setupGitCredentialHelper()
         
         if (serverStartResult === 0) {
-            // splashScreen.updateProgress("Failed to start servers!", 100);
+            splashScreen.updateProgress("Failed to start servers!", 100);
             await sleep(2000);
             await shutdown();
             return;
