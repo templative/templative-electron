@@ -53,7 +53,7 @@ const createWindow = () => {
 }
 
 var servers = [
-  new ServerRunner("templativeServer", 8085, serverEnvironmentConfiguration.templativeServerCommandsByEnvironment),
+//   new ServerRunner("templativeServer", 8085, serverEnvironmentConfiguration.templativeServerCommandsByEnvironment),
 ]
 var serverManager = new ServerManager(servers)
 
