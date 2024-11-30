@@ -1,16 +1,31 @@
-const rules = require('./webpack.rules');
-
-rules.push({
-  test: /\.css$/,
-  use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
-});
-
 module.exports = {
-  // Put your normal webpack config below here
+  target: 'electron-renderer',
   module: {
-    rules,
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.jsx?$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-react']
+          }
+        },
+        exclude: /node_modules/
+      },
+      {
+        test: /\.(png|jpe?g|svg|gif|ico)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name][ext]'
+        }
+      }
+    ],
   },
   resolve: {
     extensions: ['.js', '.jsx', '.css']
-  },
+  }
 };

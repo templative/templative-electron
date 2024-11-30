@@ -68,13 +68,15 @@ module.exports = {
           config: './webpack.renderer.config.js',
           entryPoints: [
             {
-              html: './src/index.html',
-              js: './src/renderer.js',
+              html: './src/renderer/app/index.html',
+              js: './src/renderer/app/renderer.js',
               name: 'main_window',
-              preload: {
-                js: './src/preload.js',
-              },
             },
+            {
+              html: './src/renderer/splash/splash.html',
+              js: './src/renderer/splash/splashRenderer.js',
+              name: 'splash_window'
+            }
           ],
         },
       },

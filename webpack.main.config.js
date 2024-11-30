@@ -1,9 +1,24 @@
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/main/main.js',
   module: {
-    rules: require('./webpack.rules'),
+    rules: [
+      {
+        test: /native_modules\/.+\.node$/,
+        use: 'node-loader',
+      },
+      {
+        test: /\.(m?js|node)$/,
+        parser: { amd: false },
+        use: {
+          loader: '@zeit/webpack-asset-relocator-loader',
+          options: {
+            outputAssetBase: 'native_modules',
+          },
+        },
+      }
+    ],
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.css', '.json']
+    extensions: ['.js', '.jsx', '.json']
   },
 };
