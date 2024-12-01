@@ -6,7 +6,7 @@ import subprocess
 import asyncio
 from os import path
 import tempfile
-import cairosvg
+# import cairosvg
 
 def searchWindowsRegistryForInkscape():
     try:
@@ -130,15 +130,15 @@ async def convertToJpg(absoluteOutputDirectory, name, pngFilepath):
         '"%s"' % jpgFilepath ]
     runCommands(convertCommands)
 
-async def convertSvgToPngWithCairo(absoluteSvgFilepath, pngFilepath, width, height):
-    cairosvg.svg2png(
-        url=absoluteSvgFilepath,
-        write_to=pngFilepath,
-        output_width=width,
-        output_height=height,
-        dpi=300,
-        background_color='transparent',
-    )
+# async def convertSvgToPngWithCairo(absoluteSvgFilepath, pngFilepath, width, height):
+#     cairosvg.svg2png(
+#         url=absoluteSvgFilepath,
+#         write_to=pngFilepath,
+#         output_width=width,
+#         output_height=height,
+#         dpi=300,
+#         background_color='transparent',
+#     )
 
 async def exportSvgToImage(artFileOutputFilepath, imageSizePixels, name, outputDirectory):
     absoluteSvgFilepath = path.normpath(path.abspath(artFileOutputFilepath))

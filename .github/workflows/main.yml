@@ -25,41 +25,41 @@ jobs:
 
       - uses: actions/checkout@v2
       
-      - name: Install vcpkg
-        uses: lukka/run-vcpkg@v11
-        with:
-          vcpkgGitCommitId: '86fba13068f1e8111e7d885de2aef11378435139'
+      # - name: Install vcpkg
+      #   uses: lukka/run-vcpkg@v11
+      #   with:
+      #     vcpkgGitCommitId: '86fba13068f1e8111e7d885de2aef11378435139'
 
-      - name: Add vcpkg to PATH
-        run: |
-          echo "${{ env.VCPKG_ROOT }}" >> $GITHUB_PATH
+      # - name: Add vcpkg to PATH
+      #   run: |
+      #     echo "${{ env.VCPKG_ROOT }}" >> $GITHUB_PATH
 
-      - name: Install Cairo via vcpkg
-        run: |
-          ${{ env.VCPKG_ROOT }}/vcpkg.exe install cairo:x64-windows
-          ${{ env.VCPKG_ROOT }}/vcpkg.exe list
+      # - name: Install Cairo via vcpkg
+      #   run: |
+      #     ${{ env.VCPKG_ROOT }}/vcpkg.exe install cairo:x64-windows
+      #     ${{ env.VCPKG_ROOT }}/vcpkg.exe list
           
-      - name: Verify Cairo Installation
-        run: |
-          ls "${{ env.VCPKG_ROOT }}/installed/x64-windows/bin"
+      # - name: Verify Cairo Installation
+      #   run: |
+      #     ls "${{ env.VCPKG_ROOT }}/installed/x64-windows/bin"
           
-      - name: Search for cairo DLL
-        run: |
-          Get-ChildItem -Path "D:\a\templative-electron\templative-electron\vcpkg\installed\x64-windows" -Filter "*cairo*" -Recurse
-      - name: Determine Cairo Path
-        run: |
-          $cairoPath = "D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll"
-          echo "Cairo installed at: $cairoPath"
-          echo "CAIRO_PATH=$cairoPath" >> $env:GITHUB_ENV
+      # - name: Search for cairo DLL
+      #   run: |
+      #     Get-ChildItem -Path "D:\a\templative-electron\templative-electron\vcpkg\installed\x64-windows" -Filter "*cairo*" -Recurse
+      # - name: Determine Cairo Path
+      #   run: |
+      #     $cairoPath = "D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll"
+      #     echo "Cairo installed at: $cairoPath"
+      #     echo "CAIRO_PATH=$cairoPath" >> $env:GITHUB_ENV
 
-      - name: Verify Cairo DLL Exists
-        run: |
-          if (Test-Path -Path "D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll") {
-            Write-Host "Cairo DLL exists at $cairoPath"
-          } else {
-            Write-Host "Cairo DLL not found"
-            exit 1
-          }
+      # - name: Verify Cairo DLL Exists
+      #   run: |
+      #     if (Test-Path -Path "D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll") {
+      #       Write-Host "Cairo DLL exists at $cairoPath"
+      #     } else {
+      #       Write-Host "Cairo DLL not found"
+      #       exit 1
+      #     }
 
       - uses: actions/setup-python@v2
         with:
@@ -81,7 +81,9 @@ jobs:
       - name: Create Templative Exe
         run: |
           cd ./python
-          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" --additional-hooks-dir=./python/pyinstallerHooks --add-binary="D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll:."
+          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" 
+      # --additional-hooks-dir=./python/pyinstallerHooks
+      # --add-binary="D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll:."
             
       - name: Upload Templative Xref as Artifact
         uses: actions/upload-artifact@v3
@@ -219,6 +221,7 @@ jobs:
       matrix:
         os:
           - macos-12
+          - macos-13
           - macos-latest
         node:
           - 18
@@ -249,13 +252,13 @@ jobs:
           CERTIFICATE_OSX_APPLICATION: ${{secrets.CERTIFICATE_OSX_APPLICATION}}
           CERTIFICATE_PASSWORD: ${{secrets.CERTIFICATE_PASSWORD}}
           
-      - name: Install Cairo via Homebrew
-        run: |
-          brew update
-          brew install cairo
-          brew install zlib
-          brew install pango
-          brew install libffi
+      # - name: Install Cairo via Homebrew
+      #   run: |
+      #     brew update
+      #     brew install cairo
+      #     brew install zlib
+      #     brew install pango
+      #     brew install libffi
 
       - uses: actions/setup-python@v2
         with:
@@ -280,34 +283,16 @@ jobs:
           pipenv run pip list
           pip list
       
-      - name: Verify libz.dylib
-        run: |
-          echo "Checking /usr/lib/libz.dylib:"
-          ls -la /usr/lib/libz.dylib || echo "/usr/lib/libz.dylib does not exist."
+      # - name: Verify libz.dylib
+      #   run: |
+      #     echo "Checking /usr/lib/libz.dylib:"
+      #     ls -la /usr/lib/libz.dylib || echo "/usr/lib/libz.dylib does not exist."
           
-          echo "Checking Homebrew-installed libz.1.dylib:"
-          ls -la "$(brew --prefix zlib)/lib/libz.1.dylib" || echo "$(brew --prefix zlib)/lib/libz.1.dylib does not exist."
+      #     echo "Checking Homebrew-installed libz.1.dylib:"
+      #     ls -la "$(brew --prefix zlib)/lib/libz.1.dylib" || echo "$(brew --prefix zlib)/lib/libz.1.dylib does not exist."
 
       - name: Create Templative App/Exe (macOS)
         run: |
-          CAIRO_PREFIX=$(brew --prefix cairo)
-          LIBPNG_PREFIX=$(brew --prefix libpng)
-          ZLIB_PREFIX=$(brew --prefix zlib || echo "/usr/lib")
-          LIBFFI_PREFIX=$(brew --prefix libffi)
-
-          echo "Cairo prefix: $CAIRO_PREFIX"
-          echo "LibPNG prefix: $LIBPNG_PREFIX"
-          echo "Zlib prefix: $ZLIB_PREFIX"
-          echo "Libffi prefix: $LIBFFI_PREFIX"
-
-          export LDFLAGS="-L$CAIRO_PREFIX/lib -L$LIBPNG_PREFIX/lib -L$ZLIB_PREFIX/lib -L$LIBFFI_PREFIX/lib"
-          export CPPFLAGS="-I$CAIRO_PREFIX/include -I$LIBPNG_PREFIX/include -I$ZLIB_PREFIX/include -I$LIBFFI_PREFIX/include"
-          export PKG_CONFIG_PATH="$CAIRO_PREFIX/lib/pkgconfig:$LIBPNG_PREFIX/lib/pkgconfig:$ZLIB_PREFIX/lib/pkgconfig:$LIBFFI_PREFIX/lib/pkgconfig"
-
-          ls "$CAIRO_PREFIX/lib"
-          ls "$LIBPNG_PREFIX/lib"
-          ls "$ZLIB_PREFIX/lib" || ls "$ZLIB_PREFIX"
-
           cd ./python
           pipenv run pyinstaller --distpath ../bin -y -n templative \
             --log-level=DEBUG ./templative/__main__.py \
@@ -316,13 +301,33 @@ jobs:
             --hidden-import=engineio.async_aiohttp \
             --collect-all templative \
             --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" \
-            --add-binary="$CAIRO_PREFIX/lib/libcairo.2.dylib:lib" \
-            --add-binary="$LIBPNG_PREFIX/lib/libpng16.16.dylib:lib" \
-            --add-binary="$ZLIB_PREFIX/lib/libz.1.dylib:lib" \
-            --additional-hooks-dir=./pyinstallerHooks \
-            --runtime-hook=./hooks/dylib.py \
             --codesign-identity "Developer ID Application: Go Next Games LLC (829PN2W7LK)"
       
+      # CAIRO_PREFIX=$(brew --prefix cairo)
+      # LIBPNG_PREFIX=$(brew --prefix libpng)
+      # ZLIB_PREFIX=$(brew --prefix zlib || echo "/usr/lib")
+      # LIBFFI_PREFIX=$(brew --prefix libffi)
+
+      # echo "Cairo prefix: $CAIRO_PREFIX"
+      # echo "LibPNG prefix: $LIBPNG_PREFIX"
+      # echo "Zlib prefix: $ZLIB_PREFIX"
+      # echo "Libffi prefix: $LIBFFI_PREFIX"
+
+      # export LDFLAGS="-L$CAIRO_PREFIX/lib -L$LIBPNG_PREFIX/lib -L$ZLIB_PREFIX/lib -L$LIBFFI_PREFIX/lib"
+      # export CPPFLAGS="-I$CAIRO_PREFIX/include -I$LIBPNG_PREFIX/include -I$ZLIB_PREFIX/include -I$LIBFFI_PREFIX/include"
+      # export PKG_CONFIG_PATH="$CAIRO_PREFIX/lib/pkgconfig:$LIBPNG_PREFIX/lib/pkgconfig:$ZLIB_PREFIX/lib/pkgconfig:$LIBFFI_PREFIX/lib/pkgconfig"
+
+      # ls "$CAIRO_PREFIX/lib"
+      # ls "$LIBPNG_PREFIX/lib"
+      # ls "$ZLIB_PREFIX/lib" || ls "$ZLIB_PREFIX"
+
+      # --add-binary="$CAIRO_PREFIX/lib/libcairo.2.dylib:lib" \
+      # --add-binary="$LIBPNG_PREFIX/lib/libpng16.16.dylib:lib" \
+      # --add-binary="$ZLIB_PREFIX/lib/libz.1.dylib:lib" \
+      # --additional-hooks-dir=./pyinstallerHooks \
+      # --runtime-hook=./hooks/dylib.py \
+
+
       # - name: List Bundled Libraries
       #   run: |
       #     echo "Listing contents of ./bin:"
@@ -330,12 +335,12 @@ jobs:
       #     echo "Listing contents of ./bin/lib:"
       #     ls -la ./bin/lib
 
-      - name: Adjust Library Paths with install_name_tool (macOS)
-        run: |
-          cd ./bin/templative
-          install_name_tool -change /opt/homebrew/lib/libcairo.2.dylib @executable_path/../lib/libcairo.2.dylib ./templative
-          install_name_tool -change /opt/homebrew/lib/libpng16.16.dylib @executable_path/../lib/libpng16.16.dylib ./templative
-          install_name_tool -change /opt/homebrew/lib/libz.1.dylib @executable_path/../lib/libz.1.dylib ./templative
+      # - name: Adjust Library Paths with install_name_tool (macOS)
+      #   run: |
+      #     cd ./bin/templative
+      #     install_name_tool -change /opt/homebrew/lib/libcairo.2.dylib @executable_path/../lib/libcairo.2.dylib ./templative
+      #     install_name_tool -change /opt/homebrew/lib/libpng16.16.dylib @executable_path/../lib/libpng16.16.dylib ./templative
+      #     install_name_tool -change /opt/homebrew/lib/libz.1.dylib @executable_path/../lib/libz.1.dylib ./templative
       
       - name: Upload Templative Xref as Artifact
         uses: actions/upload-artifact@v3
@@ -349,10 +354,10 @@ jobs:
           name: templative-app
           path: ./bin
 
-      - name: Confirm libz.1.dylib
-        run: |
-          echo "Confirming libz.1.dylib presence:"
-          ls -la "$(brew --prefix zlib)/lib/libz.1.dylib"
+      # - name: Confirm libz.1.dylib
+      #   run: |
+      #     echo "Confirming libz.1.dylib presence:"
+      #     ls -la "$(brew --prefix zlib)/lib/libz.1.dylib"
 
       - name: Test Templative Exe
         shell: bash
