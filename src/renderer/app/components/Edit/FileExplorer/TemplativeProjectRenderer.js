@@ -6,10 +6,7 @@ import IconContentFileItem from "./ContentFiles/IconContentFileItem";
 import artIcon from "../Icons/artIcon.svg"
 import gamedataIcon from "../Icons/gamedataIcon.svg"
 import ResourceHeader from "./ContentFiles/ResourceHeader";
-import GitStatusViewer from "./Git/GitStatusViewer";
-import GithubLogin from "./Git/GithubLogin";
-import { ipcRenderer } from 'electron';
-import { channels } from '../../../../../shared/constants';
+import GitRow from "./Git/GitRow";
 
 const fsOld = require('fs');
 const path = require("path")
@@ -98,7 +95,6 @@ export default class TemplativeProjectRenderer extends React.Component {
     }
     componentDidMount = async () => {
         await this.#parseComponentComposeAsync()
-        await this.#checkHasGitAndGitProject()
     }
     #parseComponentComposeAsync = async () => {
         var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json");
@@ -126,7 +122,6 @@ export default class TemplativeProjectRenderer extends React.Component {
             return
         }
         await this.#parseComponentComposeAsync()
-        await this.#checkHasGitAndGitProject()
     }
 
     #closeComponentComposeListener = () => {
@@ -190,78 +185,6 @@ export default class TemplativeProjectRenderer extends React.Component {
             default:
                 return "";
         }
-    }
-    execAsync = (command) => {
-        return new Promise((resolve, reject) => {
-            exec(command, {
-                cwd: this.props.templativeRootDirectoryPath
-            }, (error, stdout, stderr) => {
-                if (error) reject(error);
-                else resolve(stdout.toString());
-            });
-        });
-    }
-    
-    #isGitInstalled = async () => {
-        try {
-            await this.execAsync('git --version');
-            console.log("Git is installed")
-            return true;
-        } catch (error) {
-            console.log(`Git is not installed: ${error}`)
-            return false;
-        }
-    };
-    
-    #isGitProjectHere = async () => {
-        const gitPath = path.join(this.props.templativeRootDirectoryPath, '.git');
-        try {
-            await fs.access(gitPath, fs.constants.F_OK);
-            console.log("Git directory found")
-            return true;
-        } catch {
-            console.log("No .git directory found")
-            return false;
-        }
-    }
-    
-    #isGithubRepo = async () => {
-        try {
-            const remoteUrl = await this.execAsync('git remote get-url origin');
-            return remoteUrl.toLowerCase().includes('github.com');
-        } catch (error) {
-            console.error('Failed to check GitHub status:', error);
-        }
-    }
-    #getGithubAuth = async () => {
-        return await ipcRenderer.invoke(channels.TO_SERVER_IS_LOGGED_INTO_GITHUB)
-    }
-
-    #checkHasGitAndGitProject = async () => {
-        try {
-            const githubToken = await this.#getGithubAuth()
-            const hasGit = 
-                await this.#isGitProjectHere() && 
-                await this.#isGitInstalled() &&
-                await this.#isGithubRepo() &&
-                githubToken !== undefined;
-            
-            this.setState({ hasGit, githubToken });
-        } catch (error) {
-            console.error('Check has Git failed:', error);
-            this.setState({ 
-                hasGit: false
-            });
-        }
-    }
-    setGithubAuthToken = (token) => {
-        this.setState({ 
-            githubToken: token 
-        });
-    }
-
-    clearGithubAuthToken = () => {
-        this.setState({ githubToken: null });
     }
 
     render() {
@@ -404,19 +327,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                     />
                 </div>
                 
-                {this.state.hasGit && !this.state.githubToken && (
-                    <GithubLogin 
-                        onAuthSuccessCallback={this.setGithubAuthToken} 
-                    />
-                )}
-                
-                {this.state.hasGit && this.state.githubToken && (
-                    <GitStatusViewer 
-                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                        githubToken={this.state.githubToken}
-                        clearGithubAuthTokenCallback={this.clearGithubAuthToken}
-                    />
-                )}
+                {/* <GitRow templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> */}
             </div>
             
         </div>   
