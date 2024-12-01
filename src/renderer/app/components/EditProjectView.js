@@ -13,6 +13,8 @@ import '../App.css';
 import FeedbackPanel from "./Feedback/FeedbackPanel";
 import { RenderingWorkspaceProvider } from "./Render/RenderingWorkspaceProvider";
 
+const { ipcRenderer } = window.require('electron');
+const { channels } = require("../../../shared/constants");
 const path = require("path");
 const fs = require("fs/promises");
 const axios = require("axios");
@@ -212,6 +214,12 @@ export default class EditProjectView extends React.Component {
         await axios.get(`http://127.0.0.1:8085/stock-info`).then((response) => {
             this.setState({componentTypesStockInfo: response.data})
         })
+
+        ipcRenderer.on(channels.GIVE_OPEN_SETTINGS, () => {
+            var settingsPath = path.join(require('os').homedir(), "Documents", "Templative", "settings.json")
+            console.log(settingsPath)
+            this.changeTabsToEditAFile("SETTINGS", settingsPath)
+        });
     }
 
     componentDidUpdate = (prevProps) => {

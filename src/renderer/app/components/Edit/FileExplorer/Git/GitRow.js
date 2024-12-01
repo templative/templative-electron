@@ -35,7 +35,18 @@ export default class GitRow extends React.Component {
             });
         });
     }
-    
+    #isGitEnabled = async () => {
+        var settingsPath = path.join(require('os').homedir(), "Documents", "Templative", "settings.json")
+        try {
+            await fs.access(settingsPath, fs.constants.F_OK)
+            const settingsData = await fs.readFile(settingsPath, 'utf8')
+            const settings = JSON.parse(settingsData)
+        return settings["isGitEnabled"] === "true"
+        } catch (error) {
+            console.log("Settings file not found or invalid")
+            return false
+        }
+    }
     #isGitInstalled = async () => {
         try {
             await this.execAsync('git --version');
@@ -78,6 +89,7 @@ export default class GitRow extends React.Component {
                 await this.#isGitProjectHere() && 
                 await this.#isGitInstalled() &&
                 await this.#isGithubRepo() &&
+                await this.#isGitEnabled() &&
                 githubToken !== undefined;
             
             this.setState({ hasGit, githubToken });

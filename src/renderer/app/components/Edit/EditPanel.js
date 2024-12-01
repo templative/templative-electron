@@ -5,6 +5,7 @@ import ComponentsViewer from "./Viewers/ComponentsViewer/ComponentsViewer"
 import PieceGamedataViewer from "./Viewers/GamedataViewer/PieceGamedataViewer"
 import ComponentGamedataViewer from "./Viewers/GamedataViewer/ComponentGamedataViewer"
 import GameGamedataViewer from "./Viewers/GamedataViewer/GameGamedataViewer";
+import SettingsViewer from "./Viewers/SettingsViewer";
 import ImageViewer from "./Viewers/ImageViewer";
 import RulesEditor from "./Viewers/RulesEditor";
 import EditPanelTabs from "./EditPanelTabs";
@@ -96,6 +97,13 @@ export default class EditPanel extends React.Component {
                         <p className="filename-title">{filepathSplit}</p>
                     </div>
                     <div className="file-contents" onClick={this.clickIntoFile}>
+                        {this.props.currentFileType === "SETTINGS" &&
+                            <SettingsViewer 
+                                filepath={this.props.currentFilepath} 
+                                templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                                saveFileAsyncCallback={this.props.saveFileAsyncCallback}
+                            />
+                        }
                         {this.props.currentFileType === "RULES" &&
                             <RulesEditor 
                                 templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}

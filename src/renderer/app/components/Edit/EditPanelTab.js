@@ -13,6 +13,7 @@ import gameIcon from "./Icons/gameIcon.svg"
 import studioIcon from "./Icons/studioIcon.svg"
 import componentIcon from "./Icons/componentIcon.svg"
 import rulesIcon from "./Icons/rulesIcon.svg"
+import settingsIcon from "./Icons/settingsIcon.svg"
 
 const path = require("path");
 const shell = require('electron').shell;
@@ -73,6 +74,7 @@ export default class EditPanelTab extends React.Component {
             "ARTDATA": artDataIcon,
             "STUDIO_GAMEDATA": studioIcon,
             "GAME_GAMEDATA": gameIcon,
+            "SETTINGS": settingsIcon,
         }
         var iconSource = icons[this.props.tabbedFile.filetype]
         

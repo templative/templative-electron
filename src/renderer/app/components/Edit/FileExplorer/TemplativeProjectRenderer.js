@@ -327,7 +327,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                     />
                 </div>
                 
-                {/* <GitRow templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> */}
+                <GitRow templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
             </div>
             
         </div>   
