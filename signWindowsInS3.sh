@@ -111,9 +111,9 @@ check_for_new_files() {
 
     for setup_file in $setup_files; do
         process_setup_file "$setup_file"
-        if [ $? -eq 2 ]; then
-            break
-        fi
+        # if [ $? -eq 2 ]; then
+        #     break
+        # fi
     done
     copy_releases_file
 }
