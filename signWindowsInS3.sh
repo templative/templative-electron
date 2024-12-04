@@ -107,13 +107,20 @@ copy_releases_file() {
 check_for_new_files() {
     echo "Checking for new setup.exe in $TEMP_BUCKET..."
 
+    signed_files=$(aws s3 ls "s3://$FINAL_BUCKET/" | grep 'Setup.exe' | awk '{print $4}')
     setup_files=$(aws s3 ls "s3://$TEMP_BUCKET/" | grep 'Setup.exe' | awk '{print $4}' | tac)
 
     for setup_file in $setup_files; do
+        version=$(echo "$setup_file" | grep -oP '(?<=Templative-).*')
+        
+        is_signed_already=$(echo "$signed_files" | grep -q "Templative-$version")
+        if $is_signed_already; then
+            echo "templative-artifacts/win32/x64/Templative-$version Setup.exe already exists so we are skipping."
+            continue
+        fi
+        echo "Processing $version..."
+        
         process_setup_file "$setup_file"
-        # if [ $? -eq 2 ]; then
-        #     break
-        # fi
     done
     copy_releases_file
 }
