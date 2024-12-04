@@ -100,6 +100,7 @@ function grabTokenAndEmail(data) {
 
 async function loginIntoGameCrafter(sso) {
     try {
+        console.log('SSO:', sso);
         const response = await fetch(`https://templative-d1a3033da970.herokuapp.com/the-game-crafter/sso?sso=${sso}`, {
             method: 'GET',
             headers: {
@@ -108,6 +109,7 @@ async function loginIntoGameCrafter(sso) {
         });
 
         if (!response.ok) {
+            console.error('Failed to login into Game Crafter:', response.status, response.statusText);
             throw new Error('Failed to login into Game Crafter');
         }
         const data = await response.json();
@@ -119,22 +121,25 @@ async function loginIntoGameCrafter(sso) {
 }
 
 async function handleDeepLink(url) {
-    if (os.platform() === "win32") {
-        url = url + "="
-    }
-    const parsedUrl = new URL(url);
+    var parsedUrl = new URL(url);
+    const protocol = parsedUrl.protocol.toLowerCase();
 
-    // Handle TheGameCrafter SSO callback
-    if (parsedUrl.searchParams.has('sso_id')) {
+    // Handle TheGameCrafter SSO callback - make sure it's the right protocol
+    if (protocol === 'templative:' && parsedUrl.searchParams.has('sso_id')) {
         const ssoId = parsedUrl.searchParams.get('sso_id');
         if (!ssoId) {
             console.error("No SSO ID found in TGC callback");
             return;
         }
-        await loginIntoGameCrafter(ssoId)
+        await loginIntoGameCrafter(ssoId);
         return;
     }
 
+    // For some reason, on Windows, the URL is missing a trailing =
+    if (os.platform() === "win32") {
+        url = url + "="
+    }
+    parsedUrl = new URL(url);
     // Handle Templative.net OAuth callback
     const data = parsedUrl.searchParams.get('data');
     if (!data) {

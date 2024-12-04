@@ -170,9 +170,9 @@ export default class OutputExplorer extends React.Component {
             <RenderedImages componentDirectories={this.state.componentDirectories} typeQuantities={this.state.typeQuantities} changeTabsToEditAFileCallback={this.props.changeTabsToEditAFileCallback} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>,
             <RulesViewer outputFolderPath={this.props.outputFolderPath} />,
             <SimulatorPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath} changeTabsToEditAFileCallback={this.props.changeTabsToEditAFileCallback}/>,
-            <PlaygroundPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath} changeTabsToEditAFileCallback={this.props.changeTabsToEditAFileCallback}/>,
+            // <PlaygroundPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath} changeTabsToEditAFileCallback={this.props.changeTabsToEditAFileCallback}/>,
             <PrintPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath}/>,
-            <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath} changeTabsToEditAFileCallback={this.props.changeTabsToEditAFileCallback}/>
+            // <UploadPanel templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}  outputFolderPath={this.props.outputFolderPath} changeTabsToEditAFileCallback={this.props.changeTabsToEditAFileCallback}/>
         ]
         
         return <React.Fragment>
