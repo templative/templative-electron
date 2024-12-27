@@ -111,13 +111,14 @@
 }
 .edit-component-button, .render-component-button {
     /* 105px / 2 buttons */
-    width: calc(50% - 52.5px); 
+    width: 50%; 
     background-color: hsl(210, 10%, 19%);
     border:none !important;
     border-left: 1px solid rgb(73, 80, 87) !important;
+    color:white !important;
 }
 .edit-component-button:hover, .render-component-button:hover {
-    background-color: hsl(210, 10%, 19%) !important;
+    background-color: hsl(210, 10%, 24%) !important;
 }
 .disabled-header {
     border-left: 1px solid rgb(73, 80, 87) !important;

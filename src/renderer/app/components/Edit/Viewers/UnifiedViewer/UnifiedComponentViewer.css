@@ -6,6 +6,21 @@
     height: 100%;
     overflow-y: scroll;
 }
+.gamedata-column {
+    position: relative;
+    min-width: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 0 0 auto !important;
+    max-width: none !important;
+}
+.artdata-column {
+    position: relative;
+    min-width: 200px;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 .artdata-column > * > p, .gamedata-column > * > p {
     border-bottom: 1px hsl(210, 10%, 22%) solid;
     font-size: 18px;
@@ -30,4 +45,18 @@
 .drop-down-chevron {
     margin-left: 6px;
     margin-right: 6px;
+}
+.viewer-resize-handle {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 10px;
+    height: 100%;
+    cursor: col-resize;
+    z-index: 10;
+    opacity: 0;
+}
+.viewer-resize-handle:hover, .viewer-resize-handle.active {
+    background-color: orange;
+    opacity: 0.5;
 }

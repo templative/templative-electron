@@ -22,7 +22,8 @@ export default class EditPanel extends React.Component {
     static contextType = RenderingWorkspaceContext;
 
     state = {
-        componentComposeScollPosition: 0
+        componentComposeScollPosition: 0,
+        isResizing: false
     }
 
     clickIntoFile = () => {
@@ -42,6 +43,8 @@ export default class EditPanel extends React.Component {
         const startWidth = this.context.fileExplorerColumnWidth;
         const container = document.querySelector('.mainBody .row');
         
+        this.setState({ isResizing: true });
+        
         const doDrag = (e) => {
             const containerWidth = container.offsetWidth;
             const difference = e.clientX - startX;
@@ -50,6 +53,7 @@ export default class EditPanel extends React.Component {
         };
 
         const stopResize = () => {
+            this.setState({ isResizing: false });
             document.removeEventListener('mousemove', doDrag);
             document.removeEventListener('mouseup', stopResize);
         };
@@ -62,7 +66,7 @@ export default class EditPanel extends React.Component {
         return <div className='mainBody'>
             <div className="row g-0">
                 <div className='col-3 col-xl-2 left-column' style={{width: `${this.context.fileExplorerColumnWidth}%`}}>
-                    <div className="resize-handle" onMouseDown={this.startResize}></div>
+                    <div className={`resize-handle${this.state.isResizing ? ' active' : ''}`} onMouseDown={this.startResize}></div>
                     <TemplativeProjectRenderer 
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
                         currentFileType={this.props.currentFileType}

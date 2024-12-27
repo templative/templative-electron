@@ -124,7 +124,7 @@ textarea::-webkit-scrollbar-corner {
 }
 
 button:not(:disabled):hover > .bi-trash3 {
-  fill: hsl(354, 80%, 54%);
+  fill: hsl(354, 100%, 85%);
 }
 
 input, textarea, select {

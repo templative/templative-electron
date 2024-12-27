@@ -21,9 +21,6 @@
     overflow-y: auto;
     padding-bottom: 12px;
 }
-.gamedata-quantity-input {
-    max-width: 7ch !important;
-}
 th {
     font-size: 12px;
 }
@@ -96,6 +93,14 @@ tr {
 }
 .table td {
     padding: 0 !important;
+}
+.preview-piece-button {
+    background-color: hsl(210, 10%, 19%)!important;
+    border-color: rgb(73, 80, 87) !important;
+    color: white !important;
+}
+.preview-piece-button:hover {
+    background-color: hsl(210, 10%, 24%)!important;
 }
 .render-piece-icon {
     margin-bottom: 3px;

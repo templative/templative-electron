@@ -114,7 +114,8 @@
     opacity: 0;
 }
 
-.resize-handle:hover {
+.resize-handle:hover,
+.resize-handle.active {
     background-color: orange;
     opacity: 0.5;
 }

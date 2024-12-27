@@ -22,7 +22,7 @@ export default class RenderPanel extends React.Component {
         selectedLanguage: "en",
         isConnectedToTemplative: false,
         isProcessing: false,
-        
+        isResizing: false
     }
 
     selectDirectoryAsync = async (directory) => {
@@ -81,6 +81,8 @@ export default class RenderPanel extends React.Component {
         const startWidth = this.context.renderControlsColumnWidth;
         const container = document.querySelector('.mainBody .row');
         
+        this.setState({ isResizing: true });
+        
         const doDrag = (e) => {
             const containerWidth = container.offsetWidth;
             const difference = e.clientX - startX;
@@ -89,6 +91,7 @@ export default class RenderPanel extends React.Component {
         };
 
         const stopResize = () => {
+            this.setState({ isResizing: false });
             document.removeEventListener('mousemove', doDrag);
             document.removeEventListener('mouseup', stopResize);
         };
@@ -119,10 +122,10 @@ export default class RenderPanel extends React.Component {
             <div className="row render-panel-row">
                 <div className="col-xs-12 col-md-7 col-lg-6 col-xl-3 directoryPanel" 
                      style={{width: `${this.context.renderControlsColumnWidth}%`}}>
-                    <div className="resize-handle" onMouseDown={this.startResize}></div>
+                    <div className={`resize-handle${this.state.isResizing ? ' active' : ''}`} onMouseDown={this.startResize}></div>
                     <div className="component-filter-container">
                         <div className="headerWrapper">
-                            <p className="resourcesHeader">Component Filter</p>
+                            <p className="resourcesHeader">Composition Filter</p>
                         </div>
                         <div className="component-filter-options">
                             {componentDirectoryDivs}

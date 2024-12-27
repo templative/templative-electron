@@ -82,7 +82,9 @@ export default class EditPanelTab extends React.Component {
         var shouldShowX = (this.state.isHovering || isSelected) && this.props.tabbedFile.canClose
         
         var tabName = path.parse(this.props.tabbedFile.filepath).name
-        
+        if (this.props.tabbedFile.filetype === "COMPONENTS") {
+            tabName = "compositions"
+        }
         return <li 
             className="nav-item"
             onClick={this.viewTabFileAsync}

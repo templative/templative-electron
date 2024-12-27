@@ -95,10 +95,10 @@ export default class CreatePanel extends React.Component {
         return <div className='mainBody'>
             <div className="create-component-name-row">
                 <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
-                    <span className="input-group-text">Component Name</span>
+                    <span className="input-group-text">Composition Name</span>
                     <input type="text" className="form-control" 
                         onChange={(event)=>this.context.setComponentName(event.target.value.replace(/[^a-zA-Z0-9-_]/g, ''))} 
-                        placeholder="nameOfTheComponent" 
+                        placeholder="nameOfTheComposition" 
                         value={this.context.componentName}
                     />
 
@@ -128,7 +128,7 @@ export default class CreatePanel extends React.Component {
                     !isCreateButtonDisabled ? (
                         <p className="creation-explanation">A {addSpaces(this.context.selectedComponentType)} named {this.context.componentName}...</p>
                     ) : (
-                        <p className="creation-instructions">Pick a component type and give it a name.</p>
+                        <p className="creation-instructions">Pick a type and give it a name.</p>
                     )
                 )}
                 

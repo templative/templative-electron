@@ -23,7 +23,9 @@ export default class UnifiedComponentViewer extends EditableViewerJson {
             game: [],
             component: [],
             piece: []
-        }
+        },
+        gamedataColumnWidth: 50,
+        isResizing: false
     }
 
     getFilePath = (props) => {
@@ -186,6 +188,30 @@ export default class UnifiedComponentViewer extends EditableViewerJson {
         await this.checkAndReloadDataSources(filepath);
     }
 
+    startResize = (e) => {
+        const startX = e.clientX;
+        const startWidth = this.state.gamedataColumnWidth;
+        const container = document.querySelector('.unified-viewer');
+        
+        this.setState({ isResizing: true });
+        
+        const doDrag = (e) => {
+            const containerWidth = container.offsetWidth;
+            const difference = e.clientX - startX;
+            const newWidth = startWidth + (difference / containerWidth * 100);
+            this.setState({ gamedataColumnWidth: Math.min(Math.max(20, newWidth), 80) });
+        };
+
+        const stopResize = () => {
+            this.setState({ isResizing: false });
+            document.removeEventListener('mousemove', doDrag);
+            document.removeEventListener('mouseup', stopResize);
+        };
+
+        document.addEventListener('mousemove', doDrag);
+        document.addEventListener('mouseup', stopResize);
+    }
+
     render() {        
         const extendedChevron = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-down drop-down-chevron" viewBox="0 0 16 16">
             <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -247,7 +273,8 @@ export default class UnifiedComponentViewer extends EditableViewerJson {
         
         return <div className="row g-0 unified-viewer">
             {this.state.loadedSubfiles && 
-                <div className="col gamedata-column">
+                <div className="col gamedata-column" style={{width: `${this.state.gamedataColumnWidth}%`}}>
+                    <div className={`viewer-resize-handle${this.state.isResizing ? ' active' : ''}`} onMouseDown={this.startResize}></div>
                     <div className="">
                         <p 
                             onClick={() => this.toggleExtension("isStudioExtended")}
