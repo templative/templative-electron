@@ -60,7 +60,7 @@ textarea::-webkit-scrollbar-corner {
   /* align-items: center;
   justify-content: center; */
   font-size: 24px;
-  color:#cfcfcf !important;
+  color:hsl(0, 0%, 81%) !important;
   user-select: none;
 }
 .hidden-visibility{
@@ -110,13 +110,24 @@ textarea::-webkit-scrollbar-corner {
 .vertical-input-group .input-group:nth-child(even) .form-select:disabled {
   background-color: hsl(206, 4%, 15%)!important;
 }
+.vertical-input-group .soft-label {
+  background-color: hsl(200, 10%, 11%) !important;
 
+}
+.soft-label {
+  background-color: hsl(210, 11%, 15%) !important;
+  color: hsl(0, 0%, 60%) !important;
+  border-right-width: 0 !important;
+}
+.vertical-input-group .input-group:nth-child(even) .soft-label {
+background-color: rgb(33, 37, 41) !important;
+}
 .darkened-label {
   background-color: rgb(33, 37, 41)!important;
   border-right-width: 0!important;
 }
 .vertical-input-group .input-group:nth-child(odd) .darkened-label {
-  background-color: #1a1e20!important;
+  background-color: hsl(200, 10%, 11%)!important;
 }
 .bi-trash3 {
   /* fill: inherit; */

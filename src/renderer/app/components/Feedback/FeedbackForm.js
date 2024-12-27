@@ -7,10 +7,10 @@ export default class FeedbackForm extends React.Component {
         return <div className="feedback-form">
             <p>Thank you for providing feedback!</p>
             <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
-                <span className="input-group-text">Title</span>
+                <span className="input-group-text soft-label">Title</span>
                 <input 
                     type="text" 
-                    className="form-control" 
+                    className="form-control no-left-border" 
                     onChange={this.props.updatePostTitleCallback} 
                     placeholder="Fix the / Add a / Remove every"
                     value={this.props.title}

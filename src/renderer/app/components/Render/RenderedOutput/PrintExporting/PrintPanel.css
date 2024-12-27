@@ -27,7 +27,7 @@
 }
 .fake-pdf {
     height: 2000px;
-    /* background-color: white; */
+    /* background-color: hsl(0, 0%, 81%); */
 }
 .pdf {
     height: 100%;

@@ -22,9 +22,9 @@ export default class StyleUpdate extends React.Component {
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}
             >
-            <span className="input-group-text" title={`Update the X position of the overlay in pixels.`}>At X</span>
+            <span className="input-group-text soft-label" title={`Update the X position of the overlay in pixels.`}>At X</span>
 
-            <input type="number" className="form-control scoped-value-coordinate-input" 
+            <input type="number" className="form-control scoped-value-coordinate-input no-left-border" 
                 onChange={(event) => {
                     const value = event.target.value;
                     if (value === '-' || value === '') {
@@ -37,9 +37,9 @@ export default class StyleUpdate extends React.Component {
                     }
                 }} title={`Update the X position of the overlay in pixels.`} aria-label="X position..." value={this.props.artdataItem.positionX} placeholder="0"/>
 
-            <span className="input-group-text" title={`Update the Y position of the overlay in pixels.`}>Y</span>
+            <span className="input-group-text soft-label" title={`Update the Y position of the overlay in pixels.`}>Y</span>
 
-            <input type="number" className="form-control scoped-value-coordinate-input" 
+            <input type="number" className="form-control scoped-value-coordinate-input no-left-border" 
                 onChange={(event) => {
                     const value = event.target.value;
                     if (value === '-' || value === '') {
@@ -51,7 +51,7 @@ export default class StyleUpdate extends React.Component {
                         }
                     }
                 }} title={`Update the Y position of the overlay in pixels.`} aria-label="Y position..." value={this.props.artdataItem.positionY} placeholder="0"/>
-            <span className="input-group-text" title={`Which file are you overlaying? This searches in the 'Art Files/Overlays' folder.`}>overlay</span>
+            <span className="input-group-text soft-label" title={`Which file are you overlaying? This searches in the 'Art Files/Overlays' folder.`}>overlay</span>
             <ScopedValueInput 
                 index={this.props.index}
                 updateArtdataFieldCallback={(index, field, value) => this.props.updateArtdataFieldCallback("overlays", index, field, value)} 

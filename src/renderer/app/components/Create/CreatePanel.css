@@ -93,7 +93,7 @@
 .vertical-bar {
     width: 25px !important;
     background-color: #2c303a;
-    color: white;
+    color: hsl(0, 0%, 81%);
     display: flex;
     align-items: center;
     justify-content: center;

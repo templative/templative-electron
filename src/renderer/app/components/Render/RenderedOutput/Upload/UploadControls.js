@@ -95,9 +95,9 @@ export default class UploadControls extends React.Component {
                     className="input-group input-group-sm" 
                     data-bs-theme="dark"
                 >
-                    <span className="input-group-text" title="Select the designer who will own this the game">Designer</span>
+                    <span className="input-group-text soft-label" title="Select the designer who will own this the game">Designer</span>
                     <select 
-                        className="form-select"
+                        className="form-select no-left-border"
                         value={this.props.designerId}
                         onChange={(e) => this.props.updateDesignerIdCallback(e.target.value)}
                         disabled={this.props.isCreating}

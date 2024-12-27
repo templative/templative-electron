@@ -95,8 +95,8 @@ export default class CreatePanel extends React.Component {
         return <div className='mainBody'>
             <div className="create-component-name-row">
                 <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
-                    <span className="input-group-text">Composition Name</span>
-                    <input type="text" className="form-control" 
+                    <span className="input-group-text soft-label">Composition Name</span>
+                    <input type="text" className="form-control no-left-border" 
                         onChange={(event)=>this.context.setComponentName(event.target.value.replace(/[^a-zA-Z0-9-_]/g, ''))} 
                         placeholder="nameOfTheComposition" 
                         value={this.context.componentName}
@@ -112,8 +112,8 @@ export default class CreatePanel extends React.Component {
                     </button>
                 </div>
                 <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
-                    <span className="input-group-text">Description</span>
-                    <textarea className="form-control component-ai-description-textarea" 
+                    <span className="input-group-text soft-label">Description</span>
+                    <textarea className="form-control component-ai-description-textarea  no-left-border" 
                         rows="3"
                         disabled
                         onChange={(event)=>this.context.setComponentAIDescription(event.target.value)} 

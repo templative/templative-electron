@@ -22,9 +22,9 @@ export default class TextReplacement extends React.Component {
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}
             >
-            <span className="input-group-text" title={`What text are you replacing?`}>Replace</span>
+            <span className="input-group-text soft-label" title={`What text are you replacing?`}>Replace</span>
 
-            <input type="text" className="form-control text-replacement-key-field" 
+            <input type="text" className="form-control text-replacement-key-field no-left-border" 
                 onChange={(event)=>this.props.updateArtdataFieldCallback("textReplacements", this.props.index, "key", event.target.value)} 
                 value={this.props.artdataItem.key} 
                 placeholder="{some text}"
@@ -32,7 +32,7 @@ export default class TextReplacement extends React.Component {
                     "This looks for text wrapped in {} in the template and overlay files." :
                     `This looks for {${this.props.artdataItem.key}} in the template and overlay files.`}/>
 
-            <span className="input-group-text" title="What value are you replacing the text with?">with</span>
+            <span className="input-group-text soft-label" title="What value are you replacing the text with?">with</span>
 
             <ScopedValueInput index={this.props.index} 
                 updateArtdataFieldCallback={(index, field, value) => this.props.updateArtdataFieldCallback("textReplacements", index, field, value)} 

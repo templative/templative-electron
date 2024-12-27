@@ -22,15 +22,15 @@ export default class PieceNameControls extends React.Component {
     render() {
         return <div key="main-row" className="input-group input-group-sm mb-3" data-bs-theme="dark">
 
-            <span className="input-group-text">name</span>
-            <input type="text" className="form-control value-field" 
+            <span className="input-group-text input-group-text soft-label">name</span>
+            <input type="text" className="form-control value-field no-left-border" 
                 onKeyDown={PieceNameControls.preventSpaces}
                 onChange={(event)=> this.updateName(event.target.value)} 
                 aria-label="What key to get from the scope..." 
                 value={this.props.piece["name"]}/>
 
-            <span className="input-group-text">displayName</span>
-            <input type="text" className="form-control value-field" 
+            <span className="input-group-text input-group-text soft-label">displayName</span>
+            <input type="text" className="form-control value-field no-left-border" 
                 onChange={(event)=>this.props.updateValueCallback("displayName", event.target.value)} 
                 aria-label="What key to get from the scope..." 
                 value={this.props.piece["displayName"]}/>

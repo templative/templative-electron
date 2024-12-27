@@ -24,9 +24,9 @@ export default class CreatePrintoutButton extends React.Component {
                 <div className="input-group-text no-left-border">
                     <input className="form-check-input mt-0" title="When checked, the back of each component will be included in the printout." type="checkbox" value="" onChange={()=>{ this.props.toggleIsBackIncludedCallback()}} checked={this.props.isBackIncluded} aria-label="Checkbox for following text input" />
                 </div>
-                {/* <span className="input-group-text">Draw Margins?</span>
-                <div className="input-group-text">
-                    <input className="form-check-input mt-0" type="checkbox" value="" onChange={()=>{ this.props.toggleAreMarginsDrawnCallback()}} checked={this.props.areMarginsDrawn} aria-label="Checkbox for following text input"/>
+                {/* <span className="input-group-text soft-label">Draw Margins?</span>
+                <div className="input-group-text soft-label no-left-border">
+                    <input className="form-check-input mt-0 no-left-border" type="checkbox" value="" onChange={()=>{ this.props.toggleAreMarginsDrawnCallback()}} checked={this.props.areMarginsDrawn} aria-label="Checkbox for following text input"/>
                 </div> */}
             </div>
             <div className="input-group input-group-sm printout-button-controls " data-bs-theme="dark">

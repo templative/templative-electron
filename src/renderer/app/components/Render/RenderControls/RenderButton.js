@@ -19,9 +19,9 @@ export default class RenderButton extends React.Component {
                         </svg>
                         <input disabled className="form-check-input mt-0 " type="checkbox" value="" onChange={()=>{ this.props.toggleDebugCallback()}} checked={this.props.isDebugRendering} />
                     </div>
-                    <span className="input-group-text">🔎</span>
-                    <div className="input-group-text">
-                        <input className="form-check-input mt-0" type="checkbox" value="" onChange={()=>{ this.props.toggleComplexCallback()}} checked={this.props.isComplexRendering} aria-label="Checkbox for following text input"/>
+                    <span className="input-group-text soft-label">🔎</span>
+                    <div className="input-group-text soft-label no-left-border">
+                        <input className="form-check-input mt-0 no-left-border" type="checkbox" value="" onChange={()=>{ this.props.toggleComplexCallback()}} checked={this.props.isComplexRendering} aria-label="Checkbox for following text input"/>
                     </div>
                 </div> */}
                 <div className="input-group input-group-sm render-input-group" data-bs-theme="dark">

@@ -6,7 +6,7 @@ export default class ArtdataItemControls extends React.Component {
         return <React.Fragment>
             <button 
                 onClick={() => this.props.updateArtdataItemOrderCallback(this.props.index,this.props.index-1)} 
-                className="btn btn-outline-secondary artdata-crud-control" 
+                className="btn btn-outline-secondary artdata-crud-control artdata-up-arrow" 
                 type="button" 
                 disabled={this.props.isFirst}
                 id="button-addon1">

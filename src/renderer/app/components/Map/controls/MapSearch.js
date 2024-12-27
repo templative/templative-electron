@@ -83,14 +83,14 @@ export default class MapSearch extends React.Component {
                 <p className="preview-filter-label">Search for a Publisher for your Game</p>
                 <div className="vertical-input-group">
                     <div className="input-group input-group-sm" data-bs-theme="dark">
-                        <span className="input-group-text">Pitch</span>
-                        <textarea type="text" className="form-control" placeholder=""
+                        <span className="input-group-text soft-label">Pitch</span>
+                        <textarea type="text" className="form-control no-left-border" placeholder=""
                             value={this.state.pitch} 
                             onChange={this.updatePitch} 
                         />
                     </div>
                     <div className="input-group input-group-sm" data-bs-theme="dark">
-                        <span className="input-group-text">Theme</span>
+                        <span className="input-group-text soft-label no-left-border">Theme</span>
                         <textarea type="text" className="form-control" placeholder=""
                             value={this.state.theme} 
                             onChange={this.updateTheme} 
@@ -98,7 +98,7 @@ export default class MapSearch extends React.Component {
                     </div>
                     {Object.entries(settings).map(([field, options]) => {
                         return <div key={field} className="input-group input-group-sm" data-bs-theme="dark">
-                            <span className="input-group-text">{camelCaseToTitleCase(field)}</span>
+                            <span className="input-group-text soft-label">{camelCaseToTitleCase(field)}</span>
                             <select value={this.state[field]} onChange={async (event) => this.setFieldOption(field, event.target.value)} className="form-select" id="inputGroupSelect01">
                                 {options.map(option => 
                                     <option key={option} value={option}>{option}</option>

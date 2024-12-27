@@ -5,10 +5,10 @@ export default class FeedbackViewer extends React.Component {
     render() {
         return <div className="feedback-viewer">
             <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
-                <span className="input-group-text">Title</span>
+                <span className="input-group-text soft-label">Title</span>
                 <input 
                     type="text" 
-                    className="form-control"  
+                    className="form-control no-left-border"  
                     readOnly
                     value={this.props.post.title}
                 />

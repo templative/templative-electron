@@ -27,7 +27,7 @@
 .testDiv {
     height: 1000px;
     width: 100%;
-    background-color: white;
+    background-color: hsl(0, 0%, 81%);
 }
 .directoryPanel {
     position: relative;

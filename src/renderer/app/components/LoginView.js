@@ -26,15 +26,15 @@ export default class LoginView extends React.Component {
                         Login with Google
                     </button>
                     <div className="input-group input-group-sm" data-bs-theme="dark">
-                        <span className="input-group-text" id="basic-addon3">Email Address</span>
-                        <input type="email" className="form-control" placeholder="john-smith@mail.com" 
+                        <span className="input-group-text soft-label" id="basic-addon3">Email Address</span>
+                        <input type="email" className="form-control no-left-border" placeholder="john-smith@mail.com" 
                             value={this.props.email} 
                             onChange={(e)=> this.props.updateEmailCallback(e.target.value)}
                         />
                     </div>
                     <div className="input-group input-group-sm" data-bs-theme="dark">
-                        <span className="input-group-text" id="basic-addon3">Password</span>
-                        <input type="password" className="form-control" placeholder=""
+                        <span className="input-group-text soft-label no-left-border" id="basic-addon3">Password</span>
+                        <input type="password" className="form-control no-left-border" placeholder=""
                             value={this.props.password} 
                             onChange={(e)=> this.props.updatePasswordCallback(e.target.value)} 
                         />

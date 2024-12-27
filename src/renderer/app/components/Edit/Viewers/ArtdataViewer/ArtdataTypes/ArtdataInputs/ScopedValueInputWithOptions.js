@@ -84,7 +84,7 @@ export default class ScopedValueInputWithOptions extends React.Component {
 
         return (
             <React.Fragment>
-                <span className="input-group-text scope-icon-container" title={title}>
+                <span className="input-group-text scope-icon-container no-left-border" title={title}>
                     <img 
                         className="scope-icon" 
                         src={iconToShow} 

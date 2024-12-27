@@ -212,16 +212,16 @@ export default class RenderPreview extends React.Component {
                 <p className="preview-title">Preview</p>
                 {/* <div className="vertical-input-group">
                     <div className="input-group input-group-sm preview-select" data-bs-theme="dark">
-                        <span className="input-group-text">Component</span>
-                        <select value={this.state.chosenComponentName} onChange={this.updateChosenComponentName} className="form-select" id="inputGroupSelect01">
+                        <span className="input-group-text soft-label">Component</span>
+                        <select value={this.state.chosenComponentName} onChange={this.updateChosenComponentName} className="form-select  no-left-border">
                             {this.state.componentOptions.map(componentOption => (
                                 <option key={componentOption} value={componentOption}>{componentOption}</option>
                             ))}
                         </select>
                     </div>
                     <div className="input-group input-group-sm preview-select" data-bs-theme="dark">
-                        <span className="input-group-text">Piece</span>
-                        <select value={this.state.chosenPieceName} onChange={this.updateChosenPieceName} className="form-select" id="inputGroupSelect01">
+                        <span className="input-group-text soft-label">Piece</span>
+                        <select value={this.state.chosenPieceName} onChange={this.updateChosenPieceName} className="form-select  no-left-border">
                             {this.state.piecesOptions.map(piecesOption => (
                                 <option key={piecesOption} value={piecesOption}>{piecesOption}</option>
                             ))}

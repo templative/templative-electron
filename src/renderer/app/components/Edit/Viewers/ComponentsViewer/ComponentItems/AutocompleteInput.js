@@ -35,7 +35,7 @@ export default class AutocompleteInput extends React.Component {
                 onFocus={this.onFocus} onBlur={this.onBlur}
                 type="text" 
                 aria-label={this.props.ariaLabel} 
-                className="form-control autocomplete-input" 
+                className="form-control autocomplete-input no-left-border" 
                 onChange={(event)=>this.props.onChange(event.target.value)} 
                 value={this.props.value}/>
             { shouldShowAutocomplete &&

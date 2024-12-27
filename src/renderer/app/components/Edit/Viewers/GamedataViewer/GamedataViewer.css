@@ -97,7 +97,7 @@ tr {
 .preview-piece-button {
     background-color: hsl(210, 10%, 19%)!important;
     border-color: rgb(73, 80, 87) !important;
-    color: white !important;
+    color: hsl(0, 0%, 81%) !important;
 }
 .preview-piece-button:hover {
     background-color: hsl(210, 10%, 24%)!important;

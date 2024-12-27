@@ -28,12 +28,12 @@ export default class EditComponentControls extends React.Component {
     render() {
         return <div className="vertical-input-group editable-component">
             <div className={`input-group mb-3 input-group-sm mb-3`} data-bs-theme="dark">
-                <span className="input-group-text component-left-bumper">Composition Name</span>
-                <input type="text" aria-label="First name" className="form-control " 
+                <span className="input-group-text soft-label component-left-bumper">Composition Name</span>
+                <input type="text" className="form-control no-left-border" 
                     onChange={(event) => this.props.updateFloatingNameCallback(event.target.value)}
                     onBlur={() => this.props.releaseFloatingNameCallback()}
                     value={this.props.isFloatingName ? this.props.floatingName : this.props.componentName}/> 
-                <span className="input-group-text">Type</span>
+                <span className="input-group-text soft-label">Type</span>
                 <AutocompleteInput 
                     value={this.props.componentType} 
                     onChange={(value)=> this.props.updateComponentFieldCallback("type", value)}
@@ -53,8 +53,8 @@ export default class EditComponentControls extends React.Component {
                 
             </div>
             <div className="input-group mb-3 input-group-sm mb-3" data-bs-theme="dark">
-                <span className="input-group-text component-left-bumper">Quantity</span>
-                <input type="number" aria-label="Quantity" className="form-control " 
+                <span className="input-group-text soft-label component-left-bumper">Quantity</span>
+                <input type="number" aria-label="Quantity" className="form-control no-left-border" 
                     onChange={(event) => {
                         const value = event.target.value;
                         if (value === '-' || value === '') {

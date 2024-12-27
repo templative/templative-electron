@@ -117,8 +117,8 @@ export default class ComponentGamedataViewer extends EditableViewerJson {
         return <div className="tableContainer">
             <div className="vertical-input-group">
                 <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
-                    <span className="input-group-text">displayName</span>
-                    <input type="text" className="form-control value-field" 
+                    <span className="input-group-text soft-label">displayName</span>
+                    <input type="text" className="form-control value-field no-left-border" 
                         onChange={(event)=>this.updateValue("displayName", event.target.value)} 
                         value={this.state.content["displayName"]}/>                            
                 </div>

@@ -38,7 +38,7 @@
     margin-bottom: 0.1em;
 }
 .playground-texture-name {
-    color: white;
+    color: hsl(0, 0%, 81%);
     font-weight: bold;
     font-size: 14px;
     margin-bottom: 0px;

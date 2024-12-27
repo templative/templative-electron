@@ -4,8 +4,8 @@ import "./GamedataViewer.css"
 export default class PieceActionControls extends React.Component {
     render() {
         return <div key="main-row" className="input-group input-group-sm mb-3 piece-control-input" data-bs-theme="dark">
-            <span className="input-group-text">quantity</span>
-            <input type="number" className="form-control value-field gamedata-quantity-input" 
+            <span className="input-group-text input-group-text soft-label">quantity</span>
+            <input type="number" className="form-control value-field gamedata-quantity-input no-left-border" 
                 onKeyDown={(e) => PieceNameControls.preventNonNumbers(e)}
                 onChange={(event) => {
                     const value = event.target.value;
