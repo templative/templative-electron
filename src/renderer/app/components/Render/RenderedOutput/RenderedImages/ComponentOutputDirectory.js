@@ -60,14 +60,12 @@ export default class ComponentOutputDirectory extends React.Component {
         }
         if (componentInstructions["dieFaceFilepaths"] !== undefined) {
             for (var index in componentInstructions["dieFaceFilepaths"]) {
-                var instruction = componentInstructions["dieFaceFilepaths"][index]
-                if(existingFilepaths.has(instruction["filepath"])) {
-                    imageFilepaths.push({path: this.props.componentDirectory, name: `${path.parse(instruction["filepath"]).name}.png`})
-                }
-                
+                var filepath = componentInstructions["dieFaceFilepaths"][index]
+                const filename = `${path.parse(filepath).name}.png`
+                imageFilepaths.push({path: this.props.componentDirectory, name: filename})
             }
-            totalImageFileCount = componentInstructions["dieFaceFilepaths"].length
-            totalPieces = componentQuantity
+            totalImageFileCount = totalImageFileCount + componentInstructions["dieFaceFilepaths"].length
+            totalPieces = totalPieces + 1
         }
             
         // Keep track of name, quantity. If it ends in -back dont keep track of quantity

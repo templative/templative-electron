@@ -71,6 +71,9 @@ export default class Piece extends React.Component {
         >        
             <PieceNameControls 
                 piece={this.props.piece}
+                isPreviewEnabled={this.props.isPreviewEnabled}deleteCallback={this.props.deletePieceCallback}
+                duplicatePieceByIndexCallback={this.props.duplicatePieceByIndexCallback}
+                previewPieceCallback={this.previewPiece}
                 updateValueCallback={(key, value)=>this.props.updateValueCallback(this.props.index, key, value)}
                 
             />            
@@ -79,6 +82,7 @@ export default class Piece extends React.Component {
                 isPreviewEnabled={this.props.isPreviewEnabled}deleteCallback={this.props.deletePieceCallback}
                 duplicatePieceByIndexCallback={this.props.duplicatePieceByIndexCallback}
                 previewPieceCallback={this.previewPiece}
+                updateValueCallback={(key, value)=>this.props.updateValueCallback(this.props.index, key, value)}
             />
             {keyValueRows}
             

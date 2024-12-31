@@ -29,7 +29,7 @@ export default class FeedbackPanel extends React.Component {
         trackEvent("view_feedbackPanel")
 
         try {
-            var response = await axios.get(`https://www.templative.net/feedback?userGuid=${FeedbackPanel.getMachineId()}`)
+            var response = await axios.get(`https://templative-server-84c7a76c7ddd.herokuapp.com//feedback?userGuid=${FeedbackPanel.getMachineId()}`)
             this.setState({feedbackPosts: response.data.feedback})
         }
         catch(error) {
@@ -44,13 +44,13 @@ export default class FeedbackPanel extends React.Component {
         // const files = this.fileInput.current.files
 
         trackEvent("feedback_create")
-        axios.post("https://www.templative.net/feedback", {
+        axios.post("https://templative-server-84c7a76c7ddd.herokuapp.com//feedback", {
             title: this.state.title,
             body: this.state.body,
             userGuid: FeedbackPanel.getMachineId()
         })
         try {
-            var response = await axios.get(`https://www.templative.net/feedback?userGuid=${FeedbackPanel.getMachineId()}`)
+            var response = await axios.get(`https://templative-server-84c7a76c7ddd.herokuapp.com//feedback?userGuid=${FeedbackPanel.getMachineId()}`)
             // this.fileInput.current.value = []
             this.setState({
                 feedbackPosts: response.data.feedback, 

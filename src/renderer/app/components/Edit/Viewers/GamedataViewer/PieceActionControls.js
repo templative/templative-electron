@@ -2,11 +2,25 @@ import React from "react";
 import "./GamedataViewer.css"
 
 export default class PieceActionControls extends React.Component {
+    static preventSpacesAndNumbers = (e) => {
+        if (/[\s]/.test(e.key)) {
+            e.preventDefault();
+        }
+    }
+    static preventNonNumbers = (e) => {
+        if (e.key === "Backspace" || e.key === "Tab") {
+            return
+        }
+        if(/[0-9\b]/.test(e.key)) {
+            return
+        }
+        e.preventDefault();
+    }
     render() {
         return <div key="main-row" className="input-group input-group-sm mb-3 piece-control-input" data-bs-theme="dark">
             <span className="input-group-text input-group-text soft-label">quantity</span>
             <input type="number" className="form-control value-field gamedata-quantity-input no-left-border" 
-                onKeyDown={(e) => PieceNameControls.preventNonNumbers(e)}
+                onKeyDown={(e) => PieceActionControls.preventNonNumbers(e)}
                 onChange={(event) => {
                     const value = event.target.value;
                     if (value === '-' || value === '') {
