@@ -18,7 +18,6 @@ export default class DocumentationButton extends React.Component {
     };
     goTo = () => {
         const official = "https://www.templative.net"
-        const testing = "localhost:5000"
         shell.openExternal(official + "/docs" + this.props.endpoint);
     }
     render() {

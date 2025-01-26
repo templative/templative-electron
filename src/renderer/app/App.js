@@ -19,10 +19,10 @@ class App extends React.Component {
     
     state = {
         templativeRootDirectoryPath: undefined,
-        loggedIn: process.env.NODE_ENV === 'development' ? true : false,
-        email: process.env.NODE_ENV === 'development' ? "dev@templative.net" : "",
-        password: process.env.NODE_ENV === 'development' ? "devpass123" : "",
-        token: process.env.NODE_ENV === 'development' ? "dev_tk_" + Math.random().toString(36).substring(2) : undefined,
+        loggedIn: false,
+        email: "",
+        password: "",
+        token: undefined,
         loginStatus: undefined,
         templativeMessages: []
     }    
@@ -82,9 +82,7 @@ class App extends React.Component {
             this.setState({templativeMessages:  [...this.state.templativeMessages, ...newMessages]})
         });
         await this.attemptToLoadLastTemplativeProject()
-        if (process.env.NODE_ENV !== 'development') {
-            await ipcRenderer.invoke(channels.TO_SERVER_IS_LOGGED_IN)
-        }
+        await ipcRenderer.invoke(channels.TO_SERVER_IS_LOGGED_IN)
     }
     updateRoute = (route) => {
         this.setState({currentRoute: route})
@@ -93,7 +91,7 @@ class App extends React.Component {
         await ipcRenderer.invoke(channels.TO_SERVER_LOGIN, this.state.email, this.state.password)
     }
     goToRegisterWebpage = async()=>{
-        await ipcRenderer.invoke(channels.TO_SERVER_OPEN_URL, "https://www.templative.net/register")
+        await ipcRenderer.invoke(channels.TO_SERVER_OPEN_URL, "https://templative-server-84c7a76c7ddd.herokuapp.com/register")
     }
     render() {
         var element = <></>
