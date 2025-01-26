@@ -12,6 +12,8 @@ import TemplativeAccessTools from "./TemplativeAccessTools";
 import '../App.css';
 import FeedbackPanel from "./Feedback/FeedbackPanel";
 import { RenderingWorkspaceProvider } from "./Render/RenderingWorkspaceProvider";
+import RulesEditor from "./Edit/Viewers/RulesEditor";
+import ComponentsViewer from "./Edit/Viewers/ComponentsViewer/ComponentsViewer";
 
 const { ipcRenderer } = window.require('electron');
 const { channels } = require("../../../shared/constants");
@@ -24,13 +26,13 @@ export default class EditProjectView extends React.Component {
     state = {
         currentRoute: "edit",
         tabbedFiles: [
-            new TabbedFile("COMPONENTS", path.join(this.props.templativeRootDirectoryPath, "component-compose.json"), true),
+            // new TabbedFile("COMPONENTS", path.join(this.props.templativeRootDirectoryPath, "component-compose.json"), true),
         ],
         italicsTabFilepath: undefined,
-        currentFileType: "COMPONENTS",
+        currentFileType: undefined,
+        currentFilepath: undefined,
         componentTypesCustomInfo: {},
         componentTypesStockInfo: {},
-        currentFilepath: path.join(this.props.templativeRootDirectoryPath, "component-compose.json"),
 
         extendedFileTypes: new Set(),
         extendedDirectories: new Set(),
@@ -347,6 +349,26 @@ export default class EditProjectView extends React.Component {
                     componentTypesStockInfo={this.state.componentTypesStockInfo}
                     templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                     changeTabsToEditAFileCallback={this.changeTabsToEditAFile}
+                />
+            )}
+            {this.state.currentRoute === 'project' && (
+                <ComponentsViewer 
+                    updateViewedFileUsingExplorerAsyncCallback ={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                    updateViewedFileToUnifiedAsyncCallback={this.props.updateViewedFileToUnifiedAsyncCallback}
+                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    saveFileAsyncCallback={this.saveFileAsync}
+                    componentTypesCustomInfo={this.state.componentTypesCustomInfo}
+                    componentTypesStockInfo={this.state.componentTypesStockInfo}
+                    
+                    componentComposeScollPosition={this.state.componentComposeScollPosition}     
+                    updateComponentComposeScrollPositionCallback={this.updateComponentComposeScrollPosition}         
+                    updateRouteCallback={this.props.updateRouteCallback}
+                />
+            )}
+            {this.state.currentRoute === 'rules' && (
+                <RulesEditor 
+                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    saveFileAsyncCallback={this.saveFileAsync}
                 />
             )}
 

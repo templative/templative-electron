@@ -2,7 +2,7 @@ import aiohttp
 import json
 from typing import Optional, Tuple, Union
 
-baseUrl = "https://templative-server-84c7a76c7ddd.herokuapp.com/"
+baseUrl = "https://api.templative.net/"
 # baseUrl = "http://127.0.0.1:5000"
 
 async def updateTemplativeFileForDescription(

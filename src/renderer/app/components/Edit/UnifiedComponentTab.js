@@ -4,18 +4,7 @@ import "./EditPanel.css"
 import "./EditPanelTabs.css"
 import ContextMenu from "../ContextMenu";
 
-import artDataIcon from "./Icons/artDataIcon.svg"
-import artIcon from "./Icons/artIcon.svg"
-import componentComposeIcon from "./Icons/componentComposeIcon.svg"
-import pieceIcon from "./Icons/pieceIcon.svg"
 import unifiedComponentIcon from "./Icons/unifiedComponentIcon.svg"
-import gameIcon from "./Icons/gameIcon.svg"
-import studioIcon from "./Icons/studioIcon.svg"
-import componentIcon from "./Icons/componentIcon.svg"
-import rulesIcon from "./Icons/rulesIcon.svg"
-
-const path = require("path");
-const shell = require('electron').shell;
 
 export default class UnifiedComponentTab extends React.Component {       
     state = {

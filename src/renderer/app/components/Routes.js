@@ -16,13 +16,26 @@ export const TOP_NAVBAR_ITEMS = [
             <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
         </svg>
     },
+    // {
+    //     name:"Project",
+    //     route:"project",
+    //     svg: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#efb521" className="bi bi-file-richtext-fill" viewBox="0 0 16 16">
+    //     <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M7 4.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m-.861 1.542 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V7.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V7s1.54-1.274 1.639-1.208M5 9h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1m0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1"/>
+    //   </svg>
+    // },
     {
         name:"Edit",
         route:"edit",
         svg: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#efb521" className="bi bi-file-text-fill" viewBox="0 0 24 24">
             <path d="M 18,0 H 6 A 3,3 0 0 0 3,3 v 18 a 3,3 0 0 0 3,3 h 12 a 3,3 0 0 0 3,-3 V 3 A 3,3 0 0 0 18,0 M 7.5,6 h 9 a 0.75,0.75 0 0 1 0,1.5 h -9 A 0.75,0.75 0 0 1 7.5,6 M 6.75,9.75 A 0.75,0.75 0 0 1 7.5,9 h 9 a 0.75,0.75 0 0 1 0,1.5 h -9 A 0.75,0.75 0 0 1 6.75,9.75 M 7.5,12 h 9 a 0.75,0.75 0 0 1 0,1.5 h -9 a 0.75,0.75 0 0 1 0,-1.5 m 0,3 H 12 a 0.75,0.75 0 0 1 0,1.5 H 7.5 a 0.75,0.75 0 0 1 0,-1.5"/>
         </svg>
-     
+    },
+    {
+        name:"Rules",
+        route:"rules",
+        svg:<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#efb521" className="bi bi-file-font-fill" viewBox="0 0 16 16">
+  <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M5.057 4h5.886L11 6h-.5c-.18-1.096-.356-1.192-1.694-1.235l-.298-.01v6.09c0 .47.1.582.903.655v.5H6.59v-.5c.799-.073.898-.184.898-.654V4.755l-.293.01C5.856 4.808 5.68 4.905 5.5 6H5z"/>
+</svg>
     },
     {
         name:"Render",

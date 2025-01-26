@@ -54,6 +54,7 @@ export default class IconContentFileItem extends React.Component {
         var icons = {
             "RULES": rulesIcon,
             "COMPONENTS": componentComposeIcon,
+            "UNIFIED_COMPONENT": componentComposeIcon,
             "GAME_GAMEDATA": gameIcon,
             "STUDIO_GAMEDATA": studioIcon,
             "GAMECRAFTER": gamecrafterIcon,
@@ -67,7 +68,10 @@ export default class IconContentFileItem extends React.Component {
         var filename = path.parse(this.props.filepath).name
         
         if (this.props.contentType === "COMPONENTS") {
-            filename = "compositions"
+            filename = "project"
+        }
+        else if (this.props.contentType === "UNIFIED_COMPONENT") {
+            filename = this.props.filepath.split("#")[1]
         }
 
         return <div 

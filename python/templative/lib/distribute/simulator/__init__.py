@@ -396,7 +396,7 @@ async def uploadToS3(image):
     
     files = {'image': buffered}
     isDev = False
-    baseUrl = "http://127.0.0.1:5000" if isDev else "https://templative-server-84c7a76c7ddd.herokuapp.com/"
+    baseUrl = "http://127.0.0.1:5000" if isDev else "https://api.templative.net/"
     response = requests.post('%s/simulator/image' % baseUrl, files=files)
     
     if response.status_code == 200:

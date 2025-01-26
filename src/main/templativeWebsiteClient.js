@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-var baseurl = "https://templative-server-84c7a76c7ddd.herokuapp.com/"
+var baseurl = "https://api.templative.net/"
 // baseurl = "http://127.0.0.1:5000"
 const verifyCredentials = async (email, password) => {
     try {

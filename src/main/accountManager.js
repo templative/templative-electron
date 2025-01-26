@@ -8,7 +8,7 @@ const { clearSessionToken, clearEmail, saveSessionToken, saveEmail, getSessionTo
 let mainWindow;
 
 const goToAccount = async(event, args) => {
-    shell.openExternal("https://templative-server-84c7a76c7ddd.herokuapp.com/");
+    shell.openExternal("https://api.templative.net/");
 }
 const giveLogout = async (event, args) => {
     await clearSessionToken()

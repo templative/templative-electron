@@ -23,7 +23,8 @@ export default class TemplativeProjectRenderer extends React.Component {
         piecesGamedataDirectory: undefined,
         componentGamedataDirectory: undefined,
         hasGit: false,
-        githubToken: false
+        githubToken: false,
+        componentCompose: undefined
     }
 
     createFileAsync = async (filepath, contents) => {
@@ -98,16 +99,20 @@ export default class TemplativeProjectRenderer extends React.Component {
     }
     #parseComponentComposeAsync = async () => {
         var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json");
+        var componentCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json");
         await this.#saveComponentComposeFileCountAsync()
         
         this.#closeComponentComposeListener()
         var componentComposeFilepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json")        
         this.componentComposeWatcher = fsOld.watch(componentComposeFilepath, {}, async () => {
             await this.#saveComponentComposeFileCountAsync()
+            const updatedComponentCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json");
+            this.setState({ componentCompose: updatedComponentCompose });
         });
         
         this.setState({
             gameCompose: gameCompose,
+            componentCompose: componentCompose,
             gameCrafterAdsDirectory: path.join(this.props.templativeRootDirectoryPath, "gamecrafter"),
             templatesDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.artTemplatesDirectory),
             overlaysDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.artInsertsDirectory),
@@ -313,18 +318,20 @@ export default class TemplativeProjectRenderer extends React.Component {
                     } 
                     <div className="file-explorer-spacing"/>
                     
-                    <IconContentFileItem
+                    {/* <IconContentFileItem
                         contentType={"COMPONENTS"}
                         currentFilepath={this.props.currentFilepath}
                         filepath={path.join(this.props.templativeRootDirectoryPath, "component-compose.json")}
                         updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                    />
-                    <IconContentFileItem
-                        contentType={"RULES"}
-                        currentFilepath={this.props.currentFilepath}
-                        filepath={path.join(this.props.templativeRootDirectoryPath, "rules.md")}
-                        updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                    />
+                    /> */}
+                    {this.state.componentCompose.map(composition => 
+                        <IconContentFileItem
+                            contentType={"UNIFIED_COMPONENT"}
+                            currentFilepath={this.props.currentFilepath}
+                            filepath={path.join(this.props.templativeRootDirectoryPath, `component-compose.json#${composition.name}`)}
+                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                        />
+                    )}
                 </div>
                 
                 <GitRow templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
