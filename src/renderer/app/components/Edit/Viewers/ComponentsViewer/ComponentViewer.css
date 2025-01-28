@@ -116,7 +116,7 @@
     cursor: pointer;
 } */
 .already-written-autocomplete {
-    color: hsl(210, 14%, 50%)
+    color: hsl(210, 14%, 50%);
 }
 
 .auto-complete > p:nth-child(even) {

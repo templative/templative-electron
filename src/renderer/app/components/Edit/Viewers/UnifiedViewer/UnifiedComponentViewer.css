@@ -1,5 +1,8 @@
+.composition-controls-row {
+    margin-bottom: 10px;
+}
 .unified-viewer {
-    height: 100%;
+    height: calc(100% - 42px);
     overflow-y: hidden;
 }
 .unified-viewer > .col {
@@ -14,6 +17,7 @@
     flex: 0 0 auto !important;
     max-width: none !important;
 }
+
 .artdata-column {
     position: relative;
     min-width: 200px;
@@ -59,4 +63,7 @@
 .viewer-resize-handle:hover, .viewer-resize-handle.active {
     background-color: orange;
     opacity: 0.5;
+}
+.quantity-input {
+    max-width: 8ch !important;
 }

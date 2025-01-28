@@ -1,23 +1,15 @@
 import React from "react";
-
+import EditCompositionRow from "./EditComposition/EditCompositionRow";
 import EditableViewerJson from "../EditableViewerJson";
 import TemplativeAccessTools from "../../../TemplativeAccessTools";
-import ArtdataViewer from "../ArtdataViewer/ArtdataViewer";
-import ComponentGamedataViewer from "../GamedataViewer/ComponentGamedataViewer";
-import PieceGamedataViewer from "../GamedataViewer/PieceGamedataViewer";
 import "./UnifiedComponentViewer.css"
-import StudioGamedataViewer from "../GamedataViewer/StudioGamedataViewer";
-import GameGamedataViewer from "../GamedataViewer/GameGamedataViewer";
-const path = require("path")
+import CompositionControlsRow from "./CompositionControlsRow";
+import path from "path";
 
-import studioIcon from "../../Icons/studioIcon.svg"
-import gameIcon from "../../Icons/gameIcon.svg"
-import componentIcon from "../../Icons/componentIcon.svg"
-import pieceIcon from "../../Icons/pieceIcon.svg"
-import artdataIcon from "../../Icons/artDataIcon.svg"
-
-export default class UnifiedComponentViewer extends EditableViewerJson { 
+export default class UnifiedComponentViewer extends React.Component { 
     state = {
+        componentInfo: undefined,
+        compositionIndex: undefined,
         availableDataSources: {
             studio: [],
             game: [],
@@ -27,32 +19,20 @@ export default class UnifiedComponentViewer extends EditableViewerJson {
         gamedataColumnWidth: 50,
         isResizing: false
     }
-
-    getFilePath = (props) => {
-        return path.join(props.templativeRootDirectoryPath, "component-compose.json")
+    componentDidMount = async () => {
+        await this.load();
     }
-
-    async componentDidUpdate(prevProps, prevState) {
-        await super.componentDidUpdate(prevProps, prevState);
-        
-        // Check if the viewed file has changed
-        if (this.props.viewedFile !== prevProps.viewedFile) {
-            await this.checkAndReloadDataSources(this.props.viewedFile);
-        }
-
-        const isChangingLoaded = prevState.hasLoaded !== this.state.hasLoaded;
-        const isChangingComponentName = prevProps.componentName !== this.props.componentName;
-        if (!this.state.hasLoaded || !(isChangingLoaded || isChangingComponentName)) {
-            return;
-        }
-
+    load = async () => {
         var componentInfo = undefined;
-        for (let c = 0; c < this.state.content.length; c++) {
-            const component = this.state.content[c];
+        var compositionIndex = undefined;
+        console.log("this.props.componentCompose", this.props.componentCompose)
+        for (let c = 0; c < this.props.componentCompose.length; c++) {
+            const component = this.props.componentCompose[c];
             if (component.name !== this.props.componentName) {
                 continue;
             }
             componentInfo = component;
+            compositionIndex = c;
             break;
         }
         
@@ -61,6 +41,8 @@ export default class UnifiedComponentViewer extends EditableViewerJson {
         }
 
         this.setState({
+            componentInfo: componentInfo,
+            compositionIndex: compositionIndex,
             isStudioExtended: false,
             isGameExtended: false,
             isComponentExtended: false,
@@ -71,11 +53,24 @@ export default class UnifiedComponentViewer extends EditableViewerJson {
             loadedSubfiles: false
         }, async () => await this.loadSubfiles(componentInfo));
     }
+
+    async componentDidUpdate(prevProps, prevState) {
+        // Check if the viewed file has changed
+        if (this.props.viewedFile !== prevProps.viewedFile) {
+            await this.checkAndReloadDataSources(this.props.viewedFile);
+        }
+
+        const isChangingComponentName = prevProps.componentName !== this.props.componentName;
+        if (!isChangingComponentName) {
+            return;
+        }
+
+        await this.load();
+    }
     
     loadSubfiles = async (componentInfo) => {
-        const { templativeRootDirectoryPath } = this.props;
-    
-        // Load game JSON and construct paths
+        const { templativeRootDirectoryPath,  } = this.props;
+        
         const gameJson = await TemplativeAccessTools.loadFileContentsAsJson(
             path.join(templativeRootDirectoryPath, "game-compose.json")
         );
@@ -135,6 +130,7 @@ export default class UnifiedComponentViewer extends EditableViewerJson {
         }
     
         this.setState(loadedContent, async () => await this.loadDataSources());
+        console.log("loadedContent", loadedContent)
     };
     
     toggleExtension = (key) => {
@@ -163,6 +159,7 @@ export default class UnifiedComponentViewer extends EditableViewerJson {
                     piece: pieceFields
                 }
             });
+            console.log("this.state.availableDataSources", this.state.availableDataSources)
         } catch (error) {
             console.error("Error loading data sources:", error);
         }
@@ -212,193 +209,85 @@ export default class UnifiedComponentViewer extends EditableViewerJson {
         document.addEventListener('mouseup', stopResize);
     }
 
-    render() {        
-        const extendedChevron = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-down drop-down-chevron" viewBox="0 0 16 16">
-            <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-        </svg>
-        const unextendedChevron = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right drop-down-chevron" viewBox="0 0 16 16">
-            <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-        </svg>
-        
-        var artdataFiles = {
-            "Front": "frontArtdataFilepath",
-            "Back": "backArtdataFilepath",
-            "DieFace": "dieFaceArtdataFilepath",
+    updateComponentName = (newName) => {
+        const newContent = [...this.props.componentCompose];
+        newContent[this.state.compositionIndex].name = newName;
+        this.props.saveComponentComposeAsync(newContent);
+    }
+
+    updateComponentType = (newType) => {
+        const newContent = [...this.props.componentCompose];
+        newContent[this.state.compositionIndex].type = newType;
+        this.props.saveComponentComposeAsync(newContent);
+    }
+
+    updateQuantity = (newQuantity) => {
+        let quantity = 0;
+        if (typeof newQuantity === 'number') {
+            quantity = newQuantity;
+        } else {
+            quantity = parseInt(newQuantity);
         }
-        var artdataRows = []
-        if (this.state.loadedSubfiles) {
-            artdataRows = Object.entries(artdataFiles).map(([face, value]) => {
-                if (this.state[value] === undefined) {
-                    return <div key={face}/>
+        quantity = Math.floor(Math.max(quantity, 0));
+        const newContent = [...this.props.componentCompose];
+        newContent[this.state.compositionIndex].quantity = quantity;
+        this.props.saveComponentComposeAsync(newContent);
+    }
+
+    updateIsDisabled = (newIsDisabled) => {
+        const newContent = [...this.props.componentCompose];
+        newContent[this.state.compositionIndex].disabled = newIsDisabled;
+        this.props.saveComponentComposeAsync(newContent);
+    }
+    
+    render() {
+
+        return (
+            <>
+                {this.state.componentInfo && 
+                    <CompositionControlsRow 
+                        componentName={this.state.componentInfo["name"]}
+                        updateComponentName={this.updateComponentName}
+                        type={this.state.componentInfo["type"]}
+                        updateComponentType={this.updateComponentType}
+                        quantity={this.state.componentInfo["quantity"]}
+                        updateQuantity={this.updateQuantity}
+                        isDisabled={this.state.componentInfo["disabled"]}
+                        updateIsDisabled={this.updateIsDisabled}
+                        renderComponent={this.props.renderComponent}
+                        isProcessing={this.state.isProcessing}
+                        componentTypesCustomInfo={this.props.componentTypesCustomInfo}
+                        updateRouteCallback={this.props.updateRouteCallback}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    />
                 }
-                if (!this.state[`has${face}Artdata`]) {
-                    return <div key={face}/>
-                }
-                if (face === "Back" && (this.state["backArtdataFilepath"] === this.state["frontArtdataFilepath"])) {
-                    const rightChevron = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right" viewBox="0 0 16 16">
-                        <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-                    </svg>
-                    return <div className="unselecteable-artdata" key={`${this.props.componentName}_${face}`}>
-                        <p>
-                            {rightChevron} <img 
-                                className="tab-icon" 
-                                src={artdataIcon} 
-                                alt="Tab icon"
-                            /> {face} Art Recipe <span className="subfile-filepath">Same as Front Art Recipe</span>
-                        </p>
-                    </div>
-                }
-                const extensionString = `is${face}Extended`
-                return <div className="" key={`${this.props.componentName}_${face}`}>
-                    <p onClick={() => this.toggleExtension(extensionString)}>
-                        { this.state[extensionString] ? extendedChevron : unextendedChevron } <img 
-                                className="tab-icon" 
-                                src={artdataIcon} 
-                                alt="Tab icon"
-                            /> {face} Art Recipe <span className="subfile-filepath">{path.parse(this.state[value]).name}.json</span> </p>
-                    { this.state[extensionString] && 
-                        <div className="universal-file-content">
-                            <ArtdataViewer 
-                                templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                                filepath={this.state[value]} 
-                                saveFileAsyncCallback={this.props.saveFileAsyncCallback}
-                                updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                                availableDataSources={this.state.availableDataSources}
-                            />
-                        </div>
-                    }
-                </div>
-            });
-        }
-        
-        const editRow = <div className="row g-0 unified-viewer">
-            {this.state.loadedSubfiles && 
-                <div className="col gamedata-column" style={{width: `${this.state.gamedataColumnWidth}%`}}>
-                    <div className={`viewer-resize-handle${this.state.isResizing ? ' active' : ''}`} onMouseDown={this.startResize}></div>
-                    <div className="">
-                        <p 
-                            onClick={() => this.toggleExtension("isStudioExtended")}
-                        >
-                            {this.state.isStudioExtended ? extendedChevron : unextendedChevron} 
-                            <img 
-                                className="tab-icon" 
-                                src={studioIcon} 
-                                alt="Tab icon"
-                            /> 
-                            Studio <span className="subfile-filepath">{`${path.parse(this.state.studioGamedataFilepath).name}.json`}</span>
-                        </p>
-                        {this.state.isStudioExtended && 
-                            <div className="universal-file-content">
-                                <StudioGamedataViewer 
-                                    filepath={this.state.studioGamedataFilepath} 
-                                    saveFileAsyncCallback={this.handleFileSave}
-                                    />
-                            </div>
-                        }
-                    </div>
-                    <div className="">
-                        <p 
-                            onClick={() => this.toggleExtension("isGameExtended")}
-                        >
-                            {this.state.isGameExtended ? extendedChevron : unextendedChevron} 
-                            <img 
-                                className="tab-icon" 
-                                src={gameIcon} 
-                                alt="Tab icon"
-                            /> 
-                            Game <span className="subfile-filepath">{`${path.parse(this.state.gameGamedataFilepath).name}.json`}</span>
-                        </p>
-                        {this.state.isGameExtended && 
-                            <div className="universal-file-content">
-                                <GameGamedataViewer 
-                                    filepath={this.state.gameGamedataFilepath} 
-                                    saveFileAsyncCallback={this.handleFileSave}
-                                />
-                            </div>
-                        }
-                    </div>
-                    <div className="">
-                        <p 
-                            onClick={() => this.toggleExtension("isComponentExtended")}
-                        >
-                            {this.state.isComponentExtended ? extendedChevron : unextendedChevron} 
-                            <img 
-                                className="tab-icon" 
-                                src={componentIcon} 
-                                alt="Tab icon"
-                            /> 
-                            Component <span className="subfile-filepath">{`${path.parse(this.state.componentGamedataFilepath).name}.json`}</span>
-                        </p>
-                        {this.state.isComponentExtended && 
-                            <div className="universal-file-content">
-                                <ComponentGamedataViewer 
-                                    filepath={this.state.componentGamedataFilepath} 
-                                    saveFileAsyncCallback={this.handleFileSave}
-                                />
-                            </div>
-                        }
-                    </div>
-                    <div className="">
-                        <p 
-                            onClick={() => this.toggleExtension("isPiecesExtended")}
-                        >
-                            {this.state.isPiecesExtended ? extendedChevron : unextendedChevron} 
-                            <img 
-                                className="tab-icon" 
-                                src={pieceIcon} 
-                                alt="Tab icon"
-                            /> 
-                            Piece <span className="subfile-filepath">{`${path.parse(this.state.piecesGamedataFilepath).name}.json`}</span>
-                        </p>
-                        {this.state.isPiecesExtended && 
-                            <div className="universal-file-content">
-                            
-                            <PieceGamedataViewer 
-                                filepath={this.state.piecesGamedataFilepath} 
-                                saveFileAsyncCallback={this.handleFileSave}
-                                showPreviewCallback={this.props.showPreviewCallback}
-                                isPreviewEnabled={true}
-                                componentName={this.props.componentName}
-                                templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                            />
-                            </div>                                         
-                        }
-                    </div>
-                </div>
-            }
-            <div className="col artdata-column">
-                {artdataRows}
-            </div>
-        </div> 
-
-        return <>
-            <div className="row g-0">
-                <div className="input-group input-group-sm" data-bs-theme="dark">
-                    <span className="input-group-text soft-label">Type</span>
-                    <select className="form-select no-left-border" value={this.props.componentType} onChange={(e) => this.props.updateComponentType(e.target.value)}></select>
-
-                    <span className="input-group-text soft-label">Quantity</span>
-                    <input type="number" className="form-control no-left-border" placeholder="0" aria-label="Search" value={this.props.quantity} onChange={(e) => this.props.updateComponentName(e.target.value)} />
-
-                    <span className="input-group-text soft-label">Disabled</span>
-                    <div className="input-group-text no-left-border">
-                        <input 
-                            className="form-check-input mt-0" 
-                            type="checkbox" 
-                            checked={this.props.isDisabled}
-                            onChange={(e) => this.props.updateIsDisabled(e.target.checked)}
-                            aria-label="Checkbox to disable component"
-                        />
-                    </div>
-
-                    <button onClick={async ()=>{await this.renderComponent()}} disabled={this.state.isProcessing} className="btn btn-outline-secondary" type="button" title={`Render ${this.props.componentName}.`}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-brush component-use-icon" viewBox="0 0 16 16">
-                            <path d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.1 6.1 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.1 8.1 0 0 1-3.078.132 4 4 0 0 1-.562-.135 1.4 1.4 0 0 1-.466-.247.7.7 0 0 1-.204-.288.62.62 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896q.19.012.348.048c.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04M4.705 11.912a1.2 1.2 0 0 0-.419-.1c-.246-.013-.573.05-.879.479-.197.275-.355.532-.5.777l-.105.177c-.106.181-.213.362-.32.528a3.4 3.4 0 0 1-.76.861c.69.112 1.736.111 2.657-.12.559-.139.843-.569.993-1.06a3 3 0 0 0 .126-.75zm1.44.026c.12-.04.277-.1.458-.183a5.1 5.1 0 0 0 1.535-1.1c1.9-1.996 4.412-5.57 6.052-8.631-2.59 1.927-5.566 4.66-7.302 6.792-.442.543-.795 1.243-1.042 1.826-.121.288-.214.54-.275.72v.001l.575.575zm-4.973 3.04.007-.005zm3.582-3.043.002.001h-.002z"/>
-                        </svg> Render Composition
-                    </button>
-                </div>
-            </div>
-            {editRow}
-        </>
+                
+                {this.state.loadedSubfiles && 
+                    <EditCompositionRow 
+                        frontArtdataFilepath={this.state.frontArtdataFilepath}
+                        backArtdataFilepath={this.state.backArtdataFilepath}
+                        dieFaceArtdataFilepath={this.state.dieFaceArtdataFilepath}
+                        hasFrontArtdata={this.state.hasFrontArtdata}
+                        hasBackArtdata={this.state.hasBackArtdata}
+                        hasDieFaceArtdata={this.state.hasDieFaceArtdata}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        handleFileSave={this.handleFileSave}
+                        updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                        availableDataSources={this.state.availableDataSources}
+                        
+                        gamedataColumnWidth={this.state.gamedataColumnWidth}
+                        isResizing={this.state.isResizing}
+                        startResize={this.startResize}
+                        
+                        componentName={this.state.componentInfo["name"]}
+                        studioGamedataFilepath={this.state.studioGamedataFilepath}
+                        gameGamedataFilepath={this.state.gameGamedataFilepath}
+                        componentGamedataFilepath={this.state.componentGamedataFilepath}
+                        piecesGamedataFilepath={this.state.piecesGamedataFilepath}
+                        showPreviewCallback={this.props.showPreviewCallback}
+                    />
+                } 
+            </>
+        );
     }
 }

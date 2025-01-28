@@ -95,7 +95,8 @@ export default class IconContentFileItem extends React.Component {
             }
             <p className={`renameable-file`}>
                 <span style={{ marginLeft: `${(numberSpaces * 16) + 8}px` }}/>
-                <img src={icon} className="tab-icon"/>{filename}
+                {(this.props.hasIcon==undefined || this.props.hasIcon) && <img src={icon} className="tab-icon"/>}
+                {filename}
             </p>
         </div>
     }

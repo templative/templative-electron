@@ -36,6 +36,7 @@ export default class EditProjectView extends React.Component {
 
         extendedFileTypes: new Set(),
         extendedDirectories: new Set(),
+        componentCompose: [], // Store the parsed component-compose.json
     }
     changeExtendedDirectoryAsync = (isExtended, directory) => {
         var isAlreadyExtended = this.state.extendedDirectories.has(directory)
@@ -222,9 +223,11 @@ export default class EditProjectView extends React.Component {
             console.log(settingsPath)
             this.changeTabsToEditAFile("SETTINGS", settingsPath)
         });
+
+        await this.loadComponentComposeAsync();
     }
 
-    componentDidUpdate = (prevProps) => {
+    componentDidUpdate = async (prevProps) => {
         if (prevProps.templativeRootDirectoryPath === this.props.templativeRootDirectoryPath) {
             return
         }
@@ -234,6 +237,8 @@ export default class EditProjectView extends React.Component {
             currentFileType: undefined,
             currentFilepath: undefined,
         })
+
+        await this.loadComponentComposeAsync();
     }
     updateRoute = (route) => {
         this.setState({currentRoute: route})
@@ -340,6 +345,25 @@ export default class EditProjectView extends React.Component {
         }
         this.setState({tabbedFiles: newTabbedFiles}, async () => await this.checkForCurrentTabRemovedAsync());
     }
+    loadComponentComposeAsync = async () => {
+        try {
+            const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
+            const content = await TemplativeAccessTools.loadFileContentsAsJson(filepath);
+            this.setState({ componentCompose: content });
+        } catch (error) {
+            console.error("Error loading component-compose.json:", error);
+            this.setState({ componentCompose: [] });
+        }
+    }
+    saveComponentComposeAsync = async (updatedContent) => {
+        try {
+            const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
+            await this.saveFileAsync(filepath, JSON.stringify(updatedContent, null, 2));
+            this.setState({ componentCompose: updatedContent });
+        } catch (error) {
+            console.error("Error saving component-compose.json:", error);
+        }
+    }
     render() {
         return <RenderingWorkspaceProvider key={this.props.templativeRootDirectoryPath}>
             <TopNavbar topNavbarItems={TOP_NAVBAR_ITEMS} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
@@ -398,6 +422,8 @@ export default class EditProjectView extends React.Component {
                     extendedFileTypes={this.state.extendedFileTypes}
                     changeExtendedFileTypeAsyncCallback={this.changeExtendedFileTypeAsync}
                     updateRouteCallback={this.updateRoute}
+                    componentCompose={this.state.componentCompose}
+                    saveComponentComposeAsync={this.saveComponentComposeAsync}
                 />
                 )}
 
