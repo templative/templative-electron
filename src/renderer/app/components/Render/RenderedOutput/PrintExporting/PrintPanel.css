@@ -6,7 +6,7 @@
     flex-direction: column-reverse;
 }
 .print-controls-row {
-    background-color: var(--color-dark-2);
+    background-color: var(--color-surface);
     height: 2em;
     padding-top: 4px;
     padding-bottom: 8px;
@@ -38,12 +38,12 @@
 }
 .create-printout-button {
     width: 100%;
-    background-color: var(--color-primary) !important;
-    color:var(--color-dark-2) !important;
+    background-color: var(--color-accent) !important;
+    color:var(--color-surface) !important;
     font-weight: bold !important;
 }
 .create-printout-button:hover {
-    background-color: var(--color-primary) !important;
+    background-color: var(--color-accent) !important;
     border-color: var(--color-gray) !important;
 }
 .selectedDirectory { 

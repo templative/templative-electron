@@ -33,7 +33,7 @@
 .gamedata-column > *:not(.unselecteable-artdata) > p:hover {
     cursor: pointer;
     font-size: 18px;
-    background-color: var(--color-dark-2);
+    background-color: var(--color-surface);
 }
 .unselecteable-artdata > p {
     color: var(--color-gray);
@@ -61,7 +61,7 @@
     opacity: 0;
 }
 .viewer-resize-handle:hover, .viewer-resize-handle.active {
-    background-color: var(--color-primary);
+    background-color: var(--color-accent);
     opacity: 0.5;
 }
 .quantity-input {

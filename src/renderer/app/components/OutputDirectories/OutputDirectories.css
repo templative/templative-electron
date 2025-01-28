@@ -1,22 +1,22 @@
 .selected-output-directory {
     background-color: var(--color-gray) !important;
-    border-right:var(--color-primary) solid 1px !important;
+    border-right:var(--color-accent) solid 1px !important;
 }
 .resourceHeaderWrapper:nth-child(even) {
-    background-color: var(--color-dark-1);
+    background-color: var(--color-base);
 }
 .render-output-option {
     padding: 0.2em 0.2em 0.2em 0.4em;
     border-right: transparent solid 1px;
 }
 .render-output-option:nth-child(even) {
-    background-color: var(--color-dark-1);
+    background-color: var(--color-base);
 }
 .render-output-option:nth-child(even) > .render-output-name {
-    color: var(--color-primary) !important;
+    color: var(--color-accent) !important;
 }
 .render-output-option:hover {
-    background-color: var(--color-dark-2);
+    background-color: var(--color-surface);
     cursor: pointer;
 }
 .render-output-option p {
@@ -26,7 +26,7 @@
 .render-output-name { 
     margin-right: 0.25em;
     font-weight: bold;
-    color: var(--color-primary);
+    color: var(--color-accent);
 }
 .render-output-version { 
     margin-right: 0.5em;

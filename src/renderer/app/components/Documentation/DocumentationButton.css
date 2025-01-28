@@ -19,7 +19,7 @@
     transform: translateY(-50%) translateX(-100%);
     background-color: var(--color-light);
     font-size: 12px !important;
-    color: var(--color-dark-2);
+    color: var(--color-surface);
     padding: 8px;
     border-radius: 4px;
     white-space: nowrap;

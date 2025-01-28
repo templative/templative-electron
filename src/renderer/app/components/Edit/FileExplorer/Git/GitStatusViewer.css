@@ -196,14 +196,14 @@
 }
 
 .commit-button{
-    background-color: var(--color-primary) !important;
+    background-color: var(--color-accent) !important;
     width: 100%;
     color: black !important;
     font-weight: 800 !important;
 }
 
 .commit-button:disabled {
-    background-color: var(--color-primary);
+    background-color: var(--color-accent);
 }
 
 .git-file:n-child(even) {
@@ -242,11 +242,11 @@
 }
 
 .git-status-A {
-    color: var(--color-primary) !important;  /* Yellow/Gold for Added */
+    color: var(--color-accent) !important;  /* Yellow/Gold for Added */
 }
 
 .git-status-D {
-    color: var(--color-primary) !important;  /* var(--color-error) for Deleted */
+    color: var(--color-accent) !important;  /* var(--color-error) for Deleted */
 }
 
 .git-status-R {
@@ -282,7 +282,7 @@
 }
 
 .branch-status .behind {
-    color: var(--color-primary);
+    color: var(--color-accent);
 }
 .branch-status .behind:hover {
     color: hsl(36, 100%, 90%);
@@ -290,7 +290,7 @@
 
 .branch-name {
     margin: 0 8px;
-    color: var(--color-primary);
+    color: var(--color-accent);
     font-size: 12px;
     user-select: none;
     -webkit-user-select: none;

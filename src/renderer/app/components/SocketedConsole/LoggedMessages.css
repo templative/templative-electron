@@ -7,7 +7,7 @@
 
 .console-messages {
     border-radius: 3px;
-    background-color: var(--color-dark-1);
+    background-color: var(--color-base);
     padding: 0.25em;
     padding-right: 14px;
     overflow-y: scroll !important;
@@ -25,7 +25,7 @@
     color: var(--color-light);
 }
 .output-warning {
-    color: var(--color-primary);
+    color: var(--color-accent);
 }
 .console-url {
     color: blue;

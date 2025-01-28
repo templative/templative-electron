@@ -2,7 +2,7 @@
     height: 100%;
     display: inline-block;
     width: 80px !important;
-    background-color: var(--color-dark-2);
+    background-color: var(--color-surface);
     vertical-align: top;
     border-right: #3c414d 1px solid;
 }
@@ -34,10 +34,10 @@
 }
 
 .current-sidebar-button {
-    background-color: var(--color-dark-1) !important;
+    background-color: var(--color-base) !important;
 }
 .current-sidebar-button:hover {
-    background-color: var(--color-dark-1) !important;
+    background-color: var(--color-base) !important;
     cursor: default !important;
 }
 .top-navbar-item-label {

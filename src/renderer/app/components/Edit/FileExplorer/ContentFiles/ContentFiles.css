@@ -12,17 +12,17 @@
 } 
 */
 .icon-content-file-item-wrapper:n-child(even), .content-file-item-wrapper:nth-child(even) {
-    background-color: var(--color-dark-1);
+    background-color: var(--color-base);
 }
 .icon-content-file-item-wrapper:hover, .content-file-item-wrapper:hover {
-    background-color: var(--color-dark-2);
+    background-color: var(--color-surface);
     cursor: pointer;
 }
 .selected-content-file-item-wrapper {
-    background-color: var(--color-dark-2);
+    background-color: var(--color-surface);
 }
 .selected-content-file-item-wrapper:hover {
-    background-color: var(--color-dark-2);
+    background-color: var(--color-surface);
 }
 .content-file-list {
     padding: 0 !important;

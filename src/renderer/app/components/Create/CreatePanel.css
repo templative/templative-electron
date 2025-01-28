@@ -14,7 +14,9 @@
     margin: 5px 0px 5px 0px;
 }
 .create-component-name-row {
-    height: 7.5em;
+    height: 4em;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
     display: block;
     padding-top:0.5em;
     width: 100%;
@@ -27,8 +29,8 @@
 }
 .component-type-picking-row {
     padding: 1em 1em 1em 1em !important;
-    border-top: var(--color-dark-4) solid 1px;
-    height: calc(100% - 7.5em);
+    border-top: var(--color-border) solid 1px;
+    height: calc(100% - 4em);
 }
 .component-type-picking-row > * {
     height: 100%;
@@ -39,18 +41,18 @@
     max-width: 30em !important;
 }
 .create-component-button {
-    background-color: var(--color-primary) !important;
-    color:var(--color-dark-2) !important;
+    background-color: var(--color-accent) !important;
+    color:var(--color-text) !important;
     font-weight: bold !important;
     min-width: 84px !important;
 }
 .create-component-button:disabled {
-    background-color: var(--color-dark-2) !important;
-    color: var(--color-light)!important;
+    background-color: var(--color-accent-disabled) !important;
+    color: var(--color-text)!important;
 }
 .create-component-button:hover {
-    background-color: var(--color-primary) !important;
-    color:var(--color-dark-2) !important;
+    background-color: var(--color-accent-hover) !important;
+    color:var(--color-text) !important;
 }
 .creating-spinner {
     margin-right: 6px;
@@ -92,7 +94,7 @@
 
 .vertical-bar {
     width: 25px !important;
-    background-color: var(--color-dark-2);
+    background-color: var(--color-surface);
     color: var(--color-light);
     display: flex;
     align-items: center;
@@ -103,7 +105,7 @@
     transform: rotate(180deg); /* To make text vertical */
 }
 .vertical-bar:hover {
-    background-color: var(--color-dark-2)!important;
+    background-color: var(--color-surface)!important;
 }
 .vertical-bar span {
     font-size: 24px;

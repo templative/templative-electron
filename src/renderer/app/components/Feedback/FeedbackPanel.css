@@ -28,13 +28,13 @@
     min-height: 3em;
     font-size: 14px;
     padding: 0.5em;
-    background-color:var(--color-dark-2);
-    border-bottom-color: var(--color-dark-2);
+    background-color:var(--color-surface);
+    border-bottom-color: var(--color-surface);
     border-bottom-width: 1px;
     border-bottom-style:solid;
 }
 .post-option:first-of-type {
-    border-top-color: var(--color-dark-2);
+    border-top-color: var(--color-surface);
     border-top-width: 1px;
     border-top-style:solid;
 }

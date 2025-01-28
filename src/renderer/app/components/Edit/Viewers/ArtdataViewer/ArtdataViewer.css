@@ -13,7 +13,7 @@
     width:100%;
 }
 .add-field-button {
-    background-color: var(--color-dark-2)!important;
+    background-color: var(--color-surface)!important;
     border-color: var(--color-gray) !important;
     border-bottom-width: 2px !important;
     color: var(--color-light) !important;
@@ -25,7 +25,7 @@
 
 .trash-button, .add-button {
     padding-top: 0px !important;
-    background-color: var(--color-dark-2)!important;
+    background-color: var(--color-surface)!important;
     border-color: var(--color-gray) !important;
     color: var(--color-light) !important;
 }
@@ -33,7 +33,7 @@
     background-color: var(--color-dark-3)!important;
 }
 .artdata-crud-control {
-    background-color: var(--color-dark-1) !important;
+    background-color: var(--color-base) !important;
     border-color: var(--color-gray) !important;
     border-bottom-width: 1px !important;
     border-left:none !important;
@@ -46,10 +46,10 @@
     color: rgba(108, 117, 125, 0.65) !important;
 }
 .vertical-input-group .input-group:nth-child(odd) .artdata-crud-control  {
-    background-color: var(--color-dark-1)!important;
+    background-color: var(--color-base)!important;
 }
 .vertical-input-group .input-group:nth-child(odd) .artdata-crud-control:disabled  {
-    background-color: var(--color-dark-1)!important;
+    background-color: var(--color-base)!important;
 }
 .no-left-border {
     border-left-width: 0 !important;
@@ -100,13 +100,13 @@
 }
 
 .scope-icon-container {
-    background-color: var(--color-dark-1) !important;
+    background-color: var(--color-base) !important;
     border-color: var(--color-gray) !important;
     color: var(--color-light) !important;
     border-right: none !important;
 }
 .vertical-input-group .input-group:nth-child(even) .scope-icon-container {
-    background-color: var(--color-dark-1) !important;
+    background-color: var(--color-base) !important;
   }
 .scoped-value-coordinate-input {
     max-width: 6ch !important;

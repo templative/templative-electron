@@ -23,7 +23,7 @@ const axios = require("axios");
 export default class EditProjectView extends React.Component {
   
     state = {
-        currentRoute: "edit",
+        currentRoute: "create",
         tabbedFiles: [
             // new TabbedFile("COMPONENTS", path.join(this.props.templativeRootDirectoryPath, "component-compose.json"), true),
         ],

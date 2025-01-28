@@ -133,7 +133,7 @@
     padding-bottom: 6px;
     margin-left: 12px;
     margin-right: 12px;
-    background-color: var(--color-dark-2);
+    background-color: var(--color-surface);
     color: var(--color-gray);
 }
 .see-it-in-action-image {
@@ -145,7 +145,7 @@
 .the-gamecrafter-url-button {
     background-color: hsl(85, 54%, 51%) !important;
     border: none !important;
-    color: var(--color-dark-1) !important;
+    color: var(--color-base) !important;
     font-weight: 600;
     transition: all 0.2s ease;
     filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.406));
@@ -221,12 +221,12 @@
     padding-left: 10px !important;
 }
 .components-table-head, .components-table-head > tr, .components-table-head > tr > th {
-    background-color: var(--color-dark-2) !important;
+    background-color: var(--color-surface) !important;
 }
 
 .components-table-body > tr:nth-child(even) > td {
-    background-color: var(--color-dark-2);
+    background-color: var(--color-surface);
 }
 .components-table-body > tr:nth-child(odd) > td {
-    background-color: var(--color-dark-1);
+    background-color: var(--color-base);
 }

@@ -12,7 +12,7 @@
     height: 100%;
     display: inline-block;
     white-space: nowrap;
-    /* background-color: var(--color-dark-1); */
+    /* background-color: var(--color-base); */
     padding: 0.25em 0.25em 0.25em 0.25em;
     margin-bottom: 0.3em;
 }
@@ -30,7 +30,7 @@
     padding: 0.1em 0.1em 0.1em 0.1em;
     width: 100%;
     height: calc(100% - 220px);
-    background-color: var(--color-dark-1);
+    background-color: var(--color-base);
     overflow-x: hidden;
     overflow-y: scroll;
 }

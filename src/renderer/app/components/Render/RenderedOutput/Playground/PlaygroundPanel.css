@@ -22,12 +22,12 @@
 }
 .create-playground-button {
     width: 100%;
-    background-color: var(--color-primary) !important;
-    color:var(--color-dark-2) !important;
+    background-color: var(--color-accent) !important;
+    color:var(--color-surface) !important;
     font-weight: bold !important;
 }
 .create-playground-button:hover {
-    background-color: var(--color-primary) !important;
+    background-color: var(--color-accent) !important;
     border-color: var(--color-gray) !important;
 }
 .playground-directory-header, .ttp-directory-label {

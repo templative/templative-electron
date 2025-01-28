@@ -3,11 +3,11 @@
 }
 .register-now {
     text-decoration: underline;
-    color: var(--color-primary);
+    color: var(--color-accent);
 }
 .register-now:hover {
     cursor: pointer;
-    color: var(--color-primary);
+    color: var(--color-accent);
 }
 .login-status {
     color:var(--color-error);

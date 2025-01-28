@@ -108,7 +108,7 @@ export default function CompositionItem(props) {
             }
             <p className={`renameable-file`}>
                 <span style={{ marginLeft: `24px` }}/>
-                <span style={{color: "gray"}}>{quantity}x</span> <span style={{color: isDisabled ? "gray" : ""}}>{compositionName}</span> <span style={{color: "gray"}}>{addSpaces(type)}</span>
+                <span style={{color: "gray"}}><i className="bi bi-ban"/>{isDisabled && <i className="bi bi-ban"/>} {quantity}x</span> <span style={{color: "var(--color-accent)"}}>{compositionName}</span> <span style={{color: "gray"}}>{addSpaces(type.replace("STOCK_", ""))}</span>
             </p>
         </div>
     );

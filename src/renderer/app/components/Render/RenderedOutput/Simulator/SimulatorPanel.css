@@ -11,12 +11,12 @@
 }
 .create-simulator-button {
     width: 100%;
-    background-color: var(--color-primary) !important;
-    color:var(--color-dark-2) !important;
+    background-color: var(--color-accent) !important;
+    color:var(--color-surface) !important;
     font-weight: bold !important;
 }
 .create-simulator-button:hover {
-    background-color: var(--color-primary) !important;
+    background-color: var(--color-accent) !important;
     border-color: var(--color-gray) !important;
 }
 .simulator-directory-header, .tts-directory-label {
@@ -53,17 +53,17 @@
     margin-bottom: 3px;
 }
 .tabletop-simulator-save:nth-child(even) {
-    background-color: var(--color-dark-1);
+    background-color: var(--color-base);
 }
 .tabletop-simulator-save:hover {
-    background-color: var(--color-dark-2);
+    background-color: var(--color-surface);
     cursor: pointer;
 }
 .tabletop-simulator-save.selected-save {
-    background-color: var(--color-dark-2);
+    background-color: var(--color-surface);
 }
 /* .tabletop-simulator-saves.selected:hover {
-    background-color: var(--color-dark-2);
+    background-color: var(--color-surface);
 } */
  
 .simulator-save-controls {

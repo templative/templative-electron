@@ -77,7 +77,7 @@ tr {
     z-index: 1;
 }
 .table-input-dark {
-    background-color: var(--color-dark-1) !important;
+    background-color: var(--color-base) !important;
     color: var(--color-light) !important;
     border-color: var(--color-gray) !important;
     /* padding: 0 !important; */
@@ -88,14 +88,14 @@ tr {
     height: 100% !important;
 }
 .table-input-dark:focus {
-    background-color: var(--color-dark-1) !important;
+    background-color: var(--color-base) !important;
     color: var(--color-light) !important;
 }
 .table td {
     padding: 0 !important;
 }
 .preview-piece-button {
-    background-color: var(--color-dark-2)!important;
+    background-color: var(--color-surface)!important;
     border-color: var(--color-gray) !important;
     color: var(--color-light) !important;
 }
@@ -116,7 +116,7 @@ tr {
     white-space: nowrap;
 }
 .key-value-control-button {
-    background-color: var(--color-dark-1) !important;
+    background-color: var(--color-base) !important;
     border-color: var(--color-gray) !important;
     border-bottom-width: 1px !important;
     border-left:none !important;
@@ -125,7 +125,7 @@ tr {
     border-right:none !important;
 }
 .vertical-input-group .input-group:nth-child(odd) .key-value-control-button  {
-    background-color: var(--color-dark-1)!important;
+    background-color: var(--color-base)!important;
 }
 .piece-controls-and-keys:has(> .piece-control-input:only-child) {
     margin-bottom: 1em;
