@@ -11,6 +11,7 @@
     },
     "scripts": {
         "start": "electron-forge start",
+        "start-templative": "cd ./python && pipenv run templative serve",
         "templative": "bash ./build.sh templative",
         "templative-build": "bash ./build.sh createTemplativeApp",
         "make": "bash ./build.sh make",
