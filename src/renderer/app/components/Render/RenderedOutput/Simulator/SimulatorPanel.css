@@ -11,13 +11,13 @@
 }
 .create-simulator-button {
     width: 100%;
-    background-color: orange !important;
-    color:#313540 !important;
+    background-color: var(--color-primary) !important;
+    color:var(--color-dark-2) !important;
     font-weight: bold !important;
 }
 .create-simulator-button:hover {
-    background-color: #EFB521 !important;
-    border-color: rgb(73, 80, 87) !important;
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-gray) !important;
 }
 .simulator-directory-header, .tts-directory-label {
     width: 100% !important;
@@ -35,7 +35,7 @@
     border-top-right-radius: 0px !important;
 }
 .lookup-simulator-button {
-    border-color: rgb(73, 80, 87) !important;
+    border-color: var(--color-gray) !important;
 }
 .simulator-controls > .render-output-options-container { 
     height: calc(100% - 450px);
@@ -53,17 +53,17 @@
     margin-bottom: 3px;
 }
 .tabletop-simulator-save:nth-child(even) {
-    background-color: hsl(224, 13%, 17.5%);
+    background-color: var(--color-dark-1);
 }
 .tabletop-simulator-save:hover {
-    background-color: #333942;
+    background-color: var(--color-dark-2);
     cursor: pointer;
 }
 .tabletop-simulator-save.selected-save {
-    background-color: rgb(63, 69, 76);
+    background-color: var(--color-dark-2);
 }
 /* .tabletop-simulator-saves.selected:hover {
-    background-color: #333942;
+    background-color: var(--color-dark-2);
 } */
  
 .simulator-save-controls {

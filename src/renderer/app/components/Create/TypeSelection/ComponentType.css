@@ -8,8 +8,8 @@
 .component-type-card {
     margin: 0 0.2em 0.5em 0.2em;
     text-align: left !important;
-    background-color: #323843 !important;
-    color: #d9d9d9!important;
+    background-color: var(--color-dark-2) !important;
+    color: var(--color-light)!important;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     padding: 0.05em;
@@ -17,7 +17,7 @@
 }
 .component-type-header {
     padding: 0.3em;
-    border-bottom-color:rgb(49, 53, 64);
+    border-bottom-color:var(--color-dark-2);
     border-bottom-style: solid;
     border-bottom-width: 1px;
     display: flex;
@@ -29,30 +29,30 @@
     font-size: 14px !important;
 }
 .component-type-dimensions {
-    color: #b6b6b6 !important;
+    color: var(--color-light) !important;
 }
 .component-type-card:hover { 
-    background-color: #f3f3f3!important;
-    color: #323843!important;
+    background-color: var(--color-light)!important;
+    color: var(--color-dark-2)!important;
 }
 .component-type-card:hover .component-type-dimensions { 
-    color: rgb(33, 36, 44)!important;
+    color: var(--color-dark-1)!important;
 }
 .component-type-card.selected-component-type:hover .component-type-dimensions, .component-type-card.selected-component-type .component-type-dimensions { 
-    color: #323843!important;
+    color: var(--color-dark-2)!important;
 }
 .component-type-card p {
     line-height: 1.6em;
     margin:0;
 }
 .selected-component-type {
-    color: #323843!important;
-    background-color: #ea9800 !important;
+    color: var(--color-dark-2)!important;
+    background-color: var(--color-primary) !important;
 }
 
 .selected-component-type:hover {
-    color: #323843!important;
-    background-color: #ffa500 !important;
+    color: var(--color-dark-2)!important;
+    background-color: var(--color-primary) !important;
 }
 
 .end-of-component-types-icon-container {

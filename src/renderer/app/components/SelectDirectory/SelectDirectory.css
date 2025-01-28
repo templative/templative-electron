@@ -1,5 +1,5 @@
 .selected-directory {
-    background-color: #3f454c;
+    background-color: var(--color-gray);
 }
 .selecteable-directories {
     /* height: 300px; */

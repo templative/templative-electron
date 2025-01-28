@@ -17,7 +17,7 @@
     /* font-weight: bold; */
 }
 .selected-post-render-option {
-    border-bottom: orange 1px solid;
+    border-bottom: var(--color-primary) 1px solid;
     /* font-weight: bold; */
 }
 .component-count-list {
@@ -29,6 +29,6 @@
     font-size: 12px;
     margin-right: 1em;
     padding: 1em;
-    background: #2c303a;
+    background: var(--color-dark-2);
     border-radius: 24px;
 }

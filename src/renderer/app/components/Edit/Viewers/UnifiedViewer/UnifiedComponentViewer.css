@@ -26,20 +26,20 @@
     overflow-x: hidden;
 }
 .artdata-column > * > p, .gamedata-column > * > p {
-    border-bottom: 1px hsl(210, 10%, 22%) solid;
+    border-bottom: 1px var(--color-dark-3) solid;
     font-size: 18px;
 }
 .artdata-column > *:not(.unselecteable-artdata) > p:hover,
 .gamedata-column > *:not(.unselecteable-artdata) > p:hover {
     cursor: pointer;
     font-size: 18px;
-    background-color: hsl(222, 14%, 20%);
+    background-color: var(--color-dark-2);
 }
 .unselecteable-artdata > p {
-    color: gray;
+    color: var(--color-gray);
 }
 .subfile-filepath {
-    color: gray;
+    color: var(--color-gray);
     font-size:12px;
 }
 .universal-file-content {
@@ -61,7 +61,7 @@
     opacity: 0;
 }
 .viewer-resize-handle:hover, .viewer-resize-handle.active {
-    background-color: orange;
+    background-color: var(--color-primary);
     opacity: 0.5;
 }
 .quantity-input {

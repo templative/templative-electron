@@ -9,7 +9,7 @@
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background-color: #2b2f37;
+    background-color: var(--color-dark-3);
     text-align: center;
     padding: 3em;
     border-radius: 12px;

@@ -8,7 +8,7 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom: 2px solid hsl(215, 14%, 16%);
-    background-color: #252a31;
+    background-color: var(--color-dark-2);
     display: flex;
     flex-direction:column;
 }
@@ -33,12 +33,12 @@
 }
 
 .stock-toggle {
-    background-color: #524429 !important;
-    border-color: #524429 !important;
+    background-color: brown !important;
+    border-color: brown !important;
 }
 .stock-toggle:checked {
-    background-color: #ffa500 !important;
-    border-color: #ffa500 !important;
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
 }
 .stock-toggle:disabled, .stock-toggle:checked:disabled {
     opacity: 0.5;
@@ -48,29 +48,29 @@
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0) !important;
 }
 .stock-toggle:hover {
-    background-color: #79643c !important;
+    background-color: brown !important;
 }
 .stock-toggle:checked:hover {
-    background-color: #ffc75e !important;
+    background-color: var(--color-primary) !important;
 }
 
 
 
 
 .tag-button { 
-    background-color: #323843!important;
+    background-color: var(--color-dark-2)!important;
     margin: 0 0.25em 0.25em 0.25em;
-    color: #f3f3f3!important;
+    color: var(--color-light)!important;
 }
 .tag-button:hover { 
-    background-color: #f3f3f3!important;
-    color: #323843!important;
+    background-color: var(--color-light)!important;
+    color: var(--color-dark-2)!important;
 }
 .selected-tag {
-    color: #323843!important;
-    background-color: #ea9800 !important;
+    color: var(--color-dark-2)!important;
+    background-color: var(--color-primary) !important;
 }
 .selected-tag:hover {
-    color: #323843!important;
-    background-color: #ffa500 !important;
+    color: var(--color-dark-2)!important;
+    background-color: var(--color-primary) !important;
 }

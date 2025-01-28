@@ -1,22 +1,22 @@
 .selected-output-directory {
-    background-color: #3f454c !important;
-    border-right:#d9a41d solid 1px !important;
+    background-color: var(--color-gray) !important;
+    border-right:var(--color-primary) solid 1px !important;
 }
 .resourceHeaderWrapper:nth-child(even) {
-    background-color: hsl(224, 13%, 17.5%);
+    background-color: var(--color-dark-1);
 }
 .render-output-option {
     padding: 0.2em 0.2em 0.2em 0.4em;
     border-right: transparent solid 1px;
 }
 .render-output-option:nth-child(even) {
-    background-color: hsl(224, 13%, 17.5%);
+    background-color: var(--color-dark-1);
 }
 .render-output-option:nth-child(even) > .render-output-name {
-    color: #d9a41d !important;
+    color: var(--color-primary) !important;
 }
 .render-output-option:hover {
-    background-color: #333942;
+    background-color: var(--color-dark-2);
     cursor: pointer;
 }
 .render-output-option p {
@@ -26,7 +26,7 @@
 .render-output-name { 
     margin-right: 0.25em;
     font-weight: bold;
-    color: #EFB521;
+    color: var(--color-primary);
 }
 .render-output-version { 
     margin-right: 0.5em;
@@ -35,12 +35,12 @@
     margin-right: 0.25em;
 }
 .render-output-version-name, .render-output-version {
-    color: gray;
+    color: var(--color-gray);
 }
 .render-output-date { 
     display: block;
     margin-top: 0.2em;
-    color: gray;
+    color: var(--color-gray);
 }
 .output-folder-options {
     flex: 1;

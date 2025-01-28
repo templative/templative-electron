@@ -55,13 +55,13 @@
 }
 .upload-tgc-button {
     width: 100%;
-    background-color: orange !important;
-    color:#313540 !important;
+    background-color: var(--color-primary) !important;
+    color:var(--color-dark-2) !important;
     font-weight: bold !important;
 }
 .upload-tgc-button:hover {
-    background-color: #EFB521 !important;
-    border-color: rgb(73, 80, 87) !important;
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-gray) !important;
 }
 .logged-messages-container {
     width: 100%;
@@ -72,27 +72,27 @@
 }
 
 .go-to-tgc-button, .tgc-logout-button {
-    color: rgb(222, 226, 230) !important;
-    background-color: rgb(43, 48, 53) !important;
-    border-color: rgb(73, 80, 87) !important;
+    color: var(--color-light) !important;
+    background-color: var(--color-dark-3) !important;
+    border-color: var(--color-gray) !important;
 }
 .go-to-tgc-button:hover {
-    background-color: hsl(210, 10%, 22%) !important;
+    background-color: var(--color-dark-3) !important;
 }
 .tgc-logout-button:hover {
-    border-color: rgb(198, 40, 40) !important;
-    /* color: rgb(198, 40, 40) !important; */
+    border-color: var(--color-error) !important;
+    /* color: var(--color-error) !important; */
 }
 .uploaded-game-text {
     font-size:14px;
 }
 .game-url-text {
-    color: hsl(180, 100%, 35%);
+    color: blue;
     text-decoration: underline;
 }
 .game-url-text:hover {
     cursor:pointer;
-    color: hsl(180, 100%, 45%);
+    color: blue;
 }
 .clickable-checkbox-label {
     cursor: pointer;

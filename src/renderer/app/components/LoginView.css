@@ -3,14 +3,14 @@
 }
 .register-now {
     text-decoration: underline;
-    color: #ffa500;
+    color: var(--color-primary);
 }
 .register-now:hover {
     cursor: pointer;
-    color: hsl(39, 100%, 60%);
+    color: var(--color-primary);
 }
 .login-status {
-    color:palevioletred;
+    color:var(--color-error);
     font-size: 12px;
     margin-bottom: 0px;
 }

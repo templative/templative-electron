@@ -1,3 +1,13 @@
+:root {
+  --color-dark-1: hsl(220, 13%, 15%);    
+  --color-dark-2: hsl(220, 13%, 20%);   
+  --color-dark-3: hsl(212, 9%, 27%);   
+  --color-dark-4: hsl(222, 13%, 30%);   
+  --color-gray: hsl(210, 14%, 50%);   
+  --color-light: hsl(0, 0%, 81%);   
+  --color-primary: orange;
+  --color-error: red;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -14,15 +24,30 @@ code {
 
 .App {
   /* text-align: center; */
-  background-color: hsl(220, 13%, 18%);
+  background-color: var(--color-dark-2);
   height: 100% !important;
 }
 
+.App input, .App textarea, .App select, .App button, .App .form-check-input {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: var(--color-gray) !important;
+}
+
+.App input:active, .App textarea:active, .App select:active, .App button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.App input:focus, .App textarea:focus, .App select:focus, .App button:focus, .App .form-check-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
 html, body {
   height: 100%;
 }
 html {
-  scrollbar-color: hsl(222, 13%, 28%) #2f333c;
+  scrollbar-color: var(--color-dark-4) var(--color-dark-3);
 }
 .no-right-border {
   border-right-width: 0px !important;
@@ -34,14 +59,14 @@ html {
 ::-webkit-scrollbar {
   width: 9px;
   height: 8px;
-  background-color: #2f333c;
+  background-color: var(--color-dark-3);
 }
 textarea::-webkit-scrollbar-corner {
-  background-color: #2f333c; /* Color of the corner */
+  background-color: var(--color-dark-3); /* Color of the corner */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #373c48;
+  background: var(--color-gray);
   border-radius: 5px;
 }
 
@@ -60,7 +85,7 @@ textarea::-webkit-scrollbar-corner {
   /* align-items: center;
   justify-content: center; */
   font-size: 24px;
-  color:hsl(0, 0%, 81%) !important;
+  color:var(--color-light) !important;
   user-select: none;
 }
 .hidden-visibility{
@@ -98,36 +123,36 @@ textarea::-webkit-scrollbar-corner {
 }
 .vertical-input-group .input-group:nth-child(odd) .form-control,
 .vertical-input-group .input-group:nth-child(odd) .form-select {
-  background-color: #1a1e20!important;
+  background-color: var(--color-dark-1)!important;
 }
 
 .vertical-input-group .input-group:nth-child(odd) .form-control:disabled,
 .vertical-input-group .input-group:nth-child(odd) .form-select:disabled {
-  background-color: hsl(204, 4%, 15%)!important;
+  background-color: var(--color-dark-1)!important;
 }
 
 .vertical-input-group .input-group:nth-child(even) .form-control:disabled,
 .vertical-input-group .input-group:nth-child(even) .form-select:disabled {
-  background-color: hsl(206, 4%, 15%)!important;
+  background-color: var(--color-dark-1)!important;
 }
 .vertical-input-group .soft-label {
-  background-color: hsl(200, 10%, 11%) !important;
+  background-color: var(--color-dark-1) !important;
 
 }
 .soft-label {
-  background-color: hsl(210, 11%, 15%) !important;
-  color: hsl(0, 0%, 60%) !important;
+  background-color: var(--color-dark-1) !important;
+  color: var(--color-light) !important;
   border-right-width: 0 !important;
 }
 .vertical-input-group .input-group:nth-child(even) .soft-label {
-background-color: rgb(33, 37, 41) !important;
+background-color: var(--color-dark-1) !important;
 }
 .darkened-label {
-  background-color: rgb(33, 37, 41)!important;
+  background-color: var(--color-dark-1)!important;
   border-right-width: 0!important;
 }
 .vertical-input-group .input-group:nth-child(odd) .darkened-label {
-  background-color: hsl(200, 10%, 11%)!important;
+  background-color: var(--color-dark-1)!important;
 }
 .bi-trash3 {
   /* fill: inherit; */

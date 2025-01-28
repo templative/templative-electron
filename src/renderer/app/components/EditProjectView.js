@@ -13,7 +13,6 @@ import '../App.css';
 import FeedbackPanel from "./Feedback/FeedbackPanel";
 import { RenderingWorkspaceProvider } from "./Render/RenderingWorkspaceProvider";
 import RulesEditor from "./Edit/Viewers/RulesEditor";
-import ComponentsViewer from "./Edit/Viewers/ComponentsViewer/ComponentsViewer";
 
 const { ipcRenderer } = window.require('electron');
 const { channels } = require("../../../shared/constants");

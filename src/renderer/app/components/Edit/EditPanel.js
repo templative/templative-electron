@@ -1,7 +1,6 @@
 import React from "react";
 import TemplativeProjectRenderer from "./FileExplorer/TemplativeProjectRenderer"
 import ArtdataViewer from "./Viewers/ArtdataViewer/ArtdataViewer"
-import ComponentsViewer from "./Viewers/ComponentsViewer/ComponentsViewer"
 import PieceGamedataViewer from "./Viewers/GamedataViewer/PieceGamedataViewer"
 import ComponentGamedataViewer from "./Viewers/GamedataViewer/ComponentGamedataViewer"
 import GameGamedataViewer from "./Viewers/GamedataViewer/GameGamedataViewer";

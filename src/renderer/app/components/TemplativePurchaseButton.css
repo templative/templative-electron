@@ -5,14 +5,14 @@
     width: calc(100% - 1em);
     margin-left: auto;
     margin-right: auto;
-    background-color: hsl(39, 100%, 50%) !important;
-    border-color: orange !important;
-    color: #2b3035 !important;
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: var(--color-dark-3) !important;
     padding: 10px; /* Ensures there's some space inside the button */
 }
 .templative-purchase-button:hover {
-    background-color: hsl(39, 100%, 60%) !important;
-    border-color: hsl(39, 100%, 60%) !important;
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
     cursor: pointer;
 }
 .templative-purchase-lock {

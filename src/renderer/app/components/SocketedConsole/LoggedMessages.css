@@ -7,7 +7,7 @@
 
 .console-messages {
     border-radius: 3px;
-    background-color: #131517;
+    background-color: var(--color-dark-1);
     padding: 0.25em;
     padding-right: 14px;
     overflow-y: scroll !important;
@@ -19,28 +19,28 @@
 .outputMessage {
     font-size: 14px;
     margin-bottom: 0px;
-    color: #cfcfcf;
+    color: var(--color-light);
 }
 .odd-output-child {
-    color: #bbbbbb;
+    color: var(--color-light);
 }
 .output-warning {
-    color: orange;
+    color: var(--color-primary);
 }
 .console-url {
-    color: hsl(180, 100%, 35%);
+    color: blue;
     text-decoration: underline;
 }
 .console-url:hover {
     cursor:pointer;
-    color: hsl(180, 100%, 45%);
+    color: blue;
 }
 .console-filepath {
-    color: hsl(0, 0%, 60%);
+    color: var(--color-light);
     text-decoration: underline;
 }
 .console-filepath:hover {
-    color: hsl(0, 0%, 70%);
+    color: var(--color-light);
     cursor:pointer;
     text-decoration: underline;
 }

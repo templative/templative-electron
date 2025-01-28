@@ -1,5 +1,5 @@
 .leaflet-container {
-    background: #282c34 !important;
+    background: var(--color-dark-2) !important;
 }
 
 .leaflet-tile {
@@ -30,7 +30,7 @@
     font-size: 14px; /* Adjust text size if needed */
 }
 .convention-link, .publisher-link {
-    color:#363680;
+    color:var(--color-primary);
     text-decoration: underline;
 }
 .convention-link:hover, .publisher-link:hover {

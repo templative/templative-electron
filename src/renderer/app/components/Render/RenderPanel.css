@@ -11,30 +11,30 @@
     height: 30px;
 }
 .directory:nth-child(even) {
-    background-color: hsl(224, 13%, 17.5%);
+    background-color: var(--color-dark-1);
 }
 .directory:hover {
-    background-color: #333942;
+    background-color: var(--color-dark-2);
     cursor: pointer;
 }
 .component-selected-for-rendering {
-    background-color: hsl(212, 9%, 27%) !important;
-    border-right:#d9a41d solid 1px !important;
+    background-color: var(--color-dark-3) !important;
+    border-right: var(--color-primary) solid 1px !important;
 }
 .component-selected-for-rendering:hover {
-    background-color: hsl(212, 9%, 47%);
+    background-color: var(--color-gray);
 }
 .testDiv {
     height: 1000px;
     width: 100%;
-    background-color: hsl(0, 0%, 81%);
+    background-color: var(--color-light);
 }
 .directoryPanel {
     position: relative;
     height: 100%;
     overflow-y: hidden;
     overflow-x:hidden;
-    border-right: solid #313540;
+    border-right: solid var(--color-dark-2);
     border-width: 1px;
     padding-top:0.25em;
     padding-right: 0px !important;
@@ -59,7 +59,7 @@
 }
 .headerWrapper {
     width: 100%;
-    border-bottom: solid #313540;
+    border-bottom: solid var(--color-dark-2);
     border-width: 1px;
     padding-left:0.5em !important;
     margin-bottom:0.2em;
@@ -80,15 +80,15 @@
 }
 .renderButton {
     width: calc(100%);
-    border-color:#495357 !important;
-    background-color: orange !important;
-    color:#313540 !important;
+    border-color:var(--color-light) !important;
+    background-color: var(--color-primary) !important;
+    color:var(--color-dark-2) !important;
     font-weight: bold !important;
 }
 .renderButton:hover {
-    background-color: #ffc14e !important;
+    background-color: var(--color-primary) !important;
 }
-.renderedComponentsRow {
+.rendevar(--color-error)ComponentsRow {
     padding: 0.5em 1em 1em 1em;
     overflow-y: scroll;
     height: calc(100% - 2em) !important;
@@ -107,19 +107,19 @@
     width: auto !important; /* Override Bootstrap's width */
 }
 
-.renderedComponent {
-    background-color: #2c303a;
+.rendevar(--color-error)Component {
+    background-color: var(--color-dark-2);
     width: 100%;
     margin-bottom:1em;
     border-radius: 8px;
     /* padding-bottom: 0.5em; */
-    border-color:rgb(49, 53, 64);
+    border-color:var(--color-dark-2);
     border-style: solid;
     border-width: 1px;
 }
 .component-output-header {
     padding: 0.3em;
-    border-bottom-color:rgb(49, 53, 64);
+    border-bottom-color:var(--color-dark-2);
     border-bottom-style: solid;
     border-bottom-width: 1px;
     display: flex;
@@ -136,10 +136,10 @@
     padding: 0.3em;
 }
 .component-progess {
-    background-color: rgb(108, 70, 0);
+    background-color: brown;
     border-radius: 10px;
     font-size: 12px;
-    color:orange;
+    color:var(--color-primary);
     font-weight: bold;
     padding-left:8px; 
     padding-right: 8px;
@@ -166,8 +166,8 @@
     cursor:pointer;
 } */
 .component-progress-completed {
-    background-color: rgb(9, 108, 0);
-    color:rgb(17, 201, 0);
+    background-color: green;
+    color:green;
 }
 .output-image-container {
     position:relative;
@@ -182,7 +182,7 @@
     border-style: solid;
     border-radius: 6px;
     border-width: 1px;
-    border-color: #313540;
+    border-color: var(--color-dark-2);
 }
 
 .output-image-giganto {
@@ -201,23 +201,23 @@
 }
 
 .editable-output-component-title:hover,
-.editable-output-component-title:hover .rendered-component-type,
+.editable-output-component-title:hover .rendevar(--color-error)-component-type,
 .editable-output-component-title:hover .edit-component-output-icon {
     cursor: pointer;
-    color: #ffffff !important;
+    color: var(--color-light) !important;
 }
 .edit-component-output-icon {
     margin-right:6px;
 }
-.rendered-component-title {
+.rendevar(--color-error)-component-title {
     padding-left: 0.25em;
     margin-bottom: 0px;
     font-size: 12px;
     font-weight: bold;
 }
-.rendered-component-type {
+.rendevar(--color-error)-component-type {
     font-size: 12px;
-    color: gray;
+    color: var(--color-gray);
 }
 .output-header-container {
     height: 2em;
@@ -234,24 +234,24 @@
     margin-left: auto;
     font-size: 12px !important;
     margin-top: 1em;
-    color: gray;
+    color: var(--color-gray);
 }
 .output-folder-name {
     font-size: 24px;
     font-weight: bold;
-    color: #EFB521;
+    color: var(--color-primary);
 }
 .output-folder-version-info {
     font-size: 24px;
 }
 .output-folder-component-filter {
     font-size: 24px;
-    color: gray;    
+    color: var(--color-gray);    
 }
 .render-progress-row {
     height: 78px;
     overflow: hidden;
-    border-bottom: solid 1px #313540;
+    border-bottom: solid 1px var(--color-dark-2);
 }
 .render-output-row {
     padding-top: 0.5em;
@@ -262,11 +262,11 @@
     height: 100%;
 }
 .render-progress-bar-outer {
-    background-color: #212529 !important;
+    background-color: var(--color-dark-1) !important;
     margin: 0em 1em 0em 0em;
 }
 .render-progress-bar-inner {
-    background-color: #efb521 !important;
+    background-color: var(--color-primary) !important;
 }
 
 .rotate90 {
@@ -319,7 +319,7 @@
 
 .resize-handle:hover,
 .resize-handle.active {
-    background-color: orange;
+    background-color: var(--color-primary);
     opacity: 0.5;
 }
 
