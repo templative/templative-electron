@@ -119,12 +119,14 @@ export default class RenderPanel extends React.Component {
         )
         
         return <div className='mainBody'>
-            <div className="row render-panel-row">
-                <div className="col-xs-12 col-md-7 col-lg-6 col-xl-3 directoryPanel" 
-                     style={{width: `${this.context.renderControlsColumnWidth}%`}}>
+            <div className="row render-panel-row g-0">
+                <div 
+                    className="col-xs-12 col-md-7 col-lg-6 col-xl-3 render-controls-column" 
+                    style={{width: `${this.context.renderControlsColumnWidth}%`}}
+                >
                     <div className={`resize-handle${this.state.isResizing ? ' active' : ''}`} onMouseDown={this.startResize}></div>
                     <div className="component-filter-container">
-                        <div className="headerWrapper">
+                        <div className="header-wrapper">
                             <p className="resourcesHeader">Composition Filter</p>
                         </div>
                         <div className="component-filter-options">
@@ -155,7 +157,7 @@ export default class RenderPanel extends React.Component {
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
                         outputFolderPath={this.context.selectedOutputDirectory}
                     />
-                </div>        
+                </div>       
             </div>
         </div>
     }

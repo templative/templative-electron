@@ -7,7 +7,7 @@
 
 .console-messages {
     border-radius: 3px;
-    background-color: var(--color-base);
+    background-color: var(--color-content);
     padding: 0.25em;
     padding-right: 14px;
     overflow-y: scroll !important;

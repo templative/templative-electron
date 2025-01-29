@@ -14,7 +14,7 @@
     width: 100%;
     border-color:var(--color-light) !important;
     background-color: var(--color-accent) !important;
-    color:var(--color-surface) !important;
+    color:var(--color-content-surface) !important;
     font-weight: bold !important;
     margin-top:1em;
     margin-bottom: 1em;

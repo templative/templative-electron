@@ -6,7 +6,7 @@
     flex-direction: column-reverse;
 }
 .print-controls-row {
-    background-color: var(--color-surface);
+    background-color: var(--color-content-surface);
     height: 2em;
     padding-top: 4px;
     padding-bottom: 8px;
@@ -39,7 +39,7 @@
 .create-printout-button {
     width: 100%;
     background-color: var(--color-accent) !important;
-    color:var(--color-surface) !important;
+    color:var(--color-content-surface) !important;
     font-weight: bold !important;
 }
 .create-printout-button:hover {

@@ -1,6 +1,5 @@
 .component-type-folder {
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
+    background-color: var(--color-content-surface);
     border-radius: 4px;
     margin-bottom: 0.5em;
 }
@@ -14,7 +13,7 @@
 .component-type-card {
     margin: 0 0.2em 0.5em 0.2em;
     text-align: left !important;
-    background-color: var(--color-base) !important;
+    background-color: var(--color-surface-cover) !important;
     color: var(--color-text)!important;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
@@ -23,13 +22,12 @@
 }
 .component-type-header {
     padding: 0.3em;
-    border-bottom-color:var(--color-surface);
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
+    border-bottom: 1px solid var(--color-border);
     display: flex;
 }
 .component-type-header:hover {
     cursor:pointer;
+    background-color: var(--color-surface-cover-hover);
 }
 .component-type-card > strong {
     font-size: 14px !important;
@@ -38,26 +36,26 @@
     color: var(--color-text) !important;
 }
 .component-type-card:hover { 
-    background-color: var(--color-surface-hover)!important;
+    background-color: var(--color-surface-cover-hover)!important;
     color: var(--color-text)!important;
 }
 .component-type-card:hover .component-type-dimensions { 
     color: var(--color-text)!important;
 }
 .component-type-card.selected-component-type:hover .component-type-dimensions, .component-type-card.selected-component-type .component-type-dimensions { 
-    color: var(--color-text)!important;
+    color: var(--color-content-surface)!important;
 }
 .component-type-card p {
     line-height: 1.6em;
     margin:0;
 }
 .selected-component-type {
-    color: var(--color-text)!important;
+    color: var(--color-content-surface)!important;
     background-color: var(--color-accent) !important;
 }
 
 .selected-component-type:hover {
-    color: var(--color-text)!important;
+    color: var(--color-content-surface)!important;
     background-color: var(--color-accent-hover) !important;
 }
 

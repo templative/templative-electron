@@ -68,7 +68,7 @@ export default class SelectDirectoryInDirectory extends React.Component {
         outputDirectoryDivs = outputDirectoryDivs.reverse()
 
         return <div className="selectable-directories">
-            <div className="headerWrapper">
+            <div className="header-wrapper">
                 <p className="resourcesHeader">{this.props.title}</p>
             </div> 
             <div className="directory-select-options">

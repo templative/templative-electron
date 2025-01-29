@@ -22,7 +22,7 @@
 .map-search-message-output {
     font-size: 14px;
     padding: 6px;
-    background-color: var(--color-base);
+    background-color: var(--color-content);
     overflow-y: scroll;
     border-radius: 6px;
     width: 100%;

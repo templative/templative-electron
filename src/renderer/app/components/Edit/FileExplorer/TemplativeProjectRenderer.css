@@ -2,18 +2,6 @@
     /* overflow-y: scroll; */
     padding-bottom:2em
 }
-.main-game-button-row {
-    padding-left: 1em;
-    padding-right: 0.5em;
-    padding-bottom: 0.15em;
-    height: 1.5em;
-    margin-bottom: 0.5em;
-}
-.main-game-button {
-    margin: 0 1% 0em 0em;
-    color:var(--color-light) !important;
-    width: 24% !important;
-}
 .actual-files {
     border-bottom: 1px solid #3f4450;
 }
@@ -82,4 +70,14 @@
 .content-files-container::-webkit-scrollbar-thumb:hover,
 .git-status-viewer::-webkit-scrollbar-thumb:hover {
     background: #4a4f5a;  /* Even lighter on hover */
+}
+
+.composition-item-name {
+    color: var(--color-accent);
+}
+.disabled-composition-item {
+    color: var(--color-text-muted);
+}
+.disabled-composition-item > .composition-item-name {
+    color: var(--color-text-muted);
 }

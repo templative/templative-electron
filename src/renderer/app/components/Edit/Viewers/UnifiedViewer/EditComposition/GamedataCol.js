@@ -50,9 +50,10 @@ export default function GamedataCol(params) {
 
     return <div className="col gamedata-column" style={{width: `${gamedataColumnWidth}%`}}>
         <div className={`viewer-resize-handle${isResizing ? ' active' : ''}`} onMouseDown={startResize}/>
-        <div className="">
+        <div className="content-container">
             <p 
                 onClick={() => toggleExtension("isStudioExtended")}
+                className="studio-gamedata-header"
             >
                 {isStudioExtended ? extendedChevron : unextendedChevron} 
                 <img 
@@ -60,7 +61,7 @@ export default function GamedataCol(params) {
                     src={studioIcon} 
                     alt="Tab icon"
                 /> 
-                Studio <span className="subfile-filepath">{`${path.parse(studioGamedataFilepath).name}.json`}</span>
+                Studio Content <span className="subfile-filepath">{`${path.parse(studioGamedataFilepath).name}.json`}</span>
             </p>
             {isStudioExtended && 
                 <div className="universal-file-content">
@@ -71,9 +72,10 @@ export default function GamedataCol(params) {
                 </div>
             }
         </div>
-        <div className="">
+        <div className="content-container">
             <p 
                 onClick={() => toggleExtension("isGameExtended")}
+                className="game-gamedata-header"
             >
                 {isGameExtended ? extendedChevron : unextendedChevron} 
                 <img 
@@ -81,7 +83,7 @@ export default function GamedataCol(params) {
                     src={gameIcon} 
                     alt="Tab icon"
                 /> 
-                Game <span className="subfile-filepath">{`${path.parse(gameGamedataFilepath).name}.json`}</span>
+                Game Content <span className="subfile-filepath">{`${path.parse(gameGamedataFilepath).name}.json`}</span>
             </p>
             {isGameExtended && 
                 <div className="universal-file-content">
@@ -92,9 +94,10 @@ export default function GamedataCol(params) {
                 </div>
             }
         </div>
-        <div className="">
+        <div className="content-container">
             <p 
                 onClick={() => toggleExtension("isComponentExtended")}
+                className="component-gamedata-header"
             >
                 {isComponentExtended ? extendedChevron : unextendedChevron} 
                 <img 
@@ -102,7 +105,7 @@ export default function GamedataCol(params) {
                     src={componentIcon} 
                     alt="Tab icon"
                 /> 
-                Component <span className="subfile-filepath">{`${path.parse(componentGamedataFilepath).name}.json`}</span>
+                Component Content <span className="subfile-filepath">{`${path.parse(componentGamedataFilepath).name}.json`}</span>
             </p>
             {isComponentExtended && 
                 <div className="universal-file-content">
@@ -113,9 +116,10 @@ export default function GamedataCol(params) {
                 </div>
             }
         </div>
-        <div className="">
+        <div className="content-container">
             <p 
                 onClick={() => toggleExtension("isPiecesExtended")}
+                className="pieces-gamedata-header"
             >
                 {isPiecesExtended ? extendedChevron : unextendedChevron} 
                 <img 
@@ -123,7 +127,7 @@ export default function GamedataCol(params) {
                     src={pieceIcon} 
                     alt="Tab icon"
                 /> 
-                Piece <span className="subfile-filepath">{`${path.parse(piecesGamedataFilepath).name}.json`}</span>
+                Piece Content <span className="subfile-filepath">{`${path.parse(piecesGamedataFilepath).name}.json`}</span>
             </p>
             {isPiecesExtended && 
                 <div className="universal-file-content">

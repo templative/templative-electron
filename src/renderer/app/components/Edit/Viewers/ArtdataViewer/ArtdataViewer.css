@@ -12,28 +12,17 @@
 .add-button {
     width:100%;
 }
-.add-field-button {
-    background-color: var(--color-surface)!important;
-    border-color: var(--color-gray) !important;
-    border-bottom-width: 2px !important;
-    color: var(--color-light) !important;
-}
-.add-field-button:hover {
-    background-color: var(--color-dark-3)!important;
-
-}
 
 .trash-button, .add-button {
-    padding-top: 0px !important;
-    background-color: var(--color-surface)!important;
+    /* padding-top: 0px !important;
+    background-color: var(--color-content-surface)!important;
     border-color: var(--color-gray) !important;
-    color: var(--color-light) !important;
+    color: var(--color-light) !important; */
 }
 .trash-button:hover, .add-button:hover {
-    background-color: var(--color-dark-3)!important;
 }
 .artdata-crud-control {
-    background-color: var(--color-base) !important;
+    background-color: var(--color-content) !important;
     border-color: var(--color-gray) !important;
     border-bottom-width: 1px !important;
     border-left:none !important;
@@ -46,10 +35,10 @@
     color: rgba(108, 117, 125, 0.65) !important;
 }
 .vertical-input-group .input-group:nth-child(odd) .artdata-crud-control  {
-    background-color: var(--color-base)!important;
+    background-color: var(--color-content)!important;
 }
 .vertical-input-group .input-group:nth-child(odd) .artdata-crud-control:disabled  {
-    background-color: var(--color-base)!important;
+    background-color: var(--color-content)!important;
 }
 .no-left-border {
     border-left-width: 0 !important;
@@ -100,13 +89,13 @@
 }
 
 .scope-icon-container {
-    background-color: var(--color-base) !important;
+    background-color: var(--color-content) !important;
     border-color: var(--color-gray) !important;
     color: var(--color-light) !important;
     border-right: none !important;
 }
 .vertical-input-group .input-group:nth-child(even) .scope-icon-container {
-    background-color: var(--color-base) !important;
+    background-color: var(--color-content) !important;
   }
 .scoped-value-coordinate-input {
     max-width: 6ch !important;

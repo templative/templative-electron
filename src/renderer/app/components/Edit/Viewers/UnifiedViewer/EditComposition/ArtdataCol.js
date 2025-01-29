@@ -65,8 +65,8 @@ export default function ArtdataCol(params) {
             </div>
         }
         const isExtended = extensionState[face];
-        return <div className="" key={face}>
-            <p onClick={() => toggleExtension(face)}>
+        return <div className="content-container" key={face}>
+            <p onClick={() => toggleExtension(face)} className="artdata-header">
                 { isExtended ? extendedChevron : unextendedChevron } <img 
                     className="tab-icon" 
                     src={artdataIcon} 

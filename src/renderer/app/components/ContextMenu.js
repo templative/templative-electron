@@ -27,7 +27,8 @@ class ContextMenu extends React.Component {
             <p 
                 key={command.name} 
                 className="context-menu-item" 
-                onClick={async () => {
+                onClick={async (e) => {
+                    e.stopPropagation();
                     await command.callback();
                     this.props.closeContextMenuCallback();
                 }}
@@ -44,6 +45,7 @@ class ContextMenu extends React.Component {
                     left: `${left}px`,
                     top: `${top}px`,
                 }}
+                onClick={(e) => e.stopPropagation()}
             >
                 {elements}
             </div>

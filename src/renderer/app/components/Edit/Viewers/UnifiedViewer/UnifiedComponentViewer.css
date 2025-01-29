@@ -16,6 +16,7 @@
     overflow-x: hidden;
     flex: 0 0 auto !important;
     max-width: none !important;
+    padding-right:12px;
 }
 
 .artdata-column {
@@ -33,16 +34,31 @@
 .gamedata-column > *:not(.unselecteable-artdata) > p:hover {
     cursor: pointer;
     font-size: 18px;
-    background-color: var(--color-surface);
+    background-color: var(--color-content-surface);
 }
 .unselecteable-artdata > p {
-    color: var(--color-gray);
+    color: var(--color-text-muted);
 }
 .subfile-filepath {
-    color: var(--color-gray);
+    color: var(--color-text-muted);
     font-size:12px;
 }
+.content-container {
+    background-color: var(--color-content-surface);
+    border-radius: 4px;
+    /* Creates a shadow effect on the content container */
+    /* 2px - Horizontal offset of the shadow */
+    /* 2px - Vertical offset of the shadow */
+    /* 4px - Blur radius makes the shadow fuzzy/soft around the edges */
+    /* 4px - Spread radius expands/contracts the shadow's size outward */
+    /* rgba(0, 0, 0, 0.5) - Black shadow color at 50% opacity */
+    box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
+    border: 1px var(--color-border) solid;
+    margin-bottom: 10px;
+}
 .universal-file-content {
+    padding-top: 12px;
+    padding-bottom: 6px;
     padding-left: 6px;
     padding-right: 6px;
 }
@@ -66,4 +82,26 @@
 }
 .quantity-input {
     max-width: 8ch !important;
+}
+.studio-gamedata-header, .game-gamedata-header, .component-gamedata-header, .pieces-gamedata-header, .artdata-header {
+    background-color: var(--color-content-surface);
+    margin-bottom: 0px !important;
+}
+.studio-gamedata-header:hover, .game-gamedata-header:hover, .component-gamedata-header:hover, .pieces-gamedata-header:hover, .artdata-header:hover {
+    background-color: var(--color-content-surface-hover);
+}
+.studio-gamedata-header {
+    border-bottom: 1px hsl(273, 70%, 59%, 0.5) solid !important;
+}
+.game-gamedata-header {
+    border-bottom: 1px hsl(221, 52%, 51%, 0.5) solid !important;
+}
+.component-gamedata-header {
+    border-bottom: 1px hsl(221, 52%, 51%, 0.5) solid !important;
+}
+.pieces-gamedata-header {
+    border-bottom: 1px hsl(175, 70%, 59%, 0.5) solid !important;
+}
+.artdata-header {
+    border-bottom: 1px hsl(39, 77%, 61%, 0.5) solid !important;
 }

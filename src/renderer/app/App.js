@@ -9,7 +9,9 @@ import StartView from "./components/StartView";
 import EditProjectView from "./components/EditProjectView";
 import BootstrapSizeIndicator from "./utility/SizeIndicator";
 
+import './Theme.css';
 import './App.css';
+import './Inputs.css';
 
 import {writeLastOpenedProject, getLastProjectDirectory} from "./utility/SettingsManager"
 const { ipcRenderer } = require('electron');

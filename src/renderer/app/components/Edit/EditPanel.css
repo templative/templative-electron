@@ -3,7 +3,7 @@
     min-width: 100px;
     overflow: hidden;
     height:100%;
-    background-color: var(--color-surface);
+    background-color: var(--color-content-surface);
     border-right: solid var(--color-border);
     border-width: 1px;
     padding-right: 0 !important;
@@ -21,7 +21,7 @@
     overflow: hidden;
 }
 .file-contents {
-    background-color: var(--color-base);
+    background-color: var(--color-content);
     overflow-y: auto;
     overflow-x: hidden;
     flex: 1;
@@ -32,9 +32,8 @@
     /* 0.85em height */
     height: 0.85em;
     margin-bottom: 0.25em;
-    background-color: var(--color-surface);
+    background-color: var(--color-content);
     padding: 0 0 0 0.4em;
-    box-shadow: 0px 5px 5px hsl(220, 13%, 14%);
 }
 .filename-title {
     /* height: 100%; */
@@ -49,8 +48,7 @@
 .render-preview-column {
     position: relative;
     min-width: 100px;
-    background-color: var(--color-surface);
-    border-left: solid var(--color-border);
+    background-color: var(--color-content-surface);
     border-width: 1px;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -75,8 +73,9 @@
 
 .preview-vertical-bar {
     width: 25px !important;
-    background-color: var(--color-base);
-    color: var(--color-light);
+    background-color: var(--color-content-surface);
+    color: var(--color-text);
+    border-right: 1px solid var(--color-border);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,11 +85,11 @@
     transform: rotate(180deg); /* To make text vertical */
 }
 .preview-vertical-bar:hover {
-    background-color: var(--color-base)!important;
+    background-color: var(--color-content-surface-hover)!important;
 }
 .preview-vertical-bar span {
     font-size: 24px;
-    color: var(--color-light);
+    color: var(--color-text);
     transform: rotate(180deg); /* Flip text back to readable orientation */
 }
 .nav-tabs.edit-panel-tabs {

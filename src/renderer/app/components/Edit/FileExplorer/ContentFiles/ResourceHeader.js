@@ -58,7 +58,7 @@ export default class ResourceHeader extends React.Component {
             </svg>
         
         return <div 
-                className="resourcesHeaderWrapper"
+                className="resourcesheader-wrapper"
                 
                 onMouseOver={this.handleMouseOver}
                 onMouseLeave={this.handleMouseOut}

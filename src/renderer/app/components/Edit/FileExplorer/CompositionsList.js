@@ -4,7 +4,6 @@ import componentComposeIcon from "../Icons/componentComposeIcon.svg"
 const fsOld = require('fs');
 const fs = require("fs/promises")
 const path = require("path")
-import "./CompositionsList.css"
 import CompositionItem from "./CompositionItem";
     
 export default class CompositionsList extends React.Component {

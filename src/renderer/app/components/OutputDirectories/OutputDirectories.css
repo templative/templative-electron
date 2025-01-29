@@ -1,22 +1,16 @@
 .selected-output-directory {
-    background-color: var(--color-gray) !important;
+    background-color: var(--color-content-surface-hover) !important;
     border-right:var(--color-accent) solid 1px !important;
 }
-.resourceHeaderWrapper:nth-child(even) {
-    background-color: var(--color-base);
+.resourceheader-wrapper:nth-child(even) {
+    background-color: var(--color-content-surface);
 }
 .render-output-option {
     padding: 0.2em 0.2em 0.2em 0.4em;
     border-right: transparent solid 1px;
 }
-.render-output-option:nth-child(even) {
-    background-color: var(--color-base);
-}
-.render-output-option:nth-child(even) > .render-output-name {
-    color: var(--color-accent) !important;
-}
 .render-output-option:hover {
-    background-color: var(--color-surface);
+    background-color: var(--color-content-surface-hover);
     cursor: pointer;
 }
 .render-output-option p {

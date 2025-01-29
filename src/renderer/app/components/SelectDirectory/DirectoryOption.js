@@ -20,7 +20,7 @@ export default class DirectoryOption extends React.Component {
 
     render() {
         const isSelected = this.props.selectedDirectory === this.props.directory.name
-        return <div className={`resourceHeaderWrapper directory ${isSelected && "selected-directory"}`} 
+        return <div className={`resourceheader-wrapper directory ${isSelected && "selected-directory"}`} 
                 onClick={async () => await this.props.selectDirectoryAsyncCallback(this.props.directory.name)}
                 onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseOut}
             >

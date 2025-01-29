@@ -34,7 +34,7 @@
     width: 100% !important;
     height: calc(100% - 15em) !important;
     overflow-y: scroll;
-    background-color: var(--color-base);
+    background-color: var(--color-content);
 }
 .object-state {
     padding: 6px;

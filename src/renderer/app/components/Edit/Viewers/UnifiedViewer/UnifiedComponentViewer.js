@@ -262,7 +262,7 @@ export default class UnifiedComponentViewer extends React.Component {
                     />
                 }
                 
-                {this.state.loadedSubfiles && 
+                {this.state.loadedSubfiles &&
                     <EditCompositionRow 
                         frontArtdataFilepath={this.state.frontArtdataFilepath}
                         backArtdataFilepath={this.state.backArtdataFilepath}

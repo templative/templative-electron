@@ -8,7 +8,7 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom: 2px solid hsl(215, 14%, 16%);
-    background-color: var(--color-surface);
+    background-color: var(--color-content-surface);
     display: flex;
     flex-direction:column;
 }
@@ -58,19 +58,19 @@
 
 
 .tag-button { 
-    background-color: var(--color-surface)!important;
+    background-color: var(--color-content-surface)!important;
     margin: 0 0.25em 0.25em 0.25em;
     color: var(--color-light)!important;
 }
 .tag-button:hover { 
     background-color: var(--color-light)!important;
-    color: var(--color-surface)!important;
+    color: var(--color-content-surface)!important;
 }
 .selected-tag {
-    color: var(--color-surface)!important;
+    color: var(--color-content-surface)!important;
     background-color: var(--color-accent) !important;
 }
 .selected-tag:hover {
-    color: var(--color-surface)!important;
+    color: var(--color-content-surface)!important;
     background-color: var(--color-accent) !important;
 }

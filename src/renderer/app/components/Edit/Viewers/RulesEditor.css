@@ -8,7 +8,7 @@
     transform: translateY(-5px);
     padding: 0em 0em 0 0em;
     /* overflow-y: scroll !important; */
-    /* background-color: var(--color-base); */
+    /* background-color: var(--color-content); */
     /* padding: 0.5em 0.25em 3em 0.5em; */
 }
 .md-editor { 

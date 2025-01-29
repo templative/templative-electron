@@ -29,6 +29,6 @@
     font-size: 12px;
     margin-right: 1em;
     padding: 1em;
-    background: var(--color-surface);
+    background: var(--color-content-surface);
     border-radius: 24px;
 }

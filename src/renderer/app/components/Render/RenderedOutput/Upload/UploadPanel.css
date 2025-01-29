@@ -56,7 +56,7 @@
 .upload-tgc-button {
     width: 100%;
     background-color: var(--color-accent) !important;
-    color:var(--color-surface) !important;
+    color:var(--color-content-surface) !important;
     font-weight: bold !important;
 }
 .upload-tgc-button:hover {

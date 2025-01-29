@@ -38,7 +38,7 @@
 .componentEditable {
     padding: 0.6em 0.5em 0.15em 0.25em;
     margin-bottom: 1em;
-    background-color: var(--color-surface);
+    background-color: var(--color-content-surface);
     border-radius: 8px;
 }
 .component-left-bumper {
@@ -120,7 +120,7 @@
 }
 
 .auto-complete > p:nth-child(even) {
-    background-color: var(--color-surface);
+    background-color: var(--color-content-surface);
 }
 
 .render-specific-component-button {
@@ -132,7 +132,7 @@
 }
 .render-specific-component-button:hover {
     color: var(--color-light) !important;
-    background-color: var(--color-surface) !important;
+    background-color: var(--color-content-surface) !important;
 }
 .no-components-svg {
     width: 90%;
@@ -252,7 +252,7 @@
     font-weight: 800;;
 }
 .delete-modal .modal-content {
-    background-color: var(--color-surface) !important;
+    background-color: var(--color-content-surface) !important;
     color: var(--color-light) !important;
 }
 

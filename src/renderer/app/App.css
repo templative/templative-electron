@@ -1,49 +1,4 @@
-:root {
-  /* Core palette */
-  --color-accent: hsl(233, 34%, 65%);
-  --color-accent-hover: hsl(233, 33%, 75%);
-  --color-accent-disabled: hsl(233, 34%, 50%);
-  
-  /* Neutrals */
-  --color-gray-100: hsl(220, 14%, 95%); 
-  --color-gray-200: hsl(220, 14%, 85%);
-  --color-gray-300: hsl(220, 14%, 75%);
-  --color-gray-400: hsl(220, 14%, 65%);
-  --color-gray-500: hsl(220, 14%, 50%);
-  --color-gray-600: hsl(220, 14%, 35%);
-  --color-gray-700: hsl(220, 14%, 25%);
-  --color-gray-800: hsl(220, 14%, 15%);
-  --color-gray-900: hsl(220, 14%, 10%); 
 
-  /* Semantic colors */
-  --color-error: hsl(340, 57%, 64%);
-  --color-success: hsl(150, 57%, 64%);
-  --color-warning: hsl(40, 57%, 64%);
-  --color-info: hsl(200, 57%, 64%);
-
-  /* Theme mapping */
-  --color-base: var(--color-gray-900);
-  --color-surface: var(--color-gray-800);
-  --color-surface-hover: var(--color-gray-700);
-  --color-border: var(--color-gray-700);
-  --color-text: var(--color-gray-200);
-  --color-text-muted: var(--color-gray-400);
-
-  /* Input specific */
-  --color-input-background-odd: var(--color-gray-900);
-  --color-input-background-even: var(--color-gray-800);
-
-  /* Bootstrap overrides */
-  --bs-primary: var(--color-accent);
-  --bs-body-bg: var(--color-base);
-  --bs-body-color: var(--color-text);
-  --bs-border-color: var(--color-border);
-  --bs-link-color: var(--color-accent);
-  --bs-link-hover-color: var(--color-accent-hover);
-  --bs-primary-rgb: 123, 134, 192;
-  --bs-border-radius: 0.375rem;
-  --bs-border-width: 1px;
-}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -60,49 +15,28 @@ code {
 
 .App {
   /* text-align: center; */
-  background-color: var(--color-base);
+  background-color: var(--color-content);
   height: 100% !important;
 }
 
-.App input, .App textarea, .App select, .App button, .App .form-check-input {
-  outline: none !important;
-  box-shadow: none !important;
-  border-color: var(--color-border) !important;
-}
-
-.App input:active, .App textarea:active, .App select:active, .App button:active {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-.App input:focus, .App textarea:focus, .App select:focus, .App button:focus, .App .form-check-input:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
 html, body {
   height: 100%;
 }
 html {
   scrollbar-color: var(--color-accent) var(--color-accent-hover);
 }
-.no-right-border {
-  border-right-width: 0px !important;
-}
-.no-left-border {
-  border-left-width: 0px !important;
-}
 
 ::-webkit-scrollbar {
   width: 9px;
   height: 8px;
-  background-color: var(--color-base);
+  background-color: var(--color-content) !important;
 }
 textarea::-webkit-scrollbar-corner {
-  background-color: var(--color-base); /* Color of the corner */
+  background-color: var(--color-content) !important; /* Color of the corner */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-base);
+  background: var(--color-accent) !important;
   border-radius: 5px;
 }
 
@@ -131,91 +65,3 @@ textarea::-webkit-scrollbar-corner {
   cursor: not-allowed !important;
 }
 
-.vertical-input-group .input-group:first-child {
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-}
-.vertical-input-group .input-group:first-child *:not(.form-check-input) {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;    
-}
-.vertical-input-group .input-group:last-child {
-  padding-top: 0 !important;
-}
-.vertical-input-group .input-group:last-child *:not(.form-check-input) {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-.vertical-input-group .input-group:not(:last-child):not(:first-child) {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  margin-bottom:0 !important
-}
-.vertical-input-group .input-group:not(:last-child):not(:first-child) *:not(.form-check-input) {
-  border-radius: 0;
-}  
-.vertical-input-group .input-group:not(:first-child) :not(.form-check-input) {
-  border-top: 0 !important;
-}
-.vertical-input-group .input-group:nth-child(odd) .form-control,
-.vertical-input-group .input-group:nth-child(odd) .form-select {
-  background-color: var(--color-input-background-odd)!important;
-}
-
-.vertical-input-group .input-group:nth-child(odd) .form-control:disabled,
-.vertical-input-group .input-group:nth-child(odd) .form-select:disabled {
-  background-color: var(--color-input-background-odd)!important;
-}
-
-.vertical-input-group .input-group:nth-child(even) .form-control,
-.vertical-input-group .input-group:nth-child(even) .form-select {
-  background-color: var(--color-input-background-even)!important;
-}
-
-.vertical-input-group .input-group:nth-child(odd) .form-control:disabled,
-.vertical-input-group .input-group:nth-child(odd) .form-select:disabled {
-  background-color: var(--color-input-background-odd)!important;
-}
-
-.vertical-input-group .input-group:nth-child(even) .form-control:disabled,
-.vertical-input-group .input-group:nth-child(even) .form-select:disabled {
-  background-color: var(--color-input-background-even)!important;
-}
-
-/* Updated soft-label styles */
-.soft-label {
-  color: var(--color-light) !important;
-  border-color: var(--color-border) !important;
-  border-right-width: 0 !important;
-}
-
-.vertical-input-group .input-group:nth-child(odd) .soft-label {
-  background-color: var(--color-input-background-odd) !important;
-}
-
-.vertical-input-group .input-group:nth-child(even) .soft-label {
-  background-color: var(--color-input-background-even) !important;
-}
-
-.darkened-label {
-  background-color: var(--color-input-background-odd)!important;
-  border-right-width: 0!important;
-}
-.vertical-input-group .input-group:nth-child(odd) .darkened-label {
-  background-color: var(--color-input-background-odd)!important;
-}
-.bi-trash3 {
-  /* fill: inherit; */
-  transition: fill 0.2s ease !important;
-}
-
-button:not(:disabled):hover > .bi-trash3 {
-  fill: var(--color-error);
-}
-
-input, textarea, select {
-  user-select: text;
-}
-.form-check-input {
-  cursor: pointer;
-}
