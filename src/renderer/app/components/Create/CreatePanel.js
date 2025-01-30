@@ -79,6 +79,12 @@ export default class CreatePanel extends React.Component {
             componentAIDescription: this.context.componentAIDescription
         }
         await axios.post(`http://127.0.0.1:8085/component`, data)
+        
+        // Load the updated component-compose.json
+        const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
+        const updatedContent = await TemplativeAccessTools.loadFileContentsAsJson(filepath);
+        await this.props.saveComponentComposeAsync(updatedContent);
+
         this.setState({isProcessing: false})
         var originalType = this.context.selectedComponentType
         this.context.setComponentName("");

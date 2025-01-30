@@ -373,6 +373,7 @@ export default class EditProjectView extends React.Component {
                         componentTypesStockInfo={this.state.componentTypesStockInfo}
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         changeTabsToEditAFileCallback={this.changeTabsToEditAFile}
+                        saveComponentComposeAsync={this.saveComponentComposeAsync}
                     />
                 )}
                 {this.state.currentRoute === 'project' && (
