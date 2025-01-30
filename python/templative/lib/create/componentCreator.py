@@ -73,9 +73,9 @@ async def createCustomComponent(gameRootDirectoryPath, name, type, componentAIDe
     )
     files.extend(artFiles)
 
-    result = await aiArtGenerator.wireUpComponent(componentAIDescription, files)
-    print(result)
-    # await templateComponentProjectUpdater.createOverlayFiles(artOverlaysDirectoryPath, type, componentData, piecesData)
+    # result = await aiArtGenerator.wireUpComponent(componentAIDescription, files)
+    # print(result)
+    await templateComponentProjectUpdater.createOverlayFiles(artOverlaysDirectoryPath, type, {}, [])
 
 async def createStockComponent(gameRootDirectoryPath, name, stockPartId):
     if name == None or name == "":
