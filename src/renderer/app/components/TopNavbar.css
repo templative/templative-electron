@@ -17,6 +17,7 @@
     display: inline-block;
     width: calc(100% - var(--topbar-width)) !important;
     height: 100%;
+    vertical-align: top;
 }
 .mainBody > * {
     display: inherit;
