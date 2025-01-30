@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { extendedChevron, unextendedChevron } from "./Chevrons";
 import StudioGamedataViewer from "../../GamedataViewer/StudioGamedataViewer";
 import GameGamedataViewer from "../../GamedataViewer/GameGamedataViewer";
 import ComponentGamedataViewer from "../../GamedataViewer/ComponentGamedataViewer";
 import PieceGamedataViewer from "../../GamedataViewer/PieceGamedataViewer";
+import ChevronHeader from "./ChevronHeader";
 
 import path from "path";
 import studioIcon from "../../../Icons/studioIcon.svg"
@@ -23,6 +23,7 @@ export default function GamedataCol(params) {
         componentGamedataFilepath,
         piecesGamedataFilepath,
         showPreviewCallback,
+        updateViewedFileUsingTabAsyncCallback,
         handleFileSave,
     } = params;
 
@@ -51,40 +52,38 @@ export default function GamedataCol(params) {
     return <div className="col gamedata-column" style={{width: `${gamedataColumnWidth}%`}}>
         <div className={`viewer-resize-handle${isResizing ? ' active' : ''}`} onMouseDown={startResize}/>
         <div className="content-container">
-            <p 
+            <ChevronHeader 
+                isExtended={isStudioExtended}
                 onClick={() => toggleExtension("isStudioExtended")}
+                icon={studioIcon}
+                title="Studio Content"
+                filetype="STUDIO_GAMEDATA"
+                filepath={studioGamedataFilepath}
                 className="studio-gamedata-header"
-            >
-                {isStudioExtended ? extendedChevron : unextendedChevron} 
-                <img 
-                    className="tab-icon" 
-                    src={studioIcon} 
-                    alt="Tab icon"
-                /> 
-                Studio Content <span className="subfile-filepath">{`${path.parse(studioGamedataFilepath).name}.json`}</span>
-            </p>
+                templativeRootDirectoryPath={templativeRootDirectoryPath}
+                updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
+            />
             {isStudioExtended && 
                 <div className="universal-file-content">
                     <StudioGamedataViewer 
                         filepath={studioGamedataFilepath} 
                         saveFileAsyncCallback={handleFileSave}
-                        />
+                    />
                 </div>
             }
         </div>
         <div className="content-container">
-            <p 
+            <ChevronHeader 
+                isExtended={isGameExtended}
                 onClick={() => toggleExtension("isGameExtended")}
+                icon={gameIcon}
+                title="Game Content"
+                filetype="GAME_GAMEDATA"
+                filepath={gameGamedataFilepath}
+                templativeRootDirectoryPath={templativeRootDirectoryPath}
                 className="game-gamedata-header"
-            >
-                {isGameExtended ? extendedChevron : unextendedChevron} 
-                <img 
-                    className="tab-icon" 
-                    src={gameIcon} 
-                    alt="Tab icon"
-                /> 
-                Game Content <span className="subfile-filepath">{`${path.parse(gameGamedataFilepath).name}.json`}</span>
-            </p>
+                updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
+            />
             {isGameExtended && 
                 <div className="universal-file-content">
                     <GameGamedataViewer 
@@ -95,18 +94,17 @@ export default function GamedataCol(params) {
             }
         </div>
         <div className="content-container">
-            <p 
+            <ChevronHeader 
+                isExtended={isComponentExtended}
                 onClick={() => toggleExtension("isComponentExtended")}
+                icon={componentIcon}
+                title="Component Content"
+                filetype="COMPONENT_GAMEDATA"
+                templativeRootDirectoryPath={templativeRootDirectoryPath}
+                filepath={componentGamedataFilepath}
                 className="component-gamedata-header"
-            >
-                {isComponentExtended ? extendedChevron : unextendedChevron} 
-                <img 
-                    className="tab-icon" 
-                    src={componentIcon} 
-                    alt="Tab icon"
-                /> 
-                Component Content <span className="subfile-filepath">{`${path.parse(componentGamedataFilepath).name}.json`}</span>
-            </p>
+                updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
+            />
             {isComponentExtended && 
                 <div className="universal-file-content">
                     <ComponentGamedataViewer 
@@ -117,29 +115,27 @@ export default function GamedataCol(params) {
             }
         </div>
         <div className="content-container">
-            <p 
+            <ChevronHeader 
+                isExtended={isPiecesExtended}
                 onClick={() => toggleExtension("isPiecesExtended")}
+                icon={pieceIcon}
+                title="Piece Content"
+                filetype="PIECE_GAMEDATA"
+                templativeRootDirectoryPath={templativeRootDirectoryPath}
+                filepath={piecesGamedataFilepath}
                 className="pieces-gamedata-header"
-            >
-                {isPiecesExtended ? extendedChevron : unextendedChevron} 
-                <img 
-                    className="tab-icon" 
-                    src={pieceIcon} 
-                    alt="Tab icon"
-                /> 
-                Piece Content <span className="subfile-filepath">{`${path.parse(piecesGamedataFilepath).name}.json`}</span>
-            </p>
+                updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
+            />
             {isPiecesExtended && 
                 <div className="universal-file-content">
-                
-                <PieceGamedataViewer 
-                    filepath={piecesGamedataFilepath} 
-                    saveFileAsyncCallback={handleFileSave}
-                    showPreviewCallback={showPreviewCallback}
-                    isPreviewEnabled={true}
-                    componentName={componentName}
-                    templativeRootDirectoryPath={templativeRootDirectoryPath}
-                />
+                    <PieceGamedataViewer 
+                        filepath={piecesGamedataFilepath} 
+                        saveFileAsyncCallback={handleFileSave}
+                        showPreviewCallback={showPreviewCallback}
+                        isPreviewEnabled={true}
+                        componentName={componentName}
+                        templativeRootDirectoryPath={templativeRootDirectoryPath}
+                    />
                 </div>                                         
             }
         </div>

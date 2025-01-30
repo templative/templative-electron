@@ -280,7 +280,7 @@ export default class TemplativeProjectRenderer extends React.Component {
             case "PIECE_GAMEDATA":
                 return "[]"
             case "COMPONENT_GAMEDATA":
-                return `{"displayName": "${filename}", "pieceDisplayName": "${filename}" }`
+                return `{"name": "${filename}" }`
             case "ARTDATA":
                 return `{ "name":"${filename}", "templateFilename": "", "overlays": [], "textReplacements": [], "styleUpdates": [] }`
             default:

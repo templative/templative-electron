@@ -3,7 +3,7 @@ import KeyValueInput from "./KeyValueInput"
 import EditableViewerJson from "../EditableViewerJson";
 import "./GamedataViewer.css"
 const ignoredControlGamedataKeys = [
-    "name", "displayName", "quantity", "category", "longDescription", "shortDescription", "maxPlayers", "minPlayers", "minAge", "playTime", "version", "versionName", "coolFactors"
+    "name", "quantity", "category", "longDescription", "shortDescription", "maxPlayers", "minPlayers", "minAge", "playTime", "version", "versionName", "coolFactors"
 ]
 export default class GameGamedataViewer extends EditableViewerJson {   
     state = {
@@ -118,15 +118,8 @@ export default class GameGamedataViewer extends EditableViewerJson {
                 <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
                     <span className="input-group-text input-group-text soft-label">name</span>
                     <input type="text" className="form-control value-field no-left-border" 
-                        onKeyDown={GameGamedataViewer.preventSpaces}
-                        onChange={(event)=> this.updateValue("name", event.target.value.replace(/\s/g, ""))} 
+                        onChange={(event)=> this.updateValue("name", event.target.value.replace(/[<>:"/\\|?*]/g, ""))} 
                         value={this.state.content["name"]}/>
-
-                    <span className="input-group-text input-group-text soft-label">displayName</span>
-                    <input type="text" className="form-control value-field no-left-border" 
-                        onChange={(event)=>this.updateValue("displayName", event.target.value)} 
-                        value={this.state.content["displayName"]}/>
-
                 </div>
                 <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
 
@@ -161,7 +154,6 @@ export default class GameGamedataViewer extends EditableViewerJson {
                 <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
                     <span className="input-group-text input-group-text soft-label">minPlayers</span>
                     <input type="number" className="form-control value-field no-left-border" 
-                        onKeyDown={GameGamedataViewer.preventSpaces}
                         onChange={(event)=> this.updateValue("minPlayers",event.target.value.toString())} 
                         value={this.state.content["minPlayers"]}/>
 
@@ -175,29 +167,20 @@ export default class GameGamedataViewer extends EditableViewerJson {
                 <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
                     <span className="input-group-text input-group-text soft-label">versionName</span>
                     <input type="text" className="form-control value-field no-left-border" 
-                        // onKeyDown={GameGamedataViewer.preventSpaces}
                         onChange={(event)=> this.updateValue("versionName", event.target.value)} 
                         value={this.state.content["versionName"]}/>
-
-                    <span className="input-group-text input-group-text soft-label">version</span>
-                    <input type="text" className="form-control value-field no-left-border" 
-                        onChange={(event)=>this.updateValue("displayName", event.target.value)} 
-                        aria-label="What key to get from the version..." 
-                        value={this.state.content["version"]}/>
                 </div>
             </div>
             <div className="vertical-input-group">
                 <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
                     <span className="input-group-text input-group-text soft-label">shortDescription</span>
                     <input type="text" className="form-control value-field no-left-border" 
-                        // onKeyDown={GameGamedataViewer.preventSpaces}
                         onChange={(event)=> this.updateValue("shortDescription", event.target.value)} 
                         value={this.state.content["shortDescription"]}/>
                 </div>
                 <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
                     <span className="input-group-text input-group-text soft-label">longDescription</span>
                     <textarea rows={5} className="form-control value-field no-left-border" 
-                        // onKeyDown={GameGamedataViewer.preventSpaces}
                         onChange={(event)=> this.updateValue("longDescription",event.target.value)} 
                         value={this.state.content["longDescription"]}/>
                 </div>

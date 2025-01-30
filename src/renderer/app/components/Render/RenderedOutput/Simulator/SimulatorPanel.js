@@ -69,7 +69,7 @@ export default class SimulatorPanel extends React.Component {
             this.setState({isCreating: false, selectedSaveFilepath: selectedSaveExists ? selectedSaveFilepath : undefined})
         }
         catch(e) {
-            console.log(e)
+            console.error(e)
         }
     }
     render() {

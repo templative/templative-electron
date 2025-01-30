@@ -33,18 +33,18 @@ const giveLoginInformation = async () => {
     var token = await getSessionToken()
     var email = await getEmail()
     if (!token || !email) {
-        // console.log("GIVE_NOT_LOGGED_IN because no saved token")
+        // console.warn("GIVE_NOT_LOGGED_IN because no saved token")
         BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_NOT_LOGGED_IN);
         return
     }
     var response = await isTokenValid(email, token)
     if (response.statusCode !== axios.HttpStatusCode.Ok) {
-        // console.log("GIVE_NOT_LOGGED_IN because bad status code checking token validity", response.status)
+        // console.warn("GIVE_NOT_LOGGED_IN because bad status code checking token validity", response.status)
         BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_NOT_LOGGED_IN);
         return
     }
     if (!response.isValid) {
-        // console.log("GIVE_NOT_LOGGED_IN because invalid token, clear session token")
+        // console.warn("GIVE_NOT_LOGGED_IN because invalid token, clear session token")
         await clearSessionToken()
         await clearEmail()
         BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_NOT_LOGGED_IN);
@@ -100,7 +100,6 @@ function grabTokenAndEmail(data) {
 
 async function loginIntoGameCrafter(sso) {
     try {
-        console.log('SSO:', sso);
         const response = await fetch(`https://templative-d1a3033da970.herokuapp.com/the-game-crafter/sso?sso=${sso}`, {
             method: 'GET',
             headers: {

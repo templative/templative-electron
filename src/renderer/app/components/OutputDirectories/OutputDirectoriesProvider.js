@@ -43,7 +43,7 @@ export function OutputDirectoriesProvider({ children, templativeRootDirectoryPat
             setGameCrafterUrl(gameJsonFile.gameCrafterUrl);
 
             const metadata = {
-                gameDisplayName: gameJsonFile.displayName,
+                gameDisplayName: gameJsonFile.name,
                 versionName: gameJsonFile.versionName,
                 versionNumber: gameJsonFile.version,
                 timestamp: parseTimeStamp(gameJsonFile.timestamp),

@@ -48,7 +48,6 @@ export default function ComponentOutputContainer({
         </svg>
     );
 
-    console.log(componentDirectories, imageFiles)
     return (
         <div className="renderedComponent">
             <div className="component-output-header">

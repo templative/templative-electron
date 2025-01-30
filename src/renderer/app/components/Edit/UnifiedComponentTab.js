@@ -44,7 +44,6 @@ export default class UnifiedComponentTab extends React.Component {
             return
         }
         const componentName = this.props.tabbedFile.filepath.split("#")[1]
-        console.log(componentName)
         await this.props.updateViewedFileToUnifiedAsyncCallback(componentName)
     }
     render() {

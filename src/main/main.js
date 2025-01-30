@@ -72,7 +72,6 @@ const initializeApp = async () => {
     // Wait for splash screen to be ready before proceeding
     await new Promise((resolve) => {
         splashScreen.window.webContents.once('did-finish-load', () => {
-            console.log('Splash screen ready');
             resolve();
         });
     });

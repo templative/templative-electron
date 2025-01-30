@@ -443,8 +443,8 @@ export default class EditProjectView extends React.Component {
                 )}
                 {this.state.currentRoute === 'project' && (
                     <ComponentsViewer 
-                        updateViewedFileUsingExplorerAsyncCallback ={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                        updateViewedFileToUnifiedAsyncCallback={this.props.updateViewedFileToUnifiedAsyncCallback}
+                        updateViewedFileUsingExplorerAsyncCallback ={this.updateViewedFileUsingExplorerAsync}
+                        updateViewedFileToUnifiedAsyncCallback={this.updateViewedFileToUnifiedAsync}
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         saveFileAsyncCallback={this.saveFileAsync}
                         componentTypesCustomInfo={this.state.componentTypesCustomInfo}

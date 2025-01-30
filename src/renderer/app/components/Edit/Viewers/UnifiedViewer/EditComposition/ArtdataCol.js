@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { extendedChevron, unextendedChevron } from "./Chevrons";
 import ArtdataViewer from "../../ArtdataViewer/ArtdataViewer";
 import path from "path";
 import artdataIcon from "../../../Icons/artDataIcon.svg";
+import ChevronHeader from "./ChevronHeader";
 
 export default function ArtdataCol(params) {
     const {
@@ -15,7 +15,8 @@ export default function ArtdataCol(params) {
         templativeRootDirectoryPath,
         handleFileSave,
         updateViewedFileUsingExplorerAsyncCallback,
-        availableDataSources
+        availableDataSources,
+        updateViewedFileUsingTabAsyncCallback
     } = params;
     
     const [extensionState, setExtensionState] = useState({
@@ -24,7 +25,6 @@ export default function ArtdataCol(params) {
         DieFace: hasDieFaceArtdata
     });
 
-    
     const artdataFiles = {
         "Front": frontArtdataFilepath,
         "Back": backArtdataFilepath,
@@ -66,17 +66,22 @@ export default function ArtdataCol(params) {
         }
         const isExtended = extensionState[face];
         return <div className="content-container" key={face}>
-            <p onClick={() => toggleExtension(face)} className="artdata-header">
-                { isExtended ? extendedChevron : unextendedChevron } <img 
-                    className="tab-icon" 
-                    src={artdataIcon} 
-                    alt="Tab icon"
-                /> {face} Art Recipe <span className="subfile-filepath">{path.parse(filepath).name}.json</span> </p>
+            <ChevronHeader 
+                isExtended={isExtended}
+                onClick={() => toggleExtension(face)}
+                icon={artdataIcon}
+                title={`${face} Art Recipe`}
+                filepath={filepath}
+                templativeRootDirectoryPath={templativeRootDirectoryPath}
+                updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
+                className="artdata-header"
+            />
             { isExtended && 
                 <div className="universal-file-content">
                     <ArtdataViewer 
                         templativeRootDirectoryPath={templativeRootDirectoryPath}
                         filepath={filepath} 
+                        filetype="ARTDATA"
                         saveFileAsyncCallback={handleFileSave}
                         updateViewedFileUsingExplorerAsyncCallback={updateViewedFileUsingExplorerAsyncCallback}
                         availableDataSources={availableDataSources}

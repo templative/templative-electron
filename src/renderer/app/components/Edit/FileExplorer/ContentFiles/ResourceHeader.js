@@ -29,7 +29,6 @@ export default class ResourceHeader extends React.Component {
         if (event.currentTarget !== event.target) {
             event.stopPropagation()
         }
-        console.log("parent menu click")
         await this.props.toggleExtendedAsyncCallback()
     }
     handleMouseOver = () => {

@@ -276,6 +276,7 @@ export default class UnifiedComponentViewer extends React.Component {
                         componentGamedataFilepath={this.state.componentGamedataFilepath}
                         piecesGamedataFilepath={this.state.piecesGamedataFilepath}
                         showPreviewCallback={this.props.showPreviewCallback}
+                        updateViewedFileUsingTabAsyncCallback={this.props.updateViewedFileUsingTabAsyncCallback}
                     />
                 } 
             </>

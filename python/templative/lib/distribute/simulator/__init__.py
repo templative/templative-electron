@@ -45,7 +45,7 @@ async def convertToTabletopSimulator(producedDirectoryPath, tabletopSimulatorDir
     game = await instructionsLoader.loadGameInstructions(producedDirectoryPath)
     studio = await instructionsLoader.loadStudioInstructions(producedDirectoryPath)
 
-    print(f"Converting {game['displayName']} into a Tabletop Simulator save.")
+    print(f"Converting {game['name']} into a Tabletop Simulator save.")
 
     uniqueGameName = path.basename(producedDirectoryPath)
 

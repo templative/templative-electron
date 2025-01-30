@@ -22,7 +22,7 @@ export default function EditCompositionRow(props) {
         hasBackArtdata,
         hasDieFaceArtdata,
         availableDataSources,
-        updateViewedFileUsingExplorerAsyncCallback,
+        updateViewedFileUsingTabAsyncCallback,
     } = props;
     return (
         <div className="row g-0 unified-viewer">
@@ -38,6 +38,7 @@ export default function EditCompositionRow(props) {
                 piecesGamedataFilepath={piecesGamedataFilepath}
                 showPreviewCallback={showPreviewCallback}
                 handleFileSave={handleFileSave}
+                updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
             />
             <ArtdataRows 
                 frontArtdataFilepath={frontArtdataFilepath}
@@ -48,8 +49,9 @@ export default function EditCompositionRow(props) {
                 hasDieFaceArtdata={hasDieFaceArtdata}
                 templativeRootDirectoryPath={templativeRootDirectoryPath}
                 handleFileSave={handleFileSave}
-                updateViewedFileUsingExplorerAsyncCallback={updateViewedFileUsingExplorerAsyncCallback}
                 availableDataSources={availableDataSources}
+                updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
+                
             />
         </div>
     );

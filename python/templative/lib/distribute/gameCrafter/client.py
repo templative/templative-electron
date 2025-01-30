@@ -18,7 +18,7 @@ async def uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirectory,
         return
     gameCrafterDesignerId = designerId if designerId is not None else studio["gameCrafterDesignerId"]
 
-    print("Uploading %s for %s." % (game["displayName"], studio["displayName"]))
+    print("Uploading %s for %s." % (game["name"], studio["name"]))
 
     uniqueGameName = os.path.basename(outputDirectory)
 

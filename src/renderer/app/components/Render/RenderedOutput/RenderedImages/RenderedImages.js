@@ -16,7 +16,6 @@ const addSpaces = (str) => {
 export default function RenderedImages({ templativeRootDirectoryPath, changeTabsToEditAFileCallback }) {
     const { typeQuantities, groupedComponents } = useContext(OutputDirectoriesContext);
 
-    console.log('RenderedImages - groupedComponents:', groupedComponents); // Debug log
 
     return (
         <React.Fragment>

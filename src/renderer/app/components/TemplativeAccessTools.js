@@ -12,8 +12,6 @@ export default class TemplativeAccessTools {
         }
         var fileContentsBuffer = await fs.readFile(filepath, 'utf8')     
         var fileContents = fileContentsBuffer.toString()
-        // console.log(fileContentsBuffer)
-        // console.log(fileContents)
         if (fileContents.trim() === "") {
             console.error(`${filepath} is invalid json: ${fileContents.trim()}`)
             return undefined;

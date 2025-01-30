@@ -114,7 +114,7 @@ export default class UploadPanel extends React.Component {
             this.setState({isCreating: false, isLoggedIn: uploadStatus.isLoggedIn})
         }
         catch(e) {
-            console.log(e)
+            console.error(e)
         }
     }
 

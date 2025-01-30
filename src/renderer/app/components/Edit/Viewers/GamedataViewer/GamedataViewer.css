@@ -126,3 +126,6 @@ tr {
 .piece-controls-and-keys:has(> .piece-control-input:only-child) {
     margin-bottom: 1em;
 }
+.gamedata-quantity-input {
+    max-width: 8ch;
+}

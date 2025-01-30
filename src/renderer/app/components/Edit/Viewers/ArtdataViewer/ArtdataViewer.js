@@ -22,9 +22,14 @@ const DEFAULT_ARTDATA_ITEMS = {
 }
 
 export default class ArtdataViewer extends EditableViewerJson {  
-    state = {
-        replacementSuggestions: [],
-        templateFileExists: false
+    constructor(props) {
+        super(props);
+        this.updateViewedFileUsingExplorerAsyncCallback = props.updateViewedFileUsingExplorerAsyncCallback;
+        this.state = {
+            ...this.state,
+            replacementSuggestions: [],
+            templateFileExists: false
+        }
     }
 
     static hasFileNameChanged = (prevState, currentState) => {
@@ -32,16 +37,13 @@ export default class ArtdataViewer extends EditableViewerJson {
         const currentHasTemplateFileName = currentState.content !== undefined && currentState.content.templateFilename !== undefined
         if (oldHasTemplateFileName) {
             if (!currentHasTemplateFileName) {
-                // console.log("Old has filename, but current doesn't")
                 return true
             }
             const isTemplateFileNameChanged = currentState.content.templateFilename !== prevState.content.templateFilename
-            // console.log(`Old does, current does, they are ${isTemplateFileNameChanged ? "different" : "the same"}.${currentState.content.templateFilename}${prevState.content.templateFilename}`)
             
             return isTemplateFileNameChanged
         }
         else {
-            // console.log(`Old doesn't, current ${currentHasTemplateFileName ? "does" : "doesn't"}.`)
             return currentHasTemplateFileName
         }
         
@@ -98,7 +100,6 @@ export default class ArtdataViewer extends EditableViewerJson {
     deleteArtdata(artdataType, index) {
         const newArtdataContents = { ...this.state.content }
         newArtdataContents[artdataType].splice(index, 1)
-        console.log(newArtdataContents)
         this.setState({
             content: newArtdataContents
         }, async () => this.autosave())

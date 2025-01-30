@@ -31,7 +31,7 @@ export default class AdPanel extends React.Component {
             actionShot: `file://${imagePath}/actionShot.png`,
             logo: `file://${imagePath}/logo.png`
         };
-        const nameUsed = this.props.isPublish ? this.props.game.displayName : path.basename(this.props.selectedOutputDirectory);
+        const nameUsed = this.props.isPublish ? this.props.game.name : path.basename(this.props.selectedOutputDirectory);
 
         var componentElements = this.props.uploadComponents
             .filter(component => {

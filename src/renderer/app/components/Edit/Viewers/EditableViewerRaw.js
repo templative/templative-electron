@@ -4,11 +4,14 @@ import TemplativeAccessTools from "../../TemplativeAccessTools";
 const { setIntervalAsync, clearIntervalAsync } = require('set-interval-async');
 
 export default class EditableViewerRaw extends React.Component {   
-    state = {
-        content: undefined,
-        hasLoaded: false,
-        filepath: undefined,
-        lastKnownFileContents: undefined
+    constructor(props) {
+        super(props);
+        this.state = {
+            content: undefined,
+            hasLoaded: false,
+            filepath: undefined,
+            lastKnownFileContents: undefined
+        }
     }
 
     saveAsync = async (filepath, content) => {
@@ -16,7 +19,6 @@ export default class EditableViewerRaw extends React.Component {
             return
         }
         await this.props.saveFileAsyncCallback(filepath, content)
-        console.log(`💾 Saved ${filepath}`);
         this.setState({ lastKnownFileContents: content })
     }
 

@@ -60,7 +60,6 @@ export function useComponentProcessing({ doesFileExist }) {
                 }
             }
 
-            console.log('Grouped components:', grouped); // Debug log
             setGroupedComponents(grouped);
             setTypeQuantities(quantities);
 

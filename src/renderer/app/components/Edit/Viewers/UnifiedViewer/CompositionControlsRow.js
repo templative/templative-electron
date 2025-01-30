@@ -40,7 +40,6 @@ export default function CompositionControlsRow(props) {
             language: "en",
             directoryPath: templativeRootDirectoryPath,
         }
-        console.log(request)
         socket.emit('produceGame', request);
         updateRouteCallback("render")
     };

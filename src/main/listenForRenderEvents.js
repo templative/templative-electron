@@ -10,7 +10,6 @@ var openFilepath = async (event, filepath) => {
     const fs = require('fs').promises;
     try {
         shell.openPath(filepath)
-            .then(() => console.log('Folder opened'))
             .catch(err => console.error('Error opening folder:', err));
     } catch (err) {
         console.error('Error checking path:', err);

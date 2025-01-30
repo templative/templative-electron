@@ -103,8 +103,8 @@ export default class CreatePanel extends React.Component {
                 <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
                     <span className="input-group-text soft-label">Composition Name</span>
                     <input type="text" className="form-control no-left-border" 
-                        onChange={(event)=>this.context.setComponentName(event.target.value.replace(/[^a-zA-Z0-9-_]/g, ''))} 
-                        placeholder="nameOfTheComposition" 
+                        onChange={(event)=>this.context.setComponentName(event.target.value.replace(/[<>:"/\\|?*]/g, ''))} 
+                        placeholder="Player Roles or Emperor Token, etc" 
                         value={this.context.componentName}
                     />
 

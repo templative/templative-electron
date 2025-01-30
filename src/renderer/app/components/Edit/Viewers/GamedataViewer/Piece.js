@@ -1,13 +1,12 @@
 import React from "react";
 import KeyValueInput from "./KeyValueInput"
 import "./GamedataViewer.css"
-import PieceActionControls from "./PieceActionControls";
-import PieceNameControls from "./PieceNameControls";
+import PieceControls from "./PieceControls.js";
 var axios = require('axios');
 
 
 const ignoredControlGamedataKeys = [
-    "name", "displayName", "quantity"
+    "name","quantity"
 ]
 
 export default class Piece extends React.Component {   
@@ -69,21 +68,14 @@ export default class Piece extends React.Component {
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}
         >        
-            <PieceNameControls 
+            <PieceControls 
                 piece={this.props.piece}
-                isPreviewEnabled={this.props.isPreviewEnabled}deleteCallback={this.props.deletePieceCallback}
+                isPreviewEnabled={this.props.isPreviewEnabled}
+                deleteCallback={this.props.deletePieceCallback}
                 duplicatePieceByIndexCallback={this.props.duplicatePieceByIndexCallback}
                 previewPieceCallback={this.previewPiece}
                 updateValueCallback={(key, value)=>this.props.updateValueCallback(this.props.index, key, value)}
-                
-            />            
-            <PieceActionControls 
-                piece={this.props.piece}
-                isPreviewEnabled={this.props.isPreviewEnabled}deleteCallback={this.props.deletePieceCallback}
-                duplicatePieceByIndexCallback={this.props.duplicatePieceByIndexCallback}
-                previewPieceCallback={this.previewPiece}
-                updateValueCallback={(key, value)=>this.props.updateValueCallback(this.props.index, key, value)}
-            />
+            />    
             {keyValueRows}
             
         </div>

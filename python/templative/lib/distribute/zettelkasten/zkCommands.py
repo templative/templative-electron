@@ -3,7 +3,7 @@ from os.path import isfile, join
 
 def convertFilesToCsv():
     files = [f for f in listdir(".") if isfile(join(".", f))]
-    csvContents = "name,displayName,quantity,contents\n"
+    csvContents = "name,quantity,contents\n"
 
     for file in files:
         permaNoteFile = open(file, "r")

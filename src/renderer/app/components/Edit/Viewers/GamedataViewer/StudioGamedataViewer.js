@@ -3,7 +3,7 @@ import KeyValueInput from "./KeyValueInput"
 import EditableViewerJson from "../EditableViewerJson";
 import "./GamedataViewer.css"
 const ignoredControlGamedataKeys = [
-    "name", "displayName", "gameCrafterDesignerId"
+    "name"
 ]
 export default class StudioGamedataViewer extends EditableViewerJson {   
     state = {
@@ -118,20 +118,8 @@ export default class StudioGamedataViewer extends EditableViewerJson {
                 <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
                     <span className="input-group-text input-group-text soft-label">name</span>
                     <input type="text" className="form-control value-field no-left-border" 
-                        onKeyDown={StudioGamedataViewer.preventSpaces}
-                        onChange={(event)=> this.updateValue("name", event.target.value.replace(/\s/g, ""))} 
-                        value={this.state.content["name"]}/>
-
-                    <span className="input-group-text input-group-text soft-label">displayName</span>
-                    <input type="text" className="form-control value-field no-left-border" 
-                        onChange={(event)=>this.updateValue("displayName", event.target.value)} 
-                        value={this.state.content["displayName"]}/>                    
-                </div>
-                <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
-                    <span className="input-group-text input-group-text soft-label">gameCrafterDesignerId</span>
-                    <input type="text" className="form-control value-field no-left-border" 
-                        onChange={(event)=> this.updateValue("gameCrafterDesignerId", event.target.value)} 
-                        value={this.state.content["gameCrafterDesignerId"]}/>
+                        onChange={(event)=> this.updateValue("name", event.target.value.replace(/[<>:"/\\|?*]/g, ""))} 
+                        value={this.state.content["name"]}/>     
                 </div>
             </div>
             

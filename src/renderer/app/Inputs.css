@@ -12,6 +12,11 @@
   border-color: var(--color-accent);
   color: var(--color-text);
 }
+.App input::placeholder, .App textarea::placeholder {
+    color: var(--color-text-muted) !important;
+    opacity: 0.7;
+}
+
 
 .input-group .btn:hover {
   background-color: var(--color-accent-hover);
@@ -20,12 +25,14 @@
 .App .btn-primary {
   background-color: var(--color-accent);
   border-color: var(--color-accent);
-  font-weight: 400;
+  color: var(--color-content);
+  font-weight: 500;
   border-width: 1px;
 }
 .App .btn-primary:hover {
   background-color: var(--color-accent-hover);
   border-color: var(--color-accent-hover);
+  color: var(--color-content);
 }
 .App .btn-primary:active {
   background-color: var(--color-accent-hover) ;

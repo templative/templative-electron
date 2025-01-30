@@ -74,14 +74,14 @@ export default class UploadControls extends React.Component {
                     className="input-group input-group-sm upload-checkbox-controls" 
                     data-bs-theme="dark"
                 >
-                    <span className="input-group-text upload-publish-checkbox  clickable-checkbox-label" title="If checked, the displayName of the game will used, instead of the output folder, and the game's store page will be marked Published.." onClick={()=>{ this.props.toggleIsPublishCallback()}}>Mark as Published?</span>
+                    <span className="input-group-text upload-publish-checkbox  clickable-checkbox-label" title="If checked, the name of the game will used, instead of the output folder, and the game's store page will be marked Published.." onClick={()=>{ this.props.toggleIsPublishCallback()}}>Mark as Published?</span>
                     <div className="input-group-text no-left-border">
                         <input 
                             className="form-check-input mt-0" 
                             type="checkbox" 
                             disabled={this.props.isCreating}
                             value=""
-                            title="If checked, the displayName of the game will used, instead of the output folder, and the game's store page will be marked Published.."
+                            title="If checked, the name of the game will used, instead of the output folder, and the game's store page will be marked Published.."
                             onChange={()=>{ this.props.toggleIsPublishCallback()}} 
                             checked={this.props.isPublish} 
                             aria-label="Checkbox for following text input"

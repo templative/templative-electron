@@ -19,8 +19,7 @@ class BackProducer(Producer):
     async def createPiecePreview(previewProperties:PreviewProperties, componentComposition:ComponentComposition, componentData:ComponentData, componentArtdata:ComponentArtdata, fontCache:FontCache):
         componentTypeInfo = COMPONENT_INFO[componentComposition.componentCompose["type"]]
         defaultPieceGamedataBlob = [{ 
-            "name": componentComposition.componentCompose["name"], 
-            "displayName": componentComposition.componentCompose["name"], 
+            "name": componentComposition.componentCompose["name"],
             "quantity": 1, 
         }]
         piecesDataBlob = defaultPieceGamedataBlob
@@ -49,7 +48,6 @@ class BackProducer(Producer):
         componentTypeInfo = COMPONENT_INFO[componentComposition.componentCompose["type"]]
         defaultPieceGamedataBlob = [{ 
             "name": componentComposition.componentCompose["name"], 
-            "displayName": componentComposition.componentCompose["name"], 
             "quantity": 1, 
         }]
         piecesDataBlob = defaultPieceGamedataBlob

@@ -12,8 +12,6 @@ export default class LoginView extends React.Component {
         shell.openExternal(googleOAuthUrl);
     };
     render() {
-        // console.log("Origin:", window.location.origin);
-
         var isLoginValid = emailPattern.test(this.props.email) && strongPasswordPattern.test(this.props.password)
         return <div className="start-view" data-bs-theme="dark">
             <div className="welcome-modal">

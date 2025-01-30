@@ -16,7 +16,6 @@ export default class NewFileInput extends React.Component {
                     // onBlur={() => this.props.submitNewFilenameCallback(this.state.filename)}
                     onKeyDown={async (e) => {
                         if (e.key === 'Enter') {
-                            console.log(this.state.filename)
                             await this.props.submitNewFilenameAsyncCallback(this.state.filename)
                         }
                         if (e.key === "Escape") {

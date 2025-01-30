@@ -11,13 +11,13 @@ For textReplacements array items:
 - Text replacements are commands used replace text in an svg.
 - 'key': What text string to look for in the svg to replace, suhc as name, rules or points.
 - 'scope': Must be one of: piece, component, game, studio, or global. For instance, if the data we are piping in is the health of a piece, then we'd use the piece scope. If the data is true of all peices in the component, we use component. If its true from for the entire game or studio, use game or studio respectively. If we are using a static value, we use global.
-- 'source': The specific property name within the scope to use for the replacement. If the scope is global, then this source value is the static text. Never use "name" as the source for text replacements, instead use "displayName" when referring to the name of the piece.
+- 'source': The specific property name within the scope to use for the replacement. If the scope is global, then this source value is the static text.
 
 For styleUpdates array items:
 - 'id': The id of the element in the svg whose style we are updating
 - 'cssValue': The CSS property to modify (e.g., "fill", "font-size")
 - 'scope': Must be one of: piece, component, game, studio, or global
-- 'source': The specific property name within the scope to use for the style. If its the rules of the envoy, it shouldn't be "envoyRules" it should be "rules". All pieces have name (no spaces), displayName (spaces and proper capitalization), and quantity fields by default.
+- 'source': The specific property name within the scope to use for the style. If its the rules of the envoy, it shouldn't be "envoyRules" it should be "rules". All pieces have name and quantity fields by default.
 
 For overlays array items:
 - 'scope': Must be one of: piece, component, game, studio, or global
@@ -37,8 +37,7 @@ We need to create the fields that the artdata asks for in each of the pieces. Fo
 We create components as makes sense in the descripiton. For instance if the description is about a the people in a football team, we need a piece per member of the team.
 
 1. Each piece must have these properties:
-    - name: no spaces (e.g., "germanyPiece")
-    - displayName: proper capitalization with spaces (e.g., "Germany Piece")
+    - name: (e.g., "Germany Piece")
     - quantity: reasonable number for the game piece
 2. When giving a value for a color, use hexidecimal colors without alpha values, such as #ffaaff.
 3. If a field ends in Image then the value should be the filename (without extension). For instance the key "unitImage" might get the value "soldier". All images should have the same prefix, such as soldierCalvary, soldierPikemen, etc.
@@ -62,12 +61,12 @@ artdata_Back at /Users/oliverbarnum/Documents/git/middle-east/./artdata/citizens
 
 component at /Users/oliverbarnum/Documents/git/middle-east/./gamedata/component/citizens.json
 '''
-{"displayName": "citizens", "pieceDisplayName": "citizens"}
+{"name": "citizens", "citizens"}
 '''
 
 pieces at /Users/oliverbarnum/Documents/git/middle-east/./gamedata/piece/citizens.json
 '''
-[{"name": "citizens", "displayName": "citizens", "quantity": 1}]
+[{"name": "citizens", "quantity": 1}]
 '''
 
 art_Front at /Users/oliverbarnum/Documents/git/middle-east/./art/templates/citizensFront.svg

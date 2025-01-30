@@ -32,7 +32,6 @@ export default function ComponentOutputDirectory({ componentDirectory, imageFile
                     />
                 )}
                 {frontImages.map((image, index) => {
-                    console.log(image)
                     return (
                         <RenderOutputImage 
                             key={`front_${index}`}
