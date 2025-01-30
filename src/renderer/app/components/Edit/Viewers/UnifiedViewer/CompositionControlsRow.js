@@ -23,6 +23,7 @@ export default function CompositionControlsRow(props) {
         quantity, updateQuantity,
         isDisabled, updateIsDisabled,
         componentTypesCustomInfo,
+        componentTypesStockInfo,
         isProcessing,
         updateRouteCallback,
         templativeRootDirectoryPath
@@ -43,17 +44,20 @@ export default function CompositionControlsRow(props) {
         socket.emit('produceGame', request);
         updateRouteCallback("render")
     };
-
+    const isStock = type.startsWith("STOCK_")
     return <div className="row g-0 composition-controls-row">
     <div className="input-group input-group-sm" data-bs-theme="dark">
+        
         <span className="input-group-text soft-label">Quantity</span>
-        <input type="number" className="form-control no-left-border quantity-input" placeholder={0} aria-label="Search" value={quantity} onChange={(e) => updateQuantity(e.target.value)} />
+        <input type="number" className="form-control no-left-border quantity-input" placeholder={0} aria-label="Search" value={quantity} onChange={async (e) => await updateQuantity(e.target.value)} />
+        
         <span className="input-group-text soft-label">Name</span>
-        <input type="text" className="form-control no-left-border" placeholder="Name" aria-label="Search" value={componentName} onChange={(e) => updateComponentName(e.target.value)} />
+        <input type="text" className="form-control no-left-border" placeholder="Name" aria-label="Search" value={componentName} onChange={async (e) => await updateComponentName(e.target.value)} />
+        
         <span className="input-group-text soft-label">Type</span>
-        <select className="form-select no-left-border" value={type} onChange={(e) => updateComponentType(e.target.value)}>
-            {Object.entries(componentTypesCustomInfo).sort((a, b) => a[0].localeCompare(b[0])).map(([key, value]) => (
-                <option key={key} value={key}>{addSpaces(key)}</option>
+        <select className="form-select no-left-border" value={type} onChange={async (e) => await updateComponentType(e.target.value)}>
+            {Object.entries(isStock ? componentTypesStockInfo : componentTypesCustomInfo).sort((a, b) => a[0].localeCompare(b[0])).map(([key, value]) => (
+                <option key={key} value={isStock ?  "STOCK_"+key :key}>{addSpaces(key)}</option>
             ))}
         </select>
 
@@ -65,7 +69,7 @@ export default function CompositionControlsRow(props) {
                 className="form-check-input mt-0" 
                 type="checkbox" 
                 checked={isDisabled}
-                onChange={(e) => updateIsDisabled(e.target.checked)}
+                onChange={async (e) => await updateIsDisabled(e.target.checked)}
                 aria-label="Checkbox to disable component"
             />
         </div>

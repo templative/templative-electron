@@ -159,7 +159,9 @@ export default class EditPanel extends React.Component {
                                 saveFileAsyncCallback={this.props.saveFileAsyncCallback}  
                                 updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}  
                                 componentTypesCustomInfo={this.props.componentTypesCustomInfo}        
+                                componentTypesStockInfo={this.props.componentTypesStockInfo}
                                 updateRouteCallback={this.props.updateRouteCallback}     
+                                updateComponentComposeFieldAsync={this.props.updateComponentComposeFieldAsync}
                             />
                         }
                         {this.props.currentFileType === undefined && 

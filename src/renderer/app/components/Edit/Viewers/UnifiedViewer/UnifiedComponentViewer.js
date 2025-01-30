@@ -25,7 +25,6 @@ export default class UnifiedComponentViewer extends React.Component {
     load = async () => {
         var componentInfo = undefined;
         var compositionIndex = undefined;
-        console.log("this.props.componentCompose", this.props.componentCompose)
         for (let c = 0; c < this.props.componentCompose.length; c++) {
             const component = this.props.componentCompose[c];
             if (component.name !== this.props.componentName) {
@@ -70,7 +69,9 @@ export default class UnifiedComponentViewer extends React.Component {
     
     loadSubfiles = async (componentInfo) => {
         const { templativeRootDirectoryPath,  } = this.props;
-        
+        if (componentInfo.type.includes("STOCK_")) {
+            return;
+        }
         const gameJson = await TemplativeAccessTools.loadFileContentsAsJson(
             path.join(templativeRootDirectoryPath, "game-compose.json")
         );
@@ -130,7 +131,6 @@ export default class UnifiedComponentViewer extends React.Component {
         }
     
         this.setState(loadedContent, async () => await this.loadDataSources());
-        console.log("loadedContent", loadedContent)
     };
     
     toggleExtension = (key) => {
@@ -159,7 +159,6 @@ export default class UnifiedComponentViewer extends React.Component {
                     piece: pieceFields
                 }
             });
-            console.log("this.state.availableDataSources", this.state.availableDataSources)
         } catch (error) {
             console.error("Error loading data sources:", error);
         }
@@ -209,19 +208,15 @@ export default class UnifiedComponentViewer extends React.Component {
         document.addEventListener('mouseup', stopResize);
     }
 
-    updateComponentName = (newName) => {
-        const newContent = [...this.props.componentCompose];
-        newContent[this.state.compositionIndex].name = newName;
-        this.props.saveComponentComposeAsync(newContent);
+    updateComponentName = async (newName) => {
+        await this.props.updateComponentComposeFieldAsync(this.state.compositionIndex, "name", newName);
     }
 
-    updateComponentType = (newType) => {
-        const newContent = [...this.props.componentCompose];
-        newContent[this.state.compositionIndex].type = newType;
-        this.props.saveComponentComposeAsync(newContent);
+    updateComponentType = async (newType) => {
+        await this.props.updateComponentComposeFieldAsync(this.state.compositionIndex, "type", newType);
     }
 
-    updateQuantity = (newQuantity) => {
+    updateQuantity = async (newQuantity) => {
         let quantity = 0;
         if (typeof newQuantity === 'number') {
             quantity = newQuantity;
@@ -229,19 +224,14 @@ export default class UnifiedComponentViewer extends React.Component {
             quantity = parseInt(newQuantity);
         }
         quantity = Math.floor(Math.max(quantity, 0));
-        const newContent = [...this.props.componentCompose];
-        newContent[this.state.compositionIndex].quantity = quantity;
-        this.props.saveComponentComposeAsync(newContent);
+        await this.props.updateComponentComposeFieldAsync(this.state.compositionIndex, "quantity", quantity);
     }
 
-    updateIsDisabled = (newIsDisabled) => {
-        const newContent = [...this.props.componentCompose];
-        newContent[this.state.compositionIndex].disabled = newIsDisabled;
-        this.props.saveComponentComposeAsync(newContent);
+    updateIsDisabled = async (newIsDisabled) => {
+        await this.props.updateComponentComposeFieldAsync(this.state.compositionIndex, "disabled", newIsDisabled);
     }
     
     render() {
-
         return (
             <>
                 {this.state.componentInfo && 
@@ -257,6 +247,7 @@ export default class UnifiedComponentViewer extends React.Component {
                         renderComponent={this.props.renderComponent}
                         isProcessing={this.state.isProcessing}
                         componentTypesCustomInfo={this.props.componentTypesCustomInfo}
+                        componentTypesStockInfo={this.props.componentTypesStockInfo}
                         updateRouteCallback={this.props.updateRouteCallback}
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                     />

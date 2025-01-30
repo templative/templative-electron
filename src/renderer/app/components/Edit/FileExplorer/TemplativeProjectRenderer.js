@@ -8,6 +8,7 @@ import gamedataIcon from "../Icons/gamedataIcon.svg"
 import ResourceHeader from "./ContentFiles/ResourceHeader";
 import GitRow from "./Git/GitRow";
 import CompositionsList from "./CompositionsList";
+import StockItemsList from "./StockItemsList";
 
 const fsOld = require('fs');
 const path = require("path")
@@ -396,6 +397,17 @@ export default class TemplativeProjectRenderer extends React.Component {
                     </div>
                     <div className="compositions">
                         <CompositionsList 
+                            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                            componentCompose={this.props.componentCompose}
+                            saveComponentComposeAsync={this.props.saveComponentComposeAsync}
+                            currentFilepath={this.props.currentFilepath}
+                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                            updateRouteCallback={this.props.updateRouteCallback}
+                            deleteCompositionCallbackAsync={this.deleteComposition}
+                            duplicateCompositionCallbackAsync={this.duplicateComposition}
+                            toggleDisableCompositionCallbackAsync={this.toggleDisableComposition}
+                        />
+                        <StockItemsList 
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                             componentCompose={this.props.componentCompose}
                             saveComponentComposeAsync={this.props.saveComponentComposeAsync}

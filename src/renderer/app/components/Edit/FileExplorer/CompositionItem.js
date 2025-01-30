@@ -30,7 +30,8 @@ export default function CompositionItem(props) {
         updateRouteCallback,
         deleteCompositionCallbackAsync,
         duplicateCompositionCallbackAsync,
-        toggleDisableCompositionCallbackAsync
+        toggleDisableCompositionCallbackAsync,
+        isStock
     } = props;
     const [isHovering, setIsHovering] = useState(false);
     const [isShowingContextMenu, setIsShowingContextMenu] = useState(false);
@@ -76,13 +77,24 @@ export default function CompositionItem(props) {
             language: "en",
             directoryPath: templativeRootDirectoryPath,
         }
-        console.log(request)
         socket.emit('produceGame', request);
         updateRouteCallback("render")
     };
 
+    const commands = [
+        {name: "Open", callback: openFileAsyncCallback},
+        {name: "Open in Default App", callback: openInDefaultAppAsync},
+        {name: "Render", callback: renderCompositionAsyncCallback},
+        {name: "Duplicate", callback: duplicateCompositionCallbackAsync},
+        {name: isDisabled ? "Enable" : "Disable", callback: toggleDisableCompositionCallbackAsync},
+        {name: "Delete", callback: deleteCompositionCallbackAsync},
+    ]
+    const stockCommands = [
+        {name: "Duplicate", callback: duplicateCompositionCallbackAsync},
+        {name: isDisabled ? "Enable" : "Disable", callback: toggleDisableCompositionCallbackAsync},
+        {name: "Delete", callback: deleteCompositionCallbackAsync},
+    ]
     return (
-        
         <div 
             className={`icon-content-file-item-wrapper ${isSelected && "selected-content-file-item-wrapper"}`} 
             onClick={openFileAsyncCallback}
@@ -94,14 +106,7 @@ export default function CompositionItem(props) {
                 <ContextMenu 
                     left={contextCoordinates.x} 
                     top={contextCoordinates.y}
-                    commands={[
-                        {name: "Open", callback: openFileAsyncCallback},
-                        {name: "Open in Default App", callback: openInDefaultAppAsync},
-                        {name: "Render", callback: renderCompositionAsyncCallback},
-                        {name: "Duplicate", callback: duplicateCompositionCallbackAsync},
-                        {name: isDisabled ? "Enable" : "Disable", callback: toggleDisableCompositionCallbackAsync},
-                        {name: "Delete", callback: deleteCompositionCallbackAsync},
-                    ]}
+                    commands={isStock ? stockCommands : commands}
                     closeContextMenuCallback={closeContextMenu}
                 />
             }

@@ -111,7 +111,6 @@ export default class EditProjectView extends React.Component {
         const isSolidifyingItalicsTab = hasItalicsFile && isAddingItalicsFile
         
         if (isSolidifyingItalicsTab) {
-            // console.log("solidifying italics tab", hasItalicsFile, isAddingItalicsFile)
             this.setState({
                 currentFileType: filetype,
                 currentFilepath: filepath,
@@ -123,7 +122,6 @@ export default class EditProjectView extends React.Component {
         const hasTabAlready = EditProjectView.#hasTabAlready(filetype, filepath, this.state.tabbedFiles)
         const isChangingItalicsTab = hasItalicsFile && !hasTabAlready
         if (isChangingItalicsTab) {
-            // console.log("Changing italics tab", hasItalicsFile, isAddingItalicsFile, hasTabAlready)
             this.setState({
                 currentFileType: filetype,
                 currentFilepath: filepath,
@@ -133,7 +131,6 @@ export default class EditProjectView extends React.Component {
             })
             return
         }
-        // console.log("Default tab behavior", hasItalicsFile, isAddingItalicsFile, hasTabAlready)
         this.setState({
             currentFileType: filetype,
             currentFilepath: filepath,
@@ -210,7 +207,6 @@ export default class EditProjectView extends React.Component {
     
     componentDidMount = async () => {
         await axios.get(`http://127.0.0.1:8085/component-info`).then((response) => {
-            // console.log(response.data)    
             this.setState({componentTypesCustomInfo: response.data})
         })
         await axios.get(`http://127.0.0.1:8085/stock-info`).then((response) => {
@@ -219,7 +215,6 @@ export default class EditProjectView extends React.Component {
 
         ipcRenderer.on(channels.GIVE_OPEN_SETTINGS, () => {
             var settingsPath = path.join(require('os').homedir(), "Documents", "Templative", "settings.json")
-            console.log(settingsPath)
             this.changeTabsToEditAFile("SETTINGS", settingsPath)
         });
 
@@ -363,6 +358,76 @@ export default class EditProjectView extends React.Component {
             console.error("Error saving component-compose.json:", error);
         }
     }
+    
+    updateComponentComposeFieldAsync = async (index, field, value) => {
+        try {
+            const updatedContent = [...this.state.componentCompose];
+            if (updatedContent[index] === undefined) {
+                console.warn("Component not found at index:", index);
+                return
+            }
+
+            const oldName = updatedContent[index].name;
+            const isChangingName = field === "name" && value !== oldName;
+            
+            // Update the value in component compose
+            updatedContent[index][field] = value;
+
+            // Only process tab and filepath updates if we're changing a name
+            if (isChangingName) {
+                const newTabbedFiles = this.state.tabbedFiles.map(tab => {
+                    if (tab.filetype !== "UNIFIED_COMPONENT") {
+                        return tab;
+                    }
+                    const [basePath, componentName] = tab.filepath.split("#");
+                    if (componentName === oldName) {
+                        return new TabbedFile(
+                            tab.filetype,
+                            `${basePath}#${value}`,
+                            tab.canClose
+                        );
+                    }
+                    return tab;
+                });
+
+                // Update current filepath if it's a unified component
+                let newCurrentFilepath = this.state.currentFilepath;
+                if (this.state.currentFileType === "UNIFIED_COMPONENT") {
+                    const [basePath, componentName] = this.state.currentFilepath.split("#");
+                    if (componentName === oldName) {
+                        newCurrentFilepath = `${basePath}#${value}`;
+                    }
+                }
+
+                // Update italics tab filepath if it's a unified component
+                let newItalicsTabFilepath = this.state.italicsTabFilepath;
+                if (this.state.italicsTabFilepath?.includes("#")) {
+                    const [basePath, componentName] = this.state.italicsTabFilepath.split("#");
+                    if (componentName === oldName) {
+                        newItalicsTabFilepath = `${basePath}#${value}`;
+                    }
+                }
+
+                // Save and update state with all changes
+                const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
+                await this.saveFileAsync(filepath, JSON.stringify(updatedContent, null, 2));
+
+                this.setState({
+                    componentCompose: updatedContent,
+                    tabbedFiles: newTabbedFiles,
+                    currentFilepath: newCurrentFilepath,
+                    italicsTabFilepath: newItalicsTabFilepath
+                });
+            } else {
+                // For non-name changes, just update component compose
+                const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
+                await this.saveFileAsync(filepath, JSON.stringify(updatedContent, null, 2));
+                this.setState({ componentCompose: updatedContent });
+            }
+        } catch (error) {
+            console.error("Error saving component-compose.json:", error);
+        }
+    }
     render() {
         return <RenderingWorkspaceProvider key={this.props.templativeRootDirectoryPath}>
             <TopNavbar topNavbarItems={TOP_NAVBAR_ITEMS} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
@@ -425,6 +490,7 @@ export default class EditProjectView extends React.Component {
                         updateRouteCallback={this.updateRoute}
                         componentCompose={this.state.componentCompose}
                         saveComponentComposeAsync={this.saveComponentComposeAsync}
+                        updateComponentComposeFieldAsync={this.updateComponentComposeFieldAsync}
                     />
                     )}
 

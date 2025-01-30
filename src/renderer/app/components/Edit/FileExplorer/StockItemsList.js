@@ -1,31 +1,31 @@
 import React, { useState } from "react";
 import ResourceHeader from "./ContentFiles/ResourceHeader";
-import componentComposeIcon from "../Icons/componentComposeIcon.svg"
-const path = require("path")
+import stockIcon from "../Icons/stockIcon.svg"
 import CompositionItem from "./CompositionItem";
+const path = require("path")
 
-const CompositionsList = (props) => {
+const StockItemsList = (props) => {
     const [isExtended, setIsExtended] = useState(true);
     
     const toggleExtendedAsync = () => {
         setIsExtended(prev => !prev);
     }
 
-    const compositions = props.componentCompose
+    const stockItems = props.componentCompose
         .map((composition, index) => ({ ...composition, originalIndex: index }))
-        .filter(composition => !composition.type.includes("STOCK_"));
+        .filter(composition => composition.type.includes("STOCK_"));
     
     return (
         <div className="content-file-list unified-viewer-list">
             <ResourceHeader 
-                iconSource={componentComposeIcon}
-                header="Compositions"
+                iconSource={stockIcon}
+                header="Stock Items"
                 isExtended={isExtended}
                 toggleExtendedAsyncCallback={toggleExtendedAsync}
             />
             {isExtended &&
                 <>
-                    {compositions.map((composition) => 
+                    {stockItems.map((composition) => 
                         <CompositionItem
                             key={composition.name + composition.originalIndex}
                             type={composition.type}
@@ -40,7 +40,7 @@ const CompositionsList = (props) => {
                             deleteCompositionCallbackAsync={() => props.deleteCompositionCallbackAsync(composition.originalIndex)}
                             duplicateCompositionCallbackAsync={() => props.duplicateCompositionCallbackAsync(composition.originalIndex)}
                             toggleDisableCompositionCallbackAsync={() => props.toggleDisableCompositionCallbackAsync(composition.originalIndex)}
-                            isStock={false}
+                            isStock={true}
                         />
                     )}
                 </>
@@ -49,4 +49,4 @@ const CompositionsList = (props) => {
     );
 }
 
-export default CompositionsList;
+export default StockItemsList; 
