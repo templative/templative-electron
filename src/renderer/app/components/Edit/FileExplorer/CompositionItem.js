@@ -78,7 +78,6 @@ export default function CompositionItem(props) {
         }
         console.log(request)
         socket.emit('produceGame', request);
-        await new Promise(resolve => setTimeout(resolve, 125));
         updateRouteCallback("render")
     };
 

@@ -1,69 +1,55 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../Render/RenderPanel.css"
 import "./OutputDirectories.css"
-import TemplativeAccessTools from "../TemplativeAccessTools";
 import RenderOutputOption from "./RenderOutputOption";
+import { OutputDirectoriesContext } from './OutputDirectoriesProvider';
 
-const fsOld = require('fs');
+const RenderOutputOptions = () => {
+    const { 
+        directories, 
+        directoryMetadata, 
+        deleteOutputDirectory,
+        selectedDirectory,
+        setSelectedOutputDirectory 
+    } = useContext(OutputDirectoriesContext);
 
-export default class RenderOutputOptions extends React.Component {   
-    outputFolderWatcher = undefined
-    state = {
-        directories: []
-    }
-    #getOutputDirectoryNames = async () => {
-        this.setState({directories: await TemplativeAccessTools.getOutputDirectoriesAsync(this.props.templativeRootDirectoryPath)})
-    }
-    #stopWatchingBasepath = () => {
-        if (this.outputFolderWatcher === undefined) {
-            return
-        }
-        this.outputFolderWatcher.close();
-        this.outputFolderWatcher = undefined;
-    }
-    #watchBasepathAsync = async () => {
-        this.#stopWatchingBasepath()                
-        this.outputFolderWatcher = fsOld.watch(this.props.templativeRootDirectoryPath, {recursive: true}, async (event, filename) => {
-            // console.log(event, filename)
-            await this.#getOutputDirectoryNames()
+    const handleDelete = async (directory) => {
+        await deleteOutputDirectory(directory);
+    };
+
+    const handleSelect = async (directory) => {
+        await setSelectedOutputDirectory(directory);
+    };
+
+    let outputDirectoryDivs = directories
+        .filter(directory => directoryMetadata[directory.name])
+        .map((directory) => {
+            const metadata = directoryMetadata[directory.name];
+            return <RenderOutputOption 
+                key={directory.name}
+                directory={directory}
+                isSelected={selectedDirectory?.name === directory.name}
+                gameDisplayName={metadata.gameDisplayName}
+                componentFilter={metadata.componentFilter}
+                versionName={metadata.versionName}
+                versionNumber={metadata.versionNumber}
+                timestamp={metadata.timestamp}
+                onSelect={handleSelect}
+                onDelete={handleDelete}
+            />
         })
-            
-        await this.#getOutputDirectoryNames()
-    }
-    componentDidMount = async () => {
-        if (this.props.templativeRootDirectoryPath === undefined) {
-            return
-        }
-        await this.#watchBasepathAsync()        
-    }
-    componentDidUpdate = async (prevProps, prevState) => {
-        if (prevState.directories.length !== this.state.directories.length) {
-            await this.props.selectDirectoryAsyncCallback(this.state.directories[this.state.directories.length-1].name)
-        }
-        if (this.props.templativeRootDirectoryPath === prevProps.templativeRootDirectoryPath) {
-            return
-        }
-        if (this.props.templativeRootDirectoryPath === undefined) {
-            return
-        }
-        await this.#watchBasepathAsync()
-    }
-    componentWillUnmount = () => {
-        this.#stopWatchingBasepath()
-    }
-    render() {        
-        var outputDirectoryDivs = this.state.directories.map((directory) => {
-            return <RenderOutputOption selectedDirectory={this.props.selectedDirectory} directory={directory} key={directory.name} selectDirectoryAsyncCallback={this.props.selectDirectoryAsyncCallback}/>
-        })
-        outputDirectoryDivs = outputDirectoryDivs.reverse()
+    outputDirectoryDivs = outputDirectoryDivs.reverse();
 
-        return <div className="render-output-options-container">
+    return (
+        <div className="render-output-options-container">
             <div className="header-wrapper">
                 <p className="resourcesHeader">Rendered Output</p>
-            </div> 
+            </div>
             <div className="output-folder-options">
                 {outputDirectoryDivs}
             </div>
         </div>
-    }
+    );
 }
+
+export default RenderOutputOptions;

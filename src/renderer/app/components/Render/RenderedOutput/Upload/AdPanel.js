@@ -5,8 +5,6 @@ const {shell} = require('electron')
 const path = require("path")
 const { ipcRenderer } = require('electron');
 import { channels } from "../../../../../../shared/constants"
-const fs = require('fs').promises;
-
 const addSpaces = (str) => {
     return str
         // First specifically handle D4, D6, D8, D10, D12, D20
@@ -24,50 +22,7 @@ const addSpaces = (str) => {
         .trim()
 }
 
-export default class AdPanel extends React.Component {  
-    state = {
-        components: []
-    }
-
-    async loadComponents() {
-        try {
-            const directories = await fs.readdir(this.props.selectedOutputDirectory, { withFileTypes: true });
-            const componentPromises = directories
-                .filter(dirent => dirent.isDirectory())
-                .map(async (dir) => {
-                    const componentPath = path.join(this.props.selectedOutputDirectory, dir.name, 'component.json');
-                    try {
-                        const data = await fs.readFile(componentPath, 'utf8');
-                        return JSON.parse(data);
-                    } catch (err) {
-                        console.warn(`Failed to load component.json from ${componentPath}:`, err);
-                        return null;
-                    }
-                });
-
-            const components = (await Promise.all(componentPromises)).filter(comp => comp !== null);
-            this.setState({ components });
-        } catch (err) {
-            console.error('Error loading components:', err);
-        }
-    }
-
-    componentDidMount() {
-        this.loadComponents();
-    }
-
-    componentDidUpdate(prevProps) {
-        if (prevProps.selectedOutputDirectory !== this.props.selectedOutputDirectory) {
-            this.loadComponents();
-        }
-    }
-
-    openFolder = () => {
-        shell.openPath(path.join(this.props.templativeRootDirectoryPath, "gamecrafter"));
-    }
-    static visitLink = async (link) => {
-        await ipcRenderer.invoke(channels.TO_SERVER_OPEN_URL, link)
-    }
+export default class AdPanel extends React.Component {
     render() {
         const imagePath = `${this.props.templativeRootDirectoryPath}/gamecrafter`;
         const images = {
@@ -78,7 +33,7 @@ export default class AdPanel extends React.Component {
         };
         const nameUsed = this.props.isPublish ? this.props.game.displayName : path.basename(this.props.selectedOutputDirectory);
 
-        var componentElements = this.state.components
+        var componentElements = this.props.uploadComponents
             .filter(component => {
                 return !component.type.startsWith("STOCK_") || this.props.isIncludingStock;
             })
@@ -123,7 +78,7 @@ export default class AdPanel extends React.Component {
                         <button onClick={this.props.editGameJsonCallback} className="btn btn-sm btn-dark d-flex align-items-center gap-2 nowrap">
                             Edit Game Content <img src={gameContentIcon} alt="Game Content Icon" width="16" height="16" />
                         </button>
-                        <button onClick={this.openFolder} className="btn btn-sm btn-dark">
+                        <button onClick={this.props.openFolder} className="btn btn-sm btn-dark">
                             Open Store Page Images Folder <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-up-right" viewBox="0 0 16 16">
                                 <path fillRule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
                             </svg>
@@ -154,7 +109,7 @@ export default class AdPanel extends React.Component {
                                 <div className="detail-badge">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                                         <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
-                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
                                     </svg>
                                     <span>{this.props.game.playTime}</span>
                                 </div>
@@ -231,5 +186,9 @@ export default class AdPanel extends React.Component {
                 </div>
             </div>
         );
+    }
+
+    static visitLink = async (link) => {
+        await ipcRenderer.invoke(channels.TO_SERVER_OPEN_URL, link)
     }
 }

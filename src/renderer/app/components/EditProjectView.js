@@ -12,8 +12,8 @@ import TemplativeAccessTools from "./TemplativeAccessTools";
 import '../App.css';
 import FeedbackPanel from "./Feedback/FeedbackPanel";
 import { RenderingWorkspaceProvider } from "./Render/RenderingWorkspaceProvider";
+import { OutputDirectoriesProvider } from "./OutputDirectories/OutputDirectoriesProvider";
 import RulesEditor from "./Edit/Viewers/RulesEditor";
-
 const { ipcRenderer } = window.require('electron');
 const { channels } = require("../../../shared/constants");
 const path = require("path");
@@ -366,98 +366,100 @@ export default class EditProjectView extends React.Component {
     render() {
         return <RenderingWorkspaceProvider key={this.props.templativeRootDirectoryPath}>
             <TopNavbar topNavbarItems={TOP_NAVBAR_ITEMS} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
-            {this.state.currentRoute === 'create' && (
-                <CreatePanel
-                    componentTypesCustomInfo={this.state.componentTypesCustomInfo}
-                    componentTypesStockInfo={this.state.componentTypesStockInfo}
-                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                    changeTabsToEditAFileCallback={this.changeTabsToEditAFile}
-                />
-            )}
-            {this.state.currentRoute === 'project' && (
-                <ComponentsViewer 
-                    updateViewedFileUsingExplorerAsyncCallback ={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                    updateViewedFileToUnifiedAsyncCallback={this.props.updateViewedFileToUnifiedAsyncCallback}
-                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                    saveFileAsyncCallback={this.saveFileAsync}
-                    componentTypesCustomInfo={this.state.componentTypesCustomInfo}
-                    componentTypesStockInfo={this.state.componentTypesStockInfo}
-                    
-                    componentComposeScollPosition={this.state.componentComposeScollPosition}     
-                    updateComponentComposeScrollPositionCallback={this.updateComponentComposeScrollPosition}         
-                    updateRouteCallback={this.props.updateRouteCallback}
-                />
-            )}
-            {this.state.currentRoute === 'rules' && (
-                <RulesEditor 
-                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                    saveFileAsyncCallback={this.saveFileAsync}
-                />
-            )}
-
-            {this.state.currentRoute === 'edit' && (
-                <EditPanel
-                    componentTypesCustomInfo={this.state.componentTypesCustomInfo}
-                    componentTypesStockInfo={this.state.componentTypesStockInfo}
-                    italicsTabFilepath={this.state.italicsTabFilepath}
-                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                    tabbedFiles={this.state.tabbedFiles}
-                    currentFileType={this.state.currentFileType}
-                    currentFilepath={this.state.currentFilepath}
-                    closeAllTabsButIndexAsyncCallback={this.closeAllTabsButIndexAsync}
-                    closeAllTabsAsyncCallback={this.closeAllTabsAsync}
-                    closeTabsToRightAsyncCallback={this.closeTabsToRightAsync}
-                    closeTabsToLeftAsyncCallback={this.closeTabsToLeftAsync}
-                    closeTabAtIndexAsyncCallback={this.closeTabAtIndexAsync}
-                    clearViewedFileCallback={this.clearViewedFile}
-                    clickIntoFileCallback={this.clickIntoFile}
-                    updateViewedFileUsingTabAsyncCallback={this.updateViewedFileUsingTabAsync}
-                    updateViewedFileUsingExplorerAsyncCallback={this.updateViewedFileUsingExplorerAsync}
-                    updateViewedFileToUnifiedAsyncCallback={this.updateViewedFileToUnifiedAsync}
-                    saveFileAsyncCallback={this.saveFileAsync}
-                    closeTabIfOpenByFilepathCallback={this.closeTabIfOpenByFilepath}
-                    extendedDirectories={this.state.extendedDirectories}
-                    changeExtendedDirectoryAsyncCallback={this.changeExtendedDirectoryAsync}
-                    extendedFileTypes={this.state.extendedFileTypes}
-                    changeExtendedFileTypeAsyncCallback={this.changeExtendedFileTypeAsync}
-                    updateRouteCallback={this.updateRoute}
-                    componentCompose={this.state.componentCompose}
-                    saveComponentComposeAsync={this.saveComponentComposeAsync}
-                />
+            <OutputDirectoriesProvider templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}>
+                {this.state.currentRoute === 'create' && (
+                    <CreatePanel
+                        componentTypesCustomInfo={this.state.componentTypesCustomInfo}
+                        componentTypesStockInfo={this.state.componentTypesStockInfo}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        changeTabsToEditAFileCallback={this.changeTabsToEditAFile}
+                    />
+                )}
+                {this.state.currentRoute === 'project' && (
+                    <ComponentsViewer 
+                        updateViewedFileUsingExplorerAsyncCallback ={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                        updateViewedFileToUnifiedAsyncCallback={this.props.updateViewedFileToUnifiedAsyncCallback}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        saveFileAsyncCallback={this.saveFileAsync}
+                        componentTypesCustomInfo={this.state.componentTypesCustomInfo}
+                        componentTypesStockInfo={this.state.componentTypesStockInfo}
+                        
+                        componentComposeScollPosition={this.state.componentComposeScollPosition}     
+                        updateComponentComposeScrollPositionCallback={this.updateComponentComposeScrollPosition}         
+                        updateRouteCallback={this.props.updateRouteCallback}
+                    />
+                )}
+                {this.state.currentRoute === 'rules' && (
+                    <RulesEditor 
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        saveFileAsyncCallback={this.saveFileAsync}
+                    />
                 )}
 
-            {this.state.currentRoute === 'render' && (
-                <RenderPanel
-                    email={this.props.email}
-                    token={this.props.token}
-                    changeTabsToEditAFileCallback={this.changeTabsToEditAFile}
-                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                    templativeMessages={this.props.templativeMessages}
-                />
-            )}
+                {this.state.currentRoute === 'edit' && (
+                    <EditPanel
+                        componentTypesCustomInfo={this.state.componentTypesCustomInfo}
+                        componentTypesStockInfo={this.state.componentTypesStockInfo}
+                        italicsTabFilepath={this.state.italicsTabFilepath}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        tabbedFiles={this.state.tabbedFiles}
+                        currentFileType={this.state.currentFileType}
+                        currentFilepath={this.state.currentFilepath}
+                        closeAllTabsButIndexAsyncCallback={this.closeAllTabsButIndexAsync}
+                        closeAllTabsAsyncCallback={this.closeAllTabsAsync}
+                        closeTabsToRightAsyncCallback={this.closeTabsToRightAsync}
+                        closeTabsToLeftAsyncCallback={this.closeTabsToLeftAsync}
+                        closeTabAtIndexAsyncCallback={this.closeTabAtIndexAsync}
+                        clearViewedFileCallback={this.clearViewedFile}
+                        clickIntoFileCallback={this.clickIntoFile}
+                        updateViewedFileUsingTabAsyncCallback={this.updateViewedFileUsingTabAsync}
+                        updateViewedFileUsingExplorerAsyncCallback={this.updateViewedFileUsingExplorerAsync}
+                        updateViewedFileToUnifiedAsyncCallback={this.updateViewedFileToUnifiedAsync}
+                        saveFileAsyncCallback={this.saveFileAsync}
+                        closeTabIfOpenByFilepathCallback={this.closeTabIfOpenByFilepath}
+                        extendedDirectories={this.state.extendedDirectories}
+                        changeExtendedDirectoryAsyncCallback={this.changeExtendedDirectoryAsync}
+                        extendedFileTypes={this.state.extendedFileTypes}
+                        changeExtendedFileTypeAsyncCallback={this.changeExtendedFileTypeAsync}
+                        updateRouteCallback={this.updateRoute}
+                        componentCompose={this.state.componentCompose}
+                        saveComponentComposeAsync={this.saveComponentComposeAsync}
+                    />
+                    )}
 
-            {this.state.currentRoute === 'animate' && (
-                <AnimatePanel
-                    email={this.props.email}
-                    token={this.props.token}
-                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                />
-            )}
+                {this.state.currentRoute === 'render' && (
+                    <RenderPanel
+                        email={this.props.email}
+                        token={this.props.token}
+                        changeTabsToEditAFileCallback={this.changeTabsToEditAFile}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        templativeMessages={this.props.templativeMessages}
+                    />
+                )}
 
-            {/* {this.state.currentRoute === 'map' && (
-                <MapPanel
-                    email={this.props.email}
-                    token={this.props.token}
-                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                />
-            )} */}
+                {this.state.currentRoute === 'animate' && (
+                    <AnimatePanel
+                        email={this.props.email}
+                        token={this.props.token}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    />
+                )}
 
-            {this.state.currentRoute === 'feedback' && (
-                <FeedbackPanel
-                    email={this.props.email}
-                    token={this.props.token}
-                />
-            )}
+                {/* {this.state.currentRoute === 'map' && (
+                    <MapPanel
+                        email={this.props.email}
+                        token={this.props.token}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    />
+                )} */}
+
+                {this.state.currentRoute === 'feedback' && (
+                    <FeedbackPanel
+                        email={this.props.email}
+                        token={this.props.token}
+                    />
+                )}
+            </OutputDirectoriesProvider>
         </RenderingWorkspaceProvider>
         
     }

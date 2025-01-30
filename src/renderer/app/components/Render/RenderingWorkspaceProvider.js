@@ -6,9 +6,9 @@ const PostRenderOptions = [
     "Images",
     "Rules",
     "Export to Tabletop Simulator",
-    // "Export to TTP Package",
+    "Export to TTP Package",
     "Create Print & Play",
-    // "Upload to TheGameCrafter",
+    "Upload to TheGameCrafter",
     // "Assemble Animation Library"
 ]
 
