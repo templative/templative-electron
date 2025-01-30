@@ -18,3 +18,24 @@
     margin-bottom:3px;
     margin-right: 0.5em;
 }
+.login-logo {
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.login-logo {
+    animation: float 3s ease-in-out infinite;
+}

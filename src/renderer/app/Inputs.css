@@ -20,6 +20,7 @@
 .App .btn-primary {
   background-color: var(--color-accent);
   border-color: var(--color-accent);
+  font-weight: 400;
   border-width: 1px;
 }
 .App .btn-primary:hover {
@@ -29,6 +30,10 @@
 .App .btn-primary:active {
   background-color: var(--color-accent-hover) ;
   border-color: var(--color-accent-hover);
+}
+.App .btn-primary:disabled {
+  background-color: var(--color-accent-disabled);
+  border-color: var(--color-accent-disabled);
 }
 .App .btn-outline-secondary {
   background-color: var(--color-content-surface);
@@ -44,6 +49,11 @@
   background-color: var(--color-accent);
   border-color: var(--color-accent);
   color: var(--color-content);
+}
+.App .btn-secondary-outline:disabled {
+  background-color: var(--color-content-surface);
+  border-color: var(--color-border);
+  color: var(--color-text-muted);
 }
 
 .App input:active, .App textarea:active, .App select:active, .App button:active {

@@ -9,7 +9,8 @@
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background-color: var(--color-dark-3);
+    background-color: var(--color-content-surface);
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 3em;
     border-radius: 12px;
