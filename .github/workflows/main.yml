@@ -350,7 +350,7 @@ jobs:
       - name: Upload Templative as Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: templative-app
+          name: templative-app-${{ matrix.os }}
           path: ./bin
 
       # - name: Confirm libz.1.dylib
