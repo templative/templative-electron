@@ -45,38 +45,39 @@ export default function CompositionControlsRow(props) {
     };
     const isStock = type.startsWith("STOCK_")
     return <div className="row g-0 composition-controls-row">
-    <div className="input-group input-group-sm" data-bs-theme="dark">
-        
-        <span className="input-group-text soft-label">Quantity</span>
-        <input type="number" className="form-control no-left-border quantity-input" placeholder={0} aria-label="Search" value={quantity} onChange={async (e) => await updateQuantity(e.target.value)} />
-        
-        <span className="input-group-text soft-label">Name</span>
-        <input type="text" className="form-control no-left-border" placeholder="Name" aria-label="Search" value={componentName} onChange={async (e) => await updateComponentName(e.target.value)} />
-        
-        <span className="input-group-text soft-label">Type</span>
-        <select className="form-select no-left-border" value={type} onChange={async (e) => await updateComponentType(e.target.value)}>
-            {Object.entries(isStock ? componentTypesStockInfo : componentTypesCustomInfo).sort((a, b) => a[0].localeCompare(b[0])).map(([key, value]) => (
-                <option key={key} value={isStock ?  "STOCK_"+key :key}>{addSpaces(key)}</option>
-            ))}
-        </select>
-
-        
-
-        <span className="input-group-text soft-label">Disabled</span>
-        <div className="input-group-text no-left-border">
-            <input 
-                className="form-check-input mt-0" 
-                type="checkbox" 
-                checked={isDisabled}
-                onChange={async (e) => await updateIsDisabled(e.target.checked)}
-                aria-label="Checkbox to disable component"
-            />
-        </div>
-
-        <button onClick={renderCompositionAsyncCallback} disabled={isProcessing} className="btn btn-outline-secondary" type="button" title={`Render ${componentName}.`}>
-            {icon} Render Composition
-        </button>
+        <div className="col">
+            <div className="input-group input-group-sm" data-bs-theme="dark">
             
+            <span className="input-group-text soft-label">Quantity</span>
+            <input type="number" className="form-control no-left-border quantity-input" placeholder={0} aria-label="Search" value={quantity} onChange={async (e) => await updateQuantity(e.target.value)} />
+            
+            <span className="input-group-text soft-label">Name</span>
+            <input type="text" className="form-control no-left-border" placeholder="Name" aria-label="Search" value={componentName} onChange={async (e) => await updateComponentName(e.target.value)} />
+            
+            <span className="input-group-text soft-label">Type</span>
+            <select className="form-select no-left-border" value={type} onChange={async (e) => await updateComponentType(e.target.value)}>
+                {Object.entries(isStock ? componentTypesStockInfo : componentTypesCustomInfo).sort((a, b) => a[0].localeCompare(b[0])).map(([key, value]) => (
+                    <option key={key} value={isStock ?  "STOCK_"+key :key}>{addSpaces(key)}</option>
+                ))}
+            </select>
+
+            
+
+            <span className="input-group-text soft-label">Disabled</span>
+            <div className="input-group-text no-left-border">
+                <input 
+                    className="form-check-input mt-0" 
+                    type="checkbox" 
+                    checked={isDisabled}
+                    onChange={async (e) => await updateIsDisabled(e.target.checked)}
+                    aria-label="Checkbox to disable component"
+                />
+            </div>
+
+            <button onClick={renderCompositionAsyncCallback} disabled={isProcessing} className="btn btn-primary" type="button" title={`Render ${componentName}.`}>
+                {icon} Render Composition
+            </button>
+            </div>
+        </div>
     </div>
-</div>
 }

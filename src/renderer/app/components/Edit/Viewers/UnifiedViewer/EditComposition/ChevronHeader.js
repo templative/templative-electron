@@ -12,13 +12,15 @@ const unextendedChevron = <svg xmlns="http://www.w3.org/2000/svg" width="16" hei
 
 export default function ChevronHeader({ 
     isExtended,
-    onClick,
+    onClick=undefined,
     icon,
-    filetype,
+    filetype, 
+    field=undefined,
     title,
     filepath,
     templativeRootDirectoryPath,
     className,
+    updateCompositionFilepathCallback,
     updateViewedFileUsingTabAsyncCallback,
     suffix
 }) {
@@ -40,8 +42,8 @@ export default function ChevronHeader({
         shell.openPath(filepath);
     };
 
-    const handleChooseNewFile = (newFilePath) => {
-        updateViewedFileUsingTabAsyncCallback(filetype, newFilePath);
+    const handleChooseNewFile = async (newFilePath) => {
+        await updateCompositionFilepathCallback(field, newFilePath);
         setShowFileModal(false);
     };
 
@@ -52,13 +54,7 @@ export default function ChevronHeader({
     const filename = shortPath.split('/').pop();
     
     var commands = [
-        {
-            name: `${isExtended ? 'Collapse' : 'Expand'} ${title}`,
-            callback: () => {
-                onClick();
-                closeContextMenu();
-            }
-        },
+        
         {
             name: `Open ${filename}`,
             callback: async () => {
@@ -74,6 +70,15 @@ export default function ChevronHeader({
             }
         },
     ]
+    if (onClick) {
+        commands = [{
+            name: `${isExtended ? 'Collapse' : 'Expand'} ${title}`,
+            callback: () => {
+                onClick();
+                closeContextMenu();
+            }
+        }, ...commands]
+    }
     if (filetype === "ARTDATA" || filetype === "COMPONENT_GAMEDATA" || filetype === "PIECE_GAMEDATA") {
         commands.push({
             name: `Choose Different ${title} File`,

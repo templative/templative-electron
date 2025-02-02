@@ -35,7 +35,7 @@ export default class FeedbackForm extends React.Component {
                     type="submit"
                     disabled={!canPost}
                     onClick={async () => await this.props.uploadFeedbackAsyncCallback()}
-                    className="btn btn-outline-secondary btn-lg btn-block post-button"                            
+                    className="btn btn-outline-primary btn-lg btn-block post-button"                            
                 >
                     Post
                 </button>

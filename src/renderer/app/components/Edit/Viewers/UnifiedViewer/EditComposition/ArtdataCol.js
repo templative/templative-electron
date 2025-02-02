@@ -16,7 +16,8 @@ export default function ArtdataCol(params) {
         handleFileSave,
         updateViewedFileUsingExplorerAsyncCallback,
         availableDataSources,
-        updateViewedFileUsingTabAsyncCallback
+        updateViewedFileUsingTabAsyncCallback,
+        updateCompositionFilepathCallback
     } = params;
     
     const [extensionState, setExtensionState] = useState({
@@ -54,15 +55,17 @@ export default function ArtdataCol(params) {
             return <div className="unselecteable-artdata" key={face}>
                 <ChevronHeader 
                     isExtended={false}
-                    onClick={() => {}}
+                    onClick={undefined}
                     icon={artdataIcon}
                     title={`${face} Art Recipe`}
                     filepath={filepath}
                     filetype="ARTDATA"
+                    field={`artdata${face}Filename`}
                     templativeRootDirectoryPath={templativeRootDirectoryPath}
                     updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
                     className="artdata-header unextendable"
                     suffix="Same as Front Art Recipe"
+                    updateCompositionFilepathCallback={updateCompositionFilepathCallback}
                 />
             </div>
         }

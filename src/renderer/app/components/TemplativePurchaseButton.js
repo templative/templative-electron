@@ -21,7 +21,7 @@ export default class TemplativePurchaseButton extends React.Component {
     render() {
         return <button 
             type="button" 
-            className="btn btn-outline-secondary templative-purchase-button"
+            className="btn btn-outline-primary templative-purchase-button"
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseOut}
         >

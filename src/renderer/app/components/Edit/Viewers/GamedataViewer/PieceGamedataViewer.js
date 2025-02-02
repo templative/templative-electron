@@ -169,7 +169,7 @@ export default class PieceGamedataViewer extends EditableViewerJson {
             <div className="input-group pieces-controls-input-group">
                 <button 
                     onClick={() => this.addPiece()} 
-                    className="btn btn-outline-secondary add-field-button" 
+                    className="btn btn-outline-primary add-field-button" 
                     type="button"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg add-field-plus" viewBox="0 0 16 16">
@@ -180,7 +180,7 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                 {this.state.lockedKey === undefined &&
                     <button 
                         onClick={() => this.addBlankKeyValuePair()} 
-                        className="btn btn-outline-secondary add-field-button" 
+                        className="btn btn-outline-primary add-field-button" 
                         type="button"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg add-field-plus" viewBox="0 0 16 16">

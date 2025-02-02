@@ -25,6 +25,7 @@ export default function GamedataCol(params) {
         showPreviewCallback,
         updateViewedFileUsingTabAsyncCallback,
         handleFileSave,
+        updateCompositionFilepathCallback,
     } = params;
 
     const [isStudioExtended, setIsStudioExtended] = useState(false);
@@ -62,6 +63,7 @@ export default function GamedataCol(params) {
                 className="studio-gamedata-header"
                 templativeRootDirectoryPath={templativeRootDirectoryPath}
                 updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
+                updateCompositionFilepathCallback={updateCompositionFilepathCallback}
             />
             {isStudioExtended && 
                 <div className="universal-file-content">
@@ -83,6 +85,7 @@ export default function GamedataCol(params) {
                 templativeRootDirectoryPath={templativeRootDirectoryPath}
                 className="game-gamedata-header"
                 updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
+                updateCompositionFilepathCallback={updateCompositionFilepathCallback}
             />
             {isGameExtended && 
                 <div className="universal-file-content">
@@ -102,8 +105,10 @@ export default function GamedataCol(params) {
                 filetype="COMPONENT_GAMEDATA"
                 templativeRootDirectoryPath={templativeRootDirectoryPath}
                 filepath={componentGamedataFilepath}
+                field="componentGamedataFilename"
                 className="component-gamedata-header"
                 updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
+                updateCompositionFilepathCallback={updateCompositionFilepathCallback}
             />
             {isComponentExtended && 
                 <div className="universal-file-content">
@@ -123,8 +128,10 @@ export default function GamedataCol(params) {
                 filetype="PIECE_GAMEDATA"
                 templativeRootDirectoryPath={templativeRootDirectoryPath}
                 filepath={piecesGamedataFilepath}
+                field="piecesGamedataFilename"
                 className="pieces-gamedata-header"
                 updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
+                updateCompositionFilepathCallback={updateCompositionFilepathCallback}
             />
             {isPiecesExtended && 
                 <div className="universal-file-content">

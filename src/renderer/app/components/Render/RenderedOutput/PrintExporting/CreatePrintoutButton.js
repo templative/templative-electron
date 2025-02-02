@@ -30,7 +30,7 @@ export default class CreatePrintoutButton extends React.Component {
                 </div> */}
             </div>
             <div className="input-group input-group-sm printout-button-controls " data-bs-theme="dark">
-                <button disabled={this.props.isCreatingPrintout || !this.props.hasOutputDirectoryValue} type="button" className="btn btn-outline-secondary create-printout-button" onClick={() => this.props.createPrintoutCallback()}>{buttonMessage}</button>            
+                <button disabled={this.props.isCreatingPrintout || !this.props.hasOutputDirectoryValue} type="button" className="btn btn-primary create-printout-button" onClick={() => this.props.createPrintoutCallback()}>{buttonMessage}</button>            
             </div>
         </div>
     }

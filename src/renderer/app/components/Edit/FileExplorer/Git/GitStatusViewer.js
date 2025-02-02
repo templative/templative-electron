@@ -450,7 +450,7 @@ export default class GitStatusViewer extends React.Component {
                                 <>
                                     
                                     <button 
-                                        className="btn btn-sm branch-controls behind btn-outline-secondary"
+                                        className="btn btn-sm branch-controls behind btn-outline-primary"
                                         onClick={this.pullChanges}
                                         disabled={!canPull}
                                         title={
@@ -466,7 +466,7 @@ export default class GitStatusViewer extends React.Component {
                                         ↓{this.state.branchStatus.behind}
                                     </button>
                                     <button 
-                                        className="btn btn-sm branch-controls ahead btn-outline-secondary"
+                                        className="btn btn-sm branch-controls ahead btn-outline-primary"
                                         onClick={this.pushChanges}
                                         disabled={!canPush}
                                         title={
@@ -480,7 +480,7 @@ export default class GitStatusViewer extends React.Component {
                                         ↑{this.state.branchStatus.ahead}
                                     </button>
                                     <button 
-                                        className="btn btn-sm branch-controls btn-outline-secondary"
+                                        className="btn btn-sm branch-controls btn-outline-primary"
                                         onClick={this.syncChanges}
                                         title="Sync changes"
                                     >
@@ -493,7 +493,7 @@ export default class GitStatusViewer extends React.Component {
                             )}
                         </div>
                         <button 
-                            className="btn btn-sm branch-controls btn-outline-secondary"
+                            className="btn btn-sm branch-controls btn-outline-primary"
                             onClick={this.handleContextMenu}
                             title="GitHub Options"
                         >
@@ -534,7 +534,7 @@ export default class GitStatusViewer extends React.Component {
                             <button 
                                 onClick={this.state.isRebasing ? this.continueRebase : this.commitChanges}
                                 disabled={isCommitDisabled}
-                                className={`btn btn-outline-secondary commit-button ${this.state.isRebasing && this.state.mergeConflicts.length > 0 ? 'has-conflicts' : ''}`}
+                                className={`btn btn-outline-primary commit-button ${this.state.isRebasing && this.state.mergeConflicts.length > 0 ? 'has-conflicts' : ''}`}
                                 title={this.state.isRebasing && this.state.mergeConflicts.length > 0 
                                     ? "Resolve all conflicts before continuing rebase" 
                                     : this.state.isRebasing 

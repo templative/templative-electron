@@ -63,7 +63,7 @@ export default class UploadControls extends React.Component {
                     </select>
                     <button 
                         type="button" 
-                        className="btn btn-outline-secondary tgc-logout-button" 
+                        className="btn btn-outline-primary tgc-logout-button" 
                         onClick={this.logout}
                         disabled={this.props.isCreating}
                     >
@@ -121,7 +121,7 @@ export default class UploadControls extends React.Component {
                     <button 
                         disabled={!canUpload} 
                         type="button" 
-                        className="btn btn-outline-secondary upload-tgc-button" 
+                        className="btn btn-outline-primary upload-tgc-button" 
                         onClick={async () => await this.props.uploadCallback()}
                     >{buttonMessage}</button>
                 </div>

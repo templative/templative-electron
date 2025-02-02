@@ -11,7 +11,6 @@ const ChooseNewFileModal = ({
     show, 
     onHide, 
     currentFilePath, 
-    possibleFilePaths, 
     filetype,
     templativeRootDirectoryPath,
     onChooseFilePath 
@@ -32,8 +31,9 @@ const ChooseNewFileModal = ({
                 };
                 const field = fields[filetype];
                 const filepath = path.join(templativeRootDirectoryPath, gameCompose[field]);
-                const filepaths = await fs.readdir(filepath);
-                setFiles(filepaths);
+                var filenames = await fs.readdir(filepath);
+                filenames = filenames.map(filename => path.parse(path.join(filepath, filename)).name);
+                setFiles(filenames);
             } catch (error) {
                 console.error('Error loading files:', error);
             }
@@ -47,7 +47,6 @@ const ChooseNewFileModal = ({
     if (!show) return null;
     
     const currentFileTitle = path.relative(templativeRootDirectoryPath, currentFilePath);
-    
     return (
         <div className="modal-overlay" onClick={onHide}>
             <div className="modal-content" onClick={e => e.stopPropagation()}>
@@ -60,7 +59,7 @@ const ChooseNewFileModal = ({
                     <div className="file-list">
                         <select 
                             className="file-option"
-                            onChange={(e) => onChooseFilePath(e.target.value)}
+                            onChange={async (e) => await onChooseFilePath(e.target.value)}
                             value={currentFilePath}
                         >
                             {files.map((filePath, index) => (

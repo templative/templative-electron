@@ -167,6 +167,12 @@ export default class EditPanel extends React.Component {
                         }
                         {this.props.currentFileType === undefined && 
                             <div className="no-file-icon-container">
+                                {/* {["primary", "outline-primary", "secondary", "outline-secondary"].map((className) => 
+                                    <div className="input-group">
+                                        <button className={`btn btn-${className}`}>{className}</button>
+                                        <button className={`btn btn-${className}`} disabled>{className} Disabled</button>
+                                    </div>
+                                )} */}
                                 <img src={noFileIcon} className="no-file-icon"/>
                             </div>
                         }

@@ -231,6 +231,14 @@ export default class UnifiedComponentViewer extends React.Component {
         await this.props.updateComponentComposeFieldAsync(this.state.compositionIndex, "disabled", newIsDisabled);
     }
     
+    updateFile = async (field, filepath) => {
+        await this.props.updateComponentComposeFieldAsync(this.state.compositionIndex, field, filepath);
+        await this.loadSubfiles(this.state.componentInfo);
+        if (field === "componentGamedataFilepath" || field === "piecesGamedataFilepath") {
+            await this.loadDataSources();
+        }
+    }
+    
     render() {
         return (
             <>
@@ -277,6 +285,7 @@ export default class UnifiedComponentViewer extends React.Component {
                         piecesGamedataFilepath={this.state.piecesGamedataFilepath}
                         showPreviewCallback={this.props.showPreviewCallback}
                         updateViewedFileUsingTabAsyncCallback={this.props.updateViewedFileUsingTabAsyncCallback}
+                        updateCompositionFilepathCallback={this.updateFile}
                     />
                 } 
             </>

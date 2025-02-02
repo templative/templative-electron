@@ -23,6 +23,7 @@ export default function EditCompositionRow(props) {
         hasDieFaceArtdata,
         availableDataSources,
         updateViewedFileUsingTabAsyncCallback,
+        updateCompositionFilepathCallback,
     } = props;
     return (
         <div className="row g-0 unified-viewer">
@@ -39,6 +40,7 @@ export default function EditCompositionRow(props) {
                 showPreviewCallback={showPreviewCallback}
                 handleFileSave={handleFileSave}
                 updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
+                updateCompositionFilepathCallback={updateCompositionFilepathCallback}
             />
             <ArtdataRows 
                 frontArtdataFilepath={frontArtdataFilepath}
@@ -51,7 +53,7 @@ export default function EditCompositionRow(props) {
                 handleFileSave={handleFileSave}
                 availableDataSources={availableDataSources}
                 updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
-                
+                updateCompositionFilepathCallback={updateCompositionFilepathCallback}
             />
         </div>
     );

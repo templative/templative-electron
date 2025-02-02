@@ -88,7 +88,7 @@ export default class FeedbackPanel extends React.Component {
             <div className="row feedbackRow">
                 <div className="col-2 past-feedback-col">
                     <button type="button" 
-                        className="btn btn-outline-secondary create-feedback-post-button" 
+                        className="btn btn-outline-primary create-feedback-post-button" 
                         onClick={this.createFeedbackPost}
                         disabled={this.state.feedbackMode===FeedbackMode.POSTING}
                     >

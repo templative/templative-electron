@@ -22,47 +22,6 @@
   background-color: var(--color-accent-hover);
   border-color: var(--color-accent-hover);
 }
-.App .btn-primary {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-content);
-  font-weight: 500;
-  border-width: 1px;
-}
-.App .btn-primary:hover {
-  background-color: var(--color-accent-hover);
-  border-color: var(--color-accent-hover);
-  color: var(--color-content);
-}
-.App .btn-primary:active {
-  background-color: var(--color-accent-hover) !important;
-  border-color: var(--color-accent-hover) !important;
-}
-.App .btn-primary:disabled {
-  background-color: var(--color-accent-disabled);
-  border-color: var(--color-accent-disabled);
-}
-.App .btn-outline-secondary {
-  background-color: var(--color-content-surface);
-  border-color: var(--color-accent) !important;
-  border-width: 1px;
-  color: var(--color-text) !important;
-}
-.App .btn-outline-secondary:hover {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-content);
-}
-.App .btn-outline-secondary:active {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-content);
-}
-.App .btn-secondary-outline:disabled {
-  background-color: var(--color-content-surface);
-  border-color: var(--color-border);
-  color: var(--color-text-muted);
-}
 
 .App input:active, .App textarea:active, .App select:active, .App button:active {
   outline: none !important;
@@ -177,4 +136,107 @@ input, textarea, select {
 }
 .form-check-input {
   cursor: pointer;
+}
+.App .btn-primary {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-content);
+  font-weight: bold;
+}
+.App .btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  color: var(--color-content);
+}
+.App .btn-primary:active {
+  background-color: var(--color-accent-hover) !important;
+  border-color: var(--color-accent-hover) !important;
+  color: var(--color-content) !important;
+}
+.App .btn-primary:disabled {
+  background-color: var(--color-accent-disabled);
+  border-color: var(--color-accent-disabled);
+}
+
+.App .btn-outline-primary {
+  background-color: var(--color-content-surface);
+  border-color: var(--color-accent) !important;
+  color: var(--color-accent);
+}
+
+.App .btn-outline-primary:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  color: var(--color-content);
+}
+
+.App .btn-outline-primary:active {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-content) !important;
+}
+
+.App .btn-outline-primary:disabled {
+  background-color: var(--color-content-surface);
+  border-color: var(--color-accent-disabled);
+  color: var(--color-accent-disabled);
+}
+
+.App .btn-secondary {
+  background-color: var(--color-surface-cover);
+  border-color: var(--color-surface-cover);
+  color: var(--color-text);
+}
+
+.App .btn-secondary:hover {
+  background-color: var(--color-surface-cover-hover);
+  border-color: var(--color-surface-cover-hover);
+  color: var(--color-text);
+}
+
+.App .btn-secondary:active {
+  background-color: var(--color-surface-cover) !important;
+  border-color: var(--color-surface-cover) !important;
+  color: var(--color-text) !important;
+}
+
+.App .btn-secondary:disabled {
+  background-color: var(--color-content);
+  border-color: var(--color-border);
+  color: var(--color-text-muted);
+}
+.App .btn-outline-secondary {
+  background-color: var(--color-content);
+  border-color: var(--color-surface-cover);
+  color: var(--color-text);
+}
+.App .btn-outline-secondary:hover {
+  background-color: var(--color-surface-cover-hover);
+  border-color: var(--color-surface-cover-hover);
+  color: var(--color-text);
+}
+.App .btn-outline-secondary:active {
+  background-color: var(--color-surface-cover) !important;
+  border-color: var(--color-surface-cover) !important;
+  color: var(--color-text) !important;
+}
+.App .btn-secondary-outline:disabled {
+  background-color: var(--color-content);
+  border-color: var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.App .form-check-input:checked {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+}
+
+.App .form-check-input:checked:focus {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+}
+
+.App .form-check-input:checked:hover {
+  background-color: var(--color-accent-hover) !important;
+  border-color: var(--color-accent-hover) !important;
 }

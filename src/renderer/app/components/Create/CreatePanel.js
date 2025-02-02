@@ -110,7 +110,7 @@ export default class CreatePanel extends React.Component {
 
                     <button 
                         disabled={isCreateButtonDisabled}
-                        className="btn btn-outline-secondary create-component-button" type="button" id="button-addon1"
+                        className="btn btn-outline-primary create-component-button" type="button" id="button-addon1"
                         onClick={()=>this.createComponent()}
                     >
                         { this.state.isProcessing && <span className="spinner-border spinner-border-sm creating-spinner"></span>}
