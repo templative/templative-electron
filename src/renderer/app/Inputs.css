@@ -35,8 +35,8 @@
   color: var(--color-content);
 }
 .App .btn-primary:active {
-  background-color: var(--color-accent-hover) ;
-  border-color: var(--color-accent-hover);
+  background-color: var(--color-accent-hover) !important;
+  border-color: var(--color-accent-hover) !important;
 }
 .App .btn-primary:disabled {
   background-color: var(--color-accent-disabled);
@@ -44,8 +44,9 @@
 }
 .App .btn-outline-secondary {
   background-color: var(--color-content-surface);
-  border-color: var(--color-border);
+  border-color: var(--color-accent) !important;
   border-width: 1px;
+  color: var(--color-text) !important;
 }
 .App .btn-outline-secondary:hover {
   background-color: var(--color-accent);

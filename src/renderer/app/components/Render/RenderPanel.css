@@ -74,15 +74,8 @@
     border-top-left-radius: 0px !important;
     border-top-right-radius: 0px !important;
 }
-.renderButton {
+.render-button {
     width: calc(100%);
-    border-color:var(--color-light) !important;
-    background-color: var(--color-accent) !important;
-    color:var(--color-content-surface) !important;
-    font-weight: bold !important;
-}
-.renderButton:hover {
-    background-color: var(--color-accent) !important;
 }
 .error-components-row {
     padding: 0.5em 1em 1em 1em;
