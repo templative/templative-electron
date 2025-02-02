@@ -105,3 +105,10 @@
 .artdata-header {
     border-bottom: 1px hsl(39, 77%, 61%, 0.5) solid !important;
 }
+.artdata-header:hover > .subfile-filepath,
+.pieces-gamedata-header:hover > .subfile-filepath,
+.studio-gamedata-header:hover > .subfile-filepath,
+.game-gamedata-header:hover > .subfile-filepath,
+.component-gamedata-header:hover > .subfile-filepath {
+    color: var(--color-text);
+}

@@ -55,17 +55,19 @@
 .add-text-replacement-suggestion-button {
     font-size:12px !important;
     border-radius: 32px !important;
-    background-color: var(--color-dark-3)!important;
-    border-color: var(--color-gray) !important;
+    background-color: var(--color-content)!important;
+    color: var(--color-text) !important;
+    border-color: var(--color-border) !important;
     margin-right: 0.25em;
 }
 .go-to-template-button {
     color: var(--color-light) !important;
-    background-color: var(--color-dark-3) !important;
-    border-color: var(--color-gray) !important;
+    background-color: var(--color-content) !important;
+    border-color: var(--color-border) !important;
+    color: var(--color-text) !important;
 }
 .go-to-template-button:hover {
-    background-color: var(--color-dark-3) !important;
+    background-color: var(--color-content-surface) !important;
 }
 
 .text-replacement-debugging-label {

@@ -51,17 +51,19 @@ export default function ArtdataCol(params) {
             return <div key={face}/>
         }
         if (face === "Back" && (backArtdataFilepath === frontArtdataFilepath)) {
-            const rightChevron = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right" viewBox="0 0 16 16">
-                <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-            </svg>
             return <div className="unselecteable-artdata" key={face}>
-                <p>
-                    {rightChevron} <img 
-                        className="tab-icon" 
-                        src={artdataIcon} 
-                        alt="Tab icon"
-                    /> {face} Art Recipe <span className="subfile-filepath">Same as Front Art Recipe</span>
-                </p>
+                <ChevronHeader 
+                    isExtended={false}
+                    onClick={() => {}}
+                    icon={artdataIcon}
+                    title={`${face} Art Recipe`}
+                    filepath={filepath}
+                    filetype="ARTDATA"
+                    templativeRootDirectoryPath={templativeRootDirectoryPath}
+                    updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
+                    className="artdata-header unextendable"
+                    suffix="Same as Front Art Recipe"
+                />
             </div>
         }
         const isExtended = extensionState[face];
@@ -72,6 +74,7 @@ export default function ArtdataCol(params) {
                 icon={artdataIcon}
                 title={`${face} Art Recipe`}
                 filepath={filepath}
+                filetype="ARTDATA"
                 templativeRootDirectoryPath={templativeRootDirectoryPath}
                 updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
                 className="artdata-header"
