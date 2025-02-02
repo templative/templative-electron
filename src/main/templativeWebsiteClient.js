@@ -19,6 +19,28 @@ const verifyCredentials = async (email, password) => {
             return { statusCode: error.response ? error.response.status : 500, token: null };
         }
 }
+
+const loginIntoGameCrafter = async (sso) => {
+    try {
+        const response = await axios.get(`${baseurl}/the-game-crafter/sso`, {
+            params: { sso },
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (!response.data || response.status !== 200) {
+            console.error('Failed to login into Game Crafter:', response.status);
+            throw new Error('Failed to login into Game Crafter');
+        }
+
+        return response.data;
+    } catch (error) {
+        console.error('Error logging into Game Crafter:', error);
+        throw error;
+    }
+}
+
 const verifyCredentialsGoogle = async (token) => {
     try {
         var response = await axios.post(`${baseurl}/login/google`, { token: token })
@@ -57,5 +79,5 @@ const isTokenValid = async (email, token) => {
     }
 }
 module.exports = {
-    verifyCredentials, isTokenValid, verifyCredentialsGoogle
+    verifyCredentials, isTokenValid, verifyCredentialsGoogle, loginIntoGameCrafter
 }

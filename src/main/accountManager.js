@@ -3,12 +3,12 @@ const axios = require("axios");
 const os = require("os");
 const {  shell, BrowserWindow,BrowserView, app } = require('electron')
 const { channels } = require("../shared/constants");
-const { verifyCredentials, isTokenValid, verifyCredentialsGoogle } = require("./templativeWebsiteClient")
+const { verifyCredentials, isTokenValid, verifyCredentialsGoogle, loginIntoGameCrafter } = require("./templativeWebsiteClient")
 const { clearSessionToken, clearEmail, saveSessionToken, saveEmail, getSessionToken, getEmail, getTgcSession, saveTgcSession, clearTgcSession, getGithubToken, saveGithubToken, clearGithubToken } = require("./sessionStore")
 let mainWindow;
 
 const goToAccount = async(event, args) => {
-    shell.openExternal("https://api.templative.net/");
+    shell.openExternal("https://templative.net/");
 }
 const giveLogout = async (event, args) => {
     await clearSessionToken()
@@ -66,23 +66,37 @@ function setupOauthListener(window) {
         app.setAsDefaultProtocolClient('templative');
     }
 
+    // Ensure we only have one instance of the app running
     const gotTheLock = app.requestSingleInstanceLock();
 
     if (!gotTheLock) {
+        // If we can't get the lock, focus the existing window and quit this instance
         app.quit();
     } else {
         app.on('second-instance', async (event, commandLine, workingDirectory) => {
+            // If a second instance is launched, focus the main window
             if (mainWindow) {
-                if (mainWindow.isMinimized()) mainWindow.restore();
+                if (mainWindow.isMinimized()) {
+                    mainWindow.restore();
+                }
                 mainWindow.focus();
+                
+                // Handle the deep link from the command line arguments
+                const deepLink = commandLine.pop();
+                await handleDeepLink(deepLink);
             }
-            const deepLink = commandLine.pop().slice(0, -1);
-            await handleDeepLink(deepLink);
         });
 
+        // Handle deep links on macOS
         app.on('open-url', async (event, url) => {
             event.preventDefault();
-            await handleDeepLink(url);
+            if (mainWindow) {
+                if (mainWindow.isMinimized()) {
+                    mainWindow.restore();
+                }
+                mainWindow.focus();
+                await handleDeepLink(url);
+            }
         });
     }
 }
@@ -98,31 +112,12 @@ function grabTokenAndEmail(data) {
     return { token, email };
 }
 
-async function loginIntoGameCrafter(sso) {
-    try {
-        const response = await fetch(`https://templative-d1a3033da970.herokuapp.com/the-game-crafter/sso?sso=${sso}`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
 
-        if (!response.ok) {
-            console.error('Failed to login into Game Crafter:', response.status, response.statusText);
-            throw new Error('Failed to login into Game Crafter');
-        }
-        const data = await response.json();
-        await saveTgcSession(data["result"]["id"], data["result"]["user_id"]);
-        BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TGC_LOGIN_STATUS, { isLoggedIn: true });
-    } catch (error) {
-        console.error('Error fetching designers:', error);
-    }
-}
 
 async function handleDeepLink(url) {
     var parsedUrl = new URL(url);
     const protocol = parsedUrl.protocol.toLowerCase();
-
+    console.log("Deep Link URL", url)
     // Handle TheGameCrafter SSO callback - make sure it's the right protocol
     if (protocol === 'templative:' && parsedUrl.searchParams.has('sso_id')) {
         const ssoId = parsedUrl.searchParams.get('sso_id');
@@ -130,7 +125,9 @@ async function handleDeepLink(url) {
             console.error("No SSO ID found in TGC callback");
             return;
         }
-        await loginIntoGameCrafter(ssoId);
+        const data = await loginIntoGameCrafter(ssoId);
+        await saveTgcSession(data["result"]["id"], data["result"]["user_id"]);
+        BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TGC_LOGIN_STATUS, { isLoggedIn: true });
         return;
     }
 

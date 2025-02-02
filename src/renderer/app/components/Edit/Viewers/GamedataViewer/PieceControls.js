@@ -21,7 +21,7 @@ export default class PieceControls extends React.Component {
 
             <span className="input-group-text input-group-text soft-label">name</span>
             <input type="text" className="form-control value-field no-left-border"
-                onChange={(event)=> this.props.updateValueCallback(event.target.value.replace(/[<>:"/\\|?*]/g, ""))} 
+                onChange={(event)=> this.props.updateValueCallback("name", event.target.value.replace(/[<>:"/\\|?*]/g, ""))} 
                 aria-label="What key to get from the scope..." 
                 value={this.props.piece["name"]}/>
                 

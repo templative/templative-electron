@@ -48,11 +48,11 @@ export default function OutputExplorer({ outputFolderPath, templativeRootDirecto
             outputFolderPath={outputFolderPath} 
             changeTabsToEditAFileCallback={changeTabsToEditAFileCallback}
         />,
-        <PlaygroundPanel 
-            templativeRootDirectoryPath={templativeRootDirectoryPath}  
-            outputFolderPath={outputFolderPath} 
-            changeTabsToEditAFileCallback={changeTabsToEditAFileCallback}
-        />,
+        // <PlaygroundPanel 
+        //     templativeRootDirectoryPath={templativeRootDirectoryPath}  
+        //     outputFolderPath={outputFolderPath} 
+        //     changeTabsToEditAFileCallback={changeTabsToEditAFileCallback}
+        // />,
         <PrintPanel 
             templativeRootDirectoryPath={templativeRootDirectoryPath}  
             outputFolderPath={outputFolderPath}
