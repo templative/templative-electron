@@ -354,21 +354,33 @@ export default class TemplativeProjectRenderer extends React.Component {
             <div className="col file-explorer-col">
                 <div className="content-files-container">
                     <div className="actual-files">
-                    <ResourceSection 
-                        iconSource={artIcon}
-                        header="Art Files"
-                        directory={artDirectory}
-                        isExtended={isArtExtended}
-                        contentFileListProps={contentFileListProps}
-                        changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
-                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                        currentFilepath={this.props.currentFilepath}
-                        updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                        directories={{
-                            templatesDirectory: this.state.templatesDirectory,
-                            overlaysDirectory: this.state.overlaysDirectory,
-                        }}
-                    />
+                    {this.state.templatesDirectory !== this.state.overlaysDirectory ? (
+                        <ResourceSection 
+                            iconSource={artIcon}
+                            header="Art Files"
+                            directory={artDirectory}
+                            isExtended={isArtExtended}
+                            contentFileListProps={contentFileListProps}
+                            changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
+                            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                            currentFilepath={this.props.currentFilepath}
+                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                            directories={{
+                                templatesDirectory: this.state.templatesDirectory,
+                                overlaysDirectory: this.state.overlaysDirectory,
+                            }}
+                        />
+                    ) : (
+                        <ContentFileList
+                            {...contentFileListProps}
+                            header="Art Files" 
+                            contentType="ART"
+                            baseDepth={0}
+                            directoryPath={this.state.templatesDirectory}
+                            baseFilepath={this.state.templatesDirectory}
+                            filetype={"ART"}      
+                        />
+                    )}
                     <ContentFileList
                         {...contentFileListProps}
                         header="Art Recipe Files" 
