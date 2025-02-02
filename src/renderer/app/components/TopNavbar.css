@@ -1,46 +1,62 @@
+:root {
+    --topbar-width: 60px;
+}
+
 .topNavbar {
     height: 100%;
     display: inline-block;
-    width: 80px !important;
-    background-color: #282C35;
+    width: var(--topbar-width) !important;
+    background-color: var(--color-surface-cover);
     vertical-align: top;
-    border-right: #3c414d 1px solid;
+    border-right: solid 1px var(--color-border);
 }
 .topNavbar > * {
     display: inherit;
 }
 .mainBody {
     display: inline-block;
-    width: calc(100% - 80px) !important;
+    width: calc(100% - var(--topbar-width)) !important;
     height: 100%;
+    vertical-align: top;
 }
 .mainBody > * {
     display: inherit;
     height: 100%;
 }
 
-
-.sidebar-button {
+.sidebar-buttons .sidebar-button {
     position: relative;
-    height:80px;
-    width: 100%;
-    background-color: transparent !important;
+    padding-top:10px;
+    height:var(--topbar-width);
+    width: calc(100% - 2px);
     border-width: 0px !important;
+    border-left: 2px solid transparent !important;
     border-radius: 0px !important;
+    background-color: var(--color-surface-cover) !important;
 }
-.sidebar-button:hover, .sidebar-button:active {
-    background-color: hsl(222, 14%, 23%) !important;
+.sidebar-buttons .sidebar-button > .topbar-icon {
+    fill: var(--color-accent-disabled);
+}
+.sidebar-buttons .sidebar-button:hover, .sidebar-buttons .sidebar-button:active {
+    /* fill: var(--color-text-muted) !important; */
     cursor: pointer;
 }
-
-.current-sidebar-button {
-    background-color: hsl(222, 14%, 15.5%) !important;
+.sidebar-buttons .sidebar-button:hover > .topbar-icon {
+    fill: var(--color-accent) !important;
 }
-.current-sidebar-button:hover {
-    background-color: hsl(222, 14%, 15.5%) !important;
+.sidebar-buttons .current-sidebar-button {
+    border-left: 2px solid var(--color-accent) !important;
+}
+.sidebar-buttons .current-sidebar-button > .topbar-icon {
+    fill: var(--color-accent) !important;
+}
+.sidebar-buttons .current-sidebar-button:hover > .topbar-icon {
+    fill: var(--color-accent) !important;
+}
+.sidebar-buttons .current-sidebar-button:hover {
     cursor: default !important;
 }
 .top-navbar-item-label {
     font-size: 12px;
-    color: rgb(207, 207, 207);
+    color: var(--color-text);
 }

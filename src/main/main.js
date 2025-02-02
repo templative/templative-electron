@@ -51,7 +51,7 @@ const createWindow = () => {
 }
 
 var servers = [
-  new ServerRunner("templativeServer", 8085, serverEnvironmentConfiguration.templativeServerCommandsByEnvironment),
+//   new ServerRunner("templativeServer", 8085, serverEnvironmentConfiguration.templativeServerCommandsByEnvironment),
 ]
 var serverManager = new ServerManager(servers)
 
@@ -72,7 +72,6 @@ const initializeApp = async () => {
     // Wait for splash screen to be ready before proceeding
     await new Promise((resolve) => {
         splashScreen.window.webContents.once('did-finish-load', () => {
-            console.log('Splash screen ready');
             resolve();
         });
     });

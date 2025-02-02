@@ -12,7 +12,8 @@ import TemplativeAccessTools from "./TemplativeAccessTools";
 import '../App.css';
 import FeedbackPanel from "./Feedback/FeedbackPanel";
 import { RenderingWorkspaceProvider } from "./Render/RenderingWorkspaceProvider";
-
+import { OutputDirectoriesProvider } from "./OutputDirectories/OutputDirectoriesProvider";
+import RulesEditor from "./Edit/Viewers/RulesEditor";
 const { ipcRenderer } = window.require('electron');
 const { channels } = require("../../../shared/constants");
 const path = require("path");
@@ -24,16 +25,17 @@ export default class EditProjectView extends React.Component {
     state = {
         currentRoute: "edit",
         tabbedFiles: [
-            new TabbedFile("COMPONENTS", path.join(this.props.templativeRootDirectoryPath, "component-compose.json"), true),
+            // new TabbedFile("COMPONENTS", path.join(this.props.templativeRootDirectoryPath, "component-compose.json"), true),
         ],
         italicsTabFilepath: undefined,
-        currentFileType: "COMPONENTS",
+        currentFileType: undefined,
+        currentFilepath: undefined,
         componentTypesCustomInfo: {},
         componentTypesStockInfo: {},
-        currentFilepath: path.join(this.props.templativeRootDirectoryPath, "component-compose.json"),
 
         extendedFileTypes: new Set(),
         extendedDirectories: new Set(),
+        componentCompose: [], // Store the parsed component-compose.json
     }
     changeExtendedDirectoryAsync = (isExtended, directory) => {
         var isAlreadyExtended = this.state.extendedDirectories.has(directory)
@@ -109,7 +111,6 @@ export default class EditProjectView extends React.Component {
         const isSolidifyingItalicsTab = hasItalicsFile && isAddingItalicsFile
         
         if (isSolidifyingItalicsTab) {
-            // console.log("solidifying italics tab", hasItalicsFile, isAddingItalicsFile)
             this.setState({
                 currentFileType: filetype,
                 currentFilepath: filepath,
@@ -121,7 +122,6 @@ export default class EditProjectView extends React.Component {
         const hasTabAlready = EditProjectView.#hasTabAlready(filetype, filepath, this.state.tabbedFiles)
         const isChangingItalicsTab = hasItalicsFile && !hasTabAlready
         if (isChangingItalicsTab) {
-            // console.log("Changing italics tab", hasItalicsFile, isAddingItalicsFile, hasTabAlready)
             this.setState({
                 currentFileType: filetype,
                 currentFilepath: filepath,
@@ -131,7 +131,6 @@ export default class EditProjectView extends React.Component {
             })
             return
         }
-        // console.log("Default tab behavior", hasItalicsFile, isAddingItalicsFile, hasTabAlready)
         this.setState({
             currentFileType: filetype,
             currentFilepath: filepath,
@@ -208,7 +207,6 @@ export default class EditProjectView extends React.Component {
     
     componentDidMount = async () => {
         await axios.get(`http://127.0.0.1:8085/component-info`).then((response) => {
-            // console.log(response.data)    
             this.setState({componentTypesCustomInfo: response.data})
         })
         await axios.get(`http://127.0.0.1:8085/stock-info`).then((response) => {
@@ -217,12 +215,13 @@ export default class EditProjectView extends React.Component {
 
         ipcRenderer.on(channels.GIVE_OPEN_SETTINGS, () => {
             var settingsPath = path.join(require('os').homedir(), "Documents", "Templative", "settings.json")
-            console.log(settingsPath)
             this.changeTabsToEditAFile("SETTINGS", settingsPath)
         });
+
+        await this.loadComponentComposeAsync();
     }
 
-    componentDidUpdate = (prevProps) => {
+    componentDidUpdate = async (prevProps) => {
         if (prevProps.templativeRootDirectoryPath === this.props.templativeRootDirectoryPath) {
             return
         }
@@ -232,6 +231,8 @@ export default class EditProjectView extends React.Component {
             currentFileType: undefined,
             currentFilepath: undefined,
         })
+
+        await this.loadComponentComposeAsync();
     }
     updateRoute = (route) => {
         this.setState({currentRoute: route})
@@ -338,79 +339,194 @@ export default class EditProjectView extends React.Component {
         }
         this.setState({tabbedFiles: newTabbedFiles}, async () => await this.checkForCurrentTabRemovedAsync());
     }
+    loadComponentComposeAsync = async () => {
+        try {
+            const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
+            const content = await TemplativeAccessTools.loadFileContentsAsJson(filepath);
+            this.setState({ componentCompose: content });
+        } catch (error) {
+            console.error("Error loading component-compose.json:", error);
+            this.setState({ componentCompose: [] });
+        }
+    }
+    saveComponentComposeAsync = async (updatedContent) => {
+        try {
+            const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
+            await this.saveFileAsync(filepath, JSON.stringify(updatedContent, null, 2));
+            this.setState({ componentCompose: updatedContent });
+        } catch (error) {
+            console.error("Error saving component-compose.json:", error);
+        }
+    }
+    
+    updateComponentComposeFieldAsync = async (index, field, value) => {
+        try {
+            const updatedContent = [...this.state.componentCompose];
+            if (updatedContent[index] === undefined) {
+                console.warn("Component not found at index:", index);
+                return
+            }
+
+            const oldName = updatedContent[index].name;
+            const isChangingName = field === "name" && value !== oldName;
+            
+            // Update the value in component compose
+            updatedContent[index][field] = value;
+
+            // Only process tab and filepath updates if we're changing a name
+            if (isChangingName) {
+                const newTabbedFiles = this.state.tabbedFiles.map(tab => {
+                    if (tab.filetype !== "UNIFIED_COMPONENT") {
+                        return tab;
+                    }
+                    const [basePath, componentName] = tab.filepath.split("#");
+                    if (componentName === oldName) {
+                        return new TabbedFile(
+                            tab.filetype,
+                            `${basePath}#${value}`,
+                            tab.canClose
+                        );
+                    }
+                    return tab;
+                });
+
+                // Update current filepath if it's a unified component
+                let newCurrentFilepath = this.state.currentFilepath;
+                if (this.state.currentFileType === "UNIFIED_COMPONENT") {
+                    const [basePath, componentName] = this.state.currentFilepath.split("#");
+                    if (componentName === oldName) {
+                        newCurrentFilepath = `${basePath}#${value}`;
+                    }
+                }
+
+                // Update italics tab filepath if it's a unified component
+                let newItalicsTabFilepath = this.state.italicsTabFilepath;
+                if (this.state.italicsTabFilepath?.includes("#")) {
+                    const [basePath, componentName] = this.state.italicsTabFilepath.split("#");
+                    if (componentName === oldName) {
+                        newItalicsTabFilepath = `${basePath}#${value}`;
+                    }
+                }
+
+                // Save and update state with all changes
+                const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
+                await this.saveFileAsync(filepath, JSON.stringify(updatedContent, null, 2));
+
+                this.setState({
+                    componentCompose: updatedContent,
+                    tabbedFiles: newTabbedFiles,
+                    currentFilepath: newCurrentFilepath,
+                    italicsTabFilepath: newItalicsTabFilepath
+                });
+            } else {
+                // For non-name changes, just update component compose
+                const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
+                await this.saveFileAsync(filepath, JSON.stringify(updatedContent, null, 2));
+                this.setState({ componentCompose: updatedContent });
+            }
+        } catch (error) {
+            console.error("Error saving component-compose.json:", error);
+        }
+    }
     render() {
         return <RenderingWorkspaceProvider key={this.props.templativeRootDirectoryPath}>
             <TopNavbar topNavbarItems={TOP_NAVBAR_ITEMS} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
-            {this.state.currentRoute === 'create' && (
-                <CreatePanel
-                    componentTypesCustomInfo={this.state.componentTypesCustomInfo}
-                    componentTypesStockInfo={this.state.componentTypesStockInfo}
-                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                    changeTabsToEditAFileCallback={this.changeTabsToEditAFile}
-                />
-            )}
-
-            {this.state.currentRoute === 'edit' && (
-                <EditPanel
-                    componentTypesCustomInfo={this.state.componentTypesCustomInfo}
-                    componentTypesStockInfo={this.state.componentTypesStockInfo}
-                    italicsTabFilepath={this.state.italicsTabFilepath}
-                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                    tabbedFiles={this.state.tabbedFiles}
-                    currentFileType={this.state.currentFileType}
-                    currentFilepath={this.state.currentFilepath}
-                    closeAllTabsButIndexAsyncCallback={this.closeAllTabsButIndexAsync}
-                    closeAllTabsAsyncCallback={this.closeAllTabsAsync}
-                    closeTabsToRightAsyncCallback={this.closeTabsToRightAsync}
-                    closeTabsToLeftAsyncCallback={this.closeTabsToLeftAsync}
-                    closeTabAtIndexAsyncCallback={this.closeTabAtIndexAsync}
-                    clearViewedFileCallback={this.clearViewedFile}
-                    clickIntoFileCallback={this.clickIntoFile}
-                    updateViewedFileUsingTabAsyncCallback={this.updateViewedFileUsingTabAsync}
-                    updateViewedFileUsingExplorerAsyncCallback={this.updateViewedFileUsingExplorerAsync}
-                    updateViewedFileToUnifiedAsyncCallback={this.updateViewedFileToUnifiedAsync}
-                    saveFileAsyncCallback={this.saveFileAsync}
-                    closeTabIfOpenByFilepathCallback={this.closeTabIfOpenByFilepath}
-                    extendedDirectories={this.state.extendedDirectories}
-                    changeExtendedDirectoryAsyncCallback={this.changeExtendedDirectoryAsync}
-                    extendedFileTypes={this.state.extendedFileTypes}
-                    changeExtendedFileTypeAsyncCallback={this.changeExtendedFileTypeAsync}
-                    updateRouteCallback={this.updateRoute}
-                />
+            <OutputDirectoriesProvider templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}>
+                {this.state.currentRoute === 'create' && (
+                    <CreatePanel
+                        componentTypesCustomInfo={this.state.componentTypesCustomInfo}
+                        componentTypesStockInfo={this.state.componentTypesStockInfo}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        changeTabsToEditAFileCallback={this.changeTabsToEditAFile}
+                        saveComponentComposeAsync={this.saveComponentComposeAsync}
+                    />
+                )}
+                {this.state.currentRoute === 'project' && (
+                    <ComponentsViewer 
+                        updateViewedFileUsingExplorerAsyncCallback ={this.updateViewedFileUsingExplorerAsync}
+                        updateViewedFileToUnifiedAsyncCallback={this.updateViewedFileToUnifiedAsync}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        saveFileAsyncCallback={this.saveFileAsync}
+                        componentTypesCustomInfo={this.state.componentTypesCustomInfo}
+                        componentTypesStockInfo={this.state.componentTypesStockInfo}
+                        
+                        componentComposeScollPosition={this.state.componentComposeScollPosition}     
+                        updateComponentComposeScrollPositionCallback={this.updateComponentComposeScrollPosition}         
+                        updateRouteCallback={this.props.updateRouteCallback}
+                    />
+                )}
+                {this.state.currentRoute === 'rules' && (
+                    <RulesEditor 
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        saveFileAsyncCallback={this.saveFileAsync}
+                    />
                 )}
 
-            {this.state.currentRoute === 'render' && (
-                <RenderPanel
-                    email={this.props.email}
-                    token={this.props.token}
-                    changeTabsToEditAFileCallback={this.changeTabsToEditAFile}
-                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                    templativeMessages={this.props.templativeMessages}
-                />
-            )}
+                {this.state.currentRoute === 'edit' && (
+                    <EditPanel
+                        componentTypesCustomInfo={this.state.componentTypesCustomInfo}
+                        componentTypesStockInfo={this.state.componentTypesStockInfo}
+                        italicsTabFilepath={this.state.italicsTabFilepath}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        tabbedFiles={this.state.tabbedFiles}
+                        currentFileType={this.state.currentFileType}
+                        currentFilepath={this.state.currentFilepath}
+                        closeAllTabsButIndexAsyncCallback={this.closeAllTabsButIndexAsync}
+                        closeAllTabsAsyncCallback={this.closeAllTabsAsync}
+                        closeTabsToRightAsyncCallback={this.closeTabsToRightAsync}
+                        closeTabsToLeftAsyncCallback={this.closeTabsToLeftAsync}
+                        closeTabAtIndexAsyncCallback={this.closeTabAtIndexAsync}
+                        clearViewedFileCallback={this.clearViewedFile}
+                        clickIntoFileCallback={this.clickIntoFile}
+                        updateViewedFileUsingTabAsyncCallback={this.updateViewedFileUsingTabAsync}
+                        updateViewedFileUsingExplorerAsyncCallback={this.updateViewedFileUsingExplorerAsync}
+                        updateViewedFileToUnifiedAsyncCallback={this.updateViewedFileToUnifiedAsync}
+                        saveFileAsyncCallback={this.saveFileAsync}
+                        closeTabIfOpenByFilepathCallback={this.closeTabIfOpenByFilepath}
+                        extendedDirectories={this.state.extendedDirectories}
+                        changeExtendedDirectoryAsyncCallback={this.changeExtendedDirectoryAsync}
+                        extendedFileTypes={this.state.extendedFileTypes}
+                        changeExtendedFileTypeAsyncCallback={this.changeExtendedFileTypeAsync}
+                        updateRouteCallback={this.updateRoute}
+                        componentCompose={this.state.componentCompose}
+                        saveComponentComposeAsync={this.saveComponentComposeAsync}
+                        updateComponentComposeFieldAsync={this.updateComponentComposeFieldAsync}
+                    />
+                    )}
 
-            {this.state.currentRoute === 'animate' && (
-                <AnimatePanel
-                    email={this.props.email}
-                    token={this.props.token}
-                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                />
-            )}
+                {this.state.currentRoute === 'render' && (
+                    <RenderPanel
+                        email={this.props.email}
+                        token={this.props.token}
+                        changeTabsToEditAFileCallback={this.changeTabsToEditAFile}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        templativeMessages={this.props.templativeMessages}
+                    />
+                )}
 
-            {/* {this.state.currentRoute === 'map' && (
-                <MapPanel
-                    email={this.props.email}
-                    token={this.props.token}
-                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                />
-            )} */}
+                {this.state.currentRoute === 'animate' && (
+                    <AnimatePanel
+                        email={this.props.email}
+                        token={this.props.token}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    />
+                )}
 
-            {this.state.currentRoute === 'feedback' && (
-                <FeedbackPanel
-                    email={this.props.email}
-                    token={this.props.token}
-                />
-            )}
+                {/* {this.state.currentRoute === 'map' && (
+                    <MapPanel
+                        email={this.props.email}
+                        token={this.props.token}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    />
+                )} */}
+
+                {this.state.currentRoute === 'feedback' && (
+                    <FeedbackPanel
+                        email={this.props.email}
+                        token={this.props.token}
+                    />
+                )}
+            </OutputDirectoriesProvider>
         </RenderingWorkspaceProvider>
         
     }

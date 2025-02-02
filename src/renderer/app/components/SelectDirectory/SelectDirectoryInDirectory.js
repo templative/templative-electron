@@ -32,9 +32,7 @@ export default class SelectDirectoryInDirectory extends React.Component {
         if (this.props.directoryPath === undefined || this.props.directoryPath === "") {
             return
         }
-        console.log(this.props.directoryPath)
         this.outputFolderWatcher = fsOld.watch(this.props.directoryPath, {recursive: true}, async (event, filename) => {
-            // console.log(event, filename)
             await this.#getDirectories()
         })
             
@@ -68,7 +66,7 @@ export default class SelectDirectoryInDirectory extends React.Component {
         outputDirectoryDivs = outputDirectoryDivs.reverse()
 
         return <div className="selectable-directories">
-            <div className="headerWrapper">
+            <div className="header-wrapper">
                 <p className="resourcesHeader">{this.props.title}</p>
             </div> 
             <div className="directory-select-options">

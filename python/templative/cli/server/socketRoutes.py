@@ -36,7 +36,8 @@ async def error_handler(sid, error):
         del printStatements[sid]
 
 @sio.on("produceGame")
-async def produceGame(sid, data):
+async def produceGame(sid, data, namespace=None):
+    print(f"Socket for {sid}: {data}")
     if 'isDebug' not in data:
         print("Missing isDebug")
         return False
@@ -59,5 +60,15 @@ async def produceGame(sid, data):
         return False
     directoryPath = data['directoryPath']
 
-    await gameProducer.produceGame(directoryPath, componentFilter, not isComplex, not isDebug, language)
-    return True
+    try:
+        await gameProducer.produceGame(
+            gameRootDirectoryPath=directoryPath,
+            componentFilter=componentFilter,
+            isSimple=not isComplex,
+            isPublish=not isDebug,
+            targetLanguage=language
+        )
+        return True
+    except Exception as e:
+        print(f"Error producing game: {str(e)}")
+        return False

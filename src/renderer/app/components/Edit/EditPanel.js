@@ -1,7 +1,6 @@
 import React from "react";
 import TemplativeProjectRenderer from "./FileExplorer/TemplativeProjectRenderer"
 import ArtdataViewer from "./Viewers/ArtdataViewer/ArtdataViewer"
-import ComponentsViewer from "./Viewers/ComponentsViewer/ComponentsViewer"
 import PieceGamedataViewer from "./Viewers/GamedataViewer/PieceGamedataViewer"
 import ComponentGamedataViewer from "./Viewers/GamedataViewer/ComponentGamedataViewer"
 import GameGamedataViewer from "./Viewers/GamedataViewer/GameGamedataViewer";
@@ -82,6 +81,9 @@ export default class EditPanel extends React.Component {
                         changeExtendedFileTypeAsyncCallback={this.props.changeExtendedFileTypeAsyncCallback}
                         extendedDirectories={this.props.extendedDirectories}
                         changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
+                        updateRouteCallback={this.props.updateRouteCallback}
+                        componentCompose={this.props.componentCompose}
+                        saveComponentComposeAsync={this.props.saveComponentComposeAsync}
                     />
                 </div>
                 <div className='col viewer'>
@@ -96,6 +98,9 @@ export default class EditPanel extends React.Component {
                         closeTabsToLeftAsyncCallback={this.props.closeTabsToLeftAsyncCallback}
                         closeTabsToRightAsyncCallback={this.props.closeTabsToRightAsyncCallback}
                         closeAllTabsButIndexAsyncCallback={this.props.closeAllTabsButIndexAsyncCallback}
+                        componentTypesCustomInfo={this.props.componentTypesCustomInfo}
+                        componentTypesStockInfo={this.props.componentTypesStockInfo}
+                        updateRouteCallback={this.props.updateRouteCallback}
                     />
                     <div className="filename-row">
                         <p className="filename-title">{filepathSplit}</p>
@@ -116,10 +121,10 @@ export default class EditPanel extends React.Component {
                         }
                         {this.props.currentFileType === "ARTDATA" &&
                             <ArtdataViewer 
+                                updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
                                 templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                                 filepath={this.props.currentFilepath} 
                                 saveFileAsyncCallback={this.props.saveFileAsyncCallback}
-                                updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
                             />
                         }
                         {(this.props.currentFileType === "ART" || this.props.currentFileType === "GAMECRAFTER") &&
@@ -144,26 +149,20 @@ export default class EditPanel extends React.Component {
                         {this.props.currentFileType === "GAME_GAMEDATA" &&
                             <GameGamedataViewer filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
                         }
-                        {this.props.currentFileType === "COMPONENTS" && 
-                            <ComponentsViewer 
-                                updateViewedFileUsingExplorerAsyncCallback ={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                                updateViewedFileToUnifiedAsyncCallback={this.props.updateViewedFileToUnifiedAsyncCallback}
-                                templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                                saveFileAsyncCallback={this.props.saveFileAsyncCallback}
-                                componentTypesCustomInfo={this.props.componentTypesCustomInfo}
-                                componentTypesStockInfo={this.props.componentTypesStockInfo}
-                                componentComposeScollPosition={this.state.componentComposeScollPosition}     
-                                updateComponentComposeScrollPositionCallback={this.updateComponentComposeScrollPosition}         
-                                updateRouteCallback={this.props.updateRouteCallback}
-                            />
-                        }
                         {this.props.currentFileType === "UNIFIED_COMPONENT" && 
                             <UnifiedComponentViewer 
+                                componentCompose={this.props.componentCompose}
+                                saveComponentComposeAsync={this.props.saveComponentComposeAsync}
                                 componentName={this.props.currentFilepath.split("#")[1]}
                                 showPreviewCallback={this.context.showPreview}
                                 templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}      
                                 saveFileAsyncCallback={this.props.saveFileAsyncCallback}  
-                                updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}                 
+                                updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}  
+                                componentTypesCustomInfo={this.props.componentTypesCustomInfo}        
+                                componentTypesStockInfo={this.props.componentTypesStockInfo}
+                                updateRouteCallback={this.props.updateRouteCallback}     
+                                updateComponentComposeFieldAsync={this.props.updateComponentComposeFieldAsync}
+                                updateViewedFileUsingTabAsyncCallback={this.props.updateViewedFileUsingTabAsyncCallback}
                             />
                         }
                         {this.props.currentFileType === undefined && 

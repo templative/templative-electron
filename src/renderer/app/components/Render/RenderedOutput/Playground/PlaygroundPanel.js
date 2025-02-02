@@ -37,7 +37,6 @@ export default class PlaygroundPanel extends React.Component {
         var outputName = path.basename(this.props.outputFolderPath);
         var selectedPackageDirectory = path.join(exportedToDirectory, outputName)
         var selectedPackageExists = fs.existsSync(selectedPackageDirectory)
-        console.log(outputName)
         this.setState({
             playgroundDirectory: exportedToDirectory,
             selectedPackageDirectory: selectedPackageExists ? selectedPackageDirectory : undefined
@@ -73,7 +72,7 @@ export default class PlaygroundPanel extends React.Component {
             this.setState({isCreating: false, selectedPackageDirectory: selectedPackageExists ? selectedPackageDirectory : undefined})
         }
         catch(e) {
-            console.log(e)
+            console.error(e)
         }
     }
     render() {

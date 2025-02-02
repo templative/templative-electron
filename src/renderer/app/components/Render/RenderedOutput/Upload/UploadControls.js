@@ -3,64 +3,15 @@ import "./UploadPanel.css"
 const { ipcRenderer } = require('electron');
 import { channels } from "../../../../../../shared/constants"
 import AdPanel from "./AdPanel";
-const fs = require('fs');
 const path = require('path');
 
 export default class UploadControls extends React.Component {   
     state = {
         gameCrafterUrl: undefined,
-        gameData: null
-    }
-    componentDidUpdate(prevProps) {
-        if (this.watcher && prevProps.selectedOutputDirectory !== this.props.selectedOutputDirectory) {
-            this.watcher.close();
-            this.watcher = null;
-        }
-
-        if (this.props.selectedOutputDirectory && !this.watcher) {
-            const gameJsonPath = path.join(this.props.selectedOutputDirectory, 'game.json');
-            
-            this.updateGameUrlFromFile(gameJsonPath);
-            
-            this.watcher = fs.watch(gameJsonPath, (eventType, filename) => {
-                if (filename) {
-                    this.updateGameUrlFromFile(gameJsonPath);
-                }
-            });
-        }
-    }
-
-    updateGameUrlFromFile = (gameJsonPath) => {
-        try {
-            const gameData = JSON.parse(fs.readFileSync(gameJsonPath, 'utf8'));
-            if (gameData.gameCrafterUrl !== this.state.gameCrafterUrl || 
-                JSON.stringify(gameData) !== JSON.stringify(this.state.gameData)) {
-                this.setState({ 
-                    gameCrafterUrl: gameData.gameCrafterUrl,
-                    gameData: gameData 
-                });
-            }
-        } catch (error) {
-            console.error('Error reading game.json:', error);
-        }
-    }
-
-    componentWillUnmount() {
-        if (this.watcher) {
-            this.watcher.close();
-            this.watcher = null;
-        }
     }
 
     logout = async () => {
         await ipcRenderer.invoke(channels.TO_SERVER_TGC_LOGOUT);
-    }
-
-    componentDidMount() {
-        if (this.props.selectedOutputDirectory) {
-            const gameJsonPath = path.join(this.props.selectedOutputDirectory, 'game.json');
-            this.updateGameUrlFromFile(gameJsonPath);
-        }
     }
 
     editGameJson = () => {
@@ -78,16 +29,17 @@ export default class UploadControls extends React.Component {
         var canUpload = !this.props.isCreating && this.props.selectedOutputDirectory !== undefined && this.props.designerId !== undefined
         
         return <React.Fragment>
-            
-            {this.state.gameData &&
+            {this.props.gameJsonFile &&
                 <AdPanel 
                     templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                    game={this.state.gameData}
-                    gameCrafterUrl={this.state.gameCrafterUrl}
+                    game={this.props.gameJsonFile}
+                    gameCrafterUrl={this.props.gameCrafterUrl}
                     isPublish={this.props.isPublish}
                     isIncludingStock={this.props.isIncludingStock}
                     editGameJsonCallback={this.editGameJson}
                     selectedOutputDirectory={this.props.selectedOutputDirectory}
+                    uploadComponents={this.props.uploadComponents}
+                    openFolder={this.props.openFolder}
                 />
             }
             <div className="vertical-input-group">
@@ -122,14 +74,14 @@ export default class UploadControls extends React.Component {
                     className="input-group input-group-sm upload-checkbox-controls" 
                     data-bs-theme="dark"
                 >
-                    <span className="input-group-text upload-publish-checkbox  clickable-checkbox-label" title="If checked, the displayName of the game will used, instead of the output folder, and the game's store page will be marked Published.." onClick={()=>{ this.props.toggleIsPublishCallback()}}>Mark as Published?</span>
+                    <span className="input-group-text upload-publish-checkbox  clickable-checkbox-label" title="If checked, the name of the game will used, instead of the output folder, and the game's store page will be marked Published.." onClick={()=>{ this.props.toggleIsPublishCallback()}}>Mark as Published?</span>
                     <div className="input-group-text no-left-border">
                         <input 
                             className="form-check-input mt-0" 
                             type="checkbox" 
                             disabled={this.props.isCreating}
                             value=""
-                            title="If checked, the displayName of the game will used, instead of the output folder, and the game's store page will be marked Published.."
+                            title="If checked, the name of the game will used, instead of the output folder, and the game's store page will be marked Published.."
                             onChange={()=>{ this.props.toggleIsPublishCallback()}} 
                             checked={this.props.isPublish} 
                             aria-label="Checkbox for following text input"

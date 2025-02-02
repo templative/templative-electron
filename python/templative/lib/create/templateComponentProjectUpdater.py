@@ -50,7 +50,6 @@ async def addStockComponentToComponentCompose(name, stockPartId, gameRootDirecto
 async def createPiecesJson(piecesDirectoryPath, name, hasPieceQuantity, componentAIDescription=None, artdataFiles=None):
     pieces = [{
         "name": name,
-        "displayName": " ".join(re.findall('[A-Z][^A-Z]*', name)) or name
     }]
 
     if hasPieceQuantity:
@@ -64,7 +63,7 @@ async def createPiecesJson(piecesDirectoryPath, name, hasPieceQuantity, componen
     #             if item["scope"] != "piece":
     #                 continue
     #             source = item["source"]
-    #             if source == "displayName" or source == "name" or source == "quantity":
+    #             if source == "name" or source == "quantity":
     #                 continue
     #             needsContent = True
     #             pieces[0][source] = "Replace with reasonable content"
@@ -86,8 +85,7 @@ async def createPiecesJson(piecesDirectoryPath, name, hasPieceQuantity, componen
 
 async def createComponentJson(componentDirectoryPath, name):#, componentAIDescription, artdataFiles):
     componentJsonData = {
-        "displayName": name,
-        "pieceDisplayName": name
+        "name": name,
     }
     # needsContent = False
     # for face in artdataFiles:
@@ -96,7 +94,7 @@ async def createComponentJson(componentDirectoryPath, name):#, componentAIDescri
     #         for item in artdata.get(section, []):
     #             if item["scope"] != "component":
     #                 continue
-    #             if item["source"] == "displayName" or item["source"] == "pieceDisplayName":
+    #             if item["source"] == "name"
     #                 continue
     #             componentJsonData[item["source"]] = "Replace with reasonable content"
     #             needsContent = True

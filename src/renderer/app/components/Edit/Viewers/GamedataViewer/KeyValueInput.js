@@ -25,7 +25,7 @@ export default class KeyValueInput extends React.Component {
                 placeholder="The name of the field" 
                 value={key}/>
             
-            <textarea rows={Math.max(1,Math.floor(this.props.value.length/70))} className="form-control value-field value-text-area" 
+            <textarea rows={Math.max(1,Math.floor(this.props.value.length/70)).toString()} className="form-control value-field value-text-area" 
                 onChange={(event)=>this.props.updateValueCallback(this.props.gamedataKey, event.target.value)} 
                 placeholder="The value of the field"
                 style={{color: isValueColor ? this.props.value : "inherit"}}

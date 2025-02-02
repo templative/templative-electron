@@ -29,7 +29,6 @@ export default class ResourceHeader extends React.Component {
         if (event.currentTarget !== event.target) {
             event.stopPropagation()
         }
-        console.log("parent menu click")
         await this.props.toggleExtendedAsyncCallback()
     }
     handleMouseOver = () => {
@@ -58,7 +57,7 @@ export default class ResourceHeader extends React.Component {
             </svg>
         
         return <div 
-                className="resourcesHeaderWrapper"
+                className="resourcesheader-wrapper"
                 
                 onMouseOver={this.handleMouseOver}
                 onMouseLeave={this.handleMouseOut}

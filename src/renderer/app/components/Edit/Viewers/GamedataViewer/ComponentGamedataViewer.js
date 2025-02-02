@@ -3,7 +3,7 @@ import KeyValueInput from "./KeyValueInput"
 import EditableViewerJson from "../EditableViewerJson";
 import "./GamedataViewer.css"
 const ignoredControlGamedataKeys = [
-    "displayName"
+    "name"
 ]
 export default class ComponentGamedataViewer extends EditableViewerJson {   
     state = {
@@ -59,11 +59,6 @@ export default class ComponentGamedataViewer extends EditableViewerJson {
         this.updateKey(this.state.trackedKey, this.state.currentUpdateValue)
     }
     
-    static preventSpaces = (e) => {
-        if (/[\s]/.test(e.key)) {
-            e.preventDefault();
-        }
-    }
     static preventCommas = (e) => {
         if (/,/.test(e.key)) {
             e.preventDefault();
@@ -117,10 +112,10 @@ export default class ComponentGamedataViewer extends EditableViewerJson {
         return <div className="tableContainer">
             <div className="vertical-input-group">
                 <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
-                    <span className="input-group-text soft-label">displayName</span>
+                    <span className="input-group-text soft-label">name</span>
                     <input type="text" className="form-control value-field no-left-border" 
-                        onChange={(event)=>this.updateValue("displayName", event.target.value)} 
-                        value={this.state.content["displayName"]}/>                            
+                        onChange={(event)=>this.updateValue("name", event.target.value.replace(/[<>:"/\\|?*]/g, ""))} 
+                        value={this.state.content["name"]}/>                            
                 </div>
                 {rows}
                 <div className="input-group input-group-sm mb-3" data-bs-theme="dark">

@@ -12,17 +12,17 @@
 } 
 */
 .icon-content-file-item-wrapper:n-child(even), .content-file-item-wrapper:nth-child(even) {
-    background-color: hsl(224, 13%, 17.5%);
+    background-color: var(--color-content);
 }
 .icon-content-file-item-wrapper:hover, .content-file-item-wrapper:hover {
-    background-color: #2b3037;
+    background-color: var(--color-content-surface);
     cursor: pointer;
 }
 .selected-content-file-item-wrapper {
-    background-color: #333942;
+    background-color: var(--color-surface-cover-hover);
 }
 .selected-content-file-item-wrapper:hover {
-    background-color: #373e48;
+    background-color: var(--color-surface-cover-hover);
 }
 .content-file-list {
     padding: 0 !important;

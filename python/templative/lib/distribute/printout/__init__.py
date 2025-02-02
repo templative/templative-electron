@@ -83,6 +83,21 @@ async def collectFilepathQuantitiesForComponent(componentInstructions):
     if "STOCK_" in componentInstructions["type"]:
         return componentTypeFilepathAndQuantity
 
+    # Special handling for dice
+    if "CustomColorD6" in componentInstructions["type"]:
+        if not "dieFaceFilepaths" in componentInstructions:
+            print(f"!!! Skipping {componentInstructions['uniqueName']} because it lacks 'dieFaceFilepaths'.")
+            return componentTypeFilepathAndQuantity
+        
+        dieLayout = {
+            "filepath": componentInstructions["dieFaceFilepaths"],  # Pass all filepaths
+            "quantity": componentInstructions["quantity"],
+            "isDie": True
+        }
+        componentTypeFilepathAndQuantity[componentInstructions["type"]].append(dieLayout)
+        return componentTypeFilepathAndQuantity
+
+    # Original code for non-dice components
     if not "frontInstructions" in componentInstructions:
         print(f"!!! Skipping {componentInstructions['uniqueName']} because it lacks 'frontInstructions'.")
         return componentTypeFilepathAndQuantity
@@ -133,20 +148,32 @@ async def createPageImagesForComponentTypeImages(componentType, componentTypeIma
         accountForMarginsFactor = (dimensionsPixels[0]/sizeOfContentPixels[0], dimensionsPixels[1]/sizeOfContentPixels[1])
         componentSizeInches = (componentSizeInches[0] * accountForMarginsFactor[0], componentSizeInches[1] * accountForMarginsFactor[1])
 
-    pieceSizeInches = (componentSizeInches[0] + pieceMarginInches, componentSizeInches[1] + pieceMarginInches)
+    # Special handling for dice - adjust piece size for layout while keeping component size the same
+    isDie = "CustomColorD6" in componentType
+    if isDie:
+        flangeSize = componentSizeInches[1] * 0.15  # Match the flange size ratio
+        pieceSizeInches = (
+            (componentSizeInches[0] * 3) + pieceMarginInches + (flangeSize*2),      # 3 faces wide + left & right flanges
+            (componentSizeInches[1] * 4 + flangeSize * 2) + pieceMarginInches   # 4 faces tall + top & bottom flanges
+        )
+    else:
+        pieceSizeInches = (componentSizeInches[0] + pieceMarginInches, componentSizeInches[1] + pieceMarginInches)
 
     columns = math.floor(printoutPlayAreaInches[0] / pieceSizeInches[0])
     rows = math.floor(printoutPlayAreaInches[1] / pieceSizeInches[1])
     
-    rotatedColumns = math.floor(printoutPlayAreaInches[0] / pieceSizeInches[1])
-    rotatedRows = math.floor(printoutPlayAreaInches[1] / pieceSizeInches[0])
-
-    isImageRotated = rotatedColumns*rotatedRows > columns*rows
-    if isImageRotated:
-        columns = rotatedColumns
-        rows = rotatedRows
-        pieceSizeInches = (pieceSizeInches[1], pieceSizeInches[0])
-        componentSizeInches = (componentSizeInches[1], componentSizeInches[0])
+    # Only try rotation for non-dice pieces
+    if not isDie:
+        rotatedColumns = math.floor(printoutPlayAreaInches[0] / pieceSizeInches[1])
+        rotatedRows = math.floor(printoutPlayAreaInches[1] / pieceSizeInches[0])
+        isImageRotated = rotatedColumns*rotatedRows > columns*rows
+        if isImageRotated:
+            columns = rotatedColumns
+            rows = rotatedRows
+            pieceSizeInches = (pieceSizeInches[1], pieceSizeInches[0])
+            componentSizeInches = (componentSizeInches[1], componentSizeInches[0])
+    else:
+        isImageRotated = False
 
     if rows == 0 or columns == 0:
         print(f"Skipping the {pieceSizeInches[0]}x{pieceSizeInches[1]}inch {componentType} as it's too large for a {printoutPlayAreaInches[0]}x{printoutPlayAreaInches[1]}inch print space.")
@@ -173,6 +200,20 @@ async def createPageImagesForComponentTypeImages(componentType, componentTypeIma
     return pageImages
 
 async def drawPieceForQuantities(pageImages, instruction, totalImagesDrawn, printBack, columns, rows, isImageRotated, resizedSizePixels, halfAreaPixels, pieceSizeInches, dimensionsPixels, marginsPixels):
+    if instruction.get("isDie"):
+        # For dice, create cross layout
+        dieImage = await createDieCrossLayout(instruction["filepath"], resizedSizePixels)
+        
+        pieceIndex = totalImagesDrawn
+        for _ in range(instruction["quantity"]):
+            await drawPiece(pageImages, dieImage, dieImage, pieceIndex, False, columns, rows, 
+                          (resizedSizePixels[0] * 3, resizedSizePixels[1] * 4), 
+                          halfAreaPixels, pieceSizeInches, isImageRotated, None)
+            pieceIndex += 1
+        
+        dieImage.close()
+        return instruction["quantity"]
+    
     try:
         frontImage = Image.open(instruction["filepath"])
     except (FileNotFoundError, IOError):
@@ -314,3 +355,89 @@ def createMissingImage(size, filepath):
     draw.multiline_text(textPosition, text, fill=(0, 0, 0), font=font, align="center", spacing=spacing)
     
     return image
+
+# Add new function for creating die cross layout
+async def createDieCrossLayout(filepaths, size):
+    """Creates a cross layout for a die using the provided face images"""
+    # Create a 3x4 white canvas for the cross layout, with extra space for flanges
+    flangeSize = int(size[1] * 0.15)  # 20% of face height for flange
+    crossSize = (
+        size[0] * 3 + flangeSize * 2,  # Add space for left and right flanges
+        size[1] * 4 + flangeSize * 2    # Add space for top and bottom flanges
+    )
+    crossImage = Image.new("RGB", crossSize, (255, 255, 255))
+    draw = ImageDraw.Draw(crossImage)
+    
+    # Load and resize all die faces
+    faces = []
+    for filepath in filepaths:
+        try:
+            face = Image.open(filepath)
+            face = face.resize(size)
+            faces.append(face)
+        except (FileNotFoundError, IOError):
+            faces.append(createMissingImage(size, filepath))
+
+    # Layout positions (relative to size units), adjusted for flange space
+    positions = [
+        (1 + flangeSize/size[0], flangeSize/size[1]),      # Top (1)
+        (1 + flangeSize/size[0], 1 + flangeSize/size[1]),  # Front (2)
+        (flangeSize/size[0], 1 + flangeSize/size[1]),      # Left (3)
+        (2 + flangeSize/size[0], 1 + flangeSize/size[1]),  # Right (4)
+        (1 + flangeSize/size[0], 2 + flangeSize/size[1]),  # Back (5)
+        (1 + flangeSize/size[0], 3 + flangeSize/size[1]),  # Bottom (6)
+    ]
+
+    # Paste faces onto cross
+    # First, draw all flanges
+    for i, pos in enumerate(positions):
+        position = (int(pos[0] * size[0]), int(pos[1] * size[1]))
+        
+        if i == 0:  # Face 1 (top)
+            # Add top flange
+            draw.rectangle([
+                position[0], position[1] - flangeSize,  # top-left
+                position[0] + size[0], position[1],     # bottom-right
+            ], fill="pink")
+
+        elif i == 2:  # Face 3 (left)
+            # Add top flange
+            draw.rectangle([
+                position[0], position[1] - flangeSize,
+                position[0] + size[0], position[1]
+            ], fill="pink")
+            # Add left flange
+            draw.rectangle([
+                position[0] - flangeSize, position[1],
+                position[0], position[1] + size[1]
+            ], fill="pink")
+            # Add bottom flange
+            draw.rectangle([
+                position[0], position[1] + size[1],
+                position[0] + size[0], position[1] + size[1] + flangeSize
+            ], fill="pink")
+
+        elif i == 3:  # Face 4 (right)
+            # Add top flange
+            draw.rectangle([
+                position[0], position[1] - flangeSize,
+                position[0] + size[0], position[1]
+            ], fill="pink")
+            # Add right flange
+            draw.rectangle([
+                position[0] + size[0], position[1],
+                position[0] + size[0] + flangeSize, position[1] + size[1]
+            ], fill="pink")
+            # Add bottom flange
+            draw.rectangle([
+                position[0], position[1] + size[1],
+                position[0] + size[0], position[1] + size[1] + flangeSize
+            ], fill="pink")
+
+    # Then paste all faces
+    for face, pos in zip(faces, positions):
+        position = (int(pos[0] * size[0]), int(pos[1] * size[1]))
+        crossImage.paste(face, position)
+        face.close()
+
+    return crossImage

@@ -3,18 +3,39 @@
 }
 .register-now {
     text-decoration: underline;
-    color: #ffa500;
+    color: var(--color-accent);
 }
 .register-now:hover {
     cursor: pointer;
-    color: hsl(39, 100%, 60%);
+    color: var(--color-accent);
 }
 .login-status {
-    color:palevioletred;
+    color:var(--color-error);
     font-size: 12px;
     margin-bottom: 0px;
 }
 .google-login-icon {
     margin-bottom:3px;
     margin-right: 0.5em;
+}
+.login-logo {
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.login-logo {
+    animation: float 3s ease-in-out infinite;
 }

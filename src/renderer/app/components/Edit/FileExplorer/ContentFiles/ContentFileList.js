@@ -88,7 +88,6 @@ export default class ContentFileList extends React.Component {
     #watchBasepathAsync = async () => {
         this.#stopWatchingBasepath()                
         this.componentComposeWatcher = fsOld.watch(this.props.baseFilepath, {recursive: true}, async (event, filename) => {
-            console.log(event, filename)
             await this.#requestNewFilesNamesAsync()
         })
             
@@ -121,7 +120,6 @@ export default class ContentFileList extends React.Component {
     }
 
     submitNewFilenameAsync = async (filename) => {
-        console.log(filename)
         this.setState({doesNewFileExist: false})
         var filepath = path.join(this.props.baseFilepath, `${filename}.${this.props.newFileExtension}`)
         const content = this.props.getDefaultContentForFileBasedOnFilenameCallback(this.props.contentType, filename)

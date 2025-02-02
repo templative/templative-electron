@@ -33,11 +33,9 @@ export default class ComponentTypeList extends React.Component {
                     var isMatchingTags = componentTypeHasAllFilteredTags(this.props.selectedTags, this.props.componentTypeOptions[key]["Tags"])
                     var isMatchingCategory = componentTypeHasAllFilteredTags([category], this.props.componentTypeOptions[key]["Tags"])
                     var isMatchingSearch = matchesSearch(this.props.search, key)
-                    // console.log(category, key, isMatchingTags, isMatchingCategory, isMatchingSearch)
                     return isMatchingTags && isMatchingCategory && isMatchingSearch
                 })
                 .sort()
-            // console.log(category, filteredComponentTypes)
             if (filteredComponentTypes.length > 0) {
                 categoryToFilteredTypes[category] = filteredComponentTypes
             }

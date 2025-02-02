@@ -29,9 +29,7 @@ def createGameCompose(directory):
 
 def createStudio(directory):
     studio = {
-        "name": "templateStudio",
-        "displayName": "Template Studio",
-        "gameCrafterDesignerId": ""
+        "name": "Template Studio"
     }
     with open(path.join(directory, "studio.json"), "w") as file:
         file.write(json.dumps(studio, indent=4))
@@ -47,8 +45,7 @@ def createLastFile(directory):
 
 def createGame(directory):
     game = {
-        "name": "gameName",
-        "displayName": "Game Name",
+        "name": "Game Name",
         "version": "0.0.0",
         "versionName": "Template",
         "shortDescription": "Tagline",

@@ -2,17 +2,8 @@
     /* overflow-y: scroll; */
     padding-bottom:2em
 }
-.main-game-button-row {
-    padding-left: 1em;
-    padding-right: 0.5em;
-    padding-bottom: 0.15em;
-    height: 1.5em;
-    margin-bottom: 0.5em;
-}
-.main-game-button {
-    margin: 0 1% 0em 0em;
-    color:#cfcfcf !important;
-    width: 24% !important;
+.actual-files {
+    border-bottom: 1px solid #3f4450;
 }
 .new-file-wrapper {
     padding-left: 1em;
@@ -45,15 +36,17 @@
 }
 .content-files-container {
     flex: 1;
-    overflow-y: scroll;
+    overflow-y: none;
+    gap: 8px;
     overflow-x: hidden;
     min-height: 0;
-    padding-bottom: 1em;
     padding-right: 0px;
 }
-
-.file-explorer-spacing {
-    margin-bottom: 6px;
+.content-files-container > * {
+    height: calc(50% - 4px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 8px;
 }
 
 /* Custom scrollbar styling */
@@ -77,4 +70,14 @@
 .content-files-container::-webkit-scrollbar-thumb:hover,
 .git-status-viewer::-webkit-scrollbar-thumb:hover {
     background: #4a4f5a;  /* Even lighter on hover */
+}
+
+.composition-item-name {
+    color: var(--color-accent);
+}
+.disabled-composition-item {
+    color: var(--color-text-muted);
+}
+.disabled-composition-item > .composition-item-name {
+    color: var(--color-text-muted);
 }

@@ -114,7 +114,7 @@ export default class UploadPanel extends React.Component {
             this.setState({isCreating: false, isLoggedIn: uploadStatus.isLoggedIn})
         }
         catch(e) {
-            console.log(e)
+            console.error(e)
         }
     }
 
@@ -144,6 +144,9 @@ export default class UploadPanel extends React.Component {
             designers={this.state.designers}
             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
             changeTabsToEditAFileCallback={this.props.changeTabsToEditAFileCallback}
+            gameJsonFile={this.props.gameJsonFile}
+            gameCrafterUrl={this.props.gameCrafterUrl}
+            uploadComponents={this.props.uploadComponents}
         />
     }
 }

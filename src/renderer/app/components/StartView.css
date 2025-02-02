@@ -9,8 +9,30 @@
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background-color: #2b2f37;
+    background-color: var(--color-content-surface);
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 3em;
     border-radius: 12px;
+}
+.login-logo {
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.login-logo {
+    animation: float 3s ease-in-out infinite;
 }

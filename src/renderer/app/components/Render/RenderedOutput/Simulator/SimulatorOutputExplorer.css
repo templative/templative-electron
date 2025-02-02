@@ -18,7 +18,7 @@
     margin-bottom: 0.1em;
 }
 .simulator-texture-name {
-    color: hsl(0, 0%, 81%);
+    color: var(--color-light);
     font-weight: bold;
     font-size: 14px;
     margin-bottom: 0px;
@@ -34,7 +34,7 @@
     width: 100% !important;
     height: calc(100% - 15em) !important;
     overflow-y: scroll;
-    background-color: #1F2329;
+    background-color: var(--color-content);
 }
 .object-state {
     padding: 6px;
@@ -44,7 +44,7 @@
     font-size: 14px;
 }
 .object-state-guid {
-    color: #848484;
+    color: var(--color-light);
     font-style: italic;
     font-size: 12px;
 }

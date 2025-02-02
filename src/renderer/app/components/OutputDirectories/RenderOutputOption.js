@@ -1,148 +1,81 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Render/RenderPanel.css"
 import ContextMenu from "../ContextMenu";
 const {shell} = require('electron')
 const path = require("path")
-const fs = require("fs/promises");
-const fsOld = require('fs');
 
-export default class RenderOutputOption extends React.Component {  
-    state = {
-        isHovering: false,
-        gameName: "",
-        versionName: "",
-        versionNumber: "",
-        timestamp: undefined,
-        isShowingContextMenu: false,
-    }
-    handleRightClick = (e) => {
-        if (this.state.isRenamingFile) {
-            return
-        }
-        this.setState({
-            isShowingContextMenu: !this.state.isShowingContextMenu,
-            contextCoordinatesX: e.pageX,
-            contextCoordinatesY: e.pageY,
-        })
-    }
-    closeContextMenu = () => {
-        this.setState({
-            isShowingContextMenu: false
-        })
-    }
-    handleMouseOver = () => {
-        this.setState({isHovering: true})
-    }
-    handleMouseOut = () => {
-        this.setState({isHovering: false})
-    }
-    openFolder() {
-        shell.openPath(path.join(this.props.directory.path, this.props.directory.name));
-    }
-    getDirectoryPath = () => path.join(this.props.directory.path, this.props.directory.name)
+const RenderOutputOption = ({ 
+    directory, 
+    isSelected,
+    onSelect, 
+    gameDisplayName,
+    componentFilter,
+    versionName,
+    versionNumber,
+    timestamp,
+    onDelete
+}) => {
+    const [isShowingContextMenu, setIsShowingContextMenu] = useState(false);
+    const [contextCoordinates, setContextCoordinates] = useState({ x: 0, y: 0 });
 
-    static #parseTimeStamp = (timestamp) => {
-        if (timestamp === undefined) {
-            return undefined
-        }
-        var timestampComponents = timestamp.split("_")
-        var timeOfDayComponents = timestampComponents[1].split("-")
-        var dateTime = new Date(`${timestampComponents[0]}T${timeOfDayComponents[0]}:${timeOfDayComponents[1]}:${timeOfDayComponents[2]}`)
-        return dateTime.toLocaleDateString('en-us', { year:"numeric", month:"short", day:"numeric", hour: '2-digit', minute:'2-digit'}) 
+    const handleRightClick = (e) => {
+        e.preventDefault();
+        setIsShowingContextMenu(!isShowingContextMenu);
+        setContextCoordinates({ x: e.pageX, y: e.pageY });
     }
-    static doesFileExist = async (filepath) => {
-        try {
-          await fs.stat(filepath);
-          return true;
-        } catch {
-          return false;
-        }
-      }
-    #getGameInformation = async () => {
-        const gameJsonFilepath = path.join(this.getDirectoryPath(), "game.json")
-        if (!await RenderOutputOption.doesFileExist(gameJsonFilepath)) {
-            console.log("doesnt exist")
-            return
-        }
-        const gameJsonFile = JSON.parse(await fs.readFile(gameJsonFilepath))
-        this.setState({
-            gameDisplayName: gameJsonFile["displayName"],
-            versionName: gameJsonFile["versionName"],
-            versionNumber: gameJsonFile["version"],
-            timestamp: RenderOutputOption.#parseTimeStamp(gameJsonFile["timestamp"]),
-            componentFilter: gameJsonFile["componentFilter"]
-        })
-    }
-    #stopWatchingGameJsonForChanges = () => {
-        if (this.outputFolderWatcher === undefined) {
-            return
-        }
-        this.outputFolderWatcher.close();
-        this.outputFolderWatcher = undefined;
-    }
-    #watchGameJsonForChanges = async () => {
-        this.#stopWatchingGameJsonForChanges()            
-        this.outputFolderWatcher = fsOld.watch(this.getDirectoryPath(), async (event, filename) => {
-            await this.#getGameInformation()
-        })
-        await this.#getGameInformation()
-    }
-    componentDidMount = async () => {
-        if (this.props.directory === undefined) {
-            return
-        }
-        await this.#watchGameJsonForChanges()        
-    }
-    componentDidUpdate = async (prevProps, prevState) => {
-        if (this.props.directory === prevProps.directory) {
-            return
-        }
-        this.#stopWatchingGameJsonForChanges()            
-        if (this.props.directory === undefined) {
-            return
-        }
-        await this.#watchGameJsonForChanges()
-    }
-    openFolderAsync = async () => {
-        shell.openPath(this.getDirectoryPath());
-    }
-    deleteFolderAsync = async () => {
 
+    const closeContextMenu = () => {
+        setIsShowingContextMenu(false);
     }
-    render() {
-        const isSelected = this.props.selectedDirectory === this.getDirectoryPath()
-        var commands = [
-            {name: "View Folder", callback: async () => await this.openFolderAsync()},
-            // {name: "Delete Folder", callback: async () => await this.deleteFolder()},
-        ]
 
-        return <div className={`render-output-option ${isSelected && "selected-output-directory"}`} 
-                onClick={async () => await this.props.selectDirectoryAsyncCallback(this.props.directory.name)}
-                onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseOut}
-                onContextMenu={this.handleRightClick}
-            >
-                { this.state.isShowingContextMenu && 
-                    <ContextMenu 
-                        left={this.state.contextCoordinatesX} 
-                        top={this.state.contextCoordinatesY}
-                        commands={commands}
-                        closeContextMenuCallback={this.closeContextMenu}
-                    />
+    const getDirectoryPath = () => path.join(directory.path, directory.name);
+
+    const openFolderAsync = async () => {
+        shell.openPath(getDirectoryPath());
+    }
+
+    const handleDelete = async () => {
+        if (window.confirm(`Are you sure you want to delete "${gameDisplayName}"?`)) {
+            await onDelete(directory);
+        }
+    };
+
+    const commands = [
+        {name: "View Folder", callback: async () => await openFolderAsync()},
+        {name: "Delete", callback: handleDelete},
+    ];
+
+    return (
+        <div 
+            className={`render-output-option ${isSelected ? "selected-output-directory" : ""}`} 
+            onClick={() => onSelect(directory)}
+            onContextMenu={handleRightClick}
+        >
+            {isShowingContextMenu && 
+                <ContextMenu 
+                    left={contextCoordinates.x} 
+                    top={contextCoordinates.y}
+                    commands={commands}
+                    closeContextMenuCallback={closeContextMenu}
+                />
+            }
+            
+            <p className="render-output-main-line">
+                <span className="render-output-name">{gameDisplayName}</span>
+                {componentFilter && 
+                    <span className="render-output-component-filter">- {componentFilter}</span>
                 }
-                
-                <p className="render-output-main-line">
-                    <span className="render-output-name">{this.state.gameDisplayName}</span>
-                    {this.state.componentFilter && 
-                        <span className="render-output-component-filter">- {this.state.componentFilter}</span>
-                    }
-                </p>
-                <p><span className="render-output-version-name">{this.state.versionName}</span>
-                <span className="render-output-version">v{this.state.versionNumber}</span></p>
-                
-                {this.state.timestamp !== undefined && 
-                    <p className="render-output-date">{this.state.timestamp}</p>
-                }
-            </div>
-        
-    }
+            </p>
+            <p>
+                <span className="render-output-version-name">{versionName}</span>
+                <span className="render-output-version">v{versionNumber}</span>
+            </p>
+            
+            {timestamp !== undefined && 
+                <p className="render-output-date">{timestamp}</p>
+            }
+        </div>
+    );
 }
+
+export default RenderOutputOption;

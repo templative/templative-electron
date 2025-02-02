@@ -83,7 +83,7 @@ export default class EditPanelTab extends React.Component {
         
         var tabName = path.parse(this.props.tabbedFile.filepath).name
         if (this.props.tabbedFile.filetype === "COMPONENTS") {
-            tabName = "compositions"
+            tabName = "project"
         }
         return <li 
             className="nav-item"

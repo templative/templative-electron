@@ -9,16 +9,20 @@ export default class RulesEditor extends EditableViewerRaw {
     getFilePath = (props) => {
         return path.join(props.templativeRootDirectoryPath, "rules.md")
     }
+    updateContent = (value) => {
+        if (!this.state.hasLoaded) {
+            return
+        }
+        this.setState({content: value}, async () => {
+            await this.autosave()
+        })
+    }
     render() {
-        return <React.Fragment>
-            <div className="row rules-body">
-                <div className="col">
-                    <MarkdownEditor 
-                        value={this.state.hasLoaded ? this.state.content : ""} 
-                        onChange={this.state.hasLoaded ? (value, viewUpdate) => this.updateContent(value) : undefined}
-                    />
-                </div>
-            </div>
-        </React.Fragment> 
+        return <div className="rules-body">
+            <MarkdownEditor 
+                value={this.state.hasLoaded ? this.state.content : ""} 
+                onChange={(value, _) => this.updateContent(value)}
+            />
+        </div>
     }
 }

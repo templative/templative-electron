@@ -6,7 +6,7 @@
     flex-direction: column-reverse;
 }
 .print-controls-row {
-    background-color: rgb(42, 46, 54);
+    background-color: var(--color-content-surface);
     height: 2em;
     padding-top: 4px;
     padding-bottom: 8px;
@@ -27,7 +27,7 @@
 }
 .fake-pdf {
     height: 2000px;
-    /* background-color: hsl(0, 0%, 81%); */
+    /* background-color: var(--color-light); */
 }
 .pdf {
     height: 100%;
@@ -38,13 +38,13 @@
 }
 .create-printout-button {
     width: 100%;
-    background-color: orange !important;
-    color:#313540 !important;
+    background-color: var(--color-accent) !important;
+    color:var(--color-content-surface) !important;
     font-weight: bold !important;
 }
 .create-printout-button:hover {
-    background-color: #EFB521 !important;
-    border-color: rgb(73, 80, 87) !important;
+    background-color: var(--color-accent) !important;
+    border-color: var(--color-gray) !important;
 }
 .selectedDirectory { 
     margin-bottom:0 !important;

@@ -12,7 +12,7 @@
 }
 .add-pieces-gamedata-row {
     height: 40px;
-    border-color: hsl(210, 10%, 22%) !important;
+    border-color: var(--color-dark-3) !important;
     border-bottom-width: 1px;
     border-bottom-style: solid;
 }
@@ -77,9 +77,9 @@ tr {
     z-index: 1;
 }
 .table-input-dark {
-    background-color: rgb(26, 30, 32) !important;
-    color: #cfcfcf !important;
-    border-color: #373b3e !important;
+    background-color: var(--color-content) !important;
+    color: var(--color-light) !important;
+    border-color: var(--color-gray) !important;
     /* padding: 0 !important; */
     border-radius: 0 !important;
     margin: 0 !important;
@@ -88,20 +88,20 @@ tr {
     height: 100% !important;
 }
 .table-input-dark:focus {
-    background-color: rgb(26, 30, 32) !important;
-    color: #cfcfcf !important;
+    background-color: var(--color-content) !important;
+    color: var(--color-light) !important;
 }
 .table td {
     padding: 0 !important;
 }
-.preview-piece-button {
-    background-color: hsl(210, 10%, 19%)!important;
-    border-color: rgb(73, 80, 87) !important;
-    color: hsl(0, 0%, 81%) !important;
+/* .preview-piece-button {
+    background-color: var(--color-content-surface)!important;
+    border-color: var(--color-gray) !important;
+    color: var(--color-light) !important;
 }
 .preview-piece-button:hover {
-    background-color: hsl(210, 10%, 24%)!important;
-}
+    background-color: var(--color-dark-3)!important;
+} */
 .render-piece-icon {
     margin-bottom: 3px;
 }
@@ -116,17 +116,16 @@ tr {
     white-space: nowrap;
 }
 .key-value-control-button {
-    background-color: rgb(33, 37, 41) !important;
-    border-color: rgb(73, 80, 87) !important;
     border-bottom-width: 1px !important;
     border-left:none !important;
 }
 .key-value-control-button:first-of-type {
     border-right:none !important;
 }
-.vertical-input-group .input-group:nth-child(odd) .key-value-control-button  {
-    background-color: hsl(200, 10%, 11%)!important;
-}
+
 .piece-controls-and-keys:has(> .piece-control-input:only-child) {
     margin-bottom: 1em;
+}
+.gamedata-quantity-input {
+    max-width: 8ch;
 }

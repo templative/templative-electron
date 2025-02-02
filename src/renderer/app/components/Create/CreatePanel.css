@@ -8,16 +8,18 @@
     margin-left: 1em;
 }
 .component-type-list {
-    padding: 0px 8px 0px 8px !important;
+    padding: 0px 0px 0px 8px !important;
     overflow-y: scroll;
     height: calc(100% - 25px);
     margin: 5px 0px 5px 0px;
 }
 .create-component-name-row {
-    height: 7.5em;
+    height: 4em;
+    background-color: var(--color-content-surface);
     display: block;
     padding-top:0.5em;
     width: 100%;
+    border-bottom: solid 1px var(--color-border);
 }
 .create-component-name-row > .input-group {
     margin-bottom: 0px;
@@ -27,8 +29,7 @@
 }
 .component-type-picking-row {
     padding: 1em 1em 1em 1em !important;
-    border-top: hsl(222, 13%, 28%) solid 1px;
-    height: calc(100% - 7.5em);
+    height: calc(100% - 4em);
 }
 .component-type-picking-row > * {
     height: 100%;
@@ -39,18 +40,18 @@
     max-width: 30em !important;
 }
 .create-component-button {
-    background-color: #ea9800 !important;
-    color:#313540 !important;
+    background-color: var(--color-accent) !important;
+    color:var(--color-content-surface) !important;
     font-weight: bold !important;
     min-width: 84px !important;
 }
 .create-component-button:disabled {
-    background-color: #323843 !important;
-    color: #f3f3f3!important;
+    background-color: var(--color-accent-disabled) !important;
+    color: var(--color-text)!important;
 }
 .create-component-button:hover {
-    background-color: #ffa500 !important;
-    color:#313540 !important;
+    background-color: var(--color-accent-hover) !important;
+    color:var(--color-text) !important;
 }
 .creating-spinner {
     margin-right: 6px;
@@ -92,8 +93,8 @@
 
 .vertical-bar {
     width: 25px !important;
-    background-color: #2c303a;
-    color: hsl(0, 0%, 81%);
+    background-color: var(--color-content-surface);
+    color: var(--color-light);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,11 +104,11 @@
     transform: rotate(180deg); /* To make text vertical */
 }
 .vertical-bar:hover {
-    background-color: #323742!important;
+    background-color: var(--color-content-surface)!important;
 }
 .vertical-bar span {
     font-size: 24px;
-    color: #b6b6b6;
+    color: var(--color-light);
     transform: rotate(180deg); /* Flip text back to readable orientation */
 }
 .tags-chevron {

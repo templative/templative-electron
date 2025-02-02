@@ -1,23 +1,15 @@
 import React from "react";
-
+import EditCompositionRow from "./EditComposition/EditCompositionRow";
 import EditableViewerJson from "../EditableViewerJson";
 import TemplativeAccessTools from "../../../TemplativeAccessTools";
-import ArtdataViewer from "../ArtdataViewer/ArtdataViewer";
-import ComponentGamedataViewer from "../GamedataViewer/ComponentGamedataViewer";
-import PieceGamedataViewer from "../GamedataViewer/PieceGamedataViewer";
 import "./UnifiedComponentViewer.css"
-import StudioGamedataViewer from "../GamedataViewer/StudioGamedataViewer";
-import GameGamedataViewer from "../GamedataViewer/GameGamedataViewer";
-const path = require("path")
+import CompositionControlsRow from "./CompositionControlsRow";
+import path from "path";
 
-import studioIcon from "../../Icons/studioIcon.svg"
-import gameIcon from "../../Icons/gameIcon.svg"
-import componentIcon from "../../Icons/componentIcon.svg"
-import pieceIcon from "../../Icons/pieceIcon.svg"
-import artdataIcon from "../../Icons/artDataIcon.svg"
-
-export default class UnifiedComponentViewer extends EditableViewerJson { 
+export default class UnifiedComponentViewer extends React.Component { 
     state = {
+        componentInfo: undefined,
+        compositionIndex: undefined,
         availableDataSources: {
             studio: [],
             game: [],
@@ -27,32 +19,19 @@ export default class UnifiedComponentViewer extends EditableViewerJson {
         gamedataColumnWidth: 50,
         isResizing: false
     }
-
-    getFilePath = (props) => {
-        return path.join(props.templativeRootDirectoryPath, "component-compose.json")
+    componentDidMount = async () => {
+        await this.load();
     }
-
-    async componentDidUpdate(prevProps, prevState) {
-        await super.componentDidUpdate(prevProps, prevState);
-        
-        // Check if the viewed file has changed
-        if (this.props.viewedFile !== prevProps.viewedFile) {
-            await this.checkAndReloadDataSources(this.props.viewedFile);
-        }
-
-        const isChangingLoaded = prevState.hasLoaded !== this.state.hasLoaded;
-        const isChangingComponentName = prevProps.componentName !== this.props.componentName;
-        if (!this.state.hasLoaded || !(isChangingLoaded || isChangingComponentName)) {
-            return;
-        }
-
+    load = async () => {
         var componentInfo = undefined;
-        for (let c = 0; c < this.state.content.length; c++) {
-            const component = this.state.content[c];
+        var compositionIndex = undefined;
+        for (let c = 0; c < this.props.componentCompose.length; c++) {
+            const component = this.props.componentCompose[c];
             if (component.name !== this.props.componentName) {
                 continue;
             }
             componentInfo = component;
+            compositionIndex = c;
             break;
         }
         
@@ -61,6 +40,8 @@ export default class UnifiedComponentViewer extends EditableViewerJson {
         }
 
         this.setState({
+            componentInfo: componentInfo,
+            compositionIndex: compositionIndex,
             isStudioExtended: false,
             isGameExtended: false,
             isComponentExtended: false,
@@ -71,11 +52,26 @@ export default class UnifiedComponentViewer extends EditableViewerJson {
             loadedSubfiles: false
         }, async () => await this.loadSubfiles(componentInfo));
     }
+
+    async componentDidUpdate(prevProps, prevState) {
+        // Check if the viewed file has changed
+        if (this.props.viewedFile !== prevProps.viewedFile) {
+            await this.checkAndReloadDataSources(this.props.viewedFile);
+        }
+
+        const isChangingComponentName = prevProps.componentName !== this.props.componentName;
+        if (!isChangingComponentName) {
+            return;
+        }
+
+        await this.load();
+    }
     
     loadSubfiles = async (componentInfo) => {
-        const { templativeRootDirectoryPath } = this.props;
-    
-        // Load game JSON and construct paths
+        const { templativeRootDirectoryPath,  } = this.props;
+        if (componentInfo.type.includes("STOCK_")) {
+            return;
+        }
         const gameJson = await TemplativeAccessTools.loadFileContentsAsJson(
             path.join(templativeRootDirectoryPath, "game-compose.json")
         );
@@ -212,163 +208,78 @@ export default class UnifiedComponentViewer extends EditableViewerJson {
         document.addEventListener('mouseup', stopResize);
     }
 
-    render() {        
-        const extendedChevron = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-down drop-down-chevron" viewBox="0 0 16 16">
-            <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-        </svg>
-        const unextendedChevron = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right drop-down-chevron" viewBox="0 0 16 16">
-            <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-        </svg>
-        
-        var artdataFiles = {
-            "Front": "frontArtdataFilepath",
-            "Back": "backArtdataFilepath",
-            "DieFace": "dieFaceArtdataFilepath",
+    updateComponentName = async (newName) => {
+        await this.props.updateComponentComposeFieldAsync(this.state.compositionIndex, "name", newName);
+    }
+
+    updateComponentType = async (newType) => {
+        await this.props.updateComponentComposeFieldAsync(this.state.compositionIndex, "type", newType);
+    }
+
+    updateQuantity = async (newQuantity) => {
+        let quantity = 0;
+        if (typeof newQuantity === 'number') {
+            quantity = newQuantity;
+        } else {
+            quantity = parseInt(newQuantity);
         }
-        var artdataRows = []
-        if (this.state.loadedSubfiles) {
-            artdataRows = Object.entries(artdataFiles).map(([face, value]) => {
-                if (this.state[value] === undefined) {
-                    return <div key={face}/>
+        quantity = Math.floor(Math.max(quantity, 0));
+        await this.props.updateComponentComposeFieldAsync(this.state.compositionIndex, "quantity", quantity);
+    }
+
+    updateIsDisabled = async (newIsDisabled) => {
+        await this.props.updateComponentComposeFieldAsync(this.state.compositionIndex, "disabled", newIsDisabled);
+    }
+    
+    render() {
+        return (
+            <>
+                {this.state.componentInfo && 
+                    <CompositionControlsRow 
+                        componentName={this.state.componentInfo["name"]}
+                        updateComponentName={this.updateComponentName}
+                        type={this.state.componentInfo["type"]}
+                        updateComponentType={this.updateComponentType}
+                        quantity={this.state.componentInfo["quantity"]}
+                        updateQuantity={this.updateQuantity}
+                        isDisabled={this.state.componentInfo["disabled"]}
+                        updateIsDisabled={this.updateIsDisabled}
+                        renderComponent={this.props.renderComponent}
+                        isProcessing={this.state.isProcessing}
+                        componentTypesCustomInfo={this.props.componentTypesCustomInfo}
+                        componentTypesStockInfo={this.props.componentTypesStockInfo}
+                        updateRouteCallback={this.props.updateRouteCallback}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    />
                 }
-                if (!this.state[`has${face}Artdata`]) {
-                    return <div key={face}/>
-                }
-                if (face === "Back" && (this.state["backArtdataFilepath"] === this.state["frontArtdataFilepath"])) {
-                    const rightChevron = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right" viewBox="0 0 16 16">
-                        <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-                    </svg>
-                    return <div className="unselecteable-artdata" key={`${this.props.componentName}_${face}`}>
-                        <p>
-                            {rightChevron} <img 
-                                className="tab-icon" 
-                                src={artdataIcon} 
-                                alt="Tab icon"
-                            /> {face} Art Recipe <span className="subfile-filepath">Same as Front Art Recipe</span>
-                        </p>
-                    </div>
-                }
-                const extensionString = `is${face}Extended`
-                return <div className="" key={`${this.props.componentName}_${face}`}>
-                    <p onClick={() => this.toggleExtension(extensionString)}>
-                        { this.state[extensionString] ? extendedChevron : unextendedChevron } <img 
-                                className="tab-icon" 
-                                src={artdataIcon} 
-                                alt="Tab icon"
-                            /> {face} Art Recipe <span className="subfile-filepath">{path.parse(this.state[value]).name}.json</span> </p>
-                    { this.state[extensionString] && 
-                        <div className="universal-file-content">
-                            <ArtdataViewer 
-                                templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                                filepath={this.state[value]} 
-                                saveFileAsyncCallback={this.props.saveFileAsyncCallback}
-                                updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                                availableDataSources={this.state.availableDataSources}
-                            />
-                        </div>
-                    }
-                </div>
-            });
-        }
-        
-        return <div className="row g-0 unified-viewer">
-            {this.state.loadedSubfiles && 
-                <div className="col gamedata-column" style={{width: `${this.state.gamedataColumnWidth}%`}}>
-                    <div className={`viewer-resize-handle${this.state.isResizing ? ' active' : ''}`} onMouseDown={this.startResize}></div>
-                    <div className="">
-                        <p 
-                            onClick={() => this.toggleExtension("isStudioExtended")}
-                        >
-                            {this.state.isStudioExtended ? extendedChevron : unextendedChevron} 
-                            <img 
-                                className="tab-icon" 
-                                src={studioIcon} 
-                                alt="Tab icon"
-                            /> 
-                            Studio <span className="subfile-filepath">{`${path.parse(this.state.studioGamedataFilepath).name}.json`}</span>
-                        </p>
-                        {this.state.isStudioExtended && 
-                            <div className="universal-file-content">
-                                <StudioGamedataViewer 
-                                    filepath={this.state.studioGamedataFilepath} 
-                                    saveFileAsyncCallback={this.handleFileSave}
-                                    />
-                            </div>
-                        }
-                    </div>
-                    <div className="">
-                        <p 
-                            onClick={() => this.toggleExtension("isGameExtended")}
-                        >
-                            {this.state.isGameExtended ? extendedChevron : unextendedChevron} 
-                            <img 
-                                className="tab-icon" 
-                                src={gameIcon} 
-                                alt="Tab icon"
-                            /> 
-                            Game <span className="subfile-filepath">{`${path.parse(this.state.gameGamedataFilepath).name}.json`}</span>
-                        </p>
-                        {this.state.isGameExtended && 
-                            <div className="universal-file-content">
-                                <GameGamedataViewer 
-                                    filepath={this.state.gameGamedataFilepath} 
-                                    saveFileAsyncCallback={this.handleFileSave}
-                                />
-                            </div>
-                        }
-                    </div>
-                    <div className="">
-                        <p 
-                            onClick={() => this.toggleExtension("isComponentExtended")}
-                        >
-                            {this.state.isComponentExtended ? extendedChevron : unextendedChevron} 
-                            <img 
-                                className="tab-icon" 
-                                src={componentIcon} 
-                                alt="Tab icon"
-                            /> 
-                            Component <span className="subfile-filepath">{`${path.parse(this.state.componentGamedataFilepath).name}.json`}</span>
-                        </p>
-                        {this.state.isComponentExtended && 
-                            <div className="universal-file-content">
-                                <ComponentGamedataViewer 
-                                    filepath={this.state.componentGamedataFilepath} 
-                                    saveFileAsyncCallback={this.handleFileSave}
-                                />
-                            </div>
-                        }
-                    </div>
-                    <div className="">
-                        <p 
-                            onClick={() => this.toggleExtension("isPiecesExtended")}
-                        >
-                            {this.state.isPiecesExtended ? extendedChevron : unextendedChevron} 
-                            <img 
-                                className="tab-icon" 
-                                src={pieceIcon} 
-                                alt="Tab icon"
-                            /> 
-                            Piece <span className="subfile-filepath">{`${path.parse(this.state.piecesGamedataFilepath).name}.json`}</span>
-                        </p>
-                        {this.state.isPiecesExtended && 
-                            <div className="universal-file-content">
-                            
-                            <PieceGamedataViewer 
-                                filepath={this.state.piecesGamedataFilepath} 
-                                saveFileAsyncCallback={this.handleFileSave}
-                                showPreviewCallback={this.props.showPreviewCallback}
-                                isPreviewEnabled={true}
-                                componentName={this.props.componentName}
-                                templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                            />
-                            </div>                                         
-                        }
-                    </div>
-                </div>
-            }
-            <div className="col artdata-column">
-                {artdataRows}
-            </div>
-        </div> 
+                
+                {this.state.loadedSubfiles &&
+                    <EditCompositionRow 
+                        frontArtdataFilepath={this.state.frontArtdataFilepath}
+                        backArtdataFilepath={this.state.backArtdataFilepath}
+                        dieFaceArtdataFilepath={this.state.dieFaceArtdataFilepath}
+                        hasFrontArtdata={this.state.hasFrontArtdata}
+                        hasBackArtdata={this.state.hasBackArtdata}
+                        hasDieFaceArtdata={this.state.hasDieFaceArtdata}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        handleFileSave={this.handleFileSave}
+                        updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                        availableDataSources={this.state.availableDataSources}
+                        
+                        gamedataColumnWidth={this.state.gamedataColumnWidth}
+                        isResizing={this.state.isResizing}
+                        startResize={this.startResize}
+                        
+                        componentName={this.state.componentInfo["name"]}
+                        studioGamedataFilepath={this.state.studioGamedataFilepath}
+                        gameGamedataFilepath={this.state.gameGamedataFilepath}
+                        componentGamedataFilepath={this.state.componentGamedataFilepath}
+                        piecesGamedataFilepath={this.state.piecesGamedataFilepath}
+                        showPreviewCallback={this.props.showPreviewCallback}
+                        updateViewedFileUsingTabAsyncCallback={this.props.updateViewedFileUsingTabAsyncCallback}
+                    />
+                } 
+            </>
+        );
     }
 }

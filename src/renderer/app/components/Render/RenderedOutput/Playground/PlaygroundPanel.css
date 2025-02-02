@@ -22,13 +22,13 @@
 }
 .create-playground-button {
     width: 100%;
-    background-color: orange !important;
-    color:#313540 !important;
+    background-color: var(--color-accent) !important;
+    color:var(--color-content-surface) !important;
     font-weight: bold !important;
 }
 .create-playground-button:hover {
-    background-color: #EFB521 !important;
-    border-color: rgb(73, 80, 87) !important;
+    background-color: var(--color-accent) !important;
+    border-color: var(--color-gray) !important;
 }
 .playground-directory-header, .ttp-directory-label {
     width: 100% !important;
@@ -46,7 +46,7 @@
     border-top-right-radius: 0px !important;
 }
 .lookup-playground-button {
-    border-color: rgb(73, 80, 87) !important;
+    border-color: var(--color-gray) !important;
 }
 .playground-controls > .render-output-options-container { 
     height: calc(100% - 450px);

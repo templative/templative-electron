@@ -1,0 +1,179 @@
+:root {
+  --color-input-background-odd: var(--color-content);
+  --color-input-background-even: hsl(215, 21%, 14%);
+}
+.App input, .App textarea, .App select, .App button, .App .form-check-input {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: var(--color-border) !important;
+}
+.input-group .btn {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+.App input::placeholder, .App textarea::placeholder {
+    color: var(--color-text-muted) !important;
+    opacity: 0.7;
+}
+
+
+.input-group .btn:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+.App .btn-primary {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-content);
+  font-weight: 500;
+  border-width: 1px;
+}
+.App .btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  color: var(--color-content);
+}
+.App .btn-primary:active {
+  background-color: var(--color-accent-hover) ;
+  border-color: var(--color-accent-hover);
+}
+.App .btn-primary:disabled {
+  background-color: var(--color-accent-disabled);
+  border-color: var(--color-accent-disabled);
+}
+.App .btn-outline-secondary {
+  background-color: var(--color-content-surface);
+  border-color: var(--color-border);
+  border-width: 1px;
+}
+.App .btn-outline-secondary:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-content);
+}
+.App .btn-outline-secondary:active {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-content);
+}
+.App .btn-secondary-outline:disabled {
+  background-color: var(--color-content-surface);
+  border-color: var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.App input:active, .App textarea:active, .App select:active, .App button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.App input:focus, .App textarea:focus, .App select:focus, .App button:focus, .App .form-check-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.no-right-border {
+  border-right-width: 0px !important;
+}
+.no-left-border {
+  border-left-width: 0px !important;
+}
+
+.vertical-input-group .input-group:first-child {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+.vertical-input-group .input-group:first-child *:not(.form-check-input) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;    
+}
+.vertical-input-group .input-group:last-child {
+  padding-top: 0 !important;
+}
+.vertical-input-group .input-group:last-child *:not(.form-check-input) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.vertical-input-group .input-group:not(:last-child):not(:first-child) {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom:0 !important
+}
+.vertical-input-group .input-group:not(:last-child):not(:first-child) *:not(.form-check-input) {
+  border-radius: 0;
+}  
+.vertical-input-group .input-group:not(:first-child) :not(.form-check-input) {
+  border-top: 0 !important;
+}
+
+/* Input Group Base Styles */
+.input-group .form-control,
+.input-group .form-select,
+.input-group .soft-label,
+.input-group .input-group-text {
+  background-color: var(--color-input-background-odd);
+}
+
+
+
+/* Vertical Input Group Styles */
+.vertical-input-group .input-group:nth-child(odd) .form-control,
+.vertical-input-group .input-group:nth-child(odd) .form-select,
+.vertical-input-group .input-group:nth-child(odd) .soft-label,
+.vertical-input-group .input-group:nth-child(odd) .input-group-text {
+  background-color: var(--color-input-background-odd) !important;
+}
+
+.vertical-input-group .input-group:nth-child(even) .form-control,
+.vertical-input-group .input-group:nth-child(even) .form-select,
+.vertical-input-group .input-group:nth-child(even) .soft-label,
+.vertical-input-group .input-group:nth-child(even) .input-group-text {
+  background-color: var(--color-input-background-even) !important;
+}
+
+/* Disabled states */
+.vertical-input-group .input-group:nth-child(odd) .form-control:disabled,
+.vertical-input-group .input-group:nth-child(odd) .form-select:disabled,
+.vertical-input-group .input-group:nth-child(odd) .soft-label:disabled,
+.vertical-input-group .input-group:nth-child(odd) .input-group-text:disabled {
+  background-color: var(--color-input-background-odd) !important;
+  opacity: 0.75;
+}
+
+.vertical-input-group .input-group:nth-child(even) .form-control:disabled,
+.vertical-input-group .input-group:nth-child(even) .form-select:disabled,
+.vertical-input-group .input-group:nth-child(even) .soft-label:disabled,
+.vertical-input-group .input-group:nth-child(even) .input-group-text:disabled {
+  background-color: var(--color-input-background-even) !important;
+  opacity: 0.75;
+}
+
+/* Updated soft-label styles */
+.soft-label,
+.input-group-text {
+  color: var(--color-light) !important;
+  border-color: var(--color-border) !important;
+  border-right-width: 0 !important;
+}
+
+.vertical-input-group .input-group:nth-child(odd) .soft-label,
+.vertical-input-group .input-group:nth-child(odd) .input-group-text {
+  background-color: var(--color-input-background-odd) !important;
+}
+
+.vertical-input-group .input-group:nth-child(even) .soft-label,
+.vertical-input-group .input-group:nth-child(even) .input-group-text {
+  background-color: var(--color-input-background-even) !important;
+}
+
+.bi-trash3 {
+  /* fill: inherit; */
+  transition: fill 0.2s ease !important;
+}
+
+input, textarea, select {
+  user-select: text;
+}
+.form-check-input {
+  cursor: pointer;
+}

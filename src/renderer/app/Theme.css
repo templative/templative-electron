@@ -1,0 +1,35 @@
+:root {
+  /* Core palette */
+  --color-accent: hsl(233, 34%, 65%);
+  --color-accent-hover: hsl(233, 33%, 75%);
+  --color-accent-disabled: hsl(233, 20%, 45%);
+
+  /* Semantic colors */
+  --color-error: hsl(340, 57%, 64%);
+  --color-success: hsl(150, 57%, 64%);
+  --color-warning: hsl(40, 57%, 64%);
+  --color-info: hsl(200, 57%, 64%);
+
+  /* Theme mapping */
+  --color-content: hsl(215, 21%, 12%);
+  --color-content-hover: hsl(215, 21%, 17%);
+  --color-content-surface: hsl(215, 21%, 15%);
+  --color-content-surface-hover: hsl(215, 21%, 20%);
+  --color-surface-cover: hsl(215, 21%, 20%);
+  --color-surface-cover-hover: hsl(215, 21%, 25%);
+  --color-border: hsl(215, 21%, 23%);
+  --color-text: hsl(240, 11%, 78%);
+  --color-text-muted: hsl(240, 11%, 50%);
+  
+
+  /* Bootstrap overrides */
+  --bs-primary: var(--color-accent);
+  --bs-body-bg: var(--color-content);
+  --bs-body-color: var(--color-text);
+  --bs-border-color: var(--color-border);
+  --bs-link-color: var(--color-accent);
+  --bs-link-hover-color: var(--color-accent-hover);
+  --bs-primary-rgb: 123, 134, 192;
+  --bs-border-radius: 0.375rem;
+  --bs-border-width: 1px;
+}

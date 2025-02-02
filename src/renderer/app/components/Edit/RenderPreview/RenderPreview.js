@@ -25,7 +25,6 @@ export default class RenderPreview extends React.Component {
         await this.#loadImages(this.state.previewsDirectory);
         this.#closePreviewImagesWatcher()
         this.previewImagesWatcher = fsOld.watch(this.state.previewsDirectory, {}, async () => {
-            console.log(`${this.state.previewsDirectory} changed.`);
             await this.#loadImages(this.state.previewsDirectory);
         });
     }
@@ -47,7 +46,6 @@ export default class RenderPreview extends React.Component {
 
             // const preloadImages = filepaths.map(src => this.#preloadImage(src));
             // await Promise.all(preloadImages);
-            // console.log(filepaths)
             this.setState({
                 imageSources: filepaths,
                 loadingImages: false,

@@ -20,7 +20,7 @@ async def convertElementToString(element) -> str:
 async def createArtFileOfPiece(compositions: ComponentComposition, artdata: any, gamedata: PieceData | ComponentBackData, componentBackOutputDirectory: str, productionProperties: ProduceProperties | PreviewProperties, _:FontCache) -> None:
     templateFilesDirectory = compositions.gameCompose["artTemplatesDirectory"]
     if artdata is None: 
-        print("!!! Missing artdata %s" % gamedata.componentDataBlob["displayName"])
+        print("!!! Missing artdata %s" % gamedata.componentDataBlob["name"])
         return
     artFilename = "%s.svg" % (artdata["templateFilename"])
     artFilepath = os.path.normpath(os.path.join(productionProperties.inputDirectoryPath, templateFilesDirectory, artFilename))

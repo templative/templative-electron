@@ -1,12 +1,12 @@
 .context-menu {
     width: 300px;
-    background-color: #373c48fa;
+    background-color: var(--color-content-surface);
     border-radius: 6px;
     position: fixed;
     z-index: 999999;
     padding: 0.15em 0.15em 0.15em 0.15em;
     border-style: solid;
-    border-color: hsl(222, 13%, 32%);
+    border-color: var(--color-border);
     border-width: 1px;
     pointer-events: auto;
 }
@@ -25,5 +25,5 @@
     margin-bottom: 0px;
 }
 .context-menu-item:hover {
-    background-color: hsl(222, 13%, 32%);
+    background-color: var(--color-content-surface-hover);
 }

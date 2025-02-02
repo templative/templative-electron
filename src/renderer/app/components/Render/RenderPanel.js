@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import OutputExplorer from "./RenderedOutput/OutputExplorer"
 import RenderButton from "./RenderControls/RenderButton"
 import "./RenderPanel.css"
@@ -8,155 +8,180 @@ import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 import { trackEvent } from "@aptabase/electron/renderer";
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import { RenderingWorkspaceContext } from "./RenderingWorkspaceProvider";
+import { OutputDirectoriesContext } from "../OutputDirectories/OutputDirectoriesProvider";
+const path = require("path");
 
-const path = require('path');
+export default function RenderPanel({ templativeRootDirectoryPath, templativeMessages, changeTabsToEditAFileCallback }) {  
+    const renderingContext = useContext(RenderingWorkspaceContext);
+    const outputContext = useContext(OutputDirectoriesContext);
+    
+    const [isDebugRendering, setIsDebugRendering] = useState(false);
+    const [isComplexRendering, setIsComplexRendering] = useState(true);
+    const [selectedLanguage, setSelectedLanguage] = useState("en");
+    const [isConnectedToTemplative, setIsConnectedToTemplative] = useState(false);
+    const [isProcessing, setIsProcessing] = useState(false);
+    const [isResizing, setIsResizing] = useState(false);
+    const [components, setComponents] = useState([]);
 
+    useEffect(() => {
+        const loadComponents = async () => {
+            if (templativeRootDirectoryPath) {
+                const components = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(
+                    templativeRootDirectoryPath, 
+                    "component-compose.json"
+                );
+                setComponents(components);
+            }
+        };
 
+        loadComponents();
+        trackEvent("view_renderPanel");
+    }, [templativeRootDirectoryPath]);
 
-export default class RenderPanel extends React.Component {  
-    static contextType = RenderingWorkspaceContext; 
-    state={
-        components: [],
-        isDebugRendering: false,
-        isComplexRendering: true,
-        selectedLanguage: "en",
-        isConnectedToTemplative: false,
-        isProcessing: false,
-        isResizing: false
-    }
+    const selectDirectoryAsync = async (directory) => {
+        const gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(
+            templativeRootDirectoryPath, 
+            "game-compose.json"
+        );
+        const outputDirectory = path.join(
+            templativeRootDirectoryPath, 
+            gameCompose["outputDirectory"], 
+            directory
+        );
 
-    selectDirectoryAsync = async (directory) => {
-        var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json")
-        var outputDirectory = path.join(this.props.templativeRootDirectoryPath, gameCompose["outputDirectory"], directory)
-        this.setState({selectedOutputDirectory: outputDirectory})
-        this.context.setSelectedOutputFolder(outputDirectory)
-    }
-    toggleComponent = (componentName) => {
-        if (this.context.selectedComponentFilter === componentName) {
-            this.context.setSelectedComponentFilter(undefined)
-            return
-        }
-        this.context.setSelectedComponentFilter(componentName)
-    }
-    setDebugCheckbox = () => { 
-        this.setState({isDebugRendering: !this.state.isDebugRendering})
-    }
-    setComplexCheckbox = () => { 
-        this.setState({isComplexRendering: !this.state.isComplexRendering})
-    }
-    setLanguage = (event) => {
-        this.setState({selectedLanguage: event.target.value})
-    }
-    componentDidMount = async () => {
-        trackEvent("view_renderPanel")
-        if (this.props.templativeRootDirectoryPath !== undefined) {
-            var components = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
-            this.setState({components: components})
-        }
-    }
-    componentDidUpdate = async (prevProps, prevState) => {
-        if (this.props.templativeRootDirectoryPath !== prevProps.templativeRootDirectoryPath) {
-            var components = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json")
-            this.setState({components: components})
-        }
-    }
-    renderTemplativeProject = () => {
-        var request = {
-            isDebug: this.state.isDebugRendering,
-            isComplex: this.state.isComplexRendering,
-            componentFilter: this.context.selectedComponentFilter,
-            language: this.state.selectedLanguage,
-            directoryPath: this.props.templativeRootDirectoryPath,
-        }
-        this.context.setExportOptionIndex(0)
-        this.setState({isProcessing: true})
-        trackEvent("render")
+        // Find the directory object that matches this path
+        const dirObj = outputContext.directories.find(d => 
+            path.join(d.path, d.name) === outputDirectory
+        );
         
-        socket.emit('produceGame', request, () => {
-            this.setState({isProcessing: false, isConnectedToTemplative: socket.connected,})
-        });
-    }
-    startResize = (e) => {
+        if (dirObj) {
+            await outputContext.setSelectedOutputDirectory(dirObj);
+        }
+    };
+
+    const toggleComponent = (componentName) => {
+        if (renderingContext.selectedComponentFilter === componentName) {
+            renderingContext.setSelectedComponentFilter(undefined);
+            return;
+        }
+        renderingContext.setSelectedComponentFilter(componentName);
+    };
+
+    const renderTemplativeProject = () => {
+        const request = {
+            isDebug: isDebugRendering,
+            isComplex: isComplexRendering,
+            componentFilter: renderingContext.selectedComponentFilter,
+            language: selectedLanguage,
+            directoryPath: templativeRootDirectoryPath,
+        };
+        
+        renderingContext.setExportOptionIndex(0);
+        setIsProcessing(true);
+        trackEvent("render");
+        
+        socket.emit('produceGame', request);
+        setIsConnectedToTemplative(socket.connected);
+    };
+
+    const startResize = (e) => {
         const startX = e.clientX;
-        const startWidth = this.context.renderControlsColumnWidth;
+        const startWidth = renderingContext.renderControlsColumnWidth;
         const container = document.querySelector('.mainBody .row');
         
-        this.setState({ isResizing: true });
+        setIsResizing(true);
         
         const doDrag = (e) => {
             const containerWidth = container.offsetWidth;
             const difference = e.clientX - startX;
             const newWidth = startWidth + (difference / containerWidth * 100);
-            this.context.setRenderControlsColumnWidth(Math.min(Math.max(8, newWidth), 50));
+            renderingContext.setRenderControlsColumnWidth(Math.min(Math.max(8, newWidth), 50));
         };
 
         const stopResize = () => {
-            this.setState({ isResizing: false });
+            setIsResizing(false);
             document.removeEventListener('mousemove', doDrag);
             document.removeEventListener('mouseup', stopResize);
         };
 
         document.addEventListener('mousemove', doDrag);
         document.addEventListener('mouseup', stopResize);
-    }
-    render() {
-        var componentDirectoryDivs = this.state.components
-            .filter(component => !component.type.startsWith("STOCK_"))
-            .sort(function (a, b) {
-                if (a.name < b.name) {
-                  return -1;
-                }
-                if (a.name > b.name) {
-                  return 1;
-                }
-                return 0;
-              })
-            .map((component) => {
-                return <div onClick={()=>this.toggleComponent(component.name)} className={this.context.selectedComponentFilter === component.name ? "directory component-selected-for-rendering" : "directory"} key={component.name}> 
-                    <p className="directory-item">{component.name}</p>
-                </div>
-            }
-        )
-        
-        return <div className='mainBody'>
-            <div className="row render-panel-row">
-                <div className="col-xs-12 col-md-7 col-lg-6 col-xl-3 directoryPanel" 
-                     style={{width: `${this.context.renderControlsColumnWidth}%`}}>
-                    <div className={`resize-handle${this.state.isResizing ? ' active' : ''}`} onMouseDown={this.startResize}></div>
+    };
+
+    const handleDirectoryDelete = (deletedPath) => {
+        if (outputContext.selectedDirectory && 
+            path.join(outputContext.selectedDirectory.path, outputContext.selectedDirectory.name) === deletedPath) {
+            outputContext.setSelectedOutputDirectory(undefined);
+        }
+    };
+
+    const componentDirectoryDivs = components
+        .filter(component => !component.type.startsWith("STOCK_"))
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .map((component) => (
+            <div 
+                onClick={() => toggleComponent(component.name)} 
+                className={renderingContext.selectedComponentFilter === component.name 
+                    ? "directory component-selected-for-rendering" 
+                    : "directory"
+                } 
+                key={component.name}
+            > 
+                <p className="directory-item">{component.name}</p>
+            </div>
+        ));
+    
+    return (
+        <div className='mainBody'>
+            <div className="row render-panel-row g-0">
+                <div 
+                    className="col-xs-12 col-md-7 col-lg-6 col-xl-3 render-controls-column" 
+                    style={{width: `${renderingContext.renderControlsColumnWidth}%`}}
+                >
+                    <div 
+                        className={`resize-handle${isResizing ? ' active' : ''}`} 
+                        onMouseDown={startResize}
+                    />
                     <div className="component-filter-container">
-                        <div className="headerWrapper">
+                        <div className="header-wrapper">
                             <p className="resourcesHeader">Composition Filter</p>
                         </div>
                         <div className="component-filter-options">
                             {componentDirectoryDivs}
                         </div>
                         <RenderButton 
-                            selectedComponent={this.context.selectedComponentFilter} 
-                            selectedLanguage={this.state.selectedLanguage} 
-                            isDebugRendering={this.state.isDebugRendering}
-                            isComplexRendering={this.state.isComplexRendering}
-                            toggleDebugCallback={this.setDebugCheckbox}
-                            toggleComplexCallback={this.setComplexCheckbox}
-                            renderTemplativeProjectCallback={this.renderTemplativeProject}
-                            setLanguageCallback={this.setLanguage}
+                            selectedComponent={renderingContext.selectedComponentFilter} 
+                            selectedLanguage={selectedLanguage} 
+                            isDebugRendering={isDebugRendering}
+                            isComplexRendering={isComplexRendering}
+                            toggleDebugCallback={() => setIsDebugRendering(!isDebugRendering)}
+                            toggleComplexCallback={() => setIsComplexRendering(!isComplexRendering)}
+                            renderTemplativeProjectCallback={renderTemplativeProject}
+                            setLanguageCallback={(e) => setSelectedLanguage(e.target.value)}
                         />
-                        
                     </div>
                     <LoggedMessages 
-                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
-                        messages={this.props.templativeMessages}
+                        templativeRootDirectoryPath={templativeRootDirectoryPath} 
+                        messages={templativeMessages}
                     />
                     <RenderOutputOptions 
-                        selectedDirectory={this.context.selectedOutputDirectory} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} selectDirectoryAsyncCallback={this.selectDirectoryAsync}/>
+                        selectedDirectory={outputContext.selectedDirectory}
+                        templativeRootDirectoryPath={templativeRootDirectoryPath} 
+                        selectDirectoryAsyncCallback={selectDirectoryAsync}
+                        onDirectoryDelete={handleDirectoryDelete}
+                    />
                 </div>  
                 <div className="outputPanel">
                     <OutputExplorer 
-                        changeTabsToEditAFileCallback={this.props.changeTabsToEditAFileCallback}
-                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} 
-                        outputFolderPath={this.context.selectedOutputDirectory}
+                        changeTabsToEditAFileCallback={changeTabsToEditAFileCallback}
+                        templativeRootDirectoryPath={templativeRootDirectoryPath} 
+                        outputFolderPath={outputContext.selectedDirectory 
+                            ? path.join(outputContext.selectedDirectory.path, outputContext.selectedDirectory.name)
+                            : undefined
+                        }
                     />
-                </div>        
+                </div>       
             </div>
         </div>
-    }
+    );
 }

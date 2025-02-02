@@ -14,7 +14,7 @@ const doesUserOwnTemplative = async(email, token) => {
         return false
     }
     try {
-        const baseurl = "https://templative-server-84c7a76c7ddd.herokuapp.com"
+        const baseurl = "https://api.templative.net/"
         var response = await axios.get(`${baseurl}/product`, {
             params: {
                 email: email,
@@ -53,7 +53,7 @@ const searchForAPublisher = async(email, token, gameInformation) => {
         return false
     }
     try {
-        const baseurl = "https://templative-server-84c7a76c7ddd.herokuapp.com"
+        const baseurl = "https://api.templative.net/"
         var response = await axios.post(`${baseurl}/publishers`, {
             email: email,
             gameInformation: gameInformation

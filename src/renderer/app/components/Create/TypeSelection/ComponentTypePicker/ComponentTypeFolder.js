@@ -11,7 +11,7 @@ export default class ComponentTypeFolder extends React.Component {
         this.setState({isExtended: !this.state.isExtended})
     }
     render = () => {            
-        var folder = <div className="renderedComponent">
+        var folder = <div className="component-type-folder">
             <div className="component-type-header" onClick={this.toggleExtended}>
                 <p className="rendered-component-title">{this.props.category.charAt(0).toUpperCase() + this.props.category.slice(1)}</p>
                 <div className="component-output-extension-chevron">

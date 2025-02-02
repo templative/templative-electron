@@ -10,7 +10,7 @@ async def calculateComponentsDepth(gameRootDirectoryPath):
     studioCompose = await defineLoader.loadStudio(gameRootDirectoryPath)
     componentCompose = await defineLoader.loadComponentCompose(gameRootDirectoryPath)
 
-    print("%s by %s" % (game["displayName"], studioCompose["displayName"]))
+    print("%s by %s" % (game["name"], studioCompose["name"]))
     await printGameComponentDepth(gameRootDirectoryPath, gameCompose, componentCompose)
 
 async def printGameComponentDepth(gameRootDirectoryPath, gameCompose, componentCompose):

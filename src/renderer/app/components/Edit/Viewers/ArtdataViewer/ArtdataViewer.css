@@ -12,29 +12,18 @@
 .add-button {
     width:100%;
 }
-.add-field-button {
-    background-color: hsl(210, 10%, 19%)!important;
-    border-color: rgb(73, 80, 87) !important;
-    border-bottom-width: 2px !important;
-    color: hsl(0, 0%, 81%) !important;
-}
-.add-field-button:hover {
-    background-color: hsl(210, 10%, 24%)!important;
-
-}
 
 .trash-button, .add-button {
-    padding-top: 0px !important;
-    background-color: hsl(210, 10%, 19%)!important;
-    border-color: rgb(73, 80, 87) !important;
-    color: hsl(0, 0%, 81%) !important;
+    /* padding-top: 0px !important;
+    background-color: var(--color-content-surface)!important;
+    border-color: var(--color-gray) !important;
+    color: var(--color-light) !important; */
 }
 .trash-button:hover, .add-button:hover {
-    background-color: hsl(210, 10%, 24%)!important;
 }
 .artdata-crud-control {
-    background-color: rgb(33, 37, 41) !important;
-    border-color: rgb(73, 80, 87) !important;
+    background-color: var(--color-content) !important;
+    border-color: var(--color-gray) !important;
     border-bottom-width: 1px !important;
     border-left:none !important;
     border-right-width: 0px;
@@ -46,10 +35,10 @@
     color: rgba(108, 117, 125, 0.65) !important;
 }
 .vertical-input-group .input-group:nth-child(odd) .artdata-crud-control  {
-    background-color: hsl(200, 10%, 11%)!important;
+    background-color: var(--color-content)!important;
 }
 .vertical-input-group .input-group:nth-child(odd) .artdata-crud-control:disabled  {
-    background-color: hsl(200, 10%, 11%)!important;
+    background-color: var(--color-content)!important;
 }
 .no-left-border {
     border-left-width: 0 !important;
@@ -66,17 +55,19 @@
 .add-text-replacement-suggestion-button {
     font-size:12px !important;
     border-radius: 32px !important;
-    background-color: #2b3035!important;
-    border-color: rgb(73, 80, 87) !important;
+    background-color: var(--color-content)!important;
+    color: var(--color-text) !important;
+    border-color: var(--color-border) !important;
     margin-right: 0.25em;
 }
 .go-to-template-button {
-    color: rgb(222, 226, 230) !important;
-    background-color: rgb(43, 48, 53) !important;
-    border-color: rgb(73, 80, 87) !important;
+    color: var(--color-light) !important;
+    background-color: var(--color-content) !important;
+    border-color: var(--color-border) !important;
+    color: var(--color-text) !important;
 }
 .go-to-template-button:hover {
-    background-color: hsl(210, 10%, 22%) !important;
+    background-color: var(--color-content-surface) !important;
 }
 
 .text-replacement-debugging-label {
@@ -100,13 +91,13 @@
 }
 
 .scope-icon-container {
-    background-color: #1a1e20 !important;
-    border-color: rgb(73, 80, 87) !important;
-    color: rgb(222, 226, 230) !important;
+    background-color: var(--color-content) !important;
+    border-color: var(--color-gray) !important;
+    color: var(--color-light) !important;
     border-right: none !important;
 }
 .vertical-input-group .input-group:nth-child(even) .scope-icon-container {
-    background-color: rgb(33, 37, 41) !important;
+    background-color: var(--color-content) !important;
   }
 .scoped-value-coordinate-input {
     max-width: 6ch !important;
@@ -130,5 +121,5 @@
 }
 
 .artdata-up-arrow {
-    border-left: 1px rgb(73, 80, 87) solid !important;
+    border-left: 1px var(--color-gray) solid !important;
 }

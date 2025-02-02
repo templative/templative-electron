@@ -1,5 +1,5 @@
 .github-login-controls {
-    border-top: 1px solid #444;
+    border-top: 1px solid var(--color-gray);
     padding-top: 10px;
     padding-bottom:1em;
     padding-right: 10px;
@@ -21,9 +21,9 @@
 }
 
 .login-github-button {
-    color: rgb(222, 226, 230) !important;
-    background-color: rgb(43, 48, 53) !important;
-    border-color: rgb(73, 80, 87) !important;
+    color: var(--color-light) !important;
+    background-color: var(--color-dark-3) !important;
+    border-color: var(--color-gray) !important;
     padding: 0.5rem 1rem;
     border-radius: 6px;
     font-size: 14px;
@@ -31,7 +31,7 @@
     transition: background-color 0.2s;
 }
 .login-github-button:hover {
-    background-color: hsl(210, 10%, 22%) !important;
+    background-color: var(--color-dark-3) !important;
 }
 
 .verification-popup {
@@ -48,7 +48,7 @@
 }
 
 .popup-content {
-    background: #2b3035;
+    background: var(--color-dark-3);
     padding: 2rem;
     border-radius: 8px;
     text-align: center;
@@ -61,7 +61,7 @@
     font-size: 24px;
     padding: 1rem;
     margin: 1rem 0;
-    background: #212529;
+    background: var(--color-content);
     border-radius: 4px;
     user-select: all;
 }
@@ -73,9 +73,9 @@
 }
 
 .popup-button {
-    color: rgb(222, 226, 230);
-    background-color: rgb(43, 48, 53);
-    border: 1px solid rgb(73, 80, 87);
+    color: var(--color-light);
+    background-color: var(--color-dark-3);
+    border: 1px solid var(--color-gray);
     padding: 0.5rem 1rem;
     border-radius: 6px;
     font-size: 14px;
@@ -84,11 +84,11 @@
 }
 
 .popup-button:hover {
-    background-color: hsl(210, 10%, 22%);
+    background-color: var(--color-dark-3);
 }
 
 .error-message {
-    color: #ff6b6b;
+    color: var(--color-error);
     margin-top: 1rem;
     font-size: 14px;
 }
@@ -101,10 +101,10 @@
     border: none;
     font-size: 20px;
     cursor: pointer;
-    color: #666;
+    color: var(--color-gray);
     padding: 5px 10px;
 }
 
 .popup-close-button:hover {
-    color: #333;
+    color: var(--color-dark-3);
 }

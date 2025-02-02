@@ -43,17 +43,16 @@ export default class GitRow extends React.Component {
             const settings = JSON.parse(settingsData)
         return settings["isGitEnabled"] === "true"
         } catch (error) {
-            console.log("Settings file not found or invalid")
+            console.warn("Settings file not found or invalid")
             return false
         }
     }
     #isGitInstalled = async () => {
         try {
             await this.execAsync('git --version');
-            console.log("Git is installed")
             return true;
         } catch (error) {
-            console.log(`Git is not installed: ${error}`)
+            console.warn(`Git is not installed: ${error}`)
             return false;
         }
     };
@@ -62,10 +61,9 @@ export default class GitRow extends React.Component {
         const gitPath = path.join(this.props.templativeRootDirectoryPath, '.git');
         try {
             await fs.access(gitPath, fs.constants.F_OK);
-            console.log("Git directory found")
             return true;
         } catch {
-            console.log("No .git directory found")
+            console.warn("No .git directory found")
             return false;
         }
     }

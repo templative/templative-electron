@@ -27,5 +27,5 @@
     outline: none;
 }
 .unused-file {
-    color: hsl(0, 0%, 60%) !important;
+    color: var(--color-text-muted) !important;
 }

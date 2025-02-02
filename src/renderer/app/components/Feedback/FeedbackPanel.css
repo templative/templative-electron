@@ -1,5 +1,5 @@
 .past-feedback-col {
-    background-color: #2b2f37;
+    background-color: var(--color-dark-3);
     padding-right:0em !important; 
 }
 .past-feedback-col > button {
@@ -11,7 +11,7 @@
 .feedback {
     margin-top: 1em;
     padding: 1em 1em 1em 1em;
-    background-color: #2b2f37;
+    background-color: var(--color-dark-3);
     max-width: 725px;
     margin-left: auto;
     margin-right: auto;
@@ -28,22 +28,22 @@
     min-height: 3em;
     font-size: 14px;
     padding: 0.5em;
-    background-color:#00000000;
-    border-bottom-color: #252830;
+    background-color:var(--color-content-surface);
+    border-bottom-color: var(--color-content-surface);
     border-bottom-width: 1px;
     border-bottom-style:solid;
 }
 .post-option:first-of-type {
-    border-top-color: #252830;
+    border-top-color: var(--color-content-surface);
     border-top-width: 1px;
     border-top-style:solid;
 }
 .post-option:hover {
-    background-color: #333742;
+    background-color: var(--color-gray);
     cursor: pointer;
 }
 .selected-post-option {
-    background-color: #2f333c;
+    background-color: var(--color-dark-3);
 }
 .feedback-form, .feedback-viewer {
     margin-top: 1em;
@@ -51,13 +51,13 @@
     margin-right: auto;
     max-width: 715px;
     padding: 1em;
-    background-color: #2b2f37;
+    background-color: var(--color-dark-3);
     border-radius: 8px;
 }
 .post-button, .create-feedback-post-button {
-    background-color: #333742 !important;
-    color: hsl(0, 0%, 81%) !important;
+    background-color: var(--color-gray) !important;
+    color: var(--color-light) !important;
 }
 .post-button:hover, .create-feedback-post-button:hover {
-    background-color: #373c48 !important;
+    background-color: var(--color-gray) !important;
 }

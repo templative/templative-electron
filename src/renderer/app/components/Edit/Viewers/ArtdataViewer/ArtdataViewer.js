@@ -22,9 +22,14 @@ const DEFAULT_ARTDATA_ITEMS = {
 }
 
 export default class ArtdataViewer extends EditableViewerJson {  
-    state = {
-        replacementSuggestions: [],
-        templateFileExists: false
+    constructor(props) {
+        super(props);
+        this.updateViewedFileUsingExplorerAsyncCallback = props.updateViewedFileUsingExplorerAsyncCallback;
+        this.state = {
+            ...this.state,
+            replacementSuggestions: [],
+            templateFileExists: false
+        }
     }
 
     static hasFileNameChanged = (prevState, currentState) => {
@@ -32,16 +37,13 @@ export default class ArtdataViewer extends EditableViewerJson {
         const currentHasTemplateFileName = currentState.content !== undefined && currentState.content.templateFilename !== undefined
         if (oldHasTemplateFileName) {
             if (!currentHasTemplateFileName) {
-                // console.log("Old has filename, but current doesn't")
                 return true
             }
             const isTemplateFileNameChanged = currentState.content.templateFilename !== prevState.content.templateFilename
-            // console.log(`Old does, current does, they are ${isTemplateFileNameChanged ? "different" : "the same"}.${currentState.content.templateFilename}${prevState.content.templateFilename}`)
             
             return isTemplateFileNameChanged
         }
         else {
-            // console.log(`Old doesn't, current ${currentHasTemplateFileName ? "does" : "doesn't"}.`)
             return currentHasTemplateFileName
         }
         
@@ -98,7 +100,6 @@ export default class ArtdataViewer extends EditableViewerJson {
     deleteArtdata(artdataType, index) {
         const newArtdataContents = { ...this.state.content }
         newArtdataContents[artdataType].splice(index, 1)
-        console.log(newArtdataContents)
         this.setState({
             content: newArtdataContents
         }, async () => this.autosave())
@@ -215,23 +216,18 @@ export default class ArtdataViewer extends EditableViewerJson {
         
         return <div className="row artdata-viewer">
             <div className="col">
-                <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
-                    { this.state.templateFileExists ? 
-                        <button onClick={async () => await this.goToTemplateFile(templateFilename)} className="btn btn-outline-secondary go-to-template-button" type="button">Template ↗</button> :
-                        <span className="input-group-text templative-label">Template</span> 
-                    }
-                    <FilepathsAutocompleteInput 
-                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                        value={templateFilename} 
-                        onChange={(value)=> this.updateTemplate(value)}
-                        ariaLabel="Template Filename"
-                        gameComposeDirectory="artTemplatesDirectory"
-                    />
-                </div>
-
-                <h3 className="artdata-type-header">Overlays</h3>
+                <h3 className="artdata-type-header">Layers</h3>
                 <div className="vertical-input-group">
-                    
+                    <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
+                        <span className="input-group-text templative-label">Template</span> 
+                        <FilepathsAutocompleteInput 
+                            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                            value={templateFilename} 
+                            onChange={(value)=> this.updateTemplate(value)}
+                            ariaLabel="Template Filename"
+                            gameComposeDirectory="artTemplatesDirectory"
+                        />
+                    </div>
                     {overlays}
                     <ArtdataAddButton addArtdataCallback={()=>this.addArtdataItem("overlays")} whatToAdd={"an Overlay"}/>
                 </div>
@@ -243,11 +239,11 @@ export default class ArtdataViewer extends EditableViewerJson {
                 </div>
 
                 <h3 className="artdata-type-header">Text Replacements</h3>
-                {replacementSuggestionElements.length > 0 &&
+                {/* {replacementSuggestionElements.length > 0 &&
                     <div className="text-replacement-examples">
                         {replacementSuggestionElements}
                     </div>
-                }
+                } */}
                 <div className="vertical-input-group">
                     {textReplacements}
                     <ArtdataAddButton addArtdataCallback={()=>this.addArtdataItem("textReplacements")} whatToAdd={"a Text Replacement"}/>

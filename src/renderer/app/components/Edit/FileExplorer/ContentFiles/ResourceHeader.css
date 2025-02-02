@@ -1,15 +1,15 @@
-.resourcesHeaderWrapper {
+.resourcesheader-wrapper {
     width: 100%;
     padding-top: 0.1em;
     padding-right: 0.2em;
     padding-bottom: 0.1em;
-    border-bottom: solid #313540;
+    border-bottom: solid var(--color-border);
     border-width: 1px;
     height:1em !important;
     margin-bottom:0.1em;
 }
-.resourcesHeaderWrapper:hover {
-    background-color: #333741;
+.resourcesheader-wrapper:hover {
+    background-color: var(--color-content-surface);
     cursor: pointer;
 }
 .resourcesHeader {
@@ -45,7 +45,7 @@
     text-align: right;
     padding:0 !important;
     border: 0 !important;
-    background-color: #2b3037 !important;
+    background-color: var(--color-content-surface) !important;
 }
 .resource-header-chevron {
     margin-right: 0.5em;

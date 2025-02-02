@@ -3,18 +3,19 @@ const path = require('path');
 
 // Define the fields to look for
 const cssFields = {
-  fontSizes: /font-size\s*:\s*([^;]+);/g,
-  fontWeights: /font-weight\s*:\s*([^;]+);/g,
-  lineHeights: /line-height\s*:\s*([^;]+);/g,
+  // fontSizes: /font-size\s*:\s*([^;]+);/g,
+  // fontWeights: /font-weight\s*:\s*([^;]+);/g,
+  // lineHeights: /line-height\s*:\s*([^;]+);/g,
   colors: /color\s*:\s*([^;]+);/g,
-  margins: /margin\s*:\s*([^;]+);/g,
-  paddings: /padding\s*:\s*([^;]+);/g,
-  widths: /width\s*:\s*([^;]+);/g,
-  heights: /height\s*:\s*([^;]+);/g,
-  boxShadows: /box-shadow\s*:\s*([^;]+);/g,
-  borderRadius: /border-radius\s*:\s*([^;]+);/g,
-  borderWidths: /border-width\s*:\s*([^;]+);/g,
-  opacities: /opacity\s*:\s*([^;]+);/g,
+  // backgroundColors: /background-color\s*:\s*([^;]+);/g,
+  // margins: /margin\s*:\s*([^;]+);/g,
+  // paddings: /padding\s*:\s*([^;]+);/g,
+  // widths: /width\s*:\s*([^;]+);/g,
+  // heights: /height\s*:\s*([^;]+);/g,
+  // boxShadows: /box-shadow\s*:\s*([^;]+);/g,
+  // borderRadius: /border-radius\s*:\s*([^;]+);/g,
+  // borderWidths: /border-width\s*:\s*([^;]+);/g,
+  // opacities: /opacity\s*:\s*([^;]+);/g,
 };
 
 // Recursively walk through a directory and process files
@@ -34,7 +35,16 @@ function extractValues(content, regex) {
   const matches = new Set();
   let match;
   while ((match = regex.exec(content)) !== null) {
-    matches.add(match[1].trim());
+    // Remove !important and trim whitespace
+    let value = match[1].trim();
+    value = value.replace(/\s*!important\s*$/, '').trim();
+    
+    // Remove spaces from rgba/rgb values
+    value = value.replace(/rgba?\(\s*([^)]+)\s*\)/g, (match, params) => {
+      return match.replace(/\s+/g, '');
+    });
+    
+    matches.add(value);
   }
   return Array.from(matches);
 }
@@ -42,18 +52,19 @@ function extractValues(content, regex) {
 // Main function to gather CSS values
 function gatherCssValues(directory) {
   const result = {
-    fontSizes: new Set(),
-    fontWeights: new Set(),
-    lineHeights: new Set(),
+    // fontSizes: new Set(),
+    // fontWeights: new Set(),
+    // lineHeights: new Set(),
     colors: new Set(),
-    margins: new Set(),
-    paddings: new Set(),
-    widths: new Set(),
-    heights: new Set(),
-    boxShadows: new Set(),
-    borderRadius: new Set(),
-    borderWidths: new Set(),
-    opacities: new Set(),
+    // backgroundColors: new Set(),
+    // margins: new Set(),
+    // paddings: new Set(),
+    // widths: new Set(),
+    // heights: new Set(),
+    // boxShadows: new Set(),
+    // borderRadius: new Set(),
+    // borderWidths: new Set(),
+    // opacities: new Set(),
   };
 
   walkDir(directory, (filePath) => {

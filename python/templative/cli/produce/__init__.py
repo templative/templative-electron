@@ -18,7 +18,13 @@ async def produce(name, simple, publish, language, input):
     """Produce the game in the current directory"""
     # pr = cProfile.Profile()
     # pr.enable()
-    await gameProducer.produceGame(input, name, simple, publish, language)
+    await gameProducer.produceGame(
+        gameRootDirectoryPath=input,
+        componentFilter=name,
+        isSimple=simple,
+        isPublish=publish,
+        targetLanguage=language
+    )
     # pr.disable()
     # pr.dump_stats('./profiling_data.prof')
 

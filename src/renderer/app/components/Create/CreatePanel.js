@@ -79,6 +79,12 @@ export default class CreatePanel extends React.Component {
             componentAIDescription: this.context.componentAIDescription
         }
         await axios.post(`http://127.0.0.1:8085/component`, data)
+        
+        // Load the updated component-compose.json
+        const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
+        const updatedContent = await TemplativeAccessTools.loadFileContentsAsJson(filepath);
+        await this.props.saveComponentComposeAsync(updatedContent);
+
         this.setState({isProcessing: false})
         var originalType = this.context.selectedComponentType
         this.context.setComponentName("");
@@ -97,8 +103,8 @@ export default class CreatePanel extends React.Component {
                 <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
                     <span className="input-group-text soft-label">Composition Name</span>
                     <input type="text" className="form-control no-left-border" 
-                        onChange={(event)=>this.context.setComponentName(event.target.value.replace(/[^a-zA-Z0-9-_]/g, ''))} 
-                        placeholder="nameOfTheComposition" 
+                        onChange={(event)=>this.context.setComponentName(event.target.value.replace(/[<>:"/\\|?*]/g, ''))} 
+                        placeholder="Player Roles or Emperor Token, etc" 
                         value={this.context.componentName}
                     />
 
@@ -111,7 +117,7 @@ export default class CreatePanel extends React.Component {
                         Create
                     </button>
                 </div>
-                <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
+                {/* <div className="input-group input-group-sm mb-3"  data-bs-theme="dark">
                     <span className="input-group-text soft-label">Description</span>
                     <textarea className="form-control component-ai-description-textarea  no-left-border" 
                         rows="3"
@@ -120,7 +126,7 @@ export default class CreatePanel extends React.Component {
                         placeholder="e.g. This a deck of foreign envoys. There is an envoy for Russia, Italy, France, Britain, and Sweden. Each card has a name and rules text. The background of the card matches the color of the country. Each card has an overlay that is a famous diplomat from that country..." 
                         value={this.context.componentAIDescription}
                     />
-                </div>
+                </div> */}
 
                 {this.state.isProcessing ? (
                     <p className="creation-instructions">Creating your component...</p>    
