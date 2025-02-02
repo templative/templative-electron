@@ -86,13 +86,13 @@ jobs:
       # --add-binary="D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll:."
             
       - name: Upload Templative Xref as Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: xref
           path: ./python/build/templative/xref-templative.html
 
       - name: Upload Templative as Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: templative-exe
           path: ./bin
@@ -342,13 +342,13 @@ jobs:
       #     install_name_tool -change /opt/homebrew/lib/libz.1.dylib @executable_path/../lib/libz.1.dylib ./templative
       
       - name: Upload Templative Xref as Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: xref
           path: ./python/build/templative/xref-templative.html
 
       - name: Upload Templative as Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: templative-app
           path: ./bin
