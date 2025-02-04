@@ -18,11 +18,11 @@
     padding: 0.05em;
     display: inline-block;
 }
-.App .component-type-card .selected-component-type {
+.App .btn.btn-outline-primary.component-type-card.selected-component-type {
     background-color: var(--color-accent) !important;
     color: var(--color-content) !important;
 }
-.App .component-type-card .selected-component-type:hover {
+.App .btn.btn-outline-primary.component-type-card.selected-component-type:hover {
     background-color: var(--color-accent-hover) !important;
     color: var(--color-content) !important;
 }
