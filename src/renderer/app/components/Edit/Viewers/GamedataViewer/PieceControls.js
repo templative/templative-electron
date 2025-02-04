@@ -24,10 +24,12 @@ export default class PieceControls extends React.Component {
                 onChange={(event)=> this.props.updateValueCallback("name", event.target.value.replace(/[<>:"/\\|?*]/g, ""))} 
                 aria-label="What key to get from the scope..." 
                 value={this.props.piece["name"]}/>
-                
-                <span className="input-group-text input-group-text soft-label">quantity</span>
-            <input type="number" className="form-control value-field gamedata-quantity-input no-left-border" 
-                onKeyDown={(e) => PieceControls.preventNonNumbers(e)}
+            
+            {this.props.piece["quantity"] !== undefined &&
+                <>
+                    <span className="input-group-text input-group-text soft-label">quantity</span>
+                    <input type="number" className="form-control value-field gamedata-quantity-input no-left-border" 
+                        onKeyDown={(e) => PieceControls.preventNonNumbers(e)}
                 onChange={(event) => {
                     const value = event.target.value;
                     if (value === '-' || value === '') {
@@ -40,8 +42,10 @@ export default class PieceControls extends React.Component {
                     }
                 }}
                 aria-label="What key to get from the scope..." 
-                value={this.props.piece["quantity"]}
-            />
+                        value={this.props.piece["quantity"]}
+                    />
+                </>
+            }
 
             
 
