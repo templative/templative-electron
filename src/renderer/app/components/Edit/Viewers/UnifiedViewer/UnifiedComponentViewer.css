@@ -25,6 +25,9 @@
     overflow-y: auto;
     overflow-x: hidden;
 }
+.artdata-column > * {
+    margin-left: 0.5em;
+}
 .artdata-column > * > p, .gamedata-column > * > p {
     border-bottom: 1px var(--color-dark-3) solid;
     font-size: 18px;
@@ -59,8 +62,8 @@
 .universal-file-content {
     padding-top: 12px;
     padding-bottom: 6px;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 .drop-down-chevron {
     margin-left: 6px;
