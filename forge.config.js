@@ -25,6 +25,7 @@ module.exports = {
       appleId: process.env.APPLE_ID,
       appleIdPassword: process.env.TEMPLATIVE_APP_SPECIFIC_PASSWORD,
       teamId: process.env.APPLE_TEAM_ID,
+      debug: true,
     },
   },
   rebuildConfig: {},

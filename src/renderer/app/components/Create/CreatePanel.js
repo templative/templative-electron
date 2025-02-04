@@ -2,7 +2,7 @@ import React from "react";
 import "./CreatePanel.css"
 import "./TypeSelection/ComponentType.css"
 import "./TypeSelection/ComponentTypeTags.css"
-import "./CreatePanel.css"
+
 import ComponentTypeTagPicker from "./TypeSelection/ComponentTypeTagPicker";
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import ComponentTypeList from "./TypeSelection/ComponentTypePicker/ComponentTypeList";
