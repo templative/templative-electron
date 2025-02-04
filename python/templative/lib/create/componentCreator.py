@@ -57,7 +57,8 @@ async def createCustomComponent(gameRootDirectoryPath, name, type, componentAIDe
         piecesFile = await templateComponentProjectUpdater.createPiecesJson(
             piecesDirectoryPath, 
             name, 
-            hasPieceQuantity#, 
+            hasPieceQuantity,
+            type,#, 
             # componentAIDescription,  
             # artdataFiles
         )

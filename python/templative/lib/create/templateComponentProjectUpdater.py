@@ -47,13 +47,24 @@ async def addStockComponentToComponentCompose(name, stockPartId, gameRootDirecto
     with open(path.join(gameRootDirectoryPath, 'component-compose.json'), 'w') as componentComposeFile:
         dump(componentComposeData, componentComposeFile, indent=4)
 
-async def createPiecesJson(piecesDirectoryPath, name, hasPieceQuantity, componentAIDescription=None, artdataFiles=None):
+async def createPiecesJson(piecesDirectoryPath, name, hasPieceQuantity, type, componentAIDescription=None, artdataFiles=None):
     pieces = [{
         "name": name,
     }]
 
-    if hasPieceQuantity:
-        pieces[0]["quantity"] = 1
+    if type.startswith("CustomColor") or type == "CustomWoodD6":
+        die_faces = {
+            "CustomColorD4": 4,
+            "CustomColorD6": 6, 
+            "CustomWoodD6": 6,
+            "CustomColorD8": 8
+        }
+        if type in die_faces:
+            pieces = [{"name": str(i)} for i in range(1, die_faces[type] + 1)]
+    elif hasPieceQuantity:
+        for piece in pieces:
+            piece["quantity"] = 1
+    print(pieces)
 
     # needsContent = False
     # if "Front" in artdataFiles:
@@ -74,7 +85,6 @@ async def createPiecesJson(piecesDirectoryPath, name, hasPieceQuantity, componen
     filepath = path.join(piecesDirectoryPath, f'{name}.json')
     with open(filepath, 'w') as piecesJsonFile:
         dump(pieces, piecesJsonFile, indent=4)
-    print(pieces)
     print(f"Created pieces {filepath}")
     return {
         "type": f"pieces",

@@ -21,8 +21,8 @@ def createGameCompose(directory):
         "componentGamedataDirectory": "./gamedata/component",
         
         "artdataDirectory": "./artdata",
-        "artTemplatesDirectory": "./art/templates",
-        "artInsertsDirectory": "./art/graphicalInserts"
+        "artTemplatesDirectory": "./art",
+        "artInsertsDirectory": "./art"
     }
     with open(path.join(directory, "game-compose.json"), "w") as file:
         file.write(json.dumps(gameCompose, indent=4))
@@ -101,7 +101,6 @@ def createProjectInDirectory(directory):
 
     makedirs(path.join(directory, "artdata"), exist_ok=True)
 
-    makedirs(path.join(directory, "art/templates"), exist_ok=True)
-    makedirs(path.join(directory, "art/graphicalInserts"), exist_ok=True)
+    makedirs(path.join(directory, "art"), exist_ok=True)
 
     return 1
