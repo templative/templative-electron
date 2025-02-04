@@ -2014,9 +2014,9 @@ COMPONENT_INFO = {
         "GameCrafterUploadTask": "onesidedsluggedset",
         "GameCrafterPackagingDepthMillimeters": 0.2794,
         "HasPieceData": True,
-        "HasPieceQuantity": False,
+        "HasPieceQuantity": True,
         "ArtDataTypeNames": [
-            "DieFace"
+            "Front"
         ],
         "Tags": [
             "sticker",
@@ -2024,32 +2024,32 @@ COMPONENT_INFO = {
             "die"
         ]
     },
-    "DigestPerfectBoundBook": {
-        "DisplayName": "DigestPerfectBoundBook",
-        "DimensionsPixels": [
-            1725,
-            2625
-        ],
-        "DimensionsInches": [
-            5.375,
-            8.375
-        ],
-        "GameCrafterUploadTask": "perfectboundbook",
-        "GameCrafterPackagingDepthMillimeters": 0.13055599999999998,
-        "HasPieceData": True,
-        "HasPieceQuantity": True,
-        "ArtDataTypeNames": [
-            "Front",
-            "Back"
-        ],
-        "Tags": [
-            "perfect",
-            "document",
-            "book",
-            "digest",
-            "bound"
-        ]
-    },
+    # "DigestPerfectBoundBook": {
+    #     "DisplayName": "DigestPerfectBoundBook",
+    #     "DimensionsPixels": [
+    #         1725,
+    #         2625
+    #     ],
+    #     "DimensionsInches": [
+    #         5.375,
+    #         8.375
+    #     ],
+    #     "GameCrafterUploadTask": "perfectboundbook",
+    #     "GameCrafterPackagingDepthMillimeters": 0.13055599999999998,
+    #     "HasPieceData": True,
+    #     "HasPieceQuantity": True,
+    #     "ArtDataTypeNames": [
+    #         "Front",
+    #         "Back"
+    #     ],
+    #     "Tags": [
+    #         "perfect",
+    #         "document",
+    #         "book",
+    #         "digest",
+    #         "bound"
+    #     ]
+    # },
     "DividerDeck": {
         "DisplayName": "DividerDeck",
         "DimensionsPixels": [
@@ -2451,31 +2451,31 @@ COMPONENT_INFO = {
             "document"
         ]
     },
-    "JumboCoilBook": {
-        "DisplayName": "JumboCoilBook",
-        "DimensionsPixels": [
-            2550,
-            3075
-        ],
-        "DimensionsInches": [
-            8.25,
-            10.0
-        ],
-        "GameCrafterUploadTask": "coilbook",
-        "GameCrafterPackagingDepthMillimeters": 0.0762,
-        "HasPieceData": True,
-        "HasPieceQuantity": True,
-        "ArtDataTypeNames": [
-            "Front",
-            "Back"
-        ],
-        "Tags": [
-            "book",
-            "jumbo",
-            "document",
-            "coil"
-        ]
-    },
+    # "JumboCoilBook": {
+    #     "DisplayName": "JumboCoilBook",
+    #     "DimensionsPixels": [
+    #         2550,
+    #         3075
+    #     ],
+    #     "DimensionsInches": [
+    #         8.25,
+    #         10.0
+    #     ],
+    #     "GameCrafterUploadTask": "coilbook",
+    #     "GameCrafterPackagingDepthMillimeters": 0.0762,
+    #     "HasPieceData": True,
+    #     "HasPieceQuantity": True,
+    #     "ArtDataTypeNames": [
+    #         "Front",
+    #         "Back"
+    #     ],
+    #     "Tags": [
+    #         "book",
+    #         "jumbo",
+    #         "document",
+    #         "coil"
+    #     ]
+    # },
     "JumboHookBox36": {
         "DisplayName": "JumboHookBox36",
         "DimensionsPixels": [
@@ -2892,32 +2892,32 @@ COMPONENT_INFO = {
             "packaging"
         ]
     },
-    "LetterPerfectBoundBook": {
-        "DisplayName": "LetterPerfectBoundBook",
-        "DimensionsPixels": [
-            2625,
-            3375
-        ],
-        "DimensionsInches": [
-            8.5,
-            11.0
-        ],
-        "GameCrafterUploadTask": "perfectboundbook",
-        "GameCrafterPackagingDepthMillimeters": 0.13055599999999998,
-        "HasPieceData": True,
-        "HasPieceQuantity": True,
-        "ArtDataTypeNames": [
-            "Front",
-            "Back"
-        ],
-        "Tags": [
-            "perfect",
-            "document",
-            "book",
-            "letter",
-            "bound"
-        ]
-    },
+    # "LetterPerfectBoundBook": {
+    #     "DisplayName": "LetterPerfectBoundBook",
+    #     "DimensionsPixels": [
+    #         2625,
+    #         3375
+    #     ],
+    #     "DimensionsInches": [
+    #         8.5,
+    #         11.0
+    #     ],
+    #     "GameCrafterUploadTask": "perfectboundbook",
+    #     "GameCrafterPackagingDepthMillimeters": 0.13055599999999998,
+    #     "HasPieceData": True,
+    #     "HasPieceQuantity": True,
+    #     "ArtDataTypeNames": [
+    #         "Front",
+    #         "Back"
+    #     ],
+    #     "Tags": [
+    #         "perfect",
+    #         "document",
+    #         "book",
+    #         "letter",
+    #         "bound"
+    #     ]
+    # },
     "MediumBooklet": {
         "DisplayName": "MediumBooklet",
         "DimensionsPixels": [
@@ -2941,31 +2941,31 @@ COMPONENT_INFO = {
             "medium"
         ]
     },
-    "MediumCoilBook": {
-        "DisplayName": "MediumCoilBook",
-        "DimensionsPixels": [
-            1575,
-            2325
-        ],
-        "DimensionsInches": [
-            5.0,
-            7.5
-        ],
-        "GameCrafterUploadTask": "coilbook",
-        "GameCrafterPackagingDepthMillimeters": 18.034,
-        "HasPieceData": True,
-        "HasPieceQuantity": True,
-        "ArtDataTypeNames": [
-            "Front",
-            "Back"
-        ],
-        "Tags": [
-            "book",
-            "document",
-            "coil",
-            "medium"
-        ]
-    },
+    # "MediumCoilBook": {
+    #     "DisplayName": "MediumCoilBook",
+    #     "DimensionsPixels": [
+    #         1575,
+    #         2325
+    #     ],
+    #     "DimensionsInches": [
+    #         5.0,
+    #         7.5
+    #     ],
+    #     "GameCrafterUploadTask": "coilbook",
+    #     "GameCrafterPackagingDepthMillimeters": 18.034,
+    #     "HasPieceData": True,
+    #     "HasPieceQuantity": True,
+    #     "ArtDataTypeNames": [
+    #         "Front",
+    #         "Back"
+    #     ],
+    #     "Tags": [
+    #         "book",
+    #         "document",
+    #         "coil",
+    #         "medium"
+    #     ]
+    # },
     "MediumFolio": {
         "DisplayName": "MediumFolio",
         "DimensionsPixels": [

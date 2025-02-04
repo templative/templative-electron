@@ -133,12 +133,12 @@ async def produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublis
             
             piecesGamedata = await defineLoader.loadPiecesGamedata(gameRootDirectoryPath, gameCompose, componentCompose["piecesGamedataFilename"])
             for piece in piecesGamedata:
-                if "quantity" in piece and piece["quantity"] > 0:
+                if "quantity" not in piece or piece["quantity"] > 0:
                     needsToProduceAPiece = True
                     break 
                 
             if not needsToProduceAPiece:
-                print(f"Skipping {componentCompose['name']} due to not have pieces to make.")
+                print(f"Skipping {componentCompose['name']} due to not having any pieces to make.")
                 continue
         componentComposition = ComponentComposition(gameCompose, componentCompose)
 

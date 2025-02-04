@@ -68,42 +68,29 @@ async def createCustomComponent(gameCrafterSession, componentType, componentFile
         return
     
     component = COMPONENT_INFO[componentType]
-    createDeckTask = createDeck
-    createTwoSidedSluggedTask = createTwoSidedSlugged
-    createTwoSidedBoxTask = createTwoSidedBox
-    createTuckBoxTask = createTuckBox
-    createTwoSidedTask = createTwoSided
-    createCustomPlasticDieTask = createCustomPlasticDie
-    createHookboxTask = createHookbox
-    createBoxFaceTask = createBoxface
     componentTasks = {        
-        "deck": createDeckTask,
-        "twosidedbox": createTwoSidedBoxTask,
-        "twosidedsluggedset": createTwoSidedSluggedTask,
-        "tuckbox": createTuckBoxTask,
-        "twosidedset": createTwoSidedTask,
-        "hookbox": createHookboxTask,
-        "boxface": createBoxFaceTask,
-        "customcolord6": createCustomPlasticDieTask,
-        "customcolord4": createCustomPlasticDieTask,
-        "customcolord8": createCustomPlasticDieTask,
-        # "acrylicshape" : createDeckTask,
-        # "customcuttwosidedslugged" : createDeckTask,
-        # "customcutonesidedslugged" : createDeckTask,
-        # "customprintedmeeple" : createDeckTask,
-        # "customwoodd6" : createDeckTask,
-        # "boxtop" : createDeckTask,
-        # "boxtopgloss" : createDeckTask,
-        # "onesidedgloss" : createDeckTask,
-        # "twosidedboxgloss" : createDeckTask,
-        # "onesided" : createDeckTask,
-        # "onesidedsluggedset" : createDeckTask,
-        # "document" : createDeckTask,
-        # "booklet" : createDeckTask,
-        # "perfectboundbook" : createDeckTask,
-        # "coilbook" : createDeckTask,
-        # "dial" : createDeckTask,
-        # "scorepad" : createDeckTask,
+        "deck": createDeck,
+        "twosidedbox": createTwoSidedBox,
+        "twosidedsluggedset": createTwoSidedSlugged,
+        "tuckbox": createTuckBox,
+        "twosidedset": createTwoSided,
+        "hookbox": createHookbox,
+        "boxface": createBoxface,
+        "customcolord6": createCustomPlasticDie,
+        "customcolord4": createCustomPlasticDie,
+        "customcolord8": createCustomPlasticDie,
+        "customwoodd6": createCustomWoodDie,
+        "onesidedsluggedset": createOneSidedSlugged,
+        "twosidedboxgloss": createTwoSidedBoxGloss,
+        "scorepad": createScorePad,
+        "onesided": createOneSided,
+        "onesidedgloss": createOneSided, #createOneSidedGloss
+        "dial": createDial,
+        "customprintedmeeple": createCustomPrintedMeeple,
+        "boxtop": createBoxTop,
+        "boxtopgloss": createBoxTop, #createBoxTopGloss
+        # "perfectboundbook": createPerfectBoundBook,
+        # "coilbook": createCoilBook,
     }
 
     if not "GameCrafterUploadTask" in component:
@@ -111,7 +98,7 @@ async def createCustomComponent(gameCrafterSession, componentType, componentFile
         return
 
     if not component["GameCrafterUploadTask"] in componentTasks:
-        print("!!! Missing component info for %s." % componentType)
+        print("!!! Skipping %s since we don't know how to upload it yet." % componentType)
         return
     
     uploadTask = componentTasks[component["GameCrafterUploadTask"]]
@@ -244,23 +231,42 @@ async def createHookbox(gameCrafterSession, component, identity, cloudGameId, cl
     quantity = component["quantity"]
     if int(quantity) == 0:
         return
-    frontInstructions = component["frontInstructions"]
-    backInstructions = component["backInstructions"]
+    frontInstructions = component["frontInstructions"]  # Outside
+    backInstructions = component["backInstructions"]    # Inside
 
     if not os.path.isfile(frontInstructions[0]["filepath"]):
-        print(f"!!! Cannot create {componentName}, missing {frontInstructions[0]['filepath']}")
+        print(f"!!! Cannot create {componentName}, missing outside image {frontInstructions[0]['filepath']}")
         return
     if not os.path.isfile(backInstructions["filepath"]):
-        print(f"!!! Cannot create {componentName}, missing {backInstructions['filepath']}")
+        print(f"!!! Cannot create {componentName}, missing inside image {backInstructions['filepath']}")
         return
     print("Uploading %s %s %s(s)" % (quantity, componentName, component["type"]))
 
     cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
 
-    topImageFileId = await fileFolderManager.createFileInFolder(gameCrafterSession, frontInstructions[0]["name"], frontInstructions[0]["filepath"], cloudComponentFolder["id"])
-    bottomImageFileId = await fileFolderManager.createFileInFolder(gameCrafterSession, backInstructions["name"], backInstructions["filepath"], cloudComponentFolder["id"])
+    outsideImageId = await fileFolderManager.createFileInFolder(
+        gameCrafterSession, 
+        frontInstructions[0]["name"], 
+        frontInstructions[0]["filepath"], 
+        cloudComponentFolder["id"]
+    )
+    insideImageId = await fileFolderManager.createFileInFolder(
+        gameCrafterSession, 
+        backInstructions["name"], 
+        backInstructions["filepath"], 
+        cloudComponentFolder["id"]
+    )
 
-    cloudHookbox = await httpOperations.postHookBox(gameCrafterSession, cloudGameId, componentName, identity, quantity, topImageFileId, bottomImageFileId, isProofed)
+    cloudHookbox = await httpOperations.postHookBox(
+        gameCrafterSession,
+        componentName, 
+        cloudGameId, 
+        quantity,
+        outsideImageId,
+        insideImageId,
+        identity,  # This will be something like "JumboHookBox36"
+        isProofed
+    )
 
 
 async def createBoxface(gameCrafterSession, component, identity, cloudGameId, cloudGameFolderId, isProofed):
@@ -268,18 +274,31 @@ async def createBoxface(gameCrafterSession, component, identity, cloudGameId, cl
     quantity = component["quantity"]
     if int(quantity) == 0:
         return
-    frontInstructions = component["frontInstructions"]
+    frontInstructions = component["frontInstructions"]  # Face image
 
     if not os.path.isfile(frontInstructions[0]["filepath"]):
-        print(f"!!! Cannot create {componentName}, missing {frontInstructions[0]['filepath']}")
+        print(f"!!! Cannot create {componentName}, missing face image {frontInstructions[0]['filepath']}")
         return
     print("Uploading %s %s %s(s)" % (quantity, componentName, component["type"]))
 
     cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
 
-    topImageFileId = await fileFolderManager.createFileInFolder(gameCrafterSession, frontInstructions[0]["name"], frontInstructions[0]["filepath"], cloudComponentFolder["id"])
+    faceImageId = await fileFolderManager.createFileInFolder(
+        gameCrafterSession, 
+        frontInstructions[0]["name"], 
+        frontInstructions[0]["filepath"], 
+        cloudComponentFolder["id"]
+    )
 
-    cloudBoxface = await httpOperations.postBoxFace(gameCrafterSession, cloudGameId, componentName, identity, quantity, topImageFileId, isProofed)
+    cloudBoxface = await httpOperations.postBoxFace(
+        gameCrafterSession,
+        componentName,
+        cloudGameId, 
+        quantity,
+        faceImageId,
+        identity,  # This will be something like "PokerBooster"
+        isProofed
+    )
 
 
 async def createTuckBox(gameCrafterSession, component, identity, cloudGameId, cloudGameFolderId, isProofed):
@@ -369,3 +388,434 @@ async def createCustomPlasticDie(gameCrafterSession, componentInstructionsOutput
     
     dieCreationFunction = dieCreationFunctions[str(len(dieFaceFilepaths))]
     await dieCreationFunction(gameCrafterSession,componentName, cloudGameId, quantity, "white", imageFileIds, isProofed)
+
+async def createOneSidedSlugged(gameCrafterSession, component, identity, cloudGameId, cloudGameFolderId, isProofed):
+    componentName = component["name"]
+    quantity = component["quantity"]
+    if int(quantity) == 0:
+        return
+    frontInstructions = component["frontInstructions"]
+    
+    print("Uploading %s %s %s(s)" % (quantity, componentName, identity))
+
+    cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
+    
+    cloudOneSidedSluggedSet = await httpOperations.postOneSidedSluggedSet(gameCrafterSession, componentName, identity, quantity, cloudGameId, isProofed)
+
+    tasks = []
+    for instructions in frontInstructions:
+        tasks.append(asyncio.create_task(createOneSidedSluggedPiece(gameCrafterSession, instructions, cloudOneSidedSluggedSet["id"], cloudComponentFolder["id"], isProofed)))
+
+    res = await asyncio.gather(*tasks, return_exceptions=True)
+
+async def createOneSidedSluggedPiece(gameCrafterSession, instructions, setId, cloudComponentFolderId, isProofed):
+    name = instructions["name"]
+    filepath = instructions["filepath"]
+    quantity = instructions["quantity"]
+    if int(quantity) == 0:
+        return
+    if not os.path.isfile(filepath):
+        print(f"!!! Cannot create one sided slugged piece, no file at {filepath}")
+        return
+    print("Uploading %s" % (filepath))
+    cloudFile = await fileFolderManager.postFile(gameCrafterSession, filepath, cloudComponentFolderId)
+    oneSidedSlugged = await httpOperations.postOneSidedSlugged(gameCrafterSession, name, setId, quantity, cloudFile["id"], isProofed)
+
+async def createCustomWoodDie(gameCrafterSession, componentInstructionsOutput, identity, cloudGameId, cloudGameFolderId, isProofed):
+    componentName = componentInstructionsOutput["name"]
+    quantity = componentInstructionsOutput["quantity"]
+    if int(quantity) == 0:
+        return
+    dieFaceFilepaths = componentInstructionsOutput["dieFaceFilepaths"]
+
+    for dieFaceFilepath in dieFaceFilepaths:
+        if not os.path.isfile(dieFaceFilepath):
+            print(f"!!! Cannot create {componentName}, missing {dieFaceFilepath}")
+            return
+    print("Uploading %s %s %s(s)" % (quantity, componentName, identity))
+
+    cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
+
+    imageFileIds = []
+    for dieFaceFilepath in dieFaceFilepaths:
+        fileId = await fileFolderManager.createFileInFolder(gameCrafterSession, os.path.basename(dieFaceFilepath), dieFaceFilepath, cloudComponentFolder["id"])
+        imageFileIds.append(fileId)
+    
+    await httpOperations.postCustomWoodD6(gameCrafterSession, componentName, cloudGameId, quantity, imageFileIds, isProofed)
+
+async def createTwoSidedBoxGloss(gameCrafterSession, component, identity, cloudGameId, cloudGameFolderId, isProofed):
+    componentName = component["name"]
+    quantity = component["quantity"]
+    if int(quantity) == 0:
+        return
+    frontInstructions = component["frontInstructions"]
+    backInstructions = component["backInstructions"]
+
+    if not os.path.isfile(frontInstructions[0]["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing {frontInstructions[0]['filepath']}")
+        return
+    if not os.path.isfile(backInstructions["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing {backInstructions['filepath']}")
+        return
+    print("Uploading %s %s %s(s)" % (quantity, componentName, component["type"]))
+
+    cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
+
+    topImageFileId = await fileFolderManager.createFileInFolder(gameCrafterSession, frontInstructions[0]["name"], frontInstructions[0]["filepath"], cloudComponentFolder["id"])
+    bottomImageFileId = await fileFolderManager.createFileInFolder(gameCrafterSession, backInstructions["name"], backInstructions["filepath"], cloudComponentFolder["id"])
+
+    cloudTwoSidedBoxGloss = await httpOperations.postTwoSidedBoxGloss(gameCrafterSession, cloudGameId, componentName, identity, quantity, topImageFileId, bottomImageFileId, isProofed)
+
+async def createScorePad(gameCrafterSession, component, identity, cloudGameId, cloudGameFolderId, isProofed):
+    componentName = component["name"]
+    quantity = component["quantity"]
+    if int(quantity) == 0:
+        return
+    frontInstructions = component["frontInstructions"]
+
+    if not os.path.isfile(frontInstructions[0]["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing {frontInstructions[0]['filepath']}")
+        return
+    print("Uploading %s %s %s(s)" % (quantity, componentName, component["type"]))
+
+    cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
+    
+    imageId = await fileFolderManager.createFileInFolder(
+        gameCrafterSession, 
+        frontInstructions[0]["name"], 
+        frontInstructions[0]["filepath"], 
+        cloudComponentFolder["id"]
+    )
+    
+    pageCount = component.get("pageCount", 40)
+    
+    cloudScorePad = await httpOperations.postScorePad(
+        gameCrafterSession,
+        componentName, 
+        cloudGameId, 
+        quantity,
+        imageId,
+        pageCount,
+        identity,
+        isProofed
+    )
+
+async def createOneSided(gameCrafterSession, component, identity, cloudGameId, cloudGameFolderId, isProofed):
+    componentName = component["name"]
+    quantity = component["quantity"]
+    if int(quantity) == 0:
+        return
+    frontInstructions = component["frontInstructions"]
+
+    if not os.path.isfile(frontInstructions[0]["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing {frontInstructions[0]['filepath']}")
+        return
+    print("Uploading %s %s %s(s)" % (quantity, componentName, component["type"]))
+
+    cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
+    
+    imageId = await fileFolderManager.createFileInFolder(gameCrafterSession, frontInstructions[0]["name"], frontInstructions[0]["filepath"], cloudComponentFolder["id"])
+    
+    cloudOneSided = await httpOperations.postOneSided(
+        gameCrafterSession, 
+        componentName, 
+        cloudGameId, 
+        quantity, 
+        imageId,
+        identity,  # This will be something like "MediumGameMat"
+        isProofed
+    )
+
+async def createOneSidedGloss(gameCrafterSession, component, identity, cloudGameId, cloudGameFolderId, isProofed):
+    componentName = component["name"]
+    quantity = component["quantity"]
+    if int(quantity) == 0:
+        return
+    frontInstructions = component["frontInstructions"]
+    spotGlossInstructions = component.get("spotGlossInstructions", None)
+
+    if not os.path.isfile(frontInstructions[0]["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing {frontInstructions[0]['filepath']}")
+        return
+    print("Uploading %s %s %s(s)" % (quantity, componentName, component["type"]))
+
+    cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
+    
+    imageId = await fileFolderManager.createFileInFolder(gameCrafterSession, frontInstructions[0]["name"], frontInstructions[0]["filepath"], cloudComponentFolder["id"])
+    
+    spotGlossId = None
+    if spotGlossInstructions and os.path.isfile(spotGlossInstructions["filepath"]):
+        spotGlossId = await fileFolderManager.createFileInFolder(
+            gameCrafterSession, 
+            spotGlossInstructions["name"], 
+            spotGlossInstructions["filepath"], 
+            cloudComponentFolder["id"]
+        )
+    
+    cloudOneSidedGloss = await httpOperations.postOneSidedGloss(
+        gameCrafterSession, 
+        componentName, 
+        cloudGameId, 
+        quantity, 
+        imageId,
+        identity,  # This will be something like "QuadFoldBoard"
+        isProofed,
+        spotGlossId
+    )
+
+async def createDial(gameCrafterSession, component, identity, cloudGameId, cloudGameFolderId, isProofed):
+    componentName = component["name"]
+    quantity = component["quantity"]
+    if int(quantity) == 0:
+        return
+    frontInstructions = component["frontInstructions"]  # Outside image
+
+    if not os.path.isfile(frontInstructions[0]["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing outside image {frontInstructions[0]['filepath']}")
+        return
+    print("Uploading %s %s %s(s)" % (quantity, componentName, component["type"]))
+
+    cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
+    
+    outsideImageId = await fileFolderManager.createFileInFolder(
+        gameCrafterSession, 
+        frontInstructions[0]["name"], 
+        frontInstructions[0]["filepath"], 
+        cloudComponentFolder["id"]
+    )
+    
+    cloudDial = await httpOperations.postDial(
+        gameCrafterSession,
+        componentName, 
+        cloudGameId, 
+        quantity,
+        outsideImageId,
+        identity,  # This will be something like "SmallDial"
+        isProofed
+    )
+
+async def createCustomPrintedMeeple(gameCrafterSession, component, identity, cloudGameId, cloudGameFolderId, isProofed):
+    componentName = component["name"]
+    quantity = component["quantity"]
+    if int(quantity) == 0:
+        return
+    frontInstructions = component["frontInstructions"]  # Side 1
+    backInstructions = component.get("backInstructions", None)  # Side 2 (optional)
+    diecolor = component.get("diecolor", "white")  # Optional color specification
+
+    if not os.path.isfile(frontInstructions[0]["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing side 1 image {frontInstructions[0]['filepath']}")
+        return
+    print("Uploading %s %s %s(s)" % (quantity, componentName, component["type"]))
+
+    cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
+    
+    # Upload side 1 image
+    side1ImageId = await fileFolderManager.createFileInFolder(
+        gameCrafterSession, 
+        frontInstructions[0]["name"], 
+        frontInstructions[0]["filepath"], 
+        cloudComponentFolder["id"]
+    )
+    
+    # Upload side 2 image if provided
+    side2ImageId = None
+    if backInstructions and os.path.isfile(backInstructions["filepath"]):
+        side2ImageId = await fileFolderManager.createFileInFolder(
+            gameCrafterSession, 
+            backInstructions["name"], 
+            backInstructions["filepath"], 
+            cloudComponentFolder["id"]
+        )
+    
+    cloudMeeple = await httpOperations.postCustomPrintedMeeple(
+        gameCrafterSession,
+        componentName, 
+        cloudGameId, 
+        quantity,
+        side1ImageId,
+        side2ImageId,
+        diecolor,
+        isProofed
+    )
+
+async def createBoxTop(gameCrafterSession, component, identity, cloudGameId, cloudGameFolderId, isProofed):
+    componentName = component["name"]
+    quantity = component["quantity"]
+    if int(quantity) == 0:
+        return
+    frontInstructions = component["frontInstructions"]  # Top image
+
+    if not os.path.isfile(frontInstructions[0]["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing top image {frontInstructions[0]['filepath']}")
+        return
+    print("Uploading %s %s %s(s)" % (quantity, componentName, component["type"]))
+
+    cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
+    
+    topImageId = await fileFolderManager.createFileInFolder(
+        gameCrafterSession, 
+        frontInstructions[0]["name"], 
+        frontInstructions[0]["filepath"], 
+        cloudComponentFolder["id"]
+    )
+    
+    cloudBoxTop = await httpOperations.postBoxTop(
+        gameCrafterSession,
+        componentName, 
+        cloudGameId, 
+        quantity,
+        topImageId,
+        identity,  # This will be something like "DeckBoxTopAndSide"
+        isProofed
+    )
+
+async def createBoxTopGloss(gameCrafterSession, component, identity, cloudGameId, cloudGameFolderId, isProofed):
+    componentName = component["name"]
+    quantity = component["quantity"]
+    if int(quantity) == 0:
+        return
+    frontInstructions = component["frontInstructions"]  # Top image
+    spotGlossInstructions = component.get("spotGlossInstructions", None)
+
+    if not os.path.isfile(frontInstructions[0]["filepath"]):
+        print(f"!!! Cannot create {componentName}, missing top image {frontInstructions[0]['filepath']}")
+        return
+    print("Uploading %s %s %s(s)" % (quantity, componentName, component["type"]))
+
+    cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
+    
+    topImageId = await fileFolderManager.createFileInFolder(
+        gameCrafterSession, 
+        frontInstructions[0]["name"], 
+        frontInstructions[0]["filepath"], 
+        cloudComponentFolder["id"]
+    )
+    
+    spotGlossId = None
+    if spotGlossInstructions and os.path.isfile(spotGlossInstructions["filepath"]):
+        spotGlossId = await fileFolderManager.createFileInFolder(
+            gameCrafterSession, 
+            spotGlossInstructions["name"], 
+            spotGlossInstructions["filepath"], 
+            cloudComponentFolder["id"]
+        )
+    
+    cloudBoxTopGloss = await httpOperations.postBoxTopGloss(
+        gameCrafterSession,
+        componentName, 
+        cloudGameId, 
+        quantity,
+        topImageId,
+        identity,  # This will be something like "LargeStoutBoxTopAndSide"
+        isProofed,
+        spotGlossId
+    )
+
+async def createPerfectBoundBook(gameCrafterSession, component, identity, cloudGameId, cloudGameFolderId, isProofed):
+    componentName = component["name"]
+    quantity = component["quantity"]
+    if int(quantity) == 0:
+        return
+    pageInstructions = component["pageInstructions"]  # List of page images
+    spineInstructions = component.get("spineInstructions", None)  # Optional spine image
+
+    if not pageInstructions:
+        print(f"!!! Cannot create {componentName}, no pages specified")
+        return
+
+    print("Uploading %s %s %s(s)" % (quantity, componentName, component["type"]))
+
+    cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
+    
+    # Upload spine image if provided
+    spineImageId = None
+    if spineInstructions and os.path.isfile(spineInstructions["filepath"]):
+        spineImageId = await fileFolderManager.createFileInFolder(
+            gameCrafterSession, 
+            spineInstructions["name"], 
+            spineInstructions["filepath"], 
+            cloudComponentFolder["id"]
+        )
+    
+    # Create the book
+    cloudBook = await httpOperations.postPerfectBoundBook(
+        gameCrafterSession,
+        componentName, 
+        cloudGameId, 
+        quantity,
+        identity,  # This will be something like "DigestPerfectBoundBook"
+        len(pageInstructions),
+        spineImageId,
+        isProofed
+    )
+    
+    # Upload and create each page
+    for i, pageInstruction in enumerate(pageInstructions, 1):  # Start counting at 1
+        if not os.path.isfile(pageInstruction["filepath"]):
+            print(f"!!! Cannot create page {i}, missing image {pageInstruction['filepath']}")
+            continue
+            
+        pageImageId = await fileFolderManager.createFileInFolder(
+            gameCrafterSession, 
+            pageInstruction["name"], 
+            pageInstruction["filepath"], 
+            cloudComponentFolder["id"]
+        )
+        
+        await httpOperations.postPerfectBoundBookPage(
+            gameCrafterSession,
+            f"{componentName} Page {i}",
+            cloudBook["id"],
+            i,  # sequence_number
+            pageImageId,
+            isProofed
+        )
+
+async def createCoilBook(gameCrafterSession, component, identity, cloudGameId, cloudGameFolderId, isProofed):
+    componentName = component["name"]
+    quantity = component["quantity"]
+    if int(quantity) == 0:
+        return
+    pageInstructions = component["pageInstructions"]  # List of page images
+
+    if not pageInstructions:
+        print(f"!!! Cannot create {componentName}, no pages specified")
+        return
+
+    print("Uploading %s %s %s(s)" % (quantity, componentName, component["type"]))
+
+    cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId)
+    
+    # Create the book
+    cloudBook = await httpOperations.postCoilBook(
+        gameCrafterSession,
+        componentName, 
+        cloudGameId, 
+        quantity,
+        identity,  # This will be something like "JumboCoilBook"
+        len(pageInstructions),
+        isProofed
+    )
+    
+    # Upload and create each page
+    for i, pageInstruction in enumerate(pageInstructions, 1):  # Start counting at 1
+        if not os.path.isfile(pageInstruction["filepath"]):
+            print(f"!!! Cannot create page {i}, missing image {pageInstruction['filepath']}")
+            continue
+            
+        pageImageId = await fileFolderManager.createFileInFolder(
+            gameCrafterSession, 
+            pageInstruction["name"], 
+            pageInstruction["filepath"], 
+            cloudComponentFolder["id"]
+        )
+        
+        await httpOperations.postCoilBookPage(
+            gameCrafterSession,
+            f"{componentName} Page {i}",
+            cloudBook["id"],
+            i,  # sequence_number
+            pageImageId,
+            isProofed
+        )

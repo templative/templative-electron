@@ -10,6 +10,8 @@ from fpdf import FPDF
 from templative.lib.componentInfo import COMPONENT_INFO
 from templative.lib.manage.instructionsLoader import getLastOutputFileDirectory
 
+diceTypes = [ "CustomColorD6", "CustomWoodD6"]
+unsupportedDiceTypes = ["CustomColorD4", "CustomColorD8"]
 marginInches = 0.5 # or 0.25
 inchToPixelConversion = 96
 pieceMarginInches = 0.11811 * 1/3
@@ -84,28 +86,35 @@ async def collectFilepathQuantitiesForComponent(componentInstructions):
         return componentTypeFilepathAndQuantity
 
     # Special handling for dice
-    if "CustomColorD6" in componentInstructions["type"]:
+    isDie = componentInstructions["type"] in diceTypes or componentInstructions["type"] in unsupportedDiceTypes
+    if isDie:
+        # Skip unsupported dice types
+        if componentInstructions["type"] in unsupportedDiceTypes:
+            print(f"!!! Skipping {componentInstructions['name']} because {componentInstructions['type']} is not supported for printing due to it's complexity.")
+            return componentTypeFilepathAndQuantity
+            
         if not "dieFaceFilepaths" in componentInstructions:
-            print(f"!!! Skipping {componentInstructions['uniqueName']} because it lacks 'dieFaceFilepaths'.")
+            print(f"!!! Skipping {componentInstructions['name']} because it lacks 'dieFaceFilepaths'.")
             return componentTypeFilepathAndQuantity
         
         dieLayout = {
             "filepath": componentInstructions["dieFaceFilepaths"],  # Pass all filepaths
             "quantity": componentInstructions["quantity"],
-            "isDie": True
+            "isDie": isDie
         }
         componentTypeFilepathAndQuantity[componentInstructions["type"]].append(dieLayout)
         return componentTypeFilepathAndQuantity
 
     # Original code for non-dice components
     if not "frontInstructions" in componentInstructions:
-        print(f"!!! Skipping {componentInstructions['uniqueName']} because it lacks 'frontInstructions'.")
+        print(f"!!! Skipping {componentInstructions['name']} because it lacks 'frontInstructions'.")
         return componentTypeFilepathAndQuantity
     
     for instruction in componentInstructions["frontInstructions"]:
         frontBack = {
             "filepath": instruction["filepath"],
             "quantity":  instruction["quantity"] * componentInstructions["quantity"],
+            "isDie": isDie
         }
         if "backInstructions" in componentInstructions:
             frontBack["backFilepath"] = componentInstructions["backInstructions"]["filepath"]
@@ -149,7 +158,7 @@ async def createPageImagesForComponentTypeImages(componentType, componentTypeIma
         componentSizeInches = (componentSizeInches[0] * accountForMarginsFactor[0], componentSizeInches[1] * accountForMarginsFactor[1])
 
     # Special handling for dice - adjust piece size for layout while keeping component size the same
-    isDie = "CustomColorD6" in componentType
+    isDie = componentType in diceTypes
     if isDie:
         flangeSize = componentSizeInches[1] * 0.15  # Match the flange size ratio
         pieceSizeInches = (

@@ -126,28 +126,30 @@ async def postTwoSided(gameCrafterSession, name, setId, quantity, faceImageId, i
         has_proofed_face = isProofed,
     )
 
-async def postHookBox(gameCrafterSession, name, identity, quantity, gameId, imageId, isProofed):
-    url = "%s/hookbox" % (gameCrafterBaseUrl)
+async def postHookBox(gameCrafterSession, name, gameId, quantity, outsideImageId, insideImageId, identity, isProofed):
+    url = "%s/hookbox" % gameCrafterBaseUrl
     return await httpClient.post(gameCrafterSession, url,
         session_id = gameCrafterSession.sessionId,
         name = name,
         game_id = gameId,
         quantity = quantity,
-        outside_id = imageId,
+        outside_id = outsideImageId,
+        inside_id = insideImageId,
         identity = identity,
         has_proofed_outside = isProofed,
+        has_proofed_inside = isProofed
     )
 
-async def postBoxFace(gameCrafterSession, gameId, name, identity, quantity, frontImageId, isProofed):
-    url = "%s/boxface" % (gameCrafterBaseUrl)
+async def postBoxFace(gameCrafterSession, name, gameId, quantity, faceImageId, identity, isProofed):
+    url = "%s/boxface" % gameCrafterBaseUrl
     return await httpClient.post(gameCrafterSession, url,
         session_id = gameCrafterSession.sessionId,
         name = name,
         game_id = gameId,
         quantity = quantity,
-        face_id = frontImageId,
-        has_proofed_face = isProofed,
+        face_id = faceImageId,
         identity = identity,
+        has_proofed_face = isProofed
     )
 
 async def postTuckBox(gameCrafterSession, name, identity, quantity, gameId, imageId, isProofed):
@@ -187,18 +189,18 @@ async def postDeckCard(gameCrafterSession, name, deckId, quantity, imageFileId, 
         has_proofed_back = isProofed
     )
 
-async def postTwoSidedBox(gameCrafterSession, gameId, name, identity, quantity, topImageFileId, backImageFileId, isProofed):
+async def postTwoSidedBox(gameCrafterSession, cloudGameId, componentName, identity, quantity, topImageFileId, bottomImageFileId, isProofed):
     url = "%s/twosidedbox" % gameCrafterBaseUrl
     return await httpClient.post(gameCrafterSession, url,
         session_id = gameCrafterSession.sessionId,
-        name = name,
-        game_id = gameId,
+        name = componentName,
+        game_id = cloudGameId,
         quantity = quantity,
+        identity = identity,
         top_id = topImageFileId,
         has_proofed_top = isProofed,
-        bottom_id = backImageFileId,
-        has_proofed_bottom = isProofed,
-        identity = identity
+        bottom_id = bottomImageFileId,
+        has_proofed_bottom = isProofed
     )
 
 async def postTwoSidedSluggedSet(gameCrafterSession, name, identity, quantity, gameId, backImageFileId, isProofed):
@@ -360,4 +362,231 @@ async def getStockPartInfo(gameCrafterSession, pageNumber=1):
     url = "%s/part?_page_number=%s" % (gameCrafterBaseUrl, pageNumber)
     return await httpClient.get(gameCrafterSession, url, 
         session_id = gameCrafterSession.sessionId,
+    )
+
+async def postOneSidedSluggedSet(gameCrafterSession, name, identity, quantity, gameId, isProofed):
+    url = "%s/onesidedsluggedset" % gameCrafterBaseUrl
+    return await httpClient.post(gameCrafterSession, url,
+        session_id = gameCrafterSession.sessionId,
+        name = name,
+        game_id = gameId,
+        identity = identity,
+        quantity = quantity
+    )
+
+async def postOneSidedSlugged(gameCrafterSession, name, setId, quantity, imageFileId, isProofed):
+    url = "%s/onesidedslugged" % gameCrafterBaseUrl
+    return await httpClient.post(gameCrafterSession, url,
+        session_id = gameCrafterSession.sessionId,
+        name = name,
+        set_id = setId,
+        quantity = quantity,
+        face_id = imageFileId,
+        has_proofed_face = isProofed
+    )
+
+async def postCustomWoodD6(gameCrafterSession, name, gameId, quantity, sideFileIds, isProofed):
+    if len(sideFileIds) != 6:
+        raise Exception("A wooden D6 needs 6 sides, but only %s were given." % (len(sideFileIds)))
+    
+    url = "%s/customwoodd6" % gameCrafterBaseUrl
+    return await httpClient.post(gameCrafterSession, url,
+        session_id = gameCrafterSession.sessionId,
+        name = name,
+        game_id = gameId,
+        quantity = quantity,
+        identity = "CustomWoodD6",
+        side1_id = sideFileIds[0],
+        side2_id = sideFileIds[1],
+        side3_id = sideFileIds[2],
+        side4_id = sideFileIds[3],
+        side5_id = sideFileIds[4],
+        side6_id = sideFileIds[5],
+        has_proofed_side1 = isProofed,
+        has_proofed_side2 = isProofed,
+        has_proofed_side3 = isProofed,
+        has_proofed_side4 = isProofed,
+        has_proofed_side5 = isProofed,
+        has_proofed_side6 = isProofed
+    )
+
+async def postTwoSidedBoxGloss(gameCrafterSession, cloudGameId, componentName, identity, quantity, topImageFileId, bottomImageFileId, isProofed):
+    url = "%s/twosidedboxgloss" % gameCrafterBaseUrl
+    return await httpClient.post(gameCrafterSession, url,
+        session_id = gameCrafterSession.sessionId,
+        name = componentName,
+        game_id = cloudGameId,
+        quantity = quantity,
+        identity = identity,
+        top_id = topImageFileId,
+        bottom_id = bottomImageFileId,
+        has_proofed_top = isProofed,
+        has_proofed_bottom = isProofed,
+        surfacing_treatment = "gloss"
+    )
+
+async def postScorePad(gameCrafterSession, name, gameId, quantity, imageFileId, pageCount, identity, isProofed):
+    url = "%s/scorepad" % gameCrafterBaseUrl
+    return await httpClient.post(gameCrafterSession, url,
+        session_id = gameCrafterSession.sessionId,
+        name = name,
+        game_id = gameId,
+        quantity = quantity,
+        image_id = imageFileId,
+        page_count = pageCount,
+        has_proofed_image = isProofed,
+        identity = identity
+    )
+
+async def postOneSided(gameCrafterSession, name, gameId, quantity, faceImageId, identity, isProofed):
+    url = "%s/onesided" % gameCrafterBaseUrl
+    return await httpClient.post(gameCrafterSession, url,
+        session_id = gameCrafterSession.sessionId,
+        name = name,
+        game_id = gameId,
+        quantity = quantity,
+        face_id = faceImageId,
+        identity = identity,
+        has_proofed_face = isProofed
+    )
+
+async def postOneSidedGloss(gameCrafterSession, name, gameId, quantity, faceImageId, identity, isProofed, spotGlossId=None):
+    url = "%s/onesidedgloss" % gameCrafterBaseUrl
+    params = {
+        "session_id": gameCrafterSession.sessionId,
+        "name": name,
+        "game_id": gameId,
+        "quantity": quantity,
+        "face_id": faceImageId,
+        "identity": identity,
+        "has_proofed_face": isProofed,
+        "surfacing_treatment": "gloss"
+    }
+    
+    if spotGlossId:
+        params.update({
+            "spot_gloss_id": spotGlossId,
+            "has_proofed_spot_gloss": isProofed,
+            "surfacing_treatment": "spot_gloss"
+        })
+        
+    return await httpClient.post(gameCrafterSession, url, **params)
+
+async def postDial(gameCrafterSession, name, gameId, quantity, outsideImageId, identity, isProofed):
+    url = "%s/dial" % gameCrafterBaseUrl
+    return await httpClient.post(gameCrafterSession, url,
+        session_id = gameCrafterSession.sessionId,
+        name = name,
+        game_id = gameId,
+        quantity = quantity,
+        outside_id = outsideImageId,
+        identity = identity, 
+        has_proofed_outside = isProofed
+    )
+
+async def postCustomPrintedMeeple(gameCrafterSession, name, gameId, quantity, side1ImageId, side2ImageId, diecolor, isProofed):
+    url = "%s/customprintedmeeple" % gameCrafterBaseUrl
+    params = {
+        "session_id": gameCrafterSession.sessionId,
+        "name": name,
+        "game_id": gameId,
+        "quantity": quantity,
+        "identity": "CustomPrintedMeeple",
+        "diecolor": diecolor or "white",
+        "has_proofed_side1": isProofed,
+    }
+    
+    if side1ImageId:
+        params["side1_id"] = side1ImageId
+        
+    if side2ImageId:
+        params["side2_id"] = side2ImageId
+        params["has_proofed_side2"] = isProofed
+        
+    return await httpClient.post(gameCrafterSession, url, **params)
+
+async def postBoxTop(gameCrafterSession, name, gameId, quantity, topImageId, identity, isProofed):
+    url = "%s/boxtop" % gameCrafterBaseUrl
+    return await httpClient.post(gameCrafterSession, url,
+        session_id = gameCrafterSession.sessionId,
+        name = name,
+        game_id = gameId,
+        quantity = quantity,
+        top_id = topImageId,
+        identity = identity,
+        has_proofed_top = isProofed
+    )
+
+async def postBoxTopGloss(gameCrafterSession, name, gameId, quantity, topImageId, identity, isProofed, spotGlossId=None):
+    url = "%s/boxtopgloss" % gameCrafterBaseUrl
+    params = {
+        "session_id": gameCrafterSession.sessionId,
+        "name": name,
+        "game_id": gameId,
+        "quantity": quantity,
+        "top_id": topImageId,
+        "identity": identity,
+        "has_proofed_top": isProofed,
+        "surfacing_treatment": "gloss"
+    }
+    
+    if spotGlossId:
+        params.update({
+            "spot_gloss_id": spotGlossId,
+            "has_proofed_spot_gloss": isProofed,
+            "surfacing_treatment": "spot_gloss"
+        })
+        
+    return await httpClient.post(gameCrafterSession, url, **params)
+
+async def postPerfectBoundBook(gameCrafterSession, name, gameId, quantity, identity, pageCount, spineImageId=None, isProofed=False):
+    url = "%s/perfectboundbook" % gameCrafterBaseUrl
+    params = {
+        "session_id": gameCrafterSession.sessionId,
+        "name": name,
+        "game_id": gameId,
+        "quantity": quantity,
+        "identity": identity,
+        "page_count": pageCount
+    }
+    
+    if spineImageId:
+        params.update({
+            "spine_image_id": spineImageId,
+            "has_proofed_spine": isProofed
+        })
+        
+    return await httpClient.post(gameCrafterSession, url, **params)
+
+async def postPerfectBoundBookPage(gameCrafterSession, name, bookletId, sequenceNumber, imageId, isProofed):
+    url = "%s/perfectboundbookpage" % gameCrafterBaseUrl
+    return await httpClient.post(gameCrafterSession, url,
+        session_id = gameCrafterSession.sessionId,
+        name = name,
+        booklet_id = bookletId,
+        sequence_number = sequenceNumber,
+        image_id = imageId,
+        has_proofed_image = isProofed
+    )
+
+async def postCoilBook(gameCrafterSession, name, gameId, quantity, identity, pageCount, isProofed):
+    url = "%s/coilbook" % gameCrafterBaseUrl
+    return await httpClient.post(gameCrafterSession, url,
+        session_id = gameCrafterSession.sessionId,
+        name = name,
+        game_id = gameId,
+        quantity = quantity,
+        identity = identity,
+        page_count = pageCount
+    )
+
+async def postCoilBookPage(gameCrafterSession, name, coilbookId, sequenceNumber, imageId, isProofed):
+    url = "%s/coilbookpage" % gameCrafterBaseUrl
+    return await httpClient.post(gameCrafterSession, url,
+        session_id = gameCrafterSession.sessionId,
+        name = name,
+        coilbook_id = coilbookId,
+        sequence_number = sequenceNumber,
+        image_id = imageId,
+        has_proofed_image = isProofed
     )
