@@ -17,7 +17,7 @@ export default class PieceControls extends React.Component {
         e.preventDefault();
     }
     render() {
-        return <div key="main-row" className="input-group input-group-sm mb-3" data-bs-theme="dark">
+        return <div key="main-row" className="input-group input-group-sm mb-3 piece-controls-row" data-bs-theme="dark">
 
             <span className="input-group-text input-group-text soft-label">name</span>
             <input type="text" className="form-control value-field no-left-border"

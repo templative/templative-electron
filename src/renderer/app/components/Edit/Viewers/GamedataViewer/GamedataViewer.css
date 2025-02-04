@@ -129,3 +129,6 @@ tr {
 .gamedata-quantity-input {
     max-width: 8ch;
 }
+.App .piece-controls-row > * {
+    border-bottom: 4px solid var(--color-surface-cover-hover) !important;
+}
