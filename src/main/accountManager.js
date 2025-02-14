@@ -10,6 +10,15 @@ let mainWindow;
 const goToAccount = async(event, args) => {
     shell.openExternal("https://templative.net/");
 }
+const reportBug = async(event, args) => {
+    shell.openExternal("https://discord.com/channels/1257955995918008351/1261183276387799123");
+}
+const giveFeedback = async(event, args) => {
+    shell.openExternal("https://discord.com/channels/1257955995918008351/1257956358435639419");
+}
+const viewDocumentation = async(event, args) => {
+    shell.openExternal("https://templative.net/docs");
+}
 const giveLogout = async (event, args) => {
     await clearSessionToken()
     await clearEmail()
@@ -306,5 +315,8 @@ module.exports = {
     logoutTgc,
     pollGithubAuth,
     giveGithubAuth,
-    clearGithubAuth
+    clearGithubAuth,
+    reportBug,
+    giveFeedback,
+    viewDocumentation
 }

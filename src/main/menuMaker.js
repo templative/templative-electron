@@ -1,7 +1,7 @@
 const { channels } = require("../shared/constants");
 const { Menu, BrowserWindow  } = require('electron')
 const { createProject, openFolder } = require("./dialogMaker")
-const { giveLogout, goToAccount} = require("./accountManager")
+const { giveLogout, goToAccount, reportBug, giveFeedback, viewDocumentation } = require("./accountManager")
 const templates = [
     {
         label: "File",
@@ -55,6 +55,29 @@ const templates = [
             }
         ]
     },
+    {
+        label: "Bugs and Feedback",
+        submenu: [
+            { 
+                label: "Report a Bug",
+                click: reportBug
+            },
+            { 
+                label: "Give Feedback",
+                click: giveFeedback
+            }
+        ]
+    },
+    {
+        label: "Help",
+        submenu: [
+            {
+                label: "View Documentation",
+                click: viewDocumentation
+            }
+        ]
+    }
+    
 ]
 
 module.exports.mainMenu = Menu.buildFromTemplate(templates);
