@@ -9,14 +9,40 @@ from templative.lib.stockComponentInfo import STOCK_COMPONENT_INFO
 from templative.lib.produce import gameProducer
 from templative.lib.distribute.gameCrafter.util.gameCrafterSession import createSessionFromLogin
 from templative.lib.distribute.gameCrafter.client import uploadGame
+from .errorHandler import error_collector
+import uuid
 
 routes = web.RouteTableDef()
+
+def wrap_route(handler):
+    async def wrapper(request):
+        request_id = str(uuid.uuid4())
+        try:
+            return await handler(request)
+        except Exception as e:
+            route_name = handler.__name__
+            await error_collector.collect_error(
+                e, 
+                f"HTTP_{route_name}", 
+                {
+                    "method": request.method, 
+                    "path": request.path,
+                    "request_id": request_id
+                }
+            )
+            return web.Response(
+                text=f"Internal server error: {str(e)}", 
+                status=500,
+                headers={"X-Request-ID": request_id}
+            )
+    return wrapper
 
 @routes.get("/status")
 async def getStatus(_):
   return web.Response(status=200)
 
 @routes.post("/project") 
+@wrap_route
 async def createProject(request):
   data = await request.json()
   if data["directoryPath"] == None:
@@ -28,6 +54,7 @@ async def createProject(request):
   return web.Response(status=200)
 
 @routes.post("/printout") 
+@wrap_route
 async def printout(request):
   data = await request.json()
   if data["outputDirectorypath"] == None:
@@ -45,6 +72,7 @@ async def printout(request):
   return web.Response(status=200)
 
 @routes.post("/playground")
+@wrap_route
 async def playground(request):
   data = await request.json()
   if data["outputDirectorypath"] == None:
@@ -57,6 +85,7 @@ async def playground(request):
   return web.Response(status=200)
 
 @routes.post("/simulator")
+@wrap_route
 async def simulator(request):
   data = await request.json()
   if data["outputDirectorypath"] == None:
@@ -69,6 +98,7 @@ async def simulator(request):
   return web.Response(status=200)
 
 @routes.post("/component") 
+@wrap_route
 async def createComponent(request):
   data = await request.json()
   if data["componentName"] == None:
@@ -90,6 +120,7 @@ async def getStockInfo(request):
   return web.json_response(STOCK_COMPONENT_INFO)
 
 @routes.post("/preview-piece")
+@wrap_route
 async def previewPiece(request):
   data = await request.json()
   if data["componentFilter"] == None:
@@ -133,6 +164,7 @@ async def getDesigners(request):
             await gameCrafterSession.httpSession.close()
     
 @routes.post("/the-game-crafter/upload")
+@wrap_route
 async def upload(request):
     data = await request.json()
     

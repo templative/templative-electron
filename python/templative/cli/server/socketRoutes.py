@@ -1,6 +1,7 @@
 import socketio
 from templative.lib.produce import gameProducer 
 from .emitPrintStatements import EmitPrintStatements
+from .errorHandler import error_collector
 
 from templative.lib.distribute.gameCrafter.client import uploadGame
 from templative.lib.distribute.gameCrafter.accountManagement import listGames, deletePageOfGames
@@ -35,7 +36,24 @@ async def error_handler(sid, error):
         await printStatements[sid].__aexit__(None, None, None)
         del printStatements[sid]
 
+def wrap_socket_handler(handler):
+    async def wrapper(sid, data, namespace=None):
+        try:
+            return await handler(sid, data, namespace)
+        except Exception as e:
+            route_name = handler.__name__
+            await error_collector.collect_error(
+                e,
+                f"WS_{route_name}",
+                {"sid": sid, "data": data}
+            )
+            # Optionally emit error back to client
+            await sio.emit('error', {"message": str(e)}, room=sid)
+            return False
+    return wrapper
+
 @sio.on("produceGame")
+@wrap_socket_handler
 async def produceGame(sid, data, namespace=None):
     print(f"Socket for {sid}: {data}")
     if 'isDebug' not in data:

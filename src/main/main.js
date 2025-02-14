@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require('electron')
+const { app, BrowserWindow, Menu, ipcMain } = require('electron')
 const killPort = require('kill-port');
 const {mainMenu} = require("./menuMaker")
 const {listenForRenderEvents} = require("./listenForRenderEvents")
@@ -10,6 +10,7 @@ const { setupAppUpdateListener } = require("./appUpdater")
 const { initialize } = require("@aptabase/electron/main");
 const SplashScreen = require('../renderer/splash/splashScreen');
 const { setupOauthListener } = require("./accountManager")
+const axios = require('axios');
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
@@ -51,7 +52,7 @@ const createWindow = () => {
 }
 
 var servers = [
-  new ServerRunner("templativeServer", 8085, serverEnvironmentConfiguration.templativeServerCommandsByEnvironment),
+//   new ServerRunner("templativeServer", 8085, serverEnvironmentConfiguration.templativeServerCommandsByEnvironment),
 ]
 var serverManager = new ServerManager(servers)
 
@@ -65,6 +66,27 @@ const launchServers = async () => {
         return 0
     }
 }
+
+const logError = async (error, route, additionalContext = {}) => {
+    try {
+        await axios.post('https://api.templative.net/logging', {
+            error: {
+                type: error.name,
+                message: error.message,
+                stacktrace: error.stack
+            },
+            route: route,
+            additionalContext: {
+                ...additionalContext,
+                application_layer: 'electron',
+                electron_version: process.versions.electron,
+                app_version: app.getVersion()
+            }
+        });
+    } catch (err) {
+        console.error('Failed to log error:', err);
+    }
+};
 
 const initializeApp = async () => {
     splashScreen = new SplashScreen();
@@ -106,6 +128,7 @@ const initializeApp = async () => {
         });
 
     } catch (err) {
+        await logError(err, 'app_initialization');
         error(err);
         splashScreen.updateProgress(`Error: ${err.message}`, 100);
         await sleep(2000);
@@ -192,11 +215,17 @@ process.on('SIGINT', async () => {
 });
 
 process.on('uncaughtException', async (err) => {
-    error(`Uncaught Exception: ${err}`);
+    await logError(err, 'process_uncaught_exception');
     await shutdown();
 });
 
 process.on('unhandledRejection', async (err) => {
-    error(`Unhandled Rejection: ${err}`);
+    await logError(err, 'process_unhandled_rejection');
     await shutdown();
+});
+
+ipcMain.on('error', async (event, error) => {
+    await logError(error, 'ipc_error', {
+        sender: event.sender.getTitle()
+    });
 });
