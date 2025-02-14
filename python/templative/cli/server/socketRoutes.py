@@ -55,7 +55,6 @@ def wrap_socket_handler(handler):
 @sio.on("produceGame")
 @wrap_socket_handler
 async def produceGame(sid, data, namespace=None):
-    print(f"Socket for {sid}: {data}")
     if 'isDebug' not in data:
         print("Missing isDebug")
         return False
@@ -77,6 +76,8 @@ async def produceGame(sid, data, namespace=None):
         print("Missing directoryPath")
         return False
     directoryPath = data['directoryPath']
+
+    raise Exception("Test error for error handling")
 
     try:
         await gameProducer.produceGame(
