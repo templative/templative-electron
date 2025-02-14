@@ -27,7 +27,7 @@ app.setName('Templative');
 var templativeWindow = undefined
 var splashScreen = undefined
 
-initialize("A-US-9521417167");
+initialize("A-US-3966824173");
 
 const createWindow = () => {
     templativeWindow = new BrowserWindow({
