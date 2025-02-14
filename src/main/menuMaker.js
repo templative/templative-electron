@@ -69,7 +69,7 @@ const templates = [
         ]
     },
     {
-        label: "Help",
+        label: "Documentation",
         submenu: [
             {
                 label: "View Documentation",
