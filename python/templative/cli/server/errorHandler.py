@@ -45,6 +45,7 @@ class ErrorCollector:
                 "message": str(error),
                 "stacktrace": traceback.format_exc()
             },
+            "application_layer": "python",
             "route": route,
             "additionalContext": additional_context or {},
             "severity": severity
