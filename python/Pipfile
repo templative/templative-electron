@@ -21,11 +21,12 @@ numpy = "1.26.4"
 pyinstaller = "*"
 requests = "*"
 aiofiles = "*"
-python-socketio = {extras = ["asyncio"], version = "*"}
+python-socketio = {extras = ["asyncio"] }
 templative = {file = ".", editable = true}
 matplotlib = "*"
 snakeviz = "*"
 #cairosvg = "*"
+sentry-sdk = {extras = ["flask"], version = "*"}
 
 [requires]
-python_version = "3.11.9"
+python_version = "3.11"

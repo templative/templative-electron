@@ -5,6 +5,15 @@ from .httpRoutes import routes
 from .socketRoutes import sio, printStatements
 import sys
 import os
+import sentry_sdk
+from sentry_sdk.integrations.aiohttp import AioHttpIntegration
+
+# Initialize Sentry at the top of your file
+sentry_sdk.init(
+    dsn="https://ea447f3e89982daf599068c5b6bf933c@o4508842181459968.ingest.us.sentry.io/4508859562328064",
+    integrations=[AioHttpIntegration()],
+    environment="production" if getattr(sys, 'frozen', False) else "development",
+)
 
 @click.command()
 @click.option('--port', default=8085, required=False, help='The port of the local server.')

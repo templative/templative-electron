@@ -11,6 +11,14 @@ const { initialize } = require("@aptabase/electron/main");
 const SplashScreen = require('../renderer/splash/splashScreen');
 const { setupOauthListener } = require("./accountManager")
 const axios = require('axios');
+const Sentry = require("@sentry/electron");
+
+Sentry.init({
+  dsn: "https://ea447f3e89982daf599068c5b6bf933c@o4508842181459968.ingest.us.sentry.io/4508859562328064",
+  enableNative: true,
+  release: `templative@${app.getVersion()}`,
+  environment: app.isPackaged ? 'production' : 'development',
+});
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
