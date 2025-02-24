@@ -5,9 +5,47 @@ permissions:
   contents: write
 
 jobs:
+  check-version:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.package-version.outputs.current-version }}
+      should_build: ${{ steps.check-s3.outputs.should_build }}
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: get-npm-version
+        id: package-version
+        shell: bash
+        run: |
+          PACKAGE_VERSION=$(npm pkg get version --workspaces=false | tr -d \")
+          echo $PACKAGE_VERSION
+          echo "current-version=$PACKAGE_VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Configure AWS credentials
+        env:
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          aws configure set aws_access_key_id $AWS_ACCESS_KEY
+          aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+          aws configure set region us-west-2
+
+      - name: Check if version exists
+        id: check-s3
+        run: |
+          VERSION=${{steps.package-version.outputs.current-version}}
+          if aws s3 ls "s3://templative-artifacts/win32/unsigned/x64/Templative-win32-x64-${VERSION}.zip" 2>&1 | grep -q 'NoSuchKey'; then
+            echo "Version ${VERSION} does not exist, proceeding with build"
+            echo "should_build=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Version ${VERSION} already exists, skipping build"
+            echo "should_build=false" >> "$GITHUB_OUTPUT"
+          fi
+
   templative-windows:
-    if: true
-    # timeout-minutes: 30
+    needs: check-version
+    if: needs.check-version.outputs.should_build == 'true'
+    timeout-minutes: 20
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -213,8 +251,9 @@ jobs:
           aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip s3://templative-artifacts/win32/unsigned/x64/Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip --region us-west-2
           
   templative-osx:
-    if: true
-    # timeout-minutes: 45
+    needs: check-version
+    if: needs.check-version.outputs.should_build == 'true'
+    timeout-minutes: 20
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
