@@ -47,7 +47,7 @@ module.exports = {
         name: "templative",
         authors: "Go Next Games",
         noMsi: true,
-        // noDelta: true,
+        noDelta: true,
         remoteReleases: `https://templative-artifacts.s3.amazonaws.com/win32/${arch}`,
         setupIcon: 'src/assets/images/icon.ico',        
         iconUrl: 'https://drive.google.com/uc?export=download&id=1kZ7VRV_A_cwG6mPIS1HUXKFWViW5y3-J', 
