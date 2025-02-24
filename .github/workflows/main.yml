@@ -34,12 +34,12 @@ jobs:
         id: check-s3
         run: |
           VERSION=${{steps.package-version.outputs.current-version}}
-          if aws s3 ls "s3://templative-artifacts/win32/unsigned/x64/Templative-win32-x64-${VERSION}.zip" 2>&1 | grep -q 'NoSuchKey'; then
-            echo "Version ${VERSION} does not exist, proceeding with build"
-            echo "should_build=true" >> "$GITHUB_OUTPUT"
-          else
+          if aws s3 ls "s3://templative-artifacts/win32/unsigned/x64/Templative-win32-x64-${VERSION}.zip" >/dev/null 2>&1; then
             echo "Version ${VERSION} already exists, skipping build"
             echo "should_build=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Version ${VERSION} does not exist, proceeding with build"
+            echo "should_build=true" >> "$GITHUB_OUTPUT"
           fi
 
   templative-windows:
