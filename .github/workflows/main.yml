@@ -256,9 +256,15 @@ jobs:
           
           # Sign Setup.exe
           Write-Host "Starting signing job for Setup.exe..."
+          $sourcePath = "s3://templative-artifacts/win32/unsigned/x64/templative-$env:VERSION Setup.exe"
+          $destPath = "s3://templative-artifacts/win32/x64/templative-$env:VERSION Setup.exe"
+          
+          Write-Host "Source path: $sourcePath"
+          Write-Host "Destination path: $destPath"
+          
           $SIGNING_JOB_ID = (aws signer start-signing-job `
-            --source 's3://templative-artifacts/win32/unsigned/x64/templative-${env:VERSION} Setup.exe' `
-            --destination 's3://templative-artifacts/win32/x64/templative-${env:VERSION} Setup.exe' `
+            --source "$sourcePath" `
+            --destination "$destPath" `
             --profile-name "Templative" `
             --region us-west-2 `
             --output text `
@@ -288,7 +294,7 @@ jobs:
           }
           
           Write-Host "Copying nupkg file..."
-          aws s3 cp s3://templative-artifacts/win32/unsigned/x64/templative-${env:VERSION}-full.nupkg s3://templative-artifacts/win32/x64/
+          aws s3 cp "s3://templative-artifacts/win32/unsigned/x64/templative-$env:VERSION-full.nupkg" "s3://templative-artifacts/win32/x64/"
           if ($LASTEXITCODE -ne 0) {
               Write-Error "Failed to copy nupkg file"
               exit 1
