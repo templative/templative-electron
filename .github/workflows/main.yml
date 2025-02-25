@@ -245,60 +245,101 @@ jobs:
           aws s3 cp ./out/make/squirrel.windows/x64/RELEASES s3://templative-artifacts/win32/unsigned/x64/ --region us-west-2
 
       - name: Sign Windows Files with AWS Signer
-        shell: pwsh
+        shell: bash
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           VERSION: ${{steps.package-version.outputs.current-version}}
         run: |
-          # Enable error handling
-          $ErrorActionPreference = "Stop"
+          # Enable error handling and debugging
+          set -e
+          set -x
           
-          # Sign Setup.exe
-          Write-Host "Starting signing job for Setup.exe..."
-          $sourcePath = "s3://templative-artifacts/win32/unsigned/x64/templative-$env:VERSION Setup.exe"
-          $destPath = "s3://templative-artifacts/win32/x64/templative-$env:VERSION Setup.exe"
-          
-          Write-Host "Source path: $sourcePath"
-          Write-Host "Destination path: $destPath"
-          
-          $SIGNING_JOB_ID = (aws signer start-signing-job `
-            --source "$sourcePath" `
-            --destination "$destPath" `
-            --profile-name "Templative" `
-            --region us-west-2 `
-            --output text `
-            --query 'jobId')
-          
-          if (-not $SIGNING_JOB_ID) {
-              Write-Error "Failed to get signing job ID"
-              exit 1
+          # Function to sign and verify file
+          sign_file() {
+            local source_key=$1
+            local dest_key=$2
+            local file_name=$3
+            
+            echo "Starting signing job for $file_name..."
+            
+            # Verify source file exists in S3 before signing
+            if ! aws s3 ls "s3://templative-artifacts/win32/unsigned/x64/$source_key" > /dev/null 2>&1; then
+              echo "Error: Source file $source_key not found in S3"
+              return 1
+            fi
+            
+            # Start signing job and capture job ID with proper error handling
+            local SIGNING_JOB
+            SIGNING_JOB=$(aws signer start-signing-job \
+              --source "s3={bucket=templative-artifacts,key=win32/unsigned/x64/$source_key}" \
+              --destination "s3={bucket=templative-artifacts,key=win32/x64/$dest_key}" \
+              --profile-name "Templative" \
+              --region us-west-2)
+            
+            if [ $? -ne 0 ]; then
+              echo "Error starting signing job for $file_name"
+              return 1
+            fi
+            
+            local SIGNING_JOB_ID
+            SIGNING_JOB_ID=$(echo "$SIGNING_JOB" | jq -r '.jobId')
+            
+            if [ -z "$SIGNING_JOB_ID" ] || [ "$SIGNING_JOB_ID" = "null" ]; then
+              echo "Failed to get signing job ID"
+              return 1
+            fi
+            
+            # Wait for signing job completion with better status checking
+            local COUNTER=0
+            while [ $COUNTER -lt 30 ]; do
+              local STATUS
+              STATUS=$(aws signer describe-signing-job \
+                --job-id "$SIGNING_JOB_ID" \
+                --region us-west-2 \
+                --query 'status' \
+                --output text)
+              
+              echo "Signing status for $file_name: $STATUS"
+              
+              if [ "$STATUS" = "Succeeded" ]; then
+                # Verify file exists in destination
+                if aws s3 ls "s3://templative-artifacts/win32/x64/$dest_key" > /dev/null 2>&1; then
+                  echo "Successfully signed $file_name"
+                  return 0
+                fi
+              elif [ "$STATUS" = "Failed" ]; then
+                echo "Signing job failed for $file_name"
+                aws signer describe-signing-job --job-id "$SIGNING_JOB_ID" --region us-west-2
+                return 1
+              fi
+              
+              COUNTER=$((COUNTER + 1))
+              sleep 10
+            done
+            
+            echo "Timeout waiting for signing job to complete for $file_name"
+            return 1
           }
           
-          Write-Host "Waiting for signing job $SIGNING_JOB_ID to complete..."
-          aws signer wait successful-signing-job `
-            --job-id $SIGNING_JOB_ID `
-            --region us-west-2
-          
-          if ($LASTEXITCODE -ne 0) {
-              Write-Error "Signing job failed"
+          # Sign each file
+          for file in \
+            "templative-${VERSION} Setup.exe:templative-${VERSION} Setup.exe:Setup.exe" \
+            "templative-${VERSION}-full.nupkg:templative-${VERSION}-full.nupkg:nupkg"; do
+            IFS=':' read -r source_key dest_key file_name <<< "$file"
+            if ! sign_file "$source_key" "$dest_key" "$file_name"; then
+              echo "Failed to sign $file_name"
               exit 1
-          }
+            fi
+          done
           
-          # Copy other required files to signed location
-          Write-Host "Copying RELEASES file..."
-          aws s3 cp s3://templative-artifacts/win32/unsigned/x64/RELEASES s3://templative-artifacts/win32/x64/RELEASES
-          if ($LASTEXITCODE -ne 0) {
-              Write-Error "Failed to copy RELEASES file"
+          # Copy RELEASES file separately (no signing needed)
+          aws s3 cp \
+            "s3://templative-artifacts/win32/unsigned/x64/RELEASES" \
+            "s3://templative-artifacts/win32/x64/RELEASES" || {
+              echo "Failed to copy RELEASES file"
               exit 1
-          }
-          
-          Write-Host "Copying nupkg file..."
-          aws s3 cp "s3://templative-artifacts/win32/unsigned/x64/templative-$env:VERSION-full.nupkg" "s3://templative-artifacts/win32/x64/"
-          if ($LASTEXITCODE -ne 0) {
-              Write-Error "Failed to copy nupkg file"
-              exit 1
-          }
+            }
 
   templative-osx:
     needs: check-version
