@@ -219,60 +219,54 @@ jobs:
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
       
-      - name: Move Windows Squirrel Files into directory 
-        shell: bash
+      - name: Prepare and Zip Windows Files
+        shell: pwsh
         run: |
-          ls
-          mkdir ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
-          mv ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}-full.nupkg ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}-full.nupkg
-          mv ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe
-          mv ./out/make/squirrel.windows/x64/RELEASES ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/RELEASES
-          cd ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
-          ls
-          cd ..
+          $version = "${{steps.package-version.outputs.current-version}}"
+          $dirName = "Templative-win32-x64-$version"
+          
+          # Create directory and copy files
+          New-Item -ItemType Directory -Path $dirName
+          Copy-Item "./out/make/squirrel.windows/x64/templative-$version-full.nupkg" -Destination "$dirName/"
+          Copy-Item "./out/make/squirrel.windows/x64/templative-$version Setup.exe" -Destination "$dirName/"
+          Copy-Item "./out/make/squirrel.windows/x64/RELEASES" -Destination "$dirName/"
+          
+          # Create zip archive
+          Compress-Archive -Path "$dirName/*" -DestinationPath "$dirName.zip"
 
       - name: Upload Unsigned Windows Files to S3
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip s3://templative-artifacts/win32/unsigned/x64/Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip --region us-west-2
+          aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip s3://templative-artifacts/win32/unsigned/x64/ --region us-west-2
+          aws s3 cp ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}-full.nupkg s3://templative-artifacts/win32/unsigned/x64/ --region us-west-2
+          aws s3 cp "./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}} Setup.exe" s3://templative-artifacts/win32/unsigned/x64/ --region us-west-2
+          aws s3 cp ./out/make/squirrel.windows/x64/RELEASES s3://templative-artifacts/win32/unsigned/x64/ --region us-west-2
 
-      - name: Sign Windows Setup.exe with AWS Signer
+      - name: Sign Windows Files with AWS Signer
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           VERSION: ${{steps.package-version.outputs.current-version}}
         run: |
-          # Start signing job for Setup.exe
+          # Sign Setup.exe
           SIGNING_JOB_ID=$(aws signer start-signing-job \
-            --source "s3={bucket=templative-artifacts,key=win32/unsigned/x64/Templative-${VERSION} Setup.exe}" \
-            --destination "s3={bucket=templative-artifacts,key=win32/x64/Templative-${VERSION} Setup.exe}" \
+            --source "s3={bucket=templative-artifacts,key=win32/unsigned/x64/templative-${VERSION} Setup.exe}" \
+            --destination "s3={bucket=templative-artifacts,key=win32/x64/templative-${VERSION} Setup.exe}" \
             --profile-name "Templative" \
             --region us-west-2 \
             --output text --query 'jobId')
 
-          # Wait for signing job to complete
           aws signer wait successful-signing-job --job-id $SIGNING_JOB_ID --region us-west-2
 
-      - name: Copy RELEASES file to signed location
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: |
+          # Copy other required files to signed location
           aws s3 cp s3://templative-artifacts/win32/unsigned/x64/RELEASES s3://templative-artifacts/win32/x64/RELEASES
-
-      - name: Copy full nupkg to signed location
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          VERSION: ${{steps.package-version.outputs.current-version}}
-        run: |
           aws s3 cp s3://templative-artifacts/win32/unsigned/x64/templative-${VERSION}-full.nupkg s3://templative-artifacts/win32/x64/
 
   templative-osx:
     needs: check-version
-    if: needs.check-version.outputs.should_build == 'true'
+    if: false #needs.check-version.outputs.should_build == 'true'
     timeout-minutes: 20
     runs-on: ${{ matrix.os }}
     strategy:
