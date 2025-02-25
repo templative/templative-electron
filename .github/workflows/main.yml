@@ -245,24 +245,25 @@ jobs:
           aws s3 cp ./out/make/squirrel.windows/x64/RELEASES s3://templative-artifacts/win32/unsigned/x64/ --region us-west-2
 
       - name: Sign Windows Files with AWS Signer
+        shell: pwsh
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           VERSION: ${{steps.package-version.outputs.current-version}}
         run: |
           # Sign Setup.exe
-          SIGNING_JOB_ID=$(aws signer start-signing-job \
-            --source "s3={bucket=templative-artifacts,key=win32/unsigned/x64/templative-${VERSION} Setup.exe}" \
-            --destination "s3={bucket=templative-artifacts,key=win32/x64/templative-${VERSION} Setup.exe}" \
-            --profile-name "Templative" \
-            --region us-west-2 \
+          $SIGNING_JOB_ID = (aws signer start-signing-job `
+            --source "s3={bucket=templative-artifacts,key=win32/unsigned/x64/templative-${env:VERSION} Setup.exe}" `
+            --destination "s3={bucket=templative-artifacts,key=win32/x64/templative-${env:VERSION} Setup.exe}" `
+            --profile-name "Templative" `
+            --region us-west-2 `
             --output text --query 'jobId')
 
           aws signer wait successful-signing-job --job-id $SIGNING_JOB_ID --region us-west-2
 
           # Copy other required files to signed location
           aws s3 cp s3://templative-artifacts/win32/unsigned/x64/RELEASES s3://templative-artifacts/win32/x64/RELEASES
-          aws s3 cp s3://templative-artifacts/win32/unsigned/x64/templative-${VERSION}-full.nupkg s3://templative-artifacts/win32/x64/
+          aws s3 cp s3://templative-artifacts/win32/unsigned/x64/templative-${env:VERSION}-full.nupkg s3://templative-artifacts/win32/x64/
 
   templative-osx:
     needs: check-version
