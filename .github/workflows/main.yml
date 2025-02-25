@@ -251,19 +251,48 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           VERSION: ${{steps.package-version.outputs.current-version}}
         run: |
+          # Enable error handling
+          $ErrorActionPreference = "Stop"
+          
           # Sign Setup.exe
+          Write-Host "Starting signing job for Setup.exe..."
           $SIGNING_JOB_ID = (aws signer start-signing-job `
-            --source "s3={bucket=templative-artifacts,key=win32/unsigned/x64/templative-${env:VERSION} Setup.exe}" `
-            --destination "s3={bucket=templative-artifacts,key=win32/x64/templative-${env:VERSION} Setup.exe}" `
+            --source 's3://templative-artifacts/win32/unsigned/x64/templative-${env:VERSION} Setup.exe' `
+            --destination 's3://templative-artifacts/win32/x64/templative-${env:VERSION} Setup.exe' `
             --profile-name "Templative" `
             --region us-west-2 `
-            --output text --query 'jobId')
-
-          aws signer wait successful-signing-job --job-id $SIGNING_JOB_ID --region us-west-2
-
+            --output text `
+            --query 'jobId')
+          
+          if (-not $SIGNING_JOB_ID) {
+              Write-Error "Failed to get signing job ID"
+              exit 1
+          }
+          
+          Write-Host "Waiting for signing job $SIGNING_JOB_ID to complete..."
+          aws signer wait successful-signing-job `
+            --job-id $SIGNING_JOB_ID `
+            --region us-west-2
+          
+          if ($LASTEXITCODE -ne 0) {
+              Write-Error "Signing job failed"
+              exit 1
+          }
+          
           # Copy other required files to signed location
+          Write-Host "Copying RELEASES file..."
           aws s3 cp s3://templative-artifacts/win32/unsigned/x64/RELEASES s3://templative-artifacts/win32/x64/RELEASES
+          if ($LASTEXITCODE -ne 0) {
+              Write-Error "Failed to copy RELEASES file"
+              exit 1
+          }
+          
+          Write-Host "Copying nupkg file..."
           aws s3 cp s3://templative-artifacts/win32/unsigned/x64/templative-${env:VERSION}-full.nupkg s3://templative-artifacts/win32/x64/
+          if ($LASTEXITCODE -ne 0) {
+              Write-Error "Failed to copy nupkg file"
+              exit 1
+          }
 
   templative-osx:
     needs: check-version
