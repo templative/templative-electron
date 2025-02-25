@@ -99,50 +99,50 @@ jobs:
       #       exit 1
       #     }
 
-      - uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python }}
+      # - uses: actions/setup-python@v2
+      #   with:
+      #     python-version: ${{ matrix.python }}
 
-      - name: Install Project Python Dependencies
-        run: |
-          cd ./python
-          pip install pipenv
-          pipenv install
-          pipenv install pyinstaller
+      # - name: Install Project Python Dependencies
+      #   run: |
+      #     cd ./python
+      #     pip install pipenv
+      #     pipenv install
+      #     pipenv install pyinstaller
 
-      - name: Show Python Packages
-        run: |
-          cd ./python
-          pipenv run pip list
-          pip list
+      # - name: Show Python Packages
+      #   run: |
+      #     cd ./python
+      #     pipenv run pip list
+      #     pip list
           
-      - name: Create Templative Exe
-        run: |
-          cd ./python
-          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" 
-      # --additional-hooks-dir=./python/pyinstallerHooks
-      # --add-binary="D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll:."
+      # - name: Create Templative Exe
+      #   run: |
+      #     cd ./python
+      #     pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" 
+      # # --additional-hooks-dir=./python/pyinstallerHooks
+      # # --add-binary="D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll:."
             
-      - name: Upload Templative Xref as Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: xref-windows
-          path: ./python/build/templative/xref-templative.html
+      # - name: Upload Templative Xref as Artifact
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: xref-windows
+      #     path: ./python/build/templative/xref-templative.html
 
-      - name: Upload Templative as Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: templative-exe
-          path: ./bin
+      # - name: Upload Templative as Artifact
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: templative-exe
+      #     path: ./bin
 
-      - name: Test Templative Exe
-        shell: bash
-        run: |
-          ./bin/templative/templative.exe
-          if [ $? -ne 0 ]; then
-            echo "The application exited with an error"
-            exit 1
-          fi
+      # - name: Test Templative Exe
+      #   shell: bash
+      #   run: |
+      #     ./bin/templative/templative.exe
+      #     if [ $? -ne 0 ]; then
+      #       echo "The application exited with an error"
+      #       exit 1
+      #     fi
 
       - name: Configure AWS credentials
         env:
@@ -219,6 +219,11 @@ jobs:
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
       
+      - name: Install zip
+        shell: bash
+        run: |
+          choco install zip -y
+
       - name: Prepare and Zip Windows Files
         shell: bash
         run: |
