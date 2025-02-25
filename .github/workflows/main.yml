@@ -99,50 +99,50 @@ jobs:
       #       exit 1
       #     }
 
-      # - uses: actions/setup-python@v2
-      #   with:
-      #     python-version: ${{ matrix.python }}
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python }}
 
-      # - name: Install Project Python Dependencies
-      #   run: |
-      #     cd ./python
-      #     pip install pipenv
-      #     pipenv install
-      #     pipenv install pyinstaller
+      - name: Install Project Python Dependencies
+        run: |
+          cd ./python
+          pip install pipenv
+          pipenv install
+          pipenv install pyinstaller
 
-      # - name: Show Python Packages
-      #   run: |
-      #     cd ./python
-      #     pipenv run pip list
-      #     pip list
+      - name: Show Python Packages
+        run: |
+          cd ./python
+          pipenv run pip list
+          pip list
           
-      # - name: Create Templative Exe
-      #   run: |
-      #     cd ./python
-      #     pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" 
-      # # --additional-hooks-dir=./python/pyinstallerHooks
-      # # --add-binary="D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll:."
+      - name: Create Templative Exe
+        run: |
+          cd ./python
+          pipenv run pyinstaller --distpath ../bin -y -n templative --log-level=DEBUG ./templative/__main__.py --hidden-import=asyncclick --hidden-import=engineio.async_drivers.aiohttp --hidden-import=engineio.async_aiohttp --collect-all templative --add-data="./templative/lib/create/componentTemplates:templative/lib/create/componentTemplates" 
+      # --additional-hooks-dir=./python/pyinstallerHooks
+      # --add-binary="D:\\a\\templative-electron\\templative-electron\\vcpkg\\installed\\x64-windows\\bin\\cairo-2.dll:."
             
-      # - name: Upload Templative Xref as Artifact
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: xref-windows
-      #     path: ./python/build/templative/xref-templative.html
+      - name: Upload Templative Xref as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: xref-windows
+          path: ./python/build/templative/xref-templative.html
 
-      # - name: Upload Templative as Artifact
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: templative-exe
-      #     path: ./bin
+      - name: Upload Templative as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: templative-exe
+          path: ./bin
 
-      # - name: Test Templative Exe
-      #   shell: bash
-      #   run: |
-      #     ./bin/templative/templative.exe
-      #     if [ $? -ne 0 ]; then
-      #       echo "The application exited with an error"
-      #       exit 1
-      #     fi
+      - name: Test Templative Exe
+        shell: bash
+        run: |
+          ./bin/templative/templative.exe
+          if [ $? -ne 0 ]; then
+            echo "The application exited with an error"
+            exit 1
+          fi
 
       - name: Configure AWS credentials
         env:
@@ -219,137 +219,40 @@ jobs:
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
       
-      - name: Install zip
+      - name: Move Windows Squirrel Files into directory 
         shell: bash
         run: |
-          choco install zip -y
+          ls
+          mkdir ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
+          mv ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}-full.nupkg ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}-full.nupkg
+          mv ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe
+          mv ./out/make/squirrel.windows/x64/RELEASES ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/RELEASES
+          cd ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
+          ls
+          cd ..
 
-      - name: Prepare and Zip Windows Files
-        shell: bash
-        run: |
-          version="${{steps.package-version.outputs.current-version}}"
-          dirName="templative-win32-x64-$version"
-          
-          # Create directory and copy files
-          mkdir -p "$dirName"
-          # Ensure lowercase naming convention for all files
-          cp "./out/make/squirrel.windows/x64/Templative-$version-full.nupkg" "$dirName/templative-$version-full.nupkg"
-          cp "./out/make/squirrel.windows/x64/Templative-$version Setup.exe" "$dirName/templative-$version Setup.exe"
-          cp "./out/make/squirrel.windows/x64/RELEASES" "$dirName/"
-          
-          # Create zip archive
-          zip -r "$dirName.zip" "$dirName"
-
-      - name: Upload Unsigned Windows Files to S3
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: |
-          # Ensure all uploads use lowercase naming
-          aws s3 cp "$dirName.zip" s3://templative-artifacts/win32/unsigned/x64/ --region us-west-2
-          aws s3 cp "$dirName/templative-${{steps.package-version.outputs.current-version}}-full.nupkg" s3://templative-artifacts/win32/unsigned/x64/ --region us-west-2
-          aws s3 cp "$dirName/templative-${{steps.package-version.outputs.current-version}} Setup.exe" s3://templative-artifacts/win32/unsigned/x64/ --region us-west-2
-          aws s3 cp "$dirName/RELEASES" s3://templative-artifacts/win32/unsigned/x64/ --region us-west-2
-
-      - name: Sign Windows Files with AWS Signer
+      - name: Upload Releases
         shell: bash
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          VERSION: ${{steps.package-version.outputs.current-version}}
-        run: |
-          # Enable error handling and debugging
-          set -e
-          set -x
-          
-          # Function to sign and verify file
-          sign_file() {
-            local source_key=$1
-            local dest_key=$2
-            local file_name=$3
-            
-            echo "Starting signing job for $file_name..."
-            
-            # Verify source file exists in S3 before signing
-            if ! aws s3 ls "s3://templative-artifacts/win32/unsigned/x64/$source_key" > /dev/null 2>&1; then
-              echo "Error: Source file $source_key not found in S3"
-              return 1
-            fi
-            
-            # Start signing job with correct parameter format
-            local SIGNING_JOB
-            SIGNING_JOB=$(aws signer start-signing-job \
-              --source "s3={bucketName=templative-artifacts,key=win32/unsigned/x64/$source_key,version=null}" \
-              --destination "s3={bucketName=templative-artifacts,prefix=win32/x64/$dest_key}" \
-              --profile-name "Templative" \
-              --region us-west-2)
-            
-            if [ $? -ne 0 ]; then
-              echo "Error starting signing job for $file_name"
-              return 1
-            fi
-            
-            local SIGNING_JOB_ID
-            SIGNING_JOB_ID=$(echo "$SIGNING_JOB" | jq -r '.jobId')
-            
-            if [ -z "$SIGNING_JOB_ID" ] || [ "$SIGNING_JOB_ID" = "null" ]; then
-              echo "Failed to get signing job ID"
-              return 1
-            fi
-            
-            # Wait for signing job completion
-            local COUNTER=0
-            while [ $COUNTER -lt 30 ]; do
-              local STATUS
-              STATUS=$(aws signer describe-signing-job \
-                --job-id "$SIGNING_JOB_ID" \
-                --region us-west-2 \
-                --query 'status' \
-                --output text)
-              
-              echo "Signing status for $file_name: $STATUS"
-              
-              if [ "$STATUS" = "Succeeded" ]; then
-                if aws s3 ls "s3://templative-artifacts/win32/x64/$dest_key" > /dev/null 2>&1; then
-                  echo "Successfully signed $file_name"
-                  return 0
-                fi
-              elif [ "$STATUS" = "Failed" ]; then
-                echo "Signing job failed for $file_name"
-                aws signer describe-signing-job --job-id "$SIGNING_JOB_ID" --region us-west-2
-                return 1
-              fi
-              
-              COUNTER=$((COUNTER + 1))
-              sleep 10
-            done
-            
-            echo "Timeout waiting for signing job to complete for $file_name"
-            return 1
-          }
-          
-          # Sign each file
-          for file in \
-            "templative-${VERSION} Setup.exe:templative-${VERSION} Setup.exe:Setup.exe" \
-            "templative-${VERSION}-full.nupkg:templative-${VERSION}-full.nupkg:nupkg"; do
-            IFS=':' read -r source_key dest_key file_name <<< "$file"
-            if ! sign_file "$source_key" "$dest_key" "$file_name"; then
-              echo "Failed to sign $file_name"
-              exit 1
-            fi
-          done
-          
-          # Copy RELEASES file separately (no signing needed)
-          aws s3 cp \
-            "s3://templative-artifacts/win32/unsigned/x64/RELEASES" \
-            "s3://templative-artifacts/win32/x64/RELEASES" || {
-              echo "Failed to copy RELEASES file"
-              exit 1
-            }
+        run: aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/RELEASES s3://templative-artifacts/win32/unsigned/x64/RELEASES --region us-west-2
 
+      - name: Zip Windows Squirrel Files 
+        run: |
+          Compress-Archive -Path ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/* ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip 
+          dir
+
+      - name: Deploy Windows to S3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip s3://templative-artifacts/win32/unsigned/x64/Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip --region us-west-2
+          
   templative-osx:
     needs: check-version
-    if: false #needs.check-version.outputs.should_build == 'true'
+    if: needs.check-version.outputs.should_build == 'true'
     timeout-minutes: 20
     runs-on: ${{ matrix.os }}
     strategy:
