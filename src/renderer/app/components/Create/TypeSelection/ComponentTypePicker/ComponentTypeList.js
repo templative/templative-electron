@@ -1,68 +1,90 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {componentTypeHasAllFilteredTags, matchesSearch} from "../../TagFilter"
 import ComponentTypeFolder from "./ComponentTypeFolder";
 import ComponentType from "./ComponentType";
+import StockComponentType from "./StockComponentType";
 import noFileIcon from "../../../Edit/noFileIcon.svg";
 
-export default class ComponentTypeList extends React.Component {   
-    
-    render() {
-        var componentDivs = Object.keys(this.props.componentTypeOptions)
+const ComponentTypeList = ({ 
+    componentTypeOptions,
+    selectedTags,
+    majorCategories,
+    search,
+    selectTypeCallback,
+    selectedComponentType,
+    isStock
+}) => {   
+    const { componentDivs, categoryToFilteredTypes } = useMemo(() => {
+        const filteredDivs = Object.keys(componentTypeOptions)
             .filter((key) => {
-                return componentTypeHasAllFilteredTags(this.props.selectedTags, this.props.componentTypeOptions[key]["Tags"], this.props.majorCategories)
+                return componentTypeHasAllFilteredTags(selectedTags, componentTypeOptions[key]["Tags"], majorCategories)
             })
             .filter((key) => {
-                return matchesSearch(this.props.search, key)
+                return matchesSearch(search, key)
             })
             .sort()
             .map((key) => {
-                var existingQuantity = 0
-                return <ComponentType key={`${key}${this.props.search}`} 
-                    name={key} componentInfo={this.props.componentTypeOptions[key]}
-                    selectTypeCallback={this.props.selectTypeCallback}
-                    selectedComponentType={this.props.selectedComponentType} 
+                const existingQuantity = 0;
+                // Choose between StockComponentType or ComponentType based on isStock
+                const ComponentToRender = isStock ? StockComponentType : ComponentType;
+                
+                return <ComponentToRender 
+                    key={`${key}${search}`} 
+                    name={key} 
+                    componentInfo={componentTypeOptions[key]}
+                    selectTypeCallback={selectTypeCallback}
+                    selectedComponentType={selectedComponentType} 
                     existingQuantity={existingQuantity}
-                    search={this.props.search}    
+                    search={search}    
                 />
-            })
-        
-        var categoryToFilteredTypes = {}
-        this.props.majorCategories.forEach(category => {
-            var filteredComponentTypes = Object.keys(this.props.componentTypeOptions)
-                .filter((key) => {                
-                    var isMatchingTags = componentTypeHasAllFilteredTags(this.props.selectedTags, this.props.componentTypeOptions[key]["Tags"])
-                    var isMatchingCategory = componentTypeHasAllFilteredTags([category], this.props.componentTypeOptions[key]["Tags"])
-                    var isMatchingSearch = matchesSearch(this.props.search, key)
-                    return isMatchingTags && isMatchingCategory && isMatchingSearch
-                })
-                .sort()
-            if (filteredComponentTypes.length > 0) {
-                categoryToFilteredTypes[category] = filteredComponentTypes
-            }
-        })
+            });
 
-        var folders = Object.entries(categoryToFilteredTypes).map(([category, filteredComponentTypes]) => {
+        const categoryTypes = {};
+        majorCategories.forEach(category => {
+            const filteredComponentTypes = Object.keys(componentTypeOptions)
+                .filter((key) => {                
+                    const isMatchingTags = componentTypeHasAllFilteredTags(selectedTags, componentTypeOptions[key]["Tags"]);
+                    const isMatchingCategory = componentTypeHasAllFilteredTags([category], componentTypeOptions[key]["Tags"]);
+                    const isMatchingSearch = matchesSearch(search, key);
+                    return isMatchingTags && isMatchingCategory && isMatchingSearch;
+                })
+                .sort();
+            if (filteredComponentTypes.length > 0) {
+                categoryTypes[category] = filteredComponentTypes;
+            }
+        });
+
+        return {
+            componentDivs: filteredDivs,
+            categoryToFilteredTypes: categoryTypes
+        };
+    }, [componentTypeOptions, selectedTags, majorCategories, search, selectTypeCallback, selectedComponentType]);
+
+    const folders = useMemo(() => {
+        return Object.entries(categoryToFilteredTypes).map(([category, filteredComponentTypes]) => {
             return <ComponentTypeFolder 
                 key={category} 
-                search={this.props.search} 
-                selectTypeCallback={this.props.selectTypeCallback} 
+                search={search} 
+                selectTypeCallback={selectTypeCallback} 
                 category={category} 
-                selectedTags={this.props.selectedTags} 
-                componentTypeOptions={this.props.componentTypeOptions} 
-                selectedComponentType={this.props.selectedComponentType} 
+                selectedTags={selectedTags} 
+                componentTypeOptions={componentTypeOptions} 
+                selectedComponentType={selectedComponentType} 
                 filteredComponentTypes={filteredComponentTypes}
+                isStock={isStock}
             />
-        })
-        var isSearchTooNarrow = 
-            folders.length === 0 && 
-            componentDivs.length === 0 && 
-            Object.keys(this.props.componentTypeOptions).length > 0 && 
-            this.props.search.trim() !== ""
+        });
+    }, [categoryToFilteredTypes, search, selectTypeCallback, selectedTags, componentTypeOptions, selectedComponentType, isStock]);
 
-        return <div className="component-type-list">
-            {
-                isSearchTooNarrow && <p className="no-results-message">Your search returned no results.</p>
-            }
+    const isSearchTooNarrow = 
+        folders.length === 0 && 
+        componentDivs.length === 0 && 
+        Object.keys(componentTypeOptions).length > 0 && 
+        search.trim() !== "";
+
+    return (
+        <div className="component-type-list">
+            {isSearchTooNarrow && <p className="no-results-message">Your search returned no results.</p>}
             {folders}
             {/* {folders.length !== 0 && <p>Other {folders.length}</p>}  */}
             {componentDivs}
@@ -72,5 +94,7 @@ export default class ComponentTypeList extends React.Component {
                 </div>
             }
         </div>
-    }
-}
+    );
+};
+
+export default React.memo(ComponentTypeList);

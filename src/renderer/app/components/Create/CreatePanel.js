@@ -3,14 +3,14 @@ import "./CreatePanel.css"
 import "./TypeSelection/ComponentType.css"
 import "./TypeSelection/ComponentTypeTags.css"
 
-import ComponentTypeTagPicker from "./TypeSelection/ComponentTypeTagPicker";
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import ComponentTypeList from "./TypeSelection/ComponentTypePicker/ComponentTypeList";
 import { trackEvent } from "@aptabase/electron/renderer";
-import DocumentationButton from "../Documentation/DocumentationButton";
 import { RenderingWorkspaceContext } from '../Render/RenderingWorkspaceProvider';
+
 var axios = require('axios');
 var path = require('path');
+
 const addSpaces = (str) => {
     return str
         // First specifically handle D4, D6, D8, D10, D12, D20
@@ -183,7 +183,9 @@ export default class CreatePanel extends React.Component {
                         selectTypeCallback={this.context.selectComponent}
                         search={this.context.componentTypeSearch}
                         selectedComponentType={this.context.selectedComponentType}  
-                        componentTypeOptions={componentTypeOptions}/>
+                        componentTypeOptions={componentTypeOptions}
+                        isStock={!this.context.isToggledToComponents}
+                    />
                 </div>
             </div>     
         </div>

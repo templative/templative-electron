@@ -1,6 +1,7 @@
 import React from "react";
 import {componentTypeHasAllFilteredTags, matchesSearch} from "../../TagFilter"
 import ComponentType from "./ComponentType";
+import StockComponentType from "./StockComponentType";
 
 export default class ComponentTypeFolder extends React.Component { 
     state = {
@@ -10,7 +11,8 @@ export default class ComponentTypeFolder extends React.Component {
     toggleExtended = () => {
         this.setState({isExtended: !this.state.isExtended})
     }
-    render = () => {            
+    render = () => {       
+        const ComponentToRender = this.props.isStock ? StockComponentType : ComponentType;
         var folder = <div className="component-type-folder">
             <div className="component-type-header" onClick={this.toggleExtended}>
                 <p className="rendered-component-title">{this.props.category.charAt(0).toUpperCase() + this.props.category.slice(1)}</p>
@@ -30,7 +32,7 @@ export default class ComponentTypeFolder extends React.Component {
                 <div className="component-output-content">
                     {
                         this.props.filteredComponentTypes.map(key =>
-                            <ComponentType key={key} 
+                            <ComponentToRender key={key} 
                                 name={key} componentInfo={this.props.componentTypeOptions[key]}
                                 selectTypeCallback={this.props.selectTypeCallback}
                                 selectedComponentType={this.props.selectedComponentType} 
