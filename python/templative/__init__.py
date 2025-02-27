@@ -21,6 +21,9 @@ cli.add_command(gameCrafterCommands.list)
 cli.add_command(gameCrafterCommands.deletegames)
 cli.add_command(gameCrafterCommands.stocklist)
 cli.add_command(gameCrafterCommands.customlist)
+cli.add_command(gameCrafterCommands.downloadimages)
+cli.add_command(gameCrafterCommands.generate3dmodels)
+cli.add_command(gameCrafterCommands.uploads3models)
 
 cli.add_command(animationCommands.animation)
 

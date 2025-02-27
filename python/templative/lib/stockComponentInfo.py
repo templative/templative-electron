@@ -20,7 +20,13 @@ STOCK_COMPONENT_INFO = {
       "incendiary",
       "arson",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/472E7CF6-7E36-11E8-987B-12E7CD1076AC.png",
+    "3DModel": {
+      "ObjUrl": "https://templative-simulator-images.s3.amazonaws.com/game_components_3d/Flame/Flame.obj",
+      "TextureUrl": "https://templative-simulator-images.s3.amazonaws.com/game_components_3d/Flame/Flame_texture.png",
+      "NormalMapUrl": "https://templative-simulator-images.s3.amazonaws.com/game_components_3d/Flame/Flame_normal.png"
+    }
   },
   "CardStandWhite": {
     "GameCrafterGuid": "E1128AF6-9A04-11E0-AACC-432941C43697",
@@ -42,7 +48,8 @@ STOCK_COMPONENT_INFO = {
       "arrangement",
       "layout",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9570B602-04B4-11E1-BB1C-8F4F9966D12C.png"
   },
   "JewelClear": {
     "GameCrafterGuid": "98800188-FC4C-11E5-99B4-4D46B620570A",
@@ -104,7 +111,8 @@ STOCK_COMPONENT_INFO = {
       "refractive",
       "cymophane",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1EF15C60-B070-11E8-BB17-4AAACE95AB04.png"
   },
   "JewelYellow": {
     "GameCrafterGuid": "25B234DC-FC4C-11E5-ACDB-EEBE1CA95DD6",
@@ -166,7 +174,8 @@ STOCK_COMPONENT_INFO = {
       "refractive",
       "cymophane",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DA404810-0031-11E6-BEB8-4850B620570A.png"
   },
   "JewelGreen": {
     "GameCrafterGuid": "CE78A99E-FC4B-11E5-A27F-4D46B620570A",
@@ -228,7 +237,8 @@ STOCK_COMPONENT_INFO = {
       "refractive",
       "cymophane",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D8733E98-0031-11E6-90E3-8EC71CA95DD6.png"
   },
   "Cube8mmGreen": {
     "GameCrafterGuid": "5E179AEA-8335-11E1-B714-C692DC194F78",
@@ -258,8 +268,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0519CE6C-FC09-11E0-AB22-F2379966D12C.png"
   },
   "Cube8mmOrange": {
     "GameCrafterGuid": "B97995AA-8335-11E1-A7B5-C692DC194F78",
@@ -289,8 +324,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B67491CE-FC09-11E0-89AE-F2379966D12C.png"
   },
   "Cube8mmBlack": {
     "GameCrafterGuid": "7EB543EC-4D3E-11E1-A14C-40B1921A1C03",
@@ -320,8 +380,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B4BE3A9C-FBF5-11E0-89AE-F2379966D12C.png"
   },
   "Cube8mmBlue": {
     "GameCrafterGuid": "F40968BC-8335-11E1-A7B5-C692DC194F78",
@@ -351,8 +436,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/083D515E-18DB-11ED-8543-C5E15A49D14C.png"
   },
   "Cube8mmWhite": {
     "GameCrafterGuid": "B7F3D54C-4D3E-11E1-A14C-40B1921A1C03",
@@ -382,8 +492,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DCA14308-A662-11E0-896A-3A7437D397EC.png"
   },
   "Cube8mmRed": {
     "GameCrafterGuid": "A664456E-8335-11E1-9143-C692DC194F78",
@@ -413,8 +548,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DCAD8612-FC0D-11E0-AE14-F2379966D12C.png"
   },
   "Cube8mmPurple": {
     "GameCrafterGuid": "4045BFC4-4D3E-11E1-A14C-40B1921A1C03",
@@ -444,8 +604,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/314C6C52-FC0D-11E0-89AE-F2379966D12C.png"
   },
   "VictorianMiniatureYellow": {
     "GameCrafterGuid": "75DF064C-2EC7-11ED-9CBC-E8F95EE382A3",
@@ -484,7 +669,8 @@ STOCK_COMPONENT_INFO = {
       "residency",
       "suite",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/65797EF4-2F8F-11ED-88E4-930E5FE382A3.png"
   },
   "D68mmWhite": {
     "GameCrafterGuid": "251A0858-59C0-11EA-A896-F5FE59BF7666",
@@ -574,7 +760,8 @@ STOCK_COMPONENT_INFO = {
       "farkle",
       "miniature",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/637F5604-D826-11EA-8C64-39DB521ADEB3.png"
   },
   "D616mmYellow": {
     "GameCrafterGuid": "E4F90956-9A04-11E0-AACC-432941C43697",
@@ -663,7 +850,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E56917F0-A661-11E0-896A-3A7437D397EC.png"
   },
   "D616mmBlue": {
     "GameCrafterGuid": "E4D68318-9A04-11E0-AACC-432941C43697",
@@ -752,7 +940,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FD5E55AA-A661-11E0-896A-3A7437D397EC.png"
   },
   "D612mmClear": {
     "GameCrafterGuid": "6099FFB0-215A-11EC-B773-76004B5CF84F",
@@ -843,7 +1032,8 @@ STOCK_COMPONENT_INFO = {
       "casino",
       "transparent",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7B9D5730-35D7-11EC-B888-00D258594BAF.png"
   },
   "D12White": {
     "GameCrafterGuid": "08162C04-09D7-11E3-B696-40087740BD4B",
@@ -961,7 +1151,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "dodecahedron",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C3EA7532-0AB5-11E3-8574-34787740BD4B.png"
   },
   "D20Black": {
     "GameCrafterGuid": "E52E1696-9A04-11E0-AACC-432941C43697",
@@ -1134,7 +1325,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D22C630E-A661-11E0-896A-3A7437D397EC.png"
   },
   "D20Yellow": {
     "GameCrafterGuid": "5F1BF8EA-09D6-11E3-A83D-40087740BD4B",
@@ -1307,7 +1499,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1CD08622-09F4-11E3-A0D8-41087740BD4B.png"
   },
   "D20White": {
     "GameCrafterGuid": "49849758-09D6-11E3-AE02-40087740BD4B",
@@ -1480,7 +1673,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1C0457DC-09F4-11E3-9CB2-41087740BD4B.png"
   },
   "HouseWoodBlack": {
     "GameCrafterGuid": "FD85F422-2EA2-11E8-B873-9D2AC78910BA",
@@ -1516,7 +1710,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BC7B5EC0-433F-11E8-B170-88301A475659.png"
   },
   "HouseWoodBlue": {
     "GameCrafterGuid": "EA86962C-221F-11E8-A201-E5F993A6FE1D",
@@ -1552,7 +1747,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FCA87948-48CA-11E8-8F71-FD8607951268.png"
   },
   "HouseWoodGreen": {
     "GameCrafterGuid": "CFE86DC2-4EFC-11E8-80AE-900DCB137816",
@@ -1588,7 +1784,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/95D37046-593D-11E8-BB2B-8C4094A6FE1D.png"
   },
   "HouseWoodOrange": {
     "GameCrafterGuid": "FDEDF34A-4A24-11E8-8009-E69A584C442A",
@@ -1624,7 +1821,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/15432C4A-4F4D-11E8-8111-D1AA41F2F0D7.png"
   },
   "HouseWoodWhite": {
     "GameCrafterGuid": "C8616066-48B9-11E8-BA56-8DBB1EA37D3B",
@@ -1660,7 +1858,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/55CD45FC-4F4D-11E8-80AE-E1FACA137816.png"
   },
   "HouseWoodRed": {
     "GameCrafterGuid": "B6949542-48B9-11E8-BA56-3DBB1EA37D3B",
@@ -1696,7 +1895,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CE729044-4F4C-11E8-8111-85FB8B203E5D.png"
   },
   "HouseWoodPurple": {
     "GameCrafterGuid": "E36B2C18-4EFC-11E8-8111-F6A03D012D85",
@@ -1732,7 +1932,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/72327AA6-593D-11E8-800E-4B2694A6FE1D.png"
   },
   "11X11Baggies": {
     "DisplayName": "11 X 11 Baggies",
@@ -1748,7 +1949,8 @@ STOCK_COMPONENT_INFO = {
       "plastic",
       "container",
       "tiptop"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9AA02B16-C43E-11ED-8361-9686DB6D3EB3.png"
   },
   "1st": {
     "DisplayName": "1st",
@@ -1760,8 +1962,12 @@ STOCK_COMPONENT_INFO = {
       "lettering",
       "type",
       "player token",
+      "first player",
+      "first player marker",
+      "first player token",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/67F0DE98-61E0-11EC-BA8E-D08503B57022.png"
   },
   "3X4Baggies": {
     "DisplayName": "3 X 4 Baggies",
@@ -1779,7 +1985,8 @@ STOCK_COMPONENT_INFO = {
       "ziptop",
       "resealable",
       "reusable"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1479D068-C43F-11ED-8361-A78BDB6D3EB3.png"
   },
   "4X10Baggies": {
     "DisplayName": "4 X 10 Baggies",
@@ -1797,7 +2004,8 @@ STOCK_COMPONENT_INFO = {
       "ziptop",
       "resealable",
       "reusable"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0C7B124A-C4D6-11ED-A4D8-AE945FA0F72B.png"
   },
   "4X5Baggies": {
     "DisplayName": "4 X 5 Baggies",
@@ -1815,7 +2023,8 @@ STOCK_COMPONENT_INFO = {
       "ziptop",
       "resealable",
       "reusable"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EB1FB2FA-C43E-11ED-85BE-09BA5FA0F72B.png"
   },
   "4X6Baggies": {
     "DisplayName": "4 X 6 Baggies",
@@ -1833,7 +2042,8 @@ STOCK_COMPONENT_INFO = {
       "ziptop",
       "resealable",
       "reusable"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BAB10038-C43E-11ED-8361-EE87DB6D3EB3.png"
   },
   "5X5Baggies": {
     "DisplayName": "5 X 5 Baggies",
@@ -1851,7 +2061,8 @@ STOCK_COMPONENT_INFO = {
       "ziptop",
       "resealable",
       "reusable"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E2B80B62-C43E-11ED-8361-C189DB6D3EB3.png"
   },
   "5X7Baggies": {
     "DisplayName": "5 X 7 Baggies",
@@ -1869,7 +2080,8 @@ STOCK_COMPONENT_INFO = {
       "ziptop",
       "resealable",
       "reusable"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2222AB68-C43F-11ED-85BE-8DBC5FA0F72B.png"
   },
   "6X10Baggies": {
     "DisplayName": "6 X 10 Baggies",
@@ -1887,7 +2099,8 @@ STOCK_COMPONENT_INFO = {
       "ziptop",
       "resealable",
       "reusable"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/03D81DBE-C43F-11ED-8361-118BDB6D3EB3.png"
   },
   "7X12Baggies": {
     "DisplayName": "7 X 12 Baggies",
@@ -1905,7 +2118,8 @@ STOCK_COMPONENT_INFO = {
       "ziptop",
       "resealable",
       "reusable"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F8011176-C43E-11ED-8361-0F8BDB6D3EB3.png"
   },
   "9X12Baggies": {
     "DisplayName": "9 X 12 Baggies",
@@ -1923,7 +2137,8 @@ STOCK_COMPONENT_INFO = {
       "ziptop",
       "resealable",
       "reusable"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3555AB68-C43F-11ED-B904-ABFB00937027.png"
   },
   "AcornBrown": {
     "DisplayName": "Acorn, Brown",
@@ -1954,7 +2169,8 @@ STOCK_COMPONENT_INFO = {
       "chestnuts",
       "waymark",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1B9DAF0C-A24A-11ED-8876-1F792A49FC29.png"
   },
   "AcornYellow": {
     "DisplayName": "Acorn, Yellow",
@@ -1985,7 +2201,8 @@ STOCK_COMPONENT_INFO = {
       "chestnuts",
       "waymark",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0BB773C0-A24A-11ED-8876-6E782A49FC29.png"
   },
   "AcrylicTrainTrackBlack": {
     "DisplayName": "Acrylic Train Track, Black",
@@ -2003,7 +2220,8 @@ STOCK_COMPONENT_INFO = {
       "transport",
       "tramway",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/04754D22-217F-11E8-8A2E-930394A6FE1D.png"
   },
   "AcrylicTrainTrackBlue": {
     "DisplayName": "Acrylic Train Track, Blue",
@@ -2021,7 +2239,8 @@ STOCK_COMPONENT_INFO = {
       "transport",
       "tramway",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9EBA8C96-26DC-11E8-94C8-9D2BEB014BA6.png"
   },
   "AcrylicTrainTrackGreen": {
     "DisplayName": "Acrylic Train Track, Green",
@@ -2039,7 +2258,8 @@ STOCK_COMPONENT_INFO = {
       "transport",
       "tramway",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DA2B7C0E-26DC-11E8-94C8-8D83F6956076.png"
   },
   "AcrylicTrainTrackOrange": {
     "DisplayName": "Acrylic Train Track, Orange",
@@ -2057,7 +2277,8 @@ STOCK_COMPONENT_INFO = {
       "transport",
       "tramway",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D9CAF638-26DA-11E8-8A4F-E686183AAE20.png"
   },
   "AcrylicTrainTrackPurple": {
     "DisplayName": "Acrylic Train Track, Purple",
@@ -2075,7 +2296,8 @@ STOCK_COMPONENT_INFO = {
       "transport",
       "tramway",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/70003392-26DC-11E8-8A4F-D7A2BAF4D5EC.png"
   },
   "AcrylicTrainTrackRed": {
     "DisplayName": "Acrylic Train Track, Red",
@@ -2093,7 +2315,8 @@ STOCK_COMPONENT_INFO = {
       "transport",
       "tramway",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8855AAAE-26DB-11E8-94C8-DCCBDC566D86.png"
   },
   "AcrylicTrainTrackWhite": {
     "DisplayName": "Acrylic Train Track, White",
@@ -2111,7 +2334,8 @@ STOCK_COMPONENT_INFO = {
       "transport",
       "tramway",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0DC46F16-217F-11E8-8B26-2EFA93A6FE1D.png"
   },
   "AcrylicTrainTrackYellow": {
     "DisplayName": "Acrylic Train Track, Yellow",
@@ -2129,7 +2353,8 @@ STOCK_COMPONENT_INFO = {
       "transport",
       "tramway",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5BA6D1F4-26DB-11E8-94C8-9FE3D04E63E6.png"
   },
   "AcrylicTrainBoxCarBlack": {
     "DisplayName": "Acrylic Train, Box Car, Black",
@@ -2154,7 +2379,8 @@ STOCK_COMPONENT_INFO = {
       "container",
       "bulk",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0A6A4C44-20CD-11E8-84FA-82EF93A6FE1D.png"
   },
   "AcrylicTrainBoxCarBlue": {
     "DisplayName": "Acrylic Train, Box Car, Blue",
@@ -2179,7 +2405,8 @@ STOCK_COMPONENT_INFO = {
       "container",
       "bulk",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1E1EE484-20CD-11E8-84FA-9DEF93A6FE1D.png"
   },
   "AcrylicTrainBoxCarGreen": {
     "DisplayName": "Acrylic Train, Box Car, Green",
@@ -2204,7 +2431,8 @@ STOCK_COMPONENT_INFO = {
       "container",
       "bulk",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3DDDCBBE-20CD-11E8-84FA-DBEF93A6FE1D.png"
   },
   "AcrylicTrainBoxCarOrange": {
     "DisplayName": "Acrylic Train, Box Car, Orange",
@@ -2229,7 +2457,8 @@ STOCK_COMPONENT_INFO = {
       "container",
       "bulk",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/48E54B68-20CD-11E8-A86F-8EE793A6FE1D.png"
   },
   "AcrylicTrainBoxCarPurple": {
     "DisplayName": "Acrylic Train, Box Car, Purple",
@@ -2254,7 +2483,8 @@ STOCK_COMPONENT_INFO = {
       "container",
       "bulk",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/536B8B10-20CD-11E8-84FA-E2EF93A6FE1D.png"
   },
   "AcrylicTrainBoxCarRed": {
     "DisplayName": "Acrylic Train, Box Car, Red",
@@ -2279,7 +2509,8 @@ STOCK_COMPONENT_INFO = {
       "container",
       "bulk",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5C8F9754-20CD-11E8-84FA-FFEF93A6FE1D.png"
   },
   "AcrylicTrainBoxCarWhite": {
     "DisplayName": "Acrylic Train, Box Car, White",
@@ -2304,7 +2535,8 @@ STOCK_COMPONENT_INFO = {
       "container",
       "bulk",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/68850454-20CD-11E8-84FA-07F093A6FE1D.png"
   },
   "AcrylicTrainBoxCarYellow": {
     "DisplayName": "Acrylic Train, Box Car, Yellow",
@@ -2329,7 +2561,8 @@ STOCK_COMPONENT_INFO = {
       "container",
       "bulk",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/73FBC1C4-20CD-11E8-A86F-D6E793A6FE1D.png"
   },
   "AcrylicTrainCabooseBlack": {
     "DisplayName": "Acrylic Train, Caboose, Black",
@@ -2361,7 +2594,8 @@ STOCK_COMPONENT_INFO = {
       "cabin car",
       "cabin",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A110F8BE-20CD-11E8-84FA-57F093A6FE1D.png"
   },
   "AcrylicTrainCabooseBlue": {
     "DisplayName": "Acrylic Train, Caboose, Blue",
@@ -2393,7 +2627,8 @@ STOCK_COMPONENT_INFO = {
       "cabin car",
       "cabin",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AA56D0CE-20CD-11E8-84FA-6CF093A6FE1D.png"
   },
   "AcrylicTrainCabooseGreen": {
     "DisplayName": "Acrylic Train, Caboose, Green",
@@ -2425,7 +2660,8 @@ STOCK_COMPONENT_INFO = {
       "cabin car",
       "cabin",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B5699EC4-20CD-11E8-A86F-4AE893A6FE1D.png"
   },
   "AcrylicTrainCabooseOrange": {
     "DisplayName": "Acrylic Train, Caboose, Orange",
@@ -2457,7 +2693,8 @@ STOCK_COMPONENT_INFO = {
       "cabin car",
       "cabin",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DDD8701A-20CD-11E8-84FA-DCF093A6FE1D.png"
   },
   "AcrylicTrainCaboosePurple": {
     "DisplayName": "Acrylic Train, Caboose, Purple",
@@ -2489,7 +2726,8 @@ STOCK_COMPONENT_INFO = {
       "cabin car",
       "cabin",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E6D9AAEE-20CD-11E8-A86F-CCE893A6FE1D.png"
   },
   "AcrylicTrainCabooseRed": {
     "DisplayName": "Acrylic Train, Caboose, Red",
@@ -2521,7 +2759,8 @@ STOCK_COMPONENT_INFO = {
       "cabin car",
       "cabin",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F344A36A-20CD-11E8-A86F-D8E893A6FE1D.png"
   },
   "AcrylicTrainCabooseWhite": {
     "DisplayName": "Acrylic Train, Caboose, White",
@@ -2553,7 +2792,8 @@ STOCK_COMPONENT_INFO = {
       "cabin car",
       "cabin",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FB566CF0-20CD-11E8-84FA-08F193A6FE1D.png"
   },
   "AcrylicTrainCabooseYellow": {
     "DisplayName": "Acrylic Train, Caboose, Yellow",
@@ -2585,7 +2825,8 @@ STOCK_COMPONENT_INFO = {
       "cabin car",
       "cabin",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/177B45FE-20CE-11E8-A86F-25E993A6FE1D.png"
   },
   "AcrylicTrainCoalCarBlack": {
     "DisplayName": "Acrylic Train, Coal Car, Black",
@@ -2612,7 +2853,8 @@ STOCK_COMPONENT_INFO = {
       "gondola",
       "gravity wagon",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/24C822C2-20CE-11E8-84FA-4CF193A6FE1D.png"
   },
   "AcrylicTrainCoalCarBlue": {
     "DisplayName": "Acrylic Train, Coal Car, Blue",
@@ -2639,7 +2881,8 @@ STOCK_COMPONENT_INFO = {
       "gondola",
       "gravity wagon",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2D39230C-20CE-11E8-84FA-5EF193A6FE1D.png"
   },
   "AcrylicTrainCoalCarGreen": {
     "DisplayName": "Acrylic Train, Coal Car, Green",
@@ -2666,7 +2909,8 @@ STOCK_COMPONENT_INFO = {
       "gondola",
       "gravity wagon",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3C7F5B10-20CE-11E8-84FA-7EF193A6FE1D.png"
   },
   "AcrylicTrainCoalCarOrange": {
     "DisplayName": "Acrylic Train, Coal Car, Orange",
@@ -2693,7 +2937,8 @@ STOCK_COMPONENT_INFO = {
       "gondola",
       "gravity wagon",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A22B348-20CE-11E8-A86F-6AE993A6FE1D.png"
   },
   "AcrylicTrainCoalCarPurple": {
     "DisplayName": "Acrylic Train, Coal Car, Purple",
@@ -2720,7 +2965,8 @@ STOCK_COMPONENT_INFO = {
       "gondola",
       "gravity wagon",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/557DD736-20CE-11E8-84FA-8CF193A6FE1D.png"
   },
   "AcrylicTrainCoalCarRed": {
     "DisplayName": "Acrylic Train, Coal Car, Red",
@@ -2747,7 +2993,8 @@ STOCK_COMPONENT_INFO = {
       "gondola",
       "gravity wagon",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5FFB4AD6-20CE-11E8-A86F-A1E993A6FE1D.png"
   },
   "AcrylicTrainCoalCarWhite": {
     "DisplayName": "Acrylic Train, Coal Car, White",
@@ -2774,7 +3021,8 @@ STOCK_COMPONENT_INFO = {
       "gondola",
       "gravity wagon",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6B23DFB8-20CE-11E8-84FA-C8F193A6FE1D.png"
   },
   "AcrylicTrainCoalCarYellow": {
     "DisplayName": "Acrylic Train, Coal Car, Yellow",
@@ -2801,7 +3049,8 @@ STOCK_COMPONENT_INFO = {
       "gondola",
       "gravity wagon",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7755D336-20CE-11E8-A86F-CCE993A6FE1D.png"
   },
   "AcrylicTrainFlatBedBlack": {
     "DisplayName": "Acrylic Train, Flat Bed, Black",
@@ -2827,7 +3076,8 @@ STOCK_COMPONENT_INFO = {
       "skeleton car",
       "spine car",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9998DB32-20CE-11E8-84FA-27F293A6FE1D.png"
   },
   "AcrylicTrainFlatBedBlue": {
     "DisplayName": "Acrylic Train, Flat Bed, Blue",
@@ -2853,7 +3103,8 @@ STOCK_COMPONENT_INFO = {
       "skeleton car",
       "spine car",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A2BF6AFA-20CE-11E8-84FA-36F293A6FE1D.png"
   },
   "AcrylicTrainFlatBedGreen": {
     "DisplayName": "Acrylic Train, Flat Bed, Green",
@@ -2879,7 +3130,8 @@ STOCK_COMPONENT_INFO = {
       "skeleton car",
       "spine car",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AA7AE8B4-20CE-11E8-84FA-42F293A6FE1D.png"
   },
   "AcrylicTrainFlatBedOrange": {
     "DisplayName": "Acrylic Train, Flat Bed, Orange",
@@ -2905,7 +3157,8 @@ STOCK_COMPONENT_INFO = {
       "skeleton car",
       "spine car",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B2A8AD78-20CE-11E8-84FA-52F293A6FE1D.png"
   },
   "AcrylicTrainFlatBedPurple": {
     "DisplayName": "Acrylic Train, Flat Bed, Purple",
@@ -2931,7 +3184,8 @@ STOCK_COMPONENT_INFO = {
       "skeleton car",
       "spine car",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C21D9548-20CE-11E8-84FA-64F293A6FE1D.png"
   },
   "AcrylicTrainFlatBedRed": {
     "DisplayName": "Acrylic Train, Flat Bed, Red",
@@ -2957,7 +3211,8 @@ STOCK_COMPONENT_INFO = {
       "skeleton car",
       "spine car",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D037236A-20CE-11E8-84FA-91F293A6FE1D.png"
   },
   "AcrylicTrainFlatBedWhite": {
     "DisplayName": "Acrylic Train, Flat Bed, White",
@@ -2983,7 +3238,8 @@ STOCK_COMPONENT_INFO = {
       "skeleton car",
       "spine car",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DCBD1004-20CE-11E8-A86F-8FEA93A6FE1D.png"
   },
   "AcrylicTrainFlatBedYellow": {
     "DisplayName": "Acrylic Train, Flat Bed, Yellow",
@@ -3009,7 +3265,8 @@ STOCK_COMPONENT_INFO = {
       "skeleton car",
       "spine car",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E4E007FA-20CE-11E8-A86F-B6EA93A6FE1D.png"
   },
   "AcrylicTrainModernEngineBlack": {
     "DisplayName": "Acrylic Train, Modern Engine, Black",
@@ -3027,7 +3284,8 @@ STOCK_COMPONENT_INFO = {
       "diesel",
       "modern",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F0E4EAF2-20CE-11E8-A86F-C7EA93A6FE1D.png"
   },
   "AcrylicTrainModernEngineBlue": {
     "DisplayName": "Acrylic Train, Modern Engine, Blue",
@@ -3045,7 +3303,8 @@ STOCK_COMPONENT_INFO = {
       "diesel",
       "modern",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FB247118-20CE-11E8-A86F-DCEA93A6FE1D.png"
   },
   "AcrylicTrainModernEngineGreen": {
     "DisplayName": "Acrylic Train, Modern Engine, Green",
@@ -3063,7 +3322,8 @@ STOCK_COMPONENT_INFO = {
       "diesel",
       "modern",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0544154A-20CF-11E8-84FA-E7F293A6FE1D.png"
   },
   "AcrylicTrainModernEngineOrange": {
     "DisplayName": "Acrylic Train, Modern Engine, Orange",
@@ -3081,7 +3341,8 @@ STOCK_COMPONENT_INFO = {
       "diesel",
       "modern",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/11CDCE8C-20CF-11E8-A86F-F8EA93A6FE1D.png"
   },
   "AcrylicTrainModernEnginePurple": {
     "DisplayName": "Acrylic Train, Modern Engine, Purple",
@@ -3099,7 +3360,8 @@ STOCK_COMPONENT_INFO = {
       "diesel",
       "modern",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1A203C32-20CF-11E8-A86F-10EB93A6FE1D.png"
   },
   "AcrylicTrainModernEngineRed": {
     "DisplayName": "Acrylic Train, Modern Engine, Red",
@@ -3117,7 +3379,8 @@ STOCK_COMPONENT_INFO = {
       "diesel",
       "modern",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/24815A94-20CF-11E8-A86F-25EB93A6FE1D.png"
   },
   "AcrylicTrainModernEngineWhite": {
     "DisplayName": "Acrylic Train, Modern Engine, White",
@@ -3135,7 +3398,8 @@ STOCK_COMPONENT_INFO = {
       "diesel",
       "modern",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2D07043E-20CF-11E8-A86F-32EB93A6FE1D.png"
   },
   "AcrylicTrainModernEngineYellow": {
     "DisplayName": "Acrylic Train, Modern Engine, Yellow",
@@ -3153,7 +3417,8 @@ STOCK_COMPONENT_INFO = {
       "diesel",
       "modern",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/38B9A1BA-20CF-11E8-A86F-43EB93A6FE1D.png"
   },
   "AcrylicTrainPassengerCarBlack": {
     "DisplayName": "Acrylic Train, Passenger Car, Black",
@@ -3180,7 +3445,8 @@ STOCK_COMPONENT_INFO = {
       "observation car",
       "sleeping car",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/47376434-20CF-11E8-A86F-4BEB93A6FE1D.png"
   },
   "AcrylicTrainPassengerCarBlue": {
     "DisplayName": "Acrylic Train, Passenger Car, Blue",
@@ -3207,7 +3473,8 @@ STOCK_COMPONENT_INFO = {
       "observation car",
       "sleeping car",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/57E84618-20CF-11E8-84FA-89F393A6FE1D.png"
   },
   "AcrylicTrainPassengerCarGreen": {
     "DisplayName": "Acrylic Train, Passenger Car, Green",
@@ -3234,7 +3501,8 @@ STOCK_COMPONENT_INFO = {
       "observation car",
       "sleeping car",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/629B1E82-20CF-11E8-84FA-94F393A6FE1D.png"
   },
   "AcrylicTrainPassengerCarOrange": {
     "DisplayName": "Acrylic Train, Passenger Car, Orange",
@@ -3261,7 +3529,8 @@ STOCK_COMPONENT_INFO = {
       "observation car",
       "sleeping car",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6E054766-20CF-11E8-A86F-B1EB93A6FE1D.png"
   },
   "AcrylicTrainPassengerCarPurple": {
     "DisplayName": "Acrylic Train, Passenger Car, Purple",
@@ -3288,7 +3557,8 @@ STOCK_COMPONENT_INFO = {
       "observation car",
       "sleeping car",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7AD78436-20CF-11E8-84FA-E6F393A6FE1D.png"
   },
   "AcrylicTrainPassengerCarRed": {
     "DisplayName": "Acrylic Train, Passenger Car, Red",
@@ -3315,7 +3585,8 @@ STOCK_COMPONENT_INFO = {
       "observation car",
       "sleeping car",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/84375344-20CF-11E8-84FA-F4F393A6FE1D.png"
   },
   "AcrylicTrainPassengerCarWhite": {
     "DisplayName": "Acrylic Train, Passenger Car, White",
@@ -3342,7 +3613,8 @@ STOCK_COMPONENT_INFO = {
       "observation car",
       "sleeping car",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8B68317E-20CF-11E8-84FA-1BF493A6FE1D.png"
   },
   "AcrylicTrainPassengerCarYellow": {
     "DisplayName": "Acrylic Train, Passenger Car, Yellow",
@@ -3369,7 +3641,8 @@ STOCK_COMPONENT_INFO = {
       "observation car",
       "sleeping car",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/92E79CF0-20CF-11E8-A86F-E1EB93A6FE1D.png"
   },
   "AcrylicTrainSteamEngineBlack": {
     "DisplayName": "Acrylic Train, Steam Engine, Black",
@@ -3391,7 +3664,8 @@ STOCK_COMPONENT_INFO = {
       "boiler",
       "steam tractor",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/75DEC880-20D0-11E8-84FA-C0F593A6FE1D.png"
   },
   "AcrylicTrainSteamEngineBlue": {
     "DisplayName": "Acrylic Train, Steam Engine, Blue",
@@ -3413,7 +3687,8 @@ STOCK_COMPONENT_INFO = {
       "boiler",
       "steam tractor",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/802A6966-20D0-11E8-84FA-CEF593A6FE1D.png"
   },
   "AcrylicTrainSteamEngineGreen": {
     "DisplayName": "Acrylic Train, Steam Engine, Green",
@@ -3435,7 +3710,8 @@ STOCK_COMPONENT_INFO = {
       "boiler",
       "steam tractor",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C3E034A0-20D1-11E8-A86F-75EF93A6FE1D.png"
   },
   "AcrylicTrainSteamEngineOrange": {
     "DisplayName": "Acrylic Train, Steam Engine, Orange",
@@ -3457,7 +3733,8 @@ STOCK_COMPONENT_INFO = {
       "boiler",
       "steam tractor",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CE791A76-20D1-11E8-A86F-87EF93A6FE1D.png"
   },
   "AcrylicTrainSteamEnginePurple": {
     "DisplayName": "Acrylic Train, Steam Engine, Purple",
@@ -3479,7 +3756,8 @@ STOCK_COMPONENT_INFO = {
       "boiler",
       "steam tractor",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D33CA28A-20D1-11E8-A86F-99EF93A6FE1D.png"
   },
   "AcrylicTrainSteamEngineRed": {
     "DisplayName": "Acrylic Train, Steam Engine, Red",
@@ -3501,7 +3779,8 @@ STOCK_COMPONENT_INFO = {
       "boiler",
       "steam tractor",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DA74D2FC-20D1-11E8-84FA-DBF793A6FE1D.png"
   },
   "AcrylicTrainSteamEngineWhite": {
     "DisplayName": "Acrylic Train, Steam Engine, White",
@@ -3523,7 +3802,8 @@ STOCK_COMPONENT_INFO = {
       "boiler",
       "steam tractor",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DF7C1102-20D1-11E8-A86F-AAEF93A6FE1D.png"
   },
   "AcrylicTrainSteamEngineYellow": {
     "DisplayName": "Acrylic Train, Steam Engine, Yellow",
@@ -3545,7 +3825,8 @@ STOCK_COMPONENT_INFO = {
       "boiler",
       "steam tractor",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E63BDD4C-20D1-11E8-A86F-B8EF93A6FE1D.png"
   },
   "AcrylicTrainTankCarBlack": {
     "DisplayName": "Acrylic Train, Tank Car, Black",
@@ -3569,7 +3850,8 @@ STOCK_COMPONENT_INFO = {
       "torpedo wagon",
       "whale belly",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EF2AC3FA-20D1-11E8-A86F-D1EF93A6FE1D.png"
   },
   "AcrylicTrainTankCarBlue": {
     "DisplayName": "Acrylic Train, Tank Car, Blue",
@@ -3593,7 +3875,8 @@ STOCK_COMPONENT_INFO = {
       "torpedo wagon",
       "whale belly",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F935040A-20D1-11E8-84FA-24F893A6FE1D.png"
   },
   "AcrylicTrainTankCarGreen": {
     "DisplayName": "Acrylic Train, Tank Car, Green",
@@ -3617,7 +3900,8 @@ STOCK_COMPONENT_INFO = {
       "torpedo wagon",
       "whale belly",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/07F58924-20D2-11E8-A86F-E3EF93A6FE1D.png"
   },
   "AcrylicTrainTankCarOrange": {
     "DisplayName": "Acrylic Train, Tank Car, Orange",
@@ -3641,7 +3925,8 @@ STOCK_COMPONENT_INFO = {
       "torpedo wagon",
       "whale belly",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/22B25670-20D2-11E8-A86F-80F093A6FE1D.png"
   },
   "AcrylicTrainTankCarPurple": {
     "DisplayName": "Acrylic Train, Tank Car, Purple",
@@ -3665,7 +3950,8 @@ STOCK_COMPONENT_INFO = {
       "torpedo wagon",
       "whale belly",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2C9D1E18-20D2-11E8-A86F-85F093A6FE1D.png"
   },
   "AcrylicTrainTankCarRed": {
     "DisplayName": "Acrylic Train, Tank Car, Red",
@@ -3689,7 +3975,8 @@ STOCK_COMPONENT_INFO = {
       "torpedo wagon",
       "whale belly",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3482673C-20D2-11E8-84FA-F0F893A6FE1D.png"
   },
   "AcrylicTrainTankCarWhite": {
     "DisplayName": "Acrylic Train, Tank Car, White",
@@ -3713,7 +4000,8 @@ STOCK_COMPONENT_INFO = {
       "torpedo wagon",
       "whale belly",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3C656EFE-20D2-11E8-84FA-01F993A6FE1D.png"
   },
   "AcrylicTrainTankCarYellow": {
     "DisplayName": "Acrylic Train, Tank Car, Yellow",
@@ -3737,7 +4025,8 @@ STOCK_COMPONENT_INFO = {
       "torpedo wagon",
       "whale belly",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4639DE06-20D2-11E8-84FA-02F993A6FE1D.png"
   },
   "AdventurerwithSwordandShield": {
     "DisplayName": "Adventurer with Sword and Shield",
@@ -3761,7 +4050,8 @@ STOCK_COMPONENT_INFO = {
       "shield",
       "adventurer",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0F663588-0CF9-11E8-BDAE-81E293A6FE1D.png"
   },
   "AdventuressFantasyTB25": {
     "DisplayName": "Adventuress, Fantasy, TB25",
@@ -3782,7 +4072,8 @@ STOCK_COMPONENT_INFO = {
       "heroine",
       "fantasy",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0FDA6098-261D-11EC-9F7F-5E7E898C9FDE.png"
   },
   "AfricanElephant": {
     "DisplayName": "African Elephant",
@@ -3836,7 +4127,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/54E5BBE2-FFDB-11E0-80A5-4E3C9966D12C.png"
   },
   "AirplaneLargeBlue": {
     "DisplayName": "Airplane, Large, Blue",
@@ -3861,7 +4153,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B0A296CA-FFDC-11E0-80A5-4E3C9966D12C.png"
   },
   "AirplaneLargeGreen": {
     "DisplayName": "Airplane, Large, Green",
@@ -3911,7 +4204,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C416DF36-FFE1-11E0-80A5-4E3C9966D12C.png"
   },
   "AirplaneLargePurple": {
     "DisplayName": "Airplane, Large, Purple",
@@ -3936,7 +4230,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D231B7A2-FFE2-11E0-8C12-4E3C9966D12C.png"
   },
   "AirplaneLargeRed": {
     "DisplayName": "Airplane, Large, Red",
@@ -4011,7 +4306,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5516C61C-FF2F-11E0-A5CD-4E3C9966D12C.png"
   },
   "AirplaneSmallBlack": {
     "DisplayName": "Airplane, Small, Black",
@@ -4036,7 +4332,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/74427750-FF31-11E0-A5CD-4E3C9966D12C.png"
   },
   "AirplaneSmallBlue": {
     "DisplayName": "Airplane, Small, Blue",
@@ -4061,7 +4358,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CCA81074-67FC-11EB-8476-BB91EA421ABE.png"
   },
   "AirplaneSmallOrange": {
     "DisplayName": "Airplane, Small, Orange",
@@ -4086,7 +4384,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9A5E1F94-FF35-11E0-A5CD-4E3C9966D12C.png"
   },
   "AirplaneSmallPurple": {
     "DisplayName": "Airplane, Small, Purple",
@@ -4111,7 +4410,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/75C34290-FFD5-11E0-8C12-4E3C9966D12C.png"
   },
   "AirplaneSmallRed": {
     "DisplayName": "Airplane, Small, Red",
@@ -4136,7 +4436,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C45FCC5E-67FC-11EB-8413-8FFFC78E2D70.png"
   },
   "AirplaneSmallWhite": {
     "DisplayName": "Airplane, Small, White",
@@ -4161,7 +4462,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A9B5FA2C-FFD8-11E0-8C12-4E3C9966D12C.png"
   },
   "AirplaneSmallYellow": {
     "DisplayName": "Airplane, Small, Yellow",
@@ -4186,7 +4488,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B84C96F4-67FC-11EB-8476-8C91EA421ABE.png"
   },
   "AK-47": {
     "DisplayName": "AK-47",
@@ -4207,7 +4510,8 @@ STOCK_COMPONENT_INFO = {
       "armory",
       "attack",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DFF2450C-0302-11E9-9C65-30271589B894.png"
   },
   "AliceFantasyTB25": {
     "DisplayName": "Alice, Fantasy, TB25",
@@ -4221,7 +4525,8 @@ STOCK_COMPONENT_INFO = {
       "jabberwocky",
       "young",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7ADB6534-E38E-11EC-B001-8A2AD456B98B.png"
   },
   "AlienGreyTB15Black": {
     "DisplayName": "Alien, Grey, TB15, Black",
@@ -4239,7 +4544,8 @@ STOCK_COMPONENT_INFO = {
       "weather balloon",
       "invader",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/37971BA6-56C6-11EC-AF3B-C39C5DD54BA2.png"
   },
   "AlienGreyTB15Blue": {
     "DisplayName": "Alien, Grey, TB15, Blue",
@@ -4257,7 +4563,8 @@ STOCK_COMPONENT_INFO = {
       "weather balloon",
       "invader",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3FCDDFDA-56C6-11EC-B9BD-535EE73F1098.png"
   },
   "AlienGreyTB15Green": {
     "DisplayName": "Alien, Grey, TB15, Green",
@@ -4275,7 +4582,8 @@ STOCK_COMPONENT_INFO = {
       "weather balloon",
       "invader",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/28F453D4-56C6-11EC-B9BD-155EE73F1098.png"
   },
   "AlienGreyTB15Grey": {
     "DisplayName": "Alien, Grey, TB15, Grey",
@@ -4293,7 +4601,8 @@ STOCK_COMPONENT_INFO = {
       "weather balloon",
       "invader",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/32628382-56C6-11EC-AF3B-A89C5DD54BA2.png"
   },
   "AlienGreyTB15Orange": {
     "DisplayName": "Alien, Grey, TB15, Orange",
@@ -4311,7 +4620,8 @@ STOCK_COMPONENT_INFO = {
       "weather balloon",
       "invader",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2507C10C-56C6-11EC-AF3B-949C5DD54BA2.png"
   },
   "AlienGreyTB15Purple": {
     "DisplayName": "Alien, Grey, TB15, Purple",
@@ -4329,7 +4639,8 @@ STOCK_COMPONENT_INFO = {
       "weather balloon",
       "invader",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/074FA33C-56C6-11EC-B9BD-AA5DE73F1098.png"
   },
   "AlienGreyTB15Red": {
     "DisplayName": "Alien, Grey, TB15, Red",
@@ -4347,7 +4658,8 @@ STOCK_COMPONENT_INFO = {
       "weather balloon",
       "invader",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/04E5FCCC-56C6-11EC-AF3B-279C5DD54BA2.png"
   },
   "AlienGreyTB15White": {
     "DisplayName": "Alien, Grey, TB15, White",
@@ -4365,7 +4677,8 @@ STOCK_COMPONENT_INFO = {
       "weather balloon",
       "invader",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E712ABD6-56C6-11EC-AF3B-C49E5DD54BA2.png"
   },
   "AlienGreyTB15Yellow": {
     "DisplayName": "Alien, Grey, TB15, Yellow",
@@ -4383,7 +4696,8 @@ STOCK_COMPONENT_INFO = {
       "weather balloon",
       "invader",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3D31386C-56C6-11EC-AF3B-C59C5DD54BA2.png"
   },
   "AlienSpaceTB25": {
     "DisplayName": "Alien, Space, TB25",
@@ -4396,7 +4710,8 @@ STOCK_COMPONENT_INFO = {
       "cyclops",
       "squid",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CDC82E14-9E94-11ED-8B48-9C502A49FC29.png"
   },
   "AmericanIndianwithBow": {
     "DisplayName": "American Indian with Bow",
@@ -4424,7 +4739,8 @@ STOCK_COMPONENT_INFO = {
       "attacker",
       "toxophilite",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BAEE647C-101C-11E8-B62C-EAF993A6FE1D.png"
   },
   "AmphisbaenaFantasyTB25": {
     "DisplayName": "Amphisbaena, Fantasy, TB25",
@@ -4434,7 +4750,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "mythological",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4640FB18-02C4-11ED-A994-D4983AE74957.png"
   },
   "AnkhegFantasyTB50": {
     "DisplayName": "Ankheg, Fantasy, TB50",
@@ -4444,7 +4761,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "mythological",
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/56F26856-FE6F-11EC-8F7C-D4A63AE74957.png"
   },
   "Ant": {
     "DisplayName": "Ant",
@@ -4467,7 +4785,8 @@ STOCK_COMPONENT_INFO = {
       "vermin",
       "soldier",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D0D83E52-D5C6-11EB-9F1A-20A08D8D6E47.png"
   },
   "Anti-Paladin": {
     "DisplayName": "Anti-Paladin",
@@ -4495,7 +4814,8 @@ STOCK_COMPONENT_INFO = {
       "armored",
       "melee",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/65461DDC-11D2-11E8-94A0-2B0694A6FE1D.png"
   },
   "AriannaMoonshadowEnchantress": {
     "DisplayName": "Arianna Moonshadow Enchantress",
@@ -4520,7 +4840,8 @@ STOCK_COMPONENT_INFO = {
       "caster",
       "wizard",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1EA5F27E-4560-11E7-BFDD-135F370CF66B.png"
   },
   "ArmoredGuard": {
     "DisplayName": "Armored Guard",
@@ -4541,7 +4862,8 @@ STOCK_COMPONENT_INFO = {
       "garrison",
       "sword",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F0B973DC-62B2-11E9-9DDC-7A699E5FDBD4.png"
   },
   "ArmoredOgre": {
     "DisplayName": "Armored Ogre",
@@ -4567,7 +4889,8 @@ STOCK_COMPONENT_INFO = {
       "npc",
       "enemy",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E31BBB18-12D1-11E8-906D-C20A94A6FE1D.png"
   },
   "AstronautTB15Black": {
     "DisplayName": "Astronaut TB15, Black",
@@ -4583,7 +4906,8 @@ STOCK_COMPONENT_INFO = {
       "spacewalk",
       "spacewoman",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3B88FCBC-56CA-11EC-AF3B-48A85DD54BA2.png"
   },
   "AstronautTB15Blue": {
     "DisplayName": "Astronaut, TB15, Blue",
@@ -4598,7 +4922,8 @@ STOCK_COMPONENT_INFO = {
       "taikonaut",
       "spacewalk",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/426A3BFE-56CA-11EC-B9BD-CD69E73F1098.png"
   },
   "AstronautTB15Green": {
     "DisplayName": "Astronaut, TB15, Green",
@@ -4613,7 +4938,8 @@ STOCK_COMPONENT_INFO = {
       "taikonaut",
       "spacewalk",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/54FFDDF0-56CA-11EC-AF3B-A9A85DD54BA2.png"
   },
   "AstronautTB15Orange": {
     "DisplayName": "Astronaut, TB15, Orange",
@@ -4628,7 +4954,8 @@ STOCK_COMPONENT_INFO = {
       "taikonaut",
       "spacewalk",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8C30106A-56CA-11EC-B9BD-BB6AE73F1098.png"
   },
   "AstronautTB15Purple": {
     "DisplayName": "Astronaut, TB15, Purple",
@@ -4643,7 +4970,8 @@ STOCK_COMPONENT_INFO = {
       "taikonaut",
       "spacewalk",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4F0620BC-56CA-11EC-B9BD-ED69E73F1098.png"
   },
   "AstronautTB15Red": {
     "DisplayName": "Astronaut, TB15, Red",
@@ -4658,7 +4986,8 @@ STOCK_COMPONENT_INFO = {
       "taikonaut",
       "spacewalk",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4BF78B72-56CA-11EC-AF3B-83A85DD54BA2.png"
   },
   "AstronautTB15White": {
     "DisplayName": "Astronaut, TB15, White",
@@ -4673,7 +5002,8 @@ STOCK_COMPONENT_INFO = {
       "taikonaut",
       "spacewalk",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3F285E9E-56CA-11EC-B9BD-A969E73F1098.png"
   },
   "AstronautTB15Yellow": {
     "DisplayName": "Astronaut, TB15, Yellow",
@@ -4688,7 +5018,8 @@ STOCK_COMPONENT_INFO = {
       "taikonaut",
       "spacewalk",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/51E4BF50-56CA-11EC-B9BD-0A6AE73F1098.png"
   },
   "AtomSymbol": {
     "DisplayName": "Atom Symbol",
@@ -4718,7 +5049,8 @@ STOCK_COMPONENT_INFO = {
       "bomb",
       "radioactive",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/48A7C810-35F3-11E9-BDDE-FE4116796776.png"
   },
   "AvatarOpaqueBlack": {
     "DisplayName": "Avatar, Opaque, Black",
@@ -4736,7 +5068,8 @@ STOCK_COMPONENT_INFO = {
       "mover",
       "unit",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7A9BCD90-3276-11E6-ABB0-4253C6EDC2D7.png"
   },
   "AvatarOpaqueWhite": {
     "DisplayName": "Avatar, Opaque, White",
@@ -4754,7 +5087,8 @@ STOCK_COMPONENT_INFO = {
       "mover",
       "unit",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7D2EE4D4-3276-11E6-B6AC-54D970C3C4B9.png"
   },
   "AvatarTransparentBlack": {
     "DisplayName": "Avatar, Transparent, Black",
@@ -4772,7 +5106,8 @@ STOCK_COMPONENT_INFO = {
       "mover",
       "unit",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/11C0559C-5EA8-11E8-990A-9F7A75A431D5.png"
   },
   "AvatarTransparentBlue": {
     "DisplayName": "Avatar, Transparent, Blue",
@@ -4790,7 +5125,8 @@ STOCK_COMPONENT_INFO = {
       "mover",
       "unit",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7A7CF050-3276-11E6-923C-54D970C3C4B9.png"
   },
   "AvatarTransparentClear": {
     "DisplayName": "Avatar, Transparent, Clear",
@@ -4808,7 +5144,8 @@ STOCK_COMPONENT_INFO = {
       "mover",
       "unit",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/776F1A96-AD67-11E8-85D2-D7C7CE95AB04.png"
   },
   "AvatarTransparentGreen": {
     "DisplayName": "Avatar, Transparent, Green",
@@ -4826,7 +5163,8 @@ STOCK_COMPONENT_INFO = {
       "mover",
       "unit",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7B36D2EA-3276-11E6-B322-54D970C3C4B9.png"
   },
   "AvatarTransparentOrange": {
     "DisplayName": "Avatar, Transparent, Orange",
@@ -4844,7 +5182,8 @@ STOCK_COMPONENT_INFO = {
       "mover",
       "unit",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7C1B8318-3276-11E6-8FD3-54D970C3C4B9.png"
   },
   "AvatarTransparentPurple": {
     "DisplayName": "Avatar, Transparent, Purple",
@@ -4862,7 +5201,8 @@ STOCK_COMPONENT_INFO = {
       "mover",
       "unit",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7BF69922-3276-11E6-941B-4253C6EDC2D7.png"
   },
   "AvatarTransparentRed": {
     "DisplayName": "Avatar, Transparent, Red",
@@ -4880,7 +5220,8 @@ STOCK_COMPONENT_INFO = {
       "mover",
       "unit",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7CAC1FB8-3276-11E6-9B08-4253C6EDC2D7.png"
   },
   "AvatarTransparentWhite": {
     "DisplayName": "Avatar, Transparent, White",
@@ -4898,7 +5239,8 @@ STOCK_COMPONENT_INFO = {
       "mover",
       "unit",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9D29DB5E-433B-11E8-842A-9161FBCBC2F2.png"
   },
   "AvatarTransparentYellow": {
     "DisplayName": "Avatar, Transparent, Yellow",
@@ -4916,7 +5258,8 @@ STOCK_COMPONENT_INFO = {
       "mover",
       "unit",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7D62DD52-3276-11E6-B4C1-4253C6EDC2D7.png"
   },
   "Aztec-CharacterMeeple": {
     "DisplayName": "Aztec - Character Meeple",
@@ -4932,7 +5275,8 @@ STOCK_COMPONENT_INFO = {
       "civilization",
       "ethnic",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9D2D228E-8EB6-11E8-8D59-2B91B70C97C7.png"
   },
   "BadgeHolderw/StringLanyard(boxof100)": {
     "DisplayName": "Badge Holder w/String Lanyard (box of 100)",
@@ -4954,7 +5298,8 @@ STOCK_COMPONENT_INFO = {
       "tradeshow",
       "visitor",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D7163A24-C046-11E7-96CA-91E41A08B15E.jpg"
   },
   "BalefireDemonw/Sword": {
     "DisplayName": "Balefire Demon w/ Sword",
@@ -4979,7 +5324,8 @@ STOCK_COMPONENT_INFO = {
       "winged",
       "manticore",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C3BA1C24-102E-11E8-AA62-AA1594A6FE1D.png"
   },
   "BarbarianDuelFantasyTB25": {
     "DisplayName": "Barbarian Duel, Fantasy, TB25",
@@ -4994,7 +5340,8 @@ STOCK_COMPONENT_INFO = {
       "sword",
       "fantasy",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E3AAFFFA-261C-11EC-9F7F-CD7D898C9FDE.png"
   },
   "BarbarianwithAxe": {
     "DisplayName": "Barbarian with Axe",
@@ -5020,7 +5367,8 @@ STOCK_COMPONENT_INFO = {
       "axeman",
       "axman",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D819F6E2-1021-11E8-B55A-ADEB93A6FE1D.png"
   },
   "BarbarianwithSword&Shield": {
     "DisplayName": "Barbarian with Sword & Shield",
@@ -5046,7 +5394,8 @@ STOCK_COMPONENT_INFO = {
       "sword",
       "combatant",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1F9838E0-4560-11E7-BFDD-095F370CF66B.png"
   },
   "BarbarianwithTwoSwords": {
     "DisplayName": "Barbarian with Two Swords",
@@ -5072,7 +5421,8 @@ STOCK_COMPONENT_INFO = {
       "swords",
       "barbarian",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E43392A2-101D-11E8-B62C-79FB93A6FE1D.png"
   },
   "BarbarianNordicHistoricTB25": {
     "DisplayName": "Barbarian, Nordic, Historic, TB25",
@@ -5084,7 +5434,8 @@ STOCK_COMPONENT_INFO = {
       "sweden",
       "soldier",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/51E69F40-B48B-11EC-B447-08ECB5E37A90.png"
   },
   "Barrel": {
     "DisplayName": "Barrel",
@@ -5108,7 +5459,8 @@ STOCK_COMPONENT_INFO = {
       "food",
       "drink",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/799BA6A4-D509-11E2-95AE-EE5FB37B439B.png"
   },
   "BarrelWood": {
     "DisplayName": "Barrel, Wood",
@@ -5134,7 +5486,8 @@ STOCK_COMPONENT_INFO = {
       "food",
       "drink",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/52CF54C0-524A-11E9-A156-75D7BE9D83F6.png"
   },
   "BaseShoeTB15Black": {
     "DisplayName": "Base Shoe, TB15, Black",
@@ -5148,7 +5501,8 @@ STOCK_COMPONENT_INFO = {
       "shoe",
       "color",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8F7932B4-1CBA-11EC-9D40-BD965853E446.png"
   },
   "BaseShoeTB15Blue": {
     "DisplayName": "Base Shoe, TB15, Blue",
@@ -5162,7 +5516,8 @@ STOCK_COMPONENT_INFO = {
       "shoe",
       "color",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9D95D528-1CBA-11EC-9177-1EFF4A5CF84F.png"
   },
   "BaseShoeTB15Green": {
     "DisplayName": "Base Shoe, TB15, Green",
@@ -5176,7 +5531,8 @@ STOCK_COMPONENT_INFO = {
       "shoe",
       "color",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A2F8444C-1CBA-11EC-9177-39FF4A5CF84F.png"
   },
   "BaseShoeTB15Orange": {
     "DisplayName": "Base Shoe, TB15, Orange",
@@ -5190,7 +5546,8 @@ STOCK_COMPONENT_INFO = {
       "shoe",
       "color",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A969AAE6-1CBA-11EC-9177-3AFF4A5CF84F.png"
   },
   "BaseShoeTB15Purple": {
     "DisplayName": "Base Shoe, TB15, Purple",
@@ -5204,7 +5561,8 @@ STOCK_COMPONENT_INFO = {
       "shoe",
       "color",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B0ECD216-1CBA-11EC-9177-58FF4A5CF84F.png"
   },
   "BaseShoeTB15Red": {
     "DisplayName": "Base Shoe, TB15, Red",
@@ -5218,7 +5576,8 @@ STOCK_COMPONENT_INFO = {
       "shoe",
       "color",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B62295D6-1CBA-11EC-9177-5BFF4A5CF84F.png"
   },
   "BaseShoeTB15White": {
     "DisplayName": "Base Shoe, TB15, White",
@@ -5232,7 +5591,8 @@ STOCK_COMPONENT_INFO = {
       "shoe",
       "color",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BD87B8D8-1CBA-11EC-9D40-17975853E446.png"
   },
   "BaseShoeTB15Yellow": {
     "DisplayName": "Base Shoe, TB15, Yellow",
@@ -5246,7 +5606,8 @@ STOCK_COMPONENT_INFO = {
       "shoe",
       "color",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C2254AA4-1CBA-11EC-9D40-25975853E446.png"
   },
   "BaseShoeTB25Black": {
     "DisplayName": "Base Shoe, TB25, Black",
@@ -5260,7 +5621,8 @@ STOCK_COMPONENT_INFO = {
       "shoe",
       "color",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D3FA9444-261C-11EC-B986-5683D18EBD9F.png"
   },
   "BaseShoeTB25Blue": {
     "DisplayName": "Base Shoe, TB25, Blue",
@@ -5274,7 +5636,8 @@ STOCK_COMPONENT_INFO = {
       "shoe",
       "color",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BD8B8290-261C-11EC-9F7F-457D898C9FDE.png"
   },
   "BaseShoeTB25Green": {
     "DisplayName": "Base Shoe, TB25, Green",
@@ -5288,7 +5651,8 @@ STOCK_COMPONENT_INFO = {
       "shoe",
       "color",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D02CFD66-261C-11EC-9F7F-A57D898C9FDE.png"
   },
   "BaseShoeTB25Orange": {
     "DisplayName": "Base Shoe, TB25, Orange",
@@ -5302,7 +5666,8 @@ STOCK_COMPONENT_INFO = {
       "shoe",
       "color",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C981E0C6-261C-11EC-9F7F-7E7D898C9FDE.png"
   },
   "BaseShoeTB25Purple": {
     "DisplayName": "Base Shoe, TB25, Purple",
@@ -5316,7 +5681,8 @@ STOCK_COMPONENT_INFO = {
       "shoe",
       "color",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D6EFF900-261C-11EC-B986-4C83D18EBD9F.png"
   },
   "BaseShoeTB25Red": {
     "DisplayName": "Base Shoe, TB25, Red",
@@ -5330,7 +5696,8 @@ STOCK_COMPONENT_INFO = {
       "shoe",
       "color",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C13EB132-261C-11EC-B986-0B83D18EBD9F.png"
   },
   "BaseShoeTB25White": {
     "DisplayName": "Base Shoe, TB25, White",
@@ -5344,7 +5711,8 @@ STOCK_COMPONENT_INFO = {
       "shoe",
       "color",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CC8E9FD4-261C-11EC-B986-3183D18EBD9F.png"
   },
   "BaseShoeTB25Yellow": {
     "DisplayName": "Base Shoe, TB25, Yellow",
@@ -5358,7 +5726,8 @@ STOCK_COMPONENT_INFO = {
       "shoe",
       "color",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C43D5A1E-261C-11EC-9F7F-717D898C9FDE.png"
   },
   "BattlePriestFantasyTB25": {
     "DisplayName": "Battle Priest, Fantasy, TB25",
@@ -5382,7 +5751,8 @@ STOCK_COMPONENT_INFO = {
       "warlock",
       "wizard",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/06B1A4E0-261D-11EC-B986-E383D18EBD9F.png"
   },
   "BeeWood": {
     "DisplayName": "Bee, Wood",
@@ -5407,7 +5777,8 @@ STOCK_COMPONENT_INFO = {
       "beekeeping",
       "bumblebee",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ED913B98-D5C6-11EB-A165-5DF33218550E.png"
   },
   "BerehyniaTB25": {
     "DisplayName": "Berehynia, TB25",
@@ -5421,7 +5792,8 @@ STOCK_COMPONENT_INFO = {
       "ukraine",
       "lady",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D5DE00C0-9E49-11EC-BDF2-33BFE4848153.png"
   },
   "Bible": {
     "DisplayName": "Bible",
@@ -5471,7 +5843,8 @@ STOCK_COMPONENT_INFO = {
       "humanoid",
       "adult",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8A37DBAA-626D-11E1-B767-67ACBD782CDC.png"
   },
   "BirdTB15Black": {
     "DisplayName": "Bird, TB15, Black",
@@ -5485,7 +5858,8 @@ STOCK_COMPONENT_INFO = {
       "avian",
       "finch",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C664A90C-B48B-11EC-96F1-A1FF565FC6E3.png"
   },
   "BirdTB15Blue": {
     "DisplayName": "Bird, TB15, Blue",
@@ -5499,7 +5873,8 @@ STOCK_COMPONENT_INFO = {
       "avian",
       "finch",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0F945AF6-C7FF-11EC-B769-C8416EB7A829.png"
   },
   "BirdTB15Green": {
     "DisplayName": "Bird, TB15, Green",
@@ -5513,7 +5888,8 @@ STOCK_COMPONENT_INFO = {
       "avian",
       "finch",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/05B0418A-C7FF-11EC-B769-C9406EB7A829.png"
   },
   "BirdTB15Orange": {
     "DisplayName": "Bird, TB15, Orange",
@@ -5527,7 +5903,8 @@ STOCK_COMPONENT_INFO = {
       "avian",
       "finch",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FB91D9C0-C7FE-11EC-8BBA-AEAB448F12DC.png"
   },
   "BirdTB15Purple": {
     "DisplayName": "Bird, TB15, Purple",
@@ -5541,7 +5918,8 @@ STOCK_COMPONENT_INFO = {
       "avian",
       "finch",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E7A4790E-C7FE-11EC-8BBA-08AB448F12DC.png"
   },
   "BirdTB15Red": {
     "DisplayName": "Bird, TB15, Red",
@@ -5555,7 +5933,8 @@ STOCK_COMPONENT_INFO = {
       "avian",
       "finch",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DC6DE084-C7FE-11EC-B769-213F6EB7A829.png"
   },
   "BirdTB15White": {
     "DisplayName": "Bird, TB15, White",
@@ -5569,7 +5948,8 @@ STOCK_COMPONENT_INFO = {
       "avian",
       "finch",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F1AE1428-C7FE-11EC-B769-03406EB7A829.png"
   },
   "BirdTB15Yellow": {
     "DisplayName": "Bird, TB15, Yellow",
@@ -5583,7 +5963,8 @@ STOCK_COMPONENT_INFO = {
       "avian",
       "finch",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D13112F4-C7FE-11EC-8BBA-45AA448F12DC.png"
   },
   "BlackBear": {
     "DisplayName": "Black Bear",
@@ -5601,7 +5982,8 @@ STOCK_COMPONENT_INFO = {
       "predator",
       "wild",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BC409D10-0303-11E9-9C65-B3281589B894.png"
   },
   "BlankBoardAccordion": {
     "DisplayName": "Blank Board, Accordion",
@@ -5624,7 +6006,8 @@ STOCK_COMPONENT_INFO = {
       "board",
       "accordion",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/62A0AB14-21E3-11E6-9512-AF4DEB12782E.png"
   },
   "BlankBoardBi-Fold": {
     "DisplayName": "Blank Board, Bi-Fold",
@@ -5633,7 +6016,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "5BE10B38-8190-11E4-8243-803778432033",
     "Tags": [
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/63077510-21E3-11E6-99B1-AF4DEB12782E.png"
   },
   "BlankBoardDomino": {
     "DisplayName": "Blank Board, Domino",
@@ -5656,7 +6040,8 @@ STOCK_COMPONENT_INFO = {
       "board",
       "domino",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/25DFDD64-5662-11E5-9243-5193FE149099.png"
   },
   "BlankBoardHalf": {
     "DisplayName": "Blank Board, Half",
@@ -5678,7 +6063,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "board",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A6975706-5663-11E5-8083-5E5436CD926D.png"
   },
   "BlankBoardMediumSix-Fold": {
     "DisplayName": "Blank Board, Medium, Six-Fold",
@@ -5702,7 +6088,8 @@ STOCK_COMPONENT_INFO = {
       "six-fold",
       "game board",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1CE89B26-77E0-11E9-ACB3-103A98773BEB.png"
   },
   "BlankBoardQuad-Fold18inch": {
     "DisplayName": "Blank Board, Quad-Fold, 18 inch",
@@ -5727,7 +6114,8 @@ STOCK_COMPONENT_INFO = {
       "quad fold",
       "quad-fold",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/65E273AC-21E3-11E6-805D-AF4DEB12782E.png"
   },
   "BlankBoardSix-Fold": {
     "DisplayName": "Blank Board, Six-Fold",
@@ -5751,7 +6139,8 @@ STOCK_COMPONENT_INFO = {
       "six-fold",
       "game board",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/666F916A-21E3-11E6-AF6D-1ABED96019DD.png"
   },
   "BlankBoardSkinny": {
     "DisplayName": "Blank Board, Skinny",
@@ -5774,7 +6163,8 @@ STOCK_COMPONENT_INFO = {
       "board",
       "skinny",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/883FF980-5667-11E5-969A-5193FE149099.png"
   },
   "BlankBoardSliver": {
     "DisplayName": "Blank Board, Sliver",
@@ -5797,7 +6187,8 @@ STOCK_COMPONENT_INFO = {
       "board",
       "sliver",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/31CA2868-5668-11E5-A5C0-5E5436CD926D.png"
   },
   "BlankBoardSquare": {
     "DisplayName": "Blank Board, Square",
@@ -5820,7 +6211,8 @@ STOCK_COMPONENT_INFO = {
       "board",
       "square",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CCFE177C-56F9-11E5-9CD0-1DCFFE149099.png"
   },
   "BlankBoardSquareLarge": {
     "DisplayName": "Blank Board, Square, Large",
@@ -5843,7 +6235,8 @@ STOCK_COMPONENT_INFO = {
       "board",
       "square",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E7379C02-5664-11E5-93F9-5193FE149099.png"
   },
   "BlankBoardSquareSmall": {
     "DisplayName": "Blank Board, Square, Small",
@@ -5866,7 +6259,8 @@ STOCK_COMPONENT_INFO = {
       "board",
       "square",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AAE4E3C2-308C-11E3-83B4-80B8B5238BE3.png"
   },
   "BlankBoardStrip": {
     "DisplayName": "Blank Board, Strip",
@@ -5889,7 +6283,8 @@ STOCK_COMPONENT_INFO = {
       "board",
       "strip",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6717D92E-21E3-11E6-989C-1ABED96019DD.png"
   },
   "BlankBoxHookBridge(108)": {
     "DisplayName": "Blank Box, Hook, Bridge (108)",
@@ -5899,7 +6294,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "packaging",
       "example",
       "model",
       "template",
@@ -5914,7 +6308,8 @@ STOCK_COMPONENT_INFO = {
       "hook",
       "bridge",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D5FC7AC6-EA32-11EB-9161-4277EE9EC01D.png"
   },
   "BlankBoxHookBridge(54)": {
     "DisplayName": "Blank Box, Hook, Bridge (54)",
@@ -5924,7 +6319,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "packaging",
       "example",
       "model",
       "template",
@@ -5939,7 +6333,8 @@ STOCK_COMPONENT_INFO = {
       "hook",
       "bridge",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D1FFECF0-EA32-11EB-9161-4277EE9EC01D.png"
   },
   "BlankBoxHookJumbo(36)": {
     "DisplayName": "Blank Box, Hook, Jumbo (36)",
@@ -5949,7 +6344,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "packaging",
       "example",
       "model",
       "template",
@@ -5964,7 +6358,8 @@ STOCK_COMPONENT_INFO = {
       "hook",
       "jumbo",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FC28711E-EA32-11EB-9837-DE2558DE1F23.png"
   },
   "BlankBoxHookJumbo(90)": {
     "DisplayName": "Blank Box, Hook, Jumbo (90)",
@@ -5974,7 +6369,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "packaging",
       "example",
       "model",
       "template",
@@ -5989,7 +6383,8 @@ STOCK_COMPONENT_INFO = {
       "hook",
       "jumbo",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FFFDA19C-EA32-11EB-9161-EC77EE9EC01D.png"
   },
   "BlankBoxHookPoker(108)": {
     "DisplayName": "Blank Box, Hook, Poker (108)",
@@ -5999,7 +6394,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "packaging",
       "example",
       "model",
       "template",
@@ -6014,7 +6408,8 @@ STOCK_COMPONENT_INFO = {
       "hook",
       "poker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F0465190-EA32-11EB-9161-AD77EE9EC01D.png"
   },
   "BlankBoxHookPoker(18)": {
     "DisplayName": "Blank Box, Hook, Poker (18)",
@@ -6024,7 +6419,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "packaging",
       "example",
       "model",
       "template",
@@ -6039,7 +6433,8 @@ STOCK_COMPONENT_INFO = {
       "hook",
       "poker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CB782708-EA32-11EB-9161-1C77EE9EC01D.png"
   },
   "BlankBoxHookPoker(36)": {
     "DisplayName": "Blank Box, Hook, Poker (36)",
@@ -6049,7 +6444,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "packaging",
       "example",
       "model",
       "template",
@@ -6064,7 +6458,8 @@ STOCK_COMPONENT_INFO = {
       "hook",
       "poker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C23676D6-EA32-11EB-9161-0677EE9EC01D.png"
   },
   "BlankBoxHookPoker(54)": {
     "DisplayName": "Blank Box, Hook, Poker (54)",
@@ -6074,7 +6469,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "packaging",
       "example",
       "model",
       "template",
@@ -6089,7 +6483,8 @@ STOCK_COMPONENT_INFO = {
       "hook",
       "poker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FF653E1E-EB10-11EB-BADA-64CEE7726C43.png"
   },
   "BlankBoxHookPoker(72)": {
     "DisplayName": "Blank Box, Hook, Poker (72)",
@@ -6099,7 +6494,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "packaging",
       "example",
       "model",
       "template",
@@ -6114,7 +6508,8 @@ STOCK_COMPONENT_INFO = {
       "hook",
       "poker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/67520E30-EB11-11EB-BADA-22CFE7726C43.png"
   },
   "BlankBoxHookPoker(90)": {
     "DisplayName": "Blank Box, Hook, Poker (90)",
@@ -6124,7 +6519,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "packaging",
       "example",
       "model",
       "template",
@@ -6139,7 +6533,8 @@ STOCK_COMPONENT_INFO = {
       "hook",
       "poker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EC59C800-EA32-11EB-9161-9C77EE9EC01D.png"
   },
   "BlankBoxHookSquare(48)": {
     "DisplayName": "Blank Box, Hook, Square (48)",
@@ -6149,7 +6544,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "packaging",
       "example",
       "model",
       "template",
@@ -6164,7 +6558,8 @@ STOCK_COMPONENT_INFO = {
       "hook",
       "square",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F45D4B4E-EA32-11EB-9161-B277EE9EC01D.png"
   },
   "BlankBoxHookSquare(96)": {
     "DisplayName": "Blank Box, Hook, Square (96)",
@@ -6174,7 +6569,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "packaging",
       "example",
       "model",
       "template",
@@ -6189,7 +6583,8 @@ STOCK_COMPONENT_INFO = {
       "hook",
       "square",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F7DDF9E4-EA32-11EB-9837-D42558DE1F23.png"
   },
   "BlankBoxHookTarot(40)": {
     "DisplayName": "Blank Box, Hook, Tarot (40)",
@@ -6199,7 +6594,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "packaging",
       "example",
       "model",
       "template",
@@ -6214,7 +6608,8 @@ STOCK_COMPONENT_INFO = {
       "hook",
       "tarot",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DCB244F4-EA32-11EB-9837-782558DE1F23.png"
   },
   "BlankBoxHookTarot(90)": {
     "DisplayName": "Blank Box, Hook, Tarot (90)",
@@ -6224,7 +6619,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "packaging",
       "example",
       "model",
       "template",
@@ -6239,7 +6633,8 @@ STOCK_COMPONENT_INFO = {
       "hook",
       "tarot",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E0353FAA-EA32-11EB-9161-7877EE9EC01D.png"
   },
   "BlankBoxProMedium": {
     "DisplayName": "Blank Box, Pro, Medium",
@@ -6261,7 +6656,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "box",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F6678C2C-56FB-11E5-8F60-2A1636CD926D.png"
   },
   "BlankBoxProSmall": {
     "DisplayName": "Blank Box, Pro, Small",
@@ -6283,7 +6679,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "box",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5F6CCD0-CF56-11E9-8690-62B834E1E425.png"
   },
   "BlankBoxPrototypeLarge": {
     "DisplayName": "Blank Box, Prototype, Large",
@@ -6305,7 +6702,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "box",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CF4306F2-5D2B-11EC-A381-67D61E5F5B50.png"
   },
   "BlankBoxPrototypeMedium": {
     "DisplayName": "Blank Box, Prototype, Medium",
@@ -6327,7 +6725,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "box",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BA6847BA-5D2B-11EC-AACA-B76A68FE145E.png"
   },
   "BlankBoxPrototypeSmall": {
     "DisplayName": "Blank Box, Prototype, Small",
@@ -6349,7 +6748,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "box",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C484DE52-5D2B-11EC-A381-12D61E5F5B50.png"
   },
   "BlankBoxRetailLarge": {
     "DisplayName": "Blank Box, Retail, Large",
@@ -6371,7 +6771,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "box",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/61ED7D72-56FB-11E5-A545-1DCFFE149099.png"
   },
   "BlankBoxTuckBridge(108)": {
     "DisplayName": "Blank Box, Tuck, Bridge (108)",
@@ -6395,7 +6796,8 @@ STOCK_COMPONENT_INFO = {
       "tuck",
       "bridge",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6037E48A-B08B-11E8-BB17-87D5CE95AB04.png"
   },
   "BlankBoxTuckBridge(54)": {
     "DisplayName": "Blank Box, Tuck, Bridge (54)",
@@ -6419,7 +6821,8 @@ STOCK_COMPONENT_INFO = {
       "tuck",
       "bridge",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/82F8978A-B08B-11E8-8C22-32D7BCC16479.png"
   },
   "BlankBoxTuckJumbo(90)": {
     "DisplayName": "Blank Box, Tuck, Jumbo (90)",
@@ -6443,7 +6846,8 @@ STOCK_COMPONENT_INFO = {
       "tuck",
       "jumbo",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9988D50A-B08B-11E8-8C22-4DD7BCC16479.png"
   },
   "BlankBoxTuckPoker(108)": {
     "DisplayName": "Blank Box, Tuck, Poker (108)",
@@ -6467,7 +6871,8 @@ STOCK_COMPONENT_INFO = {
       "tuck",
       "poker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1F2DD3F0-B08B-11E8-8C22-BDD5BCC16479.png"
   },
   "BlankBoxTuckPoker(36)": {
     "DisplayName": "Blank Box, Tuck, Poker (36)",
@@ -6491,7 +6896,8 @@ STOCK_COMPONENT_INFO = {
       "tuck",
       "poker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AFE63FCC-B08B-11E8-8C22-6BD7BCC16479.png"
   },
   "BlankBoxTuckPoker(54)": {
     "DisplayName": "Blank Box, Tuck, Poker (54)",
@@ -6515,7 +6921,8 @@ STOCK_COMPONENT_INFO = {
       "tuck",
       "poker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C20F6192-B08B-11E8-BB17-77D6CE95AB04.png"
   },
   "BlankBoxTuckPoker(72)": {
     "DisplayName": "Blank Box, Tuck, Poker (72)",
@@ -6539,7 +6946,8 @@ STOCK_COMPONENT_INFO = {
       "tuck",
       "poker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D759E50E-B08B-11E8-8C22-8FD7BCC16479.png"
   },
   "BlankBoxTuckPoker(90)": {
     "DisplayName": "Blank Box, Tuck, Poker (90)",
@@ -6563,7 +6971,8 @@ STOCK_COMPONENT_INFO = {
       "tuck",
       "poker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ED09F1AA-B08B-11E8-8C22-BDD7BCC16479.png"
   },
   "BlankBoxTuckSquare(48)": {
     "DisplayName": "Blank Box, Tuck, Square (48)",
@@ -6586,7 +6995,8 @@ STOCK_COMPONENT_INFO = {
       "box",
       "tuck",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A4BE274-B08C-11E8-8C22-4FD8BCC16479.png"
   },
   "BlankBoxTuckSquare(96)": {
     "DisplayName": "Blank Box, Tuck, Square (96)",
@@ -6609,7 +7019,8 @@ STOCK_COMPONENT_INFO = {
       "tuck",
       "square",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5EB4A764-B08C-11E8-8C22-6FD8BCC16479.png"
   },
   "BlankBoxTuckTarot(40)": {
     "DisplayName": "Blank Box, Tuck, Tarot (40)",
@@ -6633,7 +7044,8 @@ STOCK_COMPONENT_INFO = {
       "tarot",
       "box",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E0C1ED56-56FE-11E5-BEF7-1DCFFE149099.png"
   },
   "BlankBoxTuckTarot(90)": {
     "DisplayName": "Blank Box, Tuck, Tarot (90)",
@@ -6657,11 +7069,12 @@ STOCK_COMPONENT_INFO = {
       "tarot",
       "tuck",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/33061A26-B08C-11E8-BB17-ECD6CE95AB04.png"
   },
   "BlankBridgeCard": {
     "DisplayName": "Blank Bridge Card",
-    "Description": "Cut by the same equipment that cuts our printed bridge cards, so they are exactly the same size. Great for prototyping.",
+    "Description": "Each card sold separately.  Cut by the same equipment that cuts our printed bridge cards, so they are exactly the same size. Great for prototyping.",
     "GameCrafterGuid": "15B3455E-3088-11E3-AE6C-7FB8B5238BE3",
     "GameCrafterSkuId": "15B378C6-3088-11E3-AE6C-7FB8B5238BE3",
     "Tags": [
@@ -6681,11 +7094,12 @@ STOCK_COMPONENT_INFO = {
       "deck",
       "bridge",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5FBF12AE-3088-11E3-A6BF-80B8B5238BE3.png"
   },
   "BlankBusinessCard": {
     "DisplayName": "Blank Business Card",
-    "Description": "Cut by the same equipment that cuts our printed business cards, so they are exactly the same size. Great for prototyping.",
+    "Description": "Each card sold separately.  Cut by the same equipment that cuts our printed business cards, so they are exactly the same size. Great for prototyping.",
     "GameCrafterGuid": "4B6A1018-A73A-11E4-8CE1-7B7DB2B0CB8E",
     "GameCrafterSkuId": "4B6A461E-A73A-11E4-8CE1-7B7DB2B0CB8E",
     "Tags": [
@@ -6704,7 +7118,8 @@ STOCK_COMPONENT_INFO = {
       "card",
       "business",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2F8BFB0C-B286-11E4-9541-C208313DE1AF.png"
   },
   "BlankChitArrow": {
     "DisplayName": "Blank Chit, Arrow",
@@ -6727,7 +7142,8 @@ STOCK_COMPONENT_INFO = {
       "chit",
       "arrow",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/62D537D0-21E3-11E6-9954-1ABED96019DD.png"
   },
   "BlankChitBullseye": {
     "DisplayName": "Blank Chit, Bullseye",
@@ -6750,7 +7166,8 @@ STOCK_COMPONENT_INFO = {
       "chit",
       "bullseye",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/635E4804-21E3-11E6-9DC7-1ABED96019DD.png"
   },
   "BlankChitCircleLarge": {
     "DisplayName": "Blank Chit, Circle, Large",
@@ -6773,7 +7190,8 @@ STOCK_COMPONENT_INFO = {
       "chit",
       "circle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/23D51966-E0A6-11E5-A465-34853ACF1344.png"
   },
   "BlankChitCircleMedium": {
     "DisplayName": "Blank Chit, Circle, Medium",
@@ -6796,7 +7214,8 @@ STOCK_COMPONENT_INFO = {
       "chit",
       "circle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/23D51966-E0A6-11E5-A465-34853ACF1344.png"
   },
   "BlankChitCircleSmall": {
     "DisplayName": "Blank Chit, Circle, Small",
@@ -6819,7 +7238,8 @@ STOCK_COMPONENT_INFO = {
       "chit",
       "circle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/23D51966-E0A6-11E5-A465-34853ACF1344.png"
   },
   "BlankChitDomino": {
     "DisplayName": "Blank Chit, Domino",
@@ -6842,7 +7262,8 @@ STOCK_COMPONENT_INFO = {
       "chit",
       "domino",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/63666246-21E3-11E6-8665-AF4DEB12782E.png"
   },
   "BlankChitSquareLarge": {
     "DisplayName": "Blank Chit, Square, Large",
@@ -6865,7 +7286,8 @@ STOCK_COMPONENT_INFO = {
       "chit",
       "square",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8DB9724C-408F-11E2-A485-B7CFD946F4D1.png"
   },
   "BlankChitSquareMedium": {
     "DisplayName": "Blank Chit, Square, Medium",
@@ -6888,7 +7310,8 @@ STOCK_COMPONENT_INFO = {
       "square",
       "chit",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8DB9724C-408F-11E2-A485-B7CFD946F4D1.png"
   },
   "BlankChitSquareSmall": {
     "DisplayName": "Blank Chit, Square, Small",
@@ -6910,7 +7333,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "square",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/66C5DC32-21E3-11E6-BD71-1ABED96019DD.png"
   },
   "BlankChitTriangleMedium": {
     "DisplayName": "Blank Chit, Triangle, Medium",
@@ -6932,11 +7356,12 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "triangle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/65E6D9C4-21E3-11E6-85F3-1ABED96019DD.png"
   },
   "BlankCircleCard": {
     "DisplayName": "Blank Circle Card",
-    "Description": "Blank version of our <a href=\"https://www.thegamecrafter.com/make/products/CircleDeck\">circle cards</a>.",
+    "Description": "Each card sold separately.  Blank version of our <a href=\"https://www.thegamecrafter.com/make/products/CircleDeck\">circle cards</a>.",
     "GameCrafterGuid": "FF091632-4692-11E3-8DDC-4377F14FE85E",
     "GameCrafterSkuId": "FF094AC6-4692-11E3-8DDC-4377F14FE85E",
     "Tags": [
@@ -6955,7 +7380,8 @@ STOCK_COMPONENT_INFO = {
       "circle",
       "card",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8DA1D258-4693-11E3-B0AA-4377F14FE85E.png"
   },
   "BlankCircleShard": {
     "DisplayName": "Blank Circle Shard",
@@ -6978,11 +7404,12 @@ STOCK_COMPONENT_INFO = {
       "shard",
       "circle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A875EFDC-308C-11E3-88CE-80B8B5238BE3.png"
   },
   "BlankClearEuroPokerCard": {
     "DisplayName": "Blank Clear Euro Poker Card",
-    "Description": "Blank version of our <a href=\"https://www.thegamecrafter.com/make/products/ClearEuroPokerDeck\">Clear Euro Poker Card</a>, transparent and made of PVC plastic. Cut by the same equipment that cuts our printed clear euro poker cards, so they are exactly the same size.",
+    "Description": "Each card sold separately.  Blank version of our <a href=\"https://www.thegamecrafter.com/make/products/ClearEuroPokerDeck\">Clear Euro Poker Card</a>, transparent and made of PVC plastic. Cut by the same equipment that cuts our printed clear euro poker cards, so they are exactly the same size.",
     "GameCrafterGuid": "F28C6CE0-C53F-11EB-A3A6-0DB5191B093B",
     "GameCrafterSkuId": "F2931AD6-C53F-11EB-A3A6-0DB5191B093B",
     "Tags": [
@@ -7001,11 +7428,12 @@ STOCK_COMPONENT_INFO = {
       "card",
       "poker",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CE2EDB0A-CAC4-11EB-9457-6B9CAB1B0D64.png"
   },
   "BlankDividerCard": {
     "DisplayName": "Blank Divider Card",
-    "Description": "This a blank divider card that fits in the Deck Box.",
+    "Description": "Each card sold separately.  This a blank divider card that fits in the Deck Box.",
     "GameCrafterGuid": "5EE0BDAE-339F-11E9-9C7E-7FF13AF41BB0",
     "GameCrafterSkuId": "5EE5E914-339F-11E9-9C7E-7FF13AF41BB0",
     "Tags": [
@@ -7024,7 +7452,8 @@ STOCK_COMPONENT_INFO = {
       "divider",
       "card",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DDDB54BE-33B0-11E9-8BE3-1A103BF41BB0.png"
   },
   "BlankDocument": {
     "DisplayName": "Blank Document",
@@ -7046,11 +7475,12 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "document",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E576AE46-E5AE-11EB-BE1A-54ED57DE1F23.png"
   },
   "BlankDominoCard": {
     "DisplayName": "Blank Domino Card",
-    "Description": "Made from the same material and cut using the same equipment as our printed domino cards, these are ideal for prototyping.",
+    "Description": "Each card sold separately.  Made from the same material and cut using the same equipment as our printed domino cards, these are ideal for prototyping.",
     "GameCrafterGuid": "ECC355CE-A73E-11E4-8D27-7B7DB2B0CB8E",
     "GameCrafterSkuId": "ECC38F58-A73E-11E4-8D27-7B7DB2B0CB8E",
     "Tags": [
@@ -7069,7 +7499,8 @@ STOCK_COMPONENT_INFO = {
       "card",
       "poker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F7FE1520-B286-11E4-A4B1-7239E95B2310.png"
   },
   "BlankDualDial": {
     "DisplayName": "Blank Dual Dial",
@@ -7091,7 +7522,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "dial",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/119CA81C-B133-11E8-B0E5-9DC0CE95AB04.png"
   },
   "BlankEuroPoker": {
     "DisplayName": "Blank Euro Poker",
@@ -7137,11 +7569,12 @@ STOCK_COMPONENT_INFO = {
       "card",
       "euro square",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1ED059E4-21E2-11E6-AAC6-1ABED96019DD.png"
   },
   "BlankFoilPokerCard": {
     "DisplayName": "Blank Foil Poker Card",
-    "Description": "Cut by the same equipment that cuts our printed <a href=\"https://www.thegamecrafter.com/make/products/FoilPokerDeck\">foil poker cards</a>, so they are exactly the same size. Great for prototyping.  Note that the foil is only on one side - the other side is blank cardstock.",
+    "Description": "Each card sold separately.  Cut by the same equipment that cuts our printed <a href=\"https://www.thegamecrafter.com/make/products/FoilPokerDeck\">foil poker cards</a>, so they are exactly the same size. Great for prototyping.  Note that the foil is only on one side - the other side is blank cardstock.",
     "GameCrafterGuid": "2F4E79CA-1AB9-11EB-B653-2538FA3D5F78",
     "GameCrafterSkuId": "2F748CBE-1AB9-11EB-B653-2538FA3D5F78",
     "Tags": [
@@ -7162,11 +7595,12 @@ STOCK_COMPONENT_INFO = {
       "holographic",
       "holofoil,shiny",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/46A6ADDE-1F7F-11EB-8524-94141D004E32.png"
   },
   "BlankFoilTarotCard": {
     "DisplayName": "Blank Foil Tarot Card",
-    "Description": "Cut by the same equipment that cuts our printed <a href=\"https://www.thegamecrafter.com/make/products/FoilTarotDeck\">foil tarot cards</a>, so they are exactly the same size. Great for prototyping.  Note that the foil is only on one side - the other side is blank cardstock.",
+    "Description": "Each card sold separately.  Cut by the same equipment that cuts our printed <a href=\"https://www.thegamecrafter.com/make/products/FoilTarotDeck\">foil tarot cards</a>, so they are exactly the same size. Great for prototyping.  Note that the foil is only on one side - the other side is blank cardstock.",
     "GameCrafterGuid": "41EAB670-1AB9-11EB-B653-5238FA3D5F78",
     "GameCrafterSkuId": "420538E2-1AB9-11EB-B653-5238FA3D5F78",
     "Tags": [
@@ -7191,7 +7625,8 @@ STOCK_COMPONENT_INFO = {
       "lenormand",
       "arcana",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/54629D20-1F7F-11EB-8524-DF4208A53D20.png"
   },
   "BlankFolioBridge": {
     "DisplayName": "Blank Folio, Bridge",
@@ -7201,7 +7636,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "document",
       "example",
       "model",
       "template",
@@ -7215,7 +7649,8 @@ STOCK_COMPONENT_INFO = {
       "folio",
       "bridge",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AF83C562-E5AE-11EB-BE1A-D3EC57DE1F23.png"
   },
   "BlankFolioMedium": {
     "DisplayName": "Blank Folio, Medium",
@@ -7225,7 +7660,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "document",
       "example",
       "model",
       "template",
@@ -7239,7 +7673,8 @@ STOCK_COMPONENT_INFO = {
       "folio",
       "medium",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C0C911E2-E5AE-11EB-BE1A-0DED57DE1F23.png"
   },
   "BlankFolioMintTin": {
     "DisplayName": "Blank Folio, Mint Tin",
@@ -7249,7 +7684,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "document",
       "example",
       "model",
       "template",
@@ -7263,7 +7697,8 @@ STOCK_COMPONENT_INFO = {
       "folio",
       "mint tin",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D67875BE-E5AE-11EB-BE1A-2BED57DE1F23.png"
   },
   "BlankFolioPoker": {
     "DisplayName": "Blank Folio, Poker",
@@ -7273,7 +7708,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "document",
       "example",
       "model",
       "template",
@@ -7287,7 +7721,8 @@ STOCK_COMPONENT_INFO = {
       "folio",
       "poker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A97EA2D6-E5AE-11EB-BE1A-C4EC57DE1F23.png"
   },
   "BlankFolioSmall": {
     "DisplayName": "Blank Folio, Small",
@@ -7297,7 +7732,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "blank",
       "prototype",
-      "document",
       "example",
       "model",
       "template",
@@ -7312,7 +7746,8 @@ STOCK_COMPONENT_INFO = {
       "small",
       "jumbo",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BCEEC42C-E5AE-11EB-BE1A-FCEC57DE1F23.png"
   },
   "BlankFolioSquare": {
     "DisplayName": "Blank Folio, Square",
@@ -7323,7 +7758,6 @@ STOCK_COMPONENT_INFO = {
       "blank",
       "prototype",
       "example",
-      "document",
       "model",
       "template",
       "design",
@@ -7336,7 +7770,8 @@ STOCK_COMPONENT_INFO = {
       "folio",
       "square",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B93E944C-E5AE-11EB-BE1A-01ED57DE1F23.png"
   },
   "BlankFolioTarot": {
     "DisplayName": "Blank Folio, Tarot",
@@ -7348,7 +7783,6 @@ STOCK_COMPONENT_INFO = {
       "prototype",
       "example",
       "model",
-      "document",
       "template",
       "design",
       "sample",
@@ -7360,11 +7794,12 @@ STOCK_COMPONENT_INFO = {
       "folio",
       "tarot",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B6D5CA18-E5AE-11EB-BE1A-F9EC57DE1F23.png"
   },
   "BlankHexCard": {
     "DisplayName": "Blank Hex Card",
-    "Description": "These 3.75 inch blank hex cards are made of the same material and cut by the same process as our regular <a href=\"https://www.thegamecrafter.com/make/products/HexDeck\">hex cards</a>. These are great for prototyping. ",
+    "Description": "Each card sold separately.  These 3.75 inch blank hex cards are made of the same material and cut by the same process as our regular <a href=\"https://www.thegamecrafter.com/make/products/HexDeck\">hex cards</a>. These are great for prototyping. ",
     "GameCrafterGuid": "08598152-47BE-11E1-9E8A-7BA9921A1C03",
     "GameCrafterSkuId": "08599868-47BE-11E1-9E8A-7BA9921A1C03",
     "Tags": [
@@ -7383,7 +7818,8 @@ STOCK_COMPONENT_INFO = {
       "card",
       "hex",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7117BDF8-47BE-11E1-96C1-7BA9921A1C03.png"
   },
   "BlankHexShard": {
     "DisplayName": "Blank Hex Shard",
@@ -7407,11 +7843,12 @@ STOCK_COMPONENT_INFO = {
       "hex",
       "hexagon",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/62C74638-3088-11E3-86DA-80B8B5238BE3.png"
   },
   "BlankJumboCard": {
     "DisplayName": "Blank Jumbo Card",
-    "Description": "Made from the same material and cut using the same equipment as our printed jumbo cards, these are ideal for prototyping. ",
+    "Description": "Each card sold separately.  Made from the same material and cut using the same equipment as our printed jumbo cards, these are ideal for prototyping. ",
     "GameCrafterGuid": "8252A7D2-47C2-11E1-9E8A-7BA9921A1C03",
     "GameCrafterSkuId": "8252BC04-47C2-11E1-9E8A-7BA9921A1C03",
     "Tags": [
@@ -7429,7 +7866,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "card",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D8FAC524-47C2-11E1-85EA-7BA9921A1C03.png"
   },
   "BlankMatBig": {
     "DisplayName": "Blank Mat, Big",
@@ -7451,7 +7889,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "mat",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/876C5990-408F-11E2-AB2F-B7CFD946F4D1.png"
   },
   "BlankMatDomino": {
     "DisplayName": "Blank Mat, Domino",
@@ -7474,7 +7913,8 @@ STOCK_COMPONENT_INFO = {
       "mat",
       "domino",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A45397A2-4693-11E3-93B8-4377F14FE85E.png"
   },
   "BlankMatFlower": {
     "DisplayName": "Blank Mat, Flower",
@@ -7497,7 +7937,8 @@ STOCK_COMPONENT_INFO = {
       "flower",
       "mat",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/60603CC4-3088-11E3-A6BF-80B8B5238BE3.png"
   },
   "BlankMatHalf": {
     "DisplayName": "Blank Mat, Half",
@@ -7519,7 +7960,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "mat",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0868A06C-CC70-11E4-9BE1-BD20506B0483.png"
   },
   "BlankMatHex": {
     "DisplayName": "Blank Mat, Hex",
@@ -7543,7 +7985,8 @@ STOCK_COMPONENT_INFO = {
       "hex",
       "hexagon",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3648EF28-475B-11E3-8C6D-1A5FF14FE85E.png"
   },
   "BlankMatHexLarge": {
     "DisplayName": "Blank Mat, Hex, Large",
@@ -7565,7 +8008,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "mat",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9FC280FE-4693-11E3-B95B-4377F14FE85E.png"
   },
   "BlankMatInvader": {
     "DisplayName": "Blank Mat, Invader",
@@ -7588,7 +8032,8 @@ STOCK_COMPONENT_INFO = {
       "mat",
       "invader",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/89A63F96-408F-11E2-AC8E-B7CFD946F4D1.png"
   },
   "BlankMatPostcard": {
     "DisplayName": "Blank Mat, Postcard",
@@ -7611,7 +8056,8 @@ STOCK_COMPONENT_INFO = {
       "mat",
       "postcard",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E2DD5694-E5AE-11EB-AAA7-8FAEEE9EC01D.png"
   },
   "BlankMatQuarter": {
     "DisplayName": "Blank Mat, Quarter",
@@ -7633,7 +8079,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "mat",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/95975D70-4693-11E3-B95B-4377F14FE85E.png"
   },
   "BlankMatSkinny": {
     "DisplayName": "Blank Mat, Skinny",
@@ -7655,7 +8102,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "mat",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/98DE846E-47C0-11E1-9E8A-7BA9921A1C03.png"
   },
   "BlankMatSliver": {
     "DisplayName": "Blank Mat, Sliver",
@@ -7678,7 +8126,8 @@ STOCK_COMPONENT_INFO = {
       "mat",
       "sliver",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A5D92530-5666-11E5-8BEE-5E5436CD926D.png"
   },
   "BlankMatSmallBi-fold": {
     "DisplayName": "Blank Mat, Small Bi-fold",
@@ -7701,7 +8150,8 @@ STOCK_COMPONENT_INFO = {
       "mat",
       "bi-fold",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EA1147E0-E5AE-11EB-AAA7-B0AEEE9EC01D.png"
   },
   "BlankMatSpinner": {
     "DisplayName": "Blank Mat, Spinner",
@@ -7724,7 +8174,8 @@ STOCK_COMPONENT_INFO = {
       "mat",
       "spinner",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7B7DA162-47C4-11E1-9E8A-7BA9921A1C03.png"
   },
   "BlankMatSquare": {
     "DisplayName": "Blank Mat, Square",
@@ -7746,7 +8197,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "mat",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/95975D70-4693-11E3-B95B-4377F14FE85E.png"
   },
   "BlankMatSquareLarge": {
     "DisplayName": "Blank Mat, Square, Large",
@@ -7769,7 +8221,8 @@ STOCK_COMPONENT_INFO = {
       "mat",
       "square",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8B1BF244-408F-11E2-83F5-B7CFD946F4D1.png"
   },
   "BlankMatSquareSmall": {
     "DisplayName": "Blank Mat, Square, Small",
@@ -7792,7 +8245,8 @@ STOCK_COMPONENT_INFO = {
       "mat",
       "square",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BC0F9892-47BB-11E1-96C1-7BA9921A1C03.png"
   },
   "BlankMatStrip": {
     "DisplayName": "Blank Mat, Strip",
@@ -7815,7 +8269,8 @@ STOCK_COMPONENT_INFO = {
       "mat",
       "strip",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ED2FD5CA-CC6C-11E4-B074-F45D81F9DBEC.png"
   },
   "BlankMicroCard(slug)": {
     "DisplayName": "Blank Micro Card (slug)",
@@ -7838,11 +8293,12 @@ STOCK_COMPONENT_INFO = {
       "card",
       "micro",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/86369910-4553-11EB-8206-4366C313F0E0.png"
   },
   "BlankMiniCard": {
     "DisplayName": "Blank Mini Card",
-    "Description": "Made from the same material and cut using the same equipment as our printed mini cards, these are ideal for prototyping. ",
+    "Description": "Each card sold separately.  Made from the same material and cut using the same equipment as our printed mini cards, these are ideal for prototyping. ",
     "GameCrafterGuid": "B541AAC8-61D8-11E1-9233-F5A2BD782CDC",
     "GameCrafterSkuId": "B541C1F2-61D8-11E1-9233-F5A2BD782CDC",
     "Tags": [
@@ -7861,7 +8317,8 @@ STOCK_COMPONENT_INFO = {
       "card",
       "mini",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/77C6200A-F6C8-11E0-9180-EB2060677055.png"
   },
   "BlankMintTinAccordion(4Panel)": {
     "DisplayName": "Blank Mint Tin Accordion (4 Panel)",
@@ -7885,7 +8342,8 @@ STOCK_COMPONENT_INFO = {
       "accordion",
       "divider",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0491B8B8-FF71-11EA-BA35-A6141618BCF0.png"
   },
   "BlankMintTinAccordion(6Panel)": {
     "DisplayName": "Blank Mint Tin Accordion (6 Panel)",
@@ -7909,7 +8367,8 @@ STOCK_COMPONENT_INFO = {
       "accordion",
       "divider",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9090D402-FF71-11EA-815C-0BF93D8A83F5.png"
   },
   "BlankMintTinAccordion(8Panel)": {
     "DisplayName": "Blank Mint Tin Accordion (8 Panel)",
@@ -7933,11 +8392,12 @@ STOCK_COMPONENT_INFO = {
       "accordion",
       "divider",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E5F6CADC-FF71-11EA-BA35-A6151618BCF0.png"
   },
   "BlankMintTinCard": {
     "DisplayName": "Blank Mint Tin Card",
-    "Description": "Made from the same material and cut using the same equipment as our printed mint tin cards, these are ideal for prototyping. Designed to fit perfectly inside our <a href=\"https://www.thegamecrafter.com/parts/mint-tin\">mint tins</a>.",
+    "Description": "Each card sold separately.  Made from the same material and cut using the same equipment as our printed mint tin cards, these are ideal for prototyping. Designed to fit perfectly inside our <a href=\"https://www.thegamecrafter.com/parts/mint-tin\">mint tins</a>.",
     "GameCrafterGuid": "EA723BBA-C37B-11E9-AA5E-42F5C8268CB1",
     "GameCrafterSkuId": "EA76D224-C37B-11E9-AA5E-42F5C8268CB1",
     "Tags": [
@@ -7956,7 +8416,8 @@ STOCK_COMPONENT_INFO = {
       "card",
       "mint tin",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FFA6AF3C-C37D-11E9-AA5E-90F8C8268CB1.png"
   },
   "BlankMoneyPlay": {
     "DisplayName": "Blank Money, Play",
@@ -8007,11 +8468,12 @@ STOCK_COMPONENT_INFO = {
       "mock up",
       "sampling",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EC2F7012-EC00-11EB-8A98-7F2BD978D3E1.png"
   },
   "BlankPokerCard": {
     "DisplayName": "Blank Poker Card",
-    "Description": "Cut by the same equipment that cuts our printed <a href=\"https://www.thegamecrafter.com/make/products/PokerDeck\">poker cards</a>, so they are exactly the same size. Great for prototyping.",
+    "Description": "Each card sold separately.  Cut by the same equipment that cuts our printed <a href=\"https://www.thegamecrafter.com/make/products/PokerDeck\">poker cards</a>, so they are exactly the same size. Great for prototyping.",
     "GameCrafterGuid": "E4D5E712-F6C7-11E0-B52D-EB2060677055",
     "GameCrafterSkuId": "E4D5FB58-F6C7-11E0-B52D-EB2060677055",
     "Tags": [
@@ -8030,7 +8492,8 @@ STOCK_COMPONENT_INFO = {
       "card",
       "poker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/77C6200A-F6C8-11E0-9180-EB2060677055.png"
   },
   "BlankRingLarge": {
     "DisplayName": "Blank Ring, Large",
@@ -8052,7 +8515,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "ring",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/63EB780A-21E3-11E6-85F3-1ABED96019DD.png"
   },
   "BlankRingMedium": {
     "DisplayName": "Blank Ring, Medium",
@@ -8074,7 +8538,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "ring",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/64CF025A-21E3-11E6-A2F3-1ABED96019DD.png"
   },
   "BlankRingSmall": {
     "DisplayName": "Blank Ring, Small",
@@ -8096,7 +8561,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "ring",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/66640778-21E3-11E6-B04C-AF4DEB12782E.png"
   },
   "BlankScreenLarge": {
     "DisplayName": "Blank Screen, Large",
@@ -8122,7 +8588,8 @@ STOCK_COMPONENT_INFO = {
       "divider",
       "barrier",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A92DA96A-308C-11E3-9E6A-80B8B5238BE3.png"
   },
   "BlankScreenMedium": {
     "DisplayName": "Blank Screen, Medium",
@@ -8148,7 +8615,8 @@ STOCK_COMPONENT_INFO = {
       "divider",
       "barrier",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AA16776C-308C-11E3-94E0-80B8B5238BE3.png"
   },
   "BlankScreenSmall": {
     "DisplayName": "Blank Screen, Small",
@@ -8174,7 +8642,8 @@ STOCK_COMPONENT_INFO = {
       "divider",
       "barrier",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0C412AB6-314D-11E3-AD25-27E08E576CCE.png"
   },
   "BlankSmallDial": {
     "DisplayName": "Blank Small Dial",
@@ -8196,7 +8665,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "dial",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A24F0C60-B133-11E8-AAB7-35C5BCC16479.png"
   },
   "BlankSmallProTarotInsert": {
     "DisplayName": "Blank Small Pro Tarot Insert",
@@ -8220,11 +8690,12 @@ STOCK_COMPONENT_INFO = {
       "tarot",
       "insert",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C0F9F48E-C3E8-11EB-B9DF-287B6F30B128.png"
   },
   "BlankSmallSquareCard": {
     "DisplayName": "Blank Small Square Card",
-    "Description": "Made from the same material and cut using the same equipment as our printed small square cards, these are ideal for prototyping.",
+    "Description": "Each card sold separately.  Made from the same material and cut using the same equipment as our printed small square cards, these are ideal for prototyping.",
     "GameCrafterGuid": "A1D6D9D6-A73F-11E4-8F71-7B7DB2B0CB8E",
     "GameCrafterSkuId": "A1D71216-A73F-11E4-8F71-7B7DB2B0CB8E",
     "Tags": [
@@ -8244,7 +8715,8 @@ STOCK_COMPONENT_INFO = {
       "square",
       "notecard",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/728441C0-B287-11E4-A60E-C208313DE1AF.png"
   },
   "BlankSmallStoutTarotInsert": {
     "DisplayName": "Blank Small Stout Tarot Insert",
@@ -8268,11 +8740,12 @@ STOCK_COMPONENT_INFO = {
       "tarot",
       "insert",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D201749E-C3BD-11EB-A327-42986F30B128.png"
   },
   "BlankSquareCard": {
     "DisplayName": "Blank Square Card",
-    "Description": "Made from the same material and cut using the same equipment as our printed square cards, these are ideal for prototyping. ",
+    "Description": "Each card sold separately.  Made from the same material and cut using the same equipment as our printed square cards, these are ideal for prototyping. ",
     "GameCrafterGuid": "A7B45D98-47C4-11E1-85EA-7BA9921A1C03",
     "GameCrafterSkuId": "A7B4745E-47C4-11E1-85EA-7BA9921A1C03",
     "Tags": [
@@ -8292,7 +8765,8 @@ STOCK_COMPONENT_INFO = {
       "square",
       "notecard",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7D61EF00-47C5-11E1-85EA-7BA9921A1C03.png"
   },
   "BlankSquareShard": {
     "DisplayName": "Blank Square Shard",
@@ -8315,7 +8789,8 @@ STOCK_COMPONENT_INFO = {
       "shard",
       "square",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8C3B6678-408F-11E2-A687-B7CFD946F4D1.png"
   },
   "BlankStandeeLarge": {
     "DisplayName": "Blank Standee, Large",
@@ -8337,7 +8812,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "standee",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/18C2144A-B135-11E8-AAB7-83C7BCC16479.png"
   },
   "BlankStandeeMedium": {
     "DisplayName": "Blank Standee, Medium",
@@ -8359,7 +8835,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "standee",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/49726680-B135-11E8-B0E5-F3C3CE95AB04.png"
   },
   "BlankStandeeSmall": {
     "DisplayName": "Blank Standee, Small",
@@ -8381,7 +8858,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "standee",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/57315E70-B135-11E8-B0E5-07C4CE95AB04.png"
   },
   "BlankStickersMeeple": {
     "DisplayName": "Blank Stickers, Meeple",
@@ -8404,7 +8882,8 @@ STOCK_COMPONENT_INFO = {
       "meeple",
       "sticker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A3F07ABE-ED35-11E5-8A3D-8CAAFCC30529.png"
   },
   "BlankStickersPawn": {
     "DisplayName": "Blank Stickers, Pawn",
@@ -8427,7 +8906,8 @@ STOCK_COMPONENT_INFO = {
       "sticker",
       "pawn",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A473AB0A-ED35-11E5-82E8-5DA30D20B532.png"
   },
   "BlankStickersSheetDice": {
     "DisplayName": "Blank Stickers, Sheet, Dice",
@@ -8451,7 +8931,8 @@ STOCK_COMPONENT_INFO = {
       "sticker",
       "dice",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3FE7B726-D682-11E1-8E98-6F0B14BAC486.png"
   },
   "BlankStickersSheetToken": {
     "DisplayName": "Blank Stickers, Sheet, Token",
@@ -8475,11 +8956,12 @@ STOCK_COMPONENT_INFO = {
       "token",
       "sticker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E5DB6B62-D67F-11E1-96B4-6F0B14BAC486.png"
   },
   "BlankTarotCard": {
     "DisplayName": "Blank Tarot Card",
-    "Description": "Cut by the same equipment that cuts our printed tarot cards, so they are exactly the same size. Great for prototyping.",
+    "Description": "Each card sold separately.  Cut by the same equipment that cuts our printed tarot cards, so they are exactly the same size. Great for prototyping.",
     "GameCrafterGuid": "E6B883DA-3088-11E3-89A4-7FB8B5238BE3",
     "GameCrafterSkuId": "E6B8B300-3088-11E3-89A4-7FB8B5238BE3",
     "Tags": [
@@ -8501,7 +8983,8 @@ STOCK_COMPONENT_INFO = {
       "lenormand",
       "arcana",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/614BC6DA-3088-11E3-A2D0-80B8B5238BE3.png"
   },
   "BlankTileCircleMini": {
     "DisplayName": "Blank Tile, Circle, Mini",
@@ -8524,7 +9007,8 @@ STOCK_COMPONENT_INFO = {
       "circle",
       "tile",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6409AC46-B2A8-11E8-A9CC-E9E2CE95AB04.png"
   },
   "BlankTileDomino": {
     "DisplayName": "Blank Tile, Domino",
@@ -8547,7 +9031,8 @@ STOCK_COMPONENT_INFO = {
       "tile",
       "domino",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6F6AFAE0-B2A8-11E8-A9CC-12E3CE95AB04.png"
   },
   "BlankTileHexLarge": {
     "DisplayName": "Blank Tile, Hex, Large",
@@ -8571,7 +9056,8 @@ STOCK_COMPONENT_INFO = {
       "hex",
       "hexagon",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/71E880DA-B2A8-11E8-9668-CBD4BCC16479.png"
   },
   "BlankTileHexMedium": {
     "DisplayName": "Blank Tile, Hex, Medium",
@@ -8595,7 +9081,8 @@ STOCK_COMPONENT_INFO = {
       "hex",
       "hexagon",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7423DF84-B2A8-11E8-9668-CAD4BCC16479.png"
   },
   "BlankTileHexMini": {
     "DisplayName": "Blank Tile, Hex, Mini",
@@ -8619,7 +9106,8 @@ STOCK_COMPONENT_INFO = {
       "hex",
       "hexagon",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/76AE9D20-B2A8-11E8-A9CC-17E3CE95AB04.png"
   },
   "BlankTileHexSmall": {
     "DisplayName": "Blank Tile, Hex, Small",
@@ -8643,7 +9131,8 @@ STOCK_COMPONENT_INFO = {
       "hex",
       "hexagon",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/784E7290-B2A8-11E8-9668-D1D4BCC16479.png"
   },
   "BlankTileSquareLarge": {
     "DisplayName": "Blank Tile, Square, Large",
@@ -8666,7 +9155,8 @@ STOCK_COMPONENT_INFO = {
       "tile",
       "square",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7DC45D0C-B2A8-11E8-9668-D4D4BCC16479.png"
   },
   "BlankTileSquareMedium": {
     "DisplayName": "Blank Tile, Square, Medium",
@@ -8689,7 +9179,8 @@ STOCK_COMPONENT_INFO = {
       "tile",
       "square",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/80F8B13A-B2A8-11E8-A9CC-1DE3CE95AB04.png"
   },
   "BlankTileSquareMini": {
     "DisplayName": "Blank Tile, Square, Mini",
@@ -8712,7 +9203,8 @@ STOCK_COMPONENT_INFO = {
       "tile",
       "square",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CE55F8D8-B2A9-11E8-A9CC-04E5CE95AB04.png"
   },
   "BlankTileSquareSmall": {
     "DisplayName": "Blank Tile, Square, Small",
@@ -8735,7 +9227,8 @@ STOCK_COMPONENT_INFO = {
       "tile",
       "square",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9A36F5A8-B2A8-11E8-A9CC-4BE3CE95AB04.png"
   },
   "BlankTileTriangle": {
     "DisplayName": "Blank Tile, Triangle",
@@ -8758,7 +9251,8 @@ STOCK_COMPONENT_INFO = {
       "tile",
       "triangle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D3F19F50-B2A8-11E8-9668-60D5BCC16479.png"
   },
   "BlankTombstoneShard": {
     "DisplayName": "Blank Tombstone Shard",
@@ -8781,11 +9275,12 @@ STOCK_COMPONENT_INFO = {
       "shard",
       "tombstone",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/621C9EFE-3088-11E3-B028-80B8B5238BE3.png"
   },
   "BlankUSGameCard": {
     "DisplayName": "Blank US Game Card",
-    "Description": "Cut by the same equipment that cuts our printed us game cards, so they are exactly the same size. Great for prototyping.",
+    "Description": "Each card sold separately.  Cut by the same equipment that cuts our printed us game cards, so they are exactly the same size. Great for prototyping.",
     "GameCrafterGuid": "E92DB668-A042-11E5-893D-EA64A5C97202",
     "GameCrafterSkuId": "E92DC748-A042-11E5-893D-EA64A5C97202",
     "Tags": [
@@ -8803,7 +9298,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "card",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6737A56A-21E3-11E6-95BC-1ABED96019DD.png"
   },
   "BlankUSGameMat": {
     "DisplayName": "Blank US Game Mat",
@@ -8827,7 +9323,8 @@ STOCK_COMPONENT_INFO = {
       "playmat",
       "placemat",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/67A504D4-21E3-11E6-8708-1ABED96019DD.png"
   },
   "BlightTwigFantasyTB25": {
     "DisplayName": "Blight Twig, Fantasy, TB25",
@@ -8842,7 +9339,8 @@ STOCK_COMPONENT_INFO = {
       "mulch",
       "leaves",
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C7735240-9F0E-11EC-A7FE-1182E4848153.png"
   },
   "Block1x1Black": {
     "DisplayName": "Block 1x1, Black",
@@ -8859,7 +9357,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "building blocks",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D4731B7C-4D6C-11EC-BF5E-7AD594EE74C0.png"
   },
   "Block1x1Blue": {
     "DisplayName": "Block 1x1, Blue",
@@ -8876,7 +9375,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "building blocks",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C5EA5F16-4D6C-11EC-BF5E-4FD594EE74C0.png"
   },
   "Block1x1Red": {
     "DisplayName": "Block 1x1, Red",
@@ -8893,7 +9393,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "building blocks",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CF428E76-4D6C-11EC-BF5E-64D594EE74C0.png"
   },
   "Block1x1White": {
     "DisplayName": "Block 1x1, White",
@@ -8910,7 +9411,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "building blocks",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C0F925F0-4D6C-11EC-BF5E-47D594EE74C0.png"
   },
   "Block1x1Yellow": {
     "DisplayName": "Block 1x1, Yellow",
@@ -8927,7 +9429,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "building blocks",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CAE09BF2-4D6C-11EC-A7BF-25D0837854C6.png"
   },
   "Block1x2Black": {
     "DisplayName": "Block 1x2, Black",
@@ -8944,7 +9447,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "building blocks",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7FE9052A-4D6D-11EC-BF5E-4BD794EE74C0.png"
   },
   "Block1x2Blue": {
     "DisplayName": "Block 1x2, Blue",
@@ -8961,7 +9465,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "building blocks",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9941E000-4D6D-11EC-BF5E-86D794EE74C0.png"
   },
   "Block1x2Red": {
     "DisplayName": "Block 1x2, Red",
@@ -8978,7 +9483,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "building blocks",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9F4C0C1E-4D6D-11EC-A7BF-8BD2837854C6.png"
   },
   "Block1x2White": {
     "DisplayName": "Block 1x2, White",
@@ -8995,7 +9501,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "building blocks",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8A0E6C8E-4D6D-11EC-BF5E-63D794EE74C0.png"
   },
   "Block1x2Yellow": {
     "DisplayName": "Block 1x2, Yellow",
@@ -9012,7 +9519,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "building blocks",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/92709A64-4D6D-11EC-A7BF-6AD2837854C6.png"
   },
   "Block1x3Black": {
     "DisplayName": "Block 1x3, Black",
@@ -9029,7 +9537,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "building blocks",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FC644F92-4D6D-11EC-BF5E-A0D894EE74C0.png"
   },
   "Block1x3Blue": {
     "DisplayName": "Block 1x3, Blue",
@@ -9046,7 +9555,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "building blocks",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/00B12458-4D6E-11EC-BF5E-ADD894EE74C0.png"
   },
   "Block1x3Red": {
     "DisplayName": "Block 1x3, Red",
@@ -9063,7 +9573,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "building blocks",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EE12DA08-4D6D-11EC-BF5E-6FD894EE74C0.png"
   },
   "Block1x3White": {
     "DisplayName": "Block 1x3, White",
@@ -9080,7 +9591,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "building blocks",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0764EDF2-4D6E-11EC-A7BF-BDD3837854C6.png"
   },
   "Block1x3Yellow": {
     "DisplayName": "Block 1x3, Yellow",
@@ -9097,7 +9609,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "building blocks",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F75E0A56-4D6D-11EC-BF5E-88D894EE74C0.png"
   },
   "BloodyRemains": {
     "DisplayName": "Bloody Remains",
@@ -9110,7 +9623,8 @@ STOCK_COMPONENT_INFO = {
       "dismember",
       " violent",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/431FF92E-74DA-11ED-9E82-D22B25C4E336.png"
   },
   "BogBeastFantasyTB25": {
     "DisplayName": "Bog Beast, Fantasy, TB25",
@@ -9123,8 +9637,10 @@ STOCK_COMPONENT_INFO = {
       "water",
       "swamp",
       "villain",
+      "halloween",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/04F2C4E0-B20D-11ED-8FBD-D78DB58D8F2A.png"
   },
   "Bolt": {
     "DisplayName": "Bolt",
@@ -9140,7 +9656,8 @@ STOCK_COMPONENT_INFO = {
       "nut",
       "washer",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CAE0B69E-0302-11E9-849C-3CE6D18499DE.png"
   },
   "BowandArrow": {
     "DisplayName": "Bow and Arrow",
@@ -9158,7 +9675,8 @@ STOCK_COMPONENT_INFO = {
       "reflex",
       "longbow",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D8F09754-0302-11E9-9C65-1B271589B894.png"
   },
   "BowlingPinLargeBlack": {
     "DisplayName": "Bowling Pin, Large, Black",
@@ -9176,7 +9694,8 @@ STOCK_COMPONENT_INFO = {
       "strike",
       "spare",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0524FD56-1263-11E8-AADE-7FF493A6FE1D.png"
   },
   "BowlingPinLargeBlue": {
     "DisplayName": "Bowling Pin, Large, Blue",
@@ -9194,7 +9713,8 @@ STOCK_COMPONENT_INFO = {
       "strike",
       "spare",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/08F0CA46-1263-11E8-AADE-80F493A6FE1D.png"
   },
   "BowlingPinLargeClear": {
     "DisplayName": "Bowling Pin, Large, Clear",
@@ -9212,7 +9732,8 @@ STOCK_COMPONENT_INFO = {
       "strike",
       "spare",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9C1E40F4-67FC-11EB-8413-2CFFC78E2D70.png"
   },
   "BowlingPinLargeGreen": {
     "DisplayName": "Bowling Pin, Large, Green",
@@ -9230,7 +9751,8 @@ STOCK_COMPONENT_INFO = {
       "strike",
       "spare",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0CACE6B0-1263-11E8-AADE-7FF493A6FE1D.png"
   },
   "BowlingPinLargeOrange": {
     "DisplayName": "Bowling Pin, Large, Orange",
@@ -9248,7 +9770,8 @@ STOCK_COMPONENT_INFO = {
       "strike",
       "spare",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1040C2F6-1263-11E8-AADE-7DF493A6FE1D.png"
   },
   "BowlingPinLargePurple": {
     "DisplayName": "Bowling Pin, Large, Purple",
@@ -9266,7 +9789,8 @@ STOCK_COMPONENT_INFO = {
       "strike",
       "spare",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/14C4E06E-1263-11E8-AADE-7FF493A6FE1D.png"
   },
   "BowlingPinLargeRed": {
     "DisplayName": "Bowling Pin, Large, Red",
@@ -9284,7 +9808,8 @@ STOCK_COMPONENT_INFO = {
       "strike",
       "spare",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/18D29E6C-1263-11E8-94A0-D65994A6FE1D.png"
   },
   "BowlingPinLargeWhite": {
     "DisplayName": "Bowling Pin, Large, White",
@@ -9302,7 +9827,8 @@ STOCK_COMPONENT_INFO = {
       "strike",
       "spare",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1C8218EE-1263-11E8-AADE-A6F493A6FE1D.png"
   },
   "BowlingPinLargeYellow": {
     "DisplayName": "Bowling Pin, Large, Yellow",
@@ -9320,7 +9846,8 @@ STOCK_COMPONENT_INFO = {
       "strike",
       "spare",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/20369014-1263-11E8-94A0-F15994A6FE1D.png"
   },
   "BowlingPinSmallBlack": {
     "DisplayName": "Bowling Pin, Small, Black",
@@ -9338,7 +9865,8 @@ STOCK_COMPONENT_INFO = {
       "strike",
       "spare",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F94B89A8-37FA-11E6-BA7D-51C670C3C4B9.png"
   },
   "BowlingPinSmallBlue": {
     "DisplayName": "Bowling Pin, Small, Blue",
@@ -9356,7 +9884,8 @@ STOCK_COMPONENT_INFO = {
       "strike",
       "spare",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F94DBC32-37FA-11E6-8F08-96AAC6EDC2D7.png"
   },
   "BowlingPinSmallGreen": {
     "DisplayName": "Bowling Pin, Small, Green",
@@ -9374,7 +9903,8 @@ STOCK_COMPONENT_INFO = {
       "strike",
       "spare",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F9AADFAC-37FA-11E6-A3C3-51C670C3C4B9.png"
   },
   "BowlingPinSmallOrange": {
     "DisplayName": "Bowling Pin, Small, Orange",
@@ -9392,7 +9922,8 @@ STOCK_COMPONENT_INFO = {
       "strike",
       "spare",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F9BB0F1C-37FA-11E6-9C11-96AAC6EDC2D7.png"
   },
   "BowlingPinSmallPurple": {
     "DisplayName": "Bowling Pin, Small, Purple",
@@ -9410,7 +9941,8 @@ STOCK_COMPONENT_INFO = {
       "strike",
       "spare",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FA389838-37FA-11E6-B8DB-51C670C3C4B9.png"
   },
   "BowlingPinSmallRed": {
     "DisplayName": "Bowling Pin, Small, Red",
@@ -9428,7 +9960,8 @@ STOCK_COMPONENT_INFO = {
       "strike",
       "spare",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FA495F38-37FA-11E6-A833-96AAC6EDC2D7.png"
   },
   "BowlingPinSmallWhite": {
     "DisplayName": "Bowling Pin, Small, White",
@@ -9446,7 +9979,8 @@ STOCK_COMPONENT_INFO = {
       "strike",
       "spare",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FACA523C-37FA-11E6-8871-51C670C3C4B9.png"
   },
   "BowlingPinSmallYellow": {
     "DisplayName": "Bowling Pin, Small, Yellow",
@@ -9464,7 +9998,8 @@ STOCK_COMPONENT_INFO = {
       "strike",
       "spare",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FAD0DE90-37FA-11E6-91AA-96AAC6EDC2D7.png"
   },
   "BoxBand6\"Blue": {
     "DisplayName": "Box Band, 6\", Blue",
@@ -9485,7 +10020,8 @@ STOCK_COMPONENT_INFO = {
       "elasticity",
       "stretch",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D25A7198-8B85-11E8-990F-2804795DA8EE.png"
   },
   "BoxBand6\"Green": {
     "DisplayName": "Box Band, 6\", Green",
@@ -9506,7 +10042,8 @@ STOCK_COMPONENT_INFO = {
       "elasticity",
       "stretch",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7A7CB71A-8B85-11E8-AD88-B1ABB70C97C7.png"
   },
   "BoxBand6\"Red": {
     "DisplayName": "Box Band, 6\", Red",
@@ -9527,7 +10064,8 @@ STOCK_COMPONENT_INFO = {
       "elasticity",
       "stretch",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E4D6C9C0-8B85-11E8-AD88-4BACB70C97C7.png"
   },
   "BoxBand8\"Blue": {
     "DisplayName": "Box Band, 8\", Blue",
@@ -9548,7 +10086,8 @@ STOCK_COMPONENT_INFO = {
       "elasticity",
       "stretch",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D25A7198-8B85-11E8-990F-2804795DA8EE.png"
   },
   "BoxBand8\"Green": {
     "DisplayName": "Box Band, 8\", Green",
@@ -9569,7 +10108,8 @@ STOCK_COMPONENT_INFO = {
       "elasticity",
       "stretch",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7A7CB71A-8B85-11E8-AD88-B1ABB70C97C7.png"
   },
   "BoxBand8\"Red": {
     "DisplayName": "Box Band, 8\", Red",
@@ -9590,7 +10130,8 @@ STOCK_COMPONENT_INFO = {
       "elasticity",
       "stretch",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E4D6C9C0-8B85-11E8-AD88-4BACB70C97C7.png"
   },
   "BoxBand9\"Blue": {
     "DisplayName": "Box Band, 9\", Blue",
@@ -9611,7 +10152,8 @@ STOCK_COMPONENT_INFO = {
       "elasticity",
       "stretch",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D25A7198-8B85-11E8-990F-2804795DA8EE.png"
   },
   "BoxBand9\"Green": {
     "DisplayName": "Box Band, 9\", Green",
@@ -9632,7 +10174,8 @@ STOCK_COMPONENT_INFO = {
       "elasticity",
       "stretch",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7A7CB71A-8B85-11E8-AD88-B1ABB70C97C7.png"
   },
   "BoxBand9\"Red": {
     "DisplayName": "Box Band, 9\", Red",
@@ -9653,7 +10196,8 @@ STOCK_COMPONENT_INFO = {
       "elasticity",
       "stretch",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E4D6C9C0-8B85-11E8-AD88-4BACB70C97C7.png"
   },
   "BoxInsertProMedium": {
     "DisplayName": "Box Insert, Pro, Medium",
@@ -9668,7 +10212,8 @@ STOCK_COMPONENT_INFO = {
       "separator",
       "organizer",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A6632BAA-6A2A-11E4-8EC4-B7B4A32F826F.png"
   },
   "BoxInsertProSmall": {
     "DisplayName": "Box Insert, Pro, Small",
@@ -9683,7 +10228,8 @@ STOCK_COMPONENT_INFO = {
       "separator",
       "organizer",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C4E4E844-15E1-11E5-A50E-E5624BA7186E.png"
   },
   "BoxInsertStoutSmall": {
     "DisplayName": "Box Insert, Stout, Small",
@@ -9698,7 +10244,8 @@ STOCK_COMPONENT_INFO = {
       "separator",
       "organizer",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B19C5190-D10D-11EA-A6FC-3211E5FADFE3.png"
   },
   "BrainOrganPink": {
     "DisplayName": "Brain Organ, Pink",
@@ -9731,7 +10278,8 @@ STOCK_COMPONENT_INFO = {
       "cognitive",
       "iq",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BF9DEA32-C04D-11E9-A0D9-7A0FC9268CB1.png"
   },
   "BreadBasket": {
     "DisplayName": "Bread Basket",
@@ -9743,7 +10291,8 @@ STOCK_COMPONENT_INFO = {
       "loaves",
       "roll",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/49A490A6-465A-11ED-881D-116099F4B99C.png"
   },
   "BreadWoodDarkBrown": {
     "DisplayName": "Bread, Wood, Dark Brown",
@@ -9795,7 +10344,8 @@ STOCK_COMPONENT_INFO = {
       "grain",
       "grains",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BC72928C-44C9-11E8-83D1-89721EA37D3B.png"
   },
   "BrickTowerGrey": {
     "DisplayName": "Brick Tower, Grey",
@@ -9820,7 +10370,8 @@ STOCK_COMPONENT_INFO = {
       "wall",
       "spire",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/03B0EBFA-5246-11E9-800C-120785BD98AD.png"
   },
   "BrickWood2HolesRed": {
     "DisplayName": "Brick, Wood, 2 Holes, Red",
@@ -9843,7 +10394,8 @@ STOCK_COMPONENT_INFO = {
       "wall",
       "barrier",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5A6E355E-44A7-11E8-ADE7-84B81EA37D3B.png"
   },
   "BrickWoodLarge": {
     "DisplayName": "Brick, Wood, Large",
@@ -9866,7 +10418,8 @@ STOCK_COMPONENT_INFO = {
       "wall",
       "barrier",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9563BFDE-4FEC-11E9-BA3F-E9F584BD98AD.png"
   },
   "BrickWoodRed": {
     "DisplayName": "Brick, Wood, Red",
@@ -9889,7 +10442,8 @@ STOCK_COMPONENT_INFO = {
       "wall",
       "barrier",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DAC9F44C-F998-11E0-BC92-108960677055.png"
   },
   "BrigandwithDagger": {
     "DisplayName": "Brigand with Dagger",
@@ -9915,7 +10469,8 @@ STOCK_COMPONENT_INFO = {
       "dagger",
       "brigand",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2ADA33A2-4560-11E7-ABA2-874390E4BA5A.png"
   },
   "BrochureJumbo": {
     "DisplayName": "Brochure, Jumbo",
@@ -9944,7 +10499,8 @@ STOCK_COMPONENT_INFO = {
       "advert",
       "commercial",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1B577E90-5690-11E1-8DC9-F36184430AF1.png"
   },
   "BrochurePoker": {
     "DisplayName": "Brochure, Poker",
@@ -9973,7 +10529,8 @@ STOCK_COMPONENT_INFO = {
       "advert",
       "commercial",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1B577E90-5690-11E1-8DC9-F36184430AF1.png"
   },
   "BrokenColumn": {
     "DisplayName": "Broken Column",
@@ -9984,7 +10541,8 @@ STOCK_COMPONENT_INFO = {
       "roman",
       "pillar",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2F624080-465A-11ED-881D-C15E99F4B99C.png"
   },
   "BrokenHeart": {
     "DisplayName": "Broken Heart",
@@ -10015,7 +10573,8 @@ STOCK_COMPONENT_INFO = {
       "relationship",
       "ex",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/764D4472-A4A1-11E8-84DE-38003E511364.png"
   },
   "Buddha": {
     "DisplayName": "Buddha",
@@ -10039,8 +10598,10 @@ STOCK_COMPONENT_INFO = {
       "zen",
       "dharma",
       "nirvana",
+      "peace",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/48197D32-D5C7-11EB-9F1A-CDA08D8D6E47.png"
   },
   "BugBlack": {
     "DisplayName": "Bug, Black",
@@ -10056,7 +10617,8 @@ STOCK_COMPONENT_INFO = {
       "arthropod",
       "beetle",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/74167DBE-42D8-11EA-8289-7A5D8BA36C1F.png"
   },
   "BugBlue": {
     "DisplayName": "Bug, Blue",
@@ -10072,7 +10634,8 @@ STOCK_COMPONENT_INFO = {
       "arthropod",
       "beetle",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7E185ADA-42D8-11EA-8289-885D8BA36C1F.png"
   },
   "BugGreen": {
     "DisplayName": "Bug, Green",
@@ -10088,7 +10651,8 @@ STOCK_COMPONENT_INFO = {
       "arthropod",
       "beetle",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8826AAD6-42D8-11EA-BFEF-8160180F5E55.png"
   },
   "BugOrange": {
     "DisplayName": "Bug, Orange",
@@ -10104,7 +10668,8 @@ STOCK_COMPONENT_INFO = {
       "arthropod",
       "beetle",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/92F81E40-42D8-11EA-BFEF-9360180F5E55.png"
   },
   "BugPurple": {
     "DisplayName": "Bug, Purple",
@@ -10120,7 +10685,8 @@ STOCK_COMPONENT_INFO = {
       "arthropod",
       "beetle",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9C1E5656-42D8-11EA-BFEF-A160180F5E55.png"
   },
   "BugRed": {
     "DisplayName": "Bug, Red",
@@ -10136,7 +10702,8 @@ STOCK_COMPONENT_INFO = {
       "arthropod",
       "beetle",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A717170A-42D8-11EA-8289-D25D8BA36C1F.png"
   },
   "BugWhite": {
     "DisplayName": "Bug, White",
@@ -10152,7 +10719,8 @@ STOCK_COMPONENT_INFO = {
       "arthropod",
       "beetle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AF9BCB96-42D8-11EA-8289-D45D8BA36C1F.png"
   },
   "BugYellow": {
     "DisplayName": "Bug, Yellow",
@@ -10168,7 +10736,8 @@ STOCK_COMPONENT_INFO = {
       "arthropod",
       "beetle",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B8879118-42D8-11EA-BFEF-E260180F5E55.png"
   },
   "BuildingSmallBlack": {
     "DisplayName": "Building, Small, Black",
@@ -10198,7 +10767,8 @@ STOCK_COMPONENT_INFO = {
       "entrance",
       "estate",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F49A3DE8-74A0-11E8-81DE-F72694A6FE1D.png"
   },
   "BuildingSmallBlue": {
     "DisplayName": "Building, Small, Blue",
@@ -10228,7 +10798,8 @@ STOCK_COMPONENT_INFO = {
       "entrance",
       "estate",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/02530AB4-7960-11E8-9F79-C82CE27A4ED4.png"
   },
   "BuildingSmallGreen": {
     "DisplayName": "Building, Small, Green",
@@ -10258,7 +10829,8 @@ STOCK_COMPONENT_INFO = {
       "entrance",
       "estate",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BA088500-7963-11E8-933A-CDCA9C39084D.png"
   },
   "BuildingSmallOrange": {
     "DisplayName": "Building, Small, Orange",
@@ -10288,7 +10860,8 @@ STOCK_COMPONENT_INFO = {
       "entrance",
       "estate",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D1BA0E94-7963-11E8-933A-DE90B337F017.png"
   },
   "BuildingSmallPurple": {
     "DisplayName": "Building, Small, Purple",
@@ -10318,7 +10891,8 @@ STOCK_COMPONENT_INFO = {
       "entrance",
       "estate",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/09328C9E-7963-11E8-9F79-898E8F46E2E3.png"
   },
   "BuildingSmallRed": {
     "DisplayName": "Building, Small, Red",
@@ -10348,7 +10922,8 @@ STOCK_COMPONENT_INFO = {
       "entrance",
       "estate",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D3A040D8-74A0-11E8-81DE-C72694A6FE1D.png"
   },
   "BuildingSmallSideDoorBlack": {
     "DisplayName": "Building, Small, Side Door, Black",
@@ -10378,7 +10953,8 @@ STOCK_COMPONENT_INFO = {
       "entrance",
       "estate",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BEB9BE76-1657-11E8-8F09-F62C94A6FE1D.png"
   },
   "BuildingSmallSideDoorBlue": {
     "DisplayName": "Building, Small, Side Door, Blue",
@@ -10408,7 +10984,8 @@ STOCK_COMPONENT_INFO = {
       "entrance",
       "estate",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8788315A-1655-11E8-8F09-6F2994A6FE1D.png"
   },
   "BuildingSmallSideDoorGreen": {
     "DisplayName": "Building, Small, Side Door, Green",
@@ -10438,7 +11015,8 @@ STOCK_COMPONENT_INFO = {
       "entrance",
       "estate",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0ACC5438-1656-11E8-8F09-3E2A94A6FE1D.png"
   },
   "BuildingSmallSideDoorOrange": {
     "DisplayName": "Building, Small, Side Door, Orange",
@@ -10468,7 +11046,8 @@ STOCK_COMPONENT_INFO = {
       "entrance",
       "estate",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AAEEA828-7563-11E8-AD66-A81A7D96D9E1.png"
   },
   "BuildingSmallSideDoorPurple": {
     "DisplayName": "Building, Small, Side Door, Purple",
@@ -10498,7 +11077,8 @@ STOCK_COMPONENT_INFO = {
       "entrance",
       "estate",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D7A5C4D0-1656-11E8-8F09-A02B94A6FE1D.png"
   },
   "BuildingSmallSideDoorRed": {
     "DisplayName": "Building, Small, Side Door, Red",
@@ -10528,7 +11108,8 @@ STOCK_COMPONENT_INFO = {
       "entrance",
       "estate",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/157EE63C-1658-11E8-8F09-042E94A6FE1D.png"
   },
   "BuildingSmallSideDoorWhite": {
     "DisplayName": "Building, Small, Side Door, White",
@@ -10558,7 +11139,8 @@ STOCK_COMPONENT_INFO = {
       "entrance",
       "estate",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/36D942EA-1659-11E8-A55B-60E393A6FE1D.png"
   },
   "BuildingSmallSideDoorYellow": {
     "DisplayName": "Building, Small, Side Door, Yellow",
@@ -10588,7 +11170,8 @@ STOCK_COMPONENT_INFO = {
       "entrance",
       "estate",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5A8C105C-1657-11E8-A55B-CE5E94A6FE1D.png"
   },
   "BuildingSmallWhite": {
     "DisplayName": "Building, Small, White",
@@ -10618,7 +11201,8 @@ STOCK_COMPONENT_INFO = {
       "entrance",
       "estate",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5949CFA6-74A1-11E8-81DE-7E2794A6FE1D.png"
   },
   "BuildingSmallYellow": {
     "DisplayName": "Building, Small, Yellow",
@@ -10648,7 +11232,8 @@ STOCK_COMPONENT_INFO = {
       "entrance",
       "estate",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/943ED912-74A1-11E8-B70A-C9F993A6FE1D.png"
   },
   "BullWoodBrown": {
     "DisplayName": "Bull, Wood, Brown",
@@ -10679,7 +11264,8 @@ STOCK_COMPONENT_INFO = {
       "calf",
       "meat",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/23DE7D36-F99B-11E0-9006-108960677055.png"
   },
   "BullWoodOrange": {
     "DisplayName": "Bull, Wood, Orange",
@@ -10710,7 +11296,8 @@ STOCK_COMPONENT_INFO = {
       "calf",
       "meat",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B820C148-44AD-11E8-88E1-5D431EA37D3B.png"
   },
   "BulldozerAcrylic": {
     "DisplayName": "Bulldozer, Acrylic",
@@ -10721,7 +11308,8 @@ STOCK_COMPONENT_INFO = {
       "construction equipment",
       "construction",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6140CA9A-F700-11EB-9EF2-6B3A22502F64.png"
   },
   "BulletGrey": {
     "DisplayName": "Bullet, Grey",
@@ -10745,7 +11333,8 @@ STOCK_COMPONENT_INFO = {
       "attack",
       "damage",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D8FE5700-C04D-11E9-9BED-FF41B7C0CB06.png"
   },
   "BunnyTB15Black": {
     "DisplayName": "Bunny, TB15, Black",
@@ -10758,7 +11347,8 @@ STOCK_COMPONENT_INFO = {
       "easter",
       "hare",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D0F78D0C-5F69-11EC-9EF3-CA7E1E5F5B50.png"
   },
   "BunnyTB15Blue": {
     "DisplayName": "Bunny, TB15, Blue",
@@ -10771,7 +11361,8 @@ STOCK_COMPONENT_INFO = {
       "easter",
       "hare",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AEBAB430-5F69-11EC-9EF3-737E1E5F5B50.png"
   },
   "BunnyTB15Green": {
     "DisplayName": "Bunny, TB15, Green",
@@ -10784,7 +11375,8 @@ STOCK_COMPONENT_INFO = {
       "easter",
       "hare",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CC1D6018-5F69-11EC-9EF3-C67E1E5F5B50.png"
   },
   "BunnyTB15Orange": {
     "DisplayName": "Bunny, TB15, Orange",
@@ -10797,7 +11389,8 @@ STOCK_COMPONENT_INFO = {
       "easter",
       "hare",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D5CE95D2-5F69-11EC-80B9-921068FE145E.png"
   },
   "BunnyTB15Purple": {
     "DisplayName": "Bunny, TB15, Purple",
@@ -10810,7 +11403,8 @@ STOCK_COMPONENT_INFO = {
       "easter",
       "hare",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/355E7C4A-5F85-11EC-B956-9FCE1E5F5B50.png"
   },
   "BunnyTB15Red": {
     "DisplayName": "Bunny, TB15, Red",
@@ -10823,7 +11417,8 @@ STOCK_COMPONENT_INFO = {
       "easter",
       "hare",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B7A6DB50-5F69-11EC-9EF3-867E1E5F5B50.png"
   },
   "BunnyTB15White": {
     "DisplayName": "Bunny, TB15, White",
@@ -10836,7 +11431,8 @@ STOCK_COMPONENT_INFO = {
       "easter",
       "hare",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2956D884-5F85-11EC-B956-7CCE1E5F5B50.png"
   },
   "BunnyTB15Yellow": {
     "DisplayName": "Bunny, TB15, Yellow",
@@ -10849,7 +11445,8 @@ STOCK_COMPONENT_INFO = {
       "easter",
       "hare",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C533343A-5F69-11EC-9EF3-AC7E1E5F5B50.png"
   },
   "BurlapBagSmallBlack": {
     "DisplayName": "Burlap Bag, Small, Black",
@@ -10895,7 +11492,8 @@ STOCK_COMPONENT_INFO = {
       "renewable",
       "vegan",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0CACB110-B1B4-11EB-B77B-26DC0F1ADEF4.png"
   },
   "BurlapBagSmallGreen": {
     "DisplayName": "Burlap Bag, Small, Green",
@@ -10940,7 +11538,8 @@ STOCK_COMPONENT_INFO = {
       "preservation",
       "renewable",
       "vegan"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0114D738-B1B4-11EB-B77B-FEDB0F1ADEF4.png"
   },
   "BurlapBagSmallRed": {
     "DisplayName": "Burlap Bag, Small, Red",
@@ -10986,7 +11585,8 @@ STOCK_COMPONENT_INFO = {
       "renewable",
       "vegan",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/169B5532-B1B4-11EB-8EC7-5724421B163D.png"
   },
   "BurlapBagSmallWhite": {
     "DisplayName": "Burlap Bag, Small, White",
@@ -11032,7 +11632,8 @@ STOCK_COMPONENT_INFO = {
       "renewable",
       "vegan",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2293AC18-B1B4-11EB-B77B-60DC0F1ADEF4.png"
   },
   "BusinessMiniatureBlue": {
     "DisplayName": "Business Miniature, Blue",
@@ -11064,7 +11665,8 @@ STOCK_COMPONENT_INFO = {
       "suite",
       "cape may",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/27B3D3F8-2F8F-11ED-9E4B-380AD14F796C.png"
   },
   "BusinessMiniatureGreen": {
     "DisplayName": "Business Miniature, Green",
@@ -11096,7 +11698,8 @@ STOCK_COMPONENT_INFO = {
       "suite",
       "cape may",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E097AF3A-2F8E-11ED-9E4B-D106D14F796C.png"
   },
   "BusinessMiniatureRed": {
     "DisplayName": "Business Miniature, Red",
@@ -11128,7 +11731,8 @@ STOCK_COMPONENT_INFO = {
       "suite",
       "cape may",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1EF5C398-2F8F-11ED-88E4-2F0B5FE382A3.png"
   },
   "BusinessMiniatureYellow": {
     "DisplayName": "Business Miniature, Yellow",
@@ -11160,7 +11764,8 @@ STOCK_COMPONENT_INFO = {
       "suite",
       "cape may",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0682EC78-2F8F-11ED-9E4B-3308D14F796C.png"
   },
   "BustWoodBlue": {
     "DisplayName": "Bust, Wood, Blue",
@@ -11178,7 +11783,8 @@ STOCK_COMPONENT_INFO = {
       "human",
       "individual",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8572B1CE-9395-11E9-8253-BEE8DF2C6739.png"
   },
   "BustWoodCollaredBlue": {
     "DisplayName": "Bust, Wood, Collared, Blue",
@@ -11196,7 +11802,8 @@ STOCK_COMPONENT_INFO = {
       "human",
       "individual",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8CCC3E54-9395-11E9-8253-CAE8DF2C6739.png"
   },
   "BustWoodCollaredGreen": {
     "DisplayName": "Bust, Wood, Collared, Green",
@@ -11214,7 +11821,8 @@ STOCK_COMPONENT_INFO = {
       "human",
       "individual",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/97CC4B14-9395-11E9-8253-D2E8DF2C6739.png"
   },
   "BustWoodGreen": {
     "DisplayName": "Bust, Wood, Green",
@@ -11232,7 +11840,8 @@ STOCK_COMPONENT_INFO = {
       "human",
       "individual",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A278AE18-9395-11E9-8253-DDE8DF2C6739.png"
   },
   "ButtonLargeBlue": {
     "DisplayName": "Button, Large, Blue",
@@ -11248,7 +11857,8 @@ STOCK_COMPONENT_INFO = {
       "counting",
       "tally",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5444B128-CFF0-11E9-B0A3-4D0035E1E425.png"
   },
   "ButtonLargeGreen": {
     "DisplayName": "Button, Large, Green",
@@ -11264,7 +11874,8 @@ STOCK_COMPONENT_INFO = {
       "counting",
       "tally",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/72D8057C-CFF0-11E9-B0A3-7E0035E1E425.png"
   },
   "ButtonLargeGrey": {
     "DisplayName": "Button, Large, Grey",
@@ -11280,7 +11891,8 @@ STOCK_COMPONENT_INFO = {
       "counting",
       "tally",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B40A20CA-1B7C-11EA-900A-38E1E1C0C926.png"
   },
   "ButtonLargePink": {
     "DisplayName": "Button, Large, Pink",
@@ -11296,7 +11908,8 @@ STOCK_COMPONENT_INFO = {
       "counting",
       "tally",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BA9F5ACC-1B7C-11EA-900A-3BE1E1C0C926.png"
   },
   "ButtonLargeYellow": {
     "DisplayName": "Button, Large, Yellow",
@@ -11312,7 +11925,8 @@ STOCK_COMPONENT_INFO = {
       "counting",
       "tally",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/82FE8AB6-CFF0-11E9-9505-A2CC6FF76758.png"
   },
   "ButtonPurple": {
     "DisplayName": "Button, Purple",
@@ -11328,7 +11942,8 @@ STOCK_COMPONENT_INFO = {
       "counting",
       "tally",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F3277454-44A7-11E8-ACC9-DCDE0DF7F543.png"
   },
   "ButtonWhite": {
     "DisplayName": "Button, White",
@@ -11345,7 +11960,8 @@ STOCK_COMPONENT_INFO = {
       "counting",
       "tally",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/85A7B61E-44A7-11E8-ADE7-C3B81EA37D3B.png"
   },
   "ButtonYellow": {
     "DisplayName": "Button, Yellow",
@@ -11376,7 +11992,8 @@ STOCK_COMPONENT_INFO = {
       "food",
       "potions",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/196A7FFE-465A-11ED-B8C6-7C4A83472B09.png"
   },
   "CarBlack": {
     "DisplayName": "Car, Black",
@@ -11392,7 +12009,8 @@ STOCK_COMPONENT_INFO = {
       "automotive",
       "transport",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A4649E80-FF19-11E0-A9AB-4E3C9966D12C.png"
   },
   "CarBlue": {
     "DisplayName": "Car, Blue",
@@ -11408,7 +12026,8 @@ STOCK_COMPONENT_INFO = {
       "automotive",
       "transport",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A2AA80D6-FF1A-11E0-A9AB-4E3C9966D12C.png"
   },
   "CarGreen": {
     "DisplayName": "Car, Green",
@@ -11424,7 +12043,8 @@ STOCK_COMPONENT_INFO = {
       "automotive",
       "transport",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DDFAA7DC-FF1B-11E0-9950-4E3C9966D12C.png"
   },
   "CarMuscleBlack": {
     "DisplayName": "Car, Muscle, Black",
@@ -11439,7 +12059,8 @@ STOCK_COMPONENT_INFO = {
       "firebird",
       "barracuda,",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D6397A8E-9022-11EC-854F-EB55865AFFDF.png"
   },
   "CarMuscleBlue": {
     "DisplayName": "Car, Muscle, Blue",
@@ -11454,7 +12075,8 @@ STOCK_COMPONENT_INFO = {
       "firebird",
       "barracuda,",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FB2C2EC2-9022-11EC-A139-4A152DFC60CF.png"
   },
   "CarMuscleGreen": {
     "DisplayName": "Car, Muscle, Green",
@@ -11469,7 +12091,8 @@ STOCK_COMPONENT_INFO = {
       "firebird",
       "barracuda,",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E095F728-9022-11EC-A139-7C142DFC60CF.png"
   },
   "CarMuscleOrange": {
     "DisplayName": "Car, Muscle, Orange",
@@ -11484,7 +12107,8 @@ STOCK_COMPONENT_INFO = {
       "firebird",
       "barracuda,",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FF18A9B6-9022-11EC-A139-C8152DFC60CF.png"
   },
   "CarMusclePurple": {
     "DisplayName": "Car, Muscle, Purple",
@@ -11499,7 +12123,8 @@ STOCK_COMPONENT_INFO = {
       "firebird",
       "barracuda,",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D9BF49B8-9022-11EC-854F-B255865AFFDF.png"
   },
   "CarMuscleRed": {
     "DisplayName": "Car, Muscle, Red",
@@ -11514,7 +12139,8 @@ STOCK_COMPONENT_INFO = {
       "firebird",
       "barracuda,",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/041EF686-9023-11EC-854F-3458865AFFDF.png"
   },
   "CarMuscleWhite": {
     "DisplayName": "Car, Muscle, White",
@@ -11529,7 +12155,8 @@ STOCK_COMPONENT_INFO = {
       "firebird",
       "barracuda,",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EF96ABFA-9022-11EC-854F-8856865AFFDF.png"
   },
   "CarMuscleYellow": {
     "DisplayName": "Car, Muscle, Yellow",
@@ -11544,7 +12171,8 @@ STOCK_COMPONENT_INFO = {
       "firebird",
       "barracuda,",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5323D0E-9022-11EC-854F-5557865AFFDF.png"
   },
   "CarOrange": {
     "DisplayName": "Car, Orange",
@@ -11560,7 +12188,8 @@ STOCK_COMPONENT_INFO = {
       "automotive",
       "transport",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0AD14A8E-FF1E-11E0-A9AB-4E3C9966D12C.png"
   },
   "CarPurple": {
     "DisplayName": "Car, Purple",
@@ -11576,7 +12205,8 @@ STOCK_COMPONENT_INFO = {
       "automotive",
       "transport",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F932A04C-FF1E-11E0-A932-4E3C9966D12C.png"
   },
   "CarRaceBlack": {
     "DisplayName": "Car, Race, Black",
@@ -11592,7 +12222,8 @@ STOCK_COMPONENT_INFO = {
       "fast car",
       " ",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E0C777CA-1CBA-11EC-9177-D8FF4A5CF84F.png"
   },
   "CarRaceBlue": {
     "DisplayName": "Car, Race, Blue",
@@ -11613,7 +12244,8 @@ STOCK_COMPONENT_INFO = {
       "nascar",
       "competition",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EADA9A4E-1CBA-11EC-9177-E7FF4A5CF84F.png"
   },
   "CarRaceGreen": {
     "DisplayName": "Car, Race, Green",
@@ -11629,7 +12261,8 @@ STOCK_COMPONENT_INFO = {
       "fast car",
       " ",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F1C51500-1CBA-11EC-9D40-A4975853E446.png"
   },
   "CarRaceOrange": {
     "DisplayName": "Car, Race, Orange",
@@ -11645,7 +12278,8 @@ STOCK_COMPONENT_INFO = {
       "fast car",
       " ",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F6A9400A-1CBA-11EC-9D40-AC975853E446.png"
   },
   "CarRacePurple": {
     "DisplayName": "Car, Race, Purple",
@@ -11661,7 +12295,8 @@ STOCK_COMPONENT_INFO = {
       "fast car",
       " ",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FDB54812-1CBA-11EC-9177-1E004B5CF84F.png"
   },
   "CarRaceRed": {
     "DisplayName": "Car, Race, Red",
@@ -11677,7 +12312,8 @@ STOCK_COMPONENT_INFO = {
       "fast car",
       " ",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/066D0274-1CBB-11EC-9D40-E5975853E446.png"
   },
   "CarRaceWhite": {
     "DisplayName": "Car, Race, White",
@@ -11693,7 +12329,8 @@ STOCK_COMPONENT_INFO = {
       "fast car",
       " ",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0C21ED06-1CBB-11EC-9D40-E5975853E446.png"
   },
   "CarRaceYellow": {
     "DisplayName": "Car, Race, Yellow",
@@ -11709,7 +12346,8 @@ STOCK_COMPONENT_INFO = {
       "fast car",
       " ",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/17F8B092-1CBB-11EC-9D40-02985853E446.png"
   },
   "CarRed": {
     "DisplayName": "Car, Red",
@@ -11725,7 +12363,8 @@ STOCK_COMPONENT_INFO = {
       "automotive",
       "transport",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D35C156E-FF1F-11E0-A9AB-4E3C9966D12C.png"
   },
   "CarSportyBlue": {
     "DisplayName": "Car, Sporty, Blue",
@@ -11746,7 +12385,8 @@ STOCK_COMPONENT_INFO = {
       "sporty",
       "fast",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5115C882-FF26-11E0-A932-4E3C9966D12C.png"
   },
   "CarSportyYellow": {
     "DisplayName": "Car, Sporty, Yellow",
@@ -11767,7 +12407,8 @@ STOCK_COMPONENT_INFO = {
       "sporty",
       "fast",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/00D63C86-FF2A-11E0-A9AB-4E3C9966D12C.png"
   },
   "CarVintageJalopyOrange": {
     "DisplayName": "Car, Vintage Jalopy, Orange",
@@ -11786,7 +12427,8 @@ STOCK_COMPONENT_INFO = {
       "classic",
       "jalopy",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/84D508F6-1DC1-11E9-B36C-AB0B0C241361.png"
   },
   "CarVintageRoadsterYellow": {
     "DisplayName": "Car, Vintage Roadster, Yellow",
@@ -11805,7 +12447,8 @@ STOCK_COMPONENT_INFO = {
       "classic",
       "roadster",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9514C45E-1DC1-11E9-B36C-CA0B0C241361.png"
   },
   "CarWhite": {
     "DisplayName": "Car, White",
@@ -11821,7 +12464,8 @@ STOCK_COMPONENT_INFO = {
       "automotive",
       "transport",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7B51AAB8-FF20-11E0-9950-4E3C9966D12C.png"
   },
   "CarYellow": {
     "DisplayName": "Car, Yellow",
@@ -11837,11 +12481,12 @@ STOCK_COMPONENT_INFO = {
       "automotive",
       "transport",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6899D5AA-FF23-11E0-A932-4E3C9966D12C.png"
   },
   "CardConnector120-degreeBlack": {
     "DisplayName": "Card Connector, 120-degree, Black",
-    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 120-degree angles in three directions. ",
+    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 120-degree angles in three directions. \r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "AA543192-15DD-11EE-A726-FBCD3D42CBCF",
     "GameCrafterSkuId": "AA5B4EE6-15DD-11EE-A726-FBCD3D42CBCF",
     "Tags": [
@@ -11864,11 +12509,12 @@ STOCK_COMPONENT_INFO = {
       "hexagons",
       "hexagonal",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1E0E4BF4-15ED-11EE-86C3-5309A28F6E6A.png"
   },
   "CardConnector120-degreeBlue": {
     "DisplayName": "Card Connector, 120-degree, Blue",
-    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 120-degree angles in three directions. ",
+    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 120-degree angles in three directions. \r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "AA563E2E-15DD-11EE-8E03-DE2041088330",
     "GameCrafterSkuId": "AA86E9DE-15DD-11EE-8E03-DE2041088330",
     "Tags": [
@@ -11891,11 +12537,12 @@ STOCK_COMPONENT_INFO = {
       "hexagons",
       "hexagonal",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2D911480-15ED-11EE-8E03-F75F41088330.png"
   },
   "CardConnector120-degreeGreen": {
     "DisplayName": "Card Connector, 120-degree, Green",
-    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 120-degree angles in three directions. ",
+    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 120-degree angles in three directions. \r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "AA59CB16-15DD-11EE-86C3-D4C9A18F6E6A",
     "GameCrafterSkuId": "AA676208-15DD-11EE-86C3-D4C9A18F6E6A",
     "Tags": [
@@ -11918,11 +12565,12 @@ STOCK_COMPONENT_INFO = {
       "hexagons",
       "hexagonal",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3631D412-15ED-11EE-86C3-800AA28F6E6A.png"
   },
   "CardConnector120-degreeOrange": {
     "DisplayName": "Card Connector, 120-degree, Orange",
-    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 120-degree angles in three directions. ",
+    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 120-degree angles in three directions. \r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "AA5A7C32-15DD-11EE-A726-04CE3D42CBCF",
     "GameCrafterSkuId": "AA60E68A-15DD-11EE-A726-04CE3D42CBCF",
     "Tags": [
@@ -11945,11 +12593,12 @@ STOCK_COMPONENT_INFO = {
       "hexagons",
       "hexagonal",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3EACBF58-15ED-11EE-8E03-A76041088330.png"
   },
   "CardConnector120-degreePurple": {
     "DisplayName": "Card Connector, 120-degree, Purple",
-    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 120-degree angles in three directions. ",
+    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 120-degree angles in three directions. \r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "AA629232-15DD-11EE-8E03-DF2041088330",
     "GameCrafterSkuId": "AA98CF00-15DD-11EE-8E03-DF2041088330",
     "Tags": [
@@ -11972,11 +12621,12 @@ STOCK_COMPONENT_INFO = {
       "hexagons",
       "hexagonal",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/473DD134-15ED-11EE-A726-B5903D42CBCF.png"
   },
   "CardConnector120-degreeRed": {
     "DisplayName": "Card Connector, 120-degree, Red",
-    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 120-degree angles in three directions. ",
+    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 120-degree angles in three directions. \r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "AA658C58-15DD-11EE-86C3-26CAA18F6E6A",
     "GameCrafterSkuId": "AA892320-15DD-11EE-86C3-26CAA18F6E6A",
     "Tags": [
@@ -11999,11 +12649,12 @@ STOCK_COMPONENT_INFO = {
       "hexagons",
       "hexagonal",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/565B5AE2-15ED-11EE-86C3-580CA28F6E6A.png"
   },
   "CardConnector120-degreeWhite": {
     "DisplayName": "Card Connector, 120-degree, White",
-    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 120-degree angles in three directions. ",
+    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 120-degree angles in three directions. \r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "AA6B19FC-15DD-11EE-A726-71CE3D42CBCF",
     "GameCrafterSkuId": "AA8BAD34-15DD-11EE-A726-71CE3D42CBCF",
     "Tags": [
@@ -12026,11 +12677,12 @@ STOCK_COMPONENT_INFO = {
       "hexagons",
       "hexagonal",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/60F91C00-15ED-11EE-A726-A3913D42CBCF.png"
   },
   "CardConnector120-degreeYellow": {
     "DisplayName": "Card Connector, 120-degree, Yellow",
-    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 120-degree angles in three directions. ",
+    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 120-degree angles in three directions. \r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "AA6FB6F6-15DD-11EE-8E03-632041088330",
     "GameCrafterSkuId": "AA823E2A-15DD-11EE-8E03-632041088330",
     "Tags": [
@@ -12053,11 +12705,12 @@ STOCK_COMPONENT_INFO = {
       "hexagons",
       "hexagonal",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/68C074B0-15ED-11EE-A726-31923D42CBCF.png"
   },
   "CardConnector90-degreeBlack": {
     "DisplayName": "Card Connector, 90-degree, Black",
-    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 90-degree angles in four directions. ",
+    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 90-degree angles in four directions. \r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "05DCF4B4-15DD-11EE-86C3-25C2A18F6E6A",
     "GameCrafterSkuId": "060D687E-15DD-11EE-86C3-25C2A18F6E6A",
     "Tags": [
@@ -12078,11 +12731,12 @@ STOCK_COMPONENT_INFO = {
       "t-connector",
       "x-connector",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B51558F8-15E8-11EE-8E03-712841088330.png"
   },
   "CardConnector90-degreeBlue": {
     "DisplayName": "Card Connector, 90-degree, Blue",
-    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 90-degree angles in four directions. ",
+    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 90-degree angles in four directions. \r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "05DD211E-15DD-11EE-8E03-BC1841088330",
     "GameCrafterSkuId": "060E0D88-15DD-11EE-8E03-BC1841088330",
     "Tags": [
@@ -12103,11 +12757,12 @@ STOCK_COMPONENT_INFO = {
       "t-connector",
       "x-connector",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BC7CD9C2-15E8-11EE-A726-C6D63D42CBCF.png"
   },
   "CardConnector90-degreeGreen": {
     "DisplayName": "Card Connector, 90-degree, Green",
-    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 90-degree angles in four directions. ",
+    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 90-degree angles in four directions. \r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "05E25148-15DD-11EE-A726-35C63D42CBCF",
     "GameCrafterSkuId": "05F10B16-15DD-11EE-A726-35C63D42CBCF",
     "Tags": [
@@ -12128,11 +12783,12 @@ STOCK_COMPONENT_INFO = {
       "t-connector",
       "x-connector",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A141E5EA-15E7-11EE-8E03-451B41088330.png"
   },
   "CardConnector90-degreeOrange": {
     "DisplayName": "Card Connector, 90-degree, Orange",
-    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 90-degree angles in four directions. ",
+    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 90-degree angles in four directions. \r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "05E375FA-15DD-11EE-8E03-A21841088330",
     "GameCrafterSkuId": "0606B5D8-15DD-11EE-8E03-A21841088330",
     "Tags": [
@@ -12153,11 +12809,12 @@ STOCK_COMPONENT_INFO = {
       "t-connector",
       "x-connector",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9B8CFCE2-15E8-11EE-8E03-142741088330.png"
   },
   "CardConnector90-degreePurple": {
     "DisplayName": "Card Connector, 90-degree, Purple",
-    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 90-degree angles in four directions. ",
+    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 90-degree angles in four directions. \r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "05EA20F8-15DD-11EE-86C3-6EC2A18F6E6A",
     "GameCrafterSkuId": "0623862C-15DD-11EE-86C3-6EC2A18F6E6A",
     "Tags": [
@@ -12178,11 +12835,12 @@ STOCK_COMPONENT_INFO = {
       "t-connector",
       "x-connector",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/828EEE48-15E9-11EE-86C3-E5DBA18F6E6A.png"
   },
   "CardConnector90-degreeRed": {
     "DisplayName": "Card Connector, 90-degree, Red",
-    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 90-degree angles in four directions. ",
+    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 90-degree angles in four directions. \r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "05E3CBF4-15DD-11EE-A726-5DC63D42CBCF",
     "GameCrafterSkuId": "060CCF86-15DD-11EE-A726-5DC63D42CBCF",
     "Tags": [
@@ -12203,11 +12861,12 @@ STOCK_COMPONENT_INFO = {
       "t-connector",
       "x-connector",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A813806C-15E8-11EE-A726-C2D53D42CBCF.png"
   },
   "CardConnector90-degreeWhite": {
     "DisplayName": "Card Connector, 90-degree, White",
-    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 90-degree angles in four directions. ",
+    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 90-degree angles in four directions. \r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "05ED07AA-15DD-11EE-8E03-C31841088330",
     "GameCrafterSkuId": "06192060-15DD-11EE-8E03-C31841088330",
     "Tags": [
@@ -12228,11 +12887,12 @@ STOCK_COMPONENT_INFO = {
       "t-connector",
       "x-connector",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F0B8A1BC-15E8-11EE-86C3-20D5A18F6E6A.png"
   },
   "CardConnector90-degreeYellow": {
     "DisplayName": "Card Connector, 90-degree, Yellow",
-    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 90-degree angles in four directions. ",
+    "Description": "A stand for building card structures, sized for our standard cardstock. Connects cards together at 90-degree angles in four directions. \r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "05EB73AE-15DD-11EE-86C3-E7C1A18F6E6A",
     "GameCrafterSkuId": "0622DE16-15DD-11EE-86C3-E7C1A18F6E6A",
     "Tags": [
@@ -12253,7 +12913,8 @@ STOCK_COMPONENT_INFO = {
       "t-connector",
       "x-connector",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6367B9D2-15E9-11EE-8E03-793041088330.png"
   },
   "CardEnvelope": {
     "DisplayName": "Card Envelope",
@@ -12273,7 +12934,8 @@ STOCK_COMPONENT_INFO = {
       "clue",
       "murder mystery party",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7563522E-AD81-11E4-8DC2-36A8BF09979E.png"
   },
   "CardEnvelopeWhite": {
     "DisplayName": "Card Envelope, White",
@@ -12293,7 +12955,8 @@ STOCK_COMPONENT_INFO = {
       "clue",
       "murder mystery party",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F9F8EB9A-35F7-11E9-8712-F2700031EE1B.png"
   },
   "CardHolder": {
     "DisplayName": "Card Holder",
@@ -12315,7 +12978,8 @@ STOCK_COMPONENT_INFO = {
       "arrangement",
       "layout",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E95FB992-AC6F-11E8-8097-4633BDC16479.png"
   },
   "CardStandBlack": {
     "DisplayName": "Card Stand, Black",
@@ -12337,7 +13001,8 @@ STOCK_COMPONENT_INFO = {
       "arrangement",
       "layout",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/558049E6-04A9-11E1-8462-8F4F9966D12C.png"
   },
   "CardStandBlue": {
     "DisplayName": "Card Stand, Blue",
@@ -12359,7 +13024,8 @@ STOCK_COMPONENT_INFO = {
       "arrangement",
       "layout",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E9779104-04A9-11E1-8B59-8F4F9966D12C.png"
   },
   "CardStandGreen": {
     "DisplayName": "Card Stand, Green",
@@ -12381,7 +13047,8 @@ STOCK_COMPONENT_INFO = {
       "arrangement",
       "layout",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/470EC0F4-04B3-11E1-8462-8F4F9966D12C.png"
   },
   "CardStandRed": {
     "DisplayName": "Card Stand, Red",
@@ -12403,7 +13070,8 @@ STOCK_COMPONENT_INFO = {
       "arrangement",
       "layout",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0936F8B8-04B4-11E1-8462-8F4F9966D12C.png"
   },
   "CardStandYellow": {
     "DisplayName": "Card Stand, Yellow",
@@ -12425,7 +13093,8 @@ STOCK_COMPONENT_INFO = {
       "arrangement",
       "layout",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2D1A3EF6-04B5-11E1-BB1C-8F4F9966D12C.png"
   },
   "Carrot": {
     "DisplayName": "Carrot",
@@ -12453,7 +13122,8 @@ STOCK_COMPONENT_INFO = {
       "salad",
       "garden",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B329E1C2-F98E-11E0-9D98-108960677055.png"
   },
   "Cash$1": {
     "DisplayName": "Cash, $1",
@@ -12498,7 +13168,8 @@ STOCK_COMPONENT_INFO = {
       "notes",
       "tender",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/25F2AFDE-9A05-11E0-8516-C02841C43697.png"
   },
   "Cash$10": {
     "DisplayName": "Cash, $10",
@@ -12543,7 +13214,8 @@ STOCK_COMPONENT_INFO = {
       "notes",
       "tender",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/31AC1E90-A663-11E0-896A-3A7437D397EC.png"
   },
   "Cash$100": {
     "DisplayName": "Cash, $100",
@@ -12588,7 +13260,8 @@ STOCK_COMPONENT_INFO = {
       "notes",
       "tender",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/239928D4-A663-11E0-896A-3A7437D397EC.png"
   },
   "Cash$100K": {
     "DisplayName": "Cash, $100K",
@@ -12633,7 +13306,8 @@ STOCK_COMPONENT_INFO = {
       "notes",
       "tender",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/07446536-A663-11E0-896A-3A7437D397EC.png"
   },
   "Cash$10K": {
     "DisplayName": "Cash, $10K",
@@ -12678,7 +13352,8 @@ STOCK_COMPONENT_INFO = {
       "notes",
       "tender",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/10B7DF9E-A663-11E0-896A-3A7437D397EC.png"
   },
   "Cash$1K": {
     "DisplayName": "Cash, $1K",
@@ -12723,7 +13398,8 @@ STOCK_COMPONENT_INFO = {
       "notes",
       "tender",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1A1A5C1A-A663-11E0-896A-3A7437D397EC.png"
   },
   "Cash$1M": {
     "DisplayName": "Cash, $1M",
@@ -12768,7 +13444,8 @@ STOCK_COMPONENT_INFO = {
       "notes",
       "tender",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FDCACBA8-A662-11E0-896A-3A7437D397EC.png"
   },
   "Cash$20": {
     "DisplayName": "Cash, $20",
@@ -12813,7 +13490,8 @@ STOCK_COMPONENT_INFO = {
       "notes",
       "tender",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2CF88DF2-A663-11E0-896A-3A7437D397EC.png"
   },
   "Cash$5": {
     "DisplayName": "Cash, $5",
@@ -12858,7 +13536,8 @@ STOCK_COMPONENT_INFO = {
       "notes",
       "tender",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3657B6DE-A663-11E0-896A-3A7437D397EC.png"
   },
   "Cash$50": {
     "DisplayName": "Cash, $50",
@@ -12903,7 +13582,8 @@ STOCK_COMPONENT_INFO = {
       "notes",
       "tender",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/284BF122-A663-11E0-896A-3A7437D397EC.png"
   },
   "Cash$500": {
     "DisplayName": "Cash, $500",
@@ -12948,7 +13628,8 @@ STOCK_COMPONENT_INFO = {
       "notes",
       "tender",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1ED6A1AA-A663-11E0-896A-3A7437D397EC.png"
   },
   "Cash$500K": {
     "DisplayName": "Cash, $500K",
@@ -12993,7 +13674,8 @@ STOCK_COMPONENT_INFO = {
       "notes",
       "tender",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/02827CEA-A663-11E0-896A-3A7437D397EC.png"
   },
   "Cash$50K": {
     "DisplayName": "Cash, $50K",
@@ -13038,7 +13720,8 @@ STOCK_COMPONENT_INFO = {
       "notes",
       "tender",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0BFEF5DC-A663-11E0-896A-3A7437D397EC.png"
   },
   "Cash$5K": {
     "DisplayName": "Cash, $5K",
@@ -13083,7 +13766,8 @@ STOCK_COMPONENT_INFO = {
       "notes",
       "tender",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/15690068-A663-11E0-896A-3A7437D397EC.png"
   },
   "CastleRoomCatwalks": {
     "DisplayName": "Castle Room, Catwalks",
@@ -13104,7 +13788,8 @@ STOCK_COMPONENT_INFO = {
       "handmade",
       "wood",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BE885F9A-3BA1-11EA-A73E-4B7F74C6DA90.png"
   },
   "CastleRoomChambers": {
     "DisplayName": "Castle Room, Chambers",
@@ -13125,7 +13810,8 @@ STOCK_COMPONENT_INFO = {
       "handmade",
       "wood",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/70F9B846-3BA1-11EA-A73E-867E74C6DA90.png"
   },
   "CastleRoomOutpost": {
     "DisplayName": "Castle Room, Outpost",
@@ -13146,7 +13832,8 @@ STOCK_COMPONENT_INFO = {
       "handmade",
       "wood",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6E81AEDE-3BA1-11EA-A3A8-5FEDEBC8DDC9.png"
   },
   "CastleRoomSanctuary": {
     "DisplayName": "Castle Room, Sanctuary",
@@ -13167,7 +13854,8 @@ STOCK_COMPONENT_INFO = {
       "handmade",
       "wood",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/94A88FCE-3BA1-11EA-A3A8-98EDEBC8DDC9.png"
   },
   "CastleRoomTower": {
     "DisplayName": "Castle Room, Tower",
@@ -13188,7 +13876,8 @@ STOCK_COMPONENT_INFO = {
       "handmade",
       "wood",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6950DA0C-3BA1-11EA-A73E-627E74C6DA90.png"
   },
   "CastleRoomVeranda": {
     "DisplayName": "Castle Room, Veranda",
@@ -13209,7 +13898,8 @@ STOCK_COMPONENT_INFO = {
       "handmade",
       "wood",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/63A528B0-3BA1-11EA-A3A8-43EDEBC8DDC9.png"
   },
   "CastleTower": {
     "DisplayName": "Castle Tower",
@@ -13231,7 +13921,8 @@ STOCK_COMPONENT_INFO = {
       "castle",
       "parapet",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6CB721B4-666B-11E7-A50A-063923D28831.png"
   },
   "CastleBlack": {
     "DisplayName": "Castle, Black",
@@ -13242,7 +13933,8 @@ STOCK_COMPONENT_INFO = {
       "medieval",
       "fortress",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8767638A-901D-11EC-A139-15502DFC60CF.png"
   },
   "CastleBlue": {
     "DisplayName": "Castle, Blue",
@@ -13253,7 +13945,8 @@ STOCK_COMPONENT_INFO = {
       "medieval",
       "fortress",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9470D9A8-901D-11EC-854F-A992865AFFDF.png"
   },
   "CastleGreen": {
     "DisplayName": "Castle, Green",
@@ -13264,7 +13957,8 @@ STOCK_COMPONENT_INFO = {
       "medieval",
       "fortress",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A65B792A-901D-11EC-A139-A5512DFC60CF.png"
   },
   "CastleOrange": {
     "DisplayName": "Castle, Orange",
@@ -13275,7 +13969,8 @@ STOCK_COMPONENT_INFO = {
       "medieval",
       "fortress",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CC8A87D0-901D-11EC-A139-50532DFC60CF.png"
   },
   "CastlePurple": {
     "DisplayName": "Castle, Purple",
@@ -13286,7 +13981,8 @@ STOCK_COMPONENT_INFO = {
       "medieval",
       "fortress",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EE472B76-901D-11EC-A139-EB542DFC60CF.png"
   },
   "CastleRed": {
     "DisplayName": "Castle, Red",
@@ -13297,7 +13993,8 @@ STOCK_COMPONENT_INFO = {
       "medieval",
       "fortress",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D61522D8-901D-11EC-A139-E7532DFC60CF.png"
   },
   "CastleWhite": {
     "DisplayName": "Castle, White",
@@ -13308,7 +14005,8 @@ STOCK_COMPONENT_INFO = {
       "medieval",
       "fortress",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C5D633D0-901D-11EC-854F-FB94865AFFDF.png"
   },
   "CastleYellow": {
     "DisplayName": "Castle, Yellow",
@@ -13319,7 +14017,8 @@ STOCK_COMPONENT_INFO = {
       "medieval",
       "fortress",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9D1E5EB8-901D-11EC-A139-E6502DFC60CF.png"
   },
   "CatAcrylic": {
     "DisplayName": "Cat, Acrylic",
@@ -13337,7 +14036,8 @@ STOCK_COMPONENT_INFO = {
       "pussycat",
       "kitten",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/47FA54EC-F6FC-11EB-9EF2-183322502F64.png"
   },
   "CatTB15Black": {
     "DisplayName": "Cat, TB15, Black",
@@ -13351,7 +14051,8 @@ STOCK_COMPONENT_INFO = {
       "kitten",
       "kitty",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/768365C2-C7FF-11EC-B769-6D466EB7A829.png"
   },
   "CatTB15Blue": {
     "DisplayName": "Cat, TB15, Blue",
@@ -13365,7 +14066,8 @@ STOCK_COMPONENT_INFO = {
       "kitten",
       "kitty",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6670023A-C7FF-11EC-B769-AB456EB7A829.png"
   },
   "CatTB15Green": {
     "DisplayName": "Cat, TB15, Green",
@@ -13379,7 +14081,8 @@ STOCK_COMPONENT_INFO = {
       "kitten",
       "kitty",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6E2B17D0-C7FF-11EC-8BBA-7CB1448F12DC.png"
   },
   "CatTB15Orange": {
     "DisplayName": "Cat, TB15, Orange",
@@ -13393,7 +14096,8 @@ STOCK_COMPONENT_INFO = {
       "kitten",
       "kitty",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/450B400A-C7FF-11EC-B769-B5436EB7A829.png"
   },
   "CatTB15Purple": {
     "DisplayName": "Cat, TB15, Purple",
@@ -13407,7 +14111,8 @@ STOCK_COMPONENT_INFO = {
       "kitten",
       "kitty",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/54B5A946-C7FF-11EC-B769-67446EB7A829.png"
   },
   "CatTB15Red": {
     "DisplayName": "Cat, TB15, Red",
@@ -13421,7 +14126,8 @@ STOCK_COMPONENT_INFO = {
       "kitten",
       "kitty",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7ECA99D0-C7FF-11EC-8BBA-3EB2448F12DC.png"
   },
   "CatTB15White": {
     "DisplayName": "Cat, TB15, White",
@@ -13435,7 +14141,8 @@ STOCK_COMPONENT_INFO = {
       "kitten",
       "kitty",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5C258CFA-C7FF-11EC-8BBA-6BB0448F12DC.png"
   },
   "CatTB15Yellow": {
     "DisplayName": "Cat, TB15, Yellow",
@@ -13449,7 +14156,8 @@ STOCK_COMPONENT_INFO = {
       "kitten",
       "kitty",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3C7A9B02-C7FF-11EC-B769-26436EB7A829.png"
   },
   "CathedralBlack": {
     "DisplayName": "Cathedral, Black",
@@ -13459,7 +14167,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "church",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2BB048FC-9047-11EC-854F-03A8865AFFDF.png"
   },
   "CathedralBlue": {
     "DisplayName": "Cathedral, Blue",
@@ -13469,7 +14178,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "church",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/89056294-9047-11EC-A139-006B2DFC60CF.png"
   },
   "CathedralGreen": {
     "DisplayName": "Cathedral, Green",
@@ -13479,7 +14189,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "church",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C498FA32-9047-11EC-854F-D930865AFFDF.png"
   },
   "CathedralOrange": {
     "DisplayName": "Cathedral, Orange",
@@ -13489,7 +14200,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "church",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CF4EB44E-9047-11EC-854F-2F31865AFFDF.png"
   },
   "CathedralPurple": {
     "DisplayName": "Cathedral, Purple",
@@ -13499,7 +14211,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "church",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DA3A0584-9047-11EC-A139-2E6E2DFC60CF.png"
   },
   "CathedralRed": {
     "DisplayName": "Cathedral, Red",
@@ -13509,7 +14222,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "church",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E225DA2A-9047-11EC-854F-DD31865AFFDF.png"
   },
   "CathedralWhite": {
     "DisplayName": "Cathedral, White",
@@ -13519,7 +14233,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "church",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ED8E6350-9047-11EC-A139-666F2DFC60CF.png"
   },
   "CathedralYellow": {
     "DisplayName": "Cathedral, Yellow",
@@ -13529,7 +14244,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "church",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0AD31C26-9048-11EC-854F-FF33865AFFDF.png"
   },
   "Cauldron": {
     "DisplayName": "Cauldron",
@@ -13545,7 +14261,8 @@ STOCK_COMPONENT_INFO = {
       "halloween",
       "boiling",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3AE00578-61E0-11EC-B122-0A4A68FE145E.png"
   },
   "CavalryGreen": {
     "DisplayName": "Cavalry, Green",
@@ -13570,7 +14287,8 @@ STOCK_COMPONENT_INFO = {
       "mounted",
       "rider",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AD6AE9D0-4185-11EC-B092-EEFF7CC35D4C.png"
   },
   "CavemanTB15Black": {
     "DisplayName": "Caveman, TB15, Black",
@@ -13583,7 +14301,8 @@ STOCK_COMPONENT_INFO = {
       "prehistoric",
       "dinosaurs",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B165A1C-02C3-11ED-8182-0622D5F05A14.png"
   },
   "CavemanTB15Blue": {
     "DisplayName": "Caveman, TB15, Blue",
@@ -13596,7 +14315,8 @@ STOCK_COMPONENT_INFO = {
       "prehistoric",
       "dinosaurs",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4F5C44D8-02C3-11ED-A994-D90B3BE74957.png"
   },
   "CavemanTB15Green": {
     "DisplayName": "Caveman, TB15, Green",
@@ -13609,7 +14329,8 @@ STOCK_COMPONENT_INFO = {
       "prehistoric",
       "dinosaurs",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/61A3BCF2-02C3-11ED-A994-750C3BE74957.png"
   },
   "CavemanTB15Orange": {
     "DisplayName": "Caveman, TB15, Orange",
@@ -13622,7 +14343,8 @@ STOCK_COMPONENT_INFO = {
       "prehistoric",
       "dinosaurs",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/65861C34-02C3-11ED-A994-0D0D3BE74957.png"
   },
   "CavemanTB15Purple": {
     "DisplayName": "Caveman, TB15, Purple",
@@ -13635,7 +14357,8 @@ STOCK_COMPONENT_INFO = {
       "prehistoric",
       "dinosaurs",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/99C1FCE2-FE6E-11EC-8F7C-869E3AE74957.png"
   },
   "CavemanTB15Red": {
     "DisplayName": "Caveman, TB15, Red",
@@ -13648,7 +14371,8 @@ STOCK_COMPONENT_INFO = {
       "prehistoric",
       "dinosaurs",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/68FDCD58-02C3-11ED-A994-110D3BE74957.png"
   },
   "CavemanTB15White": {
     "DisplayName": "Caveman, TB15, White",
@@ -13661,7 +14385,8 @@ STOCK_COMPONENT_INFO = {
       "prehistoric",
       "dinosaurs",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6C594DBA-02C3-11ED-8182-BD23D5F05A14.png"
   },
   "CavemanTB15Yellow": {
     "DisplayName": "Caveman, TB15, Yellow",
@@ -13674,7 +14399,8 @@ STOCK_COMPONENT_INFO = {
       "prehistoric",
       "dinosaurs",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6F62C3B0-02C3-11ED-8182-9123D5F05A14.png"
   },
   "CavewomanTB15Black": {
     "DisplayName": "Cavewoman, TB15, Black",
@@ -13687,7 +14413,8 @@ STOCK_COMPONENT_INFO = {
       "prehistoric",
       "dinosaurs",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8405619C-013D-11ED-AED5-7CAD3AE74957.png"
   },
   "CavewomanTB15Blue": {
     "DisplayName": "Cavewoman, TB15, Blue",
@@ -13700,7 +14427,8 @@ STOCK_COMPONENT_INFO = {
       "prehistoric",
       "dinosaurs",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0140C8C2-FF27-11EC-8F7C-66C13AE74957.png"
   },
   "CavewomanTB15Green": {
     "DisplayName": "Cavewoman, TB15, Green",
@@ -13713,7 +14441,8 @@ STOCK_COMPONENT_INFO = {
       "prehistoric",
       "dinosaurs",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DA70C724-FF26-11EC-8F7C-83BF3AE74957.png"
   },
   "CavewomanTB15Orange": {
     "DisplayName": "Cavewoman, TB15, Orange",
@@ -13726,7 +14455,8 @@ STOCK_COMPONENT_INFO = {
       "prehistoric",
       "dinosaurs",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7EAAB2CE-013D-11ED-AED5-3AAD3AE74957.png"
   },
   "CavewomanTB15Purple": {
     "DisplayName": "Cavewoman, TB15, Purple",
@@ -13739,7 +14469,8 @@ STOCK_COMPONENT_INFO = {
       "prehistoric",
       "dinosaurs",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D89E9138-013D-11ED-AED5-8DB13AE74957.png"
   },
   "CavewomanTB15Red": {
     "DisplayName": "Cavewoman, TB15, Red",
@@ -13752,7 +14483,8 @@ STOCK_COMPONENT_INFO = {
       "prehistoric",
       "dinosaurs",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A19E0358-013D-11ED-AED5-F5AE3AE74957.png"
   },
   "CavewomanTB15White": {
     "DisplayName": "Cavewoman, TB15, White",
@@ -13765,7 +14497,8 @@ STOCK_COMPONENT_INFO = {
       "prehistoric",
       "dinosaurs",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/58E4D488-FF27-11EC-8A01-E558D5F05A14.png"
   },
   "CavewomanTB15Yellow": {
     "DisplayName": "Cavewoman, TB15, Yellow",
@@ -13778,7 +14511,8 @@ STOCK_COMPONENT_INFO = {
       "prehistoric",
       "dinosaurs",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/80B6E7A8-FF27-11EC-8F7C-07C73AE74957.png"
   },
   "CentaurThrustingSpear": {
     "DisplayName": "Centaur Thrusting Spear",
@@ -13808,7 +14542,8 @@ STOCK_COMPONENT_INFO = {
       "greek",
       "hippocentaur,",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A21CBD24-11D2-11E8-AADE-1D3294A6FE1D.png"
   },
   "ChaosDeathMaster": {
     "DisplayName": "Chaos Death Master",
@@ -13834,7 +14569,8 @@ STOCK_COMPONENT_INFO = {
       "sickle",
       "necromancer",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/99042E70-11D2-11E8-AADE-E53194A6FE1D.png"
   },
   "CharacterStandBlue": {
     "DisplayName": "Character Stand, Blue",
@@ -13851,7 +14587,8 @@ STOCK_COMPONENT_INFO = {
       "holster",
       "clamp",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A230B0C0-C226-11EA-BF75-899AE676D3FB.png"
   },
   "CharacterStandClear": {
     "DisplayName": "Character Stand, Clear",
@@ -13868,7 +14605,8 @@ STOCK_COMPONENT_INFO = {
       "holster",
       "clamp",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/672F142E-AC77-11E8-92B1-F2E3CE95AB04.png"
   },
   "CharacterStandGreen": {
     "DisplayName": "Character Stand, Green",
@@ -13885,7 +14623,8 @@ STOCK_COMPONENT_INFO = {
       "holster",
       "clamp",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D7B0AE8A-C226-11EA-BF75-2D9BE676D3FB.png"
   },
   "CharacterStandPurple": {
     "DisplayName": "Character Stand, Purple",
@@ -13902,7 +14641,8 @@ STOCK_COMPONENT_INFO = {
       "holster",
       "clamp",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/09A2FE52-C227-11EA-9CF9-1EE37C0739FD.png"
   },
   "CharacterStandRed": {
     "DisplayName": "Character Stand, Red",
@@ -13919,7 +14659,8 @@ STOCK_COMPONENT_INFO = {
       "holster",
       "clamp",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/03992E00-C227-11EA-BF75-929BE676D3FB.png"
   },
   "CharacterStandYellow": {
     "DisplayName": "Character Stand, Yellow",
@@ -13936,7 +14677,8 @@ STOCK_COMPONENT_INFO = {
       "holster",
       "clamp",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FB2AC2CE-C226-11EA-BF75-899BE676D3FB.png"
   },
   "CheeseWedge": {
     "DisplayName": "Cheese Wedge",
@@ -13965,7 +14707,8 @@ STOCK_COMPONENT_INFO = {
       "swiss",
       "provolone",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8ABA940C-5F2E-11EA-B807-6AA4D50F5BC8.png"
   },
   "Cheetah": {
     "DisplayName": "Cheetah",
@@ -13987,7 +14730,8 @@ STOCK_COMPONENT_INFO = {
       "jaguar",
       "cougar",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1B65C172-1A57-11EC-B915-2E1BAE212452.png"
   },
   "ChessSetHalfBlack": {
     "DisplayName": "Chess Set, Half, Black",
@@ -14012,7 +14756,8 @@ STOCK_COMPONENT_INFO = {
       "fide",
       "sport",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AF409258-1308-11EA-A3C1-3839DA9C6FD5.png"
   },
   "ChessSetHalfBlue": {
     "DisplayName": "Chess Set, Half, Blue",
@@ -14037,7 +14782,8 @@ STOCK_COMPONENT_INFO = {
       "fide",
       "sport",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CB8E3C3A-1308-11EA-94D6-3A6F0612E894.png"
   },
   "ChessSetHalfGreen": {
     "DisplayName": "Chess Set, Half, Green",
@@ -14062,7 +14808,8 @@ STOCK_COMPONENT_INFO = {
       "fide",
       "sport",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F7284366-78B1-11EC-83D0-7B68B97B56BB.png"
   },
   "ChessSetHalfOrange": {
     "DisplayName": "Chess Set, Half, Orange",
@@ -14087,7 +14834,8 @@ STOCK_COMPONENT_INFO = {
       "fide",
       "sport",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C75E8520-1308-11EA-94D6-296F0612E894.png"
   },
   "ChessSetHalfPurple": {
     "DisplayName": "Chess Set, Half, Purple",
@@ -14112,7 +14860,8 @@ STOCK_COMPONENT_INFO = {
       "fide",
       "sport",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/11EE8BE4-1309-11EA-94D6-8D6F0612E894.png"
   },
   "ChessSetHalfRed": {
     "DisplayName": "Chess Set, Half, Red",
@@ -14137,7 +14886,8 @@ STOCK_COMPONENT_INFO = {
       "fide",
       "sport",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CF162F0C-1308-11EA-A3C1-5639DA9C6FD5.png"
   },
   "ChessSetHalfWhite": {
     "DisplayName": "Chess Set, Half, White",
@@ -14162,7 +14912,8 @@ STOCK_COMPONENT_INFO = {
       "fide",
       "sport",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B22EA770-1308-11EA-A3C1-3439DA9C6FD5.png"
   },
   "ChessSetHalfYellow": {
     "DisplayName": "Chess Set, Half, Yellow",
@@ -14187,7 +14938,8 @@ STOCK_COMPONENT_INFO = {
       "fide",
       "sport",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B7B279CE-1308-11EA-94D6-276F0612E894.png"
   },
   "ChestBlue": {
     "DisplayName": "Chest, Blue",
@@ -14200,7 +14952,8 @@ STOCK_COMPONENT_INFO = {
       "locked",
       "trunk",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/540A507C-DFA6-11ED-A7B5-AB87A87948BE.png"
   },
   "ChestBronze": {
     "DisplayName": "Chest, Bronze",
@@ -14213,7 +14966,8 @@ STOCK_COMPONENT_INFO = {
       "locked",
       "trunk",
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5C9F0D68-DFA6-11ED-A7B5-4C88A87948BE.png"
   },
   "ChestFantasyTB25": {
     "DisplayName": "Chest, Fantasy, TB25",
@@ -14224,7 +14978,8 @@ STOCK_COMPONENT_INFO = {
       "treasure",
       "marker",
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5795C182-E38E-11EC-B001-7228D456B98B.png"
   },
   "ChestGreen": {
     "DisplayName": "Chest, Green",
@@ -14237,7 +14992,8 @@ STOCK_COMPONENT_INFO = {
       "locked",
       "trunk",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6A2870DC-DFA6-11ED-9E68-613AFFDE5649.png"
   },
   "ChestGrey": {
     "DisplayName": "Chest, Grey",
@@ -14250,7 +15006,8 @@ STOCK_COMPONENT_INFO = {
       "locked",
       "trunk",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4360193C-DFA6-11ED-A7B5-F386A87948BE.png"
   },
   "ChestRed": {
     "DisplayName": "Chest, Red",
@@ -14263,7 +15020,8 @@ STOCK_COMPONENT_INFO = {
       "locked",
       "trunk",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/61F13A34-DFA6-11ED-9E68-9939FFDE5649.png"
   },
   "Chevron20mmBlack": {
     "DisplayName": "Chevron, 20mm, Black",
@@ -14287,7 +15045,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "resources",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3A8534DE-C028-11E3-982E-739E523B2E03.png"
   },
   "Chevron20mmBlue": {
     "DisplayName": "Chevron, 20mm, Blue",
@@ -14311,7 +15070,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "resources",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3A882630-C028-11E3-976A-FDE36B930D5D.png"
   },
   "Chevron20mmGreen": {
     "DisplayName": "Chevron, 20mm, Green",
@@ -14335,7 +15095,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "resources",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3B3B26A4-C028-11E3-84E9-739E523B2E03.png"
   },
   "Chevron20mmOrange": {
     "DisplayName": "Chevron, 20mm, Orange",
@@ -14359,7 +15120,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "resources",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3B295690-C028-11E3-AF22-FDE36B930D5D.png"
   },
   "Chevron20mmPurple": {
     "DisplayName": "Chevron, 20mm, Purple",
@@ -14383,7 +15145,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "resources",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3BA845F4-C028-11E3-8740-739E523B2E03.png"
   },
   "Chevron20mmRed": {
     "DisplayName": "Chevron, 20mm, Red",
@@ -14407,7 +15170,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "resources",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3BE6919C-C028-11E3-81B2-FDE36B930D5D.png"
   },
   "Chevron20mmWhite": {
     "DisplayName": "Chevron, 20mm, White",
@@ -14431,7 +15195,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "resources",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3C70F508-C028-11E3-8F1F-739E523B2E03.png"
   },
   "Chevron20mmYellow": {
     "DisplayName": "Chevron, 20mm, Yellow",
@@ -14455,7 +15220,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "resources",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3C8413A4-C028-11E3-ABFC-FDE36B930D5D.png"
   },
   "Chevron8mmBlack": {
     "DisplayName": "Chevron, 8mm, Black",
@@ -14479,7 +15245,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "resources",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E2AEC2C8-6CEF-11E9-BE0F-89C3BA9B8687.png"
   },
   "Chevron8mmBlue": {
     "DisplayName": "Chevron, 8mm, Blue",
@@ -14503,7 +15270,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "resources",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EC9793FA-6CEF-11E9-855A-D30CAA801980.png"
   },
   "Chevron8mmGreen": {
     "DisplayName": "Chevron, 8mm, Green",
@@ -14527,7 +15295,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "resources",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E0BE61F0-9394-11E9-8253-69E7DF2C6739.png"
   },
   "Chevron8mmOrange": {
     "DisplayName": "Chevron, 8mm, Orange",
@@ -14551,7 +15320,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "resources",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E86834E4-9394-11E9-B0D7-C52221A8FFA8.png"
   },
   "Chevron8mmPurple": {
     "DisplayName": "Chevron, 8mm, Purple",
@@ -14575,7 +15345,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "resources",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F12FBB74-9394-11E9-8253-84E6DF2C6739.png"
   },
   "Chevron8mmRed": {
     "DisplayName": "Chevron, 8mm, Red",
@@ -14599,7 +15370,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "resources",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/305A66B2-6CF0-11E9-855A-3A0DAA801980.png"
   },
   "Chevron8mmWhite": {
     "DisplayName": "Chevron, 8mm, White",
@@ -14623,7 +15395,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "resources",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F9C8BD80-9394-11E9-B0D7-E12221A8FFA8.png"
   },
   "Chevron8mmYellow": {
     "DisplayName": "Chevron, 8mm, Yellow",
@@ -14647,7 +15420,8 @@ STOCK_COMPONENT_INFO = {
       "resource",
       "resources",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3C292136-6CF0-11E9-BE0F-15C4BA9B8687.png"
   },
   "ChickenAcrylic": {
     "DisplayName": "Chicken, Acrylic",
@@ -14671,7 +15445,8 @@ STOCK_COMPONENT_INFO = {
       "yardbird",
       "flock,",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/75241506-F702-11EB-9EF2-E83F22502F64.png"
   },
   "ChurchAcrylicOpaqueBlack": {
     "DisplayName": "Church, Acrylic, Opaque, Black",
@@ -14698,7 +15473,8 @@ STOCK_COMPONENT_INFO = {
       "spiritual",
       "catan",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7CDF0EB0-A4A6-11E8-84DE-160A3E511364.png"
   },
   "ChurchAcrylicOpaqueGold": {
     "DisplayName": "Church, Acrylic, Opaque, Gold",
@@ -14725,7 +15501,8 @@ STOCK_COMPONENT_INFO = {
       "spiritual",
       "catan",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C3DDE744-A4A8-11E8-84DE-300E3E511364.png"
   },
   "ChurchAcrylicOpaqueSilver": {
     "DisplayName": "Church, Acrylic, Opaque, Silver",
@@ -14758,7 +15535,8 @@ STOCK_COMPONENT_INFO = {
       "r": 192,
       "g": 192,
       "b": 192
-    }
+    },
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D268400C-A4A8-11E8-A620-4CE0FC81399E.png"
   },
   "ChurchAcrylicOpaqueWhite": {
     "DisplayName": "Church, Acrylic, Opaque, White",
@@ -14785,7 +15563,8 @@ STOCK_COMPONENT_INFO = {
       "spiritual",
       "catan",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C632EED0-A4A4-11E8-84DE-D5063E511364.png"
   },
   "ChurchAcrylicTransparentBlack": {
     "DisplayName": "Church, Acrylic, Transparent, Black",
@@ -14812,7 +15591,8 @@ STOCK_COMPONENT_INFO = {
       "spiritual",
       "catan",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8DABCFA8-A4A6-11E8-84DE-4A0A3E511364.png"
   },
   "ChurchAcrylicTransparentBlue": {
     "DisplayName": "Church, Acrylic, Transparent, Blue",
@@ -14839,7 +15619,8 @@ STOCK_COMPONENT_INFO = {
       "spiritual",
       "catan",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DB7A1FC6-A4A8-11E8-84DE-5E0E3E511364.png"
   },
   "ChurchAcrylicTransparentClear": {
     "DisplayName": "Church, Acrylic, Transparent, Clear",
@@ -14866,7 +15647,8 @@ STOCK_COMPONENT_INFO = {
       "spiritual",
       "catan",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1601CEC6-B081-11E8-BB17-07C4CE95AB04.png"
   },
   "ChurchAcrylicTransparentGreen": {
     "DisplayName": "Church, Acrylic, Transparent, Green",
@@ -14893,7 +15675,8 @@ STOCK_COMPONENT_INFO = {
       "spiritual",
       "catan",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E22D5BA8-A4A8-11E8-A620-6FE0FC81399E.png"
   },
   "ChurchAcrylicTransparentOrange": {
     "DisplayName": "Church, Acrylic, Transparent, Orange",
@@ -14920,7 +15703,8 @@ STOCK_COMPONENT_INFO = {
       "spiritual",
       "catan",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A04D29A4-A4A6-11E8-A620-4CDCFC81399E.png"
   },
   "ChurchAcrylicTransparentPurple": {
     "DisplayName": "Church, Acrylic, Transparent, Purple",
@@ -14947,7 +15731,8 @@ STOCK_COMPONENT_INFO = {
       "spiritual",
       "catan",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A648D542-A4A6-11E8-A620-5ADCFC81399E.png"
   },
   "ChurchAcrylicTransparentRed": {
     "DisplayName": "Church, Acrylic, Transparent, Red",
@@ -14974,7 +15759,8 @@ STOCK_COMPONENT_INFO = {
       "spiritual",
       "catan",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EB4EA3FE-A4A8-11E8-A620-78E0FC81399E.png"
   },
   "ChurchAcrylicTransparentWhite": {
     "DisplayName": "Church, Acrylic, Transparent, White",
@@ -15001,7 +15787,8 @@ STOCK_COMPONENT_INFO = {
       "spiritual",
       "catan",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/319F0030-A4AC-11E8-A620-C0E5FC81399E.png"
   },
   "ChurchAcrylicTransparentYellow": {
     "DisplayName": "Church, Acrylic, Transparent, Yellow",
@@ -15028,7 +15815,8 @@ STOCK_COMPONENT_INFO = {
       "spiritual",
       "catan",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D353E7AC-A4A6-11E8-A620-ACDCFC81399E.png"
   },
   "ChurchPlasticBlue": {
     "DisplayName": "Church, Plastic, Blue",
@@ -15055,7 +15843,8 @@ STOCK_COMPONENT_INFO = {
       "spiritual",
       "catan",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ADED1514-43E0-11E8-8433-59781EA37D3B.png"
   },
   "ChurchPlasticOrange": {
     "DisplayName": "Church, Plastic, Orange",
@@ -15082,7 +15871,8 @@ STOCK_COMPONENT_INFO = {
       "spiritual",
       "catan",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C9D8AC3E-43E0-11E8-BE95-F378775E42DD.png"
   },
   "ChurchPlasticRed": {
     "DisplayName": "Church, Plastic, Red",
@@ -15109,7 +15899,8 @@ STOCK_COMPONENT_INFO = {
       "spiritual",
       "catan",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EFF2A24E-43E0-11E8-BE95-FFB6892DB14A.png"
   },
   "ChurchPlasticWhite": {
     "DisplayName": "Church, Plastic,White",
@@ -15136,7 +15927,8 @@ STOCK_COMPONENT_INFO = {
       "spiritual",
       "catan",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0AD053B8-43E1-11E8-8433-02791EA37D3B.png"
   },
   "ChurchWoodBlack": {
     "DisplayName": "Church, Wood, Black",
@@ -15163,7 +15955,8 @@ STOCK_COMPONENT_INFO = {
       "spiritual",
       "catan",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8F273BA4-2AC5-11E1-82D0-B470E060718B.png"
   },
   "ChurchWoodBlue": {
     "DisplayName": "Church, Wood, Blue",
@@ -15190,7 +15983,8 @@ STOCK_COMPONENT_INFO = {
       "spirit",
       "spiritual",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/963F1D94-2AC5-11E1-82D0-B470E060718B.png"
   },
   "ChurchWoodGreen": {
     "DisplayName": "Church, Wood, Green",
@@ -15217,7 +16011,8 @@ STOCK_COMPONENT_INFO = {
       "spirit",
       "spiritual",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9E135F44-2AC5-11E1-AB7E-B470E060718B.png"
   },
   "ChurchWoodOrange": {
     "DisplayName": "Church, Wood, Orange",
@@ -15244,7 +16039,8 @@ STOCK_COMPONENT_INFO = {
       "spirit",
       "spiritual",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A524DBE6-2AC5-11E1-8A47-B470E060718B.png"
   },
   "ChurchWoodPurple": {
     "DisplayName": "Church, Wood, Purple",
@@ -15271,7 +16067,8 @@ STOCK_COMPONENT_INFO = {
       "spirit",
       "spiritual",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AC738212-2AC5-11E1-82D0-B470E060718B.png"
   },
   "ChurchWoodRed": {
     "DisplayName": "Church, Wood, Red",
@@ -15298,7 +16095,8 @@ STOCK_COMPONENT_INFO = {
       "spirit",
       "spiritual",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B492581A-2AC5-11E1-AB7E-B470E060718B.png"
   },
   "ChurchWoodWhite": {
     "DisplayName": "Church, Wood, White",
@@ -15325,7 +16123,8 @@ STOCK_COMPONENT_INFO = {
       "spirit",
       "spiritual",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BBB2FB04-2AC5-11E1-8A47-B470E060718B.png"
   },
   "ChurchWoodYellow": {
     "DisplayName": "Church, Wood, Yellow",
@@ -15352,7 +16151,8 @@ STOCK_COMPONENT_INFO = {
       "spirit",
       "spiritual",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C297E506-2AC5-11E1-AB7E-B470E060718B.png"
   },
   "CityCoin1": {
     "DisplayName": "City Coin, 1",
@@ -15394,7 +16194,8 @@ STOCK_COMPONENT_INFO = {
       "mint",
       "change",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2A7D2C14-5A1E-11E9-8BF1-BCAFA1F2CF41.png"
   },
   "CityCoin5": {
     "DisplayName": "City Coin, 5",
@@ -15436,7 +16237,8 @@ STOCK_COMPONENT_INFO = {
       "mint",
       "change",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/51C6518C-5A1F-11E9-8BF1-DBB1A1F2CF41.png"
   },
   "ClayWood": {
     "DisplayName": "Clay, Wood",
@@ -15460,7 +16262,8 @@ STOCK_COMPONENT_INFO = {
       "varve",
       "pottery",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/385D2E08-44C9-11E8-83D1-83711EA37D3B.png"
   },
   "ClearPokerTuckBox(200)": {
     "DisplayName": "Clear Poker Tuck Box (200)",
@@ -15470,7 +16273,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "poker",
       "pack",
-      "packaging",
       "card",
       "protector",
       "trading",
@@ -15484,7 +16286,8 @@ STOCK_COMPONENT_INFO = {
       "deck",
       "collection",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E00635F8-F4E7-11E4-BD56-F49DFE48D702.png"
   },
   "ClearPokerTuckBox(41)": {
     "DisplayName": "Clear Poker Tuck Box (41)",
@@ -15495,7 +16298,6 @@ STOCK_COMPONENT_INFO = {
       "poker",
       "pack",
       "card",
-      "packaging",
       "protector",
       "trading",
       "magic the gathering",
@@ -15509,7 +16311,8 @@ STOCK_COMPONENT_INFO = {
       "collection",
       "clear",
       "display"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E778B3F6-F676-11E0-8F9E-503B60677055.png"
   },
   "ClearPokerTuckBox(66)": {
     "DisplayName": "Clear Poker Tuck Box (66)",
@@ -15519,7 +16322,6 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "poker",
       "pack",
-      "packaging",
       "card",
       "protector",
       "trading",
@@ -15534,7 +16336,8 @@ STOCK_COMPONENT_INFO = {
       "collection",
       "clear",
       "display"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E778B3F6-F676-11E0-8F9E-503B60677055.png"
   },
   "Cleric": {
     "DisplayName": "Cleric",
@@ -15564,7 +16367,8 @@ STOCK_COMPONENT_INFO = {
       "sorceress",
       "witch",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1BEB524A-4560-11E7-ABA2-404390E4BA5A.png"
   },
   "Cleric-CharacterMeeple": {
     "DisplayName": "Cleric - Character Meeple",
@@ -15594,7 +16398,8 @@ STOCK_COMPONENT_INFO = {
       "sorceress",
       "witch",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A6A5E526-8EBB-11E8-AE40-A1E8785DA8EE.png"
   },
   "CoalWood": {
     "DisplayName": "Coal, Wood",
@@ -15617,7 +16422,8 @@ STOCK_COMPONENT_INFO = {
       "anthracite",
       "graphite",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/517213C2-44C9-11E8-83D1-CB711EA37D3B.png"
   },
   "CobaltWood": {
     "DisplayName": "Cobalt, Wood",
@@ -15637,7 +16443,8 @@ STOCK_COMPONENT_INFO = {
       "isotope",
       "compound",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C71C750C-4FEC-11E9-BA3F-21F684BD98AD.png"
   },
   "CobraWoodTeal": {
     "DisplayName": "Cobra, Wood, Teal",
@@ -15657,7 +16464,8 @@ STOCK_COMPONENT_INFO = {
       "hood",
       "predator",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/97A8EDB2-CFF0-11E9-B0A3-A80035E1E425.png"
   },
   "Cog's2024Calendar": {
     "DisplayName": "Cog's 2024 Calendar",
@@ -15722,7 +16530,8 @@ STOCK_COMPONENT_INFO = {
       "change",
       "points",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D1E0BF00-5A20-11E9-8BF1-0EB4A1F2CF41.png"
   },
   "Coin5x": {
     "DisplayName": "Coin, 5x",
@@ -15765,7 +16574,8 @@ STOCK_COMPONENT_INFO = {
       "change",
       "multiplier",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/013D764A-5A20-11E9-9D42-72F67E23BFD3.png"
   },
   "CoinAncientRussian22mm": {
     "DisplayName": "Coin, Ancient Russian, 22mm",
@@ -15809,7 +16619,8 @@ STOCK_COMPONENT_INFO = {
       "ruble",
       "kopek",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AFA03EA0-000D-11EA-ADC9-246F378EFB1C.png"
   },
   "CoinChinese20mm": {
     "DisplayName": "Coin, Chinese, 20mm",
@@ -15858,7 +16669,8 @@ STOCK_COMPONENT_INFO = {
       "china",
       "renminbi",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DD8458AA-0747-11EB-B07A-DCD6E06DCA5A.png"
   },
   "CoinChinese23mm": {
     "DisplayName": "Coin, Chinese, 23mm",
@@ -15914,7 +16726,8 @@ STOCK_COMPONENT_INFO = {
       "china",
       "renminbi",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/54D0907E-3BA4-11EA-A73E-268474C6DA90.png"
   },
   "CoinDime": {
     "DisplayName": "Coin, Dime",
@@ -15957,7 +16770,8 @@ STOCK_COMPONENT_INFO = {
       "change",
       "dime",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7B105F48-06BE-11E3-B79C-344DF281FBB4.png"
   },
   "CoinDwarven": {
     "DisplayName": "Coin, Dwarven",
@@ -15978,7 +16792,8 @@ STOCK_COMPONENT_INFO = {
       "dwarf",
       "smithing",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E69752A0-0130-11ED-976B-2223D5F05A14.png"
   },
   "CoinFantasy1": {
     "DisplayName": "Coin, Fantasy, 1",
@@ -15997,7 +16812,8 @@ STOCK_COMPONENT_INFO = {
       "trade",
       "phoenix",
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/08A01270-61DF-11EC-BA8E-9B7403B57022.png"
   },
   "CoinFantasy10": {
     "DisplayName": "Coin, Fantasy, 10",
@@ -16015,7 +16831,8 @@ STOCK_COMPONENT_INFO = {
       "bargain",
       "trade",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8B564DC0-61DE-11EC-B122-273568FE145E.png"
   },
   "CoinFantasy5": {
     "DisplayName": "Coin, Fantasy, 5",
@@ -16033,7 +16850,8 @@ STOCK_COMPONENT_INFO = {
       "bargain",
       "trade",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9E7624C0-61DE-11EC-BA8E-496F03B57022.png"
   },
   "CoinGold": {
     "DisplayName": "Coin, Gold",
@@ -16077,7 +16895,8 @@ STOCK_COMPONENT_INFO = {
       "gold",
       "treasure",
       "bullion"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F8FE30CE-A662-11E0-896A-3A7437D397EC.png"
   },
   "CoinGreen": {
     "DisplayName": "Coin, Green",
@@ -16120,7 +16939,8 @@ STOCK_COMPONENT_INFO = {
       "change",
       "treasure",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F4390B36-A662-11E0-896A-3A7437D397EC.png"
   },
   "CoinHalfdollar": {
     "DisplayName": "Coin, Half dollar",
@@ -16162,7 +16982,8 @@ STOCK_COMPONENT_INFO = {
       "mint",
       "change",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5ED5D088-0394-11E3-BCE5-1C36F281FBB4.png"
   },
   "CoinMedievalBronze": {
     "DisplayName": "Coin, Medieval, Bronze",
@@ -16171,7 +16992,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "B08A2F78-0F83-11ED-AD45-B012A5A96053",
     "Tags": [
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AF7129EA-14F9-11ED-B552-EEAD95221FC2.png"
   },
   "CoinMedievalGold": {
     "DisplayName": "Coin, Medieval, Gold",
@@ -16180,7 +17002,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "E62AAE96-0F83-11ED-B912-4E7B591B8E51",
     "Tags": [
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8A3166C2-14F9-11ED-B552-BFAB95221FC2.png"
   },
   "CoinMedievalSilver": {
     "DisplayName": "Coin, Medieval, Silver",
@@ -16191,7 +17014,8 @@ STOCK_COMPONENT_INFO = {
       "rustic",
       "historic",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9516E120-14F9-11ED-B7FD-9526A5A96053.png"
   },
   "CoinNickel": {
     "DisplayName": "Coin, Nickel",
@@ -16234,7 +17058,8 @@ STOCK_COMPONENT_INFO = {
       "change",
       "nickel",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7B90E01E-06BE-11E3-AB30-344DF281FBB4.png"
   },
   "CoinPenny": {
     "DisplayName": "Coin, Penny",
@@ -16278,7 +17103,8 @@ STOCK_COMPONENT_INFO = {
       "cent",
       "penny",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6166026E-0394-11E3-ADF6-1C36F281FBB4.png"
   },
   "CoinPirate35mm": {
     "DisplayName": "Coin, Pirate, 35mm",
@@ -16323,7 +17149,8 @@ STOCK_COMPONENT_INFO = {
       "mint",
       "change",
       "booty"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8351FDF2-6AED-11EF-ACCA-7E3FBABE8560.png"
   },
   "CoinPurple": {
     "DisplayName": "Coin, Purple",
@@ -16367,7 +17194,8 @@ STOCK_COMPONENT_INFO = {
       "loot",
       "treasure",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EF717188-A662-11E0-896A-3A7437D397EC.png"
   },
   "CoinQuarter": {
     "DisplayName": "Coin, Quarter",
@@ -16410,7 +17238,8 @@ STOCK_COMPONENT_INFO = {
       "change",
       "quarter",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/406D5EB8-06BE-11E3-8EC0-344DF281FBB4.png"
   },
   "CoinRoman18mm": {
     "DisplayName": "Coin, Roman, 18mm",
@@ -16458,7 +17287,8 @@ STOCK_COMPONENT_INFO = {
       "nummus aureus",
       "or denarius aureus",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/63D4C6A8-3BA4-11EA-A3A8-4074EBC8DDC9.png"
   },
   "CoinSacagaweaDollar": {
     "DisplayName": "Coin, Sacagawea Dollar",
@@ -16501,7 +17331,8 @@ STOCK_COMPONENT_INFO = {
       "change",
       "golden",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/60180FD8-0394-11E3-8842-1C36F281FBB4.png"
   },
   "CoinTimeless1": {
     "DisplayName": "Coin, Timeless, 1",
@@ -16525,7 +17356,8 @@ STOCK_COMPONENT_INFO = {
       "r": 255,
       "g": 255,
       "b": 0
-    }
+    },
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7B89AED2-61DE-11EC-BA8E-6C6D03B57022.png"
   },
   "CoinTimeless10": {
     "DisplayName": "Coin, Timeless, 10",
@@ -16543,7 +17375,8 @@ STOCK_COMPONENT_INFO = {
       "bargain",
       "trade",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/306ACCBA-61DE-11EC-B122-EE3068FE145E.png"
   },
   "CoinTimeless5": {
     "DisplayName": "Coin, Timeless, 5",
@@ -16561,7 +17394,8 @@ STOCK_COMPONENT_INFO = {
       "bargain",
       "trade",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B7C1824-61DE-11EC-B122-D73168FE145E.png"
   },
   "ColonialLumberjackBlue": {
     "DisplayName": "Colonial Lumberjack, Blue",
@@ -16580,7 +17414,8 @@ STOCK_COMPONENT_INFO = {
       "timber",
       "cutter",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1C15A90E-4197-11EC-B092-63AB7CC35D4C.png"
   },
   "ColonialLumberjackGreen": {
     "DisplayName": "Colonial Lumberjack, Green",
@@ -16599,7 +17434,8 @@ STOCK_COMPONENT_INFO = {
       "timber",
       "cutter",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/405C2D88-4197-11EC-B092-BAAB7CC35D4C.png"
   },
   "ColonialLumberjackOrange": {
     "DisplayName": "Colonial Lumberjack, Orange",
@@ -16618,7 +17454,8 @@ STOCK_COMPONENT_INFO = {
       "timber",
       "cutter",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/165378C0-4197-11EC-B092-50AB7CC35D4C.png"
   },
   "ColonialLumberjackRed": {
     "DisplayName": "Colonial Lumberjack, Red",
@@ -16637,7 +17474,8 @@ STOCK_COMPONENT_INFO = {
       "timber",
       "cutter",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4721BF2A-4197-11EC-877A-6E2C5E0D62FB.png"
   },
   "ColonialLumberjackYellow": {
     "DisplayName": "Colonial Lumberjack, Yellow",
@@ -16656,7 +17494,8 @@ STOCK_COMPONENT_INFO = {
       "timber",
       "cutter",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2B743F14-4197-11EC-B092-86AB7CC35D4C.png"
   },
   "ColonialSoldierBlue": {
     "DisplayName": "Colonial Soldier, Blue",
@@ -16675,7 +17514,8 @@ STOCK_COMPONENT_INFO = {
       "private",
       "arquebusier",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DB66A24C-419A-11EC-877A-F5355E0D62FB.png"
   },
   "ColonialSoldierGreen": {
     "DisplayName": "Colonial Soldier, Green",
@@ -16694,7 +17534,8 @@ STOCK_COMPONENT_INFO = {
       "private",
       "arquebusier",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D71F02EC-419A-11EC-877A-EB355E0D62FB.png"
   },
   "ColonialSoldierOrange": {
     "DisplayName": "Colonial Soldier, Orange",
@@ -16713,7 +17554,8 @@ STOCK_COMPONENT_INFO = {
       "private",
       "arquebusier",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D0D3A6EA-419A-11EC-B092-39B57CC35D4C.png"
   },
   "ColonialSoldierRed": {
     "DisplayName": "Colonial Soldier, Red",
@@ -16732,7 +17574,8 @@ STOCK_COMPONENT_INFO = {
       "private",
       "arquebusier",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CC6E53FC-419A-11EC-877A-B5355E0D62FB.png"
   },
   "ColonialSoldierYellow": {
     "DisplayName": "Colonial Soldier, Yellow",
@@ -16751,7 +17594,8 @@ STOCK_COMPONENT_INFO = {
       "private",
       "arquebusier",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C6C4B360-419A-11EC-877A-A3355E0D62FB.png"
   },
   "CommandCenterBlack": {
     "DisplayName": "Command Center, Black",
@@ -16767,7 +17611,8 @@ STOCK_COMPONENT_INFO = {
       "telescope",
       "astronomy",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9956FB4C-6353-11EC-9201-58C914F325E3.png"
   },
   "CommandCenterBlue": {
     "DisplayName": "Command Center, Blue",
@@ -16783,7 +17628,8 @@ STOCK_COMPONENT_INFO = {
       "telescope",
       "astronomy",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/10CF2900-5F63-11EC-80B9-3D7C68FE145E.png"
   },
   "CommandCenterGreen": {
     "DisplayName": "Command Center, Green",
@@ -16799,7 +17645,8 @@ STOCK_COMPONENT_INFO = {
       "telescope",
       "astronomy",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2285C4BA-5F63-11EC-9EF3-0CEB1E5F5B50.png"
   },
   "CommandCenterOrange": {
     "DisplayName": "Command Center, Orange",
@@ -16815,7 +17662,8 @@ STOCK_COMPONENT_INFO = {
       "telescope",
       "astronomy",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/19749C20-5F63-11EC-80B9-4E7C68FE145E.png"
   },
   "CommandCenterPurple": {
     "DisplayName": "Command Center, Purple",
@@ -16831,7 +17679,8 @@ STOCK_COMPONENT_INFO = {
       "telescope",
       "astronomy",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ABE127B0-6353-11EC-BCFF-FC7E03B57022.png"
   },
   "CommandCenterRed": {
     "DisplayName": "Command Center, Red",
@@ -16847,7 +17696,8 @@ STOCK_COMPONENT_INFO = {
       "telescope",
       "astronomy",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0268DA3C-5F63-11EC-80B9-2C7C68FE145E.png"
   },
   "CommandCenterWhite": {
     "DisplayName": "Command Center, White",
@@ -16863,7 +17713,8 @@ STOCK_COMPONENT_INFO = {
       "telescope",
       "astronomy",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FE3D1948-6CC1-11EC-8E50-7B8D102E9259.png"
   },
   "CommandCenterYellow": {
     "DisplayName": "Command Center, Yellow",
@@ -16879,7 +17730,8 @@ STOCK_COMPONENT_INFO = {
       "telescope",
       "astronomy",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0AD6EA56-5F63-11EC-9EF3-E7EA1E5F5B50.png"
   },
   "Compass": {
     "DisplayName": "Compass",
@@ -16893,7 +17745,8 @@ STOCK_COMPONENT_INFO = {
       "explorer",
       "adventure",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E01F6206-F702-11EC-A087-714C7805D582.png"
   },
   "Computer": {
     "DisplayName": "Computer",
@@ -16901,8 +17754,11 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "00760C38-9930-11ED-B8BB-A8412FC265EA",
     "GameCrafterSkuId": "007C2ECE-9930-11ED-B8BB-A8412FC265EA",
     "Tags": [
+      "computer",
+      "button",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DF3BD470-9E94-11ED-88B5-3DAFCB83BB28.png"
   },
   "ComputerDesk": {
     "DisplayName": "Computer Desk",
@@ -16910,8 +17766,12 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterGuid": "CF707F5C-9938-11ED-8833-31AA70F6595B",
     "GameCrafterSkuId": "CFB07ED6-9938-11ED-8833-31AA70F6595B",
     "Tags": [
+      "computer",
+      "desk",
+      "button",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E5BCE33E-9E94-11ED-8B48-36522A49FC29.png"
   },
   "ConePawnBlack": {
     "DisplayName": "Cone Pawn, Black",
@@ -16927,7 +17787,8 @@ STOCK_COMPONENT_INFO = {
       "character",
       "unit",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4566DF12-57C0-11E9-8BEB-B1C47E23BFD3.png"
   },
   "ContainerShipBlue": {
     "DisplayName": "Container Ship, Blue",
@@ -16954,7 +17815,8 @@ STOCK_COMPONENT_INFO = {
       "tanker",
       "maritime",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/82E37132-666A-11E7-A50A-DC3723D28831.png"
   },
   "ContainerShipGreen": {
     "DisplayName": "Container Ship, Green",
@@ -16981,7 +17843,8 @@ STOCK_COMPONENT_INFO = {
       "tanker",
       "maritime",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/829A58E4-666A-11E7-A50A-DA3723D28831.png"
   },
   "ContainerShipGrey": {
     "DisplayName": "Container Ship, Grey",
@@ -17008,7 +17871,8 @@ STOCK_COMPONENT_INFO = {
       "tanker",
       "maritime",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/82DEFC24-666A-11E7-86C9-A76A8701372A.png"
   },
   "ContainerShipRed": {
     "DisplayName": "Container Ship, Red",
@@ -17035,7 +17899,8 @@ STOCK_COMPONENT_INFO = {
       "tanker",
       "maritime",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/834812EA-666A-11E7-A50A-C93723D28831.png"
   },
   "ContainerShipYellow": {
     "DisplayName": "Container Ship, Yellow",
@@ -17062,7 +17927,8 @@ STOCK_COMPONENT_INFO = {
       "tanker",
       "maritime",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8336B5AE-666A-11E7-86C9-716A8701372A.png"
   },
   "CottonBagSmallWhite": {
     "DisplayName": "Cotton Bag, Small, White",
@@ -17083,7 +17949,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F2CA608A-B1B3-11EB-8EC7-EB23421B163D.png"
   },
   "CowBlack": {
     "DisplayName": "Cow, Black",
@@ -17101,7 +17968,8 @@ STOCK_COMPONENT_INFO = {
       "beef",
       "heifer",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/47F17D6E-33ED-11EA-808B-F2382AEAE865.png"
   },
   "CowHalfBlack": {
     "DisplayName": "Cow, Half Black",
@@ -17119,7 +17987,8 @@ STOCK_COMPONENT_INFO = {
       "beef",
       "heifer",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A2304556-33EF-11EA-836F-4329B829B2FA.png"
   },
   "CowHalfBrown": {
     "DisplayName": "Cow, Half Brown",
@@ -17137,7 +18006,8 @@ STOCK_COMPONENT_INFO = {
       "beef",
       "heifer",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4E0B6EDA-33ED-11EA-808B-FA382AEAE865.png"
   },
   "CowboyBlack-CharacterMeeple": {
     "DisplayName": "Cowboy, Black - Character Meeple",
@@ -17168,7 +18038,8 @@ STOCK_COMPONENT_INFO = {
       "gunfighter",
       "ranchero",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B99F89FC-8EBB-11E8-8D59-DB98B70C97C7.png"
   },
   "CowboyBlue-CharacterMeeple": {
     "DisplayName": "Cowboy, Blue - Character Meeple",
@@ -17199,7 +18070,8 @@ STOCK_COMPONENT_INFO = {
       "gunfighter",
       "ranchero",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C739DD06-8EBB-11E8-8D59-0899B70C97C7.png"
   },
   "CowboyGreen-CharacterMeeple": {
     "DisplayName": "Cowboy, Green - Character Meeple",
@@ -17230,7 +18102,8 @@ STOCK_COMPONENT_INFO = {
       "gunfighter",
       "ranchero",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/18B6318A-8F51-11E8-8EA6-16AB785DA8EE.png"
   },
   "CowboyOrange-CharacterMeeple": {
     "DisplayName": "Cowboy, Orange - Character Meeple",
@@ -17261,7 +18134,8 @@ STOCK_COMPONENT_INFO = {
       "gunfighter",
       "ranchero",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D004430E-8EBB-11E8-AE40-D8E8785DA8EE.png"
   },
   "CowboyPurple-CharacterMeeple": {
     "DisplayName": "Cowboy, Purple - Character Meeple",
@@ -17292,7 +18166,8 @@ STOCK_COMPONENT_INFO = {
       "gunfighter",
       "ranchero",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DDFE420C-8EBB-11E8-8D59-2799B70C97C7.png"
   },
   "CowboyRed-CharacterMeeple": {
     "DisplayName": "Cowboy, Red - Character Meeple",
@@ -17323,7 +18198,8 @@ STOCK_COMPONENT_INFO = {
       "gunfighter",
       "ranchero",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FCDA2A88-8EBB-11E8-8D59-4999B70C97C7.png"
   },
   "CowboyWhite-CharacterMeeple": {
     "DisplayName": "Cowboy, White - Character Meeple",
@@ -17354,7 +18230,8 @@ STOCK_COMPONENT_INFO = {
       "gunfighter",
       "ranchero",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0FCC512A-8EBC-11E8-AE40-2BE9785DA8EE.png"
   },
   "CowboyYellow-CharacterMeeple": {
     "DisplayName": "Cowboy, Yellow - Character Meeple",
@@ -17385,7 +18262,8 @@ STOCK_COMPONENT_INFO = {
       "gunfighter",
       "ranchero",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/050B0C4A-8EBC-11E8-8D59-5E99B70C97C7.png"
   },
   "CrabAcrylicBlack": {
     "DisplayName": "Crab, Acrylic, Black",
@@ -17412,7 +18290,8 @@ STOCK_COMPONENT_INFO = {
       "arthropod",
       "shellfish",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3464C4C4-4A4A-11E8-855F-D4C090B65509.png"
   },
   "CrabAcrylicBlue": {
     "DisplayName": "Crab, Acrylic, Blue",
@@ -17439,7 +18318,8 @@ STOCK_COMPONENT_INFO = {
       "arthropod",
       "shellfish",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3E05B132-4A4A-11E8-855F-BC450198377D.png"
   },
   "CrabAcrylicGreen": {
     "DisplayName": "Crab, Acrylic, Green",
@@ -17466,7 +18346,8 @@ STOCK_COMPONENT_INFO = {
       "arthropod",
       "shellfish",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4734C1F8-4A4A-11E8-855F-805A6A7D2DE7.png"
   },
   "CrabAcrylicOrange": {
     "DisplayName": "Crab, Acrylic, Orange",
@@ -17493,7 +18374,8 @@ STOCK_COMPONENT_INFO = {
       "arthropod",
       "shellfish",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4CE43C1E-4A4A-11E8-855F-F3436882281B.png"
   },
   "CrabAcrylicPurple": {
     "DisplayName": "Crab, Acrylic, Purple",
@@ -17520,7 +18402,8 @@ STOCK_COMPONENT_INFO = {
       "arthropod",
       "shellfish",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FDEFC774-4A4C-11E8-855F-93825C19F033.png"
   },
   "CrabAcrylicRed": {
     "DisplayName": "Crab, Acrylic, Red",
@@ -17547,7 +18430,8 @@ STOCK_COMPONENT_INFO = {
       "arthropod",
       "shellfish",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0458F400-4A4D-11E8-855F-A8043D87E057.png"
   },
   "CrabAcrylicWhite": {
     "DisplayName": "Crab, Acrylic, White",
@@ -17574,7 +18458,8 @@ STOCK_COMPONENT_INFO = {
       "arthropod",
       "shellfish",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/095BF920-4A4D-11E8-B01B-F999551EBD8A.png"
   },
   "CrabAcrylicYellow": {
     "DisplayName": "Crab, Acrylic, Yellow",
@@ -17601,7 +18486,8 @@ STOCK_COMPONENT_INFO = {
       "arthropod",
       "shellfish",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/108180D0-4A4D-11E8-855F-E5F2B113BFB0.png"
   },
   "Crate": {
     "DisplayName": "Crate",
@@ -17613,7 +18499,8 @@ STOCK_COMPONENT_INFO = {
       "bin",
       "sack",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4D10B176-74DA-11ED-8643-6B2543694036.png"
   },
   "CreepyHandTB25": {
     "DisplayName": "Creepy Hand, TB25",
@@ -17625,8 +18512,14 @@ STOCK_COMPONENT_INFO = {
       "undead",
       "resurrection",
       "horror",
+      "first player",
+      "first player marker",
+      "first player token",
+      "halloween",
+      "creature\r\n",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1D0035DC-6CCB-11EC-AA0B-CA7FF74A7BBA.png"
   },
   "CrescentWrench": {
     "DisplayName": "Crescent Wrench",
@@ -17650,7 +18543,8 @@ STOCK_COMPONENT_INFO = {
       "gadget",
       "mechanism",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D6677070-0302-11E9-849C-49E6D18499DE.png"
   },
   "Crown": {
     "DisplayName": "Crown",
@@ -17664,8 +18558,11 @@ STOCK_COMPONENT_INFO = {
       "regal",
       "golden",
       "corona",
+      "hat",
+      "headware",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/84E61598-6CC8-11EC-AA0B-75DDF74A7BBA.png"
   },
   "CrystalOpaqueBlack": {
     "DisplayName": "Crystal, Opaque, Black",
@@ -17689,7 +18586,8 @@ STOCK_COMPONENT_INFO = {
       "trinket",
       "rock",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4DEB2524-0B9C-11E3-ABEC-C1057740BD4B.png"
   },
   "CrystalOpaqueGold": {
     "DisplayName": "Crystal, Opaque, Gold",
@@ -17713,7 +18611,8 @@ STOCK_COMPONENT_INFO = {
       "trinket",
       "rock",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6AA5FAD8-4326-11E8-B04D-E0631EA37D3B.png"
   },
   "CrystalOpaqueSilver": {
     "DisplayName": "Crystal, Opaque, Silver",
@@ -17737,7 +18636,8 @@ STOCK_COMPONENT_INFO = {
       "trinket",
       "rock",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E24C55E2-4325-11E8-A8D1-C4621EA37D3B.png"
   },
   "CrystalOpaqueWhite": {
     "DisplayName": "Crystal, Opaque, White",
@@ -17761,7 +18661,8 @@ STOCK_COMPONENT_INFO = {
       "trinket",
       "rock",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8EAE5D18-3F0D-11E6-A83E-823ABEB5980F.png"
   },
   "CrystalTransparentBlack": {
     "DisplayName": "Crystal, Transparent, Black",
@@ -17785,7 +18686,8 @@ STOCK_COMPONENT_INFO = {
       "trinket",
       "rock",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AE21B71A-4327-11E8-BAFE-ED66A79737CA.png"
   },
   "CrystalTransparentBlue": {
     "DisplayName": "Crystal, Transparent, Blue",
@@ -17810,7 +18712,8 @@ STOCK_COMPONENT_INFO = {
       "rock",
       "sapphire",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/28854692-E49A-11E4-AD8B-CF118CEE446B.png"
   },
   "CrystalTransparentClear": {
     "DisplayName": "Crystal, Transparent, Clear",
@@ -17834,7 +18737,8 @@ STOCK_COMPONENT_INFO = {
       "trinket",
       "rock",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9A8AF276-AD66-11E8-85D2-6EC6CE95AB04.png"
   },
   "CrystalTransparentGreen": {
     "DisplayName": "Crystal, Transparent, Green",
@@ -17859,7 +18763,8 @@ STOCK_COMPONENT_INFO = {
       "rock",
       "emerald",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2896541E-E49A-11E4-9428-AD31737B945E.png"
   },
   "CrystalTransparentOrange": {
     "DisplayName": "Crystal, Transparent, Orange",
@@ -17883,7 +18788,8 @@ STOCK_COMPONENT_INFO = {
       "trinket",
       "rock",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4FB5A4C4-0B9C-11E3-ABEC-C1057740BD4B.png"
   },
   "CrystalTransparentPurple": {
     "DisplayName": "Crystal, Transparent, Purple",
@@ -17908,7 +18814,8 @@ STOCK_COMPONENT_INFO = {
       "rock",
       "opal",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/292531D4-E49A-11E4-9BF7-CF118CEE446B.png"
   },
   "CrystalTransparentRed": {
     "DisplayName": "Crystal, Transparent, Red",
@@ -17933,7 +18840,8 @@ STOCK_COMPONENT_INFO = {
       "rock",
       "ruby",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6AE1FCC0-C028-11E3-9FD1-739E523B2E03.png"
   },
   "CrystalTransparentWhite": {
     "DisplayName": "Crystal, Transparent, White",
@@ -17957,7 +18865,8 @@ STOCK_COMPONENT_INFO = {
       "trinket",
       "rock",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B83C2F9C-47EF-11E8-8D8F-2F8A1EA37D3B.png"
   },
   "CrystalTransparentYellow": {
     "DisplayName": "Crystal, Transparent, Yellow",
@@ -17982,7 +18891,8 @@ STOCK_COMPONENT_INFO = {
       "rock",
       "citrine",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/294B22D6-E49A-11E4-86AA-AD31737B945E.png"
   },
   "Cube10mmBlack": {
     "DisplayName": "Cube, 10mm, Black",
@@ -18011,8 +18921,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B4BE3A9C-FBF5-11E0-89AE-F2379966D12C.png"
   },
   "Cube10mmBlue": {
     "DisplayName": "Cube, 10mm, Blue",
@@ -18041,8 +18976,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4DF68D86-FBF6-11E0-89AE-F2379966D12C.png"
   },
   "Cube10mmBrown": {
     "DisplayName": "Cube, 10mm, Brown",
@@ -18071,22 +19031,16 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
-      "brown"
-    ]
-  },
-  "Cube10mmGreen": {
-    "DisplayName": "Cube, 10mm, Green",
-    "Description": "A wooden 10mm x 10mm cube, which can be used as a resource in euro-style games.\n",
-    "GameCrafterGuid": "E00A5652-9A04-11E0-AACC-432941C43697", 
-    "GameCrafterSkuId": "E00A5FC6-9A04-11E0-AACC-432941C43697",
-    "PlaygroundColor": {
-      "r": 0,
-      "g": 255,
-      "b": 0
-    },
-    "Tags": [
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "square",
-      "box", 
+      "box",
       "block",
       "hexahedron",
       "cuboid",
@@ -18101,8 +19055,72 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
+      "brown"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E54F1B98-02B7-11E8-9AE7-F4C0DE6B1420.png"
+  },
+  "Cube10mmGreen": {
+    "DisplayName": "Cube, 10mm, Green",
+    "Description": "A wooden 10mm x 10mm cube, which can be used as a resource in euro-style games.\n",
+    "GameCrafterGuid": "E00A5652-9A04-11E0-AACC-432941C43697",
+    "GameCrafterSkuId": "E00A5FC6-9A04-11E0-AACC-432941C43697",
+    "PlaygroundColor": {
+      "r": 0,
+      "g": 255,
+      "b": 0
+    },
+    "Tags": [
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0519CE6C-FC09-11E0-AB22-F2379966D12C.png"
   },
   "Cube10mmGrey": {
     "DisplayName": "Cube, 10mm, Grey",
@@ -18131,8 +19149,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D5B4E29E-02B7-11E8-A637-9A912C4289AF.png"
   },
   "Cube10mmMustard": {
     "DisplayName": "Cube, 10mm, Mustard",
@@ -18147,7 +19190,7 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "square",
       "box",
-      "block", 
+      "block",
       "hexahedron",
       "cuboid",
       "cubical",
@@ -18191,8 +19234,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B67491CE-FC09-11E0-89AE-F2379966D12C.png"
   },
   "Cube10mmPink": {
     "DisplayName": "Cube, 10mm, Pink",
@@ -18221,8 +19289,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DD9E1822-02B7-11E8-9AE7-F4A0AD56985E.png"
   },
   "Cube10mmPurple": {
     "DisplayName": "Cube, 10mm, Purple",
@@ -18251,8 +19344,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/314C6C52-FC0D-11E0-89AE-F2379966D12C.png"
   },
   "Cube10mmRed": {
     "PlaygroundColor": {
@@ -18281,8 +19399,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DCAD8612-FC0D-11E0-AE14-F2379966D12C.png"
   },
   "Cube10mmWhite": {
     "PlaygroundColor": {
@@ -18311,8 +19454,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DCA14308-A662-11E0-896A-3A7437D397EC.png"
   },
   "Cube10mmYellow": {
     "DisplayName": "Cube, 10mm, Yellow",
@@ -18341,8 +19509,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9F30EE62-FC0A-11E0-AB22-F2379966D12C.png"
   },
   "Cube15mmRed": {
     "PlaygroundColor": {
@@ -18371,8 +19564,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C6A8EE72-54B3-11E9-BF1F-3CED84BD98AD.png"
   },
   "Cube8mmBrightYellow": {
     "PlaygroundColor": {
@@ -18401,8 +19619,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/053D4EDE-788D-11E8-8AAE-82E9B4CA41B8.png"
   },
   "Cube8mmBrown": {
     "PlaygroundColor": {
@@ -18431,8 +19674,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E54F1B98-02B7-11E8-9AE7-F4C0DE6B1420.png"
   },
   "Cube8mmGrey": {
     "PlaygroundColor": {
@@ -18461,8 +19729,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D5B4E29E-02B7-11E8-A637-9A912C4289AF.png"
   },
   "Cube8mmLightPink": {
     "PlaygroundColor": {
@@ -18491,8 +19784,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E1B260B4-4973-11E8-A77D-D7400D7F3827.png"
   },
   "Cube8mmNatural": {
     "PlaygroundColor": {
@@ -18551,8 +19869,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DD9E1822-02B7-11E8-9AE7-F4A0AD56985E.png"
   },
   "Cube8mmYellow": {
     "PlaygroundColor": {
@@ -18581,8 +19924,33 @@ STOCK_COMPONENT_INFO = {
       "kit",
       "maker",
       "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9F30EE62-FC0A-11E0-AB22-F2379966D12C.png"
   },
   "CubeMetalBronze8mm": {
     "PlaygroundColor": {
@@ -18612,8 +19980,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "luster",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "copper"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BD74BD26-10CC-11E8-8D35-775494A6FE1D.png"
   },
   "CubeMetalGold8mm": {
     "PlaygroundColor": {
@@ -18643,8 +20036,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "luster",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C9C35CC2-10CC-11E8-8D35-955494A6FE1D.png"
   },
   "CubeMetalSilver8mm": {
     "PlaygroundColor": {
@@ -18674,8 +20092,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "luster",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D2742AB8-10CC-11E8-B567-4DF693A6FE1D.png"
   },
   "Cylinder10mmx10mmBlack": {
     "DisplayName": "Cylinder, 10mm x 10mm, Black",
@@ -18694,8 +20137,20 @@ STOCK_COMPONENT_INFO = {
       "rod",
       "can",
       "dowel",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6DA32C30-311E-11EC-9B09-D7B0BE85CC60.png"
   },
   "Cylinder10mmx10mmBlue": {
     "DisplayName": "Cylinder, 10mm x 10mm, Blue",
@@ -18714,8 +20169,20 @@ STOCK_COMPONENT_INFO = {
       "rod",
       "can",
       "dowel",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/02F531A8-311E-11EC-891E-E9C557AF5381.png"
   },
   "Cylinder10mmx10mmGreen": {
     "DisplayName": "Cylinder, 10mm x 10mm, Green",
@@ -18734,8 +20201,20 @@ STOCK_COMPONENT_INFO = {
       "rod",
       "can",
       "dowel",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8A5BF428-311F-11EC-891E-A9C957AF5381.png"
   },
   "Cylinder10mmx10mmOrange": {
     "DisplayName": "Cylinder, 10mm x 10mm, Orange",
@@ -18754,8 +20233,20 @@ STOCK_COMPONENT_INFO = {
       "rod",
       "can",
       "dowel",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9D451502-311E-11EC-9B09-7DB1BE85CC60.png"
   },
   "Cylinder10mmx10mmPurple": {
     "DisplayName": "Cylinder, 10mm x 10mm, Purple",
@@ -18774,8 +20265,20 @@ STOCK_COMPONENT_INFO = {
       "rod",
       "can",
       "dowel",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D59DD066-311D-11EC-9B09-4BAFBE85CC60.png"
   },
   "Cylinder10mmx10mmRed": {
     "DisplayName": "Cylinder, 10mm x 10mm, Red",
@@ -18794,8 +20297,20 @@ STOCK_COMPONENT_INFO = {
       "rod",
       "can",
       "dowel",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7613E9B8-311E-11EC-9B09-14B1BE85CC60.png"
   },
   "Cylinder10mmx10mmWhite": {
     "DisplayName": "Cylinder, 10mm x 10mm, White",
@@ -18814,8 +20329,20 @@ STOCK_COMPONENT_INFO = {
       "rod",
       "can",
       "dowel",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/905DA1BE-311F-11EC-891E-A3C957AF5381.png"
   },
   "Cylinder10mmx10mmYellow": {
     "DisplayName": "Cylinder, 10mm x 10mm, Yellow",
@@ -18834,8 +20361,20 @@ STOCK_COMPONENT_INFO = {
       "rod",
       "can",
       "dowel",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/31CF8E7E-311E-11EC-891E-A1C657AF5381.png"
   },
   "Cylinder15mmx8mmYellow": {
     "DisplayName": "Cylinder, 15mm x 8mm, Yellow",
@@ -18854,8 +20393,20 @@ STOCK_COMPONENT_INFO = {
       "rod",
       "can",
       "dowel",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D7A4202C-4968-11E8-8168-D51070886834.png"
   },
   "Cylinder18mmx10mmYellow": {
     "DisplayName": "Cylinder, 18mm x 10mm, Yellow",
@@ -18874,8 +20425,20 @@ STOCK_COMPONENT_INFO = {
       "rod",
       "can",
       "dowel",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BDC967CE-20D3-11E8-84FA-65FB93A6FE1D.png"
   },
   "Cylinder30mmx14mmNatural": {
     "DisplayName": "Cylinder, 30mm x 14mm, Natural",
@@ -18914,8 +20477,20 @@ STOCK_COMPONENT_INFO = {
       "rod",
       "can",
       "dowel",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B455F07C-434C-11E8-A182-C6A71EA37D3B.png"
   },
   "Cylinder30mmx15mmYellow": {
     "DisplayName": "Cylinder, 30mm x 15mm, Yellow",
@@ -18934,8 +20509,20 @@ STOCK_COMPONENT_INFO = {
       "rod",
       "can",
       "dowel",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/038DDD62-434D-11E8-A5FA-E27495F84907.png"
   },
   "D10Black": {
     "DisplayName": "D10, Black",
@@ -18955,7 +20542,8 @@ STOCK_COMPONENT_INFO = {
       "pentagonal trapezohedron",
       "percentile",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2B686B80-AD78-11E0-9091-4BD1D909E391.png"
   },
   "D10Blue": {
     "DisplayName": "D10, Blue",
@@ -18975,7 +20563,8 @@ STOCK_COMPONENT_INFO = {
       "pentagonal trapezohedron",
       "percentile",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0194E462-09FD-11E3-B999-41087740BD4B.png"
   },
   "D10Green": {
     "DisplayName": "D10, Green",
@@ -18995,7 +20584,8 @@ STOCK_COMPONENT_INFO = {
       "pentagonal trapezohedron",
       "percentile",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0266C874-09FD-11E3-BEDF-41087740BD4B.png"
   },
   "D10Red": {
     "DisplayName": "D10, Red",
@@ -19015,7 +20605,8 @@ STOCK_COMPONENT_INFO = {
       "pentagonal trapezohedron",
       "percentile",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0333CA18-09FD-11E3-B999-41087740BD4B.png"
   },
   "D10White": {
     "DisplayName": "D10, White",
@@ -19035,7 +20626,8 @@ STOCK_COMPONENT_INFO = {
       "pentagonal trapezohedron",
       "percentile",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/03D7854A-09FD-11E3-9927-41087740BD4B.png"
   },
   "D10Yellow": {
     "DisplayName": "D10, Yellow",
@@ -19055,7 +20647,8 @@ STOCK_COMPONENT_INFO = {
       "pentagonal trapezohedron",
       "percentile",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/049C1856-09FD-11E3-9424-41087740BD4B.png"
   },
   "D10x10Black": {
     "DisplayName": "D10x10, Black",
@@ -19075,7 +20668,8 @@ STOCK_COMPONENT_INFO = {
       "pentagonal trapezohedron",
       "percentile",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DBBE5CF6-A661-11E0-896A-3A7437D397EC.png"
   },
   "D10x10BlackonRed": {
     "DisplayName": "D10x10, Black on Red",
@@ -19139,7 +20733,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "dodecahedron",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D6F1F476-A661-11E0-896A-3A7437D397EC.png"
   },
   "D12Blue": {
     "DisplayName": "D12, Blue",
@@ -19163,7 +20758,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "dodecahedron",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C2AC5B0E-0AB5-11E3-B912-34787740BD4B.png"
   },
   "D12BodyParts": {
     "DisplayName": "D12, Body Parts",
@@ -19190,7 +20786,8 @@ STOCK_COMPONENT_INFO = {
       "dodecagon",
       "dodecahedron",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6CADC1AA-621C-11EA-968E-54831E8531CA.png"
   },
   "D12Green": {
     "DisplayName": "D12, Green",
@@ -19214,7 +20811,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "dodecahedron",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C3519696-0AB5-11E3-AF6F-34787740BD4B.png"
   },
   "D12Red": {
     "DisplayName": "D12, Red",
@@ -19238,7 +20836,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "dodecahedron",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/31168A2C-0B76-11E3-9E84-C1057740BD4B.png"
   },
   "D12Yellow": {
     "DisplayName": "D12, Yellow",
@@ -19262,7 +20861,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "dodecahedron",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C467640C-0AB5-11E3-ADAA-34787740BD4B.png"
   },
   "D20Blue": {
     "DisplayName": "D20, Blue",
@@ -19285,7 +20885,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1A47A9B2-09F4-11E3-AE86-41087740BD4B.png"
   },
   "D20Green": {
     "DisplayName": "D20, Green",
@@ -19308,7 +20909,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1AC92186-09F4-11E3-AC5B-41087740BD4B.png"
   },
   "D20Red": {
     "DisplayName": "D20, Red",
@@ -19331,7 +20933,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1B544CCA-09F4-11E3-8CA2-41087740BD4B.png"
   },
   "D316mmRoundedNumeralBlack": {
     "DisplayName": "D3, 16mm, Rounded, Numeral, Black",
@@ -19354,7 +20957,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9FA49ED0-CFF0-11E9-9505-BBCC6FF76758.png"
   },
   "D316mmRoundedNumeralBlue": {
     "DisplayName": "D3, 16mm, Rounded, Numeral, Blue",
@@ -19400,7 +21004,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A77DFDA4-CFF0-11E9-9505-C5CC6FF76758.png"
   },
   "D316mmRoundedNumeralRed": {
     "DisplayName": "D3, 16mm, Rounded, Numeral, Red",
@@ -19446,7 +21051,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B343108E-CFF0-11E9-9505-EACC6FF76758.png"
   },
   "D316mmRoundedNumeralYellow": {
     "DisplayName": "D3, 16mm, Rounded, Numeral, Yellow",
@@ -19469,7 +21075,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B84EE602-CFF0-11E9-9505-F8CC6FF76758.png"
   },
   "D4Black": {
     "DisplayName": "D4, Black",
@@ -19492,7 +21099,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/06F1CAE8-A662-11E0-896A-3A7437D397EC.png"
   },
   "D4Blank": {
     "DisplayName": "D4, Blank",
@@ -19527,7 +21135,8 @@ STOCK_COMPONENT_INFO = {
       "mock up",
       "sampling",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F2B6A1E-621A-11EA-968E-8B801E8531CA.png"
   },
   "D4Blue": {
     "DisplayName": "D4, Blue",
@@ -19550,7 +21159,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg,",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/400F4C4E-0B71-11E3-8A5B-C1057740BD4B.png"
   },
   "D4Green": {
     "DisplayName": "D4, Green",
@@ -19573,7 +21183,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg,",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E59276E2-09EF-11E3-81A9-41087740BD4B.png"
   },
   "D4Orange": {
     "DisplayName": "D4, Orange",
@@ -19596,7 +21207,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg,",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/081F5394-133F-11E8-906D-300394A6FE1D.png"
   },
   "D4Red": {
     "DisplayName": "D4, Red",
@@ -19619,7 +21231,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E622CF6C-09EF-11E3-B558-41087740BD4B.png"
   },
   "D4White": {
     "DisplayName": "D4, White",
@@ -19642,7 +21255,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg,",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E7738686-09EF-11E3-9607-41087740BD4B.png"
   },
   "D4Yellow": {
     "DisplayName": "D4, Yellow",
@@ -19665,7 +21279,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg,",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9107D6C0-0B71-11E3-8832-C1057740BD4B.png"
   },
   "D612mmBlack": {
     "DisplayName": "D6, 12mm, Black",
@@ -19702,7 +21317,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B85697C-AD78-11E0-B487-B1BA0C070879.png"
   },
   "D612mmBlue": {
     "DisplayName": "D6, 12mm, Blue",
@@ -19739,7 +21355,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FD5E55AA-A661-11E0-896A-3A7437D397EC.png"
   },
   "D612mmGreen": {
     "DisplayName": "D6, 12mm, Green",
@@ -19776,7 +21393,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F8930DC2-A661-11E0-896A-3A7437D397EC.png"
   },
   "D612mmMarbledBlack": {
     "DisplayName": "D6, 12mm, Marbled Black",
@@ -19850,7 +21468,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1D7B0FC4-4C1B-11E9-AF38-C0992FF1173D.png"
   },
   "D612mmRed": {
     "DisplayName": "D6, 12mm, Red",
@@ -19887,7 +21506,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EA354DF8-A661-11E0-896A-3A7437D397EC.png"
   },
   "D612mmRoundedBlue": {
     "DisplayName": "D6, 12mm, Rounded, Blue",
@@ -19924,7 +21544,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/05DE9D5E-F6E0-11E7-87C2-FC1631DDDC28.png"
   },
   "D612mmRoundedBlue/Black": {
     "DisplayName": "D6, 12mm, Rounded, Blue/Black",
@@ -19961,7 +21582,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/253B9AD0-F6E0-11E7-B23F-C1BE1B60DBEB.png"
   },
   "D612mmRoundedGolden/Black": {
     "DisplayName": "D6, 12mm, Rounded, Golden/Black",
@@ -19998,7 +21620,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/39AAD4B8-F6E0-11E7-87C2-AE8B732ED963.png"
   },
   "D612mmRoundedOrange/Blue": {
     "DisplayName": "D6, 12mm, Rounded, Orange/Blue",
@@ -20035,7 +21658,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A6CDD00-F6E0-11E7-B23F-A0012D5B01DD.png"
   },
   "D612mmRoundedPurple/Black": {
     "DisplayName": "D6, 12mm, Rounded, Purple/Black",
@@ -20072,7 +21696,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5931DD22-F6E0-11E7-87C2-BEEDC03FF00E.png"
   },
   "D612mmRoundedWhite/Black": {
     "DisplayName": "D6, 12mm, Rounded, White/Black",
@@ -20109,7 +21734,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6A228F28-F6E0-11E7-87C2-DC8949223F68.png"
   },
   "D612mmTransparentBlack": {
     "DisplayName": "D6, 12mm, Transparent Black",
@@ -20185,7 +21811,8 @@ STOCK_COMPONENT_INFO = {
       "farkle",
       "casino",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A1DA2658-35D7-11EC-B888-7FD258594BAF.png"
   },
   "D612mmTransparentGreen": {
     "DisplayName": "D6, 12mm, Transparent Green",
@@ -20223,7 +21850,8 @@ STOCK_COMPONENT_INFO = {
       "farkle",
       "casino",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5AA6B908-35D8-11EC-B888-6BD458594BAF.png"
   },
   "D612mmTransparentOrange": {
     "DisplayName": "D6, 12mm, Transparent Orange",
@@ -20261,7 +21889,8 @@ STOCK_COMPONENT_INFO = {
       "farkle",
       "casino",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/300E2488-35D8-11EC-861B-8C72F840BE30.png"
   },
   "D612mmTransparentPurple": {
     "DisplayName": "D6, 12mm, Transparent Purple",
@@ -20299,7 +21928,8 @@ STOCK_COMPONENT_INFO = {
       "farkle",
       "casino",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01B1535E-35D7-11EC-861B-476FF840BE30.png"
   },
   "D612mmTransparentRed": {
     "DisplayName": "D6, 12mm, Transparent Red",
@@ -20337,7 +21967,8 @@ STOCK_COMPONENT_INFO = {
       "farkle",
       "casino",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/32039F6C-019A-11EF-80D4-F8FB719B6C86.png"
   },
   "D612mmTransparentYellow": {
     "DisplayName": "D6, 12mm, Transparent Yellow",
@@ -20375,7 +22006,8 @@ STOCK_COMPONENT_INFO = {
       "farkle",
       "casino",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01E6EB4E-35D8-11EC-B888-5FD358594BAF.png"
   },
   "D612mmWhite": {
     "DisplayName": "D6, 12mm, White",
@@ -20412,7 +22044,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9114C8A6-A662-11E0-896A-3A7437D397EC.png"
   },
   "D612mmYellow": {
     "DisplayName": "D6, 12mm, Yellow",
@@ -20449,7 +22082,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/35A0BA54-4C1B-11E9-AF38-E8992FF1173D.png"
   },
   "D615mmBoldNumeralRed": {
     "DisplayName": "D6, 15mm, Bold Numeral, Red",
@@ -20488,7 +22122,8 @@ STOCK_COMPONENT_INFO = {
       "numbered",
       "numeral",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D2823CAC-D5C7-11EB-9F1A-C9A18D8D6E47.png"
   },
   "D615mmNumeralBlue": {
     "DisplayName": "D6, 15mm, Numeral, Blue",
@@ -20527,7 +22162,8 @@ STOCK_COMPONENT_INFO = {
       "numbered",
       "numeral",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3B8FB0F2-133F-11E8-B66E-54EA93A6FE1D.png"
   },
   "D615mmNumeralGreen": {
     "DisplayName": "D6, 15mm, Numeral, Green",
@@ -20605,7 +22241,8 @@ STOCK_COMPONENT_INFO = {
       "numbered",
       "numeral",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/28FAC986-133F-11E8-906D-AE0394A6FE1D.png"
   },
   "D616mmBetrayal": {
     "DisplayName": "D6, 16mm, Betrayal",
@@ -20620,7 +22257,8 @@ STOCK_COMPONENT_INFO = {
       "cube",
       "die",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2D84590C-74E4-11ED-B27B-702243694036.png"
   },
   "D616mmBinary": {
     "DisplayName": "D6, 16mm, Binary",
@@ -20636,7 +22274,8 @@ STOCK_COMPONENT_INFO = {
       "die",
       "computer",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B1A576F8-4F2D-11ED-9496-4D7C1A3195A7.png"
   },
   "D616mmBlack": {
     "DisplayName": "D6, 16mm, Black",
@@ -20673,7 +22312,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B85697C-AD78-11E0-B487-B1BA0C070879.png"
   },
   "D616mmBlackonBlue": {
     "DisplayName": "D6, 16mm, Black on Blue",
@@ -20710,7 +22350,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/74922F26-4CBC-11E9-AB94-632FD2978862.png"
   },
   "D616mmBlackonPink": {
     "DisplayName": "D6, 16mm, Black on Pink",
@@ -20774,7 +22415,8 @@ STOCK_COMPONENT_INFO = {
       "mock up",
       "sampling",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1B077180-52A7-11E6-9CCB-1DED603D21FA.png"
   },
   "D616mmBlankBlue": {
     "DisplayName": "D6, 16mm, Blank, Blue",
@@ -20801,7 +22443,8 @@ STOCK_COMPONENT_INFO = {
       "mock up",
       "sampling",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1B05207E-52A7-11E6-B002-5EA787CADD93.png"
   },
   "D616mmBlankGreen": {
     "DisplayName": "D6, 16mm, Blank, Green",
@@ -20828,7 +22471,8 @@ STOCK_COMPONENT_INFO = {
       "mock up",
       "sampling",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CB4B4F12-1A08-11EB-B3F2-D772FA3D5F78.png"
   },
   "D616mmBlankOrange": {
     "DisplayName": "D6, 16mm, Blank, Orange",
@@ -20855,7 +22499,8 @@ STOCK_COMPONENT_INFO = {
       "mock up",
       "sampling",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D46B9CC8-1A08-11EB-B3F2-EE72FA3D5F78.png"
   },
   "D616mmBlankPurple": {
     "DisplayName": "D6, 16mm, Blank, Purple",
@@ -20882,7 +22527,8 @@ STOCK_COMPONENT_INFO = {
       "mock up",
       "sampling",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DD281BD4-1A08-11EB-B3F2-0D73FA3D5F78.png"
   },
   "D616mmBlankRed": {
     "DisplayName": "D6, 16mm, Blank, Red",
@@ -20909,7 +22555,8 @@ STOCK_COMPONENT_INFO = {
       "mock up",
       "sampling",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1BB45850-52A7-11E6-9CCB-1DED603D21FA.png"
   },
   "D616mmBlankWhite": {
     "DisplayName": "D6, 16mm, Blank, White",
@@ -20936,7 +22583,8 @@ STOCK_COMPONENT_INFO = {
       "mock up",
       "sampling",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1BB0E2B0-52A7-11E6-B002-5EA787CADD93.png"
   },
   "D616mmBlankWoodDark": {
     "DisplayName": "D6, 16mm, Blank, Wood, Dark",
@@ -20963,7 +22611,8 @@ STOCK_COMPONENT_INFO = {
       "mock up",
       "sampling",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6EA6213A-D5D2-11EA-B47D-40480EE65047.png"
   },
   "D616mmBlankYellow": {
     "DisplayName": "D6, 16mm, Blank, Yellow",
@@ -20990,7 +22639,8 @@ STOCK_COMPONENT_INFO = {
       "mock up",
       "sampling",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BC36E0FE-1A08-11EB-B3F2-C772FA3D5F78.png"
   },
   "D616mmGreen": {
     "DisplayName": "D6, 16mm, Green",
@@ -21027,7 +22677,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F8930DC2-A661-11E0-896A-3A7437D397EC.png"
   },
   "D616mmLightningBoltBlack": {
     "DisplayName": "D6, 16mm, Lightning Bolt, Black",
@@ -21045,7 +22696,8 @@ STOCK_COMPONENT_INFO = {
       "hazmat",
       "lightning bolt",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/95528FA8-35F6-11E9-8712-C76E0031EE1B.png"
   },
   "D616mmLightningBoltBlue": {
     "DisplayName": "D6, 16mm, Lightning Bolt, Blue",
@@ -21063,7 +22715,8 @@ STOCK_COMPONENT_INFO = {
       "hazmat",
       "lightning bolt",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AC2B9D64-35F6-11E9-8712-E66E0031EE1B.png"
   },
   "D616mmLightningBoltBrown": {
     "DisplayName": "D6, 16mm, Lightning Bolt, Brown",
@@ -21081,7 +22734,8 @@ STOCK_COMPONENT_INFO = {
       "hazmat",
       "lightning bolt",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B13749B6-35F6-11E9-8712-E66E0031EE1B.png"
   },
   "D616mmLightningBoltGreen": {
     "DisplayName": "D6, 16mm, Lightning Bolt, Green",
@@ -21098,7 +22752,8 @@ STOCK_COMPONENT_INFO = {
       "symbol",
       "lightning bolt",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C0AC13D6-35F6-11E9-8712-1B6F0031EE1B.png"
   },
   "D616mmLightningBoltYellow": {
     "DisplayName": "D6, 16mm, Lightning Bolt, Yellow",
@@ -21116,7 +22771,8 @@ STOCK_COMPONENT_INFO = {
       "nuclear",
       "lightning bolt",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CE2EC01C-35F6-11E9-8712-346F0031EE1B.png"
   },
   "D616mmNumeralBlack": {
     "DisplayName": "D6, 16mm, Numeral, Black",
@@ -21155,7 +22811,8 @@ STOCK_COMPONENT_INFO = {
       "numeral",
       "number",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F3C94F4A-A661-11E0-896A-3A7437D397EC.png"
   },
   "D616mmPurple": {
     "DisplayName": "D6, 16mm, Purple",
@@ -21229,7 +22886,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EA354DF8-A661-11E0-896A-3A7437D397EC.png"
   },
   "D616mmRoundedBlackPearl": {
     "DisplayName": "D6, 16mm, Rounded, Black Pearl",
@@ -21266,7 +22924,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7534443C-F6E1-11E7-B23F-E6F2018643E9.png"
   },
   "D616mmRoundedBluePearl": {
     "DisplayName": "D6, 16mm, Rounded, Blue Pearl",
@@ -21303,7 +22962,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8142D180-F6E1-11E7-B23F-D08A8216FF42.png"
   },
   "D616mmRoundedBrownOpaque": {
     "DisplayName": "D6, 16mm, Rounded, Brown Opaque",
@@ -21340,7 +23000,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A7F964B0-F6E1-11E7-87C2-82354ECFD185.png"
   },
   "D616mmRoundedBrownPearl": {
     "DisplayName": "D6, 16mm, Rounded, Brown Pearl",
@@ -21429,7 +23090,8 @@ STOCK_COMPONENT_INFO = {
         "Name": "6",
         "Metadata": ""
       }
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DDE9B2C8-F6E1-11E7-B23F-DB1487FC48B0.png"
   },
   "D616mmRoundedGreenPearl": {
     "DisplayName": "D6, 16mm, Rounded, Green Pearl",
@@ -21466,7 +23128,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EF1701B8-F6E1-11E7-B23F-91ABF8451AD9.png"
   },
   "D616mmRoundedOrangeOpaque": {
     "DisplayName": "D6, 16mm, Rounded, Orange Opaque",
@@ -21503,7 +23166,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FA76216A-F6E1-11E7-87C2-909EFF5C6DF7.png"
   },
   "D616mmRoundedWhitePearl": {
     "DisplayName": "D6, 16mm, Rounded, White Pearl",
@@ -21592,7 +23256,8 @@ STOCK_COMPONENT_INFO = {
         "Name": "6",
         "Metadata": ""
       }
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/05EDD196-F6E2-11E7-B23F-FD175113DAE1.png"
   },
   "D616mmSichermanHigh": {
     "DisplayName": "D6, 16mm, Sicherman, High",
@@ -21609,7 +23274,8 @@ STOCK_COMPONENT_INFO = {
       "mathematical",
       "crazy",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9ECDB90A-4F2D-11ED-9496-677B1A3195A7.png"
   },
   "D616mmSichermanLow": {
     "DisplayName": "D6, 16mm, Sicherman, Low",
@@ -21626,7 +23292,8 @@ STOCK_COMPONENT_INFO = {
       "mathematical",
       "crazy",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/942EFFCC-4F2D-11ED-B776-EACDCAB944DD.png"
   },
   "D616mmSymbolIvory": {
     "DisplayName": "D6, 16mm, Symbol, Ivory",
@@ -21644,7 +23311,8 @@ STOCK_COMPONENT_INFO = {
       "lily pad",
       "lilypad",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0D83F8BE-593D-11E8-800E-882594A6FE1D.png"
   },
   "D616mmWhite": {
     "DisplayName": "D6, 16mm, White",
@@ -21681,7 +23349,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9114C8A6-A662-11E0-896A-3A7437D397EC.png"
   },
   "D616mmWood": {
     "DisplayName": "D6, 16mm, Wood",
@@ -21718,7 +23387,8 @@ STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3145EE9E-621C-11EA-86E6-53C1D50F5BC8.png"
   },
   "D625mmAnimalSymbols": {
     "DisplayName": "D6, 25mm, Animal Symbols",
@@ -21742,7 +23412,8 @@ STOCK_COMPONENT_INFO = {
       "fauna",
       "creatures",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/672FEBBA-FBAC-11EB-A517-993A22502F64.png"
   },
   "D68mmBlack": {
     "DisplayName": "D6, 8mm, Black",
@@ -21780,7 +23451,8 @@ STOCK_COMPONENT_INFO = {
       "farkle",
       "miniature",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/336917CC-D824-11EA-86E5-35320EE65047.png"
   },
   "D68mmBlue": {
     "DisplayName": "D6, 8mm, Blue",
@@ -21818,7 +23490,8 @@ STOCK_COMPONENT_INFO = {
       "farkle",
       "miniature",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/50075C18-D824-11EA-86E5-6E320EE65047.png"
   },
   "D68mmGreen": {
     "DisplayName": "D6, 8mm, Green",
@@ -21856,7 +23529,8 @@ STOCK_COMPONENT_INFO = {
       "farkle",
       "miniature",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BB7D98C6-D825-11EA-8C64-DED9521ADEB3.png"
   },
   "D68mmRed": {
     "DisplayName": "D6, 8mm, Red",
@@ -21894,7 +23568,8 @@ STOCK_COMPONENT_INFO = {
       "farkle",
       "miniature",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/513F19D4-D826-11EA-86E5-E5350EE65047.png"
   },
   "D6AlienBlackonGreen": {
     "DisplayName": "D6, Alien, Black on Green",
@@ -21919,7 +23594,8 @@ STOCK_COMPONENT_INFO = {
       "symbol",
       "extraterrestrial",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/89C1A80A-621D-11EA-968E-E6841E8531CA.png"
   },
   "D6AlienRedonGreen": {
     "DisplayName": "D6, Alien, Red on Green",
@@ -21944,7 +23620,8 @@ STOCK_COMPONENT_INFO = {
       "symbol",
       "extraterrestrial",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DC645CBA-621D-11EA-968E-86851E8531CA.png"
   },
   "D6Colors": {
     "DisplayName": "D6, Colors",
@@ -21967,7 +23644,8 @@ STOCK_COMPONENT_INFO = {
       "symbol",
       "colors",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BFF6348E-621A-11EA-86E6-13BFD50F5BC8.png"
   },
   "D6Dinosaur": {
     "DisplayName": "D6, Dinosaur",
@@ -21990,7 +23668,8 @@ STOCK_COMPONENT_INFO = {
       "symbol",
       "dinosaur",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5DC71D7E-D5CD-11EA-B47D-0E400EE65047.png"
   },
   "D6Emotion": {
     "DisplayName": "D6, Emotion",
@@ -22065,7 +23744,8 @@ STOCK_COMPONENT_INFO = {
       "indented",
       "stickers",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/09968A2A-42C2-11E1-A38C-140DF7D8CD61.png"
   },
   "D6IndentedBlankDarkBlue": {
     "DisplayName": "D6, Indented, Blank, Dark Blue",
@@ -22123,7 +23803,8 @@ STOCK_COMPONENT_INFO = {
       "indented",
       "stickers",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A5290BD0-8C17-11E7-9891-DB9F6BA831B7.png"
   },
   "D6IndentedBlankLavender": {
     "DisplayName": "D6, Indented, Blank, Lavender",
@@ -22152,7 +23833,8 @@ STOCK_COMPONENT_INFO = {
       "indented",
       "stickers",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FBB51C38-0CE5-11E8-A2B3-A32F94A6FE1D.png"
   },
   "D6IndentedBlankLightBlue": {
     "DisplayName": "D6, Indented, Blank, Light Blue",
@@ -22210,7 +23892,8 @@ STOCK_COMPONENT_INFO = {
       "indented",
       "stickers",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9C6E8D80-8C17-11E7-9891-E19F6BA831B7.png"
   },
   "D6IndentedBlankOrange": {
     "DisplayName": "D6, Indented, Blank, Orange",
@@ -22239,7 +23922,8 @@ STOCK_COMPONENT_INFO = {
       "indented",
       "stickers",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/22787652-42C2-11E1-A38C-140DF7D8CD61.png"
   },
   "D6IndentedBlankPurple": {
     "DisplayName": "D6, Indented, Blank, Purple",
@@ -22268,7 +23952,8 @@ STOCK_COMPONENT_INFO = {
       "indented",
       "stickers",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2F55D18A-42C2-11E1-A263-140DF7D8CD61.png"
   },
   "D6IndentedBlankRed": {
     "DisplayName": "D6, Indented, Blank, Red",
@@ -22297,7 +23982,8 @@ STOCK_COMPONENT_INFO = {
       "indented",
       "stickers",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3538B04E-42D7-11E1-A263-140DF7D8CD61.png"
   },
   "D6IndentedBlankWhite": {
     "DisplayName": "D6, Indented, Blank, White",
@@ -22326,7 +24012,8 @@ STOCK_COMPONENT_INFO = {
       "indented",
       "stickers",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4715F00C-42C2-11E1-A263-140DF7D8CD61.png"
   },
   "D6IndentedBlankYellow": {
     "DisplayName": "D6, Indented, Blank, Yellow",
@@ -22355,7 +24042,8 @@ STOCK_COMPONENT_INFO = {
       "indented",
       "stickers",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/52FEE86A-42C2-11E1-BBEC-140DF7D8CD61.png"
   },
   "D6Interrogative": {
     "DisplayName": "D6, Interrogative",
@@ -22376,7 +24064,8 @@ STOCK_COMPONENT_INFO = {
       "interview",
       "learning",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0CA6951E-6219-11EA-968E-697E1E8531CA.png"
   },
   "D6NaturalShapes": {
     "DisplayName": "D6, Natural Shapes",
@@ -22405,7 +24094,8 @@ STOCK_COMPONENT_INFO = {
       "light",
       "darkness",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F2203F5A-D5C7-11EB-A165-08F53218550E.png"
   },
   "D6NegativeCounter": {
     "DisplayName": "D6, Negative Counter",
@@ -22421,7 +24111,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "tracking",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B70E410-9A53-11E7-BC02-BCC471BAD30D.png"
   },
   "D6PartsofSpeech": {
     "DisplayName": "D6, Parts of Speech",
@@ -22446,7 +24137,8 @@ STOCK_COMPONENT_INFO = {
       "syntax",
       "syntactic",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/31E81A96-621E-11EA-968E-FD851E8531CA.png"
   },
   "D6PositiveCounter": {
     "DisplayName": "D6, Positive Counter",
@@ -22462,7 +24154,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "tracking",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4FD68FD2-9A53-11E7-932D-3C49CB191CC0.png"
   },
   "D6Shapes": {
     "DisplayName": "D6, Shapes",
@@ -22487,7 +24180,8 @@ STOCK_COMPONENT_INFO = {
       "learning",
       "education",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/027CB68C-621D-11EA-86E6-76C2D50F5BC8.png"
   },
   "D6Species": {
     "DisplayName": "D6, Species",
@@ -22513,7 +24207,8 @@ STOCK_COMPONENT_INFO = {
       "symbol",
       "fauna",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/50572F9C-621B-11EA-86E6-FABFD50F5BC8.png"
   },
   "D6Train18mmWhite": {
     "DisplayName": "D6, Train, 18mm, White",
@@ -22536,7 +24231,8 @@ STOCK_COMPONENT_INFO = {
       "die",
       "symbol",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0FBD10A0-621B-11EA-968E-61811E8531CA.png"
   },
   "D6WoodlandAnimals": {
     "DisplayName": "D6, Woodland Animals",
@@ -22561,7 +24257,8 @@ STOCK_COMPONENT_INFO = {
       "critters",
       "animals",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E7EEBFFC-6219-11EA-968E-B37F1E8531CA.png"
   },
   "D8Black": {
     "DisplayName": "D8, Black",
@@ -22584,7 +24281,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E09A15F8-A661-11E0-896A-3A7437D397EC.png"
   },
   "D8Blank": {
     "DisplayName": "D8, Blank",
@@ -22619,7 +24317,8 @@ STOCK_COMPONENT_INFO = {
       "mock up",
       "sampling,",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A1D5684E-621A-11EA-86E6-E2BED50F5BC8.png"
   },
   "D8Blue": {
     "DisplayName": "D8, Blue",
@@ -22642,7 +24341,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F1964F4-0AB5-11E3-BE47-34787740BD4B.png"
   },
   "D8Compass": {
     "DisplayName": "D8, Compass",
@@ -22676,7 +24376,8 @@ STOCK_COMPONENT_INFO = {
       "maps",
       "heading",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E3E13B66-85B2-11EB-B449-2E411BF3E6B8.png"
   },
   "D8Green": {
     "DisplayName": "D8, Green",
@@ -22699,7 +24400,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7FD50740-0AB5-11E3-8836-34787740BD4B.png"
   },
   "D8Red": {
     "DisplayName": "D8, Red",
@@ -22722,7 +24424,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/808461AE-0AB5-11E3-B35F-34787740BD4B.png"
   },
   "D8White": {
     "DisplayName": "D8, White",
@@ -22745,7 +24448,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C371206E-0B74-11E3-AA17-C1057740BD4B.png"
   },
   "D8Yellow": {
     "DisplayName": "D8, Yellow",
@@ -22768,7 +24472,8 @@ STOCK_COMPONENT_INFO = {
       "earthdawn",
       "rpg",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8142B528-0AB5-11E3-8836-34787740BD4B.png"
   },
   "DarkElfSorcererFantasyTB25": {
     "DisplayName": "Dark Elf Sorcerer, Fantasy, TB25",
@@ -22784,7 +24489,8 @@ STOCK_COMPONENT_INFO = {
       "evil",
       "spider",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2C1FCA06-5217-11EC-B45F-F8CD837854C6.png"
   },
   "DarkWarrior1FantasyTB25": {
     "DisplayName": "Dark Warrior 1, Fantasy, TB25",
@@ -22798,7 +24504,8 @@ STOCK_COMPONENT_INFO = {
       "paladin",
       "kite shield",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CC7B1872-6F16-11EC-9B55-BF237DF5F7CD.png"
   },
   "DarkWarrior2FantasyTB25": {
     "DisplayName": "Dark Warrior 2, Fantasy, TB25",
@@ -22811,7 +24518,8 @@ STOCK_COMPONENT_INFO = {
       "spiked",
       "evil",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DE44AD16-6F16-11EC-917D-42925FE54652.png"
   },
   "deadEarthPlayer'sHandbook": {
     "DisplayName": "deadEarth Player's Handbook",
@@ -22825,7 +24533,8 @@ STOCK_COMPONENT_INFO = {
       "zombie",
       "post-apocalyptic",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/67EE8414-CF51-11E9-A4FD-189FAB9B09E5.png"
   },
   "DealerButton": {
     "DisplayName": "Dealer Button",
@@ -22837,8 +24546,13 @@ STOCK_COMPONENT_INFO = {
       "cardshark",
       "vegas",
       "poker",
+      "first player",
+      "first player marker",
+      "first player token",
+      "first",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/535DC296-6CC8-11EC-AA0B-3CDBF74A7BBA.png"
   },
   "DeathKnightwithPolearm": {
     "DisplayName": "Death Knight with Polearm",
@@ -22867,7 +24581,8 @@ STOCK_COMPONENT_INFO = {
       "polearm",
       "pole arm",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/277CD9BC-4560-11E7-ABA2-464390E4BA5A.png"
   },
   "DeathKnightwithSword": {
     "DisplayName": "Death Knight with Sword",
@@ -22896,7 +24611,8 @@ STOCK_COMPONENT_INFO = {
       "polearm",
       "pole arm",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/250D8582-4560-11E7-ABA2-374390E4BA5A.png"
   },
   "DeckBoxBlank": {
     "DisplayName": "Deck Box, Blank",
@@ -22920,7 +24636,8 @@ STOCK_COMPONENT_INFO = {
       "enclosure",
       "case",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5306D7A0-41C5-11EE-9F26-8454BCA20CCB.png"
   },
   "DecoderStrips": {
     "DisplayName": "Decoder Strips",
@@ -22937,7 +24654,8 @@ STOCK_COMPONENT_INFO = {
       "passphrase",
       "codeword",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DD99B3CA-CB40-11E8-A4C7-398FB7072CD4.jpg"
   },
   "DesignersTableCover": {
     "DisplayName": "Designers Table Cover",
@@ -22952,7 +24670,8 @@ STOCK_COMPONENT_INFO = {
       "cover",
       "protective sheet",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BEF52464-7B69-11E1-B4F0-4A521B09C483.jpg"
   },
   "DigitalTimer": {
     "DisplayName": "Digital Timer",
@@ -22968,7 +24687,8 @@ STOCK_COMPONENT_INFO = {
       "teams",
       "countdown",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B651D19E-9DFB-11E2-AD4A-3D1385EBD4DF.png"
   },
   "Dindaelus:WizardwithStaff": {
     "DisplayName": "Dindaelus: Wizard with Staff",
@@ -22999,7 +24719,8 @@ STOCK_COMPONENT_INFO = {
       "warlock",
       "conjurer",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1CD181A2-4560-11E7-BFDD-035F370CF66B.png"
   },
   "DinosaurTokenWoodBlue": {
     "DisplayName": "Dinosaur Token, Wood, Blue",
@@ -23018,7 +24739,8 @@ STOCK_COMPONENT_INFO = {
       "marker",
       "counter",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/923F6D3E-1A57-11EC-ADD7-3C7C5853E446.png"
   },
   "DinosaurTokenWoodGreen": {
     "DisplayName": "Dinosaur Token, Wood, Green",
@@ -23037,7 +24759,8 @@ STOCK_COMPONENT_INFO = {
       "marker",
       "counter",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D999285A-1A57-11EC-B915-EB1CAE212452.png"
   },
   "DinosaurTokenWoodOrange": {
     "DisplayName": "Dinosaur Token, Wood, Orange",
@@ -23056,7 +24779,8 @@ STOCK_COMPONENT_INFO = {
       "marker",
       "counter",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9C51B0A2-1A57-11EC-B915-8B1CAE212452.png"
   },
   "DinosaurTokenWoodPurple": {
     "DisplayName": "Dinosaur Token, Wood, Purple",
@@ -23075,7 +24799,8 @@ STOCK_COMPONENT_INFO = {
       "marker",
       "counter",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AB9BD2EA-1A57-11EC-B915-AF1CAE212452.png"
   },
   "DinosaurTokenWoodRed": {
     "DisplayName": "Dinosaur Token, Wood, Red",
@@ -23094,7 +24819,8 @@ STOCK_COMPONENT_INFO = {
       "marker",
       "counter",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B9A7C966-1A57-11EC-B915-AF1CAE212452.png"
   },
   "DinosaurTokensWoodPink": {
     "DisplayName": "Dinosaur Tokens, Wood, Pink",
@@ -23113,7 +24839,8 @@ STOCK_COMPONENT_INFO = {
       "marker",
       "counter",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E2084F3E-1A57-11EC-ADD7-9D7C5853E446.png"
   },
   "DinosaurAnkylosaurus": {
     "DisplayName": "Dinosaur, Ankylosaurus",
@@ -23130,7 +24857,8 @@ STOCK_COMPONENT_INFO = {
       "mesozoic",
       "extinct",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/95526954-0303-11E9-9C65-69281589B894.png"
   },
   "DinosaurAnkylosaurusPink": {
     "DisplayName": "Dinosaur, Ankylosaurus, Pink",
@@ -23149,7 +24877,8 @@ STOCK_COMPONENT_INFO = {
       "mesozoic",
       "ornithischia",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E715AD7A-3832-11EC-9CF9-45B158594BAF.png"
   },
   "DinosaurAnkylosaurusWoodBlue": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Blue",
@@ -23166,7 +24895,8 @@ STOCK_COMPONENT_INFO = {
       "mesozoic",
       "extinct",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/22FAF9B0-1A58-11EC-ADD7-0D7D5853E446.png"
   },
   "DinosaurAnkylosaurusWoodGreen": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Green",
@@ -23183,7 +24913,8 @@ STOCK_COMPONENT_INFO = {
       "mesozoic",
       "extinct",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/65A9775A-1A58-11EC-ADD7-657D5853E446.png"
   },
   "DinosaurAnkylosaurusWoodOrange": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Orange",
@@ -23200,7 +24931,8 @@ STOCK_COMPONENT_INFO = {
       "mesozoic",
       "extinct",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9763CCBE-1A58-11EC-B915-271EAE212452.png"
   },
   "DinosaurAnkylosaurusWoodPink": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Pink",
@@ -23217,7 +24949,8 @@ STOCK_COMPONENT_INFO = {
       "mesozoic",
       "extinct",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/56B2802A-1A58-11EC-B915-A61DAE212452.png"
   },
   "DinosaurAnkylosaurusWoodPurple": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Purple",
@@ -23234,7 +24967,8 @@ STOCK_COMPONENT_INFO = {
       "mesozoic",
       "extinct",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4EE862E2-1A58-11EC-B915-991DAE212452.png"
   },
   "DinosaurAnkylosaurusWoodRed": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Red",
@@ -23251,7 +24985,8 @@ STOCK_COMPONENT_INFO = {
       "mesozoic",
       "extinct",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/45304E7C-1A58-11EC-ADD7-337D5853E446.png"
   },
   "DinosaurAnkylosaurusWoodWhite": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, White",
@@ -23268,7 +25003,8 @@ STOCK_COMPONENT_INFO = {
       "mesozoic",
       "extinct",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/803CE148-FBAD-11EB-91AE-8F20C3EA581D.png"
   },
   "DinosaurBrontosaurus": {
     "DisplayName": "Dinosaur, Brontosaurus",
@@ -23285,7 +25021,8 @@ STOCK_COMPONENT_INFO = {
       "mesozoic",
       "extinct",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B49ED7DE-0303-11E9-849C-73E7D18499DE.png"
   },
   "DinosaurPachycephalosaurus": {
     "DisplayName": "Dinosaur, Pachycephalosaurus",
@@ -23302,7 +25039,8 @@ STOCK_COMPONENT_INFO = {
       "mesozoic",
       "extinct",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9BB8C8CE-0303-11E9-849C-44E7D18499DE.png"
   },
   "DinosaurPterodactyl": {
     "DisplayName": "Dinosaur, Pterodactyl",
@@ -23319,7 +25057,8 @@ STOCK_COMPONENT_INFO = {
       "mesozoic",
       "extinct",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AAE12FB2-0303-11E9-849C-59E7D18499DE.png"
   },
   "DinosaurSpinosaurusOrange": {
     "DisplayName": "Dinosaur, Spinosaurus, Orange",
@@ -23338,7 +25077,8 @@ STOCK_COMPONENT_INFO = {
       "mesozoic",
       "spinosauridae",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/22AD69FA-3832-11EC-A62E-86CBF840BE30.png"
   },
   "DinosaurStegosaurus": {
     "DisplayName": "Dinosaur, Stegosaurus",
@@ -23355,7 +25095,8 @@ STOCK_COMPONENT_INFO = {
       "mesozoic",
       "extinct",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/98361C42-0303-11E9-849C-2CE7D18499DE.png"
   },
   "DinosaurStegosaurusGreen": {
     "DisplayName": "Dinosaur, Stegosaurus, Green",
@@ -23375,7 +25116,8 @@ STOCK_COMPONENT_INFO = {
       "stegosauridae",
       "chordata",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F1178730-3832-11EC-A62E-9ACEF840BE30.png"
   },
   "DinosaurTriceratops": {
     "DisplayName": "Dinosaur, Triceratops",
@@ -23392,7 +25134,8 @@ STOCK_COMPONENT_INFO = {
       "mesozoic",
       "extinct",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9FAC9122-0303-11E9-9C65-74281589B894.png"
   },
   "DinosaurTriceratopsRed": {
     "DisplayName": "Dinosaur, Triceratops, Red",
@@ -23412,7 +25155,8 @@ STOCK_COMPONENT_INFO = {
       "dinosauria",
       "ceratopsidae",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/111AA742-3833-11EC-A62E-05CFF840BE30.png"
   },
   "DinosaurTyrannosaurus": {
     "DisplayName": "Dinosaur, Tyrannosaurus",
@@ -23429,7 +25173,8 @@ STOCK_COMPONENT_INFO = {
       "mesozoic",
       "extinct",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B9E6767A-0303-11E9-9C65-B2281589B894.png"
   },
   "DinosaurTyrannosaurusBlue": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Blue",
@@ -23454,7 +25199,8 @@ STOCK_COMPONENT_INFO = {
       "apex",
       "predator",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D2FCFAF0-3832-11EC-9CF9-14B158594BAF.png"
   },
   "DinosaurTyrannosaurusDarkGreen": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Dark Green",
@@ -23479,7 +25225,8 @@ STOCK_COMPONENT_INFO = {
       "apex",
       "predator",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D82C0714-3832-11EC-9CF9-35B158594BAF.png"
   },
   "DinosaurTyrannosaurusGreen": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Green",
@@ -23504,7 +25251,8 @@ STOCK_COMPONENT_INFO = {
       "apex",
       "predator",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B182A1B8-3832-11EC-9CF9-66AF58594BAF.png"
   },
   "DinosaurTyrannosaurusOrange": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Orange",
@@ -23529,7 +25277,8 @@ STOCK_COMPONENT_INFO = {
       "apex",
       "predator",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BFF49170-3832-11EC-9CF9-01B158594BAF.png"
   },
   "DinosaurTyrannosaurusPink": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Pink",
@@ -23554,7 +25303,8 @@ STOCK_COMPONENT_INFO = {
       "apex",
       "predator",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CCCFD7B0-3832-11EC-9CF9-01B158594BAF.png"
   },
   "DinosaurTyrannosaurusPurple": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Purple",
@@ -23579,7 +25329,8 @@ STOCK_COMPONENT_INFO = {
       "apex",
       "predator",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B8EF2E3A-3832-11EC-A62E-B7CCF840BE30.png"
   },
   "DinosaurTyrannosaurusRed": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Red",
@@ -23604,7 +25355,8 @@ STOCK_COMPONENT_INFO = {
       "apex",
       "predator",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C713CE30-3832-11EC-9CF9-0CB158594BAF.png"
   },
   "DinosaurVelociraptor": {
     "DisplayName": "Dinosaur, Velociraptor",
@@ -23621,7 +25373,8 @@ STOCK_COMPONENT_INFO = {
       "mesozoic",
       "extinct",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B01861EE-0303-11E9-9C65-94281589B894.png"
   },
   "DinosaurVelociraptorGrey": {
     "DisplayName": "Dinosaur, Velociraptor, Grey",
@@ -23643,7 +25396,8 @@ STOCK_COMPONENT_INFO = {
       "osmolskae",
       "mongoliensis",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4911784E-3831-11EC-9CF9-F6AB58594BAF.png"
   },
   "DirectionFinderTransparentBlack": {
     "DisplayName": "Direction Finder, Transparent Black",
@@ -23661,7 +25415,8 @@ STOCK_COMPONENT_INFO = {
       "heading",
       "df",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CCC5193E-A4A0-11E8-84DE-15FF3D511364.png"
   },
   "Disc14mmx10mmBlue": {
     "DisplayName": "Disc, 14mm x 10mm, Blue",
@@ -23685,8 +25440,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/781DAA1C-9EEE-11E7-AC47-39D071BAD30D.png"
   },
   "Disc14mmx10mmPurple": {
     "DisplayName": "Disc, 14mm x 10mm, Purple",
@@ -23710,8 +25477,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8947A932-9EEE-11E7-9B52-2655CB191CC0.png"
   },
   "Disc14mmx10mmRed": {
     "DisplayName": "Disc, 14mm x 10mm, Red",
@@ -23761,8 +25540,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/98336416-4972-11E8-8680-1F491EA37D3B.png"
   },
   "Disc14mmx4mmGreen": {
     "DisplayName": "Disc, 14mm x 4mm, Green",
@@ -23786,8 +25577,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D3D6A6F4-4972-11E8-A77D-8AE44D043C08.png"
   },
   "Disc14mmx4mmLightBlue": {
     "DisplayName": "Disc, 14mm x 4mm, Light Blue",
@@ -23811,8 +25614,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C3E9372A-4972-11E8-8680-45491EA37D3B.png"
   },
   "Disc14mmx4mmLightPurple": {
     "DisplayName": "Disc, 14mm x 4mm, Light Purple",
@@ -23836,8 +25651,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/927A5950-3BA4-11EA-A3A8-9474EBC8DDC9.png"
   },
   "Disc14mmx4mmRed": {
     "DisplayName": "Disc, 14mm x 4mm, Red",
@@ -23886,8 +25713,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/49F626FC-4973-11E8-A77D-C1F4461B0F69.png"
   },
   "Disc15mmx5mmBlack": {
     "DisplayName": "Disc, 15mm x 5mm, Black",
@@ -23911,8 +25750,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/52F64104-498E-11E8-9410-76791EA37D3B.png"
   },
   "Disc15mmx5mmBlue": {
     "DisplayName": "Disc, 15mm x 5mm, Blue",
@@ -23936,8 +25787,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/52847950-78BB-11E8-AF21-F1E85CFD4EC6.png"
   },
   "Disc15mmx5mmGreen": {
     "DisplayName": "Disc, 15mm x 5mm, Green",
@@ -23961,8 +25824,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/02BBA074-4968-11E8-9221-A5B51EA37D3B.png"
   },
   "Disc15mmx5mmRed": {
     "DisplayName": "Disc, 15mm x 5mm, Red",
@@ -23986,8 +25861,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D83FCAD2-4967-11E8-8168-DFD9F46C1B2E.png"
   },
   "Disc15mmx6mmLimeGreen": {
     "DisplayName": "Disc, 15mm x 6mm, Lime Green",
@@ -24011,8 +25898,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9E2E7BC4-498D-11E8-9410-28781EA37D3B.png"
   },
   "Disc15mmx6mmOrange": {
     "DisplayName": "Disc, 15mm x 6mm, Orange",
@@ -24036,8 +25935,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D24709DA-498D-11E8-A69E-83D905CEB24C.png"
   },
   "Disc15mmx6mmRed": {
     "DisplayName": "Disc, 15mm x 6mm, Red",
@@ -24061,8 +25972,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F4920A62-498D-11E8-A69E-FBFDAD359A41.png"
   },
   "Disc15mmx6mmYellow": {
     "DisplayName": "Disc, 15mm x 6mm, Yellow",
@@ -24086,8 +26009,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/080F1116-498E-11E8-9410-F7781EA37D3B.png"
   },
   "Disc16mmx10mmBlue": {
     "DisplayName": "Disc, 16mm x 10mm, Blue",
@@ -24111,8 +26046,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4FB27D3E-498C-11E8-9410-5B751EA37D3B.png"
   },
   "Disc16mmx10mmBrown": {
     "DisplayName": "Disc, 16mm x 10mm, Brown",
@@ -24136,8 +26083,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4C6F9CEC-498C-11E8-9410-5F751EA37D3B.png"
   },
   "Disc16mmx10mmGreen": {
     "DisplayName": "Disc, 16mm x 10mm, Green",
@@ -24161,8 +26120,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/461BA85E-498C-11E8-9410-49751EA37D3B.png"
   },
   "Disc16mmx10mmPurple": {
     "DisplayName": "Disc, 16mm x 10mm, Purple",
@@ -24186,8 +26157,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C6ECF668-498C-11E8-A69E-E908E6616E7C.png"
   },
   "Disc16mmx10mmRed": {
     "DisplayName": "Disc, 16mm x 10mm, Red",
@@ -24211,8 +26194,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3600AFA0-498C-11E8-9410-32751EA37D3B.png"
   },
   "Disc16mmx10mmYellow": {
     "DisplayName": "Disc, 16mm x 10mm, Yellow",
@@ -24236,8 +26231,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2849A060-498C-11E8-9410-2E751EA37D3B.png"
   },
   "Disc16mmx4mmBlack": {
     "DisplayName": "Disc, 16mm x 4mm, Black",
@@ -24261,8 +26268,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "and rondure",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5CCD8390-2AC3-11E1-82D0-B470E060718B.png"
   },
   "Disc16mmx4mmBlue": {
     "DisplayName": "Disc, 16mm x 4mm, Blue",
@@ -24286,8 +26305,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/63C1FD2A-2AC3-11E1-8A47-B470E060718B.png"
   },
   "Disc16mmx4mmGreen": {
     "DisplayName": "Disc, 16mm x 4mm, Green",
@@ -24311,8 +26342,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6AA4712C-2AC3-11E1-82D0-B470E060718B.png"
   },
   "Disc16mmx4mmOrange": {
     "DisplayName": "Disc, 16mm x 4mm, Orange",
@@ -24336,8 +26379,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/719EF40C-2AC3-11E1-AB7E-B470E060718B.png"
   },
   "Disc16mmx4mmPurple": {
     "DisplayName": "Disc, 16mm x 4mm, Purple",
@@ -24361,8 +26416,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/78D810FA-2AC3-11E1-8A47-B470E060718B.png"
   },
   "Disc16mmx4mmRed": {
     "DisplayName": "Disc, 16mm x 4mm, Red",
@@ -24386,8 +26453,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7FD8E5DC-2AC3-11E1-82D0-B470E060718B.png"
   },
   "Disc16mmx4mmWhite": {
     "DisplayName": "Disc, 16mm x 4mm, White",
@@ -24412,8 +26491,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/872A3070-2AC3-11E1-8A47-B470E060718B.png"
   },
   "Disc16mmx4mmYellow": {
     "DisplayName": "Disc, 16mm x 4mm, Yellow",
@@ -24437,8 +26528,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8FA38648-2AC3-11E1-AB7E-B470E060718B.png"
   },
   "Disc16mmx6mmLightPurple": {
     "DisplayName": "Disc, 16mm x 6mm, Light Purple",
@@ -24462,8 +26565,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1092DB10-54B4-11E9-BF1F-96ED84BD98AD.png"
   },
   "Disc16mmx6mmOrange": {
     "DisplayName": "Disc, 16mm x 6mm, Orange",
@@ -24487,8 +26602,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/133FF500-54B4-11E9-BF1F-99ED84BD98AD.png"
   },
   "Disc16mmx8mmMint": {
     "DisplayName": "Disc, 16mm x 8mm, Mint",
@@ -24512,8 +26639,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/43897DD2-498C-11E8-A69E-84514D2B87B0.png"
   },
   "Disc16mmx8mmPink": {
     "DisplayName": "Disc, 16mm x 8mm, Pink",
@@ -24537,8 +26676,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/995C6B26-498B-11E8-9410-3E741EA37D3B.png"
   },
   "Disc16mmx8mmPurple": {
     "DisplayName": "Disc, 16mm x 8mm, Purple",
@@ -24562,8 +26713,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3FA63E76-498C-11E8-A69E-BC22B60BF994.png"
   },
   "Disc16mmx8mmTan": {
     "DisplayName": "Disc, 16mm x 8mm, Tan",
@@ -24587,8 +26750,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "tan"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D14BBB1A-2B1A-11E9-A81D-A87CEA13D078.png"
   },
   "Disc16mmx8mmYellow": {
     "DisplayName": "Disc, 16mm x 8mm, Yellow",
@@ -24612,8 +26787,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "and rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3244B33A-4968-11E8-8168-FD0E42658109.png"
   },
   "Disc17mmx10mmApricot": {
     "DisplayName": "Disc, 17mm x 10mm, Apricot",
@@ -24643,8 +26830,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E9548790-DB4B-11EA-B126-046FA6AA72A1.png"
   },
   "Disc17mmx10mmGreen": {
     "DisplayName": "Disc, 17mm x 10mm, Green",
@@ -24672,8 +26871,20 @@ STOCK_COMPONENT_INFO = {
       "othello",
       "birdie",
       "sjoelbak",
-      "pucket"
-    ]
+      "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/02780ABC-DB4C-11EA-8557-02A6521ADEB3.png"
   },
   "Disc18mmx3mmClear": {
     "DisplayName": "Disc, 18mm x 3mm, Clear",
@@ -24700,8 +26911,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E2B401EC-B06C-11E8-BB17-1FA5CE95AB04.png"
   },
   "Disc18mmx3mmfluorescentblue": {
     "DisplayName": "Disc, 18mm x 3mm, fluorescent blue ",
@@ -24728,8 +26951,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F687140C-9A7D-11E8-B241-36318CA49208.png"
   },
   "Disc18mmx3mmFluorescentGreen": {
     "DisplayName": "Disc, 18mm x 3mm, Fluorescent Green",
@@ -24756,8 +26991,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F391A48-9A7E-11E8-B241-E2318CA49208.png"
   },
   "Disc18mmx3mmFluorescentOrange": {
     "DisplayName": "Disc, 18mm x 3mm, Fluorescent Orange",
@@ -24784,8 +27031,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/91F0CF00-9A7E-11E8-919B-95BCCC46DD39.png"
   },
   "Disc18mmx3mmFluorescentRed": {
     "DisplayName": "Disc, 18mm x 3mm, Fluorescent Red",
@@ -24812,8 +27071,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E19DFD02-9A7E-11E8-B241-8C328CA49208.png"
   },
   "Disc18mmx3mmFluorescentYellow": {
     "DisplayName": "Disc, 18mm x 3mm, Fluorescent Yellow",
@@ -24840,8 +27111,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5BC4AA56-9A78-11E8-919B-59B2CC46DD39.png"
   },
   "Disc18mmx3mmTransparentBlue": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent Blue",
@@ -24868,8 +27151,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CF790D3C-9A7F-11E8-919B-52BECC46DD39.png"
   },
   "Disc18mmx3mmTransparentGreen": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent Green",
@@ -24896,8 +27191,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D82D1F36-9A7F-11E8-B241-E7338CA49208.png"
   },
   "Disc18mmx3mmTransparentGrey": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent Grey",
@@ -24924,8 +27231,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E28FA4B2-9A7F-11E8-B241-F0338CA49208.png"
   },
   "Disc18mmx3mmTransparentOrange": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent Orange",
@@ -24952,8 +27271,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EBA979A6-9A7F-11E8-919B-83BECC46DD39.png"
   },
   "Disc18mmx3mmTransparentPurple": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent Purple",
@@ -24980,8 +27311,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5F1184C-9A7F-11E8-B241-1D348CA49208.png"
   },
   "Disc18mmx3mmTransparentRed": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent Red",
@@ -25008,8 +27351,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01652736-9A80-11E8-B241-20348CA49208.png"
   },
   "Disc18mmx3mmTransparentYellow": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent Yellow",
@@ -25036,8 +27391,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/091C973E-9A80-11E8-919B-C3BECC46DD39.png"
   },
   "Disc18mmx5mmRed": {
     "DisplayName": "Disc, 18mm x 5mm, Red",
@@ -25061,8 +27428,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2FC32480-174E-11E8-9C3D-D92394A6FE1D.png"
   },
   "Disc18mmx6mmClear": {
     "DisplayName": "Disc, 18mm x 6mm, Clear",
@@ -25089,8 +27468,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E5341D1C-B06C-11E8-BB17-27A5CE95AB04.png"
   },
   "Disc18mmx6mmFluorescentBlue": {
     "DisplayName": "Disc, 18mm x 6mm, Fluorescent Blue",
@@ -25117,8 +27508,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F687140C-9A7D-11E8-B241-36318CA49208.png"
   },
   "Disc18mmx6mmFluorescentGreen": {
     "DisplayName": "Disc, 18mm x 6mm, Fluorescent Green",
@@ -25145,8 +27548,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F391A48-9A7E-11E8-B241-E2318CA49208.png"
   },
   "Disc18mmx6mmFluorescentOrange": {
     "DisplayName": "Disc, 18mm x 6mm, Fluorescent Orange",
@@ -25173,8 +27588,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/91F0CF00-9A7E-11E8-919B-95BCCC46DD39.png"
   },
   "Disc18mmx6mmFluorescentRed": {
     "DisplayName": "Disc, 18mm x 6mm, Fluorescent Red",
@@ -25201,8 +27628,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E19DFD02-9A7E-11E8-B241-8C328CA49208.png"
   },
   "Disc18mmx6mmFluorescentYellow": {
     "DisplayName": "Disc, 18mm x 6mm, Fluorescent Yellow",
@@ -25229,8 +27668,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5BC4AA56-9A78-11E8-919B-59B2CC46DD39.png"
   },
   "Disc18mmx6mmTransparentBlue": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent Blue",
@@ -25257,8 +27708,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CF790D3C-9A7F-11E8-919B-52BECC46DD39.png"
   },
   "Disc18mmx6mmTransparentGreen": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent Green",
@@ -25285,8 +27748,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D82D1F36-9A7F-11E8-B241-E7338CA49208.png"
   },
   "Disc18mmx6mmTransparentGrey": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent Grey",
@@ -25313,8 +27788,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E28FA4B2-9A7F-11E8-B241-F0338CA49208.png"
   },
   "Disc18mmx6mmTransparentOrange": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent Orange",
@@ -25341,8 +27828,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EBA979A6-9A7F-11E8-919B-83BECC46DD39.png"
   },
   "Disc18mmx6mmTransparentPurple": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent Purple",
@@ -25369,8 +27868,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5F1184C-9A7F-11E8-B241-1D348CA49208.png"
   },
   "Disc18mmx6mmTransparentRed": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent Red",
@@ -25397,8 +27908,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01652736-9A80-11E8-B241-20348CA49208.png"
   },
   "Disc18mmx6mmTransparentYellow": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent Yellow",
@@ -25425,8 +27948,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/091C973E-9A80-11E8-919B-C3BECC46DD39.png"
   },
   "Disc20mmx5mmPastelBlue": {
     "DisplayName": "Disc, 20mm x 5mm, Pastel Blue",
@@ -25450,8 +27985,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E98D5474-6C27-11E9-B784-DFF5A9801980.png"
   },
   "Disc20mmx5mmPastelOrange": {
     "DisplayName": "Disc, 20mm x 5mm, Pastel Orange",
@@ -25475,8 +28022,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F73CA43A-6C27-11E9-B784-F9F5A9801980.png"
   },
   "Disc20mmx5mmPastelPurple": {
     "DisplayName": "Disc, 20mm x 5mm, Pastel Purple",
@@ -25500,8 +28059,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F279AA10-6C27-11E9-85C7-0EAEBA9B8687.png"
   },
   "Disc25mmx3mmClear": {
     "DisplayName": "Disc, 25mm x 3mm, Clear",
@@ -25528,8 +28099,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E03E5674-B06C-11E8-BB17-18A5CE95AB04.png"
   },
   "Disc25mmx3mmFluorescentBlue": {
     "DisplayName": "Disc, 25mm x 3mm, Fluorescent Blue",
@@ -25556,8 +28139,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F687140C-9A7D-11E8-B241-36318CA49208.png"
   },
   "Disc25mmx3mmFluorescentGreen": {
     "DisplayName": "Disc, 25mm x 3mm, Fluorescent Green",
@@ -25584,8 +28179,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F391A48-9A7E-11E8-B241-E2318CA49208.png"
   },
   "Disc25mmx3mmFluorescentOrange": {
     "DisplayName": "Disc, 25mm x 3mm, Fluorescent Orange",
@@ -25612,8 +28219,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/91F0CF00-9A7E-11E8-919B-95BCCC46DD39.png"
   },
   "Disc25mmx3mmFluorescentRed": {
     "DisplayName": "Disc, 25mm x 3mm, Fluorescent Red",
@@ -25640,8 +28259,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E19DFD02-9A7E-11E8-B241-8C328CA49208.png"
   },
   "Disc25mmx3mmFluorescentYellow": {
     "DisplayName": "Disc, 25mm x 3mm, Fluorescent Yellow",
@@ -25668,8 +28299,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5BC4AA56-9A78-11E8-919B-59B2CC46DD39.png"
   },
   "Disc25mmx3mmTransparentBlue": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent Blue",
@@ -25696,8 +28339,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CF790D3C-9A7F-11E8-919B-52BECC46DD39.png"
   },
   "Disc25mmx3mmTransparentGreen": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent Green",
@@ -25724,8 +28379,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D82D1F36-9A7F-11E8-B241-E7338CA49208.png"
   },
   "Disc25mmx3mmTransparentGrey": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent Grey",
@@ -25752,8 +28419,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E28FA4B2-9A7F-11E8-B241-F0338CA49208.png"
   },
   "Disc25mmx3mmTransparentOrange": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent Orange",
@@ -25780,8 +28459,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EBA979A6-9A7F-11E8-919B-83BECC46DD39.png"
   },
   "Disc25mmx3mmTransparentRed": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent Red",
@@ -25808,8 +28499,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01652736-9A80-11E8-B241-20348CA49208.png"
   },
   "Disc25mmx3mmTransparentPurple": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent, Purple",
@@ -25836,8 +28539,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5F1184C-9A7F-11E8-B241-1D348CA49208.png"
   },
   "Disc25mmx3mmTransparentYellow": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent, Yellow",
@@ -25864,8 +28579,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/091C973E-9A80-11E8-919B-C3BECC46DD39.png"
   },
   "Disc25mmx6mmClear": {
     "DisplayName": "Disc, 25mm x 6mm, Clear",
@@ -25892,8 +28619,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/144BFDFC-B07E-11E8-8C22-84BFBCC16479.png"
   },
   "Disc25mmx6mmFluorescentBlue": {
     "DisplayName": "Disc, 25mm x 6mm, Fluorescent Blue",
@@ -25920,8 +28659,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F687140C-9A7D-11E8-B241-36318CA49208.png"
   },
   "Disc25mmx6mmFluorescentGreen": {
     "DisplayName": "Disc, 25mm x 6mm, Fluorescent Green",
@@ -25948,8 +28699,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F391A48-9A7E-11E8-B241-E2318CA49208.png"
   },
   "Disc25mmx6mmFluorescentOrange": {
     "DisplayName": "Disc, 25mm x 6mm, Fluorescent Orange",
@@ -25976,8 +28739,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/91F0CF00-9A7E-11E8-919B-95BCCC46DD39.png"
   },
   "Disc25mmx6mmFluorescentRed": {
     "DisplayName": "Disc, 25mm x 6mm, Fluorescent Red",
@@ -26004,8 +28779,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E19DFD02-9A7E-11E8-B241-8C328CA49208.png"
   },
   "Disc25mmx6mmFluorescentYellow": {
     "DisplayName": "Disc, 25mm x 6mm, Fluorescent Yellow",
@@ -26032,8 +28819,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5BC4AA56-9A78-11E8-919B-59B2CC46DD39.png"
   },
   "Disc25mmx6mmTransparentBlue": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent Blue",
@@ -26060,8 +28859,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CF790D3C-9A7F-11E8-919B-52BECC46DD39.png"
   },
   "Disc25mmx6mmTransparentGreen": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent Green",
@@ -26088,8 +28899,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D82D1F36-9A7F-11E8-B241-E7338CA49208.png"
   },
   "Disc25mmx6mmTransparentGrey": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent Grey",
@@ -26116,8 +28939,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E28FA4B2-9A7F-11E8-B241-F0338CA49208.png"
   },
   "Disc25mmx6mmTransparentOrange": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent Orange",
@@ -26144,8 +28979,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EBA979A6-9A7F-11E8-919B-83BECC46DD39.png"
   },
   "Disc25mmx6mmTransparentPurple": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent Purple",
@@ -26172,8 +29019,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5F1184C-9A7F-11E8-B241-1D348CA49208.png"
   },
   "Disc25mmx6mmTransparentRed": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent Red",
@@ -26200,8 +29059,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01652736-9A80-11E8-B241-20348CA49208.png"
   },
   "Disc25mmx6mmTransparentYellow": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent Yellow",
@@ -26228,8 +29099,20 @@ STOCK_COMPONENT_INFO = {
       "arts",
       "crafts",
       "diy",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/091C973E-9A80-11E8-919B-C3BECC46DD39.png"
   },
   "Disc30mmx5mmBlue": {
     "DisplayName": "Disc, 30mm x 5mm, Blue",
@@ -26253,8 +29136,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FFB9EA16-4A5C-11E8-855F-858BD2C40D81.png"
   },
   "Djin": {
     "DisplayName": "Djin",
@@ -26287,7 +29182,8 @@ STOCK_COMPONENT_INFO = {
       "spirit",
       "demon",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/45C414B4-11D2-11E8-AADE-153194A6FE1D.png"
   },
   "Doctor-CharacterMeeple": {
     "DisplayName": "Doctor - Character Meeple",
@@ -26307,7 +29203,8 @@ STOCK_COMPONENT_INFO = {
       "medicine",
       "pediatrician",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2111A80E-8EBC-11E8-AE40-54EA785DA8EE.png"
   },
   "DogAcrylic": {
     "DisplayName": "Dog, Acrylic",
@@ -26329,7 +29226,8 @@ STOCK_COMPONENT_INFO = {
       "puppy",
       "dog",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9D2C819A-F6F9-11EB-9EF2-D62C22502F64.png"
   },
   "DogPostApocalypseArmorTB25": {
     "DisplayName": "Dog, Post Apocalypse, Armor, TB25",
@@ -26341,7 +29239,8 @@ STOCK_COMPONENT_INFO = {
       "mad max",
       "pibble",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F9ED3612-D0B6-11EC-A767-8C1CD858682F.png"
   },
   "DominoesSmall": {
     "DisplayName": "Dominoes, Small",
@@ -26378,7 +29277,8 @@ STOCK_COMPONENT_INFO = {
       "sevens",
       "trump",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BB1AEFEE-D5C9-11EB-9F1A-59A58D8D6E47.png"
   },
   "DonjonPagodaBlack": {
     "DisplayName": "Donjon Pagoda, Black",
@@ -26392,7 +29292,8 @@ STOCK_COMPONENT_INFO = {
       "military",
       "historic",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D0B31246-401C-11ED-8172-938699F4B99C.png"
   },
   "DonjonPagodaBlue": {
     "DisplayName": "Donjon Pagoda, Blue",
@@ -26406,7 +29307,8 @@ STOCK_COMPONENT_INFO = {
       "military",
       "historic",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D5A4CA06-401C-11ED-8172-AC8699F4B99C.png"
   },
   "DonjonPagodaGreen": {
     "DisplayName": "Donjon Pagoda, Green",
@@ -26420,7 +29322,8 @@ STOCK_COMPONENT_INFO = {
       "military",
       "historic",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D8675D4E-401C-11ED-8172-F08699F4B99C.png"
   },
   "DonjonPagodaOrange": {
     "DisplayName": "Donjon Pagoda, Orange",
@@ -26434,7 +29337,8 @@ STOCK_COMPONENT_INFO = {
       "military",
       "historic",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DAD71F24-401C-11ED-ABE7-C234B4CA1F86.png"
   },
   "DonjonPagodaPurple": {
     "DisplayName": "Donjon Pagoda, Purple",
@@ -26448,7 +29352,8 @@ STOCK_COMPONENT_INFO = {
       "military",
       "historic",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DD710128-401C-11ED-ABE7-D534B4CA1F86.png"
   },
   "DonjonPagodaRed": {
     "DisplayName": "Donjon Pagoda, Red",
@@ -26462,7 +29367,8 @@ STOCK_COMPONENT_INFO = {
       "military",
       "historic",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E079E1D2-401C-11ED-ABE7-0D35B4CA1F86.png"
   },
   "DonjonPagodaWhite": {
     "DisplayName": "Donjon Pagoda, White",
@@ -26476,7 +29382,8 @@ STOCK_COMPONENT_INFO = {
       "military",
       "historic",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E329DAD6-401C-11ED-8172-7C8799F4B99C.png"
   },
   "DonjonPagodaYellow": {
     "DisplayName": "Donjon Pagoda, Yellow",
@@ -26490,7 +29397,8 @@ STOCK_COMPONENT_INFO = {
       "military",
       "historic",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E639B8B8-401C-11ED-ABE7-8535B4CA1F86.png"
   },
   "DonkeyWood": {
     "DisplayName": "Donkey, Wood",
@@ -26510,7 +29418,8 @@ STOCK_COMPONENT_INFO = {
       "jenny",
       "foal",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/287398A0-611B-11E9-AC18-FCE552E7BC3A.png"
   },
   "DoubloonMetalGold": {
     "DisplayName": "Doubloon, Metal, Gold",
@@ -26533,7 +29442,8 @@ STOCK_COMPONENT_INFO = {
       "r": 255,
       "g": 255,
       "b": 0
-    }
+    },
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9D1871D2-10D4-11E8-B567-8F0094A6FE1D.png"
   },
   "DoubloonMetalSilver": {
     "DisplayName": "Doubloon, Metal, Silver",
@@ -26550,7 +29460,8 @@ STOCK_COMPONENT_INFO = {
       "currency",
       "loonie",
       "dubloon"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E7B476BE-F8AF-11ED-99EA-1C0E8844832A.png"
   },
   "Doubloons": {
     "DisplayName": "Doubloons",
@@ -26567,7 +29478,8 @@ STOCK_COMPONENT_INFO = {
       "currency",
       "loonie",
       "dubloon"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EAA0567E-A662-11E0-896A-3A7437D397EC.png"
   },
   "Dove": {
     "DisplayName": "Dove",
@@ -26591,8 +29503,10 @@ STOCK_COMPONENT_INFO = {
       "feathers",
       "nest",
       "warbler",
+      "peace\r\n",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D2ECE3B6-D5C9-11EB-A165-ADF83218550E.png"
   },
   "DragonFamiliar": {
     "DisplayName": "Dragon Familiar",
@@ -26622,7 +29536,8 @@ STOCK_COMPONENT_INFO = {
       "leviathan",
       "firebreathing,",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/55029506-1022-11E8-B62C-8D0194A6FE1D.png"
   },
   "DragonBlueDark": {
     "DisplayName": "Dragon, Blue, Dark",
@@ -26643,7 +29558,8 @@ STOCK_COMPONENT_INFO = {
       "firebreathing",
       "creature",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ECC3A154-D5CD-11EB-A165-B2023318550E.png"
   },
   "DragonBlueLight": {
     "DisplayName": "Dragon, Blue, Light",
@@ -26664,7 +29580,8 @@ STOCK_COMPONENT_INFO = {
       "firebreathing",
       "creature",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0FA989E0-D5CE-11EB-9F1A-9DAD8D8D6E47.png"
   },
   "DragonFantasyTB15Black": {
     "DisplayName": "Dragon, Fantasy, TB15, Black",
@@ -26680,7 +29597,8 @@ STOCK_COMPONENT_INFO = {
       "adorable",
       "fierce",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FA427890-AEEE-11ED-97F1-F9289307B86A.png"
   },
   "DragonFantasyTB15Blue": {
     "DisplayName": "Dragon, Fantasy, TB15, Blue",
@@ -26696,7 +29614,8 @@ STOCK_COMPONENT_INFO = {
       "adorable",
       "fierce",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E78A2608-AEEE-11ED-97F1-61289307B86A.png"
   },
   "DragonFantasyTB15Green": {
     "DisplayName": "Dragon, Fantasy, TB15, Green",
@@ -26712,7 +29631,8 @@ STOCK_COMPONENT_INFO = {
       "adorable",
       "fierce",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/329B9A22-AEF0-11ED-AC3F-5C53B58D8F2A.png"
   },
   "DragonFantasyTB15Orange": {
     "DisplayName": "Dragon, Fantasy, TB15, Orange",
@@ -26728,7 +29648,8 @@ STOCK_COMPONENT_INFO = {
       "adorable",
       "fierce",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2781442A-AEF0-11ED-AC3F-3853B58D8F2A.png"
   },
   "DragonFantasyTB15Purple": {
     "DisplayName": "Dragon, Fantasy, TB15, Purple",
@@ -26744,7 +29665,8 @@ STOCK_COMPONENT_INFO = {
       "adorable",
       "fierce",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B843C372-AEEE-11ED-AC3F-5E41B58D8F2A.png"
   },
   "DragonFantasyTB15Red": {
     "DisplayName": "Dragon, Fantasy, TB15, Red",
@@ -26760,7 +29682,8 @@ STOCK_COMPONENT_INFO = {
       "adorable",
       "fierce",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0AF992C2-AEEF-11ED-97F1-C3299307B86A.png"
   },
   "DragonFantasyTB15White": {
     "DisplayName": "Dragon, Fantasy, TB15, White",
@@ -26776,7 +29699,8 @@ STOCK_COMPONENT_INFO = {
       "adorable",
       "fierce",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3E3C6B72-AEF0-11ED-AC3F-3454B58D8F2A.png"
   },
   "DragonFantasyTB15Yellow": {
     "DisplayName": "Dragon, Fantasy, TB15, Yellow",
@@ -26792,7 +29716,8 @@ STOCK_COMPONENT_INFO = {
       "adorable",
       "fierce",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FF0CEFD6-AEEE-11ED-97F1-81299307B86A.png"
   },
   "DragonFantasyTB50": {
     "DisplayName": "Dragon, Fantasy, TB50",
@@ -26801,7 +29726,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "71609428-7FB8-11EC-90B0-7DFF8D9C19B6",
     "Tags": [
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3E06D634-8B8C-11EC-8A6C-A517EFDF9D7E.png"
   },
   "DragonOrange": {
     "DisplayName": "Dragon, Orange",
@@ -26822,7 +29748,8 @@ STOCK_COMPONENT_INFO = {
       "firebreathing",
       "creature",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/22C163B8-D5CE-11EB-9F1A-AAAD8D8D6E47.png"
   },
   "DragonRed": {
     "DisplayName": "Dragon, Red",
@@ -26843,7 +29770,8 @@ STOCK_COMPONENT_INFO = {
       "firebreathing",
       "creature",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C865C300-D5CD-11EB-A165-45023318550E.png"
   },
   "DragonSmallBlue": {
     "DisplayName": "Dragon, Small, Blue",
@@ -26863,7 +29791,8 @@ STOCK_COMPONENT_INFO = {
       "firebreathing",
       "creature",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/76966E5A-621E-11E9-99CF-C6239E5FDBD4.png"
   },
   "DragonSmallGreen": {
     "DisplayName": "Dragon, Small, Green",
@@ -26883,7 +29812,8 @@ STOCK_COMPONENT_INFO = {
       "firebreathing",
       "creature",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/62FDBB0A-621E-11E9-99CF-A0239E5FDBD4.png"
   },
   "DragonSmallRed": {
     "DisplayName": "Dragon, Small, Red",
@@ -26903,7 +29833,8 @@ STOCK_COMPONENT_INFO = {
       "firebreathing",
       "creature",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6D1D7F44-621E-11E9-8FAC-6A8352E7BC3A.png"
   },
   "DragonSmallYellow": {
     "DisplayName": "Dragon, Small, Yellow",
@@ -26923,7 +29854,8 @@ STOCK_COMPONENT_INFO = {
       "firebreathing",
       "creature",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/85808A22-621E-11E9-99CF-E5239E5FDBD4.png"
   },
   "DriderFantasyTB50": {
     "DisplayName": "Drider, Fantasy, TB50",
@@ -26932,7 +29864,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "22C7EDE2-11E5-11ED-83DA-6141591B8E51",
     "Tags": [
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FAE61192-14EF-11ED-B7FD-3C30A5A96053.png"
   },
   "DropBlack": {
     "DisplayName": "Drop, Black",
@@ -26948,7 +29881,8 @@ STOCK_COMPONENT_INFO = {
       "ink",
       "coffee",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6AEEF5CE-C028-11E3-B79E-FDE36B930D5D.png"
   },
   "DropBlue": {
     "DisplayName": "Drop, Blue",
@@ -26963,7 +29897,8 @@ STOCK_COMPONENT_INFO = {
       "droplet",
       "pendant",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6B8DB93E-C028-11E3-B27C-739E523B2E03.png"
   },
   "DropGreen": {
     "DisplayName": "Drop, Green",
@@ -26980,7 +29915,8 @@ STOCK_COMPONENT_INFO = {
       "sludge",
       "toxic",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6B9EE632-C028-11E3-8838-FDE36B930D5D.png"
   },
   "DropOrange": {
     "DisplayName": "Drop, Orange",
@@ -27001,7 +29937,8 @@ STOCK_COMPONENT_INFO = {
       "sunnyd",
       "citrus",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6C16E9DE-C028-11E3-BC28-739E523B2E03.png"
   },
   "DropPurple": {
     "DisplayName": "Drop, Purple",
@@ -27018,7 +29955,8 @@ STOCK_COMPONENT_INFO = {
       "sizzurp",
       "lilac",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6C434D1C-C028-11E3-89B3-FDE36B930D5D.png"
   },
   "DropRed": {
     "DisplayName": "Drop, Red",
@@ -27036,7 +29974,8 @@ STOCK_COMPONENT_INFO = {
       "tomato juice",
       "cranberry",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6CC61814-C028-11E3-9692-739E523B2E03.png"
   },
   "DropWhite": {
     "DisplayName": "Drop, White",
@@ -27051,7 +29990,8 @@ STOCK_COMPONENT_INFO = {
       "pendant",
       "whiteout",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6CDE328C-C028-11E3-855F-739E523B2E03.png"
   },
   "DropYellow": {
     "DisplayName": "Drop, Yellow",
@@ -27066,7 +30006,8 @@ STOCK_COMPONENT_INFO = {
       "pendant",
       "lemonjuice",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6D85E7F2-C028-11E3-867B-FDE36B930D5D.png"
   },
   "DrumstickOrange": {
     "DisplayName": "Drumstick, Orange",
@@ -27087,7 +30028,8 @@ STOCK_COMPONENT_INFO = {
       "mutton",
       "shank",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/64F85F5C-3F45-11E8-9557-A4BBCEC01D42.png"
   },
   "DwarfAxeFantasyTB25": {
     "DisplayName": "Dwarf Axe, Fantasy, TB25",
@@ -27103,7 +30045,8 @@ STOCK_COMPONENT_INFO = {
       "logger",
       "forester",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7EF26F4A-5217-11EC-889E-D9DF94EE74C0.png"
   },
   "DwarfFighter": {
     "DisplayName": "Dwarf Fighter",
@@ -27136,7 +30079,8 @@ STOCK_COMPONENT_INFO = {
       "half-ling",
       "duergar",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1B8A0A8A-4560-11E7-BFDD-0E5F370CF66B.png"
   },
   "DwarfMinigunFantasyTB25": {
     "DisplayName": "Dwarf Minigun, Fantasy, TB25",
@@ -27150,7 +30094,8 @@ STOCK_COMPONENT_INFO = {
       "m134 minigun",
       "fighter",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/774BC8F4-5217-11EC-889E-C3DF94EE74C0.png"
   },
   "DwarfPaladinFantasyTB25": {
     "DisplayName": "Dwarf Paladin, Fantasy, TB25",
@@ -27164,7 +30109,8 @@ STOCK_COMPONENT_INFO = {
       "mechanic",
       "dorf",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E3860202-6F16-11EC-9B55-37257DF5F7CD.png"
   },
   "DwarfRiflemanFantasyTB25": {
     "DisplayName": "Dwarf Rifleman, Fantasy, TB25",
@@ -27173,7 +30119,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "15DD1BDA-2AF8-11ED-B464-88B079D8BDFD",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7E8F4356-2E18-11ED-91FF-5D19D14F796C.png"
   },
   "DwarfBlue-CharacterMeeple": {
     "DisplayName": "Dwarf, Blue - Character Meeple",
@@ -27189,7 +30136,8 @@ STOCK_COMPONENT_INFO = {
       "duergar",
       "character",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2E0769D6-8EBC-11E8-AE40-6AEA785DA8EE.png"
   },
   "DwarfGreen-CharacterMeeple": {
     "DisplayName": "Dwarf, Green - Character Meeple",
@@ -27205,7 +30153,8 @@ STOCK_COMPONENT_INFO = {
       "duergar",
       "character",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/38A2F270-8EBC-11E8-AE40-6DEA785DA8EE.png"
   },
   "DwarfOrange-CharacterMeeple": {
     "DisplayName": "Dwarf, Orange - Character Meeple",
@@ -27221,7 +30170,8 @@ STOCK_COMPONENT_INFO = {
       "duergar",
       "character",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/484C1D8C-8EBC-11E8-AE40-87EA785DA8EE.png"
   },
   "DwarfPistolSpaceTB25": {
     "DisplayName": "Dwarf, Pistol, Space, TB25",
@@ -27230,7 +30180,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "01E8CE66-9B3D-11ED-937E-36582A49FC29",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EC848212-9E94-11ED-8B48-37522A49FC29.png"
   },
   "DwarfPurple-CharacterMeeple": {
     "DisplayName": "Dwarf, Purple - Character Meeple",
@@ -27246,7 +30197,8 @@ STOCK_COMPONENT_INFO = {
       "duergar",
       "character",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/51D41116-8EBC-11E8-8D59-FF9AB70C97C7.png"
   },
   "DwarfRed-CharacterMeeple": {
     "DisplayName": "Dwarf, Red - Character Meeple",
@@ -27262,7 +30214,8 @@ STOCK_COMPONENT_INFO = {
       "duergar",
       "character",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5A5023AC-8EBC-11E8-AE40-C9EA785DA8EE.png"
   },
   "DwarfYellow-CharacterMeeple": {
     "DisplayName": "Dwarf, Yellow - Character Meeple",
@@ -27278,7 +30231,8 @@ STOCK_COMPONENT_INFO = {
       "duergar",
       "character",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/650315AC-8EBC-11E8-8D59-1F9BB70C97C7.png"
   },
   "DwarvenIronGolem": {
     "DisplayName": "Dwarven Iron Golem",
@@ -27308,7 +30262,8 @@ STOCK_COMPONENT_INFO = {
       "ushabti",
       "saltling",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/40829B7E-102E-11E8-9265-75FF93A6FE1D.png"
   },
   "Dynamite": {
     "DisplayName": "Dynamite",
@@ -27352,7 +30307,8 @@ STOCK_COMPONENT_INFO = {
       "faberg\u00e9",
       "pysanka",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/78074E08-D5F3-11EB-ADF6-96798D8D6E47.png"
   },
   "EggGreen": {
     "DisplayName": "Egg, Green",
@@ -27375,7 +30331,8 @@ STOCK_COMPONENT_INFO = {
       "faberg\u00e9",
       "pysanka",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C17C35BC-D5F3-11EB-ADF6-067A8D8D6E47.png"
   },
   "EggNatural": {
     "DisplayName": "Egg, Natural",
@@ -27398,7 +30355,8 @@ STOCK_COMPONENT_INFO = {
       "faberg\u00e9",
       "pysanka",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/69F8F450-D5F4-11EB-8101-9D99E882EB54.png"
   },
   "EggPurple": {
     "DisplayName": "Egg, Purple",
@@ -27421,7 +30379,8 @@ STOCK_COMPONENT_INFO = {
       "faberg\u00e9",
       "pysanka",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9F40C494-D5F4-11EB-8101-EE99E882EB54.png"
   },
   "EggRose": {
     "DisplayName": "Egg, Rose",
@@ -27444,7 +30403,8 @@ STOCK_COMPONENT_INFO = {
       "faberg\u00e9",
       "pysanka",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A8B4A7F2-D5F4-11EB-8101-FF99E882EB54.png"
   },
   "EggWhite": {
     "DisplayName": "Egg, White",
@@ -27467,7 +30427,8 @@ STOCK_COMPONENT_INFO = {
       "faberg\u00e9",
       "pysanka",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D3E3ECBC-D5F4-11EB-ADF6-757C8D8D6E47.png"
   },
   "ElectricitySymbolGreen": {
     "DisplayName": "Electricity Symbol, Green",
@@ -27520,7 +30481,8 @@ STOCK_COMPONENT_INFO = {
       "endangered",
       "circus",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9F5CDA46-6C27-11E9-B784-5EF5A9801980.png"
   },
   "ElephantwithRiderGrey": {
     "DisplayName": "Elephant with Rider, Grey",
@@ -27540,7 +30502,8 @@ STOCK_COMPONENT_INFO = {
       "endangered",
       "circus",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9E81A18C-5BC5-11E9-B9E4-B0C2A1F2CF41.png"
   },
   "ElephantwithRiderOrange": {
     "DisplayName": "Elephant with Rider, Orange",
@@ -27560,7 +30523,8 @@ STOCK_COMPONENT_INFO = {
       "endangered",
       "circus",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A235F7F2-6C27-11E9-85C7-92ADBA9B8687.png"
   },
   "ElephantwithRiderPurple": {
     "DisplayName": "Elephant with Rider, Purple",
@@ -27580,7 +30544,8 @@ STOCK_COMPONENT_INFO = {
       "endangered",
       "circus",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A49F97F0-6C27-11E9-B784-69F5A9801980.png"
   },
   "ElephantwithRiderRed": {
     "DisplayName": "Elephant with Rider, Red",
@@ -27600,7 +30565,8 @@ STOCK_COMPONENT_INFO = {
       "endangered",
       "circus",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A74E61FC-6C27-11E9-B784-66F5A9801980.png"
   },
   "ElephantwithRiderYellow": {
     "DisplayName": "Elephant with Rider, Yellow",
@@ -27620,7 +30586,8 @@ STOCK_COMPONENT_INFO = {
       "endangered",
       "circus",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A94D1ACA-6C27-11E9-85C7-9EADBA9B8687.png"
   },
   "Elf-CharacterMeeple": {
     "DisplayName": "Elf - Character Meeple",
@@ -27640,7 +30607,8 @@ STOCK_COMPONENT_INFO = {
       "fay",
       "fae",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6BD56452-8EBC-11E8-AE40-EEEA785DA8EE.png"
   },
   "ElfArcher2FantasyTB25": {
     "DisplayName": "Elf Archer 2, Fantasy, TB25",
@@ -27655,7 +30623,8 @@ STOCK_COMPONENT_INFO = {
       "quiver",
       "crystal",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D2C1118C-9F0E-11EC-99AF-FF9666E85691.png"
   },
   "ElfArcherFantasyTB25": {
     "DisplayName": "Elf Archer, Fantasy, TB25",
@@ -27670,7 +30639,8 @@ STOCK_COMPONENT_INFO = {
       "quiver",
       "crystal",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D5902E70-9F0E-11EC-99AF-089766E85691.png"
   },
   "EmptyBottle": {
     "DisplayName": "Empty Bottle",
@@ -27691,7 +30661,8 @@ STOCK_COMPONENT_INFO = {
       "glass",
       "jug",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/20C9BD2C-B082-11E8-BB17-54C5CE95AB04.png"
   },
   "EmptyVial": {
     "DisplayName": "Empty Vial",
@@ -27710,7 +30681,8 @@ STOCK_COMPONENT_INFO = {
       "ampul",
       "ampoule",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/437B62C0-AC78-11E8-8097-32C1BCC16479.png"
   },
   "EnchanterwithStaff": {
     "DisplayName": "Enchanter with Staff",
@@ -27735,7 +30707,8 @@ STOCK_COMPONENT_INFO = {
       "caster",
       "wizard",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/22B758DA-4560-11E7-BFDD-0F5F370CF66B.png"
   },
   "EuroPokerTin": {
     "DisplayName": "Euro Poker Tin",
@@ -27749,7 +30722,8 @@ STOCK_COMPONENT_INFO = {
       "altoids",
       "mints",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FB68F576-230A-11EC-81A5-FAEB9FC3DD01.png"
   },
   "EvilLordwithMace": {
     "DisplayName": "Evil Lord with Mace",
@@ -27778,7 +30752,8 @@ STOCK_COMPONENT_INFO = {
       "crusader",
       "fighter",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3072A236-4560-11E7-ABA2-484390E4BA5A.png"
   },
   "ExclamationMark": {
     "DisplayName": "Exclamation Mark",
@@ -27807,7 +30782,8 @@ STOCK_COMPONENT_INFO = {
       "astonished",
       "astonishment",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2E2787A2-A177-11E8-9AC6-592BC5DEAA9F.png"
   },
   "ExplorerSetof3(AssortedColors)": {
     "DisplayName": "Explorer, Set of 3 (Assorted Colors)",
@@ -27847,7 +30823,8 @@ STOCK_COMPONENT_INFO = {
       "rafter",
       "barge",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9A702F92-D5F2-11EB-8101-6895E882EB54.png"
   },
   "FailFasterPlaytestingJournal": {
     "DisplayName": "Fail Faster Playtesting Journal",
@@ -27869,7 +30846,8 @@ STOCK_COMPONENT_INFO = {
       "helper",
       "tester",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/961088DE-0006-11EA-8333-42290241A2E6.png"
   },
   "Fang": {
     "DisplayName": "Fang",
@@ -27878,7 +30856,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "F75B8234-0F84-11ED-AD45-B822A5A96053",
     "Tags": [
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0DFA8CFA-14F9-11ED-B552-0DA595221FC2.png"
   },
   "FantasyCoin20": {
     "DisplayName": "Fantasy Coin 20",
@@ -27920,7 +30899,8 @@ STOCK_COMPONENT_INFO = {
       "mint",
       "change",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/485EFF10-79AC-11E5-822F-4D13007DF507.png"
   },
   "FantasyCoin5": {
     "DisplayName": "Fantasy Coin 5",
@@ -27963,7 +30943,8 @@ STOCK_COMPONENT_INFO = {
       "change",
       "nickel",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4796DA26-79AC-11E5-A8FD-4D13007DF507.png"
   },
   "FarmerFemaleBlue-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Blue - Character Meeple",
@@ -27997,7 +30978,8 @@ STOCK_COMPONENT_INFO = {
       "hillbilly",
       "gaucho",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9CDFE3CE-8EBC-11E8-AE40-29EB785DA8EE.png"
   },
   "FarmerFemaleGreen-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Green - Character Meeple",
@@ -28031,7 +31013,8 @@ STOCK_COMPONENT_INFO = {
       "hillbilly",
       "gaucho",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A8B92EF8-8EBC-11E8-8D59-899BB70C97C7.png"
   },
   "FarmerFemaleOrange-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Orange - Character Meeple",
@@ -28065,7 +31048,8 @@ STOCK_COMPONENT_INFO = {
       "hillbilly",
       "gaucho",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B30A4DB0-8EBC-11E8-8D59-9B9BB70C97C7.png"
   },
   "FarmerFemalePurple-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Purple - Character Meeple",
@@ -28099,7 +31083,8 @@ STOCK_COMPONENT_INFO = {
       "hillbilly",
       "gaucho",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EC71970C-8EBC-11E8-AE40-9FEB785DA8EE.png"
   },
   "FarmerFemaleRed-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Red - Character Meeple",
@@ -28133,7 +31118,8 @@ STOCK_COMPONENT_INFO = {
       "hillbilly",
       "gaucho",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F88D513E-8EBC-11E8-8D59-FB9BB70C97C7.png"
   },
   "FarmerFemaleYellow-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Yellow - Character Meeple",
@@ -28167,7 +31153,8 @@ STOCK_COMPONENT_INFO = {
       "hillbilly",
       "gaucho",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/02CFE116-8EBD-11E8-8D59-159CB70C97C7.png"
   },
   "FarmerMaleBlue-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Blue - Character Meeple",
@@ -28201,7 +31188,8 @@ STOCK_COMPONENT_INFO = {
       "hillbilly",
       "gaucho",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3D8E89D4-8F52-11E8-BD69-40DAB70C97C7.png"
   },
   "FarmerMaleGreen-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Green - Character Meeple",
@@ -28235,7 +31223,8 @@ STOCK_COMPONENT_INFO = {
       "hillbilly",
       "gaucho",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/47458180-8F52-11E8-BD69-61DAB70C97C7.png"
   },
   "FarmerMaleOrange-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Orange - Character Meeple",
@@ -28269,7 +31258,8 @@ STOCK_COMPONENT_INFO = {
       "hillbilly",
       "gaucho",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/98469290-8F52-11E8-8EA6-8FAD785DA8EE.png"
   },
   "FarmerMalePurple-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Purple - Character Meeple",
@@ -28303,7 +31293,8 @@ STOCK_COMPONENT_INFO = {
       "hillbilly",
       "gaucho",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A5BDF8C4-8F51-11E8-BD69-60D9B70C97C7.png"
   },
   "FarmerMaleRed-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Red - Character Meeple",
@@ -28337,7 +31328,8 @@ STOCK_COMPONENT_INFO = {
       "hillbilly",
       "gaucho",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F671B462-8F52-11E8-8EA6-30AE785DA8EE.png"
   },
   "FarmerMaleYellow-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Yellow - Character Meeple",
@@ -28371,7 +31363,8 @@ STOCK_COMPONENT_INFO = {
       "hillbilly",
       "gaucho",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E133B89C-8F4E-11E8-8EA6-2BA7785DA8EE.png"
   },
   "FedoraPersonBlackDark": {
     "DisplayName": "Fedora Person, Black, Dark",
@@ -28395,7 +31388,8 @@ STOCK_COMPONENT_INFO = {
       "skimmer",
       "topper",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0B690428-5EAD-11ED-9BD8-4DDBF946917F.png"
   },
   "FedoraPersonBlackLight": {
     "DisplayName": "Fedora Person, Black, Light",
@@ -28419,7 +31413,8 @@ STOCK_COMPONENT_INFO = {
       "skimmer",
       "topper",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FB1920C6-5EAC-11ED-9BD8-09DBF946917F.png"
   },
   "FedoraPersonBlackMedium": {
     "DisplayName": "Fedora Person, Black, Medium",
@@ -28443,7 +31438,8 @@ STOCK_COMPONENT_INFO = {
       "skimmer",
       "topper",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/03EA2D3A-5EAD-11ED-9BD8-4DDBF946917F.png"
   },
   "FedoraPersonBlueDark": {
     "DisplayName": "Fedora Person, Blue, Dark",
@@ -28467,7 +31463,8 @@ STOCK_COMPONENT_INFO = {
       "skimmer",
       "topper",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3BE7C602-5EAD-11ED-9BD8-05DEF946917F.png"
   },
   "FedoraPersonBlueLight": {
     "DisplayName": "Fedora Person, Blue, Light",
@@ -28491,7 +31488,8 @@ STOCK_COMPONENT_INFO = {
       "skimmer",
       "topper",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2B6C74C6-5EAD-11ED-A783-3E5935DE7897.png"
   },
   "FedoraPersonBlueMedium": {
     "DisplayName": "Fedora Person, Blue, Medium",
@@ -28515,7 +31513,8 @@ STOCK_COMPONENT_INFO = {
       "skimmer",
       "topper",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/347896DA-5EAD-11ED-A783-B35935DE7897.png"
   },
   "FedoraPersonRedDark": {
     "DisplayName": "Fedora Person, Red, Dark",
@@ -28539,7 +31538,8 @@ STOCK_COMPONENT_INFO = {
       "skimmer",
       "topper",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1564DEF2-5EAD-11ED-9BD8-CDDBF946917F.png"
   },
   "FedoraPersonRedLight": {
     "DisplayName": "Fedora Person, Red, Light",
@@ -28563,7 +31563,8 @@ STOCK_COMPONENT_INFO = {
       "skimmer",
       "topper",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1E52201A-5EAD-11ED-9BD8-88DCF946917F.png"
   },
   "FedoraPersonRedMedium": {
     "DisplayName": "Fedora Person, Red, Medium",
@@ -28587,7 +31588,8 @@ STOCK_COMPONENT_INFO = {
       "skimmer",
       "topper",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/24008876-5EAD-11ED-9BD8-8ADCF946917F.png"
   },
   "FedoraPersonWhiteDark": {
     "DisplayName": "Fedora Person, White, Dark",
@@ -28611,7 +31613,8 @@ STOCK_COMPONENT_INFO = {
       "skimmer",
       "topper",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/432C2566-5EAD-11ED-9BD8-05DEF946917F.png"
   },
   "FedoraPersonWhiteLight": {
     "DisplayName": "Fedora Person, White, Light",
@@ -28635,7 +31638,8 @@ STOCK_COMPONENT_INFO = {
       "skimmer",
       "topper",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/52456CBA-5EAD-11ED-9BD8-01DFF946917F.png"
   },
   "FedoraPersonWhiteMedium": {
     "DisplayName": "Fedora Person, White, Medium",
@@ -28659,7 +31663,8 @@ STOCK_COMPONENT_INFO = {
       "skimmer",
       "topper",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4AC450DC-5EAD-11ED-A783-ED5A35DE7897.png"
   },
   "FedoraPersonYellowDark": {
     "DisplayName": "Fedora Person, Yellow, Dark",
@@ -28683,7 +31688,8 @@ STOCK_COMPONENT_INFO = {
       "skimmer",
       "topper",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F252F80E-5EAC-11ED-A783-675635DE7897.png"
   },
   "FedoraPersonYellowLight": {
     "DisplayName": "Fedora Person, Yellow, Light",
@@ -28707,7 +31713,8 @@ STOCK_COMPONENT_INFO = {
       "skimmer",
       "topper",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EB1AC116-5EAC-11ED-A783-3B5635DE7897.png"
   },
   "FedoraPersonYellowMedium": {
     "DisplayName": "Fedora Person, Yellow, Medium",
@@ -28731,7 +31738,8 @@ STOCK_COMPONENT_INFO = {
       "skimmer",
       "topper",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E2991E20-5EAC-11ED-A783-3F5535DE7897.png"
   },
   "FedoraWearerBlack": {
     "DisplayName": "Fedora Wearer, Black",
@@ -28755,7 +31763,8 @@ STOCK_COMPONENT_INFO = {
       "skimmer",
       "topper",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8A5F5796-9C84-11E7-B170-BF79CB191CC0.png"
   },
   "FemaleAssassinFantasyTB25": {
     "DisplayName": "Female Assassin, Fantasy, TB25",
@@ -28769,7 +31778,8 @@ STOCK_COMPONENT_INFO = {
       "fantasy",
       "deadly",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E83727A6-261C-11EC-9F7F-DC7D898C9FDE.png"
   },
   "FemaleBeastMasterWarriorwithSwordandSpear": {
     "DisplayName": "Female Beast Master Warrior with Sword and Spear",
@@ -28795,7 +31805,8 @@ STOCK_COMPONENT_INFO = {
       "combatant",
       "beastmaster",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/901179D0-12D1-11E8-B66E-F6F093A6FE1D.png"
   },
   "FemaleElfArcherFantasyTB25": {
     "DisplayName": "Female Elf Archer, Fantasy, TB25",
@@ -28804,7 +31815,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "6AADF56C-2AF8-11ED-B464-BEB479D8BDFD",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/116C1C38-2E1B-11ED-91FF-93BAD04F796C.png"
   },
   "FemaleElfMageFantasyTB25": {
     "DisplayName": "Female Elf Mage, Fantasy, TB25",
@@ -28819,7 +31831,8 @@ STOCK_COMPONENT_INFO = {
       "sorceress",
       "wizard",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4ED5062E-5217-11EC-B45F-5DCE837854C6.png"
   },
   "FemaleFarmerGreen": {
     "DisplayName": "Female Farmer, Green",
@@ -28853,7 +31866,8 @@ STOCK_COMPONENT_INFO = {
       "hillbilly",
       "gaucho",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4ED608EA-88F3-11E7-B8E3-A60E80CDF569.png"
   },
   "FemaleFarmerOrange": {
     "DisplayName": "Female Farmer, Orange",
@@ -28921,7 +31935,8 @@ STOCK_COMPONENT_INFO = {
       "hillbilly",
       "gaucho",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5A514A18-88F3-11E7-A597-58676BA831B7.png"
   },
   "FemaleFarmerWhite": {
     "DisplayName": "Female Farmer, White",
@@ -28989,7 +32004,8 @@ STOCK_COMPONENT_INFO = {
       "hillbilly",
       "gaucho",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6026EA56-88F3-11E7-A597-5C676BA831B7.png"
   },
   "FemaleGunslingerGray": {
     "DisplayName": "Female Gunslinger, Gray",
@@ -29017,7 +32033,8 @@ STOCK_COMPONENT_INFO = {
       "gunfighter",
       "bandit",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B7ABC1A4-D30F-11E8-96CD-76DEE2DBE451.png"
   },
   "FenceWicker": {
     "DisplayName": "Fence, Wicker",
@@ -29028,7 +32045,8 @@ STOCK_COMPONENT_INFO = {
       "barrier",
       "wattle",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/53EB279C-74DA-11ED-8643-2B2643694036.png"
   },
   "FighterShipSetof6": {
     "DisplayName": "Fighter Ship, Set of 6",
@@ -29050,7 +32068,8 @@ STOCK_COMPONENT_INFO = {
       "turbojet",
       "aviation",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EA498EEC-9E23-11E7-A0AF-65DD71BAD30D.png"
   },
   "FighterwithGreatSword": {
     "DisplayName": "Fighter with Great Sword",
@@ -29075,7 +32094,8 @@ STOCK_COMPONENT_INFO = {
       "combatant",
       "greatsword",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D208992E-0CF8-11E8-BD5F-755294A6FE1D.png"
   },
   "FigureWoodGreen": {
     "DisplayName": "Figure, Wood, Green",
@@ -29095,7 +32115,8 @@ STOCK_COMPONENT_INFO = {
       "humanoid",
       "adult",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8CC9113E-9C84-11E7-B170-CA79CB191CC0.png"
   },
   "FigureWoodWhite": {
     "DisplayName": "Figure, Wood, White",
@@ -29115,7 +32136,8 @@ STOCK_COMPONENT_INFO = {
       "humanoid",
       "adult",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8F0C7828-9C84-11E7-B170-FA79CB191CC0.png"
   },
   "FiguresMissionarySetof5": {
     "DisplayName": "Figures, Missionary, Set of 5",
@@ -29171,7 +32193,8 @@ STOCK_COMPONENT_INFO = {
       "venusian",
       "lunar",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C6C1F292-97E4-11E7-9291-D44CCB191CC0.png"
   },
   "FiguresSoldierSetof5": {
     "DisplayName": "Figures, Soldier, Set of 5",
@@ -29194,7 +32217,8 @@ STOCK_COMPONENT_INFO = {
       "gi",
       "cadet",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/51413706-9A25-11E7-932D-3771CB191CC0.png"
   },
   "FiguresSteampunkSetof14": {
     "DisplayName": "Figures, Steampunk, Set of 14",
@@ -29210,7 +32234,8 @@ STOCK_COMPONENT_INFO = {
       "post-apocalyptic",
       "postapocalyptic ",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C9F473CC-97E4-11E7-9DFD-18A071BAD30D.png"
   },
   "FillableVial": {
     "DisplayName": "Fillable Vial",
@@ -29230,7 +32255,8 @@ STOCK_COMPONENT_INFO = {
       "ampoule",
       "empty",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1D567E02-AC7A-11E8-92B1-85E8CE95AB04.png"
   },
   "FireAxe": {
     "DisplayName": "Fire Axe",
@@ -29255,7 +32281,8 @@ STOCK_COMPONENT_INFO = {
       "poleaxe",
       "tool",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E9627850-0302-11E9-849C-71E6D18499DE.png"
   },
   "FireElemental": {
     "DisplayName": "Fire Elemental",
@@ -29285,7 +32312,8 @@ STOCK_COMPONENT_INFO = {
       "blaze",
       "brass",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1206D09E-102E-11E8-AA62-751494A6FE1D.png"
   },
   "FireElemental-CharacterMeeple": {
     "DisplayName": "Fire Elemental - Character Meeple",
@@ -29303,7 +32331,8 @@ STOCK_COMPONENT_INFO = {
       "blaze",
       "brass",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/183100C6-8EBD-11E8-8D59-239CB70C97C7.png"
   },
   "FireTB25": {
     "DisplayName": "Fire, TB25",
@@ -29312,7 +32341,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "C34BDEBC-0F84-11ED-AD45-C420A5A96053",
     "Tags": [
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1C340E0E-14F9-11ED-B7FD-A120A5A96053.png"
   },
   "Firefighter-CharacterMeeple": {
     "DisplayName": "Firefighter - Character Meeple",
@@ -29330,7 +32360,8 @@ STOCK_COMPONENT_INFO = {
       "backdraft",
       "wildfire",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/23F5DCEC-8EBD-11E8-8D59-3B9CB70C97C7.png"
   },
   "FishWoodYellow": {
     "DisplayName": "Fish, Wood, Yellow",
@@ -29361,7 +32392,8 @@ STOCK_COMPONENT_INFO = {
       "trout",
       "bass",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/848AE242-3F43-11E8-9E36-4E531EA37D3B.png"
   },
   "Fist": {
     "DisplayName": "Fist",
@@ -29383,7 +32415,8 @@ STOCK_COMPONENT_INFO = {
       "resistance",
       "protest",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E448E55E-A3E7-11ED-B927-68C568E2BFA4.png"
   },
   "FlagBlack": {
     "DisplayName": "Flag, Black",
@@ -29408,11 +32441,12 @@ STOCK_COMPONENT_INFO = {
       "pride",
       "national",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/43540C76-D5F5-11EB-ADF6-407D8D8D6E47.png"
   },
   "FlagBlue": {
     "DisplayName": "Flag, Blue",
-    "Description": "Single-piece 3d-printed plastic flag with a triangular base.",
+    "Description": "Single-piece 3d-printed plastic flag with a triangular base.\r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "3E26E8DC-27FF-11EE-B0CD-6F0A1D656649",
     "GameCrafterSkuId": "3E4D39BA-27FF-11EE-B0CD-6F0A1D656649",
     "Tags": [
@@ -29433,11 +32467,12 @@ STOCK_COMPONENT_INFO = {
       "pride",
       "national",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/02BD8454-92C6-11EE-843D-B1838277D96F.png"
   },
   "FlagGreen": {
     "DisplayName": "Flag, Green",
-    "Description": "Single-piece 3d-printed plastic flag with a triangular base.",
+    "Description": "Single-piece 3d-printed plastic flag with a triangular base.\r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "3E2775D6-27FF-11EE-B69A-356436F4A9CB",
     "GameCrafterSkuId": "3E3DB512-27FF-11EE-B69A-356436F4A9CB",
     "Tags": [
@@ -29458,7 +32493,8 @@ STOCK_COMPONENT_INFO = {
       "pride",
       "national",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/24AC4968-2801-11EE-B727-2C9E0B83E74D.png"
   },
   "FlagOrange": {
     "DisplayName": "Flag, Orange",
@@ -29483,7 +32519,8 @@ STOCK_COMPONENT_INFO = {
       "pride",
       "national",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/52CD78E0-D5F5-11EB-ADF6-5C7D8D8D6E47.png"
   },
   "FlagPurple": {
     "DisplayName": "Flag, Purple",
@@ -29508,11 +32545,12 @@ STOCK_COMPONENT_INFO = {
       "pride",
       "national",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5C83BDCC-D5F5-11EB-8101-4D9BE882EB54.png"
   },
   "FlagRed": {
     "DisplayName": "Flag, Red",
-    "Description": "Single-piece 3d-printed plastic flag with a triangular base.",
+    "Description": "Single-piece 3d-printed plastic flag with a triangular base.\r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "3E2D3DD6-27FF-11EE-B69A-0D6436F4A9CB",
     "GameCrafterSkuId": "3E3780AC-27FF-11EE-B69A-0D6436F4A9CB",
     "Tags": [
@@ -29533,11 +32571,12 @@ STOCK_COMPONENT_INFO = {
       "pride",
       "national",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/17EC0A06-2801-11EE-B0CD-BC211D656649.png"
   },
   "FlagWhite": {
     "DisplayName": "Flag, White",
-    "Description": "Single-piece 3d-printed plastic flag with a triangular base.",
+    "Description": "Single-piece 3d-printed plastic flag with a triangular base.\r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "3E2E2462-27FF-11EE-B727-09860B83E74D",
     "GameCrafterSkuId": "3E43E25C-27FF-11EE-B727-09860B83E74D",
     "Tags": [
@@ -29558,7 +32597,8 @@ STOCK_COMPONENT_INFO = {
       "pride",
       "national",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2188CAAE-2801-11EE-B0CD-CAA31C656649.png"
   },
   "FlagYellow": {
     "DisplayName": "Flag, Yellow",
@@ -29583,7 +32623,8 @@ STOCK_COMPONENT_INFO = {
       "pride",
       "national",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/005FD1F2-D5F5-11EB-ADF6-CF7C8D8D6E47.png"
   },
   "FlameBaseLogs": {
     "DisplayName": "Flame Base, Logs",
@@ -29601,7 +32642,8 @@ STOCK_COMPONENT_INFO = {
       "woodpile",
       "sticks",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4FA24EDA-7E3B-11E8-987B-2CF0CD1076AC.png"
   },
   "FlameBaseSmoke": {
     "DisplayName": "Flame Base, Smoke",
@@ -29619,7 +32661,8 @@ STOCK_COMPONENT_INFO = {
       "cloud",
       "campfire",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/387E7C90-7E38-11E8-AF83-47F3D1EB5668.png"
   },
   "FlameFree-Standing": {
     "DisplayName": "Flame, Free-Standing",
@@ -29637,7 +32680,8 @@ STOCK_COMPONENT_INFO = {
       "woodpile",
       "sticks. ",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/971A02D4-EBFD-11EB-A508-23B9E7726C43.png"
   },
   "FlatCapBlackBronze": {
     "DisplayName": "Flat Cap, Black, Bronze",
@@ -29661,7 +32705,8 @@ STOCK_COMPONENT_INFO = {
       "newsy",
       "paperboy",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CE233C90-5EAD-11ED-A783-7A6135DE7897.png"
   },
   "FlatCapBlackGreen": {
     "DisplayName": "Flat Cap, Black, Green",
@@ -29685,7 +32730,8 @@ STOCK_COMPONENT_INFO = {
       "newsy",
       "paperboy",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BFA2C410-5EAD-11ED-A783-926035DE7897.png"
   },
   "FlatCapBlackPurple": {
     "DisplayName": "Flat Cap, Black, Purple",
@@ -29709,7 +32755,8 @@ STOCK_COMPONENT_INFO = {
       "newsy",
       "paperboy",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C6A8569E-5EAD-11ED-A783-ED6035DE7897.png"
   },
   "FlatCapBlueBronze": {
     "DisplayName": "Flat Cap, Blue, Bronze",
@@ -29733,7 +32780,8 @@ STOCK_COMPONENT_INFO = {
       "newsy",
       "paperboy",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F708AC44-5EAD-11ED-9BD8-66E7F946917F.png"
   },
   "FlatCapBlueGreen": {
     "DisplayName": "Flat Cap, Blue, Green",
@@ -29757,7 +32805,8 @@ STOCK_COMPONENT_INFO = {
       "newsy",
       "paperboy",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/013B9ED8-5EAE-11ED-A783-CD6335DE7897.png"
   },
   "FlatCapBluePurple": {
     "DisplayName": "Flat Cap, Blue, Purple",
@@ -29781,7 +32830,8 @@ STOCK_COMPONENT_INFO = {
       "newsy",
       "paperboy",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F1284532-5EAD-11ED-A783-366335DE7897.png"
   },
   "FlatCapRedBronze": {
     "DisplayName": "Flat Cap, Red, Bronze",
@@ -29805,7 +32855,8 @@ STOCK_COMPONENT_INFO = {
       "newsy",
       "paperboy",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0AF2331A-5EAE-11ED-9BD8-59E8F946917F.png"
   },
   "FlatCapRedGreen": {
     "DisplayName": "Flat Cap, Red, Green",
@@ -29829,7 +32880,8 @@ STOCK_COMPONENT_INFO = {
       "newsy",
       "paperboy",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/11BA0042-5EAE-11ED-9BD8-98E8F946917F.png"
   },
   "FlatCapRedPurple": {
     "DisplayName": "Flat Cap, Red, Purple",
@@ -29853,7 +32905,8 @@ STOCK_COMPONENT_INFO = {
       "newsy",
       "paperboy",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1897F8B0-5EAE-11ED-9BD8-24E9F946917F.png"
   },
   "FlatCapWhiteBronze": {
     "DisplayName": "Flat Cap, White, Bronze",
@@ -29877,7 +32930,8 @@ STOCK_COMPONENT_INFO = {
       "newsy",
       "paperboy",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D52E9BBA-5EAD-11ED-A783-966135DE7897.png"
   },
   "FlatCapWhiteGreen": {
     "DisplayName": "Flat Cap, White, Green",
@@ -29901,7 +32955,8 @@ STOCK_COMPONENT_INFO = {
       "newsy",
       "paperboy",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DCB3C374-5EAD-11ED-A783-146235DE7897.png"
   },
   "FlatCapWhitePurple": {
     "DisplayName": "Flat Cap, White, Purple",
@@ -29925,7 +32980,8 @@ STOCK_COMPONENT_INFO = {
       "newsy",
       "paperboy",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E7620682-5EAD-11ED-A783-5E6235DE7897.png"
   },
   "FlatCapYellowBronze": {
     "DisplayName": "Flat Cap, Yellow, Bronze",
@@ -29949,7 +33005,8 @@ STOCK_COMPONENT_INFO = {
       "newsy",
       "paperboy",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B628B462-5EAD-11ED-A783-336035DE7897.png"
   },
   "FlatCapYellowGreen": {
     "DisplayName": "Flat Cap, Yellow, Green",
@@ -29973,7 +33030,8 @@ STOCK_COMPONENT_INFO = {
       "newsy",
       "paperboy",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AF81A0E2-5EAD-11ED-9BD8-78E3F946917F.png"
   },
   "FlatCapYellowPurple": {
     "DisplayName": "Flat Cap, Yellow, Purple",
@@ -29997,7 +33055,8 @@ STOCK_COMPONENT_INFO = {
       "newsy",
       "paperboy",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AA3F0D22-5EAD-11ED-A783-2C5F35DE7897.png"
   },
   "FlatStarBlack": {
     "DisplayName": "Flat Star, Black",
@@ -30027,7 +33086,8 @@ STOCK_COMPONENT_INFO = {
       "polygram",
       "pentagram",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/36757ED6-9660-11E8-A320-8A1A8CA49208.png"
   },
   "FlatStarBlue": {
     "DisplayName": "Flat Star, Blue",
@@ -30057,7 +33117,8 @@ STOCK_COMPONENT_INFO = {
       "polygram",
       "pentagram",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3B4E1CA6-9660-11E8-8205-3EA9CC46DD39.png"
   },
   "FlatStarGreen": {
     "DisplayName": "Flat Star, Green",
@@ -30087,7 +33148,8 @@ STOCK_COMPONENT_INFO = {
       "polygram",
       "pentagram",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ABD3DD9E-9660-11E8-8205-EFA9CC46DD39.png"
   },
   "FlatStarOrange": {
     "DisplayName": "Flat Star, Orange",
@@ -30117,7 +33179,8 @@ STOCK_COMPONENT_INFO = {
       "polygram",
       "pentagram",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/41346634-9660-11E8-A320-8D1A8CA49208.png"
   },
   "FlatStarPurple": {
     "DisplayName": "Flat Star, Purple",
@@ -30147,7 +33210,8 @@ STOCK_COMPONENT_INFO = {
       "polygram",
       "pentagram",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/455EA3DC-9660-11E8-8205-44A9CC46DD39.png"
   },
   "FlatStarRed": {
     "DisplayName": "Flat Star, Red",
@@ -30177,7 +33241,8 @@ STOCK_COMPONENT_INFO = {
       "polygram",
       "pentagram",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/491EADAA-9660-11E8-8205-67A9CC46DD39.png"
   },
   "FlatStarWhite": {
     "DisplayName": "Flat Star, White",
@@ -30207,7 +33272,8 @@ STOCK_COMPONENT_INFO = {
       "polygram",
       "pentagram",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4C266416-9660-11E8-8205-67A9CC46DD39.png"
   },
   "FlatStarYellow": {
     "DisplayName": "Flat Star, Yellow",
@@ -30237,7 +33303,8 @@ STOCK_COMPONENT_INFO = {
       "polygram",
       "pentagram",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/500E9666-9660-11E8-8205-6EA9CC46DD39.png"
   },
   "FlatbedTruckWoodBlack": {
     "DisplayName": "Flatbed Truck, Wood, Black",
@@ -30283,7 +33350,8 @@ STOCK_COMPONENT_INFO = {
       "peaceful",
       "bard",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/19512AB2-261D-11EC-9F7F-787E898C9FDE.png"
   },
   "FootBrown": {
     "DisplayName": "Foot, Brown",
@@ -30306,7 +33374,8 @@ STOCK_COMPONENT_INFO = {
       "path",
       "walk",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/847EBBD4-5BBC-11E9-BFB6-36EC7E23BFD3.png"
   },
   "FootmanBlue": {
     "DisplayName": "Footman, Blue",
@@ -30327,7 +33396,8 @@ STOCK_COMPONENT_INFO = {
       "medieval",
       "swordsman",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AED14A9C-621E-11E9-99CF-1D249E5FDBD4.png"
   },
   "FootmanGreen": {
     "DisplayName": "Footman, Green",
@@ -30348,7 +33418,8 @@ STOCK_COMPONENT_INFO = {
       "medieval",
       "swordsman",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/38F902F6-62B4-11E9-9DDC-AD6B9E5FDBD4.png"
   },
   "FootmanRed": {
     "DisplayName": "Footman, Red",
@@ -30369,7 +33440,8 @@ STOCK_COMPONENT_INFO = {
       "medieval",
       "swordsman",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A754B0BA-621E-11E9-8FAC-DA8352E7BC3A.png"
   },
   "FootmanYellow": {
     "DisplayName": "Footman, Yellow",
@@ -30390,7 +33462,8 @@ STOCK_COMPONENT_INFO = {
       "medieval",
       "swordsman",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/55A4CFC6-62B3-11E9-ABDD-5EBD52E7BC3A.png"
   },
   "FourArmedTitanofTerrorw/WeaponSprue": {
     "DisplayName": "Four Armed Titan of Terror w/ Weapon Sprue",
@@ -30416,7 +33489,8 @@ STOCK_COMPONENT_INFO = {
       "goliath",
       "leviathan",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6194DCF8-1279-11E8-906D-4B2A94A6FE1D.png"
   },
   "FragGrenade": {
     "DisplayName": "Frag Grenade",
@@ -30435,7 +33509,8 @@ STOCK_COMPONENT_INFO = {
       "military",
       "munitions",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E6640E02-0302-11E9-9C65-50271589B894.png"
   },
   "FrogRiderBlue": {
     "DisplayName": "Frog Rider, Blue",
@@ -30462,7 +33537,8 @@ STOCK_COMPONENT_INFO = {
       "batrachian",
       "salientian",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BBE7455E-D5F5-11EB-8101-F89BE882EB54.png"
   },
   "FrogRiderBrown": {
     "DisplayName": "Frog Rider, Brown",
@@ -30489,7 +33565,8 @@ STOCK_COMPONENT_INFO = {
       "batrachian",
       "salientian",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D4602402-D5F5-11EB-ADF6-697E8D8D6E47.png"
   },
   "FrogRiderGreen": {
     "DisplayName": "Frog Rider, Green",
@@ -30516,7 +33593,8 @@ STOCK_COMPONENT_INFO = {
       "batrachian",
       "salientian",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A4750550-D5F5-11EB-ADF6-F67D8D8D6E47.png"
   },
   "FrogRiderRed": {
     "DisplayName": "Frog Rider, Red",
@@ -30543,7 +33621,8 @@ STOCK_COMPONENT_INFO = {
       "batrachian",
       "salientian",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7DE3E424-D5F5-11EB-ADF6-9B7D8D8D6E47.png"
   },
   "FrogRiderYellow": {
     "DisplayName": "Frog Rider, Yellow",
@@ -30570,7 +33649,8 @@ STOCK_COMPONENT_INFO = {
       "batrachian",
       "salientian",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/85C69EFC-D5F5-11EB-8101-8A9BE882EB54.png"
   },
   "FrogfolkSpearFantasyTB25": {
     "DisplayName": "Frogfolk, Spear, Fantasy, TB25",
@@ -30579,7 +33659,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "724C7370-11E4-11ED-B645-E658A5A96053",
     "Tags": [
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8EBABD94-14F7-11ED-B552-1F1196221FC2.png"
   },
   "FutureCoin1": {
     "DisplayName": "Future Coin, 1",
@@ -30622,7 +33703,8 @@ STOCK_COMPONENT_INFO = {
       "change",
       "future",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/391949FC-4694-11E5-9587-C4EF7E45DCD9.png"
   },
   "FutureCoin5": {
     "DisplayName": "Future Coin, 5",
@@ -30665,7 +33747,8 @@ STOCK_COMPONENT_INFO = {
       "change",
       "future",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/38EC0DF2-4694-11E5-9BDA-0FB7C8391902.png"
   },
   "FutureCubeOrange": {
     "DisplayName": "Future Cube, Orange",
@@ -30690,8 +33773,33 @@ STOCK_COMPONENT_INFO = {
       "technology",
       "supplies",
       "storage",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3AB58F0A-4694-11E5-B6C7-0FB7C8391902.png"
   },
   "FutureCubePurple": {
     "DisplayName": "Future Cube, Purple",
@@ -30716,8 +33824,33 @@ STOCK_COMPONENT_INFO = {
       "technology",
       "supplies",
       "storage",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3ADDE586-4694-11E5-BDB2-C4EF7E45DCD9.png"
   },
   "FutureCubeRed": {
     "DisplayName": "Future Cube, Red",
@@ -30742,8 +33875,33 @@ STOCK_COMPONENT_INFO = {
       "technology",
       "supplies",
       "storage",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3B81A234-4694-11E5-B4DB-0FB7C8391902.png"
   },
   "FutureCubeYellow": {
     "DisplayName": "Future Cube, Yellow",
@@ -30768,8 +33926,33 @@ STOCK_COMPONENT_INFO = {
       "technology",
       "supplies",
       "storage",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3BA53578-4694-11E5-ABA1-C4EF7E45DCD9.png"
   },
   "FutureDomeBlue": {
     "DisplayName": "Future Dome, Blue",
@@ -30788,7 +33971,8 @@ STOCK_COMPONENT_INFO = {
       "space",
       "technology",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3C6B94C0-4694-11E5-99A9-0FB7C8391902.png"
   },
   "FutureDomeGreen": {
     "DisplayName": "Future Dome, Green",
@@ -30807,7 +33991,8 @@ STOCK_COMPONENT_INFO = {
       "space",
       "technology",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3C6AE2BE-4694-11E5-B718-C4EF7E45DCD9.png"
   },
   "FutureDomeOrange": {
     "DisplayName": "Future Dome, Orange",
@@ -30826,7 +34011,8 @@ STOCK_COMPONENT_INFO = {
       "space",
       "technology",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3D169BB8-4694-11E5-9B4F-0FB7C8391902.png"
   },
   "FutureDomePurple": {
     "DisplayName": "Future Dome, Purple",
@@ -30845,7 +34031,8 @@ STOCK_COMPONENT_INFO = {
       "space",
       "technology",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3D39108A-4694-11E5-B596-C4EF7E45DCD9.png"
   },
   "FutureDomeRed": {
     "DisplayName": "Future Dome, Red",
@@ -30864,7 +34051,8 @@ STOCK_COMPONENT_INFO = {
       "space",
       "technology",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3DC86398-4694-11E5-9BDA-0FB7C8391902.png"
   },
   "FutureDomeYellow": {
     "DisplayName": "Future Dome, Yellow",
@@ -30883,7 +34071,8 @@ STOCK_COMPONENT_INFO = {
       "space",
       "technology",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3DE6DCC4-4694-11E5-B130-C4EF7E45DCD9.png"
   },
   "FuturePersonOrange": {
     "DisplayName": "Future Person, Orange",
@@ -30906,7 +34095,8 @@ STOCK_COMPONENT_INFO = {
       "space",
       "technology",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3F3E44F4-4694-11E5-ABA1-C4EF7E45DCD9.png"
   },
   "FuturePersonPurple": {
     "DisplayName": "Future Person, Purple",
@@ -30929,7 +34119,8 @@ STOCK_COMPONENT_INFO = {
       "space",
       "technology",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3F5BF4C2-4694-11E5-99A9-0FB7C8391902.png"
   },
   "FuturePersonYellow": {
     "DisplayName": "Future Person, Yellow",
@@ -30952,7 +34143,8 @@ STOCK_COMPONENT_INFO = {
       "space",
       "technology",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/406D6A3A-4694-11E5-841F-0FB7C8391902.png"
   },
   "FuturePyramidGreen": {
     "DisplayName": "Future Pyramid, Green",
@@ -30978,7 +34170,8 @@ STOCK_COMPONENT_INFO = {
       "monolith",
       "tomb",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/41412762-4694-11E5-A48E-0FB7C8391902.png"
   },
   "FuturePyramidOrange": {
     "DisplayName": "Future Pyramid, Orange",
@@ -31004,7 +34197,8 @@ STOCK_COMPONENT_INFO = {
       "monolith",
       "tomb",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4145E658-4694-11E5-BDB2-C4EF7E45DCD9.png"
   },
   "FuturePyramidPurple": {
     "DisplayName": "Future Pyramid, Purple",
@@ -31030,7 +34224,8 @@ STOCK_COMPONENT_INFO = {
       "monolith",
       "tomb",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/422931EC-4694-11E5-ABA1-C4EF7E45DCD9.png"
   },
   "FuturePyramidRed": {
     "DisplayName": "Future Pyramid, Red",
@@ -31056,7 +34251,8 @@ STOCK_COMPONENT_INFO = {
       "monolith",
       "tomb",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4207C2FA-4694-11E5-B4DB-0FB7C8391902.png"
   },
   "FuturePyramidYellow": {
     "DisplayName": "Future Pyramid, Yellow",
@@ -31082,7 +34278,8 @@ STOCK_COMPONENT_INFO = {
       "monolith",
       "tomb",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/42D9F78E-4694-11E5-A394-C4EF7E45DCD9.png"
   },
   "FutureSoldierTB15Black": {
     "DisplayName": "Future Soldier, TB15, Black",
@@ -31097,7 +34294,8 @@ STOCK_COMPONENT_INFO = {
       "iron",
       "halo",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/688D1552-904C-11EC-A139-AF252DFC60CF.png"
   },
   "FutureSoldierTB15Blue": {
     "DisplayName": "Future Soldier, TB15, Blue",
@@ -31112,7 +34310,8 @@ STOCK_COMPONENT_INFO = {
       "iron",
       "halo",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6FD2D0E0-904C-11EC-A139-0D262DFC60CF.png"
   },
   "FutureSoldierTB15Green": {
     "DisplayName": "Future Soldier, TB15, Green",
@@ -31127,7 +34326,8 @@ STOCK_COMPONENT_INFO = {
       "iron",
       "halo",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/788B7E76-904C-11EC-854F-BF67865AFFDF.png"
   },
   "FutureSoldierTB15Orange": {
     "DisplayName": "Future Soldier, TB15, Orange",
@@ -31142,7 +34342,8 @@ STOCK_COMPONENT_INFO = {
       "iron",
       "halo",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/857EABC6-904C-11EC-854F-2E68865AFFDF.png"
   },
   "FutureSoldierTB15Purple": {
     "DisplayName": "Future Soldier, TB15, Purple",
@@ -31157,7 +34358,8 @@ STOCK_COMPONENT_INFO = {
       "iron",
       "halo",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8D7E4F8E-904C-11EC-854F-7868865AFFDF.png"
   },
   "FutureSoldierTB15Red": {
     "DisplayName": "Future Soldier, TB15, Red",
@@ -31172,7 +34374,8 @@ STOCK_COMPONENT_INFO = {
       "iron",
       "halo",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/45A878B2-906D-11EC-BB24-19442DFC60CF.png"
   },
   "FutureSoldierTB15White": {
     "DisplayName": "Future Soldier, TB15, White",
@@ -31187,7 +34390,8 @@ STOCK_COMPONENT_INFO = {
       "iron",
       "halo",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/95F374F0-904C-11EC-A139-56272DFC60CF.png"
   },
   "FutureSoldierTB15Yellow": {
     "DisplayName": "Future Soldier, TB15, Yellow",
@@ -31202,7 +34406,8 @@ STOCK_COMPONENT_INFO = {
       "iron",
       "halo",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9CBC2516-904C-11EC-854F-C069865AFFDF.png"
   },
   "FutureTankBlack": {
     "DisplayName": "Future Tank, Black",
@@ -31219,7 +34424,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C096613C-F0F3-11ED-A84A-3A93BD29F483.png"
   },
   "FutureTankBlue": {
     "DisplayName": "Future Tank, Blue",
@@ -31236,7 +34442,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C89770C4-F0F3-11ED-949F-873692187310.png"
   },
   "FutureTankGreen": {
     "DisplayName": "Future Tank, Green",
@@ -31253,7 +34460,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B980A84E-F0F3-11ED-949F-D13592187310.png"
   },
   "FutureTankOrange": {
     "DisplayName": "Future Tank, Orange",
@@ -31270,7 +34478,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BDDD7BEC-F0F3-11ED-949F-1A3692187310.png"
   },
   "FutureTankPurple": {
     "DisplayName": "Future Tank, Purple",
@@ -31287,7 +34496,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CC1ECFA8-F0F3-11ED-949F-A83692187310.png"
   },
   "FutureTankRed": {
     "DisplayName": "Future Tank, Red",
@@ -31304,7 +34514,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress,",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B3132A36-F0F3-11ED-A84A-1193BD29F483.png"
   },
   "FutureTankWhite": {
     "DisplayName": "Future Tank, White",
@@ -31321,7 +34532,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C51884E2-F0F3-11ED-8E8E-80B95781F7B4.png"
   },
   "FutureTankYellow": {
     "DisplayName": "Future Tank, Yellow",
@@ -31338,7 +34550,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B613D672-F0F3-11ED-8E8E-ACB85781F7B4.png"
   },
   "GalleyLongshipGreen": {
     "DisplayName": "Galley Longship, Green",
@@ -31418,7 +34631,8 @@ STOCK_COMPONENT_INFO = {
       "stencil",
       "tool",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D7F0CFCA-E36A-11E8-BF14-21982333FFC9.png"
   },
   "GameMaster'sScreen": {
     "DisplayName": "Game Master's Screen",
@@ -31458,7 +34672,8 @@ STOCK_COMPONENT_INFO = {
       "holster",
       "clamp",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CD63F828-A661-11E0-896A-3A7437D397EC.png"
   },
   "GameStandBlue": {
     "DisplayName": "Game Stand, Blue",
@@ -31477,7 +34692,8 @@ STOCK_COMPONENT_INFO = {
       "holster",
       "clamp",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C8B02874-A661-11E0-896A-3A7437D397EC.png"
   },
   "GameStandGreen": {
     "DisplayName": "Game Stand, Green",
@@ -31496,7 +34712,8 @@ STOCK_COMPONENT_INFO = {
       "holster",
       "clamp",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C3F3D68C-A661-11E0-896A-3A7437D397EC.png"
   },
   "GameStandOrange": {
     "DisplayName": "Game Stand, Orange",
@@ -31515,7 +34732,8 @@ STOCK_COMPONENT_INFO = {
       "holster",
       "clamp",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BF3EB580-A661-11E0-896A-3A7437D397EC.png"
   },
   "GameStandPurple": {
     "DisplayName": "Game Stand, Purple",
@@ -31534,7 +34752,8 @@ STOCK_COMPONENT_INFO = {
       "holster",
       "clamp",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BA645060-A661-11E0-896A-3A7437D397EC.png"
   },
   "GameStandRed": {
     "DisplayName": "Game Stand, Red",
@@ -31553,7 +34772,8 @@ STOCK_COMPONENT_INFO = {
       "holster",
       "clamp",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B5A6BFCC-A661-11E0-896A-3A7437D397EC.png"
   },
   "GameStandWhite": {
     "DisplayName": "Game Stand, White",
@@ -31572,7 +34792,8 @@ STOCK_COMPONENT_INFO = {
       "holster",
       "clamp",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/82C4AA50-A662-11E0-896A-3A7437D397EC.png"
   },
   "GameStandYellow": {
     "DisplayName": "Game Stand, Yellow",
@@ -31591,7 +34812,8 @@ STOCK_COMPONENT_INFO = {
       "holster",
       "clamp",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B0E532CA-A661-11E0-896A-3A7437D397EC.png"
   },
   "GangsterBlue": {
     "DisplayName": "Gangster, Blue",
@@ -31617,7 +34839,8 @@ STOCK_COMPONENT_INFO = {
       "crime",
       "cartel",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/09A1E740-D5F6-11EB-ADF6-F17E8D8D6E47.png"
   },
   "GangsterGreen": {
     "DisplayName": "Gangster, Green",
@@ -31643,7 +34866,8 @@ STOCK_COMPONENT_INFO = {
       "crime",
       "cartel",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01CF87F2-D5F6-11EB-8101-B29CE882EB54.png"
   },
   "GangsterOrange": {
     "DisplayName": "Gangster, Orange",
@@ -31669,7 +34893,8 @@ STOCK_COMPONENT_INFO = {
       "crime",
       "cartel",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F1BFC3B8-D5F5-11EB-ADF6-A27E8D8D6E47.png"
   },
   "GangsterYellow": {
     "DisplayName": "Gangster, Yellow",
@@ -31695,7 +34920,8 @@ STOCK_COMPONENT_INFO = {
       "crime",
       "cartel",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F97C7F56-D5F5-11EB-ADF6-BA7E8D8D6E47.png"
   },
   "Gavel": {
     "DisplayName": "Gavel",
@@ -31706,8 +34932,12 @@ STOCK_COMPONENT_INFO = {
       "judge",
       "lawyer",
       "hammer",
+      "first player",
+      "first player marker",
+      "first player token",
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2C7330E4-6CC8-11EC-8E50-775D102E9259.png"
   },
   "Gear": {
     "DisplayName": "Gear",
@@ -31738,7 +34968,8 @@ STOCK_COMPONENT_INFO = {
       "cycloidal",
       "magnetic ",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D32471EC-0302-11E9-9C65-18271589B894.png"
   },
   "GearBronze": {
     "DisplayName": "Gear, Bronze",
@@ -31772,7 +35003,8 @@ STOCK_COMPONENT_INFO = {
       "currency",
       "steampunk",
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/518A5BDA-14F9-11ED-B552-70A895221FC2.png"
   },
   "GearGold": {
     "DisplayName": "Gear, Gold",
@@ -31806,7 +35038,8 @@ STOCK_COMPONENT_INFO = {
       "currency",
       "steampunk",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5DADD5A4-14F9-11ED-B552-66A995221FC2.png"
   },
   "GearSilver": {
     "DisplayName": "Gear, Silver",
@@ -31840,7 +35073,8 @@ STOCK_COMPONENT_INFO = {
       "currency",
       "steampunk",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/58C75B5A-14F9-11ED-B552-DAA895221FC2.png"
   },
   "Geisha-CharacterMeeple": {
     "DisplayName": "Geisha - Character Meeple",
@@ -31869,7 +35103,8 @@ STOCK_COMPONENT_INFO = {
       "shikomi",
       "hanamachi",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/14B4861E-8EBF-11E8-8D59-FD9EB70C97C7.png"
   },
   "GelatinousCube": {
     "DisplayName": "Gelatinous Cube",
@@ -31883,7 +35118,8 @@ STOCK_COMPONENT_INFO = {
       "slime",
       "cube",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/38302EB4-BA84-11EC-9C35-DCCF4D9BCBEA.png"
   },
   "GemBlack": {
     "DisplayName": "Gem, Black",
@@ -31945,7 +35181,8 @@ STOCK_COMPONENT_INFO = {
       "refractive",
       "cymophane",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AC1198BA-A661-11E0-896A-3A7437D397EC.png"
   },
   "GemBlue": {
     "DisplayName": "Gem, Blue",
@@ -32069,7 +35306,8 @@ STOCK_COMPONENT_INFO = {
       "refractive",
       "cymophane",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6F7CFA1C-AD2E-11E8-95DF-A2CABCC16479.png"
   },
   "GemGreen": {
     "DisplayName": "Gem, Green",
@@ -32131,7 +35369,8 @@ STOCK_COMPONENT_INFO = {
       "refractive",
       "cymophane",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A2758ECE-A661-11E0-896A-3A7437D397EC.png"
   },
   "GemLightGreen": {
     "DisplayName": "Gem, Light Green",
@@ -32193,7 +35432,8 @@ STOCK_COMPONENT_INFO = {
       "refractive",
       "cymophane",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3AE49922-8C36-11E8-9D2C-6AF9785DA8EE.png"
   },
   "GemOrange": {
     "DisplayName": "Gem, Orange",
@@ -32317,7 +35557,8 @@ STOCK_COMPONENT_INFO = {
       "refractive",
       "cymophane",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/98F45B0A-A661-11E0-896A-3A7437D397EC.png"
   },
   "GemRed": {
     "DisplayName": "Gem, Red",
@@ -32441,7 +35682,8 @@ STOCK_COMPONENT_INFO = {
       "refractive",
       "cymophane",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8F5A91FE-A661-11E0-896A-3A7437D397EC.png"
   },
   "GemYellow": {
     "DisplayName": "Gem, Yellow",
@@ -32503,7 +35745,8 @@ STOCK_COMPONENT_INFO = {
       "refractive",
       "cymophane",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A5B464EA-AF47-11EA-B69A-0B4EC1E666ED.png"
   },
   "GentlemanGold": {
     "DisplayName": "Gentleman, Gold",
@@ -32534,7 +35777,8 @@ STOCK_COMPONENT_INFO = {
       "elite",
       "socialite",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7BD4BFBE-33AE-11E9-8FEB-2D1016796776.png"
   },
   "GhostBunnyFantasyTB25": {
     "DisplayName": "Ghost Bunny, Fantasy, TB25",
@@ -32544,7 +35788,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "bnuuy",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E72EE8B6-14F6-11ED-B7FD-F183A5A96053.png"
   },
   "GhostIVHooded": {
     "DisplayName": "Ghost IV Hooded",
@@ -32589,7 +35834,8 @@ STOCK_COMPONENT_INFO = {
       "demon",
       "ghoul",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EFAD5AB6-101B-11E8-B55A-7EE393A6FE1D.png"
   },
   "GhostFantasyTB25": {
     "DisplayName": "Ghost, Fantasy, TB25",
@@ -32601,7 +35847,8 @@ STOCK_COMPONENT_INFO = {
       "supernatural",
       "ectoplasm",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FA529BA6-D205-11EC-A9E7-79D4D758682F.png"
   },
   "GhostWhite": {
     "DisplayName": "Ghost, White",
@@ -32635,7 +35882,8 @@ STOCK_COMPONENT_INFO = {
       "demon",
       "ghoul",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B319AB2-33AE-11E9-8BE3-240C3BF41BB0.png"
   },
   "Ghoul2FantasyTB25": {
     "DisplayName": "Ghoul 2, Fantasy, TB25",
@@ -32653,7 +35901,8 @@ STOCK_COMPONENT_INFO = {
       "sewer ",
       "halloween",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C86D55EE-3102-11EC-9914-DC6FBE85CC60.png"
   },
   "GhoulFantasyTB25": {
     "DisplayName": "Ghoul, Fantasy, TB25",
@@ -32671,7 +35920,8 @@ STOCK_COMPONENT_INFO = {
       "sewer ",
       "halloween",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/59D1000E-3102-11EC-9914-9C6EBE85CC60.png"
   },
   "GiantRat1FantasyTB25": {
     "DisplayName": "Giant Rat 1, Fantasy, TB25",
@@ -32680,7 +35930,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "12A0646E-846C-11EC-9C47-F0058E9C19B6",
     "Tags": [
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A7156B0-8B8C-11EC-8A6C-5718EFDF9D7E.png"
   },
   "GiantRat2FantasyTB25": {
     "DisplayName": "Giant Rat 2, Fantasy, TB25",
@@ -32689,7 +35940,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "357D7EB8-846C-11EC-98AD-D8BDC90CCBA6",
     "Tags": [
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4E3AC542-8B8C-11EC-BD42-649501D4988D.png"
   },
   "GiftCertificate$25": {
     "DisplayName": "Gift Certificate $25",
@@ -32702,7 +35954,8 @@ STOCK_COMPONENT_INFO = {
       "credit",
       "prepaid",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A517D210-61DA-11E1-9233-F5A2BD782CDC.png"
   },
   "GiftCertificate$5": {
     "DisplayName": "Gift Certificate $5",
@@ -32715,7 +35968,8 @@ STOCK_COMPONENT_INFO = {
       "credit",
       "prepaid",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A45523DC-61DA-11E1-A855-F5A2BD782CDC.png"
   },
   "GlueDotsSheet": {
     "DisplayName": "Glue Dots Sheet",
@@ -32724,7 +35978,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "FBA77A1E-E1BC-11EC-806E-4F4BD456B98B",
     "Tags": [
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E5E60036-E1BE-11EC-806E-CA63D456B98B.png"
   },
   "GnollArcherFantasyTB25": {
     "DisplayName": "Gnoll Archer, Fantasy, TB25",
@@ -32739,7 +35994,8 @@ STOCK_COMPONENT_INFO = {
       "arrow",
       "quiver",
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DB15DC46-9F0E-11EC-99AF-7B9766E85691.png"
   },
   "GnollAxeFantasyTB25": {
     "DisplayName": "Gnoll, Axe, Fantasy, TB25",
@@ -32750,7 +36006,8 @@ STOCK_COMPONENT_INFO = {
       "hyena",
       "battleaxe",
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/741BC306-B48B-11EC-96F1-ABFB565FC6E3.png"
   },
   "GnollFlailFantasyTB25": {
     "DisplayName": "Gnoll, Flail, Fantasy, TB25",
@@ -32759,7 +36016,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "41F8836C-2AF8-11ED-B464-CAB279D8BDFD",
     "Tags": [
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/90AC1546-2E18-11ED-A0A6-30145FE382A3.png"
   },
   "GnomeBlue": {
     "DisplayName": "Gnome, Blue",
@@ -32785,7 +36043,8 @@ STOCK_COMPONENT_INFO = {
       "fantasy",
       "earthmen",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/69990D90-9C84-11E7-A769-90F471BAD30D.png"
   },
   "GnomeCrossbowFantasyTB25": {
     "DisplayName": "Gnome, Crossbow, Fantasy, TB25",
@@ -32794,7 +36053,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "81AC0F92-2AF8-11ED-B464-22B679D8BDFD",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9E971368-2E18-11ED-91FF-061BD14F796C.png"
   },
   "GnomeSwordFantasyTB25": {
     "DisplayName": "Gnome, Sword, Fantasy, TB25",
@@ -32803,7 +36063,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "B832E63A-2AF8-11ED-BFDD-100C5FE382A3",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AAC1D3D0-2E18-11ED-A0A6-3E155FE382A3.png"
   },
   "GnomeTB15Black": {
     "DisplayName": "Gnome, TB15, Black",
@@ -32817,7 +36078,8 @@ STOCK_COMPONENT_INFO = {
       "norwegian",
       "garden,",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0348F932-401D-11ED-8172-308999F4B99C.png"
   },
   "GnomeTB15Blue": {
     "DisplayName": "Gnome, TB15, Blue",
@@ -32831,7 +36093,8 @@ STOCK_COMPONENT_INFO = {
       "norwegian",
       "garden,",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0613BBF2-401D-11ED-ABE7-2C37B4CA1F86.png"
   },
   "GnomeTB15Green": {
     "DisplayName": "Gnome, TB15, Green",
@@ -32845,7 +36108,8 @@ STOCK_COMPONENT_INFO = {
       "norwegian",
       "garden,",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/09E63778-401D-11ED-ABE7-6737B4CA1F86.png"
   },
   "GnomeTB15Orange": {
     "DisplayName": "Gnome, TB15, Orange",
@@ -32859,7 +36123,8 @@ STOCK_COMPONENT_INFO = {
       "norwegian",
       "garden,",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0C9A46F8-401D-11ED-ABE7-8937B4CA1F86.png"
   },
   "GnomeTB15Purple": {
     "DisplayName": "Gnome, TB15, Purple",
@@ -32873,7 +36138,8 @@ STOCK_COMPONENT_INFO = {
       "norwegian",
       "garden,",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0EDE5C9C-401D-11ED-ABE7-7F37B4CA1F86.png"
   },
   "GnomeTB15Red": {
     "DisplayName": "Gnome, TB15, Red",
@@ -32887,7 +36153,8 @@ STOCK_COMPONENT_INFO = {
       "norwegian",
       "garden,",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1187C640-401D-11ED-ABE7-CB37B4CA1F86.png"
   },
   "GnomeTB15White": {
     "DisplayName": "Gnome, TB15, White",
@@ -32901,7 +36168,8 @@ STOCK_COMPONENT_INFO = {
       "norwegian",
       "garden,",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/14362CF6-401D-11ED-ABE7-CC37B4CA1F86.png"
   },
   "GnomeTB15Yellow": {
     "DisplayName": "Gnome, TB15, Yellow",
@@ -32915,7 +36183,8 @@ STOCK_COMPONENT_INFO = {
       "norwegian",
       "garden,",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/16F13D3C-401D-11ED-8172-318A99F4B99C.png"
   },
   "GnometteHammerFantasyTB25": {
     "DisplayName": "Gnomette, Hammer, Fantasy, TB25",
@@ -32924,7 +36193,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "D7C3BE20-2AF8-11ED-B464-EFB979D8BDFD",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BB520864-2E18-11ED-91FF-F21BD14F796C.png"
   },
   "GnometteMageFantasyTB25": {
     "DisplayName": "Gnomette, Mage, Fantasy, TB25",
@@ -32933,7 +36203,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "EC80B502-2AF8-11ED-B464-6BBB79D8BDFD",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C50E513C-2E18-11ED-91FF-9A1CD14F796C.png"
   },
   "GoatAcrylic": {
     "DisplayName": "Goat, Acrylic",
@@ -32943,7 +36214,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "g",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E5C24CC2-F6FF-11EB-9EF2-633922502F64.png"
   },
   "GoatRandom": {
     "DisplayName": "Goat, Random",
@@ -32967,7 +36239,8 @@ STOCK_COMPONENT_INFO = {
       "farm",
       "animal",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7B3516E4-33EE-11EA-836F-7326B829B2FA.png"
   },
   "GoatmanChampion": {
     "DisplayName": "Goatman Champion",
@@ -32993,7 +36266,8 @@ STOCK_COMPONENT_INFO = {
       "faun. satyr",
       "pan",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/02DE45BA-12D2-11E8-B66E-2BF293A6FE1D.png"
   },
   "GoatmanwithBow": {
     "DisplayName": "Goatman with Bow",
@@ -33020,7 +36294,8 @@ STOCK_COMPONENT_INFO = {
       "pan",
       "archer",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/74E05696-1005-11E8-B62C-F65094A6FE1D.png"
   },
   "GoatmanWithSpear&Shield": {
     "DisplayName": "Goatman With Spear & Shield",
@@ -33046,7 +36321,8 @@ STOCK_COMPONENT_INFO = {
       "faun. satyr",
       "pan",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/212057EC-4560-11E7-ABA2-494390E4BA5A.png"
   },
   "GoatmanwithSwordandShield": {
     "DisplayName": "Goatman with Sword and Shield",
@@ -33072,7 +36348,8 @@ STOCK_COMPONENT_INFO = {
       "faun. satyr",
       "pan",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F42F80D8-0CF5-11E8-BD5F-494C94A6FE1D.png"
   },
   "GoblinArcherDrawBaldFantasyTB25": {
     "DisplayName": "Goblin Archer Draw Bald, Fantasy, TB25",
@@ -33087,7 +36364,8 @@ STOCK_COMPONENT_INFO = {
       "shooter",
       "longbow",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3DB7DB8C-5217-11EC-B45F-31CE837854C6.png"
   },
   "GoblinArcherDrawFantasyTB25": {
     "DisplayName": "Goblin Archer, Draw, Fantasy, TB25",
@@ -33101,7 +36379,8 @@ STOCK_COMPONENT_INFO = {
       "ranger",
       "marksman",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B2E0210-6F17-11EC-9B55-53297DF5F7CD.png"
   },
   "GoblinChieftainFantasyTB25": {
     "DisplayName": "Goblin Chieftain, Fantasy, TB25",
@@ -33119,7 +36398,8 @@ STOCK_COMPONENT_INFO = {
       "warlord",
       "fighter",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F803CFBC-57A0-11EC-A747-5654E73F1098.png"
   },
   "GoblinSling1FantasyTB25": {
     "DisplayName": "Goblin Sling 1, Fantasy, TB25",
@@ -33132,7 +36412,8 @@ STOCK_COMPONENT_INFO = {
       "marksman",
       "stone,",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F14AD2AA-6F16-11EC-917D-63935FE54652.png"
   },
   "GoblinWarlockFantasyTB25Yellow": {
     "DisplayName": "Goblin Warlock, Fantasy, TB25, Yellow",
@@ -33146,7 +36427,8 @@ STOCK_COMPONENT_INFO = {
       "magician",
       "mage",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D86AB390-6F16-11EC-917D-1B925FE54652.png"
   },
   "GoblinDefensiveFantasyTB25": {
     "DisplayName": "Goblin, Defensive, Fantasy, TB25",
@@ -33159,7 +36441,8 @@ STOCK_COMPONENT_INFO = {
       "sword",
       "shield",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AC0AF46C-E38E-11EC-A245-6EBDE1809829.png"
   },
   "GoblinJesterFantasyTB25": {
     "DisplayName": "Goblin, Jester, Fantasy, TB25",
@@ -33169,7 +36452,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "clown",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/97995F36-FE6F-11EC-8A01-7E3FD5F05A14.png"
   },
   "GoblinOffensiveFantasyTB25": {
     "DisplayName": "Goblin, Offensive, Fantasy, TB25",
@@ -33178,7 +36462,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "E2F722CE-F645-11EC-9EBA-9FFB7705D582",
     "Tags": [
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/287CB28E-02C4-11ED-8182-162CD5F05A14.png"
   },
   "Gorilla": {
     "DisplayName": "Gorilla",
@@ -33201,7 +36486,8 @@ STOCK_COMPONENT_INFO = {
       "baboon",
       "gibbon",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/81920B06-33AD-11E9-931F-150E16796776.png"
   },
   "GrabBag": {
     "DisplayName": "Grab Bag",
@@ -33221,7 +36507,8 @@ STOCK_COMPONENT_INFO = {
       "hodgepodge",
       "medley",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E237AF9E-0F09-11E2-8584-134B1D5FFC75.png"
   },
   "GrabBagPremium": {
     "DisplayName": "Grab Bag, Premium",
@@ -33241,7 +36528,8 @@ STOCK_COMPONENT_INFO = {
       "hodgepodge",
       "medley",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/450E5702-CBF1-11E4-878A-675C81F9DBEC.png"
   },
   "GrainSackWood": {
     "DisplayName": "Grain Sack, Wood",
@@ -33266,7 +36554,8 @@ STOCK_COMPONENT_INFO = {
       "quinoa",
       "pulses",
       "tan"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BD7BBF72-524D-11E9-A156-C8DCBE9D83F6.png"
   },
   "GrickFantasyTB25": {
     "DisplayName": "Grick, Fantasy, TB25",
@@ -33286,7 +36575,8 @@ STOCK_COMPONENT_INFO = {
       "sewer ",
       "halloween",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/35A984F6-304B-11EC-AFBD-DE0C58AF5381.png"
   },
   "GrimReaperFantasyTB25": {
     "DisplayName": "Grim Reaper, Fantasy, TB25",
@@ -33306,8 +36596,10 @@ STOCK_COMPONENT_INFO = {
       "rpg",
       "sewer ",
       "halloween",
+      "halloween",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/88EBCE28-3049-11EC-AFBD-840958AF5381.png"
   },
   "GrizzlyBear": {
     "DisplayName": "Grizzly Bear",
@@ -33325,7 +36617,8 @@ STOCK_COMPONENT_INFO = {
       "yogi",
       "silvertip",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/90594C04-54C2-11E9-92A0-580885BD98AD.png"
   },
   "Guard1SpaceTB25": {
     "DisplayName": "Guard 1, Space, TB25",
@@ -33334,7 +36627,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "63A5738A-992A-11ED-B8BB-DAFD2EC265EA",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F2609C84-9E94-11ED-88B5-91AFCB83BB28.png"
   },
   "Guard2SpaceTB25": {
     "DisplayName": "Guard 2, Space, TB25",
@@ -33343,7 +36637,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "A2171A42-992A-11ED-B8BB-D3002FC265EA",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FE2F4D6C-9E94-11ED-8B48-6C532A49FC29.png"
   },
   "GuardRobotBlack": {
     "DisplayName": "Guard Robot, Black",
@@ -33365,7 +36660,8 @@ STOCK_COMPONENT_INFO = {
       "ai",
       "mechanical",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3051E912-D5F6-11EB-8101-FE9CE882EB54.png"
   },
   "GuardRobotGreen": {
     "DisplayName": "Guard Robot, Green",
@@ -33387,7 +36683,8 @@ STOCK_COMPONENT_INFO = {
       "ai",
       "mechanical",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/642AA56C-D5F6-11EB-ADF6-9A7F8D8D6E47.png"
   },
   "GuardRobotRed": {
     "DisplayName": "Guard Robot, Red",
@@ -33409,7 +36706,8 @@ STOCK_COMPONENT_INFO = {
       "ai",
       "mechanical",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/50BC06EC-D5F6-11EB-ADF6-8D7F8D8D6E47.png"
   },
   "GuardRobotYellow": {
     "DisplayName": "Guard Robot, Yellow",
@@ -33431,7 +36729,8 @@ STOCK_COMPONENT_INFO = {
       "ai",
       "mechanical",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/38772062-D5F6-11EB-8101-159DE882EB54.png"
   },
   "GuardHeavySpaceTB25": {
     "DisplayName": "Guard, Heavy, Space, TB25",
@@ -33440,7 +36739,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "F4507DAE-9929-11ED-B8BB-2BF82EC265EA",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/03D28478-9E95-11ED-88B5-07B1CB83BB28.png"
   },
   "Gunpod": {
     "DisplayName": "Gunpod",
@@ -33455,7 +36755,8 @@ STOCK_COMPONENT_INFO = {
       "barbette",
       "cupola",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2A639184-EA9F-11E4-BC83-CB71C57E091C.png"
   },
   "HagFantasyTB25": {
     "DisplayName": "Hag, Fantasy, TB25",
@@ -33473,7 +36774,8 @@ STOCK_COMPONENT_INFO = {
       "sorceress",
       "enchantress",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1BA4416E-261D-11EC-9F7F-8B7E898C9FDE.png"
   },
   "Halfling-CharacterMeeple": {
     "DisplayName": "Halfling - Character Meeple",
@@ -33489,7 +36791,8 @@ STOCK_COMPONENT_INFO = {
       "hobbit",
       "hauflin",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/317220BA-8EBD-11E8-AE40-15EC785DA8EE.png"
   },
   "HalflingPirateFantasyTB25": {
     "DisplayName": "Halfling Pirate, Fantasy, TB25",
@@ -33505,7 +36808,8 @@ STOCK_COMPONENT_INFO = {
       "swashbuckling",
       "hobbit",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FD2104D2-B48A-11EC-96F1-A9F5565FC6E3.png"
   },
   "HalflingSpaceTB25": {
     "DisplayName": "Halfling, Space, TB25",
@@ -33514,7 +36818,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "EAF27766-992A-11ED-B8BB-0A042FC265EA",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/140FAA50-9E95-11ED-8B48-3A542A49FC29.png"
   },
   "HalmaBlack": {
     "DisplayName": "Halma, Black",
@@ -33528,7 +36833,8 @@ STOCK_COMPONENT_INFO = {
       "piece",
       "marker",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/24B91E7A-2AC2-11E1-82D0-B470E060718B.png"
   },
   "HalmaBlue": {
     "DisplayName": "Halma, Blue",
@@ -33542,7 +36848,8 @@ STOCK_COMPONENT_INFO = {
       "piece",
       "marker",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2B52CB64-2AC2-11E1-8A47-B470E060718B.png"
   },
   "HalmaGreen": {
     "DisplayName": "Halma, Green",
@@ -33556,7 +36863,8 @@ STOCK_COMPONENT_INFO = {
       "piece",
       "marker",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/327B6464-2AC2-11E1-AB7E-B470E060718B.png"
   },
   "HalmaLargeNatural": {
     "DisplayName": "Halma, Large, Natural",
@@ -33572,7 +36880,8 @@ STOCK_COMPONENT_INFO = {
       "mover",
       "marker",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D3D95A1C-D826-11EA-8C64-F2DB521ADEB3.png"
   },
   "HalmaOrange": {
     "DisplayName": "Halma, Orange",
@@ -33586,7 +36895,8 @@ STOCK_COMPONENT_INFO = {
       "piece",
       "marker",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3956DE1C-2AC2-11E1-8A47-B470E060718B.png"
   },
   "HalmaPurple": {
     "DisplayName": "Halma, Purple",
@@ -33600,7 +36910,8 @@ STOCK_COMPONENT_INFO = {
       "piece",
       "marker",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/404DEA76-2AC2-11E1-AB7E-B470E060718B.png"
   },
   "HalmaRed": {
     "DisplayName": "Halma, Red",
@@ -33614,7 +36925,8 @@ STOCK_COMPONENT_INFO = {
       "piece",
       "marker",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/472AB04A-2AC2-11E1-8A47-B470E060718B.png"
   },
   "HalmaStackableBlue": {
     "DisplayName": "Halma, Stackable, Blue",
@@ -33628,7 +36940,8 @@ STOCK_COMPONENT_INFO = {
       "piece",
       "marker",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/47DFCD2A-9CE0-11E9-910A-2797FD20C3D1.png"
   },
   "HalmaStackableGreen": {
     "DisplayName": "Halma, Stackable, Green",
@@ -33642,7 +36955,8 @@ STOCK_COMPONENT_INFO = {
       "piece",
       "marker",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5117D7CA-9CE0-11E9-910A-2897FD20C3D1.png"
   },
   "HalmaStackableRed": {
     "DisplayName": "Halma, Stackable, Red",
@@ -33656,7 +36970,8 @@ STOCK_COMPONENT_INFO = {
       "piece",
       "marker",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/14B45294-9CE1-11E9-910A-3B98FD20C3D1.png"
   },
   "HalmaStackableWhite": {
     "DisplayName": "Halma, Stackable, White",
@@ -33670,7 +36985,8 @@ STOCK_COMPONENT_INFO = {
       "piece",
       "marker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/590ACF96-9CE0-11E9-910A-3697FD20C3D1.png"
   },
   "HalmaStackableYellow": {
     "DisplayName": "Halma, Stackable, Yellow",
@@ -33684,7 +37000,8 @@ STOCK_COMPONENT_INFO = {
       "piece",
       "marker",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2129430E-9CE1-11E9-9FD7-2364B1FF4D9C.png"
   },
   "HalmaWhite": {
     "DisplayName": "Halma, White",
@@ -33698,7 +37015,8 @@ STOCK_COMPONENT_INFO = {
       "piece",
       "marker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4DD5284E-2AC2-11E1-AB7E-B470E060718B.png"
   },
   "HalmaYellow": {
     "DisplayName": "Halma, Yellow",
@@ -33712,7 +37030,8 @@ STOCK_COMPONENT_INFO = {
       "piece",
       "marker",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/54DDA620-2AC2-11E1-82D0-B470E060718B.png"
   },
   "HandmadeBrick": {
     "DisplayName": "Handmade Brick",
@@ -33735,7 +37054,8 @@ STOCK_COMPONENT_INFO = {
       "wall",
       "barrier",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FCF49604-2A83-11E7-9260-AEC26F50B980.png"
   },
   "HandmadeCampfire": {
     "DisplayName": "Handmade Campfire",
@@ -33753,7 +37073,8 @@ STOCK_COMPONENT_INFO = {
       "woodpile",
       "sticks",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F4FC5D00-29F8-11E7-B991-565397AD74D5.png"
   },
   "HandmadeCarrot": {
     "DisplayName": "Handmade Carrot",
@@ -33781,7 +37102,8 @@ STOCK_COMPONENT_INFO = {
       "salad",
       "garden",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F536B874-29F8-11E7-B3FC-6AB86F50B980.png"
   },
   "HandmadeCoal": {
     "DisplayName": "Handmade Coal",
@@ -33805,7 +37127,8 @@ STOCK_COMPONENT_INFO = {
       "anthracite",
       "graphite",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5FC008E-29F8-11E7-B3FC-5CB86F50B980.png"
   },
   "HandmadeCorn": {
     "DisplayName": "Handmade Corn",
@@ -33825,7 +37148,8 @@ STOCK_COMPONENT_INFO = {
       "cultivation",
       "cultivate",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F687D2E4-29F8-11E7-B3FC-79B86F50B980.png"
   },
   "HandmadeFence": {
     "DisplayName": "Handmade Fence",
@@ -33843,7 +37167,8 @@ STOCK_COMPONENT_INFO = {
       "palisade",
       "bulwark",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F6CDAF80-29F8-11E7-B991-5E5397AD74D5.png"
   },
   "HandmadeFish": {
     "DisplayName": "Handmade Fish",
@@ -33874,7 +37199,8 @@ STOCK_COMPONENT_INFO = {
       "trout",
       "bass",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F7CF4B5A-29F8-11E7-B3FC-7DB86F50B980.png"
   },
   "HandmadeGrape": {
     "DisplayName": "Handmade Grape",
@@ -33891,7 +37217,8 @@ STOCK_COMPONENT_INFO = {
       "food",
       "nutrition",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F76833E8-29F8-11E7-B991-4F5397AD74D5.png"
   },
   "HandmadeOilDrum": {
     "DisplayName": "Handmade Oil Drum",
@@ -33910,7 +37237,8 @@ STOCK_COMPONENT_INFO = {
       "petroleum",
       "crude",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F48AA764-29F8-11E7-B3FC-74B86F50B980.png"
   },
   "HandmadePumpkin": {
     "DisplayName": "Handmade Pumpkin",
@@ -33927,7 +37255,8 @@ STOCK_COMPONENT_INFO = {
       "gourd",
       "pepo",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F8FB74E0-29F8-11E7-B991-675397AD74D5.png"
   },
   "HandmadeReed": {
     "DisplayName": "Handmade Reed",
@@ -33944,7 +37273,8 @@ STOCK_COMPONENT_INFO = {
       "typha",
       "bog",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F612A186-29F8-11E7-B991-5C5397AD74D5.png"
   },
   "HandmadeSheep": {
     "DisplayName": "Handmade Sheep",
@@ -33965,7 +37295,8 @@ STOCK_COMPONENT_INFO = {
       "livestock",
       "herd",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F941B608-29F8-11E7-B3FC-74B86F50B980.png"
   },
   "HandmadeSkull": {
     "DisplayName": "Handmade Skull",
@@ -33994,7 +37325,8 @@ STOCK_COMPONENT_INFO = {
       "macabre",
       "morbid",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FA003EAC-29F8-11E7-B3FC-6AB86F50B980.png"
   },
   "HandmadeSteak": {
     "DisplayName": "Handmade Steak",
@@ -34046,7 +37378,8 @@ STOCK_COMPONENT_INFO = {
       "garbage",
       "bin",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FAA51BE8-29F8-11E7-B3FC-89B86F50B980.png"
   },
   "HandmadeTrough": {
     "DisplayName": "Handmade Trough",
@@ -34059,7 +37392,8 @@ STOCK_COMPONENT_INFO = {
       "livestock",
       "feeder",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FA94EBB0-29F8-11E7-B991-585397AD74D5.png"
   },
   "HandmadeUraniumRod": {
     "DisplayName": "Handmade Uranium Rod",
@@ -34082,7 +37416,8 @@ STOCK_COMPONENT_INFO = {
       "reactor",
       "hazmat",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F7FEEDEC-29F8-11E7-B991-4D5397AD74D5.png"
   },
   "HandmadeWheat": {
     "DisplayName": "Handmade Wheat",
@@ -34107,7 +37442,8 @@ STOCK_COMPONENT_INFO = {
       "quinoa",
       "pulses",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FB616686-29F8-11E7-B991-785397AD74D5.png"
   },
   "HangTabsTriangle(packof20)": {
     "DisplayName": "Hang Tabs, Triangle (pack of 20)",
@@ -34120,7 +37456,8 @@ STOCK_COMPONENT_INFO = {
       "adhesive",
       "tags",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/46C04F52-F91B-11EB-9A85-995622502F64.png"
   },
   "HarborBlack": {
     "DisplayName": "Harbor, Black",
@@ -34137,7 +37474,8 @@ STOCK_COMPONENT_INFO = {
       "trade",
       "pirates",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/91083012-D8D4-11ED-9198-022BE9981595.png"
   },
   "HarborBlue": {
     "DisplayName": "Harbor, Blue",
@@ -34154,7 +37492,8 @@ STOCK_COMPONENT_INFO = {
       "trade",
       "pirates",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/31045732-D8D3-11ED-804E-CD3E43DDF103.png"
   },
   "HarborGreen": {
     "DisplayName": "Harbor, Green",
@@ -34171,7 +37510,8 @@ STOCK_COMPONENT_INFO = {
       "trade",
       "pirates",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4030FD0A-D8D3-11ED-804E-BAC042DDF103.png"
   },
   "HarborOrange": {
     "DisplayName": "Harbor, Orange",
@@ -34188,7 +37528,8 @@ STOCK_COMPONENT_INFO = {
       "trade",
       "pirates",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4820BD3E-D8D3-11ED-9198-571BE9981595.png"
   },
   "HarborPurple": {
     "DisplayName": "Harbor, Purple",
@@ -34205,7 +37546,8 @@ STOCK_COMPONENT_INFO = {
       "trade",
       "pirates",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5007EBD0-D8D3-11ED-9198-391CE9981595.png"
   },
   "HarborRed": {
     "DisplayName": "Harbor, Red",
@@ -34222,7 +37564,8 @@ STOCK_COMPONENT_INFO = {
       "trade",
       "pirates",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/587E8CA6-D8D3-11ED-804E-D6C142DDF103.png"
   },
   "HarborWhite": {
     "DisplayName": "Harbor, White",
@@ -34239,7 +37582,8 @@ STOCK_COMPONENT_INFO = {
       "trade",
       "pirates",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/888B8484-D8D4-11ED-ADE6-6A2DFFDE5649.png"
   },
   "HarborYellow": {
     "DisplayName": "Harbor, Yellow",
@@ -34256,7 +37600,8 @@ STOCK_COMPONENT_INFO = {
       "trade",
       "pirates",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/38C96232-D8D3-11ED-804E-28C042DDF103.png"
   },
   "Harpy2FantasyTB25": {
     "DisplayName": "Harpy 2, Fantasy, TB25",
@@ -34268,7 +37613,8 @@ STOCK_COMPONENT_INFO = {
       "beast",
       "monster",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/55662AE6-8B8C-11EC-8A6C-1A19EFDF9D7E.png"
   },
   "HarpyFantasyTB25": {
     "DisplayName": "Harpy, Fantasy, TB25",
@@ -34280,7 +37626,8 @@ STOCK_COMPONENT_INFO = {
       "beast",
       "monster",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/586D11E6-8B8C-11EC-8A6C-2119EFDF9D7E.png"
   },
   "HatmanGreen": {
     "DisplayName": "Hatman Green",
@@ -34304,7 +37651,8 @@ STOCK_COMPONENT_INFO = {
       "fedora",
       "boater,",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A4A373C0-3F55-11E8-9E36-D5781EA37D3B.png"
   },
   "Hazmat-CharacterMeeple": {
     "DisplayName": "Hazmat - Character Meeple",
@@ -34337,7 +37685,8 @@ STOCK_COMPONENT_INFO = {
       "reactor",
       "biohazard",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3AF3253A-8EBD-11E8-AE40-18EC785DA8EE.png"
   },
   "HeartOrganRed": {
     "DisplayName": "Heart Organ, Red",
@@ -34384,7 +37733,8 @@ STOCK_COMPONENT_INFO = {
       "hp",
       "life",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/704C8620-0D1E-11E8-83BB-E81794A6FE1D.png"
   },
   "HeartFlatBlue": {
     "DisplayName": "Heart, Flat, Blue",
@@ -34410,7 +37760,8 @@ STOCK_COMPONENT_INFO = {
       "hp",
       "life",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/85CA2534-0D1E-11E8-A748-BF2594A6FE1D.png"
   },
   "HeartFlatGreen": {
     "DisplayName": "Heart, Flat, Green",
@@ -34436,7 +37787,8 @@ STOCK_COMPONENT_INFO = {
       "hp",
       "life",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BC0670DA-0D1E-11E8-83BB-611894A6FE1D.png"
   },
   "HeartFlatOrange": {
     "DisplayName": "Heart, Flat, Orange",
@@ -34462,7 +37814,8 @@ STOCK_COMPONENT_INFO = {
       "hp",
       "life",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4128E16C-0D1F-11E8-A748-472794A6FE1D.png"
   },
   "HeartFlatPurple": {
     "DisplayName": "Heart, Flat, Purple",
@@ -34488,7 +37841,8 @@ STOCK_COMPONENT_INFO = {
       "hp",
       "life",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1F95B214-0D1F-11E8-A748-F42694A6FE1D.png"
   },
   "HeartFlatRed": {
     "DisplayName": "Heart, Flat, Red",
@@ -34514,7 +37868,8 @@ STOCK_COMPONENT_INFO = {
       "hp",
       "life",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B6126BC-0D1F-11E8-83BB-791994A6FE1D.png"
   },
   "HeartFlatWhite": {
     "DisplayName": "Heart, Flat, White",
@@ -34540,7 +37895,8 @@ STOCK_COMPONENT_INFO = {
       "hp",
       "life",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7C06B5EC-0D20-11E8-A748-722994A6FE1D.png"
   },
   "HeartFlatYellow": {
     "DisplayName": "Heart, Flat, Yellow",
@@ -34566,7 +37922,8 @@ STOCK_COMPONENT_INFO = {
       "hp",
       "life",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AA46CE56-0D20-11E8-A748-C52994A6FE1D.png"
   },
   "HeartWoodRed": {
     "DisplayName": "Heart, Wood, Red",
@@ -34592,7 +37949,8 @@ STOCK_COMPONENT_INFO = {
       "hp",
       "life",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/56D2236E-AC9A-11ED-A5DA-F256B58D8F2A.png"
   },
   "HelicopterAcrylic": {
     "DisplayName": "Helicopter, Acrylic",
@@ -34602,7 +37960,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "helicopter",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/597AD46E-F6F5-11EB-9EF2-86A122502F64.png"
   },
   "HenhouseBlack": {
     "DisplayName": "Henhouse, Black",
@@ -34616,7 +37975,8 @@ STOCK_COMPONENT_INFO = {
       "building",
       "housing",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1CD818EA-257A-11E9-BF02-1908C9BFB413.png"
   },
   "HenhouseBlue": {
     "DisplayName": "Henhouse, Blue",
@@ -34630,7 +37990,8 @@ STOCK_COMPONENT_INFO = {
       "building",
       "housing",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/641D0838-2583-11E9-BF02-DD15C9BFB413.png"
   },
   "HenhouseGreen": {
     "DisplayName": "Henhouse, Green",
@@ -34644,7 +38005,8 @@ STOCK_COMPONENT_INFO = {
       "building",
       "housing",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/96E04BEA-2583-11E9-8BE8-C3502A938A1B.png"
   },
   "HenhouseOrange": {
     "DisplayName": "Henhouse, Orange",
@@ -34658,7 +38020,8 @@ STOCK_COMPONENT_INFO = {
       "building",
       "housing",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DC44D12E-2583-11E9-8BE8-40512A938A1B.png"
   },
   "HenhousePurple": {
     "DisplayName": "Henhouse, Purple",
@@ -34672,7 +38035,8 @@ STOCK_COMPONENT_INFO = {
       "building",
       "housing",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/106E1618-2584-11E9-8BE8-86512A938A1B.png"
   },
   "HenhouseRed": {
     "DisplayName": "Henhouse, Red",
@@ -34686,7 +38050,8 @@ STOCK_COMPONENT_INFO = {
       "building",
       "housing",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/414CAC02-2581-11E9-BF02-7212C9BFB413.png"
   },
   "HenhouseWhite": {
     "DisplayName": "Henhouse, White",
@@ -34700,7 +38065,8 @@ STOCK_COMPONENT_INFO = {
       "building",
       "housing",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/46383E72-2584-11E9-BF02-5017C9BFB413.png"
   },
   "HenhouseYellow": {
     "DisplayName": "Henhouse, Yellow",
@@ -34714,7 +38080,8 @@ STOCK_COMPONENT_INFO = {
       "building",
       "housing",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/93ADCF1E-2584-11E9-8BE8-9A522A938A1B.png"
   },
   "HerbBlack": {
     "DisplayName": "Herb, Black",
@@ -34738,7 +38105,8 @@ STOCK_COMPONENT_INFO = {
       "fragrances",
       "grass",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/057B7E8E-3228-11E4-A5F4-CE1CB5FA2F1D.png"
   },
   "HerbBlue": {
     "DisplayName": "Herb, Blue",
@@ -34762,7 +38130,8 @@ STOCK_COMPONENT_INFO = {
       "fragrances",
       "grass",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/05A38190-3228-11E4-9BE1-F6D56556143E.png"
   },
   "HerbGreen": {
     "DisplayName": "Herb, Green",
@@ -34788,7 +38157,8 @@ STOCK_COMPONENT_INFO = {
       "hay",
       "alfalfa",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0656E2BC-3228-11E4-B299-CE1CB5FA2F1D.png"
   },
   "HerbOrange": {
     "DisplayName": "Herb, Orange",
@@ -34814,7 +38184,8 @@ STOCK_COMPONENT_INFO = {
       "hay",
       "alfalfa",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0742641C-3228-11E4-8297-F6D56556143E.png"
   },
   "HerbPurple": {
     "DisplayName": "Herb, Purple",
@@ -34842,7 +38213,8 @@ STOCK_COMPONENT_INFO = {
       "poppy",
       "opium",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/074272FE-3228-11E4-B3E8-CE1CB5FA2F1D.png"
   },
   "HerbRed": {
     "DisplayName": "Herb, Red",
@@ -34870,7 +38242,8 @@ STOCK_COMPONENT_INFO = {
       "poppy",
       "opium",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/080338EA-3228-11E4-B763-F6D56556143E.png"
   },
   "HerbWhite": {
     "DisplayName": "Herb, White",
@@ -34899,7 +38272,8 @@ STOCK_COMPONENT_INFO = {
       "opium",
       "rice",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/093669A8-3228-11E4-93E9-CE1CB5FA2F1D.png"
   },
   "HerbYellow": {
     "DisplayName": "Herb, Yellow",
@@ -34928,7 +38302,8 @@ STOCK_COMPONENT_INFO = {
       "opium",
       "straw",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/09371CE0-3228-11E4-82C2-F6D56556143E.png"
   },
   "HexNut": {
     "DisplayName": "Hex Nut",
@@ -34944,11 +38319,12 @@ STOCK_COMPONENT_INFO = {
       "lock",
       "fastening",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D09B0260-0302-11E9-849C-4AE6D18499DE.png"
   },
   "HexStackerBlack": {
     "DisplayName": "Hex Stacker, Black",
-    "Description": "A hexagon-shaped stacking token which can be stacked on itself. This stacker snap-fits together.",
+    "Description": "A hexagon-shaped stacking token which can be stacked on itself. This stacker snap-fits together.\r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "FDF66C7E-06ED-11EE-8FED-11CC9E42D132",
     "GameCrafterSkuId": "FE08AA42-06ED-11EE-8FED-11CC9E42D132",
     "Tags": [
@@ -34962,11 +38338,12 @@ STOCK_COMPONENT_INFO = {
       "press fit",
       "snap fit",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/319038E4-06EE-11EE-9AEF-374A6736E72A.png"
   },
   "HexStackerBlue": {
     "DisplayName": "Hex Stacker, Blue",
-    "Description": "A hexagon-shaped stacking token which can be stacked on itself. This stacker snap-fits together.",
+    "Description": "A hexagon-shaped stacking token which can be stacked on itself. This stacker snap-fits together.\r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "FDF5ABFE-06ED-11EE-9AEF-92476736E72A",
     "GameCrafterSkuId": "FE06F8F0-06ED-11EE-9AEF-92476736E72A",
     "Tags": [
@@ -34980,11 +38357,12 @@ STOCK_COMPONENT_INFO = {
       "press fit",
       "snap fit",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/50CEEA02-06EE-11EE-9E66-EC1CEEF880F0.png"
   },
   "HexStackerGreen": {
     "DisplayName": "Hex Stacker, Green",
-    "Description": "A hexagon-shaped stacking token which can be stacked on itself. This stacker snap-fits together.",
+    "Description": "A hexagon-shaped stacking token which can be stacked on itself. This stacker snap-fits together.\r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "FDF557E4-06ED-11EE-9E66-2719EEF880F0",
     "GameCrafterSkuId": "FE1559C2-06ED-11EE-9E66-2719EEF880F0",
     "Tags": [
@@ -34998,11 +38376,12 @@ STOCK_COMPONENT_INFO = {
       "press fit",
       "snap fit",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/47F66C84-06EE-11EE-9AEF-3E4B6736E72A.png"
   },
   "HexStackerOrange": {
     "DisplayName": "Hex Stacker, Orange",
-    "Description": "A hexagon-shaped stacking token which can be stacked on itself. This stacker snap-fits together.",
+    "Description": "A hexagon-shaped stacking token which can be stacked on itself. This stacker snap-fits together.\r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "FDF59DC6-06ED-11EE-8FED-F2CB9E42D132",
     "GameCrafterSkuId": "FE181E14-06ED-11EE-8FED-F2CB9E42D132",
     "Tags": [
@@ -35016,11 +38395,12 @@ STOCK_COMPONENT_INFO = {
       "press fit",
       "snap fit",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4AB2C80A-06EE-11EE-8FED-10D09E42D132.png"
   },
   "HexStackerPurple": {
     "DisplayName": "Hex Stacker, Purple",
-    "Description": "A hexagon-shaped stacking token which can be stacked on itself. This stacker snap-fits together.",
+    "Description": "A hexagon-shaped stacking token which can be stacked on itself. This stacker snap-fits together.\r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "FDF6CAB6-06ED-11EE-9AEF-D5476736E72A",
     "GameCrafterSkuId": "FE1F9C48-06ED-11EE-9AEF-D5476736E72A",
     "Tags": [
@@ -35034,11 +38414,12 @@ STOCK_COMPONENT_INFO = {
       "press fit",
       "snap fit",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/57B6AE9A-06EE-11EE-9AEF-D94B6736E72A.png"
   },
   "HexStackerRed": {
     "DisplayName": "Hex Stacker, Red",
-    "Description": "A hexagon-shaped stacking token which can be stacked on itself. This stacker snap-fits together.",
+    "Description": "A hexagon-shaped stacking token which can be stacked on itself. This stacker snap-fits together.\r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "FDF6AB80-06ED-11EE-9E66-2819EEF880F0",
     "GameCrafterSkuId": "FE00BC4C-06ED-11EE-9E66-2819EEF880F0",
     "Tags": [
@@ -35052,11 +38433,12 @@ STOCK_COMPONENT_INFO = {
       "press fit",
       "snap fit",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7718978A-06EE-11EE-9AEF-B84D6736E72A.png"
   },
   "HexStackerWhite": {
     "DisplayName": "Hex Stacker, White",
-    "Description": "A hexagon-shaped stacking token which can be stacked on itself. This stacker snap-fits together.",
+    "Description": "A hexagon-shaped stacking token which can be stacked on itself. This stacker snap-fits together.\r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "FE003FD8-06ED-11EE-8FED-78CC9E42D132",
     "GameCrafterSkuId": "FE288588-06ED-11EE-8FED-78CC9E42D132",
     "Tags": [
@@ -35070,11 +38452,12 @@ STOCK_COMPONENT_INFO = {
       "press fit",
       "snap fit",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/53C95A08-06EE-11EE-9AEF-6F4B6736E72A.png"
   },
   "HexStackerYellow": {
     "DisplayName": "Hex Stacker, Yellow",
-    "Description": "A hexagon-shaped stacking token which can be stacked on itself. This stacker snap-fits together.",
+    "Description": "A hexagon-shaped stacking token which can be stacked on itself. This stacker snap-fits together.\r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "FDFB9E56-06ED-11EE-9AEF-CD476736E72A",
     "GameCrafterSkuId": "FE0F8BE6-06ED-11EE-9AEF-CD476736E72A",
     "Tags": [
@@ -35088,7 +38471,8 @@ STOCK_COMPONENT_INFO = {
       "press fit",
       "snap fit",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4DDD901E-06EE-11EE-9E66-9C1CEEF880F0.png"
   },
   "Hexbox20mmBlue": {
     "DisplayName": "Hexbox, 20mm, Blue",
@@ -35105,7 +38489,8 @@ STOCK_COMPONENT_INFO = {
       "hexagonal",
       "prism",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EDE39EE2-54B3-11E9-A688-D5BFBE9D83F6.png"
   },
   "Hexbox20mmDarkRed": {
     "DisplayName": "Hexbox, 20mm, Dark Red",
@@ -35122,7 +38507,8 @@ STOCK_COMPONENT_INFO = {
       "hexagonal",
       "prism",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F3F97522-54B3-11E9-BF1F-87ED84BD98AD.png"
   },
   "Hexbox20mmMustard": {
     "DisplayName": "Hexbox, 20mm, Mustard",
@@ -35151,7 +38537,8 @@ STOCK_COMPONENT_INFO = {
       "hero quest",
       "zombicide",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/133E7FE8-180D-11ED-AB42-76D895221FC2.png"
   },
   "HingedStoneDoorBronze": {
     "DisplayName": "Hinged Stone Door, Bronze",
@@ -35163,7 +38550,8 @@ STOCK_COMPONENT_INFO = {
       "hero quest",
       "zombicide",
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/50DB2F6E-17F8-11ED-AB3A-B8549D677BF4.png"
   },
   "HingedStoneDoorGreen": {
     "DisplayName": "Hinged Stone Door, Green",
@@ -35175,7 +38563,8 @@ STOCK_COMPONENT_INFO = {
       "hero quest",
       "zombicide",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5C9834C8-17F8-11ED-9DE0-E1C495221FC2.png"
   },
   "HingedStoneDoorGrey": {
     "DisplayName": "Hinged Stone Door, Grey",
@@ -35187,7 +38576,8 @@ STOCK_COMPONENT_INFO = {
       "hero quest",
       "zombicide",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F90564A-17F8-11ED-9DE0-25C695221FC2.png"
   },
   "HingedStoneDoorRed": {
     "DisplayName": "Hinged Stone Door, Red",
@@ -35199,7 +38589,8 @@ STOCK_COMPONENT_INFO = {
       "hero quest",
       "zombicide",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/73E12C84-17F8-11ED-AB3A-6F569D677BF4.png"
   },
   "Hippogriff": {
     "DisplayName": "Hippogriff",
@@ -35232,7 +38623,8 @@ STOCK_COMPONENT_INFO = {
       "brettonia",
       "warhammer",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/54AE5E1A-1279-11E8-B66E-111194A6FE1D.png"
   },
   "HobgoblinCrossbow2FantasyTB25": {
     "DisplayName": "Hobgoblin, Crossbow 2, Fantasy, TB25",
@@ -35241,7 +38633,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "31FB19A2-F646-11EC-BBF9-7CD0803EB811",
     "Tags": [
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/817F53EC-02C3-11ED-A994-F80D3BE74957.png"
   },
   "HobgoblinCrossbowFantasyTB25": {
     "DisplayName": "Hobgoblin, Crossbow, Fantasy, TB25",
@@ -35251,7 +38644,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "man bun",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/85076D60-02C3-11ED-8182-B524D5F05A14.png"
   },
   "HobgoblinSword2FantasyTB25": {
     "DisplayName": "Hobgoblin, Sword 2, Fantasy, TB25",
@@ -35264,7 +38658,8 @@ STOCK_COMPONENT_INFO = {
       "shield",
       "scale mail",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C36F7962-EEAF-11EC-9E03-50F7DA1BC22A.png"
   },
   "HobgoblinSwordFantasyTB25": {
     "DisplayName": "Hobgoblin, Sword, Fantasy, TB25",
@@ -35273,7 +38668,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "00510736-F646-11EC-BBF9-99CD803EB811",
     "Tags": [
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/87E3C59C-02C3-11ED-8182-CF24D5F05A14.png"
   },
   "HoodedStrangerFantasyTB25": {
     "DisplayName": "Hooded Stranger, Fantasy, TB25",
@@ -35290,7 +38686,8 @@ STOCK_COMPONENT_INFO = {
       "robe",
       "mysterious",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1DC3C76C-261D-11EC-9F7F-8A7E898C9FDE.png"
   },
   "HorseAcrylic": {
     "DisplayName": "Horse, Acrylic",
@@ -35318,7 +38715,8 @@ STOCK_COMPONENT_INFO = {
       "gelding",
       "pony",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/62B5437A-F6FA-11EB-9EF2-632F22502F64.png"
   },
   "HotRodBlack": {
     "DisplayName": "Hot Rod, Black",
@@ -35337,7 +38735,8 @@ STOCK_COMPONENT_INFO = {
       "model a",
       "moonshiner",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3905DA0A-F314-11EC-A359-E007DB1BC22A.png"
   },
   "HotRodBlue": {
     "DisplayName": "Hot Rod, Blue",
@@ -35356,7 +38755,8 @@ STOCK_COMPONENT_INFO = {
       "model a",
       "moonshiner",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0E2DD4E0-F314-11EC-BD00-33ADFF847FD3.png"
   },
   "HotRodGreen": {
     "DisplayName": "Hot Rod, Green",
@@ -35375,7 +38775,8 @@ STOCK_COMPONENT_INFO = {
       "model a",
       "moonshiner",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2D4C8416-F314-11EC-BD00-09AFFF847FD3.png"
   },
   "HotRodOrange": {
     "DisplayName": "Hot Rod, Orange",
@@ -35394,7 +38795,8 @@ STOCK_COMPONENT_INFO = {
       "model a",
       "moonshiner",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3FED4C54-F314-11EC-A359-4408DB1BC22A.png"
   },
   "HotRodPurple": {
     "DisplayName": "Hot Rod, Purple",
@@ -35413,7 +38815,8 @@ STOCK_COMPONENT_INFO = {
       "model a",
       "moonshiner",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1BBD6030-F314-11EC-A359-A606DB1BC22A.png"
   },
   "HotRodRed": {
     "DisplayName": "Hot Rod, Red",
@@ -35432,7 +38835,8 @@ STOCK_COMPONENT_INFO = {
       "model a",
       "moonshiner",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/23A0D6D8-F314-11EC-BD00-73AEFF847FD3.png"
   },
   "HotRodWhite": {
     "DisplayName": "Hot Rod, White",
@@ -35451,7 +38855,8 @@ STOCK_COMPONENT_INFO = {
       "model a",
       "moonshiner",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4670A922-F314-11EC-A359-6D08DB1BC22A.png"
   },
   "HotRodYellow": {
     "DisplayName": "Hot Rod, Yellow",
@@ -35470,7 +38875,8 @@ STOCK_COMPONENT_INFO = {
       "model a",
       "moonshiner",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4F575F68-F314-11EC-BD00-7AB0FF847FD3.png"
   },
   "HotelBlack": {
     "DisplayName": "Hotel, Black",
@@ -35493,7 +38899,8 @@ STOCK_COMPONENT_INFO = {
       "building",
       "asset",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1AFD4522-FE08-11E6-8909-96B7328253FF.png"
   },
   "HotelBlue": {
     "DisplayName": "Hotel, Blue",
@@ -35516,7 +38923,8 @@ STOCK_COMPONENT_INFO = {
       "building",
       "asset",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E5657662-FEB8-11E6-B532-48AE72F7C122.png"
   },
   "HotelGreen": {
     "DisplayName": "Hotel, Green",
@@ -35539,7 +38947,8 @@ STOCK_COMPONENT_INFO = {
       "building",
       "asset",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/384BEA3C-FEB9-11E6-BA3A-D7E9328253FF.png"
   },
   "HotelOrange": {
     "DisplayName": "Hotel, Orange",
@@ -35562,7 +38971,8 @@ STOCK_COMPONENT_INFO = {
       "building",
       "asset",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A655A61C-FEB9-11E6-B532-25AF72F7C122.png"
   },
   "HotelPurple": {
     "DisplayName": "Hotel, Purple",
@@ -35585,7 +38995,8 @@ STOCK_COMPONENT_INFO = {
       "building",
       "asset",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B67CBCB0-FEB9-11E6-BA3A-47EA328253FF.png"
   },
   "HotelRed": {
     "DisplayName": "Hotel, Red",
@@ -35608,7 +39019,8 @@ STOCK_COMPONENT_INFO = {
       "building",
       "asset",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B6AFBA98-FEB9-11E6-B532-1FAF72F7C122.png"
   },
   "HotelWhite": {
     "DisplayName": "Hotel, White",
@@ -35631,7 +39043,8 @@ STOCK_COMPONENT_INFO = {
       "building",
       "asset",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B64EFBA4-FEB9-11E6-B532-67AF72F7C122.png"
   },
   "HotelYellow": {
     "DisplayName": "Hotel, Yellow",
@@ -35654,7 +39067,8 @@ STOCK_COMPONENT_INFO = {
       "building",
       "asset",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B60A0C56-FEB9-11E6-BA3A-6AEA328253FF.png"
   },
   "HouseAcrylicOpaqueBlack": {
     "DisplayName": "House, Acrylic, Opaque, Black",
@@ -35684,7 +39098,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DCFD90CE-A4C3-11E8-84DE-D5BB3D511364.png"
   },
   "HouseAcrylicOpaqueGold": {
     "DisplayName": "House, Acrylic, Opaque, Gold",
@@ -35714,7 +39129,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EEF7F36E-A4C3-11E8-84DE-E9BB3D511364.png"
   },
   "HouseAcrylicOpaqueSilver": {
     "DisplayName": "House, Acrylic, Opaque, Silver",
@@ -35750,7 +39166,8 @@ STOCK_COMPONENT_INFO = {
       "r": 192,
       "g": 192,
       "b": 192
-    }
+    },
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/02546960-A4C4-11E8-84DE-F7BB3D511364.png"
   },
   "HouseAcrylicOpaqueWhite": {
     "DisplayName": "House, Acrylic, Opaque, White",
@@ -35780,7 +39197,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/08BF7F42-A4C4-11E8-A620-D88DFC81399E.png"
   },
   "HouseAcrylicTransparentBlack": {
     "DisplayName": "House, Acrylic, Transparent, Black",
@@ -35810,7 +39228,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0FC37F46-A4C4-11E8-84DE-23BC3D511364.png"
   },
   "HouseAcrylicTransparentBlue": {
     "DisplayName": "House, Acrylic, Transparent, Blue",
@@ -35840,7 +39259,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1417F9E6-A4C4-11E8-A620-D98DFC81399E.png"
   },
   "HouseAcrylicTransparentClear": {
     "DisplayName": "House, Acrylic, Transparent, Clear",
@@ -35870,7 +39290,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1868626A-A4C4-11E8-A620-DD8DFC81399E.png"
   },
   "HouseAcrylicTransparentGreen": {
     "DisplayName": "House, Acrylic, Transparent, Green",
@@ -35900,7 +39321,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1F1B096E-A4C4-11E8-A620-F98DFC81399E.png"
   },
   "HouseAcrylicTransparentOrange": {
     "DisplayName": "House, Acrylic, Transparent, Orange",
@@ -35930,7 +39352,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2593FB66-A4C4-11E8-84DE-37BC3D511364.png"
   },
   "HouseAcrylicTransparentPurple": {
     "DisplayName": "House, Acrylic, Transparent, Purple",
@@ -35960,7 +39383,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3D2EDB88-A4C4-11E8-A620-138EFC81399E.png"
   },
   "HouseAcrylicTransparentRed": {
     "DisplayName": "House, Acrylic, Transparent, Red",
@@ -35990,7 +39414,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2C6A0F8E-A4C4-11E8-84DE-49BC3D511364.png"
   },
   "HouseAcrylicTransparentYellow": {
     "DisplayName": "House, Acrylic, Transparent, Yellow",
@@ -36020,7 +39445,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/31F3EE7A-A4C4-11E8-84DE-4ABC3D511364.png"
   },
   "HouseBlack": {
     "DisplayName": "House, Black",
@@ -36050,7 +39476,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/211BEB24-37FD-11E6-8E35-51C670C3C4B9.png"
   },
   "HouseBlue": {
     "DisplayName": "House, Blue",
@@ -36080,7 +39507,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2115BC4A-37FD-11E6-87D6-96AAC6EDC2D7.png"
   },
   "HouseGreen": {
     "DisplayName": "House, Green",
@@ -36110,7 +39538,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/217450C0-37FD-11E6-B892-96AAC6EDC2D7.png"
   },
   "HouseOrange": {
     "DisplayName": "House, Orange",
@@ -36140,7 +39569,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/21B7DCD2-37FD-11E6-A761-51C670C3C4B9.png"
   },
   "HousePurple": {
     "DisplayName": "House, Purple",
@@ -36170,7 +39600,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/21FCA39E-37FD-11E6-882E-96AAC6EDC2D7.png"
   },
   "HouseRed": {
     "DisplayName": "House, Red",
@@ -36200,7 +39631,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/22597FF6-37FD-11E6-9D9C-96AAC6EDC2D7.png"
   },
   "HouseWhite": {
     "DisplayName": "House, White",
@@ -36230,7 +39662,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B773DEC-37FD-11E6-A032-51C670C3C4B9.png"
   },
   "HouseWoodNatural": {
     "DisplayName": "House, Wood, Natural",
@@ -36260,7 +39693,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CC9D2714-43E1-11E8-BE95-AEBBB20C7EB2.png"
   },
   "HouseWoodYellow": {
     "DisplayName": "House, Wood, Yellow",
@@ -36290,7 +39724,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/349C04A0-48CB-11E8-8F71-B4781FDFCBC8.png"
   },
   "HouseYellow": {
     "DisplayName": "House, Yellow",
@@ -36320,7 +39755,8 @@ STOCK_COMPONENT_INFO = {
       "asset",
       "monopoly",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B7CBCE0-37FD-11E6-9070-96AAC6EDC2D7.png"
   },
   "HumanFigureOrange": {
     "DisplayName": "Human Figure, Orange",
@@ -36348,7 +39784,8 @@ STOCK_COMPONENT_INFO = {
       "philosopher",
       "bookworm",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1F44B384-715F-11E7-B7F5-E5BC3AA59C5F.png"
   },
   "HumanFigurePurple": {
     "DisplayName": "Human Figure, Purple",
@@ -36376,7 +39813,8 @@ STOCK_COMPONENT_INFO = {
       "philosopher",
       "bookworm",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1B280472-715F-11E7-9B98-F0F1FEDF52DE.png"
   },
   "HumanFigureRed": {
     "DisplayName": "Human Figure, Red",
@@ -36404,7 +39842,8 @@ STOCK_COMPONENT_INFO = {
       "philosopher",
       "bookworm",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1674497C-715F-11E7-9B98-17F2FEDF52DE.png"
   },
   "HumanFigureYellow": {
     "DisplayName": "Human Figure, Yellow",
@@ -36432,7 +39871,8 @@ STOCK_COMPONENT_INFO = {
       "philosopher",
       "bookworm",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/10C0CDC0-715F-11E7-B7F5-B8BC3AA59C5F.png"
   },
   "HutLarge": {
     "DisplayName": "Hut, Large",
@@ -36451,7 +39891,8 @@ STOCK_COMPONENT_INFO = {
       "resort",
       "abode",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/882B123A-D5F6-11EB-8101-AB9DE882EB54.png"
   },
   "HutSmall": {
     "DisplayName": "Hut, Small",
@@ -36470,7 +39911,8 @@ STOCK_COMPONENT_INFO = {
       "resort",
       "abode",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/81D48FCE-D5F6-11EB-8101-8E9DE882EB54.png"
   },
   "Hydra": {
     "DisplayName": "Hydra",
@@ -36489,7 +39931,8 @@ STOCK_COMPONENT_INFO = {
       "serpentine",
       "theogony",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/963D2B8C-102F-11E8-9265-CB0194A6FE1D.png"
   },
   "I-Beam": {
     "DisplayName": "I-Beam",
@@ -36509,7 +39952,8 @@ STOCK_COMPONENT_INFO = {
       "truss",
       "strut",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/26BA0B4C-1F31-11E9-A71A-8C8F2AD784EF.png"
   },
   "IceCube10mmCopper": {
     "DisplayName": "Ice Cube, 10mm, Copper",
@@ -36534,8 +39978,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8C1C7CC0-1A09-11EB-84D1-5538E4BD0016.png"
   },
   "IceCube10mmOpaqueBlack": {
     "DisplayName": "Ice Cube, 10mm, Opaque, Black",
@@ -36560,8 +40029,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F522BE8-3F4B-11E8-9E36-30631EA37D3B.png"
   },
   "IceCube10mmOpaqueGold": {
     "DisplayName": "Ice Cube, 10mm, Opaque, Gold",
@@ -36586,8 +40080,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1ED7846A-431B-11E8-A8D1-31531EA37D3B.png"
   },
   "IceCube10mmOpaqueSilver": {
     "DisplayName": "Ice Cube, 10mm, Opaque, Silver",
@@ -36612,8 +40131,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/744BA294-433B-11E8-842A-986A097D4534.png"
   },
   "IceCube10mmOpaqueWhite": {
     "DisplayName": "Ice Cube, 10mm, Opaque, White",
@@ -36638,8 +40182,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FC7E9D4E-3F42-11E8-9557-8C724B433374.png"
   },
   "IceCube10mmTransparentBlack": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Black",
@@ -36664,8 +40233,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DA31F942-3F48-11E8-9E36-995E1EA37D3B.png"
   },
   "IceCube10mmTransparentBlue": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Blue",
@@ -36690,8 +40284,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/147F393C-432E-11E8-BAFE-87ECFED15A96.png"
   },
   "IceCube10mmTransparentClear": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Clear",
@@ -36716,8 +40335,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2FB96FA0-B06C-11E8-BB17-E6A3CE95AB04.png"
   },
   "IceCube10mmTransparentGreen": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Green",
@@ -36742,8 +40386,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FE4B8B32-432F-11E8-8722-49731EA37D3B.png"
   },
   "IceCube10mmTransparentOrange": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Orange",
@@ -36768,8 +40437,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F140BD92-3F4A-11E8-9E36-F1611EA37D3B.png"
   },
   "IceCube10mmTransparentPurple": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Purple",
@@ -36794,8 +40488,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/73D15648-433A-11E8-842A-FF84480FAB07.png"
   },
   "IceCube10mmTransparentRed": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Red",
@@ -36820,8 +40539,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3AC7CE54-433A-11E8-AEA5-F9831EA37D3B.png"
   },
   "IceCube10mmTransparentWhite": {
     "DisplayName": "Ice Cube, 10mm, Transparent, White",
@@ -36846,8 +40590,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BE22C450-4319-11E8-A8D1-A74F1EA37D3B.png"
   },
   "IceCube10mmTransparentYellow": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Yellow",
@@ -36872,8 +40641,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4536ED52-3F43-11E8-9E36-02531EA37D3B.png"
   },
   "IceCube12mmOpaqueBlack": {
     "DisplayName": "Ice Cube, 12mm, Opaque, Black",
@@ -36898,8 +40692,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F522BE8-3F4B-11E8-9E36-30631EA37D3B.png"
   },
   "IceCube12mmOpaqueGold": {
     "DisplayName": "Ice Cube, 12mm, Opaque, Gold",
@@ -36924,8 +40743,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/58D9470A-433B-11E8-AEA5-4D851EA37D3B.png"
   },
   "IceCube12mmOpaqueSilver": {
     "DisplayName": "Ice Cube, 12mm, Opaque, Silver",
@@ -36950,8 +40794,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7D76EBD8-431A-11E8-B059-BF5C9EA37B52.png"
   },
   "IceCube12mmOpaqueWhite": {
     "DisplayName": "Ice Cube, 12mm, Opaque, White",
@@ -36976,8 +40845,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4DF46248-3F49-11E8-9E36-545F1EA37D3B.png"
   },
   "IceCube12mmTransparentBlack": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Black",
@@ -37002,8 +40896,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8A83C918-3F4B-11E8-9E36-33631EA37D3B.png"
   },
   "IceCube12mmTransparentBlue": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Blue",
@@ -37028,6 +40947,30 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "blue"
     ],
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/Cube.Cube'",
@@ -37035,7 +40978,8 @@ STOCK_COMPONENT_INFO = {
       "r": 0,
       "g": 0,
       "b": 255
-    }
+    },
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/080F51BC-433A-11E8-842A-8398EBC1916C.png"
   },
   "IceCube12mmTransparentClear": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Clear",
@@ -37060,8 +41004,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/09D50024-B06C-11E8-BB17-97A3CE95AB04.png"
   },
   "IceCube12mmTransparentGreen": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Green",
@@ -37086,8 +41055,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/29C1B544-43E3-11E8-8433-FE7B1EA37D3B.png"
   },
   "IceCube12mmTransparentOrange": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Orange",
@@ -37112,8 +41106,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AF6A2F4A-433A-11E8-AEA5-82841EA37D3B.png"
   },
   "IceCube12mmTransparentPurple": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Purple",
@@ -37138,8 +41157,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E541B496-4801-11E8-8D8F-E0AC1EA37D3B.png"
   },
   "IceCube12mmTransparentRed": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Red",
@@ -37164,8 +41208,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F103307A-431A-11E8-B059-FE6F0DD3AC18.png"
   },
   "IceCube12mmTransparentWhite": {
     "DisplayName": "Ice Cube, 12mm, Transparent, White",
@@ -37190,8 +41259,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/50F0859C-431A-11E8-B059-B7C51ECDB43F.png"
   },
   "IceCube12mmTransparentYellow": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Yellow",
@@ -37216,6 +41310,30 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "yellow"
     ],
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Basic/Cube.Cube'",
@@ -37223,7 +41341,8 @@ STOCK_COMPONENT_INFO = {
       "r": 255,
       "g": 242,
       "b": 0
-    }
+    },
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E81B53DA-432D-11E8-BAFE-E5BBBA169527.png"
   },
   "IceCube8mmCopper": {
     "DisplayName": "Ice Cube, 8mm, Copper",
@@ -37244,8 +41363,33 @@ STOCK_COMPONENT_INFO = {
       "bits",
       "components",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4E244178-1A09-11EB-B3F2-7474FA3D5F78.png"
   },
   "IceCube8mmOpaqueBlack": {
     "DisplayName": "Ice Cube, 8mm, Opaque, Black",
@@ -37270,8 +41414,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FFE9F83C-DE53-11E4-AB5E-6A5B17E0A741.png"
   },
   "IceCube8mmOpaqueGold": {
     "DisplayName": "Ice Cube, 8mm, Opaque, Gold",
@@ -37296,8 +41465,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1ED7846A-431B-11E8-A8D1-31531EA37D3B.png"
   },
   "IceCube8mmOpaqueSilver": {
     "DisplayName": "Ice Cube, 8mm, Opaque, Silver",
@@ -37322,8 +41516,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ABFDDEB2-431A-11E8-A8D1-94521EA37D3B.png"
   },
   "IceCube8mmOpaqueWhite": {
     "DisplayName": "Ice Cube, 8mm, Opaque, White",
@@ -37348,8 +41567,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DF865892-B21C-11E8-900E-F497CE95AB04.png"
   },
   "IceCube8mmTransparentBlack": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Black",
@@ -37374,8 +41618,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1B171C9C-431A-11E8-A8D1-C4511EA37D3B.png"
   },
   "IceCube8mmTransparentBlue": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Blue",
@@ -37400,8 +41669,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C76FFF6A-DE53-11E4-AA4A-6A5B17E0A741.png"
   },
   "IceCube8mmTransparentClear": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Clear",
@@ -37426,8 +41720,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0C5383CA-B06C-11E8-8C22-7622BDC16479.png"
   },
   "IceCube8mmTransparentGreen": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Green",
@@ -37452,8 +41771,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C8A21FB2-DE53-11E4-A81F-0A6958DE78BC.png"
   },
   "IceCube8mmTransparentOrange": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Orange",
@@ -37478,8 +41822,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C8CFFE1E-DE53-11E4-8934-6A5B17E0A741.png"
   },
   "IceCube8mmTransparentPurple": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Purple",
@@ -37504,8 +41873,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C9503B42-DE53-11E4-81C6-0A6958DE78BC.png"
   },
   "IceCube8mmTransparentRed": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Red",
@@ -37530,8 +41924,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C97604BC-DE53-11E4-8AB5-6A5B17E0A741.png"
   },
   "IceCube8mmTransparentWhite": {
     "DisplayName": "Ice Cube, 8mm, Transparent, White",
@@ -37556,8 +41975,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BE22C450-4319-11E8-A8D1-A74F1EA37D3B.png"
   },
   "IceCube8mmTransparentYellow": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Yellow",
@@ -37582,8 +42026,33 @@ STOCK_COMPONENT_INFO = {
       "maker",
       "prototype",
       "eurocube",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C9FAD156-DE53-11E4-8846-0A6958DE78BC.png"
   },
   "IceElemental-CharacterMeeple": {
     "DisplayName": "Ice Elemental - Character Meeple",
@@ -37605,7 +42074,8 @@ STOCK_COMPONENT_INFO = {
       "ice king",
       "urgence evergreen",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/896A5CDE-8F4D-11E8-BA66-5CA4785DA8EE.png"
   },
   "ImpFantasyTB25": {
     "DisplayName": "Imp, Fantasy, TB25",
@@ -37617,8 +42087,10 @@ STOCK_COMPONENT_INFO = {
       "hell",
       "minor",
       "lesser",
+      "halloween",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/39AA13AC-E38F-11EC-A245-B2C3E1809829.png"
   },
   "IngotWoodAluminum": {
     "DisplayName": "Ingot, Wood, Aluminum",
@@ -37642,7 +42114,8 @@ STOCK_COMPONENT_INFO = {
       "alumina",
       "bayer",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/93D4F6FA-9C84-11E7-B170-027ACB191CC0.png"
   },
   "IngotWoodBrass": {
     "DisplayName": "Ingot, Wood, Brass",
@@ -37665,7 +42138,8 @@ STOCK_COMPONENT_INFO = {
       "zinc",
       "bronze",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DBA3E490-44C8-11E8-9CA9-C91FC49F7974.png"
   },
   "IngotWoodCobalt": {
     "DisplayName": "Ingot, Wood, Cobalt",
@@ -37690,7 +42164,8 @@ STOCK_COMPONENT_INFO = {
       "cobaltocene",
       "cobaltite",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B10ED800-3470-11E9-95DA-CA1E16796776.png"
   },
   "IngotWoodCopper": {
     "DisplayName": "Ingot, Wood, Copper",
@@ -37714,7 +42189,8 @@ STOCK_COMPONENT_INFO = {
       "bronze",
       "patina",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9976E9E2-3F45-11E8-9557-D1D3571ABC78.png"
   },
   "IngotWoodGold": {
     "DisplayName": "Ingot, Wood, Gold",
@@ -37749,7 +42225,8 @@ STOCK_COMPONENT_INFO = {
       "forty-niner",
       "fortyniner",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B83268BE-F9A8-11E0-9D98-108960677055.png"
   },
   "IngotWoodIron": {
     "DisplayName": "Ingot, Wood, Iron",
@@ -37780,7 +42257,8 @@ STOCK_COMPONENT_INFO = {
       "ironworks",
       "ironworking",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/13797F98-44C8-11E8-9CA9-F0431074537F.png"
   },
   "IngotWoodSilver": {
     "DisplayName": "Ingot, Wood, Silver",
@@ -37813,7 +42291,8 @@ STOCK_COMPONENT_INFO = {
       "coin",
       "sterling",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D0588AEC-44C7-11E8-83D1-F46E1EA37D3B.png"
   },
   "IngotWoodSteel": {
     "DisplayName": "Ingot, Wood, Steel",
@@ -37843,7 +42322,8 @@ STOCK_COMPONENT_INFO = {
       "industrial",
       "commodity",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D4975CCA-3F43-11E8-9E36-DB531EA37D3B.png"
   },
   "InsectWarriorFantasyTB25": {
     "DisplayName": "Insect Warrior, Fantasy, TB25",
@@ -37852,7 +42332,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "48D2C926-11E5-11ED-83DA-8043591B8E51",
     "Tags": [
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/95B42838-14F7-11ED-B552-B01196221FC2.png"
   },
   "JewelBlue": {
     "DisplayName": "Jewel, Blue",
@@ -37914,7 +42395,8 @@ STOCK_COMPONENT_INFO = {
       "refractive",
       "cymophane",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D86F1796-0031-11E6-B571-4850B620570A.png"
   },
   "JewelOrange": {
     "DisplayName": "Jewel, Orange",
@@ -37976,7 +42458,8 @@ STOCK_COMPONENT_INFO = {
       "refractive",
       "cymophane",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D90ECA66-0031-11E6-B99B-4850B620570A.png"
   },
   "JewelPurple": {
     "DisplayName": "Jewel, Purple",
@@ -38038,7 +42521,8 @@ STOCK_COMPONENT_INFO = {
       "refractive",
       "cymophane",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D91A5B1A-0031-11E6-969A-8EC71CA95DD6.png"
   },
   "JewelRed": {
     "DisplayName": "Jewel, Red",
@@ -38100,7 +42584,8 @@ STOCK_COMPONENT_INFO = {
       "refractive",
       "cymophane",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D9B07690-0031-11E6-8D9B-4850B620570A.png"
   },
   "JoystickBlack": {
     "DisplayName": "Joystick, Black",
@@ -38117,7 +42602,8 @@ STOCK_COMPONENT_INFO = {
       "parcheesi",
       "pachisi",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/104B5EA4-FA6A-11E0-A24D-4D3A60677055.png"
   },
   "JoystickBlue": {
     "DisplayName": "Joystick, Blue",
@@ -38134,7 +42620,8 @@ STOCK_COMPONENT_INFO = {
       "parcheesi",
       "pachisi",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/71F9E2F6-FA6A-11E0-A1DC-4D3A60677055.png"
   },
   "JoystickGreen": {
     "DisplayName": "Joystick, Green",
@@ -38151,7 +42638,8 @@ STOCK_COMPONENT_INFO = {
       "parcheesi",
       "pachisi",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B754D7DE-FA6A-11E0-A1DC-4D3A60677055.png"
   },
   "JoystickHeadlessBlack": {
     "DisplayName": "Joystick, Headless, Black",
@@ -38168,7 +42656,8 @@ STOCK_COMPONENT_INFO = {
       "parcheesi",
       "pachisi",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C86DDD7E-434A-11E8-89E3-A55F00BF2A04.png"
   },
   "JoystickOrange": {
     "DisplayName": "Joystick, Orange",
@@ -38185,7 +42674,8 @@ STOCK_COMPONENT_INFO = {
       "parcheesi",
       "pachisi",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1C513532-FA6C-11E0-A24D-4D3A60677055.png"
   },
   "JoystickPurple": {
     "DisplayName": "Joystick, Purple",
@@ -38202,7 +42692,8 @@ STOCK_COMPONENT_INFO = {
       "parcheesi",
       "pachisi",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/55BA4554-FA88-11E0-BEA9-4D3A60677055.png"
   },
   "JoystickRed": {
     "DisplayName": "Joystick, Red",
@@ -38219,7 +42710,8 @@ STOCK_COMPONENT_INFO = {
       "parcheesi",
       "pachisi",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4CF1F02E-FA89-11E0-87FE-4D3A60677055.png"
   },
   "JoystickWhite": {
     "DisplayName": "Joystick, White",
@@ -38236,7 +42728,8 @@ STOCK_COMPONENT_INFO = {
       "parcheesi",
       "pachisi",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E5EBDD24-A662-11E0-896A-3A7437D397EC.png"
   },
   "JoystickYellow": {
     "DisplayName": "Joystick, Yellow",
@@ -38253,7 +42746,8 @@ STOCK_COMPONENT_INFO = {
       "parcheesi",
       "pachisi",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2D0F364E-FA8A-11E0-87FE-4D3A60677055.png"
   },
   "JumboSleevePack(100)": {
     "DisplayName": "Jumbo Sleeve Pack (100)",
@@ -38276,7 +42770,8 @@ STOCK_COMPONENT_INFO = {
       "protective",
       "deck",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/591FA0E8-ABC2-11E8-8C69-21E5CE95AB04.png"
   },
   "KeycardFluorescentBlue": {
     "DisplayName": "Keycard, Fluorescent Blue",
@@ -38302,7 +42797,8 @@ STOCK_COMPONENT_INFO = {
       "fob",
       "code",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7E58AA64-5AED-11E9-80CB-3873A1F2CF41.png"
   },
   "KeycardFluorescentGreen": {
     "DisplayName": "Keycard, Fluorescent Green",
@@ -38328,7 +42824,8 @@ STOCK_COMPONENT_INFO = {
       "fob",
       "code",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/81561BF2-5AED-11E9-80CB-3773A1F2CF41.png"
   },
   "KeycardFluorescentRed": {
     "DisplayName": "Keycard, Fluorescent Red",
@@ -38354,7 +42851,8 @@ STOCK_COMPONENT_INFO = {
       "fob",
       "code",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/841540A2-5AED-11E9-9117-58B37E23BFD3.png"
   },
   "KeycardFluorescentYellow": {
     "DisplayName": "Keycard, Fluorescent Yellow",
@@ -38380,7 +42878,8 @@ STOCK_COMPONENT_INFO = {
       "fob",
       "code",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8756175A-5AED-11E9-80CB-4F73A1F2CF41.png"
   },
   "KittenBrown": {
     "DisplayName": "Kitten, Brown",
@@ -38405,7 +42904,8 @@ STOCK_COMPONENT_INFO = {
       "glaring",
       "meow",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2F6EB6AC-06E1-11E3-B2F8-344DF281FBB4.png"
   },
   "KittenWhite": {
     "DisplayName": "Kitten, White",
@@ -38430,7 +42930,8 @@ STOCK_COMPONENT_INFO = {
       "glaring",
       "meow",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/32F6AD84-06E1-11E3-8E42-344DF281FBB4.png"
   },
   "KittenWhitewithBrown": {
     "DisplayName": "Kitten, White with Brown ",
@@ -38455,7 +42956,8 @@ STOCK_COMPONENT_INFO = {
       "glaring",
       "meow",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/70E9A166-0932-11E3-8137-590A7740BD4B.png"
   },
   "KnightWolfribHistoricTB25": {
     "DisplayName": "Knight Wolfrib, Historic, TB25",
@@ -38467,7 +42969,8 @@ STOCK_COMPONENT_INFO = {
       "armored",
       "medieval",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C8FD7E38-6F16-11EC-9B55-87237DF5F7CD.png"
   },
   "KnightLanceSpaceTB25": {
     "DisplayName": "Knight, Lance, Space, TB25",
@@ -38476,7 +42979,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "697A80CE-992B-11ED-982E-BF8670F6595B",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0A3B87CE-9E95-11ED-88B5-FEB0CB83BB28.png"
   },
   "KoboldPickaxeFantasyTB25": {
     "DisplayName": "Kobold, Pickaxe, Fantasy, TB25",
@@ -38488,7 +42992,8 @@ STOCK_COMPONENT_INFO = {
       "reptilian",
       "miner",
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4CA50AB0-2E18-11ED-91FF-CA16D14F796C.png"
   },
   "KrampusFantasyTB25": {
     "DisplayName": "Krampus, Fantasy, TB25",
@@ -38505,7 +43010,8 @@ STOCK_COMPONENT_INFO = {
       "punishment",
       "bad kids",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5FB1ABDC-5217-11EC-889E-80DF94EE74C0.png"
   },
   "LabAssistant-CharacterMeeple": {
     "DisplayName": "Lab Assistant - Character Meeple",
@@ -38542,7 +43048,8 @@ STOCK_COMPONENT_INFO = {
       "immunologist",
       "phlebotomist",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/208602BA-8EBF-11E8-AE40-DCEE785DA8EE.png"
   },
   "LaboratoryBlack": {
     "DisplayName": "Laboratory, Black",
@@ -38555,7 +43062,8 @@ STOCK_COMPONENT_INFO = {
       "scientist",
       "research",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/47EB64A0-6353-11EC-9201-2AC514F325E3.png"
   },
   "LaboratoryBlue": {
     "DisplayName": "Laboratory, Blue",
@@ -38568,7 +43076,8 @@ STOCK_COMPONENT_INFO = {
       "scientist",
       "research",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/082F5462-61E0-11EC-BA8E-0E8103B57022.png"
   },
   "LaboratoryGreen": {
     "DisplayName": "Laboratory, Green",
@@ -38581,7 +43090,8 @@ STOCK_COMPONENT_INFO = {
       "scientist",
       "research",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F853E8DC-61DF-11EC-B122-BC4668FE145E.png"
   },
   "LaboratoryOrange": {
     "DisplayName": "Laboratory, Orange",
@@ -38594,7 +43104,8 @@ STOCK_COMPONENT_INFO = {
       "scientist",
       "research",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E6F3051E-61DF-11EC-BA8E-787F03B57022.png"
   },
   "LaboratoryPurple": {
     "DisplayName": "Laboratory, Purple",
@@ -38607,7 +43118,8 @@ STOCK_COMPONENT_INFO = {
       "scientist",
       "research",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F186DE6A-61DF-11EC-BA8E-B77F03B57022.png"
   },
   "LaboratoryRed": {
     "DisplayName": "Laboratory, Red",
@@ -38620,7 +43132,8 @@ STOCK_COMPONENT_INFO = {
       "scientist",
       "research",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/00B1285A-61E0-11EC-BA8E-848003B57022.png"
   },
   "LaboratoryWhite": {
     "DisplayName": "Laboratory, White",
@@ -38633,7 +43146,8 @@ STOCK_COMPONENT_INFO = {
       "scientist",
       "research",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AC0E9EAC-6CC7-11EC-8E50-AB56102E9259.png"
   },
   "LaboratoryYellow": {
     "DisplayName": "Laboratory, Yellow",
@@ -38646,7 +43160,8 @@ STOCK_COMPONENT_INFO = {
       "scientist",
       "research",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0E847806-61E0-11EC-B122-164868FE145E.png"
   },
   "LadyBugWood": {
     "DisplayName": "Lady Bug, Wood",
@@ -38667,7 +43182,8 @@ STOCK_COMPONENT_INFO = {
       "pest",
       "vermin",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A401972C-D5F6-11EB-8101-CC9DE882EB54.png"
   },
   "LampPost": {
     "DisplayName": "Lamp Post",
@@ -38679,7 +43195,8 @@ STOCK_COMPONENT_INFO = {
       "lantern",
       "lamppost",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/38D5DB5E-465A-11ED-881D-2A5F99F4B99C.png"
   },
   "LandmarkBase": {
     "DisplayName": "Landmark Base",
@@ -38721,7 +43238,8 @@ STOCK_COMPONENT_INFO = {
       "lighting",
       "lantern",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0D2B67FC-DE1D-11ED-9585-6514A7C33693.png"
   },
   "LargeStarGold": {
     "DisplayName": "Large Star, Gold",
@@ -38751,7 +43269,8 @@ STOCK_COMPONENT_INFO = {
       "polygram",
       "pentagram",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5DBBF39E-5BC2-11E9-B9E4-F3BCA1F2CF41.png"
   },
   "LargeStoutBox": {
     "DisplayName": "Large Stout Box",
@@ -38773,7 +43292,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "box",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6C2D4314-03AD-11E9-BFAA-DD341589B894.jpg"
   },
   "LargeTreasureChest(closed)": {
     "DisplayName": "Large Treasure Chest (closed)",
@@ -38797,7 +43317,8 @@ STOCK_COMPONENT_INFO = {
       "wealth",
       "riches",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2D409258-4560-11E7-BFDD-485F370CF66B.png"
   },
   "LeatherBlack": {
     "DisplayName": "Leather, Black",
@@ -38827,7 +43348,8 @@ STOCK_COMPONENT_INFO = {
       "trapper",
       "taxidermy",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C206FBF4-D5F6-11EB-ADF6-29808D8D6E47.png"
   },
   "LeatherBrown": {
     "DisplayName": "Leather, Brown",
@@ -38857,7 +43379,8 @@ STOCK_COMPONENT_INFO = {
       "trapper",
       "taxidermy",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D4521CF8-D5F6-11EB-ADF6-6E808D8D6E47.png"
   },
   "LeatherWhite": {
     "DisplayName": "Leather, White",
@@ -38887,7 +43410,8 @@ STOCK_COMPONENT_INFO = {
       "trapper",
       "taxidermy",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CC528772-D5F6-11EB-ADF6-52808D8D6E47.png"
   },
   "LichwithStaff": {
     "DisplayName": "Lich with Staff",
@@ -38921,7 +43445,8 @@ STOCK_COMPONENT_INFO = {
       "dota2",
       "karthus",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/24BE373E-4560-11E7-BFDD-135F370CF66B.png"
   },
   "LichFantasyTB25": {
     "DisplayName": "Lich, Fantasy, TB25",
@@ -38942,7 +43467,8 @@ STOCK_COMPONENT_INFO = {
       "soulless",
       "halloween",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EB918D66-3101-11EC-9914-9E6DBE85CC60.png"
   },
   "LightBulbBlue": {
     "DisplayName": "Light Bulb, Blue",
@@ -38975,7 +43501,8 @@ STOCK_COMPONENT_INFO = {
       "fluorescent",
       "langmuir",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/93B2DC7E-5A14-11E9-9D42-6AE37E23BFD3.png"
   },
   "LightBulbGold": {
     "DisplayName": "Light Bulb, Gold",
@@ -39008,7 +43535,8 @@ STOCK_COMPONENT_INFO = {
       "fluorescent",
       "langmuir",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/21C43790-5A17-11E9-9D42-07E77E23BFD3.png"
   },
   "LightBulbGreen": {
     "DisplayName": "Light Bulb, Green",
@@ -39041,7 +43569,8 @@ STOCK_COMPONENT_INFO = {
       "fluorescent",
       "langmuir",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/934D5C1C-5A16-11E9-9D42-2AE67E23BFD3.png"
   },
   "LightBulbSalmon": {
     "DisplayName": "Light Bulb, Salmon",
@@ -39074,7 +43603,8 @@ STOCK_COMPONENT_INFO = {
       "fluorescent",
       "langmuir",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/48872B1E-5A15-11E9-9D42-4CE47E23BFD3.png"
   },
   "LightBulbTaupe": {
     "DisplayName": "Light Bulb, Taupe",
@@ -39107,7 +43637,8 @@ STOCK_COMPONENT_INFO = {
       "fluorescent",
       "langmuir",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DEE14DC2-5A17-11E9-9D42-08E87E23BFD3.png"
   },
   "LightningBoltBlack": {
     "DisplayName": "Lightning Bolt, Black",
@@ -39165,7 +43696,8 @@ STOCK_COMPONENT_INFO = {
       "power ranger",
       "harry potter",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1D4BADDE-FB16-11ED-B9C1-0D2E96CFC7D9.png"
   },
   "LightningBoltBlue": {
     "DisplayName": "Lightning Bolt, Blue",
@@ -39223,7 +43755,8 @@ STOCK_COMPONENT_INFO = {
       "power ranger",
       "harry potter",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/347CC90C-FB16-11ED-87B3-F176EA48E49E.png"
   },
   "LightningBoltGreen": {
     "DisplayName": "Lightning Bolt, Green",
@@ -39281,7 +43814,8 @@ STOCK_COMPONENT_INFO = {
       "power ranger",
       "harry potter",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0C1138E0-FB16-11ED-81DA-9BB4A755A3EB.png"
   },
   "LightningBoltLargeOrange": {
     "DisplayName": "Lightning Bolt, Large, Orange",
@@ -39339,7 +43873,8 @@ STOCK_COMPONENT_INFO = {
       "power ranger",
       "harry potter",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/72DFF2CC-5E67-11EF-9D69-A7C552DCF4F6.png"
   },
   "LightningBoltOrange": {
     "DisplayName": "Lightning Bolt, Orange",
@@ -39397,7 +43932,8 @@ STOCK_COMPONENT_INFO = {
       "power ranger",
       "harry potter",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/24E2D6D0-FB16-11ED-81DA-43B6A755A3EB.png"
   },
   "LightningBoltPurple": {
     "DisplayName": "Lightning Bolt, Purple",
@@ -39455,7 +43991,8 @@ STOCK_COMPONENT_INFO = {
       "power ranger",
       "harry potter",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3F462AF4-FB16-11ED-B9C1-252F96CFC7D9.png"
   },
   "LightningBoltRed": {
     "DisplayName": "Lightning Bolt, Red",
@@ -39513,7 +44050,8 @@ STOCK_COMPONENT_INFO = {
       "power ranger",
       "harry potter",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/475FFE40-FB16-11ED-87B3-7677EA48E49E.png"
   },
   "LightningBoltWhite": {
     "DisplayName": "Lightning Bolt, White",
@@ -39571,7 +44109,8 @@ STOCK_COMPONENT_INFO = {
       "power ranger",
       "harry potter",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/15A961CA-FB16-11ED-B9C1-152E96CFC7D9.png"
   },
   "LightningBoltYellow": {
     "DisplayName": "Lightning Bolt, Yellow",
@@ -39629,7 +44168,8 @@ STOCK_COMPONENT_INFO = {
       "power ranger",
       "harry potter",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2F9B1D80-FB16-11ED-B9C1-A42E96CFC7D9.png"
   },
   "LimoBlue": {
     "DisplayName": "Limo, Blue",
@@ -39651,7 +44191,8 @@ STOCK_COMPONENT_INFO = {
       "chauffeur",
       "wealth",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FC4B6CE6-D5F6-11EB-ADF6-F4808D8D6E47.png"
   },
   "LimoGreen": {
     "DisplayName": "Limo, Green",
@@ -39673,7 +44214,8 @@ STOCK_COMPONENT_INFO = {
       "chauffeur",
       "wealth",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5A76B38-D5F6-11EB-8101-A99EE882EB54.png"
   },
   "LimoRed": {
     "DisplayName": "Limo, Red",
@@ -39695,7 +44237,8 @@ STOCK_COMPONENT_INFO = {
       "chauffeur",
       "wealth",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E6CBCC4E-D5F6-11EB-ADF6-84808D8D6E47.png"
   },
   "LimoYellow": {
     "DisplayName": "Limo, Yellow",
@@ -39717,7 +44260,8 @@ STOCK_COMPONENT_INFO = {
       "chauffeur",
       "wealth",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EDAB75DC-D5F6-11EB-ADF6-A5808D8D6E47.png"
   },
   "Lion": {
     "DisplayName": "Lion",
@@ -39744,7 +44288,8 @@ STOCK_COMPONENT_INFO = {
       "tigon",
       "mane",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5DA3F0C2-1A57-11EC-ADD7-A57B5853E446.png"
   },
   "LizardManonRockThrone": {
     "DisplayName": "Lizard Man on Rock Throne",
@@ -39767,7 +44312,8 @@ STOCK_COMPONENT_INFO = {
       "reptilian",
       "zuckerburg",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/72D2A7C2-102E-11E8-9265-AFFF93A6FE1D.png"
   },
   "LizardManwithWarClubandShield": {
     "DisplayName": "Lizard Man with War Club and Shield",
@@ -39790,7 +44336,8 @@ STOCK_COMPONENT_INFO = {
       "reptilian",
       "zuckerburg",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/23C51222-12D2-11E8-906D-660B94A6FE1D.png"
   },
   "LizardmanJavelinFantasyTB25": {
     "DisplayName": "Lizardman, Javelin, Fantasy, TB25",
@@ -39805,7 +44352,8 @@ STOCK_COMPONENT_INFO = {
       "herpetology",
       "illuminati",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DFE77216-9F0E-11EC-A7FE-7383E4848153.png"
   },
   "LocomotiveTrainEngineBlack": {
     "DisplayName": "Locomotive Train Engine, Black",
@@ -39821,7 +44369,8 @@ STOCK_COMPONENT_INFO = {
       "locomotive",
       "diesel",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ACC30FB8-6669-11E7-A50A-EF3623D28831.png"
   },
   "LocomotiveTrainEngineGreen": {
     "DisplayName": "Locomotive Train Engine, Green",
@@ -39837,7 +44386,8 @@ STOCK_COMPONENT_INFO = {
       "locomotive",
       "diesel",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AC587612-6669-11E7-A50A-D23623D28831.png"
   },
   "LocomotiveTrainEngineLightBlue": {
     "DisplayName": "Locomotive Train Engine, Light Blue",
@@ -39853,7 +44403,8 @@ STOCK_COMPONENT_INFO = {
       "locomotive",
       "diesel",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AD6DF478-6669-11E7-86C9-B7698701372A.png"
   },
   "LocomotiveTrainEngineOrange": {
     "DisplayName": "Locomotive Train Engine, Orange",
@@ -39869,7 +44420,8 @@ STOCK_COMPONENT_INFO = {
       "locomotive",
       "diesel",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ADD41C4E-6669-11E7-86C9-9B698701372A.png"
   },
   "LocomotiveTrainEngineTan": {
     "DisplayName": "Locomotive Train Engine, Tan",
@@ -39885,7 +44437,8 @@ STOCK_COMPONENT_INFO = {
       "locomotive",
       "diesel",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AD191494-6669-11E7-A50A-E53623D28831.png"
   },
   "LocomotiveBlack": {
     "DisplayName": "Locomotive, Black",
@@ -39898,7 +44451,8 @@ STOCK_COMPONENT_INFO = {
       "transportation",
       "railway",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/03D4035E-74E0-11ED-B27B-C56C43694036.png"
   },
   "LocomotiveBlue": {
     "DisplayName": "Locomotive, Blue",
@@ -39911,7 +44465,8 @@ STOCK_COMPONENT_INFO = {
       "transportation",
       "railway",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0A532BB0-74E0-11ED-BB94-3F7425C4E336.png"
   },
   "LocomotiveGreen": {
     "DisplayName": "Locomotive, Green",
@@ -39924,7 +44479,8 @@ STOCK_COMPONENT_INFO = {
       "transportation",
       "railway",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0E07453E-74E0-11ED-B27B-9C6D43694036.png"
   },
   "LocomotiveOrange": {
     "DisplayName": "Locomotive, Orange",
@@ -39937,7 +44493,8 @@ STOCK_COMPONENT_INFO = {
       "transportation",
       "railway",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/14C7F04E-74E0-11ED-BB94-977425C4E336.png"
   },
   "LocomotivePurple": {
     "DisplayName": "Locomotive, Purple",
@@ -39950,7 +44507,8 @@ STOCK_COMPONENT_INFO = {
       "transportation",
       "railway",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1E7A1D7E-74E0-11ED-B27B-CA6D43694036.png"
   },
   "LocomotiveRed": {
     "DisplayName": "Locomotive, Red",
@@ -39963,7 +44521,8 @@ STOCK_COMPONENT_INFO = {
       "transportation",
       "railway",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/21B08582-74E0-11ED-BB94-477525C4E336.png"
   },
   "LocomotiveWhite": {
     "DisplayName": "Locomotive, White",
@@ -39976,7 +44535,8 @@ STOCK_COMPONENT_INFO = {
       "transportation",
       "railway",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2680324C-74E0-11ED-B27B-886E43694036.png"
   },
   "LocomotiveYellow": {
     "DisplayName": "Locomotive, Yellow",
@@ -39989,7 +44549,8 @@ STOCK_COMPONENT_INFO = {
       "transportation",
       "railway",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2D051E52-74E0-11ED-B27B-B76E43694036.png"
   },
   "LookoutBlue": {
     "DisplayName": "Lookout, Blue",
@@ -40005,7 +44566,8 @@ STOCK_COMPONENT_INFO = {
       "explorer",
       "observer",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1FE1F6DA-41A3-11EC-B092-CBC87CC35D4C.png"
   },
   "LookoutGreen": {
     "DisplayName": "Lookout, Green",
@@ -40021,7 +44583,8 @@ STOCK_COMPONENT_INFO = {
       "explorer",
       "observer",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3B3A58A0-41A3-11EC-B092-F6C87CC35D4C.png"
   },
   "LookoutOrange": {
     "DisplayName": "Lookout, Orange",
@@ -40037,7 +44600,8 @@ STOCK_COMPONENT_INFO = {
       "explorer",
       "observer",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/35A94AEA-41A3-11EC-877A-B3495E0D62FB.png"
   },
   "LookoutRed": {
     "DisplayName": "Lookout, Red",
@@ -40053,7 +44617,8 @@ STOCK_COMPONENT_INFO = {
       "explorer",
       "observer",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2D15D858-41A3-11EC-877A-A6495E0D62FB.png"
   },
   "LookoutYellow": {
     "DisplayName": "Lookout, Yellow",
@@ -40069,7 +44634,8 @@ STOCK_COMPONENT_INFO = {
       "explorer",
       "observer",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4E0378C2-41A3-11EC-877A-DA495E0D62FB.png"
   },
   "Maasai-CharacterMeeple": {
     "DisplayName": "Maasai - Character Meeple",
@@ -40090,7 +44656,8 @@ STOCK_COMPONENT_INFO = {
       "traditional",
       "traditions",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/30B8F80E-8EBF-11E8-8D59-3C9FB70C97C7.png"
   },
   "MafiosoBurntOrange": {
     "DisplayName": "Mafioso, Burnt Orange",
@@ -40115,7 +44682,8 @@ STOCK_COMPONENT_INFO = {
       "bootlegging",
       "syndicate",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AF96E3A2-43CF-11EC-A6FE-8D612B523E0D.png"
   },
   "MafiosoGreen": {
     "DisplayName": "Mafioso, Green",
@@ -40140,7 +44708,8 @@ STOCK_COMPONENT_INFO = {
       "bootlegging",
       "syndicate",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A8B6EB7C-43CF-11EC-A294-E1DA83417843.png"
   },
   "MafiosoPurple": {
     "DisplayName": "Mafioso, Purple",
@@ -40165,7 +44734,8 @@ STOCK_COMPONENT_INFO = {
       "bootlegging",
       "syndicate",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B813C0AE-43CF-11EC-A294-1CDB83417843.png"
   },
   "MafiosoRed": {
     "DisplayName": "Mafioso, Red",
@@ -40190,7 +44760,8 @@ STOCK_COMPONENT_INFO = {
       "bootlegging",
       "syndicate",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BEC133E6-43CF-11EC-A6FE-AC612B523E0D.png"
   },
   "MafiosoYellow": {
     "DisplayName": "Mafioso, Yellow",
@@ -40215,7 +44786,8 @@ STOCK_COMPONENT_INFO = {
       "bootlegging",
       "syndicate",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C86EAB3A-43CF-11EC-A294-41DB83417843.png"
   },
   "MagnifyingGlass5X": {
     "DisplayName": "Magnifying Glass, 5X",
@@ -40240,7 +44812,8 @@ STOCK_COMPONENT_INFO = {
       "scientific",
       "research",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/79019FCA-F704-11EB-AAD0-23F99FDB2463.png"
   },
   "MaleFarmerPurple": {
     "DisplayName": "Male Farmer, Purple",
@@ -40292,7 +44865,8 @@ STOCK_COMPONENT_INFO = {
       "ufologist",
       "alien",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3A14AAD8-8EBF-11E8-8D59-519FB70C97C7.png"
   },
   "ManAmericanRevolutionTB15Black": {
     "DisplayName": "Man, American Revolution, TB15, Black",
@@ -40307,7 +44881,8 @@ STOCK_COMPONENT_INFO = {
       "american",
       "british",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C90F6F74-6351-11EC-9201-9FB314F325E3.png"
   },
   "ManAmericanRevolutionTB15Blue": {
     "DisplayName": "Man, American Revolution, TB15, Blue",
@@ -40322,7 +44897,8 @@ STOCK_COMPONENT_INFO = {
       "american",
       "british",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4E9938E2-6CC0-11EC-AA0B-6877F74A7BBA.png"
   },
   "ManAmericanRevolutionTB15Green": {
     "DisplayName": "Man, American Revolution, TB15, Green",
@@ -40337,7 +44913,8 @@ STOCK_COMPONENT_INFO = {
       "american",
       "british",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3E2F5158-6CC0-11EC-8E50-1F78102E9259.png"
   },
   "ManAmericanRevolutionTB15Orange": {
     "DisplayName": "Man, American Revolution, TB15, Orange",
@@ -40352,7 +44929,8 @@ STOCK_COMPONENT_INFO = {
       "american",
       "british",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8A74BD3C-6351-11EC-BCFF-256503B57022.png"
   },
   "ManAmericanRevolutionTB15Purple": {
     "DisplayName": "Man, American Revolution, TB15, Purple",
@@ -40367,7 +44945,8 @@ STOCK_COMPONENT_INFO = {
       "american",
       "british",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2DF12CC6-6CC0-11EC-8E50-5B77102E9259.png"
   },
   "ManAmericanRevolutionTB15Red": {
     "DisplayName": "Man, American Revolution, TB15, Red",
@@ -40382,7 +44961,8 @@ STOCK_COMPONENT_INFO = {
       "american",
       "british",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0A38F23C-6CC0-11EC-AA0B-3D74F74A7BBA.png"
   },
   "ManAmericanRevolutionTB15White": {
     "DisplayName": "Man, American Revolution, TB15, White",
@@ -40397,7 +44977,8 @@ STOCK_COMPONENT_INFO = {
       "american",
       "british",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/866DDDBA-6CD2-11EC-AA0B-EEDEF74A7BBA.png"
   },
   "ManAmericanRevolutionTB15Yellow": {
     "DisplayName": "Man, American Revolution, TB15, Yellow",
@@ -40412,7 +44993,8 @@ STOCK_COMPONENT_INFO = {
       "american",
       "british",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D21FDA4A-6351-11EC-BCFF-B76803B57022.png"
   },
   "ManIroquoisTB15Black": {
     "DisplayName": "Man, Iroquois, TB15, Black",
@@ -40423,7 +45005,8 @@ STOCK_COMPONENT_INFO = {
       "native american",
       "indian,",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F2F8AEC4-C830-11EC-B769-BC9B6EB7A829.png"
   },
   "ManIroquoisTB15Blue": {
     "DisplayName": "Man, Iroquois, TB15, Blue",
@@ -40434,7 +45017,8 @@ STOCK_COMPONENT_INFO = {
       "native american",
       "indian,",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6E709376-C833-11EC-B769-D53B6EB7A829.png"
   },
   "ManIroquoisTB15Green": {
     "DisplayName": "Man, Iroquois, TB15, Green",
@@ -40445,7 +45029,8 @@ STOCK_COMPONENT_INFO = {
       "native american",
       "indian,",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/52110044-C833-11EC-B769-EB396EB7A829.png"
   },
   "ManIroquoisTB15Orange": {
     "DisplayName": "Man, Iroquois, TB15, Orange",
@@ -40456,7 +45041,8 @@ STOCK_COMPONENT_INFO = {
       "native american",
       "indian,",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2F91E27C-C833-11EC-8BBA-0BA4448F12DC.png"
   },
   "ManIroquoisTB15Purple": {
     "DisplayName": "Man, Iroquois, TB15, Purple",
@@ -40467,7 +45053,8 @@ STOCK_COMPONENT_INFO = {
       "native american",
       "indian,",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/387B475C-C833-11EC-8BBA-08A5448F12DC.png"
   },
   "ManIroquoisTB15Red": {
     "DisplayName": "Man, Iroquois, TB15, Red",
@@ -40478,7 +45065,8 @@ STOCK_COMPONENT_INFO = {
       "native american",
       "indian,",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/653A0B2A-C833-11EC-8BBA-95A7448F12DC.png"
   },
   "ManIroquoisTB15White": {
     "DisplayName": "Man, Iroquois, TB15, White",
@@ -40489,7 +45077,8 @@ STOCK_COMPONENT_INFO = {
       "native american",
       "indian,",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3F46ADD8-C833-11EC-B769-E8386EB7A829.png"
   },
   "ManIroquoisTB15Yellow": {
     "DisplayName": "Man, Iroquois, TB15, Yellow",
@@ -40500,7 +45089,8 @@ STOCK_COMPONENT_INFO = {
       "native american",
       "indian,",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/48F0686A-C833-11EC-B769-BC396EB7A829.png"
   },
   "ManModernChainsawTB25": {
     "DisplayName": "Man, Modern, Chainsaw, TB25",
@@ -40512,7 +45102,8 @@ STOCK_COMPONENT_INFO = {
       "logger",
       "lumberjack",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D27BF7E4-6CC5-11EC-AA0B-7DBBF74A7BBA.png"
   },
   "ManModernFlashlightTB25": {
     "DisplayName": "Man, Modern, Flashlight, TB25",
@@ -40523,7 +45114,8 @@ STOCK_COMPONENT_INFO = {
       "post-apocalyptic",
       "butler",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/18B526A4-6CC6-11EC-8E50-AF42102E9259.png"
   },
   "ManModernShotgunTB25": {
     "DisplayName": "Man, Modern, Shotgun, TB25",
@@ -40535,7 +45127,8 @@ STOCK_COMPONENT_INFO = {
       "logger",
       "hitman",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/172A4838-6CC5-11EC-AA0B-44B2F74A7BBA.png"
   },
   "ManModernTB15Black": {
     "DisplayName": "Man, Modern, TB15, Black",
@@ -40554,7 +45147,8 @@ STOCK_COMPONENT_INFO = {
       "modern",
       "contemporary",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2865F62E-1CBB-11EC-9177-AC004B5CF84F.png"
   },
   "ManModernTB15Blue": {
     "DisplayName": "Man, Modern, TB15, Blue",
@@ -40573,7 +45167,8 @@ STOCK_COMPONENT_INFO = {
       "modern",
       "contemporary",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2FCB5814-1CBB-11EC-9D40-5B985853E446.png"
   },
   "ManModernTB15Green": {
     "DisplayName": "Man, Modern, TB15, Green",
@@ -40592,7 +45187,8 @@ STOCK_COMPONENT_INFO = {
       "modern",
       "contemporary",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/33141916-1CBB-11EC-9D40-5B985853E446.png"
   },
   "ManModernTB15Orange": {
     "DisplayName": "Man, Modern, TB15, Orange",
@@ -40611,7 +45207,8 @@ STOCK_COMPONENT_INFO = {
       "modern",
       "contemporary",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3F980F76-1CBB-11EC-9D40-72985853E446.png"
   },
   "ManModernTB15Purple": {
     "DisplayName": "Man, Modern, TB15, Purple",
@@ -40630,7 +45227,8 @@ STOCK_COMPONENT_INFO = {
       "modern",
       "contemporary",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/433B07B4-1CBB-11EC-9177-D8004B5CF84F.png"
   },
   "ManModernTB15Red": {
     "DisplayName": "Man, Modern, TB15, Red",
@@ -40649,7 +45247,8 @@ STOCK_COMPONENT_INFO = {
       "modern",
       "contemporary",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4AA19C16-1CBB-11EC-9D40-86985853E446.png"
   },
   "ManModernTB15White": {
     "DisplayName": "Man, Modern, TB15, White",
@@ -40668,7 +45267,8 @@ STOCK_COMPONENT_INFO = {
       "modern",
       "contemporary",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4F64A55E-1CBB-11EC-9177-27014B5CF84F.png"
   },
   "ManModernTB15Yellow": {
     "DisplayName": "Man, Modern, TB15, Yellow",
@@ -40687,7 +45287,8 @@ STOCK_COMPONENT_INFO = {
       "modern",
       "contemporary",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/555FDE1A-1CBB-11EC-9177-39014B5CF84F.png"
   },
   "ManPostApocalypseArcherTB25": {
     "DisplayName": "Man, Post Apocalypse, Archer, TB25",
@@ -40700,7 +45301,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1863B00A-E38E-11EC-A245-68B6E1809829.png"
   },
   "ManPostApocalypseDualSMGTB25": {
     "DisplayName": "Man, Post Apocalypse, Dual SMG, TB25",
@@ -40713,7 +45315,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout,",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0C61A896-D0B7-11EC-8240-270A3B7A0FE4.png"
   },
   "ManPostApocalypseHammerTB25": {
     "DisplayName": "Man, Post Apocalypse, Hammer, TB25",
@@ -40726,7 +45329,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/42FD9360-D0B7-11EC-A767-621FD858682F.png"
   },
   "ManPostApocalypseTB15Black": {
     "DisplayName": "Man, Post Apocalypse, TB15, Black",
@@ -40739,7 +45343,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E612DEE4-C837-11EC-9900-9E716EB7A829.png"
   },
   "ManPostApocalypseTB15Blue": {
     "DisplayName": "Man, Post Apocalypse, TB15, Blue",
@@ -40752,7 +45357,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D7A64DF0-C837-11EC-9900-BC706EB7A829.png"
   },
   "ManPostApocalypseTB15Green": {
     "DisplayName": "Man, Post Apocalypse, TB15, Green",
@@ -40765,7 +45371,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BEFFA946-CA5C-11EC-9226-4B9C448F12DC.png"
   },
   "ManPostApocalypseTB15Orange": {
     "DisplayName": "Man, Post Apocalypse, TB15, Orange",
@@ -40778,7 +45385,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9FC4176A-CA5C-11EC-9226-649A448F12DC.png"
   },
   "ManPostApocalypseTB15Purple": {
     "DisplayName": "Man, Post Apocalypse, TB15, Purple",
@@ -40791,7 +45399,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A774A3E4-CA5C-11EC-B4F2-033B6EB7A829.png"
   },
   "ManPostApocalypseTB15Red": {
     "DisplayName": "Man, Post Apocalypse, TB15, Red",
@@ -40804,7 +45413,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B13F93AC-CA5C-11EC-B4F2-AE3B6EB7A829.png"
   },
   "ManPostApocalypseTB15White": {
     "DisplayName": "Man, Post Apocalypse, TB15, White",
@@ -40817,7 +45427,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/518A9A1E-CA5D-11EC-9226-0CA3448F12DC.png"
   },
   "ManPostApocalypseTB15Yellow": {
     "DisplayName": "Man, Post Apocalypse, TB15, Yellow",
@@ -40830,7 +45441,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9892525E-CA5C-11EC-9226-009A448F12DC.png"
   },
   "ManSamuraiArmorTB15Black": {
     "DisplayName": "Man, Samurai Armor, TB15, Black",
@@ -40845,7 +45457,8 @@ STOCK_COMPONENT_INFO = {
       "swords",
       "sandals",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6D3B9DD8-83BA-11EC-AD26-80208E9C19B6.png"
   },
   "ManSamuraiArmorTB15Blue": {
     "DisplayName": "Man, Samurai Armor, TB15, Blue",
@@ -40860,7 +45473,8 @@ STOCK_COMPONENT_INFO = {
       "swords",
       "sandals",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8FED5722-83BA-11EC-AD26-74228E9C19B6.png"
   },
   "ManSamuraiArmorTB15Green": {
     "DisplayName": "Man, Samurai Armor, TB15, Green",
@@ -40875,7 +45489,8 @@ STOCK_COMPONENT_INFO = {
       "swords",
       "sandals",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AD830264-83BA-11EC-9C92-EB65C90CCBA6.png"
   },
   "ManSamuraiArmorTB15Orange": {
     "DisplayName": "Man, Samurai Armor, TB15, Orange",
@@ -40890,7 +45505,8 @@ STOCK_COMPONENT_INFO = {
       "swords",
       "sandals",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/74F6B904-83BA-11EC-AD26-93218E9C19B6.png"
   },
   "ManSamuraiArmorTB15Purple": {
     "DisplayName": "Man, Samurai Armor, TB15, Purple",
@@ -40905,7 +45521,8 @@ STOCK_COMPONENT_INFO = {
       "swords",
       "sandals",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/877C90C6-83BA-11EC-AD26-8D228E9C19B6.png"
   },
   "ManSamuraiArmorTB15Red": {
     "DisplayName": "Man, Samurai Armor, TB15, Red",
@@ -40920,7 +45537,8 @@ STOCK_COMPONENT_INFO = {
       "swords",
       "sandals",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/99C0C8E2-83BA-11EC-9C92-1A65C90CCBA6.png"
   },
   "ManSamuraiArmorTB15White": {
     "DisplayName": "Man, Samurai Armor, TB15, White",
@@ -40935,7 +45553,8 @@ STOCK_COMPONENT_INFO = {
       "swords",
       "sandals",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A4ABF9DE-83BA-11EC-9C92-9565C90CCBA6.png"
   },
   "ManSamuraiArmorTB15Yellow": {
     "DisplayName": "Man, Samurai Armor, TB15, Yellow",
@@ -40950,7 +45569,8 @@ STOCK_COMPONENT_INFO = {
       "swords",
       "sandals",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7EE46830-83BA-11EC-9C92-E8E2C90CCBA6.png"
   },
   "MarkerDry-EraseFineBlack": {
     "DisplayName": "Marker, Dry-Erase, Fine, Black",
@@ -40971,7 +45591,8 @@ STOCK_COMPONENT_INFO = {
       "koki",
       "sharpie",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CF6AB262-1039-11E8-9DD4-0C2A94A6FE1D.png"
   },
   "MarkerDry-EraseFineBlue": {
     "DisplayName": "Marker, Dry-Erase, Fine, Blue",
@@ -40992,7 +45613,8 @@ STOCK_COMPONENT_INFO = {
       "koki",
       "sharpie",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/49EB5EC0-DD52-11ED-A93F-F3586406D37C.png"
   },
   "MarkerDry-EraseFineGreen": {
     "DisplayName": "Marker, Dry-Erase, Fine, Green",
@@ -41013,7 +45635,8 @@ STOCK_COMPONENT_INFO = {
       "koki",
       "sharpie",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3F0C347A-DD52-11ED-A93F-FE586406D37C.png"
   },
   "MarkerDry-EraseFineRed": {
     "DisplayName": "Marker, Dry-Erase, Fine, Red",
@@ -41034,7 +45657,8 @@ STOCK_COMPONENT_INFO = {
       "koki",
       "sharpie",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1FD8E558-DD52-11ED-A93F-32576406D37C.png"
   },
   "MarketplaceBlack": {
     "DisplayName": "Marketplace, Black",
@@ -41047,7 +45671,8 @@ STOCK_COMPONENT_INFO = {
       "moroccan",
       "merchants",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/56BC7858-D8D1-11ED-ADE6-0586FFDE5649.png"
   },
   "MarketplaceBlue": {
     "DisplayName": "Marketplace, Blue",
@@ -41060,7 +45685,8 @@ STOCK_COMPONENT_INFO = {
       "moroccan",
       "merchants",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6C4D346E-D8D1-11ED-ADE6-5087FFDE5649.png"
   },
   "MarketplaceGreen": {
     "DisplayName": "Marketplace, Green",
@@ -41073,7 +45699,8 @@ STOCK_COMPONENT_INFO = {
       "moroccan",
       "merchants",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/95BD147C-D8D1-11ED-ADE6-0E89FFDE5649.png"
   },
   "MarketplaceOrange": {
     "DisplayName": "Marketplace, Orange",
@@ -41086,7 +45713,8 @@ STOCK_COMPONENT_INFO = {
       "moroccan",
       "merchants",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4DA6A204-DFA0-11ED-9E68-5270FFDE5649.png"
   },
   "MarketplacePurple": {
     "DisplayName": "Marketplace, Purple",
@@ -41099,7 +45727,8 @@ STOCK_COMPONENT_INFO = {
       "moroccan",
       "merchants",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8DE03892-D8D1-11ED-8947-774193BD3DC0.png"
   },
   "MarketplaceRed": {
     "DisplayName": "Marketplace, Red",
@@ -41112,7 +45741,8 @@ STOCK_COMPONENT_INFO = {
       "moroccan",
       "merchants",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7E9BE624-D8D1-11ED-8947-E04093BD3DC0.png"
   },
   "MarketplaceWhite": {
     "DisplayName": "Marketplace, White",
@@ -41125,7 +45755,8 @@ STOCK_COMPONENT_INFO = {
       "moroccan",
       "merchants",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/76085574-D8D1-11ED-ADE6-DA87FFDE5649.png"
   },
   "MarketplaceYellow": {
     "DisplayName": "Marketplace, Yellow",
@@ -41138,7 +45769,8 @@ STOCK_COMPONENT_INFO = {
       "moroccan",
       "merchants",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ECED32D0-D8D2-11ED-8947-0B5293BD3DC0.png"
   },
   "MechTB15Black": {
     "DisplayName": "Mech, TB15, Black",
@@ -41152,7 +45784,8 @@ STOCK_COMPONENT_INFO = {
       "walker",
       "sci-fi",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F169CDCC-9F13-11EC-A7FE-AFC2E4848153.png"
   },
   "MechTB15Blue": {
     "DisplayName": "Mech, TB15, Blue",
@@ -41166,7 +45799,8 @@ STOCK_COMPONENT_INFO = {
       "walker",
       "sci-fi",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FB7ACF50-9F13-11EC-99AF-1C5966E85691.png"
   },
   "MechTB15Green": {
     "DisplayName": "Mech, TB15, Green",
@@ -41180,7 +45814,8 @@ STOCK_COMPONENT_INFO = {
       "walker",
       "sci-fi",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01E4172A-9F14-11EC-99AF-1A5966E85691.png"
   },
   "MechTB15Orange": {
     "DisplayName": "Mech, TB15, Orange",
@@ -41194,7 +45829,8 @@ STOCK_COMPONENT_INFO = {
       "walker",
       "sci-fi",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F4F20400-9F13-11EC-A7FE-ACC2E4848153.png"
   },
   "MechTB15Purple": {
     "DisplayName": "Mech, TB15, Purple",
@@ -41208,7 +45844,8 @@ STOCK_COMPONENT_INFO = {
       "walker",
       "sci-fi",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0507FB06-9F14-11EC-A7FE-6BC3E4848153.png"
   },
   "MechTB15Red": {
     "DisplayName": "Mech, TB15, Red",
@@ -41222,7 +45859,8 @@ STOCK_COMPONENT_INFO = {
       "walker",
       "sci-fi",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F7A5E784-9F13-11EC-99AF-935866E85691.png"
   },
   "MechTB15White": {
     "DisplayName": "Mech, TB15, White",
@@ -41236,7 +45874,8 @@ STOCK_COMPONENT_INFO = {
       "walker",
       "sci-fi",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2F7EFCCC-9F14-11EC-A7FE-85C5E4848153.png"
   },
   "MechTB15Yellow": {
     "DisplayName": "Mech, TB15, Yellow",
@@ -41250,7 +45889,8 @@ STOCK_COMPONENT_INFO = {
       "walker",
       "sci-fi",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EEB4C7D0-9F13-11EC-99AF-695866E85691.png"
   },
   "Medic-CharacterMeeple": {
     "DisplayName": "Medic - Character Meeple",
@@ -41270,7 +45910,8 @@ STOCK_COMPONENT_INFO = {
       "medicine",
       "pediatrician",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/67F28894-8EBF-11E8-AE40-6DEF785DA8EE.png"
   },
   "MedicFantasyTB25": {
     "DisplayName": "Medic, Fantasy, TB25",
@@ -41286,7 +45927,8 @@ STOCK_COMPONENT_INFO = {
       "potions",
       "brewing",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EC57FE4E-6F16-11EC-9B55-64257DF5F7CD.png"
   },
   "MedievalCoin2": {
     "DisplayName": "Medieval Coin 2",
@@ -41345,7 +45987,8 @@ STOCK_COMPONENT_INFO = {
       "pound",
       "pfund",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/14718642-938C-11E5-A4A4-8C1F59F718D7.png"
   },
   "MedievalCoin20": {
     "DisplayName": "Medieval Coin 20",
@@ -41404,7 +46047,8 @@ STOCK_COMPONENT_INFO = {
       "pound",
       "pfund",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/144F4FA0-938C-11E5-86AF-27703A00C85C.png"
   },
   "MediumStoutBoxBlank": {
     "DisplayName": "Medium Stout Box, Blank",
@@ -41426,7 +46070,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "box",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3CBEE1FE-2A41-11E9-A40F-9727E0AC8D83.png"
   },
   "MeepleAcrylicOpaqueBlack": {
     "DisplayName": "Meeple, Acrylic, Opaque, Black",
@@ -41446,7 +46091,8 @@ STOCK_COMPONENT_INFO = {
       "carcassonne",
       "agricola",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DC43F33A-3F51-11E8-9E36-6B711EA37D3B.png"
   },
   "MeepleAcrylicOpaqueGold": {
     "DisplayName": "Meeple, Acrylic, Opaque, Gold",
@@ -41466,7 +46112,8 @@ STOCK_COMPONENT_INFO = {
       "carcassonne",
       "agricola",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8D993BDC-A6FD-11E8-B26C-24AFFC81399E.png"
   },
   "MeepleAcrylicOpaqueSilver": {
     "DisplayName": "Meeple, Acrylic, Opaque, Silver",
@@ -41486,7 +46133,8 @@ STOCK_COMPONENT_INFO = {
       "carcassonne",
       "agricola",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/86F2AB74-A6FD-11E8-B26C-1FAFFC81399E.png"
   },
   "MeepleAcrylicOpaqueWhite": {
     "DisplayName": "Meeple, Acrylic, Opaque, White",
@@ -41506,7 +46154,8 @@ STOCK_COMPONENT_INFO = {
       "carcassonne",
       "agricola",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3DCEB8A6-4326-11E8-89B9-9EB005EDFE97.png"
   },
   "MeepleAcrylicTransparentBlack": {
     "DisplayName": "Meeple, Acrylic, Transparent, Black",
@@ -41526,7 +46175,8 @@ STOCK_COMPONENT_INFO = {
       "carcassonne",
       "agricola",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3BE92948-48A5-11E8-8D8F-E69A1EA37D3B.png"
   },
   "MeepleAcrylicTransparentBlue": {
     "DisplayName": "Meeple, Acrylic, Transparent, Blue",
@@ -41546,7 +46196,8 @@ STOCK_COMPONENT_INFO = {
       "carcassonne",
       "agricola",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3AA47DF8-4319-11E8-B059-8EB3372ABA63.png"
   },
   "MeepleAcrylicTransparentClear": {
     "DisplayName": "Meeple, Acrylic, Transparent, Clear",
@@ -41566,7 +46217,8 @@ STOCK_COMPONENT_INFO = {
       "carcassonne",
       "agricola",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4DEF70EE-B082-11E8-BB17-8BC5CE95AB04.png"
   },
   "MeepleAcrylicTransparentGreen": {
     "DisplayName": "Meeple, Acrylic, Transparent, Green",
@@ -41586,7 +46238,8 @@ STOCK_COMPONENT_INFO = {
       "carcassonne",
       "agricola",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CE13E700-4318-11E8-A8D1-224E1EA37D3B.png"
   },
   "MeepleAcrylicTransparentOrange": {
     "DisplayName": "Meeple, Acrylic, Transparent, Orange",
@@ -41606,7 +46259,8 @@ STOCK_COMPONENT_INFO = {
       "carcassonne",
       "agricola",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/054175A8-4319-11E8-A8D1-654E1EA37D3B.png"
   },
   "MeepleAcrylicTransparentPurple": {
     "DisplayName": "Meeple, Acrylic, Transparent, Purple",
@@ -41626,7 +46280,8 @@ STOCK_COMPONENT_INFO = {
       "carcassonne",
       "agricola",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/67533B54-432E-11E8-8722-DC701EA37D3B.png"
   },
   "MeepleAcrylicTransparentRed": {
     "DisplayName": "Meeple, Acrylic, Transparent, Red",
@@ -41646,7 +46301,8 @@ STOCK_COMPONENT_INFO = {
       "carcassonne",
       "agricola",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4308BE06-4318-11E8-A8D1-634D1EA37D3B.png"
   },
   "MeepleAcrylicTransparentWhite": {
     "DisplayName": "Meeple, Acrylic, Transparent, White",
@@ -41666,7 +46322,8 @@ STOCK_COMPONENT_INFO = {
       "carcassonne",
       "agricola",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5A55A94E-3F48-11E8-9E36-8A5D1EA37D3B.png"
   },
   "MeepleAcrylicTransparentYellow": {
     "DisplayName": "Meeple, Acrylic, Transparent, Yellow",
@@ -41696,7 +46353,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/676CDC22-48A5-11E8-AA37-EF38E5C25E9D.png"
   },
   "MeepleLargeAcrylicOpaqueBlack": {
     "DisplayName": "Meeple, Large, Acrylic, Opaque, Black",
@@ -41726,7 +46384,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7D1E8EA4-A187-11E8-A229-49485A6393C8.png"
   },
   "MeepleLargeAcrylicOpaqueGold": {
     "DisplayName": "Meeple, Large, Acrylic, Opaque, Gold",
@@ -41756,7 +46415,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/750691C6-A187-11E8-A229-25485A6393C8.png"
   },
   "MeepleLargeAcrylicOpaqueSilver": {
     "DisplayName": "Meeple, Large, Acrylic, Opaque, Silver",
@@ -41786,7 +46446,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6D6D6F2A-A187-11E8-9AC6-5D46C5DEAA9F.png"
   },
   "MeepleLargeAcrylicOpaqueWhite": {
     "DisplayName": "Meeple, Large, Acrylic, Opaque, White",
@@ -41816,7 +46477,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FCCE7702-A184-11E8-9AC6-AA41C5DEAA9F.png"
   },
   "MeepleLargeAcrylicTransparentBlack": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Black",
@@ -41846,7 +46508,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E775EE5A-A178-11E8-A229-71AF5A6393C8.png"
   },
   "MeepleLargeAcrylicTransparentBlue": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Blue",
@@ -41876,7 +46539,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/34F138CC-A176-11E8-A229-3FAA5A6393C8.png"
   },
   "MeepleLargeAcrylicTransparentClear": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Clear",
@@ -41906,7 +46570,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F0545BCA-A177-11E8-A229-D4AD5A6393C8.png"
   },
   "MeepleLargeAcrylicTransparentGreen": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Green",
@@ -41936,7 +46601,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E51D074A-A175-11E8-9AC6-D628C5DEAA9F.png"
   },
   "MeepleLargeAcrylicTransparentOrange": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Orange",
@@ -41966,7 +46632,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E89C9904-A174-11E8-9AC6-6D27C5DEAA9F.png"
   },
   "MeepleLargeAcrylicTransparentPurple": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Purple",
@@ -41996,7 +46663,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/52CD9FFA-A16E-11E8-A229-9F9E5A6393C8.png"
   },
   "MeepleLargeAcrylicTransparentRed": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Red",
@@ -42026,7 +46694,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DDA951B0-A16D-11E8-A229-F89D5A6393C8.png"
   },
   "MeepleLargeAcrylicTransparentWhite": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, White",
@@ -42056,7 +46725,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EB9044B0-A16C-11E8-9AC6-751BC5DEAA9F.png"
   },
   "MeepleLargeAcrylicTransparentYellow": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Yellow",
@@ -42086,7 +46756,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/35F264A4-A16B-11E8-AE69-4E995A6393C8.png"
   },
   "MeepleLargeWoodBlack": {
     "DisplayName": "Meeple, Large, Wood, Black",
@@ -42116,7 +46787,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/23A91CF6-4F4B-11E8-80AE-2CF8CA137816.png"
   },
   "MeepleLargeWoodBlue": {
     "DisplayName": "Meeple, Large, Wood, Blue",
@@ -42146,7 +46818,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1C34BE16-4894-11E8-AA37-B5341FDC774B.png"
   },
   "MeepleLargeWoodGreen": {
     "DisplayName": "Meeple, Large, Wood, Green",
@@ -42176,7 +46849,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1EB9DCE8-4894-11E8-8D8F-967E1EA37D3B.png"
   },
   "MeepleLargeWoodOrange": {
     "DisplayName": "Meeple, Large, Wood, Orange",
@@ -42206,7 +46880,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/21421886-4894-11E8-AA37-E12E7235E067.png"
   },
   "MeepleLargeWoodPurple": {
     "DisplayName": "Meeple, Large, Wood, Purple",
@@ -42236,7 +46911,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0389823E-4F4C-11E8-80AE-19F9CA137816.png"
   },
   "MeepleLargeWoodRed": {
     "DisplayName": "Meeple, Large, Wood, Red",
@@ -42266,7 +46942,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/118745C4-4F4C-11E8-8111-C9490DE06504.png"
   },
   "MeepleLargeWoodWhite": {
     "DisplayName": "Meeple, Large, Wood, White",
@@ -42296,7 +46973,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4C905084-4F4C-11E8-80AE-92F9CA137816.png"
   },
   "MeepleLargeWoodYellow": {
     "DisplayName": "Meeple, Large, Wood, Yellow",
@@ -42326,7 +47004,8 @@ STOCK_COMPONENT_INFO = {
       "tall",
       "humongous",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2399C34A-4894-11E8-8D8F-A07E1EA37D3B.png"
   },
   "MeepleMiniAcrylicOpaqueBlack": {
     "DisplayName": "Meeple, Mini, Acrylic, Opaque, Black",
@@ -42354,7 +47033,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CAAE3982-A4BE-11E8-A620-AE85FC81399E.png"
   },
   "MeepleMiniAcrylicOpaqueGold": {
     "DisplayName": "Meeple, Mini, Acrylic, Opaque, Gold",
@@ -42382,7 +47062,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D68B30B8-09F7-11EE-80F6-61C49E42D132.png"
   },
   "MeepleMiniAcrylicOpaqueSilver": {
     "DisplayName": "Meeple, Mini, Acrylic, Opaque, Silver",
@@ -42410,7 +47091,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/50703A4C-A6F5-11E8-A68A-C5A1FC81399E.png"
   },
   "MeepleMiniAcrylicOpaqueWhite": {
     "DisplayName": "Meeple, Mini, Acrylic, Opaque, White",
@@ -42438,7 +47120,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F95F9A46-A4BE-11E8-A620-0F86FC81399E.png"
   },
   "MeepleMiniAcrylicTransparentBlack": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Black",
@@ -42466,7 +47149,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0174C6F2-A4BF-11E8-84DE-9FB43D511364.png"
   },
   "MeepleMiniAcrylicTransparentBlue": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Blue",
@@ -42494,7 +47178,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/077C962E-A4BF-11E8-A620-5386FC81399E.png"
   },
   "MeepleMiniAcrylicTransparentClear": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Clear",
@@ -42522,7 +47207,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/702C57F8-B082-11E8-8C22-8CC6BCC16479.png"
   },
   "MeepleMiniAcrylicTransparentGreen": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Green",
@@ -42550,7 +47236,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1DBA30D6-A4BF-11E8-A620-6E86FC81399E.png"
   },
   "MeepleMiniAcrylicTransparentOrange": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Orange",
@@ -42578,7 +47265,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3ADACE6E-A4BF-11E8-A620-AB86FC81399E.png"
   },
   "MeepleMiniAcrylicTransparentPurple": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Purple",
@@ -42606,7 +47294,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3BAFEB2A-A6F5-11E8-A68A-ABA1FC81399E.png"
   },
   "MeepleMiniAcrylicTransparentRed": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Red",
@@ -42634,7 +47323,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4035E93E-A4BF-11E8-84DE-FBB43D511364.png"
   },
   "MeepleMiniAcrylicTransparentYellow": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Yellow",
@@ -42662,7 +47352,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/460962BE-A4BF-11E8-A620-B586FC81399E.png"
   },
   "MeepleMiniWoodBlack": {
     "DisplayName": "Meeple, Mini, Wood, Black",
@@ -42690,7 +47381,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FF863446-02B8-11E8-9AE7-99AA579DC709.png"
   },
   "MeepleMiniWoodBlue": {
     "DisplayName": "Meeple, Mini, Wood, Blue",
@@ -42718,7 +47410,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/09C6FBC0-02B9-11E8-9AE7-FCE5ED67C966.png"
   },
   "MeepleMiniWoodGreen": {
     "DisplayName": "Meeple, Mini, Wood, Green",
@@ -42746,7 +47439,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/10A754B2-02B9-11E8-A637-9E45FEEF8786.png"
   },
   "MeepleMiniWoodOrange": {
     "DisplayName": "Meeple, Mini, Wood, Orange",
@@ -42774,7 +47468,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/16110FA6-02B9-11E8-9AE7-E07BDABA5CE5.png"
   },
   "MeepleMiniWoodPurple": {
     "DisplayName": "Meeple, Mini, Wood, Purple",
@@ -42802,7 +47497,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1CA7B3D8-02B9-11E8-A637-ECC38EC530BD.png"
   },
   "MeepleMiniWoodRed": {
     "DisplayName": "Meeple, Mini, Wood, Red",
@@ -42830,7 +47526,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/249AFB0E-02B9-11E8-9AE7-85E008E73DCB.png"
   },
   "MeepleMiniWoodWhite": {
     "DisplayName": "Meeple, Mini, Wood, White",
@@ -42858,7 +47555,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2AC52B8A-02B9-11E8-A637-EF88C8087A73.png"
   },
   "MeepleMiniWoodYellow": {
     "DisplayName": "Meeple, Mini, Wood, Yellow",
@@ -42886,7 +47584,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/30EE24EE-02B9-11E8-A637-84EA4C18B41F.png"
   },
   "MeepleThickBlue": {
     "DisplayName": "Meeple, Thick, Blue",
@@ -42914,7 +47613,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/60EF3722-9CF1-11E9-8DDE-8C31FD20C3D1.png"
   },
   "MeepleThickOrange": {
     "DisplayName": "Meeple, Thick, Orange",
@@ -42942,7 +47642,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/71133432-9CF1-11E9-AB43-697BB1FF4D9C.png"
   },
   "MeepleThickPurple": {
     "DisplayName": "Meeple, Thick, Purple",
@@ -42970,7 +47671,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9B8BC10E-CA8F-11E9-95F9-ADE4C1B1929C.png"
   },
   "MeepleThickRed": {
     "DisplayName": "Meeple, Thick, Red",
@@ -42998,7 +47700,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0283159A-9CF7-11E9-AB43-D883B1FF4D9C.png"
   },
   "MeepleThickTeal": {
     "DisplayName": "Meeple, Thick, Teal",
@@ -43026,7 +47729,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5862D1E-9CF6-11E9-AB43-BA83B1FF4D9C.png"
   },
   "MeepleThickYellow": {
     "DisplayName": "Meeple, Thick, Yellow",
@@ -43054,7 +47758,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FBA4C28C-9CF6-11E9-AB43-BA83B1FF4D9C.png"
   },
   "MeepleWoodBlack": {
     "DisplayName": "Meeple, Wood, Black",
@@ -43082,7 +47787,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/365FE88E-FA8E-11E0-BEA9-4D3A60677055.png"
   },
   "MeepleWoodBlue": {
     "DisplayName": "Meeple, Wood, Blue",
@@ -43110,7 +47816,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/58B087B2-FB2A-11E0-A7F1-96F09866D12C.png"
   },
   "MeepleWoodGreen": {
     "DisplayName": "Meeple, Wood, Green",
@@ -43138,7 +47845,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8404B86C-FB29-11E0-85FD-96F09866D12C.png"
   },
   "MeepleWoodOrange": {
     "DisplayName": "Meeple, Wood, Orange",
@@ -43166,7 +47874,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5EED0D5E-FB1F-11E0-A7F1-96F09866D12C.png"
   },
   "MeepleWoodPurple": {
     "DisplayName": "Meeple, Wood, Purple",
@@ -43194,7 +47903,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4882A660-FB1E-11E0-9A89-96F09866D12C.png"
   },
   "MeepleWoodRed": {
     "DisplayName": "Meeple, Wood, Red",
@@ -43222,7 +47932,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/85C5BBEE-FB1D-11E0-A7F1-96F09866D12C.png"
   },
   "MeepleWoodWhite": {
     "DisplayName": "Meeple, Wood, White",
@@ -43250,7 +47961,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A5DFC164-FB1C-11E0-9A89-96F09866D12C.png"
   },
   "MeepleWoodYellow": {
     "DisplayName": "Meeple, Wood, Yellow",
@@ -43278,7 +47990,8 @@ STOCK_COMPONENT_INFO = {
       "puny",
       "nano",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BC543048-FB1B-11E0-A7F1-96F09866D12C.png"
   },
   "MermaidFantasyTB25": {
     "DisplayName": "Mermaid, Fantasy, TB25",
@@ -43295,7 +48008,8 @@ STOCK_COMPONENT_INFO = {
       "fairy",
       "tales",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/277B93F0-E38E-11EC-A245-D1B6E1809829.png"
   },
   "MineBlack": {
     "DisplayName": "Mine, Black",
@@ -43311,7 +48025,8 @@ STOCK_COMPONENT_INFO = {
       "iron",
       "mining",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C8DB4BE0-D808-11ED-9947-23E292BD3DC0.png"
   },
   "MineBlue": {
     "DisplayName": "Mine, Blue",
@@ -43327,7 +48042,8 @@ STOCK_COMPONENT_INFO = {
       "iron",
       "mining",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/55222462-D808-11ED-9947-B2DC92BD3DC0.png"
   },
   "MineGreen": {
     "DisplayName": "Mine, Green",
@@ -43343,7 +48059,8 @@ STOCK_COMPONENT_INFO = {
       "iron",
       "mining",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C930A032-D807-11ED-9182-5D22E9981595.png"
   },
   "MineOrange": {
     "DisplayName": "Mine, Orange",
@@ -43359,7 +48076,8 @@ STOCK_COMPONENT_INFO = {
       "iron",
       "mining",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8005EF88-D808-11ED-9947-C7DE92BD3DC0.png"
   },
   "MinePurple": {
     "DisplayName": "Mine, Purple",
@@ -43375,7 +48093,8 @@ STOCK_COMPONENT_INFO = {
       "iron",
       "mining",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4BF61E70-D808-11ED-9947-74DC92BD3DC0.png"
   },
   "MineRed": {
     "DisplayName": "Mine, Red",
@@ -43391,7 +48110,8 @@ STOCK_COMPONENT_INFO = {
       "iron",
       "mining",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/66466F1E-D808-11ED-9947-4DDD92BD3DC0.png"
   },
   "MineWhite": {
     "DisplayName": "Mine, White",
@@ -43407,7 +48127,8 @@ STOCK_COMPONENT_INFO = {
       "iron",
       "mining",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D6D8644A-D807-11ED-96AA-04C642DDF103.png"
   },
   "MineYellow": {
     "DisplayName": "Mine, Yellow",
@@ -43423,7 +48144,8 @@ STOCK_COMPONENT_INFO = {
       "iron",
       "mining",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/884C1D5C-D808-11ED-9182-EA2BE9981595.png"
   },
   "MiniSleevePack(100)": {
     "DisplayName": "Mini Sleeve Pack (100)",
@@ -43446,7 +48168,8 @@ STOCK_COMPONENT_INFO = {
       "protective",
       "deck",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6B8A66BE-ABC2-11E8-8C69-32E5CE95AB04.png"
   },
   "MiniStorageBoxPurple": {
     "DisplayName": "Mini Storage Box, Purple",
@@ -43488,7 +48211,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E30BDAEA-292E-11E8-8B5C-DC9F96CEB793.png"
   },
   "MiniatureBase25mmHexBlue": {
     "DisplayName": "Miniature Base, 25mm Hex, Blue",
@@ -43505,7 +48229,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EA6A6CD4-292E-11E8-8B5C-A5906585F94D.png"
   },
   "MiniatureBase25mmHexGreen": {
     "DisplayName": "Miniature Base, 25mm Hex, Green",
@@ -43522,7 +48247,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EF64124E-292E-11E8-A252-88AF9CBFE878.png"
   },
   "MiniatureBase25mmHexOrange": {
     "DisplayName": "Miniature Base, 25mm Hex, Orange",
@@ -43539,7 +48265,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F74DE836-292E-11E8-A252-CB521C1D1C89.png"
   },
   "MiniatureBase25mmHexPurple": {
     "DisplayName": "Miniature Base, 25mm Hex, Purple",
@@ -43556,7 +48283,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0088B728-292F-11E8-A252-8D96562D72A3.png"
   },
   "MiniatureBase25mmHexRed": {
     "DisplayName": "Miniature Base, 25mm Hex, Red",
@@ -43573,7 +48301,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0609A0EA-292F-11E8-A252-C1D66C49F13D.png"
   },
   "MiniatureBase25mmHexWhite": {
     "DisplayName": "Miniature Base, 25mm Hex, White",
@@ -43590,7 +48319,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AD43A300-2930-11E8-8B5C-F689499A5272.png"
   },
   "MiniatureBase25mmHexYellow": {
     "DisplayName": "Miniature Base, 25mm Hex, Yellow",
@@ -43607,7 +48337,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0A8289E8-292F-11E8-8B5C-9ED72F8F7192.png"
   },
   "MinotaurwithBattleAxe": {
     "DisplayName": "Minotaur with Battle Axe",
@@ -43641,7 +48372,8 @@ STOCK_COMPONENT_INFO = {
       "theseus",
       "asterion",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/26AF370A-4560-11E7-ABA2-7B4390E4BA5A.png"
   },
   "MintTin": {
     "DisplayName": "Mint Tin",
@@ -43658,7 +48390,8 @@ STOCK_COMPONENT_INFO = {
       "storage",
       "container",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DA3DDEF2-AFDA-11E9-A355-437A896997E9.png"
   },
   "MintTinRibbon": {
     "DisplayName": "Mint Tin Ribbon",
@@ -43673,13 +48406,14 @@ STOCK_COMPONENT_INFO = {
       "remove",
       "removal",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/62519FA2-EBFE-11EB-A508-81BAE7726C43.png"
   },
   "MintTinTall": {
     "DisplayName": "Mint Tin, Tall",
-    "Description": "Mint tin containers have 4 round edges, all edges are smooth and seamless with a hinged lid. Great for micro games. This version is a taller version of our standard mint tin meaning you can fit even more goodies inside. Fits 80 Mint Tin cards inside.",
-    "GameCrafterGuid": "78B4D658-6C90-11EB-8FF6-A61CC4F43DFC",
-    "GameCrafterSkuId": "78C4E82C-6C90-11EB-8FF6-A61CC4F43DFC",
+    "Description": "Mint tin containers have 4 round edges, all edges are smooth and seamless. Great for micro games. This version is a taller version of our standard mint tin, with a fully detachable lid, meaning you can fit even more goodies inside. Fits 90 Mint Tin cards.",
+    "GameCrafterGuid": "BE116FF2-B3F2-11EE-9CBB-CC3BA9ABE58A",
+    "GameCrafterSkuId": "BE1A1990-B3F2-11EE-9CBB-CC3BA9ABE58A",
     "Tags": [
       "box",
       "tin",
@@ -43689,7 +48423,8 @@ STOCK_COMPONENT_INFO = {
       "container",
       "storage,",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FA384FF2-FB67-11EE-9A53-270DD46E50C8.png"
   },
   "MissionaryLargeBlue": {
     "DisplayName": "Missionary, Large, Blue",
@@ -43721,7 +48456,8 @@ STOCK_COMPONENT_INFO = {
       "prelates",
       "apostles",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3AE03D56-43CF-11EC-A6FE-8A602B523E0D.png"
   },
   "MissionaryLargeGreen": {
     "DisplayName": "Missionary, Large, Green",
@@ -43753,7 +48489,8 @@ STOCK_COMPONENT_INFO = {
       "prelates",
       "apostles",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B0C0AD4-43CF-11EC-A6FE-B2602B523E0D.png"
   },
   "MissionaryLargeOrange": {
     "DisplayName": "Missionary, Large, Orange",
@@ -43785,7 +48522,8 @@ STOCK_COMPONENT_INFO = {
       "prelates",
       "apostles",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/449785DE-43CF-11EC-A294-DDD983417843.png"
   },
   "MissionaryLargeRed": {
     "DisplayName": "Missionary, Large, Red",
@@ -43817,7 +48555,8 @@ STOCK_COMPONENT_INFO = {
       "prelates",
       "apostles",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5D6C38D4-43CF-11EC-A294-22DA83417843.png"
   },
   "MissionaryLargeYellow": {
     "DisplayName": "Missionary, Large, Yellow",
@@ -43849,7 +48588,8 @@ STOCK_COMPONENT_INFO = {
       "prelates",
       "apostles",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/51FDB536-43CF-11EC-A6FE-C8602B523E0D.png"
   },
   "MoneyPackOrange": {
     "DisplayName": "Money Pack, Orange",
@@ -43888,7 +48628,8 @@ STOCK_COMPONENT_INFO = {
       "payment",
       "tender",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8DAF1E1C-431F-11E8-B059-9D7BCBA905A5.png"
   },
   "MoneyPackPink": {
     "DisplayName": "Money Pack, Pink",
@@ -43927,7 +48668,8 @@ STOCK_COMPONENT_INFO = {
       "payment",
       "tender",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/96675B28-431F-11E8-A8D1-93591EA37D3B.png"
   },
   "Mongol-CharacterMeeple": {
     "DisplayName": "Mongol - Character Meeple",
@@ -43963,7 +48705,8 @@ STOCK_COMPONENT_INFO = {
       "eurasia",
       "silk road",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/75137628-8EBF-11E8-8D59-C79FB70C97C7.png"
   },
   "MonkFantasyTB25": {
     "DisplayName": "Monk, Fantasy, TB25",
@@ -43977,7 +48720,8 @@ STOCK_COMPONENT_INFO = {
       "magic",
       "religious",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8119E290-8B8C-11EC-8A6C-C21AEFDF9D7E.png"
   },
   "MotorBoatBlack": {
     "DisplayName": "Motor Boat, Black",
@@ -43993,7 +48737,8 @@ STOCK_COMPONENT_INFO = {
       "motorsports",
       "powerboat",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/361B95B6-4174-11EC-877A-2A4D5E0D62FB.png"
   },
   "MotorBoatBlue": {
     "DisplayName": "Motor Boat, Blue",
@@ -44009,7 +48754,8 @@ STOCK_COMPONENT_INFO = {
       "motorsports",
       "powerboat",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/77822A74-4174-11EC-B092-2ACD7CC35D4C.png"
   },
   "MotorBoatGreen": {
     "DisplayName": "Motor Boat, Green",
@@ -44025,7 +48771,8 @@ STOCK_COMPONENT_INFO = {
       "motorsports",
       "powerboat",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A3A6F58A-4174-11EC-B092-91CD7CC35D4C.png"
   },
   "MotorBoatOrange": {
     "DisplayName": "Motor Boat, Orange",
@@ -44041,7 +48788,8 @@ STOCK_COMPONENT_INFO = {
       "motorsports",
       "powerboat",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8B0C5A4C-4174-11EC-B092-4CCD7CC35D4C.png"
   },
   "MotorBoatPurple": {
     "DisplayName": "Motor Boat, Purple",
@@ -44057,7 +48805,8 @@ STOCK_COMPONENT_INFO = {
       "motorsports",
       "powerboat",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/961EA110-4174-11EC-B092-77CD7CC35D4C.png"
   },
   "MotorBoatRed": {
     "DisplayName": "Motor Boat, Red",
@@ -44073,7 +48822,8 @@ STOCK_COMPONENT_INFO = {
       "motorsports",
       "powerboat",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BA044B70-4174-11EC-B092-A5CD7CC35D4C.png"
   },
   "MotorBoatWhite": {
     "DisplayName": "Motor Boat, White",
@@ -44089,7 +48839,8 @@ STOCK_COMPONENT_INFO = {
       "motorsports",
       "powerboat",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8228F8CC-4174-11EC-B092-3CCD7CC35D4C.png"
   },
   "MotorBoatYellow": {
     "DisplayName": "Motor Boat, Yellow",
@@ -44105,7 +48856,8 @@ STOCK_COMPONENT_INFO = {
       "motorsports",
       "powerboat",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B277A71C-4174-11EC-B092-A2CD7CC35D4C.png"
   },
   "MotorcycleBlack": {
     "DisplayName": "Motorcycle, Black",
@@ -44118,7 +48870,8 @@ STOCK_COMPONENT_INFO = {
       "tron",
       "wheeled",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F604392E-D808-11ED-9182-D830E9981595.png"
   },
   "MotorcycleBlue": {
     "DisplayName": "Motorcycle, Blue",
@@ -44131,7 +48884,8 @@ STOCK_COMPONENT_INFO = {
       "tron",
       "wheeled",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/209CB78C-D972-11ED-8A8B-5D51FFDE5649.png"
   },
   "MotorcycleGreen": {
     "DisplayName": "Motorcycle, Green",
@@ -44144,7 +48898,8 @@ STOCK_COMPONENT_INFO = {
       "tron",
       "wheeled",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EB3C6700-D808-11ED-9182-0030E9981595.png"
   },
   "MotorcycleOrange": {
     "DisplayName": "Motorcycle, Orange",
@@ -44157,7 +48912,8 @@ STOCK_COMPONENT_INFO = {
       "tron",
       "wheeled",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/319D4F8E-D809-11ED-96AA-0DD542DDF103.png"
   },
   "MotorcyclePurple": {
     "DisplayName": "Motorcycle, Purple",
@@ -44170,7 +48926,8 @@ STOCK_COMPONENT_INFO = {
       "tron",
       "wheeled",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FCC81B04-D808-11ED-9947-98E492BD3DC0.png"
   },
   "MotorcycleRed": {
     "DisplayName": "Motorcycle, Red",
@@ -44183,7 +48940,8 @@ STOCK_COMPONENT_INFO = {
       "tron",
       "wheeled",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E37DE520-D808-11ED-9947-4AE392BD3DC0.png"
   },
   "MotorcycleWhite": {
     "DisplayName": "Motorcycle, White",
@@ -44196,7 +48954,8 @@ STOCK_COMPONENT_INFO = {
       "tron",
       "wheeled",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/782579F4-D809-11ED-96AA-E5D842DDF103.png"
   },
   "MotorcycleYellow": {
     "DisplayName": "Motorcycle, Yellow",
@@ -44209,7 +48968,8 @@ STOCK_COMPONENT_INFO = {
       "tron",
       "wheeled",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CE3EBFD0-D809-11ED-9182-F43AE9981595.png"
   },
   "MouseAcrylic": {
     "DisplayName": "Mouse, Acrylic",
@@ -44231,7 +48991,8 @@ STOCK_COMPONENT_INFO = {
       "laboratory",
       "experiment",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/547DD09C-F6FF-11EB-AAD0-65EE9FDB2463.png"
   },
   "MouseWoodGrey": {
     "DisplayName": "Mouse, Wood, Grey",
@@ -44253,7 +49014,8 @@ STOCK_COMPONENT_INFO = {
       "laboratory",
       "experiment",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F2085630-CFF0-11E9-9505-49CD6FF76758.png"
   },
   "MuscleCarPostApocalypse": {
     "DisplayName": "Muscle Car, Post Apocalypse",
@@ -44262,7 +49024,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "363071D6-3B54-11ED-AD7D-570BB4CA1F86",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/36EF4DD6-401D-11ED-ABE7-DD39B4CA1F86.png"
   },
   "MushroomCloud": {
     "DisplayName": "Mushroom Cloud",
@@ -44282,7 +49045,8 @@ STOCK_COMPONENT_INFO = {
       "eruption",
       "manhattan project",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0782FB3C-5D02-11E7-9187-110E28022822.png"
   },
   "Musketeer": {
     "DisplayName": "Musketeer",
@@ -44324,7 +49088,8 @@ STOCK_COMPONENT_INFO = {
       "hattori hanzo",
       "ninjutsu",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7EDBD768-8EBF-11E8-AE40-A1EF785DA8EE.png"
   },
   "NinjaBlue-CharacterMeeple": {
     "DisplayName": "Ninja, Blue - Character Meeple",
@@ -44350,7 +49115,8 @@ STOCK_COMPONENT_INFO = {
       "hattori hanzo",
       "ninjutsu",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1CEEDE2E-9112-11E8-BB44-CAC7785DA8EE.png"
   },
   "NinjaBrown": {
     "DisplayName": "Ninja, Brown",
@@ -44376,7 +49142,8 @@ STOCK_COMPONENT_INFO = {
       "hattori hanzo",
       "ninjutsu",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7D09BB4A-053E-11E3-90BE-01A0F281FBB4.png"
   },
   "NinjaGreen-CharacterMeeple": {
     "DisplayName": "Ninja, Green - Character Meeple",
@@ -44402,7 +49169,8 @@ STOCK_COMPONENT_INFO = {
       "hattori hanzo",
       "ninjutsu",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/402F57C4-9112-11E8-B85F-EBF0B70C97C7.png"
   },
   "NinjaOrange": {
     "DisplayName": "Ninja, Orange",
@@ -44428,7 +49196,8 @@ STOCK_COMPONENT_INFO = {
       "hattori hanzo",
       "ninjutsu",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7E56583C-053E-11E3-A18B-01A0F281FBB4.png"
   },
   "NinjaOrange-CharacterMeeple": {
     "DisplayName": "Ninja, Orange - Character Meeple",
@@ -44454,7 +49223,8 @@ STOCK_COMPONENT_INFO = {
       "hattori hanzo",
       "ninjutsu",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4FFBFF72-9112-11E8-B85F-46F1B70C97C7.png"
   },
   "NinjaPurple-CharacterMeeple": {
     "DisplayName": "Ninja, Purple - Character Meeple",
@@ -44480,7 +49250,8 @@ STOCK_COMPONENT_INFO = {
       "hattori hanzo",
       "ninjutsu",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/601CB3D8-9112-11E8-B85F-68F1B70C97C7.png"
   },
   "NinjaRed-CharacterMeeple": {
     "DisplayName": "Ninja, Red - Character Meeple",
@@ -44506,7 +49277,8 @@ STOCK_COMPONENT_INFO = {
       "hattori hanzo",
       "ninjutsu",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/707ABC84-9112-11E8-B85F-74F1B70C97C7.png"
   },
   "NinjaWhite-CharacterMeeple": {
     "DisplayName": "Ninja, White - Character Meeple",
@@ -44532,7 +49304,8 @@ STOCK_COMPONENT_INFO = {
       "hattori hanzo",
       "ninjutsu",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7C1E67DE-9112-11E8-B85F-7EF1B70C97C7.png"
   },
   "NinjaYellow-CharacterMeeple": {
     "DisplayName": "Ninja, Yellow - Character Meeple",
@@ -44558,7 +49331,8 @@ STOCK_COMPONENT_INFO = {
       "hattori hanzo",
       "ninjutsu",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/85D8A244-9112-11E8-B85F-7FF1B70C97C7.png"
   },
   "NobleBlue": {
     "DisplayName": "Noble, Blue",
@@ -44587,7 +49361,8 @@ STOCK_COMPONENT_INFO = {
       "highness",
       "lordship",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/29B3BB58-9CB6-11E7-A769-D9AE71BAD30D.png"
   },
   "NobleGreen": {
     "DisplayName": "Noble, Green",
@@ -44616,7 +49391,8 @@ STOCK_COMPONENT_INFO = {
       "highness",
       "lordship",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2C2CD252-9CB6-11E7-A769-F1AE71BAD30D.png"
   },
   "NobleRed": {
     "DisplayName": "Noble, Red",
@@ -44645,7 +49421,8 @@ STOCK_COMPONENT_INFO = {
       "highness",
       "lordship",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2E68E196-9CB6-11E7-B170-F733CB191CC0.png"
   },
   "NobleWhite": {
     "DisplayName": "Noble, White",
@@ -44674,7 +49451,8 @@ STOCK_COMPONENT_INFO = {
       "highness",
       "lordship",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/87486080-CB09-11EC-822E-BC4F448F12DC.png"
   },
   "NobleYellow": {
     "DisplayName": "Noble, Yellow",
@@ -44703,7 +49481,8 @@ STOCK_COMPONENT_INFO = {
       "highness",
       "lordship",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/33DF471E-9CB6-11E7-A769-FFAE71BAD30D.png"
   },
   "NorseMaidenFantasyTB25": {
     "DisplayName": "Norse Maiden, Fantasy, TB25",
@@ -44716,7 +49495,8 @@ STOCK_COMPONENT_INFO = {
       "sword fighter",
       "combatant",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7BE526B8-280C-11EE-B727-49AF0B83E74D.png"
   },
   "Notepad": {
     "DisplayName": "Notepad",
@@ -44738,7 +49518,8 @@ STOCK_COMPONENT_INFO = {
       "reporting",
       "documentation",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8C3C2374-A662-11E0-896A-3A7437D397EC.png"
   },
   "NothicFantasyTB25": {
     "DisplayName": "Nothic, Fantasy, TB25",
@@ -44755,7 +49536,8 @@ STOCK_COMPONENT_INFO = {
       "eye",
       "halloween",
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/90A0F3EC-3101-11EC-9914-E66CBE85CC60.png"
   },
   "NoticeBoard": {
     "DisplayName": "Notice Board",
@@ -44767,7 +49549,8 @@ STOCK_COMPONENT_INFO = {
       "postings",
       "cats",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5C3F783A-74DA-11ED-8643-472643694036.png"
   },
   "NuclearSymbol": {
     "DisplayName": "Nuclear Symbol",
@@ -44798,7 +49581,8 @@ STOCK_COMPONENT_INFO = {
       "bomb",
       "radioactive",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/079FD1C6-5D02-11E7-AE1C-EA443A5609A0.png"
   },
   "Nurse-CharacterMeeple": {
     "DisplayName": "Nurse - Character Meeple",
@@ -44820,7 +49604,8 @@ STOCK_COMPONENT_INFO = {
       "medicine",
       "pediatrician",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7DFC0006-8EC0-11E8-BCE8-14F2785DA8EE.png"
   },
   "ObeliskTB25": {
     "DisplayName": "Obelisk, TB25",
@@ -44832,7 +49617,8 @@ STOCK_COMPONENT_INFO = {
       "egyptian",
       "mystical",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5638B13A-465A-11ED-B8C6-0D4D83472B09.png"
   },
   "ObservatoryBlack": {
     "DisplayName": "Observatory, Black",
@@ -44845,7 +49631,8 @@ STOCK_COMPONENT_INFO = {
       "scientist",
       "research",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/474B41F0-6CC7-11EC-AA0B-A8CDF74A7BBA.png"
   },
   "ObservatoryBlue": {
     "DisplayName": "Observatory, Blue",
@@ -44858,7 +49645,8 @@ STOCK_COMPONENT_INFO = {
       "scientist",
       "research",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/16311374-6353-11EC-9201-B8C214F325E3.png"
   },
   "ObservatoryGreen": {
     "DisplayName": "Observatory, Green",
@@ -44871,7 +49659,8 @@ STOCK_COMPONENT_INFO = {
       "scientist",
       "research",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E0D6B774-6352-11EC-9201-B2C014F325E3.png"
   },
   "ObservatoryOrange": {
     "DisplayName": "Observatory, Orange",
@@ -44884,7 +49673,8 @@ STOCK_COMPONENT_INFO = {
       "scientist",
       "research",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5B3D56D0-6353-11EC-9201-47C614F325E3.png"
   },
   "ObservatoryPurple": {
     "DisplayName": "Observatory, Purple",
@@ -44897,7 +49687,8 @@ STOCK_COMPONENT_INFO = {
       "scientist",
       "research",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EA18EC08-6352-11EC-9201-78C014F325E3.png"
   },
   "ObservatoryRed": {
     "DisplayName": "Observatory, Red",
@@ -44910,7 +49701,8 @@ STOCK_COMPONENT_INFO = {
       "scientist",
       "research",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0DDCFB0C-6353-11EC-9201-94C214F325E3.png"
   },
   "ObservatoryWhite": {
     "DisplayName": "Observatory, White",
@@ -44923,7 +49715,8 @@ STOCK_COMPONENT_INFO = {
       "scientist",
       "research",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/192607D8-6CC7-11EC-AA0B-ACCBF74A7BBA.png"
   },
   "ObservatoryYellow": {
     "DisplayName": "Observatory, Yellow",
@@ -44936,7 +49729,8 @@ STOCK_COMPONENT_INFO = {
       "scientist",
       "research",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F1E39168-6352-11EC-9201-9AC114F325E3.png"
   },
   "Octbox10mmBlack": {
     "DisplayName": "Octbox, 10mm, Black",
@@ -44957,7 +49751,8 @@ STOCK_COMPONENT_INFO = {
       "eight",
       "octahedron",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E9EB2C7C-FC2F-11E0-B1B3-F2379966D12C.png"
   },
   "Octbox10mmBlue": {
     "DisplayName": "Octbox, 10mm, Blue",
@@ -44978,7 +49773,8 @@ STOCK_COMPONENT_INFO = {
       "eight",
       "octahedron",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8E111AB0-FC2F-11E0-83B8-F2379966D12C.png"
   },
   "Octbox10mmGreen": {
     "DisplayName": "Octbox, 10mm, Green",
@@ -44999,7 +49795,8 @@ STOCK_COMPONENT_INFO = {
       "eight",
       "octahedron",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/34AA7462-FC2F-11E0-86AF-F2379966D12C.png"
   },
   "Octbox10mmOrange": {
     "DisplayName": "Octbox, 10mm, Orange",
@@ -45020,7 +49817,8 @@ STOCK_COMPONENT_INFO = {
       "eight",
       "octahedron",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E26A2BDE-FC2E-11E0-B1B3-F2379966D12C.png"
   },
   "Octbox10mmPurple": {
     "DisplayName": "Octbox, 10mm, Purple",
@@ -45041,7 +49839,8 @@ STOCK_COMPONENT_INFO = {
       "eight",
       "octahedron",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/76D36944-FC2E-11E0-83B8-F2379966D12C.png"
   },
   "Octbox10mmRed": {
     "DisplayName": "Octbox, 10mm, Red",
@@ -45062,7 +49861,8 @@ STOCK_COMPONENT_INFO = {
       "eight",
       "octahedron",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EBF250EC-FC2D-11E0-86AF-F2379966D12C.png"
   },
   "Octbox10mmWhite": {
     "DisplayName": "Octbox, 10mm, White",
@@ -45083,7 +49883,8 @@ STOCK_COMPONENT_INFO = {
       "eight",
       "octahedron",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6949C6D8-A661-11E0-896A-3A7437D397EC.png"
   },
   "Octbox10mmYellow": {
     "DisplayName": "Octbox, 10mm, Yellow",
@@ -45104,7 +49905,8 @@ STOCK_COMPONENT_INFO = {
       "eight",
       "octahedron",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7650CD40-FC29-11E0-83B8-F2379966D12C.png"
   },
   "Octbox7mmBlue": {
     "DisplayName": "Octbox, 7mm, Blue",
@@ -45125,7 +49927,8 @@ STOCK_COMPONENT_INFO = {
       "eight",
       "octahedron",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CDF894B0-3470-11E9-AC0D-9E1A3BF41BB0.png"
   },
   "Octbox7mmGrey": {
     "DisplayName": "Octbox, 7mm, Grey",
@@ -45146,7 +49949,8 @@ STOCK_COMPONENT_INFO = {
       "eight",
       "octahedron",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EEAB4432-3470-11E9-95DA-7F1F16796776.png"
   },
   "Octbox7mmPurple": {
     "DisplayName": "Octbox, 7mm, Purple",
@@ -45167,7 +49971,8 @@ STOCK_COMPONENT_INFO = {
       "eight",
       "octahedron",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5272948-3470-11E9-95DA-7C1F16796776.png"
   },
   "Octbox7mmYellow": {
     "DisplayName": "Octbox, 7mm, Yellow",
@@ -45188,7 +49993,8 @@ STOCK_COMPONENT_INFO = {
       "eight",
       "octahedron",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01942D3E-3471-11E9-AC0D-151B3BF41BB0.png"
   },
   "OfficeWorkerBlue-CharacterMeeple": {
     "DisplayName": "Office Worker, Blue - Character Meeple",
@@ -45213,7 +50019,8 @@ STOCK_COMPONENT_INFO = {
       "clerical",
       "management",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2DD76C32-8F51-11E8-8EA6-40AB785DA8EE.png"
   },
   "OfficeWorkerPurple-CharacterMeeple": {
     "DisplayName": "Office Worker, Purple - Character Meeple",
@@ -45238,7 +50045,8 @@ STOCK_COMPONENT_INFO = {
       "clerical",
       "management",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DC9C0D70-8F4E-11E8-8EA6-18A7785DA8EE.png"
   },
   "OgrewithClub&Shield": {
     "DisplayName": "Ogre with Club & Shield",
@@ -45268,7 +50076,8 @@ STOCK_COMPONENT_INFO = {
       "cyclops",
       "oni",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/28BB66F4-4560-11E7-BFDD-185F370CF66B.png"
   },
   "OgreFantasyTB25": {
     "DisplayName": "Ogre, Fantasy, TB25",
@@ -45282,7 +50091,8 @@ STOCK_COMPONENT_INFO = {
       "goblin",
       "orc",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/634C739A-8B8C-11EC-BD42-C99601D4988D.png"
   },
   "OilBarrel": {
     "DisplayName": "Oil Barrel",
@@ -45308,7 +50118,8 @@ STOCK_COMPONENT_INFO = {
       "food",
       "drink",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/02FBA622-5D02-11E7-AE1C-D5443A5609A0.png"
   },
   "OilDrumWoodBlue": {
     "DisplayName": "Oil Drum, Wood, Blue",
@@ -45334,7 +50145,8 @@ STOCK_COMPONENT_INFO = {
       "food",
       "drink",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D9A21E90-88F4-11E7-B8E3-991180CDF569.png"
   },
   "OldWestCoinBronze": {
     "DisplayName": "Old West Coin, Bronze",
@@ -45343,7 +50155,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "059B7D58-F258-11EC-9860-6AD3FF847FD3",
     "Tags": [
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D20700A2-F702-11EC-B6CD-950F813EB811.png"
   },
   "OldWestCoinGold": {
     "DisplayName": "Old West Coin, Gold",
@@ -45352,7 +50165,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "AC8B02A6-F257-11EC-9860-CFCEFF847FD3",
     "Tags": [
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B89FE26E-F702-11EC-A087-114A7805D582.png"
   },
   "OldWestCoinSilver": {
     "DisplayName": "Old West Coin, Silver",
@@ -45361,7 +50175,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "DC7E80AA-F257-11EC-9860-23D1FF847FD3",
     "Tags": [
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C6B111FC-F702-11EC-B6CD-B00E813EB811.png"
   },
   "OpossumDruidFantasyTB25": {
     "DisplayName": "Opossum Druid, Fantasy, TB25",
@@ -45371,7 +50186,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "shark week",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2883B256-14F7-11ED-B552-630C96221FC2.png"
   },
   "OrcScimitarFantasyTB25": {
     "DisplayName": "Orc Scimitar, Fantasy, TB25",
@@ -45385,7 +50201,8 @@ STOCK_COMPONENT_INFO = {
       "fighter",
       "foot soldier ",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/34010FFA-5217-11EC-B45F-04CE837854C6.png"
   },
   "OrcShamanFantasyTB25": {
     "DisplayName": "Orc Shaman, Fantasy, TB25",
@@ -45399,7 +50216,8 @@ STOCK_COMPONENT_INFO = {
       "goblinoid",
       " ",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3181B402-5855-11EC-9F1B-C153E73F1098.png"
   },
   "Outlaw-CharacterMeeple": {
     "DisplayName": "Outlaw - Character Meeple",
@@ -45432,7 +50250,8 @@ STOCK_COMPONENT_INFO = {
       "swindler",
       "delinquent",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8D0FA30A-8EBF-11E8-8D59-EE9FB70C97C7.png"
   },
   "OwlbearFantasyTB50": {
     "DisplayName": "Owlbear, Fantasy, TB50",
@@ -45444,7 +50263,8 @@ STOCK_COMPONENT_INFO = {
       "bear",
       "hybrid,",
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EC54DF02-9F0E-11EC-A7FE-F883E4848153.png"
   },
   "PadlockKeyBlack": {
     "DisplayName": "Padlock Key, Black",
@@ -45470,7 +50290,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2783B836-A4A0-11E8-A620-01D0FC81399E.png"
   },
   "PadlockKeyBlue": {
     "DisplayName": "Padlock Key, Blue",
@@ -45496,7 +50317,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2A100898-A4A0-11E8-A620-08D0FC81399E.png"
   },
   "PadlockKeyGreen": {
     "DisplayName": "Padlock Key, Green",
@@ -45522,7 +50344,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2D8C420C-A4A0-11E8-A620-1CD0FC81399E.png"
   },
   "PadlockKeyOrange": {
     "DisplayName": "Padlock Key, Orange",
@@ -45548,7 +50371,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/302ACEAC-A4A0-11E8-A620-13D0FC81399E.png"
   },
   "PadlockKeyPurple": {
     "DisplayName": "Padlock Key, Purple",
@@ -45574,7 +50398,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/331B26F2-A4A0-11E8-A620-1DD0FC81399E.png"
   },
   "PadlockKeyRed": {
     "DisplayName": "Padlock Key, Red",
@@ -45600,7 +50425,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/35968548-A4A0-11E8-84DE-00FE3D511364.png"
   },
   "PadlockKeyWhite": {
     "DisplayName": "Padlock Key, White",
@@ -45626,7 +50452,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/38AEB476-A4A0-11E8-A620-31D0FC81399E.png"
   },
   "PadlockKeyYellow": {
     "DisplayName": "Padlock Key, Yellow",
@@ -45652,7 +50479,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3B9075C6-A4A0-11E8-A620-5FD0FC81399E.png"
   },
   "PadlockLockedBlack": {
     "DisplayName": "Padlock, Locked, Black",
@@ -45678,7 +50506,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/925E6304-A4A0-11E8-A620-E4D0FC81399E.png"
   },
   "PadlockLockedBlue": {
     "DisplayName": "Padlock, Locked, Blue",
@@ -45704,7 +50533,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4470347E-A4A0-11E8-84DE-1AFE3D511364.png"
   },
   "PadlockLockedGreen": {
     "DisplayName": "Padlock, Locked, Green",
@@ -45730,7 +50560,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/46BAB4D4-A4A0-11E8-A620-71D0FC81399E.png"
   },
   "PadlockLockedOrange": {
     "DisplayName": "Padlock, Locked, Orange",
@@ -45756,7 +50587,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/49AF391C-A4A0-11E8-A620-77D0FC81399E.png"
   },
   "PadlockLockedPurple": {
     "DisplayName": "Padlock, Locked, Purple",
@@ -45782,7 +50614,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4D0083DC-A4A0-11E8-84DE-1BFE3D511364.png"
   },
   "PadlockLockedRed": {
     "DisplayName": "Padlock, Locked, Red",
@@ -45808,7 +50641,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4F5C1254-A4A0-11E8-A620-7AD0FC81399E.png"
   },
   "PadlockLockedWhite": {
     "DisplayName": "Padlock, Locked, White",
@@ -45834,7 +50668,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/52DB192A-A4A0-11E8-A620-89D0FC81399E.png"
   },
   "PadlockLockedYellow": {
     "DisplayName": "Padlock, Locked, Yellow",
@@ -45860,7 +50695,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/55324FE0-A4A0-11E8-A620-84D0FC81399E.png"
   },
   "PadlockUnlockedBlack": {
     "DisplayName": "Padlock, Unlocked, Black",
@@ -45886,7 +50722,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/590A1B52-A4A0-11E8-84DE-3AFE3D511364.png"
   },
   "PadlockUnlockedBlue": {
     "DisplayName": "Padlock, Unlocked, Blue",
@@ -45912,7 +50749,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BA91FDA4-A4A0-11E8-84DE-F2FE3D511364.png"
   },
   "PadlockUnlockedGreen": {
     "DisplayName": "Padlock, Unlocked, Green",
@@ -45938,7 +50776,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/612DDC74-A4A0-11E8-A620-95D0FC81399E.png"
   },
   "PadlockUnlockedOrange": {
     "DisplayName": "Padlock, Unlocked, Orange",
@@ -45964,7 +50803,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6485B450-A4A0-11E8-84DE-5CFE3D511364.png"
   },
   "PadlockUnlockedPurple": {
     "DisplayName": "Padlock, Unlocked, Purple",
@@ -45990,7 +50830,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/67E64F06-A4A0-11E8-A620-AED0FC81399E.png"
   },
   "PadlockUnlockedRed": {
     "DisplayName": "Padlock, Unlocked, Red",
@@ -46016,7 +50857,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6A8CE68E-A4A0-11E8-A620-B1D0FC81399E.png"
   },
   "PadlockUnlockedWhite": {
     "DisplayName": "Padlock, Unlocked, White",
@@ -46042,7 +50884,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6D27FF32-A4A0-11E8-84DE-5CFE3D511364.png"
   },
   "PadlockUnlockedYellow": {
     "DisplayName": "Padlock, Unlocked, Yellow",
@@ -46068,7 +50911,8 @@ STOCK_COMPONENT_INFO = {
       "latchkey",
       "bolt",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/701ADD90-A4A0-11E8-84DE-67FE3D511364.png"
   },
   "PaperMiniatureBaseSquare20mm": {
     "DisplayName": "Paper Miniature Base Square, 20mm",
@@ -46085,7 +50929,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A3DC24AA-52F6-11E8-9DA0-9BDA8950E144.png"
   },
   "PaperMiniatureBase20mmAngled": {
     "DisplayName": "Paper Miniature Base, 20mm, Angled",
@@ -46102,7 +50947,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/084DFFE4-52F7-11E8-BDFB-F744CB137816.png"
   },
   "PaperMiniatureBase25mmBlack": {
     "DisplayName": "Paper Miniature Base, 25mm, Black",
@@ -46119,7 +50965,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D0D42F5E-4EF3-11E8-8111-EACAE9458C65.png"
   },
   "PaperMiniatureBase25mmBlue": {
     "DisplayName": "Paper Miniature Base, 25mm, Blue",
@@ -46136,7 +50983,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0FA08746-4EF4-11E8-80AE-C6FFCA137816.png"
   },
   "PaperMiniatureBase25mmClear": {
     "DisplayName": "Paper Miniature Base, 25mm, Clear",
@@ -46153,7 +51001,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8E0494AE-AD2E-11E8-95DF-DACABCC16479.png"
   },
   "PaperMiniatureBase25mmGreen": {
     "DisplayName": "Paper Miniature Base, 25mm, Green",
@@ -46170,7 +51019,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4DB52C6C-4EF4-11E8-8111-8B3F3CF98E9C.png"
   },
   "PaperMiniatureBase25mmOrange": {
     "DisplayName": "Paper Miniature Base, 25mm, Orange",
@@ -46187,7 +51037,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7296FACE-4EF4-11E8-8111-F966160F7A47.png"
   },
   "PaperMiniatureBase25mmPurple": {
     "DisplayName": "Paper Miniature Base, 25mm, Purple",
@@ -46204,7 +51055,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8A695B06-4EF4-11E8-80AE-A701CB137816.png"
   },
   "PaperMiniatureBase25mmRed": {
     "DisplayName": "Paper Miniature Base, 25mm, Red",
@@ -46221,7 +51073,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AE3264C4-4EF4-11E8-8111-C12A6D7901D9.png"
   },
   "PaperMiniatureBase25mmWhite": {
     "DisplayName": "Paper Miniature Base, 25mm, White",
@@ -46238,7 +51091,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CD3832D6-4EF4-11E8-80AE-1302CB137816.png"
   },
   "PaperMiniatureBase25mmYellow": {
     "DisplayName": "Paper Miniature Base, 25mm, Yellow",
@@ -46255,7 +51109,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E3137520-4EF4-11E8-80AE-4202CB137816.png"
   },
   "PaperMiniatureFormationTray20mm10x4": {
     "DisplayName": "Paper Miniature Formation Tray, 20mm, 10 x 4",
@@ -46272,7 +51127,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DB3E9F62-52F7-11E8-9DA0-A77F2FA2278A.png"
   },
   "PaperMiniatureFormationTray20mm5x2": {
     "DisplayName": "Paper Miniature Formation Tray, 20mm, 5 x 2",
@@ -46289,7 +51145,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/36B8D9C6-52F7-11E8-9DA0-C37B9095D9D7.png"
   },
   "PaperMiniatureFormationTray20mm5x2Angled": {
     "DisplayName": "Paper Miniature Formation Tray, 20mm, 5 x 2, Angled",
@@ -46306,7 +51163,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/66B43030-52F7-11E8-BDFB-7245CB137816.png"
   },
   "PaperMiniatureFormationTray20mm5x4": {
     "DisplayName": "Paper Miniature Formation Tray, 20mm, 5 x 4",
@@ -46323,7 +51181,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9F9DB07E-52F7-11E8-BDFB-A445CB137816.png"
   },
   "PaperMiniatureFormationTray20mm5x4Angled": {
     "DisplayName": "Paper Miniature Formation Tray, 20mm, 5 x 4, Angled",
@@ -46340,7 +51199,8 @@ STOCK_COMPONENT_INFO = {
       "pedestal",
       "plinth",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BC7C9FDE-52F7-11E8-BDFB-F845CB137816.png"
   },
   "PartsBagFancyGold": {
     "DisplayName": "Parts Bag, Fancy, Gold",
@@ -46362,7 +51222,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B1210C60-91B4-11E2-9D0C-4072792D7C77.png"
   },
   "PartsBagFancySilver": {
     "DisplayName": "Parts Bag, Fancy, Silver",
@@ -46384,7 +51245,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B1F8C902-91B4-11E2-9BD0-4072792D7C77.png"
   },
   "PartsBagLargeBlack": {
     "DisplayName": "Parts Bag, Large, Black",
@@ -46406,7 +51268,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D897EE10-91A2-11E2-B3A0-4072792D7C77.png"
   },
   "PartsBagLargeBlue": {
     "DisplayName": "Parts Bag, Large, Blue",
@@ -46428,7 +51291,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D9C16258-91A2-11E2-BF43-4072792D7C77.png"
   },
   "PartsBagLargeRed": {
     "DisplayName": "Parts Bag, Large, Red",
@@ -46450,7 +51314,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DB9B9B66-91A2-11E2-B8A0-4072792D7C77.png"
   },
   "PartsBagMediumBlack": {
     "DisplayName": "Parts Bag, Medium, Black",
@@ -46472,7 +51337,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/919B8AA2-91AD-11E2-8F2D-4072792D7C77.png"
   },
   "PartsBagMediumBlue": {
     "DisplayName": "Parts Bag, Medium, Blue",
@@ -46494,7 +51360,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/92768A9E-91AD-11E2-8F2D-4072792D7C77.png"
   },
   "PartsBagMediumBrown": {
     "DisplayName": "Parts Bag, Medium, Brown",
@@ -46516,7 +51383,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/934E8746-91AD-11E2-8E5B-4072792D7C77.png"
   },
   "PartsBagMediumGreen": {
     "DisplayName": "Parts Bag, Medium, Green",
@@ -46538,7 +51406,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/941DCEE8-91AD-11E2-8582-4072792D7C77.png"
   },
   "PartsBagMediumGrey": {
     "DisplayName": "Parts Bag, Medium, Grey",
@@ -46560,7 +51429,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/94FD3236-91AD-11E2-8714-4072792D7C77.png"
   },
   "PartsBagMediumPurple": {
     "DisplayName": "Parts Bag, Medium, Purple",
@@ -46582,7 +51452,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/95C2E08A-91AD-11E2-A214-4072792D7C77.png"
   },
   "PartsBagMediumRed": {
     "DisplayName": "Parts Bag, Medium, Red",
@@ -46604,7 +51475,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CC2BB846-D5C4-11EA-B417-F52F0EE65047.png"
   },
   "PartsBagSmallBlack": {
     "DisplayName": "Parts Bag, Small, Black",
@@ -46626,7 +51498,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/919B8AA2-91AD-11E2-8F2D-4072792D7C77.png"
   },
   "PartsBagSmallBlue": {
     "DisplayName": "Parts Bag, Small, Blue",
@@ -46648,7 +51521,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/92768A9E-91AD-11E2-8F2D-4072792D7C77.png"
   },
   "PartsBagSmallBrown": {
     "DisplayName": "Parts Bag, Small, Brown",
@@ -46670,7 +51544,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/934E8746-91AD-11E2-8E5B-4072792D7C77.png"
   },
   "PartsBagSmallGray": {
     "DisplayName": "Parts Bag, Small, Gray",
@@ -46692,7 +51567,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/94FD3236-91AD-11E2-8714-4072792D7C77.png"
   },
   "PartsBagSmallGreen": {
     "DisplayName": "Parts Bag, Small, Green",
@@ -46714,7 +51590,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/941DCEE8-91AD-11E2-8582-4072792D7C77.png"
   },
   "PartsBagSmallPurple": {
     "DisplayName": "Parts Bag, Small, Purple",
@@ -46736,7 +51613,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/95C2E08A-91AD-11E2-A214-4072792D7C77.png"
   },
   "PartsBagSmallRed": {
     "DisplayName": "Parts Bag, Small, Red",
@@ -46758,7 +51636,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/09977F58-D5C5-11EA-B47D-F9300EE65047.png"
   },
   "PartsBagTallBlack": {
     "DisplayName": "Parts Bag, Tall, Black",
@@ -46780,7 +51659,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A489F1A-A7DF-11E9-BF4E-96C289824F18.png"
   },
   "PartsBowl70mm": {
     "DisplayName": "Parts Bowl, 70mm",
@@ -46801,7 +51681,8 @@ STOCK_COMPONENT_INFO = {
       "soup",
       "receptacle",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/80829E48-1CBB-11EC-9D40-23995853E446.png"
   },
   "PartsTray": {
     "DisplayName": "Parts Tray",
@@ -46817,7 +51698,8 @@ STOCK_COMPONENT_INFO = {
       "packs",
       "cases",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A103B302-8319-11E9-803D-2F30F5424212.png"
   },
   "PeasantPurple": {
     "DisplayName": "Peasant, Purple",
@@ -46841,7 +51723,8 @@ STOCK_COMPONENT_INFO = {
       "serf",
       "hierarchy",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3090999A-829F-11E7-BAA7-981A0DB31C25.png"
   },
   "PegPawnBlack": {
     "DisplayName": "Peg Pawn, Black",
@@ -46857,7 +51740,8 @@ STOCK_COMPONENT_INFO = {
       "character",
       "unit",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1D1B9B06-FB2F-11E0-9A89-96F09866D12C.png"
   },
   "PegPawnBlue": {
     "DisplayName": "Peg Pawn, Blue",
@@ -46873,7 +51757,8 @@ STOCK_COMPONENT_INFO = {
       "character",
       "unit",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0D7A3F94-FB3A-11E0-A758-96F09866D12C.png"
   },
   "PegPawnGreen": {
     "DisplayName": "Peg Pawn, Green",
@@ -46889,7 +51774,8 @@ STOCK_COMPONENT_INFO = {
       "character",
       "unit",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F3BB188A-FB57-11E0-915A-F2379966D12C.png"
   },
   "PegPawnOrange": {
     "DisplayName": "Peg Pawn, Orange",
@@ -46905,7 +51791,8 @@ STOCK_COMPONENT_INFO = {
       "character",
       "unit",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B3F0A610-FB58-11E0-915A-F2379966D12C.png"
   },
   "PegPawnPurple": {
     "DisplayName": "Peg Pawn, Purple",
@@ -46921,7 +51808,8 @@ STOCK_COMPONENT_INFO = {
       "character",
       "unit",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AD3A853E-FB5D-11E0-AD81-F2379966D12C.png"
   },
   "PegPawnRed": {
     "DisplayName": "Peg Pawn, Red",
@@ -46937,7 +51825,8 @@ STOCK_COMPONENT_INFO = {
       "character",
       "unit",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EA2E52CC-44AD-11E8-88E1-9D431EA37D3B.png"
   },
   "PegPawnWhite": {
     "DisplayName": "Peg Pawn, White",
@@ -46953,7 +51842,8 @@ STOCK_COMPONENT_INFO = {
       "character",
       "unit",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E14615FA-A662-11E0-896A-3A7437D397EC.png"
   },
   "PegPawnYellow": {
     "DisplayName": "Peg Pawn, Yellow",
@@ -46969,7 +51859,8 @@ STOCK_COMPONENT_INFO = {
       "character",
       "unit",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B7B46934-FB5E-11E0-AAB7-F2379966D12C.png"
   },
   "Pencil": {
     "DisplayName": "Pencil",
@@ -46990,7 +51881,8 @@ STOCK_COMPONENT_INFO = {
       "manuscript",
       "recording ",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5949BF44-A14C-11E2-8F68-066E8112674D.png"
   },
   "Pentagram": {
     "DisplayName": "Pentagram",
@@ -47003,7 +51895,8 @@ STOCK_COMPONENT_INFO = {
       "demonic",
       "star",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/735D4650-74DA-11ED-9E82-702E25C4E336.png"
   },
   "PeopleBlack": {
     "DisplayName": "People, Black",
@@ -47024,7 +51917,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E34B25F2-6E61-11E2-AD12-E9506321BAEE.png"
   },
   "PeopleBlue": {
     "DisplayName": "People, Blue",
@@ -47045,7 +51939,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E836FAEC-D508-11E2-9FD5-EE5FB37B439B.png"
   },
   "PeopleGreen": {
     "DisplayName": "People, Green",
@@ -47066,7 +51961,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E8F9B4C4-D508-11E2-AE04-EE5FB37B439B.png"
   },
   "PeopleOrange": {
     "DisplayName": "People, Orange",
@@ -47087,7 +51983,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E3E97D9C-6E61-11E2-9C56-E9506321BAEE.png"
   },
   "PeoplePurple": {
     "DisplayName": "People, Purple",
@@ -47108,7 +52005,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E98F3E4A-D508-11E2-9FD5-EE5FB37B439B.png"
   },
   "PeopleRed": {
     "DisplayName": "People, Red",
@@ -47129,7 +52027,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E4C8711E-6E61-11E2-8A2C-E9506321BAEE.png"
   },
   "PeopleThickGreen": {
     "DisplayName": "People, Thick, Green",
@@ -47150,7 +52049,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4278C948-3AAE-11E9-9F91-0148A86D9653.png"
   },
   "PeopleThickPurple": {
     "DisplayName": "People, Thick, Purple",
@@ -47171,7 +52071,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/721D3792-3AAE-11E9-9294-1C210031EE1B.png"
   },
   "PeopleWhite": {
     "DisplayName": "People, White",
@@ -47192,7 +52093,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E54D505A-6E61-11E2-8AAD-E9506321BAEE.png"
   },
   "PeopleYellow": {
     "DisplayName": "People, Yellow",
@@ -47213,7 +52115,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E6073FA6-6E61-11E2-8A2C-E9506321BAEE.png"
   },
   "PerniciousPuzzle#1": {
     "DisplayName": "Pernicious Puzzle #1",
@@ -47226,7 +52129,8 @@ STOCK_COMPONENT_INFO = {
       "piece",
       "circle ",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B5E57520-2023-11EE-8A7D-077C8EB44061.png"
   },
   "PersonwithHatTeal": {
     "DisplayName": "Person with Hat, Teal",
@@ -47254,7 +52158,8 @@ STOCK_COMPONENT_INFO = {
       "bowler",
       "headpiece",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D02E71F0-33AD-11E9-8FEB-F80E16796776.png"
   },
   "PigMiniBlackandWhite": {
     "DisplayName": "Pig, Mini, Black and White",
@@ -47280,7 +52185,8 @@ STOCK_COMPONENT_INFO = {
       "pigpen",
       "pork. ",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C9498B9A-33ED-11EA-808B-B5392AEAE865.png"
   },
   "PigMiniBrown": {
     "DisplayName": "Pig, Mini, Brown",
@@ -47306,7 +52212,8 @@ STOCK_COMPONENT_INFO = {
       "pigpen",
       "pork. ",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D25BED04-33ED-11EA-836F-3E25B829B2FA.png"
   },
   "PigMiniPink": {
     "DisplayName": "Pig, Mini, Pink",
@@ -47332,7 +52239,8 @@ STOCK_COMPONENT_INFO = {
       "pigpen",
       "pork. ",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C1450316-33ED-11EA-808B-B5392AEAE865.png"
   },
   "PigTB15Black": {
     "DisplayName": "Pig, TB15, Black",
@@ -47346,7 +52254,8 @@ STOCK_COMPONENT_INFO = {
       "piggy",
       "hog",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B2F4030A-C835-11EC-8BBA-8B44448F12DC.png"
   },
   "PigTB15Blue": {
     "DisplayName": "Pig, TB15, Blue",
@@ -47360,7 +52269,8 @@ STOCK_COMPONENT_INFO = {
       "piggy",
       "hog",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0D3F4018-C836-11EC-8BBA-7F48448F12DC.png"
   },
   "PigTB15Green": {
     "DisplayName": "Pig, TB15, Green",
@@ -47374,7 +52284,8 @@ STOCK_COMPONENT_INFO = {
       "piggy",
       "hog",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AA681C94-C835-11EC-B769-F1556EB7A829.png"
   },
   "PigTB15Orange": {
     "DisplayName": "Pig, TB15, Orange",
@@ -47388,7 +52299,8 @@ STOCK_COMPONENT_INFO = {
       "piggy",
       "hog",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A363BFFC-C835-11EC-8BBA-A543448F12DC.png"
   },
   "PigTB15Purple": {
     "DisplayName": "Pig, TB15, Purple",
@@ -47402,7 +52314,8 @@ STOCK_COMPONENT_INFO = {
       "piggy",
       "hog",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DEC26C24-C835-11EC-8BBA-4B46448F12DC.png"
   },
   "PigTB15Red": {
     "DisplayName": "Pig, TB15, Red",
@@ -47416,7 +52329,8 @@ STOCK_COMPONENT_INFO = {
       "piggy",
       "hog",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B93C5E56-C835-11EC-B769-D1566EB7A829.png"
   },
   "PigTB15White": {
     "DisplayName": "Pig, TB15, White",
@@ -47430,7 +52344,8 @@ STOCK_COMPONENT_INFO = {
       "piggy",
       "hog",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/07DBF058-C836-11EC-B769-B95A6EB7A829.png"
   },
   "PigTB15Yellow": {
     "DisplayName": "Pig, TB15, Yellow",
@@ -47444,7 +52359,8 @@ STOCK_COMPONENT_INFO = {
       "piggy",
       "hog",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/00C0ED50-C836-11EC-8BBA-0F48448F12DC.png"
   },
   "PigWoodBlack": {
     "DisplayName": "Pig, Wood, Black",
@@ -47470,7 +52386,8 @@ STOCK_COMPONENT_INFO = {
       "pigpen",
       "pork. ",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C5333DB4-F9A7-11E0-9006-108960677055.png"
   },
   "PigWoodPink": {
     "DisplayName": "Pig, Wood, Pink",
@@ -47496,7 +52413,8 @@ STOCK_COMPONENT_INFO = {
       "pigpen",
       "pork. ",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E193A706-44AE-11E8-88E1-0D451EA37D3B.png"
   },
   "PigfaceOrcHalberdFantasyTB25": {
     "DisplayName": "Pigface Orc Halberd, Fantasy, TB25",
@@ -47510,7 +52428,8 @@ STOCK_COMPONENT_INFO = {
       "armored",
       "ogre",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D3D09B06-6F16-11EC-9B55-11247DF5F7CD.png"
   },
   "PinheadtheBarbarian": {
     "DisplayName": "Pinhead the Barbarian",
@@ -47536,7 +52455,8 @@ STOCK_COMPONENT_INFO = {
       "axeman",
       "axman",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/14681B94-12D2-11E8-906D-410B94A6FE1D.png"
   },
   "Pirate1FantasyTB25": {
     "DisplayName": "Pirate 1, Fantasy, TB25",
@@ -47551,7 +52471,8 @@ STOCK_COMPONENT_INFO = {
       "sword",
       "swashbuckling",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6FC3790C-8B8C-11EC-BD42-2C9701D4988D.png"
   },
   "Pirate2FemaleFantasyTB25": {
     "DisplayName": "Pirate 2, Female, Fantasy, TB25",
@@ -47565,7 +52486,8 @@ STOCK_COMPONENT_INFO = {
       "sailing",
       "sword",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/738EE8F0-8B8C-11EC-BD42-5C9701D4988D.png"
   },
   "Pirate3FantasyTB25": {
     "DisplayName": "Pirate 3, Fantasy, TB25",
@@ -47580,7 +52502,8 @@ STOCK_COMPONENT_INFO = {
       "sword",
       "swashbuckling",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/18ABEC94-B48B-11EC-96F1-C3F6565FC6E3.png"
   },
   "Pirate4FantasyTB25": {
     "DisplayName": "Pirate 4, Fantasy, TB25",
@@ -47595,7 +52518,8 @@ STOCK_COMPONENT_INFO = {
       "sword",
       "swashbuckling",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A26F6C12-B48B-11EC-B447-2CF0B5E37A90.png"
   },
   "PirateBlue-CharacterMeeple": {
     "DisplayName": "Pirate, Blue - Character Meeple",
@@ -47619,7 +52543,8 @@ STOCK_COMPONENT_INFO = {
       "buccaneer",
       "corsair",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E1F8E9EE-8EBF-11E8-AE40-75F0785DA8EE.png"
   },
   "PirateGreen-CharacterMeeple": {
     "DisplayName": "Pirate, Green - Character Meeple",
@@ -47643,7 +52568,8 @@ STOCK_COMPONENT_INFO = {
       "buccaneer",
       "corsair",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D45C3B78-8F5B-11E8-8EA6-49BC785DA8EE.png"
   },
   "PirateOrange-CharacterMeeple": {
     "DisplayName": "Pirate, Orange - Character Meeple",
@@ -47667,7 +52593,8 @@ STOCK_COMPONENT_INFO = {
       "buccaneer",
       "corsair",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F91C3B94-8EBF-11E8-AE40-A9F0785DA8EE.png"
   },
   "PiratePurple-CharacterMeeple": {
     "DisplayName": "Pirate, Purple - Character Meeple",
@@ -47691,7 +52618,8 @@ STOCK_COMPONENT_INFO = {
       "buccaneer",
       "corsair",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/684DC590-910A-11E8-BB44-E9BA785DA8EE.png"
   },
   "PirateRed-CharacterMeeple": {
     "DisplayName": "Pirate, Red - Character Meeple",
@@ -47715,7 +52643,8 @@ STOCK_COMPONENT_INFO = {
       "buccaneer",
       "corsair",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/06F364A4-8EC0-11E8-AE40-ABF0785DA8EE.png"
   },
   "PirateYellow-CharacterMeeple": {
     "DisplayName": "Pirate, Yellow - Character Meeple",
@@ -47739,7 +52668,8 @@ STOCK_COMPONENT_INFO = {
       "buccaneer",
       "corsair",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/325D8AB6-8EC0-11E8-8D59-15A1B70C97C7.png"
   },
   "PitFiendFantasyTB50": {
     "DisplayName": "Pit Fiend, Fantasy, TB50",
@@ -47756,7 +52686,8 @@ STOCK_COMPONENT_INFO = {
       "boss",
       "brimstone",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F0EEC230-9F0E-11EC-A7FE-F883E4848153.png"
   },
   "PizzaDiscYellow": {
     "DisplayName": "Pizza Disc, Yellow",
@@ -47780,8 +52711,20 @@ STOCK_COMPONENT_INFO = {
       "birdie",
       "sjoelbak",
       "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A6E12BA4-54B3-11E9-A688-26BFBE9D83F6.png"
   },
   "PlasticCastleRed": {
     "DisplayName": "Plastic Castle, Red",
@@ -47804,7 +52747,8 @@ STOCK_COMPONENT_INFO = {
       "stronghold",
       "citadel",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/16E61FC0-666A-11E7-A50A-4F3723D28831.png"
   },
   "PokerChip19mmFancyBlack": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Black",
@@ -47822,7 +52766,8 @@ STOCK_COMPONENT_INFO = {
       "gambler",
       "counter",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5294D104-6CF0-11E9-855A-7B0DAA801980.png"
   },
   "PokerChip19mmFancyBlue": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Blue",
@@ -47840,7 +52785,8 @@ STOCK_COMPONENT_INFO = {
       "gambler",
       "counter",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/96E56580-6CF0-11E9-855A-060EAA801980.png"
   },
   "PokerChip19mmFancyGreen": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Green",
@@ -47858,7 +52804,8 @@ STOCK_COMPONENT_INFO = {
       "gambler",
       "counter",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A37FF878-6CF0-11E9-855A-3F0EAA801980.png"
   },
   "PokerChip19mmFancyPurple": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Purple",
@@ -47876,7 +52823,8 @@ STOCK_COMPONENT_INFO = {
       "gambler",
       "counter",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ABE4406E-6CF0-11E9-855A-460EAA801980.png"
   },
   "PokerChip19mmFancyRed": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Red",
@@ -47894,7 +52842,8 @@ STOCK_COMPONENT_INFO = {
       "gambler",
       "counter",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B6545840-6CF0-11E9-BE0F-E0C4BA9B8687.png"
   },
   "PokerChip19mmFancyYellow": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Yellow",
@@ -47912,7 +52861,8 @@ STOCK_COMPONENT_INFO = {
       "gambler",
       "counter",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/898150DE-D1D5-11EA-9510-6A16E5FADFE3.png"
   },
   "PokerChipBlack": {
     "DisplayName": "Poker Chip, Black",
@@ -47930,7 +52880,8 @@ STOCK_COMPONENT_INFO = {
       "gambler",
       "counter",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A28755BA-FE44-11E0-9F48-F2379966D12C.png"
   },
   "PokerChipBlue": {
     "DisplayName": "Poker Chip, Blue",
@@ -47948,7 +52899,8 @@ STOCK_COMPONENT_INFO = {
       "gambler",
       "counter",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8D6075A8-FE45-11E0-B7DD-F2379966D12C.png"
   },
   "PokerChipGreen": {
     "DisplayName": "Poker Chip, Green",
@@ -47966,7 +52918,8 @@ STOCK_COMPONENT_INFO = {
       "gambler",
       "counter",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C986D0DA-FE46-11E0-9F48-F2379966D12C.png"
   },
   "PokerChipLightBlue": {
     "DisplayName": "Poker Chip, Light Blue",
@@ -47984,7 +52937,8 @@ STOCK_COMPONENT_INFO = {
       "gambler",
       "counter",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E622419A-3F5B-11E8-9E36-CA831EA37D3B.png"
   },
   "PokerChipOrange": {
     "DisplayName": "Poker Chip, Orange",
@@ -48002,7 +52956,8 @@ STOCK_COMPONENT_INFO = {
       "gambler",
       "counter",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B9AEE304-FE47-11E0-87A2-F2379966D12C.png"
   },
   "PokerChipPurple": {
     "DisplayName": "Poker Chip, Purple",
@@ -48020,7 +52975,8 @@ STOCK_COMPONENT_INFO = {
       "gambler",
       "counter",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/83FFA3AA-FE48-11E0-B7DD-F2379966D12C.png"
   },
   "PokerChipRed": {
     "DisplayName": "Poker Chip, Red",
@@ -48038,7 +52994,8 @@ STOCK_COMPONENT_INFO = {
       "gambler",
       "counter",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A9BB21FE-FE49-11E0-B7DD-F2379966D12C.png"
   },
   "PokerChipWhite": {
     "DisplayName": "Poker Chip, White",
@@ -48056,7 +53013,8 @@ STOCK_COMPONENT_INFO = {
       "gambler",
       "counter",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4F7BC11C-A660-11E0-896A-3A7437D397EC.png"
   },
   "PokerChipYellow": {
     "DisplayName": "Poker Chip, Yellow",
@@ -48074,7 +53032,8 @@ STOCK_COMPONENT_INFO = {
       "gambler",
       "counter",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6722A384-FE4A-11E0-A117-F2379966D12C.png"
   },
   "PolarBear": {
     "DisplayName": "Polar Bear",
@@ -48092,7 +53051,8 @@ STOCK_COMPONENT_INFO = {
       "hunter",
       "ursidae",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F684E996-5627-11E9-A0E6-71ED7E23BFD3.png"
   },
   "Police-CharacterMeeple": {
     "DisplayName": "Police - Character Meeple",
@@ -48120,7 +53080,8 @@ STOCK_COMPONENT_INFO = {
       "nypd",
       "policia",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/486508EC-90DD-11E8-BB44-A5FA785DA8EE.png"
   },
   "PremiumApple": {
     "DisplayName": "Premium Apple",
@@ -48140,7 +53101,8 @@ STOCK_COMPONENT_INFO = {
       "sustenance",
       "rations",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/87F829B0-59B0-11EA-B62C-E99D047667A6.png"
   },
   "PremiumAxe": {
     "DisplayName": "Premium Axe",
@@ -48165,7 +53127,8 @@ STOCK_COMPONENT_INFO = {
       "poleaxe",
       "tool",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A00472E4-0266-11EA-A991-BE6A378EFB1C.png"
   },
   "PremiumBarrel": {
     "DisplayName": "Premium Barrel",
@@ -48191,7 +53154,8 @@ STOCK_COMPONENT_INFO = {
       "food",
       "drink",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BFEC4262-2906-11E7-9E0B-5CAF6F50B980.png"
   },
   "PremiumBee": {
     "DisplayName": "Premium Bee",
@@ -48215,7 +53179,8 @@ STOCK_COMPONENT_INFO = {
       "beekeeping",
       "bumblebee",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F43E9602-D5C6-11EB-A165-66F33218550E.png"
   },
   "PremiumBlueClothBundle": {
     "DisplayName": "Premium Blue Cloth Bundle",
@@ -48235,7 +53200,8 @@ STOCK_COMPONENT_INFO = {
       "patchwork",
       "textile",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BFFAE1BE-2906-11E7-9E0B-5FAF6F50B980.png"
   },
   "PremiumBrain": {
     "DisplayName": "Premium Brain",
@@ -48268,7 +53234,8 @@ STOCK_COMPONENT_INFO = {
       "cognitive",
       "iq",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/644402F6-6CD1-11E7-A233-60D38701372A.png"
   },
   "PremiumBread": {
     "DisplayName": "Premium Bread",
@@ -48294,7 +53261,8 @@ STOCK_COMPONENT_INFO = {
       "grain",
       "grains",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3AF5D7E8-0267-11EA-A991-B96B378EFB1C.png"
   },
   "PremiumBrick": {
     "DisplayName": "Premium Brick",
@@ -48317,7 +53285,8 @@ STOCK_COMPONENT_INFO = {
       "wall",
       "barrier",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C08D641C-2906-11E7-8C1A-398C6E1C2FD2.png"
   },
   "PremiumBrownSpiceSack": {
     "DisplayName": "Premium Brown Spice Sack",
@@ -48338,7 +53307,8 @@ STOCK_COMPONENT_INFO = {
       "rituals",
       "cuisine",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C41B5676-542B-11EB-894E-144EE5DEA5C7.png"
   },
   "PremiumBuckler": {
     "DisplayName": "Premium Buckler",
@@ -48358,7 +53328,8 @@ STOCK_COMPONENT_INFO = {
       "targes",
       "aspis",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/776FAF1E-026C-11EA-A991-AB74378EFB1C.png"
   },
   "PremiumCampfire": {
     "DisplayName": "Premium Campfire",
@@ -48376,7 +53347,8 @@ STOCK_COMPONENT_INFO = {
       "woodpile",
       "sticks",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C11C98B2-2906-11E7-9E0B-72AF6F50B980.png"
   },
   "PremiumCinderBlock": {
     "DisplayName": "Premium Cinder Block",
@@ -48396,7 +53368,8 @@ STOCK_COMPONENT_INFO = {
       "architectures",
       "architects",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1382AC14-3F44-11E8-9E36-62541EA37D3B.png"
   },
   "PremiumCoal": {
     "DisplayName": "Premium Coal",
@@ -48421,7 +53394,8 @@ STOCK_COMPONENT_INFO = {
       "anthracite",
       "graphite",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C13B7020-2906-11E7-8C1A-4D8C6E1C2FD2.png"
   },
   "PremiumCopperIngot": {
     "DisplayName": "Premium Copper Ingot",
@@ -48445,7 +53419,8 @@ STOCK_COMPONENT_INFO = {
       "bronze",
       "patina",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/48433684-0267-11EA-A991-FA6B378EFB1C.png"
   },
   "PremiumCorn": {
     "DisplayName": "Premium Corn",
@@ -48468,7 +53443,8 @@ STOCK_COMPONENT_INFO = {
       "cultivation",
       "cultivate",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6FA98A8E-2939-11E7-9E0B-BBED6F50B980.png"
   },
   "PremiumCow": {
     "DisplayName": "Premium Cow",
@@ -48486,7 +53462,8 @@ STOCK_COMPONENT_INFO = {
       "beef",
       "heifer",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C19D2BEE-2906-11E7-9E0B-65AF6F50B980.png"
   },
   "PremiumCrate": {
     "DisplayName": "Premium Crate",
@@ -48506,7 +53483,8 @@ STOCK_COMPONENT_INFO = {
       "box",
       "transport",
       "tan"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CE06E614-2937-11E7-8C1A-25C76E1C2FD2.png"
   },
   "PremiumDog": {
     "DisplayName": "Premium Dog",
@@ -48528,7 +53506,8 @@ STOCK_COMPONENT_INFO = {
       "puppy",
       "dog",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A512E64C-34CA-11E7-9C5D-2BB4AFDFEE25.png"
   },
   "PremiumEnergyCell": {
     "DisplayName": "Premium Energy Cell",
@@ -48551,7 +53530,8 @@ STOCK_COMPONENT_INFO = {
       "futurism",
       "futuristic",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/65CB0432-026E-11EA-A4BA-DCAE0141A2E6.png"
   },
   "PremiumFish": {
     "DisplayName": "Premium Fish",
@@ -48582,7 +53562,8 @@ STOCK_COMPONENT_INFO = {
       "trout",
       "bass",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5F265804-2939-11E7-9E0B-7BED6F50B980.png"
   },
   "PremiumFurBundle": {
     "DisplayName": "Premium Fur Bundle",
@@ -48598,7 +53579,8 @@ STOCK_COMPONENT_INFO = {
       "cold",
       "thermal",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AA3531D0-0267-11EA-A4BA-DD210241A2E6.png"
   },
   "PremiumGoldIngot": {
     "DisplayName": "Premium Gold Ingot",
@@ -48633,7 +53615,8 @@ STOCK_COMPONENT_INFO = {
       "forty-niner",
       "fortyniner",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DDFE6DA8-2937-11E7-9E0B-FCEB6F50B980.png"
   },
   "PremiumGoldNugget": {
     "DisplayName": "Premium Gold Nugget",
@@ -48670,7 +53653,8 @@ STOCK_COMPONENT_INFO = {
       "fortyniner",
       "lode",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/275A0F5C-542C-11EB-894E-284FE5DEA5C7.png"
   },
   "PremiumGrainSack": {
     "DisplayName": "Premium Grain Sack",
@@ -48686,7 +53670,8 @@ STOCK_COMPONENT_INFO = {
       "rituals",
       "cuisine",
       "tan"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F06BCD46-2937-11E7-8C1A-3CC76E1C2FD2.png"
   },
   "PremiumGreenSpiceSack": {
     "DisplayName": "Premium Green Spice Sack",
@@ -48708,7 +53693,8 @@ STOCK_COMPONENT_INFO = {
       "rituals",
       "cuisine",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/776B88AA-542B-11EB-A27C-422C8AEC9566.png"
   },
   "PremiumHeart": {
     "DisplayName": "Premium Heart",
@@ -48735,7 +53721,8 @@ STOCK_COMPONENT_INFO = {
       "life",
       "anatomy",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F720ED8-6CD1-11E7-A233-63D38701372A.png"
   },
   "PremiumHorse": {
     "DisplayName": "Premium Horse",
@@ -48763,7 +53750,8 @@ STOCK_COMPONENT_INFO = {
       "gelding",
       "pony",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FDEAC33C-2937-11E7-8C1A-75C76E1C2FD2.png"
   },
   "PremiumIronIngot": {
     "DisplayName": "Premium Iron Ingot",
@@ -48794,7 +53782,8 @@ STOCK_COMPONENT_INFO = {
       "ironworks",
       "ironworking",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C227379E-2906-11E7-8C1A-458C6E1C2FD2.png"
   },
   "PremiumLeatherBag": {
     "DisplayName": "Premium Leather Bag",
@@ -48816,7 +53805,8 @@ STOCK_COMPONENT_INFO = {
       "knapsacks",
       "rucksacks,",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CBBF535C-BAE2-11EE-B020-C5E0DB3513CC.png"
   },
   "PremiumLeatherScroll": {
     "DisplayName": "Premium Leather Scroll",
@@ -48835,7 +53825,8 @@ STOCK_COMPONENT_INFO = {
       "torah",
       "vellum",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5F28C63E-0267-11EA-A4BA-40210241A2E6.png"
   },
   "PremiumLPGasCan": {
     "DisplayName": "Premium LP Gas Can",
@@ -48857,7 +53848,8 @@ STOCK_COMPONENT_INFO = {
       "combustion",
       "enthalpy",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C26CF676-2906-11E7-8C1A-528C6E1C2FD2.png"
   },
   "PremiumMagnifyingGlass": {
     "DisplayName": "Premium Magnifying Glass",
@@ -48882,7 +53874,8 @@ STOCK_COMPONENT_INFO = {
       "scientific",
       "research",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/72650722-6CD1-11E7-A233-6DD38701372A.png"
   },
   "PremiumMarbleTile": {
     "DisplayName": "Premium Marble Tile",
@@ -48901,7 +53894,8 @@ STOCK_COMPONENT_INFO = {
       "silica",
       "textile",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A1D6C58A-0267-11EA-A4BA-C2210241A2E6.png"
   },
   "PremiumOilDrum": {
     "DisplayName": "Premium Oil Drum",
@@ -48920,7 +53914,8 @@ STOCK_COMPONENT_INFO = {
       "petroleum",
       "crude",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/32D3B730-26A3-11E7-B612-0DD86E1C2FD2.png"
   },
   "PremiumOrangeClothBundle": {
     "DisplayName": "Premium Orange Cloth Bundle",
@@ -48940,7 +53935,8 @@ STOCK_COMPONENT_INFO = {
       "patchwork",
       "textile",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0F42A0A0-542C-11EB-A27C-E2AE89EC9566.png"
   },
   "PremiumOre": {
     "DisplayName": "Premium Ore",
@@ -48964,7 +53960,8 @@ STOCK_COMPONENT_INFO = {
       "extraction",
       "petrology",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9E33D4F6-FA10-11E7-972E-982354FDF89B.png"
   },
   "PremiumPinkPig": {
     "DisplayName": "Premium Pink Pig",
@@ -48990,7 +53987,8 @@ STOCK_COMPONENT_INFO = {
       "pigpen",
       "pork. ",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C3E94810-2906-11E7-9E0B-8AAF6F50B980.png"
   },
   "PremiumPotionBottle": {
     "DisplayName": "Premium Potion Bottle",
@@ -49021,7 +54019,8 @@ STOCK_COMPONENT_INFO = {
       "cure",
       "ailment",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C0AA3696-2906-11E7-9E0B-63AF6F50B980.png"
   },
   "PremiumPumpkin": {
     "DisplayName": "Premium Pumpkin",
@@ -49038,7 +54037,8 @@ STOCK_COMPONENT_INFO = {
       "gourd",
       "pepo",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/880E8C92-6CD1-11E7-9DB7-989D23D28831.png"
   },
   "PremiumPurpleClothBundle": {
     "DisplayName": "Premium Purple Cloth Bundle",
@@ -49058,7 +54058,8 @@ STOCK_COMPONENT_INFO = {
       "patchwork",
       "textile",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/038A0C76-542C-11EB-894E-944EE5DEA5C7.png"
   },
   "PremiumRedSpiceSack": {
     "DisplayName": "Premium Red Spice Sack",
@@ -49078,7 +54079,8 @@ STOCK_COMPONENT_INFO = {
       "rituals",
       "cuisine",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4933B548-542B-11EB-A27C-D72B8AEC9566.png"
   },
   "PremiumSealedScroll": {
     "DisplayName": "Premium Sealed Scroll",
@@ -49100,7 +54102,8 @@ STOCK_COMPONENT_INFO = {
       "wax",
       "formal",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/55325D98-0267-11EA-A4BA-28210241A2E6.png"
   },
   "PremiumSheep": {
     "DisplayName": "Premium Sheep",
@@ -49121,7 +54124,8 @@ STOCK_COMPONENT_INFO = {
       "livestock",
       "herd",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C4466630-2906-11E7-8C1A-688C6E1C2FD2.png"
   },
   "PremiumSkull": {
     "DisplayName": "Premium Skull",
@@ -49150,7 +54154,8 @@ STOCK_COMPONENT_INFO = {
       "macabre",
       "morbid",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A3D625E8-6CD1-11E7-A233-8AD38701372A.png"
   },
   "PremiumSpaceCrate": {
     "DisplayName": "Premium Space Crate",
@@ -49176,7 +54181,8 @@ STOCK_COMPONENT_INFO = {
       "ufo",
       "roswell",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D1DED5F6-0267-11EA-A4BA-19220241A2E6.png"
   },
   "PremiumSteak": {
     "DisplayName": "Premium Steak",
@@ -49208,7 +54214,8 @@ STOCK_COMPONENT_INFO = {
       "sirloin",
       "tenderloin",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C4C6B420-2906-11E7-9E0B-8DAF6F50B980.png"
   },
   "PremiumTome": {
     "DisplayName": "Premium Tome",
@@ -49249,7 +54256,8 @@ STOCK_COMPONENT_INFO = {
       "garbage",
       "bin",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1BFD3936-2938-11E7-8C1A-90C76E1C2FD2.png"
   },
   "PremiumTreasureChest": {
     "DisplayName": "Premium Treasure Chest",
@@ -49273,7 +54281,8 @@ STOCK_COMPONENT_INFO = {
       "wealth",
       "riches",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B061284E-6CD1-11E7-9DB7-2A9E23D28831.png"
   },
   "PremiumUraniumRod": {
     "DisplayName": "Premium Uranium Rod",
@@ -49296,7 +54305,8 @@ STOCK_COMPONENT_INFO = {
       "reactor",
       "hazmat",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C301A096-2906-11E7-9E0B-7AAF6F50B980.png"
   },
   "PremiumWaterBucket": {
     "DisplayName": "Premium Water Bucket",
@@ -49317,7 +54327,8 @@ STOCK_COMPONENT_INFO = {
       "basket",
       "cask",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7456FA1A-026E-11EA-A4BA-00AF0141A2E6.png"
   },
   "PremiumWhiteClothBundle": {
     "DisplayName": "Premium White Cloth Bundle",
@@ -49337,7 +54348,8 @@ STOCK_COMPONENT_INFO = {
       "patchwork",
       "textile",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0B5F5802-2938-11E7-8C1A-5EC76E1C2FD2.png"
   },
   "PremiumWhiteSpiceSack": {
     "DisplayName": "Premium White Spice Sack",
@@ -49357,7 +54369,8 @@ STOCK_COMPONENT_INFO = {
       "rituals",
       "cuisine",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BAE6336E-542B-11EB-A27C-E0AD89EC9566.png"
   },
   "PremiumWood": {
     "DisplayName": "Premium Wood",
@@ -49378,7 +54391,8 @@ STOCK_COMPONENT_INFO = {
       "timber",
       "lumber",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C54005C8-2906-11E7-8C1A-498C6E1C2FD2.png"
   },
   "PremiumYarnBall": {
     "DisplayName": "Premium Yarn Ball",
@@ -49400,7 +54414,8 @@ STOCK_COMPONENT_INFO = {
       "embroidery",
       "knitting",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/98E6BAB6-0267-11EA-A991-8F6C378EFB1C.png"
   },
   "PumpkinWood": {
     "DisplayName": "Pumpkin, Wood",
@@ -49420,7 +54435,8 @@ STOCK_COMPONENT_INFO = {
       "gourd",
       "pepo",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AF20FA7A-1DC1-11E9-A06D-4A442AD784EF.png"
   },
   "PuppyBlacklab": {
     "DisplayName": "Puppy, Black lab",
@@ -49442,7 +54458,8 @@ STOCK_COMPONENT_INFO = {
       "puppy",
       "dog",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D79B7FD8-0392-11E3-9103-1C36F281FBB4.png"
   },
   "PuppyBulldog": {
     "DisplayName": "Puppy, Bulldog",
@@ -49464,7 +54481,8 @@ STOCK_COMPONENT_INFO = {
       "puppy",
       "dog",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/44E3ABBC-0931-11E3-B70B-590A7740BD4B.png"
   },
   "PuppyMutt": {
     "DisplayName": "Puppy, Mutt",
@@ -49486,7 +54504,8 @@ STOCK_COMPONENT_INFO = {
       "puppy",
       "dog",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/40AC4A02-06E0-11E3-8D69-344DF281FBB4.png"
   },
   "PuppyPoodle": {
     "DisplayName": "Puppy, Poodle",
@@ -49508,7 +54527,8 @@ STOCK_COMPONENT_INFO = {
       "puppy",
       "dog",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/415D5158-06E0-11E3-A8A7-344DF281FBB4.png"
   },
   "PuppyTB15Black": {
     "DisplayName": "Puppy, TB15, Black",
@@ -49536,7 +54556,8 @@ STOCK_COMPONENT_INFO = {
       "puppy",
       "dog",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DB9850E0-6CCD-11EC-AA0B-A4A1F74A7BBA.png"
   },
   "PuppyTB15Blue": {
     "DisplayName": "Puppy, TB15, Blue",
@@ -49564,7 +54585,8 @@ STOCK_COMPONENT_INFO = {
       "puppy",
       "dog",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/005C39E6-6CCE-11EC-8E50-9CA7102E9259.png"
   },
   "PuppyTB15Green": {
     "DisplayName": "Puppy, TB15, Green",
@@ -49592,7 +54614,8 @@ STOCK_COMPONENT_INFO = {
       "puppy",
       "dog",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AA726DCE-6CCE-11EC-8E50-9BB0102E9259.png"
   },
   "PuppyTB15Orange": {
     "DisplayName": "Puppy, TB15, Orange",
@@ -49620,7 +54643,8 @@ STOCK_COMPONENT_INFO = {
       "puppy",
       "dog",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/85E81A58-6CCE-11EC-AA0B-60AAF74A7BBA.png"
   },
   "PuppyTB15Purple": {
     "DisplayName": "Puppy, TB15, Purple",
@@ -49648,7 +54672,8 @@ STOCK_COMPONENT_INFO = {
       "puppy",
       "dog",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4FC474DA-6CCE-11EC-8E50-77AB102E9259.png"
   },
   "PuppyTB15Red": {
     "DisplayName": "Puppy, TB15, Red",
@@ -49676,7 +54701,8 @@ STOCK_COMPONENT_INFO = {
       "puppy",
       "dog",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3CBCFE66-6CCE-11EC-8E50-B5AA102E9259.png"
   },
   "PuppyTB15White": {
     "DisplayName": "Puppy, TB15, White",
@@ -49704,7 +54730,8 @@ STOCK_COMPONENT_INFO = {
       "puppy",
       "dog",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/706E6BD2-6CCE-11EC-AA0B-2DA9F74A7BBA.png"
   },
   "PuppyTB15Yellow": {
     "DisplayName": "Puppy, TB15, Yellow",
@@ -49732,7 +54759,8 @@ STOCK_COMPONENT_INFO = {
       "puppy",
       "dog",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CAB3F378-6CCE-11EC-8E50-01B2102E9259.png"
   },
   "PuppyTerrier": {
     "DisplayName": "Puppy, Terrier",
@@ -49754,7 +54782,8 @@ STOCK_COMPONENT_INFO = {
       "puppy",
       "dog",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8BFEC716-0391-11E3-9F3E-1C36F281FBB4.png"
   },
   "PuppyYellowlab": {
     "DisplayName": "Puppy, Yellow lab",
@@ -49776,7 +54805,8 @@ STOCK_COMPONENT_INFO = {
       "puppy",
       "dog",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D81A3DB4-0392-11E3-A97D-1C36F281FBB4.png"
   },
   "PuppyYorkie": {
     "DisplayName": "Puppy, Yorkie",
@@ -49798,7 +54828,8 @@ STOCK_COMPONENT_INFO = {
       "puppy",
       "dog",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D8A89082-0392-11E3-B17F-1C36F281FBB4.png"
   },
   "PushCartBlack": {
     "DisplayName": "Push Cart, Black",
@@ -49815,7 +54846,8 @@ STOCK_COMPONENT_INFO = {
       "maintenance",
       "mining car",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/94795E1A-165B-11E8-8F09-593394A6FE1D.png"
   },
   "PushCartBlue": {
     "DisplayName": "Push Cart, Blue",
@@ -49832,7 +54864,8 @@ STOCK_COMPONENT_INFO = {
       "maintenance",
       "mining car",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/251A451C-165A-11E8-8F09-F03094A6FE1D.png"
   },
   "PushCartGreen": {
     "DisplayName": "Push Cart, Green",
@@ -49849,7 +54882,8 @@ STOCK_COMPONENT_INFO = {
       "maintenance",
       "mining car",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6AF91CD4-165A-11E8-8F09-833194A6FE1D.png"
   },
   "PushCartOrange": {
     "DisplayName": "Push Cart, Orange",
@@ -49866,7 +54900,8 @@ STOCK_COMPONENT_INFO = {
       "maintenance",
       "mining car",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/107A6122-165B-11E8-8F09-773294A6FE1D.png"
   },
   "PushCartPurple": {
     "DisplayName": "Push Cart, Purple",
@@ -49883,7 +54918,8 @@ STOCK_COMPONENT_INFO = {
       "maintenance",
       "mining car",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/17A30A58-165B-11E8-A55B-78E693A6FE1D.png"
   },
   "PushCartRed": {
     "DisplayName": "Push Cart, Red",
@@ -49900,7 +54936,8 @@ STOCK_COMPONENT_INFO = {
       "maintenance",
       "mining car",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E4DF38F2-165B-11E8-8F09-C33394A6FE1D.png"
   },
   "PushCartWhite": {
     "DisplayName": "Push Cart, White",
@@ -49917,7 +54954,8 @@ STOCK_COMPONENT_INFO = {
       "maintenance",
       "mining car",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/21AC070C-165B-11E8-A55B-8DE693A6FE1D.png"
   },
   "PushCartYellow": {
     "DisplayName": "Push Cart, Yellow",
@@ -49934,7 +54972,8 @@ STOCK_COMPONENT_INFO = {
       "maintenance",
       "mining car",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4CF80730-165B-11E8-8F09-DD3294A6FE1D.png"
   },
   "PutlerTB25": {
     "DisplayName": "Putler, TB25",
@@ -49950,7 +54989,8 @@ STOCK_COMPONENT_INFO = {
       "fsb",
       "kgb",
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D220B37E-9E49-11EC-9D86-61389B682474.png"
   },
   "PyramidBlack": {
     "DisplayName": "Pyramid, Black",
@@ -49972,7 +55012,8 @@ STOCK_COMPONENT_INFO = {
       "mummy",
       "tutankhamen",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B253526A-9EEC-11E7-9B52-F052CB191CC0.png"
   },
   "PyramidBlue": {
     "DisplayName": "Pyramid, Blue",
@@ -49994,7 +55035,8 @@ STOCK_COMPONENT_INFO = {
       "mummy",
       "tutankhamen",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C2E1FB40-9EEC-11E7-AC47-7ACE71BAD30D.png"
   },
   "PyramidPurple": {
     "DisplayName": "Pyramid, Purple",
@@ -50016,7 +55058,8 @@ STOCK_COMPONENT_INFO = {
       "mummy",
       "tutankhamen",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E6CD70B6-9EEC-11E7-9B52-4F53CB191CC0.png"
   },
   "PyramidRed": {
     "DisplayName": "Pyramid, Red",
@@ -50038,7 +55081,8 @@ STOCK_COMPONENT_INFO = {
       "mummy",
       "tutankhamen",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EF6F3574-9EEC-11E7-AC47-9DCE71BAD30D.png"
   },
   "PyramidWhite": {
     "DisplayName": "Pyramid, White",
@@ -50060,7 +55104,8 @@ STOCK_COMPONENT_INFO = {
       "mummy",
       "tutankhamen",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F62567B2-9EEC-11E7-9B52-6753CB191CC0.png"
   },
   "PyramidYellow": {
     "DisplayName": "Pyramid, Yellow",
@@ -50082,7 +55127,8 @@ STOCK_COMPONENT_INFO = {
       "mummy",
       "tutankhamen",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FBE8CD10-9EEC-11E7-AC47-A1CE71BAD30D.png"
   },
   "QubitBlack": {
     "DisplayName": "Qubit, Black",
@@ -50093,7 +55139,8 @@ STOCK_COMPONENT_INFO = {
       "cubit",
       "cube",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/02B7E4C4-14F8-11ED-B552-4A1796221FC2.png"
   },
   "QubitBlue": {
     "DisplayName": "Qubit, Blue",
@@ -50104,7 +55151,8 @@ STOCK_COMPONENT_INFO = {
       "cubit",
       "cube",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3C167352-14F8-11ED-B7FD-6815A5A96053.png"
   },
   "QubitGreen": {
     "DisplayName": "Qubit, Green",
@@ -50115,7 +55163,8 @@ STOCK_COMPONENT_INFO = {
       "cubit",
       "cube",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/52ED93E4-14F8-11ED-B7FD-9416A5A96053.png"
   },
   "QubitOrange": {
     "DisplayName": "Qubit, Orange",
@@ -50126,7 +55175,8 @@ STOCK_COMPONENT_INFO = {
       "cubit",
       "cube",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F461BE90-14F7-11ED-B7FD-2F12A5A96053.png"
   },
   "QubitPurple": {
     "DisplayName": "Qubit, Purple",
@@ -50137,7 +55187,8 @@ STOCK_COMPONENT_INFO = {
       "cubit",
       "cube",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/189CC37C-14F8-11ED-B7FD-4014A5A96053.png"
   },
   "QubitRed": {
     "DisplayName": "Qubit, Red",
@@ -50148,7 +55199,8 @@ STOCK_COMPONENT_INFO = {
       "cubit",
       "cube",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1088C9CE-14F8-11ED-B7FD-C213A5A96053.png"
   },
   "QubitWhite": {
     "DisplayName": "Qubit, White",
@@ -50159,7 +55211,8 @@ STOCK_COMPONENT_INFO = {
       "cubit",
       "cube",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BDC7F142-14F7-11ED-B552-C01396221FC2.png"
   },
   "QubitYellow": {
     "DisplayName": "Qubit, Yellow",
@@ -50170,7 +55223,8 @@ STOCK_COMPONENT_INFO = {
       "cubit",
       "cube",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4884222E-14F8-11ED-B552-501A96221FC2.png"
   },
   "QuestionMark": {
     "DisplayName": "Question Mark",
@@ -50188,7 +55242,8 @@ STOCK_COMPONENT_INFO = {
       "uncertainty",
       "doubt",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/21ECCA38-A177-11E8-9AC6-492BC5DEAA9F.png"
   },
   "RabbitPurple": {
     "DisplayName": "Rabbit, Purple",
@@ -50207,7 +55262,8 @@ STOCK_COMPONENT_INFO = {
       "rodentia",
       "hare",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A17FA5A8-33AE-11E9-8FEB-591016796776.png"
   },
   "RaceCarBlack": {
     "DisplayName": "Race Car, Black",
@@ -50228,7 +55284,8 @@ STOCK_COMPONENT_INFO = {
       "nascar",
       "competition",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C9ABDA96-473D-11E3-8048-4377F14FE85E.png"
   },
   "RaceCarBlue": {
     "DisplayName": "Race Car, Blue",
@@ -50270,7 +55327,8 @@ STOCK_COMPONENT_INFO = {
       "nascar",
       "competition",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CA72F176-473D-11E3-9083-4377F14FE85E.png"
   },
   "RaceCarOrange": {
     "DisplayName": "Race Car, Orange",
@@ -50291,7 +55349,8 @@ STOCK_COMPONENT_INFO = {
       "nascar",
       "competition",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/72776464-47EE-11E3-9A62-1A5FF14FE85E.png"
   },
   "RaceCarPurple": {
     "DisplayName": "Race Car, Purple",
@@ -50312,7 +55371,8 @@ STOCK_COMPONENT_INFO = {
       "nascar",
       "competition",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/18931EB6-47EE-11E3-876E-1A5FF14FE85E.png"
   },
   "RaceCarRed": {
     "DisplayName": "Race Car, Red",
@@ -50333,7 +55393,8 @@ STOCK_COMPONENT_INFO = {
       "nascar",
       "competition",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FD74B852-47EC-11E3-8030-1A5FF14FE85E.png"
   },
   "RaceCarYellow": {
     "DisplayName": "Race Car, Yellow",
@@ -50354,7 +55415,8 @@ STOCK_COMPONENT_INFO = {
       "nascar",
       "competition",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CC4BA7FE-473D-11E3-BCA1-4377F14FE85E.png"
   },
   "RadiationMask": {
     "DisplayName": "Radiation Mask",
@@ -50373,7 +55435,8 @@ STOCK_COMPONENT_INFO = {
       "filtration",
       "helmet",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/31ECDA70-35F3-11E9-BDDE-D54116796776.png"
   },
   "RangerArcherFantasyTB25": {
     "DisplayName": "Ranger Archer, Fantasy, TB25",
@@ -50405,7 +55468,8 @@ STOCK_COMPONENT_INFO = {
       "quiver",
       "arrows",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D8ECE434-280E-11EE-B0CD-C4D31C656649.png"
   },
   "RangerFiringBow": {
     "DisplayName": "Ranger Firing Bow",
@@ -50437,7 +55501,8 @@ STOCK_COMPONENT_INFO = {
       "quiver",
       "arrows",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/214FEA8E-4560-11E7-BFDD-0C5F370CF66B.png"
   },
   "RatAcrylic": {
     "DisplayName": "Rat, Acrylic",
@@ -50456,7 +55521,8 @@ STOCK_COMPONENT_INFO = {
       "disease",
       "laboratory",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/98E876B4-F6FB-11EB-9EF2-CF3122502F64.png"
   },
   "RatcatcherFantasyTB25": {
     "DisplayName": "Ratcatcher, Fantasy, TB25",
@@ -50470,7 +55536,8 @@ STOCK_COMPONENT_INFO = {
       "mouse",
       "hunter",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/77B1187C-8B8C-11EC-8A6C-BD1AEFDF9D7E.png"
   },
   "RatfolkAssassinFantasyTB25": {
     "DisplayName": "Ratfolk, Assassin, Fantasy, TB25",
@@ -50479,7 +55546,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "881CA0BC-11E4-11ED-B645-B559A5A96053",
     "Tags": [
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F577E8C-14F7-11ED-B7FD-280CA5A96053.png"
   },
   "Renegade-CharacterMeeple": {
     "DisplayName": "Renegade - Character Meeple",
@@ -50498,7 +55566,8 @@ STOCK_COMPONENT_INFO = {
       "anarchy",
       "rebel",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/487C4076-8EC0-11E8-8D59-9DA1B70C97C7.png"
   },
   "Rhinoceros": {
     "DisplayName": "Rhinoceros",
@@ -50521,7 +55590,8 @@ STOCK_COMPONENT_INFO = {
       "aphrodisiac",
       "animal",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/54183CF2-1A57-11EC-B915-B01BAE212452.png"
   },
   "Rifle": {
     "DisplayName": "Rifle",
@@ -50539,7 +55609,8 @@ STOCK_COMPONENT_INFO = {
       "musket",
       "arquebus",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0ABCA936-2FA8-11E9-B2A8-86F63AF41BB0.png"
   },
   "RingBlack": {
     "DisplayName": "Ring, Black",
@@ -50554,7 +55625,8 @@ STOCK_COMPONENT_INFO = {
       "hoop",
       "gasket,",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7EB0BC7A-FE5E-11E0-A117-F2379966D12C.png"
   },
   "RingBlue": {
     "DisplayName": "Ring, Blue",
@@ -50569,7 +55641,8 @@ STOCK_COMPONENT_INFO = {
       "hoop",
       "gasket,",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7B416222-FE51-11E0-A46B-F2379966D12C.png"
   },
   "RingGreen": {
     "DisplayName": "Ring, Green",
@@ -50584,7 +55657,8 @@ STOCK_COMPONENT_INFO = {
       "hoop",
       "gasket,",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FC135032-FE55-11E0-A117-F2379966D12C.png"
   },
   "RingOrange": {
     "DisplayName": "Ring, Orange",
@@ -50599,7 +55673,8 @@ STOCK_COMPONENT_INFO = {
       "hoop",
       "gasket,",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4047764A-FE59-11E0-A46B-F2379966D12C.png"
   },
   "RingPurple": {
     "DisplayName": "Ring, Purple",
@@ -50614,7 +55689,8 @@ STOCK_COMPONENT_INFO = {
       "hoop",
       "gasket,",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CD22385C-FE59-11E0-A46B-F2379966D12C.png"
   },
   "RingRed": {
     "DisplayName": "Ring, Red",
@@ -50629,7 +55705,8 @@ STOCK_COMPONENT_INFO = {
       "hoop",
       "gasket,",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/465C3FDE-FE5E-11E0-A117-F2379966D12C.png"
   },
   "RingWhite": {
     "DisplayName": "Ring, White",
@@ -50644,7 +55721,8 @@ STOCK_COMPONENT_INFO = {
       "hoop",
       "gasket,",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9EE50D4E-FE5D-11E0-A46B-F2379966D12C.png"
   },
   "RingYellow": {
     "DisplayName": "Ring, Yellow",
@@ -50659,7 +55737,8 @@ STOCK_COMPONENT_INFO = {
       "hoop",
       "gasket,",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DE9D1F72-FE5C-11E0-A46B-F2379966D12C.png"
   },
   "RivetBlack": {
     "DisplayName": "Rivet, Black",
@@ -50685,7 +55764,8 @@ STOCK_COMPONENT_INFO = {
       "rivet",
       "post",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C1009D3C-5824-11E6-897A-C3FA47D63B00.png"
   },
   "RobotDetectiveSpaceTB25": {
     "DisplayName": "Robot, Detective, Space, TB25",
@@ -50694,7 +55774,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "96355F02-992C-11ED-982E-C79470F6595B",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0E17B822-9E95-11ED-88B5-35B1CB83BB28.png"
   },
   "RobotSilver": {
     "DisplayName": "Robot, Silver",
@@ -50713,7 +55794,8 @@ STOCK_COMPONENT_INFO = {
       "synthetic",
       "mechanical",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BB2FC042-33AD-11E9-931F-A80E16796776.png"
   },
   "RobotWizardSpaceTB25": {
     "DisplayName": "Robot, Wizard, Space, TB25",
@@ -50722,7 +55804,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "637DEDD0-992D-11ED-982E-9B9D70F6595B",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/17803D4E-9E95-11ED-88B5-D8B1CB83BB28.png"
   },
   "RocketDiceBlack": {
     "DisplayName": "Rocket Dice, Black",
@@ -50770,7 +55853,8 @@ STOCK_COMPONENT_INFO = {
       "icbm",
       "booster",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/170C8E7C-F5AA-11E9-A274-CA7A752AFF71.png"
   },
   "RocketDiceBlue": {
     "DisplayName": "Rocket Dice, Blue",
@@ -50818,7 +55902,8 @@ STOCK_COMPONENT_INFO = {
       "icbm",
       "booster",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1F8D56DA-F5AA-11E9-A274-D17A752AFF71.png"
   },
   "RocketDiceBrown": {
     "DisplayName": "Rocket Dice, Brown",
@@ -50866,7 +55951,8 @@ STOCK_COMPONENT_INFO = {
       "icbm",
       "booster",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/266A201E-F5AA-11E9-A705-5C3545C92AFA.png"
   },
   "RocketDiceFrostWhite": {
     "DisplayName": "Rocket Dice, Frost White",
@@ -50914,7 +56000,8 @@ STOCK_COMPONENT_INFO = {
       "icbm",
       "booster",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D6A937C4-F5AC-11E9-A705-F33945C92AFA.png"
   },
   "RocketDiceGreen": {
     "DisplayName": "Rocket Dice, Green",
@@ -50962,7 +56049,8 @@ STOCK_COMPONENT_INFO = {
       "icbm",
       "booster",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2FEA148C-F5AA-11E9-A705-893545C92AFA.png"
   },
   "RocketDiceGrey": {
     "DisplayName": "Rocket Dice, Grey",
@@ -51058,7 +56146,8 @@ STOCK_COMPONENT_INFO = {
       "icbm",
       "booster",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E21C7A38-F5A9-11E9-A705-D53445C92AFA.png"
   },
   "RocketDicePurple": {
     "DisplayName": "Rocket Dice, Purple",
@@ -51106,7 +56195,8 @@ STOCK_COMPONENT_INFO = {
       "icbm",
       "booster",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/71F0E702-0243-11EA-9E9C-DC2F378EFB1C.png"
   },
   "RocketDiceRed": {
     "DisplayName": "Rocket Dice, Red",
@@ -51154,7 +56244,8 @@ STOCK_COMPONENT_INFO = {
       "icbm",
       "booster",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/811E6E8E-0243-11EA-B402-08E50141A2E6.png"
   },
   "RocketDiceWhite": {
     "DisplayName": "Rocket Dice, White",
@@ -51202,7 +56293,8 @@ STOCK_COMPONENT_INFO = {
       "icbm",
       "booster",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D118CE00-F5AC-11E9-A705-E43945C92AFA.png"
   },
   "RocketBlack": {
     "DisplayName": "Rocket, Black",
@@ -51221,7 +56313,8 @@ STOCK_COMPONENT_INFO = {
       "icbm",
       "booster",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ADAEA470-FFF2-11E0-8510-D5F69866D12C.png"
   },
   "RocketBlue": {
     "DisplayName": "Rocket, Blue",
@@ -51240,7 +56333,8 @@ STOCK_COMPONENT_INFO = {
       "icbm",
       "booster",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/35C13FF8-FFF3-11E0-8510-D5F69866D12C.png"
   },
   "RocketGreen": {
     "DisplayName": "Rocket, Green",
@@ -51259,7 +56353,8 @@ STOCK_COMPONENT_INFO = {
       "icbm",
       "booster",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/422F0080-FFF4-11E0-A96F-D5F69866D12C.png"
   },
   "RocketOrange": {
     "DisplayName": "Rocket, Orange",
@@ -51278,7 +56373,8 @@ STOCK_COMPONENT_INFO = {
       "icbm",
       "booster",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BDE7007E-FFF4-11E0-AFDD-D5F69866D12C.png"
   },
   "RocketPurple": {
     "DisplayName": "Rocket, Purple",
@@ -51297,7 +56393,8 @@ STOCK_COMPONENT_INFO = {
       "icbm",
       "booster",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FD3B42F0-FFF7-11E0-AFDD-D5F69866D12C.png"
   },
   "RocketRed": {
     "DisplayName": "Rocket, Red",
@@ -51316,7 +56413,8 @@ STOCK_COMPONENT_INFO = {
       "icbm",
       "booster",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/95947DA6-FFFC-11E0-AFDD-D5F69866D12C.png"
   },
   "RocketWhite": {
     "DisplayName": "Rocket, White",
@@ -51335,7 +56433,8 @@ STOCK_COMPONENT_INFO = {
       "icbm",
       "booster",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/204F6050-FFFD-11E0-AFDD-D5F69866D12C.png"
   },
   "RocketYellow": {
     "DisplayName": "Rocket, Yellow",
@@ -51354,7 +56453,8 @@ STOCK_COMPONENT_INFO = {
       "icbm",
       "booster",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/26CE3A1C-FFFF-11E0-AFDD-D5F69866D12C.png"
   },
   "Rogue-CharacterMeeple": {
     "DisplayName": "Rogue - Character Meeple",
@@ -51375,7 +56475,8 @@ STOCK_COMPONENT_INFO = {
       "guild",
       "thieves",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/55CB712A-8EC0-11E8-84CE-DCA1B70C97C7.png"
   },
   "RomanNumeralIBlack": {
     "DisplayName": "Roman Numeral I, Black",
@@ -51391,7 +56492,8 @@ STOCK_COMPONENT_INFO = {
       "digits",
       "notation",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D50850CE-42FA-11E2-A93F-3659ABED863F.png"
   },
   "RomanNumeralIBlue": {
     "DisplayName": "Roman Numeral I, Blue",
@@ -51407,7 +56509,8 @@ STOCK_COMPONENT_INFO = {
       "digits",
       "notation",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FDB10AD4-42FA-11E2-BA57-3659ABED863F.png"
   },
   "RomanNumeralIBrown": {
     "DisplayName": "Roman Numeral I, Brown",
@@ -51423,7 +56526,8 @@ STOCK_COMPONENT_INFO = {
       "digits",
       "notation",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/367A695A-42FB-11E2-A405-3659ABED863F.png"
   },
   "RomanNumeralIGreen": {
     "DisplayName": "Roman Numeral I, Green",
@@ -51439,7 +56543,8 @@ STOCK_COMPONENT_INFO = {
       "digits",
       "notation",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2636956E-42FB-11E2-835E-3659ABED863F.png"
   },
   "RomanNumeralIGreyLarge": {
     "DisplayName": "Roman Numeral I, Grey, Large",
@@ -51455,7 +56560,8 @@ STOCK_COMPONENT_INFO = {
       "digits",
       "notation",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F6ECC0AC-4FEC-11E9-978D-F0B5BE9D83F6.png"
   },
   "RomanNumeralIRed": {
     "DisplayName": "Roman Numeral I, Red",
@@ -51471,7 +56577,8 @@ STOCK_COMPONENT_INFO = {
       "digits",
       "notation",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6C24662E-43B8-11E2-BA05-9C6BABED863F.png"
   },
   "RomanNumeralIYellow": {
     "DisplayName": "Roman Numeral I, Yellow",
@@ -51487,7 +56594,8 @@ STOCK_COMPONENT_INFO = {
       "digits",
       "notation",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/52E6C58E-42FB-11E2-80B4-3659ABED863F.png"
   },
   "RomanNumeralIIIYellow": {
     "DisplayName": "Roman Numeral III, Yellow",
@@ -51503,7 +56611,8 @@ STOCK_COMPONENT_INFO = {
       "digits",
       "notation",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9AFE0B5E-42FE-11E2-AD20-3659ABED863F.png"
   },
   "RomanNumeralVGreen": {
     "DisplayName": "Roman Numeral V, Green",
@@ -51519,7 +56628,8 @@ STOCK_COMPONENT_INFO = {
       "digits",
       "notation",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D90964DE-42FE-11E2-8A05-3659ABED863F.png"
   },
   "RomanNumeralVYellow": {
     "DisplayName": "Roman Numeral V, Yellow",
@@ -51535,7 +56645,8 @@ STOCK_COMPONENT_INFO = {
       "digits",
       "notation",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FAB55E6C-42FE-11E2-BD6B-3659ABED863F.png"
   },
   "RoosterBlack": {
     "DisplayName": "Rooster, Black",
@@ -51560,7 +56671,8 @@ STOCK_COMPONENT_INFO = {
       "crowing",
       "brood",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5CB8B6FC-2E0B-11E8-9F03-B661B6AE4127.png"
   },
   "RoosterBlue": {
     "DisplayName": "Rooster, Blue",
@@ -51585,7 +56697,8 @@ STOCK_COMPONENT_INFO = {
       "crowing",
       "brood",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9ED8312E-2E0C-11E8-9F03-9C14F105D3FA.png"
   },
   "RoosterGreen": {
     "DisplayName": "Rooster, Green",
@@ -51610,7 +56723,8 @@ STOCK_COMPONENT_INFO = {
       "crowing",
       "brood",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AC9E28E0-2E0C-11E8-8EAE-F7DB54BFD7EC.png"
   },
   "RoosterOrange": {
     "DisplayName": "Rooster, Orange",
@@ -51635,7 +56749,8 @@ STOCK_COMPONENT_INFO = {
       "crowing",
       "brood",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/48D12D2A-2E0D-11E8-9F03-EF1B44D5D363.png"
   },
   "RoosterPurple": {
     "DisplayName": "Rooster, Purple",
@@ -51660,7 +56775,8 @@ STOCK_COMPONENT_INFO = {
       "crowing",
       "brood",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5EB28986-2E0D-11E8-9F03-E4E7225A519B.png"
   },
   "RoosterRed": {
     "DisplayName": "Rooster, Red",
@@ -51685,7 +56801,8 @@ STOCK_COMPONENT_INFO = {
       "crowing",
       "brood",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/63D4A9FE-2E0C-11E8-9F03-CC806F8AE353.png"
   },
   "RoosterWhite": {
     "DisplayName": "Rooster, White",
@@ -51710,7 +56827,8 @@ STOCK_COMPONENT_INFO = {
       "crowing",
       "brood",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0D3E79DE-2E0D-11E8-9F03-BA6E3E9B5FBC.png"
   },
   "RoosterYellow": {
     "DisplayName": "Rooster, Yellow",
@@ -51735,7 +56853,8 @@ STOCK_COMPONENT_INFO = {
       "crowing",
       "brood",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ED91C9CE-2E0C-11E8-9F03-92EFEF9AE5D1.png"
   },
   "RopeCoil": {
     "DisplayName": "Rope Coil",
@@ -51745,7 +56864,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "rigging",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/41EB1B3C-465A-11ED-B8C6-604C83472B09.png"
   },
   "RubberBands": {
     "DisplayName": "Rubber Bands",
@@ -51766,7 +56886,8 @@ STOCK_COMPONENT_INFO = {
       "elasticity",
       "stretch",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/42128314-9C84-11E7-B170-5A79CB191CC0.png"
   },
   "SackGold": {
     "DisplayName": "Sack, Gold",
@@ -51807,7 +56928,8 @@ STOCK_COMPONENT_INFO = {
       "treasure",
       "riches",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/410EB30E-88F5-11E7-B8E3-3E1280CDF569.png"
   },
   "SailboatBlack": {
     "DisplayName": "Sailboat, Black",
@@ -51832,7 +56954,8 @@ STOCK_COMPONENT_INFO = {
       "cutter",
       "sloop",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A1D15684-02A2-11E8-89DC-B0403BB45B2B.png"
   },
   "SailboatBlue": {
     "DisplayName": "Sailboat, Blue",
@@ -51857,7 +56980,8 @@ STOCK_COMPONENT_INFO = {
       "cutter",
       "sloop",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AD7E2192-02A2-11E8-89DC-C31E290D1C6F.png"
   },
   "SailboatGreen": {
     "DisplayName": "Sailboat, Green",
@@ -51882,7 +57006,8 @@ STOCK_COMPONENT_INFO = {
       "cutter",
       "sloop",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B8C7E664-02A2-11E8-89DC-D5318A22412F.png"
   },
   "SailboatOrange": {
     "DisplayName": "Sailboat, Orange",
@@ -51907,7 +57032,8 @@ STOCK_COMPONENT_INFO = {
       "cutter",
       "sloop",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C12240F2-02A2-11E8-8A0F-A1AD12E7582D.png"
   },
   "SailboatPurple": {
     "DisplayName": "Sailboat, Purple",
@@ -51932,7 +57058,8 @@ STOCK_COMPONENT_INFO = {
       "cutter",
       "sloop",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C9B4FBB0-02A2-11E8-89DC-DC1FD201C60D.png"
   },
   "SailboatRed": {
     "DisplayName": "Sailboat, Red",
@@ -51957,7 +57084,8 @@ STOCK_COMPONENT_INFO = {
       "cutter",
       "sloop",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D133C5BA-02A2-11E8-8A0F-DB9F9D6F38F2.png"
   },
   "SailboatWhite": {
     "DisplayName": "Sailboat, White",
@@ -51982,7 +57110,8 @@ STOCK_COMPONENT_INFO = {
       "cutter",
       "sloop",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DA5F67A2-02A2-11E8-8A0F-D5AF13AD3497.png"
   },
   "SailboatYellow": {
     "DisplayName": "Sailboat, Yellow",
@@ -52007,7 +57136,8 @@ STOCK_COMPONENT_INFO = {
       "cutter",
       "sloop",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ED704384-02A2-11E8-8A0F-E22F9A8DED4D.png"
   },
   "Sake": {
     "DisplayName": "Sake",
@@ -52016,7 +57146,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "0DC1068E-0F85-11ED-AD45-4A24A5A96053",
     "Tags": [
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01B2FD42-14F9-11ED-B7FD-431FA5A96053.png"
   },
   "SamuraiArmorHistoricTB25": {
     "DisplayName": "Samurai Armor, Historic, TB25",
@@ -52029,7 +57160,8 @@ STOCK_COMPONENT_INFO = {
       "spiked",
       "evil",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C12C694E-6F16-11EC-917D-D3905FE54652.png"
   },
   "SandTimer10Seconds": {
     "DisplayName": "Sand Timer, 10 Seconds",
@@ -52046,7 +57178,8 @@ STOCK_COMPONENT_INFO = {
       "timepiece",
       "chronometer",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D32F0DCE-7B8B-11EB-9850-CA14C787CE59.png"
   },
   "SandTimer120seconds": {
     "DisplayName": "Sand Timer, 120 seconds",
@@ -52063,7 +57196,8 @@ STOCK_COMPONENT_INFO = {
       "timepiece",
       "chronometer",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4E639194-B088-11E8-8C22-70D0BCC16479.png"
   },
   "SandTimer180seconds": {
     "DisplayName": "Sand Timer, 180 seconds",
@@ -52080,7 +57214,8 @@ STOCK_COMPONENT_INFO = {
       "timepiece",
       "chronometer",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4293E9AE-B088-11E8-8C22-5DD0BCC16479.png"
   },
   "SandTimer30seconds": {
     "DisplayName": "Sand Timer, 30 seconds",
@@ -52097,7 +57232,8 @@ STOCK_COMPONENT_INFO = {
       "timepiece",
       "chronometer",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D11D50AC-B088-11E8-BB17-54D0CE95AB04.png"
   },
   "SandTimer60seconds": {
     "DisplayName": "Sand Timer, 60 seconds",
@@ -52114,7 +57250,8 @@ STOCK_COMPONENT_INFO = {
       "timepiece",
       "chronometer",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CEF7B362-B088-11E8-8C22-80D1BCC16479.png"
   },
   "SandTimer90seconds": {
     "DisplayName": "Sand Timer, 90 seconds",
@@ -52131,7 +57268,8 @@ STOCK_COMPONENT_INFO = {
       "timepiece",
       "chronometer",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B011BFA2-B087-11E8-BB17-32CECE95AB04.png"
   },
   "SavageOrcChampionGreatHamm": {
     "DisplayName": "Savage Orc Champion Great Hamm",
@@ -52158,7 +57296,8 @@ STOCK_COMPONENT_INFO = {
       "isengard",
       "ogre",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C03327EC-4560-11E7-BFDD-1660370CF66B.png"
   },
   "SavageOrcChieftain": {
     "DisplayName": "Savage Orc Chieftain",
@@ -52185,7 +57324,8 @@ STOCK_COMPONENT_INFO = {
       "isengard",
       "ogre",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C52709CC-4550-11E7-ABA2-0C2F90E4BA5A.png"
   },
   "ScarecrowA": {
     "DisplayName": "Scarecrow A",
@@ -52228,7 +57368,8 @@ STOCK_COMPONENT_INFO = {
       "effigy",
       "fiddlesticks",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B1882550-12D1-11E8-B66E-58F193A6FE1D.png"
   },
   "ScarecrowB": {
     "DisplayName": "Scarecrow B",
@@ -52271,7 +57412,8 @@ STOCK_COMPONENT_INFO = {
       "effigy",
       "fiddlesticks",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D36B2910-12D1-11E8-B66E-76F193A6FE1D.png"
   },
   "Sci-FiCoinBronze": {
     "DisplayName": "Sci-Fi Coin, Bronze",
@@ -52281,7 +57423,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "credit",
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4644147E-401D-11ED-ABE7-AA3AB4CA1F86.png"
   },
   "Sci-FiCoinGold": {
     "DisplayName": "Sci-Fi Coin, Gold",
@@ -52291,7 +57434,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "credit",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5CE01020-401D-11ED-8172-A08D99F4B99C.png"
   },
   "Sci-FiCoinSilver": {
     "DisplayName": "Sci-Fi Coin, Silver",
@@ -52301,7 +57445,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "credit",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/68500F00-401D-11ED-8172-068E99F4B99C.png"
   },
   "Scientist-CharacterMeeple": {
     "DisplayName": "Scientist - Character Meeple",
@@ -52338,7 +57483,8 @@ STOCK_COMPONENT_INFO = {
       "immunologist",
       "phlebotomist",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3AEE42D0-90DA-11E8-BB44-74F6785DA8EE.png"
   },
   "Screw6mmx3mmBlack": {
     "DisplayName": "Screw, 6mm x 3mm, Black",
@@ -52364,7 +57510,8 @@ STOCK_COMPONENT_INFO = {
       "rivet",
       "post",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A566F24C-715F-11E7-B7F5-9EBD3AA59C5F.png"
   },
   "Screw8mmx5mmBlack": {
     "DisplayName": "Screw, 8mm x 5mm, Black",
@@ -52390,7 +57537,8 @@ STOCK_COMPONENT_INFO = {
       "rivet",
       "post",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AAD9F97C-3DE8-11EC-BC5B-671F5E0D62FB.png"
   },
   "SemiTruckPostApocalypse": {
     "DisplayName": "Semi Truck, Post Apocalypse",
@@ -52399,7 +57547,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "561916F6-3B54-11ED-AD7D-AF0DB4CA1F86",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/73EDD3D8-401D-11ED-8172-DB8E99F4B99C.png"
   },
   "Sharpies": {
     "DisplayName": "Sharpies",
@@ -52421,7 +57570,8 @@ STOCK_COMPONENT_INFO = {
       "sharpie",
       "marker",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/13B6EFDE-621E-11EA-86E6-10C4D50F5BC8.png"
   },
   "Sheep": {
     "DisplayName": "Sheep",
@@ -52449,7 +57599,8 @@ STOCK_COMPONENT_INFO = {
       "husbandry",
       "flock",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/32D8F4D0-F9AD-11E0-9D98-108960677055.png"
   },
   "SheepRandom": {
     "DisplayName": "Sheep, Random",
@@ -52477,7 +57628,8 @@ STOCK_COMPONENT_INFO = {
       "husbandry",
       "flock",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F4EDEFA8-F5A8-11E9-A274-9B78752AFF71.png"
   },
   "Sheetof1\"GoldScratchOffCircleStickers": {
     "DisplayName": "Sheet of 1\" Gold Scratch Off Circle Stickers",
@@ -52489,7 +57641,8 @@ STOCK_COMPONENT_INFO = {
       "coin scratch",
       "lottery ticket",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1990DE7A-E673-11EC-B80A-B3E2D670201F.png"
   },
   "Sheetof1\"SilverScratchOffCircleStickers": {
     "DisplayName": "Sheet of 1\" Silver Scratch Off Circle Stickers",
@@ -52501,7 +57654,8 @@ STOCK_COMPONENT_INFO = {
       "lottery ticket",
       "scratch offs",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/222F6614-E673-11EC-8767-A7C2C8617CE0.png"
   },
   "SheetofRectangleScratchOffSitckers": {
     "DisplayName": "Sheet of Rectangle Scratch Off Sitckers",
@@ -52513,7 +57667,8 @@ STOCK_COMPONENT_INFO = {
       "coin scratch",
       "lottery ticket",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/28E23A22-E673-11EC-8767-25C3C8617CE0.png"
   },
   "Sheriff-CharacterMeeple": {
     "DisplayName": "Sheriff - Character Meeple",
@@ -52541,7 +57696,8 @@ STOCK_COMPONENT_INFO = {
       "nypd",
       "policia",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5F98BA78-8EC0-11E8-BCE8-D2F1785DA8EE.png"
   },
   "SheriffBadgeGold": {
     "DisplayName": "Sheriff Badge, Gold",
@@ -52574,8 +57730,12 @@ STOCK_COMPONENT_INFO = {
       "lapd",
       "nypd",
       "policia",
+      "first player",
+      "first player marker",
+      "first player token",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4AC89BFA-6CC9-11EC-AA0B-21E7F74A7BBA.png"
   },
   "SheriffBadgeSilver": {
     "DisplayName": "Sheriff Badge, Silver",
@@ -52608,8 +57768,12 @@ STOCK_COMPONENT_INFO = {
       "lapd",
       "nypd",
       "policia",
+      "first player",
+      "first player marker",
+      "first player token",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5775C312-61E0-11EC-BA8E-348503B57022.png"
   },
   "ShieldbearerBlue": {
     "DisplayName": "Shieldbearer, Blue",
@@ -52645,7 +57809,8 @@ STOCK_COMPONENT_INFO = {
       "protectorate",
       "military",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8CD013CA-43D4-11EC-952A-BBE783417843.png"
   },
   "ShieldbearerPurple": {
     "DisplayName": "Shieldbearer, Purple",
@@ -52696,7 +57861,8 @@ STOCK_COMPONENT_INFO = {
       "blimp",
       "helium,",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3F80AB32-74E0-11ED-BB94-CF7625C4E336.png"
   },
   "ShipAirSteampunkBlue": {
     "DisplayName": "Ship, Air, Steampunk, Blue",
@@ -52711,7 +57877,8 @@ STOCK_COMPONENT_INFO = {
       "blimp",
       "helium,",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5E472D34-74E0-11ED-B27B-FB7043694036.png"
   },
   "ShipAirSteampunkGreen": {
     "DisplayName": "Ship, Air, Steampunk, Green",
@@ -52726,7 +57893,8 @@ STOCK_COMPONENT_INFO = {
       "blimp",
       "helium,",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6111B1C4-74E0-11ED-B27B-137143694036.png"
   },
   "ShipAirSteampunkOrange": {
     "DisplayName": "Ship, Air, Steampunk, Orange",
@@ -52741,7 +57909,8 @@ STOCK_COMPONENT_INFO = {
       "blimp",
       "helium,",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6711120E-74E0-11ED-BB94-897825C4E336.png"
   },
   "ShipAirSteampunkPurple": {
     "DisplayName": "Ship, Air, Steampunk, Purple",
@@ -52756,7 +57925,8 @@ STOCK_COMPONENT_INFO = {
       "blimp",
       "helium,",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6D8CF49A-74E0-11ED-BB94-BA7825C4E336.png"
   },
   "ShipAirSteampunkRed": {
     "DisplayName": "Ship, Air, Steampunk, Red",
@@ -52771,7 +57941,8 @@ STOCK_COMPONENT_INFO = {
       "blimp",
       "helium,",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/70B8B974-74E0-11ED-BB94-2E7925C4E336.png"
   },
   "ShipAirSteampunkWhite": {
     "DisplayName": "Ship, Air, Steampunk, White",
@@ -52786,7 +57957,8 @@ STOCK_COMPONENT_INFO = {
       "blimp",
       "helium,",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/76E82D2A-74E0-11ED-BB94-547925C4E336.png"
   },
   "ShipAirSteampunkYellow": {
     "DisplayName": "Ship, Air, Steampunk, Yellow",
@@ -52801,7 +57973,8 @@ STOCK_COMPONENT_INFO = {
       "blimp",
       "helium,",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7AB712EA-74E0-11ED-B27B-3F7243694036.png"
   },
   "ShipModernAircraftCarrierBlack": {
     "DisplayName": "Ship, Modern, Aircraft Carrier, Black",
@@ -52819,7 +57992,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6AEAEFE8-904E-11EC-A139-503D2DFC60CF.png"
   },
   "ShipModernAircraftCarrierGreen": {
     "DisplayName": "Ship, Modern, Aircraft Carrier, Green",
@@ -52837,7 +58011,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/72184496-904E-11EC-854F-8F80865AFFDF.png"
   },
   "ShipModernAircraftCarrierOrange": {
     "DisplayName": "Ship, Modern, Aircraft Carrier, Orange",
@@ -52855,7 +58030,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/79812342-904E-11EC-854F-AB80865AFFDF.png"
   },
   "ShipModernAircraftCarrierPurple": {
     "DisplayName": "Ship, Modern, Aircraft Carrier, Purple",
@@ -52873,7 +58049,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8279F780-904E-11EC-854F-3B81865AFFDF.png"
   },
   "ShipModernAircraftCarrierWhite": {
     "DisplayName": "Ship, Modern, Aircraft Carrier, White",
@@ -52891,7 +58068,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8A329586-904E-11EC-A139-4C3F2DFC60CF.png"
   },
   "ShipModernBattleshipBlack": {
     "DisplayName": "Ship, Modern, Battleship, Black",
@@ -52909,7 +58087,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C11589FE-904F-11EC-854F-B38E865AFFDF.png"
   },
   "ShipModernBattleshipGreen": {
     "DisplayName": "Ship, Modern, Battleship, Green",
@@ -52927,7 +58106,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C965DEF6-904F-11EC-A139-1F4E2DFC60CF.png"
   },
   "ShipModernBattleshipOrange": {
     "DisplayName": "Ship, Modern, Battleship, Orange",
@@ -52945,7 +58125,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D0FADB76-904F-11EC-854F-C48F865AFFDF.png"
   },
   "ShipModernBattleshipPurple": {
     "DisplayName": "Ship, Modern, Battleship, Purple",
@@ -52963,7 +58144,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D6C4ED62-904F-11EC-854F-9C90865AFFDF.png"
   },
   "ShipModernBattleshipWhite": {
     "DisplayName": "Ship, Modern, Battleship, White",
@@ -52981,7 +58163,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DEB3769C-904F-11EC-A139-F24E2DFC60CF.png"
   },
   "ShipModernContainerBlack": {
     "DisplayName": "Ship, Modern, Container, Black",
@@ -52995,7 +58178,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5076FBAE-9051-11EC-A139-7B602DFC60CF.png"
   },
   "ShipModernContainerGreen": {
     "DisplayName": "Ship, Modern, Container, Green",
@@ -53009,7 +58193,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/57B929B4-9051-11EC-854F-94A2865AFFDF.png"
   },
   "ShipModernContainerOrange": {
     "DisplayName": "Ship, Modern, Container, Orange",
@@ -53023,7 +58208,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/62075A62-9051-11EC-854F-26A3865AFFDF.png"
   },
   "ShipModernContainerPurple": {
     "DisplayName": "Ship, Modern, Container, Purple",
@@ -53037,7 +58223,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6F6BE2FE-9051-11EC-A139-35622DFC60CF.png"
   },
   "ShipModernContainerWhite": {
     "DisplayName": "Ship, Modern, Container, White",
@@ -53051,7 +58238,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/784E86E2-9051-11EC-854F-50A4865AFFDF.png"
   },
   "ShipModernCruiserBlack": {
     "DisplayName": "Ship, Modern, Cruiser, Black",
@@ -53069,7 +58257,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B4DDEF96-9054-11EC-A139-288A2DFC60CF.png"
   },
   "ShipModernCruiserGreen": {
     "DisplayName": "Ship, Modern, Cruiser, Green",
@@ -53087,7 +58276,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A68CBBA4-9057-11EC-854F-A471865AFFDF.png"
   },
   "ShipModernCruiserOrange": {
     "DisplayName": "Ship, Modern, Cruiser, Orange",
@@ -53105,7 +58295,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ADD2CC14-9057-11EC-A139-FB2F2DFC60CF.png"
   },
   "ShipModernCruiserPurple": {
     "DisplayName": "Ship, Modern, Cruiser, Purple",
@@ -53123,7 +58314,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B57236EE-9057-11EC-A139-97302DFC60CF.png"
   },
   "ShipModernCruiserWhite": {
     "DisplayName": "Ship, Modern, Cruiser, White",
@@ -53141,7 +58333,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BA945E2C-9057-11EC-854F-B672865AFFDF.png"
   },
   "ShipModernDestroyerBlack": {
     "DisplayName": "Ship, Modern, Destroyer, Black",
@@ -53159,7 +58352,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/43551F16-9059-11EC-854F-8C84865AFFDF.png"
   },
   "ShipModernDestroyerGreen": {
     "DisplayName": "Ship, Modern, Destroyer, Green",
@@ -53177,7 +58371,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A816E34-9059-11EC-854F-D384865AFFDF.png"
   },
   "ShipModernDestroyerOrange": {
     "DisplayName": "Ship, Modern, Destroyer, Orange",
@@ -53195,7 +58390,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/57D798D8-9059-11EC-A139-97432DFC60CF.png"
   },
   "ShipModernDestroyerPurple": {
     "DisplayName": "Ship, Modern, Destroyer, Purple",
@@ -53213,7 +58409,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5FA21084-9059-11EC-854F-EC85865AFFDF.png"
   },
   "ShipModernDestroyerWhite": {
     "DisplayName": "Ship, Modern, Destroyer, White",
@@ -53231,7 +58428,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/66AD6EB4-9059-11EC-854F-2686865AFFDF.png"
   },
   "ShipModernSubmarineBlack": {
     "DisplayName": "Ship, Modern, Submarine, Black",
@@ -53249,7 +58447,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4BF38D40-9065-11EC-A97F-0B5B2DFC60CF.png"
   },
   "ShipModernSubmarineGreen": {
     "DisplayName": "Ship, Modern, Submarine, Green",
@@ -53267,7 +58466,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5523D74E-9065-11EC-A97F-2D5B2DFC60CF.png"
   },
   "ShipModernSubmarineOrange": {
     "DisplayName": "Ship, Modern, Submarine, Orange",
@@ -53285,7 +58485,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5C07408C-9065-11EC-A97F-8D5B2DFC60CF.png"
   },
   "ShipModernSubmarinePurple": {
     "DisplayName": "Ship, Modern, Submarine, Purple",
@@ -53303,7 +58504,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/67C5B3FE-9065-11EC-A97F-6C5C2DFC60CF.png"
   },
   "ShipModernSubmarineWhite": {
     "DisplayName": "Ship, Modern, Submarine, White",
@@ -53321,7 +58523,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/715A553C-9065-11EC-A97F-CE5C2DFC60CF.png"
   },
   "ShipModernTransportBlack": {
     "DisplayName": "Ship, Modern, Transport, Black",
@@ -53339,7 +58542,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A1A236E6-9066-11EC-A97F-816C2DFC60CF.png"
   },
   "ShipModernTransportGreen": {
     "DisplayName": "Ship, Modern, Transport, Green",
@@ -53357,7 +58561,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AC3CB6D0-9066-11EC-9E3C-FA2F865AFFDF.png"
   },
   "ShipModernTransportOrange": {
     "DisplayName": "Ship, Modern, Transport, Orange",
@@ -53375,7 +58580,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C38A9C30-9066-11EC-A97F-3D6E2DFC60CF.png"
   },
   "ShipModernTransportPurple": {
     "DisplayName": "Ship, Modern, Transport, Purple",
@@ -53393,7 +58599,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C9BF9E48-9066-11EC-A97F-636E2DFC60CF.png"
   },
   "ShipModernTransportWhite": {
     "DisplayName": "Ship, Modern, Transport, White",
@@ -53411,7 +58618,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "maritime",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D017196A-9066-11EC-9E3C-DA31865AFFDF.png"
   },
   "ShipSeaBritishBlack": {
     "DisplayName": "Ship, Sea, British, Black",
@@ -53428,7 +58636,8 @@ STOCK_COMPONENT_INFO = {
       "piracy",
       "shipwright",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/700E93F4-9020-11EC-A139-EC732DFC60CF.png"
   },
   "ShipSeaBritishBlue": {
     "DisplayName": "Ship, Sea, British, Blue",
@@ -53445,7 +58654,8 @@ STOCK_COMPONENT_INFO = {
       "piracy",
       "shipwright",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9D791C06-9020-11EC-854F-6639865AFFDF.png"
   },
   "ShipSeaBritishGreen": {
     "DisplayName": "Ship, Sea, British, Green",
@@ -53462,7 +58672,8 @@ STOCK_COMPONENT_INFO = {
       "piracy",
       "shipwright",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A39C92D4-9020-11EC-A139-5E762DFC60CF.png"
   },
   "ShipSeaBritishOrange": {
     "DisplayName": "Ship, Sea, British, Orange",
@@ -53479,7 +58690,8 @@ STOCK_COMPONENT_INFO = {
       "piracy",
       "shipwright",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/73E070A6-9020-11EC-854F-3D37865AFFDF.png"
   },
   "ShipSeaBritishPurple": {
     "DisplayName": "Ship, Sea, British, Purple",
@@ -53496,7 +58708,8 @@ STOCK_COMPONENT_INFO = {
       "piracy",
       "shipwright",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/94AB6A34-9020-11EC-A139-AB752DFC60CF.png"
   },
   "ShipSeaBritishRed": {
     "DisplayName": "Ship, Sea, British, Red",
@@ -53513,7 +58726,8 @@ STOCK_COMPONENT_INFO = {
       "piracy",
       "shipwright",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/710E20EA-9682-11EC-9621-B110E9419938.png"
   },
   "ShipSeaBritishWhite": {
     "DisplayName": "Ship, Sea, British, White",
@@ -53530,7 +58744,8 @@ STOCK_COMPONENT_INFO = {
       "piracy",
       "shipwright",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/85FE97A4-9020-11EC-A139-08752DFC60CF.png"
   },
   "ShipSeaBritishYellow": {
     "DisplayName": "Ship, Sea, British, Yellow",
@@ -53547,7 +58762,8 @@ STOCK_COMPONENT_INFO = {
       "piracy",
       "shipwright",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9955EFAA-9020-11EC-A139-23762DFC60CF.png"
   },
   "ShipSeaPirateBlack": {
     "DisplayName": "Ship, Sea, Pirate, Black",
@@ -53571,7 +58787,8 @@ STOCK_COMPONENT_INFO = {
       "piracy",
       "high seas",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/85C683F6-1CBB-11EC-9D40-2E995853E446.png"
   },
   "ShipSeaPirateBlue": {
     "DisplayName": "Ship, Sea, Pirate, Blue",
@@ -53595,7 +58812,8 @@ STOCK_COMPONENT_INFO = {
       "piracy",
       "high seas",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9245CA88-1CBB-11EC-9177-DA014B5CF84F.png"
   },
   "ShipSeaPirateGreen": {
     "DisplayName": "Ship, Sea, Pirate, Green",
@@ -53619,7 +58837,8 @@ STOCK_COMPONENT_INFO = {
       "piracy",
       "high seas",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/98A56DA2-1CBB-11EC-9177-DF014B5CF84F.png"
   },
   "ShipSeaPirateOrange": {
     "DisplayName": "Ship, Sea, Pirate, Orange",
@@ -53643,7 +58862,8 @@ STOCK_COMPONENT_INFO = {
       "piracy",
       "high seas",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B542FE20-1CBB-11EC-9177-3C024B5CF84F.png"
   },
   "ShipSeaPiratePurple": {
     "DisplayName": "Ship, Sea, Pirate, Purple",
@@ -53667,7 +58887,8 @@ STOCK_COMPONENT_INFO = {
       "piracy",
       "high seas",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C5E6CDE2-1CBB-11EC-9D40-EE995853E446.png"
   },
   "ShipSeaPirateRed": {
     "DisplayName": "Ship, Sea, Pirate, Red",
@@ -53691,7 +58912,8 @@ STOCK_COMPONENT_INFO = {
       "piracy",
       "high seas",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CCECE0AE-1CBB-11EC-9177-6E024B5CF84F.png"
   },
   "ShipSeaPirateWhite": {
     "DisplayName": "Ship, Sea, Pirate, White",
@@ -53715,7 +58937,8 @@ STOCK_COMPONENT_INFO = {
       "piracy",
       "high seas",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E0480110-1CBB-11EC-9177-AE024B5CF84F.png"
   },
   "ShipSeaPirateYellow": {
     "DisplayName": "Ship, Sea, Pirate, Yellow",
@@ -53739,7 +58962,8 @@ STOCK_COMPONENT_INFO = {
       "piracy",
       "high seas",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E6668210-1CBB-11EC-9D40-349A5853E446.png"
   },
   "ShipSeaVikingLongboatBlack": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Black",
@@ -53759,7 +58983,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "ocean",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EFC5F0DA-57AC-11EC-AAEC-91AD5DD54BA2.png"
   },
   "ShipSeaVikingLongboatBlue": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Blue",
@@ -53779,7 +59004,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "ocean",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F33D3944-57AC-11EC-A747-D371E73F1098.png"
   },
   "ShipSeaVikingLongboatGreen": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Green",
@@ -53799,7 +59025,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "ocean",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F6866AA8-57AC-11EC-AAEC-91AD5DD54BA2.png"
   },
   "ShipSeaVikingLongboatOrange": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Orange",
@@ -53819,7 +59046,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "ocean",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FB95E096-57AC-11EC-AAEC-B8AD5DD54BA2.png"
   },
   "ShipSeaVikingLongboatPurple": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Purple",
@@ -53839,7 +59067,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "ocean",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FF628F6C-57AC-11EC-A747-D771E73F1098.png"
   },
   "ShipSeaVikingLongboatRed": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Red",
@@ -53859,7 +59088,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "ocean",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/02BDDA7C-57AD-11EC-AAEC-B9AD5DD54BA2.png"
   },
   "ShipSeaVikingLongboatWhite": {
     "DisplayName": "Ship, Sea, Viking, Longboat, White",
@@ -53879,7 +59109,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "ocean",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/06DF26A6-57AD-11EC-A747-0772E73F1098.png"
   },
   "ShipSeaVikingLongboatYellow": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Yellow",
@@ -53899,7 +59130,8 @@ STOCK_COMPONENT_INFO = {
       "sea",
       "ocean",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0A8136F0-57AD-11EC-AAEC-E1AD5DD54BA2.png"
   },
   "ShipSpaceFighterBlack": {
     "DisplayName": "Ship, Space, Fighter, Black",
@@ -53926,7 +59158,8 @@ STOCK_COMPONENT_INFO = {
       "starfighter",
       "intergalactic",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1458612A-1CBC-11EC-9D40-DA9A5853E446.png"
   },
   "ShipSpaceFighterBlue": {
     "DisplayName": "Ship, Space, Fighter, Blue",
@@ -53953,7 +59186,8 @@ STOCK_COMPONENT_INFO = {
       "starfighter",
       "intergalactic",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1BBFC98A-1CBC-11EC-9D40-DB9A5853E446.png"
   },
   "ShipSpaceFighterGreen": {
     "DisplayName": "Ship, Space, Fighter, Green",
@@ -53980,7 +59214,8 @@ STOCK_COMPONENT_INFO = {
       "starfighter",
       "intergalactic",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/247CC604-1CBC-11EC-9177-51034B5CF84F.png"
   },
   "ShipSpaceFighterOrange": {
     "DisplayName": "Ship, Space, Fighter, Orange",
@@ -54007,7 +59242,8 @@ STOCK_COMPONENT_INFO = {
       "starfighter",
       "intergalactic",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2CC1D052-1CBC-11EC-9D40-F39A5853E446.png"
   },
   "ShipSpaceFighterPurple": {
     "DisplayName": "Ship, Space, Fighter, Purple",
@@ -54034,7 +59270,8 @@ STOCK_COMPONENT_INFO = {
       "starfighter",
       "intergalactic",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/34579662-1CBC-11EC-9D40-129B5853E446.png"
   },
   "ShipSpaceFighterRed": {
     "DisplayName": "Ship, Space, Fighter, Red",
@@ -54061,7 +59298,8 @@ STOCK_COMPONENT_INFO = {
       "starfighter",
       "intergalactic",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3BF2E62E-1CBC-11EC-9177-91034B5CF84F.png"
   },
   "ShipSpaceFighterWhite": {
     "DisplayName": "Ship, Space, Fighter, White",
@@ -54088,7 +59326,8 @@ STOCK_COMPONENT_INFO = {
       "starfighter",
       "intergalactic",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/418942A4-1CBC-11EC-9D40-329B5853E446.png"
   },
   "ShipSpaceFighterYellow": {
     "DisplayName": "Ship, Space, Fighter, Yellow",
@@ -54115,7 +59354,8 @@ STOCK_COMPONENT_INFO = {
       "starfighter",
       "intergalactic",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A8FA76C-1CBC-11EC-9D40-499B5853E446.png"
   },
   "ShipSpaceFreighterBlack": {
     "DisplayName": "Ship, Space, Freighter, Black",
@@ -54138,7 +59378,8 @@ STOCK_COMPONENT_INFO = {
       "haul",
       "logisticals",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C63C6904-1CBC-11EC-9D40-A19C5853E446.png"
   },
   "ShipSpaceFreighterBlue": {
     "DisplayName": "Ship, Space, Freighter, Blue",
@@ -54161,7 +59402,8 @@ STOCK_COMPONENT_INFO = {
       "haul",
       "logisticals",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CAA05960-1CBC-11EC-9D40-A49C5853E446.png"
   },
   "ShipSpaceFreighterGreen": {
     "DisplayName": "Ship, Space, Freighter, Green",
@@ -54184,7 +59426,8 @@ STOCK_COMPONENT_INFO = {
       "haul",
       "logisticals",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CE194A16-1CBC-11EC-9D40-A49C5853E446.png"
   },
   "ShipSpaceFreighterOrange": {
     "DisplayName": "Ship, Space, Freighter, Orange",
@@ -54207,7 +59450,8 @@ STOCK_COMPONENT_INFO = {
       "haul",
       "logisticals",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EC1B4F24-25E9-11EC-831B-1F65898C9FDE.png"
   },
   "ShipSpaceFreighterPurple": {
     "DisplayName": "Ship, Space, Freighter, Purple",
@@ -54230,7 +59474,8 @@ STOCK_COMPONENT_INFO = {
       "haul",
       "logisticals",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D3AD9DC4-1CBC-11EC-9177-FC044B5CF84F.png"
   },
   "ShipSpaceFreighterRed": {
     "DisplayName": "Ship, Space, Freighter, Red",
@@ -54253,7 +59498,8 @@ STOCK_COMPONENT_INFO = {
       "haul",
       "logisticals",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E5FE46BE-25E9-11EC-831B-0465898C9FDE.png"
   },
   "ShipSpaceFreighterWhite": {
     "DisplayName": "Ship, Space, Freighter, White",
@@ -54276,7 +59522,8 @@ STOCK_COMPONENT_INFO = {
       "haul",
       "logisticals",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DD1B8916-1CBC-11EC-9D40-D79C5853E446.png"
   },
   "ShipSpaceFreighterYellow": {
     "DisplayName": "Ship, Space, Freighter, Yellow",
@@ -54299,7 +59546,8 @@ STOCK_COMPONENT_INFO = {
       "haul",
       "logisticals",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E156AEDE-1CBC-11EC-9177-20054B5CF84F.png"
   },
   "ShipSpaceSmugglerBlack": {
     "DisplayName": "Ship, Space, Smuggler, Black",
@@ -54326,7 +59574,8 @@ STOCK_COMPONENT_INFO = {
       "poach",
       "rogue",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/322B43EA-2881-11EC-B34D-1F14898C9FDE.png"
   },
   "ShipSpaceSmugglerBlue": {
     "DisplayName": "Ship, Space, Smuggler, Blue",
@@ -54353,7 +59602,8 @@ STOCK_COMPONENT_INFO = {
       "poach",
       "rogue",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3ABBD432-2AC2-11EC-A279-8338898C9FDE.png"
   },
   "ShipSpaceSmugglerGreen": {
     "DisplayName": "Ship, Space, Smuggler, Green",
@@ -54380,7 +59630,8 @@ STOCK_COMPONENT_INFO = {
       "poach",
       "rogue",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3C39244C-2881-11EC-AB69-DA1AD18EBD9F.png"
   },
   "ShipSpaceSmugglerOrange": {
     "DisplayName": "Ship, Space, Smuggler, Orange",
@@ -54407,7 +59658,8 @@ STOCK_COMPONENT_INFO = {
       "poach",
       "rogue",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2B5B0942-2881-11EC-B34D-FD13898C9FDE.png"
   },
   "ShipSpaceSmugglerPurple": {
     "DisplayName": "Ship, Space, Smuggler, Purple",
@@ -54434,7 +59686,8 @@ STOCK_COMPONENT_INFO = {
       "poach",
       "rogue",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/35AE5B1A-2881-11EC-AB69-CE1AD18EBD9F.png"
   },
   "ShipSpaceSmugglerRed": {
     "DisplayName": "Ship, Space, Smuggler, Red",
@@ -54461,7 +59714,8 @@ STOCK_COMPONENT_INFO = {
       "poach",
       "rogue",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/281AA4BE-2C5E-11EC-851D-546ABE85CC60.png"
   },
   "ShipSpaceSmugglerWhite": {
     "DisplayName": "Ship, Space, Smuggler, White",
@@ -54488,7 +59742,8 @@ STOCK_COMPONENT_INFO = {
       "poach",
       "rogue",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/243B46C2-2881-11EC-B34D-FC13898C9FDE.png"
   },
   "ShipSpaceSmugglerYellow": {
     "DisplayName": "Ship, Space, Smuggler, Yellow",
@@ -54515,7 +59770,8 @@ STOCK_COMPONENT_INFO = {
       "poach",
       "rogue",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/278CE290-2881-11EC-AB69-9D1AD18EBD9F.png"
   },
   "ShipSpaceTransportBlack": {
     "DisplayName": "Ship, Space, Transport, Black",
@@ -54526,7 +59782,8 @@ STOCK_COMPONENT_INFO = {
       "carrier",
       "cargo",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8A7851A8-74E0-11ED-B27B-747343694036.png"
   },
   "ShipSpaceTransportBlue": {
     "DisplayName": "Ship, Space, Transport, Blue",
@@ -54537,7 +59794,8 @@ STOCK_COMPONENT_INFO = {
       "carrier",
       "cargo",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8D66EABE-74E0-11ED-B27B-B37343694036.png"
   },
   "ShipSpaceTransportGreen": {
     "DisplayName": "Ship, Space, Transport, Green",
@@ -54548,7 +59806,8 @@ STOCK_COMPONENT_INFO = {
       "carrier",
       "cargo",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/91327BEA-74E0-11ED-BB94-D37A25C4E336.png"
   },
   "ShipSpaceTransportOrange": {
     "DisplayName": "Ship, Space, Transport, Orange",
@@ -54559,7 +59818,8 @@ STOCK_COMPONENT_INFO = {
       "carrier",
       "cargo",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/97AE5A84-74E0-11ED-B27B-E27343694036.png"
   },
   "ShipSpaceTransportPurple": {
     "DisplayName": "Ship, Space, Transport, Purple",
@@ -54570,7 +59830,8 @@ STOCK_COMPONENT_INFO = {
       "carrier",
       "cargo",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9AFEEE06-74E0-11ED-BB94-4F7B25C4E336.png"
   },
   "ShipSpaceTransportRed": {
     "DisplayName": "Ship, Space, Transport, Red",
@@ -54581,7 +59842,8 @@ STOCK_COMPONENT_INFO = {
       "carrier",
       "cargo",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A108BFE8-74E0-11ED-BB94-867B25C4E336.png"
   },
   "ShipSpaceTransportWhite": {
     "DisplayName": "Ship, Space, Transport, White",
@@ -54592,7 +59854,8 @@ STOCK_COMPONENT_INFO = {
       "carrier",
       "cargo",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A72838C2-74E0-11ED-B27B-907443694036.png"
   },
   "ShipSpaceTransportYellow": {
     "DisplayName": "Ship, Space, Transport, Yellow",
@@ -54603,7 +59866,8 @@ STOCK_COMPONENT_INFO = {
       "carrier",
       "cargo",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A9956C6A-74E0-11ED-B27B-D37443694036.png"
   },
   "ShipSpaceUFOBlack": {
     "DisplayName": "Ship, Space, UFO, Black",
@@ -54632,7 +59896,8 @@ STOCK_COMPONENT_INFO = {
       "ayylmaos",
       "flying saucer",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/63BE258A-2C64-11EC-851D-B27EBE85CC60.png"
   },
   "ShipSpaceUFOBlue": {
     "DisplayName": "Ship, Space, UFO, Blue",
@@ -54661,7 +59926,8 @@ STOCK_COMPONENT_INFO = {
       "ayylmaos",
       "flying saucer",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4BB6DEDC-2C64-11EC-851D-447EBE85CC60.png"
   },
   "ShipSpaceUFOGreen": {
     "DisplayName": "Ship, Space, UFO, Green",
@@ -54690,7 +59956,8 @@ STOCK_COMPONENT_INFO = {
       "ayylmaos",
       "flying saucer",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5D1E8724-2C64-11EC-851D-A87EBE85CC60.png"
   },
   "ShipSpaceUFOOrange": {
     "DisplayName": "Ship, Space, UFO, Orange",
@@ -54719,7 +59986,8 @@ STOCK_COMPONENT_INFO = {
       "ayylmaos",
       "flying saucer",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7479073C-2C64-11EC-851D-E57EBE85CC60.png"
   },
   "ShipSpaceUFOPurple": {
     "DisplayName": "Ship, Space, UFO, Purple",
@@ -54748,7 +60016,8 @@ STOCK_COMPONENT_INFO = {
       "ayylmaos",
       "flying saucer",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1DA449F2-2C65-11EC-BF0C-2D1458AF5381.png"
   },
   "ShipSpaceUFORed": {
     "DisplayName": "Ship, Space, UFO, Red",
@@ -54777,7 +60046,8 @@ STOCK_COMPONENT_INFO = {
       "ayylmaos",
       "flying saucer",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7937CEE8-2C64-11EC-851D-0C7FBE85CC60.png"
   },
   "ShipSpaceUFOSilver": {
     "DisplayName": "Ship, Space, UFO, Silver",
@@ -54806,7 +60076,8 @@ STOCK_COMPONENT_INFO = {
       "ayylmaos",
       "flying saucer",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5190AC2A-2C64-11EC-BF0C-951158AF5381.png"
   },
   "ShipSpaceUFOWhite": {
     "DisplayName": "Ship, Space, UFO, White",
@@ -54835,7 +60106,8 @@ STOCK_COMPONENT_INFO = {
       "ayylmaos",
       "flying saucer",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4701CE7E-2C64-11EC-851D-367EBE85CC60.png"
   },
   "ShipSpaceUFOYellow": {
     "DisplayName": "Ship, Space, UFO, Yellow",
@@ -54864,7 +60136,8 @@ STOCK_COMPONENT_INFO = {
       "ayylmaos",
       "flying saucer",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6A7AC900-2C64-11EC-851D-D67EBE85CC60.png"
   },
   "Shotgun": {
     "DisplayName": "Shotgun",
@@ -54880,7 +60153,8 @@ STOCK_COMPONENT_INFO = {
       "gauge",
       "pumpaction",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E336B612-0302-11E9-9C65-4B271589B894.png"
   },
   "Signpost": {
     "DisplayName": "Signpost",
@@ -54891,7 +60165,8 @@ STOCK_COMPONENT_INFO = {
       "wayfinder",
       "directions",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/78647920-74DA-11ED-9E82-D02E25C4E336.png"
   },
   "SkeletalCrossbowmanIII": {
     "DisplayName": "Skeletal Crossbowman III",
@@ -54922,7 +60197,8 @@ STOCK_COMPONENT_INFO = {
       "zombies",
       "cloaks",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/30DDD6BE-4560-11E7-ABA2-8D4390E4BA5A.png"
   },
   "Skeleton-CharacterMeeple": {
     "DisplayName": "Skeleton - Character Meeple",
@@ -54937,7 +60213,8 @@ STOCK_COMPONENT_INFO = {
       "tendon",
       "cadaver",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/63636E94-8EC2-11E8-BCE8-31F5785DA8EE.png"
   },
   "SkeletonArcher2FantasyTB25": {
     "DisplayName": "Skeleton Archer 2, Fantasy, TB25",
@@ -54957,7 +60234,8 @@ STOCK_COMPONENT_INFO = {
       "zombies",
       "cloaks",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2EBAE3AE-304D-11EC-B037-D77ABE85CC60.png"
   },
   "SkeletonArcherFantasyTB25": {
     "DisplayName": "Skeleton Archer, Fantasy, TB25",
@@ -54977,7 +60255,8 @@ STOCK_COMPONENT_INFO = {
       "zombies",
       "cloaks",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/98AF707A-3117-11EC-9B09-789EBE85CC60.png"
   },
   "SkeletonAxeFantasyTB25": {
     "DisplayName": "Skeleton Axe, Fantasy, TB25",
@@ -54992,7 +60271,8 @@ STOCK_COMPONENT_INFO = {
       "undead",
       "zombies",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5CD91378-311A-11EC-9B09-03A5BE85CC60.png"
   },
   "SkeletonBattleAxe": {
     "DisplayName": "Skeleton Battle Axe",
@@ -55018,7 +60298,8 @@ STOCK_COMPONENT_INFO = {
       "undead",
       "zombies",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/340333AC-4560-11E7-ABA2-844390E4BA5A.png"
   },
   "SkeletonSword2FantasyTB25": {
     "DisplayName": "Skeleton Sword 2, Fantasy, TB25",
@@ -55033,7 +60314,8 @@ STOCK_COMPONENT_INFO = {
       "undead",
       "zombies",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/941FD64C-3119-11EC-9B09-7EA3BE85CC60.png"
   },
   "SkeletonSword3FantasyTB25": {
     "DisplayName": "Skeleton Sword 3, Fantasy, TB25",
@@ -55049,7 +60331,8 @@ STOCK_COMPONENT_INFO = {
       "zombies",
       "cloaks",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2DF9F3E0-311C-11EC-9B09-4EAABE85CC60.png"
   },
   "SkeletonSwordArmoredFantasyTB25": {
     "DisplayName": "Skeleton Sword, Armored, Fantasy, TB25",
@@ -55068,7 +60351,8 @@ STOCK_COMPONENT_INFO = {
       "undead",
       "zombies",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/34A2F07C-304D-11EC-B037-D97ABE85CC60.png"
   },
   "SkeletonSwordFantasyTB25": {
     "DisplayName": "Skeleton Sword, Fantasy, TB25",
@@ -55083,7 +60367,8 @@ STOCK_COMPONENT_INFO = {
       "undead",
       "zombies",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A670887E-3118-11EC-891E-313658AF5381.png"
   },
   "SkeletonWarriorBlack": {
     "DisplayName": "Skeleton Warrior, Black",
@@ -55098,7 +60383,8 @@ STOCK_COMPONENT_INFO = {
       "undead",
       "zombies",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AD959006-C04D-11E9-A0D9-630FC9268CB1.png"
   },
   "SkeletonWarriorBlue": {
     "DisplayName": "Skeleton Warrior, Blue",
@@ -55113,7 +60399,8 @@ STOCK_COMPONENT_INFO = {
       "undead",
       "zombies",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AFC84BFC-C04D-11E9-A0D9-5D0FC9268CB1.png"
   },
   "SkeletonWarriorPink": {
     "DisplayName": "Skeleton Warrior, Pink",
@@ -55128,7 +60415,8 @@ STOCK_COMPONENT_INFO = {
       "undead",
       "zombies",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B215A22E-C04D-11E9-A0D9-600FC9268CB1.png"
   },
   "SkeletonWarriorTan": {
     "DisplayName": "Skeleton Warrior, Tan",
@@ -55143,7 +60431,8 @@ STOCK_COMPONENT_INFO = {
       "undead",
       "zombies",
       "tan"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B3ECF84A-C04D-11E9-A0D9-5E0FC9268CB1.png"
   },
   "Skull": {
     "DisplayName": "Skull",
@@ -55172,7 +60461,8 @@ STOCK_COMPONENT_INFO = {
       "macabre",
       "morbid",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0E6694AA-D5F2-11EB-8101-4094E882EB54.png"
   },
   "SliderClipBlack": {
     "DisplayName": "Slider Clip, Black",
@@ -55191,7 +60481,8 @@ STOCK_COMPONENT_INFO = {
       "affix",
       "connector",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/26A56C60-CDDA-11E5-A66E-12607094FC45.png"
   },
   "SliderClipBlue": {
     "DisplayName": "Slider Clip, Blue",
@@ -55210,7 +60501,8 @@ STOCK_COMPONENT_INFO = {
       "affix",
       "connector",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/26D26558-CDDA-11E5-BFFF-85AA483ECFB9.png"
   },
   "SliderClipChipboardBlack": {
     "DisplayName": "Slider Clip, Chipboard, Black",
@@ -55229,7 +60521,8 @@ STOCK_COMPONENT_INFO = {
       "affix",
       "connector",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/81F99C38-56AC-11EC-B9BD-B518E73F1098.png"
   },
   "SliderClipChipboardBlue": {
     "DisplayName": "Slider Clip, Chipboard, Blue",
@@ -55248,7 +60541,8 @@ STOCK_COMPONENT_INFO = {
       "affix",
       "connector",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/791B94B8-56AC-11EC-B9BD-9718E73F1098.png"
   },
   "SliderClipChipboardGreen": {
     "DisplayName": "Slider Clip, Chipboard, Green",
@@ -55267,7 +60561,8 @@ STOCK_COMPONENT_INFO = {
       "affix",
       "connector",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/56D31DC2-56AC-11EC-AF3B-07D65DD54BA2.png"
   },
   "SliderClipChipboardOrange": {
     "DisplayName": "Slider Clip, Chipboard, Orange",
@@ -55286,7 +60581,8 @@ STOCK_COMPONENT_INFO = {
       "affix",
       "connector",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/62A57262-56AC-11EC-B9BD-7118E73F1098.png"
   },
   "SliderClipChipboardPurple": {
     "DisplayName": "Slider Clip, Chipboard, Purple",
@@ -55305,7 +60601,8 @@ STOCK_COMPONENT_INFO = {
       "affix",
       "connector",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/454B538A-56AC-11EC-AF3B-E3D55DD54BA2.png"
   },
   "SliderClipChipboardRed": {
     "DisplayName": "Slider Clip, Chipboard, Red",
@@ -55324,7 +60621,8 @@ STOCK_COMPONENT_INFO = {
       "affix",
       "connector",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6DF84CC0-56AC-11EC-B9BD-7E18E73F1098.png"
   },
   "SliderClipChipboardWhite": {
     "DisplayName": "Slider Clip, Chipboard, White",
@@ -55343,7 +60641,8 @@ STOCK_COMPONENT_INFO = {
       "affix",
       "connector",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/38BA973E-56AC-11EC-B9BD-1018E73F1098.png"
   },
   "SliderClipChipboardYellow": {
     "DisplayName": "Slider Clip, Chipboard, Yellow",
@@ -55362,7 +60661,8 @@ STOCK_COMPONENT_INFO = {
       "affix",
       "connector",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4AF18CAA-56AC-11EC-B9BD-3518E73F1098.png"
   },
   "SliderClipGreen": {
     "DisplayName": "Slider Clip, Green",
@@ -55381,7 +60681,8 @@ STOCK_COMPONENT_INFO = {
       "affix",
       "connector",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2711BC08-CDDA-11E5-9822-12607094FC45.png"
   },
   "SliderClipOrange": {
     "DisplayName": "Slider Clip, Orange",
@@ -55400,7 +60701,8 @@ STOCK_COMPONENT_INFO = {
       "affix",
       "connector",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2743CFF4-CDDA-11E5-8F95-85AA483ECFB9.png"
   },
   "SliderClipPurple": {
     "DisplayName": "Slider Clip, Purple",
@@ -55419,7 +60721,8 @@ STOCK_COMPONENT_INFO = {
       "affix",
       "connector",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/277E8D06-CDDA-11E5-A8C6-12607094FC45.png"
   },
   "SliderClipRed": {
     "DisplayName": "Slider Clip, Red",
@@ -55438,7 +60741,8 @@ STOCK_COMPONENT_INFO = {
       "affix",
       "connector",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/27C39392-CDDA-11E5-80F8-85AA483ECFB9.png"
   },
   "SliderClipWhite": {
     "DisplayName": "Slider Clip, White",
@@ -55457,7 +60761,8 @@ STOCK_COMPONENT_INFO = {
       "affix",
       "connector",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/27E1F7BA-CDDA-11E5-BD10-12607094FC45.png"
   },
   "SliderClipYellow": {
     "DisplayName": "Slider Clip, Yellow",
@@ -55476,7 +60781,8 @@ STOCK_COMPONENT_INFO = {
       "affix",
       "connector",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2872B354-CDDA-11E5-AAB1-12607094FC45.png"
   },
   "SmallStoutBox": {
     "DisplayName": "Small Stout Box",
@@ -55498,7 +60804,8 @@ STOCK_COMPONENT_INFO = {
       "sampling",
       "box",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D8BAC9AA-2A42-11E9-A40F-BF2AE0AC8D83.png"
   },
   "Snap&StackConditionMarkerBlack": {
     "DisplayName": "Snap & Stack Condition Marker, Black",
@@ -55533,7 +60840,8 @@ STOCK_COMPONENT_INFO = {
       "effect",
       "impairment",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FA646DB4-B2FA-11ED-BEE5-2B0B8D671EC5.png"
   },
   "Snap&StackConditionMarkerBlue": {
     "DisplayName": "Snap & Stack Condition Marker, Blue",
@@ -55568,7 +60876,8 @@ STOCK_COMPONENT_INFO = {
       "effect",
       "impairment",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/35BC6FE2-B2FB-11ED-867A-3E3FFDEE112B.png"
   },
   "Snap&StackConditionMarkerGreen": {
     "DisplayName": "Snap & Stack Condition Marker, Green",
@@ -55603,7 +60912,8 @@ STOCK_COMPONENT_INFO = {
       "effect",
       "impairment",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2DCD4874-B2FB-11ED-867A-D63EFDEE112B.png"
   },
   "Snap&StackConditionMarkerPink": {
     "DisplayName": "Snap & Stack Condition Marker, Pink",
@@ -55638,7 +60948,8 @@ STOCK_COMPONENT_INFO = {
       "effect",
       "impairment",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/150BEF3E-B2FB-11ED-BEE5-7E0C8D671EC5.png"
   },
   "Snap&StackConditionMarkerWhite": {
     "DisplayName": "Snap & Stack Condition Marker, White",
@@ -55673,7 +60984,8 @@ STOCK_COMPONENT_INFO = {
       "effect",
       "impairment",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0B4B521E-B2FB-11ED-867A-DC3CFDEE112B.png"
   },
   "Snap&StackConditionMarkerYellow": {
     "DisplayName": "Snap & Stack Condition Marker, Yellow",
@@ -55708,7 +61020,8 @@ STOCK_COMPONENT_INFO = {
       "effect",
       "impairment",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/20FA7E3C-B2FB-11ED-867A-0B3EFDEE112B.png"
   },
   "SnaplockBoxMicro": {
     "DisplayName": "Snaplock Box, Micro",
@@ -55717,7 +61030,6 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "17A06EF0-254D-11ED-91D6-27B279D8BDFD",
     "Tags": [
       "blank",
-      "packaging",
       "prototype",
       "example",
       "model",
@@ -55734,7 +61046,8 @@ STOCK_COMPONENT_INFO = {
       "micro",
       "mtg",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4BD81D7E-2A1D-11ED-BE39-5D385FE382A3.png"
   },
   "SnaplockBoxMini": {
     "DisplayName": "Snaplock Box, Mini",
@@ -55743,7 +61056,6 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "B2C9C2C8-2548-11ED-91D6-E67A79D8BDFD",
     "Tags": [
       "blank",
-      "packaging",
       "prototype",
       "example",
       "model",
@@ -55760,7 +61072,8 @@ STOCK_COMPONENT_INFO = {
       "mtg",
       "mini",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5990A6A2-2A1D-11ED-BE39-92395FE382A3.png"
   },
   "SnaplockBoxOrganizer": {
     "DisplayName": "Snaplock Box, Organizer",
@@ -55784,7 +61097,8 @@ STOCK_COMPONENT_INFO = {
       "tuck",
       "mtg",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3E4102C0-2A1D-11ED-BE39-40385FE382A3.png"
   },
   "SnaplockBoxPoker100+Card": {
     "DisplayName": "Snaplock Box, Poker, 100+ Card",
@@ -55810,7 +61124,8 @@ STOCK_COMPONENT_INFO = {
       "poker",
       "mtg",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/663A5E34-2A1D-11ED-BE39-353A5FE382A3.png"
   },
   "Snowman1FantasyTB25": {
     "DisplayName": "Snowman 1, Fantasy, TB25",
@@ -55820,7 +61135,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "snow snowman winter angry scary horror frosty abominable",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FF170880-5216-11EC-889E-9EDE94EE74C0.png"
   },
   "Snowman2FantasyTB25": {
     "DisplayName": "Snowman 2 Fantasy, TB25",
@@ -55830,7 +61146,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "snow snowman winter angry scary horror frosty abominable",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/23569DA0-5217-11EC-B45F-E3CD837854C6.png"
   },
   "SoldierBlue-CharacterMeeple": {
     "DisplayName": "Soldier, Blue - Character Meeple",
@@ -55850,7 +61167,8 @@ STOCK_COMPONENT_INFO = {
       "enlisted",
       "gunman,",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/66E12138-8EC2-11E8-84CE-26A8B70C97C7.png"
   },
   "SoldierGreen-CharacterMeeple": {
     "DisplayName": "Soldier, Green - Character Meeple",
@@ -55870,7 +61188,8 @@ STOCK_COMPONENT_INFO = {
       "enlisted",
       "gunman,",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6CBB817A-8EC2-11E8-84CE-20A8B70C97C7.png"
   },
   "SpaceRangerGuns": {
     "DisplayName": "Space Ranger Guns",
@@ -55891,7 +61210,8 @@ STOCK_COMPONENT_INFO = {
       "enlisted",
       "sprue",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8AB18CB2-172E-11E8-ACED-27F293A6FE1D.png"
   },
   "SpaceRangerIIw/Armament": {
     "DisplayName": "Space Ranger II w/ Armament",
@@ -55912,7 +61232,8 @@ STOCK_COMPONENT_INFO = {
       "enlisted",
       "sprue",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BE4F04A0-172E-11E8-ACED-9BF293A6FE1D.png"
   },
   "SpaceRangerw/Armament": {
     "DisplayName": "Space Ranger w/ Armament",
@@ -55933,7 +61254,8 @@ STOCK_COMPONENT_INFO = {
       "enlisted",
       "sprue",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B70BB1AC-172E-11E8-ACED-81F293A6FE1D.png"
   },
   "SpeedsterRed": {
     "DisplayName": "Speedster, Red",
@@ -55950,7 +61272,8 @@ STOCK_COMPONENT_INFO = {
       "quick",
       "speedy",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/58C29748-9C84-11E7-A769-7DF471BAD30D.png"
   },
   "Spider": {
     "DisplayName": "Spider",
@@ -55977,7 +61300,8 @@ STOCK_COMPONENT_INFO = {
       "halloween",
       "scary",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3030D9E0-D5C7-11EB-A165-B2F33218550E.png"
   },
   "SpiderEggs": {
     "DisplayName": "Spider Eggs",
@@ -55989,7 +61313,8 @@ STOCK_COMPONENT_INFO = {
       "spawn",
       "arachnid",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/80AD4F1C-74DA-11ED-8643-B22843694036.png"
   },
   "SpiderFantasyTB50": {
     "DisplayName": "Spider, Fantasy, TB50",
@@ -55999,8 +61324,27 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "arachnid",
       "araxxi",
+      "bug",
+      "insect",
+      "arthropod",
+      "eight",
+      "arachnid",
+      "arachnida",
+      "araneae",
+      "webspinner",
+      "charlotte",
+      "cephalothorax",
+      "nest",
+      "infestation",
+      "arachnophobia",
+      "tarantula",
+      "venomous",
+      "spooky",
+      "halloween",
+      "scary",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3A4E3860-74E4-11ED-B27B-402343694036.png"
   },
   "SpinnerBlack": {
     "DisplayName": "Spinner, Black",
@@ -56013,7 +61357,8 @@ STOCK_COMPONENT_INFO = {
       "selector",
       "twister",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0FB154D0-FBEB-11E0-ADC6-F2379966D12C.png"
   },
   "SpinnerRed": {
     "DisplayName": "Spinner, Red",
@@ -56026,7 +61371,8 @@ STOCK_COMPONENT_INFO = {
       "selector",
       "twister",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/78A295FC-FBEC-11E0-ADC6-F2379966D12C.png"
   },
   "SpinnerWhite": {
     "DisplayName": "Spinner, White",
@@ -56039,7 +61385,8 @@ STOCK_COMPONENT_INFO = {
       "selector",
       "twister",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BEAAB74A-FBED-11E0-878C-F2379966D12C.png"
   },
   "SprueAgesBeige": {
     "DisplayName": "Sprue, Ages, Beige",
@@ -56067,7 +61414,8 @@ STOCK_COMPONENT_INFO = {
       "war",
       "military",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A35AC96-704B-11E4-AC89-0302AC8BD9E5.png"
   },
   "SprueAgesBlack": {
     "DisplayName": "Sprue, Ages, Black",
@@ -56095,7 +61443,8 @@ STOCK_COMPONENT_INFO = {
       "war",
       "military",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A02C3EE-704B-11E4-B56A-0302AC8BD9E5.png"
   },
   "SprueAgesPurple": {
     "DisplayName": "Sprue, Ages, Purple",
@@ -56123,7 +61472,8 @@ STOCK_COMPONENT_INFO = {
       "war",
       "military",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A9E2672-704B-11E4-81DB-0302AC8BD9E5.png"
   },
   "SprueAgesTan": {
     "DisplayName": "Sprue, Ages, Tan",
@@ -56151,7 +61501,8 @@ STOCK_COMPONENT_INFO = {
       "war",
       "military",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4AF273D0-704B-11E4-ADF7-0302AC8BD9E5.png"
   },
   "SprueAgesYellow": {
     "DisplayName": "Sprue, Ages, Yellow",
@@ -56179,7 +61530,8 @@ STOCK_COMPONENT_INFO = {
       "war",
       "military",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B4F18B0-704B-11E4-A16F-04525F5A78EA.png"
   },
   "SprueCivilWarHorseBlack": {
     "DisplayName": "Sprue, Civil War Horse, Black",
@@ -56223,7 +61575,8 @@ STOCK_COMPONENT_INFO = {
       "gelding",
       "pony",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6ACD9016-F623-11E7-9250-D195C34EB7A8.png"
   },
   "SprueCivilWarHorseBrown": {
     "DisplayName": "Sprue, Civil War Horse, Brown",
@@ -56267,7 +61620,8 @@ STOCK_COMPONENT_INFO = {
       "gelding",
       "pony",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/741711BA-F623-11E7-AFA0-A855F8C81474.png"
   },
   "SprueCivilWarMilitaryBlue": {
     "DisplayName": "Sprue, Civil War Military, Blue",
@@ -56290,7 +61644,8 @@ STOCK_COMPONENT_INFO = {
       "confederates",
       "confederacy",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7D508DCE-F623-11E7-AFA0-F1D790B05D64.png"
   },
   "SprueCivilWarMilitaryGrey": {
     "DisplayName": "Sprue, Civil War Military, Grey",
@@ -56313,7 +61668,8 @@ STOCK_COMPONENT_INFO = {
       "confederates",
       "confederacy",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/86DB22FA-F623-11E7-9250-8CDE3CEC5386.png"
   },
   "SprueCivilWarMilitaryLtBlue": {
     "DisplayName": "Sprue, Civil War Military, Lt Blue",
@@ -56336,7 +61692,8 @@ STOCK_COMPONENT_INFO = {
       "confederates",
       "confederacy",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8F668072-F623-11E7-AFA0-8DFDC0D679F6.png"
   },
   "SprueCivilWarMilitaryRed": {
     "DisplayName": "Sprue, Civil War Military, Red",
@@ -56359,7 +61716,8 @@ STOCK_COMPONENT_INFO = {
       "confederates",
       "confederacy",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/077A5AD0-F623-11E7-AFA0-9C4776721444.png"
   },
   "SprueCivilizationBlue": {
     "DisplayName": "Sprue, Civilization, Blue",
@@ -56385,7 +61743,8 @@ STOCK_COMPONENT_INFO = {
       "enlisted",
       "gunman,",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/488AF7A0-6EA4-11E4-8D99-1B4FAC8BD9E5.png"
   },
   "SprueCivilizationGreen": {
     "DisplayName": "Sprue, Civilization, Green",
@@ -56411,7 +61770,8 @@ STOCK_COMPONENT_INFO = {
       "enlisted",
       "gunman,",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/48ABA522-6EA4-11E4-BEDB-C57F5F5A78EA.png"
   },
   "SprueCivilizationGrey": {
     "DisplayName": "Sprue, Civilization, Grey",
@@ -56437,7 +61797,8 @@ STOCK_COMPONENT_INFO = {
       "enlisted",
       "gunman,",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/493141AA-6EA4-11E4-AEF2-1B4FAC8BD9E5.png"
   },
   "SprueCivilizationPurple": {
     "DisplayName": "Sprue, Civilization, Purple",
@@ -56463,7 +61824,8 @@ STOCK_COMPONENT_INFO = {
       "enlisted",
       "gunman,",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DF024A4A-6EA3-11E4-A558-C57F5F5A78EA.png"
   },
   "SprueCivilizationYellow": {
     "DisplayName": "Sprue, Civilization, Yellow",
@@ -56489,7 +61851,8 @@ STOCK_COMPONENT_INFO = {
       "enlisted",
       "gunman,",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/732544A8-6EA3-11E4-9F92-1B4FAC8BD9E5.png"
   },
   "SprueEgyptMythBrown": {
     "DisplayName": "Sprue, Egypt Myth, Brown",
@@ -56516,7 +61879,8 @@ STOCK_COMPONENT_INFO = {
       "apis",
       "thoth",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5F21A51E-995C-11E7-B3BC-EB7CCB191CC0.png"
   },
   "SprueMilitaryBeige": {
     "DisplayName": "Sprue, Military, Beige",
@@ -56559,7 +61923,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AF760646-5FD4-11E4-BB96-1E5080F70C85.png"
   },
   "SprueMilitaryBlue": {
     "DisplayName": "Sprue, Military, Blue",
@@ -56602,7 +61967,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AE6FFD60-5FD4-11E4-BA3F-1E5080F70C85.png"
   },
   "SprueMilitaryBrown": {
     "DisplayName": "Sprue, Military, Brown",
@@ -56645,7 +62011,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E21B4264-5FD4-11E4-8E5A-B78AED7A9241.png"
   },
   "SprueMilitaryGreen": {
     "DisplayName": "Sprue, Military, Green",
@@ -56688,7 +62055,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AFE10702-5FD4-11E4-815E-B78AED7A9241.png"
   },
   "SprueMilitaryGrey": {
     "DisplayName": "Sprue, Military, Grey",
@@ -56774,7 +62142,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B0B3D6E6-5FD4-11E4-957B-B78AED7A9241.png"
   },
   "SprueNorseMythDkBlue": {
     "DisplayName": "Sprue, Norse Myth, Dk Blue",
@@ -56795,7 +62164,8 @@ STOCK_COMPONENT_INFO = {
       "spearmen",
       "scandinavian",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6E6BD5FE-97D5-11E7-9291-BA31CB191CC0.png"
   },
   "SprueNorseMythLtBlue": {
     "DisplayName": "Sprue, Norse Myth, Lt Blue",
@@ -56816,7 +62186,8 @@ STOCK_COMPONENT_INFO = {
       "spearmen",
       "scandinavian",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/76896DA0-97D5-11E7-9291-AC31CB191CC0.png"
   },
   "SprueNorseMythMedBlue": {
     "DisplayName": "Sprue, Norse Myth, Med Blue",
@@ -56837,7 +62208,8 @@ STOCK_COMPONENT_INFO = {
       "spearmen",
       "scandinavian",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7C39099A-97D5-11E7-9291-D231CB191CC0.png"
   },
   "StackerConeBlack": {
     "DisplayName": "Stacker Cone, Black",
@@ -56850,7 +62222,8 @@ STOCK_COMPONENT_INFO = {
       "pyramid",
       "triangle",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6C10DE02-C800-11EC-8BBA-443F448F12DC.png"
   },
   "StackerConeBlue": {
     "DisplayName": "Stacker Cone, Blue",
@@ -56863,7 +62236,8 @@ STOCK_COMPONENT_INFO = {
       "pyramid",
       "triangle",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/235A6F74-C801-11EC-8BBA-E648448F12DC.png"
   },
   "StackerConeGreen": {
     "DisplayName": "Stacker Cone, Green",
@@ -56876,7 +62250,8 @@ STOCK_COMPONENT_INFO = {
       "pyramid",
       "triangle",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A8FE5E6E-C82F-11EC-B769-BD8C6EB7A829.png"
   },
   "StackerConeOrange": {
     "DisplayName": "Stacker Cone, Orange",
@@ -56889,7 +62264,8 @@ STOCK_COMPONENT_INFO = {
       "pyramid",
       "triangle",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/64CCC858-C82E-11EC-B769-DB7D6EB7A829.png"
   },
   "StackerConePurple": {
     "DisplayName": "Stacker Cone, Purple",
@@ -56902,7 +62278,8 @@ STOCK_COMPONENT_INFO = {
       "pyramid",
       "triangle",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6B999A44-C82E-11EC-8BBA-836B448F12DC.png"
   },
   "StackerConeRed": {
     "DisplayName": "Stacker Cone, Red",
@@ -56915,7 +62292,8 @@ STOCK_COMPONENT_INFO = {
       "pyramid",
       "triangle",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/59CE477E-C82E-11EC-8BBA-A56A448F12DC.png"
   },
   "StackerConeWhite": {
     "DisplayName": "Stacker Cone, White",
@@ -56928,7 +62306,8 @@ STOCK_COMPONENT_INFO = {
       "pyramid",
       "triangle",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9B3A21C8-C82F-11EC-8BBA-3E79448F12DC.png"
   },
   "StackerConeYellow": {
     "DisplayName": "Stacker Cone, Yellow",
@@ -56941,7 +62320,8 @@ STOCK_COMPONENT_INFO = {
       "pyramid",
       "triangle",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EB7C4D34-C82D-11EC-B769-65786EB7A829.png"
   },
   "Stacker19mmBlack": {
     "DisplayName": "Stacker, 19mm, Black",
@@ -56952,7 +62332,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "token",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/45F41F1A-9068-11EC-9E3C-AD44865AFFDF.png"
   },
   "Stacker19mmBlue": {
     "DisplayName": "Stacker, 19mm, Blue",
@@ -56963,7 +62344,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "token",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4E29649C-9068-11EC-A97F-A1812DFC60CF.png"
   },
   "Stacker19mmGreen": {
     "DisplayName": "Stacker, 19mm, Green",
@@ -56974,7 +62356,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "token",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/55DE155C-9068-11EC-A97F-A6822DFC60CF.png"
   },
   "Stacker19mmOrange": {
     "DisplayName": "Stacker, 19mm, Orange",
@@ -56985,7 +62368,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "token",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5E76080A-9068-11EC-9E3C-7446865AFFDF.png"
   },
   "Stacker19mmPurple": {
     "DisplayName": "Stacker, 19mm, Purple",
@@ -56996,7 +62380,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "token",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/65F19DBA-9068-11EC-A97F-99832DFC60CF.png"
   },
   "Stacker19mmRed": {
     "DisplayName": "Stacker, 19mm, Red",
@@ -57007,7 +62392,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "token",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6FDC3DDA-9068-11EC-9E3C-7047865AFFDF.png"
   },
   "Stacker19mmWhite": {
     "DisplayName": "Stacker, 19mm, White",
@@ -57018,7 +62404,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "token",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A96FC67E-9069-11EC-9E3C-9F57865AFFDF.png"
   },
   "Stacker19mmYellow": {
     "DisplayName": "Stacker, 19mm, Yellow",
@@ -57029,7 +62416,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "token",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B591882-9119-11EC-ACBE-A5632DFC60CF.png"
   },
   "StackerBlack": {
     "DisplayName": "Stacker, Black",
@@ -57049,7 +62437,8 @@ STOCK_COMPONENT_INFO = {
       "chips",
       "sorting",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A327F07E-FB3A-11ED-81DA-0A6AA755A3EB.png"
   },
   "StackerBlue": {
     "DisplayName": "Stacker, Blue",
@@ -57069,7 +62458,8 @@ STOCK_COMPONENT_INFO = {
       "chips",
       "sorting",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2EBE5A16-FB3A-11ED-87B3-16A4EA48E49E.png"
   },
   "StackerGreen": {
     "DisplayName": "Stacker, Green",
@@ -57089,7 +62479,8 @@ STOCK_COMPONENT_INFO = {
       "chips",
       "sorting",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/28AA7984-FB3A-11ED-81DA-8C64A755A3EB.png"
   },
   "StackerOrange": {
     "DisplayName": "Stacker, Orange",
@@ -57109,7 +62500,8 @@ STOCK_COMPONENT_INFO = {
       "chips",
       "sorting",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/17458738-FB3A-11ED-87B3-B6A2EA48E49E.png"
   },
   "StackerPurple": {
     "DisplayName": "Stacker, Purple",
@@ -57129,7 +62521,8 @@ STOCK_COMPONENT_INFO = {
       "chips",
       "sorting",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/42DEAC1C-FB3A-11ED-81DA-C565A755A3EB.png"
   },
   "StackerRed": {
     "DisplayName": "Stacker, Red",
@@ -57149,7 +62542,8 @@ STOCK_COMPONENT_INFO = {
       "chips",
       "sorting",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1FF442AC-FB3A-11ED-81DA-F863A755A3EB.png"
   },
   "StackerWhite": {
     "DisplayName": "Stacker, White",
@@ -57169,7 +62563,8 @@ STOCK_COMPONENT_INFO = {
       "chips",
       "sorting",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4960E064-FB3A-11ED-B9C1-11DF95CFC7D9.png"
   },
   "StackerYellow": {
     "DisplayName": "Stacker, Yellow",
@@ -57189,7 +62584,8 @@ STOCK_COMPONENT_INFO = {
       "chips",
       "sorting",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3BCAC424-FB3A-11ED-B9C1-34DE95CFC7D9.png"
   },
   "StakeBedTruckBlack": {
     "DisplayName": "Stake Bed Truck, Black",
@@ -57230,7 +62626,8 @@ STOCK_COMPONENT_INFO = {
       "stands",
       "standees",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1946C6CA-25FB-11EC-9324-6820D18EBD9F.png"
   },
   "StandChipboardTB15Blue": {
     "DisplayName": "Stand, Chipboard, TB15, Blue",
@@ -57248,7 +62645,8 @@ STOCK_COMPONENT_INFO = {
       "stands",
       "standees",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3F0EE63A-25FB-11EC-831B-861A898C9FDE.png"
   },
   "StandChipboardTB15Green": {
     "DisplayName": "Stand, Chipboard, TB15, Green",
@@ -57266,7 +62664,8 @@ STOCK_COMPONENT_INFO = {
       "stands",
       "standees",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/38FF022A-25FB-11EC-831B-691A898C9FDE.png"
   },
   "StandChipboardTB15Orange": {
     "DisplayName": "Stand, Chipboard, TB15, Orange",
@@ -57284,7 +62683,8 @@ STOCK_COMPONENT_INFO = {
       "stands",
       "standees",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2FAA81D6-25FB-11EC-9324-D720D18EBD9F.png"
   },
   "StandChipboardTB15Purple": {
     "DisplayName": "Stand, Chipboard, TB15, Purple",
@@ -57302,7 +62702,8 @@ STOCK_COMPONENT_INFO = {
       "stands",
       "standees",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/49D4A000-25FB-11EC-9324-3C21D18EBD9F.png"
   },
   "StandChipboardTB15Red": {
     "DisplayName": "Stand, Chipboard, TB15, Red",
@@ -57320,7 +62721,8 @@ STOCK_COMPONENT_INFO = {
       "stands",
       "standees",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/22B58BA6-25FB-11EC-831B-061A898C9FDE.png"
   },
   "StandChipboardTB15White": {
     "DisplayName": "Stand, Chipboard, TB15, White",
@@ -57338,7 +62740,8 @@ STOCK_COMPONENT_INFO = {
       "stands",
       "standees",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/44665528-25FB-11EC-831B-9C1A898C9FDE.png"
   },
   "StandChipboardTB15Yellow": {
     "DisplayName": "Stand, Chipboard, TB15, Yellow",
@@ -57356,7 +62759,8 @@ STOCK_COMPONENT_INFO = {
       "stands",
       "standees",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/28720290-25FB-11EC-831B-001A898C9FDE.png"
   },
   "StandeeTGC": {
     "DisplayName": "Standee, TGC",
@@ -57372,7 +62776,8 @@ STOCK_COMPONENT_INFO = {
       "marketing",
       "booth",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CBB48A20-761C-11E6-8A16-0FE26F405C46.jpg"
   },
   "StarWoodBlack": {
     "DisplayName": "Star, Wood, Black",
@@ -57402,7 +62807,8 @@ STOCK_COMPONENT_INFO = {
       "polygram",
       "pentagram",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/682E5238-88EF-11E7-A597-4C636BA831B7.png"
   },
   "StarWoodGreen": {
     "DisplayName": "Star, Wood, Green",
@@ -57432,7 +62838,8 @@ STOCK_COMPONENT_INFO = {
       "polygram",
       "pentagram",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6EB6955C-88EF-11E7-A597-54636BA831B7.png"
   },
   "StarWoodPurple": {
     "DisplayName": "Star, Wood, Purple",
@@ -57462,7 +62869,8 @@ STOCK_COMPONENT_INFO = {
       "polygram",
       "pentagram",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/754D5FAE-88EF-11E7-A597-7D636BA831B7.png"
   },
   "StarWoodRed": {
     "DisplayName": "Star, Wood, Red",
@@ -57492,7 +62900,8 @@ STOCK_COMPONENT_INFO = {
       "polygram",
       "pentagram",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/79D42A76-88EF-11E7-B8E3-E00A80CDF569.png"
   },
   "StickAcrylicOpaqueBlack": {
     "DisplayName": "Stick, Acrylic, Opaque, Black",
@@ -57507,7 +62916,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/89256468-4325-11E8-A8D1-50621EA37D3B.png"
   },
   "StickAcrylicOpaqueGold": {
     "DisplayName": "Stick, Acrylic, Opaque, Gold",
@@ -57523,7 +62933,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/16A1795E-43E3-11E8-8433-CA7B1EA37D3B.png"
   },
   "StickAcrylicOpaqueSilver": {
     "DisplayName": "Stick, Acrylic, Opaque, Silver",
@@ -57539,7 +62950,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/893C4284-48A5-11E8-8D8F-779B1EA37D3B.png"
   },
   "StickAcrylicOpaqueWhite": {
     "DisplayName": "Stick, Acrylic, Opaque, White",
@@ -57554,7 +62966,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/09F7D8BA-432F-11E8-8722-E0711EA37D3B.png"
   },
   "StickAcrylicTransparentBlack": {
     "DisplayName": "Stick, Acrylic, Transparent, Black",
@@ -57569,7 +62982,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A7D39882-48A5-11E8-8D8F-A89B1EA37D3B.png"
   },
   "StickAcrylicTransparentBlue": {
     "DisplayName": "Stick, Acrylic, Transparent, Blue",
@@ -57584,7 +62998,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1FA88C24-48A0-11E8-AA37-B108A69D202A.png"
   },
   "StickAcrylicTransparentClear": {
     "DisplayName": "Stick, Acrylic, Transparent, Clear",
@@ -57599,7 +63014,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/24F61460-ABD5-11E8-8C69-3584CE95AB04.png"
   },
   "StickAcrylicTransparentGreen": {
     "DisplayName": "Stick, Acrylic, Transparent, Green",
@@ -57614,7 +63030,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D469E346-4324-11E8-B059-D3AA43E08445.png"
   },
   "StickAcrylicTransparentorange": {
     "DisplayName": "Stick, Acrylic, Transparent, orange",
@@ -57629,7 +63046,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6AA52550-4325-11E8-A8D1-1D621EA37D3B.png"
   },
   "StickAcrylicTransparentPurple": {
     "DisplayName": "Stick, Acrylic, Transparent, Purple",
@@ -57644,7 +63062,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/93A7C652-4324-11E8-B059-843006C84F5C.png"
   },
   "StickAcrylicTransparentRed": {
     "DisplayName": "Stick, Acrylic, Transparent, Red",
@@ -57659,7 +63078,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/028F15B6-4325-11E8-B059-BCCB0FC1B331.png"
   },
   "StickAcrylicTransparentWhite": {
     "DisplayName": "Stick, Acrylic, Transparent, White",
@@ -57674,7 +63094,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/13B34F7C-433B-11E8-AEA5-01851EA37D3B.png"
   },
   "StickAcrylicTransparentYellow": {
     "DisplayName": "Stick, Acrylic, Transparent, Yellow",
@@ -57689,7 +63110,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0E4E15FE-4326-11E8-A8D1-FC621EA37D3B.png"
   },
   "StickWoodBlack": {
     "DisplayName": "Stick, Wood, Black",
@@ -57705,7 +63127,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5AED08C4-2AC4-11E1-82D0-B470E060718B.png"
   },
   "StickWoodBlue": {
     "DisplayName": "Stick, Wood, Blue",
@@ -57721,7 +63144,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/61839270-2AC4-11E1-AB7E-B470E060718B.png"
   },
   "StickWoodGreen": {
     "DisplayName": "Stick, Wood, Green",
@@ -57737,7 +63161,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/689D8C0A-2AC4-11E1-82D0-B470E060718B.png"
   },
   "StickWoodOrange": {
     "DisplayName": "Stick, Wood, Orange",
@@ -57753,7 +63178,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6FABD678-2AC4-11E1-8A47-B470E060718B.png"
   },
   "StickWoodPurple": {
     "DisplayName": "Stick, Wood, Purple",
@@ -57769,7 +63195,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/76681AEE-2AC4-11E1-AB7E-B470E060718B.png"
   },
   "StickWoodRed": {
     "DisplayName": "Stick, Wood, Red",
@@ -57785,7 +63212,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7D06BB3A-2AC4-11E1-8A47-B470E060718B.png"
   },
   "StickWoodWhite": {
     "DisplayName": "Stick, Wood, White",
@@ -57801,7 +63229,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/87D9D38A-2AC4-11E1-82D0-B470E060718B.png"
   },
   "StickWoodYellow": {
     "DisplayName": "Stick, Wood, Yellow",
@@ -57817,7 +63246,8 @@ STOCK_COMPONENT_INFO = {
       "trail",
       "route",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8F3CC254-2AC4-11E1-AB7E-B470E060718B.png"
   },
   "StickerPawnOpaqueBlack": {
     "DisplayName": "Sticker Pawn, Opaque, Black",
@@ -57834,7 +63264,8 @@ STOCK_COMPONENT_INFO = {
       "halma",
       "custom",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0762F348-2F65-11E7-8211-1C8597AD74D5.png"
   },
   "StickerPawnOpaqueBlue": {
     "DisplayName": "Sticker Pawn, Opaque, Blue",
@@ -57851,7 +63282,8 @@ STOCK_COMPONENT_INFO = {
       "halma",
       "custom",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0768DE16-2F65-11E7-9BC4-05413B521290.png"
   },
   "StickerPawnOpaqueGreen": {
     "DisplayName": "Sticker Pawn, Opaque, Green",
@@ -57868,7 +63300,8 @@ STOCK_COMPONENT_INFO = {
       "halma",
       "custom",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/07F5775E-2F65-11E7-9BC4-07413B521290.png"
   },
   "StickerPawnOpaqueOrange": {
     "DisplayName": "Sticker Pawn, Opaque, Orange",
@@ -57885,7 +63318,8 @@ STOCK_COMPONENT_INFO = {
       "halma",
       "custom",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/07EDFB5A-2F65-11E7-8211-3A8597AD74D5.png"
   },
   "StickerPawnOpaquePurple": {
     "DisplayName": "Sticker Pawn, Opaque, Purple",
@@ -57902,7 +63336,8 @@ STOCK_COMPONENT_INFO = {
       "halma",
       "custom",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/084471F6-2F65-11E7-8211-3C8597AD74D5.png"
   },
   "StickerPawnOpaqueRed": {
     "DisplayName": "Sticker Pawn, Opaque, Red",
@@ -57919,7 +63354,8 @@ STOCK_COMPONENT_INFO = {
       "halma",
       "custom",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0885CBC4-2F65-11E7-8211-3E8597AD74D5.png"
   },
   "StickerPawnOpaqueWhite": {
     "DisplayName": "Sticker Pawn, Opaque, White",
@@ -57936,7 +63372,8 @@ STOCK_COMPONENT_INFO = {
       "halma",
       "custom",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/08A01484-2F65-11E7-8211-3F8597AD74D5.png"
   },
   "StickerPawnOpaqueYellow": {
     "DisplayName": "Sticker Pawn, Opaque, Yellow",
@@ -57953,7 +63390,8 @@ STOCK_COMPONENT_INFO = {
       "halma",
       "custom",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/52D55C5A-3107-11E7-9D7B-DB823B521290.png"
   },
   "StickerPawnTransparentBlue": {
     "DisplayName": "Sticker Pawn, Transparent, Blue",
@@ -57970,7 +63408,8 @@ STOCK_COMPONENT_INFO = {
       "halma",
       "custom",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/25F9879C-ABC7-11E8-8C69-04EDCE95AB04.png"
   },
   "StickerPawnTransparentClear": {
     "DisplayName": "Sticker Pawn, Transparent, Clear",
@@ -57987,7 +63426,8 @@ STOCK_COMPONENT_INFO = {
       "halma",
       "custom",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E32DD192-ABCC-11E8-8A67-C7CEBCC16479.png"
   },
   "StickerPawnTransparentGreen": {
     "DisplayName": "Sticker Pawn, Transparent, Green",
@@ -58004,7 +63444,8 @@ STOCK_COMPONENT_INFO = {
       "halma",
       "custom",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0F48BE0A-ABCC-11E8-8C69-4476CE95AB04.png"
   },
   "StickerPawnTransparentOrange": {
     "DisplayName": "Sticker Pawn, Transparent, Orange",
@@ -58021,7 +63462,8 @@ STOCK_COMPONENT_INFO = {
       "halma",
       "custom",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/957C63E8-ABD4-11E8-8A67-77DABCC16479.png"
   },
   "StickerPawnTransparentPurple": {
     "DisplayName": "Sticker Pawn, Transparent, Purple",
@@ -58038,7 +63480,8 @@ STOCK_COMPONENT_INFO = {
       "halma",
       "custom",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CD511768-ABC6-11E8-8C69-4CECCE95AB04.png"
   },
   "StickerPawnTransparentRed": {
     "DisplayName": "Sticker Pawn, Transparent, Red",
@@ -58055,7 +63498,8 @@ STOCK_COMPONENT_INFO = {
       "halma",
       "custom",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EFCBDE7C-ABC6-11E8-8A67-5AC5BCC16479.png"
   },
   "StickerPawnTransparentYellow": {
     "DisplayName": "Sticker Pawn, Transparent, Yellow",
@@ -58072,7 +63516,8 @@ STOCK_COMPONENT_INFO = {
       "halma",
       "custom",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/980411D8-ABD4-11E8-8C69-3583CE95AB04.png"
   },
   "StoneArrowhead": {
     "DisplayName": "Stone Arrowhead",
@@ -58081,7 +63526,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "98509180-0F84-11ED-AD45-7A1EA5A96053",
     "Tags": [
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/23D57BAC-14F9-11ED-B552-26A695221FC2.png"
   },
   "StoneWood": {
     "DisplayName": "Stone, Wood",
@@ -58098,7 +63544,8 @@ STOCK_COMPONENT_INFO = {
       "metamorphic",
       "silicate",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FF489362-F9A4-11E0-9006-108960677055.png"
   },
   "StorageJarRoundClear": {
     "DisplayName": "Storage Jar, Round, Clear",
@@ -58117,7 +63564,8 @@ STOCK_COMPONENT_INFO = {
       "enclosure",
       "case",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2F9DB1DC-2A1D-11ED-9911-726779D8BDFD.png"
   },
   "StorageJarTin": {
     "DisplayName": "Storage Jar, Tin",
@@ -58136,7 +63584,8 @@ STOCK_COMPONENT_INFO = {
       "enclosure",
       "case",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3B2FF2F2-8314-11E9-803D-7827F5424212.png"
   },
   "SubmarineBlack": {
     "DisplayName": "Submarine, Black",
@@ -58158,7 +63607,8 @@ STOCK_COMPONENT_INFO = {
       "ballast",
       "torpedo",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2E80BF88-F8D8-11E0-A031-B96660677055.png"
   },
   "SubmarineBlue": {
     "DisplayName": "Submarine, Blue",
@@ -58180,7 +63630,8 @@ STOCK_COMPONENT_INFO = {
       "ballast",
       "torpedo",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BDECDB86-F8D6-11E0-8CB2-B96660677055.png"
   },
   "SubmarineGreen": {
     "DisplayName": "Submarine, Green",
@@ -58202,7 +63653,8 @@ STOCK_COMPONENT_INFO = {
       "ballast",
       "torpedo",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9EBC3014-A65F-11E0-896A-3A7437D397EC.png"
   },
   "SubmarineOrange": {
     "DisplayName": "Submarine, Orange",
@@ -58224,7 +63676,8 @@ STOCK_COMPONENT_INFO = {
       "ballast",
       "torpedo",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B0153478-F678-11E0-AB6C-503B60677055.png"
   },
   "SubmarinePurple": {
     "DisplayName": "Submarine, Purple",
@@ -58246,7 +63699,8 @@ STOCK_COMPONENT_INFO = {
       "ballast",
       "torpedo",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/24B45DB2-F8D2-11E0-8789-B96660677055.png"
   },
   "SubmarineRed": {
     "DisplayName": "Submarine, Red",
@@ -58268,7 +63722,8 @@ STOCK_COMPONENT_INFO = {
       "ballast",
       "torpedo",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AEC886F0-F8D1-11E0-A031-B96660677055.png"
   },
   "SubmarineWhite": {
     "DisplayName": "Submarine, White",
@@ -58290,7 +63745,8 @@ STOCK_COMPONENT_INFO = {
       "ballast",
       "torpedo",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CE931C8C-A662-11E0-896A-3A7437D397EC.png"
   },
   "SubmarineYellow": {
     "DisplayName": "Submarine, Yellow",
@@ -58312,7 +63768,8 @@ STOCK_COMPONENT_INFO = {
       "ballast",
       "torpedo",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8C41D2D6-A65F-11E0-896A-3A7437D397EC.png"
   },
   "SuitsClubs": {
     "DisplayName": "Suits, Clubs",
@@ -58325,7 +63782,8 @@ STOCK_COMPONENT_INFO = {
       "blackjack",
       "gambling",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2C1F6D36-68D8-11EC-BBC5-0CABF74A7BBA.png"
   },
   "SuitsDiamonds": {
     "DisplayName": "Suits, Diamonds",
@@ -58338,7 +63796,8 @@ STOCK_COMPONENT_INFO = {
       "blackjack",
       "gambling",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3E4517AE-68D8-11EC-9CF8-C3FB14F325E3.png"
   },
   "SuitsHearts": {
     "DisplayName": "Suits, Hearts",
@@ -58351,7 +63810,8 @@ STOCK_COMPONENT_INFO = {
       "blackjack",
       "gambling",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/330E7EF2-68D8-11EC-BBC5-4FABF74A7BBA.png"
   },
   "SuitsSpades": {
     "DisplayName": "Suits, Spades",
@@ -58364,7 +63824,8 @@ STOCK_COMPONENT_INFO = {
       "blackjack",
       "gambling",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/390581AC-68D8-11EC-9CF8-29FB14F325E3.png"
   },
   "SUVPostApocalypse": {
     "DisplayName": "SUV, Post Apocalypse",
@@ -58373,7 +63834,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "712A0216-3B54-11ED-97AE-E711D10F71E7",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/78C24FEC-401D-11ED-8172-4D8F99F4B99C.png"
   },
   "Sword": {
     "DisplayName": "Sword",
@@ -58397,7 +63859,8 @@ STOCK_COMPONENT_INFO = {
       "katana",
       "duel",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DC9A70B4-0302-11E9-849C-58E6D18499DE.png"
   },
   "SwordsmanBlack-CharacterMeeple": {
     "DisplayName": "Swordsman, Black - Character Meeple",
@@ -58426,7 +63889,8 @@ STOCK_COMPONENT_INFO = {
       "gladiator",
       "gladius",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6F457F90-8EC2-11E8-BCE8-53F5785DA8EE.png"
   },
   "SwordsmanBlue-CharacterMeeple": {
     "DisplayName": "Swordsman, Blue - Character Meeple",
@@ -58455,7 +63919,8 @@ STOCK_COMPONENT_INFO = {
       "gladiator",
       "gladius",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/742AB908-8EC2-11E8-84CE-44A8B70C97C7.png"
   },
   "SwordsmanGreen-CharacterMeeple": {
     "DisplayName": "Swordsman, Green - Character Meeple",
@@ -58484,7 +63949,8 @@ STOCK_COMPONENT_INFO = {
       "gladiator",
       "gladius",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4D63EF10-8EC2-11E8-84CE-D7A7B70C97C7.png"
   },
   "SwordsmanOrange-CharacterMeeple": {
     "DisplayName": "Swordsman, Orange - Character Meeple",
@@ -58513,7 +63979,8 @@ STOCK_COMPONENT_INFO = {
       "gladiator",
       "gladius",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/362ACC92-8EC2-11E8-84CE-B6A7B70C97C7.png"
   },
   "SwordsmanPurple-CharacterMeeple": {
     "DisplayName": "Swordsman, Purple - Character Meeple",
@@ -58542,7 +64009,8 @@ STOCK_COMPONENT_INFO = {
       "gladiator",
       "gladius",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2FF1CAA6-8EC2-11E8-84CE-ABA7B70C97C7.png"
   },
   "SwordsmanRed-CharacterMeeple": {
     "DisplayName": "Swordsman, Red - Character Meeple",
@@ -58571,7 +64039,8 @@ STOCK_COMPONENT_INFO = {
       "gladiator",
       "gladius",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1E096BFA-8EC2-11E8-84CE-99A7B70C97C7.png"
   },
   "SwordsmanWhite-CharacterMeeple": {
     "DisplayName": "Swordsman, White - Character Meeple",
@@ -58600,7 +64069,8 @@ STOCK_COMPONENT_INFO = {
       "gladiator",
       "gladius",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1A24FBC6-8EC2-11E8-84CE-9DA7B70C97C7.png"
   },
   "SwordsmanYellow-CharacterMeeple": {
     "DisplayName": "Swordsman, Yellow - Character Meeple",
@@ -58629,7 +64099,8 @@ STOCK_COMPONENT_INFO = {
       "gladiator",
       "gladius",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/15056658-8EC2-11E8-84CE-8FA7B70C97C7.png"
   },
   "T-BarBrown": {
     "DisplayName": "T-Bar, Brown",
@@ -58644,7 +64115,8 @@ STOCK_COMPONENT_INFO = {
       "structure",
       "loadbearing",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B632E1B8-44A8-11E8-ACC9-A26F4E56BC64.png"
   },
   "TableOrange": {
     "DisplayName": "Table, Orange",
@@ -58663,7 +64135,8 @@ STOCK_COMPONENT_INFO = {
       "stand",
       "worktable",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8FC0A88A-9EEF-11E7-AC47-6DD271BAD30D.png"
   },
   "TabletStone": {
     "DisplayName": "Tablet, Stone",
@@ -58677,7 +64150,8 @@ STOCK_COMPONENT_INFO = {
       "hieroglyphics",
       "ancient",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/57234C24-F7BB-11EC-845A-8B25813EB811.png"
   },
   "TacticalKnife": {
     "DisplayName": "Tactical Knife",
@@ -58708,7 +64182,8 @@ STOCK_COMPONENT_INFO = {
       "gouge",
       "impale",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C5CA1C22-0302-11E9-9C65-08271589B894.png"
   },
   "TajMahalPalaceSetof5": {
     "DisplayName": "Taj Mahal Palace, Set of 5",
@@ -58726,7 +64201,8 @@ STOCK_COMPONENT_INFO = {
       "indian",
       "tomb",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C16DB136-7152-11E7-9B98-31D9FEDF52DE.png"
   },
   "TallPeopleBlack": {
     "DisplayName": "Tall People, Black",
@@ -58747,7 +64223,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4786496C-0B82-11E3-B1E2-C1057740BD4B.png"
   },
   "TallPeopleBlue": {
     "DisplayName": "Tall People, Blue",
@@ -58768,7 +64245,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/481C908E-0B82-11E3-9FCF-C1057740BD4B.png"
   },
   "TallPeopleGreen": {
     "DisplayName": "Tall People, Green",
@@ -58789,7 +64267,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/488DD168-0B82-11E3-9A1C-C1057740BD4B.png"
   },
   "TallPeopleOrange": {
     "DisplayName": "Tall People, Orange",
@@ -58810,7 +64289,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/490F1A70-0B82-11E3-B1E2-C1057740BD4B.png"
   },
   "TallPeoplePurple": {
     "DisplayName": "Tall People, Purple",
@@ -58831,7 +64311,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/498B2804-0B82-11E3-9FCF-C1057740BD4B.png"
   },
   "TallPeopleRed": {
     "DisplayName": "Tall People, Red",
@@ -58852,7 +64333,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A2758C8-0B82-11E3-9A1C-C1057740BD4B.png"
   },
   "TallPeopleThickGreen": {
     "DisplayName": "Tall People, Thick, Green",
@@ -58873,7 +64355,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F36FC116-3AAE-11E9-9F91-FB48A86D9653.png"
   },
   "TallPeopleThickGrey": {
     "DisplayName": "Tall People, Thick, Grey",
@@ -58894,7 +64377,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/490790EA-3AAF-11E9-9294-68220031EE1B.png"
   },
   "TallPeopleThickPurple": {
     "DisplayName": "Tall People, Thick, Purple",
@@ -58915,7 +64399,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5C4D822C-3AAF-11E9-9F91-8349A86D9653.png"
   },
   "TallPeopleThickRed": {
     "DisplayName": "Tall People, Thick, Red",
@@ -58936,7 +64421,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/71087F64-3AAF-11E9-9294-AE220031EE1B.png"
   },
   "TallPeopleThickYellow": {
     "DisplayName": "Tall People, Thick, Yellow",
@@ -58957,7 +64443,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/82BC3520-3AAF-11E9-9F91-C849A86D9653.png"
   },
   "TallPeopleWhite": {
     "DisplayName": "Tall People, White",
@@ -58978,7 +64465,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A9D1E50-0B82-11E3-829D-C1057740BD4B.png"
   },
   "TallPeopleYellow": {
     "DisplayName": "Tall People, Yellow",
@@ -58999,7 +64487,8 @@ STOCK_COMPONENT_INFO = {
       "adult",
       "biped",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B18F05C-0B82-11E3-959F-C1057740BD4B.png"
   },
   "TankBlack": {
     "DisplayName": "Tank, Black",
@@ -59015,7 +64504,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C1DFD178-048C-11E1-B70E-8F4F9966D12C.png"
   },
   "TankBlue": {
     "DisplayName": "Tank, Blue",
@@ -59031,7 +64521,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D6E31912-048D-11E1-B70E-8F4F9966D12C.png"
   },
   "TankBrown": {
     "DisplayName": "Tank, Brown",
@@ -59047,7 +64538,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8B7416F2-67FC-11EB-8413-13FFC78E2D70.png"
   },
   "TankClear": {
     "DisplayName": "Tank, Clear",
@@ -59063,7 +64555,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7A745E0C-67FC-11EB-8476-0391EA421ABE.png"
   },
   "TankGreen": {
     "DisplayName": "Tank, Green",
@@ -59079,7 +64572,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AB540054-0497-11E1-9D85-8F4F9966D12C.png"
   },
   "TankOrange": {
     "DisplayName": "Tank, Orange",
@@ -59095,7 +64589,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FA162568-0498-11E1-B70E-8F4F9966D12C.png"
   },
   "TankPostApocalypse": {
     "DisplayName": "Tank, Post Apocalypse",
@@ -59104,7 +64599,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "8E3C4BA2-3B54-11ED-AD7D-EC0FB4CA1F86",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/802FC106-401D-11ED-ABE7-403DB4CA1F86.png"
   },
   "TankPurple": {
     "DisplayName": "Tank, Purple",
@@ -59120,7 +64616,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DD713D7A-049E-11E1-B70E-8F4F9966D12C.png"
   },
   "TankRed": {
     "DisplayName": "Tank, Red",
@@ -59136,7 +64633,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1EB60C2E-04A0-11E1-8794-8F4F9966D12C.png"
   },
   "TankWhite": {
     "DisplayName": "Tank, White",
@@ -59152,7 +64650,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/532624CE-04A2-11E1-9D85-8F4F9966D12C.png"
   },
   "TankYellow": {
     "DisplayName": "Tank, Yellow",
@@ -59168,7 +64667,8 @@ STOCK_COMPONENT_INFO = {
       "panzer",
       "battlefortress",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0ECF3CE2-04A3-11E1-8794-8F4F9966D12C.png"
   },
   "TapeMeasure": {
     "DisplayName": "Tape Measure",
@@ -59194,7 +64694,8 @@ STOCK_COMPONENT_INFO = {
       "tailoring",
       "carpentry",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0077B2D8-0AC7-11E3-9E50-34787740BD4B.png"
   },
   "TarotSleevePack(100)": {
     "DisplayName": "Tarot Sleeve Pack (100)",
@@ -59217,7 +64718,8 @@ STOCK_COMPONENT_INFO = {
       "protective",
       "deck",
       "clear"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C68FF256-ABC5-11E8-8A67-0EC3BCC16479.png"
   },
   "TCIDLockdownMinimumSecurityPromoPack": {
     "DisplayName": "TCID Lockdown Minimum Security Promo Pack",
@@ -59231,7 +64733,8 @@ STOCK_COMPONENT_INFO = {
       "complementary",
       "dlc",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CE932252-E6A3-11E8-9FC1-F2FBAAC4E562.png"
   },
   "TentaclePortalTB25": {
     "DisplayName": "Tentacle Portal, TB25",
@@ -59245,8 +64748,12 @@ STOCK_COMPONENT_INFO = {
       "squid",
       "octopus",
       "stargate",
+      "first player",
+      "first player marker",
+      "first player token",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/96BF6624-8B8C-11EC-8A6C-5B1CEFDF9D7E.png"
   },
   "TGCFollies-ShamrockPack": {
     "DisplayName": "TGC Follies - Shamrock Pack",
@@ -59255,7 +64762,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "E1EAEA38-4071-11EE-B08E-684DBCA20CCB",
     "Tags": [
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/76E3AD64-57F6-11EE-880F-CAB89B8FEC0E.png"
   },
   "TheWhiteWizard": {
     "DisplayName": "The White Wizard",
@@ -59292,7 +64800,8 @@ STOCK_COMPONENT_INFO = {
       "conjurer",
       "dumbledore",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F8975E4A-1022-11E8-B55A-55ED93A6FE1D.png"
   },
   "Thief-CharacterMeeple": {
     "DisplayName": "Thief - Character Meeple",
@@ -59314,7 +64823,8 @@ STOCK_COMPONENT_INFO = {
       "thieves",
       "rogue",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1189B998-8EC2-11E8-84CE-85A7B70C97C7.png"
   },
   "Thimble": {
     "DisplayName": "Thimble ",
@@ -59329,7 +64839,8 @@ STOCK_COMPONENT_INFO = {
       "kiss",
       "cap",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B1C2F3DE-0F02-11E2-A25F-134B1D5FFC75.png"
   },
   "ThinStarGrey": {
     "DisplayName": "Thin Star, Grey",
@@ -59359,7 +64870,8 @@ STOCK_COMPONENT_INFO = {
       "polygram",
       "pentagram",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/92ECD2CE-5BC5-11E9-B9E4-9DC2A1F2CF41.png"
   },
   "TieflingFemaleMageFantasyTB25": {
     "DisplayName": "Tiefling Female Mage, Fantasy, TB25",
@@ -59391,7 +64903,8 @@ STOCK_COMPONENT_INFO = {
       "conjurer",
       "dumbledore",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2D274BCE-5855-11EC-9F1B-9153E73F1098.png"
   },
   "TikiIdolYellow": {
     "DisplayName": "Tiki Idol, Yellow",
@@ -59409,7 +64922,8 @@ STOCK_COMPONENT_INFO = {
       "statue",
       "polynesian",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/84B68828-9C84-11E7-B170-CD79CB191CC0.png"
   },
   "TileRack": {
     "DisplayName": "Tile Rack",
@@ -59422,11 +64936,12 @@ STOCK_COMPONENT_INFO = {
       "scrabble",
       "hidden",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BFCD7BA4-9F10-11EC-99AF-1DAF66E85691.png"
   },
   "ToiletPaper": {
     "DisplayName": "Toilet Paper",
-    "Description": "A bathroom necessity!",
+    "Description": "A bathroom necessity!\r\n<br>Model by Rob Smeaton.",
     "GameCrafterGuid": "E4560A64-A2D5-11EB-8F3A-BCF93E044836",
     "GameCrafterSkuId": "E48A9EDC-A2D5-11EB-8F3A-BCF93E044836",
     "Tags": [
@@ -59453,7 +64968,8 @@ STOCK_COMPONENT_INFO = {
       "teepee",
       "tee-pee",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DD8A94DC-12EB-11EF-BD6B-321EE1116AE2.png"
   },
   "TokenChipBlack": {
     "DisplayName": "Token Chip, Black",
@@ -59472,7 +64988,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "poker",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/39B3DCCC-0D96-11E7-B587-21035E5FB8B0.png"
   },
   "TokenChipBlue": {
     "DisplayName": "Token Chip, Blue",
@@ -59491,7 +65008,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "poker",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3AC25A44-0D96-11E7-B587-38035E5FB8B0.png"
   },
   "TokenChipGreen": {
     "DisplayName": "Token Chip, Green",
@@ -59510,7 +65028,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "poker",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3A2FAD8E-0D96-11E7-9756-18693118ADED.png"
   },
   "TokenChipIndentedOrange": {
     "DisplayName": "Token Chip, Indented, Orange",
@@ -59548,7 +65067,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "poker",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3AA7541A-0D96-11E7-9756-FA683118ADED.png"
   },
   "TokenChipPurple": {
     "DisplayName": "Token Chip, Purple",
@@ -59567,7 +65087,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "poker",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3B3E8CA4-0D96-11E7-B587-3C035E5FB8B0.png"
   },
   "TokenChipRed": {
     "DisplayName": "Token Chip, Red",
@@ -59586,7 +65107,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "poker",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3B98ED3E-0D96-11E7-9756-FF683118ADED.png"
   },
   "TokenChipWhite": {
     "DisplayName": "Token Chip, White",
@@ -59605,7 +65127,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "poker",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3BDB77B2-0D96-11E7-B587-3D035E5FB8B0.png"
   },
   "TokenChipYellow": {
     "DisplayName": "Token Chip, Yellow",
@@ -59624,7 +65147,8 @@ STOCK_COMPONENT_INFO = {
       "counter",
       "poker",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3C2CC748-0D96-11E7-9756-01693118ADED.png"
   },
   "Tombstone": {
     "DisplayName": "Tombstone",
@@ -59636,7 +65160,8 @@ STOCK_COMPONENT_INFO = {
       "funeral",
       "rip",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/89957F50-74DA-11ED-9E82-C42F25C4E336.png"
   },
   "TopHat": {
     "DisplayName": "Top Hat",
@@ -59649,7 +65174,7 @@ STOCK_COMPONENT_INFO = {
       "stovepipe",
       "clothing",
       "dress",
-      " hat",
+      "hat",
       "cap",
       "chapeau",
       "fedora",
@@ -59657,8 +65182,14 @@ STOCK_COMPONENT_INFO = {
       "bonnet",
       "bowler",
       "headpiece",
+      "royalty",
+      "headware",
+      "first player",
+      "first player marker",
+      "first player token",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/92B868D2-6CC9-11EC-8E50-4F6F102E9259.png"
   },
   "TowerStackerBlack": {
     "DisplayName": "Tower Stacker, Black",
@@ -59678,7 +65209,8 @@ STOCK_COMPONENT_INFO = {
       "status",
       "stack",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D22ACF8A-E39E-11ED-BDE9-2AEFC010DAE3.png"
   },
   "TowerStackerBlue": {
     "DisplayName": "Tower Stacker, Blue",
@@ -59698,7 +65230,8 @@ STOCK_COMPONENT_INFO = {
       "status",
       "stack",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9E589764-E39E-11ED-BDE9-20EDC010DAE3.png"
   },
   "TowerStackerGreen": {
     "DisplayName": "Tower Stacker, Green",
@@ -59718,7 +65251,8 @@ STOCK_COMPONENT_INFO = {
       "status",
       "stack",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CB946A28-E39E-11ED-BDE9-55EFC010DAE3.png"
   },
   "TowerStackerOrange": {
     "DisplayName": "Tower Stacker, Orange",
@@ -59738,7 +65272,8 @@ STOCK_COMPONENT_INFO = {
       "status",
       "stack",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AF650BFA-E39E-11ED-BDE9-01EEC010DAE3.png"
   },
   "TowerStackerPurple": {
     "DisplayName": "Tower Stacker, Purple",
@@ -59758,7 +65293,8 @@ STOCK_COMPONENT_INFO = {
       "status",
       "stack",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/923829A4-E39E-11ED-BDE9-ACECC010DAE3.png"
   },
   "TowerStackerRed": {
     "DisplayName": "Tower Stacker, Red",
@@ -59778,7 +65314,8 @@ STOCK_COMPONENT_INFO = {
       "status",
       "stack",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8AB37E40-E39E-11ED-9075-4CFCA6C33693.png"
   },
   "TowerStackerWhite": {
     "DisplayName": "Tower Stacker, White",
@@ -59798,7 +65335,8 @@ STOCK_COMPONENT_INFO = {
       "status",
       "stack",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A9FD6E1E-E39E-11ED-89CF-8E33BE3485F9.png"
   },
   "TowerStackerYellow": {
     "DisplayName": "Tower Stacker, Yellow",
@@ -59818,7 +65356,8 @@ STOCK_COMPONENT_INFO = {
       "status",
       "stack",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B643F864-E39E-11ED-89CF-CB33BE3485F9.png"
   },
   "TrafficCone": {
     "DisplayName": "Traffic Cone",
@@ -59836,7 +65375,8 @@ STOCK_COMPONENT_INFO = {
       "accidents",
       "roadblock",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5D2DCB16-4D19-11EA-87FB-6015ACB81EB0.png"
   },
   "TrainEngineWoodBlue": {
     "DisplayName": "Train Engine, Wood, Blue",
@@ -59857,7 +65397,8 @@ STOCK_COMPONENT_INFO = {
       "boiler",
       "steam tractor",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/77FA41B0-625A-11E7-8778-32377071C659.png"
   },
   "TrainEngineWoodOrange": {
     "DisplayName": "Train Engine, Wood, Orange",
@@ -59878,7 +65419,8 @@ STOCK_COMPONENT_INFO = {
       "boiler",
       "steam tractor",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7828975E-625A-11E7-9244-59FA27022822.png"
   },
   "TrainEngineWoodPurple": {
     "DisplayName": "Train Engine, Wood, Purple",
@@ -59899,7 +65441,8 @@ STOCK_COMPONENT_INFO = {
       "boiler",
       "steam tractor",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/78AFCC88-625A-11E7-8778-41377071C659.png"
   },
   "TrainEngineWoodRed": {
     "DisplayName": "Train Engine, Wood, Red",
@@ -59941,7 +65484,8 @@ STOCK_COMPONENT_INFO = {
       "boiler",
       "steam tractor",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/78CD0910-625A-11E7-9244-6FFA27022822.png"
   },
   "TrainEngineWoodYellow": {
     "DisplayName": "Train Engine, Wood, Yellow",
@@ -59962,7 +65506,8 @@ STOCK_COMPONENT_INFO = {
       "boiler",
       "steam tractor",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/76E953F6-625A-11E7-9244-78FA27022822.png"
   },
   "TransportShipSetof6": {
     "DisplayName": "Transport Ship, Set of 6",
@@ -59987,7 +65532,8 @@ STOCK_COMPONENT_INFO = {
       "airbus",
       "passenger",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DA6C7CFA-9E23-11E7-A0AF-5EDD71BAD30D.png"
   },
   "TreasureChestContainer": {
     "DisplayName": "Treasure Chest Container",
@@ -60011,7 +65557,8 @@ STOCK_COMPONENT_INFO = {
       "wealth",
       "riches",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E5C06E7C-714B-11E7-9B98-E8CAFEDF52DE.png"
   },
   "TrellisofGrapesBlue": {
     "DisplayName": "Trellis of Grapes, Blue",
@@ -60028,7 +65575,8 @@ STOCK_COMPONENT_INFO = {
       "vineyards",
       "canopy",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3A1C0410-8BFD-11E7-9891-93866BA831B7.png"
   },
   "TrellisofGrapesGreen": {
     "DisplayName": "Trellis of Grapes, Green",
@@ -60045,7 +65593,8 @@ STOCK_COMPONENT_INFO = {
       "vineyards",
       "canopy",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3D44E2BA-8BFD-11E7-ABFF-172D80CDF569.png"
   },
   "TrellisofGrapesOrange": {
     "DisplayName": "Trellis of Grapes, Orange",
@@ -60062,7 +65611,8 @@ STOCK_COMPONENT_INFO = {
       "vineyards",
       "canopy",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/410B7DC8-8BFD-11E7-ABFF-3E2D80CDF569.png"
   },
   "TrellisofGrapesWhite": {
     "DisplayName": "Trellis of Grapes, White",
@@ -60079,7 +65629,8 @@ STOCK_COMPONENT_INFO = {
       "vineyards",
       "canopy",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/47C17672-8BFD-11E7-ABFF-2D2D80CDF569.png"
   },
   "TriangleBlack": {
     "DisplayName": "Triangle, Black",
@@ -60101,7 +65652,8 @@ STOCK_COMPONENT_INFO = {
       "scalene",
       "isosceles",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F94C5E20-3F18-11E2-A2BA-5B1CDA46F4D1.png"
   },
   "TriangleBlue": {
     "DisplayName": "Triangle, Blue",
@@ -60123,7 +65675,8 @@ STOCK_COMPONENT_INFO = {
       "scalene",
       "isosceles",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/089D5C9E-3F19-11E2-B2B0-5B1CDA46F4D1.png"
   },
   "TriangleGreen": {
     "DisplayName": "Triangle, Green",
@@ -60145,7 +65698,8 @@ STOCK_COMPONENT_INFO = {
       "scalene",
       "isosceles",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/17A7F398-3F19-11E2-80CF-5B1CDA46F4D1.png"
   },
   "TriangleHollow": {
     "DisplayName": "Triangle, Hollow",
@@ -60168,7 +65722,8 @@ STOCK_COMPONENT_INFO = {
       "isosceles",
       "customizable",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6C5620EE-D5F7-11EB-ADF6-56828D8D6E47.png"
   },
   "TrianglePink": {
     "DisplayName": "Triangle, Pink",
@@ -60190,7 +65745,8 @@ STOCK_COMPONENT_INFO = {
       "scalene",
       "isosceles",
       "pink"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2A60D2B6-3F19-11E2-904B-5B1CDA46F4D1.png"
   },
   "TrollFantasyTB50": {
     "DisplayName": "Troll, Fantasy, TB50",
@@ -60204,7 +65760,8 @@ STOCK_COMPONENT_INFO = {
       "rock",
       "boss,",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F69A484E-9F0E-11EC-A7FE-8F84E4848153.png"
   },
   "TrophyTB15Bronze": {
     "DisplayName": "Trophy, TB15, Bronze",
@@ -60221,8 +65778,12 @@ STOCK_COMPONENT_INFO = {
       "recognition",
       "third",
       "medal",
+      "first player",
+      "first player marker",
+      "first player token",
       "bronze"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C44476CA-6F17-11EC-9B55-312F7DF5F7CD.png"
   },
   "TrophyTB15Gold": {
     "DisplayName": "Trophy, TB15, Gold",
@@ -60244,8 +65805,12 @@ STOCK_COMPONENT_INFO = {
       "medal",
       "winner",
       "champion",
+      "first player",
+      "first player marker",
+      "first player token",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AF23C8FE-6F17-11EC-9B55-BE2E7DF5F7CD.png"
   },
   "TrophyTB15Silver": {
     "DisplayName": "Trophy, TB15, Silver",
@@ -60267,8 +65832,12 @@ STOCK_COMPONENT_INFO = {
       "medal",
       "runnerup",
       "consolation",
+      "first player",
+      "first player marker",
+      "first player token",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CC51CD0E-6F17-11EC-917D-879D5FE54652.png"
   },
   "TruckFlatbedBlack": {
     "DisplayName": "Truck, Flatbed, Black",
@@ -60284,7 +65853,8 @@ STOCK_COMPONENT_INFO = {
       "logistics",
       "straight",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2E500BB8-1CBD-11EC-9D40-AA9D5853E446.png"
   },
   "TruckFlatbedBlue": {
     "DisplayName": "Truck, Flatbed, Blue",
@@ -60300,7 +65870,8 @@ STOCK_COMPONENT_INFO = {
       "logistics",
       "straight",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/386EF316-1CBD-11EC-9177-1B064B5CF84F.png"
   },
   "TruckFlatbedGreen": {
     "DisplayName": "Truck, Flatbed, Green",
@@ -60316,7 +65887,8 @@ STOCK_COMPONENT_INFO = {
       "logistics",
       "straight",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/40A913E0-1CBD-11EC-9177-31064B5CF84F.png"
   },
   "TruckFlatbedOrange": {
     "DisplayName": "Truck, Flatbed, Orange",
@@ -60332,7 +65904,8 @@ STOCK_COMPONENT_INFO = {
       "logistics",
       "straight",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4CE53A8A-1CBD-11EC-9D40-059E5853E446.png"
   },
   "TruckFlatbedPurple": {
     "DisplayName": "Truck, Flatbed, Purple",
@@ -60348,7 +65921,8 @@ STOCK_COMPONENT_INFO = {
       "logistics",
       "straight",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5740C7B0-1CBD-11EC-9177-52064B5CF84F.png"
   },
   "TruckFlatbedRed": {
     "DisplayName": "Truck, Flatbed, Red",
@@ -60364,7 +65938,8 @@ STOCK_COMPONENT_INFO = {
       "logistics",
       "straight",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5EE5946E-1CBD-11EC-9177-69064B5CF84F.png"
   },
   "TruckFlatbedWhite": {
     "DisplayName": "Truck, Flatbed, White",
@@ -60380,7 +65955,8 @@ STOCK_COMPONENT_INFO = {
       "logistics",
       "straight",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6AC1C096-1CBD-11EC-9177-92064B5CF84F.png"
   },
   "TruckFlatbedYellow": {
     "DisplayName": "Truck, Flatbed, Yellow",
@@ -60396,7 +65972,8 @@ STOCK_COMPONENT_INFO = {
       "logistics",
       "straight",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/72E2F8B2-1CBD-11EC-9D40-539E5853E446.png"
   },
   "TruckWoodBlue": {
     "DisplayName": "Truck, Wood, Blue",
@@ -60420,7 +65997,8 @@ STOCK_COMPONENT_INFO = {
       "eighteen wheeler",
       "cab",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2BA52220-D5F7-11EB-ADF6-6A818D8D6E47.png"
   },
   "TruckWoodGreen": {
     "DisplayName": "Truck, Wood, Green",
@@ -60444,7 +66022,8 @@ STOCK_COMPONENT_INFO = {
       "eighteen wheeler",
       "cab",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2454F324-D5F7-11EB-ADF6-59818D8D6E47.png"
   },
   "TruckWoodGrey": {
     "DisplayName": "Truck, Wood, Grey",
@@ -60468,7 +66047,8 @@ STOCK_COMPONENT_INFO = {
       "eighteen wheeler",
       "cab",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3293B646-D5F7-11EB-8101-419FE882EB54.png"
   },
   "TruckWoodRed": {
     "DisplayName": "Truck, Wood, Red",
@@ -60492,7 +66072,8 @@ STOCK_COMPONENT_INFO = {
       "eighteen wheeler",
       "cab",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3A465AC4-D5F7-11EB-ADF6-9A818D8D6E47.png"
   },
   "TruckWoodYellow": {
     "DisplayName": "Truck, Wood, Yellow",
@@ -60516,7 +66097,8 @@ STOCK_COMPONENT_INFO = {
       "eighteen wheeler",
       "cab",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0ED9FCA6-D5F7-11EB-ADF6-2B818D8D6E47.png"
   },
   "TwoHeadedOgrew/Captive": {
     "DisplayName": "Two Headed Ogre w/ Captive",
@@ -60547,7 +66129,8 @@ STOCK_COMPONENT_INFO = {
       "cyclops",
       "oni",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E11177CC-102E-11E8-9265-9E0094A6FE1D.png"
   },
   "UniversalNo": {
     "DisplayName": "Universal No",
@@ -60580,7 +66163,8 @@ STOCK_COMPONENT_INFO = {
       "unlawful",
       "bar sinister",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B3639502-D5F7-11EB-8101-EEA0E882EB54.png"
   },
   "UniversalYes": {
     "DisplayName": "Universal Yes",
@@ -60613,7 +66197,8 @@ STOCK_COMPONENT_INFO = {
       "confirm",
       "list",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D40D6D80-EBFC-11EB-A508-51B7E7726C43.png"
   },
   "ValveControlStation": {
     "DisplayName": "Valve Control Station",
@@ -60624,9 +66209,11 @@ STOCK_COMPONENT_INFO = {
       "wheel",
       "button",
       "pipes",
-      "space\r\n",
+      "space",
+      "computer\r\n\r\n",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1D2D1866-9E95-11ED-88B5-04B2CB83BB28.png"
   },
   "Vampire-CharacterMeeple": {
     "DisplayName": "Vampire - Character Meeple",
@@ -60648,7 +66235,8 @@ STOCK_COMPONENT_INFO = {
       "undead",
       "supernatural",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0E4A04CC-8EC2-11E8-84CE-89A7B70C97C7.png"
   },
   "VanPostApocalypse": {
     "DisplayName": "Van, Post Apocalypse",
@@ -60657,7 +66245,8 @@ STOCK_COMPONENT_INFO = {
     "GameCrafterSkuId": "F01F9E82-3B54-11ED-97AE-7918D10F71E7",
     "Tags": [
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/85666210-401D-11ED-8172-E48F99F4B99C.png"
   },
   "VialLiquidFluorescentBlue": {
     "DisplayName": "Vial Liquid, Fluorescent Blue",
@@ -60681,7 +66270,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/51AA00AC-43FC-11E8-BE95-B3FB76454E43.png"
   },
   "VialLiquidFluorescentGreen": {
     "DisplayName": "Vial Liquid, Fluorescent Green",
@@ -60705,7 +66295,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3EFE9E04-43FC-11E8-8433-27A61EA37D3B.png"
   },
   "VialLiquidFluorescentOrange": {
     "DisplayName": "Vial Liquid, Fluorescent Orange",
@@ -60729,7 +66320,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/16630D0E-43FC-11E8-8433-3CA51EA37D3B.png"
   },
   "VialLiquidFluorescentRed": {
     "DisplayName": "Vial Liquid, Fluorescent Red",
@@ -60753,7 +66345,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E7EFFF68-43FB-11E8-BE95-CEA5D9A24ABA.png"
   },
   "VialLiquidFluorescentYellow": {
     "DisplayName": "Vial Liquid, Fluorescent Yellow",
@@ -60777,7 +66370,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7A537196-43FC-11E8-8433-9DA61EA37D3B.png"
   },
   "VialLiquidOpaqueBlack": {
     "DisplayName": "Vial Liquid, Opaque Black",
@@ -60801,7 +66395,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/845A847A-AC7C-11E8-92B1-4AECCE95AB04.png"
   },
   "VialLiquidOpaqueBlue1": {
     "DisplayName": "Vial Liquid, Opaque Blue 1",
@@ -60825,7 +66420,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DF7C9BFE-AC7C-11E8-92B1-C7ECCE95AB04.png"
   },
   "VialLiquidOpaqueBlue2": {
     "DisplayName": "Vial Liquid, Opaque Blue 2",
@@ -60849,7 +66445,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/538B0BEC-AD2D-11E8-95DF-EBC8BCC16479.png"
   },
   "VialLiquidOpaqueBlue3": {
     "DisplayName": "Vial Liquid, Opaque Blue 3",
@@ -60873,7 +66470,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/842AE5B0-B115-11E8-B0E5-EC92CE95AB04.png"
   },
   "VialLiquidOpaqueBrown": {
     "DisplayName": "Vial Liquid, Opaque Brown",
@@ -60897,7 +66495,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/404D3474-AD2D-11E8-95DF-D7C8BCC16479.png"
   },
   "VialLiquidOpaqueGray": {
     "DisplayName": "Vial Liquid, Opaque Gray",
@@ -60925,7 +66524,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6235D49C-AD2D-11E8-95DF-F5C8BCC16479.png"
   },
   "VialLiquidOpaqueGreen": {
     "DisplayName": "Vial Liquid, Opaque Green",
@@ -60949,7 +66549,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/13FE5282-AC7D-11E8-8097-F1C8BCC16479.png"
   },
   "VialLiquidOpaqueIvory": {
     "DisplayName": "Vial Liquid, Opaque Ivory",
@@ -60973,7 +66574,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4DD52432-A579-11E8-9326-85B83D511364.png"
   },
   "VialLiquidOpaqueOrange": {
     "DisplayName": "Vial Liquid, Opaque Orange",
@@ -60997,7 +66599,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/32CF3B66-AC7A-11E8-8097-9AC4BCC16479.png"
   },
   "VialLiquidOpaquePurple": {
     "DisplayName": "Vial Liquid, Opaque Purple",
@@ -61021,7 +66624,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F9E4634A-AC7D-11E8-92B1-45EECE95AB04.png"
   },
   "VialLiquidOpaqueRed": {
     "DisplayName": "Vial Liquid, Opaque Red",
@@ -61045,7 +66649,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/50AC9DFA-AC7E-11E8-8097-A8CABCC16479.png"
   },
   "VialLiquidOpaqueWhite": {
     "DisplayName": "Vial Liquid, Opaque White",
@@ -61069,7 +66674,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2698AC94-A570-11E8-9326-62A93D511364.png"
   },
   "VialLiquidOpaqueYellow": {
     "DisplayName": "Vial Liquid, Opaque Yellow",
@@ -61093,7 +66699,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8E84B52C-AC7E-11E8-8097-1BCBBCC16479.png"
   },
   "VialLiquidSilverMirror": {
     "DisplayName": "Vial Liquid, Silver Mirror",
@@ -61117,7 +66724,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A673856E-43FB-11E8-8433-76A41EA37D3B.png"
   },
   "VialLiquidTransparentBlack": {
     "DisplayName": "Vial Liquid, Transparent Black",
@@ -61141,7 +66749,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/16D31B22-43FB-11E8-BE95-9656362E83F0.png"
   },
   "VialLiquidTransparentBlue": {
     "DisplayName": "Vial Liquid, Transparent Blue",
@@ -61165,7 +66774,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/644A6EFA-43FB-11E8-8433-F1A31EA37D3B.png"
   },
   "VialLiquidTransparentGreen": {
     "DisplayName": "Vial Liquid, Transparent Green",
@@ -61189,7 +66799,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3057AF0E-43FB-11E8-BE95-E07350C7213A.png"
   },
   "VialLiquidTransparentOrange": {
     "DisplayName": "Vial Liquid, Transparent Orange",
@@ -61213,7 +66824,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/928D2230-43FB-11E8-8433-3FA41EA37D3B.png"
   },
   "VialLiquidTransparentPurple": {
     "DisplayName": "Vial Liquid, Transparent Purple",
@@ -61237,7 +66849,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BC98EDFC-7A3D-11E8-AC09-A60F25C7EACD.png"
   },
   "VialLiquidTransparentRed": {
     "DisplayName": "Vial Liquid, Transparent Red",
@@ -61261,7 +66874,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7BDE2EE4-43FB-11E8-BE95-A56E6E66B20B.png"
   },
   "VialLiquidTransparentYellow": {
     "DisplayName": "Vial Liquid, Transparent Yellow",
@@ -61285,7 +66899,8 @@ STOCK_COMPONENT_INFO = {
       "flow",
       "wet",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BEC49FF4-43FB-11E8-BE95-E6A8C2BC4854.png"
   },
   "VictorianMiniatureBlue": {
     "DisplayName": "Victorian Miniature, Blue",
@@ -61316,7 +66931,8 @@ STOCK_COMPONENT_INFO = {
       "residency",
       "suite",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/73DA2E62-2F8F-11ED-9E4B-810DD14F796C.png"
   },
   "VictorianMiniatureGreen": {
     "DisplayName": "Victorian Miniature, Green",
@@ -61347,7 +66963,8 @@ STOCK_COMPONENT_INFO = {
       "residency",
       "suite",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/958B99D8-2F8F-11ED-88E4-FE105FE382A3.png"
   },
   "VictorianMiniatureRed": {
     "DisplayName": "Victorian Miniature, Red",
@@ -61378,7 +66995,8 @@ STOCK_COMPONENT_INFO = {
       "residency",
       "suite",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8C5A9616-2F8F-11ED-88E4-B3105FE382A3.png"
   },
   "VillagerBlack-CharacterMeeple": {
     "DisplayName": "Villager, Black - Character Meeple",
@@ -61393,7 +67011,8 @@ STOCK_COMPONENT_INFO = {
       "folk",
       "generic",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0B4CFBC6-8EC2-11E8-84CE-81A7B70C97C7.png"
   },
   "VillagerBlue-CharacterMeeple": {
     "DisplayName": "Villager, Blue - Character Meeple",
@@ -61408,7 +67027,8 @@ STOCK_COMPONENT_INFO = {
       "folk",
       "generic",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/062365C2-8EC2-11E8-BCE8-92F4785DA8EE.png"
   },
   "VillagerGreen-CharacterMeeple": {
     "DisplayName": "Villager, Green - Character Meeple",
@@ -61423,7 +67043,8 @@ STOCK_COMPONENT_INFO = {
       "folk",
       "generic",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/016ED052-8EC2-11E8-84CE-7DA7B70C97C7.png"
   },
   "VillagerOrange-CharacterMeeple": {
     "DisplayName": "Villager, Orange - Character Meeple",
@@ -61438,7 +67059,8 @@ STOCK_COMPONENT_INFO = {
       "folk",
       "generic",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FE7926C2-8EC1-11E8-84CE-6CA7B70C97C7.png"
   },
   "VillagerPurple-CharacterMeeple": {
     "DisplayName": "Villager, Purple - Character Meeple",
@@ -61453,7 +67075,8 @@ STOCK_COMPONENT_INFO = {
       "folk",
       "generic",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FB6CEE14-8EC1-11E8-84CE-6CA7B70C97C7.png"
   },
   "VillagerRed-CharacterMeeple": {
     "DisplayName": "Villager, Red - Character Meeple",
@@ -61468,7 +67091,8 @@ STOCK_COMPONENT_INFO = {
       "folk",
       "generic",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F8352202-8EC1-11E8-84CE-6BA7B70C97C7.png"
   },
   "VillagerWhite-CharacterMeeple": {
     "DisplayName": "Villager, White - Character Meeple",
@@ -61483,7 +67107,8 @@ STOCK_COMPONENT_INFO = {
       "folk",
       "generic",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F586C33A-8EC1-11E8-84CE-64A7B70C97C7.png"
   },
   "VillagerYellow-CharacterMeeple": {
     "DisplayName": "Villager, Yellow - Character Meeple",
@@ -61498,7 +67123,8 @@ STOCK_COMPONENT_INFO = {
       "folk",
       "generic",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F2E13674-8EC1-11E8-84CE-65A7B70C97C7.png"
   },
   "WalkerDriverSpace": {
     "DisplayName": "Walker Driver, Space",
@@ -61510,7 +67136,8 @@ STOCK_COMPONENT_INFO = {
       "exosuit",
       "exoskeleton",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/23D0708C-9E95-11ED-88B5-2CB2CB83BB28.png"
   },
   "WalkerSpaceTB50": {
     "DisplayName": "Walker, Space, TB50",
@@ -61522,7 +67149,8 @@ STOCK_COMPONENT_INFO = {
       "exosuit",
       "exoskeleton",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/26EC683E-9E95-11ED-8B48-1B552A49FC29.png"
   },
   "WallSandbags": {
     "DisplayName": "Wall, Sandbags",
@@ -61534,7 +67162,8 @@ STOCK_COMPONENT_INFO = {
       "barrier",
       "trenches",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EBA56EFE-F702-11EC-A087-C84C7805D582.png"
   },
   "WallStone": {
     "DisplayName": "Wall, Stone",
@@ -61546,7 +67175,8 @@ STOCK_COMPONENT_INFO = {
       "embankment",
       "barrier",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7219EF5A-F703-11EC-A087-BC527805D582.png"
   },
   "WarbeastwithHandler": {
     "DisplayName": "Warbeast with Handler",
@@ -61568,7 +67198,8 @@ STOCK_COMPONENT_INFO = {
       "dog",
       "cerberus",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6D67EDFC-0CF9-11E8-BDAE-2AE393A6FE1D.png"
   },
   "WarriorMonkPurple": {
     "DisplayName": "Warrior Monk, Purple",
@@ -61595,7 +67226,8 @@ STOCK_COMPONENT_INFO = {
       "shinto",
       "enlightenment",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B69E01B8-3F54-11E8-9557-E59C4D811EA7.png"
   },
   "WarriorMonkRed": {
     "DisplayName": "Warrior Monk, Red",
@@ -61622,7 +67254,8 @@ STOCK_COMPONENT_INFO = {
       "shinto",
       "enlightenment",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/89C94C62-4330-11E8-BAFE-F0A5B1D320E1.png"
   },
   "WaterMillBlack": {
     "DisplayName": "Water Mill, Black",
@@ -61634,7 +67267,8 @@ STOCK_COMPONENT_INFO = {
       "wheat",
       "farming",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EEA4B832-906C-11EC-BB24-DC3F2DFC60CF.png"
   },
   "WaterMillBlue": {
     "DisplayName": "Water Mill, Blue",
@@ -61646,7 +67280,8 @@ STOCK_COMPONENT_INFO = {
       "wheat",
       "farming",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F4910F52-906C-11EC-BB24-E43F2DFC60CF.png"
   },
   "WaterMillGreen": {
     "DisplayName": "Water Mill, Green",
@@ -61658,7 +67293,8 @@ STOCK_COMPONENT_INFO = {
       "wheat",
       "farming",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/04FB8F3E-906D-11EC-BB24-8F402DFC60CF.png"
   },
   "WaterMillOrange": {
     "DisplayName": "Water Mill, Orange",
@@ -61670,7 +67306,8 @@ STOCK_COMPONENT_INFO = {
       "wheat",
       "farming",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0CF756DC-906D-11EC-BB24-50412DFC60CF.png"
   },
   "WaterMillPurple": {
     "DisplayName": "Water Mill, Purple",
@@ -61682,7 +67319,8 @@ STOCK_COMPONENT_INFO = {
       "wheat",
       "farming",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/12A81B70-906D-11EC-BB24-67412DFC60CF.png"
   },
   "WaterMillRed": {
     "DisplayName": "Water Mill, Red",
@@ -61694,7 +67332,8 @@ STOCK_COMPONENT_INFO = {
       "wheat",
       "farming",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/194844F0-906D-11EC-BB24-D4412DFC60CF.png"
   },
   "WaterMillWhite": {
     "DisplayName": "Water Mill, White",
@@ -61706,7 +67345,8 @@ STOCK_COMPONENT_INFO = {
       "wheat",
       "farming",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1EFD3A4A-906D-11EC-BB24-07422DFC60CF.png"
   },
   "WaterMillYellow": {
     "DisplayName": "Water Mill, Yellow",
@@ -61718,7 +67358,8 @@ STOCK_COMPONENT_INFO = {
       "wheat",
       "farming",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/24E38540-906D-11EC-BB24-83422DFC60CF.png"
   },
   "WeresharkFantasyTB25": {
     "DisplayName": "Wereshark, Fantasy, TB25",
@@ -61728,7 +67369,8 @@ STOCK_COMPONENT_INFO = {
     "Tags": [
       "shark week",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7076E92A-14F7-11ED-B552-041096221FC2.png"
   },
   "WerewolfFantasyTB25": {
     "DisplayName": "Werewolf, Fantasy, TB25",
@@ -61746,7 +67388,8 @@ STOCK_COMPONENT_INFO = {
       "moon",
       "halloween",
       "gold"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/38B8B8C8-3056-11EC-B12E-9892BE85CC60.png"
   },
   "WilhelmTellCrossbowmanFantasyTB25": {
     "DisplayName": "Wilhelm Tell, Crossbowman, Fantasy, TB25",
@@ -61760,7 +67403,8 @@ STOCK_COMPONENT_INFO = {
       "apple",
       "apple-shot",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CD9887A2-E38E-11EC-A245-94BEE1809829.png"
   },
   "WindmillBlack": {
     "DisplayName": "Windmill, Black",
@@ -61772,7 +67416,8 @@ STOCK_COMPONENT_INFO = {
       "milling",
       "food",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B7AE63C4-74E0-11ED-B27B-927543694036.png"
   },
   "WindmillBlue": {
     "DisplayName": "Windmill, Blue",
@@ -61797,7 +67442,8 @@ STOCK_COMPONENT_INFO = {
       "propeller",
       "flabellum",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D1E8DA82-A20C-11E7-88DB-254368568B05.png"
   },
   "WindmillGreen": {
     "DisplayName": "Windmill, Green",
@@ -61809,7 +67455,8 @@ STOCK_COMPONENT_INFO = {
       "milling",
       "food",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C53B7C02-74E0-11ED-B27B-DB7543694036.png"
   },
   "WindmillOrange": {
     "DisplayName": "Windmill, Orange",
@@ -61821,7 +67468,8 @@ STOCK_COMPONENT_INFO = {
       "milling",
       "food",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CCF3E8DA-74E0-11ED-B27B-C9F742694036.png"
   },
   "WindmillPurple": {
     "DisplayName": "Windmill, Purple",
@@ -61846,7 +67494,8 @@ STOCK_COMPONENT_INFO = {
       "propeller",
       "flabellum",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C1F8B516-A20C-11E7-88DB-E74268568B05.png"
   },
   "WindmillRed": {
     "DisplayName": "Windmill, Red",
@@ -61871,7 +67520,8 @@ STOCK_COMPONENT_INFO = {
       "propeller",
       "flabellum",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B8851D80-A20C-11E7-88DB-DD4268568B05.png"
   },
   "WindmillWhite": {
     "DisplayName": "Windmill, White",
@@ -61883,7 +67533,8 @@ STOCK_COMPONENT_INFO = {
       "milling",
       "food",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DC75FA46-74E0-11ED-B27B-A8F842694036.png"
   },
   "WindmillYellow": {
     "DisplayName": "Windmill, Yellow",
@@ -61895,7 +67546,8 @@ STOCK_COMPONENT_INFO = {
       "milling",
       "food",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E071EF9C-74E0-11ED-B27B-0AF942694036.png"
   },
   "Wink20mmBlack": {
     "DisplayName": "Wink, 20mm, Black",
@@ -61909,7 +67561,8 @@ STOCK_COMPONENT_INFO = {
       "token",
       "counter",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/963657EA-4314-11E8-A8D1-21481EA37D3B.png"
   },
   "Wink20mmOpaqueWhite": {
     "DisplayName": "Wink, 20mm, Opaque, White",
@@ -61923,7 +67576,8 @@ STOCK_COMPONENT_INFO = {
       "token",
       "counter",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A54C6ADA-4314-11E8-B059-CDC3A83E92A3.png"
   },
   "Wink20mmTranslucentBlue": {
     "DisplayName": "Wink, 20mm, Translucent, Blue",
@@ -61937,7 +67591,8 @@ STOCK_COMPONENT_INFO = {
       "token",
       "counter",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5462921E-3F5B-11E8-9E36-F2821EA37D3B.png"
   },
   "Wink20mmTranslucentGreen": {
     "DisplayName": "Wink, 20mm, Translucent, Green",
@@ -61965,7 +67620,8 @@ STOCK_COMPONENT_INFO = {
       "token",
       "counter",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/518B0C4E-F8C5-11E0-8023-B96660677055.png"
   },
   "Wink22mmOpaqueWhite": {
     "DisplayName": "Wink, 22mm, Opaque, White",
@@ -61979,7 +67635,8 @@ STOCK_COMPONENT_INFO = {
       "token",
       "counter",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7DEADC48-A662-11E0-896A-3A7437D397EC.png"
   },
   "Wink22mmTranslucentBlack": {
     "DisplayName": "Wink, 22mm, Translucent Black",
@@ -61993,7 +67650,8 @@ STOCK_COMPONENT_INFO = {
       "token",
       "counter",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/963657EA-4314-11E8-A8D1-21481EA37D3B.png"
   },
   "Wink22mmTranslucentBlue": {
     "DisplayName": "Wink, 22mm, Translucent Blue",
@@ -62007,7 +67665,8 @@ STOCK_COMPONENT_INFO = {
       "token",
       "counter",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CB8A1C40-F8C2-11E0-8023-B96660677055.png"
   },
   "Wink22mmTranslucentGreen": {
     "DisplayName": "Wink, 22mm, Translucent Green",
@@ -62021,7 +67680,8 @@ STOCK_COMPONENT_INFO = {
       "token",
       "counter",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0618078C-F8C3-11E0-9155-B96660677055.png"
   },
   "Wink22mmTranslucentOrange": {
     "DisplayName": "Wink, 22mm, Translucent Orange",
@@ -62035,7 +67695,8 @@ STOCK_COMPONENT_INFO = {
       "token",
       "counter",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A3B0B27E-F8C2-11E0-9155-B96660677055.png"
   },
   "Wink22mmTranslucentPurple": {
     "DisplayName": "Wink, 22mm, Translucent Purple",
@@ -62049,7 +67710,8 @@ STOCK_COMPONENT_INFO = {
       "token",
       "counter",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2C381C04-F8C3-11E0-8023-B96660677055.png"
   },
   "Wink22mmTranslucentRed": {
     "DisplayName": "Wink, 22mm, Translucent Red",
@@ -62063,7 +67725,8 @@ STOCK_COMPONENT_INFO = {
       "token",
       "counter",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B5D48F7E-F8C3-11E0-8023-B96660677055.png"
   },
   "Wink22mmTranslucentYellow": {
     "DisplayName": "Wink, 22mm, Translucent, Yellow",
@@ -62077,7 +67740,8 @@ STOCK_COMPONENT_INFO = {
       "token",
       "counter",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A3C7CD18-F8C4-11E0-8023-B96660677055.png"
   },
   "WizardOldFantasyTB25": {
     "DisplayName": "Wizard Old, Fantasy, TB25",
@@ -62109,7 +67773,8 @@ STOCK_COMPONENT_INFO = {
       "conjurer",
       "dumbledore",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01CC53AE-27F5-11EE-B727-4F850B83E74D.png"
   },
   "WizardBlue-CharacterMeeple": {
     "DisplayName": "Wizard, Blue - Character Meeple",
@@ -62135,7 +67800,8 @@ STOCK_COMPONENT_INFO = {
       "conjurer",
       "dumbledore",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D736024C-8EC1-11E8-84CE-EBA6B70C97C7.png"
   },
   "WizardGreen-CharacterMeeple": {
     "DisplayName": "Wizard, Green - Character Meeple",
@@ -62161,7 +67827,8 @@ STOCK_COMPONENT_INFO = {
       "conjurer",
       "dumbledore",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D45202C4-8EC1-11E8-BCE8-46F4785DA8EE.png"
   },
   "WizardOrange-CharacterMeeple": {
     "DisplayName": "Wizard, Orange - Character Meeple",
@@ -62187,7 +67854,8 @@ STOCK_COMPONENT_INFO = {
       "conjurer",
       "dumbledore",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D236EBB2-8EC1-11E8-BCE8-3AF4785DA8EE.png"
   },
   "WizardPurple-CharacterMeeple": {
     "DisplayName": "Wizard, Purple - Character Meeple",
@@ -62213,7 +67881,8 @@ STOCK_COMPONENT_INFO = {
       "conjurer",
       "dumbledore",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CEA6BBEE-8EC1-11E8-84CE-A7A6B70C97C7.png"
   },
   "WizardRed-CharacterMeeple": {
     "DisplayName": "Wizard, Red - Character Meeple",
@@ -62239,7 +67908,8 @@ STOCK_COMPONENT_INFO = {
       "conjurer",
       "dumbledore",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CD66A1E0-8EC1-11E8-BCE8-37F4785DA8EE.png"
   },
   "WizardYellow-CharacterMeeple": {
     "DisplayName": "Wizard, Yellow - Character Meeple",
@@ -62265,7 +67935,8 @@ STOCK_COMPONENT_INFO = {
       "conjurer",
       "dumbledore",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CA37E466-8EC1-11E8-BCE8-34F4785DA8EE.png"
   },
   "WomanHighSociety": {
     "DisplayName": "Woman, High Society",
@@ -62297,7 +67968,8 @@ STOCK_COMPONENT_INFO = {
       "weapon",
       "homerun",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/348A1810-6354-11EC-BCFF-E58503B57022.png"
   },
   "WomanModernHandgunTB25": {
     "DisplayName": "Woman, Modern, Handgun, TB25",
@@ -62310,7 +67982,8 @@ STOCK_COMPONENT_INFO = {
       "police",
       "detective",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3D1E4C44-6354-11EC-BCFF-088603B57022.png"
   },
   "WomanModernTB15Black": {
     "DisplayName": "Woman, Modern, TB15, Black",
@@ -62329,7 +68002,8 @@ STOCK_COMPONENT_INFO = {
       "modern",
       "contemporary",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/913F3DD4-1CBD-11EC-9177-D8064B5CF84F.png"
   },
   "WomanModernTB15Blue": {
     "DisplayName": "Woman, Modern, TB15, Blue",
@@ -62348,7 +68022,8 @@ STOCK_COMPONENT_INFO = {
       "modern",
       "contemporary",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/96831072-1CBD-11EC-9177-E9064B5CF84F.png"
   },
   "WomanModernTB15Green": {
     "DisplayName": "Woman, Modern, TB15, Green",
@@ -62367,7 +68042,8 @@ STOCK_COMPONENT_INFO = {
       "modern",
       "contemporary",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A43B155C-1CBD-11EC-9177-F1064B5CF84F.png"
   },
   "WomanModernTB15Orange": {
     "DisplayName": "Woman, Modern, TB15, Orange",
@@ -62386,7 +68062,8 @@ STOCK_COMPONENT_INFO = {
       "modern",
       "contemporary",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ADE77EA6-1CBD-11EC-9177-09074B5CF84F.png"
   },
   "WomanModernTB15Purple": {
     "DisplayName": "Woman, Modern, TB15, Purple",
@@ -62405,7 +68082,8 @@ STOCK_COMPONENT_INFO = {
       "modern",
       "contemporary",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B8012554-1CBD-11EC-9D40-D29E5853E446.png"
   },
   "WomanModernTB15Red": {
     "DisplayName": "Woman, Modern, TB15, Red",
@@ -62424,7 +68102,8 @@ STOCK_COMPONENT_INFO = {
       "modern",
       "contemporary",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C011378E-1CBD-11EC-9177-30074B5CF84F.png"
   },
   "WomanModernTB15White": {
     "DisplayName": "Woman, Modern, TB15, White",
@@ -62443,7 +68122,8 @@ STOCK_COMPONENT_INFO = {
       "modern",
       "contemporary",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D24A9A76-1CBD-11EC-9D40-0E9F5853E446.png"
   },
   "WomanModernTB15Yellow": {
     "DisplayName": "Woman, Modern, TB15, Yellow",
@@ -62462,7 +68142,8 @@ STOCK_COMPONENT_INFO = {
       "modern",
       "contemporary",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DE51DB5E-1CBD-11EC-9177-6A074B5CF84F.png"
   },
   "WomanMum": {
     "DisplayName": "Woman, Mum",
@@ -62484,7 +68165,8 @@ STOCK_COMPONENT_INFO = {
       "caregiver",
       "mother",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E8FA8B9A-A094-11E2-87CD-41178112674D.png"
   },
   "WomanPostApocalypseBazookaTB25": {
     "DisplayName": "Woman, Post Apocalypse, Bazooka, TB25",
@@ -62500,7 +68182,8 @@ STOCK_COMPONENT_INFO = {
       "launcher",
       "rocket lawnchair",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/524C8E7A-D0B7-11EC-8240-730D3B7A0FE4.png"
   },
   "WomanPostApocalypseShotgunTB25": {
     "DisplayName": "Woman, Post Apocalypse, Shotgun, TB25",
@@ -62513,7 +68196,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "grey"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/204540B6-D206-11EC-A9E7-19D6D758682F.png"
   },
   "WomanPostApocalypseTB15Black": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Black",
@@ -62527,7 +68211,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/688AE7F2-C835-11EC-B769-54536EB7A829.png"
   },
   "WomanPostApocalypseTB15Blue": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Blue",
@@ -62541,7 +68226,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/39CCF32A-C834-11EC-B769-E6446EB7A829.png"
   },
   "WomanPostApocalypseTB15Green": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Green",
@@ -62555,7 +68241,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0DAFE4C4-CA77-11EC-B4F2-A6856EB7A829.png"
   },
   "WomanPostApocalypseTB15Orange": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Orange",
@@ -62569,7 +68256,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/430D6DB6-C834-11EC-8BBA-A9B1448F12DC.png"
   },
   "WomanPostApocalypseTB15Purple": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Purple",
@@ -62583,7 +68271,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2968EDF4-C834-11EC-8BBA-94B0448F12DC.png"
   },
   "WomanPostApocalypseTB15Red": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Red",
@@ -62597,7 +68286,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "red"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/78E29A56-C834-11EC-B769-55476EB7A829.png"
   },
   "WomanPostApocalypseTB15White": {
     "DisplayName": "Woman, Post Apocalypse, TB15, White",
@@ -62611,7 +68301,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/418CFE5E-CA5D-11EC-9226-DFA2448F12DC.png"
   },
   "WomanPostApocalypseTB15Yellow": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Yellow",
@@ -62625,7 +68316,8 @@ STOCK_COMPONENT_INFO = {
       "wasteland",
       "fallout",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B8A524C-C834-11EC-B769-09466EB7A829.png"
   },
   "WoodCabinBrown": {
     "DisplayName": "Wood Cabin, Brown",
@@ -62646,7 +68338,8 @@ STOCK_COMPONENT_INFO = {
       "lodge",
       "shed",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1271D882-B2A3-11E7-A9C2-5DB2711B34F5.png"
   },
   "WoodLogs": {
     "DisplayName": "Wood Logs",
@@ -62672,7 +68365,8 @@ STOCK_COMPONENT_INFO = {
       "timber",
       "lumber",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/80F3B280-F9A4-11E0-BC92-108960677055.png"
   },
   "WoodPile": {
     "DisplayName": "Wood Pile",
@@ -62698,7 +68392,8 @@ STOCK_COMPONENT_INFO = {
       "timber",
       "lumber",
       "brown"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/10BB7DD4-4FED-11E9-BA3F-ACF684BD98AD.png"
   },
   "WorkerSingleBagBlue": {
     "DisplayName": "Worker, Single Bag, Blue",
@@ -62721,7 +68416,8 @@ STOCK_COMPONENT_INFO = {
       "immigrant",
       "laborer",
       "blue"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/606AB76C-8C00-11E7-9891-22896BA831B7.png"
   },
   "WorkerSingleBagGreen": {
     "DisplayName": "Worker, Single Bag, Green",
@@ -62744,7 +68440,8 @@ STOCK_COMPONENT_INFO = {
       "immigrant",
       "laborer",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/63AF30C4-8C00-11E7-ABFF-4F2F80CDF569.png"
   },
   "WorkerSingleBagOrange": {
     "DisplayName": "Worker, Single Bag, Orange",
@@ -62767,7 +68464,8 @@ STOCK_COMPONENT_INFO = {
       "immigrant",
       "laborer",
       "orange"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6A4332FA-8C00-11E7-9891-25896BA831B7.png"
   },
   "WorkerSingleBagPurple": {
     "DisplayName": "Worker, Single Bag, Purple",
@@ -62790,7 +68488,8 @@ STOCK_COMPONENT_INFO = {
       "immigrant",
       "laborer",
       "purple"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6CEE760E-8C00-11E7-ABFF-772F80CDF569.png"
   },
   "WorkerSingleBagWhite": {
     "DisplayName": "Worker, Single Bag, White",
@@ -62813,7 +68512,8 @@ STOCK_COMPONENT_INFO = {
       "immigrant",
       "laborer",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C7BAE6A8-8C00-11E7-ABFF-AC2F80CDF569.png"
   },
   "WorkerSingleBagYellow": {
     "DisplayName": "Worker, Single Bag, Yellow",
@@ -62836,7 +68536,8 @@ STOCK_COMPONENT_INFO = {
       "immigrant",
       "laborer",
       "yellow"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/74A39CA8-8C00-11E7-9891-38896BA831B7.png"
   },
   "WraithFantasyTB25": {
     "DisplayName": "Wraith, Fantasy, TB25",
@@ -62849,7 +68550,8 @@ STOCK_COMPONENT_INFO = {
       "ectoplasm",
       "wight",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2FD3C2D2-D206-11EC-A9E7-6BD6D758682F.png"
   },
   "WraithHalberdFantasyTB25": {
     "DisplayName": "Wraith, Halberd, Fantasy, TB25",
@@ -62862,7 +68564,8 @@ STOCK_COMPONENT_INFO = {
       "ectoplasm",
       "wight",
       "black"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/37ACAD84-D206-11EC-9118-833F3B7A0FE4.png"
   },
   "WyvernII": {
     "DisplayName": "Wyvern II",
@@ -62880,7 +68583,8 @@ STOCK_COMPONENT_INFO = {
       "hydra",
       "serpent",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D66871AE-102E-11E8-AA62-EA1594A6FE1D.png"
   },
   "Yeti-CharacterMeeple": {
     "DisplayName": "Yeti - Character Meeple",
@@ -62898,7 +68602,8 @@ STOCK_COMPONENT_INFO = {
       "neanderthal",
       "tibetan",
       "white"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B5F91D62-8EC1-11E8-BCE8-07F4785DA8EE.png"
   },
   "Zombie2FantasyTB25": {
     "DisplayName": "Zombie 2, Fantasy, TB25",
@@ -62918,7 +68623,8 @@ STOCK_COMPONENT_INFO = {
       "sewer ",
       "halloween",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C0C530CC-3103-11EC-9914-0272BE85CC60.png"
   },
   "Zombie3FantasyTB25": {
     "DisplayName": "Zombie 3, Fantasy, TB25",
@@ -62942,7 +68648,8 @@ STOCK_COMPONENT_INFO = {
       "sewer ",
       "halloween",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C7F440E0-3103-11EC-9914-2772BE85CC60.png"
   },
   "ZombieBabe": {
     "DisplayName": "Zombie Babe",
@@ -62962,7 +68669,8 @@ STOCK_COMPONENT_INFO = {
       "sewer ",
       "halloween",
       "green"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EFAB55CE-9198-11E2-AA3D-4072792D7C77.png"
   },
   "ZombieCheerleader": {
     "DisplayName": "Zombie Cheerleader",
@@ -62983,7 +68691,8 @@ STOCK_COMPONENT_INFO = {
       "halloween",
       "varsity",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1B1CC2A0-22CD-11E2-87AF-FACF23F5912A.png"
   },
   "ZombieCircusClown": {
     "DisplayName": "Zombie Circus Clown",
@@ -63025,7 +68734,8 @@ STOCK_COMPONENT_INFO = {
       "halloween",
       "carnival",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1D84D3C0-22CD-11E2-A98A-FACF23F5912A.png"
   },
   "ZombieDoctor": {
     "DisplayName": "Zombie Doctor",
@@ -63045,7 +68755,8 @@ STOCK_COMPONENT_INFO = {
       "sewer ",
       "halloween",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/191D882C-22CD-11E2-81C2-FACF23F5912A.png"
   },
   "ZombieDog": {
     "DisplayName": "Zombie Dog",
@@ -63068,7 +68779,8 @@ STOCK_COMPONENT_INFO = {
       "pet",
       "beast",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F06AEAEC-9198-11E2-95B3-4072792D7C77.png"
   },
   "ZombieDude": {
     "DisplayName": "Zombie Dude",
@@ -63089,7 +68801,8 @@ STOCK_COMPONENT_INFO = {
       "halloween",
       "surfer",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1FB177E8-22CD-11E2-B308-FACF23F5912A.png"
   },
   "ZombieGranny": {
     "DisplayName": "Zombie Granny",
@@ -63110,7 +68823,8 @@ STOCK_COMPONENT_INFO = {
       "halloween",
       "elderly",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/21B2C9CA-22CD-11E2-A98A-FACF23F5912A.png"
   },
   "ZombieMullet": {
     "DisplayName": "Zombie Mullet",
@@ -63131,7 +68845,8 @@ STOCK_COMPONENT_INFO = {
       "halloween",
       "hick",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/23F8E98A-22CD-11E2-BB38-FACF23F5912A.png"
   },
   "ZombieProfessor": {
     "DisplayName": "Zombie Professor",
@@ -63152,7 +68867,8 @@ STOCK_COMPONENT_INFO = {
       "halloween",
       "teacher",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/25DCB074-22CD-11E2-A98A-FACF23F5912A.png"
   },
   "ZombieThriller": {
     "DisplayName": "Zombie Thriller",
@@ -63172,7 +68888,8 @@ STOCK_COMPONENT_INFO = {
       "sewer ",
       "halloween",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2B778356-22CD-11E2-81C2-FACF23F5912A.png"
   },
   "ZombieFantasyTB25": {
     "DisplayName": "Zombie, Fantasy, TB25",
@@ -63192,7 +68909,8 @@ STOCK_COMPONENT_INFO = {
       "sewer ",
       "halloween",
       "silver"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3F47943A-3104-11EC-B9AD-450858AF5381.png"
   },
   "ZombieRandom": {
     "DisplayName": "Zombie, Random",
@@ -63212,6 +68930,2485 @@ STOCK_COMPONENT_INFO = {
       "sewer ",
       "halloween",
       "pictured"
-    ]
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/48D12E66-39B1-11E7-AFAA-5F924B0EAFB3.png"
+  },
+  "Black7PieceDiceSet": {
+    "DisplayName": "Black 7 Piece Dice Set",
+    "Description": "A 7-piece dice that that includes a D4, D6, D8, D10, D10x10, D12, and D20 in black",
+    "GameCrafterGuid": "EBA7D180-80E9-11EF-AF4A-9054F67514D5",
+    "GameCrafterSkuId": "EBA9ECA4-80E9-11EF-AF4A-9054F67514D5",
+    "Tags": [
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6EED5EF0-817D-11EF-BD90-93BB1FAA6523.png"
+  },
+  "BlankEuroPokerCard": {
+    "DisplayName": "Blank Euro Poker Card",
+    "Description": "Each card sold separately.  Cut by the same equipment that cuts our printed <a href=\"https://www.thegamecrafter.com/make/products/EuroPokerDeck\">euro poker cards</a>, so they are exactly the same size. Great for prototyping.",
+    "GameCrafterGuid": "FDA71848-051A-11E8-834D-9C7CFD3BDF49",
+    "GameCrafterSkuId": "FDADA0BE-051A-11E8-834D-9C7CFD3BDF49",
+    "Tags": [
+      "blank",
+      "prototype",
+      "example",
+      "model",
+      "template",
+      "design",
+      "sample",
+      "archetype",
+      "mockup",
+      "mock-up",
+      "mock up",
+      "sampling",
+      "card",
+      "euro poker",
+      "white"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/449205A4-1747-11E8-8CA1-C91B94A6FE1D.png"
+  },
+  "BlankVHSBox": {
+    "DisplayName": "Blank VHS Box",
+    "Description": "These relics of the past are now fully functional in the present as an alternative way to box your games or collections! They have a snap close connector and a clear film so you can insert your own cover art. ",
+    "GameCrafterGuid": "6E445B50-492B-11EF-A799-24D15DDDF2EA",
+    "GameCrafterSkuId": "6E5A4D84-492B-11EF-A799-24D15DDDF2EA",
+    "Tags": [
+      "blank",
+      "prototype",
+      "example",
+      "model",
+      "template",
+      "design",
+      "sample",
+      "archetype",
+      "mockup",
+      "mock-up",
+      "mock up",
+      "sampling",
+      "box",
+      "repurposed",
+      "recycled",
+      "vintage",
+      "vhs",
+      "movie",
+      "case",
+      "black"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A7CC807C-4DDC-11EF-BB86-159C2B64B26B.png"
+  },
+  "Blue7PieceDiceSet": {
+    "DisplayName": "Blue 7 Piece Dice Set",
+    "Description": "A 7-piece dice that that includes a D4, D6, D8, D10, D10x10, D12, and D20 in blue",
+    "GameCrafterGuid": "EC7AFEDE-80E9-11EF-AF4A-9054F67514D5",
+    "GameCrafterSkuId": "EC7C429E-80E9-11EF-AF4A-9054F67514D5",
+    "Tags": [
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/74BB374E-817D-11EF-9328-BDAD0B571517.png"
+  },
+  "BridgeSleevePack(100)": {
+    "DisplayName": "Bridge Sleeve Pack (100)",
+    "Description": "A pack of 100 protective card sleeves sized perfectly for our Bridge sized cards.  The plastic has a thickness of 50 microns.",
+    "GameCrafterGuid": "D7B66DA6-591A-11E8-BCD4-2C0A94A6FE1D",
+    "GameCrafterSkuId": "D7B9760E-591A-11E8-BCD4-2C0A94A6FE1D",
+    "Tags": [
+      "bridge",
+      "sleeve",
+      "pack",
+      "card",
+      "protector",
+      "trading",
+      "magic the gathering",
+      "mtg",
+      "collectible",
+      "insert",
+      "sheath",
+      "protect",
+      "protective",
+      "deck",
+      "clear"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8C2445C0-ABC2-11E8-8C69-7FE5CE95AB04.png"
+  },
+  "Cube13mmBlue": {
+    "DisplayName": "Cube, 13mm, Blue",
+    "Description": "A large wooden 13mm x 13mm cube, which can be used as a resource in euro-style games.",
+    "GameCrafterGuid": "19A4A848-640B-11EF-BD62-EF6CCAAEFD3F",
+    "GameCrafterSkuId": "19C030F4-640B-11EF-BD62-EF6CCAAEFD3F",
+    "Tags": [
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
+      "blue"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/55C16B12-6A4C-11EF-B695-B534BABE8560.png"
+  },
+  "Cube13mmGreen": {
+    "DisplayName": "Cube, 13mm, Green",
+    "Description": "A large wooden 13mm x 13mm cube, which can be used as a resource in euro-style games.",
+    "GameCrafterGuid": "2223A334-640B-11EF-A4F7-2F2D8FFFEEA2",
+    "GameCrafterSkuId": "223BDEFE-640B-11EF-A4F7-2F2D8FFFEEA2",
+    "Tags": [
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
+      "green"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4AF466A4-6A37-11EF-B695-5431BABE8560.png"
+  },
+  "Cube13mmRed": {
+    "DisplayName": "Cube, 13mm, Red",
+    "Description": "A large wooden 13mm x 13mm cube, which can be used as a resource in euro-style games.",
+    "GameCrafterGuid": "260AF150-640B-11EF-A4F7-312D8FFFEEA2",
+    "GameCrafterSkuId": "26102972-640B-11EF-A4F7-312D8FFFEEA2",
+    "Tags": [
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
+      "red"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/52FE46DA-6A37-11EF-A9E1-B806C6E47471.png"
+  },
+  "Cube13mmYellow": {
+    "DisplayName": "Cube, 13mm, Yellow",
+    "Description": "A large wooden 13mm x 13mm cube, which can be used as a resource in euro-style games.",
+    "GameCrafterGuid": "2AFDC5DE-640B-11EF-A4F7-892D8FFFEEA2",
+    "GameCrafterSkuId": "2B0A3BB6-640B-11EF-A4F7-892D8FFFEEA2",
+    "Tags": [
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
+      "yellow"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5E0DCEB4-6A4C-11EF-BD9F-5AF78EFFEEA2.png"
+  },
+  "D16Purple": {
+    "DisplayName": "D16, Purple",
+    "Description": "Many games call for a specific number of sides on a die; 16 sides offer a unique experience for your gameplay.",
+    "GameCrafterGuid": "6B8B25B4-21DB-11EF-B303-F2855357CE27",
+    "GameCrafterSkuId": "6BA62BFC-21DB-11EF-B303-F2855357CE27",
+    "Tags": [
+      "dice",
+      "d&d",
+      "dungeons and dragons",
+      "twenty",
+      "twentysided",
+      "twenty-sided",
+      "dungeonmaster",
+      "dungeon master",
+      "pathfinder",
+      "call of c'thulu",
+      "cthulhu",
+      "cthulu c'thulhu",
+      "earthdawn",
+      "rpg",
+      "violence",
+      "candy heist",
+      "purple"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F8531E6E-2462-11EF-8DCE-5D6B9DC64376.png"
+  },
+  "D612mmCaramel": {
+    "DisplayName": "D6, 12mm, Caramel",
+    "Description": "These 12mm six-sided dice are great for games that need lots of D6.",
+    "GameCrafterGuid": "3E84BD84-5D4E-11E9-A37B-2C207F23BFD3",
+    "GameCrafterSkuId": "3E89077C-5D4E-11E9-A37B-2C207F23BFD3",
+    "Tags": [
+      "dice",
+      "d&d",
+      "dungeons and dragons",
+      "six",
+      "sixsided",
+      "six-sided",
+      "dungeonmaster",
+      "dungeon master",
+      "pathfinder",
+      "call of c'thulu",
+      "cthulhu",
+      "cthulu c'thulhu",
+      "earthdawn",
+      "rpg",
+      "chance",
+      "rng",
+      "cube",
+      "die",
+      "knucklebones",
+      "senet",
+      "backgammon",
+      "gambling",
+      "gamble",
+      "sugoroku",
+      "craps",
+      "monopoly",
+      "yahtzee",
+      "farkle",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E82832DE-6141-11E9-8191-5EA752E7BC3A.png"
+  },
+  "D614mmBlack": {
+    "DisplayName": "D6, 14mm, Black",
+    "Description": "Drilled (dots), six-sided dice.",
+    "GameCrafterGuid": "F6215022-473E-11EE-9605-29954E7FE1DB",
+    "GameCrafterSkuId": "F6378F04-473E-11EE-9605-29954E7FE1DB",
+    "Tags": [
+      "dice",
+      "d&d",
+      "dungeons and dragons",
+      "six",
+      "sixsided",
+      "six-sided",
+      "dungeonmaster",
+      "dungeon master",
+      "pathfinder",
+      "call of c'thulu",
+      "cthulhu",
+      "cthulu c'thulhu",
+      "earthdawn",
+      "rpg",
+      "chance",
+      "rng",
+      "cube",
+      "die",
+      "knucklebones",
+      "senet",
+      "backgammon",
+      "gambling",
+      "gamble",
+      "sugoroku",
+      "craps",
+      "monopoly",
+      "yahtzee",
+      "farkle",
+      "black"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/633BE6F0-82B1-11EF-8767-2D7D0B571517.png"
+  },
+  "D6AlchemyOrange": {
+    "DisplayName": "D6, Alchemy, Orange",
+    "Description": "Part of our Production Dice set, this depicts a flask (2), the symbol Epsilon (3), and the Earth (1) on the different faces",
+    "GameCrafterGuid": "F50D4CBC-8C17-11EF-8AF0-158F5D3C4E48",
+    "GameCrafterSkuId": "F543C864-8C17-11EF-8AF0-158F5D3C4E48",
+    "Tags": [
+      "terraforming",
+      "mars",
+      "temperature",
+      "oxygen",
+      "atmosphere",
+      "planet",
+      "water",
+      "plant",
+      "animal",
+      "resource",
+      "building",
+      "planning",
+      "victory",
+      "technologies",
+      "technology",
+      "hellas",
+      "elysium",
+      "colony",
+      "colonies",
+      "science",
+      "transmute",
+      "transmutation",
+      "laboratory",
+      "elements",
+      "chemistry",
+      "orange"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3937EB9E-8FE8-11EF-BC39-91BF43B3BDFD.png"
+  },
+  "D6DamageBlack": {
+    "DisplayName": "D6, Damage, Black",
+    "Description": "Part of our Production Dice set, this larger die depicts a blank, a sword, a sword with an explosion, an explosion, two swords with an explosion, and three swords on the different faces",
+    "GameCrafterGuid": "530060D4-8C18-11EF-A9F3-22417DD79F5F",
+    "GameCrafterSkuId": "5305BB60-8C18-11EF-A9F3-22417DD79F5F",
+    "Tags": [
+      "terraforming",
+      "mars",
+      "temperature",
+      "oxygen",
+      "atmosphere",
+      "planet",
+      "water",
+      "plant",
+      "animal",
+      "resource",
+      "building",
+      "planning",
+      "victory",
+      "technologies",
+      "technology",
+      "hellas",
+      "elysium",
+      "colony",
+      "colonies",
+      "war",
+      "military",
+      "combat",
+      "conflict",
+      "black"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/71C2D096-8FE8-11EF-85E5-F9087DD79F5F.png"
+  },
+  "D6IndustryGrey": {
+    "DisplayName": "D6, Industry, Grey",
+    "Description": "Part of our Production Dice set, sides depicts a star (2), hammer (3), and industrial building (1) on the different faces",
+    "GameCrafterGuid": "D68F11E4-8C17-11EF-AD76-05C9ABB376F8",
+    "GameCrafterSkuId": "D6A3454C-8C17-11EF-AD76-05C9ABB376F8",
+    "Tags": [
+      "terraforming",
+      "mars",
+      "temperature",
+      "oxygen",
+      "atmosphere",
+      "planet",
+      "water",
+      "plant",
+      "animal",
+      "resource",
+      "building",
+      "planning",
+      "victory",
+      "technologies",
+      "technology",
+      "hellas",
+      "elysium",
+      "colony",
+      "colonies",
+      "manufacturing",
+      "manufacture",
+      "labor",
+      "machines",
+      "tools",
+      "goods",
+      "engineering",
+      "semiconductor",
+      "grey"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2E6419E0-8FE8-11EF-8125-4340528053A4.png"
+  },
+  "D6NatureGreen": {
+    "DisplayName": "D6, Nature, Green",
+    "Description": "Part of our Production Dice set, this depicts cellular matter (2), leaves (3), and a paw print (1) on the different faces",
+    "GameCrafterGuid": "EE781E68-8C17-11EF-AD76-07CAABB376F8",
+    "GameCrafterSkuId": "EE7E7BD2-8C17-11EF-AD76-07CAABB376F8",
+    "Tags": [
+      "terraforming",
+      "mars",
+      "temperature",
+      "oxygen",
+      "atmosphere",
+      "planet",
+      "water",
+      "plant",
+      "animal",
+      "resource",
+      "building",
+      "planning",
+      "victory",
+      "technologies",
+      "technology",
+      "hellas",
+      "elysium",
+      "colony",
+      "colonies",
+      "ecosphere",
+      "ecology",
+      "wildlife",
+      "geology",
+      "wilderness",
+      "green"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3651F354-8FDC-11EF-81E6-63727DD79F5F.png"
+  },
+  "D6OxygenBlue": {
+    "DisplayName": "D6, Oxygen, Blue",
+    "Description": "Part of our Production Dice set, this depicts a water droplet (2), a lightning bolt (3), and the symbol for Oxygen O2 (1) on the different faces",
+    "GameCrafterGuid": "2B87A602-8C18-11EF-9CFE-C9915D3C4E48",
+    "GameCrafterSkuId": "2B9FA40A-8C18-11EF-9CFE-C9915D3C4E48",
+    "Tags": [
+      "terraforming",
+      "mars",
+      "temperature",
+      "oxygen",
+      "atmosphere",
+      "planet",
+      "water",
+      "plant",
+      "animal",
+      "resource",
+      "building",
+      "planning",
+      "victory",
+      "technologies",
+      "technology",
+      "hellas",
+      "elysium",
+      "colony",
+      "colonies",
+      "chemical",
+      "element",
+      "periodic",
+      "respiration",
+      "cellular",
+      "molecules",
+      "blue"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/59914692-8FE8-11EF-8125-6342528053A4.png"
+  },
+  "D6TemperatureRed": {
+    "DisplayName": "D6, Temperature, Red",
+    "Description": "Part of our Production Dice set, this depicts an arrow (2), degrees Celsius (3), and the nuclear symbol (1) on the different faces",
+    "GameCrafterGuid": "4CE801CA-8C18-11EF-A9F3-A3407DD79F5F",
+    "GameCrafterSkuId": "4D0418C4-8C18-11EF-A9F3-A3407DD79F5F",
+    "Tags": [
+      "terraforming",
+      "mars",
+      "temperature",
+      "oxygen",
+      "atmosphere",
+      "planet",
+      "water",
+      "plant",
+      "animal",
+      "resource",
+      "building",
+      "planning",
+      "victory",
+      "technologies",
+      "technology",
+      "hellas",
+      "elysium",
+      "colony",
+      "colonies",
+      "hotness",
+      "coldness",
+      "thermometer",
+      "fahrenheit",
+      "celsius",
+      "centigrade",
+      "kelvin",
+      "thermodynamics",
+      "physics",
+      "radiation",
+      "thermal",
+      "red"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/448BA454-8FE8-11EF-BC39-49C043B3BDFD.png"
+  },
+  "DeckStorageClear": {
+    "DisplayName": "Deck Storage, Clear",
+    "Description": "2 compartment box that latches shut.  See through design makes it great for showing off your deck artwork!\nHolds 150 poker cards comfortably (75 per side) There is a plastic sleeve on the outside of the box that allows you to insert a jumbo size card (3.5\" x 5.5\") that can serve as face/back cover art for the box. Standard 16mm Meeple included for scale.",
+    "GameCrafterGuid": "1F176A34-D4C5-11E9-9199-B1AC6FF76758",
+    "GameCrafterSkuId": "1FBF6B8A-D4C5-11E9-9199-B1AC6FF76758",
+    "Tags": [
+      "pack",
+      "card",
+      "protector",
+      "trading",
+      "magic the gathering",
+      "mtg",
+      "collectible",
+      "protect",
+      "protective",
+      "deck",
+      "container",
+      "storage",
+      "receptacle",
+      "enclosure",
+      "case",
+      "clear"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/75C711AE-3BA4-11EA-A3A8-6074EBC8DDC9.png"
+  },
+  "Disc20mmx5mmPastelPink": {
+    "DisplayName": "Disc, 20mm x 5mm, Pastel Pink",
+    "Description": "A wood disc measuring 20mm across by 5mm high",
+    "GameCrafterGuid": "6EF6ECA8-6B90-11E9-9B10-6FE7BA9B8687",
+    "GameCrafterSkuId": "6EFD601A-6B90-11E9-9B10-6FE7BA9B8687",
+    "Tags": [
+      "solid",
+      "geometric",
+      "can",
+      " discus",
+      "cylinder",
+      "saucer",
+      "crokinole",
+      "checker",
+      "bridget",
+      "shuffleboard",
+      "carrom",
+      "reversi",
+      "othello",
+      "birdie",
+      "sjoelbak",
+      "pucket",
+      "circle",
+      "round",
+      "orb",
+      "sphere",
+      "globe",
+      "ball",
+      "ring",
+      "loop",
+      "oval",
+      "ellipse",
+      "rondure",
+      "pink"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EEDE6A12-6C27-11E9-B784-DDF5A9801980.png"
+  },
+  "FutureCubeBlue": {
+    "DisplayName": "Future Cube, Blue",
+    "Description": "Design courtesy <a href=\"http://www.miniongames.com\" target=\"_blank\">Minion Games</a>",
+    "GameCrafterGuid": "09670BFC-3AF2-11E5-BF06-214164F7B285",
+    "GameCrafterSkuId": "09673E1A-3AF2-11E5-BF06-214164F7B285",
+    "Tags": [
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "futurology",
+      "space",
+      "technology",
+      "supplies",
+      "storage",
+      "square",
+      "box",
+      "block",
+      "hexahedron",
+      "cuboid",
+      "cubical",
+      "cuboidal",
+      "cubic",
+      "prism",
+      "solid",
+      "bits",
+      "components",
+      "versatile",
+      "kit",
+      "maker",
+      "prototype",
+      "quadrate",
+      "blocky",
+      "rectangular",
+      "boxlike",
+      "squarish",
+      "blockish",
+      "foursquare",
+      "rectangle",
+      "blue"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/39DD5644-4694-11E5-B123-0FB7C8391902.png"
+  },
+  "FutureTankTan": {
+    "DisplayName": "Future Tank, Tan",
+    "Description": "Every army needs tanks, so does yours.",
+    "GameCrafterGuid": "9C3E3944-4C0C-11E9-A8CD-F5D1D1978862",
+    "GameCrafterSkuId": "9C4648D2-4C0C-11E9-A8CD-F5D1D1978862",
+    "Tags": [
+      "futurology",
+      "vehicle",
+      "combat",
+      "armored",
+      "heavy",
+      "armoured",
+      "panzer",
+      "battlefortress",
+      "tan"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D29ED8B6-4FEC-11E9-BA3F-3BF684BD98AD.png"
+  },
+  "Green7PieceDiceSet": {
+    "DisplayName": "Green 7 Piece Dice Set",
+    "Description": "A 7-piece dice that that includes a D4, D6, D8, D10, D10x10, D12, and D20 in green",
+    "GameCrafterGuid": "EC5DA596-80E9-11EF-AF4A-9054F67514D5",
+    "GameCrafterSkuId": "EC5F0576-80E9-11EF-AF4A-9054F67514D5",
+    "Tags": [
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/779D389A-817D-11EF-9328-B5AD0B571517.png"
+  },
+  "HalmaPlasticBlack": {
+    "DisplayName": "Halma, Plastic, Black",
+    "Description": "Generic marker pawn",
+    "GameCrafterGuid": "D2836A5A-446E-11EF-B962-1A50B3ED255D",
+    "GameCrafterSkuId": "D2ADCF34-446E-11EF-B962-1A50B3ED255D",
+    "Tags": [
+      "pawn",
+      "marker",
+      "mover",
+      "piece",
+      "marker",
+      "black"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FA55089C-6A4B-11EF-A9E1-E905C6E47471.png"
+  },
+  "HalmaPlasticBlue": {
+    "DisplayName": "Halma, Plastic, Blue",
+    "Description": "Generic marker pawn",
+    "GameCrafterGuid": "D68CF008-446E-11EF-9C71-D0329BBAEF3B",
+    "GameCrafterSkuId": "D6942828-446E-11EF-9C71-D0329BBAEF3B",
+    "Tags": [
+      "pawn",
+      "marker",
+      "mover",
+      "piece",
+      "marker",
+      "blue"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/027EFF14-6A4C-11EF-BD9F-26F38EFFEEA2.png"
+  },
+  "HalmaPlasticOrange": {
+    "DisplayName": "Halma, Plastic, Orange",
+    "Description": "Generic marker pawn",
+    "GameCrafterGuid": "DC32729E-446E-11EF-BA1D-F37B5DDDF2EA",
+    "GameCrafterSkuId": "DC3891BA-446E-11EF-BA1D-F37B5DDDF2EA",
+    "Tags": [
+      "pawn",
+      "marker",
+      "mover",
+      "piece",
+      "marker",
+      "orange"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/11D18040-6A4C-11EF-B695-AC31BABE8560.png"
+  },
+  "HalmaPlasticRed": {
+    "DisplayName": "Halma, Plastic, Red",
+    "Description": "Generic marker pawn",
+    "GameCrafterGuid": "E243325E-446E-11EF-B962-DB50B3ED255D",
+    "GameCrafterSkuId": "E257FEB4-446E-11EF-B962-DB50B3ED255D",
+    "Tags": [
+      "pawn",
+      "marker",
+      "mover",
+      "piece",
+      "marker",
+      "red"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/190C9192-6A4C-11EF-A9E1-2907C6E47471.png"
+  },
+  "HalmaPlasticWhite": {
+    "DisplayName": "Halma, Plastic, White",
+    "Description": "Generic marker pawn",
+    "GameCrafterGuid": "E75A801C-446E-11EF-B962-1F51B3ED255D",
+    "GameCrafterSkuId": "E7756C88-446E-11EF-B962-1F51B3ED255D",
+    "Tags": [
+      "pawn",
+      "marker",
+      "mover",
+      "piece",
+      "marker",
+      "white"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A03CD6B8-6A5B-11EF-B695-7270BABE8560.png"
+  },
+  "HalmaPlasticYellow": {
+    "DisplayName": "Halma, Plastic, Yellow",
+    "Description": "Generic marker pawn",
+    "GameCrafterGuid": "ED64F4B0-446E-11EF-9C71-12349BBAEF3B",
+    "GameCrafterSkuId": "ED7910B2-446E-11EF-9C71-12349BBAEF3B",
+    "Tags": [
+      "pawn",
+      "marker",
+      "mover",
+      "piece",
+      "marker",
+      "yellow"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/21934CCA-6A4C-11EF-A9E1-EE07C6E47471.png"
+  },
+  "HorizontalGameMaster'sScreen": {
+    "DisplayName": "Horizontal Game Master's Screen",
+    "Description": "4 piece foldable screen for conducting business in secret while playing games.  Easy to access sleeves make it possible to insert your own artwork for a fully customizable experience. Each panel holds a landscaped piece of US Letter Paper (11x8.5 inches). Unfurled it stands 48 inches wide by 9 inches tall. The plastic envelope is also dry erasable. ",
+    "GameCrafterGuid": "1C0E1ABE-0F10-11EB-A846-2B4D07EF76FE",
+    "GameCrafterSkuId": "1C1EC9AE-0F10-11EB-A846-2B4D07EF76FE",
+    "Tags": [
+      "screen",
+      "dm",
+      "d&d",
+      "divider",
+      "barrier gm",
+      "dungeon master",
+      "game master",
+      "insertable",
+      "pathfinder",
+      "inserts",
+      "5e",
+      "roleplaying",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A4D6C92E-1409-11EB-9443-4F36E4BD0016.jpg"
+  },
+  "InFUNityTileHatBlack": {
+    "DisplayName": "InFUNity Tile, Hat, Black",
+    "Description": "Made from 100% recycled plastic, easy to clean, and fun to play with. These interlocking tiles can be combined to form all sorts of artistic mosaics that challenge your spatial reasoning and visual problem solving skills.",
+    "GameCrafterGuid": "7A538A30-43CA-11EF-B2D0-001E9BBAEF3B",
+    "GameCrafterSkuId": "7A678C06-43CA-11EF-B2D0-001E9BBAEF3B",
+    "Tags": [
+      "mosaic",
+      "patchwork",
+      "tessellation",
+      "tesselate",
+      "slab",
+      "slate",
+      "puzzle",
+      "diy",
+      "black"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7B9D2E1E-4EB0-11EF-8CD0-1E742B64B26B.png"
+  },
+  "InFUNityTileHatBlue": {
+    "DisplayName": "InFUNity Tile, Hat, Blue",
+    "Description": "Made from 100% recycled plastic, easy to clean, and fun to play with. These interlocking tiles can be combined to form all sorts of artistic mosaics that challenge your spatial reasoning and visual problem solving skills.",
+    "GameCrafterGuid": "7D447A60-43CA-11EF-8D8B-1F7BA32EF305",
+    "GameCrafterSkuId": "7D49743E-43CA-11EF-8D8B-1F7BA32EF305",
+    "Tags": [
+      "mosaic",
+      "patchwork",
+      "tessellation",
+      "tesselate",
+      "slab",
+      "slate",
+      "puzzle",
+      "diy",
+      "blue"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8B403B68-4EB0-11EF-8CD0-B9742B64B26B.png"
+  },
+  "InFUNityTileHatGreen": {
+    "DisplayName": "InFUNity Tile, Hat, Green",
+    "Description": "Made from 100% recycled plastic, easy to clean, and fun to play with. These interlocking tiles can be combined to form all sorts of artistic mosaics that challenge your spatial reasoning and visual problem solving skills.",
+    "GameCrafterGuid": "8018E406-43CA-11EF-8D8B-7F7BA32EF305",
+    "GameCrafterSkuId": "802A164A-43CA-11EF-8D8B-7F7BA32EF305",
+    "Tags": [
+      "mosaic",
+      "patchwork",
+      "tessellation",
+      "tesselate",
+      "slab",
+      "slate",
+      "puzzle",
+      "diy",
+      "green"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B0F267FA-4EB0-11EF-B232-6A94120BA3F9.png"
+  },
+  "InFUNityTileHatOrange": {
+    "DisplayName": "InFUNity Tile, Hat, Orange",
+    "Description": "Made from 100% recycled plastic, easy to clean, and fun to play with. These interlocking tiles can be combined to form all sorts of artistic mosaics that challenge your spatial reasoning and visual problem solving skills.",
+    "GameCrafterGuid": "83327DB4-43CA-11EF-8C87-BF37B3ED255D",
+    "GameCrafterSkuId": "8337A758-43CA-11EF-8C87-BF37B3ED255D",
+    "Tags": [
+      "mosaic",
+      "patchwork",
+      "tessellation",
+      "tesselate",
+      "slab",
+      "slate",
+      "puzzle",
+      "diy",
+      "orange"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BAEE2456-4EB0-11EF-B232-0695120BA3F9.png"
+  },
+  "InFUNityTileHatPurple": {
+    "DisplayName": "InFUNity Tile, Hat, Purple",
+    "Description": "Made from 100% recycled plastic, easy to clean, and fun to play with. These interlocking tiles can be combined to form all sorts of artistic mosaics that challenge your spatial reasoning and visual problem solving skills.",
+    "GameCrafterGuid": "8669C528-43CA-11EF-8D8B-7F7BA32EF305",
+    "GameCrafterSkuId": "866FF484-43CA-11EF-8D8B-7F7BA32EF305",
+    "Tags": [
+      "mosaic",
+      "patchwork",
+      "tessellation",
+      "tesselate",
+      "slab",
+      "slate",
+      "puzzle",
+      "diy",
+      "purple"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C931BE92-4EB0-11EF-8CD0-80772B64B26B.png"
+  },
+  "InFUNityTileHatRed": {
+    "DisplayName": "InFUNity Tile, Hat, Red",
+    "Description": "Made from 100% recycled plastic, easy to clean, and fun to play with. These interlocking tiles can be combined to form all sorts of artistic mosaics that challenge your spatial reasoning and visual problem solving skills.",
+    "GameCrafterGuid": "8A07D59E-43CA-11EF-B2D0-A11E9BBAEF3B",
+    "GameCrafterSkuId": "8A0D4E8E-43CA-11EF-B2D0-A11E9BBAEF3B",
+    "Tags": [
+      "mosaic",
+      "patchwork",
+      "tessellation",
+      "tesselate",
+      "slab",
+      "slate",
+      "puzzle",
+      "diy",
+      "red"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D4298956-4EB0-11EF-82B1-8C4126787D2E.png"
+  },
+  "InFUNityTileHatWhite": {
+    "DisplayName": "InFUNity Tile, Hat, White",
+    "Description": "Made from 100% recycled plastic, easy to clean, and fun to play with. These interlocking tiles can be combined to form all sorts of artistic mosaics that challenge your spatial reasoning and visual problem solving skills.",
+    "GameCrafterGuid": "8D5801D8-43CA-11EF-B2D0-0F1F9BBAEF3B",
+    "GameCrafterSkuId": "8D6C089A-43CA-11EF-B2D0-0F1F9BBAEF3B",
+    "Tags": [
+      "mosaic",
+      "patchwork",
+      "tessellation",
+      "tesselate",
+      "slab",
+      "slate",
+      "puzzle",
+      "diy",
+      "white"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DF4043CA-4EB0-11EF-8CD0-C4782B64B26B.png"
+  },
+  "InFUNityTileHatYellow": {
+    "DisplayName": "InFUNity Tile, Hat, Yellow",
+    "Description": "Made from 100% recycled plastic, easy to clean, and fun to play with. These interlocking tiles can be combined to form all sorts of artistic mosaics that challenge your spatial reasoning and visual problem solving skills.",
+    "GameCrafterGuid": "9057B392-43CA-11EF-8C87-A138B3ED255D",
+    "GameCrafterSkuId": "906BEF1A-43CA-11EF-8C87-A138B3ED255D",
+    "Tags": [
+      "mosaic",
+      "patchwork",
+      "tessellation",
+      "tesselate",
+      "slab",
+      "slate",
+      "puzzle",
+      "diy",
+      "yellow"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F0200D06-4EB0-11EF-8CD0-F2792B64B26B.png"
+  },
+  "InFUNityTileTurtleBlack": {
+    "DisplayName": "InFUNity Tile, Turtle, Black",
+    "Description": "Made from 100% recycled plastic, easy to clean, and fun to play with. These interlocking tiles can be combined to form all sorts of artistic mosaics that challenge your spatial reasoning and visual problem solving skills.",
+    "GameCrafterGuid": "98A75660-4096-11EF-88C7-F345D4A9407E",
+    "GameCrafterSkuId": "98B8BC52-4096-11EF-88C7-F345D4A9407E",
+    "Tags": [
+      "mosaic",
+      "patchwork",
+      "tessellation",
+      "tesselate",
+      "slab",
+      "slate",
+      "puzzle",
+      "diy",
+      "black"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BDED8B78-4EAC-11EF-82B1-608F26787D2E.png"
+  },
+  "InFUNityTileTurtleBlue": {
+    "DisplayName": "InFUNity Tile, Turtle, Blue",
+    "Description": "Made from 100% recycled plastic, easy to clean, and fun to play with. These interlocking tiles can be combined to form all sorts of artistic mosaics that challenge your spatial reasoning and visual problem solving skills.",
+    "GameCrafterGuid": "B0C127E4-4096-11EF-88C7-8047D4A9407E",
+    "GameCrafterSkuId": "B0DC4F24-4096-11EF-88C7-8047D4A9407E",
+    "Tags": [
+      "mosaic",
+      "patchwork",
+      "tessellation",
+      "tesselate",
+      "slab",
+      "slate",
+      "puzzle",
+      "diy",
+      "blue"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E08977AA-4EAC-11EF-82B1-F99026787D2E.png"
+  },
+  "InFUNityTileTurtleGreen": {
+    "DisplayName": "InFUNity Tile, Turtle, Green",
+    "Description": "Made from 100% recycled plastic, easy to clean, and fun to play with. These interlocking tiles can be combined to form all sorts of artistic mosaics that challenge your spatial reasoning and visual problem solving skills.",
+    "GameCrafterGuid": "B4D89A1A-4096-11EF-97CE-EADE3AE4AF6E",
+    "GameCrafterSkuId": "B4F47BC2-4096-11EF-97CE-EADE3AE4AF6E",
+    "Tags": [
+      "mosaic",
+      "patchwork",
+      "tessellation",
+      "tesselate",
+      "slab",
+      "slate",
+      "puzzle",
+      "diy",
+      "green"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F6B5217A-4EAF-11EF-B232-128B120BA3F9.png"
+  },
+  "InFUNityTileTurtleOrange": {
+    "DisplayName": "InFUNity Tile, Turtle, Orange",
+    "Description": "Made from 100% recycled plastic, easy to clean, and fun to play with. These interlocking tiles can be combined to form all sorts of artistic mosaics that challenge your spatial reasoning and visual problem solving skills.",
+    "GameCrafterGuid": "B886D622-4096-11EF-97CE-9BDE3AE4AF6E",
+    "GameCrafterSkuId": "B89BF840-4096-11EF-97CE-9BDE3AE4AF6E",
+    "Tags": [
+      "mosaic",
+      "patchwork",
+      "tessellation",
+      "tesselate",
+      "slab",
+      "slate",
+      "puzzle",
+      "diy",
+      "orange"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0A7E262A-4EB0-11EF-8CD0-706E2B64B26B.png"
+  },
+  "InFUNityTileTurtlePurple": {
+    "DisplayName": "InFUNity Tile, Turtle, Purple",
+    "Description": "Made from 100% recycled plastic, easy to clean, and fun to play with. These interlocking tiles can be combined to form all sorts of artistic mosaics that challenge your spatial reasoning and visual problem solving skills.",
+    "GameCrafterGuid": "BBEC8EB0-4096-11EF-B4C2-06B5A32EF305",
+    "GameCrafterSkuId": "BBF38F30-4096-11EF-B4C2-06B5A32EF305",
+    "Tags": [
+      "mosaic",
+      "patchwork",
+      "tessellation",
+      "tesselate",
+      "slab",
+      "slate",
+      "puzzle",
+      "diy",
+      "purple"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3366B714-4EB0-11EF-8CD0-03712B64B26B.png"
+  },
+  "InFUNityTileTurtleRed": {
+    "DisplayName": "InFUNity Tile, Turtle, Red",
+    "Description": "Made from 100% recycled plastic, easy to clean, and fun to play with. These interlocking tiles can be combined to form all sorts of artistic mosaics that challenge your spatial reasoning and visual problem solving skills.",
+    "GameCrafterGuid": "BF715BB0-4096-11EF-B4C2-97B5A32EF305",
+    "GameCrafterSkuId": "BF874AF6-4096-11EF-B4C2-97B5A32EF305",
+    "Tags": [
+      "mosaic",
+      "patchwork",
+      "tessellation",
+      "tesselate",
+      "slab",
+      "slate",
+      "puzzle",
+      "diy",
+      "red"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/40725C38-4EB0-11EF-8CD0-A9712B64B26B.png"
+  },
+  "InFUNityTileTurtleWhite": {
+    "DisplayName": "InFUNity Tile, Turtle, White",
+    "Description": "Made from 100% recycled plastic, easy to clean, and fun to play with. These interlocking tiles can be combined to form all sorts of artistic mosaics that challenge your spatial reasoning and visual problem solving skills.",
+    "GameCrafterGuid": "C2C9B2B2-4096-11EF-88C7-4748D4A9407E",
+    "GameCrafterSkuId": "C2CEE6C4-4096-11EF-88C7-4748D4A9407E",
+    "Tags": [
+      "mosaic",
+      "patchwork",
+      "tessellation",
+      "tesselate",
+      "slab",
+      "slate",
+      "puzzle",
+      "diy",
+      "white"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/520D24DC-4EB0-11EF-82B1-C73B26787D2E.png"
+  },
+  "InFUNityTileTurtleYellow": {
+    "DisplayName": "InFUNity Tile, Turtle, Yellow",
+    "Description": "Made from 100% recycled plastic, easy to clean, and fun to play with. These interlocking tiles can be combined to form all sorts of artistic mosaics that challenge your spatial reasoning and visual problem solving skills.",
+    "GameCrafterGuid": "C7898610-4096-11EF-88C7-AA48D4A9407E",
+    "GameCrafterSkuId": "C79D5014-4096-11EF-88C7-AA48D4A9407E",
+    "Tags": [
+      "mosaic",
+      "patchwork",
+      "tessellation",
+      "tesselate",
+      "slab",
+      "slate",
+      "puzzle",
+      "diy",
+      "yellow"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/64AAB69A-4EB0-11EF-B232-0C91120BA3F9.png"
+  },
+  "LargeBlackTin": {
+    "DisplayName": "Large Black Tin",
+    "Description": "5.5\" x 4\" x 2\" Seamless Steel Black Tin",
+    "GameCrafterGuid": "7BE77E92-2FDA-11EE-A4B8-DA83D73C2A86",
+    "GameCrafterSkuId": "7BE95D84-2FDA-11EE-A4B8-DA83D73C2A86",
+    "Tags": [
+      "black"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BEBE6CFC-0190-11EF-B5A6-5E0F015F28ED.png"
+  },
+  "LargeQuadFoldGameBoard": {
+    "DisplayName": "Large Quad Fold Game Board",
+    "Description": "This is the blank, unprinted version of our printed <a href=\"https://www.thegamecrafter.com/make/products/LargeQuadFoldBoard\">Large Quad-Fold Game Board</a>. It comes with a plain white surface.<br><br>\r\nSpread out, this board is 20 inches by 20 inches by 0.1 inches. Folded it is 10 inches by 10 inches by 0.4 inches.",
+    "GameCrafterGuid": "66E42228-5C5B-11ED-B188-CA7E4E9C8A9F",
+    "GameCrafterSkuId": "66F4349C-5C5B-11ED-B188-CA7E4E9C8A9F",
+    "Tags": [
+      "blank",
+      "prototype",
+      "example",
+      "model",
+      "template",
+      "design",
+      "sample",
+      "archetype",
+      "mockup",
+      "mock-up",
+      "mock up",
+      "sampling",
+      "board",
+      "quadfold",
+      "quad fold",
+      "quad-fold",
+      "white"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/65E273AC-21E3-11E6-805D-AF4DEB12782E.png"
+  },
+  "LEDBlack": {
+    "DisplayName": "LED, Black",
+    "Description": "A 3d printed game piece shaped like an LED.",
+    "GameCrafterGuid": "4CC426EA-B32A-11EF-AFD4-709F039E9548",
+    "GameCrafterSkuId": "4CDE05D8-B32A-11EF-AFD4-709F039E9548",
+    "Tags": [
+      "led",
+      "light",
+      "emitting",
+      "diode",
+      "l.e.d.",
+      "lightbulb",
+      "bulb",
+      "black"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7D9BF7F2-B32A-11EF-86C2-C87744FDF008.png"
+  },
+  "LEDBlue": {
+    "DisplayName": "LED, Blue",
+    "Description": "A 3d printed game piece shaped like an LED.",
+    "GameCrafterGuid": "64EB7750-B32A-11EF-92CD-5EBC0E2E3B71",
+    "GameCrafterSkuId": "64F34340-B32A-11EF-92CD-5EBC0E2E3B71",
+    "Tags": [
+      "led",
+      "light",
+      "emitting",
+      "diode",
+      "l.e.d.",
+      "lightbulb",
+      "bulb",
+      "blue"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AC13CD8A-B32A-11EF-86C2-C77944FDF008.png"
+  },
+  "LEDGreen": {
+    "DisplayName": "LED, Green",
+    "Description": "A 3d printed game piece shaped like an LED.",
+    "GameCrafterGuid": "4CC49E86-B32A-11EF-92CD-96BB0E2E3B71",
+    "GameCrafterSkuId": "4CFB7082-B32A-11EF-92CD-96BB0E2E3B71",
+    "Tags": [
+      "led",
+      "light",
+      "emitting",
+      "diode",
+      "l.e.d.",
+      "lightbulb",
+      "bulb",
+      "green"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A534B3C6-B32A-11EF-92CD-05C00E2E3B71.png"
+  },
+  "LEDOrange": {
+    "DisplayName": "LED, Orange",
+    "Description": "A 3d printed game piece shaped like an LED.",
+    "GameCrafterGuid": "4CC48CC0-B32A-11EF-86C2-517544FDF008",
+    "GameCrafterSkuId": "4CE19928-B32A-11EF-86C2-517544FDF008",
+    "Tags": [
+      "led",
+      "light",
+      "emitting",
+      "diode",
+      "l.e.d.",
+      "lightbulb",
+      "bulb",
+      "orange"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/83180392-B32A-11EF-92CD-12BE0E2E3B71.png"
+  },
+  "LEDPurple": {
+    "DisplayName": "LED, Purple",
+    "Description": "A 3d printed game piece shaped like an LED.",
+    "GameCrafterGuid": "4CD1AFC2-B32A-11EF-AFD4-A09F039E9548",
+    "GameCrafterSkuId": "4CEC2528-B32A-11EF-AFD4-A09F039E9548",
+    "Tags": [
+      "led",
+      "light",
+      "emitting",
+      "diode",
+      "l.e.d.",
+      "lightbulb",
+      "bulb",
+      "purple"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/86F20BD4-B32A-11EF-AFD4-56A2039E9548.png"
+  },
+  "LEDRed": {
+    "DisplayName": "LED, Red",
+    "Description": "A 3d printed game piece shaped like an LED.",
+    "GameCrafterGuid": "4CC486EE-B32A-11EF-92CD-86BB0E2E3B71",
+    "GameCrafterSkuId": "4CEEB18A-B32A-11EF-92CD-86BB0E2E3B71",
+    "Tags": [
+      "led",
+      "light",
+      "emitting",
+      "diode",
+      "l.e.d.",
+      "lightbulb",
+      "bulb",
+      "red"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9253B6EE-B32A-11EF-AFD4-FEA2039E9548.png"
+  },
+  "LEDWhite": {
+    "DisplayName": "LED, White",
+    "Description": "A 3d printed game piece shaped like an LED.",
+    "GameCrafterGuid": "4CD0DA20-B32A-11EF-92CD-97BB0E2E3B71",
+    "GameCrafterSkuId": "4D0B13A2-B32A-11EF-92CD-97BB0E2E3B71",
+    "Tags": [
+      "led",
+      "light",
+      "emitting",
+      "diode",
+      "l.e.d.",
+      "lightbulb",
+      "bulb",
+      "white"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A9AAF456-B32A-11EF-92CD-6DC00E2E3B71.png"
+  },
+  "LEDYellow": {
+    "DisplayName": "LED, Yellow",
+    "Description": "A 3d printed game piece shaped like an LED.",
+    "GameCrafterGuid": "4CD12E9E-B32A-11EF-86C2-697544FDF008",
+    "GameCrafterSkuId": "4CEB644E-B32A-11EF-86C2-697544FDF008",
+    "Tags": [
+      "led",
+      "light",
+      "emitting",
+      "diode",
+      "l.e.d.",
+      "lightbulb",
+      "bulb",
+      "yellow"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8EB4F69C-B32A-11EF-92CD-61BE0E2E3B71.png"
+  },
+  "MineSeaTB25": {
+    "DisplayName": "Mine, Sea, TB25",
+    "Description": "An underwater naval sea mine\u2013a half-sphere with detonating spikes that appears to be floating on the surface. Has a 25mm threaded foot on the bottom for fitting into any color of our <a href=\"https://www.thegamecrafter.com/search?query=Base%20Shoe%2C%20TB25&hitsPerPage=8\">25mm Base Shoes</a> (sold seperately). <br>Model by Troy Pichelman.",
+    "GameCrafterGuid": "7F909E5C-C9DB-11EE-BA9D-4AC69F333D56",
+    "GameCrafterSkuId": "7FABD79E-C9DB-11EE-BA9D-4AC69F333D56",
+    "Tags": [
+      "navy",
+      "marine",
+      "maritime",
+      "defensive",
+      "anti-ship",
+      "weapon",
+      "water",
+      "ocean",
+      "sea",
+      "attack",
+      "ship",
+      "bomb",
+      "offensive",
+      "war",
+      "shipping",
+      "harbor",
+      "vessel",
+      "grey"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/404EC1F8-C9E3-11EE-B9ED-6A45D68C236B.png"
+  },
+  "Orange7PieceDiceSet": {
+    "DisplayName": "Orange 7 Piece Dice Set",
+    "Description": "A 7-piece dice that that includes a D4, D6, D8, D10, D10x10, D12, and D20 in orange\r\n",
+    "GameCrafterGuid": "EC1CE632-80E9-11EF-AF4A-9054F67514D5",
+    "GameCrafterSkuId": "EC1E2ACE-80E9-11EF-AF4A-9054F67514D5",
+    "Tags": [
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7CC7D082-817D-11EF-9328-94AE0B571517.png"
+  },
+  "PartsBagLargeClothBlack": {
+    "DisplayName": "Parts Bag, Large Cloth, Black",
+    "Description": "A cloth parts bag capable of holding several dice and pawns.",
+    "GameCrafterGuid": "334E9EBC-2EC4-11ED-9CBC-DED05EE382A3",
+    "GameCrafterSkuId": "336A0C24-2EC4-11ED-9CBC-DED05EE382A3",
+    "Tags": [
+      "holder",
+      "sacks",
+      "containers",
+      "receptacles",
+      "totes",
+      "pouch",
+      "drawstrings",
+      "pouches",
+      "packs",
+      "cases",
+      "haversacks",
+      "knapsacks",
+      "rucksacks,",
+      "black"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/969FD236-2F8E-11ED-88E4-9E045FE382A3.png"
+  },
+  "PhaseShiftGames|Boblin'sRebellion|1-4players": {
+    "DisplayName": "Phase Shift Games | Boblin's Rebellion | 1-4 players",
+    "Description": "It's time to take back the dungeon! \r\n\r\nBoblin's Rebellion is a 1-4 player engine builder with just one, notably volatile resource to manage: Goblins! Start by recruiting simple Stickler and Screamer goblins at camp, and then seek out opportunities to train them into mighty Stabbers, Stalkers, Slingers, and Sparklers. \r\n\r\nDescend into the depths with your fresh goblin army, conquering key rooms throughout the dungeon: Learn new tricks in the mineshaft, establish strategic footholds in the ice caves, and ultimately launch your furious assault upon the goblin king\u2019s lair in the inferno. \r\n\r\nBut remember\u2026  goblins are reckless and clumsy. Your finely crafted engine will require constant adjustment as your goblins overuse and destroy the conquered rooms. Adapt to this, and lead the most effective goblin rebellion to earn ultimate fame and be crowned the winner!",
+    "GameCrafterGuid": "56E7AC22-55AC-11EF-AA7B-F09D2E9F7479",
+    "GameCrafterSkuId": "56E9237C-55AC-11EF-AA7B-F09D2E9F7479",
+    "Tags": [
+      "engine builder goblins dungeon drop fantasy boblin ",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E4058CE8-B996-11EF-94A3-9D566FFDAAE0.png"
+  },
+  "PhaseShiftGames|Flutter|2-5players": {
+    "DisplayName": "Phase Shift Games | Flutter | 2-5 players",
+    "Description": "Grow a meadow of wings and pollen. Flutter is a strategic tile-laying strategy game for 2 to 5 players, ages 8 and up, and it takes about 30 minutes to play. Players take turns laying tiles of varying shapes, earning petal tokens for matching flower petals in each corner. As the game progresses, players will spend those petal tokens when they enclose a previously laid tile, supplying the tile's pollinator with all the flowers it needs, earning pollen. Once a single stack of tiles in the supply rondel has been emptied, the player with most pollen is the winner!",
+    "GameCrafterGuid": "59D838A2-55AC-11EF-AA7B-F09D2E9F7479",
+    "GameCrafterSkuId": "59D99300-55AC-11EF-AA7B-F09D2E9F7479",
+    "Tags": [
+      "pollinator pollen insect nature tile laying placement strategy",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1C532026-B99A-11EF-94A3-547D6FFDAAE0.png"
+  },
+  "PhaseShiftGames|Obelus|2players": {
+    "DisplayName": "Phase Shift Games | Obelus | 2 players",
+    "Description": "Shifting strategies in a timeless realm.\r\n\r\nObelus is a light-weight, 2-player abstract strategy game, playable in 10-15 minutes. Taking on the role of a powerful Mensor, you will summon obelisk shaped dice onto conflux cards, shift your obelisks according to the number showing, and banish your opponent\u2019s obelisks. Through clever maneuvering, banished obelisks may be reformed, creating a rift that prevents further summoning on that conflux. You win when your opponent cannot legally summon or shift an obelisk!",
+    "GameCrafterGuid": "571D4FC6-55AC-11EF-AA7B-F09D2E9F7479",
+    "GameCrafterSkuId": "571ECC7A-55AC-11EF-AA7B-F09D2E9F7479",
+    "Tags": [
+      "abstract strategy dice horror 2-player",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/41B22EC6-7925-11EF-9297-49087B97FC12.png"
+  },
+  "PokerSleevePack(100)": {
+    "DisplayName": "Poker Sleeve Pack (100)",
+    "Description": "A pack of 100 protective card sleeves sized perfectly for our Poker sized cards.  The plastic has a thickness of 50 microns.",
+    "GameCrafterGuid": "2D282DBE-591C-11E8-9140-67F093A6FE1D",
+    "GameCrafterSkuId": "2D2A9306-591C-11E8-9140-67F093A6FE1D",
+    "Tags": [
+      "poker",
+      "sleeve",
+      "pack",
+      "card",
+      "protector",
+      "trading",
+      "magic the gathering",
+      "mtg",
+      "collectible",
+      "insert",
+      "sheath",
+      "protect",
+      "protective",
+      "deck",
+      "clear"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CA16A7B2-ABC5-11E8-8C69-A3EACE95AB04.png"
+  },
+  "PremiumBeerMug": {
+    "DisplayName": "Premium Beer Mug",
+    "Description": "Finely crafted token depicting a tall mug full of beer",
+    "GameCrafterGuid": "B15ED9A6-640B-11EF-AE54-42A7F7D80FC0",
+    "GameCrafterSkuId": "B163B0CA-640B-11EF-AE54-42A7F7D80FC0",
+    "Tags": [
+      "cups",
+      "drinks",
+      "fluids",
+      "liquids",
+      "containers",
+      "bars",
+      "tankards",
+      "drinkwares",
+      "glasses",
+      "steins",
+      "fermented",
+      "alcoholic",
+      "beverages",
+      "ethanol",
+      "carbonation",
+      "consumes",
+      "chugs",
+      "hops",
+      "brewing",
+      "brewery",
+      "brewers",
+      "draught",
+      "pubs",
+      "brewpubs",
+      "breweries",
+      "abv",
+      "ales",
+      "stouts",
+      "porters",
+      "ipa",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/58E47904-6A2B-11EF-A9E1-AFEFC5E47471.png"
+  },
+  "PremiumBloodDroplet": {
+    "DisplayName": "Premium Blood Droplet",
+    "Description": "Finely crafted token depicting a singular teardrop shape of blood",
+    "GameCrafterGuid": "ECE1F774-640B-11EF-A4F7-BB378FFFEEA2",
+    "GameCrafterSkuId": "ECEBD79E-640B-11EF-A4F7-BB378FFFEEA2",
+    "Tags": [
+      "body",
+      "bodily",
+      "fluid",
+      "circulatory",
+      "humans",
+      "vertebrates",
+      "nutrients",
+      "oxygen",
+      "cells",
+      "plasmas",
+      "glucose",
+      "erythrocytes",
+      "leukocytes",
+      "thrombocytes",
+      "hemoglobin",
+      "bleeding",
+      "bleeds",
+      "anatomy",
+      "biology",
+      "chemistry",
+      "coagulation",
+      "token",
+      "red"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3D46B4BC-6A4B-11EF-B695-D127BABE8560.png"
+  },
+  "PremiumBlueTome": {
+    "DisplayName": "Premium Blue Tome",
+    "Description": "Finely crafted token depicting a blue journal",
+    "GameCrafterGuid": "D9A1D3D2-640B-11EF-A4F7-99368FFFEEA2",
+    "GameCrafterSkuId": "D9A6C18A-640B-11EF-A4F7-99368FFFEEA2",
+    "Tags": [
+      "book",
+      "journal",
+      "codex",
+      "textbook",
+      "publication",
+      "volume",
+      "reading",
+      "literature",
+      "library",
+      "novel",
+      "poetry",
+      "novella",
+      "blue"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/70023C20-6A2B-11EF-BD9F-8DDC8EFFEEA2.png"
+  },
+  "PremiumBrownMushroom": {
+    "DisplayName": "Premium Brown Mushroom",
+    "Description": "Finely crafted token depicting a brown fungus",
+    "GameCrafterGuid": "F8AA2B58-640B-11EF-BD62-CC77CAAEFD3F",
+    "GameCrafterSkuId": "F8B8C6AE-640B-11EF-BD62-CC77CAAEFD3F",
+    "Tags": [
+      "fungus",
+      "fungi",
+      "toadstool",
+      "spore",
+      "agaricus",
+      "bisporus",
+      "stem",
+      "cap",
+      "bolete",
+      "puffball",
+      "stinkhorn",
+      "morel",
+      "thallus",
+      "psylocybin",
+      "phallaceae",
+      "sporophore",
+      "portobello",
+      "shiitake",
+      "maitake",
+      "mushroom",
+      "brown"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8537C02E-6A2B-11EF-BD9F-8BDD8EFFEEA2.png"
+  },
+  "PremiumBullet": {
+    "DisplayName": "Premium Bullet",
+    "Description": "Finely crafted token depicting a round nose piece of ammunition",
+    "GameCrafterGuid": "FEA95B14-640B-11EF-A4F7-BC388FFFEEA2",
+    "GameCrafterSkuId": "FEBCD9D2-640B-11EF-A4F7-BC388FFFEEA2",
+    "Tags": [
+      "bullet",
+      "ammunition",
+      "magazine",
+      "projectile",
+      "cartridge",
+      "firearm",
+      "gun",
+      "caliber",
+      "hollowpoint",
+      "hollow point",
+      "shot",
+      "slug",
+      "ammo",
+      "attack",
+      "damage",
+      "toxic bullet",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4D01128A-6A4B-11EF-A9E1-F0FDC5E47471.png"
+  },
+  "PremiumCarrot": {
+    "DisplayName": "Premium Carrot",
+    "Description": "Finely crafted token depicting the root vegetable we know as a carrot",
+    "GameCrafterGuid": "0A3AFC26-640C-11EF-BD62-A778CAAEFD3F",
+    "GameCrafterSkuId": "0A40F112-640C-11EF-BD62-A778CAAEFD3F",
+    "Tags": [
+      "carrot",
+      "food",
+      "nutrition",
+      "sustenance",
+      "resource",
+      "resources",
+      "farm",
+      "nutrient",
+      "nutrients",
+      "agriculture",
+      "energy",
+      "hunger",
+      "hungry",
+      "vegetable",
+      "healthy",
+      "root",
+      "vision",
+      "salad",
+      "garden",
+      "orange"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9AE8EE5C-6A2B-11EF-A9E1-A2F2C5E47471.png"
+  },
+  "PremiumCheeseWedge": {
+    "DisplayName": "Premium Cheese Wedge",
+    "Description": "Finely crafted token depicting a piece of light colored cheese with holes in it",
+    "GameCrafterGuid": "1202E32E-640C-11EF-BD62-E678CAAEFD3F",
+    "GameCrafterSkuId": "12080214-640C-11EF-BD62-E678CAAEFD3F",
+    "Tags": [
+      "cheese",
+      "food",
+      "nutrition",
+      "sustenance",
+      "resource",
+      "resources",
+      "farm",
+      "nutrient",
+      "nutrients",
+      "hunger",
+      "hungry",
+      "dairy",
+      "mouse",
+      "wheel",
+      "cow",
+      "goat",
+      "cheddar",
+      "gouda",
+      "swiss",
+      "provolone",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AEA6CE1E-6A2B-11EF-B695-0D1EBABE8560.png"
+  },
+  "PremiumCoffeeBean": {
+    "DisplayName": "Premium Coffee Bean",
+    "Description": "Finely crafted token depicting a seed from the Coffea plant",
+    "GameCrafterGuid": "18F443A8-640C-11EF-AE54-FAACF7D80FC0",
+    "GameCrafterSkuId": "1913235E-640C-11EF-AE54-FAACF7D80FC0",
+    "Tags": [
+      "beverage",
+      "brewed",
+      "roasted",
+      "caffeine",
+      "coffea",
+      "espresso",
+      "latte",
+      "coldbrew",
+      "crop",
+      "java",
+      "decaf",
+      "mocha",
+      "joe",
+      "brown"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2A69B5AC-6A36-11EF-B695-3923BABE8560.png"
+  },
+  "PremiumDeflectorShield": {
+    "DisplayName": "Premium Deflector Shield",
+    "Description": "Finely crafted token depicting a force shield or energy shield that can protect starships, battle stations, ground-based structures, soldiers, and even armies from enemy assault",
+    "GameCrafterGuid": "285F8FDC-640C-11EF-BD62-127ACAAEFD3F",
+    "GameCrafterSkuId": "28640666-640C-11EF-BD62-127ACAAEFD3F",
+    "Tags": [
+      "force",
+      "protect",
+      "block",
+      "parry",
+      "dodge",
+      "projectiles",
+      "intercept",
+      "antiair",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3890F334-6A36-11EF-BD9F-CFE58EFFEEA2.png"
+  },
+  "PremiumExplosion": {
+    "DisplayName": "Premium Explosion",
+    "Description": "Finely crafted token depicting a large orange cloud of fiery combustion",
+    "GameCrafterGuid": "2F0A9098-640C-11EF-A4F7-403B8FFFEEA2",
+    "GameCrafterSkuId": "2F1E579A-640C-11EF-A4F7-403B8FFFEEA2",
+    "Tags": [
+      "matter",
+      "energy",
+      "atomic",
+      "particles",
+      "gases",
+      "detonations",
+      "combustions",
+      "deflagrations",
+      "eruptions",
+      "fission",
+      "fusion",
+      "supernovae",
+      "impact",
+      "destroy",
+      "raze",
+      "force",
+      "smoke",
+      "orange"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3C65B47A-6A5B-11EF-B695-8E6BBABE8560.png"
+  },
+  "PremiumGasCan": {
+    "DisplayName": "Premium Gas Can",
+    "Description": "Finely crafted token depicting a jerrycan typically used for fuel",
+    "GameCrafterGuid": "4527A00A-640C-11EF-BD62-FD7BCAAEFD3F",
+    "GameCrafterSkuId": "453BEC2C-640C-11EF-BD62-FD7BCAAEFD3F",
+    "Tags": [
+      "jerrycan",
+      "jerrican",
+      "fuel",
+      "container",
+      "water",
+      "liquids",
+      "portable",
+      "gasoline",
+      "kerosene",
+      "diesel",
+      "red"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4966989E-6A36-11EF-BD9F-88E68EFFEEA2.png"
+  },
+  "PremiumGreenLeaf": {
+    "DisplayName": "Premium Green Leaf",
+    "Description": "Finely crafted token depicting a style of palm tree leaf",
+    "GameCrafterGuid": "661B9D34-640C-11EF-AE54-2CB1F7D80FC0",
+    "GameCrafterSkuId": "6633D872-640C-11EF-AE54-2CB1F7D80FC0",
+    "Tags": [
+      "frond",
+      "palm",
+      "lamina",
+      "rachis",
+      "pinna",
+      "pinnule",
+      "rhizome",
+      "stipe",
+      "stalk",
+      "davallia",
+      "tyermannii",
+      "dryopteris",
+      "decipiens",
+      "pinnate",
+      "pinnation",
+      "pinnae",
+      "palmate",
+      "bifurcate",
+      "costapalmate",
+      "sporangia",
+      "plant",
+      "photosynthesis",
+      "foliage",
+      "plantae",
+      "nature",
+      "trees",
+      "grasses",
+      "green"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5D98FB04-6A36-11EF-A9E1-61FBC5E47471.png"
+  },
+  "PremiumHammer": {
+    "DisplayName": "Premium Hammer",
+    "Description": "Finely crafted token depicting a chipping hammer",
+    "GameCrafterGuid": "B37DDF7E-640C-11EF-A4F7-71418FFFEEA2",
+    "GameCrafterSkuId": "B3838938-640C-11EF-A4F7-71418FFFEEA2",
+    "Tags": [
+      "claw",
+      "tool",
+      "carpenter",
+      "carpentry",
+      "nails",
+      "blacksmithing",
+      "prospecting",
+      "archaeology",
+      " peen",
+      "pein",
+      "pane",
+      "demolition",
+      "bricklayer",
+      "gavel",
+      "lathe",
+      "maul",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/71F0FBBA-6A36-11EF-B695-9126BABE8560.png"
+  },
+  "PremiumIceCrystals": {
+    "DisplayName": "Premium Ice Crystals",
+    "Description": "Finely crafted token depicting a cluster of crystal shards",
+    "GameCrafterGuid": "5B1D33CA-640C-11EF-A4F7-503D8FFFEEA2",
+    "GameCrafterSkuId": "5B2CF90E-640C-11EF-A4F7-503D8FFFEEA2",
+    "Tags": [
+      "solid",
+      "dendritic",
+      "stalagmite",
+      "lattice",
+      "symmetry",
+      "frozen",
+      "cold",
+      "hypothermia",
+      "nucleation",
+      "snowflake",
+      "icicles",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/509E0A46-6A5B-11EF-A9E1-44C4C5E47471.png"
+  },
+  "PremiumMedKit": {
+    "DisplayName": "Premium Med Kit",
+    "Description": "Finely crafted token depicting a Red Cross symbol on an equipment container",
+    "GameCrafterGuid": "0F2E947A-640E-11EF-AE54-E4C4F7D80FC0",
+    "GameCrafterSkuId": "0F339B96-640E-11EF-AE54-E4C4F7D80FC0",
+    "Tags": [
+      "firstaid",
+      "treatment",
+      "health",
+      "hp",
+      "healing",
+      "bandages",
+      "medications",
+      "gauze",
+      "antiseptics",
+      "saline",
+      "ppe",
+      "aspirin",
+      "ifak",
+      "injury",
+      "tech",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1C458FE4-6A5B-11EF-BD9F-2BFCE4A24392.png"
+  },
+  "PremiumMilkBottle": {
+    "DisplayName": "Premium Milk Bottle",
+    "Description": "Finely crafted token depicting the classic glass dairy bottle style of milk",
+    "GameCrafterGuid": "6B2B3258-640C-11EF-A4F7-FE3D8FFFEEA2",
+    "GameCrafterSkuId": "6B312384-640C-11EF-A4F7-FE3D8FFFEEA2",
+    "Tags": [
+      "food",
+      "beverage",
+      "nutrition",
+      "breastfeeding",
+      "lactation",
+      "lactase",
+      "colostrum",
+      "calcium",
+      "lactose",
+      "dairy",
+      "cows",
+      "mammary",
+      "cream",
+      "buttermilk",
+      "homogenized",
+      "pasteurized",
+      "formula",
+      "milkman,",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8E366152-6A36-11EF-B695-FF27BABE8560.png"
+  },
+  "PremiumMushroom": {
+    "DisplayName": "Premium Mushroom",
+    "Description": "Finely crafted token depicting fly agaric fungus, or the classic red mushroom",
+    "GameCrafterGuid": "8DA83038-640C-11EF-AE54-08B3F7D80FC0",
+    "GameCrafterSkuId": "8DBBF6C2-640C-11EF-AE54-08B3F7D80FC0",
+    "Tags": [
+      "fungus",
+      "fungi",
+      "toadstool",
+      "spore",
+      "agaricus",
+      "bisporus",
+      "stem",
+      "cap",
+      "bolete",
+      "puffball",
+      "stinkhorn",
+      "morel",
+      "thallus",
+      "psylocybin",
+      "phallaceae",
+      "sporophore",
+      "portobello",
+      "shiitake",
+      "maitake",
+      "amanita",
+      "muscaria",
+      "russulas",
+      "agaric",
+      "mushroom",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A02F4CDE-6A36-11EF-B695-0D29BABE8560.png"
+  },
+  "PremiumOrangeTome": {
+    "DisplayName": "Premium Orange Tome",
+    "Description": "Finely crafted token depicting a bound book or journal",
+    "GameCrafterGuid": "E75C4B7C-EC58-11E9-88A3-9515F267DAAD",
+    "GameCrafterSkuId": "E764BC26-EC58-11E9-88A3-9515F267DAAD",
+    "Tags": [
+      "book",
+      "journal",
+      "codex",
+      "textbook",
+      "publication",
+      "volume",
+      "reading",
+      "literature",
+      "library",
+      "novel",
+      "poetry",
+      "novella",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D54835C0-026C-11EA-A991-4575378EFB1C.png"
+  },
+  "PremiumPileofBones": {
+    "DisplayName": "Premium Pile of Bones",
+    "Description": "Finely crafted token depicting a skull on top of various other bones",
+    "GameCrafterGuid": "9483B4C2-640C-11EF-BD62-E67FCAAEFD3F",
+    "GameCrafterSkuId": "9488519E-640C-11EF-BD62-E67FCAAEFD3F",
+    "Tags": [
+      "bones",
+      "exoskeleton",
+      "cartilage",
+      "ligament",
+      "tendon",
+      "cadaver",
+      "halloween",
+      "spooky",
+      "horror",
+      "scary",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6917BA68-6A5B-11EF-A9E1-C4C5C5E47471.png"
+  },
+  "PremiumPresent": {
+    "DisplayName": "Premium Present",
+    "Description": "Finely crafted token depicting a gift wrapped box",
+    "GameCrafterGuid": "9AC9AFD0-640C-11EF-A4F7-94408FFFEEA2",
+    "GameCrafterSkuId": "9AD81FCA-640C-11EF-A4F7-94408FFFEEA2",
+    "Tags": [
+      "gift",
+      "goods",
+      "occasion",
+      "birthday",
+      "special",
+      "holidays",
+      "christmas",
+      "kwanzaa",
+      "hanukkah",
+      "chanukah",
+      "gratitude",
+      "souvenirs",
+      "eidi",
+      "diwali",
+      "vesak",
+      "wedding",
+      "anniversary",
+      "housewarming",
+      "valentines",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D75C6B88-6A36-11EF-B695-6C2BBABE8560.png"
+  },
+  "PremiumPurpleGrapes": {
+    "DisplayName": "Premium Purple Grapes",
+    "Description": "Finely crafted token depicting a bunch of purple grapes on the vine",
+    "GameCrafterGuid": "A4D0FB28-640C-11EF-A4F7-E0408FFFEEA2",
+    "GameCrafterSkuId": "A4D5BD66-640C-11EF-A4F7-E0408FFFEEA2",
+    "Tags": [
+      "harvesting",
+      "farming",
+      "agriculture",
+      "fruits",
+      "vinyards",
+      "vineyards",
+      "canopy",
+      "wine",
+      "berry",
+      "raisins",
+      "currants",
+      "sultanas",
+      "winery",
+      "sommelier",
+      "purple"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/797C77A4-6A5B-11EF-BD9F-8400E5A24392.png"
+  },
+  "PremiumSmokeCloud": {
+    "DisplayName": "Premium Smoke Cloud",
+    "Description": "Finely crafted token depicting a large grey cloud of billowing smoky air",
+    "GameCrafterGuid": "C6364C5A-640C-11EF-A4F7-E2428FFFEEA2",
+    "GameCrafterSkuId": "C653EA76-640C-11EF-A4F7-E2428FFFEEA2",
+    "Tags": [
+      "gases",
+      "flammagenitus",
+      "pyrocumulus",
+      "cumuliform",
+      "volcanic",
+      "eruption",
+      "firestorm",
+      "convection",
+      "grey"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5D63B31C-6A4B-11EF-A9E1-5BFEC5E47471.png"
+  },
+  "PremiumStone": {
+    "DisplayName": "Premium Stone",
+    "Description": "Finely crafted token depicting a large rock",
+    "GameCrafterGuid": "B85CE09E-640C-11EF-AE54-F0B4F7D80FC0",
+    "GameCrafterSkuId": "B86261F4-640C-11EF-AE54-F0B4F7D80FC0",
+    "Tags": [
+      "rock",
+      "mineral",
+      "substance",
+      "material",
+      "geology",
+      "igneous",
+      "sedimentary",
+      "metamorphic",
+      "aggregate",
+      "mineraloid",
+      "silica",
+      "ore",
+      "pebble",
+      "grey"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8DB52CB2-6A4B-11EF-B695-222BBABE8560.png"
+  },
+  "PremiumTechTablet": {
+    "DisplayName": "Premium Tech Tablet",
+    "Description": "Finely crafted token depicting a wireless, portable personal computer with a touchscreen interface",
+    "GameCrafterGuid": "BF043AA0-640C-11EF-AE54-9EB5F7D80FC0",
+    "GameCrafterSkuId": "BF24B5A0-640C-11EF-AE54-9EB5F7D80FC0",
+    "Tags": [
+      "ipad",
+      "notepad",
+      "booklet",
+      "phablet",
+      "slate",
+      "smart",
+      "device",
+      "touchscreen",
+      "gadget",
+      "laptop",
+      "tech",
+      "tablet",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EB69C454-6A36-11EF-A9E1-F901C6E47471.png"
+  },
+  "PremiumTentacle": {
+    "DisplayName": "Premium Tentacle",
+    "Description": "Finely crafted token depicting a limb with visible suckers on one side such as those you would see on an octopus or squid",
+    "GameCrafterGuid": "CE1A5FA6-640C-11EF-AE54-17B6F7D80FC0",
+    "GameCrafterSkuId": "CE1F7180-640C-11EF-AE54-17B6F7D80FC0",
+    "Tags": [
+      "eldritch",
+      "lovecraftian",
+      "cthulhu",
+      "squid",
+      "octopus",
+      "cirrus",
+      "cirri",
+      "nautilus",
+      "mollusks",
+      "molluscs",
+      "abalone",
+      "cephalopods",
+      "cnidaria",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8C6473C6-6A5B-11EF-A9E1-69C7C5E47471.png"
+  },
+  "PremiumToxicWaste": {
+    "DisplayName": "Premium Toxic Waste",
+    "Description": "Finely crafted token depicting a green barrel with a warning label on it",
+    "GameCrafterGuid": "6D0C0468-640B-11EF-AE54-6AA4F7D80FC0",
+    "GameCrafterSkuId": "6D1FAE8C-640B-11EF-AE54-6AA4F7D80FC0",
+    "Tags": [
+      "pollution",
+      "chemicals",
+      "byproducts",
+      "radiation",
+      "pathogens",
+      "toxins",
+      "contamination",
+      "contaminants",
+      "harmful",
+      "death",
+      "hazardous",
+      "pesticides",
+      "arsenic",
+      "epa",
+      "carcinogens",
+      "toxic bullet",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AA00626A-6A4B-11EF-A9E1-E601C6E47471.png"
+  },
+  "PremiumWaterDroplet": {
+    "DisplayName": "Premium Water Droplet",
+    "Description": "Finely crafted token depicting a singular teardrop shape of water",
+    "GameCrafterGuid": "DB391ACE-640C-11EF-BD62-FE82CAAEFD3F",
+    "GameCrafterSkuId": "DB3DCF6A-640C-11EF-BD62-FE82CAAEFD3F",
+    "Tags": [
+      "liquid",
+      "tear",
+      "fluid",
+      "life",
+      "precipitant",
+      "precipitation",
+      "rain",
+      "ice",
+      "clouds",
+      "aqua",
+      "sea",
+      "ocean",
+      "lake",
+      "loch",
+      "pond",
+      "pool",
+      "reservoir",
+      "river",
+      "sprinkle",
+      "wet",
+      "spray",
+      "splash",
+      "flood",
+      "blue"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BDF15F9A-6A4B-11EF-BD9F-3BEF8EFFEEA2.png"
+  },
+  "PremiumWheatBundle": {
+    "DisplayName": "Premium Wheat Bundle",
+    "Description": "Finely crafted token depicting a bound group of brown wheat stalks",
+    "GameCrafterGuid": "F06F49FE-640C-11EF-BD62-1684CAAEFD3F",
+    "GameCrafterSkuId": "F084543E-640C-11EF-BD62-1684CAAEFD3F",
+    "Tags": [
+      "agricola",
+      "wheat",
+      "barley",
+      "corn",
+      "rice",
+      "flour",
+      "token",
+      "commodity",
+      "wheat",
+      "caryopses",
+      "amaranth",
+      "barley",
+      "oats",
+      "rice",
+      "quinoa",
+      "pulses",
+      "crop",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/07CB2782-6A37-11EF-A9E1-B603C6E47471.png"
+  },
+  "PremiumWhiteSheaf": {
+    "DisplayName": "Premium White Sheaf",
+    "Description": "Finely crafted token depicting a bound group of white wheat stalks",
+    "GameCrafterGuid": "E845537C-640C-11EF-A4F7-FE438FFFEEA2",
+    "GameCrafterSkuId": "E84B5056-640C-11EF-A4F7-FE438FFFEEA2",
+    "Tags": [
+      "agricola",
+      "wheat",
+      "barley",
+      "corn",
+      "rice",
+      "flour",
+      "token",
+      "commodity",
+      "wheat",
+      "caryopses",
+      "amaranth",
+      "barley",
+      "oats",
+      "rice",
+      "quinoa",
+      "pulses",
+      "crop",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D2CFA7C8-6A4B-11EF-B695-F62EBABE8560.png"
+  },
+  "PremiumWrench": {
+    "DisplayName": "Premium Wrench",
+    "Description": "Finely crafted token depicting a tool use for tightening and loosening nuts and bolts",
+    "GameCrafterGuid": "D45BD642-640C-11EF-BD62-F482CAAEFD3F",
+    "GameCrafterSkuId": "D4607814-640C-11EF-BD62-F482CAAEFD3F",
+    "Tags": [
+      "adjustable spanner",
+      "movable",
+      "fastener",
+      "tool",
+      "shifting",
+      "shifter",
+      "monkey",
+      "hexagonal",
+      "channellock",
+      "torque",
+      "allen",
+      "apparatus",
+      "device",
+      "gadget",
+      "mechanism",
+      "silver"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/14CAE60C-6A37-11EF-A9E1-5204C6E47471.png"
+  },
+  "Purple7PieceDiceSet": {
+    "DisplayName": "Purple 7 Piece Dice Set",
+    "Description": "A 7-piece dice that that includes a D4, D6, D8, D10, D10x10, D12, and D20 in purple",
+    "GameCrafterGuid": "EC986082-80E9-11EF-AF4A-9054F67514D5",
+    "GameCrafterSkuId": "EC99B34C-80E9-11EF-AF4A-9054F67514D5",
+    "Tags": [
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/819842CC-817D-11EF-ACA4-706C03059BA2.png"
+  },
+  "Red7PieceDiceSet": {
+    "DisplayName": "Red 7 Piece Dice Set",
+    "Description": "A 7-piece dice that that includes a D4, D6, D8, D10, D10x10, D12, and D20 in red",
+    "GameCrafterGuid": "EBFC3108-80E9-11EF-AF4A-9054F67514D5",
+    "GameCrafterSkuId": "EBFDF722-80E9-11EF-AF4A-9054F67514D5",
+    "Tags": [
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/83F3FBD8-817D-11EF-BD90-3FBC1FAA6523.png"
+  },
+  "SkyscraperBlack": {
+    "DisplayName": "Skyscraper, Black",
+    "Description": "This 3D-printed game piece features a simplified skyscraper design. It adds a modern, architectural touch to any game involving city-building or strategy.",
+    "GameCrafterGuid": "2D461F4A-B7E8-11EF-A18F-A25EBC80E5F6",
+    "GameCrafterSkuId": "2D76F250-B7E8-11EF-A18F-A25EBC80E5F6",
+    "Tags": [
+      "3d printed",
+      "skyscraper",
+      "modern",
+      "city-building",
+      "urban",
+      "token",
+      "architecture",
+      "strategy",
+      "high-rise",
+      "minimalist",
+      "black"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A4E6660-B7E8-11EF-A18F-FB5FBC80E5F6.png"
+  },
+  "SkyscraperBlue": {
+    "DisplayName": "Skyscraper, Blue",
+    "Description": "This 3D-printed game piece features a simplified skyscraper design. It adds a modern, architectural touch to any game involving city-building or strategy.",
+    "GameCrafterGuid": "2D44C672-B7E8-11EF-8309-8F19C27DD078",
+    "GameCrafterSkuId": "2D5897CE-B7E8-11EF-8309-8F19C27DD078",
+    "Tags": [
+      "3d printed",
+      "skyscraper",
+      "modern",
+      "city-building",
+      "urban",
+      "token",
+      "architecture",
+      "strategy",
+      "high-rise",
+      "minimalist",
+      "blue"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/69928132-B7E8-11EF-BB6B-D6A70E2E3B71.png"
+  },
+  "SkyscraperGreen": {
+    "DisplayName": "Skyscraper, Green",
+    "Description": "This 3D-printed game piece features a simplified skyscraper design. It adds a modern, architectural touch to any game involving city-building or strategy.",
+    "GameCrafterGuid": "2D467E54-B7E8-11EF-A18F-A35EBC80E5F6",
+    "GameCrafterSkuId": "2D73C1B6-B7E8-11EF-A18F-A35EBC80E5F6",
+    "Tags": [
+      "3d printed",
+      "skyscraper",
+      "modern",
+      "city-building",
+      "urban",
+      "token",
+      "architecture",
+      "strategy",
+      "high-rise",
+      "minimalist",
+      "green"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/549ECF1A-B7E8-11EF-BB6B-B8A60E2E3B71.png"
+  },
+  "SkyscraperOrange": {
+    "DisplayName": "Skyscraper, Orange",
+    "Description": "This 3D-printed game piece features a simplified skyscraper design. It adds a modern, architectural touch to any game involving city-building or strategy.",
+    "GameCrafterGuid": "2D458CC4-B7E8-11EF-BB6B-0CA50E2E3B71",
+    "GameCrafterSkuId": "2D662E70-B7E8-11EF-BB6B-0CA50E2E3B71",
+    "Tags": [
+      "3d printed",
+      "skyscraper",
+      "modern",
+      "city-building",
+      "urban",
+      "token",
+      "architecture",
+      "strategy",
+      "high-rise",
+      "minimalist",
+      "orange"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5EBAC18E-B7E8-11EF-BB6B-2DA70E2E3B71.png"
+  },
+  "SkyscraperPurple": {
+    "DisplayName": "Skyscraper, Purple",
+    "Description": "This 3D-printed game piece features a simplified skyscraper design. It adds a modern, architectural touch to any game involving city-building or strategy.",
+    "GameCrafterGuid": "2D4FFDC6-B7E8-11EF-BB6B-9AA40E2E3B71",
+    "GameCrafterSkuId": "2D5DD87E-B7E8-11EF-BB6B-9AA40E2E3B71",
+    "Tags": [
+      "3d printed",
+      "skyscraper",
+      "modern",
+      "city-building",
+      "urban",
+      "token",
+      "architecture",
+      "strategy",
+      "high-rise",
+      "minimalist",
+      "purple"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/58B99936-B7E8-11EF-BB6B-AAA60E2E3B71.png"
+  },
+  "SkyscraperRed": {
+    "DisplayName": "Skyscraper, Red",
+    "Description": "This 3D-printed game piece features a simplified skyscraper design. It adds a modern, architectural touch to any game involving city-building or strategy.",
+    "GameCrafterGuid": "2D510DD8-B7E8-11EF-8309-051AC27DD078",
+    "GameCrafterSkuId": "2D6B28EE-B7E8-11EF-8309-051AC27DD078",
+    "Tags": [
+      "3d printed",
+      "skyscraper",
+      "modern",
+      "city-building",
+      "urban",
+      "token",
+      "architecture",
+      "strategy",
+      "high-rise",
+      "minimalist",
+      "red"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/65BEC8A4-B7E8-11EF-A18F-F860BC80E5F6.png"
+  },
+  "SkyscraperWhite": {
+    "DisplayName": "Skyscraper, White",
+    "Description": "This 3D-printed game piece features a simplified skyscraper design. It adds a modern, architectural touch to any game involving city-building or strategy.",
+    "GameCrafterGuid": "2D54D22E-B7E8-11EF-A18F-AA5EBC80E5F6",
+    "GameCrafterSkuId": "2D78ADF2-B7E8-11EF-A18F-AA5EBC80E5F6",
+    "Tags": [
+      "3d printed",
+      "skyscraper",
+      "modern",
+      "city-building",
+      "urban",
+      "token",
+      "architecture",
+      "strategy",
+      "high-rise",
+      "minimalist",
+      "white"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4F7F2F3E-B7E8-11EF-8309-6E1BC27DD078.png"
+  },
+  "SkyscraperYellow": {
+    "DisplayName": "Skyscraper, Yellow",
+    "Description": "This 3D-printed game piece features a simplified skyscraper design. It adds a modern, architectural touch to any game involving city-building or strategy.",
+    "GameCrafterGuid": "2D5184D4-B7E8-11EF-BB6B-9DA40E2E3B71",
+    "GameCrafterSkuId": "2D61B732-B7E8-11EF-BB6B-9DA40E2E3B71",
+    "Tags": [
+      "3d printed",
+      "skyscraper",
+      "modern",
+      "city-building",
+      "urban",
+      "token",
+      "architecture",
+      "strategy",
+      "high-rise",
+      "minimalist",
+      "yellow"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/62BEC488-B7E8-11EF-8309-081CC27DD078.png"
+  },
+  "StandChipboard4-wayBlack": {
+    "DisplayName": "Stand, Chipboard, 4-way, Black",
+    "Description": "",
+    "GameCrafterGuid": "F8A3FC16-A75D-11EF-BE5D-C0453EC6194F",
+    "GameCrafterSkuId": "F8B017F8-A75D-11EF-BE5D-C0453EC6194F",
+    "Tags": [
+      "chipboard",
+      "paperboard",
+      "greyboard",
+      "grayboard",
+      "punchouts",
+      "chits",
+      "tiles",
+      "stands",
+      "standees",
+      "intersection",
+      "connector",
+      "maze",
+      "construction",
+      "wall",
+      "base",
+      "dungeon",
+      "black"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B383963E-A760-11EF-AC22-F0375382A9C1.png"
+  },
+  "VerticalGameMaster'sScreen": {
+    "DisplayName": "Vertical Game Master's Screen",
+    "Description": "4 piece foldable screen for conducting business in secret while playing games.  Easy to access sleeves make it possible to insert your own artwork for a fully customizable experience. Each panel holds a portrait oriented piece of US Letter Paper (11x8.5 inches). Unfurled it stands 36 inches wide by 12 inches tall. The plastic envelope is also dry erasable. ",
+    "GameCrafterGuid": "EF0BA702-96FB-11EF-A310-2A0F697D08C0",
+    "GameCrafterSkuId": "EF204054-96FB-11EF-A310-2A0F697D08C0",
+    "Tags": [
+      "screen",
+      "dm",
+      "d&d",
+      "divider",
+      "barrier gm",
+      "dungeon master",
+      "game master",
+      "insertable",
+      "pathfinder",
+      "inserts",
+      "5e",
+      "roleplaying",
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5B70E202-9D5C-11EF-8928-C059FFEA838B.png"
+  },
+  "White7PieceDiceSet": {
+    "DisplayName": "White 7 Piece Dice Set",
+    "Description": "A 7-piece dice that that includes a D4, D6, D8, D10, D10x10, D12, and D20 in white",
+    "GameCrafterGuid": "EBD9F084-80E9-11EF-AF4A-9054F67514D5",
+    "GameCrafterSkuId": "EBDB320A-80E9-11EF-AF4A-9054F67514D5",
+    "Tags": [
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/892702C6-817D-11EF-BD90-5DBC1FAA6523.png"
+  },
+  "Yellow7PieceDiceSet": {
+    "DisplayName": "Yellow 7 Piece Dice Set",
+    "Description": "A 7-piece dice that that includes a D4, D6, D8, D10, D10x10, D12, and D20 in yellow\r\n",
+    "GameCrafterGuid": "EC406F4E-80E9-11EF-AF4A-9054F67514D5",
+    "GameCrafterSkuId": "EC419900-80E9-11EF-AF4A-9054F67514D5",
+    "Tags": [
+      "pictured"
+    ],
+    "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8E6E2390-817D-11EF-9328-B1AE0B571517.png"
   }
 }

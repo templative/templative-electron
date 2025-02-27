@@ -23,8 +23,8 @@ COMPONENT_INFO = {
         "DisplayName": "HexShard",
         "Tags": [
             "token",
-            "shard",
-            "hex"
+            "hex",
+            "shard"
         ]
     },
     "CircleShard": {
@@ -79,8 +79,8 @@ COMPONENT_INFO = {
         "DisplayName": "SquareShard",
         "Tags": [
             "token",
-            "shard",
-            "square"
+            "square",
+            "shard"
         ]
     },
     "BusinessDeck": {
@@ -254,7 +254,8 @@ COMPONENT_INFO = {
         "DisplayName": "MintTinDeck",
         "Tags": [
             "deck",
-            "mint"
+            "mint",
+            "tin"
         ]
     },
     "HexDeck": {
@@ -307,10 +308,10 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "SmallSquareChit",
         "Tags": [
-            "small",
-            "square",
             "token",
-            "chit"
+            "chit",
+            "small",
+            "square"
         ]
     },
     "MediumSquareChit": {
@@ -336,10 +337,10 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "MediumSquareChit",
         "Tags": [
-            "chit",
             "token",
-            "square",
-            "medium"
+            "chit",
+            "medium",
+            "square"
         ]
     },
     "LargeSquareChit": {
@@ -365,10 +366,10 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "LargeSquareChit",
         "Tags": [
-            "chit",
-            "square",
             "token",
-            "large"
+            "large",
+            "chit",
+            "square"
         ]
     },
     "SmallRingChit": {
@@ -481,10 +482,10 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "SmallCircleChit",
         "Tags": [
-            "circle",
-            "small",
             "token",
-            "chit"
+            "chit",
+            "circle",
+            "small"
         ]
     },
     "MediumCircleChit": {
@@ -510,10 +511,10 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "MediumCircleChit",
         "Tags": [
-            "circle",
-            "medium",
             "token",
-            "chit"
+            "circle",
+            "chit",
+            "medium"
         ]
     },
     "LargeCircleChit": {
@@ -539,9 +540,9 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "LargeCircleChit",
         "Tags": [
-            "circle",
-            "large",
             "token",
+            "large",
+            "circle",
             "chit"
         ]
     },
@@ -568,11 +569,11 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "MiniHexTile",
         "Tags": [
-            "mini",
-            "tile",
-            "hex",
             "token",
-            "chit"
+            "chit",
+            "hex",
+            "tile",
+            "mini"
         ]
     },
     "SmallHexTile": {
@@ -598,11 +599,11 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "SmallHexTile",
         "Tags": [
-            "tile",
             "small",
-            "hex",
             "token",
-            "chit"
+            "chit",
+            "hex",
+            "tile"
         ]
     },
     "MediumHexTile": {
@@ -628,11 +629,11 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "MediumHexTile",
         "Tags": [
-            "tile",
-            "hex",
-            "medium",
             "token",
-            "chit"
+            "chit",
+            "medium",
+            "hex",
+            "tile"
         ]
     },
     "LargeHexTile": {
@@ -658,11 +659,11 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "LargeHexTile",
         "Tags": [
-            "tile",
-            "hex",
-            "large",
             "token",
-            "chit"
+            "large",
+            "chit",
+            "hex",
+            "tile"
         ]
     },
     "MintTinAccordion4": {
@@ -688,8 +689,9 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "MintTinAccordion4",
         "Tags": [
-            "mint",
+            "tin",
             "document",
+            "mint",
             "accordion"
         ]
     },
@@ -717,8 +719,8 @@ COMPONENT_INFO = {
         "DisplayName": "BiFoldMat",
         "Tags": [
             "fold",
-            "mat",
-            "bifold"
+            "bifold",
+            "mat"
         ]
     },
     "DominoMat": {
@@ -744,8 +746,8 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "DominoMat",
         "Tags": [
-            "mat",
-            "domino"
+            "domino",
+            "mat"
         ]
     },
     "MintTinAccordion6": {
@@ -771,9 +773,10 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "MintTinAccordion6",
         "Tags": [
+            "tin",
+            "document",
             "mint",
-            "accordion",
-            "document"
+            "accordion"
         ]
     },
     "MintTinAccordion8": {
@@ -799,8 +802,9 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "MintTinAccordion8",
         "Tags": [
-            "mint",
+            "tin",
             "document",
+            "mint",
             "accordion"
         ]
     },
@@ -859,9 +863,10 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "MintTinFolio",
         "Tags": [
-            "mint",
+            "tin",
+            "folio",
             "document",
-            "folio"
+            "mint"
         ]
     },
     "DominoBoard": {
@@ -887,8 +892,8 @@ COMPONENT_INFO = {
         ],
         "DisplayName": "DominoBoard",
         "Tags": [
-            "board",
-            "domino"
+            "domino",
+            "board"
         ]
     },
     "PunchoutCustomSmall": {
@@ -956,8 +961,9 @@ COMPONENT_INFO = {
         "GameCrafterPackagingDepthMillimeters": 21.59,
         "HasPieceQuantity": True,
         "Tags": [
-            "mint",
-            "packaging"
+            "tin",
+            "packaging",
+            "mint"
         ]
     },
     "SmallStoutBox": {
@@ -979,10 +985,10 @@ COMPONENT_INFO = {
         "GameCrafterPackagingDepthMillimeters": 57.15,
         "HasPieceQuantity": True,
         "Tags": [
-            "stout",
-            "small",
             "box",
-            "packaging"
+            "stout",
+            "packaging",
+            "small"
         ]
     },
     "MediumStoutBox": {
@@ -1004,10 +1010,10 @@ COMPONENT_INFO = {
         "GameCrafterPackagingDepthMillimeters": 57.15,
         "HasPieceQuantity": True,
         "Tags": [
-            "stout",
             "box",
-            "medium",
-            "packaging"
+            "stout",
+            "packaging",
+            "medium"
         ]
     },
     "LargeStoutBox": {
@@ -1029,8 +1035,8 @@ COMPONENT_INFO = {
         ],
         "GameCrafterPackagingDepthMillimeters": 82.042,
         "Tags": [
-            "stout",
             "box",
+            "stout",
             "large",
             "packaging"
         ]
@@ -1054,8 +1060,8 @@ COMPONENT_INFO = {
         "GameCrafterPackagingDepthMillimeters": 5.9436,
         "Tags": [
             "poker",
-            "booster",
-            "packaging"
+            "packaging",
+            "booster"
         ]
     },
     "PokerTuckBox36": {
@@ -1077,9 +1083,9 @@ COMPONENT_INFO = {
         "HasPieceQuantity": True,
         "Tags": [
             "poker",
+            "packaging",
             "tuck",
-            "box",
-            "packaging"
+            "box"
         ]
     },
     "PokerTuckBox54": {
@@ -1101,9 +1107,9 @@ COMPONENT_INFO = {
         "HasPieceQuantity": True,
         "Tags": [
             "poker",
+            "packaging",
             "tuck",
-            "box",
-            "packaging"
+            "box"
         ]
     },
     "PokerTuckBox72": {
@@ -1125,9 +1131,9 @@ COMPONENT_INFO = {
         "HasPieceQuantity": True,
         "Tags": [
             "poker",
+            "packaging",
             "tuck",
-            "box",
-            "packaging"
+            "box"
         ]
     },
     "PokerTuckBox90": {
@@ -1149,9 +1155,9 @@ COMPONENT_INFO = {
         "HasPieceQuantity": True,
         "Tags": [
             "poker",
+            "packaging",
             "tuck",
-            "box",
-            "packaging"
+            "box"
         ]
     },
     "PokerTuckBox108": {
@@ -1173,9 +1179,9 @@ COMPONENT_INFO = {
         "HasPieceQuantity": True,
         "Tags": [
             "poker",
+            "packaging",
             "tuck",
-            "box",
-            "packaging"
+            "box"
         ]
     },
     "AccordionBoard": {
@@ -1199,8 +1205,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "accordion",
-            "board"
+            "board",
+            "accordion"
         ]
     },
     "AcrylicShape125": {
@@ -1217,9 +1223,7 @@ COMPONENT_INFO = {
         "GameCrafterPackagingDepthMillimeters": 3.175,
         "HasPieceData": True,
         "HasPieceQuantity": False,
-        "ArtDataTypeNames": [
-            "Front"
-        ],
+        "ArtDataTypeNames": [],
         "Tags": [
             "shape",
             "acrylic"
@@ -1239,9 +1243,7 @@ COMPONENT_INFO = {
         "GameCrafterPackagingDepthMillimeters": 6.35,
         "HasPieceData": True,
         "HasPieceQuantity": False,
-        "ArtDataTypeNames": [
-            "Front"
-        ],
+        "ArtDataTypeNames": [],
         "Tags": [
             "shape",
             "acrylic"
@@ -1266,9 +1268,9 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "arrow",
             "token",
-            "chit"
+            "chit",
+            "arrow"
         ]
     },
     "BiFoldBoard": {
@@ -1361,9 +1363,9 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "bridge",
             "document",
-            "folio"
+            "folio",
+            "bridge"
         ]
     },
     "BridgeHookBox108": {
@@ -1385,11 +1387,11 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "bridge",
             "packaging",
+            "hook",
             "box",
-            "hookbox",
-            "hook"
+            "bridge",
+            "hookbox"
         ]
     },
     "BridgeHookBox54": {
@@ -1411,11 +1413,11 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "bridge",
             "packaging",
+            "hook",
             "box",
-            "hookbox",
-            "hook"
+            "bridge",
+            "hookbox"
         ]
     },
     "BridgeTuckBox108": {
@@ -1439,8 +1441,8 @@ COMPONENT_INFO = {
             "packaging",
             "tuck",
             "box",
-            "hookbox",
-            "bridge"
+            "bridge",
+            "hookbox"
         ]
     },
     "BridgeTuckBox54": {
@@ -1461,11 +1463,11 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "tuck",
             "packaging",
+            "tuck",
             "box",
-            "hookbox",
-            "bridge"
+            "bridge",
+            "hookbox"
         ]
     },
     "BullseyeChit": {
@@ -1487,9 +1489,9 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "bullseye",
             "token",
-            "chit"
+            "chit",
+            "bullseye"
         ]
     },
     "CardCraftingDeck": {
@@ -1512,8 +1514,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "deck",
-            "card",
-            "crafting"
+            "crafting",
+            "card"
         ]
     },
     "CircleDeck": {
@@ -1558,8 +1560,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "clear",
             "deck",
+            "clear",
             "card",
             "crafting"
         ]
@@ -1583,10 +1585,10 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "clear",
             "deck",
-            "poker",
-            "euro"
+            "clear",
+            "euro",
+            "poker"
         ]
     },
     "CustomColorD4": {
@@ -1603,13 +1605,11 @@ COMPONENT_INFO = {
         "GameCrafterPackagingDepthMillimeters": 17.272000000000002,
         "HasPieceData": True,
         "HasPieceQuantity": False,
-        "ArtDataTypeNames": [
-            "DieFace"
-        ],
+        "ArtDataTypeNames": [],
         "Tags": [
-            "plastic",
             "d4",
-            "die"
+            "die",
+            "plastic"
         ]
     },
     "CustomColorD6": {
@@ -1626,13 +1626,11 @@ COMPONENT_INFO = {
         "GameCrafterPackagingDepthMillimeters": 16.002,
         "HasPieceData": True,
         "HasPieceQuantity": False,
-        "ArtDataTypeNames": [
-            "DieFace"
-        ],
+        "ArtDataTypeNames": [],
         "Tags": [
-            "plastic",
             "die",
-            "d6"
+            "d6",
+            "plastic"
         ]
     },
     "CustomColorD8": {
@@ -1649,13 +1647,11 @@ COMPONENT_INFO = {
         "GameCrafterPackagingDepthMillimeters": 17.475199999999997,
         "HasPieceData": True,
         "HasPieceQuantity": False,
-        "ArtDataTypeNames": [
-            "DieFace"
-        ],
+        "ArtDataTypeNames": [],
         "Tags": [
-            "d8",
+            "die",
             "plastic",
-            "die"
+            "d8"
         ]
     },
     "CustomLargeCardstock": {
@@ -1700,8 +1696,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "punchout",
-            "large"
+            "large",
+            "punchout"
         ]
     },
     "CustomLargeSticker": {
@@ -1722,8 +1718,8 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "sticker",
-            "large"
+            "large",
+            "sticker"
         ]
     },
     "CustomMediumCardstock": {
@@ -1745,8 +1741,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "medium",
-            "cardstock"
+            "cardstock",
+            "medium"
         ]
     },
     "CustomMediumPunchout": {
@@ -1858,8 +1854,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "meeple",
-            "printed"
+            "printed",
+            "meeple"
         ]
     },
     "CustomSmallCardstock": {
@@ -1926,8 +1922,8 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "sticker",
-            "small"
+            "small",
+            "sticker"
         ]
     },
     "CustomWoodD6": {
@@ -1944,14 +1940,12 @@ COMPONENT_INFO = {
         "GameCrafterPackagingDepthMillimeters": 16.000000000000007,
         "HasPieceData": True,
         "HasPieceQuantity": False,
-        "ArtDataTypeNames": [
-            "DieFace"
-        ],
+        "ArtDataTypeNames": [],
         "Tags": [
-            "die",
-            "wooden",
             "wood",
-            "d6"
+            "d6",
+            "die",
+            "wooden"
         ]
     },
     "DeckBox": {
@@ -1974,8 +1968,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "deck",
-            "box",
-            "packaging"
+            "packaging",
+            "box"
         ]
     },
     "DeckBoxTopAndSide": {
@@ -1991,14 +1985,14 @@ COMPONENT_INFO = {
         "GameCrafterUploadTask": "boxtop",
         "GameCrafterPackagingDepthMillimeters": 80.772,
         "HasPieceData": True,
-        "HasPieceQuantity": False,
+        "HasPieceQuantity": True,
         "ArtDataTypeNames": [
             "Front"
         ],
         "Tags": [
             "deck",
-            "box",
-            "packaging"
+            "packaging",
+            "box"
         ]
     },
     "DiceSticker": {
@@ -2019,37 +2013,11 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "sticker",
             "dice",
+            "sticker",
             "die"
         ]
     },
-    # "DigestPerfectBoundBook": {
-    #     "DisplayName": "DigestPerfectBoundBook",
-    #     "DimensionsPixels": [
-    #         1725,
-    #         2625
-    #     ],
-    #     "DimensionsInches": [
-    #         5.375,
-    #         8.375
-    #     ],
-    #     "GameCrafterUploadTask": "perfectboundbook",
-    #     "GameCrafterPackagingDepthMillimeters": 0.13055599999999998,
-    #     "HasPieceData": True,
-    #     "HasPieceQuantity": True,
-    #     "ArtDataTypeNames": [
-    #         "Front",
-    #         "Back"
-    #     ],
-    #     "Tags": [
-    #         "perfect",
-    #         "document",
-    #         "book",
-    #         "digest",
-    #         "bound"
-    #     ]
-    # },
     "DividerDeck": {
         "DisplayName": "DividerDeck",
         "DimensionsPixels": [
@@ -2070,8 +2038,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "deck",
-            "divider",
-            "packaging"
+            "packaging",
+            "divider"
         ]
     },
     "Document": {
@@ -2115,8 +2083,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "chit",
             "token",
+            "chit",
             "domino"
         ]
     },
@@ -2162,10 +2130,10 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "tile",
             "token",
+            "domino",
             "chit",
-            "domino"
+            "tile"
         ]
     },
     "DualDial": {
@@ -2186,8 +2154,8 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "dual",
-            "dial"
+            "dial",
+            "dual"
         ]
     },
     "EuroPokerDeck": {
@@ -2210,8 +2178,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "poker",
-            "deck",
-            "euro"
+            "euro",
+            "deck"
         ]
     },
     "EuroSquareDeck": {
@@ -2234,8 +2202,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "deck",
-            "square",
-            "euro"
+            "euro",
+            "square"
         ]
     },
     "FlowerMat": {
@@ -2257,8 +2225,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "mat",
-            "flower"
+            "flower",
+            "mat"
         ]
     },
     "FoilEuroPokerDeck": {
@@ -2281,9 +2249,9 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "poker",
-            "deck",
+            "euro",
             "foil",
-            "euro"
+            "deck"
         ]
     },
     "FoilPokerDeck": {
@@ -2306,8 +2274,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "poker",
-            "deck",
-            "foil"
+            "foil",
+            "deck"
         ]
     },
     "FoilTarotDeck": {
@@ -2355,8 +2323,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "half",
-            "board"
+            "board",
+            "half"
         ]
     },
     "HalfMat": {
@@ -2401,8 +2369,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "mat",
-            "hex"
+            "hex",
+            "mat"
         ]
     },
     "InvaderMat": {
@@ -2447,35 +2415,10 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "booklet",
-            "jumbo",
-            "document"
+            "document",
+            "jumbo"
         ]
     },
-    # "JumboCoilBook": {
-    #     "DisplayName": "JumboCoilBook",
-    #     "DimensionsPixels": [
-    #         2550,
-    #         3075
-    #     ],
-    #     "DimensionsInches": [
-    #         8.25,
-    #         10.0
-    #     ],
-    #     "GameCrafterUploadTask": "coilbook",
-    #     "GameCrafterPackagingDepthMillimeters": 0.0762,
-    #     "HasPieceData": True,
-    #     "HasPieceQuantity": True,
-    #     "ArtDataTypeNames": [
-    #         "Front",
-    #         "Back"
-    #     ],
-    #     "Tags": [
-    #         "book",
-    #         "jumbo",
-    #         "document",
-    #         "coil"
-    #     ]
-    # },
     "JumboHookBox36": {
         "DisplayName": "JumboHookBox36",
         "DimensionsPixels": [
@@ -2495,10 +2438,10 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "box",
-            "packaging",
             "jumbo",
+            "packaging",
             "hook",
+            "box",
             "hookbox"
         ]
     },
@@ -2521,10 +2464,10 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "box",
-            "packaging",
             "jumbo",
+            "packaging",
             "hook",
+            "box",
             "hookbox"
         ]
     },
@@ -2546,11 +2489,11 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "tuckbox",
-            "tuck",
+            "jumbo",
             "packaging",
+            "tuck",
             "box",
-            "jumbo"
+            "tuckbox"
         ]
     },
     "LargeAcrylicShape125": {
@@ -2567,13 +2510,11 @@ COMPONENT_INFO = {
         "GameCrafterPackagingDepthMillimeters": 3.175,
         "HasPieceData": True,
         "HasPieceQuantity": False,
-        "ArtDataTypeNames": [
-            "Front"
-        ],
+        "ArtDataTypeNames": [],
         "Tags": [
             "shape",
-            "acrylic",
-            "large"
+            "large",
+            "acrylic"
         ]
     },
     "LargeBooklet": {
@@ -2595,8 +2536,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "booklet",
-            "document",
-            "large"
+            "large",
+            "document"
         ]
     },
     "LargeHexMat": {
@@ -2618,9 +2559,9 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "mat",
+            "large",
             "hex",
-            "large"
+            "mat"
         ]
     },
     "LargePrototypeBox": {
@@ -2641,10 +2582,10 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "prototype",
             "box",
             "large",
-            "packaging"
+            "packaging",
+            "prototype"
         ]
     },
     "LargeRetailBox": {
@@ -2667,8 +2608,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "box",
-            "retail",
             "large",
+            "retail",
             "packaging"
         ]
     },
@@ -2691,10 +2632,10 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "ring",
             "token",
             "large",
-            "chit"
+            "chit",
+            "ring"
         ]
     },
     "LargeScorePadColor": {
@@ -2741,8 +2682,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "screen",
-            "large"
+            "large",
+            "screen"
         ]
     },
     "LargeSquareBoard": {
@@ -2766,9 +2707,9 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
+            "large",
             "board",
-            "square",
-            "large"
+            "square"
         ]
     },
     "LargeSquareMat": {
@@ -2790,9 +2731,9 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "mat",
+            "large",
             "square",
-            "large"
+            "mat"
         ]
     },
     "LargeSquareTile": {
@@ -2815,10 +2756,10 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "token",
-            "tile",
+            "large",
             "chit",
             "square",
-            "large"
+            "tile"
         ]
     },
     "LargeStandee": {
@@ -2840,8 +2781,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "standee",
-            "large"
+            "large",
+            "standee"
         ]
     },
     "LargeStoutBoxTop": {
@@ -2862,8 +2803,8 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "stout",
             "box",
+            "stout",
             "large",
             "packaging"
         ]
@@ -2886,38 +2827,12 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "stout",
             "box",
+            "stout",
             "large",
             "packaging"
         ]
     },
-    # "LetterPerfectBoundBook": {
-    #     "DisplayName": "LetterPerfectBoundBook",
-    #     "DimensionsPixels": [
-    #         2625,
-    #         3375
-    #     ],
-    #     "DimensionsInches": [
-    #         8.5,
-    #         11.0
-    #     ],
-    #     "GameCrafterUploadTask": "perfectboundbook",
-    #     "GameCrafterPackagingDepthMillimeters": 0.13055599999999998,
-    #     "HasPieceData": True,
-    #     "HasPieceQuantity": True,
-    #     "ArtDataTypeNames": [
-    #         "Front",
-    #         "Back"
-    #     ],
-    #     "Tags": [
-    #         "perfect",
-    #         "document",
-    #         "book",
-    #         "letter",
-    #         "bound"
-    #     ]
-    # },
     "MediumBooklet": {
         "DisplayName": "MediumBooklet",
         "DimensionsPixels": [
@@ -2941,31 +2856,6 @@ COMPONENT_INFO = {
             "medium"
         ]
     },
-    # "MediumCoilBook": {
-    #     "DisplayName": "MediumCoilBook",
-    #     "DimensionsPixels": [
-    #         1575,
-    #         2325
-    #     ],
-    #     "DimensionsInches": [
-    #         5.0,
-    #         7.5
-    #     ],
-    #     "GameCrafterUploadTask": "coilbook",
-    #     "GameCrafterPackagingDepthMillimeters": 18.034,
-    #     "HasPieceData": True,
-    #     "HasPieceQuantity": True,
-    #     "ArtDataTypeNames": [
-    #         "Front",
-    #         "Back"
-    #     ],
-    #     "Tags": [
-    #         "book",
-    #         "document",
-    #         "coil",
-    #         "medium"
-    #     ]
-    # },
     "MediumFolio": {
         "DisplayName": "MediumFolio",
         "DimensionsPixels": [
@@ -2985,9 +2875,9 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "medium",
             "document",
-            "folio"
+            "folio",
+            "medium"
         ]
     },
     "MediumGameMat": {
@@ -3008,9 +2898,9 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "mat",
+            "game",
             "medium",
-            "game"
+            "mat"
         ]
     },
     "MediumMatBook": {
@@ -3032,10 +2922,10 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "book",
-            "mat",
             "document",
-            "medium"
+            "book",
+            "medium",
+            "mat"
         ]
     },
     "MediumProBox": {
@@ -3058,9 +2948,9 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "box",
+            "packaging",
             "pro",
-            "medium",
-            "packaging"
+            "medium"
         ]
     },
     "MediumPrototypeBox": {
@@ -3081,10 +2971,10 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "prototype",
             "box",
+            "packaging",
             "medium",
-            "packaging"
+            "prototype"
         ]
     },
     "MediumRing": {
@@ -3106,10 +2996,10 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "ring",
-            "medium",
             "token",
-            "chit"
+            "chit",
+            "ring",
+            "medium"
         ]
     },
     "MediumScorePadColor": {
@@ -3133,8 +3023,8 @@ COMPONENT_INFO = {
         "Tags": [
             "score",
             "document",
-            "medium",
-            "pad"
+            "pad",
+            "medium"
         ]
     },
     "MediumScreen": {
@@ -3181,9 +3071,9 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "fold",
-            "six",
             "board",
-            "medium"
+            "medium",
+            "six"
         ]
     },
     "MediumSquareTile": {
@@ -3206,10 +3096,10 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "token",
-            "tile",
             "chit",
+            "medium",
             "square",
-            "medium"
+            "tile"
         ]
     },
     "MediumStandee": {
@@ -3253,10 +3143,10 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "stout",
             "box",
-            "medium",
-            "packaging"
+            "stout",
+            "packaging",
+            "medium"
         ]
     },
     "MediumTriangleChit": {
@@ -3279,8 +3169,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "token",
-            "triangle",
             "chit",
+            "triangle",
             "medium"
         ]
     },
@@ -3302,8 +3192,8 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "meeple",
-            "sticker"
+            "sticker",
+            "meeple"
         ]
     },
     "MiniCircleTile": {
@@ -3325,11 +3215,11 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "tile",
-            "circle",
-            "mini",
             "token",
-            "chit"
+            "chit",
+            "circle",
+            "tile",
+            "mini"
         ]
     },
     "MiniSquareTile": {
@@ -3352,9 +3242,9 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "token",
-            "tile",
             "mini",
-            "square"
+            "square",
+            "tile"
         ]
     },
     "MintTinSticker": {
@@ -3375,9 +3265,10 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "sticker",
+            "tin",
+            "packaging",
             "mint",
-            "packaging"
+            "sticker"
         ]
     },
     "PawnSticker": {
@@ -3444,8 +3335,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "money",
-            "play"
+            "play",
+            "money"
         ]
     },
     "PokerBoosterBox": {
@@ -3467,9 +3358,9 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "poker",
+            "packaging",
             "box",
-            "booster",
-            "packaging"
+            "booster"
         ]
     },
     "PokerEnvelope": {
@@ -3491,8 +3382,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "poker",
-            "envelope",
-            "packaging"
+            "packaging",
+            "envelope"
         ]
     },
     "PokerHookBox108": {
@@ -3514,11 +3405,11 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "box",
             "packaging",
+            "hook",
+            "box",
             "poker",
-            "hookbox",
-            "hook"
+            "hookbox"
         ]
     },
     "PokerHookBox18": {
@@ -3540,11 +3431,11 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "box",
             "packaging",
+            "hook",
+            "box",
             "poker",
-            "hookbox",
-            "hook"
+            "hookbox"
         ]
     },
     "PokerHookBox36": {
@@ -3566,11 +3457,11 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "box",
             "packaging",
+            "hook",
+            "box",
             "poker",
-            "hookbox",
-            "hook"
+            "hookbox"
         ]
     },
     "PokerHookBox54": {
@@ -3592,11 +3483,11 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "box",
             "packaging",
+            "hook",
+            "box",
             "poker",
-            "hookbox",
-            "hook"
+            "hookbox"
         ]
     },
     "PokerHookBox72": {
@@ -3618,11 +3509,11 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "box",
             "packaging",
+            "hook",
+            "box",
             "poker",
-            "hookbox",
-            "hook"
+            "hookbox"
         ]
     },
     "PokerHookBox90": {
@@ -3644,11 +3535,11 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "box",
             "packaging",
+            "hook",
+            "box",
             "poker",
-            "hookbox",
-            "hook"
+            "hookbox"
         ]
     },
     "PostcardMat": {
@@ -3670,8 +3561,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "mat",
-            "postcard"
+            "postcard",
+            "mat"
         ]
     },
     "QuadFoldBoard": {
@@ -3695,8 +3586,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "fold",
-            "quad",
-            "board"
+            "board",
+            "quad"
         ]
     },
     "QuadFoldMat": {
@@ -3719,8 +3610,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "fold",
-            "mat",
-            "quad"
+            "quad",
+            "mat"
         ]
     },
     "QuarterBoard": {
@@ -3744,8 +3635,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "quarter",
-            "board"
+            "board",
+            "quarter"
         ]
     },
     "QuarterMat": {
@@ -3792,8 +3683,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "fold",
-            "six",
-            "board"
+            "board",
+            "six"
         ]
     },
     "SkinnyBoard": {
@@ -3817,8 +3708,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "skinny",
-            "board"
+            "board",
+            "skinny"
         ]
     },
     "SkinnyMat": {
@@ -3888,8 +3779,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "mat",
-            "sliver"
+            "sliver",
+            "mat"
         ]
     },
     "SlopesideBiFoldMat": {
@@ -3912,9 +3803,9 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "fold",
-            "mat",
             "slopeside",
-            "square"
+            "square",
+            "mat"
         ]
     },
     "SmallBiFoldMat": {
@@ -3937,9 +3828,9 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "fold",
-            "mat",
+            "bifold",
             "small",
-            "bifold"
+            "mat"
         ]
     },
     "SmallBooklet": {
@@ -3961,8 +3852,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "booklet",
-            "small",
-            "document"
+            "document",
+            "small"
         ]
     },
     "SmallDial": {
@@ -3983,8 +3874,8 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "small",
-            "dial"
+            "dial",
+            "small"
         ]
     },
     "SmallFolio": {
@@ -4007,8 +3898,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "document",
-            "small",
-            "folio"
+            "folio",
+            "small"
         ]
     },
     "SmallGameMat": {
@@ -4029,9 +3920,9 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "mat",
+            "game",
             "small",
-            "game"
+            "mat"
         ]
     },
     "SmallProBox": {
@@ -4054,9 +3945,9 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "box",
+            "packaging",
             "small",
-            "pro",
-            "packaging"
+            "pro"
         ]
     },
     "SmallProTarotInsert": {
@@ -4077,11 +3968,11 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "deck",
-            "tarot",
-            "insert",
             "small",
-            "pro"
+            "tarot",
+            "pro",
+            "deck",
+            "insert"
         ]
     },
     "SmallPrototypeBox": {
@@ -4102,10 +3993,10 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "prototype",
             "box",
+            "packaging",
             "small",
-            "packaging"
+            "prototype"
         ]
     },
     "SmallQuadFoldMat": {
@@ -4128,9 +4019,9 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "fold",
-            "mat",
             "small",
-            "quad"
+            "quad",
+            "mat"
         ]
     },
     "SmallRing": {
@@ -4153,8 +4044,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "token",
-            "small",
             "chit",
+            "small",
             "ring"
         ]
     },
@@ -4178,9 +4069,9 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "score",
+            "document",
             "pad",
-            "small",
-            "document"
+            "small"
         ]
     },
     "SmallScreen": {
@@ -4227,9 +4118,9 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
+            "board",
             "small",
-            "square",
-            "board"
+            "square"
         ]
     },
     "SmallSquareDeck": {
@@ -4275,9 +4166,9 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "mat",
             "small",
-            "square"
+            "square",
+            "mat"
         ]
     },
     "SmallSquareTile": {
@@ -4300,9 +4191,9 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "token",
-            "tile",
             "small",
-            "square"
+            "square",
+            "tile"
         ]
     },
     "SmallStandee": {
@@ -4347,9 +4238,9 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "stout",
-            "deck",
             "small",
             "tarot",
+            "deck",
             "insert"
         ]
     },
@@ -4372,8 +4263,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "mat",
-            "spinner"
+            "spinner",
+            "mat"
         ]
     },
     "SquareBoard": {
@@ -4397,8 +4288,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "square",
-            "board"
+            "board",
+            "square"
         ]
     },
     "SquareDeck": {
@@ -4444,8 +4335,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "document",
-            "square",
-            "folio"
+            "folio",
+            "square"
         ]
     },
     "SquareHookBox48": {
@@ -4468,9 +4359,9 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "box",
-            "square",
             "packaging",
-            "hook"
+            "hook",
+            "square"
         ]
     },
     "SquareHookBox96": {
@@ -4493,9 +4384,9 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "box",
-            "square",
             "packaging",
-            "hook"
+            "hook",
+            "square"
         ]
     },
     "SquareMat": {
@@ -4517,8 +4408,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "mat",
-            "square"
+            "square",
+            "mat"
         ]
     },
     "SquareTuckBox48": {
@@ -4539,9 +4430,9 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "tuck",
             "box",
             "packaging",
+            "tuck",
             "square"
         ]
     },
@@ -4563,9 +4454,9 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "tuck",
-            "packaging",
             "box",
+            "packaging",
+            "tuck",
             "square"
         ]
     },
@@ -4637,8 +4528,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "mat",
-            "strip"
+            "strip",
+            "mat"
         ]
     },
     "TallBooklet": {
@@ -4659,9 +4550,9 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "tall",
+            "booklet",
             "document",
-            "booklet"
+            "tall"
         ]
     },
     "TarotBooklet": {
@@ -4730,8 +4621,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "document",
-            "tarot",
-            "folio"
+            "folio",
+            "tarot"
         ]
     },
     "TarotHookBox40": {
@@ -4753,10 +4644,10 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "tarot",
-            "packaging",
             "box",
-            "hook"
+            "packaging",
+            "hook",
+            "tarot"
         ]
     },
     "TarotHookBox90": {
@@ -4778,10 +4669,10 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "tarot",
             "box",
             "packaging",
-            "hook"
+            "hook",
+            "tarot"
         ]
     },
     "TarotTuckBox40": {
@@ -4802,9 +4693,9 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "tuck",
-            "packaging",
             "box",
+            "packaging",
+            "tuck",
             "tarot"
         ]
     },
@@ -4826,9 +4717,9 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "tuck",
             "box",
             "packaging",
+            "tuck",
             "tarot"
         ]
     },
@@ -4850,8 +4741,8 @@ COMPONENT_INFO = {
             "Front"
         ],
         "Tags": [
-            "sticker",
-            "token"
+            "token",
+            "sticker"
         ]
     },
     "TombstoneShard": {
@@ -4873,8 +4764,8 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "tombstone",
             "token",
+            "tombstone",
             "shard"
         ]
     },
@@ -4921,8 +4812,8 @@ COMPONENT_INFO = {
         ],
         "Tags": [
             "token",
-            "tile",
-            "triangle"
+            "triangle",
+            "tile"
         ]
     },
     "USGameDeck": {
@@ -4967,8 +4858,253 @@ COMPONENT_INFO = {
             "Back"
         ],
         "Tags": [
-            "mat",
-            "game"
+            "game",
+            "mat"
+        ]
+    },
+    "DigestPerfectBoundBook": {
+        "DisplayName": "DigestPerfectBoundBook",
+        "DimensionsPixels": [
+            1725,
+            2625
+        ],
+        "DimensionsInches": [
+            5.375,
+            8.375
+        ],
+        "GameCrafterUploadTask": "perfectboundbook",
+        "GameCrafterPackagingDepthMillimeters": 0.13055599999999998,
+        "HasPieceData": True,
+        "HasPieceQuantity": True,
+        "ArtDataTypeNames": [
+            "Front",
+            "Back"
+        ],
+        "Tags": [
+            "bound",
+            "perfect",
+            "book",
+            "digest"
+        ]
+    },
+    "JumboCoilBook": {
+        "DisplayName": "JumboCoilBook",
+        "DimensionsPixels": [
+            2550,
+            3075
+        ],
+        "DimensionsInches": [
+            8.25,
+            10.0
+        ],
+        "GameCrafterUploadTask": "coilbook",
+        "GameCrafterPackagingDepthMillimeters": 0.0762,
+        "HasPieceData": True,
+        "HasPieceQuantity": True,
+        "ArtDataTypeNames": [
+            "Front",
+            "Back"
+        ],
+        "Tags": [
+            "jumbo",
+            "coil",
+            "book"
+        ]
+    },
+    "LargeDualLayerBoard": {
+        "DisplayName": "LargeDualLayerBoard",
+        "DimensionsPixels": [
+            2475,
+            3075
+        ],
+        "DimensionsInches": [
+            8.0,
+            10.0
+        ],
+        "GameCrafterUploadTask": "threesidedcustomcutset",
+        "GameCrafterPackagingDepthMillimeters": 3.429,
+        "HasPieceData": True,
+        "HasPieceQuantity": True,
+        "ArtDataTypeNames": [
+            "Inner",
+            "Front",
+            "Back"
+        ],
+        "Tags": [
+            "layer",
+            "large",
+            "dual",
+            "board"
+        ]
+    },
+    "LargeQuadFoldBoard": {
+        "DisplayName": "LargeQuadFoldBoard",
+        "DimensionsPixels": [
+            6075,
+            6075
+        ],
+        "DimensionsInches": [
+            20.0,
+            20.0
+        ],
+        "GameCrafterUploadTask": "onesidedgloss",
+        "GameCrafterPackagingDepthMillimeters": 10.16,
+        "HasPieceData": True,
+        "HasPieceQuantity": True,
+        "ArtDataTypeNames": [
+            "Front"
+        ],
+        "Tags": [
+            "fold",
+            "large",
+            "board",
+            "quad"
+        ]
+    },
+    "LetterPerfectBoundBook": {
+        "DisplayName": "LetterPerfectBoundBook",
+        "DimensionsPixels": [
+            2625,
+            3375
+        ],
+        "DimensionsInches": [
+            8.5,
+            11.0
+        ],
+        "GameCrafterUploadTask": "perfectboundbook",
+        "GameCrafterPackagingDepthMillimeters": 0.13055599999999998,
+        "HasPieceData": True,
+        "HasPieceQuantity": True,
+        "ArtDataTypeNames": [
+            "Front",
+            "Back"
+        ],
+        "Tags": [
+            "bound",
+            "perfect",
+            "book",
+            "letter"
+        ]
+    },
+    "MediumCoilBook": {
+        "DisplayName": "MediumCoilBook",
+        "DimensionsPixels": [
+            1575,
+            2325
+        ],
+        "DimensionsInches": [
+            5.0,
+            7.5
+        ],
+        "GameCrafterUploadTask": "coilbook",
+        "GameCrafterPackagingDepthMillimeters": 18.034,
+        "HasPieceData": True,
+        "HasPieceQuantity": True,
+        "ArtDataTypeNames": [
+            "Front",
+            "Back"
+        ],
+        "Tags": [
+            "coil",
+            "book",
+            "medium"
+        ]
+    },
+    "MediumDualLayerBoard": {
+        "DisplayName": "MediumDualLayerBoard",
+        "DimensionsPixels": [
+            2475,
+            1275
+        ],
+        "DimensionsInches": [
+            8.0,
+            4.0
+        ],
+        "GameCrafterUploadTask": "threesidedcustomcutset",
+        "GameCrafterPackagingDepthMillimeters": 3.429,
+        "HasPieceData": True,
+        "HasPieceQuantity": True,
+        "ArtDataTypeNames": [
+            "Inner",
+            "Front",
+            "Back"
+        ],
+        "Tags": [
+            "layer",
+            "dual",
+            "board",
+            "medium"
+        ]
+    },
+    "SmallDualLayerBoard": {
+        "DisplayName": "SmallDualLayerBoard",
+        "DimensionsPixels": [
+            1125,
+            1725
+        ],
+        "DimensionsInches": [
+            3.5,
+            5.5
+        ],
+        "GameCrafterUploadTask": "threesidedcustomcutset",
+        "GameCrafterPackagingDepthMillimeters": 3.429,
+        "HasPieceData": True,
+        "HasPieceQuantity": True,
+        "ArtDataTypeNames": [
+            "Inner",
+            "Front",
+            "Back"
+        ],
+        "Tags": [
+            "layer",
+            "small",
+            "dual",
+            "board"
+        ]
+    },
+    "TallMintTin": {
+        "DisplayName": "TallMintTin",
+        "DimensionsPixels": [
+            750,
+            1125
+        ],
+        "DimensionsInches": [
+            2.43,
+            3.85
+        ],
+        "GameCrafterUploadTask": "twosidedbox",
+        "GameCrafterPackagingDepthMillimeters": 33.019999999999996,
+        "HasPieceData": True,
+        "HasPieceQuantity": True,
+        "ArtDataTypeNames": [
+            "Front",
+            "Back"
+        ],
+        "Tags": [
+            "tin",
+            "mint",
+            "tall"
+        ]
+    },
+    "VHSBox": {
+        "DisplayName": "VHSBox",
+        "DimensionsPixels": [
+            3225,
+            2400
+        ],
+        "DimensionsInches": [
+            7.9,
+            4.82
+        ],
+        "GameCrafterUploadTask": "onesided",
+        "GameCrafterPackagingDepthMillimeters": 27.432,
+        "HasPieceData": True,
+        "HasPieceQuantity": True,
+        "ArtDataTypeNames": [
+            "Front"
+        ],
+        "Tags": [
+            "box"
         ]
     }
 }
