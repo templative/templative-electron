@@ -277,6 +277,9 @@ async function applyPlacementCommandsToPdf(pdf, commands, size) {
         return;
     }
     
+    // Set a cross-platform compatible font
+    pdf.setFont("helvetica");
+    
     // Sort commands by page
     commands.sort((a, b) => {
         if (a.page !== b.page) return a.page - b.page;
@@ -311,6 +314,7 @@ async function applyPlacementCommandsToPdf(pdf, commands, size) {
             pdf.setFillColor(255, 200, 200);
             pdf.rect(command.x, command.y, command.width, command.height, 'F');
             pdf.setTextColor(200, 0, 0);
+            pdf.setFont("helvetica");
             pdf.setFontSize(12);
             pdf.text(
                 `Error: ${error.message.substring(0, 20)}...`, 
@@ -405,6 +409,9 @@ async function addComponentToPdf(pdf, command) {
 function addCutGuides(pdf, command) {
     const { marginsInfo } = command;
     if (!marginsInfo) return;
+    
+    // Ensure font is set to a cross-platform compatible font
+    pdf.setFont("helvetica");
     
     const { pixels, dimensionsPixels } = marginsInfo;
     const marginRatioX = pixels[0] / dimensionsPixels[0];
