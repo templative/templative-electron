@@ -24,7 +24,8 @@
         "sign": "bash ./build.sh sign",
         "signS3": "bash ./signWindowsInS3.sh",
         "fullMake": "bash ./build.sh fullMake",
-        "fullPublish": "bash ./build.sh fullPublish"
+        "fullPublish": "bash ./build.sh fullPublish",
+        "test": "node ./test-cli.js"
     },
     "dependencies": {
         "@aptabase/electron": "^0.3.1",
@@ -80,7 +81,8 @@
         "rage-edit": "^1.2.0",
         "tmp-promise": "^3.0.3",
         "which": "^4.0.0",
-        "xml2js": "^0.6.2"
+        "xml2js": "^0.6.2",
+        "node-fetch": "^2.6.7"
     },
     "devDependencies": {
         "@babel/core": "^7.24.5",
