@@ -7,8 +7,9 @@ import TemplativeAccessTools from "../TemplativeAccessTools";
 import ComponentTypeList from "./TypeSelection/ComponentTypePicker/ComponentTypeList";
 import { trackEvent } from "@aptabase/electron/renderer";
 import { RenderingWorkspaceContext } from '../Render/RenderingWorkspaceProvider';
+const { ipcRenderer } = window.require('electron');
+const { channels } = require('../../../../shared/constants');
 
-var axios = require('axios');
 var path = require('path');
 
 const addSpaces = (str) => {
@@ -78,7 +79,7 @@ export default class CreatePanel extends React.Component {
             directoryPath: this.props.templativeRootDirectoryPath,
             componentAIDescription: this.context.componentAIDescription
         }
-        await axios.post(`http://127.0.0.1:8085/component`, data)
+        await ipcRenderer.invoke(channels.TO_SERVER_CREATE_COMPONENT, data);
         
         // Load the updated component-compose.json
         const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");

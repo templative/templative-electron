@@ -3,8 +3,8 @@ import "./PrintPanel.css"
 import CreatePrintoutButton from "./CreatePrintoutButton";
 import { trackEvent } from "@aptabase/electron/renderer";
 import TemplativePurchaseButton from "../../../TemplativePurchaseButton";
-
-const axios = require("axios");
+import { channels } from "../../../../../../shared/constants";
+const { ipcRenderer } = require('electron');
 const fs = require("fs");
 
 export default class PrintPanel extends React.Component {   
@@ -38,7 +38,7 @@ export default class PrintPanel extends React.Component {
         }
         try {
             this.setState({isCreatingPrintout: true})
-            await axios.post(`http://localhost:8085/printout`, data)
+            const result = await ipcRenderer.invoke(channels.TO_SERVER_CREATE_PRINTOUT, data);
             this.setState({isCreatingPrintout: false, rerenderIframeKey: this.state.rerenderIframeKey +1})
         }
         catch(e) {

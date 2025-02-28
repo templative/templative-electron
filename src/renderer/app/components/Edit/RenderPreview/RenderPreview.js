@@ -1,5 +1,7 @@
 import React from "react";
 import TemplativeAccessTools from "../../TemplativeAccessTools";
+import { channels } from '../../../../../shared/constants';
+const { ipcRenderer } = window.require('electron');
 
 import "./RenderPreview.css"
 import RenderImage from "./RenderImage";
@@ -8,7 +10,6 @@ import CoordinateImage from "./CoordinateImage";
 const fsOld = require('fs');
 const path = require("path");
 const fs = require("fs/promises");
-const axios = require("axios");
 
 export default class RenderPreview extends React.Component {
     state = {
@@ -30,17 +31,17 @@ export default class RenderPreview extends React.Component {
     }
 
     componentDidMount = async () => {
-        // try {
+        try {
             await this.#parseComponentComposeAsync();
-            const response = await axios.get(`http://127.0.0.1:8085/previews`);
-            this.setState({ previewsDirectory: response.data.previewsDirectory }, async () => await this.setupPreviewWatcher());
-        // } catch (error) {
-        //     console.error("Error in componentDidMount:", error);
-        // }
+            const response = await ipcRenderer.invoke(channels.TO_SERVER_GET_PREVIEWS_DIRECTORY);
+            this.setState({ previewsDirectory: response.previewsDirectory }, async () => await this.setupPreviewWatcher());
+        } catch (error) {
+            console.error("Error in componentDidMount:", error);
+        }
     }
 
     #loadImages = async (directory) => {
-        // try { 
+        try { 
             let filepaths = await fs.readdir(directory, { withFileTypes: true });
             filepaths = filepaths.filter(filepath => filepath.name.endsWith(".png")).map(filepath => path.join(directory, filepath.name));
 
@@ -51,9 +52,9 @@ export default class RenderPreview extends React.Component {
                 loadingImages: false,
                 imageHash: Date.now()
             });
-        // } catch (error) {
-        //     console.error("Error in #loadImages:", error);
-        // }
+        } catch (error) {
+            console.error("Error in #loadImages:", error);
+        }
     }
 
     #preloadImage = (src) => {
@@ -66,7 +67,7 @@ export default class RenderPreview extends React.Component {
     }
 
     #parseComponentCompose = async () => {
-        // try {
+        try {
             const componentCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json");
             const gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json");
             const componentOptions = componentCompose.filter(component => !component.type?.startsWith('STOCK_')).map(component => component.name);
@@ -91,13 +92,13 @@ export default class RenderPreview extends React.Component {
                 chosenPieceName: chosenPieceName,
                 piecesOptions: piecesOptions
             });
-        // } catch (error) {
-        //     console.error("Error in #parseComponentCompose:", error);
-        // }
+        } catch (error) {
+            console.error("Error in #parseComponentCompose:", error);
+        }
     }
 
     #parseComponentComposeAsync = async () => {
-        // try {
+        try {
             await this.#parseComponentCompose();
             this.#closeComponentComposeWatcher();
 
@@ -105,9 +106,9 @@ export default class RenderPreview extends React.Component {
             this.componentComposeWatcher = fsOld.watch(componentComposeFilepath, {}, async () => {
                 await this.#parseComponentCompose();
             });
-        // } catch (error) {
-        //     console.error("Error in #parseComponentComposeAsync:", error);
-        // }
+        } catch (error) {
+            console.error("Error in #parseComponentComposeAsync:", error);
+        }
     }
 
     componentDidUpdate = async (prevProps) => {
@@ -143,7 +144,7 @@ export default class RenderPreview extends React.Component {
                 directoryPath: this.props.templativeRootDirectoryPath
             }
             try {
-                await axios.post(`http://localhost:8085/preview-piece`, data);
+                await ipcRenderer.invoke(channels.TO_SERVER_PREVIEW_PIECE, data);
             } catch (error) {
                 console.error("Error in preview:", error);
             }

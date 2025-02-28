@@ -166,72 +166,6 @@ async function getTgcSessionFromStore() {
     return { isLoggedIn: session !== null };
 }
 
-async function getDesigners() {
-    try {
-        var session = await getTgcSession()
-        if (!session) {
-            return { isLoggedIn: false, designers: [] }
-        }
-        
-        const response = await fetch(`http://localhost:8085/the-game-crafter/designers?id=${session.id}&userId=${session.userId}`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-        
-        if (response.status === 400) {
-            await clearTgcSession();
-            return { isLoggedIn: false, designers: [] };
-        }
-
-        if (!response.ok) {
-            throw new Error('Failed to fetch designers');
-        }
-
-        const data = await response.json();
-        return { isLoggedIn: true, designers: data.designers };
-    } catch (error) {
-        console.error('Error fetching designers:', error);
-        return [];
-    }
-}
-
-async function uploadGame(_,data) {
-    try {
-        var session = await getTgcSession()
-        if (!session) {
-            return { isLoggedIn: false }
-        }
-        const response = await fetch('http://localhost:8085/the-game-crafter/upload', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                ...data,
-                sessionId: session.id,
-                userId: session.userId
-            })
-        });
-
-        if (response.status === 440) {
-            // Session is invalid/expired
-            await clearTgcSession();
-            return { isLoggedIn: false };
-        }
-
-        if (!response.ok) {
-            throw new Error('Upload failed');
-        }
-
-        return { isLoggedIn: true };
-    } catch (error) {
-        console.error('Error uploading game:', error);
-        return { isLoggedIn: true, error: error.message };
-    }
-}
-
 async function logoutTgc() {
     await clearTgcSession()
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TGC_LOGIN_STATUS, { isLoggedIn: false });
@@ -310,8 +244,6 @@ module.exports = {
     giveLogout,
     giveLoginInformation,
     getTgcSessionFromStore,
-    getDesigners,
-    uploadGame,
     logoutTgc,
     pollGithubAuth,
     giveGithubAuth,

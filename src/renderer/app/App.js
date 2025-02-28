@@ -30,8 +30,8 @@ class App extends React.Component {
     }    
     componentWillUnmount() {
         ipcRenderer.removeAllListeners(channels.GIVE_TEMPLATIVE_ROOT_FOLDER);
-        socket.off("printStatement");
-        socket.disconnect()
+        // socket.off("printStatement");
+        // socket.disconnect()
     }
     async openTemplativeDirectoryPicker() {
         trackEvent("project_change")
@@ -85,11 +85,11 @@ class App extends React.Component {
             trackEvent("user_login_error", { reason: "invalid_credentials" })
             this.setState({loggedIn: false, loginStatus: "Invalid login credentials."})
         })
-        socket.connect();
-        socket.on('printStatement', (messages) => {
-            var newMessages = messages.split('\n').map(message => message.trim()).filter(message => message !== "")
-            this.setState({templativeMessages:  [...this.state.templativeMessages, ...newMessages]})
-        });
+        // socket.connect();
+        // socket.on('printStatement', (messages) => {
+        //     var newMessages = messages.split('\n').map(message => message.trim()).filter(message => message !== "")
+        //     this.setState({templativeMessages:  [...this.state.templativeMessages, ...newMessages]})
+        // });
         await this.attemptToLoadLastTemplativeProject()
         await ipcRenderer.invoke(channels.TO_SERVER_IS_LOGGED_IN)
     }

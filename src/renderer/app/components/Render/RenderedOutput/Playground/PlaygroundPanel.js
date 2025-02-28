@@ -6,7 +6,6 @@ import { trackEvent } from "@aptabase/electron/renderer";
 import TemplativePurchaseButton from "../../../TemplativePurchaseButton";
 import PlaygroundOutputExplorer from "./PlaygroundOutputExplorer";
 import playgroundLogo from "./playgroundLogo.png"
-const axios = require("axios");
 const path = require('path');
 const fs = require('fs');
 const { ipcRenderer } = require('electron');
@@ -65,7 +64,7 @@ export default class PlaygroundPanel extends React.Component {
         }
         try {
             this.setState({isCreating: true})
-            await axios.post(`http://localhost:8085/playground`, data)
+            const result = await ipcRenderer.invoke(channels.TO_SERVER_CREATE_PLAYGROUND_PACKAGE, data);
             var outputName = path.basename(this.props.outputFolderPath);
             var selectedPackageDirectory = path.join(this.state.playgroundDirectory, outputName)
             var selectedPackageExists = fs.existsSync(selectedPackageDirectory)

@@ -79,7 +79,7 @@ async function createGameCrafterImage(directory) {
   await createImage(directory, "logo", 350, 150);
 }
 
-function createProjectInDirectory(directory) {
+async function createProjectInDirectory(directory) {
   createStudio(directory);
   createRulesFile(directory);
   createGame(directory);

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ContextMenu from "../../ContextMenu";
-import socket from "../../../utility/socket";
+import { channels } from '../../../../../shared/constants';
+const { ipcRenderer } = window.require('electron');
 // import "./ContentFiles.css"
 
 const path = require("path");
@@ -77,7 +78,7 @@ export default function CompositionItem(props) {
             language: "en",
             directoryPath: templativeRootDirectoryPath,
         }
-        socket.emit('produceGame', request);
+        await ipcRenderer.invoke(channels.TO_SERVER_PRODUCE_GAME, request);
         updateRouteCallback("render")
     };
 

@@ -1,4 +1,5 @@
 const { channels } = require("../shared/constants");
+const { createProject } = require("./templative/index");
 const { dialog, BrowserWindow, app  } = require('electron')
 var axios  = require('axios');
 var path = require('path');
@@ -41,14 +42,14 @@ const openSimulatorFolder = async(event, args) => {
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_SIMULATOR_FOLDER, chosenDirectory)
 }
 
-const createProject = async(event, args) => {
+const createTemplativeProjectWithDialog = async(event, args) => {
     var result = await dialog.showOpenDialog({  title:"Create new Templative Project",  buttonLabel: "Create", properties: [ 'openDirectory', 'createDirectory', "promptToCreate"] })
     if (result.filePaths.length === 0) {
         console.warn("Chose nothing!")
         return
     }
     var chosenDirectory = result.filePaths[0]
-    var creationResult = await axios.post(`http://127.0.0.1:8085/project`, { directoryPath: chosenDirectory})
+    var creationResult = await createProject(chosenDirectory)
 
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, chosenDirectory)
 }
@@ -57,6 +58,6 @@ module.exports = {
     openPlaygroundFolder,
     setCurrentFolder,
     openSimulatorFolder,
-    createProject,
+    createTemplativeProjectWithDialog,
     openFolder
 }

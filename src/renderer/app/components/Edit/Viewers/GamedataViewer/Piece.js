@@ -2,7 +2,8 @@ import React from "react";
 import KeyValueInput from "./KeyValueInput"
 import "./GamedataViewer.css"
 import PieceControls from "./PieceControls.js";
-var axios = require('axios');
+import { channels } from "../../../../../../shared/constants";
+const { ipcRenderer } = require('electron');
 
 
 const ignoredControlGamedataKeys = [
@@ -28,7 +29,7 @@ export default class Piece extends React.Component {
         }
         try {
             this.props.showPreviewCallback()
-            await axios.post(`http://localhost:8085/preview-piece`, data);
+            await ipcRenderer.invoke(channels.TO_SERVER_PREVIEW_PIECE, data);
         } catch (error) {
             console.error("Error in preview:", error);
         }

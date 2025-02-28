@@ -5,7 +5,6 @@ import {writeLastUseTableTopSimulatorDirectory, getLastUsedTableTopSimulatorDire
 import { trackEvent } from "@aptabase/electron/renderer";
 import TemplativePurchaseButton from "../../../TemplativePurchaseButton";
 import SimulatorOutputExplorer from "./SimulatorOutputExplorer";
-const axios = require("axios");
 const path = require('path');
 const fs = require('fs');
 
@@ -63,7 +62,7 @@ export default class SimulatorPanel extends React.Component {
         }
         try {
             this.setState({isCreating: true})
-            await axios.post(`http://localhost:8085/simulator`, data)
+            const result = await ipcRenderer.invoke(channels.TO_SERVER_CREATE_SIMULATOR_SAVE, data);
             var selectedSaveFilepath = path.join(this.state.simulatorDirectory, "Saves", `${path.basename(this.props.outputFolderPath)}.json`)
             var selectedSaveExists = fs.existsSync(selectedSaveFilepath)
             this.setState({isCreating: false, selectedSaveFilepath: selectedSaveExists ? selectedSaveFilepath : undefined})

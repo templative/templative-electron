@@ -1,5 +1,7 @@
 import React from "react";
-import socket from "../../../../utility/socket";
+import { channels } from '../../../../../../shared/constants';
+const { ipcRenderer } = window.require('electron');
+
 const addSpaces = (str) => {
     return str
         // First specifically handle D4, D6, D8, D10, D12, D20
@@ -40,7 +42,7 @@ export default function CompositionControlsRow(props) {
             language: "en",
             directoryPath: templativeRootDirectoryPath,
         }
-        socket.emit('produceGame', request);
+        await ipcRenderer.invoke(channels.TO_SERVER_PRODUCE_GAME, request);
         updateRouteCallback("render")
     };
     const isStock = type.startsWith("STOCK_")

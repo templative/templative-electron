@@ -2,7 +2,8 @@ import React, { useContext, useState, useEffect } from "react";
 import OutputExplorer from "./RenderedOutput/OutputExplorer"
 import RenderButton from "./RenderControls/RenderButton"
 import "./RenderPanel.css"
-import socket from "../../utility/socket"
+import { channels } from '../../../../shared/constants';
+const { ipcRenderer } = window.require('electron');
 import { LoggedMessages } from "../SocketedConsole/LoggedMessages"
 import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
 import { trackEvent } from "@aptabase/electron/renderer";
@@ -18,7 +19,6 @@ export default function RenderPanel({ templativeRootDirectoryPath, templativeMes
     const [isDebugRendering, setIsDebugRendering] = useState(false);
     const [isComplexRendering, setIsComplexRendering] = useState(true);
     const [selectedLanguage, setSelectedLanguage] = useState("en");
-    const [isConnectedToTemplative, setIsConnectedToTemplative] = useState(false);
     const [isProcessing, setIsProcessing] = useState(false);
     const [isResizing, setIsResizing] = useState(false);
     const [components, setComponents] = useState([]);
@@ -67,7 +67,7 @@ export default function RenderPanel({ templativeRootDirectoryPath, templativeMes
         renderingContext.setSelectedComponentFilter(componentName);
     };
 
-    const renderTemplativeProject = () => {
+    const renderTemplativeProject = async () => {
         const request = {
             isDebug: isDebugRendering,
             isComplex: isComplexRendering,
@@ -80,8 +80,7 @@ export default function RenderPanel({ templativeRootDirectoryPath, templativeMes
         setIsProcessing(true);
         trackEvent("render");
         
-        socket.emit('produceGame', request);
-        setIsConnectedToTemplative(socket.connected);
+        await ipcRenderer.invoke(channels.TO_SERVER_PRODUCE_GAME, request);
     };
 
     const startResize = (e) => {
