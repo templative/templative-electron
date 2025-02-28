@@ -17,82 +17,87 @@ const { SimulatorTilesetUrls, SimulatorComponentPlacement, SimulatorDimensions, 
  * @returns {Promise<Object|null>} - Deck object state or null if failed
  */
 async function createDeck(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal) {
-  const totalUniqueCards = componentInstructions.frontInstructions.length;
-  const isSingleCard = totalUniqueCards === 1 && (componentInstructions.frontInstructions[0].quantity * componentInstructions.quantity) === 1;
+  try {
+    const totalUniqueCards = componentInstructions.frontInstructions.length;
+    const isSingleCard = totalUniqueCards === 1 && (componentInstructions.frontInstructions[0].quantity * componentInstructions.quantity) === 1;
 
-  if (isSingleCard) {
-    return await createSingleCard(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal);
-  }
+    if (isSingleCard) {
+      return await createSingleCard(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal);
+    }
 
-  let deckType = 0;
-  if (componentInfo.Tags.includes("hex")) {
-    deckType = 3;
-  } else if (componentInfo.Tags.includes("circle")) {
-    deckType = 4;
-  }
+    let deckType = 0;
+    if (componentInfo.Tags.includes("hex")) {
+      deckType = 3;
+    } else if (componentInfo.Tags.includes("circle")) {
+      deckType = 4;
+    }
 
-  const componentUniqueName = componentInstructions.uniqueName;
+    const componentUniqueName = componentInstructions.uniqueName;
 
-  const result = await createCompositeImage(
-    componentUniqueName, 
-    componentInstructions.type, 
-    componentInstructions.quantity, 
-    componentInstructions.frontInstructions, 
-    componentInstructions.backInstructions, 
-    tabletopSimulatorImageDirectoryPath,
-    componentInfo
-  );
-  
-  if (result === null) {
-    console.log(chalk.red(`!!! Failed to create composite image for ${componentUniqueName}`));
+    const result = await createCompositeImage(
+      componentUniqueName, 
+      componentInstructions.type, 
+      componentInstructions.quantity, 
+      componentInstructions.frontInstructions, 
+      componentInstructions.backInstructions, 
+      tabletopSimulatorImageDirectoryPath,
+      componentInfo
+    );
+    
+    if (!result || result[0] === null) {
+      console.log(chalk.red(`!!! Failed to create composite image for ${componentUniqueName}`));
+      return null;
+    }
+
+    const [imgurUrl, totalCount, cardColumnCount, cardRowCount] = result;
+
+    const backImageImgurUrl = await placeAndUploadBackImage(
+      componentUniqueName, 
+      componentInstructions.type, 
+      componentInstructions.backInstructions, 
+      tabletopSimulatorImageDirectoryPath,
+      componentInfo
+    );
+    
+    if (backImageImgurUrl === null) {
+      console.log(chalk.red(`!!! Failed to upload back image for ${componentUniqueName}`));
+      return null;
+    }
+
+    const componentGuid = createHash('md5').update(componentInstructions.uniqueName).digest('hex').slice(0, 6);
+
+    const relativeWidth = componentInfo.DimensionsInches[0] / 2.5;
+    const relativeHeight = relativeWidth;
+    const thickness = 1.0;
+
+    const imageUrls = new SimulatorTilesetUrls(imgurUrl, backImageImgurUrl);
+
+    const [columns, rows] = findBoxiestShape(componentCountTotal);
+    const boxPositionIndexX = componentIndex % columns;
+    const boxPositionIndexZ = Math.floor(componentIndex / columns);
+    const height = 1.5;
+
+    const simulatorComponentPlacement = new SimulatorComponentPlacement(boxPositionIndexX, height, boxPositionIndexZ, columns, rows);
+    const dimensions = new SimulatorDimensions(relativeWidth, relativeHeight, thickness);
+    const layout = new SimulatorTilesetLayout(totalCount, cardColumnCount, cardRowCount);
+
+    const cardQuantities = componentInstructions.frontInstructions.map(instruction => instruction.quantity * componentInstructions.quantity);
+
+    return createDeckObjectState(
+      componentGuid,
+      componentIndex + 1,
+      componentInstructions.uniqueName,
+      imageUrls,
+      simulatorComponentPlacement,
+      dimensions,
+      layout,
+      cardQuantities,
+      deckType
+    );
+  } catch (error) {
+    console.log(chalk.red(`!!! Error creating deck for ${componentInstructions.uniqueName}: ${error}`));
     return null;
   }
-
-  const [imgurUrl, totalCount, cardColumnCount, cardRowCount] = result;
-
-  const backImageImgurUrl = await placeAndUploadBackImage(
-    componentUniqueName, 
-    componentInstructions.type, 
-    componentInstructions.backInstructions, 
-    tabletopSimulatorImageDirectoryPath,
-    componentInfo
-  );
-  
-  if (backImageImgurUrl === null) {
-    console.log(chalk.red(`!!! Failed to upload back image for ${componentUniqueName}`));
-    return null;
-  }
-
-  const componentGuid = createHash('md5').update(componentInstructions.uniqueName).digest('hex').slice(0, 6);
-
-  const relativeWidth = componentInfo.DimensionsInches[0] / 2.5;
-  const relativeHeight = relativeWidth;
-  const thickness = 1.0;
-
-  const imageUrls = new SimulatorTilesetUrls(imgurUrl, backImageImgurUrl);
-
-  const [columns, rows] = findBoxiestShape(componentCountTotal);
-  const boxPositionIndexX = componentIndex % columns;
-  const boxPositionIndexZ = Math.floor(componentIndex / columns);
-  const height = 1.5;
-
-  const simulatorComponentPlacement = new SimulatorComponentPlacement(boxPositionIndexX, height, boxPositionIndexZ, columns, rows);
-  const dimensions = new SimulatorDimensions(relativeWidth, relativeHeight, thickness);
-  const layout = new SimulatorTilesetLayout(totalCount, cardColumnCount, cardRowCount);
-
-  const cardQuantities = componentInstructions.frontInstructions.map(instruction => instruction.quantity * componentInstructions.quantity);
-
-  return createDeckObjectState(
-    componentGuid,
-    componentIndex + 1,
-    componentInstructions.uniqueName,
-    imageUrls,
-    simulatorComponentPlacement,
-    dimensions,
-    layout,
-    cardQuantities,
-    deckType
-  );
 }
 
 /**
@@ -105,56 +110,72 @@ async function createDeck(tabletopSimulatorImageDirectoryPath, componentInstruct
  * @returns {Promise<Object|null>} - Card object state or null if failed
  */
 async function createSingleCard(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal) {
-  // Determine component type based on tags
-  let deckType = 0;  // default type
-  if (componentInfo.Tags.includes("hex")) {
-    deckType = 3;
-  } else if (componentInfo.Tags.includes("circle")) {
-    deckType = 4;
-  }
+  try {
+    // Determine component type based on tags
+    let deckType = 0;  // default type
+    if (componentInfo.Tags.includes("hex")) {
+      deckType = 3;
+    } else if (componentInfo.Tags.includes("circle")) {
+      deckType = 4;
+    }
 
-  // Upload front and back images directly without tiling
-  const frontImage = await safeLoadImage(componentInstructions.frontInstructions[0].filepath, componentInfo.DimensionsPixels);
-  if (!frontImage) {
+    // Upload front and back images directly without tiling
+    const frontImage = await safeLoadImage(componentInstructions.frontInstructions[0].filepath, componentInfo.DimensionsPixels);
+    if (!frontImage) {
+      console.log(chalk.red(`!!! Failed to load front image for ${componentInstructions.uniqueName}`));
+      return null;
+    }
+
+    const backImage = await safeLoadImage(
+      componentInstructions.backInstructions ? componentInstructions.backInstructions.filepath : null, 
+      componentInfo.DimensionsPixels
+    );
+    if (!backImage) {
+      console.log(chalk.red(`!!! Failed to load back image for ${componentInstructions.uniqueName}`));
+      return null;
+    }
+    
+    const frontImgurUrl = await uploadToS3(frontImage);
+    if (!frontImgurUrl) {
+      console.log(chalk.red(`!!! Failed to upload front image for ${componentInstructions.uniqueName}`));
+      return null;
+    }
+    
+    const backImgurUrl = await uploadToS3(backImage);
+    if (!backImgurUrl) {
+      console.log(chalk.red(`!!! Failed to upload back image for ${componentInstructions.uniqueName}`));
+      return null;
+    }
+    
+    const componentGuid = createHash('md5').update(componentInstructions.uniqueName).digest('hex').slice(0, 6);
+    
+    const relativeWidth = componentInfo.DimensionsInches[0] / 2.5;
+    const relativeHeight = componentInfo.DimensionsInches[1] / 3.5;
+    const thickness = 1.0;
+    
+    const imageUrls = new SimulatorTilesetUrls(frontImgurUrl, backImgurUrl);
+    
+    const [columns, rows] = findBoxiestShape(componentCountTotal);
+    const boxPositionIndexX = componentIndex % columns;
+    const boxPositionIndexZ = Math.floor(componentIndex / columns);
+    const height = 1.5;
+    
+    const simulatorComponentPlacement = new SimulatorComponentPlacement(boxPositionIndexX, height, boxPositionIndexZ, columns, rows);
+    const dimensions = new SimulatorDimensions(relativeWidth, relativeHeight, thickness);
+    
+    return createCardObjectState(
+      componentGuid,
+      componentIndex + 1,
+      componentInstructions.uniqueName,
+      imageUrls,
+      simulatorComponentPlacement,
+      dimensions,
+      deckType
+    );
+  } catch (error) {
+    console.log(chalk.red(`!!! Error creating single card for ${componentInstructions.uniqueName}: ${error}`));
     return null;
   }
-
-  const backImage = await safeLoadImage(
-    componentInstructions.backInstructions ? componentInstructions.backInstructions.filepath : null, 
-    componentInfo.DimensionsPixels
-  );
-  if (!backImage) {
-    return null;
-  }
-  
-  const frontImgurUrl = await uploadToS3(frontImage);
-  const backImgurUrl = await uploadToS3(backImage);
-  
-  const componentGuid = createHash('md5').update(componentInstructions.uniqueName).digest('hex').slice(0, 6);
-  
-  const relativeWidth = componentInfo.DimensionsInches[0] / 2.5;
-  const relativeHeight = componentInfo.DimensionsInches[1] / 3.5;
-  const thickness = 1.0;
-  
-  const imageUrls = new SimulatorTilesetUrls(frontImgurUrl, backImgurUrl);
-  
-  const [columns, rows] = findBoxiestShape(componentCountTotal);
-  const boxPositionIndexX = componentIndex % columns;
-  const boxPositionIndexZ = Math.floor(componentIndex / columns);
-  const height = 1.5;
-  
-  const simulatorComponentPlacement = new SimulatorComponentPlacement(boxPositionIndexX, height, boxPositionIndexZ, columns, rows);
-  const dimensions = new SimulatorDimensions(relativeWidth, relativeHeight, thickness);
-  
-  return createCardObjectState(
-    componentGuid,
-    componentIndex + 1,
-    componentInstructions.uniqueName,
-    imageUrls,
-    simulatorComponentPlacement,
-    dimensions,
-    deckType
-  );
 }
 
 module.exports = {

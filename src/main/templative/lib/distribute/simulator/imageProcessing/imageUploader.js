@@ -1,6 +1,4 @@
-const fetch = require('node-fetch');
-const FormData = require('form-data');
-const { Readable } = require('stream');
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const chalk = require('chalk');
 
 /**
@@ -9,30 +7,20 @@ const chalk = require('chalk');
  * @returns {Promise<string|null>} - The URL of the uploaded image or null if upload failed
  */
 async function uploadToS3(image) {
-  // Convert image to buffer
-  const buffer = await image.toBuffer({ format: 'png' });
-  
-  const isDev = false;
-  const baseUrl = isDev ? "http://127.0.0.1:5000" : "https://api.templative.net/";
-  
   try {
-    // Create multipart form data
-    const formData = new FormData();
+    // Convert image to buffer
+    const buffer = await image.toBuffer({ format: 'png' });
     
-    // Create a readable stream from buffer for form-data
-    const stream = new Readable();
-    stream.push(buffer);
-    stream.push(null); // Signal end of stream
+    const isDev = false;
+    const baseUrl = isDev ? "http://127.0.0.1:5000" : "https://api.templative.net/";
     
-    formData.append('image', stream, {
-      filename: 'image.png',
-      contentType: 'image/png'
-    });
-    
+    // Create a simple fetch request with the buffer as the body
     const response = await fetch(`${baseUrl}/simulator/image`, {
       method: 'POST',
-      body: formData,
-      headers: formData.getHeaders ? formData.getHeaders() : {}
+      headers: {
+        'Content-Type': 'application/octet-stream'
+      },
+      body: buffer
     });
     
     if (response.ok) {
