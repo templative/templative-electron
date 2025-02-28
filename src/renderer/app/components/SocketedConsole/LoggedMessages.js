@@ -89,12 +89,49 @@ export class LoggedMessages extends React.Component {
         return <p key={index} className={className}>{spans}</p>
     }
 
-    render() {
+    constructor(props) {
+        super(props);
+        this.state = {
+            internalMessages: []
+        };
+    }
+    
+    async componentDidMount() {
+        // Set up the IPC listener for new log messages
+        ipcRenderer.on(channels.GIVE_LOG_MESSAGE, (event, message) => {
+            this.setState(prevState => ({
+                internalMessages: [...prevState.internalMessages, message]
+            }));
+        });
         
-        var messageElements = [  ] //LoggedMessages.processMessage("!!!Producing /Users/oliverbarnum/Documents/git/peace-of-westphalia/output/westphalia_giftVersion_0.0.0_2024-11-26_01-39-59_abilities", 0, this.props.templativeRootDirectoryPath)
-        if (this.props.messages !== undefined) {
-            messageElements = this.props.messages.map((message, index) => LoggedMessages.processMessage(message, index, this.props.templativeRootDirectoryPath)).reverse();
+        // Fetch existing logs from the main process
+        try {
+            const existingLogs = await ipcRenderer.invoke(channels.TO_SERVER_GET_LOGS);
+            if (existingLogs && existingLogs.length > 0) {
+                this.setState({
+                    internalMessages: existingLogs
+                });
+            }
+        } catch (error) {
+            console.error('Failed to fetch logs:', error);
         }
+    }
+    
+    componentWillUnmount() {
+        ipcRenderer.removeAllListeners(channels.GIVE_LOG_MESSAGE);
+    }
+
+    render() {
+        // Combine props messages with internal messages
+        const allMessages = [...(this.props.messages || []), ...this.state.internalMessages];
+        
+        var messageElements = [];
+        if (allMessages.length > 0) {
+            messageElements = allMessages.map((message, index) => 
+                LoggedMessages.processMessage(message, index, this.props.templativeRootDirectoryPath)
+            ).reverse();
+        }
+        
         return <div className="console-messages">
             {messageElements}
         </div>

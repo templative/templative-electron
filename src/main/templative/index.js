@@ -1,3 +1,4 @@
+const { BrowserWindow } = require('electron');
 const { COMPONENT_INFO } = require('./lib/componentInfo');
 const { STOCK_COMPONENT_INFO } = require('./lib/stockComponentInfo');
 const { createComponentByType } = require('./lib/create/componentCreator');
@@ -6,15 +7,17 @@ const { convertToTabletopPlayground } = require('./lib/distribute/playground/pla
 const { createPdfForPrinting } = require('./lib/distribute/printout/printout');
 const { convertToTabletopSimulator } = require('./lib/distribute/simulator/simulator');
 
+const { withLogCapture } = require('./logStore');
+
 const getComponentInfo = async () => {
   return COMPONENT_INFO;
-}
+};
 
 const getStockComponentInfo = async () => {
   return STOCK_COMPONENT_INFO;
-}
+};
 
-const createTemplativeComponent = async (event, data) => {
+const createTemplativeComponent = withLogCapture(async (event, data) => {
   try {
     const { componentName, componentType, directoryPath, componentAIDescription } = data;
     
@@ -25,10 +28,9 @@ const createTemplativeComponent = async (event, data) => {
     console.error('Error creating component:', error);
     return { success: false, error: error.message };
   }
-}
+});
 
-// Stub implementation for producing a game
-const produceTemplativeProject = async (event, request) => {
+const produceTemplativeProject = withLogCapture(async (event, request) => {
   try {
     const { isDebug, isComplex, componentFilter, language, directoryPath } = request;
     
@@ -39,22 +41,18 @@ const produceTemplativeProject = async (event, request) => {
     console.error('Error producing game:', error);
     return { success: false, error: error.message };
   }
-}
+});
 
-// Stub implementation for getting previews directory
-const getPreviewsDirectory = async (event) => {
+const getPreviewsDirectory = withLogCapture(async (event) => {
   try {
-    // This would normally return the actual previews directory
-    // For now, we'll just return a placeholder
     return { previewsDirectory: getPreviewsPath() };
   } catch (error) {
     console.error('Error getting previews directory:', error);
     return { success: false, error: error.message };
   }
-}
+});
 
-// Stub implementation for previewing a piece
-const previewPiece = async (event, data) => {
+const previewPiece = withLogCapture(async (event, data) => {
   try {
     const { componentFilter, pieceFilter, language, directoryPath } = data;
     
@@ -65,9 +63,9 @@ const previewPiece = async (event, data) => {
     console.error('Error previewing piece:', error);
     return { success: false, error: error.message };
   }
-}
+});
 
-const createTemplativeProject = async (event, data) => {
+const createTemplativeProject = withLogCapture(async (event, data) => {
   try {
     const { directoryPath } = data;
     
@@ -77,10 +75,9 @@ const createTemplativeProject = async (event, data) => {
     console.error('Error previewing piece:', error);
     return { success: false, error: error.message };
   }
-}
+});
 
-// Implementation for creating a Tabletop Playground package
-const createPlaygroundPackage = async (event, data) => {
+const createPlaygroundPackage = withLogCapture(async (event, data) => {
   try {
     const { outputDirectorypath, playgroundPackagesDirectorypath } = data;
     
@@ -91,9 +88,9 @@ const createPlaygroundPackage = async (event, data) => {
     console.error('Error creating Playground package:', error);
     return { success: false, error: error.message };
   }
-}
+});
 
-const createPrintout = async (event, data) => {
+const createPrintout = withLogCapture(async (event, data) => {
   try {
     const { outputDirectorypath, isBackIncluded, size, areMarginsIncluded } = data;
     
@@ -104,9 +101,9 @@ const createPrintout = async (event, data) => {
     console.error('Error creating printout:', error);
     return { success: false, error: error.message };
   }
-}
+});
 
-const createSimulatorSave = async (event, data) => {
+const createSimulatorSave = withLogCapture(async (event, data) => {
   try {
     const { outputDirectorypath, tabletopSimulatorDocumentsDirectorypath } = data;
     
@@ -117,9 +114,9 @@ const createSimulatorSave = async (event, data) => {
     console.error('Error creating simulator save:', error);
     return { success: false, error: error.message };
   }
-}
+});
 
-const listGameCrafterDesigners = async (event, data) => {
+const listGameCrafterDesigners = withLogCapture(async (event, data) => {
   try {
     // gameCrafterSession = await createSessionFromLogin(id, userId)
     // designers = await listDesigners(gameCrafterSession)
@@ -129,9 +126,9 @@ const listGameCrafterDesigners = async (event, data) => {
     console.error('Error listing designers:', error);
     return { success: false, error: error.message };
   }
-}
+});
 
-const uploadTemplativeProjectToGameCrafter = async (event, data) => {
+const uploadTemplativeProjectToGameCrafter = withLogCapture(async (event, data) => {
   try {
     const { gameRootDirectoryPath, outputDirectory, isPublish, isStock, isProofed, designerId } = data;
     
@@ -142,7 +139,8 @@ const uploadTemplativeProjectToGameCrafter = async (event, data) => {
     console.error('Error uploading game:', error);
     return { success: false, error: error.message };
   }
-}
+});
+
 module.exports = {
   getComponentInfo,
   getStockComponentInfo,
