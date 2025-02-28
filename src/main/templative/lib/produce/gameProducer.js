@@ -1,0 +1,219 @@
+const os = require('os');
+const path = require('path');
+const fsPromises = require('fs').promises;
+const fs = require('fs');
+const glob = require('glob');
+const chalk = require('chalk');
+
+const outputWriter = require('./outputWriter');
+const rulesMarkdownProcessor = require('./rulesMarkdownProcessor');
+const defineLoader = require('../manage/defineLoader');
+const customComponents = require('./customComponents/customComponents');
+const ProduceProperties = require('../manage/models/produceProperties').ProduceProperties;
+const PreviewProperties = require('../manage/models/produceProperties').PreviewProperties;
+const GameData = require('../manage/models/gamedata').GameData;
+const ComponentComposition = require('../manage/models/composition');
+const FontCache = require('./customComponents/svgscissors/fontCache').FontCache;
+const findInkscape = require('./customComponents/svgscissors/inkscapeProcessor').findInkscape;
+
+function getPreviewsPath() {
+    let base_path;
+    if (process.resourcesPath) {
+        base_path = process.resourcesPath;
+    } else {
+        base_path = path.resolve(".");
+    }
+
+    const previewsPath = path.join(base_path, "previews");
+    if (!fs.existsSync(previewsPath)) {
+        fs.mkdirSync(previewsPath, { recursive: true });
+    }
+    return previewsPath;
+}
+
+async function deleteFile(file) {
+    try {
+        await fsPromises.unlink(file);
+    } catch (e) {
+        console.log(`Error deleting ${file}: ${e}`);
+    }
+}
+
+async function clearPreviews(directoryPath) {
+    const files = glob.sync(path.join(directoryPath, '*'));
+    await Promise.all(files.map(deleteFile));
+}
+
+async function producePiecePreview(gameRootDirectoryPath, componentName, pieceName, language) {
+    if (!gameRootDirectoryPath) {
+        throw new Error("Game root directory path is invalid.");
+    }
+    
+    if (!findInkscape()) {
+        console.log("Inkscape is required to render previews. Download it at https://inkscape.org/");
+        return;
+    }
+    
+    const gameCompose = await defineLoader.loadGameCompose(gameRootDirectoryPath);
+    const gameDataBlob = await defineLoader.loadGame(gameRootDirectoryPath);
+    const studioDataBlob = await defineLoader.loadStudio(gameRootDirectoryPath);
+    const componentsCompose = await defineLoader.loadComponentCompose(gameRootDirectoryPath);
+    let component = null;
+    for (const componentCompose of componentsCompose) {
+        const isMatchingComponentFilter = componentCompose["name"] === componentName;
+        if (!isMatchingComponentFilter) {
+            continue;
+        }
+        component = componentCompose;
+    }
+    const componentComposition = new ComponentComposition(gameCompose, component);
+    const gameData = new GameData(studioDataBlob, gameDataBlob);
+    const outputDirectoryPath = getPreviewsPath();
+    await clearPreviews(outputDirectoryPath);
+    const previewProperties = new PreviewProperties(gameRootDirectoryPath, outputDirectoryPath, pieceName, language);
+    const fontCache = new FontCache();
+    await customComponents.produceCustomComponentPreview(previewProperties, gameData, componentComposition, fontCache);
+}
+
+async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage) {
+    if (!gameRootDirectoryPath) {
+        throw new Error("Game root directory path is invalid.");
+    }
+    
+    if (!findInkscape()) {
+        console.log(chalk.red("!!!Inkscape is required to produce your game. Download it at https://inkscape.org/"));
+        return;
+    }
+
+    const gameDataBlob = await defineLoader.loadGame(gameRootDirectoryPath);
+
+    const timestamp = new Date().toISOString().replace(/T/, '_').replace(/\..+/, '').replace(/:/g, '-'); 
+    let componentFilterString = "";
+    if (componentFilter != null) {
+        componentFilterString = `_${componentFilter}`;
+    }
+    const uniqueGameName = `${gameDataBlob['name']}_${gameDataBlob['versionName']}_${gameDataBlob['version']}_${timestamp}${componentFilterString}`.replace(/\s/g, "");
+    
+    // This stuff isnt typically stored in the game.json, but it is for exporting
+    gameDataBlob["timestamp"] = timestamp;
+    gameDataBlob["componentFilter"] = componentFilter;
+
+    const gameCompose = await defineLoader.loadGameCompose(gameRootDirectoryPath);
+
+    const outputDirectoryPath = await outputWriter.createGameFolder(gameRootDirectoryPath, gameCompose["outputDirectory"], uniqueGameName);
+    await outputWriter.updateLastOutputFolder(gameRootDirectoryPath, gameCompose["outputDirectory"], outputDirectoryPath);
+    console.log(`Producing ${path.normalize(outputDirectoryPath)}`);
+
+    const tasks = [];
+    tasks.push(outputWriter.copyGameFromGameFolderToOutput(gameDataBlob, outputDirectoryPath));
+
+    const studioDataBlob = await defineLoader.loadStudio(gameRootDirectoryPath);
+    tasks.push(outputWriter.copyStudioFromGameFolderToOutput(studioDataBlob, outputDirectoryPath));
+
+    const componentsCompose = await defineLoader.loadComponentCompose(gameRootDirectoryPath);
+
+    const gameData = new GameData(studioDataBlob, gameDataBlob);
+    const produceProperties = new ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage);
+    const fontCache = new FontCache();
+    for (const componentCompose of componentsCompose) {
+        const isProducingOneComponent = componentFilter != null;
+        const isMatchingComponentFilter = isProducingOneComponent && componentCompose["name"] === componentFilter;
+        if (!isMatchingComponentFilter && componentCompose["disabled"]) {
+            if (!isProducingOneComponent) {
+                console.log(`Skipping disabled ${componentCompose["name"]} component.`);
+            }
+            continue;
+        }
+
+        const isDebugInfo = componentCompose["isDebugInfo"] ?? false;
+        if (isDebugInfo && isPublish) {
+            console.log(`Skipping debug only ${componentCompose["name"]} component as we are publishing.`);
+            continue;
+        }
+
+        if (isProducingOneComponent && !isMatchingComponentFilter) {
+            continue;
+        }
+        
+        if (componentCompose["quantity"] === 0 && !isMatchingComponentFilter) {
+            console.log(`Skipping ${componentCompose["name"]} component as it has a quantity of 0.`);
+            continue;
+        }
+        
+        // Skip components that dont have fronts
+        // This doesnt handle uniqueBacks
+        const componentType = componentCompose["type"];
+        const componentTypeTokens = componentType.split("_");
+        const isCustomComponent = componentTypeTokens[0].toUpperCase() !== "STOCK";
+        const isDie = !("piecesGamedataFilename" in componentCompose);
+        
+        if (isCustomComponent && !isDie) {
+            let needsToProduceAPiece = false;
+            
+            const piecesGamedata = await defineLoader.loadPiecesGamedata(gameRootDirectoryPath, gameCompose, componentCompose["piecesGamedataFilename"]);
+            for (const piece of piecesGamedata) {
+                if (!("quantity" in piece) || piece["quantity"] > 0) {
+                    needsToProduceAPiece = true;
+                    break; 
+                }
+            }
+                
+            if (!needsToProduceAPiece) {
+                console.log(`Skipping ${componentCompose['name']} due to not having any pieces to make.`);
+                continue;
+            }
+        }
+        const componentComposition = new ComponentComposition(gameCompose, componentCompose);
+
+        tasks.push(produceGameComponent(produceProperties, gameData, componentComposition, fontCache));
+    }
+
+    const rules = await defineLoader.loadRules(gameRootDirectoryPath);
+    tasks.push(rulesMarkdownProcessor.produceRulebook(rules, outputDirectoryPath));
+
+    await Promise.all(tasks);
+
+    console.log(`Done producing ${path.normalize(outputDirectoryPath)}`);
+
+    return outputDirectoryPath;
+}
+
+async function produceGameComponent(produceProperties, gamedata, componentComposition, fontCache) {
+    const componentType = componentComposition.componentCompose["type"];
+    const componentTypeTokens = componentType.split("_");
+    const isStockComponent = componentTypeTokens[0].toUpperCase() === "STOCK";
+
+    if (isStockComponent) {
+        await produceStockComponent(componentComposition.componentCompose, produceProperties.outputDirectoryPath);
+        return;
+    }
+
+    await customComponents.produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache);
+}
+
+async function produceStockComponent(componentCompose, outputDirectory) {
+    const componentName = componentCompose["name"];
+
+    console.log(`Outputing stock parts for ${componentName} component.`);
+
+    const componentDirectory = await outputWriter.createComponentFolder(componentName, outputDirectory);
+
+    const stockPartInstructions = {
+        "name": componentCompose["name"],
+        "quantity": componentCompose["quantity"],
+        "type": componentCompose["type"]
+    };
+
+    const componentInstructionFilepath = path.join(componentDirectory, "component.json");
+    await outputWriter.dumpInstructions(componentInstructionFilepath, stockPartInstructions);
+}
+
+module.exports = {
+    getPreviewsPath,
+    deleteFile,
+    clearPreviews,
+    producePiecePreview,
+    produceGame,
+    produceGameComponent,
+    produceStockComponent
+};
