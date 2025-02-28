@@ -50,7 +50,7 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     }
     
     if (!findInkscape()) {
-        console.log("Inkscape is required to render previews. Download it at https://inkscape.org/");
+        console.log("!!! Inkscape is required to render previews. Download it at https://inkscape.org/");
         return;
     }
     
@@ -73,6 +73,7 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     const previewProperties = new PreviewProperties(gameRootDirectoryPath, outputDirectoryPath, pieceName, language);
     const fontCache = new FontCache();
     await customComponents.produceCustomComponentPreview(previewProperties, gameData, componentComposition, fontCache);
+    console.log(`Wrote previews to ${outputDirectoryPath}`);
 }
 
 async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage) {
