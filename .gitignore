@@ -3,6 +3,8 @@
 /python/previews/*
 
 # dependencies
+test-project/
+previews/
 /node_modules
 /.pnp
 .pnp.js
