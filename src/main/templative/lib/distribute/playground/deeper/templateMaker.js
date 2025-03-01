@@ -59,7 +59,7 @@ function createCardTemplateData(guid, name, componentTypeInfo, frontTextureName,
     const dimensions = [
         componentTypeInfo["DimensionsPixels"][0] * gameCrafterScaleToPlaygroundScale, 
         componentTypeInfo["DimensionsPixels"][1] * gameCrafterScaleToPlaygroundScale, 
-        componentTypeInfo["PlaygroundThickness"]
+        componentTypeInfo["Thickness"]
     ];
     
     const indices = [];

@@ -8,7 +8,6 @@ async function produceRulebook(rulesMdContent, gameFolderPath) {
   try {
     // Diagnostic checks
     const cwd = process.cwd();
-    console.log(`Current working directory: ${cwd}`);
     
     // Create temporary CSS files
     const tempFiles = [];
@@ -48,7 +47,6 @@ async function produceRulebook(rulesMdContent, gameFolderPath) {
     try {
       fs.writeFileSync(tempCssPath, cssContent);
       tempFiles.push(tempCssPath);
-      console.log(`Created temporary CSS file: ${tempCssPath}`);
     } catch (cssError) {
       console.warn(`Warning: Could not create temporary CSS file: ${cssError.message}`);
     }
@@ -64,7 +62,6 @@ async function produceRulebook(rulesMdContent, gameFolderPath) {
       if (!fs.existsSync(dir)) {
         try {
           fs.mkdirSync(dir, { recursive: true });
-          console.log(`Created styles directory: ${dir}`);
         } catch (dirError) {
           console.warn(`Warning: Could not create styles directory ${dir}: ${dirError.message}`);
         }
@@ -159,25 +156,18 @@ async function produceRulebook(rulesMdContent, gameFolderPath) {
       try {
         fs.writeFileSync(githubCssPath, githubCssContent);
         tempFiles.push(githubCssPath);
-        console.log(`Created GitHub syntax highlighting file: ${githubCssPath}`);
       } catch (githubCssError) {
         console.warn(`Warning: Could not create GitHub CSS file at ${githubCssPath}: ${githubCssError.message}`);
       }
     });
 
-    // Check possible CSS paths
-    [tempCssPath, path.join(__dirname, 'markdown.css'), path.join(process.resourcesPath || '', 'markdown.css')].forEach(cssPath => {
-      console.log(`Checking for CSS at: ${cssPath}`);
-      console.log(`CSS file exists: ${fs.existsSync(cssPath)}`);
-    });
+    
 
     const outputFilepath = join(gameFolderPath, 'rules.pdf');
-    console.log(`Will output PDF to: ${outputFilepath}`);
     
     // Try to resolve the specific bundle path structure
     const bundlePath = path.join(cwd, '.webpack', 'main');
     const isBundled = fs.existsSync(bundlePath);
-    console.log(`Is running from webpack bundle: ${isBundled}`);
     
     // Create PDF with explicit options
     const pdfOptions = { 
@@ -207,7 +197,6 @@ async function produceRulebook(rulesMdContent, gameFolderPath) {
       tempFiles.forEach(file => {
         try {
           fs.unlinkSync(file);
-          console.log(`Temporary file removed: ${file}`);
         } catch (cleanupError) {
           console.warn(`Warning: Could not remove temporary file ${file}: ${cleanupError.message}`);
         }
@@ -218,7 +207,6 @@ async function produceRulebook(rulesMdContent, gameFolderPath) {
         if (fs.existsSync(dir)) {
           try {
             fs.rmdirSync(dir);
-            console.log(`Removed temporary styles directory: ${dir}`);
           } catch (rmDirError) {
             console.warn(`Warning: Could not remove temporary styles directory ${dir}: ${rmDirError.message}`);
           }

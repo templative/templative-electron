@@ -30,8 +30,8 @@ const addSpaces = (str) => {
 }
 
 const majorCategories = [
-    "deck", "die", "board","token","mat","packaging","box", "document",
-    "animal", "blank", "building", "minifig", "vehicle"
+    "deck", "die", "board","token","mat","packaging", "box", "document",
+    "animal", "blank", "building", "minifig", "vehicle", "meeple"
 ]
 
 export default class CreatePanel extends React.Component {   

@@ -1,0 +1,2396 @@
+{
+  "totalFiles": 2819,
+  "prefixes": {
+    "MeepleLargeAcrylicTransparent": [
+      "MeepleLargeAcrylicTransparentClear.png",
+      "MeepleLargeAcrylicTransparentGreen.png",
+      "MeepleLargeAcrylicTransparentOrange.png",
+      "MeepleLargeAcrylicTransparentPurple.png",
+      "MeepleLargeAcrylicTransparentRed.png",
+      "MeepleLargeAcrylicTransparentWhite.png",
+      "MeepleLargeAcrylicTransparentYellow.png"
+    ],
+    "MeepleMiniAcrylicTransparent": [
+      "MeepleMiniAcrylicTransparentClear.png",
+      "MeepleMiniAcrylicTransparentGreen.png",
+      "MeepleMiniAcrylicTransparentOrange.png",
+      "MeepleMiniAcrylicTransparentPurple.png",
+      "MeepleMiniAcrylicTransparentRed.png",
+      "MeepleMiniAcrylicTransparentYellow.png"
+    ],
+    "ManAmericanRevolutionTB15": [
+      "ManAmericanRevolutionTB15Green.png",
+      "ManAmericanRevolutionTB15Orange.png",
+      "ManAmericanRevolutionTB15Purple.png",
+      "ManAmericanRevolutionTB15Red.png",
+      "ManAmericanRevolutionTB15White.png",
+      "ManAmericanRevolutionTB15Yellow.png"
+    ],
+    "ShipModernAircraftCarrier": [
+      "ShipModernAircraftCarrierBlack.png",
+      "ShipModernAircraftCarrierGreen.png",
+      "ShipModernAircraftCarrierOrange.png",
+      "ShipModernAircraftCarrierPurple.png",
+      "ShipModernAircraftCarrierWhite.png"
+    ],
+    "Snap&StackConditionMarker": [
+      "Snap&StackConditionMarkerGreen.png",
+      "Snap&StackConditionMarkerPink.png",
+      "Snap&StackConditionMarkerWhite.png",
+      "Snap&StackConditionMarkerYellow.png"
+    ],
+    "AcrylicTrainModernEngine": [
+      "AcrylicTrainModernEngineGreen.png",
+      "AcrylicTrainModernEngineOrange.png",
+      "AcrylicTrainModernEnginePurple.png",
+      "AcrylicTrainModernEngineRed.png",
+      "AcrylicTrainModernEngineWhite.png",
+      "AcrylicTrainModernEngineYellow.png"
+    ],
+    "AcrylicTrainPassengerCar": [
+      "AcrylicTrainPassengerCarGreen.png",
+      "AcrylicTrainPassengerCarOrange.png",
+      "AcrylicTrainPassengerCarPurple.png",
+      "AcrylicTrainPassengerCarRed.png",
+      "AcrylicTrainPassengerCarWhite.png",
+      "AcrylicTrainPassengerCarYellow.png"
+    ],
+    "ChurchAcrylicTransparent": [
+      "ChurchAcrylicTransparentClear.png",
+      "ChurchAcrylicTransparentGreen.png",
+      "ChurchAcrylicTransparentOrange.png",
+      "ChurchAcrylicTransparentPurple.png",
+      "ChurchAcrylicTransparentRed.png",
+      "ChurchAcrylicTransparentWhite.png",
+      "ChurchAcrylicTransparentYellow.png"
+    ],
+    "DinosaurAnkylosaurusWood": [
+      "DinosaurAnkylosaurusWoodBlue.png",
+      "DinosaurAnkylosaurusWoodGreen.png",
+      "DinosaurAnkylosaurusWoodOrange.png",
+      "DinosaurAnkylosaurusWoodRed.png",
+      "DinosaurAnkylosaurusWoodWhite.png"
+    ],
+    "MeepleAcrylicTransparent": [
+      "MeepleAcrylicTransparentClear.png",
+      "MeepleAcrylicTransparentGreen.png",
+      "MeepleAcrylicTransparentOrange.png",
+      "MeepleAcrylicTransparentPurple.png",
+      "MeepleAcrylicTransparentRed.png",
+      "MeepleAcrylicTransparentWhite.png",
+      "MeepleAcrylicTransparentYellow.png"
+    ],
+    "MeepleLargeAcrylicOpaque": [
+      "MeepleLargeAcrylicOpaqueBlack.png",
+      "MeepleLargeAcrylicOpaqueGold.png",
+      "MeepleLargeAcrylicOpaqueSilver.png",
+      "MeepleLargeAcrylicOpaqueWhite.png"
+    ],
+    "AcrylicTrainSteamEngine": [
+      "AcrylicTrainSteamEngineGreen.png",
+      "AcrylicTrainSteamEngineOrange.png",
+      "AcrylicTrainSteamEnginePurple.png",
+      "AcrylicTrainSteamEngineRed.png",
+      "AcrylicTrainSteamEngineWhite.png",
+      "AcrylicTrainSteamEngineYellow.png"
+    ],
+    "CardConnector120-degree": [
+      "CardConnector120-degreeGreen.png",
+      "CardConnector120-degreeOrange.png",
+      "CardConnector120-degreePurple.png",
+      "CardConnector120-degreeRed.png",
+      "CardConnector120-degreeWhite.png",
+      "CardConnector120-degreeYellow.png"
+    ],
+    "Disc18mmx3mmFluorescent": [
+      "Disc18mmx3mmFluorescentGreen.png",
+      "Disc18mmx3mmFluorescentOrange.png",
+      "Disc18mmx3mmFluorescentRed.png",
+      "Disc18mmx3mmFluorescentYellow.png"
+    ],
+    "Disc18mmx3mmTransparent": [
+      "Disc18mmx3mmTransparentBlue.png",
+      "Disc18mmx3mmTransparentOrange.png",
+      "Disc18mmx3mmTransparentPurple.png",
+      "Disc18mmx3mmTransparentRed.png",
+      "Disc18mmx3mmTransparentYellow.png"
+    ],
+    "Disc18mmx6mmFluorescent": [
+      "Disc18mmx6mmFluorescentBlue.png",
+      "Disc18mmx6mmFluorescentGreen.png",
+      "Disc18mmx6mmFluorescentOrange.png",
+      "Disc18mmx6mmFluorescentRed.png",
+      "Disc18mmx6mmFluorescentYellow.png"
+    ],
+    "Disc18mmx6mmTransparent": [
+      "Disc18mmx6mmTransparentBlue.png",
+      "Disc18mmx6mmTransparentOrange.png",
+      "Disc18mmx6mmTransparentPurple.png",
+      "Disc18mmx6mmTransparentRed.png",
+      "Disc18mmx6mmTransparentYellow.png"
+    ],
+    "Disc25mmx3mmFluorescent": [
+      "Disc25mmx3mmFluorescentBlue.png",
+      "Disc25mmx3mmFluorescentGreen.png",
+      "Disc25mmx3mmFluorescentOrange.png",
+      "Disc25mmx3mmFluorescentRed.png",
+      "Disc25mmx3mmFluorescentYellow.png"
+    ],
+    "Disc25mmx3mmTransparent": [
+      "Disc25mmx3mmTransparentBlue.png",
+      "Disc25mmx3mmTransparentOrange.png",
+      "Disc25mmx3mmTransparentPurple.png",
+      "Disc25mmx3mmTransparentRed.png",
+      "Disc25mmx3mmTransparentYellow.png"
+    ],
+    "Disc25mmx6mmFluorescent": [
+      "Disc25mmx6mmFluorescentBlue.png",
+      "Disc25mmx6mmFluorescentGreen.png",
+      "Disc25mmx6mmFluorescentOrange.png",
+      "Disc25mmx6mmFluorescentRed.png",
+      "Disc25mmx6mmFluorescentYellow.png"
+    ],
+    "Disc25mmx6mmTransparent": [
+      "Disc25mmx6mmTransparentBlue.png",
+      "Disc25mmx6mmTransparentOrange.png",
+      "Disc25mmx6mmTransparentPurple.png",
+      "Disc25mmx6mmTransparentRed.png",
+      "Disc25mmx6mmTransparentYellow.png"
+    ],
+    "HouseAcrylicTransparent": [
+      "HouseAcrylicTransparentClear.png",
+      "HouseAcrylicTransparentGreen.png",
+      "HouseAcrylicTransparentOrange.png",
+      "HouseAcrylicTransparentPurple.png",
+      "HouseAcrylicTransparentRed.png",
+      "HouseAcrylicTransparentYellow.png"
+    ],
+    "MeepleMiniAcrylicOpaque": [
+      "MeepleMiniAcrylicOpaqueBlack.png",
+      "MeepleMiniAcrylicOpaqueGold.png",
+      "MeepleMiniAcrylicOpaqueSilver.png",
+      "MeepleMiniAcrylicOpaqueWhite.png"
+    ],
+    "StickAcrylicTransparent": [
+      "StickAcrylicTransparentClear.png",
+      "StickAcrylicTransparentGreen.png",
+      "StickAcrylicTransparentPurple.png",
+      "StickAcrylicTransparentRed.png",
+      "StickAcrylicTransparentWhite.png",
+      "StickAcrylicTransparentYellow.png",
+      "StickAcrylicTransparentorange.png"
+    ],
+    "WomanPostApocalypseTB15": [
+      "WomanPostApocalypseTB15Green.png",
+      "WomanPostApocalypseTB15Orange.png",
+      "WomanPostApocalypseTB15Purple.png",
+      "WomanPostApocalypseTB15Red.png",
+      "WomanPostApocalypseTB15White.png",
+      "WomanPostApocalypseTB15Yellow.png"
+    ],
+    "BlankMintTinAccordion(": [
+      "BlankMintTinAccordion(4Panel).png",
+      "BlankMintTinAccordion(6Panel).png",
+      "BlankMintTinAccordion(8Panel).png"
+    ],
+    "CardConnector90-degree": [
+      "CardConnector90-degreeGreen.png",
+      "CardConnector90-degreeOrange.png",
+      "CardConnector90-degreePurple.png",
+      "CardConnector90-degreeRed.png",
+      "CardConnector90-degreeWhite.png",
+      "CardConnector90-degreeYellow.png"
+    ],
+    "IceCube10mmTransparent": [
+      "IceCube10mmTransparentClear.png",
+      "IceCube10mmTransparentGreen.png",
+      "IceCube10mmTransparentOrange.png",
+      "IceCube10mmTransparentPurple.png",
+      "IceCube10mmTransparentRed.png",
+      "IceCube10mmTransparentWhite.png",
+      "IceCube10mmTransparentYellow.png"
+    ],
+    "IceCube12mmTransparent": [
+      "IceCube12mmTransparentClear.png",
+      "IceCube12mmTransparentGreen.png",
+      "IceCube12mmTransparentOrange.png",
+      "IceCube12mmTransparentPurple.png",
+      "IceCube12mmTransparentRed.png",
+      "IceCube12mmTransparentWhite.png",
+      "IceCube12mmTransparentYellow.png"
+    ],
+    "PaperMiniatureBase25mm": [
+      "PaperMiniatureBase25mmClear.png",
+      "PaperMiniatureBase25mmGreen.png",
+      "PaperMiniatureBase25mmOrange.png",
+      "PaperMiniatureBase25mmPurple.png",
+      "PaperMiniatureBase25mmRed.png",
+      "PaperMiniatureBase25mmWhite.png",
+      "PaperMiniatureBase25mmYellow.png"
+    ],
+    "StickerPawnTransparent": [
+      "StickerPawnTransparentBlue.png",
+      "StickerPawnTransparentClear.png",
+      "StickerPawnTransparentGreen.png",
+      "StickerPawnTransparentOrange.png",
+      "StickerPawnTransparentPurple.png",
+      "StickerPawnTransparentRed.png",
+      "StickerPawnTransparentYellow.png"
+    ],
+    "BuildingSmallSideDoor": [
+      "BuildingSmallSideDoorGreen.png",
+      "BuildingSmallSideDoorOrange.png",
+      "BuildingSmallSideDoorPurple.png",
+      "BuildingSmallSideDoorRed.png",
+      "BuildingSmallSideDoorWhite.png",
+      "BuildingSmallSideDoorYellow.png"
+    ],
+    "DinosaurTyrannosaurus": [
+      "DinosaurTyrannosaurus.png",
+      "DinosaurTyrannosaurusBlue.png",
+      "DinosaurTyrannosaurusDarkGreen.png",
+      "DinosaurTyrannosaurusGreen.png",
+      "DinosaurTyrannosaurusOrange.png",
+      "DinosaurTyrannosaurusRed.png"
+    ],
+    "IceCube8mmTransparent": [
+      "IceCube8mmTransparentClear.png",
+      "IceCube8mmTransparentGreen.png",
+      "IceCube8mmTransparentOrange.png",
+      "IceCube8mmTransparentPurple.png",
+      "IceCube8mmTransparentRed.png",
+      "IceCube8mmTransparentWhite.png",
+      "IceCube8mmTransparentYellow.png"
+    ],
+    "LocomotiveTrainEngine": [
+      "LocomotiveTrainEngineBlack.png",
+      "LocomotiveTrainEngineGreen.png",
+      "LocomotiveTrainEngineLightBlue.png",
+      "LocomotiveTrainEngineOrange.png",
+      "LocomotiveTrainEngineTan.png"
+    ],
+    "ManPostApocalypseTB15": [
+      "ManPostApocalypseTB15Green.png",
+      "ManPostApocalypseTB15Orange.png",
+      "ManPostApocalypseTB15Purple.png",
+      "ManPostApocalypseTB15Red.png",
+      "ManPostApocalypseTB15White.png",
+      "ManPostApocalypseTB15Yellow.png"
+    ],
+    "ShipSeaVikingLongboat": [
+      "ShipSeaVikingLongboatGreen.png",
+      "ShipSeaVikingLongboatOrange.png",
+      "ShipSeaVikingLongboatPurple.png",
+      "ShipSeaVikingLongboatRed.png",
+      "ShipSeaVikingLongboatWhite.png",
+      "ShipSeaVikingLongboatYellow.png"
+    ],
+    "SprueCivilWarMilitary": [
+      "SprueCivilWarMilitaryBlue.png",
+      "SprueCivilWarMilitaryGrey.png",
+      "SprueCivilWarMilitaryLtBlue.png",
+      "SprueCivilWarMilitaryRed.png"
+    ],
+    "VialLiquidFluorescent": [
+      "VialLiquidFluorescentBlue.png",
+      "VialLiquidFluorescentGreen.png",
+      "VialLiquidFluorescentOrange.png",
+      "VialLiquidFluorescentRed.png",
+      "VialLiquidFluorescentYellow.png"
+    ],
+    "VialLiquidTransparent": [
+      "VialLiquidTransparentGreen.png",
+      "VialLiquidTransparentOrange.png",
+      "VialLiquidTransparentPurple.png",
+      "VialLiquidTransparentRed.png",
+      "VialLiquidTransparentYellow.png"
+    ],
+    "D316mmRoundedNumeral": [
+      "D316mmRoundedNumeralBlack.png",
+      "D316mmRoundedNumeralGreen.png",
+      "D316mmRoundedNumeralWhite.png",
+      "D316mmRoundedNumeralYellow.png"
+    ],
+    "MiniatureBase25mmHex": [
+      "MiniatureBase25mmHexGreen.png",
+      "MiniatureBase25mmHexOrange.png",
+      "MiniatureBase25mmHexPurple.png",
+      "MiniatureBase25mmHexRed.png",
+      "MiniatureBase25mmHexWhite.png",
+      "MiniatureBase25mmHexYellow.png"
+    ],
+    "ShipModernBattleship": [
+      "ShipModernBattleshipBlack.png",
+      "ShipModernBattleshipGreen.png",
+      "ShipModernBattleshipOrange.png",
+      "ShipModernBattleshipPurple.png",
+      "ShipModernBattleshipWhite.png"
+    ],
+    "VialLiquidOpaqueBlue": [
+      "VialLiquidOpaqueBlue1.png",
+      "VialLiquidOpaqueBlue2.png",
+      "VialLiquidOpaqueBlue3.png"
+    ],
+    "AcrylicTrainCaboose": [
+      "AcrylicTrainCabooseGreen.png",
+      "AcrylicTrainCabooseOrange.png",
+      "AcrylicTrainCaboosePurple.png",
+      "AcrylicTrainCabooseRed.png",
+      "AcrylicTrainCabooseWhite.png",
+      "AcrylicTrainCabooseYellow.png"
+    ],
+    "AcrylicTrainCoalCar": [
+      "AcrylicTrainCoalCarGreen.png",
+      "AcrylicTrainCoalCarOrange.png",
+      "AcrylicTrainCoalCarPurple.png",
+      "AcrylicTrainCoalCarRed.png",
+      "AcrylicTrainCoalCarWhite.png",
+      "AcrylicTrainCoalCarYellow.png"
+    ],
+    "AcrylicTrainFlatBed": [
+      "AcrylicTrainFlatBedGreen.png",
+      "AcrylicTrainFlatBedOrange.png",
+      "AcrylicTrainFlatBedPurple.png",
+      "AcrylicTrainFlatBedRed.png",
+      "AcrylicTrainFlatBedWhite.png",
+      "AcrylicTrainFlatBedYellow.png"
+    ],
+    "AcrylicTrainTankCar": [
+      "AcrylicTrainTankCarGreen.png",
+      "AcrylicTrainTankCarOrange.png",
+      "AcrylicTrainTankCarPurple.png",
+      "AcrylicTrainTankCarRed.png",
+      "AcrylicTrainTankCarWhite.png",
+      "AcrylicTrainTankCarYellow.png"
+    ],
+    "ChurchAcrylicOpaque": [
+      "ChurchAcrylicOpaqueBlack.png",
+      "ChurchAcrylicOpaqueGold.png",
+      "ChurchAcrylicOpaqueSilver.png",
+      "ChurchAcrylicOpaqueWhite.png"
+    ],
+    "D616mmLightningBolt": [
+      "D616mmLightningBoltBrown.png",
+      "D616mmLightningBoltGreen.png",
+      "D616mmLightningBoltYellow.png"
+    ],
+    "ManSamuraiArmorTB15": [
+      "ManSamuraiArmorTB15Green.png",
+      "ManSamuraiArmorTB15Orange.png",
+      "ManSamuraiArmorTB15Purple.png",
+      "ManSamuraiArmorTB15Red.png",
+      "ManSamuraiArmorTB15White.png",
+      "ManSamuraiArmorTB15Yellow.png"
+    ],
+    "MeepleAcrylicOpaque": [
+      "MeepleAcrylicOpaqueBlack.png",
+      "MeepleAcrylicOpaqueGold.png",
+      "MeepleAcrylicOpaqueSilver.png",
+      "MeepleAcrylicOpaqueWhite.png"
+    ],
+    "ShipModernContainer": [
+      "ShipModernContainerBlack.png",
+      "ShipModernContainerGreen.png",
+      "ShipModernContainerOrange.png",
+      "ShipModernContainerPurple.png",
+      "ShipModernContainerWhite.png"
+    ],
+    "ShipModernDestroyer": [
+      "ShipModernDestroyerBlack.png",
+      "ShipModernDestroyerGreen.png",
+      "ShipModernDestroyerOrange.png",
+      "ShipModernDestroyerPurple.png",
+      "ShipModernDestroyerWhite.png"
+    ],
+    "ShipModernSubmarine": [
+      "ShipModernSubmarineBlack.png",
+      "ShipModernSubmarineGreen.png",
+      "ShipModernSubmarineOrange.png",
+      "ShipModernSubmarinePurple.png",
+      "ShipModernSubmarineWhite.png"
+    ],
+    "ShipModernTransport": [
+      "ShipModernTransportBlack.png",
+      "ShipModernTransportGreen.png",
+      "ShipModernTransportOrange.png",
+      "ShipModernTransportPurple.png",
+      "ShipModernTransportWhite.png"
+    ],
+    "SliderClipChipboard": [
+      "SliderClipChipboardGreen.png",
+      "SliderClipChipboardOrange.png",
+      "SliderClipChipboardPurple.png",
+      "SliderClipChipboardRed.png",
+      "SliderClipChipboardWhite.png",
+      "SliderClipChipboardYellow.png"
+    ],
+    "Wink22mmTranslucent": [
+      "Wink22mmTranslucentGreen.png",
+      "Wink22mmTranslucentOrange.png",
+      "Wink22mmTranslucentPurple.png",
+      "Wink22mmTranslucentRed.png",
+      "Wink22mmTranslucentYellow.png"
+    ],
+    "AcrylicTrainBoxCar": [
+      "AcrylicTrainBoxCarGreen.png",
+      "AcrylicTrainBoxCarOrange.png",
+      "AcrylicTrainBoxCarPurple.png",
+      "AcrylicTrainBoxCarRed.png",
+      "AcrylicTrainBoxCarWhite.png",
+      "AcrylicTrainBoxCarYellow.png"
+    ],
+    "BlankBoxHookPoker(": [
+      "BlankBoxHookPoker(36).png",
+      "BlankBoxHookPoker(54).png",
+      "BlankBoxHookPoker(72).png",
+      "BlankBoxHookPoker(90).png"
+    ],
+    "BlankBoxTuckPoker(": [
+      "BlankBoxTuckPoker(108).png",
+      "BlankBoxTuckPoker(36).png",
+      "BlankBoxTuckPoker(54).png",
+      "BlankBoxTuckPoker(72).png",
+      "BlankBoxTuckPoker(90).png"
+    ],
+    "ClearPokerTuckBox(": [
+      "ClearPokerTuckBox(200).png",
+      "ClearPokerTuckBox(41).png",
+      "ClearPokerTuckBox(66).png"
+    ],
+    "ColonialLumberjack": [
+      "ColonialLumberjackBlue.png",
+      "ColonialLumberjackGreen.png",
+      "ColonialLumberjackOrange.png",
+      "ColonialLumberjackRed.png",
+      "ColonialLumberjackYellow.png"
+    ],
+    "CrystalTransparent": [
+      "CrystalTransparentClear.png",
+      "CrystalTransparentGreen.png",
+      "CrystalTransparentOrange.png",
+      "CrystalTransparentPurple.png",
+      "CrystalTransparentRed.png",
+      "CrystalTransparentWhite.png",
+      "CrystalTransparentYellow.png"
+    ],
+    "FedoraPersonYellow": [
+      "FedoraPersonYellowDark.png",
+      "FedoraPersonYellowLight.png",
+      "FedoraPersonYellowMedium.png"
+    ],
+    "HouseAcrylicOpaque": [
+      "HouseAcrylicOpaqueBlack.png",
+      "HouseAcrylicOpaqueGold.png",
+      "HouseAcrylicOpaqueSilver.png",
+      "HouseAcrylicOpaqueWhite.png"
+    ],
+    "InFUNityTileTurtle": [
+      "InFUNityTileTurtleGreen.png",
+      "InFUNityTileTurtleOrange.png",
+      "InFUNityTileTurtlePurple.png",
+      "InFUNityTileTurtleRed.png",
+      "InFUNityTileTurtleWhite.png",
+      "InFUNityTileTurtleYellow.png"
+    ],
+    "KeycardFluorescent": [
+      "KeycardFluorescentBlue.png",
+      "KeycardFluorescentGreen.png",
+      "KeycardFluorescentRed.png",
+      "KeycardFluorescentYellow.png"
+    ],
+    "PokerChip19mmFancy": [
+      "PokerChip19mmFancyGreen.png",
+      "PokerChip19mmFancyPurple.png",
+      "PokerChip19mmFancyRed.png",
+      "PokerChip19mmFancyYellow.png"
+    ],
+    "ShipSpaceFreighter": [
+      "ShipSpaceFreighterGreen.png",
+      "ShipSpaceFreighterOrange.png",
+      "ShipSpaceFreighterPurple.png",
+      "ShipSpaceFreighterRed.png",
+      "ShipSpaceFreighterWhite.png",
+      "ShipSpaceFreighterYellow.png"
+    ],
+    "ShipSpaceTransport": [
+      "ShipSpaceTransportGreen.png",
+      "ShipSpaceTransportOrange.png",
+      "ShipSpaceTransportPurple.png",
+      "ShipSpaceTransportRed.png",
+      "ShipSpaceTransportWhite.png",
+      "ShipSpaceTransportYellow.png"
+    ],
+    "StandChipboardTB15": [
+      "StandChipboardTB15Green.png",
+      "StandChipboardTB15Orange.png",
+      "StandChipboardTB15Purple.png",
+      "StandChipboardTB15Red.png",
+      "StandChipboardTB15White.png",
+      "StandChipboardTB15Yellow.png"
+    ],
+    "StickAcrylicOpaque": [
+      "StickAcrylicOpaqueBlack.png",
+      "StickAcrylicOpaqueGold.png",
+      "StickAcrylicOpaqueSilver.png",
+      "StickAcrylicOpaqueWhite.png"
+    ],
+    "VictorianMiniature": [
+      "VictorianMiniatureBlue.png",
+      "VictorianMiniatureGreen.png",
+      "VictorianMiniatureRed.png",
+      "VictorianMiniatureYellow.png"
+    ],
+    "AcrylicTrainTrack": [
+      "AcrylicTrainTrackGreen.png",
+      "AcrylicTrainTrackOrange.png",
+      "AcrylicTrainTrackPurple.png",
+      "AcrylicTrainTrackRed.png",
+      "AcrylicTrainTrackWhite.png",
+      "AcrylicTrainTrackYellow.png"
+    ],
+    "AvatarTransparent": [
+      "AvatarTransparentClear.png",
+      "AvatarTransparentGreen.png",
+      "AvatarTransparentOrange.png",
+      "AvatarTransparentPurple.png",
+      "AvatarTransparentRed.png",
+      "AvatarTransparentWhite.png",
+      "AvatarTransparentYellow.png"
+    ],
+    "BlankBoxPrototype": [
+      "BlankBoxPrototypeLarge.png",
+      "BlankBoxPrototypeMedium.png",
+      "BlankBoxPrototypeSmall.png"
+    ],
+    "BusinessMiniature": [
+      "BusinessMiniatureBlue.png",
+      "BusinessMiniatureGreen.png",
+      "BusinessMiniatureRed.png",
+      "BusinessMiniatureYellow.png"
+    ],
+    "Cylinder10mmx10mm": [
+      "Cylinder10mmx10mmGreen.png",
+      "Cylinder10mmx10mmOrange.png",
+      "Cylinder10mmx10mmPurple.png",
+      "Cylinder10mmx10mmRed.png",
+      "Cylinder10mmx10mmWhite.png",
+      "Cylinder10mmx10mmYellow.png"
+    ],
+    "D612mmTransparent": [
+      "D612mmTransparentBlue.png",
+      "D612mmTransparentGreen.png",
+      "D612mmTransparentOrange.png",
+      "D612mmTransparentPurple.png",
+      "D612mmTransparentRed.png",
+      "D612mmTransparentYellow.png"
+    ],
+    "DinosaurTokenWood": [
+      "DinosaurTokenWoodBlue.png",
+      "DinosaurTokenWoodGreen.png",
+      "DinosaurTokenWoodOrange.png",
+      "DinosaurTokenWoodPurple.png",
+      "DinosaurTokenWoodRed.png"
+    ],
+    "DragonFantasyTB15": [
+      "DragonFantasyTB15Green.png",
+      "DragonFantasyTB15Orange.png",
+      "DragonFantasyTB15Purple.png",
+      "DragonFantasyTB15Red.png",
+      "DragonFantasyTB15White.png",
+      "DragonFantasyTB15Yellow.png"
+    ],
+    "ElephantwithRider": [
+      "ElephantwithRiderOrange.png",
+      "ElephantwithRiderPurple.png",
+      "ElephantwithRiderRed.png",
+      "ElephantwithRiderYellow.png"
+    ],
+    "FedoraPersonBlack": [
+      "FedoraPersonBlackDark.png",
+      "FedoraPersonBlackLight.png",
+      "FedoraPersonBlackMedium.png"
+    ],
+    "FedoraPersonWhite": [
+      "FedoraPersonWhiteDark.png",
+      "FedoraPersonWhiteLight.png",
+      "FedoraPersonWhiteMedium.png"
+    ],
+    "FutureSoldierTB15": [
+      "FutureSoldierTB15Green.png",
+      "FutureSoldierTB15Orange.png",
+      "FutureSoldierTB15Purple.png",
+      "FutureSoldierTB15Red.png",
+      "FutureSoldierTB15White.png",
+      "FutureSoldierTB15Yellow.png"
+    ],
+    "IceCube10mmOpaque": [
+      "IceCube10mmOpaqueBlack.png",
+      "IceCube10mmOpaqueGold.png",
+      "IceCube10mmOpaqueSilver.png",
+      "IceCube10mmOpaqueWhite.png"
+    ],
+    "IceCube12mmOpaque": [
+      "IceCube12mmOpaqueBlack.png",
+      "IceCube12mmOpaqueGold.png",
+      "IceCube12mmOpaqueSilver.png",
+      "IceCube12mmOpaqueWhite.png"
+    ],
+    "ManPostApocalypse": [
+      "ManPostApocalypseArcherTB25.png",
+      "ManPostApocalypseDualSMGTB25.png",
+      "ManPostApocalypseHammerTB25.png"
+    ],
+    "ShipModernCruiser": [
+      "ShipModernCruiserBlack.png",
+      "ShipModernCruiserGreen.png",
+      "ShipModernCruiserOrange.png",
+      "ShipModernCruiserPurple.png",
+      "ShipModernCruiserWhite.png"
+    ],
+    "ShipSpaceSmuggler": [
+      "ShipSpaceSmugglerGreen.png",
+      "ShipSpaceSmugglerOrange.png",
+      "ShipSpaceSmugglerPurple.png",
+      "ShipSpaceSmugglerRed.png",
+      "ShipSpaceSmugglerWhite.png",
+      "ShipSpaceSmugglerYellow.png"
+    ],
+    "SprueCivilization": [
+      "SprueCivilizationBlue.png",
+      "SprueCivilizationPurple.png",
+      "SprueCivilizationYellow.png"
+    ],
+    "StickerPawnOpaque": [
+      "StickerPawnOpaqueGreen.png",
+      "StickerPawnOpaqueOrange.png",
+      "StickerPawnOpaquePurple.png",
+      "StickerPawnOpaqueRed.png",
+      "StickerPawnOpaqueWhite.png",
+      "StickerPawnOpaqueYellow.png"
+    ],
+    "BlankBoardSquare": [
+      "BlankBoardSquare.png",
+      "BlankBoardSquareLarge.png",
+      "BlankBoardSquareSmall.png"
+    ],
+    "FedoraPersonBlue": [
+      "FedoraPersonBlueDark.png",
+      "FedoraPersonBlueLight.png",
+      "FedoraPersonBlueMedium.png"
+    ],
+    "IceCube8mmOpaque": [
+      "IceCube8mmOpaqueBlack.png",
+      "IceCube8mmOpaqueGold.png",
+      "IceCube8mmOpaqueSilver.png",
+      "IceCube8mmOpaqueWhite.png"
+    ],
+    "PhaseShiftGames|": [
+      "PhaseShiftGames|Boblin'sRebellion|1-4players.png",
+      "PhaseShiftGames|Flutter|2-5players.png",
+      "PhaseShiftGames|Obelus|2players.png"
+    ],
+    "ShipAirSteampunk": [
+      "ShipAirSteampunkGreen.png",
+      "ShipAirSteampunkOrange.png",
+      "ShipAirSteampunkPurple.png",
+      "ShipAirSteampunkRed.png",
+      "ShipAirSteampunkWhite.png",
+      "ShipAirSteampunkYellow.png"
+    ],
+    "ShipSpaceFighter": [
+      "ShipSpaceFighterGreen.png",
+      "ShipSpaceFighterOrange.png",
+      "ShipSpaceFighterPurple.png",
+      "ShipSpaceFighterRed.png",
+      "ShipSpaceFighterWhite.png",
+      "ShipSpaceFighterYellow.png"
+    ],
+    "VialLiquidOpaque": [
+      "VialLiquidOpaqueIvory.png",
+      "VialLiquidOpaqueOrange.png",
+      "VialLiquidOpaquePurple.png",
+      "VialLiquidOpaqueRed.png",
+      "VialLiquidOpaqueWhite.png",
+      "VialLiquidOpaqueYellow.png"
+    ],
+    "BlankChitCircle": [
+      "BlankChitCircleLarge.png",
+      "BlankChitCircleMedium.png",
+      "BlankChitCircleSmall.png"
+    ],
+    "BlankChitSquare": [
+      "BlankChitSquareLarge.png",
+      "BlankChitSquareMedium.png",
+      "BlankChitSquareSmall.png"
+    ],
+    "BowlingPinLarge": [
+      "BowlingPinLargeClear.png",
+      "BowlingPinLargeGreen.png",
+      "BowlingPinLargeOrange.png",
+      "BowlingPinLargePurple.png",
+      "BowlingPinLargeRed.png",
+      "BowlingPinLargeWhite.png",
+      "BowlingPinLargeYellow.png"
+    ],
+    "BowlingPinSmall": [
+      "BowlingPinSmallGreen.png",
+      "BowlingPinSmallOrange.png",
+      "BowlingPinSmallPurple.png",
+      "BowlingPinSmallRed.png",
+      "BowlingPinSmallWhite.png",
+      "BowlingPinSmallYellow.png"
+    ],
+    "ColonialSoldier": [
+      "ColonialSoldierBlue.png",
+      "ColonialSoldierGreen.png",
+      "ColonialSoldierOrange.png",
+      "ColonialSoldierRed.png",
+      "ColonialSoldierYellow.png"
+    ],
+    "D6IndentedBlank": [
+      "D6IndentedBlankBlue.png",
+      "D6IndentedBlankGreen.png",
+      "D6IndentedBlankOrange.png",
+      "D6IndentedBlankPurple.png",
+      "D6IndentedBlankRed.png",
+      "D6IndentedBlankWhite.png",
+      "D6IndentedBlankYellow.png"
+    ],
+    "FedoraPersonRed": [
+      "FedoraPersonRedDark.png",
+      "FedoraPersonRedLight.png",
+      "FedoraPersonRedMedium.png"
+    ],
+    "InFUNityTileHat": [
+      "InFUNityTileHatGreen.png",
+      "InFUNityTileHatOrange.png",
+      "InFUNityTileHatPurple.png",
+      "InFUNityTileHatRed.png",
+      "InFUNityTileHatWhite.png",
+      "InFUNityTileHatYellow.png"
+    ],
+    "ManIroquoisTB15": [
+      "ManIroquoisTB15Green.png",
+      "ManIroquoisTB15Orange.png",
+      "ManIroquoisTB15Purple.png",
+      "ManIroquoisTB15Red.png",
+      "ManIroquoisTB15White.png",
+      "ManIroquoisTB15Yellow.png"
+    ],
+    "MeepleLargeWood": [
+      "MeepleLargeWoodGreen.png",
+      "MeepleLargeWoodOrange.png",
+      "MeepleLargeWoodPurple.png",
+      "MeepleLargeWoodRed.png",
+      "MeepleLargeWoodWhite.png",
+      "MeepleLargeWoodYellow.png"
+    ],
+    "MissionaryLarge": [
+      "MissionaryLargeBlue.png",
+      "MissionaryLargeGreen.png",
+      "MissionaryLargeOrange.png",
+      "MissionaryLargeRed.png",
+      "MissionaryLargeYellow.png"
+    ],
+    "PadlockUnlocked": [
+      "PadlockUnlockedGreen.png",
+      "PadlockUnlockedOrange.png",
+      "PadlockUnlockedPurple.png",
+      "PadlockUnlockedRed.png",
+      "PadlockUnlockedWhite.png",
+      "PadlockUnlockedYellow.png"
+    ],
+    "TallPeopleThick": [
+      "TallPeopleThickPurple.png",
+      "TallPeopleThickRed.png",
+      "TallPeopleThickYellow.png"
+    ],
+    "TrainEngineWood": [
+      "TrainEngineWoodBlue.png",
+      "TrainEngineWoodOrange.png",
+      "TrainEngineWoodPurple.png",
+      "TrainEngineWoodWhite.png",
+      "TrainEngineWoodYellow.png"
+    ],
+    "TrellisofGrapes": [
+      "TrellisofGrapesBlue.png",
+      "TrellisofGrapesGreen.png",
+      "TrellisofGrapesOrange.png",
+      "TrellisofGrapesWhite.png"
+    ],
+    "WomanModernTB15": [
+      "WomanModernTB15Green.png",
+      "WomanModernTB15Orange.png",
+      "WomanModernTB15Purple.png",
+      "WomanModernTB15Red.png",
+      "WomanModernTB15White.png",
+      "WomanModernTB15Yellow.png"
+    ],
+    "WorkerSingleBag": [
+      "WorkerSingleBagBlue.png",
+      "WorkerSingleBagGreen.png",
+      "WorkerSingleBagOrange.png",
+      "WorkerSingleBagPurple.png",
+      "WorkerSingleBagWhite.png",
+      "WorkerSingleBagYellow.png"
+    ],
+    "BlankMatSquare": [
+      "BlankMatSquare.png",
+      "BlankMatSquareLarge.png",
+      "BlankMatSquareSmall.png"
+    ],
+    "BurlapBagSmall": [
+      "BurlapBagSmallBlack.png",
+      "BurlapBagSmallGreen.png",
+      "BurlapBagSmallRed.png",
+      "BurlapBagSmallWhite.png"
+    ],
+    "CharacterStand": [
+      "CharacterStandBlue.png",
+      "CharacterStandClear.png",
+      "CharacterStandGreen.png",
+      "CharacterStandPurple.png",
+      "CharacterStandRed.png",
+      "CharacterStandYellow.png"
+    ],
+    "HalmaStackable": [
+      "HalmaStackableBlue.png",
+      "HalmaStackableGreen.png",
+      "HalmaStackableRed.png",
+      "HalmaStackableWhite.png",
+      "HalmaStackableYellow.png"
+    ],
+    "MeepleMiniWood": [
+      "MeepleMiniWoodGreen.png",
+      "MeepleMiniWoodOrange.png",
+      "MeepleMiniWoodPurple.png",
+      "MeepleMiniWoodRed.png",
+      "MeepleMiniWoodWhite.png",
+      "MeepleMiniWoodYellow.png"
+    ],
+    "PartsBagMedium": [
+      "PartsBagMediumBrown.png",
+      "PartsBagMediumPurple.png",
+      "PartsBagMediumRed.png"
+    ],
+    "ShipSeaBritish": [
+      "ShipSeaBritishGreen.png",
+      "ShipSeaBritishOrange.png",
+      "ShipSeaBritishPurple.png",
+      "ShipSeaBritishRed.png",
+      "ShipSeaBritishWhite.png",
+      "ShipSeaBritishYellow.png"
+    ],
+    "SprueMilitaryB": [
+      "SprueMilitaryBeige.png",
+      "SprueMilitaryBlue.png",
+      "SprueMilitaryBrown.png"
+    ],
+    "SprueNorseMyth": [
+      "SprueNorseMythDkBlue.png",
+      "SprueNorseMythLtBlue.png",
+      "SprueNorseMythMedBlue.png"
+    ],
+    "AirplaneLarge": [
+      "AirplaneLargeOrange.png",
+      "AirplaneLargePurple.png",
+      "AirplaneLargeYellow.png"
+    ],
+    "AirplaneSmall": [
+      "AirplaneSmallOrange.png",
+      "AirplaneSmallPurple.png",
+      "AirplaneSmallRed.png",
+      "AirplaneSmallWhite.png",
+      "AirplaneSmallYellow.png"
+    ],
+    "AlienGreyTB15": [
+      "AlienGreyTB15Orange.png",
+      "AlienGreyTB15Purple.png",
+      "AlienGreyTB15Red.png",
+      "AlienGreyTB15White.png",
+      "AlienGreyTB15Yellow.png"
+    ],
+    "AstronautTB15": [
+      "AstronautTB15Green.png",
+      "AstronautTB15Orange.png",
+      "AstronautTB15Purple.png",
+      "AstronautTB15Red.png",
+      "AstronautTB15White.png",
+      "AstronautTB15Yellow.png"
+    ],
+    "Barbarianwith": [
+      "BarbarianwithAxe.png",
+      "BarbarianwithSword&Shield.png",
+      "BarbarianwithTwoSwords.png"
+    ],
+    "BuildingSmall": [
+      "BuildingSmallGreen.png",
+      "BuildingSmallOrange.png",
+      "BuildingSmallPurple.png",
+      "BuildingSmallRed.png",
+      "BuildingSmallWhite.png",
+      "BuildingSmallYellow.png"
+    ],
+    "CavewomanTB15": [
+      "CavewomanTB15Green.png",
+      "CavewomanTB15Orange.png",
+      "CavewomanTB15Purple.png",
+      "CavewomanTB15Red.png",
+      "CavewomanTB15White.png",
+      "CavewomanTB15Yellow.png"
+    ],
+    "ChurchPlastic": [
+      "ChurchPlasticBlue.png",
+      "ChurchPlasticOrange.png",
+      "ChurchPlasticRed.png",
+      "ChurchPlasticWhite.png"
+    ],
+    "CommandCenter": [
+      "CommandCenterGreen.png",
+      "CommandCenterOrange.png",
+      "CommandCenterPurple.png",
+      "CommandCenterRed.png",
+      "CommandCenterWhite.png",
+      "CommandCenterYellow.png"
+    ],
+    "ContainerShip": [
+      "ContainerShipBlue.png",
+      "ContainerShipRed.png",
+      "ContainerShipYellow.png"
+    ],
+    "CrystalOpaque": [
+      "CrystalOpaqueBlack.png",
+      "CrystalOpaqueGold.png",
+      "CrystalOpaqueSilver.png",
+      "CrystalOpaqueWhite.png"
+    ],
+    "D616mmRounded": [
+      "D616mmRoundedGreenPearl.png",
+      "D616mmRoundedOrangeOpaque.png",
+      "D616mmRoundedWhitePearl.png"
+    ],
+    "Disc16mmx10mm": [
+      "Disc16mmx10mmGreen.png",
+      "Disc16mmx10mmPurple.png",
+      "Disc16mmx10mmRed.png",
+      "Disc16mmx10mmYellow.png"
+    ],
+    "FlatCapYellow": [
+      "FlatCapYellowBronze.png",
+      "FlatCapYellowGreen.png",
+      "FlatCapYellowPurple.png"
+    ],
+    "FuturePyramid": [
+      "FuturePyramidGreen.png",
+      "FuturePyramidOrange.png",
+      "FuturePyramidPurple.png",
+      "FuturePyramidRed.png",
+      "FuturePyramidYellow.png"
+    ],
+    "LightningBolt": [
+      "LightningBoltGreen.png",
+      "LightningBoltLargeOrange.png",
+      "LightningBoltOrange.png",
+      "LightningBoltPurple.png",
+      "LightningBoltRed.png",
+      "LightningBoltWhite.png",
+      "LightningBoltYellow.png"
+    ],
+    "ManModernTB15": [
+      "ManModernTB15Green.png",
+      "ManModernTB15Orange.png",
+      "ManModernTB15Purple.png",
+      "ManModernTB15Red.png",
+      "ManModernTB15White.png",
+      "ManModernTB15Yellow.png"
+    ],
+    "PadlockLocked": [
+      "PadlockLockedGreen.png",
+      "PadlockLockedOrange.png",
+      "PadlockLockedPurple.png",
+      "PadlockLockedRed.png",
+      "PadlockLockedWhite.png",
+      "PadlockLockedYellow.png"
+    ],
+    "PartsBagSmall": [
+      "PartsBagSmallBrown.png",
+      "PartsBagSmallPurple.png",
+      "PartsBagSmallRed.png"
+    ],
+    "RomanNumeralI": [
+      "RomanNumeralIBrown.png",
+      "RomanNumeralIIIYellow.png",
+      "RomanNumeralIRed.png",
+      "RomanNumeralIYellow.png"
+    ],
+    "ShipSeaPirate": [
+      "ShipSeaPirateGreen.png",
+      "ShipSeaPirateOrange.png",
+      "ShipSeaPiratePurple.png",
+      "ShipSeaPirateRed.png",
+      "ShipSeaPirateWhite.png",
+      "ShipSeaPirateYellow.png"
+    ],
+    "SkeletonSword": [
+      "SkeletonSword2FantasyTB25.png",
+      "SkeletonSword3FantasyTB25.png",
+      "SkeletonSwordArmoredFantasyTB25.png",
+      "SkeletonSwordFantasyTB25.png"
+    ],
+    "BaseShoeTB15": [
+      "BaseShoeTB15Green.png",
+      "BaseShoeTB15Orange.png",
+      "BaseShoeTB15Purple.png",
+      "BaseShoeTB15Red.png",
+      "BaseShoeTB15White.png",
+      "BaseShoeTB15Yellow.png"
+    ],
+    "BaseShoeTB25": [
+      "BaseShoeTB25Green.png",
+      "BaseShoeTB25Orange.png",
+      "BaseShoeTB25Purple.png",
+      "BaseShoeTB25Red.png",
+      "BaseShoeTB25White.png",
+      "BaseShoeTB25Yellow.png"
+    ],
+    "BlankStandee": [
+      "BlankStandeeLarge.png",
+      "BlankStandeeMedium.png",
+      "BlankStandeeSmall.png"
+    ],
+    "ChessSetHalf": [
+      "ChessSetHalfGreen.png",
+      "ChessSetHalfOrange.png",
+      "ChessSetHalfPurple.png",
+      "ChessSetHalfRed.png",
+      "ChessSetHalfWhite.png",
+      "ChessSetHalfYellow.png"
+    ],
+    "CoinMedieval": [
+      "CoinMedievalBronze.png",
+      "CoinMedievalGold.png",
+      "CoinMedievalSilver.png"
+    ],
+    "Disc14mmx4mm": [
+      "Disc14mmx4mmBlack.png",
+      "Disc14mmx4mmGreen.png",
+      "Disc14mmx4mmYellow.png"
+    ],
+    "Disc15mmx6mm": [
+      "Disc15mmx6mmLimeGreen.png",
+      "Disc15mmx6mmOrange.png",
+      "Disc15mmx6mmRed.png",
+      "Disc15mmx6mmYellow.png"
+    ],
+    "Disc16mmx4mm": [
+      "Disc16mmx4mmGreen.png",
+      "Disc16mmx4mmOrange.png",
+      "Disc16mmx4mmPurple.png",
+      "Disc16mmx4mmRed.png",
+      "Disc16mmx4mmWhite.png",
+      "Disc16mmx4mmYellow.png"
+    ],
+    "Disc16mmx8mm": [
+      "Disc16mmx8mmMint.png",
+      "Disc16mmx8mmTan.png",
+      "Disc16mmx8mmYellow.png"
+    ],
+    "DonjonPagoda": [
+      "DonjonPagodaGreen.png",
+      "DonjonPagodaOrange.png",
+      "DonjonPagodaPurple.png",
+      "DonjonPagodaRed.png",
+      "DonjonPagodaWhite.png",
+      "DonjonPagodaYellow.png"
+    ],
+    "FarmerFemale": [
+      "FarmerFemaleBlue-CharacterMeeple.png",
+      "FarmerFemaleGreen-CharacterMeeple.png",
+      "FarmerFemaleOrange-CharacterMeeple.png",
+      "FarmerFemalePurple-CharacterMeeple.png",
+      "FarmerFemaleRed-CharacterMeeple.png",
+      "FarmerFemaleYellow-CharacterMeeple.png"
+    ],
+    "FemaleFarmer": [
+      "FemaleFarmerGreen.png",
+      "FemaleFarmerPurple.png",
+      "FemaleFarmerYellow.png"
+    ],
+    "FlatCapBlack": [
+      "FlatCapBlackBronze.png",
+      "FlatCapBlackGreen.png",
+      "FlatCapBlackPurple.png"
+    ],
+    "FlatCapWhite": [
+      "FlatCapWhiteBronze.png",
+      "FlatCapWhiteGreen.png",
+      "FlatCapWhitePurple.png"
+    ],
+    "FuturePerson": [
+      "FuturePersonOrange.png",
+      "FuturePersonPurple.png",
+      "FuturePersonYellow.png"
+    ],
+    "HalmaPlastic": [
+      "HalmaPlasticOrange.png",
+      "HalmaPlasticRed.png",
+      "HalmaPlasticWhite.png",
+      "HalmaPlasticYellow.png"
+    ],
+    "ShipSpaceUFO": [
+      "ShipSpaceUFOGreen.png",
+      "ShipSpaceUFOOrange.png",
+      "ShipSpaceUFOPurple.png",
+      "ShipSpaceUFORed.png",
+      "ShipSpaceUFOSilver.png",
+      "ShipSpaceUFOWhite.png",
+      "ShipSpaceUFOYellow.png"
+    ],
+    "TowerStacker": [
+      "TowerStackerGreen.png",
+      "TowerStackerOrange.png",
+      "TowerStackerPurple.png",
+      "TowerStackerRed.png",
+      "TowerStackerWhite.png",
+      "TowerStackerYellow.png"
+    ],
+    "TruckFlatbed": [
+      "TruckFlatbedGreen.png",
+      "TruckFlatbedOrange.png",
+      "TruckFlatbedPurple.png",
+      "TruckFlatbedRed.png",
+      "TruckFlatbedWhite.png",
+      "TruckFlatbedYellow.png"
+    ],
+    "BlankBoardS": [
+      "BlankBoardSix-Fold.png",
+      "BlankBoardSkinny.png",
+      "BlankBoardSliver.png",
+      "BlankBoardStrip.png"
+    ],
+    "BlankScreen": [
+      "BlankScreenLarge.png",
+      "BlankScreenMedium.png",
+      "BlankScreenSmall.png"
+    ],
+    "ButtonLarge": [
+      "ButtonLargeBlue.png",
+      "ButtonLargePink.png",
+      "ButtonLargeYellow.png"
+    ],
+    "CavemanTB15": [
+      "CavemanTB15Green.png",
+      "CavemanTB15Orange.png",
+      "CavemanTB15Purple.png",
+      "CavemanTB15Red.png",
+      "CavemanTB15White.png",
+      "CavemanTB15Yellow.png"
+    ],
+    "Chevron20mm": [
+      "Chevron20mmGreen.png",
+      "Chevron20mmOrange.png",
+      "Chevron20mmPurple.png",
+      "Chevron20mmRed.png",
+      "Chevron20mmWhite.png",
+      "Chevron20mmYellow.png"
+    ],
+    "CrabAcrylic": [
+      "CrabAcrylicGreen.png",
+      "CrabAcrylicOrange.png",
+      "CrabAcrylicPurple.png",
+      "CrabAcrylicRed.png",
+      "CrabAcrylicWhite.png",
+      "CrabAcrylicYellow.png"
+    ],
+    "D616mmBlank": [
+      "D616mmBlankGreen.png",
+      "D616mmBlankOrange.png",
+      "D616mmBlankPurple.png",
+      "D616mmBlankRed.png",
+      "D616mmBlankYellow.png"
+    ],
+    "DragonSmall": [
+      "DragonSmallBlue.png",
+      "DragonSmallGreen.png",
+      "DragonSmallRed.png",
+      "DragonSmallYellow.png"
+    ],
+    "FlatCapBlue": [
+      "FlatCapBlueBronze.png",
+      "FlatCapBlueGreen.png",
+      "FlatCapBluePurple.png"
+    ],
+    "HumanFigure": [
+      "HumanFigureOrange.png",
+      "HumanFigurePurple.png",
+      "HumanFigureRed.png",
+      "HumanFigureYellow.png"
+    ],
+    "Marketplace": [
+      "MarketplaceGreen.png",
+      "MarketplaceOrange.png",
+      "MarketplacePurple.png",
+      "MarketplaceRed.png",
+      "MarketplaceWhite.png",
+      "MarketplaceYellow.png"
+    ],
+    "MeepleThick": [
+      "MeepleThickBlue.png",
+      "MeepleThickOrange.png",
+      "MeepleThickPurple.png",
+      "MeepleThickRed.png",
+      "MeepleThickTeal.png",
+      "MeepleThickYellow.png"
+    ],
+    "Observatory": [
+      "ObservatoryGreen.png",
+      "ObservatoryOrange.png",
+      "ObservatoryPurple.png",
+      "ObservatoryRed.png",
+      "ObservatoryWhite.png",
+      "ObservatoryYellow.png"
+    ],
+    "OldWestCoin": [
+      "OldWestCoinBronze.png",
+      "OldWestCoinGold.png",
+      "OldWestCoinSilver.png"
+    ],
+    "Stacker19mm": [
+      "Stacker19mmGreen.png",
+      "Stacker19mmOrange.png",
+      "Stacker19mmPurple.png",
+      "Stacker19mmRed.png",
+      "Stacker19mmWhite.png",
+      "Stacker19mmYellow.png"
+    ],
+    "StackerCone": [
+      "StackerConeGreen.png",
+      "StackerConeOrange.png",
+      "StackerConePurple.png",
+      "StackerConeRed.png",
+      "StackerConeWhite.png",
+      "StackerConeYellow.png"
+    ],
+    "BlankBoard": [
+      "BlankBoardAccordion.png",
+      "BlankBoardBi-Fold.png",
+      "BlankBoardDomino.png",
+      "BlankBoardHalf.png",
+      "BlankBoardMediumSix-Fold.png",
+      "BlankBoardQuad-Fold18inch.png"
+    ],
+    "BlankFolio": [
+      "BlankFolioBridge.png",
+      "BlankFolioPoker.png",
+      "BlankFolioTarot.png"
+    ],
+    "CastleRoom": [
+      "CastleRoomOutpost.png",
+      "CastleRoomSanctuary.png",
+      "CastleRoomTower.png",
+      "CastleRoomVeranda.png"
+    ],
+    "Chevron8mm": [
+      "Chevron8mmGreen.png",
+      "Chevron8mmOrange.png",
+      "Chevron8mmPurple.png",
+      "Chevron8mmRed.png",
+      "Chevron8mmWhite.png",
+      "Chevron8mmYellow.png"
+    ],
+    "ChurchWood": [
+      "ChurchWoodGreen.png",
+      "ChurchWoodOrange.png",
+      "ChurchWoodPurple.png",
+      "ChurchWoodRed.png",
+      "ChurchWoodWhite.png",
+      "ChurchWoodYellow.png"
+    ],
+    "FarmerMale": [
+      "FarmerMaleBlue-CharacterMeeple.png",
+      "FarmerMaleGreen-CharacterMeeple.png",
+      "FarmerMaleOrange-CharacterMeeple.png",
+      "FarmerMalePurple-CharacterMeeple.png",
+      "FarmerMaleRed-CharacterMeeple.png",
+      "FarmerMaleYellow-CharacterMeeple.png"
+    ],
+    "FlatCapRed": [
+      "FlatCapRedBronze.png",
+      "FlatCapRedGreen.png",
+      "FlatCapRedPurple.png"
+    ],
+    "FutureCube": [
+      "FutureCubeBlue.png",
+      "FutureCubeOrange.png",
+      "FutureCubePurple.png",
+      "FutureCubeRed.png",
+      "FutureCubeYellow.png"
+    ],
+    "FutureDome": [
+      "FutureDomeBlue.png",
+      "FutureDomeGreen.png",
+      "FutureDomeOrange.png",
+      "FutureDomePurple.png",
+      "FutureDomeRed.png",
+      "FutureDomeYellow.png"
+    ],
+    "FutureTank": [
+      "FutureTankGreen.png",
+      "FutureTankOrange.png",
+      "FutureTankPurple.png",
+      "FutureTankRed.png",
+      "FutureTankTan.png",
+      "FutureTankWhite.png",
+      "FutureTankYellow.png"
+    ],
+    "GuardRobot": [
+      "GuardRobotBlack.png",
+      "GuardRobotGreen.png",
+      "GuardRobotRed.png",
+      "GuardRobotYellow.png"
+    ],
+    "HexStacker": [
+      "HexStackerGreen.png",
+      "HexStackerOrange.png",
+      "HexStackerPurple.png",
+      "HexStackerRed.png",
+      "HexStackerWhite.png",
+      "HexStackerYellow.png"
+    ],
+    "Laboratory": [
+      "LaboratoryGreen.png",
+      "LaboratoryOrange.png",
+      "LaboratoryPurple.png",
+      "LaboratoryRed.png",
+      "LaboratoryWhite.png",
+      "LaboratoryYellow.png"
+    ],
+    "Locomotive": [
+      "LocomotiveGreen.png",
+      "LocomotiveOrange.png",
+      "LocomotivePurple.png",
+      "LocomotiveRed.png",
+      "LocomotiveWhite.png",
+      "LocomotiveYellow.png"
+    ],
+    "MeepleWood": [
+      "MeepleWoodGreen.png",
+      "MeepleWoodOrange.png",
+      "MeepleWoodPurple.png",
+      "MeepleWoodRed.png",
+      "MeepleWoodWhite.png",
+      "MeepleWoodYellow.png"
+    ],
+    "Motorcycle": [
+      "MotorcycleGreen.png",
+      "MotorcycleOrange.png",
+      "MotorcyclePurple.png",
+      "MotorcycleRed.png",
+      "MotorcycleWhite.png",
+      "MotorcycleYellow.png"
+    ],
+    "Octbox10mm": [
+      "Octbox10mmGreen.png",
+      "Octbox10mmOrange.png",
+      "Octbox10mmPurple.png",
+      "Octbox10mmRed.png",
+      "Octbox10mmWhite.png",
+      "Octbox10mmYellow.png"
+    ],
+    "PadlockKey": [
+      "PadlockKeyGreen.png",
+      "PadlockKeyOrange.png",
+      "PadlockKeyPurple.png",
+      "PadlockKeyRed.png",
+      "PadlockKeyWhite.png",
+      "PadlockKeyYellow.png"
+    ],
+    "RocketDice": [
+      "RocketDiceBrown.png",
+      "RocketDiceFrostWhite.png",
+      "RocketDiceGreen.png",
+      "RocketDiceRed.png",
+      "RocketDiceWhite.png"
+    ],
+    "SandTimer1": [
+      "SandTimer10Seconds.png",
+      "SandTimer120seconds.png",
+      "SandTimer180seconds.png"
+    ],
+    "Sci-FiCoin": [
+      "Sci-FiCoinBronze.png",
+      "Sci-FiCoinGold.png",
+      "Sci-FiCoinSilver.png"
+    ],
+    "Skyscraper": [
+      "SkyscraperGreen.png",
+      "SkyscraperOrange.png",
+      "SkyscraperPurple.png",
+      "SkyscraperRed.png",
+      "SkyscraperWhite.png",
+      "SkyscraperYellow.png"
+    ],
+    "SliderClip": [
+      "SliderClipGreen.png",
+      "SliderClipOrange.png",
+      "SliderClipPurple.png",
+      "SliderClipRed.png",
+      "SliderClipWhite.png",
+      "SliderClipYellow.png"
+    ],
+    "TallPeople": [
+      "TallPeopleGreen.png",
+      "TallPeopleOrange.png",
+      "TallPeoplePurple.png",
+      "TallPeopleRed.png",
+      "TallPeopleWhite.png",
+      "TallPeopleYellow.png"
+    ],
+    "TrophyTB15": [
+      "TrophyTB15Bronze.png",
+      "TrophyTB15Gold.png",
+      "TrophyTB15Silver.png"
+    ],
+    "BlankChit": [
+      "BlankChitArrow.png",
+      "BlankChitBullseye.png",
+      "BlankChitDomino.png",
+      "BlankChitTriangleMedium.png"
+    ],
+    "BlankMatS": [
+      "BlankMatSkinny.png",
+      "BlankMatSliver.png",
+      "BlankMatSmallBi-fold.png",
+      "BlankMatSpinner.png",
+      "BlankMatStrip.png"
+    ],
+    "BlankRing": [
+      "BlankRingLarge.png",
+      "BlankRingMedium.png",
+      "BlankRingSmall.png"
+    ],
+    "BlankTile": [
+      "BlankTileCircleMini.png",
+      "BlankTileDomino.png",
+      "BlankTileTriangle.png"
+    ],
+    "BoxBand6\"": [
+      "BoxBand6\"Blue.png",
+      "BoxBand6\"Green.png",
+      "BoxBand6\"Red.png"
+    ],
+    "BoxBand8\"": [
+      "BoxBand8\"Blue.png",
+      "BoxBand8\"Green.png",
+      "BoxBand8\"Red.png"
+    ],
+    "BoxBand9\"": [
+      "BoxBand9\"Blue.png",
+      "BoxBand9\"Green.png",
+      "BoxBand9\"Red.png"
+    ],
+    "BrickWood": [
+      "BrickWood2HolesRed.png",
+      "BrickWoodLarge.png",
+      "BrickWoodRed.png"
+    ],
+    "BunnyTB15": [
+      "BunnyTB15Green.png",
+      "BunnyTB15Orange.png",
+      "BunnyTB15Purple.png",
+      "BunnyTB15Red.png",
+      "BunnyTB15White.png",
+      "BunnyTB15Yellow.png"
+    ],
+    "CarMuscle": [
+      "CarMuscleGreen.png",
+      "CarMuscleOrange.png",
+      "CarMusclePurple.png",
+      "CarMuscleRed.png",
+      "CarMuscleWhite.png",
+      "CarMuscleYellow.png"
+    ],
+    "CardStand": [
+      "CardStandGreen.png",
+      "CardStandRed.png",
+      "CardStandWhite.png",
+      "CardStandYellow.png"
+    ],
+    "Cathedral": [
+      "CathedralGreen.png",
+      "CathedralOrange.png",
+      "CathedralPurple.png",
+      "CathedralRed.png",
+      "CathedralWhite.png",
+      "CathedralYellow.png"
+    ],
+    "CubeMetal": [
+      "CubeMetalBronze8mm.png",
+      "CubeMetalGold8mm.png",
+      "CubeMetalSilver8mm.png"
+    ],
+    "FrogRider": [
+      "FrogRiderGreen.png",
+      "FrogRiderRed.png",
+      "FrogRiderYellow.png"
+    ],
+    "GameStand": [
+      "GameStandGreen.png",
+      "GameStandOrange.png",
+      "GameStandPurple.png",
+      "GameStandRed.png",
+      "GameStandWhite.png",
+      "GameStandYellow.png"
+    ],
+    "GnomeTB15": [
+      "GnomeTB15Green.png",
+      "GnomeTB15Orange.png",
+      "GnomeTB15Purple.png",
+      "GnomeTB15Red.png",
+      "GnomeTB15White.png",
+      "GnomeTB15Yellow.png"
+    ],
+    "HeartFlat": [
+      "HeartFlatGreen.png",
+      "HeartFlatOrange.png",
+      "HeartFlatPurple.png",
+      "HeartFlatRed.png",
+      "HeartFlatWhite.png",
+      "HeartFlatYellow.png"
+    ],
+    "HouseWood": [
+      "HouseWoodGreen.png",
+      "HouseWoodNatural.png",
+      "HouseWoodOrange.png",
+      "HouseWoodPurple.png",
+      "HouseWoodRed.png",
+      "HouseWoodWhite.png",
+      "HouseWoodYellow.png"
+    ],
+    "IngotWood": [
+      "IngotWoodAluminum.png",
+      "IngotWoodBrass.png",
+      "IngotWoodGold.png",
+      "IngotWoodIron.png"
+    ],
+    "LightBulb": [
+      "LightBulbBlue.png",
+      "LightBulbSalmon.png",
+      "LightBulbTaupe.png"
+    ],
+    "ManModern": [
+      "ManModernChainsawTB25.png",
+      "ManModernFlashlightTB25.png",
+      "ManModernShotgunTB25.png"
+    ],
+    "MotorBoat": [
+      "MotorBoatGreen.png",
+      "MotorBoatOrange.png",
+      "MotorBoatPurple.png",
+      "MotorBoatRed.png",
+      "MotorBoatWhite.png",
+      "MotorBoatYellow.png"
+    ],
+    "Octbox7mm": [
+      "Octbox7mmBlue.png",
+      "Octbox7mmGrey.png",
+      "Octbox7mmPurple.png",
+      "Octbox7mmYellow.png"
+    ],
+    "PokerChip": [
+      "PokerChipGreen.png",
+      "PokerChipLightBlue.png",
+      "PokerChipOrange.png",
+      "PokerChipPurple.png",
+      "PokerChipRed.png",
+      "PokerChipWhite.png",
+      "PokerChipYellow.png"
+    ],
+    "PremiumBr": [
+      "PremiumBrain.png",
+      "PremiumBread.png",
+      "PremiumBrick.png"
+    ],
+    "PremiumCo": [
+      "PremiumCoal.png",
+      "PremiumCoffeeBean.png",
+      "PremiumCopperIngot.png",
+      "PremiumCorn.png",
+      "PremiumCow.png"
+    ],
+    "PuppyTB15": [
+      "PuppyTB15Green.png",
+      "PuppyTB15Orange.png",
+      "PuppyTB15Purple.png",
+      "PuppyTB15Red.png",
+      "PuppyTB15White.png",
+      "PuppyTB15Yellow.png"
+    ],
+    "SandTimer": [
+      "SandTimer30seconds.png",
+      "SandTimer60seconds.png",
+      "SandTimer90seconds.png"
+    ],
+    "SprueAges": [
+      "SprueAgesPurple.png",
+      "SprueAgesTan.png",
+      "SprueAgesYellow.png"
+    ],
+    "StickWood": [
+      "StickWoodGreen.png",
+      "StickWoodOrange.png",
+      "StickWoodPurple.png",
+      "StickWoodRed.png",
+      "StickWoodWhite.png",
+      "StickWoodYellow.png"
+    ],
+    "Submarine": [
+      "SubmarineGreen.png",
+      "SubmarineOrange.png",
+      "SubmarinePurple.png",
+      "SubmarineRed.png",
+      "SubmarineWhite.png",
+      "SubmarineYellow.png"
+    ],
+    "Swordsman": [
+      "SwordsmanGreen-CharacterMeeple.png",
+      "SwordsmanOrange-CharacterMeeple.png",
+      "SwordsmanPurple-CharacterMeeple.png",
+      "SwordsmanRed-CharacterMeeple.png",
+      "SwordsmanWhite-CharacterMeeple.png",
+      "SwordsmanYellow-CharacterMeeple.png"
+    ],
+    "TokenChip": [
+      "TokenChipGreen.png",
+      "TokenChipOrange.png",
+      "TokenChipPurple.png",
+      "TokenChipRed.png",
+      "TokenChipWhite.png",
+      "TokenChipYellow.png"
+    ],
+    "TruckWood": [
+      "TruckWoodBlue.png",
+      "TruckWoodRed.png",
+      "TruckWoodYellow.png"
+    ],
+    "WaterMill": [
+      "WaterMillGreen.png",
+      "WaterMillOrange.png",
+      "WaterMillPurple.png",
+      "WaterMillRed.png",
+      "WaterMillWhite.png",
+      "WaterMillYellow.png"
+    ],
+    "BirdTB15": [
+      "BirdTB15Green.png",
+      "BirdTB15Orange.png",
+      "BirdTB15Purple.png",
+      "BirdTB15Red.png",
+      "BirdTB15White.png",
+      "BirdTB15Yellow.png"
+    ],
+    "BlankMat": [
+      "BlankMatBig.png",
+      "BlankMatDomino.png",
+      "BlankMatFlower.png",
+      "BlankMatHalf.png",
+      "BlankMatInvader.png",
+      "BlankMatPostcard.png",
+      "BlankMatQuarter.png"
+    ],
+    "Block1x1": [
+      "Block1x1Red.png",
+      "Block1x1White.png",
+      "Block1x1Yellow.png"
+    ],
+    "Block1x2": [
+      "Block1x2Red.png",
+      "Block1x2White.png",
+      "Block1x2Yellow.png"
+    ],
+    "Block1x3": [
+      "Block1x3Red.png",
+      "Block1x3White.png",
+      "Block1x3Yellow.png"
+    ],
+    "Cube10mm": [
+      "Cube10mmBrown.png",
+      "Cube10mmOrange.png",
+      "Cube10mmRed.png",
+      "Cube10mmWhite.png",
+      "Cube10mmYellow.png"
+    ],
+    "Cube13mm": [
+      "Cube13mmBlue.png",
+      "Cube13mmGreen.png",
+      "Cube13mmRed.png",
+      "Cube13mmYellow.png"
+    ],
+    "Dinosaur": [
+      "DinosaurBrontosaurus.png",
+      "DinosaurSpinosaurusOrange.png",
+      "DinosaurTokensWoodPink.png"
+    ],
+    "FiguresS": [
+      "FiguresSci-FiSetof10.png",
+      "FiguresSoldierSetof5.png",
+      "FiguresSteampunkSetof14.png"
+    ],
+    "FlatStar": [
+      "FlatStarGreen.png",
+      "FlatStarOrange.png",
+      "FlatStarPurple.png",
+      "FlatStarRed.png",
+      "FlatStarWhite.png",
+      "FlatStarYellow.png"
+    ],
+    "Gangster": [
+      "GangsterBlue.png",
+      "GangsterGreen.png",
+      "GangsterOrange.png",
+      "GangsterYellow.png"
+    ],
+    "Halfling": [
+      "Halfling-CharacterMeeple.png",
+      "HalflingPirateFantasyTB25.png",
+      "HalflingSpaceTB25.png"
+    ],
+    "Handmade": [
+      "HandmadeBrick.png",
+      "HandmadeGrape.png",
+      "HandmadeOilDrum.png",
+      "HandmadePumpkin.png",
+      "HandmadeReed.png",
+      "HandmadeUraniumRod.png",
+      "HandmadeWheat.png"
+    ],
+    "Henhouse": [
+      "HenhouseGreen.png",
+      "HenhouseOrange.png",
+      "HenhousePurple.png",
+      "HenhouseRed.png",
+      "HenhouseWhite.png",
+      "HenhouseYellow.png"
+    ],
+    "Joystick": [
+      "JoystickGreen.png",
+      "JoystickHeadlessBlack.png",
+      "JoystickOrange.png",
+      "JoystickPurple.png",
+      "JoystickRed.png",
+      "JoystickWhite.png",
+      "JoystickYellow.png"
+    ],
+    "MechTB15": [
+      "MechTB15Green.png",
+      "MechTB15Orange.png",
+      "MechTB15Purple.png",
+      "MechTB15Red.png",
+      "MechTB15White.png",
+      "MechTB15Yellow.png"
+    ],
+    "PremiumC": [
+      "PremiumCheeseWedge.png",
+      "PremiumCinderBlock.png",
+      "PremiumCrate.png"
+    ],
+    "PremiumH": [
+      "PremiumHammer.png",
+      "PremiumHeart.png",
+      "PremiumHorse.png"
+    ],
+    "PremiumM": [
+      "PremiumMedKit.png",
+      "PremiumMilkBottle.png",
+      "PremiumMushroom.png"
+    ],
+    "PremiumP": [
+      "PremiumPotionBottle.png",
+      "PremiumPresent.png",
+      "PremiumPumpkin.png"
+    ],
+    "PremiumS": [
+      "PremiumSealedScroll.png",
+      "PremiumSheep.png",
+      "PremiumSkull.png",
+      "PremiumSmokeCloud.png",
+      "PremiumSpaceCrate.png"
+    ],
+    "PushCart": [
+      "PushCartGreen.png",
+      "PushCartOrange.png",
+      "PushCartPurple.png",
+      "PushCartRed.png",
+      "PushCartWhite.png",
+      "PushCartYellow.png"
+    ],
+    "Sailboat": [
+      "SailboatGreen.png",
+      "SailboatOrange.png",
+      "SailboatPurple.png",
+      "SailboatRed.png",
+      "SailboatWhite.png",
+      "SailboatYellow.png"
+    ],
+    "Skeleton": [
+      "Skeleton-CharacterMeeple.png",
+      "SkeletonAxeFantasyTB25.png",
+      "SkeletonBattleAxe.png"
+    ],
+    "StarWood": [
+      "StarWoodBlack.png",
+      "StarWoodGreen.png",
+      "StarWoodPurple.png",
+      "StarWoodRed.png"
+    ],
+    "Triangle": [
+      "TriangleGreen.png",
+      "TriangleHollow.png",
+      "TrianglePink.png"
+    ],
+    "Villager": [
+      "VillagerGreen-CharacterMeeple.png",
+      "VillagerOrange-CharacterMeeple.png",
+      "VillagerPurple-CharacterMeeple.png",
+      "VillagerRed-CharacterMeeple.png",
+      "VillagerWhite-CharacterMeeple.png",
+      "VillagerYellow-CharacterMeeple.png"
+    ],
+    "Windmill": [
+      "WindmillGreen.png",
+      "WindmillOrange.png",
+      "WindmillPurple.png",
+      "WindmillRed.png",
+      "WindmillWhite.png",
+      "WindmillYellow.png"
+    ],
+    "Wink20mm": [
+      "Wink20mmBlack.png",
+      "Wink20mmOpaqueWhite.png",
+      "Wink20mmTranslucentBlue.png"
+    ],
+    "CarRace": [
+      "CarRaceGreen.png",
+      "CarRaceOrange.png",
+      "CarRacePurple.png",
+      "CarRaceRed.png",
+      "CarRaceWhite.png",
+      "CarRaceYellow.png"
+    ],
+    "CatTB15": [
+      "CatTB15Green.png",
+      "CatTB15Orange.png",
+      "CatTB15Purple.png",
+      "CatTB15Red.png",
+      "CatTB15White.png",
+      "CatTB15Yellow.png"
+    ],
+    "Cube8mm": [
+      "Cube8mmLightPink.png",
+      "Cube8mmOrange.png",
+      "Cube8mmRed.png",
+      "Cube8mmWhite.png",
+      "Cube8mmYellow.png"
+    ],
+    "D616mmB": [
+      "D616mmBetrayal.png",
+      "D616mmBinary.png",
+      "D616mmBlue.png"
+    ],
+    "Footman": [
+      "FootmanBlue.png",
+      "FootmanGreen.png",
+      "FootmanRed.png",
+      "FootmanYellow.png"
+    ],
+    "Lookout": [
+      "LookoutBlue.png",
+      "LookoutGreen.png",
+      "LookoutOrange.png",
+      "LookoutRed.png",
+      "LookoutYellow.png"
+    ],
+    "Mafioso": [
+      "MafiosoBurntOrange.png",
+      "MafiosoGreen.png",
+      "MafiosoPurple.png",
+      "MafiosoRed.png",
+      "MafiosoYellow.png"
+    ],
+    "MintTin": [
+      "MintTin.png",
+      "MintTinRibbon.png",
+      "MintTinTall.png"
+    ],
+    "PegPawn": [
+      "PegPawnGreen.png",
+      "PegPawnOrange.png",
+      "PegPawnPurple.png",
+      "PegPawnRed.png",
+      "PegPawnWhite.png",
+      "PegPawnYellow.png"
+    ],
+    "PigTB15": [
+      "PigTB15Green.png",
+      "PigTB15Orange.png",
+      "PigTB15Purple.png",
+      "PigTB15Red.png",
+      "PigTB15White.png",
+      "PigTB15Yellow.png"
+    ],
+    "Premium": [
+      "PremiumLPGasCan.png",
+      "PremiumRedSpiceSack.png",
+      "PremiumToxicWaste.png",
+      "PremiumUraniumRod.png",
+      "PremiumYarnBall.png"
+    ],
+    "Pyramid": [
+      "PyramidPurple.png",
+      "PyramidRed.png",
+      "PyramidWhite.png",
+      "PyramidYellow.png"
+    ],
+    "RaceCar": [
+      "RaceCarBlack.png",
+      "RaceCarGreen.png",
+      "RaceCarOrange.png",
+      "RaceCarPurple.png",
+      "RaceCarRed.png",
+      "RaceCarYellow.png"
+    ],
+    "Rooster": [
+      "RoosterGreen.png",
+      "RoosterOrange.png",
+      "RoosterPurple.png",
+      "RoosterRed.png",
+      "RoosterWhite.png",
+      "RoosterYellow.png"
+    ],
+    "Spinner": [
+      "SpinnerBlack.png",
+      "SpinnerRed.png",
+      "SpinnerWhite.png"
+    ],
+    "Stacker": [
+      "StackerGreen.png",
+      "StackerOrange.png",
+      "StackerPurple.png",
+      "StackerRed.png",
+      "StackerWhite.png",
+      "StackerYellow.png"
+    ],
+    "Cash$1": [
+      "Cash$1.png",
+      "Cash$1K.png",
+      "Cash$1M.png"
+    ],
+    "Castle": [
+      "CastleGreen.png",
+      "CastleOrange.png",
+      "CastlePurple.png",
+      "CastleRed.png",
+      "CastleTower.png",
+      "CastleWhite.png",
+      "CastleYellow.png"
+    ],
+    "Cowboy": [
+      "CowboyGreen-CharacterMeeple.png",
+      "CowboyOrange-CharacterMeeple.png",
+      "CowboyPurple-CharacterMeeple.png",
+      "CowboyRed-CharacterMeeple.png",
+      "CowboyWhite-CharacterMeeple.png",
+      "CowboyYellow-CharacterMeeple.png"
+    ],
+    "D612mm": [
+      "D612mmGreen.png",
+      "D612mmMarbledGreen.png",
+      "D612mmWhite.png",
+      "D612mmYellow.png"
+    ],
+    "D616mm": [
+      "D616mmGreen.png",
+      "D616mmNumeralBlack.png",
+      "D616mmRed.png",
+      "D616mmSymbolIvory.png",
+      "D616mmYellow.png"
+    ],
+    "DwarfP": [
+      "DwarfPaladinFantasyTB25.png",
+      "DwarfPistolSpaceTB25.png",
+      "DwarfPurple-CharacterMeeple.png"
+    ],
+    "Female": [
+      "FemaleAssassinFantasyTB25.png",
+      "FemaleBeastMasterWarriorwithSwordandSpear.png",
+      "FemaleGunslingerGray.png"
+    ],
+    "Goblin": [
+      "GoblinChieftainFantasyTB25.png",
+      "GoblinDefensiveFantasyTB25.png",
+      "GoblinJesterFantasyTB25.png",
+      "GoblinOffensiveFantasyTB25.png",
+      "GoblinSling1FantasyTB25.png",
+      "GoblinWarlockFantasyTB25Yellow.png"
+    ],
+    "Harbor": [
+      "HarborGreen.png",
+      "HarborOrange.png",
+      "HarborPurple.png",
+      "HarborRed.png",
+      "HarborWhite.png",
+      "HarborYellow.png"
+    ],
+    "HotRod": [
+      "HotRodGreen.png",
+      "HotRodOrange.png",
+      "HotRodPurple.png",
+      "HotRodRed.png",
+      "HotRodWhite.png",
+      "HotRodYellow.png"
+    ],
+    "People": [
+      "PeopleGreen.png",
+      "PeopleOrange.png",
+      "PeoplePurple.png",
+      "PeopleRed.png",
+      "PeopleWhite.png",
+      "PeopleYellow.png"
+    ],
+    "Pirate": [
+      "Pirate1FantasyTB25.png",
+      "Pirate2FemaleFantasyTB25.png",
+      "Pirate3FantasyTB25.png",
+      "Pirate4FantasyTB25.png",
+      "PirateBlue-CharacterMeeple.png",
+      "PirateGreen-CharacterMeeple.png",
+      "PirateOrange-CharacterMeeple.png",
+      "PiratePurple-CharacterMeeple.png",
+      "PirateRed-CharacterMeeple.png",
+      "PirateYellow-CharacterMeeple.png"
+    ],
+    "Rocket": [
+      "RocketGreen.png",
+      "RocketOrange.png",
+      "RocketPurple.png",
+      "RocketRed.png",
+      "RocketWhite.png",
+      "RocketYellow.png"
+    ],
+    "Spider": [
+      "Spider.png",
+      "SpiderEggs.png",
+      "SpiderFantasyTB50.png"
+    ],
+    "Wizard": [
+      "WizardBlue-CharacterMeeple.png",
+      "WizardGreen-CharacterMeeple.png",
+      "WizardPurple-CharacterMeeple.png",
+      "WizardRed-CharacterMeeple.png",
+      "WizardYellow-CharacterMeeple.png"
+    ],
+    "Zombie": [
+      "Zombie2FantasyTB25.png",
+      "Zombie3FantasyTB25.png",
+      "ZombieBabe.png",
+      "ZombieDude.png",
+      "ZombieFantasyTB25.png",
+      "ZombieGranny.png",
+      "ZombieMullet.png",
+      "ZombieProfessor.png",
+      "ZombieRandom.png",
+      "ZombieThriller.png"
+    ],
+    "Blank": [
+      "BlankClearEuroPokerCard.png",
+      "BlankJumboCard.png",
+      "BlankPokerCard.png",
+      "BlankVHSBox.png"
+    ],
+    "CoinP": [
+      "CoinPenny.png",
+      "CoinPirate35mm.png",
+      "CoinPurple.png"
+    ],
+    "D68mm": [
+      "D68mmGreen.png",
+      "D68mmRed.png",
+      "D68mmWhite.png"
+    ],
+    "Dwarf": [
+      "DwarfAxeFantasyTB25.png",
+      "DwarfBlue-CharacterMeeple.png",
+      "DwarfFighter.png",
+      "DwarfGreen-CharacterMeeple.png",
+      "DwarfMinigunFantasyTB25.png",
+      "DwarfOrange-CharacterMeeple.png",
+      "DwarfYellow-CharacterMeeple.png"
+    ],
+    "Ghost": [
+      "GhostBunnyFantasyTB25.png",
+      "GhostFantasyTB25.png",
+      "GhostIVHooded.png",
+      "GhostWhite.png"
+    ],
+    "Gnome": [
+      "GnomeBlue.png",
+      "GnomeCrossbowFantasyTB25.png",
+      "GnomeSwordFantasyTB25.png"
+    ],
+    "Guard": [
+      "Guard1SpaceTB25.png",
+      "Guard2SpaceTB25.png",
+      "GuardHeavySpaceTB25.png"
+    ],
+    "Halma": [
+      "HalmaGreen.png",
+      "HalmaLargeNatural.png",
+      "HalmaOrange.png",
+      "HalmaPurple.png",
+      "HalmaRed.png",
+      "HalmaWhite.png",
+      "HalmaYellow.png"
+    ],
+    "Hotel": [
+      "HotelGreen.png",
+      "HotelOrange.png",
+      "HotelPurple.png",
+      "HotelRed.png",
+      "HotelWhite.png",
+      "HotelYellow.png"
+    ],
+    "House": [
+      "HouseGreen.png",
+      "HouseOrange.png",
+      "HousePurple.png",
+      "HouseRed.png",
+      "HouseWhite.png",
+      "HouseYellow.png"
+    ],
+    "Jewel": [
+      "JewelBlue.png",
+      "JewelClear.png",
+      "JewelGreen.png",
+      "JewelOrange.png",
+      "JewelPurple.png",
+      "JewelRed.png",
+      "JewelYellow.png"
+    ],
+    "Large": [
+      "LargeBlackTin.png",
+      "LargeQuadFoldGameBoard.png",
+      "LargeTreasureChest(closed).png"
+    ],
+    "Ninja": [
+      "NinjaBrown.png",
+      "NinjaGreen-CharacterMeeple.png",
+      "NinjaPurple-CharacterMeeple.png",
+      "NinjaRed-CharacterMeeple.png",
+      "NinjaWhite-CharacterMeeple.png",
+      "NinjaYellow-CharacterMeeple.png"
+    ],
+    "Noble": [
+      "NobleBlue.png",
+      "NobleGreen.png",
+      "NobleRed.png",
+      "NobleWhite.png",
+      "NobleYellow.png"
+    ],
+    "Puppy": [
+      "PuppyMutt.png",
+      "PuppyPoodle.png",
+      "PuppyTerrier.png"
+    ],
+    "Qubit": [
+      "QubitGreen.png",
+      "QubitOrange.png",
+      "QubitPurple.png",
+      "QubitRed.png",
+      "QubitWhite.png",
+      "QubitYellow.png"
+    ],
+    "Robot": [
+      "RobotDetectiveSpaceTB25.png",
+      "RobotSilver.png",
+      "RobotWizardSpaceTB25.png"
+    ],
+    "Suits": [
+      "SuitsClubs.png",
+      "SuitsDiamonds.png",
+      "SuitsHearts.png",
+      "SuitsSpades.png"
+    ],
+    "Coin": [
+      "CoinAncientRussian22mm.png",
+      "CoinFantasy5.png",
+      "CoinHalfdollar.png",
+      "CoinNickel.png",
+      "CoinQuarter.png",
+      "CoinRoman18mm.png",
+      "CoinSacagaweaDollar.png",
+      "CoinTimeless5.png"
+    ],
+    "Drop": [
+      "DropGreen.png",
+      "DropOrange.png",
+      "DropPurple.png",
+      "DropRed.png",
+      "DropWhite.png",
+      "DropYellow.png"
+    ],
+    "Fire": [
+      "FireAxe.png",
+      "FireTB25.png",
+      "Firefighter-CharacterMeeple.png"
+    ],
+    "Flag": [
+      "FlagGreen.png",
+      "FlagOrange.png",
+      "FlagPurple.png",
+      "FlagRed.png",
+      "FlagWhite.png",
+      "FlagYellow.png"
+    ],
+    "Gear": [
+      "Gear.png",
+      "GearBronze.png",
+      "GearGold.png",
+      "GearSilver.png"
+    ],
+    "Herb": [
+      "HerbGreen.png",
+      "HerbOrange.png",
+      "HerbPurple.png",
+      "HerbRed.png",
+      "HerbWhite.png",
+      "HerbYellow.png"
+    ],
+    "Limo": [
+      "LimoBlue.png",
+      "LimoGreen.png",
+      "LimoRed.png",
+      "LimoYellow.png"
+    ],
+    "Mine": [
+      "MineGreen.png",
+      "MineOrange.png",
+      "MinePurple.png",
+      "MineRed.png",
+      "MineSeaTB25.png",
+      "MineWhite.png",
+      "MineYellow.png"
+    ],
+    "Ring": [
+      "RingGreen.png",
+      "RingOrange.png",
+      "RingPurple.png",
+      "RingRed.png",
+      "RingWhite.png",
+      "RingYellow.png"
+    ],
+    "Tank": [
+      "TankBrown.png",
+      "TankClear.png",
+      "TankGreen.png",
+      "TankOrange.png",
+      "TankRed.png",
+      "TankWhite.png",
+      "TankYellow.png"
+    ],
+    "Wood": [
+      "WoodCabinBrown.png",
+      "WoodLogs.png",
+      "WoodPile.png"
+    ],
+    "Bri": [
+      "BrickTowerGrey.png",
+      "BridgeSleevePack(100).png",
+      "BrigandwithDagger.png"
+    ],
+    "Bug": [
+      "BugGreen.png",
+      "BugOrange.png",
+      "BugPurple.png",
+      "BugRed.png",
+      "BugWhite.png",
+      "BugYellow.png"
+    ],
+    "Car": [
+      "CarGreen.png",
+      "CarOrange.png",
+      "CarPurple.png",
+      "CarRed.png",
+      "CarWhite.png",
+      "CarYellow.png",
+      "CardHolder.png",
+      "Carrot.png"
+    ],
+    "D10": [
+      "D10Green.png",
+      "D10Red.png",
+      "D10White.png",
+      "D10Yellow.png",
+      "D10x10Black.png"
+    ],
+    "D12": [
+      "D12BodyParts.png",
+      "D12Green.png",
+      "D12Red.png",
+      "D12White.png",
+      "D12Yellow.png"
+    ],
+    "D20": [
+      "D20Green.png",
+      "D20Red.png",
+      "D20White.png",
+      "D20Yellow.png"
+    ],
+    "Egg": [
+      "EggBlue.png",
+      "EggGreen.png",
+      "EggNatural.png",
+      "EggPurple.png",
+      "EggRose.png",
+      "EggWhite.png"
+    ],
+    "Gem": [
+      "GemBlack.png",
+      "GemClear.png",
+      "GemGreen.png",
+      "GemLightGreen.png",
+      "GemPurple.png",
+      "GemWhite.png",
+      "GemYellow.png"
+    ],
+    "Gri": [
+      "GrickFantasyTB25.png",
+      "GrimReaperFantasyTB25.png",
+      "GrizzlyBear.png"
+    ],
+    "LED": [
+      "LEDGreen.png",
+      "LEDOrange.png",
+      "LEDPurple.png",
+      "LEDRed.png",
+      "LEDWhite.png",
+      "LEDYellow.png"
+    ],
+    "Not": [
+      "Notepad.png",
+      "NothicFantasyTB25.png",
+      "NoticeBoard.png"
+    ],
+    "Rat": [
+      "RatAcrylic.png",
+      "RatcatcherFantasyTB25.png",
+      "RatfolkAssassinFantasyTB25.png"
+    ],
+    "Thi": [
+      "Thief-CharacterMeeple.png",
+      "Thimble.png",
+      "ThinStarGrey.png"
+    ]
+  },
+  "potentialTimeSavings": 1351,
+  "generatedAt": "2025-02-28T13:23:40.561Z"
+}

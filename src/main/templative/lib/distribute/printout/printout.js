@@ -35,6 +35,8 @@ async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size,
     const pageWidthInches = printoutPlayAreaChoices[size][0];
     const pageHeightInches = printoutPlayAreaChoices[size][1];
     
+    let nextAvailablePage = 0;
+    
     for (const componentType of Object.keys(componentTypeFilepathsAndQuantity)) {
         if (componentType.startsWith("STOCK_")) {
             console.log(`Skipping STOCK component: ${componentType}`);
@@ -59,10 +61,17 @@ async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size,
             isBackIncluded,
             pageWidthInches,
             pageHeightInches,
-            areMarginsIncluded
+            areMarginsIncluded,
+            nextAvailablePage
         );
         
         placementCommands.push(...componentCommands);
+        
+        // Update the next available page
+        if (componentCommands.length > 0) {
+            const maxPage = Math.max(...componentCommands.map(cmd => cmd.page));
+            nextAvailablePage = maxPage + 1;
+        }
     }
     
     // Create PDF and apply all placement commands
@@ -72,7 +81,12 @@ async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size,
     // Save the PDF
     const outputPath = join(producedDirectoryPath, "printout.pdf");
     console.log(`Writing printout to ${outputPath}`);
-    pdf.save(outputPath);
+    
+    // Replace pdf.save() with direct file writing
+    const pdfOutput = pdf.output('arraybuffer');
+    const fs = require('fs');
+    fs.writeFileSync(outputPath, Buffer.from(pdfOutput));
+    
     return 1;
 }
 
@@ -86,7 +100,8 @@ async function generatePlacementCommandsForComponentType(
     isBackIncluded,
     pageWidthInches,
     pageHeightInches,
-    areMarginsIncluded
+    areMarginsIncluded,
+    startingPageIndex
 ) {
     const commands = [];
     const isDie = diceTypes.includes(componentType);
@@ -175,7 +190,7 @@ async function generatePlacementCommandsForComponentType(
             
             for (let i = 0; i < component.quantity; i++) {
                 // For dice, we need to create a cross layout
-                const pageIndex = Math.floor(itemIndex / (columns * rows));
+                const pageIndex = Math.floor(itemIndex / (columns * rows)) + startingPageIndex;
                 const itemIndexOnPage = itemIndex % (columns * rows);
                 const col = itemIndexOnPage % columns;
                 const row = Math.floor(itemIndexOnPage / columns);
@@ -202,7 +217,7 @@ async function generatePlacementCommandsForComponentType(
         } else {
             // Handle regular components
             for (let i = 0; i < component.quantity; i++) {
-                const pageIndex = Math.floor(itemIndex / (columns * rows));
+                const pageIndex = Math.floor(itemIndex / (columns * rows)) + startingPageIndex;
                 const itemIndexOnPage = itemIndex % (columns * rows);
                 const col = itemIndexOnPage % columns;
                 const row = Math.floor(itemIndexOnPage / columns);

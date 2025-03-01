@@ -39,44 +39,54 @@ const StockComponentType = ({ componentInfo, selectedComponentType, name, select
     };
 
     return (
-        <button 
-            type="button" 
-            className={`btn btn-outline-primary component-type-card ${selectedComponentType === name && "selected-component-type"}`} 
-            onClick={() => selectTypeCallback(name)}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
-            <div className="component-type-content">
-                <div className="component-type-info">
-                    <p><strong>{existingQuantity !== 0 && `${existingQuantity}x `}{displayName}</strong></p>
-                    
-                    {componentInfo["PreviewUri"] && (
-                        <div className="stock-component-preview">
-                            {has3DModel ? (
-                                <div className="model-container">
-                                    <Suspense fallback={<div className="loading-model">Loading 3D model...</div>}>
-                                        <ModelViewer 
-                                            objUrl={componentInfo["3DModel"].ObjUrl}
-                                            textureUrl={componentInfo["3DModel"].TextureUrl}
-                                            normalMapUrl={componentInfo["3DModel"].NormalMapUrl}
+        <div className="component-type-wrapper">
+            <button 
+                type="button" 
+                className={`btn btn-outline-primary component-type-card ${selectedComponentType === name && "selected-component-type"}`} 
+                onClick={() => selectTypeCallback(name)}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+            >
+                <div className="component-type-content">
+                    <div className="component-type-info">
+                        <p><strong>{existingQuantity !== 0 && `${existingQuantity}x `}{displayName}</strong></p>
+                        
+                        {componentInfo["SimulatorCreationTask"] && (
+                            <p>Task: {componentInfo["SimulatorCreationTask"]}</p>
+                        )}
+                        
+                        {componentInfo["Color"] && (
+                            <p>Color: {componentInfo["Color"]}</p>
+                        )}
+                        
+                        {componentInfo["PreviewUri"] && (
+                            <div className="stock-component-preview">
+                                {has3DModel ? (
+                                    <div className="model-container">
+                                        <Suspense fallback={<div className="loading-model">Loading 3D model...</div>}>
+                                            <ModelViewer 
+                                                objUrl={componentInfo["3DModel"].ObjUrl}
+                                                textureUrl={componentInfo["3DModel"].TextureUrl}
+                                                normalMapUrl={componentInfo["3DModel"].NormalMapUrl}
+                                            />
+                                        </Suspense>
+                                    </div>
+                                ) : (
+                                    <div className="preview-container">
+                                        <img 
+                                            src={componentInfo["PreviewUri"]} 
+                                            alt={displayName}
+                                            className="preview-image"
                                         />
-                                    </Suspense>
-                                </div>
-                            ) : (
-                                <div className="preview-container">
-                                    <img 
-                                        src={componentInfo["PreviewUri"]} 
-                                        alt={displayName}
-                                        className="preview-image"
-                                    />
-                                    
-                                </div>
-                            )}
-                        </div>
-                    )}
+                                        
+                                    </div>
+                                )}
+                            </div>
+                        )}
+                    </div>
                 </div>
-            </div>
-        </button>
+            </button>
+        </div>
     );
 };
 

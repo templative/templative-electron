@@ -95,4 +95,261 @@
 
 .stock-component-preview:hover .model-preview-overlay {
     opacity: 1;
+}
+
+/* Updated styles for ColorGroupedStockComponents */
+.color-grouped-components {
+    margin-bottom: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.color-grouped-components .component-type-card {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
+
+.color-group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.component-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Color options grid styles */
+.color-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.color-option-button {
+    background: none;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 4px;
+    cursor: pointer;
+    height: 80px;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.color-option-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.selected-color-option {
+    border: 2px solid var(--color-accent);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.color-option-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.color-option-image {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.color-option-placeholder {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 5px;
+}
+
+.color-option-label {
+    font-size: 10px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.selected-group .component-type-card {
+    border-color: #007bff;
+}
+
+/* You can remove or comment out the thumbnails styles that are no longer needed */
+/* .color-thumbnails, .color-thumbnail, etc. */
+
+/* Component type wrapper for consistent layout */
+.component-type-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    margin: 8px;
+    width: 280px; /* Set a fixed width to ensure components line up in rows */
+    height: 230px; /* Manually set consistent height for all components */
+}
+
+/* Ensure consistent button height */
+.component-type-wrapper .btn.component-type-card,
+.component-type-wrapper .component-type-card {
+    width: 100%;
+    height: 230px; /* Match exactly the wrapper height */
+    display: flex;
+    flex-direction: column;
+    margin: 0; /* Remove any margins */
+    padding: 12px;
+}
+
+/* Ensure stock component and color grouped components have the same layout */
+.component-type-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.component-type-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Ensure preview areas have consistent height */
+.stock-component-preview,
+.color-options-container {
+    flex: 1;
+    height: 150px; /* Fixed height for preview areas */
+    margin-top: 8px;
+    overflow: hidden; /* Prevent any overflow */
+}
+
+/* Updated styles for ColorGroupedStockComponents */
+.color-grouped-component-card {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+    background-color: #fff;
+}
+
+.color-options-container {
+    height: 150px; /* Match the height of the standard component preview */
+    margin-top: 8px;
+    overflow: visible; /* Prevent scrollbars */
+}
+
+/* Color options grid styles - smaller buttons to fit more */
+.color-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Smaller buttons */
+    gap: 5px; /* Smaller gap to fit more buttons */
+}
+
+.color-option-button {
+    background: none;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 3px; /* Smaller padding */
+    cursor: pointer;
+    height: 55px; /* Smaller height */
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.color-option-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.selected-color-option {
+    border: 2px solid #007bff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.color-option-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Make images relatively larger within the buttons */
+.color-option-image {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    margin-bottom: 3px;
+    transform: scale(1.5); /* Make image relatively larger */
+}
+
+.color-option-placeholder {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 3px;
+    transform: scale(1.1); /* Make placeholder relatively larger */
+}
+
+.color-option-label {
+    font-size: 8px; /* Smaller font for label */
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.selected-group .component-type-card {
+    border-color: #007bff;
+}
+
+/* Need to ensure standard component type has the same width */
+.component-type-card {
+    width: 100%;
+    height: 100%; /* Make sure cards take full height of wrapper */
+    display: flex;
+    flex-direction: column;
+}
+
+/* New class for outline styling without button behavior */
+.outline-card {
+    background-color: var(--color-content-surface);
+    border: 1px solid var(--color-accent) !important;
+    color: var(--color-accent);
+    border-radius: 4px;
 } 

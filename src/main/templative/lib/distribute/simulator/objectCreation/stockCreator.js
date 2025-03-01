@@ -1,5 +1,5 @@
 const chalk = require('chalk');
-const { createStockDie, createStockCube, createStockModel } = require('../simulatorTemplates/objectState');
+const { createStandardDie, createStockCube, createStockModel, createStandee } = require('../simulatorTemplates/objectState');
 
 /**
  * Create a stock component (dice, cubes, etc.)
@@ -30,6 +30,15 @@ async function createStock(componentInstructions, stockPartInfo) {
   const isCube = stockType.startsWith("Cube");
 
   if (!isDie && !isCube) {
+    // Check if we have a preview image to use as fallback
+    if (stockPartInfo.hasOwnProperty("PreviewUri")) {
+      console.log(chalk.yellow(`Using preview image as fallback for ${stockType}`));
+      return createStandee(
+        componentInstructions.name,
+        stockPartInfo.PreviewUri
+      );
+    }
+    
     console.log(chalk.red(`!!! Unsupported stock type: ${stockType}`));
     return null;
   }
@@ -49,7 +58,7 @@ async function createStock(componentInstructions, stockPartInfo) {
   const size = parseFloat(sizeStr) / 25.4;
 
   if (isDie) {
-    return createStockDie(
+    return createStandardDie(
       componentInstructions.name,
       size,
       color

@@ -84,7 +84,7 @@ async function copyComponentToPackage(componentDirectoryPath, packageDirectoryPa
     }
     const instruction = supportedInstructionTypes[playgroundTask];
 
-    if (!("DimensionsPixels" in componentTypeInfo) || !("PlaygroundThickness" in componentTypeInfo)) {
+    if (!("DimensionsPixels" in componentTypeInfo) || !("Thickness" in componentTypeInfo)) {
         console.log(`Skipping ${componentType} with undefined size.`);
         return null;
     }

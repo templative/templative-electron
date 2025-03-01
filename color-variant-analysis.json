@@ -1,0 +1,7411 @@
+{
+  "totalFiles": 2819,
+  "colorVariants": {
+    "AcrylicTrainBoxCar": [
+      {
+        "filename": "AcrylicTrainBoxCarBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "AcrylicTrainBoxCarBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "AcrylicTrainBoxCarGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "AcrylicTrainBoxCarOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "AcrylicTrainBoxCarPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "AcrylicTrainBoxCarRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "AcrylicTrainBoxCarWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "AcrylicTrainBoxCarYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "AcrylicTrainCaboose": [
+      {
+        "filename": "AcrylicTrainCabooseBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "AcrylicTrainCabooseBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "AcrylicTrainCabooseGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "AcrylicTrainCabooseOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "AcrylicTrainCaboosePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "AcrylicTrainCabooseRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "AcrylicTrainCabooseWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "AcrylicTrainCabooseYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "AcrylicTrainCoalCar": [
+      {
+        "filename": "AcrylicTrainCoalCarBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "AcrylicTrainCoalCarBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "AcrylicTrainCoalCarGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "AcrylicTrainCoalCarOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "AcrylicTrainCoalCarPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "AcrylicTrainCoalCarRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "AcrylicTrainCoalCarWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "AcrylicTrainCoalCarYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "AcrylicTrainFlatBed": [
+      {
+        "filename": "AcrylicTrainFlatBedBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "AcrylicTrainFlatBedBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "AcrylicTrainFlatBedGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "AcrylicTrainFlatBedOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "AcrylicTrainFlatBedPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "AcrylicTrainFlatBedRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "AcrylicTrainFlatBedWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "AcrylicTrainFlatBedYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "AcrylicTrainModernEngine": [
+      {
+        "filename": "AcrylicTrainModernEngineBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "AcrylicTrainModernEngineBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "AcrylicTrainModernEngineGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "AcrylicTrainModernEngineOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "AcrylicTrainModernEnginePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "AcrylicTrainModernEngineRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "AcrylicTrainModernEngineWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "AcrylicTrainModernEngineYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "AcrylicTrainPassengerCar": [
+      {
+        "filename": "AcrylicTrainPassengerCarBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "AcrylicTrainPassengerCarBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "AcrylicTrainPassengerCarGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "AcrylicTrainPassengerCarOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "AcrylicTrainPassengerCarPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "AcrylicTrainPassengerCarRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "AcrylicTrainPassengerCarWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "AcrylicTrainPassengerCarYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "AcrylicTrainSteamEngine": [
+      {
+        "filename": "AcrylicTrainSteamEngineBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "AcrylicTrainSteamEngineBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "AcrylicTrainSteamEngineGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "AcrylicTrainSteamEngineOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "AcrylicTrainSteamEnginePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "AcrylicTrainSteamEngineRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "AcrylicTrainSteamEngineWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "AcrylicTrainSteamEngineYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "AcrylicTrainTankCar": [
+      {
+        "filename": "AcrylicTrainTankCarBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "AcrylicTrainTankCarBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "AcrylicTrainTankCarGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "AcrylicTrainTankCarOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "AcrylicTrainTankCarPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "AcrylicTrainTankCarRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "AcrylicTrainTankCarWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "AcrylicTrainTankCarYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "AcrylicTrainTrack": [
+      {
+        "filename": "AcrylicTrainTrackBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "AcrylicTrainTrackBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "AcrylicTrainTrackGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "AcrylicTrainTrackOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "AcrylicTrainTrackPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "AcrylicTrainTrackRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "AcrylicTrainTrackWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "AcrylicTrainTrackYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "AirplaneLarge": [
+      {
+        "filename": "AirplaneLargeBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "AirplaneLargeBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "AirplaneLargeOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "AirplaneLargePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "AirplaneLargeYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "AirplaneSmall": [
+      {
+        "filename": "AirplaneSmallBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "AirplaneSmallBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "AirplaneSmallOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "AirplaneSmallPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "AirplaneSmallRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "AirplaneSmallWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "AirplaneSmallYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "AlienGreyTB15": [
+      {
+        "filename": "AlienGreyTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "AlienGreyTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "AlienGreyTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "AlienGreyTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "AlienGreyTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "AlienGreyTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "AlienGreyTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "AlienGreyTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "AstronautTB15": [
+      {
+        "filename": "AstronautTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "AstronautTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "AstronautTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "AstronautTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "AstronautTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "AstronautTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "AstronautTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "AstronautTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "AvatarTransparent": [
+      {
+        "filename": "AvatarTransparentBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "AvatarTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "AvatarTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "AvatarTransparentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "AvatarTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "AvatarTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "AvatarTransparentWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "AvatarTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "BaseShoeTB15": [
+      {
+        "filename": "BaseShoeTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "BaseShoeTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "BaseShoeTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "BaseShoeTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "BaseShoeTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "BaseShoeTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "BaseShoeTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "BaseShoeTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "BaseShoeTB25": [
+      {
+        "filename": "BaseShoeTB25Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "BaseShoeTB25Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "BaseShoeTB25Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "BaseShoeTB25Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "BaseShoeTB25Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "BaseShoeTB25Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "BaseShoeTB25White.png",
+        "color": "White"
+      },
+      {
+        "filename": "BaseShoeTB25Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "BirdTB15": [
+      {
+        "filename": "BirdTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "BirdTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "BirdTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "BirdTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "BirdTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "BirdTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "BirdTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "BirdTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Block1x1": [
+      {
+        "filename": "Block1x1Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "Block1x1Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Block1x1Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Block1x1White.png",
+        "color": "White"
+      },
+      {
+        "filename": "Block1x1Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Block1x2": [
+      {
+        "filename": "Block1x2Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "Block1x2Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Block1x2Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Block1x2White.png",
+        "color": "White"
+      },
+      {
+        "filename": "Block1x2Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Block1x3": [
+      {
+        "filename": "Block1x3Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "Block1x3Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Block1x3Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Block1x3White.png",
+        "color": "White"
+      },
+      {
+        "filename": "Block1x3Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "BowlingPinLarge": [
+      {
+        "filename": "BowlingPinLargeBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "BowlingPinLargeBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "BowlingPinLargeGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "BowlingPinLargeOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "BowlingPinLargePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "BowlingPinLargeRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "BowlingPinLargeWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "BowlingPinLargeYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "BowlingPinSmall": [
+      {
+        "filename": "BowlingPinSmallBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "BowlingPinSmallBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "BowlingPinSmallGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "BowlingPinSmallOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "BowlingPinSmallPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "BowlingPinSmallRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "BowlingPinSmallWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "BowlingPinSmallYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "BoxBand6\"": [
+      {
+        "filename": "BoxBand6\"Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "BoxBand6\"Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "BoxBand6\"Red.png",
+        "color": "Red"
+      }
+    ],
+    "BoxBand8\"": [
+      {
+        "filename": "BoxBand8\"Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "BoxBand8\"Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "BoxBand8\"Red.png",
+        "color": "Red"
+      }
+    ],
+    "BoxBand9\"": [
+      {
+        "filename": "BoxBand9\"Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "BoxBand9\"Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "BoxBand9\"Red.png",
+        "color": "Red"
+      }
+    ],
+    "Bug": [
+      {
+        "filename": "BugBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "BugBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "BugGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "BugOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "BugPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "BugRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "BugWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "BugYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "BuildingSmall": [
+      {
+        "filename": "BuildingSmallBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "BuildingSmallBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "BuildingSmallGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "BuildingSmallOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "BuildingSmallPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "BuildingSmallRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "BuildingSmallWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "BuildingSmallYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "BuildingSmallSideDoor": [
+      {
+        "filename": "BuildingSmallSideDoorBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "BuildingSmallSideDoorBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "BuildingSmallSideDoorGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "BuildingSmallSideDoorOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "BuildingSmallSideDoorPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "BuildingSmallSideDoorRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "BuildingSmallSideDoorWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "BuildingSmallSideDoorYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "BunnyTB15": [
+      {
+        "filename": "BunnyTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "BunnyTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "BunnyTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "BunnyTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "BunnyTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "BunnyTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "BunnyTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "BunnyTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "BurlapBagSmall": [
+      {
+        "filename": "BurlapBagSmallBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "BurlapBagSmallGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "BurlapBagSmallRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "BurlapBagSmallWhite.png",
+        "color": "White"
+      }
+    ],
+    "BusinessMiniature": [
+      {
+        "filename": "BusinessMiniatureBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "BusinessMiniatureGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "BusinessMiniatureRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "BusinessMiniatureYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ButtonLarge": [
+      {
+        "filename": "ButtonLargeBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ButtonLargeGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ButtonLargePink.png",
+        "color": "Pink"
+      },
+      {
+        "filename": "ButtonLargeYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Car": [
+      {
+        "filename": "CarBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "CarBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "CarGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "CarOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "CarPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "CarRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "CarWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "CarYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "CarMuscle": [
+      {
+        "filename": "CarMuscleBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "CarMuscleBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "CarMuscleGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "CarMuscleOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "CarMusclePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "CarMuscleRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "CarMuscleWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "CarMuscleYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "CarRace": [
+      {
+        "filename": "CarRaceBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "CarRaceBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "CarRaceGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "CarRaceOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "CarRacePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "CarRaceRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "CarRaceWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "CarRaceYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "CardConnector120-degree": [
+      {
+        "filename": "CardConnector120-degreeBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "CardConnector120-degreeBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "CardConnector120-degreeGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "CardConnector120-degreeOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "CardConnector120-degreePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "CardConnector120-degreeRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "CardConnector120-degreeWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "CardConnector120-degreeYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "CardConnector90-degree": [
+      {
+        "filename": "CardConnector90-degreeBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "CardConnector90-degreeBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "CardConnector90-degreeGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "CardConnector90-degreeOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "CardConnector90-degreePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "CardConnector90-degreeRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "CardConnector90-degreeWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "CardConnector90-degreeYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "CardStand": [
+      {
+        "filename": "CardStandBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "CardStandBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "CardStandGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "CardStandRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "CardStandWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "CardStandYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Castle": [
+      {
+        "filename": "CastleBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "CastleBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "CastleGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "CastleOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "CastlePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "CastleRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "CastleWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "CastleYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "CatTB15": [
+      {
+        "filename": "CatTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "CatTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "CatTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "CatTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "CatTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "CatTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "CatTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "CatTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Cathedral": [
+      {
+        "filename": "CathedralBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "CathedralBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "CathedralGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "CathedralOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "CathedralPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "CathedralRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "CathedralWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "CathedralYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "CavemanTB15": [
+      {
+        "filename": "CavemanTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "CavemanTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "CavemanTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "CavemanTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "CavemanTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "CavemanTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "CavemanTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "CavemanTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "CavewomanTB15": [
+      {
+        "filename": "CavewomanTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "CavewomanTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "CavewomanTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "CavewomanTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "CavewomanTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "CavewomanTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "CavewomanTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "CavewomanTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "CharacterStand": [
+      {
+        "filename": "CharacterStandBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "CharacterStandGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "CharacterStandPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "CharacterStandRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "CharacterStandYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ChessSetHalf": [
+      {
+        "filename": "ChessSetHalfBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ChessSetHalfBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ChessSetHalfGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ChessSetHalfOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ChessSetHalfPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ChessSetHalfRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ChessSetHalfWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "ChessSetHalfYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Chest": [
+      {
+        "filename": "ChestBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ChestBronze.png",
+        "color": "Bronze"
+      },
+      {
+        "filename": "ChestGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ChestRed.png",
+        "color": "Red"
+      }
+    ],
+    "Chevron20mm": [
+      {
+        "filename": "Chevron20mmBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "Chevron20mmBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Chevron20mmGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Chevron20mmOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Chevron20mmPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "Chevron20mmRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Chevron20mmWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "Chevron20mmYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Chevron8mm": [
+      {
+        "filename": "Chevron8mmBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "Chevron8mmBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Chevron8mmGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Chevron8mmOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Chevron8mmPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "Chevron8mmRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Chevron8mmWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "Chevron8mmYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ChurchAcrylicOpaque": [
+      {
+        "filename": "ChurchAcrylicOpaqueBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ChurchAcrylicOpaqueGold.png",
+        "color": "Gold"
+      },
+      {
+        "filename": "ChurchAcrylicOpaqueSilver.png",
+        "color": "Silver"
+      },
+      {
+        "filename": "ChurchAcrylicOpaqueWhite.png",
+        "color": "White"
+      }
+    ],
+    "ChurchAcrylicTransparent": [
+      {
+        "filename": "ChurchAcrylicTransparentBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ChurchAcrylicTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ChurchAcrylicTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ChurchAcrylicTransparentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ChurchAcrylicTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ChurchAcrylicTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ChurchAcrylicTransparentWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "ChurchAcrylicTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ChurchPlastic": [
+      {
+        "filename": "ChurchPlasticBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ChurchPlasticOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ChurchPlasticRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ChurchPlasticWhite.png",
+        "color": "White"
+      }
+    ],
+    "ChurchWood": [
+      {
+        "filename": "ChurchWoodBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ChurchWoodBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ChurchWoodGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ChurchWoodOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ChurchWoodPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ChurchWoodRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ChurchWoodWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "ChurchWoodYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Coin": [
+      {
+        "filename": "CoinGold.png",
+        "color": "Gold"
+      },
+      {
+        "filename": "CoinGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "CoinPurple.png",
+        "color": "Purple"
+      }
+    ],
+    "CoinMedieval": [
+      {
+        "filename": "CoinMedievalBronze.png",
+        "color": "Bronze"
+      },
+      {
+        "filename": "CoinMedievalGold.png",
+        "color": "Gold"
+      },
+      {
+        "filename": "CoinMedievalSilver.png",
+        "color": "Silver"
+      }
+    ],
+    "ColonialLumberjack": [
+      {
+        "filename": "ColonialLumberjackBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ColonialLumberjackGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ColonialLumberjackOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ColonialLumberjackRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ColonialLumberjackYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ColonialSoldier": [
+      {
+        "filename": "ColonialSoldierBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ColonialSoldierGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ColonialSoldierOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ColonialSoldierRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ColonialSoldierYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "CommandCenter": [
+      {
+        "filename": "CommandCenterBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "CommandCenterBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "CommandCenterGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "CommandCenterOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "CommandCenterPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "CommandCenterRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "CommandCenterWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "CommandCenterYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ContainerShip": [
+      {
+        "filename": "ContainerShipBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ContainerShipGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ContainerShipRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ContainerShipYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "CrabAcrylic": [
+      {
+        "filename": "CrabAcrylicBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "CrabAcrylicBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "CrabAcrylicGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "CrabAcrylicOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "CrabAcrylicPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "CrabAcrylicRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "CrabAcrylicWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "CrabAcrylicYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "CrystalOpaque": [
+      {
+        "filename": "CrystalOpaqueBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "CrystalOpaqueGold.png",
+        "color": "Gold"
+      },
+      {
+        "filename": "CrystalOpaqueSilver.png",
+        "color": "Silver"
+      },
+      {
+        "filename": "CrystalOpaqueWhite.png",
+        "color": "White"
+      }
+    ],
+    "CrystalTransparent": [
+      {
+        "filename": "CrystalTransparentBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "CrystalTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "CrystalTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "CrystalTransparentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "CrystalTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "CrystalTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "CrystalTransparentWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "CrystalTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Cube10mm": [
+      {
+        "filename": "Cube10mmBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "Cube10mmBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Cube10mmBrown.png",
+        "color": "Brown"
+      },
+      {
+        "filename": "Cube10mmGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Cube10mmOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Cube10mmPink.png",
+        "color": "Pink"
+      },
+      {
+        "filename": "Cube10mmPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "Cube10mmRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Cube10mmWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "Cube10mmYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Cube13mm": [
+      {
+        "filename": "Cube13mmBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Cube13mmGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Cube13mmRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Cube13mmYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Cube8mm": [
+      {
+        "filename": "Cube8mmBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "Cube8mmBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Cube8mmBrown.png",
+        "color": "Brown"
+      },
+      {
+        "filename": "Cube8mmGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Cube8mmOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Cube8mmPink.png",
+        "color": "Pink"
+      },
+      {
+        "filename": "Cube8mmPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "Cube8mmRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Cube8mmWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "Cube8mmYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Cylinder10mmx10mm": [
+      {
+        "filename": "Cylinder10mmx10mmBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "Cylinder10mmx10mmBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Cylinder10mmx10mmGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Cylinder10mmx10mmOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Cylinder10mmx10mmPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "Cylinder10mmx10mmRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Cylinder10mmx10mmWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "Cylinder10mmx10mmYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "D10": [
+      {
+        "filename": "D10Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "D10Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "D10Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "D10Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "D10White.png",
+        "color": "White"
+      },
+      {
+        "filename": "D10Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "D12": [
+      {
+        "filename": "D12Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "D12Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "D12Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "D12Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "D12White.png",
+        "color": "White"
+      },
+      {
+        "filename": "D12Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "D20": [
+      {
+        "filename": "D20Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "D20Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "D20Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "D20Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "D20White.png",
+        "color": "White"
+      },
+      {
+        "filename": "D20Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "D316mmRoundedNumeral": [
+      {
+        "filename": "D316mmRoundedNumeralBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "D316mmRoundedNumeralGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "D316mmRoundedNumeralWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "D316mmRoundedNumeralYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "D4": [
+      {
+        "filename": "D4Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "D4Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "D4Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "D4Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "D4Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "D4White.png",
+        "color": "White"
+      },
+      {
+        "filename": "D4Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "D612mm": [
+      {
+        "filename": "D612mmBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "D612mmBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "D612mmGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "D612mmRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "D612mmWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "D612mmYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "D612mmTransparent": [
+      {
+        "filename": "D612mmTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "D612mmTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "D612mmTransparentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "D612mmTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "D612mmTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "D612mmTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "D616mm": [
+      {
+        "filename": "D616mmBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "D616mmBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "D616mmGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "D616mmRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "D616mmWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "D616mmYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "D616mmBlank": [
+      {
+        "filename": "D616mmBlankBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "D616mmBlankBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "D616mmBlankGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "D616mmBlankOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "D616mmBlankPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "D616mmBlankRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "D616mmBlankWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "D616mmBlankYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "D616mmLightningBolt": [
+      {
+        "filename": "D616mmLightningBoltBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "D616mmLightningBoltBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "D616mmLightningBoltBrown.png",
+        "color": "Brown"
+      },
+      {
+        "filename": "D616mmLightningBoltGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "D616mmLightningBoltYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "D68mm": [
+      {
+        "filename": "D68mmBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "D68mmBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "D68mmGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "D68mmRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "D68mmWhite.png",
+        "color": "White"
+      }
+    ],
+    "D6IndentedBlank": [
+      {
+        "filename": "D6IndentedBlankBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "D6IndentedBlankGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "D6IndentedBlankOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "D6IndentedBlankPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "D6IndentedBlankRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "D6IndentedBlankWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "D6IndentedBlankYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "D8": [
+      {
+        "filename": "D8Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "D8Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "D8Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "D8Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "D8White.png",
+        "color": "White"
+      },
+      {
+        "filename": "D8Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "DinosaurAnkylosaurusWood": [
+      {
+        "filename": "DinosaurAnkylosaurusWoodBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "DinosaurAnkylosaurusWoodGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "DinosaurAnkylosaurusWoodOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "DinosaurAnkylosaurusWoodPink.png",
+        "color": "Pink"
+      },
+      {
+        "filename": "DinosaurAnkylosaurusWoodPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "DinosaurAnkylosaurusWoodRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "DinosaurAnkylosaurusWoodWhite.png",
+        "color": "White"
+      }
+    ],
+    "DinosaurTokenWood": [
+      {
+        "filename": "DinosaurTokenWoodBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "DinosaurTokenWoodGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "DinosaurTokenWoodOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "DinosaurTokenWoodPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "DinosaurTokenWoodRed.png",
+        "color": "Red"
+      }
+    ],
+    "DinosaurTyrannosaurus": [
+      {
+        "filename": "DinosaurTyrannosaurusBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "DinosaurTyrannosaurusGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "DinosaurTyrannosaurusOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "DinosaurTyrannosaurusPink.png",
+        "color": "Pink"
+      },
+      {
+        "filename": "DinosaurTyrannosaurusPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "DinosaurTyrannosaurusRed.png",
+        "color": "Red"
+      }
+    ],
+    "Disc14mmx4mm": [
+      {
+        "filename": "Disc14mmx4mmBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "Disc14mmx4mmGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Disc14mmx4mmYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Disc15mmx5mm": [
+      {
+        "filename": "Disc15mmx5mmBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "Disc15mmx5mmBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Disc15mmx5mmGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Disc15mmx5mmRed.png",
+        "color": "Red"
+      }
+    ],
+    "Disc15mmx6mm": [
+      {
+        "filename": "Disc15mmx6mmOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Disc15mmx6mmRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Disc15mmx6mmYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Disc16mmx10mm": [
+      {
+        "filename": "Disc16mmx10mmBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Disc16mmx10mmBrown.png",
+        "color": "Brown"
+      },
+      {
+        "filename": "Disc16mmx10mmGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Disc16mmx10mmPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "Disc16mmx10mmRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Disc16mmx10mmYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Disc16mmx4mm": [
+      {
+        "filename": "Disc16mmx4mmBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "Disc16mmx4mmBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Disc16mmx4mmGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Disc16mmx4mmOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Disc16mmx4mmPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "Disc16mmx4mmRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Disc16mmx4mmWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "Disc16mmx4mmYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Disc16mmx8mm": [
+      {
+        "filename": "Disc16mmx8mmPink.png",
+        "color": "Pink"
+      },
+      {
+        "filename": "Disc16mmx8mmPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "Disc16mmx8mmYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Disc18mmx3mmFluorescent": [
+      {
+        "filename": "Disc18mmx3mmFluorescentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Disc18mmx3mmFluorescentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Disc18mmx3mmFluorescentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Disc18mmx3mmFluorescentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Disc18mmx3mmTransparent": [
+      {
+        "filename": "Disc18mmx3mmTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Disc18mmx3mmTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Disc18mmx3mmTransparentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Disc18mmx3mmTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "Disc18mmx3mmTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Disc18mmx3mmTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Disc18mmx6mmFluorescent": [
+      {
+        "filename": "Disc18mmx6mmFluorescentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Disc18mmx6mmFluorescentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Disc18mmx6mmFluorescentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Disc18mmx6mmFluorescentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Disc18mmx6mmFluorescentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Disc18mmx6mmTransparent": [
+      {
+        "filename": "Disc18mmx6mmTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Disc18mmx6mmTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Disc18mmx6mmTransparentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Disc18mmx6mmTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "Disc18mmx6mmTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Disc18mmx6mmTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Disc20mmx5mmPastel": [
+      {
+        "filename": "Disc20mmx5mmPastelBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Disc20mmx5mmPastelOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Disc20mmx5mmPastelPink.png",
+        "color": "Pink"
+      },
+      {
+        "filename": "Disc20mmx5mmPastelPurple.png",
+        "color": "Purple"
+      }
+    ],
+    "Disc25mmx3mmFluorescent": [
+      {
+        "filename": "Disc25mmx3mmFluorescentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Disc25mmx3mmFluorescentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Disc25mmx3mmFluorescentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Disc25mmx3mmFluorescentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Disc25mmx3mmFluorescentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Disc25mmx3mmTransparent": [
+      {
+        "filename": "Disc25mmx3mmTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Disc25mmx3mmTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Disc25mmx3mmTransparentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Disc25mmx3mmTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "Disc25mmx3mmTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Disc25mmx3mmTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Disc25mmx6mmFluorescent": [
+      {
+        "filename": "Disc25mmx6mmFluorescentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Disc25mmx6mmFluorescentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Disc25mmx6mmFluorescentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Disc25mmx6mmFluorescentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Disc25mmx6mmFluorescentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Disc25mmx6mmTransparent": [
+      {
+        "filename": "Disc25mmx6mmTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Disc25mmx6mmTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Disc25mmx6mmTransparentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Disc25mmx6mmTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "Disc25mmx6mmTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Disc25mmx6mmTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "DonjonPagoda": [
+      {
+        "filename": "DonjonPagodaBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "DonjonPagodaBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "DonjonPagodaGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "DonjonPagodaOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "DonjonPagodaPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "DonjonPagodaRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "DonjonPagodaWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "DonjonPagodaYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "DragonFantasyTB15": [
+      {
+        "filename": "DragonFantasyTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "DragonFantasyTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "DragonFantasyTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "DragonFantasyTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "DragonFantasyTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "DragonFantasyTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "DragonFantasyTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "DragonFantasyTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "DragonSmall": [
+      {
+        "filename": "DragonSmallBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "DragonSmallGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "DragonSmallRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "DragonSmallYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Drop": [
+      {
+        "filename": "DropBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "DropBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "DropGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "DropOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "DropPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "DropRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "DropWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "DropYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Egg": [
+      {
+        "filename": "EggBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "EggGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "EggPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "EggWhite.png",
+        "color": "White"
+      }
+    ],
+    "ElephantwithRider": [
+      {
+        "filename": "ElephantwithRiderGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ElephantwithRiderOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ElephantwithRiderPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ElephantwithRiderRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ElephantwithRiderYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "FemaleFarmer": [
+      {
+        "filename": "FemaleFarmerGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "FemaleFarmerPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "FemaleFarmerYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Flag": [
+      {
+        "filename": "FlagBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "FlagBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "FlagGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "FlagOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "FlagPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "FlagRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "FlagWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "FlagYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "FlatCapBlack": [
+      {
+        "filename": "FlatCapBlackBronze.png",
+        "color": "Bronze"
+      },
+      {
+        "filename": "FlatCapBlackGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "FlatCapBlackPurple.png",
+        "color": "Purple"
+      }
+    ],
+    "FlatCapBlue": [
+      {
+        "filename": "FlatCapBlueBronze.png",
+        "color": "Bronze"
+      },
+      {
+        "filename": "FlatCapBlueGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "FlatCapBluePurple.png",
+        "color": "Purple"
+      }
+    ],
+    "FlatCapRed": [
+      {
+        "filename": "FlatCapRedBronze.png",
+        "color": "Bronze"
+      },
+      {
+        "filename": "FlatCapRedGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "FlatCapRedPurple.png",
+        "color": "Purple"
+      }
+    ],
+    "FlatCapWhite": [
+      {
+        "filename": "FlatCapWhiteBronze.png",
+        "color": "Bronze"
+      },
+      {
+        "filename": "FlatCapWhiteGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "FlatCapWhitePurple.png",
+        "color": "Purple"
+      }
+    ],
+    "FlatCapYellow": [
+      {
+        "filename": "FlatCapYellowBronze.png",
+        "color": "Bronze"
+      },
+      {
+        "filename": "FlatCapYellowGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "FlatCapYellowPurple.png",
+        "color": "Purple"
+      }
+    ],
+    "FlatStar": [
+      {
+        "filename": "FlatStarBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "FlatStarBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "FlatStarGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "FlatStarOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "FlatStarPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "FlatStarRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "FlatStarWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "FlatStarYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Footman": [
+      {
+        "filename": "FootmanBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "FootmanGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "FootmanRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "FootmanYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "FrogRider": [
+      {
+        "filename": "FrogRiderBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "FrogRiderBrown.png",
+        "color": "Brown"
+      },
+      {
+        "filename": "FrogRiderGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "FrogRiderRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "FrogRiderYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "FutureCube": [
+      {
+        "filename": "FutureCubeBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "FutureCubeOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "FutureCubePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "FutureCubeRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "FutureCubeYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "FutureDome": [
+      {
+        "filename": "FutureDomeBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "FutureDomeGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "FutureDomeOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "FutureDomePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "FutureDomeRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "FutureDomeYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "FuturePerson": [
+      {
+        "filename": "FuturePersonOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "FuturePersonPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "FuturePersonYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "FuturePyramid": [
+      {
+        "filename": "FuturePyramidGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "FuturePyramidOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "FuturePyramidPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "FuturePyramidRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "FuturePyramidYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "FutureSoldierTB15": [
+      {
+        "filename": "FutureSoldierTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "FutureSoldierTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "FutureSoldierTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "FutureSoldierTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "FutureSoldierTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "FutureSoldierTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "FutureSoldierTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "FutureSoldierTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "FutureTank": [
+      {
+        "filename": "FutureTankBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "FutureTankBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "FutureTankGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "FutureTankOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "FutureTankPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "FutureTankRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "FutureTankWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "FutureTankYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "GameStand": [
+      {
+        "filename": "GameStandBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "GameStandBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "GameStandGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "GameStandOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "GameStandPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "GameStandRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "GameStandWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "GameStandYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Gangster": [
+      {
+        "filename": "GangsterBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "GangsterGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "GangsterOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "GangsterYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Gear": [
+      {
+        "filename": "GearBronze.png",
+        "color": "Bronze"
+      },
+      {
+        "filename": "GearGold.png",
+        "color": "Gold"
+      },
+      {
+        "filename": "GearSilver.png",
+        "color": "Silver"
+      }
+    ],
+    "Gem": [
+      {
+        "filename": "GemBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "GemGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "GemPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "GemWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "GemYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "GnomeTB15": [
+      {
+        "filename": "GnomeTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "GnomeTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "GnomeTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "GnomeTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "GnomeTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "GnomeTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "GnomeTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "GnomeTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "GuardRobot": [
+      {
+        "filename": "GuardRobotBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "GuardRobotGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "GuardRobotRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "GuardRobotYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Halma": [
+      {
+        "filename": "HalmaBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "HalmaBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "HalmaGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "HalmaOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "HalmaPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "HalmaRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "HalmaWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "HalmaYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "HalmaPlastic": [
+      {
+        "filename": "HalmaPlasticBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "HalmaPlasticBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "HalmaPlasticOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "HalmaPlasticRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "HalmaPlasticWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "HalmaPlasticYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "HalmaStackable": [
+      {
+        "filename": "HalmaStackableBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "HalmaStackableGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "HalmaStackableRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "HalmaStackableWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "HalmaStackableYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Harbor": [
+      {
+        "filename": "HarborBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "HarborBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "HarborGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "HarborOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "HarborPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "HarborRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "HarborWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "HarborYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "HeartFlat": [
+      {
+        "filename": "HeartFlatBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "HeartFlatBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "HeartFlatGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "HeartFlatOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "HeartFlatPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "HeartFlatRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "HeartFlatWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "HeartFlatYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Henhouse": [
+      {
+        "filename": "HenhouseBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "HenhouseBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "HenhouseGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "HenhouseOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "HenhousePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "HenhouseRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "HenhouseWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "HenhouseYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Herb": [
+      {
+        "filename": "HerbBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "HerbBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "HerbGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "HerbOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "HerbPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "HerbRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "HerbWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "HerbYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "HexStacker": [
+      {
+        "filename": "HexStackerBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "HexStackerBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "HexStackerGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "HexStackerOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "HexStackerPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "HexStackerRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "HexStackerWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "HexStackerYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "HingedStoneDoor": [
+      {
+        "filename": "HingedStoneDoorBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "HingedStoneDoorBronze.png",
+        "color": "Bronze"
+      },
+      {
+        "filename": "HingedStoneDoorGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "HingedStoneDoorRed.png",
+        "color": "Red"
+      }
+    ],
+    "HotRod": [
+      {
+        "filename": "HotRodBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "HotRodBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "HotRodGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "HotRodOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "HotRodPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "HotRodRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "HotRodWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "HotRodYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Hotel": [
+      {
+        "filename": "HotelBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "HotelBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "HotelGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "HotelOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "HotelPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "HotelRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "HotelWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "HotelYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "HouseAcrylicOpaque": [
+      {
+        "filename": "HouseAcrylicOpaqueBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "HouseAcrylicOpaqueGold.png",
+        "color": "Gold"
+      },
+      {
+        "filename": "HouseAcrylicOpaqueSilver.png",
+        "color": "Silver"
+      },
+      {
+        "filename": "HouseAcrylicOpaqueWhite.png",
+        "color": "White"
+      }
+    ],
+    "HouseAcrylicTransparent": [
+      {
+        "filename": "HouseAcrylicTransparentBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "HouseAcrylicTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "HouseAcrylicTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "HouseAcrylicTransparentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "HouseAcrylicTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "HouseAcrylicTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "HouseAcrylicTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "House": [
+      {
+        "filename": "HouseBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "HouseBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "HouseGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "HouseOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "HousePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "HouseRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "HouseWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "HouseYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "HouseWood": [
+      {
+        "filename": "HouseWoodBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "HouseWoodBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "HouseWoodGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "HouseWoodOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "HouseWoodPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "HouseWoodRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "HouseWoodWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "HouseWoodYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "HumanFigure": [
+      {
+        "filename": "HumanFigureOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "HumanFigurePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "HumanFigureRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "HumanFigureYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "IceCube10mmOpaque": [
+      {
+        "filename": "IceCube10mmOpaqueBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "IceCube10mmOpaqueGold.png",
+        "color": "Gold"
+      },
+      {
+        "filename": "IceCube10mmOpaqueSilver.png",
+        "color": "Silver"
+      },
+      {
+        "filename": "IceCube10mmOpaqueWhite.png",
+        "color": "White"
+      }
+    ],
+    "IceCube10mmTransparent": [
+      {
+        "filename": "IceCube10mmTransparentBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "IceCube10mmTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "IceCube10mmTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "IceCube10mmTransparentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "IceCube10mmTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "IceCube10mmTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "IceCube10mmTransparentWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "IceCube10mmTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "IceCube12mmOpaque": [
+      {
+        "filename": "IceCube12mmOpaqueBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "IceCube12mmOpaqueGold.png",
+        "color": "Gold"
+      },
+      {
+        "filename": "IceCube12mmOpaqueSilver.png",
+        "color": "Silver"
+      },
+      {
+        "filename": "IceCube12mmOpaqueWhite.png",
+        "color": "White"
+      }
+    ],
+    "IceCube12mmTransparent": [
+      {
+        "filename": "IceCube12mmTransparentBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "IceCube12mmTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "IceCube12mmTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "IceCube12mmTransparentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "IceCube12mmTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "IceCube12mmTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "IceCube12mmTransparentWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "IceCube12mmTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "IceCube8mmOpaque": [
+      {
+        "filename": "IceCube8mmOpaqueBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "IceCube8mmOpaqueGold.png",
+        "color": "Gold"
+      },
+      {
+        "filename": "IceCube8mmOpaqueSilver.png",
+        "color": "Silver"
+      },
+      {
+        "filename": "IceCube8mmOpaqueWhite.png",
+        "color": "White"
+      }
+    ],
+    "IceCube8mmTransparent": [
+      {
+        "filename": "IceCube8mmTransparentBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "IceCube8mmTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "IceCube8mmTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "IceCube8mmTransparentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "IceCube8mmTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "IceCube8mmTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "IceCube8mmTransparentWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "IceCube8mmTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "InFUNityTileHat": [
+      {
+        "filename": "InFUNityTileHatBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "InFUNityTileHatBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "InFUNityTileHatGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "InFUNityTileHatOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "InFUNityTileHatPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "InFUNityTileHatRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "InFUNityTileHatWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "InFUNityTileHatYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "InFUNityTileTurtle": [
+      {
+        "filename": "InFUNityTileTurtleBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "InFUNityTileTurtleBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "InFUNityTileTurtleGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "InFUNityTileTurtleOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "InFUNityTileTurtlePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "InFUNityTileTurtleRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "InFUNityTileTurtleWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "InFUNityTileTurtleYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Jewel": [
+      {
+        "filename": "JewelBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "JewelGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "JewelOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "JewelPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "JewelRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "JewelYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Joystick": [
+      {
+        "filename": "JoystickBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "JoystickBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "JoystickGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "JoystickOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "JoystickPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "JoystickRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "JoystickWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "JoystickYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "KeycardFluorescent": [
+      {
+        "filename": "KeycardFluorescentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "KeycardFluorescentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "KeycardFluorescentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "KeycardFluorescentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "LED": [
+      {
+        "filename": "LEDBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "LEDBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "LEDGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "LEDOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "LEDPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "LEDRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "LEDWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "LEDYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Laboratory": [
+      {
+        "filename": "LaboratoryBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "LaboratoryBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "LaboratoryGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "LaboratoryOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "LaboratoryPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "LaboratoryRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "LaboratoryWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "LaboratoryYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Leather": [
+      {
+        "filename": "LeatherBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "LeatherBrown.png",
+        "color": "Brown"
+      },
+      {
+        "filename": "LeatherWhite.png",
+        "color": "White"
+      }
+    ],
+    "LightBulb": [
+      {
+        "filename": "LightBulbBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "LightBulbGold.png",
+        "color": "Gold"
+      },
+      {
+        "filename": "LightBulbGreen.png",
+        "color": "Green"
+      }
+    ],
+    "LightningBolt": [
+      {
+        "filename": "LightningBoltBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "LightningBoltBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "LightningBoltGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "LightningBoltOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "LightningBoltPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "LightningBoltRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "LightningBoltWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "LightningBoltYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Limo": [
+      {
+        "filename": "LimoBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "LimoGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "LimoRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "LimoYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Locomotive": [
+      {
+        "filename": "LocomotiveBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "LocomotiveBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "LocomotiveGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "LocomotiveOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "LocomotivePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "LocomotiveRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "LocomotiveWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "LocomotiveYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "LocomotiveTrainEngine": [
+      {
+        "filename": "LocomotiveTrainEngineBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "LocomotiveTrainEngineGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "LocomotiveTrainEngineOrange.png",
+        "color": "Orange"
+      }
+    ],
+    "Lookout": [
+      {
+        "filename": "LookoutBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "LookoutGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "LookoutOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "LookoutRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "LookoutYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Mafioso": [
+      {
+        "filename": "MafiosoGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "MafiosoPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "MafiosoRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "MafiosoYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ManAmericanRevolutionTB15": [
+      {
+        "filename": "ManAmericanRevolutionTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ManAmericanRevolutionTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ManAmericanRevolutionTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ManAmericanRevolutionTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ManAmericanRevolutionTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ManAmericanRevolutionTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ManAmericanRevolutionTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "ManAmericanRevolutionTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ManIroquoisTB15": [
+      {
+        "filename": "ManIroquoisTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ManIroquoisTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ManIroquoisTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ManIroquoisTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ManIroquoisTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ManIroquoisTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ManIroquoisTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "ManIroquoisTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ManModernTB15": [
+      {
+        "filename": "ManModernTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ManModernTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ManModernTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ManModernTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ManModernTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ManModernTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ManModernTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "ManModernTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ManPostApocalypseTB15": [
+      {
+        "filename": "ManPostApocalypseTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ManPostApocalypseTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ManPostApocalypseTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ManPostApocalypseTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ManPostApocalypseTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ManPostApocalypseTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ManPostApocalypseTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "ManPostApocalypseTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ManSamuraiArmorTB15": [
+      {
+        "filename": "ManSamuraiArmorTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ManSamuraiArmorTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ManSamuraiArmorTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ManSamuraiArmorTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ManSamuraiArmorTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ManSamuraiArmorTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ManSamuraiArmorTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "ManSamuraiArmorTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "MarkerDry-EraseFine": [
+      {
+        "filename": "MarkerDry-EraseFineBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "MarkerDry-EraseFineBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "MarkerDry-EraseFineGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "MarkerDry-EraseFineRed.png",
+        "color": "Red"
+      }
+    ],
+    "Marketplace": [
+      {
+        "filename": "MarketplaceBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "MarketplaceBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "MarketplaceGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "MarketplaceOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "MarketplacePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "MarketplaceRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "MarketplaceWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "MarketplaceYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "MechTB15": [
+      {
+        "filename": "MechTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "MechTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "MechTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "MechTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "MechTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "MechTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "MechTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "MechTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "MeepleAcrylicOpaque": [
+      {
+        "filename": "MeepleAcrylicOpaqueBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "MeepleAcrylicOpaqueGold.png",
+        "color": "Gold"
+      },
+      {
+        "filename": "MeepleAcrylicOpaqueSilver.png",
+        "color": "Silver"
+      },
+      {
+        "filename": "MeepleAcrylicOpaqueWhite.png",
+        "color": "White"
+      }
+    ],
+    "MeepleAcrylicTransparent": [
+      {
+        "filename": "MeepleAcrylicTransparentBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "MeepleAcrylicTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "MeepleAcrylicTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "MeepleAcrylicTransparentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "MeepleAcrylicTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "MeepleAcrylicTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "MeepleAcrylicTransparentWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "MeepleAcrylicTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "MeepleLargeAcrylicOpaque": [
+      {
+        "filename": "MeepleLargeAcrylicOpaqueBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "MeepleLargeAcrylicOpaqueGold.png",
+        "color": "Gold"
+      },
+      {
+        "filename": "MeepleLargeAcrylicOpaqueSilver.png",
+        "color": "Silver"
+      },
+      {
+        "filename": "MeepleLargeAcrylicOpaqueWhite.png",
+        "color": "White"
+      }
+    ],
+    "MeepleLargeAcrylicTransparent": [
+      {
+        "filename": "MeepleLargeAcrylicTransparentBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "MeepleLargeAcrylicTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "MeepleLargeAcrylicTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "MeepleLargeAcrylicTransparentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "MeepleLargeAcrylicTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "MeepleLargeAcrylicTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "MeepleLargeAcrylicTransparentWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "MeepleLargeAcrylicTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "MeepleLargeWood": [
+      {
+        "filename": "MeepleLargeWoodBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "MeepleLargeWoodBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "MeepleLargeWoodGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "MeepleLargeWoodOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "MeepleLargeWoodPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "MeepleLargeWoodRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "MeepleLargeWoodWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "MeepleLargeWoodYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "MeepleMiniAcrylicOpaque": [
+      {
+        "filename": "MeepleMiniAcrylicOpaqueBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "MeepleMiniAcrylicOpaqueGold.png",
+        "color": "Gold"
+      },
+      {
+        "filename": "MeepleMiniAcrylicOpaqueSilver.png",
+        "color": "Silver"
+      },
+      {
+        "filename": "MeepleMiniAcrylicOpaqueWhite.png",
+        "color": "White"
+      }
+    ],
+    "MeepleMiniAcrylicTransparent": [
+      {
+        "filename": "MeepleMiniAcrylicTransparentBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "MeepleMiniAcrylicTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "MeepleMiniAcrylicTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "MeepleMiniAcrylicTransparentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "MeepleMiniAcrylicTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "MeepleMiniAcrylicTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "MeepleMiniAcrylicTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "MeepleMiniWood": [
+      {
+        "filename": "MeepleMiniWoodBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "MeepleMiniWoodBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "MeepleMiniWoodGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "MeepleMiniWoodOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "MeepleMiniWoodPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "MeepleMiniWoodRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "MeepleMiniWoodWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "MeepleMiniWoodYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "MeepleThick": [
+      {
+        "filename": "MeepleThickBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "MeepleThickOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "MeepleThickPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "MeepleThickRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "MeepleThickYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "MeepleWood": [
+      {
+        "filename": "MeepleWoodBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "MeepleWoodBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "MeepleWoodGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "MeepleWoodOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "MeepleWoodPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "MeepleWoodRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "MeepleWoodWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "MeepleWoodYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Mine": [
+      {
+        "filename": "MineBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "MineBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "MineGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "MineOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "MinePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "MineRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "MineWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "MineYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "MiniatureBase25mmHex": [
+      {
+        "filename": "MiniatureBase25mmHexBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "MiniatureBase25mmHexBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "MiniatureBase25mmHexGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "MiniatureBase25mmHexOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "MiniatureBase25mmHexPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "MiniatureBase25mmHexRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "MiniatureBase25mmHexWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "MiniatureBase25mmHexYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "MissionaryLarge": [
+      {
+        "filename": "MissionaryLargeBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "MissionaryLargeGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "MissionaryLargeOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "MissionaryLargeRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "MissionaryLargeYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "MotorBoat": [
+      {
+        "filename": "MotorBoatBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "MotorBoatBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "MotorBoatGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "MotorBoatOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "MotorBoatPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "MotorBoatRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "MotorBoatWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "MotorBoatYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Motorcycle": [
+      {
+        "filename": "MotorcycleBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "MotorcycleBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "MotorcycleGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "MotorcycleOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "MotorcyclePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "MotorcycleRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "MotorcycleWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "MotorcycleYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Noble": [
+      {
+        "filename": "NobleBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "NobleGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "NobleRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "NobleWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "NobleYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Observatory": [
+      {
+        "filename": "ObservatoryBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ObservatoryBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ObservatoryGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ObservatoryOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ObservatoryPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ObservatoryRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ObservatoryWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "ObservatoryYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Octbox10mm": [
+      {
+        "filename": "Octbox10mmBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "Octbox10mmBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Octbox10mmGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Octbox10mmOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Octbox10mmPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "Octbox10mmRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Octbox10mmWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "Octbox10mmYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Octbox7mm": [
+      {
+        "filename": "Octbox7mmBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Octbox7mmPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "Octbox7mmYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "OldWestCoin": [
+      {
+        "filename": "OldWestCoinBronze.png",
+        "color": "Bronze"
+      },
+      {
+        "filename": "OldWestCoinGold.png",
+        "color": "Gold"
+      },
+      {
+        "filename": "OldWestCoinSilver.png",
+        "color": "Silver"
+      }
+    ],
+    "PadlockKey": [
+      {
+        "filename": "PadlockKeyBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "PadlockKeyBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "PadlockKeyGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "PadlockKeyOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "PadlockKeyPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "PadlockKeyRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "PadlockKeyWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "PadlockKeyYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "PadlockLocked": [
+      {
+        "filename": "PadlockLockedBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "PadlockLockedBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "PadlockLockedGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "PadlockLockedOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "PadlockLockedPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "PadlockLockedRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "PadlockLockedWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "PadlockLockedYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "PadlockUnlocked": [
+      {
+        "filename": "PadlockUnlockedBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "PadlockUnlockedBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "PadlockUnlockedGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "PadlockUnlockedOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "PadlockUnlockedPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "PadlockUnlockedRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "PadlockUnlockedWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "PadlockUnlockedYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "PaperMiniatureBase25mm": [
+      {
+        "filename": "PaperMiniatureBase25mmBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "PaperMiniatureBase25mmBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "PaperMiniatureBase25mmGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "PaperMiniatureBase25mmOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "PaperMiniatureBase25mmPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "PaperMiniatureBase25mmRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "PaperMiniatureBase25mmWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "PaperMiniatureBase25mmYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "PartsBagLarge": [
+      {
+        "filename": "PartsBagLargeBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "PartsBagLargeBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "PartsBagLargeRed.png",
+        "color": "Red"
+      }
+    ],
+    "PartsBagMedium": [
+      {
+        "filename": "PartsBagMediumBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "PartsBagMediumBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "PartsBagMediumBrown.png",
+        "color": "Brown"
+      },
+      {
+        "filename": "PartsBagMediumGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "PartsBagMediumPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "PartsBagMediumRed.png",
+        "color": "Red"
+      }
+    ],
+    "PartsBagSmall": [
+      {
+        "filename": "PartsBagSmallBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "PartsBagSmallBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "PartsBagSmallBrown.png",
+        "color": "Brown"
+      },
+      {
+        "filename": "PartsBagSmallGray.png",
+        "color": "Gray"
+      },
+      {
+        "filename": "PartsBagSmallGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "PartsBagSmallPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "PartsBagSmallRed.png",
+        "color": "Red"
+      }
+    ],
+    "PegPawn": [
+      {
+        "filename": "PegPawnBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "PegPawnBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "PegPawnGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "PegPawnOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "PegPawnPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "PegPawnRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "PegPawnWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "PegPawnYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "People": [
+      {
+        "filename": "PeopleBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "PeopleBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "PeopleGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "PeopleOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "PeoplePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "PeopleRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "PeopleWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "PeopleYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "PigTB15": [
+      {
+        "filename": "PigTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "PigTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "PigTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "PigTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "PigTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "PigTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "PigTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "PigTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "PokerChip19mmFancy": [
+      {
+        "filename": "PokerChip19mmFancyBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "PokerChip19mmFancyBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "PokerChip19mmFancyGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "PokerChip19mmFancyPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "PokerChip19mmFancyRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "PokerChip19mmFancyYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "PokerChip": [
+      {
+        "filename": "PokerChipBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "PokerChipBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "PokerChipGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "PokerChipOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "PokerChipPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "PokerChipRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "PokerChipWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "PokerChipYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "PuppyTB15": [
+      {
+        "filename": "PuppyTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "PuppyTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "PuppyTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "PuppyTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "PuppyTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "PuppyTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "PuppyTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "PuppyTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "PushCart": [
+      {
+        "filename": "PushCartBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "PushCartBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "PushCartGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "PushCartOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "PushCartPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "PushCartRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "PushCartWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "PushCartYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Pyramid": [
+      {
+        "filename": "PyramidBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "PyramidBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "PyramidPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "PyramidRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "PyramidWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "PyramidYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Qubit": [
+      {
+        "filename": "QubitBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "QubitBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "QubitGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "QubitOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "QubitPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "QubitRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "QubitWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "QubitYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "RaceCar": [
+      {
+        "filename": "RaceCarBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "RaceCarGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "RaceCarOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "RaceCarPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "RaceCarRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "RaceCarYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Ring": [
+      {
+        "filename": "RingBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "RingBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "RingGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "RingOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "RingPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "RingRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "RingWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "RingYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Rocket": [
+      {
+        "filename": "RocketBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "RocketBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "RocketGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "RocketOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "RocketPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "RocketRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "RocketWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "RocketYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "RocketDice": [
+      {
+        "filename": "RocketDiceBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "RocketDiceBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "RocketDiceBrown.png",
+        "color": "Brown"
+      },
+      {
+        "filename": "RocketDiceGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "RocketDicePink.png",
+        "color": "Pink"
+      },
+      {
+        "filename": "RocketDicePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "RocketDiceRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "RocketDiceWhite.png",
+        "color": "White"
+      }
+    ],
+    "RomanNumeralI": [
+      {
+        "filename": "RomanNumeralIBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "RomanNumeralIBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "RomanNumeralIBrown.png",
+        "color": "Brown"
+      },
+      {
+        "filename": "RomanNumeralIGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "RomanNumeralIRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "RomanNumeralIYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Rooster": [
+      {
+        "filename": "RoosterBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "RoosterBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "RoosterGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "RoosterOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "RoosterPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "RoosterRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "RoosterWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "RoosterYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Sailboat": [
+      {
+        "filename": "SailboatBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "SailboatBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "SailboatGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "SailboatOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "SailboatPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "SailboatRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "SailboatWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "SailboatYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Sci-FiCoin": [
+      {
+        "filename": "Sci-FiCoinBronze.png",
+        "color": "Bronze"
+      },
+      {
+        "filename": "Sci-FiCoinGold.png",
+        "color": "Gold"
+      },
+      {
+        "filename": "Sci-FiCoinSilver.png",
+        "color": "Silver"
+      }
+    ],
+    "ShipAirSteampunk": [
+      {
+        "filename": "ShipAirSteampunkBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ShipAirSteampunkBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ShipAirSteampunkGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ShipAirSteampunkOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ShipAirSteampunkPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ShipAirSteampunkRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ShipAirSteampunkWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "ShipAirSteampunkYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ShipModernAircraftCarrier": [
+      {
+        "filename": "ShipModernAircraftCarrierBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ShipModernAircraftCarrierGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ShipModernAircraftCarrierOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ShipModernAircraftCarrierPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ShipModernAircraftCarrierWhite.png",
+        "color": "White"
+      }
+    ],
+    "ShipModernBattleship": [
+      {
+        "filename": "ShipModernBattleshipBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ShipModernBattleshipGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ShipModernBattleshipOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ShipModernBattleshipPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ShipModernBattleshipWhite.png",
+        "color": "White"
+      }
+    ],
+    "ShipModernContainer": [
+      {
+        "filename": "ShipModernContainerBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ShipModernContainerGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ShipModernContainerOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ShipModernContainerPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ShipModernContainerWhite.png",
+        "color": "White"
+      }
+    ],
+    "ShipModernCruiser": [
+      {
+        "filename": "ShipModernCruiserBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ShipModernCruiserGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ShipModernCruiserOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ShipModernCruiserPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ShipModernCruiserWhite.png",
+        "color": "White"
+      }
+    ],
+    "ShipModernDestroyer": [
+      {
+        "filename": "ShipModernDestroyerBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ShipModernDestroyerGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ShipModernDestroyerOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ShipModernDestroyerPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ShipModernDestroyerWhite.png",
+        "color": "White"
+      }
+    ],
+    "ShipModernSubmarine": [
+      {
+        "filename": "ShipModernSubmarineBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ShipModernSubmarineGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ShipModernSubmarineOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ShipModernSubmarinePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ShipModernSubmarineWhite.png",
+        "color": "White"
+      }
+    ],
+    "ShipModernTransport": [
+      {
+        "filename": "ShipModernTransportBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ShipModernTransportGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ShipModernTransportOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ShipModernTransportPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ShipModernTransportWhite.png",
+        "color": "White"
+      }
+    ],
+    "ShipSeaBritish": [
+      {
+        "filename": "ShipSeaBritishBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ShipSeaBritishBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ShipSeaBritishGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ShipSeaBritishOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ShipSeaBritishPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ShipSeaBritishRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ShipSeaBritishWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "ShipSeaBritishYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ShipSeaPirate": [
+      {
+        "filename": "ShipSeaPirateBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ShipSeaPirateBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ShipSeaPirateGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ShipSeaPirateOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ShipSeaPiratePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ShipSeaPirateRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ShipSeaPirateWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "ShipSeaPirateYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ShipSeaVikingLongboat": [
+      {
+        "filename": "ShipSeaVikingLongboatBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ShipSeaVikingLongboatBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ShipSeaVikingLongboatGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ShipSeaVikingLongboatOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ShipSeaVikingLongboatPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ShipSeaVikingLongboatRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ShipSeaVikingLongboatWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "ShipSeaVikingLongboatYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ShipSpaceFighter": [
+      {
+        "filename": "ShipSpaceFighterBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ShipSpaceFighterBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ShipSpaceFighterGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ShipSpaceFighterOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ShipSpaceFighterPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ShipSpaceFighterRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ShipSpaceFighterWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "ShipSpaceFighterYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ShipSpaceFreighter": [
+      {
+        "filename": "ShipSpaceFreighterBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ShipSpaceFreighterBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ShipSpaceFreighterGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ShipSpaceFreighterOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ShipSpaceFreighterPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ShipSpaceFreighterRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ShipSpaceFreighterWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "ShipSpaceFreighterYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ShipSpaceSmuggler": [
+      {
+        "filename": "ShipSpaceSmugglerBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ShipSpaceSmugglerBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ShipSpaceSmugglerGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ShipSpaceSmugglerOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ShipSpaceSmugglerPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ShipSpaceSmugglerRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ShipSpaceSmugglerWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "ShipSpaceSmugglerYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ShipSpaceTransport": [
+      {
+        "filename": "ShipSpaceTransportBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ShipSpaceTransportBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ShipSpaceTransportGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ShipSpaceTransportOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ShipSpaceTransportPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ShipSpaceTransportRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ShipSpaceTransportWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "ShipSpaceTransportYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "ShipSpaceUFO": [
+      {
+        "filename": "ShipSpaceUFOBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "ShipSpaceUFOBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "ShipSpaceUFOGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "ShipSpaceUFOOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "ShipSpaceUFOPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "ShipSpaceUFORed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "ShipSpaceUFOSilver.png",
+        "color": "Silver"
+      },
+      {
+        "filename": "ShipSpaceUFOWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "ShipSpaceUFOYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "SkeletonWarrior": [
+      {
+        "filename": "SkeletonWarriorBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "SkeletonWarriorBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "SkeletonWarriorPink.png",
+        "color": "Pink"
+      }
+    ],
+    "Skyscraper": [
+      {
+        "filename": "SkyscraperBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "SkyscraperBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "SkyscraperGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "SkyscraperOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "SkyscraperPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "SkyscraperRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "SkyscraperWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "SkyscraperYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "SliderClip": [
+      {
+        "filename": "SliderClipBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "SliderClipBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "SliderClipGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "SliderClipOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "SliderClipPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "SliderClipRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "SliderClipWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "SliderClipYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "SliderClipChipboard": [
+      {
+        "filename": "SliderClipChipboardBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "SliderClipChipboardBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "SliderClipChipboardGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "SliderClipChipboardOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "SliderClipChipboardPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "SliderClipChipboardRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "SliderClipChipboardWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "SliderClipChipboardYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Snap&StackConditionMarker": [
+      {
+        "filename": "Snap&StackConditionMarkerBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "Snap&StackConditionMarkerBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Snap&StackConditionMarkerGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Snap&StackConditionMarkerPink.png",
+        "color": "Pink"
+      },
+      {
+        "filename": "Snap&StackConditionMarkerWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "Snap&StackConditionMarkerYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Spinner": [
+      {
+        "filename": "SpinnerBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "SpinnerRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "SpinnerWhite.png",
+        "color": "White"
+      }
+    ],
+    "SprueAges": [
+      {
+        "filename": "SprueAgesBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "SprueAgesPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "SprueAgesYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "SprueCivilization": [
+      {
+        "filename": "SprueCivilizationBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "SprueCivilizationGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "SprueCivilizationPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "SprueCivilizationYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "SprueMilitary": [
+      {
+        "filename": "SprueMilitaryBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "SprueMilitaryBrown.png",
+        "color": "Brown"
+      },
+      {
+        "filename": "SprueMilitaryGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "SprueMilitaryRed.png",
+        "color": "Red"
+      }
+    ],
+    "Stacker19mm": [
+      {
+        "filename": "Stacker19mmBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "Stacker19mmBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Stacker19mmGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Stacker19mmOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Stacker19mmPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "Stacker19mmRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Stacker19mmWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "Stacker19mmYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Stacker": [
+      {
+        "filename": "StackerBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "StackerBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "StackerGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "StackerOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "StackerPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "StackerRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "StackerWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "StackerYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "StackerCone": [
+      {
+        "filename": "StackerConeBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "StackerConeBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "StackerConeGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "StackerConeOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "StackerConePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "StackerConeRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "StackerConeWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "StackerConeYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "StandChipboardTB15": [
+      {
+        "filename": "StandChipboardTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "StandChipboardTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "StandChipboardTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "StandChipboardTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "StandChipboardTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "StandChipboardTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "StandChipboardTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "StandChipboardTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "StarWood": [
+      {
+        "filename": "StarWoodBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "StarWoodGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "StarWoodPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "StarWoodRed.png",
+        "color": "Red"
+      }
+    ],
+    "StickAcrylicOpaque": [
+      {
+        "filename": "StickAcrylicOpaqueBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "StickAcrylicOpaqueGold.png",
+        "color": "Gold"
+      },
+      {
+        "filename": "StickAcrylicOpaqueSilver.png",
+        "color": "Silver"
+      },
+      {
+        "filename": "StickAcrylicOpaqueWhite.png",
+        "color": "White"
+      }
+    ],
+    "StickAcrylicTransparent": [
+      {
+        "filename": "StickAcrylicTransparentBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "StickAcrylicTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "StickAcrylicTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "StickAcrylicTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "StickAcrylicTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "StickAcrylicTransparentWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "StickAcrylicTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "StickWood": [
+      {
+        "filename": "StickWoodBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "StickWoodBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "StickWoodGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "StickWoodOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "StickWoodPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "StickWoodRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "StickWoodWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "StickWoodYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "StickerPawnOpaque": [
+      {
+        "filename": "StickerPawnOpaqueBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "StickerPawnOpaqueBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "StickerPawnOpaqueGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "StickerPawnOpaqueOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "StickerPawnOpaquePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "StickerPawnOpaqueRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "StickerPawnOpaqueWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "StickerPawnOpaqueYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "StickerPawnTransparent": [
+      {
+        "filename": "StickerPawnTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "StickerPawnTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "StickerPawnTransparentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "StickerPawnTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "StickerPawnTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "StickerPawnTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Submarine": [
+      {
+        "filename": "SubmarineBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "SubmarineBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "SubmarineGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "SubmarineOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "SubmarinePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "SubmarineRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "SubmarineWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "SubmarineYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "TallPeople": [
+      {
+        "filename": "TallPeopleBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "TallPeopleBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "TallPeopleGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "TallPeopleOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "TallPeoplePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "TallPeopleRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "TallPeopleWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "TallPeopleYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "TallPeopleThick": [
+      {
+        "filename": "TallPeopleThickGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "TallPeopleThickPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "TallPeopleThickRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "TallPeopleThickYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Tank": [
+      {
+        "filename": "TankBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "TankBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "TankBrown.png",
+        "color": "Brown"
+      },
+      {
+        "filename": "TankGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "TankOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "TankPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "TankRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "TankWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "TankYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "TokenChip": [
+      {
+        "filename": "TokenChipBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "TokenChipBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "TokenChipGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "TokenChipOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "TokenChipPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "TokenChipRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "TokenChipWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "TokenChipYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "TowerStacker": [
+      {
+        "filename": "TowerStackerBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "TowerStackerBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "TowerStackerGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "TowerStackerOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "TowerStackerPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "TowerStackerRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "TowerStackerWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "TowerStackerYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "TrainEngineWood": [
+      {
+        "filename": "TrainEngineWoodBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "TrainEngineWoodOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "TrainEngineWoodPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "TrainEngineWoodWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "TrainEngineWoodYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "TrellisofGrapes": [
+      {
+        "filename": "TrellisofGrapesBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "TrellisofGrapesGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "TrellisofGrapesOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "TrellisofGrapesWhite.png",
+        "color": "White"
+      }
+    ],
+    "Triangle": [
+      {
+        "filename": "TriangleBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "TriangleBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "TriangleGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "TrianglePink.png",
+        "color": "Pink"
+      }
+    ],
+    "TrophyTB15": [
+      {
+        "filename": "TrophyTB15Bronze.png",
+        "color": "Bronze"
+      },
+      {
+        "filename": "TrophyTB15Gold.png",
+        "color": "Gold"
+      },
+      {
+        "filename": "TrophyTB15Silver.png",
+        "color": "Silver"
+      }
+    ],
+    "TruckFlatbed": [
+      {
+        "filename": "TruckFlatbedBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "TruckFlatbedBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "TruckFlatbedGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "TruckFlatbedOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "TruckFlatbedPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "TruckFlatbedRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "TruckFlatbedWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "TruckFlatbedYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "TruckWood": [
+      {
+        "filename": "TruckWoodBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "TruckWoodGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "TruckWoodRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "TruckWoodYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "VialLiquidFluorescent": [
+      {
+        "filename": "VialLiquidFluorescentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "VialLiquidFluorescentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "VialLiquidFluorescentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "VialLiquidFluorescentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "VialLiquidFluorescentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "VialLiquidOpaque": [
+      {
+        "filename": "VialLiquidOpaqueBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "VialLiquidOpaqueBrown.png",
+        "color": "Brown"
+      },
+      {
+        "filename": "VialLiquidOpaqueGray.png",
+        "color": "Gray"
+      },
+      {
+        "filename": "VialLiquidOpaqueGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "VialLiquidOpaqueOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "VialLiquidOpaquePurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "VialLiquidOpaqueRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "VialLiquidOpaqueWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "VialLiquidOpaqueYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "VialLiquidTransparent": [
+      {
+        "filename": "VialLiquidTransparentBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "VialLiquidTransparentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "VialLiquidTransparentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "VialLiquidTransparentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "VialLiquidTransparentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "VialLiquidTransparentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "VialLiquidTransparentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "VictorianMiniature": [
+      {
+        "filename": "VictorianMiniatureBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "VictorianMiniatureGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "VictorianMiniatureRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "VictorianMiniatureYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "WaterMill": [
+      {
+        "filename": "WaterMillBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "WaterMillBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "WaterMillGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "WaterMillOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "WaterMillPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "WaterMillRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "WaterMillWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "WaterMillYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Windmill": [
+      {
+        "filename": "WindmillBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "WindmillBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "WindmillGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "WindmillOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "WindmillPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "WindmillRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "WindmillWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "WindmillYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "Wink22mmTranslucent": [
+      {
+        "filename": "Wink22mmTranslucentBlack.png",
+        "color": "Black"
+      },
+      {
+        "filename": "Wink22mmTranslucentBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "Wink22mmTranslucentGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "Wink22mmTranslucentOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "Wink22mmTranslucentPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "Wink22mmTranslucentRed.png",
+        "color": "Red"
+      },
+      {
+        "filename": "Wink22mmTranslucentYellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "WomanModernTB15": [
+      {
+        "filename": "WomanModernTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "WomanModernTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "WomanModernTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "WomanModernTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "WomanModernTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "WomanModernTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "WomanModernTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "WomanModernTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "WomanPostApocalypseTB15": [
+      {
+        "filename": "WomanPostApocalypseTB15Black.png",
+        "color": "Black"
+      },
+      {
+        "filename": "WomanPostApocalypseTB15Blue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "WomanPostApocalypseTB15Green.png",
+        "color": "Green"
+      },
+      {
+        "filename": "WomanPostApocalypseTB15Orange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "WomanPostApocalypseTB15Purple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "WomanPostApocalypseTB15Red.png",
+        "color": "Red"
+      },
+      {
+        "filename": "WomanPostApocalypseTB15White.png",
+        "color": "White"
+      },
+      {
+        "filename": "WomanPostApocalypseTB15Yellow.png",
+        "color": "Yellow"
+      }
+    ],
+    "WorkerSingleBag": [
+      {
+        "filename": "WorkerSingleBagBlue.png",
+        "color": "Blue"
+      },
+      {
+        "filename": "WorkerSingleBagGreen.png",
+        "color": "Green"
+      },
+      {
+        "filename": "WorkerSingleBagOrange.png",
+        "color": "Orange"
+      },
+      {
+        "filename": "WorkerSingleBagPurple.png",
+        "color": "Purple"
+      },
+      {
+        "filename": "WorkerSingleBagWhite.png",
+        "color": "White"
+      },
+      {
+        "filename": "WorkerSingleBagYellow.png",
+        "color": "Yellow"
+      }
+    ]
+  },
+  "potentialTimeSavings": 1446,
+  "generatedAt": "2025-02-28T13:48:38.354Z"
+}
