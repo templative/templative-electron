@@ -19,7 +19,7 @@
  */
 
 const chalk = require('chalk');
-const { getColorValueRGB } = require('../../../../../../shared/stockComponentColors');
+const { getColorValueRGB, getColorValueHex } = require('../../../../../../shared/stockComponentColors');
 /**
  * Adapter for createStandardDie
  * @param {Object} componentInstructions - Component instructions
@@ -40,7 +40,7 @@ function standardDieAdapter(componentInstructions, stockPartInfo) {
 
   return {
     name: componentInstructions.name,
-    numberSides: parseInt(stockType.slice(2)),
+    numberSides: stockType.startsWith("D") ? parseInt(stockType.match(/D(\d+)/)[1]) : 6,
     sizeInches: sizeInches,
     colorRGBOutOfOne: getColorValueRGB(stockPartInfo.Color),
     isMetal: componentInstructions.type.toUpperCase().includes("METAL")
@@ -107,9 +107,21 @@ function stockCubeAdapter(componentInstructions, stockPartInfo) {
   const sizeStr = stockType.slice(4).split("mm")[0];
   const sizeInches = parseFloat(sizeStr) / 25.4; // Convert mm to inches
 
+  // Check for block dimensions in DisplayName such as 1x3
+  let sizeInchesXYZ = [sizeInches, sizeInches, sizeInches]; // Default cube dimensions
+  
+  if (stockPartInfo.hasOwnProperty("DisplayName")) {
+    const blockMatch = stockPartInfo.DisplayName.match(/Block\s+(\d+)x(\d+)/i);
+    if (blockMatch) {
+      const xDimension = parseInt(blockMatch[1]);
+      const zDimension = parseInt(blockMatch[2]);
+      sizeInchesXYZ = [sizeInches * xDimension, sizeInches, sizeInches * zDimension];
+    }
+  }
+
   return {
     name: componentInstructions.name,
-    sizeInches: sizeInches,
+    sizeInchesXYZ: sizeInchesXYZ,
     color: getColorValueRGB(stockPartInfo.Color)
   };
 }
@@ -246,6 +258,149 @@ function thickTokenWithTransparencyBasedShapeAdapter(componentInstructions, stoc
 }
 
 /**
+ * Adapter for createCustomPDF
+ * @param {Object} componentInstructions - Component instructions
+ * @param {Object} stockPartInfo - Stock part information
+ * @returns {Object|null} - Parameters for createCustomPDF or null if invalid
+ */
+function customPDFAdapter(componentInstructions, stockPartInfo) {
+  if (!stockPartInfo.hasOwnProperty("PDFUrl")) {
+    console.log(chalk.red(`!!! Missing PDFUrl for custom PDF ${componentInstructions.type}`));
+    return null;
+  }
+
+  return {
+    name: componentInstructions.name,
+    pdfUrl: stockPartInfo.PDFUrl,
+    pdfPassword: stockPartInfo.PDFPassword || "",
+    pdfPage: stockPartInfo.PDFPage || 0,
+    pdfPageOffset: stockPartInfo.PDFPageOffset || 0
+  };
+}
+
+/**
+ * Adapter for createDomino
+ * @param {Object} componentInstructions - Component instructions
+ * @param {Object} stockPartInfo - Stock part information
+ * @returns {Object|null} - Parameters for createDomino or null if invalid
+ */
+function dominoAdapter(componentInstructions, stockPartInfo) {
+  let colorDiffuse = null;
+  
+  if (stockPartInfo.hasOwnProperty("Color")) {
+    colorDiffuse = getColorValueRGB(stockPartInfo.Color);
+  }
+
+  return {
+    name: componentInstructions.name,
+    colorDiffuse: colorDiffuse,
+    meshIndex: stockPartInfo.MeshIndex || 14,
+    materialIndex: stockPartInfo.MaterialIndex || 0
+  };
+}
+
+/**
+ * Adapter for createBag
+ * @param {Object} componentInstructions - Component instructions
+ * @param {Object} stockPartInfo - Stock part information
+ * @returns {Object|null} - Parameters for createBag or null if invalid
+ */
+function baggieAdapter(componentInstructions, stockPartInfo) {
+  let colorDiffuse = null;
+  
+  if (stockPartInfo.hasOwnProperty("Color")) {
+    colorDiffuse = getColorValueRGB(stockPartInfo.Color);
+  }
+
+  return {
+    name: componentInstructions.name,
+    colorDiffuse: colorDiffuse,
+    isInfinite: stockPartInfo.IsInfinite || false
+  };
+}
+
+/**
+ * Adapter for createPokerChip
+ * @param {Object} componentInstructions - Component instructions
+ * @param {Object} stockPartInfo - Stock part information
+ * @returns {Object|null} - Parameters for createPokerChip or null if invalid
+ */
+function pokerChipAdapter(componentInstructions, stockPartInfo) {
+  if (!stockPartInfo.hasOwnProperty("ChipValue")) {
+    // Extract chip value from the type if not explicitly provided
+    const typeMatch = componentInstructions.type.match(/CHIP_(\d+)/i);
+    if (!typeMatch) {
+      console.log(chalk.red(`!!! Missing ChipValue for poker chip ${componentInstructions.type}`));
+      return null;
+    }
+    stockPartInfo.ChipValue = parseInt(typeMatch[1]);
+  }
+
+  let colorDiffuse = null;
+  
+  if (stockPartInfo.hasOwnProperty("Color")) {
+    colorDiffuse = getColorValueRGB(stockPartInfo.Color);
+  }
+
+  return {
+    name: componentInstructions.name,
+    chipValue: stockPartInfo.ChipValue,
+    colorDiffuse: colorDiffuse
+  };
+}
+function cylinderAdapter(componentInstructions, stockPartInfo) {
+  let color = "white";
+  let widthMillimeters = 10;
+  let heightMillimeters = 10;
+  if (stockPartInfo.hasOwnProperty("Color")) {
+    color = stockPartInfo.Color;
+  }
+  let colorHex = getColorValueHex(color);
+  if (colorHex === null) {
+    console.log(chalk.yellow(`!!! Invalid color: ${color}. Using white instead.`));
+    colorHex = "ffffff";
+  }
+  if (stockPartInfo.hasOwnProperty("DisplayName")) {
+    // Example DisplayName: "Cylinder, 10mm x 10mm, Black" or "Disc, 14mm x 10mm, Blue" or "Wink, 20mm, Black"
+    // The first value is width mm the second is height mm.
+    // Notice that wink doesn't have a seconnd value.
+    // The order of name, size, color might be randomized.
+    const displayNameTokens = stockPartInfo.DisplayName.split(", ").map(token => token.trim());
+    // Extract dimensions from DisplayName by looking for patterns with 'mm' and 'x'
+    let dimensions = null;
+    
+    for (const token of displayNameTokens) {
+      // Look for patterns like "10mm x 10mm" or "14mm x 10mm" or just "20mm"
+      const dimensionMatch = token.match(/(\d+)mm(?:\s*x\s*(\d+)mm)?/i);
+      if (dimensionMatch) {
+        if (dimensionMatch[2]) {
+          // Both width and height are specified (e.g., "10mm x 10mm")
+          widthMillimeters = parseInt(dimensionMatch[1]);
+          heightMillimeters = parseInt(dimensionMatch[2]);
+        } else {
+          // Only one dimension specified (e.g., "20mm")
+          height = parseInt(dimensionMatch[1]);
+          // For items like "Wink, 20mm, Black" we'll use a default height
+          // or try to infer from the component type
+        }
+        dimensions = true;
+        break;
+      }
+    }
+    
+    if (!dimensions) {
+      console.log(chalk.yellow(`!!! Could not extract dimensions from ${stockPartInfo.DisplayName}. Using defaults.`));
+    }
+  }
+  return {
+    name: componentInstructions.name,
+    colorHex: colorHex,
+    widthMillimeters: widthMillimeters,
+    heightMillimeters: heightMillimeters
+  };
+}
+
+/**
  * Get the appropriate adapter function based on the simulator creation task
  * @param {string} simulatorCreationTask - The simulator creation task
  * @returns {Function|null} - The adapter function or null if not supported
@@ -259,7 +414,12 @@ function getAdapter(simulatorCreationTask) {
     "Standee": standeeAdapter,
     "TokenWithDefinedShape": tokenWithDefinedShapeAdapter,
     "FlatTokenWithTransparencyBasedShape": flatTokenWithTransparencyBasedShapeAdapter,
-    "ThickTokenWithTransparencyBasedShape": thickTokenWithTransparencyBasedShapeAdapter
+    "ThickTokenWithTransparencyBasedShape": thickTokenWithTransparencyBasedShapeAdapter,
+    "CustomPDF": customPDFAdapter,
+    "Domino": dominoAdapter,
+    "Baggie": baggieAdapter,
+    "PokerChip": pokerChipAdapter,
+    "StockCylinder": cylinderAdapter
   };
 
   return adapters[simulatorCreationTask] || null;
@@ -274,5 +434,9 @@ module.exports = {
   tokenWithDefinedShapeAdapter,
   flatTokenWithTransparencyBasedShapeAdapter,
   thickTokenWithTransparencyBasedShapeAdapter,
+  customPDFAdapter,
+  dominoAdapter,
+  baggieAdapter,
+  pokerChipAdapter,
   getAdapter
 }; 

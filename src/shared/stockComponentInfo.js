@@ -709,7 +709,8 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "miniature",
-      "white"
+      "white",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/637F5604-D826-11EA-8C64-39DB521ADEB3.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -803,7 +804,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "yellow"
+      "yellow",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E56917F0-A661-11E0-896A-3A7437D397EC.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -897,7 +899,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "blue"
+      "blue",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FD5E55AA-A661-11E0-896A-3A7437D397EC.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -993,11 +996,12 @@ const STOCK_COMPONENT_INFO = {
       "farkle",
       "casino",
       "transparent",
-      "clear"
+      "clear",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7B9D5730-35D7-11EC-B888-00D258594BAF.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -1116,7 +1120,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "dodecahedron",
-      "white"
+      "white",
+      "d12"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C3EA7532-0AB5-11E3-8574-34787740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -1294,7 +1299,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg",
-      "black"
+      "black",
+      "d20"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D22C630E-A661-11E0-896A-3A7437D397EC.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -1472,7 +1478,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg",
-      "yellow"
+      "yellow",
+      "d20"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1CD08622-09F4-11E3-A0D8-41087740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -1650,7 +1657,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg",
-      "white"
+      "white",
+      "d20"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1C0457DC-09F4-11E3-9CB2-41087740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -1967,8 +1975,8 @@ const STOCK_COMPONENT_INFO = {
       "tiptop"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9AA02B16-C43E-11ED-8361-9686DB6D3EB3.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -1989,8 +1997,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/67F0DE98-61E0-11EC-BA8E-D08503B57022.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
     "IsDisabled": false
   },
@@ -2011,8 +2019,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1479D068-C43F-11ED-8361-A78BDB6D3EB3.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -2033,8 +2041,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0C7B124A-C4D6-11ED-A4D8-AE945FA0F72B.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -2055,8 +2063,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EB1FB2FA-C43E-11ED-85BE-09BA5FA0F72B.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -2077,8 +2085,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BAB10038-C43E-11ED-8361-EE87DB6D3EB3.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -2099,8 +2107,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E2B80B62-C43E-11ED-8361-C189DB6D3EB3.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -2121,8 +2129,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2222AB68-C43F-11ED-85BE-8DBC5FA0F72B.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -2143,8 +2151,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/03D81DBE-C43F-11ED-8361-118BDB6D3EB3.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -2165,8 +2173,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F8011176-C43E-11ED-8361-0F8BDB6D3EB3.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -2187,8 +2195,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3555AB68-C43F-11ED-B904-ABFB00937027.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -6990,8 +6998,8 @@ const STOCK_COMPONENT_INFO = {
       "white"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/25DFDD64-5662-11E5-9243-5193FE149099.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Domino",
+    "SimulatorCreationTask": "Domino",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7302,8 +7310,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D5FC7AC6-EA32-11EB-9161-4277EE9EC01D.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7331,8 +7339,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D1FFECF0-EA32-11EB-9161-4277EE9EC01D.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7360,8 +7368,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FC28711E-EA32-11EB-9837-DE2558DE1F23.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7389,8 +7397,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FFFDA19C-EA32-11EB-9161-EC77EE9EC01D.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7418,8 +7426,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F0465190-EA32-11EB-9161-AD77EE9EC01D.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7447,8 +7455,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CB782708-EA32-11EB-9161-1C77EE9EC01D.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7476,8 +7484,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C23676D6-EA32-11EB-9161-0677EE9EC01D.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7505,8 +7513,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FF653E1E-EB10-11EB-BADA-64CEE7726C43.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7534,8 +7542,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/67520E30-EB11-11EB-BADA-22CFE7726C43.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7563,8 +7571,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EC59C800-EA32-11EB-9161-9C77EE9EC01D.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7592,8 +7600,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F45D4B4E-EA32-11EB-9161-B277EE9EC01D.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7621,8 +7629,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F7DDF9E4-EA32-11EB-9837-D42558DE1F23.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7650,8 +7658,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DCB244F4-EA32-11EB-9837-782558DE1F23.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7679,8 +7687,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E0353FAA-EA32-11EB-9161-7877EE9EC01D.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7706,8 +7714,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F6678C2C-56FB-11E5-8F60-2A1636CD926D.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7733,8 +7741,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5F6CCD0-CF56-11E9-8690-62B834E1E425.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7760,8 +7768,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CF4306F2-5D2B-11EC-A381-67D61E5F5B50.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7787,8 +7795,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BA6847BA-5D2B-11EC-AACA-B76A68FE145E.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7814,8 +7822,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C484DE52-5D2B-11EC-A381-12D61E5F5B50.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7841,8 +7849,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/61ED7D72-56FB-11E5-A545-1DCFFE149099.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7870,8 +7878,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6037E48A-B08B-11E8-BB17-87D5CE95AB04.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7899,8 +7907,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/82F8978A-B08B-11E8-8C22-32D7BCC16479.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7928,8 +7936,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9988D50A-B08B-11E8-8C22-4DD7BCC16479.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7957,8 +7965,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1F2DD3F0-B08B-11E8-8C22-BDD5BCC16479.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -7986,8 +7994,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AFE63FCC-B08B-11E8-8C22-6BD7BCC16479.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -8015,8 +8023,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C20F6192-B08B-11E8-BB17-77D6CE95AB04.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -8044,8 +8052,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D759E50E-B08B-11E8-8C22-8FD7BCC16479.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -8073,8 +8081,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ED09F1AA-B08B-11E8-8C22-BDD7BCC16479.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -8101,8 +8109,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A4BE274-B08C-11E8-8C22-4FD8BCC16479.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -8158,8 +8166,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E0C1ED56-56FE-11E5-BEF7-1DCFFE149099.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -8187,8 +8195,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/33061A26-B08C-11E8-BB17-ECD6CE95AB04.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -8412,8 +8420,8 @@ const STOCK_COMPONENT_INFO = {
       "white"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/63666246-21E3-11E6-8665-AF4DEB12782E.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Domino",
+    "SimulatorCreationTask": "Domino",
     "Color": "white",
     "IsDisabled": false
   },
@@ -9171,8 +9179,8 @@ const STOCK_COMPONENT_INFO = {
       "white"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A45397A2-4693-11E3-93B8-4377F14FE85E.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Domino",
+    "SimulatorCreationTask": "Domino",
     "Color": "white",
     "IsDisabled": false
   },
@@ -10072,8 +10080,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C0F9F48E-C3E8-11EB-B9DF-287B6F30B128.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -10130,8 +10138,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D201749E-C3BD-11EB-A327-42986F30B128.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -10469,8 +10477,8 @@ const STOCK_COMPONENT_INFO = {
       "white"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6F6AFAE0-B2A8-11E8-A9CC-12E3CE95AB04.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Domino",
+    "SimulatorCreationTask": "Domino",
     "Color": "white",
     "IsDisabled": false
   },
@@ -10853,8 +10861,8 @@ const STOCK_COMPONENT_INFO = {
       "black"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D4731B7C-4D6C-11EC-BF5E-7AD594EE74C0.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCube",
+    "SimulatorCreationTask": "StockCube",
     "Color": "black",
     "IsDisabled": false
   },
@@ -10875,8 +10883,8 @@ const STOCK_COMPONENT_INFO = {
       "blue"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C5EA5F16-4D6C-11EC-BF5E-4FD594EE74C0.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCube",
+    "SimulatorCreationTask": "StockCube",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -10897,8 +10905,8 @@ const STOCK_COMPONENT_INFO = {
       "red"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CF428E76-4D6C-11EC-BF5E-64D594EE74C0.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCube",
+    "SimulatorCreationTask": "StockCube",
     "Color": "red",
     "IsDisabled": false
   },
@@ -10919,8 +10927,8 @@ const STOCK_COMPONENT_INFO = {
       "white"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C0F925F0-4D6C-11EC-BF5E-47D594EE74C0.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCube",
+    "SimulatorCreationTask": "StockCube",
     "Color": "white",
     "IsDisabled": false
   },
@@ -10941,8 +10949,8 @@ const STOCK_COMPONENT_INFO = {
       "yellow"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CAE09BF2-4D6C-11EC-A7BF-25D0837854C6.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCube",
+    "SimulatorCreationTask": "StockCube",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -10963,8 +10971,8 @@ const STOCK_COMPONENT_INFO = {
       "black"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7FE9052A-4D6D-11EC-BF5E-4BD794EE74C0.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCube",
+    "SimulatorCreationTask": "StockCube",
     "Color": "black",
     "IsDisabled": false
   },
@@ -10985,8 +10993,8 @@ const STOCK_COMPONENT_INFO = {
       "blue"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9941E000-4D6D-11EC-BF5E-86D794EE74C0.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCube",
+    "SimulatorCreationTask": "StockCube",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -11007,8 +11015,8 @@ const STOCK_COMPONENT_INFO = {
       "red"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9F4C0C1E-4D6D-11EC-A7BF-8BD2837854C6.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCube",
+    "SimulatorCreationTask": "StockCube",
     "Color": "red",
     "IsDisabled": false
   },
@@ -11029,8 +11037,8 @@ const STOCK_COMPONENT_INFO = {
       "white"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8A0E6C8E-4D6D-11EC-BF5E-63D794EE74C0.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCube",
+    "SimulatorCreationTask": "StockCube",
     "Color": "white",
     "IsDisabled": false
   },
@@ -11051,8 +11059,8 @@ const STOCK_COMPONENT_INFO = {
       "yellow"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/92709A64-4D6D-11EC-A7BF-6AD2837854C6.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCube",
+    "SimulatorCreationTask": "StockCube",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -11073,8 +11081,8 @@ const STOCK_COMPONENT_INFO = {
       "black"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FC644F92-4D6D-11EC-BF5E-A0D894EE74C0.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCube",
+    "SimulatorCreationTask": "StockCube",
     "Color": "black",
     "IsDisabled": false
   },
@@ -11095,8 +11103,8 @@ const STOCK_COMPONENT_INFO = {
       "blue"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/00B12458-4D6E-11EC-BF5E-ADD894EE74C0.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCube",
+    "SimulatorCreationTask": "StockCube",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -11117,8 +11125,8 @@ const STOCK_COMPONENT_INFO = {
       "red"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EE12DA08-4D6D-11EC-BF5E-6FD894EE74C0.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCube",
+    "SimulatorCreationTask": "StockCube",
     "Color": "red",
     "IsDisabled": false
   },
@@ -11139,8 +11147,8 @@ const STOCK_COMPONENT_INFO = {
       "white"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0764EDF2-4D6E-11EC-A7BF-BDD3837854C6.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCube",
+    "SimulatorCreationTask": "StockCube",
     "Color": "white",
     "IsDisabled": false
   },
@@ -11161,8 +11169,8 @@ const STOCK_COMPONENT_INFO = {
       "yellow"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F75E0A56-4D6D-11EC-BF5E-88D894EE74C0.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCube",
+    "SimulatorCreationTask": "StockCube",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -11909,8 +11917,8 @@ const STOCK_COMPONENT_INFO = {
       "white"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A6632BAA-6A2A-11E4-8EC4-B7B4A32F826F.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -11928,8 +11936,8 @@ const STOCK_COMPONENT_INFO = {
       "white"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C4E4E844-15E1-11E5-A50E-E5624BA7186E.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -11947,8 +11955,8 @@ const STOCK_COMPONENT_INFO = {
       "white"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B19C5190-D10D-11EA-A6FC-3211E5FADFE3.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -12232,8 +12240,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2F624080-465A-11ED-881D-C15E99F4B99C.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -13362,8 +13370,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0CACB110-B1B4-11EB-B77B-26DC0F1ADEF4.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "green",
     "IsDisabled": false
   },
@@ -13413,8 +13421,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0114D738-B1B4-11EB-B77B-FEDB0F1ADEF4.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "green",
     "IsDisabled": false
   },
@@ -13465,8 +13473,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/169B5532-B1B4-11EB-8EC7-5724421B163D.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "green",
     "IsDisabled": false
   },
@@ -13517,8 +13525,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2293AC18-B1B4-11EB-B77B-60DC0F1ADEF4.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "green",
     "IsDisabled": false
   },
@@ -13958,8 +13966,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/196A7FFE-465A-11ED-B8C6-7C4A83472B09.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -15114,8 +15122,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7563522E-AD81-11E4-8DC2-36A8BF09979E.png",
-    "PlaygroundCreationTask": "Standee",
-    "SimulatorCreationTask": "Standee",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -15141,8 +15149,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F9F8EB9A-35F7-11E9-8712-F2700031EE1B.png",
-    "PlaygroundCreationTask": "Standee",
-    "SimulatorCreationTask": "Standee",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -19185,8 +19193,8 @@ const STOCK_COMPONENT_INFO = {
       "clear"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E00635F8-F4E7-11E4-BD56-F49DFE48D702.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -19216,8 +19224,8 @@ const STOCK_COMPONENT_INFO = {
       "display"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E778B3F6-F676-11E0-8F9E-503B60677055.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -19247,8 +19255,8 @@ const STOCK_COMPONENT_INFO = {
       "display"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E778B3F6-F676-11E0-8F9E-503B60677055.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -20904,8 +20912,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E01F6206-F702-11EC-A087-714C7805D582.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
     "IsDisabled": false
   },
@@ -20921,8 +20929,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DF3BD470-9E94-11ED-88B5-3DAFCB83BB28.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -20939,8 +20947,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E5BCE33E-9E94-11ED-8B48-36522A49FC29.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -21153,8 +21161,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F2CA608A-B1B3-11EB-8EC7-EB23421B163D.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -23314,8 +23322,8 @@ const STOCK_COMPONENT_INFO = {
       "cylinder"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6DA32C30-311E-11EC-9B09-D7B0BE85CC60.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "black",
     "IsDisabled": false
   },
@@ -23351,8 +23359,8 @@ const STOCK_COMPONENT_INFO = {
       "cylinder"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/02F531A8-311E-11EC-891E-E9C557AF5381.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -23388,8 +23396,8 @@ const STOCK_COMPONENT_INFO = {
       "cylinder"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8A5BF428-311F-11EC-891E-A9C957AF5381.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
     "IsDisabled": false
   },
@@ -23425,8 +23433,8 @@ const STOCK_COMPONENT_INFO = {
       "cylinder"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9D451502-311E-11EC-9B09-7DB1BE85CC60.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -23462,8 +23470,8 @@ const STOCK_COMPONENT_INFO = {
       "cylinder"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D59DD066-311D-11EC-9B09-4BAFBE85CC60.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -23499,8 +23507,8 @@ const STOCK_COMPONENT_INFO = {
       "cylinder"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7613E9B8-311E-11EC-9B09-14B1BE85CC60.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": false
   },
@@ -23536,8 +23544,8 @@ const STOCK_COMPONENT_INFO = {
       "cylinder"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/905DA1BE-311F-11EC-891E-A3C957AF5381.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "white",
     "IsDisabled": false
   },
@@ -23573,8 +23581,8 @@ const STOCK_COMPONENT_INFO = {
       "cylinder"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/31CF8E7E-311E-11EC-891E-A1C657AF5381.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -23610,8 +23618,8 @@ const STOCK_COMPONENT_INFO = {
       "cylinder"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D7A4202C-4968-11E8-8168-D51070886834.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -23647,8 +23655,8 @@ const STOCK_COMPONENT_INFO = {
       "cylinder"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BDC967CE-20D3-11E8-84FA-65FB93A6FE1D.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -23673,8 +23681,8 @@ const STOCK_COMPONENT_INFO = {
       "cylinder",
       "natural"
     ],
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "natural",
     "IsDisabled": true
   },
@@ -23710,8 +23718,8 @@ const STOCK_COMPONENT_INFO = {
       "cylinder"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B455F07C-434C-11E8-A182-C6A71EA37D3B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -23747,8 +23755,8 @@ const STOCK_COMPONENT_INFO = {
       "cylinder"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/038DDD62-434D-11E8-A5FA-E27495F84907.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -23769,7 +23777,8 @@ const STOCK_COMPONENT_INFO = {
       "decagon",
       "pentagonal trapezohedron",
       "percentile",
-      "black"
+      "black",
+      "d10"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2B686B80-AD78-11E0-9091-4BD1D909E391.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -23794,7 +23803,8 @@ const STOCK_COMPONENT_INFO = {
       "decagon",
       "pentagonal trapezohedron",
       "percentile",
-      "blue"
+      "blue",
+      "d10"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0194E462-09FD-11E3-B999-41087740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -23819,7 +23829,8 @@ const STOCK_COMPONENT_INFO = {
       "decagon",
       "pentagonal trapezohedron",
       "percentile",
-      "green"
+      "green",
+      "d10"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0266C874-09FD-11E3-BEDF-41087740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -23844,7 +23855,8 @@ const STOCK_COMPONENT_INFO = {
       "decagon",
       "pentagonal trapezohedron",
       "percentile",
-      "red"
+      "red",
+      "d10"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0333CA18-09FD-11E3-B999-41087740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -23869,7 +23881,8 @@ const STOCK_COMPONENT_INFO = {
       "decagon",
       "pentagonal trapezohedron",
       "percentile",
-      "white"
+      "white",
+      "d10"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/03D7854A-09FD-11E3-9927-41087740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -23894,7 +23907,8 @@ const STOCK_COMPONENT_INFO = {
       "decagon",
       "pentagonal trapezohedron",
       "percentile",
-      "yellow"
+      "yellow",
+      "d10"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/049C1856-09FD-11E3-9424-41087740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -23919,7 +23933,8 @@ const STOCK_COMPONENT_INFO = {
       "decagon",
       "pentagonal trapezohedron",
       "percentile",
-      "black"
+      "black",
+      "d10"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DBBE5CF6-A661-11E0-896A-3A7437D397EC.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -23944,7 +23959,8 @@ const STOCK_COMPONENT_INFO = {
       "decagon",
       "pentagonal trapezohedron",
       "percentile",
-      "red"
+      "red",
+      "d10"
     ],
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
@@ -23968,7 +23984,8 @@ const STOCK_COMPONENT_INFO = {
       "decagon",
       "pentagonal trapezohedron",
       "percentile",
-      "red"
+      "red",
+      "d10"
     ],
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
@@ -23996,7 +24013,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "dodecahedron",
-      "black"
+      "black",
+      "d12"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D6F1F476-A661-11E0-896A-3A7437D397EC.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24025,7 +24043,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "dodecahedron",
-      "blue"
+      "blue",
+      "d12"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C2AC5B0E-0AB5-11E3-B912-34787740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24057,7 +24076,8 @@ const STOCK_COMPONENT_INFO = {
       "twelve-sided",
       "dodecagon",
       "dodecahedron",
-      "pictured"
+      "pictured",
+      "d12"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6CADC1AA-621C-11EA-968E-54831E8531CA.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24086,7 +24106,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "dodecahedron",
-      "green"
+      "green",
+      "d12"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C3519696-0AB5-11E3-AF6F-34787740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24115,7 +24136,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "dodecahedron",
-      "red"
+      "red",
+      "d12"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/31168A2C-0B76-11E3-9E84-C1057740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24144,7 +24166,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "dodecahedron",
-      "yellow"
+      "yellow",
+      "d12"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C467640C-0AB5-11E3-ADAA-34787740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24172,7 +24195,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg",
-      "blue"
+      "blue",
+      "d20"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1A47A9B2-09F4-11E3-AE86-41087740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24200,7 +24224,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg",
-      "green"
+      "green",
+      "d20"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1AC92186-09F4-11E3-AC5B-41087740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24228,7 +24253,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg",
-      "red"
+      "red",
+      "d20"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1B544CCA-09F4-11E3-8CA2-41087740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24422,7 +24448,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg",
-      "black"
+      "black",
+      "d4"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/06F1CAE8-A662-11E0-896A-3A7437D397EC.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24462,11 +24489,12 @@ const STOCK_COMPONENT_INFO = {
       "mock-up",
       "mock up",
       "sampling",
-      "white"
+      "white",
+      "d4"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F2B6A1E-621A-11EA-968E-8B801E8531CA.png",
-    "PlaygroundCreationTask": "StockCube",
-    "SimulatorCreationTask": "StockCube",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -24490,7 +24518,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg,",
-      "blue"
+      "blue",
+      "d4"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/400F4C4E-0B71-11E3-8A5B-C1057740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24518,7 +24547,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg,",
-      "green"
+      "green",
+      "d4"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E59276E2-09EF-11E3-81A9-41087740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24546,7 +24576,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg,",
-      "orange"
+      "orange",
+      "d4"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/081F5394-133F-11E8-906D-300394A6FE1D.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24574,7 +24605,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg",
-      "red"
+      "red",
+      "d4"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E622CF6C-09EF-11E3-B558-41087740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24602,7 +24634,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg,",
-      "white"
+      "white",
+      "d4"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E7738686-09EF-11E3-9607-41087740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24630,7 +24663,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg,",
-      "yellow"
+      "yellow",
+      "d4"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9107D6C0-0B71-11E3-8832-C1057740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24672,7 +24706,8 @@ const STOCK_COMPONENT_INFO = {
       "six-sided",
       "sixsided",
       "sugoroku",
-      "yahtzee"
+      "yahtzee",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B85697C-AD78-11E0-B487-B1BA0C070879.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24714,7 +24749,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "blue"
+      "blue",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FD5E55AA-A661-11E0-896A-3A7437D397EC.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24756,7 +24792,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "green"
+      "green",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F8930DC2-A661-11E0-896A-3A7437D397EC.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24798,7 +24835,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "black"
+      "black",
+      "d6"
     ],
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
@@ -24839,7 +24877,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "green"
+      "green",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1D7B0FC4-4C1B-11E9-AF38-C0992FF1173D.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24881,7 +24920,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "red"
+      "red",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EA354DF8-A661-11E0-896A-3A7437D397EC.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24923,7 +24963,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "blue"
+      "blue",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/05DE9D5E-F6E0-11E7-87C2-FC1631DDDC28.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -24966,7 +25007,8 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "pictured",
-      "blue"
+      "blue",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/253B9AD0-F6E0-11E7-B23F-C1BE1B60DBEB.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -25009,7 +25051,8 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "pictured",
-      "black"
+      "black",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/39AAD4B8-F6E0-11E7-87C2-AE8B732ED963.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -25052,7 +25095,8 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "pictured",
-      "blue"
+      "blue",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A6CDD00-F6E0-11E7-B23F-A0012D5B01DD.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -25095,7 +25139,8 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "pictured",
-      "purple"
+      "purple",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5931DD22-F6E0-11E7-87C2-BEEDC03FF00E.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -25138,7 +25183,8 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "pictured",
-      "black"
+      "black",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6A228F28-F6E0-11E7-87C2-DC8949223F68.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -25181,10 +25227,11 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "casino",
-      "black"
+      "black",
+      "d6"
     ],
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "black",
     "IsDisabled": true
   },
@@ -25223,11 +25270,12 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "casino",
-      "blue"
+      "blue",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A1DA2658-35D7-11EC-B888-7FD258594BAF.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -25266,11 +25314,12 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "casino",
-      "green"
+      "green",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5AA6B908-35D8-11EC-B888-6BD458594BAF.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "green",
     "IsDisabled": false
   },
@@ -25309,11 +25358,12 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "casino",
-      "orange"
+      "orange",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/300E2488-35D8-11EC-861B-8C72F840BE30.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -25352,11 +25402,12 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "casino",
-      "purple"
+      "purple",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01B1535E-35D7-11EC-861B-476FF840BE30.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -25395,11 +25446,12 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "casino",
-      "red"
+      "red",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/32039F6C-019A-11EF-80D4-F8FB719B6C86.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "red",
     "IsDisabled": false
   },
@@ -25438,11 +25490,12 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "casino",
-      "yellow"
+      "yellow",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01E6EB4E-35D8-11EC-B888-5FD358594BAF.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -25480,7 +25533,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "white"
+      "white",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9114C8A6-A662-11E0-896A-3A7437D397EC.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -25522,7 +25576,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "yellow"
+      "yellow",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/35A0BA54-4C1B-11E9-AF38-E8992FF1173D.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -25566,7 +25621,8 @@ const STOCK_COMPONENT_INFO = {
       "farkle",
       "numbered",
       "numeral",
-      "red"
+      "red",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D2823CAC-D5C7-11EB-9F1A-C9A18D8D6E47.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -25610,7 +25666,8 @@ const STOCK_COMPONENT_INFO = {
       "farkle",
       "numbered",
       "numeral",
-      "blue"
+      "blue",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3B8FB0F2-133F-11E8-B66E-54EA93A6FE1D.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -25654,7 +25711,8 @@ const STOCK_COMPONENT_INFO = {
       "farkle",
       "numbered",
       "numeral",
-      "green"
+      "green",
+      "d6"
     ],
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
@@ -25697,7 +25755,8 @@ const STOCK_COMPONENT_INFO = {
       "farkle",
       "numbered",
       "numeral",
-      "gray"
+      "gray",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/28FAC986-133F-11E8-906D-AE0394A6FE1D.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -25717,7 +25776,8 @@ const STOCK_COMPONENT_INFO = {
       "six-sided",
       "cube",
       "die",
-      "white"
+      "white",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2D84590C-74E4-11ED-B27B-702243694036.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -25738,7 +25798,8 @@ const STOCK_COMPONENT_INFO = {
       "cube",
       "die",
       "computer",
-      "white"
+      "white",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B1A576F8-4F2D-11ED-9496-4D7C1A3195A7.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -25780,7 +25841,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "black"
+      "black",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B85697C-AD78-11E0-B487-B1BA0C070879.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -25822,7 +25884,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "blue"
+      "blue",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/74922F26-4CBC-11E9-AB94-632FD2978862.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -25864,7 +25927,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "pink"
+      "pink",
+      "d6"
     ],
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
@@ -25895,7 +25959,8 @@ const STOCK_COMPONENT_INFO = {
       "mock-up",
       "mock up",
       "sampling",
-      "black"
+      "black",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1B077180-52A7-11E6-9CCB-1DED603D21FA.png",
     "PlaygroundCreationTask": "StockCube",
@@ -25927,7 +25992,8 @@ const STOCK_COMPONENT_INFO = {
       "mock-up",
       "mock up",
       "sampling",
-      "blue"
+      "blue",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1B05207E-52A7-11E6-B002-5EA787CADD93.png",
     "PlaygroundCreationTask": "StockCube",
@@ -25959,7 +26025,8 @@ const STOCK_COMPONENT_INFO = {
       "mock-up",
       "mock up",
       "sampling",
-      "green"
+      "green",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CB4B4F12-1A08-11EB-B3F2-D772FA3D5F78.png",
     "PlaygroundCreationTask": "StockCube",
@@ -25991,7 +26058,8 @@ const STOCK_COMPONENT_INFO = {
       "mock-up",
       "mock up",
       "sampling",
-      "orange"
+      "orange",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D46B9CC8-1A08-11EB-B3F2-EE72FA3D5F78.png",
     "PlaygroundCreationTask": "StockCube",
@@ -26023,7 +26091,8 @@ const STOCK_COMPONENT_INFO = {
       "mock-up",
       "mock up",
       "sampling",
-      "purple"
+      "purple",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DD281BD4-1A08-11EB-B3F2-0D73FA3D5F78.png",
     "PlaygroundCreationTask": "StockCube",
@@ -26055,7 +26124,8 @@ const STOCK_COMPONENT_INFO = {
       "mock-up",
       "mock up",
       "sampling",
-      "red"
+      "red",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1BB45850-52A7-11E6-9CCB-1DED603D21FA.png",
     "PlaygroundCreationTask": "StockCube",
@@ -26087,7 +26157,8 @@ const STOCK_COMPONENT_INFO = {
       "mock-up",
       "mock up",
       "sampling",
-      "white"
+      "white",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1BB0E2B0-52A7-11E6-B002-5EA787CADD93.png",
     "PlaygroundCreationTask": "StockCube",
@@ -26120,7 +26191,8 @@ const STOCK_COMPONENT_INFO = {
       "mock up",
       "sampling",
       "pictured",
-      "wood"
+      "wood",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6EA6213A-D5D2-11EA-B47D-40480EE65047.png",
     "PlaygroundCreationTask": "StockCube",
@@ -26152,7 +26224,8 @@ const STOCK_COMPONENT_INFO = {
       "mock-up",
       "mock up",
       "sampling",
-      "yellow"
+      "yellow",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BC36E0FE-1A08-11EB-B3F2-C772FA3D5F78.png",
     "PlaygroundCreationTask": "StockCube",
@@ -26194,7 +26267,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "green"
+      "green",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F8930DC2-A661-11E0-896A-3A7437D397EC.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -26217,11 +26291,12 @@ const STOCK_COMPONENT_INFO = {
       "symbol",
       "hazmat",
       "lightning bolt",
-      "black"
+      "black",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/95528FA8-35F6-11E9-8712-C76E0031EE1B.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "black",
     "IsDisabled": false
   },
@@ -26240,11 +26315,12 @@ const STOCK_COMPONENT_INFO = {
       "symbol",
       "hazmat",
       "lightning bolt",
-      "blue"
+      "blue",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AC2B9D64-35F6-11E9-8712-E66E0031EE1B.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -26263,11 +26339,12 @@ const STOCK_COMPONENT_INFO = {
       "symbol",
       "hazmat",
       "lightning bolt",
-      "brown"
+      "brown",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B13749B6-35F6-11E9-8712-E66E0031EE1B.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "brown",
     "IsDisabled": false
   },
@@ -26285,11 +26362,12 @@ const STOCK_COMPONENT_INFO = {
       "die",
       "symbol",
       "lightning bolt",
-      "green"
+      "green",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C0AC13D6-35F6-11E9-8712-1B6F0031EE1B.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "green",
     "IsDisabled": false
   },
@@ -26308,11 +26386,12 @@ const STOCK_COMPONENT_INFO = {
       "symbol",
       "nuclear",
       "lightning bolt",
-      "yellow"
+      "yellow",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CE2EC01C-35F6-11E9-8712-346F0031EE1B.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -26352,7 +26431,8 @@ const STOCK_COMPONENT_INFO = {
       "farkle",
       "numeral",
       "number",
-      "black"
+      "black",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F3C94F4A-A661-11E0-896A-3A7437D397EC.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -26394,7 +26474,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "purple"
+      "purple",
+      "d6"
     ],
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
@@ -26435,7 +26516,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "red"
+      "red",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EA354DF8-A661-11E0-896A-3A7437D397EC.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -26477,7 +26559,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "black"
+      "black",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7534443C-F6E1-11E7-B23F-E6F2018643E9.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -26519,7 +26602,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "blue"
+      "blue",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8142D180-F6E1-11E7-B23F-D08A8216FF42.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -26561,7 +26645,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "brown"
+      "brown",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A7F964B0-F6E1-11E7-87C2-82354ECFD185.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -26603,7 +26688,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "brown"
+      "brown",
+      "d6"
     ],
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Dice/Dice_D6.Dice_D6'",
     "PlaygroundColor": {
@@ -26697,7 +26783,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "green"
+      "green",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EF1701B8-F6E1-11E7-B23F-91ABF8451AD9.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -26739,7 +26826,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "orange"
+      "orange",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FA76216A-F6E1-11E7-87C2-909EFF5C6DF7.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -26781,7 +26869,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "white"
+      "white",
+      "d6"
     ],
     "PlaygroundModelFile": "StaticMesh'/Game/Meshes/Dice/Dice_D6.Dice_D6'",
     "PlaygroundColor": {
@@ -26855,7 +26944,8 @@ const STOCK_COMPONENT_INFO = {
       "die",
       "mathematical",
       "crazy",
-      "white"
+      "white",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9ECDB90A-4F2D-11ED-9496-677B1A3195A7.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -26877,7 +26967,8 @@ const STOCK_COMPONENT_INFO = {
       "die",
       "mathematical",
       "crazy",
-      "white"
+      "white",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/942EFFCC-4F2D-11ED-B776-EACDCAB944DD.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -26901,11 +26992,12 @@ const STOCK_COMPONENT_INFO = {
       "symbol",
       "lily pad",
       "lilypad",
-      "pictured"
+      "pictured",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0D83F8BE-593D-11E8-800E-882594A6FE1D.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "ivory",
     "IsDisabled": false
   },
@@ -26943,7 +27035,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "white"
+      "white",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9114C8A6-A662-11E0-896A-3A7437D397EC.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -26986,7 +27079,8 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "pictured",
-      "wood"
+      "wood",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3145EE9E-621C-11EA-86E6-53C1D50F5BC8.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -27016,7 +27110,8 @@ const STOCK_COMPONENT_INFO = {
       "fauna",
       "creatures",
       "brown",
-      "dice"
+      "dice",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/672FEBBA-FBAC-11EB-A517-993A22502F64.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -27059,7 +27154,8 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "miniature",
-      "black"
+      "black",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/336917CC-D824-11EA-86E5-35320EE65047.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -27102,7 +27198,8 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "miniature",
-      "blue"
+      "blue",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/50075C18-D824-11EA-86E5-6E320EE65047.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -27145,7 +27242,8 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "miniature",
-      "green"
+      "green",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BB7D98C6-D825-11EA-8C64-DED9521ADEB3.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -27188,7 +27286,8 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "miniature",
-      "red"
+      "red",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/513F19D4-D826-11EA-86E5-E5350EE65047.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -27219,11 +27318,12 @@ const STOCK_COMPONENT_INFO = {
       "symbol",
       "extraterrestrial",
       "pictured",
-      "green"
+      "green",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/89C1A80A-621D-11EA-968E-E6841E8531CA.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "green",
     "IsDisabled": false
   },
@@ -27250,11 +27350,12 @@ const STOCK_COMPONENT_INFO = {
       "symbol",
       "extraterrestrial",
       "pictured",
-      "red"
+      "red",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DC645CBA-621D-11EA-968E-86851E8531CA.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -27278,11 +27379,12 @@ const STOCK_COMPONENT_INFO = {
       "die",
       "symbol",
       "colors",
-      "pictured"
+      "pictured",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BFF6348E-621A-11EA-86E6-13BFD50F5BC8.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "red",
     "IsDisabled": false
   },
@@ -27306,11 +27408,12 @@ const STOCK_COMPONENT_INFO = {
       "die",
       "symbol",
       "dinosaur",
-      "pictured"
+      "pictured",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5DC71D7E-D5CD-11EA-B47D-0E400EE65047.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -27359,10 +27462,11 @@ const STOCK_COMPONENT_INFO = {
       "vengeful",
       "pictured",
       "dice",
-      "tube"
+      "tube",
+      "d6"
     ],
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "none",
     "IsDisabled": true
   },
@@ -27392,7 +27496,8 @@ const STOCK_COMPONENT_INFO = {
       "sampling",
       "indented",
       "stickers",
-      "blue"
+      "blue",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/09968A2A-42C2-11E1-A38C-140DF7D8CD61.png",
     "PlaygroundCreationTask": "StockCube",
@@ -27426,7 +27531,8 @@ const STOCK_COMPONENT_INFO = {
       "sampling",
       "indented",
       "stickers",
-      "blue"
+      "blue",
+      "d6"
     ],
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
@@ -27459,7 +27565,8 @@ const STOCK_COMPONENT_INFO = {
       "sampling",
       "indented",
       "stickers",
-      "green"
+      "green",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A5290BD0-8C17-11E7-9891-DB9F6BA831B7.png",
     "PlaygroundCreationTask": "StockCube",
@@ -27494,7 +27601,8 @@ const STOCK_COMPONENT_INFO = {
       "sampling",
       "indented",
       "stickers",
-      "pictured"
+      "pictured",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FBB51C38-0CE5-11E8-A2B3-A32F94A6FE1D.png",
     "PlaygroundCreationTask": "StockCube",
@@ -27529,7 +27637,8 @@ const STOCK_COMPONENT_INFO = {
       "sampling",
       "indented",
       "stickers",
-      "blue"
+      "blue",
+      "d6"
     ],
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
@@ -27563,7 +27672,8 @@ const STOCK_COMPONENT_INFO = {
       "sampling",
       "indented",
       "stickers",
-      "green"
+      "green",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9C6E8D80-8C17-11E7-9891-E19F6BA831B7.png",
     "PlaygroundCreationTask": "StockCube",
@@ -27597,7 +27707,8 @@ const STOCK_COMPONENT_INFO = {
       "sampling",
       "indented",
       "stickers",
-      "orange"
+      "orange",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/22787652-42C2-11E1-A38C-140DF7D8CD61.png",
     "PlaygroundCreationTask": "StockCube",
@@ -27631,7 +27742,8 @@ const STOCK_COMPONENT_INFO = {
       "sampling",
       "indented",
       "stickers",
-      "purple"
+      "purple",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2F55D18A-42C2-11E1-A263-140DF7D8CD61.png",
     "PlaygroundCreationTask": "StockCube",
@@ -27665,7 +27777,8 @@ const STOCK_COMPONENT_INFO = {
       "sampling",
       "indented",
       "stickers",
-      "red"
+      "red",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3538B04E-42D7-11E1-A263-140DF7D8CD61.png",
     "PlaygroundCreationTask": "StockCube",
@@ -27699,7 +27812,8 @@ const STOCK_COMPONENT_INFO = {
       "sampling",
       "indented",
       "stickers",
-      "white"
+      "white",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4715F00C-42C2-11E1-A263-140DF7D8CD61.png",
     "PlaygroundCreationTask": "StockCube",
@@ -27733,7 +27847,8 @@ const STOCK_COMPONENT_INFO = {
       "sampling",
       "indented",
       "stickers",
-      "yellow"
+      "yellow",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/52FEE86A-42C2-11E1-BBEC-140DF7D8CD61.png",
     "PlaygroundCreationTask": "StockCube",
@@ -27760,7 +27875,8 @@ const STOCK_COMPONENT_INFO = {
       "interview",
       "learning",
       "pictured",
-      "dice"
+      "dice",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0CA6951E-6219-11EA-968E-697E1E8531CA.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -27796,7 +27912,8 @@ const STOCK_COMPONENT_INFO = {
       "darkness",
       "black",
       "dice",
-      "natural"
+      "natural",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F2203F5A-D5C7-11EB-A165-08F53218550E.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -27817,7 +27934,8 @@ const STOCK_COMPONENT_INFO = {
       "positive",
       "counter",
       "tracking",
-      "black"
+      "black",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4B70E410-9A53-11E7-BC02-BCC471BAD30D.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -27847,11 +27965,12 @@ const STOCK_COMPONENT_INFO = {
       "symbol",
       "syntax",
       "syntactic",
-      "pictured"
+      "pictured",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/31E81A96-621E-11EA-968E-FD851E8531CA.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -27868,7 +27987,8 @@ const STOCK_COMPONENT_INFO = {
       "positive",
       "counter",
       "tracking",
-      "white"
+      "white",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4FD68FD2-9A53-11E7-932D-3C49CB191CC0.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -27898,11 +28018,12 @@ const STOCK_COMPONENT_INFO = {
       "symbol",
       "learning",
       "education",
-      "pictured"
+      "pictured",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/027CB68C-621D-11EA-86E6-76C2D50F5BC8.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -27929,11 +28050,12 @@ const STOCK_COMPONENT_INFO = {
       "die",
       "symbol",
       "fauna",
-      "pictured"
+      "pictured",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/50572F9C-621B-11EA-86E6-FABFD50F5BC8.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -27959,11 +28081,12 @@ const STOCK_COMPONENT_INFO = {
       "symbol",
       "pictured",
       "white",
+      "d6",
       "vehicle"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0FBD10A0-621B-11EA-968E-61811E8531CA.png",
-    "PlaygroundCreationTask": "Standee",
-    "SimulatorCreationTask": "Standee",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -27990,11 +28113,12 @@ const STOCK_COMPONENT_INFO = {
       "critters",
       "animals",
       "pictured",
-      "wood"
+      "wood",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E7EEBFFC-6219-11EA-968E-B37F1E8531CA.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "wood",
     "IsDisabled": false
   },
@@ -28018,7 +28142,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg",
-      "black"
+      "black",
+      "d8"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E09A15F8-A661-11E0-896A-3A7437D397EC.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -28058,11 +28183,12 @@ const STOCK_COMPONENT_INFO = {
       "mock-up",
       "mock up",
       "sampling,",
-      "white"
+      "white",
+      "d8"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A1D5684E-621A-11EA-86E6-E2BED50F5BC8.png",
-    "PlaygroundCreationTask": "StockCube",
-    "SimulatorCreationTask": "StockCube",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -28086,7 +28212,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg",
-      "blue"
+      "blue",
+      "d8"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F1964F4-0AB5-11E3-BE47-34787740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -28126,7 +28253,8 @@ const STOCK_COMPONENT_INFO = {
       "maps",
       "heading",
       "black",
-      "dice"
+      "dice",
+      "d8"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E3E13B66-85B2-11EB-B449-2E411BF3E6B8.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -28154,7 +28282,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg",
-      "green"
+      "green",
+      "d8"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7FD50740-0AB5-11E3-8836-34787740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -28182,7 +28311,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg",
-      "red"
+      "red",
+      "d8"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/808461AE-0AB5-11E3-B35F-34787740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -28210,7 +28340,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg",
-      "white"
+      "white",
+      "d8"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C371206E-0B74-11E3-AA17-C1057740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -28238,7 +28369,8 @@ const STOCK_COMPONENT_INFO = {
       "cthulu c'thulhu",
       "earthdawn",
       "rpg",
-      "yellow"
+      "yellow",
+      "d8"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8142B528-0AB5-11E3-8836-34787740BD4B.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -28446,8 +28578,8 @@ const STOCK_COMPONENT_INFO = {
       "white"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5306D7A0-41C5-11EE-9F26-8454BCA20CCB.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -29468,8 +29600,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/781DAA1C-9EEE-11E7-AC47-39D071BAD30D.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -29511,8 +29643,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8947A932-9EEE-11E7-9B52-2655CB191CC0.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -29542,8 +29674,8 @@ const STOCK_COMPONENT_INFO = {
       "disc",
       "tube"
     ],
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": true
   },
@@ -29585,8 +29717,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/98336416-4972-11E8-8680-1F491EA37D3B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "black",
     "IsDisabled": false
   },
@@ -29628,8 +29760,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D3D6A6F4-4972-11E8-A77D-8AE44D043C08.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
     "IsDisabled": false
   },
@@ -29672,8 +29804,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C3E9372A-4972-11E8-8680-45491EA37D3B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "lightblue",
     "IsDisabled": false
   },
@@ -29716,8 +29848,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/927A5950-3BA4-11EA-A3A8-9474EBC8DDC9.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -29747,8 +29879,8 @@ const STOCK_COMPONENT_INFO = {
       "disc",
       "tube"
     ],
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": true
   },
@@ -29790,8 +29922,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/49F626FC-4973-11E8-A77D-C1F4461B0F69.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -29833,8 +29965,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/52F64104-498E-11E8-9410-76791EA37D3B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "black",
     "IsDisabled": false
   },
@@ -29876,8 +30008,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/52847950-78BB-11E8-AF21-F1E85CFD4EC6.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -29919,8 +30051,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/02BBA074-4968-11E8-9221-A5B51EA37D3B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
     "IsDisabled": false
   },
@@ -29962,8 +30094,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D83FCAD2-4967-11E8-8168-DFD9F46C1B2E.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": false
   },
@@ -30006,8 +30138,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9E2E7BC4-498D-11E8-9410-28781EA37D3B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "limegreen",
     "IsDisabled": false
   },
@@ -30049,8 +30181,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D24709DA-498D-11E8-A69E-83D905CEB24C.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -30092,8 +30224,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F4920A62-498D-11E8-A69E-FBFDAD359A41.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": false
   },
@@ -30135,8 +30267,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/080F1116-498E-11E8-9410-F7781EA37D3B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -30178,8 +30310,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4FB27D3E-498C-11E8-9410-5B751EA37D3B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -30221,8 +30353,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4C6F9CEC-498C-11E8-9410-5F751EA37D3B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "brown",
     "IsDisabled": false
   },
@@ -30264,8 +30396,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/461BA85E-498C-11E8-9410-49751EA37D3B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
     "IsDisabled": false
   },
@@ -30307,8 +30439,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C6ECF668-498C-11E8-A69E-E908E6616E7C.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -30350,8 +30482,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3600AFA0-498C-11E8-9410-32751EA37D3B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": false
   },
@@ -30393,8 +30525,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2849A060-498C-11E8-9410-2E751EA37D3B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -30436,8 +30568,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5CCD8390-2AC3-11E1-82D0-B470E060718B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "black",
     "IsDisabled": false
   },
@@ -30479,8 +30611,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/63C1FD2A-2AC3-11E1-8A47-B470E060718B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -30522,8 +30654,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6AA4712C-2AC3-11E1-82D0-B470E060718B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
     "IsDisabled": false
   },
@@ -30565,8 +30697,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/719EF40C-2AC3-11E1-AB7E-B470E060718B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -30608,8 +30740,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/78D810FA-2AC3-11E1-8A47-B470E060718B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -30651,8 +30783,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7FD8E5DC-2AC3-11E1-82D0-B470E060718B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": false
   },
@@ -30695,8 +30827,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/872A3070-2AC3-11E1-8A47-B470E060718B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "white",
     "IsDisabled": false
   },
@@ -30738,8 +30870,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8FA38648-2AC3-11E1-AB7E-B470E060718B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -30781,8 +30913,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1092DB10-54B4-11E9-BF1F-96ED84BD98AD.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -30824,8 +30956,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/133FF500-54B4-11E9-BF1F-99ED84BD98AD.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -30867,8 +30999,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/43897DD2-498C-11E8-A69E-84514D2B87B0.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "none",
     "IsDisabled": false
   },
@@ -30910,8 +31042,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/995C6B26-498B-11E8-9410-3E741EA37D3B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "pink",
     "IsDisabled": false
   },
@@ -30953,8 +31085,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3FA63E76-498C-11E8-A69E-BC22B60BF994.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -30996,8 +31128,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D14BBB1A-2B1A-11E9-A81D-A87CEA13D078.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "none",
     "IsDisabled": false
   },
@@ -31039,8 +31171,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3244B33A-4968-11E8-8168-FD0E42658109.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -31087,8 +31219,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E9548790-DB4B-11EA-B126-046FA6AA72A1.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "apricot",
     "IsDisabled": false
   },
@@ -31133,8 +31265,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/02780ABC-DB4C-11EA-8557-02A6521ADEB3.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
     "IsDisabled": false
   },
@@ -31179,8 +31311,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E2B401EC-B06C-11E8-BB17-1FA5CE95AB04.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "none",
     "IsDisabled": false
   },
@@ -31225,8 +31357,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F687140C-9A7D-11E8-B241-36318CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -31271,8 +31403,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F391A48-9A7E-11E8-B241-E2318CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
     "IsDisabled": false
   },
@@ -31317,8 +31449,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/91F0CF00-9A7E-11E8-919B-95BCCC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -31363,8 +31495,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E19DFD02-9A7E-11E8-B241-8C328CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": false
   },
@@ -31409,8 +31541,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5BC4AA56-9A78-11E8-919B-59B2CC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -31455,8 +31587,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CF790D3C-9A7F-11E8-919B-52BECC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -31501,8 +31633,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D82D1F36-9A7F-11E8-B241-E7338CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
     "IsDisabled": false
   },
@@ -31547,8 +31679,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E28FA4B2-9A7F-11E8-B241-F0338CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -31593,8 +31725,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EBA979A6-9A7F-11E8-919B-83BECC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -31639,8 +31771,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5F1184C-9A7F-11E8-B241-1D348CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -31685,8 +31817,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01652736-9A80-11E8-B241-20348CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": false
   },
@@ -31731,8 +31863,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/091C973E-9A80-11E8-919B-C3BECC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -31774,8 +31906,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2FC32480-174E-11E8-9C3D-D92394A6FE1D.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": false
   },
@@ -31820,8 +31952,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E5341D1C-B06C-11E8-BB17-27A5CE95AB04.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "none",
     "IsDisabled": false
   },
@@ -31866,8 +31998,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F687140C-9A7D-11E8-B241-36318CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -31912,8 +32044,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F391A48-9A7E-11E8-B241-E2318CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
     "IsDisabled": false
   },
@@ -31958,8 +32090,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/91F0CF00-9A7E-11E8-919B-95BCCC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -32004,8 +32136,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E19DFD02-9A7E-11E8-B241-8C328CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": false
   },
@@ -32050,8 +32182,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5BC4AA56-9A78-11E8-919B-59B2CC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -32096,8 +32228,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CF790D3C-9A7F-11E8-919B-52BECC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -32142,8 +32274,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D82D1F36-9A7F-11E8-B241-E7338CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
     "IsDisabled": false
   },
@@ -32188,8 +32320,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E28FA4B2-9A7F-11E8-B241-F0338CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -32234,8 +32366,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EBA979A6-9A7F-11E8-919B-83BECC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -32280,8 +32412,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5F1184C-9A7F-11E8-B241-1D348CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -32326,8 +32458,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01652736-9A80-11E8-B241-20348CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": false
   },
@@ -32372,8 +32504,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/091C973E-9A80-11E8-919B-C3BECC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -32415,8 +32547,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E98D5474-6C27-11E9-B784-DFF5A9801980.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -32459,8 +32591,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F73CA43A-6C27-11E9-B784-F9F5A9801980.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -32502,8 +32634,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F279AA10-6C27-11E9-85C7-0EAEBA9B8687.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -32548,8 +32680,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E03E5674-B06C-11E8-BB17-18A5CE95AB04.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "none",
     "IsDisabled": false
   },
@@ -32594,8 +32726,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F687140C-9A7D-11E8-B241-36318CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -32640,8 +32772,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F391A48-9A7E-11E8-B241-E2318CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
     "IsDisabled": false
   },
@@ -32686,8 +32818,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/91F0CF00-9A7E-11E8-919B-95BCCC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -32732,8 +32864,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E19DFD02-9A7E-11E8-B241-8C328CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": false
   },
@@ -32778,8 +32910,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5BC4AA56-9A78-11E8-919B-59B2CC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -32824,8 +32956,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CF790D3C-9A7F-11E8-919B-52BECC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -32870,8 +33002,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D82D1F36-9A7F-11E8-B241-E7338CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
     "IsDisabled": false
   },
@@ -32916,8 +33048,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E28FA4B2-9A7F-11E8-B241-F0338CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -32962,8 +33094,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EBA979A6-9A7F-11E8-919B-83BECC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -33008,8 +33140,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01652736-9A80-11E8-B241-20348CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": false
   },
@@ -33054,8 +33186,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5F1184C-9A7F-11E8-B241-1D348CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -33100,8 +33232,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/091C973E-9A80-11E8-919B-C3BECC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -33146,8 +33278,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/144BFDFC-B07E-11E8-8C22-84BFBCC16479.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "none",
     "IsDisabled": false
   },
@@ -33192,8 +33324,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F687140C-9A7D-11E8-B241-36318CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -33238,8 +33370,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F391A48-9A7E-11E8-B241-E2318CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
     "IsDisabled": false
   },
@@ -33284,8 +33416,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/91F0CF00-9A7E-11E8-919B-95BCCC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -33330,8 +33462,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E19DFD02-9A7E-11E8-B241-8C328CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": false
   },
@@ -33376,8 +33508,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5BC4AA56-9A78-11E8-919B-59B2CC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -33422,8 +33554,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CF790D3C-9A7F-11E8-919B-52BECC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -33468,8 +33600,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D82D1F36-9A7F-11E8-B241-E7338CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
     "IsDisabled": false
   },
@@ -33514,8 +33646,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E28FA4B2-9A7F-11E8-B241-F0338CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -33560,8 +33692,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EBA979A6-9A7F-11E8-919B-83BECC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -33606,8 +33738,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5F1184C-9A7F-11E8-B241-1D348CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -33652,8 +33784,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01652736-9A80-11E8-B241-20348CA49208.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": false
   },
@@ -33698,8 +33830,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/091C973E-9A80-11E8-919B-C3BECC46DD39.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -33741,8 +33873,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FFB9EA16-4A5C-11E8-855F-858BD2C40D81.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -35732,8 +35864,8 @@ const STOCK_COMPONENT_INFO = {
       "silver"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FB68F576-230A-11EC-81A5-FAEB9FC3DD01.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "silver",
     "IsDisabled": false
   },
@@ -37279,11 +37411,12 @@ const STOCK_COMPONENT_INFO = {
     "Tags": [
       "barrier",
       "wattle",
-      "gray"
+      "gray",
+      "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/53EB279C-74DA-11ED-8643-2B2643694036.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -38807,8 +38940,8 @@ const STOCK_COMPONENT_INFO = {
       "black",
       "wood"
     ],
-    "PlaygroundCreationTask": "Standee",
-    "SimulatorCreationTask": "Standee",
+    "PlaygroundCreationTask": "StockCube",
+    "SimulatorCreationTask": "StockCube",
     "Color": "black",
     "IsDisabled": true
   },
@@ -40305,8 +40438,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D7F0CFCA-E36A-11E8-BF14-21982333FFC9.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "none",
     "IsDisabled": true
   },
@@ -42557,8 +42690,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E237AF9E-0F09-11E2-8584-134B1D5FFC75.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -42583,8 +42716,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/450E5702-CBF1-11E4-878A-675C81F9DBEC.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -43280,8 +43413,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F4FC5D00-29F8-11E7-B991-565397AD74D5.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
     "IsDisabled": false
   },
@@ -43344,8 +43477,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5FC008E-29F8-11E7-B3FC-5CB86F50B980.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -43370,8 +43503,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F687D2E4-29F8-11E7-B3FC-79B86F50B980.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -43394,8 +43527,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F6CDAF80-29F8-11E7-B991-5E5397AD74D5.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -43454,8 +43587,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F76833E8-29F8-11E7-B991-4F5397AD74D5.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -43479,8 +43612,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F48AA764-29F8-11E7-B3FC-74B86F50B980.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -43502,8 +43635,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F8FB74E0-29F8-11E7-B991-675397AD74D5.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -43525,8 +43658,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F612A186-29F8-11E7-B991-5C5397AD74D5.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -43587,8 +43720,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FA003EAC-29F8-11E7-B3FC-6AB86F50B980.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -43650,8 +43783,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FAA51BE8-29F8-11E7-B3FC-89B86F50B980.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -43669,8 +43802,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FA94EBB0-29F8-11E7-B991-585397AD74D5.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -43698,8 +43831,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F7FEEDEC-29F8-11E7-B991-4D5397AD74D5.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -43725,8 +43858,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FB616686-29F8-11E7-B991-785397AD74D5.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -43744,8 +43877,8 @@ const STOCK_COMPONENT_INFO = {
       "clear"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/46C04F52-F91B-11EB-9A85-995622502F64.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -49795,8 +49928,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/38D5DB5E-465A-11ED-881D-2A5F99F4B99C.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -49847,8 +49980,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0D2B67FC-DE1D-11ED-9585-6514A7C33693.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -49907,8 +50040,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6C2D4314-03AD-11E9-BFAA-DD341589B894.jpg",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -49937,8 +50070,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2D409258-4560-11E7-BFDD-485F370CF66B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
     "IsDisabled": false
   },
@@ -53384,8 +53517,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3CBEE1FE-2A41-11E9-A40F-9727E0AC8D83.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -56171,8 +56304,8 @@ const STOCK_COMPONENT_INFO = {
       "silver"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DA3DDEF2-AFDA-11E9-A355-437A896997E9.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "silver",
     "IsDisabled": false
   },
@@ -56192,8 +56325,8 @@ const STOCK_COMPONENT_INFO = {
       "black"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/62519FA2-EBFE-11EB-A508-81BAE7726C43.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "black",
     "IsDisabled": false
   },
@@ -56213,8 +56346,8 @@ const STOCK_COMPONENT_INFO = {
       "silver"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FA384FF2-FB67-11EE-9A53-270DD46E50C8.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "silver",
     "IsDisabled": false
   },
@@ -57631,8 +57764,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5C3F783A-74DA-11ED-8643-472643694036.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -57890,8 +58023,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E9EB2C7C-FC2F-11E0-B1B3-F2379966D12C.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "black",
     "IsDisabled": false
   },
@@ -57917,8 +58050,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8E111AB0-FC2F-11E0-83B8-F2379966D12C.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -57944,8 +58077,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/34AA7462-FC2F-11E0-86AF-F2379966D12C.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
     "IsDisabled": false
   },
@@ -57971,8 +58104,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E26A2BDE-FC2E-11E0-B1B3-F2379966D12C.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -57998,8 +58131,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/76D36944-FC2E-11E0-83B8-F2379966D12C.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -58025,8 +58158,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EBF250EC-FC2D-11E0-86AF-F2379966D12C.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": false
   },
@@ -58052,8 +58185,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6949C6D8-A661-11E0-896A-3A7437D397EC.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "white",
     "IsDisabled": false
   },
@@ -58079,8 +58212,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7650CD40-FC29-11E0-83B8-F2379966D12C.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -58106,8 +58239,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CDF894B0-3470-11E9-AC0D-9E1A3BF41BB0.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -58133,8 +58266,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EEAB4432-3470-11E9-95DA-7F1F16796776.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -58160,8 +58293,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5272948-3470-11E9-95DA-7C1F16796776.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -58187,8 +58320,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/01942D3E-3471-11E9-AC0D-151B3BF41BB0.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -59695,8 +59828,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B1210C60-91B4-11E2-9D0C-4072792D7C77.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "gold",
     "IsDisabled": false
   },
@@ -59723,8 +59856,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B1F8C902-91B4-11E2-9BD0-4072792D7C77.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "silver",
     "IsDisabled": false
   },
@@ -59751,8 +59884,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D897EE10-91A2-11E2-B3A0-4072792D7C77.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "black",
     "IsDisabled": false
   },
@@ -59779,8 +59912,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D9C16258-91A2-11E2-BF43-4072792D7C77.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -59807,8 +59940,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DB9B9B66-91A2-11E2-B8A0-4072792D7C77.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "red",
     "IsDisabled": false
   },
@@ -59835,8 +59968,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/919B8AA2-91AD-11E2-8F2D-4072792D7C77.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "black",
     "IsDisabled": false
   },
@@ -59863,8 +59996,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/92768A9E-91AD-11E2-8F2D-4072792D7C77.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -59891,8 +60024,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/934E8746-91AD-11E2-8E5B-4072792D7C77.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "brown",
     "IsDisabled": false
   },
@@ -59919,8 +60052,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/941DCEE8-91AD-11E2-8582-4072792D7C77.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "green",
     "IsDisabled": false
   },
@@ -59947,8 +60080,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/94FD3236-91AD-11E2-8714-4072792D7C77.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -59975,8 +60108,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/95C2E08A-91AD-11E2-A214-4072792D7C77.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -60003,8 +60136,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CC2BB846-D5C4-11EA-B417-F52F0EE65047.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "red",
     "IsDisabled": false
   },
@@ -60031,8 +60164,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/919B8AA2-91AD-11E2-8F2D-4072792D7C77.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "black",
     "IsDisabled": false
   },
@@ -60059,8 +60192,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/92768A9E-91AD-11E2-8F2D-4072792D7C77.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -60087,8 +60220,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/934E8746-91AD-11E2-8E5B-4072792D7C77.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "brown",
     "IsDisabled": false
   },
@@ -60115,8 +60248,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/94FD3236-91AD-11E2-8714-4072792D7C77.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -60143,8 +60276,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/941DCEE8-91AD-11E2-8582-4072792D7C77.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "green",
     "IsDisabled": false
   },
@@ -60171,8 +60304,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/95C2E08A-91AD-11E2-A214-4072792D7C77.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -60199,8 +60332,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/09977F58-D5C5-11EA-B47D-F9300EE65047.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "red",
     "IsDisabled": false
   },
@@ -60227,8 +60360,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A489F1A-A7DF-11E9-BF4E-96C289824F18.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "black",
     "IsDisabled": false
   },
@@ -60253,8 +60386,8 @@ const STOCK_COMPONENT_INFO = {
       "silver"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/80829E48-1CBB-11EC-9D40-23995853E446.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "silver",
     "IsDisabled": false
   },
@@ -60275,8 +60408,8 @@ const STOCK_COMPONENT_INFO = {
       "black"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A103B302-8319-11E9-803D-2F30F5424212.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "black",
     "IsDisabled": false
   },
@@ -60527,8 +60660,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/735D4650-74DA-11ED-9E82-702E25C4E336.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -61566,8 +61699,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A6E12BA4-54B3-11E9-A688-26BFBE9D83F6.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -62025,8 +62158,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/87F829B0-59B0-11EA-B62C-E99D047667A6.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
     "IsDisabled": false
   },
@@ -62056,8 +62189,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A00472E4-0266-11EA-A991-BE6A378EFB1C.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
     "IsDisabled": false
   },
@@ -62088,8 +62221,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BFEC4262-2906-11E7-9E0B-5CAF6F50B980.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
     "IsDisabled": false
   },
@@ -62118,8 +62251,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F43E9602-D5C6-11EB-A165-66F33218550E.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -62144,8 +62277,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BFFAE1BE-2906-11E7-9E0B-5FAF6F50B980.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -62183,8 +62316,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/644402F6-6CD1-11E7-A233-60D38701372A.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "pink",
     "IsDisabled": false
   },
@@ -62271,8 +62404,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C41B5676-542B-11EB-894E-144EE5DEA5C7.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
     "IsDisabled": false
   },
@@ -62297,8 +62430,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/776FAF1E-026C-11EA-A991-AB74378EFB1C.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -62321,8 +62454,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C11C98B2-2906-11E7-9E0B-72AF6F50B980.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
     "IsDisabled": false
   },
@@ -62347,8 +62480,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1382AC14-3F44-11E8-9E36-62541EA37D3B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -62377,8 +62510,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C13B7020-2906-11E7-8C1A-4D8C6E1C2FD2.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
     "IsDisabled": false
   },
@@ -62408,8 +62541,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/48433684-0267-11EA-A991-FA6B378EFB1C.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "bronze",
     "IsDisabled": false
   },
@@ -62435,8 +62568,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6FA98A8E-2939-11E7-9E0B-BBED6F50B980.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -62485,8 +62618,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CE06E614-2937-11E7-8C1A-25C76E1C2FD2.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -62513,8 +62646,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A512E64C-34CA-11E7-9C5D-2BB4AFDFEE25.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
     "IsDisabled": false
   },
@@ -62542,8 +62675,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/65CB0432-026E-11EA-A4BA-DCAE0141A2E6.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -62601,8 +62734,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AA3531D0-0267-11EA-A4BA-DD210241A2E6.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -62642,8 +62775,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DDFE6DA8-2937-11E7-9E0B-FCEB6F50B980.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
     "IsDisabled": false
   },
@@ -62684,8 +62817,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/275A0F5C-542C-11EB-894E-284FE5DEA5C7.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
     "IsDisabled": false
   },
@@ -62706,8 +62839,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F06BCD46-2937-11E7-8C1A-3CC76E1C2FD2.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -62734,8 +62867,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/776B88AA-542B-11EB-A27C-422C8AEC9566.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
     "IsDisabled": false
   },
@@ -62767,8 +62900,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7F720ED8-6CD1-11E7-A233-63D38701372A.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
     "IsDisabled": false
   },
@@ -62801,8 +62934,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FDEAC33C-2937-11E7-8C1A-75C76E1C2FD2.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
     "IsDisabled": false
   },
@@ -62838,8 +62971,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C227379E-2906-11E7-8C1A-458C6E1C2FD2.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
     "IsDisabled": false
   },
@@ -62867,8 +63000,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CBBF535C-BAE2-11EE-B020-C5E0DB3513CC.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "brown",
     "IsDisabled": false
   },
@@ -62892,8 +63025,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5F28C63E-0267-11EA-A4BA-40210241A2E6.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
     "IsDisabled": false
   },
@@ -62920,8 +63053,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C26CF676-2906-11E7-8C1A-528C6E1C2FD2.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
     "IsDisabled": false
   },
@@ -62951,8 +63084,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/72650722-6CD1-11E7-A233-6DD38701372A.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
     "IsDisabled": false
   },
@@ -62976,8 +63109,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A1D6C58A-0267-11EA-A4BA-C2210241A2E6.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
     "IsDisabled": false
   },
@@ -63001,8 +63134,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/32D3B730-26A3-11E7-B612-0DD86E1C2FD2.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -63028,8 +63161,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0F42A0A0-542C-11EB-A27C-E2AE89EC9566.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -63058,8 +63191,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9E33D4F6-FA10-11E7-972E-982354FDF89B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
     "IsDisabled": false
   },
@@ -63127,8 +63260,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C0AA3696-2906-11E7-9E0B-63AF6F50B980.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -63150,8 +63283,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/880E8C92-6CD1-11E7-9DB7-989D23D28831.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -63176,8 +63309,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/038A0C76-542C-11EB-894E-944EE5DEA5C7.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -63202,8 +63335,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4933B548-542B-11EB-A27C-D72B8AEC9566.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
     "IsDisabled": false
   },
@@ -63230,8 +63363,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/55325D98-0267-11EA-A4BA-28210241A2E6.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -63292,8 +63425,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A3D625E8-6CD1-11E7-A233-8AD38701372A.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
     "IsDisabled": false
   },
@@ -63323,8 +63456,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D1DED5F6-0267-11EA-A4BA-19220241A2E6.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
     "IsDisabled": false
   },
@@ -63387,8 +63520,8 @@ const STOCK_COMPONENT_INFO = {
       "pictured",
       "premium"
     ],
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": true
   },
@@ -63413,8 +63546,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1BFD3936-2938-11E7-8C1A-90C76E1C2FD2.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -63443,8 +63576,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B061284E-6CD1-11E7-9DB7-2A9E23D28831.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
     "IsDisabled": false
   },
@@ -63472,8 +63605,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C301A096-2906-11E7-9E0B-7AAF6F50B980.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
     "IsDisabled": false
   },
@@ -63499,8 +63632,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7456FA1A-026E-11EA-A4BA-00AF0141A2E6.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -63525,8 +63658,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0B5F5802-2938-11E7-8C1A-5EC76E1C2FD2.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
     "IsDisabled": false
   },
@@ -63551,8 +63684,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BAE6336E-542B-11EB-A27C-E0AD89EC9566.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
     "IsDisabled": false
   },
@@ -63579,8 +63712,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C54005C8-2906-11E7-8C1A-498C6E1C2FD2.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
     "IsDisabled": false
   },
@@ -63607,8 +63740,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/98E6BAB6-0267-11EA-A991-8F6C378EFB1C.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -65097,8 +65230,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0ABCA936-2FA8-11E9-B2A8-86F63AF41BB0.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
     "IsDisabled": false
   },
@@ -65408,8 +65541,8 @@ const STOCK_COMPONENT_INFO = {
       "vehicle"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/170C8E7C-F5AA-11E9-A274-CA7A752AFF71.png",
-    "PlaygroundCreationTask": "Standee",
-    "SimulatorCreationTask": "Standee",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "black",
     "IsDisabled": false
   },
@@ -65462,8 +65595,8 @@ const STOCK_COMPONENT_INFO = {
       "vehicle"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1F8D56DA-F5AA-11E9-A274-D17A752AFF71.png",
-    "PlaygroundCreationTask": "Standee",
-    "SimulatorCreationTask": "Standee",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -65516,8 +65649,8 @@ const STOCK_COMPONENT_INFO = {
       "vehicle"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/266A201E-F5AA-11E9-A705-5C3545C92AFA.png",
-    "PlaygroundCreationTask": "Standee",
-    "SimulatorCreationTask": "Standee",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "brown",
     "IsDisabled": false
   },
@@ -65571,8 +65704,8 @@ const STOCK_COMPONENT_INFO = {
       "vehicle"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D6A937C4-F5AC-11E9-A705-F33945C92AFA.png",
-    "PlaygroundCreationTask": "Standee",
-    "SimulatorCreationTask": "Standee",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -65625,8 +65758,8 @@ const STOCK_COMPONENT_INFO = {
       "vehicle"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2FEA148C-F5AA-11E9-A705-893545C92AFA.png",
-    "PlaygroundCreationTask": "Standee",
-    "SimulatorCreationTask": "Standee",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "green",
     "IsDisabled": false
   },
@@ -65678,8 +65811,8 @@ const STOCK_COMPONENT_INFO = {
       "gray",
       "vehicle"
     ],
-    "PlaygroundCreationTask": "Standee",
-    "SimulatorCreationTask": "Standee",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "gray",
     "IsDisabled": true
   },
@@ -65732,8 +65865,8 @@ const STOCK_COMPONENT_INFO = {
       "vehicle"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E21C7A38-F5A9-11E9-A705-D53445C92AFA.png",
-    "PlaygroundCreationTask": "Standee",
-    "SimulatorCreationTask": "Standee",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "pink",
     "IsDisabled": false
   },
@@ -65786,8 +65919,8 @@ const STOCK_COMPONENT_INFO = {
       "vehicle"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/71F0E702-0243-11EA-9E9C-DC2F378EFB1C.png",
-    "PlaygroundCreationTask": "Standee",
-    "SimulatorCreationTask": "Standee",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -65840,8 +65973,8 @@ const STOCK_COMPONENT_INFO = {
       "vehicle"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/811E6E8E-0243-11EA-B402-08E50141A2E6.png",
-    "PlaygroundCreationTask": "Standee",
-    "SimulatorCreationTask": "Standee",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "red",
     "IsDisabled": false
   },
@@ -65894,8 +66027,8 @@ const STOCK_COMPONENT_INFO = {
       "vehicle"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D118CE00-F5AC-11E9-A705-E43945C92AFA.png",
-    "PlaygroundCreationTask": "Standee",
-    "SimulatorCreationTask": "Standee",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -70645,8 +70778,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/78647920-74DA-11ED-9E82-D02E25C4E336.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -71457,8 +71590,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D8BAC9AA-2A42-11E9-A40F-BF2AE0AC8D83.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "white",
     "IsDisabled": false
   },
@@ -71733,8 +71866,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4BD81D7E-2A1D-11ED-BE39-5D385FE382A3.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -71763,8 +71896,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5990A6A2-2A1D-11ED-BE39-92395FE382A3.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -71792,8 +71925,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3E4102C0-2A1D-11ED-BE39-40385FE382A3.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -71823,8 +71956,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/663A5E34-2A1D-11ED-BE39-353A5FE382A3.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -74839,8 +74972,8 @@ const STOCK_COMPONENT_INFO = {
       "clear"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2F9DB1DC-2A1D-11ED-9911-726779D8BDFD.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -74864,8 +74997,8 @@ const STOCK_COMPONENT_INFO = {
       "silver"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3B2FF2F2-8314-11E9-803D-7827F5424212.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "silver",
     "IsDisabled": false
   },
@@ -75502,8 +75635,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B632E1B8-44A8-11E8-ACC9-A26F4E56BC64.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
     "IsDisabled": false
   },
@@ -75527,8 +75660,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8FC0A88A-9EEF-11E7-AC47-6DD271BAD30D.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -76770,8 +76903,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/89957F50-74DA-11ED-9E82-C42F25C4E336.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -76803,8 +76936,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/92B868D2-6CC9-11EC-8E50-4F6F102E9259.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
     "IsDisabled": false
   },
@@ -77035,8 +77168,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5D2DCB16-4D19-11EA-87FB-6015ACB81EB0.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -77264,8 +77397,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E5C06E7C-714B-11E7-9B98-E8CAFEDF52DE.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
     "IsDisabled": false
   },
@@ -78066,8 +78199,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1D2D1866-9E95-11ED-88B5-04B2CB83BB28.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -79191,8 +79324,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/23D0708C-9E95-11ED-88B5-2CB2CB83BB28.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -79228,8 +79361,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EBA56EFE-F702-11EC-A087-C84C7805D582.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -79246,8 +79379,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7219EF5A-F703-11EC-A087-BC527805D582.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -79754,8 +79887,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/963657EA-4314-11E8-A8D1-21481EA37D3B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "black",
     "IsDisabled": false
   },
@@ -79775,8 +79908,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A54C6ADA-4314-11E8-B059-CDC3A83E92A3.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "white",
     "IsDisabled": false
   },
@@ -79796,8 +79929,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5462921E-3F5B-11E8-9E36-F2821EA37D3B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -79816,8 +79949,8 @@ const STOCK_COMPONENT_INFO = {
       "wink",
       "tube"
     ],
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
     "IsDisabled": true
   },
@@ -79837,8 +79970,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/518B0C4E-F8C5-11E0-8023-B96660677055.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "black",
     "IsDisabled": false
   },
@@ -79858,8 +79991,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7DEADC48-A662-11E0-896A-3A7437D397EC.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "white",
     "IsDisabled": false
   },
@@ -79879,8 +80012,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/963657EA-4314-11E8-A8D1-21481EA37D3B.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "black",
     "IsDisabled": false
   },
@@ -79900,8 +80033,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CB8A1C40-F8C2-11E0-8023-B96660677055.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -79921,8 +80054,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0618078C-F8C3-11E0-9155-B96660677055.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
     "IsDisabled": false
   },
@@ -79942,8 +80075,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A3B0B27E-F8C2-11E0-9155-B96660677055.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -79963,8 +80096,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2C381C04-F8C3-11E0-8023-B96660677055.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -79984,8 +80117,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B5D48F7E-F8C3-11E0-8023-B96660677055.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
     "IsDisabled": false
   },
@@ -80005,8 +80138,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A3C7CD18-F8C4-11E0-8023-B96660677055.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
     "IsDisabled": false
   },
@@ -81584,8 +81717,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A7CC807C-4DDC-11EF-BB86-159C2B64B26B.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "black",
     "IsDisabled": false
   },
@@ -81854,7 +81987,8 @@ const STOCK_COMPONENT_INFO = {
       "yahtzee",
       "farkle",
       "pictured",
-      "caramel"
+      "caramel",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E82832DE-6141-11E9-8191-5EA752E7BC3A.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -81896,7 +82030,8 @@ const STOCK_COMPONENT_INFO = {
       "monopoly",
       "yahtzee",
       "farkle",
-      "black"
+      "black",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/633BE6F0-82B1-11EF-8767-2D7D0B571517.png",
     "PlaygroundCreationTask": "StandardDie",
@@ -81934,11 +82069,12 @@ const STOCK_COMPONENT_INFO = {
       "elements",
       "chemistry",
       "orange",
-      "dice"
+      "dice",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3937EB9E-8FE8-11EF-BC39-91BF43B3BDFD.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -81970,11 +82106,12 @@ const STOCK_COMPONENT_INFO = {
       "combat",
       "conflict",
       "black",
-      "dice"
+      "dice",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/71C2D096-8FE8-11EF-85E5-F9087DD79F5F.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "black",
     "IsDisabled": false
   },
@@ -82010,11 +82147,12 @@ const STOCK_COMPONENT_INFO = {
       "engineering",
       "semiconductor",
       "gray",
-      "dice"
+      "dice",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2E6419E0-8FE8-11EF-8125-4340528053A4.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -82047,11 +82185,12 @@ const STOCK_COMPONENT_INFO = {
       "geology",
       "wilderness",
       "green",
-      "dice"
+      "dice",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3651F354-8FDC-11EF-81E6-63727DD79F5F.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "green",
     "IsDisabled": false
   },
@@ -82085,11 +82224,12 @@ const STOCK_COMPONENT_INFO = {
       "cellular",
       "molecules",
       "blue",
-      "dice"
+      "dice",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/59914692-8FE8-11EF-8125-6342528053A4.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -82128,11 +82268,12 @@ const STOCK_COMPONENT_INFO = {
       "radiation",
       "thermal",
       "red",
-      "dice"
+      "dice",
+      "d6"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/448BA454-8FE8-11EF-BC39-49C043B3BDFD.png",
-    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StandardDie",
+    "SimulatorCreationTask": "StandardDie",
     "Color": "red",
     "IsDisabled": false
   },
@@ -82161,8 +82302,8 @@ const STOCK_COMPONENT_INFO = {
       "clear"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/75C711AE-3BA4-11EA-A3A8-6074EBC8DDC9.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "none",
     "IsDisabled": false
   },
@@ -82204,8 +82345,8 @@ const STOCK_COMPONENT_INFO = {
       "tube"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EEDE6A12-6C27-11E9-B784-DDF5A9801980.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "StockCylinder",
+    "SimulatorCreationTask": "StockCylinder",
     "Color": "pink",
     "IsDisabled": false
   },
@@ -82795,8 +82936,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BEBE6CFC-0190-11EF-B5A6-5E0F015F28ED.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "black",
     "IsDisabled": false
   },
@@ -83078,8 +83219,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/969FD236-2F8E-11ED-88E4-9E045FE382A3.png",
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "Baggie",
+    "SimulatorCreationTask": "Baggie",
     "Color": "black",
     "IsDisabled": false
   },
@@ -83196,8 +83337,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/58E47904-6A2B-11EF-A9E1-AFEFC5E47471.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -83233,8 +83374,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3D46B4BC-6A4B-11EF-B695-D127BABE8560.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
     "IsDisabled": false
   },
@@ -83260,8 +83401,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/70023C20-6A2B-11EF-BD9F-8DDC8EFFEEA2.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -83295,8 +83436,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8537C02E-6A2B-11EF-BD9F-8BDD8EFFEEA2.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
     "IsDisabled": false
   },
@@ -83326,8 +83467,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4D01128A-6A4B-11EF-A9E1-F0FDC5E47471.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -83423,8 +83564,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2A69B5AC-6A36-11EF-B695-3923BABE8560.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
     "IsDisabled": false
   },
@@ -83446,8 +83587,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3890F334-6A36-11EF-BD9F-CFE58EFFEEA2.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -83478,8 +83619,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3C65B47A-6A5B-11EF-B695-8E6BBABE8560.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -83503,8 +83644,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4966989E-6A36-11EF-BD9F-88E68EFFEEA2.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
     "IsDisabled": false
   },
@@ -83545,8 +83686,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5D98FB04-6A36-11EF-A9E1-61FBC5E47471.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
     "IsDisabled": false
   },
@@ -83576,8 +83717,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/71F0FBBA-6A36-11EF-B695-9126BABE8560.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -83602,8 +83743,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/509E0A46-6A5B-11EF-A9E1-44C4C5E47471.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -83632,8 +83773,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1C458FE4-6A5B-11EF-BD9F-2BFCE4A24392.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -83665,8 +83806,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8E366152-6A36-11EF-B695-FF27BABE8560.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -83704,8 +83845,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A02F4CDE-6A36-11EF-B695-0D29BABE8560.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -83732,8 +83873,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D54835C0-026C-11EA-A991-4575378EFB1C.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
     "IsDisabled": false
   },
@@ -83757,8 +83898,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6917BA68-6A5B-11EF-A9E1-C4C5C5E47471.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -83791,8 +83932,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D75C6B88-6A36-11EF-B695-6C2BBABE8560.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -83820,8 +83961,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/797C77A4-6A5B-11EF-BD9F-8400E5A24392.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
     "IsDisabled": false
   },
@@ -83843,8 +83984,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5D63B31C-6A4B-11EF-A9E1-5BFEC5E47471.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -83871,8 +84012,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8DB52CB2-6A4B-11EF-B695-222BBABE8560.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
     "IsDisabled": false
   },
@@ -83898,8 +84039,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EB69C454-6A36-11EF-A9E1-F901C6E47471.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -83926,8 +84067,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/8C6473C6-6A5B-11EF-A9E1-69C7C5E47471.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -83957,8 +84098,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AA00626A-6A4B-11EF-A9E1-E601C6E47471.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -83995,8 +84136,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BDF15F9A-6A4B-11EF-BD9F-3BEF8EFFEEA2.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
     "IsDisabled": false
   },
@@ -84024,8 +84165,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/07CB2782-6A37-11EF-A9E1-B603C6E47471.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
     "IsDisabled": false
   },
@@ -84054,8 +84195,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D2CFA7C8-6A4B-11EF-B695-F62EBABE8560.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
     "IsDisabled": false
   },
@@ -84084,8 +84225,8 @@ const STOCK_COMPONENT_INFO = {
       "premium"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/14CAE60C-6A37-11EF-A9E1-5204C6E47471.png",
-    "PlaygroundCreationTask": "TokenWithTransparencyBasedShape",
-    "SimulatorCreationTask": "TokenWithTransparencyBasedShape",
+    "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
+    "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
     "IsDisabled": false
   },

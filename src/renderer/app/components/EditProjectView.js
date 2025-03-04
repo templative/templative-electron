@@ -19,6 +19,8 @@ const { ipcRenderer } = window.require('electron');
 const { channels } = require("../../../shared/constants");
 const path = require("path");
 const fs = require("fs/promises");
+import { COMPONENT_INFO } from "../../../shared/componentInfo";
+import { STOCK_COMPONENT_INFO } from "../../../shared/stockComponentInfo";
 
 export default class EditProjectView extends React.Component {
   
@@ -30,8 +32,6 @@ export default class EditProjectView extends React.Component {
         italicsTabFilepath: undefined,
         currentFileType: undefined,
         currentFilepath: undefined,
-        componentTypesCustomInfo: {},
-        componentTypesStockInfo: {},
 
         extendedFileTypes: new Set(),
         extendedDirectories: new Set(),
@@ -207,23 +207,6 @@ export default class EditProjectView extends React.Component {
     
     
     componentDidMount = async () => {
-        try {
-            const componentTypesCustomInfo = await ipcRenderer.invoke(channels.TO_SERVER_GET_COMPONENT_INFO);
-            console.log("componentTypesCustomInfo", componentTypesCustomInfo)
-            this.setState({ componentTypesCustomInfo });
-        } catch (error) {
-            console.error("Error loading component info:", error);
-            this.setState({ componentTypesCustomInfo: {} });
-        }
-        
-        try {
-            const componentTypesStockInfo = await ipcRenderer.invoke(channels.TO_SERVER_GET_STOCK_COMPONENT_INFO);
-            this.setState({ componentTypesStockInfo });
-        } catch (error) {
-            console.error("Error loading stock component info:", error);
-            this.setState({ componentTypesStockInfo: {} });
-        }
-
         ipcRenderer.on(channels.GIVE_OPEN_SETTINGS, () => {
             var settingsPath = path.join(require('os').homedir(), "Documents", "Templative", "settings.json")
             this.changeTabsToEditAFile("SETTINGS", settingsPath)
@@ -445,8 +428,8 @@ export default class EditProjectView extends React.Component {
             <OutputDirectoriesProvider templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}>
                 {this.state.currentRoute === 'create' && (
                     <CreatePanel
-                        componentTypesCustomInfo={this.state.componentTypesCustomInfo}
-                        componentTypesStockInfo={this.state.componentTypesStockInfo}
+                        componentTypesCustomInfo={COMPONENT_INFO}
+                        componentTypesStockInfo={STOCK_COMPONENT_INFO}
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         changeTabsToEditAFileCallback={this.changeTabsToEditAFile}
                         saveComponentComposeAsync={this.saveComponentComposeAsync}
@@ -458,8 +441,8 @@ export default class EditProjectView extends React.Component {
                         updateViewedFileToUnifiedAsyncCallback={this.updateViewedFileToUnifiedAsync}
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         saveFileAsyncCallback={this.saveFileAsync}
-                        componentTypesCustomInfo={this.state.componentTypesCustomInfo}
-                        componentTypesStockInfo={this.state.componentTypesStockInfo}
+                        componentTypesCustomInfo={COMPONENT_INFO}
+                        componentTypesStockInfo={STOCK_COMPONENT_INFO}
                         
                         componentComposeScollPosition={this.state.componentComposeScollPosition}     
                         updateComponentComposeScrollPositionCallback={this.updateComponentComposeScrollPosition}         
@@ -475,8 +458,8 @@ export default class EditProjectView extends React.Component {
 
                 {this.state.currentRoute === 'edit' && (
                     <EditPanel
-                        componentTypesCustomInfo={this.state.componentTypesCustomInfo}
-                        componentTypesStockInfo={this.state.componentTypesStockInfo}
+                        componentTypesCustomInfo={COMPONENT_INFO}
+                        componentTypesStockInfo={STOCK_COMPONENT_INFO}
                         italicsTabFilepath={this.state.italicsTabFilepath}
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         tabbedFiles={this.state.tabbedFiles}

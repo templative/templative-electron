@@ -6,6 +6,7 @@ const {
   createStockModel, 
   createStandee, 
   createTokenWithDefinedShape, 
+  createStockCylinder,
   createFlatTokenWithTransparencyBasedShape,
   createThickTokenWithTransparencyBasedShape
 } = require('../simulatorTemplates/objectState');
@@ -46,6 +47,7 @@ async function createStock(componentInstructions, stockPartInfo) {
     "StandardDie": createStandardDie,
     "CustomDie": createCustomDie,
     "StockCube": createStockCube,
+    "StockCylinder": createStockCylinder,
     "StockModel": createStockModel,
     "Standee": createStandee,
     "TokenWithDefinedShape": createTokenWithDefinedShape,

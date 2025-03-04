@@ -9,14 +9,6 @@ const { convertToTabletopSimulator } = require('./lib/distribute/simulator/simul
 
 const { withLogCapture } = require('./logStore');
 
-const getComponentInfo = async () => {
-  return COMPONENT_INFO;
-};
-
-const getStockComponentInfo = async () => {
-  return STOCK_COMPONENT_INFO;
-};
-
 const createTemplativeComponent = withLogCapture(async (event, data) => {
   try {
     const { componentName, componentType, directoryPath, componentAIDescription } = data;
@@ -142,8 +134,6 @@ const uploadTemplativeProjectToGameCrafter = withLogCapture(async (event, data) 
 });
 
 module.exports = {
-  getComponentInfo,
-  getStockComponentInfo,
   createTemplativeComponent,
   produceTemplativeProject,
   getPreviewsDirectory,

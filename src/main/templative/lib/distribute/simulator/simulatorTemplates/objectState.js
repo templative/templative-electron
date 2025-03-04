@@ -3,7 +3,8 @@ const { createHash } = require('crypto');
 function md5(str) {
   return createHash('md5').update(str).digest('hex');
 }
-const { SimulatorTilesetUrls, SimulatorComponentPlacement, SimulatorDimensions, SimulatorTilesetLayout } = require('../structs');
+
+const { CYLINDER_COLORS } = require('../../../../../../shared/cylinderColors');
 
 const STANDARD_ATTRIBUTES = {
   LuaScript: "",
@@ -29,6 +30,7 @@ const tableLength = 7.5;
 const shrinkFactor = 0.75;
 
 function createComponentLibraryChest(componentStates, name = "ComponentLibrary", isInfinite = false, colorDiffuse = null) {
+  console.log('createComponentLibraryChest params:', { componentStates, name, isInfinite, colorDiffuse });
   return {
     Name: isInfinite ? "Infinite_Bag" : "Bag",
     Transform: {
@@ -52,6 +54,7 @@ function createComponentLibraryChest(componentStates, name = "ComponentLibrary",
 }
 
 function createDeckObjectState(guid, deckPrefix, name, imageUrls, simulatorComponentPlacement, dimensions, layout, cardQuantities, deckType = 0) {
+  console.log('createDeckObjectState params:', { guid, deckPrefix, name, imageUrls, simulatorComponentPlacement, dimensions, layout, cardQuantities, deckType });
   const deckIds = [];
   let cardIndex = 0;
 
@@ -147,6 +150,7 @@ function createDeckObjectState(guid, deckPrefix, name, imageUrls, simulatorCompo
 }
 
 function createCardObjectState(guid, cardPrefix, name, imageUrls, simulatorComponentPlacement, dimensions, deckType = 0) {
+  console.log('createCardObjectState params:', { guid, cardPrefix, name, imageUrls, simulatorComponentPlacement, dimensions, deckType });
   const positionX = (-tableLength / 2) + (simulatorComponentPlacement.boxPositionIndexX * tableLength / simulatorComponentPlacement.boxColumnCount * 2);
   const positionZ = (-tableLength / 2) + (simulatorComponentPlacement.boxPositionIndexZ * tableLength / simulatorComponentPlacement.boxRowCount * 2);
   const transform = {
@@ -195,6 +199,7 @@ function createCardObjectState(guid, cardPrefix, name, imageUrls, simulatorCompo
 }
 
 function createStandardDie(name, numberSides, sizeInches, colorRGBOutOfOne, isMetal=false) {
+  console.log(`Creating a standard d${numberSides} die: ${name} color: ${colorRGBOutOfOne} isMetal: ${isMetal}`);
   const guid = md5(name).slice(0, 6);
   const colorDiffuse = {
     r: colorRGBOutOfOne.r / 255.0,
@@ -223,7 +228,8 @@ function createStandardDie(name, numberSides, sizeInches, colorRGBOutOfOne, isMe
   return createComponentLibraryChest([die], `${name} Bag`, true, colorDiffuse);
 }
 
-function createStockCube(name, sizeInches, color) {
+function createStockCube(name, sizeInchesXYZ, color) {
+  console.log(`Creating a stock cube ${name} size: ${sizeInchesXYZ} color: ${color}`);
   const guid = md5(name).slice(0, 6);
   const colorDiffuse = {
     r: color.r / 255.0,
@@ -235,7 +241,7 @@ function createStockCube(name, sizeInches, color) {
     Transform: {
       posX: 0, posY: 2, posZ: 0, 
       rotX: 0, rotY: 0, rotZ: 0, 
-      scaleX: sizeInches, scaleY: sizeInches, scaleZ: sizeInches
+      scaleX: sizeInchesXYZ[0], scaleY: sizeInchesXYZ[1], scaleZ: sizeInchesXYZ[2]
     },
     Nickname: name,
     ColorDiffuse: colorDiffuse,
@@ -249,6 +255,7 @@ function createStockCube(name, sizeInches, color) {
 }
 
 function createStockModel(name, objUrl, textureUrl, normalMapUrl) {
+  console.log(`Creating a stock model ${name} objUrl: ${objUrl} textureUrl: ${textureUrl} normalMapUrl: ${normalMapUrl}`);
   const guid = md5(name).slice(0, 6);
   return {
     GUID: guid,
@@ -279,6 +286,7 @@ function createStockModel(name, objUrl, textureUrl, normalMapUrl) {
 }
 
 function createStandee(name, frontImageUrl, backImageUrl) {
+  console.log(`Creating a standee ${name} frontImageUrl: ${frontImageUrl}`);
   const guid = md5(name).slice(0, 6);
   const scale = 0.750000238;
   return {
@@ -310,6 +318,7 @@ function createStandee(name, frontImageUrl, backImageUrl) {
 }
 
 function createTokenWithDefinedShape(name, frontImageUrl, backImageUrl, shape) {
+  console.log(`Creating a token with a defined shape ${name} frontImageUrl: ${frontImageUrl} shape: ${shape}`);
   const guid = md5(name).slice(0, 6);
   const shapeIndex = {
     "Box": 0,
@@ -350,14 +359,54 @@ function createTokenWithDefinedShape(name, frontImageUrl, backImageUrl, shape) {
 }
 
 function createFlatTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl) {
-  return createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl, 0.2, false);
+  return createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl, 0.2, false, true);
 }
 function createThickTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl) {
-  return createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl, 1.0, true);
+  return createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl, 1.0, true, false);
+}
+function createStockCylinder(name, colorHex, widthMillimeters, heightMillimeters) {
+  const imageUrl = CYLINDER_COLORS[`${widthMillimeters}mm_${colorHex.replace("#", "")}`];
+  const tallestPossibleCylinderMillimeters = 30;
+  const heightScale = heightMillimeters / tallestPossibleCylinderMillimeters;
+  const guid = md5(name).slice(0, 6);
+  const scale = 0.25
+  console.log(`Creating a cylinder ${name} color: ${colorHex} width: ${widthMillimeters}mm height: ${heightMillimeters}mm heightScale: ${heightScale}`);
+  return {
+    GUID: guid,
+    Name: "Custom_Token",
+    Transform: {
+      posX: 0, posY: 0, posZ: 0, rotX: 0, rotY: 0, rotZ: 0,
+      scaleX: scale, scaleY: 1, scaleZ: scale
+    },
+    Nickname: name,
+    ColorDiffuse: {
+      r: 1.0,
+      g: 1.0,
+      b: 1.0
+    },
+    LayoutGroupSortIndex: 0,
+    Value: 0,
+    Locked: false,    
+    HideWhenFaceDown: false,
+    Hands: false,
+    CustomImage: {
+      ImageURL: imageUrl,
+      ImageSecondaryURL: imageUrl,
+      ImageScalar: 1.0,
+      WidthScale: 0.0,
+      CustomToken: {
+        Thickness: heightScale,
+        MergeDistancePixels: 15.0,
+        StandUp: false,
+        Stackable: true
+      }
+    },
+    ...STANDARD_ATTRIBUTES
+  }
 }
 
-
-function createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl, thickness = 0.2, isStandUp = false) {
+function createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl, thickness = 0.2, isStandUp = false, isStackable = true) {
+  console.log(`Creating a token with a transparency based shape ${name} frontImageUrl: ${frontImageUrl} thickness: ${thickness} isStandUp: ${isStandUp} isStackable: ${isStackable}`);
   const guid = md5(name).slice(0, 6);
   const scale = 0.25
   return {
@@ -387,7 +436,7 @@ function createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl
         Thickness: thickness,
         MergeDistancePixels: 15.0,
         StandUp: isStandUp,
-        Stackable: true
+        Stackable: isStackable
       }
     },
     ...STANDARD_ATTRIBUTES
@@ -395,6 +444,7 @@ function createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl
 }
 
 function createCustomDie(name, imageUrl, numberSides) {
+  console.log(`Creating a custom die ${name} imageUrl: ${imageUrl} numberSides: ${numberSides}`);
   const guid = md5(name).slice(0, 6);
   const dieTypes = {
     4: 0,  // d4 - tetrahedron
@@ -532,6 +582,117 @@ function getDieRotationValues(numberSides) {
   }
 }
 
+function createCustomPDF(name, pdfUrl) {
+  console.log(`Creating a custom PDF ${name} pdfUrl: ${pdfUrl}`);
+  const guid = md5(name).slice(0, 6);
+  return {
+    GUID: guid,
+    Name: "Custom_PDF",
+    Transform: {
+      posX: 0, posY: 1, posZ: 0, 
+      rotX: 0, rotY: 180, rotZ: 0, 
+      scaleX: 1.0, scaleY: 1.0, scaleZ: 1.0
+    },
+    Nickname: name,
+    ColorDiffuse: {
+      r: 1.0,
+      g: 1.0,
+      b: 1.0
+    },
+    LayoutGroupSortIndex: 0,
+    Value: 0,
+    Locked: false,
+    HideWhenFaceDown: false,
+    Hands: false,
+    CustomPDF: {
+      PDFUrl: pdfUrl,
+      PDFPassword: "",
+      PDFPage: 0,
+      PDFPageOffset: 0
+    },
+    ...STANDARD_ATTRIBUTES
+  };
+}
+
+function createDomino(name) {
+  console.log(`Creating a domino ${name}`);
+  const guid = md5(name).slice(0, 6);
+  return {
+    GUID: guid,
+    Name: "Domino",
+    Transform: {
+      posX: 0, posY: 1, posZ: 0, 
+      rotX: 0, rotY: 0, rotZ: 0, 
+      scaleX: 1.0, scaleY: 1.0, scaleZ: 1.0
+    },
+    Nickname: name,
+    ColorDiffuse: {
+      r: 0.7867647,
+      g: 0.7867647,
+      b: 0.7867647
+    },
+    LayoutGroupSortIndex: 0,
+    Value: 0,
+    Locked: false,
+    HideWhenFaceDown: true,
+    Hands: true,
+    ...STANDARD_ATTRIBUTES
+  };
+}
+
+function createBaggie(name, colorDiffuse = null, isInfinite = false) {
+  const guid = md5(name).slice(0, 6);
+  return {
+    GUID: guid,
+    Name: isInfinite ? "Infinite_Bag" : "Bag",
+    Transform: {
+      posX: 0, posY: 1, posZ: 0, 
+      rotX: 0, rotY: 0, rotZ: 0, 
+      scaleX: 1.0, scaleY: 1.0, scaleZ: 1.0
+    },
+    Nickname: name,
+    ColorDiffuse: colorDiffuse || {
+      r: 0.7058823,
+      g: 0.366520882,
+      b: 0.0
+    },
+    LayoutGroupSortIndex: 0,
+    Value: 0,
+    Locked: false,
+    HideWhenFaceDown: false,
+    Hands: false,
+    Bag: {
+      Order: 0
+    },
+    ...STANDARD_ATTRIBUTES
+  };
+}
+
+function createPokerChip(name, chipValue, colorDiffuse = null) {
+  const guid = md5(name).slice(0, 6);
+  return {
+    GUID: guid,
+    Name: `Chip_${chipValue}`,
+    Transform: {
+      posX: 0, posY: 1, posZ: 0, 
+      rotX: 0, rotY: 90, rotZ: 0, 
+      scaleX: 1.0, scaleY: 1.0, scaleZ: 1.0
+    },
+    Nickname: name,
+    ColorDiffuse: colorDiffuse || {
+      r: 1.0,
+      g: 1.0,
+      b: 1.0
+    },
+    LayoutGroupSortIndex: 0,
+    Value: 0,
+    Locked: false,
+    HideWhenFaceDown: false,
+    Hands: false,
+    ...STANDARD_ATTRIBUTES
+  };
+}
+
 module.exports = { 
   createDeckObjectState, 
   createCardObjectState, 
@@ -543,5 +704,10 @@ module.exports = {
   createStandee, 
   createTokenWithDefinedShape, 
   createFlatTokenWithTransparencyBasedShape,
-  createThickTokenWithTransparencyBasedShape
+  createThickTokenWithTransparencyBasedShape,
+  createCustomPDF,
+  createStockCylinder,
+  createDomino,
+  createBaggie,
+  createPokerChip
 };

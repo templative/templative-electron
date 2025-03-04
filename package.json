@@ -29,7 +29,8 @@
         "analyze-images": "node ./scripts/imageTreeGenerator.js",
         "export-audit": "node ./scripts/exportAudit.js",
         "update-component-info": "node ./scripts/updateComponentInfoBasedOnRules.js",
-        "design-meeple": "dotenv -- node ./scripts/meepleDesigner.js"
+        "design-meeple": "dotenv -- node ./scripts/meepleDesigner.js",
+        "create-cylinders": "node ./scripts/cylinderCreator.js"
     },
     "dependencies": {
         "@anthropic-ai/sdk": "^0.18.0",

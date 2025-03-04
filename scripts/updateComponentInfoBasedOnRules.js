@@ -110,7 +110,7 @@ function processComponents() {
         console.log('\nSaving updates to stock component info file...');
         saveComponentInfo(
             STOCK_COMPONENT_INFO,
-            "/Users/oliverbarnum/Documents/git/templative-electron/src/main/templative/lib/stockComponentInfo.js",
+            "/Users/oliverbarnum/Documents/git/templative-electron/src/shared/stockComponentInfo.js",
             "STOCK_COMPONENT_INFO"
         );
     }

@@ -2,8 +2,7 @@ const { ipcMain, shell } = require('electron')
 const { setCurrentFolder, openFolder, createTemplativeProjectWithDialog, openPlaygroundFolder, openSimulatorFolder} = require("./dialogMaker")
 const { channels } = require('../shared/constants');
 const { login, giveLoginInformation, getTgcSessionFromStore, logoutTgc, clearGithubAuth, giveGithubAuth, pollGithubAuth } = require("./accountManager")
-const { getComponentInfo,
-    getStockComponentInfo,
+const { 
     createTemplativeComponent,
     produceTemplativeProject,
     getPreviewsDirectory,
@@ -48,9 +47,6 @@ function listenForRenderEvents(window) {
     ipcMain.handle(channels.TO_SERVER_CLEAR_GITHUB_LOGIN, clearGithubAuth);
     ipcMain.handle(channels.TO_SERVER_IS_LOGGED_INTO_GITHUB, giveGithubAuth);
     ipcMain.handle(channels.TO_SERVER_GITHUB_AUTH, pollGithubAuth);
-    
-    ipcMain.handle(channels.TO_SERVER_GET_COMPONENT_INFO, getComponentInfo);
-    ipcMain.handle(channels.TO_SERVER_GET_STOCK_COMPONENT_INFO, getStockComponentInfo);
     
     ipcMain.handle(channels.TO_SERVER_CREATE_COMPONENT, createTemplativeComponent);
     ipcMain.handle(channels.TO_SERVER_PRODUCE_GAME, produceTemplativeProject);

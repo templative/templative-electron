@@ -77,6 +77,15 @@ const diceCommands = [
         }
     },
     {
+        description: "Components that begin with 'D' and then a dice numeral should be tagged 'd${numeral}'",
+        condition: (component) => component.Tags && component.DisplayName && diceNumerals.some(numeral => component.DisplayName.startsWith("D" + numeral)) && component.Tags.includes("dice"),
+        setValue: (component) => {
+            const numeral = component.DisplayName.match(/D(\d+)/)[1];
+            component.Tags.push("d" + numeral);
+            return ["Tags"];
+        }
+    },
+    {
         description: "Dice with 'Transparent ' in their DisplayName should replace it with 'Transparent, '",
         condition: (component) => component.DisplayName && component.DisplayName.includes("Transparent") && !component.Tags.includes("transparent"),
         setValue: (component) => {
@@ -85,17 +94,8 @@ const diceCommands = [
         }
     },
     {
-        description: "Components tagged 'dice' and 'indented' should have SimulatorCreationTask/PlaygroundCreationTask set to StockCube",
-        condition: (component) => component.Tags && component.Tags.includes("dice") && component.Tags.includes("indented"),
-        setValue: (component) => {
-            component.SimulatorCreationTask = "StockCube";
-            component.PlaygroundCreationTask = "StockCube";
-            return ["SimulatorCreationTask", "PlaygroundCreationTask"];
-        }
-    },
-    {
-        description: "Components tagged 'dice' and 'blank' should have SimulatorCreationTask/PlaygroundCreationTask set to StockCube",
-        condition: (component) => component.Tags && component.Tags.includes("dice") && component.Tags.includes("blank"),
+        description: "Components tagged 'dice' and ('indented' or 'blank') that are tagged 'd6' should have SimulatorCreationTask/PlaygroundCreationTask set to StockCube",
+        condition: (component) => component.Tags && component.Tags.includes("dice") && (component.Tags.includes("indented") || component.Tags.includes("blank")) && component.Tags.includes("d6"),
         setValue: (component) => {
             component.SimulatorCreationTask = "StockCube";
             component.PlaygroundCreationTask = "StockCube";
@@ -136,15 +136,6 @@ const packagingCommands = [
         setValue: (component) => {
             component.Tags = component.Tags.filter(tag => tag !== "box");
             return ["Tags"];
-        }
-    },
-    {
-        description: "packaging should have SimulatorCreationTask and PlaygroundCreationTask set to none",
-        condition: (component) => component.Tags && component.Tags.includes("packaging"),
-        setValue: (component) => {
-            component.SimulatorCreationTask = "none";
-            component.PlaygroundCreationTask = "none";
-            return ["SimulatorCreationTask", "PlaygroundCreationTask"];
         }
     },
     {
@@ -249,6 +240,15 @@ module.exports = [
             return ["PlaygroundCreationTask", "SimulatorCreationTask"];
         }
     },
+    {
+        description: "Components tagged 'cube' that aren't 'dice' get the Playground/Simulator CreationTask set to StockCube",
+        condition: (component) => component.Tags && component.Tags.includes("cube") && !component.Tags.includes("dice"),
+        setValue: (component) => {
+            component.PlaygroundCreationTask = "StockCube";
+            component.SimulatorCreationTask = "StockCube";
+            return ["PlaygroundCreationTask", "SimulatorCreationTask"];
+        }
+    },
     
     ...meepleCommands,
     ...packagingCommands,
@@ -281,15 +281,7 @@ module.exports = [
             return ["Tags"];
         }
     },
-    {
-        description: "Components tagged 'cube' that aren't dice get the Playground/Simulator CreationTask set to StockCube",
-        condition: (component) => component.Tags && component.Tags.includes("cube") && !component.Tags.includes("dice"),
-        setValue: (component) => {
-            component.PlaygroundCreationTask = "StockCube";
-            component.SimulatorCreationTask = "StockCube";
-            return ["PlaygroundCreationTask", "SimulatorCreationTask"];
-        }
-    },
+    
     {
         description: "Components without a PreviewUri should have their 'IsDisabled' set to true",
         condition: (component) => !component.PreviewUri && !component.Tags.includes("disabled"),
@@ -500,6 +492,7 @@ module.exports = [
             return ["Tags"];
         }
     },
+    
     {
         description: "Components that are tagged 'TB' or 'minifig' should be tagged 'figurine'",
         condition: (component) => (component.Tags && (component.Tags.includes("TB") || component.Tags.includes("minifig"))) && !component.Tags.includes("figurine"),
@@ -549,10 +542,10 @@ module.exports = [
         }
     },
     {
-        description: "Components that have the Display prefix from premiumPrefix should have Playground/SimulatorCreationTask of FlatTokenWithTransparencyBasedShape",
+        description: "Components that have the DisplayName prefix from premiumPrefix should have Playground/SimulatorCreationTask of FlatTokenWithTransparencyBasedShape that aren't 'dice'",
         condition: (component) => component.DisplayName && premiumNames.some(name => 
             new RegExp(`^${name}(\\s|,|$)`).test(component.DisplayName)
-        ),
+        ) && !component.Tags.includes("dice"),
         setValue: (component) => {
             component.SimulatorCreationTask = "FlatTokenWithTransparencyBasedShape";
             component.PlaygroundCreationTask = "FlatTokenWithTransparencyBasedShape";
@@ -587,8 +580,8 @@ module.exports = [
         }
     },
     {
-        description: "Components tagged 'animal' or 'bodypart' or 'symbol' or 'resource' or 'casino' or 'vial' or 'money' should have Playground/SimulatorCreationTask of FlatTokenWithTransparencyBasedShape",
-        condition: (component) => component.Tags && (component.Tags.includes("animal") || component.Tags.includes("bodypart") || component.Tags.includes("symbol") || component.Tags.includes("resource") || component.Tags.includes("casino") || component.Tags.includes("vial") || component.Tags.includes("money")),
+        description: "Components tagged 'animal' or 'bodypart' or 'symbol' or 'resource' or 'casino' or 'vial' or 'money' that aren't 'dice' and aren't 'cube' should have Playground/SimulatorCreationTask of FlatTokenWithTransparencyBasedShape",
+        condition: (component) => component.Tags && (component.Tags.includes("animal") || component.Tags.includes("bodypart") || component.Tags.includes("symbol") || component.Tags.includes("resource") || component.Tags.includes("casino") || component.Tags.includes("vial") || component.Tags.includes("money")) && !component.Tags.includes("dice") && !component.Tags.includes("cube"),
         setValue: (component) => {
             component.SimulatorCreationTask = "FlatTokenWithTransparencyBasedShape";
             component.PlaygroundCreationTask = "FlatTokenWithTransparencyBasedShape";
@@ -596,14 +589,39 @@ module.exports = [
         }
     },
     {
-        description: "Components tagged 'figurine' or 'vehicle' or 'minifig' or 'TB' or 'building' should have a Playground/SimulatorCreationTask of Standee",
-        condition: (component) => component.Tags && (component.Tags.includes("figurine") || component.Tags.includes("vehicle") || component.Tags.includes("minifig") || component.Tags.includes("TB") || component.Tags.includes("building")),
+        description: "Components tagged 'figurine' or 'vehicle' or 'minifig' or 'TB' or 'building' that aren't 'dice' and aren't 'cube' should have a Playground/SimulatorCreationTask of Standee",
+        condition: (component) => component.Tags && (component.Tags.includes("figurine") || component.Tags.includes("vehicle") || component.Tags.includes("minifig") || component.Tags.includes("TB") || component.Tags.includes("building")) && !component.Tags.includes("dice") && !component.Tags.includes("cube"),
         setValue: (component) => {
             component.SimulatorCreationTask = "Standee";
             component.PlaygroundCreationTask = "Standee";
             return ["SimulatorCreationTask", "PlaygroundCreationTask"];
         }
-    }
-    
-    
+    },
+    {
+        description: "Components tagged 'domino' should have Playground/SimulatorCreationTask of Domino",
+        condition: (component) => component.Tags && component.Tags.includes("domino"),
+        setValue: (component) => {
+            component.SimulatorCreationTask = "Domino"; 
+            component.PlaygroundCreationTask = "Domino";
+            return ["SimulatorCreationTask", "PlaygroundCreationTask"];
+        }
+    },
+    {
+        description: "Components tagged 'baggies' or 'packaging' should have Playground/SimulatorCreationTask of Baggie",
+        condition: (component) => component.Tags && (component.Tags.includes("baggies") || component.Tags.includes("packaging")),
+        setValue: (component) => {
+            component.SimulatorCreationTask = "Baggie"; 
+            component.PlaygroundCreationTask = "Baggie";
+            return ["SimulatorCreationTask", "PlaygroundCreationTask"];
+        }
+    },
+    {
+        description: "Components tagged 'tube' should have their 'SimulatorCreationTask' set to 'StockCylinder'",
+        condition: (component) => component.Tags && component.Tags.includes("tube"),
+        setValue: (component) => {
+            component.SimulatorCreationTask = "StockCylinder";
+            component.PlaygroundCreationTask = "StockCylinder";
+            return ["SimulatorCreationTask", "PlaygroundCreationTask"];
+        }
+    },
 ];
