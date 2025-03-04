@@ -2,7 +2,7 @@ const { join } = require('path');
 const fs = require('fs').promises;
 const { copyFile } = require('fs').promises;
 const { aiArtGenerator } = require('../ai/aiArtGenerator');
-const { COMPONENT_INFO } = require('../componentInfo');
+const { COMPONENT_INFO } = require('../../../../shared/componentInfo');
 
 async function addToComponentCompose(name, type, gameRootDirectoryPath, componentComposeData, componentInfo) {
     for (let i = 0; i < componentComposeData.length; i++) {

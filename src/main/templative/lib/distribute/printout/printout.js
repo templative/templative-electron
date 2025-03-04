@@ -3,7 +3,7 @@ const { join, basename, dirname } = require('path');
 const { existsSync, readFileSync } = require('fs');
 const { jsPDF } = require('jspdf');
 const chalk = require('chalk');
-const { COMPONENT_INFO } = require('../../componentInfo.js');
+const { COMPONENT_INFO } = require('../../../../../shared/componentInfo.js');
 
 // Constants
 const diceTypes = ["CustomColorD6", "CustomWoodD6"];

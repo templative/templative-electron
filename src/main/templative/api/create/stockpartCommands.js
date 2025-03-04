@@ -1,6 +1,6 @@
 const { Command } = require('commander');
 const { createCustomComponent, createStockComponent } = require('../../lib/create/componentCreator');
-const { STOCK_COMPONENT_INFO } = require('../../lib/stockComponentInfo');
+const { STOCK_COMPONENT_INFO } = require('../../../../shared/stockComponentInfo');
 
 // Create the stock command group
 const stock = new Command('stock')

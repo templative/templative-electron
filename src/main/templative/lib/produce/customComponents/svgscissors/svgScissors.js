@@ -4,7 +4,7 @@ const fs = require('fs-extra');
 const { parseStringPromise, Builder } = require('xml2js');
 const { DOMParser, XMLSerializer } = require('@xmldom/xmldom');
 
-const { COMPONENT_INFO } = require('../../../componentInfo.js');
+const { COMPONENT_INFO } = require('../../../../../../shared/componentInfo.js');
 const { ProduceProperties, PreviewProperties } = require('../../../manage/models/produceProperties.js');
 const { PieceData, ComponentBackData } = require('../../../manage/models/gamedata.js');
 const { getTranslation } = require('../../translation/translation.js');

@@ -5,8 +5,8 @@ const { createBoard, createDeck, createStock } = require('./deeper/templateMaker
 const { createGameStateVts } = require('./deeper/gameStateMaker.js');
 const { createPackageDirectories, createManifest } = require('./deeper/packageFileManagement.js');
 
-const { COMPONENT_INFO } = require('../../componentInfo.js');
-const { STOCK_COMPONENT_INFO } = require('../../stockComponentInfo.js');
+const { COMPONENT_INFO } = require('../../../../../shared/componentInfo.js');
+const { STOCK_COMPONENT_INFO } = require('../../../../../shared/stockComponentInfo.js');
 
 async function convertToTabletopPlayground(producedDirectoryPath, playgroundPackagesDirectory) {
     const uniqueGameName = basename(producedDirectoryPath);

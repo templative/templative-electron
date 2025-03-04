@@ -1,5 +1,5 @@
 const { channels } = require("../shared/constants");
-const { createProject } = require("./templative/index");
+const { createTemplativeProject } = require("./templative/index");
 const { dialog, BrowserWindow, app  } = require('electron')
 var axios  = require('axios');
 var path = require('path');
@@ -49,7 +49,7 @@ const createTemplativeProjectWithDialog = async(event, args) => {
         return
     }
     var chosenDirectory = result.filePaths[0]
-    var creationResult = await createProject(chosenDirectory)
+    var creationResult = await createTemplativeProject(chosenDirectory)
 
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, chosenDirectory)
 }

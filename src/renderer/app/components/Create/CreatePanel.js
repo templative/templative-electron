@@ -29,11 +29,13 @@ const addSpaces = (str) => {
         .trim()
 }
 
-const majorCategories = [
-    "deck", "die", "board","token","mat","packaging", "box", "document",
-    "animal", "blank", "building", "minifig", "vehicle", "meeple"
+const customMajorCategories = [
+    "deck", "die", "premium", "board","token","mat","packaging", "box", "document", "blank", 
 ]
 
+const stockMajorCategories = [
+    "dice", "premium", "packaging", 'sleeve', 'baggies', "cube", "tube", "blank", "building","meeple","TB", "minifig", "figurine", "animal",  "vehicle",  "casino", "money", "utility", "vial","symbol", "bodypart", "resource"
+]
 export default class CreatePanel extends React.Component {   
     static contextType = RenderingWorkspaceContext;
 
@@ -135,7 +137,15 @@ export default class CreatePanel extends React.Component {
                     !isCreateButtonDisabled ? (
                         <p className="creation-explanation">A {addSpaces(this.context.selectedComponentType)} named {this.context.componentName}...</p>
                     ) : (
-                        <p className="creation-instructions">Pick a type and give it a name.</p>
+                        this.context.selectedComponentType && this.context.componentName === "" ? (
+                            <p className="creation-instructions">You've selected {addSpaces(this.context.selectedComponentType)}, now give it a name.</p>
+                        ) : (
+                            this.context.componentName !== "" && !this.context.selectedComponentType ? (
+                                <p className="creation-instructions">You've named it {this.context.componentName}, now select a type.</p>
+                            ) : (
+                                <p className="creation-instructions">Pick a type and give it a name.</p>
+                            )
+                        )
                     )
                 )}
                 
@@ -179,7 +189,7 @@ export default class CreatePanel extends React.Component {
                         />
                     </div>
                     <ComponentTypeList 
-                        majorCategories={majorCategories}
+                        majorCategories={this.context.isToggledToComponents ? customMajorCategories : stockMajorCategories}
                         selectedTags={this.state.tagFilters}  
                         selectTypeCallback={this.context.selectComponent}
                         search={this.context.componentTypeSearch}

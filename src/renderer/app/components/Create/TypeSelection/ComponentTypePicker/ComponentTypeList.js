@@ -87,15 +87,46 @@ const ComponentTypeList = ({
     isStock
 }) => {   
     const { componentDivs, categoryToFilteredTypes } = useMemo(() => {
-        const filteredKeys = Object.keys(componentTypeOptions)
+        // Track which components have already been assigned to a category
+        const assignedComponents = new Set();
+        const categoryTypes = {};
+
+        // Process categories in order of majorCategories (priority order)
+        majorCategories.forEach(category => {
+            const filteredComponentTypes = Object.keys(componentTypeOptions)
+                .filter((key) => {                
+                    // Skip if this component is already assigned to a category
+                    if (assignedComponents.has(key)) {
+                        return false;
+                    }
+                    
+                    const isMatchingTags = componentTypeHasAllFilteredTags(selectedTags, componentTypeOptions[key]["Tags"]);
+                    const isMatchingCategory = componentTypeHasAllFilteredTags([category], componentTypeOptions[key]["Tags"]);
+                    const isMatchingSearch = matchesSearch(search, key);
+                    const isNotDisabled = !componentTypeOptions[key]["IsDisabled"] || componentTypeOptions[key]["IsDisabled"] === undefined;
+                    
+                    // If this component matches this category, mark it as assigned
+                    if (isMatchingTags && isMatchingCategory && isMatchingSearch && isNotDisabled) {
+                        assignedComponents.add(key);
+                        return true;
+                    }
+                    
+                    return false;
+                })
+                .sort();
+                
+            if (filteredComponentTypes.length > 0) {
+                categoryTypes[category] = filteredComponentTypes;
+            }
+        });
+
+        // Get all components that match search and filters but aren't in any category
+        const uncategorizedKeys = Object.keys(componentTypeOptions)
             .filter((key) => {
-                return componentTypeHasAllFilteredTags(selectedTags, componentTypeOptions[key]["Tags"], majorCategories)
-            })
-            .filter((key) => {
-                return !componentTypeOptions[key]["IsDisabled"] || componentTypeOptions[key]["IsDisabled"] === undefined
-            })
-            .filter((key) => {
-                return matchesSearch(search, key)
+                return !assignedComponents.has(key) && // Not already in a category
+                    componentTypeHasAllFilteredTags(selectedTags, componentTypeOptions[key]["Tags"], majorCategories) &&
+                    (!componentTypeOptions[key]["IsDisabled"] || componentTypeOptions[key]["IsDisabled"] === undefined) &&
+                    matchesSearch(search, key);
             })
             .sort();
             
@@ -105,7 +136,7 @@ const ComponentTypeList = ({
             // Group components by base name only (ignoring color variations)
             const groupedComponents = {};
             
-            filteredKeys.forEach(key => {
+            uncategorizedKeys.forEach(key => {
                 const { baseName, color } = extractBaseNameAndColor(key, componentTypeOptions[key]["DisplayName"]);
                 
                 // Only group if there's a color
@@ -174,7 +205,7 @@ const ComponentTypeList = ({
             });
         } else {
             // For non-stock components, keep the original behavior
-            filteredDivs = filteredKeys.map((key) => {
+            filteredDivs = uncategorizedKeys.map((key) => {
                 const existingQuantity = 0;
                 return <ComponentType 
                     key={`${key}${search}`} 
@@ -187,22 +218,6 @@ const ComponentTypeList = ({
                 />
             });
         }
-
-        const categoryTypes = {};
-        majorCategories.forEach(category => {
-            const filteredComponentTypes = Object.keys(componentTypeOptions)
-                .filter((key) => {                
-                    const isMatchingTags = componentTypeHasAllFilteredTags(selectedTags, componentTypeOptions[key]["Tags"]);
-                    const isMatchingCategory = componentTypeHasAllFilteredTags([category], componentTypeOptions[key]["Tags"]);
-                    const isMatchingSearch = matchesSearch(search, key);
-                    const isNotDisabled = !componentTypeOptions[key]["IsDisabled"] || componentTypeOptions[key]["IsDisabled"] === undefined;
-                    return isMatchingTags && isMatchingCategory && isMatchingSearch && isNotDisabled;
-                })
-                .sort();
-            if (filteredComponentTypes.length > 0) {
-                categoryTypes[category] = filteredComponentTypes;
-            }
-        });
 
         return {
             componentDivs: filteredDivs,

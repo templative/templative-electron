@@ -1,6 +1,6 @@
 const { BrowserWindow } = require('electron');
-const { COMPONENT_INFO } = require('./lib/componentInfo');
-const { STOCK_COMPONENT_INFO } = require('./lib/stockComponentInfo');
+const { COMPONENT_INFO } = require('../../shared/componentInfo');
+const { STOCK_COMPONENT_INFO } = require('../../shared/stockComponentInfo');
 const { createComponentByType } = require('./lib/create/componentCreator');
 const { produceGame, getPreviewsPath, producePiecePreview } = require('./lib/produce/gameProducer');
 const { convertToTabletopPlayground } = require('./lib/distribute/playground/playground');

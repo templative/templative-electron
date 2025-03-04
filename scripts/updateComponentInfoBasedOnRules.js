@@ -1,5 +1,5 @@
-import { COMPONENT_INFO } from "../src/main/templative/lib/componentInfo.js";
-import { STOCK_COMPONENT_INFO } from "../src/main/templative/lib/stockComponentInfo.js";
+import { COMPONENT_INFO } from "../src/shared/componentInfo.js";
+import { STOCK_COMPONENT_INFO } from "../src/shared/stockComponentInfo.js";
 import fs from 'fs';
 import componentRules from "./rules/customComponentRules.js";
 import stockComponentRules from "./rules/stockComponentRules.js";
@@ -96,7 +96,7 @@ function processComponents() {
         console.log('\nSaving updates to component info file...');
         saveComponentInfo(
             COMPONENT_INFO, 
-            "/Users/oliverbarnum/Documents/git/templative-electron/src/main/templative/lib/componentInfo.js",
+            "/Users/oliverbarnum/Documents/git/templative-electron/src/shared/componentInfo.js",
             "COMPONENT_INFO"
         );
     }

@@ -4,8 +4,8 @@ const os = require('os');
 const https = require('https');
 const { S3Client, PutObjectCommand } = require('@aws-sdk/client-s3');
 const httpOperations = require('./util/httpOperations.js');
-const { STOCK_COMPONENT_INFO } = require('../../stockComponentInfo.js');
-const { COMPONENT_INFO } = require('../../componentInfo.js');
+const { STOCK_COMPONENT_INFO } = require('../../../../../shared/stockComponentInfo.js');
+const { COMPONENT_INFO } = require('../../../../../shared/componentInfo.js');
 
 const blankSvgFileContents = '<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg version="1.1" id="template" x="0px" y="0px" width="%s" height="%s" viewBox="0 0 %s %s" enable-background="new 0 0 270 414" xml:space="preserve" sodipodi:docname="blank.svg" inkscape:version="1.2.2 (b0a8486, 2022-12-01)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"> <defs id="defs728" /> <sodipodi:namedview id="namedview726" pagecolor="#ffffff" bordercolor="#999999" borderopacity="1" showgrid="false" /></svg>';
 const componentsDirectoryPath = "C:/Users/User/Documents/git/nextdaygames/templative/../create/componentTemplates";

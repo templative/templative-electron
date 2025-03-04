@@ -49,14 +49,14 @@ const StockComponentType = ({ componentInfo, selectedComponentType, name, select
             >
                 <div className="component-type-content">
                     <div className="component-type-info">
-                        <p><strong>{existingQuantity !== 0 && `${existingQuantity}x `}{displayName}</strong></p>
+                        <p className="component-type-name">{existingQuantity !== 0 && `${existingQuantity}x `}{displayName}</p>
                         
-                        {componentInfo["SimulatorCreationTask"] && (
-                            <p>Task: {componentInfo["SimulatorCreationTask"]}</p>
-                        )}
-                        
-                        {componentInfo["Color"] && (
-                            <p>Color: {componentInfo["Color"]}</p>
+                        {(componentInfo["SimulatorCreationTask"] || componentInfo["Color"]) && (
+                            <p className="component-type-dimensions">
+                                {componentInfo["SimulatorCreationTask"]}
+                                {componentInfo["SimulatorCreationTask"] && componentInfo["Color"] && " - "}
+                                {componentInfo["Color"]}
+                            </p>
                         )}
                         
                         {componentInfo["PreviewUri"] && (

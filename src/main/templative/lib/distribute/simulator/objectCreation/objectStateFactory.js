@@ -4,8 +4,8 @@ const chalk = require('chalk');
 const { createDeck } = require('./deckCreator.js');
 const { createStock } = require('./stockCreator.js');
 const { createComponentLibraryChest } = require('../simulatorTemplates/objectState.js');
-const COMPONENT_INFO = require('../../../componentInfo.js').COMPONENT_INFO;
-const STOCK_COMPONENT_INFO = require('../../../stockComponentInfo.js').STOCK_COMPONENT_INFO;
+const COMPONENT_INFO = require('../../../../../../shared/componentInfo.js').COMPONENT_INFO;
+const STOCK_COMPONENT_INFO = require('../../../../../../shared/stockComponentInfo.js').STOCK_COMPONENT_INFO;
 
 /**
  * Create object states for all components in a directory
@@ -33,7 +33,6 @@ async function createObjectStates(producedDirectoryPath, tabletopSimulatorDirect
       const objectState = await createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPath, tabletopSimulatorImageDirectoryPath, index, directories.length);
       index++;
       if (objectState === null) {
-        console.log(chalk.red(`!!! Skipping ${directory.name} due to errors.`));
         continue;
       }
       objectStates.push(objectState);
@@ -58,6 +57,7 @@ async function createObjectState(componentDirectoryPath, tabletopSimulatorDirect
   const supportedInstructionTypes = {
     "DECK": createDeck,
     "BOARD": createDeck,
+    
   };
 
   const componentTypeTokens = componentInstructions.type.split("_");
@@ -92,8 +92,13 @@ async function createObjectState(componentDirectoryPath, tabletopSimulatorDirect
     return null;
   }
 
+  if (simulatorTask === "none") {
+    console.log(chalk.yellow(`Skipping ${componentInstructions.uniqueName} due to no SimulatorCreationTask.`));
+    return null;
+  }
+
   if (!supportedInstructionTypes.hasOwnProperty(simulatorTask)) {
-    console.log(chalk.red(`!!! Skipping unsupported ${simulatorTask}.`));
+    console.log(chalk.red(`!!! Skipping unsupported ${simulatorTask} for ${componentInstructions.uniqueName}.`));
     return null;
   }
   const instruction = supportedInstructionTypes[simulatorTask];

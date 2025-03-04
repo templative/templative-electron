@@ -1,6 +1,22 @@
 const { allColorVariations } = require("../../src/shared/stockComponentColors");
 
 const diceNumerals = ["2", "4", "6", "8", "10", "12", "20"]
+const buildingNames = ["Windmill", "Victorian Miniature", "Water Mill", "Plastic Castle", "Observatory", "Mine", "Marketplace", "Tower Stacker", "Trellis", "Laboratory", "Harbor", "Donjon Pagoda", "Church", "Cathedral", "Castle", "Business", "Taj Mahal Palace", "Pyramid", "Command Center", "Brick Tower", "Wood Cabin", "Skyscraper", "Hut", "Hinged Stone Door"]
+const premiumNames = ["Premium", "Handmade", "Treasure Chest Container", "Top Hat", "Traffic Cone", "Rifle", "1st", "Broken Column", "Campfire", "Compass", "Computer", "Computer Desk", "Fence, Wicker", "Notice Board", "Lamp Post", "Lantern", "Large Treasure Chest", "Pentagram", "Signpost", "Tombstone", "Triangle Hollow", "Valve Control Station", "Walker Driver", "Wall, Sandbags", "Wall, Stone", "T-Bar", "Table, Orange"]
+const vehicleNames = ["Ship", "Sailboat", "Rocket", "Car", "Truck", "Race Car", "Airplane", "Train", "Push Cart", "Cart", "Wheelbarrow", "Motor Boat", "Motorcycle", "Locomotive", "Van", "Tank", "Semi", "SUV", "Muscle Car", "Helicopter", "Blimp", "Hot Rod", "Container Ship", "Bulldozer"]
+const animals = ["Puppy", "Dinosaur", "Dog", "Cat", "Bird", "Fish", "Snake", "Lizard", "Turtle", "Frog", "Toad", "Snake", "Pig", "Kitten", "Elephant", "Dragon", "Bunny", "Bug", "Polar Bear", "Horse", "Grizzly Bear", "Goat", "Dove", "Chicken", "Ant", "Rooster", "Crab", "Bee", "Spider", "Rat", "Lady Bug" ]
+const buildingMaterials = ["Brick", "Clay", "Ingot", "Crystal", "Stone", "Jewel"]
+const meeplePrefixes = ["Big People", "People", "Worker, Single Bag", "Tall People", "Speedster", "Person with Hat", "Peasant", "Guard Robot",  "Footman", "Gangster", "Female Farmer", "Fedora Wearer", "Figure, Wood", "Bust", "Tiki Idol", "Ghost, White", "Gentleman", "Robot, Silver", "Armored Guard"]
+const utility = ["Sand Timer", "Tape Measure", "Sharpies", "Rubber Bands", "Marker, Dry-Erase", "Horizontal Game Master", "Vertical Game Master", "Pencil", "Notepad", "Box Band", "Digital Timer", "Decoder Strips", 'Slider Clip', 'Spinner', "Rivet", "Screw,", "Stand, Chipboard", "Character Stand", "Game Stand", "Card Stand", "Direction Finder", "Snap & Stack", "Card Holder", "Badge Holder", "Tile Rack", "Magnifying Glass, 5X"]
+const minifigPrefixes = ["Zombie", "Warrior Monk", "Shieldbearer", "Skeleton Warrior", "Noble", "Missionary", "Ninja", "Mafioso", "Lookout", "Human Figure", 'Colonial Soldier', 'Colonial Lumberjack', "Cavalry, Green", "Woman, Mum", "Hydra", "Gunpod", "Wyvern", "Gelatinous Monster", ]
+const otherFigurines = [ "Paper Miniature Base", "Miniature Base", "Halma", "Cone Pawn", "Sticker Pawn", "Peg Pawn", "Paper Miniature Formation"]
+const bodyPartPrefixes = ["Bloody Remains", "Broken Heart", "Fist", "Skull", "Brain", "Foot, Brown", "Heart"]
+const resourcePrefixes = ["Brick", "Clay", "Ingot", "Coal", "Cobalt", "Crystal","Gem", "Stone", "Jewel", "Stick", "Star", "Flat Star", "Large Star", "Thin Star", "Sack, Gold", "Pumpkin", "Lightning Bolt", "Keycard", "Leather", "Light Bulb", "LED", "Herb", "Grain Sack", "Egg", "Drop","Flag", "Chest", "Brick", "Bullet", "Button", "Acorn", "Wood Logs", "Wood Pile", "Sword", "Tactical Knife", "Tablet", "Rope Coil", "Hex Nut", "I-Beam", "Gear", "Fire Axe", "Frag Grenade", "Empty Bottle", "Crescent Wrench", "AK-47", "Bolt", "Bow and Arrow", "Shotgun", "Bread", "Drumstick", "Oil Drum", "Barrel", "Oil Barrel", "Padlock", "Ring", "Cauldron", "Bowling Pin", "Hexbox", "Hex Stacker", "Stacker Cone", "Stacker", "Sheriff Badge", "Sake", "Flame", "Crown", "Crate", "Fang", "Gavel", "Joystick", "Thimble", "Radiation Mask", "Mushroom Cloud", "Triangle", "Buddha"]
+const symbolPrefixes = [ "Universal No", "Universal Yes", "Question Mark", "Exclamation Mark", "Roman Numeral"]
+const money = ["Coin", "Doubloon"]
+const casino =["Poker Chip", "Suits"]
+
+const undoMeeple = ["Avatar", "Flat Cap", "Fedora Person", "Hatman Green", "Future Person"]
 
 const meepleCommands = [
     {
@@ -15,10 +31,20 @@ const meepleCommands = [
         }
     },
     {
-        description: "Component tagged meeple should have SimulatorCreationTask set to TokenWithTransparencyBasedShape",
+        description: "Components that begin with undoMeeple should not have 'meeple' tag and instead should have 'figurine' tag",
+        condition: (component) => component.Tags && undoMeeple.some(name => 
+            new RegExp(`^${name}(\\s|,|$)`).test(component.DisplayName) && component.Tags.includes("meeple")),
+        setValue: (component) => {
+            component.Tags = component.Tags.filter(tag => tag !== "meeple");
+            component.Tags.push("figurine");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Component tagged meeple should have SimulatorCreationTask set to ThickTokenWithTransparencyBasedShape",
         condition: (component) => component.Tags && component.Tags.includes("meeple"),
         setValue: (component) => {
-            component.SimulatorCreationTask = "TokenWithTransparencyBasedShape";
+            component.SimulatorCreationTask = "ThickTokenWithTransparencyBasedShape";
             return ["SimulatorCreationTask"];
         }
     },
@@ -31,6 +57,15 @@ const meepleCommands = [
             return ["Tags"];
         }
     },
+    {
+        description: "Components that begin with any of the following should be tagged 'meeple': " + meeplePrefixes.join(", "),
+        condition: (component) => component.DisplayName && meeplePrefixes.some(prefix => component.DisplayName.startsWith(prefix)) && !component.Tags.includes("meeple"),
+        setValue: (component) => {
+            component.Tags.push("meeple");
+            return ["Tags"];
+        }
+    },
+    
 ]
 const diceCommands = [
     {
@@ -39,6 +74,14 @@ const diceCommands = [
         setValue: (component) => {
             component.Tags.push("dice");
             return ["Tags"];
+        }
+    },
+    {
+        description: "Dice with 'Transparent ' in their DisplayName should replace it with 'Transparent, '",
+        condition: (component) => component.DisplayName && component.DisplayName.includes("Transparent") && !component.Tags.includes("transparent"),
+        setValue: (component) => {
+            component.DisplayName = component.DisplayName.replace("Transparent ", "Transparent, ");
+            return ["DisplayName"];
         }
     },
     {
@@ -256,6 +299,36 @@ module.exports = [
         }
     },
     {
+        description: "Components that begin with any of the following should be tagged 'building': " + buildingNames.join(", "),
+        condition: (component) => component.DisplayName && buildingNames.some(name => 
+            new RegExp(`^${name}(\\s|,|$)`).test(component.DisplayName)
+        ) && !component.Tags.includes("building") && !component.Tags.includes("TB"),
+        setValue: (component) => {
+            component.Tags.push("building");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components that begin with any of the following should be tagged 'minifig': " + minifigPrefixes.join(", "),
+        condition: (component) => component.DisplayName && minifigPrefixes.some(name => 
+            new RegExp(`^${name}(\\s|,|$)`).test(component.DisplayName)
+        ) && !component.Tags.includes("minifig"),
+        setValue: (component) => {
+            component.Tags.push("minifig");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components that begin with any of the following should be tagged 'figurine': " + otherFigurines.join(", "),
+        condition: (component) => component.DisplayName && otherFigurines.some(name => 
+            new RegExp(`^${name}(\\s|,|$)`).test(component.DisplayName)
+        ) && !component.Tags.includes("figurine"),
+        setValue: (component) => {
+            component.Tags.push("figurine");
+            return ["Tags"];
+        }
+    },
+    {
         description: "Components with the Card Connectors in their DisplayName should not be tagged 'building'",
         condition: (component) => component.DisplayName && component.DisplayName.includes("Card Connectors") && component.Tags.includes("building"),
         setValue: (component) => {
@@ -264,10 +337,10 @@ module.exports = [
         }
     },
     {
-        description: "Components that have Set in their DisplayName should not be tagged 'set'",
-        condition: (component) => component.DisplayName && component.DisplayName.includes("Set") && component.Tags.includes("set"),
+        description: "Components that contain 'Set' in their DisplayName should be tagged 'set'",
+        condition: (component) => component.DisplayName && component.DisplayName.includes("Set") && !component.Tags.includes("set"),
         setValue: (component) => {
-            component.Tags = component.Tags.filter(tag => tag !== "set");
+            component.Tags.push("set");
             return ["Tags"];
         }
     },
@@ -278,5 +351,259 @@ module.exports = [
             component.IsDisabled = true;
             return ["IsDisabled"];
         }
+    },
+    {
+        description: "Components that begin with any of the following should be tagged 'premium': " + premiumNames.join(", "),
+        condition: (component) => component.DisplayName && premiumNames.some(name => 
+            new RegExp(`^${name}(\\s|,|$)`).test(component.DisplayName)
+        ) && !component.Tags.includes("premium"),
+        setValue: (component) => {
+            component.Tags.push("premium");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components that begin with any of the following should be tagged 'vehicle': " + vehicleNames.join(", "),
+        condition: (component) => component.DisplayName && vehicleNames.some(name => 
+            new RegExp(`^${name}(\\s|,|$)`).test(component.DisplayName)
+        ) && !component.Tags.includes("vehicle"),
+        setValue: (component) => {  
+            component.Tags.push("vehicle");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components that begin with any of the following should be tagged 'animal': " + animals.join(", "),
+        condition: (component) => component.DisplayName && animals.some(name => 
+            new RegExp(`^${name}(\\s|,|$)`).test(component.DisplayName)
+        ) && !component.Tags.includes("animal"),
+        setValue: (component) => {  
+            component.Tags.push("animal");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components that have TB followed by maybe a space and definately 1 or more numbers should be tagged 'TB'",
+        condition: (component) => component.DisplayName && /TB\s*\d+/.test(component.DisplayName) && !component.Tags.includes("TB"),
+        setValue: (component) => {
+            component.Tags.push("TB");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Disable components that begin with Castle Room",
+        condition: (component) => component.DisplayName && component.DisplayName.startsWith("Castle Room"),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            return ["IsDisabled"];
+        }
+    },
+    { 
+        description: "Components that begin with any building material should not be tagged building",
+        condition: (component) => component.DisplayName && buildingMaterials.some(material => 
+            new RegExp(`^${material}(\\s|,|$)`).test(component.DisplayName)
+        ) && component.Tags.includes("building"),
+        setValue: (component) => {
+            component.Tags = component.Tags.filter(tag => tag !== "building");
+            return ["Tags"];
+        }
+    },
+    { 
+        description: "Components that begin with any body part prefix should be tagged 'bodypart",
+        condition: (component) => component.DisplayName && bodyPartPrefixes.some(prefix => 
+            new RegExp(`^${prefix}(\\s|,|$)`).test(component.DisplayName)
+        ) && !component.Tags.includes("bodypart"),
+        setValue: (component) => {
+            component.Tags.push("bodypart");
+            return ["Tags"];
+        }
+    },
+    { 
+        description: "Components that begin with any resource prefix should be tagged 'resource'",
+        condition: (component) => component.DisplayName && resourcePrefixes.some(prefix => 
+            new RegExp(`^${prefix}(\\s|,|$)`).test(component.DisplayName)
+        ) && !component.Tags.includes("resource"),
+        setValue: (component) => {
+            component.Tags.push("resource");
+            return ["Tags"];
+        }
+    },
+    { 
+        description: "Components that begin with any symbol prefix should be tagged 'symbol'",
+        condition: (component) => component.DisplayName && symbolPrefixes.some(prefix => 
+            new RegExp(`^${prefix}(\\s|,|$)`).test(component.DisplayName)
+        ) && !component.Tags.includes("symbol"),
+        setValue: (component) => {
+            component.Tags.push("symbol");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components that begin with any of the following should be tagged 'utility': " + utility.join(", "),
+        condition: (component) => component.DisplayName && utility.some(name => 
+            new RegExp(`^${name}(\\s|,|$)`).test(component.DisplayName)
+        ) && !component.Tags.includes("utility"),
+        setValue: (component) => {
+            component.Tags.push("utility");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components that begin with any of the following should be tagged 'casino': " + casino.join(", "),
+        condition: (component) => component.DisplayName && casino.some(name => 
+            new RegExp(`^${name}(\\s|,|$)`).test(component.DisplayName)
+        ) && !component.Tags.includes("casino"),
+        setValue: (component) => {
+            component.Tags.push("casino");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components that begin with any of the following should be tagged 'money': " + money.join(", "),
+        condition: (component) => component.DisplayName && money.some(name => 
+            new RegExp(`^${name}(\\s|,|$)`).test(component.DisplayName)
+        ) && !component.Tags.includes("money"),
+        setValue: (component) => {
+            component.Tags.push("money");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components that begin with 'Disc ' or 'Disc,' should be tagged 'disc'",
+        condition: (component) => component.DisplayName && (component.DisplayName.startsWith("Disc ") || component.DisplayName.startsWith("Disc,")) && !component.Tags.includes("disc"),
+        setValue: (component) => {
+            component.Tags.push("disc");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components that begin with 'Wink ' or 'Wink,' should be tagged 'wink'",
+        condition: (component) => component.DisplayName && (component.DisplayName.startsWith("Wink ") || component.DisplayName.startsWith("Wink,")) && !component.Tags.includes("wink"),
+        setValue: (component) => {
+            component.Tags.push("wink");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components that begin with 'Cylinder ' or 'Cylinder,' should be tagged 'cylinder'",
+        condition: (component) => component.DisplayName && (component.DisplayName.startsWith("Cylinder ") || component.DisplayName.startsWith("Cylinder,")) && !component.Tags.includes("cylinder"),
+        setValue: (component) => {
+            component.Tags.push("cylinder");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components that are tagged 'cylinder' or 'disc' or 'wink' should be tagged 'tube'",
+        condition: (component) => (component.Tags && (component.Tags.includes("cylinder") || component.Tags.includes("disc") || component.Tags.includes("wink"))) && !component.Tags.includes("tube"),
+        setValue: (component) => {
+            component.Tags.push("tube");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components that are tagged 'TB' or 'minifig' should be tagged 'figurine'",
+        condition: (component) => (component.Tags && (component.Tags.includes("TB") || component.Tags.includes("minifig"))) && !component.Tags.includes("figurine"),
+        setValue: (component) => {
+            component.Tags.push("figurine");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components that contain 'Baggies' or 'Grab Bag' in their DisplayName should be tagged 'baggies'",
+        condition: (component) => component.DisplayName && (component.DisplayName.includes("Baggies") || component.DisplayName.includes("Grab Bag")) && !component.Tags.includes("baggies"),
+        setValue: (component) => {
+            component.Tags.push("baggies");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components that contain 'Blank' in their DisplayName should be tagged 'blank'",
+        condition: (component) => component.DisplayName && component.DisplayName.includes("Blank") && !component.Tags.includes("blank"),
+        setValue: (component) => {
+            component.Tags.push("blank");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components tagged 'pouch' should be tagged 'baggies'",
+        condition: (component) => component.Tags && component.Tags.includes("pouch") && !component.Tags.includes("baggies"),
+        setValue: (component) => {
+            component.Tags.push("baggies");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components that have the word 'Vial' in their DisplayName should be tagged 'vial'",
+        condition: (component) => component.DisplayName && component.DisplayName.includes("Vial") && !component.Tags.includes("vial"),
+        setValue: (component) => {
+            component.Tags.push("vial");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components that begin with 'InFUN' are disabled",
+        condition: (component) => component.DisplayName && component.DisplayName.startsWith("InFUN"),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            return ["IsDisabled"];
+        }
+    },
+    {
+        description: "Components that have the Display prefix from premiumPrefix should have Playground/SimulatorCreationTask of FlatTokenWithTransparencyBasedShape",
+        condition: (component) => component.DisplayName && premiumNames.some(name => 
+            new RegExp(`^${name}(\\s|,|$)`).test(component.DisplayName)
+        ),
+        setValue: (component) => {
+            component.SimulatorCreationTask = "FlatTokenWithTransparencyBasedShape";
+            component.PlaygroundCreationTask = "FlatTokenWithTransparencyBasedShape";
+            return ["SimulatorCreationTask", "PlaygroundCreationTask"];
+        }
+    },
+    {
+        description: "Components tagged 'packaging' or 'sleeve' or 'baggies' should have Playground/SimulatorCreationTask of none.",
+        condition: (component) => component.Tags && (component.Tags.includes("packaging") || component.Tags.includes("sleeve") || component.Tags.includes("baggies")),
+        setValue: (component) => {
+            component.SimulatorCreationTask = "none";
+            component.PlaygroundCreationTask = "none";
+            return ["SimulatorCreationTask", "PlaygroundCreationTask"];
+        }
+    }, 
+    {
+        description: "Components tagged 'blank' that aren't tagged 'dice' should have Playground/SimulatorCreationTask of none.",
+        condition: (component) => component.Tags && component.Tags.includes("blank") && !component.Tags.includes("dice"),
+        setValue: (component) => {
+            component.SimulatorCreationTask = "none";
+            component.PlaygroundCreationTask = "none";
+            return ["SimulatorCreationTask", "PlaygroundCreationTask"];
+        }
+    }, 
+    {
+        description: "Components tagged 'tube' should have Playground/SimulatorCreationTask of ThickTokenWithTransparencyBasedShape",
+        condition: (component) => component.Tags && component.Tags.includes("tube"),
+        setValue: (component) => {
+            component.SimulatorCreationTask = "ThickTokenWithTransparencyBasedShape";
+            component.PlaygroundCreationTask = "ThickTokenWithTransparencyBasedShape";
+            return ["SimulatorCreationTask", "PlaygroundCreationTask"];
+        }
+    },
+    {
+        description: "Components tagged 'animal' or 'bodypart' or 'symbol' or 'resource' or 'casino' or 'vial' or 'money' should have Playground/SimulatorCreationTask of FlatTokenWithTransparencyBasedShape",
+        condition: (component) => component.Tags && (component.Tags.includes("animal") || component.Tags.includes("bodypart") || component.Tags.includes("symbol") || component.Tags.includes("resource") || component.Tags.includes("casino") || component.Tags.includes("vial") || component.Tags.includes("money")),
+        setValue: (component) => {
+            component.SimulatorCreationTask = "FlatTokenWithTransparencyBasedShape";
+            component.PlaygroundCreationTask = "FlatTokenWithTransparencyBasedShape";
+            return ["SimulatorCreationTask", "PlaygroundCreationTask"];
+        }
+    },
+    {
+        description: "Components tagged 'figurine' or 'vehicle' or 'minifig' or 'TB' or 'building' should have a Playground/SimulatorCreationTask of Standee",
+        condition: (component) => component.Tags && (component.Tags.includes("figurine") || component.Tags.includes("vehicle") || component.Tags.includes("minifig") || component.Tags.includes("TB") || component.Tags.includes("building")),
+        setValue: (component) => {
+            component.SimulatorCreationTask = "Standee";
+            component.PlaygroundCreationTask = "Standee";
+            return ["SimulatorCreationTask", "PlaygroundCreationTask"];
+        }
     }
+    
+    
 ];

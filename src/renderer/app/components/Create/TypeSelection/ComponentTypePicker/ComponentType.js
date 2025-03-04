@@ -76,7 +76,7 @@ const ComponentType = ({ componentInfo, selectedComponentType, name, selectTypeC
         >
             <div className="component-type-content">
                 <div className="component-type-info">
-                    <p><strong>{existingQuantity !== 0 && `${existingQuantity}x `}{displayName}</strong></p>
+                    <p className="component-type-name">{existingQuantity !== 0 && `${existingQuantity}x `}{displayName}</p>
                     {componentInfo["DimensionsPixels"] && (
                         <p className="component-type-dimensions">
                             {`${componentInfo["DimensionsPixels"][0]}x${componentInfo["DimensionsPixels"][1]}px`}

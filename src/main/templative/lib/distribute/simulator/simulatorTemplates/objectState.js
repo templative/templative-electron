@@ -194,7 +194,7 @@ function createCardObjectState(guid, cardPrefix, name, imageUrls, simulatorCompo
   };
 }
 
-function createStandardDie(name, sizeInches, colorRGBOutOfOne) {
+function createStandardDie(name, numberSides, sizeInches, colorRGBOutOfOne, isMetal=false) {
   const guid = md5(name).slice(0, 6);
   const colorDiffuse = {
     r: colorRGBOutOfOne.r / 255.0,
@@ -202,7 +202,7 @@ function createStandardDie(name, sizeInches, colorRGBOutOfOne) {
     b: colorRGBOutOfOne.b / 255.0
   };
   const die = {
-    Name: "Die_6",
+    Name: `Die_${numberSides}`,
     Transform: {
       posX: 0, posY: 2, posZ: 0, 
       rotX: 0, rotY: 0, rotZ: 0, 
@@ -210,13 +210,14 @@ function createStandardDie(name, sizeInches, colorRGBOutOfOne) {
     },
     Nickname: name,
     ColorDiffuse: colorDiffuse,
-    DieType: 0, // Regular D6
     MaterialIndex: -1,
     MaterialType: 0,
     HideWhenFaceDown: false,
     Locked: false,    
     Hands: true,
     GUID: guid,
+    AltSound: isMetal,
+    RotationValues: getDieRotationValues(numberSides),
     ...STANDARD_ATTRIBUTES
   };
   return createComponentLibraryChest([die], `${name} Bag`, true, colorDiffuse);
@@ -348,12 +349,24 @@ function createTokenWithDefinedShape(name, frontImageUrl, backImageUrl, shape) {
   }
 }
 
-function createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl) {
+function createFlatTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl) {
+  return createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl, 0.2, false);
+}
+function createThickTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl) {
+  return createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl, 1.0, true);
+}
+
+
+function createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl, thickness = 0.2, isStandUp = false) {
   const guid = md5(name).slice(0, 6);
+  const scale = 0.25
   return {
     GUID: guid,
     Name: "Custom_Token",
-    Transform: STANDARD_TRANSFORM,
+    Transform: {
+      posX: 0, posY: 0, posZ: 0, rotX: 0, rotY: 0, rotZ: 0,
+      scaleX: scale, scaleY: scale, scaleZ: scale
+    },
     Nickname: name,
     ColorDiffuse: {
       r: 1.0,
@@ -371,9 +384,9 @@ function createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl
       ImageScalar: 1.0,
       WidthScale: 0.0,
       CustomToken: {
-        Thickness: 0.2,
+        Thickness: thickness,
         MergeDistancePixels: 15.0,
-        StandUp: false,
+        StandUp: isStandUp,
         Stackable: true
       }
     },
@@ -529,5 +542,6 @@ module.exports = {
   createStockModel, 
   createStandee, 
   createTokenWithDefinedShape, 
-  createTokenWithTransparencyBasedShape
+  createFlatTokenWithTransparencyBasedShape,
+  createThickTokenWithTransparencyBasedShape
 };

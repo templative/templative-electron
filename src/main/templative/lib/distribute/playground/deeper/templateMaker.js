@@ -85,7 +85,7 @@ async function createStock(packageDirectoryPath, componentInstructions, stockPar
 async function createStockTemplateData(guid, componentInstructions, stockPartInfo) {
     const normalMap = stockPartInfo["PlaygroundNormalMap"] || "";
     const extraMap = stockPartInfo["PlaygroundExtraMap"] || "";
-    const stockTemplateData = stockModel.createStockModel(componentInstructions["name"], guid, stockPartInfo["PlaygroundModelFile"], stockPartInfo["PlaygroundColor"], normalMap, extraMap, componentInstructions["quantity"]);
+    const stockTemplateData = stockModel.createStockModel(componentInstructions["name"], guid, stockPartInfo["PlaygroundModelFile"], stockPartInfo["Color"], normalMap, extraMap, componentInstructions["quantity"]);
 
     if ("PlaygroundDieFaces" in stockPartInfo) {
         stockTemplateData["Faces"] = stockPartInfo["PlaygroundDieFaces"];

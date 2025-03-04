@@ -9,7 +9,7 @@ const ComponentComposition = require('../../manage/models/composition');
 const ComponentArtdata = require('../../manage/models/artdata');
 const defineLoader = require('../../manage/defineLoader');
 
-const { COMPONENT_INFO } = require('../../componentInfo');
+const { COMPONENT_INFO } = require('../../../../../shared/componentInfo');
 
 const { BackProducer } = require('./backProducer');
 const { FrontOnlyProducer } = require('./frontOnlyProducer');

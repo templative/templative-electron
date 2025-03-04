@@ -7,7 +7,7 @@ const { createHash } = require('crypto');
 const path = require('path');
 const defineLoader = require('../../manage/defineLoader');
 const { FontCache } = require('./svgscissors/fontCache');
-const { COMPONENT_INFO } = require('../../componentInfo');
+const { COMPONENT_INFO } = require('../../../../../shared/componentInfo');
 const { ComponentBackData } = require('../../manage/models/gamedata');
 const chalk = require('chalk');
 

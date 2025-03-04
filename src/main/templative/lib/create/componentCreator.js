@@ -1,8 +1,8 @@
 const templateComponentProjectUpdater = require('./templateComponentProjectUpdater');
 const { aiArtGenerator } = require('../ai/aiArtGenerator');
 const { loadGameCompose, loadComponentCompose } = require('../manage/defineLoader');
-const { COMPONENT_INFO } = require('../componentInfo');
-const { STOCK_COMPONENT_INFO } = require('../stockComponentInfo');
+const { COMPONENT_INFO } = require('../../../../shared/componentInfo');
+const { STOCK_COMPONENT_INFO } = require('../../../../shared/stockComponentInfo');
 const { join } = require('path');
 
 async function createComponentByType(gameRootDirectoryPath, name, type, componentAIDescription) {

@@ -1,6 +1,6 @@
 const path = require('path');
 const { Image } = require('image-js');
-const { COMPONENT_INFO } = require('../../../componentInfo.js');
+const { COMPONENT_INFO } = require('../../../../../../shared/componentInfo.js');
 
 async function createCompositeImageInTextures(componentName, componentTypeInfo, frontInstructions, textureDirectoryFilepath) {
   let totalCount = 0;

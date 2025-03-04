@@ -1,5 +1,15 @@
 const chalk = require('chalk');
-const { createStandardDie, createStockCube, createStockModel, createStandee } = require('../simulatorTemplates/objectState');
+const { 
+  createStandardDie, 
+  createCustomDie,
+  createStockCube, 
+  createStockModel, 
+  createStandee, 
+  createTokenWithDefinedShape, 
+  createFlatTokenWithTransparencyBasedShape,
+  createThickTokenWithTransparencyBasedShape
+} = require('../simulatorTemplates/objectState');
+const { getAdapter } = require('./stockObjectAdapter');
 
 /**
  * Create a stock component (dice, cubes, etc.)
@@ -8,69 +18,43 @@ const { createStandardDie, createStockCube, createStockModel, createStandee } = 
  * @returns {Promise<Object|null>} - Stock object state or null if failed
  */
 async function createStock(componentInstructions, stockPartInfo) {
-  const componentTypeTokens = componentInstructions.type.split("_");
-  const stockType = componentTypeTokens[1];
-  console.log(componentInstructions);
-  console.log(stockPartInfo);
-  if (
-    stockPartInfo.hasOwnProperty("3DModel") && 
-    stockPartInfo["3DModel"].hasOwnProperty("ObjUrl") && 
-    stockPartInfo["3DModel"].hasOwnProperty("TextureUrl") && 
-    stockPartInfo["3DModel"].hasOwnProperty("NormalMapUrl")
-  ) {
-    return createStockModel(
-      componentInstructions.name, 
-      stockPartInfo["3DModel"]["ObjUrl"], 
-      stockPartInfo["3DModel"]["TextureUrl"], 
-      stockPartInfo["3DModel"]["NormalMapUrl"]
-    );
-  }
-
-  const isDie = stockType.startsWith("D6");
-  const isCube = stockType.startsWith("Cube");
-
-  if (!isDie && !isCube) {
-    // Check if we have a preview image to use as fallback
-    if (stockPartInfo.hasOwnProperty("PreviewUri")) {
-      console.log(chalk.yellow(`Using preview image as fallback for ${stockType}`));
-      return createStandee(
-        componentInstructions.name,
-        stockPartInfo.PreviewUri
-      );
-    }
-    
-    console.log(chalk.red(`!!! Unsupported stock type: ${stockType}`));
+  // Check if SimulatorCreationTask is specified
+  // console.log(componentInstructions);
+  // console.log(stockPartInfo);
+  if (!stockPartInfo.hasOwnProperty("SimulatorCreationTask") || 
+      stockPartInfo["SimulatorCreationTask"] === "none") {
+    console.log(chalk.yellow(`Skipping ${componentInstructions.name} due to no SimulatorCreationTask.`));
     return null;
   }
-  if (!stockPartInfo.hasOwnProperty("PlaygroundColor")) {
-    console.log(chalk.red(`!!! Missing PlaygroundColor for ${stockType}`));
+  const simulatorCreationTask = stockPartInfo["SimulatorCreationTask"];
+  // Get the appropriate adapter function
+  const adapter = getAdapter(simulatorCreationTask);
+  if (!adapter) {
+    console.log(chalk.red(`!!! Unsupported SimulatorCreationTask: ${simulatorCreationTask}`));
     return null;
   }
-  const color = stockPartInfo.PlaygroundColor;
 
-  let sizeStr = "";
-  if (isDie) {
-    sizeStr = stockType.slice(2).split("mm")[0];
-  } else if (isCube) {
-    sizeStr = stockType.slice(4).split("mm")[0];
+  // Use the adapter to convert componentInstructions and stockPartInfo into parameters
+  const params = adapter(componentInstructions, stockPartInfo);
+  if (!params) {
+    // Adapter already logged the error
+    return null;
   }
 
-  const size = parseFloat(sizeStr) / 25.4;
+  // Call the appropriate function with the parameters
+  const functions = {
+    "StandardDie": createStandardDie,
+    "CustomDie": createCustomDie,
+    "StockCube": createStockCube,
+    "StockModel": createStockModel,
+    "Standee": createStandee,
+    "TokenWithDefinedShape": createTokenWithDefinedShape,
+    "FlatTokenWithTransparencyBasedShape": createFlatTokenWithTransparencyBasedShape,
+    "ThickTokenWithTransparencyBasedShape": createThickTokenWithTransparencyBasedShape
+  };
 
-  if (isDie) {
-    return createStandardDie(
-      componentInstructions.name,
-      size,
-      color
-    );
-  } else {
-    return createStockCube(
-      componentInstructions.name,
-      size,
-      color
-    );
-  }
-  
+  const createFunction = functions[simulatorCreationTask];
+  return createFunction(...Object.values(params));
 }
 
 module.exports = {
