@@ -1,11 +1,11 @@
 import React, { useMemo } from "react";
-import {componentTypeHasAllFilteredTags, matchesSearch} from "../../TagFilter"
+import {componentTypeHasAllFilteredTags, matchesSearch} from "../TagFilter"
 import ComponentTypeFolder from "./ComponentTypeFolder";
 import ComponentType from "./ComponentType";
 import StockComponentType from "./StockComponentType";
 import ColorGroupedStockComponents from "./ColorGroupedStockComponents";
-import noFileIcon from "../../../Edit/noFileIcon.svg";
-import { allColorVariations } from "../../../../../../shared/stockComponentColors";
+import noFileIcon from "../../Edit/noFileIcon.svg";
+import { allColorVariations } from "../../../../../shared/stockComponentColors";
 
 // Helper function to extract base name and color from component name
 // For example: "Bug, Green" -> { baseName: "Bug", color: "Green" }

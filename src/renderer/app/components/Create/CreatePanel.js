@@ -1,10 +1,9 @@
 import React from "react";
 import "./CreatePanel.css"
 import "./TypeSelection/ComponentType.css"
-import "./TypeSelection/ComponentTypeTags.css"
 
 import TemplativeAccessTools from "../TemplativeAccessTools";
-import ComponentTypeList from "./TypeSelection/ComponentTypePicker/ComponentTypeList";
+import ComponentTypeList from "./TypeSelection/ComponentTypeList";
 import { trackEvent } from "@aptabase/electron/renderer";
 import { RenderingWorkspaceContext } from '../Render/RenderingWorkspaceProvider';
 const { ipcRenderer } = window.require('electron');

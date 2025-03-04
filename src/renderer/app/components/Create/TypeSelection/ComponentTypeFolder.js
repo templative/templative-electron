@@ -1,10 +1,9 @@
 import React from "react";
-import {componentTypeHasAllFilteredTags, matchesSearch} from "../../TagFilter"
 import ComponentType from "./ComponentType";
 import StockComponentType from "./StockComponentType";
 import ColorGroupedStockComponents from "./ColorGroupedStockComponents";
 import { extractBaseNameAndColor } from "./ComponentTypeList";
-import { allColorVariations } from "../../../../../../shared/stockComponentColors";
+import { allColorVariations } from "../../../../../shared/stockComponentColors";
 
 // Helper function to extract the base color (like "Green" from "Lime Green" or "Transparent Green")
 const getBaseColor = (color) => {

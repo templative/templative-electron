@@ -3,7 +3,6 @@ import PdfIcon from './TypeIcons/PdfIcon';
 import TabletopPlaygroundIcon from './TypeIcons/TabletopPlaygroundIcon';
 import TabletopSimulatorIcon from './TypeIcons/TabletopSimulatorIcon';
 import TheGameCrafterIcon from './TypeIcons/theGameCrafterIcon';
-import StockComponentType from './StockComponentType';
 
 export const getExportRouteInfo = (componentInfo) => {
     return {

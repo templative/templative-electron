@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { addSpaces } from './ComponentType';
 import './StockComponentType.css';
-import { allColorVariations, getColorValueHex } from "../../../../../../shared/stockComponentColors";
+import { allColorVariations, getColorValueHex } from "../../../../../shared/stockComponentColors";
 
 // Helper function to get a CSS color value from a color name
 
