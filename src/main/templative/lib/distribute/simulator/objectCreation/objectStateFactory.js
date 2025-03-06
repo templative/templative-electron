@@ -2,6 +2,7 @@ const fs = require('fs').promises;
 const path = require('path');
 const chalk = require('chalk');
 const { createDeck } = require('./deckCreator.js');
+const { createDie } = require("./customDieCreator.js")
 const { createStock } = require('./stockCreator.js');
 const { createComponentLibraryChest } = require('../simulatorTemplates/objectState.js');
 const COMPONENT_INFO = require('../../../../../../shared/componentInfo.js').COMPONENT_INFO;
@@ -57,7 +58,7 @@ async function createObjectState(componentDirectoryPath, tabletopSimulatorDirect
   const supportedInstructionTypes = {
     "DECK": createDeck,
     "BOARD": createDeck,
-    
+    "CustomDie": createDie
   };
 
   const componentTypeTokens = componentInstructions.type.split("_");
@@ -83,13 +84,15 @@ async function createObjectState(componentDirectoryPath, tabletopSimulatorDirect
   }
   const simulatorTask = componentInfo.SimulatorCreationTask;
 
-  let totalCount = 0;
-  for (const instruction of componentInstructions.frontInstructions) {
-    totalCount += instruction.quantity;
-  }
-
-  if (totalCount === 0) {
-    return null;
+  if (componentInstructions.frontInstructions) {
+    let totalCount = 0;
+    for (const instruction of componentInstructions.frontInstructions) {
+      totalCount += instruction.quantity;
+    }
+  
+    if (totalCount === 0) {
+      return null;
+    }
   }
 
   if (simulatorTask === "none") {
@@ -102,7 +105,7 @@ async function createObjectState(componentDirectoryPath, tabletopSimulatorDirect
     return null;
   }
   const instruction = supportedInstructionTypes[simulatorTask];
-  console.log(`Creating ${componentInstructions.uniqueName}`);
+  console.log(`Creating ${componentInstructions.uniqueName || componentInstructions.name}`);
   return await instruction(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal);
 }
 

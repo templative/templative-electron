@@ -247,7 +247,84 @@ async function copyBackImageToImages(componentName, backInstructions, tabletopSi
   }
 }
 
+async function createD6CompositeImage(name, color, filepaths) {
+  try {
+    // Create a square image 2048x2048px with the specified color
+    const imageSize = 2048;
+    const cellSize = Math.floor(imageSize / 3);
+    
+    // Create base image with the specified color
+    const baseImage = new Image(imageSize, imageSize, {kind: 'RGB'});
+    
+    // Parse the hex color to RGB
+    const r = parseInt(color.slice(1, 3), 16);
+    const g = parseInt(color.slice(3, 5), 16);
+    const b = parseInt(color.slice(5, 7), 16);
+    
+    // Fill the image with the color
+    for (let x = 0; x < imageSize; x++) {
+      for (let y = 0; y < imageSize; y++) {
+        baseImage.setPixelXY(x, y, [r, g, b]);
+      }
+    }
+    
+    // Position mappings for die faces (grid coordinates)
+    const positions = [
+      [0, 2], // Face 1 (position 0)
+      [0, 1], // Face 2 (position 1)
+      [1, 2], // Face 3 (position 2)
+      [1, 1], // Face 4 (position 3)
+      [2, 1], // Face 5 (position 4)
+      [2, 2]  // Face 6 (position 5)
+    ];
+    
+    
+    // Process each die face image
+    for (let i = 0; i < 6; i++) {
+      if (i < filepaths.length) {
+        try {
+          // Load the die face image
+          const faceImage = await safeLoadImage(filepaths[i], [cellSize, cellSize]);
+          
+          // Resize the image to fit the cell size
+          let resizedFaceImage = faceImage.resize({
+            width: cellSize,
+            height: cellSize
+          });
+          
+          // Rotate the image 180 degrees for faces 1 and 6 (index 0 and 5)
+          if (i === 0 || i === 5) {
+            resizedFaceImage = resizedFaceImage.rotate(180);
+          }
+          
+          // Calculate position
+          const [col, row] = positions[i];
+          console.log(`Placing ${filepaths[i]} at ${col}, ${row}`);
+          const x = col * cellSize;
+          const y = row * cellSize;
+          
+          // Paint the resized face onto the base image
+          paintImageOnto(baseImage, resizedFaceImage, x, y);
+        } catch (error) {
+          console.log(chalk.yellow(`Warning: Could not load die face ${i+1} from ${filepaths[i]}: ${error}`));
+          // Continue with other faces
+        }
+      }
+    }
+    const imageUrl = await uploadToS3(baseImage);
+    if (!imageUrl) {
+      console.log(chalk.red(`!!! Failed to upload die image for ${name}`));
+      return null;
+    }
+    return imageUrl;
+  } catch (error) {
+    console.log(chalk.red(`!!! Error creating D6 composite image for ${name}: ${error}`));
+    return null;
+  }
+}
+
 module.exports = {
   createCompositeImage,
-  placeAndUploadBackImage
+  placeAndUploadBackImage,
+  createD6CompositeImage
 }; 
