@@ -26,11 +26,13 @@
         "fullMake": "bash ./build.sh fullMake",
         "fullPublish": "bash ./build.sh fullPublish",
         "test": "node ./scripts/test-cli.js",
+        "test-distribute": "node ./scripts/test-distribute.js",
         "analyze-images": "node ./scripts/imageTreeGenerator.js",
         "export-audit": "node ./scripts/exportAudit.js",
         "update-component-info": "node ./scripts/updateComponentInfoBasedOnRules.js",
         "design-meeple": "dotenv -- node ./scripts/meepleDesigner.js",
-        "create-cylinders": "node ./scripts/cylinderCreator.js"
+        "create-cylinders": "node ./scripts/cylinderCreator.js",
+        "create-cylinder-objects": "node ./scripts/cylinderObjectCreator.js"
     },
     "dependencies": {
         "@anthropic-ai/sdk": "^0.18.0",

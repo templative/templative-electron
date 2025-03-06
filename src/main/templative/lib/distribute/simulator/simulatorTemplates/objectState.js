@@ -1,10 +1,11 @@
 const { createHash } = require('crypto');
+const chalk = require('chalk');
 
 function md5(str) {
   return createHash('md5').update(str).digest('hex');
 }
-
-const { CYLINDER_COLORS } = require('../../../../../../shared/cylinderColors');
+const { getColorValueRGB, getColorValueHex } = require('../../../../../../shared/stockComponentColors');
+const WHITE_COLOR_DIFFUSE = { r: 1.0, g: 1.0, b: 1.0}
 
 const STANDARD_ATTRIBUTES = {
   LuaScript: "",
@@ -29,8 +30,30 @@ const STANDARD_TRANSFORM = { posX: 0, posY: 0, posZ: 0, rotX: 0, rotY: 0, rotZ: 
 const tableLength = 7.5;
 const shrinkFactor = 0.75;
 
+function createBagForObject(object, quantity, name, colorDiffuse = WHITE_COLOR_DIFFUSE) {
+  if (quantity == 1) {
+    return object;
+  }
+  return {
+    Name: "Bag",
+    Transform: {
+      posX: 0, posY: 3, posZ: -20, 
+      rotX: 0, rotY: 180, rotZ: 0, 
+      scaleX: 1, scaleY: 1, scaleZ: 1
+    },
+    Nickname: name,
+    ColorDiffuse: colorDiffuse,
+    Locked: true,    
+    HideWhenFaceDown: false,
+    Hands: false,
+    ContainedObjects: Array(quantity).fill().map(() => ({...object, GUID: md5(name + Math.random()).slice(0, 6)})),
+    GUID: "chest" + md5(name).slice(0, 6),
+    ...STANDARD_ATTRIBUTES
+  }
+}
+
 function createComponentLibraryChest(componentStates, name = "ComponentLibrary", isInfinite = false, colorDiffuse = null) {
-  console.log('createComponentLibraryChest params:', { componentStates, name, isInfinite, colorDiffuse });
+  // console.log(`Creating a component library chest ${name} isInfinite: ${isInfinite} colorDiffuse: ${colorDiffuse}`);
   return {
     Name: isInfinite ? "Infinite_Bag" : "Bag",
     Transform: {
@@ -198,13 +221,14 @@ function createCardObjectState(guid, cardPrefix, name, imageUrls, simulatorCompo
   };
 }
 
-function createStandardDie(name, numberSides, sizeInches, colorRGBOutOfOne, isMetal=false) {
-  console.log(`Creating a standard d${numberSides} die: ${name} color: ${colorRGBOutOfOne} isMetal: ${isMetal}`);
+function createStandardDie(name, quantity, numberSides, sizeInches, colorRGBOutOfOne, isMetal=false) {
+  console.log(`Creating a standard d${numberSides} die: ${name} color: ${colorRGBOutOfOne[0]}, ${colorRGBOutOfOne[1]}, ${colorRGBOutOfOne[2]} isMetal: ${isMetal}`);
   const guid = md5(name).slice(0, 6);
+  
   const colorDiffuse = {
-    r: colorRGBOutOfOne.r / 255.0,
-    g: colorRGBOutOfOne.g / 255.0,
-    b: colorRGBOutOfOne.b / 255.0
+    r: colorRGBOutOfOne[0],
+    g: colorRGBOutOfOne[1],
+    b: colorRGBOutOfOne[2]
   };
   const die = {
     Name: `Die_${numberSides}`,
@@ -225,16 +249,16 @@ function createStandardDie(name, numberSides, sizeInches, colorRGBOutOfOne, isMe
     RotationValues: getDieRotationValues(numberSides),
     ...STANDARD_ATTRIBUTES
   };
-  return createComponentLibraryChest([die], `${name} Bag`, true, colorDiffuse);
+  return createBagForObject(die, quantity, `${name} Bag`, colorDiffuse);
 }
 
-function createStockCube(name, sizeInchesXYZ, color) {
-  console.log(`Creating a stock cube ${name} size: ${sizeInchesXYZ} color: ${color}`);
+function createStockCube(name, quantity, sizeInchesXYZ, colorRGBOutOfOne) {
+  console.log(`Creating a stock cube ${name} size: ${sizeInchesXYZ} color: ${colorRGBOutOfOne[0]}, ${colorRGBOutOfOne[1]}, ${colorRGBOutOfOne[2]}`);
   const guid = md5(name).slice(0, 6);
   const colorDiffuse = {
-    r: color.r / 255.0,
-    g: color.g / 255.0,
-    b: color.b / 255.0
+    r: colorRGBOutOfOne[0],
+    g: colorRGBOutOfOne[1],
+    b: colorRGBOutOfOne[2]
   };
   const cube = {
     Name: "BlockSquare",
@@ -251,13 +275,13 @@ function createStockCube(name, sizeInchesXYZ, color) {
     GUID: guid,
     ...STANDARD_ATTRIBUTES
   };
-  return createComponentLibraryChest([cube], `${name} Bag`, true, colorDiffuse);
+  return createBagForObject(cube, quantity, `${name} Bag`, colorDiffuse);
 }
 
-function createStockModel(name, objUrl, textureUrl, normalMapUrl) {
+function createStockModel(name, quantity, objUrl, textureUrl, normalMapUrl) {
   console.log(`Creating a stock model ${name} objUrl: ${objUrl} textureUrl: ${textureUrl} normalMapUrl: ${normalMapUrl}`);
   const guid = md5(name).slice(0, 6);
-  return {
+  const model =  {
     GUID: guid,
     Name: "Custom_Model",
     Transform: STANDARD_TRANSFORM,
@@ -283,13 +307,14 @@ function createStockModel(name, objUrl, textureUrl, normalMapUrl) {
     },
     ...STANDARD_ATTRIBUTES
   }
+  return createBagForObject(model, quantity, `${name} Bag`, WHITE_COLOR_DIFFUSE);
 }
 
-function createStandee(name, frontImageUrl, backImageUrl) {
+function createStandee(name, quantity, frontImageUrl, backImageUrl) {
   console.log(`Creating a standee ${name} frontImageUrl: ${frontImageUrl}`);
   const guid = md5(name).slice(0, 6);
   const scale = 0.750000238;
-  return {
+  const model = {
     GUID: guid,
     Name: "Figurine_Custom",
     Transform: {
@@ -315,9 +340,10 @@ function createStandee(name, frontImageUrl, backImageUrl) {
     },
     ...STANDARD_ATTRIBUTES
   }
+  return createBagForObject(model, quantity, `${name} Bag`, WHITE_COLOR_DIFFUSE);
 }
 
-function createTokenWithDefinedShape(name, frontImageUrl, backImageUrl, shape) {
+function createTokenWithDefinedShape(name, quantity, frontImageUrl, backImageUrl, shape) {
   console.log(`Creating a token with a defined shape ${name} frontImageUrl: ${frontImageUrl} shape: ${shape}`);
   const guid = md5(name).slice(0, 6);
   const shapeIndex = {
@@ -327,7 +353,7 @@ function createTokenWithDefinedShape(name, frontImageUrl, backImageUrl, shape) {
     "Rounded": 3
   }
   const customTileShapeType = shapeIndex[shape]
-  return {
+  const model = {
     GUID: guid,
     Name: "Custom_Tile",
     Transform: STANDARD_TRANSFORM,
@@ -356,60 +382,59 @@ function createTokenWithDefinedShape(name, frontImageUrl, backImageUrl, shape) {
     },
     ...STANDARD_ATTRIBUTES
   }
+  return createBagForObject(model, quantity, `${name} Bag`, WHITE_COLOR_DIFFUSE);
 }
 
-function createFlatTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl) {
-  return createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl, 0.2, false, true);
+function createFlatTokenWithTransparencyBasedShape(name, quantity, frontImageUrl, backImageUrl) {
+  return createTokenWithTransparencyBasedShape(name, quantity, frontImageUrl, backImageUrl, 0.2, false, true);
 }
-function createThickTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl) {
-  return createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl, 1.0, true, false);
+function createThickTokenWithTransparencyBasedShape(name, quantity, frontImageUrl, backImageUrl) {
+  return createTokenWithTransparencyBasedShape(name, quantity, frontImageUrl, backImageUrl, 1.0, true, false);
 }
-function createStockCylinder(name, colorHex, widthMillimeters, heightMillimeters) {
-  const imageUrl = CYLINDER_COLORS[`${widthMillimeters}mm_${colorHex.replace("#", "")}`];
-  const tallestPossibleCylinderMillimeters = 30;
-  const heightScale = heightMillimeters / tallestPossibleCylinderMillimeters;
+function createStockCylinder(name, quantity, colorHex, widthMillimeters, heightMillimeters) {
   const guid = md5(name).slice(0, 6);
-  const scale = 0.25
-  console.log(`Creating a cylinder ${name} color: ${colorHex} width: ${widthMillimeters}mm height: ${heightMillimeters}mm heightScale: ${heightScale}`);
-  return {
+  const longName = `${name} ${colorHex} ${widthMillimeters}x${heightMillimeters}mm`;
+  console.log(`Creating a cylinder ${longName}`);
+  const colors = getColorValueRGB(colorHex);
+  const colorDiffuse = {
+    r: colors[0],
+    g: colors[1],
+    b: colors[2]
+  };
+  const model = {
     GUID: guid,
-    Name: "Custom_Token",
+    Name: "Custom_Model",
     Transform: {
       posX: 0, posY: 0, posZ: 0, rotX: 0, rotY: 0, rotZ: 0,
-      scaleX: scale, scaleY: 1, scaleZ: scale
+      scaleX: 1, scaleY: 1, scaleZ: 1
     },
-    Nickname: name,
-    ColorDiffuse: {
-      r: 1.0,
-      g: 1.0,
-      b: 1.0
-    },
+    Nickname: longName,
+    ColorDiffuse: WHITE_COLOR_DIFFUSE,
     LayoutGroupSortIndex: 0,
     Value: 0,
     Locked: false,    
     HideWhenFaceDown: false,
     Hands: false,
-    CustomImage: {
-      ImageURL: imageUrl,
-      ImageSecondaryURL: imageUrl,
-      ImageScalar: 1.0,
-      WidthScale: 0.0,
-      CustomToken: {
-        Thickness: heightScale,
-        MergeDistancePixels: 15.0,
-        StandUp: false,
-        Stackable: true
-      }
-    },
+    CustomMesh: {
+      MeshURL: `https://templative-simulator-images.s3.amazonaws.com/${widthMillimeters}mm_${heightMillimeters}mm.obj`,
+      DiffuseURL: `https://templative-simulator-images.s3.amazonaws.com/texture_${colorHex.replace("#", "")}.png`,
+      NormalURL: `https://templative-simulator-images.s3.amazonaws.com/cylinder_normal.png`,
+      ColliderURL: "",
+      Convex: true,
+      MaterialIndex: 1,
+      TypeIndex: 5,
+      CastShadows: true
+      },
     ...STANDARD_ATTRIBUTES
   }
+  return createBagForObject(model, quantity, `${longName} Bag`, colorDiffuse);
 }
 
-function createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl, thickness = 0.2, isStandUp = false, isStackable = true) {
+function createTokenWithTransparencyBasedShape(name, quantity, frontImageUrl, backImageUrl, thickness = 0.2, isStandUp = false, isStackable = true) {
   console.log(`Creating a token with a transparency based shape ${name} frontImageUrl: ${frontImageUrl} thickness: ${thickness} isStandUp: ${isStandUp} isStackable: ${isStackable}`);
   const guid = md5(name).slice(0, 6);
   const scale = 0.25
-  return {
+  const model = {
     GUID: guid,
     Name: "Custom_Token",
     Transform: {
@@ -417,11 +442,7 @@ function createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl
       scaleX: scale, scaleY: scale, scaleZ: scale
     },
     Nickname: name,
-    ColorDiffuse: {
-      r: 1.0,
-      g: 1.0,
-      b: 1.0
-    },
+    ColorDiffuse: WHITE_COLOR_DIFFUSE,
     LayoutGroupSortIndex: 0,
     Value: 0,
     Locked: false,    
@@ -441,9 +462,10 @@ function createTokenWithTransparencyBasedShape(name, frontImageUrl, backImageUrl
     },
     ...STANDARD_ATTRIBUTES
   }
+  return createBagForObject(model, quantity, `${name} Bag`, WHITE_COLOR_DIFFUSE);
 }
 
-function createCustomDie(name, imageUrl, numberSides) {
+function createCustomDie(name, quantity, imageUrl, numberSides) {
   console.log(`Creating a custom die ${name} imageUrl: ${imageUrl} numberSides: ${numberSides}`);
   const guid = md5(name).slice(0, 6);
   const dieTypes = {
@@ -462,16 +484,12 @@ function createCustomDie(name, imageUrl, numberSides) {
     throw new Error(`Unsupported die type: d${numberSides}. Only d4, d6, d8, d10, d12, and d20 are supported.`);
   }
   
-  return {
+  const model = {
     GUID: guid,
     Name: "Custom_Dice",
     Transform: STANDARD_TRANSFORM,
     Nickname: name,
-    ColorDiffuse: {
-      r: 1.0,
-      g: 1.0,
-      b: 1.0
-    },
+    ColorDiffuse: WHITE_COLOR_DIFFUSE,
     LayoutGroupSortIndex: 0,
     Value: 0,
     Locked: false,
@@ -489,6 +507,7 @@ function createCustomDie(name, imageUrl, numberSides) {
     RotationValues: rotationValues,
     ...STANDARD_ATTRIBUTES
   };
+  return createBagForObject(model, quantity, `${name} Bag`, WHITE_COLOR_DIFFUSE);
 }
 
 function getDieRotationValues(numberSides) {
@@ -594,11 +613,7 @@ function createCustomPDF(name, pdfUrl) {
       scaleX: 1.0, scaleY: 1.0, scaleZ: 1.0
     },
     Nickname: name,
-    ColorDiffuse: {
-      r: 1.0,
-      g: 1.0,
-      b: 1.0
-    },
+    ColorDiffuse: WHITE_COLOR_DIFFUSE,
     LayoutGroupSortIndex: 0,
     Value: 0,
     Locked: false,
@@ -617,7 +632,7 @@ function createCustomPDF(name, pdfUrl) {
 function createDomino(name) {
   console.log(`Creating a domino ${name}`);
   const guid = md5(name).slice(0, 6);
-  return {
+  const model = {
     GUID: guid,
     Name: "Domino",
     Transform: {
@@ -626,11 +641,7 @@ function createDomino(name) {
       scaleX: 1.0, scaleY: 1.0, scaleZ: 1.0
     },
     Nickname: name,
-    ColorDiffuse: {
-      r: 0.7867647,
-      g: 0.7867647,
-      b: 0.7867647
-    },
+    ColorDiffuse: WHITE_COLOR_DIFFUSE,
     LayoutGroupSortIndex: 0,
     Value: 0,
     Locked: false,
@@ -638,13 +649,14 @@ function createDomino(name) {
     Hands: true,
     ...STANDARD_ATTRIBUTES
   };
+  return createBagForObject(model, quantity, `${name} Bag`, WHITE_COLOR_DIFFUSE);
 }
 
-function createBaggie(name, colorDiffuse = null, isInfinite = false) {
+function createBaggie(name, quantity, colorDiffuse = null, isInfinite = false) {
   const guid = md5(name).slice(0, 6);
-  return {
+  const bag = {
     GUID: guid,
-    Name: isInfinite ? "Infinite_Bag" : "Bag",
+    Name: "Bag",
     Transform: {
       posX: 0, posY: 1, posZ: 0, 
       rotX: 0, rotY: 0, rotZ: 0, 
@@ -666,11 +678,16 @@ function createBaggie(name, colorDiffuse = null, isInfinite = false) {
     },
     ...STANDARD_ATTRIBUTES
   };
+  return createBagForObject(bag, quantity, `${name} Bag`, colorDiffuse);
 }
-
-function createPokerChip(name, chipValue, colorDiffuse = null) {
+function createPokerChip(name, quantity, chipValue, colorDiffuse = null) {
   const guid = md5(name).slice(0, 6);
-  return {
+  const diffuse = colorDiffuse || {
+    r: 1.0,
+    g: 1.0,
+    b: 1.0
+  }
+  const model = {
     GUID: guid,
     Name: `Chip_${chipValue}`,
     Transform: {
@@ -679,11 +696,7 @@ function createPokerChip(name, chipValue, colorDiffuse = null) {
       scaleX: 1.0, scaleY: 1.0, scaleZ: 1.0
     },
     Nickname: name,
-    ColorDiffuse: colorDiffuse || {
-      r: 1.0,
-      g: 1.0,
-      b: 1.0
-    },
+    ColorDiffuse: diffuse,
     LayoutGroupSortIndex: 0,
     Value: 0,
     Locked: false,
@@ -691,6 +704,7 @@ function createPokerChip(name, chipValue, colorDiffuse = null) {
     Hands: false,
     ...STANDARD_ATTRIBUTES
   };
+  return createBagForObject(model, quantity, `${name} Bag`, diffuse);
 }
 
 module.exports = { 

@@ -1,5 +1,12 @@
 module.exports = {
   entry: './src/main/main.js',
+  mode: 'development',
+  cache: {
+    type: 'filesystem',
+    buildDependencies: {
+      config: [__filename]
+    }
+  },
   module: {
     rules: [
       {
@@ -15,10 +22,20 @@ module.exports = {
             outputAssetBase: 'native_modules',
           },
         },
+        exclude: /node_modules/
       }
     ],
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json']
   },
+  externals: [
+    'electron',
+    'fs',
+    'path',
+    'os',
+    'crypto',
+    'child_process'
+  ],
+  devtool: 'eval-cheap-module-source-map'
 };

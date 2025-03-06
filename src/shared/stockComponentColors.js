@@ -123,7 +123,7 @@ const getColorValueRGB = (colorName) => {
   const g = parseInt(hex.substring(2, 4), 16) / 255.0;
   const b = parseInt(hex.substring(4, 6), 16) / 255.0;
   
-  return { r, g, b };
+  return [r,g,b];
 };
 module.exports = {
     colors,

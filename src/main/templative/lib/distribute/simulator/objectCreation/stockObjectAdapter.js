@@ -35,12 +35,27 @@ function standardDieAdapter(componentInstructions, stockPartInfo) {
   const componentTypeTokens = componentInstructions.type.split("_");
   const stockType = componentTypeTokens[1];
 
-  const sizeStr = stockType.slice(2).split("mm")[0];
+  // First let's extract size if present
+  const sizeStr = stockType.match(/(?:^|[\s,])([0-9]+)mm/)?.[1] || '16';
   const sizeInches = parseFloat(sizeStr) / 25.4; // Convert mm to inches
 
+  // Extract die type with improved regex that handles D4, D6, D8, D10, D12, D20 
+  // regardless of what follows (color, dimensions, etc.)
+  const dieTypeMatch = stockType.match(/D(4|6|8|10|12|20)/);
+  
+  // Parse the number of sides or default to 6
+  let numberSides = 6;
+  if (dieTypeMatch) {
+    numberSides = parseInt(dieTypeMatch[1]);
+    console.log(chalk.blue(`Detected die with ${numberSides} sides from type: ${stockType}`));
+  } else {
+    console.log(chalk.yellow(`Could not detect die type from ${stockType}, defaulting to D6`));
+  }
+// console.log(stockPartInfo.Color)
   return {
     name: componentInstructions.name,
-    numberSides: stockType.startsWith("D") ? parseInt(stockType.match(/D(\d+)/)[1]) : 6,
+    quantity: componentInstructions.quantity,
+    numberSides: numberSides,
     sizeInches: sizeInches,
     colorRGBOutOfOne: getColorValueRGB(stockPartInfo.Color),
     isMetal: componentInstructions.type.toUpperCase().includes("METAL")
@@ -62,15 +77,16 @@ function customDieAdapter(componentInstructions, stockPartInfo) {
   const componentTypeTokens = componentInstructions.type.split("_");
   const stockType = componentTypeTokens[1];
   
-  // Extract die type (e.g., D4, D6, D8, D10, D12, D20)
-  const dieTypeMatch = stockType.match(/D(\d+)/);
+  // Extract die type with improved regex
+  const validSides = [4, 6, 8, 10, 12, 20];
+  // Simplified pattern to just match the die type
+  const dieTypeMatch = stockType.match(/D(4|6|8|10|12|20)/);
   if (!dieTypeMatch) {
     console.log(chalk.red(`!!! Invalid custom die type: ${stockType}. Expected D4, D6, D8, D10, D12, or D20`));
     return null;
   }
 
   const numberSides = parseInt(dieTypeMatch[1]);
-  const validSides = [4, 6, 8, 10, 12, 20];
   if (!validSides.includes(numberSides)) {
     console.log(chalk.red(`!!! Unsupported die type: D${numberSides}. Only D4, D6, D8, D10, D12, and D20 are supported.`));
     return null;
@@ -78,6 +94,7 @@ function customDieAdapter(componentInstructions, stockPartInfo) {
 
   return {
     name: componentInstructions.name,
+    quantity: componentInstructions.quantity,
     imageUrl: stockPartInfo.ImageUrl,
     numberSides: numberSides
   };
@@ -90,7 +107,6 @@ function customDieAdapter(componentInstructions, stockPartInfo) {
  * @returns {Object|null} - Parameters for createStockCube or null if invalid
  */
 function stockCubeAdapter(componentInstructions, stockPartInfo) {
-
   if (!stockPartInfo.hasOwnProperty("Color")) {
     console.log(chalk.red(`!!! Missing Color for ${componentInstructions.type}`));
     return null;
@@ -99,18 +115,41 @@ function stockCubeAdapter(componentInstructions, stockPartInfo) {
   const componentTypeTokens = componentInstructions.type.split("_");
   const stockType = componentTypeTokens[1];
   
-  if (!stockType.startsWith("Cube")) {
-    console.log(chalk.red(`!!! Invalid cube type: ${stockType}. Expected Cube*`));
+  // Accept both Cube* and Block* formats
+  if (!stockType.startsWith("Cube") && !stockType.startsWith("Block")) {
+    console.log(chalk.red(`!!! Invalid cube/block type: ${stockType}. Expected Cube* or Block*`));
     return null;
   }
 
-  const sizeStr = stockType.slice(4).split("mm")[0];
+  // Extract size in mm, handling both formats
+  let sizeStr;
+  if (stockType.startsWith("Cube")) {
+    sizeStr = stockType.slice(4).split("mm")[0];
+  } else { // Block format
+    // Extract from Block format (e.g., Block1x2Red)
+    const blockMatch = stockType.match(/Block(\d+)x(\d+)/);
+    if (blockMatch) {
+      // For Block types, use a default size of 8mm if not specified elsewhere
+      sizeStr = '8';
+    } else {
+      sizeStr = '16'; // Default if no size is found
+    }
+  }
+  
   const sizeInches = parseFloat(sizeStr) / 25.4; // Convert mm to inches
 
-  // Check for block dimensions in DisplayName such as 1x3
+  // Check for block dimensions in the type or DisplayName
   let sizeInchesXYZ = [sizeInches, sizeInches, sizeInches]; // Default cube dimensions
   
-  if (stockPartInfo.hasOwnProperty("DisplayName")) {
+  // First try to extract from the stockType for Block format
+  const blockTypeMatch = stockType.match(/Block(\d+)x(\d+)/);
+  if (blockTypeMatch) {
+    const xDimension = parseInt(blockTypeMatch[1]);
+    const zDimension = parseInt(blockTypeMatch[2]);
+    sizeInchesXYZ = [sizeInches * xDimension, sizeInches, sizeInches * zDimension];
+  }
+  // Then check DisplayName as a fallback
+  else if (stockPartInfo.hasOwnProperty("DisplayName")) {
     const blockMatch = stockPartInfo.DisplayName.match(/Block\s+(\d+)x(\d+)/i);
     if (blockMatch) {
       const xDimension = parseInt(blockMatch[1]);
@@ -121,6 +160,7 @@ function stockCubeAdapter(componentInstructions, stockPartInfo) {
 
   return {
     name: componentInstructions.name,
+    quantity: componentInstructions.quantity,
     sizeInchesXYZ: sizeInchesXYZ,
     color: getColorValueRGB(stockPartInfo.Color)
   };
@@ -145,6 +185,7 @@ function stockModelAdapter(componentInstructions, stockPartInfo) {
 
   return {
     name: componentInstructions.name,
+    quantity: componentInstructions.quantity,
     objUrl: stockPartInfo["3DModel"]["ObjUrl"],
     textureUrl: stockPartInfo["3DModel"]["TextureUrl"],
     normalMapUrl: stockPartInfo["3DModel"]["NormalMapUrl"]
@@ -179,6 +220,7 @@ function standeeAdapter(componentInstructions, stockPartInfo) {
 
   return {
     name: componentInstructions.name,
+    quantity: componentInstructions.quantity,
     frontImageUrl: frontImageUrl,
     backImageUrl: backImageUrl
   };
@@ -214,6 +256,7 @@ function tokenWithDefinedShapeAdapter(componentInstructions, stockPartInfo) {
 
   return {
     name: componentInstructions.name,
+    quantity: componentInstructions.quantity,
     frontImageUrl: stockPartInfo.FrontImageUrl,
     backImageUrl: backImageUrl,
     shape: stockPartInfo.Shape
@@ -234,6 +277,7 @@ function flatTokenWithTransparencyBasedShapeAdapter(componentInstructions, stock
 
   return {
     name: componentInstructions.name,
+    quantity: componentInstructions.quantity,
     frontImageUrl: stockPartInfo.PreviewUri,
     backImageUrl: stockPartInfo.PreviewUri
   };
@@ -252,6 +296,7 @@ function thickTokenWithTransparencyBasedShapeAdapter(componentInstructions, stoc
 
   return {
     name: componentInstructions.name,
+    quantity: componentInstructions.quantity,
     frontImageUrl: stockPartInfo.PreviewUri,
     backImageUrl: stockPartInfo.PreviewUri
   };
@@ -293,6 +338,7 @@ function dominoAdapter(componentInstructions, stockPartInfo) {
 
   return {
     name: componentInstructions.name,
+    quantity: componentInstructions.quantity,
     colorDiffuse: colorDiffuse,
     meshIndex: stockPartInfo.MeshIndex || 14,
     materialIndex: stockPartInfo.MaterialIndex || 0
@@ -314,6 +360,7 @@ function baggieAdapter(componentInstructions, stockPartInfo) {
 
   return {
     name: componentInstructions.name,
+    quantity: componentInstructions.quantity,
     colorDiffuse: colorDiffuse,
     isInfinite: stockPartInfo.IsInfinite || false
   };
@@ -344,6 +391,7 @@ function pokerChipAdapter(componentInstructions, stockPartInfo) {
 
   return {
     name: componentInstructions.name,
+    quantity: componentInstructions.quantity,
     chipValue: stockPartInfo.ChipValue,
     colorDiffuse: colorDiffuse
   };
@@ -394,6 +442,7 @@ function cylinderAdapter(componentInstructions, stockPartInfo) {
   }
   return {
     name: componentInstructions.name,
+    quantity: componentInstructions.quantity,
     colorHex: colorHex,
     widthMillimeters: widthMillimeters,
     heightMillimeters: heightMillimeters

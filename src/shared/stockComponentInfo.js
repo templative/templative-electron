@@ -23587,7 +23587,7 @@ const STOCK_COMPONENT_INFO = {
     "IsDisabled": false
   },
   "Cylinder15mmx8mmYellow": {
-    "DisplayName": "Cylinder, 15mm x 8mm, Yellow",
+    "DisplayName": "Cylinder, 8m x 15mm, Yellow",
     "Description": "A 15mm tall wooden cylinder.",
     "GameCrafterGuid": "3220B5D6-2602-11E8-A307-E8BD9483A17B",
     "GameCrafterSkuId": "32266170-2602-11E8-A307-E8BD9483A17B",
@@ -23624,7 +23624,7 @@ const STOCK_COMPONENT_INFO = {
     "IsDisabled": false
   },
   "Cylinder18mmx10mmYellow": {
-    "DisplayName": "Cylinder, 18mm x 10mm, Yellow",
+    "DisplayName": "Cylinder, 10mm x 18mm, Yellow",
     "Description": "An 18mm tall cylinder.",
     "GameCrafterGuid": "0A9881A8-1BFB-11E8-83AA-B74D94A6FE1D",
     "GameCrafterSkuId": "0A9B6FEE-1BFB-11E8-83AA-B74D94A6FE1D",
@@ -23661,7 +23661,7 @@ const STOCK_COMPONENT_INFO = {
     "IsDisabled": false
   },
   "Cylinder30mmx14mmNatural": {
-    "DisplayName": "Cylinder, 30mm x 14mm, Natural",
+    "DisplayName": "Cylinder, 14mm x 30mm, Natural",
     "Description": "A cylinder 30mm tall by 14mm wide.",
     "GameCrafterGuid": "DA74F04E-1BF3-11E8-A0F5-113E94A6FE1D",
     "GameCrafterSkuId": "DA7E1AF2-1BF3-11E8-A0F5-113E94A6FE1D",
@@ -24288,7 +24288,7 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": true
   },
   "D316mmRoundedNumeralBlue": {
     "DisplayName": "D3, 16mm, Rounded, Numeral, Blue",
@@ -58218,7 +58218,7 @@ const STOCK_COMPONENT_INFO = {
     "IsDisabled": false
   },
   "Octbox7mmBlue": {
-    "DisplayName": "Octbox, 7mm, Blue",
+    "DisplayName": "Octbox, 10mm x 7mm, Blue",
     "Description": "A wooden 7mm tall x 10mm wide octagonal cylinder which can be used in euro-style resource management games.",
     "GameCrafterGuid": "3A573850-2BF2-11E9-BFF8-E8FADFAC8D83",
     "GameCrafterSkuId": "3A5AF9C2-2BF2-11E9-BFF8-E8FADFAC8D83",
@@ -58245,7 +58245,7 @@ const STOCK_COMPONENT_INFO = {
     "IsDisabled": false
   },
   "Octbox7mmGray": {
-    "DisplayName": "Octbox, 7mm, Gray",
+    "DisplayName": "Octbox, 10mm x 7mm, Gray",
     "Description": "A wooden 7mm tall x 10mm wide octagonal cylinder which can be used in euro-style resource management games.",
     "GameCrafterGuid": "E6C02854-2BF2-11E9-BFF8-EFFBDFAC8D83",
     "GameCrafterSkuId": "E6C453AC-2BF2-11E9-BFF8-EFFBDFAC8D83",
@@ -58272,7 +58272,7 @@ const STOCK_COMPONENT_INFO = {
     "IsDisabled": false
   },
   "Octbox7mmPurple": {
-    "DisplayName": "Octbox, 7mm, Purple",
+    "DisplayName": "Octbox, 10mm x 7mm, Purple",
     "Description": "A wooden 7mm tall x 10mm wide octagonal cylinder which can be used in euro-style resource management games.",
     "GameCrafterGuid": "BBB8A190-2BF2-11E9-BFF8-A7FBDFAC8D83",
     "GameCrafterSkuId": "BBBB05FC-2BF2-11E9-BFF8-A7FBDFAC8D83",
@@ -81950,7 +81950,7 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": true
   },
   "D612mmCaramel": {
     "DisplayName": "D6, 12mm, Caramel",
