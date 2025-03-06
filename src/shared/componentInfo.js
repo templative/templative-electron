@@ -1807,7 +1807,7 @@ const COMPONENT_INFO = {
     "GameCrafterPackagingDepthMillimeters": 16.002,
     "HasPieceData": true,
     "HasPieceQuantity": false,
-    "ArtDataTypeNames": [],
+    "ArtDataTypeNames": ["DieFace"],
     "Tags": [
       "die",
       "d6",
@@ -1815,8 +1815,8 @@ const COMPONENT_INFO = {
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "PlaygroundCreationTask": "CustomDie",
+    "SimulatorCreationTask": "CustomDie"
   },
   "CustomColorD8": {
     "DisplayName": "CustomColorD8",
