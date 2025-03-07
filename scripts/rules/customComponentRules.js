@@ -70,11 +70,19 @@ module.exports = [
               return ["SimulatorCreationTask", "PlaygroundCreationTask"];
           }
       },
+    //   {
+    //       description: "Components tagged 'tin' or 'hookbox' but not 'accordion' and not 'folio' and not  that aren't tagged 'packaging' are tagged 'packaging'",
+    //       condition: (component) => component.Tags && (component.Tags.includes("tin") || component.Tags.includes("hookbox")) && !component.Tags.includes("packaging") && !component.Tags.includes("accordion") && !component.Tags.includes("folio"),
+    //       setValue: (component) => {
+    //           component.Tags = [...component.Tags, "packaging"];
+    //           return ["Tags"];
+    //       }
+    //   },
       {
-          description: "Components tagged 'tin' or 'hookbox' that aren't tagged 'packaging' are tagged 'packaging'",
-          condition: (component) => component.Tags && (component.Tags.includes("tin") || component.Tags.includes("hookbox")) && !component.Tags.includes("packaging"),
+          description: "Components tagged 'standee' that aren't tagged 'token' are tagged 'token'",
+          condition: (component) => component.Tags && (component.Tags.includes("standee")) && !component.Tags.includes("token"),
           setValue: (component) => {
-              component.Tags = [...component.Tags, "packaging"];
+              component.Tags = [...component.Tags, "token"];
               return ["Tags"];
           }
       },
@@ -86,5 +94,65 @@ module.exports = [
               component.PlaygroundCreationTask = "none";
               return ["SimulatorCreationTask", "PlaygroundCreationTask"];
           }
-      }
+      },
+      {
+        description: "Anything tagged 'deck' or 'board' gets the Playground/SimulatorCreationTask set to 'DECK'",
+        condition: (component) => component.Tags && (component.Tags.includes("deck") || component.Tags.includes("board")),
+        setValue: (component) => {
+            component.PlaygroundCreationTask = "DECK";
+            component.SimulatorCreationTask = "DECK";
+            return ["PlaygroundCreationTask", "SimulatorCreationTask"];
+        }
+      },
+      {
+        description: "Disable components that whose DisplayName contains 'Acrylic'",
+        condition: (component) => component.DisplayName && component.DisplayName.includes("Acrylic"),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            return ["IsDisabled"];
+        }
+    },
+    {
+        description: "Components whose DisplayName contains 'Sticker' are tagged 'stickers'",
+        condition: (component) => component.DisplayName && component.DisplayName.includes("Sticker") && !component.Tags.includes("stickers"),
+        setValue: (component) => {
+            component.Tags = [...component.Tags, "stickers"];
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components whose DisplayName contains 'Book' are tagged 'document'",
+        condition: (component) => component.DisplayName && component.DisplayName.includes("Book") && !component.Tags.includes("document"),
+        setValue: (component) => {
+            component.Tags = [...component.Tags, "document"];
+            return ["Tags"];
+        }
+    },
+    {
+        description: "Components tagged meeple get the Playground/SimulatorCreationTask set to 'Meeple'",
+        condition: (component) => component.Tags && component.Tags.includes("meeple"),
+        setValue: (component) => {
+            component.PlaygroundCreationTask = "Meeple";
+            component.SimulatorCreationTask = "Meeple";
+            return ["PlaygroundCreationTask", "SimulatorCreationTask"];
+        }
+    },
+    {
+        description: "Components tagged 'packaging' get the Playground/SimulatorCreationTask set to 'none'",
+        condition: (component) => component.Tags && component.Tags.includes("packaging"),
+        setValue: (component) => {
+            component.PlaygroundCreationTask = "none";
+            component.SimulatorCreationTask = "none";
+            return ["PlaygroundCreationTask", "SimulatorCreationTask"];
+        }
+    },
+    {
+        // Cut components require another svg for customization, which templative doesn't support
+        description: "Components tagged 'cut' are disabled",
+        condition: (component) => component.Tags && component.Tags.includes("cut"),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            return ["IsDisabled"];
+        }
+    }
   ];

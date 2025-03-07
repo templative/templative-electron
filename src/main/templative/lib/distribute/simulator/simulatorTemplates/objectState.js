@@ -77,7 +77,7 @@ function createComponentLibraryChest(componentStates, name = "ComponentLibrary",
 }
 
 function createDeckObjectState(guid, deckPrefix, name, imageUrls, simulatorComponentPlacement, dimensions, layout, cardQuantities, deckType = 0) {
-  console.log('createDeckObjectState params:', { guid, deckPrefix, name, imageUrls, simulatorComponentPlacement, dimensions, layout, cardQuantities, deckType });
+  console.log(`Creating deck ${name} with ${cardQuantities.reduce((sum, qty) => sum + qty, 0)} cards.`);
   const deckIds = [];
   let cardIndex = 0;
 

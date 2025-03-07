@@ -4,6 +4,7 @@ import ComponentTypeFolder from "./ComponentTypeFolder";
 import ComponentType from "./ComponentType";
 import StockComponentType from "./StockComponentType";
 import ColorGroupedStockComponents from "./ColorGroupedStockComponents";
+import SizeGroupedCustomComponent from "./SizeGroupedCustomComponent";
 import noFileIcon from "../../Edit/noFileIcon.svg";
 import { allColorVariations } from "../../../../../shared/stockComponentColors";
 
@@ -76,6 +77,9 @@ const getColorPrefix = (color) => {
     
     return prefixPart;
 };
+
+// Helper functions for extracting size information
+import { extractBaseNameAndSize } from "./SizeGroupedCustomComponent";
 
 const ComponentTypeList = ({ 
     componentTypeOptions,
@@ -204,18 +208,75 @@ const ComponentTypeList = ({
                 }
             });
         } else {
-            // For non-stock components, keep the original behavior
-            filteredDivs = uncategorizedKeys.map((key) => {
-                const existingQuantity = 0;
-                return <ComponentType 
-                    key={`${key}${search}`} 
-                    name={key} 
-                    componentInfo={componentTypeOptions[key]}
-                    selectTypeCallback={selectTypeCallback}
-                    selectedComponentType={selectedComponentType} 
-                    existingQuantity={existingQuantity}
-                    search={search}    
-                />
+            // For non-stock components, group by size
+            const groupedComponents = {};
+            
+            uncategorizedKeys.forEach(key => {
+                const { baseName, size, isNumeric } = extractBaseNameAndSize(key, componentTypeOptions[key]["DisplayName"]);
+                
+                // Only group if there's a size
+                if (size) {
+                    // Use just the baseName as the grouping key
+                    const groupKey = baseName;
+                    
+                    if (!groupedComponents[groupKey]) {
+                        groupedComponents[groupKey] = [];
+                    }
+                    
+                    groupedComponents[groupKey].push({
+                        key,
+                        size,
+                        isNumeric,
+                        componentInfo: componentTypeOptions[key]
+                    });
+                } else {
+                    // If no size, render as a regular component
+                    filteredDivs.push(
+                        <ComponentType 
+                            key={`${key}${search}`} 
+                            name={key} 
+                            componentInfo={componentTypeOptions[key]}
+                            selectTypeCallback={selectTypeCallback}
+                            selectedComponentType={selectedComponentType} 
+                            existingQuantity={0}
+                            search={search}    
+                        />
+                    );
+                }
+            });
+            
+            // Add grouped components to the filtered divs
+            Object.entries(groupedComponents).forEach(([groupKey, components]) => {
+                // Extract the actual base name (remove the prefix marker if present)
+                const baseName = groupKey.includes('__') ? groupKey.split('__')[0] : groupKey;
+                
+                // Only create a size group if there are multiple components with the same base name
+                if (components.length > 1) {
+                    filteredDivs.push(
+                        <SizeGroupedCustomComponent
+                            key={`${groupKey}${search}`}
+                            baseName={baseName}
+                            components={components}
+                            selectTypeCallback={selectTypeCallback}
+                            selectedComponentType={selectedComponentType}
+                            search={search}
+                        />
+                    );
+                } else if (components.length === 1) {
+                    // If only one component with this base name, render it normally
+                    const component = components[0];
+                    filteredDivs.push(
+                        <ComponentType 
+                            key={`${component.key}${search}`} 
+                            name={component.key} 
+                            componentInfo={component.componentInfo}
+                            selectTypeCallback={selectTypeCallback}
+                            selectedComponentType={selectedComponentType} 
+                            existingQuantity={0}
+                            search={search}    
+                        />
+                    );
+                }
             });
         }
 

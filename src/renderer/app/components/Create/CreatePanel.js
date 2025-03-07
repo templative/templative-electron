@@ -29,7 +29,7 @@ const addSpaces = (str) => {
 }
 
 const customMajorCategories = [
-    "deck", "die", "premium", "board","token","mat","packaging", "box", "document", "blank", 
+    "stickers", "packaging","deck", "die", "premium", "board","token","mat","document", "blank", "screen", "dial"
 ]
 
 const stockMajorCategories = [

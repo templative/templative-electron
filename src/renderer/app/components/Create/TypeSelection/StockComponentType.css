@@ -200,18 +200,19 @@
     display: inline-block;
     vertical-align: top;
     margin: 8px;
-    width: 280px; /* Set a fixed width to ensure components line up in rows */
-    height: 230px; /* Manually set consistent height for all components */
+    width: 280px; /* Fixed width to ensure components line up in rows */
+    height: 230px; /* Fixed height for all components */
 }
 
-/* Ensure consistent button height */
+/* Ensure consistent button height and width */
 .component-type-wrapper .btn.component-type-card,
 .component-type-wrapper .component-type-card {
     width: 100%;
-    height: 230px; /* Match exactly the wrapper height */
+    height: 100%; /* Take full height of wrapper */
     display: flex;
     flex-direction: column;
     margin: 0; /* Remove any margins */
+    box-sizing: border-box; /* Include padding and border in element's size */
 }
 
 /* Ensure stock component and color grouped components have the same layout */
@@ -219,29 +220,33 @@
     width: 100%;
     height: 100%;
     display: flex;
-    padding: 0px;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 .component-type-info {
     display: flex;
     flex-direction: column;
     flex: 1;
+    width: 100%;
 }
 
 /* Ensure preview areas have consistent height */
 .stock-component-preview,
-.color-options-container {
-    /* flex: 1; */
+.color-options-container,
+.size-options-container {
+    flex: 1;
     height: 150px; /* Fixed height for preview areas */
     margin-top: 8px;
-    
-    overflow-x: hidden;
+    overflow: hidden; /* Hide overflow by default */
+}
+
+/* Allow scrolling in options containers when needed */
+.color-options-container,
+.size-options-container {
     overflow-y: auto;
 }
-.stock-component-preview {
-flex: 1;
-}
+
 /* Updated styles for ColorGroupedStockComponents */
 .color-grouped-component-card {
     width: 100%;
@@ -353,4 +358,126 @@ flex: 1;
     border: 1px solid var(--color-accent) !important;
     color: var(--color-accent);
     border-radius: 4px;
+}
+
+/* Styles for SizeGroupedCustomComponent */
+.size-grouped-component-card {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    padding: 6px 12px !important;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+}
+
+.size-options-container {
+    height: 150px;
+    margin-top: 8px;
+    overflow: visible;
+}
+
+/* Size options grid styles */
+.size-options-grid {
+    display: grid;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: visible;
+    padding-top: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 5px 5px;
+}
+
+.size-option-button {
+    background: none;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    transition: all 0.2s ease;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+.size-option-button:hover {
+    transform: translateY(-2px);
+}
+
+.selected-size-option {
+    background-color: var(--color-accent-hover) !important;
+    transform: translateY(-2px);
+}
+
+.size-option-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.size-option-image {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    margin-bottom: 3px;
+    transform: scale(1.5);
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.5));
+}
+
+.size-option-button:hover .size-option-image {
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.5));
+}
+
+.size-option-placeholder {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-accent-hover);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 3px;
+    transform: scale(1.1);
+}
+
+/* Size dropdown and export icons row */
+.size-selector-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.size-selector {
+    margin-right: 10px;
+}
+
+.size-dropdown {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-content-surface);
+    color: var(--color-text);
+    font-size: 14px;
+    min-width: 120px;
+}
+
+.size-dropdown:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+/* Make the export icons container slightly smaller to make room for the dropdown */
+.size-selector-row .export-icons {
+    display: flex;
+    gap: 10px;
 } 

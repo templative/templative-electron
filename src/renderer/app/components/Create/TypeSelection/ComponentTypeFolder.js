@@ -2,7 +2,9 @@ import React from "react";
 import ComponentType from "./ComponentType";
 import StockComponentType from "./StockComponentType";
 import ColorGroupedStockComponents from "./ColorGroupedStockComponents";
+import SizeGroupedCustomComponent from "./SizeGroupedCustomComponent";
 import { extractBaseNameAndColor } from "./ComponentTypeList";
+import { extractBaseNameAndSize } from "./SizeGroupedCustomComponent";
 import { allColorVariations } from "../../../../../shared/stockComponentColors";
 
 // Helper function to extract the base color (like "Green" from "Lime Green" or "Transparent Green")
@@ -139,22 +141,89 @@ export default class ComponentTypeFolder extends React.Component {
                 </>
             );
         } else {
-            // For non-stock components, keep the original behavior
+            // For custom components, try to group by size
+            const groupedComponents = {};
+            
+            this.props.filteredComponentTypes
+                .filter(key => !this.props.componentTypeOptions[key]["IsDisabled"] || 
+                               this.props.componentTypeOptions[key]["IsDisabled"] === undefined)
+                .forEach(key => {
+                    const { baseName, size, isNumeric } = extractBaseNameAndSize(key, this.props.componentTypeOptions[key]["DisplayName"]);
+                    
+                    // Only group if there's a size
+                    if (size) {
+                        // Use just the baseName as the grouping key
+                        const groupKey = baseName;
+                        
+                        if (!groupedComponents[groupKey]) {
+                            groupedComponents[groupKey] = [];
+                        }
+                        
+                        groupedComponents[groupKey].push({
+                            key,
+                            size,
+                            isNumeric,
+                            componentInfo: this.props.componentTypeOptions[key]
+                        });
+                    }
+                });
+            
             componentContent = (
                 <>
-                    {
-                        this.props.filteredComponentTypes
-                            .filter(key => !this.props.componentTypeOptions[key]["IsDisabled"] || 
-                                          this.props.componentTypeOptions[key]["IsDisabled"] === undefined)
-                            .map(key =>
-                                <ComponentType key={key} 
-                                    name={key} componentInfo={this.props.componentTypeOptions[key]}
+                    {/* Render grouped components by size */}
+                    {Object.entries(groupedComponents).map(([groupKey, components]) => {
+                        // Extract the actual base name (remove the prefix marker if present)
+                        const baseName = groupKey.includes('__') ? groupKey.split('__')[0] : groupKey;
+                        
+                        // Only create a size group if there are multiple components with the same base name
+                        if (components.length > 1) {
+                            return (
+                                <SizeGroupedCustomComponent
+                                    key={`${groupKey}${this.props.search}`}
+                                    baseName={baseName}
+                                    components={components}
+                                    selectTypeCallback={this.props.selectTypeCallback}
+                                    selectedComponentType={this.props.selectedComponentType}
+                                    search={this.props.search}
+                                />
+                            );
+                        } else if (components.length === 1) {
+                            // If only one component with this base name, render it normally
+                            const component = components[0];
+                            return (
+                                <ComponentType 
+                                    key={component.key} 
+                                    name={component.key} 
+                                    componentInfo={component.componentInfo}
                                     selectTypeCallback={this.props.selectTypeCallback}
                                     selectedComponentType={this.props.selectedComponentType} 
                                     existingQuantity={0}
                                     search={this.props.search}    
                                 />
-                            )
+                            );
+                        }
+                        return null;
+                    })}
+                    
+                    {/* Render components without sizes */}
+                    {this.props.filteredComponentTypes
+                        .filter(key => !this.props.componentTypeOptions[key]["IsDisabled"] || 
+                                      this.props.componentTypeOptions[key]["IsDisabled"] === undefined)
+                        .filter(key => {
+                            const { size } = extractBaseNameAndSize(key, this.props.componentTypeOptions[key]["DisplayName"]);
+                            return !size; // Only include components without a size prefix
+                        })
+                        .map(key =>
+                            <ComponentType 
+                                key={key} 
+                                name={key} 
+                                componentInfo={this.props.componentTypeOptions[key]}
+                                selectTypeCallback={this.props.selectTypeCallback}
+                                selectedComponentType={this.props.selectedComponentType} 
+                                existingQuantity={0}
+                                search={this.props.search}    
+                            />
+                        )
                     }
                 </>
             );

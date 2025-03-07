@@ -299,7 +299,6 @@ async function createD6CompositeImage(name, color, filepaths) {
           
           // Calculate position
           const [col, row] = positions[i];
-          console.log(`Placing ${filepaths[i]} at ${col}, ${row}`);
           const x = col * cellSize;
           const y = row * cellSize;
           

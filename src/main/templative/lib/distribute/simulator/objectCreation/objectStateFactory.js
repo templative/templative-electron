@@ -96,16 +96,16 @@ async function createObjectState(componentDirectoryPath, tabletopSimulatorDirect
   }
 
   if (simulatorTask === "none") {
-    console.log(chalk.yellow(`Skipping ${componentInstructions.uniqueName} due to no SimulatorCreationTask.`));
+    console.log(chalk.yellow(`Skipping ${componentInstructions.uniqueName || componentInstructions.name} due to no SimulatorCreationTask.`));
     return null;
   }
 
   if (!supportedInstructionTypes.hasOwnProperty(simulatorTask)) {
-    console.log(chalk.red(`!!! Skipping unsupported ${simulatorTask} for ${componentInstructions.uniqueName}.`));
+    console.log(chalk.red(`!!! Skipping unsupported ${simulatorTask} for ${componentInstructions.uniqueName || componentInstructions.name}.`));
     return null;
   }
   const instruction = supportedInstructionTypes[simulatorTask];
-  console.log(`Creating ${componentInstructions.uniqueName || componentInstructions.name}`);
+  console.log(`Creating ${componentInstructions.type} ${componentInstructions.uniqueName || componentInstructions.name}`);
   return await instruction(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal);
 }
 

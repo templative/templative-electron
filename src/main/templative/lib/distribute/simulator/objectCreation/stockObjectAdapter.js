@@ -47,7 +47,7 @@ function standardDieAdapter(componentInstructions, stockPartInfo) {
   let numberSides = 6;
   if (dieTypeMatch) {
     numberSides = parseInt(dieTypeMatch[1]);
-    console.log(chalk.blue(`Detected die with ${numberSides} sides from type: ${stockType}`));
+    // console.log(chalk.blue(`Detected die with ${numberSides} sides from type: ${stockType}`));
   } else {
     console.log(chalk.yellow(`Could not detect die type from ${stockType}, defaulting to D6`));
   }

@@ -272,7 +272,6 @@ const COMPONENT_INFO = {
       "deck",
       "mint",
       "tin",
-      "packaging"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false
@@ -739,8 +738,7 @@ const COMPONENT_INFO = {
       "tin",
       "document",
       "mint",
-      "accordion",
-      "packaging"
+      "accordion"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false
@@ -830,8 +828,7 @@ const COMPONENT_INFO = {
       "tin",
       "document",
       "mint",
-      "accordion",
-      "packaging"
+      "accordion"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false
@@ -862,8 +859,7 @@ const COMPONENT_INFO = {
       "tin",
       "document",
       "mint",
-      "accordion",
-      "packaging"
+      "accordion"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false
@@ -929,7 +925,6 @@ const COMPONENT_INFO = {
       "folio",
       "document",
       "mint",
-      "packaging"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false
@@ -944,8 +939,8 @@ const COMPONENT_INFO = {
       8
     ],
     "Thickness": 0.4,
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD",
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK",
     "PlaygroundModel": "Rounded",
     "GameCrafterUploadTask": "twosidedset",
     "GameCrafterPackagingDepthMillimeters": 1.651,
@@ -1307,8 +1302,8 @@ const COMPONENT_INFO = {
       8,
       16
     ],
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD",
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK",
     "GameCrafterUploadTask": "twosidedset",
     "GameCrafterPackagingDepthMillimeters": 1.651,
     "HasPieceData": true,
@@ -1344,7 +1339,7 @@ const COMPONENT_INFO = {
       "acrylic"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none"
   },
@@ -1368,7 +1363,7 @@ const COMPONENT_INFO = {
       "acrylic"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none"
   },
@@ -1410,8 +1405,8 @@ const COMPONENT_INFO = {
       9,
       18
     ],
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD",
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK",
     "GameCrafterUploadTask": "onesidedgloss",
     "GameCrafterPackagingDepthMillimeters": 1.651,
     "HasPieceData": true,
@@ -1807,7 +1802,9 @@ const COMPONENT_INFO = {
     "GameCrafterPackagingDepthMillimeters": 16.002,
     "HasPieceData": true,
     "HasPieceQuantity": false,
-    "ArtDataTypeNames": ["DieFace"],
+    "ArtDataTypeNames": [
+      "DieFace"
+    ],
     "Tags": [
       "die",
       "d6",
@@ -1863,7 +1860,8 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "large",
-      "cardstock"
+      "cardstock",
+      "cut"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": true,
@@ -1890,7 +1888,8 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "large",
-      "punchout"
+      "punchout",
+      "cut"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": true,
@@ -1916,10 +1915,12 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "large",
-      "sticker"
+      "sticker",
+      "stickers",
+      "cut"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none"
   },
@@ -1943,7 +1944,8 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "cardstock",
-      "medium"
+      "medium",
+      "cut"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": true,
@@ -1970,7 +1972,8 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "punchout",
-      "medium"
+      "medium",
+      "cut"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": true,
@@ -1996,10 +1999,12 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "sticker",
-      "medium"
+      "medium",
+      "stickers",
+      "cut"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none"
   },
@@ -2023,7 +2028,8 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "mini",
-      "cardstock"
+      "cardstock",
+      "cut"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": true,
@@ -2049,10 +2055,12 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "mini",
-      "sticker"
+      "sticker",
+      "stickers",
+      "cut"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none"
   },
@@ -2076,12 +2084,13 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "printed",
+      "token",
       "meeple"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "PlaygroundCreationTask": "Meeple",
+    "SimulatorCreationTask": "Meeple"
   },
   "CustomSmallCardstock": {
     "DisplayName": "CustomSmallCardstock",
@@ -2103,7 +2112,8 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "small",
-      "cardstock"
+      "cardstock",
+      "cut"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": true,
@@ -2130,7 +2140,8 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "punchout",
-      "small"
+      "small",
+      "cut"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": true,
@@ -2156,10 +2167,12 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "small",
-      "sticker"
+      "sticker",
+      "stickers",
+      "cut"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none"
   },
@@ -2264,7 +2277,8 @@ const COMPONENT_INFO = {
     "Tags": [
       "dice",
       "sticker",
-      "die"
+      "die",
+      "stickers"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
@@ -2291,7 +2305,6 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "deck",
-      "packaging",
       "divider"
     ],
     "IsPrintingDisabled": false,
@@ -2428,6 +2441,7 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "dial",
+      "dials",
       "dual"
     ],
     "IsPrintingDisabled": false,
@@ -2613,8 +2627,8 @@ const COMPONENT_INFO = {
       5,
       10
     ],
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD",
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK",
     "GameCrafterUploadTask": "twosidedset",
     "GameCrafterPackagingDepthMillimeters": 1.651,
     "HasPieceData": true,
@@ -2848,7 +2862,7 @@ const COMPONENT_INFO = {
       "acrylic"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none"
   },
@@ -3059,8 +3073,8 @@ const COMPONENT_INFO = {
       10,
       10
     ],
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD",
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK",
     "GameCrafterUploadTask": "twosidedset",
     "GameCrafterPackagingDepthMillimeters": 1.651,
     "HasPieceData": true,
@@ -3155,7 +3169,8 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "large",
-      "standee"
+      "standee",
+      "token"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
@@ -3481,8 +3496,8 @@ const COMPONENT_INFO = {
       16,
       16
     ],
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD",
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK",
     "GameCrafterUploadTask": "onesidedgloss",
     "GameCrafterPackagingDepthMillimeters": 1.651,
     "HasPieceData": true,
@@ -3549,7 +3564,8 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "standee",
-      "medium"
+      "medium",
+      "token"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
@@ -3632,12 +3648,13 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "sticker",
-      "meeple"
+      "meeple",
+      "stickers"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "PlaygroundCreationTask": "Meeple",
+    "SimulatorCreationTask": "Meeple"
   },
   "MiniCircleTile": {
     "DisplayName": "MiniCircleTile",
@@ -3719,7 +3736,8 @@ const COMPONENT_INFO = {
       "tin",
       "packaging",
       "mint",
-      "sticker"
+      "sticker",
+      "stickers"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
@@ -3745,7 +3763,8 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "sticker",
-      "pawn"
+      "pawn",
+      "stickers"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
@@ -3789,7 +3808,7 @@ const COMPONENT_INFO = {
       2,
       3.5
     ],
-    "GameCrafterUploadTask": "twosidedset",
+    "GameCrafterUploadTask": "deck",
     "GameCrafterPackagingDepthMillimeters": 0.17779999999999999,
     "HasPieceData": true,
     "HasPieceQuantity": true,
@@ -3799,12 +3818,13 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "play",
+      "deck",
       "money"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK"
   },
   "PokerBoosterBox": {
     "DisplayName": "PokerBoosterBox",
@@ -4078,8 +4098,8 @@ const COMPONENT_INFO = {
       18,
       18
     ],
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD",
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK",
     "GameCrafterUploadTask": "onesidedgloss",
     "GameCrafterPackagingDepthMillimeters": 1.651,
     "HasPieceData": true,
@@ -4133,8 +4153,8 @@ const COMPONENT_INFO = {
       5,
       5
     ],
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD",
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK",
     "GameCrafterUploadTask": "twosidedset",
     "GameCrafterPackagingDepthMillimeters": 1.651,
     "HasPieceData": true,
@@ -4187,8 +4207,8 @@ const COMPONENT_INFO = {
       27,
       18
     ],
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD",
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK",
     "GameCrafterUploadTask": "onesidedgloss",
     "GameCrafterPackagingDepthMillimeters": 1.651,
     "HasPieceData": true,
@@ -4214,8 +4234,8 @@ const COMPONENT_INFO = {
       4,
       10
     ],
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD",
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK",
     "GameCrafterUploadTask": "twosidedset",
     "GameCrafterPackagingDepthMillimeters": 1.651,
     "HasPieceData": true,
@@ -4268,8 +4288,8 @@ const COMPONENT_INFO = {
       2,
       8
     ],
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD",
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK",
     "GameCrafterUploadTask": "twosidedset",
     "GameCrafterPackagingDepthMillimeters": 1.651,
     "HasPieceData": true,
@@ -4416,6 +4436,7 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "dial",
+      "dials",
       "small"
     ],
     "IsPrintingDisabled": false,
@@ -4688,8 +4709,8 @@ const COMPONENT_INFO = {
       4,
       4
     ],
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD",
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK",
     "GameCrafterUploadTask": "twosidedset",
     "GameCrafterPackagingDepthMillimeters": 1.651,
     "HasPieceData": true,
@@ -4811,7 +4832,8 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "standee",
-      "small"
+      "small",
+      "token"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
@@ -4884,8 +4906,8 @@ const COMPONENT_INFO = {
       8,
       8
     ],
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD",
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK",
     "GameCrafterUploadTask": "twosidedset",
     "GameCrafterPackagingDepthMillimeters": 1.651,
     "HasPieceData": true,
@@ -5107,8 +5129,8 @@ const COMPONENT_INFO = {
       2,
       10
     ],
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD",
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK",
     "GameCrafterUploadTask": "twosidedset",
     "GameCrafterPackagingDepthMillimeters": 1.651,
     "HasPieceData": true,
@@ -5421,7 +5443,8 @@ const COMPONENT_INFO = {
     ],
     "Tags": [
       "token",
-      "sticker"
+      "sticker",
+      "stickers"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
@@ -5587,7 +5610,8 @@ const COMPONENT_INFO = {
       "bound",
       "perfect",
       "book",
-      "digest"
+      "digest",
+      "document"
     ],
     "IsPrintingDisabled": true,
     "IsDisabled": false,
@@ -5615,7 +5639,8 @@ const COMPONENT_INFO = {
     "Tags": [
       "jumbo",
       "coil",
-      "book"
+      "book",
+      "document"
     ],
     "IsPrintingDisabled": true,
     "IsDisabled": false,
@@ -5649,8 +5674,8 @@ const COMPONENT_INFO = {
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK"
   },
   "LargeQuadFoldBoard": {
     "DisplayName": "LargeQuadFoldBoard",
@@ -5677,8 +5702,8 @@ const COMPONENT_INFO = {
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK"
   },
   "LetterPerfectBoundBook": {
     "DisplayName": "LetterPerfectBoundBook",
@@ -5702,7 +5727,8 @@ const COMPONENT_INFO = {
       "bound",
       "perfect",
       "book",
-      "letter"
+      "letter",
+      "document"
     ],
     "IsPrintingDisabled": true,
     "IsDisabled": false,
@@ -5730,7 +5756,8 @@ const COMPONENT_INFO = {
     "Tags": [
       "coil",
       "book",
-      "medium"
+      "medium",
+      "document"
     ],
     "IsPrintingDisabled": true,
     "IsDisabled": false,
@@ -5764,8 +5791,8 @@ const COMPONENT_INFO = {
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK"
   },
   "SmallDualLayerBoard": {
     "DisplayName": "SmallDualLayerBoard",
@@ -5794,8 +5821,8 @@ const COMPONENT_INFO = {
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
-    "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK"
   },
   "TallMintTin": {
     "DisplayName": "TallMintTin",
@@ -5844,6 +5871,7 @@ const COMPONENT_INFO = {
       "Front"
     ],
     "Tags": [
+      "packaging",
       "box"
     ],
     "IsDisabled": false,
