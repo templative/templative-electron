@@ -106,14 +106,28 @@ function processComponents() {
     // Deduplicate tags in stock components
     const stockComponentTagDedupes = deduplicateTags(STOCK_COMPONENT_INFO);
     
-    if (stockComponentUpdates > 0 || stockComponentTagDedupes > 0) {
-        console.log('\nSaving updates to stock component info file...');
-        saveComponentInfo(
-            STOCK_COMPONENT_INFO,
-            "/Users/oliverbarnum/Documents/git/templative-electron/src/shared/stockComponentInfo.js",
-            "STOCK_COMPONENT_INFO"
-        );
+    // Add Key field to each stock component
+    console.log("\n=== ADDING KEY FIELD TO STOCK COMPONENTS ===");
+    let keyFieldAddedCount = 0;
+    
+    for (const [componentKey, componentData] of Object.entries(STOCK_COMPONENT_INFO)) {
+        if (!componentData.Key) {
+            componentData.Key = componentKey;
+            keyFieldAddedCount++;
+            console.log(`- Added Key field to: ${componentKey}`);
+        }
     }
+    
+    console.log(`\nTotal stock components with Key field added: ${keyFieldAddedCount}`);
+    
+    // if (stockComponentUpdates > 0 || stockComponentTagDedupes > 0) {
+    //     console.log('\nSaving updates to stock component info file...');
+    //     saveComponentInfo(
+    //         STOCK_COMPONENT_INFO,
+    //         "/Users/oliverbarnum/Documents/git/templative-electron/src/shared/stockComponentInfo.js",
+    //         "STOCK_COMPONENT_INFO"
+    //     );
+    // }
     
     if (componentUpdates === 0 && stockComponentUpdates === 0 && 
         componentTagDedupes === 0 && stockComponentTagDedupes === 0) {

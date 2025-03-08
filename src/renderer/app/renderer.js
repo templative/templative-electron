@@ -27,3 +27,14 @@ const render = () => {
 };
 
 render();
+
+// Accept HMR for CSS
+if (module.hot) {
+    // Accept CSS updates without refreshing the page
+    module.hot.accept('bootstrap/dist/css/bootstrap.css', () => {
+        console.log('CSS updated without refresh');
+    });
+    
+    // Accept other updates with page refresh
+    module.hot.accept();
+}

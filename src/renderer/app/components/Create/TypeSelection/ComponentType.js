@@ -1,37 +1,34 @@
 import React, { useMemo } from "react";
 import ExportIcons, { getExportRouteInfo } from './ExportIcons';
+import { extractBaseNameAndSize, addSpaces } from './ComponentUtils';
 import "./ComponentType.css";
 
-export const addSpaces = (str) => {
-    return str
-        // First specifically handle D4, D6, D8, D10, D12, D20
-        .replace(/D(4|6|8|10|12|20)(\d+)/g, 'D$1 $2')
-        // Then handle measurement units, keeping them with their numbers
-        .replace(/(\d+)(mm|cm)/g, '$1$2')
-        // Add space between lowercase and uppercase
-        .replace(/([a-z])([A-Z])/g, '$1 $2')
-        // Add space between letters and numbers (except for measurement units)
-        .replace(/([a-zA-Z])(\d)/g, '$1 $2')
-        // Clean up any double spaces
-        .replace(/\s+/g, ' ')
-        // Fix dice notation
-        .replace(/D ?(4|6|8|10|12|20)/g, 'D$1')
-        .trim()
-};
-
-const ComponentType = ({ componentInfo, selectedComponentType, name, selectTypeCallback, existingQuantity }) => {
+const ComponentType = ({ componentInfo, selectedComponentType, name, selectTypeCallback, existingQuantity, sizeVariations }) => {
     const exportRoutes = useMemo(() => getExportRouteInfo(componentInfo), [componentInfo]);
+    
+    // Extract size information from the current component
+    const sizeInfo = useMemo(() => {
+        return extractBaseNameAndSize(name, componentInfo["DisplayName"]);
+    }, [name, componentInfo]);
     
     const displayName = useMemo(() => {
         if (!componentInfo["DisplayName"]) return name;
-        return addSpaces(componentInfo["DisplayName"]);
-    }, [componentInfo, name]);
+        
+        // If we have size variations or this component has a size, use the base name without size
+        if ((sizeVariations && sizeVariations.length > 0) || sizeInfo.size) {
+            // Use the baseName from the first size variation or from this component
+            const baseName = sizeVariations && sizeVariations.length > 0 
+                ? sizeVariations[0].baseName 
+                : sizeInfo.baseName;
+            return addSpaces(baseName);
+        }
+        
+        return componentInfo["DisplayName"];
+    }, [componentInfo, name, sizeVariations, sizeInfo]);
 
-    // Generate image URL for non-stock components
-    const imageUrl = useMemo(() => {
-        if (!name) return null;
-        return `https://www.thegamecrafter.com/product-images/${name}.jpg`;
-    }, [name]);
+    // Calculate total number of sizes (current + variations)
+    // Always at least 1 (the current size)
+    const totalSizes = (sizeVariations ? sizeVariations.length : 0) + (sizeInfo.size ? 1 : 0);
 
     return (
         <div className="component-type-wrapper">
@@ -47,15 +44,23 @@ const ComponentType = ({ componentInfo, selectedComponentType, name, selectTypeC
                                 {`${parseFloat(componentInfo["DimensionsPixels"][0]).toFixed(1)}x${parseFloat(componentInfo["DimensionsPixels"][1]).toFixed(1)}px ${componentInfo["SimulatorCreationTask"]}`}
                             </p>
                         )}
-                        {imageUrl && (
-                            <div className="component-type-preview">
-                                <img 
-                                    src={imageUrl} 
-                                    alt={displayName}
-                                    className="preview-image"
-                                    onError={(e) => e.target.style.display = 'none'}
-                                />
-                            </div>
+                        
+                        {componentInfo.PreviewUri && (
+                        <div className="component-type-preview">
+                            <img 
+                                src={componentInfo.PreviewUri} 
+                                alt={displayName}
+                                className="preview-image"
+                                onError={(e) => e.target.style.display = 'none'}
+                        />
+                        </div>)}
+                        
+                        
+                        {/* Show size variations info if this component has a size */}
+                        {totalSizes > 1 && (
+                            <p className="component-type-dimensions size-variations">
+                                {`Available in ${totalSizes} size${totalSizes > 1 ? 's' : ''}`}
+                            </p>
                         )}
                     </div>
                     <ExportIcons componentInfo={componentInfo} />

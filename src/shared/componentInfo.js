@@ -20,14 +20,16 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "HexShard",
+    "DisplayName": "Hex Shard",
     "Tags": [
       "token",
       "hex",
       "shard"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HexShard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/HexShard.jpg"
   },
   "CircleShard": {
     "DimensionsPixels": [
@@ -50,14 +52,16 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "CircleShard",
+    "DisplayName": "Circle Shard",
     "Tags": [
       "token",
       "circle",
       "shard"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CircleShard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CircleShard.jpg"
   },
   "SquareShard": {
     "DimensionsPixels": [
@@ -80,14 +84,16 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "SquareShard",
+    "DisplayName": "Square Shard",
     "Tags": [
       "token",
       "square",
       "shard"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SquareShard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SquareShard.jpg"
   },
   "BusinessDeck": {
     "DimensionsPixels": [
@@ -110,13 +116,15 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "BusinessDeck",
+    "DisplayName": "Business Deck",
     "Tags": [
       "deck",
       "business"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BusinessDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/BusinessDeck.jpg"
   },
   "PokerDeck": {
     "DimensionsPixels": [
@@ -143,13 +151,15 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "PokerDeck",
+    "DisplayName": "Poker Deck",
     "Tags": [
       "poker",
       "deck"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PokerDeck.jpg"
   },
   "JumboDeck": {
     "DimensionsPixels": [
@@ -172,13 +182,15 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "JumboDeck",
+    "DisplayName": "Jumbo Deck",
     "Tags": [
       "deck",
       "jumbo"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JumboDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/JumboDeck.jpg"
   },
   "MiniDeck": {
     "DimensionsPixels": [
@@ -201,13 +213,15 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "MiniDeck",
+    "DisplayName": "Mini Deck",
     "Tags": [
       "deck",
       "mini"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MiniDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MiniDeck.jpg"
   },
   "MicroDeck": {
     "DimensionsPixels": [
@@ -234,13 +248,15 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "MicroDeck",
+    "DisplayName": "Micro Deck",
     "Tags": [
       "deck",
       "micro"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MicroDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MicroDeck.jpg"
   },
   "MintTinDeck": {
     "DimensionsPixels": [
@@ -256,8 +272,8 @@ const COMPONENT_INFO = {
       3.4251968503937
     ],
     "Thickness": 0.05,
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK",
     "PlaygroundModel": "Rounded",
     "GameCrafterUploadTask": "deck",
     "GameCrafterPackagingDepthMillimeters": 0.3302,
@@ -267,14 +283,16 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "MintTinDeck",
+    "DisplayName": "Mint Tin Deck",
     "Tags": [
       "deck",
       "mint",
-      "tin",
+      "tin"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MintTinDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MintTinDeck.jpg"
   },
   "HexDeck": {
     "DimensionsPixels": [
@@ -297,13 +315,15 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "HexDeck",
+    "DisplayName": "Hex Deck",
     "Tags": [
       "deck",
       "hex"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HexDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/HexDeck.jpg"
   },
   "SmallSquareChit": {
     "DimensionsPixels": [
@@ -326,7 +346,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "SmallSquareChit",
+    "DisplayName": "Small Square Chit",
     "Tags": [
       "token",
       "chit",
@@ -334,7 +354,9 @@ const COMPONENT_INFO = {
       "square"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SmallSquareChit",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallSquareChit.jpg"
   },
   "MediumSquareChit": {
     "DimensionsPixels": [
@@ -357,7 +379,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "MediumSquareChit",
+    "DisplayName": "Medium Square Chit",
     "Tags": [
       "token",
       "chit",
@@ -365,7 +387,9 @@ const COMPONENT_INFO = {
       "square"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MediumSquareChit",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumSquareChit.jpg"
   },
   "LargeSquareChit": {
     "DimensionsPixels": [
@@ -388,7 +412,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "LargeSquareChit",
+    "DisplayName": "Large Square Chit",
     "Tags": [
       "token",
       "large",
@@ -396,7 +420,9 @@ const COMPONENT_INFO = {
       "square"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LargeSquareChit",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeSquareChit.jpg"
   },
   "SmallRingChit": {
     "DimensionsPixels": [
@@ -419,7 +445,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "SmallRingChit",
+    "DisplayName": "Small Ring Chit",
     "Tags": [
       "small",
       "ring",
@@ -427,7 +453,9 @@ const COMPONENT_INFO = {
       "chit"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SmallRingChit",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallRingChit.jpg"
   },
   "MediumRingChit": {
     "DimensionsPixels": [
@@ -450,7 +478,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "MediumRingChit",
+    "DisplayName": "Medium Ring Chit",
     "Tags": [
       "medium",
       "ring",
@@ -458,7 +486,9 @@ const COMPONENT_INFO = {
       "chit"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MediumRingChit",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumRingChit.jpg"
   },
   "LargeRingChit": {
     "DimensionsPixels": [
@@ -481,7 +511,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "LargeRingChit",
+    "DisplayName": "Large Ring Chit",
     "Tags": [
       "large",
       "ring",
@@ -489,7 +519,9 @@ const COMPONENT_INFO = {
       "chit"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LargeRingChit",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeRingChit.jpg"
   },
   "SmallCircleChit": {
     "DimensionsPixels": [
@@ -512,7 +544,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "SmallCircleChit",
+    "DisplayName": "Small Circle Chit",
     "Tags": [
       "token",
       "chit",
@@ -520,7 +552,9 @@ const COMPONENT_INFO = {
       "small"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SmallCircleChit",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallCircleChit.jpg"
   },
   "MediumCircleChit": {
     "DimensionsPixels": [
@@ -543,7 +577,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "MediumCircleChit",
+    "DisplayName": "Medium Circle Chit",
     "Tags": [
       "token",
       "circle",
@@ -551,7 +585,9 @@ const COMPONENT_INFO = {
       "medium"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MediumCircleChit",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumCircleChit.jpg"
   },
   "LargeCircleChit": {
     "DimensionsPixels": [
@@ -574,7 +610,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "LargeCircleChit",
+    "DisplayName": "Large Circle Chit",
     "Tags": [
       "token",
       "large",
@@ -582,7 +618,9 @@ const COMPONENT_INFO = {
       "chit"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LargeCircleChit",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeCircleChit.jpg"
   },
   "MiniHexTile": {
     "DimensionsPixels": [
@@ -605,7 +643,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "MiniHexTile",
+    "DisplayName": "Mini Hex Tile",
     "Tags": [
       "token",
       "chit",
@@ -614,7 +652,9 @@ const COMPONENT_INFO = {
       "mini"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MiniHexTile",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MiniHexTile.jpg"
   },
   "SmallHexTile": {
     "DimensionsPixels": [
@@ -637,7 +677,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "SmallHexTile",
+    "DisplayName": "Small Hex Tile",
     "Tags": [
       "small",
       "token",
@@ -646,7 +686,9 @@ const COMPONENT_INFO = {
       "tile"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SmallHexTile",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallHexTile.jpg"
   },
   "MediumHexTile": {
     "DimensionsPixels": [
@@ -669,7 +711,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "MediumHexTile",
+    "DisplayName": "Medium Hex Tile",
     "Tags": [
       "token",
       "chit",
@@ -678,7 +720,9 @@ const COMPONENT_INFO = {
       "tile"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MediumHexTile",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumHexTile.jpg"
   },
   "LargeHexTile": {
     "DimensionsPixels": [
@@ -701,7 +745,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "LargeHexTile",
+    "DisplayName": "Large Hex Tile",
     "Tags": [
       "token",
       "large",
@@ -710,7 +754,9 @@ const COMPONENT_INFO = {
       "tile"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LargeHexTile",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeHexTile.jpg"
   },
   "MintTinAccordion4": {
     "DimensionsPixels": [
@@ -733,7 +779,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "MintTinAccordion4",
+    "DisplayName": "Mint Tin Accordion 4",
     "Tags": [
       "tin",
       "document",
@@ -741,7 +787,9 @@ const COMPONENT_INFO = {
       "accordion"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MintTinAccordion4",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MintTinAccordion4.jpg"
   },
   "BiFoldMat": {
     "DimensionsPixels": [
@@ -764,14 +812,16 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "BiFoldMat",
+    "DisplayName": "Bi Fold Mat",
     "Tags": [
       "fold",
       "bifold",
       "mat"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BiFoldMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/BiFoldMat.jpg"
   },
   "DominoMat": {
     "DimensionsPixels": [
@@ -794,13 +844,15 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "DominoMat",
+    "DisplayName": "Domino Mat",
     "Tags": [
       "domino",
       "mat"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DominoMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/DominoMat.jpg"
   },
   "MintTinAccordion6": {
     "DimensionsPixels": [
@@ -823,7 +875,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "MintTinAccordion6",
+    "DisplayName": "Mint Tin Accordion 6",
     "Tags": [
       "tin",
       "document",
@@ -831,7 +883,9 @@ const COMPONENT_INFO = {
       "accordion"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MintTinAccordion6",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MintTinAccordion6.jpg"
   },
   "MintTinAccordion8": {
     "DimensionsPixels": [
@@ -854,7 +908,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "MintTinAccordion8",
+    "DisplayName": "Mint Tin Accordion 8",
     "Tags": [
       "tin",
       "document",
@@ -862,7 +916,9 @@ const COMPONENT_INFO = {
       "accordion"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MintTinAccordion8",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MintTinAccordion8.jpg"
   },
   "PokerFolio": {
     "DimensionsPixels": [
@@ -885,14 +941,16 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "PokerFolio",
+    "DisplayName": "Poker Folio",
     "Tags": [
       "poker",
       "document",
       "folio"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerFolio",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PokerFolio.jpg"
   },
   "MintTinFolio": {
     "DimensionsPixels": [
@@ -919,15 +977,17 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "MintTinFolio",
+    "DisplayName": "Mint Tin Folio",
     "Tags": [
       "tin",
       "folio",
       "document",
-      "mint",
+      "mint"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MintTinFolio",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MintTinFolio.jpg"
   },
   "DominoBoard": {
     "DimensionsPixels": [
@@ -950,13 +1010,15 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "DominoBoard",
+    "DisplayName": "Domino Board",
     "Tags": [
       "domino",
       "board"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DominoBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/DominoBoard.jpg"
   },
   "PunchoutCustomSmall": {
     "DimensionsPixels": [
@@ -980,13 +1042,15 @@ const COMPONENT_INFO = {
       "Back",
       "Overlay"
     ],
-    "DisplayName": "PunchoutCustomSmall",
+    "DisplayName": "Punchout Custom Small",
     "Tags": [
       "punchout",
       "small"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "PunchoutCustomSmall",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PunchoutCustomSmall.jpg"
   },
   "PokerHookbox36": {
     "DimensionsPixels": [
@@ -999,7 +1063,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "PokerHookbox36",
+    "DisplayName": "Poker Hookbox 36",
     "Tags": [
       "packaging",
       "hookbox",
@@ -1008,7 +1072,9 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "PokerHookbox36",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PokerHookbox36.jpg"
   },
   "MintTin": {
     "DimensionsPixels": [
@@ -1021,7 +1087,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "MintTin",
+    "DisplayName": "Mint Tin",
     "DimensionsInches": [
       2.46,
       3.88
@@ -1036,7 +1102,9 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "MintTin",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MintTin.jpg"
   },
   "SmallStoutBox": {
     "DimensionsPixels": [
@@ -1049,7 +1117,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "SmallStoutBox",
+    "DisplayName": "Small Stout Box",
     "DimensionsInches": [
       4,
       6
@@ -1065,7 +1133,9 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "SmallStoutBox",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallStoutBox.jpg"
   },
   "MediumStoutBox": {
     "DimensionsPixels": [
@@ -1078,7 +1148,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "MediumStoutBox",
+    "DisplayName": "Medium Stout Box",
     "DimensionsInches": [
       6.125,
       9
@@ -1094,7 +1164,9 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "MediumStoutBox",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumStoutBox.jpg"
   },
   "LargeStoutBox": {
     "DimensionsPixels": [
@@ -1108,7 +1180,7 @@ const COMPONENT_INFO = {
       "Front",
       "Back"
     ],
-    "DisplayName": "LargeStoutBox",
+    "DisplayName": "Large Stout Box",
     "DimensionsInches": [
       11,
       11
@@ -1123,7 +1195,9 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "LargeStoutBox",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeStoutBox.jpg"
   },
   "PokerBooster": {
     "DimensionsPixels": [
@@ -1136,7 +1210,7 @@ const COMPONENT_INFO = {
     "ArtDataTypeNames": [
       "Front"
     ],
-    "DisplayName": "PokerBooster",
+    "DisplayName": "Poker Booster",
     "DimensionsInches": [
       2.87,
       5.15
@@ -1150,7 +1224,9 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "PokerBooster",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PokerBooster.jpg"
   },
   "PokerTuckBox36": {
     "DimensionsPixels": [
@@ -1166,7 +1242,7 @@ const COMPONENT_INFO = {
     "ArtDataTypeNames": [
       "Front"
     ],
-    "DisplayName": "PokerTuckBox36",
+    "DisplayName": "Poker Tuck Box 36",
     "GameCrafterPackagingDepthMillimeters": 16.509999999999998,
     "HasPieceQuantity": true,
     "Tags": [
@@ -1178,7 +1254,9 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "PokerTuckBox36",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PokerTuckBox36.jpg"
   },
   "PokerTuckBox54": {
     "DimensionsPixels": [
@@ -1190,7 +1268,7 @@ const COMPONENT_INFO = {
     "ArtDataTypeNames": [
       "Front"
     ],
-    "DisplayName": "PokerTuckBox54",
+    "DisplayName": "Poker Tuck Box 54",
     "DimensionsInches": [
       2.6,
       3.6
@@ -1206,7 +1284,9 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "PokerTuckBox54",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PokerTuckBox54.jpg"
   },
   "PokerTuckBox72": {
     "DimensionsPixels": [
@@ -1218,7 +1298,7 @@ const COMPONENT_INFO = {
     "ArtDataTypeNames": [
       "Front"
     ],
-    "DisplayName": "PokerTuckBox72",
+    "DisplayName": "Poker Tuck Box 72",
     "DimensionsInches": [
       2.6,
       3.6
@@ -1234,7 +1314,9 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "PokerTuckBox72",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PokerTuckBox72.jpg"
   },
   "PokerTuckBox90": {
     "DimensionsPixels": [
@@ -1246,7 +1328,7 @@ const COMPONENT_INFO = {
     "ArtDataTypeNames": [
       "Front"
     ],
-    "DisplayName": "PokerTuckBox90",
+    "DisplayName": "Poker Tuck Box 90",
     "DimensionsInches": [
       2.6,
       3.6
@@ -1262,7 +1344,9 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "PokerTuckBox90",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PokerTuckBox90.jpg"
   },
   "PokerTuckBox108": {
     "DimensionsPixels": [
@@ -1274,7 +1358,7 @@ const COMPONENT_INFO = {
     "ArtDataTypeNames": [
       "Front"
     ],
-    "DisplayName": "PokerTuckBox108",
+    "DisplayName": "Poker Tuck Box 108",
     "DimensionsInches": [
       2.6,
       3.6
@@ -1290,10 +1374,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "PokerTuckBox108",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PokerTuckBox108.jpg"
   },
   "AccordionBoard": {
-    "DisplayName": "AccordionBoard",
+    "DisplayName": "Accordion Board",
     "DimensionsPixels": [
       2475,
       4875
@@ -1317,10 +1403,12 @@ const COMPONENT_INFO = {
       "accordion"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AccordionBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/AccordionBoard.jpg"
   },
   "AcrylicShape125": {
-    "DisplayName": "AcrylicShape125",
+    "DisplayName": "Acrylic Shape 125",
     "DimensionsPixels": [
       2400,
       1200
@@ -1341,10 +1429,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": true,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "AcrylicShape125",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/AcrylicShape125.jpg"
   },
   "AcrylicShape250": {
-    "DisplayName": "AcrylicShape250",
+    "DisplayName": "Acrylic Shape 250",
     "DimensionsPixels": [
       2400,
       1200
@@ -1365,10 +1455,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": true,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "AcrylicShape250",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/AcrylicShape250.jpg"
   },
   "ArrowChit": {
-    "DisplayName": "ArrowChit",
+    "DisplayName": "Arrow Chit",
     "DimensionsPixels": [
       150,
       300
@@ -1393,10 +1485,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "ArrowChit",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/ArrowChit.jpg"
   },
   "BiFoldBoard": {
-    "DisplayName": "BiFoldBoard",
+    "DisplayName": "Bi Fold Board",
     "DimensionsPixels": [
       2775,
       5475
@@ -1420,10 +1514,12 @@ const COMPONENT_INFO = {
       "bifold"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BiFoldBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/BiFoldBoard.jpg"
   },
   "BigMat": {
-    "DisplayName": "BigMat",
+    "DisplayName": "Big Mat",
     "DimensionsPixels": [
       3075,
       4875
@@ -1447,10 +1543,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "BigMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/BigMat.jpg"
   },
   "BridgeDeck": {
-    "DisplayName": "BridgeDeck",
+    "DisplayName": "Bridge Deck",
     "DimensionsPixels": [
       750,
       1125
@@ -1474,10 +1572,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "BridgeDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/BridgeDeck.jpg"
   },
   "BridgeFolio": {
-    "DisplayName": "BridgeFolio",
+    "DisplayName": "Bridge Folio",
     "DimensionsPixels": [
       2775,
       1125
@@ -1502,10 +1602,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "BridgeFolio",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/BridgeFolio.jpg"
   },
   "BridgeHookBox108": {
-    "DisplayName": "BridgeHookBox108",
+    "DisplayName": "Bridge Hook Box 108",
     "DimensionsPixels": [
       3000,
       3750
@@ -1532,10 +1634,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "BridgeHookBox108",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/BridgeHookBox108.jpg"
   },
   "BridgeHookBox54": {
-    "DisplayName": "BridgeHookBox54",
+    "DisplayName": "Bridge Hook Box 54",
     "DimensionsPixels": [
       2625,
       3300
@@ -1562,10 +1666,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "BridgeHookBox54",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/BridgeHookBox54.jpg"
   },
   "BridgeTuckBox108": {
-    "DisplayName": "BridgeTuckBox108",
+    "DisplayName": "Bridge Tuck Box 108",
     "DimensionsPixels": [
       2925,
       2250
@@ -1591,10 +1697,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "BridgeTuckBox108",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/BridgeTuckBox108.jpg"
   },
   "BridgeTuckBox54": {
-    "DisplayName": "BridgeTuckBox54",
+    "DisplayName": "Bridge Tuck Box 54",
     "DimensionsPixels": [
       2175,
       1800
@@ -1620,10 +1728,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "BridgeTuckBox54",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/BridgeTuckBox54.jpg"
   },
   "BullseyeChit": {
-    "DisplayName": "BullseyeChit",
+    "DisplayName": "Bullseye Chit",
     "DimensionsPixels": [
       375,
       900
@@ -1648,10 +1758,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "BullseyeChit",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/BullseyeChit.jpg"
   },
   "CardCraftingDeck": {
-    "DisplayName": "CardCraftingDeck",
+    "DisplayName": "Card Crafting Deck",
     "DimensionsPixels": [
       900,
       1500
@@ -1676,10 +1788,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "CardCraftingDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CardCraftingDeck.jpg"
   },
   "CircleDeck": {
-    "DisplayName": "CircleDeck",
+    "DisplayName": "Circle Deck",
     "DimensionsPixels": [
       1125,
       1125
@@ -1703,10 +1817,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "CircleDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CircleDeck.jpg"
   },
   "ClearCardCraftingDeck": {
-    "DisplayName": "ClearCardCraftingDeck",
+    "DisplayName": "Clear Card Crafting Deck",
     "DimensionsPixels": [
       900,
       1500
@@ -1732,10 +1848,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "ClearCardCraftingDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/ClearCardCraftingDeck.jpg"
   },
   "ClearEuroPokerDeck": {
-    "DisplayName": "ClearEuroPokerDeck",
+    "DisplayName": "Clear Euro Poker Deck",
     "DimensionsPixels": [
       825,
       1125
@@ -1761,10 +1879,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "ClearEuroPokerDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/ClearEuroPokerDeck.jpg"
   },
   "CustomColorD4": {
-    "DisplayName": "CustomColorD4",
+    "DisplayName": "Custom Color D4",
     "DimensionsPixels": [
       300,
       300
@@ -1786,10 +1906,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "CustomColorD4",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CustomColorD4.jpg"
   },
   "CustomColorD6": {
-    "DisplayName": "CustomColorD6",
+    "DisplayName": "Custom Color D6",
     "DimensionsPixels": [
       180,
       180
@@ -1813,10 +1935,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "CustomDie",
-    "SimulatorCreationTask": "CustomDie"
+    "SimulatorCreationTask": "CustomDie",
+    "Key": "CustomColorD6",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CustomColorD6.jpg"
   },
   "CustomColorD8": {
-    "DisplayName": "CustomColorD8",
+    "DisplayName": "Custom Color D8",
     "DimensionsPixels": [
       300,
       300
@@ -1838,10 +1962,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "CustomColorD8",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CustomColorD8.jpg"
   },
   "CustomLargeCardstock": {
-    "DisplayName": "CustomLargeCardstock",
+    "DisplayName": "Custom Large Cardstock",
     "DimensionsPixels": [
       2475,
       3150
@@ -1866,10 +1992,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": true,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "CustomLargeCardstock",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CustomLargeCardstock.jpg"
   },
   "CustomLargePunchout": {
-    "DisplayName": "CustomLargePunchout",
+    "DisplayName": "Custom Large Punchout",
     "DimensionsPixels": [
       2475,
       3150
@@ -1894,10 +2022,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": true,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "CustomLargePunchout",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CustomLargePunchout.jpg"
   },
   "CustomLargeSticker": {
-    "DisplayName": "CustomLargeSticker",
+    "DisplayName": "Custom Large Sticker",
     "DimensionsPixels": [
       2475,
       3150
@@ -1922,10 +2052,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": true,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "CustomLargeSticker",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CustomLargeSticker.jpg"
   },
   "CustomMediumCardstock": {
-    "DisplayName": "CustomMediumCardstock",
+    "DisplayName": "Custom Medium Cardstock",
     "DimensionsPixels": [
       2400,
       1350
@@ -1950,10 +2082,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": true,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "CustomMediumCardstock",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CustomMediumCardstock.jpg"
   },
   "CustomMediumPunchout": {
-    "DisplayName": "CustomMediumPunchout",
+    "DisplayName": "Custom Medium Punchout",
     "DimensionsPixels": [
       2400,
       1350
@@ -1978,10 +2112,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": true,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "CustomMediumPunchout",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CustomMediumPunchout.jpg"
   },
   "CustomMediumSticker": {
-    "DisplayName": "CustomMediumSticker",
+    "DisplayName": "Custom Medium Sticker",
     "DimensionsPixels": [
       2400,
       1350
@@ -2006,10 +2142,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": true,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "CustomMediumSticker",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CustomMediumSticker.jpg"
   },
   "CustomMiniCardstock": {
-    "DisplayName": "CustomMiniCardstock",
+    "DisplayName": "Custom Mini Cardstock",
     "DimensionsPixels": [
       750,
       1050
@@ -2034,10 +2172,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": true,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "CustomMiniCardstock",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CustomMiniCardstock.jpg"
   },
   "CustomMiniSticker": {
-    "DisplayName": "CustomMiniSticker",
+    "DisplayName": "Custom Mini Sticker",
     "DimensionsPixels": [
       750,
       1050
@@ -2062,10 +2202,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": true,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "CustomMiniSticker",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CustomMiniSticker.jpg"
   },
   "CustomPrintedMeeple": {
-    "DisplayName": "CustomPrintedMeeple",
+    "DisplayName": "Custom Printed Meeple",
     "DimensionsPixels": [
       300,
       300
@@ -2090,10 +2232,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "Meeple",
-    "SimulatorCreationTask": "Meeple"
+    "SimulatorCreationTask": "Meeple",
+    "Key": "CustomPrintedMeeple",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CustomPrintedMeeple.jpg"
   },
   "CustomSmallCardstock": {
-    "DisplayName": "CustomSmallCardstock",
+    "DisplayName": "Custom Small Cardstock",
     "DimensionsPixels": [
       975,
       1575
@@ -2118,10 +2262,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": true,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "CustomSmallCardstock",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CustomSmallCardstock.jpg"
   },
   "CustomSmallPunchout": {
-    "DisplayName": "CustomSmallPunchout",
+    "DisplayName": "Custom Small Punchout",
     "DimensionsPixels": [
       975,
       1575
@@ -2146,10 +2292,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": true,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "CustomSmallPunchout",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CustomSmallPunchout.jpg"
   },
   "CustomSmallSticker": {
-    "DisplayName": "CustomSmallSticker",
+    "DisplayName": "Custom Small Sticker",
     "DimensionsPixels": [
       975,
       1575
@@ -2174,10 +2322,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": true,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "CustomSmallSticker",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CustomSmallSticker.jpg"
   },
   "CustomWoodD6": {
-    "DisplayName": "CustomWoodD6",
+    "DisplayName": "Custom Wood D6",
     "DimensionsPixels": [
       180,
       180
@@ -2200,10 +2350,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "CustomWoodD6",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/CustomWoodD6.jpg"
   },
   "DeckBox": {
-    "DisplayName": "DeckBox",
+    "DisplayName": "Deck Box",
     "DimensionsPixels": [
       3675,
       4950
@@ -2228,10 +2380,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "DeckBox",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/DeckBox.jpg"
   },
   "DeckBoxTopAndSide": {
-    "DisplayName": "DeckBoxTopAndSide",
+    "DisplayName": "Deck Box Top And Side",
     "DimensionsPixels": [
       3675,
       4950
@@ -2255,10 +2409,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "DeckBoxTopAndSide",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/DeckBoxTopAndSide.jpg"
   },
   "DiceSticker": {
-    "DisplayName": "DiceSticker",
+    "DisplayName": "Dice Sticker",
     "DimensionsPixels": [
       188,
       188
@@ -2283,10 +2439,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "DiceSticker",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/DiceSticker.jpg"
   },
   "DividerDeck": {
-    "DisplayName": "DividerDeck",
+    "DisplayName": "Divider Deck",
     "DimensionsPixels": [
       975,
       1125
@@ -2309,8 +2467,10 @@ const COMPONENT_INFO = {
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
-    "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "PlaygroundCreationTask": "DECK",
+    "SimulatorCreationTask": "DECK",
+    "Key": "DividerDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/DividerDeck.jpg"
   },
   "Document": {
     "DisplayName": "Document",
@@ -2336,10 +2496,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "Document",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/Document.jpg"
   },
   "DominoChit": {
-    "DisplayName": "DominoChit",
+    "DisplayName": "Domino Chit",
     "DimensionsPixels": [
       375,
       675
@@ -2364,10 +2526,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "DominoChit",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/DominoChit.jpg"
   },
   "DominoDeck": {
-    "DisplayName": "DominoDeck",
+    "DisplayName": "Domino Deck",
     "DimensionsPixels": [
       600,
       1125
@@ -2391,10 +2555,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "DominoDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/DominoDeck.jpg"
   },
   "DominoTile": {
-    "DisplayName": "DominoTile",
+    "DisplayName": "Domino Tile",
     "DimensionsPixels": [
       675,
       1275
@@ -2420,10 +2586,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "DominoTile",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/DominoTile.jpg"
   },
   "DualDial": {
-    "DisplayName": "DualDial",
+    "DisplayName": "Dual Dial",
     "DimensionsPixels": [
       2550,
       1650
@@ -2447,10 +2615,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "DualDial",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/DualDial.jpg"
   },
   "EuroPokerDeck": {
-    "DisplayName": "EuroPokerDeck",
+    "DisplayName": "Euro Poker Deck",
     "DimensionsPixels": [
       825,
       1125
@@ -2475,10 +2645,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "EuroPokerDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/EuroPokerDeck.jpg"
   },
   "EuroSquareDeck": {
-    "DisplayName": "EuroSquareDeck",
+    "DisplayName": "Euro Square Deck",
     "DimensionsPixels": [
       900,
       900
@@ -2503,10 +2675,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "EuroSquareDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/EuroSquareDeck.jpg"
   },
   "FlowerMat": {
-    "DisplayName": "FlowerMat",
+    "DisplayName": "Flower Mat",
     "DimensionsPixels": [
       825,
       900
@@ -2530,10 +2704,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "FlowerMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/FlowerMat.jpg"
   },
   "FoilEuroPokerDeck": {
-    "DisplayName": "FoilEuroPokerDeck",
+    "DisplayName": "Foil Euro Poker Deck",
     "DimensionsPixels": [
       825,
       1125
@@ -2559,10 +2735,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "FoilEuroPokerDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/FoilEuroPokerDeck.jpg"
   },
   "FoilPokerDeck": {
-    "DisplayName": "FoilPokerDeck",
+    "DisplayName": "Foil Poker Deck",
     "DimensionsPixels": [
       825,
       1125
@@ -2587,10 +2765,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "FoilPokerDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/FoilPokerDeck.jpg"
   },
   "FoilTarotDeck": {
-    "DisplayName": "FoilTarotDeck",
+    "DisplayName": "Foil Tarot Deck",
     "DimensionsPixels": [
       900,
       1500
@@ -2615,10 +2795,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "FoilTarotDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/FoilTarotDeck.jpg"
   },
   "HalfBoard": {
-    "DisplayName": "HalfBoard",
+    "DisplayName": "Half Board",
     "DimensionsPixels": [
       1575,
       3075
@@ -2642,10 +2824,12 @@ const COMPONENT_INFO = {
       "half"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalfBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/HalfBoard.jpg"
   },
   "HalfMat": {
-    "DisplayName": "HalfMat",
+    "DisplayName": "Half Mat",
     "DimensionsPixels": [
       1575,
       3075
@@ -2669,10 +2853,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "HalfMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/HalfMat.jpg"
   },
   "HexMat": {
-    "DisplayName": "HexMat",
+    "DisplayName": "Hex Mat",
     "DimensionsPixels": [
       1650,
       1425
@@ -2696,10 +2882,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "HexMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/HexMat.jpg"
   },
   "InvaderMat": {
-    "DisplayName": "InvaderMat",
+    "DisplayName": "Invader Mat",
     "DimensionsPixels": [
       1275,
       1125
@@ -2723,10 +2911,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "InvaderMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/InvaderMat.jpg"
   },
   "JumboBooklet": {
-    "DisplayName": "JumboBooklet",
+    "DisplayName": "Jumbo Booklet",
     "DimensionsPixels": [
       2475,
       3075
@@ -2750,10 +2940,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "JumboBooklet",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/JumboBooklet.jpg"
   },
   "JumboHookBox36": {
-    "DisplayName": "JumboHookBox36",
+    "DisplayName": "Jumbo Hook Box 36",
     "DimensionsPixels": [
       3075,
       4725
@@ -2780,10 +2972,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "JumboHookBox36",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/JumboHookBox36.jpg"
   },
   "JumboHookBox90": {
-    "DisplayName": "JumboHookBox90",
+    "DisplayName": "Jumbo Hook Box 90",
     "DimensionsPixels": [
       3450,
       5100
@@ -2810,10 +3004,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "JumboHookBox90",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/JumboHookBox90.jpg"
   },
   "JumboTuckBox90": {
-    "DisplayName": "JumboTuckBox90",
+    "DisplayName": "Jumbo Tuck Box 90",
     "DimensionsPixels": [
       3450,
       2700
@@ -2839,10 +3035,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "JumboTuckBox90",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/JumboTuckBox90.jpg"
   },
   "LargeAcrylicShape125": {
-    "DisplayName": "LargeAcrylicShape125",
+    "DisplayName": "Large Acrylic Shape 125",
     "DimensionsPixels": [
       3150,
       2700
@@ -2864,10 +3062,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": true,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "LargeAcrylicShape125",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeAcrylicShape125.jpg"
   },
   "LargeBooklet": {
-    "DisplayName": "LargeBooklet",
+    "DisplayName": "Large Booklet",
     "DimensionsPixels": [
       1575,
       2475
@@ -2891,10 +3091,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "LargeBooklet",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeBooklet.jpg"
   },
   "LargeHexMat": {
-    "DisplayName": "LargeHexMat",
+    "DisplayName": "Large Hex Mat",
     "DimensionsPixels": [
       2925,
       2550
@@ -2919,10 +3121,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "LargeHexMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeHexMat.jpg"
   },
   "LargePrototypeBox": {
-    "DisplayName": "LargePrototypeBox",
+    "DisplayName": "Large Prototype Box",
     "DimensionsPixels": [
       7650,
       5925
@@ -2947,10 +3151,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "LargePrototypeBox",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargePrototypeBox.jpg"
   },
   "LargeRetailBox": {
-    "DisplayName": "LargeRetailBox",
+    "DisplayName": "Large Retail Box",
     "DimensionsPixels": [
       3975,
       4725
@@ -2976,10 +3182,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "LargeRetailBox",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeRetailBox.jpg"
   },
   "LargeRing": {
-    "DisplayName": "LargeRing",
+    "DisplayName": "Large Ring",
     "DimensionsPixels": [
       450,
       450
@@ -3005,10 +3213,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "LargeRing",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeRing.jpg"
   },
   "LargeScorePadColor": {
-    "DisplayName": "LargeScorePadColor",
+    "DisplayName": "Large Score Pad Color",
     "DimensionsPixels": [
       2475,
       3075
@@ -3034,10 +3244,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "LargeScorePadColor",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeScorePadColor.jpg"
   },
   "LargeScreen": {
-    "DisplayName": "LargeScreen",
+    "DisplayName": "Large Screen",
     "DimensionsPixels": [
       4875,
       3075
@@ -3061,10 +3273,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "LargeScreen",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeScreen.jpg"
   },
   "LargeSquareBoard": {
-    "DisplayName": "LargeSquareBoard",
+    "DisplayName": "Large Square Board",
     "DimensionsPixels": [
       3075,
       3075
@@ -3089,10 +3303,12 @@ const COMPONENT_INFO = {
       "square"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LargeSquareBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeSquareBoard.jpg"
   },
   "LargeSquareMat": {
-    "DisplayName": "LargeSquareMat",
+    "DisplayName": "Large Square Mat",
     "DimensionsPixels": [
       3075,
       3075
@@ -3117,10 +3333,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "LargeSquareMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeSquareMat.jpg"
   },
   "LargeSquareTile": {
-    "DisplayName": "LargeSquareTile",
+    "DisplayName": "Large Square Tile",
     "DimensionsPixels": [
       1125,
       1125
@@ -3147,10 +3365,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "LargeSquareTile",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeSquareTile.jpg"
   },
   "LargeStandee": {
-    "DisplayName": "LargeStandee",
+    "DisplayName": "Large Standee",
     "DimensionsPixels": [
       375,
       975
@@ -3175,10 +3395,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "LargeStandee",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeStandee.jpg"
   },
   "LargeStoutBoxTop": {
-    "DisplayName": "LargeStoutBoxTop",
+    "DisplayName": "Large Stout Box Top",
     "DimensionsPixels": [
       3450,
       3450
@@ -3203,10 +3425,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "LargeStoutBoxTop",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeStoutBoxTop.jpg"
   },
   "LargeStoutBoxTopAndSide": {
-    "DisplayName": "LargeStoutBoxTopAndSide",
+    "DisplayName": "Large Stout Box Top And Side",
     "DimensionsPixels": [
       5925,
       5925
@@ -3231,10 +3455,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "LargeStoutBoxTopAndSide",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeStoutBoxTopAndSide.jpg"
   },
   "MediumBooklet": {
-    "DisplayName": "MediumBooklet",
+    "DisplayName": "Medium Booklet",
     "DimensionsPixels": [
       1125,
       1575
@@ -3258,10 +3484,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "MediumBooklet",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumBooklet.jpg"
   },
   "MediumFolio": {
-    "DisplayName": "MediumFolio",
+    "DisplayName": "Medium Folio",
     "DimensionsPixels": [
       4875,
       2475
@@ -3286,10 +3514,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "MediumFolio",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumFolio.jpg"
   },
   "MediumGameMat": {
-    "DisplayName": "MediumGameMat",
+    "DisplayName": "Medium Game Mat",
     "DimensionsPixels": [
       7275,
       4275
@@ -3313,10 +3543,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "MediumGameMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumGameMat.jpg"
   },
   "MediumMatBook": {
-    "DisplayName": "MediumMatBook",
+    "DisplayName": "Medium Mat Book",
     "DimensionsPixels": [
       1575,
       2325
@@ -3342,10 +3574,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": true,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "MediumMatBook",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumMatBook.jpg"
   },
   "MediumProBox": {
-    "DisplayName": "MediumProBox",
+    "DisplayName": "Medium Pro Box",
     "DimensionsPixels": [
       3300,
       4350
@@ -3371,10 +3605,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "MediumProBox",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumProBox.jpg"
   },
   "MediumPrototypeBox": {
-    "DisplayName": "MediumPrototypeBox",
+    "DisplayName": "Medium Prototype Box",
     "DimensionsPixels": [
       5850,
       5400
@@ -3399,10 +3635,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "MediumPrototypeBox",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumPrototypeBox.jpg"
   },
   "MediumRing": {
-    "DisplayName": "MediumRing",
+    "DisplayName": "Medium Ring",
     "DimensionsPixels": [
       375,
       375
@@ -3428,10 +3666,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "MediumRing",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumRing.jpg"
   },
   "MediumScorePadColor": {
-    "DisplayName": "MediumScorePadColor",
+    "DisplayName": "Medium Score Pad Color",
     "DimensionsPixels": [
       1425,
       2475
@@ -3457,10 +3697,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "MediumScorePadColor",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumScorePadColor.jpg"
   },
   "MediumScreen": {
-    "DisplayName": "MediumScreen",
+    "DisplayName": "Medium Screen",
     "DimensionsPixels": [
       4875,
       1425
@@ -3484,10 +3726,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "MediumScreen",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumScreen.jpg"
   },
   "MediumSixFoldBoard": {
-    "DisplayName": "MediumSixFoldBoard",
+    "DisplayName": "Medium Six Fold Board",
     "DimensionsPixels": [
       4875,
       4875
@@ -3512,10 +3756,12 @@ const COMPONENT_INFO = {
       "six"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MediumSixFoldBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumSixFoldBoard.jpg"
   },
   "MediumSquareTile": {
-    "DisplayName": "MediumSquareTile",
+    "DisplayName": "Medium Square Tile",
     "DimensionsPixels": [
       825,
       825
@@ -3542,10 +3788,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "MediumSquareTile",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumSquareTile.jpg"
   },
   "MediumStandee": {
-    "DisplayName": "MediumStandee",
+    "DisplayName": "Medium Standee",
     "DimensionsPixels": [
       300,
       750
@@ -3570,10 +3818,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "MediumStandee",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumStandee.jpg"
   },
   "MediumStoutBoxTopAndSide": {
-    "DisplayName": "MediumStoutBoxTopAndSide",
+    "DisplayName": "Medium Stout Box Top And Side",
     "DimensionsPixels": [
       3675,
       4575
@@ -3598,10 +3848,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "MediumStoutBoxTopAndSide",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumStoutBoxTopAndSide.jpg"
   },
   "MediumTriangleChit": {
-    "DisplayName": "MediumTriangleChit",
+    "DisplayName": "Medium Triangle Chit",
     "DimensionsPixels": [
       300,
       300
@@ -3627,10 +3879,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "MediumTriangleChit",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumTriangleChit.jpg"
   },
   "MeepleSticker": {
-    "DisplayName": "MeepleSticker",
+    "DisplayName": "Meeple Sticker",
     "DimensionsPixels": [
       225,
       225
@@ -3654,10 +3908,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "Meeple",
-    "SimulatorCreationTask": "Meeple"
+    "SimulatorCreationTask": "Meeple",
+    "Key": "MeepleSticker",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MeepleSticker.jpg"
   },
   "MiniCircleTile": {
-    "DisplayName": "MiniCircleTile",
+    "DisplayName": "Mini Circle Tile",
     "DimensionsPixels": [
       450,
       450
@@ -3684,10 +3940,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "MiniCircleTile",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MiniCircleTile.jpg"
   },
   "MiniSquareTile": {
-    "DisplayName": "MiniSquareTile",
+    "DisplayName": "Mini Square Tile",
     "DimensionsPixels": [
       450,
       450
@@ -3713,10 +3971,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "MiniSquareTile",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MiniSquareTile.jpg"
   },
   "MintTinSticker": {
-    "DisplayName": "MintTinSticker",
+    "DisplayName": "Mint Tin Sticker",
     "DimensionsPixels": [
       750,
       1125
@@ -3742,10 +4002,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "MintTinSticker",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MintTinSticker.jpg"
   },
   "PawnSticker": {
-    "DisplayName": "PawnSticker",
+    "DisplayName": "Pawn Sticker",
     "DimensionsPixels": [
       300,
       525
@@ -3769,10 +4031,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "PawnSticker",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PawnSticker.jpg"
   },
   "PlacardMat": {
-    "DisplayName": "PlacardMat",
+    "DisplayName": "Placard Mat",
     "DimensionsPixels": [
       1275,
       975
@@ -3796,10 +4060,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "PlacardMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PlacardMat.jpg"
   },
   "PlayMoney": {
-    "DisplayName": "PlayMoney",
+    "DisplayName": "Play Money",
     "DimensionsPixels": [
       675,
       1125
@@ -3824,10 +4090,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "PlayMoney",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PlayMoney.jpg"
   },
   "PokerBoosterBox": {
-    "DisplayName": "PokerBoosterBox",
+    "DisplayName": "Poker Booster Box",
     "DimensionsPixels": [
       3450,
       4875
@@ -3852,10 +4120,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "PokerBoosterBox",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PokerBoosterBox.jpg"
   },
   "PokerEnvelope": {
-    "DisplayName": "PokerEnvelope",
+    "DisplayName": "Poker Envelope",
     "DimensionsPixels": [
       975,
       1425
@@ -3879,10 +4149,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "PokerEnvelope",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PokerEnvelope.jpg"
   },
   "PokerHookBox108": {
-    "DisplayName": "PokerHookBox108",
+    "DisplayName": "Poker Hook Box 108",
     "DimensionsPixels": [
       3225,
       3750
@@ -3909,10 +4181,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "PokerHookBox108",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PokerHookBox108.jpg"
   },
   "PokerHookBox18": {
-    "DisplayName": "PokerHookBox18",
+    "DisplayName": "Poker Hook Box 18",
     "DimensionsPixels": [
       2475,
       3000
@@ -3939,10 +4213,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "PokerHookBox18",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PokerHookBox18.jpg"
   },
   "PokerHookBox36": {
-    "DisplayName": "PokerHookBox36",
+    "DisplayName": "Poker Hook Box 36",
     "DimensionsPixels": [
       2700,
       3150
@@ -3969,10 +4245,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "PokerHookBox36",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PokerHookBox36.jpg"
   },
   "PokerHookBox54": {
-    "DisplayName": "PokerHookBox54",
+    "DisplayName": "Poker Hook Box 54",
     "DimensionsPixels": [
       2850,
       3375
@@ -3999,10 +4277,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "PokerHookBox54",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PokerHookBox54.jpg"
   },
   "PokerHookBox72": {
-    "DisplayName": "PokerHookBox72",
+    "DisplayName": "Poker Hook Box 72",
     "DimensionsPixels": [
       3000,
       3450
@@ -4029,10 +4309,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "PokerHookBox72",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PokerHookBox72.jpg"
   },
   "PokerHookBox90": {
-    "DisplayName": "PokerHookBox90",
+    "DisplayName": "Poker Hook Box 90",
     "DimensionsPixels": [
       3075,
       3600
@@ -4059,10 +4341,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "PokerHookBox90",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PokerHookBox90.jpg"
   },
   "PostcardMat": {
-    "DisplayName": "PostcardMat",
+    "DisplayName": "Postcard Mat",
     "DimensionsPixels": [
       1875,
       1275
@@ -4086,10 +4370,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "PostcardMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/PostcardMat.jpg"
   },
   "QuadFoldBoard": {
-    "DisplayName": "QuadFoldBoard",
+    "DisplayName": "Quad Fold Board",
     "DimensionsPixels": [
       5475,
       5475
@@ -4113,10 +4399,12 @@ const COMPONENT_INFO = {
       "quad"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "QuadFoldBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/QuadFoldBoard.jpg"
   },
   "QuadFoldMat": {
-    "DisplayName": "QuadFoldMat",
+    "DisplayName": "Quad Fold Mat",
     "DimensionsPixels": [
       3375,
       5175
@@ -4141,10 +4429,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "QuadFoldMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/QuadFoldMat.jpg"
   },
   "QuarterBoard": {
-    "DisplayName": "QuarterBoard",
+    "DisplayName": "Quarter Board",
     "DimensionsPixels": [
       1575,
       1575
@@ -4168,10 +4458,12 @@ const COMPONENT_INFO = {
       "quarter"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "QuarterBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/QuarterBoard.jpg"
   },
   "QuarterMat": {
-    "DisplayName": "QuarterMat",
+    "DisplayName": "Quarter Mat",
     "DimensionsPixels": [
       1575,
       1575
@@ -4195,10 +4487,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "QuarterMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/QuarterMat.jpg"
   },
   "SixFoldBoard": {
-    "DisplayName": "SixFoldBoard",
+    "DisplayName": "Six Fold Board",
     "DimensionsPixels": [
       8175,
       5475
@@ -4222,10 +4516,12 @@ const COMPONENT_INFO = {
       "six"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SixFoldBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SixFoldBoard.jpg"
   },
   "SkinnyBoard": {
-    "DisplayName": "SkinnyBoard",
+    "DisplayName": "Skinny Board",
     "DimensionsPixels": [
       1275,
       3075
@@ -4249,10 +4545,12 @@ const COMPONENT_INFO = {
       "skinny"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkinnyBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SkinnyBoard.jpg"
   },
   "SkinnyMat": {
-    "DisplayName": "SkinnyMat",
+    "DisplayName": "Skinny Mat",
     "DimensionsPixels": [
       1275,
       3075
@@ -4276,10 +4574,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "SkinnyMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SkinnyMat.jpg"
   },
   "SliverBoard": {
-    "DisplayName": "SliverBoard",
+    "DisplayName": "Sliver Board",
     "DimensionsPixels": [
       675,
       2475
@@ -4303,10 +4603,12 @@ const COMPONENT_INFO = {
       "sliver"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SliverBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SliverBoard.jpg"
   },
   "SliverMat": {
-    "DisplayName": "SliverMat",
+    "DisplayName": "Sliver Mat",
     "DimensionsPixels": [
       675,
       2475
@@ -4330,10 +4632,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "SliverMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SliverMat.jpg"
   },
   "SlopesideBiFoldMat": {
-    "DisplayName": "SlopesideBiFoldMat",
+    "DisplayName": "Slopeside Bi Fold Mat",
     "DimensionsPixels": [
       2175,
       1125
@@ -4359,10 +4663,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "SlopesideBiFoldMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SlopesideBiFoldMat.jpg"
   },
   "SmallBiFoldMat": {
-    "DisplayName": "SmallBiFoldMat",
+    "DisplayName": "Small Bi Fold Mat",
     "DimensionsPixels": [
       1725,
       2175
@@ -4388,10 +4694,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "SmallBiFoldMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallBiFoldMat.jpg"
   },
   "SmallBooklet": {
-    "DisplayName": "SmallBooklet",
+    "DisplayName": "Small Booklet",
     "DimensionsPixels": [
       825,
       1125
@@ -4415,10 +4723,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "SmallBooklet",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallBooklet.jpg"
   },
   "SmallDial": {
-    "DisplayName": "SmallDial",
+    "DisplayName": "Small Dial",
     "DimensionsPixels": [
       825,
       2400
@@ -4442,10 +4752,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "SmallDial",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallDial.jpg"
   },
   "SmallFolio": {
-    "DisplayName": "SmallFolio",
+    "DisplayName": "Small Folio",
     "DimensionsPixels": [
       4275,
       1725
@@ -4470,10 +4782,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "SmallFolio",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallFolio.jpg"
   },
   "SmallGameMat": {
-    "DisplayName": "SmallGameMat",
+    "DisplayName": "Small Game Mat",
     "DimensionsPixels": [
       3075,
       4875
@@ -4497,10 +4811,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "SmallGameMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallGameMat.jpg"
   },
   "SmallProBox": {
-    "DisplayName": "SmallProBox",
+    "DisplayName": "Small Pro Box",
     "DimensionsPixels": [
       3450,
       2700
@@ -4526,10 +4842,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "SmallProBox",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallProBox.jpg"
   },
   "SmallProTarotInsert": {
-    "DisplayName": "SmallProTarotInsert",
+    "DisplayName": "Small Pro Tarot Insert",
     "DimensionsPixels": [
       2400,
       4575
@@ -4555,10 +4873,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "SmallProTarotInsert",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallProTarotInsert.jpg"
   },
   "SmallPrototypeBox": {
-    "DisplayName": "SmallPrototypeBox",
+    "DisplayName": "Small Prototype Box",
     "DimensionsPixels": [
       4350,
       4500
@@ -4583,10 +4903,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "SmallPrototypeBox",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallPrototypeBox.jpg"
   },
   "SmallQuadFoldMat": {
-    "DisplayName": "SmallQuadFoldMat",
+    "DisplayName": "Small Quad Fold Mat",
     "DimensionsPixels": [
       2175,
       3375
@@ -4612,10 +4934,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "SmallQuadFoldMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallQuadFoldMat.jpg"
   },
   "SmallRing": {
-    "DisplayName": "SmallRing",
+    "DisplayName": "Small Ring",
     "DimensionsPixels": [
       300,
       300
@@ -4641,10 +4965,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "SmallRing",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallRing.jpg"
   },
   "SmallScorePadColor": {
-    "DisplayName": "SmallScorePadColor",
+    "DisplayName": "Small Score Pad Color",
     "DimensionsPixels": [
       1125,
       1725
@@ -4670,10 +4996,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "SmallScorePadColor",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallScorePadColor.jpg"
   },
   "SmallScreen": {
-    "DisplayName": "SmallScreen",
+    "DisplayName": "Small Screen",
     "DimensionsPixels": [
       3075,
       1200
@@ -4697,10 +5025,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "SmallScreen",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallScreen.jpg"
   },
   "SmallSquareBoard": {
-    "DisplayName": "SmallSquareBoard",
+    "DisplayName": "Small Square Board",
     "DimensionsPixels": [
       1275,
       1275
@@ -4725,10 +5055,12 @@ const COMPONENT_INFO = {
       "square"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SmallSquareBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallSquareBoard.jpg"
   },
   "SmallSquareDeck": {
-    "DisplayName": "SmallSquareDeck",
+    "DisplayName": "Small Square Deck",
     "DimensionsPixels": [
       825,
       825
@@ -4753,10 +5085,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "SmallSquareDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallSquareDeck.jpg"
   },
   "SmallSquareMat": {
-    "DisplayName": "SmallSquareMat",
+    "DisplayName": "Small Square Mat",
     "DimensionsPixels": [
       1275,
       1275
@@ -4781,10 +5115,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "SmallSquareMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallSquareMat.jpg"
   },
   "SmallSquareTile": {
-    "DisplayName": "SmallSquareTile",
+    "DisplayName": "Small Square Tile",
     "DimensionsPixels": [
       675,
       675
@@ -4810,10 +5146,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "SmallSquareTile",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallSquareTile.jpg"
   },
   "SmallStandee": {
-    "DisplayName": "SmallStandee",
+    "DisplayName": "Small Standee",
     "DimensionsPixels": [
       225,
       525
@@ -4838,10 +5176,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "SmallStandee",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallStandee.jpg"
   },
   "SmallStoutTarotInsert": {
-    "DisplayName": "SmallStoutTarotInsert",
+    "DisplayName": "Small Stout Tarot Insert",
     "DimensionsPixels": [
       3525,
       4725
@@ -4867,10 +5207,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "SmallStoutTarotInsert",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallStoutTarotInsert.jpg"
   },
   "SpinnerMat": {
-    "DisplayName": "SpinnerMat",
+    "DisplayName": "Spinner Mat",
     "DimensionsPixels": [
       2475,
       2475
@@ -4894,10 +5236,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "SpinnerMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SpinnerMat.jpg"
   },
   "SquareBoard": {
-    "DisplayName": "SquareBoard",
+    "DisplayName": "Square Board",
     "DimensionsPixels": [
       2475,
       2475
@@ -4921,10 +5265,12 @@ const COMPONENT_INFO = {
       "square"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SquareBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SquareBoard.jpg"
   },
   "SquareDeck": {
-    "DisplayName": "SquareDeck",
+    "DisplayName": "Square Deck",
     "DimensionsPixels": [
       1125,
       1125
@@ -4948,10 +5294,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "SquareDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SquareDeck.jpg"
   },
   "SquareFolio": {
-    "DisplayName": "SquareFolio",
+    "DisplayName": "Square Folio",
     "DimensionsPixels": [
       4275,
       1125
@@ -4976,10 +5324,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "SquareFolio",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SquareFolio.jpg"
   },
   "SquareHookBox48": {
-    "DisplayName": "SquareHookBox48",
+    "DisplayName": "Square Hook Box 48",
     "DimensionsPixels": [
       3450,
       3450
@@ -5005,10 +5355,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "SquareHookBox48",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SquareHookBox48.jpg"
   },
   "SquareHookBox96": {
-    "DisplayName": "SquareHookBox96",
+    "DisplayName": "Square Hook Box 96",
     "DimensionsPixels": [
       3525,
       3900
@@ -5034,10 +5386,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "SquareHookBox96",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SquareHookBox96.jpg"
   },
   "SquareMat": {
-    "DisplayName": "SquareMat",
+    "DisplayName": "Square Mat",
     "DimensionsPixels": [
       2475,
       2475
@@ -5061,10 +5415,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "SquareMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SquareMat.jpg"
   },
   "SquareTuckBox48": {
-    "DisplayName": "SquareTuckBox48",
+    "DisplayName": "Square Tuck Box 48",
     "DimensionsPixels": [
       2850,
       1800
@@ -5089,10 +5445,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "SquareTuckBox48",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SquareTuckBox48.jpg"
   },
   "SquareTuckBox96": {
-    "DisplayName": "SquareTuckBox96",
+    "DisplayName": "Square Tuck Box 96",
     "DimensionsPixels": [
       3525,
       2250
@@ -5117,10 +5475,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "SquareTuckBox96",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SquareTuckBox96.jpg"
   },
   "StripBoard": {
-    "DisplayName": "StripBoard",
+    "DisplayName": "Strip Board",
     "DimensionsPixels": [
       675,
       3075
@@ -5144,10 +5504,12 @@ const COMPONENT_INFO = {
       "strip"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StripBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/StripBoard.jpg"
   },
   "StripChit": {
-    "DisplayName": "StripChit",
+    "DisplayName": "Strip Chit",
     "DimensionsPixels": [
       375,
       975
@@ -5172,10 +5534,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "StripChit",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/StripChit.jpg"
   },
   "StripMat": {
-    "DisplayName": "StripMat",
+    "DisplayName": "Strip Mat",
     "DimensionsPixels": [
       675,
       3075
@@ -5199,10 +5563,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "StripMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/StripMat.jpg"
   },
   "TallBooklet": {
-    "DisplayName": "TallBooklet",
+    "DisplayName": "Tall Booklet",
     "DimensionsPixels": [
       1425,
       2475
@@ -5226,10 +5592,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "TallBooklet",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/TallBooklet.jpg"
   },
   "TarotBooklet": {
-    "DisplayName": "TarotBooklet",
+    "DisplayName": "Tarot Booklet",
     "DimensionsPixels": [
       900,
       1500
@@ -5253,10 +5621,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "TarotBooklet",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/TarotBooklet.jpg"
   },
   "TarotDeck": {
-    "DisplayName": "TarotDeck",
+    "DisplayName": "Tarot Deck",
     "DimensionsPixels": [
       900,
       1500
@@ -5280,10 +5650,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "TarotDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/TarotDeck.jpg"
   },
   "TarotFolio": {
-    "DisplayName": "TarotFolio",
+    "DisplayName": "Tarot Folio",
     "DimensionsPixels": [
       3375,
       1500
@@ -5308,10 +5680,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "TarotFolio",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/TarotFolio.jpg"
   },
   "TarotHookBox40": {
-    "DisplayName": "TarotHookBox40",
+    "DisplayName": "Tarot Hook Box 40",
     "DimensionsPixels": [
       2925,
       4125
@@ -5337,10 +5711,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "TarotHookBox40",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/TarotHookBox40.jpg"
   },
   "TarotHookBox90": {
-    "DisplayName": "TarotHookBox90",
+    "DisplayName": "Tarot Hook Box 90",
     "DimensionsPixels": [
       3300,
       4500
@@ -5366,10 +5742,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "TarotHookBox90",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/TarotHookBox90.jpg"
   },
   "TarotTuckBox40": {
-    "DisplayName": "TarotTuckBox40",
+    "DisplayName": "Tarot Tuck Box 40",
     "DimensionsPixels": [
       2325,
       2025
@@ -5394,10 +5772,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "TarotTuckBox40",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/TarotTuckBox40.jpg"
   },
   "TarotTuckBox90": {
-    "DisplayName": "TarotTuckBox90",
+    "DisplayName": "Tarot Tuck Box 90",
     "DimensionsPixels": [
       3000,
       2475
@@ -5422,10 +5802,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "TarotTuckBox90",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/TarotTuckBox90.jpg"
   },
   "TokenSticker": {
-    "DisplayName": "TokenSticker",
+    "DisplayName": "Token Sticker",
     "DimensionsPixels": [
       338,
       338
@@ -5449,10 +5831,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "TokenSticker",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/TokenSticker.jpg"
   },
   "TombstoneShard": {
-    "DisplayName": "TombstoneShard",
+    "DisplayName": "Tombstone Shard",
     "DimensionsPixels": [
       300,
       450
@@ -5477,10 +5861,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "TombstoneShard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/TombstoneShard.jpg"
   },
   "TradingDeck": {
-    "DisplayName": "TradingDeck",
+    "DisplayName": "Trading Deck",
     "DimensionsPixels": [
       825,
       1125
@@ -5504,10 +5890,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "TradingDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/TradingDeck.jpg"
   },
   "TriangleTile": {
-    "DisplayName": "TriangleTile",
+    "DisplayName": "Triangle Tile",
     "DimensionsPixels": [
       675,
       600
@@ -5532,10 +5920,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "TriangleTile",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/TriangleTile.jpg"
   },
   "USGameDeck": {
-    "DisplayName": "USGameDeck",
+    "DisplayName": "USGame Deck",
     "DimensionsPixels": [
       750,
       1125
@@ -5559,10 +5949,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "USGameDeck",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/USGameDeck.jpg"
   },
   "USGameMat": {
-    "DisplayName": "USGameMat",
+    "DisplayName": "USGame Mat",
     "DimensionsPixels": [
       1050,
       1425
@@ -5586,10 +5978,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "BOARD",
-    "SimulatorCreationTask": "BOARD"
+    "SimulatorCreationTask": "BOARD",
+    "Key": "USGameMat",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/USGameMat.jpg"
   },
   "DigestPerfectBoundBook": {
-    "DisplayName": "DigestPerfectBoundBook",
+    "DisplayName": "Digest Perfect Bound Book",
     "DimensionsPixels": [
       1725,
       2625
@@ -5616,10 +6010,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": true,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "DigestPerfectBoundBook",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/DigestPerfectBoundBook.jpg"
   },
   "JumboCoilBook": {
-    "DisplayName": "JumboCoilBook",
+    "DisplayName": "Jumbo Coil Book",
     "DimensionsPixels": [
       2550,
       3075
@@ -5645,10 +6041,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": true,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "JumboCoilBook",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/JumboCoilBook.jpg"
   },
   "LargeDualLayerBoard": {
-    "DisplayName": "LargeDualLayerBoard",
+    "DisplayName": "Large Dual Layer Board",
     "DimensionsPixels": [
       2475,
       3075
@@ -5675,10 +6073,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "LargeDualLayerBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeDualLayerBoard.jpg"
   },
   "LargeQuadFoldBoard": {
-    "DisplayName": "LargeQuadFoldBoard",
+    "DisplayName": "Large Quad Fold Board",
     "DimensionsPixels": [
       6075,
       6075
@@ -5703,10 +6103,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "LargeQuadFoldBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LargeQuadFoldBoard.jpg"
   },
   "LetterPerfectBoundBook": {
-    "DisplayName": "LetterPerfectBoundBook",
+    "DisplayName": "Letter Perfect Bound Book",
     "DimensionsPixels": [
       2625,
       3375
@@ -5733,10 +6135,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": true,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "LetterPerfectBoundBook",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/LetterPerfectBoundBook.jpg"
   },
   "MediumCoilBook": {
-    "DisplayName": "MediumCoilBook",
+    "DisplayName": "Medium Coil Book",
     "DimensionsPixels": [
       1575,
       2325
@@ -5762,10 +6166,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": true,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "MediumCoilBook",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumCoilBook.jpg"
   },
   "MediumDualLayerBoard": {
-    "DisplayName": "MediumDualLayerBoard",
+    "DisplayName": "Medium Dual Layer Board",
     "DimensionsPixels": [
       2475,
       1275
@@ -5792,10 +6198,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "MediumDualLayerBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/MediumDualLayerBoard.jpg"
   },
   "SmallDualLayerBoard": {
-    "DisplayName": "SmallDualLayerBoard",
+    "DisplayName": "Small Dual Layer Board",
     "DimensionsPixels": [
       1125,
       1725
@@ -5822,10 +6230,12 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK"
+    "SimulatorCreationTask": "DECK",
+    "Key": "SmallDualLayerBoard",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/SmallDualLayerBoard.jpg"
   },
   "TallMintTin": {
-    "DisplayName": "TallMintTin",
+    "DisplayName": "Tall Mint Tin",
     "DimensionsPixels": [
       750,
       1125
@@ -5851,7 +6261,9 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
-    "SimulatorCreationTask": "none"
+    "SimulatorCreationTask": "none",
+    "Key": "TallMintTin",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/TallMintTin.jpg"
   },
   "VHSBox": {
     "DisplayName": "VHSBox",
@@ -5877,7 +6289,9 @@ const COMPONENT_INFO = {
     "IsDisabled": false,
     "IsPrintingDisabled": false,
     "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "VHSBox",
+    "PreviewUri": "https://www.thegamecrafter.com/product-images/VHSBox.jpg"
   }
 }
 module.exports = { COMPONENT_INFO }

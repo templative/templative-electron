@@ -1,7 +1,7 @@
 .component-type-folder {
     background-color: var(--color-content-surface);
     border-radius: 4px;
-    margin-bottom: 0.5em;
+    margin-top: 0.5em;
     margin-right: 6px;
 }
 .create-component-by-type-choices {
@@ -199,4 +199,12 @@
     margin: 8px;
     width: 280px;
     height: 230px;
+}
+
+/* Add styles for size variations info */
+.component-type-dimensions.size-variations {
+    color: var(--color-text-secondary);
+    font-size: 0.85em;
+    margin-top: 0.25em;
+    font-style: italic;
 } 

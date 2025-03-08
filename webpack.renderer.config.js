@@ -1,10 +1,23 @@
+const webpack = require('webpack');
+
 module.exports = {
   target: 'electron-renderer',
+  mode: 'development',
+  devtool: 'eval-source-map',
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          {
+            loader: 'style-loader',
+            options: {
+              injectType: 'styleTag',
+              esModule: false
+            }
+          }, 
+          'css-loader'
+        ],
       },
       {
         test: /\.jsx?$/,
@@ -27,5 +40,8 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.css']
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 };

@@ -71,7 +71,6 @@ class App extends React.Component {
             this.setState({loggedIn: false, email: "", password: "", status: ""})
         })
         ipcRenderer.on(channels.GIVE_LOGGED_IN, (_, token, email) => {
-            trackEvent("user_login_success", { email })
             this.setState({loggedIn: true, token: token, email: email, password: "", status: ""})
         })
         ipcRenderer.on(channels.GIVE_NOT_LOGGED_IN, (_) => {

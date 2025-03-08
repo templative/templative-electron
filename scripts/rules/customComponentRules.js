@@ -1,4 +1,37 @@
+const addSpaces = (str) => {
+    return str
+        // First specifically handle D4, D6, D8, D10, D12, D20
+        .replace(/D(4|6|8|10|12|20)(\d+)/g, 'D$1 $2')
+        // Then handle measurement units, keeping them with their numbers
+        .replace(/(\d+)(mm|cm)/g, '$1$2')
+        // Add space between lowercase and uppercase
+        .replace(/([a-z])([A-Z])/g, '$1 $2')
+        // Add space between letters and numbers (except for measurement units)
+        .replace(/([a-zA-Z])(\d)/g, '$1 $2')
+        // Clean up any double spaces
+        .replace(/\s+/g, ' ')
+        // Fix dice notation
+        .replace(/D ?(4|6|8|10|12|20)/g, 'D$1')
+        .trim()
+};
 module.exports = [
+    // {
+    //     description: "Component DisplayNames should have added spaces",
+    //     condition: (component) => component.DisplayName,
+    //     setValue: (component) => {
+    //         component.Key = component.DisplayName
+    //         component.DisplayName = addSpaces(component.DisplayName);
+    //         return ["DisplayName"];
+    //     }
+    // },
+    {
+        description: "Set the PreviewUri to `https://www.thegamecrafter.com/product-images/${component.Key}.jpg`",
+        condition: (component) => component.Key,
+        setValue: (component) => {
+            component.PreviewUri = `https://www.thegamecrafter.com/product-images/${component.Key}.jpg`;
+            return ["PreviewUri"];
+        }
+    },
     {
       description: "Set PlaygroundCreationTask, GameCrafterUploadTask, and SimulatorCreationTask for components tagged with 'deck'",
       condition: (component) => component.Tags && component.Tags.includes("deck"),

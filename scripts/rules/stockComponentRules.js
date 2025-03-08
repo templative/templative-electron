@@ -16,6 +16,8 @@ const symbolPrefixes = [ "Universal No", "Universal Yes", "Question Mark", "Excl
 const money = ["Coin", "Doubloon"]
 const casino =["Poker Chip", "Suits"]
 
+
+
 const undoMeeple = ["Avatar", "Flat Cap", "Fedora Person", "Hatman Green", "Future Person"]
 
 const meepleCommands = [
@@ -228,6 +230,14 @@ module.exports = [
         condition: (component) => !component.IsDisabled,
         setValue: (component) => {
             component.IsDisabled = false;
+            return ["IsDisabled"];
+        }
+    },
+    {
+        description: "Disable components without a PreviewUri",
+        condition: (component) => !component.PreviewUri,
+        setValue: (component) => {
+            component.IsDisabled = true;
             return ["IsDisabled"];
         }
     },

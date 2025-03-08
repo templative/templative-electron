@@ -1,0 +1,74 @@
+.chosen-component-preview {
+    height: 100%;
+    padding-bottom: 1em;
+}
+.chosen-component-preview > * {
+    align-items: center;
+    text-align: center;
+    margin-top: 0em;
+    vertical-align: middle;
+}
+.component-type-name-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-accent);
+    margin-bottom: 2px;
+}
+.component-type-name-subtitle {
+    font-size: 18px;
+    font-weight: normal;
+}
+.chosen-component-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 150px;
+}
+.chosen-component-settings {
+    padding: 0.1em 0.3em;
+    background-color: var(--color-content);
+    border-radius: 16px;
+    /* margin-bottom: 1em; */
+}
+.chosen-component-settings > p {
+    font-size: 18px;
+    margin-bottom: 4px;  
+}
+.chosen-component-settings > .btn {
+    font-size: 14px;
+    margin-bottom: 4px;
+    margin-right: 4px;  
+}
+.create-component-name-row > div {
+    display: inline-block;
+    width: 33%;
+    height: 100%;
+    vertical-align: top;
+}
+
+.create-component-name-row > div:last-child {
+    margin-right: 0;
+}
+.create-component-output-options {
+    padding-left: 0.5em;
+}
+.create-component-button {
+    background-color: var(--color-accent) !important;
+    color:var(--color-content-surface) !important;
+    font-weight: bold !important;
+    width: 100% !important;
+}
+
+.create-component-button:disabled {
+    background-color: var(--color-accent-disabled) !important;
+    color: var(--color-text)!important;
+}
+
+.create-component-button:hover {
+    background-color: var(--color-accent-hover) !important;
+    color:var(--color-text) !important;
+}
+.selected-size-option {
+    background-color: var(--color-accent) !important;
+    color: var(--color-content-surface) !important;
+}

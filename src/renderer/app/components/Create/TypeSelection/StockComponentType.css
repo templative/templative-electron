@@ -127,10 +127,14 @@
 
 /* Color options grid styles */
 .color-options-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-    gap: 8px;
+    height: 100%;
+    overflow: visible;
+    gap: 15px;
     margin-top: 5px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 40px);
+    grid-template-rows: repeat(auto-fill, 40px);
 }
 
 .color-option-button {
@@ -139,11 +143,13 @@
     border-radius: 4px;
     padding: 4px;
     cursor: pointer;
-    height: 80px;
+    height: 40px;
+    width: 40px;
     transition: all 0.2s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .color-option-button:hover {
@@ -233,16 +239,14 @@
 
 /* Ensure preview areas have consistent height */
 .stock-component-preview,
-.color-options-container,
 .size-options-container {
     flex: 1;
     height: 150px; /* Fixed height for preview areas */
-    margin-top: 8px;
+    /* margin-top: 8px; */
     overflow: hidden; /* Hide overflow by default */
 }
 
 /* Allow scrolling in options containers when needed */
-.color-options-container,
 .size-options-container {
     overflow-y: auto;
 }
@@ -260,22 +264,15 @@
 }
 
 .color-options-container {
-    height: 150px;
-    margin-top: 8px;
-    overflow: visible; /* Change to auto to allow scrolling when needed */
+    height: 160px; 
+    overflow-x: visible;
+    overflow-y: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 /* Color options grid styles - smaller buttons to fit more */
-.color-options-grid {
-    display: grid;
-    height: 100%;
-    overflow-y: auto;
-    overflow-x:visible;
-    padding-top:15px;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Smaller buttons */
-    gap: 5px 5px; /* First value is row gap (vertical), second is column gap (horizontal) */
-    /* row-gap: 5px;  */
-}
+
 
 .color-option-button {
     background: none;
@@ -388,27 +385,11 @@
     gap: 5px 5px;
 }
 
-.size-option-button {
-    background: none;
-    border: none;
-    padding: 3px;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    transition: all 0.2s ease;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: column;
-    align-items: center;
-}
-
 .size-option-button:hover {
     transform: translateY(-2px);
 }
 
 .selected-size-option {
-    background-color: var(--color-accent-hover) !important;
     transform: translateY(-2px);
 }
 

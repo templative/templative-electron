@@ -64,6 +64,10 @@ module.exports = {
       config: {
         mainConfig: './webpack.main.config.js',
         devContentSecurityPolicy: "connect-src 'self' * 'unsafe-eval'",
+        devServer: {
+          hot: true,
+          liveReload: false
+        },
         renderer: {
           nodeIntegration: true,
           config: './webpack.renderer.config.js',
@@ -72,11 +76,6 @@ module.exports = {
               html: './src/renderer/app/index.html',
               js: './src/renderer/app/renderer.js',
               name: 'main_window',
-            },
-            {
-              html: './src/renderer/splash/splash.html',
-              js: './src/renderer/splash/splashRenderer.js',
-              name: 'splash_window'
             }
           ],
         },

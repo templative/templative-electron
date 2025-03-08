@@ -31,7 +31,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Flame"
   },
   "CardStandWhite": {
     "GameCrafterGuid": "E1128AF6-9A04-11E0-AACC-432941C43697",
@@ -59,7 +60,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardStandWhite"
   },
   "JewelClear": {
     "GameCrafterGuid": "98800188-FC4C-11E5-99B4-4D46B620570A",
@@ -126,7 +128,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JewelClear"
   },
   "JewelYellow": {
     "GameCrafterGuid": "25B234DC-FC4C-11E5-ACDB-EEBE1CA95DD6",
@@ -193,7 +196,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JewelYellow"
   },
   "JewelGreen": {
     "GameCrafterGuid": "CE78A99E-FC4B-11E5-A27F-4D46B620570A",
@@ -260,7 +264,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JewelGreen"
   },
   "Cube8mmGreen": {
     "GameCrafterGuid": "5E179AEA-8335-11E1-B714-C692DC194F78",
@@ -305,7 +310,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube8mmGreen"
   },
   "Cube8mmOrange": {
     "GameCrafterGuid": "B97995AA-8335-11E1-A7B5-C692DC194F78",
@@ -350,7 +356,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube8mmOrange"
   },
   "Cube8mmBlack": {
     "GameCrafterGuid": "7EB543EC-4D3E-11E1-A14C-40B1921A1C03",
@@ -395,7 +402,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube8mmBlack"
   },
   "Cube8mmBlue": {
     "GameCrafterGuid": "F40968BC-8335-11E1-A7B5-C692DC194F78",
@@ -440,7 +448,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube8mmBlue"
   },
   "Cube8mmWhite": {
     "GameCrafterGuid": "B7F3D54C-4D3E-11E1-A14C-40B1921A1C03",
@@ -485,7 +494,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube8mmWhite"
   },
   "Cube8mmRed": {
     "GameCrafterGuid": "A664456E-8335-11E1-9143-C692DC194F78",
@@ -530,7 +540,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube8mmRed"
   },
   "Cube8mmPurple": {
     "GameCrafterGuid": "4045BFC4-4D3E-11E1-A14C-40B1921A1C03",
@@ -575,7 +586,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube8mmPurple"
   },
   "VictorianMiniatureYellow": {
     "GameCrafterGuid": "75DF064C-2EC7-11ED-9CBC-E8F95EE382A3",
@@ -620,7 +632,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VictorianMiniatureYellow"
   },
   "D68mmWhite": {
     "GameCrafterGuid": "251A0858-59C0-11EA-A896-F5FE59BF7666",
@@ -716,7 +729,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D68mmWhite"
   },
   "D616mmYellow": {
     "GameCrafterGuid": "E4F90956-9A04-11E0-AACC-432941C43697",
@@ -811,7 +825,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmYellow"
   },
   "D616mmBlue": {
     "GameCrafterGuid": "E4D68318-9A04-11E0-AACC-432941C43697",
@@ -906,7 +921,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmBlue"
   },
   "D612mmClear": {
     "GameCrafterGuid": "6099FFB0-215A-11EC-B773-76004B5CF84F",
@@ -1003,7 +1019,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmClear"
   },
   "D12White": {
     "GameCrafterGuid": "08162C04-09D7-11E3-B696-40087740BD4B",
@@ -1127,7 +1144,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D12White"
   },
   "D20Black": {
     "GameCrafterGuid": "E52E1696-9A04-11E0-AACC-432941C43697",
@@ -1306,7 +1324,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D20Black"
   },
   "D20Yellow": {
     "GameCrafterGuid": "5F1BF8EA-09D6-11E3-A83D-40087740BD4B",
@@ -1485,7 +1504,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D20Yellow"
   },
   "D20White": {
     "GameCrafterGuid": "49849758-09D6-11E3-AE02-40087740BD4B",
@@ -1664,7 +1684,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D20White"
   },
   "HouseWoodBlack": {
     "GameCrafterGuid": "FD85F422-2EA2-11E8-B873-9D2AC78910BA",
@@ -1706,7 +1727,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseWoodBlack"
   },
   "HouseWoodBlue": {
     "GameCrafterGuid": "EA86962C-221F-11E8-A201-E5F993A6FE1D",
@@ -1748,7 +1770,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseWoodBlue"
   },
   "HouseWoodGreen": {
     "GameCrafterGuid": "CFE86DC2-4EFC-11E8-80AE-900DCB137816",
@@ -1790,7 +1813,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseWoodGreen"
   },
   "HouseWoodOrange": {
     "GameCrafterGuid": "FDEDF34A-4A24-11E8-8009-E69A584C442A",
@@ -1832,7 +1856,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseWoodOrange"
   },
   "HouseWoodWhite": {
     "GameCrafterGuid": "C8616066-48B9-11E8-BA56-8DBB1EA37D3B",
@@ -1874,7 +1899,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseWoodWhite"
   },
   "HouseWoodRed": {
     "GameCrafterGuid": "B6949542-48B9-11E8-BA56-3DBB1EA37D3B",
@@ -1916,7 +1942,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseWoodRed"
   },
   "HouseWoodPurple": {
     "GameCrafterGuid": "E36B2C18-4EFC-11E8-8111-F6A03D012D85",
@@ -1958,7 +1985,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseWoodPurple"
   },
   "11X11Baggies": {
     "DisplayName": "11 X 11 Baggies",
@@ -1978,7 +2006,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "11X11Baggies"
   },
   "1st": {
     "DisplayName": "1st",
@@ -2000,7 +2029,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "1st"
   },
   "3X4Baggies": {
     "DisplayName": "3 X 4 Baggies",
@@ -2022,7 +2052,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "3X4Baggies"
   },
   "4X10Baggies": {
     "DisplayName": "4 X 10 Baggies",
@@ -2044,7 +2075,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "4X10Baggies"
   },
   "4X5Baggies": {
     "DisplayName": "4 X 5 Baggies",
@@ -2066,7 +2098,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "4X5Baggies"
   },
   "4X6Baggies": {
     "DisplayName": "4 X 6 Baggies",
@@ -2088,7 +2121,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "4X6Baggies"
   },
   "5X5Baggies": {
     "DisplayName": "5 X 5 Baggies",
@@ -2110,7 +2144,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "5X5Baggies"
   },
   "5X7Baggies": {
     "DisplayName": "5 X 7 Baggies",
@@ -2132,7 +2167,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "5X7Baggies"
   },
   "6X10Baggies": {
     "DisplayName": "6 X 10 Baggies",
@@ -2154,7 +2190,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "6X10Baggies"
   },
   "7X12Baggies": {
     "DisplayName": "7 X 12 Baggies",
@@ -2176,7 +2213,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "7X12Baggies"
   },
   "9X12Baggies": {
     "DisplayName": "9 X 12 Baggies",
@@ -2198,7 +2236,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "9X12Baggies"
   },
   "AcornBrown": {
     "DisplayName": "Acorn, Brown",
@@ -2235,7 +2274,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcornBrown"
   },
   "AcornYellow": {
     "DisplayName": "Acorn, Yellow",
@@ -2272,7 +2312,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcornYellow"
   },
   "AcrylicTrainTrackBlack": {
     "DisplayName": "Acrylic Train Track, Black",
@@ -2296,7 +2337,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainTrackBlack"
   },
   "AcrylicTrainTrackBlue": {
     "DisplayName": "Acrylic Train Track, Blue",
@@ -2320,7 +2362,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainTrackBlue"
   },
   "AcrylicTrainTrackGreen": {
     "DisplayName": "Acrylic Train Track, Green",
@@ -2344,7 +2387,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainTrackGreen"
   },
   "AcrylicTrainTrackOrange": {
     "DisplayName": "Acrylic Train Track, Orange",
@@ -2368,7 +2412,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainTrackOrange"
   },
   "AcrylicTrainTrackPurple": {
     "DisplayName": "Acrylic Train Track, Purple",
@@ -2392,7 +2437,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainTrackPurple"
   },
   "AcrylicTrainTrackRed": {
     "DisplayName": "Acrylic Train Track, Red",
@@ -2416,7 +2462,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainTrackRed"
   },
   "AcrylicTrainTrackWhite": {
     "DisplayName": "Acrylic Train Track, White",
@@ -2440,7 +2487,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainTrackWhite"
   },
   "AcrylicTrainTrackYellow": {
     "DisplayName": "Acrylic Train Track, Yellow",
@@ -2464,7 +2512,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainTrackYellow"
   },
   "AcrylicTrainBoxCarBlack": {
     "DisplayName": "Acrylic Train, Box Car, Black",
@@ -2494,7 +2543,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainBoxCarBlack"
   },
   "AcrylicTrainBoxCarBlue": {
     "DisplayName": "Acrylic Train, Box Car, Blue",
@@ -2524,7 +2574,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainBoxCarBlue"
   },
   "AcrylicTrainBoxCarGreen": {
     "DisplayName": "Acrylic Train, Box Car, Green",
@@ -2554,7 +2605,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainBoxCarGreen"
   },
   "AcrylicTrainBoxCarOrange": {
     "DisplayName": "Acrylic Train, Box Car, Orange",
@@ -2584,7 +2636,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainBoxCarOrange"
   },
   "AcrylicTrainBoxCarPurple": {
     "DisplayName": "Acrylic Train, Box Car, Purple",
@@ -2614,7 +2667,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainBoxCarPurple"
   },
   "AcrylicTrainBoxCarRed": {
     "DisplayName": "Acrylic Train, Box Car, Red",
@@ -2644,7 +2698,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainBoxCarRed"
   },
   "AcrylicTrainBoxCarWhite": {
     "DisplayName": "Acrylic Train, Box Car, White",
@@ -2674,7 +2729,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainBoxCarWhite"
   },
   "AcrylicTrainBoxCarYellow": {
     "DisplayName": "Acrylic Train, Box Car, Yellow",
@@ -2704,7 +2760,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainBoxCarYellow"
   },
   "AcrylicTrainCabooseBlack": {
     "DisplayName": "Acrylic Train, Caboose, Black",
@@ -2742,7 +2799,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainCabooseBlack"
   },
   "AcrylicTrainCabooseBlue": {
     "DisplayName": "Acrylic Train, Caboose, Blue",
@@ -2780,7 +2838,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainCabooseBlue"
   },
   "AcrylicTrainCabooseGreen": {
     "DisplayName": "Acrylic Train, Caboose, Green",
@@ -2818,7 +2877,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainCabooseGreen"
   },
   "AcrylicTrainCabooseOrange": {
     "DisplayName": "Acrylic Train, Caboose, Orange",
@@ -2856,7 +2916,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainCabooseOrange"
   },
   "AcrylicTrainCaboosePurple": {
     "DisplayName": "Acrylic Train, Caboose, Purple",
@@ -2894,7 +2955,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainCaboosePurple"
   },
   "AcrylicTrainCabooseRed": {
     "DisplayName": "Acrylic Train, Caboose, Red",
@@ -2932,7 +2994,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainCabooseRed"
   },
   "AcrylicTrainCabooseWhite": {
     "DisplayName": "Acrylic Train, Caboose, White",
@@ -2970,7 +3033,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainCabooseWhite"
   },
   "AcrylicTrainCabooseYellow": {
     "DisplayName": "Acrylic Train, Caboose, Yellow",
@@ -3008,7 +3072,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainCabooseYellow"
   },
   "AcrylicTrainCoalCarBlack": {
     "DisplayName": "Acrylic Train, Coal Car, Black",
@@ -3041,7 +3106,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainCoalCarBlack"
   },
   "AcrylicTrainCoalCarBlue": {
     "DisplayName": "Acrylic Train, Coal Car, Blue",
@@ -3074,7 +3140,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainCoalCarBlue"
   },
   "AcrylicTrainCoalCarGreen": {
     "DisplayName": "Acrylic Train, Coal Car, Green",
@@ -3107,7 +3174,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainCoalCarGreen"
   },
   "AcrylicTrainCoalCarOrange": {
     "DisplayName": "Acrylic Train, Coal Car, Orange",
@@ -3140,7 +3208,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainCoalCarOrange"
   },
   "AcrylicTrainCoalCarPurple": {
     "DisplayName": "Acrylic Train, Coal Car, Purple",
@@ -3173,7 +3242,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainCoalCarPurple"
   },
   "AcrylicTrainCoalCarRed": {
     "DisplayName": "Acrylic Train, Coal Car, Red",
@@ -3206,7 +3276,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainCoalCarRed"
   },
   "AcrylicTrainCoalCarWhite": {
     "DisplayName": "Acrylic Train, Coal Car, White",
@@ -3239,7 +3310,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainCoalCarWhite"
   },
   "AcrylicTrainCoalCarYellow": {
     "DisplayName": "Acrylic Train, Coal Car, Yellow",
@@ -3272,7 +3344,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainCoalCarYellow"
   },
   "AcrylicTrainFlatBedBlack": {
     "DisplayName": "Acrylic Train, Flat Bed, Black",
@@ -3304,7 +3377,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainFlatBedBlack"
   },
   "AcrylicTrainFlatBedBlue": {
     "DisplayName": "Acrylic Train, Flat Bed, Blue",
@@ -3336,7 +3410,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainFlatBedBlue"
   },
   "AcrylicTrainFlatBedGreen": {
     "DisplayName": "Acrylic Train, Flat Bed, Green",
@@ -3368,7 +3443,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainFlatBedGreen"
   },
   "AcrylicTrainFlatBedOrange": {
     "DisplayName": "Acrylic Train, Flat Bed, Orange",
@@ -3400,7 +3476,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainFlatBedOrange"
   },
   "AcrylicTrainFlatBedPurple": {
     "DisplayName": "Acrylic Train, Flat Bed, Purple",
@@ -3432,7 +3509,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainFlatBedPurple"
   },
   "AcrylicTrainFlatBedRed": {
     "DisplayName": "Acrylic Train, Flat Bed, Red",
@@ -3464,7 +3542,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainFlatBedRed"
   },
   "AcrylicTrainFlatBedWhite": {
     "DisplayName": "Acrylic Train, Flat Bed, White",
@@ -3496,7 +3575,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainFlatBedWhite"
   },
   "AcrylicTrainFlatBedYellow": {
     "DisplayName": "Acrylic Train, Flat Bed, Yellow",
@@ -3528,7 +3608,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainFlatBedYellow"
   },
   "AcrylicTrainModernEngineBlack": {
     "DisplayName": "Acrylic Train, Modern Engine, Black",
@@ -3552,7 +3633,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainModernEngineBlack"
   },
   "AcrylicTrainModernEngineBlue": {
     "DisplayName": "Acrylic Train, Modern Engine, Blue",
@@ -3576,7 +3658,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainModernEngineBlue"
   },
   "AcrylicTrainModernEngineGreen": {
     "DisplayName": "Acrylic Train, Modern Engine, Green",
@@ -3600,7 +3683,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainModernEngineGreen"
   },
   "AcrylicTrainModernEngineOrange": {
     "DisplayName": "Acrylic Train, Modern Engine, Orange",
@@ -3624,7 +3708,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainModernEngineOrange"
   },
   "AcrylicTrainModernEnginePurple": {
     "DisplayName": "Acrylic Train, Modern Engine, Purple",
@@ -3648,7 +3733,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainModernEnginePurple"
   },
   "AcrylicTrainModernEngineRed": {
     "DisplayName": "Acrylic Train, Modern Engine, Red",
@@ -3672,7 +3758,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainModernEngineRed"
   },
   "AcrylicTrainModernEngineWhite": {
     "DisplayName": "Acrylic Train, Modern Engine, White",
@@ -3696,7 +3783,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainModernEngineWhite"
   },
   "AcrylicTrainModernEngineYellow": {
     "DisplayName": "Acrylic Train, Modern Engine, Yellow",
@@ -3720,7 +3808,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainModernEngineYellow"
   },
   "AcrylicTrainPassengerCarBlack": {
     "DisplayName": "Acrylic Train, Passenger Car, Black",
@@ -3752,7 +3841,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainPassengerCarBlack"
   },
   "AcrylicTrainPassengerCarBlue": {
     "DisplayName": "Acrylic Train, Passenger Car, Blue",
@@ -3784,7 +3874,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainPassengerCarBlue"
   },
   "AcrylicTrainPassengerCarGreen": {
     "DisplayName": "Acrylic Train, Passenger Car, Green",
@@ -3816,7 +3907,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainPassengerCarGreen"
   },
   "AcrylicTrainPassengerCarOrange": {
     "DisplayName": "Acrylic Train, Passenger Car, Orange",
@@ -3848,7 +3940,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainPassengerCarOrange"
   },
   "AcrylicTrainPassengerCarPurple": {
     "DisplayName": "Acrylic Train, Passenger Car, Purple",
@@ -3880,7 +3973,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainPassengerCarPurple"
   },
   "AcrylicTrainPassengerCarRed": {
     "DisplayName": "Acrylic Train, Passenger Car, Red",
@@ -3912,7 +4006,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainPassengerCarRed"
   },
   "AcrylicTrainPassengerCarWhite": {
     "DisplayName": "Acrylic Train, Passenger Car, White",
@@ -3944,7 +4039,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainPassengerCarWhite"
   },
   "AcrylicTrainPassengerCarYellow": {
     "DisplayName": "Acrylic Train, Passenger Car, Yellow",
@@ -3976,7 +4072,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainPassengerCarYellow"
   },
   "AcrylicTrainSteamEngineBlack": {
     "DisplayName": "Acrylic Train, Steam Engine, Black",
@@ -4004,7 +4101,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainSteamEngineBlack"
   },
   "AcrylicTrainSteamEngineBlue": {
     "DisplayName": "Acrylic Train, Steam Engine, Blue",
@@ -4032,7 +4130,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainSteamEngineBlue"
   },
   "AcrylicTrainSteamEngineGreen": {
     "DisplayName": "Acrylic Train, Steam Engine, Green",
@@ -4060,7 +4159,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainSteamEngineGreen"
   },
   "AcrylicTrainSteamEngineOrange": {
     "DisplayName": "Acrylic Train, Steam Engine, Orange",
@@ -4088,7 +4188,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainSteamEngineOrange"
   },
   "AcrylicTrainSteamEnginePurple": {
     "DisplayName": "Acrylic Train, Steam Engine, Purple",
@@ -4116,7 +4217,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainSteamEnginePurple"
   },
   "AcrylicTrainSteamEngineRed": {
     "DisplayName": "Acrylic Train, Steam Engine, Red",
@@ -4144,7 +4246,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainSteamEngineRed"
   },
   "AcrylicTrainSteamEngineWhite": {
     "DisplayName": "Acrylic Train, Steam Engine, White",
@@ -4172,7 +4275,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainSteamEngineWhite"
   },
   "AcrylicTrainSteamEngineYellow": {
     "DisplayName": "Acrylic Train, Steam Engine, Yellow",
@@ -4200,7 +4304,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainSteamEngineYellow"
   },
   "AcrylicTrainTankCarBlack": {
     "DisplayName": "Acrylic Train, Tank Car, Black",
@@ -4230,7 +4335,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainTankCarBlack"
   },
   "AcrylicTrainTankCarBlue": {
     "DisplayName": "Acrylic Train, Tank Car, Blue",
@@ -4260,7 +4366,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainTankCarBlue"
   },
   "AcrylicTrainTankCarGreen": {
     "DisplayName": "Acrylic Train, Tank Car, Green",
@@ -4290,7 +4397,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainTankCarGreen"
   },
   "AcrylicTrainTankCarOrange": {
     "DisplayName": "Acrylic Train, Tank Car, Orange",
@@ -4320,7 +4428,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainTankCarOrange"
   },
   "AcrylicTrainTankCarPurple": {
     "DisplayName": "Acrylic Train, Tank Car, Purple",
@@ -4350,7 +4459,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainTankCarPurple"
   },
   "AcrylicTrainTankCarRed": {
     "DisplayName": "Acrylic Train, Tank Car, Red",
@@ -4380,7 +4490,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainTankCarRed"
   },
   "AcrylicTrainTankCarWhite": {
     "DisplayName": "Acrylic Train, Tank Car, White",
@@ -4410,7 +4521,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainTankCarWhite"
   },
   "AcrylicTrainTankCarYellow": {
     "DisplayName": "Acrylic Train, Tank Car, Yellow",
@@ -4440,7 +4552,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AcrylicTrainTankCarYellow"
   },
   "AdventurerwithSwordandShield": {
     "DisplayName": "Adventurer with Sword and Shield",
@@ -4469,7 +4582,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AdventurerwithSwordandShield"
   },
   "AdventuressFantasyTB25": {
     "DisplayName": "Adventuress, Fantasy, TB25",
@@ -4497,7 +4611,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AdventuressFantasyTB25"
   },
   "AfricanElephant": {
     "DisplayName": "African Elephant",
@@ -4530,7 +4645,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "AfricanElephant"
   },
   "AirplaneLargeBlack": {
     "DisplayName": "Airplane, Large, Black",
@@ -4561,7 +4677,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AirplaneLargeBlack"
   },
   "AirplaneLargeBlue": {
     "DisplayName": "Airplane, Large, Blue",
@@ -4592,7 +4709,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AirplaneLargeBlue"
   },
   "AirplaneLargeGreen": {
     "DisplayName": "Airplane, Large, Green",
@@ -4622,7 +4740,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "AirplaneLargeGreen"
   },
   "AirplaneLargeOrange": {
     "DisplayName": "Airplane, Large, Orange",
@@ -4653,7 +4772,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AirplaneLargeOrange"
   },
   "AirplaneLargePurple": {
     "DisplayName": "Airplane, Large, Purple",
@@ -4684,7 +4804,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AirplaneLargePurple"
   },
   "AirplaneLargeRed": {
     "DisplayName": "Airplane, Large, Red",
@@ -4714,7 +4835,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "AirplaneLargeRed"
   },
   "AirplaneLargeWhite": {
     "DisplayName": "Airplane, Large, White",
@@ -4744,7 +4866,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "AirplaneLargeWhite"
   },
   "AirplaneLargeYellow": {
     "DisplayName": "Airplane, Large, Yellow",
@@ -4775,7 +4898,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AirplaneLargeYellow"
   },
   "AirplaneSmallBlack": {
     "DisplayName": "Airplane, Small, Black",
@@ -4806,7 +4930,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AirplaneSmallBlack"
   },
   "AirplaneSmallBlue": {
     "DisplayName": "Airplane, Small, Blue",
@@ -4837,7 +4962,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AirplaneSmallBlue"
   },
   "AirplaneSmallOrange": {
     "DisplayName": "Airplane, Small, Orange",
@@ -4868,7 +4994,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AirplaneSmallOrange"
   },
   "AirplaneSmallPurple": {
     "DisplayName": "Airplane, Small, Purple",
@@ -4899,7 +5026,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AirplaneSmallPurple"
   },
   "AirplaneSmallRed": {
     "DisplayName": "Airplane, Small, Red",
@@ -4930,7 +5058,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AirplaneSmallRed"
   },
   "AirplaneSmallWhite": {
     "DisplayName": "Airplane, Small, White",
@@ -4961,7 +5090,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AirplaneSmallWhite"
   },
   "AirplaneSmallYellow": {
     "DisplayName": "Airplane, Small, Yellow",
@@ -4992,7 +5122,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AirplaneSmallYellow"
   },
   "AK-47": {
     "DisplayName": "AK-47",
@@ -5019,7 +5150,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AK-47"
   },
   "AliceFantasyTB25": {
     "DisplayName": "Alice, Fantasy, TB25",
@@ -5040,7 +5172,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AliceFantasyTB25"
   },
   "AlienGreyTB15Black": {
     "DisplayName": "Alien, Grey, TB15, Black",
@@ -5065,7 +5198,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AlienGreyTB15Black"
   },
   "AlienGreyTB15Blue": {
     "DisplayName": "Alien, Grey, TB15, Blue",
@@ -5090,7 +5224,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AlienGreyTB15Blue"
   },
   "AlienGreyTB15Green": {
     "DisplayName": "Alien, Grey, TB15, Green",
@@ -5115,7 +5250,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AlienGreyTB15Green"
   },
   "AlienGreyTB15Gray": {
     "DisplayName": "Alien, Grey, TB15, Gray",
@@ -5140,7 +5276,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AlienGreyTB15Gray"
   },
   "AlienGreyTB15Orange": {
     "DisplayName": "Alien, Grey, TB15, Orange",
@@ -5165,7 +5302,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AlienGreyTB15Orange"
   },
   "AlienGreyTB15Purple": {
     "DisplayName": "Alien, Grey, TB15, Purple",
@@ -5190,7 +5328,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AlienGreyTB15Purple"
   },
   "AlienGreyTB15Red": {
     "DisplayName": "Alien, Grey, TB15, Red",
@@ -5215,7 +5354,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AlienGreyTB15Red"
   },
   "AlienGreyTB15White": {
     "DisplayName": "Alien, Grey, TB15, White",
@@ -5240,7 +5380,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AlienGreyTB15White"
   },
   "AlienGreyTB15Yellow": {
     "DisplayName": "Alien, Grey, TB15, Yellow",
@@ -5265,7 +5406,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AlienGreyTB15Yellow"
   },
   "AlienSpaceTB25": {
     "DisplayName": "Alien, Space, TB25",
@@ -5285,7 +5427,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AlienSpaceTB25"
   },
   "AmericanIndianwithBow": {
     "DisplayName": "American Indian with Bow",
@@ -5317,7 +5460,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AmericanIndianwithBow"
   },
   "AmphisbaenaFantasyTB25": {
     "DisplayName": "Amphisbaena, Fantasy, TB25",
@@ -5334,7 +5478,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AmphisbaenaFantasyTB25"
   },
   "AnkhegFantasyTB50": {
     "DisplayName": "Ankheg, Fantasy, TB50",
@@ -5351,7 +5496,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AnkhegFantasyTB50"
   },
   "Ant": {
     "DisplayName": "Ant",
@@ -5380,7 +5526,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Ant"
   },
   "Anti-Paladin": {
     "DisplayName": "Anti-Paladin",
@@ -5414,7 +5561,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Anti-Paladin"
   },
   "AriannaMoonshadowEnchantress": {
     "DisplayName": "Arianna Moonshadow Enchantress",
@@ -5444,7 +5592,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AriannaMoonshadowEnchantress"
   },
   "ArmoredGuard": {
     "DisplayName": "Armored Guard",
@@ -5471,7 +5620,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ArmoredGuard"
   },
   "ArmoredOgre": {
     "DisplayName": "Armored Ogre",
@@ -5502,7 +5652,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ArmoredOgre"
   },
   "AstronautTB15Black": {
     "DisplayName": "Astronaut TB15, Black",
@@ -5525,7 +5676,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AstronautTB15Black"
   },
   "AstronautTB15Blue": {
     "DisplayName": "Astronaut, TB15, Blue",
@@ -5547,7 +5699,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AstronautTB15Blue"
   },
   "AstronautTB15Green": {
     "DisplayName": "Astronaut, TB15, Green",
@@ -5569,7 +5722,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AstronautTB15Green"
   },
   "AstronautTB15Orange": {
     "DisplayName": "Astronaut, TB15, Orange",
@@ -5591,7 +5745,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AstronautTB15Orange"
   },
   "AstronautTB15Purple": {
     "DisplayName": "Astronaut, TB15, Purple",
@@ -5613,7 +5768,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AstronautTB15Purple"
   },
   "AstronautTB15Red": {
     "DisplayName": "Astronaut, TB15, Red",
@@ -5635,7 +5791,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AstronautTB15Red"
   },
   "AstronautTB15White": {
     "DisplayName": "Astronaut, TB15, White",
@@ -5657,7 +5814,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AstronautTB15White"
   },
   "AstronautTB15Yellow": {
     "DisplayName": "Astronaut, TB15, Yellow",
@@ -5679,7 +5837,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AstronautTB15Yellow"
   },
   "AtomSymbol": {
     "DisplayName": "Atom Symbol",
@@ -5713,7 +5872,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AtomSymbol"
   },
   "AvatarOpaqueBlack": {
     "DisplayName": "Avatar, Opaque, Black",
@@ -5737,7 +5897,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AvatarOpaqueBlack"
   },
   "AvatarOpaqueWhite": {
     "DisplayName": "Avatar, Opaque, White",
@@ -5761,7 +5922,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AvatarOpaqueWhite"
   },
   "AvatarTransparentBlack": {
     "DisplayName": "Avatar, Transparent, Black",
@@ -5785,7 +5947,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AvatarTransparentBlack"
   },
   "AvatarTransparentBlue": {
     "DisplayName": "Avatar, Transparent, Blue",
@@ -5809,7 +5972,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AvatarTransparentBlue"
   },
   "AvatarTransparentClear": {
     "DisplayName": "Avatar, Transparent, Clear",
@@ -5833,7 +5997,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AvatarTransparentClear"
   },
   "AvatarTransparentGreen": {
     "DisplayName": "Avatar, Transparent, Green",
@@ -5857,7 +6022,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AvatarTransparentGreen"
   },
   "AvatarTransparentOrange": {
     "DisplayName": "Avatar, Transparent, Orange",
@@ -5881,7 +6047,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AvatarTransparentOrange"
   },
   "AvatarTransparentPurple": {
     "DisplayName": "Avatar, Transparent, Purple",
@@ -5905,7 +6072,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AvatarTransparentPurple"
   },
   "AvatarTransparentRed": {
     "DisplayName": "Avatar, Transparent, Red",
@@ -5929,7 +6097,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AvatarTransparentRed"
   },
   "AvatarTransparentWhite": {
     "DisplayName": "Avatar, Transparent, White",
@@ -5953,7 +6122,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AvatarTransparentWhite"
   },
   "AvatarTransparentYellow": {
     "DisplayName": "Avatar, Transparent, Yellow",
@@ -5977,7 +6147,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "AvatarTransparentYellow"
   },
   "Aztec-CharacterMeeple": {
     "DisplayName": "Aztec - Character Meeple",
@@ -5997,7 +6168,8 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9D2D228E-8EB6-11E8-8D59-2B91B70C97C7.png",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Aztec-CharacterMeeple"
   },
   "BadgeHolderw/StringLanyard(boxof100)": {
     "DisplayName": "Badge Holder w/String Lanyard (box of 100)",
@@ -6025,7 +6197,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BadgeHolderw/StringLanyard(boxof100)"
   },
   "BalefireDemonw/Sword": {
     "DisplayName": "Balefire Demon w/ Sword",
@@ -6055,7 +6228,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BalefireDemonw/Sword"
   },
   "BarbarianDuelFantasyTB25": {
     "DisplayName": "Barbarian Duel, Fantasy, TB25",
@@ -6077,7 +6251,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BarbarianDuelFantasyTB25"
   },
   "BarbarianwithAxe": {
     "DisplayName": "Barbarian with Axe",
@@ -6108,7 +6283,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BarbarianwithAxe"
   },
   "BarbarianwithSword&Shield": {
     "DisplayName": "Barbarian with Sword & Shield",
@@ -6139,7 +6315,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BarbarianwithSword&Shield"
   },
   "BarbarianwithTwoSwords": {
     "DisplayName": "Barbarian with Two Swords",
@@ -6170,7 +6347,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BarbarianwithTwoSwords"
   },
   "BarbarianNordicHistoricTB25": {
     "DisplayName": "Barbarian, Nordic, Historic, TB25",
@@ -6189,7 +6367,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BarbarianNordicHistoricTB25"
   },
   "Barrel": {
     "DisplayName": "Barrel",
@@ -6219,7 +6398,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Barrel"
   },
   "BarrelWood": {
     "DisplayName": "Barrel, Wood",
@@ -6251,7 +6431,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BarrelWood"
   },
   "BaseShoeTB15Black": {
     "DisplayName": "Base Shoe, TB15, Black",
@@ -6272,7 +6453,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BaseShoeTB15Black"
   },
   "BaseShoeTB15Blue": {
     "DisplayName": "Base Shoe, TB15, Blue",
@@ -6293,7 +6475,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BaseShoeTB15Blue"
   },
   "BaseShoeTB15Green": {
     "DisplayName": "Base Shoe, TB15, Green",
@@ -6314,7 +6497,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BaseShoeTB15Green"
   },
   "BaseShoeTB15Orange": {
     "DisplayName": "Base Shoe, TB15, Orange",
@@ -6335,7 +6519,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BaseShoeTB15Orange"
   },
   "BaseShoeTB15Purple": {
     "DisplayName": "Base Shoe, TB15, Purple",
@@ -6356,7 +6541,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BaseShoeTB15Purple"
   },
   "BaseShoeTB15Red": {
     "DisplayName": "Base Shoe, TB15, Red",
@@ -6377,7 +6563,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BaseShoeTB15Red"
   },
   "BaseShoeTB15White": {
     "DisplayName": "Base Shoe, TB15, White",
@@ -6398,7 +6585,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BaseShoeTB15White"
   },
   "BaseShoeTB15Yellow": {
     "DisplayName": "Base Shoe, TB15, Yellow",
@@ -6419,7 +6607,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BaseShoeTB15Yellow"
   },
   "BaseShoeTB25Black": {
     "DisplayName": "Base Shoe, TB25, Black",
@@ -6440,7 +6629,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BaseShoeTB25Black"
   },
   "BaseShoeTB25Blue": {
     "DisplayName": "Base Shoe, TB25, Blue",
@@ -6461,7 +6651,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BaseShoeTB25Blue"
   },
   "BaseShoeTB25Green": {
     "DisplayName": "Base Shoe, TB25, Green",
@@ -6482,7 +6673,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BaseShoeTB25Green"
   },
   "BaseShoeTB25Orange": {
     "DisplayName": "Base Shoe, TB25, Orange",
@@ -6503,7 +6695,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BaseShoeTB25Orange"
   },
   "BaseShoeTB25Purple": {
     "DisplayName": "Base Shoe, TB25, Purple",
@@ -6524,7 +6717,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BaseShoeTB25Purple"
   },
   "BaseShoeTB25Red": {
     "DisplayName": "Base Shoe, TB25, Red",
@@ -6545,7 +6739,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BaseShoeTB25Red"
   },
   "BaseShoeTB25White": {
     "DisplayName": "Base Shoe, TB25, White",
@@ -6566,7 +6761,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BaseShoeTB25White"
   },
   "BaseShoeTB25Yellow": {
     "DisplayName": "Base Shoe, TB25, Yellow",
@@ -6587,7 +6783,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BaseShoeTB25Yellow"
   },
   "BattlePriestFantasyTB25": {
     "DisplayName": "Battle Priest, Fantasy, TB25",
@@ -6618,7 +6815,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BattlePriestFantasyTB25"
   },
   "BeeWood": {
     "DisplayName": "Bee, Wood",
@@ -6650,7 +6848,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BeeWood"
   },
   "BerehyniaTB25": {
     "DisplayName": "Berehynia, TB25",
@@ -6671,7 +6870,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BerehyniaTB25"
   },
   "Bible": {
     "DisplayName": "Bible",
@@ -6705,7 +6905,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Bible"
   },
   "BigPeopleBlue": {
     "DisplayName": "Big People, Blue",
@@ -6731,7 +6932,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BigPeopleBlue"
   },
   "BirdTB15Black": {
     "DisplayName": "Bird, TB15, Black",
@@ -6753,7 +6955,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BirdTB15Black"
   },
   "BirdTB15Blue": {
     "DisplayName": "Bird, TB15, Blue",
@@ -6775,7 +6978,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BirdTB15Blue"
   },
   "BirdTB15Green": {
     "DisplayName": "Bird, TB15, Green",
@@ -6797,7 +7001,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BirdTB15Green"
   },
   "BirdTB15Orange": {
     "DisplayName": "Bird, TB15, Orange",
@@ -6819,7 +7024,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BirdTB15Orange"
   },
   "BirdTB15Purple": {
     "DisplayName": "Bird, TB15, Purple",
@@ -6841,7 +7047,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BirdTB15Purple"
   },
   "BirdTB15Red": {
     "DisplayName": "Bird, TB15, Red",
@@ -6863,7 +7070,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BirdTB15Red"
   },
   "BirdTB15White": {
     "DisplayName": "Bird, TB15, White",
@@ -6885,7 +7093,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BirdTB15White"
   },
   "BirdTB15Yellow": {
     "DisplayName": "Bird, TB15, Yellow",
@@ -6907,7 +7116,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BirdTB15Yellow"
   },
   "BlackBear": {
     "DisplayName": "Black Bear",
@@ -6930,7 +7140,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlackBear"
   },
   "BlankBoardAccordion": {
     "DisplayName": "Blank Board, Accordion",
@@ -6958,7 +7169,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoardAccordion"
   },
   "BlankBoardBi-Fold": {
     "DisplayName": "Blank Board, Bi-Fold",
@@ -6973,7 +7185,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoardBi-Fold"
   },
   "BlankBoardDomino": {
     "DisplayName": "Blank Board, Domino",
@@ -7001,7 +7214,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Domino",
     "SimulatorCreationTask": "Domino",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoardDomino"
   },
   "BlankBoardHalf": {
     "DisplayName": "Blank Board, Half",
@@ -7028,7 +7242,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoardHalf"
   },
   "BlankBoardMediumSix-Fold": {
     "DisplayName": "Blank Board, Medium, Six-Fold",
@@ -7057,7 +7272,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoardMediumSix-Fold"
   },
   "BlankBoardQuad-Fold18inch": {
     "DisplayName": "Blank Board, Quad-Fold, 18 inch",
@@ -7087,7 +7303,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoardQuad-Fold18inch"
   },
   "BlankBoardSix-Fold": {
     "DisplayName": "Blank Board, Six-Fold",
@@ -7116,7 +7333,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoardSix-Fold"
   },
   "BlankBoardSkinny": {
     "DisplayName": "Blank Board, Skinny",
@@ -7144,7 +7362,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoardSkinny"
   },
   "BlankBoardSliver": {
     "DisplayName": "Blank Board, Sliver",
@@ -7172,7 +7391,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoardSliver"
   },
   "BlankBoardSquare": {
     "DisplayName": "Blank Board, Square",
@@ -7200,7 +7420,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoardSquare"
   },
   "BlankBoardSquareLarge": {
     "DisplayName": "Blank Board, Square, Large",
@@ -7228,7 +7449,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoardSquareLarge"
   },
   "BlankBoardSquareSmall": {
     "DisplayName": "Blank Board, Square, Small",
@@ -7256,7 +7478,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoardSquareSmall"
   },
   "BlankBoardStrip": {
     "DisplayName": "Blank Board, Strip",
@@ -7284,7 +7507,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoardStrip"
   },
   "BlankBoxHookBridge(108)": {
     "DisplayName": "Blank Box, Hook, Bridge (108)",
@@ -7313,7 +7537,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxHookBridge(108)"
   },
   "BlankBoxHookBridge(54)": {
     "DisplayName": "Blank Box, Hook, Bridge (54)",
@@ -7342,7 +7567,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxHookBridge(54)"
   },
   "BlankBoxHookJumbo(36)": {
     "DisplayName": "Blank Box, Hook, Jumbo (36)",
@@ -7371,7 +7597,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxHookJumbo(36)"
   },
   "BlankBoxHookJumbo(90)": {
     "DisplayName": "Blank Box, Hook, Jumbo (90)",
@@ -7400,7 +7627,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxHookJumbo(90)"
   },
   "BlankBoxHookPoker(108)": {
     "DisplayName": "Blank Box, Hook, Poker (108)",
@@ -7429,7 +7657,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxHookPoker(108)"
   },
   "BlankBoxHookPoker(18)": {
     "DisplayName": "Blank Box, Hook, Poker (18)",
@@ -7458,7 +7687,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxHookPoker(18)"
   },
   "BlankBoxHookPoker(36)": {
     "DisplayName": "Blank Box, Hook, Poker (36)",
@@ -7487,7 +7717,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxHookPoker(36)"
   },
   "BlankBoxHookPoker(54)": {
     "DisplayName": "Blank Box, Hook, Poker (54)",
@@ -7516,7 +7747,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxHookPoker(54)"
   },
   "BlankBoxHookPoker(72)": {
     "DisplayName": "Blank Box, Hook, Poker (72)",
@@ -7545,7 +7777,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxHookPoker(72)"
   },
   "BlankBoxHookPoker(90)": {
     "DisplayName": "Blank Box, Hook, Poker (90)",
@@ -7574,7 +7807,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxHookPoker(90)"
   },
   "BlankBoxHookSquare(48)": {
     "DisplayName": "Blank Box, Hook, Square (48)",
@@ -7603,7 +7837,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxHookSquare(48)"
   },
   "BlankBoxHookSquare(96)": {
     "DisplayName": "Blank Box, Hook, Square (96)",
@@ -7632,7 +7867,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxHookSquare(96)"
   },
   "BlankBoxHookTarot(40)": {
     "DisplayName": "Blank Box, Hook, Tarot (40)",
@@ -7661,7 +7897,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxHookTarot(40)"
   },
   "BlankBoxHookTarot(90)": {
     "DisplayName": "Blank Box, Hook, Tarot (90)",
@@ -7690,7 +7927,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxHookTarot(90)"
   },
   "BlankBoxProMedium": {
     "DisplayName": "Blank Box, Pro, Medium",
@@ -7717,7 +7955,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxProMedium"
   },
   "BlankBoxProSmall": {
     "DisplayName": "Blank Box, Pro, Small",
@@ -7744,7 +7983,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxProSmall"
   },
   "BlankBoxPrototypeLarge": {
     "DisplayName": "Blank Box, Prototype, Large",
@@ -7771,7 +8011,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxPrototypeLarge"
   },
   "BlankBoxPrototypeMedium": {
     "DisplayName": "Blank Box, Prototype, Medium",
@@ -7798,7 +8039,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxPrototypeMedium"
   },
   "BlankBoxPrototypeSmall": {
     "DisplayName": "Blank Box, Prototype, Small",
@@ -7825,7 +8067,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxPrototypeSmall"
   },
   "BlankBoxRetailLarge": {
     "DisplayName": "Blank Box, Retail, Large",
@@ -7852,7 +8095,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxRetailLarge"
   },
   "BlankBoxTuckBridge(108)": {
     "DisplayName": "Blank Box, Tuck, Bridge (108)",
@@ -7881,7 +8125,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxTuckBridge(108)"
   },
   "BlankBoxTuckBridge(54)": {
     "DisplayName": "Blank Box, Tuck, Bridge (54)",
@@ -7910,7 +8155,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxTuckBridge(54)"
   },
   "BlankBoxTuckJumbo(90)": {
     "DisplayName": "Blank Box, Tuck, Jumbo (90)",
@@ -7939,7 +8185,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxTuckJumbo(90)"
   },
   "BlankBoxTuckPoker(108)": {
     "DisplayName": "Blank Box, Tuck, Poker (108)",
@@ -7968,7 +8215,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxTuckPoker(108)"
   },
   "BlankBoxTuckPoker(36)": {
     "DisplayName": "Blank Box, Tuck, Poker (36)",
@@ -7997,7 +8245,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxTuckPoker(36)"
   },
   "BlankBoxTuckPoker(54)": {
     "DisplayName": "Blank Box, Tuck, Poker (54)",
@@ -8026,7 +8275,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxTuckPoker(54)"
   },
   "BlankBoxTuckPoker(72)": {
     "DisplayName": "Blank Box, Tuck, Poker (72)",
@@ -8055,7 +8305,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxTuckPoker(72)"
   },
   "BlankBoxTuckPoker(90)": {
     "DisplayName": "Blank Box, Tuck, Poker (90)",
@@ -8084,7 +8335,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxTuckPoker(90)"
   },
   "BlankBoxTuckSquare(48)": {
     "DisplayName": "Blank Box, Tuck, Square (48)",
@@ -8112,7 +8364,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxTuckSquare(48)"
   },
   "BlankBoxTuckSquare(96)": {
     "DisplayName": "Blank Box, Tuck, Square (96)",
@@ -8140,7 +8393,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxTuckSquare(96)"
   },
   "BlankBoxTuckTarot(40)": {
     "DisplayName": "Blank Box, Tuck, Tarot (40)",
@@ -8169,7 +8423,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxTuckTarot(40)"
   },
   "BlankBoxTuckTarot(90)": {
     "DisplayName": "Blank Box, Tuck, Tarot (90)",
@@ -8198,7 +8453,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBoxTuckTarot(90)"
   },
   "BlankBridgeCard": {
     "DisplayName": "Blank Bridge Card",
@@ -8227,7 +8483,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBridgeCard"
   },
   "BlankBusinessCard": {
     "DisplayName": "Blank Business Card",
@@ -8255,7 +8512,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankBusinessCard"
   },
   "BlankChitArrow": {
     "DisplayName": "Blank Chit, Arrow",
@@ -8283,7 +8541,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankChitArrow"
   },
   "BlankChitBullseye": {
     "DisplayName": "Blank Chit, Bullseye",
@@ -8311,7 +8570,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankChitBullseye"
   },
   "BlankChitCircleLarge": {
     "DisplayName": "Blank Chit, Circle, Large",
@@ -8339,7 +8599,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankChitCircleLarge"
   },
   "BlankChitCircleMedium": {
     "DisplayName": "Blank Chit, Circle, Medium",
@@ -8367,7 +8628,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankChitCircleMedium"
   },
   "BlankChitCircleSmall": {
     "DisplayName": "Blank Chit, Circle, Small",
@@ -8395,7 +8657,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankChitCircleSmall"
   },
   "BlankChitDomino": {
     "DisplayName": "Blank Chit, Domino",
@@ -8423,7 +8686,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Domino",
     "SimulatorCreationTask": "Domino",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankChitDomino"
   },
   "BlankChitSquareLarge": {
     "DisplayName": "Blank Chit, Square, Large",
@@ -8451,7 +8715,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankChitSquareLarge"
   },
   "BlankChitSquareMedium": {
     "DisplayName": "Blank Chit, Square, Medium",
@@ -8479,7 +8744,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankChitSquareMedium"
   },
   "BlankChitSquareSmall": {
     "DisplayName": "Blank Chit, Square, Small",
@@ -8506,7 +8772,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankChitSquareSmall"
   },
   "BlankChitTriangleMedium": {
     "DisplayName": "Blank Chit, Triangle, Medium",
@@ -8533,7 +8800,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankChitTriangleMedium"
   },
   "BlankCircleCard": {
     "DisplayName": "Blank Circle Card",
@@ -8561,7 +8829,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankCircleCard"
   },
   "BlankCircleShard": {
     "DisplayName": "Blank Circle Shard",
@@ -8589,7 +8858,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankCircleShard"
   },
   "BlankClearEuroPokerCard": {
     "DisplayName": "Blank Clear Euro Poker Card",
@@ -8617,7 +8887,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankClearEuroPokerCard"
   },
   "BlankDividerCard": {
     "DisplayName": "Blank Divider Card",
@@ -8645,7 +8916,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankDividerCard"
   },
   "BlankDocument": {
     "DisplayName": "Blank Document",
@@ -8672,7 +8944,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankDocument"
   },
   "BlankDominoCard": {
     "DisplayName": "Blank Domino Card",
@@ -8700,7 +8973,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankDominoCard"
   },
   "BlankDualDial": {
     "DisplayName": "Blank Dual Dial",
@@ -8727,7 +9001,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankDualDial"
   },
   "BlankEuroPoker": {
     "DisplayName": "Blank Euro Poker",
@@ -8754,7 +9029,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "BlankEuroPoker"
   },
   "BlankEuroSquareCard": {
     "DisplayName": "Blank Euro Square Card",
@@ -8782,7 +9058,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankEuroSquareCard"
   },
   "BlankFoilPokerCard": {
     "DisplayName": "Blank Foil Poker Card",
@@ -8812,7 +9089,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankFoilPokerCard"
   },
   "BlankFoilTarotCard": {
     "DisplayName": "Blank Foil Tarot Card",
@@ -8846,7 +9124,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankFoilTarotCard"
   },
   "BlankFolioBridge": {
     "DisplayName": "Blank Folio, Bridge",
@@ -8874,7 +9153,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankFolioBridge"
   },
   "BlankFolioMedium": {
     "DisplayName": "Blank Folio, Medium",
@@ -8902,7 +9182,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankFolioMedium"
   },
   "BlankFolioMintTin": {
     "DisplayName": "Blank Folio, Mint Tin",
@@ -8930,7 +9211,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankFolioMintTin"
   },
   "BlankFolioPoker": {
     "DisplayName": "Blank Folio, Poker",
@@ -8958,7 +9240,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankFolioPoker"
   },
   "BlankFolioSmall": {
     "DisplayName": "Blank Folio, Small",
@@ -8987,7 +9270,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankFolioSmall"
   },
   "BlankFolioSquare": {
     "DisplayName": "Blank Folio, Square",
@@ -9015,7 +9299,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankFolioSquare"
   },
   "BlankFolioTarot": {
     "DisplayName": "Blank Folio, Tarot",
@@ -9043,7 +9328,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankFolioTarot"
   },
   "BlankHexCard": {
     "DisplayName": "Blank Hex Card",
@@ -9071,7 +9357,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankHexCard"
   },
   "BlankHexShard": {
     "DisplayName": "Blank Hex Shard",
@@ -9100,7 +9387,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankHexShard"
   },
   "BlankJumboCard": {
     "DisplayName": "Blank Jumbo Card",
@@ -9127,7 +9415,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankJumboCard"
   },
   "BlankMatBig": {
     "DisplayName": "Blank Mat, Big",
@@ -9154,7 +9443,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMatBig"
   },
   "BlankMatDomino": {
     "DisplayName": "Blank Mat, Domino",
@@ -9182,7 +9472,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Domino",
     "SimulatorCreationTask": "Domino",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMatDomino"
   },
   "BlankMatFlower": {
     "DisplayName": "Blank Mat, Flower",
@@ -9210,7 +9501,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMatFlower"
   },
   "BlankMatHalf": {
     "DisplayName": "Blank Mat, Half",
@@ -9237,7 +9529,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMatHalf"
   },
   "BlankMatHex": {
     "DisplayName": "Blank Mat, Hex",
@@ -9266,7 +9559,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMatHex"
   },
   "BlankMatHexLarge": {
     "DisplayName": "Blank Mat, Hex, Large",
@@ -9293,7 +9587,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMatHexLarge"
   },
   "BlankMatInvader": {
     "DisplayName": "Blank Mat, Invader",
@@ -9321,7 +9616,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMatInvader"
   },
   "BlankMatPostcard": {
     "DisplayName": "Blank Mat, Postcard",
@@ -9349,7 +9645,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMatPostcard"
   },
   "BlankMatQuarter": {
     "DisplayName": "Blank Mat, Quarter",
@@ -9376,7 +9673,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMatQuarter"
   },
   "BlankMatSkinny": {
     "DisplayName": "Blank Mat, Skinny",
@@ -9403,7 +9701,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMatSkinny"
   },
   "BlankMatSliver": {
     "DisplayName": "Blank Mat, Sliver",
@@ -9431,7 +9730,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMatSliver"
   },
   "BlankMatSmallBi-fold": {
     "DisplayName": "Blank Mat, Small Bi-fold",
@@ -9459,7 +9759,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMatSmallBi-fold"
   },
   "BlankMatSpinner": {
     "DisplayName": "Blank Mat, Spinner",
@@ -9487,7 +9788,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMatSpinner"
   },
   "BlankMatSquare": {
     "DisplayName": "Blank Mat, Square",
@@ -9514,7 +9816,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMatSquare"
   },
   "BlankMatSquareLarge": {
     "DisplayName": "Blank Mat, Square, Large",
@@ -9542,7 +9845,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMatSquareLarge"
   },
   "BlankMatSquareSmall": {
     "DisplayName": "Blank Mat, Square, Small",
@@ -9570,7 +9874,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMatSquareSmall"
   },
   "BlankMatStrip": {
     "DisplayName": "Blank Mat, Strip",
@@ -9598,7 +9903,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMatStrip"
   },
   "BlankMicroCard(slug)": {
     "DisplayName": "Blank Micro Card (slug)",
@@ -9626,7 +9932,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMicroCard(slug)"
   },
   "BlankMiniCard": {
     "DisplayName": "Blank Mini Card",
@@ -9654,7 +9961,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMiniCard"
   },
   "BlankMintTinAccordion(4Panel)": {
     "DisplayName": "Blank Mint Tin Accordion (4 Panel)",
@@ -9683,7 +9991,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMintTinAccordion(4Panel)"
   },
   "BlankMintTinAccordion(6Panel)": {
     "DisplayName": "Blank Mint Tin Accordion (6 Panel)",
@@ -9712,7 +10021,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMintTinAccordion(6Panel)"
   },
   "BlankMintTinAccordion(8Panel)": {
     "DisplayName": "Blank Mint Tin Accordion (8 Panel)",
@@ -9741,7 +10051,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMintTinAccordion(8Panel)"
   },
   "BlankMintTinCard": {
     "DisplayName": "Blank Mint Tin Card",
@@ -9769,7 +10080,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMintTinCard"
   },
   "BlankMoneyPlay": {
     "DisplayName": "Blank Money, Play",
@@ -9825,7 +10137,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankMoneyPlay"
   },
   "BlankPokerCard": {
     "DisplayName": "Blank Poker Card",
@@ -9853,7 +10166,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankPokerCard"
   },
   "BlankRingLarge": {
     "DisplayName": "Blank Ring, Large",
@@ -9880,7 +10194,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankRingLarge"
   },
   "BlankRingMedium": {
     "DisplayName": "Blank Ring, Medium",
@@ -9907,7 +10222,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankRingMedium"
   },
   "BlankRingSmall": {
     "DisplayName": "Blank Ring, Small",
@@ -9934,7 +10250,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankRingSmall"
   },
   "BlankScreenLarge": {
     "DisplayName": "Blank Screen, Large",
@@ -9965,7 +10282,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankScreenLarge"
   },
   "BlankScreenMedium": {
     "DisplayName": "Blank Screen, Medium",
@@ -9996,7 +10314,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankScreenMedium"
   },
   "BlankScreenSmall": {
     "DisplayName": "Blank Screen, Small",
@@ -10027,7 +10346,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankScreenSmall"
   },
   "BlankSmallDial": {
     "DisplayName": "Blank Small Dial",
@@ -10054,7 +10374,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankSmallDial"
   },
   "BlankSmallProTarotInsert": {
     "DisplayName": "Blank Small Pro Tarot Insert",
@@ -10083,7 +10404,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankSmallProTarotInsert"
   },
   "BlankSmallSquareCard": {
     "DisplayName": "Blank Small Square Card",
@@ -10112,7 +10434,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankSmallSquareCard"
   },
   "BlankSmallStoutTarotInsert": {
     "DisplayName": "Blank Small Stout Tarot Insert",
@@ -10141,7 +10464,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankSmallStoutTarotInsert"
   },
   "BlankSquareCard": {
     "DisplayName": "Blank Square Card",
@@ -10170,7 +10494,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankSquareCard"
   },
   "BlankSquareShard": {
     "DisplayName": "Blank Square Shard",
@@ -10198,7 +10523,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankSquareShard"
   },
   "BlankStandeeLarge": {
     "DisplayName": "Blank Standee, Large",
@@ -10225,7 +10551,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankStandeeLarge"
   },
   "BlankStandeeMedium": {
     "DisplayName": "Blank Standee, Medium",
@@ -10252,7 +10579,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankStandeeMedium"
   },
   "BlankStandeeSmall": {
     "DisplayName": "Blank Standee, Small",
@@ -10279,7 +10607,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankStandeeSmall"
   },
   "BlankStickersMeeple": {
     "DisplayName": "Blank Stickers, Meeple",
@@ -10307,7 +10636,8 @@ const STOCK_COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
-    "PlaygroundCreationTask": "none"
+    "PlaygroundCreationTask": "none",
+    "Key": "BlankStickersMeeple"
   },
   "BlankStickersPawn": {
     "DisplayName": "Blank Stickers, Pawn",
@@ -10335,7 +10665,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankStickersPawn"
   },
   "BlankStickersSheetDice": {
     "DisplayName": "Blank Stickers, Sheet, Dice",
@@ -10364,7 +10695,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankStickersSheetDice"
   },
   "BlankStickersSheetToken": {
     "DisplayName": "Blank Stickers, Sheet, Token",
@@ -10393,7 +10725,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankStickersSheetToken"
   },
   "BlankTarotCard": {
     "DisplayName": "Blank Tarot Card",
@@ -10424,7 +10757,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankTarotCard"
   },
   "BlankTileCircleMini": {
     "DisplayName": "Blank Tile, Circle, Mini",
@@ -10452,7 +10786,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankTileCircleMini"
   },
   "BlankTileDomino": {
     "DisplayName": "Blank Tile, Domino",
@@ -10480,7 +10815,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Domino",
     "SimulatorCreationTask": "Domino",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankTileDomino"
   },
   "BlankTileHexLarge": {
     "DisplayName": "Blank Tile, Hex, Large",
@@ -10509,7 +10845,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankTileHexLarge"
   },
   "BlankTileHexMedium": {
     "DisplayName": "Blank Tile, Hex, Medium",
@@ -10538,7 +10875,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankTileHexMedium"
   },
   "BlankTileHexMini": {
     "DisplayName": "Blank Tile, Hex, Mini",
@@ -10567,7 +10905,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankTileHexMini"
   },
   "BlankTileHexSmall": {
     "DisplayName": "Blank Tile, Hex, Small",
@@ -10596,7 +10935,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankTileHexSmall"
   },
   "BlankTileSquareLarge": {
     "DisplayName": "Blank Tile, Square, Large",
@@ -10624,7 +10964,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankTileSquareLarge"
   },
   "BlankTileSquareMedium": {
     "DisplayName": "Blank Tile, Square, Medium",
@@ -10652,7 +10993,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankTileSquareMedium"
   },
   "BlankTileSquareMini": {
     "DisplayName": "Blank Tile, Square, Mini",
@@ -10680,7 +11022,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankTileSquareMini"
   },
   "BlankTileSquareSmall": {
     "DisplayName": "Blank Tile, Square, Small",
@@ -10708,7 +11051,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankTileSquareSmall"
   },
   "BlankTileTriangle": {
     "DisplayName": "Blank Tile, Triangle",
@@ -10736,7 +11080,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankTileTriangle"
   },
   "BlankTombstoneShard": {
     "DisplayName": "Blank Tombstone Shard",
@@ -10764,7 +11109,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankTombstoneShard"
   },
   "BlankUSGameCard": {
     "DisplayName": "Blank US Game Card",
@@ -10791,7 +11137,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankUSGameCard"
   },
   "BlankUSGameMat": {
     "DisplayName": "Blank US Game Mat",
@@ -10820,7 +11167,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankUSGameMat"
   },
   "BlightTwigFantasyTB25": {
     "DisplayName": "Blight Twig, Fantasy, TB25",
@@ -10842,7 +11190,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlightTwigFantasyTB25"
   },
   "Block1x1Black": {
     "DisplayName": "Block 1x1, Black",
@@ -10864,7 +11213,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Block1x1Black"
   },
   "Block1x1Blue": {
     "DisplayName": "Block 1x1, Blue",
@@ -10886,7 +11236,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Block1x1Blue"
   },
   "Block1x1Red": {
     "DisplayName": "Block 1x1, Red",
@@ -10908,7 +11259,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Block1x1Red"
   },
   "Block1x1White": {
     "DisplayName": "Block 1x1, White",
@@ -10930,7 +11282,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Block1x1White"
   },
   "Block1x1Yellow": {
     "DisplayName": "Block 1x1, Yellow",
@@ -10952,7 +11305,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Block1x1Yellow"
   },
   "Block1x2Black": {
     "DisplayName": "Block 1x2, Black",
@@ -10974,7 +11328,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Block1x2Black"
   },
   "Block1x2Blue": {
     "DisplayName": "Block 1x2, Blue",
@@ -10996,7 +11351,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Block1x2Blue"
   },
   "Block1x2Red": {
     "DisplayName": "Block 1x2, Red",
@@ -11018,7 +11374,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Block1x2Red"
   },
   "Block1x2White": {
     "DisplayName": "Block 1x2, White",
@@ -11040,7 +11397,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Block1x2White"
   },
   "Block1x2Yellow": {
     "DisplayName": "Block 1x2, Yellow",
@@ -11062,7 +11420,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Block1x2Yellow"
   },
   "Block1x3Black": {
     "DisplayName": "Block 1x3, Black",
@@ -11084,7 +11443,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Block1x3Black"
   },
   "Block1x3Blue": {
     "DisplayName": "Block 1x3, Blue",
@@ -11106,7 +11466,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Block1x3Blue"
   },
   "Block1x3Red": {
     "DisplayName": "Block 1x3, Red",
@@ -11128,7 +11489,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Block1x3Red"
   },
   "Block1x3White": {
     "DisplayName": "Block 1x3, White",
@@ -11150,7 +11512,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Block1x3White"
   },
   "Block1x3Yellow": {
     "DisplayName": "Block 1x3, Yellow",
@@ -11172,7 +11535,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Block1x3Yellow"
   },
   "BloodyRemains": {
     "DisplayName": "Bloody Remains",
@@ -11191,7 +11555,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BloodyRemains"
   },
   "BogBeastFantasyTB25": {
     "DisplayName": "Bog Beast, Fantasy, TB25",
@@ -11213,7 +11578,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BogBeastFantasyTB25"
   },
   "Bolt": {
     "DisplayName": "Bolt",
@@ -11235,7 +11601,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Bolt"
   },
   "BowandArrow": {
     "DisplayName": "Bow and Arrow",
@@ -11259,7 +11626,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowandArrow"
   },
   "BowlingPinLargeBlack": {
     "DisplayName": "Bowling Pin, Large, Black",
@@ -11283,7 +11651,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowlingPinLargeBlack"
   },
   "BowlingPinLargeBlue": {
     "DisplayName": "Bowling Pin, Large, Blue",
@@ -11307,7 +11676,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowlingPinLargeBlue"
   },
   "BowlingPinLargeClear": {
     "DisplayName": "Bowling Pin, Large, Clear",
@@ -11331,7 +11701,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowlingPinLargeClear"
   },
   "BowlingPinLargeGreen": {
     "DisplayName": "Bowling Pin, Large, Green",
@@ -11355,7 +11726,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowlingPinLargeGreen"
   },
   "BowlingPinLargeOrange": {
     "DisplayName": "Bowling Pin, Large, Orange",
@@ -11379,7 +11751,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowlingPinLargeOrange"
   },
   "BowlingPinLargePurple": {
     "DisplayName": "Bowling Pin, Large, Purple",
@@ -11403,7 +11776,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowlingPinLargePurple"
   },
   "BowlingPinLargeRed": {
     "DisplayName": "Bowling Pin, Large, Red",
@@ -11427,7 +11801,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowlingPinLargeRed"
   },
   "BowlingPinLargeWhite": {
     "DisplayName": "Bowling Pin, Large, White",
@@ -11451,7 +11826,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowlingPinLargeWhite"
   },
   "BowlingPinLargeYellow": {
     "DisplayName": "Bowling Pin, Large, Yellow",
@@ -11475,7 +11851,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowlingPinLargeYellow"
   },
   "BowlingPinSmallBlack": {
     "DisplayName": "Bowling Pin, Small, Black",
@@ -11499,7 +11876,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowlingPinSmallBlack"
   },
   "BowlingPinSmallBlue": {
     "DisplayName": "Bowling Pin, Small, Blue",
@@ -11523,7 +11901,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowlingPinSmallBlue"
   },
   "BowlingPinSmallGreen": {
     "DisplayName": "Bowling Pin, Small, Green",
@@ -11547,7 +11926,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowlingPinSmallGreen"
   },
   "BowlingPinSmallOrange": {
     "DisplayName": "Bowling Pin, Small, Orange",
@@ -11571,7 +11951,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowlingPinSmallOrange"
   },
   "BowlingPinSmallPurple": {
     "DisplayName": "Bowling Pin, Small, Purple",
@@ -11595,7 +11976,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowlingPinSmallPurple"
   },
   "BowlingPinSmallRed": {
     "DisplayName": "Bowling Pin, Small, Red",
@@ -11619,7 +12001,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowlingPinSmallRed"
   },
   "BowlingPinSmallWhite": {
     "DisplayName": "Bowling Pin, Small, White",
@@ -11643,7 +12026,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowlingPinSmallWhite"
   },
   "BowlingPinSmallYellow": {
     "DisplayName": "Bowling Pin, Small, Yellow",
@@ -11667,7 +12051,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BowlingPinSmallYellow"
   },
   "BoxBand6\"Blue": {
     "DisplayName": "Box Band, 6\", Blue",
@@ -11693,7 +12078,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BoxBand6\"Blue"
   },
   "BoxBand6\"Green": {
     "DisplayName": "Box Band, 6\", Green",
@@ -11719,7 +12105,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BoxBand6\"Green"
   },
   "BoxBand6\"Red": {
     "DisplayName": "Box Band, 6\", Red",
@@ -11745,7 +12132,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BoxBand6\"Red"
   },
   "BoxBand8\"Blue": {
     "DisplayName": "Box Band, 8\", Blue",
@@ -11771,7 +12159,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BoxBand8\"Blue"
   },
   "BoxBand8\"Green": {
     "DisplayName": "Box Band, 8\", Green",
@@ -11797,7 +12186,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BoxBand8\"Green"
   },
   "BoxBand8\"Red": {
     "DisplayName": "Box Band, 8\", Red",
@@ -11823,7 +12213,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BoxBand8\"Red"
   },
   "BoxBand9\"Blue": {
     "DisplayName": "Box Band, 9\", Blue",
@@ -11849,7 +12240,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BoxBand9\"Blue"
   },
   "BoxBand9\"Green": {
     "DisplayName": "Box Band, 9\", Green",
@@ -11875,7 +12267,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BoxBand9\"Green"
   },
   "BoxBand9\"Red": {
     "DisplayName": "Box Band, 9\", Red",
@@ -11901,7 +12294,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BoxBand9\"Red"
   },
   "BoxInsertProMedium": {
     "DisplayName": "Box Insert, Pro, Medium",
@@ -11920,7 +12314,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BoxInsertProMedium"
   },
   "BoxInsertProSmall": {
     "DisplayName": "Box Insert, Pro, Small",
@@ -11939,7 +12334,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BoxInsertProSmall"
   },
   "BoxInsertStoutSmall": {
     "DisplayName": "Box Insert, Stout, Small",
@@ -11958,7 +12354,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BoxInsertStoutSmall"
   },
   "BrainOrganPink": {
     "DisplayName": "Brain Organ, Pink",
@@ -11997,7 +12394,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BrainOrganPink"
   },
   "BreadBasket": {
     "DisplayName": "Bread Basket",
@@ -12015,7 +12413,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BreadBasket"
   },
   "BreadWoodDarkBrown": {
     "DisplayName": "Bread, Wood, Dark Brown",
@@ -12046,7 +12445,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "BreadWoodDarkBrown"
   },
   "BreadWoodLightBrown": {
     "DisplayName": "Bread, Wood, Light Brown",
@@ -12078,7 +12478,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BreadWoodLightBrown"
   },
   "BrickTowerGray": {
     "DisplayName": "Brick Tower, Gray",
@@ -12108,7 +12509,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BrickTowerGray"
   },
   "BrickWood2HolesRed": {
     "DisplayName": "Brick, Wood, 2 Holes, Red",
@@ -12137,7 +12539,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BrickWood2HolesRed"
   },
   "BrickWoodLarge": {
     "DisplayName": "Brick, Wood, Large",
@@ -12166,7 +12569,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BrickWoodLarge"
   },
   "BrickWoodRed": {
     "DisplayName": "Brick, Wood, Red",
@@ -12195,7 +12599,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BrickWoodRed"
   },
   "BrigandwithDagger": {
     "DisplayName": "Brigand with Dagger",
@@ -12226,7 +12631,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BrigandwithDagger"
   },
   "BrokenColumn": {
     "DisplayName": "Broken Column",
@@ -12243,7 +12649,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BrokenColumn"
   },
   "BrokenHeart": {
     "DisplayName": "Broken Heart",
@@ -12280,7 +12687,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BrokenHeart"
   },
   "Buddha": {
     "DisplayName": "Buddha",
@@ -12312,7 +12720,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Buddha"
   },
   "BugBlack": {
     "DisplayName": "Bug, Black",
@@ -12334,7 +12743,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BugBlack"
   },
   "BugBlue": {
     "DisplayName": "Bug, Blue",
@@ -12356,7 +12766,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BugBlue"
   },
   "BugGreen": {
     "DisplayName": "Bug, Green",
@@ -12378,7 +12789,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BugGreen"
   },
   "BugOrange": {
     "DisplayName": "Bug, Orange",
@@ -12400,7 +12812,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BugOrange"
   },
   "BugPurple": {
     "DisplayName": "Bug, Purple",
@@ -12422,7 +12835,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BugPurple"
   },
   "BugRed": {
     "DisplayName": "Bug, Red",
@@ -12444,7 +12858,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BugRed"
   },
   "BugWhite": {
     "DisplayName": "Bug, White",
@@ -12466,7 +12881,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BugWhite"
   },
   "BugYellow": {
     "DisplayName": "Bug, Yellow",
@@ -12488,7 +12904,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BugYellow"
   },
   "BuildingSmallBlack": {
     "DisplayName": "Building, Small, Black",
@@ -12522,7 +12939,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BuildingSmallBlack"
   },
   "BuildingSmallBlue": {
     "DisplayName": "Building, Small, Blue",
@@ -12556,7 +12974,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BuildingSmallBlue"
   },
   "BuildingSmallGreen": {
     "DisplayName": "Building, Small, Green",
@@ -12590,7 +13009,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BuildingSmallGreen"
   },
   "BuildingSmallOrange": {
     "DisplayName": "Building, Small, Orange",
@@ -12624,7 +13044,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BuildingSmallOrange"
   },
   "BuildingSmallPurple": {
     "DisplayName": "Building, Small, Purple",
@@ -12658,7 +13079,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BuildingSmallPurple"
   },
   "BuildingSmallRed": {
     "DisplayName": "Building, Small, Red",
@@ -12692,7 +13114,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BuildingSmallRed"
   },
   "BuildingSmallSideDoorBlack": {
     "DisplayName": "Building, Small, Side Door, Black",
@@ -12726,7 +13149,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BuildingSmallSideDoorBlack"
   },
   "BuildingSmallSideDoorBlue": {
     "DisplayName": "Building, Small, Side Door, Blue",
@@ -12760,7 +13184,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BuildingSmallSideDoorBlue"
   },
   "BuildingSmallSideDoorGreen": {
     "DisplayName": "Building, Small, Side Door, Green",
@@ -12794,7 +13219,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BuildingSmallSideDoorGreen"
   },
   "BuildingSmallSideDoorOrange": {
     "DisplayName": "Building, Small, Side Door, Orange",
@@ -12828,7 +13254,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BuildingSmallSideDoorOrange"
   },
   "BuildingSmallSideDoorPurple": {
     "DisplayName": "Building, Small, Side Door, Purple",
@@ -12862,7 +13289,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BuildingSmallSideDoorPurple"
   },
   "BuildingSmallSideDoorRed": {
     "DisplayName": "Building, Small, Side Door, Red",
@@ -12896,7 +13324,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BuildingSmallSideDoorRed"
   },
   "BuildingSmallSideDoorWhite": {
     "DisplayName": "Building, Small, Side Door, White",
@@ -12930,7 +13359,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BuildingSmallSideDoorWhite"
   },
   "BuildingSmallSideDoorYellow": {
     "DisplayName": "Building, Small, Side Door, Yellow",
@@ -12964,7 +13394,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BuildingSmallSideDoorYellow"
   },
   "BuildingSmallWhite": {
     "DisplayName": "Building, Small, White",
@@ -12998,7 +13429,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BuildingSmallWhite"
   },
   "BuildingSmallYellow": {
     "DisplayName": "Building, Small, Yellow",
@@ -13032,7 +13464,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BuildingSmallYellow"
   },
   "BullWoodBrown": {
     "DisplayName": "Bull, Wood, Brown",
@@ -13069,7 +13502,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BullWoodBrown"
   },
   "BullWoodOrange": {
     "DisplayName": "Bull, Wood, Orange",
@@ -13106,7 +13540,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BullWoodOrange"
   },
   "BulldozerAcrylic": {
     "DisplayName": "Bulldozer, Acrylic",
@@ -13123,7 +13558,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BulldozerAcrylic"
   },
   "BulletGray": {
     "DisplayName": "Bullet, Gray",
@@ -13153,7 +13589,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BulletGray"
   },
   "BunnyTB15Black": {
     "DisplayName": "Bunny, TB15, Black",
@@ -13174,7 +13611,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BunnyTB15Black"
   },
   "BunnyTB15Blue": {
     "DisplayName": "Bunny, TB15, Blue",
@@ -13195,7 +13633,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BunnyTB15Blue"
   },
   "BunnyTB15Green": {
     "DisplayName": "Bunny, TB15, Green",
@@ -13216,7 +13655,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BunnyTB15Green"
   },
   "BunnyTB15Orange": {
     "DisplayName": "Bunny, TB15, Orange",
@@ -13237,7 +13677,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BunnyTB15Orange"
   },
   "BunnyTB15Purple": {
     "DisplayName": "Bunny, TB15, Purple",
@@ -13258,7 +13699,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BunnyTB15Purple"
   },
   "BunnyTB15Red": {
     "DisplayName": "Bunny, TB15, Red",
@@ -13279,7 +13721,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BunnyTB15Red"
   },
   "BunnyTB15White": {
     "DisplayName": "Bunny, TB15, White",
@@ -13300,7 +13743,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BunnyTB15White"
   },
   "BunnyTB15Yellow": {
     "DisplayName": "Bunny, TB15, Yellow",
@@ -13321,7 +13765,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BunnyTB15Yellow"
   },
   "BurlapBagSmallBlack": {
     "DisplayName": "Burlap Bag, Small, Black",
@@ -13373,7 +13818,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BurlapBagSmallBlack"
   },
   "BurlapBagSmallGreen": {
     "DisplayName": "Burlap Bag, Small, Green",
@@ -13424,7 +13870,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BurlapBagSmallGreen"
   },
   "BurlapBagSmallRed": {
     "DisplayName": "Burlap Bag, Small, Red",
@@ -13476,7 +13923,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BurlapBagSmallRed"
   },
   "BurlapBagSmallWhite": {
     "DisplayName": "Burlap Bag, Small, White",
@@ -13528,7 +13976,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BurlapBagSmallWhite"
   },
   "BusinessMiniatureBlue": {
     "DisplayName": "Business Miniature, Blue",
@@ -13566,7 +14015,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BusinessMiniatureBlue"
   },
   "BusinessMiniatureGreen": {
     "DisplayName": "Business Miniature, Green",
@@ -13604,7 +14054,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BusinessMiniatureGreen"
   },
   "BusinessMiniatureRed": {
     "DisplayName": "Business Miniature, Red",
@@ -13642,7 +14093,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BusinessMiniatureRed"
   },
   "BusinessMiniatureYellow": {
     "DisplayName": "Business Miniature, Yellow",
@@ -13680,7 +14132,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BusinessMiniatureYellow"
   },
   "BustWoodBlue": {
     "DisplayName": "Bust, Wood, Blue",
@@ -13705,7 +14158,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BustWoodBlue"
   },
   "BustWoodCollaredBlue": {
     "DisplayName": "Bust, Wood, Collared, Blue",
@@ -13730,7 +14184,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BustWoodCollaredBlue"
   },
   "BustWoodCollaredGreen": {
     "DisplayName": "Bust, Wood, Collared, Green",
@@ -13755,7 +14210,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BustWoodCollaredGreen"
   },
   "BustWoodGreen": {
     "DisplayName": "Bust, Wood, Green",
@@ -13780,7 +14236,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BustWoodGreen"
   },
   "ButtonLargeBlue": {
     "DisplayName": "Button, Large, Blue",
@@ -13801,7 +14258,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ButtonLargeBlue"
   },
   "ButtonLargeGreen": {
     "DisplayName": "Button, Large, Green",
@@ -13822,7 +14280,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ButtonLargeGreen"
   },
   "ButtonLargeGray": {
     "DisplayName": "Button, Large, Gray",
@@ -13843,7 +14302,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ButtonLargeGray"
   },
   "ButtonLargePink": {
     "DisplayName": "Button, Large, Pink",
@@ -13864,7 +14324,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ButtonLargePink"
   },
   "ButtonLargeYellow": {
     "DisplayName": "Button, Large, Yellow",
@@ -13885,7 +14346,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ButtonLargeYellow"
   },
   "ButtonPurple": {
     "DisplayName": "Button, Purple",
@@ -13906,7 +14368,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ButtonPurple"
   },
   "ButtonWhite": {
     "DisplayName": "Button, White",
@@ -13928,7 +14391,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ButtonWhite"
   },
   "ButtonYellow": {
     "DisplayName": "Button, Yellow",
@@ -13948,7 +14412,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "ButtonYellow"
   },
   "Campfire": {
     "DisplayName": "Campfire",
@@ -13969,7 +14434,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Campfire"
   },
   "CarBlack": {
     "DisplayName": "Car, Black",
@@ -13990,7 +14456,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarBlack"
   },
   "CarBlue": {
     "DisplayName": "Car, Blue",
@@ -14011,7 +14478,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarBlue"
   },
   "CarGreen": {
     "DisplayName": "Car, Green",
@@ -14032,7 +14500,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarGreen"
   },
   "CarMuscleBlack": {
     "DisplayName": "Car, Muscle, Black",
@@ -14053,7 +14522,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarMuscleBlack"
   },
   "CarMuscleBlue": {
     "DisplayName": "Car, Muscle, Blue",
@@ -14074,7 +14544,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarMuscleBlue"
   },
   "CarMuscleGreen": {
     "DisplayName": "Car, Muscle, Green",
@@ -14095,7 +14566,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarMuscleGreen"
   },
   "CarMuscleOrange": {
     "DisplayName": "Car, Muscle, Orange",
@@ -14116,7 +14588,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarMuscleOrange"
   },
   "CarMusclePurple": {
     "DisplayName": "Car, Muscle, Purple",
@@ -14137,7 +14610,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarMusclePurple"
   },
   "CarMuscleRed": {
     "DisplayName": "Car, Muscle, Red",
@@ -14158,7 +14632,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarMuscleRed"
   },
   "CarMuscleWhite": {
     "DisplayName": "Car, Muscle, White",
@@ -14179,7 +14654,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarMuscleWhite"
   },
   "CarMuscleYellow": {
     "DisplayName": "Car, Muscle, Yellow",
@@ -14200,7 +14676,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarMuscleYellow"
   },
   "CarOrange": {
     "DisplayName": "Car, Orange",
@@ -14221,7 +14698,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarOrange"
   },
   "CarPurple": {
     "DisplayName": "Car, Purple",
@@ -14242,7 +14720,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarPurple"
   },
   "CarRaceBlack": {
     "DisplayName": "Car, Race, Black",
@@ -14264,7 +14743,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarRaceBlack"
   },
   "CarRaceBlue": {
     "DisplayName": "Car, Race, Blue",
@@ -14291,7 +14771,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarRaceBlue"
   },
   "CarRaceGreen": {
     "DisplayName": "Car, Race, Green",
@@ -14313,7 +14794,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarRaceGreen"
   },
   "CarRaceOrange": {
     "DisplayName": "Car, Race, Orange",
@@ -14335,7 +14817,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarRaceOrange"
   },
   "CarRacePurple": {
     "DisplayName": "Car, Race, Purple",
@@ -14357,7 +14840,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarRacePurple"
   },
   "CarRaceRed": {
     "DisplayName": "Car, Race, Red",
@@ -14379,7 +14863,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarRaceRed"
   },
   "CarRaceWhite": {
     "DisplayName": "Car, Race, White",
@@ -14401,7 +14886,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarRaceWhite"
   },
   "CarRaceYellow": {
     "DisplayName": "Car, Race, Yellow",
@@ -14423,7 +14909,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarRaceYellow"
   },
   "CarRed": {
     "DisplayName": "Car, Red",
@@ -14444,7 +14931,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarRed"
   },
   "CarSportyBlue": {
     "DisplayName": "Car, Sporty, Blue",
@@ -14470,7 +14958,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarSportyBlue"
   },
   "CarSportyYellow": {
     "DisplayName": "Car, Sporty, Yellow",
@@ -14496,7 +14985,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarSportyYellow"
   },
   "CarVintageJalopyOrange": {
     "DisplayName": "Car, Vintage Jalopy, Orange",
@@ -14520,7 +15010,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarVintageJalopyOrange"
   },
   "CarVintageRoadsterYellow": {
     "DisplayName": "Car, Vintage Roadster, Yellow",
@@ -14544,7 +15035,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarVintageRoadsterYellow"
   },
   "CarWhite": {
     "DisplayName": "Car, White",
@@ -14565,7 +15057,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarWhite"
   },
   "CarYellow": {
     "DisplayName": "Car, Yellow",
@@ -14586,7 +15079,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CarYellow"
   },
   "CardConnector120-degreeBlack": {
     "DisplayName": "Card Connector, 120-degree, Black",
@@ -14619,7 +15113,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardConnector120-degreeBlack"
   },
   "CardConnector120-degreeBlue": {
     "DisplayName": "Card Connector, 120-degree, Blue",
@@ -14652,7 +15147,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardConnector120-degreeBlue"
   },
   "CardConnector120-degreeGreen": {
     "DisplayName": "Card Connector, 120-degree, Green",
@@ -14685,7 +15181,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardConnector120-degreeGreen"
   },
   "CardConnector120-degreeOrange": {
     "DisplayName": "Card Connector, 120-degree, Orange",
@@ -14718,7 +15215,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardConnector120-degreeOrange"
   },
   "CardConnector120-degreePurple": {
     "DisplayName": "Card Connector, 120-degree, Purple",
@@ -14751,7 +15249,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardConnector120-degreePurple"
   },
   "CardConnector120-degreeRed": {
     "DisplayName": "Card Connector, 120-degree, Red",
@@ -14784,7 +15283,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardConnector120-degreeRed"
   },
   "CardConnector120-degreeWhite": {
     "DisplayName": "Card Connector, 120-degree, White",
@@ -14817,7 +15317,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardConnector120-degreeWhite"
   },
   "CardConnector120-degreeYellow": {
     "DisplayName": "Card Connector, 120-degree, Yellow",
@@ -14850,7 +15351,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardConnector120-degreeYellow"
   },
   "CardConnector90-degreeBlack": {
     "DisplayName": "Card Connector, 90-degree, Black",
@@ -14881,7 +15383,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardConnector90-degreeBlack"
   },
   "CardConnector90-degreeBlue": {
     "DisplayName": "Card Connector, 90-degree, Blue",
@@ -14912,7 +15415,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardConnector90-degreeBlue"
   },
   "CardConnector90-degreeGreen": {
     "DisplayName": "Card Connector, 90-degree, Green",
@@ -14943,7 +15447,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardConnector90-degreeGreen"
   },
   "CardConnector90-degreeOrange": {
     "DisplayName": "Card Connector, 90-degree, Orange",
@@ -14974,7 +15479,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardConnector90-degreeOrange"
   },
   "CardConnector90-degreePurple": {
     "DisplayName": "Card Connector, 90-degree, Purple",
@@ -15005,7 +15511,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardConnector90-degreePurple"
   },
   "CardConnector90-degreeRed": {
     "DisplayName": "Card Connector, 90-degree, Red",
@@ -15036,7 +15543,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardConnector90-degreeRed"
   },
   "CardConnector90-degreeWhite": {
     "DisplayName": "Card Connector, 90-degree, White",
@@ -15067,7 +15575,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardConnector90-degreeWhite"
   },
   "CardConnector90-degreeYellow": {
     "DisplayName": "Card Connector, 90-degree, Yellow",
@@ -15098,7 +15607,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardConnector90-degreeYellow"
   },
   "CardEnvelope": {
     "DisplayName": "Card Envelope",
@@ -15125,7 +15635,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardEnvelope"
   },
   "CardEnvelopeWhite": {
     "DisplayName": "Card Envelope, White",
@@ -15152,7 +15663,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardEnvelopeWhite"
   },
   "CardHolder": {
     "DisplayName": "Card Holder",
@@ -15180,7 +15692,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardHolder"
   },
   "CardStandBlack": {
     "DisplayName": "Card Stand, Black",
@@ -15208,7 +15721,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardStandBlack"
   },
   "CardStandBlue": {
     "DisplayName": "Card Stand, Blue",
@@ -15236,7 +15750,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardStandBlue"
   },
   "CardStandGreen": {
     "DisplayName": "Card Stand, Green",
@@ -15264,7 +15779,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardStandGreen"
   },
   "CardStandRed": {
     "DisplayName": "Card Stand, Red",
@@ -15292,7 +15808,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardStandRed"
   },
   "CardStandYellow": {
     "DisplayName": "Card Stand, Yellow",
@@ -15320,7 +15837,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CardStandYellow"
   },
   "Carrot": {
     "DisplayName": "Carrot",
@@ -15353,7 +15871,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Carrot"
   },
   "Cash$1": {
     "DisplayName": "Cash, $1",
@@ -15403,7 +15922,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cash$1"
   },
   "Cash$10": {
     "DisplayName": "Cash, $10",
@@ -15453,7 +15973,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cash$10"
   },
   "Cash$100": {
     "DisplayName": "Cash, $100",
@@ -15503,7 +16024,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cash$100"
   },
   "Cash$100K": {
     "DisplayName": "Cash, $100K",
@@ -15553,7 +16075,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cash$100K"
   },
   "Cash$10K": {
     "DisplayName": "Cash, $10K",
@@ -15603,7 +16126,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cash$10K"
   },
   "Cash$1K": {
     "DisplayName": "Cash, $1K",
@@ -15653,7 +16177,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cash$1K"
   },
   "Cash$1M": {
     "DisplayName": "Cash, $1M",
@@ -15703,7 +16228,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cash$1M"
   },
   "Cash$20": {
     "DisplayName": "Cash, $20",
@@ -15753,7 +16279,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cash$20"
   },
   "Cash$5": {
     "DisplayName": "Cash, $5",
@@ -15803,7 +16330,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cash$5"
   },
   "Cash$50": {
     "DisplayName": "Cash, $50",
@@ -15853,7 +16381,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cash$50"
   },
   "Cash$500": {
     "DisplayName": "Cash, $500",
@@ -15903,7 +16432,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cash$500"
   },
   "Cash$500K": {
     "DisplayName": "Cash, $500K",
@@ -15953,7 +16483,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cash$500K"
   },
   "Cash$50K": {
     "DisplayName": "Cash, $50K",
@@ -16003,7 +16534,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cash$50K"
   },
   "Cash$5K": {
     "DisplayName": "Cash, $5K",
@@ -16053,7 +16585,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cash$5K"
   },
   "CastleRoomCatwalks": {
     "DisplayName": "Castle Room, Catwalks",
@@ -16079,7 +16612,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "wood",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "CastleRoomCatwalks"
   },
   "CastleRoomChambers": {
     "DisplayName": "Castle Room, Chambers",
@@ -16105,7 +16639,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "wood",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "CastleRoomChambers"
   },
   "CastleRoomOutpost": {
     "DisplayName": "Castle Room, Outpost",
@@ -16131,7 +16666,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "wood",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "CastleRoomOutpost"
   },
   "CastleRoomSanctuary": {
     "DisplayName": "Castle Room, Sanctuary",
@@ -16157,7 +16693,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "wood",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "CastleRoomSanctuary"
   },
   "CastleRoomTower": {
     "DisplayName": "Castle Room, Tower",
@@ -16183,7 +16720,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "wood",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "CastleRoomTower"
   },
   "CastleRoomVeranda": {
     "DisplayName": "Castle Room, Veranda",
@@ -16209,7 +16747,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "wood",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "CastleRoomVeranda"
   },
   "CastleTower": {
     "DisplayName": "Castle Tower",
@@ -16236,7 +16775,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CastleTower"
   },
   "CastleBlack": {
     "DisplayName": "Castle, Black",
@@ -16253,7 +16793,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CastleBlack"
   },
   "CastleBlue": {
     "DisplayName": "Castle, Blue",
@@ -16270,7 +16811,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CastleBlue"
   },
   "CastleGreen": {
     "DisplayName": "Castle, Green",
@@ -16287,7 +16829,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CastleGreen"
   },
   "CastleOrange": {
     "DisplayName": "Castle, Orange",
@@ -16304,7 +16847,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CastleOrange"
   },
   "CastlePurple": {
     "DisplayName": "Castle, Purple",
@@ -16321,7 +16865,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CastlePurple"
   },
   "CastleRed": {
     "DisplayName": "Castle, Red",
@@ -16338,7 +16883,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CastleRed"
   },
   "CastleWhite": {
     "DisplayName": "Castle, White",
@@ -16355,7 +16901,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CastleWhite"
   },
   "CastleYellow": {
     "DisplayName": "Castle, Yellow",
@@ -16372,7 +16919,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CastleYellow"
   },
   "CatAcrylic": {
     "DisplayName": "Cat, Acrylic",
@@ -16396,7 +16944,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CatAcrylic"
   },
   "CatTB15Black": {
     "DisplayName": "Cat, TB15, Black",
@@ -16418,7 +16967,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CatTB15Black"
   },
   "CatTB15Blue": {
     "DisplayName": "Cat, TB15, Blue",
@@ -16440,7 +16990,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CatTB15Blue"
   },
   "CatTB15Green": {
     "DisplayName": "Cat, TB15, Green",
@@ -16462,7 +17013,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CatTB15Green"
   },
   "CatTB15Orange": {
     "DisplayName": "Cat, TB15, Orange",
@@ -16484,7 +17036,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CatTB15Orange"
   },
   "CatTB15Purple": {
     "DisplayName": "Cat, TB15, Purple",
@@ -16506,7 +17059,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CatTB15Purple"
   },
   "CatTB15Red": {
     "DisplayName": "Cat, TB15, Red",
@@ -16528,7 +17082,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CatTB15Red"
   },
   "CatTB15White": {
     "DisplayName": "Cat, TB15, White",
@@ -16550,7 +17105,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CatTB15White"
   },
   "CatTB15Yellow": {
     "DisplayName": "Cat, TB15, Yellow",
@@ -16572,7 +17128,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CatTB15Yellow"
   },
   "CathedralBlack": {
     "DisplayName": "Cathedral, Black",
@@ -16589,7 +17146,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CathedralBlack"
   },
   "CathedralBlue": {
     "DisplayName": "Cathedral, Blue",
@@ -16606,7 +17164,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CathedralBlue"
   },
   "CathedralGreen": {
     "DisplayName": "Cathedral, Green",
@@ -16623,7 +17182,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CathedralGreen"
   },
   "CathedralOrange": {
     "DisplayName": "Cathedral, Orange",
@@ -16640,7 +17200,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CathedralOrange"
   },
   "CathedralPurple": {
     "DisplayName": "Cathedral, Purple",
@@ -16657,7 +17218,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CathedralPurple"
   },
   "CathedralRed": {
     "DisplayName": "Cathedral, Red",
@@ -16674,7 +17236,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CathedralRed"
   },
   "CathedralWhite": {
     "DisplayName": "Cathedral, White",
@@ -16691,7 +17254,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CathedralWhite"
   },
   "CathedralYellow": {
     "DisplayName": "Cathedral, Yellow",
@@ -16708,7 +17272,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CathedralYellow"
   },
   "Cauldron": {
     "DisplayName": "Cauldron",
@@ -16730,7 +17295,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cauldron"
   },
   "CavalryGreen": {
     "DisplayName": "Cavalry, Green",
@@ -16762,7 +17328,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CavalryGreen"
   },
   "CavemanTB15Black": {
     "DisplayName": "Caveman, TB15, Black",
@@ -16782,7 +17349,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CavemanTB15Black"
   },
   "CavemanTB15Blue": {
     "DisplayName": "Caveman, TB15, Blue",
@@ -16802,7 +17370,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CavemanTB15Blue"
   },
   "CavemanTB15Green": {
     "DisplayName": "Caveman, TB15, Green",
@@ -16822,7 +17391,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CavemanTB15Green"
   },
   "CavemanTB15Orange": {
     "DisplayName": "Caveman, TB15, Orange",
@@ -16842,7 +17412,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CavemanTB15Orange"
   },
   "CavemanTB15Purple": {
     "DisplayName": "Caveman, TB15, Purple",
@@ -16862,7 +17433,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CavemanTB15Purple"
   },
   "CavemanTB15Red": {
     "DisplayName": "Caveman, TB15, Red",
@@ -16882,7 +17454,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CavemanTB15Red"
   },
   "CavemanTB15White": {
     "DisplayName": "Caveman, TB15, White",
@@ -16902,7 +17475,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CavemanTB15White"
   },
   "CavemanTB15Yellow": {
     "DisplayName": "Caveman, TB15, Yellow",
@@ -16922,7 +17496,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CavemanTB15Yellow"
   },
   "CavewomanTB15Black": {
     "DisplayName": "Cavewoman, TB15, Black",
@@ -16942,7 +17517,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CavewomanTB15Black"
   },
   "CavewomanTB15Blue": {
     "DisplayName": "Cavewoman, TB15, Blue",
@@ -16962,7 +17538,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CavewomanTB15Blue"
   },
   "CavewomanTB15Green": {
     "DisplayName": "Cavewoman, TB15, Green",
@@ -16982,7 +17559,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CavewomanTB15Green"
   },
   "CavewomanTB15Orange": {
     "DisplayName": "Cavewoman, TB15, Orange",
@@ -17002,7 +17580,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CavewomanTB15Orange"
   },
   "CavewomanTB15Purple": {
     "DisplayName": "Cavewoman, TB15, Purple",
@@ -17022,7 +17601,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CavewomanTB15Purple"
   },
   "CavewomanTB15Red": {
     "DisplayName": "Cavewoman, TB15, Red",
@@ -17042,7 +17622,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CavewomanTB15Red"
   },
   "CavewomanTB15White": {
     "DisplayName": "Cavewoman, TB15, White",
@@ -17062,7 +17643,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CavewomanTB15White"
   },
   "CavewomanTB15Yellow": {
     "DisplayName": "Cavewoman, TB15, Yellow",
@@ -17082,7 +17664,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CavewomanTB15Yellow"
   },
   "CentaurThrustingSpear": {
     "DisplayName": "Centaur Thrusting Spear",
@@ -17117,7 +17700,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CentaurThrustingSpear"
   },
   "ChaosDeathMaster": {
     "DisplayName": "Chaos Death Master",
@@ -17148,7 +17732,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChaosDeathMaster"
   },
   "CharacterStandBlue": {
     "DisplayName": "Character Stand, Blue",
@@ -17171,7 +17756,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CharacterStandBlue"
   },
   "CharacterStandClear": {
     "DisplayName": "Character Stand, Clear",
@@ -17194,7 +17780,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CharacterStandClear"
   },
   "CharacterStandGreen": {
     "DisplayName": "Character Stand, Green",
@@ -17217,7 +17804,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CharacterStandGreen"
   },
   "CharacterStandPurple": {
     "DisplayName": "Character Stand, Purple",
@@ -17240,7 +17828,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CharacterStandPurple"
   },
   "CharacterStandRed": {
     "DisplayName": "Character Stand, Red",
@@ -17263,7 +17852,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CharacterStandRed"
   },
   "CharacterStandYellow": {
     "DisplayName": "Character Stand, Yellow",
@@ -17286,7 +17876,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CharacterStandYellow"
   },
   "CheeseWedge": {
     "DisplayName": "Cheese Wedge",
@@ -17320,7 +17911,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CheeseWedge"
   },
   "Cheetah": {
     "DisplayName": "Cheetah",
@@ -17347,7 +17939,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cheetah"
   },
   "ChessSetHalfBlack": {
     "DisplayName": "Chess Set, Half, Black",
@@ -17378,7 +17971,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "ChessSetHalfBlack"
   },
   "ChessSetHalfBlue": {
     "DisplayName": "Chess Set, Half, Blue",
@@ -17409,7 +18003,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "ChessSetHalfBlue"
   },
   "ChessSetHalfGreen": {
     "DisplayName": "Chess Set, Half, Green",
@@ -17440,7 +18035,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "green",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "ChessSetHalfGreen"
   },
   "ChessSetHalfOrange": {
     "DisplayName": "Chess Set, Half, Orange",
@@ -17471,7 +18067,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "orange",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "ChessSetHalfOrange"
   },
   "ChessSetHalfPurple": {
     "DisplayName": "Chess Set, Half, Purple",
@@ -17502,7 +18099,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "purple",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "ChessSetHalfPurple"
   },
   "ChessSetHalfRed": {
     "DisplayName": "Chess Set, Half, Red",
@@ -17533,7 +18131,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "red",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "ChessSetHalfRed"
   },
   "ChessSetHalfWhite": {
     "DisplayName": "Chess Set, Half, White",
@@ -17564,7 +18163,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "ChessSetHalfWhite"
   },
   "ChessSetHalfYellow": {
     "DisplayName": "Chess Set, Half, Yellow",
@@ -17595,7 +18195,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "yellow",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "ChessSetHalfYellow"
   },
   "ChestBlue": {
     "DisplayName": "Chest, Blue",
@@ -17614,7 +18215,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChestBlue"
   },
   "ChestBronze": {
     "DisplayName": "Chest, Bronze",
@@ -17633,7 +18235,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChestBronze"
   },
   "ChestFantasyTB25": {
     "DisplayName": "Chest, Fantasy, TB25",
@@ -17652,7 +18255,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChestFantasyTB25"
   },
   "ChestGreen": {
     "DisplayName": "Chest, Green",
@@ -17671,7 +18275,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChestGreen"
   },
   "ChestGray": {
     "DisplayName": "Chest, Gray",
@@ -17690,7 +18295,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChestGray"
   },
   "ChestRed": {
     "DisplayName": "Chest, Red",
@@ -17709,7 +18315,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChestRed"
   },
   "Chevron20mmBlack": {
     "DisplayName": "Chevron, 20mm, Black",
@@ -17738,7 +18345,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Chevron20mmBlack"
   },
   "Chevron20mmBlue": {
     "DisplayName": "Chevron, 20mm, Blue",
@@ -17767,7 +18375,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Chevron20mmBlue"
   },
   "Chevron20mmGreen": {
     "DisplayName": "Chevron, 20mm, Green",
@@ -17796,7 +18405,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Chevron20mmGreen"
   },
   "Chevron20mmOrange": {
     "DisplayName": "Chevron, 20mm, Orange",
@@ -17825,7 +18435,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Chevron20mmOrange"
   },
   "Chevron20mmPurple": {
     "DisplayName": "Chevron, 20mm, Purple",
@@ -17854,7 +18465,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Chevron20mmPurple"
   },
   "Chevron20mmRed": {
     "DisplayName": "Chevron, 20mm, Red",
@@ -17883,7 +18495,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Chevron20mmRed"
   },
   "Chevron20mmWhite": {
     "DisplayName": "Chevron, 20mm, White",
@@ -17912,7 +18525,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Chevron20mmWhite"
   },
   "Chevron20mmYellow": {
     "DisplayName": "Chevron, 20mm, Yellow",
@@ -17941,7 +18555,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Chevron20mmYellow"
   },
   "Chevron8mmBlack": {
     "DisplayName": "Chevron, 8mm, Black",
@@ -17970,7 +18585,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Chevron8mmBlack"
   },
   "Chevron8mmBlue": {
     "DisplayName": "Chevron, 8mm, Blue",
@@ -17999,7 +18615,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Chevron8mmBlue"
   },
   "Chevron8mmGreen": {
     "DisplayName": "Chevron, 8mm, Green",
@@ -18028,7 +18645,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Chevron8mmGreen"
   },
   "Chevron8mmOrange": {
     "DisplayName": "Chevron, 8mm, Orange",
@@ -18057,7 +18675,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Chevron8mmOrange"
   },
   "Chevron8mmPurple": {
     "DisplayName": "Chevron, 8mm, Purple",
@@ -18086,7 +18705,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Chevron8mmPurple"
   },
   "Chevron8mmRed": {
     "DisplayName": "Chevron, 8mm, Red",
@@ -18115,7 +18735,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Chevron8mmRed"
   },
   "Chevron8mmWhite": {
     "DisplayName": "Chevron, 8mm, White",
@@ -18144,7 +18765,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Chevron8mmWhite"
   },
   "Chevron8mmYellow": {
     "DisplayName": "Chevron, 8mm, Yellow",
@@ -18173,7 +18795,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Chevron8mmYellow"
   },
   "ChickenAcrylic": {
     "DisplayName": "Chicken, Acrylic",
@@ -18203,7 +18826,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChickenAcrylic"
   },
   "ChurchAcrylicOpaqueBlack": {
     "DisplayName": "Church, Acrylic, Opaque, Black",
@@ -18236,7 +18860,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchAcrylicOpaqueBlack"
   },
   "ChurchAcrylicOpaqueGold": {
     "DisplayName": "Church, Acrylic, Opaque, Gold",
@@ -18269,7 +18894,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchAcrylicOpaqueGold"
   },
   "ChurchAcrylicOpaqueSilver": {
     "DisplayName": "Church, Acrylic, Opaque, Silver",
@@ -18308,7 +18934,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchAcrylicOpaqueSilver"
   },
   "ChurchAcrylicOpaqueWhite": {
     "DisplayName": "Church, Acrylic, Opaque, White",
@@ -18341,7 +18968,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchAcrylicOpaqueWhite"
   },
   "ChurchAcrylicTransparentBlack": {
     "DisplayName": "Church, Acrylic, Transparent, Black",
@@ -18374,7 +19002,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchAcrylicTransparentBlack"
   },
   "ChurchAcrylicTransparentBlue": {
     "DisplayName": "Church, Acrylic, Transparent, Blue",
@@ -18407,7 +19036,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchAcrylicTransparentBlue"
   },
   "ChurchAcrylicTransparentClear": {
     "DisplayName": "Church, Acrylic, Transparent, Clear",
@@ -18440,7 +19070,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchAcrylicTransparentClear"
   },
   "ChurchAcrylicTransparentGreen": {
     "DisplayName": "Church, Acrylic, Transparent, Green",
@@ -18473,7 +19104,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchAcrylicTransparentGreen"
   },
   "ChurchAcrylicTransparentOrange": {
     "DisplayName": "Church, Acrylic, Transparent, Orange",
@@ -18506,7 +19138,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchAcrylicTransparentOrange"
   },
   "ChurchAcrylicTransparentPurple": {
     "DisplayName": "Church, Acrylic, Transparent, Purple",
@@ -18539,7 +19172,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchAcrylicTransparentPurple"
   },
   "ChurchAcrylicTransparentRed": {
     "DisplayName": "Church, Acrylic, Transparent, Red",
@@ -18572,7 +19206,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchAcrylicTransparentRed"
   },
   "ChurchAcrylicTransparentWhite": {
     "DisplayName": "Church, Acrylic, Transparent, White",
@@ -18605,7 +19240,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchAcrylicTransparentWhite"
   },
   "ChurchAcrylicTransparentYellow": {
     "DisplayName": "Church, Acrylic, Transparent, Yellow",
@@ -18638,7 +19274,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchAcrylicTransparentYellow"
   },
   "ChurchPlasticBlue": {
     "DisplayName": "Church, Plastic, Blue",
@@ -18671,7 +19308,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchPlasticBlue"
   },
   "ChurchPlasticOrange": {
     "DisplayName": "Church, Plastic, Orange",
@@ -18704,7 +19342,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchPlasticOrange"
   },
   "ChurchPlasticRed": {
     "DisplayName": "Church, Plastic, Red",
@@ -18737,7 +19376,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchPlasticRed"
   },
   "ChurchPlasticWhite": {
     "DisplayName": "Church, Plastic,White",
@@ -18770,7 +19410,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchPlasticWhite"
   },
   "ChurchWoodBlack": {
     "DisplayName": "Church, Wood, Black",
@@ -18804,7 +19445,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchWoodBlack"
   },
   "ChurchWoodBlue": {
     "DisplayName": "Church, Wood, Blue",
@@ -18838,7 +19480,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchWoodBlue"
   },
   "ChurchWoodGreen": {
     "DisplayName": "Church, Wood, Green",
@@ -18872,7 +19515,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchWoodGreen"
   },
   "ChurchWoodOrange": {
     "DisplayName": "Church, Wood, Orange",
@@ -18906,7 +19550,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchWoodOrange"
   },
   "ChurchWoodPurple": {
     "DisplayName": "Church, Wood, Purple",
@@ -18940,7 +19585,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchWoodPurple"
   },
   "ChurchWoodRed": {
     "DisplayName": "Church, Wood, Red",
@@ -18974,7 +19620,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchWoodRed"
   },
   "ChurchWoodWhite": {
     "DisplayName": "Church, Wood, White",
@@ -19008,7 +19655,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchWoodWhite"
   },
   "ChurchWoodYellow": {
     "DisplayName": "Church, Wood, Yellow",
@@ -19042,7 +19690,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ChurchWoodYellow"
   },
   "CityCoin1": {
     "DisplayName": "City Coin, 1",
@@ -19089,7 +19738,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CityCoin1"
   },
   "CityCoin5": {
     "DisplayName": "City Coin, 5",
@@ -19136,7 +19786,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CityCoin5"
   },
   "ClayWood": {
     "DisplayName": "Clay, Wood",
@@ -19166,7 +19817,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ClayWood"
   },
   "ClearPokerTuckBox(200)": {
     "DisplayName": "Clear Poker Tuck Box (200)",
@@ -19196,7 +19848,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ClearPokerTuckBox(200)"
   },
   "ClearPokerTuckBox(41)": {
     "DisplayName": "Clear Poker Tuck Box (41)",
@@ -19227,7 +19880,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ClearPokerTuckBox(41)"
   },
   "ClearPokerTuckBox(66)": {
     "DisplayName": "Clear Poker Tuck Box (66)",
@@ -19258,7 +19912,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ClearPokerTuckBox(66)"
   },
   "Cleric": {
     "DisplayName": "Cleric",
@@ -19293,7 +19948,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cleric"
   },
   "Cleric-CharacterMeeple": {
     "DisplayName": "Cleric - Character Meeple",
@@ -19326,7 +19982,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cleric-CharacterMeeple"
   },
   "CoalWood": {
     "DisplayName": "Coal, Wood",
@@ -19356,7 +20013,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoalWood"
   },
   "CobaltWood": {
     "DisplayName": "Cobalt, Wood",
@@ -19381,7 +20039,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CobaltWood"
   },
   "CobraWoodTeal": {
     "DisplayName": "Cobra, Wood, Teal",
@@ -19408,7 +20067,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CobraWoodTeal"
   },
   "Cog's2024Calendar": {
     "DisplayName": "Cog's 2024 Calendar",
@@ -19434,7 +20094,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Cog's2024Calendar"
   },
   "Coin50points": {
     "DisplayName": "Coin, 50 points",
@@ -19482,7 +20143,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Coin50points"
   },
   "Coin5x": {
     "DisplayName": "Coin, 5x",
@@ -19530,7 +20192,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Coin5x"
   },
   "CoinAncientRussian22mm": {
     "DisplayName": "Coin, Ancient Russian, 22mm",
@@ -19579,7 +20242,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinAncientRussian22mm"
   },
   "CoinChinese20mm": {
     "DisplayName": "Coin, Chinese, 20mm",
@@ -19633,7 +20297,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinChinese20mm"
   },
   "CoinChinese23mm": {
     "DisplayName": "Coin, Chinese, 23mm",
@@ -19694,7 +20359,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinChinese23mm"
   },
   "CoinDime": {
     "DisplayName": "Coin, Dime",
@@ -19742,7 +20408,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinDime"
   },
   "CoinDwarven": {
     "DisplayName": "Coin, Dwarven",
@@ -19768,7 +20435,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinDwarven"
   },
   "CoinFantasy1": {
     "DisplayName": "Coin, Fantasy, 1",
@@ -19792,7 +20460,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinFantasy1"
   },
   "CoinFantasy10": {
     "DisplayName": "Coin, Fantasy, 10",
@@ -19815,7 +20484,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinFantasy10"
   },
   "CoinFantasy5": {
     "DisplayName": "Coin, Fantasy, 5",
@@ -19838,7 +20508,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinFantasy5"
   },
   "CoinGold": {
     "DisplayName": "Coin, Gold",
@@ -19887,7 +20558,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinGold"
   },
   "CoinGreen": {
     "DisplayName": "Coin, Green",
@@ -19935,7 +20607,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinGreen"
   },
   "CoinHalfdollar": {
     "DisplayName": "Coin, Half dollar",
@@ -19982,7 +20655,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinHalfdollar"
   },
   "CoinMedievalBronze": {
     "DisplayName": "Coin, Medieval, Bronze",
@@ -19997,7 +20671,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinMedievalBronze"
   },
   "CoinMedievalGold": {
     "DisplayName": "Coin, Medieval, Gold",
@@ -20012,7 +20687,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinMedievalGold"
   },
   "CoinMedievalSilver": {
     "DisplayName": "Coin, Medieval, Silver",
@@ -20029,7 +20705,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinMedievalSilver"
   },
   "CoinNickel": {
     "DisplayName": "Coin, Nickel",
@@ -20077,7 +20754,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinNickel"
   },
   "CoinPenny": {
     "DisplayName": "Coin, Penny",
@@ -20126,7 +20804,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinPenny"
   },
   "CoinPirate35mm": {
     "DisplayName": "Coin, Pirate, 35mm",
@@ -20176,7 +20855,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinPirate35mm"
   },
   "CoinPurple": {
     "DisplayName": "Coin, Purple",
@@ -20225,7 +20905,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinPurple"
   },
   "CoinQuarter": {
     "DisplayName": "Coin, Quarter",
@@ -20273,7 +20954,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinQuarter"
   },
   "CoinRoman18mm": {
     "DisplayName": "Coin, Roman, 18mm",
@@ -20326,7 +21008,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinRoman18mm"
   },
   "CoinSacagaweaDollar": {
     "DisplayName": "Coin, Sacagawea Dollar",
@@ -20374,7 +21057,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinSacagaweaDollar"
   },
   "CoinTimeless1": {
     "DisplayName": "Coin, Timeless, 1",
@@ -20403,7 +21087,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinTimeless1"
   },
   "CoinTimeless10": {
     "DisplayName": "Coin, Timeless, 10",
@@ -20426,7 +21111,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinTimeless10"
   },
   "CoinTimeless5": {
     "DisplayName": "Coin, Timeless, 5",
@@ -20449,7 +21135,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CoinTimeless5"
   },
   "ColonialLumberjackBlue": {
     "DisplayName": "Colonial Lumberjack, Blue",
@@ -20476,7 +21163,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ColonialLumberjackBlue"
   },
   "ColonialLumberjackGreen": {
     "DisplayName": "Colonial Lumberjack, Green",
@@ -20503,7 +21191,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ColonialLumberjackGreen"
   },
   "ColonialLumberjackOrange": {
     "DisplayName": "Colonial Lumberjack, Orange",
@@ -20530,7 +21219,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ColonialLumberjackOrange"
   },
   "ColonialLumberjackRed": {
     "DisplayName": "Colonial Lumberjack, Red",
@@ -20557,7 +21247,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ColonialLumberjackRed"
   },
   "ColonialLumberjackYellow": {
     "DisplayName": "Colonial Lumberjack, Yellow",
@@ -20584,7 +21275,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ColonialLumberjackYellow"
   },
   "ColonialSoldierBlue": {
     "DisplayName": "Colonial Soldier, Blue",
@@ -20611,7 +21303,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ColonialSoldierBlue"
   },
   "ColonialSoldierGreen": {
     "DisplayName": "Colonial Soldier, Green",
@@ -20638,7 +21331,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ColonialSoldierGreen"
   },
   "ColonialSoldierOrange": {
     "DisplayName": "Colonial Soldier, Orange",
@@ -20665,7 +21359,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ColonialSoldierOrange"
   },
   "ColonialSoldierRed": {
     "DisplayName": "Colonial Soldier, Red",
@@ -20692,7 +21387,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ColonialSoldierRed"
   },
   "ColonialSoldierYellow": {
     "DisplayName": "Colonial Soldier, Yellow",
@@ -20719,7 +21415,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ColonialSoldierYellow"
   },
   "CommandCenterBlack": {
     "DisplayName": "Command Center, Black",
@@ -20741,7 +21438,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CommandCenterBlack"
   },
   "CommandCenterBlue": {
     "DisplayName": "Command Center, Blue",
@@ -20763,7 +21461,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CommandCenterBlue"
   },
   "CommandCenterGreen": {
     "DisplayName": "Command Center, Green",
@@ -20785,7 +21484,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CommandCenterGreen"
   },
   "CommandCenterOrange": {
     "DisplayName": "Command Center, Orange",
@@ -20807,7 +21507,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CommandCenterOrange"
   },
   "CommandCenterPurple": {
     "DisplayName": "Command Center, Purple",
@@ -20829,7 +21530,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CommandCenterPurple"
   },
   "CommandCenterRed": {
     "DisplayName": "Command Center, Red",
@@ -20851,7 +21553,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CommandCenterRed"
   },
   "CommandCenterWhite": {
     "DisplayName": "Command Center, White",
@@ -20873,7 +21576,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CommandCenterWhite"
   },
   "CommandCenterYellow": {
     "DisplayName": "Command Center, Yellow",
@@ -20895,7 +21599,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CommandCenterYellow"
   },
   "Compass": {
     "DisplayName": "Compass",
@@ -20915,7 +21620,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Compass"
   },
   "Computer": {
     "DisplayName": "Computer",
@@ -20932,7 +21638,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Computer"
   },
   "ComputerDesk": {
     "DisplayName": "Computer Desk",
@@ -20950,7 +21657,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ComputerDesk"
   },
   "ConePawnBlack": {
     "DisplayName": "Cone Pawn, Black",
@@ -20972,7 +21680,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ConePawnBlack"
   },
   "ContainerShipBlue": {
     "DisplayName": "Container Ship, Blue",
@@ -21005,7 +21714,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ContainerShipBlue"
   },
   "ContainerShipGreen": {
     "DisplayName": "Container Ship, Green",
@@ -21038,7 +21748,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ContainerShipGreen"
   },
   "ContainerShipGray": {
     "DisplayName": "Container Ship, Gray",
@@ -21071,7 +21782,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ContainerShipGray"
   },
   "ContainerShipRed": {
     "DisplayName": "Container Ship, Red",
@@ -21104,7 +21816,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ContainerShipRed"
   },
   "ContainerShipYellow": {
     "DisplayName": "Container Ship, Yellow",
@@ -21137,7 +21850,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ContainerShipYellow"
   },
   "CottonBagSmallWhite": {
     "DisplayName": "Cotton Bag, Small, White",
@@ -21164,7 +21878,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CottonBagSmallWhite"
   },
   "CowBlack": {
     "DisplayName": "Cow, Black",
@@ -21188,7 +21903,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CowBlack"
   },
   "CowHalfBlack": {
     "DisplayName": "Cow, Half Black",
@@ -21212,7 +21928,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CowHalfBlack"
   },
   "CowHalfBrown": {
     "DisplayName": "Cow, Half Brown",
@@ -21236,7 +21953,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CowHalfBrown"
   },
   "CowboyBlack-CharacterMeeple": {
     "DisplayName": "Cowboy, Black - Character Meeple",
@@ -21273,7 +21991,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CowboyBlack-CharacterMeeple"
   },
   "CowboyBlue-CharacterMeeple": {
     "DisplayName": "Cowboy, Blue - Character Meeple",
@@ -21310,7 +22029,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CowboyBlue-CharacterMeeple"
   },
   "CowboyGreen-CharacterMeeple": {
     "DisplayName": "Cowboy, Green - Character Meeple",
@@ -21347,7 +22067,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CowboyGreen-CharacterMeeple"
   },
   "CowboyOrange-CharacterMeeple": {
     "DisplayName": "Cowboy, Orange - Character Meeple",
@@ -21384,7 +22105,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CowboyOrange-CharacterMeeple"
   },
   "CowboyPurple-CharacterMeeple": {
     "DisplayName": "Cowboy, Purple - Character Meeple",
@@ -21421,7 +22143,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CowboyPurple-CharacterMeeple"
   },
   "CowboyRed-CharacterMeeple": {
     "DisplayName": "Cowboy, Red - Character Meeple",
@@ -21458,7 +22181,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CowboyRed-CharacterMeeple"
   },
   "CowboyWhite-CharacterMeeple": {
     "DisplayName": "Cowboy, White - Character Meeple",
@@ -21495,7 +22219,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CowboyWhite-CharacterMeeple"
   },
   "CowboyYellow-CharacterMeeple": {
     "DisplayName": "Cowboy, Yellow - Character Meeple",
@@ -21532,7 +22257,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CowboyYellow-CharacterMeeple"
   },
   "CrabAcrylicBlack": {
     "DisplayName": "Crab, Acrylic, Black",
@@ -21565,7 +22291,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrabAcrylicBlack"
   },
   "CrabAcrylicBlue": {
     "DisplayName": "Crab, Acrylic, Blue",
@@ -21598,7 +22325,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrabAcrylicBlue"
   },
   "CrabAcrylicGreen": {
     "DisplayName": "Crab, Acrylic, Green",
@@ -21631,7 +22359,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrabAcrylicGreen"
   },
   "CrabAcrylicOrange": {
     "DisplayName": "Crab, Acrylic, Orange",
@@ -21664,7 +22393,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrabAcrylicOrange"
   },
   "CrabAcrylicPurple": {
     "DisplayName": "Crab, Acrylic, Purple",
@@ -21697,7 +22427,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrabAcrylicPurple"
   },
   "CrabAcrylicRed": {
     "DisplayName": "Crab, Acrylic, Red",
@@ -21730,7 +22461,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrabAcrylicRed"
   },
   "CrabAcrylicWhite": {
     "DisplayName": "Crab, Acrylic, White",
@@ -21763,7 +22495,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrabAcrylicWhite"
   },
   "CrabAcrylicYellow": {
     "DisplayName": "Crab, Acrylic, Yellow",
@@ -21796,7 +22529,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrabAcrylicYellow"
   },
   "Crate": {
     "DisplayName": "Crate",
@@ -21814,7 +22548,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Crate"
   },
   "CreepyHandTB25": {
     "DisplayName": "Creepy Hand, TB25",
@@ -21839,7 +22574,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CreepyHandTB25"
   },
   "CrescentWrench": {
     "DisplayName": "Crescent Wrench",
@@ -21869,7 +22605,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrescentWrench"
   },
   "Crown": {
     "DisplayName": "Crown",
@@ -21892,7 +22629,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Crown"
   },
   "CrystalOpaqueBlack": {
     "DisplayName": "Crystal, Opaque, Black",
@@ -21922,7 +22660,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrystalOpaqueBlack"
   },
   "CrystalOpaqueGold": {
     "DisplayName": "Crystal, Opaque, Gold",
@@ -21952,7 +22691,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrystalOpaqueGold"
   },
   "CrystalOpaqueSilver": {
     "DisplayName": "Crystal, Opaque, Silver",
@@ -21982,7 +22722,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrystalOpaqueSilver"
   },
   "CrystalOpaqueWhite": {
     "DisplayName": "Crystal, Opaque, White",
@@ -22012,7 +22753,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrystalOpaqueWhite"
   },
   "CrystalTransparentBlack": {
     "DisplayName": "Crystal, Transparent, Black",
@@ -22042,7 +22784,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrystalTransparentBlack"
   },
   "CrystalTransparentBlue": {
     "DisplayName": "Crystal, Transparent, Blue",
@@ -22073,7 +22816,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrystalTransparentBlue"
   },
   "CrystalTransparentClear": {
     "DisplayName": "Crystal, Transparent, Clear",
@@ -22103,7 +22847,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrystalTransparentClear"
   },
   "CrystalTransparentGreen": {
     "DisplayName": "Crystal, Transparent, Green",
@@ -22134,7 +22879,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrystalTransparentGreen"
   },
   "CrystalTransparentOrange": {
     "DisplayName": "Crystal, Transparent, Orange",
@@ -22164,7 +22910,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrystalTransparentOrange"
   },
   "CrystalTransparentPurple": {
     "DisplayName": "Crystal, Transparent, Purple",
@@ -22195,7 +22942,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrystalTransparentPurple"
   },
   "CrystalTransparentRed": {
     "DisplayName": "Crystal, Transparent, Red",
@@ -22226,7 +22974,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrystalTransparentRed"
   },
   "CrystalTransparentWhite": {
     "DisplayName": "Crystal, Transparent, White",
@@ -22256,7 +23005,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrystalTransparentWhite"
   },
   "CrystalTransparentYellow": {
     "DisplayName": "Crystal, Transparent, Yellow",
@@ -22287,7 +23037,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CrystalTransparentYellow"
   },
   "Cube10mmBlack": {
     "DisplayName": "Cube, 10mm, Black",
@@ -22331,7 +23082,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube10mmBlack"
   },
   "Cube10mmBlue": {
     "DisplayName": "Cube, 10mm, Blue",
@@ -22375,7 +23127,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube10mmBlue"
   },
   "Cube10mmBrown": {
     "DisplayName": "Cube, 10mm, Brown",
@@ -22419,7 +23172,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube10mmBrown"
   },
   "Cube10mmGreen": {
     "DisplayName": "Cube, 10mm, Green",
@@ -22463,7 +23217,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube10mmGreen"
   },
   "Cube10mmGray": {
     "DisplayName": "Cube, 10mm, Gray",
@@ -22507,7 +23262,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube10mmGray"
   },
   "Cube10mmMustard": {
     "DisplayName": "Cube, 10mm, Mustard",
@@ -22543,7 +23299,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "mustard",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Cube10mmMustard"
   },
   "Cube10mmOrange": {
     "DisplayName": "Cube, 10mm, Orange",
@@ -22587,7 +23344,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube10mmOrange"
   },
   "Cube10mmPink": {
     "DisplayName": "Cube, 10mm, Pink",
@@ -22631,7 +23389,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube10mmPink"
   },
   "Cube10mmPurple": {
     "DisplayName": "Cube, 10mm, Purple",
@@ -22675,7 +23434,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube10mmPurple"
   },
   "Cube10mmRed": {
     "PlaygroundColor": {
@@ -22719,7 +23479,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube10mmRed"
   },
   "Cube10mmWhite": {
     "PlaygroundColor": {
@@ -22763,7 +23524,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube10mmWhite"
   },
   "Cube10mmYellow": {
     "DisplayName": "Cube, 10mm, Yellow",
@@ -22807,7 +23569,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube10mmYellow"
   },
   "Cube15mmRed": {
     "PlaygroundColor": {
@@ -22851,7 +23614,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube15mmRed"
   },
   "Cube8mmBrightYellow": {
     "PlaygroundColor": {
@@ -22895,7 +23659,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube8mmBrightYellow"
   },
   "Cube8mmBrown": {
     "PlaygroundColor": {
@@ -22939,7 +23704,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube8mmBrown"
   },
   "Cube8mmGray": {
     "PlaygroundColor": {
@@ -22983,7 +23749,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube8mmGray"
   },
   "Cube8mmLightPink": {
     "PlaygroundColor": {
@@ -23028,7 +23795,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "lightpink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube8mmLightPink"
   },
   "Cube8mmNatural": {
     "PlaygroundColor": {
@@ -23064,7 +23832,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "natural",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Cube8mmNatural"
   },
   "Cube8mmPink": {
     "PlaygroundColor": {
@@ -23108,7 +23877,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube8mmPink"
   },
   "Cube8mmYellow": {
     "PlaygroundColor": {
@@ -23152,7 +23922,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube8mmYellow"
   },
   "CubeMetalBronze8mm": {
     "PlaygroundColor": {
@@ -23198,7 +23969,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "copper",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CubeMetalBronze8mm"
   },
   "CubeMetalGold8mm": {
     "PlaygroundColor": {
@@ -23243,7 +24015,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CubeMetalGold8mm"
   },
   "CubeMetalSilver8mm": {
     "PlaygroundColor": {
@@ -23288,7 +24061,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "CubeMetalSilver8mm"
   },
   "Cylinder10mmx10mmBlack": {
     "DisplayName": "Cylinder, 10mm x 10mm, Black",
@@ -23325,7 +24099,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cylinder10mmx10mmBlack"
   },
   "Cylinder10mmx10mmBlue": {
     "DisplayName": "Cylinder, 10mm x 10mm, Blue",
@@ -23362,7 +24137,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cylinder10mmx10mmBlue"
   },
   "Cylinder10mmx10mmGreen": {
     "DisplayName": "Cylinder, 10mm x 10mm, Green",
@@ -23399,7 +24175,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cylinder10mmx10mmGreen"
   },
   "Cylinder10mmx10mmOrange": {
     "DisplayName": "Cylinder, 10mm x 10mm, Orange",
@@ -23436,7 +24213,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cylinder10mmx10mmOrange"
   },
   "Cylinder10mmx10mmPurple": {
     "DisplayName": "Cylinder, 10mm x 10mm, Purple",
@@ -23473,7 +24251,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cylinder10mmx10mmPurple"
   },
   "Cylinder10mmx10mmRed": {
     "DisplayName": "Cylinder, 10mm x 10mm, Red",
@@ -23510,7 +24289,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cylinder10mmx10mmRed"
   },
   "Cylinder10mmx10mmWhite": {
     "DisplayName": "Cylinder, 10mm x 10mm, White",
@@ -23547,7 +24327,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cylinder10mmx10mmWhite"
   },
   "Cylinder10mmx10mmYellow": {
     "DisplayName": "Cylinder, 10mm x 10mm, Yellow",
@@ -23584,7 +24365,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cylinder10mmx10mmYellow"
   },
   "Cylinder15mmx8mmYellow": {
     "DisplayName": "Cylinder, 8m x 15mm, Yellow",
@@ -23621,7 +24403,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cylinder15mmx8mmYellow"
   },
   "Cylinder18mmx10mmYellow": {
     "DisplayName": "Cylinder, 10mm x 18mm, Yellow",
@@ -23658,7 +24441,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cylinder18mmx10mmYellow"
   },
   "Cylinder30mmx14mmNatural": {
     "DisplayName": "Cylinder, 14mm x 30mm, Natural",
@@ -23684,7 +24468,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "natural",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Cylinder30mmx14mmNatural"
   },
   "Cylinder30mmx15mmBlue": {
     "DisplayName": "Cylinder, 30mm x 15mm, Blue",
@@ -23721,7 +24506,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cylinder30mmx15mmBlue"
   },
   "Cylinder30mmx15mmYellow": {
     "DisplayName": "Cylinder, 30mm x 15mm, Yellow",
@@ -23758,7 +24544,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cylinder30mmx15mmYellow"
   },
   "D10Black": {
     "DisplayName": "D10, Black",
@@ -23784,7 +24571,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D10Black"
   },
   "D10Blue": {
     "DisplayName": "D10, Blue",
@@ -23810,7 +24598,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D10Blue"
   },
   "D10Green": {
     "DisplayName": "D10, Green",
@@ -23836,7 +24625,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D10Green"
   },
   "D10Red": {
     "DisplayName": "D10, Red",
@@ -23862,7 +24652,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D10Red"
   },
   "D10White": {
     "DisplayName": "D10, White",
@@ -23888,7 +24679,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D10White"
   },
   "D10Yellow": {
     "DisplayName": "D10, Yellow",
@@ -23914,7 +24706,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D10Yellow"
   },
   "D10x10Black": {
     "DisplayName": "D10x10, Black",
@@ -23940,7 +24733,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D10x10Black"
   },
   "D10x10BlackonRed": {
     "DisplayName": "D10x10, Black on Red",
@@ -23965,7 +24759,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "red",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "D10x10BlackonRed"
   },
   "D10x10WhiteonRed": {
     "DisplayName": "D10x10, White on Red",
@@ -23990,7 +24785,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "red",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "D10x10WhiteonRed"
   },
   "D12Black": {
     "DisplayName": "D12, Black",
@@ -24020,7 +24816,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D12Black"
   },
   "D12Blue": {
     "DisplayName": "D12, Blue",
@@ -24050,7 +24847,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D12Blue"
   },
   "D12BodyParts": {
     "DisplayName": "D12, Body Parts",
@@ -24083,7 +24881,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D12BodyParts"
   },
   "D12Green": {
     "DisplayName": "D12, Green",
@@ -24113,7 +24912,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D12Green"
   },
   "D12Red": {
     "DisplayName": "D12, Red",
@@ -24143,7 +24943,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D12Red"
   },
   "D12Yellow": {
     "DisplayName": "D12, Yellow",
@@ -24173,7 +24974,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D12Yellow"
   },
   "D20Blue": {
     "DisplayName": "D20, Blue",
@@ -24202,7 +25004,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D20Blue"
   },
   "D20Green": {
     "DisplayName": "D20, Green",
@@ -24231,7 +25034,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D20Green"
   },
   "D20Red": {
     "DisplayName": "D20, Red",
@@ -24260,7 +25064,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D20Red"
   },
   "D316mmRoundedNumeralBlack": {
     "DisplayName": "D3, 16mm, Rounded, Numeral, Black",
@@ -24288,7 +25093,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "D316mmRoundedNumeralBlack"
   },
   "D316mmRoundedNumeralBlue": {
     "DisplayName": "D3, 16mm, Rounded, Numeral, Blue",
@@ -24315,7 +25121,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "D316mmRoundedNumeralBlue"
   },
   "D316mmRoundedNumeralGreen": {
     "DisplayName": "D3, 16mm, Rounded, Numeral, Green",
@@ -24343,7 +25150,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D316mmRoundedNumeralGreen"
   },
   "D316mmRoundedNumeralRed": {
     "DisplayName": "D3, 16mm, Rounded, Numeral, Red",
@@ -24370,7 +25178,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "red",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "D316mmRoundedNumeralRed"
   },
   "D316mmRoundedNumeralWhite": {
     "DisplayName": "D3, 16mm, Rounded, Numeral, White",
@@ -24398,7 +25207,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D316mmRoundedNumeralWhite"
   },
   "D316mmRoundedNumeralYellow": {
     "DisplayName": "D3, 16mm, Rounded, Numeral, Yellow",
@@ -24426,7 +25236,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D316mmRoundedNumeralYellow"
   },
   "D4Black": {
     "DisplayName": "D4, Black",
@@ -24455,7 +25266,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D4Black"
   },
   "D4Blank": {
     "DisplayName": "D4, Blank",
@@ -24496,7 +25308,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D4Blank"
   },
   "D4Blue": {
     "DisplayName": "D4, Blue",
@@ -24525,7 +25338,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D4Blue"
   },
   "D4Green": {
     "DisplayName": "D4, Green",
@@ -24554,7 +25368,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D4Green"
   },
   "D4Orange": {
     "DisplayName": "D4, Orange",
@@ -24583,7 +25398,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D4Orange"
   },
   "D4Red": {
     "DisplayName": "D4, Red",
@@ -24612,7 +25428,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D4Red"
   },
   "D4White": {
     "DisplayName": "D4, White",
@@ -24641,7 +25458,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D4White"
   },
   "D4Yellow": {
     "DisplayName": "D4, Yellow",
@@ -24670,7 +25488,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D4Yellow"
   },
   "D612mmBlack": {
     "DisplayName": "D6, 12mm, Black",
@@ -24713,7 +25532,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmBlack"
   },
   "D612mmBlue": {
     "DisplayName": "D6, 12mm, Blue",
@@ -24756,7 +25576,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmBlue"
   },
   "D612mmGreen": {
     "DisplayName": "D6, 12mm, Green",
@@ -24799,7 +25620,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmGreen"
   },
   "D612mmMarbledBlack": {
     "DisplayName": "D6, 12mm, Marbled Black",
@@ -24841,7 +25663,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "D612mmMarbledBlack"
   },
   "D612mmMarbledGreen": {
     "DisplayName": "D6, 12mm, Marbled Green",
@@ -24884,7 +25707,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmMarbledGreen"
   },
   "D612mmRed": {
     "DisplayName": "D6, 12mm, Red",
@@ -24927,7 +25751,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmRed"
   },
   "D612mmRoundedBlue": {
     "DisplayName": "D6, 12mm, Rounded, Blue",
@@ -24970,7 +25795,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmRoundedBlue"
   },
   "D612mmRoundedBlue/Black": {
     "DisplayName": "D6, 12mm, Rounded, Blue/Black",
@@ -25014,7 +25840,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmRoundedBlue/Black"
   },
   "D612mmRoundedGolden/Black": {
     "DisplayName": "D6, 12mm, Rounded, Golden/Black",
@@ -25058,7 +25885,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmRoundedGolden/Black"
   },
   "D612mmRoundedOrange/Blue": {
     "DisplayName": "D6, 12mm, Rounded, Orange/Blue",
@@ -25102,7 +25930,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmRoundedOrange/Blue"
   },
   "D612mmRoundedPurple/Black": {
     "DisplayName": "D6, 12mm, Rounded, Purple/Black",
@@ -25146,7 +25975,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmRoundedPurple/Black"
   },
   "D612mmRoundedWhite/Black": {
     "DisplayName": "D6, 12mm, Rounded, White/Black",
@@ -25190,7 +26020,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmRoundedWhite/Black"
   },
   "D612mmTransparentBlack": {
     "DisplayName": "D6, 12mm, Transparent, Black",
@@ -25233,7 +26064,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "D612mmTransparentBlack"
   },
   "D612mmTransparentBlue": {
     "DisplayName": "D6, 12mm, Transparent, Blue",
@@ -25277,7 +26109,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmTransparentBlue"
   },
   "D612mmTransparentGreen": {
     "DisplayName": "D6, 12mm, Transparent, Green",
@@ -25321,7 +26154,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmTransparentGreen"
   },
   "D612mmTransparentOrange": {
     "DisplayName": "D6, 12mm, Transparent, Orange",
@@ -25365,7 +26199,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmTransparentOrange"
   },
   "D612mmTransparentPurple": {
     "DisplayName": "D6, 12mm, Transparent, Purple",
@@ -25409,7 +26244,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmTransparentPurple"
   },
   "D612mmTransparentRed": {
     "DisplayName": "D6, 12mm, Transparent, Red",
@@ -25453,7 +26289,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmTransparentRed"
   },
   "D612mmTransparentYellow": {
     "DisplayName": "D6, 12mm, Transparent, Yellow",
@@ -25497,7 +26334,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmTransparentYellow"
   },
   "D612mmWhite": {
     "DisplayName": "D6, 12mm, White",
@@ -25540,7 +26378,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmWhite"
   },
   "D612mmYellow": {
     "DisplayName": "D6, 12mm, Yellow",
@@ -25583,7 +26422,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmYellow"
   },
   "D615mmBoldNumeralRed": {
     "DisplayName": "D6, 15mm, Bold Numeral, Red",
@@ -25628,7 +26468,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D615mmBoldNumeralRed"
   },
   "D615mmNumeralBlue": {
     "DisplayName": "D6, 15mm, Numeral, Blue",
@@ -25673,7 +26514,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D615mmNumeralBlue"
   },
   "D615mmNumeralGreen": {
     "DisplayName": "D6, 15mm, Numeral, Green",
@@ -25717,7 +26559,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "green",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "D615mmNumeralGreen"
   },
   "D615mmNumeralGray": {
     "DisplayName": "D6, 15mm, Numeral, Gray",
@@ -25762,7 +26605,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D615mmNumeralGray"
   },
   "D616mmBetrayal": {
     "DisplayName": "D6, 16mm, Betrayal",
@@ -25783,7 +26627,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmBetrayal"
   },
   "D616mmBinary": {
     "DisplayName": "D6, 16mm, Binary",
@@ -25805,7 +26650,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmBinary"
   },
   "D616mmBlack": {
     "DisplayName": "D6, 16mm, Black",
@@ -25848,7 +26694,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmBlack"
   },
   "D616mmBlackonBlue": {
     "DisplayName": "D6, 16mm, Black on Blue",
@@ -25891,7 +26738,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmBlackonBlue"
   },
   "D616mmBlackonPink": {
     "DisplayName": "D6, 16mm, Black on Pink",
@@ -25933,7 +26781,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "pink",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "D616mmBlackonPink"
   },
   "D616mmBlankBlack": {
     "DisplayName": "D6, 16mm, Blank, Black",
@@ -25966,7 +26815,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmBlankBlack"
   },
   "D616mmBlankBlue": {
     "DisplayName": "D6, 16mm, Blank, Blue",
@@ -25999,7 +26849,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmBlankBlue"
   },
   "D616mmBlankGreen": {
     "DisplayName": "D6, 16mm, Blank, Green",
@@ -26032,7 +26883,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmBlankGreen"
   },
   "D616mmBlankOrange": {
     "DisplayName": "D6, 16mm, Blank, Orange",
@@ -26065,7 +26917,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmBlankOrange"
   },
   "D616mmBlankPurple": {
     "DisplayName": "D6, 16mm, Blank, Purple",
@@ -26098,7 +26951,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmBlankPurple"
   },
   "D616mmBlankRed": {
     "DisplayName": "D6, 16mm, Blank, Red",
@@ -26131,7 +26985,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmBlankRed"
   },
   "D616mmBlankWhite": {
     "DisplayName": "D6, 16mm, Blank, White",
@@ -26164,7 +27019,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmBlankWhite"
   },
   "D616mmBlankWoodDark": {
     "DisplayName": "D6, 16mm, Blank, Wood, Dark",
@@ -26198,7 +27054,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmBlankWoodDark"
   },
   "D616mmBlankYellow": {
     "DisplayName": "D6, 16mm, Blank, Yellow",
@@ -26231,7 +27088,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmBlankYellow"
   },
   "D616mmGreen": {
     "DisplayName": "D6, 16mm, Green",
@@ -26274,7 +27132,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmGreen"
   },
   "D616mmLightningBoltBlack": {
     "DisplayName": "D6, 16mm, Lightning Bolt, Black",
@@ -26298,7 +27157,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmLightningBoltBlack"
   },
   "D616mmLightningBoltBlue": {
     "DisplayName": "D6, 16mm, Lightning Bolt, Blue",
@@ -26322,7 +27182,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmLightningBoltBlue"
   },
   "D616mmLightningBoltBrown": {
     "DisplayName": "D6, 16mm, Lightning Bolt, Brown",
@@ -26346,7 +27207,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmLightningBoltBrown"
   },
   "D616mmLightningBoltGreen": {
     "DisplayName": "D6, 16mm, Lightning Bolt, Green",
@@ -26369,7 +27231,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmLightningBoltGreen"
   },
   "D616mmLightningBoltYellow": {
     "DisplayName": "D6, 16mm, Lightning Bolt, Yellow",
@@ -26393,7 +27256,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmLightningBoltYellow"
   },
   "D616mmNumeralBlack": {
     "DisplayName": "D6, 16mm, Numeral, Black",
@@ -26438,7 +27302,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmNumeralBlack"
   },
   "D616mmPurple": {
     "DisplayName": "D6, 16mm, Purple",
@@ -26480,7 +27345,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "purple",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "D616mmPurple"
   },
   "D616mmRed": {
     "DisplayName": "D6, 16mm, Red",
@@ -26523,7 +27389,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmRed"
   },
   "D616mmRoundedBlackPearl": {
     "DisplayName": "D6, 16mm, Rounded, Black Pearl",
@@ -26566,7 +27433,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmRoundedBlackPearl"
   },
   "D616mmRoundedBluePearl": {
     "DisplayName": "D6, 16mm, Rounded, Blue Pearl",
@@ -26609,7 +27477,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmRoundedBluePearl"
   },
   "D616mmRoundedBrownOpaque": {
     "DisplayName": "D6, 16mm, Rounded, Brown Opaque",
@@ -26652,7 +27521,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmRoundedBrownOpaque"
   },
   "D616mmRoundedBrownPearl": {
     "DisplayName": "D6, 16mm, Rounded, Brown Pearl",
@@ -26747,7 +27617,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmRoundedBrownPearl"
   },
   "D616mmRoundedGreenPearl": {
     "DisplayName": "D6, 16mm, Rounded, Green Pearl",
@@ -26790,7 +27661,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmRoundedGreenPearl"
   },
   "D616mmRoundedOrangeOpaque": {
     "DisplayName": "D6, 16mm, Rounded, Orange Opaque",
@@ -26833,7 +27705,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmRoundedOrangeOpaque"
   },
   "D616mmRoundedWhitePearl": {
     "DisplayName": "D6, 16mm, Rounded, White Pearl",
@@ -26928,7 +27801,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmRoundedWhitePearl"
   },
   "D616mmSichermanHigh": {
     "DisplayName": "D6, 16mm, Sicherman, High",
@@ -26951,7 +27825,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmSichermanHigh"
   },
   "D616mmSichermanLow": {
     "DisplayName": "D6, 16mm, Sicherman, Low",
@@ -26974,7 +27849,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmSichermanLow"
   },
   "D616mmSymbolIvory": {
     "DisplayName": "D6, 16mm, Symbol, Ivory",
@@ -26999,7 +27875,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "ivory",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmSymbolIvory"
   },
   "D616mmWhite": {
     "DisplayName": "D6, 16mm, White",
@@ -27042,7 +27919,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmWhite"
   },
   "D616mmWood": {
     "DisplayName": "D6, 16mm, Wood",
@@ -27086,7 +27964,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D616mmWood"
   },
   "D625mmAnimalSymbols": {
     "DisplayName": "D6, 25mm, Animal Symbols",
@@ -27117,7 +27996,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "salmon",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D625mmAnimalSymbols"
   },
   "D68mmBlack": {
     "DisplayName": "D6, 8mm, Black",
@@ -27161,7 +28041,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D68mmBlack"
   },
   "D68mmBlue": {
     "DisplayName": "D6, 8mm, Blue",
@@ -27205,7 +28086,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D68mmBlue"
   },
   "D68mmGreen": {
     "DisplayName": "D6, 8mm, Green",
@@ -27249,7 +28131,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D68mmGreen"
   },
   "D68mmRed": {
     "DisplayName": "D6, 8mm, Red",
@@ -27293,7 +28176,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D68mmRed"
   },
   "D6AlienBlackonGreen": {
     "DisplayName": "D6, Alien, Black on Green",
@@ -27325,7 +28209,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6AlienBlackonGreen"
   },
   "D6AlienRedonGreen": {
     "DisplayName": "D6, Alien, Red on Green",
@@ -27357,7 +28242,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6AlienRedonGreen"
   },
   "D6Colors": {
     "DisplayName": "D6, Colors",
@@ -27386,7 +28272,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6Colors"
   },
   "D6Dinosaur": {
     "DisplayName": "D6, Dinosaur",
@@ -27415,7 +28302,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6Dinosaur"
   },
   "D6Emotion": {
     "DisplayName": "D6, Emotion",
@@ -27468,7 +28356,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "D6Emotion"
   },
   "D6IndentedBlankBlue": {
     "DisplayName": "D6, Indented, Blank, Blue",
@@ -27503,7 +28392,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6IndentedBlankBlue"
   },
   "D6IndentedBlankDarkBlue": {
     "DisplayName": "D6, Indented, Blank, Dark Blue",
@@ -27537,7 +28427,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "blue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "D6IndentedBlankDarkBlue"
   },
   "D6IndentedBlankGreen": {
     "DisplayName": "D6, Indented, Blank, Green",
@@ -27572,7 +28463,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6IndentedBlankGreen"
   },
   "D6IndentedBlankLavender": {
     "DisplayName": "D6, Indented, Blank, Lavender",
@@ -27608,7 +28500,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "lavender",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6IndentedBlankLavender"
   },
   "D6IndentedBlankLightBlue": {
     "DisplayName": "D6, Indented, Blank, Light Blue",
@@ -27643,7 +28536,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "lightblue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "D6IndentedBlankLightBlue"
   },
   "D6IndentedBlankLimeGreen": {
     "DisplayName": "D6, Indented, Blank, Lime Green",
@@ -27679,7 +28573,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "limegreen",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6IndentedBlankLimeGreen"
   },
   "D6IndentedBlankOrange": {
     "DisplayName": "D6, Indented, Blank, Orange",
@@ -27714,7 +28609,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6IndentedBlankOrange"
   },
   "D6IndentedBlankPurple": {
     "DisplayName": "D6, Indented, Blank, Purple",
@@ -27749,7 +28645,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6IndentedBlankPurple"
   },
   "D6IndentedBlankRed": {
     "DisplayName": "D6, Indented, Blank, Red",
@@ -27784,7 +28681,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6IndentedBlankRed"
   },
   "D6IndentedBlankWhite": {
     "DisplayName": "D6, Indented, Blank, White",
@@ -27819,7 +28717,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6IndentedBlankWhite"
   },
   "D6IndentedBlankYellow": {
     "DisplayName": "D6, Indented, Blank, Yellow",
@@ -27854,7 +28753,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6IndentedBlankYellow"
   },
   "D6Interrogative": {
     "DisplayName": "D6, Interrogative",
@@ -27882,7 +28782,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6Interrogative"
   },
   "D6NaturalShapes": {
     "DisplayName": "D6, Natural Shapes",
@@ -27919,7 +28820,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6NaturalShapes"
   },
   "D6NegativeCounter": {
     "DisplayName": "D6, Negative Counter",
@@ -27941,7 +28843,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6NegativeCounter"
   },
   "D6PartsofSpeech": {
     "DisplayName": "D6, Parts of Speech",
@@ -27972,7 +28875,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6PartsofSpeech"
   },
   "D6PositiveCounter": {
     "DisplayName": "D6, Positive Counter",
@@ -27994,7 +28898,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6PositiveCounter"
   },
   "D6Shapes": {
     "DisplayName": "D6, Shapes",
@@ -28025,7 +28930,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6Shapes"
   },
   "D6Species": {
     "DisplayName": "D6, Species",
@@ -28057,7 +28963,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6Species"
   },
   "D6Train18mmWhite": {
     "DisplayName": "D6, Train, 18mm, White",
@@ -28088,7 +28995,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6Train18mmWhite"
   },
   "D6WoodlandAnimals": {
     "DisplayName": "D6, Woodland Animals",
@@ -28120,7 +29028,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6WoodlandAnimals"
   },
   "D8Black": {
     "DisplayName": "D8, Black",
@@ -28149,7 +29058,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D8Black"
   },
   "D8Blank": {
     "DisplayName": "D8, Blank",
@@ -28190,7 +29100,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D8Blank"
   },
   "D8Blue": {
     "DisplayName": "D8, Blue",
@@ -28219,7 +29130,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D8Blue"
   },
   "D8Compass": {
     "DisplayName": "D8, Compass",
@@ -28260,7 +29172,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D8Compass"
   },
   "D8Green": {
     "DisplayName": "D8, Green",
@@ -28289,7 +29202,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D8Green"
   },
   "D8Red": {
     "DisplayName": "D8, Red",
@@ -28318,7 +29232,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D8Red"
   },
   "D8White": {
     "DisplayName": "D8, White",
@@ -28347,7 +29262,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D8White"
   },
   "D8Yellow": {
     "DisplayName": "D8, Yellow",
@@ -28376,7 +29292,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D8Yellow"
   },
   "DarkElfSorcererFantasyTB25": {
     "DisplayName": "Dark Elf Sorcerer, Fantasy, TB25",
@@ -28399,7 +29316,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DarkElfSorcererFantasyTB25"
   },
   "DarkWarrior1FantasyTB25": {
     "DisplayName": "Dark Warrior 1, Fantasy, TB25",
@@ -28420,7 +29338,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DarkWarrior1FantasyTB25"
   },
   "DarkWarrior2FantasyTB25": {
     "DisplayName": "Dark Warrior 2, Fantasy, TB25",
@@ -28440,7 +29359,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DarkWarrior2FantasyTB25"
   },
   "deadEarthPlayer'sHandbook": {
     "DisplayName": "deadEarth Player's Handbook",
@@ -28459,7 +29379,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "deadEarthPlayer'sHandbook"
   },
   "DealerButton": {
     "DisplayName": "Dealer Button",
@@ -28482,7 +29403,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DealerButton"
   },
   "DeathKnightwithPolearm": {
     "DisplayName": "Death Knight with Polearm",
@@ -28516,7 +29438,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DeathKnightwithPolearm"
   },
   "DeathKnightwithSword": {
     "DisplayName": "Death Knight with Sword",
@@ -28550,7 +29473,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DeathKnightwithSword"
   },
   "DeckBoxBlank": {
     "DisplayName": "Deck Box, Blank",
@@ -28581,7 +29505,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DeckBoxBlank"
   },
   "DecoderStrips": {
     "DisplayName": "Decoder Strips",
@@ -28604,7 +29529,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DecoderStrips"
   },
   "DesignersTableCover": {
     "DisplayName": "Designers Table Cover",
@@ -28624,7 +29550,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "DesignersTableCover"
   },
   "DigitalTimer": {
     "DisplayName": "Digital Timer",
@@ -28646,7 +29573,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DigitalTimer"
   },
   "Dindaelus:WizardwithStaff": {
     "DisplayName": "Dindaelus: Wizard with Staff",
@@ -28682,7 +29610,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Dindaelus:WizardwithStaff"
   },
   "DinosaurTokenWoodBlue": {
     "DisplayName": "Dinosaur Token, Wood, Blue",
@@ -28708,7 +29637,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurTokenWoodBlue"
   },
   "DinosaurTokenWoodGreen": {
     "DisplayName": "Dinosaur Token, Wood, Green",
@@ -28734,7 +29664,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurTokenWoodGreen"
   },
   "DinosaurTokenWoodOrange": {
     "DisplayName": "Dinosaur Token, Wood, Orange",
@@ -28760,7 +29691,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurTokenWoodOrange"
   },
   "DinosaurTokenWoodPurple": {
     "DisplayName": "Dinosaur Token, Wood, Purple",
@@ -28786,7 +29718,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurTokenWoodPurple"
   },
   "DinosaurTokenWoodRed": {
     "DisplayName": "Dinosaur Token, Wood, Red",
@@ -28812,7 +29745,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurTokenWoodRed"
   },
   "DinosaurTokensWoodPink": {
     "DisplayName": "Dinosaur Tokens, Wood, Pink",
@@ -28838,7 +29772,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurTokensWoodPink"
   },
   "DinosaurAnkylosaurus": {
     "DisplayName": "Dinosaur, Ankylosaurus",
@@ -28861,7 +29796,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurAnkylosaurus"
   },
   "DinosaurAnkylosaurusPink": {
     "DisplayName": "Dinosaur, Ankylosaurus, Pink",
@@ -28886,7 +29822,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurAnkylosaurusPink"
   },
   "DinosaurAnkylosaurusWoodBlue": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Blue",
@@ -28910,7 +29847,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurAnkylosaurusWoodBlue"
   },
   "DinosaurAnkylosaurusWoodGreen": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Green",
@@ -28934,7 +29872,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurAnkylosaurusWoodGreen"
   },
   "DinosaurAnkylosaurusWoodOrange": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Orange",
@@ -28958,7 +29897,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurAnkylosaurusWoodOrange"
   },
   "DinosaurAnkylosaurusWoodPink": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Pink",
@@ -28982,7 +29922,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurAnkylosaurusWoodPink"
   },
   "DinosaurAnkylosaurusWoodPurple": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Purple",
@@ -29006,7 +29947,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurAnkylosaurusWoodPurple"
   },
   "DinosaurAnkylosaurusWoodRed": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Red",
@@ -29030,7 +29972,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurAnkylosaurusWoodRed"
   },
   "DinosaurAnkylosaurusWoodWhite": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, White",
@@ -29054,7 +29997,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurAnkylosaurusWoodWhite"
   },
   "DinosaurBrontosaurus": {
     "DisplayName": "Dinosaur, Brontosaurus",
@@ -29077,7 +30021,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurBrontosaurus"
   },
   "DinosaurPachycephalosaurus": {
     "DisplayName": "Dinosaur, Pachycephalosaurus",
@@ -29100,7 +30045,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurPachycephalosaurus"
   },
   "DinosaurPterodactyl": {
     "DisplayName": "Dinosaur, Pterodactyl",
@@ -29123,7 +30069,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurPterodactyl"
   },
   "DinosaurSpinosaurusOrange": {
     "DisplayName": "Dinosaur, Spinosaurus, Orange",
@@ -29148,7 +30095,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurSpinosaurusOrange"
   },
   "DinosaurStegosaurus": {
     "DisplayName": "Dinosaur, Stegosaurus",
@@ -29171,7 +30119,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurStegosaurus"
   },
   "DinosaurStegosaurusGreen": {
     "DisplayName": "Dinosaur, Stegosaurus, Green",
@@ -29197,7 +30146,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurStegosaurusGreen"
   },
   "DinosaurTriceratops": {
     "DisplayName": "Dinosaur, Triceratops",
@@ -29220,7 +30170,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurTriceratops"
   },
   "DinosaurTriceratopsRed": {
     "DisplayName": "Dinosaur, Triceratops, Red",
@@ -29246,7 +30197,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurTriceratopsRed"
   },
   "DinosaurTyrannosaurus": {
     "DisplayName": "Dinosaur, Tyrannosaurus",
@@ -29269,7 +30221,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurTyrannosaurus"
   },
   "DinosaurTyrannosaurusBlue": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Blue",
@@ -29300,7 +30253,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurTyrannosaurusBlue"
   },
   "DinosaurTyrannosaurusDarkGreen": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Dark Green",
@@ -29331,7 +30285,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurTyrannosaurusDarkGreen"
   },
   "DinosaurTyrannosaurusGreen": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Green",
@@ -29362,7 +30317,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurTyrannosaurusGreen"
   },
   "DinosaurTyrannosaurusOrange": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Orange",
@@ -29393,7 +30349,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurTyrannosaurusOrange"
   },
   "DinosaurTyrannosaurusPink": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Pink",
@@ -29424,7 +30381,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurTyrannosaurusPink"
   },
   "DinosaurTyrannosaurusPurple": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Purple",
@@ -29455,7 +30413,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurTyrannosaurusPurple"
   },
   "DinosaurTyrannosaurusRed": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Red",
@@ -29486,7 +30445,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurTyrannosaurusRed"
   },
   "DinosaurVelociraptor": {
     "DisplayName": "Dinosaur, Velociraptor",
@@ -29509,7 +30469,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurVelociraptor"
   },
   "DinosaurVelociraptorGray": {
     "DisplayName": "Dinosaur, Velociraptor, Gray",
@@ -29537,7 +30498,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DinosaurVelociraptorGray"
   },
   "DirectionFinderTransparentBlack": {
     "DisplayName": "Direction Finder, Transparent, Black",
@@ -29560,7 +30522,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DirectionFinderTransparentBlack"
   },
   "Disc14mmx10mmBlue": {
     "DisplayName": "Disc, 14mm x 10mm, Blue",
@@ -29603,7 +30566,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc14mmx10mmBlue"
   },
   "Disc14mmx10mmPurple": {
     "DisplayName": "Disc, 14mm x 10mm, Purple",
@@ -29646,7 +30610,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc14mmx10mmPurple"
   },
   "Disc14mmx10mmRed": {
     "DisplayName": "Disc, 14mm x 10mm, Red",
@@ -29677,7 +30642,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Disc14mmx10mmRed"
   },
   "Disc14mmx4mmBlack": {
     "DisplayName": "Disc, 14mm x 4mm, Black",
@@ -29720,7 +30686,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc14mmx4mmBlack"
   },
   "Disc14mmx4mmGreen": {
     "DisplayName": "Disc, 14mm x 4mm, Green",
@@ -29763,7 +30730,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc14mmx4mmGreen"
   },
   "Disc14mmx4mmLightBlue": {
     "DisplayName": "Disc, 14mm x 4mm, Light Blue",
@@ -29807,7 +30775,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "lightblue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc14mmx4mmLightBlue"
   },
   "Disc14mmx4mmLightPurple": {
     "DisplayName": "Disc, 14mm x 4mm, Light Purple",
@@ -29851,7 +30820,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc14mmx4mmLightPurple"
   },
   "Disc14mmx4mmRed": {
     "DisplayName": "Disc, 14mm x 4mm, Red",
@@ -29882,7 +30852,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Disc14mmx4mmRed"
   },
   "Disc14mmx4mmYellow": {
     "DisplayName": "Disc, 14mm x 4mm, Yellow",
@@ -29925,7 +30896,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc14mmx4mmYellow"
   },
   "Disc15mmx5mmBlack": {
     "DisplayName": "Disc, 15mm x 5mm, Black",
@@ -29968,7 +30940,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc15mmx5mmBlack"
   },
   "Disc15mmx5mmBlue": {
     "DisplayName": "Disc, 15mm x 5mm, Blue",
@@ -30011,7 +30984,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc15mmx5mmBlue"
   },
   "Disc15mmx5mmGreen": {
     "DisplayName": "Disc, 15mm x 5mm, Green",
@@ -30054,7 +31028,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc15mmx5mmGreen"
   },
   "Disc15mmx5mmRed": {
     "DisplayName": "Disc, 15mm x 5mm, Red",
@@ -30097,7 +31072,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc15mmx5mmRed"
   },
   "Disc15mmx6mmLimeGreen": {
     "DisplayName": "Disc, 15mm x 6mm, Lime Green",
@@ -30141,7 +31117,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "limegreen",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc15mmx6mmLimeGreen"
   },
   "Disc15mmx6mmOrange": {
     "DisplayName": "Disc, 15mm x 6mm, Orange",
@@ -30184,7 +31161,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc15mmx6mmOrange"
   },
   "Disc15mmx6mmRed": {
     "DisplayName": "Disc, 15mm x 6mm, Red",
@@ -30227,7 +31205,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc15mmx6mmRed"
   },
   "Disc15mmx6mmYellow": {
     "DisplayName": "Disc, 15mm x 6mm, Yellow",
@@ -30270,7 +31249,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc15mmx6mmYellow"
   },
   "Disc16mmx10mmBlue": {
     "DisplayName": "Disc, 16mm x 10mm, Blue",
@@ -30313,7 +31293,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx10mmBlue"
   },
   "Disc16mmx10mmBrown": {
     "DisplayName": "Disc, 16mm x 10mm, Brown",
@@ -30356,7 +31337,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx10mmBrown"
   },
   "Disc16mmx10mmGreen": {
     "DisplayName": "Disc, 16mm x 10mm, Green",
@@ -30399,7 +31381,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx10mmGreen"
   },
   "Disc16mmx10mmPurple": {
     "DisplayName": "Disc, 16mm x 10mm, Purple",
@@ -30442,7 +31425,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx10mmPurple"
   },
   "Disc16mmx10mmRed": {
     "DisplayName": "Disc, 16mm x 10mm, Red",
@@ -30485,7 +31469,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx10mmRed"
   },
   "Disc16mmx10mmYellow": {
     "DisplayName": "Disc, 16mm x 10mm, Yellow",
@@ -30528,7 +31513,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx10mmYellow"
   },
   "Disc16mmx4mmBlack": {
     "DisplayName": "Disc, 16mm x 4mm, Black",
@@ -30571,7 +31557,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx4mmBlack"
   },
   "Disc16mmx4mmBlue": {
     "DisplayName": "Disc, 16mm x 4mm, Blue",
@@ -30614,7 +31601,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx4mmBlue"
   },
   "Disc16mmx4mmGreen": {
     "DisplayName": "Disc, 16mm x 4mm, Green",
@@ -30657,7 +31645,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx4mmGreen"
   },
   "Disc16mmx4mmOrange": {
     "DisplayName": "Disc, 16mm x 4mm, Orange",
@@ -30700,7 +31689,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx4mmOrange"
   },
   "Disc16mmx4mmPurple": {
     "DisplayName": "Disc, 16mm x 4mm, Purple",
@@ -30743,7 +31733,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx4mmPurple"
   },
   "Disc16mmx4mmRed": {
     "DisplayName": "Disc, 16mm x 4mm, Red",
@@ -30786,7 +31777,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx4mmRed"
   },
   "Disc16mmx4mmWhite": {
     "DisplayName": "Disc, 16mm x 4mm, White",
@@ -30830,7 +31822,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx4mmWhite"
   },
   "Disc16mmx4mmYellow": {
     "DisplayName": "Disc, 16mm x 4mm, Yellow",
@@ -30873,7 +31866,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx4mmYellow"
   },
   "Disc16mmx6mmLightPurple": {
     "DisplayName": "Disc, 16mm x 6mm, Light Purple",
@@ -30916,7 +31910,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx6mmLightPurple"
   },
   "Disc16mmx6mmOrange": {
     "DisplayName": "Disc, 16mm x 6mm, Orange",
@@ -30959,7 +31954,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx6mmOrange"
   },
   "Disc16mmx8mmMint": {
     "DisplayName": "Disc, 16mm x 8mm, Mint",
@@ -31002,7 +31998,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx8mmMint"
   },
   "Disc16mmx8mmPink": {
     "DisplayName": "Disc, 16mm x 8mm, Pink",
@@ -31045,7 +32042,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx8mmPink"
   },
   "Disc16mmx8mmPurple": {
     "DisplayName": "Disc, 16mm x 8mm, Purple",
@@ -31088,7 +32086,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx8mmPurple"
   },
   "Disc16mmx8mmTan": {
     "DisplayName": "Disc, 16mm x 8mm, Tan",
@@ -31131,7 +32130,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx8mmTan"
   },
   "Disc16mmx8mmYellow": {
     "DisplayName": "Disc, 16mm x 8mm, Yellow",
@@ -31174,7 +32174,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc16mmx8mmYellow"
   },
   "Disc17mmx10mmApricot": {
     "DisplayName": "Disc, 17mm x 10mm, Apricot",
@@ -31222,7 +32223,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "apricot",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc17mmx10mmApricot"
   },
   "Disc17mmx10mmGreen": {
     "DisplayName": "Disc, 17mm x 10mm, Green",
@@ -31268,7 +32270,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc17mmx10mmGreen"
   },
   "Disc18mmx3mmClear": {
     "DisplayName": "Disc, 18mm x 3mm, Clear",
@@ -31314,7 +32317,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx3mmClear"
   },
   "Disc18mmx3mmfluorescentblue": {
     "DisplayName": "Disc, 18mm x 3mm, fluorescent blue ",
@@ -31360,7 +32364,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx3mmfluorescentblue"
   },
   "Disc18mmx3mmFluorescentGreen": {
     "DisplayName": "Disc, 18mm x 3mm, Fluorescent Green",
@@ -31406,7 +32411,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx3mmFluorescentGreen"
   },
   "Disc18mmx3mmFluorescentOrange": {
     "DisplayName": "Disc, 18mm x 3mm, Fluorescent Orange",
@@ -31452,7 +32458,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx3mmFluorescentOrange"
   },
   "Disc18mmx3mmFluorescentRed": {
     "DisplayName": "Disc, 18mm x 3mm, Fluorescent Red",
@@ -31498,7 +32505,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx3mmFluorescentRed"
   },
   "Disc18mmx3mmFluorescentYellow": {
     "DisplayName": "Disc, 18mm x 3mm, Fluorescent Yellow",
@@ -31544,7 +32552,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx3mmFluorescentYellow"
   },
   "Disc18mmx3mmTransparentBlue": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent, Blue",
@@ -31590,7 +32599,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx3mmTransparentBlue"
   },
   "Disc18mmx3mmTransparentGreen": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent, Green",
@@ -31636,7 +32646,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx3mmTransparentGreen"
   },
   "Disc18mmx3mmTransparentGray": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent, Gray",
@@ -31682,7 +32693,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx3mmTransparentGray"
   },
   "Disc18mmx3mmTransparentOrange": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent, Orange",
@@ -31728,7 +32740,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx3mmTransparentOrange"
   },
   "Disc18mmx3mmTransparentPurple": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent, Purple",
@@ -31774,7 +32787,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx3mmTransparentPurple"
   },
   "Disc18mmx3mmTransparentRed": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent, Red",
@@ -31820,7 +32834,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx3mmTransparentRed"
   },
   "Disc18mmx3mmTransparentYellow": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent, Yellow",
@@ -31866,7 +32881,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx3mmTransparentYellow"
   },
   "Disc18mmx5mmRed": {
     "DisplayName": "Disc, 18mm x 5mm, Red",
@@ -31909,7 +32925,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx5mmRed"
   },
   "Disc18mmx6mmClear": {
     "DisplayName": "Disc, 18mm x 6mm, Clear",
@@ -31955,7 +32972,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx6mmClear"
   },
   "Disc18mmx6mmFluorescentBlue": {
     "DisplayName": "Disc, 18mm x 6mm, Fluorescent Blue",
@@ -32001,7 +33019,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx6mmFluorescentBlue"
   },
   "Disc18mmx6mmFluorescentGreen": {
     "DisplayName": "Disc, 18mm x 6mm, Fluorescent Green",
@@ -32047,7 +33066,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx6mmFluorescentGreen"
   },
   "Disc18mmx6mmFluorescentOrange": {
     "DisplayName": "Disc, 18mm x 6mm, Fluorescent Orange",
@@ -32093,7 +33113,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx6mmFluorescentOrange"
   },
   "Disc18mmx6mmFluorescentRed": {
     "DisplayName": "Disc, 18mm x 6mm, Fluorescent Red",
@@ -32139,7 +33160,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx6mmFluorescentRed"
   },
   "Disc18mmx6mmFluorescentYellow": {
     "DisplayName": "Disc, 18mm x 6mm, Fluorescent Yellow",
@@ -32185,7 +33207,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx6mmFluorescentYellow"
   },
   "Disc18mmx6mmTransparentBlue": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent, Blue",
@@ -32231,7 +33254,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx6mmTransparentBlue"
   },
   "Disc18mmx6mmTransparentGreen": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent, Green",
@@ -32277,7 +33301,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx6mmTransparentGreen"
   },
   "Disc18mmx6mmTransparentGray": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent, Gray",
@@ -32323,7 +33348,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx6mmTransparentGray"
   },
   "Disc18mmx6mmTransparentOrange": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent, Orange",
@@ -32369,7 +33395,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx6mmTransparentOrange"
   },
   "Disc18mmx6mmTransparentPurple": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent, Purple",
@@ -32415,7 +33442,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx6mmTransparentPurple"
   },
   "Disc18mmx6mmTransparentRed": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent, Red",
@@ -32461,7 +33489,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx6mmTransparentRed"
   },
   "Disc18mmx6mmTransparentYellow": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent, Yellow",
@@ -32507,7 +33536,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc18mmx6mmTransparentYellow"
   },
   "Disc20mmx5mmPastelBlue": {
     "DisplayName": "Disc, 20mm x 5mm, Pastel Blue",
@@ -32550,7 +33580,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc20mmx5mmPastelBlue"
   },
   "Disc20mmx5mmPastelOrange": {
     "DisplayName": "Disc, 20mm x 5mm, Pastel Orange",
@@ -32594,7 +33625,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc20mmx5mmPastelOrange"
   },
   "Disc20mmx5mmPastelPurple": {
     "DisplayName": "Disc, 20mm x 5mm, Pastel Purple",
@@ -32637,7 +33669,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc20mmx5mmPastelPurple"
   },
   "Disc25mmx3mmClear": {
     "DisplayName": "Disc, 25mm x 3mm, Clear",
@@ -32683,7 +33716,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx3mmClear"
   },
   "Disc25mmx3mmFluorescentBlue": {
     "DisplayName": "Disc, 25mm x 3mm, Fluorescent Blue",
@@ -32729,7 +33763,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx3mmFluorescentBlue"
   },
   "Disc25mmx3mmFluorescentGreen": {
     "DisplayName": "Disc, 25mm x 3mm, Fluorescent Green",
@@ -32775,7 +33810,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx3mmFluorescentGreen"
   },
   "Disc25mmx3mmFluorescentOrange": {
     "DisplayName": "Disc, 25mm x 3mm, Fluorescent Orange",
@@ -32821,7 +33857,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx3mmFluorescentOrange"
   },
   "Disc25mmx3mmFluorescentRed": {
     "DisplayName": "Disc, 25mm x 3mm, Fluorescent Red",
@@ -32867,7 +33904,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx3mmFluorescentRed"
   },
   "Disc25mmx3mmFluorescentYellow": {
     "DisplayName": "Disc, 25mm x 3mm, Fluorescent Yellow",
@@ -32913,7 +33951,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx3mmFluorescentYellow"
   },
   "Disc25mmx3mmTransparentBlue": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent, Blue",
@@ -32959,7 +33998,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx3mmTransparentBlue"
   },
   "Disc25mmx3mmTransparentGreen": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent, Green",
@@ -33005,7 +34045,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx3mmTransparentGreen"
   },
   "Disc25mmx3mmTransparentGray": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent, Gray",
@@ -33051,7 +34092,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx3mmTransparentGray"
   },
   "Disc25mmx3mmTransparentOrange": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent, Orange",
@@ -33097,7 +34139,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx3mmTransparentOrange"
   },
   "Disc25mmx3mmTransparentRed": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent, Red",
@@ -33143,7 +34186,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx3mmTransparentRed"
   },
   "Disc25mmx3mmTransparentPurple": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent, Purple",
@@ -33189,7 +34233,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx3mmTransparentPurple"
   },
   "Disc25mmx3mmTransparentYellow": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent, Yellow",
@@ -33235,7 +34280,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx3mmTransparentYellow"
   },
   "Disc25mmx6mmClear": {
     "DisplayName": "Disc, 25mm x 6mm, Clear",
@@ -33281,7 +34327,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx6mmClear"
   },
   "Disc25mmx6mmFluorescentBlue": {
     "DisplayName": "Disc, 25mm x 6mm, Fluorescent Blue",
@@ -33327,7 +34374,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx6mmFluorescentBlue"
   },
   "Disc25mmx6mmFluorescentGreen": {
     "DisplayName": "Disc, 25mm x 6mm, Fluorescent Green",
@@ -33373,7 +34421,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx6mmFluorescentGreen"
   },
   "Disc25mmx6mmFluorescentOrange": {
     "DisplayName": "Disc, 25mm x 6mm, Fluorescent Orange",
@@ -33419,7 +34468,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx6mmFluorescentOrange"
   },
   "Disc25mmx6mmFluorescentRed": {
     "DisplayName": "Disc, 25mm x 6mm, Fluorescent Red",
@@ -33465,7 +34515,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx6mmFluorescentRed"
   },
   "Disc25mmx6mmFluorescentYellow": {
     "DisplayName": "Disc, 25mm x 6mm, Fluorescent Yellow",
@@ -33511,7 +34562,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx6mmFluorescentYellow"
   },
   "Disc25mmx6mmTransparentBlue": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent, Blue",
@@ -33557,7 +34609,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx6mmTransparentBlue"
   },
   "Disc25mmx6mmTransparentGreen": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent, Green",
@@ -33603,7 +34656,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx6mmTransparentGreen"
   },
   "Disc25mmx6mmTransparentGray": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent, Gray",
@@ -33649,7 +34703,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx6mmTransparentGray"
   },
   "Disc25mmx6mmTransparentOrange": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent, Orange",
@@ -33695,7 +34750,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx6mmTransparentOrange"
   },
   "Disc25mmx6mmTransparentPurple": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent, Purple",
@@ -33741,7 +34797,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx6mmTransparentPurple"
   },
   "Disc25mmx6mmTransparentRed": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent, Red",
@@ -33787,7 +34844,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx6mmTransparentRed"
   },
   "Disc25mmx6mmTransparentYellow": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent, Yellow",
@@ -33833,7 +34891,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc25mmx6mmTransparentYellow"
   },
   "Disc30mmx5mmBlue": {
     "DisplayName": "Disc, 30mm x 5mm, Blue",
@@ -33876,7 +34935,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc30mmx5mmBlue"
   },
   "Djin": {
     "DisplayName": "Djin",
@@ -33914,7 +34974,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Djin"
   },
   "Doctor-CharacterMeeple": {
     "DisplayName": "Doctor - Character Meeple",
@@ -33938,7 +34999,8 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2111A80E-8EBC-11E8-AE40-54EA785DA8EE.png",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Doctor-CharacterMeeple"
   },
   "DogAcrylic": {
     "DisplayName": "Dog, Acrylic",
@@ -33966,7 +35028,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DogAcrylic"
   },
   "DogPostApocalypseArmorTB25": {
     "DisplayName": "Dog, Post Apocalypse, Armor, TB25",
@@ -33986,7 +35049,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DogPostApocalypseArmorTB25"
   },
   "DominoesSmall": {
     "DisplayName": "Dominoes, Small",
@@ -34028,7 +35092,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DominoesSmall"
   },
   "DonjonPagodaBlack": {
     "DisplayName": "Donjon Pagoda, Black",
@@ -34048,7 +35113,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DonjonPagodaBlack"
   },
   "DonjonPagodaBlue": {
     "DisplayName": "Donjon Pagoda, Blue",
@@ -34068,7 +35134,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DonjonPagodaBlue"
   },
   "DonjonPagodaGreen": {
     "DisplayName": "Donjon Pagoda, Green",
@@ -34088,7 +35155,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DonjonPagodaGreen"
   },
   "DonjonPagodaOrange": {
     "DisplayName": "Donjon Pagoda, Orange",
@@ -34108,7 +35176,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DonjonPagodaOrange"
   },
   "DonjonPagodaPurple": {
     "DisplayName": "Donjon Pagoda, Purple",
@@ -34128,7 +35197,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DonjonPagodaPurple"
   },
   "DonjonPagodaRed": {
     "DisplayName": "Donjon Pagoda, Red",
@@ -34148,7 +35218,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DonjonPagodaRed"
   },
   "DonjonPagodaWhite": {
     "DisplayName": "Donjon Pagoda, White",
@@ -34168,7 +35239,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DonjonPagodaWhite"
   },
   "DonjonPagodaYellow": {
     "DisplayName": "Donjon Pagoda, Yellow",
@@ -34188,7 +35260,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DonjonPagodaYellow"
   },
   "DonkeyWood": {
     "DisplayName": "Donkey, Wood",
@@ -34214,7 +35287,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DonkeyWood"
   },
   "DoubloonMetalGold": {
     "DisplayName": "Doubloon, Metal, Gold",
@@ -34243,7 +35317,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DoubloonMetalGold"
   },
   "DoubloonMetalSilver": {
     "DisplayName": "Doubloon, Metal, Silver",
@@ -34266,7 +35341,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DoubloonMetalSilver"
   },
   "Doubloons": {
     "DisplayName": "Doubloons",
@@ -34289,7 +35365,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Doubloons"
   },
   "Dove": {
     "DisplayName": "Dove",
@@ -34320,7 +35397,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Dove"
   },
   "DragonFamiliar": {
     "DisplayName": "Dragon Familiar",
@@ -34356,7 +35434,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonFamiliar"
   },
   "DragonBlueDark": {
     "DisplayName": "Dragon, Blue, Dark",
@@ -34383,7 +35462,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonBlueDark"
   },
   "DragonBlueLight": {
     "DisplayName": "Dragon, Blue, Light",
@@ -34410,7 +35490,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonBlueLight"
   },
   "DragonFantasyTB15Black": {
     "DisplayName": "Dragon, Fantasy, TB15, Black",
@@ -34434,7 +35515,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonFantasyTB15Black"
   },
   "DragonFantasyTB15Blue": {
     "DisplayName": "Dragon, Fantasy, TB15, Blue",
@@ -34458,7 +35540,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonFantasyTB15Blue"
   },
   "DragonFantasyTB15Green": {
     "DisplayName": "Dragon, Fantasy, TB15, Green",
@@ -34482,7 +35565,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonFantasyTB15Green"
   },
   "DragonFantasyTB15Orange": {
     "DisplayName": "Dragon, Fantasy, TB15, Orange",
@@ -34506,7 +35590,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonFantasyTB15Orange"
   },
   "DragonFantasyTB15Purple": {
     "DisplayName": "Dragon, Fantasy, TB15, Purple",
@@ -34530,7 +35615,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonFantasyTB15Purple"
   },
   "DragonFantasyTB15Red": {
     "DisplayName": "Dragon, Fantasy, TB15, Red",
@@ -34554,7 +35640,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonFantasyTB15Red"
   },
   "DragonFantasyTB15White": {
     "DisplayName": "Dragon, Fantasy, TB15, White",
@@ -34578,7 +35665,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonFantasyTB15White"
   },
   "DragonFantasyTB15Yellow": {
     "DisplayName": "Dragon, Fantasy, TB15, Yellow",
@@ -34602,7 +35690,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonFantasyTB15Yellow"
   },
   "DragonFantasyTB50": {
     "DisplayName": "Dragon, Fantasy, TB50",
@@ -34619,7 +35708,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonFantasyTB50"
   },
   "DragonOrange": {
     "DisplayName": "Dragon, Orange",
@@ -34646,7 +35736,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonOrange"
   },
   "DragonRed": {
     "DisplayName": "Dragon, Red",
@@ -34673,7 +35764,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonRed"
   },
   "DragonSmallBlue": {
     "DisplayName": "Dragon, Small, Blue",
@@ -34699,7 +35791,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonSmallBlue"
   },
   "DragonSmallGreen": {
     "DisplayName": "Dragon, Small, Green",
@@ -34725,7 +35818,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonSmallGreen"
   },
   "DragonSmallRed": {
     "DisplayName": "Dragon, Small, Red",
@@ -34751,7 +35845,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonSmallRed"
   },
   "DragonSmallYellow": {
     "DisplayName": "Dragon, Small, Yellow",
@@ -34777,7 +35872,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DragonSmallYellow"
   },
   "DriderFantasyTB50": {
     "DisplayName": "Drider, Fantasy, TB50",
@@ -34793,7 +35889,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DriderFantasyTB50"
   },
   "DropBlack": {
     "DisplayName": "Drop, Black",
@@ -34815,7 +35912,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DropBlack"
   },
   "DropBlue": {
     "DisplayName": "Drop, Blue",
@@ -34836,7 +35934,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DropBlue"
   },
   "DropGreen": {
     "DisplayName": "Drop, Green",
@@ -34859,7 +35958,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DropGreen"
   },
   "DropOrange": {
     "DisplayName": "Drop, Orange",
@@ -34886,7 +35986,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DropOrange"
   },
   "DropPurple": {
     "DisplayName": "Drop, Purple",
@@ -34909,7 +36010,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DropPurple"
   },
   "DropRed": {
     "DisplayName": "Drop, Red",
@@ -34933,7 +36035,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DropRed"
   },
   "DropWhite": {
     "DisplayName": "Drop, White",
@@ -34954,7 +36057,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DropWhite"
   },
   "DropYellow": {
     "DisplayName": "Drop, Yellow",
@@ -34975,7 +36079,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DropYellow"
   },
   "DrumstickOrange": {
     "DisplayName": "Drumstick, Orange",
@@ -35001,7 +36106,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DrumstickOrange"
   },
   "DwarfAxeFantasyTB25": {
     "DisplayName": "Dwarf Axe, Fantasy, TB25",
@@ -35024,7 +36130,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DwarfAxeFantasyTB25"
   },
   "DwarfFighter": {
     "DisplayName": "Dwarf Fighter",
@@ -35062,7 +36169,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DwarfFighter"
   },
   "DwarfMinigunFantasyTB25": {
     "DisplayName": "Dwarf Minigun, Fantasy, TB25",
@@ -35083,7 +36191,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DwarfMinigunFantasyTB25"
   },
   "DwarfPaladinFantasyTB25": {
     "DisplayName": "Dwarf Paladin, Fantasy, TB25",
@@ -35104,7 +36213,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DwarfPaladinFantasyTB25"
   },
   "DwarfRiflemanFantasyTB25": {
     "DisplayName": "Dwarf Rifleman, Fantasy, TB25",
@@ -35120,7 +36230,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DwarfRiflemanFantasyTB25"
   },
   "DwarfBlue-CharacterMeeple": {
     "DisplayName": "Dwarf, Blue - Character Meeple",
@@ -35142,7 +36253,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DwarfBlue-CharacterMeeple"
   },
   "DwarfGreen-CharacterMeeple": {
     "DisplayName": "Dwarf, Green - Character Meeple",
@@ -35164,7 +36276,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DwarfGreen-CharacterMeeple"
   },
   "DwarfOrange-CharacterMeeple": {
     "DisplayName": "Dwarf, Orange - Character Meeple",
@@ -35186,7 +36299,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DwarfOrange-CharacterMeeple"
   },
   "DwarfPistolSpaceTB25": {
     "DisplayName": "Dwarf, Pistol, Space, TB25",
@@ -35202,7 +36316,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DwarfPistolSpaceTB25"
   },
   "DwarfPurple-CharacterMeeple": {
     "DisplayName": "Dwarf, Purple - Character Meeple",
@@ -35224,7 +36339,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DwarfPurple-CharacterMeeple"
   },
   "DwarfRed-CharacterMeeple": {
     "DisplayName": "Dwarf, Red - Character Meeple",
@@ -35246,7 +36362,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DwarfRed-CharacterMeeple"
   },
   "DwarfYellow-CharacterMeeple": {
     "DisplayName": "Dwarf, Yellow - Character Meeple",
@@ -35268,7 +36385,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DwarfYellow-CharacterMeeple"
   },
   "DwarvenIronGolem": {
     "DisplayName": "Dwarven Iron Golem",
@@ -35303,7 +36421,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DwarvenIronGolem"
   },
   "Dynamite": {
     "DisplayName": "Dynamite",
@@ -35328,7 +36447,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "red",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Dynamite"
   },
   "EggBlue": {
     "DisplayName": "Egg, Blue",
@@ -35357,7 +36477,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "EggBlue"
   },
   "EggGreen": {
     "DisplayName": "Egg, Green",
@@ -35386,7 +36507,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "EggGreen"
   },
   "EggNatural": {
     "DisplayName": "Egg, Natural",
@@ -35416,7 +36538,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "natural",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "EggNatural"
   },
   "EggPurple": {
     "DisplayName": "Egg, Purple",
@@ -35445,7 +36568,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "EggPurple"
   },
   "EggRose": {
     "DisplayName": "Egg, Rose",
@@ -35475,7 +36599,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "EggRose"
   },
   "EggWhite": {
     "DisplayName": "Egg, White",
@@ -35504,7 +36629,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "EggWhite"
   },
   "ElectricitySymbolGreen": {
     "DisplayName": "Electricity Symbol, Green",
@@ -35541,7 +36667,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "green",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "ElectricitySymbolGreen"
   },
   "ElephantwithRiderGreen": {
     "DisplayName": "Elephant with Rider, Green",
@@ -35567,7 +36694,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "ivory",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ElephantwithRiderGreen"
   },
   "ElephantwithRiderGray": {
     "DisplayName": "Elephant with Rider, Gray",
@@ -35593,7 +36721,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "ivory",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ElephantwithRiderGray"
   },
   "ElephantwithRiderOrange": {
     "DisplayName": "Elephant with Rider, Orange",
@@ -35619,7 +36748,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "ivory",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ElephantwithRiderOrange"
   },
   "ElephantwithRiderPurple": {
     "DisplayName": "Elephant with Rider, Purple",
@@ -35645,7 +36775,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "ivory",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ElephantwithRiderPurple"
   },
   "ElephantwithRiderRed": {
     "DisplayName": "Elephant with Rider, Red",
@@ -35671,7 +36802,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "ivory",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ElephantwithRiderRed"
   },
   "ElephantwithRiderYellow": {
     "DisplayName": "Elephant with Rider, Yellow",
@@ -35697,7 +36829,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "ivory",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ElephantwithRiderYellow"
   },
   "Elf-CharacterMeeple": {
     "DisplayName": "Elf - Character Meeple",
@@ -35723,7 +36856,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Elf-CharacterMeeple"
   },
   "ElfArcher2FantasyTB25": {
     "DisplayName": "Elf Archer 2, Fantasy, TB25",
@@ -35745,7 +36879,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ElfArcher2FantasyTB25"
   },
   "ElfArcherFantasyTB25": {
     "DisplayName": "Elf Archer, Fantasy, TB25",
@@ -35767,7 +36902,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ElfArcherFantasyTB25"
   },
   "EmptyBottle": {
     "DisplayName": "Empty Bottle",
@@ -35794,7 +36930,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "EmptyBottle"
   },
   "EmptyVial": {
     "DisplayName": "Empty Vial",
@@ -35819,7 +36956,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "EmptyVial"
   },
   "EnchanterwithStaff": {
     "DisplayName": "Enchanter with Staff",
@@ -35849,7 +36987,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "EnchanterwithStaff"
   },
   "EuroPokerTin": {
     "DisplayName": "Euro Poker Tin",
@@ -35867,7 +37006,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "EuroPokerTin"
   },
   "EvilLordwithMace": {
     "DisplayName": "Evil Lord with Mace",
@@ -35901,7 +37041,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "EvilLordwithMace"
   },
   "ExclamationMark": {
     "DisplayName": "Exclamation Mark",
@@ -35936,7 +37077,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ExclamationMark"
   },
   "ExplorerSetof3(AssortedColors)": {
     "DisplayName": "Explorer, Set of 3 (Assorted Colors)",
@@ -35982,7 +37124,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "ExplorerSetof3(AssortedColors)"
   },
   "FailFasterPlaytestingJournal": {
     "DisplayName": "Fail Faster Playtesting Journal",
@@ -36009,7 +37152,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "FailFasterPlaytestingJournal"
   },
   "Fang": {
     "DisplayName": "Fang",
@@ -36024,7 +37168,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Fang"
   },
   "FantasyCoin20": {
     "DisplayName": "Fantasy Coin 20",
@@ -36071,7 +37216,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FantasyCoin20"
   },
   "FantasyCoin5": {
     "DisplayName": "Fantasy Coin 5",
@@ -36119,7 +37265,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FantasyCoin5"
   },
   "FarmerFemaleBlue-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Blue - Character Meeple",
@@ -36159,7 +37306,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FarmerFemaleBlue-CharacterMeeple"
   },
   "FarmerFemaleGreen-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Green - Character Meeple",
@@ -36199,7 +37347,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FarmerFemaleGreen-CharacterMeeple"
   },
   "FarmerFemaleOrange-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Orange - Character Meeple",
@@ -36239,7 +37388,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FarmerFemaleOrange-CharacterMeeple"
   },
   "FarmerFemalePurple-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Purple - Character Meeple",
@@ -36279,7 +37429,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FarmerFemalePurple-CharacterMeeple"
   },
   "FarmerFemaleRed-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Red - Character Meeple",
@@ -36319,7 +37470,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FarmerFemaleRed-CharacterMeeple"
   },
   "FarmerFemaleYellow-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Yellow - Character Meeple",
@@ -36359,7 +37511,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FarmerFemaleYellow-CharacterMeeple"
   },
   "FarmerMaleBlue-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Blue - Character Meeple",
@@ -36399,7 +37552,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FarmerMaleBlue-CharacterMeeple"
   },
   "FarmerMaleGreen-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Green - Character Meeple",
@@ -36439,7 +37593,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FarmerMaleGreen-CharacterMeeple"
   },
   "FarmerMaleOrange-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Orange - Character Meeple",
@@ -36479,7 +37634,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FarmerMaleOrange-CharacterMeeple"
   },
   "FarmerMalePurple-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Purple - Character Meeple",
@@ -36519,7 +37675,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FarmerMalePurple-CharacterMeeple"
   },
   "FarmerMaleRed-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Red - Character Meeple",
@@ -36559,7 +37716,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FarmerMaleRed-CharacterMeeple"
   },
   "FarmerMaleYellow-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Yellow - Character Meeple",
@@ -36599,7 +37757,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FarmerMaleYellow-CharacterMeeple"
   },
   "FedoraPersonBlackDark": {
     "DisplayName": "Fedora Person, Black, Dark",
@@ -36629,7 +37788,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FedoraPersonBlackDark"
   },
   "FedoraPersonBlackLight": {
     "DisplayName": "Fedora Person, Black, Light",
@@ -36659,7 +37819,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FedoraPersonBlackLight"
   },
   "FedoraPersonBlackMedium": {
     "DisplayName": "Fedora Person, Black, Medium",
@@ -36689,7 +37850,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FedoraPersonBlackMedium"
   },
   "FedoraPersonBlueDark": {
     "DisplayName": "Fedora Person, Blue, Dark",
@@ -36719,7 +37881,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FedoraPersonBlueDark"
   },
   "FedoraPersonBlueLight": {
     "DisplayName": "Fedora Person, Blue, Light",
@@ -36749,7 +37912,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FedoraPersonBlueLight"
   },
   "FedoraPersonBlueMedium": {
     "DisplayName": "Fedora Person, Blue, Medium",
@@ -36779,7 +37943,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FedoraPersonBlueMedium"
   },
   "FedoraPersonRedDark": {
     "DisplayName": "Fedora Person, Red, Dark",
@@ -36809,7 +37974,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FedoraPersonRedDark"
   },
   "FedoraPersonRedLight": {
     "DisplayName": "Fedora Person, Red, Light",
@@ -36839,7 +38005,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FedoraPersonRedLight"
   },
   "FedoraPersonRedMedium": {
     "DisplayName": "Fedora Person, Red, Medium",
@@ -36869,7 +38036,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FedoraPersonRedMedium"
   },
   "FedoraPersonWhiteDark": {
     "DisplayName": "Fedora Person, White, Dark",
@@ -36899,7 +38067,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FedoraPersonWhiteDark"
   },
   "FedoraPersonWhiteLight": {
     "DisplayName": "Fedora Person, White, Light",
@@ -36929,7 +38098,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FedoraPersonWhiteLight"
   },
   "FedoraPersonWhiteMedium": {
     "DisplayName": "Fedora Person, White, Medium",
@@ -36959,7 +38129,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FedoraPersonWhiteMedium"
   },
   "FedoraPersonYellowDark": {
     "DisplayName": "Fedora Person, Yellow, Dark",
@@ -36989,7 +38160,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FedoraPersonYellowDark"
   },
   "FedoraPersonYellowLight": {
     "DisplayName": "Fedora Person, Yellow, Light",
@@ -37019,7 +38191,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FedoraPersonYellowLight"
   },
   "FedoraPersonYellowMedium": {
     "DisplayName": "Fedora Person, Yellow, Medium",
@@ -37049,7 +38222,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FedoraPersonYellowMedium"
   },
   "FedoraWearerBlack": {
     "DisplayName": "Fedora Wearer, Black",
@@ -37079,7 +38253,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FedoraWearerBlack"
   },
   "FemaleAssassinFantasyTB25": {
     "DisplayName": "Female Assassin, Fantasy, TB25",
@@ -37100,7 +38275,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FemaleAssassinFantasyTB25"
   },
   "FemaleBeastMasterWarriorwithSwordandSpear": {
     "DisplayName": "Female Beast Master Warrior with Sword and Spear",
@@ -37131,7 +38307,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FemaleBeastMasterWarriorwithSwordandSpear"
   },
   "FemaleElfArcherFantasyTB25": {
     "DisplayName": "Female Elf Archer, Fantasy, TB25",
@@ -37147,7 +38324,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FemaleElfArcherFantasyTB25"
   },
   "FemaleElfMageFantasyTB25": {
     "DisplayName": "Female Elf Mage, Fantasy, TB25",
@@ -37169,7 +38347,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FemaleElfMageFantasyTB25"
   },
   "FemaleFarmerGreen": {
     "DisplayName": "Female Farmer, Green",
@@ -37209,7 +38388,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FemaleFarmerGreen"
   },
   "FemaleFarmerOrange": {
     "DisplayName": "Female Farmer, Orange",
@@ -37248,7 +38428,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "FemaleFarmerOrange"
   },
   "FemaleFarmerPurple": {
     "DisplayName": "Female Farmer, Purple",
@@ -37288,7 +38469,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FemaleFarmerPurple"
   },
   "FemaleFarmerWhite": {
     "DisplayName": "Female Farmer, White",
@@ -37327,7 +38509,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "FemaleFarmerWhite"
   },
   "FemaleFarmerYellow": {
     "DisplayName": "Female Farmer, Yellow",
@@ -37367,7 +38550,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FemaleFarmerYellow"
   },
   "FemaleGunslingerGray": {
     "DisplayName": "Female Gunslinger, Gray",
@@ -37401,7 +38585,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FemaleGunslingerGray"
   },
   "FenceWicker": {
     "DisplayName": "Fence, Wicker",
@@ -37418,7 +38603,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FenceWicker"
   },
   "FighterShipSetof6": {
     "DisplayName": "Fighter Ship, Set of 6",
@@ -37447,7 +38633,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "FighterShipSetof6"
   },
   "FighterwithGreatSword": {
     "DisplayName": "Fighter with Great Sword",
@@ -37477,7 +38664,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FighterwithGreatSword"
   },
   "FigureWoodGreen": {
     "DisplayName": "Figure, Wood, Green",
@@ -37504,7 +38692,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FigureWoodGreen"
   },
   "FigureWoodWhite": {
     "DisplayName": "Figure, Wood, White",
@@ -37531,7 +38720,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FigureWoodWhite"
   },
   "FiguresMissionarySetof5": {
     "DisplayName": "Figures, Missionary, Set of 5",
@@ -37568,7 +38758,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "FiguresMissionarySetof5"
   },
   "FiguresSci-FiSetof10": {
     "DisplayName": "Figures, Sci-Fi, Set of 10",
@@ -37597,7 +38788,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "FiguresSci-FiSetof10"
   },
   "FiguresSoldierSetof5": {
     "DisplayName": "Figures, Soldier, Set of 5",
@@ -37626,7 +38818,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "FiguresSoldierSetof5"
   },
   "FiguresSteampunkSetof14": {
     "DisplayName": "Figures, Steampunk, Set of 14",
@@ -37648,7 +38841,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "FiguresSteampunkSetof14"
   },
   "FillableVial": {
     "DisplayName": "Fillable Vial",
@@ -37674,7 +38868,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FillableVial"
   },
   "FireAxe": {
     "DisplayName": "Fire Axe",
@@ -37705,7 +38900,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FireAxe"
   },
   "FireElemental": {
     "DisplayName": "Fire Elemental",
@@ -37740,7 +38936,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FireElemental"
   },
   "FireElemental-CharacterMeeple": {
     "DisplayName": "Fire Elemental - Character Meeple",
@@ -37764,7 +38961,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FireElemental-CharacterMeeple"
   },
   "FireTB25": {
     "DisplayName": "Fire, TB25",
@@ -37780,7 +38978,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FireTB25"
   },
   "Firefighter-CharacterMeeple": {
     "DisplayName": "Firefighter - Character Meeple",
@@ -37804,7 +39003,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Firefighter-CharacterMeeple"
   },
   "FishWoodYellow": {
     "DisplayName": "Fish, Wood, Yellow",
@@ -37841,7 +39041,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "salmon",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FishWoodYellow"
   },
   "Fist": {
     "DisplayName": "Fist",
@@ -37869,7 +39070,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Fist"
   },
   "FlagBlack": {
     "DisplayName": "Flag, Black",
@@ -37900,7 +39102,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlagBlack"
   },
   "FlagBlue": {
     "DisplayName": "Flag, Blue",
@@ -37931,7 +39134,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlagBlue"
   },
   "FlagGreen": {
     "DisplayName": "Flag, Green",
@@ -37962,7 +39166,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlagGreen"
   },
   "FlagOrange": {
     "DisplayName": "Flag, Orange",
@@ -37993,7 +39198,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlagOrange"
   },
   "FlagPurple": {
     "DisplayName": "Flag, Purple",
@@ -38024,7 +39230,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlagPurple"
   },
   "FlagRed": {
     "DisplayName": "Flag, Red",
@@ -38055,7 +39262,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlagRed"
   },
   "FlagWhite": {
     "DisplayName": "Flag, White",
@@ -38086,7 +39294,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlagWhite"
   },
   "FlagYellow": {
     "DisplayName": "Flag, Yellow",
@@ -38117,7 +39326,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlagYellow"
   },
   "FlameBaseLogs": {
     "DisplayName": "Flame Base, Logs",
@@ -38141,7 +39351,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlameBaseLogs"
   },
   "FlameBaseSmoke": {
     "DisplayName": "Flame Base, Smoke",
@@ -38165,7 +39376,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlameBaseSmoke"
   },
   "FlameFree-Standing": {
     "DisplayName": "Flame, Free-Standing",
@@ -38189,7 +39401,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlameFree-Standing"
   },
   "FlatCapBlackBronze": {
     "DisplayName": "Flat Cap, Black, Bronze",
@@ -38219,7 +39432,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatCapBlackBronze"
   },
   "FlatCapBlackGreen": {
     "DisplayName": "Flat Cap, Black, Green",
@@ -38250,7 +39464,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatCapBlackGreen"
   },
   "FlatCapBlackPurple": {
     "DisplayName": "Flat Cap, Black, Purple",
@@ -38281,7 +39496,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatCapBlackPurple"
   },
   "FlatCapBlueBronze": {
     "DisplayName": "Flat Cap, Blue, Bronze",
@@ -38311,7 +39527,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatCapBlueBronze"
   },
   "FlatCapBlueGreen": {
     "DisplayName": "Flat Cap, Blue, Green",
@@ -38341,7 +39558,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatCapBlueGreen"
   },
   "FlatCapBluePurple": {
     "DisplayName": "Flat Cap, Blue, Purple",
@@ -38371,7 +39589,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatCapBluePurple"
   },
   "FlatCapRedBronze": {
     "DisplayName": "Flat Cap, Red, Bronze",
@@ -38401,7 +39620,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatCapRedBronze"
   },
   "FlatCapRedGreen": {
     "DisplayName": "Flat Cap, Red, Green",
@@ -38431,7 +39651,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatCapRedGreen"
   },
   "FlatCapRedPurple": {
     "DisplayName": "Flat Cap, Red, Purple",
@@ -38461,7 +39682,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatCapRedPurple"
   },
   "FlatCapWhiteBronze": {
     "DisplayName": "Flat Cap, White, Bronze",
@@ -38491,7 +39713,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatCapWhiteBronze"
   },
   "FlatCapWhiteGreen": {
     "DisplayName": "Flat Cap, White, Green",
@@ -38522,7 +39745,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatCapWhiteGreen"
   },
   "FlatCapWhitePurple": {
     "DisplayName": "Flat Cap, White, Purple",
@@ -38553,7 +39777,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatCapWhitePurple"
   },
   "FlatCapYellowBronze": {
     "DisplayName": "Flat Cap, Yellow, Bronze",
@@ -38583,7 +39808,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatCapYellowBronze"
   },
   "FlatCapYellowGreen": {
     "DisplayName": "Flat Cap, Yellow, Green",
@@ -38614,7 +39840,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatCapYellowGreen"
   },
   "FlatCapYellowPurple": {
     "DisplayName": "Flat Cap, Yellow, Purple",
@@ -38644,7 +39871,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatCapYellowPurple"
   },
   "FlatStarBlack": {
     "DisplayName": "Flat Star, Black",
@@ -38677,7 +39905,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatStarBlack"
   },
   "FlatStarBlue": {
     "DisplayName": "Flat Star, Blue",
@@ -38710,7 +39939,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatStarBlue"
   },
   "FlatStarGreen": {
     "DisplayName": "Flat Star, Green",
@@ -38743,7 +39973,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatStarGreen"
   },
   "FlatStarOrange": {
     "DisplayName": "Flat Star, Orange",
@@ -38776,7 +40007,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatStarOrange"
   },
   "FlatStarPurple": {
     "DisplayName": "Flat Star, Purple",
@@ -38809,7 +40041,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatStarPurple"
   },
   "FlatStarRed": {
     "DisplayName": "Flat Star, Red",
@@ -38842,7 +40075,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatStarRed"
   },
   "FlatStarWhite": {
     "DisplayName": "Flat Star, White",
@@ -38875,7 +40109,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatStarWhite"
   },
   "FlatStarYellow": {
     "DisplayName": "Flat Star, Yellow",
@@ -38908,7 +40143,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FlatStarYellow"
   },
   "FlatbedTruckWoodBlack": {
     "DisplayName": "Flatbed Truck, Wood, Black",
@@ -38943,7 +40179,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "black",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "FlatbedTruckWoodBlack"
   },
   "FluteGirlFantasyTB25": {
     "DisplayName": "Flute Girl, Fantasy, TB25",
@@ -38965,7 +40202,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FluteGirlFantasyTB25"
   },
   "FootBrown": {
     "DisplayName": "Foot, Brown",
@@ -38994,7 +40232,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FootBrown"
   },
   "FootmanBlue": {
     "DisplayName": "Footman, Blue",
@@ -39021,7 +40260,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FootmanBlue"
   },
   "FootmanGreen": {
     "DisplayName": "Footman, Green",
@@ -39048,7 +40288,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FootmanGreen"
   },
   "FootmanRed": {
     "DisplayName": "Footman, Red",
@@ -39075,7 +40316,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FootmanRed"
   },
   "FootmanYellow": {
     "DisplayName": "Footman, Yellow",
@@ -39102,7 +40344,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FootmanYellow"
   },
   "FourArmedTitanofTerrorw/WeaponSprue": {
     "DisplayName": "Four Armed Titan of Terror w/ Weapon Sprue",
@@ -39134,7 +40377,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "FourArmedTitanofTerrorw/WeaponSprue"
   },
   "FragGrenade": {
     "DisplayName": "Frag Grenade",
@@ -39159,7 +40403,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FragGrenade"
   },
   "FrogRiderBlue": {
     "DisplayName": "Frog Rider, Blue",
@@ -39192,7 +40437,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FrogRiderBlue"
   },
   "FrogRiderBrown": {
     "DisplayName": "Frog Rider, Brown",
@@ -39225,7 +40471,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FrogRiderBrown"
   },
   "FrogRiderGreen": {
     "DisplayName": "Frog Rider, Green",
@@ -39258,7 +40505,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FrogRiderGreen"
   },
   "FrogRiderRed": {
     "DisplayName": "Frog Rider, Red",
@@ -39291,7 +40539,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FrogRiderRed"
   },
   "FrogRiderYellow": {
     "DisplayName": "Frog Rider, Yellow",
@@ -39324,7 +40573,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FrogRiderYellow"
   },
   "FrogfolkSpearFantasyTB25": {
     "DisplayName": "Frogfolk, Spear, Fantasy, TB25",
@@ -39341,7 +40591,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FrogfolkSpearFantasyTB25"
   },
   "FutureCoin1": {
     "DisplayName": "Future Coin, 1",
@@ -39389,7 +40640,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureCoin1"
   },
   "FutureCoin5": {
     "DisplayName": "Future Coin, 5",
@@ -39437,7 +40689,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureCoin5"
   },
   "FutureCubeOrange": {
     "DisplayName": "Future Cube, Orange",
@@ -39481,7 +40734,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureCubeOrange"
   },
   "FutureCubePurple": {
     "DisplayName": "Future Cube, Purple",
@@ -39525,7 +40779,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureCubePurple"
   },
   "FutureCubeRed": {
     "DisplayName": "Future Cube, Red",
@@ -39569,7 +40824,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureCubeRed"
   },
   "FutureCubeYellow": {
     "DisplayName": "Future Cube, Yellow",
@@ -39613,7 +40869,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureCubeYellow"
   },
   "FutureDomeBlue": {
     "DisplayName": "Future Dome, Blue",
@@ -39637,7 +40894,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureDomeBlue"
   },
   "FutureDomeGreen": {
     "DisplayName": "Future Dome, Green",
@@ -39661,7 +40919,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureDomeGreen"
   },
   "FutureDomeOrange": {
     "DisplayName": "Future Dome, Orange",
@@ -39685,7 +40944,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureDomeOrange"
   },
   "FutureDomePurple": {
     "DisplayName": "Future Dome, Purple",
@@ -39709,7 +40969,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureDomePurple"
   },
   "FutureDomeRed": {
     "DisplayName": "Future Dome, Red",
@@ -39733,7 +40994,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureDomeRed"
   },
   "FutureDomeYellow": {
     "DisplayName": "Future Dome, Yellow",
@@ -39757,7 +41019,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureDomeYellow"
   },
   "FuturePersonOrange": {
     "DisplayName": "Future Person, Orange",
@@ -39786,7 +41049,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FuturePersonOrange"
   },
   "FuturePersonPurple": {
     "DisplayName": "Future Person, Purple",
@@ -39815,7 +41079,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FuturePersonPurple"
   },
   "FuturePersonYellow": {
     "DisplayName": "Future Person, Yellow",
@@ -39844,7 +41109,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FuturePersonYellow"
   },
   "FuturePyramidGreen": {
     "DisplayName": "Future Pyramid, Green",
@@ -39875,7 +41141,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FuturePyramidGreen"
   },
   "FuturePyramidOrange": {
     "DisplayName": "Future Pyramid, Orange",
@@ -39906,7 +41173,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FuturePyramidOrange"
   },
   "FuturePyramidPurple": {
     "DisplayName": "Future Pyramid, Purple",
@@ -39937,7 +41205,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FuturePyramidPurple"
   },
   "FuturePyramidRed": {
     "DisplayName": "Future Pyramid, Red",
@@ -39968,7 +41237,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FuturePyramidRed"
   },
   "FuturePyramidYellow": {
     "DisplayName": "Future Pyramid, Yellow",
@@ -39999,7 +41269,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FuturePyramidYellow"
   },
   "FutureSoldierTB15Black": {
     "DisplayName": "Future Soldier, TB15, Black",
@@ -40021,7 +41292,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureSoldierTB15Black"
   },
   "FutureSoldierTB15Blue": {
     "DisplayName": "Future Soldier, TB15, Blue",
@@ -40043,7 +41315,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureSoldierTB15Blue"
   },
   "FutureSoldierTB15Green": {
     "DisplayName": "Future Soldier, TB15, Green",
@@ -40065,7 +41338,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureSoldierTB15Green"
   },
   "FutureSoldierTB15Orange": {
     "DisplayName": "Future Soldier, TB15, Orange",
@@ -40087,7 +41361,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureSoldierTB15Orange"
   },
   "FutureSoldierTB15Purple": {
     "DisplayName": "Future Soldier, TB15, Purple",
@@ -40109,7 +41384,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureSoldierTB15Purple"
   },
   "FutureSoldierTB15Red": {
     "DisplayName": "Future Soldier, TB15, Red",
@@ -40131,7 +41407,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureSoldierTB15Red"
   },
   "FutureSoldierTB15White": {
     "DisplayName": "Future Soldier, TB15, White",
@@ -40153,7 +41430,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureSoldierTB15White"
   },
   "FutureSoldierTB15Yellow": {
     "DisplayName": "Future Soldier, TB15, Yellow",
@@ -40175,7 +41453,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureSoldierTB15Yellow"
   },
   "FutureTankBlack": {
     "DisplayName": "Future Tank, Black",
@@ -40197,7 +41476,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureTankBlack"
   },
   "FutureTankBlue": {
     "DisplayName": "Future Tank, Blue",
@@ -40219,7 +41499,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureTankBlue"
   },
   "FutureTankGreen": {
     "DisplayName": "Future Tank, Green",
@@ -40241,7 +41522,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureTankGreen"
   },
   "FutureTankOrange": {
     "DisplayName": "Future Tank, Orange",
@@ -40263,7 +41545,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureTankOrange"
   },
   "FutureTankPurple": {
     "DisplayName": "Future Tank, Purple",
@@ -40285,7 +41568,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureTankPurple"
   },
   "FutureTankRed": {
     "DisplayName": "Future Tank, Red",
@@ -40307,7 +41591,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureTankRed"
   },
   "FutureTankWhite": {
     "DisplayName": "Future Tank, White",
@@ -40329,7 +41614,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureTankWhite"
   },
   "FutureTankYellow": {
     "DisplayName": "Future Tank, Yellow",
@@ -40351,7 +41637,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureTankYellow"
   },
   "GalleyLongshipGreen": {
     "DisplayName": "Galley Longship, Green",
@@ -40377,7 +41664,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "green",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "GalleyLongshipGreen"
   },
   "GameDesigner’sRuler": {
     "DisplayName": "Game Designer’s Ruler",
@@ -40441,7 +41729,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "GameDesigner’sRuler"
   },
   "GameMaster'sScreen": {
     "DisplayName": "Game Master's Screen",
@@ -40466,7 +41755,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "GameMaster'sScreen"
   },
   "GameStandBlack": {
     "DisplayName": "Game Stand, Black",
@@ -40491,7 +41781,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GameStandBlack"
   },
   "GameStandBlue": {
     "DisplayName": "Game Stand, Blue",
@@ -40516,7 +41807,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GameStandBlue"
   },
   "GameStandGreen": {
     "DisplayName": "Game Stand, Green",
@@ -40541,7 +41833,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GameStandGreen"
   },
   "GameStandOrange": {
     "DisplayName": "Game Stand, Orange",
@@ -40566,7 +41859,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GameStandOrange"
   },
   "GameStandPurple": {
     "DisplayName": "Game Stand, Purple",
@@ -40591,7 +41885,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GameStandPurple"
   },
   "GameStandRed": {
     "DisplayName": "Game Stand, Red",
@@ -40616,7 +41911,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GameStandRed"
   },
   "GameStandWhite": {
     "DisplayName": "Game Stand, White",
@@ -40641,7 +41937,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GameStandWhite"
   },
   "GameStandYellow": {
     "DisplayName": "Game Stand, Yellow",
@@ -40666,7 +41963,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GameStandYellow"
   },
   "GangsterBlue": {
     "DisplayName": "Gangster, Blue",
@@ -40698,7 +41996,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GangsterBlue"
   },
   "GangsterGreen": {
     "DisplayName": "Gangster, Green",
@@ -40730,7 +42029,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GangsterGreen"
   },
   "GangsterOrange": {
     "DisplayName": "Gangster, Orange",
@@ -40762,7 +42062,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GangsterOrange"
   },
   "GangsterYellow": {
     "DisplayName": "Gangster, Yellow",
@@ -40794,7 +42095,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GangsterYellow"
   },
   "Gavel": {
     "DisplayName": "Gavel",
@@ -40815,7 +42117,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Gavel"
   },
   "Gear": {
     "DisplayName": "Gear",
@@ -40852,7 +42155,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Gear"
   },
   "GearBronze": {
     "DisplayName": "Gear, Bronze",
@@ -40892,7 +42196,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GearBronze"
   },
   "GearGold": {
     "DisplayName": "Gear, Gold",
@@ -40932,7 +42237,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GearGold"
   },
   "GearSilver": {
     "DisplayName": "Gear, Silver",
@@ -40972,7 +42278,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GearSilver"
   },
   "Geisha-CharacterMeeple": {
     "DisplayName": "Geisha - Character Meeple",
@@ -41005,7 +42312,8 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/14B4861E-8EBF-11E8-8D59-FD9EB70C97C7.png",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Geisha-CharacterMeeple"
   },
   "GelatinousCube": {
     "DisplayName": "Gelatinous Monster",
@@ -41025,7 +42333,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GelatinousCube"
   },
   "GemBlack": {
     "DisplayName": "Gem, Black",
@@ -41092,7 +42401,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GemBlack"
   },
   "GemBlue": {
     "DisplayName": "Gem, Blue",
@@ -41158,7 +42468,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "GemBlue"
   },
   "GemClear": {
     "DisplayName": "Gem, Clear",
@@ -41225,7 +42536,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GemClear"
   },
   "GemGreen": {
     "DisplayName": "Gem, Green",
@@ -41292,7 +42604,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GemGreen"
   },
   "GemLightGreen": {
     "DisplayName": "Gem, Light Green",
@@ -41359,7 +42672,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GemLightGreen"
   },
   "GemOrange": {
     "DisplayName": "Gem, Orange",
@@ -41425,7 +42739,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "GemOrange"
   },
   "GemPurple": {
     "DisplayName": "Gem, Purple",
@@ -41492,7 +42807,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GemPurple"
   },
   "GemRed": {
     "DisplayName": "Gem, Red",
@@ -41558,7 +42874,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "GemRed"
   },
   "GemWhite": {
     "DisplayName": "Gem, White",
@@ -41625,7 +42942,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GemWhite"
   },
   "GemYellow": {
     "DisplayName": "Gem, Yellow",
@@ -41692,7 +43010,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GemYellow"
   },
   "GentlemanGold": {
     "DisplayName": "Gentleman, Gold",
@@ -41729,7 +43048,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GentlemanGold"
   },
   "GhostBunnyFantasyTB25": {
     "DisplayName": "Ghost Bunny, Fantasy, TB25",
@@ -41746,7 +43066,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GhostBunnyFantasyTB25"
   },
   "GhostIVHooded": {
     "DisplayName": "Ghost IV Hooded",
@@ -41795,7 +43116,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GhostIVHooded"
   },
   "GhostFantasyTB25": {
     "DisplayName": "Ghost, Fantasy, TB25",
@@ -41814,7 +43136,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GhostFantasyTB25"
   },
   "GhostWhite": {
     "DisplayName": "Ghost, White",
@@ -41853,7 +43176,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GhostWhite"
   },
   "Ghoul2FantasyTB25": {
     "DisplayName": "Ghoul 2, Fantasy, TB25",
@@ -41878,7 +43202,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Ghoul2FantasyTB25"
   },
   "GhoulFantasyTB25": {
     "DisplayName": "Ghoul, Fantasy, TB25",
@@ -41903,7 +43228,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GhoulFantasyTB25"
   },
   "GiantRat1FantasyTB25": {
     "DisplayName": "Giant Rat 1, Fantasy, TB25",
@@ -41919,7 +43245,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GiantRat1FantasyTB25"
   },
   "GiantRat2FantasyTB25": {
     "DisplayName": "Giant Rat 2, Fantasy, TB25",
@@ -41935,7 +43262,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GiantRat2FantasyTB25"
   },
   "GiftCertificate$25": {
     "DisplayName": "Gift Certificate $25",
@@ -41953,7 +43281,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "GiftCertificate$25"
   },
   "GiftCertificate$5": {
     "DisplayName": "Gift Certificate $5",
@@ -41971,7 +43300,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "GiftCertificate$5"
   },
   "GlueDotsSheet": {
     "DisplayName": "Glue Dots Sheet",
@@ -41985,7 +43315,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "GlueDotsSheet"
   },
   "GnollArcherFantasyTB25": {
     "DisplayName": "Gnoll Archer, Fantasy, TB25",
@@ -42007,7 +43338,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GnollArcherFantasyTB25"
   },
   "GnollAxeFantasyTB25": {
     "DisplayName": "Gnoll, Axe, Fantasy, TB25",
@@ -42025,7 +43357,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GnollAxeFantasyTB25"
   },
   "GnollFlailFantasyTB25": {
     "DisplayName": "Gnoll, Flail, Fantasy, TB25",
@@ -42041,7 +43374,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GnollFlailFantasyTB25"
   },
   "GnomeBlue": {
     "DisplayName": "Gnome, Blue",
@@ -42071,7 +43405,8 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/69990D90-9C84-11E7-A769-90F471BAD30D.png",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GnomeBlue"
   },
   "GnomeCrossbowFantasyTB25": {
     "DisplayName": "Gnome, Crossbow, Fantasy, TB25",
@@ -42087,7 +43422,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GnomeCrossbowFantasyTB25"
   },
   "GnomeSwordFantasyTB25": {
     "DisplayName": "Gnome, Sword, Fantasy, TB25",
@@ -42103,7 +43439,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GnomeSwordFantasyTB25"
   },
   "GnomeTB15Black": {
     "DisplayName": "Gnome, TB15, Black",
@@ -42124,7 +43461,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GnomeTB15Black"
   },
   "GnomeTB15Blue": {
     "DisplayName": "Gnome, TB15, Blue",
@@ -42145,7 +43483,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GnomeTB15Blue"
   },
   "GnomeTB15Green": {
     "DisplayName": "Gnome, TB15, Green",
@@ -42166,7 +43505,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GnomeTB15Green"
   },
   "GnomeTB15Orange": {
     "DisplayName": "Gnome, TB15, Orange",
@@ -42187,7 +43527,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GnomeTB15Orange"
   },
   "GnomeTB15Purple": {
     "DisplayName": "Gnome, TB15, Purple",
@@ -42208,7 +43549,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GnomeTB15Purple"
   },
   "GnomeTB15Red": {
     "DisplayName": "Gnome, TB15, Red",
@@ -42229,7 +43571,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GnomeTB15Red"
   },
   "GnomeTB15White": {
     "DisplayName": "Gnome, TB15, White",
@@ -42250,7 +43593,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GnomeTB15White"
   },
   "GnomeTB15Yellow": {
     "DisplayName": "Gnome, TB15, Yellow",
@@ -42271,7 +43615,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GnomeTB15Yellow"
   },
   "GnometteHammerFantasyTB25": {
     "DisplayName": "Gnomette, Hammer, Fantasy, TB25",
@@ -42287,7 +43632,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GnometteHammerFantasyTB25"
   },
   "GnometteMageFantasyTB25": {
     "DisplayName": "Gnomette, Mage, Fantasy, TB25",
@@ -42303,7 +43649,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GnometteMageFantasyTB25"
   },
   "GoatAcrylic": {
     "DisplayName": "Goat, Acrylic",
@@ -42319,7 +43666,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GoatAcrylic"
   },
   "GoatRandom": {
     "DisplayName": "Goat, Random",
@@ -42348,7 +43696,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GoatRandom"
   },
   "GoatmanChampion": {
     "DisplayName": "Goatman Champion",
@@ -42380,7 +43729,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GoatmanChampion"
   },
   "GoatmanwithBow": {
     "DisplayName": "Goatman with Bow",
@@ -42413,7 +43763,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GoatmanwithBow"
   },
   "GoatmanWithSpear&Shield": {
     "DisplayName": "Goatman With Spear & Shield",
@@ -42445,7 +43796,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GoatmanWithSpear&Shield"
   },
   "GoatmanwithSwordandShield": {
     "DisplayName": "Goatman with Sword and Shield",
@@ -42477,7 +43829,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GoatmanwithSwordandShield"
   },
   "GoblinArcherDrawBaldFantasyTB25": {
     "DisplayName": "Goblin Archer Draw Bald, Fantasy, TB25",
@@ -42499,7 +43852,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GoblinArcherDrawBaldFantasyTB25"
   },
   "GoblinArcherDrawFantasyTB25": {
     "DisplayName": "Goblin Archer, Draw, Fantasy, TB25",
@@ -42520,7 +43874,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GoblinArcherDrawFantasyTB25"
   },
   "GoblinChieftainFantasyTB25": {
     "DisplayName": "Goblin Chieftain, Fantasy, TB25",
@@ -42545,7 +43900,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GoblinChieftainFantasyTB25"
   },
   "GoblinSling1FantasyTB25": {
     "DisplayName": "Goblin Sling 1, Fantasy, TB25",
@@ -42565,7 +43921,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GoblinSling1FantasyTB25"
   },
   "GoblinWarlockFantasyTB25Yellow": {
     "DisplayName": "Goblin Warlock, Fantasy, TB25, Yellow",
@@ -42586,7 +43943,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GoblinWarlockFantasyTB25Yellow"
   },
   "GoblinDefensiveFantasyTB25": {
     "DisplayName": "Goblin, Defensive, Fantasy, TB25",
@@ -42606,7 +43964,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GoblinDefensiveFantasyTB25"
   },
   "GoblinJesterFantasyTB25": {
     "DisplayName": "Goblin, Jester, Fantasy, TB25",
@@ -42623,7 +43982,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GoblinJesterFantasyTB25"
   },
   "GoblinOffensiveFantasyTB25": {
     "DisplayName": "Goblin, Offensive, Fantasy, TB25",
@@ -42639,7 +43999,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GoblinOffensiveFantasyTB25"
   },
   "Gorilla": {
     "DisplayName": "Gorilla",
@@ -42667,7 +44028,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Gorilla"
   },
   "GrabBag": {
     "DisplayName": "Grab Bag",
@@ -42693,7 +44055,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GrabBag"
   },
   "GrabBagPremium": {
     "DisplayName": "Grab Bag, Premium",
@@ -42719,7 +44082,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GrabBagPremium"
   },
   "GrainSackWood": {
     "DisplayName": "Grain Sack, Wood",
@@ -42748,7 +44112,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GrainSackWood"
   },
   "GrickFantasyTB25": {
     "DisplayName": "Grick, Fantasy, TB25",
@@ -42775,7 +44140,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GrickFantasyTB25"
   },
   "GrimReaperFantasyTB25": {
     "DisplayName": "Grim Reaper, Fantasy, TB25",
@@ -42803,7 +44169,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GrimReaperFantasyTB25"
   },
   "GrizzlyBear": {
     "DisplayName": "Grizzly Bear",
@@ -42827,7 +44194,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GrizzlyBear"
   },
   "Guard1SpaceTB25": {
     "DisplayName": "Guard 1, Space, TB25",
@@ -42843,7 +44211,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Guard1SpaceTB25"
   },
   "Guard2SpaceTB25": {
     "DisplayName": "Guard 2, Space, TB25",
@@ -42859,7 +44228,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Guard2SpaceTB25"
   },
   "GuardRobotBlack": {
     "DisplayName": "Guard Robot, Black",
@@ -42887,7 +44257,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GuardRobotBlack"
   },
   "GuardRobotGreen": {
     "DisplayName": "Guard Robot, Green",
@@ -42915,7 +44286,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GuardRobotGreen"
   },
   "GuardRobotRed": {
     "DisplayName": "Guard Robot, Red",
@@ -42943,7 +44315,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GuardRobotRed"
   },
   "GuardRobotYellow": {
     "DisplayName": "Guard Robot, Yellow",
@@ -42971,7 +44344,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GuardRobotYellow"
   },
   "GuardHeavySpaceTB25": {
     "DisplayName": "Guard, Heavy, Space, TB25",
@@ -42987,7 +44361,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "GuardHeavySpaceTB25"
   },
   "Gunpod": {
     "DisplayName": "Gunpod",
@@ -43010,7 +44385,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Gunpod"
   },
   "HagFantasyTB25": {
     "DisplayName": "Hag, Fantasy, TB25",
@@ -43035,7 +44411,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HagFantasyTB25"
   },
   "Halfling-CharacterMeeple": {
     "DisplayName": "Halfling - Character Meeple",
@@ -43055,7 +44432,8 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/317220BA-8EBD-11E8-AE40-15EC785DA8EE.png",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Halfling-CharacterMeeple"
   },
   "HalflingPirateFantasyTB25": {
     "DisplayName": "Halfling Pirate, Fantasy, TB25",
@@ -43078,7 +44456,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalflingPirateFantasyTB25"
   },
   "HalflingSpaceTB25": {
     "DisplayName": "Halfling, Space, TB25",
@@ -43094,7 +44473,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalflingSpaceTB25"
   },
   "HalmaBlack": {
     "DisplayName": "Halma, Black",
@@ -43113,7 +44493,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaBlack"
   },
   "HalmaBlue": {
     "DisplayName": "Halma, Blue",
@@ -43132,7 +44513,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaBlue"
   },
   "HalmaGreen": {
     "DisplayName": "Halma, Green",
@@ -43151,7 +44533,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaGreen"
   },
   "HalmaLargeNatural": {
     "DisplayName": "Halma, Large, Natural",
@@ -43173,7 +44556,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "natural",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaLargeNatural"
   },
   "HalmaOrange": {
     "DisplayName": "Halma, Orange",
@@ -43192,7 +44576,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaOrange"
   },
   "HalmaPurple": {
     "DisplayName": "Halma, Purple",
@@ -43211,7 +44596,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaPurple"
   },
   "HalmaRed": {
     "DisplayName": "Halma, Red",
@@ -43230,7 +44616,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaRed"
   },
   "HalmaStackableBlue": {
     "DisplayName": "Halma, Stackable, Blue",
@@ -43249,7 +44636,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaStackableBlue"
   },
   "HalmaStackableGreen": {
     "DisplayName": "Halma, Stackable, Green",
@@ -43268,7 +44656,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaStackableGreen"
   },
   "HalmaStackableRed": {
     "DisplayName": "Halma, Stackable, Red",
@@ -43287,7 +44676,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaStackableRed"
   },
   "HalmaStackableWhite": {
     "DisplayName": "Halma, Stackable, White",
@@ -43306,7 +44696,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaStackableWhite"
   },
   "HalmaStackableYellow": {
     "DisplayName": "Halma, Stackable, Yellow",
@@ -43325,7 +44716,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaStackableYellow"
   },
   "HalmaWhite": {
     "DisplayName": "Halma, White",
@@ -43344,7 +44736,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaWhite"
   },
   "HalmaYellow": {
     "DisplayName": "Halma, Yellow",
@@ -43363,7 +44756,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaYellow"
   },
   "HandmadeBrick": {
     "DisplayName": "Handmade Brick",
@@ -43392,7 +44786,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HandmadeBrick"
   },
   "HandmadeCampfire": {
     "DisplayName": "Handmade Campfire",
@@ -43416,7 +44811,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HandmadeCampfire"
   },
   "HandmadeCarrot": {
     "DisplayName": "Handmade Carrot",
@@ -43450,7 +44846,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HandmadeCarrot"
   },
   "HandmadeCoal": {
     "DisplayName": "Handmade Coal",
@@ -43480,7 +44877,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HandmadeCoal"
   },
   "HandmadeCorn": {
     "DisplayName": "Handmade Corn",
@@ -43506,7 +44904,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HandmadeCorn"
   },
   "HandmadeFence": {
     "DisplayName": "Handmade Fence",
@@ -43530,7 +44929,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HandmadeFence"
   },
   "HandmadeFish": {
     "DisplayName": "Handmade Fish",
@@ -43567,7 +44967,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "salmon",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HandmadeFish"
   },
   "HandmadeGrape": {
     "DisplayName": "Handmade Grape",
@@ -43590,7 +44991,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HandmadeGrape"
   },
   "HandmadeOilDrum": {
     "DisplayName": "Handmade Oil Drum",
@@ -43615,7 +45017,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HandmadeOilDrum"
   },
   "HandmadePumpkin": {
     "DisplayName": "Handmade Pumpkin",
@@ -43638,7 +45041,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HandmadePumpkin"
   },
   "HandmadeReed": {
     "DisplayName": "Handmade Reed",
@@ -43661,7 +45065,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HandmadeReed"
   },
   "HandmadeSheep": {
     "DisplayName": "Handmade Sheep",
@@ -43688,7 +45093,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HandmadeSheep"
   },
   "HandmadeSkull": {
     "DisplayName": "Handmade Skull",
@@ -43723,7 +45129,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HandmadeSkull"
   },
   "HandmadeSteak": {
     "DisplayName": "Handmade Steak",
@@ -43760,7 +45167,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "HandmadeSteak"
   },
   "HandmadeTrashCan": {
     "DisplayName": "Handmade Trash Can",
@@ -43786,7 +45194,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HandmadeTrashCan"
   },
   "HandmadeTrough": {
     "DisplayName": "Handmade Trough",
@@ -43805,7 +45214,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HandmadeTrough"
   },
   "HandmadeUraniumRod": {
     "DisplayName": "Handmade Uranium Rod",
@@ -43834,7 +45244,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HandmadeUraniumRod"
   },
   "HandmadeWheat": {
     "DisplayName": "Handmade Wheat",
@@ -43861,7 +45272,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HandmadeWheat"
   },
   "HangTabsTriangle(packof20)": {
     "DisplayName": "Hang Tabs, Triangle (pack of 20)",
@@ -43880,7 +45292,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HangTabsTriangle(packof20)"
   },
   "HarborBlack": {
     "DisplayName": "Harbor, Black",
@@ -43903,7 +45316,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HarborBlack"
   },
   "HarborBlue": {
     "DisplayName": "Harbor, Blue",
@@ -43926,7 +45340,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HarborBlue"
   },
   "HarborGreen": {
     "DisplayName": "Harbor, Green",
@@ -43949,7 +45364,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HarborGreen"
   },
   "HarborOrange": {
     "DisplayName": "Harbor, Orange",
@@ -43972,7 +45388,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HarborOrange"
   },
   "HarborPurple": {
     "DisplayName": "Harbor, Purple",
@@ -43995,7 +45412,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HarborPurple"
   },
   "HarborRed": {
     "DisplayName": "Harbor, Red",
@@ -44018,7 +45436,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HarborRed"
   },
   "HarborWhite": {
     "DisplayName": "Harbor, White",
@@ -44041,7 +45460,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HarborWhite"
   },
   "HarborYellow": {
     "DisplayName": "Harbor, Yellow",
@@ -44064,7 +45484,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HarborYellow"
   },
   "Harpy2FantasyTB25": {
     "DisplayName": "Harpy 2, Fantasy, TB25",
@@ -44083,7 +45504,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Harpy2FantasyTB25"
   },
   "HarpyFantasyTB25": {
     "DisplayName": "Harpy, Fantasy, TB25",
@@ -44102,7 +45524,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HarpyFantasyTB25"
   },
   "HatmanGreen": {
     "DisplayName": "Hatman Green",
@@ -44132,7 +45555,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HatmanGreen"
   },
   "Hazmat-CharacterMeeple": {
     "DisplayName": "Hazmat - Character Meeple",
@@ -44170,7 +45594,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Hazmat-CharacterMeeple"
   },
   "HeartOrganRed": {
     "DisplayName": "Heart Organ, Red",
@@ -44196,7 +45621,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "HeartOrganRed"
   },
   "HeartFlatBlack": {
     "DisplayName": "Heart, Flat, Black",
@@ -44228,7 +45654,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HeartFlatBlack"
   },
   "HeartFlatBlue": {
     "DisplayName": "Heart, Flat, Blue",
@@ -44260,7 +45687,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HeartFlatBlue"
   },
   "HeartFlatGreen": {
     "DisplayName": "Heart, Flat, Green",
@@ -44292,7 +45720,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HeartFlatGreen"
   },
   "HeartFlatOrange": {
     "DisplayName": "Heart, Flat, Orange",
@@ -44324,7 +45753,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HeartFlatOrange"
   },
   "HeartFlatPurple": {
     "DisplayName": "Heart, Flat, Purple",
@@ -44356,7 +45786,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HeartFlatPurple"
   },
   "HeartFlatRed": {
     "DisplayName": "Heart, Flat, Red",
@@ -44388,7 +45819,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HeartFlatRed"
   },
   "HeartFlatWhite": {
     "DisplayName": "Heart, Flat, White",
@@ -44420,7 +45852,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HeartFlatWhite"
   },
   "HeartFlatYellow": {
     "DisplayName": "Heart, Flat, Yellow",
@@ -44452,7 +45885,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HeartFlatYellow"
   },
   "HeartWoodRed": {
     "DisplayName": "Heart, Wood, Red",
@@ -44485,7 +45919,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HeartWoodRed"
   },
   "HelicopterAcrylic": {
     "DisplayName": "Helicopter, Acrylic",
@@ -44501,7 +45936,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HelicopterAcrylic"
   },
   "HenhouseBlack": {
     "DisplayName": "Henhouse, Black",
@@ -44520,7 +45956,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HenhouseBlack"
   },
   "HenhouseBlue": {
     "DisplayName": "Henhouse, Blue",
@@ -44539,7 +45976,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HenhouseBlue"
   },
   "HenhouseGreen": {
     "DisplayName": "Henhouse, Green",
@@ -44558,7 +45996,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HenhouseGreen"
   },
   "HenhouseOrange": {
     "DisplayName": "Henhouse, Orange",
@@ -44577,7 +46016,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HenhouseOrange"
   },
   "HenhousePurple": {
     "DisplayName": "Henhouse, Purple",
@@ -44596,7 +46036,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HenhousePurple"
   },
   "HenhouseRed": {
     "DisplayName": "Henhouse, Red",
@@ -44615,7 +46056,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HenhouseRed"
   },
   "HenhouseWhite": {
     "DisplayName": "Henhouse, White",
@@ -44634,7 +46076,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HenhouseWhite"
   },
   "HenhouseYellow": {
     "DisplayName": "Henhouse, Yellow",
@@ -44653,7 +46096,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HenhouseYellow"
   },
   "HerbBlack": {
     "DisplayName": "Herb, Black",
@@ -44683,7 +46127,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HerbBlack"
   },
   "HerbBlue": {
     "DisplayName": "Herb, Blue",
@@ -44713,7 +46158,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HerbBlue"
   },
   "HerbGreen": {
     "DisplayName": "Herb, Green",
@@ -44745,7 +46191,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HerbGreen"
   },
   "HerbOrange": {
     "DisplayName": "Herb, Orange",
@@ -44777,7 +46224,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HerbOrange"
   },
   "HerbPurple": {
     "DisplayName": "Herb, Purple",
@@ -44811,7 +46259,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HerbPurple"
   },
   "HerbRed": {
     "DisplayName": "Herb, Red",
@@ -44845,7 +46294,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HerbRed"
   },
   "HerbWhite": {
     "DisplayName": "Herb, White",
@@ -44880,7 +46330,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HerbWhite"
   },
   "HerbYellow": {
     "DisplayName": "Herb, Yellow",
@@ -44915,7 +46366,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HerbYellow"
   },
   "HexNut": {
     "DisplayName": "Hex Nut",
@@ -44937,7 +46389,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HexNut"
   },
   "HexStackerBlack": {
     "DisplayName": "Hex Stacker, Black",
@@ -44961,7 +46414,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HexStackerBlack"
   },
   "HexStackerBlue": {
     "DisplayName": "Hex Stacker, Blue",
@@ -44985,7 +46439,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HexStackerBlue"
   },
   "HexStackerGreen": {
     "DisplayName": "Hex Stacker, Green",
@@ -45009,7 +46464,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HexStackerGreen"
   },
   "HexStackerOrange": {
     "DisplayName": "Hex Stacker, Orange",
@@ -45033,7 +46489,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HexStackerOrange"
   },
   "HexStackerPurple": {
     "DisplayName": "Hex Stacker, Purple",
@@ -45057,7 +46514,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HexStackerPurple"
   },
   "HexStackerRed": {
     "DisplayName": "Hex Stacker, Red",
@@ -45081,7 +46539,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HexStackerRed"
   },
   "HexStackerWhite": {
     "DisplayName": "Hex Stacker, White",
@@ -45105,7 +46564,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HexStackerWhite"
   },
   "HexStackerYellow": {
     "DisplayName": "Hex Stacker, Yellow",
@@ -45129,7 +46589,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HexStackerYellow"
   },
   "Hexbox20mmBlue": {
     "DisplayName": "Hexbox, 20mm, Blue",
@@ -45152,7 +46613,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Hexbox20mmBlue"
   },
   "Hexbox20mmDarkRed": {
     "DisplayName": "Hexbox, 20mm, Dark Red",
@@ -45176,7 +46638,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Hexbox20mmDarkRed"
   },
   "Hexbox20mmMustard": {
     "DisplayName": "Hexbox, 20mm, Mustard",
@@ -45199,7 +46662,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "mustard",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Hexbox20mmMustard"
   },
   "HingedStoneDoorBlue": {
     "DisplayName": "Hinged Stone Door, Blue",
@@ -45217,7 +46681,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HingedStoneDoorBlue"
   },
   "HingedStoneDoorBronze": {
     "DisplayName": "Hinged Stone Door, Bronze",
@@ -45235,7 +46700,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HingedStoneDoorBronze"
   },
   "HingedStoneDoorGreen": {
     "DisplayName": "Hinged Stone Door, Green",
@@ -45253,7 +46719,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HingedStoneDoorGreen"
   },
   "HingedStoneDoorGray": {
     "DisplayName": "Hinged Stone Door, Gray",
@@ -45271,7 +46738,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HingedStoneDoorGray"
   },
   "HingedStoneDoorRed": {
     "DisplayName": "Hinged Stone Door, Red",
@@ -45289,7 +46757,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HingedStoneDoorRed"
   },
   "Hippogriff": {
     "DisplayName": "Hippogriff",
@@ -45327,7 +46796,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Hippogriff"
   },
   "HobgoblinCrossbow2FantasyTB25": {
     "DisplayName": "Hobgoblin, Crossbow 2, Fantasy, TB25",
@@ -45343,7 +46813,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HobgoblinCrossbow2FantasyTB25"
   },
   "HobgoblinCrossbowFantasyTB25": {
     "DisplayName": "Hobgoblin, Crossbow, Fantasy, TB25",
@@ -45360,7 +46831,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HobgoblinCrossbowFantasyTB25"
   },
   "HobgoblinSword2FantasyTB25": {
     "DisplayName": "Hobgoblin, Sword 2, Fantasy, TB25",
@@ -45380,7 +46852,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HobgoblinSword2FantasyTB25"
   },
   "HobgoblinSwordFantasyTB25": {
     "DisplayName": "Hobgoblin, Sword, Fantasy, TB25",
@@ -45396,7 +46869,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HobgoblinSwordFantasyTB25"
   },
   "HoodedStrangerFantasyTB25": {
     "DisplayName": "Hooded Stranger, Fantasy, TB25",
@@ -45420,7 +46894,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HoodedStrangerFantasyTB25"
   },
   "HorseAcrylic": {
     "DisplayName": "Horse, Acrylic",
@@ -45454,7 +46929,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HorseAcrylic"
   },
   "HotRodBlack": {
     "DisplayName": "Hot Rod, Black",
@@ -45479,7 +46955,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HotRodBlack"
   },
   "HotRodBlue": {
     "DisplayName": "Hot Rod, Blue",
@@ -45504,7 +46981,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HotRodBlue"
   },
   "HotRodGreen": {
     "DisplayName": "Hot Rod, Green",
@@ -45529,7 +47007,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HotRodGreen"
   },
   "HotRodOrange": {
     "DisplayName": "Hot Rod, Orange",
@@ -45554,7 +47033,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HotRodOrange"
   },
   "HotRodPurple": {
     "DisplayName": "Hot Rod, Purple",
@@ -45579,7 +47059,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HotRodPurple"
   },
   "HotRodRed": {
     "DisplayName": "Hot Rod, Red",
@@ -45604,7 +47085,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HotRodRed"
   },
   "HotRodWhite": {
     "DisplayName": "Hot Rod, White",
@@ -45629,7 +47111,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HotRodWhite"
   },
   "HotRodYellow": {
     "DisplayName": "Hot Rod, Yellow",
@@ -45654,7 +47137,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HotRodYellow"
   },
   "HotelBlack": {
     "DisplayName": "Hotel, Black",
@@ -45682,7 +47166,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HotelBlack"
   },
   "HotelBlue": {
     "DisplayName": "Hotel, Blue",
@@ -45710,7 +47195,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HotelBlue"
   },
   "HotelGreen": {
     "DisplayName": "Hotel, Green",
@@ -45738,7 +47224,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HotelGreen"
   },
   "HotelOrange": {
     "DisplayName": "Hotel, Orange",
@@ -45766,7 +47253,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HotelOrange"
   },
   "HotelPurple": {
     "DisplayName": "Hotel, Purple",
@@ -45794,7 +47282,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HotelPurple"
   },
   "HotelRed": {
     "DisplayName": "Hotel, Red",
@@ -45822,7 +47311,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HotelRed"
   },
   "HotelWhite": {
     "DisplayName": "Hotel, White",
@@ -45850,7 +47340,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HotelWhite"
   },
   "HotelYellow": {
     "DisplayName": "Hotel, Yellow",
@@ -45878,7 +47369,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HotelYellow"
   },
   "HouseAcrylicOpaqueBlack": {
     "DisplayName": "House, Acrylic, Opaque, Black",
@@ -45913,7 +47405,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseAcrylicOpaqueBlack"
   },
   "HouseAcrylicOpaqueGold": {
     "DisplayName": "House, Acrylic, Opaque, Gold",
@@ -45948,7 +47441,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseAcrylicOpaqueGold"
   },
   "HouseAcrylicOpaqueSilver": {
     "DisplayName": "House, Acrylic, Opaque, Silver",
@@ -45989,7 +47483,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseAcrylicOpaqueSilver"
   },
   "HouseAcrylicOpaqueWhite": {
     "DisplayName": "House, Acrylic, Opaque, White",
@@ -46024,7 +47519,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseAcrylicOpaqueWhite"
   },
   "HouseAcrylicTransparentBlack": {
     "DisplayName": "House, Acrylic, Transparent, Black",
@@ -46059,7 +47555,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseAcrylicTransparentBlack"
   },
   "HouseAcrylicTransparentBlue": {
     "DisplayName": "House, Acrylic, Transparent, Blue",
@@ -46094,7 +47591,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseAcrylicTransparentBlue"
   },
   "HouseAcrylicTransparentClear": {
     "DisplayName": "House, Acrylic, Transparent, Clear",
@@ -46129,7 +47627,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseAcrylicTransparentClear"
   },
   "HouseAcrylicTransparentGreen": {
     "DisplayName": "House, Acrylic, Transparent, Green",
@@ -46164,7 +47663,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseAcrylicTransparentGreen"
   },
   "HouseAcrylicTransparentOrange": {
     "DisplayName": "House, Acrylic, Transparent, Orange",
@@ -46199,7 +47699,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseAcrylicTransparentOrange"
   },
   "HouseAcrylicTransparentPurple": {
     "DisplayName": "House, Acrylic, Transparent, Purple",
@@ -46234,7 +47735,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseAcrylicTransparentPurple"
   },
   "HouseAcrylicTransparentRed": {
     "DisplayName": "House, Acrylic, Transparent, Red",
@@ -46269,7 +47771,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseAcrylicTransparentRed"
   },
   "HouseAcrylicTransparentYellow": {
     "DisplayName": "House, Acrylic, Transparent, Yellow",
@@ -46304,7 +47807,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseAcrylicTransparentYellow"
   },
   "HouseBlack": {
     "DisplayName": "House, Black",
@@ -46339,7 +47843,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseBlack"
   },
   "HouseBlue": {
     "DisplayName": "House, Blue",
@@ -46374,7 +47879,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseBlue"
   },
   "HouseGreen": {
     "DisplayName": "House, Green",
@@ -46409,7 +47915,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseGreen"
   },
   "HouseOrange": {
     "DisplayName": "House, Orange",
@@ -46444,7 +47951,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseOrange"
   },
   "HousePurple": {
     "DisplayName": "House, Purple",
@@ -46479,7 +47987,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HousePurple"
   },
   "HouseRed": {
     "DisplayName": "House, Red",
@@ -46514,7 +48023,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseRed"
   },
   "HouseWhite": {
     "DisplayName": "House, White",
@@ -46549,7 +48059,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseWhite"
   },
   "HouseWoodNatural": {
     "DisplayName": "House, Wood, Natural",
@@ -46585,7 +48096,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseWoodNatural"
   },
   "HouseWoodYellow": {
     "DisplayName": "House, Wood, Yellow",
@@ -46621,7 +48133,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseWoodYellow"
   },
   "HouseYellow": {
     "DisplayName": "House, Yellow",
@@ -46656,7 +48169,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HouseYellow"
   },
   "HumanFigureOrange": {
     "DisplayName": "Human Figure, Orange",
@@ -46692,7 +48206,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HumanFigureOrange"
   },
   "HumanFigurePurple": {
     "DisplayName": "Human Figure, Purple",
@@ -46728,7 +48243,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HumanFigurePurple"
   },
   "HumanFigureRed": {
     "DisplayName": "Human Figure, Red",
@@ -46764,7 +48280,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HumanFigureRed"
   },
   "HumanFigureYellow": {
     "DisplayName": "Human Figure, Yellow",
@@ -46800,7 +48317,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HumanFigureYellow"
   },
   "HutLarge": {
     "DisplayName": "Hut, Large",
@@ -46825,7 +48343,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HutLarge"
   },
   "HutSmall": {
     "DisplayName": "Hut, Small",
@@ -46850,7 +48369,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HutSmall"
   },
   "Hydra": {
     "DisplayName": "Hydra",
@@ -46877,7 +48397,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Hydra"
   },
   "I-Beam": {
     "DisplayName": "I-Beam",
@@ -46903,7 +48424,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "I-Beam"
   },
   "IceCube10mmCopper": {
     "DisplayName": "Ice Cube, 10mm, Copper",
@@ -46944,7 +48466,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "copper",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube10mmCopper"
   },
   "IceCube10mmOpaqueBlack": {
     "DisplayName": "Ice Cube, 10mm, Opaque, Black",
@@ -46984,7 +48507,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube10mmOpaqueBlack"
   },
   "IceCube10mmOpaqueGold": {
     "DisplayName": "Ice Cube, 10mm, Opaque, Gold",
@@ -47024,7 +48548,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube10mmOpaqueGold"
   },
   "IceCube10mmOpaqueSilver": {
     "DisplayName": "Ice Cube, 10mm, Opaque, Silver",
@@ -47064,7 +48589,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube10mmOpaqueSilver"
   },
   "IceCube10mmOpaqueWhite": {
     "DisplayName": "Ice Cube, 10mm, Opaque, White",
@@ -47104,7 +48630,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube10mmOpaqueWhite"
   },
   "IceCube10mmTransparentBlack": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Black",
@@ -47144,7 +48671,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube10mmTransparentBlack"
   },
   "IceCube10mmTransparentBlue": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Blue",
@@ -47184,7 +48712,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube10mmTransparentBlue"
   },
   "IceCube10mmTransparentClear": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Clear",
@@ -47224,7 +48753,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube10mmTransparentClear"
   },
   "IceCube10mmTransparentGreen": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Green",
@@ -47264,7 +48794,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube10mmTransparentGreen"
   },
   "IceCube10mmTransparentOrange": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Orange",
@@ -47304,7 +48835,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube10mmTransparentOrange"
   },
   "IceCube10mmTransparentPurple": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Purple",
@@ -47344,7 +48876,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube10mmTransparentPurple"
   },
   "IceCube10mmTransparentRed": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Red",
@@ -47384,7 +48917,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube10mmTransparentRed"
   },
   "IceCube10mmTransparentWhite": {
     "DisplayName": "Ice Cube, 10mm, Transparent, White",
@@ -47424,7 +48958,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube10mmTransparentWhite"
   },
   "IceCube10mmTransparentYellow": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Yellow",
@@ -47464,7 +48999,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube10mmTransparentYellow"
   },
   "IceCube12mmOpaqueBlack": {
     "DisplayName": "Ice Cube, 12mm, Opaque, Black",
@@ -47504,7 +49040,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube12mmOpaqueBlack"
   },
   "IceCube12mmOpaqueGold": {
     "DisplayName": "Ice Cube, 12mm, Opaque, Gold",
@@ -47544,7 +49081,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube12mmOpaqueGold"
   },
   "IceCube12mmOpaqueSilver": {
     "DisplayName": "Ice Cube, 12mm, Opaque, Silver",
@@ -47584,7 +49122,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube12mmOpaqueSilver"
   },
   "IceCube12mmOpaqueWhite": {
     "DisplayName": "Ice Cube, 12mm, Opaque, White",
@@ -47624,7 +49163,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube12mmOpaqueWhite"
   },
   "IceCube12mmTransparentBlack": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Black",
@@ -47664,7 +49204,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube12mmTransparentBlack"
   },
   "IceCube12mmTransparentBlue": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Blue",
@@ -47710,7 +49251,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube12mmTransparentBlue"
   },
   "IceCube12mmTransparentClear": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Clear",
@@ -47750,7 +49292,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube12mmTransparentClear"
   },
   "IceCube12mmTransparentGreen": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Green",
@@ -47790,7 +49333,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube12mmTransparentGreen"
   },
   "IceCube12mmTransparentOrange": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Orange",
@@ -47830,7 +49374,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube12mmTransparentOrange"
   },
   "IceCube12mmTransparentPurple": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Purple",
@@ -47870,7 +49415,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube12mmTransparentPurple"
   },
   "IceCube12mmTransparentRed": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Red",
@@ -47910,7 +49456,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube12mmTransparentRed"
   },
   "IceCube12mmTransparentWhite": {
     "DisplayName": "Ice Cube, 12mm, Transparent, White",
@@ -47950,7 +49497,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube12mmTransparentWhite"
   },
   "IceCube12mmTransparentYellow": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Yellow",
@@ -47996,7 +49544,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube12mmTransparentYellow"
   },
   "IceCube8mmCopper": {
     "DisplayName": "Ice Cube, 8mm, Copper",
@@ -48037,7 +49586,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "copper",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube8mmCopper"
   },
   "IceCube8mmOpaqueBlack": {
     "DisplayName": "Ice Cube, 8mm, Opaque, Black",
@@ -48077,7 +49627,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube8mmOpaqueBlack"
   },
   "IceCube8mmOpaqueGold": {
     "DisplayName": "Ice Cube, 8mm, Opaque, Gold",
@@ -48117,7 +49668,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube8mmOpaqueGold"
   },
   "IceCube8mmOpaqueSilver": {
     "DisplayName": "Ice Cube, 8mm, Opaque, Silver",
@@ -48157,7 +49709,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube8mmOpaqueSilver"
   },
   "IceCube8mmOpaqueWhite": {
     "DisplayName": "Ice Cube, 8mm, Opaque, White",
@@ -48197,7 +49750,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube8mmOpaqueWhite"
   },
   "IceCube8mmTransparentBlack": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Black",
@@ -48237,7 +49791,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube8mmTransparentBlack"
   },
   "IceCube8mmTransparentBlue": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Blue",
@@ -48277,7 +49832,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube8mmTransparentBlue"
   },
   "IceCube8mmTransparentClear": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Clear",
@@ -48317,7 +49873,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube8mmTransparentClear"
   },
   "IceCube8mmTransparentGreen": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Green",
@@ -48357,7 +49914,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube8mmTransparentGreen"
   },
   "IceCube8mmTransparentOrange": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Orange",
@@ -48397,7 +49955,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube8mmTransparentOrange"
   },
   "IceCube8mmTransparentPurple": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Purple",
@@ -48437,7 +49996,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube8mmTransparentPurple"
   },
   "IceCube8mmTransparentRed": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Red",
@@ -48477,7 +50037,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube8mmTransparentRed"
   },
   "IceCube8mmTransparentWhite": {
     "DisplayName": "Ice Cube, 8mm, Transparent, White",
@@ -48517,7 +50078,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube8mmTransparentWhite"
   },
   "IceCube8mmTransparentYellow": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Yellow",
@@ -48557,7 +50119,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceCube8mmTransparentYellow"
   },
   "IceElemental-CharacterMeeple": {
     "DisplayName": "Ice Elemental - Character Meeple",
@@ -48585,7 +50148,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IceElemental-CharacterMeeple"
   },
   "ImpFantasyTB25": {
     "DisplayName": "Imp, Fantasy, TB25",
@@ -48606,7 +50170,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ImpFantasyTB25"
   },
   "IngotWoodAluminum": {
     "DisplayName": "Ingot, Wood, Aluminum",
@@ -48637,7 +50202,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IngotWoodAluminum"
   },
   "IngotWoodBrass": {
     "DisplayName": "Ingot, Wood, Brass",
@@ -48667,7 +50233,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "copper",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IngotWoodBrass"
   },
   "IngotWoodCobalt": {
     "DisplayName": "Ingot, Wood, Cobalt",
@@ -48699,7 +50266,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IngotWoodCobalt"
   },
   "IngotWoodCopper": {
     "DisplayName": "Ingot, Wood, Copper",
@@ -48730,7 +50298,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IngotWoodCopper"
   },
   "IngotWoodGold": {
     "DisplayName": "Ingot, Wood, Gold",
@@ -48772,7 +50341,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IngotWoodGold"
   },
   "IngotWoodIron": {
     "DisplayName": "Ingot, Wood, Iron",
@@ -48810,7 +50380,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IngotWoodIron"
   },
   "IngotWoodSilver": {
     "DisplayName": "Ingot, Wood, Silver",
@@ -48850,7 +50421,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IngotWoodSilver"
   },
   "IngotWoodSteel": {
     "DisplayName": "Ingot, Wood, Steel",
@@ -48886,7 +50458,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "IngotWoodSteel"
   },
   "InsectWarriorFantasyTB25": {
     "DisplayName": "Insect Warrior, Fantasy, TB25",
@@ -48902,7 +50475,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "InsectWarriorFantasyTB25"
   },
   "JewelBlue": {
     "DisplayName": "Jewel, Blue",
@@ -48969,7 +50543,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JewelBlue"
   },
   "JewelOrange": {
     "DisplayName": "Jewel, Orange",
@@ -49036,7 +50611,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JewelOrange"
   },
   "JewelPurple": {
     "DisplayName": "Jewel, Purple",
@@ -49103,7 +50679,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JewelPurple"
   },
   "JewelRed": {
     "DisplayName": "Jewel, Red",
@@ -49170,7 +50747,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JewelRed"
   },
   "JoystickBlack": {
     "DisplayName": "Joystick, Black",
@@ -49192,7 +50770,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JoystickBlack"
   },
   "JoystickBlue": {
     "DisplayName": "Joystick, Blue",
@@ -49214,7 +50793,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JoystickBlue"
   },
   "JoystickGreen": {
     "DisplayName": "Joystick, Green",
@@ -49236,7 +50816,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JoystickGreen"
   },
   "JoystickHeadlessBlack": {
     "DisplayName": "Joystick, Headless, Black",
@@ -49258,7 +50839,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JoystickHeadlessBlack"
   },
   "JoystickOrange": {
     "DisplayName": "Joystick, Orange",
@@ -49280,7 +50862,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JoystickOrange"
   },
   "JoystickPurple": {
     "DisplayName": "Joystick, Purple",
@@ -49302,7 +50885,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JoystickPurple"
   },
   "JoystickRed": {
     "DisplayName": "Joystick, Red",
@@ -49324,7 +50908,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JoystickRed"
   },
   "JoystickWhite": {
     "DisplayName": "Joystick, White",
@@ -49346,7 +50931,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JoystickWhite"
   },
   "JoystickYellow": {
     "DisplayName": "Joystick, Yellow",
@@ -49368,7 +50954,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JoystickYellow"
   },
   "JumboSleevePack(100)": {
     "DisplayName": "Jumbo Sleeve Pack (100)",
@@ -49396,7 +50983,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "JumboSleevePack(100)"
   },
   "KeycardFluorescentBlue": {
     "DisplayName": "Keycard, Fluorescent Blue",
@@ -49427,7 +51015,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "KeycardFluorescentBlue"
   },
   "KeycardFluorescentGreen": {
     "DisplayName": "Keycard, Fluorescent Green",
@@ -49458,7 +51047,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "KeycardFluorescentGreen"
   },
   "KeycardFluorescentRed": {
     "DisplayName": "Keycard, Fluorescent Red",
@@ -49489,7 +51079,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "KeycardFluorescentRed"
   },
   "KeycardFluorescentYellow": {
     "DisplayName": "Keycard, Fluorescent Yellow",
@@ -49520,7 +51111,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "KeycardFluorescentYellow"
   },
   "KittenBrown": {
     "DisplayName": "Kitten, Brown",
@@ -49551,7 +51143,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "KittenBrown"
   },
   "KittenWhite": {
     "DisplayName": "Kitten, White",
@@ -49582,7 +51175,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "KittenWhite"
   },
   "KittenWhitewithBrown": {
     "DisplayName": "Kitten, White with Brown ",
@@ -49614,7 +51208,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "KittenWhitewithBrown"
   },
   "KnightWolfribHistoricTB25": {
     "DisplayName": "Knight Wolfrib, Historic, TB25",
@@ -49633,7 +51228,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "KnightWolfribHistoricTB25"
   },
   "KnightLanceSpaceTB25": {
     "DisplayName": "Knight, Lance, Space, TB25",
@@ -49649,7 +51245,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "KnightLanceSpaceTB25"
   },
   "KoboldPickaxeFantasyTB25": {
     "DisplayName": "Kobold, Pickaxe, Fantasy, TB25",
@@ -49668,7 +51265,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "KoboldPickaxeFantasyTB25"
   },
   "KrampusFantasyTB25": {
     "DisplayName": "Krampus, Fantasy, TB25",
@@ -49692,7 +51290,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "KrampusFantasyTB25"
   },
   "LabAssistant-CharacterMeeple": {
     "DisplayName": "Lab Assistant - Character Meeple",
@@ -49733,7 +51332,8 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/208602BA-8EBF-11E8-AE40-DCEE785DA8EE.png",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LabAssistant-CharacterMeeple"
   },
   "LaboratoryBlack": {
     "DisplayName": "Laboratory, Black",
@@ -49752,7 +51352,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LaboratoryBlack"
   },
   "LaboratoryBlue": {
     "DisplayName": "Laboratory, Blue",
@@ -49771,7 +51372,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LaboratoryBlue"
   },
   "LaboratoryGreen": {
     "DisplayName": "Laboratory, Green",
@@ -49790,7 +51392,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LaboratoryGreen"
   },
   "LaboratoryOrange": {
     "DisplayName": "Laboratory, Orange",
@@ -49809,7 +51412,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LaboratoryOrange"
   },
   "LaboratoryPurple": {
     "DisplayName": "Laboratory, Purple",
@@ -49828,7 +51432,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LaboratoryPurple"
   },
   "LaboratoryRed": {
     "DisplayName": "Laboratory, Red",
@@ -49847,7 +51452,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LaboratoryRed"
   },
   "LaboratoryWhite": {
     "DisplayName": "Laboratory, White",
@@ -49866,7 +51472,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LaboratoryWhite"
   },
   "LaboratoryYellow": {
     "DisplayName": "Laboratory, Yellow",
@@ -49885,7 +51492,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LaboratoryYellow"
   },
   "LadyBugWood": {
     "DisplayName": "Lady Bug, Wood",
@@ -49913,7 +51521,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LadyBugWood"
   },
   "LampPost": {
     "DisplayName": "Lamp Post",
@@ -49931,7 +51540,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LampPost"
   },
   "LandmarkBase": {
     "DisplayName": "Landmark Base",
@@ -49966,7 +51576,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "LandmarkBase"
   },
   "Lantern": {
     "DisplayName": "Lantern",
@@ -49983,7 +51594,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Lantern"
   },
   "LargeStarGold": {
     "DisplayName": "Large Star, Gold",
@@ -50016,7 +51628,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LargeStarGold"
   },
   "LargeStoutBox": {
     "DisplayName": "Large Stout Box",
@@ -50043,7 +51656,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LargeStoutBox"
   },
   "LargeTreasureChest(closed)": {
     "DisplayName": "Large Treasure Chest (closed)",
@@ -50073,7 +51687,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LargeTreasureChest(closed)"
   },
   "LeatherBlack": {
     "DisplayName": "Leather, Black",
@@ -50109,7 +51724,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LeatherBlack"
   },
   "LeatherBrown": {
     "DisplayName": "Leather, Brown",
@@ -50145,7 +51761,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LeatherBrown"
   },
   "LeatherWhite": {
     "DisplayName": "Leather, White",
@@ -50181,7 +51798,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LeatherWhite"
   },
   "LichwithStaff": {
     "DisplayName": "Lich with Staff",
@@ -50220,7 +51838,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LichwithStaff"
   },
   "LichFantasyTB25": {
     "DisplayName": "Lich, Fantasy, TB25",
@@ -50248,7 +51867,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LichFantasyTB25"
   },
   "LightBulbBlue": {
     "DisplayName": "Light Bulb, Blue",
@@ -50287,7 +51907,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LightBulbBlue"
   },
   "LightBulbGold": {
     "DisplayName": "Light Bulb, Gold",
@@ -50326,7 +51947,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LightBulbGold"
   },
   "LightBulbGreen": {
     "DisplayName": "Light Bulb, Green",
@@ -50365,7 +51987,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LightBulbGreen"
   },
   "LightBulbSalmon": {
     "DisplayName": "Light Bulb, Salmon",
@@ -50405,7 +52028,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "salmon",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LightBulbSalmon"
   },
   "LightBulbTaupe": {
     "DisplayName": "Light Bulb, Taupe",
@@ -50445,7 +52069,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "taupe",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LightBulbTaupe"
   },
   "LightningBoltBlack": {
     "DisplayName": "Lightning Bolt, Black",
@@ -50509,7 +52134,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LightningBoltBlack"
   },
   "LightningBoltBlue": {
     "DisplayName": "Lightning Bolt, Blue",
@@ -50573,7 +52199,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LightningBoltBlue"
   },
   "LightningBoltGreen": {
     "DisplayName": "Lightning Bolt, Green",
@@ -50637,7 +52264,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LightningBoltGreen"
   },
   "LightningBoltLargeOrange": {
     "DisplayName": "Lightning Bolt, Large, Orange",
@@ -50701,7 +52329,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LightningBoltLargeOrange"
   },
   "LightningBoltOrange": {
     "DisplayName": "Lightning Bolt, Orange",
@@ -50765,7 +52394,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LightningBoltOrange"
   },
   "LightningBoltPurple": {
     "DisplayName": "Lightning Bolt, Purple",
@@ -50829,7 +52459,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LightningBoltPurple"
   },
   "LightningBoltRed": {
     "DisplayName": "Lightning Bolt, Red",
@@ -50893,7 +52524,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LightningBoltRed"
   },
   "LightningBoltWhite": {
     "DisplayName": "Lightning Bolt, White",
@@ -50957,7 +52589,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LightningBoltWhite"
   },
   "LightningBoltYellow": {
     "DisplayName": "Lightning Bolt, Yellow",
@@ -51021,7 +52654,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LightningBoltYellow"
   },
   "LimoBlue": {
     "DisplayName": "Limo, Blue",
@@ -51048,7 +52682,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LimoBlue"
   },
   "LimoGreen": {
     "DisplayName": "Limo, Green",
@@ -51075,7 +52710,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LimoGreen"
   },
   "LimoRed": {
     "DisplayName": "Limo, Red",
@@ -51102,7 +52738,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LimoRed"
   },
   "LimoYellow": {
     "DisplayName": "Limo, Yellow",
@@ -51129,7 +52766,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LimoYellow"
   },
   "Lion": {
     "DisplayName": "Lion",
@@ -51161,7 +52799,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Lion"
   },
   "LizardManonRockThrone": {
     "DisplayName": "Lizard Man on Rock Throne",
@@ -51190,7 +52829,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LizardManonRockThrone"
   },
   "LizardManwithWarClubandShield": {
     "DisplayName": "Lizard Man with War Club and Shield",
@@ -51219,7 +52859,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LizardManwithWarClubandShield"
   },
   "LizardmanJavelinFantasyTB25": {
     "DisplayName": "Lizardman, Javelin, Fantasy, TB25",
@@ -51242,7 +52883,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LizardmanJavelinFantasyTB25"
   },
   "LocomotiveTrainEngineBlack": {
     "DisplayName": "Locomotive Train Engine, Black",
@@ -51264,7 +52906,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LocomotiveTrainEngineBlack"
   },
   "LocomotiveTrainEngineGreen": {
     "DisplayName": "Locomotive Train Engine, Green",
@@ -51286,7 +52929,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LocomotiveTrainEngineGreen"
   },
   "LocomotiveTrainEngineLightBlue": {
     "DisplayName": "Locomotive Train Engine, Light Blue",
@@ -51309,7 +52953,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "lightblue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LocomotiveTrainEngineLightBlue"
   },
   "LocomotiveTrainEngineOrange": {
     "DisplayName": "Locomotive Train Engine, Orange",
@@ -51331,7 +52976,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LocomotiveTrainEngineOrange"
   },
   "LocomotiveTrainEngineTan": {
     "DisplayName": "Locomotive Train Engine, Tan",
@@ -51353,7 +52999,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LocomotiveTrainEngineTan"
   },
   "LocomotiveBlack": {
     "DisplayName": "Locomotive, Black",
@@ -51372,7 +53019,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LocomotiveBlack"
   },
   "LocomotiveBlue": {
     "DisplayName": "Locomotive, Blue",
@@ -51391,7 +53039,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LocomotiveBlue"
   },
   "LocomotiveGreen": {
     "DisplayName": "Locomotive, Green",
@@ -51410,7 +53059,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LocomotiveGreen"
   },
   "LocomotiveOrange": {
     "DisplayName": "Locomotive, Orange",
@@ -51429,7 +53079,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LocomotiveOrange"
   },
   "LocomotivePurple": {
     "DisplayName": "Locomotive, Purple",
@@ -51448,7 +53099,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LocomotivePurple"
   },
   "LocomotiveRed": {
     "DisplayName": "Locomotive, Red",
@@ -51467,7 +53119,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LocomotiveRed"
   },
   "LocomotiveWhite": {
     "DisplayName": "Locomotive, White",
@@ -51486,7 +53139,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LocomotiveWhite"
   },
   "LocomotiveYellow": {
     "DisplayName": "Locomotive, Yellow",
@@ -51505,7 +53159,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LocomotiveYellow"
   },
   "LookoutBlue": {
     "DisplayName": "Lookout, Blue",
@@ -51529,7 +53184,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LookoutBlue"
   },
   "LookoutGreen": {
     "DisplayName": "Lookout, Green",
@@ -51553,7 +53209,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LookoutGreen"
   },
   "LookoutOrange": {
     "DisplayName": "Lookout, Orange",
@@ -51577,7 +53234,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LookoutOrange"
   },
   "LookoutRed": {
     "DisplayName": "Lookout, Red",
@@ -51601,7 +53259,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LookoutRed"
   },
   "LookoutYellow": {
     "DisplayName": "Lookout, Yellow",
@@ -51625,7 +53284,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LookoutYellow"
   },
   "Maasai-CharacterMeeple": {
     "DisplayName": "Maasai - Character Meeple",
@@ -51652,7 +53312,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Maasai-CharacterMeeple"
   },
   "MafiosoBurntOrange": {
     "DisplayName": "Mafioso, Burnt Orange",
@@ -51685,7 +53346,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MafiosoBurntOrange"
   },
   "MafiosoGreen": {
     "DisplayName": "Mafioso, Green",
@@ -51718,7 +53380,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MafiosoGreen"
   },
   "MafiosoPurple": {
     "DisplayName": "Mafioso, Purple",
@@ -51751,7 +53414,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MafiosoPurple"
   },
   "MafiosoRed": {
     "DisplayName": "Mafioso, Red",
@@ -51784,7 +53448,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MafiosoRed"
   },
   "MafiosoYellow": {
     "DisplayName": "Mafioso, Yellow",
@@ -51817,7 +53482,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MafiosoYellow"
   },
   "MagnifyingGlass5X": {
     "DisplayName": "Magnifying Glass, 5X",
@@ -51848,7 +53514,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MagnifyingGlass5X"
   },
   "MaleFarmerPurple": {
     "DisplayName": "Male Farmer, Purple",
@@ -51886,7 +53553,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "purple",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "MaleFarmerPurple"
   },
   "ManInBlack-CharacterMeeple": {
     "DisplayName": "Man In Black - Character Meeple",
@@ -51910,7 +53578,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManInBlack-CharacterMeeple"
   },
   "ManAmericanRevolutionTB15Black": {
     "DisplayName": "Man, American Revolution, TB15, Black",
@@ -51932,7 +53601,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManAmericanRevolutionTB15Black"
   },
   "ManAmericanRevolutionTB15Blue": {
     "DisplayName": "Man, American Revolution, TB15, Blue",
@@ -51954,7 +53624,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManAmericanRevolutionTB15Blue"
   },
   "ManAmericanRevolutionTB15Green": {
     "DisplayName": "Man, American Revolution, TB15, Green",
@@ -51976,7 +53647,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManAmericanRevolutionTB15Green"
   },
   "ManAmericanRevolutionTB15Orange": {
     "DisplayName": "Man, American Revolution, TB15, Orange",
@@ -51998,7 +53670,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManAmericanRevolutionTB15Orange"
   },
   "ManAmericanRevolutionTB15Purple": {
     "DisplayName": "Man, American Revolution, TB15, Purple",
@@ -52020,7 +53693,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManAmericanRevolutionTB15Purple"
   },
   "ManAmericanRevolutionTB15Red": {
     "DisplayName": "Man, American Revolution, TB15, Red",
@@ -52042,7 +53716,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManAmericanRevolutionTB15Red"
   },
   "ManAmericanRevolutionTB15White": {
     "DisplayName": "Man, American Revolution, TB15, White",
@@ -52064,7 +53739,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManAmericanRevolutionTB15White"
   },
   "ManAmericanRevolutionTB15Yellow": {
     "DisplayName": "Man, American Revolution, TB15, Yellow",
@@ -52086,7 +53762,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManAmericanRevolutionTB15Yellow"
   },
   "ManIroquoisTB15Black": {
     "DisplayName": "Man, Iroquois, TB15, Black",
@@ -52104,7 +53781,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManIroquoisTB15Black"
   },
   "ManIroquoisTB15Blue": {
     "DisplayName": "Man, Iroquois, TB15, Blue",
@@ -52122,7 +53800,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManIroquoisTB15Blue"
   },
   "ManIroquoisTB15Green": {
     "DisplayName": "Man, Iroquois, TB15, Green",
@@ -52140,7 +53819,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManIroquoisTB15Green"
   },
   "ManIroquoisTB15Orange": {
     "DisplayName": "Man, Iroquois, TB15, Orange",
@@ -52158,7 +53838,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManIroquoisTB15Orange"
   },
   "ManIroquoisTB15Purple": {
     "DisplayName": "Man, Iroquois, TB15, Purple",
@@ -52176,7 +53857,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManIroquoisTB15Purple"
   },
   "ManIroquoisTB15Red": {
     "DisplayName": "Man, Iroquois, TB15, Red",
@@ -52194,7 +53876,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManIroquoisTB15Red"
   },
   "ManIroquoisTB15White": {
     "DisplayName": "Man, Iroquois, TB15, White",
@@ -52212,7 +53895,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManIroquoisTB15White"
   },
   "ManIroquoisTB15Yellow": {
     "DisplayName": "Man, Iroquois, TB15, Yellow",
@@ -52230,7 +53914,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManIroquoisTB15Yellow"
   },
   "ManModernChainsawTB25": {
     "DisplayName": "Man, Modern, Chainsaw, TB25",
@@ -52249,7 +53934,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManModernChainsawTB25"
   },
   "ManModernFlashlightTB25": {
     "DisplayName": "Man, Modern, Flashlight, TB25",
@@ -52267,7 +53953,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManModernFlashlightTB25"
   },
   "ManModernShotgunTB25": {
     "DisplayName": "Man, Modern, Shotgun, TB25",
@@ -52286,7 +53973,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManModernShotgunTB25"
   },
   "ManModernTB15Black": {
     "DisplayName": "Man, Modern, TB15, Black",
@@ -52312,7 +54000,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManModernTB15Black"
   },
   "ManModernTB15Blue": {
     "DisplayName": "Man, Modern, TB15, Blue",
@@ -52338,7 +54027,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManModernTB15Blue"
   },
   "ManModernTB15Green": {
     "DisplayName": "Man, Modern, TB15, Green",
@@ -52364,7 +54054,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManModernTB15Green"
   },
   "ManModernTB15Orange": {
     "DisplayName": "Man, Modern, TB15, Orange",
@@ -52390,7 +54081,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManModernTB15Orange"
   },
   "ManModernTB15Purple": {
     "DisplayName": "Man, Modern, TB15, Purple",
@@ -52416,7 +54108,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManModernTB15Purple"
   },
   "ManModernTB15Red": {
     "DisplayName": "Man, Modern, TB15, Red",
@@ -52442,7 +54135,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManModernTB15Red"
   },
   "ManModernTB15White": {
     "DisplayName": "Man, Modern, TB15, White",
@@ -52468,7 +54162,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManModernTB15White"
   },
   "ManModernTB15Yellow": {
     "DisplayName": "Man, Modern, TB15, Yellow",
@@ -52494,7 +54189,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManModernTB15Yellow"
   },
   "ManPostApocalypseArcherTB25": {
     "DisplayName": "Man, Post Apocalypse, Archer, TB25",
@@ -52514,7 +54210,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManPostApocalypseArcherTB25"
   },
   "ManPostApocalypseDualSMGTB25": {
     "DisplayName": "Man, Post Apocalypse, Dual SMG, TB25",
@@ -52534,7 +54231,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManPostApocalypseDualSMGTB25"
   },
   "ManPostApocalypseHammerTB25": {
     "DisplayName": "Man, Post Apocalypse, Hammer, TB25",
@@ -52554,7 +54252,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManPostApocalypseHammerTB25"
   },
   "ManPostApocalypseTB15Black": {
     "DisplayName": "Man, Post Apocalypse, TB15, Black",
@@ -52574,7 +54273,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManPostApocalypseTB15Black"
   },
   "ManPostApocalypseTB15Blue": {
     "DisplayName": "Man, Post Apocalypse, TB15, Blue",
@@ -52594,7 +54294,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManPostApocalypseTB15Blue"
   },
   "ManPostApocalypseTB15Green": {
     "DisplayName": "Man, Post Apocalypse, TB15, Green",
@@ -52614,7 +54315,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManPostApocalypseTB15Green"
   },
   "ManPostApocalypseTB15Orange": {
     "DisplayName": "Man, Post Apocalypse, TB15, Orange",
@@ -52634,7 +54336,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManPostApocalypseTB15Orange"
   },
   "ManPostApocalypseTB15Purple": {
     "DisplayName": "Man, Post Apocalypse, TB15, Purple",
@@ -52654,7 +54357,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManPostApocalypseTB15Purple"
   },
   "ManPostApocalypseTB15Red": {
     "DisplayName": "Man, Post Apocalypse, TB15, Red",
@@ -52674,7 +54378,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManPostApocalypseTB15Red"
   },
   "ManPostApocalypseTB15White": {
     "DisplayName": "Man, Post Apocalypse, TB15, White",
@@ -52694,7 +54399,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManPostApocalypseTB15White"
   },
   "ManPostApocalypseTB15Yellow": {
     "DisplayName": "Man, Post Apocalypse, TB15, Yellow",
@@ -52714,7 +54420,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManPostApocalypseTB15Yellow"
   },
   "ManSamuraiArmorTB15Black": {
     "DisplayName": "Man, Samurai Armor, TB15, Black",
@@ -52736,7 +54443,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManSamuraiArmorTB15Black"
   },
   "ManSamuraiArmorTB15Blue": {
     "DisplayName": "Man, Samurai Armor, TB15, Blue",
@@ -52758,7 +54466,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManSamuraiArmorTB15Blue"
   },
   "ManSamuraiArmorTB15Green": {
     "DisplayName": "Man, Samurai Armor, TB15, Green",
@@ -52780,7 +54489,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManSamuraiArmorTB15Green"
   },
   "ManSamuraiArmorTB15Orange": {
     "DisplayName": "Man, Samurai Armor, TB15, Orange",
@@ -52802,7 +54512,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManSamuraiArmorTB15Orange"
   },
   "ManSamuraiArmorTB15Purple": {
     "DisplayName": "Man, Samurai Armor, TB15, Purple",
@@ -52824,7 +54535,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManSamuraiArmorTB15Purple"
   },
   "ManSamuraiArmorTB15Red": {
     "DisplayName": "Man, Samurai Armor, TB15, Red",
@@ -52846,7 +54558,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManSamuraiArmorTB15Red"
   },
   "ManSamuraiArmorTB15White": {
     "DisplayName": "Man, Samurai Armor, TB15, White",
@@ -52868,7 +54581,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManSamuraiArmorTB15White"
   },
   "ManSamuraiArmorTB15Yellow": {
     "DisplayName": "Man, Samurai Armor, TB15, Yellow",
@@ -52890,7 +54604,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ManSamuraiArmorTB15Yellow"
   },
   "MarkerDry-EraseFineBlack": {
     "DisplayName": "Marker, Dry-Erase, Fine, Black",
@@ -52917,7 +54632,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MarkerDry-EraseFineBlack"
   },
   "MarkerDry-EraseFineBlue": {
     "DisplayName": "Marker, Dry-Erase, Fine, Blue",
@@ -52944,7 +54660,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MarkerDry-EraseFineBlue"
   },
   "MarkerDry-EraseFineGreen": {
     "DisplayName": "Marker, Dry-Erase, Fine, Green",
@@ -52971,7 +54688,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MarkerDry-EraseFineGreen"
   },
   "MarkerDry-EraseFineRed": {
     "DisplayName": "Marker, Dry-Erase, Fine, Red",
@@ -52998,7 +54716,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MarkerDry-EraseFineRed"
   },
   "MarketplaceBlack": {
     "DisplayName": "Marketplace, Black",
@@ -53017,7 +54736,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MarketplaceBlack"
   },
   "MarketplaceBlue": {
     "DisplayName": "Marketplace, Blue",
@@ -53036,7 +54756,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MarketplaceBlue"
   },
   "MarketplaceGreen": {
     "DisplayName": "Marketplace, Green",
@@ -53055,7 +54776,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MarketplaceGreen"
   },
   "MarketplaceOrange": {
     "DisplayName": "Marketplace, Orange",
@@ -53074,7 +54796,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MarketplaceOrange"
   },
   "MarketplacePurple": {
     "DisplayName": "Marketplace, Purple",
@@ -53093,7 +54816,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MarketplacePurple"
   },
   "MarketplaceRed": {
     "DisplayName": "Marketplace, Red",
@@ -53112,7 +54836,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MarketplaceRed"
   },
   "MarketplaceWhite": {
     "DisplayName": "Marketplace, White",
@@ -53131,7 +54856,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MarketplaceWhite"
   },
   "MarketplaceYellow": {
     "DisplayName": "Marketplace, Yellow",
@@ -53150,7 +54876,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MarketplaceYellow"
   },
   "MechTB15Black": {
     "DisplayName": "Mech, TB15, Black",
@@ -53171,7 +54898,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MechTB15Black"
   },
   "MechTB15Blue": {
     "DisplayName": "Mech, TB15, Blue",
@@ -53192,7 +54920,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MechTB15Blue"
   },
   "MechTB15Green": {
     "DisplayName": "Mech, TB15, Green",
@@ -53213,7 +54942,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MechTB15Green"
   },
   "MechTB15Orange": {
     "DisplayName": "Mech, TB15, Orange",
@@ -53234,7 +54964,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MechTB15Orange"
   },
   "MechTB15Purple": {
     "DisplayName": "Mech, TB15, Purple",
@@ -53255,7 +54986,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MechTB15Purple"
   },
   "MechTB15Red": {
     "DisplayName": "Mech, TB15, Red",
@@ -53276,7 +55008,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MechTB15Red"
   },
   "MechTB15White": {
     "DisplayName": "Mech, TB15, White",
@@ -53297,7 +55030,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MechTB15White"
   },
   "MechTB15Yellow": {
     "DisplayName": "Mech, TB15, Yellow",
@@ -53318,7 +55052,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MechTB15Yellow"
   },
   "Medic-CharacterMeeple": {
     "DisplayName": "Medic - Character Meeple",
@@ -53342,7 +55077,8 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/67F28894-8EBF-11E8-AE40-6DEF785DA8EE.png",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Medic-CharacterMeeple"
   },
   "MedicFantasyTB25": {
     "DisplayName": "Medic, Fantasy, TB25",
@@ -53365,7 +55101,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MedicFantasyTB25"
   },
   "MedievalCoin2": {
     "DisplayName": "Medieval Coin 2",
@@ -53429,7 +55166,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MedievalCoin2"
   },
   "MedievalCoin20": {
     "DisplayName": "Medieval Coin 20",
@@ -53493,7 +55231,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MedievalCoin20"
   },
   "MediumStoutBoxBlank": {
     "DisplayName": "Medium Stout Box, Blank",
@@ -53520,7 +55259,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MediumStoutBoxBlank"
   },
   "MeepleAcrylicOpaqueBlack": {
     "DisplayName": "Meeple, Acrylic, Opaque, Black",
@@ -53546,7 +55286,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleAcrylicOpaqueBlack"
   },
   "MeepleAcrylicOpaqueGold": {
     "DisplayName": "Meeple, Acrylic, Opaque, Gold",
@@ -53572,7 +55313,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleAcrylicOpaqueGold"
   },
   "MeepleAcrylicOpaqueSilver": {
     "DisplayName": "Meeple, Acrylic, Opaque, Silver",
@@ -53598,7 +55340,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleAcrylicOpaqueSilver"
   },
   "MeepleAcrylicOpaqueWhite": {
     "DisplayName": "Meeple, Acrylic, Opaque, White",
@@ -53624,7 +55367,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleAcrylicOpaqueWhite"
   },
   "MeepleAcrylicTransparentBlack": {
     "DisplayName": "Meeple, Acrylic, Transparent, Black",
@@ -53650,7 +55394,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleAcrylicTransparentBlack"
   },
   "MeepleAcrylicTransparentBlue": {
     "DisplayName": "Meeple, Acrylic, Transparent, Blue",
@@ -53676,7 +55421,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleAcrylicTransparentBlue"
   },
   "MeepleAcrylicTransparentClear": {
     "DisplayName": "Meeple, Acrylic, Transparent, Clear",
@@ -53702,7 +55448,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleAcrylicTransparentClear"
   },
   "MeepleAcrylicTransparentGreen": {
     "DisplayName": "Meeple, Acrylic, Transparent, Green",
@@ -53728,7 +55475,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleAcrylicTransparentGreen"
   },
   "MeepleAcrylicTransparentOrange": {
     "DisplayName": "Meeple, Acrylic, Transparent, Orange",
@@ -53754,7 +55502,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleAcrylicTransparentOrange"
   },
   "MeepleAcrylicTransparentPurple": {
     "DisplayName": "Meeple, Acrylic, Transparent, Purple",
@@ -53780,7 +55529,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleAcrylicTransparentPurple"
   },
   "MeepleAcrylicTransparentRed": {
     "DisplayName": "Meeple, Acrylic, Transparent, Red",
@@ -53806,7 +55556,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleAcrylicTransparentRed"
   },
   "MeepleAcrylicTransparentWhite": {
     "DisplayName": "Meeple, Acrylic, Transparent, White",
@@ -53832,7 +55583,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleAcrylicTransparentWhite"
   },
   "MeepleAcrylicTransparentYellow": {
     "DisplayName": "Meeple, Acrylic, Transparent, Yellow",
@@ -53868,7 +55620,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleAcrylicTransparentYellow"
   },
   "MeepleLargeAcrylicOpaqueBlack": {
     "DisplayName": "Meeple, Large, Acrylic, Opaque, Black",
@@ -53904,7 +55657,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeAcrylicOpaqueBlack"
   },
   "MeepleLargeAcrylicOpaqueGold": {
     "DisplayName": "Meeple, Large, Acrylic, Opaque, Gold",
@@ -53940,7 +55694,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeAcrylicOpaqueGold"
   },
   "MeepleLargeAcrylicOpaqueSilver": {
     "DisplayName": "Meeple, Large, Acrylic, Opaque, Silver",
@@ -53976,7 +55731,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeAcrylicOpaqueSilver"
   },
   "MeepleLargeAcrylicOpaqueWhite": {
     "DisplayName": "Meeple, Large, Acrylic, Opaque, White",
@@ -54012,7 +55768,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeAcrylicOpaqueWhite"
   },
   "MeepleLargeAcrylicTransparentBlack": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Black",
@@ -54048,7 +55805,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeAcrylicTransparentBlack"
   },
   "MeepleLargeAcrylicTransparentBlue": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Blue",
@@ -54084,7 +55842,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeAcrylicTransparentBlue"
   },
   "MeepleLargeAcrylicTransparentClear": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Clear",
@@ -54120,7 +55879,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeAcrylicTransparentClear"
   },
   "MeepleLargeAcrylicTransparentGreen": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Green",
@@ -54156,7 +55916,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeAcrylicTransparentGreen"
   },
   "MeepleLargeAcrylicTransparentOrange": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Orange",
@@ -54192,7 +55953,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeAcrylicTransparentOrange"
   },
   "MeepleLargeAcrylicTransparentPurple": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Purple",
@@ -54228,7 +55990,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeAcrylicTransparentPurple"
   },
   "MeepleLargeAcrylicTransparentRed": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Red",
@@ -54264,7 +56027,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeAcrylicTransparentRed"
   },
   "MeepleLargeAcrylicTransparentWhite": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, White",
@@ -54300,7 +56064,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeAcrylicTransparentWhite"
   },
   "MeepleLargeAcrylicTransparentYellow": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Yellow",
@@ -54336,7 +56101,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeAcrylicTransparentYellow"
   },
   "MeepleLargeWoodBlack": {
     "DisplayName": "Meeple, Large, Wood, Black",
@@ -54373,7 +56139,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeWoodBlack"
   },
   "MeepleLargeWoodBlue": {
     "DisplayName": "Meeple, Large, Wood, Blue",
@@ -54410,7 +56177,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeWoodBlue"
   },
   "MeepleLargeWoodGreen": {
     "DisplayName": "Meeple, Large, Wood, Green",
@@ -54447,7 +56215,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeWoodGreen"
   },
   "MeepleLargeWoodOrange": {
     "DisplayName": "Meeple, Large, Wood, Orange",
@@ -54484,7 +56253,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeWoodOrange"
   },
   "MeepleLargeWoodPurple": {
     "DisplayName": "Meeple, Large, Wood, Purple",
@@ -54521,7 +56291,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeWoodPurple"
   },
   "MeepleLargeWoodRed": {
     "DisplayName": "Meeple, Large, Wood, Red",
@@ -54558,7 +56329,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeWoodRed"
   },
   "MeepleLargeWoodWhite": {
     "DisplayName": "Meeple, Large, Wood, White",
@@ -54595,7 +56367,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeWoodWhite"
   },
   "MeepleLargeWoodYellow": {
     "DisplayName": "Meeple, Large, Wood, Yellow",
@@ -54632,7 +56405,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleLargeWoodYellow"
   },
   "MeepleMiniAcrylicOpaqueBlack": {
     "DisplayName": "Meeple, Mini, Acrylic, Opaque, Black",
@@ -54666,7 +56440,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniAcrylicOpaqueBlack"
   },
   "MeepleMiniAcrylicOpaqueGold": {
     "DisplayName": "Meeple, Mini, Acrylic, Opaque, Gold",
@@ -54700,7 +56475,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniAcrylicOpaqueGold"
   },
   "MeepleMiniAcrylicOpaqueSilver": {
     "DisplayName": "Meeple, Mini, Acrylic, Opaque, Silver",
@@ -54734,7 +56510,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniAcrylicOpaqueSilver"
   },
   "MeepleMiniAcrylicOpaqueWhite": {
     "DisplayName": "Meeple, Mini, Acrylic, Opaque, White",
@@ -54768,7 +56545,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniAcrylicOpaqueWhite"
   },
   "MeepleMiniAcrylicTransparentBlack": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Black",
@@ -54802,7 +56580,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniAcrylicTransparentBlack"
   },
   "MeepleMiniAcrylicTransparentBlue": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Blue",
@@ -54836,7 +56615,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniAcrylicTransparentBlue"
   },
   "MeepleMiniAcrylicTransparentClear": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Clear",
@@ -54870,7 +56650,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniAcrylicTransparentClear"
   },
   "MeepleMiniAcrylicTransparentGreen": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Green",
@@ -54904,7 +56685,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniAcrylicTransparentGreen"
   },
   "MeepleMiniAcrylicTransparentOrange": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Orange",
@@ -54938,7 +56720,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniAcrylicTransparentOrange"
   },
   "MeepleMiniAcrylicTransparentPurple": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Purple",
@@ -54972,7 +56755,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniAcrylicTransparentPurple"
   },
   "MeepleMiniAcrylicTransparentRed": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Red",
@@ -55006,7 +56790,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniAcrylicTransparentRed"
   },
   "MeepleMiniAcrylicTransparentYellow": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Yellow",
@@ -55040,7 +56825,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniAcrylicTransparentYellow"
   },
   "MeepleMiniWoodBlack": {
     "DisplayName": "Meeple, Mini, Wood, Black",
@@ -55075,7 +56861,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniWoodBlack"
   },
   "MeepleMiniWoodBlue": {
     "DisplayName": "Meeple, Mini, Wood, Blue",
@@ -55110,7 +56897,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniWoodBlue"
   },
   "MeepleMiniWoodGreen": {
     "DisplayName": "Meeple, Mini, Wood, Green",
@@ -55145,7 +56933,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniWoodGreen"
   },
   "MeepleMiniWoodOrange": {
     "DisplayName": "Meeple, Mini, Wood, Orange",
@@ -55180,7 +56969,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniWoodOrange"
   },
   "MeepleMiniWoodPurple": {
     "DisplayName": "Meeple, Mini, Wood, Purple",
@@ -55215,7 +57005,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniWoodPurple"
   },
   "MeepleMiniWoodRed": {
     "DisplayName": "Meeple, Mini, Wood, Red",
@@ -55250,7 +57041,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniWoodRed"
   },
   "MeepleMiniWoodWhite": {
     "DisplayName": "Meeple, Mini, Wood, White",
@@ -55285,7 +57077,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniWoodWhite"
   },
   "MeepleMiniWoodYellow": {
     "DisplayName": "Meeple, Mini, Wood, Yellow",
@@ -55320,7 +57113,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleMiniWoodYellow"
   },
   "MeepleThickBlue": {
     "DisplayName": "Meeple, Thick, Blue",
@@ -55354,7 +57148,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleThickBlue"
   },
   "MeepleThickOrange": {
     "DisplayName": "Meeple, Thick, Orange",
@@ -55388,7 +57183,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleThickOrange"
   },
   "MeepleThickPurple": {
     "DisplayName": "Meeple, Thick, Purple",
@@ -55422,7 +57218,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleThickPurple"
   },
   "MeepleThickRed": {
     "DisplayName": "Meeple, Thick, Red",
@@ -55456,7 +57253,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleThickRed"
   },
   "MeepleThickTeal": {
     "DisplayName": "Meeple, Thick, Teal",
@@ -55491,7 +57289,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "teal",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleThickTeal"
   },
   "MeepleThickYellow": {
     "DisplayName": "Meeple, Thick, Yellow",
@@ -55525,7 +57324,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleThickYellow"
   },
   "MeepleWoodBlack": {
     "DisplayName": "Meeple, Wood, Black",
@@ -55560,7 +57360,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleWoodBlack"
   },
   "MeepleWoodBlue": {
     "DisplayName": "Meeple, Wood, Blue",
@@ -55595,7 +57396,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleWoodBlue"
   },
   "MeepleWoodGreen": {
     "DisplayName": "Meeple, Wood, Green",
@@ -55630,7 +57432,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleWoodGreen"
   },
   "MeepleWoodOrange": {
     "DisplayName": "Meeple, Wood, Orange",
@@ -55665,7 +57468,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleWoodOrange"
   },
   "MeepleWoodPurple": {
     "DisplayName": "Meeple, Wood, Purple",
@@ -55700,7 +57504,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleWoodPurple"
   },
   "MeepleWoodRed": {
     "DisplayName": "Meeple, Wood, Red",
@@ -55735,7 +57540,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleWoodRed"
   },
   "MeepleWoodWhite": {
     "DisplayName": "Meeple, Wood, White",
@@ -55770,7 +57576,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleWoodWhite"
   },
   "MeepleWoodYellow": {
     "DisplayName": "Meeple, Wood, Yellow",
@@ -55805,7 +57612,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MeepleWoodYellow"
   },
   "MermaidFantasyTB25": {
     "DisplayName": "Mermaid, Fantasy, TB25",
@@ -55829,7 +57637,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MermaidFantasyTB25"
   },
   "MineBlack": {
     "DisplayName": "Mine, Black",
@@ -55851,7 +57660,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MineBlack"
   },
   "MineBlue": {
     "DisplayName": "Mine, Blue",
@@ -55873,7 +57683,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MineBlue"
   },
   "MineGreen": {
     "DisplayName": "Mine, Green",
@@ -55895,7 +57706,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MineGreen"
   },
   "MineOrange": {
     "DisplayName": "Mine, Orange",
@@ -55917,7 +57729,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MineOrange"
   },
   "MinePurple": {
     "DisplayName": "Mine, Purple",
@@ -55939,7 +57752,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MinePurple"
   },
   "MineRed": {
     "DisplayName": "Mine, Red",
@@ -55961,7 +57775,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MineRed"
   },
   "MineWhite": {
     "DisplayName": "Mine, White",
@@ -55983,7 +57798,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MineWhite"
   },
   "MineYellow": {
     "DisplayName": "Mine, Yellow",
@@ -56005,7 +57821,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MineYellow"
   },
   "MiniSleevePack(100)": {
     "DisplayName": "Mini Sleeve Pack (100)",
@@ -56033,7 +57850,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MiniSleevePack(100)"
   },
   "MiniStorageBoxPurple": {
     "DisplayName": "Mini Storage Box, Purple",
@@ -56062,7 +57880,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "purple",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "MiniStorageBoxPurple"
   },
   "MiniatureBase25mmHexBlack": {
     "DisplayName": "Miniature Base, 25mm Hex, Black",
@@ -56085,7 +57904,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MiniatureBase25mmHexBlack"
   },
   "MiniatureBase25mmHexBlue": {
     "DisplayName": "Miniature Base, 25mm Hex, Blue",
@@ -56108,7 +57928,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MiniatureBase25mmHexBlue"
   },
   "MiniatureBase25mmHexGreen": {
     "DisplayName": "Miniature Base, 25mm Hex, Green",
@@ -56131,7 +57952,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MiniatureBase25mmHexGreen"
   },
   "MiniatureBase25mmHexOrange": {
     "DisplayName": "Miniature Base, 25mm Hex, Orange",
@@ -56154,7 +57976,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MiniatureBase25mmHexOrange"
   },
   "MiniatureBase25mmHexPurple": {
     "DisplayName": "Miniature Base, 25mm Hex, Purple",
@@ -56177,7 +58000,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MiniatureBase25mmHexPurple"
   },
   "MiniatureBase25mmHexRed": {
     "DisplayName": "Miniature Base, 25mm Hex, Red",
@@ -56200,7 +58024,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MiniatureBase25mmHexRed"
   },
   "MiniatureBase25mmHexWhite": {
     "DisplayName": "Miniature Base, 25mm Hex, White",
@@ -56223,7 +58048,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MiniatureBase25mmHexWhite"
   },
   "MiniatureBase25mmHexYellow": {
     "DisplayName": "Miniature Base, 25mm Hex, Yellow",
@@ -56246,7 +58072,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MiniatureBase25mmHexYellow"
   },
   "MinotaurwithBattleAxe": {
     "DisplayName": "Minotaur with Battle Axe",
@@ -56285,7 +58112,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MinotaurwithBattleAxe"
   },
   "MintTin": {
     "DisplayName": "Mint Tin",
@@ -56307,7 +58135,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MintTin"
   },
   "MintTinRibbon": {
     "DisplayName": "Mint Tin Ribbon",
@@ -56328,7 +58157,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MintTinRibbon"
   },
   "MintTinTall": {
     "DisplayName": "Mint Tin, Tall",
@@ -56349,7 +58179,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MintTinTall"
   },
   "MissionaryLargeBlue": {
     "DisplayName": "Missionary, Large, Blue",
@@ -56389,7 +58220,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MissionaryLargeBlue"
   },
   "MissionaryLargeGreen": {
     "DisplayName": "Missionary, Large, Green",
@@ -56429,7 +58261,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MissionaryLargeGreen"
   },
   "MissionaryLargeOrange": {
     "DisplayName": "Missionary, Large, Orange",
@@ -56469,7 +58302,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MissionaryLargeOrange"
   },
   "MissionaryLargeRed": {
     "DisplayName": "Missionary, Large, Red",
@@ -56509,7 +58343,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MissionaryLargeRed"
   },
   "MissionaryLargeYellow": {
     "DisplayName": "Missionary, Large, Yellow",
@@ -56549,7 +58384,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MissionaryLargeYellow"
   },
   "MoneyPackOrange": {
     "DisplayName": "Money Pack, Orange",
@@ -56593,7 +58429,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MoneyPackOrange"
   },
   "MoneyPackPink": {
     "DisplayName": "Money Pack, Pink",
@@ -56637,7 +58474,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MoneyPackPink"
   },
   "Mongol-CharacterMeeple": {
     "DisplayName": "Mongol - Character Meeple",
@@ -56679,7 +58517,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Mongol-CharacterMeeple"
   },
   "MonkFantasyTB25": {
     "DisplayName": "Monk, Fantasy, TB25",
@@ -56700,7 +58539,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MonkFantasyTB25"
   },
   "MotorBoatBlack": {
     "DisplayName": "Motor Boat, Black",
@@ -56722,7 +58562,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MotorBoatBlack"
   },
   "MotorBoatBlue": {
     "DisplayName": "Motor Boat, Blue",
@@ -56744,7 +58585,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MotorBoatBlue"
   },
   "MotorBoatGreen": {
     "DisplayName": "Motor Boat, Green",
@@ -56766,7 +58608,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MotorBoatGreen"
   },
   "MotorBoatOrange": {
     "DisplayName": "Motor Boat, Orange",
@@ -56788,7 +58631,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MotorBoatOrange"
   },
   "MotorBoatPurple": {
     "DisplayName": "Motor Boat, Purple",
@@ -56810,7 +58654,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MotorBoatPurple"
   },
   "MotorBoatRed": {
     "DisplayName": "Motor Boat, Red",
@@ -56832,7 +58677,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MotorBoatRed"
   },
   "MotorBoatWhite": {
     "DisplayName": "Motor Boat, White",
@@ -56854,7 +58700,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MotorBoatWhite"
   },
   "MotorBoatYellow": {
     "DisplayName": "Motor Boat, Yellow",
@@ -56876,7 +58723,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MotorBoatYellow"
   },
   "MotorcycleBlack": {
     "DisplayName": "Motorcycle, Black",
@@ -56895,7 +58743,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MotorcycleBlack"
   },
   "MotorcycleBlue": {
     "DisplayName": "Motorcycle, Blue",
@@ -56914,7 +58763,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MotorcycleBlue"
   },
   "MotorcycleGreen": {
     "DisplayName": "Motorcycle, Green",
@@ -56933,7 +58783,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MotorcycleGreen"
   },
   "MotorcycleOrange": {
     "DisplayName": "Motorcycle, Orange",
@@ -56952,7 +58803,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MotorcycleOrange"
   },
   "MotorcyclePurple": {
     "DisplayName": "Motorcycle, Purple",
@@ -56971,7 +58823,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MotorcyclePurple"
   },
   "MotorcycleRed": {
     "DisplayName": "Motorcycle, Red",
@@ -56990,7 +58843,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MotorcycleRed"
   },
   "MotorcycleWhite": {
     "DisplayName": "Motorcycle, White",
@@ -57009,7 +58863,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MotorcycleWhite"
   },
   "MotorcycleYellow": {
     "DisplayName": "Motorcycle, Yellow",
@@ -57028,7 +58883,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MotorcycleYellow"
   },
   "MouseAcrylic": {
     "DisplayName": "Mouse, Acrylic",
@@ -57055,7 +58911,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MouseAcrylic"
   },
   "MouseWoodGray": {
     "DisplayName": "Mouse, Wood, Gray",
@@ -57083,7 +58940,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MouseWoodGray"
   },
   "MuscleCarPostApocalypse": {
     "DisplayName": "Muscle Car, Post Apocalypse",
@@ -57098,7 +58956,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MuscleCarPostApocalypse"
   },
   "MushroomCloud": {
     "DisplayName": "Mushroom Cloud",
@@ -57124,7 +58983,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MushroomCloud"
   },
   "Musketeer": {
     "DisplayName": "Musketeer",
@@ -57144,7 +59004,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "gray",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Musketeer"
   },
   "NinjaBlack-CharacterMeeple": {
     "DisplayName": "Ninja, Black - Character Meeple",
@@ -57179,7 +59040,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NinjaBlack-CharacterMeeple"
   },
   "NinjaBlue-CharacterMeeple": {
     "DisplayName": "Ninja, Blue - Character Meeple",
@@ -57214,7 +59076,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NinjaBlue-CharacterMeeple"
   },
   "NinjaBrown": {
     "DisplayName": "Ninja, Brown",
@@ -57248,7 +59111,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NinjaBrown"
   },
   "NinjaGreen-CharacterMeeple": {
     "DisplayName": "Ninja, Green - Character Meeple",
@@ -57283,7 +59147,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NinjaGreen-CharacterMeeple"
   },
   "NinjaOrange": {
     "DisplayName": "Ninja, Orange",
@@ -57317,7 +59182,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NinjaOrange"
   },
   "NinjaOrange-CharacterMeeple": {
     "DisplayName": "Ninja, Orange - Character Meeple",
@@ -57352,7 +59218,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NinjaOrange-CharacterMeeple"
   },
   "NinjaPurple-CharacterMeeple": {
     "DisplayName": "Ninja, Purple - Character Meeple",
@@ -57387,7 +59254,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NinjaPurple-CharacterMeeple"
   },
   "NinjaRed-CharacterMeeple": {
     "DisplayName": "Ninja, Red - Character Meeple",
@@ -57422,7 +59290,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NinjaRed-CharacterMeeple"
   },
   "NinjaWhite-CharacterMeeple": {
     "DisplayName": "Ninja, White - Character Meeple",
@@ -57457,7 +59326,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NinjaWhite-CharacterMeeple"
   },
   "NinjaYellow-CharacterMeeple": {
     "DisplayName": "Ninja, Yellow - Character Meeple",
@@ -57492,7 +59362,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NinjaYellow-CharacterMeeple"
   },
   "NobleBlue": {
     "DisplayName": "Noble, Blue",
@@ -57529,7 +59400,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NobleBlue"
   },
   "NobleGreen": {
     "DisplayName": "Noble, Green",
@@ -57566,7 +59438,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NobleGreen"
   },
   "NobleRed": {
     "DisplayName": "Noble, Red",
@@ -57603,7 +59476,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NobleRed"
   },
   "NobleWhite": {
     "DisplayName": "Noble, White",
@@ -57640,7 +59514,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NobleWhite"
   },
   "NobleYellow": {
     "DisplayName": "Noble, Yellow",
@@ -57677,7 +59552,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NobleYellow"
   },
   "NorseMaidenFantasyTB25": {
     "DisplayName": "Norse Maiden, Fantasy, TB25",
@@ -57697,7 +59573,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NorseMaidenFantasyTB25"
   },
   "Notepad": {
     "DisplayName": "Notepad",
@@ -57725,7 +59602,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Notepad"
   },
   "NothicFantasyTB25": {
     "DisplayName": "Nothic, Fantasy, TB25",
@@ -57749,7 +59627,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NothicFantasyTB25"
   },
   "NoticeBoard": {
     "DisplayName": "Notice Board",
@@ -57767,7 +59646,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NoticeBoard"
   },
   "NuclearSymbol": {
     "DisplayName": "Nuclear Symbol",
@@ -57802,7 +59682,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "NuclearSymbol"
   },
   "Nurse-CharacterMeeple": {
     "DisplayName": "Nurse - Character Meeple",
@@ -57828,7 +59709,8 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7DFC0006-8EC0-11E8-BCE8-14F2785DA8EE.png",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Nurse-CharacterMeeple"
   },
   "ObeliskTB25": {
     "DisplayName": "Obelisk, TB25",
@@ -57847,7 +59729,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ObeliskTB25"
   },
   "ObservatoryBlack": {
     "DisplayName": "Observatory, Black",
@@ -57866,7 +59749,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ObservatoryBlack"
   },
   "ObservatoryBlue": {
     "DisplayName": "Observatory, Blue",
@@ -57885,7 +59769,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ObservatoryBlue"
   },
   "ObservatoryGreen": {
     "DisplayName": "Observatory, Green",
@@ -57904,7 +59789,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ObservatoryGreen"
   },
   "ObservatoryOrange": {
     "DisplayName": "Observatory, Orange",
@@ -57923,7 +59809,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ObservatoryOrange"
   },
   "ObservatoryPurple": {
     "DisplayName": "Observatory, Purple",
@@ -57942,7 +59829,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ObservatoryPurple"
   },
   "ObservatoryRed": {
     "DisplayName": "Observatory, Red",
@@ -57961,7 +59849,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ObservatoryRed"
   },
   "ObservatoryWhite": {
     "DisplayName": "Observatory, White",
@@ -57980,7 +59869,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ObservatoryWhite"
   },
   "ObservatoryYellow": {
     "DisplayName": "Observatory, Yellow",
@@ -57999,7 +59889,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ObservatoryYellow"
   },
   "Octbox10mmBlack": {
     "DisplayName": "Octbox, 10mm, Black",
@@ -58026,7 +59917,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Octbox10mmBlack"
   },
   "Octbox10mmBlue": {
     "DisplayName": "Octbox, 10mm, Blue",
@@ -58053,7 +59945,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Octbox10mmBlue"
   },
   "Octbox10mmGreen": {
     "DisplayName": "Octbox, 10mm, Green",
@@ -58080,7 +59973,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Octbox10mmGreen"
   },
   "Octbox10mmOrange": {
     "DisplayName": "Octbox, 10mm, Orange",
@@ -58107,7 +60001,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Octbox10mmOrange"
   },
   "Octbox10mmPurple": {
     "DisplayName": "Octbox, 10mm, Purple",
@@ -58134,7 +60029,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Octbox10mmPurple"
   },
   "Octbox10mmRed": {
     "DisplayName": "Octbox, 10mm, Red",
@@ -58161,7 +60057,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Octbox10mmRed"
   },
   "Octbox10mmWhite": {
     "DisplayName": "Octbox, 10mm, White",
@@ -58188,7 +60085,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Octbox10mmWhite"
   },
   "Octbox10mmYellow": {
     "DisplayName": "Octbox, 10mm, Yellow",
@@ -58215,7 +60113,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Octbox10mmYellow"
   },
   "Octbox7mmBlue": {
     "DisplayName": "Octbox, 10mm x 7mm, Blue",
@@ -58242,7 +60141,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Octbox7mmBlue"
   },
   "Octbox7mmGray": {
     "DisplayName": "Octbox, 10mm x 7mm, Gray",
@@ -58269,7 +60169,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Octbox7mmGray"
   },
   "Octbox7mmPurple": {
     "DisplayName": "Octbox, 10mm x 7mm, Purple",
@@ -58296,7 +60197,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Octbox7mmPurple"
   },
   "Octbox7mmYellow": {
     "DisplayName": "Octbox, 7mm, Yellow",
@@ -58323,7 +60225,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Octbox7mmYellow"
   },
   "OfficeWorkerBlue-CharacterMeeple": {
     "DisplayName": "Office Worker, Blue - Character Meeple",
@@ -58354,7 +60257,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "OfficeWorkerBlue-CharacterMeeple"
   },
   "OfficeWorkerPurple-CharacterMeeple": {
     "DisplayName": "Office Worker, Purple - Character Meeple",
@@ -58385,7 +60289,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "OfficeWorkerPurple-CharacterMeeple"
   },
   "OgrewithClub&Shield": {
     "DisplayName": "Ogre with Club & Shield",
@@ -58420,7 +60325,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "OgrewithClub&Shield"
   },
   "OgreFantasyTB25": {
     "DisplayName": "Ogre, Fantasy, TB25",
@@ -58441,7 +60347,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "OgreFantasyTB25"
   },
   "OilBarrel": {
     "DisplayName": "Oil Barrel",
@@ -58473,7 +60380,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "OilBarrel"
   },
   "OilDrumWoodBlue": {
     "DisplayName": "Oil Drum, Wood, Blue",
@@ -58505,7 +60413,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "OilDrumWoodBlue"
   },
   "OldWestCoinBronze": {
     "DisplayName": "Old West Coin, Bronze",
@@ -58520,7 +60429,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "OldWestCoinBronze"
   },
   "OldWestCoinGold": {
     "DisplayName": "Old West Coin, Gold",
@@ -58535,7 +60445,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "OldWestCoinGold"
   },
   "OldWestCoinSilver": {
     "DisplayName": "Old West Coin, Silver",
@@ -58550,7 +60461,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "OldWestCoinSilver"
   },
   "OpossumDruidFantasyTB25": {
     "DisplayName": "Opossum Druid, Fantasy, TB25",
@@ -58567,7 +60479,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "OpossumDruidFantasyTB25"
   },
   "OrcScimitarFantasyTB25": {
     "DisplayName": "Orc Scimitar, Fantasy, TB25",
@@ -58588,7 +60501,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "OrcScimitarFantasyTB25"
   },
   "OrcShamanFantasyTB25": {
     "DisplayName": "Orc Shaman, Fantasy, TB25",
@@ -58609,7 +60523,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "OrcShamanFantasyTB25"
   },
   "Outlaw-CharacterMeeple": {
     "DisplayName": "Outlaw - Character Meeple",
@@ -58648,7 +60563,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Outlaw-CharacterMeeple"
   },
   "OwlbearFantasyTB50": {
     "DisplayName": "Owlbear, Fantasy, TB50",
@@ -58667,7 +60583,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "OwlbearFantasyTB50"
   },
   "PadlockKeyBlack": {
     "DisplayName": "Padlock Key, Black",
@@ -58699,7 +60616,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockKeyBlack"
   },
   "PadlockKeyBlue": {
     "DisplayName": "Padlock Key, Blue",
@@ -58731,7 +60649,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockKeyBlue"
   },
   "PadlockKeyGreen": {
     "DisplayName": "Padlock Key, Green",
@@ -58763,7 +60682,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockKeyGreen"
   },
   "PadlockKeyOrange": {
     "DisplayName": "Padlock Key, Orange",
@@ -58795,7 +60715,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockKeyOrange"
   },
   "PadlockKeyPurple": {
     "DisplayName": "Padlock Key, Purple",
@@ -58827,7 +60748,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockKeyPurple"
   },
   "PadlockKeyRed": {
     "DisplayName": "Padlock Key, Red",
@@ -58859,7 +60781,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockKeyRed"
   },
   "PadlockKeyWhite": {
     "DisplayName": "Padlock Key, White",
@@ -58891,7 +60814,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockKeyWhite"
   },
   "PadlockKeyYellow": {
     "DisplayName": "Padlock Key, Yellow",
@@ -58923,7 +60847,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockKeyYellow"
   },
   "PadlockLockedBlack": {
     "DisplayName": "Padlock, Locked, Black",
@@ -58955,7 +60880,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockLockedBlack"
   },
   "PadlockLockedBlue": {
     "DisplayName": "Padlock, Locked, Blue",
@@ -58987,7 +60913,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockLockedBlue"
   },
   "PadlockLockedGreen": {
     "DisplayName": "Padlock, Locked, Green",
@@ -59019,7 +60946,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockLockedGreen"
   },
   "PadlockLockedOrange": {
     "DisplayName": "Padlock, Locked, Orange",
@@ -59051,7 +60979,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockLockedOrange"
   },
   "PadlockLockedPurple": {
     "DisplayName": "Padlock, Locked, Purple",
@@ -59083,7 +61012,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockLockedPurple"
   },
   "PadlockLockedRed": {
     "DisplayName": "Padlock, Locked, Red",
@@ -59115,7 +61045,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockLockedRed"
   },
   "PadlockLockedWhite": {
     "DisplayName": "Padlock, Locked, White",
@@ -59147,7 +61078,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockLockedWhite"
   },
   "PadlockLockedYellow": {
     "DisplayName": "Padlock, Locked, Yellow",
@@ -59179,7 +61111,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockLockedYellow"
   },
   "PadlockUnlockedBlack": {
     "DisplayName": "Padlock, Unlocked, Black",
@@ -59211,7 +61144,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockUnlockedBlack"
   },
   "PadlockUnlockedBlue": {
     "DisplayName": "Padlock, Unlocked, Blue",
@@ -59243,7 +61177,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockUnlockedBlue"
   },
   "PadlockUnlockedGreen": {
     "DisplayName": "Padlock, Unlocked, Green",
@@ -59275,7 +61210,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockUnlockedGreen"
   },
   "PadlockUnlockedOrange": {
     "DisplayName": "Padlock, Unlocked, Orange",
@@ -59307,7 +61243,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockUnlockedOrange"
   },
   "PadlockUnlockedPurple": {
     "DisplayName": "Padlock, Unlocked, Purple",
@@ -59339,7 +61276,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockUnlockedPurple"
   },
   "PadlockUnlockedRed": {
     "DisplayName": "Padlock, Unlocked, Red",
@@ -59371,7 +61309,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockUnlockedRed"
   },
   "PadlockUnlockedWhite": {
     "DisplayName": "Padlock, Unlocked, White",
@@ -59403,7 +61342,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockUnlockedWhite"
   },
   "PadlockUnlockedYellow": {
     "DisplayName": "Padlock, Unlocked, Yellow",
@@ -59435,7 +61375,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PadlockUnlockedYellow"
   },
   "PaperMiniatureBaseSquare20mm": {
     "DisplayName": "Paper Miniature Base Square, 20mm",
@@ -59458,7 +61399,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PaperMiniatureBaseSquare20mm"
   },
   "PaperMiniatureBase20mmAngled": {
     "DisplayName": "Paper Miniature Base, 20mm, Angled",
@@ -59481,7 +61423,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PaperMiniatureBase20mmAngled"
   },
   "PaperMiniatureBase25mmBlack": {
     "DisplayName": "Paper Miniature Base, 25mm, Black",
@@ -59504,7 +61447,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PaperMiniatureBase25mmBlack"
   },
   "PaperMiniatureBase25mmBlue": {
     "DisplayName": "Paper Miniature Base, 25mm, Blue",
@@ -59527,7 +61471,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PaperMiniatureBase25mmBlue"
   },
   "PaperMiniatureBase25mmClear": {
     "DisplayName": "Paper Miniature Base, 25mm, Clear",
@@ -59550,7 +61495,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PaperMiniatureBase25mmClear"
   },
   "PaperMiniatureBase25mmGreen": {
     "DisplayName": "Paper Miniature Base, 25mm, Green",
@@ -59573,7 +61519,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PaperMiniatureBase25mmGreen"
   },
   "PaperMiniatureBase25mmOrange": {
     "DisplayName": "Paper Miniature Base, 25mm, Orange",
@@ -59596,7 +61543,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PaperMiniatureBase25mmOrange"
   },
   "PaperMiniatureBase25mmPurple": {
     "DisplayName": "Paper Miniature Base, 25mm, Purple",
@@ -59619,7 +61567,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PaperMiniatureBase25mmPurple"
   },
   "PaperMiniatureBase25mmRed": {
     "DisplayName": "Paper Miniature Base, 25mm, Red",
@@ -59642,7 +61591,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PaperMiniatureBase25mmRed"
   },
   "PaperMiniatureBase25mmWhite": {
     "DisplayName": "Paper Miniature Base, 25mm, White",
@@ -59665,7 +61615,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PaperMiniatureBase25mmWhite"
   },
   "PaperMiniatureBase25mmYellow": {
     "DisplayName": "Paper Miniature Base, 25mm, Yellow",
@@ -59688,7 +61639,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PaperMiniatureBase25mmYellow"
   },
   "PaperMiniatureFormationTray20mm10x4": {
     "DisplayName": "Paper Miniature Formation Tray, 20mm, 10 x 4",
@@ -59711,7 +61663,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PaperMiniatureFormationTray20mm10x4"
   },
   "PaperMiniatureFormationTray20mm5x2": {
     "DisplayName": "Paper Miniature Formation Tray, 20mm, 5 x 2",
@@ -59734,7 +61687,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PaperMiniatureFormationTray20mm5x2"
   },
   "PaperMiniatureFormationTray20mm5x2Angled": {
     "DisplayName": "Paper Miniature Formation Tray, 20mm, 5 x 2, Angled",
@@ -59757,7 +61711,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PaperMiniatureFormationTray20mm5x2Angled"
   },
   "PaperMiniatureFormationTray20mm5x4": {
     "DisplayName": "Paper Miniature Formation Tray, 20mm, 5 x 4",
@@ -59780,7 +61735,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PaperMiniatureFormationTray20mm5x4"
   },
   "PaperMiniatureFormationTray20mm5x4Angled": {
     "DisplayName": "Paper Miniature Formation Tray, 20mm, 5 x 4, Angled",
@@ -59803,7 +61759,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PaperMiniatureFormationTray20mm5x4Angled"
   },
   "PartsBagFancyGold": {
     "DisplayName": "Parts Bag, Fancy, Gold",
@@ -59831,7 +61788,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagFancyGold"
   },
   "PartsBagFancySilver": {
     "DisplayName": "Parts Bag, Fancy, Silver",
@@ -59859,7 +61817,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagFancySilver"
   },
   "PartsBagLargeBlack": {
     "DisplayName": "Parts Bag, Large, Black",
@@ -59887,7 +61846,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagLargeBlack"
   },
   "PartsBagLargeBlue": {
     "DisplayName": "Parts Bag, Large, Blue",
@@ -59915,7 +61875,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagLargeBlue"
   },
   "PartsBagLargeRed": {
     "DisplayName": "Parts Bag, Large, Red",
@@ -59943,7 +61904,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagLargeRed"
   },
   "PartsBagMediumBlack": {
     "DisplayName": "Parts Bag, Medium, Black",
@@ -59971,7 +61933,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagMediumBlack"
   },
   "PartsBagMediumBlue": {
     "DisplayName": "Parts Bag, Medium, Blue",
@@ -59999,7 +61962,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagMediumBlue"
   },
   "PartsBagMediumBrown": {
     "DisplayName": "Parts Bag, Medium, Brown",
@@ -60027,7 +61991,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagMediumBrown"
   },
   "PartsBagMediumGreen": {
     "DisplayName": "Parts Bag, Medium, Green",
@@ -60055,7 +62020,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagMediumGreen"
   },
   "PartsBagMediumGray": {
     "DisplayName": "Parts Bag, Medium, Gray",
@@ -60083,7 +62049,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagMediumGray"
   },
   "PartsBagMediumPurple": {
     "DisplayName": "Parts Bag, Medium, Purple",
@@ -60111,7 +62078,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagMediumPurple"
   },
   "PartsBagMediumRed": {
     "DisplayName": "Parts Bag, Medium, Red",
@@ -60139,7 +62107,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagMediumRed"
   },
   "PartsBagSmallBlack": {
     "DisplayName": "Parts Bag, Small, Black",
@@ -60167,7 +62136,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagSmallBlack"
   },
   "PartsBagSmallBlue": {
     "DisplayName": "Parts Bag, Small, Blue",
@@ -60195,7 +62165,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagSmallBlue"
   },
   "PartsBagSmallBrown": {
     "DisplayName": "Parts Bag, Small, Brown",
@@ -60223,7 +62194,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagSmallBrown"
   },
   "PartsBagSmallGray": {
     "DisplayName": "Parts Bag, Small, Gray",
@@ -60251,7 +62223,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagSmallGray"
   },
   "PartsBagSmallGreen": {
     "DisplayName": "Parts Bag, Small, Green",
@@ -60279,7 +62252,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagSmallGreen"
   },
   "PartsBagSmallPurple": {
     "DisplayName": "Parts Bag, Small, Purple",
@@ -60307,7 +62281,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagSmallPurple"
   },
   "PartsBagSmallRed": {
     "DisplayName": "Parts Bag, Small, Red",
@@ -60335,7 +62310,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagSmallRed"
   },
   "PartsBagTallBlack": {
     "DisplayName": "Parts Bag, Tall, Black",
@@ -60363,7 +62339,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagTallBlack"
   },
   "PartsBowl70mm": {
     "DisplayName": "Parts Bowl, 70mm",
@@ -60389,7 +62366,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBowl70mm"
   },
   "PartsTray": {
     "DisplayName": "Parts Tray",
@@ -60411,7 +62389,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsTray"
   },
   "PeasantPurple": {
     "DisplayName": "Peasant, Purple",
@@ -60441,7 +62420,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PeasantPurple"
   },
   "PegPawnBlack": {
     "DisplayName": "Peg Pawn, Black",
@@ -60463,7 +62443,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PegPawnBlack"
   },
   "PegPawnBlue": {
     "DisplayName": "Peg Pawn, Blue",
@@ -60485,7 +62466,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PegPawnBlue"
   },
   "PegPawnGreen": {
     "DisplayName": "Peg Pawn, Green",
@@ -60507,7 +62489,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PegPawnGreen"
   },
   "PegPawnOrange": {
     "DisplayName": "Peg Pawn, Orange",
@@ -60529,7 +62512,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PegPawnOrange"
   },
   "PegPawnPurple": {
     "DisplayName": "Peg Pawn, Purple",
@@ -60551,7 +62535,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PegPawnPurple"
   },
   "PegPawnRed": {
     "DisplayName": "Peg Pawn, Red",
@@ -60573,7 +62558,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PegPawnRed"
   },
   "PegPawnWhite": {
     "DisplayName": "Peg Pawn, White",
@@ -60595,7 +62581,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PegPawnWhite"
   },
   "PegPawnYellow": {
     "DisplayName": "Peg Pawn, Yellow",
@@ -60617,7 +62604,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PegPawnYellow"
   },
   "Pencil": {
     "DisplayName": "Pencil",
@@ -60644,7 +62632,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Pencil"
   },
   "Pentagram": {
     "DisplayName": "Pentagram",
@@ -60663,7 +62652,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Pentagram"
   },
   "PeopleBlack": {
     "DisplayName": "People, Black",
@@ -60690,7 +62680,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PeopleBlack"
   },
   "PeopleBlue": {
     "DisplayName": "People, Blue",
@@ -60717,7 +62708,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PeopleBlue"
   },
   "PeopleGreen": {
     "DisplayName": "People, Green",
@@ -60744,7 +62736,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PeopleGreen"
   },
   "PeopleOrange": {
     "DisplayName": "People, Orange",
@@ -60771,7 +62764,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PeopleOrange"
   },
   "PeoplePurple": {
     "DisplayName": "People, Purple",
@@ -60798,7 +62792,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PeoplePurple"
   },
   "PeopleRed": {
     "DisplayName": "People, Red",
@@ -60825,7 +62820,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PeopleRed"
   },
   "PeopleThickGreen": {
     "DisplayName": "People, Thick, Green",
@@ -60852,7 +62848,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PeopleThickGreen"
   },
   "PeopleThickPurple": {
     "DisplayName": "People, Thick, Purple",
@@ -60879,7 +62876,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PeopleThickPurple"
   },
   "PeopleWhite": {
     "DisplayName": "People, White",
@@ -60906,7 +62904,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PeopleWhite"
   },
   "PeopleYellow": {
     "DisplayName": "People, Yellow",
@@ -60933,7 +62932,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PeopleYellow"
   },
   "PerniciousPuzzle#1": {
     "DisplayName": "Pernicious Puzzle #1",
@@ -60951,7 +62951,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "PerniciousPuzzle#1"
   },
   "PersonwithHatTeal": {
     "DisplayName": "Person with Hat, Teal",
@@ -60986,7 +62987,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "teal",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PersonwithHatTeal"
   },
   "PigMiniBlackandWhite": {
     "DisplayName": "Pig, Mini, Black and White",
@@ -61018,7 +63020,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PigMiniBlackandWhite"
   },
   "PigMiniBrown": {
     "DisplayName": "Pig, Mini, Brown",
@@ -61050,7 +63053,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PigMiniBrown"
   },
   "PigMiniPink": {
     "DisplayName": "Pig, Mini, Pink",
@@ -61082,7 +63086,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PigMiniPink"
   },
   "PigTB15Black": {
     "DisplayName": "Pig, TB15, Black",
@@ -61104,7 +63109,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PigTB15Black"
   },
   "PigTB15Blue": {
     "DisplayName": "Pig, TB15, Blue",
@@ -61126,7 +63132,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PigTB15Blue"
   },
   "PigTB15Green": {
     "DisplayName": "Pig, TB15, Green",
@@ -61148,7 +63155,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PigTB15Green"
   },
   "PigTB15Orange": {
     "DisplayName": "Pig, TB15, Orange",
@@ -61170,7 +63178,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PigTB15Orange"
   },
   "PigTB15Purple": {
     "DisplayName": "Pig, TB15, Purple",
@@ -61192,7 +63201,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PigTB15Purple"
   },
   "PigTB15Red": {
     "DisplayName": "Pig, TB15, Red",
@@ -61214,7 +63224,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PigTB15Red"
   },
   "PigTB15White": {
     "DisplayName": "Pig, TB15, White",
@@ -61236,7 +63247,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PigTB15White"
   },
   "PigTB15Yellow": {
     "DisplayName": "Pig, TB15, Yellow",
@@ -61258,7 +63270,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PigTB15Yellow"
   },
   "PigWoodBlack": {
     "DisplayName": "Pig, Wood, Black",
@@ -61290,7 +63303,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PigWoodBlack"
   },
   "PigWoodPink": {
     "DisplayName": "Pig, Wood, Pink",
@@ -61322,7 +63336,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PigWoodPink"
   },
   "PigfaceOrcHalberdFantasyTB25": {
     "DisplayName": "Pigface Orc Halberd, Fantasy, TB25",
@@ -61344,7 +63359,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PigfaceOrcHalberdFantasyTB25"
   },
   "PinheadtheBarbarian": {
     "DisplayName": "Pinhead the Barbarian",
@@ -61375,7 +63391,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PinheadtheBarbarian"
   },
   "Pirate1FantasyTB25": {
     "DisplayName": "Pirate 1, Fantasy, TB25",
@@ -61397,7 +63414,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Pirate1FantasyTB25"
   },
   "Pirate2FemaleFantasyTB25": {
     "DisplayName": "Pirate 2, Female, Fantasy, TB25",
@@ -61418,7 +63436,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Pirate2FemaleFantasyTB25"
   },
   "Pirate3FantasyTB25": {
     "DisplayName": "Pirate 3, Fantasy, TB25",
@@ -61440,7 +63459,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Pirate3FantasyTB25"
   },
   "Pirate4FantasyTB25": {
     "DisplayName": "Pirate 4, Fantasy, TB25",
@@ -61462,7 +63482,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Pirate4FantasyTB25"
   },
   "PirateBlue-CharacterMeeple": {
     "DisplayName": "Pirate, Blue - Character Meeple",
@@ -61491,7 +63512,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PirateBlue-CharacterMeeple"
   },
   "PirateGreen-CharacterMeeple": {
     "DisplayName": "Pirate, Green - Character Meeple",
@@ -61520,7 +63542,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PirateGreen-CharacterMeeple"
   },
   "PirateOrange-CharacterMeeple": {
     "DisplayName": "Pirate, Orange - Character Meeple",
@@ -61549,7 +63572,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PirateOrange-CharacterMeeple"
   },
   "PiratePurple-CharacterMeeple": {
     "DisplayName": "Pirate, Purple - Character Meeple",
@@ -61578,7 +63602,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PiratePurple-CharacterMeeple"
   },
   "PirateRed-CharacterMeeple": {
     "DisplayName": "Pirate, Red - Character Meeple",
@@ -61607,7 +63632,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PirateRed-CharacterMeeple"
   },
   "PirateYellow-CharacterMeeple": {
     "DisplayName": "Pirate, Yellow - Character Meeple",
@@ -61636,7 +63662,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PirateYellow-CharacterMeeple"
   },
   "PitFiendFantasyTB50": {
     "DisplayName": "Pit Fiend, Fantasy, TB50",
@@ -61660,7 +63687,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PitFiendFantasyTB50"
   },
   "PizzaDiscYellow": {
     "DisplayName": "Pizza Disc, Yellow",
@@ -61702,7 +63730,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PizzaDiscYellow"
   },
   "PlasticCastleRed": {
     "DisplayName": "Plastic Castle, Red",
@@ -61731,7 +63760,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PlasticCastleRed"
   },
   "PokerChip19mmFancyBlack": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Black",
@@ -61754,7 +63784,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerChip19mmFancyBlack"
   },
   "PokerChip19mmFancyBlue": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Blue",
@@ -61777,7 +63808,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerChip19mmFancyBlue"
   },
   "PokerChip19mmFancyGreen": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Green",
@@ -61800,7 +63832,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerChip19mmFancyGreen"
   },
   "PokerChip19mmFancyPurple": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Purple",
@@ -61823,7 +63856,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerChip19mmFancyPurple"
   },
   "PokerChip19mmFancyRed": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Red",
@@ -61846,7 +63880,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerChip19mmFancyRed"
   },
   "PokerChip19mmFancyYellow": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Yellow",
@@ -61869,7 +63904,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerChip19mmFancyYellow"
   },
   "PokerChipBlack": {
     "DisplayName": "Poker Chip, Black",
@@ -61892,7 +63928,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerChipBlack"
   },
   "PokerChipBlue": {
     "DisplayName": "Poker Chip, Blue",
@@ -61915,7 +63952,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerChipBlue"
   },
   "PokerChipGreen": {
     "DisplayName": "Poker Chip, Green",
@@ -61938,7 +63976,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerChipGreen"
   },
   "PokerChipLightBlue": {
     "DisplayName": "Poker Chip, Light Blue",
@@ -61962,7 +64001,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "lightblue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerChipLightBlue"
   },
   "PokerChipOrange": {
     "DisplayName": "Poker Chip, Orange",
@@ -61985,7 +64025,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerChipOrange"
   },
   "PokerChipPurple": {
     "DisplayName": "Poker Chip, Purple",
@@ -62008,7 +64049,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerChipPurple"
   },
   "PokerChipRed": {
     "DisplayName": "Poker Chip, Red",
@@ -62031,7 +64073,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerChipRed"
   },
   "PokerChipWhite": {
     "DisplayName": "Poker Chip, White",
@@ -62054,7 +64097,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerChipWhite"
   },
   "PokerChipYellow": {
     "DisplayName": "Poker Chip, Yellow",
@@ -62077,7 +64121,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerChipYellow"
   },
   "PolarBear": {
     "DisplayName": "Polar Bear",
@@ -62101,7 +64146,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PolarBear"
   },
   "Police-CharacterMeeple": {
     "DisplayName": "Police - Character Meeple",
@@ -62135,7 +64181,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Police-CharacterMeeple"
   },
   "PremiumApple": {
     "DisplayName": "Premium Apple",
@@ -62161,7 +64208,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumApple"
   },
   "PremiumAxe": {
     "DisplayName": "Premium Axe",
@@ -62192,7 +64240,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumAxe"
   },
   "PremiumBarrel": {
     "DisplayName": "Premium Barrel",
@@ -62224,7 +64273,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumBarrel"
   },
   "PremiumBee": {
     "DisplayName": "Premium Bee",
@@ -62254,7 +64304,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumBee"
   },
   "PremiumBlueClothBundle": {
     "DisplayName": "Premium Blue Cloth Bundle",
@@ -62280,7 +64331,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumBlueClothBundle"
   },
   "PremiumBrain": {
     "DisplayName": "Premium Brain",
@@ -62319,7 +64371,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumBrain"
   },
   "PremiumBread": {
     "DisplayName": "Premium Bread",
@@ -62351,7 +64404,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumBread"
   },
   "PremiumBrick": {
     "DisplayName": "Premium Brick",
@@ -62380,7 +64434,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumBrick"
   },
   "PremiumBrownSpiceSack": {
     "DisplayName": "Premium Brown Spice Sack",
@@ -62407,7 +64462,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumBrownSpiceSack"
   },
   "PremiumBuckler": {
     "DisplayName": "Premium Buckler",
@@ -62433,7 +64489,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumBuckler"
   },
   "PremiumCampfire": {
     "DisplayName": "Premium Campfire",
@@ -62457,7 +64514,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "wood",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumCampfire"
   },
   "PremiumCinderBlock": {
     "DisplayName": "Premium Cinder Block",
@@ -62483,7 +64541,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumCinderBlock"
   },
   "PremiumCoal": {
     "DisplayName": "Premium Coal",
@@ -62513,7 +64572,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumCoal"
   },
   "PremiumCopperIngot": {
     "DisplayName": "Premium Copper Ingot",
@@ -62544,7 +64604,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumCopperIngot"
   },
   "PremiumCorn": {
     "DisplayName": "Premium Corn",
@@ -62571,7 +64632,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumCorn"
   },
   "PremiumCow": {
     "DisplayName": "Premium Cow",
@@ -62595,7 +64657,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumCow"
   },
   "PremiumCrate": {
     "DisplayName": "Premium Crate",
@@ -62621,7 +64684,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumCrate"
   },
   "PremiumDog": {
     "DisplayName": "Premium Dog",
@@ -62649,7 +64713,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumDog"
   },
   "PremiumEnergyCell": {
     "DisplayName": "Premium Energy Cell",
@@ -62678,7 +64743,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumEnergyCell"
   },
   "PremiumFish": {
     "DisplayName": "Premium Fish",
@@ -62715,7 +64781,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "salmon",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumFish"
   },
   "PremiumFurBundle": {
     "DisplayName": "Premium Fur Bundle",
@@ -62737,7 +64804,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumFurBundle"
   },
   "PremiumGoldIngot": {
     "DisplayName": "Premium Gold Ingot",
@@ -62778,7 +64846,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumGoldIngot"
   },
   "PremiumGoldNugget": {
     "DisplayName": "Premium Gold Nugget",
@@ -62820,7 +64889,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumGoldNugget"
   },
   "PremiumGrainSack": {
     "DisplayName": "Premium Grain Sack",
@@ -62842,7 +64912,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumGrainSack"
   },
   "PremiumGreenSpiceSack": {
     "DisplayName": "Premium Green Spice Sack",
@@ -62870,7 +64941,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumGreenSpiceSack"
   },
   "PremiumHeart": {
     "DisplayName": "Premium Heart",
@@ -62903,7 +64975,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumHeart"
   },
   "PremiumHorse": {
     "DisplayName": "Premium Horse",
@@ -62937,7 +65010,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumHorse"
   },
   "PremiumIronIngot": {
     "DisplayName": "Premium Iron Ingot",
@@ -62974,7 +65048,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumIronIngot"
   },
   "PremiumLeatherBag": {
     "DisplayName": "Premium Leather Bag",
@@ -63003,7 +65078,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumLeatherBag"
   },
   "PremiumLeatherScroll": {
     "DisplayName": "Premium Leather Scroll",
@@ -63028,7 +65104,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumLeatherScroll"
   },
   "PremiumLPGasCan": {
     "DisplayName": "Premium LP Gas Can",
@@ -63056,7 +65133,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumLPGasCan"
   },
   "PremiumMagnifyingGlass": {
     "DisplayName": "Premium Magnifying Glass",
@@ -63087,7 +65165,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumMagnifyingGlass"
   },
   "PremiumMarbleTile": {
     "DisplayName": "Premium Marble Tile",
@@ -63112,7 +65191,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumMarbleTile"
   },
   "PremiumOilDrum": {
     "DisplayName": "Premium Oil Drum",
@@ -63137,7 +65217,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumOilDrum"
   },
   "PremiumOrangeClothBundle": {
     "DisplayName": "Premium Orange Cloth Bundle",
@@ -63164,7 +65245,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumOrangeClothBundle"
   },
   "PremiumOre": {
     "DisplayName": "Premium Ore",
@@ -63194,7 +65276,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumOre"
   },
   "PremiumPinkPig": {
     "DisplayName": "Premium Pink Pig",
@@ -63226,7 +65309,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumPinkPig"
   },
   "PremiumPotionBottle": {
     "DisplayName": "Premium Potion Bottle",
@@ -63263,7 +65347,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumPotionBottle"
   },
   "PremiumPumpkin": {
     "DisplayName": "Premium Pumpkin",
@@ -63286,7 +65371,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumPumpkin"
   },
   "PremiumPurpleClothBundle": {
     "DisplayName": "Premium Purple Cloth Bundle",
@@ -63312,7 +65398,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumPurpleClothBundle"
   },
   "PremiumRedSpiceSack": {
     "DisplayName": "Premium Red Spice Sack",
@@ -63338,7 +65425,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumRedSpiceSack"
   },
   "PremiumSealedScroll": {
     "DisplayName": "Premium Sealed Scroll",
@@ -63366,7 +65454,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumSealedScroll"
   },
   "PremiumSheep": {
     "DisplayName": "Premium Sheep",
@@ -63393,7 +65482,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumSheep"
   },
   "PremiumSkull": {
     "DisplayName": "Premium Skull",
@@ -63428,7 +65518,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumSkull"
   },
   "PremiumSpaceCrate": {
     "DisplayName": "Premium Space Crate",
@@ -63459,7 +65550,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumSpaceCrate"
   },
   "PremiumSteak": {
     "DisplayName": "Premium Steak",
@@ -63497,7 +65589,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumSteak"
   },
   "PremiumTome": {
     "DisplayName": "Premium Tome",
@@ -63523,7 +65616,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "PremiumTome"
   },
   "PremiumTrashCan": {
     "DisplayName": "Premium Trash Can",
@@ -63549,7 +65643,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumTrashCan"
   },
   "PremiumTreasureChest": {
     "DisplayName": "Premium Treasure Chest",
@@ -63579,7 +65674,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumTreasureChest"
   },
   "PremiumUraniumRod": {
     "DisplayName": "Premium Uranium Rod",
@@ -63608,7 +65704,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumUraniumRod"
   },
   "PremiumWaterBucket": {
     "DisplayName": "Premium Water Bucket",
@@ -63635,7 +65732,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumWaterBucket"
   },
   "PremiumWhiteClothBundle": {
     "DisplayName": "Premium White Cloth Bundle",
@@ -63661,7 +65759,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumWhiteClothBundle"
   },
   "PremiumWhiteSpiceSack": {
     "DisplayName": "Premium White Spice Sack",
@@ -63687,7 +65786,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumWhiteSpiceSack"
   },
   "PremiumWood": {
     "DisplayName": "Premium Wood",
@@ -63715,7 +65815,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumWood"
   },
   "PremiumYarnBall": {
     "DisplayName": "Premium Yarn Ball",
@@ -63743,7 +65844,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumYarnBall"
   },
   "PumpkinWood": {
     "DisplayName": "Pumpkin, Wood",
@@ -63770,7 +65872,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PumpkinWood"
   },
   "PuppyBlacklab": {
     "DisplayName": "Puppy, Black lab",
@@ -63798,7 +65901,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PuppyBlacklab"
   },
   "PuppyBulldog": {
     "DisplayName": "Puppy, Bulldog",
@@ -63826,7 +65930,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PuppyBulldog"
   },
   "PuppyMutt": {
     "DisplayName": "Puppy, Mutt",
@@ -63854,7 +65959,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PuppyMutt"
   },
   "PuppyPoodle": {
     "DisplayName": "Puppy, Poodle",
@@ -63882,7 +65988,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PuppyPoodle"
   },
   "PuppyTB15Black": {
     "DisplayName": "Puppy, TB15, Black",
@@ -63918,7 +66025,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PuppyTB15Black"
   },
   "PuppyTB15Blue": {
     "DisplayName": "Puppy, TB15, Blue",
@@ -63954,7 +66062,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PuppyTB15Blue"
   },
   "PuppyTB15Green": {
     "DisplayName": "Puppy, TB15, Green",
@@ -63990,7 +66099,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PuppyTB15Green"
   },
   "PuppyTB15Orange": {
     "DisplayName": "Puppy, TB15, Orange",
@@ -64026,7 +66136,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PuppyTB15Orange"
   },
   "PuppyTB15Purple": {
     "DisplayName": "Puppy, TB15, Purple",
@@ -64062,7 +66173,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PuppyTB15Purple"
   },
   "PuppyTB15Red": {
     "DisplayName": "Puppy, TB15, Red",
@@ -64098,7 +66210,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PuppyTB15Red"
   },
   "PuppyTB15White": {
     "DisplayName": "Puppy, TB15, White",
@@ -64134,7 +66247,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PuppyTB15White"
   },
   "PuppyTB15Yellow": {
     "DisplayName": "Puppy, TB15, Yellow",
@@ -64170,7 +66284,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PuppyTB15Yellow"
   },
   "PuppyTerrier": {
     "DisplayName": "Puppy, Terrier",
@@ -64198,7 +66313,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PuppyTerrier"
   },
   "PuppyYellowlab": {
     "DisplayName": "Puppy, Yellow lab",
@@ -64226,7 +66342,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PuppyYellowlab"
   },
   "PuppyYorkie": {
     "DisplayName": "Puppy, Yorkie",
@@ -64254,7 +66371,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PuppyYorkie"
   },
   "PushCartBlack": {
     "DisplayName": "Push Cart, Black",
@@ -64277,7 +66395,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PushCartBlack"
   },
   "PushCartBlue": {
     "DisplayName": "Push Cart, Blue",
@@ -64300,7 +66419,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PushCartBlue"
   },
   "PushCartGreen": {
     "DisplayName": "Push Cart, Green",
@@ -64323,7 +66443,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PushCartGreen"
   },
   "PushCartOrange": {
     "DisplayName": "Push Cart, Orange",
@@ -64346,7 +66467,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PushCartOrange"
   },
   "PushCartPurple": {
     "DisplayName": "Push Cart, Purple",
@@ -64369,7 +66491,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PushCartPurple"
   },
   "PushCartRed": {
     "DisplayName": "Push Cart, Red",
@@ -64392,7 +66515,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PushCartRed"
   },
   "PushCartWhite": {
     "DisplayName": "Push Cart, White",
@@ -64415,7 +66539,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PushCartWhite"
   },
   "PushCartYellow": {
     "DisplayName": "Push Cart, Yellow",
@@ -64438,7 +66563,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PushCartYellow"
   },
   "PutlerTB25": {
     "DisplayName": "Putler, TB25",
@@ -64461,7 +66587,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PutlerTB25"
   },
   "PyramidBlack": {
     "DisplayName": "Pyramid, Black",
@@ -64489,7 +66616,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PyramidBlack"
   },
   "PyramidBlue": {
     "DisplayName": "Pyramid, Blue",
@@ -64517,7 +66645,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PyramidBlue"
   },
   "PyramidPurple": {
     "DisplayName": "Pyramid, Purple",
@@ -64545,7 +66674,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PyramidPurple"
   },
   "PyramidRed": {
     "DisplayName": "Pyramid, Red",
@@ -64573,7 +66703,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PyramidRed"
   },
   "PyramidWhite": {
     "DisplayName": "Pyramid, White",
@@ -64601,7 +66732,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PyramidWhite"
   },
   "PyramidYellow": {
     "DisplayName": "Pyramid, Yellow",
@@ -64629,7 +66761,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PyramidYellow"
   },
   "QubitBlack": {
     "DisplayName": "Qubit, Black",
@@ -64645,7 +66778,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "QubitBlack"
   },
   "QubitBlue": {
     "DisplayName": "Qubit, Blue",
@@ -64661,7 +66795,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "QubitBlue"
   },
   "QubitGreen": {
     "DisplayName": "Qubit, Green",
@@ -64677,7 +66812,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "QubitGreen"
   },
   "QubitOrange": {
     "DisplayName": "Qubit, Orange",
@@ -64693,7 +66829,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "QubitOrange"
   },
   "QubitPurple": {
     "DisplayName": "Qubit, Purple",
@@ -64709,7 +66846,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "QubitPurple"
   },
   "QubitRed": {
     "DisplayName": "Qubit, Red",
@@ -64725,7 +66863,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "QubitRed"
   },
   "QubitWhite": {
     "DisplayName": "Qubit, White",
@@ -64741,7 +66880,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "QubitWhite"
   },
   "QubitYellow": {
     "DisplayName": "Qubit, Yellow",
@@ -64757,7 +66897,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "QubitYellow"
   },
   "QuestionMark": {
     "DisplayName": "Question Mark",
@@ -64781,7 +66922,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "QuestionMark"
   },
   "RabbitPurple": {
     "DisplayName": "Rabbit, Purple",
@@ -64805,7 +66947,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RabbitPurple"
   },
   "RaceCarBlack": {
     "DisplayName": "Race Car, Black",
@@ -64832,7 +66975,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RaceCarBlack"
   },
   "RaceCarBlue": {
     "DisplayName": "Race Car, Blue",
@@ -64858,7 +67002,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "RaceCarBlue"
   },
   "RaceCarGreen": {
     "DisplayName": "Race Car, Green",
@@ -64885,7 +67030,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RaceCarGreen"
   },
   "RaceCarOrange": {
     "DisplayName": "Race Car, Orange",
@@ -64912,7 +67058,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RaceCarOrange"
   },
   "RaceCarPurple": {
     "DisplayName": "Race Car, Purple",
@@ -64939,7 +67086,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RaceCarPurple"
   },
   "RaceCarRed": {
     "DisplayName": "Race Car, Red",
@@ -64966,7 +67114,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RaceCarRed"
   },
   "RaceCarYellow": {
     "DisplayName": "Race Car, Yellow",
@@ -64993,7 +67142,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RaceCarYellow"
   },
   "RadiationMask": {
     "DisplayName": "Radiation Mask",
@@ -65018,7 +67168,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RadiationMask"
   },
   "RangerArcherFantasyTB25": {
     "DisplayName": "Ranger Archer, Fantasy, TB25",
@@ -65056,7 +67207,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RangerArcherFantasyTB25"
   },
   "RangerFiringBow": {
     "DisplayName": "Ranger Firing Bow",
@@ -65093,7 +67245,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RangerFiringBow"
   },
   "RatAcrylic": {
     "DisplayName": "Rat, Acrylic",
@@ -65118,7 +67271,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RatAcrylic"
   },
   "RatcatcherFantasyTB25": {
     "DisplayName": "Ratcatcher, Fantasy, TB25",
@@ -65140,7 +67294,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RatcatcherFantasyTB25"
   },
   "RatfolkAssassinFantasyTB25": {
     "DisplayName": "Ratfolk, Assassin, Fantasy, TB25",
@@ -65157,7 +67312,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RatfolkAssassinFantasyTB25"
   },
   "Renegade-CharacterMeeple": {
     "DisplayName": "Renegade - Character Meeple",
@@ -65182,7 +67338,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Renegade-CharacterMeeple"
   },
   "Rhinoceros": {
     "DisplayName": "Rhinoceros",
@@ -65209,7 +67366,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Rhinoceros"
   },
   "Rifle": {
     "DisplayName": "Rifle",
@@ -65233,7 +67391,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Rifle"
   },
   "RingBlack": {
     "DisplayName": "Ring, Black",
@@ -65254,7 +67413,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RingBlack"
   },
   "RingBlue": {
     "DisplayName": "Ring, Blue",
@@ -65275,7 +67435,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RingBlue"
   },
   "RingGreen": {
     "DisplayName": "Ring, Green",
@@ -65296,7 +67457,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RingGreen"
   },
   "RingOrange": {
     "DisplayName": "Ring, Orange",
@@ -65317,7 +67479,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RingOrange"
   },
   "RingPurple": {
     "DisplayName": "Ring, Purple",
@@ -65338,7 +67501,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RingPurple"
   },
   "RingRed": {
     "DisplayName": "Ring, Red",
@@ -65359,7 +67523,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RingRed"
   },
   "RingWhite": {
     "DisplayName": "Ring, White",
@@ -65380,7 +67545,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RingWhite"
   },
   "RingYellow": {
     "DisplayName": "Ring, Yellow",
@@ -65401,7 +67567,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RingYellow"
   },
   "RivetBlack": {
     "DisplayName": "Rivet, Black",
@@ -65433,7 +67600,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RivetBlack"
   },
   "RobotDetectiveSpaceTB25": {
     "DisplayName": "Robot, Detective, Space, TB25",
@@ -65449,7 +67617,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RobotDetectiveSpaceTB25"
   },
   "RobotSilver": {
     "DisplayName": "Robot, Silver",
@@ -65474,7 +67643,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RobotSilver"
   },
   "RobotWizardSpaceTB25": {
     "DisplayName": "Robot, Wizard, Space, TB25",
@@ -65490,7 +67660,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RobotWizardSpaceTB25"
   },
   "RocketDiceBlack": {
     "DisplayName": "Rocket Dice, Black",
@@ -65544,7 +67715,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RocketDiceBlack"
   },
   "RocketDiceBlue": {
     "DisplayName": "Rocket Dice, Blue",
@@ -65598,7 +67770,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RocketDiceBlue"
   },
   "RocketDiceBrown": {
     "DisplayName": "Rocket Dice, Brown",
@@ -65652,7 +67825,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RocketDiceBrown"
   },
   "RocketDiceFrostWhite": {
     "DisplayName": "Rocket Dice, Frost White",
@@ -65707,7 +67881,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RocketDiceFrostWhite"
   },
   "RocketDiceGreen": {
     "DisplayName": "Rocket Dice, Green",
@@ -65761,7 +67936,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RocketDiceGreen"
   },
   "RocketDiceGray": {
     "DisplayName": "Rocket Dice, Gray",
@@ -65814,7 +67990,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "gray",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "RocketDiceGray"
   },
   "RocketDicePink": {
     "DisplayName": "Rocket Dice, Pink",
@@ -65868,7 +68045,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RocketDicePink"
   },
   "RocketDicePurple": {
     "DisplayName": "Rocket Dice, Purple",
@@ -65922,7 +68100,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RocketDicePurple"
   },
   "RocketDiceRed": {
     "DisplayName": "Rocket Dice, Red",
@@ -65976,7 +68155,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RocketDiceRed"
   },
   "RocketDiceWhite": {
     "DisplayName": "Rocket Dice, White",
@@ -66030,7 +68210,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RocketDiceWhite"
   },
   "RocketBlack": {
     "DisplayName": "Rocket, Black",
@@ -66055,7 +68236,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RocketBlack"
   },
   "RocketBlue": {
     "DisplayName": "Rocket, Blue",
@@ -66080,7 +68262,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RocketBlue"
   },
   "RocketGreen": {
     "DisplayName": "Rocket, Green",
@@ -66105,7 +68288,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RocketGreen"
   },
   "RocketOrange": {
     "DisplayName": "Rocket, Orange",
@@ -66130,7 +68314,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RocketOrange"
   },
   "RocketPurple": {
     "DisplayName": "Rocket, Purple",
@@ -66155,7 +68340,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RocketPurple"
   },
   "RocketRed": {
     "DisplayName": "Rocket, Red",
@@ -66180,7 +68366,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RocketRed"
   },
   "RocketWhite": {
     "DisplayName": "Rocket, White",
@@ -66205,7 +68392,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RocketWhite"
   },
   "RocketYellow": {
     "DisplayName": "Rocket, Yellow",
@@ -66230,7 +68418,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RocketYellow"
   },
   "Rogue-CharacterMeeple": {
     "DisplayName": "Rogue - Character Meeple",
@@ -66257,7 +68446,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Rogue-CharacterMeeple"
   },
   "RomanNumeralIBlack": {
     "DisplayName": "Roman Numeral I, Black",
@@ -66279,7 +68469,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RomanNumeralIBlack"
   },
   "RomanNumeralIBlue": {
     "DisplayName": "Roman Numeral I, Blue",
@@ -66301,7 +68492,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RomanNumeralIBlue"
   },
   "RomanNumeralIBrown": {
     "DisplayName": "Roman Numeral I, Brown",
@@ -66323,7 +68515,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RomanNumeralIBrown"
   },
   "RomanNumeralIGreen": {
     "DisplayName": "Roman Numeral I, Green",
@@ -66345,7 +68538,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RomanNumeralIGreen"
   },
   "RomanNumeralIGreyLarge": {
     "DisplayName": "Roman Numeral I, Grey, Large",
@@ -66367,7 +68561,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RomanNumeralIGreyLarge"
   },
   "RomanNumeralIRed": {
     "DisplayName": "Roman Numeral I, Red",
@@ -66389,7 +68584,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RomanNumeralIRed"
   },
   "RomanNumeralIYellow": {
     "DisplayName": "Roman Numeral I, Yellow",
@@ -66411,7 +68607,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RomanNumeralIYellow"
   },
   "RomanNumeralIIIYellow": {
     "DisplayName": "Roman Numeral III, Yellow",
@@ -66433,7 +68630,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RomanNumeralIIIYellow"
   },
   "RomanNumeralVGreen": {
     "DisplayName": "Roman Numeral V, Green",
@@ -66455,7 +68653,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RomanNumeralVGreen"
   },
   "RomanNumeralVYellow": {
     "DisplayName": "Roman Numeral V, Yellow",
@@ -66477,7 +68676,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RomanNumeralVYellow"
   },
   "RoosterBlack": {
     "DisplayName": "Rooster, Black",
@@ -66508,7 +68708,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RoosterBlack"
   },
   "RoosterBlue": {
     "DisplayName": "Rooster, Blue",
@@ -66539,7 +68740,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RoosterBlue"
   },
   "RoosterGreen": {
     "DisplayName": "Rooster, Green",
@@ -66570,7 +68772,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RoosterGreen"
   },
   "RoosterOrange": {
     "DisplayName": "Rooster, Orange",
@@ -66601,7 +68804,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RoosterOrange"
   },
   "RoosterPurple": {
     "DisplayName": "Rooster, Purple",
@@ -66632,7 +68836,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RoosterPurple"
   },
   "RoosterRed": {
     "DisplayName": "Rooster, Red",
@@ -66663,7 +68868,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RoosterRed"
   },
   "RoosterWhite": {
     "DisplayName": "Rooster, White",
@@ -66694,7 +68900,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RoosterWhite"
   },
   "RoosterYellow": {
     "DisplayName": "Rooster, Yellow",
@@ -66725,7 +68932,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RoosterYellow"
   },
   "RopeCoil": {
     "DisplayName": "Rope Coil",
@@ -66741,7 +68949,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RopeCoil"
   },
   "RubberBands": {
     "DisplayName": "Rubber Bands",
@@ -66767,7 +68976,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "RubberBands"
   },
   "SackGold": {
     "DisplayName": "Sack, Gold",
@@ -66814,7 +69024,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SackGold"
   },
   "SailboatBlack": {
     "DisplayName": "Sailboat, Black",
@@ -66845,7 +69056,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SailboatBlack"
   },
   "SailboatBlue": {
     "DisplayName": "Sailboat, Blue",
@@ -66876,7 +69088,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SailboatBlue"
   },
   "SailboatGreen": {
     "DisplayName": "Sailboat, Green",
@@ -66907,7 +69120,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SailboatGreen"
   },
   "SailboatOrange": {
     "DisplayName": "Sailboat, Orange",
@@ -66938,7 +69152,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SailboatOrange"
   },
   "SailboatPurple": {
     "DisplayName": "Sailboat, Purple",
@@ -66969,7 +69184,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SailboatPurple"
   },
   "SailboatRed": {
     "DisplayName": "Sailboat, Red",
@@ -67000,7 +69216,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SailboatRed"
   },
   "SailboatWhite": {
     "DisplayName": "Sailboat, White",
@@ -67031,7 +69248,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SailboatWhite"
   },
   "SailboatYellow": {
     "DisplayName": "Sailboat, Yellow",
@@ -67062,7 +69280,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SailboatYellow"
   },
   "Sake": {
     "DisplayName": "Sake",
@@ -67077,7 +69296,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Sake"
   },
   "SamuraiArmorHistoricTB25": {
     "DisplayName": "Samurai Armor, Historic, TB25",
@@ -67097,7 +69317,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SamuraiArmorHistoricTB25"
   },
   "SandTimer10Seconds": {
     "DisplayName": "Sand Timer, 10 Seconds",
@@ -67120,7 +69341,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SandTimer10Seconds"
   },
   "SandTimer120seconds": {
     "DisplayName": "Sand Timer, 120 seconds",
@@ -67143,7 +69365,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SandTimer120seconds"
   },
   "SandTimer180seconds": {
     "DisplayName": "Sand Timer, 180 seconds",
@@ -67166,7 +69389,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SandTimer180seconds"
   },
   "SandTimer30seconds": {
     "DisplayName": "Sand Timer, 30 seconds",
@@ -67189,7 +69413,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SandTimer30seconds"
   },
   "SandTimer60seconds": {
     "DisplayName": "Sand Timer, 60 seconds",
@@ -67212,7 +69437,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SandTimer60seconds"
   },
   "SandTimer90seconds": {
     "DisplayName": "Sand Timer, 90 seconds",
@@ -67235,7 +69461,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SandTimer90seconds"
   },
   "SavageOrcChampionGreatHamm": {
     "DisplayName": "Savage Orc Champion Great Hamm",
@@ -67267,7 +69494,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SavageOrcChampionGreatHamm"
   },
   "SavageOrcChieftain": {
     "DisplayName": "Savage Orc Chieftain",
@@ -67299,7 +69527,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SavageOrcChieftain"
   },
   "ScarecrowA": {
     "DisplayName": "Scarecrow A",
@@ -67347,7 +69576,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ScarecrowA"
   },
   "ScarecrowB": {
     "DisplayName": "Scarecrow B",
@@ -67395,7 +69625,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ScarecrowB"
   },
   "Sci-FiCoinBronze": {
     "DisplayName": "Sci-Fi Coin, Bronze",
@@ -67411,7 +69642,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Sci-FiCoinBronze"
   },
   "Sci-FiCoinGold": {
     "DisplayName": "Sci-Fi Coin, Gold",
@@ -67427,7 +69659,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Sci-FiCoinGold"
   },
   "Sci-FiCoinSilver": {
     "DisplayName": "Sci-Fi Coin, Silver",
@@ -67443,7 +69676,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Sci-FiCoinSilver"
   },
   "Scientist-CharacterMeeple": {
     "DisplayName": "Scientist - Character Meeple",
@@ -67484,7 +69718,8 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3AEE42D0-90DA-11E8-BB44-74F6785DA8EE.png",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Scientist-CharacterMeeple"
   },
   "Screw6mmx3mmBlack": {
     "DisplayName": "Screw, 6mm x 3mm, Black",
@@ -67516,7 +69751,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Screw6mmx3mmBlack"
   },
   "Screw8mmx5mmBlack": {
     "DisplayName": "Screw, 8mm x 5mm, Black",
@@ -67548,7 +69784,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Screw8mmx5mmBlack"
   },
   "SemiTruckPostApocalypse": {
     "DisplayName": "Semi Truck, Post Apocalypse",
@@ -67563,7 +69800,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SemiTruckPostApocalypse"
   },
   "Sharpies": {
     "DisplayName": "Sharpies",
@@ -67591,7 +69829,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Sharpies"
   },
   "Sheep": {
     "DisplayName": "Sheep",
@@ -67624,7 +69863,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Sheep"
   },
   "SheepRandom": {
     "DisplayName": "Sheep, Random",
@@ -67657,7 +69897,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SheepRandom"
   },
   "Sheetof1\"GoldScratchOffCircleStickers": {
     "DisplayName": "Sheet of 1\" Gold Scratch Off Circle Stickers",
@@ -67674,7 +69915,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "gold",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Sheetof1\"GoldScratchOffCircleStickers"
   },
   "Sheetof1\"SilverScratchOffCircleStickers": {
     "DisplayName": "Sheet of 1\" Silver Scratch Off Circle Stickers",
@@ -67691,7 +69933,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "silver",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Sheetof1\"SilverScratchOffCircleStickers"
   },
   "SheetofRectangleScratchOffSitckers": {
     "DisplayName": "Sheet of Rectangle Scratch Off Sitckers",
@@ -67708,7 +69951,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "silver",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SheetofRectangleScratchOffSitckers"
   },
   "Sheriff-CharacterMeeple": {
     "DisplayName": "Sheriff - Character Meeple",
@@ -67742,7 +69986,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Sheriff-CharacterMeeple"
   },
   "SheriffBadgeGold": {
     "DisplayName": "Sheriff Badge, Gold",
@@ -67784,7 +70029,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SheriffBadgeGold"
   },
   "SheriffBadgeSilver": {
     "DisplayName": "Sheriff Badge, Silver",
@@ -67826,7 +70072,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SheriffBadgeSilver"
   },
   "ShieldbearerBlue": {
     "DisplayName": "Shieldbearer, Blue",
@@ -67851,7 +70098,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "ShieldbearerBlue"
   },
   "ShieldbearerGreen": {
     "DisplayName": "Shieldbearer, Green",
@@ -67877,7 +70125,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShieldbearerGreen"
   },
   "ShieldbearerPurple": {
     "DisplayName": "Shieldbearer, Purple",
@@ -67902,7 +70151,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "ShieldbearerPurple"
   },
   "ShieldbearerYellow": {
     "DisplayName": "Shieldbearer, Yellow",
@@ -67927,7 +70177,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "ShieldbearerYellow"
   },
   "ShipAirSteampunkBlack": {
     "DisplayName": "Ship, Air, Steampunk, Black",
@@ -67948,7 +70199,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipAirSteampunkBlack"
   },
   "ShipAirSteampunkBlue": {
     "DisplayName": "Ship, Air, Steampunk, Blue",
@@ -67969,7 +70221,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipAirSteampunkBlue"
   },
   "ShipAirSteampunkGreen": {
     "DisplayName": "Ship, Air, Steampunk, Green",
@@ -67990,7 +70243,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipAirSteampunkGreen"
   },
   "ShipAirSteampunkOrange": {
     "DisplayName": "Ship, Air, Steampunk, Orange",
@@ -68011,7 +70265,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipAirSteampunkOrange"
   },
   "ShipAirSteampunkPurple": {
     "DisplayName": "Ship, Air, Steampunk, Purple",
@@ -68032,7 +70287,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipAirSteampunkPurple"
   },
   "ShipAirSteampunkRed": {
     "DisplayName": "Ship, Air, Steampunk, Red",
@@ -68053,7 +70309,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipAirSteampunkRed"
   },
   "ShipAirSteampunkWhite": {
     "DisplayName": "Ship, Air, Steampunk, White",
@@ -68074,7 +70331,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipAirSteampunkWhite"
   },
   "ShipAirSteampunkYellow": {
     "DisplayName": "Ship, Air, Steampunk, Yellow",
@@ -68095,7 +70353,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipAirSteampunkYellow"
   },
   "ShipModernAircraftCarrierBlack": {
     "DisplayName": "Ship, Modern, Aircraft Carrier, Black",
@@ -68119,7 +70378,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernAircraftCarrierBlack"
   },
   "ShipModernAircraftCarrierGreen": {
     "DisplayName": "Ship, Modern, Aircraft Carrier, Green",
@@ -68143,7 +70403,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernAircraftCarrierGreen"
   },
   "ShipModernAircraftCarrierOrange": {
     "DisplayName": "Ship, Modern, Aircraft Carrier, Orange",
@@ -68167,7 +70428,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernAircraftCarrierOrange"
   },
   "ShipModernAircraftCarrierPurple": {
     "DisplayName": "Ship, Modern, Aircraft Carrier, Purple",
@@ -68191,7 +70453,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernAircraftCarrierPurple"
   },
   "ShipModernAircraftCarrierWhite": {
     "DisplayName": "Ship, Modern, Aircraft Carrier, White",
@@ -68215,7 +70478,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernAircraftCarrierWhite"
   },
   "ShipModernBattleshipBlack": {
     "DisplayName": "Ship, Modern, Battleship, Black",
@@ -68239,7 +70503,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernBattleshipBlack"
   },
   "ShipModernBattleshipGreen": {
     "DisplayName": "Ship, Modern, Battleship, Green",
@@ -68263,7 +70528,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernBattleshipGreen"
   },
   "ShipModernBattleshipOrange": {
     "DisplayName": "Ship, Modern, Battleship, Orange",
@@ -68287,7 +70553,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernBattleshipOrange"
   },
   "ShipModernBattleshipPurple": {
     "DisplayName": "Ship, Modern, Battleship, Purple",
@@ -68311,7 +70578,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernBattleshipPurple"
   },
   "ShipModernBattleshipWhite": {
     "DisplayName": "Ship, Modern, Battleship, White",
@@ -68335,7 +70603,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernBattleshipWhite"
   },
   "ShipModernContainerBlack": {
     "DisplayName": "Ship, Modern, Container, Black",
@@ -68355,7 +70624,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernContainerBlack"
   },
   "ShipModernContainerGreen": {
     "DisplayName": "Ship, Modern, Container, Green",
@@ -68375,7 +70645,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernContainerGreen"
   },
   "ShipModernContainerOrange": {
     "DisplayName": "Ship, Modern, Container, Orange",
@@ -68395,7 +70666,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernContainerOrange"
   },
   "ShipModernContainerPurple": {
     "DisplayName": "Ship, Modern, Container, Purple",
@@ -68415,7 +70687,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernContainerPurple"
   },
   "ShipModernContainerWhite": {
     "DisplayName": "Ship, Modern, Container, White",
@@ -68435,7 +70708,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernContainerWhite"
   },
   "ShipModernCruiserBlack": {
     "DisplayName": "Ship, Modern, Cruiser, Black",
@@ -68459,7 +70733,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernCruiserBlack"
   },
   "ShipModernCruiserGreen": {
     "DisplayName": "Ship, Modern, Cruiser, Green",
@@ -68483,7 +70758,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernCruiserGreen"
   },
   "ShipModernCruiserOrange": {
     "DisplayName": "Ship, Modern, Cruiser, Orange",
@@ -68507,7 +70783,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernCruiserOrange"
   },
   "ShipModernCruiserPurple": {
     "DisplayName": "Ship, Modern, Cruiser, Purple",
@@ -68531,7 +70808,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernCruiserPurple"
   },
   "ShipModernCruiserWhite": {
     "DisplayName": "Ship, Modern, Cruiser, White",
@@ -68555,7 +70833,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernCruiserWhite"
   },
   "ShipModernDestroyerBlack": {
     "DisplayName": "Ship, Modern, Destroyer, Black",
@@ -68579,7 +70858,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernDestroyerBlack"
   },
   "ShipModernDestroyerGreen": {
     "DisplayName": "Ship, Modern, Destroyer, Green",
@@ -68603,7 +70883,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernDestroyerGreen"
   },
   "ShipModernDestroyerOrange": {
     "DisplayName": "Ship, Modern, Destroyer, Orange",
@@ -68627,7 +70908,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernDestroyerOrange"
   },
   "ShipModernDestroyerPurple": {
     "DisplayName": "Ship, Modern, Destroyer, Purple",
@@ -68651,7 +70933,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernDestroyerPurple"
   },
   "ShipModernDestroyerWhite": {
     "DisplayName": "Ship, Modern, Destroyer, White",
@@ -68675,7 +70958,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernDestroyerWhite"
   },
   "ShipModernSubmarineBlack": {
     "DisplayName": "Ship, Modern, Submarine, Black",
@@ -68699,7 +70983,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernSubmarineBlack"
   },
   "ShipModernSubmarineGreen": {
     "DisplayName": "Ship, Modern, Submarine, Green",
@@ -68723,7 +71008,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernSubmarineGreen"
   },
   "ShipModernSubmarineOrange": {
     "DisplayName": "Ship, Modern, Submarine, Orange",
@@ -68747,7 +71033,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernSubmarineOrange"
   },
   "ShipModernSubmarinePurple": {
     "DisplayName": "Ship, Modern, Submarine, Purple",
@@ -68771,7 +71058,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernSubmarinePurple"
   },
   "ShipModernSubmarineWhite": {
     "DisplayName": "Ship, Modern, Submarine, White",
@@ -68795,7 +71083,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernSubmarineWhite"
   },
   "ShipModernTransportBlack": {
     "DisplayName": "Ship, Modern, Transport, Black",
@@ -68819,7 +71108,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernTransportBlack"
   },
   "ShipModernTransportGreen": {
     "DisplayName": "Ship, Modern, Transport, Green",
@@ -68843,7 +71133,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernTransportGreen"
   },
   "ShipModernTransportOrange": {
     "DisplayName": "Ship, Modern, Transport, Orange",
@@ -68867,7 +71158,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernTransportOrange"
   },
   "ShipModernTransportPurple": {
     "DisplayName": "Ship, Modern, Transport, Purple",
@@ -68891,7 +71183,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernTransportPurple"
   },
   "ShipModernTransportWhite": {
     "DisplayName": "Ship, Modern, Transport, White",
@@ -68915,7 +71208,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipModernTransportWhite"
   },
   "ShipSeaBritishBlack": {
     "DisplayName": "Ship, Sea, British, Black",
@@ -68938,7 +71232,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaBritishBlack"
   },
   "ShipSeaBritishBlue": {
     "DisplayName": "Ship, Sea, British, Blue",
@@ -68961,7 +71256,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaBritishBlue"
   },
   "ShipSeaBritishGreen": {
     "DisplayName": "Ship, Sea, British, Green",
@@ -68984,7 +71280,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaBritishGreen"
   },
   "ShipSeaBritishOrange": {
     "DisplayName": "Ship, Sea, British, Orange",
@@ -69007,7 +71304,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaBritishOrange"
   },
   "ShipSeaBritishPurple": {
     "DisplayName": "Ship, Sea, British, Purple",
@@ -69030,7 +71328,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaBritishPurple"
   },
   "ShipSeaBritishRed": {
     "DisplayName": "Ship, Sea, British, Red",
@@ -69053,7 +71352,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaBritishRed"
   },
   "ShipSeaBritishWhite": {
     "DisplayName": "Ship, Sea, British, White",
@@ -69076,7 +71376,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaBritishWhite"
   },
   "ShipSeaBritishYellow": {
     "DisplayName": "Ship, Sea, British, Yellow",
@@ -69099,7 +71400,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaBritishYellow"
   },
   "ShipSeaPirateBlack": {
     "DisplayName": "Ship, Sea, Pirate, Black",
@@ -69129,7 +71431,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaPirateBlack"
   },
   "ShipSeaPirateBlue": {
     "DisplayName": "Ship, Sea, Pirate, Blue",
@@ -69159,7 +71462,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaPirateBlue"
   },
   "ShipSeaPirateGreen": {
     "DisplayName": "Ship, Sea, Pirate, Green",
@@ -69189,7 +71493,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaPirateGreen"
   },
   "ShipSeaPirateOrange": {
     "DisplayName": "Ship, Sea, Pirate, Orange",
@@ -69219,7 +71524,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaPirateOrange"
   },
   "ShipSeaPiratePurple": {
     "DisplayName": "Ship, Sea, Pirate, Purple",
@@ -69249,7 +71555,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaPiratePurple"
   },
   "ShipSeaPirateRed": {
     "DisplayName": "Ship, Sea, Pirate, Red",
@@ -69279,7 +71586,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaPirateRed"
   },
   "ShipSeaPirateWhite": {
     "DisplayName": "Ship, Sea, Pirate, White",
@@ -69309,7 +71617,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaPirateWhite"
   },
   "ShipSeaPirateYellow": {
     "DisplayName": "Ship, Sea, Pirate, Yellow",
@@ -69339,7 +71648,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaPirateYellow"
   },
   "ShipSeaVikingLongboatBlack": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Black",
@@ -69365,7 +71675,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaVikingLongboatBlack"
   },
   "ShipSeaVikingLongboatBlue": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Blue",
@@ -69391,7 +71702,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaVikingLongboatBlue"
   },
   "ShipSeaVikingLongboatGreen": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Green",
@@ -69417,7 +71729,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaVikingLongboatGreen"
   },
   "ShipSeaVikingLongboatOrange": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Orange",
@@ -69443,7 +71756,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaVikingLongboatOrange"
   },
   "ShipSeaVikingLongboatPurple": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Purple",
@@ -69469,7 +71783,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaVikingLongboatPurple"
   },
   "ShipSeaVikingLongboatRed": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Red",
@@ -69495,7 +71810,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaVikingLongboatRed"
   },
   "ShipSeaVikingLongboatWhite": {
     "DisplayName": "Ship, Sea, Viking, Longboat, White",
@@ -69521,7 +71837,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaVikingLongboatWhite"
   },
   "ShipSeaVikingLongboatYellow": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Yellow",
@@ -69547,7 +71864,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSeaVikingLongboatYellow"
   },
   "ShipSpaceFighterBlack": {
     "DisplayName": "Ship, Space, Fighter, Black",
@@ -69580,7 +71898,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceFighterBlack"
   },
   "ShipSpaceFighterBlue": {
     "DisplayName": "Ship, Space, Fighter, Blue",
@@ -69613,7 +71932,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceFighterBlue"
   },
   "ShipSpaceFighterGreen": {
     "DisplayName": "Ship, Space, Fighter, Green",
@@ -69646,7 +71966,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceFighterGreen"
   },
   "ShipSpaceFighterOrange": {
     "DisplayName": "Ship, Space, Fighter, Orange",
@@ -69679,7 +72000,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceFighterOrange"
   },
   "ShipSpaceFighterPurple": {
     "DisplayName": "Ship, Space, Fighter, Purple",
@@ -69712,7 +72034,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceFighterPurple"
   },
   "ShipSpaceFighterRed": {
     "DisplayName": "Ship, Space, Fighter, Red",
@@ -69745,7 +72068,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceFighterRed"
   },
   "ShipSpaceFighterWhite": {
     "DisplayName": "Ship, Space, Fighter, White",
@@ -69778,7 +72102,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceFighterWhite"
   },
   "ShipSpaceFighterYellow": {
     "DisplayName": "Ship, Space, Fighter, Yellow",
@@ -69811,7 +72136,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceFighterYellow"
   },
   "ShipSpaceFreighterBlack": {
     "DisplayName": "Ship, Space, Freighter, Black",
@@ -69839,7 +72165,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceFreighterBlack"
   },
   "ShipSpaceFreighterBlue": {
     "DisplayName": "Ship, Space, Freighter, Blue",
@@ -69867,7 +72194,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceFreighterBlue"
   },
   "ShipSpaceFreighterGreen": {
     "DisplayName": "Ship, Space, Freighter, Green",
@@ -69895,7 +72223,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceFreighterGreen"
   },
   "ShipSpaceFreighterOrange": {
     "DisplayName": "Ship, Space, Freighter, Orange",
@@ -69923,7 +72252,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceFreighterOrange"
   },
   "ShipSpaceFreighterPurple": {
     "DisplayName": "Ship, Space, Freighter, Purple",
@@ -69951,7 +72281,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceFreighterPurple"
   },
   "ShipSpaceFreighterRed": {
     "DisplayName": "Ship, Space, Freighter, Red",
@@ -69979,7 +72310,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceFreighterRed"
   },
   "ShipSpaceFreighterWhite": {
     "DisplayName": "Ship, Space, Freighter, White",
@@ -70007,7 +72339,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceFreighterWhite"
   },
   "ShipSpaceFreighterYellow": {
     "DisplayName": "Ship, Space, Freighter, Yellow",
@@ -70035,7 +72368,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceFreighterYellow"
   },
   "ShipSpaceSmugglerBlack": {
     "DisplayName": "Ship, Space, Smuggler, Black",
@@ -70067,7 +72401,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceSmugglerBlack"
   },
   "ShipSpaceSmugglerBlue": {
     "DisplayName": "Ship, Space, Smuggler, Blue",
@@ -70099,7 +72434,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceSmugglerBlue"
   },
   "ShipSpaceSmugglerGreen": {
     "DisplayName": "Ship, Space, Smuggler, Green",
@@ -70131,7 +72467,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceSmugglerGreen"
   },
   "ShipSpaceSmugglerOrange": {
     "DisplayName": "Ship, Space, Smuggler, Orange",
@@ -70163,7 +72500,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceSmugglerOrange"
   },
   "ShipSpaceSmugglerPurple": {
     "DisplayName": "Ship, Space, Smuggler, Purple",
@@ -70195,7 +72533,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceSmugglerPurple"
   },
   "ShipSpaceSmugglerRed": {
     "DisplayName": "Ship, Space, Smuggler, Red",
@@ -70227,7 +72566,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceSmugglerRed"
   },
   "ShipSpaceSmugglerWhite": {
     "DisplayName": "Ship, Space, Smuggler, White",
@@ -70259,7 +72599,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceSmugglerWhite"
   },
   "ShipSpaceSmugglerYellow": {
     "DisplayName": "Ship, Space, Smuggler, Yellow",
@@ -70291,7 +72632,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceSmugglerYellow"
   },
   "ShipSpaceTransportBlack": {
     "DisplayName": "Ship, Space, Transport, Black",
@@ -70308,7 +72650,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceTransportBlack"
   },
   "ShipSpaceTransportBlue": {
     "DisplayName": "Ship, Space, Transport, Blue",
@@ -70325,7 +72668,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceTransportBlue"
   },
   "ShipSpaceTransportGreen": {
     "DisplayName": "Ship, Space, Transport, Green",
@@ -70342,7 +72686,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceTransportGreen"
   },
   "ShipSpaceTransportOrange": {
     "DisplayName": "Ship, Space, Transport, Orange",
@@ -70359,7 +72704,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceTransportOrange"
   },
   "ShipSpaceTransportPurple": {
     "DisplayName": "Ship, Space, Transport, Purple",
@@ -70376,7 +72722,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceTransportPurple"
   },
   "ShipSpaceTransportRed": {
     "DisplayName": "Ship, Space, Transport, Red",
@@ -70393,7 +72740,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceTransportRed"
   },
   "ShipSpaceTransportWhite": {
     "DisplayName": "Ship, Space, Transport, White",
@@ -70410,7 +72758,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceTransportWhite"
   },
   "ShipSpaceTransportYellow": {
     "DisplayName": "Ship, Space, Transport, Yellow",
@@ -70427,7 +72776,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceTransportYellow"
   },
   "ShipSpaceUFOBlack": {
     "DisplayName": "Ship, Space, UFO, Black",
@@ -70462,7 +72812,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceUFOBlack"
   },
   "ShipSpaceUFOBlue": {
     "DisplayName": "Ship, Space, UFO, Blue",
@@ -70497,7 +72848,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceUFOBlue"
   },
   "ShipSpaceUFOGreen": {
     "DisplayName": "Ship, Space, UFO, Green",
@@ -70532,7 +72884,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceUFOGreen"
   },
   "ShipSpaceUFOOrange": {
     "DisplayName": "Ship, Space, UFO, Orange",
@@ -70567,7 +72920,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceUFOOrange"
   },
   "ShipSpaceUFOPurple": {
     "DisplayName": "Ship, Space, UFO, Purple",
@@ -70602,7 +72956,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceUFOPurple"
   },
   "ShipSpaceUFORed": {
     "DisplayName": "Ship, Space, UFO, Red",
@@ -70637,7 +72992,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceUFORed"
   },
   "ShipSpaceUFOSilver": {
     "DisplayName": "Ship, Space, UFO, Silver",
@@ -70672,7 +73028,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceUFOSilver"
   },
   "ShipSpaceUFOWhite": {
     "DisplayName": "Ship, Space, UFO, White",
@@ -70707,7 +73064,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceUFOWhite"
   },
   "ShipSpaceUFOYellow": {
     "DisplayName": "Ship, Space, UFO, Yellow",
@@ -70742,7 +73100,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ShipSpaceUFOYellow"
   },
   "Shotgun": {
     "DisplayName": "Shotgun",
@@ -70764,7 +73123,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Shotgun"
   },
   "Signpost": {
     "DisplayName": "Signpost",
@@ -70781,7 +73141,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Signpost"
   },
   "SkeletalCrossbowmanIII": {
     "DisplayName": "Skeletal Crossbowman III",
@@ -70817,7 +73178,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkeletalCrossbowmanIII"
   },
   "Skeleton-CharacterMeeple": {
     "DisplayName": "Skeleton - Character Meeple",
@@ -70838,7 +73200,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Skeleton-CharacterMeeple"
   },
   "SkeletonArcher2FantasyTB25": {
     "DisplayName": "Skeleton Archer 2, Fantasy, TB25",
@@ -70865,7 +73228,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkeletonArcher2FantasyTB25"
   },
   "SkeletonArcherFantasyTB25": {
     "DisplayName": "Skeleton Archer, Fantasy, TB25",
@@ -70892,7 +73256,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkeletonArcherFantasyTB25"
   },
   "SkeletonAxeFantasyTB25": {
     "DisplayName": "Skeleton Axe, Fantasy, TB25",
@@ -70914,7 +73279,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkeletonAxeFantasyTB25"
   },
   "SkeletonBattleAxe": {
     "DisplayName": "Skeleton Battle Axe",
@@ -70945,7 +73311,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkeletonBattleAxe"
   },
   "SkeletonSword2FantasyTB25": {
     "DisplayName": "Skeleton Sword 2, Fantasy, TB25",
@@ -70967,7 +73334,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkeletonSword2FantasyTB25"
   },
   "SkeletonSword3FantasyTB25": {
     "DisplayName": "Skeleton Sword 3, Fantasy, TB25",
@@ -70990,7 +73358,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkeletonSword3FantasyTB25"
   },
   "SkeletonSwordArmoredFantasyTB25": {
     "DisplayName": "Skeleton Sword, Armored, Fantasy, TB25",
@@ -71016,7 +73385,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkeletonSwordArmoredFantasyTB25"
   },
   "SkeletonSwordFantasyTB25": {
     "DisplayName": "Skeleton Sword, Fantasy, TB25",
@@ -71038,7 +73408,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkeletonSwordFantasyTB25"
   },
   "SkeletonWarriorBlack": {
     "DisplayName": "Skeleton Warrior, Black",
@@ -71061,7 +73432,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkeletonWarriorBlack"
   },
   "SkeletonWarriorBlue": {
     "DisplayName": "Skeleton Warrior, Blue",
@@ -71084,7 +73456,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkeletonWarriorBlue"
   },
   "SkeletonWarriorPink": {
     "DisplayName": "Skeleton Warrior, Pink",
@@ -71107,7 +73480,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkeletonWarriorPink"
   },
   "SkeletonWarriorTan": {
     "DisplayName": "Skeleton Warrior, Tan",
@@ -71130,7 +73504,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkeletonWarriorTan"
   },
   "Skull": {
     "DisplayName": "Skull",
@@ -71165,7 +73540,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Skull"
   },
   "SliderClipBlack": {
     "DisplayName": "Slider Clip, Black",
@@ -71190,7 +73566,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SliderClipBlack"
   },
   "SliderClipBlue": {
     "DisplayName": "Slider Clip, Blue",
@@ -71215,7 +73592,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SliderClipBlue"
   },
   "SliderClipChipboardBlack": {
     "DisplayName": "Slider Clip, Chipboard, Black",
@@ -71240,7 +73618,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SliderClipChipboardBlack"
   },
   "SliderClipChipboardBlue": {
     "DisplayName": "Slider Clip, Chipboard, Blue",
@@ -71265,7 +73644,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SliderClipChipboardBlue"
   },
   "SliderClipChipboardGreen": {
     "DisplayName": "Slider Clip, Chipboard, Green",
@@ -71290,7 +73670,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SliderClipChipboardGreen"
   },
   "SliderClipChipboardOrange": {
     "DisplayName": "Slider Clip, Chipboard, Orange",
@@ -71315,7 +73696,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SliderClipChipboardOrange"
   },
   "SliderClipChipboardPurple": {
     "DisplayName": "Slider Clip, Chipboard, Purple",
@@ -71340,7 +73722,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SliderClipChipboardPurple"
   },
   "SliderClipChipboardRed": {
     "DisplayName": "Slider Clip, Chipboard, Red",
@@ -71365,7 +73748,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SliderClipChipboardRed"
   },
   "SliderClipChipboardWhite": {
     "DisplayName": "Slider Clip, Chipboard, White",
@@ -71390,7 +73774,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SliderClipChipboardWhite"
   },
   "SliderClipChipboardYellow": {
     "DisplayName": "Slider Clip, Chipboard, Yellow",
@@ -71415,7 +73800,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SliderClipChipboardYellow"
   },
   "SliderClipGreen": {
     "DisplayName": "Slider Clip, Green",
@@ -71441,7 +73827,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SliderClipGreen"
   },
   "SliderClipOrange": {
     "DisplayName": "Slider Clip, Orange",
@@ -71466,7 +73853,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SliderClipOrange"
   },
   "SliderClipPurple": {
     "DisplayName": "Slider Clip, Purple",
@@ -71491,7 +73879,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SliderClipPurple"
   },
   "SliderClipRed": {
     "DisplayName": "Slider Clip, Red",
@@ -71516,7 +73905,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SliderClipRed"
   },
   "SliderClipWhite": {
     "DisplayName": "Slider Clip, White",
@@ -71541,7 +73931,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SliderClipWhite"
   },
   "SliderClipYellow": {
     "DisplayName": "Slider Clip, Yellow",
@@ -71566,7 +73957,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SliderClipYellow"
   },
   "SmallStoutBox": {
     "DisplayName": "Small Stout Box",
@@ -71593,7 +73985,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SmallStoutBox"
   },
   "Snap&StackConditionMarkerBlack": {
     "DisplayName": "Snap & Stack Condition Marker, Black",
@@ -71634,7 +74027,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Snap&StackConditionMarkerBlack"
   },
   "Snap&StackConditionMarkerBlue": {
     "DisplayName": "Snap & Stack Condition Marker, Blue",
@@ -71675,7 +74069,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Snap&StackConditionMarkerBlue"
   },
   "Snap&StackConditionMarkerGreen": {
     "DisplayName": "Snap & Stack Condition Marker, Green",
@@ -71716,7 +74111,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Snap&StackConditionMarkerGreen"
   },
   "Snap&StackConditionMarkerPink": {
     "DisplayName": "Snap & Stack Condition Marker, Pink",
@@ -71757,7 +74153,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Snap&StackConditionMarkerPink"
   },
   "Snap&StackConditionMarkerWhite": {
     "DisplayName": "Snap & Stack Condition Marker, White",
@@ -71798,7 +74195,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Snap&StackConditionMarkerWhite"
   },
   "Snap&StackConditionMarkerYellow": {
     "DisplayName": "Snap & Stack Condition Marker, Yellow",
@@ -71839,7 +74237,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Snap&StackConditionMarkerYellow"
   },
   "SnaplockBoxMicro": {
     "DisplayName": "Snaplock Box, Micro",
@@ -71869,7 +74268,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SnaplockBoxMicro"
   },
   "SnaplockBoxMini": {
     "DisplayName": "Snaplock Box, Mini",
@@ -71899,7 +74299,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SnaplockBoxMini"
   },
   "SnaplockBoxOrganizer": {
     "DisplayName": "Snaplock Box, Organizer",
@@ -71928,7 +74329,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SnaplockBoxOrganizer"
   },
   "SnaplockBoxPoker100+Card": {
     "DisplayName": "Snaplock Box, Poker, 100+ Card",
@@ -71959,7 +74361,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SnaplockBoxPoker100+Card"
   },
   "Snowman1FantasyTB25": {
     "DisplayName": "Snowman 1, Fantasy, TB25",
@@ -71976,7 +74379,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Snowman1FantasyTB25"
   },
   "Snowman2FantasyTB25": {
     "DisplayName": "Snowman 2 Fantasy, TB25",
@@ -71993,7 +74397,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Snowman2FantasyTB25"
   },
   "SoldierBlue-CharacterMeeple": {
     "DisplayName": "Soldier, Blue - Character Meeple",
@@ -72019,7 +74424,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SoldierBlue-CharacterMeeple"
   },
   "SoldierGreen-CharacterMeeple": {
     "DisplayName": "Soldier, Green - Character Meeple",
@@ -72045,7 +74451,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SoldierGreen-CharacterMeeple"
   },
   "SpaceRangerGuns": {
     "DisplayName": "Space Ranger Guns",
@@ -72071,7 +74478,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "gray",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SpaceRangerGuns"
   },
   "SpaceRangerIIw/Armament": {
     "DisplayName": "Space Ranger II w/ Armament",
@@ -72097,7 +74505,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "gray",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SpaceRangerIIw/Armament"
   },
   "SpaceRangerw/Armament": {
     "DisplayName": "Space Ranger w/ Armament",
@@ -72123,7 +74532,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "gray",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SpaceRangerw/Armament"
   },
   "SpeedsterRed": {
     "DisplayName": "Speedster, Red",
@@ -72146,7 +74556,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SpeedsterRed"
   },
   "Spider": {
     "DisplayName": "Spider",
@@ -72179,7 +74590,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Spider"
   },
   "SpiderEggs": {
     "DisplayName": "Spider Eggs",
@@ -72197,7 +74609,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SpiderEggs"
   },
   "SpiderFantasyTB50": {
     "DisplayName": "Spider, Fantasy, TB50",
@@ -72233,7 +74646,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SpiderFantasyTB50"
   },
   "SpinnerBlack": {
     "DisplayName": "Spinner, Black",
@@ -72252,7 +74666,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SpinnerBlack"
   },
   "SpinnerRed": {
     "DisplayName": "Spinner, Red",
@@ -72271,7 +74686,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SpinnerRed"
   },
   "SpinnerWhite": {
     "DisplayName": "Spinner, White",
@@ -72290,7 +74706,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SpinnerWhite"
   },
   "SprueAgesBeige": {
     "DisplayName": "Sprue, Ages, Beige",
@@ -72324,7 +74741,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueAgesBeige"
   },
   "SprueAgesBlack": {
     "DisplayName": "Sprue, Ages, Black",
@@ -72358,7 +74776,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueAgesBlack"
   },
   "SprueAgesPurple": {
     "DisplayName": "Sprue, Ages, Purple",
@@ -72392,7 +74811,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "purple",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueAgesPurple"
   },
   "SprueAgesTan": {
     "DisplayName": "Sprue, Ages, Tan",
@@ -72426,7 +74846,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueAgesTan"
   },
   "SprueAgesYellow": {
     "DisplayName": "Sprue, Ages, Yellow",
@@ -72460,7 +74881,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "yellow",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueAgesYellow"
   },
   "SprueCivilWarHorseBlack": {
     "DisplayName": "Sprue, Civil War Horse, Black",
@@ -72509,7 +74931,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueCivilWarHorseBlack"
   },
   "SprueCivilWarHorseBrown": {
     "DisplayName": "Sprue, Civil War Horse, Brown",
@@ -72558,7 +74981,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "brown",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueCivilWarHorseBrown"
   },
   "SprueCivilWarMilitaryBlue": {
     "DisplayName": "Sprue, Civil War Military, Blue",
@@ -72587,7 +75011,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueCivilWarMilitaryBlue"
   },
   "SprueCivilWarMilitaryGray": {
     "DisplayName": "Sprue, Civil War Military, Gray",
@@ -72616,7 +75041,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "gray",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueCivilWarMilitaryGray"
   },
   "SprueCivilWarMilitaryLtBlue": {
     "DisplayName": "Sprue, Civil War Military, Lt Blue",
@@ -72645,7 +75071,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueCivilWarMilitaryLtBlue"
   },
   "SprueCivilWarMilitaryRed": {
     "DisplayName": "Sprue, Civil War Military, Red",
@@ -72674,7 +75101,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "red",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueCivilWarMilitaryRed"
   },
   "SprueCivilizationBlue": {
     "DisplayName": "Sprue, Civilization, Blue",
@@ -72706,7 +75134,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueCivilizationBlue"
   },
   "SprueCivilizationGreen": {
     "DisplayName": "Sprue, Civilization, Green",
@@ -72738,7 +75167,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "green",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueCivilizationGreen"
   },
   "SprueCivilizationGray": {
     "DisplayName": "Sprue, Civilization, Gray",
@@ -72770,7 +75200,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "gray",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueCivilizationGray"
   },
   "SprueCivilizationPurple": {
     "DisplayName": "Sprue, Civilization, Purple",
@@ -72802,7 +75233,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "purple",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueCivilizationPurple"
   },
   "SprueCivilizationYellow": {
     "DisplayName": "Sprue, Civilization, Yellow",
@@ -72834,7 +75266,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "yellow",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueCivilizationYellow"
   },
   "SprueEgyptMythBrown": {
     "DisplayName": "Sprue, Egypt Myth, Brown",
@@ -72867,7 +75300,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "brown",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueEgyptMythBrown"
   },
   "SprueMilitaryBeige": {
     "DisplayName": "Sprue, Military, Beige",
@@ -72916,7 +75350,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueMilitaryBeige"
   },
   "SprueMilitaryBlue": {
     "DisplayName": "Sprue, Military, Blue",
@@ -72965,7 +75400,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueMilitaryBlue"
   },
   "SprueMilitaryBrown": {
     "DisplayName": "Sprue, Military, Brown",
@@ -73014,7 +75450,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "brown",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueMilitaryBrown"
   },
   "SprueMilitaryGreen": {
     "DisplayName": "Sprue, Military, Green",
@@ -73063,7 +75500,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueMilitaryGreen"
   },
   "SprueMilitaryGray": {
     "DisplayName": "Sprue, Military, Gray",
@@ -73111,7 +75549,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueMilitaryGray"
   },
   "SprueMilitaryRed": {
     "DisplayName": "Sprue, Military, Red",
@@ -73160,7 +75599,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueMilitaryRed"
   },
   "SprueNorseMythDkBlue": {
     "DisplayName": "Sprue, Norse Myth, Dk Blue",
@@ -73187,7 +75627,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueNorseMythDkBlue"
   },
   "SprueNorseMythLtBlue": {
     "DisplayName": "Sprue, Norse Myth, Lt Blue",
@@ -73214,7 +75655,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueNorseMythLtBlue"
   },
   "SprueNorseMythMedBlue": {
     "DisplayName": "Sprue, Norse Myth, Med Blue",
@@ -73241,7 +75683,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "SprueNorseMythMedBlue"
   },
   "StackerConeBlack": {
     "DisplayName": "Stacker Cone, Black",
@@ -73260,7 +75703,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StackerConeBlack"
   },
   "StackerConeBlue": {
     "DisplayName": "Stacker Cone, Blue",
@@ -73279,7 +75723,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StackerConeBlue"
   },
   "StackerConeGreen": {
     "DisplayName": "Stacker Cone, Green",
@@ -73298,7 +75743,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StackerConeGreen"
   },
   "StackerConeOrange": {
     "DisplayName": "Stacker Cone, Orange",
@@ -73317,7 +75763,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StackerConeOrange"
   },
   "StackerConePurple": {
     "DisplayName": "Stacker Cone, Purple",
@@ -73336,7 +75783,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StackerConePurple"
   },
   "StackerConeRed": {
     "DisplayName": "Stacker Cone, Red",
@@ -73355,7 +75803,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StackerConeRed"
   },
   "StackerConeWhite": {
     "DisplayName": "Stacker Cone, White",
@@ -73374,7 +75823,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StackerConeWhite"
   },
   "StackerConeYellow": {
     "DisplayName": "Stacker Cone, Yellow",
@@ -73393,7 +75843,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StackerConeYellow"
   },
   "Stacker19mmBlack": {
     "DisplayName": "Stacker, 19mm, Black",
@@ -73410,7 +75861,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Stacker19mmBlack"
   },
   "Stacker19mmBlue": {
     "DisplayName": "Stacker, 19mm, Blue",
@@ -73427,7 +75879,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Stacker19mmBlue"
   },
   "Stacker19mmGreen": {
     "DisplayName": "Stacker, 19mm, Green",
@@ -73444,7 +75897,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Stacker19mmGreen"
   },
   "Stacker19mmOrange": {
     "DisplayName": "Stacker, 19mm, Orange",
@@ -73461,7 +75915,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Stacker19mmOrange"
   },
   "Stacker19mmPurple": {
     "DisplayName": "Stacker, 19mm, Purple",
@@ -73478,7 +75933,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Stacker19mmPurple"
   },
   "Stacker19mmRed": {
     "DisplayName": "Stacker, 19mm, Red",
@@ -73495,7 +75951,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Stacker19mmRed"
   },
   "Stacker19mmWhite": {
     "DisplayName": "Stacker, 19mm, White",
@@ -73512,7 +75969,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Stacker19mmWhite"
   },
   "Stacker19mmYellow": {
     "DisplayName": "Stacker, 19mm, Yellow",
@@ -73529,7 +75987,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Stacker19mmYellow"
   },
   "StackerBlack": {
     "DisplayName": "Stacker, Black",
@@ -73555,7 +76014,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StackerBlack"
   },
   "StackerBlue": {
     "DisplayName": "Stacker, Blue",
@@ -73581,7 +76041,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StackerBlue"
   },
   "StackerGreen": {
     "DisplayName": "Stacker, Green",
@@ -73607,7 +76068,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StackerGreen"
   },
   "StackerOrange": {
     "DisplayName": "Stacker, Orange",
@@ -73633,7 +76095,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StackerOrange"
   },
   "StackerPurple": {
     "DisplayName": "Stacker, Purple",
@@ -73659,7 +76122,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StackerPurple"
   },
   "StackerRed": {
     "DisplayName": "Stacker, Red",
@@ -73685,7 +76149,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StackerRed"
   },
   "StackerWhite": {
     "DisplayName": "Stacker, White",
@@ -73711,7 +76176,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StackerWhite"
   },
   "StackerYellow": {
     "DisplayName": "Stacker, Yellow",
@@ -73737,7 +76203,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StackerYellow"
   },
   "StakeBedTruckBlack": {
     "DisplayName": "Stake Bed Truck, Black",
@@ -73764,7 +76231,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "StakeBedTruckBlack"
   },
   "StandChipboardTB15Black": {
     "DisplayName": "Stand, Chipboard, TB15, Black",
@@ -73790,7 +76258,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StandChipboardTB15Black"
   },
   "StandChipboardTB15Blue": {
     "DisplayName": "Stand, Chipboard, TB15, Blue",
@@ -73816,7 +76285,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StandChipboardTB15Blue"
   },
   "StandChipboardTB15Green": {
     "DisplayName": "Stand, Chipboard, TB15, Green",
@@ -73842,7 +76312,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StandChipboardTB15Green"
   },
   "StandChipboardTB15Orange": {
     "DisplayName": "Stand, Chipboard, TB15, Orange",
@@ -73868,7 +76339,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StandChipboardTB15Orange"
   },
   "StandChipboardTB15Purple": {
     "DisplayName": "Stand, Chipboard, TB15, Purple",
@@ -73894,7 +76366,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StandChipboardTB15Purple"
   },
   "StandChipboardTB15Red": {
     "DisplayName": "Stand, Chipboard, TB15, Red",
@@ -73920,7 +76393,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StandChipboardTB15Red"
   },
   "StandChipboardTB15White": {
     "DisplayName": "Stand, Chipboard, TB15, White",
@@ -73946,7 +76420,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StandChipboardTB15White"
   },
   "StandChipboardTB15Yellow": {
     "DisplayName": "Stand, Chipboard, TB15, Yellow",
@@ -73972,7 +76447,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StandChipboardTB15Yellow"
   },
   "StandeeTGC": {
     "DisplayName": "Standee, TGC",
@@ -73993,7 +76469,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "StandeeTGC"
   },
   "StarWoodBlack": {
     "DisplayName": "Star, Wood, Black",
@@ -74027,7 +76504,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StarWoodBlack"
   },
   "StarWoodGreen": {
     "DisplayName": "Star, Wood, Green",
@@ -74061,7 +76539,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StarWoodGreen"
   },
   "StarWoodPurple": {
     "DisplayName": "Star, Wood, Purple",
@@ -74095,7 +76574,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StarWoodPurple"
   },
   "StarWoodRed": {
     "DisplayName": "Star, Wood, Red",
@@ -74129,7 +76609,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StarWoodRed"
   },
   "StickAcrylicOpaqueBlack": {
     "DisplayName": "Stick, Acrylic, Opaque, Black",
@@ -74150,7 +76631,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickAcrylicOpaqueBlack"
   },
   "StickAcrylicOpaqueGold": {
     "DisplayName": "Stick, Acrylic, Opaque, Gold",
@@ -74172,7 +76654,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickAcrylicOpaqueGold"
   },
   "StickAcrylicOpaqueSilver": {
     "DisplayName": "Stick, Acrylic, Opaque, Silver",
@@ -74194,7 +76677,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickAcrylicOpaqueSilver"
   },
   "StickAcrylicOpaqueWhite": {
     "DisplayName": "Stick, Acrylic, Opaque, White",
@@ -74215,7 +76699,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickAcrylicOpaqueWhite"
   },
   "StickAcrylicTransparentBlack": {
     "DisplayName": "Stick, Acrylic, Transparent, Black",
@@ -74236,7 +76721,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickAcrylicTransparentBlack"
   },
   "StickAcrylicTransparentBlue": {
     "DisplayName": "Stick, Acrylic, Transparent, Blue",
@@ -74257,7 +76743,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickAcrylicTransparentBlue"
   },
   "StickAcrylicTransparentClear": {
     "DisplayName": "Stick, Acrylic, Transparent, Clear",
@@ -74278,7 +76765,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickAcrylicTransparentClear"
   },
   "StickAcrylicTransparentGreen": {
     "DisplayName": "Stick, Acrylic, Transparent, Green",
@@ -74299,7 +76787,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickAcrylicTransparentGreen"
   },
   "StickAcrylicTransparentorange": {
     "DisplayName": "Stick, Acrylic, Transparent, orange",
@@ -74320,7 +76809,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickAcrylicTransparentorange"
   },
   "StickAcrylicTransparentPurple": {
     "DisplayName": "Stick, Acrylic, Transparent, Purple",
@@ -74341,7 +76831,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickAcrylicTransparentPurple"
   },
   "StickAcrylicTransparentRed": {
     "DisplayName": "Stick, Acrylic, Transparent, Red",
@@ -74362,7 +76853,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickAcrylicTransparentRed"
   },
   "StickAcrylicTransparentWhite": {
     "DisplayName": "Stick, Acrylic, Transparent, White",
@@ -74383,7 +76875,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickAcrylicTransparentWhite"
   },
   "StickAcrylicTransparentYellow": {
     "DisplayName": "Stick, Acrylic, Transparent, Yellow",
@@ -74404,7 +76897,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickAcrylicTransparentYellow"
   },
   "StickWoodBlack": {
     "DisplayName": "Stick, Wood, Black",
@@ -74426,7 +76920,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickWoodBlack"
   },
   "StickWoodBlue": {
     "DisplayName": "Stick, Wood, Blue",
@@ -74448,7 +76943,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickWoodBlue"
   },
   "StickWoodGreen": {
     "DisplayName": "Stick, Wood, Green",
@@ -74470,7 +76966,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickWoodGreen"
   },
   "StickWoodOrange": {
     "DisplayName": "Stick, Wood, Orange",
@@ -74492,7 +76989,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickWoodOrange"
   },
   "StickWoodPurple": {
     "DisplayName": "Stick, Wood, Purple",
@@ -74514,7 +77012,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickWoodPurple"
   },
   "StickWoodRed": {
     "DisplayName": "Stick, Wood, Red",
@@ -74536,7 +77035,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickWoodRed"
   },
   "StickWoodWhite": {
     "DisplayName": "Stick, Wood, White",
@@ -74558,7 +77058,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickWoodWhite"
   },
   "StickWoodYellow": {
     "DisplayName": "Stick, Wood, Yellow",
@@ -74580,7 +77081,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickWoodYellow"
   },
   "StickerPawnOpaqueBlack": {
     "DisplayName": "Sticker Pawn, Opaque, Black",
@@ -74602,7 +77104,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickerPawnOpaqueBlack"
   },
   "StickerPawnOpaqueBlue": {
     "DisplayName": "Sticker Pawn, Opaque, Blue",
@@ -74624,7 +77127,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickerPawnOpaqueBlue"
   },
   "StickerPawnOpaqueGreen": {
     "DisplayName": "Sticker Pawn, Opaque, Green",
@@ -74646,7 +77150,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickerPawnOpaqueGreen"
   },
   "StickerPawnOpaqueOrange": {
     "DisplayName": "Sticker Pawn, Opaque, Orange",
@@ -74668,7 +77173,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickerPawnOpaqueOrange"
   },
   "StickerPawnOpaquePurple": {
     "DisplayName": "Sticker Pawn, Opaque, Purple",
@@ -74690,7 +77196,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickerPawnOpaquePurple"
   },
   "StickerPawnOpaqueRed": {
     "DisplayName": "Sticker Pawn, Opaque, Red",
@@ -74712,7 +77219,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickerPawnOpaqueRed"
   },
   "StickerPawnOpaqueWhite": {
     "DisplayName": "Sticker Pawn, Opaque, White",
@@ -74734,7 +77242,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickerPawnOpaqueWhite"
   },
   "StickerPawnOpaqueYellow": {
     "DisplayName": "Sticker Pawn, Opaque, Yellow",
@@ -74756,7 +77265,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickerPawnOpaqueYellow"
   },
   "StickerPawnTransparentBlue": {
     "DisplayName": "Sticker Pawn, Transparent, Blue",
@@ -74778,7 +77288,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickerPawnTransparentBlue"
   },
   "StickerPawnTransparentClear": {
     "DisplayName": "Sticker Pawn, Transparent, Clear",
@@ -74801,7 +77312,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickerPawnTransparentClear"
   },
   "StickerPawnTransparentGreen": {
     "DisplayName": "Sticker Pawn, Transparent, Green",
@@ -74823,7 +77335,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickerPawnTransparentGreen"
   },
   "StickerPawnTransparentOrange": {
     "DisplayName": "Sticker Pawn, Transparent, Orange",
@@ -74845,7 +77358,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickerPawnTransparentOrange"
   },
   "StickerPawnTransparentPurple": {
     "DisplayName": "Sticker Pawn, Transparent, Purple",
@@ -74867,7 +77381,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickerPawnTransparentPurple"
   },
   "StickerPawnTransparentRed": {
     "DisplayName": "Sticker Pawn, Transparent, Red",
@@ -74889,7 +77404,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickerPawnTransparentRed"
   },
   "StickerPawnTransparentYellow": {
     "DisplayName": "Sticker Pawn, Transparent, Yellow",
@@ -74911,7 +77427,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StickerPawnTransparentYellow"
   },
   "StoneArrowhead": {
     "DisplayName": "Stone Arrowhead",
@@ -74926,7 +77443,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StoneArrowhead"
   },
   "StoneWood": {
     "DisplayName": "Stone, Wood",
@@ -74950,7 +77468,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StoneWood"
   },
   "StorageJarRoundClear": {
     "DisplayName": "Storage Jar, Round, Clear",
@@ -74975,7 +77494,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StorageJarRoundClear"
   },
   "StorageJarTin": {
     "DisplayName": "Storage Jar, Tin",
@@ -75000,7 +77520,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StorageJarTin"
   },
   "SubmarineBlack": {
     "DisplayName": "Submarine, Black",
@@ -75027,7 +77548,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SubmarineBlack"
   },
   "SubmarineBlue": {
     "DisplayName": "Submarine, Blue",
@@ -75054,7 +77576,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SubmarineBlue"
   },
   "SubmarineGreen": {
     "DisplayName": "Submarine, Green",
@@ -75081,7 +77604,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SubmarineGreen"
   },
   "SubmarineOrange": {
     "DisplayName": "Submarine, Orange",
@@ -75108,7 +77632,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SubmarineOrange"
   },
   "SubmarinePurple": {
     "DisplayName": "Submarine, Purple",
@@ -75135,7 +77660,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SubmarinePurple"
   },
   "SubmarineRed": {
     "DisplayName": "Submarine, Red",
@@ -75162,7 +77688,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SubmarineRed"
   },
   "SubmarineWhite": {
     "DisplayName": "Submarine, White",
@@ -75189,7 +77716,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SubmarineWhite"
   },
   "SubmarineYellow": {
     "DisplayName": "Submarine, Yellow",
@@ -75216,7 +77744,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SubmarineYellow"
   },
   "SuitsClubs": {
     "DisplayName": "Suits, Clubs",
@@ -75235,7 +77764,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SuitsClubs"
   },
   "SuitsDiamonds": {
     "DisplayName": "Suits, Diamonds",
@@ -75254,7 +77784,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SuitsDiamonds"
   },
   "SuitsHearts": {
     "DisplayName": "Suits, Hearts",
@@ -75273,7 +77804,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SuitsHearts"
   },
   "SuitsSpades": {
     "DisplayName": "Suits, Spades",
@@ -75292,7 +77824,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SuitsSpades"
   },
   "SUVPostApocalypse": {
     "DisplayName": "SUV, Post Apocalypse",
@@ -75307,7 +77840,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SUVPostApocalypse"
   },
   "Sword": {
     "DisplayName": "Sword",
@@ -75337,7 +77871,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Sword"
   },
   "SwordsmanBlack-CharacterMeeple": {
     "DisplayName": "Swordsman, Black - Character Meeple",
@@ -75372,7 +77907,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SwordsmanBlack-CharacterMeeple"
   },
   "SwordsmanBlue-CharacterMeeple": {
     "DisplayName": "Swordsman, Blue - Character Meeple",
@@ -75407,7 +77943,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SwordsmanBlue-CharacterMeeple"
   },
   "SwordsmanGreen-CharacterMeeple": {
     "DisplayName": "Swordsman, Green - Character Meeple",
@@ -75442,7 +77979,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SwordsmanGreen-CharacterMeeple"
   },
   "SwordsmanOrange-CharacterMeeple": {
     "DisplayName": "Swordsman, Orange - Character Meeple",
@@ -75477,7 +78015,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SwordsmanOrange-CharacterMeeple"
   },
   "SwordsmanPurple-CharacterMeeple": {
     "DisplayName": "Swordsman, Purple - Character Meeple",
@@ -75512,7 +78051,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SwordsmanPurple-CharacterMeeple"
   },
   "SwordsmanRed-CharacterMeeple": {
     "DisplayName": "Swordsman, Red - Character Meeple",
@@ -75547,7 +78087,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SwordsmanRed-CharacterMeeple"
   },
   "SwordsmanWhite-CharacterMeeple": {
     "DisplayName": "Swordsman, White - Character Meeple",
@@ -75582,7 +78123,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SwordsmanWhite-CharacterMeeple"
   },
   "SwordsmanYellow-CharacterMeeple": {
     "DisplayName": "Swordsman, Yellow - Character Meeple",
@@ -75617,7 +78159,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SwordsmanYellow-CharacterMeeple"
   },
   "T-BarBrown": {
     "DisplayName": "T-Bar, Brown",
@@ -75638,7 +78181,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "T-BarBrown"
   },
   "TableOrange": {
     "DisplayName": "Table, Orange",
@@ -75663,7 +78207,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TableOrange"
   },
   "TabletStone": {
     "DisplayName": "Tablet, Stone",
@@ -75683,7 +78228,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TabletStone"
   },
   "TacticalKnife": {
     "DisplayName": "Tactical Knife",
@@ -75720,7 +78266,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TacticalKnife"
   },
   "TajMahalPalaceSetof5": {
     "DisplayName": "Taj Mahal Palace, Set of 5",
@@ -75745,7 +78292,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "TajMahalPalaceSetof5"
   },
   "TallPeopleBlack": {
     "DisplayName": "Tall People, Black",
@@ -75772,7 +78320,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TallPeopleBlack"
   },
   "TallPeopleBlue": {
     "DisplayName": "Tall People, Blue",
@@ -75799,7 +78348,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TallPeopleBlue"
   },
   "TallPeopleGreen": {
     "DisplayName": "Tall People, Green",
@@ -75826,7 +78376,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TallPeopleGreen"
   },
   "TallPeopleOrange": {
     "DisplayName": "Tall People, Orange",
@@ -75853,7 +78404,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TallPeopleOrange"
   },
   "TallPeoplePurple": {
     "DisplayName": "Tall People, Purple",
@@ -75880,7 +78432,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TallPeoplePurple"
   },
   "TallPeopleRed": {
     "DisplayName": "Tall People, Red",
@@ -75907,7 +78460,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TallPeopleRed"
   },
   "TallPeopleThickGreen": {
     "DisplayName": "Tall People, Thick, Green",
@@ -75934,7 +78488,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TallPeopleThickGreen"
   },
   "TallPeopleThickGray": {
     "DisplayName": "Tall People, Thick, Gray",
@@ -75961,7 +78516,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TallPeopleThickGray"
   },
   "TallPeopleThickPurple": {
     "DisplayName": "Tall People, Thick, Purple",
@@ -75988,7 +78544,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TallPeopleThickPurple"
   },
   "TallPeopleThickRed": {
     "DisplayName": "Tall People, Thick, Red",
@@ -76015,7 +78572,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TallPeopleThickRed"
   },
   "TallPeopleThickYellow": {
     "DisplayName": "Tall People, Thick, Yellow",
@@ -76042,7 +78600,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TallPeopleThickYellow"
   },
   "TallPeopleWhite": {
     "DisplayName": "Tall People, White",
@@ -76069,7 +78628,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TallPeopleWhite"
   },
   "TallPeopleYellow": {
     "DisplayName": "Tall People, Yellow",
@@ -76096,7 +78656,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TallPeopleYellow"
   },
   "TankBlack": {
     "DisplayName": "Tank, Black",
@@ -76117,7 +78678,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TankBlack"
   },
   "TankBlue": {
     "DisplayName": "Tank, Blue",
@@ -76138,7 +78700,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TankBlue"
   },
   "TankBrown": {
     "DisplayName": "Tank, Brown",
@@ -76159,7 +78722,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TankBrown"
   },
   "TankClear": {
     "DisplayName": "Tank, Clear",
@@ -76180,7 +78744,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TankClear"
   },
   "TankGreen": {
     "DisplayName": "Tank, Green",
@@ -76201,7 +78766,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TankGreen"
   },
   "TankOrange": {
     "DisplayName": "Tank, Orange",
@@ -76222,7 +78788,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TankOrange"
   },
   "TankPostApocalypse": {
     "DisplayName": "Tank, Post Apocalypse",
@@ -76237,7 +78804,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TankPostApocalypse"
   },
   "TankPurple": {
     "DisplayName": "Tank, Purple",
@@ -76258,7 +78826,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TankPurple"
   },
   "TankRed": {
     "DisplayName": "Tank, Red",
@@ -76279,7 +78848,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TankRed"
   },
   "TankWhite": {
     "DisplayName": "Tank, White",
@@ -76300,7 +78870,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TankWhite"
   },
   "TankYellow": {
     "DisplayName": "Tank, Yellow",
@@ -76321,7 +78892,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TankYellow"
   },
   "TapeMeasure": {
     "DisplayName": "Tape Measure",
@@ -76353,7 +78925,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TapeMeasure"
   },
   "TarotSleevePack(100)": {
     "DisplayName": "Tarot Sleeve Pack (100)",
@@ -76381,7 +78954,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TarotSleevePack(100)"
   },
   "TCIDLockdownMinimumSecurityPromoPack": {
     "DisplayName": "TCID Lockdown Minimum Security Promo Pack",
@@ -76400,7 +78974,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "TCIDLockdownMinimumSecurityPromoPack"
   },
   "TentaclePortalTB25": {
     "DisplayName": "Tentacle Portal, TB25",
@@ -76425,7 +79000,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TentaclePortalTB25"
   },
   "TGCFollies-ShamrockPack": {
     "DisplayName": "TGC Follies - Shamrock Pack",
@@ -76439,7 +79015,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "TGCFollies-ShamrockPack"
   },
   "TheWhiteWizard": {
     "DisplayName": "The White Wizard",
@@ -76478,7 +79055,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TheWhiteWizard"
   },
   "Thief-CharacterMeeple": {
     "DisplayName": "Thief - Character Meeple",
@@ -76506,7 +79084,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Thief-CharacterMeeple"
   },
   "Thimble": {
     "DisplayName": "Thimble ",
@@ -76527,7 +79106,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Thimble"
   },
   "ThinStarGray": {
     "DisplayName": "Thin Star, Gray",
@@ -76560,7 +79140,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ThinStarGray"
   },
   "TieflingFemaleMageFantasyTB25": {
     "DisplayName": "Tiefling Female Mage, Fantasy, TB25",
@@ -76593,7 +79174,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TieflingFemaleMageFantasyTB25"
   },
   "TikiIdolYellow": {
     "DisplayName": "Tiki Idol, Yellow",
@@ -76617,7 +79199,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TikiIdolYellow"
   },
   "TileRack": {
     "DisplayName": "Tile Rack",
@@ -76636,7 +79219,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TileRack"
   },
   "ToiletPaper": {
     "DisplayName": "Toilet Paper",
@@ -76673,7 +79257,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ToiletPaper"
   },
   "TokenChipBlack": {
     "DisplayName": "Token Chip, Black",
@@ -76697,7 +79282,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TokenChipBlack"
   },
   "TokenChipBlue": {
     "DisplayName": "Token Chip, Blue",
@@ -76721,7 +79307,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TokenChipBlue"
   },
   "TokenChipGreen": {
     "DisplayName": "Token Chip, Green",
@@ -76745,7 +79332,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TokenChipGreen"
   },
   "TokenChipIndentedOrange": {
     "DisplayName": "Token Chip, Indented, Orange",
@@ -76768,7 +79356,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "TokenChipIndentedOrange"
   },
   "TokenChipOrange": {
     "DisplayName": "Token Chip, Orange",
@@ -76792,7 +79381,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TokenChipOrange"
   },
   "TokenChipPurple": {
     "DisplayName": "Token Chip, Purple",
@@ -76816,7 +79406,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TokenChipPurple"
   },
   "TokenChipRed": {
     "DisplayName": "Token Chip, Red",
@@ -76840,7 +79431,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TokenChipRed"
   },
   "TokenChipWhite": {
     "DisplayName": "Token Chip, White",
@@ -76864,7 +79456,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TokenChipWhite"
   },
   "TokenChipYellow": {
     "DisplayName": "Token Chip, Yellow",
@@ -76888,7 +79481,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TokenChipYellow"
   },
   "Tombstone": {
     "DisplayName": "Tombstone",
@@ -76906,7 +79500,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Tombstone"
   },
   "TopHat": {
     "DisplayName": "Top Hat",
@@ -76939,7 +79534,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TopHat"
   },
   "TowerStackerBlack": {
     "DisplayName": "Tower Stacker, Black",
@@ -76965,7 +79561,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TowerStackerBlack"
   },
   "TowerStackerBlue": {
     "DisplayName": "Tower Stacker, Blue",
@@ -76991,7 +79588,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TowerStackerBlue"
   },
   "TowerStackerGreen": {
     "DisplayName": "Tower Stacker, Green",
@@ -77017,7 +79615,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TowerStackerGreen"
   },
   "TowerStackerOrange": {
     "DisplayName": "Tower Stacker, Orange",
@@ -77043,7 +79642,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TowerStackerOrange"
   },
   "TowerStackerPurple": {
     "DisplayName": "Tower Stacker, Purple",
@@ -77069,7 +79669,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TowerStackerPurple"
   },
   "TowerStackerRed": {
     "DisplayName": "Tower Stacker, Red",
@@ -77095,7 +79696,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TowerStackerRed"
   },
   "TowerStackerWhite": {
     "DisplayName": "Tower Stacker, White",
@@ -77121,7 +79723,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TowerStackerWhite"
   },
   "TowerStackerYellow": {
     "DisplayName": "Tower Stacker, Yellow",
@@ -77147,7 +79750,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TowerStackerYellow"
   },
   "TrafficCone": {
     "DisplayName": "Traffic Cone",
@@ -77171,7 +79775,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TrafficCone"
   },
   "TrainEngineWoodBlue": {
     "DisplayName": "Train Engine, Wood, Blue",
@@ -77199,7 +79804,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TrainEngineWoodBlue"
   },
   "TrainEngineWoodOrange": {
     "DisplayName": "Train Engine, Wood, Orange",
@@ -77227,7 +79833,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TrainEngineWoodOrange"
   },
   "TrainEngineWoodPurple": {
     "DisplayName": "Train Engine, Wood, Purple",
@@ -77255,7 +79862,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TrainEngineWoodPurple"
   },
   "TrainEngineWoodRed": {
     "DisplayName": "Train Engine, Wood, Red",
@@ -77282,7 +79890,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "TrainEngineWoodRed"
   },
   "TrainEngineWoodWhite": {
     "DisplayName": "Train Engine, Wood, White",
@@ -77310,7 +79919,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TrainEngineWoodWhite"
   },
   "TrainEngineWoodYellow": {
     "DisplayName": "Train Engine, Wood, Yellow",
@@ -77338,7 +79948,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TrainEngineWoodYellow"
   },
   "TransportShipSetof6": {
     "DisplayName": "Transport Ship, Set of 6",
@@ -77370,7 +79981,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "TransportShipSetof6"
   },
   "TreasureChestContainer": {
     "DisplayName": "Treasure Chest Container",
@@ -77400,7 +80012,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TreasureChestContainer"
   },
   "TrellisofGrapesBlue": {
     "DisplayName": "Trellis of Grapes, Blue",
@@ -77423,7 +80036,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TrellisofGrapesBlue"
   },
   "TrellisofGrapesGreen": {
     "DisplayName": "Trellis of Grapes, Green",
@@ -77446,7 +80060,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TrellisofGrapesGreen"
   },
   "TrellisofGrapesOrange": {
     "DisplayName": "Trellis of Grapes, Orange",
@@ -77469,7 +80084,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TrellisofGrapesOrange"
   },
   "TrellisofGrapesWhite": {
     "DisplayName": "Trellis of Grapes, White",
@@ -77492,7 +80108,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TrellisofGrapesWhite"
   },
   "TriangleBlack": {
     "DisplayName": "Triangle, Black",
@@ -77520,7 +80137,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TriangleBlack"
   },
   "TriangleBlue": {
     "DisplayName": "Triangle, Blue",
@@ -77548,7 +80166,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TriangleBlue"
   },
   "TriangleGreen": {
     "DisplayName": "Triangle, Green",
@@ -77576,7 +80195,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TriangleGreen"
   },
   "TriangleHollow": {
     "DisplayName": "Triangle, Hollow",
@@ -77605,7 +80225,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TriangleHollow"
   },
   "TrianglePink": {
     "DisplayName": "Triangle, Pink",
@@ -77633,7 +80254,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TrianglePink"
   },
   "TrollFantasyTB50": {
     "DisplayName": "Troll, Fantasy, TB50",
@@ -77654,7 +80276,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TrollFantasyTB50"
   },
   "TrophyTB15Bronze": {
     "DisplayName": "Trophy, TB15, Bronze",
@@ -77682,7 +80305,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "bronze",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TrophyTB15Bronze"
   },
   "TrophyTB15Gold": {
     "DisplayName": "Trophy, TB15, Gold",
@@ -77712,7 +80336,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TrophyTB15Gold"
   },
   "TrophyTB15Silver": {
     "DisplayName": "Trophy, TB15, Silver",
@@ -77742,7 +80367,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TrophyTB15Silver"
   },
   "TruckFlatbedBlack": {
     "DisplayName": "Truck, Flatbed, Black",
@@ -77764,7 +80390,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TruckFlatbedBlack"
   },
   "TruckFlatbedBlue": {
     "DisplayName": "Truck, Flatbed, Blue",
@@ -77786,7 +80413,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TruckFlatbedBlue"
   },
   "TruckFlatbedGreen": {
     "DisplayName": "Truck, Flatbed, Green",
@@ -77808,7 +80436,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TruckFlatbedGreen"
   },
   "TruckFlatbedOrange": {
     "DisplayName": "Truck, Flatbed, Orange",
@@ -77830,7 +80459,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TruckFlatbedOrange"
   },
   "TruckFlatbedPurple": {
     "DisplayName": "Truck, Flatbed, Purple",
@@ -77852,7 +80482,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TruckFlatbedPurple"
   },
   "TruckFlatbedRed": {
     "DisplayName": "Truck, Flatbed, Red",
@@ -77874,7 +80505,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TruckFlatbedRed"
   },
   "TruckFlatbedWhite": {
     "DisplayName": "Truck, Flatbed, White",
@@ -77896,7 +80528,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TruckFlatbedWhite"
   },
   "TruckFlatbedYellow": {
     "DisplayName": "Truck, Flatbed, Yellow",
@@ -77918,7 +80551,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TruckFlatbedYellow"
   },
   "TruckWoodBlue": {
     "DisplayName": "Truck, Wood, Blue",
@@ -77948,7 +80582,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TruckWoodBlue"
   },
   "TruckWoodGreen": {
     "DisplayName": "Truck, Wood, Green",
@@ -77978,7 +80613,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TruckWoodGreen"
   },
   "TruckWoodGray": {
     "DisplayName": "Truck, Wood, Gray",
@@ -78008,7 +80644,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TruckWoodGray"
   },
   "TruckWoodRed": {
     "DisplayName": "Truck, Wood, Red",
@@ -78038,7 +80675,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TruckWoodRed"
   },
   "TruckWoodYellow": {
     "DisplayName": "Truck, Wood, Yellow",
@@ -78068,7 +80706,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TruckWoodYellow"
   },
   "TwoHeadedOgrew/Captive": {
     "DisplayName": "Two Headed Ogre w/ Captive",
@@ -78104,7 +80743,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "TwoHeadedOgrew/Captive"
   },
   "UniversalNo": {
     "DisplayName": "Universal No",
@@ -78143,7 +80783,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "UniversalNo"
   },
   "UniversalYes": {
     "DisplayName": "Universal Yes",
@@ -78182,7 +80823,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "UniversalYes"
   },
   "ValveControlStation": {
     "DisplayName": "Valve Control Station",
@@ -78202,7 +80844,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ValveControlStation"
   },
   "Vampire-CharacterMeeple": {
     "DisplayName": "Vampire - Character Meeple",
@@ -78230,7 +80873,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Vampire-CharacterMeeple"
   },
   "VanPostApocalypse": {
     "DisplayName": "Van, Post Apocalypse",
@@ -78245,7 +80889,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VanPostApocalypse"
   },
   "VialLiquidFluorescentBlue": {
     "DisplayName": "Vial Liquid, Fluorescent Blue",
@@ -78275,7 +80920,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidFluorescentBlue"
   },
   "VialLiquidFluorescentGreen": {
     "DisplayName": "Vial Liquid, Fluorescent Green",
@@ -78305,7 +80951,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidFluorescentGreen"
   },
   "VialLiquidFluorescentOrange": {
     "DisplayName": "Vial Liquid, Fluorescent Orange",
@@ -78335,7 +80982,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidFluorescentOrange"
   },
   "VialLiquidFluorescentRed": {
     "DisplayName": "Vial Liquid, Fluorescent Red",
@@ -78365,7 +81013,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidFluorescentRed"
   },
   "VialLiquidFluorescentYellow": {
     "DisplayName": "Vial Liquid, Fluorescent Yellow",
@@ -78395,7 +81044,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidFluorescentYellow"
   },
   "VialLiquidOpaqueBlack": {
     "DisplayName": "Vial Liquid, Opaque Black",
@@ -78425,7 +81075,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidOpaqueBlack"
   },
   "VialLiquidOpaqueBlue1": {
     "DisplayName": "Vial Liquid, Opaque Blue 1",
@@ -78455,7 +81106,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidOpaqueBlue1"
   },
   "VialLiquidOpaqueBlue2": {
     "DisplayName": "Vial Liquid, Opaque Blue 2",
@@ -78485,7 +81137,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidOpaqueBlue2"
   },
   "VialLiquidOpaqueBlue3": {
     "DisplayName": "Vial Liquid, Opaque Blue 3",
@@ -78515,7 +81168,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidOpaqueBlue3"
   },
   "VialLiquidOpaqueBrown": {
     "DisplayName": "Vial Liquid, Opaque Brown",
@@ -78545,7 +81199,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidOpaqueBrown"
   },
   "VialLiquidOpaqueGray": {
     "DisplayName": "Vial Liquid, Opaque Gray",
@@ -78578,7 +81233,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidOpaqueGray"
   },
   "VialLiquidOpaqueGreen": {
     "DisplayName": "Vial Liquid, Opaque Green",
@@ -78608,7 +81264,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidOpaqueGreen"
   },
   "VialLiquidOpaqueIvory": {
     "DisplayName": "Vial Liquid, Opaque Ivory",
@@ -78639,7 +81296,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidOpaqueIvory"
   },
   "VialLiquidOpaqueOrange": {
     "DisplayName": "Vial Liquid, Opaque Orange",
@@ -78669,7 +81327,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidOpaqueOrange"
   },
   "VialLiquidOpaquePurple": {
     "DisplayName": "Vial Liquid, Opaque Purple",
@@ -78699,7 +81358,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidOpaquePurple"
   },
   "VialLiquidOpaqueRed": {
     "DisplayName": "Vial Liquid, Opaque Red",
@@ -78729,7 +81389,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidOpaqueRed"
   },
   "VialLiquidOpaqueWhite": {
     "DisplayName": "Vial Liquid, Opaque White",
@@ -78759,7 +81420,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidOpaqueWhite"
   },
   "VialLiquidOpaqueYellow": {
     "DisplayName": "Vial Liquid, Opaque Yellow",
@@ -78789,7 +81451,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidOpaqueYellow"
   },
   "VialLiquidSilverMirror": {
     "DisplayName": "Vial Liquid, Silver Mirror",
@@ -78820,7 +81483,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidSilverMirror"
   },
   "VialLiquidTransparentBlack": {
     "DisplayName": "Vial Liquid, Transparent, Black",
@@ -78850,7 +81514,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidTransparentBlack"
   },
   "VialLiquidTransparentBlue": {
     "DisplayName": "Vial Liquid, Transparent, Blue",
@@ -78880,7 +81545,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidTransparentBlue"
   },
   "VialLiquidTransparentGreen": {
     "DisplayName": "Vial Liquid, Transparent, Green",
@@ -78910,7 +81576,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidTransparentGreen"
   },
   "VialLiquidTransparentOrange": {
     "DisplayName": "Vial Liquid, Transparent, Orange",
@@ -78940,7 +81607,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidTransparentOrange"
   },
   "VialLiquidTransparentPurple": {
     "DisplayName": "Vial Liquid, Transparent, Purple",
@@ -78970,7 +81638,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidTransparentPurple"
   },
   "VialLiquidTransparentRed": {
     "DisplayName": "Vial Liquid, Transparent, Red",
@@ -79000,7 +81669,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidTransparentRed"
   },
   "VialLiquidTransparentYellow": {
     "DisplayName": "Vial Liquid, Transparent, Yellow",
@@ -79030,7 +81700,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VialLiquidTransparentYellow"
   },
   "VictorianMiniatureBlue": {
     "DisplayName": "Victorian Miniature, Blue",
@@ -79067,7 +81738,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VictorianMiniatureBlue"
   },
   "VictorianMiniatureGreen": {
     "DisplayName": "Victorian Miniature, Green",
@@ -79104,7 +81776,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VictorianMiniatureGreen"
   },
   "VictorianMiniatureRed": {
     "DisplayName": "Victorian Miniature, Red",
@@ -79141,7 +81814,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VictorianMiniatureRed"
   },
   "VillagerBlack-CharacterMeeple": {
     "DisplayName": "Villager, Black - Character Meeple",
@@ -79162,7 +81836,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VillagerBlack-CharacterMeeple"
   },
   "VillagerBlue-CharacterMeeple": {
     "DisplayName": "Villager, Blue - Character Meeple",
@@ -79183,7 +81858,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VillagerBlue-CharacterMeeple"
   },
   "VillagerGreen-CharacterMeeple": {
     "DisplayName": "Villager, Green - Character Meeple",
@@ -79204,7 +81880,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VillagerGreen-CharacterMeeple"
   },
   "VillagerOrange-CharacterMeeple": {
     "DisplayName": "Villager, Orange - Character Meeple",
@@ -79225,7 +81902,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VillagerOrange-CharacterMeeple"
   },
   "VillagerPurple-CharacterMeeple": {
     "DisplayName": "Villager, Purple - Character Meeple",
@@ -79246,7 +81924,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VillagerPurple-CharacterMeeple"
   },
   "VillagerRed-CharacterMeeple": {
     "DisplayName": "Villager, Red - Character Meeple",
@@ -79267,7 +81946,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VillagerRed-CharacterMeeple"
   },
   "VillagerWhite-CharacterMeeple": {
     "DisplayName": "Villager, White - Character Meeple",
@@ -79288,7 +81968,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VillagerWhite-CharacterMeeple"
   },
   "VillagerYellow-CharacterMeeple": {
     "DisplayName": "Villager, Yellow - Character Meeple",
@@ -79309,7 +81990,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VillagerYellow-CharacterMeeple"
   },
   "WalkerDriverSpace": {
     "DisplayName": "Walker Driver, Space",
@@ -79327,7 +82009,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WalkerDriverSpace"
   },
   "WalkerSpaceTB50": {
     "DisplayName": "Walker, Space, TB50",
@@ -79346,7 +82029,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WalkerSpaceTB50"
   },
   "WallSandbags": {
     "DisplayName": "Wall, Sandbags",
@@ -79364,7 +82048,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WallSandbags"
   },
   "WallStone": {
     "DisplayName": "Wall, Stone",
@@ -79382,7 +82067,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WallStone"
   },
   "WarbeastwithHandler": {
     "DisplayName": "Warbeast with Handler",
@@ -79409,7 +82095,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WarbeastwithHandler"
   },
   "WarriorMonkPurple": {
     "DisplayName": "Warrior Monk, Purple",
@@ -79444,7 +82131,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WarriorMonkPurple"
   },
   "WarriorMonkRed": {
     "DisplayName": "Warrior Monk, Red",
@@ -79479,7 +82167,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WarriorMonkRed"
   },
   "WaterMillBlack": {
     "DisplayName": "Water Mill, Black",
@@ -79497,7 +82186,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WaterMillBlack"
   },
   "WaterMillBlue": {
     "DisplayName": "Water Mill, Blue",
@@ -79515,7 +82205,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WaterMillBlue"
   },
   "WaterMillGreen": {
     "DisplayName": "Water Mill, Green",
@@ -79533,7 +82224,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WaterMillGreen"
   },
   "WaterMillOrange": {
     "DisplayName": "Water Mill, Orange",
@@ -79551,7 +82243,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WaterMillOrange"
   },
   "WaterMillPurple": {
     "DisplayName": "Water Mill, Purple",
@@ -79569,7 +82262,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WaterMillPurple"
   },
   "WaterMillRed": {
     "DisplayName": "Water Mill, Red",
@@ -79587,7 +82281,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WaterMillRed"
   },
   "WaterMillWhite": {
     "DisplayName": "Water Mill, White",
@@ -79605,7 +82300,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WaterMillWhite"
   },
   "WaterMillYellow": {
     "DisplayName": "Water Mill, Yellow",
@@ -79623,7 +82319,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WaterMillYellow"
   },
   "WeresharkFantasyTB25": {
     "DisplayName": "Wereshark, Fantasy, TB25",
@@ -79640,7 +82337,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WeresharkFantasyTB25"
   },
   "WerewolfFantasyTB25": {
     "DisplayName": "Werewolf, Fantasy, TB25",
@@ -79665,7 +82363,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gold",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WerewolfFantasyTB25"
   },
   "WilhelmTellCrossbowmanFantasyTB25": {
     "DisplayName": "Wilhelm Tell, Crossbowman, Fantasy, TB25",
@@ -79686,7 +82385,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WilhelmTellCrossbowmanFantasyTB25"
   },
   "WindmillBlack": {
     "DisplayName": "Windmill, Black",
@@ -79704,7 +82404,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WindmillBlack"
   },
   "WindmillBlue": {
     "DisplayName": "Windmill, Blue",
@@ -79735,7 +82436,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WindmillBlue"
   },
   "WindmillGreen": {
     "DisplayName": "Windmill, Green",
@@ -79753,7 +82455,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WindmillGreen"
   },
   "WindmillOrange": {
     "DisplayName": "Windmill, Orange",
@@ -79771,7 +82474,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WindmillOrange"
   },
   "WindmillPurple": {
     "DisplayName": "Windmill, Purple",
@@ -79802,7 +82506,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WindmillPurple"
   },
   "WindmillRed": {
     "DisplayName": "Windmill, Red",
@@ -79833,7 +82538,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WindmillRed"
   },
   "WindmillWhite": {
     "DisplayName": "Windmill, White",
@@ -79851,7 +82557,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WindmillWhite"
   },
   "WindmillYellow": {
     "DisplayName": "Windmill, Yellow",
@@ -79869,7 +82576,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WindmillYellow"
   },
   "Wink20mmBlack": {
     "DisplayName": "Wink, 20mm, Black",
@@ -79890,7 +82598,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Wink20mmBlack"
   },
   "Wink20mmOpaqueWhite": {
     "DisplayName": "Wink, 20mm, Opaque, White",
@@ -79911,7 +82620,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Wink20mmOpaqueWhite"
   },
   "Wink20mmTranslucentBlue": {
     "DisplayName": "Wink, 20mm, Translucent, Blue",
@@ -79932,7 +82642,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Wink20mmTranslucentBlue"
   },
   "Wink20mmTranslucentGreen": {
     "DisplayName": "Wink, 20mm, Translucent, Green",
@@ -79952,7 +82663,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Wink20mmTranslucentGreen"
   },
   "Wink22mmOpaqueBlack": {
     "DisplayName": "Wink, 22mm, Opaque, Black",
@@ -79973,7 +82685,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Wink22mmOpaqueBlack"
   },
   "Wink22mmOpaqueWhite": {
     "DisplayName": "Wink, 22mm, Opaque, White",
@@ -79994,7 +82707,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Wink22mmOpaqueWhite"
   },
   "Wink22mmTranslucentBlack": {
     "DisplayName": "Wink, 22mm, Translucent Black",
@@ -80015,7 +82729,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Wink22mmTranslucentBlack"
   },
   "Wink22mmTranslucentBlue": {
     "DisplayName": "Wink, 22mm, Translucent Blue",
@@ -80036,7 +82751,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Wink22mmTranslucentBlue"
   },
   "Wink22mmTranslucentGreen": {
     "DisplayName": "Wink, 22mm, Translucent Green",
@@ -80057,7 +82773,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Wink22mmTranslucentGreen"
   },
   "Wink22mmTranslucentOrange": {
     "DisplayName": "Wink, 22mm, Translucent Orange",
@@ -80078,7 +82795,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Wink22mmTranslucentOrange"
   },
   "Wink22mmTranslucentPurple": {
     "DisplayName": "Wink, 22mm, Translucent Purple",
@@ -80099,7 +82817,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Wink22mmTranslucentPurple"
   },
   "Wink22mmTranslucentRed": {
     "DisplayName": "Wink, 22mm, Translucent Red",
@@ -80120,7 +82839,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Wink22mmTranslucentRed"
   },
   "Wink22mmTranslucentYellow": {
     "DisplayName": "Wink, 22mm, Translucent, Yellow",
@@ -80141,7 +82861,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Wink22mmTranslucentYellow"
   },
   "WizardOldFantasyTB25": {
     "DisplayName": "Wizard Old, Fantasy, TB25",
@@ -80174,7 +82895,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WizardOldFantasyTB25"
   },
   "WizardBlue-CharacterMeeple": {
     "DisplayName": "Wizard, Blue - Character Meeple",
@@ -80202,7 +82924,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WizardBlue-CharacterMeeple"
   },
   "WizardGreen-CharacterMeeple": {
     "DisplayName": "Wizard, Green - Character Meeple",
@@ -80230,7 +82953,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WizardGreen-CharacterMeeple"
   },
   "WizardOrange-CharacterMeeple": {
     "DisplayName": "Wizard, Orange - Character Meeple",
@@ -80258,7 +82982,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WizardOrange-CharacterMeeple"
   },
   "WizardPurple-CharacterMeeple": {
     "DisplayName": "Wizard, Purple - Character Meeple",
@@ -80286,7 +83011,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WizardPurple-CharacterMeeple"
   },
   "WizardRed-CharacterMeeple": {
     "DisplayName": "Wizard, Red - Character Meeple",
@@ -80314,7 +83040,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WizardRed-CharacterMeeple"
   },
   "WizardYellow-CharacterMeeple": {
     "DisplayName": "Wizard, Yellow - Character Meeple",
@@ -80342,7 +83069,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WizardYellow-CharacterMeeple"
   },
   "WomanHighSociety": {
     "DisplayName": "Woman, High Society",
@@ -80366,7 +83094,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "WomanHighSociety"
   },
   "WomanModernBaseballBatTB25": {
     "DisplayName": "Woman, Modern, Baseball Bat, TB25",
@@ -80385,7 +83114,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanModernBaseballBatTB25"
   },
   "WomanModernHandgunTB25": {
     "DisplayName": "Woman, Modern, Handgun, TB25",
@@ -80405,7 +83135,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanModernHandgunTB25"
   },
   "WomanModernTB15Black": {
     "DisplayName": "Woman, Modern, TB15, Black",
@@ -80431,7 +83162,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanModernTB15Black"
   },
   "WomanModernTB15Blue": {
     "DisplayName": "Woman, Modern, TB15, Blue",
@@ -80457,7 +83189,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanModernTB15Blue"
   },
   "WomanModernTB15Green": {
     "DisplayName": "Woman, Modern, TB15, Green",
@@ -80483,7 +83216,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanModernTB15Green"
   },
   "WomanModernTB15Orange": {
     "DisplayName": "Woman, Modern, TB15, Orange",
@@ -80509,7 +83243,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanModernTB15Orange"
   },
   "WomanModernTB15Purple": {
     "DisplayName": "Woman, Modern, TB15, Purple",
@@ -80535,7 +83270,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanModernTB15Purple"
   },
   "WomanModernTB15Red": {
     "DisplayName": "Woman, Modern, TB15, Red",
@@ -80561,7 +83297,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanModernTB15Red"
   },
   "WomanModernTB15White": {
     "DisplayName": "Woman, Modern, TB15, White",
@@ -80587,7 +83324,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanModernTB15White"
   },
   "WomanModernTB15Yellow": {
     "DisplayName": "Woman, Modern, TB15, Yellow",
@@ -80613,7 +83351,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanModernTB15Yellow"
   },
   "WomanMum": {
     "DisplayName": "Woman, Mum",
@@ -80643,7 +83382,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanMum"
   },
   "WomanPostApocalypseBazookaTB25": {
     "DisplayName": "Woman, Post Apocalypse, Bazooka, TB25",
@@ -80666,7 +83406,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanPostApocalypseBazookaTB25"
   },
   "WomanPostApocalypseShotgunTB25": {
     "DisplayName": "Woman, Post Apocalypse, Shotgun, TB25",
@@ -80686,7 +83427,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanPostApocalypseShotgunTB25"
   },
   "WomanPostApocalypseTB15Black": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Black",
@@ -80707,7 +83449,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanPostApocalypseTB15Black"
   },
   "WomanPostApocalypseTB15Blue": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Blue",
@@ -80728,7 +83471,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanPostApocalypseTB15Blue"
   },
   "WomanPostApocalypseTB15Green": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Green",
@@ -80749,7 +83493,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanPostApocalypseTB15Green"
   },
   "WomanPostApocalypseTB15Orange": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Orange",
@@ -80770,7 +83515,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanPostApocalypseTB15Orange"
   },
   "WomanPostApocalypseTB15Purple": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Purple",
@@ -80791,7 +83537,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanPostApocalypseTB15Purple"
   },
   "WomanPostApocalypseTB15Red": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Red",
@@ -80812,7 +83559,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanPostApocalypseTB15Red"
   },
   "WomanPostApocalypseTB15White": {
     "DisplayName": "Woman, Post Apocalypse, TB15, White",
@@ -80833,7 +83581,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanPostApocalypseTB15White"
   },
   "WomanPostApocalypseTB15Yellow": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Yellow",
@@ -80854,7 +83603,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WomanPostApocalypseTB15Yellow"
   },
   "WoodCabinBrown": {
     "DisplayName": "Wood Cabin, Brown",
@@ -80882,7 +83632,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WoodCabinBrown"
   },
   "WoodLogs": {
     "DisplayName": "Wood Logs",
@@ -80913,7 +83664,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WoodLogs"
   },
   "WoodPile": {
     "DisplayName": "Wood Pile",
@@ -80944,7 +83696,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WoodPile"
   },
   "WorkerSingleBagBlue": {
     "DisplayName": "Worker, Single Bag, Blue",
@@ -80973,7 +83726,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WorkerSingleBagBlue"
   },
   "WorkerSingleBagGreen": {
     "DisplayName": "Worker, Single Bag, Green",
@@ -81002,7 +83756,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WorkerSingleBagGreen"
   },
   "WorkerSingleBagOrange": {
     "DisplayName": "Worker, Single Bag, Orange",
@@ -81031,7 +83786,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WorkerSingleBagOrange"
   },
   "WorkerSingleBagPurple": {
     "DisplayName": "Worker, Single Bag, Purple",
@@ -81060,7 +83816,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WorkerSingleBagPurple"
   },
   "WorkerSingleBagWhite": {
     "DisplayName": "Worker, Single Bag, White",
@@ -81089,7 +83846,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WorkerSingleBagWhite"
   },
   "WorkerSingleBagYellow": {
     "DisplayName": "Worker, Single Bag, Yellow",
@@ -81118,7 +83876,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WorkerSingleBagYellow"
   },
   "WraithFantasyTB25": {
     "DisplayName": "Wraith, Fantasy, TB25",
@@ -81138,7 +83897,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WraithFantasyTB25"
   },
   "WraithHalberdFantasyTB25": {
     "DisplayName": "Wraith, Halberd, Fantasy, TB25",
@@ -81158,7 +83918,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WraithHalberdFantasyTB25"
   },
   "WyvernII": {
     "DisplayName": "Wyvern II",
@@ -81183,7 +83944,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "WyvernII"
   },
   "Yeti-CharacterMeeple": {
     "DisplayName": "Yeti - Character Meeple",
@@ -81207,7 +83969,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "ThickTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Yeti-CharacterMeeple"
   },
   "Zombie2FantasyTB25": {
     "DisplayName": "Zombie 2, Fantasy, TB25",
@@ -81236,7 +83999,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Zombie2FantasyTB25"
   },
   "Zombie3FantasyTB25": {
     "DisplayName": "Zombie 3, Fantasy, TB25",
@@ -81269,7 +84033,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Zombie3FantasyTB25"
   },
   "ZombieBabe": {
     "DisplayName": "Zombie Babe",
@@ -81297,7 +84062,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ZombieBabe"
   },
   "ZombieCheerleader": {
     "DisplayName": "Zombie Cheerleader",
@@ -81326,7 +84092,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ZombieCheerleader"
   },
   "ZombieCircusClown": {
     "DisplayName": "Zombie Circus Clown",
@@ -81354,7 +84121,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "ZombieCircusClown"
   },
   "ZombieClown": {
     "DisplayName": "Zombie Clown",
@@ -81383,7 +84151,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ZombieClown"
   },
   "ZombieDoctor": {
     "DisplayName": "Zombie Doctor",
@@ -81411,7 +84180,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ZombieDoctor"
   },
   "ZombieDog": {
     "DisplayName": "Zombie Dog",
@@ -81442,7 +84212,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ZombieDog"
   },
   "ZombieDude": {
     "DisplayName": "Zombie Dude",
@@ -81471,7 +84242,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ZombieDude"
   },
   "ZombieGranny": {
     "DisplayName": "Zombie Granny",
@@ -81500,7 +84272,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ZombieGranny"
   },
   "ZombieMullet": {
     "DisplayName": "Zombie Mullet",
@@ -81529,7 +84302,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ZombieMullet"
   },
   "ZombieProfessor": {
     "DisplayName": "Zombie Professor",
@@ -81558,7 +84332,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ZombieProfessor"
   },
   "ZombieThriller": {
     "DisplayName": "Zombie Thriller",
@@ -81586,7 +84361,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ZombieThriller"
   },
   "ZombieFantasyTB25": {
     "DisplayName": "Zombie, Fantasy, TB25",
@@ -81615,7 +84391,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ZombieFantasyTB25"
   },
   "ZombieRandom": {
     "DisplayName": "Zombie, Random",
@@ -81643,7 +84420,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "ZombieRandom"
   },
   "Black7PieceDiceSet": {
     "DisplayName": "Black 7 Piece Dice Set",
@@ -81659,7 +84437,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Black7PieceDiceSet"
   },
   "BlankEuroPokerCard": {
     "DisplayName": "Blank Euro Poker Card",
@@ -81687,7 +84466,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankEuroPokerCard"
   },
   "BlankVHSBox": {
     "DisplayName": "Blank VHS Box",
@@ -81720,7 +84500,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BlankVHSBox"
   },
   "Blue7PieceDiceSet": {
     "DisplayName": "Blue 7 Piece Dice Set",
@@ -81736,7 +84517,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Blue7PieceDiceSet"
   },
   "BridgeSleevePack(100)": {
     "DisplayName": "Bridge Sleeve Pack (100)",
@@ -81764,7 +84546,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "BridgeSleevePack(100)"
   },
   "Cube13mmBlue": {
     "DisplayName": "Cube, 13mm, Blue",
@@ -81803,7 +84586,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube13mmBlue"
   },
   "Cube13mmGreen": {
     "DisplayName": "Cube, 13mm, Green",
@@ -81842,7 +84626,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube13mmGreen"
   },
   "Cube13mmRed": {
     "DisplayName": "Cube, 13mm, Red",
@@ -81881,7 +84666,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube13mmRed"
   },
   "Cube13mmYellow": {
     "DisplayName": "Cube, 13mm, Yellow",
@@ -81920,7 +84706,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Cube13mmYellow"
   },
   "D16Purple": {
     "DisplayName": "D16, Purple",
@@ -81950,7 +84737,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "purple",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "D16Purple"
   },
   "D612mmCaramel": {
     "DisplayName": "D6, 12mm, Caramel",
@@ -81994,7 +84782,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "caramel",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D612mmCaramel"
   },
   "D614mmBlack": {
     "DisplayName": "D6, 14mm, Black",
@@ -82037,7 +84826,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D614mmBlack"
   },
   "D6AlchemyOrange": {
     "DisplayName": "D6, Alchemy, Orange",
@@ -82076,7 +84866,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6AlchemyOrange"
   },
   "D6DamageBlack": {
     "DisplayName": "D6, Damage, Black",
@@ -82113,7 +84904,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6DamageBlack"
   },
   "D6IndustryGray": {
     "DisplayName": "D6, Industry, Gray",
@@ -82154,7 +84946,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6IndustryGray"
   },
   "D6NatureGreen": {
     "DisplayName": "D6, Nature, Green",
@@ -82192,7 +84985,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6NatureGreen"
   },
   "D6OxygenBlue": {
     "DisplayName": "D6, Oxygen, Blue",
@@ -82231,7 +85025,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6OxygenBlue"
   },
   "D6TemperatureRed": {
     "DisplayName": "D6, Temperature, Red",
@@ -82275,7 +85070,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StandardDie",
     "SimulatorCreationTask": "StandardDie",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "D6TemperatureRed"
   },
   "DeckStorageClear": {
     "DisplayName": "Deck Storage, Clear",
@@ -82305,7 +85101,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "DeckStorageClear"
   },
   "Disc20mmx5mmPastelPink": {
     "DisplayName": "Disc, 20mm x 5mm, Pastel Pink",
@@ -82348,7 +85145,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCylinder",
     "SimulatorCreationTask": "StockCylinder",
     "Color": "pink",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "Disc20mmx5mmPastelPink"
   },
   "FutureCubeBlue": {
     "DisplayName": "Future Cube, Blue",
@@ -82392,7 +85190,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "StockCube",
     "SimulatorCreationTask": "StockCube",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureCubeBlue"
   },
   "FutureTankTan": {
     "DisplayName": "Future Tank, Tan",
@@ -82414,7 +85213,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "FutureTankTan"
   },
   "Green7PieceDiceSet": {
     "DisplayName": "Green 7 Piece Dice Set",
@@ -82430,7 +85230,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "green",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Green7PieceDiceSet"
   },
   "HalmaPlasticBlack": {
     "DisplayName": "Halma, Plastic, Black",
@@ -82449,7 +85250,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaPlasticBlack"
   },
   "HalmaPlasticBlue": {
     "DisplayName": "Halma, Plastic, Blue",
@@ -82468,7 +85270,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaPlasticBlue"
   },
   "HalmaPlasticOrange": {
     "DisplayName": "Halma, Plastic, Orange",
@@ -82487,7 +85290,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaPlasticOrange"
   },
   "HalmaPlasticRed": {
     "DisplayName": "Halma, Plastic, Red",
@@ -82506,7 +85310,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaPlasticRed"
   },
   "HalmaPlasticWhite": {
     "DisplayName": "Halma, Plastic, White",
@@ -82525,7 +85330,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaPlasticWhite"
   },
   "HalmaPlasticYellow": {
     "DisplayName": "Halma, Plastic, Yellow",
@@ -82544,7 +85350,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HalmaPlasticYellow"
   },
   "HorizontalGameMaster'sScreen": {
     "DisplayName": "Horizontal Game Master's Screen",
@@ -82571,7 +85378,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "HorizontalGameMaster'sScreen"
   },
   "InFUNityTileHatBlack": {
     "DisplayName": "InFUNity Tile, Hat, Black",
@@ -82593,7 +85401,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "InFUNityTileHatBlack"
   },
   "InFUNityTileHatBlue": {
     "DisplayName": "InFUNity Tile, Hat, Blue",
@@ -82615,7 +85424,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "InFUNityTileHatBlue"
   },
   "InFUNityTileHatGreen": {
     "DisplayName": "InFUNity Tile, Hat, Green",
@@ -82637,7 +85447,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "green",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "InFUNityTileHatGreen"
   },
   "InFUNityTileHatOrange": {
     "DisplayName": "InFUNity Tile, Hat, Orange",
@@ -82659,7 +85470,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "orange",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "InFUNityTileHatOrange"
   },
   "InFUNityTileHatPurple": {
     "DisplayName": "InFUNity Tile, Hat, Purple",
@@ -82681,7 +85493,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "purple",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "InFUNityTileHatPurple"
   },
   "InFUNityTileHatRed": {
     "DisplayName": "InFUNity Tile, Hat, Red",
@@ -82703,7 +85516,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "red",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "InFUNityTileHatRed"
   },
   "InFUNityTileHatWhite": {
     "DisplayName": "InFUNity Tile, Hat, White",
@@ -82725,7 +85539,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "InFUNityTileHatWhite"
   },
   "InFUNityTileHatYellow": {
     "DisplayName": "InFUNity Tile, Hat, Yellow",
@@ -82747,7 +85562,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "yellow",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "InFUNityTileHatYellow"
   },
   "InFUNityTileTurtleBlack": {
     "DisplayName": "InFUNity Tile, Turtle, Black",
@@ -82769,7 +85585,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "InFUNityTileTurtleBlack"
   },
   "InFUNityTileTurtleBlue": {
     "DisplayName": "InFUNity Tile, Turtle, Blue",
@@ -82791,7 +85608,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "blue",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "InFUNityTileTurtleBlue"
   },
   "InFUNityTileTurtleGreen": {
     "DisplayName": "InFUNity Tile, Turtle, Green",
@@ -82813,7 +85631,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "green",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "InFUNityTileTurtleGreen"
   },
   "InFUNityTileTurtleOrange": {
     "DisplayName": "InFUNity Tile, Turtle, Orange",
@@ -82835,7 +85654,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "orange",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "InFUNityTileTurtleOrange"
   },
   "InFUNityTileTurtlePurple": {
     "DisplayName": "InFUNity Tile, Turtle, Purple",
@@ -82857,7 +85677,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "purple",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "InFUNityTileTurtlePurple"
   },
   "InFUNityTileTurtleRed": {
     "DisplayName": "InFUNity Tile, Turtle, Red",
@@ -82879,7 +85700,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "red",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "InFUNityTileTurtleRed"
   },
   "InFUNityTileTurtleWhite": {
     "DisplayName": "InFUNity Tile, Turtle, White",
@@ -82901,7 +85723,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "InFUNityTileTurtleWhite"
   },
   "InFUNityTileTurtleYellow": {
     "DisplayName": "InFUNity Tile, Turtle, Yellow",
@@ -82923,7 +85746,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "yellow",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "InFUNityTileTurtleYellow"
   },
   "LargeBlackTin": {
     "DisplayName": "Large Black Tin",
@@ -82939,7 +85763,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LargeBlackTin"
   },
   "LargeQuadFoldGameBoard": {
     "DisplayName": "Large Quad Fold Game Board",
@@ -82969,7 +85794,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LargeQuadFoldGameBoard"
   },
   "LEDBlack": {
     "DisplayName": "LED, Black",
@@ -82991,7 +85817,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LEDBlack"
   },
   "LEDBlue": {
     "DisplayName": "LED, Blue",
@@ -83013,7 +85840,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LEDBlue"
   },
   "LEDGreen": {
     "DisplayName": "LED, Green",
@@ -83035,7 +85863,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LEDGreen"
   },
   "LEDOrange": {
     "DisplayName": "LED, Orange",
@@ -83057,7 +85886,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LEDOrange"
   },
   "LEDPurple": {
     "DisplayName": "LED, Purple",
@@ -83079,7 +85909,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LEDPurple"
   },
   "LEDRed": {
     "DisplayName": "LED, Red",
@@ -83101,7 +85932,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LEDRed"
   },
   "LEDWhite": {
     "DisplayName": "LED, White",
@@ -83123,7 +85955,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LEDWhite"
   },
   "LEDYellow": {
     "DisplayName": "LED, Yellow",
@@ -83145,7 +85978,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "LEDYellow"
   },
   "MineSeaTB25": {
     "DisplayName": "Mine, Sea, TB25",
@@ -83178,7 +86012,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "MineSeaTB25"
   },
   "Orange7PieceDiceSet": {
     "DisplayName": "Orange 7 Piece Dice Set",
@@ -83194,7 +86029,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "orange",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Orange7PieceDiceSet"
   },
   "PartsBagLargeClothBlack": {
     "DisplayName": "Parts Bag, Large Cloth, Black",
@@ -83222,7 +86058,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Baggie",
     "SimulatorCreationTask": "Baggie",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PartsBagLargeClothBlack"
   },
   "PhaseShiftGames|Boblin'sRebellion|1-4players": {
     "DisplayName": "Phase Shift Games | Boblin's Rebellion | 1-4 players",
@@ -83237,7 +86074,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "PhaseShiftGames|Boblin'sRebellion|1-4players"
   },
   "PhaseShiftGames|Flutter|2-5players": {
     "DisplayName": "Phase Shift Games | Flutter | 2-5 players",
@@ -83252,7 +86090,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "PhaseShiftGames|Flutter|2-5players"
   },
   "PhaseShiftGames|Obelus|2players": {
     "DisplayName": "Phase Shift Games | Obelus | 2 players",
@@ -83267,7 +86106,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "PhaseShiftGames|Obelus|2players"
   },
   "PokerSleevePack(100)": {
     "DisplayName": "Poker Sleeve Pack (100)",
@@ -83295,7 +86135,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PokerSleevePack(100)"
   },
   "PremiumBeerMug": {
     "DisplayName": "Premium Beer Mug",
@@ -83340,7 +86181,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumBeerMug"
   },
   "PremiumBloodDroplet": {
     "DisplayName": "Premium Blood Droplet",
@@ -83377,7 +86219,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumBloodDroplet"
   },
   "PremiumBlueTome": {
     "DisplayName": "Premium Blue Tome",
@@ -83404,7 +86247,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumBlueTome"
   },
   "PremiumBrownMushroom": {
     "DisplayName": "Premium Brown Mushroom",
@@ -83439,7 +86283,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumBrownMushroom"
   },
   "PremiumBullet": {
     "DisplayName": "Premium Bullet",
@@ -83470,7 +86315,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumBullet"
   },
   "PremiumCarrot": {
     "DisplayName": "Premium Carrot",
@@ -83504,7 +86350,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumCarrot"
   },
   "PremiumCheeseWedge": {
     "DisplayName": "Premium Cheese Wedge",
@@ -83539,7 +86386,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumCheeseWedge"
   },
   "PremiumCoffeeBean": {
     "DisplayName": "Premium Coffee Bean",
@@ -83567,7 +86415,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "brown",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumCoffeeBean"
   },
   "PremiumDeflectorShield": {
     "DisplayName": "Premium Deflector Shield",
@@ -83590,7 +86439,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumDeflectorShield"
   },
   "PremiumExplosion": {
     "DisplayName": "Premium Explosion",
@@ -83622,7 +86472,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumExplosion"
   },
   "PremiumGasCan": {
     "DisplayName": "Premium Gas Can",
@@ -83647,7 +86498,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumGasCan"
   },
   "PremiumGreenLeaf": {
     "DisplayName": "Premium Green Leaf",
@@ -83689,7 +86541,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumGreenLeaf"
   },
   "PremiumHammer": {
     "DisplayName": "Premium Hammer",
@@ -83720,7 +86573,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumHammer"
   },
   "PremiumIceCrystals": {
     "DisplayName": "Premium Ice Crystals",
@@ -83746,7 +86600,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumIceCrystals"
   },
   "PremiumMedKit": {
     "DisplayName": "Premium Med Kit",
@@ -83776,7 +86631,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumMedKit"
   },
   "PremiumMilkBottle": {
     "DisplayName": "Premium Milk Bottle",
@@ -83809,7 +86665,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumMilkBottle"
   },
   "PremiumMushroom": {
     "DisplayName": "Premium Mushroom",
@@ -83848,7 +86705,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumMushroom"
   },
   "PremiumOrangeTome": {
     "DisplayName": "Premium Orange Tome",
@@ -83876,7 +86734,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumOrangeTome"
   },
   "PremiumPileofBones": {
     "DisplayName": "Premium Pile of Bones",
@@ -83901,7 +86760,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumPileofBones"
   },
   "PremiumPresent": {
     "DisplayName": "Premium Present",
@@ -83935,7 +86795,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumPresent"
   },
   "PremiumPurpleGrapes": {
     "DisplayName": "Premium Purple Grapes",
@@ -83964,7 +86825,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumPurpleGrapes"
   },
   "PremiumSmokeCloud": {
     "DisplayName": "Premium Smoke Cloud",
@@ -83987,7 +86849,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumSmokeCloud"
   },
   "PremiumStone": {
     "DisplayName": "Premium Stone",
@@ -84015,7 +86878,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "gray",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumStone"
   },
   "PremiumTechTablet": {
     "DisplayName": "Premium Tech Tablet",
@@ -84042,7 +86906,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumTechTablet"
   },
   "PremiumTentacle": {
     "DisplayName": "Premium Tentacle",
@@ -84070,7 +86935,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumTentacle"
   },
   "PremiumToxicWaste": {
     "DisplayName": "Premium Toxic Waste",
@@ -84101,7 +86967,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumToxicWaste"
   },
   "PremiumWaterDroplet": {
     "DisplayName": "Premium Water Droplet",
@@ -84139,7 +87006,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumWaterDroplet"
   },
   "PremiumWheatBundle": {
     "DisplayName": "Premium Wheat Bundle",
@@ -84168,7 +87036,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumWheatBundle"
   },
   "PremiumWhiteSheaf": {
     "DisplayName": "Premium White Sheaf",
@@ -84198,7 +87067,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumWhiteSheaf"
   },
   "PremiumWrench": {
     "DisplayName": "Premium Wrench",
@@ -84228,7 +87098,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "FlatTokenWithTransparencyBasedShape",
     "SimulatorCreationTask": "FlatTokenWithTransparencyBasedShape",
     "Color": "silver",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "PremiumWrench"
   },
   "Purple7PieceDiceSet": {
     "DisplayName": "Purple 7 Piece Dice Set",
@@ -84244,7 +87115,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "purple",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Purple7PieceDiceSet"
   },
   "Red7PieceDiceSet": {
     "DisplayName": "Red 7 Piece Dice Set",
@@ -84260,7 +87132,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "red",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Red7PieceDiceSet"
   },
   "SkyscraperBlack": {
     "DisplayName": "Skyscraper, Black",
@@ -84285,7 +87158,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkyscraperBlack"
   },
   "SkyscraperBlue": {
     "DisplayName": "Skyscraper, Blue",
@@ -84310,7 +87184,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "blue",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkyscraperBlue"
   },
   "SkyscraperGreen": {
     "DisplayName": "Skyscraper, Green",
@@ -84335,7 +87210,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "green",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkyscraperGreen"
   },
   "SkyscraperOrange": {
     "DisplayName": "Skyscraper, Orange",
@@ -84360,7 +87236,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "orange",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkyscraperOrange"
   },
   "SkyscraperPurple": {
     "DisplayName": "Skyscraper, Purple",
@@ -84385,7 +87262,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "purple",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkyscraperPurple"
   },
   "SkyscraperRed": {
     "DisplayName": "Skyscraper, Red",
@@ -84410,7 +87288,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "red",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkyscraperRed"
   },
   "SkyscraperWhite": {
     "DisplayName": "Skyscraper, White",
@@ -84435,7 +87314,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "white",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkyscraperWhite"
   },
   "SkyscraperYellow": {
     "DisplayName": "Skyscraper, Yellow",
@@ -84460,7 +87340,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "yellow",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "SkyscraperYellow"
   },
   "StandChipboard4-wayBlack": {
     "DisplayName": "Stand, Chipboard, 4-way, Black",
@@ -84491,7 +87372,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "black",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "StandChipboard4-wayBlack"
   },
   "VerticalGameMaster'sScreen": {
     "DisplayName": "Vertical Game Master's Screen",
@@ -84518,7 +87400,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false
+    "IsDisabled": false,
+    "Key": "VerticalGameMaster'sScreen"
   },
   "White7PieceDiceSet": {
     "DisplayName": "White 7 Piece Dice Set",
@@ -84534,7 +87417,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "white",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "White7PieceDiceSet"
   },
   "Yellow7PieceDiceSet": {
     "DisplayName": "Yellow 7 Piece Dice Set",
@@ -84550,7 +87434,8 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "yellow",
-    "IsDisabled": true
+    "IsDisabled": true,
+    "Key": "Yellow7PieceDiceSet"
   }
 }
 module.exports = { STOCK_COMPONENT_INFO }

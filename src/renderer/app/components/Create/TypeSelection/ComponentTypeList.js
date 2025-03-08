@@ -3,83 +3,8 @@ import {componentTypeHasAllFilteredTags, matchesSearch} from "../TagFilter"
 import ComponentTypeFolder from "./ComponentTypeFolder";
 import ComponentType from "./ComponentType";
 import StockComponentType from "./StockComponentType";
-import ColorGroupedStockComponents from "./ColorGroupedStockComponents";
-import SizeGroupedCustomComponent from "./SizeGroupedCustomComponent";
+import { extractBaseNameAndSize, compareSizes, extractBaseNameAndColor } from "./ComponentUtils";
 import noFileIcon from "../../Edit/noFileIcon.svg";
-import { allColorVariations } from "../../../../../shared/stockComponentColors";
-
-// Helper function to extract base name and color from component name
-// For example: "Bug, Green" -> { baseName: "Bug", color: "Green" }
-// Also handles cases with multiple commas like "Dice, D6, Red" -> { baseName: "Dice, D6", color: "Red" }
-// And cases with measurements like "D6, 12mm, Green" -> { baseName: "D6, 12mm", color: "Green" }
-export const extractBaseNameAndColor = (name, displayName) => {
-    // First try with displayName if available
-    if (displayName) {
-        const result = extractColorFromString(displayName);
-        if (result.color) {
-            return result;
-        }
-    }
-    
-    // Fall back to using the name
-    return extractColorFromString(name);
-};
-
-// Helper function to extract color from a string
-const extractColorFromString = (str) => {
-    const commaIndex = str.lastIndexOf(", ");
-    if (commaIndex === -1) return { baseName: str, color: null };
-    
-    // Check if the part after the last comma is a color or contains a color
-    const potentialColorPart = str.substring(commaIndex + 2); // +2 to skip ", "
-    
-    // Check if the potential color part contains a valid color from our list
-    const containsValidColor = allColorVariations.some(color => 
-        potentialColorPart.toLowerCase().includes(color.toLowerCase())
-    );
-    
-    if (containsValidColor) {
-        const baseName = str.substring(0, commaIndex);
-        return { baseName: baseName, color: potentialColorPart };
-    }
-    
-    // If it doesn't look like a valid color, return the whole name as baseName
-    return { baseName: str, color: null };
-};
-
-// Helper function to extract the base color (like "Green" from "Lime Green" or "Transparent Green")
-const getBaseColor = (color) => {
-    // Convert to lowercase for comparison
-    const colorLower = color.toLowerCase();
-    
-    // Find the base color by checking which color from our list is contained in the string
-    for (const baseColor of allColorVariations) {
-        if (colorLower.includes(baseColor.toLowerCase())) {
-            return baseColor;
-        }
-    }
-    
-    return null;
-};
-
-// Helper function to extract color prefix (like "Transparent" from "Transparent Green")
-const getColorPrefix = (color) => {
-    // Get the base color
-    const baseColor = getBaseColor(color);
-    if (!baseColor) return null;
-    
-    // Remove the base color to get the prefix
-    const prefixPart = color.toLowerCase().replace(baseColor.toLowerCase(), '').trim();
-    
-    if (!prefixPart) {
-        return null;
-    }
-    
-    return prefixPart;
-};
-
-// Helper functions for extracting size information
-import { extractBaseNameAndSize } from "./SizeGroupedCustomComponent";
 
 const ComponentTypeList = ({ 
     componentTypeOptions,
@@ -179,16 +104,19 @@ const ComponentTypeList = ({
                 // Extract the actual base name (remove the prefix marker if present)
                 const baseName = groupKey.includes('__') ? groupKey.split('__')[0] : groupKey;
                 
-                // Only create a color group if there are multiple components with the same base name
                 if (components.length > 1) {
+                    // Use the first component as the representative for the group
+                    const primaryComponent = components[0];
                     filteredDivs.push(
-                        <ColorGroupedStockComponents
-                            key={`${groupKey}${search}`}
-                            baseName={baseName}
-                            components={components}
+                        <StockComponentType 
+                            key={`${primaryComponent.key}${search}`} 
+                            name={primaryComponent.key} 
+                            componentInfo={primaryComponent.componentInfo}
                             selectTypeCallback={selectTypeCallback}
-                            selectedComponentType={selectedComponentType}
+                            selectedComponentType={selectedComponentType} 
+                            existingQuantity={0}
                             search={search}
+                            colorVariations={components.slice(1)}  // Pass the other color variations
                         />
                     );
                 } else if (components.length === 1) {
@@ -208,28 +136,82 @@ const ComponentTypeList = ({
                 }
             });
         } else {
-            // For non-stock components, group by size
+            // For non-stock components, group by size and base name
             const groupedComponents = {};
             
+            // First pass: collect all components with explicit sizes
             uncategorizedKeys.forEach(key => {
-                const { baseName, size, isNumeric } = extractBaseNameAndSize(key, componentTypeOptions[key]["DisplayName"]);
+                const { baseName, size, isNumeric, isImplicitSize } = extractBaseNameAndSize(key, componentTypeOptions[key]["DisplayName"]);
                 
-                // Only group if there's a size
-                if (size) {
-                    // Use just the baseName as the grouping key
-                    const groupKey = baseName;
+                // Skip components with implicit size in the first pass
+                if (size && !isImplicitSize) {
+                    // Create a normalized base name for grouping
+                    const normalizedBaseName = baseName.trim();
                     
-                    if (!groupedComponents[groupKey]) {
-                        groupedComponents[groupKey] = [];
+                    if (!groupedComponents[normalizedBaseName]) {
+                        groupedComponents[normalizedBaseName] = [];
                     }
                     
-                    groupedComponents[groupKey].push({
+                    groupedComponents[normalizedBaseName].push({
                         key,
                         size,
                         isNumeric,
+                        baseName: normalizedBaseName,
                         componentInfo: componentTypeOptions[key]
                     });
-                } else {
+                }
+            });
+
+            // Second pass: try to match components with implicit size to existing groups
+            uncategorizedKeys.forEach(key => {
+                const { baseName, size, isNumeric, isImplicitSize } = extractBaseNameAndSize(key, componentTypeOptions[key]["DisplayName"]);
+                
+                // Only process components with implicit size in the second pass
+                if (size && isImplicitSize) {
+                    // Try to find a matching group by checking if this component's name matches any existing group's base name
+                    let matched = false;
+                    
+                    // Check if this component's name (without any prefix) matches any group's base name
+                    for (const [groupKey, components] of Object.entries(groupedComponents)) {
+                        // If the component name is the same as the group's base name, it's a match
+                        if (key === groupKey || baseName === groupKey) {
+                            components.push({
+                                key,
+                                size,
+                                isNumeric,
+                                isImplicitSize,
+                                baseName: groupKey, // Use the group's base name for consistency
+                                componentInfo: componentTypeOptions[key]
+                            });
+                            matched = true;
+                            break;
+                        }
+                    }
+                    
+                    // If no match was found, create a new group
+                    if (!matched) {
+                        const normalizedBaseName = baseName.trim();
+                        if (!groupedComponents[normalizedBaseName]) {
+                            groupedComponents[normalizedBaseName] = [];
+                        }
+                        
+                        groupedComponents[normalizedBaseName].push({
+                            key,
+                            size,
+                            isNumeric,
+                            isImplicitSize,
+                            baseName: normalizedBaseName,
+                            componentInfo: componentTypeOptions[key]
+                        });
+                    }
+                }
+            });
+
+            // Handle components without any size
+            uncategorizedKeys.forEach(key => {
+                const { baseName, size } = extractBaseNameAndSize(key, componentTypeOptions[key]["DisplayName"]);
+                
+                if (!size) {
                     // If no size, render as a regular component
                     filteredDivs.push(
                         <ComponentType 
@@ -244,39 +226,36 @@ const ComponentTypeList = ({
                     );
                 }
             });
-            
+
             // Add grouped components to the filtered divs
             Object.entries(groupedComponents).forEach(([groupKey, components]) => {
-                // Extract the actual base name (remove the prefix marker if present)
-                const baseName = groupKey.includes('__') ? groupKey.split('__')[0] : groupKey;
+                // Sort components by size
+                components.sort((a, b) => compareSizes(a.size, b.size));
                 
-                // Only create a size group if there are multiple components with the same base name
-                if (components.length > 1) {
-                    filteredDivs.push(
-                        <SizeGroupedCustomComponent
-                            key={`${groupKey}${search}`}
-                            baseName={baseName}
-                            components={components}
-                            selectTypeCallback={selectTypeCallback}
-                            selectedComponentType={selectedComponentType}
-                            search={search}
-                        />
-                    );
-                } else if (components.length === 1) {
-                    // If only one component with this base name, render it normally
-                    const component = components[0];
-                    filteredDivs.push(
-                        <ComponentType 
-                            key={`${component.key}${search}`} 
-                            name={component.key} 
-                            componentInfo={component.componentInfo}
-                            selectTypeCallback={selectTypeCallback}
-                            selectedComponentType={selectedComponentType} 
-                            existingQuantity={0}
-                            search={search}    
-                        />
-                    );
-                }
+                // Check if any component in this group is selected
+                const isAnyComponentSelected = components.some(comp => comp.key === selectedComponentType);
+                
+                // If a component in this group is selected, use that as the primary component
+                const selectedComponent = components.find(comp => comp.key === selectedComponentType);
+                const componentToUse = isAnyComponentSelected ? selectedComponent : components[0];
+                
+                filteredDivs.push(
+                    <ComponentType 
+                        key={`${componentToUse.key}${search}`} 
+                        name={componentToUse.key} 
+                        componentInfo={componentToUse.componentInfo}
+                        selectTypeCallback={selectTypeCallback}
+                        selectedComponentType={selectedComponentType} 
+                        existingQuantity={0}
+                        search={search}
+                        sizeVariations={components
+                            .filter(comp => comp.key !== componentToUse.key) // Filter out the current component
+                            .map(comp => ({
+                                ...comp,
+                                baseName: groupKey
+                            }))}
+                    />
+                );
             });
         }
 
