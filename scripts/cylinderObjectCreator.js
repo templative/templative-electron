@@ -2,7 +2,7 @@ import {getColorValueHex, allColorVariations} from "../src/shared/stockComponent
 import { Image } from 'image-js';
 import fs from 'fs';
 import path from 'path';
-import {exportSvgToImage} from "../src/main/templative/lib/produce/customComponents/svgscissors/inkscapeProcessor.js"
+import {exportSvgToImage} from "../src/main/templative/lib/produce/customComponents/svgscissors/svgRenderer.js"
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 import dotenv from 'dotenv';
 

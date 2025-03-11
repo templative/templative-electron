@@ -1,5 +1,4 @@
 const outputWriter = require('../outputWriter');
-const svgscissors = require('./svgscissors/svgScissors');
 const os = require('os');
 const path = require('path');
 
@@ -14,7 +13,6 @@ const { COMPONENT_INFO } = require('../../../../../shared/componentInfo');
 const { BackProducer } = require('./backProducer');
 const { FrontOnlyProducer } = require('./frontOnlyProducer');
 const { DiceProducer } = require('./diceProducer');
-const { FontCache } = require('./svgscissors/fontCache');
 
 async function getComponentArtdata(componentName, inputDirectoryPath, componentComposition) {
   const artDatas = {};

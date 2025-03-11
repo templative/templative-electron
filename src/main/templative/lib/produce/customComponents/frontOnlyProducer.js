@@ -1,11 +1,9 @@
 const { Producer } = require('./producer');
 const outputWriter = require('../outputWriter');
-const svgscissors = require('./svgscissors/svgScissors');
-const svgscissorsMain = require('./svgscissors/main');
+const svgscissors = require('./svgscissors/main');
 const os = require('os');
 const path = require('path');
 const defineLoader = require('../../manage/defineLoader');
-const FontCache = require('./svgscissors/fontCache');
 const { ComponentBackData } = require('../../manage/models/gamedata');
 
 class FrontOnlyProducer extends Producer {
@@ -40,7 +38,7 @@ class FrontOnlyProducer extends Producer {
         await FrontOnlyProducer.writeComponentInstructions(componentComposition, componentBackOutputDirectory, componentFolderName, piecesDataBlob);
         
         const componentBackData = new ComponentBackData(componentData.studioDataBlob, componentData.gameDataBlob, componentData.componentDataBlob);
-        await svgscissorsMain.createArtFilesForComponent(componentComposition, componentArtdata, componentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties, fontCache);
+        await svgscissors.createArtFilesForComponent(componentComposition, componentArtdata, componentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties, fontCache);
     }
 
     static async writeComponentInstructions(compositions, componentBackOutputDirectory, componentFolderName, piecesGamedata) {

@@ -1,12 +1,10 @@
 const { Producer } = require('./producer');
 const outputWriter = require('../outputWriter');
-const svgscissors = require('./svgscissors/svgScissors');
-const svgscissorsMain = require('./svgscissors/main');
+const svgscissors = require('./svgscissors/main');
 const os = require('os');
 const { createHash } = require('crypto');
 const path = require('path');
 const defineLoader = require('../../manage/defineLoader');
-const { FontCache } = require('./svgscissors/fontCache');
 const { COMPONENT_INFO } = require('../../../../../shared/componentInfo');
 const { ComponentBackData } = require('../../manage/models/gamedata');
 const chalk = require('chalk');
@@ -44,7 +42,7 @@ class BackProducer extends Producer {
 
             uniqueComponentBackData = new ComponentBackData(componentData.studioDataBlob, componentData.gameDataBlob, componentData.componentDataBlob, componentBackDataBlob, sourcedVariableNamesSpecificToPieceOnBackArtData, uniqueHashOfSourceData);
             
-            await svgscissorsMain.createArtFileForPiece(componentComposition, componentArtdata, uniqueComponentBackData, piecesDataBlob, previewProperties.outputDirectoryPath, previewProperties, fontCache);
+            await svgscissors.createArtFileForPiece(componentComposition, componentArtdata, uniqueComponentBackData, piecesDataBlob, previewProperties.outputDirectoryPath, previewProperties, fontCache);
         }
         if (!foundPiece) {
             console.warn(chalk.yellow(`There is no piece named ${previewProperties.pieceName} in the pieces gamedata for ${componentComposition.componentCompose["name"]}.`));
@@ -154,7 +152,7 @@ class BackProducer extends Producer {
 
         const componentBackOutputDirectory = await outputWriter.createComponentFolder(componentFolderName, produceProperties.outputDirectoryPath);
         await BackProducer.createUniqueComponentBackInstructions(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, compositions, componentBackOutputDirectory, componentFolderName, piecesDataBlob);
-        await svgscissorsMain.createArtFilesForComponent(compositions, componentArtdata, uniqueComponentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties, fontCache);
+        await svgscissors.createArtFilesForComponent(compositions, componentArtdata, uniqueComponentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties, fontCache);
     }
 
     static async createUniqueComponentBackInstructions(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, compositions, componentBackOutputDirectory, componentFolderName, piecesGamedata) {

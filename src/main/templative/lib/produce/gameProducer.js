@@ -14,7 +14,6 @@ const PreviewProperties = require('../manage/models/produceProperties').PreviewP
 const GameData = require('../manage/models/gamedata').GameData;
 const ComponentComposition = require('../manage/models/composition');
 const FontCache = require('./customComponents/svgscissors/fontCache').FontCache;
-const findInkscape = require('./customComponents/svgscissors/inkscapeProcessor').findInkscape;
 
 function getPreviewsPath() {
     let base_path;
@@ -49,11 +48,6 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
         throw new Error("Game root directory path is invalid.");
     }
     
-    if (!findInkscape()) {
-        console.log("!!! Inkscape is required to render previews. Download it at https://inkscape.org/");
-        return;
-    }
-    
     const gameCompose = await defineLoader.loadGameCompose(gameRootDirectoryPath);
     const gameDataBlob = await defineLoader.loadGame(gameRootDirectoryPath);
     const studioDataBlob = await defineLoader.loadStudio(gameRootDirectoryPath);
@@ -79,11 +73,6 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
 async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage) {
     if (!gameRootDirectoryPath) {
         throw new Error("Game root directory path is invalid.");
-    }
-    
-    if (!findInkscape()) {
-        console.log(chalk.red("!!!Inkscape is required to produce your game. Download it at https://inkscape.org/"));
-        return;
     }
 
     const gameDataBlob = await defineLoader.loadGame(gameRootDirectoryPath);
