@@ -266,9 +266,19 @@ function extractFormattingFromElement(textElement, plainContent, formattingRange
     const fontStyleAttr = tspan.getAttribute('font-style');
     const fontStyle = fontStyleAttr || fontStyleStyle || 'normal';
     
-    if (fontSizeStyle || fontSizeAttr || fontStyle === 'italic') {
+    // Check for font-weight
+    const fontWeightStyle = (tspan.getAttribute('style') || '').match(/font-weight\s*:\s*([^;]+)/)?.[1];
+    const fontWeightAttr = tspan.getAttribute('font-weight');
+    const fontWeight = fontWeightAttr || fontWeightStyle || 'normal';
+    
+    // Check if this tspan has any special formatting
+    if (fontSizeStyle || fontSizeAttr || fontStyle === 'italic' || fontWeight === 'bold') {
       const fontSize = fontSizeStyle || fontSizeAttr || '';
-      // console.log(`Found tspan with font-size: ${fontSize} or font-style: ${fontStyle} for text: "${tspan.textContent}"`);
+      
+      // Only log if there's special formatting (bold or italic)
+      if (fontStyle === 'italic' || fontWeight === 'bold') {
+        // console.log(`Found tspan with font-size: ${fontSize}, font-style: ${fontStyle}, font-weight: ${fontWeight} for text: "${tspan.textContent}"`);
+      }
       
       // Extract numeric value from string like "90px"
       let fontSizeValue = fontSize;
@@ -289,8 +299,7 @@ function extractFormattingFromElement(textElement, plainContent, formattingRange
             end: position + tspanText.length,
             fontFamily: tspan.getAttribute('font-family') || 
                        (tspan.getAttribute('style') || '').match(/font-family\s*:\s*([^;]+)/)?.[1] || '',
-            fontWeight: tspan.getAttribute('font-weight') || 
-                       (tspan.getAttribute('style') || '').match(/font-weight\s*:\s*([^;]+)/)?.[1] || 'normal',
+            fontWeight: fontWeight,
             fontStyle: fontStyle,
             fontSize: fontSizeValue
           });
@@ -373,32 +382,49 @@ function addFormattingForElement(element, start, end, formattingRanges) {
     }
   }
   
-  // Log if we found italic style
-  if (fontStyle === 'italic') {
-    // console.log(`Found italic style for text from position ${start} to ${end}`);
+  // Log if we found special formatting (only for bold or italic)
+  if (fontWeight === 'bold' || fontStyle === 'italic') {
+    // console.log(`Found special formatting for text from position ${start} to ${end}: fontWeight=${fontWeight}, fontStyle=${fontStyle}`);
   }
   
   // Only add formatting if there's something special about this element
   if (fontWeight !== 'normal' || fontStyle !== 'normal' || fontFamily || fontSize) {
-    // Check if we already have a formatting range for this exact range with the same style
-    let existingRange = formattingRanges.find(range => 
-      range.start === start && 
-      range.end === end && 
-      range.fontStyle === fontStyle && 
-      range.fontWeight === fontWeight && 
-      range.fontFamily === fontFamily && 
-      range.fontSize === fontSize
-    );
+    // Check for existing overlapping ranges with the same formatting
+    let hasOverlap = false;
     
-    if (!existingRange) {
-      formattingRanges.push({
-        start,
-        end,
-        fontWeight,
-        fontStyle,
-        fontFamily,
-        fontSize
-      });
+    // Check if this range is completely contained within an existing range with the same formatting
+    for (const range of formattingRanges) {
+      if (start >= range.start && end <= range.end && 
+          range.fontWeight === fontWeight && 
+          range.fontStyle === fontStyle) {
+        // This range is completely contained within an existing range with the same formatting
+        hasOverlap = true;
+        break;
+      }
+    }
+    
+    // Only add if there's no overlap with the same formatting
+    if (!hasOverlap) {
+      // Check if we already have a formatting range for this exact range with the same style
+      let existingRange = formattingRanges.find(range => 
+        range.start === start && 
+        range.end === end && 
+        range.fontStyle === fontStyle && 
+        range.fontWeight === fontWeight && 
+        range.fontFamily === fontFamily && 
+        range.fontSize === fontSize
+      );
+      
+      if (!existingRange) {
+        formattingRanges.push({
+          start,
+          end,
+          fontWeight,
+          fontStyle,
+          fontFamily,
+          fontSize
+        });
+      }
     }
   }
 }
@@ -512,6 +538,48 @@ function createWrappedTextElement(textElement, textBounds, plainContent, formatt
   // console.log(contentLines)
   // Then wrap each line to fit the bounds
   let wrappedLines = [];
+  // for (const line of contentLines) {
+  //   if (formattingRanges && formattingRanges.length > 0) {      
+  //     // Process each character with its formatting
+  //     for (let i = 0; i < line.length; i++) {
+  //       const char = line[i];
+        
+  //       // Find applicable formatting for this character
+  //       let isBold = false;
+  //       let isItalic = false;
+        
+  //       // Calculate absolute position by adding the current index to the sum of lengths of previous lines
+  //       let absolutePosition = i;
+  //       for (let lineIndex = 0; lineIndex < contentLines.indexOf(line); lineIndex++) {
+  //         absolutePosition += contentLines[lineIndex].length + 1; // +1 for the newline character
+  //       }
+        
+  //       for (const range of formattingRanges) {
+  //         if (absolutePosition >= range.start && absolutePosition < range.end) {
+  //           if (range.fontWeight === 'bold' || parseInt(range.fontWeight, 10) >= 600) {
+  //             isBold = true;
+  //           }
+  //           if (range.fontStyle === 'italic') {
+  //             isItalic = true;
+  //           }
+  //         }
+  //       }
+        
+  //       // Apply formatting with chalk
+  //       if (isBold && isItalic) {
+  //         process.stdout.write(chalk.red.bold.italic(char));
+  //       } else if (isBold) {
+  //         process.stdout.write(chalk.red.bold(char));
+  //       } else if (isItalic) {
+  //         process.stdout.write(chalk.red.italic(char));
+  //       } else {
+  //         process.stdout.write(chalk.red(char));
+  //       }
+  //     }
+  //     console.log(); // New line after printing the text
+  //   }
+  // }
+  var characterPositionForFormatting = 0;
   for (const line of contentLines) {
     // Skip empty lines but preserve them in output
     if (!line.trim()) {
@@ -532,7 +600,7 @@ function createWrappedTextElement(textElement, textBounds, plainContent, formatt
     
     try {
       // Pass formatting ranges to wrapText
-      const wrapped = wrapText(line, fontSize, textBounds.width, fontInfo, formattingRanges);
+      const wrapped = wrapText(line, fontSize, textBounds.width, fontInfo, formattingRanges, characterPositionForFormatting);
       wrappedLines.push(...wrapped);
     } catch (err) {
       console.error('Error wrapping text:', err);
@@ -554,6 +622,7 @@ function createWrappedTextElement(textElement, textBounds, plainContent, formatt
         wrappedLines.push(currentLine);
       }
     }
+    characterPositionForFormatting += line.length
   }
   
   // Add wrapped text as tspan elements
@@ -803,8 +872,13 @@ function addWrappedTextAsTspans(textElement, wrappedLines, textBounds, fontSize,
   
   // console.log(`Calculated y positions:`, yPositions);
   
+  // Extract the original text content
+  const originalText = textElement.textContent;
+  
   // Reset current position for processing the lines
-  currentPosition = 0;  
+  currentPosition = 0;
+  
+  // Process each wrapped line
   wrappedLines.forEach((line, index) => {
     // console.log(`Processing line ${index}: "${line}" (current position: ${currentPosition})`);
     
@@ -821,63 +895,91 @@ function addWrappedTextAsTspans(textElement, wrappedLines, textBounds, fontSize,
     lineTspan.setAttribute('y', yPositions[index].toString());
     textElement.appendChild(lineTspan);
     
-    // If no formatting ranges or simple formatting, just add the text content
-    if (!formattingRanges || formattingRanges.length === 0) {
+    // Check if this line has any special formatting by looking at the formatting ranges
+    // Calculate the absolute position range for this line
+    const lineStart = currentPosition;
+    const lineEnd = currentPosition + line.length;
+    
+    // Find all formatting ranges that overlap with this line
+    const lineFormattingRanges = formattingRanges.filter(range => 
+      range.start < lineEnd && range.end > lineStart
+    );
+    
+    // Check if the entire line has the same formatting
+    const hasSingleFormatting = lineFormattingRanges.length === 1 && 
+                               lineFormattingRanges[0].start <= lineStart && 
+                               lineFormattingRanges[0].end >= lineEnd;
+    
+    if (hasSingleFormatting) {
+      // The entire line has the same formatting
+      const range = lineFormattingRanges[0];
+      const tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
+      
+      if (range.fontWeight === 'bold') {
+        tspan.setAttribute('font-weight', 'bold');
+      }
+      
+      if (range.fontStyle === 'italic') {
+        tspan.setAttribute('font-style', 'italic');
+      }
+      
+      tspan.textContent = line;
+      lineTspan.appendChild(tspan);
+    } else if (lineFormattingRanges.length > 0) {
+      // This line has mixed formatting
+      // Sort the formatting ranges by their start position
+      lineFormattingRanges.sort((a, b) => a.start - b.start);
+      
+      // Create an array of segments with their formatting
+      const segments = [];
+      let currentPos = lineStart;
+      
+      // Process each character in the line
+      for (let i = 0; i < line.length; i++) {
+        const charPos = lineStart + i;
+        
+        // Find the formatting range that applies to this character
+        const applicableRange = lineFormattingRanges.find(range => 
+          charPos >= range.start && charPos < range.end
+        );
+        
+        // Get the current segment or create a new one
+        let currentSegment = segments.length > 0 ? segments[segments.length - 1] : null;
+        
+        if (!currentSegment || 
+            currentSegment.fontWeight !== (applicableRange?.fontWeight || 'normal') || 
+            currentSegment.fontStyle !== (applicableRange?.fontStyle || 'normal')) {
+          // Create a new segment
+          currentSegment = {
+            text: line[i],
+            fontWeight: applicableRange?.fontWeight || 'normal',
+            fontStyle: applicableRange?.fontStyle || 'normal'
+          };
+          segments.push(currentSegment);
+        } else {
+          // Add to the current segment
+          currentSegment.text += line[i];
+        }
+      }
+      
+      // Create tspans for each segment
+      for (const segment of segments) {
+        const tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
+        
+        if (segment.fontWeight === 'bold') {
+          tspan.setAttribute('font-weight', 'bold');
+        }
+        
+        if (segment.fontStyle === 'italic') {
+          tspan.setAttribute('font-style', 'italic');
+        }
+        
+        tspan.textContent = segment.text;
+        lineTspan.appendChild(tspan);
+      }
+    } else {
+      // This is a normal line with no special formatting
       lineTspan.textContent = line;
-      currentPosition += line.length + 1; // +1 for the newline
-      return;
-    }
-    
-    // Process character by character for complex formatting
-    let currentCharPosition = 0;
-    let currentFormatTspan = null;
-    let currentFormat = null;
-    
-    // Process each character in the line
-    for (let i = 0; i < line.length; i++) {
-      const char = line[i];
-      const absolutePosition = currentPosition + i;
-      
-      // Find the formatting range for this character
-      let newFormat = null;
-      for (const range of formattingRanges) {
-        if (absolutePosition >= range.start && absolutePosition < range.end) {
-          newFormat = range;
-          break;
-        }
-      }
-      
-      // If format changed or no current tspan, create a new one
-      if (!currentFormatTspan || 
-          (newFormat !== currentFormat && 
-           (newFormat === null || currentFormat === null || 
-            newFormat.fontFamily !== currentFormat.fontFamily || 
-            newFormat.fontSize !== currentFormat.fontSize || 
-            newFormat.fontWeight !== currentFormat.fontWeight || 
-            newFormat.fontStyle !== currentFormat.fontStyle))) {
-        
-        // Create a new tspan for this format
-        currentFormatTspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
-        
-        // Apply formatting attributes
-        if (newFormat) {
-          if (newFormat.fontFamily) currentFormatTspan.setAttribute('font-family', newFormat.fontFamily);
-          if (newFormat.fontSize) currentFormatTspan.setAttribute('font-size', newFormat.fontSize + 'px');
-          if (newFormat.fontWeight) currentFormatTspan.setAttribute('font-weight', newFormat.fontWeight);
-          if (newFormat.fontStyle && newFormat.fontStyle !== 'normal') {
-            currentFormatTspan.setAttribute('font-style', newFormat.fontStyle);
-            // console.log(`Applied font-style: ${newFormat.fontStyle} to text at position ${absolutePosition}`);
-          }
-        }
-        
-        lineTspan.appendChild(currentFormatTspan);
-        currentFormat = newFormat;
-        currentCharPosition = 0;
-      }
-      
-      // Add the character to the current format tspan
-      currentFormatTspan.textContent = (currentFormatTspan.textContent || '') + char;
-      currentCharPosition++;
     }
     
     currentPosition += line.length + 1; // +1 for the newline
@@ -894,41 +996,61 @@ function rewrapTextElement(textElement) {
   let formattingRanges = [];
   
   // Extract text content
-  plainContent = textElement.textContent || '';
+  const hasStructuredLines = textElement.querySelectorAll('tspan').length > 0;
+  const topLevelTspans = Array.from(textElement.children).filter(child => child.tagName === 'tspan');
   
-  // Analyze the text structure to determine if it has structured lines
-  const { hasStructuredLines, topLevelTspans } = analyzeTextStructure(textElement);
+  // Initialize text content
+  const textContentInfo = initializeTextContent(textElement);
+  plainContent = textContentInfo.plainContent;
   
-  // Extract formatting information from the text element and its tspans
-  const rootTextContent = textElement.textContent;
-  extractFormattingFromElement(textElement, plainContent, formattingRanges, hasStructuredLines, topLevelTspans, rootTextContent);
+  // Extract formatting information
+  const formattingInfo = extractFormattingFromElement(
+    textElement, 
+    plainContent, 
+    formattingRanges, 
+    hasStructuredLines, 
+    topLevelTspans, 
+    plainContent
+  );
   
-  // Get font size and container width
-  const fontSize = extractFontSize(textElement);
+  // Get the text bounds
+  const styleAttr = textElement.getAttribute('style') || '';
+  const shapeBounds = calculateTextBounds(null, styleAttr);
+  
+  // Determine the container width
   const containerWidth = estimateContainerWidth(textElement);
   
-  // Get position
-  const x = parseFloat(textElement.getAttribute('x') || 0);
-  const y = parseFloat(textElement.getAttribute('y') || 0);
+  // Extract font size
+  const fontSize = extractFontSize(textElement);
   
-  // Create bounds
-  const textBounds = {
-    x: x,
-    y: y,
-    width: containerWidth,
-    height: 1000 // Large enough for all text
-  };
+  // Extract font attributes
+  const fontAttrs = extractFontAttributes(textElement);
   
-  // Wrap text
-  const wrappedLines = wrapText(plainContent, fontSize, containerWidth, {}, formattingRanges);
+  // Wrap the text
+  const wrappedLines = wrapText(
+    plainContent, 
+    fontSize, 
+    containerWidth, 
+    fontAttrs, 
+    formattingRanges
+  );
   
-  // Clear existing content
+  // Clear the text element
   while (textElement.firstChild) {
     textElement.removeChild(textElement.firstChild);
   }
   
-  // Add wrapped text as tspans with proper formatting
-  addWrappedTextAsTspans(textElement, wrappedLines, textBounds, fontSize, formattingRanges);
+  // Add the wrapped text as tspans
+  addWrappedTextAsTspans(
+    textElement, 
+    wrappedLines, 
+    shapeBounds, 
+    fontSize, 
+    formattingRanges
+  );
+  
+  // Add font attributes to the text element
+  addFontAttributes(textElement, textElement, formattingRanges);
   
   // Mark as processed
   textElement.setAttribute('data-processed', 'true');

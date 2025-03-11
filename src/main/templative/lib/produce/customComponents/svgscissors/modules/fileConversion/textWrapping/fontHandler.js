@@ -1,11 +1,5 @@
 // Try to require fontkit, but don't fail if it's not available
-let fontkit;
-try {
-  fontkit = require('fontkit');
-} catch (err) {
-  console.warn('fontkit module not available, using fallback font metrics');
-  fontkit = null;
-}
+const fontkit = require('fontkit');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
@@ -294,45 +288,46 @@ class FontCache {
       fontPath = this.findFontFile(normalizedFontFamily);
     }
     
-    // If we found a font path, try to load it
+    // If we found a font path, try to load it with fontkit
     if (fontPath && fs.existsSync(fontPath)) {
       try {
-        // console.log(`Loading font ${normalizedFontFamily} from ${fontPath}`);
-        
-        // Check if it's a TrueType Collection (.ttc) file
-        if (fontPath.toLowerCase().endsWith('.ttc')) {
-          // For TTC files, we need to get the specific font by postscript name
+        // For TrueType Collection (.ttc) files
+        if (fontPath.toLowerCase().endsWith('.ttc') || fontPath.toLowerCase().endsWith('.dfont')) {
           const collection = fontkit.openSync(fontPath);
-          if (collection && typeof collection.getFont === 'function') {
-            // Try to get the font by name
-            try {
-              const font = collection.getFont(normalizedFontFamily);
-              if (font && typeof font.layout === 'function') {
-                this.fontkitFonts.set(normalizedFontFamily, font);
-                // console.log(`Successfully loaded font ${normalizedFontFamily} from collection`);
-                return font;
-              }
-            } catch (err) {
-              console.warn(`Could not get font ${normalizedFontFamily} from collection, trying first font`);
-              // If we can't get by name, try the first font in the collection
-              if (collection.fonts && collection.fonts.length > 0) {
-                const font = collection.fonts[0];
-                if (font && typeof font.layout === 'function') {
+          
+          // First try to get the font by postscript name
+          try {
+            const font = collection.getFont(normalizedFontFamily);
+            if (font) {
+              this.fontkitFonts.set(normalizedFontFamily, font);
+              return font;
+            }
+          } catch (err) {
+            // If we can't get by name, try to find a matching font in the collection
+            if (collection.fonts) {
+              // Try to find a font with a matching name
+              for (const font of collection.fonts) {
+                if (font.familyName === normalizedFontFamily || 
+                    font.postscriptName === normalizedFontFamily ||
+                    font.fullName === normalizedFontFamily) {
                   this.fontkitFonts.set(normalizedFontFamily, font);
-                  // console.log(`Using first font in collection for ${normalizedFontFamily}`);
                   return font;
                 }
+              }
+              
+              // If no match found, use the first font as fallback
+              if (collection.fonts.length > 0) {
+                const font = collection.fonts[0];
+                this.fontkitFonts.set(normalizedFontFamily, font);
+                return font;
               }
             }
           }
         } else {
           // Regular font file
           const font = fontkit.openSync(fontPath);
-          if (font && typeof font.layout === 'function') {
-            this.fontkitFonts.set(normalizedFontFamily, font);
-            // console.log(`Successfully loaded font ${normalizedFontFamily}`);
-            return font;
-          }
+          this.fontkitFonts.set(normalizedFontFamily, font);
+          return font;
         }
       } catch (err) {
         console.error(`Error loading font ${normalizedFontFamily}:`, err);
@@ -340,11 +335,16 @@ class FontCache {
     }
     
     // Try to find a fallback font
+    const fallbackFonts = ['Arial', 'Helvetica', 'sans-serif'];
+    for (const fallbackName of fallbackFonts) {
+      if (this.fontkitFonts.has(fallbackName)) {
+        return this.fontkitFonts.get(fallbackName);
+      }
+    }
+    
+    // If no fallback found but we have any font, use the first one
     if (this.fontkitFonts.size > 0) {
-      // Return the first available font as fallback
-      const fallbackFont = Array.from(this.fontkitFonts.values())[0];
-      // console.warn(`Font ${normalizedFontFamily} not found, using fallback`);
-      return fallbackFont;
+      return Array.from(this.fontkitFonts.values())[0];
     }
     
     return null;
@@ -384,6 +384,7 @@ class FontCache {
     
     // Fallback to a simple estimation if fontkit fails
     // Use different multipliers based on the character width
+    // console.log(chalk.red(`Fallback to a simple estimation for character "${char}" using fontkit`));
     let charWidthMultiplier = 0.6; // Default for normal text
     
     // Adjust multiplier based on font weight
@@ -504,16 +505,58 @@ class FontCache {
    * @param {Array} formattingRanges - Array of formatting ranges
    * @param {number} defaultFontSize - Default font size
    * @param {string} defaultFontFamily - Default font family
+   * @param {number} offset - Offset of this text within the overall content
    * @returns {number} - Text width
    */
-  calculateTextWidth(text, formattingRanges = [], defaultFontSize = 12, defaultFontFamily = 'Arial') {
+  calculateTextWidth(text, formattingRanges = [], defaultFontSize = 12, defaultFontFamily = 'Arial', offset = 0) {
     if (!text) return 0;
     
     let totalWidth = 0;
     
-    // Process each character
+    // If fontkit is available, try to measure the entire text at once for better accuracy
+    if (this.fontkitAvailable) {
+      // Check if the text has uniform formatting
+      let uniformFormatting = formattingRanges.length === 0;
+      if (formattingRanges.length === 1) {
+        const range = formattingRanges[0];
+        uniformFormatting = range.start <= offset && range.end >= offset + text.length;
+      }
+      
+      if (uniformFormatting) {
+        // Get formatting (either from the single range or defaults)
+        const fontSize = formattingRanges.length === 1 ? (formattingRanges[0].fontSize || defaultFontSize) : defaultFontSize;
+        const fontFamily = formattingRanges.length === 1 ? (formattingRanges[0].fontFamily || defaultFontFamily) : defaultFontFamily;
+        const fontWeight = formattingRanges.length === 1 ? (formattingRanges[0].fontWeight || 'normal') : 'normal';
+        const fontStyle = formattingRanges.length === 1 ? (formattingRanges[0].fontStyle || 'normal') : 'normal';
+        
+        const font = this.getFontkitFont(fontFamily);
+        if (font && typeof font.layout === 'function') {
+          try {
+            const run = font.layout(text);
+            if (run && run.positions && run.positions.length > 0) {
+              // Calculate total width from all glyph positions
+              const scale = fontSize / font.unitsPerEm;
+              totalWidth = run.positions.reduce((sum, pos) => sum + pos.xAdvance * scale, 0);
+              
+              // Apply bold multiplier if needed
+              if (fontWeight === 'bold' || parseInt(fontWeight, 10) >= 600) {
+                totalWidth *= 1.2;
+              }
+              
+              return totalWidth;
+            }
+          } catch (err) {
+            console.error(`Error measuring text width with fontkit: ${err.message}`);
+            // Fall through to character-by-character measurement
+          }
+        }
+      }
+    }
+    
+    // Process each character individually (fallback or for mixed formatting)
     for (let i = 0; i < text.length; i++) {
       const char = text[i];
+      const absolutePosition = offset + i;
       
       // Find applicable formatting for this character
       let fontSize = defaultFontSize;
@@ -523,7 +566,7 @@ class FontCache {
       
       // Apply formatting from ranges that include this character
       for (const range of formattingRanges) {
-        if (i >= range.start && i < range.end) {
+        if (absolutePosition >= range.start && absolutePosition < range.end) {
           fontSize = range.fontSize || fontSize;
           fontFamily = range.fontFamily || fontFamily;
           fontWeight = range.fontWeight || fontWeight;
@@ -537,7 +580,6 @@ class FontCache {
         const charWidth = this.calculateCharWidth(char, fontFamily, fontSize, fontWeight, fontStyle);
         totalWidth += charWidth;
       } catch (err) {
-        console.error(`Error calculating width for character "${char}" at position ${i}, using fallback:`, err);
         // Fallback to a simple estimation
         let charWidthMultiplier = 0.6;
         
