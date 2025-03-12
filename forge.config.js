@@ -3,7 +3,7 @@ module.exports = {
     name: 'Templative',
 		executableName: 'Templative',
     "asar": {
-      "unpack": "**/*.node"
+      "unpack": "**/{*.node,node_modules/@resvg/**/*}"
     },
     osxUniversal: { // config options for `@electron/universal`
       x64ArchFiles: '*' // replace with any relevant glob pattern

@@ -10,7 +10,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /native_modules\/.+\.node$/,
+        test: /\.node$/,
         use: 'node-loader',
       },
       {
