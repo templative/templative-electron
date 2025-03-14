@@ -77,23 +77,20 @@ async function runTests() {
     console.log(chalk.blue(`Using existing project directory: ${PROJECT_DIR}`));
   }
   
-//   // Test produce command
-//   console.log(chalk.bold.blue('\n=== Testing produce command ==='));
-//   const produceResult = runCommand(`produce --input "${PROJECT_DIR}"`);
-//   if (!produceResult.success) {
-//     console.error(chalk.red('Failed to produce game, aborting tests'));
-//     process.exit(1);
-//   }
+  // Test produce command
+  console.log(chalk.bold.blue('\n=== Testing produce command ==='));
+  const produceResult = runCommand(`produce --input "${PROJECT_DIR}"`);
+  if (!produceResult.success) {
+    console.error(chalk.red('Failed to produce game, aborting tests'));
+    process.exit(1);
+  }
   
-//   // Only run preview if we created the project (has the component)
-//   if (!inputDir) {
-//     // Test preview command
-//     console.log(chalk.bold.blue('\n=== Testing preview command ==='));
-//     const previewResult = runCommand(`preview --component ${COMPONENT_NAME} --piece "PokerDeck" --input ${PROJECT_DIR}`);
-//     if (!previewResult.success) {
-//       console.error(chalk.red('Failed to preview piece, continuing with other tests'));
-//     }
-//   }
+    // Test preview command
+  // console.log(chalk.bold.blue('\n=== Testing preview command ==='));
+  // const previewResult = runCommand(`preview --component "actionCaps" --piece "diplomat" --input ${PROJECT_DIR}`);
+  // if (!previewResult.success) {
+  //   console.error(chalk.red('Failed to preview piece, continuing with other tests'));
+  // }
   
   // Get the output directory from the .last file
   const lastOutputPath = fs.readFileSync(path.join(PROJECT_DIR, 'output', '.last'), 'utf8').trim();
@@ -119,11 +116,11 @@ async function runTests() {
   }
   
   // Summary
-  console.log(chalk.bold.green('\n=== Test Summary ==='));
-  console.log(chalk.green('✓ Test framework completed'));
-  if (!inputDir) {
-    console.log(chalk.blue(`Test project created at: ${PROJECT_DIR}`));
-  }
+  // console.log(chalk.bold.green('\n=== Test Summary ==='));
+  // console.log(chalk.green('✓ Test framework completed'));
+  // if (!inputDir) {
+  //   console.log(chalk.blue(`Test project created at: ${PROJECT_DIR}`));
+  // }
 }
 
 // Run the tests

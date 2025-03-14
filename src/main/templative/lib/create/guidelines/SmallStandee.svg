@@ -1,0 +1,16 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="225" height="525" viewBox="0 0 225 525" enable-background="new 0 0 54 126" xml:space="preserve">
+<g id="Guidelines">
+	<polygon fill="#919396" points="0,0 0,126 54,126 54,0 0,0 	"></polygon>
+	<path fill="#FFFFFF" stroke="#EA222A" stroke-width="0.5" d="M29.341,99.013v8.915h-4.679v-8.915
+		c-8.554,1.121-15.23,8.271-15.662,17.091c0,0.502,0.382,0.909,0.88,0.909h34.24c0.498,0,0.88-0.405,0.88-0.907
+		C44.569,107.283,37.895,100.135,29.341,99.013z"></path>
+	<path fill="#FFFFFF" stroke="#EA222A" stroke-width="0.5" d="M27.019,8.941C36.952,8.951,45,17.006,45,26.941v62.098
+		c0,0.496-0.403,0.899-0.9,0.899H28.752v-9h-4.68v9H9.9c-0.498,0-0.9-0.403-0.9-0.899V26.941c0-9.936,8.048-17.99,17.981-18"></path>
+	<path fill="#FFFFFF" stroke="#2BA4DD" stroke-dasharray="3" d="M26.99,17.941c-4.957,0.005-8.99,4.042-8.99,9v44.996h6.072h4.68H36
+		V26.941c0-4.958-4.033-8.995-8.99-9"></path>
+</g>
+<g id="Delete_This_Layer">
+	<rect x="1.001" y="0.864" fill="#E7E5E5" width="23.694" height="6.999"></rect>
+	
+</g>
+</svg>

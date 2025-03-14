@@ -10,7 +10,7 @@ const { createArtfile} = require("./modules/artFileCreator.js");
 const { addOverlays} = require("./artdataProcessing/overlayHandler.js");
 const { textReplaceInFile} = require("./artdataProcessing/textReplacer.js");
 const { updateStylesInFile} = require("./artdataProcessing/styleUpdater.js");
-
+const { clipSvgContentToClipFile } = require("./modules/imageClipper.js");
   
 
 // Helper function to create a unique hash for a piece
@@ -51,11 +51,10 @@ async function createArtFileForPiece(compositions, componentArtdata, uniqueCompo
             tasks.push(task);
         }
     }
-    // T
-    // uniqueComponentBackData.componentBackDataBlob.name = "back";
-    // if ("Back" in componentArtdata.artDataBlobDictionary) {
-    //     tasks.push(createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Back"], uniqueComponentBackData, componentBackOutputDirectory, previewProperties, fontCache));
-    // }
+    uniqueComponentBackData.componentBackDataBlob.name = "back";
+    if ("Back" in componentArtdata.artDataBlobDictionary) {
+        tasks.push(createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Back"], uniqueComponentBackData, componentBackOutputDirectory, previewProperties, fontCache));
+    }
 
     await Promise.all(tasks);   
 }
@@ -97,9 +96,6 @@ async function createArtFilesForComponent(compositions, componentArtdata, unique
     await Promise.all(tasks);
 }
 
-
-
-
 /**
  * Create an art file of a piece
  * @param {Object} compositions - Component compositions
@@ -122,11 +118,12 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       console.log(`!!! Template art file ${artFilepath} does not exist.`);
       return;
     }
+    const componentType = compositions.componentCompose["type"]
   
-    if (!(compositions.componentCompose["type"] in COMPONENT_INFO)) {
-      throw new Error(`No image size for ${compositions.componentCompose["type"]}`);
+    if (!(componentType in COMPONENT_INFO)) {
+      throw new Error(`No image size for ${componentType}`);
     }
-    const component = COMPONENT_INFO[compositions.componentCompose["type"]];
+    const component = COMPONENT_INFO[componentType];
   
     let contents = null;
     try {
@@ -144,6 +141,11 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       contents = await textReplaceInFile(contents, artdata["textReplacements"], gamedata, productionProperties);
       contents = await updateStylesInFile(contents, artdata["styleUpdates"], gamedata);
       contents = await addNewlines(contents);
+      if (productionProperties.isClipped) {
+        const clipSvgFilepath = path.join(__dirname, '..', '..', "..", 'create', 'componentTemplates', `${componentType}.svg`);
+
+        contents = await clipSvgContentToClipFile(contents, clipSvgFilepath, artFilepath);
+      }
       
       const pieceUniqueHash = gamedata.pieceUniqueBackHash !== '' ? `_${gamedata.pieceUniqueBackHash}` : '';
       const artFileOutputName = `${compositions.componentCompose['name']}${pieceUniqueHash}-${pieceName}`;

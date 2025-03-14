@@ -21,14 +21,14 @@ async function convertSvgToPng(svgFilepath, imageSizePixels, outputFilepath) {
     // Preprocess SVG to handle text wrapping and other issues
     const processedSvgData = preprocessSvgText(svgData);
     // Write processed SVG data to a debug file for inspection
-    try {
-      const debugFilePath = `${outputFilepath}.debug.svg`;
-      await fs.writeFile(debugFilePath, processedSvgData, 'utf8');
-      // console.log(`Wrote processed SVG data to ${debugFilePath}`);
-    } catch (debugWriteError) {
-      console.error(`Error writing debug SVG file: ${debugWriteError.message}`);
-      // Continue with conversion even if debug file writing fails
-    }
+    // try {
+    //   const debugFilePath = `${outputFilepath}.debug.svg`;
+    //   await fs.writeFile(debugFilePath, processedSvgData, 'utf8');
+    //   // console.log(`Wrote processed SVG data to ${debugFilePath}`);
+    // } catch (debugWriteError) {
+    //   console.error(`Error writing debug SVG file: ${debugWriteError.message}`);
+    //   // Continue with conversion even if debug file writing fails
+    // }
     // Create Resvg instance
     let resvg;
     try {
@@ -183,8 +183,7 @@ async function exportSvgToImage(artFileOutputFilepath, imageSizePixels, name, ou
 
     // Convert SVG to PNG
     await convertSvgToPng(absoluteSvgFilepath, imageSizePixels, pngFinalFilepath);
-    
-    resolveTask();
+    return pngFinalFilepath
   } catch (error) {
     rejectTask(error);
     throw error;

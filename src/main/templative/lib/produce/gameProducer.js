@@ -64,7 +64,8 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     const gameData = new GameData(studioDataBlob, gameDataBlob);
     const outputDirectoryPath = getPreviewsPath();
     await clearPreviews(outputDirectoryPath);
-    const previewProperties = new PreviewProperties(gameRootDirectoryPath, outputDirectoryPath, pieceName, language);
+    const isClipped = false
+    const previewProperties = new PreviewProperties(gameRootDirectoryPath, outputDirectoryPath, pieceName, language, isClipped);
     const fontCache = new FontCache();
     await customComponents.produceCustomComponentPreview(previewProperties, gameData, componentComposition, fontCache);
     console.log(`Wrote previews to ${outputDirectoryPath}`);
@@ -103,7 +104,8 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
     const componentsCompose = await defineLoader.loadComponentCompose(gameRootDirectoryPath);
 
     const gameData = new GameData(studioDataBlob, gameDataBlob);
-    const produceProperties = new ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage);
+    const isClipped = false
+    const produceProperties = new ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage, isClipped);
     const fontCache = new FontCache();
     for (const componentCompose of componentsCompose) {
         const isProducingOneComponent = componentFilter != null;

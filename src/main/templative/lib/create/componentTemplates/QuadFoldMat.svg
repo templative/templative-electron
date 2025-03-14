@@ -1,1 +1,19 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns2="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="template" x="0px" y="0px" width="3375" height="5175" viewBox="0 0 3375 5175" enable-background="new 0 0 270 414" xml:space="preserve" ns1:docname="blank.svg" ns2:version="1.2.2 (b0a8486, 2022-12-01)"> <ns0:defs id="defs728" /> <ns1:namedview id="namedview726" pagecolor="#ffffff" bordercolor="#999999" borderopacity="1" showgrid="false" /></ns0:svg>
+<!--?xml version="1.0" encoding="utf-8"?--><!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><!DOCTYPE svg><html><head></head><body><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="3375" height="5175" viewBox="0 0 3375 5175" enable-background="new 0 0 810 1242" xml:space="preserve">
+<g>
+	<g id="Cut_1">
+		<line fill="none" stroke="#6EBD45" stroke-miterlimit="10" x1="404.5" y1="-0.5" x2="404.5" y2="1241.5"></line>
+	</g>
+	<g>
+		<path opacity="0.5" fill="#221F1F" stroke="#FFFFFF" stroke-miterlimit="10" enable-background="new    " d="M809.5-0.5h-810v1242
+			h810V-0.5z M800.5,8.5v1224H8.5V8.5H800.5z"></path>
+	</g>
+	
+		<rect x="17.5" y="17.5" fill="none" stroke="#29A9E1" stroke-miterlimit="10" stroke-dasharray="4.924,4.924" width="774" height="1206"></rect>
+	<g>
+		<rect x="8.5" y="8.5" fill="none" stroke="#EC2024" stroke-miterlimit="10" width="792" height="1224"></rect>
+		<line fill="none" stroke="#EC2024" stroke-miterlimit="10" x1="800.5" y1="620.5" x2="404.5" y2="620.5"></line>
+		<line fill="none" stroke="#6EBD45" stroke-miterlimit="10" x1="8.5" y1="620.5" x2="404.5" y2="620.5"></line>
+	</g>
+</g>
+</svg>
+</body></html>

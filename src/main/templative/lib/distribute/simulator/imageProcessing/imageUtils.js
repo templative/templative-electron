@@ -1,6 +1,16 @@
 const { Image } = require('image-js');
 const chalk = require('chalk');
 const { fileExists } = require('../utils/fileUtils');
+const fs = require('fs/promises');
+
+async function loadSvg(svgFilepath) {
+  try {
+    return await fs.readFile(svgFilepath, 'utf8');
+  } catch (e) {
+    console.log(`!!! Template art file ${svgFilepath} cannot be parsed. Error: ${e}`);
+    return null;
+  }
+}
 
 /**
  * Create a placeholder image with a solid pink color
@@ -41,5 +51,6 @@ async function safeLoadImage(filepath, dimensions = [400, 400]) {
 
 module.exports = {
   createPlaceholderImage,
-  safeLoadImage
+  safeLoadImage,
+  loadSvg
 }; 

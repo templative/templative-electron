@@ -199,7 +199,7 @@ function stockModelAdapter(componentInstructions, stockPartInfo) {
  * @returns {Object|null} - Parameters for createStandee or null if invalid
  */
 function standeeAdapter(componentInstructions, stockPartInfo) {
-   let frontImageUrl = null;
+  let frontImageUrl = null;
   let backImageUrl = null;
 
   if (stockPartInfo.hasOwnProperty("PreviewUri")) {
@@ -220,9 +220,14 @@ function standeeAdapter(componentInstructions, stockPartInfo) {
 
   return {
     name: componentInstructions.name,
-    quantity: componentInstructions.quantity,
-    frontImageUrl: frontImageUrl,
-    backImageUrl: backImageUrl
+    standeesNameQuantityUrls: [
+      {
+        quantity: componentInstructions.quantity,
+        frontImageUrl: frontImageUrl,
+        backImageUrl: backImageUrl,
+        name: componentInstructions.name
+      }
+    ]
   };
 }
 
@@ -263,42 +268,22 @@ function tokenWithDefinedShapeAdapter(componentInstructions, stockPartInfo) {
   };
 }
 
-/**
- * Adapter for flatTokenWithTransparencyBasedShapeAdapter
- * @param {Object} componentInstructions - Component instructions
- * @param {Object} stockPartInfo - Stock part information
- * @returns {Object|null} - Parameters for createFlatTokenWithTransparencyBasedShape or null if invalid
- */
-function flatTokenWithTransparencyBasedShapeAdapter(componentInstructions, stockPartInfo) {
+function tokenWithTransparencyBasedShapeAdapter(componentInstructions, stockPartInfo) {
   if (!stockPartInfo.hasOwnProperty("PreviewUri")) {
     console.log(chalk.red(`!!! Missing PreviewUri for token ${componentInstructions.type}`));
     return null;
   }
 
   return {
-    name: componentInstructions.name,
-    quantity: componentInstructions.quantity,
-    frontImageUrl: stockPartInfo.PreviewUri,
-    backImageUrl: stockPartInfo.PreviewUri
-  };
-}
-/**
- * Adapter for thickTokenWithTransparencyBasedShapeAdapter
- * @param {Object} componentInstructions - Component instructions
- * @param {Object} stockPartInfo - Stock part information
- * @returns {Object|null} - Parameters for createThickTokenWithTransparencyBasedShape or null if invalid
- */
-function thickTokenWithTransparencyBasedShapeAdapter(componentInstructions, stockPartInfo) {
-  if (!stockPartInfo.hasOwnProperty("PreviewUri")) {
-    console.log(chalk.red(`!!! Missing PreviewUri for token ${componentInstructions.type}`));
-    return null;
-  }
-
-  return {
-    name: componentInstructions.name,
-    quantity: componentInstructions.quantity,
-    frontImageUrl: stockPartInfo.PreviewUri,
-    backImageUrl: stockPartInfo.PreviewUri
+    componentName: componentInstructions.name, 
+    nameQuantityUrls: [
+      {
+        name: componentInstructions.name,
+        quantity: componentInstructions.quantity,
+        frontImageUrl: stockPartInfo.PreviewUri,
+        backImageUrl: stockPartInfo.PreviewUri
+      }
+    ]
   };
 }
 
@@ -462,8 +447,8 @@ function getAdapter(simulatorCreationTask) {
     "StockModel": stockModelAdapter,
     "Standee": standeeAdapter,
     "TokenWithDefinedShape": tokenWithDefinedShapeAdapter,
-    "FlatTokenWithTransparencyBasedShape": flatTokenWithTransparencyBasedShapeAdapter,
-    "ThickTokenWithTransparencyBasedShape": thickTokenWithTransparencyBasedShapeAdapter,
+    "FlatTokenWithTransparencyBasedShape": tokenWithTransparencyBasedShapeAdapter,
+    "ThickTokenWithTransparencyBasedShape": tokenWithTransparencyBasedShapeAdapter,
     "CustomPDF": customPDFAdapter,
     "Domino": dominoAdapter,
     "Baggie": baggieAdapter,
@@ -475,17 +460,5 @@ function getAdapter(simulatorCreationTask) {
 }
 
 module.exports = {
-  standardDieAdapter,
-  customDieAdapter,
-  stockCubeAdapter,
-  stockModelAdapter,
-  standeeAdapter,
-  tokenWithDefinedShapeAdapter,
-  flatTokenWithTransparencyBasedShapeAdapter,
-  thickTokenWithTransparencyBasedShapeAdapter,
-  customPDFAdapter,
-  dominoAdapter,
-  baggieAdapter,
-  pokerChipAdapter,
   getAdapter
 }; 

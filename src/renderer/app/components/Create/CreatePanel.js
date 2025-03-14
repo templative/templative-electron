@@ -14,7 +14,7 @@ const { channels } = require('../../../../shared/constants');
 var path = require('path');
 
 const customMajorCategories = [
-    "stickers", "packaging","deck", "die", "premium", "board","token","mat","document", "blank", "screen", "dial"
+    "packaging","stickers", "deck", "die", "premium", "board","token","mat","document", "blank", "screen", "dial"
 ]
 
 const stockMajorCategories = [
@@ -85,18 +85,15 @@ const CreatePanel = (props) => {
                 componentTypeSearch={context.componentTypeSearch}
                 setComponentTypeSearch={context.setComponentTypeSearch}
             />
-            
-            <div className="component-type-picking-row">
-                <ComponentTypeList 
-                    majorCategories={context.isToggledToComponents ? customMajorCategories : stockMajorCategories}
-                    selectedTags={[]}  
-                    selectTypeCallback={context.selectComponent}
-                    search={context.componentTypeSearch}
-                    selectedComponentType={context.selectedComponentType}  
-                    componentTypeOptions={componentTypeOptions}
-                    isStock={!context.isToggledToComponents}
-                />
-            </div>    
+            <ComponentTypeList 
+                majorCategories={context.isToggledToComponents ? customMajorCategories : stockMajorCategories}
+                selectedTags={[]}  
+                selectTypeCallback={context.selectComponent}
+                search={context.componentTypeSearch}
+                selectedComponentType={context.selectedComponentType}  
+                componentTypeOptions={componentTypeOptions}
+                isStock={!context.isToggledToComponents}
+            />  
             <ChosenComponent 
                 isProcessing={isProcessing}
                 createComponent={createComponent}

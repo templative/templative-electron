@@ -1,10 +1,11 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useContext } from "react";
 import {componentTypeHasAllFilteredTags, matchesSearch} from "../TagFilter"
 import ComponentTypeFolder from "./ComponentTypeFolder";
 import ComponentType from "./ComponentType";
 import StockComponentType from "./StockComponentType";
 import { extractBaseNameAndSize, compareSizes, extractBaseNameAndColor } from "./ComponentUtils";
 import noFileIcon from "../../Edit/noFileIcon.svg";
+import { RenderingWorkspaceContext } from "../../Render/RenderingWorkspaceProvider";
 
 const ComponentTypeList = ({ 
     componentTypeOptions,
@@ -15,6 +16,7 @@ const ComponentTypeList = ({
     selectedComponentType,
     isStock
 }) => {   
+    const context = useContext(RenderingWorkspaceContext);
     const { componentDivs, categoryToFilteredTypes } = useMemo(() => {
         // Track which components have already been assigned to a category
         const assignedComponents = new Set();
@@ -287,17 +289,21 @@ const ComponentTypeList = ({
         Object.keys(componentTypeOptions).length > 0 && 
         search.trim() !== "";
 
+    const hasSelectedComponent = context.selectedComponentType !== undefined;
+
     return (
-        <div className="component-type-list">
-            {isSearchTooNarrow && <p className="no-results-message">Your search returned no results.</p>}
-            {folders}
-            {/* {folders.length !== 0 && <p>Other {folders.length}</p>}  */}
-            {componentDivs}
-            {(folders.length !== 0 || componentDivs.length !== 0) && 
-                <div className="end-of-component-types-icon-container">
-                    <img src={noFileIcon} className="end-of-component-types-icon"/>
-                </div>
-            }
+        <div className={`component-type-picking-row ${hasSelectedComponent ? 'has-selected-component' : ''}`}>
+            <div className="component-type-list">
+                {isSearchTooNarrow && <p className="no-results-message">Your search returned no results.</p>}
+                {folders}
+                {/* {folders.length !== 0 && <p>Other {folders.length}</p>}  */}
+                {componentDivs}
+                {(folders.length !== 0 || componentDivs.length !== 0) && 
+                    <div className="end-of-component-types-icon-container">
+                        <img src={noFileIcon} className="end-of-component-types-icon"/>
+                    </div>
+                }
+            </div>
         </div>
     );
 };

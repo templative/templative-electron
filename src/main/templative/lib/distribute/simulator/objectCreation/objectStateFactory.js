@@ -1,8 +1,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 const chalk = require('chalk');
-const { createDeck } = require('./deckCreator.js');
-const { createDie } = require("./customDieCreator.js")
+const { createCustom } = require('./customCreator.js');
 const { createStock } = require('./stockCreator.js');
 const { createComponentLibraryChest } = require('../simulatorTemplates/objectState.js');
 const COMPONENT_INFO = require('../../../../../../shared/componentInfo.js').COMPONENT_INFO;
@@ -55,14 +54,9 @@ async function createObjectState(componentDirectoryPath, tabletopSimulatorDirect
   const componentInstructionsFilepath = path.join(componentDirectoryPath, "component.json");
   const componentInstructions = JSON.parse(await fs.readFile(componentInstructionsFilepath, 'utf8'));
 
-  const supportedInstructionTypes = {
-    "DECK": createDeck,
-    "BOARD": createDeck,
-    "CustomDie": createDie
-  };
-
   const componentTypeTokens = componentInstructions.type.split("_");
   const isStockComponent = componentTypeTokens[0].toUpperCase() === "STOCK";
+  
   if (isStockComponent) {
     if (!STOCK_COMPONENT_INFO.hasOwnProperty(componentTypeTokens[1])) {
       console.log(chalk.red(`!!! Missing stock info for ${componentTypeTokens[1]}.`));
@@ -78,12 +72,6 @@ async function createObjectState(componentDirectoryPath, tabletopSimulatorDirect
   }
   const componentInfo = COMPONENT_INFO[componentInstructions.type];
 
-  if (!componentInfo.hasOwnProperty("SimulatorCreationTask")) {
-    console.log(chalk.yellow(`Skipping ${componentInstructions.type} that has no SimulatorCreationTask.`));
-    return null;
-  }
-  const simulatorTask = componentInfo.SimulatorCreationTask;
-
   if (componentInstructions.frontInstructions) {
     let totalCount = 0;
     for (const instruction of componentInstructions.frontInstructions) {
@@ -95,18 +83,8 @@ async function createObjectState(componentDirectoryPath, tabletopSimulatorDirect
     }
   }
 
-  if (simulatorTask === "none") {
-    console.log(chalk.yellow(`Skipping ${componentInstructions.uniqueName || componentInstructions.name} due to no SimulatorCreationTask.`));
-    return null;
-  }
-
-  if (!supportedInstructionTypes.hasOwnProperty(simulatorTask)) {
-    console.log(chalk.red(`!!! Skipping unsupported ${simulatorTask} for ${componentInstructions.uniqueName || componentInstructions.name}.`));
-    return null;
-  }
-  const instruction = supportedInstructionTypes[simulatorTask];
-  console.log(`Creating ${componentInstructions.type} ${componentInstructions.uniqueName || componentInstructions.name}`);
-  return await instruction(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal);
+  // Use the new createCustom function for all custom components
+  return await createCustom(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal);
 }
 
 /**

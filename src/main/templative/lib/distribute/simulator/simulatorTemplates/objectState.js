@@ -6,6 +6,7 @@ function md5(str) {
 }
 const { getColorValueRGB, getColorValueHex } = require('../../../../../../shared/stockComponentColors');
 const WHITE_COLOR_DIFFUSE = { r: 1.0, g: 1.0, b: 1.0}
+const CLEAR_COLOR_DIFFUSE = { r: 0.0, g: 0.0, b: 0.0, a: 0.0 }
 
 const STANDARD_ATTRIBUTES = {
   LuaScript: "",
@@ -77,7 +78,8 @@ function createComponentLibraryChest(componentStates, name = "ComponentLibrary",
 }
 
 function createDeckObjectState(guid, deckPrefix, name, imageUrls, simulatorComponentPlacement, dimensions, layout, cardQuantities, deckType = 0) {
-  console.log(`Creating deck ${name} with ${cardQuantities.reduce((sum, qty) => sum + qty, 0)} cards.`);
+  console.log(cardQuantities)
+  console.log(`Creating deck ${name}.`);
   const deckIds = [];
   let cardIndex = 0;
 
@@ -310,11 +312,10 @@ function createStockModel(name, quantity, objUrl, textureUrl, normalMapUrl) {
   return createBagForObject(model, quantity, `${name} Bag`, WHITE_COLOR_DIFFUSE);
 }
 
-function createStandee(name, quantity, frontImageUrl, backImageUrl) {
-  console.log(`Creating a standee ${name} frontImageUrl: ${frontImageUrl}`);
+function createStandee(name, frontImageUrl, backImageUrl) {
   const guid = md5(name).slice(0, 6);
   const scale = 0.750000238;
-  const model = {
+  return {
     GUID: guid,
     Name: "Figurine_Custom",
     Transform: {
@@ -322,12 +323,7 @@ function createStandee(name, quantity, frontImageUrl, backImageUrl) {
       scaleX: scale, scaleY: scale, scaleZ: scale
     },
     Nickname: name,
-    ColorDiffuse: {
-      r: 0.0,
-      g: 0.0,
-      b: 0.0,
-      a: 0.0
-    },
+    ColorDiffuse: CLEAR_COLOR_DIFFUSE,
     LayoutGroupSortIndex: 0,
     Value: 0,    
     HideWhenFaceDown: false,
@@ -340,7 +336,34 @@ function createStandee(name, quantity, frontImageUrl, backImageUrl) {
     },
     ...STANDARD_ATTRIBUTES
   }
-  return createBagForObject(model, quantity, `${name} Bag`, WHITE_COLOR_DIFFUSE);
+  
+}
+function createBag(name, contents){
+  return {
+    Name: "Bag",
+    Transform: {
+      posX: 0, posY: 3, posZ: -20, 
+      rotX: 0, rotY: 180, rotZ: 0, 
+      scaleX: 1, scaleY: 1, scaleZ: 1
+    },
+    Nickname: name,
+    ColorDiffuse: WHITE_COLOR_DIFFUSE,
+    Locked: true,    
+    HideWhenFaceDown: false,
+    Hands: false,
+    ContainedObjects: contents,
+    GUID: "chest" + md5(name).slice(0, 6),
+    ...STANDARD_ATTRIBUTES
+  }
+}
+
+function createStandeeFromNameImageUrlAndQuantities(name, standeesNameQuantityUrls) {
+  console.log(`Creating standees for ${name} with ${standeesNameQuantityUrls.length} different types`);
+  
+  const standees = standeesNameQuantityUrls.flatMap(({name, frontImageUrl, backImageUrl, quantity}) => {
+    return Array(quantity).fill().map(() => createStandee(name, frontImageUrl, backImageUrl));
+  });
+  return createBag(name, standees)
 }
 
 function createTokenWithDefinedShape(name, quantity, frontImageUrl, backImageUrl, shape) {
@@ -385,11 +408,19 @@ function createTokenWithDefinedShape(name, quantity, frontImageUrl, backImageUrl
   return createBagForObject(model, quantity, `${name} Bag`, WHITE_COLOR_DIFFUSE);
 }
 
-function createFlatTokenWithTransparencyBasedShape(name, quantity, frontImageUrl, backImageUrl) {
-  return createTokenWithTransparencyBasedShape(name, quantity, frontImageUrl, backImageUrl, 0.2, false, true);
+function createFlatTokenWithTransparencyBasedShape(componentName, nameQuantityUrls) {
+  const tokens = nameQuantityUrls.flatMap(({name, frontImageUrl, backImageUrl, quantity}) => {
+    console.log(chalk.green(`Creating ${quantity} tokens for ${name} with frontImageUrl: ${frontImageUrl}`));
+    return Array(quantity).fill().map(() => createTokenWithTransparencyBasedShape(name,  frontImageUrl, 0.2, false, true));
+  });
+  return createBag(componentName, tokens) 
 }
-function createThickTokenWithTransparencyBasedShape(name, quantity, frontImageUrl, backImageUrl) {
-  return createTokenWithTransparencyBasedShape(name, quantity, frontImageUrl, backImageUrl, 1.0, true, false);
+function createThickTokenWithTransparencyBasedShape(componentName, nameQuantityUrls) {
+  const tokens = nameQuantityUrls.flatMap(({name, frontImageUrl, backImageUrl, quantity}) => {
+    console.log(chalk.green(`Creating ${quantity} tokens for ${name} with frontImageUrl: ${frontImageUrl}`));
+    return Array(quantity).fill().map(() => createTokenWithTransparencyBasedShape(name,  frontImageUrl, 1.0, true, false));
+  });
+  return createBag(componentName, tokens) 
 }
 function createStockCylinder(name, quantity, colorHex, widthMillimeters, heightMillimeters) {
   const guid = md5(name).slice(0, 6);
@@ -430,11 +461,11 @@ function createStockCylinder(name, quantity, colorHex, widthMillimeters, heightM
   return createBagForObject(model, quantity, `${longName} Bag`, colorDiffuse);
 }
 
-function createTokenWithTransparencyBasedShape(name, quantity, frontImageUrl, backImageUrl, thickness = 0.2, isStandUp = false, isStackable = true) {
+function createTokenWithTransparencyBasedShape(name, frontImageUrl, thickness = 0.2, isStandUp = false, isStackable = true) {
   console.log(`Creating a token with a transparency based shape ${name} frontImageUrl: ${frontImageUrl} thickness: ${thickness} isStandUp: ${isStandUp} isStackable: ${isStackable}`);
   const guid = md5(name).slice(0, 6);
   const scale = 0.25
-  const model = {
+  return {
     GUID: guid,
     Name: "Custom_Token",
     Transform: {
@@ -462,7 +493,6 @@ function createTokenWithTransparencyBasedShape(name, quantity, frontImageUrl, ba
     },
     ...STANDARD_ATTRIBUTES
   }
-  return createBagForObject(model, quantity, `${name} Bag`, WHITE_COLOR_DIFFUSE);
 }
 
 function createCustomDie(name, quantity, imageUrl, numberSides) {
@@ -715,7 +745,7 @@ module.exports = {
   createCustomDie,
   createStockCube, 
   createStockModel, 
-  createStandee, 
+  createStandeeFromNameImageUrlAndQuantities,
   createTokenWithDefinedShape, 
   createFlatTokenWithTransparencyBasedShape,
   createThickTokenWithTransparencyBasedShape,

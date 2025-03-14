@@ -32,7 +32,12 @@
 }
 
 .component-type-picking-row {
+    width: 100%;
     padding: 0 1em 0em 1em !important;
+    height: calc(100% - var(--search-components-box-height));
+}
+
+.component-type-picking-row.has-selected-component {
     height: calc(100% - var(--component-name-row-height) - var(--search-components-box-height) - 30px);
 }
 

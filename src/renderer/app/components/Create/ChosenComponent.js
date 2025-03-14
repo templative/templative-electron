@@ -172,17 +172,21 @@ const ChosenComponent = ({ isProcessing, createComponent, componentTypeOptions, 
         return sizeA.localeCompare(sizeB);
     }) : [];
 
+    const hasSelectedComponent = context.selectedComponentType !== undefined;
+
+    if (!hasSelectedComponent) {
+        return null;
+    }
+
     return (
         <div className="create-component-name-row">
             <div className="chosen-component-preview">
-                {selectedComponentInfo !== null &&
                     
-                    <div className="chosen-component-image-container">
-                        <p className="component-type-name-title">{selectedComponentInfo.DisplayName}</p>
-                        <img className="chosen-component-image" src={selectedComponentInfo.PreviewUri} alt={selectedComponentInfo.DisplayName} />
-                        <p className="component-type-name-subtitle">{isStock ? "Stock" : "Custom"} Component</p>
-                    </div>
-                }
+                <div className="chosen-component-image-container">
+                    <p className="component-type-name-title">{selectedComponentInfo.DisplayName}</p>
+                    <img className="chosen-component-image" src={selectedComponentInfo.PreviewUri} alt={selectedComponentInfo.DisplayName} />
+                    <p className="component-type-name-subtitle">{isStock ? "Stock" : "Custom"} Component</p>
+                </div>
             </div>
             <div className="chosen-component-settings">
                 {colorVariations.length > 0 && (

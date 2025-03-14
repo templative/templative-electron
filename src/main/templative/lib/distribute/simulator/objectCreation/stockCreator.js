@@ -4,7 +4,7 @@ const {
   createCustomDie,
   createStockCube, 
   createStockModel, 
-  createStandee, 
+  createStandeeFromNameImageUrlAndQuantities, 
   createTokenWithDefinedShape, 
   createStockCylinder,
   createFlatTokenWithTransparencyBasedShape,
@@ -49,7 +49,7 @@ async function createStock(componentInstructions, stockPartInfo) {
     "StockCube": createStockCube,
     "StockCylinder": createStockCylinder,
     "StockModel": createStockModel,
-    "Standee": createStandee,
+    "Standee": createStandeeFromNameImageUrlAndQuantities,
     "TokenWithDefinedShape": createTokenWithDefinedShape,
     "FlatTokenWithTransparencyBasedShape": createFlatTokenWithTransparencyBasedShape,
     "ThickTokenWithTransparencyBasedShape": createThickTokenWithTransparencyBasedShape
