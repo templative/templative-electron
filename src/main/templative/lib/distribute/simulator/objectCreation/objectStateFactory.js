@@ -51,40 +51,55 @@ async function createObjectStates(producedDirectoryPath, tabletopSimulatorDirect
  * @returns {Promise<Object|null>} - Object state or null if failed
  */
 async function createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPath, tabletopSimulatorImageDirectoryPath, componentIndex, componentCountTotal) {
-  const componentInstructionsFilepath = path.join(componentDirectoryPath, "component.json");
-  const componentInstructions = JSON.parse(await fs.readFile(componentInstructionsFilepath, 'utf8'));
+  try {    
+    const componentInstructionsFilepath = path.join(componentDirectoryPath, "component.json");
+    const componentInstructions = JSON.parse(await fs.readFile(componentInstructionsFilepath, 'utf8'));
 
-  const componentTypeTokens = componentInstructions.type.split("_");
-  const isStockComponent = componentTypeTokens[0].toUpperCase() === "STOCK";
-  
-  if (isStockComponent) {
-    if (!STOCK_COMPONENT_INFO.hasOwnProperty(componentTypeTokens[1])) {
-      console.log(chalk.red(`!!! Missing stock info for ${componentTypeTokens[1]}.`));
+    const componentTypeTokens = componentInstructions.type.split("_");
+    const isStockComponent = componentTypeTokens[0].toUpperCase() === "STOCK";
+    
+    if (isStockComponent) {
+      const stockComponentInfo = STOCK_COMPONENT_INFO[componentTypeTokens[1]];
+      if (!stockComponentInfo) {
+        console.log(chalk.red(`!!! Missing stock info for ${componentTypeTokens[1]}.`));
+        return null;
+      }
+      if (stockComponentInfo.hasOwnProperty("IsDisabled") && stockComponentInfo.IsDisabled) {
+        console.log(chalk.yellow(`Skipping ${componentInstructions.name} because it is disabled.`));
+        return null;
+      }
+      
+      return await createStock(componentInstructions, stockComponentInfo);
+    }
+
+    if (!COMPONENT_INFO.hasOwnProperty(componentInstructions.type)) {
+      console.log(chalk.red(`!!! Missing component info for ${componentInstructions.type}.`));
       return null;
     }
-    const stockComponentInfo = STOCK_COMPONENT_INFO[componentTypeTokens[1]];
-    return await createStock(componentInstructions, stockComponentInfo);
-  }
+    const componentInfo = COMPONENT_INFO[componentInstructions.type];
+    if (componentInfo.hasOwnProperty("IsDisabled") && componentInfo.IsDisabled) {
+      console.log(chalk.yellow(`Skipping ${componentInstructions.uniqueName || componentInstructions.name} because it is disabled.`));
+      return null;
+    }
 
-  if (!COMPONENT_INFO.hasOwnProperty(componentInstructions.type)) {
-    console.log(chalk.red(`!!! Missing component info for ${componentInstructions.type}.`));
+    if (componentInstructions.frontInstructions) {
+      let totalCount = 0;
+      for (const instruction of componentInstructions.frontInstructions) {
+        totalCount += instruction.quantity;
+      }
+    
+      if (totalCount === 0) {
+        return null;
+      }
+    }
+
+    // Use the new createCustom function for all custom components
+    return await createCustom(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal);
+  } catch (error) {
+    console.log(chalk.red(`!!! Error creating object state for ${componentDirectoryPath}.`));
+    console.log(error.message);
     return null;
   }
-  const componentInfo = COMPONENT_INFO[componentInstructions.type];
-
-  if (componentInstructions.frontInstructions) {
-    let totalCount = 0;
-    for (const instruction of componentInstructions.frontInstructions) {
-      totalCount += instruction.quantity;
-    }
-  
-    if (totalCount === 0) {
-      return null;
-    }
-  }
-
-  // Use the new createCustom function for all custom components
-  return await createCustom(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal);
 }
 
 /**

@@ -37,6 +37,10 @@ function createPlaceholderImage(width, height) {
  * @returns {Promise<Image|null>} - The loaded image or null if it cannot be loaded
  */
 async function safeLoadImage(filepath, dimensions = [400, 400]) {
+  if (!filepath || filepath === null || filepath === undefined) {
+    console.log(chalk.yellow(`!!! No image file provided.`));
+    return createPlaceholderImage(dimensions[0], dimensions[1]);
+  }
   if (!await fileExists(filepath)) {
     console.log(chalk.yellow(`!!! Image file not found: ${filepath}`));
     return createPlaceholderImage(dimensions[0], dimensions[1]);

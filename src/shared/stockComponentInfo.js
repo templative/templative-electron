@@ -2003,8 +2003,8 @@ const STOCK_COMPONENT_INFO = {
       "tiptop"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9AA02B16-C43E-11ED-8361-9686DB6D3EB3.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "11X11Baggies"
@@ -2049,8 +2049,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1479D068-C43F-11ED-8361-A78BDB6D3EB3.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "3X4Baggies"
@@ -2072,8 +2072,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0C7B124A-C4D6-11ED-A4D8-AE945FA0F72B.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "4X10Baggies"
@@ -2095,8 +2095,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EB1FB2FA-C43E-11ED-85BE-09BA5FA0F72B.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "4X5Baggies"
@@ -2118,8 +2118,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BAB10038-C43E-11ED-8361-EE87DB6D3EB3.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "4X6Baggies"
@@ -2141,8 +2141,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E2B80B62-C43E-11ED-8361-C189DB6D3EB3.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "5X5Baggies"
@@ -2164,8 +2164,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2222AB68-C43F-11ED-85BE-8DBC5FA0F72B.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "5X7Baggies"
@@ -2187,8 +2187,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/03D81DBE-C43F-11ED-8361-118BDB6D3EB3.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "6X10Baggies"
@@ -2210,8 +2210,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F8011176-C43E-11ED-8361-0F8BDB6D3EB3.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "7X12Baggies"
@@ -2233,8 +2233,8 @@ const STOCK_COMPONENT_INFO = {
       "reusable"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3555AB68-C43F-11ED-B904-ABFB00937027.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "9X12Baggies"
@@ -6197,7 +6197,7 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Color": "none",
-    "IsDisabled": false,
+    "IsDisabled": true,
     "Key": "BadgeHolderw/StringLanyard(boxof100)"
   },
   "BalefireDemonw/Sword": {
@@ -6228,7 +6228,7 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false,
+    "IsDisabled": true,
     "Key": "BalefireDemonw/Sword"
   },
   "BarbarianDuelFantasyTB25": {
@@ -7534,8 +7534,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D5FC7AC6-EA32-11EB-9161-4277EE9EC01D.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookBridge(108)"
@@ -7564,8 +7564,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D1FFECF0-EA32-11EB-9161-4277EE9EC01D.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookBridge(54)"
@@ -7594,8 +7594,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FC28711E-EA32-11EB-9837-DE2558DE1F23.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookJumbo(36)"
@@ -7624,8 +7624,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FFFDA19C-EA32-11EB-9161-EC77EE9EC01D.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookJumbo(90)"
@@ -7654,8 +7654,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F0465190-EA32-11EB-9161-AD77EE9EC01D.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookPoker(108)"
@@ -7684,8 +7684,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CB782708-EA32-11EB-9161-1C77EE9EC01D.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookPoker(18)"
@@ -7714,8 +7714,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C23676D6-EA32-11EB-9161-0677EE9EC01D.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookPoker(36)"
@@ -7744,8 +7744,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FF653E1E-EB10-11EB-BADA-64CEE7726C43.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookPoker(54)"
@@ -7774,8 +7774,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/67520E30-EB11-11EB-BADA-22CFE7726C43.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookPoker(72)"
@@ -7804,8 +7804,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/EC59C800-EA32-11EB-9161-9C77EE9EC01D.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookPoker(90)"
@@ -7834,8 +7834,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F45D4B4E-EA32-11EB-9161-B277EE9EC01D.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookSquare(48)"
@@ -7864,8 +7864,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F7DDF9E4-EA32-11EB-9837-D42558DE1F23.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookSquare(96)"
@@ -7894,8 +7894,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DCB244F4-EA32-11EB-9837-782558DE1F23.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookTarot(40)"
@@ -7924,8 +7924,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E0353FAA-EA32-11EB-9161-7877EE9EC01D.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookTarot(90)"
@@ -7952,8 +7952,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F6678C2C-56FB-11E5-8F60-2A1636CD926D.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxProMedium"
@@ -7980,8 +7980,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F5F6CCD0-CF56-11E9-8690-62B834E1E425.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxProSmall"
@@ -8008,8 +8008,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CF4306F2-5D2B-11EC-A381-67D61E5F5B50.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxPrototypeLarge"
@@ -8036,8 +8036,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BA6847BA-5D2B-11EC-AACA-B76A68FE145E.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxPrototypeMedium"
@@ -8064,8 +8064,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C484DE52-5D2B-11EC-A381-12D61E5F5B50.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxPrototypeSmall"
@@ -8092,8 +8092,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/61ED7D72-56FB-11E5-A545-1DCFFE149099.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxRetailLarge"
@@ -8122,8 +8122,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6037E48A-B08B-11E8-BB17-87D5CE95AB04.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckBridge(108)"
@@ -8152,8 +8152,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/82F8978A-B08B-11E8-8C22-32D7BCC16479.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckBridge(54)"
@@ -8182,8 +8182,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/9988D50A-B08B-11E8-8C22-4DD7BCC16479.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckJumbo(90)"
@@ -8212,8 +8212,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/1F2DD3F0-B08B-11E8-8C22-BDD5BCC16479.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckPoker(108)"
@@ -8242,8 +8242,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/AFE63FCC-B08B-11E8-8C22-6BD7BCC16479.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckPoker(36)"
@@ -8272,8 +8272,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C20F6192-B08B-11E8-BB17-77D6CE95AB04.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckPoker(54)"
@@ -8302,8 +8302,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D759E50E-B08B-11E8-8C22-8FD7BCC16479.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckPoker(72)"
@@ -8332,8 +8332,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/ED09F1AA-B08B-11E8-8C22-BDD7BCC16479.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckPoker(90)"
@@ -8361,8 +8361,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A4BE274-B08C-11E8-8C22-4FD8BCC16479.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckSquare(48)"
@@ -8420,8 +8420,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E0C1ED56-56FE-11E5-BEF7-1DCFFE149099.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckTarot(40)"
@@ -8450,8 +8450,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/33061A26-B08C-11E8-BB17-ECD6CE95AB04.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckTarot(90)"
@@ -10401,8 +10401,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C0F9F48E-C3E8-11EB-B9DF-287B6F30B128.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankSmallProTarotInsert"
@@ -10461,8 +10461,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D201749E-C3BD-11EB-A327-42986F30B128.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankSmallStoutTarotInsert"
@@ -12311,8 +12311,8 @@ const STOCK_COMPONENT_INFO = {
       "white"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A6632BAA-6A2A-11E4-8EC4-B7B4A32F826F.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BoxInsertProMedium"
@@ -12331,8 +12331,8 @@ const STOCK_COMPONENT_INFO = {
       "white"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/C4E4E844-15E1-11E5-A50E-E5624BA7186E.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BoxInsertProSmall"
@@ -12351,8 +12351,8 @@ const STOCK_COMPONENT_INFO = {
       "white"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B19C5190-D10D-11EA-A6FC-3211E5FADFE3.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "BoxInsertStoutSmall"
@@ -13815,8 +13815,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0CACB110-B1B4-11EB-B77B-26DC0F1ADEF4.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "green",
     "IsDisabled": false,
     "Key": "BurlapBagSmallBlack"
@@ -13867,8 +13867,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/0114D738-B1B4-11EB-B77B-FEDB0F1ADEF4.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "green",
     "IsDisabled": false,
     "Key": "BurlapBagSmallGreen"
@@ -13920,8 +13920,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/169B5532-B1B4-11EB-8EC7-5724421B163D.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "green",
     "IsDisabled": false,
     "Key": "BurlapBagSmallRed"
@@ -13973,8 +13973,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2293AC18-B1B4-11EB-B77B-60DC0F1ADEF4.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "green",
     "IsDisabled": false,
     "Key": "BurlapBagSmallWhite"
@@ -15632,8 +15632,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/7563522E-AD81-11E4-8DC2-36A8BF09979E.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "CardEnvelope"
@@ -15660,8 +15660,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F9F8EB9A-35F7-11E9-8712-F2700031EE1B.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "CardEnvelopeWhite"
@@ -19845,8 +19845,8 @@ const STOCK_COMPONENT_INFO = {
       "clear"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E00635F8-F4E7-11E4-BD56-F49DFE48D702.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "ClearPokerTuckBox(200)"
@@ -19877,8 +19877,8 @@ const STOCK_COMPONENT_INFO = {
       "display"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E778B3F6-F676-11E0-8F9E-503B60677055.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "ClearPokerTuckBox(41)"
@@ -19909,8 +19909,8 @@ const STOCK_COMPONENT_INFO = {
       "display"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E778B3F6-F676-11E0-8F9E-503B60677055.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "ClearPokerTuckBox(66)"
@@ -21875,8 +21875,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/F2CA608A-B1B3-11EB-8EC7-EB23421B163D.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "CottonBagSmallWhite"
@@ -29502,8 +29502,8 @@ const STOCK_COMPONENT_INFO = {
       "white"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5306D7A0-41C5-11EE-9F26-8454BCA20CCB.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "DeckBoxBlank"
@@ -37003,8 +37003,8 @@ const STOCK_COMPONENT_INFO = {
       "silver"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FB68F576-230A-11EC-81A5-FAEB9FC3DD01.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "silver",
     "IsDisabled": false,
     "Key": "EuroPokerTin"
@@ -44052,8 +44052,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/E237AF9E-0F09-11E2-8584-134B1D5FFC75.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "GrabBag"
@@ -44079,8 +44079,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/450E5702-CBF1-11E4-878A-675C81F9DBEC.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "GrabBagPremium"
@@ -45289,8 +45289,8 @@ const STOCK_COMPONENT_INFO = {
       "clear"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/46C04F52-F91B-11EB-9A85-995622502F64.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "HangTabsTriangle(packof20)"
@@ -51653,8 +51653,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/6C2D4314-03AD-11E9-BFAA-DD341589B894.jpg",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "LargeStoutBox"
@@ -55256,8 +55256,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3CBEE1FE-2A41-11E9-A40F-9727E0AC8D83.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "MediumStoutBoxBlank"
@@ -58132,8 +58132,8 @@ const STOCK_COMPONENT_INFO = {
       "silver"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DA3DDEF2-AFDA-11E9-A355-437A896997E9.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "silver",
     "IsDisabled": false,
     "Key": "MintTin"
@@ -58154,8 +58154,8 @@ const STOCK_COMPONENT_INFO = {
       "black"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/62519FA2-EBFE-11EB-A508-81BAE7726C43.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "black",
     "IsDisabled": false,
     "Key": "MintTinRibbon"
@@ -58176,8 +58176,8 @@ const STOCK_COMPONENT_INFO = {
       "silver"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/FA384FF2-FB67-11EE-9A53-270DD46E50C8.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "silver",
     "IsDisabled": false,
     "Key": "MintTinTall"
@@ -61785,8 +61785,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B1210C60-91B4-11E2-9D0C-4072792D7C77.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "gold",
     "IsDisabled": false,
     "Key": "PartsBagFancyGold"
@@ -61814,8 +61814,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/B1F8C902-91B4-11E2-9BD0-4072792D7C77.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "silver",
     "IsDisabled": false,
     "Key": "PartsBagFancySilver"
@@ -61843,8 +61843,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D897EE10-91A2-11E2-B3A0-4072792D7C77.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "black",
     "IsDisabled": false,
     "Key": "PartsBagLargeBlack"
@@ -61872,8 +61872,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D9C16258-91A2-11E2-BF43-4072792D7C77.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PartsBagLargeBlue"
@@ -61901,8 +61901,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/DB9B9B66-91A2-11E2-B8A0-4072792D7C77.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "red",
     "IsDisabled": false,
     "Key": "PartsBagLargeRed"
@@ -61930,8 +61930,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/919B8AA2-91AD-11E2-8F2D-4072792D7C77.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "black",
     "IsDisabled": false,
     "Key": "PartsBagMediumBlack"
@@ -61959,8 +61959,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/92768A9E-91AD-11E2-8F2D-4072792D7C77.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PartsBagMediumBlue"
@@ -61988,8 +61988,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/934E8746-91AD-11E2-8E5B-4072792D7C77.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "brown",
     "IsDisabled": false,
     "Key": "PartsBagMediumBrown"
@@ -62017,8 +62017,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/941DCEE8-91AD-11E2-8582-4072792D7C77.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "green",
     "IsDisabled": false,
     "Key": "PartsBagMediumGreen"
@@ -62046,8 +62046,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/94FD3236-91AD-11E2-8714-4072792D7C77.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "gray",
     "IsDisabled": false,
     "Key": "PartsBagMediumGray"
@@ -62075,8 +62075,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/95C2E08A-91AD-11E2-A214-4072792D7C77.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PartsBagMediumPurple"
@@ -62104,8 +62104,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CC2BB846-D5C4-11EA-B417-F52F0EE65047.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "red",
     "IsDisabled": false,
     "Key": "PartsBagMediumRed"
@@ -62133,8 +62133,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/919B8AA2-91AD-11E2-8F2D-4072792D7C77.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "black",
     "IsDisabled": false,
     "Key": "PartsBagSmallBlack"
@@ -62162,8 +62162,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/92768A9E-91AD-11E2-8F2D-4072792D7C77.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PartsBagSmallBlue"
@@ -62191,8 +62191,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/934E8746-91AD-11E2-8E5B-4072792D7C77.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "brown",
     "IsDisabled": false,
     "Key": "PartsBagSmallBrown"
@@ -62220,8 +62220,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/94FD3236-91AD-11E2-8714-4072792D7C77.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "gray",
     "IsDisabled": false,
     "Key": "PartsBagSmallGray"
@@ -62249,8 +62249,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/941DCEE8-91AD-11E2-8582-4072792D7C77.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "green",
     "IsDisabled": false,
     "Key": "PartsBagSmallGreen"
@@ -62278,8 +62278,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/95C2E08A-91AD-11E2-A214-4072792D7C77.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PartsBagSmallPurple"
@@ -62307,8 +62307,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/09977F58-D5C5-11EA-B47D-F9300EE65047.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "red",
     "IsDisabled": false,
     "Key": "PartsBagSmallRed"
@@ -62336,8 +62336,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4A489F1A-A7DF-11E9-BF4E-96C289824F18.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "black",
     "IsDisabled": false,
     "Key": "PartsBagTallBlack"
@@ -62363,8 +62363,8 @@ const STOCK_COMPONENT_INFO = {
       "silver"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/80829E48-1CBB-11EC-9D40-23995853E446.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "silver",
     "IsDisabled": false,
     "Key": "PartsBowl70mm"
@@ -62386,8 +62386,8 @@ const STOCK_COMPONENT_INFO = {
       "black"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A103B302-8319-11E9-803D-2F30F5424212.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "black",
     "IsDisabled": false,
     "Key": "PartsTray"
@@ -65075,8 +65075,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/CBBF535C-BAE2-11EE-B020-C5E0DB3513CC.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "brown",
     "IsDisabled": false,
     "Key": "PremiumLeatherBag"
@@ -73982,8 +73982,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/D8BAC9AA-2A42-11E9-A40F-BF2AE0AC8D83.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "white",
     "IsDisabled": false,
     "Key": "SmallStoutBox"
@@ -74265,8 +74265,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/4BD81D7E-2A1D-11ED-BE39-5D385FE382A3.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "SnaplockBoxMicro"
@@ -74296,8 +74296,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/5990A6A2-2A1D-11ED-BE39-92395FE382A3.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "SnaplockBoxMini"
@@ -74326,8 +74326,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3E4102C0-2A1D-11ED-BE39-40385FE382A3.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "SnaplockBoxOrganizer"
@@ -74358,8 +74358,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/663A5E34-2A1D-11ED-BE39-353A5FE382A3.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "SnaplockBoxPoker100+Card"
@@ -77491,8 +77491,8 @@ const STOCK_COMPONENT_INFO = {
       "clear"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/2F9DB1DC-2A1D-11ED-9911-726779D8BDFD.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "StorageJarRoundClear"
@@ -77517,8 +77517,8 @@ const STOCK_COMPONENT_INFO = {
       "silver"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/3B2FF2F2-8314-11E9-803D-7827F5424212.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "silver",
     "IsDisabled": false,
     "Key": "StorageJarTin"
@@ -80743,7 +80743,7 @@ const STOCK_COMPONENT_INFO = {
     "PlaygroundCreationTask": "Standee",
     "SimulatorCreationTask": "Standee",
     "Color": "silver",
-    "IsDisabled": false,
+    "IsDisabled": true,
     "Key": "TwoHeadedOgrew/Captive"
   },
   "UniversalNo": {
@@ -84497,8 +84497,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/A7CC807C-4DDC-11EF-BB86-159C2B64B26B.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "black",
     "IsDisabled": false,
     "Key": "BlankVHSBox"
@@ -85098,8 +85098,8 @@ const STOCK_COMPONENT_INFO = {
       "clear"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/75C711AE-3BA4-11EA-A3A8-6074EBC8DDC9.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "none",
     "IsDisabled": false,
     "Key": "DeckStorageClear"
@@ -85760,8 +85760,8 @@ const STOCK_COMPONENT_INFO = {
       "packaging"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/BEBE6CFC-0190-11EF-B5A6-5E0F015F28ED.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "black",
     "IsDisabled": false,
     "Key": "LargeBlackTin"
@@ -86055,8 +86055,8 @@ const STOCK_COMPONENT_INFO = {
       "baggies"
     ],
     "PreviewUri": "//s3.amazonaws.com/preview.thegamecrafter.com/969FD236-2F8E-11ED-88E4-9E045FE382A3.png",
-    "PlaygroundCreationTask": "Baggie",
-    "SimulatorCreationTask": "Baggie",
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Color": "black",
     "IsDisabled": false,
     "Key": "PartsBagLargeClothBlack"

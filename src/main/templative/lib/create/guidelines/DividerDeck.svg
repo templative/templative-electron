@@ -1,38 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-     id="Template"
-     viewBox="0 0 975 1125"
-     width="975"
-     height="1125"
-     version="1.1"
-     sodipodi:docname="DividerDeck.svg"
-     inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
-     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:svg="http://www.w3.org/2000/svg">
-    <sodipodi:namedview
-         id="namedview179"
-         pagecolor="#505050"
-         bordercolor="#eeeeee"
-         borderopacity="1"
-         inkscape:showpageshadow="0"
-         inkscape:pageopacity="0"
-         inkscape:pagecheckerboard="0"
-         inkscape:deskcolor="#d1d1d1"
-         inkscape:zoom="0.4"
-         inkscape:cx="300"
-         inkscape:cy="680"
-         inkscape:window-width="1872"
-         inkscape:window-height="1027"
-         inkscape:window-x="62"
-         inkscape:window-y="25"
-         inkscape:window-maximized="1"
-         inkscape:current-layer="Template" />
-    <defs
-         id="defs1">
-        <style
-             id="style1">
+<svg id="Template" viewBox="0 0 975 1125" width="975" height="1125" version="1.1" sodipodi:docname="DividerDeck.svg" inkscape:version="1.4 (e7c3feb1, 2024-10-09)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><g transform="translate(5.35714285714289, 0) scale(1.0714285714285714)">
+    <sodipodi:namedview id="namedview179" pagecolor="#505050" bordercolor="#eeeeee" borderopacity="1" inkscape:showpageshadow="0" inkscape:pageopacity="0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:zoom="0.4" inkscape:cx="300" inkscape:cy="680" inkscape:window-width="1872" inkscape:window-height="1027" inkscape:window-x="62" inkscape:window-y="25" inkscape:window-maximized="1" inkscape:current-layer="Template"/>
+    <defs id="defs1">
+        <style id="style1">
       .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
         fill: none;
       }
@@ -219,33 +189,7 @@
       }
     </style>
     </defs>
-    <path
-         id="Bleed_Zone"
-         data-name="Bleed Zone"
-         class="cls-21"
-         d="M 0,0 V 1125 H 975.00001 V 0 Z"
-         style="stroke-width:4.16667"
-         sodipodi:nodetypes="ccccc" />
-    <rect
-         id="Safe_Zone"
-         data-name="Safe Zone"
-         class="cls-3"
-         x="75"
-         y="75"
-         width="825"
-         height="975"
-         rx="37.5"
-         ry="37.5"
-         style="stroke-width:4.16667" />
-    <rect
-         id="clipping"
-         data-name="Trim Line"
-         class="cls-7"
-         x="37.5"
-         y="37.5"
-         width="900"
-         height="1050"
-         rx="37.5"
-         ry="37.5"
-         style="stroke-width:4.16667;stroke:none;fill:#717171;fill-opacity:1" />
-</svg>
+    <path id="Bleed_Zone" data-name="Bleed Zone" class="cls-21" d="M 0,0 V 1125 H 975.00001 V 0 Z" style="stroke-width:4.16667" sodipodi:nodetypes="ccccc"/>
+    <rect id="Safe_Zone" data-name="Safe Zone" class="cls-3" x="75" y="75" width="825" height="975" rx="37.5" ry="37.5" style="stroke-width:4.16667"/>
+    <rect id="clipping" data-name="Trim Line" class="cls-7" x="37.5" y="37.5" width="900" height="1050" rx="37.5" ry="37.5" style="stroke-width:4.16667;stroke:none;fill:#717171;fill-opacity:1"/>
+</g></svg>

@@ -32,7 +32,17 @@ const tableLength = 7.5;
 const shrinkFactor = 0.75;
 
 function createBagForObject(object, quantity, name, colorDiffuse = WHITE_COLOR_DIFFUSE) {
-  if (quantity == 1) {
+  if (object === undefined || object === null) {
+    throw new Error(`Object is undefined or null for ${name}`);
+  }
+  if (quantity === undefined || quantity === null) {
+    throw new Error(`Quantity is undefined or null for ${name}`);
+  }
+  if (name === undefined || name === null || name === "") {
+    throw new Error(`Name is undefined or null for ${name}`);
+  }
+
+  if (quantity === 1) {
     return object;
   }
   return {
@@ -53,7 +63,19 @@ function createBagForObject(object, quantity, name, colorDiffuse = WHITE_COLOR_D
   }
 }
 
-function createComponentLibraryChest(componentStates, name = "ComponentLibrary", isInfinite = false, colorDiffuse = null) {
+function createComponentLibraryChest(componentStates=[], name = "ComponentLibrary", isInfinite = false, colorDiffuse = WHITE_COLOR_DIFFUSE) {
+  if (componentStates === null) {
+    throw new Error(`Component states is null for ${name}`);
+  }
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for ${name}`);
+  }
+  if (typeof isInfinite !== "boolean") {
+    throw new Error(`isInfinite is not a boolean for ${name}`);
+  }
+  if (colorDiffuse === null) {
+    throw new Error(`Color diffuse is null for ${name}`);
+  }
   // console.log(`Creating a component library chest ${name} isInfinite: ${isInfinite} colorDiffuse: ${colorDiffuse}`);
   return {
     Name: isInfinite ? "Infinite_Bag" : "Bag",
@@ -63,11 +85,7 @@ function createComponentLibraryChest(componentStates, name = "ComponentLibrary",
       scaleX: 1, scaleY: 1, scaleZ: 1
     },
     Nickname: name,
-    ColorDiffuse: colorDiffuse || {
-      r: 0.7132782,
-      g: 0.7132782,
-      b: 0.7132782
-    },
+    ColorDiffuse: colorDiffuse,
     Locked: true,    
     HideWhenFaceDown: false,
     Hands: false,
@@ -77,9 +95,40 @@ function createComponentLibraryChest(componentStates, name = "ComponentLibrary",
   };
 }
 
-function createDeckObjectState(guid, deckPrefix, name, imageUrls, simulatorComponentPlacement, dimensions, layout, cardQuantities, deckType = 0) {
-  console.log(cardQuantities)
+function createDeckObjectState(deckPrefix, name, imageUrls, dimensions, layout, cardQuantities, deckType = 0) {
   console.log(`Creating deck ${name}.`);
+  if (deckPrefix === null || deckPrefix === undefined || typeof deckPrefix !== "number") {
+    throw new Error(`Deck prefix is null, undefined, or not a number for ${name}`);
+  }
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for ${name}`);
+  }
+  if (imageUrls === null || imageUrls === undefined) {
+    throw new Error(`Image urls is null or undefined for ${name}`);
+  }
+  if (!imageUrls.face || !imageUrls.back) {
+    throw new Error(`Image urls missing face or back URL for ${name}`);
+  }
+  if (dimensions === null || dimensions === undefined) {
+    throw new Error(`Dimensions is null or undefined for ${name}`);
+  }
+  if (!dimensions.width || !dimensions.height || !dimensions.thickness) {
+    throw new Error(`Dimensions missing width, height, or thickness for ${name}`);
+  }
+  if (layout === null || layout === undefined) {
+    throw new Error(`Layout is null or undefined for ${name}`);
+  }
+  if (typeof layout.columns !== 'number' || typeof layout.rows !== 'number') {
+    throw new Error(`Layout missing columns or rows for ${name}`);
+  }
+  if (cardQuantities === null || cardQuantities === undefined || !Array.isArray(cardQuantities) || cardQuantities.length === 0) {
+    throw new Error(`Card quantities is null, undefined, not an array, or empty for ${name}`);
+  }
+  if (typeof deckType !== "number") {
+    throw new Error(`Deck type is not a number for ${name}`);
+  }
+  
+  const guid = md5(name).slice(0, 6);
   const deckIds = [];
   let cardIndex = 0;
 
@@ -92,14 +141,11 @@ function createDeckObjectState(guid, deckPrefix, name, imageUrls, simulatorCompo
     }
   }
 
-  const positionX = (-tableLength / 2) + (simulatorComponentPlacement.boxPositionIndexX * tableLength / simulatorComponentPlacement.boxColumnCount * 2);
-  const positionZ = (-tableLength / 2) + (simulatorComponentPlacement.boxPositionIndexZ * tableLength / simulatorComponentPlacement.boxRowCount * 2);
-
   const transform = {
-    posX: positionX,
-    posY: simulatorComponentPlacement.height,
-    posZ: positionZ,
-    rotX: 1.46591833E-06,
+    posX: 1,
+    posY: 1,
+    posZ: 1,
+    rotX: 0,
     rotY: 180.0,
     rotZ: 180.0,
     scaleX: dimensions.width * shrinkFactor,
@@ -143,11 +189,7 @@ function createDeckObjectState(guid, deckPrefix, name, imageUrls, simulatorCompo
     Name: "DeckCustom",
     Transform: transform,
     Nickname: name,    
-    ColorDiffuse: {
-      r: 0.7132782,
-      g: 0.7132782,
-      b: 0.7132782
-    },
+    ColorDiffuse: WHITE_COLOR_DIFFUSE,
     LayoutGroupSortIndex: 0,
     Value: 0,
     HideWhenFaceDown: true,
@@ -175,7 +217,32 @@ function createDeckObjectState(guid, deckPrefix, name, imageUrls, simulatorCompo
 }
 
 function createCardObjectState(guid, cardPrefix, name, imageUrls, simulatorComponentPlacement, dimensions, deckType = 0) {
-  console.log('createCardObjectState params:', { guid, cardPrefix, name, imageUrls, simulatorComponentPlacement, dimensions, deckType });
+  // console.log('createCardObjectState params:', { guid, cardPrefix, name, imageUrls, simulatorComponentPlacement, dimensions, deckType });
+  if (guid === null || guid === undefined || typeof guid !== "string" || guid === "") {
+    throw new Error(`GUID is null, undefined, not a string, or empty for ${name}`);
+  }
+  if (cardPrefix === null || cardPrefix === undefined || typeof cardPrefix !== "number") {
+    throw new Error(`Card prefix is null, undefined, or not a number for ${name}`);
+  }
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for ${name}`);
+  }
+  if (imageUrls === null || imageUrls === undefined) {
+    throw new Error(`Image urls is null or undefined for ${name}`);
+  }
+  if (!imageUrls.face || !imageUrls.back) {
+    throw new Error(`Image urls missing face or back URL for ${name}`);
+  }
+  if (simulatorComponentPlacement === null || simulatorComponentPlacement === undefined) {
+    throw new Error(`Simulator component placement is null or undefined for ${name}`);
+  }
+  if (dimensions === null || dimensions === undefined) {
+    throw new Error(`Dimensions is null or undefined for ${name}`);
+  }
+  if (typeof deckType !== "number") {
+    throw new Error(`Deck type is not a number for ${name}`);
+  }
+
   const positionX = (-tableLength / 2) + (simulatorComponentPlacement.boxPositionIndexX * tableLength / simulatorComponentPlacement.boxColumnCount * 2);
   const positionZ = (-tableLength / 2) + (simulatorComponentPlacement.boxPositionIndexZ * tableLength / simulatorComponentPlacement.boxRowCount * 2);
   const transform = {
@@ -224,7 +291,26 @@ function createCardObjectState(guid, cardPrefix, name, imageUrls, simulatorCompo
 }
 
 function createStandardDie(name, quantity, numberSides, sizeInches, colorRGBOutOfOne, isMetal=false) {
-  console.log(`Creating a standard d${numberSides} die: ${name} color: ${colorRGBOutOfOne[0]}, ${colorRGBOutOfOne[1]}, ${colorRGBOutOfOne[2]} isMetal: ${isMetal}`);
+  console.log(`Creating a standard d${numberSides} die ${name}`);
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for die`);
+  }
+  if (quantity === null || quantity === undefined || typeof quantity !== "number" || quantity <= 0) {
+    throw new Error(`Quantity is null, undefined, not a number, or not positive for ${name}`);
+  }
+  if (numberSides === null || numberSides === undefined || typeof numberSides !== "number" || ![4, 6, 8, 10, 12, 20].includes(numberSides)) {
+    throw new Error(`Number of sides is null, undefined, not a number, or not a valid die type for ${name}. Valid types are: 4, 6, 8, 10, 12, 20`);
+  }
+  if (sizeInches === null || sizeInches === undefined || typeof sizeInches !== "number" || sizeInches <= 0) {
+    throw new Error(`Size in inches is null, undefined, not a number, or not positive for ${name}`);
+  }
+  if (colorRGBOutOfOne === null || colorRGBOutOfOne === undefined || !Array.isArray(colorRGBOutOfOne) || colorRGBOutOfOne.length < 3) {
+    throw new Error(`Color RGB is null, undefined, not an array, or does not have at least 3 elements for ${name}`);
+  }
+  if (typeof isMetal !== "boolean") {
+    throw new Error(`isMetal is not a boolean for ${name}`);
+  }
+  
   const guid = md5(name).slice(0, 6);
   
   const colorDiffuse = {
@@ -255,7 +341,20 @@ function createStandardDie(name, quantity, numberSides, sizeInches, colorRGBOutO
 }
 
 function createStockCube(name, quantity, sizeInchesXYZ, colorRGBOutOfOne) {
-  console.log(`Creating a stock cube ${name} size: ${sizeInchesXYZ} color: ${colorRGBOutOfOne[0]}, ${colorRGBOutOfOne[1]}, ${colorRGBOutOfOne[2]}`);
+  console.log(`Creating a stock cube ${name}`);
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for cube`);
+  }
+  if (quantity === null || quantity === undefined || typeof quantity !== "number" || quantity <= 0) {
+    throw new Error(`Quantity is null, undefined, not a number, or not positive for ${name}`);
+  }
+  if (sizeInchesXYZ === null || sizeInchesXYZ === undefined || !Array.isArray(sizeInchesXYZ) || sizeInchesXYZ.length < 3) {
+    throw new Error(`Size in inches XYZ is null, undefined, not an array, or does not have at least 3 elements for ${name}`);
+  }
+  if (colorRGBOutOfOne === null || colorRGBOutOfOne === undefined || !Array.isArray(colorRGBOutOfOne) || colorRGBOutOfOne.length < 3) {
+    throw new Error(`Color RGB is null, undefined, not an array, or does not have at least 3 elements for ${name}`);
+  }
+  
   const guid = md5(name).slice(0, 6);
   const colorDiffuse = {
     r: colorRGBOutOfOne[0],
@@ -281,7 +380,23 @@ function createStockCube(name, quantity, sizeInchesXYZ, colorRGBOutOfOne) {
 }
 
 function createStockModel(name, quantity, objUrl, textureUrl, normalMapUrl) {
-  console.log(`Creating a stock model ${name} objUrl: ${objUrl} textureUrl: ${textureUrl} normalMapUrl: ${normalMapUrl}`);
+  console.log(`Creating a stock model ${name}`);
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for model`);
+  }
+  if (quantity === null || quantity === undefined || typeof quantity !== "number" || quantity <= 0) {
+    throw new Error(`Quantity is null, undefined, not a number, or not positive for ${name}`);
+  }
+  if (typeof objUrl !== "string" || objUrl === "") {
+    throw new Error(`OBJ URL is not a string or is empty for ${name}`);
+  }
+  if (typeof textureUrl !== "string" || textureUrl === "") {
+    throw new Error(`Texture URL is not a string or is empty for ${name}`);
+  }
+  if (typeof normalMapUrl !== "string" || normalMapUrl === "") {
+    throw new Error(`Normal map URL is not a string or is empty for ${name}`);
+  }
+  
   const guid = md5(name).slice(0, 6);
   const model =  {
     GUID: guid,
@@ -313,6 +428,16 @@ function createStockModel(name, quantity, objUrl, textureUrl, normalMapUrl) {
 }
 
 function createStandee(name, frontImageUrl, backImageUrl) {
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for standee`);
+  }
+  if (typeof frontImageUrl !== "string" || frontImageUrl === "") {
+    throw new Error(`Front image URL is not a string or is empty for ${name}`);
+  }
+  if (typeof backImageUrl !== "string" || backImageUrl === "") {
+    throw new Error(`Back image URL is not a string or is empty for ${name}`);
+  }
+  
   const guid = md5(name).slice(0, 6);
   const scale = 0.750000238;
   return {
@@ -339,6 +464,13 @@ function createStandee(name, frontImageUrl, backImageUrl) {
   
 }
 function createBag(name, contents){
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for bag`);
+  }
+  if (contents === null || contents === undefined || !Array.isArray(contents)) {
+    throw new Error(`Contents is null, undefined, or not an array for ${name}`);
+  }
+  
   return {
     Name: "Bag",
     Transform: {
@@ -358,16 +490,53 @@ function createBag(name, contents){
 }
 
 function createStandeeFromNameImageUrlAndQuantities(name, standeesNameQuantityUrls) {
-  console.log(`Creating standees for ${name} with ${standeesNameQuantityUrls.length} different types`);
+  console.log(`Creating standees for ${name}`);
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for standee collection`);
+  }
+  if (standeesNameQuantityUrls === null || standeesNameQuantityUrls === undefined || !Array.isArray(standeesNameQuantityUrls) || standeesNameQuantityUrls.length === 0) {
+    throw new Error(`Standees name quantity URLs is null, undefined, not an array, or empty for ${name}`);
+  }
   
   const standees = standeesNameQuantityUrls.flatMap(({name, frontImageUrl, backImageUrl, quantity}) => {
+    if (typeof name !== "string" || name === "") {
+      throw new Error(`Standee name is not a string or is empty in collection ${name}`);
+    }
+    if (typeof frontImageUrl !== "string" || frontImageUrl === "") {
+      throw new Error(`Front image URL is not a string or is empty for standee ${name}`);
+    }
+    if (typeof backImageUrl !== "string" || backImageUrl === "") {
+      throw new Error(`Back image URL is not a string or is empty for standee ${name}`);
+    }
+    if (typeof quantity !== "number" || quantity <= 0) {
+      throw new Error(`Quantity is not a number or not positive for standee ${name}`);
+    }
     return Array(quantity).fill().map(() => createStandee(name, frontImageUrl, backImageUrl));
   });
+  if (standees.length === 1) {
+    return standees[0];
+  }
   return createBag(name, standees)
 }
 
 function createTokenWithDefinedShape(name, quantity, frontImageUrl, backImageUrl, shape) {
-  console.log(`Creating a token with a defined shape ${name} frontImageUrl: ${frontImageUrl} shape: ${shape}`);
+  console.log(`Creating a token for ${name}`);
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for token`);
+  }
+  if (quantity === null || quantity === undefined || typeof quantity !== "number" || quantity <= 0) {
+    throw new Error(`Quantity is null, undefined, not a number, or not positive for ${name}`);
+  }
+  if (typeof frontImageUrl !== "string" || frontImageUrl === "") {
+    throw new Error(`Front image URL is not a string or is empty for ${name}`);
+  }
+  if (typeof backImageUrl !== "string" || backImageUrl === "") {
+    throw new Error(`Back image URL is not a string or is empty for ${name}`);
+  }
+  if (typeof shape !== "string" || shape === "" || !["Box", "Hex", "Circle", "Rounded"].includes(shape)) {
+    throw new Error(`Shape is not a string, is empty, or not a valid shape for ${name}. Valid shapes are: Box, Hex, Circle, Rounded`);
+  }
+  
   const guid = md5(name).slice(0, 6);
   const shapeIndex = {
     "Box": 0,
@@ -409,23 +578,77 @@ function createTokenWithDefinedShape(name, quantity, frontImageUrl, backImageUrl
 }
 
 function createFlatTokenWithTransparencyBasedShape(componentName, nameQuantityUrls) {
-  const tokens = nameQuantityUrls.flatMap(({name, frontImageUrl, backImageUrl, quantity}) => {
-    console.log(chalk.green(`Creating ${quantity} tokens for ${name} with frontImageUrl: ${frontImageUrl}`));
-    return Array(quantity).fill().map(() => createTokenWithTransparencyBasedShape(name,  frontImageUrl, 0.2, false, true));
+  if (typeof componentName !== "string" || componentName === "") {
+    throw new Error(`Component name is not a string or is empty for flat token collection`);
+  }
+  if (nameQuantityUrls === null || nameQuantityUrls === undefined || !Array.isArray(nameQuantityUrls) || nameQuantityUrls.length === 0) {
+    throw new Error(`Name quantity URLs is null, undefined, not an array, or empty for ${componentName}`);
+  }
+  
+  const tokens = nameQuantityUrls.flatMap(({name, frontImageUrl, quantity}) => {
+    if (typeof name !== "string" || name === "") {
+      throw new Error(`Token name is not a string or is empty in collection ${componentName}`);
+    }
+    if (typeof frontImageUrl !== "string" || frontImageUrl === "") {
+      throw new Error(`Front image URL is not a string or is empty for token ${name}`);
+    }
+    if (typeof quantity !== "number" || quantity <= 0) {
+      throw new Error(`Quantity is not a number or not positive for token ${name}`);
+    }
+    console.log(`Creating ${quantity} tokens for ${name}`);
+    return Array(quantity).fill().map(() => createTokenWithTransparencyBasedShape(name, frontImageUrl, 0.2, false, true));
   });
+  if (tokens.length === 1) {
+    return tokens[0];
+  }
   return createBag(componentName, tokens) 
 }
 function createThickTokenWithTransparencyBasedShape(componentName, nameQuantityUrls) {
-  const tokens = nameQuantityUrls.flatMap(({name, frontImageUrl, backImageUrl, quantity}) => {
-    console.log(chalk.green(`Creating ${quantity} tokens for ${name} with frontImageUrl: ${frontImageUrl}`));
-    return Array(quantity).fill().map(() => createTokenWithTransparencyBasedShape(name,  frontImageUrl, 1.0, true, false));
+  if (typeof componentName !== "string" || componentName === "") {
+    throw new Error(`Component name is not a string or is empty for thick token collection`);
+  }
+  if (nameQuantityUrls === null || nameQuantityUrls === undefined || !Array.isArray(nameQuantityUrls) || nameQuantityUrls.length === 0) {
+    throw new Error(`Name quantity URLs is null, undefined, not an array, or empty for ${componentName}`);
+  }
+  
+  const tokens = nameQuantityUrls.flatMap(({name, frontImageUrl, quantity}) => {
+    if (typeof name !== "string" || name === "") {
+      throw new Error(`Token name is not a string or is empty in collection ${componentName}`);
+    }
+    if (typeof frontImageUrl !== "string" || frontImageUrl === "") {
+      throw new Error(`Front image URL is not a string or is empty for token ${name}`);
+    }
+    if (typeof quantity !== "number" || quantity <= 0) {
+      throw new Error(`Quantity is not a number or not positive for token ${name}`);
+    }
+    console.log(`Creating ${quantity} tokens for ${name}`);
+    return Array(quantity).fill().map(() => createTokenWithTransparencyBasedShape(name, frontImageUrl, 1.0, true, false));
   });
+  if (tokens.length === 1) {
+    return tokens[0];
+  }
   return createBag(componentName, tokens) 
 }
 function createStockCylinder(name, quantity, colorHex, widthMillimeters, heightMillimeters) {
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for cylinder`);
+  }
+  if (quantity === null || quantity === undefined || typeof quantity !== "number" || quantity <= 0) {
+    throw new Error(`Quantity is null, undefined, not a number, or not positive for ${name}`);
+  }
+  if (typeof colorHex !== "string" || !colorHex.startsWith("#") || colorHex.length !== 7) {
+    throw new Error(`Color hex is not a string, doesn't start with #, or is not 7 characters long for ${name}`);
+  }
+  if (typeof widthMillimeters !== "number" || widthMillimeters <= 0) {
+    throw new Error(`Width in millimeters is not a number or not positive for ${name}`);
+  }
+  if (typeof heightMillimeters !== "number" || heightMillimeters <= 0) {
+    throw new Error(`Height in millimeters is not a number or not positive for ${name}`);
+  }
+  
   const guid = md5(name).slice(0, 6);
   const longName = `${name} ${colorHex} ${widthMillimeters}x${heightMillimeters}mm`;
-  console.log(`Creating a cylinder ${longName}`);
+  console.log(`Creating a cylinder for ${name}`);
   const colors = getColorValueRGB(colorHex);
   const colorDiffuse = {
     r: colors[0],
@@ -462,7 +685,23 @@ function createStockCylinder(name, quantity, colorHex, widthMillimeters, heightM
 }
 
 function createTokenWithTransparencyBasedShape(name, frontImageUrl, thickness = 0.2, isStandUp = false, isStackable = true) {
-  console.log(`Creating a token with a transparency based shape ${name} frontImageUrl: ${frontImageUrl} thickness: ${thickness} isStandUp: ${isStandUp} isStackable: ${isStackable}`);
+  // console.log(`Creating a token with a transparency based shape ${name}`);
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for transparency token`);
+  }
+  if (typeof frontImageUrl !== "string" || frontImageUrl === "") {
+    throw new Error(`Front image URL is not a string or is empty for ${name}`);
+  }
+  if (typeof thickness !== "number" || thickness <= 0) {
+    throw new Error(`Thickness is not a number or not positive for ${name}`);
+  }
+  if (typeof isStandUp !== "boolean") {
+    throw new Error(`isStandUp is not a boolean for ${name}`);
+  }
+  if (typeof isStackable !== "boolean") {
+    throw new Error(`isStackable is not a boolean for ${name}`);
+  }
+  
   const guid = md5(name).slice(0, 6);
   const scale = 0.25
   return {
@@ -481,7 +720,6 @@ function createTokenWithTransparencyBasedShape(name, frontImageUrl, thickness = 
     Hands: false,
     CustomImage: {
       ImageURL: frontImageUrl,
-      ImageSecondaryURL: backImageUrl,
       ImageScalar: 1.0,
       WidthScale: 0.0,
       CustomToken: {
@@ -496,7 +734,20 @@ function createTokenWithTransparencyBasedShape(name, frontImageUrl, thickness = 
 }
 
 function createCustomDie(name, quantity, imageUrl, numberSides) {
-  console.log(`Creating a custom die ${name} imageUrl: ${imageUrl} numberSides: ${numberSides}`);
+  console.log(`Creating a custom die ${name}`);
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for custom die`);
+  }
+  if (quantity === null || quantity === undefined || typeof quantity !== "number" || quantity <= 0) {
+    throw new Error(`Quantity is null, undefined, not a number, or not positive for ${name}`);
+  }
+  if (typeof imageUrl !== "string" || imageUrl === "") {
+    throw new Error(`Image URL is not a string or is empty for ${name}`);
+  }
+  if (numberSides === null || numberSides === undefined || typeof numberSides !== "number" || ![4, 6, 8, 10, 12, 20].includes(numberSides)) {
+    throw new Error(`Number of sides is null, undefined, not a number, or not a valid die type for ${name}. Valid types are: 4, 6, 8, 10, 12, 20`);
+  }
+  
   const guid = md5(name).slice(0, 6);
   const dieTypes = {
     4: 0,  // d4 - tetrahedron
@@ -541,6 +792,10 @@ function createCustomDie(name, quantity, imageUrl, numberSides) {
 }
 
 function getDieRotationValues(numberSides) {
+  if (numberSides === null || numberSides === undefined || typeof numberSides !== "number") {
+    throw new Error(`Number of sides is null, undefined, or not a number for die rotation values`);
+  }
+  
   switch (numberSides) {
     case 4: // d4 - tetrahedron
       return [
@@ -632,7 +887,14 @@ function getDieRotationValues(numberSides) {
 }
 
 function createCustomPDF(name, pdfUrl) {
-  console.log(`Creating a custom PDF ${name} pdfUrl: ${pdfUrl}`);
+  console.log(`Creating a custom PDF ${name}`);
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for PDF`);
+  }
+  if (typeof pdfUrl !== "string" || pdfUrl === "") {
+    throw new Error(`PDF URL is not a string or is empty for ${name}`);
+  }
+  
   const guid = md5(name).slice(0, 6);
   return {
     GUID: guid,
@@ -661,6 +923,10 @@ function createCustomPDF(name, pdfUrl) {
 
 function createDomino(name) {
   console.log(`Creating a domino ${name}`);
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for domino`);
+  }
+  
   const guid = md5(name).slice(0, 6);
   const model = {
     GUID: guid,
@@ -679,10 +945,23 @@ function createDomino(name) {
     Hands: true,
     ...STANDARD_ATTRIBUTES
   };
-  return createBagForObject(model, quantity, `${name} Bag`, WHITE_COLOR_DIFFUSE);
+  return createBagForObject(model, 1, `${name} Bag`, WHITE_COLOR_DIFFUSE);
 }
 
 function createBaggie(name, quantity, colorDiffuse = null, isInfinite = false) {
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for baggie`);
+  }
+  if (quantity === null || quantity === undefined || typeof quantity !== "number" || quantity <= 0) {
+    throw new Error(`Quantity is null, undefined, not a number, or not positive for ${name}`);
+  }
+  if (colorDiffuse !== null && typeof colorDiffuse !== "object") {
+    throw new Error(`Color diffuse is not null and not an object for ${name}`);
+  }
+  if (typeof isInfinite !== "boolean") {
+    throw new Error(`isInfinite is not a boolean for ${name}`);
+  }
+  
   const guid = md5(name).slice(0, 6);
   const bag = {
     GUID: guid,
@@ -711,6 +990,19 @@ function createBaggie(name, quantity, colorDiffuse = null, isInfinite = false) {
   return createBagForObject(bag, quantity, `${name} Bag`, colorDiffuse);
 }
 function createPokerChip(name, quantity, chipValue, colorDiffuse = null) {
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for poker chip`);
+  }
+  if (quantity === null || quantity === undefined || typeof quantity !== "number" || quantity <= 0) {
+    throw new Error(`Quantity is null, undefined, not a number, or not positive for ${name}`);
+  }
+  if (chipValue === null || chipValue === undefined || typeof chipValue !== "number" || chipValue < 0) {
+    throw new Error(`Chip value is null, undefined, not a number, or negative for ${name}`);
+  }
+  if (colorDiffuse !== null && typeof colorDiffuse !== "object") {
+    throw new Error(`Color diffuse is not null and not an object for ${name}`);
+  }
+  
   const guid = md5(name).slice(0, 6);
   const diffuse = colorDiffuse || {
     r: 1.0,

@@ -1,6 +1,6 @@
 const { channels } = require("../shared/constants");
 const { Menu, BrowserWindow  } = require('electron')
-const { createTemplativeProject, openFolder } = require("./dialogMaker")
+const { createTemplativeProjectWithDialog, openFolder } = require("./dialogMaker")
 const { giveLogout, goToAccount, reportBug, giveFeedback, viewDocumentation } = require("./accountManager")
 const templates = [
     {
@@ -8,7 +8,7 @@ const templates = [
         submenu: [
             { 
                 label: "Create Project",
-                click: createTemplativeProject
+                click: createTemplativeProjectWithDialog
             },
             { 
                 label: "Open Project",

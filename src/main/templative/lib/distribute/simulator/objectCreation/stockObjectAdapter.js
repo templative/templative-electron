@@ -116,15 +116,20 @@ function stockCubeAdapter(componentInstructions, stockPartInfo) {
   const stockType = componentTypeTokens[1];
   
   // Accept both Cube* and Block* formats
-  if (!stockType.startsWith("Cube") && !stockType.startsWith("Block")) {
+  if (!stockType.includes("Cube") && !stockType.includes("Block")) {
     console.log(chalk.red(`!!! Invalid cube/block type: ${stockType}. Expected Cube* or Block*`));
     return null;
   }
 
   // Extract size in mm, handling both formats
   let sizeStr;
-  if (stockType.startsWith("Cube")) {
+  if (stockType.includes("Cube")) {
     sizeStr = stockType.slice(4).split("mm")[0];
+    // Ensure we have a valid number for Cube types
+    if (!sizeStr || isNaN(parseFloat(sizeStr))) {
+      console.log(chalk.yellow(`Warning: Could not extract valid size from ${stockType}, using default 16mm`));
+      sizeStr = '16'; // Default if no valid size is found
+    }
   } else { // Block format
     // Extract from Block format (e.g., Block1x2Red)
     const blockMatch = stockType.match(/Block(\d+)x(\d+)/);
@@ -136,7 +141,13 @@ function stockCubeAdapter(componentInstructions, stockPartInfo) {
     }
   }
   
+  // Ensure we have a valid number before conversion
   const sizeInches = parseFloat(sizeStr) / 25.4; // Convert mm to inches
+  
+  if (isNaN(sizeInches)) {
+    console.log(chalk.red(`!!! Invalid size value for ${componentInstructions.type}: ${sizeStr}`));
+    return null;
+  }
 
   // Check for block dimensions in the type or DisplayName
   let sizeInchesXYZ = [sizeInches, sizeInches, sizeInches]; // Default cube dimensions
@@ -412,13 +423,18 @@ function cylinderAdapter(componentInstructions, stockPartInfo) {
           heightMillimeters = parseInt(dimensionMatch[2]);
         } else {
           // Only one dimension specified (e.g., "20mm")
-          height = parseInt(dimensionMatch[1]);
+          width = parseInt(dimensionMatch[0]);
           // For items like "Wink, 20mm, Black" we'll use a default height
           // or try to infer from the component type
         }
         dimensions = true;
         break;
       }
+    }
+    
+    // If this is a Wink component and no height was found, set height to 3mm
+    if (stockPartInfo.DisplayName.includes("Wink") && (!dimensions || heightMillimeters === 10)) {
+      heightMillimeters = 3;
     }
     
     if (!dimensions) {

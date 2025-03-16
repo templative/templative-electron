@@ -80,6 +80,7 @@ async function createGameCrafterImage(directory) {
 }
 
 async function createProjectInDirectory(directory) {
+  fs.mkdirSync(directory, { recursive: true });
   createStudio(directory);
   createRulesFile(directory);
   createGame(directory);

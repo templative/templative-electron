@@ -3,6 +3,7 @@ const { COMPONENT_INFO } = require('../../shared/componentInfo');
 const { STOCK_COMPONENT_INFO } = require('../../shared/stockComponentInfo');
 const { createComponentByType } = require('./lib/create/componentCreator');
 const { produceGame, getPreviewsPath, producePiecePreview } = require('./lib/produce/gameProducer');
+const { createProjectInDirectory } = require('./lib/create/projectCreator');
 const { convertToTabletopPlayground } = require('./lib/distribute/playground/playground');
 const { createPdfForPrinting } = require('./lib/distribute/printout/printout');
 const { convertToTabletopSimulator } = require('./lib/distribute/simulator/simulator');
@@ -57,14 +58,12 @@ const previewPiece = withLogCapture(async (event, data) => {
   }
 });
 
-const createTemplativeProject = withLogCapture(async (event, data) => {
-  try {
-    const { directoryPath } = data;
-    
+const createTemplativeProject = withLogCapture(async (directoryPath) => {
+  try {    
     await createProjectInDirectory(directoryPath);
-    return { success: true, message: 'Piece preview generated' };
+    return { success: true, message: 'Project created' };
   } catch (error) {
-    console.error('Error previewing piece:', error);
+    console.error('Error creating project:', error);
     return { success: false, error: error.message };
   }
 });

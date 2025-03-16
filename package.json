@@ -36,7 +36,10 @@
         "test-clipping": "node ./scripts/test-clipping.js",
         "download-templates": "node ./scripts/downloadTemplates.js",
         "standardize-filenames": "node ./scripts/standardizeGuidelineFilenames.js",
-        "match-guidelines-to-components": "node ./scripts/matchGuidelinesToComponents.js"
+        "match-guidelines-to-components": "node ./scripts/matchGuidelinesToComponents.js",
+        "test-giant-project": "node ./scripts/test-giant-project.js",
+        "fix-svg-scaling": "node ./scripts/fix-svg-scaling.js",
+        "fix-all-svgs": "node ./scripts/fix-svg-scaling.js --glob \"src/main/templative/lib/create/guidelines/*.svg\""
     },
     "dependencies": {
         "@anthropic-ai/sdk": "^0.18.0",

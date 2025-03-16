@@ -70,31 +70,20 @@ async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstruc
       return null;
     }
 
-    const componentGuid = createHash('md5').update(componentInstructions.uniqueName).digest('hex').slice(0, 6);
-
     const relativeWidth = componentInfo.DimensionsInches[0] / 2.5;
     const relativeHeight = relativeWidth;
     const thickness = 1.0;
 
     const imageUrls = new SimulatorTilesetUrls(imgurUrl, backImageImgurUrl);
 
-    const [columns, rows] = findBoxiestShape(componentCountTotal);
-    const boxPositionIndexX = componentIndex % columns;
-    const boxPositionIndexZ = Math.floor(componentIndex / columns);
-    const height = 1.5;
-
-    const simulatorComponentPlacement = new SimulatorComponentPlacement(boxPositionIndexX, height, boxPositionIndexZ, columns, rows);
     const dimensions = new SimulatorDimensions(relativeWidth, relativeHeight, thickness);
     const layout = new SimulatorTilesetLayout(totalCount, cardColumnCount, cardRowCount);
 
     const cardQuantities = componentInstructions.frontInstructions.map(instruction => instruction.quantity * componentInstructions.quantity);
-    console.log(cardQuantities)
     return {
-      guid: componentGuid,
       deckPrefix: componentIndex + 1,
-      name: componentInstructions.uniqueName,
+      name: componentInstructions.uniqueName || componentInstructions.name,
       imageUrls: imageUrls,
-      simulatorComponentPlacement: simulatorComponentPlacement,
       dimensions: dimensions,
       layout: layout,
       cardQuantities: cardQuantities,
@@ -141,16 +130,16 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
       return null;
     }
     
-    const frontImgurUrl = await uploadToS3(frontImage);
-    if (!frontImgurUrl) {
-      console.log(chalk.red(`!!! Failed to upload front image for ${componentInstructions.uniqueName}`));
-      return null;
+    var frontUrl = await uploadToS3(frontImage);
+    if (!frontUrl) {
+      console.log(chalk.red(`!!! Failed to upload front image for ${componentInstructions.uniqueName}, falling back to local file.`));
+      frontUrl = componentInstructions.frontInstructions[0].filepath;
     }
     
-    const backImgurUrl = await uploadToS3(backImage);
-    if (!backImgurUrl) {
-      console.log(chalk.red(`!!! Failed to upload back image for ${componentInstructions.uniqueName}`));
-      return null;
+    var backUrl = await uploadToS3(backImage);
+    if (!backUrl) {
+      console.log(chalk.red(`!!! Failed to upload back image for ${componentInstructions.uniqueName}, falling back to local file.`));
+      backUrl = componentInstructions.backInstructions.filepath;
     }
     
     const componentGuid = createHash('md5').update(componentInstructions.uniqueName).digest('hex').slice(0, 6);
@@ -159,7 +148,7 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
     const relativeHeight = componentInfo.DimensionsInches[1] / 3.5;
     const thickness = 1.0;
     
-    const imageUrls = new SimulatorTilesetUrls(frontImgurUrl, backImgurUrl);
+    const imageUrls = new SimulatorTilesetUrls(frontUrl, backUrl);
     
     const [columns, rows] = findBoxiestShape(componentCountTotal);
     const boxPositionIndexX = componentIndex % columns;
@@ -172,7 +161,7 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
     return {
       guid: componentGuid,
       cardPrefix: componentIndex + 1,
-      name: componentInstructions.uniqueName,
+      name: componentInstructions.uniqueName || componentInstructions.name,
       imageUrls: imageUrls,
       simulatorComponentPlacement: simulatorComponentPlacement,
       dimensions: dimensions,
@@ -198,7 +187,7 @@ async function customDieAdapter(tabletopSimulatorImageDirectoryPath, componentIn
       console.log(chalk.yellow("!!! Multi colored custom dice are not currently supported. Using white."));
     }
     const colorHex = getColorValueHex(color);
-    const imageUrl = await createD6CompositeImage(componentInstructions["name"], colorHex, componentInstructions["dieFaceFilepaths"]);
+    const imageUrl = await createD6CompositeImage(componentInstructions["name"], colorHex, componentInstructions["dieFaceFilepaths"], tabletopSimulatorImageDirectoryPath);
 
     return {
       name: componentInstructions["name"],
@@ -227,7 +216,12 @@ async function clipFrontImageAndUploadToS3(componentInstructions, instruction, c
   const clippedPngFilepath = await exportSvgToImage(clippedSvgFilepath, componentInfo.DimensionsPixels, clippedPngFileName, outputDirectory)
   const clippedImage = await safeLoadImage(clippedPngFilepath, componentInfo.DimensionsPixels)
   
-  return await uploadToS3(clippedImage)
+  const clippedImgurUrl = await uploadToS3(clippedImage)
+  if (!clippedImgurUrl) {
+    console.log(chalk.red(`!!! Failed to upload clipped image for ${componentInstructions.uniqueName}, falling back to local file.`));
+    return clippedPngFilepath;
+  }
+  return clippedImgurUrl;
 }
 
 

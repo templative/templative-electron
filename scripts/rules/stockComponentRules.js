@@ -234,6 +234,14 @@ module.exports = [
         }
     },
     {
+        description: "Components with 'w/' in their name are disabled",
+        condition: (component) => component.DisplayName && component.DisplayName.includes("w/"),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            return ["IsDisabled"];
+        }
+    },
+    {
         description: "Disable components without a PreviewUri",
         condition: (component) => !component.PreviewUri,
         setValue: (component) => {
@@ -613,15 +621,6 @@ module.exports = [
         setValue: (component) => {
             component.SimulatorCreationTask = "Domino"; 
             component.PlaygroundCreationTask = "Domino";
-            return ["SimulatorCreationTask", "PlaygroundCreationTask"];
-        }
-    },
-    {
-        description: "Components tagged 'baggies' or 'packaging' should have Playground/SimulatorCreationTask of Baggie",
-        condition: (component) => component.Tags && (component.Tags.includes("baggies") || component.Tags.includes("packaging")),
-        setValue: (component) => {
-            component.SimulatorCreationTask = "Baggie"; 
-            component.PlaygroundCreationTask = "Baggie";
             return ["SimulatorCreationTask", "PlaygroundCreationTask"];
         }
     },

@@ -172,16 +172,16 @@ async function createCompositeImage(componentName, componentType, quantity, fron
     await tiledImage.save(frontImageFilepath);
 
     // Upload the image to S3
-    const imgurUrl = await uploadToS3(tiledImage);
-    if (!imgurUrl) {
-      console.log(chalk.red(`!!! Failed to upload composite image for ${componentName}`));
-      return [null, 0, 0, 0];
+    var url = await uploadToS3(tiledImage);
+    if (!url) {
+      console.log(chalk.red(`!!! Failed to upload composite image for ${componentName}, falling back to local file.`));
+      url = frontImageFilepath
     }
 
     // Calculate total cards including duplicates
     const totalCount = frontInstructions.reduce((sum, instruction) => sum + instruction.quantity * quantity, 0);
     
-    return [imgurUrl, totalCount, columns, rows];
+    return [url, totalCount, columns, rows];
   } catch (error) {
     console.log(chalk.red(`!!! Error creating composite image for ${componentName}: ${error}`));
     return [null, 0, 0, 0];
@@ -219,8 +219,8 @@ async function placeAndUploadBackImage(name, componentType, backInstructions, ta
     // Upload the image to S3
     const url = await uploadToS3(image);
     if (!url) {
-      console.log(chalk.red(`!!! Failed to upload back image for ${name}`));
-      return null;
+      console.log(chalk.red(`!!! Failed to upload back image for ${name}, falling back to local file.`));
+      return backInstructions.filepath;
     }
     
     return url;
@@ -247,7 +247,7 @@ async function copyBackImageToImages(componentName, backInstructions, tabletopSi
   }
 }
 
-async function createD6CompositeImage(name, color, filepaths) {
+async function createD6CompositeImage(name, color, filepaths, tabletopSimulatorImageDirectoryPath) {
   try {
     // Create a square image 2048x2048px with the specified color
     const imageSize = 2048;
@@ -310,10 +310,12 @@ async function createD6CompositeImage(name, color, filepaths) {
         }
       }
     }
+    const localImageFilepath = path.join(tabletopSimulatorImageDirectoryPath, `${name}-d6.png`);
+    await baseImage.save(localImageFilepath);
     const imageUrl = await uploadToS3(baseImage);
     if (!imageUrl) {
-      console.log(chalk.red(`!!! Failed to upload die image for ${name}`));
-      return null;
+      console.log(chalk.red(`!!! Failed to upload die image for ${name}, falling back to local file.`));
+      return localImageFilepath;
     }
     return imageUrl;
   } catch (error) {

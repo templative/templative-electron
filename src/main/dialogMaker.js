@@ -49,6 +49,11 @@ const createTemplativeProjectWithDialog = async(event, args) => {
         return
     }
     var chosenDirectory = result.filePaths[0]
+    if (chosenDirectory === undefined) {
+        console.warn("Chose nothing!")
+        return
+    }
+    console.log(chosenDirectory)
     var creationResult = await createTemplativeProject(chosenDirectory)
 
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, chosenDirectory)

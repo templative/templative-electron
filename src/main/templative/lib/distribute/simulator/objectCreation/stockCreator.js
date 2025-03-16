@@ -56,6 +56,10 @@ async function createStock(componentInstructions, stockPartInfo) {
   };
 
   const createFunction = functions[simulatorCreationTask];
+  if (!createFunction) {
+    console.log(chalk.red(`!!! Unsupported SimulatorCreationTask: ${simulatorCreationTask}`));
+    return null;
+  }
   return createFunction(...Object.values(params));
 }
 
