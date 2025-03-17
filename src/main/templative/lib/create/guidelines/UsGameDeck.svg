@@ -211,7 +211,7 @@
       }
 
       .cls-19 {
-        opacity: .5;
+        opacity: 1;
       }
     </style>
         </defs>

@@ -106,7 +106,7 @@
       }
 
       .cls-12 {
-        opacity: .5;
+        opacity: 1;
       }
 
       .cls-12, .cls-30, .cls-32 {
