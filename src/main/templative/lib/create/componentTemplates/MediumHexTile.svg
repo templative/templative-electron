@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
 <svg
      version="1.1"
      x="0px"
@@ -10,67 +8,54 @@
      viewBox="0 0 825 750"
      enable-background="new 0 0 198 180"
      xml:space="preserve"
-     id="svg495"
+     id="svg181"
      sodipodi:docname="MediumHexTile.svg"
-     inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+     inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
      xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
      xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
      xmlns="http://www.w3.org/2000/svg"
-     xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-     id="namedview15"
-     pagecolor="#ffffff"
-     bordercolor="#999999"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="false"
-     inkscape:zoom="1.3693333"
-     inkscape:cx="277.14216"
-     inkscape:cy="375.73028"
-     inkscape:window-width="2560"
-     inkscape:window-height="1351"
-     inkscape:window-x="1491"
-     inkscape:window-y="585"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg495" /><defs
-     id="defs497">
-	
-	
-	
-		
-		
-		
-		
-<defs
-     id="defs2580">
-			
-			
-			
-		</defs>
-		
-		
-		
-		
-		</defs>
+     xmlns:svg="http://www.w3.org/2000/svg"><defs
+         id="defs181">
 
 
 
-<polygon
-     fill="#929497"
-     points="198,180 198,0 0,0 0,180 "
-     id="polygon2"
-     transform="matrix(4.1666667,0,0,4.1666667,-3.3000001e-6,-3e-6)" /><path
-     fill="white"
-     stroke="#eb242b"
-     d="M 212.69791,688.10833 41.435415,391.47916 c -5.25417,-9.10417 -5.25417,-23.85833 0,-32.95833 L 212.69791,61.895824 c 5.25417,-9.10416 18.03334,-16.47916 28.54167,-16.47916 h 342.52083 c 10.50417,0 23.2875,7.37916 28.54167,16.47916 l 171.2625,296.625006 c 5.25417,9.10416 5.25417,23.85833 0,32.95833 l -171.2625,296.625 c -5.25417,9.10834 -18.03333,16.47917 -28.54167,16.47917 h -342.525 c -10.50416,0.004 -23.28333,-7.37083 -28.5375,-16.475 z"
-     id="path4"
-     style="fill:none;stroke-width:4.16667" /><polygon
-     fill="none"
-     stroke="#2da6de"
-     stroke-dasharray="1.3324"
-     points="58.527,19.899 139.473,19.899 179.946,90 139.473,160.101 58.527,160.101 18.054,90 "
-     id="polygon6"
-     transform="matrix(4.1666667,0,0,4.1666667,0.90210556,-3e-6)"
-     style="fill:none" /></svg>
+
+	
+	
+	
+
+</defs><sodipodi:namedview
+         id="namedview181"
+         pagecolor="#505050"
+         bordercolor="#eeeeee"
+         borderopacity="1"
+         inkscape:showpageshadow="0"
+         inkscape:pageopacity="0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:zoom="0.84852814"
+         inkscape:cx="583.36309"
+         inkscape:cy="351.19637"
+         inkscape:window-width="1872"
+         inkscape:window-height="1027"
+         inkscape:window-x="62"
+         inkscape:window-y="25"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="svg181" /><polygon
+         fill="#929497"
+         points="198,0 0,0 0,180 198,180 "
+         id="polygon1"
+         transform="matrix(4.1666667,0,0,4.1666667,-3.3000001e-6,-3e-6)"
+         style="fill:#191a1a;fill-opacity:1" /><path
+         fill="#ffffff"
+         stroke="#eb242b"
+         d="M 212.7,688.10834 41.437497,391.47917 c -5.254167,-9.10417 -5.254167,-23.85834 0,-32.95834 L 212.7,61.895831 c 5.25417,-9.104167 18.03333,-16.479167 28.54167,-16.479167 H 583.7625 c 10.50417,0 23.2875,7.379167 28.54167,16.479167 l 171.2625,296.624999 c 5.25417,9.10417 5.25417,23.85834 0,32.95834 l -171.2625,296.625 c -5.25417,9.10833 -18.03334,16.47917 -28.54167,16.47917 h -342.525 c -10.50417,0.004 -23.28333,-7.37084 -28.5375,-16.475 z"
+         id="clipping"
+         style="stroke-width:4.16667;fill:#727272;fill-opacity:1;stroke:none" /><polygon
+         fill="none"
+         stroke="#2da6de"
+         stroke-dasharray="1.3324"
+         points="18.054,90 58.527,19.899 139.473,19.899 179.946,90 139.473,160.101 58.527,160.101 "
+         id="polygon2"
+         transform="matrix(4.1666667,0,0,4.1666667,-3.3000001e-6,-3e-6)"
+         style="stroke:none;fill:#bcbcbc;fill-opacity:1" /></svg>

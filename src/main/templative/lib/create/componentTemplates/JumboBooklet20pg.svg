@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+     viewBox="0 0 2475 3075"
+     width="2475"
+     height="3075"
+     version="1.1"
+     id="svg122"
+     sodipodi:docname="JumboBooklet20pg.svg"
+     inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <defs
+         id="defs122">
+        <defs
+             id="defs4">
+            <style
+                 id="style1">
+      .cls-1 {
+        letter-spacing: .012em;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11 {
+        fill: none;
+      }
+
+      .cls-12 {
+        letter-spacing: .049em;
+      }
+
+      .cls-13 {
+        letter-spacing: .049em;
+      }
+
+      .cls-14 {
+        letter-spacing: .05em;
+      }
+
+      .cls-3 {
+        stroke-dasharray: 0 0 0 0 4.982 4.972 .01 0;
+      }
+
+      .cls-3, .cls-4, .cls-6, .cls-9, .cls-10 {
+        stroke: #2ba6de;
+      }
+
+      .cls-15 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-16 {
+        letter-spacing: .016em;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 0 0 .01 0;
+      }
+
+      .cls-17 {
+        letter-spacing: 0em;
+      }
+
+      .cls-18 {
+        letter-spacing: -.017em;
+      }
+
+      .cls-19, .cls-20 {
+        fill: #fff;
+      }
+
+      .cls-21 {
+        fill: #d0d2d3;
+      }
+
+      .cls-22 {
+        fill: #4c4849;
+      }
+
+      .cls-23 {
+        letter-spacing: -.034em;
+      }
+
+      .cls-24 {
+        letter-spacing: 0em;
+      }
+
+      .cls-25 {
+        letter-spacing: .333em;
+      }
+
+      .cls-26 {
+        letter-spacing: -.018em;
+      }
+
+      .cls-27 {
+        letter-spacing: .334em;
+      }
+
+      .cls-28 {
+        letter-spacing: .333em;
+      }
+
+      .cls-29 {
+        letter-spacing: .333em;
+      }
+
+      .cls-30 {
+        letter-spacing: .333em;
+      }
+
+      .cls-5 {
+        stroke: #ed2224;
+      }
+
+      .cls-5, .cls-7, .cls-8 {
+        stroke-width: 2px;
+      }
+
+      .cls-31 {
+        letter-spacing: 0em;
+      }
+
+      .cls-32 {
+        letter-spacing: .241em;
+      }
+
+      .cls-33 {
+        letter-spacing: -.024em;
+      }
+
+      .cls-34 {
+        letter-spacing: -.025em;
+      }
+
+      .cls-35 {
+        letter-spacing: .26em;
+      }
+
+      .cls-36 {
+        letter-spacing: .259em;
+      }
+
+      .cls-6 {
+        stroke-dasharray: 0 0 .01 0;
+      }
+
+      .cls-37 {
+        letter-spacing: .259em;
+      }
+
+      .cls-38 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-39 {
+        clip-path: url(#clippath-3);
+      }
+
+      .cls-40 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-41 {
+        letter-spacing: -.042em;
+      }
+
+      .cls-42 {
+        letter-spacing: -.074em;
+      }
+
+      .cls-43 {
+        letter-spacing: -.074em;
+      }
+
+      .cls-44 {
+        letter-spacing: .027em;
+      }
+
+      .cls-45 {
+        letter-spacing: .049em;
+      }
+
+      .cls-46 {
+        font-size: 8.33px;
+      }
+
+      .cls-46, .cls-47, .cls-48, .cls-49, .cls-50, .cls-51 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .cls-46, .cls-52, .cls-53, .cls-54, .cls-55 {
+        fill: #231f20;
+      }
+
+      .cls-56 {
+        letter-spacing: 0em;
+      }
+
+      .cls-57 {
+        letter-spacing: -.016em;
+      }
+
+      .cls-58 {
+        letter-spacing: -.016em;
+      }
+
+      .cls-7 {
+        stroke: #2ea6de;
+        stroke-dasharray: 0 0 5.04 5.04;
+      }
+
+      .cls-8 {
+        stroke: #939596;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-59 {
+        letter-spacing: 0em;
+      }
+
+      .cls-60 {
+        letter-spacing: -.004em;
+      }
+
+      .cls-47, .cls-54 {
+        font-size: 6.985px;
+      }
+
+      .cls-47, .cls-51 {
+        fill: #ec1c24;
+      }
+
+      .cls-52 {
+        font-size: 7.526px;
+      }
+
+      .cls-52, .cls-55 {
+        font-family: Arial-Black, 'Arial Black';
+        font-weight: 800;
+      }
+
+      .cls-9 {
+        stroke-dasharray: 0 0 0 0 5.014 5.004 .01 0;
+      }
+
+      .cls-61 {
+        letter-spacing: .241em;
+      }
+
+      .cls-62 {
+        fill: #b7d333;
+      }
+
+      .cls-62, .cls-20, .cls-63, .cls-64 {
+        fill-rule: evenodd;
+      }
+
+      .cls-53, .cls-54 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-53, .cls-51 {
+        font-size: 7px;
+      }
+
+      .cls-65 {
+        letter-spacing: 0em;
+      }
+
+      .cls-55 {
+        font-size: 10.345px;
+      }
+
+      .cls-11 {
+        stroke: #ec1e28;
+      }
+
+      .cls-48 {
+        fill: #929496;
+      }
+
+      .cls-48, .cls-49, .cls-50 {
+        font-size: 7.302px;
+      }
+
+      .cls-49 {
+        fill: #2ea6de;
+      }
+
+      .cls-50 {
+        fill: #eb232b;
+      }
+
+      .cls-64 {
+        opacity: 1;
+      }
+
+      .cls-66 {
+        letter-spacing: -.017em;
+      }
+
+      .cls-67 {
+        letter-spacing: .277em;
+      }
+
+      .cls-68 {
+        letter-spacing: .277em;
+      }
+
+      .cls-69 {
+        letter-spacing: -.017em;
+      }
+
+      .cls-70 {
+        letter-spacing: .277em;
+      }
+
+      .cls-71 {
+        letter-spacing: .278em;
+      }
+
+      .cls-72 {
+        letter-spacing: .278em;
+      }
+
+      .cls-73 {
+        letter-spacing: .278em;
+      }
+
+      .cls-74 {
+        letter-spacing: .278em;
+      }
+
+      .cls-75 {
+        letter-spacing: .278em;
+      }
+
+      .cls-76 {
+        letter-spacing: .278em;
+      }
+
+      .cls-77 {
+        letter-spacing: .278em;
+      }
+
+      .cls-78 {
+        letter-spacing: .278em;
+      }
+    </style>
+            <clipPath
+                 id="clippath">
+                <rect
+                     class="cls-2"
+                     x="494.54901"
+                     y="658.86298"
+                     width="11.337"
+                     height="11.227"
+                     id="rect1" />
+            </clipPath>
+            <clipPath
+                 id="clippath-1">
+                <rect
+                     class="cls-2"
+                     x="486.61401"
+                     y="131.129"
+                     width="14.02"
+                     height="12.998"
+                     id="rect2" />
+            </clipPath>
+            <clipPath
+                 id="clippath-2">
+                <rect
+                     class="cls-2"
+                     x="497.048"
+                     y="93.345001"
+                     width="14.02"
+                     height="12.998"
+                     id="rect3" />
+            </clipPath>
+            <clipPath
+                 id="clippath-3">
+                <rect
+                     class="cls-2"
+                     x="497.048"
+                     y="28.110001"
+                     width="14.02"
+                     height="12.998"
+                     id="rect4" />
+            </clipPath>
+        </defs>
+    </defs>
+    <sodipodi:namedview
+         id="namedview122"
+         pagecolor="#505050"
+         bordercolor="#eeeeee"
+         borderopacity="1"
+         inkscape:showpageshadow="0"
+         inkscape:pageopacity="0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:zoom="0.58536585"
+         inkscape:cx="2118.3333"
+         inkscape:cy="1535.7917"
+         inkscape:window-width="1872"
+         inkscape:window-height="1027"
+         inkscape:window-x="62"
+         inkscape:window-y="25"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="svg122" />
+    <path
+         id="Bleed_Zone"
+         style="stroke-width:4.16667;fill:#1a1a1a;fill-opacity:1"
+         class="cls-64"
+         d="M 0 0 L 0 3075 L 2475 3075 L 2475 0 L 0 0 z " />
+    <rect
+         id="clipping"
+         data-name="Trim Line"
+         class="cls-11"
+         x="37.499989"
+         y="37.499989"
+         width="2400"
+         height="3000"
+         style="stroke-width:4.16667;stroke:none;fill:#808080;fill-opacity:1" />
+    <rect
+         id="rect122"
+         data-name="Trim Line"
+         class="cls-11"
+         x="75.083321"
+         y="73.875343"
+         width="2324.8333"
+         height="2927.2493"
+         style="fill:#cecece;fill-opacity:1;stroke:none;stroke-width:4.05087" />
+</svg>

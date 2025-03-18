@@ -1,59 +1,247 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
 <svg
-     version="1.1"
-     id="Layer_1"
-     x="0px"
-     y="0px"
+     id="Template"
+     viewBox="0 0 750 1125"
      width="750"
      height="1125"
-     viewBox="0 0 750 1125"
-     xml:space="preserve"
+     version="1.1"
      sodipodi:docname="MintTinDeck.svg"
      inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
      xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
      xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
      xmlns="http://www.w3.org/2000/svg"
-     xmlns:svg="http://www.w3.org/2000/svg"><defs
-     id="defs499" /><sodipodi:namedview
-     id="namedview497"
-     pagecolor="#ffffff"
-     bordercolor="#999999"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="false"
-     inkscape:zoom="0.23773148"
-     inkscape:cx="412.2298"
-     inkscape:cy="677.23467"
-     inkscape:window-width="1392"
-     inkscape:window-height="997"
-     inkscape:window-x="62"
-     inkscape:window-y="25"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="Layer_1" />
-<style
-     type="text/css"
-     id="style2">
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <defs
+         id="defs180">
+        <defs
+             id="defs1">
+            <style
+                 id="style1">
+      .cls-1 {
+        letter-spacing: -.018em;
+      }
 
-</style>
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        fill: none;
+      }
 
+      .cls-10 {
+        font-size: 4.648px;
+      }
 
-<path
-     class="st23"
-     d="M 0,0 V 1125 H 750 V 0 Z"
-     id="path4"
-     style="fill:#ffffff;fill-opacity:1;stroke-width:4.16666"
-     sodipodi:nodetypes="ccccc" /><path
-     style="fill:#909090;fill-opacity:1;stroke:none;stroke-width:21.4627;stroke-linejoin:round;paint-order:markers stroke fill"
-     d="m 176.66991,1072.6401 c -28.6388,-6.3976 -47.65653,-16.7885 -68.08521,-37.2005 -15.520984,-15.5084 -25.628,-31.818 -33.518156,-54.08794 L 69.406038,965.37487 V 562.60956 159.84421 l 5.9387,-16.80552 C 83.228372,120.72934 93.298306,104.61691 109.26123,88.770487 124.67823,73.466 139.878,63.916619 161.24368,56.112078 l 15.42623,-5.634959 H 374.37197 572.074 l 16.35969,5.789043 c 44.05206,15.588263 76.74122,50.832328 89.2419,96.216798 3.55688,12.9134 3.7655,35.63795 3.7655,410.1266 0,376.69691 -0.19031,397.13703 -3.82075,410.12656 -10.88668,38.95318 -37.11712,71.56288 -70.84331,88.07238 -31.30581,15.3247 -25.06531,14.9277 -232.40506,14.7814 -146.65904,-0.1034 -187.70258,-0.716 -197.70206,-2.9498 z"
-     id="clipping" /><path
-     class="st0"
-     d="m 203.75686,1039.3016 c -54.1666,0 -97.9166,-44.58332 -97.9166,-99.16666 V 185.96827 c 0,-54.58334 43.75,-99.16667 97.9166,-99.16667 h 343.33339 c 54.16663,0 97.91663,44.58333 97.91663,99.16667 v 753.75001 c 0,54.58335 -43.75,99.16662 -97.91663,99.16662 H 203.75686 Z"
-     id="path8"
-     style="fill:#1d1d1d;fill-opacity:1;stroke:none;stroke-width:4.16666" />
+      .cls-10, .cls-11 {
+        fill: #000100;
+        font-family: Arial-Black, 'Arial Black';
+        font-weight: 800;
+      }
 
+      .cls-12 {
+        letter-spacing: .025em;
+      }
+
+      .cls-13 {
+        font-size: 3.501px;
+      }
+
+      .cls-14 {
+        letter-spacing: -.043em;
+      }
+
+      .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23 {
+        fill: #231f20;
+      }
+
+      .cls-15, .cls-16, .cls-17, .cls-19, .cls-20, .cls-22, .cls-23 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-24 {
+        letter-spacing: .05em;
+      }
+
+      .cls-25 {
+        letter-spacing: -.005em;
+      }
+
+      .cls-26 {
+        letter-spacing: .016em;
+      }
+
+      .cls-27 {
+        letter-spacing: -.017em;
+      }
+
+      .cls-16 {
+        letter-spacing: -.018em;
+      }
+
+      .cls-28, .cls-29 {
+        fill: #f7a31a;
+      }
+
+      .cls-30 {
+        fill: #eb1d27;
+      }
+
+      .cls-31, .cls-32 {
+        fill: #fff;
+      }
+
+      .cls-33 {
+        fill: #cecfd0;
+      }
+
+      .cls-34, .cls-35 {
+        fill: #4e494b;
+      }
+
+      .cls-3 {
+        stroke: #26aae1;
+        stroke-dasharray: 0 0 3.924 3.924;
+      }
+
+      .cls-3, .cls-5, .cls-6 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-36 {
+        fill: #929497;
+        font-size: 3.944px;
+      }
+
+      .cls-36, .cls-18, .cls-21, .cls-37, .cls-29, .cls-38, .cls-39 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .cls-17 {
+        letter-spacing: 0em;
+      }
+
+      .cls-18 {
+        font-size: 3.895px;
+      }
+
+      .cls-19 {
+        letter-spacing: -.074em;
+      }
+
+      .cls-20 {
+        letter-spacing: -.037em;
+      }
+
+      .cls-11 {
+        font-size: 4.706px;
+      }
+
+      .cls-21 {
+        font-size: 3.355px;
+      }
+
+      .cls-37 {
+        fill: #ea1c24;
+      }
+
+      .cls-40 {
+        letter-spacing: -.026em;
+      }
+
+      .cls-41 {
+        letter-spacing: -.055em;
+      }
+
+      .cls-22 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 0 0 4.941 4.941;
+      }
+
+      .cls-4, .cls-7 {
+        stroke: #2da6de;
+      }
+
+      .cls-5, .cls-9 {
+        stroke: red;
+      }
+
+      .cls-6 {
+        stroke: #f7a31a;
+      }
+
+      .cls-29, .cls-38, .cls-39 {
+        font-size: 3.943px;
+      }
+
+      .cls-38 {
+        fill: #2ba6de;
+      }
+
+      .cls-39 {
+        fill: #ec1e28;
+      }
+
+      .cls-35, .cls-42, .cls-32, .cls-43 {
+        fill-rule: evenodd;
+      }
+
+      .cls-42 {
+        fill: #b5d133;
+      }
+
+      .cls-8 {
+        stroke: #929497;
+      }
+
+      .cls-44 {
+        letter-spacing: .013em;
+      }
+
+      .cls-45 {
+        letter-spacing: 0em;
+      }
+
+      .cls-23 {
+        letter-spacing: -.018em;
+      }
+    </style>
+        </defs>
+    </defs>
+    <sodipodi:namedview
+         id="namedview180"
+         pagecolor="#505050"
+         bordercolor="#eeeeee"
+         borderopacity="1"
+         inkscape:showpageshadow="0"
+         inkscape:pageopacity="0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:zoom="0.56568543"
+         inkscape:cx="345.59844"
+         inkscape:cy="436.63844"
+         inkscape:window-width="1872"
+         inkscape:window-height="1027"
+         inkscape:window-x="62"
+         inkscape:window-y="25"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="Template" />
+    <path
+         id="Bleed_Zone"
+         data-name="Bleed Zone"
+         d="M -3e-6,-4.5e-6 V 1125 H 750 V -4.5e-6 Z"
+         style="fill:#2e2e2e;fill-opacity:1;stroke-width:4.16667"
+         sodipodi:nodetypes="ccccc" />
+    <path
+         id="clipping"
+         data-name="Trim Line"
+         class="cls-5"
+         d="m 203.3,1076.2792 c -74.65417,0 -135.387502,-61.3917 -135.387502,-136.8542 V 185.57083 C 67.912498,110.11666 128.64583,48.720829 203.3,48.720829 h 343.40417 c 74.65,0 135.38333,61.391671 135.38333,136.850001 v 753.85834 c 0,75.45833 -60.73333,136.85413 -135.38333,136.85413 H 203.3 Z"
+         style="stroke-width:4.16667;fill:#727272;fill-opacity:1;stroke:none" />
+    <path
+         id="Safe_Zone"
+         data-name="Safe Zone"
+         class="cls-3"
+         d="m 240.8,1038.7833 c -74.65417,0 -135.3875,-61.39163 -135.3875,-136.85413 V 223.07083 c 0,-75.45417 60.73333,-136.85 135.3875,-136.85 h 268.40417 c 74.65,0 135.38333,61.39167 135.38333,136.85 v 678.85834 c 0,75.45833 -60.73333,136.85413 -135.38333,136.85413 z"
+         style="stroke-width:4.16667;stroke:none;fill:#c0c0c0;fill-opacity:1" />
 </svg>

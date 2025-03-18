@@ -1,1 +1,80 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns2="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="template" x="0px" y="0px" width="1575" height="3075" viewBox="0 0 1575 3075" enable-background="new 0 0 270 414" xml:space="preserve" ns1:docname="blank.svg" ns2:version="1.2.2 (b0a8486, 2022-12-01)"> <ns0:defs id="defs728" /> <ns1:namedview id="namedview726" pagecolor="#ffffff" bordercolor="#999999" borderopacity="1" showgrid="false" /></ns0:svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+     version="1.1"
+     id="YOUR_ARTWORK_HERE"
+     x="0px"
+     y="0px"
+     width="1575"
+     height="3075"
+     viewBox="0 0 1575 3075"
+     enable-background="new 0 0 378 738"
+     xml:space="preserve"
+     sodipodi:docname="HalfMat.svg"
+     inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg"><defs
+         id="defs184">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</defs><sodipodi:namedview
+         id="namedview184"
+         pagecolor="#505050"
+         bordercolor="#eeeeee"
+         borderopacity="1"
+         inkscape:showpageshadow="0"
+         inkscape:pageopacity="0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:zoom="0.29268293"
+         inkscape:cx="775.58333"
+         inkscape:cy="1827.9167"
+         inkscape:window-width="1872"
+         inkscape:window-height="1027"
+         inkscape:window-x="62"
+         inkscape:window-y="25"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="YOUR_ARTWORK_HERE" /><rect
+         fill="#929497"
+         width="1575"
+         height="3075"
+         id="rect1"
+         x="0"
+         y="0"
+         style="stroke-width:4.16667;fill:#1a1b1b;fill-opacity:1" /><rect
+         x="37.5"
+         y="37.5"
+         fill="#ffffff"
+         stroke="#ec1e28"
+         width="1500"
+         height="3000"
+         id="clipping"
+         style="stroke-width:4.16667;stroke:none;fill:#7c7c7c;fill-opacity:1" /><rect
+         x="75"
+         y="75"
+         fill="none"
+         stroke="#2ba6de"
+         stroke-dasharray="4.19542"
+         width="1425"
+         height="2925"
+         id="rect4"
+         style="stroke-width:4.16667;fill:#d7d7d7;fill-opacity:1;stroke:none" /></svg>

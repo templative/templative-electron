@@ -1,1 +1,254 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns2="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="template" x="0px" y="0px" width="975" height="1125" viewBox="0 0 975 1125" enable-background="new 0 0 270 414" xml:space="preserve" ns1:docname="blank.svg" ns2:version="1.2.2 (b0a8486, 2022-12-01)"> <ns0:defs id="defs728" /> <ns1:namedview id="namedview726" pagecolor="#ffffff" bordercolor="#999999" borderopacity="1" showgrid="false" /></ns0:svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+     id="Template"
+     viewBox="0 0 975 1125"
+     width="975"
+     height="1125"
+     version="1.1"
+     sodipodi:docname="DividerDeck.svg"
+     inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <defs
+         id="defs2">
+        <sodipodi:namedview
+             id="namedview179"
+             pagecolor="#505050"
+             bordercolor="#eeeeee"
+             borderopacity="1"
+             inkscape:showpageshadow="0"
+             inkscape:pageopacity="0"
+             inkscape:pagecheckerboard="0"
+             inkscape:deskcolor="#d1d1d1"
+             inkscape:zoom="0.8"
+             inkscape:cx="347.5"
+             inkscape:cy="558.75"
+             inkscape:window-width="1872"
+             inkscape:window-height="1027"
+             inkscape:window-x="62"
+             inkscape:window-y="25"
+             inkscape:window-maximized="1"
+             inkscape:current-layer="Template" />
+        <defs
+             id="defs1">
+            <style
+                 id="style1">
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill: none;
+      }
+
+      .cls-8 {
+        font-size: 4.648px;
+      }
+
+      .cls-8, .cls-9 {
+        fill: #000100;
+        font-family: Arial-Black, 'Arial Black';
+        font-weight: 800;
+      }
+
+      .cls-10 {
+        letter-spacing: .025em;
+      }
+
+      .cls-11 {
+        letter-spacing: .05em;
+      }
+
+      .cls-12 {
+        letter-spacing: -.043em;
+      }
+
+      .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21 {
+        fill: #231f20;
+      }
+
+      .cls-13, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-22 {
+        letter-spacing: .05em;
+      }
+
+      .cls-23 {
+        letter-spacing: .016em;
+      }
+
+      .cls-24 {
+        letter-spacing: -.017em;
+      }
+
+      .cls-25, .cls-26 {
+        fill: #f7a31a;
+      }
+
+      .cls-27 {
+        fill: #eb1d27;
+      }
+
+      .cls-28, .cls-29 {
+        fill: #fff;
+      }
+
+      .cls-30 {
+        fill: #cecfd0;
+      }
+
+      .cls-31, .cls-32 {
+        fill: #4e494b;
+      }
+
+      .cls-33 {
+        font-size: 4.196px;
+      }
+
+      .cls-34 {
+        fill: #929497;
+        font-size: 3.944px;
+      }
+
+      .cls-34, .cls-14, .cls-35, .cls-26, .cls-36, .cls-37, .cls-20 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .cls-14 {
+        font-size: 3.895px;
+      }
+
+      .cls-15 {
+        letter-spacing: -.037em;
+      }
+
+      .cls-16 {
+        letter-spacing: -.018em;
+      }
+
+      .cls-17 {
+        letter-spacing: -.074em;
+      }
+
+      .cls-9 {
+        font-size: 4.706px;
+      }
+
+      .cls-18 {
+        letter-spacing: -.074em;
+      }
+
+      .cls-38 {
+        letter-spacing: -.037em;
+      }
+
+      .cls-35 {
+        fill: #ea1c24;
+      }
+
+      .cls-39 {
+        letter-spacing: -.026em;
+      }
+
+      .cls-40 {
+        letter-spacing: -.055em;
+      }
+
+      .cls-2 {
+        stroke-dasharray: 0 0 4.463 4.463;
+      }
+
+      .cls-2, .cls-3, .cls-5 {
+        stroke: #2da6de;
+      }
+
+      .cls-19 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        stroke-dasharray: 0 5;
+      }
+
+      .cls-4 {
+        stroke: #f7a31a;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-41 {
+        letter-spacing: -.005em;
+      }
+
+      .cls-26, .cls-36, .cls-37 {
+        font-size: 3.943px;
+      }
+
+      .cls-36 {
+        fill: #2ba6de;
+      }
+
+      .cls-37 {
+        fill: #ec1e28;
+      }
+
+      .cls-32, .cls-42, .cls-29, .cls-43 {
+        fill-rule: evenodd;
+      }
+
+      .cls-42 {
+        fill: #b5d133;
+      }
+
+      .cls-6 {
+        stroke: #929497;
+      }
+
+      .cls-7 {
+        stroke: red;
+      }
+
+      .cls-44 {
+        letter-spacing: .013em;
+      }
+
+      .cls-20 {
+        font-size: 4.156px;
+      }
+
+      .cls-21 {
+        opacity: 1;
+      }
+    </style>
+        </defs>
+    </defs>
+    <path
+         id="Bleed_Zone"
+         data-name="Bleed Zone"
+         class="cls-21"
+         d="M 0,0 V 1125 H 975.00001 V 0 Z"
+         style="stroke-width:4.16667"
+         sodipodi:nodetypes="ccccc" />
+    <rect
+         id="clipping"
+         data-name="Trim Line"
+         class="cls-7"
+         x="37.5"
+         y="37.5"
+         width="900"
+         height="1050"
+         rx="37.5"
+         ry="37.5"
+         style="fill:#717171;fill-opacity:1;stroke:none;stroke-width:4.16667" />
+    <rect
+         id="Safe_Zone"
+         data-name="Safe Zone"
+         class="cls-3"
+         x="75"
+         y="75"
+         width="825"
+         height="975"
+         rx="37.5"
+         ry="37.5"
+         style="stroke-width:4.16667;fill:#afafaf;fill-opacity:1;stroke:none;stroke-opacity:1" />
+</svg>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+     id="Layer_1"
+     data-name="Layer 1"
+     viewBox="0 0 750 1125"
+     width="750"
+     height="1125"
+     version="1.1"
+     sodipodi:docname="TallMintTinTop.svg"
+     inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <defs
+         id="defs180">
+        <defs
+             id="defs1">
+            <style
+                 id="style1">
+      .cls-1 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-2 {
+        letter-spacing: .05em;
+      }
+
+      .cls-3 {
+        letter-spacing: .05em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10 {
+        fill: none;
+      }
+
+      .cls-5, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21 {
+        stroke-width: 0px;
+      }
+
+      .cls-22 {
+        letter-spacing: .05em;
+      }
+
+      .cls-23 {
+        letter-spacing: 0em;
+      }
+
+      .cls-24 {
+        letter-spacing: 0em;
+      }
+
+      .cls-25 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-26 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-27 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-28, .cls-29, .cls-30, .cls-31 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .cls-28, .cls-17 {
+        fill: #e9262d;
+      }
+
+      .cls-6 {
+        stroke: #26aae1;
+        stroke-dasharray: 0 0 3.49 3.49;
+        stroke-width: 1.13px;
+      }
+
+      .cls-6, .cls-9 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-7 {
+        stroke: #919395;
+      }
+
+      .cls-7, .cls-8 {
+        stroke-width: .75px;
+      }
+
+      .cls-11, .cls-13, .cls-18, .cls-19 {
+        fill-rule: evenodd;
+      }
+
+      .cls-11, .cls-16 {
+        fill: #4d494a;
+      }
+
+      .cls-29 {
+        fill: #2fa4dd;
+      }
+
+      .cls-12 {
+        opacity: 1;
+      }
+
+      .cls-12, .cls-30, .cls-32 {
+        fill: #231f20;
+      }
+
+      .cls-13 {
+        fill: #b7d334;
+      }
+
+      .cls-33 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-8 {
+        stroke: #2fa4dd;
+        stroke-dasharray: 0 5;
+      }
+
+      .cls-34 {
+        font-size: 4.5px;
+      }
+
+      .cls-35 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-36 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-37 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-38 {
+        letter-spacing: 0em;
+      }
+
+      .cls-39 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-14, .cls-19 {
+        fill: #010101;
+      }
+
+      .cls-40 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-41 {
+        letter-spacing: .03em;
+      }
+
+      .cls-42 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-15 {
+        fill: #eb242b;
+      }
+
+      .cls-43 {
+        letter-spacing: .02em;
+      }
+
+      .cls-44 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-30 {
+        font-size: 5.25px;
+      }
+
+      .cls-45 {
+        fill: #221f1f;
+      }
+
+      .cls-45, .cls-32 {
+        font-family: Arial-Black, 'Arial Black';
+        font-weight: 800;
+      }
+
+      .cls-46 {
+        letter-spacing: 0em;
+      }
+
+      .cls-31 {
+        fill: #919395;
+      }
+
+      .cls-47 {
+        letter-spacing: 0em;
+      }
+
+      .cls-48 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-18, .cls-20 {
+        fill: #fff;
+      }
+
+      .cls-9 {
+        stroke: #ec2024;
+      }
+
+      .cls-49 {
+        letter-spacing: .01em;
+      }
+
+      .cls-10 {
+        stroke: #ed1c24;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: .99px;
+      }
+
+      .cls-50 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-21 {
+        fill: #e7e7e7;
+      }
+
+      .cls-32 {
+        font-size: 3.7px;
+      }
+    </style>
+        </defs>
+    </defs>
+    <sodipodi:namedview
+         id="namedview180"
+         pagecolor="#505050"
+         bordercolor="#eeeeee"
+         borderopacity="1"
+         inkscape:showpageshadow="0"
+         inkscape:pageopacity="0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:zoom="0.4"
+         inkscape:cx="617.5"
+         inkscape:cy="570"
+         inkscape:window-width="1872"
+         inkscape:window-height="1027"
+         inkscape:window-x="62"
+         inkscape:window-y="25"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="Layer_1" />
+    <path
+         class="cls-12"
+         d="M 750,1125 H -3e-6 V -4.5000001e-6 H 750 Z"
+         id="path1"
+         sodipodi:nodetypes="ccccc" />
+    <path
+         class="cls-10"
+         d="M 180.95833,1088.0833 C 115.375,1088.0833 61.999997,1034.6667 61.999997,969 V 156 C 61.999997,90.33333 115.375,36.916662 180.95833,36.916662 H 569.04167 C 634.625,36.916662 688,90.33333 688,156 V 969.04167 C 688,1034.7083 634.625,1088.125 569.04167,1088.125 H 180.95833 Z"
+         id="clipping"
+         style="fill:#696969;fill-opacity:1;stroke:none" />
+    <path
+         class="cls-6"
+         d="M 180.95833,1050.5833 C 136.04166,1050.5833 99.499998,1014 99.499998,969 V 156 c 0,-44.95834 36.541662,-81.583337 81.458332,-81.583337 H 569.04167 C 613.95834,74.416663 650.5,111 650.5,156 V 969.04167 C 650.5,1014 613.95834,1050.625 569.04167,1050.625 H 180.95833 Z"
+         id="path3"
+         style="stroke:none;fill:#b3b3b3;fill-opacity:1" />
+</svg>

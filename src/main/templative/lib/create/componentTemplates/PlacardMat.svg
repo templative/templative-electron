@@ -1,1 +1,65 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns2="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="template" x="0px" y="0px" width="1275" height="975" viewBox="0 0 1275 975" enable-background="new 0 0 270 414" xml:space="preserve" ns1:docname="blank.svg" ns2:version="1.2.2 (b0a8486, 2022-12-01)"> <ns0:defs id="defs728" /> <ns1:namedview id="namedview726" pagecolor="#ffffff" bordercolor="#999999" borderopacity="1" showgrid="false" /></ns0:svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+     version="1.1"
+     x="0px"
+     y="0px"
+     width="1275"
+     height="975"
+     viewBox="0 0 1275 975"
+     enable-background="new 0 0 306 234"
+     xml:space="preserve"
+     id="svg180"
+     sodipodi:docname="PlacardMat.svg"
+     inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg"><defs
+         id="defs180">
+
+
+
+	
+	
+	
+</defs><sodipodi:namedview
+         id="namedview180"
+         pagecolor="#505050"
+         bordercolor="#eeeeee"
+         borderopacity="1"
+         inkscape:showpageshadow="0"
+         inkscape:pageopacity="0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:zoom="0.42039216"
+         inkscape:cx="586.35728"
+         inkscape:cy="337.77985"
+         inkscape:window-width="1872"
+         inkscape:window-height="1027"
+         inkscape:window-x="62"
+         inkscape:window-y="25"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="svg180" /><polygon
+         fill="#929497"
+         points="0,-0.001 0,233.999 306.001,233.999 306.001,-0.001 "
+         id="polygon1"
+         transform="matrix(4.1666531,0,0,4.1666531,-7.62655e-6,0.00575395)"
+         style="fill:#171818;fill-opacity:1" /><rect
+         x="37.49987"
+         y="37.50563"
+         fill="#ffffff"
+         stroke="#ed1c24"
+         stroke-miterlimit="10"
+         width="1199.9961"
+         height="899.99707"
+         id="clipping"
+         style="stroke-width:4.16665;stroke:none;fill:#777777;fill-opacity:1" /><rect
+         x="74.999748"
+         y="75.001343"
+         fill="none"
+         stroke="#2da6de"
+         stroke-dasharray="5.99998"
+         width="1124.9963"
+         height="824.99731"
+         id="rect2"
+         style="stroke-width:4.16665;fill:#bebebe;fill-opacity:1;stroke:none" /></svg>

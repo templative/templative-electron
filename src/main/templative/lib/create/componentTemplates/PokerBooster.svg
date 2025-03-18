@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
 <svg
      version="1.1"
      x="0px"
@@ -10,14 +8,19 @@
      viewBox="0 0 975 1350"
      enable-background="new 0 0 234 324"
      xml:space="preserve"
-     id="svg424"
+     id="svg122"
      sodipodi:docname="PokerBooster.svg"
-     inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+     inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
      xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
      xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:svg="http://www.w3.org/2000/svg"><defs
-     id="defs428">
+         id="defs122">
+
+
+
+	
+
 	
 	
 	
@@ -29,123 +32,204 @@
 	
 	
 	
-</defs><sodipodi:namedview
-     id="namedview426"
-     pagecolor="#ffffff"
-     bordercolor="#999999"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="false"
-     inkscape:zoom="0.56033848"
-     inkscape:cx="543.42154"
-     inkscape:cy="861.08668"
-     inkscape:window-width="2560"
-     inkscape:window-height="1351"
-     inkscape:window-x="1491"
-     inkscape:window-y="585"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg424" />
 
-<g
-     id="g1921"
-     transform="scale(4.1666667)"><path
+		
+		
+		
+		
+		
+		
+	
+		
+	
+		
+		
+		
+		
+	
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+			
+			
+				
+			
+			
+				
+			
+			
+				
+			
+			
+				
+		</defs><sodipodi:namedview
+         id="namedview122"
+         pagecolor="#505050"
+         bordercolor="#eeeeee"
+         borderopacity="1"
+         inkscape:showpageshadow="0"
+         inkscape:pageopacity="0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:zoom="0.47140452"
+         inkscape:cx="703.21769"
+         inkscape:cy="697.91439"
+         inkscape:window-width="1872"
+         inkscape:window-height="1027"
+         inkscape:window-x="62"
+         inkscape:window-y="25"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="svg122" /><path
          fill="#939598"
-         d="M 0,0 V 324.001 H 234 V 0 Z M 223.201,315.003 H 10.801 V 9 h 212.4 z"
-         id="path255"
-         style="fill:none" /><rect
-         x="10.801"
-         y="9"
+         d="M -1.9621748e-6,-0.00210544 V 1350.0021 H 975 V -0.00210544 Z"
+         id="path114"
+         style="stroke-width:4.16667;fill:#19191a;fill-opacity:1;stroke:none"
+         sodipodi:nodetypes="ccccc" /><rect
+         x="45.004162"
+         y="37.497894"
          fill="none"
          stroke="#ed1f24"
          stroke-miterlimit="10"
-         width="212.39999"
-         height="306.00299"
-         id="rect257"
-         style="fill:none" /><g
-         id="g277"
-         style="fill:none">
-		<g
-     id="g275"
-     style="fill:none">
-			<polyline
-     fill="none"
-     stroke="#00aeef"
-     stroke-miterlimit="10"
-     points="22.801,306.003 19.801,306.003 19.801,303.003    "
-     id="polyline259"
-     style="fill:none" />
-			
-				<line
-     fill="none"
-     stroke="#00aeef"
-     stroke-miterlimit="10"
-     stroke-dasharray="6.0001, 6.0001"
-     x1="19.801001"
-     y1="297.00299"
-     x2="19.801001"
-     y2="24"
-     id="line261"
-     style="fill:none" />
-			<polyline
-     fill="none"
-     stroke="#00aeef"
-     stroke-miterlimit="10"
-     points="19.801,21 19.801,18 22.801,18    "
-     id="polyline263"
-     style="fill:none" />
-			
-				<line
-     fill="none"
-     stroke="#00aeef"
-     stroke-miterlimit="10"
-     stroke-dasharray="6.0774, 6.0774"
-     x1="28.878"
-     y1="18"
-     x2="208.162"
-     y2="18"
-     id="line265"
-     style="fill:none" />
-			<polyline
-     fill="none"
-     stroke="#00aeef"
-     stroke-miterlimit="10"
-     points="211.201,18 214.201,18 214.201,21    "
-     id="polyline267"
-     style="fill:none" />
-			
-				<line
-     fill="none"
-     stroke="#00aeef"
-     stroke-miterlimit="10"
-     stroke-dasharray="6.0001, 6.0001"
-     x1="214.201"
-     y1="27"
-     x2="214.201"
-     y2="300.00299"
-     id="line269"
-     style="fill:none" />
-			<polyline
-     fill="none"
-     stroke="#00aeef"
-     stroke-miterlimit="10"
-     points="214.201,303.003 214.201,306.003 211.201,306.003    "
-     id="polyline271"
-     style="fill:none" />
-			
-				<line
-     fill="none"
-     stroke="#00aeef"
-     stroke-miterlimit="10"
-     stroke-dasharray="6.0774, 6.0774"
-     x1="205.12399"
-     y1="306.00299"
-     x2="25.839001"
-     y2="306.00299"
-     id="line273"
-     style="fill:none" />
-		</g>
-	</g></g>
-</svg>
+         width="885"
+         height="1275.0125"
+         id="clipping"
+         style="stroke-width:4.16667;fill:#737373;fill-opacity:1;stroke:none" /><rect
+         x="82.127266"
+         y="74.090675"
+         fill="none"
+         stroke="#ed1f24"
+         stroke-miterlimit="10"
+         width="810.75378"
+         height="1201.8269"
+         id="rect122"
+         style="fill:#d5d5d5;fill-opacity:1;stroke:none;stroke-width:3.87192" /></svg>

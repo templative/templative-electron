@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+     id="Layer_1"
+     data-name="Layer 1"
+     version="1.1"
+     viewBox="0 0 2475 3075"
+     width="2475"
+     height="3075"
+     sodipodi:docname="LargeDualLayerBoardBack.svg"
+     inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <defs
+         id="defs126">
+        <defs
+             id="defs1">
+            <style
+                 id="style1">
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        font-family: Arial-Black, 'Arial Black';
+        font-weight: 800;
+      }
+
+      .cls-1, .cls-4 {
+        font-size: 8.3px;
+      }
+
+      .cls-1, .cls-5, .cls-6 {
+        fill: #231f20;
+      }
+
+      .cls-2 {
+        fill: #ec1c24;
+        font-size: 11.2px;
+      }
+
+      .cls-7 {
+        font-size: 7.8px;
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        stroke-dasharray: 0 0 5 5;
+      }
+
+      .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15 {
+        fill: none;
+      }
+
+      .cls-8, .cls-9, .cls-13, .cls-15 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-8, .cls-13, .cls-15 {
+        stroke: #26aae1;
+      }
+
+      .cls-3 {
+        font-size: 8.2px;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #221f1f;
+      }
+
+      .cls-9 {
+        stroke: #ec1c24;
+      }
+
+      .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-6 {
+        stroke-width: 0px;
+      }
+
+      .cls-16, .cls-21 {
+        fill: #4c4849;
+      }
+
+      .cls-26 {
+        fill: #2ca1da;
+      }
+
+      .cls-26, .cls-27, .cls-5, .cls-28, .cls-29, .cls-30, .cls-31 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .cls-26, .cls-28, .cls-29, .cls-30 {
+        font-size: 7.1px;
+      }
+
+      .cls-10 {
+        stroke: #2ba3dc;
+        stroke-dasharray: 0 5;
+      }
+
+      .cls-17 {
+        fill: #e7242c;
+      }
+
+      .cls-27 {
+        fill: #ed2224;
+        font-size: 7px;
+      }
+
+      .cls-18 {
+        fill: #e6e5e5;
+      }
+
+      .cls-11 {
+        stroke: #f9a61c;
+      }
+
+      .cls-19, .cls-25 {
+        fill: #000;
+      }
+
+      .cls-20, .cls-28 {
+        fill: #f9a61c;
+      }
+
+      .cls-12 {
+        stroke: #9b9b9b;
+      }
+
+      .cls-13 {
+        stroke-dasharray: 0 0 5 5;
+      }
+
+      .cls-21, .cls-22, .cls-23, .cls-25 {
+        fill-rule: evenodd;
+      }
+
+      .cls-14 {
+        stroke: red;
+      }
+
+      .cls-32 {
+        font-size: 11.2px;
+      }
+
+      .cls-22 {
+        fill: #b6d233;
+      }
+
+      .cls-33 {
+        opacity: 1;
+      }
+
+      .cls-29 {
+        fill: #6f6f6f;
+      }
+
+      .cls-23, .cls-24 {
+        fill: #fff;
+      }
+
+      .cls-30 {
+        fill: red;
+      }
+
+      .cls-31 {
+        fill: #10ab4b;
+        font-size: 10px;
+      }
+    </style>
+        </defs>
+    </defs>
+    <sodipodi:namedview
+         id="namedview126"
+         pagecolor="#505050"
+         bordercolor="#eeeeee"
+         borderopacity="1"
+         inkscape:showpageshadow="0"
+         inkscape:pageopacity="0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:zoom="3.3113293"
+         inkscape:cx="1211.598"
+         inkscape:cy="3042.5847"
+         inkscape:window-width="1872"
+         inkscape:window-height="1027"
+         inkscape:window-x="62"
+         inkscape:window-y="25"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="Layer_1" />
+    <path
+         class="cls-6"
+         d="M 2475,-1.23e-5 H -9.9000001e-6 V 3075 H 2475 Z"
+         id="path4"
+         sodipodi:nodetypes="ccccc" />
+    <path
+         class="cls-9"
+         d="m 2437.5,3000 c 0,20.8333 -16.6667,37.5 -37.5,37.5 H 74.999991 C 54.166657,3037.5 37.49999,3020.8333 37.49999,3000 V 37.916655 c 0,0 0,0 0,0 H 2399.5833 c 20.8334,0 37.5,17.083333 37.5,37.5 V 3000.4167 Z"
+         id="clipping"
+         style="stroke-width:4.16667;fill:#7d7d7d;fill-opacity:1;stroke:none" />
+    <path
+         class="cls-6"
+         d="M 2400.3987,74.894381 H 74.60128 V 3000.1056 H 2400.3987 Z"
+         id="path126"
+         sodipodi:nodetypes="ccccc"
+         style="fill:#bdbdbd;fill-opacity:1" />
+</svg>

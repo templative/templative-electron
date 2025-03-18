@@ -1,1 +1,64 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns2="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="template" x="0px" y="0px" width="825" height="825" viewBox="0 0 825 825" enable-background="new 0 0 270 414" xml:space="preserve" ns1:docname="blank.svg" ns2:version="1.2.2 (b0a8486, 2022-12-01)"> <ns0:defs id="defs728" /> <ns1:namedview id="namedview726" pagecolor="#ffffff" bordercolor="#999999" borderopacity="1" showgrid="false" /></ns0:svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+     version="1.1"
+     x="0px"
+     y="0px"
+     width="825"
+     height="825"
+     viewBox="0 0 825 825"
+     enable-background="new 0 0 198 198"
+     xml:space="preserve"
+     id="svg182"
+     sodipodi:docname="MediumSquareTile.svg"
+     inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg"><defs
+         id="defs182">
+
+
+
+
+	
+	
+	
+
+</defs><sodipodi:namedview
+         id="namedview182"
+         pagecolor="#505050"
+         bordercolor="#eeeeee"
+         borderopacity="1"
+         inkscape:showpageshadow="0"
+         inkscape:pageopacity="0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:zoom="0.54545455"
+         inkscape:cx="446.41667"
+         inkscape:cy="473"
+         inkscape:window-width="1872"
+         inkscape:window-height="1027"
+         inkscape:window-x="62"
+         inkscape:window-y="25"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="svg182" /><polygon
+         fill="#929497"
+         points="198,0 0,0 0,198 198,198 "
+         id="polygon1"
+         transform="matrix(4.1666665,0,0,4.1666665,6.0542874e-7,1.65e-5)"
+         style="fill:#121212;fill-opacity:1" /><path
+         fill="#ffffff"
+         stroke="#eb242b"
+         d="M 768.74997,787.49999 H 56.249998 c -10.354166,0 -18.749999,-8.39584 -18.749999,-18.75 V 56.250014 c 0,-10.354166 8.395833,-18.749999 18.749999,-18.749999 H 768.74997 c 10.35417,0 18.75,8.395833 18.75,18.749999 V 768.74999 c 0,10.35416 -8.39583,18.75 -18.75,18.75 z"
+         id="clipping"
+         style="fill:#797979;fill-opacity:1;stroke:none;stroke-width:4.16667"
+         sodipodi:nodetypes="sssssssss" /><rect
+         x="75"
+         y="75.000015"
+         fill="none"
+         stroke="#2da6de"
+         stroke-dasharray="5.55167"
+         width="675"
+         height="675"
+         id="rect1"
+         style="stroke-width:4.16667;fill:#c7c7c7;fill-opacity:1;stroke:none" /></svg>

@@ -1,1 +1,60 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns2="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="template" x="0px" y="0px" width="225" height="525" viewBox="0 0 225 525" enable-background="new 0 0 270 414" xml:space="preserve" ns1:docname="blank.svg" ns2:version="1.2.2 (b0a8486, 2022-12-01)"> <ns0:defs id="defs728" /> <ns1:namedview id="namedview726" pagecolor="#ffffff" bordercolor="#999999" borderopacity="1" showgrid="false" /></ns0:svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+     version="1.1"
+     x="0px"
+     y="0px"
+     width="225"
+     height="525"
+     viewBox="0 0 225 525"
+     enable-background="new 0 0 54 126"
+     xml:space="preserve"
+     id="svg3"
+     sodipodi:docname="SmallStandee.svg"
+     inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg"><defs
+         id="defs3">
+
+
+
+	
+	
+
+	
+	
+	
+	
+</defs><sodipodi:namedview
+         id="namedview3"
+         pagecolor="#505050"
+         bordercolor="#eeeeee"
+         borderopacity="1"
+         inkscape:showpageshadow="0"
+         inkscape:pageopacity="0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:zoom="1.2121831"
+         inkscape:cx="156.32952"
+         inkscape:cy="201.28973"
+         inkscape:window-width="1872"
+         inkscape:window-height="1027"
+         inkscape:window-x="62"
+         inkscape:window-y="25"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="svg3" /><polygon
+         fill="#919396"
+         points="0,0 0,126 54,126 54,0 "
+         id="polygon1"
+         transform="matrix(4.1666667,0,0,4.1666667,-9e-7,-2.1e-6)"
+         style="fill:#131414;fill-opacity:1" /><path
+         id="clipping"
+         style="stroke:none;fill:#696969;fill-opacity:1"
+         d="M 112.41992 37.253906 C 71.032425 37.295573 37.5 70.853901 37.5 112.25391 L 37.5 370.99609 C 37.5 373.06276 39.175 374.74219 41.25 374.74219 L 100.30078 374.74219 L 100.30078 337.24219 L 119.80078 337.24219 L 119.80078 374.74219 L 183.75 374.74219 C 185.82083 374.74219 187.5 373.06276 187.5 370.99609 L 187.5 112.25391 C 187.5 70.858068 153.96758 37.295573 112.58008 37.253906 L 112.41992 37.253906 z M 102.75781 412.55469 C 67.116149 417.22552 39.3 447.01758 37.5 483.76758 C 37.5 485.85925 39.091016 487.55469 41.166016 487.55469 L 183.83398 487.55469 C 185.90898 487.55469 187.5 485.86706 187.5 483.77539 C 185.70417 447.01289 157.89557 417.22969 122.25391 412.55469 L 122.25391 449.69922 L 102.75781 449.69922 L 102.75781 412.55469 z " /><path
+         fill="#ffffff"
+         stroke="#2ba4dd"
+         stroke-dasharray="12.5"
+         d="M 112.45833,74.754165 C 91.804167,74.774998 75,91.595832 75,112.25417 V 299.7375 h 25.3 19.5 30.2 V 112.25417 C 150,91.595832 133.19583,74.774998 112.54167,74.754165"
+         id="path3"
+         style="stroke-width:4.16667;fill:#aaaaaa;fill-opacity:1;stroke:none" /></svg>

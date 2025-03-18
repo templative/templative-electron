@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+     viewBox="0 0 1425 2475"
+     width="1425"
+     height="2475"
+     version="1.1"
+     id="svg122"
+     sodipodi:docname="TallBooklet20pg.svg"
+     inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <defs
+         id="defs122">
+        <defs
+             id="defs4">
+            <style
+                 id="style1">
+      .cls-1 {
+        letter-spacing: .012em;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11 {
+        fill: none;
+      }
+
+      .cls-12 {
+        letter-spacing: .049em;
+      }
+
+      .cls-13 {
+        letter-spacing: .049em;
+      }
+
+      .cls-3 {
+        stroke-dasharray: 0 0 0 0 4.934 4.925 .01 0;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-9, .cls-11 {
+        stroke: #2ba6de;
+      }
+
+      .cls-14 {
+        letter-spacing: .05em;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 0 0 0 0 4.982 4.972 .01 0;
+      }
+
+      .cls-15 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-16 {
+        letter-spacing: .016em;
+      }
+
+      .cls-5 {
+        stroke-dasharray: 0 0 .01 0;
+      }
+
+      .cls-17 {
+        letter-spacing: 0em;
+      }
+
+      .cls-18 {
+        letter-spacing: -.017em;
+      }
+
+      .cls-19, .cls-20 {
+        fill: #fff;
+      }
+
+      .cls-21 {
+        fill: #d0d2d3;
+      }
+
+      .cls-22 {
+        fill: #4c4849;
+      }
+
+      .cls-23 {
+        letter-spacing: -.034em;
+      }
+
+      .cls-24 {
+        letter-spacing: 0em;
+      }
+
+      .cls-25 {
+        letter-spacing: .333em;
+      }
+
+      .cls-26 {
+        letter-spacing: -.018em;
+      }
+
+      .cls-27 {
+        letter-spacing: .334em;
+      }
+
+      .cls-28 {
+        letter-spacing: .333em;
+      }
+
+      .cls-29 {
+        letter-spacing: .333em;
+      }
+
+      .cls-30 {
+        letter-spacing: .333em;
+      }
+
+      .cls-6 {
+        stroke: #ed2224;
+      }
+
+      .cls-6, .cls-7, .cls-8 {
+        stroke-width: 2px;
+      }
+
+      .cls-31 {
+        letter-spacing: 0em;
+      }
+
+      .cls-32 {
+        letter-spacing: -.024em;
+      }
+
+      .cls-33 {
+        letter-spacing: -.025em;
+      }
+
+      .cls-34 {
+        letter-spacing: .26em;
+      }
+
+      .cls-35 {
+        letter-spacing: .259em;
+      }
+
+      .cls-36 {
+        letter-spacing: .259em;
+      }
+
+      .cls-37 {
+        letter-spacing: .259em;
+      }
+
+      .cls-38 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-39 {
+        clip-path: url(#clippath-3);
+      }
+
+      .cls-40 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-41 {
+        letter-spacing: -.042em;
+      }
+
+      .cls-42 {
+        letter-spacing: -.074em;
+      }
+
+      .cls-43 {
+        letter-spacing: -.074em;
+      }
+
+      .cls-44 {
+        letter-spacing: -.074em;
+      }
+
+      .cls-45 {
+        letter-spacing: -.074em;
+      }
+
+      .cls-46 {
+        letter-spacing: .027em;
+      }
+
+      .cls-47 {
+        letter-spacing: .049em;
+      }
+
+      .cls-48 {
+        font-size: 8.33px;
+      }
+
+      .cls-48, .cls-49, .cls-50, .cls-51, .cls-52, .cls-53 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .cls-48, .cls-54, .cls-55, .cls-56, .cls-57 {
+        fill: #231f20;
+      }
+
+      .cls-58 {
+        letter-spacing: 0em;
+      }
+
+      .cls-59 {
+        letter-spacing: -.016em;
+      }
+
+      .cls-60 {
+        letter-spacing: -.016em;
+      }
+
+      .cls-7 {
+        stroke: #2ea6de;
+        stroke-dasharray: 0 0 5.04 5.04;
+      }
+
+      .cls-8 {
+        stroke: #939596;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-61 {
+        letter-spacing: 0em;
+      }
+
+      .cls-62 {
+        letter-spacing: -.004em;
+      }
+
+      .cls-49, .cls-56 {
+        font-size: 6.985px;
+      }
+
+      .cls-49, .cls-53 {
+        fill: #ec1c24;
+      }
+
+      .cls-54 {
+        font-size: 7.526px;
+      }
+
+      .cls-54, .cls-57 {
+        font-family: Arial-Black, 'Arial Black';
+        font-weight: 800;
+      }
+
+      .cls-63 {
+        letter-spacing: 0em;
+      }
+
+      .cls-64 {
+        letter-spacing: .241em;
+      }
+
+      .cls-65 {
+        letter-spacing: .241em;
+      }
+
+      .cls-66 {
+        fill: #b7d333;
+      }
+
+      .cls-66, .cls-20, .cls-67, .cls-68 {
+        fill-rule: evenodd;
+      }
+
+      .cls-55, .cls-56 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-55, .cls-53 {
+        font-size: 7px;
+      }
+
+      .cls-69 {
+        letter-spacing: 0em;
+      }
+
+      .cls-57 {
+        font-size: 10.345px;
+      }
+
+      .cls-10 {
+        stroke: #ec1e28;
+      }
+
+      .cls-11 {
+        stroke-dasharray: 0 0 .01 0;
+      }
+
+      .cls-70 {
+        letter-spacing: 0em;
+      }
+
+      .cls-50 {
+        fill: #929496;
+      }
+
+      .cls-50, .cls-51, .cls-52 {
+        font-size: 7.302px;
+      }
+
+      .cls-51 {
+        fill: #2ea6de;
+      }
+
+      .cls-52 {
+        fill: #eb232b;
+      }
+
+      .cls-68 {
+        opacity: 1;
+      }
+
+      .cls-71 {
+        letter-spacing: -.017em;
+      }
+
+      .cls-72 {
+        letter-spacing: .277em;
+      }
+
+      .cls-73 {
+        letter-spacing: .277em;
+      }
+
+      .cls-74 {
+        letter-spacing: -.017em;
+      }
+
+      .cls-75 {
+        letter-spacing: .277em;
+      }
+
+      .cls-76 {
+        letter-spacing: .278em;
+      }
+
+      .cls-77 {
+        letter-spacing: .278em;
+      }
+
+      .cls-78 {
+        letter-spacing: .278em;
+      }
+
+      .cls-79 {
+        letter-spacing: .278em;
+      }
+
+      .cls-80 {
+        letter-spacing: .278em;
+      }
+
+      .cls-81 {
+        letter-spacing: .278em;
+      }
+
+      .cls-82 {
+        letter-spacing: .278em;
+      }
+
+      .cls-83 {
+        letter-spacing: .278em;
+      }
+    </style>
+        </defs>
+    </defs>
+    <sodipodi:namedview
+         id="namedview122"
+         pagecolor="#505050"
+         bordercolor="#eeeeee"
+         borderopacity="1"
+         inkscape:showpageshadow="0"
+         inkscape:pageopacity="0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:zoom="0.25712974"
+         inkscape:cx="668.92301"
+         inkscape:cy="1645.0839"
+         inkscape:window-width="1872"
+         inkscape:window-height="1027"
+         inkscape:window-x="62"
+         inkscape:window-y="25"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="svg122" />
+    <path
+         id="Bleed_Zone"
+         data-name="Bleed Zone"
+         class="cls-68"
+         d="M -5.7000001e-6,2475 H 1425 V -9.9000001e-6 H -5.7000001e-6 Z"
+         style="stroke-width:4.16667"
+         sodipodi:nodetypes="ccccc" />
+    <polyline
+         class="cls-9"
+         points="321.5 576 324 576 324 573.5"
+         id="polyline5"
+         transform="matrix(4.1666667,0,0,4.1666667,-5.7000001e-6,-9.9000001e-6)" />
+    <line
+         class="cls-5"
+         x1="1350"
+         y1="2368.8667"
+         x2="1350"
+         y2="2368.825"
+         id="line6"
+         style="stroke-width:4.16667" />
+    <polyline
+         class="cls-9"
+         points="20.5 18 18 18 18 20.5"
+         id="polyline9"
+         transform="matrix(4.1666667,0,0,4.1666667,-5.7000001e-6,-9.9000001e-6)" />
+    <line
+         class="cls-5"
+         x1="74.999992"
+         y1="106.13332"
+         x2="74.999992"
+         y2="106.175"
+         id="line10"
+         style="stroke-width:4.16667" />
+    <rect
+         id="clipping"
+         data-name="Trim Line"
+         class="cls-10"
+         x="37.499996"
+         y="37.499989"
+         width="1350"
+         height="2400"
+         style="stroke-width:4.16667;stroke:none;fill:#545454;fill-opacity:1" />
+    <rect
+         id="rect122"
+         data-name="Trim Line"
+         class="cls-10"
+         x="75.907219"
+         y="75.907211"
+         width="1273.1855"
+         height="2323.1855"
+         style="stroke-width:3.98111;fill:#c3c3c3;fill-opacity:1;stroke:none" />
+</svg>
