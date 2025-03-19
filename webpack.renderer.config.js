@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
   target: 'electron-renderer',
@@ -39,11 +40,22 @@ module.exports = {
         generator: {
           filename: 'assets/[name][ext]'
         }
+      },
+      {
+        test: /componentTemplates\/.+\.svg$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'componentTemplates/[name][ext]'
+        }
       }
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.css']
+    extensions: ['.js', '.jsx', '.css'],
+    alias: {
+      '@templates': path.resolve(__dirname, 'src/main/templative/lib/create/componentTemplates'),
+      '@previewImages': path.resolve(__dirname, 'src/main/templative/lib/componentPreviewImages'),
+    }
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()

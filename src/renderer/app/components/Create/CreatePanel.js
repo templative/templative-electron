@@ -93,6 +93,7 @@ const CreatePanel = (props) => {
                 selectedComponentType={context.selectedComponentType}  
                 componentTypeOptions={componentTypeOptions}
                 isStock={!context.isToggledToComponents}
+                isShowingTemplates={false}
             />  
             <ChosenComponent 
                 isProcessing={isProcessing}

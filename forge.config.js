@@ -10,6 +10,8 @@ module.exports = {
     },
     extraResource: [
       "./bin",
+      "./src/main/templative/lib/create/componentTemplates",
+      "./src/main/templative/lib/componentPreviewImages"
     ],
     icon: "src/assets/images/icon",
     osxSign: {

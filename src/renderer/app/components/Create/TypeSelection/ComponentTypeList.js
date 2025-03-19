@@ -14,7 +14,8 @@ const ComponentTypeList = ({
     search,
     selectTypeCallback,
     selectedComponentType,
-    isStock
+    isStock,
+    isShowingTemplates=false
 }) => {   
     const context = useContext(RenderingWorkspaceContext);
     const { componentDivs, categoryToFilteredTypes } = useMemo(() => {
@@ -224,6 +225,7 @@ const ComponentTypeList = ({
                             selectedComponentType={selectedComponentType} 
                             existingQuantity={0}
                             search={search}    
+                            isShowingTemplates={isShowingTemplates}
                         />
                     );
                 }
@@ -250,6 +252,7 @@ const ComponentTypeList = ({
                         selectedComponentType={selectedComponentType} 
                         existingQuantity={0}
                         search={search}
+                        isShowingTemplates={isShowingTemplates}
                         sizeVariations={components
                             .filter(comp => comp.key !== componentToUse.key) // Filter out the current component
                             .map(comp => ({
@@ -272,6 +275,7 @@ const ComponentTypeList = ({
             return <ComponentTypeFolder 
                 key={category} 
                 search={search} 
+                isShowingTemplates={isShowingTemplates}
                 selectTypeCallback={selectTypeCallback} 
                 category={category} 
                 selectedTags={selectedTags} 
@@ -281,7 +285,7 @@ const ComponentTypeList = ({
                 isStock={isStock}
             />
         });
-    }, [categoryToFilteredTypes, search, selectTypeCallback, selectedTags, componentTypeOptions, selectedComponentType, isStock]);
+    }, [categoryToFilteredTypes, search, selectTypeCallback, selectedTags, componentTypeOptions, selectedComponentType, isStock, isShowingTemplates]);
 
     const isSearchTooNarrow = 
         folders.length === 0 && 

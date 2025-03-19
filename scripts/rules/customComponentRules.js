@@ -24,14 +24,14 @@ module.exports = [
     //         return ["DisplayName"];
     //     }
     // },
-    {
-        description: "Set the PreviewUri to `https://www.thegamecrafter.com/product-images/${component.Key}.jpg`",
-        condition: (component) => component.Key && component.PreviewUri !== `https://www.thegamecrafter.com/product-images/${component.Key}.jpg`,
-        setValue: (component) => {
-            component.PreviewUri = `https://www.thegamecrafter.com/product-images/${component.Key}.jpg`;
-            return ["PreviewUri"];
-        }
-    },
+    // {
+    //     description: "Set the PreviewUri to `https://www.thegamecrafter.com/product-images/${component.Key}.jpg`",
+    //     condition: (component) => component.Key && component.PreviewUri !== `https://www.thegamecrafter.com/product-images/${component.Key}.jpg`,
+    //     setValue: (component) => {
+    //         component.PreviewUri = `https://www.thegamecrafter.com/product-images/${component.Key}.jpg`;
+    //         return ["PreviewUri"];
+    //     }
+    // },
     {
       description: "Set PlaygroundCreationTask, GameCrafterUploadTask, and SimulatorCreationTask for components tagged with 'deck'",
       condition: (component) => component.Tags && component.Tags.includes("deck") && 
@@ -200,6 +200,14 @@ module.exports = [
         setValue: (component) => {
             component.SimulatorCreationTask = "DECK";
             return ["SimulatorCreationTask"];
+        }
+    },
+    {
+        description: "Components tagged 'document' and 'book' are disabled",
+        condition: (component) => component.Tags && (component.Tags.includes("document") && component.Tags.includes("book")),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            return ["IsDisabled"];
         }
     }
   ];

@@ -72,3 +72,16 @@
     background-color: var(--color-accent) !important;
     color: var(--color-content-surface) !important;
 }
+
+.single-color-display {
+    margin-bottom: 1rem;
+}
+
+.chosen-component-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 10px;
+}

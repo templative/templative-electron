@@ -209,6 +209,7 @@ export default class ComponentTypeFolder extends React.Component {
                                 selectTypeCallback={this.props.selectTypeCallback}
                                 selectedComponentType={this.props.selectedComponentType} 
                                 existingQuantity={0}
+                                isShowingTemplates={this.props.isShowingTemplates || false}
                                 search={this.props.search}
                                 sizeVariations={components
                                     .filter(comp => comp.key !== primaryComponent.key) // Filter out the current component
@@ -236,6 +237,7 @@ export default class ComponentTypeFolder extends React.Component {
                                 selectTypeCallback={this.props.selectTypeCallback}
                                 selectedComponentType={this.props.selectedComponentType} 
                                 existingQuantity={0}
+                                isShowingTemplates={this.props.isShowingTemplates || false}
                                 search={this.props.search}    
                             />
                         )

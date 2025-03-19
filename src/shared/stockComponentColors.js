@@ -1,12 +1,13 @@
-const colors = ["red", "blue", "green", "yellow", "mustard", "purple", "orange", "pink", "brown", "gray", "black", "white", "apricot", "teal", "caramel", "ivory", "wood", "limegreen", 'lavender', "salmon", "taupe", "natural", "rose"];
-const metals = ["gold", "silver", "bronze", "copper"]
+const colors = ["lime green", "red", "blue", "green", "yellow", "mustard", "purple", "orange", "pink", "brown", "gray", "black", "white", "apricot", "teal", "caramel", "ivory", "wood", "limegreen", 'lavender', "salmon", "taupe", "natural", "rose"];
+const metals = ["gold", "silver", "bronze", "copper", "golden"]
 const shades = ["light", "dark"];
 const allColorVariations = [
-  ...colors,
-  ...metals,
   ...shades.flatMap(shade => colors.map(color => `${shade}${color}`)),
-  ...shades.flatMap(shade => metals.map(metal => `${shade}${metal}`))
+  ...shades.flatMap(shade => metals.map(metal => `${shade}${metal}`)),
+  ...colors,
+  ...metals
 ];
+const colorsAndMetals = [...colors, ...metals];
 
 const getColorValueHex = (colorName) => {
   // Convert to lowercase for comparison
@@ -25,7 +26,8 @@ const getColorValueHex = (colorName) => {
           case 'pink': return '#ffccff';
           case 'brown': return '#cc9966';
           case 'gray': return '#cccccc';
-          case 'gold': return '#ffe680';
+          case 'gold': 
+          case 'golden': return '#ffe680';
           case 'silver': return '#e6e6e6';
           case 'bronze': return '#e6ccb3';
           case 'copper': return '#ffcc99';
@@ -43,7 +45,8 @@ const getColorValueHex = (colorName) => {
           case 'pink': return '#cc6699';
           case 'brown': return '#663300';
           case 'gray': return '#666666';
-          case 'gold': return '#cc9900';
+          case 'gold':
+          case 'golden': return '#cc9900';
           case 'silver': return '#999999';
           case 'bronze': return '#996633';
           case 'copper': return '#cc6633';
@@ -80,7 +83,8 @@ const getColorValueHex = (colorName) => {
           case 'wood': return '#966f33';
           case 'limegreen': return '#32cd32';
           case 'lavender': return '#e6e6fa';
-          case 'gold': return '#ffd700';
+          case 'gold':
+          case 'golden': return '#ffd700';
           case 'silver': return '#c0c0c0';
           case 'bronze': return '#cd7f32';
           case 'copper': return '#b87333';
@@ -129,6 +133,7 @@ module.exports = {
     colors,
     metals,
     shades,
+    colorsAndMetals,
     allColorVariations,
     getColorValueHex,
     getColorValueRGB

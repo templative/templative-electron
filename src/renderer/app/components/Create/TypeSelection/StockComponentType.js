@@ -1,5 +1,6 @@
-import React, { useState, Suspense, lazy } from "react";
+import React, { useState, Suspense, lazy, useMemo } from "react";
 import { addSpaces, extractBaseNameAndColor } from './ComponentUtils';
+import { loadPreviewImage } from '../utils/ImageLoader';
 import './StockComponentType.css';
 
 // Lazy load the simpler viewer instead
@@ -8,6 +9,7 @@ const ModelViewer = lazy(() => import('./ModelViewer'));
 const StockComponentType = ({ componentInfo, selectedComponentType, name, selectTypeCallback, existingQuantity, colorVariations = [] }) => {
     const [isHovering, setIsHovering] = useState(false);
     const [modelLoaded, setModelLoaded] = useState(false);
+    const [imageError, setImageError] = useState(false);
     
     // Extract base name without color if component has a color
     let displayName = componentInfo["DisplayName"];
@@ -20,6 +22,18 @@ const StockComponentType = ({ componentInfo, selectedComponentType, name, select
     const has3DModel = componentInfo["3DModel"] && 
                        componentInfo["3DModel"].ObjUrl && 
                        componentInfo["3DModel"].TextureUrl;
+    
+    // Process the PreviewUri using our shared utility
+    const previewSource = useMemo(() => {
+        if (componentInfo.PreviewUri) {
+            const source = loadPreviewImage(componentInfo.PreviewUri);
+            if (!source) {
+                setImageError(true);
+            }
+            return source || "";
+        }
+        return "";
+    }, [componentInfo.PreviewUri]);
     
     const handleMouseEnter = () => {
         setIsHovering(true);
@@ -90,11 +104,22 @@ const StockComponentType = ({ componentInfo, selectedComponentType, name, select
                                     </div>
                                 ) : (
                                     <div className="preview-container">
-                                        <img 
-                                            src={componentInfo["PreviewUri"]} 
-                                            alt={displayName}
-                                            className="preview-image"
-                                        />
+                                        {!imageError && previewSource ? (
+                                            <img 
+                                                src={previewSource} 
+                                                alt={displayName}
+                                                className="preview-image"
+                                                onError={(e) => {
+                                                    console.warn(`Failed to load image: ${previewSource}`);
+                                                    setImageError(true);
+                                                }}
+                                            />
+                                        ) : (
+                                            <div className="preview-placeholder">
+                                                {/* Optional: Show a placeholder icon or text */}
+                                                <span>No preview</span>
+                                            </div>
+                                        )}
                                     </div>
                                 )}
                             </div>

@@ -242,11 +242,11 @@ module.exports = [
         }
     },
     {
-        description: "Disable components without a PreviewUri",
-        condition: (component) => !component.PreviewUri,
+        description: "Set the PreviewUri of the Component to the @previewImages/${Key}.png",
+        condition: (component) => component.Key !== undefined,
         setValue: (component) => {
-            component.IsDisabled = true;
-            return ["IsDisabled"];
+            component.PreviewUri = `@previewImages/${component.Key}.png`;
+            return ["PreviewUri"];
         }
     },
     {

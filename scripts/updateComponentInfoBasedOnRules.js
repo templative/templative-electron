@@ -120,14 +120,14 @@ function processComponents() {
     
     console.log(`\nTotal stock components with Key field added: ${keyFieldAddedCount}`);
     
-    // if (stockComponentUpdates > 0 || stockComponentTagDedupes > 0) {
-    //     console.log('\nSaving updates to stock component info file...');
-    //     saveComponentInfo(
-    //         STOCK_COMPONENT_INFO,
-    //         "/Users/oliverbarnum/Documents/git/templative-electron/src/shared/stockComponentInfo.js",
-    //         "STOCK_COMPONENT_INFO"
-    //     );
-    // }
+    if (stockComponentUpdates > 0 || stockComponentTagDedupes > 0) {
+        console.log('\nSaving updates to stock component info file...');
+        saveComponentInfo(
+            STOCK_COMPONENT_INFO,
+            "/Users/oliverbarnum/Documents/git/templative-electron/src/shared/stockComponentInfo.js",
+            "STOCK_COMPONENT_INFO"
+        );
+    }
     
     if (componentUpdates === 0 && stockComponentUpdates === 0 && 
         componentTagDedupes === 0 && stockComponentTagDedupes === 0) {

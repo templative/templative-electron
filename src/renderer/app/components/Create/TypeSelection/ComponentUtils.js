@@ -1,81 +1,503 @@
 // New utility file for component type helpers
 import React from "react";
-
+import { allColorVariations,colorsAndMetals } from '../../../../../shared/stockComponentColors.js';
+import chalk from 'chalk';
 // Known sizes in order from smallest to largest
 export const sizePrefixes = ["Small", "Medium", "Large", "Tall"];
-export const DEFAULT_SIZE = "Standard"; // Default size for components without a size prefix
+export const DEFAULT_SIZE = null; // Default size for components without a size prefix
 
-// Helper function to extract base name and size from component name
-export const extractBaseNameAndSize = (name, displayName) => {
-    // First try with displayName if available
-    if (displayName) {
-        // Try standard size prefixes
-        const prefixResult = extractSizeFromString(displayName);
-        if (prefixResult.size) {
-            return prefixResult;
+// Define extraction rules for sizes
+export const sizeExtractionRules = [
+    // Rule 1: Size is the last part after comma (e.g., "Box Insert, Pro, Medium")
+    {
+        name: "comma-separated-last-part",
+        test: (str) => str.includes(', '),
+        extract: (str) => {
+            const parts = str.split(', ');
+            
+            // Check each part for a size, not just the last part
+            for (let i = 0; i < parts.length; i++) {
+                const part = parts[i];
+                
+                // Check if part is a known size prefix
+                if (sizePrefixes.includes(part)) {
+                    const newParts = [...parts];
+                    newParts.splice(i, 1);
+                    return {
+                        baseName: newParts.join(', '),
+                        size: part,
+                        isNumeric: false
+                    };
+                }
+                
+                // Check if part is a numeric size (e.g., "8mm")
+                const numericMatch = part.match(/^(\d+(?:mm|cm)?)$/);
+                if (numericMatch) {
+                    const newParts = [...parts];
+                    newParts.splice(i, 1);
+                    return {
+                        baseName: newParts.join(', '),
+                        size: part,
+                        isNumeric: true
+                    };
+                }
+            }
+            
+            return null;
         }
-        
-        // Try numerical suffix
-        const numericResult = extractNumericSuffix(displayName);
-        if (numericResult.size) {
-            return numericResult;
+    },
+    
+    // New Rule: Size is a number in parentheses at the end of the name (e.g., "Clear Poker Tuck Box (66)")
+    {
+        name: "number-in-parentheses-at-end",
+        test: (str) => /\(\d+\)$/.test(str),
+        extract: (str) => {
+            const match = str.match(/^(.*?)\s*\((\d+)\)$/);
+            if (match) {
+                return {
+                    baseName: match[1].trim(),
+                    size: match[2],
+                    isNumeric: true
+                };
+            }
+            return null;
+        }
+    },
+    
+    // Rule 2: Size is a prefix (e.g., "Small Box")
+    {
+        name: "size-prefix",
+        test: (str) => sizePrefixes.some(prefix => str.startsWith(prefix)),
+        extract: (str) => {
+            for (const prefix of sizePrefixes) {
+                if (str.startsWith(prefix)) {
+                    return {
+                        baseName: str.substring(prefix.length).trim(),
+                        size: prefix,
+                        isNumeric: false
+                    };
+                }
+            }
+            return null;
+        }
+    },
+    
+    // Rule 3: Size is a number at the end (e.g., "Poker Tuck Box 36")
+    {
+        name: "ends-with-number",
+        test: (str) => /\s\d+$/.test(str),
+        extract: (str) => {
+            const match = str.match(/^(.+?)\s+(\d+)$/);
+            if (match) {
+                return {
+                    baseName: match[1].trim(),
+                    size: match[2],
+                    isNumeric: true
+                };
+            }
+            return null;
+        }
+    },
+    
+    // Rule 4: Size is a number in parentheses (e.g., "Game Board (18)")
+    {
+        name: "number-in-parentheses",
+        test: (str) => /\(\d+\)$/.test(str),
+        extract: (str) => {
+            const match = str.match(/^(.+?)\s*\((\d+)\)$/);
+            if (match) {
+                return {
+                    baseName: match[1].trim(),
+                    size: match[2],
+                    isNumeric: true
+                };
+            }
+            return null;
+        }
+    },
+    
+    // Rule 5: Size is a number followed by units (e.g., "Cube 10mm")
+    {
+        name: "number-with-units",
+        test: (str) => /\d+(?:mm|cm)$/.test(str),
+        extract: (str) => {
+            const match = str.match(/^(.+?)\s+(\d+(?:mm|cm))$/);
+            if (match) {
+                return {
+                    baseName: match[1].trim(),
+                    size: match[2],
+                    isNumeric: true
+                };
+            }
+            return null;
+        }
+    }
+];
+
+// Define extraction rules for colors
+export const colorExtractionRules = [
+    // Improved rule: Handle "Light Color" and "Dark Color" patterns without changing the base name
+    {
+        name: "light-dark-color-variation",
+        test: (str) => {
+            const parts = str.split(', ');
+            
+            return parts.some(part => 
+                /^(Light|Dark) [A-Za-z]+$/.test(part) || 
+                part.includes('Light ') || 
+                part.includes('Dark ')
+            );
+        },
+        extract: (str) => {
+            const parts = str.split(', ');
+            
+            for (let i = 0; i < parts.length; i++) {
+                const part = parts[i];
+                
+                // Check for "Light Color" or "Dark Color" pattern
+                const variationMatch = part.match(/^(Light|Dark) ([A-Za-z]+)$/);
+                if (variationMatch) {
+                    const variation = variationMatch[1]; // "Light" or "Dark"
+                    const baseColor = variationMatch[2]; // The base color
+                    
+                    // Keep the full color name (e.g., "Light Blue") as the color
+                    const fullColor = `${variation} ${baseColor}`;
+                    
+                    // Check if this is a valid color variation
+                    const isValidColor = colorsAndMetals.some(c => 
+                        fullColor.toLowerCase() === ("dark " + c.toLowerCase()) || 
+                        fullColor.toLowerCase() === ("light " + c.toLowerCase())
+                    );
+                    
+                    if (isValidColor) {
+                        const newParts = [...parts];
+                        newParts.splice(i, 1);
+                        
+                        const result = {
+                            baseName: newParts.join(', '),
+                            color: fullColor
+                        };
+                        
+                        // Keep the original base name structure without adding Light/Dark to it
+                        return result;
+                    }
+                }
+            }
+            return null;
+        }
+    },
+    
+    // New rule: Handle "Color Pearl" and "Color Opaque" patterns
+    {
+        name: "color-pearl-opaque",
+        test: (str) => {
+            const parts = str.split(', ');
+            return parts.some(part => 
+                /[A-Za-z]+ Pearl/.test(part) || /[A-Za-z]+ Opaque/.test(part)
+            );
+        },
+        extract: (str) => {
+            const parts = str.split(', ');
+            for (let i = 0; i < parts.length; i++) {
+                const part = parts[i];
+                
+                // Check for "Color Pearl" pattern
+                const pearlMatch = part.match(/([A-Za-z]+) Pearl/);
+                if (pearlMatch) {
+                    const color = pearlMatch[1];
+                    if (allColorVariations.some(c => 
+                        color.toLowerCase() === c.toLowerCase()
+                    )) {
+                        const newParts = [...parts];
+                        newParts[i] = 'Pearl';
+                        return {
+                            baseName: newParts.join(', '),
+                            color: color
+                        };
+                    }
+                }
+                
+                // Check for "Color Opaque" pattern
+                const opaqueMatch = part.match(/([A-Za-z]+) Opaque/);
+                if (opaqueMatch) {
+                    const color = opaqueMatch[1];
+                    if (allColorVariations.some(c => 
+                        color.toLowerCase() === c.toLowerCase()
+                    )) {
+                        const newParts = [...parts];
+                        newParts[i] = 'Opaque';
+                        return {
+                            baseName: newParts.join(', '),
+                            color: color
+                        };
+                    }
+                }
+            }
+            return null;
+        }
+    },
+    
+    // New rule: Handle "Color/Color" patterns, extracting the first color
+    {
+        name: "color-slash-color",
+        test: (str) => {
+            const parts = str.split(', ');
+            return parts.some(part => /[A-Za-z]+\/[A-Za-z]+/.test(part));
+        },
+        extract: (str) => {
+            const parts = str.split(', ');
+            for (let i = 0; i < parts.length; i++) {
+                const part = parts[i];
+                const match = part.match(/([A-Za-z]+)\/([A-Za-z]+)/);
+                if (match) {
+                    const firstColor = match[1];
+                    // Check if the first part is a known color
+                    if (allColorVariations.some(color => 
+                        firstColor.toLowerCase() === color.toLowerCase()
+                    )) {
+                        const newParts = [...parts];
+                        // Replace the "Color/Color" with just "/Color" to preserve the pattern
+                        newParts[i] = '/' + match[2];
+                        return {
+                            baseName: newParts.join(', '),
+                            color: firstColor
+                        };
+                    }
+                }
+            }
+            return null;
+        }
+    },
+    
+    // Rule 1: Color is the last part after comma (e.g., "D6, 8mm, White")
+    {
+        name: "comma-separated-last-part",
+        test: (str) => str.includes(', '),
+        extract: (str) => {
+            const parts = str.split(', ');
+            const lastPart = parts[parts.length - 1];
+            
+            // Check if last part is a known color
+            const isExactColorMatch = allColorVariations.some(color => 
+                lastPart.toLowerCase() === color.toLowerCase()
+            );
+            
+            if (isExactColorMatch) {
+                return {
+                    baseName: parts.slice(0, parts.length - 1).join(', '),
+                    color: lastPart
+                };
+            }
+            
+            return null;
+        }
+    },
+    
+    // Rule 2: Color is the last word (e.g., "Wooden Cube Red")
+    {
+        name: "color-as-last-word",
+        test: (str) => {
+            const words = str.split(/\s+/);
+            const lastWord = words[words.length - 1];
+            return allColorVariations.some(color => 
+                lastWord.toLowerCase() === color.toLowerCase()
+            );
+        },
+        extract: (str) => {
+            const words = str.split(/\s+/);
+            const lastWord = words[words.length - 1];
+            
+            if (allColorVariations.some(color => 
+                lastWord.toLowerCase() === color.toLowerCase()
+            )) {
+                return {
+                    baseName: words.slice(0, -1).join(' '),
+                    color: lastWord
+                };
+            }
+            
+            return null;
+        }
+    },
+    
+    // Rule 3: Color is in parentheses (e.g., "Game Piece (Blue)")
+    {
+        name: "color-in-parentheses",
+        test: (str) => /\([A-Za-z]+\)$/.test(str),
+        extract: (str) => {
+            const match = str.match(/^(.+?)\s*\(([A-Za-z]+)\)$/);
+            if (match) {
+                const potentialColor = match[2];
+                if (allColorVariations.some(color => 
+                    potentialColor.toLowerCase() === color.toLowerCase()
+                )) {
+                    return {
+                        baseName: match[1].trim(),
+                        color: potentialColor
+                    };
+                }
+            }
+            return null;
+        }
+    },
+    
+    // Rule 4: Special case for dice with color (e.g., "D612mmBlack")
+    {
+        name: "dice-with-color",
+        test: (str) => /^D(?:4|6|8|10|12|20)\d*mm[A-Z][a-z]+$/.test(str),
+        extract: (str) => {
+            const match = str.match(/^(D(?:4|6|8|10|12|20)\d*mm)([A-Z][a-z]+)$/);
+            if (match) {
+                const diceBase = match[1];
+                const potentialColor = match[2];
+                
+                if (allColorVariations.some(color => 
+                    potentialColor.toLowerCase() === color.toLowerCase()
+                )) {
+                    return {
+                        baseName: diceBase,
+                        color: potentialColor
+                    };
+                }
+            }
+            return null;
+        }
+    }
+];
+
+// Updated extraction function using rules
+export const extractBaseNameAndSize = (name, displayName) => {
+    // Try with displayName first if available
+    if (displayName) {
+        for (const rule of sizeExtractionRules) {
+            if (rule.test(displayName)) {
+                const result = rule.extract(displayName);
+                if (result) {
+                    return result;
+                }
+            }
         }
     }
     
     // Fall back to using the name
-    // Try standard size prefixes
-    const prefixResult = extractSizeFromString(name);
-    if (prefixResult.size) {
-        return prefixResult;
-    }
-    
-    // Try numerical suffix
-    const numericResult = extractNumericSuffix(name);
-    if (numericResult.size) {
-        return numericResult;
-    }
-    
-    // If no size is found, return the original string as both the base name and with a default size
-    // This allows components without explicit size to be grouped with sized variants
-    return { baseName: name, size: DEFAULT_SIZE, isImplicitSize: true };
-};
-
-// Helper function to extract size from a string (for prefix-based sizes)
-export const extractSizeFromString = (str) => {
-    // Check if the string starts with any of the size prefixes
-    for (const prefix of sizePrefixes) {
-        if (str.startsWith(prefix)) {
-            // Remove the size prefix from the string to get the base name
-            const baseName = str.substring(prefix.length);
-            return { baseName, size: prefix, isNumeric: false };
+    for (const rule of sizeExtractionRules) {
+        if (rule.test(name)) {
+            const result = rule.extract(name);
+            if (result) {
+                return result;
+            }
         }
     }
     
-    // If no size prefix is found, return the original string as the base name
-    return { baseName: str, size: null };
+    // If no size is found, return the original string with default size
+    return { baseName: name, size: DEFAULT_SIZE, isImplicitSize: true };
 };
 
-// Helper function to extract numeric suffix as size
-export const extractNumericSuffix = (str) => {
-    // Skip dice notation patterns like D6, D20, etc.
-    if (/D(4|6|8|10|12|20)$/.test(str)) {
-        return { baseName: str, size: null };
+// Updated extraction function using rules
+export const extractBaseNameAndColor = (name, displayName) => {
+    // Try with displayName first if available
+    if (displayName) {
+        for (const rule of colorExtractionRules) {
+            if (rule.test(displayName)) {
+                const result = rule.extract(displayName);
+                if (result) {
+                    return result;
+                }
+            }
+        }
     }
     
-    // Check for a number at the end of the string that follows any letters/words
-    // This will match patterns like "BridgeTuckBox108" or "Hookbox 6" but not "CustomColorD6"
-    const match = str.match(/^([A-Za-z]+(?:[A-Z][a-z]*)*?)(?:\s*)(\d+)$/);
-    
-    if (match) {
-        return {
-            baseName: match[1].trim(), // Everything before the number, trimmed
-            size: match[2],            // The number itself as a string
-            isNumeric: true            // Flag to indicate this is a numeric size
-        };
+    // Fall back to using the name
+    for (const rule of colorExtractionRules) {
+        if (rule.test(name)) {
+            const result = rule.extract(name);
+            if (result) {
+                return result;
+            }
+        }
     }
     
-    // No numeric suffix found
-    return { baseName: str, size: null };
+    // If no color is found, return the original string with null color
+    return { baseName: name, color: null };
+};
+
+// Modified function to process base name with compound colors
+export const cleanBaseName = (originalName, size, color) => {
+    // Special handling for "Light" and "Dark" prefixed colors
+    let baseColor = null;
+    let colorPrefix = null;
+    
+    if (color) {
+        // Check if this is a compound color with Light/Dark prefix
+        const lightMatch = color.match(/^Light\s+([A-Za-z]+)$/i);
+        const darkMatch = color.match(/^Dark\s+([A-Za-z]+)$/i);
+        
+        if (lightMatch) {
+            baseColor = lightMatch[1];
+            colorPrefix = "Light";
+        } else if (darkMatch) {
+            baseColor = darkMatch[1];
+            colorPrefix = "Dark";
+        }
+    }
+    
+    // If the name has commas, handle it specially
+    if (originalName.includes(', ')) {
+        const parts = originalName.split(', ');
+        
+        // Filter out the size part
+        const partsWithoutSize = parts.filter(part => part !== size);
+        
+        // Handle color parts, including compound colors
+        const cleanedParts = partsWithoutSize.map(part => {
+            // If this part contains the color we extracted, handle it specially
+            if (color && part.includes(color)) {
+                // For "Color Pearl" pattern, replace with "Pearl"
+                const pearlMatch = part.match(new RegExp(`${color} Pearl`, 'i'));
+                if (pearlMatch) {
+                    return 'Pearl';
+                }
+                
+                // For "Color Opaque" pattern, replace with "Opaque"
+                const opaqueMatch = part.match(new RegExp(`${color} Opaque`, 'i'));
+                if (opaqueMatch) {
+                    return 'Opaque';
+                }
+                
+                // For "Color/Color" pattern
+                const slashMatch = part.match(new RegExp(`${color}\/([A-Za-z]+)`, 'i'));
+                if (slashMatch) {
+                    return 'Color/' + slashMatch[1];
+                }
+                
+                // For "Black on Red" pattern
+                const onMatch = part.match(new RegExp(`([A-Za-z]+) on ${color}`, 'i'));
+                if (onMatch) {
+                    return `${onMatch[1]} on Color`;
+                }
+                
+                // For compound colors like "Light Blue" or "Dark Green"
+                if (colorPrefix && baseColor) {
+                    // Replace the entire color phrase with nothing to create a clean base name
+                    return part.replace(new RegExp(`${colorPrefix} ${baseColor}`, 'i'), '').trim();
+                }
+                
+                // For other patterns, remove the color
+                return part.replace(color, '').trim();
+            }
+            return part;
+        }).filter(part => part); // Remove any empty parts
+        
+        return cleanedParts.join(', ');
+    }
+    
+    // For compound colors in non-comma separated names
+    if (colorPrefix && baseColor && originalName.includes(`${colorPrefix} ${baseColor}`)) {
+        return originalName.replace(new RegExp(`${colorPrefix} ${baseColor}`, 'i'), '').trim();
+    }
+    
+    // Otherwise return the original name
+    return originalName;
 };
 
 // Compare sizes for sorting (handles both standard size prefixes and numeric sizes)
@@ -120,96 +542,20 @@ export const addSpaces = (str) => {
         .trim()
 };
 
-// List of all possible color variations for stock components
-export const allColorVariations = [
-    "Red", "Blue", "Green", "Yellow", "Black", "White", 
-    "Purple", "Orange", "Brown", "Gray", "Pink", "Teal",
-    "Lime", "Cyan", "Magenta", "Gold", "Silver", "Bronze"
-];
-
-// Helper function to extract base name and color from component name
-export const extractBaseNameAndColor = (name, displayName) => {
-    // First try with displayName if available
-    if (displayName) {
-        const result = extractColorFromString(displayName);
-        if (result.color) {
-            return result;
-        }
-    }
-    
-    // Fall back to using the name
-    return extractColorFromString(name);
-};
-
-// Helper function to extract color from a string
-export const extractColorFromString = (str) => {
-    // Special handling for dice notation (D6, D12, etc.)
-    if (/D(4|6|8|10|12|20)\d*mm/.test(str)) {
-        // For dice, we need to be more careful with the extraction
-        // Extract color only if it appears at the end after a comma or as the last word
-        const commaIndex = str.lastIndexOf(", ");
-        if (commaIndex !== -1) {
-            const potentialColorPart = str.substring(commaIndex + 2); // +2 to skip ", "
-            
-            // Check if the potential color part contains a valid color from our list
-            const containsValidColor = allColorVariations.some(color => 
-                potentialColorPart.toLowerCase() === color.toLowerCase()
-            );
-            
-            if (containsValidColor) {
-                const baseName = str.substring(0, commaIndex);
-                return { baseName: baseName, color: potentialColorPart };
-            }
-        }
-        
-        // For dice without comma format, check if the last word is a color
-        const words = str.split(/\s+/);
-        const lastWord = words[words.length - 1];
-        
-        if (allColorVariations.some(color => lastWord.toLowerCase() === color.toLowerCase())) {
-            const baseName = words.slice(0, -1).join(' ');
-            return { baseName: baseName, color: lastWord };
-        }
-        
-        // For dice with color directly attached (like D612mmBlack)
-        const diceMatch = str.match(/^(D(?:4|6|8|10|12|20)\d*mm)([A-Z][a-z]+)$/);
-        if (diceMatch) {
-            const diceBase = diceMatch[1];
-            const potentialColor = diceMatch[2];
-            
-            if (allColorVariations.some(color => potentialColor.toLowerCase() === color.toLowerCase())) {
-                return { baseName: diceBase, color: potentialColor };
-            }
-        }
-        
-        // If we get here, we couldn't extract a color for this dice
-        return { baseName: str, color: null };
-    }
-    
-    // Standard color extraction for non-dice components
-    const commaIndex = str.lastIndexOf(", ");
-    if (commaIndex === -1) return { baseName: str, color: null };
-    
-    // Check if the part after the last comma is a color or contains a color
-    const potentialColorPart = str.substring(commaIndex + 2); // +2 to skip ", "
-    
-    // Check if the potential color part is a pure color from our list (exact match)
-    const isExactColorMatch = allColorVariations.some(color => 
-        potentialColorPart.toLowerCase() === color.toLowerCase()
-    );
-    
-    if (isExactColorMatch) {
-        const baseName = str.substring(0, commaIndex);
-        return { baseName: baseName, color: potentialColorPart };
-    }
-    
-    // If it's not an exact match, it might be a modified color (like "Marbled Green")
-    // In this case, we should consider the entire string as the base name
-    return { baseName: str, color: null };
-};
-
 // Helper function to extract the base color (like "Green" from "Lime Green" or "Transparent Green")
 export const getBaseColor = (color) => {
+    if (!color) return null;
+    
+    // First check if this is a Light/Dark prefixed color
+    const lightMatch = color.match(/^Light\s+([A-Za-z]+)$/i);
+    const darkMatch = color.match(/^Dark\s+([A-Za-z]+)$/i);
+    
+    if (lightMatch) {
+        return lightMatch[1]; // Return the base color without "Light"
+    } else if (darkMatch) {
+        return darkMatch[1]; // Return the base color without "Dark"
+    }
+    
     // Convert to lowercase for comparison
     const colorLower = color.toLowerCase();
     
@@ -225,6 +571,18 @@ export const getBaseColor = (color) => {
 
 // Helper function to extract color prefix (like "Transparent" from "Transparent Green")
 export const getColorPrefix = (color) => {
+    if (!color) return null;
+    
+    // Check for Light/Dark prefixes first
+    const lightMatch = color.match(/^(Light)\s+[A-Za-z]+$/i);
+    const darkMatch = color.match(/^(Dark)\s+[A-Za-z]+$/i);
+    
+    if (lightMatch) {
+        return lightMatch[1];
+    } else if (darkMatch) {
+        return darkMatch[1];
+    }
+    
     // Get the base color
     const baseColor = getBaseColor(color);
     if (!baseColor) return null;
@@ -294,15 +652,15 @@ export const areColorVariations = (component1, component2) => {
     const lastPart1 = parts1[parts1.length - 1];
     const lastPart2 = parts2[parts2.length - 1];
     
-    // Check if both last parts are pure colors from our list
-    const isPureColor1 = allColorVariations.some(color => 
+    // Check if both last parts are colors from our list (including light/dark variations)
+    const isColor1 = allColorVariations.some(color => 
         lastPart1.toLowerCase() === color.toLowerCase()
     );
     
-    const isPureColor2 = allColorVariations.some(color => 
+    const isColor2 = allColorVariations.some(color => 
         lastPart2.toLowerCase() === color.toLowerCase()
     );
     
-    // They're color variations if both last parts are pure colors
-    return isPureColor1 && isPureColor2;
+    // They're color variations if both last parts are colors and they're different
+    return isColor1 && isColor2 && lastPart1 !== lastPart2;
 }; 
