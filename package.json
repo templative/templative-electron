@@ -39,7 +39,10 @@
         "match-guidelines-to-components": "node ./scripts/matchGuidelinesToComponents.js",
         "test-giant-project": "node ./scripts/test-giant-project.js",
         "fix-svg-scaling": "node ./scripts/fix-svg-scaling.js",
-        "fix-all-svgs": "node ./scripts/fix-svg-scaling.js --glob \"src/main/templative/lib/create/guidelines/*.svg\""
+        "fix-all-svgs": "node ./scripts/fix-svg-scaling.js --glob \"src/main/templative/lib/create/guidelines/*.svg\"",
+        "download-preview-images": "node ./scripts/downloadPreviewImages.js",
+        "download-stock-preview-images": "node ./scripts/downloadStockPreviewImages.js",
+        "sort-components-into-categories-colors-sizes": "node ./scripts/sortComponentsIntoCategoriesColorsSizes.js"
     },
     "dependencies": {
         "@anthropic-ai/sdk": "^0.18.0",
@@ -121,8 +124,11 @@
         "css-loader": "^6.11.0",
         "dotenv-cli": "^8.0.0",
         "electron": "^25.0.0",
+        "form-data": "^4.0.2",
         "html-loader": "^5.1.0",
+        "node-fetch": "^2.6.7",
         "node-loader": "^2.0.0",
+        "sharp": "^0.33.5",
         "socket.io-client": "^4.7.4",
         "style-loader": "^3.3.4",
         "svg-inline-loader": "^0.8.2",

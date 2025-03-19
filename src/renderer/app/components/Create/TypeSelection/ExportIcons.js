@@ -54,7 +54,7 @@ const ExportIcons = ({ componentInfo }) => {
     
     return (
         <div className="export-icons">
-            <ExportIcon 
+            {/* <ExportIcon 
                 available={exportRoutes.gameCrafter.available}
                 title={exportRoutes.gameCrafter.available ? "Available on TheGameCrafter" : exportRoutes.gameCrafter.reason}
             >
@@ -77,7 +77,7 @@ const ExportIcons = ({ componentInfo }) => {
                 title={exportRoutes.printable.available ? "Printable" : exportRoutes.printable.reason}
             >
                 <PdfIcon disabled={!exportRoutes.printable.available} />
-            </ExportIcon>
+            </ExportIcon> */}
         </div>
     );
 };

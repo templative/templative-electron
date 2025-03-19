@@ -1,90 +1,90 @@
 import React, { useMemo } from "react";
 import path from "path";
 import ExportIcons, { getExportRouteInfo } from './ExportIcons';
-import { extractBaseNameAndSize, addSpaces } from './ComponentUtils';
 import "../utils/ImageLoader";
 import { loadPreviewImage, loadTemplateImage } from "../utils/ImageLoader";
 import "./ComponentType.css";
-
-const ComponentType = ({ componentInfo, selectedComponentType, name, selectTypeCallback, existingQuantity, sizeVariations, isShowingTemplates }) => {
-    const exportRoutes = useMemo(() => getExportRouteInfo(componentInfo), [componentInfo]);
-    
-    // Extract size information from the current component
-    const sizeInfo = useMemo(() => {
-        return extractBaseNameAndSize(name, componentInfo["DisplayName"]);
-    }, [name, componentInfo]);
-    
-    const displayName = useMemo(() => {
-        if (!componentInfo["DisplayName"]) return name;
-        
-        // If we have size variations or this component has a size, use the base name without size
-        if ((sizeVariations && sizeVariations.length > 0) || sizeInfo.size) {
-            // Use the baseName from the first size variation or from this component
-            const baseName = sizeVariations && sizeVariations.length > 0 
-                ? sizeVariations[0].baseName 
-                : sizeInfo.baseName;
-            return addSpaces(baseName);
+import { COMPONENT_INFO } from "../../../../../shared/componentInfo";
+import { STOCK_COMPONENT_INFO } from "../../../../../shared/stockComponentInfo";
+const ComponentType = ({ 
+    name,
+    componentInfo,
+    selectTypeCallback,
+    selectedComponentType,
+    existingQuantity,
+    isShowingTemplates,
+    search,
+    isStock
+}) => {
+    let highlightedComponent = null;
+    let selectedBaseComponent = null;
+    let selectedSize = null;
+    let selectedColor = null;
+    const components = []
+    const componentTypeInformation = isStock ? STOCK_COMPONENT_INFO : COMPONENT_INFO;
+    for (const size in componentInfo) {
+        for (const color in componentInfo[size]) {
+            const component = componentTypeInformation[componentInfo[size][color]];
+            if (component.IsDisabled) {
+                continue;
+            }
+            if (component.Key === selectedComponentType || highlightedComponent == null) {
+                highlightedComponent = component;
+                selectedBaseComponent = name;
+                selectedSize = size;
+                selectedColor = color;
+            }
+            components.push(component);
         }
-        
-        return componentInfo["DisplayName"];
-    }, [componentInfo, name, sizeVariations, sizeInfo]);
+    }
+    if (components.length === 0) {
+        return null;
+    }
 
-    // Calculate total number of sizes (current + variations)
-    // Always at least 1 (the current size)
-    const totalSizes = (sizeVariations ? sizeVariations.length : 0) + (sizeInfo.size ? 1 : 0);
+    const isSelected = highlightedComponent.Key === selectedComponentType;
 
-    // Decide which preview path to use:
-    // 1. If TemplateFiles exists (and has at least one element), build the path using templateDirPath
-    // 2. Otherwise, fall back to the original PreviewUri
-    const previewSource = useMemo(() => {
-        if (componentInfo?.TemplateFiles?.length > 0 && isShowingTemplates) {
-            return loadTemplateImage(componentInfo.TemplateFiles[0]);
-        }
+    let previewSource = null;
+    if (highlightedComponent?.TemplateFiles?.length > 0 && isShowingTemplates) {
+        previewSource = loadTemplateImage(highlightedComponent.TemplateFiles[0]);
+    }
+    else if (highlightedComponent.PreviewUri) {
+        previewSource = loadPreviewImage(highlightedComponent.PreviewUri);
+    }
         
-        // Use the utility for loading PreviewUri
-        if (componentInfo.PreviewUri) {
-            return loadPreviewImage(componentInfo.PreviewUri);
-        }
-        
-        return "";
-    }, [componentInfo, isShowingTemplates]);
-
     return (
         <div className="component-type-wrapper">
             <button type="button" 
-                className={`btn btn-outline-primary component-type-card ${selectedComponentType === name && "selected-component-type"}`} 
-                onClick={() => selectTypeCallback(name)}
+                className={`btn btn-outline-primary component-type-card ${isSelected && "selected-component-type"}`} 
+                onClick={() => selectTypeCallback(selectedBaseComponent, selectedSize, selectedColor, highlightedComponent.Key)}
             >
                 <div className="component-type-content">
                     <div className="component-type-info">
-                        <p className="component-type-name">{existingQuantity !== 0 && `${existingQuantity}x `}{displayName}</p>
-                        {componentInfo["DimensionsPixels"] && (
+                        <p className="component-type-name">{name}</p>
+                        {highlightedComponent["DimensionsPixels"] && (
                             <p className="component-type-dimensions">
-                                {`${parseFloat(componentInfo["DimensionsPixels"][0]).toFixed(1)}x${parseFloat(componentInfo["DimensionsPixels"][1]).toFixed(1)}px ${componentInfo["SimulatorCreationTask"] || ""}`}
+                                {`${parseFloat(highlightedComponent["DimensionsPixels"][0]).toFixed(1)}x${parseFloat(highlightedComponent["DimensionsPixels"][1]).toFixed(1)}px ${highlightedComponent["SimulatorCreationTask"] || ""}`}
                             </p>
                         )}
                         
-                        {/* Only show the image if we have a valid previewSource */}
                         {previewSource && (
                             <div className="component-type-preview">
                                 <img 
                                     src={previewSource} 
-                                    alt={displayName}
+                                    alt={name}
                                     className="preview-image"
                                     onError={(e) => e.target.style.display = 'none'}
                                 />
                             </div>
                         )}
                         
-                        
-                        {/* Show size variations info if this component has a size */}
-                        {totalSizes > 1 && (
+                        {/* Show variations info if this component has variations */}
+                        {components.length > 1 && (
                             <p className="component-type-dimensions size-variations">
-                                {`Available in ${totalSizes} size${totalSizes > 1 ? 's' : ''}`}
+                                {`Available in ${components.length} variation${components.length > 1 ? 's' : ''}`}
                             </p>
                         )}
                     </div>
-                    <ExportIcons componentInfo={componentInfo} />
+                    <ExportIcons componentInfo={highlightedComponent} />
                 </div>
             </button>
         </div>

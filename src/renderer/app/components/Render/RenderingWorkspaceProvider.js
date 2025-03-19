@@ -23,6 +23,10 @@ class RenderingWorkspaceProvider extends React.Component {
         // Create
         componentName: "", //"citizens",
         selectedComponentType: undefined, //"CustomPrintedMeeple",
+        selectedMajorCategory: undefined,
+        selectedBaseComponent: undefined,
+        selectedSize: undefined,
+        selectedColor: undefined,
         isToggledToComponents: true,
         componentAIDescription: "",//"This is a deck of people. There are thirty cards in it. Each card has a shirt color, hat color, and pants color. The background of the card is three rectangles stacked on top of each other, with the top taking the hat color, the middle taking the shirt color, and the bottom taking the pants color. The name of each card is a random first name.",
         componentTypeSearch: "",
@@ -67,14 +71,22 @@ class RenderingWorkspaceProvider extends React.Component {
   toggleCustomOrStock = () => {
     this.setState(prevState => ({
       isToggledToComponents: !prevState.isToggledToComponents,
-      selectedComponentType: undefined
+      selectedComponentType: undefined,
+      selectedMajorCategory: undefined,
+      selectedBaseComponent: undefined,
+      selectedSize: undefined,
+      selectedColor: undefined
     }));
   };
 
-  selectComponent = (type) => {
-    console.log("selectComponent", type);
+  selectComponent = (category, baseComponent, size, color, type) => {
+    console.log("selectComponent", category, baseComponent, size, color, type);
     this.setState(prevState => ({
-      selectedComponentType: prevState.selectedComponentType === type ? undefined : type
+      selectedComponentType: prevState.selectedComponentType === type ? undefined : type,
+      selectedMajorCategory: category,
+      selectedBaseComponent: baseComponent,
+      selectedSize: size,
+      selectedColor: color
     }));
   };
 

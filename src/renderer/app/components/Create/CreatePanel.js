@@ -8,18 +8,17 @@ import ChosenComponent from "./ChosenComponent";
 import SearchComponentsBox from "./SearchComponentsBox";
 import { trackEvent } from "@aptabase/electron/renderer";
 import { RenderingWorkspaceContext } from '../Render/RenderingWorkspaceProvider';
+import { COMPONENT_CATEGORIES } from "../../../../shared/componentCategories";
+
 const { ipcRenderer } = window.require('electron');
 const { channels } = require('../../../../shared/constants');
 
 var path = require('path');
 
-const customMajorCategories = [
-    "packaging","stickers", "deck", "die", "premium", "board","token","mat","document", "blank", "screen", "dial"
-]
+// Extract major categories from COMPONENT_CATEGORIES structure
+const customMajorCategoryOrder = ["packaging", "stickers", "deck", "die", "premium", "board", "token", "mat", "document", "blank", "screen", "dial"];
 
-const stockMajorCategories = [
-    "dice", "premium", "packaging", 'sleeve', 'baggies', "cube", "tube", "blank", "building","meeple","TB", "minifig", "figurine", "animal",  "vehicle",  "casino", "money", "utility", "vial","symbol", "bodypart", "resource"
-]
+const stockMajorCategoryOrder = ["dice", "premium", "packaging", 'sleeve', 'baggies', "cube", "tube", "blank", "building", "meeple", "TB", "minifig", "figurine", "animal", "vehicle", "casino", "money", "utility", "vial", "symbol", "bodypart", "resource"];
 
 // Convert to functional component
 const CreatePanel = (props) => {
@@ -73,9 +72,12 @@ const CreatePanel = (props) => {
         }
     };
 
-    const componentTypes = context.isToggledToComponents ? props.componentTypesCustomInfo : props.componentTypesStockInfo;
-    const componentTypeOptions = Object.assign({}, componentTypes);
-    const isCreateButtonDisabled = isProcessing || context.componentName === "" || context.selectedComponentType === undefined;
+    // Get component types based on categories
+    const componentTypesCustomInfo = props.componentTypesCustomInfo || {};
+    const componentTypesStockInfo = props.componentTypesStockInfo || {};
+    const typeInfo = context.isToggledToComponents ? componentTypesCustomInfo : componentTypesStockInfo;
+    const componentMajorCategories = context.isToggledToComponents ? COMPONENT_CATEGORIES.CUSTOM : COMPONENT_CATEGORIES.STOCK;
+    const currentMajorCategoryOrder = context.isToggledToComponents ? customMajorCategoryOrder : stockMajorCategoryOrder;
     
     return (
         <div className='mainBody'>
@@ -86,19 +88,19 @@ const CreatePanel = (props) => {
                 setComponentTypeSearch={context.setComponentTypeSearch}
             />
             <ComponentTypeList 
-                majorCategories={context.isToggledToComponents ? customMajorCategories : stockMajorCategories}
+                majorCategoryOrder={currentMajorCategoryOrder}
+                componentMajorCategories={componentMajorCategories}
                 selectedTags={[]}  
+                typeInfo={typeInfo}
                 selectTypeCallback={context.selectComponent}
                 search={context.componentTypeSearch}
                 selectedComponentType={context.selectedComponentType}  
-                componentTypeOptions={componentTypeOptions}
                 isStock={!context.isToggledToComponents}
                 isShowingTemplates={false}
             />  
             <ChosenComponent 
                 isProcessing={isProcessing}
                 createComponent={createComponent}
-                componentTypeOptions={componentTypeOptions}
                 isToggledToComponents={context.isToggledToComponents}
             /> 
         </div>

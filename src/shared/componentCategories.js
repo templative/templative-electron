@@ -3,392 +3,368 @@ const COMPONENT_CATEGORIES = {
     "dice": {
       "D6": {
         "8mm": {
-          "White": "D6, 8mm, White",
-          "Black": "D6, 8mm, Black",
-          "Blue": "D6, 8mm, Blue",
-          "Green": "D6, 8mm, Green",
-          "Red": "D6, 8mm, Red"
+          "White": "D68mmWhite",
+          "Black": "D68mmBlack",
+          "Blue": "D68mmBlue",
+          "Green": "D68mmGreen",
+          "Red": "D68mmRed"
         },
         "16mm": {
-          "Yellow": "D6, 16mm, Yellow",
-          "Blue": "D6, 16mm, Blue",
-          "Black": "D6, 16mm, Black",
-          "Green": "D6, 16mm, Green",
-          "Purple": "D6, 16mm, Purple",
-          "Red": "D6, 16mm, Red",
-          "White": "D6, 16mm, White"
+          "Yellow": "D616mmYellow",
+          "Blue": "D616mmBlue",
+          "Black": "D616mmBlack",
+          "Green": "D616mmGreen",
+          "Purple": "D616mmPurple",
+          "Red": "D616mmRed",
+          "White": "D616mmWhite",
+          "Wood": "D616mmWood"
         },
         "12mm": {
-          "Blue": "D6, 12mm, Blue",
-          "Green": "D6, 12mm, Green",
-          "Red": "D6, 12mm, Red",
-          "White": "D6, 12mm, White",
-          "Yellow": "D6, 12mm, Yellow"
+          "Blue": "D612mmBlue",
+          "Green": "D612mmGreen",
+          "Red": "D612mmRed",
+          "White": "D612mmWhite",
+          "Yellow": "D612mmYellow",
+          "Caramel": "D612mmCaramel"
         },
         "14mm": {
-          "Black": "D6, 14mm, Black"
+          "Black": "D614mmBlack"
         }
       },
       "D6, Clear": {
         "12mm": {
-          "Colorless": "D6, 12mm, Clear"
+          "Colorless": "D612mmClear"
         }
       },
       "D12": {
         "Sizeless": {
-          "White": "D12, White",
-          "Black": "D12, Black",
-          "Blue": "D12, Blue",
-          "Green": "D12, Green",
-          "Red": "D12, Red",
-          "Yellow": "D12, Yellow"
+          "White": "D12White",
+          "Black": "D12Black",
+          "Blue": "D12Blue",
+          "Green": "D12Green",
+          "Red": "D12Red",
+          "Yellow": "D12Yellow"
         }
       },
       "D20": {
         "Sizeless": {
-          "Black": "D20, Black",
-          "Yellow": "D20, Yellow",
-          "White": "D20, White",
-          "Blue": "D20, Blue",
-          "Green": "D20, Green",
-          "Red": "D20, Red"
+          "Black": "D20Black",
+          "Yellow": "D20Yellow",
+          "White": "D20White",
+          "Blue": "D20Blue",
+          "Green": "D20Green",
+          "Red": "D20Red"
         }
       },
       "D10": {
         "Sizeless": {
-          "Black": "D10, Black",
-          "Blue": "D10, Blue",
-          "Green": "D10, Green",
-          "Red": "D10, Red",
-          "White": "D10, White",
-          "Yellow": "D10, Yellow"
+          "Black": "D10Black",
+          "Blue": "D10Blue",
+          "Green": "D10Green",
+          "Red": "D10Red",
+          "White": "D10White",
+          "Yellow": "D10Yellow"
         }
       },
       "D10x10": {
         "Sizeless": {
-          "Black": "D10x10, Black"
+          "Black": "D10x10Black"
         }
       },
-      "D10x10, Black on Color": {
+      "D10x10, Black on": {
         "Sizeless": {
-          "Red": "D10x10, Black on Red"
+          "Red": "D10x10BlackonRed"
         }
       },
-      "D10x10, White on Color": {
+      "D10x10, White on": {
         "Sizeless": {
-          "Red": "D10x10, White on Red"
+          "Red": "D10x10WhiteonRed"
         }
       },
       "D12, Body Parts": {
         "Sizeless": {
-          "Colorless": "D12, Body Parts"
+          "Colorless": "D12BodyParts"
         }
       },
       "D3, Rounded, Numeral": {
         "16mm": {
-          "Black": "D3, 16mm, Rounded, Numeral, Black",
-          "Blue": "D3, 16mm, Rounded, Numeral, Blue",
-          "Green": "D3, 16mm, Rounded, Numeral, Green",
-          "Red": "D3, 16mm, Rounded, Numeral, Red",
-          "White": "D3, 16mm, Rounded, Numeral, White",
-          "Yellow": "D3, 16mm, Rounded, Numeral, Yellow"
+          "Black": "D316mmRoundedNumeralBlack",
+          "Blue": "D316mmRoundedNumeralBlue",
+          "Green": "D316mmRoundedNumeralGreen",
+          "Red": "D316mmRoundedNumeralRed",
+          "White": "D316mmRoundedNumeralWhite",
+          "Yellow": "D316mmRoundedNumeralYellow"
         }
       },
       "D4": {
         "Sizeless": {
-          "Black": "D4, Black",
-          "Blue": "D4, Blue",
-          "Green": "D4, Green",
-          "Orange": "D4, Orange",
-          "Red": "D4, Red",
-          "White": "D4, White",
-          "Yellow": "D4, Yellow"
+          "Black": "D4Black",
+          "Blue": "D4Blue",
+          "Green": "D4Green",
+          "Orange": "D4Orange",
+          "Red": "D4Red",
+          "White": "D4White",
+          "Yellow": "D4Yellow"
         }
       },
       "D4, Blank": {
         "Sizeless": {
-          "Colorless": "D4, Blank"
+          "Colorless": "D4Blank"
         }
       },
       "D6, Marbled": {
         "12mm": {
-          "Black": "D6, 12mm, Marbled Black",
-          "Green": "D6, 12mm, Marbled Green"
+          "Black": "D612mmMarbledBlack",
+          "Green": "D612mmMarbledGreen"
         }
       },
       "D6, Rounded": {
         "12mm": {
-          "Blue": "D6, 12mm, Rounded, Blue"
+          "Blue": "D612mmRoundedBlue"
         }
       },
-      "D6, Rounded, Color/Black": {
+      "D6, Rounded, /Black": {
         "12mm": {
-          "Blue": "D6, 12mm, Rounded, Blue/Black",
-          "Golden": "D6, 12mm, Rounded, Golden/Black",
-          "Purple": "D6, 12mm, Rounded, Purple/Black",
-          "White": "D6, 12mm, Rounded, White/Black"
+          "Blue": "D612mmRoundedBlue/Black",
+          "Golden": "D612mmRoundedGolden/Black",
+          "Purple": "D612mmRoundedPurple/Black",
+          "White": "D612mmRoundedWhite/Black"
         }
       },
-      "D6, Rounded, Color/Blue": {
+      "D6, Rounded, /Blue": {
         "12mm": {
-          "Orange": "D6, 12mm, Rounded, Orange/Blue"
+          "Orange": "D612mmRoundedOrange/Blue"
         }
       },
       "D6, Transparent": {
         "12mm": {
-          "Black": "D6, 12mm, Transparent, Black",
-          "Blue": "D6, 12mm, Transparent, Blue",
-          "Green": "D6, 12mm, Transparent, Green",
-          "Orange": "D6, 12mm, Transparent, Orange",
-          "Purple": "D6, 12mm, Transparent, Purple",
-          "Red": "D6, 12mm, Transparent, Red",
-          "Yellow": "D6, 12mm, Transparent, Yellow"
+          "Black": "D612mmTransparentBlack",
+          "Blue": "D612mmTransparentBlue",
+          "Green": "D612mmTransparentGreen",
+          "Orange": "D612mmTransparentOrange",
+          "Purple": "D612mmTransparentPurple",
+          "Red": "D612mmTransparentRed",
+          "Yellow": "D612mmTransparentYellow"
         }
       },
       "D6, Bold Numeral": {
         "15mm": {
-          "Red": "D6, 15mm, Bold Numeral, Red"
+          "Red": "D615mmBoldNumeralRed"
         }
       },
       "D6, Numeral": {
         "15mm": {
-          "Blue": "D6, 15mm, Numeral, Blue",
-          "Green": "D6, 15mm, Numeral, Green",
-          "Gray": "D6, 15mm, Numeral, Gray"
+          "Blue": "D615mmNumeralBlue",
+          "Green": "D615mmNumeralGreen",
+          "Gray": "D615mmNumeralGray"
         },
         "16mm": {
-          "Black": "D6, 16mm, Numeral, Black"
+          "Black": "D616mmNumeralBlack"
         }
       },
       "D6, Betrayal": {
         "16mm": {
-          "Colorless": "D6, 16mm, Betrayal"
+          "Colorless": "D616mmBetrayal"
         }
       },
       "D6, Binary": {
         "16mm": {
-          "Colorless": "D6, 16mm, Binary"
+          "Colorless": "D616mmBinary"
         }
       },
-      "D6, Black on Color": {
+      "D6, Black on": {
         "16mm": {
-          "Blue": "D6, 16mm, Black on Blue",
-          "Pink": "D6, 16mm, Black on Pink"
+          "Blue": "D616mmBlackonBlue",
+          "Pink": "D616mmBlackonPink"
         }
       },
       "D6, Blank": {
         "16mm": {
-          "Black": "D6, 16mm, Blank, Black",
-          "Blue": "D6, 16mm, Blank, Blue",
-          "Green": "D6, 16mm, Blank, Green",
-          "Orange": "D6, 16mm, Blank, Orange",
-          "Purple": "D6, 16mm, Blank, Purple",
-          "Red": "D6, 16mm, Blank, Red",
-          "White": "D6, 16mm, Blank, White",
-          "Yellow": "D6, 16mm, Blank, Yellow"
+          "Black": "D616mmBlankBlack",
+          "Blue": "D616mmBlankBlue",
+          "Green": "D616mmBlankGreen",
+          "Orange": "D616mmBlankOrange",
+          "Purple": "D616mmBlankPurple",
+          "Red": "D616mmBlankRed",
+          "White": "D616mmBlankWhite",
+          "Yellow": "D616mmBlankYellow"
         }
       },
       "D6, Blank, Wood, Dark": {
         "16mm": {
-          "Colorless": "D6, 16mm, Blank, Wood, Dark"
+          "Colorless": "D616mmBlankWoodDark"
         }
       },
       "D6, Lightning Bolt": {
         "16mm": {
-          "Black": "D6, 16mm, Lightning Bolt, Black",
-          "Blue": "D6, 16mm, Lightning Bolt, Blue",
-          "Brown": "D6, 16mm, Lightning Bolt, Brown",
-          "Green": "D6, 16mm, Lightning Bolt, Green",
-          "Yellow": "D6, 16mm, Lightning Bolt, Yellow"
+          "Black": "D616mmLightningBoltBlack",
+          "Blue": "D616mmLightningBoltBlue",
+          "Brown": "D616mmLightningBoltBrown",
+          "Green": "D616mmLightningBoltGreen",
+          "Yellow": "D616mmLightningBoltYellow"
         }
       },
       "D6, Rounded, Pearl": {
         "16mm": {
-          "Black": "D6, 16mm, Rounded, Black Pearl",
-          "Blue": "D6, 16mm, Rounded, Blue Pearl",
-          "Brown": "D6, 16mm, Rounded, Brown Pearl",
-          "Green": "D6, 16mm, Rounded, Green Pearl",
-          "White": "D6, 16mm, Rounded, White Pearl"
+          "Black": "D616mmRoundedBlackPearl",
+          "Blue": "D616mmRoundedBluePearl",
+          "Brown": "D616mmRoundedBrownPearl",
+          "Green": "D616mmRoundedGreenPearl",
+          "White": "D616mmRoundedWhitePearl"
         }
       },
       "D6, Rounded, Opaque": {
         "16mm": {
-          "Brown": "D6, 16mm, Rounded, Brown Opaque",
-          "Orange": "D6, 16mm, Rounded, Orange Opaque"
+          "Brown": "D616mmRoundedBrownOpaque",
+          "Orange": "D616mmRoundedOrangeOpaque"
         }
       },
       "D6, Sicherman, High": {
         "16mm": {
-          "Colorless": "D6, 16mm, Sicherman, High"
+          "Colorless": "D616mmSichermanHigh"
         }
       },
       "D6, Sicherman, Low": {
         "16mm": {
-          "Colorless": "D6, 16mm, Sicherman, Low"
+          "Colorless": "D616mmSichermanLow"
         }
       },
-      "D6, Symbol, Ivory": {
+      "D6, Symbol": {
         "16mm": {
-          "Colorless": "D6, 16mm, Symbol, Ivory"
-        }
-      },
-      "D6, Wood": {
-        "16mm": {
-          "Colorless": "D6, 16mm, Wood"
+          "Ivory": "D616mmSymbolIvory"
         }
       },
       "D6, Animal Symbols": {
         "25mm": {
-          "Colorless": "D6, 25mm, Animal Symbols"
+          "Colorless": "D625mmAnimalSymbols"
         }
       },
-      "D6, Alien, Black on Color": {
+      "D6, Alien, Black on": {
         "Sizeless": {
-          "Green": "D6, Alien, Black on Green"
+          "Green": "D6AlienBlackonGreen"
         }
       },
-      "D6, Alien, Red on Color": {
+      "D6, Alien, Red on": {
         "Sizeless": {
-          "Green": "D6, Alien, Red on Green"
+          "Green": "D6AlienRedonGreen"
         }
       },
       "D6, Colors": {
         "Sizeless": {
-          "Colorless": "D6, Colors"
+          "Colorless": "D6Colors"
         }
       },
       "D6, Dinosaur": {
         "Sizeless": {
-          "Colorless": "D6, Dinosaur"
+          "Colorless": "D6Dinosaur"
         }
       },
       "D6, Emotion": {
         "Sizeless": {
-          "Colorless": "D6, Emotion"
+          "Colorless": "D6Emotion"
         }
       },
       "D6, Indented, Blank": {
         "Sizeless": {
-          "Blue": "D6, Indented, Blank, Blue",
-          "Green": "D6, Indented, Blank, Green",
-          "Orange": "D6, Indented, Blank, Orange",
-          "Purple": "D6, Indented, Blank, Purple",
-          "Red": "D6, Indented, Blank, Red",
-          "White": "D6, Indented, Blank, White",
-          "Yellow": "D6, Indented, Blank, Yellow"
-        }
-      },
-      "D6, Indented, Blank, Dark": {
-        "Sizeless": {
-          "Blue": "D6, Indented, Blank, Dark Blue"
-        }
-      },
-      "D6, Indented, Blank, Lavender": {
-        "Sizeless": {
-          "Colorless": "D6, Indented, Blank, Lavender"
-        }
-      },
-      "D6, Indented, Blank, Light": {
-        "Sizeless": {
-          "Blue": "D6, Indented, Blank, Light Blue"
-        }
-      },
-      "D6, Indented, Blank, Lime": {
-        "Sizeless": {
-          "Green": "D6, Indented, Blank, Lime Green"
+          "Blue": "D6IndentedBlankBlue",
+          "Dark Blue": "D6IndentedBlankDarkBlue",
+          "Green": "D6IndentedBlankGreen",
+          "Lavender": "D6IndentedBlankLavender",
+          "Light Blue": "D6IndentedBlankLightBlue",
+          "Lime Green": "D6IndentedBlankLimeGreen",
+          "Orange": "D6IndentedBlankOrange",
+          "Purple": "D6IndentedBlankPurple",
+          "Red": "D6IndentedBlankRed",
+          "White": "D6IndentedBlankWhite",
+          "Yellow": "D6IndentedBlankYellow"
         }
       },
       "D6, Interrogative": {
         "Sizeless": {
-          "Colorless": "D6, Interrogative"
+          "Colorless": "D6Interrogative"
         }
       },
       "D6, Natural Shapes": {
         "Sizeless": {
-          "Colorless": "D6, Natural Shapes"
+          "Colorless": "D6NaturalShapes"
         }
       },
       "D6, Negative Counter": {
         "Sizeless": {
-          "Colorless": "D6, Negative Counter"
+          "Colorless": "D6NegativeCounter"
         }
       },
       "D6, Parts of Speech": {
         "Sizeless": {
-          "Colorless": "D6, Parts of Speech"
+          "Colorless": "D6PartsofSpeech"
         }
       },
       "D6, Positive Counter": {
         "Sizeless": {
-          "Colorless": "D6, Positive Counter"
+          "Colorless": "D6PositiveCounter"
         }
       },
       "D6, Shapes": {
         "Sizeless": {
-          "Colorless": "D6, Shapes"
+          "Colorless": "D6Shapes"
         }
       },
       "D6, Species": {
         "Sizeless": {
-          "Colorless": "D6, Species"
+          "Colorless": "D6Species"
         }
       },
       "D6, Train": {
         "18mm": {
-          "White": "D6, Train, 18mm, White"
+          "White": "D6Train18mmWhite"
         }
       },
       "D6, Woodland Animals": {
         "Sizeless": {
-          "Colorless": "D6, Woodland Animals"
+          "Colorless": "D6WoodlandAnimals"
         }
       },
       "D8": {
         "Sizeless": {
-          "Black": "D8, Black",
-          "Blue": "D8, Blue",
-          "Green": "D8, Green",
-          "Red": "D8, Red",
-          "White": "D8, White",
-          "Yellow": "D8, Yellow"
+          "Black": "D8Black",
+          "Blue": "D8Blue",
+          "Green": "D8Green",
+          "Red": "D8Red",
+          "White": "D8White",
+          "Yellow": "D8Yellow"
         }
       },
       "D8, Blank": {
         "Sizeless": {
-          "Colorless": "D8, Blank"
+          "Colorless": "D8Blank"
         }
       },
       "D8, Compass": {
         "Sizeless": {
-          "Colorless": "D8, Compass"
+          "Colorless": "D8Compass"
         }
       },
       "Rocket Dice": {
         "Sizeless": {
-          "Black": "Rocket Dice, Black",
-          "Blue": "Rocket Dice, Blue",
-          "Brown": "Rocket Dice, Brown",
-          "Green": "Rocket Dice, Green",
-          "Gray": "Rocket Dice, Gray",
-          "Pink": "Rocket Dice, Pink",
-          "Purple": "Rocket Dice, Purple",
-          "Red": "Rocket Dice, Red",
-          "White": "Rocket Dice, White"
+          "Black": "RocketDiceBlack",
+          "Blue": "RocketDiceBlue",
+          "Brown": "RocketDiceBrown",
+          "Green": "RocketDiceGreen",
+          "Gray": "RocketDiceGray",
+          "Pink": "RocketDicePink",
+          "Purple": "RocketDicePurple",
+          "Red": "RocketDiceRed",
+          "White": "RocketDiceWhite"
         }
       },
       "Rocket Dice, Frost": {
         "Sizeless": {
-          "White": "Rocket Dice, Frost White"
+          "White": "RocketDiceFrostWhite"
         }
       },
       "D16": {
         "Sizeless": {
-          "Purple": "D16, Purple"
-        }
-      },
-      "D6, Caramel": {
-        "12mm": {
-          "Colorless": "D6, 12mm, Caramel"
+          "Purple": "D16Purple"
         }
       }
     },
@@ -400,7 +376,7 @@ const COMPONENT_CATEGORIES = {
       },
       "Broken Column": {
         "Sizeless": {
-          "Colorless": "Broken Column"
+          "Colorless": "BrokenColumn"
         }
       },
       "Campfire": {
@@ -420,82 +396,82 @@ const COMPONENT_CATEGORIES = {
       },
       "Computer Desk": {
         "Sizeless": {
-          "Colorless": "Computer Desk"
+          "Colorless": "ComputerDesk"
         }
       },
       "Fence, Wicker": {
         "Sizeless": {
-          "Colorless": "Fence, Wicker"
+          "Colorless": "FenceWicker"
         }
       },
       "Handmade Campfire": {
         "Sizeless": {
-          "Colorless": "Handmade Campfire"
+          "Colorless": "HandmadeCampfire"
         }
       },
       "Handmade Coal": {
         "Sizeless": {
-          "Colorless": "Handmade Coal"
+          "Colorless": "HandmadeCoal"
         }
       },
       "Handmade Corn": {
         "Sizeless": {
-          "Colorless": "Handmade Corn"
+          "Colorless": "HandmadeCorn"
         }
       },
       "Handmade Fence": {
         "Sizeless": {
-          "Colorless": "Handmade Fence"
+          "Colorless": "HandmadeFence"
         }
       },
       "Handmade Grape": {
         "Sizeless": {
-          "Colorless": "Handmade Grape"
+          "Colorless": "HandmadeGrape"
         }
       },
       "Handmade Oil Drum": {
         "Sizeless": {
-          "Colorless": "Handmade Oil Drum"
+          "Colorless": "HandmadeOilDrum"
         }
       },
       "Handmade Pumpkin": {
         "Sizeless": {
-          "Colorless": "Handmade Pumpkin"
+          "Colorless": "HandmadePumpkin"
         }
       },
       "Handmade Reed": {
         "Sizeless": {
-          "Colorless": "Handmade Reed"
+          "Colorless": "HandmadeReed"
         }
       },
       "Handmade Skull": {
         "Sizeless": {
-          "Colorless": "Handmade Skull"
+          "Colorless": "HandmadeSkull"
         }
       },
       "Handmade Trash Can": {
         "Sizeless": {
-          "Colorless": "Handmade Trash Can"
+          "Colorless": "HandmadeTrashCan"
         }
       },
       "Handmade Trough": {
         "Sizeless": {
-          "Colorless": "Handmade Trough"
+          "Colorless": "HandmadeTrough"
         }
       },
       "Handmade Uranium Rod": {
         "Sizeless": {
-          "Colorless": "Handmade Uranium Rod"
+          "Colorless": "HandmadeUraniumRod"
         }
       },
       "Handmade Wheat": {
         "Sizeless": {
-          "Colorless": "Handmade Wheat"
+          "Colorless": "HandmadeWheat"
         }
       },
       "Lamp Post": {
         "Sizeless": {
-          "Colorless": "Lamp Post"
+          "Colorless": "LampPost"
         }
       },
       "Lantern": {
@@ -503,14 +479,14 @@ const COMPONENT_CATEGORIES = {
           "Colorless": "Lantern"
         }
       },
-      "Large Treasure Chest (closed)": {
+      "Treasure Chest (closed)": {
         "Large": {
-          "Colorless": "Large Treasure Chest (closed)"
+          "Colorless": "LargeTreasureChest(closed)"
         }
       },
       "Notice Board": {
         "Sizeless": {
-          "Colorless": "Notice Board"
+          "Colorless": "NoticeBoard"
         }
       },
       "Pentagram": {
@@ -520,242 +496,242 @@ const COMPONENT_CATEGORIES = {
       },
       "Premium Apple": {
         "Sizeless": {
-          "Colorless": "Premium Apple"
+          "Colorless": "PremiumApple"
         }
       },
       "Premium Axe": {
         "Sizeless": {
-          "Colorless": "Premium Axe"
+          "Colorless": "PremiumAxe"
         }
       },
       "Premium Barrel": {
         "Sizeless": {
-          "Colorless": "Premium Barrel"
+          "Colorless": "PremiumBarrel"
         }
       },
       "Premium Bee": {
         "Sizeless": {
-          "Colorless": "Premium Bee"
+          "Colorless": "PremiumBee"
         }
       },
       "Premium Blue Cloth Bundle": {
         "Sizeless": {
-          "Colorless": "Premium Blue Cloth Bundle"
+          "Colorless": "PremiumBlueClothBundle"
         }
       },
       "Premium Brain": {
         "Sizeless": {
-          "Colorless": "Premium Brain"
+          "Colorless": "PremiumBrain"
         }
       },
       "Premium Brown Spice Sack": {
         "Sizeless": {
-          "Colorless": "Premium Brown Spice Sack"
+          "Colorless": "PremiumBrownSpiceSack"
         }
       },
       "Premium Buckler": {
         "Sizeless": {
-          "Colorless": "Premium Buckler"
+          "Colorless": "PremiumBuckler"
         }
       },
       "Premium Campfire": {
         "Sizeless": {
-          "Colorless": "Premium Campfire"
+          "Colorless": "PremiumCampfire"
         }
       },
       "Premium Cinder Block": {
         "Sizeless": {
-          "Colorless": "Premium Cinder Block"
+          "Colorless": "PremiumCinderBlock"
         }
       },
       "Premium Coal": {
         "Sizeless": {
-          "Colorless": "Premium Coal"
+          "Colorless": "PremiumCoal"
         }
       },
       "Premium Copper Ingot": {
         "Sizeless": {
-          "Colorless": "Premium Copper Ingot"
+          "Colorless": "PremiumCopperIngot"
         }
       },
       "Premium Corn": {
         "Sizeless": {
-          "Colorless": "Premium Corn"
+          "Colorless": "PremiumCorn"
         }
       },
       "Premium Crate": {
         "Sizeless": {
-          "Colorless": "Premium Crate"
+          "Colorless": "PremiumCrate"
         }
       },
       "Premium Dog": {
         "Sizeless": {
-          "Colorless": "Premium Dog"
+          "Colorless": "PremiumDog"
         }
       },
       "Premium Energy Cell": {
         "Sizeless": {
-          "Colorless": "Premium Energy Cell"
+          "Colorless": "PremiumEnergyCell"
         }
       },
       "Premium Fur Bundle": {
         "Sizeless": {
-          "Colorless": "Premium Fur Bundle"
+          "Colorless": "PremiumFurBundle"
         }
       },
       "Premium Gold Ingot": {
         "Sizeless": {
-          "Colorless": "Premium Gold Ingot"
+          "Colorless": "PremiumGoldIngot"
         }
       },
       "Premium Gold Nugget": {
         "Sizeless": {
-          "Colorless": "Premium Gold Nugget"
+          "Colorless": "PremiumGoldNugget"
         }
       },
       "Premium Grain Sack": {
         "Sizeless": {
-          "Colorless": "Premium Grain Sack"
+          "Colorless": "PremiumGrainSack"
         }
       },
       "Premium Green Spice Sack": {
         "Sizeless": {
-          "Colorless": "Premium Green Spice Sack"
+          "Colorless": "PremiumGreenSpiceSack"
         }
       },
       "Premium Heart": {
         "Sizeless": {
-          "Colorless": "Premium Heart"
+          "Colorless": "PremiumHeart"
         }
       },
       "Premium Horse": {
         "Sizeless": {
-          "Colorless": "Premium Horse"
+          "Colorless": "PremiumHorse"
         }
       },
       "Premium Iron Ingot": {
         "Sizeless": {
-          "Colorless": "Premium Iron Ingot"
+          "Colorless": "PremiumIronIngot"
         }
       },
       "Premium Leather Bag": {
         "Sizeless": {
-          "Colorless": "Premium Leather Bag"
+          "Colorless": "PremiumLeatherBag"
         }
       },
       "Premium Leather Scroll": {
         "Sizeless": {
-          "Colorless": "Premium Leather Scroll"
+          "Colorless": "PremiumLeatherScroll"
         }
       },
       "Premium LP Gas Can": {
         "Sizeless": {
-          "Colorless": "Premium LP Gas Can"
+          "Colorless": "PremiumLPGasCan"
         }
       },
       "Premium Magnifying Glass": {
         "Sizeless": {
-          "Colorless": "Premium Magnifying Glass"
+          "Colorless": "PremiumMagnifyingGlass"
         }
       },
       "Premium Marble Tile": {
         "Sizeless": {
-          "Colorless": "Premium Marble Tile"
+          "Colorless": "PremiumMarbleTile"
         }
       },
       "Premium Oil Drum": {
         "Sizeless": {
-          "Colorless": "Premium Oil Drum"
+          "Colorless": "PremiumOilDrum"
         }
       },
       "Premium Orange Cloth Bundle": {
         "Sizeless": {
-          "Colorless": "Premium Orange Cloth Bundle"
+          "Colorless": "PremiumOrangeClothBundle"
         }
       },
       "Premium Ore": {
         "Sizeless": {
-          "Colorless": "Premium Ore"
+          "Colorless": "PremiumOre"
         }
       },
       "Premium Potion Bottle": {
         "Sizeless": {
-          "Colorless": "Premium Potion Bottle"
+          "Colorless": "PremiumPotionBottle"
         }
       },
       "Premium Pumpkin": {
         "Sizeless": {
-          "Colorless": "Premium Pumpkin"
+          "Colorless": "PremiumPumpkin"
         }
       },
       "Premium Purple Cloth Bundle": {
         "Sizeless": {
-          "Colorless": "Premium Purple Cloth Bundle"
+          "Colorless": "PremiumPurpleClothBundle"
         }
       },
       "Premium Red Spice Sack": {
         "Sizeless": {
-          "Colorless": "Premium Red Spice Sack"
+          "Colorless": "PremiumRedSpiceSack"
         }
       },
       "Premium Sealed Scroll": {
         "Sizeless": {
-          "Colorless": "Premium Sealed Scroll"
+          "Colorless": "PremiumSealedScroll"
         }
       },
       "Premium Skull": {
         "Sizeless": {
-          "Colorless": "Premium Skull"
+          "Colorless": "PremiumSkull"
         }
       },
       "Premium Space Crate": {
         "Sizeless": {
-          "Colorless": "Premium Space Crate"
+          "Colorless": "PremiumSpaceCrate"
         }
       },
       "Premium Tome": {
         "Sizeless": {
-          "Colorless": "Premium Tome"
+          "Colorless": "PremiumTome"
         }
       },
       "Premium Trash Can": {
         "Sizeless": {
-          "Colorless": "Premium Trash Can"
+          "Colorless": "PremiumTrashCan"
         }
       },
       "Premium Treasure Chest": {
         "Sizeless": {
-          "Colorless": "Premium Treasure Chest"
+          "Colorless": "PremiumTreasureChest"
         }
       },
       "Premium Uranium Rod": {
         "Sizeless": {
-          "Colorless": "Premium Uranium Rod"
+          "Colorless": "PremiumUraniumRod"
         }
       },
       "Premium Water Bucket": {
         "Sizeless": {
-          "Colorless": "Premium Water Bucket"
+          "Colorless": "PremiumWaterBucket"
         }
       },
       "Premium White Cloth Bundle": {
         "Sizeless": {
-          "Colorless": "Premium White Cloth Bundle"
+          "Colorless": "PremiumWhiteClothBundle"
         }
       },
       "Premium White Spice Sack": {
         "Sizeless": {
-          "Colorless": "Premium White Spice Sack"
+          "Colorless": "PremiumWhiteSpiceSack"
         }
       },
-      "Premium Wood": {
+      "Premium": {
         "Sizeless": {
-          "Colorless": "Premium Wood"
+          "Wood": "PremiumWood"
         }
       },
       "Premium Yarn Ball": {
         "Sizeless": {
-          "Colorless": "Premium Yarn Ball"
+          "Colorless": "PremiumYarnBall"
         }
       },
       "Rifle": {
@@ -770,17 +746,17 @@ const COMPONENT_CATEGORIES = {
       },
       "T-Bar": {
         "Sizeless": {
-          "Brown": "T-Bar, Brown"
+          "Brown": "T-BarBrown"
         }
       },
       "Table": {
         "Sizeless": {
-          "Orange": "Table, Orange"
+          "Orange": "TableOrange"
         }
       },
       "Toilet Paper": {
         "Sizeless": {
-          "Colorless": "Toilet Paper"
+          "Colorless": "ToiletPaper"
         }
       },
       "Tombstone": {
@@ -790,3645 +766,3573 @@ const COMPONENT_CATEGORIES = {
       },
       "Top Hat": {
         "Sizeless": {
-          "Colorless": "Top Hat"
+          "Colorless": "TopHat"
         }
       },
       "Traffic Cone": {
         "Sizeless": {
-          "Colorless": "Traffic Cone"
+          "Colorless": "TrafficCone"
         }
       },
       "Treasure Chest Container": {
         "Sizeless": {
-          "Colorless": "Treasure Chest Container"
+          "Colorless": "TreasureChestContainer"
         }
       },
       "Valve Control Station": {
         "Sizeless": {
-          "Colorless": "Valve Control Station"
+          "Colorless": "ValveControlStation"
         }
       },
       "Walker Driver, Space": {
         "Sizeless": {
-          "Colorless": "Walker Driver, Space"
+          "Colorless": "WalkerDriverSpace"
         }
       },
       "Wall, Sandbags": {
         "Sizeless": {
-          "Colorless": "Wall, Sandbags"
+          "Colorless": "WallSandbags"
         }
       },
       "Wall, Stone": {
         "Sizeless": {
-          "Colorless": "Wall, Stone"
+          "Colorless": "WallStone"
         }
       },
       "Premium Beer Mug": {
         "Sizeless": {
-          "Colorless": "Premium Beer Mug"
+          "Colorless": "PremiumBeerMug"
         }
       },
       "Premium Blood Droplet": {
         "Sizeless": {
-          "Colorless": "Premium Blood Droplet"
+          "Colorless": "PremiumBloodDroplet"
         }
       },
       "Premium Blue Tome": {
         "Sizeless": {
-          "Colorless": "Premium Blue Tome"
+          "Colorless": "PremiumBlueTome"
         }
       },
       "Premium Brown Mushroom": {
         "Sizeless": {
-          "Colorless": "Premium Brown Mushroom"
+          "Colorless": "PremiumBrownMushroom"
         }
       },
       "Premium Bullet": {
         "Sizeless": {
-          "Colorless": "Premium Bullet"
+          "Colorless": "PremiumBullet"
         }
       },
       "Premium Coffee Bean": {
         "Sizeless": {
-          "Colorless": "Premium Coffee Bean"
+          "Colorless": "PremiumCoffeeBean"
         }
       },
       "Premium Deflector Shield": {
         "Sizeless": {
-          "Colorless": "Premium Deflector Shield"
+          "Colorless": "PremiumDeflectorShield"
         }
       },
       "Premium Explosion": {
         "Sizeless": {
-          "Colorless": "Premium Explosion"
+          "Colorless": "PremiumExplosion"
         }
       },
       "Premium Gas Can": {
         "Sizeless": {
-          "Colorless": "Premium Gas Can"
+          "Colorless": "PremiumGasCan"
         }
       },
       "Premium Green Leaf": {
         "Sizeless": {
-          "Colorless": "Premium Green Leaf"
+          "Colorless": "PremiumGreenLeaf"
         }
       },
       "Premium Hammer": {
         "Sizeless": {
-          "Colorless": "Premium Hammer"
+          "Colorless": "PremiumHammer"
         }
       },
       "Premium Ice Crystals": {
         "Sizeless": {
-          "Colorless": "Premium Ice Crystals"
+          "Colorless": "PremiumIceCrystals"
         }
       },
       "Premium Med Kit": {
         "Sizeless": {
-          "Colorless": "Premium Med Kit"
+          "Colorless": "PremiumMedKit"
         }
       },
       "Premium Milk Bottle": {
         "Sizeless": {
-          "Colorless": "Premium Milk Bottle"
+          "Colorless": "PremiumMilkBottle"
         }
       },
       "Premium Mushroom": {
         "Sizeless": {
-          "Colorless": "Premium Mushroom"
+          "Colorless": "PremiumMushroom"
         }
       },
       "Premium Orange Tome": {
         "Sizeless": {
-          "Colorless": "Premium Orange Tome"
+          "Colorless": "PremiumOrangeTome"
         }
       },
       "Premium Pile of Bones": {
         "Sizeless": {
-          "Colorless": "Premium Pile of Bones"
+          "Colorless": "PremiumPileofBones"
         }
       },
       "Premium Present": {
         "Sizeless": {
-          "Colorless": "Premium Present"
+          "Colorless": "PremiumPresent"
         }
       },
       "Premium Purple Grapes": {
         "Sizeless": {
-          "Colorless": "Premium Purple Grapes"
+          "Colorless": "PremiumPurpleGrapes"
         }
       },
       "Premium Smoke Cloud": {
         "Sizeless": {
-          "Colorless": "Premium Smoke Cloud"
+          "Colorless": "PremiumSmokeCloud"
         }
       },
       "Premium Stone": {
         "Sizeless": {
-          "Colorless": "Premium Stone"
+          "Colorless": "PremiumStone"
         }
       },
       "Premium Tech Tablet": {
         "Sizeless": {
-          "Colorless": "Premium Tech Tablet"
+          "Colorless": "PremiumTechTablet"
         }
       },
       "Premium Tentacle": {
         "Sizeless": {
-          "Colorless": "Premium Tentacle"
+          "Colorless": "PremiumTentacle"
         }
       },
       "Premium Toxic Waste": {
         "Sizeless": {
-          "Colorless": "Premium Toxic Waste"
+          "Colorless": "PremiumToxicWaste"
         }
       },
       "Premium Water Droplet": {
         "Sizeless": {
-          "Colorless": "Premium Water Droplet"
+          "Colorless": "PremiumWaterDroplet"
         }
       },
       "Premium Wheat Bundle": {
         "Sizeless": {
-          "Colorless": "Premium Wheat Bundle"
+          "Colorless": "PremiumWheatBundle"
         }
       },
       "Premium White Sheaf": {
         "Sizeless": {
-          "Colorless": "Premium White Sheaf"
+          "Colorless": "PremiumWhiteSheaf"
         }
       },
       "Premium Wrench": {
         "Sizeless": {
-          "Colorless": "Premium Wrench"
+          "Colorless": "PremiumWrench"
         }
       }
     },
     "packaging": {
       "Box Insert, Pro": {
         "Medium": {
-          "Colorless": "Box Insert, Pro, Medium"
+          "Colorless": "BoxInsertProMedium"
         },
         "Small": {
-          "Colorless": "Box Insert, Pro, Small"
+          "Colorless": "BoxInsertProSmall"
         }
       },
       "Box Insert, Stout": {
         "Small": {
-          "Colorless": "Box Insert, Stout, Small"
+          "Colorless": "BoxInsertStoutSmall"
         }
       },
       "Card Envelope": {
         "Sizeless": {
-          "Colorless": "Card Envelope",
-          "White": "Card Envelope, White"
+          "Colorless": "CardEnvelope",
+          "White": "CardEnvelopeWhite"
         }
       },
-      "Clear Poker Tuck Box (200)": {
-        "200": {
-          "Colorless": "Clear Poker Tuck Box (200)"
-        }
-      },
-      "Clear Poker Tuck Box (41)": {
+      "Clear Poker Tuck Box": {
         "41": {
-          "Colorless": "Clear Poker Tuck Box (41)"
-        }
-      },
-      "Clear Poker Tuck Box (66)": {
+          "Colorless": "ClearPokerTuckBox(41)"
+        },
         "66": {
-          "Colorless": "Clear Poker Tuck Box (66)"
+          "Colorless": "ClearPokerTuckBox(66)"
+        },
+        "200": {
+          "Colorless": "ClearPokerTuckBox(200)"
         }
       },
       "Deck Box, Blank": {
         "Sizeless": {
-          "Colorless": "Deck Box, Blank"
+          "Colorless": "DeckBoxBlank"
         }
       },
       "Euro Poker Tin": {
         "Sizeless": {
-          "Colorless": "Euro Poker Tin"
+          "Colorless": "EuroPokerTin"
         }
       },
       "Hang Tabs, Triangle (pack of 20)": {
         "Sizeless": {
-          "Colorless": "Hang Tabs, Triangle (pack of 20)"
+          "Colorless": "HangTabsTriangle(packof20)"
         }
       },
       "Blank Mint Tin": {
         "Sizeless": {
-          "Colorless": "Blank Mint Tin"
+          "Colorless": "MintTin"
         }
       },
       "Mint Tin Ribbon": {
         "Sizeless": {
-          "Colorless": "Mint Tin Ribbon"
+          "Colorless": "MintTinRibbon"
         }
       },
       "Mint Tin": {
         "Tall": {
-          "Colorless": "Mint Tin, Tall"
+          "Colorless": "MintTinTall"
         }
       },
       "Parts Bowl": {
         "70mm": {
-          "Colorless": "Parts Bowl, 70mm"
+          "Colorless": "PartsBowl70mm"
         }
       },
       "Parts Tray": {
         "Sizeless": {
-          "Colorless": "Parts Tray"
+          "Colorless": "PartsTray"
         }
       },
       "Storage Jar, Round, Clear": {
         "Sizeless": {
-          "Colorless": "Storage Jar, Round, Clear"
+          "Colorless": "StorageJarRoundClear"
         }
       },
       "Storage Jar, Tin": {
         "Sizeless": {
-          "Colorless": "Storage Jar, Tin"
+          "Colorless": "StorageJarTin"
         }
       },
       "Deck Storage, Clear": {
         "Sizeless": {
-          "Colorless": "Deck Storage, Clear"
+          "Colorless": "DeckStorageClear"
         }
       },
-      "Large Black Tin": {
+      "Black Tin": {
         "Large": {
-          "Colorless": "Large Black Tin"
+          "Colorless": "LargeBlackTin"
         }
       }
     },
     "sleeve": {
-      "Jumbo Sleeve Pack (100)": {
+      "Jumbo Sleeve Pack": {
         "100": {
-          "Colorless": "Jumbo Sleeve Pack (100)"
+          "Colorless": "JumboSleevePack(100)"
         }
       },
-      "Mini Sleeve Pack (100)": {
+      "Mini Sleeve Pack": {
         "100": {
-          "Colorless": "Mini Sleeve Pack (100)"
+          "Colorless": "MiniSleevePack(100)"
         }
       },
-      "Tarot Sleeve Pack (100)": {
+      "Tarot Sleeve Pack": {
         "100": {
-          "Colorless": "Tarot Sleeve Pack (100)"
+          "Colorless": "TarotSleevePack(100)"
         }
       },
-      "Bridge Sleeve Pack (100)": {
+      "Bridge Sleeve Pack": {
         "100": {
-          "Colorless": "Bridge Sleeve Pack (100)"
+          "Colorless": "BridgeSleevePack(100)"
         }
       },
-      "Poker Sleeve Pack (100)": {
+      "Poker Sleeve Pack": {
         "100": {
-          "Colorless": "Poker Sleeve Pack (100)"
+          "Colorless": "PokerSleevePack(100)"
         }
       }
     },
     "baggies": {
       "11 X 11 Baggies": {
         "Sizeless": {
-          "Colorless": "11 X 11 Baggies"
+          "Colorless": "11X11Baggies"
         }
       },
       "3 X 4 Baggies": {
         "Sizeless": {
-          "Colorless": "3 X 4 Baggies"
+          "Colorless": "3X4Baggies"
         }
       },
       "4 X 10 Baggies": {
         "Sizeless": {
-          "Colorless": "4 X 10 Baggies"
+          "Colorless": "4X10Baggies"
         }
       },
       "4 X 5 Baggies": {
         "Sizeless": {
-          "Colorless": "4 X 5 Baggies"
+          "Colorless": "4X5Baggies"
         }
       },
       "4 X 6 Baggies": {
         "Sizeless": {
-          "Colorless": "4 X 6 Baggies"
+          "Colorless": "4X6Baggies"
         }
       },
       "5 X 5 Baggies": {
         "Sizeless": {
-          "Colorless": "5 X 5 Baggies"
+          "Colorless": "5X5Baggies"
         }
       },
       "5 X 7 Baggies": {
         "Sizeless": {
-          "Colorless": "5 X 7 Baggies"
+          "Colorless": "5X7Baggies"
         }
       },
       "6 X 10 Baggies": {
         "Sizeless": {
-          "Colorless": "6 X 10 Baggies"
+          "Colorless": "6X10Baggies"
         }
       },
       "7 X 12 Baggies": {
         "Sizeless": {
-          "Colorless": "7 X 12 Baggies"
+          "Colorless": "7X12Baggies"
         }
       },
       "9 X 12 Baggies": {
         "Sizeless": {
-          "Colorless": "9 X 12 Baggies"
+          "Colorless": "9X12Baggies"
         }
       },
       "Burlap Bag": {
         "Small": {
-          "Black": "Burlap Bag, Small, Black",
-          "Green": "Burlap Bag, Small, Green",
-          "Red": "Burlap Bag, Small, Red",
-          "White": "Burlap Bag, Small, White"
+          "Black": "BurlapBagSmallBlack",
+          "Green": "BurlapBagSmallGreen",
+          "Red": "BurlapBagSmallRed",
+          "White": "BurlapBagSmallWhite"
         }
       },
       "Cotton Bag": {
         "Small": {
-          "White": "Cotton Bag, Small, White"
+          "White": "CottonBagSmallWhite"
         }
       },
       "Grab Bag": {
         "Sizeless": {
-          "Colorless": "Grab Bag"
+          "Colorless": "GrabBag"
         }
       },
       "Grab Bag, Premium": {
         "Sizeless": {
-          "Colorless": "Grab Bag, Premium"
+          "Colorless": "GrabBagPremium"
         }
       },
       "Parts Bag, Fancy": {
         "Sizeless": {
-          "Gold": "Parts Bag, Fancy, Gold",
-          "Silver": "Parts Bag, Fancy, Silver"
+          "Gold": "PartsBagFancyGold",
+          "Silver": "PartsBagFancySilver"
         }
       },
       "Parts Bag": {
         "Large": {
-          "Black": "Parts Bag, Large, Black",
-          "Blue": "Parts Bag, Large, Blue",
-          "Red": "Parts Bag, Large, Red"
+          "Black": "PartsBagLargeBlack",
+          "Blue": "PartsBagLargeBlue",
+          "Red": "PartsBagLargeRed"
         },
         "Medium": {
-          "Black": "Parts Bag, Medium, Black",
-          "Blue": "Parts Bag, Medium, Blue",
-          "Brown": "Parts Bag, Medium, Brown",
-          "Green": "Parts Bag, Medium, Green",
-          "Gray": "Parts Bag, Medium, Gray",
-          "Purple": "Parts Bag, Medium, Purple",
-          "Red": "Parts Bag, Medium, Red"
+          "Black": "PartsBagMediumBlack",
+          "Blue": "PartsBagMediumBlue",
+          "Brown": "PartsBagMediumBrown",
+          "Green": "PartsBagMediumGreen",
+          "Gray": "PartsBagMediumGray",
+          "Purple": "PartsBagMediumPurple",
+          "Red": "PartsBagMediumRed"
         },
         "Small": {
-          "Black": "Parts Bag, Small, Black",
-          "Blue": "Parts Bag, Small, Blue",
-          "Brown": "Parts Bag, Small, Brown",
-          "Gray": "Parts Bag, Small, Gray",
-          "Green": "Parts Bag, Small, Green",
-          "Purple": "Parts Bag, Small, Purple",
-          "Red": "Parts Bag, Small, Red"
+          "Black": "PartsBagSmallBlack",
+          "Blue": "PartsBagSmallBlue",
+          "Brown": "PartsBagSmallBrown",
+          "Gray": "PartsBagSmallGray",
+          "Green": "PartsBagSmallGreen",
+          "Purple": "PartsBagSmallPurple",
+          "Red": "PartsBagSmallRed"
         },
         "Tall": {
-          "Black": "Parts Bag, Tall, Black"
+          "Black": "PartsBagTallBlack"
         }
       },
       "Parts Bag, Large Cloth": {
         "Sizeless": {
-          "Black": "Parts Bag, Large Cloth, Black"
+          "Black": "PartsBagLargeClothBlack"
         }
       }
     },
     "cube": {
       "Cube": {
         "8mm": {
-          "Green": "Cube, 8mm, Green",
-          "Orange": "Cube, 8mm, Orange",
-          "Black": "Cube, 8mm, Black",
-          "Blue": "Cube, 8mm, Blue",
-          "White": "Cube, 8mm, White",
-          "Red": "Cube, 8mm, Red",
-          "Purple": "Cube, 8mm, Purple",
-          "Brown": "Cube, 8mm, Brown",
-          "Gray": "Cube, 8mm, Gray",
-          "Pink": "Cube, 8mm, Pink",
-          "Yellow": "Cube, 8mm, Yellow"
+          "Green": "Cube8mmGreen",
+          "Orange": "Cube8mmOrange",
+          "Black": "Cube8mmBlack",
+          "Blue": "Cube8mmBlue",
+          "White": "Cube8mmWhite",
+          "Red": "Cube8mmRed",
+          "Purple": "Cube8mmPurple",
+          "Brown": "Cube8mmBrown",
+          "Gray": "Cube8mmGray",
+          "Light Pink": "Cube8mmLightPink",
+          "Natural": "Cube8mmNatural",
+          "Pink": "Cube8mmPink",
+          "Yellow": "Cube8mmYellow"
         },
         "10mm": {
-          "Black": "Cube, 10mm, Black",
-          "Blue": "Cube, 10mm, Blue",
-          "Brown": "Cube, 10mm, Brown",
-          "Green": "Cube, 10mm, Green",
-          "Gray": "Cube, 10mm, Gray",
-          "Orange": "Cube, 10mm, Orange",
-          "Pink": "Cube, 10mm, Pink",
-          "Purple": "Cube, 10mm, Purple",
-          "Red": "Cube, 10mm, Red",
-          "White": "Cube, 10mm, White",
-          "Yellow": "Cube, 10mm, Yellow"
+          "Black": "Cube10mmBlack",
+          "Blue": "Cube10mmBlue",
+          "Brown": "Cube10mmBrown",
+          "Green": "Cube10mmGreen",
+          "Gray": "Cube10mmGray",
+          "Mustard": "Cube10mmMustard",
+          "Orange": "Cube10mmOrange",
+          "Pink": "Cube10mmPink",
+          "Purple": "Cube10mmPurple",
+          "Red": "Cube10mmRed",
+          "White": "Cube10mmWhite",
+          "Yellow": "Cube10mmYellow"
         },
         "15mm": {
-          "Red": "Cube, 15mm, Red"
+          "Red": "Cube15mmRed"
         },
         "13mm": {
-          "Blue": "Cube, 13mm, Blue",
-          "Green": "Cube, 13mm, Green",
-          "Red": "Cube, 13mm, Red",
-          "Yellow": "Cube, 13mm, Yellow"
+          "Blue": "Cube13mmBlue",
+          "Green": "Cube13mmGreen",
+          "Red": "Cube13mmRed",
+          "Yellow": "Cube13mmYellow"
         }
       },
       "Block 1x1": {
         "Sizeless": {
-          "Black": "Block 1x1, Black",
-          "Blue": "Block 1x1, Blue",
-          "Red": "Block 1x1, Red",
-          "White": "Block 1x1, White",
-          "Yellow": "Block 1x1, Yellow"
+          "Black": "Block1x1Black",
+          "Blue": "Block1x1Blue",
+          "Red": "Block1x1Red",
+          "White": "Block1x1White",
+          "Yellow": "Block1x1Yellow"
         }
       },
       "Block 1x2": {
         "Sizeless": {
-          "Black": "Block 1x2, Black",
-          "Blue": "Block 1x2, Blue",
-          "Red": "Block 1x2, Red",
-          "White": "Block 1x2, White",
-          "Yellow": "Block 1x2, Yellow"
+          "Black": "Block1x2Black",
+          "Blue": "Block1x2Blue",
+          "Red": "Block1x2Red",
+          "White": "Block1x2White",
+          "Yellow": "Block1x2Yellow"
         }
       },
       "Block 1x3": {
         "Sizeless": {
-          "Black": "Block 1x3, Black",
-          "Blue": "Block 1x3, Blue",
-          "Red": "Block 1x3, Red",
-          "White": "Block 1x3, White",
-          "Yellow": "Block 1x3, Yellow"
-        }
-      },
-      "Cube, Mustard": {
-        "10mm": {
-          "Colorless": "Cube, 10mm, Mustard"
+          "Black": "Block1x3Black",
+          "Blue": "Block1x3Blue",
+          "Red": "Block1x3Red",
+          "White": "Block1x3White",
+          "Yellow": "Block1x3Yellow"
         }
       },
       "Cube, Bright": {
         "8mm": {
-          "Yellow": "Cube, 8mm, Bright Yellow"
-        }
-      },
-      "Cube, Light": {
-        "8mm": {
-          "Pink": "Cube, 8mm, Light Pink"
-        }
-      },
-      "Cube, Natural": {
-        "8mm": {
-          "Colorless": "Cube, 8mm, Natural"
+          "Yellow": "Cube8mmBrightYellow"
         }
       },
       "Cube, Metal": {
         "8mm": {
-          "Bronze": "Cube, Metal, Bronze, 8mm",
-          "Gold": "Cube, Metal, Gold, 8mm",
-          "Silver": "Cube, Metal, Silver, 8mm"
+          "Bronze": "CubeMetalBronze8mm",
+          "Gold": "CubeMetalGold8mm",
+          "Silver": "CubeMetalSilver8mm"
         }
       },
       "D6": {
         "12mm": {
-          "Black": "D6, 12mm, Black"
+          "Black": "D612mmBlack"
         }
       },
       "Flatbed Truck, Wood": {
         "Sizeless": {
-          "Black": "Flatbed Truck, Wood, Black"
+          "Black": "FlatbedTruckWoodBlack"
         }
       },
       "Future Cube": {
         "Sizeless": {
-          "Orange": "Future Cube, Orange",
-          "Purple": "Future Cube, Purple",
-          "Red": "Future Cube, Red",
-          "Yellow": "Future Cube, Yellow",
-          "Blue": "Future Cube, Blue"
+          "Orange": "FutureCubeOrange",
+          "Purple": "FutureCubePurple",
+          "Red": "FutureCubeRed",
+          "Yellow": "FutureCubeYellow",
+          "Blue": "FutureCubeBlue"
         }
       },
-      "Ice Cube, Copper": {
+      "Ice Cube": {
         "10mm": {
-          "Colorless": "Ice Cube, 10mm, Copper"
+          "Copper": "IceCube10mmCopper"
         },
         "8mm": {
-          "Colorless": "Ice Cube, 8mm, Copper"
+          "Copper": "IceCube8mmCopper"
         }
       },
       "Ice Cube, Opaque": {
         "10mm": {
-          "Black": "Ice Cube, 10mm, Opaque, Black",
-          "Gold": "Ice Cube, 10mm, Opaque, Gold",
-          "Silver": "Ice Cube, 10mm, Opaque, Silver",
-          "White": "Ice Cube, 10mm, Opaque, White"
+          "Black": "IceCube10mmOpaqueBlack",
+          "Gold": "IceCube10mmOpaqueGold",
+          "Silver": "IceCube10mmOpaqueSilver",
+          "White": "IceCube10mmOpaqueWhite"
         },
         "12mm": {
-          "Black": "Ice Cube, 12mm, Opaque, Black",
-          "Gold": "Ice Cube, 12mm, Opaque, Gold",
-          "Silver": "Ice Cube, 12mm, Opaque, Silver",
-          "White": "Ice Cube, 12mm, Opaque, White"
+          "Black": "IceCube12mmOpaqueBlack",
+          "Gold": "IceCube12mmOpaqueGold",
+          "Silver": "IceCube12mmOpaqueSilver",
+          "White": "IceCube12mmOpaqueWhite"
         },
         "8mm": {
-          "Black": "Ice Cube, 8mm, Opaque, Black",
-          "Gold": "Ice Cube, 8mm, Opaque, Gold",
-          "Silver": "Ice Cube, 8mm, Opaque, Silver",
-          "White": "Ice Cube, 8mm, Opaque, White"
+          "Black": "IceCube8mmOpaqueBlack",
+          "Gold": "IceCube8mmOpaqueGold",
+          "Silver": "IceCube8mmOpaqueSilver",
+          "White": "IceCube8mmOpaqueWhite"
         }
       },
       "Ice Cube, Transparent": {
         "10mm": {
-          "Black": "Ice Cube, 10mm, Transparent, Black",
-          "Blue": "Ice Cube, 10mm, Transparent, Blue",
-          "Green": "Ice Cube, 10mm, Transparent, Green",
-          "Orange": "Ice Cube, 10mm, Transparent, Orange",
-          "Purple": "Ice Cube, 10mm, Transparent, Purple",
-          "Red": "Ice Cube, 10mm, Transparent, Red",
-          "White": "Ice Cube, 10mm, Transparent, White",
-          "Yellow": "Ice Cube, 10mm, Transparent, Yellow"
+          "Black": "IceCube10mmTransparentBlack",
+          "Blue": "IceCube10mmTransparentBlue",
+          "Green": "IceCube10mmTransparentGreen",
+          "Orange": "IceCube10mmTransparentOrange",
+          "Purple": "IceCube10mmTransparentPurple",
+          "Red": "IceCube10mmTransparentRed",
+          "White": "IceCube10mmTransparentWhite",
+          "Yellow": "IceCube10mmTransparentYellow"
         },
         "12mm": {
-          "Black": "Ice Cube, 12mm, Transparent, Black",
-          "Blue": "Ice Cube, 12mm, Transparent, Blue",
-          "Green": "Ice Cube, 12mm, Transparent, Green",
-          "Orange": "Ice Cube, 12mm, Transparent, Orange",
-          "Purple": "Ice Cube, 12mm, Transparent, Purple",
-          "Red": "Ice Cube, 12mm, Transparent, Red",
-          "White": "Ice Cube, 12mm, Transparent, White",
-          "Yellow": "Ice Cube, 12mm, Transparent, Yellow"
+          "Black": "IceCube12mmTransparentBlack",
+          "Blue": "IceCube12mmTransparentBlue",
+          "Green": "IceCube12mmTransparentGreen",
+          "Orange": "IceCube12mmTransparentOrange",
+          "Purple": "IceCube12mmTransparentPurple",
+          "Red": "IceCube12mmTransparentRed",
+          "White": "IceCube12mmTransparentWhite",
+          "Yellow": "IceCube12mmTransparentYellow"
         },
         "8mm": {
-          "Black": "Ice Cube, 8mm, Transparent, Black",
-          "Blue": "Ice Cube, 8mm, Transparent, Blue",
-          "Green": "Ice Cube, 8mm, Transparent, Green",
-          "Orange": "Ice Cube, 8mm, Transparent, Orange",
-          "Purple": "Ice Cube, 8mm, Transparent, Purple",
-          "Red": "Ice Cube, 8mm, Transparent, Red",
-          "White": "Ice Cube, 8mm, Transparent, White",
-          "Yellow": "Ice Cube, 8mm, Transparent, Yellow"
+          "Black": "IceCube8mmTransparentBlack",
+          "Blue": "IceCube8mmTransparentBlue",
+          "Green": "IceCube8mmTransparentGreen",
+          "Orange": "IceCube8mmTransparentOrange",
+          "Purple": "IceCube8mmTransparentPurple",
+          "Red": "IceCube8mmTransparentRed",
+          "White": "IceCube8mmTransparentWhite",
+          "Yellow": "IceCube8mmTransparentYellow"
         }
       },
       "Ice Cube, Transparent, Clear": {
         "10mm": {
-          "Colorless": "Ice Cube, 10mm, Transparent, Clear"
+          "Colorless": "IceCube10mmTransparentClear"
         },
         "12mm": {
-          "Colorless": "Ice Cube, 12mm, Transparent, Clear"
+          "Colorless": "IceCube12mmTransparentClear"
         },
         "8mm": {
-          "Colorless": "Ice Cube, 8mm, Transparent, Clear"
+          "Colorless": "IceCube8mmTransparentClear"
         }
       },
       "Qubit": {
         "Sizeless": {
-          "Black": "Qubit, Black",
-          "Blue": "Qubit, Blue",
-          "Green": "Qubit, Green",
-          "Orange": "Qubit, Orange",
-          "Purple": "Qubit, Purple",
-          "Red": "Qubit, Red",
-          "White": "Qubit, White",
-          "Yellow": "Qubit, Yellow"
+          "Black": "QubitBlack",
+          "Blue": "QubitBlue",
+          "Green": "QubitGreen",
+          "Orange": "QubitOrange",
+          "Purple": "QubitPurple",
+          "Red": "QubitRed",
+          "White": "QubitWhite",
+          "Yellow": "QubitYellow"
         }
       }
     },
     "tube": {
       "Cylinder, 10mm x 10mm": {
         "Sizeless": {
-          "Black": "Cylinder, 10mm x 10mm, Black",
-          "Blue": "Cylinder, 10mm x 10mm, Blue",
-          "Green": "Cylinder, 10mm x 10mm, Green",
-          "Orange": "Cylinder, 10mm x 10mm, Orange",
-          "Purple": "Cylinder, 10mm x 10mm, Purple",
-          "Red": "Cylinder, 10mm x 10mm, Red",
-          "White": "Cylinder, 10mm x 10mm, White",
-          "Yellow": "Cylinder, 10mm x 10mm, Yellow"
+          "Black": "Cylinder10mmx10mmBlack",
+          "Blue": "Cylinder10mmx10mmBlue",
+          "Green": "Cylinder10mmx10mmGreen",
+          "Orange": "Cylinder10mmx10mmOrange",
+          "Purple": "Cylinder10mmx10mmPurple",
+          "Red": "Cylinder10mmx10mmRed",
+          "White": "Cylinder10mmx10mmWhite",
+          "Yellow": "Cylinder10mmx10mmYellow"
         }
       },
       "Cylinder, 8m x 15mm": {
         "Sizeless": {
-          "Yellow": "Cylinder, 8m x 15mm, Yellow"
+          "Yellow": "Cylinder15mmx8mmYellow"
         }
       },
       "Cylinder, 10mm x 18mm": {
         "Sizeless": {
-          "Yellow": "Cylinder, 10mm x 18mm, Yellow"
+          "Yellow": "Cylinder18mmx10mmYellow"
         }
       },
-      "Cylinder, 14mm x 30mm, Natural": {
+      "Cylinder, 14mm x 30mm": {
         "Sizeless": {
-          "Colorless": "Cylinder, 14mm x 30mm, Natural"
+          "Natural": "Cylinder30mmx14mmNatural"
         }
       },
       "Cylinder, 30mm x 15mm": {
         "Sizeless": {
-          "Blue": "Cylinder, 30mm x 15mm, Blue",
-          "Yellow": "Cylinder, 30mm x 15mm, Yellow"
+          "Blue": "Cylinder30mmx15mmBlue",
+          "Yellow": "Cylinder30mmx15mmYellow"
         }
       },
       "Disc, 14mm x 10mm": {
         "Sizeless": {
-          "Blue": "Disc, 14mm x 10mm, Blue",
-          "Purple": "Disc, 14mm x 10mm, Purple",
-          "Red": "Disc, 14mm x 10mm, Red"
+          "Blue": "Disc14mmx10mmBlue",
+          "Purple": "Disc14mmx10mmPurple",
+          "Red": "Disc14mmx10mmRed"
         }
       },
       "Disc, 14mm x 4mm": {
         "Sizeless": {
-          "Black": "Disc, 14mm x 4mm, Black",
-          "Green": "Disc, 14mm x 4mm, Green",
-          "Red": "Disc, 14mm x 4mm, Red",
-          "Yellow": "Disc, 14mm x 4mm, Yellow"
-        }
-      },
-      "Disc, 14mm x 4mm, Light": {
-        "Sizeless": {
-          "Blue": "Disc, 14mm x 4mm, Light Blue",
-          "Purple": "Disc, 14mm x 4mm, Light Purple"
+          "Black": "Disc14mmx4mmBlack",
+          "Green": "Disc14mmx4mmGreen",
+          "Light Blue": "Disc14mmx4mmLightBlue",
+          "Light Purple": "Disc14mmx4mmLightPurple",
+          "Red": "Disc14mmx4mmRed",
+          "Yellow": "Disc14mmx4mmYellow"
         }
       },
       "Disc, 15mm x 5mm": {
         "Sizeless": {
-          "Black": "Disc, 15mm x 5mm, Black",
-          "Blue": "Disc, 15mm x 5mm, Blue",
-          "Green": "Disc, 15mm x 5mm, Green",
-          "Red": "Disc, 15mm x 5mm, Red"
-        }
-      },
-      "Disc, 15mm x 6mm, Lime": {
-        "Sizeless": {
-          "Green": "Disc, 15mm x 6mm, Lime Green"
+          "Black": "Disc15mmx5mmBlack",
+          "Blue": "Disc15mmx5mmBlue",
+          "Green": "Disc15mmx5mmGreen",
+          "Red": "Disc15mmx5mmRed"
         }
       },
       "Disc, 15mm x 6mm": {
         "Sizeless": {
-          "Orange": "Disc, 15mm x 6mm, Orange",
-          "Red": "Disc, 15mm x 6mm, Red",
-          "Yellow": "Disc, 15mm x 6mm, Yellow"
+          "Lime Green": "Disc15mmx6mmLimeGreen",
+          "Orange": "Disc15mmx6mmOrange",
+          "Red": "Disc15mmx6mmRed",
+          "Yellow": "Disc15mmx6mmYellow"
         }
       },
       "Disc, 16mm x 10mm": {
         "Sizeless": {
-          "Blue": "Disc, 16mm x 10mm, Blue",
-          "Brown": "Disc, 16mm x 10mm, Brown",
-          "Green": "Disc, 16mm x 10mm, Green",
-          "Purple": "Disc, 16mm x 10mm, Purple",
-          "Red": "Disc, 16mm x 10mm, Red",
-          "Yellow": "Disc, 16mm x 10mm, Yellow"
+          "Blue": "Disc16mmx10mmBlue",
+          "Brown": "Disc16mmx10mmBrown",
+          "Green": "Disc16mmx10mmGreen",
+          "Purple": "Disc16mmx10mmPurple",
+          "Red": "Disc16mmx10mmRed",
+          "Yellow": "Disc16mmx10mmYellow"
         }
       },
       "Disc, 16mm x 4mm": {
         "Sizeless": {
-          "Black": "Disc, 16mm x 4mm, Black",
-          "Blue": "Disc, 16mm x 4mm, Blue",
-          "Green": "Disc, 16mm x 4mm, Green",
-          "Orange": "Disc, 16mm x 4mm, Orange",
-          "Purple": "Disc, 16mm x 4mm, Purple",
-          "Red": "Disc, 16mm x 4mm, Red",
-          "White": "Disc, 16mm x 4mm, White",
-          "Yellow": "Disc, 16mm x 4mm, Yellow"
-        }
-      },
-      "Disc, 16mm x 6mm, Light": {
-        "Sizeless": {
-          "Purple": "Disc, 16mm x 6mm, Light Purple"
+          "Black": "Disc16mmx4mmBlack",
+          "Blue": "Disc16mmx4mmBlue",
+          "Green": "Disc16mmx4mmGreen",
+          "Orange": "Disc16mmx4mmOrange",
+          "Purple": "Disc16mmx4mmPurple",
+          "Red": "Disc16mmx4mmRed",
+          "White": "Disc16mmx4mmWhite",
+          "Yellow": "Disc16mmx4mmYellow"
         }
       },
       "Disc, 16mm x 6mm": {
         "Sizeless": {
-          "Orange": "Disc, 16mm x 6mm, Orange"
+          "Light Purple": "Disc16mmx6mmLightPurple",
+          "Orange": "Disc16mmx6mmOrange"
         }
       },
       "Disc, 16mm x 8mm, Mint": {
         "Sizeless": {
-          "Colorless": "Disc, 16mm x 8mm, Mint"
+          "Colorless": "Disc16mmx8mmMint"
         }
       },
       "Disc, 16mm x 8mm": {
         "Sizeless": {
-          "Pink": "Disc, 16mm x 8mm, Pink",
-          "Purple": "Disc, 16mm x 8mm, Purple",
-          "Yellow": "Disc, 16mm x 8mm, Yellow"
+          "Pink": "Disc16mmx8mmPink",
+          "Purple": "Disc16mmx8mmPurple",
+          "Yellow": "Disc16mmx8mmYellow"
         }
       },
       "Disc, 16mm x 8mm, Tan": {
         "Sizeless": {
-          "Colorless": "Disc, 16mm x 8mm, Tan"
-        }
-      },
-      "Disc, 17mm x 10mm, Apricot": {
-        "Sizeless": {
-          "Colorless": "Disc, 17mm x 10mm, Apricot"
+          "Colorless": "Disc16mmx8mmTan"
         }
       },
       "Disc, 17mm x 10mm": {
         "Sizeless": {
-          "Green": "Disc, 17mm x 10mm, Green"
+          "Apricot": "Disc17mmx10mmApricot",
+          "Green": "Disc17mmx10mmGreen"
         }
       },
       "Disc, 18mm x 3mm, Clear": {
         "Sizeless": {
-          "Colorless": "Disc, 18mm x 3mm, Clear"
+          "Colorless": "Disc18mmx3mmClear"
         }
       },
       "Disc, 18mm x 3mm, fluorescent blue ": {
         "Sizeless": {
-          "Colorless": "Disc, 18mm x 3mm, fluorescent blue "
+          "Colorless": "Disc18mmx3mmfluorescentblue"
         }
       },
       "Disc, 18mm x 3mm, Fluorescent": {
         "Sizeless": {
-          "Green": "Disc, 18mm x 3mm, Fluorescent Green",
-          "Orange": "Disc, 18mm x 3mm, Fluorescent Orange",
-          "Red": "Disc, 18mm x 3mm, Fluorescent Red",
-          "Yellow": "Disc, 18mm x 3mm, Fluorescent Yellow"
+          "Green": "Disc18mmx3mmFluorescentGreen",
+          "Orange": "Disc18mmx3mmFluorescentOrange",
+          "Red": "Disc18mmx3mmFluorescentRed",
+          "Yellow": "Disc18mmx3mmFluorescentYellow"
         }
       },
       "Disc, 18mm x 3mm, Transparent": {
         "Sizeless": {
-          "Blue": "Disc, 18mm x 3mm, Transparent, Blue",
-          "Green": "Disc, 18mm x 3mm, Transparent, Green",
-          "Gray": "Disc, 18mm x 3mm, Transparent, Gray",
-          "Orange": "Disc, 18mm x 3mm, Transparent, Orange",
-          "Purple": "Disc, 18mm x 3mm, Transparent, Purple",
-          "Red": "Disc, 18mm x 3mm, Transparent, Red",
-          "Yellow": "Disc, 18mm x 3mm, Transparent, Yellow"
+          "Blue": "Disc18mmx3mmTransparentBlue",
+          "Green": "Disc18mmx3mmTransparentGreen",
+          "Gray": "Disc18mmx3mmTransparentGray",
+          "Orange": "Disc18mmx3mmTransparentOrange",
+          "Purple": "Disc18mmx3mmTransparentPurple",
+          "Red": "Disc18mmx3mmTransparentRed",
+          "Yellow": "Disc18mmx3mmTransparentYellow"
         }
       },
       "Disc, 18mm x 5mm": {
         "Sizeless": {
-          "Red": "Disc, 18mm x 5mm, Red"
+          "Red": "Disc18mmx5mmRed"
         }
       },
       "Disc, 18mm x 6mm, Clear": {
         "Sizeless": {
-          "Colorless": "Disc, 18mm x 6mm, Clear"
+          "Colorless": "Disc18mmx6mmClear"
         }
       },
       "Disc, 18mm x 6mm, Fluorescent": {
         "Sizeless": {
-          "Blue": "Disc, 18mm x 6mm, Fluorescent Blue",
-          "Green": "Disc, 18mm x 6mm, Fluorescent Green",
-          "Orange": "Disc, 18mm x 6mm, Fluorescent Orange",
-          "Red": "Disc, 18mm x 6mm, Fluorescent Red",
-          "Yellow": "Disc, 18mm x 6mm, Fluorescent Yellow"
+          "Blue": "Disc18mmx6mmFluorescentBlue",
+          "Green": "Disc18mmx6mmFluorescentGreen",
+          "Orange": "Disc18mmx6mmFluorescentOrange",
+          "Red": "Disc18mmx6mmFluorescentRed",
+          "Yellow": "Disc18mmx6mmFluorescentYellow"
         }
       },
       "Disc, 18mm x 6mm, Transparent": {
         "Sizeless": {
-          "Blue": "Disc, 18mm x 6mm, Transparent, Blue",
-          "Green": "Disc, 18mm x 6mm, Transparent, Green",
-          "Gray": "Disc, 18mm x 6mm, Transparent, Gray",
-          "Orange": "Disc, 18mm x 6mm, Transparent, Orange",
-          "Purple": "Disc, 18mm x 6mm, Transparent, Purple",
-          "Red": "Disc, 18mm x 6mm, Transparent, Red",
-          "Yellow": "Disc, 18mm x 6mm, Transparent, Yellow"
+          "Blue": "Disc18mmx6mmTransparentBlue",
+          "Green": "Disc18mmx6mmTransparentGreen",
+          "Gray": "Disc18mmx6mmTransparentGray",
+          "Orange": "Disc18mmx6mmTransparentOrange",
+          "Purple": "Disc18mmx6mmTransparentPurple",
+          "Red": "Disc18mmx6mmTransparentRed",
+          "Yellow": "Disc18mmx6mmTransparentYellow"
         }
       },
       "Disc, 20mm x 5mm, Pastel": {
         "Sizeless": {
-          "Blue": "Disc, 20mm x 5mm, Pastel Blue",
-          "Orange": "Disc, 20mm x 5mm, Pastel Orange",
-          "Purple": "Disc, 20mm x 5mm, Pastel Purple",
-          "Pink": "Disc, 20mm x 5mm, Pastel Pink"
+          "Blue": "Disc20mmx5mmPastelBlue",
+          "Orange": "Disc20mmx5mmPastelOrange",
+          "Purple": "Disc20mmx5mmPastelPurple",
+          "Pink": "Disc20mmx5mmPastelPink"
         }
       },
       "Disc, 25mm x 3mm, Clear": {
         "Sizeless": {
-          "Colorless": "Disc, 25mm x 3mm, Clear"
+          "Colorless": "Disc25mmx3mmClear"
         }
       },
       "Disc, 25mm x 3mm, Fluorescent": {
         "Sizeless": {
-          "Blue": "Disc, 25mm x 3mm, Fluorescent Blue",
-          "Green": "Disc, 25mm x 3mm, Fluorescent Green",
-          "Orange": "Disc, 25mm x 3mm, Fluorescent Orange",
-          "Red": "Disc, 25mm x 3mm, Fluorescent Red",
-          "Yellow": "Disc, 25mm x 3mm, Fluorescent Yellow"
+          "Blue": "Disc25mmx3mmFluorescentBlue",
+          "Green": "Disc25mmx3mmFluorescentGreen",
+          "Orange": "Disc25mmx3mmFluorescentOrange",
+          "Red": "Disc25mmx3mmFluorescentRed",
+          "Yellow": "Disc25mmx3mmFluorescentYellow"
         }
       },
       "Disc, 25mm x 3mm, Transparent": {
         "Sizeless": {
-          "Blue": "Disc, 25mm x 3mm, Transparent, Blue",
-          "Green": "Disc, 25mm x 3mm, Transparent, Green",
-          "Gray": "Disc, 25mm x 3mm, Transparent, Gray",
-          "Orange": "Disc, 25mm x 3mm, Transparent, Orange",
-          "Red": "Disc, 25mm x 3mm, Transparent, Red",
-          "Purple": "Disc, 25mm x 3mm, Transparent, Purple",
-          "Yellow": "Disc, 25mm x 3mm, Transparent, Yellow"
+          "Blue": "Disc25mmx3mmTransparentBlue",
+          "Green": "Disc25mmx3mmTransparentGreen",
+          "Gray": "Disc25mmx3mmTransparentGray",
+          "Orange": "Disc25mmx3mmTransparentOrange",
+          "Red": "Disc25mmx3mmTransparentRed",
+          "Purple": "Disc25mmx3mmTransparentPurple",
+          "Yellow": "Disc25mmx3mmTransparentYellow"
         }
       },
       "Disc, 25mm x 6mm, Clear": {
         "Sizeless": {
-          "Colorless": "Disc, 25mm x 6mm, Clear"
+          "Colorless": "Disc25mmx6mmClear"
         }
       },
       "Disc, 25mm x 6mm, Fluorescent": {
         "Sizeless": {
-          "Blue": "Disc, 25mm x 6mm, Fluorescent Blue",
-          "Green": "Disc, 25mm x 6mm, Fluorescent Green",
-          "Orange": "Disc, 25mm x 6mm, Fluorescent Orange",
-          "Red": "Disc, 25mm x 6mm, Fluorescent Red",
-          "Yellow": "Disc, 25mm x 6mm, Fluorescent Yellow"
+          "Blue": "Disc25mmx6mmFluorescentBlue",
+          "Green": "Disc25mmx6mmFluorescentGreen",
+          "Orange": "Disc25mmx6mmFluorescentOrange",
+          "Red": "Disc25mmx6mmFluorescentRed",
+          "Yellow": "Disc25mmx6mmFluorescentYellow"
         }
       },
       "Disc, 25mm x 6mm, Transparent": {
         "Sizeless": {
-          "Blue": "Disc, 25mm x 6mm, Transparent, Blue",
-          "Green": "Disc, 25mm x 6mm, Transparent, Green",
-          "Gray": "Disc, 25mm x 6mm, Transparent, Gray",
-          "Orange": "Disc, 25mm x 6mm, Transparent, Orange",
-          "Purple": "Disc, 25mm x 6mm, Transparent, Purple",
-          "Red": "Disc, 25mm x 6mm, Transparent, Red",
-          "Yellow": "Disc, 25mm x 6mm, Transparent, Yellow"
+          "Blue": "Disc25mmx6mmTransparentBlue",
+          "Green": "Disc25mmx6mmTransparentGreen",
+          "Gray": "Disc25mmx6mmTransparentGray",
+          "Orange": "Disc25mmx6mmTransparentOrange",
+          "Purple": "Disc25mmx6mmTransparentPurple",
+          "Red": "Disc25mmx6mmTransparentRed",
+          "Yellow": "Disc25mmx6mmTransparentYellow"
         }
       },
       "Disc, 30mm x 5mm": {
         "Sizeless": {
-          "Blue": "Disc, 30mm x 5mm, Blue"
+          "Blue": "Disc30mmx5mmBlue"
         }
       },
       "Game Designer’s Ruler": {
         "Sizeless": {
-          "Colorless": "Game Designer’s Ruler"
+          "Colorless": "GameDesigner’sRuler"
         }
       },
       "Pizza Disc": {
         "Sizeless": {
-          "Yellow": "Pizza Disc, Yellow"
+          "Yellow": "PizzaDiscYellow"
         }
       },
       "Wink": {
         "20mm": {
-          "Black": "Wink, 20mm, Black"
+          "Black": "Wink20mmBlack"
         }
       },
       "Wink, Opaque": {
         "20mm": {
-          "White": "Wink, 20mm, Opaque, White"
+          "White": "Wink20mmOpaqueWhite"
         },
         "22mm": {
-          "Black": "Wink, 22mm, Opaque, Black",
-          "White": "Wink, 22mm, Opaque, White"
+          "Black": "Wink22mmOpaqueBlack",
+          "White": "Wink22mmOpaqueWhite"
         }
       },
       "Wink, Translucent": {
         "20mm": {
-          "Blue": "Wink, 20mm, Translucent, Blue",
-          "Green": "Wink, 20mm, Translucent, Green"
+          "Blue": "Wink20mmTranslucentBlue",
+          "Green": "Wink20mmTranslucentGreen"
         },
         "22mm": {
-          "Black": "Wink, 22mm, Translucent Black",
-          "Blue": "Wink, 22mm, Translucent Blue",
-          "Green": "Wink, 22mm, Translucent Green",
-          "Orange": "Wink, 22mm, Translucent Orange",
-          "Purple": "Wink, 22mm, Translucent Purple",
-          "Red": "Wink, 22mm, Translucent Red",
-          "Yellow": "Wink, 22mm, Translucent, Yellow"
+          "Black": "Wink22mmTranslucentBlack",
+          "Blue": "Wink22mmTranslucentBlue",
+          "Green": "Wink22mmTranslucentGreen",
+          "Orange": "Wink22mmTranslucentOrange",
+          "Purple": "Wink22mmTranslucentPurple",
+          "Red": "Wink22mmTranslucentRed",
+          "Yellow": "Wink22mmTranslucentYellow"
         }
       }
     },
     "blank": {
       "Blank Board, Accordion": {
         "Sizeless": {
-          "Colorless": "Blank Board, Accordion"
+          "Colorless": "BlankBoardAccordion"
         }
       },
       "Blank Board, Bi-Fold": {
         "Sizeless": {
-          "Colorless": "Blank Board, Bi-Fold"
+          "Colorless": "BlankBoardBi-Fold"
         }
       },
       "Blank Board, Domino": {
         "Sizeless": {
-          "Colorless": "Blank Board, Domino"
+          "Colorless": "BlankBoardDomino"
         }
       },
       "Blank Board, Half": {
         "Sizeless": {
-          "Colorless": "Blank Board, Half"
+          "Colorless": "BlankBoardHalf"
         }
       },
       "Blank Board, Six-Fold": {
         "Medium": {
-          "Colorless": "Blank Board, Medium, Six-Fold"
+          "Colorless": "BlankBoardMediumSix-Fold"
         },
         "Sizeless": {
-          "Colorless": "Blank Board, Six-Fold"
+          "Colorless": "BlankBoardSix-Fold"
         }
       },
       "Blank Board, Quad-Fold, 18 inch": {
         "Sizeless": {
-          "Colorless": "Blank Board, Quad-Fold, 18 inch"
+          "Colorless": "BlankBoardQuad-Fold18inch"
         }
       },
       "Blank Board, Skinny": {
         "Sizeless": {
-          "Colorless": "Blank Board, Skinny"
+          "Colorless": "BlankBoardSkinny"
         }
       },
       "Blank Board, Sliver": {
         "Sizeless": {
-          "Colorless": "Blank Board, Sliver"
+          "Colorless": "BlankBoardSliver"
         }
       },
       "Blank Board, Square": {
         "Sizeless": {
-          "Colorless": "Blank Board, Square"
+          "Colorless": "BlankBoardSquare"
         },
         "Large": {
-          "Colorless": "Blank Board, Square, Large"
+          "Colorless": "BlankBoardSquareLarge"
         },
         "Small": {
-          "Colorless": "Blank Board, Square, Small"
+          "Colorless": "BlankBoardSquareSmall"
         }
       },
       "Blank Board, Strip": {
         "Sizeless": {
-          "Colorless": "Blank Board, Strip"
+          "Colorless": "BlankBoardStrip"
         }
       },
-      "Blank Box, Hook, Bridge (108)": {
-        "108": {
-          "Colorless": "Blank Box, Hook, Bridge (108)"
-        }
-      },
-      "Blank Box, Hook, Bridge (54)": {
+      "Blank Box, Hook, Bridge": {
         "54": {
-          "Colorless": "Blank Box, Hook, Bridge (54)"
-        }
-      },
-      "Blank Box, Hook, Jumbo (36)": {
-        "36": {
-          "Colorless": "Blank Box, Hook, Jumbo (36)"
-        }
-      },
-      "Blank Box, Hook, Jumbo (90)": {
-        "90": {
-          "Colorless": "Blank Box, Hook, Jumbo (90)"
-        }
-      },
-      "Blank Box, Hook, Poker (108)": {
+          "Colorless": "BlankBoxHookBridge(54)"
+        },
         "108": {
-          "Colorless": "Blank Box, Hook, Poker (108)"
+          "Colorless": "BlankBoxHookBridge(108)"
         }
       },
-      "Blank Box, Hook, Poker (18)": {
+      "Blank Box, Hook, Jumbo": {
+        "36": {
+          "Colorless": "BlankBoxHookJumbo(36)"
+        },
+        "90": {
+          "Colorless": "BlankBoxHookJumbo(90)"
+        }
+      },
+      "Blank Box, Hook, Poker": {
         "18": {
-          "Colorless": "Blank Box, Hook, Poker (18)"
-        }
-      },
-      "Blank Box, Hook, Poker (36)": {
+          "Colorless": "BlankBoxHookPoker(18)"
+        },
         "36": {
-          "Colorless": "Blank Box, Hook, Poker (36)"
-        }
-      },
-      "Blank Box, Hook, Poker (54)": {
+          "Colorless": "BlankBoxHookPoker(36)"
+        },
         "54": {
-          "Colorless": "Blank Box, Hook, Poker (54)"
-        }
-      },
-      "Blank Box, Hook, Poker (72)": {
+          "Colorless": "BlankBoxHookPoker(54)"
+        },
         "72": {
-          "Colorless": "Blank Box, Hook, Poker (72)"
-        }
-      },
-      "Blank Box, Hook, Poker (90)": {
+          "Colorless": "BlankBoxHookPoker(72)"
+        },
         "90": {
-          "Colorless": "Blank Box, Hook, Poker (90)"
+          "Colorless": "BlankBoxHookPoker(90)"
+        },
+        "108": {
+          "Colorless": "BlankBoxHookPoker(108)"
         }
       },
-      "Blank Box, Hook, Square (48)": {
+      "Blank Box, Hook, Square": {
         "48": {
-          "Colorless": "Blank Box, Hook, Square (48)"
-        }
-      },
-      "Blank Box, Hook, Square (96)": {
+          "Colorless": "BlankBoxHookSquare(48)"
+        },
         "96": {
-          "Colorless": "Blank Box, Hook, Square (96)"
+          "Colorless": "BlankBoxHookSquare(96)"
         }
       },
-      "Blank Box, Hook, Tarot (40)": {
+      "Blank Box, Hook, Tarot": {
         "40": {
-          "Colorless": "Blank Box, Hook, Tarot (40)"
-        }
-      },
-      "Blank Box, Hook, Tarot (90)": {
+          "Colorless": "BlankBoxHookTarot(40)"
+        },
         "90": {
-          "Colorless": "Blank Box, Hook, Tarot (90)"
+          "Colorless": "BlankBoxHookTarot(90)"
         }
       },
       "Blank Box, Pro": {
         "Medium": {
-          "Colorless": "Blank Box, Pro, Medium"
+          "Colorless": "BlankBoxProMedium"
         },
         "Small": {
-          "Colorless": "Blank Box, Pro, Small"
+          "Colorless": "BlankBoxProSmall"
         }
       },
       "Blank Box, Prototype": {
         "Large": {
-          "Colorless": "Blank Box, Prototype, Large"
+          "Colorless": "BlankBoxPrototypeLarge"
         },
         "Medium": {
-          "Colorless": "Blank Box, Prototype, Medium"
+          "Colorless": "BlankBoxPrototypeMedium"
         },
         "Small": {
-          "Colorless": "Blank Box, Prototype, Small"
+          "Colorless": "BlankBoxPrototypeSmall"
         }
       },
       "Blank Box, Retail": {
         "Large": {
-          "Colorless": "Blank Box, Retail, Large"
+          "Colorless": "BlankBoxRetailLarge"
         }
       },
-      "Blank Box, Tuck, Bridge (108)": {
-        "108": {
-          "Colorless": "Blank Box, Tuck, Bridge (108)"
-        }
-      },
-      "Blank Box, Tuck, Bridge (54)": {
+      "Blank Box, Tuck, Bridge": {
         "54": {
-          "Colorless": "Blank Box, Tuck, Bridge (54)"
-        }
-      },
-      "Blank Box, Tuck, Jumbo (90)": {
-        "90": {
-          "Colorless": "Blank Box, Tuck, Jumbo (90)"
-        }
-      },
-      "Blank Box, Tuck, Poker (108)": {
+          "Colorless": "BlankBoxTuckBridge(54)"
+        },
         "108": {
-          "Colorless": "Blank Box, Tuck, Poker (108)"
+          "Colorless": "BlankBoxTuckBridge(108)"
         }
       },
-      "Blank Box, Tuck, Poker (36)": {
+      "Blank Box, Tuck, Jumbo": {
+        "90": {
+          "Colorless": "BlankBoxTuckJumbo(90)"
+        }
+      },
+      "Blank Box, Tuck, Poker": {
         "36": {
-          "Colorless": "Blank Box, Tuck, Poker (36)"
-        }
-      },
-      "Blank Box, Tuck, Poker (54)": {
+          "Colorless": "BlankBoxTuckPoker(36)"
+        },
         "54": {
-          "Colorless": "Blank Box, Tuck, Poker (54)"
-        }
-      },
-      "Blank Box, Tuck, Poker (72)": {
+          "Colorless": "BlankBoxTuckPoker(54)"
+        },
         "72": {
-          "Colorless": "Blank Box, Tuck, Poker (72)"
-        }
-      },
-      "Blank Box, Tuck, Poker (90)": {
+          "Colorless": "BlankBoxTuckPoker(72)"
+        },
         "90": {
-          "Colorless": "Blank Box, Tuck, Poker (90)"
+          "Colorless": "BlankBoxTuckPoker(90)"
+        },
+        "108": {
+          "Colorless": "BlankBoxTuckPoker(108)"
         }
       },
-      "Blank Box, Tuck, Square (48)": {
+      "Blank Box, Tuck, Square": {
         "48": {
-          "Colorless": "Blank Box, Tuck, Square (48)"
-        }
-      },
-      "Blank Box, Tuck, Square (96)": {
+          "Colorless": "BlankBoxTuckSquare(48)"
+        },
         "96": {
-          "Colorless": "Blank Box, Tuck, Square (96)"
+          "Colorless": "BlankBoxTuckSquare(96)"
         }
       },
-      "Blank Box, Tuck, Tarot (40)": {
+      "Blank Box, Tuck, Tarot": {
         "40": {
-          "Colorless": "Blank Box, Tuck, Tarot (40)"
-        }
-      },
-      "Blank Box, Tuck, Tarot (90)": {
+          "Colorless": "BlankBoxTuckTarot(40)"
+        },
         "90": {
-          "Colorless": "Blank Box, Tuck, Tarot (90)"
+          "Colorless": "BlankBoxTuckTarot(90)"
         }
       },
       "Blank Bridge Card": {
         "Sizeless": {
-          "Colorless": "Blank Bridge Card"
+          "Colorless": "BlankBridgeCard"
         }
       },
       "Blank Business Card": {
         "Sizeless": {
-          "Colorless": "Blank Business Card"
+          "Colorless": "BlankBusinessCard"
         }
       },
       "Blank Chit, Arrow": {
         "Sizeless": {
-          "Colorless": "Blank Chit, Arrow"
+          "Colorless": "BlankChitArrow"
         }
       },
       "Blank Chit, Bullseye": {
         "Sizeless": {
-          "Colorless": "Blank Chit, Bullseye"
+          "Colorless": "BlankChitBullseye"
         }
       },
       "Blank Chit, Circle": {
         "Large": {
-          "Colorless": "Blank Chit, Circle, Large"
+          "Colorless": "BlankChitCircleLarge"
         },
         "Medium": {
-          "Colorless": "Blank Chit, Circle, Medium"
+          "Colorless": "BlankChitCircleMedium"
         },
         "Small": {
-          "Colorless": "Blank Chit, Circle, Small"
+          "Colorless": "BlankChitCircleSmall"
         }
       },
       "Blank Chit, Domino": {
         "Sizeless": {
-          "Colorless": "Blank Chit, Domino"
+          "Colorless": "BlankChitDomino"
         }
       },
       "Blank Chit, Square": {
         "Large": {
-          "Colorless": "Blank Chit, Square, Large"
+          "Colorless": "BlankChitSquareLarge"
         },
         "Medium": {
-          "Colorless": "Blank Chit, Square, Medium"
+          "Colorless": "BlankChitSquareMedium"
         },
         "Small": {
-          "Colorless": "Blank Chit, Square, Small"
+          "Colorless": "BlankChitSquareSmall"
         }
       },
       "Blank Chit, Triangle": {
         "Medium": {
-          "Colorless": "Blank Chit, Triangle, Medium"
+          "Colorless": "BlankChitTriangleMedium"
         }
       },
       "Blank Circle Card": {
         "Sizeless": {
-          "Colorless": "Blank Circle Card"
+          "Colorless": "BlankCircleCard"
         }
       },
       "Blank Circle Shard": {
         "Sizeless": {
-          "Colorless": "Blank Circle Shard"
+          "Colorless": "BlankCircleShard"
         }
       },
       "Blank Clear Euro Poker Card": {
         "Sizeless": {
-          "Colorless": "Blank Clear Euro Poker Card"
+          "Colorless": "BlankClearEuroPokerCard"
         }
       },
       "Blank Divider Card": {
         "Sizeless": {
-          "Colorless": "Blank Divider Card"
+          "Colorless": "BlankDividerCard"
         }
       },
       "Blank Document": {
         "Sizeless": {
-          "Colorless": "Blank Document"
+          "Colorless": "BlankDocument"
         }
       },
       "Blank Domino Card": {
         "Sizeless": {
-          "Colorless": "Blank Domino Card"
+          "Colorless": "BlankDominoCard"
         }
       },
       "Blank Dual Dial": {
         "Sizeless": {
-          "Colorless": "Blank Dual Dial"
+          "Colorless": "BlankDualDial"
         }
       },
       "Blank Euro Poker": {
         "Sizeless": {
-          "Colorless": "Blank Euro Poker"
+          "Colorless": "BlankEuroPoker"
         }
       },
       "Blank Euro Square Card": {
         "Sizeless": {
-          "Colorless": "Blank Euro Square Card"
+          "Colorless": "BlankEuroSquareCard"
         }
       },
       "Blank Foil Poker Card": {
         "Sizeless": {
-          "Colorless": "Blank Foil Poker Card"
+          "Colorless": "BlankFoilPokerCard"
         }
       },
       "Blank Foil Tarot Card": {
         "Sizeless": {
-          "Colorless": "Blank Foil Tarot Card"
+          "Colorless": "BlankFoilTarotCard"
         }
       },
       "Blank Folio, Bridge": {
         "Sizeless": {
-          "Colorless": "Blank Folio, Bridge"
+          "Colorless": "BlankFolioBridge"
         }
       },
       "Blank Folio": {
         "Medium": {
-          "Colorless": "Blank Folio, Medium"
+          "Colorless": "BlankFolioMedium"
         },
         "Small": {
-          "Colorless": "Blank Folio, Small"
+          "Colorless": "BlankFolioSmall"
         }
       },
       "Blank Folio, Mint Tin": {
         "Sizeless": {
-          "Colorless": "Blank Folio, Mint Tin"
+          "Colorless": "BlankFolioMintTin"
         }
       },
       "Blank Folio, Poker": {
         "Sizeless": {
-          "Colorless": "Blank Folio, Poker"
+          "Colorless": "BlankFolioPoker"
         }
       },
       "Blank Folio, Square": {
         "Sizeless": {
-          "Colorless": "Blank Folio, Square"
+          "Colorless": "BlankFolioSquare"
         }
       },
       "Blank Folio, Tarot": {
         "Sizeless": {
-          "Colorless": "Blank Folio, Tarot"
+          "Colorless": "BlankFolioTarot"
         }
       },
       "Blank Hex Card": {
         "Sizeless": {
-          "Colorless": "Blank Hex Card"
+          "Colorless": "BlankHexCard"
         }
       },
       "Blank Hex Shard": {
         "Sizeless": {
-          "Colorless": "Blank Hex Shard"
+          "Colorless": "BlankHexShard"
         }
       },
       "Blank Jumbo Card": {
         "Sizeless": {
-          "Colorless": "Blank Jumbo Card"
+          "Colorless": "BlankJumboCard"
         }
       },
       "Blank Mat, Big": {
         "Sizeless": {
-          "Colorless": "Blank Mat, Big"
+          "Colorless": "BlankMatBig"
         }
       },
       "Blank Mat, Domino": {
         "Sizeless": {
-          "Colorless": "Blank Mat, Domino"
+          "Colorless": "BlankMatDomino"
         }
       },
       "Blank Mat, Flower": {
         "Sizeless": {
-          "Colorless": "Blank Mat, Flower"
+          "Colorless": "BlankMatFlower"
         }
       },
       "Blank Mat, Half": {
         "Sizeless": {
-          "Colorless": "Blank Mat, Half"
+          "Colorless": "BlankMatHalf"
         }
       },
       "Blank Mat, Hex": {
         "Sizeless": {
-          "Colorless": "Blank Mat, Hex"
+          "Colorless": "BlankMatHex"
         },
         "Large": {
-          "Colorless": "Blank Mat, Hex, Large"
+          "Colorless": "BlankMatHexLarge"
         }
       },
       "Blank Mat, Invader": {
         "Sizeless": {
-          "Colorless": "Blank Mat, Invader"
+          "Colorless": "BlankMatInvader"
         }
       },
       "Blank Mat, Postcard": {
         "Sizeless": {
-          "Colorless": "Blank Mat, Postcard"
+          "Colorless": "BlankMatPostcard"
         }
       },
       "Blank Mat, Quarter": {
         "Sizeless": {
-          "Colorless": "Blank Mat, Quarter"
+          "Colorless": "BlankMatQuarter"
         }
       },
       "Blank Mat, Skinny": {
         "Sizeless": {
-          "Colorless": "Blank Mat, Skinny"
+          "Colorless": "BlankMatSkinny"
         }
       },
       "Blank Mat, Sliver": {
         "Sizeless": {
-          "Colorless": "Blank Mat, Sliver"
+          "Colorless": "BlankMatSliver"
         }
       },
       "Blank Mat, Small Bi-fold": {
         "Sizeless": {
-          "Colorless": "Blank Mat, Small Bi-fold"
+          "Colorless": "BlankMatSmallBi-fold"
         }
       },
       "Blank Mat, Spinner": {
         "Sizeless": {
-          "Colorless": "Blank Mat, Spinner"
+          "Colorless": "BlankMatSpinner"
         }
       },
       "Blank Mat, Square": {
         "Sizeless": {
-          "Colorless": "Blank Mat, Square"
+          "Colorless": "BlankMatSquare"
         },
         "Large": {
-          "Colorless": "Blank Mat, Square, Large"
+          "Colorless": "BlankMatSquareLarge"
         },
         "Small": {
-          "Colorless": "Blank Mat, Square, Small"
+          "Colorless": "BlankMatSquareSmall"
         }
       },
       "Blank Mat, Strip": {
         "Sizeless": {
-          "Colorless": "Blank Mat, Strip"
+          "Colorless": "BlankMatStrip"
         }
       },
       "Blank Micro Card (slug)": {
         "Sizeless": {
-          "Colorless": "Blank Micro Card (slug)"
+          "Colorless": "BlankMicroCard(slug)"
         }
       },
       "Blank Mini Card": {
         "Sizeless": {
-          "Colorless": "Blank Mini Card"
+          "Colorless": "BlankMiniCard"
         }
       },
       "Blank Mint Tin Accordion (4 Panel)": {
         "Sizeless": {
-          "Colorless": "Blank Mint Tin Accordion (4 Panel)"
+          "Colorless": "BlankMintTinAccordion(4Panel)"
         }
       },
       "Blank Mint Tin Accordion (6 Panel)": {
         "Sizeless": {
-          "Colorless": "Blank Mint Tin Accordion (6 Panel)"
+          "Colorless": "BlankMintTinAccordion(6Panel)"
         }
       },
       "Blank Mint Tin Accordion (8 Panel)": {
         "Sizeless": {
-          "Colorless": "Blank Mint Tin Accordion (8 Panel)"
+          "Colorless": "BlankMintTinAccordion(8Panel)"
         }
       },
       "Blank Mint Tin Card": {
         "Sizeless": {
-          "Colorless": "Blank Mint Tin Card"
+          "Colorless": "BlankMintTinCard"
         }
       },
       "Blank Poker Card": {
         "Sizeless": {
-          "Colorless": "Blank Poker Card"
+          "Colorless": "BlankPokerCard"
         }
       },
       "Blank Ring": {
         "Large": {
-          "Colorless": "Blank Ring, Large"
+          "Colorless": "BlankRingLarge"
         },
         "Medium": {
-          "Colorless": "Blank Ring, Medium"
+          "Colorless": "BlankRingMedium"
         },
         "Small": {
-          "Colorless": "Blank Ring, Small"
+          "Colorless": "BlankRingSmall"
         }
       },
       "Blank Screen": {
         "Large": {
-          "Colorless": "Blank Screen, Large"
+          "Colorless": "BlankScreenLarge"
         },
         "Medium": {
-          "Colorless": "Blank Screen, Medium"
+          "Colorless": "BlankScreenMedium"
         },
         "Small": {
-          "Colorless": "Blank Screen, Small"
+          "Colorless": "BlankScreenSmall"
         }
       },
       "Blank Small Dial": {
         "Sizeless": {
-          "Colorless": "Blank Small Dial"
+          "Colorless": "BlankSmallDial"
         }
       },
       "Blank Small Pro Tarot Insert": {
         "Sizeless": {
-          "Colorless": "Blank Small Pro Tarot Insert"
+          "Colorless": "BlankSmallProTarotInsert"
         }
       },
       "Blank Small Square Card": {
         "Sizeless": {
-          "Colorless": "Blank Small Square Card"
+          "Colorless": "BlankSmallSquareCard"
         }
       },
       "Blank Small Stout Tarot Insert": {
         "Sizeless": {
-          "Colorless": "Blank Small Stout Tarot Insert"
+          "Colorless": "BlankSmallStoutTarotInsert"
         }
       },
       "Blank Square Card": {
         "Sizeless": {
-          "Colorless": "Blank Square Card"
+          "Colorless": "BlankSquareCard"
         }
       },
       "Blank Square Shard": {
         "Sizeless": {
-          "Colorless": "Blank Square Shard"
+          "Colorless": "BlankSquareShard"
         }
       },
       "Blank Standee": {
         "Large": {
-          "Colorless": "Blank Standee, Large"
+          "Colorless": "BlankStandeeLarge"
         },
         "Medium": {
-          "Colorless": "Blank Standee, Medium"
+          "Colorless": "BlankStandeeMedium"
         },
         "Small": {
-          "Colorless": "Blank Standee, Small"
+          "Colorless": "BlankStandeeSmall"
         }
       },
       "Blank Stickers, Meeple": {
         "Sizeless": {
-          "Colorless": "Blank Stickers, Meeple"
+          "Colorless": "BlankStickersMeeple"
         }
       },
       "Blank Stickers, Pawn": {
         "Sizeless": {
-          "Colorless": "Blank Stickers, Pawn"
+          "Colorless": "BlankStickersPawn"
         }
       },
       "Blank Stickers, Sheet, Dice": {
         "Sizeless": {
-          "Colorless": "Blank Stickers, Sheet, Dice"
+          "Colorless": "BlankStickersSheetDice"
         }
       },
       "Blank Stickers, Sheet, Token": {
         "Sizeless": {
-          "Colorless": "Blank Stickers, Sheet, Token"
+          "Colorless": "BlankStickersSheetToken"
         }
       },
       "Blank Tarot Card": {
         "Sizeless": {
-          "Colorless": "Blank Tarot Card"
+          "Colorless": "BlankTarotCard"
         }
       },
       "Blank Tile, Circle, Mini": {
         "Sizeless": {
-          "Colorless": "Blank Tile, Circle, Mini"
+          "Colorless": "BlankTileCircleMini"
         }
       },
       "Blank Tile, Domino": {
         "Sizeless": {
-          "Colorless": "Blank Tile, Domino"
+          "Colorless": "BlankTileDomino"
         }
       },
       "Blank Tile, Hex": {
         "Large": {
-          "Colorless": "Blank Tile, Hex, Large"
+          "Colorless": "BlankTileHexLarge"
         },
         "Medium": {
-          "Colorless": "Blank Tile, Hex, Medium"
+          "Colorless": "BlankTileHexMedium"
         },
         "Small": {
-          "Colorless": "Blank Tile, Hex, Small"
+          "Colorless": "BlankTileHexSmall"
         }
       },
       "Blank Tile, Hex, Mini": {
         "Sizeless": {
-          "Colorless": "Blank Tile, Hex, Mini"
+          "Colorless": "BlankTileHexMini"
         }
       },
       "Blank Tile, Square": {
         "Large": {
-          "Colorless": "Blank Tile, Square, Large"
+          "Colorless": "BlankTileSquareLarge"
         },
         "Medium": {
-          "Colorless": "Blank Tile, Square, Medium"
+          "Colorless": "BlankTileSquareMedium"
         },
         "Small": {
-          "Colorless": "Blank Tile, Square, Small"
+          "Colorless": "BlankTileSquareSmall"
         }
       },
       "Blank Tile, Square, Mini": {
         "Sizeless": {
-          "Colorless": "Blank Tile, Square, Mini"
+          "Colorless": "BlankTileSquareMini"
         }
       },
       "Blank Tile, Triangle": {
         "Sizeless": {
-          "Colorless": "Blank Tile, Triangle"
+          "Colorless": "BlankTileTriangle"
         }
       },
       "Blank Tombstone Shard": {
         "Sizeless": {
-          "Colorless": "Blank Tombstone Shard"
+          "Colorless": "BlankTombstoneShard"
         }
       },
       "Blank US Game Card": {
         "Sizeless": {
-          "Colorless": "Blank US Game Card"
+          "Colorless": "BlankUSGameCard"
         }
       },
       "Blank US Game Mat": {
         "Sizeless": {
-          "Colorless": "Blank US Game Mat"
+          "Colorless": "BlankUSGameMat"
         }
       },
       "Blank Large Stout Box": {
         "Sizeless": {
-          "Colorless": "Blank Large Stout Box"
+          "Colorless": "LargeStoutBox"
         }
       },
-      "Medium Stout Box, Blank": {
+      "Stout Box, Blank": {
         "Medium": {
-          "Colorless": "Medium Stout Box, Blank"
+          "Colorless": "MediumStoutBoxBlank"
         }
       },
       "Blank Small Stout Box": {
         "Sizeless": {
-          "Colorless": "Blank Small Stout Box"
+          "Colorless": "SmallStoutBox"
         }
       },
       "Snaplock Box, Micro": {
         "Sizeless": {
-          "Colorless": "Snaplock Box, Micro"
+          "Colorless": "SnaplockBoxMicro"
         }
       },
       "Snaplock Box, Mini": {
         "Sizeless": {
-          "Colorless": "Snaplock Box, Mini"
+          "Colorless": "SnaplockBoxMini"
         }
       },
       "Snaplock Box, Organizer": {
         "Sizeless": {
-          "Colorless": "Snaplock Box, Organizer"
+          "Colorless": "SnaplockBoxOrganizer"
         }
       },
       "Snaplock Box, Poker, 100+ Card": {
         "Sizeless": {
-          "Colorless": "Snaplock Box, Poker, 100+ Card"
+          "Colorless": "SnaplockBoxPoker100+Card"
         }
       },
       "Blank Euro Poker Card": {
         "Sizeless": {
-          "Colorless": "Blank Euro Poker Card"
+          "Colorless": "BlankEuroPokerCard"
         }
       },
       "Blank VHS Box": {
         "Sizeless": {
-          "Colorless": "Blank VHS Box"
+          "Colorless": "BlankVHSBox"
         }
       },
-      "Large Quad Fold Game Board": {
+      "Quad Fold Game Board": {
         "Large": {
-          "Colorless": "Large Quad Fold Game Board"
+          "Colorless": "LargeQuadFoldGameBoard"
         }
       }
     },
     "building": {
       "Victorian Miniature": {
         "Sizeless": {
-          "Yellow": "Victorian Miniature, Yellow",
-          "Blue": "Victorian Miniature, Blue",
-          "Green": "Victorian Miniature, Green",
-          "Red": "Victorian Miniature, Red"
+          "Yellow": "VictorianMiniatureYellow",
+          "Blue": "VictorianMiniatureBlue",
+          "Green": "VictorianMiniatureGreen",
+          "Red": "VictorianMiniatureRed"
         }
       },
       "House, Wood": {
         "Sizeless": {
-          "Black": "House, Wood, Black",
-          "Blue": "House, Wood, Blue",
-          "Green": "House, Wood, Green",
-          "Orange": "House, Wood, Orange",
-          "White": "House, Wood, White",
-          "Red": "House, Wood, Red",
-          "Purple": "House, Wood, Purple",
-          "Yellow": "House, Wood, Yellow"
+          "Black": "HouseWoodBlack",
+          "Blue": "HouseWoodBlue",
+          "Green": "HouseWoodGreen",
+          "Orange": "HouseWoodOrange",
+          "White": "HouseWoodWhite",
+          "Red": "HouseWoodRed",
+          "Purple": "HouseWoodPurple",
+          "Natural": "HouseWoodNatural",
+          "Yellow": "HouseWoodYellow"
         }
       },
       "Building": {
         "Small": {
-          "Black": "Building, Small, Black",
-          "Blue": "Building, Small, Blue",
-          "Green": "Building, Small, Green",
-          "Orange": "Building, Small, Orange",
-          "Purple": "Building, Small, Purple",
-          "Red": "Building, Small, Red",
-          "White": "Building, Small, White",
-          "Yellow": "Building, Small, Yellow"
+          "Black": "BuildingSmallBlack",
+          "Blue": "BuildingSmallBlue",
+          "Green": "BuildingSmallGreen",
+          "Orange": "BuildingSmallOrange",
+          "Purple": "BuildingSmallPurple",
+          "Red": "BuildingSmallRed",
+          "White": "BuildingSmallWhite",
+          "Yellow": "BuildingSmallYellow"
         }
       },
       "Building, Side Door": {
         "Small": {
-          "Black": "Building, Small, Side Door, Black",
-          "Blue": "Building, Small, Side Door, Blue",
-          "Green": "Building, Small, Side Door, Green",
-          "Orange": "Building, Small, Side Door, Orange",
-          "Purple": "Building, Small, Side Door, Purple",
-          "Red": "Building, Small, Side Door, Red",
-          "White": "Building, Small, Side Door, White",
-          "Yellow": "Building, Small, Side Door, Yellow"
+          "Black": "BuildingSmallSideDoorBlack",
+          "Blue": "BuildingSmallSideDoorBlue",
+          "Green": "BuildingSmallSideDoorGreen",
+          "Orange": "BuildingSmallSideDoorOrange",
+          "Purple": "BuildingSmallSideDoorPurple",
+          "Red": "BuildingSmallSideDoorRed",
+          "White": "BuildingSmallSideDoorWhite",
+          "Yellow": "BuildingSmallSideDoorYellow"
         }
       },
       "Business Miniature": {
         "Sizeless": {
-          "Blue": "Business Miniature, Blue",
-          "Green": "Business Miniature, Green",
-          "Red": "Business Miniature, Red",
-          "Yellow": "Business Miniature, Yellow"
+          "Blue": "BusinessMiniatureBlue",
+          "Green": "BusinessMiniatureGreen",
+          "Red": "BusinessMiniatureRed",
+          "Yellow": "BusinessMiniatureYellow"
         }
       },
       "Card Connector, 120-degree": {
         "Sizeless": {
-          "Black": "Card Connector, 120-degree, Black",
-          "Blue": "Card Connector, 120-degree, Blue",
-          "Green": "Card Connector, 120-degree, Green",
-          "Orange": "Card Connector, 120-degree, Orange",
-          "Purple": "Card Connector, 120-degree, Purple",
-          "Red": "Card Connector, 120-degree, Red",
-          "White": "Card Connector, 120-degree, White",
-          "Yellow": "Card Connector, 120-degree, Yellow"
+          "Black": "CardConnector120-degreeBlack",
+          "Blue": "CardConnector120-degreeBlue",
+          "Green": "CardConnector120-degreeGreen",
+          "Orange": "CardConnector120-degreeOrange",
+          "Purple": "CardConnector120-degreePurple",
+          "Red": "CardConnector120-degreeRed",
+          "White": "CardConnector120-degreeWhite",
+          "Yellow": "CardConnector120-degreeYellow"
         }
       },
       "Card Connector, 90-degree": {
         "Sizeless": {
-          "Black": "Card Connector, 90-degree, Black",
-          "Blue": "Card Connector, 90-degree, Blue",
-          "Green": "Card Connector, 90-degree, Green",
-          "Orange": "Card Connector, 90-degree, Orange",
-          "Purple": "Card Connector, 90-degree, Purple",
-          "Red": "Card Connector, 90-degree, Red",
-          "White": "Card Connector, 90-degree, White",
-          "Yellow": "Card Connector, 90-degree, Yellow"
+          "Black": "CardConnector90-degreeBlack",
+          "Blue": "CardConnector90-degreeBlue",
+          "Green": "CardConnector90-degreeGreen",
+          "Orange": "CardConnector90-degreeOrange",
+          "Purple": "CardConnector90-degreePurple",
+          "Red": "CardConnector90-degreeRed",
+          "White": "CardConnector90-degreeWhite",
+          "Yellow": "CardConnector90-degreeYellow"
         }
       },
       "Castle Room, Catwalks": {
         "Sizeless": {
-          "Colorless": "Castle Room, Catwalks"
+          "Colorless": "CastleRoomCatwalks"
         }
       },
       "Castle Room, Chambers": {
         "Sizeless": {
-          "Colorless": "Castle Room, Chambers"
+          "Colorless": "CastleRoomChambers"
         }
       },
       "Castle Room, Outpost": {
         "Sizeless": {
-          "Colorless": "Castle Room, Outpost"
+          "Colorless": "CastleRoomOutpost"
         }
       },
       "Castle Room, Sanctuary": {
         "Sizeless": {
-          "Colorless": "Castle Room, Sanctuary"
+          "Colorless": "CastleRoomSanctuary"
         }
       },
       "Castle Room, Tower": {
         "Sizeless": {
-          "Colorless": "Castle Room, Tower"
+          "Colorless": "CastleRoomTower"
         }
       },
       "Castle Room, Veranda": {
         "Sizeless": {
-          "Colorless": "Castle Room, Veranda"
+          "Colorless": "CastleRoomVeranda"
         }
       },
       "Castle Tower": {
         "Sizeless": {
-          "Colorless": "Castle Tower"
+          "Colorless": "CastleTower"
         }
       },
       "Castle": {
         "Sizeless": {
-          "Black": "Castle, Black",
-          "Blue": "Castle, Blue",
-          "Green": "Castle, Green",
-          "Orange": "Castle, Orange",
-          "Purple": "Castle, Purple",
-          "Red": "Castle, Red",
-          "White": "Castle, White",
-          "Yellow": "Castle, Yellow"
+          "Black": "CastleBlack",
+          "Blue": "CastleBlue",
+          "Green": "CastleGreen",
+          "Orange": "CastleOrange",
+          "Purple": "CastlePurple",
+          "Red": "CastleRed",
+          "White": "CastleWhite",
+          "Yellow": "CastleYellow"
         }
       },
       "Cathedral": {
         "Sizeless": {
-          "Black": "Cathedral, Black",
-          "Blue": "Cathedral, Blue",
-          "Green": "Cathedral, Green",
-          "Orange": "Cathedral, Orange",
-          "Purple": "Cathedral, Purple",
-          "Red": "Cathedral, Red",
-          "White": "Cathedral, White",
-          "Yellow": "Cathedral, Yellow"
+          "Black": "CathedralBlack",
+          "Blue": "CathedralBlue",
+          "Green": "CathedralGreen",
+          "Orange": "CathedralOrange",
+          "Purple": "CathedralPurple",
+          "Red": "CathedralRed",
+          "White": "CathedralWhite",
+          "Yellow": "CathedralYellow"
         }
       },
       "Church, Acrylic, Opaque": {
         "Sizeless": {
-          "Black": "Church, Acrylic, Opaque, Black",
-          "Gold": "Church, Acrylic, Opaque, Gold",
-          "Silver": "Church, Acrylic, Opaque, Silver",
-          "White": "Church, Acrylic, Opaque, White"
+          "Black": "ChurchAcrylicOpaqueBlack",
+          "Gold": "ChurchAcrylicOpaqueGold",
+          "Silver": "ChurchAcrylicOpaqueSilver",
+          "White": "ChurchAcrylicOpaqueWhite"
         }
       },
       "Church, Acrylic, Transparent": {
         "Sizeless": {
-          "Black": "Church, Acrylic, Transparent, Black",
-          "Blue": "Church, Acrylic, Transparent, Blue",
-          "Green": "Church, Acrylic, Transparent, Green",
-          "Orange": "Church, Acrylic, Transparent, Orange",
-          "Purple": "Church, Acrylic, Transparent, Purple",
-          "Red": "Church, Acrylic, Transparent, Red",
-          "White": "Church, Acrylic, Transparent, White",
-          "Yellow": "Church, Acrylic, Transparent, Yellow"
+          "Black": "ChurchAcrylicTransparentBlack",
+          "Blue": "ChurchAcrylicTransparentBlue",
+          "Green": "ChurchAcrylicTransparentGreen",
+          "Orange": "ChurchAcrylicTransparentOrange",
+          "Purple": "ChurchAcrylicTransparentPurple",
+          "Red": "ChurchAcrylicTransparentRed",
+          "White": "ChurchAcrylicTransparentWhite",
+          "Yellow": "ChurchAcrylicTransparentYellow"
         }
       },
       "Church, Acrylic, Transparent, Clear": {
         "Sizeless": {
-          "Colorless": "Church, Acrylic, Transparent, Clear"
+          "Colorless": "ChurchAcrylicTransparentClear"
         }
       },
       "Church, Plastic": {
         "Sizeless": {
-          "Blue": "Church, Plastic, Blue",
-          "Orange": "Church, Plastic, Orange",
-          "Red": "Church, Plastic, Red"
+          "Blue": "ChurchPlasticBlue",
+          "Orange": "ChurchPlasticOrange",
+          "Red": "ChurchPlasticRed"
         }
       },
       "Church, Plastic,White": {
         "Sizeless": {
-          "Colorless": "Church, Plastic,White"
+          "Colorless": "ChurchPlasticWhite"
         }
       },
       "Church, Wood": {
         "Sizeless": {
-          "Black": "Church, Wood, Black",
-          "Blue": "Church, Wood, Blue",
-          "Green": "Church, Wood, Green",
-          "Orange": "Church, Wood, Orange",
-          "Purple": "Church, Wood, Purple",
-          "Red": "Church, Wood, Red",
-          "White": "Church, Wood, White",
-          "Yellow": "Church, Wood, Yellow"
+          "Black": "ChurchWoodBlack",
+          "Blue": "ChurchWoodBlue",
+          "Green": "ChurchWoodGreen",
+          "Orange": "ChurchWoodOrange",
+          "Purple": "ChurchWoodPurple",
+          "Red": "ChurchWoodRed",
+          "White": "ChurchWoodWhite",
+          "Yellow": "ChurchWoodYellow"
         }
       },
       "Command Center": {
         "Sizeless": {
-          "Black": "Command Center, Black",
-          "Blue": "Command Center, Blue",
-          "Green": "Command Center, Green",
-          "Orange": "Command Center, Orange",
-          "Purple": "Command Center, Purple",
-          "Red": "Command Center, Red",
-          "White": "Command Center, White",
-          "Yellow": "Command Center, Yellow"
+          "Black": "CommandCenterBlack",
+          "Blue": "CommandCenterBlue",
+          "Green": "CommandCenterGreen",
+          "Orange": "CommandCenterOrange",
+          "Purple": "CommandCenterPurple",
+          "Red": "CommandCenterRed",
+          "White": "CommandCenterWhite",
+          "Yellow": "CommandCenterYellow"
         }
       },
       "Donjon Pagoda": {
         "Sizeless": {
-          "Black": "Donjon Pagoda, Black",
-          "Blue": "Donjon Pagoda, Blue",
-          "Green": "Donjon Pagoda, Green",
-          "Orange": "Donjon Pagoda, Orange",
-          "Purple": "Donjon Pagoda, Purple",
-          "Red": "Donjon Pagoda, Red",
-          "White": "Donjon Pagoda, White",
-          "Yellow": "Donjon Pagoda, Yellow"
+          "Black": "DonjonPagodaBlack",
+          "Blue": "DonjonPagodaBlue",
+          "Green": "DonjonPagodaGreen",
+          "Orange": "DonjonPagodaOrange",
+          "Purple": "DonjonPagodaPurple",
+          "Red": "DonjonPagodaRed",
+          "White": "DonjonPagodaWhite",
+          "Yellow": "DonjonPagodaYellow"
         }
       },
       "Future Dome": {
         "Sizeless": {
-          "Blue": "Future Dome, Blue",
-          "Green": "Future Dome, Green",
-          "Orange": "Future Dome, Orange",
-          "Purple": "Future Dome, Purple",
-          "Red": "Future Dome, Red",
-          "Yellow": "Future Dome, Yellow"
+          "Blue": "FutureDomeBlue",
+          "Green": "FutureDomeGreen",
+          "Orange": "FutureDomeOrange",
+          "Purple": "FutureDomePurple",
+          "Red": "FutureDomeRed",
+          "Yellow": "FutureDomeYellow"
         }
       },
       "Future Pyramid": {
         "Sizeless": {
-          "Green": "Future Pyramid, Green",
-          "Orange": "Future Pyramid, Orange",
-          "Purple": "Future Pyramid, Purple",
-          "Red": "Future Pyramid, Red",
-          "Yellow": "Future Pyramid, Yellow"
+          "Green": "FuturePyramidGreen",
+          "Orange": "FuturePyramidOrange",
+          "Purple": "FuturePyramidPurple",
+          "Red": "FuturePyramidRed",
+          "Yellow": "FuturePyramidYellow"
         }
       },
       "Handmade Brick": {
         "Sizeless": {
-          "Colorless": "Handmade Brick"
+          "Colorless": "HandmadeBrick"
         }
       },
       "Harbor": {
         "Sizeless": {
-          "Black": "Harbor, Black",
-          "Blue": "Harbor, Blue",
-          "Green": "Harbor, Green",
-          "Orange": "Harbor, Orange",
-          "Purple": "Harbor, Purple",
-          "Red": "Harbor, Red",
-          "White": "Harbor, White",
-          "Yellow": "Harbor, Yellow"
+          "Black": "HarborBlack",
+          "Blue": "HarborBlue",
+          "Green": "HarborGreen",
+          "Orange": "HarborOrange",
+          "Purple": "HarborPurple",
+          "Red": "HarborRed",
+          "White": "HarborWhite",
+          "Yellow": "HarborYellow"
         }
       },
       "Henhouse": {
         "Sizeless": {
-          "Black": "Henhouse, Black",
-          "Blue": "Henhouse, Blue",
-          "Green": "Henhouse, Green",
-          "Orange": "Henhouse, Orange",
-          "Purple": "Henhouse, Purple",
-          "Red": "Henhouse, Red",
-          "White": "Henhouse, White",
-          "Yellow": "Henhouse, Yellow"
+          "Black": "HenhouseBlack",
+          "Blue": "HenhouseBlue",
+          "Green": "HenhouseGreen",
+          "Orange": "HenhouseOrange",
+          "Purple": "HenhousePurple",
+          "Red": "HenhouseRed",
+          "White": "HenhouseWhite",
+          "Yellow": "HenhouseYellow"
         }
       },
       "Hinged Stone Door": {
         "Sizeless": {
-          "Blue": "Hinged Stone Door, Blue",
-          "Bronze": "Hinged Stone Door, Bronze",
-          "Green": "Hinged Stone Door, Green",
-          "Gray": "Hinged Stone Door, Gray",
-          "Red": "Hinged Stone Door, Red"
+          "Blue": "HingedStoneDoorBlue",
+          "Bronze": "HingedStoneDoorBronze",
+          "Green": "HingedStoneDoorGreen",
+          "Gray": "HingedStoneDoorGray",
+          "Red": "HingedStoneDoorRed"
         }
       },
       "Hotel": {
         "Sizeless": {
-          "Black": "Hotel, Black",
-          "Blue": "Hotel, Blue",
-          "Green": "Hotel, Green",
-          "Orange": "Hotel, Orange",
-          "Purple": "Hotel, Purple",
-          "Red": "Hotel, Red",
-          "White": "Hotel, White",
-          "Yellow": "Hotel, Yellow"
+          "Black": "HotelBlack",
+          "Blue": "HotelBlue",
+          "Green": "HotelGreen",
+          "Orange": "HotelOrange",
+          "Purple": "HotelPurple",
+          "Red": "HotelRed",
+          "White": "HotelWhite",
+          "Yellow": "HotelYellow"
         }
       },
       "House, Acrylic, Opaque": {
         "Sizeless": {
-          "Black": "House, Acrylic, Opaque, Black",
-          "Gold": "House, Acrylic, Opaque, Gold",
-          "Silver": "House, Acrylic, Opaque, Silver",
-          "White": "House, Acrylic, Opaque, White"
+          "Black": "HouseAcrylicOpaqueBlack",
+          "Gold": "HouseAcrylicOpaqueGold",
+          "Silver": "HouseAcrylicOpaqueSilver",
+          "White": "HouseAcrylicOpaqueWhite"
         }
       },
       "House, Acrylic, Transparent": {
         "Sizeless": {
-          "Black": "House, Acrylic, Transparent, Black",
-          "Blue": "House, Acrylic, Transparent, Blue",
-          "Green": "House, Acrylic, Transparent, Green",
-          "Orange": "House, Acrylic, Transparent, Orange",
-          "Purple": "House, Acrylic, Transparent, Purple",
-          "Red": "House, Acrylic, Transparent, Red",
-          "Yellow": "House, Acrylic, Transparent, Yellow"
+          "Black": "HouseAcrylicTransparentBlack",
+          "Blue": "HouseAcrylicTransparentBlue",
+          "Green": "HouseAcrylicTransparentGreen",
+          "Orange": "HouseAcrylicTransparentOrange",
+          "Purple": "HouseAcrylicTransparentPurple",
+          "Red": "HouseAcrylicTransparentRed",
+          "Yellow": "HouseAcrylicTransparentYellow"
         }
       },
       "House, Acrylic, Transparent, Clear": {
         "Sizeless": {
-          "Colorless": "House, Acrylic, Transparent, Clear"
+          "Colorless": "HouseAcrylicTransparentClear"
         }
       },
       "House": {
         "Sizeless": {
-          "Black": "House, Black",
-          "Blue": "House, Blue",
-          "Green": "House, Green",
-          "Orange": "House, Orange",
-          "Purple": "House, Purple",
-          "Red": "House, Red",
-          "White": "House, White",
-          "Yellow": "House, Yellow"
-        }
-      },
-      "House, Wood, Natural": {
-        "Sizeless": {
-          "Colorless": "House, Wood, Natural"
+          "Black": "HouseBlack",
+          "Blue": "HouseBlue",
+          "Green": "HouseGreen",
+          "Orange": "HouseOrange",
+          "Purple": "HousePurple",
+          "Red": "HouseRed",
+          "White": "HouseWhite",
+          "Yellow": "HouseYellow"
         }
       },
       "Hut": {
         "Large": {
-          "Colorless": "Hut, Large"
+          "Colorless": "HutLarge"
         },
         "Small": {
-          "Colorless": "Hut, Small"
+          "Colorless": "HutSmall"
         }
       },
       "Laboratory": {
         "Sizeless": {
-          "Black": "Laboratory, Black",
-          "Blue": "Laboratory, Blue",
-          "Green": "Laboratory, Green",
-          "Orange": "Laboratory, Orange",
-          "Purple": "Laboratory, Purple",
-          "Red": "Laboratory, Red",
-          "White": "Laboratory, White",
-          "Yellow": "Laboratory, Yellow"
+          "Black": "LaboratoryBlack",
+          "Blue": "LaboratoryBlue",
+          "Green": "LaboratoryGreen",
+          "Orange": "LaboratoryOrange",
+          "Purple": "LaboratoryPurple",
+          "Red": "LaboratoryRed",
+          "White": "LaboratoryWhite",
+          "Yellow": "LaboratoryYellow"
         }
       },
       "Marketplace": {
         "Sizeless": {
-          "Black": "Marketplace, Black",
-          "Blue": "Marketplace, Blue",
-          "Green": "Marketplace, Green",
-          "Orange": "Marketplace, Orange",
-          "Purple": "Marketplace, Purple",
-          "Red": "Marketplace, Red",
-          "White": "Marketplace, White",
-          "Yellow": "Marketplace, Yellow"
+          "Black": "MarketplaceBlack",
+          "Blue": "MarketplaceBlue",
+          "Green": "MarketplaceGreen",
+          "Orange": "MarketplaceOrange",
+          "Purple": "MarketplacePurple",
+          "Red": "MarketplaceRed",
+          "White": "MarketplaceWhite",
+          "Yellow": "MarketplaceYellow"
         }
       },
       "Mine": {
         "Sizeless": {
-          "Black": "Mine, Black",
-          "Blue": "Mine, Blue",
-          "Green": "Mine, Green",
-          "Orange": "Mine, Orange",
-          "Purple": "Mine, Purple",
-          "Red": "Mine, Red",
-          "White": "Mine, White",
-          "Yellow": "Mine, Yellow"
+          "Black": "MineBlack",
+          "Blue": "MineBlue",
+          "Green": "MineGreen",
+          "Orange": "MineOrange",
+          "Purple": "MinePurple",
+          "Red": "MineRed",
+          "White": "MineWhite",
+          "Yellow": "MineYellow"
         }
       },
       "Observatory": {
         "Sizeless": {
-          "Black": "Observatory, Black",
-          "Blue": "Observatory, Blue",
-          "Green": "Observatory, Green",
-          "Orange": "Observatory, Orange",
-          "Purple": "Observatory, Purple",
-          "Red": "Observatory, Red",
-          "White": "Observatory, White",
-          "Yellow": "Observatory, Yellow"
+          "Black": "ObservatoryBlack",
+          "Blue": "ObservatoryBlue",
+          "Green": "ObservatoryGreen",
+          "Orange": "ObservatoryOrange",
+          "Purple": "ObservatoryPurple",
+          "Red": "ObservatoryRed",
+          "White": "ObservatoryWhite",
+          "Yellow": "ObservatoryYellow"
         }
       },
       "Plastic Castle": {
         "Sizeless": {
-          "Red": "Plastic Castle, Red"
+          "Red": "PlasticCastleRed"
         }
       },
       "Premium Brick": {
         "Sizeless": {
-          "Colorless": "Premium Brick"
+          "Colorless": "PremiumBrick"
         }
       },
       "Pyramid": {
         "Sizeless": {
-          "Black": "Pyramid, Black",
-          "Blue": "Pyramid, Blue",
-          "Purple": "Pyramid, Purple",
-          "Red": "Pyramid, Red",
-          "White": "Pyramid, White",
-          "Yellow": "Pyramid, Yellow"
+          "Black": "PyramidBlack",
+          "Blue": "PyramidBlue",
+          "Purple": "PyramidPurple",
+          "Red": "PyramidRed",
+          "White": "PyramidWhite",
+          "Yellow": "PyramidYellow"
         }
       },
-      "Taj Mahal Palace, Set of 5": {
+      "Taj Mahal Palace, Set of": {
         "5": {
-          "Colorless": "Taj Mahal Palace, Set of 5"
+          "Colorless": "TajMahalPalaceSetof5"
         }
       },
       "Tower Stacker": {
         "Sizeless": {
-          "Black": "Tower Stacker, Black",
-          "Blue": "Tower Stacker, Blue",
-          "Green": "Tower Stacker, Green",
-          "Orange": "Tower Stacker, Orange",
-          "Purple": "Tower Stacker, Purple",
-          "Red": "Tower Stacker, Red",
-          "White": "Tower Stacker, White",
-          "Yellow": "Tower Stacker, Yellow"
+          "Black": "TowerStackerBlack",
+          "Blue": "TowerStackerBlue",
+          "Green": "TowerStackerGreen",
+          "Orange": "TowerStackerOrange",
+          "Purple": "TowerStackerPurple",
+          "Red": "TowerStackerRed",
+          "White": "TowerStackerWhite",
+          "Yellow": "TowerStackerYellow"
         }
       },
       "Trellis of Grapes": {
         "Sizeless": {
-          "Blue": "Trellis of Grapes, Blue",
-          "Green": "Trellis of Grapes, Green",
-          "Orange": "Trellis of Grapes, Orange",
-          "White": "Trellis of Grapes, White"
+          "Blue": "TrellisofGrapesBlue",
+          "Green": "TrellisofGrapesGreen",
+          "Orange": "TrellisofGrapesOrange",
+          "White": "TrellisofGrapesWhite"
         }
       },
       "Water Mill": {
         "Sizeless": {
-          "Black": "Water Mill, Black",
-          "Blue": "Water Mill, Blue",
-          "Green": "Water Mill, Green",
-          "Orange": "Water Mill, Orange",
-          "Purple": "Water Mill, Purple",
-          "Red": "Water Mill, Red",
-          "White": "Water Mill, White",
-          "Yellow": "Water Mill, Yellow"
+          "Black": "WaterMillBlack",
+          "Blue": "WaterMillBlue",
+          "Green": "WaterMillGreen",
+          "Orange": "WaterMillOrange",
+          "Purple": "WaterMillPurple",
+          "Red": "WaterMillRed",
+          "White": "WaterMillWhite",
+          "Yellow": "WaterMillYellow"
         }
       },
       "Windmill": {
         "Sizeless": {
-          "Black": "Windmill, Black",
-          "Blue": "Windmill, Blue",
-          "Green": "Windmill, Green",
-          "Orange": "Windmill, Orange",
-          "Purple": "Windmill, Purple",
-          "Red": "Windmill, Red",
-          "White": "Windmill, White",
-          "Yellow": "Windmill, Yellow"
+          "Black": "WindmillBlack",
+          "Blue": "WindmillBlue",
+          "Green": "WindmillGreen",
+          "Orange": "WindmillOrange",
+          "Purple": "WindmillPurple",
+          "Red": "WindmillRed",
+          "White": "WindmillWhite",
+          "Yellow": "WindmillYellow"
         }
       },
       "Wood Cabin": {
         "Sizeless": {
-          "Brown": "Wood Cabin, Brown"
+          "Brown": "WoodCabinBrown"
         }
       },
       "Skyscraper": {
         "Sizeless": {
-          "Black": "Skyscraper, Black",
-          "Blue": "Skyscraper, Blue",
-          "Green": "Skyscraper, Green",
-          "Orange": "Skyscraper, Orange",
-          "Purple": "Skyscraper, Purple",
-          "Red": "Skyscraper, Red",
-          "White": "Skyscraper, White",
-          "Yellow": "Skyscraper, Yellow"
+          "Black": "SkyscraperBlack",
+          "Blue": "SkyscraperBlue",
+          "Green": "SkyscraperGreen",
+          "Orange": "SkyscraperOrange",
+          "Purple": "SkyscraperPurple",
+          "Red": "SkyscraperRed",
+          "White": "SkyscraperWhite",
+          "Yellow": "SkyscraperYellow"
         }
       }
     },
     "meeple": {
       "Armored Guard": {
         "Sizeless": {
-          "Colorless": "Armored Guard"
+          "Colorless": "ArmoredGuard"
         }
       },
       "Aztec - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Aztec - Character Meeple"
+          "Colorless": "Aztec-CharacterMeeple"
         }
       },
       "Big People": {
         "Sizeless": {
-          "Blue": "Big People, Blue"
+          "Blue": "BigPeopleBlue"
         }
       },
       "Bust, Wood": {
         "Sizeless": {
-          "Blue": "Bust, Wood, Blue",
-          "Green": "Bust, Wood, Green"
+          "Blue": "BustWoodBlue",
+          "Green": "BustWoodGreen"
         }
       },
       "Bust, Wood, Collared": {
         "Sizeless": {
-          "Blue": "Bust, Wood, Collared, Blue",
-          "Green": "Bust, Wood, Collared, Green"
+          "Blue": "BustWoodCollaredBlue",
+          "Green": "BustWoodCollaredGreen"
         }
       },
       "Cleric - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Cleric - Character Meeple"
+          "Colorless": "Cleric-CharacterMeeple"
         }
       },
       "Cowboy, Black - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Cowboy, Black - Character Meeple"
+          "Colorless": "CowboyBlack-CharacterMeeple"
         }
       },
       "Cowboy, Blue - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Cowboy, Blue - Character Meeple"
+          "Colorless": "CowboyBlue-CharacterMeeple"
         }
       },
       "Cowboy, Green - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Cowboy, Green - Character Meeple"
+          "Colorless": "CowboyGreen-CharacterMeeple"
         }
       },
       "Cowboy, Orange - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Cowboy, Orange - Character Meeple"
+          "Colorless": "CowboyOrange-CharacterMeeple"
         }
       },
       "Cowboy, Purple - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Cowboy, Purple - Character Meeple"
+          "Colorless": "CowboyPurple-CharacterMeeple"
         }
       },
       "Cowboy, Red - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Cowboy, Red - Character Meeple"
+          "Colorless": "CowboyRed-CharacterMeeple"
         }
       },
       "Cowboy, White - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Cowboy, White - Character Meeple"
+          "Colorless": "CowboyWhite-CharacterMeeple"
         }
       },
       "Cowboy, Yellow - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Cowboy, Yellow - Character Meeple"
+          "Colorless": "CowboyYellow-CharacterMeeple"
         }
       },
       "Doctor - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Doctor - Character Meeple"
+          "Colorless": "Doctor-CharacterMeeple"
         }
       },
       "Dwarf, Blue - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Dwarf, Blue - Character Meeple"
+          "Colorless": "DwarfBlue-CharacterMeeple"
         }
       },
       "Dwarf, Green - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Dwarf, Green - Character Meeple"
+          "Colorless": "DwarfGreen-CharacterMeeple"
         }
       },
       "Dwarf, Orange - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Dwarf, Orange - Character Meeple"
+          "Colorless": "DwarfOrange-CharacterMeeple"
         }
       },
       "Dwarf, Purple - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Dwarf, Purple - Character Meeple"
+          "Colorless": "DwarfPurple-CharacterMeeple"
         }
       },
       "Dwarf, Red - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Dwarf, Red - Character Meeple"
+          "Colorless": "DwarfRed-CharacterMeeple"
         }
       },
       "Dwarf, Yellow - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Dwarf, Yellow - Character Meeple"
+          "Colorless": "DwarfYellow-CharacterMeeple"
         }
       },
       "Elf - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Elf - Character Meeple"
+          "Colorless": "Elf-CharacterMeeple"
         }
       },
       "Farmer, Female, Blue - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Farmer, Female, Blue - Character Meeple"
+          "Colorless": "FarmerFemaleBlue-CharacterMeeple"
         }
       },
       "Farmer, Female, Green - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Farmer, Female, Green - Character Meeple"
+          "Colorless": "FarmerFemaleGreen-CharacterMeeple"
         }
       },
       "Farmer, Female, Orange - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Farmer, Female, Orange - Character Meeple"
+          "Colorless": "FarmerFemaleOrange-CharacterMeeple"
         }
       },
       "Farmer, Female, Purple - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Farmer, Female, Purple - Character Meeple"
+          "Colorless": "FarmerFemalePurple-CharacterMeeple"
         }
       },
       "Farmer, Female, Red - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Farmer, Female, Red - Character Meeple"
+          "Colorless": "FarmerFemaleRed-CharacterMeeple"
         }
       },
       "Farmer, Female, Yellow - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Farmer, Female, Yellow - Character Meeple"
+          "Colorless": "FarmerFemaleYellow-CharacterMeeple"
         }
       },
       "Farmer, Male, Blue - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Farmer, Male, Blue - Character Meeple"
+          "Colorless": "FarmerMaleBlue-CharacterMeeple"
         }
       },
       "Farmer, Male, Green - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Farmer, Male, Green - Character Meeple"
+          "Colorless": "FarmerMaleGreen-CharacterMeeple"
         }
       },
       "Farmer, Male, Orange - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Farmer, Male, Orange - Character Meeple"
+          "Colorless": "FarmerMaleOrange-CharacterMeeple"
         }
       },
       "Farmer, Male, Purple - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Farmer, Male, Purple - Character Meeple"
+          "Colorless": "FarmerMalePurple-CharacterMeeple"
         }
       },
       "Farmer, Male, Red - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Farmer, Male, Red - Character Meeple"
+          "Colorless": "FarmerMaleRed-CharacterMeeple"
         }
       },
       "Farmer, Male, Yellow - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Farmer, Male, Yellow - Character Meeple"
+          "Colorless": "FarmerMaleYellow-CharacterMeeple"
         }
       },
       "Fedora Wearer": {
         "Sizeless": {
-          "Black": "Fedora Wearer, Black"
+          "Black": "FedoraWearerBlack"
         }
       },
       "Female Farmer": {
         "Sizeless": {
-          "Green": "Female Farmer, Green",
-          "Orange": "Female Farmer, Orange",
-          "Purple": "Female Farmer, Purple",
-          "White": "Female Farmer, White",
-          "Yellow": "Female Farmer, Yellow"
+          "Green": "FemaleFarmerGreen",
+          "Orange": "FemaleFarmerOrange",
+          "Purple": "FemaleFarmerPurple",
+          "White": "FemaleFarmerWhite",
+          "Yellow": "FemaleFarmerYellow"
         }
       },
       "Figure, Wood": {
         "Sizeless": {
-          "Green": "Figure, Wood, Green",
-          "White": "Figure, Wood, White"
+          "Green": "FigureWoodGreen",
+          "White": "FigureWoodWhite"
         }
       },
       "Fire Elemental - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Fire Elemental - Character Meeple"
+          "Colorless": "FireElemental-CharacterMeeple"
         }
       },
       "Firefighter - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Firefighter - Character Meeple"
+          "Colorless": "Firefighter-CharacterMeeple"
         }
       },
       "Footman": {
         "Sizeless": {
-          "Blue": "Footman, Blue",
-          "Green": "Footman, Green",
-          "Red": "Footman, Red",
-          "Yellow": "Footman, Yellow"
+          "Blue": "FootmanBlue",
+          "Green": "FootmanGreen",
+          "Red": "FootmanRed",
+          "Yellow": "FootmanYellow"
         }
       },
       "Gangster": {
         "Sizeless": {
-          "Blue": "Gangster, Blue",
-          "Green": "Gangster, Green",
-          "Orange": "Gangster, Orange",
-          "Yellow": "Gangster, Yellow"
+          "Blue": "GangsterBlue",
+          "Green": "GangsterGreen",
+          "Orange": "GangsterOrange",
+          "Yellow": "GangsterYellow"
         }
       },
       "Geisha - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Geisha - Character Meeple"
+          "Colorless": "Geisha-CharacterMeeple"
         }
       },
       "Gentleman": {
         "Sizeless": {
-          "Gold": "Gentleman, Gold"
+          "Gold": "GentlemanGold"
         }
       },
       "Ghost": {
         "Sizeless": {
-          "White": "Ghost, White"
+          "White": "GhostWhite"
         }
       },
       "Gnome": {
         "Sizeless": {
-          "Blue": "Gnome, Blue"
+          "Blue": "GnomeBlue"
         }
       },
       "Guard Robot": {
         "Sizeless": {
-          "Black": "Guard Robot, Black",
-          "Green": "Guard Robot, Green",
-          "Red": "Guard Robot, Red",
-          "Yellow": "Guard Robot, Yellow"
+          "Black": "GuardRobotBlack",
+          "Green": "GuardRobotGreen",
+          "Red": "GuardRobotRed",
+          "Yellow": "GuardRobotYellow"
         }
       },
       "Halfling - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Halfling - Character Meeple"
+          "Colorless": "Halfling-CharacterMeeple"
         }
       },
       "Hazmat - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Hazmat - Character Meeple"
+          "Colorless": "Hazmat-CharacterMeeple"
         }
       },
       "Ice Elemental - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Ice Elemental - Character Meeple"
+          "Colorless": "IceElemental-CharacterMeeple"
         }
       },
       "Lab Assistant - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Lab Assistant - Character Meeple"
+          "Colorless": "LabAssistant-CharacterMeeple"
         }
       },
       "Maasai - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Maasai - Character Meeple"
+          "Colorless": "Maasai-CharacterMeeple"
         }
       },
       "Man In Black - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Man In Black - Character Meeple"
+          "Colorless": "ManInBlack-CharacterMeeple"
         }
       },
       "Medic - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Medic - Character Meeple"
+          "Colorless": "Medic-CharacterMeeple"
         }
       },
       "Meeple, Acrylic, Opaque": {
         "Sizeless": {
-          "Black": "Meeple, Acrylic, Opaque, Black",
-          "Gold": "Meeple, Acrylic, Opaque, Gold",
-          "Silver": "Meeple, Acrylic, Opaque, Silver",
-          "White": "Meeple, Acrylic, Opaque, White"
+          "Black": "MeepleAcrylicOpaqueBlack",
+          "Gold": "MeepleAcrylicOpaqueGold",
+          "Silver": "MeepleAcrylicOpaqueSilver",
+          "White": "MeepleAcrylicOpaqueWhite"
         },
         "Large": {
-          "Black": "Meeple, Large, Acrylic, Opaque, Black",
-          "Gold": "Meeple, Large, Acrylic, Opaque, Gold",
-          "Silver": "Meeple, Large, Acrylic, Opaque, Silver",
-          "White": "Meeple, Large, Acrylic, Opaque, White"
+          "Black": "MeepleLargeAcrylicOpaqueBlack",
+          "Gold": "MeepleLargeAcrylicOpaqueGold",
+          "Silver": "MeepleLargeAcrylicOpaqueSilver",
+          "White": "MeepleLargeAcrylicOpaqueWhite"
         }
       },
       "Meeple, Acrylic, Transparent": {
         "Sizeless": {
-          "Black": "Meeple, Acrylic, Transparent, Black",
-          "Blue": "Meeple, Acrylic, Transparent, Blue",
-          "Green": "Meeple, Acrylic, Transparent, Green",
-          "Orange": "Meeple, Acrylic, Transparent, Orange",
-          "Purple": "Meeple, Acrylic, Transparent, Purple",
-          "Red": "Meeple, Acrylic, Transparent, Red",
-          "White": "Meeple, Acrylic, Transparent, White",
-          "Yellow": "Meeple, Acrylic, Transparent, Yellow"
+          "Black": "MeepleAcrylicTransparentBlack",
+          "Blue": "MeepleAcrylicTransparentBlue",
+          "Green": "MeepleAcrylicTransparentGreen",
+          "Orange": "MeepleAcrylicTransparentOrange",
+          "Purple": "MeepleAcrylicTransparentPurple",
+          "Red": "MeepleAcrylicTransparentRed",
+          "White": "MeepleAcrylicTransparentWhite",
+          "Yellow": "MeepleAcrylicTransparentYellow"
         },
         "Large": {
-          "Black": "Meeple, Large, Acrylic, Transparent, Black",
-          "Blue": "Meeple, Large, Acrylic, Transparent, Blue",
-          "Green": "Meeple, Large, Acrylic, Transparent, Green",
-          "Orange": "Meeple, Large, Acrylic, Transparent, Orange",
-          "Purple": "Meeple, Large, Acrylic, Transparent, Purple",
-          "Red": "Meeple, Large, Acrylic, Transparent, Red",
-          "White": "Meeple, Large, Acrylic, Transparent, White",
-          "Yellow": "Meeple, Large, Acrylic, Transparent, Yellow"
+          "Black": "MeepleLargeAcrylicTransparentBlack",
+          "Blue": "MeepleLargeAcrylicTransparentBlue",
+          "Green": "MeepleLargeAcrylicTransparentGreen",
+          "Orange": "MeepleLargeAcrylicTransparentOrange",
+          "Purple": "MeepleLargeAcrylicTransparentPurple",
+          "Red": "MeepleLargeAcrylicTransparentRed",
+          "White": "MeepleLargeAcrylicTransparentWhite",
+          "Yellow": "MeepleLargeAcrylicTransparentYellow"
         }
       },
       "Meeple, Acrylic, Transparent, Clear": {
         "Sizeless": {
-          "Colorless": "Meeple, Acrylic, Transparent, Clear"
+          "Colorless": "MeepleAcrylicTransparentClear"
         },
         "Large": {
-          "Colorless": "Meeple, Large, Acrylic, Transparent, Clear"
+          "Colorless": "MeepleLargeAcrylicTransparentClear"
         }
       },
       "Meeple, Wood": {
         "Large": {
-          "Black": "Meeple, Large, Wood, Black",
-          "Blue": "Meeple, Large, Wood, Blue",
-          "Green": "Meeple, Large, Wood, Green",
-          "Orange": "Meeple, Large, Wood, Orange",
-          "Purple": "Meeple, Large, Wood, Purple",
-          "Red": "Meeple, Large, Wood, Red",
-          "White": "Meeple, Large, Wood, White",
-          "Yellow": "Meeple, Large, Wood, Yellow"
+          "Black": "MeepleLargeWoodBlack",
+          "Blue": "MeepleLargeWoodBlue",
+          "Green": "MeepleLargeWoodGreen",
+          "Orange": "MeepleLargeWoodOrange",
+          "Purple": "MeepleLargeWoodPurple",
+          "Red": "MeepleLargeWoodRed",
+          "White": "MeepleLargeWoodWhite",
+          "Yellow": "MeepleLargeWoodYellow"
         },
         "Sizeless": {
-          "Black": "Meeple, Wood, Black",
-          "Blue": "Meeple, Wood, Blue",
-          "Green": "Meeple, Wood, Green",
-          "Orange": "Meeple, Wood, Orange",
-          "Purple": "Meeple, Wood, Purple",
-          "Red": "Meeple, Wood, Red",
-          "White": "Meeple, Wood, White",
-          "Yellow": "Meeple, Wood, Yellow"
+          "Black": "MeepleWoodBlack",
+          "Blue": "MeepleWoodBlue",
+          "Green": "MeepleWoodGreen",
+          "Orange": "MeepleWoodOrange",
+          "Purple": "MeepleWoodPurple",
+          "Red": "MeepleWoodRed",
+          "White": "MeepleWoodWhite",
+          "Yellow": "MeepleWoodYellow"
         }
       },
       "Meeple, Mini, Acrylic, Opaque": {
         "Sizeless": {
-          "Black": "Meeple, Mini, Acrylic, Opaque, Black",
-          "Gold": "Meeple, Mini, Acrylic, Opaque, Gold",
-          "Silver": "Meeple, Mini, Acrylic, Opaque, Silver",
-          "White": "Meeple, Mini, Acrylic, Opaque, White"
+          "Black": "MeepleMiniAcrylicOpaqueBlack",
+          "Gold": "MeepleMiniAcrylicOpaqueGold",
+          "Silver": "MeepleMiniAcrylicOpaqueSilver",
+          "White": "MeepleMiniAcrylicOpaqueWhite"
         }
       },
       "Meeple, Mini, Acrylic, Transparent": {
         "Sizeless": {
-          "Black": "Meeple, Mini, Acrylic, Transparent, Black",
-          "Blue": "Meeple, Mini, Acrylic, Transparent, Blue",
-          "Green": "Meeple, Mini, Acrylic, Transparent, Green",
-          "Orange": "Meeple, Mini, Acrylic, Transparent, Orange",
-          "Purple": "Meeple, Mini, Acrylic, Transparent, Purple",
-          "Red": "Meeple, Mini, Acrylic, Transparent, Red",
-          "Yellow": "Meeple, Mini, Acrylic, Transparent, Yellow"
+          "Black": "MeepleMiniAcrylicTransparentBlack",
+          "Blue": "MeepleMiniAcrylicTransparentBlue",
+          "Green": "MeepleMiniAcrylicTransparentGreen",
+          "Orange": "MeepleMiniAcrylicTransparentOrange",
+          "Purple": "MeepleMiniAcrylicTransparentPurple",
+          "Red": "MeepleMiniAcrylicTransparentRed",
+          "Yellow": "MeepleMiniAcrylicTransparentYellow"
         }
       },
       "Meeple, Mini, Acrylic, Transparent, Clear": {
         "Sizeless": {
-          "Colorless": "Meeple, Mini, Acrylic, Transparent, Clear"
+          "Colorless": "MeepleMiniAcrylicTransparentClear"
         }
       },
       "Meeple, Mini, Wood": {
         "Sizeless": {
-          "Black": "Meeple, Mini, Wood, Black",
-          "Blue": "Meeple, Mini, Wood, Blue",
-          "Green": "Meeple, Mini, Wood, Green",
-          "Orange": "Meeple, Mini, Wood, Orange",
-          "Purple": "Meeple, Mini, Wood, Purple",
-          "Red": "Meeple, Mini, Wood, Red",
-          "White": "Meeple, Mini, Wood, White",
-          "Yellow": "Meeple, Mini, Wood, Yellow"
+          "Black": "MeepleMiniWoodBlack",
+          "Blue": "MeepleMiniWoodBlue",
+          "Green": "MeepleMiniWoodGreen",
+          "Orange": "MeepleMiniWoodOrange",
+          "Purple": "MeepleMiniWoodPurple",
+          "Red": "MeepleMiniWoodRed",
+          "White": "MeepleMiniWoodWhite",
+          "Yellow": "MeepleMiniWoodYellow"
         }
       },
       "Meeple, Thick": {
         "Sizeless": {
-          "Blue": "Meeple, Thick, Blue",
-          "Orange": "Meeple, Thick, Orange",
-          "Purple": "Meeple, Thick, Purple",
-          "Red": "Meeple, Thick, Red",
-          "Teal": "Meeple, Thick, Teal",
-          "Yellow": "Meeple, Thick, Yellow"
+          "Blue": "MeepleThickBlue",
+          "Orange": "MeepleThickOrange",
+          "Purple": "MeepleThickPurple",
+          "Red": "MeepleThickRed",
+          "Teal": "MeepleThickTeal",
+          "Yellow": "MeepleThickYellow"
         }
       },
       "Mongol - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Mongol - Character Meeple"
+          "Colorless": "Mongol-CharacterMeeple"
         }
       },
       "Ninja, Black - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Ninja, Black - Character Meeple"
+          "Colorless": "NinjaBlack-CharacterMeeple"
         }
       },
       "Ninja, Blue - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Ninja, Blue - Character Meeple"
+          "Colorless": "NinjaBlue-CharacterMeeple"
         }
       },
       "Ninja, Green - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Ninja, Green - Character Meeple"
+          "Colorless": "NinjaGreen-CharacterMeeple"
         }
       },
       "Ninja, Orange - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Ninja, Orange - Character Meeple"
+          "Colorless": "NinjaOrange-CharacterMeeple"
         }
       },
       "Ninja, Purple - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Ninja, Purple - Character Meeple"
+          "Colorless": "NinjaPurple-CharacterMeeple"
         }
       },
       "Ninja, Red - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Ninja, Red - Character Meeple"
+          "Colorless": "NinjaRed-CharacterMeeple"
         }
       },
       "Ninja, White - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Ninja, White - Character Meeple"
+          "Colorless": "NinjaWhite-CharacterMeeple"
         }
       },
       "Ninja, Yellow - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Ninja, Yellow - Character Meeple"
+          "Colorless": "NinjaYellow-CharacterMeeple"
         }
       },
       "Nurse - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Nurse - Character Meeple"
+          "Colorless": "Nurse-CharacterMeeple"
         }
       },
       "Office Worker, Blue - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Office Worker, Blue - Character Meeple"
+          "Colorless": "OfficeWorkerBlue-CharacterMeeple"
         }
       },
       "Office Worker, Purple - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Office Worker, Purple - Character Meeple"
+          "Colorless": "OfficeWorkerPurple-CharacterMeeple"
         }
       },
       "Outlaw - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Outlaw - Character Meeple"
+          "Colorless": "Outlaw-CharacterMeeple"
         }
       },
       "Peasant": {
         "Sizeless": {
-          "Purple": "Peasant, Purple"
+          "Purple": "PeasantPurple"
         }
       },
       "People": {
         "Sizeless": {
-          "Black": "People, Black",
-          "Blue": "People, Blue",
-          "Green": "People, Green",
-          "Orange": "People, Orange",
-          "Purple": "People, Purple",
-          "Red": "People, Red",
-          "White": "People, White",
-          "Yellow": "People, Yellow"
+          "Black": "PeopleBlack",
+          "Blue": "PeopleBlue",
+          "Green": "PeopleGreen",
+          "Orange": "PeopleOrange",
+          "Purple": "PeoplePurple",
+          "Red": "PeopleRed",
+          "White": "PeopleWhite",
+          "Yellow": "PeopleYellow"
+        },
+        "Tall": {
+          "Black": "TallPeopleBlack",
+          "Blue": "TallPeopleBlue",
+          "Green": "TallPeopleGreen",
+          "Orange": "TallPeopleOrange",
+          "Purple": "TallPeoplePurple",
+          "Red": "TallPeopleRed",
+          "White": "TallPeopleWhite",
+          "Yellow": "TallPeopleYellow"
         }
       },
       "People, Thick": {
         "Sizeless": {
-          "Green": "People, Thick, Green",
-          "Purple": "People, Thick, Purple"
+          "Green": "PeopleThickGreen",
+          "Purple": "PeopleThickPurple"
+        },
+        "Tall": {
+          "Green": "TallPeopleThickGreen",
+          "Gray": "TallPeopleThickGray",
+          "Purple": "TallPeopleThickPurple",
+          "Red": "TallPeopleThickRed",
+          "Yellow": "TallPeopleThickYellow"
         }
       },
       "Person with Hat": {
         "Sizeless": {
-          "Teal": "Person with Hat, Teal"
+          "Teal": "PersonwithHatTeal"
         }
       },
       "Pirate, Blue - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Pirate, Blue - Character Meeple"
+          "Colorless": "PirateBlue-CharacterMeeple"
         }
       },
       "Pirate, Green - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Pirate, Green - Character Meeple"
+          "Colorless": "PirateGreen-CharacterMeeple"
         }
       },
       "Pirate, Orange - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Pirate, Orange - Character Meeple"
+          "Colorless": "PirateOrange-CharacterMeeple"
         }
       },
       "Pirate, Purple - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Pirate, Purple - Character Meeple"
+          "Colorless": "PiratePurple-CharacterMeeple"
         }
       },
       "Pirate, Red - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Pirate, Red - Character Meeple"
+          "Colorless": "PirateRed-CharacterMeeple"
         }
       },
       "Pirate, Yellow - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Pirate, Yellow - Character Meeple"
+          "Colorless": "PirateYellow-CharacterMeeple"
         }
       },
       "Police - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Police - Character Meeple"
+          "Colorless": "Police-CharacterMeeple"
         }
       },
       "Renegade - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Renegade - Character Meeple"
+          "Colorless": "Renegade-CharacterMeeple"
         }
       },
       "Robot": {
         "Sizeless": {
-          "Silver": "Robot, Silver"
+          "Silver": "RobotSilver"
         }
       },
       "Rogue - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Rogue - Character Meeple"
+          "Colorless": "Rogue-CharacterMeeple"
         }
       },
       "Scientist - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Scientist - Character Meeple"
+          "Colorless": "Scientist-CharacterMeeple"
         }
       },
       "Sheriff - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Sheriff - Character Meeple"
+          "Colorless": "Sheriff-CharacterMeeple"
         }
       },
       "Skeleton - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Skeleton - Character Meeple"
+          "Colorless": "Skeleton-CharacterMeeple"
         }
       },
       "Soldier, Blue - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Soldier, Blue - Character Meeple"
+          "Colorless": "SoldierBlue-CharacterMeeple"
         }
       },
       "Soldier, Green - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Soldier, Green - Character Meeple"
+          "Colorless": "SoldierGreen-CharacterMeeple"
         }
       },
       "Speedster": {
         "Sizeless": {
-          "Red": "Speedster, Red"
+          "Red": "SpeedsterRed"
         }
       },
       "Swordsman, Black - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Swordsman, Black - Character Meeple"
+          "Colorless": "SwordsmanBlack-CharacterMeeple"
         }
       },
       "Swordsman, Blue - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Swordsman, Blue - Character Meeple"
+          "Colorless": "SwordsmanBlue-CharacterMeeple"
         }
       },
       "Swordsman, Green - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Swordsman, Green - Character Meeple"
+          "Colorless": "SwordsmanGreen-CharacterMeeple"
         }
       },
       "Swordsman, Orange - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Swordsman, Orange - Character Meeple"
+          "Colorless": "SwordsmanOrange-CharacterMeeple"
         }
       },
       "Swordsman, Purple - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Swordsman, Purple - Character Meeple"
+          "Colorless": "SwordsmanPurple-CharacterMeeple"
         }
       },
       "Swordsman, Red - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Swordsman, Red - Character Meeple"
+          "Colorless": "SwordsmanRed-CharacterMeeple"
         }
       },
       "Swordsman, White - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Swordsman, White - Character Meeple"
+          "Colorless": "SwordsmanWhite-CharacterMeeple"
         }
       },
       "Swordsman, Yellow - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Swordsman, Yellow - Character Meeple"
-        }
-      },
-      "Tall People": {
-        "Tall": {
-          "Black": "Tall People, Black",
-          "Blue": "Tall People, Blue",
-          "Green": "Tall People, Green",
-          "Orange": "Tall People, Orange",
-          "Purple": "Tall People, Purple",
-          "Red": "Tall People, Red",
-          "White": "Tall People, White",
-          "Yellow": "Tall People, Yellow"
-        }
-      },
-      "Tall People, Thick": {
-        "Tall": {
-          "Green": "Tall People, Thick, Green",
-          "Gray": "Tall People, Thick, Gray",
-          "Purple": "Tall People, Thick, Purple",
-          "Red": "Tall People, Thick, Red",
-          "Yellow": "Tall People, Thick, Yellow"
+          "Colorless": "SwordsmanYellow-CharacterMeeple"
         }
       },
       "Thief - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Thief - Character Meeple"
+          "Colorless": "Thief-CharacterMeeple"
         }
       },
       "Tiki Idol": {
         "Sizeless": {
-          "Yellow": "Tiki Idol, Yellow"
+          "Yellow": "TikiIdolYellow"
         }
       },
       "Vampire - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Vampire - Character Meeple"
+          "Colorless": "Vampire-CharacterMeeple"
         }
       },
       "Villager, Black - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Villager, Black - Character Meeple"
+          "Colorless": "VillagerBlack-CharacterMeeple"
         }
       },
       "Villager, Blue - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Villager, Blue - Character Meeple"
+          "Colorless": "VillagerBlue-CharacterMeeple"
         }
       },
       "Villager, Green - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Villager, Green - Character Meeple"
+          "Colorless": "VillagerGreen-CharacterMeeple"
         }
       },
       "Villager, Orange - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Villager, Orange - Character Meeple"
+          "Colorless": "VillagerOrange-CharacterMeeple"
         }
       },
       "Villager, Purple - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Villager, Purple - Character Meeple"
+          "Colorless": "VillagerPurple-CharacterMeeple"
         }
       },
       "Villager, Red - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Villager, Red - Character Meeple"
+          "Colorless": "VillagerRed-CharacterMeeple"
         }
       },
       "Villager, White - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Villager, White - Character Meeple"
+          "Colorless": "VillagerWhite-CharacterMeeple"
         }
       },
       "Villager, Yellow - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Villager, Yellow - Character Meeple"
+          "Colorless": "VillagerYellow-CharacterMeeple"
         }
       },
       "Wizard, Blue - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Wizard, Blue - Character Meeple"
+          "Colorless": "WizardBlue-CharacterMeeple"
         }
       },
       "Wizard, Green - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Wizard, Green - Character Meeple"
+          "Colorless": "WizardGreen-CharacterMeeple"
         }
       },
       "Wizard, Orange - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Wizard, Orange - Character Meeple"
+          "Colorless": "WizardOrange-CharacterMeeple"
         }
       },
       "Wizard, Purple - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Wizard, Purple - Character Meeple"
+          "Colorless": "WizardPurple-CharacterMeeple"
         }
       },
       "Wizard, Red - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Wizard, Red - Character Meeple"
+          "Colorless": "WizardRed-CharacterMeeple"
         }
       },
       "Wizard, Yellow - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Wizard, Yellow - Character Meeple"
+          "Colorless": "WizardYellow-CharacterMeeple"
         }
       },
       "Worker, Single Bag": {
         "Sizeless": {
-          "Blue": "Worker, Single Bag, Blue",
-          "Green": "Worker, Single Bag, Green",
-          "Orange": "Worker, Single Bag, Orange",
-          "Purple": "Worker, Single Bag, Purple",
-          "White": "Worker, Single Bag, White",
-          "Yellow": "Worker, Single Bag, Yellow"
+          "Blue": "WorkerSingleBagBlue",
+          "Green": "WorkerSingleBagGreen",
+          "Orange": "WorkerSingleBagOrange",
+          "Purple": "WorkerSingleBagPurple",
+          "White": "WorkerSingleBagWhite",
+          "Yellow": "WorkerSingleBagYellow"
         }
       },
       "Yeti - Character Meeple": {
         "Sizeless": {
-          "Colorless": "Yeti - Character Meeple"
+          "Colorless": "Yeti-CharacterMeeple"
         }
       }
     },
     "TB": {
       "Adventuress, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Adventuress, Fantasy, TB25"
+          "Colorless": "AdventuressFantasyTB25"
         }
       },
       "Alice, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Alice, Fantasy, TB25"
+          "Colorless": "AliceFantasyTB25"
         }
       },
       "Alien, Grey, TB15": {
         "Sizeless": {
-          "Black": "Alien, Grey, TB15, Black",
-          "Blue": "Alien, Grey, TB15, Blue",
-          "Green": "Alien, Grey, TB15, Green",
-          "Gray": "Alien, Grey, TB15, Gray",
-          "Orange": "Alien, Grey, TB15, Orange",
-          "Purple": "Alien, Grey, TB15, Purple",
-          "Red": "Alien, Grey, TB15, Red",
-          "White": "Alien, Grey, TB15, White",
-          "Yellow": "Alien, Grey, TB15, Yellow"
+          "Black": "AlienGreyTB15Black",
+          "Blue": "AlienGreyTB15Blue",
+          "Green": "AlienGreyTB15Green",
+          "Gray": "AlienGreyTB15Gray",
+          "Orange": "AlienGreyTB15Orange",
+          "Purple": "AlienGreyTB15Purple",
+          "Red": "AlienGreyTB15Red",
+          "White": "AlienGreyTB15White",
+          "Yellow": "AlienGreyTB15Yellow"
         }
       },
       "Alien, Space, TB25": {
         "Sizeless": {
-          "Colorless": "Alien, Space, TB25"
+          "Colorless": "AlienSpaceTB25"
         }
       },
       "Amphisbaena, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Amphisbaena, Fantasy, TB25"
+          "Colorless": "AmphisbaenaFantasyTB25"
         }
       },
       "Ankheg, Fantasy, TB50": {
         "Sizeless": {
-          "Colorless": "Ankheg, Fantasy, TB50"
+          "Colorless": "AnkhegFantasyTB50"
         }
       },
       "Astronaut TB15": {
         "Sizeless": {
-          "Black": "Astronaut TB15, Black"
+          "Black": "AstronautTB15Black"
         }
       },
       "Astronaut, TB15": {
         "Sizeless": {
-          "Blue": "Astronaut, TB15, Blue",
-          "Green": "Astronaut, TB15, Green",
-          "Orange": "Astronaut, TB15, Orange",
-          "Purple": "Astronaut, TB15, Purple",
-          "Red": "Astronaut, TB15, Red",
-          "White": "Astronaut, TB15, White",
-          "Yellow": "Astronaut, TB15, Yellow"
+          "Blue": "AstronautTB15Blue",
+          "Green": "AstronautTB15Green",
+          "Orange": "AstronautTB15Orange",
+          "Purple": "AstronautTB15Purple",
+          "Red": "AstronautTB15Red",
+          "White": "AstronautTB15White",
+          "Yellow": "AstronautTB15Yellow"
         }
       },
       "Barbarian Duel, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Barbarian Duel, Fantasy, TB25"
+          "Colorless": "BarbarianDuelFantasyTB25"
         }
       },
       "Barbarian, Nordic, Historic, TB25": {
         "Sizeless": {
-          "Colorless": "Barbarian, Nordic, Historic, TB25"
+          "Colorless": "BarbarianNordicHistoricTB25"
         }
       },
       "Base Shoe, TB15": {
         "Sizeless": {
-          "Black": "Base Shoe, TB15, Black",
-          "Blue": "Base Shoe, TB15, Blue",
-          "Green": "Base Shoe, TB15, Green",
-          "Orange": "Base Shoe, TB15, Orange",
-          "Purple": "Base Shoe, TB15, Purple",
-          "Red": "Base Shoe, TB15, Red",
-          "White": "Base Shoe, TB15, White",
-          "Yellow": "Base Shoe, TB15, Yellow"
+          "Black": "BaseShoeTB15Black",
+          "Blue": "BaseShoeTB15Blue",
+          "Green": "BaseShoeTB15Green",
+          "Orange": "BaseShoeTB15Orange",
+          "Purple": "BaseShoeTB15Purple",
+          "Red": "BaseShoeTB15Red",
+          "White": "BaseShoeTB15White",
+          "Yellow": "BaseShoeTB15Yellow"
         }
       },
       "Base Shoe, TB25": {
         "Sizeless": {
-          "Black": "Base Shoe, TB25, Black",
-          "Blue": "Base Shoe, TB25, Blue",
-          "Green": "Base Shoe, TB25, Green",
-          "Orange": "Base Shoe, TB25, Orange",
-          "Purple": "Base Shoe, TB25, Purple",
-          "Red": "Base Shoe, TB25, Red",
-          "White": "Base Shoe, TB25, White",
-          "Yellow": "Base Shoe, TB25, Yellow"
+          "Black": "BaseShoeTB25Black",
+          "Blue": "BaseShoeTB25Blue",
+          "Green": "BaseShoeTB25Green",
+          "Orange": "BaseShoeTB25Orange",
+          "Purple": "BaseShoeTB25Purple",
+          "Red": "BaseShoeTB25Red",
+          "White": "BaseShoeTB25White",
+          "Yellow": "BaseShoeTB25Yellow"
         }
       },
       "Battle Priest, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Battle Priest, Fantasy, TB25"
+          "Colorless": "BattlePriestFantasyTB25"
         }
       },
       "Berehynia, TB25": {
         "Sizeless": {
-          "Colorless": "Berehynia, TB25"
+          "Colorless": "BerehyniaTB25"
         }
       },
       "Blight Twig, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Blight Twig, Fantasy, TB25"
+          "Colorless": "BlightTwigFantasyTB25"
         }
       },
       "Bog Beast, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Bog Beast, Fantasy, TB25"
+          "Colorless": "BogBeastFantasyTB25"
         }
       },
       "Caveman, TB15": {
         "Sizeless": {
-          "Black": "Caveman, TB15, Black",
-          "Blue": "Caveman, TB15, Blue",
-          "Green": "Caveman, TB15, Green",
-          "Orange": "Caveman, TB15, Orange",
-          "Purple": "Caveman, TB15, Purple",
-          "Red": "Caveman, TB15, Red",
-          "White": "Caveman, TB15, White",
-          "Yellow": "Caveman, TB15, Yellow"
+          "Black": "CavemanTB15Black",
+          "Blue": "CavemanTB15Blue",
+          "Green": "CavemanTB15Green",
+          "Orange": "CavemanTB15Orange",
+          "Purple": "CavemanTB15Purple",
+          "Red": "CavemanTB15Red",
+          "White": "CavemanTB15White",
+          "Yellow": "CavemanTB15Yellow"
         }
       },
       "Cavewoman, TB15": {
         "Sizeless": {
-          "Black": "Cavewoman, TB15, Black",
-          "Blue": "Cavewoman, TB15, Blue",
-          "Green": "Cavewoman, TB15, Green",
-          "Orange": "Cavewoman, TB15, Orange",
-          "Purple": "Cavewoman, TB15, Purple",
-          "Red": "Cavewoman, TB15, Red",
-          "White": "Cavewoman, TB15, White",
-          "Yellow": "Cavewoman, TB15, Yellow"
+          "Black": "CavewomanTB15Black",
+          "Blue": "CavewomanTB15Blue",
+          "Green": "CavewomanTB15Green",
+          "Orange": "CavewomanTB15Orange",
+          "Purple": "CavewomanTB15Purple",
+          "Red": "CavewomanTB15Red",
+          "White": "CavewomanTB15White",
+          "Yellow": "CavewomanTB15Yellow"
         }
       },
       "Chest, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Chest, Fantasy, TB25"
+          "Colorless": "ChestFantasyTB25"
         }
       },
       "Creepy Hand, TB25": {
         "Sizeless": {
-          "Colorless": "Creepy Hand, TB25"
+          "Colorless": "CreepyHandTB25"
         }
       },
       "Dark Elf Sorcerer, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Dark Elf Sorcerer, Fantasy, TB25"
+          "Colorless": "DarkElfSorcererFantasyTB25"
         }
       },
       "Dark Warrior 1, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Dark Warrior 1, Fantasy, TB25"
+          "Colorless": "DarkWarrior1FantasyTB25"
         }
       },
       "Dark Warrior 2, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Dark Warrior 2, Fantasy, TB25"
+          "Colorless": "DarkWarrior2FantasyTB25"
         }
       },
       "Drider, Fantasy, TB50": {
         "Sizeless": {
-          "Colorless": "Drider, Fantasy, TB50"
+          "Colorless": "DriderFantasyTB50"
         }
       },
       "Dwarf Axe, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Dwarf Axe, Fantasy, TB25"
+          "Colorless": "DwarfAxeFantasyTB25"
         }
       },
       "Dwarf Minigun, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Dwarf Minigun, Fantasy, TB25"
+          "Colorless": "DwarfMinigunFantasyTB25"
         }
       },
       "Dwarf Paladin, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Dwarf Paladin, Fantasy, TB25"
+          "Colorless": "DwarfPaladinFantasyTB25"
         }
       },
       "Dwarf Rifleman, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Dwarf Rifleman, Fantasy, TB25"
+          "Colorless": "DwarfRiflemanFantasyTB25"
         }
       },
       "Dwarf, Pistol, Space, TB25": {
         "Sizeless": {
-          "Colorless": "Dwarf, Pistol, Space, TB25"
+          "Colorless": "DwarfPistolSpaceTB25"
         }
       },
       "Elf Archer 2, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Elf Archer 2, Fantasy, TB25"
+          "Colorless": "ElfArcher2FantasyTB25"
         }
       },
       "Elf Archer, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Elf Archer, Fantasy, TB25"
+          "Colorless": "ElfArcherFantasyTB25"
         }
       },
       "Female Assassin, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Female Assassin, Fantasy, TB25"
+          "Colorless": "FemaleAssassinFantasyTB25"
         }
       },
       "Female Elf Archer, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Female Elf Archer, Fantasy, TB25"
+          "Colorless": "FemaleElfArcherFantasyTB25"
         }
       },
       "Female Elf Mage, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Female Elf Mage, Fantasy, TB25"
+          "Colorless": "FemaleElfMageFantasyTB25"
         }
       },
       "Fire, TB25": {
         "Sizeless": {
-          "Colorless": "Fire, TB25"
+          "Colorless": "FireTB25"
         }
       },
       "Flute Girl, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Flute Girl, Fantasy, TB25"
+          "Colorless": "FluteGirlFantasyTB25"
         }
       },
       "Future Soldier, TB15": {
         "Sizeless": {
-          "Black": "Future Soldier, TB15, Black",
-          "Blue": "Future Soldier, TB15, Blue",
-          "Green": "Future Soldier, TB15, Green",
-          "Orange": "Future Soldier, TB15, Orange",
-          "Purple": "Future Soldier, TB15, Purple",
-          "Red": "Future Soldier, TB15, Red",
-          "White": "Future Soldier, TB15, White",
-          "Yellow": "Future Soldier, TB15, Yellow"
+          "Black": "FutureSoldierTB15Black",
+          "Blue": "FutureSoldierTB15Blue",
+          "Green": "FutureSoldierTB15Green",
+          "Orange": "FutureSoldierTB15Orange",
+          "Purple": "FutureSoldierTB15Purple",
+          "Red": "FutureSoldierTB15Red",
+          "White": "FutureSoldierTB15White",
+          "Yellow": "FutureSoldierTB15Yellow"
         }
       },
       "Ghost Bunny, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Ghost Bunny, Fantasy, TB25"
+          "Colorless": "GhostBunnyFantasyTB25"
         }
       },
       "Ghost, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Ghost, Fantasy, TB25"
+          "Colorless": "GhostFantasyTB25"
         }
       },
       "Ghoul 2, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Ghoul 2, Fantasy, TB25"
+          "Colorless": "Ghoul2FantasyTB25"
         }
       },
       "Ghoul, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Ghoul, Fantasy, TB25"
+          "Colorless": "GhoulFantasyTB25"
         }
       },
       "Giant Rat 1, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Giant Rat 1, Fantasy, TB25"
+          "Colorless": "GiantRat1FantasyTB25"
         }
       },
       "Giant Rat 2, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Giant Rat 2, Fantasy, TB25"
+          "Colorless": "GiantRat2FantasyTB25"
         }
       },
       "Gnoll Archer, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Gnoll Archer, Fantasy, TB25"
+          "Colorless": "GnollArcherFantasyTB25"
         }
       },
       "Gnoll, Axe, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Gnoll, Axe, Fantasy, TB25"
+          "Colorless": "GnollAxeFantasyTB25"
         }
       },
       "Gnoll, Flail, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Gnoll, Flail, Fantasy, TB25"
+          "Colorless": "GnollFlailFantasyTB25"
         }
       },
       "Gnome, Crossbow, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Gnome, Crossbow, Fantasy, TB25"
+          "Colorless": "GnomeCrossbowFantasyTB25"
         }
       },
       "Gnome, Sword, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Gnome, Sword, Fantasy, TB25"
+          "Colorless": "GnomeSwordFantasyTB25"
         }
       },
       "Gnome, TB15": {
         "Sizeless": {
-          "Black": "Gnome, TB15, Black",
-          "Blue": "Gnome, TB15, Blue",
-          "Green": "Gnome, TB15, Green",
-          "Orange": "Gnome, TB15, Orange",
-          "Purple": "Gnome, TB15, Purple",
-          "Red": "Gnome, TB15, Red",
-          "White": "Gnome, TB15, White",
-          "Yellow": "Gnome, TB15, Yellow"
+          "Black": "GnomeTB15Black",
+          "Blue": "GnomeTB15Blue",
+          "Green": "GnomeTB15Green",
+          "Orange": "GnomeTB15Orange",
+          "Purple": "GnomeTB15Purple",
+          "Red": "GnomeTB15Red",
+          "White": "GnomeTB15White",
+          "Yellow": "GnomeTB15Yellow"
         }
       },
       "Gnomette, Hammer, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Gnomette, Hammer, Fantasy, TB25"
+          "Colorless": "GnometteHammerFantasyTB25"
         }
       },
       "Gnomette, Mage, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Gnomette, Mage, Fantasy, TB25"
+          "Colorless": "GnometteMageFantasyTB25"
         }
       },
       "Goblin Archer Draw Bald, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Goblin Archer Draw Bald, Fantasy, TB25"
+          "Colorless": "GoblinArcherDrawBaldFantasyTB25"
         }
       },
       "Goblin Archer, Draw, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Goblin Archer, Draw, Fantasy, TB25"
+          "Colorless": "GoblinArcherDrawFantasyTB25"
         }
       },
       "Goblin Chieftain, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Goblin Chieftain, Fantasy, TB25"
+          "Colorless": "GoblinChieftainFantasyTB25"
         }
       },
       "Goblin Sling 1, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Goblin Sling 1, Fantasy, TB25"
+          "Colorless": "GoblinSling1FantasyTB25"
         }
       },
       "Goblin Warlock, Fantasy, TB25": {
         "Sizeless": {
-          "Yellow": "Goblin Warlock, Fantasy, TB25, Yellow"
+          "Yellow": "GoblinWarlockFantasyTB25Yellow"
         }
       },
       "Goblin, Defensive, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Goblin, Defensive, Fantasy, TB25"
+          "Colorless": "GoblinDefensiveFantasyTB25"
         }
       },
       "Goblin, Jester, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Goblin, Jester, Fantasy, TB25"
+          "Colorless": "GoblinJesterFantasyTB25"
         }
       },
       "Goblin, Offensive, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Goblin, Offensive, Fantasy, TB25"
+          "Colorless": "GoblinOffensiveFantasyTB25"
         }
       },
       "Grim Reaper, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Grim Reaper, Fantasy, TB25"
+          "Colorless": "GrimReaperFantasyTB25"
         }
       },
       "Guard 1, Space, TB25": {
         "Sizeless": {
-          "Colorless": "Guard 1, Space, TB25"
+          "Colorless": "Guard1SpaceTB25"
         }
       },
       "Guard 2, Space, TB25": {
         "Sizeless": {
-          "Colorless": "Guard 2, Space, TB25"
+          "Colorless": "Guard2SpaceTB25"
         }
       },
       "Guard, Heavy, Space, TB25": {
         "Sizeless": {
-          "Colorless": "Guard, Heavy, Space, TB25"
+          "Colorless": "GuardHeavySpaceTB25"
         }
       },
       "Hag, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Hag, Fantasy, TB25"
+          "Colorless": "HagFantasyTB25"
         }
       },
       "Halfling Pirate, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Halfling Pirate, Fantasy, TB25"
+          "Colorless": "HalflingPirateFantasyTB25"
         }
       },
       "Halfling, Space, TB25": {
         "Sizeless": {
-          "Colorless": "Halfling, Space, TB25"
+          "Colorless": "HalflingSpaceTB25"
         }
       },
       "Harpy 2, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Harpy 2, Fantasy, TB25"
+          "Colorless": "Harpy2FantasyTB25"
         }
       },
       "Harpy, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Harpy, Fantasy, TB25"
+          "Colorless": "HarpyFantasyTB25"
         }
       },
       "Hobgoblin, Crossbow 2, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Hobgoblin, Crossbow 2, Fantasy, TB25"
+          "Colorless": "HobgoblinCrossbow2FantasyTB25"
         }
       },
       "Hobgoblin, Crossbow, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Hobgoblin, Crossbow, Fantasy, TB25"
+          "Colorless": "HobgoblinCrossbowFantasyTB25"
         }
       },
       "Hobgoblin, Sword 2, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Hobgoblin, Sword 2, Fantasy, TB25"
+          "Colorless": "HobgoblinSword2FantasyTB25"
         }
       },
       "Hobgoblin, Sword, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Hobgoblin, Sword, Fantasy, TB25"
+          "Colorless": "HobgoblinSwordFantasyTB25"
         }
       },
       "Hooded Stranger, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Hooded Stranger, Fantasy, TB25"
+          "Colorless": "HoodedStrangerFantasyTB25"
         }
       },
       "Imp, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Imp, Fantasy, TB25"
+          "Colorless": "ImpFantasyTB25"
         }
       },
       "Insect Warrior, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Insect Warrior, Fantasy, TB25"
+          "Colorless": "InsectWarriorFantasyTB25"
         }
       },
       "Knight Wolfrib, Historic, TB25": {
         "Sizeless": {
-          "Colorless": "Knight Wolfrib, Historic, TB25"
+          "Colorless": "KnightWolfribHistoricTB25"
         }
       },
       "Knight, Lance, Space, TB25": {
         "Sizeless": {
-          "Colorless": "Knight, Lance, Space, TB25"
+          "Colorless": "KnightLanceSpaceTB25"
         }
       },
       "Kobold, Pickaxe, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Kobold, Pickaxe, Fantasy, TB25"
+          "Colorless": "KoboldPickaxeFantasyTB25"
         }
       },
       "Krampus, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Krampus, Fantasy, TB25"
+          "Colorless": "KrampusFantasyTB25"
         }
       },
       "Lich, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Lich, Fantasy, TB25"
+          "Colorless": "LichFantasyTB25"
         }
       },
       "Man, American Revolution, TB15": {
         "Sizeless": {
-          "Black": "Man, American Revolution, TB15, Black",
-          "Blue": "Man, American Revolution, TB15, Blue",
-          "Green": "Man, American Revolution, TB15, Green",
-          "Orange": "Man, American Revolution, TB15, Orange",
-          "Purple": "Man, American Revolution, TB15, Purple",
-          "Red": "Man, American Revolution, TB15, Red",
-          "White": "Man, American Revolution, TB15, White",
-          "Yellow": "Man, American Revolution, TB15, Yellow"
+          "Black": "ManAmericanRevolutionTB15Black",
+          "Blue": "ManAmericanRevolutionTB15Blue",
+          "Green": "ManAmericanRevolutionTB15Green",
+          "Orange": "ManAmericanRevolutionTB15Orange",
+          "Purple": "ManAmericanRevolutionTB15Purple",
+          "Red": "ManAmericanRevolutionTB15Red",
+          "White": "ManAmericanRevolutionTB15White",
+          "Yellow": "ManAmericanRevolutionTB15Yellow"
         }
       },
       "Man, Iroquois, TB15": {
         "Sizeless": {
-          "Black": "Man, Iroquois, TB15, Black",
-          "Blue": "Man, Iroquois, TB15, Blue",
-          "Green": "Man, Iroquois, TB15, Green",
-          "Orange": "Man, Iroquois, TB15, Orange",
-          "Purple": "Man, Iroquois, TB15, Purple",
-          "Red": "Man, Iroquois, TB15, Red",
-          "White": "Man, Iroquois, TB15, White",
-          "Yellow": "Man, Iroquois, TB15, Yellow"
+          "Black": "ManIroquoisTB15Black",
+          "Blue": "ManIroquoisTB15Blue",
+          "Green": "ManIroquoisTB15Green",
+          "Orange": "ManIroquoisTB15Orange",
+          "Purple": "ManIroquoisTB15Purple",
+          "Red": "ManIroquoisTB15Red",
+          "White": "ManIroquoisTB15White",
+          "Yellow": "ManIroquoisTB15Yellow"
         }
       },
       "Man, Modern, Chainsaw, TB25": {
         "Sizeless": {
-          "Colorless": "Man, Modern, Chainsaw, TB25"
+          "Colorless": "ManModernChainsawTB25"
         }
       },
       "Man, Modern, Flashlight, TB25": {
         "Sizeless": {
-          "Colorless": "Man, Modern, Flashlight, TB25"
+          "Colorless": "ManModernFlashlightTB25"
         }
       },
       "Man, Modern, Shotgun, TB25": {
         "Sizeless": {
-          "Colorless": "Man, Modern, Shotgun, TB25"
+          "Colorless": "ManModernShotgunTB25"
         }
       },
       "Man, Modern, TB15": {
         "Sizeless": {
-          "Black": "Man, Modern, TB15, Black",
-          "Blue": "Man, Modern, TB15, Blue",
-          "Green": "Man, Modern, TB15, Green",
-          "Orange": "Man, Modern, TB15, Orange",
-          "Purple": "Man, Modern, TB15, Purple",
-          "Red": "Man, Modern, TB15, Red",
-          "White": "Man, Modern, TB15, White",
-          "Yellow": "Man, Modern, TB15, Yellow"
+          "Black": "ManModernTB15Black",
+          "Blue": "ManModernTB15Blue",
+          "Green": "ManModernTB15Green",
+          "Orange": "ManModernTB15Orange",
+          "Purple": "ManModernTB15Purple",
+          "Red": "ManModernTB15Red",
+          "White": "ManModernTB15White",
+          "Yellow": "ManModernTB15Yellow"
         }
       },
       "Man, Post Apocalypse, Archer, TB25": {
         "Sizeless": {
-          "Colorless": "Man, Post Apocalypse, Archer, TB25"
+          "Colorless": "ManPostApocalypseArcherTB25"
         }
       },
       "Man, Post Apocalypse, Dual SMG, TB25": {
         "Sizeless": {
-          "Colorless": "Man, Post Apocalypse, Dual SMG, TB25"
+          "Colorless": "ManPostApocalypseDualSMGTB25"
         }
       },
       "Man, Post Apocalypse, Hammer, TB25": {
         "Sizeless": {
-          "Colorless": "Man, Post Apocalypse, Hammer, TB25"
+          "Colorless": "ManPostApocalypseHammerTB25"
         }
       },
       "Man, Post Apocalypse, TB15": {
         "Sizeless": {
-          "Black": "Man, Post Apocalypse, TB15, Black",
-          "Blue": "Man, Post Apocalypse, TB15, Blue",
-          "Green": "Man, Post Apocalypse, TB15, Green",
-          "Orange": "Man, Post Apocalypse, TB15, Orange",
-          "Purple": "Man, Post Apocalypse, TB15, Purple",
-          "Red": "Man, Post Apocalypse, TB15, Red",
-          "White": "Man, Post Apocalypse, TB15, White",
-          "Yellow": "Man, Post Apocalypse, TB15, Yellow"
+          "Black": "ManPostApocalypseTB15Black",
+          "Blue": "ManPostApocalypseTB15Blue",
+          "Green": "ManPostApocalypseTB15Green",
+          "Orange": "ManPostApocalypseTB15Orange",
+          "Purple": "ManPostApocalypseTB15Purple",
+          "Red": "ManPostApocalypseTB15Red",
+          "White": "ManPostApocalypseTB15White",
+          "Yellow": "ManPostApocalypseTB15Yellow"
         }
       },
       "Man, Samurai Armor, TB15": {
         "Sizeless": {
-          "Black": "Man, Samurai Armor, TB15, Black",
-          "Blue": "Man, Samurai Armor, TB15, Blue",
-          "Green": "Man, Samurai Armor, TB15, Green",
-          "Orange": "Man, Samurai Armor, TB15, Orange",
-          "Purple": "Man, Samurai Armor, TB15, Purple",
-          "Red": "Man, Samurai Armor, TB15, Red",
-          "White": "Man, Samurai Armor, TB15, White",
-          "Yellow": "Man, Samurai Armor, TB15, Yellow"
+          "Black": "ManSamuraiArmorTB15Black",
+          "Blue": "ManSamuraiArmorTB15Blue",
+          "Green": "ManSamuraiArmorTB15Green",
+          "Orange": "ManSamuraiArmorTB15Orange",
+          "Purple": "ManSamuraiArmorTB15Purple",
+          "Red": "ManSamuraiArmorTB15Red",
+          "White": "ManSamuraiArmorTB15White",
+          "Yellow": "ManSamuraiArmorTB15Yellow"
         }
       },
       "Mech, TB15": {
         "Sizeless": {
-          "Black": "Mech, TB15, Black",
-          "Blue": "Mech, TB15, Blue",
-          "Green": "Mech, TB15, Green",
-          "Orange": "Mech, TB15, Orange",
-          "Purple": "Mech, TB15, Purple",
-          "Red": "Mech, TB15, Red",
-          "White": "Mech, TB15, White",
-          "Yellow": "Mech, TB15, Yellow"
+          "Black": "MechTB15Black",
+          "Blue": "MechTB15Blue",
+          "Green": "MechTB15Green",
+          "Orange": "MechTB15Orange",
+          "Purple": "MechTB15Purple",
+          "Red": "MechTB15Red",
+          "White": "MechTB15White",
+          "Yellow": "MechTB15Yellow"
         }
       },
       "Medic, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Medic, Fantasy, TB25"
+          "Colorless": "MedicFantasyTB25"
         }
       },
       "Mermaid, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Mermaid, Fantasy, TB25"
+          "Colorless": "MermaidFantasyTB25"
         }
       },
       "Monk, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Monk, Fantasy, TB25"
+          "Colorless": "MonkFantasyTB25"
         }
       },
       "Norse Maiden, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Norse Maiden, Fantasy, TB25"
+          "Colorless": "NorseMaidenFantasyTB25"
         }
       },
       "Nothic, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Nothic, Fantasy, TB25"
+          "Colorless": "NothicFantasyTB25"
         }
       },
       "Obelisk, TB25": {
         "Sizeless": {
-          "Colorless": "Obelisk, TB25"
+          "Colorless": "ObeliskTB25"
         }
       },
       "Ogre, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Ogre, Fantasy, TB25"
+          "Colorless": "OgreFantasyTB25"
         }
       },
       "Opossum Druid, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Opossum Druid, Fantasy, TB25"
+          "Colorless": "OpossumDruidFantasyTB25"
         }
       },
       "Orc Scimitar, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Orc Scimitar, Fantasy, TB25"
+          "Colorless": "OrcScimitarFantasyTB25"
         }
       },
       "Orc Shaman, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Orc Shaman, Fantasy, TB25"
+          "Colorless": "OrcShamanFantasyTB25"
         }
       },
       "Owlbear, Fantasy, TB50": {
         "Sizeless": {
-          "Colorless": "Owlbear, Fantasy, TB50"
+          "Colorless": "OwlbearFantasyTB50"
         }
       },
       "Pirate 1, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Pirate 1, Fantasy, TB25"
+          "Colorless": "Pirate1FantasyTB25"
         }
       },
       "Pirate 2, Female, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Pirate 2, Female, Fantasy, TB25"
+          "Colorless": "Pirate2FemaleFantasyTB25"
         }
       },
       "Pirate 3, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Pirate 3, Fantasy, TB25"
+          "Colorless": "Pirate3FantasyTB25"
         }
       },
       "Pirate 4, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Pirate 4, Fantasy, TB25"
+          "Colorless": "Pirate4FantasyTB25"
         }
       },
       "Pit Fiend, Fantasy, TB50": {
         "Sizeless": {
-          "Colorless": "Pit Fiend, Fantasy, TB50"
+          "Colorless": "PitFiendFantasyTB50"
         }
       },
       "Putler, TB25": {
         "Sizeless": {
-          "Colorless": "Putler, TB25"
+          "Colorless": "PutlerTB25"
         }
       },
       "Ratcatcher, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Ratcatcher, Fantasy, TB25"
+          "Colorless": "RatcatcherFantasyTB25"
         }
       },
       "Ratfolk, Assassin, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Ratfolk, Assassin, Fantasy, TB25"
+          "Colorless": "RatfolkAssassinFantasyTB25"
         }
       },
       "Robot, Detective, Space, TB25": {
         "Sizeless": {
-          "Colorless": "Robot, Detective, Space, TB25"
+          "Colorless": "RobotDetectiveSpaceTB25"
         }
       },
       "Robot, Wizard, Space, TB25": {
         "Sizeless": {
-          "Colorless": "Robot, Wizard, Space, TB25"
+          "Colorless": "RobotWizardSpaceTB25"
         }
       },
       "Samurai Armor, Historic, TB25": {
         "Sizeless": {
-          "Colorless": "Samurai Armor, Historic, TB25"
+          "Colorless": "SamuraiArmorHistoricTB25"
         }
       },
       "Skeleton Archer 2, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Skeleton Archer 2, Fantasy, TB25"
+          "Colorless": "SkeletonArcher2FantasyTB25"
         }
       },
       "Skeleton Archer, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Skeleton Archer, Fantasy, TB25"
+          "Colorless": "SkeletonArcherFantasyTB25"
         }
       },
       "Skeleton Axe, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Skeleton Axe, Fantasy, TB25"
+          "Colorless": "SkeletonAxeFantasyTB25"
         }
       },
       "Skeleton Sword 2, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Skeleton Sword 2, Fantasy, TB25"
+          "Colorless": "SkeletonSword2FantasyTB25"
         }
       },
       "Skeleton Sword 3, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Skeleton Sword 3, Fantasy, TB25"
+          "Colorless": "SkeletonSword3FantasyTB25"
         }
       },
       "Skeleton Sword, Armored, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Skeleton Sword, Armored, Fantasy, TB25"
+          "Colorless": "SkeletonSwordArmoredFantasyTB25"
         }
       },
       "Skeleton Sword, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Skeleton Sword, Fantasy, TB25"
+          "Colorless": "SkeletonSwordFantasyTB25"
         }
       },
       "Snowman 1, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Snowman 1, Fantasy, TB25"
+          "Colorless": "Snowman1FantasyTB25"
         }
       },
       "Snowman 2 Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Snowman 2 Fantasy, TB25"
+          "Colorless": "Snowman2FantasyTB25"
         }
       },
       "Spider, Fantasy, TB50": {
         "Sizeless": {
-          "Colorless": "Spider, Fantasy, TB50"
+          "Colorless": "SpiderFantasyTB50"
         }
       },
       "Stand, Chipboard, TB15": {
         "Sizeless": {
-          "Black": "Stand, Chipboard, TB15, Black",
-          "Blue": "Stand, Chipboard, TB15, Blue",
-          "Green": "Stand, Chipboard, TB15, Green",
-          "Orange": "Stand, Chipboard, TB15, Orange",
-          "Purple": "Stand, Chipboard, TB15, Purple",
-          "Red": "Stand, Chipboard, TB15, Red",
-          "White": "Stand, Chipboard, TB15, White",
-          "Yellow": "Stand, Chipboard, TB15, Yellow"
+          "Black": "StandChipboardTB15Black",
+          "Blue": "StandChipboardTB15Blue",
+          "Green": "StandChipboardTB15Green",
+          "Orange": "StandChipboardTB15Orange",
+          "Purple": "StandChipboardTB15Purple",
+          "Red": "StandChipboardTB15Red",
+          "White": "StandChipboardTB15White",
+          "Yellow": "StandChipboardTB15Yellow"
         }
       },
       "Tentacle Portal, TB25": {
         "Sizeless": {
-          "Colorless": "Tentacle Portal, TB25"
+          "Colorless": "TentaclePortalTB25"
         }
       },
       "Tiefling Female Mage, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Tiefling Female Mage, Fantasy, TB25"
+          "Colorless": "TieflingFemaleMageFantasyTB25"
         }
       },
       "Troll, Fantasy, TB50": {
         "Sizeless": {
-          "Colorless": "Troll, Fantasy, TB50"
+          "Colorless": "TrollFantasyTB50"
         }
       },
       "Trophy, TB15": {
         "Sizeless": {
-          "Bronze": "Trophy, TB15, Bronze",
-          "Gold": "Trophy, TB15, Gold",
-          "Silver": "Trophy, TB15, Silver"
+          "Bronze": "TrophyTB15Bronze",
+          "Gold": "TrophyTB15Gold",
+          "Silver": "TrophyTB15Silver"
         }
       },
       "Walker, Space, TB50": {
         "Sizeless": {
-          "Colorless": "Walker, Space, TB50"
+          "Colorless": "WalkerSpaceTB50"
         }
       },
       "Wereshark, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Wereshark, Fantasy, TB25"
+          "Colorless": "WeresharkFantasyTB25"
         }
       },
       "Werewolf, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Werewolf, Fantasy, TB25"
+          "Colorless": "WerewolfFantasyTB25"
         }
       },
       "Wilhelm Tell, Crossbowman, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Wilhelm Tell, Crossbowman, Fantasy, TB25"
+          "Colorless": "WilhelmTellCrossbowmanFantasyTB25"
         }
       },
       "Wizard Old, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Wizard Old, Fantasy, TB25"
+          "Colorless": "WizardOldFantasyTB25"
         }
       },
       "Woman, Modern, Baseball Bat, TB25": {
         "Sizeless": {
-          "Colorless": "Woman, Modern, Baseball Bat, TB25"
+          "Colorless": "WomanModernBaseballBatTB25"
         }
       },
       "Woman, Modern, Handgun, TB25": {
         "Sizeless": {
-          "Colorless": "Woman, Modern, Handgun, TB25"
+          "Colorless": "WomanModernHandgunTB25"
         }
       },
       "Woman, Modern, TB15": {
         "Sizeless": {
-          "Black": "Woman, Modern, TB15, Black",
-          "Blue": "Woman, Modern, TB15, Blue",
-          "Green": "Woman, Modern, TB15, Green",
-          "Orange": "Woman, Modern, TB15, Orange",
-          "Purple": "Woman, Modern, TB15, Purple",
-          "Red": "Woman, Modern, TB15, Red",
-          "White": "Woman, Modern, TB15, White",
-          "Yellow": "Woman, Modern, TB15, Yellow"
+          "Black": "WomanModernTB15Black",
+          "Blue": "WomanModernTB15Blue",
+          "Green": "WomanModernTB15Green",
+          "Orange": "WomanModernTB15Orange",
+          "Purple": "WomanModernTB15Purple",
+          "Red": "WomanModernTB15Red",
+          "White": "WomanModernTB15White",
+          "Yellow": "WomanModernTB15Yellow"
         }
       },
       "Woman, Post Apocalypse, Bazooka, TB25": {
         "Sizeless": {
-          "Colorless": "Woman, Post Apocalypse, Bazooka, TB25"
+          "Colorless": "WomanPostApocalypseBazookaTB25"
         }
       },
       "Woman, Post Apocalypse, Shotgun, TB25": {
         "Sizeless": {
-          "Colorless": "Woman, Post Apocalypse, Shotgun, TB25"
+          "Colorless": "WomanPostApocalypseShotgunTB25"
         }
       },
       "Woman, Post Apocalypse, TB15": {
         "Sizeless": {
-          "Black": "Woman, Post Apocalypse, TB15, Black",
-          "Blue": "Woman, Post Apocalypse, TB15, Blue",
-          "Green": "Woman, Post Apocalypse, TB15, Green",
-          "Orange": "Woman, Post Apocalypse, TB15, Orange",
-          "Purple": "Woman, Post Apocalypse, TB15, Purple",
-          "Red": "Woman, Post Apocalypse, TB15, Red",
-          "White": "Woman, Post Apocalypse, TB15, White",
-          "Yellow": "Woman, Post Apocalypse, TB15, Yellow"
+          "Black": "WomanPostApocalypseTB15Black",
+          "Blue": "WomanPostApocalypseTB15Blue",
+          "Green": "WomanPostApocalypseTB15Green",
+          "Orange": "WomanPostApocalypseTB15Orange",
+          "Purple": "WomanPostApocalypseTB15Purple",
+          "Red": "WomanPostApocalypseTB15Red",
+          "White": "WomanPostApocalypseTB15White",
+          "Yellow": "WomanPostApocalypseTB15Yellow"
         }
       },
       "Wraith, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Wraith, Fantasy, TB25"
+          "Colorless": "WraithFantasyTB25"
         }
       },
       "Wraith, Halberd, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Wraith, Halberd, Fantasy, TB25"
+          "Colorless": "WraithHalberdFantasyTB25"
         }
       },
       "Zombie 2, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Zombie 2, Fantasy, TB25"
+          "Colorless": "Zombie2FantasyTB25"
         }
       },
       "Zombie 3, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Zombie 3, Fantasy, TB25"
+          "Colorless": "Zombie3FantasyTB25"
         }
       },
       "Zombie, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Zombie, Fantasy, TB25"
+          "Colorless": "ZombieFantasyTB25"
         }
       },
       "Mine, Sea, TB25": {
         "Sizeless": {
-          "Colorless": "Mine, Sea, TB25"
+          "Colorless": "MineSeaTB25"
         }
       }
     },
     "minifig": {
       "Adventurer with Sword and Shield": {
         "Sizeless": {
-          "Colorless": "Adventurer with Sword and Shield"
+          "Colorless": "AdventurerwithSwordandShield"
         }
       },
       "American Indian with Bow": {
         "Sizeless": {
-          "Colorless": "American Indian with Bow"
+          "Colorless": "AmericanIndianwithBow"
         }
       },
       "Anti-Paladin": {
@@ -4438,52 +4342,52 @@ const COMPONENT_CATEGORIES = {
       },
       "Arianna Moonshadow Enchantress": {
         "Sizeless": {
-          "Colorless": "Arianna Moonshadow Enchantress"
+          "Colorless": "AriannaMoonshadowEnchantress"
         }
       },
       "Armored Ogre": {
         "Sizeless": {
-          "Colorless": "Armored Ogre"
+          "Colorless": "ArmoredOgre"
         }
       },
       "Balefire Demon w/ Sword": {
         "Sizeless": {
-          "Colorless": "Balefire Demon w/ Sword"
+          "Colorless": "BalefireDemonw/Sword"
         }
       },
       "Barbarian with Axe": {
         "Sizeless": {
-          "Colorless": "Barbarian with Axe"
+          "Colorless": "BarbarianwithAxe"
         }
       },
       "Barbarian with Sword & Shield": {
         "Sizeless": {
-          "Colorless": "Barbarian with Sword & Shield"
+          "Colorless": "BarbarianwithSword&Shield"
         }
       },
       "Barbarian with Two Swords": {
         "Sizeless": {
-          "Colorless": "Barbarian with Two Swords"
+          "Colorless": "BarbarianwithTwoSwords"
         }
       },
       "Brigand with Dagger": {
         "Sizeless": {
-          "Colorless": "Brigand with Dagger"
+          "Colorless": "BrigandwithDagger"
         }
       },
       "Cavalry": {
         "Sizeless": {
-          "Green": "Cavalry, Green"
+          "Green": "CavalryGreen"
         }
       },
       "Centaur Thrusting Spear": {
         "Sizeless": {
-          "Colorless": "Centaur Thrusting Spear"
+          "Colorless": "CentaurThrustingSpear"
         }
       },
       "Chaos Death Master": {
         "Sizeless": {
-          "Colorless": "Chaos Death Master"
+          "Colorless": "ChaosDeathMaster"
         }
       },
       "Cleric": {
@@ -4493,17 +4397,17 @@ const COMPONENT_CATEGORIES = {
       },
       "Death Knight with Polearm": {
         "Sizeless": {
-          "Colorless": "Death Knight with Polearm"
+          "Colorless": "DeathKnightwithPolearm"
         }
       },
       "Death Knight with Sword": {
         "Sizeless": {
-          "Colorless": "Death Knight with Sword"
+          "Colorless": "DeathKnightwithSword"
         }
       },
       "Dindaelus: Wizard with Staff": {
         "Sizeless": {
-          "Colorless": "Dindaelus: Wizard with Staff"
+          "Colorless": "Dindaelus:WizardwithStaff"
         }
       },
       "Djin": {
@@ -4513,82 +4417,82 @@ const COMPONENT_CATEGORIES = {
       },
       "Dragon Familiar": {
         "Sizeless": {
-          "Colorless": "Dragon Familiar"
+          "Colorless": "DragonFamiliar"
         }
       },
       "Dwarf Fighter": {
         "Sizeless": {
-          "Colorless": "Dwarf Fighter"
+          "Colorless": "DwarfFighter"
         }
       },
       "Dwarven Iron Golem": {
         "Sizeless": {
-          "Colorless": "Dwarven Iron Golem"
+          "Colorless": "DwarvenIronGolem"
         }
       },
       "Enchanter with Staff": {
         "Sizeless": {
-          "Colorless": "Enchanter with Staff"
+          "Colorless": "EnchanterwithStaff"
         }
       },
       "Evil Lord with Mace": {
         "Sizeless": {
-          "Colorless": "Evil Lord with Mace"
+          "Colorless": "EvilLordwithMace"
         }
       },
       "Female Beast Master Warrior with Sword and Spear": {
         "Sizeless": {
-          "Colorless": "Female Beast Master Warrior with Sword and Spear"
+          "Colorless": "FemaleBeastMasterWarriorwithSwordandSpear"
         }
       },
       "Female Gunslinger": {
         "Sizeless": {
-          "Gray": "Female Gunslinger, Gray"
+          "Gray": "FemaleGunslingerGray"
         }
       },
       "Fighter with Great Sword": {
         "Sizeless": {
-          "Colorless": "Fighter with Great Sword"
+          "Colorless": "FighterwithGreatSword"
         }
       },
       "Fire Elemental": {
         "Sizeless": {
-          "Colorless": "Fire Elemental"
+          "Colorless": "FireElemental"
         }
       },
       "Four Armed Titan of Terror w/ Weapon Sprue": {
         "Sizeless": {
-          "Colorless": "Four Armed Titan of Terror w/ Weapon Sprue"
+          "Colorless": "FourArmedTitanofTerrorw/WeaponSprue"
         }
       },
       "Gelatinous Monster": {
         "Sizeless": {
-          "Colorless": "Gelatinous Monster"
+          "Colorless": "GelatinousCube"
         }
       },
       "Ghost IV Hooded": {
         "Sizeless": {
-          "Colorless": "Ghost IV Hooded"
+          "Colorless": "GhostIVHooded"
         }
       },
       "Goatman Champion": {
         "Sizeless": {
-          "Colorless": "Goatman Champion"
+          "Colorless": "GoatmanChampion"
         }
       },
       "Goatman with Bow": {
         "Sizeless": {
-          "Colorless": "Goatman with Bow"
+          "Colorless": "GoatmanwithBow"
         }
       },
       "Goatman With Spear & Shield": {
         "Sizeless": {
-          "Colorless": "Goatman With Spear & Shield"
+          "Colorless": "GoatmanWithSpear&Shield"
         }
       },
       "Goatman with Sword and Shield": {
         "Sizeless": {
-          "Colorless": "Goatman with Sword and Shield"
+          "Colorless": "GoatmanwithSwordandShield"
         }
       },
       "Hippogriff": {
@@ -4598,241 +4502,241 @@ const COMPONENT_CATEGORIES = {
       },
       "Lich with Staff": {
         "Sizeless": {
-          "Colorless": "Lich with Staff"
+          "Colorless": "LichwithStaff"
         }
       },
       "Lizard Man on Rock Throne": {
         "Sizeless": {
-          "Colorless": "Lizard Man on Rock Throne"
+          "Colorless": "LizardManonRockThrone"
         }
       },
       "Lizard Man with War Club and Shield": {
         "Sizeless": {
-          "Colorless": "Lizard Man with War Club and Shield"
+          "Colorless": "LizardManwithWarClubandShield"
         }
       },
       "Minotaur with Battle Axe": {
         "Sizeless": {
-          "Colorless": "Minotaur with Battle Axe"
+          "Colorless": "MinotaurwithBattleAxe"
         }
       },
       "Ogre with Club & Shield": {
         "Sizeless": {
-          "Colorless": "Ogre with Club & Shield"
+          "Colorless": "OgrewithClub&Shield"
         }
       },
       "Pinhead the Barbarian": {
         "Sizeless": {
-          "Colorless": "Pinhead the Barbarian"
+          "Colorless": "PinheadtheBarbarian"
         }
       },
       "Ranger Archer, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Ranger Archer, Fantasy, TB25"
+          "Colorless": "RangerArcherFantasyTB25"
         }
       },
       "Ranger Firing Bow": {
         "Sizeless": {
-          "Colorless": "Ranger Firing Bow"
+          "Colorless": "RangerFiringBow"
         }
       },
       "Savage Orc Champion Great Hamm": {
         "Sizeless": {
-          "Colorless": "Savage Orc Champion Great Hamm"
+          "Colorless": "SavageOrcChampionGreatHamm"
         }
       },
       "Savage Orc Chieftain": {
         "Sizeless": {
-          "Colorless": "Savage Orc Chieftain"
+          "Colorless": "SavageOrcChieftain"
         }
       },
       "Scarecrow A": {
         "Sizeless": {
-          "Colorless": "Scarecrow A"
+          "Colorless": "ScarecrowA"
         }
       },
       "Scarecrow B": {
         "Sizeless": {
-          "Colorless": "Scarecrow B"
+          "Colorless": "ScarecrowB"
         }
       },
       "Skeletal Crossbowman III": {
         "Sizeless": {
-          "Colorless": "Skeletal Crossbowman III"
+          "Colorless": "SkeletalCrossbowmanIII"
         }
       },
       "Skeleton Battle Axe": {
         "Sizeless": {
-          "Colorless": "Skeleton Battle Axe"
+          "Colorless": "SkeletonBattleAxe"
         }
       },
       "The White Wizard": {
         "Sizeless": {
-          "Colorless": "The White Wizard"
+          "Colorless": "TheWhiteWizard"
         }
       },
       "Two Headed Ogre w/ Captive": {
         "Sizeless": {
-          "Colorless": "Two Headed Ogre w/ Captive"
+          "Colorless": "TwoHeadedOgrew/Captive"
         }
       },
       "Warbeast with Handler": {
         "Sizeless": {
-          "Colorless": "Warbeast with Handler"
+          "Colorless": "WarbeastwithHandler"
         }
       },
       "Wyvern II": {
         "Sizeless": {
-          "Colorless": "Wyvern II"
+          "Colorless": "WyvernII"
         }
       }
     },
     "figurine": {
       "Avatar, Opaque": {
         "Sizeless": {
-          "Black": "Avatar, Opaque, Black",
-          "White": "Avatar, Opaque, White"
+          "Black": "AvatarOpaqueBlack",
+          "White": "AvatarOpaqueWhite"
         }
       },
       "Avatar, Transparent": {
         "Sizeless": {
-          "Black": "Avatar, Transparent, Black",
-          "Blue": "Avatar, Transparent, Blue",
-          "Green": "Avatar, Transparent, Green",
-          "Orange": "Avatar, Transparent, Orange",
-          "Purple": "Avatar, Transparent, Purple",
-          "Red": "Avatar, Transparent, Red",
-          "White": "Avatar, Transparent, White",
-          "Yellow": "Avatar, Transparent, Yellow"
+          "Black": "AvatarTransparentBlack",
+          "Blue": "AvatarTransparentBlue",
+          "Green": "AvatarTransparentGreen",
+          "Orange": "AvatarTransparentOrange",
+          "Purple": "AvatarTransparentPurple",
+          "Red": "AvatarTransparentRed",
+          "White": "AvatarTransparentWhite",
+          "Yellow": "AvatarTransparentYellow"
         }
       },
       "Avatar, Transparent, Clear": {
         "Sizeless": {
-          "Colorless": "Avatar, Transparent, Clear"
+          "Colorless": "AvatarTransparentClear"
         }
       },
       "Colonial Lumberjack": {
         "Sizeless": {
-          "Blue": "Colonial Lumberjack, Blue",
-          "Green": "Colonial Lumberjack, Green",
-          "Orange": "Colonial Lumberjack, Orange",
-          "Red": "Colonial Lumberjack, Red",
-          "Yellow": "Colonial Lumberjack, Yellow"
+          "Blue": "ColonialLumberjackBlue",
+          "Green": "ColonialLumberjackGreen",
+          "Orange": "ColonialLumberjackOrange",
+          "Red": "ColonialLumberjackRed",
+          "Yellow": "ColonialLumberjackYellow"
         }
       },
       "Colonial Soldier": {
         "Sizeless": {
-          "Blue": "Colonial Soldier, Blue",
-          "Green": "Colonial Soldier, Green",
-          "Orange": "Colonial Soldier, Orange",
-          "Red": "Colonial Soldier, Red",
-          "Yellow": "Colonial Soldier, Yellow"
+          "Blue": "ColonialSoldierBlue",
+          "Green": "ColonialSoldierGreen",
+          "Orange": "ColonialSoldierOrange",
+          "Red": "ColonialSoldierRed",
+          "Yellow": "ColonialSoldierYellow"
         }
       },
       "Cone Pawn": {
         "Sizeless": {
-          "Black": "Cone Pawn, Black"
+          "Black": "ConePawnBlack"
         }
       },
       "Fedora Person, Black, Dark": {
         "Sizeless": {
-          "Colorless": "Fedora Person, Black, Dark"
+          "Colorless": "FedoraPersonBlackDark"
         }
       },
       "Fedora Person, Black, Light": {
         "Sizeless": {
-          "Colorless": "Fedora Person, Black, Light"
+          "Colorless": "FedoraPersonBlackLight"
         }
       },
       "Fedora Person": {
         "Medium": {
-          "Black": "Fedora Person, Black, Medium",
-          "Blue": "Fedora Person, Blue, Medium",
-          "Red": "Fedora Person, Red, Medium",
-          "White": "Fedora Person, White, Medium",
-          "Yellow": "Fedora Person, Yellow, Medium"
+          "Black": "FedoraPersonBlackMedium",
+          "Blue": "FedoraPersonBlueMedium",
+          "Red": "FedoraPersonRedMedium",
+          "White": "FedoraPersonWhiteMedium",
+          "Yellow": "FedoraPersonYellowMedium"
         }
       },
       "Fedora Person, Blue, Dark": {
         "Sizeless": {
-          "Colorless": "Fedora Person, Blue, Dark"
+          "Colorless": "FedoraPersonBlueDark"
         }
       },
       "Fedora Person, Blue, Light": {
         "Sizeless": {
-          "Colorless": "Fedora Person, Blue, Light"
+          "Colorless": "FedoraPersonBlueLight"
         }
       },
       "Fedora Person, Red, Dark": {
         "Sizeless": {
-          "Colorless": "Fedora Person, Red, Dark"
+          "Colorless": "FedoraPersonRedDark"
         }
       },
       "Fedora Person, Red, Light": {
         "Sizeless": {
-          "Colorless": "Fedora Person, Red, Light"
+          "Colorless": "FedoraPersonRedLight"
         }
       },
       "Fedora Person, White, Dark": {
         "Sizeless": {
-          "Colorless": "Fedora Person, White, Dark"
+          "Colorless": "FedoraPersonWhiteDark"
         }
       },
       "Fedora Person, White, Light": {
         "Sizeless": {
-          "Colorless": "Fedora Person, White, Light"
+          "Colorless": "FedoraPersonWhiteLight"
         }
       },
       "Fedora Person, Yellow, Dark": {
         "Sizeless": {
-          "Colorless": "Fedora Person, Yellow, Dark"
+          "Colorless": "FedoraPersonYellowDark"
         }
       },
       "Fedora Person, Yellow, Light": {
         "Sizeless": {
-          "Colorless": "Fedora Person, Yellow, Light"
+          "Colorless": "FedoraPersonYellowLight"
         }
       },
       "Flat Cap, Black": {
         "Sizeless": {
-          "Bronze": "Flat Cap, Black, Bronze",
-          "Green": "Flat Cap, Black, Green",
-          "Purple": "Flat Cap, Black, Purple"
+          "Bronze": "FlatCapBlackBronze",
+          "Green": "FlatCapBlackGreen",
+          "Purple": "FlatCapBlackPurple"
         }
       },
       "Flat Cap, Blue": {
         "Sizeless": {
-          "Bronze": "Flat Cap, Blue, Bronze",
-          "Green": "Flat Cap, Blue, Green",
-          "Purple": "Flat Cap, Blue, Purple"
+          "Bronze": "FlatCapBlueBronze",
+          "Green": "FlatCapBlueGreen",
+          "Purple": "FlatCapBluePurple"
         }
       },
       "Flat Cap, Red": {
         "Sizeless": {
-          "Bronze": "Flat Cap, Red, Bronze",
-          "Green": "Flat Cap, Red, Green",
-          "Purple": "Flat Cap, Red, Purple"
+          "Bronze": "FlatCapRedBronze",
+          "Green": "FlatCapRedGreen",
+          "Purple": "FlatCapRedPurple"
         }
       },
       "Flat Cap, White": {
         "Sizeless": {
-          "Bronze": "Flat Cap, White, Bronze",
-          "Green": "Flat Cap, White, Green",
-          "Purple": "Flat Cap, White, Purple"
+          "Bronze": "FlatCapWhiteBronze",
+          "Green": "FlatCapWhiteGreen",
+          "Purple": "FlatCapWhitePurple"
         }
       },
       "Flat Cap, Yellow": {
         "Sizeless": {
-          "Bronze": "Flat Cap, Yellow, Bronze",
-          "Green": "Flat Cap, Yellow, Green",
-          "Purple": "Flat Cap, Yellow, Purple"
+          "Bronze": "FlatCapYellowBronze",
+          "Green": "FlatCapYellowGreen",
+          "Purple": "FlatCapYellowPurple"
         }
       },
       "Future Person": {
         "Sizeless": {
-          "Orange": "Future Person, Orange",
-          "Purple": "Future Person, Purple",
-          "Yellow": "Future Person, Yellow"
+          "Orange": "FuturePersonOrange",
+          "Purple": "FuturePersonPurple",
+          "Yellow": "FuturePersonYellow"
         }
       },
       "Gunpod": {
@@ -4842,41 +4746,39 @@ const COMPONENT_CATEGORIES = {
       },
       "Halma": {
         "Sizeless": {
-          "Black": "Halma, Black",
-          "Blue": "Halma, Blue",
-          "Green": "Halma, Green",
-          "Orange": "Halma, Orange",
-          "Purple": "Halma, Purple",
-          "Red": "Halma, Red",
-          "White": "Halma, White",
-          "Yellow": "Halma, Yellow"
-        }
-      },
-      "Halma, Natural": {
+          "Black": "HalmaBlack",
+          "Blue": "HalmaBlue",
+          "Green": "HalmaGreen",
+          "Orange": "HalmaOrange",
+          "Purple": "HalmaPurple",
+          "Red": "HalmaRed",
+          "White": "HalmaWhite",
+          "Yellow": "HalmaYellow"
+        },
         "Large": {
-          "Colorless": "Halma, Large, Natural"
+          "Natural": "HalmaLargeNatural"
         }
       },
       "Halma, Stackable": {
         "Sizeless": {
-          "Blue": "Halma, Stackable, Blue",
-          "Green": "Halma, Stackable, Green",
-          "Red": "Halma, Stackable, Red",
-          "White": "Halma, Stackable, White",
-          "Yellow": "Halma, Stackable, Yellow"
+          "Blue": "HalmaStackableBlue",
+          "Green": "HalmaStackableGreen",
+          "Red": "HalmaStackableRed",
+          "White": "HalmaStackableWhite",
+          "Yellow": "HalmaStackableYellow"
         }
       },
-      "Hatman Green": {
+      "Hatman": {
         "Sizeless": {
-          "Green": "Hatman Green"
+          "Green": "HatmanGreen"
         }
       },
       "Human Figure": {
         "Sizeless": {
-          "Orange": "Human Figure, Orange",
-          "Purple": "Human Figure, Purple",
-          "Red": "Human Figure, Red",
-          "Yellow": "Human Figure, Yellow"
+          "Orange": "HumanFigureOrange",
+          "Purple": "HumanFigurePurple",
+          "Red": "HumanFigureRed",
+          "Yellow": "HumanFigureYellow"
         }
       },
       "Hydra": {
@@ -4886,259 +4788,259 @@ const COMPONENT_CATEGORIES = {
       },
       "Lookout": {
         "Sizeless": {
-          "Blue": "Lookout, Blue",
-          "Green": "Lookout, Green",
-          "Orange": "Lookout, Orange",
-          "Red": "Lookout, Red",
-          "Yellow": "Lookout, Yellow"
+          "Blue": "LookoutBlue",
+          "Green": "LookoutGreen",
+          "Orange": "LookoutOrange",
+          "Red": "LookoutRed",
+          "Yellow": "LookoutYellow"
         }
       },
       "Mafioso, Burnt": {
         "Sizeless": {
-          "Orange": "Mafioso, Burnt Orange"
+          "Orange": "MafiosoBurntOrange"
         }
       },
       "Mafioso": {
         "Sizeless": {
-          "Green": "Mafioso, Green",
-          "Purple": "Mafioso, Purple",
-          "Red": "Mafioso, Red",
-          "Yellow": "Mafioso, Yellow"
+          "Green": "MafiosoGreen",
+          "Purple": "MafiosoPurple",
+          "Red": "MafiosoRed",
+          "Yellow": "MafiosoYellow"
         }
       },
       "Miniature Base, 25mm Hex": {
         "Sizeless": {
-          "Black": "Miniature Base, 25mm Hex, Black",
-          "Blue": "Miniature Base, 25mm Hex, Blue",
-          "Green": "Miniature Base, 25mm Hex, Green",
-          "Orange": "Miniature Base, 25mm Hex, Orange",
-          "Purple": "Miniature Base, 25mm Hex, Purple",
-          "Red": "Miniature Base, 25mm Hex, Red",
-          "White": "Miniature Base, 25mm Hex, White",
-          "Yellow": "Miniature Base, 25mm Hex, Yellow"
+          "Black": "MiniatureBase25mmHexBlack",
+          "Blue": "MiniatureBase25mmHexBlue",
+          "Green": "MiniatureBase25mmHexGreen",
+          "Orange": "MiniatureBase25mmHexOrange",
+          "Purple": "MiniatureBase25mmHexPurple",
+          "Red": "MiniatureBase25mmHexRed",
+          "White": "MiniatureBase25mmHexWhite",
+          "Yellow": "MiniatureBase25mmHexYellow"
         }
       },
       "Missionary": {
         "Large": {
-          "Blue": "Missionary, Large, Blue",
-          "Green": "Missionary, Large, Green",
-          "Orange": "Missionary, Large, Orange",
-          "Red": "Missionary, Large, Red",
-          "Yellow": "Missionary, Large, Yellow"
+          "Blue": "MissionaryLargeBlue",
+          "Green": "MissionaryLargeGreen",
+          "Orange": "MissionaryLargeOrange",
+          "Red": "MissionaryLargeRed",
+          "Yellow": "MissionaryLargeYellow"
         }
       },
       "Ninja": {
         "Sizeless": {
-          "Brown": "Ninja, Brown",
-          "Orange": "Ninja, Orange"
+          "Brown": "NinjaBrown",
+          "Orange": "NinjaOrange"
         }
       },
       "Noble": {
         "Sizeless": {
-          "Blue": "Noble, Blue",
-          "Green": "Noble, Green",
-          "Red": "Noble, Red",
-          "White": "Noble, White",
-          "Yellow": "Noble, Yellow"
+          "Blue": "NobleBlue",
+          "Green": "NobleGreen",
+          "Red": "NobleRed",
+          "White": "NobleWhite",
+          "Yellow": "NobleYellow"
         }
       },
       "Paper Miniature Base Square": {
         "20mm": {
-          "Colorless": "Paper Miniature Base Square, 20mm"
+          "Colorless": "PaperMiniatureBaseSquare20mm"
         }
       },
       "Paper Miniature Base, Angled": {
         "20mm": {
-          "Colorless": "Paper Miniature Base, 20mm, Angled"
+          "Colorless": "PaperMiniatureBase20mmAngled"
         }
       },
       "Paper Miniature Base": {
         "25mm": {
-          "Black": "Paper Miniature Base, 25mm, Black",
-          "Blue": "Paper Miniature Base, 25mm, Blue",
-          "Green": "Paper Miniature Base, 25mm, Green",
-          "Orange": "Paper Miniature Base, 25mm, Orange",
-          "Purple": "Paper Miniature Base, 25mm, Purple",
-          "Red": "Paper Miniature Base, 25mm, Red",
-          "White": "Paper Miniature Base, 25mm, White",
-          "Yellow": "Paper Miniature Base, 25mm, Yellow"
+          "Black": "PaperMiniatureBase25mmBlack",
+          "Blue": "PaperMiniatureBase25mmBlue",
+          "Green": "PaperMiniatureBase25mmGreen",
+          "Orange": "PaperMiniatureBase25mmOrange",
+          "Purple": "PaperMiniatureBase25mmPurple",
+          "Red": "PaperMiniatureBase25mmRed",
+          "White": "PaperMiniatureBase25mmWhite",
+          "Yellow": "PaperMiniatureBase25mmYellow"
         }
       },
       "Paper Miniature Base, Clear": {
         "25mm": {
-          "Colorless": "Paper Miniature Base, 25mm, Clear"
+          "Colorless": "PaperMiniatureBase25mmClear"
         }
       },
       "Paper Miniature Formation Tray, 10 x 4": {
         "20mm": {
-          "Colorless": "Paper Miniature Formation Tray, 20mm, 10 x 4"
+          "Colorless": "PaperMiniatureFormationTray20mm10x4"
         }
       },
       "Paper Miniature Formation Tray, 5 x 2": {
         "20mm": {
-          "Colorless": "Paper Miniature Formation Tray, 20mm, 5 x 2"
+          "Colorless": "PaperMiniatureFormationTray20mm5x2"
         }
       },
       "Paper Miniature Formation Tray, 5 x 2, Angled": {
         "20mm": {
-          "Colorless": "Paper Miniature Formation Tray, 20mm, 5 x 2, Angled"
+          "Colorless": "PaperMiniatureFormationTray20mm5x2Angled"
         }
       },
       "Paper Miniature Formation Tray, 5 x 4": {
         "20mm": {
-          "Colorless": "Paper Miniature Formation Tray, 20mm, 5 x 4"
+          "Colorless": "PaperMiniatureFormationTray20mm5x4"
         }
       },
       "Paper Miniature Formation Tray, 5 x 4, Angled": {
         "20mm": {
-          "Colorless": "Paper Miniature Formation Tray, 20mm, 5 x 4, Angled"
+          "Colorless": "PaperMiniatureFormationTray20mm5x4Angled"
         }
       },
       "Peg Pawn": {
         "Sizeless": {
-          "Black": "Peg Pawn, Black",
-          "Blue": "Peg Pawn, Blue",
-          "Green": "Peg Pawn, Green",
-          "Orange": "Peg Pawn, Orange",
-          "Purple": "Peg Pawn, Purple",
-          "Red": "Peg Pawn, Red",
-          "White": "Peg Pawn, White",
-          "Yellow": "Peg Pawn, Yellow"
+          "Black": "PegPawnBlack",
+          "Blue": "PegPawnBlue",
+          "Green": "PegPawnGreen",
+          "Orange": "PegPawnOrange",
+          "Purple": "PegPawnPurple",
+          "Red": "PegPawnRed",
+          "White": "PegPawnWhite",
+          "Yellow": "PegPawnYellow"
         }
       },
       "Shieldbearer": {
         "Sizeless": {
-          "Blue": "Shieldbearer, Blue",
-          "Green": "Shieldbearer, Green",
-          "Purple": "Shieldbearer, Purple",
-          "Yellow": "Shieldbearer, Yellow"
+          "Blue": "ShieldbearerBlue",
+          "Green": "ShieldbearerGreen",
+          "Purple": "ShieldbearerPurple",
+          "Yellow": "ShieldbearerYellow"
         }
       },
       "Skeleton Warrior": {
         "Sizeless": {
-          "Black": "Skeleton Warrior, Black",
-          "Blue": "Skeleton Warrior, Blue",
-          "Pink": "Skeleton Warrior, Pink"
+          "Black": "SkeletonWarriorBlack",
+          "Blue": "SkeletonWarriorBlue",
+          "Pink": "SkeletonWarriorPink"
         }
       },
       "Skeleton Warrior, Tan": {
         "Sizeless": {
-          "Colorless": "Skeleton Warrior, Tan"
+          "Colorless": "SkeletonWarriorTan"
         }
       },
       "Sticker Pawn, Opaque": {
         "Sizeless": {
-          "Black": "Sticker Pawn, Opaque, Black",
-          "Blue": "Sticker Pawn, Opaque, Blue",
-          "Green": "Sticker Pawn, Opaque, Green",
-          "Orange": "Sticker Pawn, Opaque, Orange",
-          "Purple": "Sticker Pawn, Opaque, Purple",
-          "Red": "Sticker Pawn, Opaque, Red",
-          "White": "Sticker Pawn, Opaque, White",
-          "Yellow": "Sticker Pawn, Opaque, Yellow"
+          "Black": "StickerPawnOpaqueBlack",
+          "Blue": "StickerPawnOpaqueBlue",
+          "Green": "StickerPawnOpaqueGreen",
+          "Orange": "StickerPawnOpaqueOrange",
+          "Purple": "StickerPawnOpaquePurple",
+          "Red": "StickerPawnOpaqueRed",
+          "White": "StickerPawnOpaqueWhite",
+          "Yellow": "StickerPawnOpaqueYellow"
         }
       },
       "Sticker Pawn, Transparent": {
         "Sizeless": {
-          "Blue": "Sticker Pawn, Transparent, Blue",
-          "Green": "Sticker Pawn, Transparent, Green",
-          "Orange": "Sticker Pawn, Transparent, Orange",
-          "Purple": "Sticker Pawn, Transparent, Purple",
-          "Red": "Sticker Pawn, Transparent, Red",
-          "Yellow": "Sticker Pawn, Transparent, Yellow"
+          "Blue": "StickerPawnTransparentBlue",
+          "Green": "StickerPawnTransparentGreen",
+          "Orange": "StickerPawnTransparentOrange",
+          "Purple": "StickerPawnTransparentPurple",
+          "Red": "StickerPawnTransparentRed",
+          "Yellow": "StickerPawnTransparentYellow"
         }
       },
       "Sticker Pawn, Transparent, Clear": {
         "Sizeless": {
-          "Colorless": "Sticker Pawn, Transparent, Clear"
+          "Colorless": "StickerPawnTransparentClear"
         }
       },
       "Warrior Monk": {
         "Sizeless": {
-          "Purple": "Warrior Monk, Purple",
-          "Red": "Warrior Monk, Red"
+          "Purple": "WarriorMonkPurple",
+          "Red": "WarriorMonkRed"
         }
       },
       "Woman, Mum": {
         "Sizeless": {
-          "Colorless": "Woman, Mum"
+          "Colorless": "WomanMum"
         }
       },
       "Zombie Babe": {
         "Sizeless": {
-          "Colorless": "Zombie Babe"
+          "Colorless": "ZombieBabe"
         }
       },
       "Zombie Cheerleader": {
         "Sizeless": {
-          "Colorless": "Zombie Cheerleader"
+          "Colorless": "ZombieCheerleader"
         }
       },
       "Zombie Circus Clown": {
         "Sizeless": {
-          "Colorless": "Zombie Circus Clown"
+          "Colorless": "ZombieCircusClown"
         }
       },
       "Zombie Clown": {
         "Sizeless": {
-          "Colorless": "Zombie Clown"
+          "Colorless": "ZombieClown"
         }
       },
       "Zombie Doctor": {
         "Sizeless": {
-          "Colorless": "Zombie Doctor"
+          "Colorless": "ZombieDoctor"
         }
       },
       "Zombie Dog": {
         "Sizeless": {
-          "Colorless": "Zombie Dog"
+          "Colorless": "ZombieDog"
         }
       },
       "Zombie Dude": {
         "Sizeless": {
-          "Colorless": "Zombie Dude"
+          "Colorless": "ZombieDude"
         }
       },
       "Zombie Granny": {
         "Sizeless": {
-          "Colorless": "Zombie Granny"
+          "Colorless": "ZombieGranny"
         }
       },
       "Zombie Mullet": {
         "Sizeless": {
-          "Colorless": "Zombie Mullet"
+          "Colorless": "ZombieMullet"
         }
       },
       "Zombie Professor": {
         "Sizeless": {
-          "Colorless": "Zombie Professor"
+          "Colorless": "ZombieProfessor"
         }
       },
       "Zombie Thriller": {
         "Sizeless": {
-          "Colorless": "Zombie Thriller"
+          "Colorless": "ZombieThriller"
         }
       },
       "Zombie, Random": {
         "Sizeless": {
-          "Colorless": "Zombie, Random"
+          "Colorless": "ZombieRandom"
         }
       },
       "Halma, Plastic": {
         "Sizeless": {
-          "Black": "Halma, Plastic, Black",
-          "Blue": "Halma, Plastic, Blue",
-          "Orange": "Halma, Plastic, Orange",
-          "Red": "Halma, Plastic, Red",
-          "White": "Halma, Plastic, White",
-          "Yellow": "Halma, Plastic, Yellow"
+          "Black": "HalmaPlasticBlack",
+          "Blue": "HalmaPlasticBlue",
+          "Orange": "HalmaPlasticOrange",
+          "Red": "HalmaPlasticRed",
+          "White": "HalmaPlasticWhite",
+          "Yellow": "HalmaPlasticYellow"
         }
       }
     },
     "animal": {
       "African Elephant": {
         "Sizeless": {
-          "Colorless": "African Elephant"
+          "Colorless": "AfricanElephant"
         }
       },
       "Ant": {
@@ -5146,73 +5048,73 @@ const COMPONENT_CATEGORIES = {
           "Colorless": "Ant"
         }
       },
-      "Bee, Wood": {
+      "Bee": {
         "Sizeless": {
-          "Colorless": "Bee, Wood"
+          "Wood": "BeeWood"
         }
       },
       "Bird, TB15": {
         "Sizeless": {
-          "Black": "Bird, TB15, Black",
-          "Blue": "Bird, TB15, Blue",
-          "Green": "Bird, TB15, Green",
-          "Orange": "Bird, TB15, Orange",
-          "Purple": "Bird, TB15, Purple",
-          "Red": "Bird, TB15, Red",
-          "White": "Bird, TB15, White",
-          "Yellow": "Bird, TB15, Yellow"
+          "Black": "BirdTB15Black",
+          "Blue": "BirdTB15Blue",
+          "Green": "BirdTB15Green",
+          "Orange": "BirdTB15Orange",
+          "Purple": "BirdTB15Purple",
+          "Red": "BirdTB15Red",
+          "White": "BirdTB15White",
+          "Yellow": "BirdTB15Yellow"
         }
       },
       "Black Bear": {
         "Sizeless": {
-          "Colorless": "Black Bear"
+          "Colorless": "BlackBear"
         }
       },
       "Bug": {
         "Sizeless": {
-          "Black": "Bug, Black",
-          "Blue": "Bug, Blue",
-          "Green": "Bug, Green",
-          "Orange": "Bug, Orange",
-          "Purple": "Bug, Purple",
-          "Red": "Bug, Red",
-          "White": "Bug, White",
-          "Yellow": "Bug, Yellow"
+          "Black": "BugBlack",
+          "Blue": "BugBlue",
+          "Green": "BugGreen",
+          "Orange": "BugOrange",
+          "Purple": "BugPurple",
+          "Red": "BugRed",
+          "White": "BugWhite",
+          "Yellow": "BugYellow"
         }
       },
       "Bull, Wood": {
         "Sizeless": {
-          "Brown": "Bull, Wood, Brown",
-          "Orange": "Bull, Wood, Orange"
+          "Brown": "BullWoodBrown",
+          "Orange": "BullWoodOrange"
         }
       },
       "Bunny, TB15": {
         "Sizeless": {
-          "Black": "Bunny, TB15, Black",
-          "Blue": "Bunny, TB15, Blue",
-          "Green": "Bunny, TB15, Green",
-          "Orange": "Bunny, TB15, Orange",
-          "Purple": "Bunny, TB15, Purple",
-          "Red": "Bunny, TB15, Red",
-          "White": "Bunny, TB15, White",
-          "Yellow": "Bunny, TB15, Yellow"
+          "Black": "BunnyTB15Black",
+          "Blue": "BunnyTB15Blue",
+          "Green": "BunnyTB15Green",
+          "Orange": "BunnyTB15Orange",
+          "Purple": "BunnyTB15Purple",
+          "Red": "BunnyTB15Red",
+          "White": "BunnyTB15White",
+          "Yellow": "BunnyTB15Yellow"
         }
       },
       "Cat, Acrylic": {
         "Sizeless": {
-          "Colorless": "Cat, Acrylic"
+          "Colorless": "CatAcrylic"
         }
       },
       "Cat, TB15": {
         "Sizeless": {
-          "Black": "Cat, TB15, Black",
-          "Blue": "Cat, TB15, Blue",
-          "Green": "Cat, TB15, Green",
-          "Orange": "Cat, TB15, Orange",
-          "Purple": "Cat, TB15, Purple",
-          "Red": "Cat, TB15, Red",
-          "White": "Cat, TB15, White",
-          "Yellow": "Cat, TB15, Yellow"
+          "Black": "CatTB15Black",
+          "Blue": "CatTB15Blue",
+          "Green": "CatTB15Green",
+          "Orange": "CatTB15Orange",
+          "Purple": "CatTB15Purple",
+          "Red": "CatTB15Red",
+          "White": "CatTB15White",
+          "Yellow": "CatTB15Yellow"
         }
       },
       "Cheetah": {
@@ -5222,135 +5124,131 @@ const COMPONENT_CATEGORIES = {
       },
       "Chicken, Acrylic": {
         "Sizeless": {
-          "Colorless": "Chicken, Acrylic"
+          "Colorless": "ChickenAcrylic"
         }
       },
       "Cobra, Wood": {
         "Sizeless": {
-          "Teal": "Cobra, Wood, Teal"
+          "Teal": "CobraWoodTeal"
         }
       },
       "Cow": {
         "Sizeless": {
-          "Black": "Cow, Black"
+          "Black": "CowBlack"
         }
       },
       "Cow, Half": {
         "Sizeless": {
-          "Black": "Cow, Half Black",
-          "Brown": "Cow, Half Brown"
+          "Black": "CowHalfBlack",
+          "Brown": "CowHalfBrown"
         }
       },
       "Crab, Acrylic": {
         "Sizeless": {
-          "Black": "Crab, Acrylic, Black",
-          "Blue": "Crab, Acrylic, Blue",
-          "Green": "Crab, Acrylic, Green",
-          "Orange": "Crab, Acrylic, Orange",
-          "Purple": "Crab, Acrylic, Purple",
-          "Red": "Crab, Acrylic, Red",
-          "White": "Crab, Acrylic, White",
-          "Yellow": "Crab, Acrylic, Yellow"
+          "Black": "CrabAcrylicBlack",
+          "Blue": "CrabAcrylicBlue",
+          "Green": "CrabAcrylicGreen",
+          "Orange": "CrabAcrylicOrange",
+          "Purple": "CrabAcrylicPurple",
+          "Red": "CrabAcrylicRed",
+          "White": "CrabAcrylicWhite",
+          "Yellow": "CrabAcrylicYellow"
         }
       },
       "Dinosaur Token, Wood": {
         "Sizeless": {
-          "Blue": "Dinosaur Token, Wood, Blue",
-          "Green": "Dinosaur Token, Wood, Green",
-          "Orange": "Dinosaur Token, Wood, Orange",
-          "Purple": "Dinosaur Token, Wood, Purple",
-          "Red": "Dinosaur Token, Wood, Red"
+          "Blue": "DinosaurTokenWoodBlue",
+          "Green": "DinosaurTokenWoodGreen",
+          "Orange": "DinosaurTokenWoodOrange",
+          "Purple": "DinosaurTokenWoodPurple",
+          "Red": "DinosaurTokenWoodRed"
         }
       },
       "Dinosaur Tokens, Wood": {
         "Sizeless": {
-          "Pink": "Dinosaur Tokens, Wood, Pink"
+          "Pink": "DinosaurTokensWoodPink"
         }
       },
       "Dinosaur, Ankylosaurus": {
         "Sizeless": {
-          "Colorless": "Dinosaur, Ankylosaurus",
-          "Pink": "Dinosaur, Ankylosaurus, Pink"
+          "Colorless": "DinosaurAnkylosaurus",
+          "Pink": "DinosaurAnkylosaurusPink"
         }
       },
       "Dinosaur, Ankylosaurus, Wood": {
         "Sizeless": {
-          "Blue": "Dinosaur, Ankylosaurus, Wood, Blue",
-          "Green": "Dinosaur, Ankylosaurus, Wood, Green",
-          "Orange": "Dinosaur, Ankylosaurus, Wood, Orange",
-          "Pink": "Dinosaur, Ankylosaurus, Wood, Pink",
-          "Purple": "Dinosaur, Ankylosaurus, Wood, Purple",
-          "Red": "Dinosaur, Ankylosaurus, Wood, Red",
-          "White": "Dinosaur, Ankylosaurus, Wood, White"
+          "Blue": "DinosaurAnkylosaurusWoodBlue",
+          "Green": "DinosaurAnkylosaurusWoodGreen",
+          "Orange": "DinosaurAnkylosaurusWoodOrange",
+          "Pink": "DinosaurAnkylosaurusWoodPink",
+          "Purple": "DinosaurAnkylosaurusWoodPurple",
+          "Red": "DinosaurAnkylosaurusWoodRed",
+          "White": "DinosaurAnkylosaurusWoodWhite"
         }
       },
       "Dinosaur, Brontosaurus": {
         "Sizeless": {
-          "Colorless": "Dinosaur, Brontosaurus"
+          "Colorless": "DinosaurBrontosaurus"
         }
       },
       "Dinosaur, Pachycephalosaurus": {
         "Sizeless": {
-          "Colorless": "Dinosaur, Pachycephalosaurus"
+          "Colorless": "DinosaurPachycephalosaurus"
         }
       },
       "Dinosaur, Pterodactyl": {
         "Sizeless": {
-          "Colorless": "Dinosaur, Pterodactyl"
+          "Colorless": "DinosaurPterodactyl"
         }
       },
       "Dinosaur, Spinosaurus": {
         "Sizeless": {
-          "Orange": "Dinosaur, Spinosaurus, Orange"
+          "Orange": "DinosaurSpinosaurusOrange"
         }
       },
       "Dinosaur, Stegosaurus": {
         "Sizeless": {
-          "Colorless": "Dinosaur, Stegosaurus",
-          "Green": "Dinosaur, Stegosaurus, Green"
+          "Colorless": "DinosaurStegosaurus",
+          "Green": "DinosaurStegosaurusGreen"
         }
       },
       "Dinosaur, Triceratops": {
         "Sizeless": {
-          "Colorless": "Dinosaur, Triceratops",
-          "Red": "Dinosaur, Triceratops, Red"
+          "Colorless": "DinosaurTriceratops",
+          "Red": "DinosaurTriceratopsRed"
         }
       },
       "Dinosaur, Tyrannosaurus": {
         "Sizeless": {
-          "Colorless": "Dinosaur, Tyrannosaurus",
-          "Blue": "Dinosaur, Tyrannosaurus, Blue",
-          "Green": "Dinosaur, Tyrannosaurus, Green",
-          "Orange": "Dinosaur, Tyrannosaurus, Orange",
-          "Pink": "Dinosaur, Tyrannosaurus, Pink",
-          "Purple": "Dinosaur, Tyrannosaurus, Purple",
-          "Red": "Dinosaur, Tyrannosaurus, Red"
-        }
-      },
-      "Dinosaur, Tyrannosaurus, Dark": {
-        "Sizeless": {
-          "Green": "Dinosaur, Tyrannosaurus, Dark Green"
+          "Colorless": "DinosaurTyrannosaurus",
+          "Blue": "DinosaurTyrannosaurusBlue",
+          "Dark Green": "DinosaurTyrannosaurusDarkGreen",
+          "Green": "DinosaurTyrannosaurusGreen",
+          "Orange": "DinosaurTyrannosaurusOrange",
+          "Pink": "DinosaurTyrannosaurusPink",
+          "Purple": "DinosaurTyrannosaurusPurple",
+          "Red": "DinosaurTyrannosaurusRed"
         }
       },
       "Dinosaur, Velociraptor": {
         "Sizeless": {
-          "Colorless": "Dinosaur, Velociraptor",
-          "Gray": "Dinosaur, Velociraptor, Gray"
+          "Colorless": "DinosaurVelociraptor",
+          "Gray": "DinosaurVelociraptorGray"
         }
       },
       "Dog, Acrylic": {
         "Sizeless": {
-          "Colorless": "Dog, Acrylic"
+          "Colorless": "DogAcrylic"
         }
       },
       "Dog, Post Apocalypse, Armor, TB25": {
         "Sizeless": {
-          "Colorless": "Dog, Post Apocalypse, Armor, TB25"
+          "Colorless": "DogPostApocalypseArmorTB25"
         }
       },
-      "Donkey, Wood": {
+      "Donkey": {
         "Sizeless": {
-          "Colorless": "Donkey, Wood"
+          "Wood": "DonkeyWood"
         }
       },
       "Dove": {
@@ -5360,80 +5258,80 @@ const COMPONENT_CATEGORIES = {
       },
       "Dragon, Blue, Dark": {
         "Sizeless": {
-          "Colorless": "Dragon, Blue, Dark"
+          "Colorless": "DragonBlueDark"
         }
       },
       "Dragon, Blue, Light": {
         "Sizeless": {
-          "Colorless": "Dragon, Blue, Light"
+          "Colorless": "DragonBlueLight"
         }
       },
       "Dragon, Fantasy, TB15": {
         "Sizeless": {
-          "Black": "Dragon, Fantasy, TB15, Black",
-          "Blue": "Dragon, Fantasy, TB15, Blue",
-          "Green": "Dragon, Fantasy, TB15, Green",
-          "Orange": "Dragon, Fantasy, TB15, Orange",
-          "Purple": "Dragon, Fantasy, TB15, Purple",
-          "Red": "Dragon, Fantasy, TB15, Red",
-          "White": "Dragon, Fantasy, TB15, White",
-          "Yellow": "Dragon, Fantasy, TB15, Yellow"
+          "Black": "DragonFantasyTB15Black",
+          "Blue": "DragonFantasyTB15Blue",
+          "Green": "DragonFantasyTB15Green",
+          "Orange": "DragonFantasyTB15Orange",
+          "Purple": "DragonFantasyTB15Purple",
+          "Red": "DragonFantasyTB15Red",
+          "White": "DragonFantasyTB15White",
+          "Yellow": "DragonFantasyTB15Yellow"
         }
       },
       "Dragon, Fantasy, TB50": {
         "Sizeless": {
-          "Colorless": "Dragon, Fantasy, TB50"
+          "Colorless": "DragonFantasyTB50"
         }
       },
       "Dragon": {
         "Sizeless": {
-          "Orange": "Dragon, Orange",
-          "Red": "Dragon, Red"
+          "Orange": "DragonOrange",
+          "Red": "DragonRed"
         },
         "Small": {
-          "Blue": "Dragon, Small, Blue",
-          "Green": "Dragon, Small, Green",
-          "Red": "Dragon, Small, Red",
-          "Yellow": "Dragon, Small, Yellow"
+          "Blue": "DragonSmallBlue",
+          "Green": "DragonSmallGreen",
+          "Red": "DragonSmallRed",
+          "Yellow": "DragonSmallYellow"
         }
       },
       "Elephant with Rider": {
         "Sizeless": {
-          "Green": "Elephant with Rider, Green",
-          "Gray": "Elephant with Rider, Gray",
-          "Orange": "Elephant with Rider, Orange",
-          "Purple": "Elephant with Rider, Purple",
-          "Red": "Elephant with Rider, Red",
-          "Yellow": "Elephant with Rider, Yellow"
+          "Green": "ElephantwithRiderGreen",
+          "Gray": "ElephantwithRiderGray",
+          "Orange": "ElephantwithRiderOrange",
+          "Purple": "ElephantwithRiderPurple",
+          "Red": "ElephantwithRiderRed",
+          "Yellow": "ElephantwithRiderYellow"
         }
       },
       "Fish, Wood": {
         "Sizeless": {
-          "Yellow": "Fish, Wood, Yellow"
+          "Yellow": "FishWoodYellow"
         }
       },
       "Frog Rider": {
         "Sizeless": {
-          "Blue": "Frog Rider, Blue",
-          "Brown": "Frog Rider, Brown",
-          "Green": "Frog Rider, Green",
-          "Red": "Frog Rider, Red",
-          "Yellow": "Frog Rider, Yellow"
+          "Blue": "FrogRiderBlue",
+          "Brown": "FrogRiderBrown",
+          "Green": "FrogRiderGreen",
+          "Red": "FrogRiderRed",
+          "Yellow": "FrogRiderYellow"
         }
       },
       "Frogfolk, Spear, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Frogfolk, Spear, Fantasy, TB25"
+          "Colorless": "FrogfolkSpearFantasyTB25"
         }
       },
       "Goat, Acrylic": {
         "Sizeless": {
-          "Colorless": "Goat, Acrylic"
+          "Colorless": "GoatAcrylic"
         }
       },
       "Goat, Random": {
         "Sizeless": {
-          "Colorless": "Goat, Random"
+          "Colorless": "GoatRandom"
         }
       },
       "Gorilla": {
@@ -5443,43 +5341,43 @@ const COMPONENT_CATEGORIES = {
       },
       "Grick, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Grick, Fantasy, TB25"
+          "Colorless": "GrickFantasyTB25"
         }
       },
       "Grizzly Bear": {
         "Sizeless": {
-          "Colorless": "Grizzly Bear"
+          "Colorless": "GrizzlyBear"
         }
       },
       "Handmade Fish": {
         "Sizeless": {
-          "Colorless": "Handmade Fish"
+          "Colorless": "HandmadeFish"
         }
       },
       "Handmade Sheep": {
         "Sizeless": {
-          "Colorless": "Handmade Sheep"
+          "Colorless": "HandmadeSheep"
         }
       },
       "Horse, Acrylic": {
         "Sizeless": {
-          "Colorless": "Horse, Acrylic"
+          "Colorless": "HorseAcrylic"
         }
       },
       "Kitten": {
         "Sizeless": {
-          "Brown": "Kitten, Brown",
-          "White": "Kitten, White"
+          "Brown": "KittenBrown",
+          "White": "KittenWhite"
         }
       },
       "Kitten, White with Brown ": {
         "Sizeless": {
-          "Colorless": "Kitten, White with Brown "
+          "Colorless": "KittenWhitewithBrown"
         }
       },
-      "Lady Bug, Wood": {
+      "Lady Bug": {
         "Sizeless": {
-          "Colorless": "Lady Bug, Wood"
+          "Wood": "LadyBugWood"
         }
       },
       "Lion": {
@@ -5489,133 +5387,133 @@ const COMPONENT_CATEGORIES = {
       },
       "Lizardman, Javelin, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Lizardman, Javelin, Fantasy, TB25"
+          "Colorless": "LizardmanJavelinFantasyTB25"
         }
       },
       "Mouse, Acrylic": {
         "Sizeless": {
-          "Colorless": "Mouse, Acrylic"
+          "Colorless": "MouseAcrylic"
         }
       },
       "Mouse, Wood": {
         "Sizeless": {
-          "Gray": "Mouse, Wood, Gray"
+          "Gray": "MouseWoodGray"
         }
       },
       "Pig, Mini, Black and": {
         "Sizeless": {
-          "White": "Pig, Mini, Black and White"
+          "White": "PigMiniBlackandWhite"
         }
       },
       "Pig, Mini": {
         "Sizeless": {
-          "Brown": "Pig, Mini, Brown",
-          "Pink": "Pig, Mini, Pink"
+          "Brown": "PigMiniBrown",
+          "Pink": "PigMiniPink"
         }
       },
       "Pig, TB15": {
         "Sizeless": {
-          "Black": "Pig, TB15, Black",
-          "Blue": "Pig, TB15, Blue",
-          "Green": "Pig, TB15, Green",
-          "Orange": "Pig, TB15, Orange",
-          "Purple": "Pig, TB15, Purple",
-          "Red": "Pig, TB15, Red",
-          "White": "Pig, TB15, White",
-          "Yellow": "Pig, TB15, Yellow"
+          "Black": "PigTB15Black",
+          "Blue": "PigTB15Blue",
+          "Green": "PigTB15Green",
+          "Orange": "PigTB15Orange",
+          "Purple": "PigTB15Purple",
+          "Red": "PigTB15Red",
+          "White": "PigTB15White",
+          "Yellow": "PigTB15Yellow"
         }
       },
       "Pig, Wood": {
         "Sizeless": {
-          "Black": "Pig, Wood, Black",
-          "Pink": "Pig, Wood, Pink"
+          "Black": "PigWoodBlack",
+          "Pink": "PigWoodPink"
         }
       },
       "Pigface Orc Halberd, Fantasy, TB25": {
         "Sizeless": {
-          "Colorless": "Pigface Orc Halberd, Fantasy, TB25"
+          "Colorless": "PigfaceOrcHalberdFantasyTB25"
         }
       },
       "Polar Bear": {
         "Sizeless": {
-          "Colorless": "Polar Bear"
+          "Colorless": "PolarBear"
         }
       },
       "Premium Cow": {
         "Sizeless": {
-          "Colorless": "Premium Cow"
+          "Colorless": "PremiumCow"
         }
       },
       "Premium Fish": {
         "Sizeless": {
-          "Colorless": "Premium Fish"
+          "Colorless": "PremiumFish"
         }
       },
       "Premium Pink Pig": {
         "Sizeless": {
-          "Colorless": "Premium Pink Pig"
+          "Colorless": "PremiumPinkPig"
         }
       },
       "Premium Sheep": {
         "Sizeless": {
-          "Colorless": "Premium Sheep"
+          "Colorless": "PremiumSheep"
         }
       },
       "Puppy, Black lab": {
         "Sizeless": {
-          "Colorless": "Puppy, Black lab"
+          "Colorless": "PuppyBlacklab"
         }
       },
       "Puppy, Bulldog": {
         "Sizeless": {
-          "Colorless": "Puppy, Bulldog"
+          "Colorless": "PuppyBulldog"
         }
       },
       "Puppy, Mutt": {
         "Sizeless": {
-          "Colorless": "Puppy, Mutt"
+          "Colorless": "PuppyMutt"
         }
       },
       "Puppy, Poodle": {
         "Sizeless": {
-          "Colorless": "Puppy, Poodle"
+          "Colorless": "PuppyPoodle"
         }
       },
       "Puppy, TB15": {
         "Sizeless": {
-          "Black": "Puppy, TB15, Black",
-          "Blue": "Puppy, TB15, Blue",
-          "Green": "Puppy, TB15, Green",
-          "Orange": "Puppy, TB15, Orange",
-          "Purple": "Puppy, TB15, Purple",
-          "Red": "Puppy, TB15, Red",
-          "White": "Puppy, TB15, White",
-          "Yellow": "Puppy, TB15, Yellow"
+          "Black": "PuppyTB15Black",
+          "Blue": "PuppyTB15Blue",
+          "Green": "PuppyTB15Green",
+          "Orange": "PuppyTB15Orange",
+          "Purple": "PuppyTB15Purple",
+          "Red": "PuppyTB15Red",
+          "White": "PuppyTB15White",
+          "Yellow": "PuppyTB15Yellow"
         }
       },
       "Puppy, Terrier": {
         "Sizeless": {
-          "Colorless": "Puppy, Terrier"
+          "Colorless": "PuppyTerrier"
         }
       },
       "Puppy, Yellow lab": {
         "Sizeless": {
-          "Colorless": "Puppy, Yellow lab"
+          "Colorless": "PuppyYellowlab"
         }
       },
       "Puppy, Yorkie": {
         "Sizeless": {
-          "Colorless": "Puppy, Yorkie"
+          "Colorless": "PuppyYorkie"
         }
       },
       "Rabbit": {
         "Sizeless": {
-          "Purple": "Rabbit, Purple"
+          "Purple": "RabbitPurple"
         }
       },
       "Rat, Acrylic": {
         "Sizeless": {
-          "Colorless": "Rat, Acrylic"
+          "Colorless": "RatAcrylic"
         }
       },
       "Rhinoceros": {
@@ -5625,14 +5523,14 @@ const COMPONENT_CATEGORIES = {
       },
       "Rooster": {
         "Sizeless": {
-          "Black": "Rooster, Black",
-          "Blue": "Rooster, Blue",
-          "Green": "Rooster, Green",
-          "Orange": "Rooster, Orange",
-          "Purple": "Rooster, Purple",
-          "Red": "Rooster, Red",
-          "White": "Rooster, White",
-          "Yellow": "Rooster, Yellow"
+          "Black": "RoosterBlack",
+          "Blue": "RoosterBlue",
+          "Green": "RoosterGreen",
+          "Orange": "RoosterOrange",
+          "Purple": "RoosterPurple",
+          "Red": "RoosterRed",
+          "White": "RoosterWhite",
+          "Yellow": "RoosterYellow"
         }
       },
       "Sheep": {
@@ -5642,7 +5540,7 @@ const COMPONENT_CATEGORIES = {
       },
       "Sheep, Random": {
         "Sizeless": {
-          "Colorless": "Sheep, Random"
+          "Colorless": "SheepRandom"
         }
       },
       "Spider": {
@@ -5652,894 +5550,886 @@ const COMPONENT_CATEGORIES = {
       },
       "Spider Eggs": {
         "Sizeless": {
-          "Colorless": "Spider Eggs"
+          "Colorless": "SpiderEggs"
         }
       }
     },
     "vehicle": {
       "Acrylic Train Track": {
         "Sizeless": {
-          "Black": "Acrylic Train Track, Black",
-          "Blue": "Acrylic Train Track, Blue",
-          "Green": "Acrylic Train Track, Green",
-          "Orange": "Acrylic Train Track, Orange",
-          "Purple": "Acrylic Train Track, Purple",
-          "Red": "Acrylic Train Track, Red",
-          "White": "Acrylic Train Track, White",
-          "Yellow": "Acrylic Train Track, Yellow"
+          "Black": "AcrylicTrainTrackBlack",
+          "Blue": "AcrylicTrainTrackBlue",
+          "Green": "AcrylicTrainTrackGreen",
+          "Orange": "AcrylicTrainTrackOrange",
+          "Purple": "AcrylicTrainTrackPurple",
+          "Red": "AcrylicTrainTrackRed",
+          "White": "AcrylicTrainTrackWhite",
+          "Yellow": "AcrylicTrainTrackYellow"
         }
       },
       "Acrylic Train, Box Car": {
         "Sizeless": {
-          "Black": "Acrylic Train, Box Car, Black",
-          "Blue": "Acrylic Train, Box Car, Blue",
-          "Green": "Acrylic Train, Box Car, Green",
-          "Orange": "Acrylic Train, Box Car, Orange",
-          "Purple": "Acrylic Train, Box Car, Purple",
-          "Red": "Acrylic Train, Box Car, Red",
-          "White": "Acrylic Train, Box Car, White",
-          "Yellow": "Acrylic Train, Box Car, Yellow"
+          "Black": "AcrylicTrainBoxCarBlack",
+          "Blue": "AcrylicTrainBoxCarBlue",
+          "Green": "AcrylicTrainBoxCarGreen",
+          "Orange": "AcrylicTrainBoxCarOrange",
+          "Purple": "AcrylicTrainBoxCarPurple",
+          "Red": "AcrylicTrainBoxCarRed",
+          "White": "AcrylicTrainBoxCarWhite",
+          "Yellow": "AcrylicTrainBoxCarYellow"
         }
       },
       "Acrylic Train, Caboose": {
         "Sizeless": {
-          "Black": "Acrylic Train, Caboose, Black",
-          "Blue": "Acrylic Train, Caboose, Blue",
-          "Green": "Acrylic Train, Caboose, Green",
-          "Orange": "Acrylic Train, Caboose, Orange",
-          "Purple": "Acrylic Train, Caboose, Purple",
-          "Red": "Acrylic Train, Caboose, Red",
-          "White": "Acrylic Train, Caboose, White",
-          "Yellow": "Acrylic Train, Caboose, Yellow"
+          "Black": "AcrylicTrainCabooseBlack",
+          "Blue": "AcrylicTrainCabooseBlue",
+          "Green": "AcrylicTrainCabooseGreen",
+          "Orange": "AcrylicTrainCabooseOrange",
+          "Purple": "AcrylicTrainCaboosePurple",
+          "Red": "AcrylicTrainCabooseRed",
+          "White": "AcrylicTrainCabooseWhite",
+          "Yellow": "AcrylicTrainCabooseYellow"
         }
       },
       "Acrylic Train, Coal Car": {
         "Sizeless": {
-          "Black": "Acrylic Train, Coal Car, Black",
-          "Blue": "Acrylic Train, Coal Car, Blue",
-          "Green": "Acrylic Train, Coal Car, Green",
-          "Orange": "Acrylic Train, Coal Car, Orange",
-          "Purple": "Acrylic Train, Coal Car, Purple",
-          "Red": "Acrylic Train, Coal Car, Red",
-          "White": "Acrylic Train, Coal Car, White",
-          "Yellow": "Acrylic Train, Coal Car, Yellow"
+          "Black": "AcrylicTrainCoalCarBlack",
+          "Blue": "AcrylicTrainCoalCarBlue",
+          "Green": "AcrylicTrainCoalCarGreen",
+          "Orange": "AcrylicTrainCoalCarOrange",
+          "Purple": "AcrylicTrainCoalCarPurple",
+          "Red": "AcrylicTrainCoalCarRed",
+          "White": "AcrylicTrainCoalCarWhite",
+          "Yellow": "AcrylicTrainCoalCarYellow"
         }
       },
       "Acrylic Train, Flat Bed": {
         "Sizeless": {
-          "Black": "Acrylic Train, Flat Bed, Black",
-          "Blue": "Acrylic Train, Flat Bed, Blue",
-          "Green": "Acrylic Train, Flat Bed, Green",
-          "Orange": "Acrylic Train, Flat Bed, Orange",
-          "Purple": "Acrylic Train, Flat Bed, Purple",
-          "Red": "Acrylic Train, Flat Bed, Red",
-          "White": "Acrylic Train, Flat Bed, White",
-          "Yellow": "Acrylic Train, Flat Bed, Yellow"
+          "Black": "AcrylicTrainFlatBedBlack",
+          "Blue": "AcrylicTrainFlatBedBlue",
+          "Green": "AcrylicTrainFlatBedGreen",
+          "Orange": "AcrylicTrainFlatBedOrange",
+          "Purple": "AcrylicTrainFlatBedPurple",
+          "Red": "AcrylicTrainFlatBedRed",
+          "White": "AcrylicTrainFlatBedWhite",
+          "Yellow": "AcrylicTrainFlatBedYellow"
         }
       },
       "Acrylic Train, Modern Engine": {
         "Sizeless": {
-          "Black": "Acrylic Train, Modern Engine, Black",
-          "Blue": "Acrylic Train, Modern Engine, Blue",
-          "Green": "Acrylic Train, Modern Engine, Green",
-          "Orange": "Acrylic Train, Modern Engine, Orange",
-          "Purple": "Acrylic Train, Modern Engine, Purple",
-          "Red": "Acrylic Train, Modern Engine, Red",
-          "White": "Acrylic Train, Modern Engine, White",
-          "Yellow": "Acrylic Train, Modern Engine, Yellow"
+          "Black": "AcrylicTrainModernEngineBlack",
+          "Blue": "AcrylicTrainModernEngineBlue",
+          "Green": "AcrylicTrainModernEngineGreen",
+          "Orange": "AcrylicTrainModernEngineOrange",
+          "Purple": "AcrylicTrainModernEnginePurple",
+          "Red": "AcrylicTrainModernEngineRed",
+          "White": "AcrylicTrainModernEngineWhite",
+          "Yellow": "AcrylicTrainModernEngineYellow"
         }
       },
       "Acrylic Train, Passenger Car": {
         "Sizeless": {
-          "Black": "Acrylic Train, Passenger Car, Black",
-          "Blue": "Acrylic Train, Passenger Car, Blue",
-          "Green": "Acrylic Train, Passenger Car, Green",
-          "Orange": "Acrylic Train, Passenger Car, Orange",
-          "Purple": "Acrylic Train, Passenger Car, Purple",
-          "Red": "Acrylic Train, Passenger Car, Red",
-          "White": "Acrylic Train, Passenger Car, White",
-          "Yellow": "Acrylic Train, Passenger Car, Yellow"
+          "Black": "AcrylicTrainPassengerCarBlack",
+          "Blue": "AcrylicTrainPassengerCarBlue",
+          "Green": "AcrylicTrainPassengerCarGreen",
+          "Orange": "AcrylicTrainPassengerCarOrange",
+          "Purple": "AcrylicTrainPassengerCarPurple",
+          "Red": "AcrylicTrainPassengerCarRed",
+          "White": "AcrylicTrainPassengerCarWhite",
+          "Yellow": "AcrylicTrainPassengerCarYellow"
         }
       },
       "Acrylic Train, Steam Engine": {
         "Sizeless": {
-          "Black": "Acrylic Train, Steam Engine, Black",
-          "Blue": "Acrylic Train, Steam Engine, Blue",
-          "Green": "Acrylic Train, Steam Engine, Green",
-          "Orange": "Acrylic Train, Steam Engine, Orange",
-          "Purple": "Acrylic Train, Steam Engine, Purple",
-          "Red": "Acrylic Train, Steam Engine, Red",
-          "White": "Acrylic Train, Steam Engine, White",
-          "Yellow": "Acrylic Train, Steam Engine, Yellow"
+          "Black": "AcrylicTrainSteamEngineBlack",
+          "Blue": "AcrylicTrainSteamEngineBlue",
+          "Green": "AcrylicTrainSteamEngineGreen",
+          "Orange": "AcrylicTrainSteamEngineOrange",
+          "Purple": "AcrylicTrainSteamEnginePurple",
+          "Red": "AcrylicTrainSteamEngineRed",
+          "White": "AcrylicTrainSteamEngineWhite",
+          "Yellow": "AcrylicTrainSteamEngineYellow"
         }
       },
       "Acrylic Train, Tank Car": {
         "Sizeless": {
-          "Black": "Acrylic Train, Tank Car, Black",
-          "Blue": "Acrylic Train, Tank Car, Blue",
-          "Green": "Acrylic Train, Tank Car, Green",
-          "Orange": "Acrylic Train, Tank Car, Orange",
-          "Purple": "Acrylic Train, Tank Car, Purple",
-          "Red": "Acrylic Train, Tank Car, Red",
-          "White": "Acrylic Train, Tank Car, White",
-          "Yellow": "Acrylic Train, Tank Car, Yellow"
+          "Black": "AcrylicTrainTankCarBlack",
+          "Blue": "AcrylicTrainTankCarBlue",
+          "Green": "AcrylicTrainTankCarGreen",
+          "Orange": "AcrylicTrainTankCarOrange",
+          "Purple": "AcrylicTrainTankCarPurple",
+          "Red": "AcrylicTrainTankCarRed",
+          "White": "AcrylicTrainTankCarWhite",
+          "Yellow": "AcrylicTrainTankCarYellow"
         }
       },
       "Airplane": {
         "Large": {
-          "Black": "Airplane, Large, Black",
-          "Blue": "Airplane, Large, Blue",
-          "Green": "Airplane, Large, Green",
-          "Orange": "Airplane, Large, Orange",
-          "Purple": "Airplane, Large, Purple",
-          "Red": "Airplane, Large, Red",
-          "White": "Airplane, Large, White",
-          "Yellow": "Airplane, Large, Yellow"
+          "Black": "AirplaneLargeBlack",
+          "Blue": "AirplaneLargeBlue",
+          "Green": "AirplaneLargeGreen",
+          "Orange": "AirplaneLargeOrange",
+          "Purple": "AirplaneLargePurple",
+          "Red": "AirplaneLargeRed",
+          "White": "AirplaneLargeWhite",
+          "Yellow": "AirplaneLargeYellow"
         },
         "Small": {
-          "Black": "Airplane, Small, Black",
-          "Blue": "Airplane, Small, Blue",
-          "Orange": "Airplane, Small, Orange",
-          "Purple": "Airplane, Small, Purple",
-          "Red": "Airplane, Small, Red",
-          "White": "Airplane, Small, White",
-          "Yellow": "Airplane, Small, Yellow"
+          "Black": "AirplaneSmallBlack",
+          "Blue": "AirplaneSmallBlue",
+          "Orange": "AirplaneSmallOrange",
+          "Purple": "AirplaneSmallPurple",
+          "Red": "AirplaneSmallRed",
+          "White": "AirplaneSmallWhite",
+          "Yellow": "AirplaneSmallYellow"
         }
       },
       "Bulldozer, Acrylic": {
         "Sizeless": {
-          "Colorless": "Bulldozer, Acrylic"
+          "Colorless": "BulldozerAcrylic"
         }
       },
       "Car": {
         "Sizeless": {
-          "Black": "Car, Black",
-          "Blue": "Car, Blue",
-          "Green": "Car, Green",
-          "Orange": "Car, Orange",
-          "Purple": "Car, Purple",
-          "Red": "Car, Red",
-          "White": "Car, White",
-          "Yellow": "Car, Yellow"
+          "Black": "CarBlack",
+          "Blue": "CarBlue",
+          "Green": "CarGreen",
+          "Orange": "CarOrange",
+          "Purple": "CarPurple",
+          "Red": "CarRed",
+          "White": "CarWhite",
+          "Yellow": "CarYellow"
         }
       },
       "Car, Muscle": {
         "Sizeless": {
-          "Black": "Car, Muscle, Black",
-          "Blue": "Car, Muscle, Blue",
-          "Green": "Car, Muscle, Green",
-          "Orange": "Car, Muscle, Orange",
-          "Purple": "Car, Muscle, Purple",
-          "Red": "Car, Muscle, Red",
-          "White": "Car, Muscle, White",
-          "Yellow": "Car, Muscle, Yellow"
+          "Black": "CarMuscleBlack",
+          "Blue": "CarMuscleBlue",
+          "Green": "CarMuscleGreen",
+          "Orange": "CarMuscleOrange",
+          "Purple": "CarMusclePurple",
+          "Red": "CarMuscleRed",
+          "White": "CarMuscleWhite",
+          "Yellow": "CarMuscleYellow"
         }
       },
       "Car, Race": {
         "Sizeless": {
-          "Black": "Car, Race, Black",
-          "Blue": "Car, Race, Blue",
-          "Green": "Car, Race, Green",
-          "Orange": "Car, Race, Orange",
-          "Purple": "Car, Race, Purple",
-          "Red": "Car, Race, Red",
-          "White": "Car, Race, White",
-          "Yellow": "Car, Race, Yellow"
+          "Black": "CarRaceBlack",
+          "Blue": "CarRaceBlue",
+          "Green": "CarRaceGreen",
+          "Orange": "CarRaceOrange",
+          "Purple": "CarRacePurple",
+          "Red": "CarRaceRed",
+          "White": "CarRaceWhite",
+          "Yellow": "CarRaceYellow"
         }
       },
       "Car, Sporty": {
         "Sizeless": {
-          "Blue": "Car, Sporty, Blue",
-          "Yellow": "Car, Sporty, Yellow"
+          "Blue": "CarSportyBlue",
+          "Yellow": "CarSportyYellow"
         }
       },
       "Car, Vintage Jalopy": {
         "Sizeless": {
-          "Orange": "Car, Vintage Jalopy, Orange"
+          "Orange": "CarVintageJalopyOrange"
         }
       },
       "Car, Vintage Roadster": {
         "Sizeless": {
-          "Yellow": "Car, Vintage Roadster, Yellow"
+          "Yellow": "CarVintageRoadsterYellow"
         }
       },
       "Container Ship": {
         "Sizeless": {
-          "Blue": "Container Ship, Blue",
-          "Green": "Container Ship, Green",
-          "Gray": "Container Ship, Gray",
-          "Red": "Container Ship, Red",
-          "Yellow": "Container Ship, Yellow"
+          "Blue": "ContainerShipBlue",
+          "Green": "ContainerShipGreen",
+          "Gray": "ContainerShipGray",
+          "Red": "ContainerShipRed",
+          "Yellow": "ContainerShipYellow"
         }
       },
-      "Fighter Ship, Set of 6": {
+      "Fighter Ship, Set of": {
         "6": {
-          "Colorless": "Fighter Ship, Set of 6"
+          "Colorless": "FighterShipSetof6"
         }
       },
       "Future Tank": {
         "Sizeless": {
-          "Black": "Future Tank, Black",
-          "Blue": "Future Tank, Blue",
-          "Green": "Future Tank, Green",
-          "Orange": "Future Tank, Orange",
-          "Purple": "Future Tank, Purple",
-          "Red": "Future Tank, Red",
-          "White": "Future Tank, White",
-          "Yellow": "Future Tank, Yellow"
+          "Black": "FutureTankBlack",
+          "Blue": "FutureTankBlue",
+          "Green": "FutureTankGreen",
+          "Orange": "FutureTankOrange",
+          "Purple": "FutureTankPurple",
+          "Red": "FutureTankRed",
+          "White": "FutureTankWhite",
+          "Yellow": "FutureTankYellow"
         }
       },
       "Helicopter, Acrylic": {
         "Sizeless": {
-          "Colorless": "Helicopter, Acrylic"
+          "Colorless": "HelicopterAcrylic"
         }
       },
       "Hot Rod": {
         "Sizeless": {
-          "Black": "Hot Rod, Black",
-          "Blue": "Hot Rod, Blue",
-          "Green": "Hot Rod, Green",
-          "Orange": "Hot Rod, Orange",
-          "Purple": "Hot Rod, Purple",
-          "Red": "Hot Rod, Red",
-          "White": "Hot Rod, White",
-          "Yellow": "Hot Rod, Yellow"
+          "Black": "HotRodBlack",
+          "Blue": "HotRodBlue",
+          "Green": "HotRodGreen",
+          "Orange": "HotRodOrange",
+          "Purple": "HotRodPurple",
+          "Red": "HotRodRed",
+          "White": "HotRodWhite",
+          "Yellow": "HotRodYellow"
         }
       },
       "Limo": {
         "Sizeless": {
-          "Blue": "Limo, Blue",
-          "Green": "Limo, Green",
-          "Red": "Limo, Red",
-          "Yellow": "Limo, Yellow"
+          "Blue": "LimoBlue",
+          "Green": "LimoGreen",
+          "Red": "LimoRed",
+          "Yellow": "LimoYellow"
         }
       },
       "Locomotive Train Engine": {
         "Sizeless": {
-          "Black": "Locomotive Train Engine, Black",
-          "Green": "Locomotive Train Engine, Green",
-          "Orange": "Locomotive Train Engine, Orange"
-        }
-      },
-      "Locomotive Train Engine, Light": {
-        "Sizeless": {
-          "Blue": "Locomotive Train Engine, Light Blue"
+          "Black": "LocomotiveTrainEngineBlack",
+          "Green": "LocomotiveTrainEngineGreen",
+          "Light Blue": "LocomotiveTrainEngineLightBlue",
+          "Orange": "LocomotiveTrainEngineOrange"
         }
       },
       "Locomotive Train Engine, Tan": {
         "Sizeless": {
-          "Colorless": "Locomotive Train Engine, Tan"
+          "Colorless": "LocomotiveTrainEngineTan"
         }
       },
       "Locomotive": {
         "Sizeless": {
-          "Black": "Locomotive, Black",
-          "Blue": "Locomotive, Blue",
-          "Green": "Locomotive, Green",
-          "Orange": "Locomotive, Orange",
-          "Purple": "Locomotive, Purple",
-          "Red": "Locomotive, Red",
-          "White": "Locomotive, White",
-          "Yellow": "Locomotive, Yellow"
+          "Black": "LocomotiveBlack",
+          "Blue": "LocomotiveBlue",
+          "Green": "LocomotiveGreen",
+          "Orange": "LocomotiveOrange",
+          "Purple": "LocomotivePurple",
+          "Red": "LocomotiveRed",
+          "White": "LocomotiveWhite",
+          "Yellow": "LocomotiveYellow"
         }
       },
       "Motor Boat": {
         "Sizeless": {
-          "Black": "Motor Boat, Black",
-          "Blue": "Motor Boat, Blue",
-          "Green": "Motor Boat, Green",
-          "Orange": "Motor Boat, Orange",
-          "Purple": "Motor Boat, Purple",
-          "Red": "Motor Boat, Red",
-          "White": "Motor Boat, White",
-          "Yellow": "Motor Boat, Yellow"
+          "Black": "MotorBoatBlack",
+          "Blue": "MotorBoatBlue",
+          "Green": "MotorBoatGreen",
+          "Orange": "MotorBoatOrange",
+          "Purple": "MotorBoatPurple",
+          "Red": "MotorBoatRed",
+          "White": "MotorBoatWhite",
+          "Yellow": "MotorBoatYellow"
         }
       },
       "Motorcycle": {
         "Sizeless": {
-          "Black": "Motorcycle, Black",
-          "Blue": "Motorcycle, Blue",
-          "Green": "Motorcycle, Green",
-          "Orange": "Motorcycle, Orange",
-          "Purple": "Motorcycle, Purple",
-          "Red": "Motorcycle, Red",
-          "White": "Motorcycle, White",
-          "Yellow": "Motorcycle, Yellow"
+          "Black": "MotorcycleBlack",
+          "Blue": "MotorcycleBlue",
+          "Green": "MotorcycleGreen",
+          "Orange": "MotorcycleOrange",
+          "Purple": "MotorcyclePurple",
+          "Red": "MotorcycleRed",
+          "White": "MotorcycleWhite",
+          "Yellow": "MotorcycleYellow"
         }
       },
       "Muscle Car, Post Apocalypse": {
         "Sizeless": {
-          "Colorless": "Muscle Car, Post Apocalypse"
+          "Colorless": "MuscleCarPostApocalypse"
         }
       },
       "Push Cart": {
         "Sizeless": {
-          "Black": "Push Cart, Black",
-          "Blue": "Push Cart, Blue",
-          "Green": "Push Cart, Green",
-          "Orange": "Push Cart, Orange",
-          "Purple": "Push Cart, Purple",
-          "Red": "Push Cart, Red",
-          "White": "Push Cart, White",
-          "Yellow": "Push Cart, Yellow"
+          "Black": "PushCartBlack",
+          "Blue": "PushCartBlue",
+          "Green": "PushCartGreen",
+          "Orange": "PushCartOrange",
+          "Purple": "PushCartPurple",
+          "Red": "PushCartRed",
+          "White": "PushCartWhite",
+          "Yellow": "PushCartYellow"
         }
       },
       "Race Car": {
         "Sizeless": {
-          "Black": "Race Car, Black",
-          "Blue": "Race Car, Blue",
-          "Green": "Race Car, Green",
-          "Orange": "Race Car, Orange",
-          "Purple": "Race Car, Purple",
-          "Red": "Race Car, Red",
-          "Yellow": "Race Car, Yellow"
+          "Black": "RaceCarBlack",
+          "Blue": "RaceCarBlue",
+          "Green": "RaceCarGreen",
+          "Orange": "RaceCarOrange",
+          "Purple": "RaceCarPurple",
+          "Red": "RaceCarRed",
+          "Yellow": "RaceCarYellow"
         }
       },
       "Rocket": {
         "Sizeless": {
-          "Black": "Rocket, Black",
-          "Blue": "Rocket, Blue",
-          "Green": "Rocket, Green",
-          "Orange": "Rocket, Orange",
-          "Purple": "Rocket, Purple",
-          "Red": "Rocket, Red",
-          "White": "Rocket, White",
-          "Yellow": "Rocket, Yellow"
+          "Black": "RocketBlack",
+          "Blue": "RocketBlue",
+          "Green": "RocketGreen",
+          "Orange": "RocketOrange",
+          "Purple": "RocketPurple",
+          "Red": "RocketRed",
+          "White": "RocketWhite",
+          "Yellow": "RocketYellow"
         }
       },
       "Sailboat": {
         "Sizeless": {
-          "Black": "Sailboat, Black",
-          "Blue": "Sailboat, Blue",
-          "Green": "Sailboat, Green",
-          "Orange": "Sailboat, Orange",
-          "Purple": "Sailboat, Purple",
-          "Red": "Sailboat, Red",
-          "White": "Sailboat, White",
-          "Yellow": "Sailboat, Yellow"
+          "Black": "SailboatBlack",
+          "Blue": "SailboatBlue",
+          "Green": "SailboatGreen",
+          "Orange": "SailboatOrange",
+          "Purple": "SailboatPurple",
+          "Red": "SailboatRed",
+          "White": "SailboatWhite",
+          "Yellow": "SailboatYellow"
         }
       },
       "Semi Truck, Post Apocalypse": {
         "Sizeless": {
-          "Colorless": "Semi Truck, Post Apocalypse"
+          "Colorless": "SemiTruckPostApocalypse"
         }
       },
       "Ship, Air, Steampunk": {
         "Sizeless": {
-          "Black": "Ship, Air, Steampunk, Black",
-          "Blue": "Ship, Air, Steampunk, Blue",
-          "Green": "Ship, Air, Steampunk, Green",
-          "Orange": "Ship, Air, Steampunk, Orange",
-          "Purple": "Ship, Air, Steampunk, Purple",
-          "Red": "Ship, Air, Steampunk, Red",
-          "White": "Ship, Air, Steampunk, White",
-          "Yellow": "Ship, Air, Steampunk, Yellow"
+          "Black": "ShipAirSteampunkBlack",
+          "Blue": "ShipAirSteampunkBlue",
+          "Green": "ShipAirSteampunkGreen",
+          "Orange": "ShipAirSteampunkOrange",
+          "Purple": "ShipAirSteampunkPurple",
+          "Red": "ShipAirSteampunkRed",
+          "White": "ShipAirSteampunkWhite",
+          "Yellow": "ShipAirSteampunkYellow"
         }
       },
       "Ship, Modern, Aircraft Carrier": {
         "Sizeless": {
-          "Black": "Ship, Modern, Aircraft Carrier, Black",
-          "Green": "Ship, Modern, Aircraft Carrier, Green",
-          "Orange": "Ship, Modern, Aircraft Carrier, Orange",
-          "Purple": "Ship, Modern, Aircraft Carrier, Purple",
-          "White": "Ship, Modern, Aircraft Carrier, White"
+          "Black": "ShipModernAircraftCarrierBlack",
+          "Green": "ShipModernAircraftCarrierGreen",
+          "Orange": "ShipModernAircraftCarrierOrange",
+          "Purple": "ShipModernAircraftCarrierPurple",
+          "White": "ShipModernAircraftCarrierWhite"
         }
       },
       "Ship, Modern, Battleship": {
         "Sizeless": {
-          "Black": "Ship, Modern, Battleship, Black",
-          "Green": "Ship, Modern, Battleship, Green",
-          "Orange": "Ship, Modern, Battleship, Orange",
-          "Purple": "Ship, Modern, Battleship, Purple",
-          "White": "Ship, Modern, Battleship, White"
+          "Black": "ShipModernBattleshipBlack",
+          "Green": "ShipModernBattleshipGreen",
+          "Orange": "ShipModernBattleshipOrange",
+          "Purple": "ShipModernBattleshipPurple",
+          "White": "ShipModernBattleshipWhite"
         }
       },
       "Ship, Modern, Container": {
         "Sizeless": {
-          "Black": "Ship, Modern, Container, Black",
-          "Green": "Ship, Modern, Container, Green",
-          "Orange": "Ship, Modern, Container, Orange",
-          "Purple": "Ship, Modern, Container, Purple",
-          "White": "Ship, Modern, Container, White"
+          "Black": "ShipModernContainerBlack",
+          "Green": "ShipModernContainerGreen",
+          "Orange": "ShipModernContainerOrange",
+          "Purple": "ShipModernContainerPurple",
+          "White": "ShipModernContainerWhite"
         }
       },
       "Ship, Modern, Cruiser": {
         "Sizeless": {
-          "Black": "Ship, Modern, Cruiser, Black",
-          "Green": "Ship, Modern, Cruiser, Green",
-          "Orange": "Ship, Modern, Cruiser, Orange",
-          "Purple": "Ship, Modern, Cruiser, Purple",
-          "White": "Ship, Modern, Cruiser, White"
+          "Black": "ShipModernCruiserBlack",
+          "Green": "ShipModernCruiserGreen",
+          "Orange": "ShipModernCruiserOrange",
+          "Purple": "ShipModernCruiserPurple",
+          "White": "ShipModernCruiserWhite"
         }
       },
       "Ship, Modern, Destroyer": {
         "Sizeless": {
-          "Black": "Ship, Modern, Destroyer, Black",
-          "Green": "Ship, Modern, Destroyer, Green",
-          "Orange": "Ship, Modern, Destroyer, Orange",
-          "Purple": "Ship, Modern, Destroyer, Purple",
-          "White": "Ship, Modern, Destroyer, White"
+          "Black": "ShipModernDestroyerBlack",
+          "Green": "ShipModernDestroyerGreen",
+          "Orange": "ShipModernDestroyerOrange",
+          "Purple": "ShipModernDestroyerPurple",
+          "White": "ShipModernDestroyerWhite"
         }
       },
       "Ship, Modern, Submarine": {
         "Sizeless": {
-          "Black": "Ship, Modern, Submarine, Black",
-          "Green": "Ship, Modern, Submarine, Green",
-          "Orange": "Ship, Modern, Submarine, Orange",
-          "Purple": "Ship, Modern, Submarine, Purple",
-          "White": "Ship, Modern, Submarine, White"
+          "Black": "ShipModernSubmarineBlack",
+          "Green": "ShipModernSubmarineGreen",
+          "Orange": "ShipModernSubmarineOrange",
+          "Purple": "ShipModernSubmarinePurple",
+          "White": "ShipModernSubmarineWhite"
         }
       },
       "Ship, Modern, Transport": {
         "Sizeless": {
-          "Black": "Ship, Modern, Transport, Black",
-          "Green": "Ship, Modern, Transport, Green",
-          "Orange": "Ship, Modern, Transport, Orange",
-          "Purple": "Ship, Modern, Transport, Purple",
-          "White": "Ship, Modern, Transport, White"
+          "Black": "ShipModernTransportBlack",
+          "Green": "ShipModernTransportGreen",
+          "Orange": "ShipModernTransportOrange",
+          "Purple": "ShipModernTransportPurple",
+          "White": "ShipModernTransportWhite"
         }
       },
       "Ship, Sea, British": {
         "Sizeless": {
-          "Black": "Ship, Sea, British, Black",
-          "Blue": "Ship, Sea, British, Blue",
-          "Green": "Ship, Sea, British, Green",
-          "Orange": "Ship, Sea, British, Orange",
-          "Purple": "Ship, Sea, British, Purple",
-          "Red": "Ship, Sea, British, Red",
-          "White": "Ship, Sea, British, White",
-          "Yellow": "Ship, Sea, British, Yellow"
+          "Black": "ShipSeaBritishBlack",
+          "Blue": "ShipSeaBritishBlue",
+          "Green": "ShipSeaBritishGreen",
+          "Orange": "ShipSeaBritishOrange",
+          "Purple": "ShipSeaBritishPurple",
+          "Red": "ShipSeaBritishRed",
+          "White": "ShipSeaBritishWhite",
+          "Yellow": "ShipSeaBritishYellow"
         }
       },
       "Ship, Sea, Pirate": {
         "Sizeless": {
-          "Black": "Ship, Sea, Pirate, Black",
-          "Blue": "Ship, Sea, Pirate, Blue",
-          "Green": "Ship, Sea, Pirate, Green",
-          "Orange": "Ship, Sea, Pirate, Orange",
-          "Purple": "Ship, Sea, Pirate, Purple",
-          "Red": "Ship, Sea, Pirate, Red",
-          "White": "Ship, Sea, Pirate, White",
-          "Yellow": "Ship, Sea, Pirate, Yellow"
+          "Black": "ShipSeaPirateBlack",
+          "Blue": "ShipSeaPirateBlue",
+          "Green": "ShipSeaPirateGreen",
+          "Orange": "ShipSeaPirateOrange",
+          "Purple": "ShipSeaPiratePurple",
+          "Red": "ShipSeaPirateRed",
+          "White": "ShipSeaPirateWhite",
+          "Yellow": "ShipSeaPirateYellow"
         }
       },
       "Ship, Sea, Viking, Longboat": {
         "Sizeless": {
-          "Black": "Ship, Sea, Viking, Longboat, Black",
-          "Blue": "Ship, Sea, Viking, Longboat, Blue",
-          "Green": "Ship, Sea, Viking, Longboat, Green",
-          "Orange": "Ship, Sea, Viking, Longboat, Orange",
-          "Purple": "Ship, Sea, Viking, Longboat, Purple",
-          "Red": "Ship, Sea, Viking, Longboat, Red",
-          "White": "Ship, Sea, Viking, Longboat, White",
-          "Yellow": "Ship, Sea, Viking, Longboat, Yellow"
+          "Black": "ShipSeaVikingLongboatBlack",
+          "Blue": "ShipSeaVikingLongboatBlue",
+          "Green": "ShipSeaVikingLongboatGreen",
+          "Orange": "ShipSeaVikingLongboatOrange",
+          "Purple": "ShipSeaVikingLongboatPurple",
+          "Red": "ShipSeaVikingLongboatRed",
+          "White": "ShipSeaVikingLongboatWhite",
+          "Yellow": "ShipSeaVikingLongboatYellow"
         }
       },
       "Ship, Space, Fighter": {
         "Sizeless": {
-          "Black": "Ship, Space, Fighter, Black",
-          "Blue": "Ship, Space, Fighter, Blue",
-          "Green": "Ship, Space, Fighter, Green",
-          "Orange": "Ship, Space, Fighter, Orange",
-          "Purple": "Ship, Space, Fighter, Purple",
-          "Red": "Ship, Space, Fighter, Red",
-          "White": "Ship, Space, Fighter, White",
-          "Yellow": "Ship, Space, Fighter, Yellow"
+          "Black": "ShipSpaceFighterBlack",
+          "Blue": "ShipSpaceFighterBlue",
+          "Green": "ShipSpaceFighterGreen",
+          "Orange": "ShipSpaceFighterOrange",
+          "Purple": "ShipSpaceFighterPurple",
+          "Red": "ShipSpaceFighterRed",
+          "White": "ShipSpaceFighterWhite",
+          "Yellow": "ShipSpaceFighterYellow"
         }
       },
       "Ship, Space, Freighter": {
         "Sizeless": {
-          "Black": "Ship, Space, Freighter, Black",
-          "Blue": "Ship, Space, Freighter, Blue",
-          "Green": "Ship, Space, Freighter, Green",
-          "Orange": "Ship, Space, Freighter, Orange",
-          "Purple": "Ship, Space, Freighter, Purple",
-          "Red": "Ship, Space, Freighter, Red",
-          "White": "Ship, Space, Freighter, White",
-          "Yellow": "Ship, Space, Freighter, Yellow"
+          "Black": "ShipSpaceFreighterBlack",
+          "Blue": "ShipSpaceFreighterBlue",
+          "Green": "ShipSpaceFreighterGreen",
+          "Orange": "ShipSpaceFreighterOrange",
+          "Purple": "ShipSpaceFreighterPurple",
+          "Red": "ShipSpaceFreighterRed",
+          "White": "ShipSpaceFreighterWhite",
+          "Yellow": "ShipSpaceFreighterYellow"
         }
       },
       "Ship, Space, Smuggler": {
         "Sizeless": {
-          "Black": "Ship, Space, Smuggler, Black",
-          "Blue": "Ship, Space, Smuggler, Blue",
-          "Green": "Ship, Space, Smuggler, Green",
-          "Orange": "Ship, Space, Smuggler, Orange",
-          "Purple": "Ship, Space, Smuggler, Purple",
-          "Red": "Ship, Space, Smuggler, Red",
-          "White": "Ship, Space, Smuggler, White",
-          "Yellow": "Ship, Space, Smuggler, Yellow"
+          "Black": "ShipSpaceSmugglerBlack",
+          "Blue": "ShipSpaceSmugglerBlue",
+          "Green": "ShipSpaceSmugglerGreen",
+          "Orange": "ShipSpaceSmugglerOrange",
+          "Purple": "ShipSpaceSmugglerPurple",
+          "Red": "ShipSpaceSmugglerRed",
+          "White": "ShipSpaceSmugglerWhite",
+          "Yellow": "ShipSpaceSmugglerYellow"
         }
       },
       "Ship, Space, Transport": {
         "Sizeless": {
-          "Black": "Ship, Space, Transport, Black",
-          "Blue": "Ship, Space, Transport, Blue",
-          "Green": "Ship, Space, Transport, Green",
-          "Orange": "Ship, Space, Transport, Orange",
-          "Purple": "Ship, Space, Transport, Purple",
-          "Red": "Ship, Space, Transport, Red",
-          "White": "Ship, Space, Transport, White",
-          "Yellow": "Ship, Space, Transport, Yellow"
+          "Black": "ShipSpaceTransportBlack",
+          "Blue": "ShipSpaceTransportBlue",
+          "Green": "ShipSpaceTransportGreen",
+          "Orange": "ShipSpaceTransportOrange",
+          "Purple": "ShipSpaceTransportPurple",
+          "Red": "ShipSpaceTransportRed",
+          "White": "ShipSpaceTransportWhite",
+          "Yellow": "ShipSpaceTransportYellow"
         }
       },
       "Ship, Space, UFO": {
         "Sizeless": {
-          "Black": "Ship, Space, UFO, Black",
-          "Blue": "Ship, Space, UFO, Blue",
-          "Green": "Ship, Space, UFO, Green",
-          "Orange": "Ship, Space, UFO, Orange",
-          "Purple": "Ship, Space, UFO, Purple",
-          "Red": "Ship, Space, UFO, Red",
-          "Silver": "Ship, Space, UFO, Silver",
-          "White": "Ship, Space, UFO, White",
-          "Yellow": "Ship, Space, UFO, Yellow"
+          "Black": "ShipSpaceUFOBlack",
+          "Blue": "ShipSpaceUFOBlue",
+          "Green": "ShipSpaceUFOGreen",
+          "Orange": "ShipSpaceUFOOrange",
+          "Purple": "ShipSpaceUFOPurple",
+          "Red": "ShipSpaceUFORed",
+          "Silver": "ShipSpaceUFOSilver",
+          "White": "ShipSpaceUFOWhite",
+          "Yellow": "ShipSpaceUFOYellow"
         }
       },
       "Sprue, Military, Beige": {
         "Sizeless": {
-          "Colorless": "Sprue, Military, Beige"
+          "Colorless": "SprueMilitaryBeige"
         }
       },
       "Sprue, Military": {
         "Sizeless": {
-          "Blue": "Sprue, Military, Blue",
-          "Brown": "Sprue, Military, Brown",
-          "Green": "Sprue, Military, Green",
-          "Gray": "Sprue, Military, Gray",
-          "Red": "Sprue, Military, Red"
+          "Blue": "SprueMilitaryBlue",
+          "Brown": "SprueMilitaryBrown",
+          "Green": "SprueMilitaryGreen",
+          "Gray": "SprueMilitaryGray",
+          "Red": "SprueMilitaryRed"
         }
       },
       "Submarine": {
         "Sizeless": {
-          "Black": "Submarine, Black",
-          "Blue": "Submarine, Blue",
-          "Green": "Submarine, Green",
-          "Orange": "Submarine, Orange",
-          "Purple": "Submarine, Purple",
-          "Red": "Submarine, Red",
-          "White": "Submarine, White",
-          "Yellow": "Submarine, Yellow"
+          "Black": "SubmarineBlack",
+          "Blue": "SubmarineBlue",
+          "Green": "SubmarineGreen",
+          "Orange": "SubmarineOrange",
+          "Purple": "SubmarinePurple",
+          "Red": "SubmarineRed",
+          "White": "SubmarineWhite",
+          "Yellow": "SubmarineYellow"
         }
       },
       "SUV, Post Apocalypse": {
         "Sizeless": {
-          "Colorless": "SUV, Post Apocalypse"
+          "Colorless": "SUVPostApocalypse"
         }
       },
       "Tank": {
         "Sizeless": {
-          "Black": "Tank, Black",
-          "Blue": "Tank, Blue",
-          "Brown": "Tank, Brown",
-          "Green": "Tank, Green",
-          "Orange": "Tank, Orange",
-          "Purple": "Tank, Purple",
-          "Red": "Tank, Red",
-          "White": "Tank, White",
-          "Yellow": "Tank, Yellow"
+          "Black": "TankBlack",
+          "Blue": "TankBlue",
+          "Brown": "TankBrown",
+          "Green": "TankGreen",
+          "Orange": "TankOrange",
+          "Purple": "TankPurple",
+          "Red": "TankRed",
+          "White": "TankWhite",
+          "Yellow": "TankYellow"
         }
       },
       "Tank, Clear": {
         "Sizeless": {
-          "Colorless": "Tank, Clear"
+          "Colorless": "TankClear"
         }
       },
       "Tank, Post Apocalypse": {
         "Sizeless": {
-          "Colorless": "Tank, Post Apocalypse"
+          "Colorless": "TankPostApocalypse"
         }
       },
       "Train Engine, Wood": {
         "Sizeless": {
-          "Blue": "Train Engine, Wood, Blue",
-          "Orange": "Train Engine, Wood, Orange",
-          "Purple": "Train Engine, Wood, Purple",
-          "Red": "Train Engine, Wood, Red",
-          "White": "Train Engine, Wood, White",
-          "Yellow": "Train Engine, Wood, Yellow"
+          "Blue": "TrainEngineWoodBlue",
+          "Orange": "TrainEngineWoodOrange",
+          "Purple": "TrainEngineWoodPurple",
+          "Red": "TrainEngineWoodRed",
+          "White": "TrainEngineWoodWhite",
+          "Yellow": "TrainEngineWoodYellow"
         }
       },
-      "Transport Ship, Set of 6": {
+      "Transport Ship, Set of": {
         "6": {
-          "Colorless": "Transport Ship, Set of 6"
+          "Colorless": "TransportShipSetof6"
         }
       },
       "Truck, Flatbed": {
         "Sizeless": {
-          "Black": "Truck, Flatbed, Black",
-          "Blue": "Truck, Flatbed, Blue",
-          "Green": "Truck, Flatbed, Green",
-          "Orange": "Truck, Flatbed, Orange",
-          "Purple": "Truck, Flatbed, Purple",
-          "Red": "Truck, Flatbed, Red",
-          "White": "Truck, Flatbed, White",
-          "Yellow": "Truck, Flatbed, Yellow"
+          "Black": "TruckFlatbedBlack",
+          "Blue": "TruckFlatbedBlue",
+          "Green": "TruckFlatbedGreen",
+          "Orange": "TruckFlatbedOrange",
+          "Purple": "TruckFlatbedPurple",
+          "Red": "TruckFlatbedRed",
+          "White": "TruckFlatbedWhite",
+          "Yellow": "TruckFlatbedYellow"
         }
       },
       "Truck, Wood": {
         "Sizeless": {
-          "Blue": "Truck, Wood, Blue",
-          "Green": "Truck, Wood, Green",
-          "Gray": "Truck, Wood, Gray",
-          "Red": "Truck, Wood, Red",
-          "Yellow": "Truck, Wood, Yellow"
+          "Blue": "TruckWoodBlue",
+          "Green": "TruckWoodGreen",
+          "Gray": "TruckWoodGray",
+          "Red": "TruckWoodRed",
+          "Yellow": "TruckWoodYellow"
         }
       },
       "Van, Post Apocalypse": {
         "Sizeless": {
-          "Colorless": "Van, Post Apocalypse"
+          "Colorless": "VanPostApocalypse"
         }
       },
       "Future Tank, Tan": {
         "Sizeless": {
-          "Colorless": "Future Tank, Tan"
+          "Colorless": "FutureTankTan"
         }
       }
     },
     "casino": {
       "Dealer Button": {
         "Sizeless": {
-          "Colorless": "Dealer Button"
+          "Colorless": "DealerButton"
         }
       },
       "Poker Chip, Fancy": {
         "19mm": {
-          "Black": "Poker Chip, 19mm, Fancy, Black",
-          "Blue": "Poker Chip, 19mm, Fancy, Blue",
-          "Green": "Poker Chip, 19mm, Fancy, Green",
-          "Purple": "Poker Chip, 19mm, Fancy, Purple",
-          "Red": "Poker Chip, 19mm, Fancy, Red",
-          "Yellow": "Poker Chip, 19mm, Fancy, Yellow"
+          "Black": "PokerChip19mmFancyBlack",
+          "Blue": "PokerChip19mmFancyBlue",
+          "Green": "PokerChip19mmFancyGreen",
+          "Purple": "PokerChip19mmFancyPurple",
+          "Red": "PokerChip19mmFancyRed",
+          "Yellow": "PokerChip19mmFancyYellow"
         }
       },
       "Poker Chip": {
         "Sizeless": {
-          "Black": "Poker Chip, Black",
-          "Blue": "Poker Chip, Blue",
-          "Green": "Poker Chip, Green",
-          "Orange": "Poker Chip, Orange",
-          "Purple": "Poker Chip, Purple",
-          "Red": "Poker Chip, Red",
-          "White": "Poker Chip, White",
-          "Yellow": "Poker Chip, Yellow"
-        }
-      },
-      "Poker Chip, Light": {
-        "Sizeless": {
-          "Blue": "Poker Chip, Light Blue"
+          "Black": "PokerChipBlack",
+          "Blue": "PokerChipBlue",
+          "Green": "PokerChipGreen",
+          "Light Blue": "PokerChipLightBlue",
+          "Orange": "PokerChipOrange",
+          "Purple": "PokerChipPurple",
+          "Red": "PokerChipRed",
+          "White": "PokerChipWhite",
+          "Yellow": "PokerChipYellow"
         }
       },
       "Suits, Clubs": {
         "Sizeless": {
-          "Colorless": "Suits, Clubs"
+          "Colorless": "SuitsClubs"
         }
       },
       "Suits, Diamonds": {
         "Sizeless": {
-          "Colorless": "Suits, Diamonds"
+          "Colorless": "SuitsDiamonds"
         }
       },
       "Suits, Hearts": {
         "Sizeless": {
-          "Colorless": "Suits, Hearts"
+          "Colorless": "SuitsHearts"
         }
       },
       "Suits, Spades": {
         "Sizeless": {
-          "Colorless": "Suits, Spades"
+          "Colorless": "SuitsSpades"
         }
       },
       "Token Chip": {
         "Sizeless": {
-          "Black": "Token Chip, Black",
-          "Blue": "Token Chip, Blue",
-          "Green": "Token Chip, Green",
-          "Orange": "Token Chip, Orange",
-          "Purple": "Token Chip, Purple",
-          "Red": "Token Chip, Red",
-          "White": "Token Chip, White",
-          "Yellow": "Token Chip, Yellow"
+          "Black": "TokenChipBlack",
+          "Blue": "TokenChipBlue",
+          "Green": "TokenChipGreen",
+          "Orange": "TokenChipOrange",
+          "Purple": "TokenChipPurple",
+          "Red": "TokenChipRed",
+          "White": "TokenChipWhite",
+          "Yellow": "TokenChipYellow"
         }
       },
       "Token Chip, Indented": {
         "Sizeless": {
-          "Orange": "Token Chip, Indented, Orange"
+          "Orange": "TokenChipIndentedOrange"
         }
       }
     },
     "money": {
       "Blank Money, Play": {
         "Sizeless": {
-          "Colorless": "Blank Money, Play"
+          "Colorless": "BlankMoneyPlay"
         }
       },
       "Cash, $1": {
         "Sizeless": {
-          "Colorless": "Cash, $1"
+          "Colorless": "Cash$1"
         }
       },
       "Cash, $10": {
         "Sizeless": {
-          "Colorless": "Cash, $10"
+          "Colorless": "Cash$10"
         }
       },
       "Cash, $100": {
         "Sizeless": {
-          "Colorless": "Cash, $100"
+          "Colorless": "Cash$100"
         }
       },
       "Cash, $100K": {
         "Sizeless": {
-          "Colorless": "Cash, $100K"
+          "Colorless": "Cash$100K"
         }
       },
       "Cash, $10K": {
         "Sizeless": {
-          "Colorless": "Cash, $10K"
+          "Colorless": "Cash$10K"
         }
       },
       "Cash, $1K": {
         "Sizeless": {
-          "Colorless": "Cash, $1K"
+          "Colorless": "Cash$1K"
         }
       },
       "Cash, $1M": {
         "Sizeless": {
-          "Colorless": "Cash, $1M"
+          "Colorless": "Cash$1M"
         }
       },
       "Cash, $20": {
         "Sizeless": {
-          "Colorless": "Cash, $20"
+          "Colorless": "Cash$20"
         }
       },
       "Cash, $5": {
         "Sizeless": {
-          "Colorless": "Cash, $5"
+          "Colorless": "Cash$5"
         }
       },
       "Cash, $50": {
         "Sizeless": {
-          "Colorless": "Cash, $50"
+          "Colorless": "Cash$50"
         }
       },
       "Cash, $500": {
         "Sizeless": {
-          "Colorless": "Cash, $500"
+          "Colorless": "Cash$500"
         }
       },
       "Cash, $500K": {
         "Sizeless": {
-          "Colorless": "Cash, $500K"
+          "Colorless": "Cash$500K"
         }
       },
       "Cash, $50K": {
         "Sizeless": {
-          "Colorless": "Cash, $50K"
+          "Colorless": "Cash$50K"
         }
       },
       "Cash, $5K": {
         "Sizeless": {
-          "Colorless": "Cash, $5K"
+          "Colorless": "Cash$5K"
         }
       },
       "City Coin": {
         "1": {
-          "Colorless": "City Coin, 1"
+          "Colorless": "CityCoin1"
         },
         "5": {
-          "Colorless": "City Coin, 5"
+          "Colorless": "CityCoin5"
         }
       },
       "Coin, 50 points": {
         "Sizeless": {
-          "Colorless": "Coin, 50 points"
+          "Colorless": "Coin50points"
         }
       },
       "Coin, 5x": {
         "Sizeless": {
-          "Colorless": "Coin, 5x"
+          "Colorless": "Coin5x"
         }
       },
       "Coin, Ancient Russian": {
         "22mm": {
-          "Colorless": "Coin, Ancient Russian, 22mm"
+          "Colorless": "CoinAncientRussian22mm"
         }
       },
       "Coin, Chinese": {
         "20mm": {
-          "Colorless": "Coin, Chinese, 20mm"
+          "Colorless": "CoinChinese20mm"
         },
         "23mm": {
-          "Colorless": "Coin, Chinese, 23mm"
+          "Colorless": "CoinChinese23mm"
         }
       },
       "Coin, Dime": {
         "Sizeless": {
-          "Colorless": "Coin, Dime"
+          "Colorless": "CoinDime"
         }
       },
       "Coin, Dwarven": {
         "Sizeless": {
-          "Colorless": "Coin, Dwarven"
+          "Colorless": "CoinDwarven"
         }
       },
       "Coin, Fantasy": {
         "1": {
-          "Colorless": "Coin, Fantasy, 1"
+          "Colorless": "CoinFantasy1"
         },
         "5": {
-          "Colorless": "Coin, Fantasy, 5"
+          "Colorless": "CoinFantasy5"
         },
         "10": {
-          "Colorless": "Coin, Fantasy, 10"
+          "Colorless": "CoinFantasy10"
         }
       },
       "Coin": {
         "Sizeless": {
-          "Gold": "Coin, Gold",
-          "Green": "Coin, Green",
-          "Purple": "Coin, Purple"
+          "Gold": "CoinGold",
+          "Green": "CoinGreen",
+          "Purple": "CoinPurple"
         }
       },
       "Coin, Half dollar": {
         "Sizeless": {
-          "Colorless": "Coin, Half dollar"
+          "Colorless": "CoinHalfdollar"
         }
       },
       "Coin, Medieval": {
         "Sizeless": {
-          "Bronze": "Coin, Medieval, Bronze",
-          "Gold": "Coin, Medieval, Gold",
-          "Silver": "Coin, Medieval, Silver"
+          "Bronze": "CoinMedievalBronze",
+          "Gold": "CoinMedievalGold",
+          "Silver": "CoinMedievalSilver"
         }
       },
       "Coin, Nickel": {
         "Sizeless": {
-          "Colorless": "Coin, Nickel"
+          "Colorless": "CoinNickel"
         }
       },
       "Coin, Penny": {
         "Sizeless": {
-          "Colorless": "Coin, Penny"
+          "Colorless": "CoinPenny"
         }
       },
       "Coin, Pirate": {
         "35mm": {
-          "Colorless": "Coin, Pirate, 35mm"
+          "Colorless": "CoinPirate35mm"
         }
       },
       "Coin, Quarter": {
         "Sizeless": {
-          "Colorless": "Coin, Quarter"
+          "Colorless": "CoinQuarter"
         }
       },
       "Coin, Roman": {
         "18mm": {
-          "Colorless": "Coin, Roman, 18mm"
+          "Colorless": "CoinRoman18mm"
         }
       },
       "Coin, Sacagawea Dollar": {
         "Sizeless": {
-          "Colorless": "Coin, Sacagawea Dollar"
+          "Colorless": "CoinSacagaweaDollar"
         }
       },
       "Coin, Timeless": {
         "1": {
-          "Colorless": "Coin, Timeless, 1"
+          "Colorless": "CoinTimeless1"
         },
         "5": {
-          "Colorless": "Coin, Timeless, 5"
+          "Colorless": "CoinTimeless5"
         },
         "10": {
-          "Colorless": "Coin, Timeless, 10"
+          "Colorless": "CoinTimeless10"
         }
       },
       "Doubloon, Metal": {
         "Sizeless": {
-          "Gold": "Doubloon, Metal, Gold",
-          "Silver": "Doubloon, Metal, Silver"
+          "Gold": "DoubloonMetalGold",
+          "Silver": "DoubloonMetalSilver"
         }
       },
       "Doubloons": {
@@ -6547,149 +6437,145 @@ const COMPONENT_CATEGORIES = {
           "Colorless": "Doubloons"
         }
       },
-      "Fantasy Coin 20": {
-        "20": {
-          "Colorless": "Fantasy Coin 20"
-        }
-      },
-      "Fantasy Coin 5": {
+      "Fantasy Coin": {
         "5": {
-          "Colorless": "Fantasy Coin 5"
+          "Colorless": "FantasyCoin5"
+        },
+        "20": {
+          "Colorless": "FantasyCoin20"
         }
       },
       "Future Coin": {
         "1": {
-          "Colorless": "Future Coin, 1"
+          "Colorless": "FutureCoin1"
         },
         "5": {
-          "Colorless": "Future Coin, 5"
+          "Colorless": "FutureCoin5"
         }
       },
-      "Medieval Coin 2": {
+      "Medieval Coin": {
         "2": {
-          "Colorless": "Medieval Coin 2"
-        }
-      },
-      "Medieval Coin 20": {
+          "Colorless": "MedievalCoin2"
+        },
         "20": {
-          "Colorless": "Medieval Coin 20"
+          "Colorless": "MedievalCoin20"
         }
       },
       "Money Pack": {
         "Sizeless": {
-          "Orange": "Money Pack, Orange",
-          "Pink": "Money Pack, Pink"
+          "Orange": "MoneyPackOrange",
+          "Pink": "MoneyPackPink"
         }
       },
       "Old West Coin": {
         "Sizeless": {
-          "Bronze": "Old West Coin, Bronze",
-          "Gold": "Old West Coin, Gold",
-          "Silver": "Old West Coin, Silver"
+          "Bronze": "OldWestCoinBronze",
+          "Gold": "OldWestCoinGold",
+          "Silver": "OldWestCoinSilver"
         }
       },
       "Sci-Fi Coin": {
         "Sizeless": {
-          "Bronze": "Sci-Fi Coin, Bronze",
-          "Gold": "Sci-Fi Coin, Gold",
-          "Silver": "Sci-Fi Coin, Silver"
+          "Bronze": "Sci-FiCoinBronze",
+          "Gold": "Sci-FiCoinGold",
+          "Silver": "Sci-FiCoinSilver"
         }
       }
     },
     "utility": {
       "Card Stand": {
         "Sizeless": {
-          "White": "Card Stand, White",
-          "Black": "Card Stand, Black",
-          "Blue": "Card Stand, Blue",
-          "Green": "Card Stand, Green",
-          "Red": "Card Stand, Red",
-          "Yellow": "Card Stand, Yellow"
+          "White": "CardStandWhite",
+          "Black": "CardStandBlack",
+          "Blue": "CardStandBlue",
+          "Green": "CardStandGreen",
+          "Red": "CardStandRed",
+          "Yellow": "CardStandYellow"
         }
       },
       "Badge Holder w/String Lanyard (box of 100)": {
         "Sizeless": {
-          "Colorless": "Badge Holder w/String Lanyard (box of 100)"
+          "Colorless": "BadgeHolderw/StringLanyard(boxof100)"
         }
       },
       "Box Band, 6\"": {
         "Sizeless": {
-          "Blue": "Box Band, 6\", Blue",
-          "Green": "Box Band, 6\", Green",
-          "Red": "Box Band, 6\", Red"
+          "Blue": "BoxBand6\"Blue",
+          "Green": "BoxBand6\"Green",
+          "Red": "BoxBand6\"Red"
         }
       },
       "Box Band, 8\"": {
         "Sizeless": {
-          "Blue": "Box Band, 8\", Blue",
-          "Green": "Box Band, 8\", Green",
-          "Red": "Box Band, 8\", Red"
+          "Blue": "BoxBand8\"Blue",
+          "Green": "BoxBand8\"Green",
+          "Red": "BoxBand8\"Red"
         }
       },
       "Box Band, 9\"": {
         "Sizeless": {
-          "Blue": "Box Band, 9\", Blue",
-          "Green": "Box Band, 9\", Green",
-          "Red": "Box Band, 9\", Red"
+          "Blue": "BoxBand9\"Blue",
+          "Green": "BoxBand9\"Green",
+          "Red": "BoxBand9\"Red"
         }
       },
       "Card Holder": {
         "Sizeless": {
-          "Colorless": "Card Holder"
+          "Colorless": "CardHolder"
         }
       },
       "Character Stand": {
         "Sizeless": {
-          "Blue": "Character Stand, Blue",
-          "Green": "Character Stand, Green",
-          "Purple": "Character Stand, Purple",
-          "Red": "Character Stand, Red",
-          "Yellow": "Character Stand, Yellow"
+          "Blue": "CharacterStandBlue",
+          "Green": "CharacterStandGreen",
+          "Purple": "CharacterStandPurple",
+          "Red": "CharacterStandRed",
+          "Yellow": "CharacterStandYellow"
         }
       },
       "Character Stand, Clear": {
         "Sizeless": {
-          "Colorless": "Character Stand, Clear"
+          "Colorless": "CharacterStandClear"
         }
       },
       "Decoder Strips": {
         "Sizeless": {
-          "Colorless": "Decoder Strips"
+          "Colorless": "DecoderStrips"
         }
       },
       "Digital Timer": {
         "Sizeless": {
-          "Colorless": "Digital Timer"
+          "Colorless": "DigitalTimer"
         }
       },
       "Direction Finder, Transparent": {
         "Sizeless": {
-          "Black": "Direction Finder, Transparent, Black"
+          "Black": "DirectionFinderTransparentBlack"
         }
       },
       "Game Stand": {
         "Sizeless": {
-          "Black": "Game Stand, Black",
-          "Blue": "Game Stand, Blue",
-          "Green": "Game Stand, Green",
-          "Orange": "Game Stand, Orange",
-          "Purple": "Game Stand, Purple",
-          "Red": "Game Stand, Red",
-          "White": "Game Stand, White",
-          "Yellow": "Game Stand, Yellow"
+          "Black": "GameStandBlack",
+          "Blue": "GameStandBlue",
+          "Green": "GameStandGreen",
+          "Orange": "GameStandOrange",
+          "Purple": "GameStandPurple",
+          "Red": "GameStandRed",
+          "White": "GameStandWhite",
+          "Yellow": "GameStandYellow"
         }
       },
       "Magnifying Glass, 5X": {
         "Sizeless": {
-          "Colorless": "Magnifying Glass, 5X"
+          "Colorless": "MagnifyingGlass5X"
         }
       },
       "Marker, Dry-Erase, Fine": {
         "Sizeless": {
-          "Black": "Marker, Dry-Erase, Fine, Black",
-          "Blue": "Marker, Dry-Erase, Fine, Blue",
-          "Green": "Marker, Dry-Erase, Fine, Green",
-          "Red": "Marker, Dry-Erase, Fine, Red"
+          "Black": "MarkerDry-EraseFineBlack",
+          "Blue": "MarkerDry-EraseFineBlue",
+          "Green": "MarkerDry-EraseFineGreen",
+          "Red": "MarkerDry-EraseFineRed"
         }
       },
       "Notepad": {
@@ -6704,52 +6590,52 @@ const COMPONENT_CATEGORIES = {
       },
       "Rivet": {
         "Sizeless": {
-          "Black": "Rivet, Black"
+          "Black": "RivetBlack"
         }
       },
       "Rubber Bands": {
         "Sizeless": {
-          "Colorless": "Rubber Bands"
+          "Colorless": "RubberBands"
         }
       },
       "Sand Timer, 10 Seconds": {
         "Sizeless": {
-          "Colorless": "Sand Timer, 10 Seconds"
+          "Colorless": "SandTimer10Seconds"
         }
       },
       "Sand Timer, 120 seconds": {
         "Sizeless": {
-          "Colorless": "Sand Timer, 120 seconds"
+          "Colorless": "SandTimer120seconds"
         }
       },
       "Sand Timer, 180 seconds": {
         "Sizeless": {
-          "Colorless": "Sand Timer, 180 seconds"
+          "Colorless": "SandTimer180seconds"
         }
       },
       "Sand Timer, 30 seconds": {
         "Sizeless": {
-          "Colorless": "Sand Timer, 30 seconds"
+          "Colorless": "SandTimer30seconds"
         }
       },
       "Sand Timer, 60 seconds": {
         "Sizeless": {
-          "Colorless": "Sand Timer, 60 seconds"
+          "Colorless": "SandTimer60seconds"
         }
       },
       "Sand Timer, 90 seconds": {
         "Sizeless": {
-          "Colorless": "Sand Timer, 90 seconds"
+          "Colorless": "SandTimer90seconds"
         }
       },
       "Screw, 6mm x 3mm": {
         "Sizeless": {
-          "Black": "Screw, 6mm x 3mm, Black"
+          "Black": "Screw6mmx3mmBlack"
         }
       },
       "Screw, 8mm x 5mm": {
         "Sizeless": {
-          "Black": "Screw, 8mm x 5mm, Black"
+          "Black": "Screw8mmx5mmBlack"
         }
       },
       "Sharpies": {
@@ -6759,213 +6645,203 @@ const COMPONENT_CATEGORIES = {
       },
       "Slider Clip": {
         "Sizeless": {
-          "Black": "Slider Clip, Black",
-          "Blue": "Slider Clip, Blue",
-          "Green": "Slider Clip, Green",
-          "Orange": "Slider Clip, Orange",
-          "Purple": "Slider Clip, Purple",
-          "Red": "Slider Clip, Red",
-          "White": "Slider Clip, White",
-          "Yellow": "Slider Clip, Yellow"
+          "Black": "SliderClipBlack",
+          "Blue": "SliderClipBlue",
+          "Green": "SliderClipGreen",
+          "Orange": "SliderClipOrange",
+          "Purple": "SliderClipPurple",
+          "Red": "SliderClipRed",
+          "White": "SliderClipWhite",
+          "Yellow": "SliderClipYellow"
         }
       },
       "Slider Clip, Chipboard": {
         "Sizeless": {
-          "Black": "Slider Clip, Chipboard, Black",
-          "Blue": "Slider Clip, Chipboard, Blue",
-          "Green": "Slider Clip, Chipboard, Green",
-          "Orange": "Slider Clip, Chipboard, Orange",
-          "Purple": "Slider Clip, Chipboard, Purple",
-          "Red": "Slider Clip, Chipboard, Red",
-          "White": "Slider Clip, Chipboard, White",
-          "Yellow": "Slider Clip, Chipboard, Yellow"
+          "Black": "SliderClipChipboardBlack",
+          "Blue": "SliderClipChipboardBlue",
+          "Green": "SliderClipChipboardGreen",
+          "Orange": "SliderClipChipboardOrange",
+          "Purple": "SliderClipChipboardPurple",
+          "Red": "SliderClipChipboardRed",
+          "White": "SliderClipChipboardWhite",
+          "Yellow": "SliderClipChipboardYellow"
         }
       },
       "Snap & Stack Condition Marker": {
         "Sizeless": {
-          "Black": "Snap & Stack Condition Marker, Black",
-          "Blue": "Snap & Stack Condition Marker, Blue",
-          "Green": "Snap & Stack Condition Marker, Green",
-          "Pink": "Snap & Stack Condition Marker, Pink",
-          "White": "Snap & Stack Condition Marker, White",
-          "Yellow": "Snap & Stack Condition Marker, Yellow"
+          "Black": "Snap&StackConditionMarkerBlack",
+          "Blue": "Snap&StackConditionMarkerBlue",
+          "Green": "Snap&StackConditionMarkerGreen",
+          "Pink": "Snap&StackConditionMarkerPink",
+          "White": "Snap&StackConditionMarkerWhite",
+          "Yellow": "Snap&StackConditionMarkerYellow"
         }
       },
       "Spinner": {
         "Sizeless": {
-          "Black": "Spinner, Black",
-          "Red": "Spinner, Red",
-          "White": "Spinner, White"
+          "Black": "SpinnerBlack",
+          "Red": "SpinnerRed",
+          "White": "SpinnerWhite"
         }
       },
       "Tape Measure": {
         "Sizeless": {
-          "Colorless": "Tape Measure"
+          "Colorless": "TapeMeasure"
         }
       },
       "Tile Rack": {
         "Sizeless": {
-          "Colorless": "Tile Rack"
+          "Colorless": "TileRack"
         }
       },
       "Horizontal Game Master's Screen": {
         "Sizeless": {
-          "Colorless": "Horizontal Game Master's Screen"
+          "Colorless": "HorizontalGameMaster'sScreen"
         }
       },
       "Stand, Chipboard, 4-way": {
         "Sizeless": {
-          "Black": "Stand, Chipboard, 4-way, Black"
+          "Black": "StandChipboard4-wayBlack"
         }
       },
       "Vertical Game Master's Screen": {
         "Sizeless": {
-          "Colorless": "Vertical Game Master's Screen"
+          "Colorless": "VerticalGameMaster'sScreen"
         }
       }
     },
     "vial": {
       "Empty Vial": {
         "Sizeless": {
-          "Colorless": "Empty Vial"
+          "Colorless": "EmptyVial"
         }
       },
       "Fillable Vial": {
         "Sizeless": {
-          "Colorless": "Fillable Vial"
+          "Colorless": "FillableVial"
         }
       },
       "Vial Liquid, Fluorescent": {
         "Sizeless": {
-          "Blue": "Vial Liquid, Fluorescent Blue",
-          "Green": "Vial Liquid, Fluorescent Green",
-          "Orange": "Vial Liquid, Fluorescent Orange",
-          "Red": "Vial Liquid, Fluorescent Red",
-          "Yellow": "Vial Liquid, Fluorescent Yellow"
+          "Blue": "VialLiquidFluorescentBlue",
+          "Green": "VialLiquidFluorescentGreen",
+          "Orange": "VialLiquidFluorescentOrange",
+          "Red": "VialLiquidFluorescentRed",
+          "Yellow": "VialLiquidFluorescentYellow"
         }
       },
       "Vial Liquid, Opaque": {
-        "Sizeless": {
-          "Black": "Vial Liquid, Opaque Black",
-          "Brown": "Vial Liquid, Opaque Brown",
-          "Gray": "Vial Liquid, Opaque Gray",
-          "Green": "Vial Liquid, Opaque Green",
-          "Orange": "Vial Liquid, Opaque Orange",
-          "Purple": "Vial Liquid, Opaque Purple",
-          "Red": "Vial Liquid, Opaque Red",
-          "White": "Vial Liquid, Opaque White",
-          "Yellow": "Vial Liquid, Opaque Yellow"
-        }
-      },
-      "Vial Liquid, Opaque  1": {
         "1": {
-          "Blue": "Vial Liquid, Opaque Blue 1"
-        }
-      },
-      "Vial Liquid, Opaque  2": {
+          "Blue": "VialLiquidOpaqueBlue1"
+        },
         "2": {
-          "Blue": "Vial Liquid, Opaque Blue 2"
-        }
-      },
-      "Vial Liquid, Opaque  3": {
+          "Blue": "VialLiquidOpaqueBlue2"
+        },
         "3": {
-          "Blue": "Vial Liquid, Opaque Blue 3"
-        }
-      },
-      "Vial Liquid, Opaque Ivory": {
+          "Blue": "VialLiquidOpaqueBlue3"
+        },
         "Sizeless": {
-          "Colorless": "Vial Liquid, Opaque Ivory"
+          "Black": "VialLiquidOpaqueBlack",
+          "Brown": "VialLiquidOpaqueBrown",
+          "Gray": "VialLiquidOpaqueGray",
+          "Green": "VialLiquidOpaqueGreen",
+          "Ivory": "VialLiquidOpaqueIvory",
+          "Orange": "VialLiquidOpaqueOrange",
+          "Purple": "VialLiquidOpaquePurple",
+          "Red": "VialLiquidOpaqueRed",
+          "White": "VialLiquidOpaqueWhite",
+          "Yellow": "VialLiquidOpaqueYellow"
         }
       },
       "Vial Liquid, Silver Mirror": {
         "Sizeless": {
-          "Colorless": "Vial Liquid, Silver Mirror"
+          "Colorless": "VialLiquidSilverMirror"
         }
       },
       "Vial Liquid, Transparent": {
         "Sizeless": {
-          "Black": "Vial Liquid, Transparent, Black",
-          "Blue": "Vial Liquid, Transparent, Blue",
-          "Green": "Vial Liquid, Transparent, Green",
-          "Orange": "Vial Liquid, Transparent, Orange",
-          "Purple": "Vial Liquid, Transparent, Purple",
-          "Red": "Vial Liquid, Transparent, Red",
-          "Yellow": "Vial Liquid, Transparent, Yellow"
+          "Black": "VialLiquidTransparentBlack",
+          "Blue": "VialLiquidTransparentBlue",
+          "Green": "VialLiquidTransparentGreen",
+          "Orange": "VialLiquidTransparentOrange",
+          "Purple": "VialLiquidTransparentPurple",
+          "Red": "VialLiquidTransparentRed",
+          "Yellow": "VialLiquidTransparentYellow"
         }
       }
     },
     "symbol": {
       "Atom Symbol": {
         "Sizeless": {
-          "Colorless": "Atom Symbol"
+          "Colorless": "AtomSymbol"
         }
       },
       "Exclamation Mark": {
         "Sizeless": {
-          "Colorless": "Exclamation Mark"
+          "Colorless": "ExclamationMark"
         }
       },
       "Nuclear Symbol": {
         "Sizeless": {
-          "Colorless": "Nuclear Symbol"
+          "Colorless": "NuclearSymbol"
         }
       },
       "Question Mark": {
         "Sizeless": {
-          "Colorless": "Question Mark"
+          "Colorless": "QuestionMark"
         }
       },
       "Roman Numeral I": {
         "Sizeless": {
-          "Black": "Roman Numeral I, Black",
-          "Blue": "Roman Numeral I, Blue",
-          "Brown": "Roman Numeral I, Brown",
-          "Green": "Roman Numeral I, Green",
-          "Red": "Roman Numeral I, Red",
-          "Yellow": "Roman Numeral I, Yellow"
+          "Black": "RomanNumeralIBlack",
+          "Blue": "RomanNumeralIBlue",
+          "Brown": "RomanNumeralIBrown",
+          "Green": "RomanNumeralIGreen",
+          "Red": "RomanNumeralIRed",
+          "Yellow": "RomanNumeralIYellow"
         }
       },
       "Roman Numeral I, Grey": {
         "Large": {
-          "Colorless": "Roman Numeral I, Grey, Large"
+          "Colorless": "RomanNumeralIGreyLarge"
         }
       },
       "Roman Numeral III": {
         "Sizeless": {
-          "Yellow": "Roman Numeral III, Yellow"
+          "Yellow": "RomanNumeralIIIYellow"
         }
       },
       "Roman Numeral V": {
         "Sizeless": {
-          "Green": "Roman Numeral V, Green",
-          "Yellow": "Roman Numeral V, Yellow"
+          "Green": "RomanNumeralVGreen",
+          "Yellow": "RomanNumeralVYellow"
         }
       },
       "Universal No": {
         "Sizeless": {
-          "Colorless": "Universal No"
+          "Colorless": "UniversalNo"
         }
       },
       "Universal Yes": {
         "Sizeless": {
-          "Colorless": "Universal Yes"
+          "Colorless": "UniversalYes"
         }
       }
     },
     "bodypart": {
       "Bloody Remains": {
         "Sizeless": {
-          "Colorless": "Bloody Remains"
+          "Colorless": "BloodyRemains"
         }
       },
       "Brain Organ": {
         "Sizeless": {
-          "Pink": "Brain Organ, Pink"
+          "Pink": "BrainOrganPink"
         }
       },
       "Broken Heart": {
         "Sizeless": {
-          "Colorless": "Broken Heart"
+          "Colorless": "BrokenHeart"
         }
       },
       "Fist": {
@@ -6975,29 +6851,29 @@ const COMPONENT_CATEGORIES = {
       },
       "Foot": {
         "Sizeless": {
-          "Brown": "Foot, Brown"
+          "Brown": "FootBrown"
         }
       },
       "Heart Organ": {
         "Sizeless": {
-          "Red": "Heart Organ, Red"
+          "Red": "HeartOrganRed"
         }
       },
       "Heart, Flat": {
         "Sizeless": {
-          "Black": "Heart, Flat, Black",
-          "Blue": "Heart, Flat, Blue",
-          "Green": "Heart, Flat, Green",
-          "Orange": "Heart, Flat, Orange",
-          "Purple": "Heart, Flat, Purple",
-          "Red": "Heart, Flat, Red",
-          "White": "Heart, Flat, White",
-          "Yellow": "Heart, Flat, Yellow"
+          "Black": "HeartFlatBlack",
+          "Blue": "HeartFlatBlue",
+          "Green": "HeartFlatGreen",
+          "Orange": "HeartFlatOrange",
+          "Purple": "HeartFlatPurple",
+          "Red": "HeartFlatRed",
+          "White": "HeartFlatWhite",
+          "Yellow": "HeartFlatYellow"
         }
       },
       "Heart, Wood": {
         "Sizeless": {
-          "Red": "Heart, Wood, Red"
+          "Red": "HeartWoodRed"
         }
       },
       "Skull": {
@@ -7014,23 +6890,23 @@ const COMPONENT_CATEGORIES = {
       },
       "Jewel, Clear": {
         "Sizeless": {
-          "Colorless": "Jewel, Clear"
+          "Colorless": "JewelClear"
         }
       },
       "Jewel": {
         "Sizeless": {
-          "Yellow": "Jewel, Yellow",
-          "Green": "Jewel, Green",
-          "Blue": "Jewel, Blue",
-          "Orange": "Jewel, Orange",
-          "Purple": "Jewel, Purple",
-          "Red": "Jewel, Red"
+          "Yellow": "JewelYellow",
+          "Green": "JewelGreen",
+          "Blue": "JewelBlue",
+          "Orange": "JewelOrange",
+          "Purple": "JewelPurple",
+          "Red": "JewelRed"
         }
       },
       "Acorn": {
         "Sizeless": {
-          "Brown": "Acorn, Brown",
-          "Yellow": "Acorn, Yellow"
+          "Brown": "AcornBrown",
+          "Yellow": "AcornYellow"
         }
       },
       "AK-47": {
@@ -7040,12 +6916,8 @@ const COMPONENT_CATEGORIES = {
       },
       "Barrel": {
         "Sizeless": {
-          "Colorless": "Barrel"
-        }
-      },
-      "Barrel, Wood": {
-        "Sizeless": {
-          "Colorless": "Barrel, Wood"
+          "Colorless": "Barrel",
+          "Wood": "BarrelWood"
         }
       },
       "Bolt": {
@@ -7055,67 +6927,65 @@ const COMPONENT_CATEGORIES = {
       },
       "Bow and Arrow": {
         "Sizeless": {
-          "Colorless": "Bow and Arrow"
+          "Colorless": "BowandArrow"
         }
       },
       "Bowling Pin": {
         "Large": {
-          "Black": "Bowling Pin, Large, Black",
-          "Blue": "Bowling Pin, Large, Blue",
-          "Green": "Bowling Pin, Large, Green",
-          "Orange": "Bowling Pin, Large, Orange",
-          "Purple": "Bowling Pin, Large, Purple",
-          "Red": "Bowling Pin, Large, Red",
-          "White": "Bowling Pin, Large, White",
-          "Yellow": "Bowling Pin, Large, Yellow"
+          "Black": "BowlingPinLargeBlack",
+          "Blue": "BowlingPinLargeBlue",
+          "Green": "BowlingPinLargeGreen",
+          "Orange": "BowlingPinLargeOrange",
+          "Purple": "BowlingPinLargePurple",
+          "Red": "BowlingPinLargeRed",
+          "White": "BowlingPinLargeWhite",
+          "Yellow": "BowlingPinLargeYellow"
         },
         "Small": {
-          "Black": "Bowling Pin, Small, Black",
-          "Blue": "Bowling Pin, Small, Blue",
-          "Green": "Bowling Pin, Small, Green",
-          "Orange": "Bowling Pin, Small, Orange",
-          "Purple": "Bowling Pin, Small, Purple",
-          "Red": "Bowling Pin, Small, Red",
-          "White": "Bowling Pin, Small, White",
-          "Yellow": "Bowling Pin, Small, Yellow"
+          "Black": "BowlingPinSmallBlack",
+          "Blue": "BowlingPinSmallBlue",
+          "Green": "BowlingPinSmallGreen",
+          "Orange": "BowlingPinSmallOrange",
+          "Purple": "BowlingPinSmallPurple",
+          "Red": "BowlingPinSmallRed",
+          "White": "BowlingPinSmallWhite",
+          "Yellow": "BowlingPinSmallYellow"
         }
       },
       "Bowling Pin, Clear": {
         "Large": {
-          "Colorless": "Bowling Pin, Large, Clear"
+          "Colorless": "BowlingPinLargeClear"
         }
       },
       "Bread Basket": {
         "Sizeless": {
-          "Colorless": "Bread Basket"
+          "Colorless": "BreadBasket"
         }
       },
-      "Bread, Wood, Dark": {
+      "Bread, Wood": {
         "Sizeless": {
-          "Brown": "Bread, Wood, Dark Brown"
-        }
-      },
-      "Bread, Wood, Light": {
-        "Sizeless": {
-          "Brown": "Bread, Wood, Light Brown"
+          "Dark Brown": "BreadWoodDarkBrown",
+          "Light Brown": "BreadWoodLightBrown"
         }
       },
       "Brick Tower": {
         "Sizeless": {
-          "Gray": "Brick Tower, Gray"
+          "Gray": "BrickTowerGray"
         }
       },
       "Brick, Wood, 2 Holes": {
         "Sizeless": {
-          "Red": "Brick, Wood, 2 Holes, Red"
+          "Red": "BrickWood2HolesRed"
+        }
+      },
+      "Brick": {
+        "Large": {
+          "Wood": "BrickWoodLarge"
         }
       },
       "Brick, Wood": {
-        "Large": {
-          "Colorless": "Brick, Wood, Large"
-        },
         "Sizeless": {
-          "Red": "Brick, Wood, Red"
+          "Red": "BrickWoodRed"
         }
       },
       "Buddha": {
@@ -7125,21 +6995,21 @@ const COMPONENT_CATEGORIES = {
       },
       "Bullet": {
         "Sizeless": {
-          "Gray": "Bullet, Gray"
+          "Gray": "BulletGray"
         }
       },
       "Button": {
         "Large": {
-          "Blue": "Button, Large, Blue",
-          "Green": "Button, Large, Green",
-          "Gray": "Button, Large, Gray",
-          "Pink": "Button, Large, Pink",
-          "Yellow": "Button, Large, Yellow"
+          "Blue": "ButtonLargeBlue",
+          "Green": "ButtonLargeGreen",
+          "Gray": "ButtonLargeGray",
+          "Pink": "ButtonLargePink",
+          "Yellow": "ButtonLargeYellow"
         },
         "Sizeless": {
-          "Purple": "Button, Purple",
-          "White": "Button, White",
-          "Yellow": "Button, Yellow"
+          "Purple": "ButtonPurple",
+          "White": "ButtonWhite",
+          "Yellow": "ButtonYellow"
         }
       },
       "Carrot": {
@@ -7154,53 +7024,53 @@ const COMPONENT_CATEGORIES = {
       },
       "Cheese Wedge": {
         "Sizeless": {
-          "Colorless": "Cheese Wedge"
+          "Colorless": "CheeseWedge"
         }
       },
       "Chest": {
         "Sizeless": {
-          "Blue": "Chest, Blue",
-          "Bronze": "Chest, Bronze",
-          "Green": "Chest, Green",
-          "Gray": "Chest, Gray",
-          "Red": "Chest, Red"
+          "Blue": "ChestBlue",
+          "Bronze": "ChestBronze",
+          "Green": "ChestGreen",
+          "Gray": "ChestGray",
+          "Red": "ChestRed"
         }
       },
       "Chevron": {
         "20mm": {
-          "Black": "Chevron, 20mm, Black",
-          "Blue": "Chevron, 20mm, Blue",
-          "Green": "Chevron, 20mm, Green",
-          "Orange": "Chevron, 20mm, Orange",
-          "Purple": "Chevron, 20mm, Purple",
-          "Red": "Chevron, 20mm, Red",
-          "White": "Chevron, 20mm, White",
-          "Yellow": "Chevron, 20mm, Yellow"
+          "Black": "Chevron20mmBlack",
+          "Blue": "Chevron20mmBlue",
+          "Green": "Chevron20mmGreen",
+          "Orange": "Chevron20mmOrange",
+          "Purple": "Chevron20mmPurple",
+          "Red": "Chevron20mmRed",
+          "White": "Chevron20mmWhite",
+          "Yellow": "Chevron20mmYellow"
         },
         "8mm": {
-          "Black": "Chevron, 8mm, Black",
-          "Blue": "Chevron, 8mm, Blue",
-          "Green": "Chevron, 8mm, Green",
-          "Orange": "Chevron, 8mm, Orange",
-          "Purple": "Chevron, 8mm, Purple",
-          "Red": "Chevron, 8mm, Red",
-          "White": "Chevron, 8mm, White",
-          "Yellow": "Chevron, 8mm, Yellow"
+          "Black": "Chevron8mmBlack",
+          "Blue": "Chevron8mmBlue",
+          "Green": "Chevron8mmGreen",
+          "Orange": "Chevron8mmOrange",
+          "Purple": "Chevron8mmPurple",
+          "Red": "Chevron8mmRed",
+          "White": "Chevron8mmWhite",
+          "Yellow": "Chevron8mmYellow"
         }
       },
-      "Clay, Wood": {
+      "Clay": {
         "Sizeless": {
-          "Colorless": "Clay, Wood"
+          "Wood": "ClayWood"
         }
       },
-      "Coal, Wood": {
+      "Coal": {
         "Sizeless": {
-          "Colorless": "Coal, Wood"
+          "Wood": "CoalWood"
         }
       },
-      "Cobalt, Wood": {
+      "Cobalt": {
         "Sizeless": {
-          "Colorless": "Cobalt, Wood"
+          "Wood": "CobaltWood"
         }
       },
       "Crate": {
@@ -7210,7 +7080,7 @@ const COMPONENT_CATEGORIES = {
       },
       "Crescent Wrench": {
         "Sizeless": {
-          "Colorless": "Crescent Wrench"
+          "Colorless": "CrescentWrench"
         }
       },
       "Crown": {
@@ -7220,67 +7090,59 @@ const COMPONENT_CATEGORIES = {
       },
       "Crystal, Opaque": {
         "Sizeless": {
-          "Black": "Crystal, Opaque, Black",
-          "Gold": "Crystal, Opaque, Gold",
-          "Silver": "Crystal, Opaque, Silver",
-          "White": "Crystal, Opaque, White"
+          "Black": "CrystalOpaqueBlack",
+          "Gold": "CrystalOpaqueGold",
+          "Silver": "CrystalOpaqueSilver",
+          "White": "CrystalOpaqueWhite"
         }
       },
       "Crystal, Transparent": {
         "Sizeless": {
-          "Black": "Crystal, Transparent, Black",
-          "Blue": "Crystal, Transparent, Blue",
-          "Green": "Crystal, Transparent, Green",
-          "Orange": "Crystal, Transparent, Orange",
-          "Purple": "Crystal, Transparent, Purple",
-          "Red": "Crystal, Transparent, Red",
-          "White": "Crystal, Transparent, White",
-          "Yellow": "Crystal, Transparent, Yellow"
+          "Black": "CrystalTransparentBlack",
+          "Blue": "CrystalTransparentBlue",
+          "Green": "CrystalTransparentGreen",
+          "Orange": "CrystalTransparentOrange",
+          "Purple": "CrystalTransparentPurple",
+          "Red": "CrystalTransparentRed",
+          "White": "CrystalTransparentWhite",
+          "Yellow": "CrystalTransparentYellow"
         }
       },
       "Crystal, Transparent, Clear": {
         "Sizeless": {
-          "Colorless": "Crystal, Transparent, Clear"
+          "Colorless": "CrystalTransparentClear"
         }
       },
       "Drop": {
         "Sizeless": {
-          "Black": "Drop, Black",
-          "Blue": "Drop, Blue",
-          "Green": "Drop, Green",
-          "Orange": "Drop, Orange",
-          "Purple": "Drop, Purple",
-          "Red": "Drop, Red",
-          "White": "Drop, White",
-          "Yellow": "Drop, Yellow"
+          "Black": "DropBlack",
+          "Blue": "DropBlue",
+          "Green": "DropGreen",
+          "Orange": "DropOrange",
+          "Purple": "DropPurple",
+          "Red": "DropRed",
+          "White": "DropWhite",
+          "Yellow": "DropYellow"
         }
       },
       "Drumstick": {
         "Sizeless": {
-          "Orange": "Drumstick, Orange"
+          "Orange": "DrumstickOrange"
         }
       },
       "Egg": {
         "Sizeless": {
-          "Blue": "Egg, Blue",
-          "Green": "Egg, Green",
-          "Purple": "Egg, Purple",
-          "White": "Egg, White"
-        }
-      },
-      "Egg, Natural": {
-        "Sizeless": {
-          "Colorless": "Egg, Natural"
-        }
-      },
-      "Egg, Rose": {
-        "Sizeless": {
-          "Colorless": "Egg, Rose"
+          "Blue": "EggBlue",
+          "Green": "EggGreen",
+          "Natural": "EggNatural",
+          "Purple": "EggPurple",
+          "Rose": "EggRose",
+          "White": "EggWhite"
         }
       },
       "Empty Bottle": {
         "Sizeless": {
-          "Colorless": "Empty Bottle"
+          "Colorless": "EmptyBottle"
         }
       },
       "Fang": {
@@ -7290,51 +7152,51 @@ const COMPONENT_CATEGORIES = {
       },
       "Fire Axe": {
         "Sizeless": {
-          "Colorless": "Fire Axe"
+          "Colorless": "FireAxe"
         }
       },
       "Flag": {
         "Sizeless": {
-          "Black": "Flag, Black",
-          "Blue": "Flag, Blue",
-          "Green": "Flag, Green",
-          "Orange": "Flag, Orange",
-          "Purple": "Flag, Purple",
-          "Red": "Flag, Red",
-          "White": "Flag, White",
-          "Yellow": "Flag, Yellow"
+          "Black": "FlagBlack",
+          "Blue": "FlagBlue",
+          "Green": "FlagGreen",
+          "Orange": "FlagOrange",
+          "Purple": "FlagPurple",
+          "Red": "FlagRed",
+          "White": "FlagWhite",
+          "Yellow": "FlagYellow"
         }
       },
       "Flame Base, Logs": {
         "Sizeless": {
-          "Colorless": "Flame Base, Logs"
+          "Colorless": "FlameBaseLogs"
         }
       },
       "Flame Base, Smoke": {
         "Sizeless": {
-          "Colorless": "Flame Base, Smoke"
+          "Colorless": "FlameBaseSmoke"
         }
       },
       "Flame, Free-Standing": {
         "Sizeless": {
-          "Colorless": "Flame, Free-Standing"
+          "Colorless": "FlameFree-Standing"
         }
       },
       "Flat Star": {
         "Sizeless": {
-          "Black": "Flat Star, Black",
-          "Blue": "Flat Star, Blue",
-          "Green": "Flat Star, Green",
-          "Orange": "Flat Star, Orange",
-          "Purple": "Flat Star, Purple",
-          "Red": "Flat Star, Red",
-          "White": "Flat Star, White",
-          "Yellow": "Flat Star, Yellow"
+          "Black": "FlatStarBlack",
+          "Blue": "FlatStarBlue",
+          "Green": "FlatStarGreen",
+          "Orange": "FlatStarOrange",
+          "Purple": "FlatStarPurple",
+          "Red": "FlatStarRed",
+          "White": "FlatStarWhite",
+          "Yellow": "FlatStarYellow"
         }
       },
       "Frag Grenade": {
         "Sizeless": {
-          "Colorless": "Frag Grenade"
+          "Colorless": "FragGrenade"
         }
       },
       "Gavel": {
@@ -7345,90 +7207,78 @@ const COMPONENT_CATEGORIES = {
       "Gear": {
         "Sizeless": {
           "Colorless": "Gear",
-          "Bronze": "Gear, Bronze",
-          "Gold": "Gear, Gold",
-          "Silver": "Gear, Silver"
+          "Bronze": "GearBronze",
+          "Gold": "GearGold",
+          "Silver": "GearSilver"
         }
       },
       "Gem": {
         "Sizeless": {
-          "Black": "Gem, Black",
-          "Blue": "Gem, Blue",
-          "Green": "Gem, Green",
-          "Orange": "Gem, Orange",
-          "Purple": "Gem, Purple",
-          "Red": "Gem, Red",
-          "White": "Gem, White",
-          "Yellow": "Gem, Yellow"
+          "Black": "GemBlack",
+          "Blue": "GemBlue",
+          "Green": "GemGreen",
+          "Light Green": "GemLightGreen",
+          "Orange": "GemOrange",
+          "Purple": "GemPurple",
+          "Red": "GemRed",
+          "White": "GemWhite",
+          "Yellow": "GemYellow"
         }
       },
       "Gem, Clear": {
         "Sizeless": {
-          "Colorless": "Gem, Clear"
+          "Colorless": "GemClear"
         }
       },
-      "Gem, Light": {
+      "Grain Sack": {
         "Sizeless": {
-          "Green": "Gem, Light Green"
-        }
-      },
-      "Grain Sack, Wood": {
-        "Sizeless": {
-          "Colorless": "Grain Sack, Wood"
+          "Wood": "GrainSackWood"
         }
       },
       "Handmade Carrot": {
         "Sizeless": {
-          "Colorless": "Handmade Carrot"
+          "Colorless": "HandmadeCarrot"
         }
       },
       "Handmade Steak": {
         "Sizeless": {
-          "Colorless": "Handmade Steak"
+          "Colorless": "HandmadeSteak"
         }
       },
       "Herb": {
         "Sizeless": {
-          "Black": "Herb, Black",
-          "Blue": "Herb, Blue",
-          "Green": "Herb, Green",
-          "Orange": "Herb, Orange",
-          "Purple": "Herb, Purple",
-          "Red": "Herb, Red",
-          "White": "Herb, White",
-          "Yellow": "Herb, Yellow"
+          "Black": "HerbBlack",
+          "Blue": "HerbBlue",
+          "Green": "HerbGreen",
+          "Orange": "HerbOrange",
+          "Purple": "HerbPurple",
+          "Red": "HerbRed",
+          "White": "HerbWhite",
+          "Yellow": "HerbYellow"
         }
       },
       "Hex Nut": {
         "Sizeless": {
-          "Colorless": "Hex Nut"
+          "Colorless": "HexNut"
         }
       },
       "Hex Stacker": {
         "Sizeless": {
-          "Black": "Hex Stacker, Black",
-          "Blue": "Hex Stacker, Blue",
-          "Green": "Hex Stacker, Green",
-          "Orange": "Hex Stacker, Orange",
-          "Purple": "Hex Stacker, Purple",
-          "Red": "Hex Stacker, Red",
-          "White": "Hex Stacker, White",
-          "Yellow": "Hex Stacker, Yellow"
+          "Black": "HexStackerBlack",
+          "Blue": "HexStackerBlue",
+          "Green": "HexStackerGreen",
+          "Orange": "HexStackerOrange",
+          "Purple": "HexStackerPurple",
+          "Red": "HexStackerRed",
+          "White": "HexStackerWhite",
+          "Yellow": "HexStackerYellow"
         }
       },
       "Hexbox": {
         "20mm": {
-          "Blue": "Hexbox, 20mm, Blue"
-        }
-      },
-      "Hexbox, Dark": {
-        "20mm": {
-          "Red": "Hexbox, 20mm, Dark Red"
-        }
-      },
-      "Hexbox, Mustard": {
-        "20mm": {
-          "Colorless": "Hexbox, 20mm, Mustard"
+          "Blue": "Hexbox20mmBlue",
+          "Dark Red": "Hexbox20mmDarkRed",
+          "Mustard": "Hexbox20mmMustard"
         }
       },
       "I-Beam": {
@@ -7438,222 +7288,210 @@ const COMPONENT_CATEGORIES = {
       },
       "Ingot, Wood, Aluminum": {
         "Sizeless": {
-          "Colorless": "Ingot, Wood, Aluminum"
+          "Colorless": "IngotWoodAluminum"
         }
       },
       "Ingot, Wood, Brass": {
         "Sizeless": {
-          "Colorless": "Ingot, Wood, Brass"
+          "Colorless": "IngotWoodBrass"
         }
       },
       "Ingot, Wood, Cobalt": {
         "Sizeless": {
-          "Colorless": "Ingot, Wood, Cobalt"
-        }
-      },
-      "Ingot, Wood, Copper": {
-        "Sizeless": {
-          "Colorless": "Ingot, Wood, Copper"
+          "Colorless": "IngotWoodCobalt"
         }
       },
       "Ingot, Wood": {
         "Sizeless": {
-          "Gold": "Ingot, Wood, Gold",
-          "Silver": "Ingot, Wood, Silver"
+          "Copper": "IngotWoodCopper",
+          "Gold": "IngotWoodGold",
+          "Silver": "IngotWoodSilver"
         }
       },
       "Ingot, Wood, Iron": {
         "Sizeless": {
-          "Colorless": "Ingot, Wood, Iron"
+          "Colorless": "IngotWoodIron"
         }
       },
       "Ingot, Wood, Steel": {
         "Sizeless": {
-          "Colorless": "Ingot, Wood, Steel"
+          "Colorless": "IngotWoodSteel"
         }
       },
       "Joystick": {
         "Sizeless": {
-          "Black": "Joystick, Black",
-          "Blue": "Joystick, Blue",
-          "Green": "Joystick, Green",
-          "Orange": "Joystick, Orange",
-          "Purple": "Joystick, Purple",
-          "Red": "Joystick, Red",
-          "White": "Joystick, White",
-          "Yellow": "Joystick, Yellow"
+          "Black": "JoystickBlack",
+          "Blue": "JoystickBlue",
+          "Green": "JoystickGreen",
+          "Orange": "JoystickOrange",
+          "Purple": "JoystickPurple",
+          "Red": "JoystickRed",
+          "White": "JoystickWhite",
+          "Yellow": "JoystickYellow"
         }
       },
       "Joystick, Headless": {
         "Sizeless": {
-          "Black": "Joystick, Headless, Black"
+          "Black": "JoystickHeadlessBlack"
         }
       },
       "Keycard, Fluorescent": {
         "Sizeless": {
-          "Blue": "Keycard, Fluorescent Blue",
-          "Green": "Keycard, Fluorescent Green",
-          "Red": "Keycard, Fluorescent Red",
-          "Yellow": "Keycard, Fluorescent Yellow"
+          "Blue": "KeycardFluorescentBlue",
+          "Green": "KeycardFluorescentGreen",
+          "Red": "KeycardFluorescentRed",
+          "Yellow": "KeycardFluorescentYellow"
         }
       },
-      "Large Star": {
+      "Star": {
         "Large": {
-          "Gold": "Large Star, Gold"
+          "Gold": "LargeStarGold"
         }
       },
       "Leather": {
         "Sizeless": {
-          "Black": "Leather, Black",
-          "Brown": "Leather, Brown",
-          "White": "Leather, White"
+          "Black": "LeatherBlack",
+          "Brown": "LeatherBrown",
+          "White": "LeatherWhite"
         }
       },
       "Light Bulb": {
         "Sizeless": {
-          "Blue": "Light Bulb, Blue",
-          "Gold": "Light Bulb, Gold",
-          "Green": "Light Bulb, Green"
-        }
-      },
-      "Light Bulb, Salmon": {
-        "Sizeless": {
-          "Colorless": "Light Bulb, Salmon"
-        }
-      },
-      "Light Bulb, Taupe": {
-        "Sizeless": {
-          "Colorless": "Light Bulb, Taupe"
+          "Blue": "LightBulbBlue",
+          "Gold": "LightBulbGold",
+          "Green": "LightBulbGreen",
+          "Salmon": "LightBulbSalmon",
+          "Taupe": "LightBulbTaupe"
         }
       },
       "Lightning Bolt": {
         "Sizeless": {
-          "Black": "Lightning Bolt, Black",
-          "Blue": "Lightning Bolt, Blue",
-          "Green": "Lightning Bolt, Green",
-          "Orange": "Lightning Bolt, Orange",
-          "Purple": "Lightning Bolt, Purple",
-          "Red": "Lightning Bolt, Red",
-          "White": "Lightning Bolt, White",
-          "Yellow": "Lightning Bolt, Yellow"
+          "Black": "LightningBoltBlack",
+          "Blue": "LightningBoltBlue",
+          "Green": "LightningBoltGreen",
+          "Orange": "LightningBoltOrange",
+          "Purple": "LightningBoltPurple",
+          "Red": "LightningBoltRed",
+          "White": "LightningBoltWhite",
+          "Yellow": "LightningBoltYellow"
         },
         "Large": {
-          "Orange": "Lightning Bolt, Large, Orange"
+          "Orange": "LightningBoltLargeOrange"
         }
       },
       "Mushroom Cloud": {
         "Sizeless": {
-          "Colorless": "Mushroom Cloud"
+          "Colorless": "MushroomCloud"
         }
       },
       "Octbox": {
         "10mm": {
-          "Black": "Octbox, 10mm, Black",
-          "Blue": "Octbox, 10mm, Blue",
-          "Green": "Octbox, 10mm, Green",
-          "Orange": "Octbox, 10mm, Orange",
-          "Purple": "Octbox, 10mm, Purple",
-          "Red": "Octbox, 10mm, Red",
-          "White": "Octbox, 10mm, White",
-          "Yellow": "Octbox, 10mm, Yellow"
+          "Black": "Octbox10mmBlack",
+          "Blue": "Octbox10mmBlue",
+          "Green": "Octbox10mmGreen",
+          "Orange": "Octbox10mmOrange",
+          "Purple": "Octbox10mmPurple",
+          "Red": "Octbox10mmRed",
+          "White": "Octbox10mmWhite",
+          "Yellow": "Octbox10mmYellow"
         },
         "7mm": {
-          "Yellow": "Octbox, 7mm, Yellow"
+          "Yellow": "Octbox7mmYellow"
         }
       },
       "Octbox, 10mm x 7mm": {
         "Sizeless": {
-          "Blue": "Octbox, 10mm x 7mm, Blue",
-          "Gray": "Octbox, 10mm x 7mm, Gray",
-          "Purple": "Octbox, 10mm x 7mm, Purple"
+          "Blue": "Octbox7mmBlue",
+          "Gray": "Octbox7mmGray",
+          "Purple": "Octbox7mmPurple"
         }
       },
       "Oil Barrel": {
         "Sizeless": {
-          "Colorless": "Oil Barrel"
+          "Colorless": "OilBarrel"
         }
       },
       "Oil Drum, Wood": {
         "Sizeless": {
-          "Blue": "Oil Drum, Wood, Blue"
+          "Blue": "OilDrumWoodBlue"
         }
       },
       "Padlock Key": {
         "Sizeless": {
-          "Black": "Padlock Key, Black",
-          "Blue": "Padlock Key, Blue",
-          "Green": "Padlock Key, Green",
-          "Orange": "Padlock Key, Orange",
-          "Purple": "Padlock Key, Purple",
-          "Red": "Padlock Key, Red",
-          "White": "Padlock Key, White",
-          "Yellow": "Padlock Key, Yellow"
+          "Black": "PadlockKeyBlack",
+          "Blue": "PadlockKeyBlue",
+          "Green": "PadlockKeyGreen",
+          "Orange": "PadlockKeyOrange",
+          "Purple": "PadlockKeyPurple",
+          "Red": "PadlockKeyRed",
+          "White": "PadlockKeyWhite",
+          "Yellow": "PadlockKeyYellow"
         }
       },
       "Padlock, Locked": {
         "Sizeless": {
-          "Black": "Padlock, Locked, Black",
-          "Blue": "Padlock, Locked, Blue",
-          "Green": "Padlock, Locked, Green",
-          "Orange": "Padlock, Locked, Orange",
-          "Purple": "Padlock, Locked, Purple",
-          "Red": "Padlock, Locked, Red",
-          "White": "Padlock, Locked, White",
-          "Yellow": "Padlock, Locked, Yellow"
+          "Black": "PadlockLockedBlack",
+          "Blue": "PadlockLockedBlue",
+          "Green": "PadlockLockedGreen",
+          "Orange": "PadlockLockedOrange",
+          "Purple": "PadlockLockedPurple",
+          "Red": "PadlockLockedRed",
+          "White": "PadlockLockedWhite",
+          "Yellow": "PadlockLockedYellow"
         }
       },
       "Padlock, Unlocked": {
         "Sizeless": {
-          "Black": "Padlock, Unlocked, Black",
-          "Blue": "Padlock, Unlocked, Blue",
-          "Green": "Padlock, Unlocked, Green",
-          "Orange": "Padlock, Unlocked, Orange",
-          "Purple": "Padlock, Unlocked, Purple",
-          "Red": "Padlock, Unlocked, Red",
-          "White": "Padlock, Unlocked, White",
-          "Yellow": "Padlock, Unlocked, Yellow"
+          "Black": "PadlockUnlockedBlack",
+          "Blue": "PadlockUnlockedBlue",
+          "Green": "PadlockUnlockedGreen",
+          "Orange": "PadlockUnlockedOrange",
+          "Purple": "PadlockUnlockedPurple",
+          "Red": "PadlockUnlockedRed",
+          "White": "PadlockUnlockedWhite",
+          "Yellow": "PadlockUnlockedYellow"
         }
       },
       "Premium Bread": {
         "Sizeless": {
-          "Colorless": "Premium Bread"
+          "Colorless": "PremiumBread"
         }
       },
       "Premium Steak": {
         "Sizeless": {
-          "Colorless": "Premium Steak"
+          "Colorless": "PremiumSteak"
         }
       },
-      "Pumpkin, Wood": {
+      "Pumpkin": {
         "Sizeless": {
-          "Colorless": "Pumpkin, Wood"
+          "Wood": "PumpkinWood"
         }
       },
       "Radiation Mask": {
         "Sizeless": {
-          "Colorless": "Radiation Mask"
+          "Colorless": "RadiationMask"
         }
       },
       "Ring": {
         "Sizeless": {
-          "Black": "Ring, Black",
-          "Blue": "Ring, Blue",
-          "Green": "Ring, Green",
-          "Orange": "Ring, Orange",
-          "Purple": "Ring, Purple",
-          "Red": "Ring, Red",
-          "White": "Ring, White",
-          "Yellow": "Ring, Yellow"
+          "Black": "RingBlack",
+          "Blue": "RingBlue",
+          "Green": "RingGreen",
+          "Orange": "RingOrange",
+          "Purple": "RingPurple",
+          "Red": "RingRed",
+          "White": "RingWhite",
+          "Yellow": "RingYellow"
         }
       },
       "Rope Coil": {
         "Sizeless": {
-          "Colorless": "Rope Coil"
+          "Colorless": "RopeCoil"
         }
       },
       "Sack": {
         "Sizeless": {
-          "Gold": "Sack, Gold"
+          "Gold": "SackGold"
         }
       },
       "Sake": {
@@ -7663,8 +7501,8 @@ const COMPONENT_CATEGORIES = {
       },
       "Sheriff Badge": {
         "Sizeless": {
-          "Gold": "Sheriff Badge, Gold",
-          "Silver": "Sheriff Badge, Silver"
+          "Gold": "SheriffBadgeGold",
+          "Silver": "SheriffBadgeSilver"
         }
       },
       "Shotgun": {
@@ -7674,91 +7512,91 @@ const COMPONENT_CATEGORIES = {
       },
       "Stacker Cone": {
         "Sizeless": {
-          "Black": "Stacker Cone, Black",
-          "Blue": "Stacker Cone, Blue",
-          "Green": "Stacker Cone, Green",
-          "Orange": "Stacker Cone, Orange",
-          "Purple": "Stacker Cone, Purple",
-          "Red": "Stacker Cone, Red",
-          "White": "Stacker Cone, White",
-          "Yellow": "Stacker Cone, Yellow"
+          "Black": "StackerConeBlack",
+          "Blue": "StackerConeBlue",
+          "Green": "StackerConeGreen",
+          "Orange": "StackerConeOrange",
+          "Purple": "StackerConePurple",
+          "Red": "StackerConeRed",
+          "White": "StackerConeWhite",
+          "Yellow": "StackerConeYellow"
         }
       },
       "Stacker": {
         "19mm": {
-          "Black": "Stacker, 19mm, Black",
-          "Blue": "Stacker, 19mm, Blue",
-          "Green": "Stacker, 19mm, Green",
-          "Orange": "Stacker, 19mm, Orange",
-          "Purple": "Stacker, 19mm, Purple",
-          "Red": "Stacker, 19mm, Red",
-          "White": "Stacker, 19mm, White",
-          "Yellow": "Stacker, 19mm, Yellow"
+          "Black": "Stacker19mmBlack",
+          "Blue": "Stacker19mmBlue",
+          "Green": "Stacker19mmGreen",
+          "Orange": "Stacker19mmOrange",
+          "Purple": "Stacker19mmPurple",
+          "Red": "Stacker19mmRed",
+          "White": "Stacker19mmWhite",
+          "Yellow": "Stacker19mmYellow"
         },
         "Sizeless": {
-          "Black": "Stacker, Black",
-          "Blue": "Stacker, Blue",
-          "Green": "Stacker, Green",
-          "Orange": "Stacker, Orange",
-          "Purple": "Stacker, Purple",
-          "Red": "Stacker, Red",
-          "White": "Stacker, White",
-          "Yellow": "Stacker, Yellow"
+          "Black": "StackerBlack",
+          "Blue": "StackerBlue",
+          "Green": "StackerGreen",
+          "Orange": "StackerOrange",
+          "Purple": "StackerPurple",
+          "Red": "StackerRed",
+          "White": "StackerWhite",
+          "Yellow": "StackerYellow"
         }
       },
       "Star, Wood": {
         "Sizeless": {
-          "Black": "Star, Wood, Black",
-          "Green": "Star, Wood, Green",
-          "Purple": "Star, Wood, Purple",
-          "Red": "Star, Wood, Red"
+          "Black": "StarWoodBlack",
+          "Green": "StarWoodGreen",
+          "Purple": "StarWoodPurple",
+          "Red": "StarWoodRed"
         }
       },
       "Stick, Acrylic, Opaque": {
         "Sizeless": {
-          "Black": "Stick, Acrylic, Opaque, Black",
-          "Gold": "Stick, Acrylic, Opaque, Gold",
-          "Silver": "Stick, Acrylic, Opaque, Silver",
-          "White": "Stick, Acrylic, Opaque, White"
+          "Black": "StickAcrylicOpaqueBlack",
+          "Gold": "StickAcrylicOpaqueGold",
+          "Silver": "StickAcrylicOpaqueSilver",
+          "White": "StickAcrylicOpaqueWhite"
         }
       },
       "Stick, Acrylic, Transparent": {
         "Sizeless": {
-          "Black": "Stick, Acrylic, Transparent, Black",
-          "Blue": "Stick, Acrylic, Transparent, Blue",
-          "Green": "Stick, Acrylic, Transparent, Green",
-          "orange": "Stick, Acrylic, Transparent, orange",
-          "Purple": "Stick, Acrylic, Transparent, Purple",
-          "Red": "Stick, Acrylic, Transparent, Red",
-          "White": "Stick, Acrylic, Transparent, White",
-          "Yellow": "Stick, Acrylic, Transparent, Yellow"
+          "Black": "StickAcrylicTransparentBlack",
+          "Blue": "StickAcrylicTransparentBlue",
+          "Green": "StickAcrylicTransparentGreen",
+          "orange": "StickAcrylicTransparentorange",
+          "Purple": "StickAcrylicTransparentPurple",
+          "Red": "StickAcrylicTransparentRed",
+          "White": "StickAcrylicTransparentWhite",
+          "Yellow": "StickAcrylicTransparentYellow"
         }
       },
       "Stick, Acrylic, Transparent, Clear": {
         "Sizeless": {
-          "Colorless": "Stick, Acrylic, Transparent, Clear"
+          "Colorless": "StickAcrylicTransparentClear"
         }
       },
       "Stick, Wood": {
         "Sizeless": {
-          "Black": "Stick, Wood, Black",
-          "Blue": "Stick, Wood, Blue",
-          "Green": "Stick, Wood, Green",
-          "Orange": "Stick, Wood, Orange",
-          "Purple": "Stick, Wood, Purple",
-          "Red": "Stick, Wood, Red",
-          "White": "Stick, Wood, White",
-          "Yellow": "Stick, Wood, Yellow"
+          "Black": "StickWoodBlack",
+          "Blue": "StickWoodBlue",
+          "Green": "StickWoodGreen",
+          "Orange": "StickWoodOrange",
+          "Purple": "StickWoodPurple",
+          "Red": "StickWoodRed",
+          "White": "StickWoodWhite",
+          "Yellow": "StickWoodYellow"
         }
       },
       "Stone Arrowhead": {
         "Sizeless": {
-          "Colorless": "Stone Arrowhead"
+          "Colorless": "StoneArrowhead"
         }
       },
-      "Stone, Wood": {
+      "Stone": {
         "Sizeless": {
-          "Colorless": "Stone, Wood"
+          "Wood": "StoneWood"
         }
       },
       "Sword": {
@@ -7768,97 +7606,97 @@ const COMPONENT_CATEGORIES = {
       },
       "Tablet, Stone": {
         "Sizeless": {
-          "Colorless": "Tablet, Stone"
+          "Colorless": "TabletStone"
         }
       },
       "Tactical Knife": {
         "Sizeless": {
-          "Colorless": "Tactical Knife"
+          "Colorless": "TacticalKnife"
         }
       },
       "Thimble ": {
         "Sizeless": {
-          "Colorless": "Thimble "
+          "Colorless": "Thimble"
         }
       },
       "Thin Star": {
         "Sizeless": {
-          "Gray": "Thin Star, Gray"
+          "Gray": "ThinStarGray"
         }
       },
       "Triangle": {
         "Sizeless": {
-          "Black": "Triangle, Black",
-          "Blue": "Triangle, Blue",
-          "Green": "Triangle, Green",
-          "Pink": "Triangle, Pink"
+          "Black": "TriangleBlack",
+          "Blue": "TriangleBlue",
+          "Green": "TriangleGreen",
+          "Pink": "TrianglePink"
         }
       },
       "Triangle, Hollow": {
         "Sizeless": {
-          "Colorless": "Triangle, Hollow"
+          "Colorless": "TriangleHollow"
         }
       },
       "Wood Logs": {
         "Sizeless": {
-          "Colorless": "Wood Logs"
+          "Colorless": "WoodLogs"
         }
       },
       "Wood Pile": {
         "Sizeless": {
-          "Colorless": "Wood Pile"
+          "Colorless": "WoodPile"
         }
       },
       "D6, Alchemy": {
         "Sizeless": {
-          "Orange": "D6, Alchemy, Orange"
+          "Orange": "D6AlchemyOrange"
         }
       },
       "D6, Damage": {
         "Sizeless": {
-          "Black": "D6, Damage, Black"
+          "Black": "D6DamageBlack"
         }
       },
       "D6, Industry": {
         "Sizeless": {
-          "Gray": "D6, Industry, Gray"
+          "Gray": "D6IndustryGray"
         }
       },
       "D6, Nature": {
         "Sizeless": {
-          "Green": "D6, Nature, Green"
+          "Green": "D6NatureGreen"
         }
       },
       "D6, Oxygen": {
         "Sizeless": {
-          "Blue": "D6, Oxygen, Blue"
+          "Blue": "D6OxygenBlue"
         }
       },
       "D6, Temperature": {
         "Sizeless": {
-          "Red": "D6, Temperature, Red"
+          "Red": "D6TemperatureRed"
         }
       },
       "LED": {
         "Sizeless": {
-          "Black": "LED, Black",
-          "Blue": "LED, Blue",
-          "Green": "LED, Green",
-          "Orange": "LED, Orange",
-          "Purple": "LED, Purple",
-          "Red": "LED, Red",
-          "White": "LED, White",
-          "Yellow": "LED, Yellow"
+          "Black": "LEDBlack",
+          "Blue": "LEDBlue",
+          "Green": "LEDGreen",
+          "Orange": "LEDOrange",
+          "Purple": "LEDPurple",
+          "Red": "LEDRed",
+          "White": "LEDWhite",
+          "Yellow": "LEDYellow"
         }
       },
       "Premium Carrot": {
         "Sizeless": {
-          "Colorless": "Premium Carrot"
+          "Colorless": "PremiumCarrot"
         }
       },
       "Premium Cheese Wedge": {
         "Sizeless": {
-          "Colorless": "Premium Cheese Wedge"
+          "Colorless": "PremiumCheeseWedge"
         }
       }
     },
@@ -7870,34 +7708,34 @@ const COMPONENT_CATEGORIES = {
       },
       "Chess Set, Half": {
         "Sizeless": {
-          "Black": "Chess Set, Half, Black",
-          "Blue": "Chess Set, Half, Blue",
-          "Green": "Chess Set, Half, Green",
-          "Orange": "Chess Set, Half, Orange",
-          "Purple": "Chess Set, Half, Purple",
-          "Red": "Chess Set, Half, Red",
-          "White": "Chess Set, Half, White",
-          "Yellow": "Chess Set, Half, Yellow"
+          "Black": "ChessSetHalfBlack",
+          "Blue": "ChessSetHalfBlue",
+          "Green": "ChessSetHalfGreen",
+          "Orange": "ChessSetHalfOrange",
+          "Purple": "ChessSetHalfPurple",
+          "Red": "ChessSetHalfRed",
+          "White": "ChessSetHalfWhite",
+          "Yellow": "ChessSetHalfYellow"
         }
       },
       "Cog's 2024 Calendar": {
         "Sizeless": {
-          "Colorless": "Cog's 2024 Calendar"
+          "Colorless": "Cog's2024Calendar"
         }
       },
       "deadEarth Player's Handbook": {
         "Sizeless": {
-          "Colorless": "deadEarth Player's Handbook"
+          "Colorless": "deadEarthPlayer'sHandbook"
         }
       },
       "Designers Table Cover": {
         "Sizeless": {
-          "Colorless": "Designers Table Cover"
+          "Colorless": "DesignersTableCover"
         }
       },
       "Dominoes": {
         "Small": {
-          "Colorless": "Dominoes, Small"
+          "Colorless": "DominoesSmall"
         }
       },
       "Dynamite": {
@@ -7907,77 +7745,77 @@ const COMPONENT_CATEGORIES = {
       },
       "Electricity Symbol": {
         "Sizeless": {
-          "Green": "Electricity Symbol, Green"
+          "Green": "ElectricitySymbolGreen"
         }
       },
       "Explorer, Set of 3 (Assorted Colors)": {
         "Sizeless": {
-          "Colorless": "Explorer, Set of 3 (Assorted Colors)"
+          "Colorless": "ExplorerSetof3(AssortedColors)"
         }
       },
       "Fail Faster Playtesting Journal": {
         "Sizeless": {
-          "Colorless": "Fail Faster Playtesting Journal"
+          "Colorless": "FailFasterPlaytestingJournal"
         }
       },
-      "Figures, Missionary, Set of 5": {
+      "Figures, Missionary, Set of": {
         "5": {
-          "Colorless": "Figures, Missionary, Set of 5"
+          "Colorless": "FiguresMissionarySetof5"
         }
       },
-      "Figures, Sci-Fi, Set of 10": {
+      "Figures, Sci-Fi, Set of": {
         "10": {
-          "Colorless": "Figures, Sci-Fi, Set of 10"
+          "Colorless": "FiguresSci-FiSetof10"
         }
       },
-      "Figures, Soldier, Set of 5": {
+      "Figures, Soldier, Set of": {
         "5": {
-          "Colorless": "Figures, Soldier, Set of 5"
+          "Colorless": "FiguresSoldierSetof5"
         }
       },
-      "Figures, Steampunk, Set of 14": {
+      "Figures, Steampunk, Set of": {
         "14": {
-          "Colorless": "Figures, Steampunk, Set of 14"
+          "Colorless": "FiguresSteampunkSetof14"
         }
       },
       "Galley Longship": {
         "Sizeless": {
-          "Green": "Galley Longship, Green"
+          "Green": "GalleyLongshipGreen"
         }
       },
       "Game Master's Screen": {
         "Sizeless": {
-          "Colorless": "Game Master's Screen"
+          "Colorless": "GameMaster'sScreen"
         }
       },
       "Gift Certificate $25": {
         "Sizeless": {
-          "Colorless": "Gift Certificate $25"
+          "Colorless": "GiftCertificate$25"
         }
       },
       "Gift Certificate $5": {
         "Sizeless": {
-          "Colorless": "Gift Certificate $5"
+          "Colorless": "GiftCertificate$5"
         }
       },
       "Glue Dots Sheet": {
         "Sizeless": {
-          "Colorless": "Glue Dots Sheet"
+          "Colorless": "GlueDotsSheet"
         }
       },
       "Landmark Base": {
         "Sizeless": {
-          "Colorless": "Landmark Base"
+          "Colorless": "LandmarkBase"
         }
       },
       "Male Farmer": {
         "Sizeless": {
-          "Purple": "Male Farmer, Purple"
+          "Purple": "MaleFarmerPurple"
         }
       },
       "Mini Storage Box": {
         "Sizeless": {
-          "Purple": "Mini Storage Box, Purple"
+          "Purple": "MiniStorageBoxPurple"
         }
       },
       "Musketeer": {
@@ -7987,205 +7825,205 @@ const COMPONENT_CATEGORIES = {
       },
       "Pernicious Puzzle #1": {
         "Sizeless": {
-          "Colorless": "Pernicious Puzzle #1"
+          "Colorless": "PerniciousPuzzle#1"
         }
       },
       "Sheet of 1\" Gold Scratch Off Circle Stickers": {
         "Sizeless": {
-          "Colorless": "Sheet of 1\" Gold Scratch Off Circle Stickers"
+          "Colorless": "Sheetof1\"GoldScratchOffCircleStickers"
         }
       },
       "Sheet of 1\" Silver Scratch Off Circle Stickers": {
         "Sizeless": {
-          "Colorless": "Sheet of 1\" Silver Scratch Off Circle Stickers"
+          "Colorless": "Sheetof1\"SilverScratchOffCircleStickers"
         }
       },
       "Sheet of Rectangle Scratch Off Sitckers": {
         "Sizeless": {
-          "Colorless": "Sheet of Rectangle Scratch Off Sitckers"
+          "Colorless": "SheetofRectangleScratchOffSitckers"
         }
       },
       "Space Ranger Guns": {
         "Sizeless": {
-          "Colorless": "Space Ranger Guns"
+          "Colorless": "SpaceRangerGuns"
         }
       },
       "Space Ranger II w/ Armament": {
         "Sizeless": {
-          "Colorless": "Space Ranger II w/ Armament"
+          "Colorless": "SpaceRangerIIw/Armament"
         }
       },
       "Space Ranger w/ Armament": {
         "Sizeless": {
-          "Colorless": "Space Ranger w/ Armament"
+          "Colorless": "SpaceRangerw/Armament"
         }
       },
       "Sprue, Ages, Beige": {
         "Sizeless": {
-          "Colorless": "Sprue, Ages, Beige"
+          "Colorless": "SprueAgesBeige"
         }
       },
       "Sprue, Ages": {
         "Sizeless": {
-          "Black": "Sprue, Ages, Black",
-          "Purple": "Sprue, Ages, Purple",
-          "Yellow": "Sprue, Ages, Yellow"
+          "Black": "SprueAgesBlack",
+          "Purple": "SprueAgesPurple",
+          "Yellow": "SprueAgesYellow"
         }
       },
       "Sprue, Ages, Tan": {
         "Sizeless": {
-          "Colorless": "Sprue, Ages, Tan"
+          "Colorless": "SprueAgesTan"
         }
       },
       "Sprue, Civil War Horse": {
         "Sizeless": {
-          "Black": "Sprue, Civil War Horse, Black",
-          "Brown": "Sprue, Civil War Horse, Brown"
+          "Black": "SprueCivilWarHorseBlack",
+          "Brown": "SprueCivilWarHorseBrown"
         }
       },
       "Sprue, Civil War Military": {
         "Sizeless": {
-          "Blue": "Sprue, Civil War Military, Blue",
-          "Gray": "Sprue, Civil War Military, Gray",
-          "Red": "Sprue, Civil War Military, Red"
+          "Blue": "SprueCivilWarMilitaryBlue",
+          "Gray": "SprueCivilWarMilitaryGray",
+          "Red": "SprueCivilWarMilitaryRed"
         }
       },
       "Sprue, Civil War Military, Lt": {
         "Sizeless": {
-          "Blue": "Sprue, Civil War Military, Lt Blue"
+          "Blue": "SprueCivilWarMilitaryLtBlue"
         }
       },
       "Sprue, Civilization": {
         "Sizeless": {
-          "Blue": "Sprue, Civilization, Blue",
-          "Green": "Sprue, Civilization, Green",
-          "Gray": "Sprue, Civilization, Gray",
-          "Purple": "Sprue, Civilization, Purple",
-          "Yellow": "Sprue, Civilization, Yellow"
+          "Blue": "SprueCivilizationBlue",
+          "Green": "SprueCivilizationGreen",
+          "Gray": "SprueCivilizationGray",
+          "Purple": "SprueCivilizationPurple",
+          "Yellow": "SprueCivilizationYellow"
         }
       },
       "Sprue, Egypt Myth": {
         "Sizeless": {
-          "Brown": "Sprue, Egypt Myth, Brown"
+          "Brown": "SprueEgyptMythBrown"
         }
       },
       "Sprue, Norse Myth, Dk": {
         "Sizeless": {
-          "Blue": "Sprue, Norse Myth, Dk Blue"
+          "Blue": "SprueNorseMythDkBlue"
         }
       },
       "Sprue, Norse Myth, Lt": {
         "Sizeless": {
-          "Blue": "Sprue, Norse Myth, Lt Blue"
+          "Blue": "SprueNorseMythLtBlue"
         }
       },
       "Sprue, Norse Myth, Med": {
         "Sizeless": {
-          "Blue": "Sprue, Norse Myth, Med Blue"
+          "Blue": "SprueNorseMythMedBlue"
         }
       },
       "Stake Bed Truck": {
         "Sizeless": {
-          "Black": "Stake Bed Truck, Black"
+          "Black": "StakeBedTruckBlack"
         }
       },
       "Standee, TGC": {
         "Sizeless": {
-          "Colorless": "Standee, TGC"
+          "Colorless": "StandeeTGC"
         }
       },
       "TCID Lockdown Minimum Security Promo Pack": {
         "Sizeless": {
-          "Colorless": "TCID Lockdown Minimum Security Promo Pack"
+          "Colorless": "TCIDLockdownMinimumSecurityPromoPack"
         }
       },
       "TGC Follies - Shamrock Pack": {
         "Sizeless": {
-          "Colorless": "TGC Follies - Shamrock Pack"
+          "Colorless": "TGCFollies-ShamrockPack"
         }
       },
       "Woman, High Society": {
         "Sizeless": {
-          "Colorless": "Woman, High Society"
+          "Colorless": "WomanHighSociety"
         }
       },
       "Black 7 Piece Dice Set": {
         "Sizeless": {
-          "Colorless": "Black 7 Piece Dice Set"
+          "Colorless": "Black7PieceDiceSet"
         }
       },
       "Blue 7 Piece Dice Set": {
         "Sizeless": {
-          "Colorless": "Blue 7 Piece Dice Set"
+          "Colorless": "Blue7PieceDiceSet"
         }
       },
       "Green 7 Piece Dice Set": {
         "Sizeless": {
-          "Colorless": "Green 7 Piece Dice Set"
+          "Colorless": "Green7PieceDiceSet"
         }
       },
       "InFUNity Tile, Hat": {
         "Sizeless": {
-          "Black": "InFUNity Tile, Hat, Black",
-          "Blue": "InFUNity Tile, Hat, Blue",
-          "Green": "InFUNity Tile, Hat, Green",
-          "Orange": "InFUNity Tile, Hat, Orange",
-          "Purple": "InFUNity Tile, Hat, Purple",
-          "Red": "InFUNity Tile, Hat, Red",
-          "White": "InFUNity Tile, Hat, White",
-          "Yellow": "InFUNity Tile, Hat, Yellow"
+          "Black": "InFUNityTileHatBlack",
+          "Blue": "InFUNityTileHatBlue",
+          "Green": "InFUNityTileHatGreen",
+          "Orange": "InFUNityTileHatOrange",
+          "Purple": "InFUNityTileHatPurple",
+          "Red": "InFUNityTileHatRed",
+          "White": "InFUNityTileHatWhite",
+          "Yellow": "InFUNityTileHatYellow"
         }
       },
       "InFUNity Tile, Turtle": {
         "Sizeless": {
-          "Black": "InFUNity Tile, Turtle, Black",
-          "Blue": "InFUNity Tile, Turtle, Blue",
-          "Green": "InFUNity Tile, Turtle, Green",
-          "Orange": "InFUNity Tile, Turtle, Orange",
-          "Purple": "InFUNity Tile, Turtle, Purple",
-          "Red": "InFUNity Tile, Turtle, Red",
-          "White": "InFUNity Tile, Turtle, White",
-          "Yellow": "InFUNity Tile, Turtle, Yellow"
+          "Black": "InFUNityTileTurtleBlack",
+          "Blue": "InFUNityTileTurtleBlue",
+          "Green": "InFUNityTileTurtleGreen",
+          "Orange": "InFUNityTileTurtleOrange",
+          "Purple": "InFUNityTileTurtlePurple",
+          "Red": "InFUNityTileTurtleRed",
+          "White": "InFUNityTileTurtleWhite",
+          "Yellow": "InFUNityTileTurtleYellow"
         }
       },
       "Orange 7 Piece Dice Set": {
         "Sizeless": {
-          "Colorless": "Orange 7 Piece Dice Set"
+          "Colorless": "Orange7PieceDiceSet"
         }
       },
       "Phase Shift Games | Boblin's Rebellion | 1-4 players": {
         "Sizeless": {
-          "Colorless": "Phase Shift Games | Boblin's Rebellion | 1-4 players"
+          "Colorless": "PhaseShiftGames|Boblin'sRebellion|1-4players"
         }
       },
       "Phase Shift Games | Flutter | 2-5 players": {
         "Sizeless": {
-          "Colorless": "Phase Shift Games | Flutter | 2-5 players"
+          "Colorless": "PhaseShiftGames|Flutter|2-5players"
         }
       },
       "Phase Shift Games | Obelus | 2 players": {
         "Sizeless": {
-          "Colorless": "Phase Shift Games | Obelus | 2 players"
+          "Colorless": "PhaseShiftGames|Obelus|2players"
         }
       },
       "Purple 7 Piece Dice Set": {
         "Sizeless": {
-          "Colorless": "Purple 7 Piece Dice Set"
+          "Colorless": "Purple7PieceDiceSet"
         }
       },
       "Red 7 Piece Dice Set": {
         "Sizeless": {
-          "Colorless": "Red 7 Piece Dice Set"
+          "Colorless": "Red7PieceDiceSet"
         }
       },
       "White 7 Piece Dice Set": {
         "Sizeless": {
-          "Colorless": "White 7 Piece Dice Set"
+          "Colorless": "White7PieceDiceSet"
         }
       },
       "Yellow 7 Piece Dice Set": {
         "Sizeless": {
-          "Colorless": "Yellow 7 Piece Dice Set"
+          "Colorless": "Yellow7PieceDiceSet"
         }
       }
     }
@@ -8194,433 +8032,385 @@ const COMPONENT_CATEGORIES = {
     "packaging": {
       "Mint Tin": {
         "Sizeless": {
-          "Colorless": "Mint Tin"
+          "Colorless": "MintTin"
+        },
+        "Tall": {
+          "Colorless": "TallMintTin"
         }
       },
-      "Small Stout Box": {
+      "Stout Box": {
         "Small": {
-          "Colorless": "Small Stout Box"
-        }
-      },
-      "Medium Stout Box": {
+          "Colorless": "SmallStoutBox"
+        },
         "Medium": {
-          "Colorless": "Medium Stout Box"
-        }
-      },
-      "Large Stout Box": {
+          "Colorless": "MediumStoutBox"
+        },
         "Large": {
-          "Colorless": "Large Stout Box"
+          "Colorless": "LargeStoutBox"
         }
       },
       "Poker Booster": {
         "Sizeless": {
-          "Colorless": "Poker Booster"
+          "Colorless": "PokerBooster"
         }
       },
-      "Poker Tuck Box 36": {
+      "Poker Tuck Box": {
         "36": {
-          "Colorless": "Poker Tuck Box 36"
-        }
-      },
-      "Poker Tuck Box 54": {
+          "Colorless": "PokerTuckBox36"
+        },
         "54": {
-          "Colorless": "Poker Tuck Box 54"
-        }
-      },
-      "Poker Tuck Box 72": {
+          "Colorless": "PokerTuckBox54"
+        },
         "72": {
-          "Colorless": "Poker Tuck Box 72"
-        }
-      },
-      "Poker Tuck Box 90": {
+          "Colorless": "PokerTuckBox72"
+        },
         "90": {
-          "Colorless": "Poker Tuck Box 90"
-        }
-      },
-      "Poker Tuck Box 108": {
+          "Colorless": "PokerTuckBox90"
+        },
         "108": {
-          "Colorless": "Poker Tuck Box 108"
+          "Colorless": "PokerTuckBox108"
         }
       },
-      "Bridge Hook Box 108": {
-        "108": {
-          "Colorless": "Bridge Hook Box 108"
-        }
-      },
-      "Bridge Hook Box 54": {
+      "Bridge Hook Box": {
         "54": {
-          "Colorless": "Bridge Hook Box 54"
-        }
-      },
-      "Bridge Tuck Box 108": {
+          "Colorless": "BridgeHookBox54"
+        },
         "108": {
-          "Colorless": "Bridge Tuck Box 108"
+          "Colorless": "BridgeHookBox108"
         }
       },
-      "Bridge Tuck Box 54": {
+      "Bridge Tuck Box": {
         "54": {
-          "Colorless": "Bridge Tuck Box 54"
+          "Colorless": "BridgeTuckBox54"
+        },
+        "108": {
+          "Colorless": "BridgeTuckBox108"
         }
       },
-      "Jumbo Hook Box 36": {
+      "Jumbo Hook Box": {
         "36": {
-          "Colorless": "Jumbo Hook Box 36"
-        }
-      },
-      "Jumbo Hook Box 90": {
+          "Colorless": "JumboHookBox36"
+        },
         "90": {
-          "Colorless": "Jumbo Hook Box 90"
+          "Colorless": "JumboHookBox90"
         }
       },
-      "Jumbo Tuck Box 90": {
+      "Jumbo Tuck Box": {
         "90": {
-          "Colorless": "Jumbo Tuck Box 90"
+          "Colorless": "JumboTuckBox90"
         }
       },
-      "Large Prototype Box": {
+      "Prototype Box": {
         "Large": {
-          "Colorless": "Large Prototype Box"
-        }
-      },
-      "Large Retail Box": {
-        "Large": {
-          "Colorless": "Large Retail Box"
-        }
-      },
-      "Large Stout Box Top": {
-        "Large": {
-          "Colorless": "Large Stout Box Top"
-        }
-      },
-      "Large Stout Box Top And Side": {
-        "Large": {
-          "Colorless": "Large Stout Box Top And Side"
-        }
-      },
-      "Medium Pro Box": {
+          "Colorless": "LargePrototypeBox"
+        },
         "Medium": {
-          "Colorless": "Medium Pro Box"
+          "Colorless": "MediumPrototypeBox"
+        },
+        "Small": {
+          "Colorless": "SmallPrototypeBox"
         }
       },
-      "Medium Prototype Box": {
-        "Medium": {
-          "Colorless": "Medium Prototype Box"
+      "Retail Box": {
+        "Large": {
+          "Colorless": "LargeRetailBox"
         }
       },
-      "Medium Stout Box Top And Side": {
+      "Stout Box Top": {
+        "Large": {
+          "Colorless": "LargeStoutBoxTop"
+        }
+      },
+      "Stout Box Top And Side": {
+        "Large": {
+          "Colorless": "LargeStoutBoxTopAndSide"
+        },
         "Medium": {
-          "Colorless": "Medium Stout Box Top And Side"
+          "Colorless": "MediumStoutBoxTopAndSide"
+        }
+      },
+      "Pro Box": {
+        "Medium": {
+          "Colorless": "MediumProBox"
+        },
+        "Small": {
+          "Colorless": "SmallProBox"
         }
       },
       "Mint Tin Sticker": {
         "Sizeless": {
-          "Colorless": "Mint Tin Sticker"
+          "Colorless": "MintTinSticker"
         }
       },
       "Poker Booster Box": {
         "Sizeless": {
-          "Colorless": "Poker Booster Box"
+          "Colorless": "PokerBoosterBox"
         }
       },
       "Poker Envelope": {
         "Sizeless": {
-          "Colorless": "Poker Envelope"
+          "Colorless": "PokerEnvelope"
         }
       },
-      "Poker Hook Box 108": {
-        "108": {
-          "Colorless": "Poker Hook Box 108"
-        }
-      },
-      "Poker Hook Box 36": {
-        "36": {
-          "Colorless": "Poker Hook Box 36"
-        }
-      },
-      "Poker Hook Box 18": {
+      "Poker Hook Box": {
         "18": {
-          "Colorless": "Poker Hook Box 18"
-        }
-      },
-      "Poker Hook Box 54": {
+          "Colorless": "PokerHookBox18"
+        },
+        "36": {
+          "Colorless": "PokerHookBox36"
+        },
         "54": {
-          "Colorless": "Poker Hook Box 54"
-        }
-      },
-      "Poker Hook Box 72": {
+          "Colorless": "PokerHookBox54"
+        },
         "72": {
-          "Colorless": "Poker Hook Box 72"
-        }
-      },
-      "Poker Hook Box 90": {
+          "Colorless": "PokerHookBox72"
+        },
         "90": {
-          "Colorless": "Poker Hook Box 90"
+          "Colorless": "PokerHookBox90"
+        },
+        "108": {
+          "Colorless": "PokerHookBox108"
         }
       },
-      "Small Pro Box": {
-        "Small": {
-          "Colorless": "Small Pro Box"
-        }
-      },
-      "Small Prototype Box": {
-        "Small": {
-          "Colorless": "Small Prototype Box"
-        }
-      },
-      "Square Hook Box 48": {
+      "Square Hook Box": {
         "48": {
-          "Colorless": "Square Hook Box 48"
-        }
-      },
-      "Square Hook Box 96": {
+          "Colorless": "SquareHookBox48"
+        },
         "96": {
-          "Colorless": "Square Hook Box 96"
+          "Colorless": "SquareHookBox96"
         }
       },
-      "Square Tuck Box 48": {
+      "Square Tuck Box": {
         "48": {
-          "Colorless": "Square Tuck Box 48"
-        }
-      },
-      "Square Tuck Box 96": {
+          "Colorless": "SquareTuckBox48"
+        },
         "96": {
-          "Colorless": "Square Tuck Box 96"
+          "Colorless": "SquareTuckBox96"
         }
       },
-      "Tarot Hook Box 40": {
+      "Tarot Hook Box": {
         "40": {
-          "Colorless": "Tarot Hook Box 40"
-        }
-      },
-      "Tarot Hook Box 90": {
+          "Colorless": "TarotHookBox40"
+        },
         "90": {
-          "Colorless": "Tarot Hook Box 90"
+          "Colorless": "TarotHookBox90"
         }
       },
-      "Tarot Tuck Box 40": {
+      "Tarot Tuck Box": {
         "40": {
-          "Colorless": "Tarot Tuck Box 40"
-        }
-      },
-      "Tarot Tuck Box 90": {
+          "Colorless": "TarotTuckBox40"
+        },
         "90": {
-          "Colorless": "Tarot Tuck Box 90"
-        }
-      },
-      "Tall Mint Tin": {
-        "Tall": {
-          "Colorless": "Tall Mint Tin"
+          "Colorless": "TarotTuckBox90"
         }
       },
       "VHS Box": {
         "Sizeless": {
-          "Colorless": "VHS Box"
+          "Colorless": "VHSBox"
         }
       }
     },
     "stickers": {
       "Custom Large Sticker": {
         "Sizeless": {
-          "Colorless": "Custom Large Sticker"
+          "Colorless": "CustomLargeSticker"
         }
       },
       "Custom Medium Sticker": {
         "Sizeless": {
-          "Colorless": "Custom Medium Sticker"
+          "Colorless": "CustomMediumSticker"
         }
       },
       "Custom Mini Sticker": {
         "Sizeless": {
-          "Colorless": "Custom Mini Sticker"
+          "Colorless": "CustomMiniSticker"
         }
       },
       "Custom Small Sticker": {
         "Sizeless": {
-          "Colorless": "Custom Small Sticker"
+          "Colorless": "CustomSmallSticker"
         }
       },
       "Meeple Sticker": {
         "Sizeless": {
-          "Colorless": "Meeple Sticker"
+          "Colorless": "MeepleSticker"
         }
       },
       "Pawn Sticker": {
         "Sizeless": {
-          "Colorless": "Pawn Sticker"
+          "Colorless": "PawnSticker"
         }
       }
     },
     "deck": {
       "Business Deck": {
         "Sizeless": {
-          "Colorless": "Business Deck"
+          "Colorless": "BusinessDeck"
         }
       },
       "Poker Deck": {
         "Sizeless": {
-          "Colorless": "Poker Deck"
+          "Colorless": "PokerDeck"
         }
       },
       "Jumbo Deck": {
         "Sizeless": {
-          "Colorless": "Jumbo Deck"
+          "Colorless": "JumboDeck"
         }
       },
       "Mini Deck": {
         "Sizeless": {
-          "Colorless": "Mini Deck"
+          "Colorless": "MiniDeck"
         }
       },
       "Micro Deck": {
         "Sizeless": {
-          "Colorless": "Micro Deck"
+          "Colorless": "MicroDeck"
         }
       },
       "Mint Tin Deck": {
         "Sizeless": {
-          "Colorless": "Mint Tin Deck"
+          "Colorless": "MintTinDeck"
         }
       },
       "Hex Deck": {
         "Sizeless": {
-          "Colorless": "Hex Deck"
+          "Colorless": "HexDeck"
         }
       },
       "Bridge Deck": {
         "Sizeless": {
-          "Colorless": "Bridge Deck"
+          "Colorless": "BridgeDeck"
         }
       },
       "Card Crafting Deck": {
         "Sizeless": {
-          "Colorless": "Card Crafting Deck"
+          "Colorless": "CardCraftingDeck"
         }
       },
       "Circle Deck": {
         "Sizeless": {
-          "Colorless": "Circle Deck"
+          "Colorless": "CircleDeck"
         }
       },
       "Clear Card Crafting Deck": {
         "Sizeless": {
-          "Colorless": "Clear Card Crafting Deck"
+          "Colorless": "ClearCardCraftingDeck"
         }
       },
       "Clear Euro Poker Deck": {
         "Sizeless": {
-          "Colorless": "Clear Euro Poker Deck"
+          "Colorless": "ClearEuroPokerDeck"
         }
       },
       "Deck Box": {
         "Sizeless": {
-          "Colorless": "Deck Box"
+          "Colorless": "DeckBox"
         }
       },
       "Deck Box Top And Side": {
         "Sizeless": {
-          "Colorless": "Deck Box Top And Side"
+          "Colorless": "DeckBoxTopAndSide"
         }
       },
       "Divider Deck": {
         "Sizeless": {
-          "Colorless": "Divider Deck"
+          "Colorless": "DividerDeck"
         }
       },
       "Domino Deck": {
         "Sizeless": {
-          "Colorless": "Domino Deck"
+          "Colorless": "DominoDeck"
         }
       },
       "Euro Poker Deck": {
         "Sizeless": {
-          "Colorless": "Euro Poker Deck"
+          "Colorless": "EuroPokerDeck"
         }
       },
       "Euro Square Deck": {
         "Sizeless": {
-          "Colorless": "Euro Square Deck"
+          "Colorless": "EuroSquareDeck"
         }
       },
       "Foil Euro Poker Deck": {
         "Sizeless": {
-          "Colorless": "Foil Euro Poker Deck"
+          "Colorless": "FoilEuroPokerDeck"
         }
       },
       "Foil Poker Deck": {
         "Sizeless": {
-          "Colorless": "Foil Poker Deck"
+          "Colorless": "FoilPokerDeck"
         }
       },
       "Foil Tarot Deck": {
         "Sizeless": {
-          "Colorless": "Foil Tarot Deck"
+          "Colorless": "FoilTarotDeck"
         }
       },
       "Play Money": {
         "Sizeless": {
-          "Colorless": "Play Money"
+          "Colorless": "PlayMoney"
         }
       },
-      "Small Pro Tarot Insert": {
+      "Pro Tarot Insert": {
         "Small": {
-          "Colorless": "Small Pro Tarot Insert"
-        }
-      },
-      "Small Square Deck": {
-        "Small": {
-          "Colorless": "Small Square Deck"
-        }
-      },
-      "Small Stout Tarot Insert": {
-        "Small": {
-          "Colorless": "Small Stout Tarot Insert"
+          "Colorless": "SmallProTarotInsert"
         }
       },
       "Square Deck": {
+        "Small": {
+          "Colorless": "SmallSquareDeck"
+        },
         "Sizeless": {
-          "Colorless": "Square Deck"
+          "Colorless": "SquareDeck"
+        }
+      },
+      "Stout Tarot Insert": {
+        "Small": {
+          "Colorless": "SmallStoutTarotInsert"
         }
       },
       "Tarot Deck": {
         "Sizeless": {
-          "Colorless": "Tarot Deck"
+          "Colorless": "TarotDeck"
         }
       },
       "Trading Deck": {
         "Sizeless": {
-          "Colorless": "Trading Deck"
+          "Colorless": "TradingDeck"
         }
       },
       "US Game Deck": {
         "Sizeless": {
-          "Colorless": "US Game Deck"
+          "Colorless": "USGameDeck"
         }
       }
     },
     "die": {
       "Custom Color D4": {
         "Sizeless": {
-          "Colorless": "Custom Color D4"
+          "Colorless": "CustomColorD4"
         }
       },
       "Custom Color D6": {
         "Sizeless": {
-          "Colorless": "Custom Color D6"
+          "Colorless": "CustomColorD6"
         }
       },
       "Custom Color D8": {
         "Sizeless": {
-          "Colorless": "Custom Color D8"
+          "Colorless": "CustomColorD8"
         }
       },
       "Custom Wood D6": {
         "Sizeless": {
-          "Colorless": "Custom Wood D6"
+          "Colorless": "CustomWoodD6"
         }
       },
       "Dice Sticker": {
         "Sizeless": {
-          "Colorless": "Dice Sticker"
+          "Colorless": "DiceSticker"
         }
       }
     },
@@ -8628,423 +8418,371 @@ const COMPONENT_CATEGORIES = {
     "board": {
       "Domino Board": {
         "Sizeless": {
-          "Colorless": "Domino Board"
+          "Colorless": "DominoBoard"
         }
       },
       "Accordion Board": {
         "Sizeless": {
-          "Colorless": "Accordion Board"
+          "Colorless": "AccordionBoard"
         }
       },
       "Bi Fold Board": {
         "Sizeless": {
-          "Colorless": "Bi Fold Board"
+          "Colorless": "BiFoldBoard"
         }
       },
       "Half Board": {
         "Sizeless": {
-          "Colorless": "Half Board"
+          "Colorless": "HalfBoard"
         }
       },
-      "Large Square Board": {
+      "Square Board": {
         "Large": {
-          "Colorless": "Large Square Board"
+          "Colorless": "LargeSquareBoard"
+        },
+        "Small": {
+          "Colorless": "SmallSquareBoard"
+        },
+        "Sizeless": {
+          "Colorless": "SquareBoard"
         }
       },
-      "Medium Six Fold Board": {
+      "Six Fold Board": {
         "Medium": {
-          "Colorless": "Medium Six Fold Board"
+          "Colorless": "MediumSixFoldBoard"
+        },
+        "Sizeless": {
+          "Colorless": "SixFoldBoard"
         }
       },
       "Quad Fold Board": {
         "Sizeless": {
-          "Colorless": "Quad Fold Board"
+          "Colorless": "QuadFoldBoard"
+        },
+        "Large": {
+          "Colorless": "LargeQuadFoldBoard"
         }
       },
       "Quarter Board": {
         "Sizeless": {
-          "Colorless": "Quarter Board"
-        }
-      },
-      "Six Fold Board": {
-        "Sizeless": {
-          "Colorless": "Six Fold Board"
+          "Colorless": "QuarterBoard"
         }
       },
       "Skinny Board": {
         "Sizeless": {
-          "Colorless": "Skinny Board"
+          "Colorless": "SkinnyBoard"
         }
       },
       "Sliver Board": {
         "Sizeless": {
-          "Colorless": "Sliver Board"
-        }
-      },
-      "Small Square Board": {
-        "Small": {
-          "Colorless": "Small Square Board"
-        }
-      },
-      "Square Board": {
-        "Sizeless": {
-          "Colorless": "Square Board"
+          "Colorless": "SliverBoard"
         }
       },
       "Strip Board": {
         "Sizeless": {
-          "Colorless": "Strip Board"
+          "Colorless": "StripBoard"
         }
       },
-      "Large Dual Layer Board": {
+      "Dual Layer Board": {
         "Large": {
-          "Colorless": "Large Dual Layer Board"
-        }
-      },
-      "Large Quad Fold Board": {
-        "Large": {
-          "Colorless": "Large Quad Fold Board"
-        }
-      },
-      "Medium Dual Layer Board": {
+          "Colorless": "LargeDualLayerBoard"
+        },
         "Medium": {
-          "Colorless": "Medium Dual Layer Board"
-        }
-      },
-      "Small Dual Layer Board": {
+          "Colorless": "MediumDualLayerBoard"
+        },
         "Small": {
-          "Colorless": "Small Dual Layer Board"
+          "Colorless": "SmallDualLayerBoard"
         }
       }
     },
     "token": {
       "Hex Shard": {
         "Sizeless": {
-          "Colorless": "Hex Shard"
+          "Colorless": "HexShard"
         }
       },
       "Circle Shard": {
         "Sizeless": {
-          "Colorless": "Circle Shard"
+          "Colorless": "CircleShard"
         }
       },
       "Square Shard": {
         "Sizeless": {
-          "Colorless": "Square Shard"
+          "Colorless": "SquareShard"
         }
       },
-      "Small Square Chit": {
+      "Square Chit": {
         "Small": {
-          "Colorless": "Small Square Chit"
-        }
-      },
-      "Medium Square Chit": {
+          "Colorless": "SmallSquareChit"
+        },
         "Medium": {
-          "Colorless": "Medium Square Chit"
-        }
-      },
-      "Large Square Chit": {
+          "Colorless": "MediumSquareChit"
+        },
         "Large": {
-          "Colorless": "Large Square Chit"
+          "Colorless": "LargeSquareChit"
         }
       },
-      "Small Circle Chit": {
+      "Circle Chit": {
         "Small": {
-          "Colorless": "Small Circle Chit"
-        }
-      },
-      "Medium Circle Chit": {
+          "Colorless": "SmallCircleChit"
+        },
         "Medium": {
-          "Colorless": "Medium Circle Chit"
-        }
-      },
-      "Large Circle Chit": {
+          "Colorless": "MediumCircleChit"
+        },
         "Large": {
-          "Colorless": "Large Circle Chit"
+          "Colorless": "LargeCircleChit"
         }
       },
       "Mini Hex Tile": {
         "Sizeless": {
-          "Colorless": "Mini Hex Tile"
+          "Colorless": "MiniHexTile"
         }
       },
-      "Small Hex Tile": {
+      "Hex Tile": {
         "Small": {
-          "Colorless": "Small Hex Tile"
-        }
-      },
-      "Medium Hex Tile": {
+          "Colorless": "SmallHexTile"
+        },
         "Medium": {
-          "Colorless": "Medium Hex Tile"
-        }
-      },
-      "Large Hex Tile": {
+          "Colorless": "MediumHexTile"
+        },
         "Large": {
-          "Colorless": "Large Hex Tile"
+          "Colorless": "LargeHexTile"
         }
       },
       "Arrow Chit": {
         "Sizeless": {
-          "Colorless": "Arrow Chit"
+          "Colorless": "ArrowChit"
         }
       },
       "Bullseye Chit": {
         "Sizeless": {
-          "Colorless": "Bullseye Chit"
+          "Colorless": "BullseyeChit"
         }
       },
       "Custom Printed Meeple": {
         "Sizeless": {
-          "Colorless": "Custom Printed Meeple"
+          "Colorless": "CustomPrintedMeeple"
         }
       },
       "Domino Chit": {
         "Sizeless": {
-          "Colorless": "Domino Chit"
+          "Colorless": "DominoChit"
         }
       },
       "Domino Tile": {
         "Sizeless": {
-          "Colorless": "Domino Tile"
+          "Colorless": "DominoTile"
         }
       },
-      "Large Ring": {
+      "Ring": {
         "Large": {
-          "Colorless": "Large Ring"
+          "Colorless": "LargeRing"
+        },
+        "Medium": {
+          "Colorless": "MediumRing"
+        },
+        "Small": {
+          "Colorless": "SmallRing"
         }
       },
-      "Large Square Tile": {
+      "Square Tile": {
         "Large": {
-          "Colorless": "Large Square Tile"
+          "Colorless": "LargeSquareTile"
+        },
+        "Medium": {
+          "Colorless": "MediumSquareTile"
+        },
+        "Small": {
+          "Colorless": "SmallSquareTile"
         }
       },
-      "Large Standee": {
+      "Standee": {
         "Large": {
-          "Colorless": "Large Standee"
+          "Colorless": "LargeStandee"
+        },
+        "Medium": {
+          "Colorless": "MediumStandee"
+        },
+        "Small": {
+          "Colorless": "SmallStandee"
         }
       },
-      "Medium Ring": {
+      "Triangle Chit": {
         "Medium": {
-          "Colorless": "Medium Ring"
-        }
-      },
-      "Medium Square Tile": {
-        "Medium": {
-          "Colorless": "Medium Square Tile"
-        }
-      },
-      "Medium Standee": {
-        "Medium": {
-          "Colorless": "Medium Standee"
-        }
-      },
-      "Medium Triangle Chit": {
-        "Medium": {
-          "Colorless": "Medium Triangle Chit"
+          "Colorless": "MediumTriangleChit"
         }
       },
       "Mini Circle Tile": {
         "Sizeless": {
-          "Colorless": "Mini Circle Tile"
+          "Colorless": "MiniCircleTile"
         }
       },
       "Mini Square Tile": {
         "Sizeless": {
-          "Colorless": "Mini Square Tile"
-        }
-      },
-      "Small Ring": {
-        "Small": {
-          "Colorless": "Small Ring"
-        }
-      },
-      "Small Square Tile": {
-        "Small": {
-          "Colorless": "Small Square Tile"
-        }
-      },
-      "Small Standee": {
-        "Small": {
-          "Colorless": "Small Standee"
+          "Colorless": "MiniSquareTile"
         }
       },
       "Strip Chit": {
         "Sizeless": {
-          "Colorless": "Strip Chit"
+          "Colorless": "StripChit"
         }
       },
       "Token Sticker": {
         "Sizeless": {
-          "Colorless": "Token Sticker"
+          "Colorless": "TokenSticker"
         }
       },
       "Tombstone Shard": {
         "Sizeless": {
-          "Colorless": "Tombstone Shard"
+          "Colorless": "TombstoneShard"
         }
       },
       "Triangle Tile": {
         "Sizeless": {
-          "Colorless": "Triangle Tile"
+          "Colorless": "TriangleTile"
         }
       }
     },
     "mat": {
       "Bi Fold Mat": {
         "Sizeless": {
-          "Colorless": "Bi Fold Mat"
+          "Colorless": "BiFoldMat"
+        },
+        "Small": {
+          "Colorless": "SmallBiFoldMat"
         }
       },
       "Domino Mat": {
         "Sizeless": {
-          "Colorless": "Domino Mat"
+          "Colorless": "DominoMat"
         }
       },
       "Big Mat": {
         "Sizeless": {
-          "Colorless": "Big Mat"
+          "Colorless": "BigMat"
         }
       },
       "Flower Mat": {
         "Sizeless": {
-          "Colorless": "Flower Mat"
+          "Colorless": "FlowerMat"
         }
       },
       "Half Mat": {
         "Sizeless": {
-          "Colorless": "Half Mat"
+          "Colorless": "HalfMat"
         }
       },
       "Hex Mat": {
         "Sizeless": {
-          "Colorless": "Hex Mat"
+          "Colorless": "HexMat"
+        },
+        "Large": {
+          "Colorless": "LargeHexMat"
         }
       },
       "Invader Mat": {
         "Sizeless": {
-          "Colorless": "Invader Mat"
+          "Colorless": "InvaderMat"
         }
       },
-      "Large Hex Mat": {
+      "Square Mat": {
         "Large": {
-          "Colorless": "Large Hex Mat"
+          "Colorless": "LargeSquareMat"
+        },
+        "Small": {
+          "Colorless": "SmallSquareMat"
+        },
+        "Sizeless": {
+          "Colorless": "SquareMat"
         }
       },
-      "Large Square Mat": {
-        "Large": {
-          "Colorless": "Large Square Mat"
-        }
-      },
-      "Medium Game Mat": {
+      "Game Mat": {
         "Medium": {
-          "Colorless": "Medium Game Mat"
+          "Colorless": "MediumGameMat"
+        },
+        "Small": {
+          "Colorless": "SmallGameMat"
         }
       },
       "Placard Mat": {
         "Sizeless": {
-          "Colorless": "Placard Mat"
+          "Colorless": "PlacardMat"
         }
       },
       "Postcard Mat": {
         "Sizeless": {
-          "Colorless": "Postcard Mat"
+          "Colorless": "PostcardMat"
         }
       },
       "Quad Fold Mat": {
         "Sizeless": {
-          "Colorless": "Quad Fold Mat"
+          "Colorless": "QuadFoldMat"
+        },
+        "Small": {
+          "Colorless": "SmallQuadFoldMat"
         }
       },
       "Quarter Mat": {
         "Sizeless": {
-          "Colorless": "Quarter Mat"
+          "Colorless": "QuarterMat"
         }
       },
       "Skinny Mat": {
         "Sizeless": {
-          "Colorless": "Skinny Mat"
+          "Colorless": "SkinnyMat"
         }
       },
       "Sliver Mat": {
         "Sizeless": {
-          "Colorless": "Sliver Mat"
+          "Colorless": "SliverMat"
         }
       },
       "Slopeside Bi Fold Mat": {
         "Sizeless": {
-          "Colorless": "Slopeside Bi Fold Mat"
-        }
-      },
-      "Small Bi Fold Mat": {
-        "Small": {
-          "Colorless": "Small Bi Fold Mat"
-        }
-      },
-      "Small Game Mat": {
-        "Small": {
-          "Colorless": "Small Game Mat"
-        }
-      },
-      "Small Quad Fold Mat": {
-        "Small": {
-          "Colorless": "Small Quad Fold Mat"
-        }
-      },
-      "Small Square Mat": {
-        "Small": {
-          "Colorless": "Small Square Mat"
+          "Colorless": "SlopesideBiFoldMat"
         }
       },
       "Spinner Mat": {
         "Sizeless": {
-          "Colorless": "Spinner Mat"
-        }
-      },
-      "Square Mat": {
-        "Sizeless": {
-          "Colorless": "Square Mat"
+          "Colorless": "SpinnerMat"
         }
       },
       "Strip Mat": {
         "Sizeless": {
-          "Colorless": "Strip Mat"
+          "Colorless": "StripMat"
         }
       },
       "USGame Mat": {
         "Sizeless": {
-          "Colorless": "USGame Mat"
+          "Colorless": "USGameMat"
         }
       }
     },
     "document": {
-      "Mint Tin Accordion 4": {
+      "Mint Tin Accordion": {
         "4": {
-          "Colorless": "Mint Tin Accordion 4"
-        }
-      },
-      "Mint Tin Accordion 6": {
+          "Colorless": "MintTinAccordion4"
+        },
         "6": {
-          "Colorless": "Mint Tin Accordion 6"
-        }
-      },
-      "Mint Tin Accordion 8": {
+          "Colorless": "MintTinAccordion6"
+        },
         "8": {
-          "Colorless": "Mint Tin Accordion 8"
+          "Colorless": "MintTinAccordion8"
         }
       },
       "Poker Folio": {
         "Sizeless": {
-          "Colorless": "Poker Folio"
+          "Colorless": "PokerFolio"
         }
       },
       "Mint Tin Folio": {
         "Sizeless": {
-          "Colorless": "Mint Tin Folio"
+          "Colorless": "MintTinFolio"
         }
       },
       "Bridge Folio": {
         "Sizeless": {
-          "Colorless": "Bridge Folio"
+          "Colorless": "BridgeFolio"
         }
       },
       "Document": {
@@ -9054,174 +8792,156 @@ const COMPONENT_CATEGORIES = {
       },
       "Jumbo Booklet": {
         "Sizeless": {
-          "Colorless": "Jumbo Booklet"
+          "Colorless": "JumboBooklet"
         }
       },
-      "Large Booklet": {
+      "Booklet": {
         "Large": {
-          "Colorless": "Large Booklet"
+          "Colorless": "LargeBooklet"
+        },
+        "Medium": {
+          "Colorless": "MediumBooklet"
+        },
+        "Small": {
+          "Colorless": "SmallBooklet"
+        },
+        "Tall": {
+          "Colorless": "TallBooklet"
         }
       },
-      "Large Score Pad Color": {
+      "Score Pad Color": {
         "Large": {
-          "Colorless": "Large Score Pad Color"
-        }
-      },
-      "Medium Booklet": {
+          "Colorless": "LargeScorePadColor"
+        },
         "Medium": {
-          "Colorless": "Medium Booklet"
-        }
-      },
-      "Medium Folio": {
-        "Medium": {
-          "Colorless": "Medium Folio"
-        }
-      },
-      "Medium Mat Book": {
-        "Medium": {
-          "Colorless": "Medium Mat Book"
-        }
-      },
-      "Medium Score Pad Color": {
-        "Medium": {
-          "Colorless": "Medium Score Pad Color"
-        }
-      },
-      "Small Booklet": {
+          "Colorless": "MediumScorePadColor"
+        },
         "Small": {
-          "Colorless": "Small Booklet"
+          "Colorless": "SmallScorePadColor"
         }
       },
-      "Small Folio": {
+      "Folio": {
+        "Medium": {
+          "Colorless": "MediumFolio"
+        },
         "Small": {
-          "Colorless": "Small Folio"
+          "Colorless": "SmallFolio"
         }
       },
-      "Small Score Pad Color": {
-        "Small": {
-          "Colorless": "Small Score Pad Color"
+      "Mat Book": {
+        "Medium": {
+          "Colorless": "MediumMatBook"
         }
       },
       "Square Folio": {
         "Sizeless": {
-          "Colorless": "Square Folio"
-        }
-      },
-      "Tall Booklet": {
-        "Tall": {
-          "Colorless": "Tall Booklet"
+          "Colorless": "SquareFolio"
         }
       },
       "Tarot Booklet": {
         "Sizeless": {
-          "Colorless": "Tarot Booklet"
+          "Colorless": "TarotBooklet"
         }
       },
       "Tarot Folio": {
         "Sizeless": {
-          "Colorless": "Tarot Folio"
+          "Colorless": "TarotFolio"
         }
       },
       "Digest Perfect Bound Book": {
         "Sizeless": {
-          "Colorless": "Digest Perfect Bound Book"
+          "Colorless": "DigestPerfectBoundBook"
         }
       },
       "Jumbo Coil Book": {
         "Sizeless": {
-          "Colorless": "Jumbo Coil Book"
+          "Colorless": "JumboCoilBook"
         }
       },
       "Letter Perfect Bound Book": {
         "Sizeless": {
-          "Colorless": "Letter Perfect Bound Book"
+          "Colorless": "LetterPerfectBoundBook"
         }
       },
-      "Medium Coil Book": {
+      "Coil Book": {
         "Medium": {
-          "Colorless": "Medium Coil Book"
+          "Colorless": "MediumCoilBook"
         }
       }
     },
     "blank": {},
     "screen": {
-      "Large Screen": {
+      "Screen": {
         "Large": {
-          "Colorless": "Large Screen"
-        }
-      },
-      "Medium Screen": {
+          "Colorless": "LargeScreen"
+        },
         "Medium": {
-          "Colorless": "Medium Screen"
-        }
-      },
-      "Small Screen": {
+          "Colorless": "MediumScreen"
+        },
         "Small": {
-          "Colorless": "Small Screen"
+          "Colorless": "SmallScreen"
         }
       }
     },
     "dial": {
       "Dual Dial": {
         "Sizeless": {
-          "Colorless": "Dual Dial"
+          "Colorless": "DualDial"
         }
       },
-      "Small Dial": {
+      "Dial": {
         "Small": {
-          "Colorless": "Small Dial"
+          "Colorless": "SmallDial"
         }
       }
     },
     "NO_CATEGORY": {
-      "Acrylic Shape 125": {
+      "Acrylic Shape": {
         "125": {
-          "Colorless": "Acrylic Shape 125"
-        }
-      },
-      "Acrylic Shape 250": {
+          "Colorless": "AcrylicShape125"
+        },
         "250": {
-          "Colorless": "Acrylic Shape 250"
+          "Colorless": "AcrylicShape250"
         }
       },
       "Custom Large Cardstock": {
         "Sizeless": {
-          "Colorless": "Custom Large Cardstock"
+          "Colorless": "CustomLargeCardstock"
         }
       },
       "Custom Large Punchout": {
         "Sizeless": {
-          "Colorless": "Custom Large Punchout"
+          "Colorless": "CustomLargePunchout"
         }
       },
       "Custom Medium Cardstock": {
         "Sizeless": {
-          "Colorless": "Custom Medium Cardstock"
+          "Colorless": "CustomMediumCardstock"
         }
       },
       "Custom Medium Punchout": {
         "Sizeless": {
-          "Colorless": "Custom Medium Punchout"
+          "Colorless": "CustomMediumPunchout"
         }
       },
       "Custom Mini Cardstock": {
         "Sizeless": {
-          "Colorless": "Custom Mini Cardstock"
+          "Colorless": "CustomMiniCardstock"
         }
       },
       "Custom Small Cardstock": {
         "Sizeless": {
-          "Colorless": "Custom Small Cardstock"
+          "Colorless": "CustomSmallCardstock"
         }
       },
       "Custom Small Punchout": {
         "Sizeless": {
-          "Colorless": "Custom Small Punchout"
+          "Colorless": "CustomSmallPunchout"
         }
       },
-      "Large Acrylic Shape 125": {
+      "Acrylic Shape 125": {
         "Large": {
-          "Colorless": "Large Acrylic Shape 125"
+          "Colorless": "LargeAcrylicShape125"
         }
       }
     }
