@@ -8,7 +8,6 @@ import CreatePanel from "./Create/CreatePanel";
 import { TOP_NAVBAR_ITEMS } from "./Routes";
 import { TabbedFile } from "./Edit/TabbedFile";
 import TemplativeAccessTools from "./TemplativeAccessTools";
-import '../App.css';
 import { RenderingWorkspaceProvider } from "./Render/RenderingWorkspaceProvider";
 import { OutputDirectoriesProvider } from "./OutputDirectories/OutputDirectoriesProvider";
 import RulesEditor from "./Edit/Viewers/RulesEditor";

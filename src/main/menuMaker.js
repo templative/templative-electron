@@ -1,14 +1,16 @@
 const { channels } = require("../shared/constants");
 const { Menu, BrowserWindow  } = require('electron')
-const { createTemplativeProjectWithDialog, openFolder } = require("./dialogMaker")
+const { openFolder } = require("./dialogMaker")
 const { giveLogout, goToAccount, reportBug, giveFeedback, viewDocumentation } = require("./accountManager")
+
+
 const templates = [
     {
         label: "File",
         submenu: [
             { 
                 label: "Create Project",
-                click: createTemplativeProjectWithDialog
+                click: () => BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_OPEN_CREATE_PROJECT_VIEW)
             },
             { 
                 label: "Open Project",

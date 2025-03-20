@@ -1,5 +1,5 @@
 const { ipcMain, shell } = require('electron')
-const { setCurrentFolder, openFolder, createTemplativeProjectWithDialog, openPlaygroundFolder, openSimulatorFolder} = require("./dialogMaker")
+const { setCurrentFolder, openFolder, createTemplativeProjectWithDialog, openPlaygroundFolder, openSimulatorFolder, openProjectLocationFolder, createTemplativeProjectWithName } = require("./dialogMaker")
 const { channels } = require('../shared/constants');
 const { login, giveLoginInformation, getTgcSessionFromStore, logoutTgc, clearGithubAuth, giveGithubAuth, pollGithubAuth } = require("./accountManager")
 const { 
@@ -32,7 +32,6 @@ function listenForRenderEvents(window) {
     ipcMain.handle(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG_FOR_SIMULATOR, openSimulatorFolder);
     ipcMain.handle(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG, openFolder);
     ipcMain.handle(channels.TO_SERVER_GIVE_CURRENT_PROJECT, setCurrentFolder);
-    ipcMain.handle(channels.TO_SERVER_OPEN_CREATE_PROJECT_DIALOG, createTemplativeProjectWithDialog);
 
     ipcMain.handle(channels.TO_SERVER_OPEN_URL, openUrl)
     ipcMain.handle(channels.TO_SERVER_OPEN_FILEPATH, openFilepath)
@@ -55,5 +54,7 @@ function listenForRenderEvents(window) {
     ipcMain.handle(channels.TO_SERVER_CREATE_PLAYGROUND_PACKAGE, createPlaygroundPackage);
     ipcMain.handle(channels.TO_SERVER_CREATE_PRINTOUT, createPrintout);
     ipcMain.handle(channels.TO_SERVER_CREATE_SIMULATOR_SAVE, createSimulatorSave);
+    ipcMain.handle(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG_FOR_PROJECT_LOCATION, openProjectLocationFolder);
+    ipcMain.handle(channels.TO_SERVER_CREATE_PROJECT, createTemplativeProjectWithName);
 }
 module.exports = { listenForRenderEvents }

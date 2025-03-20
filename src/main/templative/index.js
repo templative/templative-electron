@@ -58,9 +58,9 @@ const previewPiece = withLogCapture(async (event, data) => {
   }
 });
 
-const createTemplativeProject = withLogCapture(async (directoryPath) => {
+const createTemplativeProject = withLogCapture(async (directoryPath, projectName, templateName) => {
   try {    
-    await createProjectInDirectory(directoryPath);
+    await createProjectInDirectory(directoryPath, projectName, templateName);
     return { success: true, message: 'Project created' };
   } catch (error) {
     console.error('Error creating project:', error);

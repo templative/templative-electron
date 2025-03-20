@@ -109,11 +109,14 @@
 }
 
 /* Updated soft-label styles */
-.soft-label,
+.App .soft-label,
 .input-group-text {
   color: var(--color-light) !important;
   border-color: var(--color-border) !important;
   border-right-width: 0 !important;
+}
+.App .soft-label {
+  color: var(--color-text-muted) !important;
 }
 
 .vertical-input-group .input-group:nth-child(odd) .soft-label,

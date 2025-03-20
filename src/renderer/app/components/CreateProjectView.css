@@ -1,0 +1,99 @@
+.create-project-form {
+  max-width: 715px;
+  margin: 50vh auto 0;
+  border-radius: 10px;
+  transform: translateY(-50%);
+}
+
+.template-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  height: 500px;
+  overflow-y: auto;
+  padding: 0 6px;
+}
+
+.template-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.template-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.template-icon {
+  flex-shrink: 0;
+
+  display: inline-block;
+  height: 100%;
+  width: 90px;
+}
+
+.template-info {
+  display: inline-block;
+  height: 100%;
+  text-align: left;
+  padding-left: 12px;
+  width: calc(100% - 90px);
+}
+
+.template-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.template-description {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  margin: 0;
+}
+.App .create-project-view .template-item .template-icon {
+  color: var(--color-accent)
+}
+
+.App .create-project-view .template-item.selected, 
+.App .create-project-view .template-item.selected:hover, 
+.App .create-project-view .template-item.selected:active,
+.App .create-project-view .template-item.selected:focus {
+  background-color: var(--color-accent) !important;
+  color: var(--color-content);
+  cursor: default;
+}
+.App .create-project-view .template-item.selected .template-name, .App .create-project-view .template-item.selected .template-description, .App .create-project-view .template-item.selected .template-icon {
+  color: var(--color-content);
+}
+.App .create-project-view .template-item.disabled {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
+
+.project-name-input-group, .location-input-group {
+  margin-bottom: 12px;
+}
+
+.create-project-button {
+  width: 100%;
+  margin-top: 12px;
+}
+.project-location-example {
+  color: var(--color-accent);
+}
+.App .create-project-view .form-control {
+  background-color: var(--color-background) !important;
+  color: var(--color-text) !important;
+}
+.project-explanation {
+  font-size: 12px;
+  margin-top: 6px;
+  margin-bottom: 0px;
+}

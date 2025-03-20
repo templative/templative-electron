@@ -40,9 +40,9 @@ function createLastFile(directory) {
   fs.writeFileSync(path.join(directory, "output/.last"), "");
 }
 
-function createGame(directory) {
+function createGame(directory, projectName="Game Name") {
   const game = {
-    "name": "Game Name",
+    "name": projectName,
     "version": "0.0.0",
     "versionName": "Template",
     "shortDescription": "Tagline",
@@ -79,11 +79,11 @@ async function createGameCrafterImage(directory) {
   await createImage(directory, "logo", 350, 150);
 }
 
-async function createProjectInDirectory(directory) {
+async function createProjectInDirectory(directory, projectName, templateName) {
   fs.mkdirSync(directory, { recursive: true });
   createStudio(directory);
   createRulesFile(directory);
-  createGame(directory);
+  createGame(directory, projectName);
   createGameCompose(directory);
   createComponentCompose(directory);
   createGitIgnore(directory);

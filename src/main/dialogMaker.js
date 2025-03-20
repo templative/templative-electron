@@ -42,27 +42,42 @@ const openSimulatorFolder = async(event, args) => {
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_SIMULATOR_FOLDER, chosenDirectory)
 }
 
-const createTemplativeProjectWithDialog = async(event, args) => {
-    var result = await dialog.showOpenDialog({  title:"Create new Templative Project",  buttonLabel: "Create", properties: [ 'openDirectory', 'createDirectory', "promptToCreate"] })
+const openProjectLocationFolder = async(event, args) => {
+    var result = await dialog.showOpenDialog({ properties: ['openDirectory'] })
     if (result.filePaths.length === 0) {
         console.warn("Chose nothing!")
-        return
+        return { canceled: true }
     }
     var chosenDirectory = result.filePaths[0]
-    if (chosenDirectory === undefined) {
-        console.warn("Chose nothing!")
-        return
-    }
-    console.log(chosenDirectory)
-    var creationResult = await createTemplativeProject(chosenDirectory)
+    return { canceled: false, filePaths: [chosenDirectory] }
+}
 
-    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, chosenDirectory)
+const createTemplativeProjectWithName = async(event, { projectLocation, projectName, templateName }) => {
+    if (!projectLocation || !projectName) {
+        console.warn("Missing required project information")
+        return { success: false, error: "Missing required project information" }
+    }
+
+    console.log(`Creating project at: ${projectLocation} with template: ${templateName || 'blank'}`)
+    
+    try {
+        var creationResult = await createTemplativeProject(projectLocation, projectName, templateName)
+        if (!creationResult.success) {
+            return { success: false, error: creationResult.error }
+        }
+        BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, projectLocation)
+        return { success: true, projectDirectory: projectLocation }
+    } catch (error) {
+        console.error("Error creating project:", error)
+        return { success: false, error: error.message }
+    }
 }
 
 module.exports = { 
     openPlaygroundFolder,
     setCurrentFolder,
     openSimulatorFolder,
-    createTemplativeProjectWithDialog,
-    openFolder
+    openFolder,
+    openProjectLocationFolder,
+    createTemplativeProjectWithName
 }

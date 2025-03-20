@@ -8,7 +8,7 @@ import LoginView from "./components/LoginView";
 import StartView from "./components/StartView";
 import EditProjectView from "./components/EditProjectView";
 import BootstrapSizeIndicator from "./utility/SizeIndicator";
-
+import CreateProjectView from "./components/CreateProjectView";
 import './Theme.css';
 import './App.css';
 import './Inputs.css';
@@ -26,10 +26,18 @@ class App extends React.Component {
         password: "",
         token: undefined,
         loginStatus: undefined,
-        templativeMessages: []
+        templativeMessages: [],
+        currentView: "start"
     }    
     componentWillUnmount() {
         ipcRenderer.removeAllListeners(channels.GIVE_TEMPLATIVE_ROOT_FOLDER);
+        ipcRenderer.removeAllListeners(channels.GIVE_CLOSE_PROJECT);
+        ipcRenderer.removeAllListeners(channels.GIVE_LOGOUT);
+        ipcRenderer.removeAllListeners(channels.GIVE_LOGGED_IN);
+        ipcRenderer.removeAllListeners(channels.GIVE_NOT_LOGGED_IN);
+        ipcRenderer.removeAllListeners(channels.GIVE_UNABLE_TO_LOG_IN);
+        ipcRenderer.removeAllListeners(channels.GIVE_INVALID_LOGIN_CREDENTIALS);
+        ipcRenderer.removeAllListeners(channels.GIVE_OPEN_CREATE_PROJECT_VIEW);
         // socket.off("printStatement");
         // socket.disconnect()
     }
@@ -38,8 +46,8 @@ class App extends React.Component {
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG)
     }
     async openCreateTemplativeProjectDirectoryPicker() {
-        trackEvent("project_create")
-        await ipcRenderer.invoke(channels.TO_SERVER_OPEN_CREATE_PROJECT_DIALOG)
+        // trackEvent("project_create")
+        this.setState({ currentView: "createProject" });
     }
     updatePassword = (password) => {
         this.setState({password: password, loginStatus: undefined})
@@ -50,31 +58,42 @@ class App extends React.Component {
     attemptToLoadLastTemplativeProject = async () => {
         var lastProjectDirectory = getLastProjectDirectory()
         if (lastProjectDirectory === undefined) {
+            this.setState({templativeRootDirectoryPath: undefined, currentView: "start"})
             return
         }
         trackEvent("project_load_last", { directory: lastProjectDirectory })
         await ipcRenderer.invoke(channels.TO_SERVER_GIVE_CURRENT_PROJECT, lastProjectDirectory)
-        this.setState({templativeRootDirectoryPath: lastProjectDirectory})
+        
+        this.setState({templativeRootDirectoryPath: lastProjectDirectory, currentView: "editProject"})
     }
     componentDidMount = async () => {
         ipcRenderer.on(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, (event, templativeRootDirectoryPath) => {
             trackEvent("project_load_success", { directory: templativeRootDirectoryPath })
             writeLastOpenedProject(templativeRootDirectoryPath)
-            this.setState({templativeRootDirectoryPath: templativeRootDirectoryPath})
+            this.setState({
+                templativeRootDirectoryPath: templativeRootDirectoryPath,
+                currentView: "editProject"
+            })
         });
         ipcRenderer.on(channels.GIVE_CLOSE_PROJECT, (_) => {
-            trackEvent("project_close")
-            this.setState({templativeRootDirectoryPath: undefined})
+            // trackEvent("project_close")
+            this.setState({
+                templativeRootDirectoryPath: undefined,
+                currentView: "start"
+            })
         })
         ipcRenderer.on(channels.GIVE_LOGOUT, (_) => {
-            trackEvent("user_logout")
-            this.setState({loggedIn: false, email: "", password: "", status: ""})
+            // trackEvent("user_logout")
+            this.setState({loggedIn: false, email: "", password: "", status: "", currentView: "login"})
         })
         ipcRenderer.on(channels.GIVE_LOGGED_IN, (_, token, email) => {
-            this.setState({loggedIn: true, token: token, email: email, password: "", status: ""})
+            this.setState({loggedIn: true, token: token, email: email, password: "", status: ""}, () => {
+                // After login, check if there's a last project to load
+                this.attemptToLoadLastTemplativeProject();
+            });
         })
         ipcRenderer.on(channels.GIVE_NOT_LOGGED_IN, (_) => {
-            this.setState({loggedIn: false})
+            this.setState({loggedIn: false, currentView: "login"})
         })
         ipcRenderer.on(channels.GIVE_UNABLE_TO_LOG_IN, (_) => {
             trackEvent("user_login_error", { reason: "server_error" })
@@ -84,6 +103,10 @@ class App extends React.Component {
             trackEvent("user_login_error", { reason: "invalid_credentials" })
             this.setState({loggedIn: false, loginStatus: "Invalid login credentials."})
         })
+        ipcRenderer.on(channels.GIVE_OPEN_CREATE_PROJECT_VIEW, (_) => {
+            this.setState({ currentView: "createProject" })
+        })
+        
         // socket.connect();
         // socket.on('printStatement', (messages) => {
         //     var newMessages = messages.split('\n').map(message => message.trim()).filter(message => message !== "")
@@ -92,6 +115,7 @@ class App extends React.Component {
         await this.attemptToLoadLastTemplativeProject()
         await ipcRenderer.invoke(channels.TO_SERVER_IS_LOGGED_IN)
     }
+    
     updateRoute = (route) => {
         this.setState({currentRoute: route})
     }
@@ -104,7 +128,8 @@ class App extends React.Component {
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_URL, "https://templative-server-84c7a76c7ddd.herokuapp.com/register")
     }
     render() {
-        var element = <></>
+        let element = <></>
+        
         if (!this.state.loggedIn) {
             trackEvent("view_loginView")
             element = <LoginView 
@@ -117,15 +142,19 @@ class App extends React.Component {
                 loginStatus={this.state.loginStatus}
             />
         }
-        else if (this.state.templativeRootDirectoryPath === undefined) {
-            trackEvent("view_startView")
+        else if (this.state.currentView === "createProject") {
+            // trackEvent("view_createProjectView")
+            element = <CreateProjectView />
+        }
+        else if (this.state.templativeRootDirectoryPath === undefined || this.state.currentView === "start") {
+            // trackEvent("view_startView")
             element = <StartView 
-                openCreateTemplativeProjectDirectoryPickerCallback={()=> this.openCreateTemplativeProjectDirectoryPicker()}
+                openCreateTemplativeProjectDirectoryPickerCallback={this.openCreateTemplativeProjectDirectoryPicker.bind(this)}
                 openTemplativeDirectoryPickerCallback={() => this.openTemplativeDirectoryPicker()}
             />
         }
-        else  { 
-            trackEvent("view_editProjectView")
+        else if (this.state.currentView === "editProject") { 
+            // trackEvent("view_editProjectView")
             element = <EditProjectView 
                 token={this.state.token}
                 email={this.state.email}    
@@ -133,6 +162,7 @@ class App extends React.Component {
                 templativeMessages={this.state.templativeMessages}
             />
         }
+        
         return <div className="App">
             {/* <BootstrapSizeIndicator/> */}
             <div className="container-fluid">
