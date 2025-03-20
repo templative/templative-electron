@@ -1,4 +1,4 @@
-const colors = ["lime green", "red", "blue", "green", "yellow", "mustard", "purple", "orange", "pink", "brown", "gray", "black", "white", "apricot", "teal", "caramel", "ivory", "wood", "limegreen", 'lavender', "salmon", "taupe", "natural", "rose"];
+const colors = ["lime green", "red", "blue", "green", "yellow", "mustard", "purple", "orange", "pink", "brown", "gray", "black", "white", "apricot", "teal", "caramel", "ivory", "wood", "limegreen", 'lavender', "salmon", "taupe", "natural", "rose", "tan", "mint"];
 const metals = ["gold", "silver", "bronze", "copper", "golden"]
 const shades = ["light", "dark"];
 const allColorVariations = [
@@ -26,6 +26,8 @@ const getColorValueHex = (colorName) => {
           case 'pink': return '#ffccff';
           case 'brown': return '#cc9966';
           case 'gray': return '#cccccc';
+          case 'tan': return '#e6d8ad';
+          case 'mint': return '#c5e8c5';
           case 'gold': 
           case 'golden': return '#ffe680';
           case 'silver': return '#e6e6e6';
@@ -45,6 +47,8 @@ const getColorValueHex = (colorName) => {
           case 'pink': return '#cc6699';
           case 'brown': return '#663300';
           case 'gray': return '#666666';
+          case 'tan': return '#997a45';
+          case 'mint': return '#4c9173';
           case 'gold':
           case 'golden': return '#cc9900';
           case 'silver': return '#999999';
@@ -83,6 +87,8 @@ const getColorValueHex = (colorName) => {
           case 'wood': return '#966f33';
           case 'limegreen': return '#32cd32';
           case 'lavender': return '#e6e6fa';
+          case 'tan': return '#d2b48c';
+          case 'mint': return '#98fb98';
           case 'gold':
           case 'golden': return '#ffd700';
           case 'silver': return '#c0c0c0';

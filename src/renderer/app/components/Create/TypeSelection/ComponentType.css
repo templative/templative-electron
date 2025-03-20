@@ -148,8 +148,8 @@
 }
 
 /* Hover state */
-.App .btn.btn-outline-primary.component-type-card:hover .export-icon svg {
-    /* color: var(--color-content) !important; */
+.App .no-components {
+    visibility: hidden;
 }
 
 /* Add styles for component type preview */
@@ -209,3 +209,11 @@
     margin-top: 0.25em;
     font-style: italic;
 } 
+.component-type-descriptor {
+    font-size: 12px;
+    color: var(--color-accent-disabled);
+}
+.export-icons-label {
+    font-size: 12px;
+    color: var(--color-accent-disabled);
+}

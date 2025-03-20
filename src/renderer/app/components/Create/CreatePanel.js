@@ -4,9 +4,9 @@ import "./TypeSelection/ComponentType.css"
 
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import ComponentTypeList from "./TypeSelection/ComponentTypeList";
-import ChosenComponent from "./ChosenComponent";
+import ChosenComponent from "./ChosenComponent/ChosenComponent";
 import SearchComponentsBox from "./SearchComponentsBox";
-import { trackEvent } from "@aptabase/electron/renderer";
+// import { trackEvent } from "@aptabase/electron/renderer";
 import { RenderingWorkspaceContext } from '../Render/RenderingWorkspaceProvider';
 import { COMPONENT_CATEGORIES } from "../../../../shared/componentCategories";
 
@@ -16,7 +16,7 @@ const { channels } = require('../../../../shared/constants');
 var path = require('path');
 
 // Extract major categories from COMPONENT_CATEGORIES structure
-const customMajorCategoryOrder = ["packaging", "stickers", "deck", "die", "premium", "board", "token", "mat", "document", "blank", "screen", "dial"];
+const customMajorCategoryOrder = [  "deck", "die", "token", "board",  "mat", "packaging", "document", "stickers","blank", "screen", "dial"];
 
 const stockMajorCategoryOrder = ["dice", "premium", "packaging", 'sleeve', 'baggies', "cube", "tube", "blank", "building", "meeple", "TB", "minifig", "figurine", "animal", "vehicle", "casino", "money", "utility", "vial", "symbol", "bodypart", "resource"];
 
@@ -35,12 +35,12 @@ const CreatePanel = (props) => {
     };
 
     React.useEffect(() => {
-        trackEvent("view_createPanel");
+        // trackEvent("view_createPanel");
         loadComponents(props.templativeRootDirectoryPath);
     }, [props.templativeRootDirectoryPath]);
 
     const createComponent = async () => {
-        trackEvent("component_create");
+        // trackEvent("component_create");
         setIsProcessing(true);
         
         const data = { 

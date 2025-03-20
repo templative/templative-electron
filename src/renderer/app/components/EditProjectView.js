@@ -3,18 +3,16 @@ import TopNavbar from './TopNavbar';
 import EditPanel from './Edit/EditPanel';
 import RenderPanel from './Render/RenderPanel';
 // import MapPanel from './Map/MapPanel';
-import AnimatePanel from './Animate/AnimatePanel';
 import {HashRouter, Routes, Route } from "react-router-dom";
 import CreatePanel from "./Create/CreatePanel";
 import { TOP_NAVBAR_ITEMS } from "./Routes";
 import { TabbedFile } from "./Edit/TabbedFile";
 import TemplativeAccessTools from "./TemplativeAccessTools";
 import '../App.css';
-import FeedbackPanel from "./Feedback/FeedbackPanel";
 import { RenderingWorkspaceProvider } from "./Render/RenderingWorkspaceProvider";
 import { OutputDirectoriesProvider } from "./OutputDirectories/OutputDirectoriesProvider";
 import RulesEditor from "./Edit/Viewers/RulesEditor";
-import { trackEvent } from "@aptabase/electron/renderer";
+// import { trackEvent } from "@aptabase/electron/renderer";
 const { ipcRenderer } = window.require('electron');
 const { channels } = require("../../../shared/constants");
 const path = require("path");
@@ -140,7 +138,7 @@ export default class EditProjectView extends React.Component {
         })
     }
     updateViewedFileToUnifiedAsync = async(componentName) => {
-        trackEvent("view_unified_component", { componentName })
+        // trackEvent("view_unified_component", { componentName })
         var componentComposeFilepath = path.join(this.props.templativeRootDirectoryPath, `component-compose.json`)
         var fileExists = await EditProjectView.doesFileExist(componentComposeFilepath)
         if (!fileExists) {
@@ -498,14 +496,6 @@ export default class EditProjectView extends React.Component {
                     />
                 )}
 
-                {this.state.currentRoute === 'animate' && (
-                    <AnimatePanel
-                        email={this.props.email}
-                        token={this.props.token}
-                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                    />
-                )}
-
                 {/* {this.state.currentRoute === 'map' && (
                     <MapPanel
                         email={this.props.email}
@@ -513,13 +503,6 @@ export default class EditProjectView extends React.Component {
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                     />
                 )} */}
-
-                {this.state.currentRoute === 'feedback' && (
-                    <FeedbackPanel
-                        email={this.props.email}
-                        token={this.props.token}
-                    />
-                )}
             </OutputDirectoriesProvider>
         </RenderingWorkspaceProvider>
         

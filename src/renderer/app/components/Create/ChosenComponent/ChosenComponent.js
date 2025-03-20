@@ -1,14 +1,11 @@
-import React, { useContext, useMemo } from "react";
-import "./CreatePanel.css";
-import { RenderingWorkspaceContext } from '../Render/RenderingWorkspaceProvider';
+import React, { useContext } from "react";
+import { RenderingWorkspaceContext } from '../../Render/RenderingWorkspaceProvider';
 import "./ChosenComponent.css";
-import ColorOptions from './ColorOptions';
-import SizeOptions from './SizeOptions';
 import ComponentPreview from './ComponentPreview';
 import ComponentVariation from './ComponentVariation';
-import { COMPONENT_INFO } from "../../../../shared/componentInfo";
-import { STOCK_COMPONENT_INFO } from "../../../../shared/stockComponentInfo";
-import { COMPONENT_CATEGORIES } from "../../../../shared/componentCategories";
+import { COMPONENT_INFO } from "../../../../../shared/componentInfo";
+import { STOCK_COMPONENT_INFO } from "../../../../../shared/stockComponentInfo";
+import { COMPONENT_CATEGORIES } from "../../../../../shared/componentCategories";
 
 const ChosenComponent = ({ isProcessing, createComponent, isToggledToComponents }) => {
     const context = useContext(RenderingWorkspaceContext);

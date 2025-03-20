@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { COMPONENT_INFO } from "../../../../shared/componentInfo";
-import { STOCK_COMPONENT_INFO } from "../../../../shared/stockComponentInfo";
+import { COMPONENT_INFO } from "../../../../../shared/componentInfo";
+import { STOCK_COMPONENT_INFO } from "../../../../../shared/stockComponentInfo";
 import "./ComponentVariation.css";
-import { RenderingWorkspaceContext } from '../Render/RenderingWorkspaceProvider';
-import { loadPreviewImage } from "./utils/ImageLoader";
+import { RenderingWorkspaceContext } from '../../Render/RenderingWorkspaceProvider';
+import { loadPreviewImage } from "../utils/ImageLoader";
 
 const ComponentVariation = ({ 
     isToggledToComponents, 
@@ -24,6 +24,9 @@ const ComponentVariation = ({
   if (!componentInfo) {
     return null;
   }
+  if (componentInfo.IsDisabled) {
+    return null;
+  }
   const source = loadPreviewImage(componentInfo.PreviewUri)
   const label = [
     size !== 'Sizeless' ? size : isToggledToComponents ? 'Standard' : '',
@@ -35,7 +38,7 @@ const ComponentVariation = ({
       onClick={() => context.selectComponent(majorCategory, baseComponent, size, color, componentKey)}
     >
       <div className="component-variation-preview">
-        {componentInfo.PreviewUri && (
+        {source && (
           <img 
             src={source} 
             alt={`${baseComponent} ${size} ${color}`} 

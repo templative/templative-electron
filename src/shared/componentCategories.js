@@ -404,6 +404,11 @@ const COMPONENT_CATEGORIES = {
           "Colorless": "FenceWicker"
         }
       },
+      "Handmade Brick": {
+        "Sizeless": {
+          "Colorless": "HandmadeBrick"
+        }
+      },
       "Handmade Campfire": {
         "Sizeless": {
           "Colorless": "HandmadeCampfire"
@@ -522,6 +527,11 @@ const COMPONENT_CATEGORIES = {
       "Premium Brain": {
         "Sizeless": {
           "Colorless": "PremiumBrain"
+        }
+      },
+      "Premium Brick": {
+        "Sizeless": {
+          "Colorless": "PremiumBrick"
         }
       },
       "Premium Brown Spice Sack": {
@@ -1357,8 +1367,8 @@ const COMPONENT_CATEGORIES = {
       }
     },
     "tube": {
-      "Cylinder, 10mm x 10mm": {
-        "Sizeless": {
+      "Cylinder": {
+        "10mm x 10mm": {
           "Black": "Cylinder10mmx10mmBlack",
           "Blue": "Cylinder10mmx10mmBlue",
           "Green": "Cylinder10mmx10mmGreen",
@@ -1367,74 +1377,56 @@ const COMPONENT_CATEGORIES = {
           "Red": "Cylinder10mmx10mmRed",
           "White": "Cylinder10mmx10mmWhite",
           "Yellow": "Cylinder10mmx10mmYellow"
-        }
-      },
-      "Cylinder, 8m x 15mm": {
-        "Sizeless": {
+        },
+        "8mm x 15mm": {
           "Yellow": "Cylinder15mmx8mmYellow"
-        }
-      },
-      "Cylinder, 10mm x 18mm": {
-        "Sizeless": {
+        },
+        "10mm x 18mm": {
           "Yellow": "Cylinder18mmx10mmYellow"
-        }
-      },
-      "Cylinder, 14mm x 30mm": {
-        "Sizeless": {
+        },
+        "14mm x 30mm": {
           "Natural": "Cylinder30mmx14mmNatural"
-        }
-      },
-      "Cylinder, 30mm x 15mm": {
-        "Sizeless": {
+        },
+        "30mm x 15mm": {
           "Blue": "Cylinder30mmx15mmBlue",
           "Yellow": "Cylinder30mmx15mmYellow"
         }
       },
-      "Disc, 14mm x 10mm": {
-        "Sizeless": {
+      "Disc": {
+        "14mm x 10mm": {
           "Blue": "Disc14mmx10mmBlue",
           "Purple": "Disc14mmx10mmPurple",
           "Red": "Disc14mmx10mmRed"
-        }
-      },
-      "Disc, 14mm x 4mm": {
-        "Sizeless": {
+        },
+        "14mm x 4mm": {
           "Black": "Disc14mmx4mmBlack",
           "Green": "Disc14mmx4mmGreen",
           "Light Blue": "Disc14mmx4mmLightBlue",
           "Light Purple": "Disc14mmx4mmLightPurple",
           "Red": "Disc14mmx4mmRed",
           "Yellow": "Disc14mmx4mmYellow"
-        }
-      },
-      "Disc, 15mm x 5mm": {
-        "Sizeless": {
+        },
+        "15mm x 5mm": {
           "Black": "Disc15mmx5mmBlack",
           "Blue": "Disc15mmx5mmBlue",
           "Green": "Disc15mmx5mmGreen",
           "Red": "Disc15mmx5mmRed"
-        }
-      },
-      "Disc, 15mm x 6mm": {
-        "Sizeless": {
+        },
+        "15mm x 6mm": {
           "Lime Green": "Disc15mmx6mmLimeGreen",
           "Orange": "Disc15mmx6mmOrange",
           "Red": "Disc15mmx6mmRed",
           "Yellow": "Disc15mmx6mmYellow"
-        }
-      },
-      "Disc, 16mm x 10mm": {
-        "Sizeless": {
+        },
+        "16mm x 10mm": {
           "Blue": "Disc16mmx10mmBlue",
           "Brown": "Disc16mmx10mmBrown",
           "Green": "Disc16mmx10mmGreen",
           "Purple": "Disc16mmx10mmPurple",
           "Red": "Disc16mmx10mmRed",
           "Yellow": "Disc16mmx10mmYellow"
-        }
-      },
-      "Disc, 16mm x 4mm": {
-        "Sizeless": {
+        },
+        "16mm x 4mm": {
           "Black": "Disc16mmx4mmBlack",
           "Blue": "Disc16mmx4mmBlue",
           "Green": "Disc16mmx4mmGreen",
@@ -1443,136 +1435,66 @@ const COMPONENT_CATEGORIES = {
           "Red": "Disc16mmx4mmRed",
           "White": "Disc16mmx4mmWhite",
           "Yellow": "Disc16mmx4mmYellow"
-        }
-      },
-      "Disc, 16mm x 6mm": {
-        "Sizeless": {
+        },
+        "16mm x 6mm": {
           "Light Purple": "Disc16mmx6mmLightPurple",
           "Orange": "Disc16mmx6mmOrange"
-        }
-      },
-      "Disc, 16mm x 8mm, Mint": {
-        "Sizeless": {
-          "Colorless": "Disc16mmx8mmMint"
-        }
-      },
-      "Disc, 16mm x 8mm": {
-        "Sizeless": {
+        },
+        "16mm x 8mm": {
+          "Mint": "Disc16mmx8mmMint",
           "Pink": "Disc16mmx8mmPink",
           "Purple": "Disc16mmx8mmPurple",
+          "Tan": "Disc16mmx8mmTan",
           "Yellow": "Disc16mmx8mmYellow"
-        }
-      },
-      "Disc, 16mm x 8mm, Tan": {
-        "Sizeless": {
-          "Colorless": "Disc16mmx8mmTan"
-        }
-      },
-      "Disc, 17mm x 10mm": {
-        "Sizeless": {
+        },
+        "17mm x 10mm": {
           "Apricot": "Disc17mmx10mmApricot",
           "Green": "Disc17mmx10mmGreen"
+        },
+        "18mm x 5mm": {
+          "Red": "Disc18mmx5mmRed"
+        },
+        "30mm x 5mm": {
+          "Blue": "Disc30mmx5mmBlue"
         }
       },
-      "Disc, 18mm x 3mm, Clear": {
-        "Sizeless": {
+      "Disc, Clear": {
+        "18mm x 3mm": {
           "Colorless": "Disc18mmx3mmClear"
+        },
+        "18mm x 6mm": {
+          "Colorless": "Disc18mmx6mmClear"
+        },
+        "25mm x 3mm": {
+          "Colorless": "Disc25mmx3mmClear"
+        },
+        "25mm x 6mm": {
+          "Colorless": "Disc25mmx6mmClear"
         }
       },
-      "Disc, 18mm x 3mm, fluorescent blue ": {
-        "Sizeless": {
-          "Colorless": "Disc18mmx3mmfluorescentblue"
-        }
-      },
-      "Disc, 18mm x 3mm, Fluorescent": {
-        "Sizeless": {
+      "Disc, Fluorescent": {
+        "18mm x 3mm": {
+          "Blue": "Disc18mmx3mmfluorescentblue",
           "Green": "Disc18mmx3mmFluorescentGreen",
           "Orange": "Disc18mmx3mmFluorescentOrange",
           "Red": "Disc18mmx3mmFluorescentRed",
           "Yellow": "Disc18mmx3mmFluorescentYellow"
-        }
-      },
-      "Disc, 18mm x 3mm, Transparent": {
-        "Sizeless": {
-          "Blue": "Disc18mmx3mmTransparentBlue",
-          "Green": "Disc18mmx3mmTransparentGreen",
-          "Gray": "Disc18mmx3mmTransparentGray",
-          "Orange": "Disc18mmx3mmTransparentOrange",
-          "Purple": "Disc18mmx3mmTransparentPurple",
-          "Red": "Disc18mmx3mmTransparentRed",
-          "Yellow": "Disc18mmx3mmTransparentYellow"
-        }
-      },
-      "Disc, 18mm x 5mm": {
-        "Sizeless": {
-          "Red": "Disc18mmx5mmRed"
-        }
-      },
-      "Disc, 18mm x 6mm, Clear": {
-        "Sizeless": {
-          "Colorless": "Disc18mmx6mmClear"
-        }
-      },
-      "Disc, 18mm x 6mm, Fluorescent": {
-        "Sizeless": {
+        },
+        "18mm x 6mm": {
           "Blue": "Disc18mmx6mmFluorescentBlue",
           "Green": "Disc18mmx6mmFluorescentGreen",
           "Orange": "Disc18mmx6mmFluorescentOrange",
           "Red": "Disc18mmx6mmFluorescentRed",
           "Yellow": "Disc18mmx6mmFluorescentYellow"
-        }
-      },
-      "Disc, 18mm x 6mm, Transparent": {
-        "Sizeless": {
-          "Blue": "Disc18mmx6mmTransparentBlue",
-          "Green": "Disc18mmx6mmTransparentGreen",
-          "Gray": "Disc18mmx6mmTransparentGray",
-          "Orange": "Disc18mmx6mmTransparentOrange",
-          "Purple": "Disc18mmx6mmTransparentPurple",
-          "Red": "Disc18mmx6mmTransparentRed",
-          "Yellow": "Disc18mmx6mmTransparentYellow"
-        }
-      },
-      "Disc, 20mm x 5mm, Pastel": {
-        "Sizeless": {
-          "Blue": "Disc20mmx5mmPastelBlue",
-          "Orange": "Disc20mmx5mmPastelOrange",
-          "Purple": "Disc20mmx5mmPastelPurple",
-          "Pink": "Disc20mmx5mmPastelPink"
-        }
-      },
-      "Disc, 25mm x 3mm, Clear": {
-        "Sizeless": {
-          "Colorless": "Disc25mmx3mmClear"
-        }
-      },
-      "Disc, 25mm x 3mm, Fluorescent": {
-        "Sizeless": {
+        },
+        "25mm x 3mm": {
           "Blue": "Disc25mmx3mmFluorescentBlue",
           "Green": "Disc25mmx3mmFluorescentGreen",
           "Orange": "Disc25mmx3mmFluorescentOrange",
           "Red": "Disc25mmx3mmFluorescentRed",
           "Yellow": "Disc25mmx3mmFluorescentYellow"
-        }
-      },
-      "Disc, 25mm x 3mm, Transparent": {
-        "Sizeless": {
-          "Blue": "Disc25mmx3mmTransparentBlue",
-          "Green": "Disc25mmx3mmTransparentGreen",
-          "Gray": "Disc25mmx3mmTransparentGray",
-          "Orange": "Disc25mmx3mmTransparentOrange",
-          "Red": "Disc25mmx3mmTransparentRed",
-          "Purple": "Disc25mmx3mmTransparentPurple",
-          "Yellow": "Disc25mmx3mmTransparentYellow"
-        }
-      },
-      "Disc, 25mm x 6mm, Clear": {
-        "Sizeless": {
-          "Colorless": "Disc25mmx6mmClear"
-        }
-      },
-      "Disc, 25mm x 6mm, Fluorescent": {
-        "Sizeless": {
+        },
+        "25mm x 6mm": {
           "Blue": "Disc25mmx6mmFluorescentBlue",
           "Green": "Disc25mmx6mmFluorescentGreen",
           "Orange": "Disc25mmx6mmFluorescentOrange",
@@ -1580,8 +1502,35 @@ const COMPONENT_CATEGORIES = {
           "Yellow": "Disc25mmx6mmFluorescentYellow"
         }
       },
-      "Disc, 25mm x 6mm, Transparent": {
-        "Sizeless": {
+      "Disc, Transparent": {
+        "18mm x 3mm": {
+          "Blue": "Disc18mmx3mmTransparentBlue",
+          "Green": "Disc18mmx3mmTransparentGreen",
+          "Gray": "Disc18mmx3mmTransparentGray",
+          "Orange": "Disc18mmx3mmTransparentOrange",
+          "Purple": "Disc18mmx3mmTransparentPurple",
+          "Red": "Disc18mmx3mmTransparentRed",
+          "Yellow": "Disc18mmx3mmTransparentYellow"
+        },
+        "18mm x 6mm": {
+          "Blue": "Disc18mmx6mmTransparentBlue",
+          "Green": "Disc18mmx6mmTransparentGreen",
+          "Gray": "Disc18mmx6mmTransparentGray",
+          "Orange": "Disc18mmx6mmTransparentOrange",
+          "Purple": "Disc18mmx6mmTransparentPurple",
+          "Red": "Disc18mmx6mmTransparentRed",
+          "Yellow": "Disc18mmx6mmTransparentYellow"
+        },
+        "25mm x 3mm": {
+          "Blue": "Disc25mmx3mmTransparentBlue",
+          "Green": "Disc25mmx3mmTransparentGreen",
+          "Gray": "Disc25mmx3mmTransparentGray",
+          "Orange": "Disc25mmx3mmTransparentOrange",
+          "Red": "Disc25mmx3mmTransparentRed",
+          "Purple": "Disc25mmx3mmTransparentPurple",
+          "Yellow": "Disc25mmx3mmTransparentYellow"
+        },
+        "25mm x 6mm": {
           "Blue": "Disc25mmx6mmTransparentBlue",
           "Green": "Disc25mmx6mmTransparentGreen",
           "Gray": "Disc25mmx6mmTransparentGray",
@@ -1591,9 +1540,12 @@ const COMPONENT_CATEGORIES = {
           "Yellow": "Disc25mmx6mmTransparentYellow"
         }
       },
-      "Disc, 30mm x 5mm": {
-        "Sizeless": {
-          "Blue": "Disc30mmx5mmBlue"
+      "Disc, Pastel": {
+        "20mm x 5mm": {
+          "Blue": "Disc20mmx5mmPastelBlue",
+          "Orange": "Disc20mmx5mmPastelOrange",
+          "Purple": "Disc20mmx5mmPastelPurple",
+          "Pink": "Disc20mmx5mmPastelPink"
         }
       },
       "Game Designer’s Ruler": {
@@ -1606,13 +1558,9 @@ const COMPONENT_CATEGORIES = {
           "Yellow": "PizzaDiscYellow"
         }
       },
-      "Wink": {
-        "20mm": {
-          "Black": "Wink20mmBlack"
-        }
-      },
       "Wink, Opaque": {
         "20mm": {
+          "Black": "Wink20mmBlack",
           "White": "Wink20mmOpaqueWhite"
         },
         "22mm": {
@@ -2454,12 +2402,8 @@ const COMPONENT_CATEGORIES = {
         "Sizeless": {
           "Blue": "ChurchPlasticBlue",
           "Orange": "ChurchPlasticOrange",
-          "Red": "ChurchPlasticRed"
-        }
-      },
-      "Church, Plastic,White": {
-        "Sizeless": {
-          "Colorless": "ChurchPlasticWhite"
+          "Red": "ChurchPlasticRed",
+          "White": "ChurchPlasticWhite"
         }
       },
       "Church, Wood": {
@@ -2515,11 +2459,6 @@ const COMPONENT_CATEGORIES = {
           "Purple": "FuturePyramidPurple",
           "Red": "FuturePyramidRed",
           "Yellow": "FuturePyramidYellow"
-        }
-      },
-      "Handmade Brick": {
-        "Sizeless": {
-          "Colorless": "HandmadeBrick"
         }
       },
       "Harbor": {
@@ -2664,11 +2603,6 @@ const COMPONENT_CATEGORIES = {
           "Red": "PlasticCastleRed"
         }
       },
-      "Premium Brick": {
-        "Sizeless": {
-          "Colorless": "PremiumBrick"
-        }
-      },
       "Pyramid": {
         "Sizeless": {
           "Black": "PyramidBlack",
@@ -2752,7 +2686,7 @@ const COMPONENT_CATEGORIES = {
           "Colorless": "ArmoredGuard"
         }
       },
-      "Aztec - Character Meeple": {
+      "Aztec, Character Meeple": {
         "Sizeless": {
           "Colorless": "Aztec-CharacterMeeple"
         }
@@ -2774,149 +2708,61 @@ const COMPONENT_CATEGORIES = {
           "Green": "BustWoodCollaredGreen"
         }
       },
-      "Cleric - Character Meeple": {
+      "Cleric, Character Meeple": {
         "Sizeless": {
           "Colorless": "Cleric-CharacterMeeple"
         }
       },
-      "Cowboy, Black - Character Meeple": {
+      "Cowboy, Character Meeple": {
         "Sizeless": {
-          "Colorless": "CowboyBlack-CharacterMeeple"
+          "Black": "CowboyBlack-CharacterMeeple",
+          "Blue": "CowboyBlue-CharacterMeeple",
+          "Green": "CowboyGreen-CharacterMeeple",
+          "Orange": "CowboyOrange-CharacterMeeple",
+          "Purple": "CowboyPurple-CharacterMeeple",
+          "Red": "CowboyRed-CharacterMeeple",
+          "White": "CowboyWhite-CharacterMeeple",
+          "Yellow": "CowboyYellow-CharacterMeeple"
         }
       },
-      "Cowboy, Blue - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "CowboyBlue-CharacterMeeple"
-        }
-      },
-      "Cowboy, Green - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "CowboyGreen-CharacterMeeple"
-        }
-      },
-      "Cowboy, Orange - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "CowboyOrange-CharacterMeeple"
-        }
-      },
-      "Cowboy, Purple - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "CowboyPurple-CharacterMeeple"
-        }
-      },
-      "Cowboy, Red - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "CowboyRed-CharacterMeeple"
-        }
-      },
-      "Cowboy, White - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "CowboyWhite-CharacterMeeple"
-        }
-      },
-      "Cowboy, Yellow - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "CowboyYellow-CharacterMeeple"
-        }
-      },
-      "Doctor - Character Meeple": {
+      "Doctor, Character Meeple": {
         "Sizeless": {
           "Colorless": "Doctor-CharacterMeeple"
         }
       },
-      "Dwarf, Blue - Character Meeple": {
+      "Dwarf, Character Meeple": {
         "Sizeless": {
-          "Colorless": "DwarfBlue-CharacterMeeple"
+          "Blue": "DwarfBlue-CharacterMeeple",
+          "Green": "DwarfGreen-CharacterMeeple",
+          "Orange": "DwarfOrange-CharacterMeeple",
+          "Purple": "DwarfPurple-CharacterMeeple",
+          "Red": "DwarfRed-CharacterMeeple",
+          "Yellow": "DwarfYellow-CharacterMeeple"
         }
       },
-      "Dwarf, Green - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "DwarfGreen-CharacterMeeple"
-        }
-      },
-      "Dwarf, Orange - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "DwarfOrange-CharacterMeeple"
-        }
-      },
-      "Dwarf, Purple - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "DwarfPurple-CharacterMeeple"
-        }
-      },
-      "Dwarf, Red - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "DwarfRed-CharacterMeeple"
-        }
-      },
-      "Dwarf, Yellow - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "DwarfYellow-CharacterMeeple"
-        }
-      },
-      "Elf - Character Meeple": {
+      "Elf, Character Meeple": {
         "Sizeless": {
           "Colorless": "Elf-CharacterMeeple"
         }
       },
-      "Farmer, Female, Blue - Character Meeple": {
+      "Farmer, Female, Character Meeple": {
         "Sizeless": {
-          "Colorless": "FarmerFemaleBlue-CharacterMeeple"
+          "Blue": "FarmerFemaleBlue-CharacterMeeple",
+          "Green": "FarmerFemaleGreen-CharacterMeeple",
+          "Orange": "FarmerFemaleOrange-CharacterMeeple",
+          "Purple": "FarmerFemalePurple-CharacterMeeple",
+          "Red": "FarmerFemaleRed-CharacterMeeple",
+          "Yellow": "FarmerFemaleYellow-CharacterMeeple"
         }
       },
-      "Farmer, Female, Green - Character Meeple": {
+      "Farmer, Male, Character Meeple": {
         "Sizeless": {
-          "Colorless": "FarmerFemaleGreen-CharacterMeeple"
-        }
-      },
-      "Farmer, Female, Orange - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "FarmerFemaleOrange-CharacterMeeple"
-        }
-      },
-      "Farmer, Female, Purple - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "FarmerFemalePurple-CharacterMeeple"
-        }
-      },
-      "Farmer, Female, Red - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "FarmerFemaleRed-CharacterMeeple"
-        }
-      },
-      "Farmer, Female, Yellow - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "FarmerFemaleYellow-CharacterMeeple"
-        }
-      },
-      "Farmer, Male, Blue - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "FarmerMaleBlue-CharacterMeeple"
-        }
-      },
-      "Farmer, Male, Green - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "FarmerMaleGreen-CharacterMeeple"
-        }
-      },
-      "Farmer, Male, Orange - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "FarmerMaleOrange-CharacterMeeple"
-        }
-      },
-      "Farmer, Male, Purple - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "FarmerMalePurple-CharacterMeeple"
-        }
-      },
-      "Farmer, Male, Red - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "FarmerMaleRed-CharacterMeeple"
-        }
-      },
-      "Farmer, Male, Yellow - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "FarmerMaleYellow-CharacterMeeple"
+          "Blue": "FarmerMaleBlue-CharacterMeeple",
+          "Green": "FarmerMaleGreen-CharacterMeeple",
+          "Orange": "FarmerMaleOrange-CharacterMeeple",
+          "Purple": "FarmerMalePurple-CharacterMeeple",
+          "Red": "FarmerMaleRed-CharacterMeeple",
+          "Yellow": "FarmerMaleYellow-CharacterMeeple"
         }
       },
       "Fedora Wearer": {
@@ -2939,12 +2785,12 @@ const COMPONENT_CATEGORIES = {
           "White": "FigureWoodWhite"
         }
       },
-      "Fire Elemental - Character Meeple": {
+      "Fire Elemental, Character Meeple": {
         "Sizeless": {
           "Colorless": "FireElemental-CharacterMeeple"
         }
       },
-      "Firefighter - Character Meeple": {
+      "Firefighter, Character Meeple": {
         "Sizeless": {
           "Colorless": "Firefighter-CharacterMeeple"
         }
@@ -2965,7 +2811,7 @@ const COMPONENT_CATEGORIES = {
           "Yellow": "GangsterYellow"
         }
       },
-      "Geisha - Character Meeple": {
+      "Geisha, Character Meeple": {
         "Sizeless": {
           "Colorless": "Geisha-CharacterMeeple"
         }
@@ -2993,37 +2839,37 @@ const COMPONENT_CATEGORIES = {
           "Yellow": "GuardRobotYellow"
         }
       },
-      "Halfling - Character Meeple": {
+      "Halfling, Character Meeple": {
         "Sizeless": {
           "Colorless": "Halfling-CharacterMeeple"
         }
       },
-      "Hazmat - Character Meeple": {
+      "Hazmat, Character Meeple": {
         "Sizeless": {
           "Colorless": "Hazmat-CharacterMeeple"
         }
       },
-      "Ice Elemental - Character Meeple": {
+      "Ice Elemental, Character Meeple": {
         "Sizeless": {
           "Colorless": "IceElemental-CharacterMeeple"
         }
       },
-      "Lab Assistant - Character Meeple": {
+      "Lab Assistant, Character Meeple": {
         "Sizeless": {
           "Colorless": "LabAssistant-CharacterMeeple"
         }
       },
-      "Maasai - Character Meeple": {
+      "Maasai, Character Meeple": {
         "Sizeless": {
           "Colorless": "Maasai-CharacterMeeple"
         }
       },
-      "Man In Black - Character Meeple": {
+      "Man In Black, Character Meeple": {
         "Sizeless": {
           "Colorless": "ManInBlack-CharacterMeeple"
         }
       },
-      "Medic - Character Meeple": {
+      "Medic, Character Meeple": {
         "Sizeless": {
           "Colorless": "Medic-CharacterMeeple"
         }
@@ -3140,67 +2986,35 @@ const COMPONENT_CATEGORIES = {
           "Yellow": "MeepleThickYellow"
         }
       },
-      "Mongol - Character Meeple": {
+      "Mongol, Character Meeple": {
         "Sizeless": {
           "Colorless": "Mongol-CharacterMeeple"
         }
       },
-      "Ninja, Black - Character Meeple": {
+      "Ninja, Character Meeple": {
         "Sizeless": {
-          "Colorless": "NinjaBlack-CharacterMeeple"
+          "Black": "NinjaBlack-CharacterMeeple",
+          "Blue": "NinjaBlue-CharacterMeeple",
+          "Green": "NinjaGreen-CharacterMeeple",
+          "Orange": "NinjaOrange-CharacterMeeple",
+          "Purple": "NinjaPurple-CharacterMeeple",
+          "Red": "NinjaRed-CharacterMeeple",
+          "White": "NinjaWhite-CharacterMeeple",
+          "Yellow": "NinjaYellow-CharacterMeeple"
         }
       },
-      "Ninja, Blue - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "NinjaBlue-CharacterMeeple"
-        }
-      },
-      "Ninja, Green - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "NinjaGreen-CharacterMeeple"
-        }
-      },
-      "Ninja, Orange - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "NinjaOrange-CharacterMeeple"
-        }
-      },
-      "Ninja, Purple - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "NinjaPurple-CharacterMeeple"
-        }
-      },
-      "Ninja, Red - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "NinjaRed-CharacterMeeple"
-        }
-      },
-      "Ninja, White - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "NinjaWhite-CharacterMeeple"
-        }
-      },
-      "Ninja, Yellow - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "NinjaYellow-CharacterMeeple"
-        }
-      },
-      "Nurse - Character Meeple": {
+      "Nurse, Character Meeple": {
         "Sizeless": {
           "Colorless": "Nurse-CharacterMeeple"
         }
       },
-      "Office Worker, Blue - Character Meeple": {
+      "Office Worker, Character Meeple": {
         "Sizeless": {
-          "Colorless": "OfficeWorkerBlue-CharacterMeeple"
+          "Blue": "OfficeWorkerBlue-CharacterMeeple",
+          "Purple": "OfficeWorkerPurple-CharacterMeeple"
         }
       },
-      "Office Worker, Purple - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "OfficeWorkerPurple-CharacterMeeple"
-        }
-      },
-      "Outlaw - Character Meeple": {
+      "Outlaw, Character Meeple": {
         "Sizeless": {
           "Colorless": "Outlaw-CharacterMeeple"
         }
@@ -3250,42 +3064,22 @@ const COMPONENT_CATEGORIES = {
           "Teal": "PersonwithHatTeal"
         }
       },
-      "Pirate, Blue - Character Meeple": {
+      "Pirate, Character Meeple": {
         "Sizeless": {
-          "Colorless": "PirateBlue-CharacterMeeple"
+          "Blue": "PirateBlue-CharacterMeeple",
+          "Green": "PirateGreen-CharacterMeeple",
+          "Orange": "PirateOrange-CharacterMeeple",
+          "Purple": "PiratePurple-CharacterMeeple",
+          "Red": "PirateRed-CharacterMeeple",
+          "Yellow": "PirateYellow-CharacterMeeple"
         }
       },
-      "Pirate, Green - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "PirateGreen-CharacterMeeple"
-        }
-      },
-      "Pirate, Orange - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "PirateOrange-CharacterMeeple"
-        }
-      },
-      "Pirate, Purple - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "PiratePurple-CharacterMeeple"
-        }
-      },
-      "Pirate, Red - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "PirateRed-CharacterMeeple"
-        }
-      },
-      "Pirate, Yellow - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "PirateYellow-CharacterMeeple"
-        }
-      },
-      "Police - Character Meeple": {
+      "Police, Character Meeple": {
         "Sizeless": {
           "Colorless": "Police-CharacterMeeple"
         }
       },
-      "Renegade - Character Meeple": {
+      "Renegade, Character Meeple": {
         "Sizeless": {
           "Colorless": "Renegade-CharacterMeeple"
         }
@@ -3295,34 +3089,30 @@ const COMPONENT_CATEGORIES = {
           "Silver": "RobotSilver"
         }
       },
-      "Rogue - Character Meeple": {
+      "Rogue, Character Meeple": {
         "Sizeless": {
           "Colorless": "Rogue-CharacterMeeple"
         }
       },
-      "Scientist - Character Meeple": {
+      "Scientist, Character Meeple": {
         "Sizeless": {
           "Colorless": "Scientist-CharacterMeeple"
         }
       },
-      "Sheriff - Character Meeple": {
+      "Sheriff, Character Meeple": {
         "Sizeless": {
           "Colorless": "Sheriff-CharacterMeeple"
         }
       },
-      "Skeleton - Character Meeple": {
+      "Skeleton, Character Meeple": {
         "Sizeless": {
           "Colorless": "Skeleton-CharacterMeeple"
         }
       },
-      "Soldier, Blue - Character Meeple": {
+      "Soldier, Character Meeple": {
         "Sizeless": {
-          "Colorless": "SoldierBlue-CharacterMeeple"
-        }
-      },
-      "Soldier, Green - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "SoldierGreen-CharacterMeeple"
+          "Blue": "SoldierBlue-CharacterMeeple",
+          "Green": "SoldierGreen-CharacterMeeple"
         }
       },
       "Speedster": {
@@ -3330,47 +3120,19 @@ const COMPONENT_CATEGORIES = {
           "Red": "SpeedsterRed"
         }
       },
-      "Swordsman, Black - Character Meeple": {
+      "Swordsman, Character Meeple": {
         "Sizeless": {
-          "Colorless": "SwordsmanBlack-CharacterMeeple"
+          "Black": "SwordsmanBlack-CharacterMeeple",
+          "Blue": "SwordsmanBlue-CharacterMeeple",
+          "Green": "SwordsmanGreen-CharacterMeeple",
+          "Orange": "SwordsmanOrange-CharacterMeeple",
+          "Purple": "SwordsmanPurple-CharacterMeeple",
+          "Red": "SwordsmanRed-CharacterMeeple",
+          "White": "SwordsmanWhite-CharacterMeeple",
+          "Yellow": "SwordsmanYellow-CharacterMeeple"
         }
       },
-      "Swordsman, Blue - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "SwordsmanBlue-CharacterMeeple"
-        }
-      },
-      "Swordsman, Green - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "SwordsmanGreen-CharacterMeeple"
-        }
-      },
-      "Swordsman, Orange - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "SwordsmanOrange-CharacterMeeple"
-        }
-      },
-      "Swordsman, Purple - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "SwordsmanPurple-CharacterMeeple"
-        }
-      },
-      "Swordsman, Red - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "SwordsmanRed-CharacterMeeple"
-        }
-      },
-      "Swordsman, White - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "SwordsmanWhite-CharacterMeeple"
-        }
-      },
-      "Swordsman, Yellow - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "SwordsmanYellow-CharacterMeeple"
-        }
-      },
-      "Thief - Character Meeple": {
+      "Thief, Character Meeple": {
         "Sizeless": {
           "Colorless": "Thief-CharacterMeeple"
         }
@@ -3380,79 +3142,31 @@ const COMPONENT_CATEGORIES = {
           "Yellow": "TikiIdolYellow"
         }
       },
-      "Vampire - Character Meeple": {
+      "Vampire, Character Meeple": {
         "Sizeless": {
           "Colorless": "Vampire-CharacterMeeple"
         }
       },
-      "Villager, Black - Character Meeple": {
+      "Villager, Character Meeple": {
         "Sizeless": {
-          "Colorless": "VillagerBlack-CharacterMeeple"
+          "Black": "VillagerBlack-CharacterMeeple",
+          "Blue": "VillagerBlue-CharacterMeeple",
+          "Green": "VillagerGreen-CharacterMeeple",
+          "Orange": "VillagerOrange-CharacterMeeple",
+          "Purple": "VillagerPurple-CharacterMeeple",
+          "Red": "VillagerRed-CharacterMeeple",
+          "White": "VillagerWhite-CharacterMeeple",
+          "Yellow": "VillagerYellow-CharacterMeeple"
         }
       },
-      "Villager, Blue - Character Meeple": {
+      "Wizard, Character Meeple": {
         "Sizeless": {
-          "Colorless": "VillagerBlue-CharacterMeeple"
-        }
-      },
-      "Villager, Green - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "VillagerGreen-CharacterMeeple"
-        }
-      },
-      "Villager, Orange - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "VillagerOrange-CharacterMeeple"
-        }
-      },
-      "Villager, Purple - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "VillagerPurple-CharacterMeeple"
-        }
-      },
-      "Villager, Red - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "VillagerRed-CharacterMeeple"
-        }
-      },
-      "Villager, White - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "VillagerWhite-CharacterMeeple"
-        }
-      },
-      "Villager, Yellow - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "VillagerYellow-CharacterMeeple"
-        }
-      },
-      "Wizard, Blue - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "WizardBlue-CharacterMeeple"
-        }
-      },
-      "Wizard, Green - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "WizardGreen-CharacterMeeple"
-        }
-      },
-      "Wizard, Orange - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "WizardOrange-CharacterMeeple"
-        }
-      },
-      "Wizard, Purple - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "WizardPurple-CharacterMeeple"
-        }
-      },
-      "Wizard, Red - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "WizardRed-CharacterMeeple"
-        }
-      },
-      "Wizard, Yellow - Character Meeple": {
-        "Sizeless": {
-          "Colorless": "WizardYellow-CharacterMeeple"
+          "Blue": "WizardBlue-CharacterMeeple",
+          "Green": "WizardGreen-CharacterMeeple",
+          "Orange": "WizardOrange-CharacterMeeple",
+          "Purple": "WizardPurple-CharacterMeeple",
+          "Red": "WizardRed-CharacterMeeple",
+          "Yellow": "WizardYellow-CharacterMeeple"
         }
       },
       "Worker, Single Bag": {
@@ -3465,7 +3179,7 @@ const COMPONENT_CATEGORIES = {
           "Yellow": "WorkerSingleBagYellow"
         }
       },
-      "Yeti - Character Meeple": {
+      "Yeti, Character Meeple": {
         "Sizeless": {
           "Colorless": "Yeti-CharacterMeeple"
         }
@@ -4920,12 +4634,8 @@ const COMPONENT_CATEGORIES = {
         "Sizeless": {
           "Black": "SkeletonWarriorBlack",
           "Blue": "SkeletonWarriorBlue",
-          "Pink": "SkeletonWarriorPink"
-        }
-      },
-      "Skeleton Warrior, Tan": {
-        "Sizeless": {
-          "Colorless": "SkeletonWarriorTan"
+          "Pink": "SkeletonWarriorPink",
+          "Tan": "SkeletonWarriorTan"
         }
       },
       "Sticker Pawn, Opaque": {
@@ -5764,7 +5474,8 @@ const COMPONENT_CATEGORIES = {
           "Purple": "FutureTankPurple",
           "Red": "FutureTankRed",
           "White": "FutureTankWhite",
-          "Yellow": "FutureTankYellow"
+          "Yellow": "FutureTankYellow",
+          "Tan": "FutureTankTan"
         }
       },
       "Helicopter, Acrylic": {
@@ -5797,12 +5508,8 @@ const COMPONENT_CATEGORIES = {
           "Black": "LocomotiveTrainEngineBlack",
           "Green": "LocomotiveTrainEngineGreen",
           "Light Blue": "LocomotiveTrainEngineLightBlue",
-          "Orange": "LocomotiveTrainEngineOrange"
-        }
-      },
-      "Locomotive Train Engine, Tan": {
-        "Sizeless": {
-          "Colorless": "LocomotiveTrainEngineTan"
+          "Orange": "LocomotiveTrainEngineOrange",
+          "Tan": "LocomotiveTrainEngineTan"
         }
       },
       "Locomotive": {
@@ -6164,11 +5871,6 @@ const COMPONENT_CATEGORIES = {
         "Sizeless": {
           "Colorless": "VanPostApocalypse"
         }
-      },
-      "Future Tank, Tan": {
-        "Sizeless": {
-          "Colorless": "FutureTankTan"
-        }
       }
     },
     "casino": {
@@ -6244,73 +5946,47 @@ const COMPONENT_CATEGORIES = {
           "Colorless": "BlankMoneyPlay"
         }
       },
-      "Cash, $1": {
-        "Sizeless": {
+      "Cash": {
+        "1": {
           "Colorless": "Cash$1"
-        }
-      },
-      "Cash, $10": {
-        "Sizeless": {
-          "Colorless": "Cash$10"
-        }
-      },
-      "Cash, $100": {
-        "Sizeless": {
-          "Colorless": "Cash$100"
-        }
-      },
-      "Cash, $100K": {
-        "Sizeless": {
-          "Colorless": "Cash$100K"
-        }
-      },
-      "Cash, $10K": {
-        "Sizeless": {
-          "Colorless": "Cash$10K"
-        }
-      },
-      "Cash, $1K": {
-        "Sizeless": {
-          "Colorless": "Cash$1K"
-        }
-      },
-      "Cash, $1M": {
-        "Sizeless": {
-          "Colorless": "Cash$1M"
-        }
-      },
-      "Cash, $20": {
-        "Sizeless": {
-          "Colorless": "Cash$20"
-        }
-      },
-      "Cash, $5": {
-        "Sizeless": {
+        },
+        "5": {
           "Colorless": "Cash$5"
-        }
-      },
-      "Cash, $50": {
-        "Sizeless": {
+        },
+        "10": {
+          "Colorless": "Cash$10"
+        },
+        "20": {
+          "Colorless": "Cash$20"
+        },
+        "50": {
           "Colorless": "Cash$50"
-        }
-      },
-      "Cash, $500": {
-        "Sizeless": {
+        },
+        "100": {
+          "Colorless": "Cash$100"
+        },
+        "500": {
           "Colorless": "Cash$500"
-        }
-      },
-      "Cash, $500K": {
-        "Sizeless": {
+        },
+        "100K": {
+          "Colorless": "Cash$100K"
+        },
+        "10K": {
+          "Colorless": "Cash$10K"
+        },
+        "1K": {
+          "Colorless": "Cash$1K"
+        },
+        "1M": {
+          "Colorless": "Cash$1M"
+        },
+        "500K": {
           "Colorless": "Cash$500K"
-        }
-      },
-      "Cash, $50K": {
-        "Sizeless": {
+        },
+        "50K": {
           "Colorless": "Cash$50K"
-        }
-      },
-      "Cash, $5K": {
-        "Sizeless": {
+        },
+        "5K": {
           "Colorless": "Cash$5K"
         }
       },
@@ -6628,13 +6304,11 @@ const COMPONENT_CATEGORIES = {
           "Colorless": "SandTimer90seconds"
         }
       },
-      "Screw, 6mm x 3mm": {
-        "Sizeless": {
+      "Screw": {
+        "6mm x 3mm": {
           "Black": "Screw6mmx3mmBlack"
-        }
-      },
-      "Screw, 8mm x 5mm": {
-        "Sizeless": {
+        },
+        "8mm x 5mm": {
           "Black": "Screw8mmx5mmBlack"
         }
       },
@@ -7395,15 +7069,13 @@ const COMPONENT_CATEGORIES = {
           "White": "Octbox10mmWhite",
           "Yellow": "Octbox10mmYellow"
         },
-        "7mm": {
-          "Yellow": "Octbox7mmYellow"
-        }
-      },
-      "Octbox, 10mm x 7mm": {
-        "Sizeless": {
+        "10mm x 7mm": {
           "Blue": "Octbox7mmBlue",
           "Gray": "Octbox7mmGray",
           "Purple": "Octbox7mmPurple"
+        },
+        "7mm": {
+          "Yellow": "Octbox7mmYellow"
         }
       },
       "Oil Barrel": {
@@ -7788,14 +7460,12 @@ const COMPONENT_CATEGORIES = {
           "Colorless": "GameMaster'sScreen"
         }
       },
-      "Gift Certificate $25": {
-        "Sizeless": {
-          "Colorless": "GiftCertificate$25"
-        }
-      },
-      "Gift Certificate $5": {
-        "Sizeless": {
+      "Gift Certificate": {
+        "5": {
           "Colorless": "GiftCertificate$5"
+        },
+        "25": {
+          "Colorless": "GiftCertificate$25"
         }
       },
       "Glue Dots Sheet": {
@@ -7867,12 +7537,8 @@ const COMPONENT_CATEGORIES = {
         "Sizeless": {
           "Black": "SprueAgesBlack",
           "Purple": "SprueAgesPurple",
+          "Tan": "SprueAgesTan",
           "Yellow": "SprueAgesYellow"
-        }
-      },
-      "Sprue, Ages, Tan": {
-        "Sizeless": {
-          "Colorless": "SprueAgesTan"
         }
       },
       "Sprue, Civil War Horse": {

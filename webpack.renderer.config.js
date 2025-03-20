@@ -47,6 +47,13 @@ module.exports = {
         generator: {
           filename: 'componentTemplates/[name][ext]'
         }
+      },
+      {
+        test: /componentPreviewImages\/.+\.(png)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'componentPreviewImages/[name][ext]'
+        }
       }
     ],
   },

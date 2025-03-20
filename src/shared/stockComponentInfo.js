@@ -6322,7 +6322,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/AvatarTransparentYellow.png"
   },
   "Aztec-CharacterMeeple": {
-    "DisplayName": "Aztec - Character Meeple",
+    "DisplayName": "Aztec, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a person wearing Aztec-inspired clothing printed directly on it.",
     "GameCrafterGuid": "7A814274-8EB6-11E8-AE40-11E1785DA8EE",
     "GameCrafterSkuId": "7A838AF2-8EB6-11E8-AE40-11E1785DA8EE",
@@ -20020,7 +20020,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/ChurchPlasticRed.png"
   },
   "ChurchPlasticWhite": {
-    "DisplayName": "Church, Plastic,White",
+    "DisplayName": "Church, Plastic, White",
     "Description": "",
     "GameCrafterGuid": "1A5B3932-215A-11E8-A99B-F33F94A6FE1D",
     "GameCrafterSkuId": "1A5F01DE-215A-11E8-A99B-F33F94A6FE1D",
@@ -20608,7 +20608,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/Cleric.png"
   },
   "Cleric-CharacterMeeple": {
-    "DisplayName": "Cleric - Character Meeple",
+    "DisplayName": "Cleric, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a cleric with a wand and tome printed directly on it.",
     "GameCrafterGuid": "9901BD00-8EBB-11E8-8D59-B698B70C97C7",
     "GameCrafterSkuId": "9905600E-8EBB-11E8-8D59-B698B70C97C7",
@@ -22675,7 +22675,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/CowHalfBrown.png"
   },
   "CowboyBlack-CharacterMeeple": {
-    "DisplayName": "Cowboy, Black - Character Meeple",
+    "DisplayName": "Cowboy, Black, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a cowboy in chaps printed directly on it.",
     "GameCrafterGuid": "B71EE34E-8EBB-11E8-8D59-E798B70C97C7",
     "GameCrafterSkuId": "B724A856-8EBB-11E8-8D59-E798B70C97C7",
@@ -22714,7 +22714,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/CowboyBlack-CharacterMeeple.png"
   },
   "CowboyBlue-CharacterMeeple": {
-    "DisplayName": "Cowboy, Blue - Character Meeple",
+    "DisplayName": "Cowboy, Blue, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a cowboy in chaps printed directly on it.",
     "GameCrafterGuid": "C4C01072-8EBB-11E8-AE40-C2E8785DA8EE",
     "GameCrafterSkuId": "C4C20508-8EBB-11E8-AE40-C2E8785DA8EE",
@@ -22753,7 +22753,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/CowboyBlue-CharacterMeeple.png"
   },
   "CowboyGreen-CharacterMeeple": {
-    "DisplayName": "Cowboy, Green - Character Meeple",
+    "DisplayName": "Cowboy, Green, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a cowboy in chaps printed directly on it.",
     "GameCrafterGuid": "EF3B4A06-8EBB-11E8-AE40-F3E8785DA8EE",
     "GameCrafterSkuId": "EF3D3C1C-8EBB-11E8-AE40-F3E8785DA8EE",
@@ -22792,7 +22792,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/CowboyGreen-CharacterMeeple.png"
   },
   "CowboyOrange-CharacterMeeple": {
-    "DisplayName": "Cowboy, Orange - Character Meeple",
+    "DisplayName": "Cowboy, Orange, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a cowboy in chaps printed directly on it.",
     "GameCrafterGuid": "CDA523B2-8EBB-11E8-AE40-D3E8785DA8EE",
     "GameCrafterSkuId": "CDA92AE8-8EBB-11E8-AE40-D3E8785DA8EE",
@@ -22831,7 +22831,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/CowboyOrange-CharacterMeeple.png"
   },
   "CowboyPurple-CharacterMeeple": {
-    "DisplayName": "Cowboy, Purple - Character Meeple",
+    "DisplayName": "Cowboy, Purple, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a cowboy in chaps printed directly on it.",
     "GameCrafterGuid": "DB5C8F18-8EBB-11E8-AE40-DCE8785DA8EE",
     "GameCrafterSkuId": "DB6101BA-8EBB-11E8-AE40-DCE8785DA8EE",
@@ -22870,7 +22870,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/CowboyPurple-CharacterMeeple.png"
   },
   "CowboyRed-CharacterMeeple": {
-    "DisplayName": "Cowboy, Red - Character Meeple",
+    "DisplayName": "Cowboy, Red, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a cowboy in chaps printed directly on it.",
     "GameCrafterGuid": "FA30749A-8EBB-11E8-8D59-4699B70C97C7",
     "GameCrafterSkuId": "FA340E66-8EBB-11E8-8D59-4699B70C97C7",
@@ -22909,7 +22909,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/CowboyRed-CharacterMeeple.png"
   },
   "CowboyWhite-CharacterMeeple": {
-    "DisplayName": "Cowboy, White - Character Meeple",
+    "DisplayName": "Cowboy, White, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a cowboy in chaps printed directly on it.",
     "GameCrafterGuid": "0CBBAF3A-8EBC-11E8-8D59-6499B70C97C7",
     "GameCrafterSkuId": "0CC18AC2-8EBC-11E8-8D59-6499B70C97C7",
@@ -22948,7 +22948,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/CowboyWhite-CharacterMeeple.png"
   },
   "CowboyYellow-CharacterMeeple": {
-    "DisplayName": "Cowboy, Yellow - Character Meeple",
+    "DisplayName": "Cowboy, Yellow, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a cowboy in chaps printed directly on it.",
     "GameCrafterGuid": "024BCD64-8EBC-11E8-8D59-4F99B70C97C7",
     "GameCrafterSkuId": "024F2F72-8EBC-11E8-8D59-4F99B70C97C7",
@@ -25151,7 +25151,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/Cylinder10mmx10mmYellow.png"
   },
   "Cylinder15mmx8mmYellow": {
-    "DisplayName": "Cylinder, 8m x 15mm, Yellow",
+    "DisplayName": "Cylinder, 8mm x 15mm, Yellow",
     "Description": "A 15mm tall wooden cylinder.",
     "GameCrafterGuid": "3220B5D6-2602-11E8-A307-E8BD9483A17B",
     "GameCrafterSkuId": "32266170-2602-11E8-A307-E8BD9483A17B",
@@ -33325,7 +33325,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/Disc18mmx3mmClear.png"
   },
   "Disc18mmx3mmfluorescentblue": {
-    "DisplayName": "Disc, 18mm x 3mm, fluorescent blue ",
+    "DisplayName": "Disc, 18mm x 3mm, Fluorescent Blue",
     "Description": "A translucent disc.",
     "GameCrafterGuid": "4EEC7EBC-9B4A-11E8-9FEF-6A915A6393C8",
     "GameCrafterSkuId": "4EF1ED3E-9B4A-11E8-9FEF-6A915A6393C8",
@@ -36039,7 +36039,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/Djin.png"
   },
   "Doctor-CharacterMeeple": {
-    "DisplayName": "Doctor - Character Meeple",
+    "DisplayName": "Doctor, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a doctor with a stethoscope printed directly on it.",
     "GameCrafterGuid": "1D5D9C86-8EBC-11E8-AE40-45EA785DA8EE",
     "GameCrafterSkuId": "1D5FDF28-8EBC-11E8-AE40-45EA785DA8EE",
@@ -37345,7 +37345,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/DwarfRiflemanFantasyTB25.png"
   },
   "DwarfBlue-CharacterMeeple": {
-    "DisplayName": "Dwarf, Blue - Character Meeple",
+    "DisplayName": "Dwarf, Blue, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a dwarven warrior in armor printed directly on it.",
     "GameCrafterGuid": "2AC98952-8EBC-11E8-AE40-53EA785DA8EE",
     "GameCrafterSkuId": "2ACBDFEA-8EBC-11E8-AE40-53EA785DA8EE",
@@ -37369,7 +37369,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/DwarfBlue-CharacterMeeple.png"
   },
   "DwarfGreen-CharacterMeeple": {
-    "DisplayName": "Dwarf, Green - Character Meeple",
+    "DisplayName": "Dwarf, Green, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a dwarven warrior in armor printed directly on it.",
     "GameCrafterGuid": "35BD36D8-8EBC-11E8-AE40-6AEA785DA8EE",
     "GameCrafterSkuId": "35BF919E-8EBC-11E8-AE40-6AEA785DA8EE",
@@ -37393,7 +37393,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/DwarfGreen-CharacterMeeple.png"
   },
   "DwarfOrange-CharacterMeeple": {
-    "DisplayName": "Dwarf, Orange - Character Meeple",
+    "DisplayName": "Dwarf, Orange, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a dwarven warrior in armor printed directly on it.",
     "GameCrafterGuid": "450291A6-8EBC-11E8-AE40-82EA785DA8EE",
     "GameCrafterSkuId": "4505EF40-8EBC-11E8-AE40-82EA785DA8EE",
@@ -37435,7 +37435,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/DwarfPistolSpaceTB25.png"
   },
   "DwarfPurple-CharacterMeeple": {
-    "DisplayName": "Dwarf, Purple - Character Meeple",
+    "DisplayName": "Dwarf, Purple, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a dwarven warrior in armor printed directly on it.",
     "GameCrafterGuid": "4EC95274-8EBC-11E8-AE40-C0EA785DA8EE",
     "GameCrafterSkuId": "4ECF6E2A-8EBC-11E8-AE40-C0EA785DA8EE",
@@ -37459,7 +37459,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/DwarfPurple-CharacterMeeple.png"
   },
   "DwarfRed-CharacterMeeple": {
-    "DisplayName": "Dwarf, Red - Character Meeple",
+    "DisplayName": "Dwarf, Red, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a dwarven warrior in armor printed directly on it.",
     "GameCrafterGuid": "56DC91D8-8EBC-11E8-8D59-F59AB70C97C7",
     "GameCrafterSkuId": "56DFDCA8-8EBC-11E8-8D59-F59AB70C97C7",
@@ -37483,7 +37483,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/DwarfRed-CharacterMeeple.png"
   },
   "DwarfYellow-CharacterMeeple": {
-    "DisplayName": "Dwarf, Yellow - Character Meeple",
+    "DisplayName": "Dwarf, Yellow, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a dwarven warrior in armor printed directly on it.",
     "GameCrafterGuid": "61E6A91A-8EBC-11E8-AE40-D8EA785DA8EE",
     "GameCrafterSkuId": "61EA1028-8EBC-11E8-AE40-D8EA785DA8EE",
@@ -37966,7 +37966,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/ElephantwithRiderYellow.png"
   },
   "Elf-CharacterMeeple": {
-    "DisplayName": "Elf - Character Meeple",
+    "DisplayName": "Elf, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of an elven archer printed directly on it.",
     "GameCrafterGuid": "689BF9EA-8EBC-11E8-8D59-2B9BB70C97C7",
     "GameCrafterSkuId": "68A5379E-8EBC-11E8-8D59-2B9BB70C97C7",
@@ -38416,7 +38416,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/FantasyCoin5.png"
   },
   "FarmerFemaleBlue-CharacterMeeple": {
-    "DisplayName": "Farmer, Female, Blue - Character Meeple",
+    "DisplayName": "Farmer, Female, Blue, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a female farmer in overalls printed directly on it.",
     "GameCrafterGuid": "98D735C0-8EBC-11E8-AE40-31EB785DA8EE",
     "GameCrafterSkuId": "98DAB772-8EBC-11E8-AE40-31EB785DA8EE",
@@ -38458,7 +38458,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/FarmerFemaleBlue-CharacterMeeple.png"
   },
   "FarmerFemaleGreen-CharacterMeeple": {
-    "DisplayName": "Farmer, Female, Green - Character Meeple",
+    "DisplayName": "Farmer, Female, Green, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a female farmer in overalls printed directly on it.",
     "GameCrafterGuid": "A4C58576-8EBC-11E8-8D59-7D9BB70C97C7",
     "GameCrafterSkuId": "A4C87114-8EBC-11E8-8D59-7D9BB70C97C7",
@@ -38500,7 +38500,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/FarmerFemaleGreen-CharacterMeeple.png"
   },
   "FarmerFemaleOrange-CharacterMeeple": {
-    "DisplayName": "Farmer, Female, Orange - Character Meeple",
+    "DisplayName": "Farmer, Female, Orange, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a female farmer in overalls printed directly on it.",
     "GameCrafterGuid": "AEF91D82-8EBC-11E8-8D59-959BB70C97C7",
     "GameCrafterSkuId": "AEFCD526-8EBC-11E8-8D59-959BB70C97C7",
@@ -38542,7 +38542,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/FarmerFemaleOrange-CharacterMeeple.png"
   },
   "FarmerFemalePurple-CharacterMeeple": {
-    "DisplayName": "Farmer, Female, Purple - Character Meeple",
+    "DisplayName": "Farmer, Female, Purple, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a female farmer in overalls printed directly on it.",
     "GameCrafterGuid": "E8107D9A-8EBC-11E8-AE40-96EB785DA8EE",
     "GameCrafterSkuId": "E81367F8-8EBC-11E8-AE40-96EB785DA8EE",
@@ -38584,7 +38584,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/FarmerFemalePurple-CharacterMeeple.png"
   },
   "FarmerFemaleRed-CharacterMeeple": {
-    "DisplayName": "Farmer, Female, Red - Character Meeple",
+    "DisplayName": "Farmer, Female, Red, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a female farmer in overalls printed directly on it.",
     "GameCrafterGuid": "F40498C0-8EBC-11E8-8D59-ED9BB70C97C7",
     "GameCrafterSkuId": "F407C37E-8EBC-11E8-8D59-ED9BB70C97C7",
@@ -38626,7 +38626,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/FarmerFemaleRed-CharacterMeeple.png"
   },
   "FarmerFemaleYellow-CharacterMeeple": {
-    "DisplayName": "Farmer, Female, Yellow - Character Meeple",
+    "DisplayName": "Farmer, Female, Yellow, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a female farmer in overalls printed directly on it.",
     "GameCrafterGuid": "FECA149C-8EBC-11E8-AE40-C7EB785DA8EE",
     "GameCrafterSkuId": "FECD9AEA-8EBC-11E8-AE40-C7EB785DA8EE",
@@ -38668,7 +38668,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/FarmerFemaleYellow-CharacterMeeple.png"
   },
   "FarmerMaleBlue-CharacterMeeple": {
-    "DisplayName": "Farmer, Male, Blue - Character Meeple",
+    "DisplayName": "Farmer, Male, Blue, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a male farmer in overalls printed directly on it.",
     "GameCrafterGuid": "99C06A6C-8EBF-11E8-AE40-B7EF785DA8EE",
     "GameCrafterSkuId": "99C6DA64-8EBF-11E8-AE40-B7EF785DA8EE",
@@ -38710,7 +38710,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/FarmerMaleBlue-CharacterMeeple.png"
   },
   "FarmerMaleGreen-CharacterMeeple": {
-    "DisplayName": "Farmer, Male, Green - Character Meeple",
+    "DisplayName": "Farmer, Male, Green, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a male farmer in overalls printed directly on it.",
     "GameCrafterGuid": "A26D89E2-8EBF-11E8-8D59-11A0B70C97C7",
     "GameCrafterSkuId": "A276AE82-8EBF-11E8-8D59-11A0B70C97C7",
@@ -38752,7 +38752,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/FarmerMaleGreen-CharacterMeeple.png"
   },
   "FarmerMaleOrange-CharacterMeeple": {
-    "DisplayName": "Farmer, Male, Orange - Character Meeple",
+    "DisplayName": "Farmer, Male, Orange, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a male farmer in overalls printed directly on it.",
     "GameCrafterGuid": "A700DACC-8EBF-11E8-AE40-CFEF785DA8EE",
     "GameCrafterSkuId": "A702B2AC-8EBF-11E8-AE40-CFEF785DA8EE",
@@ -38794,7 +38794,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/FarmerMaleOrange-CharacterMeeple.png"
   },
   "FarmerMalePurple-CharacterMeeple": {
-    "DisplayName": "Farmer, Male, Purple - Character Meeple",
+    "DisplayName": "Farmer, Male, Purple, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a male farmer in overalls printed directly on it.",
     "GameCrafterGuid": "B250DF8A-8EBF-11E8-8D59-36A0B70C97C7",
     "GameCrafterSkuId": "B257F5FE-8EBF-11E8-8D59-36A0B70C97C7",
@@ -38836,7 +38836,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/FarmerMalePurple-CharacterMeeple.png"
   },
   "FarmerMaleRed-CharacterMeeple": {
-    "DisplayName": "Farmer, Male, Red - Character Meeple",
+    "DisplayName": "Farmer, Male, Red, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a male farmer in overalls printed directly on it.",
     "GameCrafterGuid": "ACC84F26-8EBF-11E8-AE40-EFEF785DA8EE",
     "GameCrafterSkuId": "ACCA448E-8EBF-11E8-AE40-EFEF785DA8EE",
@@ -38878,7 +38878,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/FarmerMaleRed-CharacterMeeple.png"
   },
   "FarmerMaleYellow-CharacterMeeple": {
-    "DisplayName": "Farmer, Male, Yellow - Character Meeple",
+    "DisplayName": "Farmer, Male, Yellow, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a male farmer in overalls printed directly on it.",
     "GameCrafterGuid": "B87E1292-8EBF-11E8-AE40-27F0785DA8EE",
     "GameCrafterSkuId": "B8807848-8EBF-11E8-AE40-27F0785DA8EE",
@@ -40137,7 +40137,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/FireElemental.png"
   },
   "FireElemental-CharacterMeeple": {
-    "DisplayName": "Fire Elemental - Character Meeple",
+    "DisplayName": "Fire Elemental, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a fire elemental printed directly on it.",
     "GameCrafterGuid": "148E8114-8EBD-11E8-8D59-239CB70C97C7",
     "GameCrafterSkuId": "14949F22-8EBD-11E8-8D59-239CB70C97C7",
@@ -40181,7 +40181,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/FireTB25.png"
   },
   "Firefighter-CharacterMeeple": {
-    "DisplayName": "Firefighter - Character Meeple",
+    "DisplayName": "Firefighter, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a firefighter in protective equipment printed directly on it.",
     "GameCrafterGuid": "1F5025A8-8EBD-11E8-8D59-339CB70C97C7",
     "GameCrafterSkuId": "1F53C3FC-8EBD-11E8-8D59-339CB70C97C7",
@@ -43589,7 +43589,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/GearSilver.png"
   },
   "Geisha-CharacterMeeple": {
-    "DisplayName": "Geisha - Character Meeple",
+    "DisplayName": "Geisha, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a person in a kimono printed directly on it.",
     "GameCrafterGuid": "10633E84-8EBF-11E8-8D59-009FB70C97C7",
     "GameCrafterSkuId": "10687FAC-8EBF-11E8-8D59-009FB70C97C7",
@@ -45792,7 +45792,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/HagFantasyTB25.png"
   },
   "Halfling-CharacterMeeple": {
-    "DisplayName": "Halfling - Character Meeple",
+    "DisplayName": "Halfling, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a halfling with raised daggers printed directly on it.",
     "GameCrafterGuid": "2CBE0548-8EBD-11E8-8D59-479CB70C97C7",
     "GameCrafterSkuId": "2CC34152-8EBD-11E8-8D59-479CB70C97C7",
@@ -46161,7 +46161,6 @@ const STOCK_COMPONENT_INFO = {
     "Tags": [
       "brick",
       "construction",
-      "building",
       "build",
       "mason",
       "masonry",
@@ -46983,7 +46982,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/HatmanGreen.png"
   },
   "Hazmat-CharacterMeeple": {
-    "DisplayName": "Hazmat - Character Meeple",
+    "DisplayName": "Hazmat, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a worker in a hazmat suit printed directly on it.",
     "GameCrafterGuid": "37566D1A-8EBD-11E8-AE40-20EC785DA8EE",
     "GameCrafterSkuId": "3759F228-8EBD-11E8-AE40-20EC785DA8EE",
@@ -51686,7 +51685,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/IceCube8mmTransparentYellow.png"
   },
   "IceElemental-CharacterMeeple": {
-    "DisplayName": "Ice Elemental - Character Meeple",
+    "DisplayName": "Ice Elemental, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of an ice elemental printed directly on it.",
     "GameCrafterGuid": "E86157BC-8EBF-11E8-AE40-75F0785DA8EE",
     "GameCrafterSkuId": "E8639F04-8EBF-11E8-AE40-75F0785DA8EE",
@@ -52893,7 +52892,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/KrampusFantasyTB25.png"
   },
   "LabAssistant-CharacterMeeple": {
-    "DisplayName": "Lab Assistant - Character Meeple",
+    "DisplayName": "Lab Assistant, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a laboratory assistant in a white coat printed directly on it.",
     "GameCrafterGuid": "1C56A4CE-8EBF-11E8-8D59-149FB70C97C7",
     "GameCrafterSkuId": "1C5E7596-8EBF-11E8-8D59-149FB70C97C7",
@@ -54948,7 +54947,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/LookoutYellow.png"
   },
   "Maasai-CharacterMeeple": {
-    "DisplayName": "Maasai - Character Meeple",
+    "DisplayName": "Maasai, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a person wearing Maasai-inspired clothing printed directly on it.",
     "GameCrafterGuid": "2D95F2A8-8EBF-11E8-AE40-FCEE785DA8EE",
     "GameCrafterSkuId": "2D9925AE-8EBF-11E8-AE40-FCEE785DA8EE",
@@ -55225,7 +55224,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/MaleFarmerPurple.png"
   },
   "ManInBlack-CharacterMeeple": {
-    "DisplayName": "Man In Black - Character Meeple",
+    "DisplayName": "Man In Black, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a secret government agent printed directly on it.",
     "GameCrafterGuid": "36292BC4-8EBF-11E8-AE40-02EF785DA8EE",
     "GameCrafterSkuId": "362B8FC2-8EBF-11E8-AE40-02EF785DA8EE",
@@ -56791,7 +56790,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/MechTB15Yellow.png"
   },
   "Medic-CharacterMeeple": {
-    "DisplayName": "Medic - Character Meeple",
+    "DisplayName": "Medic, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a combat medic with a first aid kit and backpack printed directly on it.",
     "GameCrafterGuid": "444851DA-8EBF-11E8-AE40-16EF785DA8EE",
     "GameCrafterSkuId": "444A0F66-8EBF-11E8-AE40-16EF785DA8EE",
@@ -60316,7 +60315,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/MoneyPackPink.png"
   },
   "Mongol-CharacterMeeple": {
-    "DisplayName": "Mongol - Character Meeple",
+    "DisplayName": "Mongol, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a Mongol warrior printed directly on it.",
     "GameCrafterGuid": "71E17DF6-8EBF-11E8-AE40-7CEF785DA8EE",
     "GameCrafterSkuId": "71E3F78E-8EBF-11E8-AE40-7CEF785DA8EE",
@@ -60869,7 +60868,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/Musketeer.png"
   },
   "NinjaBlack-CharacterMeeple": {
-    "DisplayName": "Ninja, Black - Character Meeple",
+    "DisplayName": "Ninja, Black, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a ninja printed directly on it.",
     "GameCrafterGuid": "79F27AD6-8EBF-11E8-8D59-C49FB70C97C7",
     "GameCrafterSkuId": "79F6E54E-8EBF-11E8-8D59-C49FB70C97C7",
@@ -60906,7 +60905,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/NinjaBlack-CharacterMeeple.png"
   },
   "NinjaBlue-CharacterMeeple": {
-    "DisplayName": "Ninja, Blue - Character Meeple",
+    "DisplayName": "Ninja, Blue, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a ninja printed directly on it.",
     "GameCrafterGuid": "0BE96DEC-9112-11E8-B85F-64F0B70C97C7",
     "GameCrafterSkuId": "0BEFD556-9112-11E8-B85F-64F0B70C97C7",
@@ -60979,7 +60978,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/NinjaBrown.png"
   },
   "NinjaGreen-CharacterMeeple": {
-    "DisplayName": "Ninja, Green - Character Meeple",
+    "DisplayName": "Ninja, Green, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a ninja printed directly on it.",
     "GameCrafterGuid": "2A26A748-9112-11E8-BB44-F7C7785DA8EE",
     "GameCrafterSkuId": "2A29255E-9112-11E8-BB44-F7C7785DA8EE",
@@ -61052,7 +61051,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/NinjaOrange.png"
   },
   "NinjaOrange-CharacterMeeple": {
-    "DisplayName": "Ninja, Orange - Character Meeple",
+    "DisplayName": "Ninja, Orange, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a ninja printed directly on it.",
     "GameCrafterGuid": "4D13ABF2-9112-11E8-B85F-33F1B70C97C7",
     "GameCrafterSkuId": "4D1839EC-9112-11E8-B85F-33F1B70C97C7",
@@ -61089,7 +61088,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/NinjaOrange-CharacterMeeple.png"
   },
   "NinjaPurple-CharacterMeeple": {
-    "DisplayName": "Ninja, Purple - Character Meeple",
+    "DisplayName": "Ninja, Purple, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a ninja printed directly on it.",
     "GameCrafterGuid": "5CA8D768-9112-11E8-BB44-B0C8785DA8EE",
     "GameCrafterSkuId": "5CAB51BE-9112-11E8-BB44-B0C8785DA8EE",
@@ -61126,7 +61125,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/NinjaPurple-CharacterMeeple.png"
   },
   "NinjaRed-CharacterMeeple": {
-    "DisplayName": "Ninja, Red - Character Meeple",
+    "DisplayName": "Ninja, Red, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a ninja printed directly on it.",
     "GameCrafterGuid": "6DFD9F62-9112-11E8-B85F-67F1B70C97C7",
     "GameCrafterSkuId": "6E00B10C-9112-11E8-B85F-67F1B70C97C7",
@@ -61163,7 +61162,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/NinjaRed-CharacterMeeple.png"
   },
   "NinjaWhite-CharacterMeeple": {
-    "DisplayName": "Ninja, White - Character Meeple",
+    "DisplayName": "Ninja, White, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a ninja printed directly on it.",
     "GameCrafterGuid": "79C30C4C-9112-11E8-B85F-81F1B70C97C7",
     "GameCrafterSkuId": "79C8B714-9112-11E8-B85F-81F1B70C97C7",
@@ -61200,7 +61199,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/NinjaWhite-CharacterMeeple.png"
   },
   "NinjaYellow-CharacterMeeple": {
-    "DisplayName": "Ninja, Yellow - Character Meeple",
+    "DisplayName": "Ninja, Yellow, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a ninja printed directly on it.",
     "GameCrafterGuid": "838BB0A8-9112-11E8-BB44-D6C8785DA8EE",
     "GameCrafterSkuId": "838DA282-9112-11E8-BB44-D6C8785DA8EE",
@@ -61567,7 +61566,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/NuclearSymbol.png"
   },
   "Nurse-CharacterMeeple": {
-    "DisplayName": "Nurse - Character Meeple",
+    "DisplayName": "Nurse, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a nurse or surgeon in scrubs printed directly on it.",
     "GameCrafterGuid": "7948ACA8-8EC0-11E8-84CE-45A2B70C97C7",
     "GameCrafterSkuId": "794BB36C-8EC0-11E8-84CE-45A2B70C97C7",
@@ -62132,7 +62131,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/Octbox7mmYellow.png"
   },
   "OfficeWorkerBlue-CharacterMeeple": {
-    "DisplayName": "Office Worker, Blue - Character Meeple",
+    "DisplayName": "Office Worker, Blue, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of an office worker in a pinstriped shirt printed directly on it.",
     "GameCrafterGuid": "C9BF8860-8EBF-11E8-AE40-42F0785DA8EE",
     "GameCrafterSkuId": "C9C1D8AE-8EBF-11E8-AE40-42F0785DA8EE",
@@ -62165,7 +62164,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/OfficeWorkerBlue-CharacterMeeple.png"
   },
   "OfficeWorkerPurple-CharacterMeeple": {
-    "DisplayName": "Office Worker, Purple - Character Meeple",
+    "DisplayName": "Office Worker, Purple, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of an office worker in a pinstriped shirt printed directly on it.",
     "GameCrafterGuid": "C40BCA78-8EBF-11E8-AE40-3BF0785DA8EE",
     "GameCrafterSkuId": "C40E2EB2-8EBF-11E8-AE40-3BF0785DA8EE",
@@ -62442,7 +62441,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/OrcShamanFantasyTB25.png"
   },
   "Outlaw-CharacterMeeple": {
-    "DisplayName": "Outlaw - Character Meeple",
+    "DisplayName": "Outlaw, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a criminal outlaw with a gun printed directly on it.",
     "GameCrafterGuid": "8792D50A-8EBF-11E8-8D59-E49FB70C97C7",
     "GameCrafterSkuId": "879A1AF4-8EBF-11E8-8D59-E49FB70C97C7",
@@ -65507,7 +65506,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/Pirate4FantasyTB25.png"
   },
   "PirateBlue-CharacterMeeple": {
-    "DisplayName": "Pirate, Blue - Character Meeple",
+    "DisplayName": "Pirate, Blue, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a pirate with a flintlock pistol and scabbard printed directly on it.",
     "GameCrafterGuid": "D8BD0590-8EBF-11E8-AE40-5EF0785DA8EE",
     "GameCrafterSkuId": "D8BF0D18-8EBF-11E8-AE40-5EF0785DA8EE",
@@ -65538,7 +65537,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/PirateBlue-CharacterMeeple.png"
   },
   "PirateGreen-CharacterMeeple": {
-    "DisplayName": "Pirate, Green - Character Meeple",
+    "DisplayName": "Pirate, Green, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a pirate with a flintlock pistol and scabbard printed directly on it.",
     "GameCrafterGuid": "ED34D106-8EBF-11E8-AE40-91F0785DA8EE",
     "GameCrafterSkuId": "ED379102-8EBF-11E8-AE40-91F0785DA8EE",
@@ -65569,7 +65568,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/PirateGreen-CharacterMeeple.png"
   },
   "PirateOrange-CharacterMeeple": {
-    "DisplayName": "Pirate, Orange - Character Meeple",
+    "DisplayName": "Pirate, Orange, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a pirate with a flintlock pistol and scabbard printed directly on it.",
     "GameCrafterGuid": "F4C90AF4-8EBF-11E8-AE40-9AF0785DA8EE",
     "GameCrafterSkuId": "F4CADB0E-8EBF-11E8-AE40-9AF0785DA8EE",
@@ -65600,7 +65599,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/PirateOrange-CharacterMeeple.png"
   },
   "PiratePurple-CharacterMeeple": {
-    "DisplayName": "Pirate, Purple - Character Meeple",
+    "DisplayName": "Pirate, Purple, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a pirate with a flintlock pistol and scabbard printed directly on it.",
     "GameCrafterGuid": "4FBE3C3A-910A-11E8-B85F-58E3B70C97C7",
     "GameCrafterSkuId": "4FC1159A-910A-11E8-B85F-58E3B70C97C7",
@@ -65631,7 +65630,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/PiratePurple-CharacterMeeple.png"
   },
   "PirateRed-CharacterMeeple": {
-    "DisplayName": "Pirate, Red - Character Meeple",
+    "DisplayName": "Pirate, Red, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a pirate with a flintlock pistol and scabbard printed directly on it.",
     "GameCrafterGuid": "00473C7A-8EC0-11E8-8D59-BAA0B70C97C7",
     "GameCrafterSkuId": "004D9386-8EC0-11E8-8D59-BAA0B70C97C7",
@@ -65662,7 +65661,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/PirateRed-CharacterMeeple.png"
   },
   "PirateYellow-CharacterMeeple": {
-    "DisplayName": "Pirate, Yellow - Character Meeple",
+    "DisplayName": "Pirate, Yellow, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a pirate with a flintlock pistol and scabbard printed directly on it.",
     "GameCrafterGuid": "29D71088-8EC0-11E8-AE40-20F1785DA8EE",
     "GameCrafterSkuId": "29DC4562-8EC0-11E8-AE40-20F1785DA8EE",
@@ -66196,7 +66195,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/PolarBear.png"
   },
   "Police-CharacterMeeple": {
-    "DisplayName": "Police - Character Meeple",
+    "DisplayName": "Police, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a police officer printed directly on it.",
     "GameCrafterGuid": "A75C3600-90DC-11E8-BB44-9EF9785DA8EE",
     "GameCrafterSkuId": "A767F24C-90DC-11E8-BB44-9EF9785DA8EE",
@@ -66469,7 +66468,6 @@ const STOCK_COMPONENT_INFO = {
     "Tags": [
       "brick",
       "construction",
-      "building",
       "build",
       "mason",
       "masonry",
@@ -69472,7 +69470,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/RatfolkAssassinFantasyTB25.png"
   },
   "Renegade-CharacterMeeple": {
-    "DisplayName": "Renegade - Character Meeple",
+    "DisplayName": "Renegade, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of renegade in a leather jacket printed directly on it.",
     "GameCrafterGuid": "417B9D58-8EC0-11E8-BCE8-86F1785DA8EE",
     "GameCrafterSkuId": "418390E4-8EC0-11E8-BCE8-86F1785DA8EE",
@@ -70611,7 +70609,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/RocketYellow.png"
   },
   "Rogue-CharacterMeeple": {
-    "DisplayName": "Rogue - Character Meeple",
+    "DisplayName": "Rogue, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a rogue in leather armor printed directly on it.",
     "GameCrafterGuid": "4D45DC48-8EC0-11E8-BCE8-AFF1785DA8EE",
     "GameCrafterSkuId": "4D47B5A4-8EC0-11E8-BCE8-AFF1785DA8EE",
@@ -71914,7 +71912,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/Sci-FiCoinSilver.png"
   },
   "Scientist-CharacterMeeple": {
-    "DisplayName": "Scientist - Character Meeple",
+    "DisplayName": "Scientist, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a scientist with a pipette and several vials printed directly on it.",
     "GameCrafterGuid": "33527918-90D7-11E8-BB44-F3F2785DA8EE",
     "GameCrafterSkuId": "3356879C-90D7-11E8-BB44-F3F2785DA8EE",
@@ -72199,7 +72197,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/SheetofRectangleScratchOffSitckers.png"
   },
   "Sheriff-CharacterMeeple": {
-    "DisplayName": "Sheriff - Character Meeple",
+    "DisplayName": "Sheriff, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a sheriff in uniform printed directly on it.",
     "GameCrafterGuid": "5BE1C884-8EC0-11E8-84CE-DFA1B70C97C7",
     "GameCrafterSkuId": "5BE59BBC-8EC0-11E8-84CE-DFA1B70C97C7",
@@ -75544,7 +75542,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/SkeletalCrossbowmanIII.png"
   },
   "Skeleton-CharacterMeeple": {
-    "DisplayName": "Skeleton - Character Meeple",
+    "DisplayName": "Skeleton, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a spooky skeleton printed directly on it.",
     "GameCrafterGuid": "67685ABA-8EC0-11E8-BCE8-E0F1785DA8EE",
     "GameCrafterSkuId": "676A9EA6-8EC0-11E8-BCE8-E0F1785DA8EE",
@@ -76806,7 +76804,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/Snowman2FantasyTB25.png"
   },
   "SoldierBlue-CharacterMeeple": {
-    "DisplayName": "Soldier, Blue - Character Meeple",
+    "DisplayName": "Soldier, Blue, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a modern soldier in tactical armor and camouflage printed directly on it.",
     "GameCrafterGuid": "70B7E072-8EC0-11E8-84CE-39A2B70C97C7",
     "GameCrafterSkuId": "70C01D0A-8EC0-11E8-84CE-39A2B70C97C7",
@@ -76834,7 +76832,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/SoldierBlue-CharacterMeeple.png"
   },
   "SoldierGreen-CharacterMeeple": {
-    "DisplayName": "Soldier, Green - Character Meeple",
+    "DisplayName": "Soldier, Green, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a modern soldier in tactical armor and camouflage printed directly on it.",
     "GameCrafterGuid": "6BE83538-8EC0-11E8-BCE8-EDF1785DA8EE",
     "GameCrafterSkuId": "6BEA1DF8-8EC0-11E8-BCE8-EDF1785DA8EE",
@@ -80410,7 +80408,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/Sword.png"
   },
   "SwordsmanBlack-CharacterMeeple": {
-    "DisplayName": "Swordsman, Black - Character Meeple",
+    "DisplayName": "Swordsman, Black, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of an armored swordsman printed directly on it.",
     "GameCrafterGuid": "8CBB78B0-8EC0-11E8-84CE-66A2B70C97C7",
     "GameCrafterSkuId": "8CC37EDE-8EC0-11E8-84CE-66A2B70C97C7",
@@ -80447,7 +80445,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/SwordsmanBlack-CharacterMeeple.png"
   },
   "SwordsmanBlue-CharacterMeeple": {
-    "DisplayName": "Swordsman, Blue - Character Meeple",
+    "DisplayName": "Swordsman, Blue, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of an armored swordsman printed directly on it.",
     "GameCrafterGuid": "91FBDB76-8EC0-11E8-BCE8-37F2785DA8EE",
     "GameCrafterSkuId": "91FF9F18-8EC0-11E8-BCE8-37F2785DA8EE",
@@ -80484,7 +80482,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/SwordsmanBlue-CharacterMeeple.png"
   },
   "SwordsmanGreen-CharacterMeeple": {
-    "DisplayName": "Swordsman, Green - Character Meeple",
+    "DisplayName": "Swordsman, Green, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of an armored swordsman printed directly on it.",
     "GameCrafterGuid": "95E97590-8EC0-11E8-84CE-71A2B70C97C7",
     "GameCrafterSkuId": "95EC808C-8EC0-11E8-84CE-71A2B70C97C7",
@@ -80521,7 +80519,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/SwordsmanGreen-CharacterMeeple.png"
   },
   "SwordsmanOrange-CharacterMeeple": {
-    "DisplayName": "Swordsman, Orange - Character Meeple",
+    "DisplayName": "Swordsman, Orange, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of an armored swordsman printed directly on it.",
     "GameCrafterGuid": "9AA6B9C6-8EC0-11E8-BCE8-4EF2785DA8EE",
     "GameCrafterSkuId": "9AAA31BE-8EC0-11E8-BCE8-4EF2785DA8EE",
@@ -80558,7 +80556,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/SwordsmanOrange-CharacterMeeple.png"
   },
   "SwordsmanPurple-CharacterMeeple": {
-    "DisplayName": "Swordsman, Purple - Character Meeple",
+    "DisplayName": "Swordsman, Purple, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of an armored swordsman printed directly on it.",
     "GameCrafterGuid": "9EA03E94-8EC0-11E8-BCE8-54F2785DA8EE",
     "GameCrafterSkuId": "9EA4DC42-8EC0-11E8-BCE8-54F2785DA8EE",
@@ -80595,7 +80593,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/SwordsmanPurple-CharacterMeeple.png"
   },
   "SwordsmanRed-CharacterMeeple": {
-    "DisplayName": "Swordsman, Red - Character Meeple",
+    "DisplayName": "Swordsman, Red, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of an armored swordsman printed directly on it.",
     "GameCrafterGuid": "A24EC376-8EC0-11E8-BCE8-54F2785DA8EE",
     "GameCrafterSkuId": "A25072A2-8EC0-11E8-BCE8-54F2785DA8EE",
@@ -80632,7 +80630,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/SwordsmanRed-CharacterMeeple.png"
   },
   "SwordsmanWhite-CharacterMeeple": {
-    "DisplayName": "Swordsman, White - Character Meeple",
+    "DisplayName": "Swordsman, White, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of an armored swordsman printed directly on it.",
     "GameCrafterGuid": "AA1F032C-8EC0-11E8-BCE8-63F2785DA8EE",
     "GameCrafterSkuId": "AA20D9B8-8EC0-11E8-BCE8-63F2785DA8EE",
@@ -80669,7 +80667,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/SwordsmanWhite-CharacterMeeple.png"
   },
   "SwordsmanYellow-CharacterMeeple": {
-    "DisplayName": "Swordsman, Yellow - Character Meeple",
+    "DisplayName": "Swordsman, Yellow, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of an armored swordsman printed directly on it.",
     "GameCrafterGuid": "A617C96C-8EC0-11E8-84CE-91A2B70C97C7",
     "GameCrafterSkuId": "A61A9E3A-8EC0-11E8-84CE-91A2B70C97C7",
@@ -81637,7 +81635,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/TheWhiteWizard.png"
   },
   "Thief-CharacterMeeple": {
-    "DisplayName": "Thief - Character Meeple",
+    "DisplayName": "Thief, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of thief or robber with a money bag printed directly on it.",
     "GameCrafterGuid": "250E1ABE-8EC1-11E8-84CE-49A3B70C97C7",
     "GameCrafterSkuId": "25117C2C-8EC1-11E8-84CE-49A3B70C97C7",
@@ -83491,7 +83489,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/ValveControlStation.png"
   },
   "Vampire-CharacterMeeple": {
-    "DisplayName": "Vampire - Character Meeple",
+    "DisplayName": "Vampire, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a classical vampire in a cloak printed directly on it.",
     "GameCrafterGuid": "2AC00774-8EC1-11E8-BCE8-24F3785DA8EE",
     "GameCrafterSkuId": "2AC23C9C-8EC1-11E8-BCE8-24F3785DA8EE",
@@ -84492,7 +84490,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/VictorianMiniatureRed.png"
   },
   "VillagerBlack-CharacterMeeple": {
-    "DisplayName": "Villager, Black - Character Meeple",
+    "DisplayName": "Villager, Black, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a villager or peasant printed directly on it.",
     "GameCrafterGuid": "3376C1C8-8EC1-11E8-84CE-69A3B70C97C7",
     "GameCrafterSkuId": "337BCFB0-8EC1-11E8-84CE-69A3B70C97C7",
@@ -84515,7 +84513,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/VillagerBlack-CharacterMeeple.png"
   },
   "VillagerBlue-CharacterMeeple": {
-    "DisplayName": "Villager, Blue - Character Meeple",
+    "DisplayName": "Villager, Blue, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a villager or peasant printed directly on it.",
     "GameCrafterGuid": "38986ADA-8EC1-11E8-BCE8-40F3785DA8EE",
     "GameCrafterSkuId": "389D5356-8EC1-11E8-BCE8-40F3785DA8EE",
@@ -84538,7 +84536,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/VillagerBlue-CharacterMeeple.png"
   },
   "VillagerGreen-CharacterMeeple": {
-    "DisplayName": "Villager, Green - Character Meeple",
+    "DisplayName": "Villager, Green, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a villager or peasant printed directly on it.",
     "GameCrafterGuid": "3DF7BEE0-8EC1-11E8-84CE-67A3B70C97C7",
     "GameCrafterSkuId": "3DFBA5F0-8EC1-11E8-84CE-67A3B70C97C7",
@@ -84561,7 +84559,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/VillagerGreen-CharacterMeeple.png"
   },
   "VillagerOrange-CharacterMeeple": {
-    "DisplayName": "Villager, Orange - Character Meeple",
+    "DisplayName": "Villager, Orange, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a villager or peasant printed directly on it.",
     "GameCrafterGuid": "4218B4AC-8EC1-11E8-BCE8-43F3785DA8EE",
     "GameCrafterSkuId": "421DE256-8EC1-11E8-BCE8-43F3785DA8EE",
@@ -84584,7 +84582,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/VillagerOrange-CharacterMeeple.png"
   },
   "VillagerPurple-CharacterMeeple": {
-    "DisplayName": "Villager, Purple - Character Meeple",
+    "DisplayName": "Villager, Purple, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a villager or peasant printed directly on it.",
     "GameCrafterGuid": "46AD3916-8EC1-11E8-84CE-B8A3B70C97C7",
     "GameCrafterSkuId": "46B03E4A-8EC1-11E8-84CE-B8A3B70C97C7",
@@ -84607,7 +84605,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/VillagerPurple-CharacterMeeple.png"
   },
   "VillagerRed-CharacterMeeple": {
-    "DisplayName": "Villager, Red - Character Meeple",
+    "DisplayName": "Villager, Red, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a villager or peasant printed directly on it.",
     "GameCrafterGuid": "49F1AFF8-8EC1-11E8-BCE8-60F3785DA8EE",
     "GameCrafterSkuId": "49F7FB4C-8EC1-11E8-BCE8-60F3785DA8EE",
@@ -84630,7 +84628,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/VillagerRed-CharacterMeeple.png"
   },
   "VillagerWhite-CharacterMeeple": {
-    "DisplayName": "Villager, White - Character Meeple",
+    "DisplayName": "Villager, White, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a villager or peasant printed directly on it.",
     "GameCrafterGuid": "54C1A118-8EC1-11E8-BCE8-6DF3785DA8EE",
     "GameCrafterSkuId": "54C39AA4-8EC1-11E8-BCE8-6DF3785DA8EE",
@@ -84653,7 +84651,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/VillagerWhite-CharacterMeeple.png"
   },
   "VillagerYellow-CharacterMeeple": {
-    "DisplayName": "Villager, Yellow - Character Meeple",
+    "DisplayName": "Villager, Yellow, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a villager or peasant printed directly on it.",
     "GameCrafterGuid": "4FA0662E-8EC1-11E8-84CE-EAA3B70C97C7",
     "GameCrafterSkuId": "4FA61ED4-8EC1-11E8-84CE-EAA3B70C97C7",
@@ -85288,7 +85286,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/WindmillYellow.png"
   },
   "Wink20mmBlack": {
-    "DisplayName": "Wink, 20mm, Black",
+    "DisplayName": "Wink, 20mm, Opaque, Black",
     "Description": "A black wink, great for games that use lots of resource tokens",
     "GameCrafterGuid": "EF524A60-2617-11E8-8C8A-E01307A00926",
     "GameCrafterSkuId": "EF5557DC-2617-11E8-8C8A-E01307A00926",
@@ -85621,7 +85619,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/WizardOldFantasyTB25.png"
   },
   "WizardBlue-CharacterMeeple": {
-    "DisplayName": "Wizard, Blue - Character Meeple",
+    "DisplayName": "Wizard, Blue, Character Meeple",
     "Description": "",
     "GameCrafterGuid": "5FB64E02-8EC1-11E8-84CE-3AA4B70C97C7",
     "GameCrafterSkuId": "5FB96B28-8EC1-11E8-84CE-3AA4B70C97C7",
@@ -85651,7 +85649,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/WizardBlue-CharacterMeeple.png"
   },
   "WizardGreen-CharacterMeeple": {
-    "DisplayName": "Wizard, Green - Character Meeple",
+    "DisplayName": "Wizard, Green, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a wizard with a staff printed directly on it.",
     "GameCrafterGuid": "6430D312-8EC1-11E8-84CE-5BA4B70C97C7",
     "GameCrafterSkuId": "6436DDC0-8EC1-11E8-84CE-5BA4B70C97C7",
@@ -85681,7 +85679,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/WizardGreen-CharacterMeeple.png"
   },
   "WizardOrange-CharacterMeeple": {
-    "DisplayName": "Wizard, Orange - Character Meeple",
+    "DisplayName": "Wizard, Orange, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a wizard with a staff printed directly on it.",
     "GameCrafterGuid": "68FAF3BE-8EC1-11E8-BCE8-83F3785DA8EE",
     "GameCrafterSkuId": "6900F1BA-8EC1-11E8-BCE8-83F3785DA8EE",
@@ -85711,7 +85709,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/WizardOrange-CharacterMeeple.png"
   },
   "WizardPurple-CharacterMeeple": {
-    "DisplayName": "Wizard, Purple - Character Meeple",
+    "DisplayName": "Wizard, Purple, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a wizard with a staff printed directly on it.",
     "GameCrafterGuid": "6CF3220C-8EC1-11E8-84CE-9DA4B70C97C7",
     "GameCrafterSkuId": "6CF867EE-8EC1-11E8-84CE-9DA4B70C97C7",
@@ -85741,7 +85739,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/WizardPurple-CharacterMeeple.png"
   },
   "WizardRed-CharacterMeeple": {
-    "DisplayName": "Wizard, Red - Character Meeple",
+    "DisplayName": "Wizard, Red, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a wizard with a staff printed directly on it.",
     "GameCrafterGuid": "7041C774-8EC1-11E8-BCE8-9CF3785DA8EE",
     "GameCrafterSkuId": "70455CFE-8EC1-11E8-BCE8-9CF3785DA8EE",
@@ -85771,7 +85769,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/WizardRed-CharacterMeeple.png"
   },
   "WizardYellow-CharacterMeeple": {
-    "DisplayName": "Wizard, Yellow - Character Meeple",
+    "DisplayName": "Wizard, Yellow, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of a wizard with a staff printed directly on it.",
     "GameCrafterGuid": "7A998AEA-8EC1-11E8-84CE-BEA4B70C97C7",
     "GameCrafterSkuId": "7AA0B996-8EC1-11E8-84CE-BEA4B70C97C7",
@@ -86710,7 +86708,7 @@ const STOCK_COMPONENT_INFO = {
     "PreviewUri": "@previewImages/WyvernII.png"
   },
   "Yeti-CharacterMeeple": {
-    "DisplayName": "Yeti - Character Meeple",
+    "DisplayName": "Yeti, Character Meeple",
     "Description": "A standard wooden meeple with front and back images of an abominable snowman or yeti printed directly on it.",
     "GameCrafterGuid": "82557136-8EC1-11E8-BCE8-AEF3785DA8EE",
     "GameCrafterSkuId": "8257A974-8EC1-11E8-BCE8-AEF3785DA8EE",

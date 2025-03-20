@@ -11,7 +11,6 @@ const ComponentType = ({
     componentInfo,
     selectTypeCallback,
     selectedComponentType,
-    existingQuantity,
     isShowingTemplates,
     search,
     isStock
@@ -28,6 +27,11 @@ const ComponentType = ({
             if (component.IsDisabled) {
                 continue;
             }
+            const searchableName = component.DisplayName.replace(/[^a-zA-Z0-9\s]/g, "").toLowerCase();
+            
+            if (search && !searchableName.includes(search.toLowerCase())) {
+                continue;
+            }
             if (component.Key === selectedComponentType || highlightedComponent == null) {
                 highlightedComponent = component;
                 selectedBaseComponent = name;
@@ -40,7 +44,6 @@ const ComponentType = ({
     if (components.length === 0) {
         return null;
     }
-
     const isSelected = highlightedComponent.Key === selectedComponentType;
 
     let previewSource = null;
@@ -50,7 +53,10 @@ const ComponentType = ({
     else if (highlightedComponent.PreviewUri) {
         previewSource = loadPreviewImage(highlightedComponent.PreviewUri);
     }
-        
+    const dimensions = highlightedComponent["DimensionsPixels"] ? `${parseInt(highlightedComponent["DimensionsPixels"][0])} x ${parseInt(highlightedComponent["DimensionsPixels"][1])}px` : "";
+    const simulatorTask = highlightedComponent["SimulatorCreationTask"] ? highlightedComponent["SimulatorCreationTask"] : "";
+    const variations = components.length > 1 ? `${components.length} variation${components.length > 1 ? 's' : ''}` : "";
+    const descriptor = [simulatorTask, dimensions, variations].filter(Boolean).join(' · ');
     return (
         <div className="component-type-wrapper">
             <button type="button" 
@@ -59,13 +65,7 @@ const ComponentType = ({
             >
                 <div className="component-type-content">
                     <div className="component-type-info">
-                        <p className="component-type-name">{name}</p>
-                        {highlightedComponent["DimensionsPixels"] && (
-                            <p className="component-type-dimensions">
-                                {`${parseFloat(highlightedComponent["DimensionsPixels"][0]).toFixed(1)}x${parseFloat(highlightedComponent["DimensionsPixels"][1]).toFixed(1)}px ${highlightedComponent["SimulatorCreationTask"] || ""}`}
-                            </p>
-                        )}
-                        
+                        <p className="component-type-name">{name} <span className="component-type-descriptor">{descriptor}</span></p>
                         {previewSource && (
                             <div className="component-type-preview">
                                 <img 
@@ -76,15 +76,8 @@ const ComponentType = ({
                                 />
                             </div>
                         )}
-                        
-                        {/* Show variations info if this component has variations */}
-                        {components.length > 1 && (
-                            <p className="component-type-dimensions size-variations">
-                                {`Available in ${components.length} variation${components.length > 1 ? 's' : ''}`}
-                            </p>
-                        )}
                     </div>
-                    <ExportIcons componentInfo={highlightedComponent} />
+                    <ExportIcons componentInfo={highlightedComponent} isStock={isStock} />
                 </div>
             </button>
         </div>

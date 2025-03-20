@@ -1,6 +1,6 @@
 import React from "react";
 import "./ChosenComponent.css";
-import { ComponentImagePreview } from './utils/ImageLoader';
+import { ComponentImagePreview } from '../utils/ImageLoader';
 
 const ComponentPreview = ({ selectedComponentInfo }) => {
     // If there's no component info, don't render anything

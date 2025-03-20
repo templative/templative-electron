@@ -131,6 +131,35 @@ export const sizeExtractionRules = [
             }
             return null;
         }
+    },
+    
+    // New Rule: Size is in format "numbermm x numbermm" (e.g., "Disc, 14mm x 10mm, Blue")
+    {
+        name: "dimensions-format",
+        test: (str) => {
+            const parts = str.split(', ');
+            return parts.some(part => /^\d+(?:mm|cm)?\s*x\s*\d+(?:mm|cm)?$/.test(part));
+        },
+        extract: (str) => {
+            const parts = str.split(', ');
+            
+            for (let i = 0; i < parts.length; i++) {
+                const part = parts[i];
+                
+                // Check if part matches the dimensions pattern
+                if (/^\d+(?:mm|cm)?\s*x\s*\d+(?:mm|cm)?$/.test(part)) {
+                    const newParts = [...parts];
+                    newParts.splice(i, 1);
+                    return {
+                        baseName: newParts.join(', '),
+                        size: part,
+                        isNumeric: true
+                    };
+                }
+            }
+            
+            return null;
+        }
     }
 ];
 

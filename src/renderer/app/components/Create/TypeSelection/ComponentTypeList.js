@@ -20,7 +20,7 @@ const ComponentTypeList = ({
     const context = useContext(RenderingWorkspaceContext);
 
     const folders = majorCategoryOrder.map((category) => {
-        const categoryInfo = componentMajorCategories[category];
+        const categoryInfo = componentMajorCategories[category];        
         return <ComponentTypeFolder 
             key={category} 
             search={search} 
@@ -31,25 +31,17 @@ const ComponentTypeList = ({
             selectedComponentType={selectedComponentType} 
             isStock={isStock}
         />
-    }).filter(folder => folder!=null);
+    })
     
-
-    const isSearchTooNarrow = 
-        folders.length === 0 && 
-        search.trim() !== "";
-
     const hasSelectedComponent = context.selectedComponentType !== undefined;
 
     return (
         <div className={`component-type-picking-row ${hasSelectedComponent ? 'has-selected-component' : ''}`}>
             <div className="component-type-list">
-                {isSearchTooNarrow && <p className="no-results-message">Your search returned no results.</p>}
                 {folders}
-                {(folders.length !== 0) && 
-                    <div className="end-of-component-types-icon-container">
-                        <img src={noFileIcon} className="end-of-component-types-icon"/>
-                    </div>
-                }
+                <div className="end-of-component-types-icon-container">
+                    <img src={noFileIcon} className="end-of-component-types-icon"/>
+                </div>
             </div>
         </div>
     );
