@@ -1,7 +1,7 @@
 {
     "name": "Templative",
     "description": "Electron frontend for the Templative CLI.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "private": true,
     "main": ".webpack/main",
     "author": {
@@ -16,20 +16,24 @@
         "package-local": "SKIP_SIGNING=true bash ./build.sh package",
         "make": "bash ./build.sh make",
         "publish": "bash ./build.sh publish",
+
         "== Templative CLI ===": "",
         "start-templative": "cd ./python && pipenv run templative serve",
         "templative": "bash ./build.sh templative",
         "templative-build": "bash ./build.sh createTemplativeApp",
+
         "== Build Process ===": "",
         "makeFromPackage": "bash ./build.sh makeFromPackage",
         "fullPackage": "bash ./build.sh fullPackage",
         "fullMake": "bash ./build.sh fullMake",
         "fullPublish": "bash ./build.sh fullPublish",
+
         "== Signing & Publishing ===": "",
         "sign": "bash ./build.sh sign",
         "signS3": "bash ./signWindowsInS3.sh",
         "createPublishDryRun": "bash ./build.sh createPublishDryRun",
         "publishDryRun": "bash ./build.sh publishDryRun",
+
         "== Testing ===": "",
         "test": "node ./scripts/test-templative.js",
         "test-distribute": "node ./scripts/test-templative.js --input=/Users/oliverbarnum/Documents/git/peace-of-westphalia",
@@ -37,6 +41,7 @@
         "test-webpack-distribute": "electron-forge start --no-launch && node ./scripts/test-templative.js --input=/Users/oliverbarnum/Documents/git/peace-of-westphalia",
         "test-giant-project": "node ./scripts/test-giant-project.js",
         "test-clipping": "node ./scripts/test-clipping.js",
+        
         "== Asset Management ===": "",
         "analyze-images": "node ./scripts/imageTreeGenerator.js",
         "export-audit": "node ./scripts/exportAudit.js",
@@ -44,6 +49,7 @@
         "design-meeple": "dotenv -- node ./scripts/meepleDesigner.js",
         "create-cylinders": "node ./scripts/cylinderCreator.js",
         "create-cylinder-objects": "node ./scripts/cylinderObjectCreator.js",
+        
         "== SVG & Image Processing ===": "",
         "fix-svg-scaling": "node ./scripts/fix-svg-scaling.js",
         "fix-all-svgs": "node ./scripts/fix-svg-scaling.js --glob \"src/main/templative/lib/create/guidelines/*.svg\"",
@@ -51,7 +57,7 @@
         "download-stock-preview-images": "node ./scripts/downloadStockPreviewImages.js",
         "download-templates": "node ./scripts/downloadTemplates.js",
         "upload-preview-images": "node ./scripts/uploadPreviewImages.js",
-        
+
         "// === Component Management ===": "",
         "standardize-filenames": "node ./scripts/standardizeGuidelineFilenames.js",
         "match-guidelines-to-components": "node ./scripts/matchGuidelinesToComponents.js",

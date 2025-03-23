@@ -23,9 +23,19 @@ module.exports = {
           },
         },
         exclude: /node_modules/
+      },
+      {
+        test: /\.svg$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'src/main/templative/lib/componentTemplates/[name][ext]'
+        }
       }
     ],
   },
+  plugins: [
+  
+  ],
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.svg', '.png']
   },

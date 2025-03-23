@@ -10,6 +10,7 @@ module.exports = {
     },
     extraResource: [
       "./bin",
+      "./src/main/templative/lib/componentTemplates",
     ],
     icon: "src/assets/images/icon",
     osxSign: process.env.SKIP_SIGNING === 'true' ? false : {

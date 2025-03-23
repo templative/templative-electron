@@ -7,11 +7,10 @@ async function getComponentTemplate(type) {
     
     // Check if we're in Electron or in a Node.js script
     if (app) {
-        // We're in Electron - use app.getAppPath() to get the application root
-        const isPackaged = app.isPackaged;
-        if (isPackaged) {
+        // We're in Electron
+        if (app.isPackaged) {
             // In production build
-            templatePath = path.join(app.getAppPath(), 'src', 'main', 'templative', 'lib', 'componentTemplates', `${type}.svg`);
+            templatePath = path.join(process.resourcesPath, 'app.asar', 'src', 'main', 'templative', 'lib', 'componentTemplates', `${type}.svg`);
             console.log(`Packaged path: ${templatePath}`);
         } else {
             // In development with Electron
