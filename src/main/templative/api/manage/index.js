@@ -1,6 +1,5 @@
 const { Command } = require('commander');
 const rules = require('./rulesCommands');
-const componentAnalysis = require('./componentAnalysisCommands');
 
 // Create the manage command group
 const manage = new Command('manage')
@@ -8,6 +7,5 @@ const manage = new Command('manage')
 
 // Add all subcommands
 manage.addCommand(rules);
-manage.addCommand(componentAnalysis);
 
 module.exports = manage; 

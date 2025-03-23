@@ -4,7 +4,7 @@ const { parseStringPromise } = require('xml2js');
 const { Builder } = require('xml2js');
 
 async function processFiles() {
-  const dirPath = "C:/Users/User/Documents/git/templative-frontend/python/../create/componentTemplates";
+  const dirPath = path.join(__dirname, 'componentTemplates');
   const files = fs.readdirSync(dirPath);
 
   for (const file of files) {

@@ -18,7 +18,6 @@
         "publish": "bash ./build.sh publish",
 
         "== Templative CLI ===": "",
-        "start-templative": "cd ./python && pipenv run templative serve",
         "templative": "bash ./build.sh templative",
         "templative-build": "bash ./build.sh createTemplativeApp",
 

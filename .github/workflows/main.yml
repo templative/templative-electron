@@ -54,8 +54,6 @@ jobs:
           - windows-latest
         node:
           - 18
-        python:
-          - 3.11.9
     steps:
       - name: Print architecture
         shell: bash
@@ -182,8 +180,6 @@ jobs:
           - macos-latest
         node:
           - 18
-        python:
-          - 3.11.9
     steps:
       - name: Print architecture
         shell: bash

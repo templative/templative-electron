@@ -1,3 +1,0 @@
-# Rules
-
-Play the game.

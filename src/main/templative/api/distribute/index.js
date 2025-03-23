@@ -1,5 +1,4 @@
 const { Command } = require('commander');
-const zettelkasten = require('./zettelkastenCommands');
 const printout = require('./printoutCommands');
 const simulator = require('./simulatorCommands');
 const gameCrafter = require('./gameCrafterCommands');
@@ -11,7 +10,6 @@ const distribute = new Command('distribute')
   .description('Game Distribution Commands');
 
 // Add all subcommands
-distribute.addCommand(zettelkasten);
 distribute.addCommand(printout);
 distribute.addCommand(simulator);
 distribute.addCommand(gameCrafter);

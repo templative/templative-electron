@@ -1,6 +1,5 @@
 /**
  * FontCache class for caching font information
- * Mirrors the Python implementation in templative-electron
  */
 class FontCache {
   /**
