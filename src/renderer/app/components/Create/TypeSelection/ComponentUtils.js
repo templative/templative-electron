@@ -47,6 +47,46 @@ export const sizeExtractionRules = [
         }
     },
     
+    // Modified Rule: Size is a dollar sign followed by a number (with optional letters) at the end (e.g., "Card $12" or "Cash, $100K")
+    {
+        name: "dollar-sign-number-at-end",
+        test: (str) => /\$\d+[KM]*$/.test(str),
+        extract: (str) => {
+            const match = str.match(/^(.*?)\s*\$(\d+[KM]*)$/);
+            if (match) {
+                // Remove trailing comma if present in the base name
+                let baseName = match[1].trim();
+                if (baseName.endsWith(',')) {
+                    baseName = baseName.slice(0, -1).trim();
+                }
+                
+                return {
+                    baseName: baseName,
+                    size: match[2],
+                    isNumeric: true
+                };
+            }
+            return null;
+        }
+    },
+    
+    // New Rule: Handle "Cash, $X" pattern specifically
+    {
+        name: "cash-dollar-pattern",
+        test: (str) => /^Cash,\s*\$\d+[KM]*$/.test(str),
+        extract: (str) => {
+            const match = str.match(/^Cash,\s*\$(\d+[KM]*)$/);
+            if (match) {
+                return {
+                    baseName: "Cash",
+                    size: match[1],
+                    isNumeric: true
+                };
+            }
+            return null;
+        }
+    },
+    
     // New Rule: Size is a number in parentheses at the end of the name (e.g., "Clear Poker Tuck Box (66)")
     {
         name: "number-in-parentheses-at-end",
@@ -165,6 +205,30 @@ export const sizeExtractionRules = [
 
 // Define extraction rules for colors
 export const colorExtractionRules = [
+    // New rule: Handle color before "Character Meeple" pattern
+    {
+        name: "character-meeple-pattern",
+        test: (str) => str.includes(', Character Meeple') && str.split(', ').length >= 3,
+        extract: (str) => {
+            const parts = str.split(', ');
+            if (parts.length >= 3 && parts[parts.length - 1] === 'Character Meeple') {
+                const potentialColor = parts[parts.length - 2];
+                if (allColorVariations.some(color => 
+                    potentialColor.toLowerCase() === color.toLowerCase()
+                )) {
+                    // Remove the color part and keep the rest as the base name
+                    const newParts = [...parts];
+                    newParts.splice(parts.length - 2, 1);
+                    return {
+                        baseName: newParts.join(', '),
+                        color: potentialColor
+                    };
+                }
+            }
+            return null;
+        }
+    },
+    
     // Improved rule: Handle "Light Color" and "Dark Color" patterns without changing the base name
     {
         name: "light-dark-color-variation",

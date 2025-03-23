@@ -13,7 +13,7 @@ const unextendedChevron = <svg xmlns="http://www.w3.org/2000/svg" width="16" hei
 export default function ChevronHeader({ 
     isExtended,
     onClick=undefined,
-    icon,
+    Icon,
     filetype, 
     field=undefined,
     title,
@@ -97,11 +97,7 @@ export default function ChevronHeader({
                 className={className}
             >
                 {isExtended ? extendedChevron : unextendedChevron} 
-                <img 
-                    className="tab-icon" 
-                    src={icon} 
-                    alt="Tab icon"
-                /> 
+                <Icon className="tab-icon"/> 
                 {title} <span className="subfile-filepath">{suffix || shortPath}</span>
             </p>
             {isShowingContextMenu && 

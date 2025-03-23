@@ -8,7 +8,7 @@ const { convertSvgToPng } = require('../src/main/templative/lib/produce/customCo
 
 // Hardcoded paths for testing
 const SVG_SOURCE_PATH = "/Users/oliverbarnum/Documents/git/peace-of-westphalia/output/westphalia_giftVersion_0.0.0_2025-03-12_06-51-50/pawnStickersTest/pawnStickersTest-green.svg";
-const CLIP_SVG_PATH = "/Users/oliverbarnum/Documents/git/templative-electron/src/main/templative/lib/create/componentTemplates/PawnSticker.svg";
+const CLIP_SVG_PATH = "/Users/oliverbarnum/Documents/git/templative-electron/src/assets/images/componentTemplates/PawnSticker.svg";
 const CLIP_ELEMENT_ID = 'clipping';
 const OUTPUT_PATH = path.join("/Users/oliverbarnum/Documents/git/templative-electron/scripts", 'clipped');
 

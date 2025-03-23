@@ -1,8 +1,6 @@
 import React, { useMemo } from "react";
 import path from "path";
 import ExportIcons, { getExportRouteInfo } from './ExportIcons';
-import "../utils/ImageLoader";
-import { loadPreviewImage, loadTemplateImage } from "../utils/ImageLoader";
 import "./ComponentType.css";
 import { COMPONENT_INFO } from "../../../../../shared/componentInfo";
 import { STOCK_COMPONENT_INFO } from "../../../../../shared/stockComponentInfo";
@@ -46,13 +44,13 @@ const ComponentType = ({
     }
     const isSelected = highlightedComponent.Key === selectedComponentType;
 
-    let previewSource = null;
-    if (highlightedComponent?.TemplateFiles?.length > 0 && isShowingTemplates) {
-        previewSource = loadTemplateImage(highlightedComponent.TemplateFiles[0]);
-    }
-    else if (highlightedComponent.PreviewUri) {
-        previewSource = loadPreviewImage(highlightedComponent.PreviewUri);
-    }
+    const previewSource = useMemo(() => {
+        if (highlightedComponent.PreviewUri) {
+            return `https://templative-component-preview-images.s3.us-west-2.amazonaws.com/${highlightedComponent.PreviewUri}`;
+        }
+        return null;
+    }, [highlightedComponent, isShowingTemplates]);
+
     const dimensions = highlightedComponent["DimensionsPixels"] ? `${parseInt(highlightedComponent["DimensionsPixels"][0])} x ${parseInt(highlightedComponent["DimensionsPixels"][1])}px` : "";
     const simulatorTask = highlightedComponent["SimulatorCreationTask"] ? highlightedComponent["SimulatorCreationTask"] : "";
     const variations = components.length > 1 ? `${components.length} variation${components.length > 1 ? 's' : ''}` : "";
@@ -72,7 +70,10 @@ const ComponentType = ({
                                     src={previewSource} 
                                     alt={name}
                                     className="preview-image"
-                                    onError={(e) => e.target.style.display = 'none'}
+                                    onError={(e) => {
+                                        console.error(`Failed to load image: ${previewSource}`);
+                                        e.target.style.display = 'none';
+                                    }}
                                 />
                             </div>
                         )}

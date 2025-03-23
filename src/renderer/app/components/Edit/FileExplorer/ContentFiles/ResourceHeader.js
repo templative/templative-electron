@@ -55,7 +55,7 @@ export default class ResourceHeader extends React.Component {
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" className="bi bi-chevron-right resource-header-chevron" viewBox="0 0 16 16">
                 <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
             </svg>
-        
+        var IconSource = this.props.IconSource
         return <div 
                 className="resourcesheader-wrapper"
                 
@@ -74,7 +74,7 @@ export default class ResourceHeader extends React.Component {
             }
             <div className="resourceHeaderContent">
                 <p className="resourcesHeader">
-                    <span style={{ marginLeft: `${((this.props.depth || 0) * 16)+8}px` }}/>{chevron}<img className="tab-icon" src={this.props.iconSource} alt="Tab icon"/>{this.props.header}
+                    <span style={{ marginLeft: `${((this.props.depth || 0) * 16)+8}px` }}/>{chevron}<IconSource className="tab-icon" alt="Tab icon"/>{this.props.header}
                 </p>
             </div>
         </div> 

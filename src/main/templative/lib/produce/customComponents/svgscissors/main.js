@@ -11,7 +11,7 @@ const { addOverlays} = require("./artdataProcessing/overlayHandler.js");
 const { textReplaceInFile} = require("./artdataProcessing/textReplacer.js");
 const { updateStylesInFile} = require("./artdataProcessing/styleUpdater.js");
 const { clipSvgContentToClipFile } = require("./modules/imageClipper.js");
-  
+const { getComponentTemplate } = require("../../../componentTemplateUtility.js");
 
 // Helper function to create a unique hash for a piece
 function createUniqueBackHashForPiece(pieceSpecificBackArtDataSources, pieceGamedata) {
@@ -142,7 +142,7 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       contents = await updateStylesInFile(contents, artdata["styleUpdates"], gamedata);
       contents = await addNewlines(contents);
       if (productionProperties.isClipped) {
-        const clipSvgFilepath = path.join(__dirname, '..', '..', "..", 'create', 'componentTemplates', `${componentType}.svg`);
+        const clipSvgFilepath = await getComponentTemplate(componentType);
 
         contents = await clipSvgContentToClipFile(contents, clipSvgFilepath, artFilepath);
       }

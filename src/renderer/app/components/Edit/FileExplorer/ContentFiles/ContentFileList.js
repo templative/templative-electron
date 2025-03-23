@@ -203,30 +203,30 @@ export default class ContentFileList extends React.Component {
             startCreatingNewFileAsyncCallback = async () => await this.startCreatingNewFileAsync()
         }
 
-        var iconSource = componentComposeIcon
+        var IconSource = componentComposeIcon
         if (this.props.contentType === "RULES") {
-            iconSource = rulesIcon
+            IconSource = rulesIcon
         }
         if (this.props.contentType === "COMPONENTS") {
-            iconSource = componentComposeIcon
+            IconSource = componentComposeIcon
         }
         if (this.props.contentType === "COMPONENT_GAMEDATA") {
-            iconSource = componentIcon
+            IconSource = componentIcon
         }
         if (this.props.contentType === "PIECE_GAMEDATA") {
-            iconSource = pieceIcon
+            IconSource = pieceIcon
         }
         if (this.props.contentType === "ART") {
-            iconSource = artIcon
+            IconSource = artIcon
         }
         if (this.props.contentType === "ARTDATA") {
-            iconSource = artDataIcon
+            IconSource = artDataIcon
         }
         var isExtended = this.props.extendedFileTypes.has(this.props.filetype)
         return <div className="content-file-list">
             <ResourceHeader 
                 depth={this.props.baseDepth}
-                iconSource={iconSource}
+                IconSource={IconSource}
                 header={this.props.header} 
                 directory={this.props.directoryPath} 
                 isExtended={isExtended}

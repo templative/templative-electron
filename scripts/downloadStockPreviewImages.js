@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 const sharp = require('sharp');
 const FormData = require('form-data');
 const chalk = require('chalk');
-const outputPath = "/Users/oliverbarnum/Documents/git/templative-electron/src/main/templative/lib/componentPreviewImages"
+const outputPath = "/Users/oliverbarnum/Documents/git/templative-electron/src/assets/images/componentPreviewImages"
 
 // Ensure the output directory exists
 if (!fs.existsSync(outputPath)) {
@@ -41,7 +41,7 @@ async function downloadImages() {
       const response = await fetch(url);
       const imageBuffer = Buffer.from(await response.arrayBuffer());
       fs.writeFileSync(outputFilePath, Buffer.from(imageBuffer));
-      stockComponents[key].PreviewUri = `@previewImages/${fileName}.png`
+      stockComponents[key].PreviewUri = `${fileName}.png`
       console.log(chalk.green(`Processed and saved ${outputFilePath}`));
     } catch (error) {
       console.error(chalk.red(`Error processing image ${key}:`), error);

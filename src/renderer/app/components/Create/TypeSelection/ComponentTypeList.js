@@ -1,10 +1,6 @@
-import React, { useMemo, useContext } from "react";
-import {componentTypeHasAllFilteredTags, matchesSearch} from "../TagFilter"
+import React, { useContext } from "react";
 import ComponentTypeFolder from "./ComponentTypeFolder";
-import ComponentType from "./ComponentType";
-import StockComponentType from "./StockComponentType";
-import { extractBaseNameAndSize, compareSizes, extractBaseNameAndColor } from "./ComponentUtils";
-import noFileIcon from "../../Edit/noFileIcon.svg";
+import NoFileIcon from "../../Edit/noFileIcon.svg";
 import { RenderingWorkspaceContext } from "../../Render/RenderingWorkspaceProvider";
 
 const ComponentTypeList = ({ 
@@ -40,7 +36,7 @@ const ComponentTypeList = ({
             <div className="component-type-list">
                 {folders}
                 <div className="end-of-component-types-icon-container">
-                    <img src={noFileIcon} className="end-of-component-types-icon"/>
+                    <NoFileIcon className="end-of-component-types-icon"/>
                 </div>
             </div>
         </div>

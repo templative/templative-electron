@@ -10,7 +10,7 @@ import RulesEditor from "./Viewers/RulesEditor";
 import EditPanelTabs from "./EditPanelTabs";
 import RenderPreview from "./RenderPreview/RenderPreview";
 // import { trackEvent } from "@aptabase/electron/renderer";
-import noFileIcon from "./noFileIcon.svg"
+import NoFileIcon from "./noFileIcon.svg"
 import "./EditPanel.css"
 import "./EditPanelTabs.css"
 import StudioGamedataViewer from "./Viewers/GamedataViewer/StudioGamedataViewer";
@@ -173,7 +173,7 @@ export default class EditPanel extends React.Component {
                                         <button className={`btn btn-${className}`} disabled>{className} Disabled</button>
                                     </div>
                                 )} */}
-                                <img src={noFileIcon} className="no-file-icon"/>
+                                <NoFileIcon className="no-file-icon"/>
                             </div>
                         }
                     </div>

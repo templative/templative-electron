@@ -16,6 +16,44 @@ const CLI_PATH = path.join(__dirname, '../src/main/templative/cli.js');
 const COMPONENT_NAME = 'PokerDeck';
 const PROJECT_DIR = inputDir || TEST_DIR;
 
+// Ensure component template files are accessible for tests
+function ensureComponentTemplatesAvailable() {
+  const templatesDir = path.join(__dirname, '../src/assets/images/componentTemplates');
+  
+  // Create a temporary symlink to the templates directory if needed
+  const tempTemplatesDir = path.join(__dirname, '../.webpack/main/assets/images/componentTemplates');
+  
+  if (!fs.existsSync(path.dirname(tempTemplatesDir))) {
+    fs.mkdirSync(path.dirname(tempTemplatesDir), { recursive: true });
+  }
+  
+  if (!fs.existsSync(tempTemplatesDir) && fs.existsSync(templatesDir)) {
+    try {
+      // On Windows, we need to use junction instead of symlink for directories
+      if (process.platform === 'win32') {
+        fs.symlinkSync(templatesDir, tempTemplatesDir, 'junction');
+      } else {
+        fs.symlinkSync(templatesDir, tempTemplatesDir, 'dir');
+      }
+      console.log(chalk.green('✓ Created symlink to component templates'));
+    } catch (error) {
+      console.warn(chalk.yellow(`Could not create symlink: ${error.message}`));
+      // Fall back to copying files if symlink fails
+      if (!fs.existsSync(tempTemplatesDir)) {
+        fs.mkdirSync(tempTemplatesDir, { recursive: true });
+        const files = fs.readdirSync(templatesDir);
+        for (const file of files) {
+          fs.copyFileSync(
+            path.join(templatesDir, file),
+            path.join(tempTemplatesDir, file)
+          );
+        }
+        console.log(chalk.green('✓ Copied component templates'));
+      }
+    }
+  }
+}
+
 // Helper function to run CLI commands
 function runCommand(command, options = {}) {
   const fullCommand = `node ${CLI_PATH} ${command}`;
@@ -53,6 +91,9 @@ function setupTestDirectory() {
 async function runTests() {
   console.log(chalk.bold.blue('=== Templative CLI Testing Framework ==='));
   
+  // Ensure component templates are available
+  ensureComponentTemplatesAvailable();
+  
   // Only setup and initialize if no input directory was provided
   if (!inputDir) {
     // Setup test directory
@@ -85,23 +126,9 @@ async function runTests() {
     process.exit(1);
   }
   
-    // Test preview command
-  // console.log(chalk.bold.blue('\n=== Testing preview command ==='));
-  // const previewResult = runCommand(`preview --component "actionCaps" --piece "diplomat" --input ${PROJECT_DIR}`);
-  // if (!previewResult.success) {
-  //   console.error(chalk.red('Failed to preview piece, continuing with other tests'));
-  // }
-  
   // Get the output directory from the .last file
   const lastOutputPath = fs.readFileSync(path.join(PROJECT_DIR, 'output', '.last'), 'utf8').trim();
   console.log(chalk.blue(`Using output directory: ${lastOutputPath}`));
-  
-//   // Test printout command
-//   console.log(chalk.bold.blue('\n=== Testing printout command ==='));
-//   const printoutResult = runCommand(`distribute printout -i "${lastOutputPath}"`);
-//   if (!printoutResult.success) {
-//     console.error(chalk.red('Failed to create printout, continuing with other tests'));
-//   }
   
   // Test simulator command
   console.log(chalk.bold.blue('\n=== Testing simulator command ==='));
@@ -114,13 +141,6 @@ async function runTests() {
   } catch (error) {
     console.error(chalk.red('Failed to create simulator, continuing with other tests'));
   }
-  
-  // Summary
-  // console.log(chalk.bold.green('\n=== Test Summary ==='));
-  // console.log(chalk.green('✓ Test framework completed'));
-  // if (!inputDir) {
-  //   console.log(chalk.blue(`Test project created at: ${PROJECT_DIR}`));
-  // }
 }
 
 // Run the tests

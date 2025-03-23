@@ -56,7 +56,7 @@ export default function GamedataCol(params) {
             <ChevronHeader 
                 isExtended={isStudioExtended}
                 onClick={() => toggleExtension("isStudioExtended")}
-                icon={studioIcon}
+                Icon={studioIcon}
                 title="Studio Content"
                 filetype="STUDIO_GAMEDATA"
                 filepath={studioGamedataFilepath}
@@ -78,7 +78,7 @@ export default function GamedataCol(params) {
             <ChevronHeader 
                 isExtended={isGameExtended}
                 onClick={() => toggleExtension("isGameExtended")}
-                icon={gameIcon}
+                Icon={gameIcon}
                 title="Game Content"
                 filetype="GAME_GAMEDATA"
                 filepath={gameGamedataFilepath}
@@ -100,7 +100,7 @@ export default function GamedataCol(params) {
             <ChevronHeader 
                 isExtended={isComponentExtended}
                 onClick={() => toggleExtension("isComponentExtended")}
-                icon={componentIcon}
+                Icon={componentIcon}
                 title="Component Content"
                 filetype="COMPONENT_GAMEDATA"
                 templativeRootDirectoryPath={templativeRootDirectoryPath}
@@ -123,7 +123,7 @@ export default function GamedataCol(params) {
             <ChevronHeader 
                 isExtended={isPiecesExtended}
                 onClick={() => toggleExtension("isPiecesExtended")}
-                icon={pieceIcon}
+                Icon={pieceIcon}
                 title="Piece Content"
                 filetype="PIECE_GAMEDATA"
                 templativeRootDirectoryPath={templativeRootDirectoryPath}

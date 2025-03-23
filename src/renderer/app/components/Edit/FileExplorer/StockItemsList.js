@@ -18,7 +18,7 @@ const StockItemsList = (props) => {
     return (
         <div className="content-file-list unified-viewer-list">
             <ResourceHeader 
-                iconSource={stockIcon}
+                IconSource={stockIcon}
                 header="Stock Items"
                 isExtended={isExtended}
                 toggleExtendedAsyncCallback={toggleExtendedAsync}

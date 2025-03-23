@@ -76,7 +76,7 @@ export default class EditPanelTab extends React.Component {
             "GAME_GAMEDATA": gameIcon,
             "SETTINGS": settingsIcon,
         }
-        var iconSource = icons[this.props.tabbedFile.filetype]
+        var IconElement = icons[this.props.tabbedFile.filetype]
         
         var isSelected = this.props.tabbedFile.filepath === this.props.currentFilepath
         var shouldShowX = (this.state.isHovering || isSelected) && this.props.tabbedFile.canClose
@@ -113,7 +113,7 @@ export default class EditPanelTab extends React.Component {
             }
             
             <a className={`nav-link ${isSelected && "active"} ${this.props.isItalics && "italics-tab"}`}>
-                <img className="tab-icon" src={iconSource} alt="Tab icon"/>
+                <IconElement className="tab-icon"/>
                 {tabName}
                 {this.props.tabbedFile.canClose && 
                     <button 

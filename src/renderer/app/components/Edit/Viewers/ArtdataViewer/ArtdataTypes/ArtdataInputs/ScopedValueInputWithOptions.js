@@ -76,7 +76,7 @@ export default class ScopedValueInputWithOptions extends React.Component {
             piece: pieceIcon,
             global: staticValueIcon
         };
-        const iconToShow = scopeIcons[this.props.scope] || staticValueIcon;
+        const IconToShow = scopeIcons[this.props.scope] || staticValueIcon;
         
         var title = this.props.scope === 'global' ? 
             `Use the value '${this.props.source}' directly.` :
@@ -85,11 +85,7 @@ export default class ScopedValueInputWithOptions extends React.Component {
         return (
             <React.Fragment>
                 <span className="input-group-text scope-icon-container no-left-border" title={title}>
-                    <img 
-                        className="scope-icon" 
-                        src={iconToShow} 
-                        alt="Scope icon"
-                    /> 
+                    <IconToShow className="scope-icon" /> 
                 </span>
                 <select 
                     value={currentValue} 

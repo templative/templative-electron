@@ -18,7 +18,7 @@ const CompositionsList = (props) => {
     return (
         <div className="content-file-list unified-viewer-list">
             <ResourceHeader 
-                iconSource={componentComposeIcon}
+                IconSource={componentComposeIcon}
                 header="Compositions"
                 isExtended={isExtended}
                 toggleExtendedAsyncCallback={toggleExtendedAsync}

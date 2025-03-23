@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const chalk = require('chalk');
-const outputPath = "/Users/oliverbarnum/Documents/git/templative-electron/src/main/templative/lib/componentPreviewImages"
+const outputPath = "/Users/oliverbarnum/Documents/git/templative-electron/src/assets/images/componentPreviewImages"
 
 // Ensure the output directory exists
 if (!fs.existsSync(outputPath)) {

@@ -1,6 +1,6 @@
 import React from "react";
 import "./GithubLogin.css";
-import githubLogo from "./githubLogo.png";
+import GithubLogo from "./githubLogo.png";
 import { channels } from '../../../../../../shared/constants';
 
 const { shell, ipcRenderer } = require('electron');
@@ -84,7 +84,7 @@ export default class GitHubLoginControls extends React.Component {
     render() {
         return (
             <div className="github-login-controls">
-                <img src={githubLogo} alt="GitHub Logo" className="github-logo" />
+                <GithubLogo className="github-logo" />
                 <button  
                     type="button" 
                     className="btn login-github-button" 

@@ -10,11 +10,9 @@ module.exports = {
     },
     extraResource: [
       "./bin",
-      "./src/main/templative/lib/create/componentTemplates",
-      "./src/main/templative/lib/componentPreviewImages"
     ],
     icon: "src/assets/images/icon",
-    osxSign: {
+    osxSign: process.env.SKIP_SIGNING === 'true' ? false : {
       'identity': "Developer ID Application: Go Next Games LLC (829PN2W7LK)",
       'hardened-runtime': true,
       'gatekeeper-assess': false,
@@ -22,7 +20,7 @@ module.exports = {
       'entitlements-inherit': 'entitlements.plist',
       'signature-flags': 'library'
     },
-    osxNotarize: {
+    osxNotarize: process.env.SKIP_SIGNING === 'true' ? false : {
       tool: 'notarytool',
       appleId: process.env.APPLE_ID,
       appleIdPassword: process.env.TEMPLATIVE_APP_SPECIFIC_PASSWORD,
@@ -77,7 +75,7 @@ module.exports = {
             {
               html: './src/renderer/app/index.html',
               js: './src/renderer/app/renderer.js',
-              name: 'main_window',
+              name: 'main_window'
             }
           ],
         },

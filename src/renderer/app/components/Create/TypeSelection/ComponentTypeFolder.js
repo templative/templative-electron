@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import StockComponentType from "./StockComponentType";
 import ComponentType from "./ComponentType";
-import { Color } from "three";
 import { COMPONENT_INFO } from "../../../../../shared/componentInfo";
 import { STOCK_COMPONENT_INFO } from "../../../../../shared/stockComponentInfo";
 

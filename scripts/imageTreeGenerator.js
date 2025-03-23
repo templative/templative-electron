@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Configuration
-const IMAGE_DIR = './src/main/templative/lib/componentPreviewImages';
+const IMAGE_DIR = '/Users/oliverbarnum/Documents/git/templative-electron/src/assets/images/componentPreviewImages';
 const COMMON_COLORS = ['Red', 'Blue', 'Green', 'Yellow', 'Black', 'White', 'Purple', 'Orange', 'Gray', 'Brown', 'Pink', 'Cyan', 'Magenta', 'Gold', 'Silver', 'Bronze'];
 
 /**

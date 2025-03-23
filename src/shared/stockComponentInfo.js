@@ -33,7 +33,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Flame",
-    "PreviewUri": "@previewImages/Flame.png"
+    "PreviewUri": "Flame.png"
   },
   "CardStandWhite": {
     "GameCrafterGuid": "E1128AF6-9A04-11E0-AACC-432941C43697",
@@ -63,7 +63,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CardStandWhite",
-    "PreviewUri": "@previewImages/CardStandWhite.png"
+    "PreviewUri": "CardStandWhite.png"
   },
   "JewelClear": {
     "GameCrafterGuid": "98800188-FC4C-11E5-99B4-4D46B620570A",
@@ -132,7 +132,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "JewelClear",
-    "PreviewUri": "@previewImages/JewelClear.png"
+    "PreviewUri": "JewelClear.png"
   },
   "JewelYellow": {
     "GameCrafterGuid": "25B234DC-FC4C-11E5-ACDB-EEBE1CA95DD6",
@@ -201,7 +201,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "JewelYellow",
-    "PreviewUri": "@previewImages/JewelYellow.png"
+    "PreviewUri": "JewelYellow.png"
   },
   "JewelGreen": {
     "GameCrafterGuid": "CE78A99E-FC4B-11E5-A27F-4D46B620570A",
@@ -270,7 +270,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "JewelGreen",
-    "PreviewUri": "@previewImages/JewelGreen.png"
+    "PreviewUri": "JewelGreen.png"
   },
   "Cube8mmGreen": {
     "GameCrafterGuid": "5E179AEA-8335-11E1-B714-C692DC194F78",
@@ -317,7 +317,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Cube8mmGreen",
-    "PreviewUri": "@previewImages/Cube8mmGreen.png"
+    "PreviewUri": "Cube8mmGreen.png"
   },
   "Cube8mmOrange": {
     "GameCrafterGuid": "B97995AA-8335-11E1-A7B5-C692DC194F78",
@@ -364,7 +364,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Cube8mmOrange",
-    "PreviewUri": "@previewImages/Cube8mmOrange.png"
+    "PreviewUri": "Cube8mmOrange.png"
   },
   "Cube8mmBlack": {
     "GameCrafterGuid": "7EB543EC-4D3E-11E1-A14C-40B1921A1C03",
@@ -411,7 +411,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Cube8mmBlack",
-    "PreviewUri": "@previewImages/Cube8mmBlack.png"
+    "PreviewUri": "Cube8mmBlack.png"
   },
   "Cube8mmBlue": {
     "GameCrafterGuid": "F40968BC-8335-11E1-A7B5-C692DC194F78",
@@ -458,7 +458,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Cube8mmBlue",
-    "PreviewUri": "@previewImages/Cube8mmBlue.png"
+    "PreviewUri": "Cube8mmBlue.png"
   },
   "Cube8mmWhite": {
     "GameCrafterGuid": "B7F3D54C-4D3E-11E1-A14C-40B1921A1C03",
@@ -505,7 +505,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Cube8mmWhite",
-    "PreviewUri": "@previewImages/Cube8mmWhite.png"
+    "PreviewUri": "Cube8mmWhite.png"
   },
   "Cube8mmRed": {
     "GameCrafterGuid": "A664456E-8335-11E1-9143-C692DC194F78",
@@ -552,7 +552,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Cube8mmRed",
-    "PreviewUri": "@previewImages/Cube8mmRed.png"
+    "PreviewUri": "Cube8mmRed.png"
   },
   "Cube8mmPurple": {
     "GameCrafterGuid": "4045BFC4-4D3E-11E1-A14C-40B1921A1C03",
@@ -599,7 +599,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Cube8mmPurple",
-    "PreviewUri": "@previewImages/Cube8mmPurple.png"
+    "PreviewUri": "Cube8mmPurple.png"
   },
   "VictorianMiniatureYellow": {
     "GameCrafterGuid": "75DF064C-2EC7-11ED-9CBC-E8F95EE382A3",
@@ -646,7 +646,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "VictorianMiniatureYellow",
-    "PreviewUri": "@previewImages/VictorianMiniatureYellow.png"
+    "PreviewUri": "VictorianMiniatureYellow.png"
   },
   "D68mmWhite": {
     "GameCrafterGuid": "251A0858-59C0-11EA-A896-F5FE59BF7666",
@@ -744,7 +744,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D68mmWhite",
-    "PreviewUri": "@previewImages/D68mmWhite.png"
+    "PreviewUri": "D68mmWhite.png"
   },
   "D616mmYellow": {
     "GameCrafterGuid": "E4F90956-9A04-11E0-AACC-432941C43697",
@@ -841,7 +841,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "D616mmYellow",
-    "PreviewUri": "@previewImages/D616mmYellow.png"
+    "PreviewUri": "D616mmYellow.png"
   },
   "D616mmBlue": {
     "GameCrafterGuid": "E4D68318-9A04-11E0-AACC-432941C43697",
@@ -938,7 +938,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D616mmBlue",
-    "PreviewUri": "@previewImages/D616mmBlue.png"
+    "PreviewUri": "D616mmBlue.png"
   },
   "D612mmClear": {
     "GameCrafterGuid": "6099FFB0-215A-11EC-B773-76004B5CF84F",
@@ -1037,7 +1037,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "D612mmClear",
-    "PreviewUri": "@previewImages/D612mmClear.png"
+    "PreviewUri": "D612mmClear.png"
   },
   "D12White": {
     "GameCrafterGuid": "08162C04-09D7-11E3-B696-40087740BD4B",
@@ -1163,7 +1163,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D12White",
-    "PreviewUri": "@previewImages/D12White.png"
+    "PreviewUri": "D12White.png"
   },
   "D20Black": {
     "GameCrafterGuid": "E52E1696-9A04-11E0-AACC-432941C43697",
@@ -1344,7 +1344,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D20Black",
-    "PreviewUri": "@previewImages/D20Black.png"
+    "PreviewUri": "D20Black.png"
   },
   "D20Yellow": {
     "GameCrafterGuid": "5F1BF8EA-09D6-11E3-A83D-40087740BD4B",
@@ -1525,7 +1525,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "D20Yellow",
-    "PreviewUri": "@previewImages/D20Yellow.png"
+    "PreviewUri": "D20Yellow.png"
   },
   "D20White": {
     "GameCrafterGuid": "49849758-09D6-11E3-AE02-40087740BD4B",
@@ -1706,7 +1706,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D20White",
-    "PreviewUri": "@previewImages/D20White.png"
+    "PreviewUri": "D20White.png"
   },
   "HouseWoodBlack": {
     "GameCrafterGuid": "FD85F422-2EA2-11E8-B873-9D2AC78910BA",
@@ -1750,7 +1750,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "HouseWoodBlack",
-    "PreviewUri": "@previewImages/HouseWoodBlack.png"
+    "PreviewUri": "HouseWoodBlack.png"
   },
   "HouseWoodBlue": {
     "GameCrafterGuid": "EA86962C-221F-11E8-A201-E5F993A6FE1D",
@@ -1794,7 +1794,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "HouseWoodBlue",
-    "PreviewUri": "@previewImages/HouseWoodBlue.png"
+    "PreviewUri": "HouseWoodBlue.png"
   },
   "HouseWoodGreen": {
     "GameCrafterGuid": "CFE86DC2-4EFC-11E8-80AE-900DCB137816",
@@ -1838,7 +1838,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "HouseWoodGreen",
-    "PreviewUri": "@previewImages/HouseWoodGreen.png"
+    "PreviewUri": "HouseWoodGreen.png"
   },
   "HouseWoodOrange": {
     "GameCrafterGuid": "FDEDF34A-4A24-11E8-8009-E69A584C442A",
@@ -1882,7 +1882,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "HouseWoodOrange",
-    "PreviewUri": "@previewImages/HouseWoodOrange.png"
+    "PreviewUri": "HouseWoodOrange.png"
   },
   "HouseWoodWhite": {
     "GameCrafterGuid": "C8616066-48B9-11E8-BA56-8DBB1EA37D3B",
@@ -1926,7 +1926,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "HouseWoodWhite",
-    "PreviewUri": "@previewImages/HouseWoodWhite.png"
+    "PreviewUri": "HouseWoodWhite.png"
   },
   "HouseWoodRed": {
     "GameCrafterGuid": "B6949542-48B9-11E8-BA56-3DBB1EA37D3B",
@@ -1970,7 +1970,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "HouseWoodRed",
-    "PreviewUri": "@previewImages/HouseWoodRed.png"
+    "PreviewUri": "HouseWoodRed.png"
   },
   "HouseWoodPurple": {
     "GameCrafterGuid": "E36B2C18-4EFC-11E8-8111-F6A03D012D85",
@@ -2014,7 +2014,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "HouseWoodPurple",
-    "PreviewUri": "@previewImages/HouseWoodPurple.png"
+    "PreviewUri": "HouseWoodPurple.png"
   },
   "11X11Baggies": {
     "DisplayName": "11 X 11 Baggies",
@@ -2036,7 +2036,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "11X11Baggies",
-    "PreviewUri": "@previewImages/11X11Baggies.png"
+    "PreviewUri": "11X11Baggies.png"
   },
   "1st": {
     "DisplayName": "1st",
@@ -2060,7 +2060,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "1st",
-    "PreviewUri": "@previewImages/1st.png"
+    "PreviewUri": "1st.png"
   },
   "3X4Baggies": {
     "DisplayName": "3 X 4 Baggies",
@@ -2084,7 +2084,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "3X4Baggies",
-    "PreviewUri": "@previewImages/3X4Baggies.png"
+    "PreviewUri": "3X4Baggies.png"
   },
   "4X10Baggies": {
     "DisplayName": "4 X 10 Baggies",
@@ -2108,7 +2108,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "4X10Baggies",
-    "PreviewUri": "@previewImages/4X10Baggies.png"
+    "PreviewUri": "4X10Baggies.png"
   },
   "4X5Baggies": {
     "DisplayName": "4 X 5 Baggies",
@@ -2132,7 +2132,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "4X5Baggies",
-    "PreviewUri": "@previewImages/4X5Baggies.png"
+    "PreviewUri": "4X5Baggies.png"
   },
   "4X6Baggies": {
     "DisplayName": "4 X 6 Baggies",
@@ -2156,7 +2156,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "4X6Baggies",
-    "PreviewUri": "@previewImages/4X6Baggies.png"
+    "PreviewUri": "4X6Baggies.png"
   },
   "5X5Baggies": {
     "DisplayName": "5 X 5 Baggies",
@@ -2180,7 +2180,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "5X5Baggies",
-    "PreviewUri": "@previewImages/5X5Baggies.png"
+    "PreviewUri": "5X5Baggies.png"
   },
   "5X7Baggies": {
     "DisplayName": "5 X 7 Baggies",
@@ -2204,7 +2204,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "5X7Baggies",
-    "PreviewUri": "@previewImages/5X7Baggies.png"
+    "PreviewUri": "5X7Baggies.png"
   },
   "6X10Baggies": {
     "DisplayName": "6 X 10 Baggies",
@@ -2228,7 +2228,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "6X10Baggies",
-    "PreviewUri": "@previewImages/6X10Baggies.png"
+    "PreviewUri": "6X10Baggies.png"
   },
   "7X12Baggies": {
     "DisplayName": "7 X 12 Baggies",
@@ -2252,7 +2252,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "7X12Baggies",
-    "PreviewUri": "@previewImages/7X12Baggies.png"
+    "PreviewUri": "7X12Baggies.png"
   },
   "9X12Baggies": {
     "DisplayName": "9 X 12 Baggies",
@@ -2276,7 +2276,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "9X12Baggies",
-    "PreviewUri": "@previewImages/9X12Baggies.png"
+    "PreviewUri": "9X12Baggies.png"
   },
   "AcornBrown": {
     "DisplayName": "Acorn, Brown",
@@ -2315,7 +2315,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "AcornBrown",
-    "PreviewUri": "@previewImages/AcornBrown.png"
+    "PreviewUri": "AcornBrown.png"
   },
   "AcornYellow": {
     "DisplayName": "Acorn, Yellow",
@@ -2354,7 +2354,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "AcornYellow",
-    "PreviewUri": "@previewImages/AcornYellow.png"
+    "PreviewUri": "AcornYellow.png"
   },
   "AcrylicTrainTrackBlack": {
     "DisplayName": "Acrylic Train Track, Black",
@@ -2380,7 +2380,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "AcrylicTrainTrackBlack",
-    "PreviewUri": "@previewImages/AcrylicTrainTrackBlack.png"
+    "PreviewUri": "AcrylicTrainTrackBlack.png"
   },
   "AcrylicTrainTrackBlue": {
     "DisplayName": "Acrylic Train Track, Blue",
@@ -2406,7 +2406,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "AcrylicTrainTrackBlue",
-    "PreviewUri": "@previewImages/AcrylicTrainTrackBlue.png"
+    "PreviewUri": "AcrylicTrainTrackBlue.png"
   },
   "AcrylicTrainTrackGreen": {
     "DisplayName": "Acrylic Train Track, Green",
@@ -2432,7 +2432,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "AcrylicTrainTrackGreen",
-    "PreviewUri": "@previewImages/AcrylicTrainTrackGreen.png"
+    "PreviewUri": "AcrylicTrainTrackGreen.png"
   },
   "AcrylicTrainTrackOrange": {
     "DisplayName": "Acrylic Train Track, Orange",
@@ -2458,7 +2458,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "AcrylicTrainTrackOrange",
-    "PreviewUri": "@previewImages/AcrylicTrainTrackOrange.png"
+    "PreviewUri": "AcrylicTrainTrackOrange.png"
   },
   "AcrylicTrainTrackPurple": {
     "DisplayName": "Acrylic Train Track, Purple",
@@ -2484,7 +2484,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "AcrylicTrainTrackPurple",
-    "PreviewUri": "@previewImages/AcrylicTrainTrackPurple.png"
+    "PreviewUri": "AcrylicTrainTrackPurple.png"
   },
   "AcrylicTrainTrackRed": {
     "DisplayName": "Acrylic Train Track, Red",
@@ -2510,7 +2510,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "AcrylicTrainTrackRed",
-    "PreviewUri": "@previewImages/AcrylicTrainTrackRed.png"
+    "PreviewUri": "AcrylicTrainTrackRed.png"
   },
   "AcrylicTrainTrackWhite": {
     "DisplayName": "Acrylic Train Track, White",
@@ -2536,7 +2536,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "AcrylicTrainTrackWhite",
-    "PreviewUri": "@previewImages/AcrylicTrainTrackWhite.png"
+    "PreviewUri": "AcrylicTrainTrackWhite.png"
   },
   "AcrylicTrainTrackYellow": {
     "DisplayName": "Acrylic Train Track, Yellow",
@@ -2562,7 +2562,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "AcrylicTrainTrackYellow",
-    "PreviewUri": "@previewImages/AcrylicTrainTrackYellow.png"
+    "PreviewUri": "AcrylicTrainTrackYellow.png"
   },
   "AcrylicTrainBoxCarBlack": {
     "DisplayName": "Acrylic Train, Box Car, Black",
@@ -2594,7 +2594,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "AcrylicTrainBoxCarBlack",
-    "PreviewUri": "@previewImages/AcrylicTrainBoxCarBlack.png"
+    "PreviewUri": "AcrylicTrainBoxCarBlack.png"
   },
   "AcrylicTrainBoxCarBlue": {
     "DisplayName": "Acrylic Train, Box Car, Blue",
@@ -2626,7 +2626,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "AcrylicTrainBoxCarBlue",
-    "PreviewUri": "@previewImages/AcrylicTrainBoxCarBlue.png"
+    "PreviewUri": "AcrylicTrainBoxCarBlue.png"
   },
   "AcrylicTrainBoxCarGreen": {
     "DisplayName": "Acrylic Train, Box Car, Green",
@@ -2658,7 +2658,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "AcrylicTrainBoxCarGreen",
-    "PreviewUri": "@previewImages/AcrylicTrainBoxCarGreen.png"
+    "PreviewUri": "AcrylicTrainBoxCarGreen.png"
   },
   "AcrylicTrainBoxCarOrange": {
     "DisplayName": "Acrylic Train, Box Car, Orange",
@@ -2690,7 +2690,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "AcrylicTrainBoxCarOrange",
-    "PreviewUri": "@previewImages/AcrylicTrainBoxCarOrange.png"
+    "PreviewUri": "AcrylicTrainBoxCarOrange.png"
   },
   "AcrylicTrainBoxCarPurple": {
     "DisplayName": "Acrylic Train, Box Car, Purple",
@@ -2722,7 +2722,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "AcrylicTrainBoxCarPurple",
-    "PreviewUri": "@previewImages/AcrylicTrainBoxCarPurple.png"
+    "PreviewUri": "AcrylicTrainBoxCarPurple.png"
   },
   "AcrylicTrainBoxCarRed": {
     "DisplayName": "Acrylic Train, Box Car, Red",
@@ -2754,7 +2754,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "AcrylicTrainBoxCarRed",
-    "PreviewUri": "@previewImages/AcrylicTrainBoxCarRed.png"
+    "PreviewUri": "AcrylicTrainBoxCarRed.png"
   },
   "AcrylicTrainBoxCarWhite": {
     "DisplayName": "Acrylic Train, Box Car, White",
@@ -2786,7 +2786,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "AcrylicTrainBoxCarWhite",
-    "PreviewUri": "@previewImages/AcrylicTrainBoxCarWhite.png"
+    "PreviewUri": "AcrylicTrainBoxCarWhite.png"
   },
   "AcrylicTrainBoxCarYellow": {
     "DisplayName": "Acrylic Train, Box Car, Yellow",
@@ -2818,7 +2818,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "AcrylicTrainBoxCarYellow",
-    "PreviewUri": "@previewImages/AcrylicTrainBoxCarYellow.png"
+    "PreviewUri": "AcrylicTrainBoxCarYellow.png"
   },
   "AcrylicTrainCabooseBlack": {
     "DisplayName": "Acrylic Train, Caboose, Black",
@@ -2858,7 +2858,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "AcrylicTrainCabooseBlack",
-    "PreviewUri": "@previewImages/AcrylicTrainCabooseBlack.png"
+    "PreviewUri": "AcrylicTrainCabooseBlack.png"
   },
   "AcrylicTrainCabooseBlue": {
     "DisplayName": "Acrylic Train, Caboose, Blue",
@@ -2898,7 +2898,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "AcrylicTrainCabooseBlue",
-    "PreviewUri": "@previewImages/AcrylicTrainCabooseBlue.png"
+    "PreviewUri": "AcrylicTrainCabooseBlue.png"
   },
   "AcrylicTrainCabooseGreen": {
     "DisplayName": "Acrylic Train, Caboose, Green",
@@ -2938,7 +2938,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "AcrylicTrainCabooseGreen",
-    "PreviewUri": "@previewImages/AcrylicTrainCabooseGreen.png"
+    "PreviewUri": "AcrylicTrainCabooseGreen.png"
   },
   "AcrylicTrainCabooseOrange": {
     "DisplayName": "Acrylic Train, Caboose, Orange",
@@ -2978,7 +2978,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "AcrylicTrainCabooseOrange",
-    "PreviewUri": "@previewImages/AcrylicTrainCabooseOrange.png"
+    "PreviewUri": "AcrylicTrainCabooseOrange.png"
   },
   "AcrylicTrainCaboosePurple": {
     "DisplayName": "Acrylic Train, Caboose, Purple",
@@ -3018,7 +3018,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "AcrylicTrainCaboosePurple",
-    "PreviewUri": "@previewImages/AcrylicTrainCaboosePurple.png"
+    "PreviewUri": "AcrylicTrainCaboosePurple.png"
   },
   "AcrylicTrainCabooseRed": {
     "DisplayName": "Acrylic Train, Caboose, Red",
@@ -3058,7 +3058,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "AcrylicTrainCabooseRed",
-    "PreviewUri": "@previewImages/AcrylicTrainCabooseRed.png"
+    "PreviewUri": "AcrylicTrainCabooseRed.png"
   },
   "AcrylicTrainCabooseWhite": {
     "DisplayName": "Acrylic Train, Caboose, White",
@@ -3098,7 +3098,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "AcrylicTrainCabooseWhite",
-    "PreviewUri": "@previewImages/AcrylicTrainCabooseWhite.png"
+    "PreviewUri": "AcrylicTrainCabooseWhite.png"
   },
   "AcrylicTrainCabooseYellow": {
     "DisplayName": "Acrylic Train, Caboose, Yellow",
@@ -3138,7 +3138,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "AcrylicTrainCabooseYellow",
-    "PreviewUri": "@previewImages/AcrylicTrainCabooseYellow.png"
+    "PreviewUri": "AcrylicTrainCabooseYellow.png"
   },
   "AcrylicTrainCoalCarBlack": {
     "DisplayName": "Acrylic Train, Coal Car, Black",
@@ -3173,7 +3173,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "AcrylicTrainCoalCarBlack",
-    "PreviewUri": "@previewImages/AcrylicTrainCoalCarBlack.png"
+    "PreviewUri": "AcrylicTrainCoalCarBlack.png"
   },
   "AcrylicTrainCoalCarBlue": {
     "DisplayName": "Acrylic Train, Coal Car, Blue",
@@ -3208,7 +3208,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "AcrylicTrainCoalCarBlue",
-    "PreviewUri": "@previewImages/AcrylicTrainCoalCarBlue.png"
+    "PreviewUri": "AcrylicTrainCoalCarBlue.png"
   },
   "AcrylicTrainCoalCarGreen": {
     "DisplayName": "Acrylic Train, Coal Car, Green",
@@ -3243,7 +3243,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "AcrylicTrainCoalCarGreen",
-    "PreviewUri": "@previewImages/AcrylicTrainCoalCarGreen.png"
+    "PreviewUri": "AcrylicTrainCoalCarGreen.png"
   },
   "AcrylicTrainCoalCarOrange": {
     "DisplayName": "Acrylic Train, Coal Car, Orange",
@@ -3278,7 +3278,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "AcrylicTrainCoalCarOrange",
-    "PreviewUri": "@previewImages/AcrylicTrainCoalCarOrange.png"
+    "PreviewUri": "AcrylicTrainCoalCarOrange.png"
   },
   "AcrylicTrainCoalCarPurple": {
     "DisplayName": "Acrylic Train, Coal Car, Purple",
@@ -3313,7 +3313,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "AcrylicTrainCoalCarPurple",
-    "PreviewUri": "@previewImages/AcrylicTrainCoalCarPurple.png"
+    "PreviewUri": "AcrylicTrainCoalCarPurple.png"
   },
   "AcrylicTrainCoalCarRed": {
     "DisplayName": "Acrylic Train, Coal Car, Red",
@@ -3348,7 +3348,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "AcrylicTrainCoalCarRed",
-    "PreviewUri": "@previewImages/AcrylicTrainCoalCarRed.png"
+    "PreviewUri": "AcrylicTrainCoalCarRed.png"
   },
   "AcrylicTrainCoalCarWhite": {
     "DisplayName": "Acrylic Train, Coal Car, White",
@@ -3383,7 +3383,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "AcrylicTrainCoalCarWhite",
-    "PreviewUri": "@previewImages/AcrylicTrainCoalCarWhite.png"
+    "PreviewUri": "AcrylicTrainCoalCarWhite.png"
   },
   "AcrylicTrainCoalCarYellow": {
     "DisplayName": "Acrylic Train, Coal Car, Yellow",
@@ -3418,7 +3418,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "AcrylicTrainCoalCarYellow",
-    "PreviewUri": "@previewImages/AcrylicTrainCoalCarYellow.png"
+    "PreviewUri": "AcrylicTrainCoalCarYellow.png"
   },
   "AcrylicTrainFlatBedBlack": {
     "DisplayName": "Acrylic Train, Flat Bed, Black",
@@ -3452,7 +3452,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "AcrylicTrainFlatBedBlack",
-    "PreviewUri": "@previewImages/AcrylicTrainFlatBedBlack.png"
+    "PreviewUri": "AcrylicTrainFlatBedBlack.png"
   },
   "AcrylicTrainFlatBedBlue": {
     "DisplayName": "Acrylic Train, Flat Bed, Blue",
@@ -3486,7 +3486,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "AcrylicTrainFlatBedBlue",
-    "PreviewUri": "@previewImages/AcrylicTrainFlatBedBlue.png"
+    "PreviewUri": "AcrylicTrainFlatBedBlue.png"
   },
   "AcrylicTrainFlatBedGreen": {
     "DisplayName": "Acrylic Train, Flat Bed, Green",
@@ -3520,7 +3520,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "AcrylicTrainFlatBedGreen",
-    "PreviewUri": "@previewImages/AcrylicTrainFlatBedGreen.png"
+    "PreviewUri": "AcrylicTrainFlatBedGreen.png"
   },
   "AcrylicTrainFlatBedOrange": {
     "DisplayName": "Acrylic Train, Flat Bed, Orange",
@@ -3554,7 +3554,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "AcrylicTrainFlatBedOrange",
-    "PreviewUri": "@previewImages/AcrylicTrainFlatBedOrange.png"
+    "PreviewUri": "AcrylicTrainFlatBedOrange.png"
   },
   "AcrylicTrainFlatBedPurple": {
     "DisplayName": "Acrylic Train, Flat Bed, Purple",
@@ -3588,7 +3588,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "AcrylicTrainFlatBedPurple",
-    "PreviewUri": "@previewImages/AcrylicTrainFlatBedPurple.png"
+    "PreviewUri": "AcrylicTrainFlatBedPurple.png"
   },
   "AcrylicTrainFlatBedRed": {
     "DisplayName": "Acrylic Train, Flat Bed, Red",
@@ -3622,7 +3622,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "AcrylicTrainFlatBedRed",
-    "PreviewUri": "@previewImages/AcrylicTrainFlatBedRed.png"
+    "PreviewUri": "AcrylicTrainFlatBedRed.png"
   },
   "AcrylicTrainFlatBedWhite": {
     "DisplayName": "Acrylic Train, Flat Bed, White",
@@ -3656,7 +3656,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "AcrylicTrainFlatBedWhite",
-    "PreviewUri": "@previewImages/AcrylicTrainFlatBedWhite.png"
+    "PreviewUri": "AcrylicTrainFlatBedWhite.png"
   },
   "AcrylicTrainFlatBedYellow": {
     "DisplayName": "Acrylic Train, Flat Bed, Yellow",
@@ -3690,7 +3690,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "AcrylicTrainFlatBedYellow",
-    "PreviewUri": "@previewImages/AcrylicTrainFlatBedYellow.png"
+    "PreviewUri": "AcrylicTrainFlatBedYellow.png"
   },
   "AcrylicTrainModernEngineBlack": {
     "DisplayName": "Acrylic Train, Modern Engine, Black",
@@ -3716,7 +3716,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "AcrylicTrainModernEngineBlack",
-    "PreviewUri": "@previewImages/AcrylicTrainModernEngineBlack.png"
+    "PreviewUri": "AcrylicTrainModernEngineBlack.png"
   },
   "AcrylicTrainModernEngineBlue": {
     "DisplayName": "Acrylic Train, Modern Engine, Blue",
@@ -3742,7 +3742,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "AcrylicTrainModernEngineBlue",
-    "PreviewUri": "@previewImages/AcrylicTrainModernEngineBlue.png"
+    "PreviewUri": "AcrylicTrainModernEngineBlue.png"
   },
   "AcrylicTrainModernEngineGreen": {
     "DisplayName": "Acrylic Train, Modern Engine, Green",
@@ -3768,7 +3768,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "AcrylicTrainModernEngineGreen",
-    "PreviewUri": "@previewImages/AcrylicTrainModernEngineGreen.png"
+    "PreviewUri": "AcrylicTrainModernEngineGreen.png"
   },
   "AcrylicTrainModernEngineOrange": {
     "DisplayName": "Acrylic Train, Modern Engine, Orange",
@@ -3794,7 +3794,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "AcrylicTrainModernEngineOrange",
-    "PreviewUri": "@previewImages/AcrylicTrainModernEngineOrange.png"
+    "PreviewUri": "AcrylicTrainModernEngineOrange.png"
   },
   "AcrylicTrainModernEnginePurple": {
     "DisplayName": "Acrylic Train, Modern Engine, Purple",
@@ -3820,7 +3820,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "AcrylicTrainModernEnginePurple",
-    "PreviewUri": "@previewImages/AcrylicTrainModernEnginePurple.png"
+    "PreviewUri": "AcrylicTrainModernEnginePurple.png"
   },
   "AcrylicTrainModernEngineRed": {
     "DisplayName": "Acrylic Train, Modern Engine, Red",
@@ -3846,7 +3846,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "AcrylicTrainModernEngineRed",
-    "PreviewUri": "@previewImages/AcrylicTrainModernEngineRed.png"
+    "PreviewUri": "AcrylicTrainModernEngineRed.png"
   },
   "AcrylicTrainModernEngineWhite": {
     "DisplayName": "Acrylic Train, Modern Engine, White",
@@ -3872,7 +3872,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "AcrylicTrainModernEngineWhite",
-    "PreviewUri": "@previewImages/AcrylicTrainModernEngineWhite.png"
+    "PreviewUri": "AcrylicTrainModernEngineWhite.png"
   },
   "AcrylicTrainModernEngineYellow": {
     "DisplayName": "Acrylic Train, Modern Engine, Yellow",
@@ -3898,7 +3898,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "AcrylicTrainModernEngineYellow",
-    "PreviewUri": "@previewImages/AcrylicTrainModernEngineYellow.png"
+    "PreviewUri": "AcrylicTrainModernEngineYellow.png"
   },
   "AcrylicTrainPassengerCarBlack": {
     "DisplayName": "Acrylic Train, Passenger Car, Black",
@@ -3932,7 +3932,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "AcrylicTrainPassengerCarBlack",
-    "PreviewUri": "@previewImages/AcrylicTrainPassengerCarBlack.png"
+    "PreviewUri": "AcrylicTrainPassengerCarBlack.png"
   },
   "AcrylicTrainPassengerCarBlue": {
     "DisplayName": "Acrylic Train, Passenger Car, Blue",
@@ -3966,7 +3966,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "AcrylicTrainPassengerCarBlue",
-    "PreviewUri": "@previewImages/AcrylicTrainPassengerCarBlue.png"
+    "PreviewUri": "AcrylicTrainPassengerCarBlue.png"
   },
   "AcrylicTrainPassengerCarGreen": {
     "DisplayName": "Acrylic Train, Passenger Car, Green",
@@ -4000,7 +4000,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "AcrylicTrainPassengerCarGreen",
-    "PreviewUri": "@previewImages/AcrylicTrainPassengerCarGreen.png"
+    "PreviewUri": "AcrylicTrainPassengerCarGreen.png"
   },
   "AcrylicTrainPassengerCarOrange": {
     "DisplayName": "Acrylic Train, Passenger Car, Orange",
@@ -4034,7 +4034,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "AcrylicTrainPassengerCarOrange",
-    "PreviewUri": "@previewImages/AcrylicTrainPassengerCarOrange.png"
+    "PreviewUri": "AcrylicTrainPassengerCarOrange.png"
   },
   "AcrylicTrainPassengerCarPurple": {
     "DisplayName": "Acrylic Train, Passenger Car, Purple",
@@ -4068,7 +4068,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "AcrylicTrainPassengerCarPurple",
-    "PreviewUri": "@previewImages/AcrylicTrainPassengerCarPurple.png"
+    "PreviewUri": "AcrylicTrainPassengerCarPurple.png"
   },
   "AcrylicTrainPassengerCarRed": {
     "DisplayName": "Acrylic Train, Passenger Car, Red",
@@ -4102,7 +4102,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "AcrylicTrainPassengerCarRed",
-    "PreviewUri": "@previewImages/AcrylicTrainPassengerCarRed.png"
+    "PreviewUri": "AcrylicTrainPassengerCarRed.png"
   },
   "AcrylicTrainPassengerCarWhite": {
     "DisplayName": "Acrylic Train, Passenger Car, White",
@@ -4136,7 +4136,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "AcrylicTrainPassengerCarWhite",
-    "PreviewUri": "@previewImages/AcrylicTrainPassengerCarWhite.png"
+    "PreviewUri": "AcrylicTrainPassengerCarWhite.png"
   },
   "AcrylicTrainPassengerCarYellow": {
     "DisplayName": "Acrylic Train, Passenger Car, Yellow",
@@ -4170,7 +4170,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "AcrylicTrainPassengerCarYellow",
-    "PreviewUri": "@previewImages/AcrylicTrainPassengerCarYellow.png"
+    "PreviewUri": "AcrylicTrainPassengerCarYellow.png"
   },
   "AcrylicTrainSteamEngineBlack": {
     "DisplayName": "Acrylic Train, Steam Engine, Black",
@@ -4200,7 +4200,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "AcrylicTrainSteamEngineBlack",
-    "PreviewUri": "@previewImages/AcrylicTrainSteamEngineBlack.png"
+    "PreviewUri": "AcrylicTrainSteamEngineBlack.png"
   },
   "AcrylicTrainSteamEngineBlue": {
     "DisplayName": "Acrylic Train, Steam Engine, Blue",
@@ -4230,7 +4230,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "AcrylicTrainSteamEngineBlue",
-    "PreviewUri": "@previewImages/AcrylicTrainSteamEngineBlue.png"
+    "PreviewUri": "AcrylicTrainSteamEngineBlue.png"
   },
   "AcrylicTrainSteamEngineGreen": {
     "DisplayName": "Acrylic Train, Steam Engine, Green",
@@ -4260,7 +4260,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "AcrylicTrainSteamEngineGreen",
-    "PreviewUri": "@previewImages/AcrylicTrainSteamEngineGreen.png"
+    "PreviewUri": "AcrylicTrainSteamEngineGreen.png"
   },
   "AcrylicTrainSteamEngineOrange": {
     "DisplayName": "Acrylic Train, Steam Engine, Orange",
@@ -4290,7 +4290,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "AcrylicTrainSteamEngineOrange",
-    "PreviewUri": "@previewImages/AcrylicTrainSteamEngineOrange.png"
+    "PreviewUri": "AcrylicTrainSteamEngineOrange.png"
   },
   "AcrylicTrainSteamEnginePurple": {
     "DisplayName": "Acrylic Train, Steam Engine, Purple",
@@ -4320,7 +4320,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "AcrylicTrainSteamEnginePurple",
-    "PreviewUri": "@previewImages/AcrylicTrainSteamEnginePurple.png"
+    "PreviewUri": "AcrylicTrainSteamEnginePurple.png"
   },
   "AcrylicTrainSteamEngineRed": {
     "DisplayName": "Acrylic Train, Steam Engine, Red",
@@ -4350,7 +4350,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "AcrylicTrainSteamEngineRed",
-    "PreviewUri": "@previewImages/AcrylicTrainSteamEngineRed.png"
+    "PreviewUri": "AcrylicTrainSteamEngineRed.png"
   },
   "AcrylicTrainSteamEngineWhite": {
     "DisplayName": "Acrylic Train, Steam Engine, White",
@@ -4380,7 +4380,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "AcrylicTrainSteamEngineWhite",
-    "PreviewUri": "@previewImages/AcrylicTrainSteamEngineWhite.png"
+    "PreviewUri": "AcrylicTrainSteamEngineWhite.png"
   },
   "AcrylicTrainSteamEngineYellow": {
     "DisplayName": "Acrylic Train, Steam Engine, Yellow",
@@ -4410,7 +4410,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "AcrylicTrainSteamEngineYellow",
-    "PreviewUri": "@previewImages/AcrylicTrainSteamEngineYellow.png"
+    "PreviewUri": "AcrylicTrainSteamEngineYellow.png"
   },
   "AcrylicTrainTankCarBlack": {
     "DisplayName": "Acrylic Train, Tank Car, Black",
@@ -4442,7 +4442,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "AcrylicTrainTankCarBlack",
-    "PreviewUri": "@previewImages/AcrylicTrainTankCarBlack.png"
+    "PreviewUri": "AcrylicTrainTankCarBlack.png"
   },
   "AcrylicTrainTankCarBlue": {
     "DisplayName": "Acrylic Train, Tank Car, Blue",
@@ -4474,7 +4474,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "AcrylicTrainTankCarBlue",
-    "PreviewUri": "@previewImages/AcrylicTrainTankCarBlue.png"
+    "PreviewUri": "AcrylicTrainTankCarBlue.png"
   },
   "AcrylicTrainTankCarGreen": {
     "DisplayName": "Acrylic Train, Tank Car, Green",
@@ -4506,7 +4506,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "AcrylicTrainTankCarGreen",
-    "PreviewUri": "@previewImages/AcrylicTrainTankCarGreen.png"
+    "PreviewUri": "AcrylicTrainTankCarGreen.png"
   },
   "AcrylicTrainTankCarOrange": {
     "DisplayName": "Acrylic Train, Tank Car, Orange",
@@ -4538,7 +4538,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "AcrylicTrainTankCarOrange",
-    "PreviewUri": "@previewImages/AcrylicTrainTankCarOrange.png"
+    "PreviewUri": "AcrylicTrainTankCarOrange.png"
   },
   "AcrylicTrainTankCarPurple": {
     "DisplayName": "Acrylic Train, Tank Car, Purple",
@@ -4570,7 +4570,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "AcrylicTrainTankCarPurple",
-    "PreviewUri": "@previewImages/AcrylicTrainTankCarPurple.png"
+    "PreviewUri": "AcrylicTrainTankCarPurple.png"
   },
   "AcrylicTrainTankCarRed": {
     "DisplayName": "Acrylic Train, Tank Car, Red",
@@ -4602,7 +4602,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "AcrylicTrainTankCarRed",
-    "PreviewUri": "@previewImages/AcrylicTrainTankCarRed.png"
+    "PreviewUri": "AcrylicTrainTankCarRed.png"
   },
   "AcrylicTrainTankCarWhite": {
     "DisplayName": "Acrylic Train, Tank Car, White",
@@ -4634,7 +4634,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "AcrylicTrainTankCarWhite",
-    "PreviewUri": "@previewImages/AcrylicTrainTankCarWhite.png"
+    "PreviewUri": "AcrylicTrainTankCarWhite.png"
   },
   "AcrylicTrainTankCarYellow": {
     "DisplayName": "Acrylic Train, Tank Car, Yellow",
@@ -4666,7 +4666,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "AcrylicTrainTankCarYellow",
-    "PreviewUri": "@previewImages/AcrylicTrainTankCarYellow.png"
+    "PreviewUri": "AcrylicTrainTankCarYellow.png"
   },
   "AdventurerwithSwordandShield": {
     "DisplayName": "Adventurer with Sword and Shield",
@@ -4697,7 +4697,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "AdventurerwithSwordandShield",
-    "PreviewUri": "@previewImages/AdventurerwithSwordandShield.png"
+    "PreviewUri": "AdventurerwithSwordandShield.png"
   },
   "AdventuressFantasyTB25": {
     "DisplayName": "Adventuress, Fantasy, TB25",
@@ -4727,7 +4727,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "AdventuressFantasyTB25",
-    "PreviewUri": "@previewImages/AdventuressFantasyTB25.png"
+    "PreviewUri": "AdventuressFantasyTB25.png"
   },
   "AfricanElephant": {
     "DisplayName": "African Elephant",
@@ -4762,7 +4762,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "AfricanElephant",
-    "PreviewUri": "@previewImages/AfricanElephant.png"
+    "PreviewUri": "AfricanElephant.png"
   },
   "AirplaneLargeBlack": {
     "DisplayName": "Airplane, Large, Black",
@@ -4795,7 +4795,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "AirplaneLargeBlack",
-    "PreviewUri": "@previewImages/AirplaneLargeBlack.png"
+    "PreviewUri": "AirplaneLargeBlack.png"
   },
   "AirplaneLargeBlue": {
     "DisplayName": "Airplane, Large, Blue",
@@ -4828,7 +4828,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "AirplaneLargeBlue",
-    "PreviewUri": "@previewImages/AirplaneLargeBlue.png"
+    "PreviewUri": "AirplaneLargeBlue.png"
   },
   "AirplaneLargeGreen": {
     "DisplayName": "Airplane, Large, Green",
@@ -4860,7 +4860,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": true,
     "Key": "AirplaneLargeGreen",
-    "PreviewUri": "@previewImages/AirplaneLargeGreen.png"
+    "PreviewUri": "AirplaneLargeGreen.png"
   },
   "AirplaneLargeOrange": {
     "DisplayName": "Airplane, Large, Orange",
@@ -4893,7 +4893,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "AirplaneLargeOrange",
-    "PreviewUri": "@previewImages/AirplaneLargeOrange.png"
+    "PreviewUri": "AirplaneLargeOrange.png"
   },
   "AirplaneLargePurple": {
     "DisplayName": "Airplane, Large, Purple",
@@ -4926,7 +4926,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "AirplaneLargePurple",
-    "PreviewUri": "@previewImages/AirplaneLargePurple.png"
+    "PreviewUri": "AirplaneLargePurple.png"
   },
   "AirplaneLargeRed": {
     "DisplayName": "Airplane, Large, Red",
@@ -4958,7 +4958,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": true,
     "Key": "AirplaneLargeRed",
-    "PreviewUri": "@previewImages/AirplaneLargeRed.png"
+    "PreviewUri": "AirplaneLargeRed.png"
   },
   "AirplaneLargeWhite": {
     "DisplayName": "Airplane, Large, White",
@@ -4990,7 +4990,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": true,
     "Key": "AirplaneLargeWhite",
-    "PreviewUri": "@previewImages/AirplaneLargeWhite.png"
+    "PreviewUri": "AirplaneLargeWhite.png"
   },
   "AirplaneLargeYellow": {
     "DisplayName": "Airplane, Large, Yellow",
@@ -5023,7 +5023,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "AirplaneLargeYellow",
-    "PreviewUri": "@previewImages/AirplaneLargeYellow.png"
+    "PreviewUri": "AirplaneLargeYellow.png"
   },
   "AirplaneSmallBlack": {
     "DisplayName": "Airplane, Small, Black",
@@ -5056,7 +5056,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "AirplaneSmallBlack",
-    "PreviewUri": "@previewImages/AirplaneSmallBlack.png"
+    "PreviewUri": "AirplaneSmallBlack.png"
   },
   "AirplaneSmallBlue": {
     "DisplayName": "Airplane, Small, Blue",
@@ -5089,7 +5089,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "AirplaneSmallBlue",
-    "PreviewUri": "@previewImages/AirplaneSmallBlue.png"
+    "PreviewUri": "AirplaneSmallBlue.png"
   },
   "AirplaneSmallOrange": {
     "DisplayName": "Airplane, Small, Orange",
@@ -5122,7 +5122,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "AirplaneSmallOrange",
-    "PreviewUri": "@previewImages/AirplaneSmallOrange.png"
+    "PreviewUri": "AirplaneSmallOrange.png"
   },
   "AirplaneSmallPurple": {
     "DisplayName": "Airplane, Small, Purple",
@@ -5155,7 +5155,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "AirplaneSmallPurple",
-    "PreviewUri": "@previewImages/AirplaneSmallPurple.png"
+    "PreviewUri": "AirplaneSmallPurple.png"
   },
   "AirplaneSmallRed": {
     "DisplayName": "Airplane, Small, Red",
@@ -5188,7 +5188,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "AirplaneSmallRed",
-    "PreviewUri": "@previewImages/AirplaneSmallRed.png"
+    "PreviewUri": "AirplaneSmallRed.png"
   },
   "AirplaneSmallWhite": {
     "DisplayName": "Airplane, Small, White",
@@ -5221,7 +5221,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "AirplaneSmallWhite",
-    "PreviewUri": "@previewImages/AirplaneSmallWhite.png"
+    "PreviewUri": "AirplaneSmallWhite.png"
   },
   "AirplaneSmallYellow": {
     "DisplayName": "Airplane, Small, Yellow",
@@ -5254,7 +5254,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "AirplaneSmallYellow",
-    "PreviewUri": "@previewImages/AirplaneSmallYellow.png"
+    "PreviewUri": "AirplaneSmallYellow.png"
   },
   "AK-47": {
     "DisplayName": "AK-47",
@@ -5283,7 +5283,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "AK-47",
-    "PreviewUri": "@previewImages/AK-47.png"
+    "PreviewUri": "AK-47.png"
   },
   "AliceFantasyTB25": {
     "DisplayName": "Alice, Fantasy, TB25",
@@ -5306,7 +5306,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "AliceFantasyTB25",
-    "PreviewUri": "@previewImages/AliceFantasyTB25.png"
+    "PreviewUri": "AliceFantasyTB25.png"
   },
   "AlienGreyTB15Black": {
     "DisplayName": "Alien, Grey, TB15, Black",
@@ -5333,7 +5333,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "AlienGreyTB15Black",
-    "PreviewUri": "@previewImages/AlienGreyTB15Black.png"
+    "PreviewUri": "AlienGreyTB15Black.png"
   },
   "AlienGreyTB15Blue": {
     "DisplayName": "Alien, Grey, TB15, Blue",
@@ -5360,7 +5360,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "AlienGreyTB15Blue",
-    "PreviewUri": "@previewImages/AlienGreyTB15Blue.png"
+    "PreviewUri": "AlienGreyTB15Blue.png"
   },
   "AlienGreyTB15Green": {
     "DisplayName": "Alien, Grey, TB15, Green",
@@ -5387,7 +5387,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "AlienGreyTB15Green",
-    "PreviewUri": "@previewImages/AlienGreyTB15Green.png"
+    "PreviewUri": "AlienGreyTB15Green.png"
   },
   "AlienGreyTB15Gray": {
     "DisplayName": "Alien, Grey, TB15, Gray",
@@ -5414,7 +5414,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "AlienGreyTB15Gray",
-    "PreviewUri": "@previewImages/AlienGreyTB15Gray.png"
+    "PreviewUri": "AlienGreyTB15Gray.png"
   },
   "AlienGreyTB15Orange": {
     "DisplayName": "Alien, Grey, TB15, Orange",
@@ -5441,7 +5441,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "AlienGreyTB15Orange",
-    "PreviewUri": "@previewImages/AlienGreyTB15Orange.png"
+    "PreviewUri": "AlienGreyTB15Orange.png"
   },
   "AlienGreyTB15Purple": {
     "DisplayName": "Alien, Grey, TB15, Purple",
@@ -5468,7 +5468,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "AlienGreyTB15Purple",
-    "PreviewUri": "@previewImages/AlienGreyTB15Purple.png"
+    "PreviewUri": "AlienGreyTB15Purple.png"
   },
   "AlienGreyTB15Red": {
     "DisplayName": "Alien, Grey, TB15, Red",
@@ -5495,7 +5495,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "AlienGreyTB15Red",
-    "PreviewUri": "@previewImages/AlienGreyTB15Red.png"
+    "PreviewUri": "AlienGreyTB15Red.png"
   },
   "AlienGreyTB15White": {
     "DisplayName": "Alien, Grey, TB15, White",
@@ -5522,7 +5522,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "AlienGreyTB15White",
-    "PreviewUri": "@previewImages/AlienGreyTB15White.png"
+    "PreviewUri": "AlienGreyTB15White.png"
   },
   "AlienGreyTB15Yellow": {
     "DisplayName": "Alien, Grey, TB15, Yellow",
@@ -5549,7 +5549,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "AlienGreyTB15Yellow",
-    "PreviewUri": "@previewImages/AlienGreyTB15Yellow.png"
+    "PreviewUri": "AlienGreyTB15Yellow.png"
   },
   "AlienSpaceTB25": {
     "DisplayName": "Alien, Space, TB25",
@@ -5571,7 +5571,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "AlienSpaceTB25",
-    "PreviewUri": "@previewImages/AlienSpaceTB25.png"
+    "PreviewUri": "AlienSpaceTB25.png"
   },
   "AmericanIndianwithBow": {
     "DisplayName": "American Indian with Bow",
@@ -5605,7 +5605,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "AmericanIndianwithBow",
-    "PreviewUri": "@previewImages/AmericanIndianwithBow.png"
+    "PreviewUri": "AmericanIndianwithBow.png"
   },
   "AmphisbaenaFantasyTB25": {
     "DisplayName": "Amphisbaena, Fantasy, TB25",
@@ -5624,7 +5624,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "AmphisbaenaFantasyTB25",
-    "PreviewUri": "@previewImages/AmphisbaenaFantasyTB25.png"
+    "PreviewUri": "AmphisbaenaFantasyTB25.png"
   },
   "AnkhegFantasyTB50": {
     "DisplayName": "Ankheg, Fantasy, TB50",
@@ -5643,7 +5643,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "AnkhegFantasyTB50",
-    "PreviewUri": "@previewImages/AnkhegFantasyTB50.png"
+    "PreviewUri": "AnkhegFantasyTB50.png"
   },
   "Ant": {
     "DisplayName": "Ant",
@@ -5674,7 +5674,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Ant",
-    "PreviewUri": "@previewImages/Ant.png"
+    "PreviewUri": "Ant.png"
   },
   "Anti-Paladin": {
     "DisplayName": "Anti-Paladin",
@@ -5710,7 +5710,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "Anti-Paladin",
-    "PreviewUri": "@previewImages/Anti-Paladin.png"
+    "PreviewUri": "Anti-Paladin.png"
   },
   "AriannaMoonshadowEnchantress": {
     "DisplayName": "Arianna Moonshadow Enchantress",
@@ -5742,7 +5742,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "AriannaMoonshadowEnchantress",
-    "PreviewUri": "@previewImages/AriannaMoonshadowEnchantress.png"
+    "PreviewUri": "AriannaMoonshadowEnchantress.png"
   },
   "ArmoredGuard": {
     "DisplayName": "Armored Guard",
@@ -5771,7 +5771,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "ArmoredGuard",
-    "PreviewUri": "@previewImages/ArmoredGuard.png"
+    "PreviewUri": "ArmoredGuard.png"
   },
   "ArmoredOgre": {
     "DisplayName": "Armored Ogre",
@@ -5804,7 +5804,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "ArmoredOgre",
-    "PreviewUri": "@previewImages/ArmoredOgre.png"
+    "PreviewUri": "ArmoredOgre.png"
   },
   "AstronautTB15Black": {
     "DisplayName": "Astronaut TB15, Black",
@@ -5829,7 +5829,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "AstronautTB15Black",
-    "PreviewUri": "@previewImages/AstronautTB15Black.png"
+    "PreviewUri": "AstronautTB15Black.png"
   },
   "AstronautTB15Blue": {
     "DisplayName": "Astronaut, TB15, Blue",
@@ -5853,7 +5853,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "AstronautTB15Blue",
-    "PreviewUri": "@previewImages/AstronautTB15Blue.png"
+    "PreviewUri": "AstronautTB15Blue.png"
   },
   "AstronautTB15Green": {
     "DisplayName": "Astronaut, TB15, Green",
@@ -5877,7 +5877,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "AstronautTB15Green",
-    "PreviewUri": "@previewImages/AstronautTB15Green.png"
+    "PreviewUri": "AstronautTB15Green.png"
   },
   "AstronautTB15Orange": {
     "DisplayName": "Astronaut, TB15, Orange",
@@ -5901,7 +5901,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "AstronautTB15Orange",
-    "PreviewUri": "@previewImages/AstronautTB15Orange.png"
+    "PreviewUri": "AstronautTB15Orange.png"
   },
   "AstronautTB15Purple": {
     "DisplayName": "Astronaut, TB15, Purple",
@@ -5925,7 +5925,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "AstronautTB15Purple",
-    "PreviewUri": "@previewImages/AstronautTB15Purple.png"
+    "PreviewUri": "AstronautTB15Purple.png"
   },
   "AstronautTB15Red": {
     "DisplayName": "Astronaut, TB15, Red",
@@ -5949,7 +5949,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "AstronautTB15Red",
-    "PreviewUri": "@previewImages/AstronautTB15Red.png"
+    "PreviewUri": "AstronautTB15Red.png"
   },
   "AstronautTB15White": {
     "DisplayName": "Astronaut, TB15, White",
@@ -5973,7 +5973,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "AstronautTB15White",
-    "PreviewUri": "@previewImages/AstronautTB15White.png"
+    "PreviewUri": "AstronautTB15White.png"
   },
   "AstronautTB15Yellow": {
     "DisplayName": "Astronaut, TB15, Yellow",
@@ -5997,7 +5997,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "AstronautTB15Yellow",
-    "PreviewUri": "@previewImages/AstronautTB15Yellow.png"
+    "PreviewUri": "AstronautTB15Yellow.png"
   },
   "AtomSymbol": {
     "DisplayName": "Atom Symbol",
@@ -6033,7 +6033,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "AtomSymbol",
-    "PreviewUri": "@previewImages/AtomSymbol.png"
+    "PreviewUri": "AtomSymbol.png"
   },
   "AvatarOpaqueBlack": {
     "DisplayName": "Avatar, Opaque, Black",
@@ -6059,7 +6059,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "AvatarOpaqueBlack",
-    "PreviewUri": "@previewImages/AvatarOpaqueBlack.png"
+    "PreviewUri": "AvatarOpaqueBlack.png"
   },
   "AvatarOpaqueWhite": {
     "DisplayName": "Avatar, Opaque, White",
@@ -6085,7 +6085,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "AvatarOpaqueWhite",
-    "PreviewUri": "@previewImages/AvatarOpaqueWhite.png"
+    "PreviewUri": "AvatarOpaqueWhite.png"
   },
   "AvatarTransparentBlack": {
     "DisplayName": "Avatar, Transparent, Black",
@@ -6111,7 +6111,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "AvatarTransparentBlack",
-    "PreviewUri": "@previewImages/AvatarTransparentBlack.png"
+    "PreviewUri": "AvatarTransparentBlack.png"
   },
   "AvatarTransparentBlue": {
     "DisplayName": "Avatar, Transparent, Blue",
@@ -6137,7 +6137,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "AvatarTransparentBlue",
-    "PreviewUri": "@previewImages/AvatarTransparentBlue.png"
+    "PreviewUri": "AvatarTransparentBlue.png"
   },
   "AvatarTransparentClear": {
     "DisplayName": "Avatar, Transparent, Clear",
@@ -6163,7 +6163,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "AvatarTransparentClear",
-    "PreviewUri": "@previewImages/AvatarTransparentClear.png"
+    "PreviewUri": "AvatarTransparentClear.png"
   },
   "AvatarTransparentGreen": {
     "DisplayName": "Avatar, Transparent, Green",
@@ -6189,7 +6189,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "AvatarTransparentGreen",
-    "PreviewUri": "@previewImages/AvatarTransparentGreen.png"
+    "PreviewUri": "AvatarTransparentGreen.png"
   },
   "AvatarTransparentOrange": {
     "DisplayName": "Avatar, Transparent, Orange",
@@ -6215,7 +6215,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "AvatarTransparentOrange",
-    "PreviewUri": "@previewImages/AvatarTransparentOrange.png"
+    "PreviewUri": "AvatarTransparentOrange.png"
   },
   "AvatarTransparentPurple": {
     "DisplayName": "Avatar, Transparent, Purple",
@@ -6241,7 +6241,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "AvatarTransparentPurple",
-    "PreviewUri": "@previewImages/AvatarTransparentPurple.png"
+    "PreviewUri": "AvatarTransparentPurple.png"
   },
   "AvatarTransparentRed": {
     "DisplayName": "Avatar, Transparent, Red",
@@ -6267,7 +6267,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "AvatarTransparentRed",
-    "PreviewUri": "@previewImages/AvatarTransparentRed.png"
+    "PreviewUri": "AvatarTransparentRed.png"
   },
   "AvatarTransparentWhite": {
     "DisplayName": "Avatar, Transparent, White",
@@ -6293,7 +6293,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "AvatarTransparentWhite",
-    "PreviewUri": "@previewImages/AvatarTransparentWhite.png"
+    "PreviewUri": "AvatarTransparentWhite.png"
   },
   "AvatarTransparentYellow": {
     "DisplayName": "Avatar, Transparent, Yellow",
@@ -6319,7 +6319,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "AvatarTransparentYellow",
-    "PreviewUri": "@previewImages/AvatarTransparentYellow.png"
+    "PreviewUri": "AvatarTransparentYellow.png"
   },
   "Aztec-CharacterMeeple": {
     "DisplayName": "Aztec, Character Meeple",
@@ -6341,7 +6341,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Aztec-CharacterMeeple",
-    "PreviewUri": "@previewImages/Aztec-CharacterMeeple.png"
+    "PreviewUri": "Aztec-CharacterMeeple.png"
   },
   "BadgeHolderw/StringLanyard(boxof100)": {
     "DisplayName": "Badge Holder w/String Lanyard (box of 100)",
@@ -6371,7 +6371,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "BadgeHolderw/StringLanyard(boxof100)",
-    "PreviewUri": "@previewImages/BadgeHolderw_StringLanyard(boxof100).png"
+    "PreviewUri": "BadgeHolderw_StringLanyard(boxof100).png"
   },
   "BalefireDemonw/Sword": {
     "DisplayName": "Balefire Demon w/ Sword",
@@ -6403,7 +6403,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": true,
     "Key": "BalefireDemonw/Sword",
-    "PreviewUri": "@previewImages/BalefireDemonw_Sword.png"
+    "PreviewUri": "BalefireDemonw_Sword.png"
   },
   "BarbarianDuelFantasyTB25": {
     "DisplayName": "Barbarian Duel, Fantasy, TB25",
@@ -6427,7 +6427,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "BarbarianDuelFantasyTB25",
-    "PreviewUri": "@previewImages/BarbarianDuelFantasyTB25.png"
+    "PreviewUri": "BarbarianDuelFantasyTB25.png"
   },
   "BarbarianwithAxe": {
     "DisplayName": "Barbarian with Axe",
@@ -6460,7 +6460,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "BarbarianwithAxe",
-    "PreviewUri": "@previewImages/BarbarianwithAxe.png"
+    "PreviewUri": "BarbarianwithAxe.png"
   },
   "BarbarianwithSword&Shield": {
     "DisplayName": "Barbarian with Sword & Shield",
@@ -6493,7 +6493,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "BarbarianwithSword&Shield",
-    "PreviewUri": "@previewImages/BarbarianwithSword&Shield.png"
+    "PreviewUri": "BarbarianwithSword&Shield.png"
   },
   "BarbarianwithTwoSwords": {
     "DisplayName": "Barbarian with Two Swords",
@@ -6526,7 +6526,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "BarbarianwithTwoSwords",
-    "PreviewUri": "@previewImages/BarbarianwithTwoSwords.png"
+    "PreviewUri": "BarbarianwithTwoSwords.png"
   },
   "BarbarianNordicHistoricTB25": {
     "DisplayName": "Barbarian, Nordic, Historic, TB25",
@@ -6547,7 +6547,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "BarbarianNordicHistoricTB25",
-    "PreviewUri": "@previewImages/BarbarianNordicHistoricTB25.png"
+    "PreviewUri": "BarbarianNordicHistoricTB25.png"
   },
   "Barrel": {
     "DisplayName": "Barrel",
@@ -6579,7 +6579,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "Barrel",
-    "PreviewUri": "@previewImages/Barrel.png"
+    "PreviewUri": "Barrel.png"
   },
   "BarrelWood": {
     "DisplayName": "Barrel, Wood",
@@ -6613,7 +6613,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "BarrelWood",
-    "PreviewUri": "@previewImages/BarrelWood.png"
+    "PreviewUri": "BarrelWood.png"
   },
   "BaseShoeTB15Black": {
     "DisplayName": "Base Shoe, TB15, Black",
@@ -6636,7 +6636,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "BaseShoeTB15Black",
-    "PreviewUri": "@previewImages/BaseShoeTB15Black.png"
+    "PreviewUri": "BaseShoeTB15Black.png"
   },
   "BaseShoeTB15Blue": {
     "DisplayName": "Base Shoe, TB15, Blue",
@@ -6659,7 +6659,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "BaseShoeTB15Blue",
-    "PreviewUri": "@previewImages/BaseShoeTB15Blue.png"
+    "PreviewUri": "BaseShoeTB15Blue.png"
   },
   "BaseShoeTB15Green": {
     "DisplayName": "Base Shoe, TB15, Green",
@@ -6682,7 +6682,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BaseShoeTB15Green",
-    "PreviewUri": "@previewImages/BaseShoeTB15Green.png"
+    "PreviewUri": "BaseShoeTB15Green.png"
   },
   "BaseShoeTB15Orange": {
     "DisplayName": "Base Shoe, TB15, Orange",
@@ -6705,7 +6705,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "BaseShoeTB15Orange",
-    "PreviewUri": "@previewImages/BaseShoeTB15Orange.png"
+    "PreviewUri": "BaseShoeTB15Orange.png"
   },
   "BaseShoeTB15Purple": {
     "DisplayName": "Base Shoe, TB15, Purple",
@@ -6728,7 +6728,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "BaseShoeTB15Purple",
-    "PreviewUri": "@previewImages/BaseShoeTB15Purple.png"
+    "PreviewUri": "BaseShoeTB15Purple.png"
   },
   "BaseShoeTB15Red": {
     "DisplayName": "Base Shoe, TB15, Red",
@@ -6751,7 +6751,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BaseShoeTB15Red",
-    "PreviewUri": "@previewImages/BaseShoeTB15Red.png"
+    "PreviewUri": "BaseShoeTB15Red.png"
   },
   "BaseShoeTB15White": {
     "DisplayName": "Base Shoe, TB15, White",
@@ -6774,7 +6774,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BaseShoeTB15White",
-    "PreviewUri": "@previewImages/BaseShoeTB15White.png"
+    "PreviewUri": "BaseShoeTB15White.png"
   },
   "BaseShoeTB15Yellow": {
     "DisplayName": "Base Shoe, TB15, Yellow",
@@ -6797,7 +6797,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "BaseShoeTB15Yellow",
-    "PreviewUri": "@previewImages/BaseShoeTB15Yellow.png"
+    "PreviewUri": "BaseShoeTB15Yellow.png"
   },
   "BaseShoeTB25Black": {
     "DisplayName": "Base Shoe, TB25, Black",
@@ -6820,7 +6820,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "BaseShoeTB25Black",
-    "PreviewUri": "@previewImages/BaseShoeTB25Black.png"
+    "PreviewUri": "BaseShoeTB25Black.png"
   },
   "BaseShoeTB25Blue": {
     "DisplayName": "Base Shoe, TB25, Blue",
@@ -6843,7 +6843,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "BaseShoeTB25Blue",
-    "PreviewUri": "@previewImages/BaseShoeTB25Blue.png"
+    "PreviewUri": "BaseShoeTB25Blue.png"
   },
   "BaseShoeTB25Green": {
     "DisplayName": "Base Shoe, TB25, Green",
@@ -6866,7 +6866,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BaseShoeTB25Green",
-    "PreviewUri": "@previewImages/BaseShoeTB25Green.png"
+    "PreviewUri": "BaseShoeTB25Green.png"
   },
   "BaseShoeTB25Orange": {
     "DisplayName": "Base Shoe, TB25, Orange",
@@ -6889,7 +6889,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "BaseShoeTB25Orange",
-    "PreviewUri": "@previewImages/BaseShoeTB25Orange.png"
+    "PreviewUri": "BaseShoeTB25Orange.png"
   },
   "BaseShoeTB25Purple": {
     "DisplayName": "Base Shoe, TB25, Purple",
@@ -6912,7 +6912,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "BaseShoeTB25Purple",
-    "PreviewUri": "@previewImages/BaseShoeTB25Purple.png"
+    "PreviewUri": "BaseShoeTB25Purple.png"
   },
   "BaseShoeTB25Red": {
     "DisplayName": "Base Shoe, TB25, Red",
@@ -6935,7 +6935,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BaseShoeTB25Red",
-    "PreviewUri": "@previewImages/BaseShoeTB25Red.png"
+    "PreviewUri": "BaseShoeTB25Red.png"
   },
   "BaseShoeTB25White": {
     "DisplayName": "Base Shoe, TB25, White",
@@ -6958,7 +6958,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BaseShoeTB25White",
-    "PreviewUri": "@previewImages/BaseShoeTB25White.png"
+    "PreviewUri": "BaseShoeTB25White.png"
   },
   "BaseShoeTB25Yellow": {
     "DisplayName": "Base Shoe, TB25, Yellow",
@@ -6981,7 +6981,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "BaseShoeTB25Yellow",
-    "PreviewUri": "@previewImages/BaseShoeTB25Yellow.png"
+    "PreviewUri": "BaseShoeTB25Yellow.png"
   },
   "BattlePriestFantasyTB25": {
     "DisplayName": "Battle Priest, Fantasy, TB25",
@@ -7014,7 +7014,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "BattlePriestFantasyTB25",
-    "PreviewUri": "@previewImages/BattlePriestFantasyTB25.png"
+    "PreviewUri": "BattlePriestFantasyTB25.png"
   },
   "BeeWood": {
     "DisplayName": "Bee, Wood",
@@ -7048,7 +7048,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "BeeWood",
-    "PreviewUri": "@previewImages/BeeWood.png"
+    "PreviewUri": "BeeWood.png"
   },
   "BerehyniaTB25": {
     "DisplayName": "Berehynia, TB25",
@@ -7071,7 +7071,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "BerehyniaTB25",
-    "PreviewUri": "@previewImages/BerehyniaTB25.png"
+    "PreviewUri": "BerehyniaTB25.png"
   },
   "Bible": {
     "DisplayName": "Bible",
@@ -7107,7 +7107,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": true,
     "Key": "Bible",
-    "PreviewUri": "@previewImages/Bible.png"
+    "PreviewUri": "Bible.png"
   },
   "BigPeopleBlue": {
     "DisplayName": "Big People, Blue",
@@ -7135,7 +7135,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "BigPeopleBlue",
-    "PreviewUri": "@previewImages/BigPeopleBlue.png"
+    "PreviewUri": "BigPeopleBlue.png"
   },
   "BirdTB15Black": {
     "DisplayName": "Bird, TB15, Black",
@@ -7159,7 +7159,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "BirdTB15Black",
-    "PreviewUri": "@previewImages/BirdTB15Black.png"
+    "PreviewUri": "BirdTB15Black.png"
   },
   "BirdTB15Blue": {
     "DisplayName": "Bird, TB15, Blue",
@@ -7183,7 +7183,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "BirdTB15Blue",
-    "PreviewUri": "@previewImages/BirdTB15Blue.png"
+    "PreviewUri": "BirdTB15Blue.png"
   },
   "BirdTB15Green": {
     "DisplayName": "Bird, TB15, Green",
@@ -7207,7 +7207,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BirdTB15Green",
-    "PreviewUri": "@previewImages/BirdTB15Green.png"
+    "PreviewUri": "BirdTB15Green.png"
   },
   "BirdTB15Orange": {
     "DisplayName": "Bird, TB15, Orange",
@@ -7231,7 +7231,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "BirdTB15Orange",
-    "PreviewUri": "@previewImages/BirdTB15Orange.png"
+    "PreviewUri": "BirdTB15Orange.png"
   },
   "BirdTB15Purple": {
     "DisplayName": "Bird, TB15, Purple",
@@ -7255,7 +7255,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "BirdTB15Purple",
-    "PreviewUri": "@previewImages/BirdTB15Purple.png"
+    "PreviewUri": "BirdTB15Purple.png"
   },
   "BirdTB15Red": {
     "DisplayName": "Bird, TB15, Red",
@@ -7279,7 +7279,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BirdTB15Red",
-    "PreviewUri": "@previewImages/BirdTB15Red.png"
+    "PreviewUri": "BirdTB15Red.png"
   },
   "BirdTB15White": {
     "DisplayName": "Bird, TB15, White",
@@ -7303,7 +7303,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BirdTB15White",
-    "PreviewUri": "@previewImages/BirdTB15White.png"
+    "PreviewUri": "BirdTB15White.png"
   },
   "BirdTB15Yellow": {
     "DisplayName": "Bird, TB15, Yellow",
@@ -7327,7 +7327,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "BirdTB15Yellow",
-    "PreviewUri": "@previewImages/BirdTB15Yellow.png"
+    "PreviewUri": "BirdTB15Yellow.png"
   },
   "BlackBear": {
     "DisplayName": "Black Bear",
@@ -7352,7 +7352,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "BlackBear",
-    "PreviewUri": "@previewImages/BlackBear.png"
+    "PreviewUri": "BlackBear.png"
   },
   "BlankBoardAccordion": {
     "DisplayName": "Blank Board, Accordion",
@@ -7382,7 +7382,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoardAccordion",
-    "PreviewUri": "@previewImages/BlankBoardAccordion.png"
+    "PreviewUri": "BlankBoardAccordion.png"
   },
   "BlankBoardBi-Fold": {
     "DisplayName": "Blank Board, Bi-Fold",
@@ -7399,7 +7399,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "BlankBoardBi-Fold",
-    "PreviewUri": "@previewImages/BlankBoardBi-Fold.png"
+    "PreviewUri": "BlankBoardBi-Fold.png"
   },
   "BlankBoardDomino": {
     "DisplayName": "Blank Board, Domino",
@@ -7429,7 +7429,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoardDomino",
-    "PreviewUri": "@previewImages/BlankBoardDomino.png"
+    "PreviewUri": "BlankBoardDomino.png"
   },
   "BlankBoardHalf": {
     "DisplayName": "Blank Board, Half",
@@ -7458,7 +7458,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoardHalf",
-    "PreviewUri": "@previewImages/BlankBoardHalf.png"
+    "PreviewUri": "BlankBoardHalf.png"
   },
   "BlankBoardMediumSix-Fold": {
     "DisplayName": "Blank Board, Medium, Six-Fold",
@@ -7489,7 +7489,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "BlankBoardMediumSix-Fold",
-    "PreviewUri": "@previewImages/BlankBoardMediumSix-Fold.png"
+    "PreviewUri": "BlankBoardMediumSix-Fold.png"
   },
   "BlankBoardQuad-Fold18inch": {
     "DisplayName": "Blank Board, Quad-Fold, 18 inch",
@@ -7521,7 +7521,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoardQuad-Fold18inch",
-    "PreviewUri": "@previewImages/BlankBoardQuad-Fold18inch.png"
+    "PreviewUri": "BlankBoardQuad-Fold18inch.png"
   },
   "BlankBoardSix-Fold": {
     "DisplayName": "Blank Board, Six-Fold",
@@ -7552,7 +7552,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoardSix-Fold",
-    "PreviewUri": "@previewImages/BlankBoardSix-Fold.png"
+    "PreviewUri": "BlankBoardSix-Fold.png"
   },
   "BlankBoardSkinny": {
     "DisplayName": "Blank Board, Skinny",
@@ -7582,7 +7582,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoardSkinny",
-    "PreviewUri": "@previewImages/BlankBoardSkinny.png"
+    "PreviewUri": "BlankBoardSkinny.png"
   },
   "BlankBoardSliver": {
     "DisplayName": "Blank Board, Sliver",
@@ -7612,7 +7612,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoardSliver",
-    "PreviewUri": "@previewImages/BlankBoardSliver.png"
+    "PreviewUri": "BlankBoardSliver.png"
   },
   "BlankBoardSquare": {
     "DisplayName": "Blank Board, Square",
@@ -7642,7 +7642,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoardSquare",
-    "PreviewUri": "@previewImages/BlankBoardSquare.png"
+    "PreviewUri": "BlankBoardSquare.png"
   },
   "BlankBoardSquareLarge": {
     "DisplayName": "Blank Board, Square, Large",
@@ -7672,7 +7672,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoardSquareLarge",
-    "PreviewUri": "@previewImages/BlankBoardSquareLarge.png"
+    "PreviewUri": "BlankBoardSquareLarge.png"
   },
   "BlankBoardSquareSmall": {
     "DisplayName": "Blank Board, Square, Small",
@@ -7702,7 +7702,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoardSquareSmall",
-    "PreviewUri": "@previewImages/BlankBoardSquareSmall.png"
+    "PreviewUri": "BlankBoardSquareSmall.png"
   },
   "BlankBoardStrip": {
     "DisplayName": "Blank Board, Strip",
@@ -7732,7 +7732,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoardStrip",
-    "PreviewUri": "@previewImages/BlankBoardStrip.png"
+    "PreviewUri": "BlankBoardStrip.png"
   },
   "BlankBoxHookBridge(108)": {
     "DisplayName": "Blank Box, Hook, Bridge (108)",
@@ -7763,7 +7763,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookBridge(108)",
-    "PreviewUri": "@previewImages/BlankBoxHookBridge(108).png"
+    "PreviewUri": "BlankBoxHookBridge(108).png"
   },
   "BlankBoxHookBridge(54)": {
     "DisplayName": "Blank Box, Hook, Bridge (54)",
@@ -7794,7 +7794,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookBridge(54)",
-    "PreviewUri": "@previewImages/BlankBoxHookBridge(54).png"
+    "PreviewUri": "BlankBoxHookBridge(54).png"
   },
   "BlankBoxHookJumbo(36)": {
     "DisplayName": "Blank Box, Hook, Jumbo (36)",
@@ -7825,7 +7825,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookJumbo(36)",
-    "PreviewUri": "@previewImages/BlankBoxHookJumbo(36).png"
+    "PreviewUri": "BlankBoxHookJumbo(36).png"
   },
   "BlankBoxHookJumbo(90)": {
     "DisplayName": "Blank Box, Hook, Jumbo (90)",
@@ -7856,7 +7856,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookJumbo(90)",
-    "PreviewUri": "@previewImages/BlankBoxHookJumbo(90).png"
+    "PreviewUri": "BlankBoxHookJumbo(90).png"
   },
   "BlankBoxHookPoker(108)": {
     "DisplayName": "Blank Box, Hook, Poker (108)",
@@ -7887,7 +7887,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookPoker(108)",
-    "PreviewUri": "@previewImages/BlankBoxHookPoker(108).png"
+    "PreviewUri": "BlankBoxHookPoker(108).png"
   },
   "BlankBoxHookPoker(18)": {
     "DisplayName": "Blank Box, Hook, Poker (18)",
@@ -7918,7 +7918,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookPoker(18)",
-    "PreviewUri": "@previewImages/BlankBoxHookPoker(18).png"
+    "PreviewUri": "BlankBoxHookPoker(18).png"
   },
   "BlankBoxHookPoker(36)": {
     "DisplayName": "Blank Box, Hook, Poker (36)",
@@ -7949,7 +7949,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookPoker(36)",
-    "PreviewUri": "@previewImages/BlankBoxHookPoker(36).png"
+    "PreviewUri": "BlankBoxHookPoker(36).png"
   },
   "BlankBoxHookPoker(54)": {
     "DisplayName": "Blank Box, Hook, Poker (54)",
@@ -7980,7 +7980,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookPoker(54)",
-    "PreviewUri": "@previewImages/BlankBoxHookPoker(54).png"
+    "PreviewUri": "BlankBoxHookPoker(54).png"
   },
   "BlankBoxHookPoker(72)": {
     "DisplayName": "Blank Box, Hook, Poker (72)",
@@ -8011,7 +8011,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookPoker(72)",
-    "PreviewUri": "@previewImages/BlankBoxHookPoker(72).png"
+    "PreviewUri": "BlankBoxHookPoker(72).png"
   },
   "BlankBoxHookPoker(90)": {
     "DisplayName": "Blank Box, Hook, Poker (90)",
@@ -8042,7 +8042,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookPoker(90)",
-    "PreviewUri": "@previewImages/BlankBoxHookPoker(90).png"
+    "PreviewUri": "BlankBoxHookPoker(90).png"
   },
   "BlankBoxHookSquare(48)": {
     "DisplayName": "Blank Box, Hook, Square (48)",
@@ -8073,7 +8073,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookSquare(48)",
-    "PreviewUri": "@previewImages/BlankBoxHookSquare(48).png"
+    "PreviewUri": "BlankBoxHookSquare(48).png"
   },
   "BlankBoxHookSquare(96)": {
     "DisplayName": "Blank Box, Hook, Square (96)",
@@ -8104,7 +8104,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookSquare(96)",
-    "PreviewUri": "@previewImages/BlankBoxHookSquare(96).png"
+    "PreviewUri": "BlankBoxHookSquare(96).png"
   },
   "BlankBoxHookTarot(40)": {
     "DisplayName": "Blank Box, Hook, Tarot (40)",
@@ -8135,7 +8135,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookTarot(40)",
-    "PreviewUri": "@previewImages/BlankBoxHookTarot(40).png"
+    "PreviewUri": "BlankBoxHookTarot(40).png"
   },
   "BlankBoxHookTarot(90)": {
     "DisplayName": "Blank Box, Hook, Tarot (90)",
@@ -8166,7 +8166,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxHookTarot(90)",
-    "PreviewUri": "@previewImages/BlankBoxHookTarot(90).png"
+    "PreviewUri": "BlankBoxHookTarot(90).png"
   },
   "BlankBoxProMedium": {
     "DisplayName": "Blank Box, Pro, Medium",
@@ -8195,7 +8195,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxProMedium",
-    "PreviewUri": "@previewImages/BlankBoxProMedium.png"
+    "PreviewUri": "BlankBoxProMedium.png"
   },
   "BlankBoxProSmall": {
     "DisplayName": "Blank Box, Pro, Small",
@@ -8224,7 +8224,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxProSmall",
-    "PreviewUri": "@previewImages/BlankBoxProSmall.png"
+    "PreviewUri": "BlankBoxProSmall.png"
   },
   "BlankBoxPrototypeLarge": {
     "DisplayName": "Blank Box, Prototype, Large",
@@ -8253,7 +8253,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxPrototypeLarge",
-    "PreviewUri": "@previewImages/BlankBoxPrototypeLarge.png"
+    "PreviewUri": "BlankBoxPrototypeLarge.png"
   },
   "BlankBoxPrototypeMedium": {
     "DisplayName": "Blank Box, Prototype, Medium",
@@ -8282,7 +8282,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxPrototypeMedium",
-    "PreviewUri": "@previewImages/BlankBoxPrototypeMedium.png"
+    "PreviewUri": "BlankBoxPrototypeMedium.png"
   },
   "BlankBoxPrototypeSmall": {
     "DisplayName": "Blank Box, Prototype, Small",
@@ -8311,7 +8311,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxPrototypeSmall",
-    "PreviewUri": "@previewImages/BlankBoxPrototypeSmall.png"
+    "PreviewUri": "BlankBoxPrototypeSmall.png"
   },
   "BlankBoxRetailLarge": {
     "DisplayName": "Blank Box, Retail, Large",
@@ -8340,7 +8340,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxRetailLarge",
-    "PreviewUri": "@previewImages/BlankBoxRetailLarge.png"
+    "PreviewUri": "BlankBoxRetailLarge.png"
   },
   "BlankBoxTuckBridge(108)": {
     "DisplayName": "Blank Box, Tuck, Bridge (108)",
@@ -8371,7 +8371,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckBridge(108)",
-    "PreviewUri": "@previewImages/BlankBoxTuckBridge(108).png"
+    "PreviewUri": "BlankBoxTuckBridge(108).png"
   },
   "BlankBoxTuckBridge(54)": {
     "DisplayName": "Blank Box, Tuck, Bridge (54)",
@@ -8402,7 +8402,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckBridge(54)",
-    "PreviewUri": "@previewImages/BlankBoxTuckBridge(54).png"
+    "PreviewUri": "BlankBoxTuckBridge(54).png"
   },
   "BlankBoxTuckJumbo(90)": {
     "DisplayName": "Blank Box, Tuck, Jumbo (90)",
@@ -8433,7 +8433,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckJumbo(90)",
-    "PreviewUri": "@previewImages/BlankBoxTuckJumbo(90).png"
+    "PreviewUri": "BlankBoxTuckJumbo(90).png"
   },
   "BlankBoxTuckPoker(108)": {
     "DisplayName": "Blank Box, Tuck, Poker (108)",
@@ -8464,7 +8464,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckPoker(108)",
-    "PreviewUri": "@previewImages/BlankBoxTuckPoker(108).png"
+    "PreviewUri": "BlankBoxTuckPoker(108).png"
   },
   "BlankBoxTuckPoker(36)": {
     "DisplayName": "Blank Box, Tuck, Poker (36)",
@@ -8495,7 +8495,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckPoker(36)",
-    "PreviewUri": "@previewImages/BlankBoxTuckPoker(36).png"
+    "PreviewUri": "BlankBoxTuckPoker(36).png"
   },
   "BlankBoxTuckPoker(54)": {
     "DisplayName": "Blank Box, Tuck, Poker (54)",
@@ -8526,7 +8526,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckPoker(54)",
-    "PreviewUri": "@previewImages/BlankBoxTuckPoker(54).png"
+    "PreviewUri": "BlankBoxTuckPoker(54).png"
   },
   "BlankBoxTuckPoker(72)": {
     "DisplayName": "Blank Box, Tuck, Poker (72)",
@@ -8557,7 +8557,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckPoker(72)",
-    "PreviewUri": "@previewImages/BlankBoxTuckPoker(72).png"
+    "PreviewUri": "BlankBoxTuckPoker(72).png"
   },
   "BlankBoxTuckPoker(90)": {
     "DisplayName": "Blank Box, Tuck, Poker (90)",
@@ -8588,7 +8588,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckPoker(90)",
-    "PreviewUri": "@previewImages/BlankBoxTuckPoker(90).png"
+    "PreviewUri": "BlankBoxTuckPoker(90).png"
   },
   "BlankBoxTuckSquare(48)": {
     "DisplayName": "Blank Box, Tuck, Square (48)",
@@ -8618,7 +8618,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckSquare(48)",
-    "PreviewUri": "@previewImages/BlankBoxTuckSquare(48).png"
+    "PreviewUri": "BlankBoxTuckSquare(48).png"
   },
   "BlankBoxTuckSquare(96)": {
     "DisplayName": "Blank Box, Tuck, Square (96)",
@@ -8648,7 +8648,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckSquare(96)",
-    "PreviewUri": "@previewImages/BlankBoxTuckSquare(96).png"
+    "PreviewUri": "BlankBoxTuckSquare(96).png"
   },
   "BlankBoxTuckTarot(40)": {
     "DisplayName": "Blank Box, Tuck, Tarot (40)",
@@ -8679,7 +8679,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckTarot(40)",
-    "PreviewUri": "@previewImages/BlankBoxTuckTarot(40).png"
+    "PreviewUri": "BlankBoxTuckTarot(40).png"
   },
   "BlankBoxTuckTarot(90)": {
     "DisplayName": "Blank Box, Tuck, Tarot (90)",
@@ -8710,7 +8710,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBoxTuckTarot(90)",
-    "PreviewUri": "@previewImages/BlankBoxTuckTarot(90).png"
+    "PreviewUri": "BlankBoxTuckTarot(90).png"
   },
   "BlankBridgeCard": {
     "DisplayName": "Blank Bridge Card",
@@ -8741,7 +8741,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBridgeCard",
-    "PreviewUri": "@previewImages/BlankBridgeCard.png"
+    "PreviewUri": "BlankBridgeCard.png"
   },
   "BlankBusinessCard": {
     "DisplayName": "Blank Business Card",
@@ -8771,7 +8771,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankBusinessCard",
-    "PreviewUri": "@previewImages/BlankBusinessCard.png"
+    "PreviewUri": "BlankBusinessCard.png"
   },
   "BlankChitArrow": {
     "DisplayName": "Blank Chit, Arrow",
@@ -8801,7 +8801,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankChitArrow",
-    "PreviewUri": "@previewImages/BlankChitArrow.png"
+    "PreviewUri": "BlankChitArrow.png"
   },
   "BlankChitBullseye": {
     "DisplayName": "Blank Chit, Bullseye",
@@ -8831,7 +8831,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankChitBullseye",
-    "PreviewUri": "@previewImages/BlankChitBullseye.png"
+    "PreviewUri": "BlankChitBullseye.png"
   },
   "BlankChitCircleLarge": {
     "DisplayName": "Blank Chit, Circle, Large",
@@ -8861,7 +8861,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankChitCircleLarge",
-    "PreviewUri": "@previewImages/BlankChitCircleLarge.png"
+    "PreviewUri": "BlankChitCircleLarge.png"
   },
   "BlankChitCircleMedium": {
     "DisplayName": "Blank Chit, Circle, Medium",
@@ -8891,7 +8891,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankChitCircleMedium",
-    "PreviewUri": "@previewImages/BlankChitCircleMedium.png"
+    "PreviewUri": "BlankChitCircleMedium.png"
   },
   "BlankChitCircleSmall": {
     "DisplayName": "Blank Chit, Circle, Small",
@@ -8921,7 +8921,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankChitCircleSmall",
-    "PreviewUri": "@previewImages/BlankChitCircleSmall.png"
+    "PreviewUri": "BlankChitCircleSmall.png"
   },
   "BlankChitDomino": {
     "DisplayName": "Blank Chit, Domino",
@@ -8951,7 +8951,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankChitDomino",
-    "PreviewUri": "@previewImages/BlankChitDomino.png"
+    "PreviewUri": "BlankChitDomino.png"
   },
   "BlankChitSquareLarge": {
     "DisplayName": "Blank Chit, Square, Large",
@@ -8981,7 +8981,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankChitSquareLarge",
-    "PreviewUri": "@previewImages/BlankChitSquareLarge.png"
+    "PreviewUri": "BlankChitSquareLarge.png"
   },
   "BlankChitSquareMedium": {
     "DisplayName": "Blank Chit, Square, Medium",
@@ -9011,7 +9011,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankChitSquareMedium",
-    "PreviewUri": "@previewImages/BlankChitSquareMedium.png"
+    "PreviewUri": "BlankChitSquareMedium.png"
   },
   "BlankChitSquareSmall": {
     "DisplayName": "Blank Chit, Square, Small",
@@ -9040,7 +9040,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankChitSquareSmall",
-    "PreviewUri": "@previewImages/BlankChitSquareSmall.png"
+    "PreviewUri": "BlankChitSquareSmall.png"
   },
   "BlankChitTriangleMedium": {
     "DisplayName": "Blank Chit, Triangle, Medium",
@@ -9069,7 +9069,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankChitTriangleMedium",
-    "PreviewUri": "@previewImages/BlankChitTriangleMedium.png"
+    "PreviewUri": "BlankChitTriangleMedium.png"
   },
   "BlankCircleCard": {
     "DisplayName": "Blank Circle Card",
@@ -9099,7 +9099,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankCircleCard",
-    "PreviewUri": "@previewImages/BlankCircleCard.png"
+    "PreviewUri": "BlankCircleCard.png"
   },
   "BlankCircleShard": {
     "DisplayName": "Blank Circle Shard",
@@ -9129,7 +9129,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankCircleShard",
-    "PreviewUri": "@previewImages/BlankCircleShard.png"
+    "PreviewUri": "BlankCircleShard.png"
   },
   "BlankClearEuroPokerCard": {
     "DisplayName": "Blank Clear Euro Poker Card",
@@ -9159,7 +9159,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "BlankClearEuroPokerCard",
-    "PreviewUri": "@previewImages/BlankClearEuroPokerCard.png"
+    "PreviewUri": "BlankClearEuroPokerCard.png"
   },
   "BlankDividerCard": {
     "DisplayName": "Blank Divider Card",
@@ -9189,7 +9189,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankDividerCard",
-    "PreviewUri": "@previewImages/BlankDividerCard.png"
+    "PreviewUri": "BlankDividerCard.png"
   },
   "BlankDocument": {
     "DisplayName": "Blank Document",
@@ -9218,7 +9218,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankDocument",
-    "PreviewUri": "@previewImages/BlankDocument.png"
+    "PreviewUri": "BlankDocument.png"
   },
   "BlankDominoCard": {
     "DisplayName": "Blank Domino Card",
@@ -9248,7 +9248,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankDominoCard",
-    "PreviewUri": "@previewImages/BlankDominoCard.png"
+    "PreviewUri": "BlankDominoCard.png"
   },
   "BlankDualDial": {
     "DisplayName": "Blank Dual Dial",
@@ -9277,7 +9277,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankDualDial",
-    "PreviewUri": "@previewImages/BlankDualDial.png"
+    "PreviewUri": "BlankDualDial.png"
   },
   "BlankEuroPoker": {
     "DisplayName": "Blank Euro Poker",
@@ -9306,7 +9306,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": true,
     "Key": "BlankEuroPoker",
-    "PreviewUri": "@previewImages/BlankEuroPoker.png"
+    "PreviewUri": "BlankEuroPoker.png"
   },
   "BlankEuroSquareCard": {
     "DisplayName": "Blank Euro Square Card",
@@ -9336,7 +9336,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankEuroSquareCard",
-    "PreviewUri": "@previewImages/BlankEuroSquareCard.png"
+    "PreviewUri": "BlankEuroSquareCard.png"
   },
   "BlankFoilPokerCard": {
     "DisplayName": "Blank Foil Poker Card",
@@ -9368,7 +9368,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "BlankFoilPokerCard",
-    "PreviewUri": "@previewImages/BlankFoilPokerCard.png"
+    "PreviewUri": "BlankFoilPokerCard.png"
   },
   "BlankFoilTarotCard": {
     "DisplayName": "Blank Foil Tarot Card",
@@ -9404,7 +9404,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "BlankFoilTarotCard",
-    "PreviewUri": "@previewImages/BlankFoilTarotCard.png"
+    "PreviewUri": "BlankFoilTarotCard.png"
   },
   "BlankFolioBridge": {
     "DisplayName": "Blank Folio, Bridge",
@@ -9434,7 +9434,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankFolioBridge",
-    "PreviewUri": "@previewImages/BlankFolioBridge.png"
+    "PreviewUri": "BlankFolioBridge.png"
   },
   "BlankFolioMedium": {
     "DisplayName": "Blank Folio, Medium",
@@ -9464,7 +9464,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankFolioMedium",
-    "PreviewUri": "@previewImages/BlankFolioMedium.png"
+    "PreviewUri": "BlankFolioMedium.png"
   },
   "BlankFolioMintTin": {
     "DisplayName": "Blank Folio, Mint Tin",
@@ -9494,7 +9494,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankFolioMintTin",
-    "PreviewUri": "@previewImages/BlankFolioMintTin.png"
+    "PreviewUri": "BlankFolioMintTin.png"
   },
   "BlankFolioPoker": {
     "DisplayName": "Blank Folio, Poker",
@@ -9524,7 +9524,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankFolioPoker",
-    "PreviewUri": "@previewImages/BlankFolioPoker.png"
+    "PreviewUri": "BlankFolioPoker.png"
   },
   "BlankFolioSmall": {
     "DisplayName": "Blank Folio, Small",
@@ -9555,7 +9555,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankFolioSmall",
-    "PreviewUri": "@previewImages/BlankFolioSmall.png"
+    "PreviewUri": "BlankFolioSmall.png"
   },
   "BlankFolioSquare": {
     "DisplayName": "Blank Folio, Square",
@@ -9585,7 +9585,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankFolioSquare",
-    "PreviewUri": "@previewImages/BlankFolioSquare.png"
+    "PreviewUri": "BlankFolioSquare.png"
   },
   "BlankFolioTarot": {
     "DisplayName": "Blank Folio, Tarot",
@@ -9615,7 +9615,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankFolioTarot",
-    "PreviewUri": "@previewImages/BlankFolioTarot.png"
+    "PreviewUri": "BlankFolioTarot.png"
   },
   "BlankHexCard": {
     "DisplayName": "Blank Hex Card",
@@ -9645,7 +9645,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankHexCard",
-    "PreviewUri": "@previewImages/BlankHexCard.png"
+    "PreviewUri": "BlankHexCard.png"
   },
   "BlankHexShard": {
     "DisplayName": "Blank Hex Shard",
@@ -9676,7 +9676,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankHexShard",
-    "PreviewUri": "@previewImages/BlankHexShard.png"
+    "PreviewUri": "BlankHexShard.png"
   },
   "BlankJumboCard": {
     "DisplayName": "Blank Jumbo Card",
@@ -9705,7 +9705,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankJumboCard",
-    "PreviewUri": "@previewImages/BlankJumboCard.png"
+    "PreviewUri": "BlankJumboCard.png"
   },
   "BlankMatBig": {
     "DisplayName": "Blank Mat, Big",
@@ -9734,7 +9734,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMatBig",
-    "PreviewUri": "@previewImages/BlankMatBig.png"
+    "PreviewUri": "BlankMatBig.png"
   },
   "BlankMatDomino": {
     "DisplayName": "Blank Mat, Domino",
@@ -9764,7 +9764,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMatDomino",
-    "PreviewUri": "@previewImages/BlankMatDomino.png"
+    "PreviewUri": "BlankMatDomino.png"
   },
   "BlankMatFlower": {
     "DisplayName": "Blank Mat, Flower",
@@ -9794,7 +9794,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMatFlower",
-    "PreviewUri": "@previewImages/BlankMatFlower.png"
+    "PreviewUri": "BlankMatFlower.png"
   },
   "BlankMatHalf": {
     "DisplayName": "Blank Mat, Half",
@@ -9823,7 +9823,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMatHalf",
-    "PreviewUri": "@previewImages/BlankMatHalf.png"
+    "PreviewUri": "BlankMatHalf.png"
   },
   "BlankMatHex": {
     "DisplayName": "Blank Mat, Hex",
@@ -9854,7 +9854,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMatHex",
-    "PreviewUri": "@previewImages/BlankMatHex.png"
+    "PreviewUri": "BlankMatHex.png"
   },
   "BlankMatHexLarge": {
     "DisplayName": "Blank Mat, Hex, Large",
@@ -9883,7 +9883,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMatHexLarge",
-    "PreviewUri": "@previewImages/BlankMatHexLarge.png"
+    "PreviewUri": "BlankMatHexLarge.png"
   },
   "BlankMatInvader": {
     "DisplayName": "Blank Mat, Invader",
@@ -9913,7 +9913,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMatInvader",
-    "PreviewUri": "@previewImages/BlankMatInvader.png"
+    "PreviewUri": "BlankMatInvader.png"
   },
   "BlankMatPostcard": {
     "DisplayName": "Blank Mat, Postcard",
@@ -9943,7 +9943,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMatPostcard",
-    "PreviewUri": "@previewImages/BlankMatPostcard.png"
+    "PreviewUri": "BlankMatPostcard.png"
   },
   "BlankMatQuarter": {
     "DisplayName": "Blank Mat, Quarter",
@@ -9972,7 +9972,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMatQuarter",
-    "PreviewUri": "@previewImages/BlankMatQuarter.png"
+    "PreviewUri": "BlankMatQuarter.png"
   },
   "BlankMatSkinny": {
     "DisplayName": "Blank Mat, Skinny",
@@ -10001,7 +10001,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMatSkinny",
-    "PreviewUri": "@previewImages/BlankMatSkinny.png"
+    "PreviewUri": "BlankMatSkinny.png"
   },
   "BlankMatSliver": {
     "DisplayName": "Blank Mat, Sliver",
@@ -10031,7 +10031,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMatSliver",
-    "PreviewUri": "@previewImages/BlankMatSliver.png"
+    "PreviewUri": "BlankMatSliver.png"
   },
   "BlankMatSmallBi-fold": {
     "DisplayName": "Blank Mat, Small Bi-fold",
@@ -10061,7 +10061,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMatSmallBi-fold",
-    "PreviewUri": "@previewImages/BlankMatSmallBi-fold.png"
+    "PreviewUri": "BlankMatSmallBi-fold.png"
   },
   "BlankMatSpinner": {
     "DisplayName": "Blank Mat, Spinner",
@@ -10091,7 +10091,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMatSpinner",
-    "PreviewUri": "@previewImages/BlankMatSpinner.png"
+    "PreviewUri": "BlankMatSpinner.png"
   },
   "BlankMatSquare": {
     "DisplayName": "Blank Mat, Square",
@@ -10120,7 +10120,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMatSquare",
-    "PreviewUri": "@previewImages/BlankMatSquare.png"
+    "PreviewUri": "BlankMatSquare.png"
   },
   "BlankMatSquareLarge": {
     "DisplayName": "Blank Mat, Square, Large",
@@ -10150,7 +10150,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMatSquareLarge",
-    "PreviewUri": "@previewImages/BlankMatSquareLarge.png"
+    "PreviewUri": "BlankMatSquareLarge.png"
   },
   "BlankMatSquareSmall": {
     "DisplayName": "Blank Mat, Square, Small",
@@ -10180,7 +10180,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMatSquareSmall",
-    "PreviewUri": "@previewImages/BlankMatSquareSmall.png"
+    "PreviewUri": "BlankMatSquareSmall.png"
   },
   "BlankMatStrip": {
     "DisplayName": "Blank Mat, Strip",
@@ -10210,7 +10210,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMatStrip",
-    "PreviewUri": "@previewImages/BlankMatStrip.png"
+    "PreviewUri": "BlankMatStrip.png"
   },
   "BlankMicroCard(slug)": {
     "DisplayName": "Blank Micro Card (slug)",
@@ -10240,7 +10240,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMicroCard(slug)",
-    "PreviewUri": "@previewImages/BlankMicroCard(slug).png"
+    "PreviewUri": "BlankMicroCard(slug).png"
   },
   "BlankMiniCard": {
     "DisplayName": "Blank Mini Card",
@@ -10270,7 +10270,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMiniCard",
-    "PreviewUri": "@previewImages/BlankMiniCard.png"
+    "PreviewUri": "BlankMiniCard.png"
   },
   "BlankMintTinAccordion(4Panel)": {
     "DisplayName": "Blank Mint Tin Accordion (4 Panel)",
@@ -10301,7 +10301,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMintTinAccordion(4Panel)",
-    "PreviewUri": "@previewImages/BlankMintTinAccordion(4Panel).png"
+    "PreviewUri": "BlankMintTinAccordion(4Panel).png"
   },
   "BlankMintTinAccordion(6Panel)": {
     "DisplayName": "Blank Mint Tin Accordion (6 Panel)",
@@ -10332,7 +10332,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMintTinAccordion(6Panel)",
-    "PreviewUri": "@previewImages/BlankMintTinAccordion(6Panel).png"
+    "PreviewUri": "BlankMintTinAccordion(6Panel).png"
   },
   "BlankMintTinAccordion(8Panel)": {
     "DisplayName": "Blank Mint Tin Accordion (8 Panel)",
@@ -10363,7 +10363,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMintTinAccordion(8Panel)",
-    "PreviewUri": "@previewImages/BlankMintTinAccordion(8Panel).png"
+    "PreviewUri": "BlankMintTinAccordion(8Panel).png"
   },
   "BlankMintTinCard": {
     "DisplayName": "Blank Mint Tin Card",
@@ -10393,7 +10393,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMintTinCard",
-    "PreviewUri": "@previewImages/BlankMintTinCard.png"
+    "PreviewUri": "BlankMintTinCard.png"
   },
   "BlankMoneyPlay": {
     "DisplayName": "Blank Money, Play",
@@ -10451,7 +10451,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankMoneyPlay",
-    "PreviewUri": "@previewImages/BlankMoneyPlay.png"
+    "PreviewUri": "BlankMoneyPlay.png"
   },
   "BlankPokerCard": {
     "DisplayName": "Blank Poker Card",
@@ -10481,7 +10481,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankPokerCard",
-    "PreviewUri": "@previewImages/BlankPokerCard.png"
+    "PreviewUri": "BlankPokerCard.png"
   },
   "BlankRingLarge": {
     "DisplayName": "Blank Ring, Large",
@@ -10510,7 +10510,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankRingLarge",
-    "PreviewUri": "@previewImages/BlankRingLarge.png"
+    "PreviewUri": "BlankRingLarge.png"
   },
   "BlankRingMedium": {
     "DisplayName": "Blank Ring, Medium",
@@ -10539,7 +10539,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankRingMedium",
-    "PreviewUri": "@previewImages/BlankRingMedium.png"
+    "PreviewUri": "BlankRingMedium.png"
   },
   "BlankRingSmall": {
     "DisplayName": "Blank Ring, Small",
@@ -10568,7 +10568,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankRingSmall",
-    "PreviewUri": "@previewImages/BlankRingSmall.png"
+    "PreviewUri": "BlankRingSmall.png"
   },
   "BlankScreenLarge": {
     "DisplayName": "Blank Screen, Large",
@@ -10601,7 +10601,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankScreenLarge",
-    "PreviewUri": "@previewImages/BlankScreenLarge.png"
+    "PreviewUri": "BlankScreenLarge.png"
   },
   "BlankScreenMedium": {
     "DisplayName": "Blank Screen, Medium",
@@ -10634,7 +10634,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankScreenMedium",
-    "PreviewUri": "@previewImages/BlankScreenMedium.png"
+    "PreviewUri": "BlankScreenMedium.png"
   },
   "BlankScreenSmall": {
     "DisplayName": "Blank Screen, Small",
@@ -10667,7 +10667,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankScreenSmall",
-    "PreviewUri": "@previewImages/BlankScreenSmall.png"
+    "PreviewUri": "BlankScreenSmall.png"
   },
   "BlankSmallDial": {
     "DisplayName": "Blank Small Dial",
@@ -10696,7 +10696,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankSmallDial",
-    "PreviewUri": "@previewImages/BlankSmallDial.png"
+    "PreviewUri": "BlankSmallDial.png"
   },
   "BlankSmallProTarotInsert": {
     "DisplayName": "Blank Small Pro Tarot Insert",
@@ -10727,7 +10727,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankSmallProTarotInsert",
-    "PreviewUri": "@previewImages/BlankSmallProTarotInsert.png"
+    "PreviewUri": "BlankSmallProTarotInsert.png"
   },
   "BlankSmallSquareCard": {
     "DisplayName": "Blank Small Square Card",
@@ -10758,7 +10758,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankSmallSquareCard",
-    "PreviewUri": "@previewImages/BlankSmallSquareCard.png"
+    "PreviewUri": "BlankSmallSquareCard.png"
   },
   "BlankSmallStoutTarotInsert": {
     "DisplayName": "Blank Small Stout Tarot Insert",
@@ -10789,7 +10789,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankSmallStoutTarotInsert",
-    "PreviewUri": "@previewImages/BlankSmallStoutTarotInsert.png"
+    "PreviewUri": "BlankSmallStoutTarotInsert.png"
   },
   "BlankSquareCard": {
     "DisplayName": "Blank Square Card",
@@ -10820,7 +10820,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankSquareCard",
-    "PreviewUri": "@previewImages/BlankSquareCard.png"
+    "PreviewUri": "BlankSquareCard.png"
   },
   "BlankSquareShard": {
     "DisplayName": "Blank Square Shard",
@@ -10850,7 +10850,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankSquareShard",
-    "PreviewUri": "@previewImages/BlankSquareShard.png"
+    "PreviewUri": "BlankSquareShard.png"
   },
   "BlankStandeeLarge": {
     "DisplayName": "Blank Standee, Large",
@@ -10879,7 +10879,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankStandeeLarge",
-    "PreviewUri": "@previewImages/BlankStandeeLarge.png"
+    "PreviewUri": "BlankStandeeLarge.png"
   },
   "BlankStandeeMedium": {
     "DisplayName": "Blank Standee, Medium",
@@ -10908,7 +10908,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankStandeeMedium",
-    "PreviewUri": "@previewImages/BlankStandeeMedium.png"
+    "PreviewUri": "BlankStandeeMedium.png"
   },
   "BlankStandeeSmall": {
     "DisplayName": "Blank Standee, Small",
@@ -10937,7 +10937,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankStandeeSmall",
-    "PreviewUri": "@previewImages/BlankStandeeSmall.png"
+    "PreviewUri": "BlankStandeeSmall.png"
   },
   "BlankStickersMeeple": {
     "DisplayName": "Blank Stickers, Meeple",
@@ -10967,7 +10967,7 @@ const STOCK_COMPONENT_INFO = {
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
     "Key": "BlankStickersMeeple",
-    "PreviewUri": "@previewImages/BlankStickersMeeple.png"
+    "PreviewUri": "BlankStickersMeeple.png"
   },
   "BlankStickersPawn": {
     "DisplayName": "Blank Stickers, Pawn",
@@ -10997,7 +10997,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankStickersPawn",
-    "PreviewUri": "@previewImages/BlankStickersPawn.png"
+    "PreviewUri": "BlankStickersPawn.png"
   },
   "BlankStickersSheetDice": {
     "DisplayName": "Blank Stickers, Sheet, Dice",
@@ -11028,7 +11028,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankStickersSheetDice",
-    "PreviewUri": "@previewImages/BlankStickersSheetDice.png"
+    "PreviewUri": "BlankStickersSheetDice.png"
   },
   "BlankStickersSheetToken": {
     "DisplayName": "Blank Stickers, Sheet, Token",
@@ -11059,7 +11059,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankStickersSheetToken",
-    "PreviewUri": "@previewImages/BlankStickersSheetToken.png"
+    "PreviewUri": "BlankStickersSheetToken.png"
   },
   "BlankTarotCard": {
     "DisplayName": "Blank Tarot Card",
@@ -11092,7 +11092,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankTarotCard",
-    "PreviewUri": "@previewImages/BlankTarotCard.png"
+    "PreviewUri": "BlankTarotCard.png"
   },
   "BlankTileCircleMini": {
     "DisplayName": "Blank Tile, Circle, Mini",
@@ -11122,7 +11122,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankTileCircleMini",
-    "PreviewUri": "@previewImages/BlankTileCircleMini.png"
+    "PreviewUri": "BlankTileCircleMini.png"
   },
   "BlankTileDomino": {
     "DisplayName": "Blank Tile, Domino",
@@ -11152,7 +11152,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankTileDomino",
-    "PreviewUri": "@previewImages/BlankTileDomino.png"
+    "PreviewUri": "BlankTileDomino.png"
   },
   "BlankTileHexLarge": {
     "DisplayName": "Blank Tile, Hex, Large",
@@ -11183,7 +11183,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankTileHexLarge",
-    "PreviewUri": "@previewImages/BlankTileHexLarge.png"
+    "PreviewUri": "BlankTileHexLarge.png"
   },
   "BlankTileHexMedium": {
     "DisplayName": "Blank Tile, Hex, Medium",
@@ -11214,7 +11214,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankTileHexMedium",
-    "PreviewUri": "@previewImages/BlankTileHexMedium.png"
+    "PreviewUri": "BlankTileHexMedium.png"
   },
   "BlankTileHexMini": {
     "DisplayName": "Blank Tile, Hex, Mini",
@@ -11245,7 +11245,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankTileHexMini",
-    "PreviewUri": "@previewImages/BlankTileHexMini.png"
+    "PreviewUri": "BlankTileHexMini.png"
   },
   "BlankTileHexSmall": {
     "DisplayName": "Blank Tile, Hex, Small",
@@ -11276,7 +11276,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankTileHexSmall",
-    "PreviewUri": "@previewImages/BlankTileHexSmall.png"
+    "PreviewUri": "BlankTileHexSmall.png"
   },
   "BlankTileSquareLarge": {
     "DisplayName": "Blank Tile, Square, Large",
@@ -11306,7 +11306,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankTileSquareLarge",
-    "PreviewUri": "@previewImages/BlankTileSquareLarge.png"
+    "PreviewUri": "BlankTileSquareLarge.png"
   },
   "BlankTileSquareMedium": {
     "DisplayName": "Blank Tile, Square, Medium",
@@ -11336,7 +11336,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankTileSquareMedium",
-    "PreviewUri": "@previewImages/BlankTileSquareMedium.png"
+    "PreviewUri": "BlankTileSquareMedium.png"
   },
   "BlankTileSquareMini": {
     "DisplayName": "Blank Tile, Square, Mini",
@@ -11366,7 +11366,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankTileSquareMini",
-    "PreviewUri": "@previewImages/BlankTileSquareMini.png"
+    "PreviewUri": "BlankTileSquareMini.png"
   },
   "BlankTileSquareSmall": {
     "DisplayName": "Blank Tile, Square, Small",
@@ -11396,7 +11396,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankTileSquareSmall",
-    "PreviewUri": "@previewImages/BlankTileSquareSmall.png"
+    "PreviewUri": "BlankTileSquareSmall.png"
   },
   "BlankTileTriangle": {
     "DisplayName": "Blank Tile, Triangle",
@@ -11426,7 +11426,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankTileTriangle",
-    "PreviewUri": "@previewImages/BlankTileTriangle.png"
+    "PreviewUri": "BlankTileTriangle.png"
   },
   "BlankTombstoneShard": {
     "DisplayName": "Blank Tombstone Shard",
@@ -11456,7 +11456,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankTombstoneShard",
-    "PreviewUri": "@previewImages/BlankTombstoneShard.png"
+    "PreviewUri": "BlankTombstoneShard.png"
   },
   "BlankUSGameCard": {
     "DisplayName": "Blank US Game Card",
@@ -11485,7 +11485,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankUSGameCard",
-    "PreviewUri": "@previewImages/BlankUSGameCard.png"
+    "PreviewUri": "BlankUSGameCard.png"
   },
   "BlankUSGameMat": {
     "DisplayName": "Blank US Game Mat",
@@ -11516,7 +11516,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankUSGameMat",
-    "PreviewUri": "@previewImages/BlankUSGameMat.png"
+    "PreviewUri": "BlankUSGameMat.png"
   },
   "BlightTwigFantasyTB25": {
     "DisplayName": "Blight Twig, Fantasy, TB25",
@@ -11540,7 +11540,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "BlightTwigFantasyTB25",
-    "PreviewUri": "@previewImages/BlightTwigFantasyTB25.png"
+    "PreviewUri": "BlightTwigFantasyTB25.png"
   },
   "Block1x1Black": {
     "DisplayName": "Block 1x1, Black",
@@ -11564,7 +11564,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Block1x1Black",
-    "PreviewUri": "@previewImages/Block1x1Black.png"
+    "PreviewUri": "Block1x1Black.png"
   },
   "Block1x1Blue": {
     "DisplayName": "Block 1x1, Blue",
@@ -11588,7 +11588,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Block1x1Blue",
-    "PreviewUri": "@previewImages/Block1x1Blue.png"
+    "PreviewUri": "Block1x1Blue.png"
   },
   "Block1x1Red": {
     "DisplayName": "Block 1x1, Red",
@@ -11612,7 +11612,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Block1x1Red",
-    "PreviewUri": "@previewImages/Block1x1Red.png"
+    "PreviewUri": "Block1x1Red.png"
   },
   "Block1x1White": {
     "DisplayName": "Block 1x1, White",
@@ -11636,7 +11636,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Block1x1White",
-    "PreviewUri": "@previewImages/Block1x1White.png"
+    "PreviewUri": "Block1x1White.png"
   },
   "Block1x1Yellow": {
     "DisplayName": "Block 1x1, Yellow",
@@ -11660,7 +11660,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Block1x1Yellow",
-    "PreviewUri": "@previewImages/Block1x1Yellow.png"
+    "PreviewUri": "Block1x1Yellow.png"
   },
   "Block1x2Black": {
     "DisplayName": "Block 1x2, Black",
@@ -11684,7 +11684,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Block1x2Black",
-    "PreviewUri": "@previewImages/Block1x2Black.png"
+    "PreviewUri": "Block1x2Black.png"
   },
   "Block1x2Blue": {
     "DisplayName": "Block 1x2, Blue",
@@ -11708,7 +11708,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Block1x2Blue",
-    "PreviewUri": "@previewImages/Block1x2Blue.png"
+    "PreviewUri": "Block1x2Blue.png"
   },
   "Block1x2Red": {
     "DisplayName": "Block 1x2, Red",
@@ -11732,7 +11732,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Block1x2Red",
-    "PreviewUri": "@previewImages/Block1x2Red.png"
+    "PreviewUri": "Block1x2Red.png"
   },
   "Block1x2White": {
     "DisplayName": "Block 1x2, White",
@@ -11756,7 +11756,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Block1x2White",
-    "PreviewUri": "@previewImages/Block1x2White.png"
+    "PreviewUri": "Block1x2White.png"
   },
   "Block1x2Yellow": {
     "DisplayName": "Block 1x2, Yellow",
@@ -11780,7 +11780,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Block1x2Yellow",
-    "PreviewUri": "@previewImages/Block1x2Yellow.png"
+    "PreviewUri": "Block1x2Yellow.png"
   },
   "Block1x3Black": {
     "DisplayName": "Block 1x3, Black",
@@ -11804,7 +11804,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Block1x3Black",
-    "PreviewUri": "@previewImages/Block1x3Black.png"
+    "PreviewUri": "Block1x3Black.png"
   },
   "Block1x3Blue": {
     "DisplayName": "Block 1x3, Blue",
@@ -11828,7 +11828,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Block1x3Blue",
-    "PreviewUri": "@previewImages/Block1x3Blue.png"
+    "PreviewUri": "Block1x3Blue.png"
   },
   "Block1x3Red": {
     "DisplayName": "Block 1x3, Red",
@@ -11852,7 +11852,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Block1x3Red",
-    "PreviewUri": "@previewImages/Block1x3Red.png"
+    "PreviewUri": "Block1x3Red.png"
   },
   "Block1x3White": {
     "DisplayName": "Block 1x3, White",
@@ -11876,7 +11876,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Block1x3White",
-    "PreviewUri": "@previewImages/Block1x3White.png"
+    "PreviewUri": "Block1x3White.png"
   },
   "Block1x3Yellow": {
     "DisplayName": "Block 1x3, Yellow",
@@ -11900,7 +11900,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Block1x3Yellow",
-    "PreviewUri": "@previewImages/Block1x3Yellow.png"
+    "PreviewUri": "Block1x3Yellow.png"
   },
   "BloodyRemains": {
     "DisplayName": "Bloody Remains",
@@ -11921,7 +11921,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BloodyRemains",
-    "PreviewUri": "@previewImages/BloodyRemains.png"
+    "PreviewUri": "BloodyRemains.png"
   },
   "BogBeastFantasyTB25": {
     "DisplayName": "Bog Beast, Fantasy, TB25",
@@ -11945,7 +11945,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BogBeastFantasyTB25",
-    "PreviewUri": "@previewImages/BogBeastFantasyTB25.png"
+    "PreviewUri": "BogBeastFantasyTB25.png"
   },
   "Bolt": {
     "DisplayName": "Bolt",
@@ -11969,7 +11969,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Bolt",
-    "PreviewUri": "@previewImages/Bolt.png"
+    "PreviewUri": "Bolt.png"
   },
   "BowandArrow": {
     "DisplayName": "Bow and Arrow",
@@ -11995,7 +11995,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "BowandArrow",
-    "PreviewUri": "@previewImages/BowandArrow.png"
+    "PreviewUri": "BowandArrow.png"
   },
   "BowlingPinLargeBlack": {
     "DisplayName": "Bowling Pin, Large, Black",
@@ -12021,7 +12021,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "BowlingPinLargeBlack",
-    "PreviewUri": "@previewImages/BowlingPinLargeBlack.png"
+    "PreviewUri": "BowlingPinLargeBlack.png"
   },
   "BowlingPinLargeBlue": {
     "DisplayName": "Bowling Pin, Large, Blue",
@@ -12047,7 +12047,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "BowlingPinLargeBlue",
-    "PreviewUri": "@previewImages/BowlingPinLargeBlue.png"
+    "PreviewUri": "BowlingPinLargeBlue.png"
   },
   "BowlingPinLargeClear": {
     "DisplayName": "Bowling Pin, Large, Clear",
@@ -12073,7 +12073,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "BowlingPinLargeClear",
-    "PreviewUri": "@previewImages/BowlingPinLargeClear.png"
+    "PreviewUri": "BowlingPinLargeClear.png"
   },
   "BowlingPinLargeGreen": {
     "DisplayName": "Bowling Pin, Large, Green",
@@ -12099,7 +12099,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BowlingPinLargeGreen",
-    "PreviewUri": "@previewImages/BowlingPinLargeGreen.png"
+    "PreviewUri": "BowlingPinLargeGreen.png"
   },
   "BowlingPinLargeOrange": {
     "DisplayName": "Bowling Pin, Large, Orange",
@@ -12125,7 +12125,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "BowlingPinLargeOrange",
-    "PreviewUri": "@previewImages/BowlingPinLargeOrange.png"
+    "PreviewUri": "BowlingPinLargeOrange.png"
   },
   "BowlingPinLargePurple": {
     "DisplayName": "Bowling Pin, Large, Purple",
@@ -12151,7 +12151,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "BowlingPinLargePurple",
-    "PreviewUri": "@previewImages/BowlingPinLargePurple.png"
+    "PreviewUri": "BowlingPinLargePurple.png"
   },
   "BowlingPinLargeRed": {
     "DisplayName": "Bowling Pin, Large, Red",
@@ -12177,7 +12177,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BowlingPinLargeRed",
-    "PreviewUri": "@previewImages/BowlingPinLargeRed.png"
+    "PreviewUri": "BowlingPinLargeRed.png"
   },
   "BowlingPinLargeWhite": {
     "DisplayName": "Bowling Pin, Large, White",
@@ -12203,7 +12203,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BowlingPinLargeWhite",
-    "PreviewUri": "@previewImages/BowlingPinLargeWhite.png"
+    "PreviewUri": "BowlingPinLargeWhite.png"
   },
   "BowlingPinLargeYellow": {
     "DisplayName": "Bowling Pin, Large, Yellow",
@@ -12229,7 +12229,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "BowlingPinLargeYellow",
-    "PreviewUri": "@previewImages/BowlingPinLargeYellow.png"
+    "PreviewUri": "BowlingPinLargeYellow.png"
   },
   "BowlingPinSmallBlack": {
     "DisplayName": "Bowling Pin, Small, Black",
@@ -12255,7 +12255,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "BowlingPinSmallBlack",
-    "PreviewUri": "@previewImages/BowlingPinSmallBlack.png"
+    "PreviewUri": "BowlingPinSmallBlack.png"
   },
   "BowlingPinSmallBlue": {
     "DisplayName": "Bowling Pin, Small, Blue",
@@ -12281,7 +12281,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "BowlingPinSmallBlue",
-    "PreviewUri": "@previewImages/BowlingPinSmallBlue.png"
+    "PreviewUri": "BowlingPinSmallBlue.png"
   },
   "BowlingPinSmallGreen": {
     "DisplayName": "Bowling Pin, Small, Green",
@@ -12307,7 +12307,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BowlingPinSmallGreen",
-    "PreviewUri": "@previewImages/BowlingPinSmallGreen.png"
+    "PreviewUri": "BowlingPinSmallGreen.png"
   },
   "BowlingPinSmallOrange": {
     "DisplayName": "Bowling Pin, Small, Orange",
@@ -12333,7 +12333,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "BowlingPinSmallOrange",
-    "PreviewUri": "@previewImages/BowlingPinSmallOrange.png"
+    "PreviewUri": "BowlingPinSmallOrange.png"
   },
   "BowlingPinSmallPurple": {
     "DisplayName": "Bowling Pin, Small, Purple",
@@ -12359,7 +12359,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "BowlingPinSmallPurple",
-    "PreviewUri": "@previewImages/BowlingPinSmallPurple.png"
+    "PreviewUri": "BowlingPinSmallPurple.png"
   },
   "BowlingPinSmallRed": {
     "DisplayName": "Bowling Pin, Small, Red",
@@ -12385,7 +12385,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BowlingPinSmallRed",
-    "PreviewUri": "@previewImages/BowlingPinSmallRed.png"
+    "PreviewUri": "BowlingPinSmallRed.png"
   },
   "BowlingPinSmallWhite": {
     "DisplayName": "Bowling Pin, Small, White",
@@ -12411,7 +12411,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BowlingPinSmallWhite",
-    "PreviewUri": "@previewImages/BowlingPinSmallWhite.png"
+    "PreviewUri": "BowlingPinSmallWhite.png"
   },
   "BowlingPinSmallYellow": {
     "DisplayName": "Bowling Pin, Small, Yellow",
@@ -12437,7 +12437,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "BowlingPinSmallYellow",
-    "PreviewUri": "@previewImages/BowlingPinSmallYellow.png"
+    "PreviewUri": "BowlingPinSmallYellow.png"
   },
   "BoxBand6\"Blue": {
     "DisplayName": "Box Band, 6\", Blue",
@@ -12465,7 +12465,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "BoxBand6\"Blue",
-    "PreviewUri": "@previewImages/BoxBand6_Blue.png"
+    "PreviewUri": "BoxBand6_Blue.png"
   },
   "BoxBand6\"Green": {
     "DisplayName": "Box Band, 6\", Green",
@@ -12493,7 +12493,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BoxBand6\"Green",
-    "PreviewUri": "@previewImages/BoxBand6_Green.png"
+    "PreviewUri": "BoxBand6_Green.png"
   },
   "BoxBand6\"Red": {
     "DisplayName": "Box Band, 6\", Red",
@@ -12521,7 +12521,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BoxBand6\"Red",
-    "PreviewUri": "@previewImages/BoxBand6_Red.png"
+    "PreviewUri": "BoxBand6_Red.png"
   },
   "BoxBand8\"Blue": {
     "DisplayName": "Box Band, 8\", Blue",
@@ -12549,7 +12549,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "BoxBand8\"Blue",
-    "PreviewUri": "@previewImages/BoxBand8_Blue.png"
+    "PreviewUri": "BoxBand8_Blue.png"
   },
   "BoxBand8\"Green": {
     "DisplayName": "Box Band, 8\", Green",
@@ -12577,7 +12577,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BoxBand8\"Green",
-    "PreviewUri": "@previewImages/BoxBand8_Green.png"
+    "PreviewUri": "BoxBand8_Green.png"
   },
   "BoxBand8\"Red": {
     "DisplayName": "Box Band, 8\", Red",
@@ -12605,7 +12605,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BoxBand8\"Red",
-    "PreviewUri": "@previewImages/BoxBand8_Red.png"
+    "PreviewUri": "BoxBand8_Red.png"
   },
   "BoxBand9\"Blue": {
     "DisplayName": "Box Band, 9\", Blue",
@@ -12633,7 +12633,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "BoxBand9\"Blue",
-    "PreviewUri": "@previewImages/BoxBand9_Blue.png"
+    "PreviewUri": "BoxBand9_Blue.png"
   },
   "BoxBand9\"Green": {
     "DisplayName": "Box Band, 9\", Green",
@@ -12661,7 +12661,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BoxBand9\"Green",
-    "PreviewUri": "@previewImages/BoxBand9_Green.png"
+    "PreviewUri": "BoxBand9_Green.png"
   },
   "BoxBand9\"Red": {
     "DisplayName": "Box Band, 9\", Red",
@@ -12689,7 +12689,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BoxBand9\"Red",
-    "PreviewUri": "@previewImages/BoxBand9_Red.png"
+    "PreviewUri": "BoxBand9_Red.png"
   },
   "BoxInsertProMedium": {
     "DisplayName": "Box Insert, Pro, Medium",
@@ -12710,7 +12710,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BoxInsertProMedium",
-    "PreviewUri": "@previewImages/BoxInsertProMedium.png"
+    "PreviewUri": "BoxInsertProMedium.png"
   },
   "BoxInsertProSmall": {
     "DisplayName": "Box Insert, Pro, Small",
@@ -12731,7 +12731,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BoxInsertProSmall",
-    "PreviewUri": "@previewImages/BoxInsertProSmall.png"
+    "PreviewUri": "BoxInsertProSmall.png"
   },
   "BoxInsertStoutSmall": {
     "DisplayName": "Box Insert, Stout, Small",
@@ -12752,7 +12752,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BoxInsertStoutSmall",
-    "PreviewUri": "@previewImages/BoxInsertStoutSmall.png"
+    "PreviewUri": "BoxInsertStoutSmall.png"
   },
   "BrainOrganPink": {
     "DisplayName": "Brain Organ, Pink",
@@ -12793,7 +12793,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "BrainOrganPink",
-    "PreviewUri": "@previewImages/BrainOrganPink.png"
+    "PreviewUri": "BrainOrganPink.png"
   },
   "BreadBasket": {
     "DisplayName": "Bread Basket",
@@ -12813,7 +12813,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "BreadBasket",
-    "PreviewUri": "@previewImages/BreadBasket.png"
+    "PreviewUri": "BreadBasket.png"
   },
   "BreadWoodDarkBrown": {
     "DisplayName": "Bread, Wood, Dark Brown",
@@ -12846,7 +12846,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": true,
     "Key": "BreadWoodDarkBrown",
-    "PreviewUri": "@previewImages/BreadWoodDarkBrown.png"
+    "PreviewUri": "BreadWoodDarkBrown.png"
   },
   "BreadWoodLightBrown": {
     "DisplayName": "Bread, Wood, Light Brown",
@@ -12880,7 +12880,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "BreadWoodLightBrown",
-    "PreviewUri": "@previewImages/BreadWoodLightBrown.png"
+    "PreviewUri": "BreadWoodLightBrown.png"
   },
   "BrickTowerGray": {
     "DisplayName": "Brick Tower, Gray",
@@ -12912,7 +12912,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "BrickTowerGray",
-    "PreviewUri": "@previewImages/BrickTowerGray.png"
+    "PreviewUri": "BrickTowerGray.png"
   },
   "BrickWood2HolesRed": {
     "DisplayName": "Brick, Wood, 2 Holes, Red",
@@ -12943,7 +12943,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BrickWood2HolesRed",
-    "PreviewUri": "@previewImages/BrickWood2HolesRed.png"
+    "PreviewUri": "BrickWood2HolesRed.png"
   },
   "BrickWoodLarge": {
     "DisplayName": "Brick, Wood, Large",
@@ -12974,7 +12974,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BrickWoodLarge",
-    "PreviewUri": "@previewImages/BrickWoodLarge.png"
+    "PreviewUri": "BrickWoodLarge.png"
   },
   "BrickWoodRed": {
     "DisplayName": "Brick, Wood, Red",
@@ -13005,7 +13005,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BrickWoodRed",
-    "PreviewUri": "@previewImages/BrickWoodRed.png"
+    "PreviewUri": "BrickWoodRed.png"
   },
   "BrigandwithDagger": {
     "DisplayName": "Brigand with Dagger",
@@ -13038,7 +13038,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "BrigandwithDagger",
-    "PreviewUri": "@previewImages/BrigandwithDagger.png"
+    "PreviewUri": "BrigandwithDagger.png"
   },
   "BrokenColumn": {
     "DisplayName": "Broken Column",
@@ -13057,7 +13057,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "BrokenColumn",
-    "PreviewUri": "@previewImages/BrokenColumn.png"
+    "PreviewUri": "BrokenColumn.png"
   },
   "BrokenHeart": {
     "DisplayName": "Broken Heart",
@@ -13096,7 +13096,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BrokenHeart",
-    "PreviewUri": "@previewImages/BrokenHeart.png"
+    "PreviewUri": "BrokenHeart.png"
   },
   "Buddha": {
     "DisplayName": "Buddha",
@@ -13130,7 +13130,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "Buddha",
-    "PreviewUri": "@previewImages/Buddha.png"
+    "PreviewUri": "Buddha.png"
   },
   "BugBlack": {
     "DisplayName": "Bug, Black",
@@ -13154,7 +13154,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "BugBlack",
-    "PreviewUri": "@previewImages/BugBlack.png"
+    "PreviewUri": "BugBlack.png"
   },
   "BugBlue": {
     "DisplayName": "Bug, Blue",
@@ -13178,7 +13178,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "BugBlue",
-    "PreviewUri": "@previewImages/BugBlue.png"
+    "PreviewUri": "BugBlue.png"
   },
   "BugGreen": {
     "DisplayName": "Bug, Green",
@@ -13202,7 +13202,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BugGreen",
-    "PreviewUri": "@previewImages/BugGreen.png"
+    "PreviewUri": "BugGreen.png"
   },
   "BugOrange": {
     "DisplayName": "Bug, Orange",
@@ -13226,7 +13226,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "BugOrange",
-    "PreviewUri": "@previewImages/BugOrange.png"
+    "PreviewUri": "BugOrange.png"
   },
   "BugPurple": {
     "DisplayName": "Bug, Purple",
@@ -13250,7 +13250,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "BugPurple",
-    "PreviewUri": "@previewImages/BugPurple.png"
+    "PreviewUri": "BugPurple.png"
   },
   "BugRed": {
     "DisplayName": "Bug, Red",
@@ -13274,7 +13274,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BugRed",
-    "PreviewUri": "@previewImages/BugRed.png"
+    "PreviewUri": "BugRed.png"
   },
   "BugWhite": {
     "DisplayName": "Bug, White",
@@ -13298,7 +13298,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BugWhite",
-    "PreviewUri": "@previewImages/BugWhite.png"
+    "PreviewUri": "BugWhite.png"
   },
   "BugYellow": {
     "DisplayName": "Bug, Yellow",
@@ -13322,7 +13322,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "BugYellow",
-    "PreviewUri": "@previewImages/BugYellow.png"
+    "PreviewUri": "BugYellow.png"
   },
   "BuildingSmallBlack": {
     "DisplayName": "Building, Small, Black",
@@ -13358,7 +13358,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "BuildingSmallBlack",
-    "PreviewUri": "@previewImages/BuildingSmallBlack.png"
+    "PreviewUri": "BuildingSmallBlack.png"
   },
   "BuildingSmallBlue": {
     "DisplayName": "Building, Small, Blue",
@@ -13394,7 +13394,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "BuildingSmallBlue",
-    "PreviewUri": "@previewImages/BuildingSmallBlue.png"
+    "PreviewUri": "BuildingSmallBlue.png"
   },
   "BuildingSmallGreen": {
     "DisplayName": "Building, Small, Green",
@@ -13430,7 +13430,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BuildingSmallGreen",
-    "PreviewUri": "@previewImages/BuildingSmallGreen.png"
+    "PreviewUri": "BuildingSmallGreen.png"
   },
   "BuildingSmallOrange": {
     "DisplayName": "Building, Small, Orange",
@@ -13466,7 +13466,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "BuildingSmallOrange",
-    "PreviewUri": "@previewImages/BuildingSmallOrange.png"
+    "PreviewUri": "BuildingSmallOrange.png"
   },
   "BuildingSmallPurple": {
     "DisplayName": "Building, Small, Purple",
@@ -13502,7 +13502,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "BuildingSmallPurple",
-    "PreviewUri": "@previewImages/BuildingSmallPurple.png"
+    "PreviewUri": "BuildingSmallPurple.png"
   },
   "BuildingSmallRed": {
     "DisplayName": "Building, Small, Red",
@@ -13538,7 +13538,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BuildingSmallRed",
-    "PreviewUri": "@previewImages/BuildingSmallRed.png"
+    "PreviewUri": "BuildingSmallRed.png"
   },
   "BuildingSmallSideDoorBlack": {
     "DisplayName": "Building, Small, Side Door, Black",
@@ -13574,7 +13574,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "BuildingSmallSideDoorBlack",
-    "PreviewUri": "@previewImages/BuildingSmallSideDoorBlack.png"
+    "PreviewUri": "BuildingSmallSideDoorBlack.png"
   },
   "BuildingSmallSideDoorBlue": {
     "DisplayName": "Building, Small, Side Door, Blue",
@@ -13610,7 +13610,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "BuildingSmallSideDoorBlue",
-    "PreviewUri": "@previewImages/BuildingSmallSideDoorBlue.png"
+    "PreviewUri": "BuildingSmallSideDoorBlue.png"
   },
   "BuildingSmallSideDoorGreen": {
     "DisplayName": "Building, Small, Side Door, Green",
@@ -13646,7 +13646,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BuildingSmallSideDoorGreen",
-    "PreviewUri": "@previewImages/BuildingSmallSideDoorGreen.png"
+    "PreviewUri": "BuildingSmallSideDoorGreen.png"
   },
   "BuildingSmallSideDoorOrange": {
     "DisplayName": "Building, Small, Side Door, Orange",
@@ -13682,7 +13682,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "BuildingSmallSideDoorOrange",
-    "PreviewUri": "@previewImages/BuildingSmallSideDoorOrange.png"
+    "PreviewUri": "BuildingSmallSideDoorOrange.png"
   },
   "BuildingSmallSideDoorPurple": {
     "DisplayName": "Building, Small, Side Door, Purple",
@@ -13718,7 +13718,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "BuildingSmallSideDoorPurple",
-    "PreviewUri": "@previewImages/BuildingSmallSideDoorPurple.png"
+    "PreviewUri": "BuildingSmallSideDoorPurple.png"
   },
   "BuildingSmallSideDoorRed": {
     "DisplayName": "Building, Small, Side Door, Red",
@@ -13754,7 +13754,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BuildingSmallSideDoorRed",
-    "PreviewUri": "@previewImages/BuildingSmallSideDoorRed.png"
+    "PreviewUri": "BuildingSmallSideDoorRed.png"
   },
   "BuildingSmallSideDoorWhite": {
     "DisplayName": "Building, Small, Side Door, White",
@@ -13790,7 +13790,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BuildingSmallSideDoorWhite",
-    "PreviewUri": "@previewImages/BuildingSmallSideDoorWhite.png"
+    "PreviewUri": "BuildingSmallSideDoorWhite.png"
   },
   "BuildingSmallSideDoorYellow": {
     "DisplayName": "Building, Small, Side Door, Yellow",
@@ -13826,7 +13826,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "BuildingSmallSideDoorYellow",
-    "PreviewUri": "@previewImages/BuildingSmallSideDoorYellow.png"
+    "PreviewUri": "BuildingSmallSideDoorYellow.png"
   },
   "BuildingSmallWhite": {
     "DisplayName": "Building, Small, White",
@@ -13862,7 +13862,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BuildingSmallWhite",
-    "PreviewUri": "@previewImages/BuildingSmallWhite.png"
+    "PreviewUri": "BuildingSmallWhite.png"
   },
   "BuildingSmallYellow": {
     "DisplayName": "Building, Small, Yellow",
@@ -13898,7 +13898,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "BuildingSmallYellow",
-    "PreviewUri": "@previewImages/BuildingSmallYellow.png"
+    "PreviewUri": "BuildingSmallYellow.png"
   },
   "BullWoodBrown": {
     "DisplayName": "Bull, Wood, Brown",
@@ -13937,7 +13937,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "BullWoodBrown",
-    "PreviewUri": "@previewImages/BullWoodBrown.png"
+    "PreviewUri": "BullWoodBrown.png"
   },
   "BullWoodOrange": {
     "DisplayName": "Bull, Wood, Orange",
@@ -13976,7 +13976,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "BullWoodOrange",
-    "PreviewUri": "@previewImages/BullWoodOrange.png"
+    "PreviewUri": "BullWoodOrange.png"
   },
   "BulldozerAcrylic": {
     "DisplayName": "Bulldozer, Acrylic",
@@ -13995,7 +13995,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "BulldozerAcrylic",
-    "PreviewUri": "@previewImages/BulldozerAcrylic.png"
+    "PreviewUri": "BulldozerAcrylic.png"
   },
   "BulletGray": {
     "DisplayName": "Bullet, Gray",
@@ -14027,7 +14027,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "BulletGray",
-    "PreviewUri": "@previewImages/BulletGray.png"
+    "PreviewUri": "BulletGray.png"
   },
   "BunnyTB15Black": {
     "DisplayName": "Bunny, TB15, Black",
@@ -14050,7 +14050,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "BunnyTB15Black",
-    "PreviewUri": "@previewImages/BunnyTB15Black.png"
+    "PreviewUri": "BunnyTB15Black.png"
   },
   "BunnyTB15Blue": {
     "DisplayName": "Bunny, TB15, Blue",
@@ -14073,7 +14073,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "BunnyTB15Blue",
-    "PreviewUri": "@previewImages/BunnyTB15Blue.png"
+    "PreviewUri": "BunnyTB15Blue.png"
   },
   "BunnyTB15Green": {
     "DisplayName": "Bunny, TB15, Green",
@@ -14096,7 +14096,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BunnyTB15Green",
-    "PreviewUri": "@previewImages/BunnyTB15Green.png"
+    "PreviewUri": "BunnyTB15Green.png"
   },
   "BunnyTB15Orange": {
     "DisplayName": "Bunny, TB15, Orange",
@@ -14119,7 +14119,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "BunnyTB15Orange",
-    "PreviewUri": "@previewImages/BunnyTB15Orange.png"
+    "PreviewUri": "BunnyTB15Orange.png"
   },
   "BunnyTB15Purple": {
     "DisplayName": "Bunny, TB15, Purple",
@@ -14142,7 +14142,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "BunnyTB15Purple",
-    "PreviewUri": "@previewImages/BunnyTB15Purple.png"
+    "PreviewUri": "BunnyTB15Purple.png"
   },
   "BunnyTB15Red": {
     "DisplayName": "Bunny, TB15, Red",
@@ -14165,7 +14165,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BunnyTB15Red",
-    "PreviewUri": "@previewImages/BunnyTB15Red.png"
+    "PreviewUri": "BunnyTB15Red.png"
   },
   "BunnyTB15White": {
     "DisplayName": "Bunny, TB15, White",
@@ -14188,7 +14188,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BunnyTB15White",
-    "PreviewUri": "@previewImages/BunnyTB15White.png"
+    "PreviewUri": "BunnyTB15White.png"
   },
   "BunnyTB15Yellow": {
     "DisplayName": "Bunny, TB15, Yellow",
@@ -14211,7 +14211,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "BunnyTB15Yellow",
-    "PreviewUri": "@previewImages/BunnyTB15Yellow.png"
+    "PreviewUri": "BunnyTB15Yellow.png"
   },
   "BurlapBagSmallBlack": {
     "DisplayName": "Burlap Bag, Small, Black",
@@ -14265,7 +14265,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BurlapBagSmallBlack",
-    "PreviewUri": "@previewImages/BurlapBagSmallBlack.png"
+    "PreviewUri": "BurlapBagSmallBlack.png"
   },
   "BurlapBagSmallGreen": {
     "DisplayName": "Burlap Bag, Small, Green",
@@ -14318,7 +14318,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BurlapBagSmallGreen",
-    "PreviewUri": "@previewImages/BurlapBagSmallGreen.png"
+    "PreviewUri": "BurlapBagSmallGreen.png"
   },
   "BurlapBagSmallRed": {
     "DisplayName": "Burlap Bag, Small, Red",
@@ -14372,7 +14372,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BurlapBagSmallRed",
-    "PreviewUri": "@previewImages/BurlapBagSmallRed.png"
+    "PreviewUri": "BurlapBagSmallRed.png"
   },
   "BurlapBagSmallWhite": {
     "DisplayName": "Burlap Bag, Small, White",
@@ -14426,7 +14426,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BurlapBagSmallWhite",
-    "PreviewUri": "@previewImages/BurlapBagSmallWhite.png"
+    "PreviewUri": "BurlapBagSmallWhite.png"
   },
   "BusinessMiniatureBlue": {
     "DisplayName": "Business Miniature, Blue",
@@ -14466,7 +14466,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "BusinessMiniatureBlue",
-    "PreviewUri": "@previewImages/BusinessMiniatureBlue.png"
+    "PreviewUri": "BusinessMiniatureBlue.png"
   },
   "BusinessMiniatureGreen": {
     "DisplayName": "Business Miniature, Green",
@@ -14506,7 +14506,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BusinessMiniatureGreen",
-    "PreviewUri": "@previewImages/BusinessMiniatureGreen.png"
+    "PreviewUri": "BusinessMiniatureGreen.png"
   },
   "BusinessMiniatureRed": {
     "DisplayName": "Business Miniature, Red",
@@ -14546,7 +14546,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "BusinessMiniatureRed",
-    "PreviewUri": "@previewImages/BusinessMiniatureRed.png"
+    "PreviewUri": "BusinessMiniatureRed.png"
   },
   "BusinessMiniatureYellow": {
     "DisplayName": "Business Miniature, Yellow",
@@ -14586,7 +14586,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "BusinessMiniatureYellow",
-    "PreviewUri": "@previewImages/BusinessMiniatureYellow.png"
+    "PreviewUri": "BusinessMiniatureYellow.png"
   },
   "BustWoodBlue": {
     "DisplayName": "Bust, Wood, Blue",
@@ -14613,7 +14613,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "BustWoodBlue",
-    "PreviewUri": "@previewImages/BustWoodBlue.png"
+    "PreviewUri": "BustWoodBlue.png"
   },
   "BustWoodCollaredBlue": {
     "DisplayName": "Bust, Wood, Collared, Blue",
@@ -14640,7 +14640,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "BustWoodCollaredBlue",
-    "PreviewUri": "@previewImages/BustWoodCollaredBlue.png"
+    "PreviewUri": "BustWoodCollaredBlue.png"
   },
   "BustWoodCollaredGreen": {
     "DisplayName": "Bust, Wood, Collared, Green",
@@ -14667,7 +14667,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BustWoodCollaredGreen",
-    "PreviewUri": "@previewImages/BustWoodCollaredGreen.png"
+    "PreviewUri": "BustWoodCollaredGreen.png"
   },
   "BustWoodGreen": {
     "DisplayName": "Bust, Wood, Green",
@@ -14694,7 +14694,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "BustWoodGreen",
-    "PreviewUri": "@previewImages/BustWoodGreen.png"
+    "PreviewUri": "BustWoodGreen.png"
   },
   "ButtonLargeBlue": {
     "DisplayName": "Button, Large, Blue",
@@ -14717,7 +14717,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ButtonLargeBlue",
-    "PreviewUri": "@previewImages/ButtonLargeBlue.png"
+    "PreviewUri": "ButtonLargeBlue.png"
   },
   "ButtonLargeGreen": {
     "DisplayName": "Button, Large, Green",
@@ -14740,7 +14740,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ButtonLargeGreen",
-    "PreviewUri": "@previewImages/ButtonLargeGreen.png"
+    "PreviewUri": "ButtonLargeGreen.png"
   },
   "ButtonLargeGray": {
     "DisplayName": "Button, Large, Gray",
@@ -14763,7 +14763,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "ButtonLargeGray",
-    "PreviewUri": "@previewImages/ButtonLargeGray.png"
+    "PreviewUri": "ButtonLargeGray.png"
   },
   "ButtonLargePink": {
     "DisplayName": "Button, Large, Pink",
@@ -14786,7 +14786,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "ButtonLargePink",
-    "PreviewUri": "@previewImages/ButtonLargePink.png"
+    "PreviewUri": "ButtonLargePink.png"
   },
   "ButtonLargeYellow": {
     "DisplayName": "Button, Large, Yellow",
@@ -14809,7 +14809,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ButtonLargeYellow",
-    "PreviewUri": "@previewImages/ButtonLargeYellow.png"
+    "PreviewUri": "ButtonLargeYellow.png"
   },
   "ButtonPurple": {
     "DisplayName": "Button, Purple",
@@ -14832,7 +14832,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ButtonPurple",
-    "PreviewUri": "@previewImages/ButtonPurple.png"
+    "PreviewUri": "ButtonPurple.png"
   },
   "ButtonWhite": {
     "DisplayName": "Button, White",
@@ -14856,7 +14856,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ButtonWhite",
-    "PreviewUri": "@previewImages/ButtonWhite.png"
+    "PreviewUri": "ButtonWhite.png"
   },
   "ButtonYellow": {
     "DisplayName": "Button, Yellow",
@@ -14878,7 +14878,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": true,
     "Key": "ButtonYellow",
-    "PreviewUri": "@previewImages/ButtonYellow.png"
+    "PreviewUri": "ButtonYellow.png"
   },
   "Campfire": {
     "DisplayName": "Campfire",
@@ -14901,7 +14901,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Campfire",
-    "PreviewUri": "@previewImages/Campfire.png"
+    "PreviewUri": "Campfire.png"
   },
   "CarBlack": {
     "DisplayName": "Car, Black",
@@ -14924,7 +14924,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CarBlack",
-    "PreviewUri": "@previewImages/CarBlack.png"
+    "PreviewUri": "CarBlack.png"
   },
   "CarBlue": {
     "DisplayName": "Car, Blue",
@@ -14947,7 +14947,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CarBlue",
-    "PreviewUri": "@previewImages/CarBlue.png"
+    "PreviewUri": "CarBlue.png"
   },
   "CarGreen": {
     "DisplayName": "Car, Green",
@@ -14970,7 +14970,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CarGreen",
-    "PreviewUri": "@previewImages/CarGreen.png"
+    "PreviewUri": "CarGreen.png"
   },
   "CarMuscleBlack": {
     "DisplayName": "Car, Muscle, Black",
@@ -14993,7 +14993,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CarMuscleBlack",
-    "PreviewUri": "@previewImages/CarMuscleBlack.png"
+    "PreviewUri": "CarMuscleBlack.png"
   },
   "CarMuscleBlue": {
     "DisplayName": "Car, Muscle, Blue",
@@ -15016,7 +15016,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CarMuscleBlue",
-    "PreviewUri": "@previewImages/CarMuscleBlue.png"
+    "PreviewUri": "CarMuscleBlue.png"
   },
   "CarMuscleGreen": {
     "DisplayName": "Car, Muscle, Green",
@@ -15039,7 +15039,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CarMuscleGreen",
-    "PreviewUri": "@previewImages/CarMuscleGreen.png"
+    "PreviewUri": "CarMuscleGreen.png"
   },
   "CarMuscleOrange": {
     "DisplayName": "Car, Muscle, Orange",
@@ -15062,7 +15062,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "CarMuscleOrange",
-    "PreviewUri": "@previewImages/CarMuscleOrange.png"
+    "PreviewUri": "CarMuscleOrange.png"
   },
   "CarMusclePurple": {
     "DisplayName": "Car, Muscle, Purple",
@@ -15085,7 +15085,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "CarMusclePurple",
-    "PreviewUri": "@previewImages/CarMusclePurple.png"
+    "PreviewUri": "CarMusclePurple.png"
   },
   "CarMuscleRed": {
     "DisplayName": "Car, Muscle, Red",
@@ -15108,7 +15108,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "CarMuscleRed",
-    "PreviewUri": "@previewImages/CarMuscleRed.png"
+    "PreviewUri": "CarMuscleRed.png"
   },
   "CarMuscleWhite": {
     "DisplayName": "Car, Muscle, White",
@@ -15131,7 +15131,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CarMuscleWhite",
-    "PreviewUri": "@previewImages/CarMuscleWhite.png"
+    "PreviewUri": "CarMuscleWhite.png"
   },
   "CarMuscleYellow": {
     "DisplayName": "Car, Muscle, Yellow",
@@ -15154,7 +15154,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CarMuscleYellow",
-    "PreviewUri": "@previewImages/CarMuscleYellow.png"
+    "PreviewUri": "CarMuscleYellow.png"
   },
   "CarOrange": {
     "DisplayName": "Car, Orange",
@@ -15177,7 +15177,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "CarOrange",
-    "PreviewUri": "@previewImages/CarOrange.png"
+    "PreviewUri": "CarOrange.png"
   },
   "CarPurple": {
     "DisplayName": "Car, Purple",
@@ -15200,7 +15200,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "CarPurple",
-    "PreviewUri": "@previewImages/CarPurple.png"
+    "PreviewUri": "CarPurple.png"
   },
   "CarRaceBlack": {
     "DisplayName": "Car, Race, Black",
@@ -15224,7 +15224,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CarRaceBlack",
-    "PreviewUri": "@previewImages/CarRaceBlack.png"
+    "PreviewUri": "CarRaceBlack.png"
   },
   "CarRaceBlue": {
     "DisplayName": "Car, Race, Blue",
@@ -15253,7 +15253,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CarRaceBlue",
-    "PreviewUri": "@previewImages/CarRaceBlue.png"
+    "PreviewUri": "CarRaceBlue.png"
   },
   "CarRaceGreen": {
     "DisplayName": "Car, Race, Green",
@@ -15277,7 +15277,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CarRaceGreen",
-    "PreviewUri": "@previewImages/CarRaceGreen.png"
+    "PreviewUri": "CarRaceGreen.png"
   },
   "CarRaceOrange": {
     "DisplayName": "Car, Race, Orange",
@@ -15301,7 +15301,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "CarRaceOrange",
-    "PreviewUri": "@previewImages/CarRaceOrange.png"
+    "PreviewUri": "CarRaceOrange.png"
   },
   "CarRacePurple": {
     "DisplayName": "Car, Race, Purple",
@@ -15325,7 +15325,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "CarRacePurple",
-    "PreviewUri": "@previewImages/CarRacePurple.png"
+    "PreviewUri": "CarRacePurple.png"
   },
   "CarRaceRed": {
     "DisplayName": "Car, Race, Red",
@@ -15349,7 +15349,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "CarRaceRed",
-    "PreviewUri": "@previewImages/CarRaceRed.png"
+    "PreviewUri": "CarRaceRed.png"
   },
   "CarRaceWhite": {
     "DisplayName": "Car, Race, White",
@@ -15373,7 +15373,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CarRaceWhite",
-    "PreviewUri": "@previewImages/CarRaceWhite.png"
+    "PreviewUri": "CarRaceWhite.png"
   },
   "CarRaceYellow": {
     "DisplayName": "Car, Race, Yellow",
@@ -15397,7 +15397,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CarRaceYellow",
-    "PreviewUri": "@previewImages/CarRaceYellow.png"
+    "PreviewUri": "CarRaceYellow.png"
   },
   "CarRed": {
     "DisplayName": "Car, Red",
@@ -15420,7 +15420,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "CarRed",
-    "PreviewUri": "@previewImages/CarRed.png"
+    "PreviewUri": "CarRed.png"
   },
   "CarSportyBlue": {
     "DisplayName": "Car, Sporty, Blue",
@@ -15448,7 +15448,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CarSportyBlue",
-    "PreviewUri": "@previewImages/CarSportyBlue.png"
+    "PreviewUri": "CarSportyBlue.png"
   },
   "CarSportyYellow": {
     "DisplayName": "Car, Sporty, Yellow",
@@ -15476,7 +15476,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CarSportyYellow",
-    "PreviewUri": "@previewImages/CarSportyYellow.png"
+    "PreviewUri": "CarSportyYellow.png"
   },
   "CarVintageJalopyOrange": {
     "DisplayName": "Car, Vintage Jalopy, Orange",
@@ -15502,7 +15502,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "CarVintageJalopyOrange",
-    "PreviewUri": "@previewImages/CarVintageJalopyOrange.png"
+    "PreviewUri": "CarVintageJalopyOrange.png"
   },
   "CarVintageRoadsterYellow": {
     "DisplayName": "Car, Vintage Roadster, Yellow",
@@ -15528,7 +15528,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CarVintageRoadsterYellow",
-    "PreviewUri": "@previewImages/CarVintageRoadsterYellow.png"
+    "PreviewUri": "CarVintageRoadsterYellow.png"
   },
   "CarWhite": {
     "DisplayName": "Car, White",
@@ -15551,7 +15551,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CarWhite",
-    "PreviewUri": "@previewImages/CarWhite.png"
+    "PreviewUri": "CarWhite.png"
   },
   "CarYellow": {
     "DisplayName": "Car, Yellow",
@@ -15574,7 +15574,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CarYellow",
-    "PreviewUri": "@previewImages/CarYellow.png"
+    "PreviewUri": "CarYellow.png"
   },
   "CardConnector120-degreeBlack": {
     "DisplayName": "Card Connector, 120-degree, Black",
@@ -15609,7 +15609,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CardConnector120-degreeBlack",
-    "PreviewUri": "@previewImages/CardConnector120-degreeBlack.png"
+    "PreviewUri": "CardConnector120-degreeBlack.png"
   },
   "CardConnector120-degreeBlue": {
     "DisplayName": "Card Connector, 120-degree, Blue",
@@ -15644,7 +15644,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CardConnector120-degreeBlue",
-    "PreviewUri": "@previewImages/CardConnector120-degreeBlue.png"
+    "PreviewUri": "CardConnector120-degreeBlue.png"
   },
   "CardConnector120-degreeGreen": {
     "DisplayName": "Card Connector, 120-degree, Green",
@@ -15679,7 +15679,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CardConnector120-degreeGreen",
-    "PreviewUri": "@previewImages/CardConnector120-degreeGreen.png"
+    "PreviewUri": "CardConnector120-degreeGreen.png"
   },
   "CardConnector120-degreeOrange": {
     "DisplayName": "Card Connector, 120-degree, Orange",
@@ -15714,7 +15714,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "CardConnector120-degreeOrange",
-    "PreviewUri": "@previewImages/CardConnector120-degreeOrange.png"
+    "PreviewUri": "CardConnector120-degreeOrange.png"
   },
   "CardConnector120-degreePurple": {
     "DisplayName": "Card Connector, 120-degree, Purple",
@@ -15749,7 +15749,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "CardConnector120-degreePurple",
-    "PreviewUri": "@previewImages/CardConnector120-degreePurple.png"
+    "PreviewUri": "CardConnector120-degreePurple.png"
   },
   "CardConnector120-degreeRed": {
     "DisplayName": "Card Connector, 120-degree, Red",
@@ -15784,7 +15784,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "CardConnector120-degreeRed",
-    "PreviewUri": "@previewImages/CardConnector120-degreeRed.png"
+    "PreviewUri": "CardConnector120-degreeRed.png"
   },
   "CardConnector120-degreeWhite": {
     "DisplayName": "Card Connector, 120-degree, White",
@@ -15819,7 +15819,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CardConnector120-degreeWhite",
-    "PreviewUri": "@previewImages/CardConnector120-degreeWhite.png"
+    "PreviewUri": "CardConnector120-degreeWhite.png"
   },
   "CardConnector120-degreeYellow": {
     "DisplayName": "Card Connector, 120-degree, Yellow",
@@ -15854,7 +15854,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CardConnector120-degreeYellow",
-    "PreviewUri": "@previewImages/CardConnector120-degreeYellow.png"
+    "PreviewUri": "CardConnector120-degreeYellow.png"
   },
   "CardConnector90-degreeBlack": {
     "DisplayName": "Card Connector, 90-degree, Black",
@@ -15887,7 +15887,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CardConnector90-degreeBlack",
-    "PreviewUri": "@previewImages/CardConnector90-degreeBlack.png"
+    "PreviewUri": "CardConnector90-degreeBlack.png"
   },
   "CardConnector90-degreeBlue": {
     "DisplayName": "Card Connector, 90-degree, Blue",
@@ -15920,7 +15920,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CardConnector90-degreeBlue",
-    "PreviewUri": "@previewImages/CardConnector90-degreeBlue.png"
+    "PreviewUri": "CardConnector90-degreeBlue.png"
   },
   "CardConnector90-degreeGreen": {
     "DisplayName": "Card Connector, 90-degree, Green",
@@ -15953,7 +15953,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CardConnector90-degreeGreen",
-    "PreviewUri": "@previewImages/CardConnector90-degreeGreen.png"
+    "PreviewUri": "CardConnector90-degreeGreen.png"
   },
   "CardConnector90-degreeOrange": {
     "DisplayName": "Card Connector, 90-degree, Orange",
@@ -15986,7 +15986,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "CardConnector90-degreeOrange",
-    "PreviewUri": "@previewImages/CardConnector90-degreeOrange.png"
+    "PreviewUri": "CardConnector90-degreeOrange.png"
   },
   "CardConnector90-degreePurple": {
     "DisplayName": "Card Connector, 90-degree, Purple",
@@ -16019,7 +16019,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "CardConnector90-degreePurple",
-    "PreviewUri": "@previewImages/CardConnector90-degreePurple.png"
+    "PreviewUri": "CardConnector90-degreePurple.png"
   },
   "CardConnector90-degreeRed": {
     "DisplayName": "Card Connector, 90-degree, Red",
@@ -16052,7 +16052,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "CardConnector90-degreeRed",
-    "PreviewUri": "@previewImages/CardConnector90-degreeRed.png"
+    "PreviewUri": "CardConnector90-degreeRed.png"
   },
   "CardConnector90-degreeWhite": {
     "DisplayName": "Card Connector, 90-degree, White",
@@ -16085,7 +16085,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CardConnector90-degreeWhite",
-    "PreviewUri": "@previewImages/CardConnector90-degreeWhite.png"
+    "PreviewUri": "CardConnector90-degreeWhite.png"
   },
   "CardConnector90-degreeYellow": {
     "DisplayName": "Card Connector, 90-degree, Yellow",
@@ -16118,7 +16118,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CardConnector90-degreeYellow",
-    "PreviewUri": "@previewImages/CardConnector90-degreeYellow.png"
+    "PreviewUri": "CardConnector90-degreeYellow.png"
   },
   "CardEnvelope": {
     "DisplayName": "Card Envelope",
@@ -16147,7 +16147,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "CardEnvelope",
-    "PreviewUri": "@previewImages/CardEnvelope.png"
+    "PreviewUri": "CardEnvelope.png"
   },
   "CardEnvelopeWhite": {
     "DisplayName": "Card Envelope, White",
@@ -16176,7 +16176,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CardEnvelopeWhite",
-    "PreviewUri": "@previewImages/CardEnvelopeWhite.png"
+    "PreviewUri": "CardEnvelopeWhite.png"
   },
   "CardHolder": {
     "DisplayName": "Card Holder",
@@ -16206,7 +16206,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "CardHolder",
-    "PreviewUri": "@previewImages/CardHolder.png"
+    "PreviewUri": "CardHolder.png"
   },
   "CardStandBlack": {
     "DisplayName": "Card Stand, Black",
@@ -16236,7 +16236,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CardStandBlack",
-    "PreviewUri": "@previewImages/CardStandBlack.png"
+    "PreviewUri": "CardStandBlack.png"
   },
   "CardStandBlue": {
     "DisplayName": "Card Stand, Blue",
@@ -16266,7 +16266,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CardStandBlue",
-    "PreviewUri": "@previewImages/CardStandBlue.png"
+    "PreviewUri": "CardStandBlue.png"
   },
   "CardStandGreen": {
     "DisplayName": "Card Stand, Green",
@@ -16296,7 +16296,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CardStandGreen",
-    "PreviewUri": "@previewImages/CardStandGreen.png"
+    "PreviewUri": "CardStandGreen.png"
   },
   "CardStandRed": {
     "DisplayName": "Card Stand, Red",
@@ -16326,7 +16326,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "CardStandRed",
-    "PreviewUri": "@previewImages/CardStandRed.png"
+    "PreviewUri": "CardStandRed.png"
   },
   "CardStandYellow": {
     "DisplayName": "Card Stand, Yellow",
@@ -16356,7 +16356,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CardStandYellow",
-    "PreviewUri": "@previewImages/CardStandYellow.png"
+    "PreviewUri": "CardStandYellow.png"
   },
   "Carrot": {
     "DisplayName": "Carrot",
@@ -16391,7 +16391,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Carrot",
-    "PreviewUri": "@previewImages/Carrot.png"
+    "PreviewUri": "Carrot.png"
   },
   "Cash$1": {
     "DisplayName": "Cash, $1",
@@ -16443,7 +16443,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Cash$1",
-    "PreviewUri": "@previewImages/Cash$1.png"
+    "PreviewUri": "Cash$1.png"
   },
   "Cash$10": {
     "DisplayName": "Cash, $10",
@@ -16495,7 +16495,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Cash$10",
-    "PreviewUri": "@previewImages/Cash$10.png"
+    "PreviewUri": "Cash$10.png"
   },
   "Cash$100": {
     "DisplayName": "Cash, $100",
@@ -16547,7 +16547,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "Cash$100",
-    "PreviewUri": "@previewImages/Cash$100.png"
+    "PreviewUri": "Cash$100.png"
   },
   "Cash$100K": {
     "DisplayName": "Cash, $100K",
@@ -16599,7 +16599,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Cash$100K",
-    "PreviewUri": "@previewImages/Cash$100K.png"
+    "PreviewUri": "Cash$100K.png"
   },
   "Cash$10K": {
     "DisplayName": "Cash, $10K",
@@ -16651,7 +16651,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Cash$10K",
-    "PreviewUri": "@previewImages/Cash$10K.png"
+    "PreviewUri": "Cash$10K.png"
   },
   "Cash$1K": {
     "DisplayName": "Cash, $1K",
@@ -16703,7 +16703,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Cash$1K",
-    "PreviewUri": "@previewImages/Cash$1K.png"
+    "PreviewUri": "Cash$1K.png"
   },
   "Cash$1M": {
     "DisplayName": "Cash, $1M",
@@ -16755,7 +16755,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Cash$1M",
-    "PreviewUri": "@previewImages/Cash$1M.png"
+    "PreviewUri": "Cash$1M.png"
   },
   "Cash$20": {
     "DisplayName": "Cash, $20",
@@ -16807,7 +16807,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Cash$20",
-    "PreviewUri": "@previewImages/Cash$20.png"
+    "PreviewUri": "Cash$20.png"
   },
   "Cash$5": {
     "DisplayName": "Cash, $5",
@@ -16859,7 +16859,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "Cash$5",
-    "PreviewUri": "@previewImages/Cash$5.png"
+    "PreviewUri": "Cash$5.png"
   },
   "Cash$50": {
     "DisplayName": "Cash, $50",
@@ -16911,7 +16911,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Cash$50",
-    "PreviewUri": "@previewImages/Cash$50.png"
+    "PreviewUri": "Cash$50.png"
   },
   "Cash$500": {
     "DisplayName": "Cash, $500",
@@ -16963,7 +16963,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Cash$500",
-    "PreviewUri": "@previewImages/Cash$500.png"
+    "PreviewUri": "Cash$500.png"
   },
   "Cash$500K": {
     "DisplayName": "Cash, $500K",
@@ -17015,7 +17015,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Cash$500K",
-    "PreviewUri": "@previewImages/Cash$500K.png"
+    "PreviewUri": "Cash$500K.png"
   },
   "Cash$50K": {
     "DisplayName": "Cash, $50K",
@@ -17067,7 +17067,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Cash$50K",
-    "PreviewUri": "@previewImages/Cash$50K.png"
+    "PreviewUri": "Cash$50K.png"
   },
   "Cash$5K": {
     "DisplayName": "Cash, $5K",
@@ -17119,7 +17119,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "Cash$5K",
-    "PreviewUri": "@previewImages/Cash$5K.png"
+    "PreviewUri": "Cash$5K.png"
   },
   "CastleRoomCatwalks": {
     "DisplayName": "Castle Room, Catwalks",
@@ -17147,7 +17147,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": true,
     "Key": "CastleRoomCatwalks",
-    "PreviewUri": "@previewImages/CastleRoomCatwalks.png"
+    "PreviewUri": "CastleRoomCatwalks.png"
   },
   "CastleRoomChambers": {
     "DisplayName": "Castle Room, Chambers",
@@ -17175,7 +17175,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": true,
     "Key": "CastleRoomChambers",
-    "PreviewUri": "@previewImages/CastleRoomChambers.png"
+    "PreviewUri": "CastleRoomChambers.png"
   },
   "CastleRoomOutpost": {
     "DisplayName": "Castle Room, Outpost",
@@ -17203,7 +17203,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": true,
     "Key": "CastleRoomOutpost",
-    "PreviewUri": "@previewImages/CastleRoomOutpost.png"
+    "PreviewUri": "CastleRoomOutpost.png"
   },
   "CastleRoomSanctuary": {
     "DisplayName": "Castle Room, Sanctuary",
@@ -17231,7 +17231,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": true,
     "Key": "CastleRoomSanctuary",
-    "PreviewUri": "@previewImages/CastleRoomSanctuary.png"
+    "PreviewUri": "CastleRoomSanctuary.png"
   },
   "CastleRoomTower": {
     "DisplayName": "Castle Room, Tower",
@@ -17259,7 +17259,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": true,
     "Key": "CastleRoomTower",
-    "PreviewUri": "@previewImages/CastleRoomTower.png"
+    "PreviewUri": "CastleRoomTower.png"
   },
   "CastleRoomVeranda": {
     "DisplayName": "Castle Room, Veranda",
@@ -17287,7 +17287,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": true,
     "Key": "CastleRoomVeranda",
-    "PreviewUri": "@previewImages/CastleRoomVeranda.png"
+    "PreviewUri": "CastleRoomVeranda.png"
   },
   "CastleTower": {
     "DisplayName": "Castle Tower",
@@ -17316,7 +17316,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "CastleTower",
-    "PreviewUri": "@previewImages/CastleTower.png"
+    "PreviewUri": "CastleTower.png"
   },
   "CastleBlack": {
     "DisplayName": "Castle, Black",
@@ -17335,7 +17335,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CastleBlack",
-    "PreviewUri": "@previewImages/CastleBlack.png"
+    "PreviewUri": "CastleBlack.png"
   },
   "CastleBlue": {
     "DisplayName": "Castle, Blue",
@@ -17354,7 +17354,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CastleBlue",
-    "PreviewUri": "@previewImages/CastleBlue.png"
+    "PreviewUri": "CastleBlue.png"
   },
   "CastleGreen": {
     "DisplayName": "Castle, Green",
@@ -17373,7 +17373,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CastleGreen",
-    "PreviewUri": "@previewImages/CastleGreen.png"
+    "PreviewUri": "CastleGreen.png"
   },
   "CastleOrange": {
     "DisplayName": "Castle, Orange",
@@ -17392,7 +17392,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "CastleOrange",
-    "PreviewUri": "@previewImages/CastleOrange.png"
+    "PreviewUri": "CastleOrange.png"
   },
   "CastlePurple": {
     "DisplayName": "Castle, Purple",
@@ -17411,7 +17411,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "CastlePurple",
-    "PreviewUri": "@previewImages/CastlePurple.png"
+    "PreviewUri": "CastlePurple.png"
   },
   "CastleRed": {
     "DisplayName": "Castle, Red",
@@ -17430,7 +17430,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "CastleRed",
-    "PreviewUri": "@previewImages/CastleRed.png"
+    "PreviewUri": "CastleRed.png"
   },
   "CastleWhite": {
     "DisplayName": "Castle, White",
@@ -17449,7 +17449,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CastleWhite",
-    "PreviewUri": "@previewImages/CastleWhite.png"
+    "PreviewUri": "CastleWhite.png"
   },
   "CastleYellow": {
     "DisplayName": "Castle, Yellow",
@@ -17468,7 +17468,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CastleYellow",
-    "PreviewUri": "@previewImages/CastleYellow.png"
+    "PreviewUri": "CastleYellow.png"
   },
   "CatAcrylic": {
     "DisplayName": "Cat, Acrylic",
@@ -17494,7 +17494,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CatAcrylic",
-    "PreviewUri": "@previewImages/CatAcrylic.png"
+    "PreviewUri": "CatAcrylic.png"
   },
   "CatTB15Black": {
     "DisplayName": "Cat, TB15, Black",
@@ -17518,7 +17518,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CatTB15Black",
-    "PreviewUri": "@previewImages/CatTB15Black.png"
+    "PreviewUri": "CatTB15Black.png"
   },
   "CatTB15Blue": {
     "DisplayName": "Cat, TB15, Blue",
@@ -17542,7 +17542,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CatTB15Blue",
-    "PreviewUri": "@previewImages/CatTB15Blue.png"
+    "PreviewUri": "CatTB15Blue.png"
   },
   "CatTB15Green": {
     "DisplayName": "Cat, TB15, Green",
@@ -17566,7 +17566,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CatTB15Green",
-    "PreviewUri": "@previewImages/CatTB15Green.png"
+    "PreviewUri": "CatTB15Green.png"
   },
   "CatTB15Orange": {
     "DisplayName": "Cat, TB15, Orange",
@@ -17590,7 +17590,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "CatTB15Orange",
-    "PreviewUri": "@previewImages/CatTB15Orange.png"
+    "PreviewUri": "CatTB15Orange.png"
   },
   "CatTB15Purple": {
     "DisplayName": "Cat, TB15, Purple",
@@ -17614,7 +17614,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "CatTB15Purple",
-    "PreviewUri": "@previewImages/CatTB15Purple.png"
+    "PreviewUri": "CatTB15Purple.png"
   },
   "CatTB15Red": {
     "DisplayName": "Cat, TB15, Red",
@@ -17638,7 +17638,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "CatTB15Red",
-    "PreviewUri": "@previewImages/CatTB15Red.png"
+    "PreviewUri": "CatTB15Red.png"
   },
   "CatTB15White": {
     "DisplayName": "Cat, TB15, White",
@@ -17662,7 +17662,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CatTB15White",
-    "PreviewUri": "@previewImages/CatTB15White.png"
+    "PreviewUri": "CatTB15White.png"
   },
   "CatTB15Yellow": {
     "DisplayName": "Cat, TB15, Yellow",
@@ -17686,7 +17686,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CatTB15Yellow",
-    "PreviewUri": "@previewImages/CatTB15Yellow.png"
+    "PreviewUri": "CatTB15Yellow.png"
   },
   "CathedralBlack": {
     "DisplayName": "Cathedral, Black",
@@ -17705,7 +17705,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CathedralBlack",
-    "PreviewUri": "@previewImages/CathedralBlack.png"
+    "PreviewUri": "CathedralBlack.png"
   },
   "CathedralBlue": {
     "DisplayName": "Cathedral, Blue",
@@ -17724,7 +17724,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CathedralBlue",
-    "PreviewUri": "@previewImages/CathedralBlue.png"
+    "PreviewUri": "CathedralBlue.png"
   },
   "CathedralGreen": {
     "DisplayName": "Cathedral, Green",
@@ -17743,7 +17743,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CathedralGreen",
-    "PreviewUri": "@previewImages/CathedralGreen.png"
+    "PreviewUri": "CathedralGreen.png"
   },
   "CathedralOrange": {
     "DisplayName": "Cathedral, Orange",
@@ -17762,7 +17762,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "CathedralOrange",
-    "PreviewUri": "@previewImages/CathedralOrange.png"
+    "PreviewUri": "CathedralOrange.png"
   },
   "CathedralPurple": {
     "DisplayName": "Cathedral, Purple",
@@ -17781,7 +17781,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "CathedralPurple",
-    "PreviewUri": "@previewImages/CathedralPurple.png"
+    "PreviewUri": "CathedralPurple.png"
   },
   "CathedralRed": {
     "DisplayName": "Cathedral, Red",
@@ -17800,7 +17800,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "CathedralRed",
-    "PreviewUri": "@previewImages/CathedralRed.png"
+    "PreviewUri": "CathedralRed.png"
   },
   "CathedralWhite": {
     "DisplayName": "Cathedral, White",
@@ -17819,7 +17819,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CathedralWhite",
-    "PreviewUri": "@previewImages/CathedralWhite.png"
+    "PreviewUri": "CathedralWhite.png"
   },
   "CathedralYellow": {
     "DisplayName": "Cathedral, Yellow",
@@ -17838,7 +17838,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CathedralYellow",
-    "PreviewUri": "@previewImages/CathedralYellow.png"
+    "PreviewUri": "CathedralYellow.png"
   },
   "Cauldron": {
     "DisplayName": "Cauldron",
@@ -17862,7 +17862,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Cauldron",
-    "PreviewUri": "@previewImages/Cauldron.png"
+    "PreviewUri": "Cauldron.png"
   },
   "CavalryGreen": {
     "DisplayName": "Cavalry, Green",
@@ -17896,7 +17896,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CavalryGreen",
-    "PreviewUri": "@previewImages/CavalryGreen.png"
+    "PreviewUri": "CavalryGreen.png"
   },
   "CavemanTB15Black": {
     "DisplayName": "Caveman, TB15, Black",
@@ -17918,7 +17918,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CavemanTB15Black",
-    "PreviewUri": "@previewImages/CavemanTB15Black.png"
+    "PreviewUri": "CavemanTB15Black.png"
   },
   "CavemanTB15Blue": {
     "DisplayName": "Caveman, TB15, Blue",
@@ -17940,7 +17940,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CavemanTB15Blue",
-    "PreviewUri": "@previewImages/CavemanTB15Blue.png"
+    "PreviewUri": "CavemanTB15Blue.png"
   },
   "CavemanTB15Green": {
     "DisplayName": "Caveman, TB15, Green",
@@ -17962,7 +17962,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CavemanTB15Green",
-    "PreviewUri": "@previewImages/CavemanTB15Green.png"
+    "PreviewUri": "CavemanTB15Green.png"
   },
   "CavemanTB15Orange": {
     "DisplayName": "Caveman, TB15, Orange",
@@ -17984,7 +17984,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "CavemanTB15Orange",
-    "PreviewUri": "@previewImages/CavemanTB15Orange.png"
+    "PreviewUri": "CavemanTB15Orange.png"
   },
   "CavemanTB15Purple": {
     "DisplayName": "Caveman, TB15, Purple",
@@ -18006,7 +18006,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "CavemanTB15Purple",
-    "PreviewUri": "@previewImages/CavemanTB15Purple.png"
+    "PreviewUri": "CavemanTB15Purple.png"
   },
   "CavemanTB15Red": {
     "DisplayName": "Caveman, TB15, Red",
@@ -18028,7 +18028,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "CavemanTB15Red",
-    "PreviewUri": "@previewImages/CavemanTB15Red.png"
+    "PreviewUri": "CavemanTB15Red.png"
   },
   "CavemanTB15White": {
     "DisplayName": "Caveman, TB15, White",
@@ -18050,7 +18050,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CavemanTB15White",
-    "PreviewUri": "@previewImages/CavemanTB15White.png"
+    "PreviewUri": "CavemanTB15White.png"
   },
   "CavemanTB15Yellow": {
     "DisplayName": "Caveman, TB15, Yellow",
@@ -18072,7 +18072,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CavemanTB15Yellow",
-    "PreviewUri": "@previewImages/CavemanTB15Yellow.png"
+    "PreviewUri": "CavemanTB15Yellow.png"
   },
   "CavewomanTB15Black": {
     "DisplayName": "Cavewoman, TB15, Black",
@@ -18094,7 +18094,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CavewomanTB15Black",
-    "PreviewUri": "@previewImages/CavewomanTB15Black.png"
+    "PreviewUri": "CavewomanTB15Black.png"
   },
   "CavewomanTB15Blue": {
     "DisplayName": "Cavewoman, TB15, Blue",
@@ -18116,7 +18116,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CavewomanTB15Blue",
-    "PreviewUri": "@previewImages/CavewomanTB15Blue.png"
+    "PreviewUri": "CavewomanTB15Blue.png"
   },
   "CavewomanTB15Green": {
     "DisplayName": "Cavewoman, TB15, Green",
@@ -18138,7 +18138,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CavewomanTB15Green",
-    "PreviewUri": "@previewImages/CavewomanTB15Green.png"
+    "PreviewUri": "CavewomanTB15Green.png"
   },
   "CavewomanTB15Orange": {
     "DisplayName": "Cavewoman, TB15, Orange",
@@ -18160,7 +18160,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "CavewomanTB15Orange",
-    "PreviewUri": "@previewImages/CavewomanTB15Orange.png"
+    "PreviewUri": "CavewomanTB15Orange.png"
   },
   "CavewomanTB15Purple": {
     "DisplayName": "Cavewoman, TB15, Purple",
@@ -18182,7 +18182,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "CavewomanTB15Purple",
-    "PreviewUri": "@previewImages/CavewomanTB15Purple.png"
+    "PreviewUri": "CavewomanTB15Purple.png"
   },
   "CavewomanTB15Red": {
     "DisplayName": "Cavewoman, TB15, Red",
@@ -18204,7 +18204,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "CavewomanTB15Red",
-    "PreviewUri": "@previewImages/CavewomanTB15Red.png"
+    "PreviewUri": "CavewomanTB15Red.png"
   },
   "CavewomanTB15White": {
     "DisplayName": "Cavewoman, TB15, White",
@@ -18226,7 +18226,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CavewomanTB15White",
-    "PreviewUri": "@previewImages/CavewomanTB15White.png"
+    "PreviewUri": "CavewomanTB15White.png"
   },
   "CavewomanTB15Yellow": {
     "DisplayName": "Cavewoman, TB15, Yellow",
@@ -18248,7 +18248,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CavewomanTB15Yellow",
-    "PreviewUri": "@previewImages/CavewomanTB15Yellow.png"
+    "PreviewUri": "CavewomanTB15Yellow.png"
   },
   "CentaurThrustingSpear": {
     "DisplayName": "Centaur Thrusting Spear",
@@ -18285,7 +18285,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "CentaurThrustingSpear",
-    "PreviewUri": "@previewImages/CentaurThrustingSpear.png"
+    "PreviewUri": "CentaurThrustingSpear.png"
   },
   "ChaosDeathMaster": {
     "DisplayName": "Chaos Death Master",
@@ -18318,7 +18318,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "ChaosDeathMaster",
-    "PreviewUri": "@previewImages/ChaosDeathMaster.png"
+    "PreviewUri": "ChaosDeathMaster.png"
   },
   "CharacterStandBlue": {
     "DisplayName": "Character Stand, Blue",
@@ -18343,7 +18343,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CharacterStandBlue",
-    "PreviewUri": "@previewImages/CharacterStandBlue.png"
+    "PreviewUri": "CharacterStandBlue.png"
   },
   "CharacterStandClear": {
     "DisplayName": "Character Stand, Clear",
@@ -18368,7 +18368,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "CharacterStandClear",
-    "PreviewUri": "@previewImages/CharacterStandClear.png"
+    "PreviewUri": "CharacterStandClear.png"
   },
   "CharacterStandGreen": {
     "DisplayName": "Character Stand, Green",
@@ -18393,7 +18393,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CharacterStandGreen",
-    "PreviewUri": "@previewImages/CharacterStandGreen.png"
+    "PreviewUri": "CharacterStandGreen.png"
   },
   "CharacterStandPurple": {
     "DisplayName": "Character Stand, Purple",
@@ -18418,7 +18418,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "CharacterStandPurple",
-    "PreviewUri": "@previewImages/CharacterStandPurple.png"
+    "PreviewUri": "CharacterStandPurple.png"
   },
   "CharacterStandRed": {
     "DisplayName": "Character Stand, Red",
@@ -18443,7 +18443,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "CharacterStandRed",
-    "PreviewUri": "@previewImages/CharacterStandRed.png"
+    "PreviewUri": "CharacterStandRed.png"
   },
   "CharacterStandYellow": {
     "DisplayName": "Character Stand, Yellow",
@@ -18468,7 +18468,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CharacterStandYellow",
-    "PreviewUri": "@previewImages/CharacterStandYellow.png"
+    "PreviewUri": "CharacterStandYellow.png"
   },
   "CheeseWedge": {
     "DisplayName": "Cheese Wedge",
@@ -18504,7 +18504,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CheeseWedge",
-    "PreviewUri": "@previewImages/CheeseWedge.png"
+    "PreviewUri": "CheeseWedge.png"
   },
   "Cheetah": {
     "DisplayName": "Cheetah",
@@ -18533,7 +18533,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "Cheetah",
-    "PreviewUri": "@previewImages/Cheetah.png"
+    "PreviewUri": "Cheetah.png"
   },
   "ChessSetHalfBlack": {
     "DisplayName": "Chess Set, Half, Black",
@@ -18566,7 +18566,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": true,
     "Key": "ChessSetHalfBlack",
-    "PreviewUri": "@previewImages/ChessSetHalfBlack.png"
+    "PreviewUri": "ChessSetHalfBlack.png"
   },
   "ChessSetHalfBlue": {
     "DisplayName": "Chess Set, Half, Blue",
@@ -18599,7 +18599,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": true,
     "Key": "ChessSetHalfBlue",
-    "PreviewUri": "@previewImages/ChessSetHalfBlue.png"
+    "PreviewUri": "ChessSetHalfBlue.png"
   },
   "ChessSetHalfGreen": {
     "DisplayName": "Chess Set, Half, Green",
@@ -18632,7 +18632,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": true,
     "Key": "ChessSetHalfGreen",
-    "PreviewUri": "@previewImages/ChessSetHalfGreen.png"
+    "PreviewUri": "ChessSetHalfGreen.png"
   },
   "ChessSetHalfOrange": {
     "DisplayName": "Chess Set, Half, Orange",
@@ -18665,7 +18665,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": true,
     "Key": "ChessSetHalfOrange",
-    "PreviewUri": "@previewImages/ChessSetHalfOrange.png"
+    "PreviewUri": "ChessSetHalfOrange.png"
   },
   "ChessSetHalfPurple": {
     "DisplayName": "Chess Set, Half, Purple",
@@ -18698,7 +18698,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": true,
     "Key": "ChessSetHalfPurple",
-    "PreviewUri": "@previewImages/ChessSetHalfPurple.png"
+    "PreviewUri": "ChessSetHalfPurple.png"
   },
   "ChessSetHalfRed": {
     "DisplayName": "Chess Set, Half, Red",
@@ -18731,7 +18731,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": true,
     "Key": "ChessSetHalfRed",
-    "PreviewUri": "@previewImages/ChessSetHalfRed.png"
+    "PreviewUri": "ChessSetHalfRed.png"
   },
   "ChessSetHalfWhite": {
     "DisplayName": "Chess Set, Half, White",
@@ -18764,7 +18764,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": true,
     "Key": "ChessSetHalfWhite",
-    "PreviewUri": "@previewImages/ChessSetHalfWhite.png"
+    "PreviewUri": "ChessSetHalfWhite.png"
   },
   "ChessSetHalfYellow": {
     "DisplayName": "Chess Set, Half, Yellow",
@@ -18797,7 +18797,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": true,
     "Key": "ChessSetHalfYellow",
-    "PreviewUri": "@previewImages/ChessSetHalfYellow.png"
+    "PreviewUri": "ChessSetHalfYellow.png"
   },
   "ChestBlue": {
     "DisplayName": "Chest, Blue",
@@ -18818,7 +18818,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ChestBlue",
-    "PreviewUri": "@previewImages/ChestBlue.png"
+    "PreviewUri": "ChestBlue.png"
   },
   "ChestBronze": {
     "DisplayName": "Chest, Bronze",
@@ -18839,7 +18839,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "ChestBronze",
-    "PreviewUri": "@previewImages/ChestBronze.png"
+    "PreviewUri": "ChestBronze.png"
   },
   "ChestFantasyTB25": {
     "DisplayName": "Chest, Fantasy, TB25",
@@ -18860,7 +18860,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "ChestFantasyTB25",
-    "PreviewUri": "@previewImages/ChestFantasyTB25.png"
+    "PreviewUri": "ChestFantasyTB25.png"
   },
   "ChestGreen": {
     "DisplayName": "Chest, Green",
@@ -18881,7 +18881,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ChestGreen",
-    "PreviewUri": "@previewImages/ChestGreen.png"
+    "PreviewUri": "ChestGreen.png"
   },
   "ChestGray": {
     "DisplayName": "Chest, Gray",
@@ -18902,7 +18902,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "ChestGray",
-    "PreviewUri": "@previewImages/ChestGray.png"
+    "PreviewUri": "ChestGray.png"
   },
   "ChestRed": {
     "DisplayName": "Chest, Red",
@@ -18923,7 +18923,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ChestRed",
-    "PreviewUri": "@previewImages/ChestRed.png"
+    "PreviewUri": "ChestRed.png"
   },
   "Chevron20mmBlack": {
     "DisplayName": "Chevron, 20mm, Black",
@@ -18954,7 +18954,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Chevron20mmBlack",
-    "PreviewUri": "@previewImages/Chevron20mmBlack.png"
+    "PreviewUri": "Chevron20mmBlack.png"
   },
   "Chevron20mmBlue": {
     "DisplayName": "Chevron, 20mm, Blue",
@@ -18985,7 +18985,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Chevron20mmBlue",
-    "PreviewUri": "@previewImages/Chevron20mmBlue.png"
+    "PreviewUri": "Chevron20mmBlue.png"
   },
   "Chevron20mmGreen": {
     "DisplayName": "Chevron, 20mm, Green",
@@ -19016,7 +19016,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Chevron20mmGreen",
-    "PreviewUri": "@previewImages/Chevron20mmGreen.png"
+    "PreviewUri": "Chevron20mmGreen.png"
   },
   "Chevron20mmOrange": {
     "DisplayName": "Chevron, 20mm, Orange",
@@ -19047,7 +19047,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Chevron20mmOrange",
-    "PreviewUri": "@previewImages/Chevron20mmOrange.png"
+    "PreviewUri": "Chevron20mmOrange.png"
   },
   "Chevron20mmPurple": {
     "DisplayName": "Chevron, 20mm, Purple",
@@ -19078,7 +19078,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Chevron20mmPurple",
-    "PreviewUri": "@previewImages/Chevron20mmPurple.png"
+    "PreviewUri": "Chevron20mmPurple.png"
   },
   "Chevron20mmRed": {
     "DisplayName": "Chevron, 20mm, Red",
@@ -19109,7 +19109,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Chevron20mmRed",
-    "PreviewUri": "@previewImages/Chevron20mmRed.png"
+    "PreviewUri": "Chevron20mmRed.png"
   },
   "Chevron20mmWhite": {
     "DisplayName": "Chevron, 20mm, White",
@@ -19140,7 +19140,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Chevron20mmWhite",
-    "PreviewUri": "@previewImages/Chevron20mmWhite.png"
+    "PreviewUri": "Chevron20mmWhite.png"
   },
   "Chevron20mmYellow": {
     "DisplayName": "Chevron, 20mm, Yellow",
@@ -19171,7 +19171,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Chevron20mmYellow",
-    "PreviewUri": "@previewImages/Chevron20mmYellow.png"
+    "PreviewUri": "Chevron20mmYellow.png"
   },
   "Chevron8mmBlack": {
     "DisplayName": "Chevron, 8mm, Black",
@@ -19202,7 +19202,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Chevron8mmBlack",
-    "PreviewUri": "@previewImages/Chevron8mmBlack.png"
+    "PreviewUri": "Chevron8mmBlack.png"
   },
   "Chevron8mmBlue": {
     "DisplayName": "Chevron, 8mm, Blue",
@@ -19233,7 +19233,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Chevron8mmBlue",
-    "PreviewUri": "@previewImages/Chevron8mmBlue.png"
+    "PreviewUri": "Chevron8mmBlue.png"
   },
   "Chevron8mmGreen": {
     "DisplayName": "Chevron, 8mm, Green",
@@ -19264,7 +19264,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Chevron8mmGreen",
-    "PreviewUri": "@previewImages/Chevron8mmGreen.png"
+    "PreviewUri": "Chevron8mmGreen.png"
   },
   "Chevron8mmOrange": {
     "DisplayName": "Chevron, 8mm, Orange",
@@ -19295,7 +19295,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Chevron8mmOrange",
-    "PreviewUri": "@previewImages/Chevron8mmOrange.png"
+    "PreviewUri": "Chevron8mmOrange.png"
   },
   "Chevron8mmPurple": {
     "DisplayName": "Chevron, 8mm, Purple",
@@ -19326,7 +19326,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Chevron8mmPurple",
-    "PreviewUri": "@previewImages/Chevron8mmPurple.png"
+    "PreviewUri": "Chevron8mmPurple.png"
   },
   "Chevron8mmRed": {
     "DisplayName": "Chevron, 8mm, Red",
@@ -19357,7 +19357,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Chevron8mmRed",
-    "PreviewUri": "@previewImages/Chevron8mmRed.png"
+    "PreviewUri": "Chevron8mmRed.png"
   },
   "Chevron8mmWhite": {
     "DisplayName": "Chevron, 8mm, White",
@@ -19388,7 +19388,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Chevron8mmWhite",
-    "PreviewUri": "@previewImages/Chevron8mmWhite.png"
+    "PreviewUri": "Chevron8mmWhite.png"
   },
   "Chevron8mmYellow": {
     "DisplayName": "Chevron, 8mm, Yellow",
@@ -19419,7 +19419,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Chevron8mmYellow",
-    "PreviewUri": "@previewImages/Chevron8mmYellow.png"
+    "PreviewUri": "Chevron8mmYellow.png"
   },
   "ChickenAcrylic": {
     "DisplayName": "Chicken, Acrylic",
@@ -19451,7 +19451,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ChickenAcrylic",
-    "PreviewUri": "@previewImages/ChickenAcrylic.png"
+    "PreviewUri": "ChickenAcrylic.png"
   },
   "ChurchAcrylicOpaqueBlack": {
     "DisplayName": "Church, Acrylic, Opaque, Black",
@@ -19486,7 +19486,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ChurchAcrylicOpaqueBlack",
-    "PreviewUri": "@previewImages/ChurchAcrylicOpaqueBlack.png"
+    "PreviewUri": "ChurchAcrylicOpaqueBlack.png"
   },
   "ChurchAcrylicOpaqueGold": {
     "DisplayName": "Church, Acrylic, Opaque, Gold",
@@ -19521,7 +19521,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "ChurchAcrylicOpaqueGold",
-    "PreviewUri": "@previewImages/ChurchAcrylicOpaqueGold.png"
+    "PreviewUri": "ChurchAcrylicOpaqueGold.png"
   },
   "ChurchAcrylicOpaqueSilver": {
     "DisplayName": "Church, Acrylic, Opaque, Silver",
@@ -19562,7 +19562,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "ChurchAcrylicOpaqueSilver",
-    "PreviewUri": "@previewImages/ChurchAcrylicOpaqueSilver.png"
+    "PreviewUri": "ChurchAcrylicOpaqueSilver.png"
   },
   "ChurchAcrylicOpaqueWhite": {
     "DisplayName": "Church, Acrylic, Opaque, White",
@@ -19597,7 +19597,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ChurchAcrylicOpaqueWhite",
-    "PreviewUri": "@previewImages/ChurchAcrylicOpaqueWhite.png"
+    "PreviewUri": "ChurchAcrylicOpaqueWhite.png"
   },
   "ChurchAcrylicTransparentBlack": {
     "DisplayName": "Church, Acrylic, Transparent, Black",
@@ -19632,7 +19632,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ChurchAcrylicTransparentBlack",
-    "PreviewUri": "@previewImages/ChurchAcrylicTransparentBlack.png"
+    "PreviewUri": "ChurchAcrylicTransparentBlack.png"
   },
   "ChurchAcrylicTransparentBlue": {
     "DisplayName": "Church, Acrylic, Transparent, Blue",
@@ -19667,7 +19667,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ChurchAcrylicTransparentBlue",
-    "PreviewUri": "@previewImages/ChurchAcrylicTransparentBlue.png"
+    "PreviewUri": "ChurchAcrylicTransparentBlue.png"
   },
   "ChurchAcrylicTransparentClear": {
     "DisplayName": "Church, Acrylic, Transparent, Clear",
@@ -19702,7 +19702,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "ChurchAcrylicTransparentClear",
-    "PreviewUri": "@previewImages/ChurchAcrylicTransparentClear.png"
+    "PreviewUri": "ChurchAcrylicTransparentClear.png"
   },
   "ChurchAcrylicTransparentGreen": {
     "DisplayName": "Church, Acrylic, Transparent, Green",
@@ -19737,7 +19737,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ChurchAcrylicTransparentGreen",
-    "PreviewUri": "@previewImages/ChurchAcrylicTransparentGreen.png"
+    "PreviewUri": "ChurchAcrylicTransparentGreen.png"
   },
   "ChurchAcrylicTransparentOrange": {
     "DisplayName": "Church, Acrylic, Transparent, Orange",
@@ -19772,7 +19772,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ChurchAcrylicTransparentOrange",
-    "PreviewUri": "@previewImages/ChurchAcrylicTransparentOrange.png"
+    "PreviewUri": "ChurchAcrylicTransparentOrange.png"
   },
   "ChurchAcrylicTransparentPurple": {
     "DisplayName": "Church, Acrylic, Transparent, Purple",
@@ -19807,7 +19807,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ChurchAcrylicTransparentPurple",
-    "PreviewUri": "@previewImages/ChurchAcrylicTransparentPurple.png"
+    "PreviewUri": "ChurchAcrylicTransparentPurple.png"
   },
   "ChurchAcrylicTransparentRed": {
     "DisplayName": "Church, Acrylic, Transparent, Red",
@@ -19842,7 +19842,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ChurchAcrylicTransparentRed",
-    "PreviewUri": "@previewImages/ChurchAcrylicTransparentRed.png"
+    "PreviewUri": "ChurchAcrylicTransparentRed.png"
   },
   "ChurchAcrylicTransparentWhite": {
     "DisplayName": "Church, Acrylic, Transparent, White",
@@ -19877,7 +19877,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ChurchAcrylicTransparentWhite",
-    "PreviewUri": "@previewImages/ChurchAcrylicTransparentWhite.png"
+    "PreviewUri": "ChurchAcrylicTransparentWhite.png"
   },
   "ChurchAcrylicTransparentYellow": {
     "DisplayName": "Church, Acrylic, Transparent, Yellow",
@@ -19912,7 +19912,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ChurchAcrylicTransparentYellow",
-    "PreviewUri": "@previewImages/ChurchAcrylicTransparentYellow.png"
+    "PreviewUri": "ChurchAcrylicTransparentYellow.png"
   },
   "ChurchPlasticBlue": {
     "DisplayName": "Church, Plastic, Blue",
@@ -19947,7 +19947,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ChurchPlasticBlue",
-    "PreviewUri": "@previewImages/ChurchPlasticBlue.png"
+    "PreviewUri": "ChurchPlasticBlue.png"
   },
   "ChurchPlasticOrange": {
     "DisplayName": "Church, Plastic, Orange",
@@ -19982,7 +19982,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ChurchPlasticOrange",
-    "PreviewUri": "@previewImages/ChurchPlasticOrange.png"
+    "PreviewUri": "ChurchPlasticOrange.png"
   },
   "ChurchPlasticRed": {
     "DisplayName": "Church, Plastic, Red",
@@ -20017,7 +20017,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ChurchPlasticRed",
-    "PreviewUri": "@previewImages/ChurchPlasticRed.png"
+    "PreviewUri": "ChurchPlasticRed.png"
   },
   "ChurchPlasticWhite": {
     "DisplayName": "Church, Plastic, White",
@@ -20052,7 +20052,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ChurchPlasticWhite",
-    "PreviewUri": "@previewImages/ChurchPlasticWhite.png"
+    "PreviewUri": "ChurchPlasticWhite.png"
   },
   "ChurchWoodBlack": {
     "DisplayName": "Church, Wood, Black",
@@ -20088,7 +20088,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ChurchWoodBlack",
-    "PreviewUri": "@previewImages/ChurchWoodBlack.png"
+    "PreviewUri": "ChurchWoodBlack.png"
   },
   "ChurchWoodBlue": {
     "DisplayName": "Church, Wood, Blue",
@@ -20124,7 +20124,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ChurchWoodBlue",
-    "PreviewUri": "@previewImages/ChurchWoodBlue.png"
+    "PreviewUri": "ChurchWoodBlue.png"
   },
   "ChurchWoodGreen": {
     "DisplayName": "Church, Wood, Green",
@@ -20160,7 +20160,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ChurchWoodGreen",
-    "PreviewUri": "@previewImages/ChurchWoodGreen.png"
+    "PreviewUri": "ChurchWoodGreen.png"
   },
   "ChurchWoodOrange": {
     "DisplayName": "Church, Wood, Orange",
@@ -20196,7 +20196,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ChurchWoodOrange",
-    "PreviewUri": "@previewImages/ChurchWoodOrange.png"
+    "PreviewUri": "ChurchWoodOrange.png"
   },
   "ChurchWoodPurple": {
     "DisplayName": "Church, Wood, Purple",
@@ -20232,7 +20232,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ChurchWoodPurple",
-    "PreviewUri": "@previewImages/ChurchWoodPurple.png"
+    "PreviewUri": "ChurchWoodPurple.png"
   },
   "ChurchWoodRed": {
     "DisplayName": "Church, Wood, Red",
@@ -20268,7 +20268,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ChurchWoodRed",
-    "PreviewUri": "@previewImages/ChurchWoodRed.png"
+    "PreviewUri": "ChurchWoodRed.png"
   },
   "ChurchWoodWhite": {
     "DisplayName": "Church, Wood, White",
@@ -20304,7 +20304,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ChurchWoodWhite",
-    "PreviewUri": "@previewImages/ChurchWoodWhite.png"
+    "PreviewUri": "ChurchWoodWhite.png"
   },
   "ChurchWoodYellow": {
     "DisplayName": "Church, Wood, Yellow",
@@ -20340,7 +20340,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ChurchWoodYellow",
-    "PreviewUri": "@previewImages/ChurchWoodYellow.png"
+    "PreviewUri": "ChurchWoodYellow.png"
   },
   "CityCoin1": {
     "DisplayName": "City Coin, 1",
@@ -20389,7 +20389,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "CityCoin1",
-    "PreviewUri": "@previewImages/CityCoin1.png"
+    "PreviewUri": "CityCoin1.png"
   },
   "CityCoin5": {
     "DisplayName": "City Coin, 5",
@@ -20438,7 +20438,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "CityCoin5",
-    "PreviewUri": "@previewImages/CityCoin5.png"
+    "PreviewUri": "CityCoin5.png"
   },
   "ClayWood": {
     "DisplayName": "Clay, Wood",
@@ -20470,7 +20470,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ClayWood",
-    "PreviewUri": "@previewImages/ClayWood.png"
+    "PreviewUri": "ClayWood.png"
   },
   "ClearPokerTuckBox(200)": {
     "DisplayName": "Clear Poker Tuck Box (200)",
@@ -20502,7 +20502,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "ClearPokerTuckBox(200)",
-    "PreviewUri": "@previewImages/ClearPokerTuckBox(200).png"
+    "PreviewUri": "ClearPokerTuckBox(200).png"
   },
   "ClearPokerTuckBox(41)": {
     "DisplayName": "Clear Poker Tuck Box (41)",
@@ -20535,7 +20535,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "ClearPokerTuckBox(41)",
-    "PreviewUri": "@previewImages/ClearPokerTuckBox(41).png"
+    "PreviewUri": "ClearPokerTuckBox(41).png"
   },
   "ClearPokerTuckBox(66)": {
     "DisplayName": "Clear Poker Tuck Box (66)",
@@ -20568,7 +20568,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "ClearPokerTuckBox(66)",
-    "PreviewUri": "@previewImages/ClearPokerTuckBox(66).png"
+    "PreviewUri": "ClearPokerTuckBox(66).png"
   },
   "Cleric": {
     "DisplayName": "Cleric",
@@ -20605,7 +20605,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "Cleric",
-    "PreviewUri": "@previewImages/Cleric.png"
+    "PreviewUri": "Cleric.png"
   },
   "Cleric-CharacterMeeple": {
     "DisplayName": "Cleric, Character Meeple",
@@ -20640,7 +20640,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Cleric-CharacterMeeple",
-    "PreviewUri": "@previewImages/Cleric-CharacterMeeple.png"
+    "PreviewUri": "Cleric-CharacterMeeple.png"
   },
   "CoalWood": {
     "DisplayName": "Coal, Wood",
@@ -20672,7 +20672,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CoalWood",
-    "PreviewUri": "@previewImages/CoalWood.png"
+    "PreviewUri": "CoalWood.png"
   },
   "CobaltWood": {
     "DisplayName": "Cobalt, Wood",
@@ -20699,7 +20699,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CobaltWood",
-    "PreviewUri": "@previewImages/CobaltWood.png"
+    "PreviewUri": "CobaltWood.png"
   },
   "CobraWoodTeal": {
     "DisplayName": "Cobra, Wood, Teal",
@@ -20728,7 +20728,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "CobraWoodTeal",
-    "PreviewUri": "@previewImages/CobraWoodTeal.png"
+    "PreviewUri": "CobraWoodTeal.png"
   },
   "Cog's2024Calendar": {
     "DisplayName": "Cog's 2024 Calendar",
@@ -20756,7 +20756,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "Cog's2024Calendar",
-    "PreviewUri": "@previewImages/Cog's2024Calendar.png"
+    "PreviewUri": "Cog's2024Calendar.png"
   },
   "Coin50points": {
     "DisplayName": "Coin, 50 points",
@@ -20806,7 +20806,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "Coin50points",
-    "PreviewUri": "@previewImages/Coin50points.png"
+    "PreviewUri": "Coin50points.png"
   },
   "Coin5x": {
     "DisplayName": "Coin, 5x",
@@ -20856,7 +20856,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "Coin5x",
-    "PreviewUri": "@previewImages/Coin5x.png"
+    "PreviewUri": "Coin5x.png"
   },
   "CoinAncientRussian22mm": {
     "DisplayName": "Coin, Ancient Russian, 22mm",
@@ -20907,7 +20907,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "CoinAncientRussian22mm",
-    "PreviewUri": "@previewImages/CoinAncientRussian22mm.png"
+    "PreviewUri": "CoinAncientRussian22mm.png"
   },
   "CoinChinese20mm": {
     "DisplayName": "Coin, Chinese, 20mm",
@@ -20963,7 +20963,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "CoinChinese20mm",
-    "PreviewUri": "@previewImages/CoinChinese20mm.png"
+    "PreviewUri": "CoinChinese20mm.png"
   },
   "CoinChinese23mm": {
     "DisplayName": "Coin, Chinese, 23mm",
@@ -21026,7 +21026,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "CoinChinese23mm",
-    "PreviewUri": "@previewImages/CoinChinese23mm.png"
+    "PreviewUri": "CoinChinese23mm.png"
   },
   "CoinDime": {
     "DisplayName": "Coin, Dime",
@@ -21076,7 +21076,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "CoinDime",
-    "PreviewUri": "@previewImages/CoinDime.png"
+    "PreviewUri": "CoinDime.png"
   },
   "CoinDwarven": {
     "DisplayName": "Coin, Dwarven",
@@ -21104,7 +21104,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "CoinDwarven",
-    "PreviewUri": "@previewImages/CoinDwarven.png"
+    "PreviewUri": "CoinDwarven.png"
   },
   "CoinFantasy1": {
     "DisplayName": "Coin, Fantasy, 1",
@@ -21130,7 +21130,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "CoinFantasy1",
-    "PreviewUri": "@previewImages/CoinFantasy1.png"
+    "PreviewUri": "CoinFantasy1.png"
   },
   "CoinFantasy10": {
     "DisplayName": "Coin, Fantasy, 10",
@@ -21155,7 +21155,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "CoinFantasy10",
-    "PreviewUri": "@previewImages/CoinFantasy10.png"
+    "PreviewUri": "CoinFantasy10.png"
   },
   "CoinFantasy5": {
     "DisplayName": "Coin, Fantasy, 5",
@@ -21180,7 +21180,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "CoinFantasy5",
-    "PreviewUri": "@previewImages/CoinFantasy5.png"
+    "PreviewUri": "CoinFantasy5.png"
   },
   "CoinGold": {
     "DisplayName": "Coin, Gold",
@@ -21231,7 +21231,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "CoinGold",
-    "PreviewUri": "@previewImages/CoinGold.png"
+    "PreviewUri": "CoinGold.png"
   },
   "CoinGreen": {
     "DisplayName": "Coin, Green",
@@ -21281,7 +21281,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CoinGreen",
-    "PreviewUri": "@previewImages/CoinGreen.png"
+    "PreviewUri": "CoinGreen.png"
   },
   "CoinHalfdollar": {
     "DisplayName": "Coin, Half dollar",
@@ -21330,7 +21330,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "CoinHalfdollar",
-    "PreviewUri": "@previewImages/CoinHalfdollar.png"
+    "PreviewUri": "CoinHalfdollar.png"
   },
   "CoinMedievalBronze": {
     "DisplayName": "Coin, Medieval, Bronze",
@@ -21347,7 +21347,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "CoinMedievalBronze",
-    "PreviewUri": "@previewImages/CoinMedievalBronze.png"
+    "PreviewUri": "CoinMedievalBronze.png"
   },
   "CoinMedievalGold": {
     "DisplayName": "Coin, Medieval, Gold",
@@ -21364,7 +21364,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "CoinMedievalGold",
-    "PreviewUri": "@previewImages/CoinMedievalGold.png"
+    "PreviewUri": "CoinMedievalGold.png"
   },
   "CoinMedievalSilver": {
     "DisplayName": "Coin, Medieval, Silver",
@@ -21383,7 +21383,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "CoinMedievalSilver",
-    "PreviewUri": "@previewImages/CoinMedievalSilver.png"
+    "PreviewUri": "CoinMedievalSilver.png"
   },
   "CoinNickel": {
     "DisplayName": "Coin, Nickel",
@@ -21433,7 +21433,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "CoinNickel",
-    "PreviewUri": "@previewImages/CoinNickel.png"
+    "PreviewUri": "CoinNickel.png"
   },
   "CoinPenny": {
     "DisplayName": "Coin, Penny",
@@ -21484,7 +21484,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "CoinPenny",
-    "PreviewUri": "@previewImages/CoinPenny.png"
+    "PreviewUri": "CoinPenny.png"
   },
   "CoinPirate35mm": {
     "DisplayName": "Coin, Pirate, 35mm",
@@ -21536,7 +21536,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "CoinPirate35mm",
-    "PreviewUri": "@previewImages/CoinPirate35mm.png"
+    "PreviewUri": "CoinPirate35mm.png"
   },
   "CoinPurple": {
     "DisplayName": "Coin, Purple",
@@ -21587,7 +21587,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "CoinPurple",
-    "PreviewUri": "@previewImages/CoinPurple.png"
+    "PreviewUri": "CoinPurple.png"
   },
   "CoinQuarter": {
     "DisplayName": "Coin, Quarter",
@@ -21637,7 +21637,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "CoinQuarter",
-    "PreviewUri": "@previewImages/CoinQuarter.png"
+    "PreviewUri": "CoinQuarter.png"
   },
   "CoinRoman18mm": {
     "DisplayName": "Coin, Roman, 18mm",
@@ -21692,7 +21692,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "CoinRoman18mm",
-    "PreviewUri": "@previewImages/CoinRoman18mm.png"
+    "PreviewUri": "CoinRoman18mm.png"
   },
   "CoinSacagaweaDollar": {
     "DisplayName": "Coin, Sacagawea Dollar",
@@ -21742,7 +21742,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "CoinSacagaweaDollar",
-    "PreviewUri": "@previewImages/CoinSacagaweaDollar.png"
+    "PreviewUri": "CoinSacagaweaDollar.png"
   },
   "CoinTimeless1": {
     "DisplayName": "Coin, Timeless, 1",
@@ -21773,7 +21773,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "CoinTimeless1",
-    "PreviewUri": "@previewImages/CoinTimeless1.png"
+    "PreviewUri": "CoinTimeless1.png"
   },
   "CoinTimeless10": {
     "DisplayName": "Coin, Timeless, 10",
@@ -21798,7 +21798,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "CoinTimeless10",
-    "PreviewUri": "@previewImages/CoinTimeless10.png"
+    "PreviewUri": "CoinTimeless10.png"
   },
   "CoinTimeless5": {
     "DisplayName": "Coin, Timeless, 5",
@@ -21823,7 +21823,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "CoinTimeless5",
-    "PreviewUri": "@previewImages/CoinTimeless5.png"
+    "PreviewUri": "CoinTimeless5.png"
   },
   "ColonialLumberjackBlue": {
     "DisplayName": "Colonial Lumberjack, Blue",
@@ -21852,7 +21852,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ColonialLumberjackBlue",
-    "PreviewUri": "@previewImages/ColonialLumberjackBlue.png"
+    "PreviewUri": "ColonialLumberjackBlue.png"
   },
   "ColonialLumberjackGreen": {
     "DisplayName": "Colonial Lumberjack, Green",
@@ -21881,7 +21881,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ColonialLumberjackGreen",
-    "PreviewUri": "@previewImages/ColonialLumberjackGreen.png"
+    "PreviewUri": "ColonialLumberjackGreen.png"
   },
   "ColonialLumberjackOrange": {
     "DisplayName": "Colonial Lumberjack, Orange",
@@ -21910,7 +21910,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ColonialLumberjackOrange",
-    "PreviewUri": "@previewImages/ColonialLumberjackOrange.png"
+    "PreviewUri": "ColonialLumberjackOrange.png"
   },
   "ColonialLumberjackRed": {
     "DisplayName": "Colonial Lumberjack, Red",
@@ -21939,7 +21939,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ColonialLumberjackRed",
-    "PreviewUri": "@previewImages/ColonialLumberjackRed.png"
+    "PreviewUri": "ColonialLumberjackRed.png"
   },
   "ColonialLumberjackYellow": {
     "DisplayName": "Colonial Lumberjack, Yellow",
@@ -21968,7 +21968,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ColonialLumberjackYellow",
-    "PreviewUri": "@previewImages/ColonialLumberjackYellow.png"
+    "PreviewUri": "ColonialLumberjackYellow.png"
   },
   "ColonialSoldierBlue": {
     "DisplayName": "Colonial Soldier, Blue",
@@ -21997,7 +21997,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ColonialSoldierBlue",
-    "PreviewUri": "@previewImages/ColonialSoldierBlue.png"
+    "PreviewUri": "ColonialSoldierBlue.png"
   },
   "ColonialSoldierGreen": {
     "DisplayName": "Colonial Soldier, Green",
@@ -22026,7 +22026,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ColonialSoldierGreen",
-    "PreviewUri": "@previewImages/ColonialSoldierGreen.png"
+    "PreviewUri": "ColonialSoldierGreen.png"
   },
   "ColonialSoldierOrange": {
     "DisplayName": "Colonial Soldier, Orange",
@@ -22055,7 +22055,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ColonialSoldierOrange",
-    "PreviewUri": "@previewImages/ColonialSoldierOrange.png"
+    "PreviewUri": "ColonialSoldierOrange.png"
   },
   "ColonialSoldierRed": {
     "DisplayName": "Colonial Soldier, Red",
@@ -22084,7 +22084,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ColonialSoldierRed",
-    "PreviewUri": "@previewImages/ColonialSoldierRed.png"
+    "PreviewUri": "ColonialSoldierRed.png"
   },
   "ColonialSoldierYellow": {
     "DisplayName": "Colonial Soldier, Yellow",
@@ -22113,7 +22113,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ColonialSoldierYellow",
-    "PreviewUri": "@previewImages/ColonialSoldierYellow.png"
+    "PreviewUri": "ColonialSoldierYellow.png"
   },
   "CommandCenterBlack": {
     "DisplayName": "Command Center, Black",
@@ -22137,7 +22137,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CommandCenterBlack",
-    "PreviewUri": "@previewImages/CommandCenterBlack.png"
+    "PreviewUri": "CommandCenterBlack.png"
   },
   "CommandCenterBlue": {
     "DisplayName": "Command Center, Blue",
@@ -22161,7 +22161,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CommandCenterBlue",
-    "PreviewUri": "@previewImages/CommandCenterBlue.png"
+    "PreviewUri": "CommandCenterBlue.png"
   },
   "CommandCenterGreen": {
     "DisplayName": "Command Center, Green",
@@ -22185,7 +22185,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CommandCenterGreen",
-    "PreviewUri": "@previewImages/CommandCenterGreen.png"
+    "PreviewUri": "CommandCenterGreen.png"
   },
   "CommandCenterOrange": {
     "DisplayName": "Command Center, Orange",
@@ -22209,7 +22209,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "CommandCenterOrange",
-    "PreviewUri": "@previewImages/CommandCenterOrange.png"
+    "PreviewUri": "CommandCenterOrange.png"
   },
   "CommandCenterPurple": {
     "DisplayName": "Command Center, Purple",
@@ -22233,7 +22233,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "CommandCenterPurple",
-    "PreviewUri": "@previewImages/CommandCenterPurple.png"
+    "PreviewUri": "CommandCenterPurple.png"
   },
   "CommandCenterRed": {
     "DisplayName": "Command Center, Red",
@@ -22257,7 +22257,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "CommandCenterRed",
-    "PreviewUri": "@previewImages/CommandCenterRed.png"
+    "PreviewUri": "CommandCenterRed.png"
   },
   "CommandCenterWhite": {
     "DisplayName": "Command Center, White",
@@ -22281,7 +22281,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CommandCenterWhite",
-    "PreviewUri": "@previewImages/CommandCenterWhite.png"
+    "PreviewUri": "CommandCenterWhite.png"
   },
   "CommandCenterYellow": {
     "DisplayName": "Command Center, Yellow",
@@ -22305,7 +22305,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CommandCenterYellow",
-    "PreviewUri": "@previewImages/CommandCenterYellow.png"
+    "PreviewUri": "CommandCenterYellow.png"
   },
   "Compass": {
     "DisplayName": "Compass",
@@ -22327,7 +22327,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Compass",
-    "PreviewUri": "@previewImages/Compass.png"
+    "PreviewUri": "Compass.png"
   },
   "Computer": {
     "DisplayName": "Computer",
@@ -22346,7 +22346,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Computer",
-    "PreviewUri": "@previewImages/Computer.png"
+    "PreviewUri": "Computer.png"
   },
   "ComputerDesk": {
     "DisplayName": "Computer Desk",
@@ -22366,7 +22366,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "ComputerDesk",
-    "PreviewUri": "@previewImages/ComputerDesk.png"
+    "PreviewUri": "ComputerDesk.png"
   },
   "ConePawnBlack": {
     "DisplayName": "Cone Pawn, Black",
@@ -22390,7 +22390,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ConePawnBlack",
-    "PreviewUri": "@previewImages/ConePawnBlack.png"
+    "PreviewUri": "ConePawnBlack.png"
   },
   "ContainerShipBlue": {
     "DisplayName": "Container Ship, Blue",
@@ -22425,7 +22425,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ContainerShipBlue",
-    "PreviewUri": "@previewImages/ContainerShipBlue.png"
+    "PreviewUri": "ContainerShipBlue.png"
   },
   "ContainerShipGreen": {
     "DisplayName": "Container Ship, Green",
@@ -22460,7 +22460,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ContainerShipGreen",
-    "PreviewUri": "@previewImages/ContainerShipGreen.png"
+    "PreviewUri": "ContainerShipGreen.png"
   },
   "ContainerShipGray": {
     "DisplayName": "Container Ship, Gray",
@@ -22495,7 +22495,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "ContainerShipGray",
-    "PreviewUri": "@previewImages/ContainerShipGray.png"
+    "PreviewUri": "ContainerShipGray.png"
   },
   "ContainerShipRed": {
     "DisplayName": "Container Ship, Red",
@@ -22530,7 +22530,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ContainerShipRed",
-    "PreviewUri": "@previewImages/ContainerShipRed.png"
+    "PreviewUri": "ContainerShipRed.png"
   },
   "ContainerShipYellow": {
     "DisplayName": "Container Ship, Yellow",
@@ -22565,7 +22565,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ContainerShipYellow",
-    "PreviewUri": "@previewImages/ContainerShipYellow.png"
+    "PreviewUri": "ContainerShipYellow.png"
   },
   "CottonBagSmallWhite": {
     "DisplayName": "Cotton Bag, Small, White",
@@ -22594,7 +22594,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CottonBagSmallWhite",
-    "PreviewUri": "@previewImages/CottonBagSmallWhite.png"
+    "PreviewUri": "CottonBagSmallWhite.png"
   },
   "CowBlack": {
     "DisplayName": "Cow, Black",
@@ -22620,7 +22620,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CowBlack",
-    "PreviewUri": "@previewImages/CowBlack.png"
+    "PreviewUri": "CowBlack.png"
   },
   "CowHalfBlack": {
     "DisplayName": "Cow, Half Black",
@@ -22646,7 +22646,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CowHalfBlack",
-    "PreviewUri": "@previewImages/CowHalfBlack.png"
+    "PreviewUri": "CowHalfBlack.png"
   },
   "CowHalfBrown": {
     "DisplayName": "Cow, Half Brown",
@@ -22672,7 +22672,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "CowHalfBrown",
-    "PreviewUri": "@previewImages/CowHalfBrown.png"
+    "PreviewUri": "CowHalfBrown.png"
   },
   "CowboyBlack-CharacterMeeple": {
     "DisplayName": "Cowboy, Black, Character Meeple",
@@ -22711,7 +22711,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CowboyBlack-CharacterMeeple",
-    "PreviewUri": "@previewImages/CowboyBlack-CharacterMeeple.png"
+    "PreviewUri": "CowboyBlack-CharacterMeeple.png"
   },
   "CowboyBlue-CharacterMeeple": {
     "DisplayName": "Cowboy, Blue, Character Meeple",
@@ -22750,7 +22750,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CowboyBlue-CharacterMeeple",
-    "PreviewUri": "@previewImages/CowboyBlue-CharacterMeeple.png"
+    "PreviewUri": "CowboyBlue-CharacterMeeple.png"
   },
   "CowboyGreen-CharacterMeeple": {
     "DisplayName": "Cowboy, Green, Character Meeple",
@@ -22789,7 +22789,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CowboyGreen-CharacterMeeple",
-    "PreviewUri": "@previewImages/CowboyGreen-CharacterMeeple.png"
+    "PreviewUri": "CowboyGreen-CharacterMeeple.png"
   },
   "CowboyOrange-CharacterMeeple": {
     "DisplayName": "Cowboy, Orange, Character Meeple",
@@ -22828,7 +22828,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "CowboyOrange-CharacterMeeple",
-    "PreviewUri": "@previewImages/CowboyOrange-CharacterMeeple.png"
+    "PreviewUri": "CowboyOrange-CharacterMeeple.png"
   },
   "CowboyPurple-CharacterMeeple": {
     "DisplayName": "Cowboy, Purple, Character Meeple",
@@ -22867,7 +22867,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "CowboyPurple-CharacterMeeple",
-    "PreviewUri": "@previewImages/CowboyPurple-CharacterMeeple.png"
+    "PreviewUri": "CowboyPurple-CharacterMeeple.png"
   },
   "CowboyRed-CharacterMeeple": {
     "DisplayName": "Cowboy, Red, Character Meeple",
@@ -22906,7 +22906,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "CowboyRed-CharacterMeeple",
-    "PreviewUri": "@previewImages/CowboyRed-CharacterMeeple.png"
+    "PreviewUri": "CowboyRed-CharacterMeeple.png"
   },
   "CowboyWhite-CharacterMeeple": {
     "DisplayName": "Cowboy, White, Character Meeple",
@@ -22945,7 +22945,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CowboyWhite-CharacterMeeple",
-    "PreviewUri": "@previewImages/CowboyWhite-CharacterMeeple.png"
+    "PreviewUri": "CowboyWhite-CharacterMeeple.png"
   },
   "CowboyYellow-CharacterMeeple": {
     "DisplayName": "Cowboy, Yellow, Character Meeple",
@@ -22984,7 +22984,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CowboyYellow-CharacterMeeple",
-    "PreviewUri": "@previewImages/CowboyYellow-CharacterMeeple.png"
+    "PreviewUri": "CowboyYellow-CharacterMeeple.png"
   },
   "CrabAcrylicBlack": {
     "DisplayName": "Crab, Acrylic, Black",
@@ -23019,7 +23019,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CrabAcrylicBlack",
-    "PreviewUri": "@previewImages/CrabAcrylicBlack.png"
+    "PreviewUri": "CrabAcrylicBlack.png"
   },
   "CrabAcrylicBlue": {
     "DisplayName": "Crab, Acrylic, Blue",
@@ -23054,7 +23054,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CrabAcrylicBlue",
-    "PreviewUri": "@previewImages/CrabAcrylicBlue.png"
+    "PreviewUri": "CrabAcrylicBlue.png"
   },
   "CrabAcrylicGreen": {
     "DisplayName": "Crab, Acrylic, Green",
@@ -23089,7 +23089,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CrabAcrylicGreen",
-    "PreviewUri": "@previewImages/CrabAcrylicGreen.png"
+    "PreviewUri": "CrabAcrylicGreen.png"
   },
   "CrabAcrylicOrange": {
     "DisplayName": "Crab, Acrylic, Orange",
@@ -23124,7 +23124,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "CrabAcrylicOrange",
-    "PreviewUri": "@previewImages/CrabAcrylicOrange.png"
+    "PreviewUri": "CrabAcrylicOrange.png"
   },
   "CrabAcrylicPurple": {
     "DisplayName": "Crab, Acrylic, Purple",
@@ -23159,7 +23159,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "CrabAcrylicPurple",
-    "PreviewUri": "@previewImages/CrabAcrylicPurple.png"
+    "PreviewUri": "CrabAcrylicPurple.png"
   },
   "CrabAcrylicRed": {
     "DisplayName": "Crab, Acrylic, Red",
@@ -23194,7 +23194,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "CrabAcrylicRed",
-    "PreviewUri": "@previewImages/CrabAcrylicRed.png"
+    "PreviewUri": "CrabAcrylicRed.png"
   },
   "CrabAcrylicWhite": {
     "DisplayName": "Crab, Acrylic, White",
@@ -23229,7 +23229,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CrabAcrylicWhite",
-    "PreviewUri": "@previewImages/CrabAcrylicWhite.png"
+    "PreviewUri": "CrabAcrylicWhite.png"
   },
   "CrabAcrylicYellow": {
     "DisplayName": "Crab, Acrylic, Yellow",
@@ -23264,7 +23264,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CrabAcrylicYellow",
-    "PreviewUri": "@previewImages/CrabAcrylicYellow.png"
+    "PreviewUri": "CrabAcrylicYellow.png"
   },
   "Crate": {
     "DisplayName": "Crate",
@@ -23284,7 +23284,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Crate",
-    "PreviewUri": "@previewImages/Crate.png"
+    "PreviewUri": "Crate.png"
   },
   "CreepyHandTB25": {
     "DisplayName": "Creepy Hand, TB25",
@@ -23311,7 +23311,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "CreepyHandTB25",
-    "PreviewUri": "@previewImages/CreepyHandTB25.png"
+    "PreviewUri": "CreepyHandTB25.png"
   },
   "CrescentWrench": {
     "DisplayName": "Crescent Wrench",
@@ -23343,7 +23343,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "CrescentWrench",
-    "PreviewUri": "@previewImages/CrescentWrench.png"
+    "PreviewUri": "CrescentWrench.png"
   },
   "Crown": {
     "DisplayName": "Crown",
@@ -23368,7 +23368,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "Crown",
-    "PreviewUri": "@previewImages/Crown.png"
+    "PreviewUri": "Crown.png"
   },
   "CrystalOpaqueBlack": {
     "DisplayName": "Crystal, Opaque, Black",
@@ -23400,7 +23400,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CrystalOpaqueBlack",
-    "PreviewUri": "@previewImages/CrystalOpaqueBlack.png"
+    "PreviewUri": "CrystalOpaqueBlack.png"
   },
   "CrystalOpaqueGold": {
     "DisplayName": "Crystal, Opaque, Gold",
@@ -23432,7 +23432,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "CrystalOpaqueGold",
-    "PreviewUri": "@previewImages/CrystalOpaqueGold.png"
+    "PreviewUri": "CrystalOpaqueGold.png"
   },
   "CrystalOpaqueSilver": {
     "DisplayName": "Crystal, Opaque, Silver",
@@ -23464,7 +23464,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "CrystalOpaqueSilver",
-    "PreviewUri": "@previewImages/CrystalOpaqueSilver.png"
+    "PreviewUri": "CrystalOpaqueSilver.png"
   },
   "CrystalOpaqueWhite": {
     "DisplayName": "Crystal, Opaque, White",
@@ -23496,7 +23496,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CrystalOpaqueWhite",
-    "PreviewUri": "@previewImages/CrystalOpaqueWhite.png"
+    "PreviewUri": "CrystalOpaqueWhite.png"
   },
   "CrystalTransparentBlack": {
     "DisplayName": "Crystal, Transparent, Black",
@@ -23528,7 +23528,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "CrystalTransparentBlack",
-    "PreviewUri": "@previewImages/CrystalTransparentBlack.png"
+    "PreviewUri": "CrystalTransparentBlack.png"
   },
   "CrystalTransparentBlue": {
     "DisplayName": "Crystal, Transparent, Blue",
@@ -23561,7 +23561,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "CrystalTransparentBlue",
-    "PreviewUri": "@previewImages/CrystalTransparentBlue.png"
+    "PreviewUri": "CrystalTransparentBlue.png"
   },
   "CrystalTransparentClear": {
     "DisplayName": "Crystal, Transparent, Clear",
@@ -23593,7 +23593,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "CrystalTransparentClear",
-    "PreviewUri": "@previewImages/CrystalTransparentClear.png"
+    "PreviewUri": "CrystalTransparentClear.png"
   },
   "CrystalTransparentGreen": {
     "DisplayName": "Crystal, Transparent, Green",
@@ -23626,7 +23626,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "CrystalTransparentGreen",
-    "PreviewUri": "@previewImages/CrystalTransparentGreen.png"
+    "PreviewUri": "CrystalTransparentGreen.png"
   },
   "CrystalTransparentOrange": {
     "DisplayName": "Crystal, Transparent, Orange",
@@ -23658,7 +23658,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "CrystalTransparentOrange",
-    "PreviewUri": "@previewImages/CrystalTransparentOrange.png"
+    "PreviewUri": "CrystalTransparentOrange.png"
   },
   "CrystalTransparentPurple": {
     "DisplayName": "Crystal, Transparent, Purple",
@@ -23691,7 +23691,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "CrystalTransparentPurple",
-    "PreviewUri": "@previewImages/CrystalTransparentPurple.png"
+    "PreviewUri": "CrystalTransparentPurple.png"
   },
   "CrystalTransparentRed": {
     "DisplayName": "Crystal, Transparent, Red",
@@ -23724,7 +23724,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "CrystalTransparentRed",
-    "PreviewUri": "@previewImages/CrystalTransparentRed.png"
+    "PreviewUri": "CrystalTransparentRed.png"
   },
   "CrystalTransparentWhite": {
     "DisplayName": "Crystal, Transparent, White",
@@ -23756,7 +23756,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "CrystalTransparentWhite",
-    "PreviewUri": "@previewImages/CrystalTransparentWhite.png"
+    "PreviewUri": "CrystalTransparentWhite.png"
   },
   "CrystalTransparentYellow": {
     "DisplayName": "Crystal, Transparent, Yellow",
@@ -23789,7 +23789,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "CrystalTransparentYellow",
-    "PreviewUri": "@previewImages/CrystalTransparentYellow.png"
+    "PreviewUri": "CrystalTransparentYellow.png"
   },
   "Cube10mmBlack": {
     "DisplayName": "Cube, 10mm, Black",
@@ -23835,7 +23835,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Cube10mmBlack",
-    "PreviewUri": "@previewImages/Cube10mmBlack.png"
+    "PreviewUri": "Cube10mmBlack.png"
   },
   "Cube10mmBlue": {
     "DisplayName": "Cube, 10mm, Blue",
@@ -23881,7 +23881,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Cube10mmBlue",
-    "PreviewUri": "@previewImages/Cube10mmBlue.png"
+    "PreviewUri": "Cube10mmBlue.png"
   },
   "Cube10mmBrown": {
     "DisplayName": "Cube, 10mm, Brown",
@@ -23927,7 +23927,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "Cube10mmBrown",
-    "PreviewUri": "@previewImages/Cube10mmBrown.png"
+    "PreviewUri": "Cube10mmBrown.png"
   },
   "Cube10mmGreen": {
     "DisplayName": "Cube, 10mm, Green",
@@ -23973,7 +23973,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Cube10mmGreen",
-    "PreviewUri": "@previewImages/Cube10mmGreen.png"
+    "PreviewUri": "Cube10mmGreen.png"
   },
   "Cube10mmGray": {
     "DisplayName": "Cube, 10mm, Gray",
@@ -24019,7 +24019,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Cube10mmGray",
-    "PreviewUri": "@previewImages/Cube10mmGray.png"
+    "PreviewUri": "Cube10mmGray.png"
   },
   "Cube10mmMustard": {
     "DisplayName": "Cube, 10mm, Mustard",
@@ -24057,7 +24057,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "mustard",
     "IsDisabled": true,
     "Key": "Cube10mmMustard",
-    "PreviewUri": "@previewImages/Cube10mmMustard.png"
+    "PreviewUri": "Cube10mmMustard.png"
   },
   "Cube10mmOrange": {
     "DisplayName": "Cube, 10mm, Orange",
@@ -24103,7 +24103,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Cube10mmOrange",
-    "PreviewUri": "@previewImages/Cube10mmOrange.png"
+    "PreviewUri": "Cube10mmOrange.png"
   },
   "Cube10mmPink": {
     "DisplayName": "Cube, 10mm, Pink",
@@ -24149,7 +24149,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "Cube10mmPink",
-    "PreviewUri": "@previewImages/Cube10mmPink.png"
+    "PreviewUri": "Cube10mmPink.png"
   },
   "Cube10mmPurple": {
     "DisplayName": "Cube, 10mm, Purple",
@@ -24195,7 +24195,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Cube10mmPurple",
-    "PreviewUri": "@previewImages/Cube10mmPurple.png"
+    "PreviewUri": "Cube10mmPurple.png"
   },
   "Cube10mmRed": {
     "PlaygroundColor": {
@@ -24241,7 +24241,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Cube10mmRed",
-    "PreviewUri": "@previewImages/Cube10mmRed.png"
+    "PreviewUri": "Cube10mmRed.png"
   },
   "Cube10mmWhite": {
     "PlaygroundColor": {
@@ -24287,7 +24287,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Cube10mmWhite",
-    "PreviewUri": "@previewImages/Cube10mmWhite.png"
+    "PreviewUri": "Cube10mmWhite.png"
   },
   "Cube10mmYellow": {
     "DisplayName": "Cube, 10mm, Yellow",
@@ -24333,7 +24333,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Cube10mmYellow",
-    "PreviewUri": "@previewImages/Cube10mmYellow.png"
+    "PreviewUri": "Cube10mmYellow.png"
   },
   "Cube15mmRed": {
     "PlaygroundColor": {
@@ -24379,7 +24379,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Cube15mmRed",
-    "PreviewUri": "@previewImages/Cube15mmRed.png"
+    "PreviewUri": "Cube15mmRed.png"
   },
   "Cube8mmBrightYellow": {
     "PlaygroundColor": {
@@ -24425,7 +24425,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Cube8mmBrightYellow",
-    "PreviewUri": "@previewImages/Cube8mmBrightYellow.png"
+    "PreviewUri": "Cube8mmBrightYellow.png"
   },
   "Cube8mmBrown": {
     "PlaygroundColor": {
@@ -24471,7 +24471,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "Cube8mmBrown",
-    "PreviewUri": "@previewImages/Cube8mmBrown.png"
+    "PreviewUri": "Cube8mmBrown.png"
   },
   "Cube8mmGray": {
     "PlaygroundColor": {
@@ -24517,7 +24517,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Cube8mmGray",
-    "PreviewUri": "@previewImages/Cube8mmGray.png"
+    "PreviewUri": "Cube8mmGray.png"
   },
   "Cube8mmLightPink": {
     "PlaygroundColor": {
@@ -24564,7 +24564,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "lightpink",
     "IsDisabled": false,
     "Key": "Cube8mmLightPink",
-    "PreviewUri": "@previewImages/Cube8mmLightPink.png"
+    "PreviewUri": "Cube8mmLightPink.png"
   },
   "Cube8mmNatural": {
     "PlaygroundColor": {
@@ -24602,7 +24602,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "natural",
     "IsDisabled": true,
     "Key": "Cube8mmNatural",
-    "PreviewUri": "@previewImages/Cube8mmNatural.png"
+    "PreviewUri": "Cube8mmNatural.png"
   },
   "Cube8mmPink": {
     "PlaygroundColor": {
@@ -24648,7 +24648,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "Cube8mmPink",
-    "PreviewUri": "@previewImages/Cube8mmPink.png"
+    "PreviewUri": "Cube8mmPink.png"
   },
   "Cube8mmYellow": {
     "PlaygroundColor": {
@@ -24694,7 +24694,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Cube8mmYellow",
-    "PreviewUri": "@previewImages/Cube8mmYellow.png"
+    "PreviewUri": "Cube8mmYellow.png"
   },
   "CubeMetalBronze8mm": {
     "PlaygroundColor": {
@@ -24742,7 +24742,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "copper",
     "IsDisabled": false,
     "Key": "CubeMetalBronze8mm",
-    "PreviewUri": "@previewImages/CubeMetalBronze8mm.png"
+    "PreviewUri": "CubeMetalBronze8mm.png"
   },
   "CubeMetalGold8mm": {
     "PlaygroundColor": {
@@ -24789,7 +24789,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "CubeMetalGold8mm",
-    "PreviewUri": "@previewImages/CubeMetalGold8mm.png"
+    "PreviewUri": "CubeMetalGold8mm.png"
   },
   "CubeMetalSilver8mm": {
     "PlaygroundColor": {
@@ -24836,7 +24836,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "CubeMetalSilver8mm",
-    "PreviewUri": "@previewImages/CubeMetalSilver8mm.png"
+    "PreviewUri": "CubeMetalSilver8mm.png"
   },
   "Cylinder10mmx10mmBlack": {
     "DisplayName": "Cylinder, 10mm x 10mm, Black",
@@ -24875,7 +24875,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Cylinder10mmx10mmBlack",
-    "PreviewUri": "@previewImages/Cylinder10mmx10mmBlack.png"
+    "PreviewUri": "Cylinder10mmx10mmBlack.png"
   },
   "Cylinder10mmx10mmBlue": {
     "DisplayName": "Cylinder, 10mm x 10mm, Blue",
@@ -24914,7 +24914,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Cylinder10mmx10mmBlue",
-    "PreviewUri": "@previewImages/Cylinder10mmx10mmBlue.png"
+    "PreviewUri": "Cylinder10mmx10mmBlue.png"
   },
   "Cylinder10mmx10mmGreen": {
     "DisplayName": "Cylinder, 10mm x 10mm, Green",
@@ -24953,7 +24953,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Cylinder10mmx10mmGreen",
-    "PreviewUri": "@previewImages/Cylinder10mmx10mmGreen.png"
+    "PreviewUri": "Cylinder10mmx10mmGreen.png"
   },
   "Cylinder10mmx10mmOrange": {
     "DisplayName": "Cylinder, 10mm x 10mm, Orange",
@@ -24992,7 +24992,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Cylinder10mmx10mmOrange",
-    "PreviewUri": "@previewImages/Cylinder10mmx10mmOrange.png"
+    "PreviewUri": "Cylinder10mmx10mmOrange.png"
   },
   "Cylinder10mmx10mmPurple": {
     "DisplayName": "Cylinder, 10mm x 10mm, Purple",
@@ -25031,7 +25031,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Cylinder10mmx10mmPurple",
-    "PreviewUri": "@previewImages/Cylinder10mmx10mmPurple.png"
+    "PreviewUri": "Cylinder10mmx10mmPurple.png"
   },
   "Cylinder10mmx10mmRed": {
     "DisplayName": "Cylinder, 10mm x 10mm, Red",
@@ -25070,7 +25070,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Cylinder10mmx10mmRed",
-    "PreviewUri": "@previewImages/Cylinder10mmx10mmRed.png"
+    "PreviewUri": "Cylinder10mmx10mmRed.png"
   },
   "Cylinder10mmx10mmWhite": {
     "DisplayName": "Cylinder, 10mm x 10mm, White",
@@ -25109,7 +25109,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Cylinder10mmx10mmWhite",
-    "PreviewUri": "@previewImages/Cylinder10mmx10mmWhite.png"
+    "PreviewUri": "Cylinder10mmx10mmWhite.png"
   },
   "Cylinder10mmx10mmYellow": {
     "DisplayName": "Cylinder, 10mm x 10mm, Yellow",
@@ -25148,7 +25148,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Cylinder10mmx10mmYellow",
-    "PreviewUri": "@previewImages/Cylinder10mmx10mmYellow.png"
+    "PreviewUri": "Cylinder10mmx10mmYellow.png"
   },
   "Cylinder15mmx8mmYellow": {
     "DisplayName": "Cylinder, 8mm x 15mm, Yellow",
@@ -25187,7 +25187,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Cylinder15mmx8mmYellow",
-    "PreviewUri": "@previewImages/Cylinder15mmx8mmYellow.png"
+    "PreviewUri": "Cylinder15mmx8mmYellow.png"
   },
   "Cylinder18mmx10mmYellow": {
     "DisplayName": "Cylinder, 10mm x 18mm, Yellow",
@@ -25226,7 +25226,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Cylinder18mmx10mmYellow",
-    "PreviewUri": "@previewImages/Cylinder18mmx10mmYellow.png"
+    "PreviewUri": "Cylinder18mmx10mmYellow.png"
   },
   "Cylinder30mmx14mmNatural": {
     "DisplayName": "Cylinder, 14mm x 30mm, Natural",
@@ -25254,7 +25254,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "natural",
     "IsDisabled": true,
     "Key": "Cylinder30mmx14mmNatural",
-    "PreviewUri": "@previewImages/Cylinder30mmx14mmNatural.png"
+    "PreviewUri": "Cylinder30mmx14mmNatural.png"
   },
   "Cylinder30mmx15mmBlue": {
     "DisplayName": "Cylinder, 30mm x 15mm, Blue",
@@ -25293,7 +25293,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Cylinder30mmx15mmBlue",
-    "PreviewUri": "@previewImages/Cylinder30mmx15mmBlue.png"
+    "PreviewUri": "Cylinder30mmx15mmBlue.png"
   },
   "Cylinder30mmx15mmYellow": {
     "DisplayName": "Cylinder, 30mm x 15mm, Yellow",
@@ -25332,7 +25332,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Cylinder30mmx15mmYellow",
-    "PreviewUri": "@previewImages/Cylinder30mmx15mmYellow.png"
+    "PreviewUri": "Cylinder30mmx15mmYellow.png"
   },
   "D10Black": {
     "DisplayName": "D10, Black",
@@ -25360,7 +25360,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D10Black",
-    "PreviewUri": "@previewImages/D10Black.png"
+    "PreviewUri": "D10Black.png"
   },
   "D10Blue": {
     "DisplayName": "D10, Blue",
@@ -25388,7 +25388,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D10Blue",
-    "PreviewUri": "@previewImages/D10Blue.png"
+    "PreviewUri": "D10Blue.png"
   },
   "D10Green": {
     "DisplayName": "D10, Green",
@@ -25416,7 +25416,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "D10Green",
-    "PreviewUri": "@previewImages/D10Green.png"
+    "PreviewUri": "D10Green.png"
   },
   "D10Red": {
     "DisplayName": "D10, Red",
@@ -25444,7 +25444,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "D10Red",
-    "PreviewUri": "@previewImages/D10Red.png"
+    "PreviewUri": "D10Red.png"
   },
   "D10White": {
     "DisplayName": "D10, White",
@@ -25472,7 +25472,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D10White",
-    "PreviewUri": "@previewImages/D10White.png"
+    "PreviewUri": "D10White.png"
   },
   "D10Yellow": {
     "DisplayName": "D10, Yellow",
@@ -25500,7 +25500,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "D10Yellow",
-    "PreviewUri": "@previewImages/D10Yellow.png"
+    "PreviewUri": "D10Yellow.png"
   },
   "D10x10Black": {
     "DisplayName": "D10x10, Black",
@@ -25528,7 +25528,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D10x10Black",
-    "PreviewUri": "@previewImages/D10x10Black.png"
+    "PreviewUri": "D10x10Black.png"
   },
   "D10x10BlackonRed": {
     "DisplayName": "D10x10, Black on Red",
@@ -25555,7 +25555,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": true,
     "Key": "D10x10BlackonRed",
-    "PreviewUri": "@previewImages/D10x10BlackonRed.png"
+    "PreviewUri": "D10x10BlackonRed.png"
   },
   "D10x10WhiteonRed": {
     "DisplayName": "D10x10, White on Red",
@@ -25582,7 +25582,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": true,
     "Key": "D10x10WhiteonRed",
-    "PreviewUri": "@previewImages/D10x10WhiteonRed.png"
+    "PreviewUri": "D10x10WhiteonRed.png"
   },
   "D12Black": {
     "DisplayName": "D12, Black",
@@ -25614,7 +25614,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D12Black",
-    "PreviewUri": "@previewImages/D12Black.png"
+    "PreviewUri": "D12Black.png"
   },
   "D12Blue": {
     "DisplayName": "D12, Blue",
@@ -25646,7 +25646,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D12Blue",
-    "PreviewUri": "@previewImages/D12Blue.png"
+    "PreviewUri": "D12Blue.png"
   },
   "D12BodyParts": {
     "DisplayName": "D12, Body Parts",
@@ -25681,7 +25681,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "D12BodyParts",
-    "PreviewUri": "@previewImages/D12BodyParts.png"
+    "PreviewUri": "D12BodyParts.png"
   },
   "D12Green": {
     "DisplayName": "D12, Green",
@@ -25713,7 +25713,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "D12Green",
-    "PreviewUri": "@previewImages/D12Green.png"
+    "PreviewUri": "D12Green.png"
   },
   "D12Red": {
     "DisplayName": "D12, Red",
@@ -25745,7 +25745,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "D12Red",
-    "PreviewUri": "@previewImages/D12Red.png"
+    "PreviewUri": "D12Red.png"
   },
   "D12Yellow": {
     "DisplayName": "D12, Yellow",
@@ -25777,7 +25777,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "D12Yellow",
-    "PreviewUri": "@previewImages/D12Yellow.png"
+    "PreviewUri": "D12Yellow.png"
   },
   "D20Blue": {
     "DisplayName": "D20, Blue",
@@ -25808,7 +25808,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D20Blue",
-    "PreviewUri": "@previewImages/D20Blue.png"
+    "PreviewUri": "D20Blue.png"
   },
   "D20Green": {
     "DisplayName": "D20, Green",
@@ -25839,7 +25839,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "D20Green",
-    "PreviewUri": "@previewImages/D20Green.png"
+    "PreviewUri": "D20Green.png"
   },
   "D20Red": {
     "DisplayName": "D20, Red",
@@ -25870,7 +25870,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "D20Red",
-    "PreviewUri": "@previewImages/D20Red.png"
+    "PreviewUri": "D20Red.png"
   },
   "D316mmRoundedNumeralBlack": {
     "DisplayName": "D3, 16mm, Rounded, Numeral, Black",
@@ -25900,7 +25900,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": true,
     "Key": "D316mmRoundedNumeralBlack",
-    "PreviewUri": "@previewImages/D316mmRoundedNumeralBlack.png"
+    "PreviewUri": "D316mmRoundedNumeralBlack.png"
   },
   "D316mmRoundedNumeralBlue": {
     "DisplayName": "D3, 16mm, Rounded, Numeral, Blue",
@@ -25929,7 +25929,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": true,
     "Key": "D316mmRoundedNumeralBlue",
-    "PreviewUri": "@previewImages/D316mmRoundedNumeralBlue.png"
+    "PreviewUri": "D316mmRoundedNumeralBlue.png"
   },
   "D316mmRoundedNumeralGreen": {
     "DisplayName": "D3, 16mm, Rounded, Numeral, Green",
@@ -25959,7 +25959,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "D316mmRoundedNumeralGreen",
-    "PreviewUri": "@previewImages/D316mmRoundedNumeralGreen.png"
+    "PreviewUri": "D316mmRoundedNumeralGreen.png"
   },
   "D316mmRoundedNumeralRed": {
     "DisplayName": "D3, 16mm, Rounded, Numeral, Red",
@@ -25988,7 +25988,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": true,
     "Key": "D316mmRoundedNumeralRed",
-    "PreviewUri": "@previewImages/D316mmRoundedNumeralRed.png"
+    "PreviewUri": "D316mmRoundedNumeralRed.png"
   },
   "D316mmRoundedNumeralWhite": {
     "DisplayName": "D3, 16mm, Rounded, Numeral, White",
@@ -26018,7 +26018,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D316mmRoundedNumeralWhite",
-    "PreviewUri": "@previewImages/D316mmRoundedNumeralWhite.png"
+    "PreviewUri": "D316mmRoundedNumeralWhite.png"
   },
   "D316mmRoundedNumeralYellow": {
     "DisplayName": "D3, 16mm, Rounded, Numeral, Yellow",
@@ -26048,7 +26048,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "D316mmRoundedNumeralYellow",
-    "PreviewUri": "@previewImages/D316mmRoundedNumeralYellow.png"
+    "PreviewUri": "D316mmRoundedNumeralYellow.png"
   },
   "D4Black": {
     "DisplayName": "D4, Black",
@@ -26079,7 +26079,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D4Black",
-    "PreviewUri": "@previewImages/D4Black.png"
+    "PreviewUri": "D4Black.png"
   },
   "D4Blank": {
     "DisplayName": "D4, Blank",
@@ -26122,7 +26122,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D4Blank",
-    "PreviewUri": "@previewImages/D4Blank.png"
+    "PreviewUri": "D4Blank.png"
   },
   "D4Blue": {
     "DisplayName": "D4, Blue",
@@ -26153,7 +26153,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D4Blue",
-    "PreviewUri": "@previewImages/D4Blue.png"
+    "PreviewUri": "D4Blue.png"
   },
   "D4Green": {
     "DisplayName": "D4, Green",
@@ -26184,7 +26184,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "D4Green",
-    "PreviewUri": "@previewImages/D4Green.png"
+    "PreviewUri": "D4Green.png"
   },
   "D4Orange": {
     "DisplayName": "D4, Orange",
@@ -26215,7 +26215,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "D4Orange",
-    "PreviewUri": "@previewImages/D4Orange.png"
+    "PreviewUri": "D4Orange.png"
   },
   "D4Red": {
     "DisplayName": "D4, Red",
@@ -26246,7 +26246,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "D4Red",
-    "PreviewUri": "@previewImages/D4Red.png"
+    "PreviewUri": "D4Red.png"
   },
   "D4White": {
     "DisplayName": "D4, White",
@@ -26277,7 +26277,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D4White",
-    "PreviewUri": "@previewImages/D4White.png"
+    "PreviewUri": "D4White.png"
   },
   "D4Yellow": {
     "DisplayName": "D4, Yellow",
@@ -26308,7 +26308,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "D4Yellow",
-    "PreviewUri": "@previewImages/D4Yellow.png"
+    "PreviewUri": "D4Yellow.png"
   },
   "D612mmBlack": {
     "DisplayName": "D6, 12mm, Black",
@@ -26353,7 +26353,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D612mmBlack",
-    "PreviewUri": "@previewImages/D612mmBlack.png"
+    "PreviewUri": "D612mmBlack.png"
   },
   "D612mmBlue": {
     "DisplayName": "D6, 12mm, Blue",
@@ -26398,7 +26398,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D612mmBlue",
-    "PreviewUri": "@previewImages/D612mmBlue.png"
+    "PreviewUri": "D612mmBlue.png"
   },
   "D612mmGreen": {
     "DisplayName": "D6, 12mm, Green",
@@ -26443,7 +26443,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "D612mmGreen",
-    "PreviewUri": "@previewImages/D612mmGreen.png"
+    "PreviewUri": "D612mmGreen.png"
   },
   "D612mmMarbledBlack": {
     "DisplayName": "D6, 12mm, Marbled Black",
@@ -26487,7 +26487,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": true,
     "Key": "D612mmMarbledBlack",
-    "PreviewUri": "@previewImages/D612mmMarbledBlack.png"
+    "PreviewUri": "D612mmMarbledBlack.png"
   },
   "D612mmMarbledGreen": {
     "DisplayName": "D6, 12mm, Marbled Green",
@@ -26532,7 +26532,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "D612mmMarbledGreen",
-    "PreviewUri": "@previewImages/D612mmMarbledGreen.png"
+    "PreviewUri": "D612mmMarbledGreen.png"
   },
   "D612mmRed": {
     "DisplayName": "D6, 12mm, Red",
@@ -26577,7 +26577,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "D612mmRed",
-    "PreviewUri": "@previewImages/D612mmRed.png"
+    "PreviewUri": "D612mmRed.png"
   },
   "D612mmRoundedBlue": {
     "DisplayName": "D6, 12mm, Rounded, Blue",
@@ -26622,7 +26622,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D612mmRoundedBlue",
-    "PreviewUri": "@previewImages/D612mmRoundedBlue.png"
+    "PreviewUri": "D612mmRoundedBlue.png"
   },
   "D612mmRoundedBlue/Black": {
     "DisplayName": "D6, 12mm, Rounded, Blue/Black",
@@ -26668,7 +26668,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D612mmRoundedBlue/Black",
-    "PreviewUri": "@previewImages/D612mmRoundedBlue_Black.png"
+    "PreviewUri": "D612mmRoundedBlue_Black.png"
   },
   "D612mmRoundedGolden/Black": {
     "DisplayName": "D6, 12mm, Rounded, Golden/Black",
@@ -26714,7 +26714,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D612mmRoundedGolden/Black",
-    "PreviewUri": "@previewImages/D612mmRoundedGolden_Black.png"
+    "PreviewUri": "D612mmRoundedGolden_Black.png"
   },
   "D612mmRoundedOrange/Blue": {
     "DisplayName": "D6, 12mm, Rounded, Orange/Blue",
@@ -26760,7 +26760,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D612mmRoundedOrange/Blue",
-    "PreviewUri": "@previewImages/D612mmRoundedOrange_Blue.png"
+    "PreviewUri": "D612mmRoundedOrange_Blue.png"
   },
   "D612mmRoundedPurple/Black": {
     "DisplayName": "D6, 12mm, Rounded, Purple/Black",
@@ -26806,7 +26806,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "D612mmRoundedPurple/Black",
-    "PreviewUri": "@previewImages/D612mmRoundedPurple_Black.png"
+    "PreviewUri": "D612mmRoundedPurple_Black.png"
   },
   "D612mmRoundedWhite/Black": {
     "DisplayName": "D6, 12mm, Rounded, White/Black",
@@ -26852,7 +26852,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D612mmRoundedWhite/Black",
-    "PreviewUri": "@previewImages/D612mmRoundedWhite_Black.png"
+    "PreviewUri": "D612mmRoundedWhite_Black.png"
   },
   "D612mmTransparentBlack": {
     "DisplayName": "D6, 12mm, Transparent, Black",
@@ -26897,7 +26897,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": true,
     "Key": "D612mmTransparentBlack",
-    "PreviewUri": "@previewImages/D612mmTransparentBlack.png"
+    "PreviewUri": "D612mmTransparentBlack.png"
   },
   "D612mmTransparentBlue": {
     "DisplayName": "D6, 12mm, Transparent, Blue",
@@ -26943,7 +26943,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D612mmTransparentBlue",
-    "PreviewUri": "@previewImages/D612mmTransparentBlue.png"
+    "PreviewUri": "D612mmTransparentBlue.png"
   },
   "D612mmTransparentGreen": {
     "DisplayName": "D6, 12mm, Transparent, Green",
@@ -26989,7 +26989,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "D612mmTransparentGreen",
-    "PreviewUri": "@previewImages/D612mmTransparentGreen.png"
+    "PreviewUri": "D612mmTransparentGreen.png"
   },
   "D612mmTransparentOrange": {
     "DisplayName": "D6, 12mm, Transparent, Orange",
@@ -27035,7 +27035,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "D612mmTransparentOrange",
-    "PreviewUri": "@previewImages/D612mmTransparentOrange.png"
+    "PreviewUri": "D612mmTransparentOrange.png"
   },
   "D612mmTransparentPurple": {
     "DisplayName": "D6, 12mm, Transparent, Purple",
@@ -27081,7 +27081,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "D612mmTransparentPurple",
-    "PreviewUri": "@previewImages/D612mmTransparentPurple.png"
+    "PreviewUri": "D612mmTransparentPurple.png"
   },
   "D612mmTransparentRed": {
     "DisplayName": "D6, 12mm, Transparent, Red",
@@ -27127,7 +27127,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "D612mmTransparentRed",
-    "PreviewUri": "@previewImages/D612mmTransparentRed.png"
+    "PreviewUri": "D612mmTransparentRed.png"
   },
   "D612mmTransparentYellow": {
     "DisplayName": "D6, 12mm, Transparent, Yellow",
@@ -27173,7 +27173,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "D612mmTransparentYellow",
-    "PreviewUri": "@previewImages/D612mmTransparentYellow.png"
+    "PreviewUri": "D612mmTransparentYellow.png"
   },
   "D612mmWhite": {
     "DisplayName": "D6, 12mm, White",
@@ -27218,7 +27218,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D612mmWhite",
-    "PreviewUri": "@previewImages/D612mmWhite.png"
+    "PreviewUri": "D612mmWhite.png"
   },
   "D612mmYellow": {
     "DisplayName": "D6, 12mm, Yellow",
@@ -27263,7 +27263,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "D612mmYellow",
-    "PreviewUri": "@previewImages/D612mmYellow.png"
+    "PreviewUri": "D612mmYellow.png"
   },
   "D615mmBoldNumeralRed": {
     "DisplayName": "D6, 15mm, Bold Numeral, Red",
@@ -27310,7 +27310,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "D615mmBoldNumeralRed",
-    "PreviewUri": "@previewImages/D615mmBoldNumeralRed.png"
+    "PreviewUri": "D615mmBoldNumeralRed.png"
   },
   "D615mmNumeralBlue": {
     "DisplayName": "D6, 15mm, Numeral, Blue",
@@ -27357,7 +27357,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D615mmNumeralBlue",
-    "PreviewUri": "@previewImages/D615mmNumeralBlue.png"
+    "PreviewUri": "D615mmNumeralBlue.png"
   },
   "D615mmNumeralGreen": {
     "DisplayName": "D6, 15mm, Numeral, Green",
@@ -27403,7 +27403,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": true,
     "Key": "D615mmNumeralGreen",
-    "PreviewUri": "@previewImages/D615mmNumeralGreen.png"
+    "PreviewUri": "D615mmNumeralGreen.png"
   },
   "D615mmNumeralGray": {
     "DisplayName": "D6, 15mm, Numeral, Gray",
@@ -27450,7 +27450,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "D615mmNumeralGray",
-    "PreviewUri": "@previewImages/D615mmNumeralGray.png"
+    "PreviewUri": "D615mmNumeralGray.png"
   },
   "D616mmBetrayal": {
     "DisplayName": "D6, 16mm, Betrayal",
@@ -27473,7 +27473,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D616mmBetrayal",
-    "PreviewUri": "@previewImages/D616mmBetrayal.png"
+    "PreviewUri": "D616mmBetrayal.png"
   },
   "D616mmBinary": {
     "DisplayName": "D6, 16mm, Binary",
@@ -27497,7 +27497,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D616mmBinary",
-    "PreviewUri": "@previewImages/D616mmBinary.png"
+    "PreviewUri": "D616mmBinary.png"
   },
   "D616mmBlack": {
     "DisplayName": "D6, 16mm, Black",
@@ -27542,7 +27542,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D616mmBlack",
-    "PreviewUri": "@previewImages/D616mmBlack.png"
+    "PreviewUri": "D616mmBlack.png"
   },
   "D616mmBlackonBlue": {
     "DisplayName": "D6, 16mm, Black on Blue",
@@ -27587,7 +27587,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D616mmBlackonBlue",
-    "PreviewUri": "@previewImages/D616mmBlackonBlue.png"
+    "PreviewUri": "D616mmBlackonBlue.png"
   },
   "D616mmBlackonPink": {
     "DisplayName": "D6, 16mm, Black on Pink",
@@ -27631,7 +27631,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": true,
     "Key": "D616mmBlackonPink",
-    "PreviewUri": "@previewImages/D616mmBlackonPink.png"
+    "PreviewUri": "D616mmBlackonPink.png"
   },
   "D616mmBlankBlack": {
     "DisplayName": "D6, 16mm, Blank, Black",
@@ -27666,7 +27666,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D616mmBlankBlack",
-    "PreviewUri": "@previewImages/D616mmBlankBlack.png"
+    "PreviewUri": "D616mmBlankBlack.png"
   },
   "D616mmBlankBlue": {
     "DisplayName": "D6, 16mm, Blank, Blue",
@@ -27701,7 +27701,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D616mmBlankBlue",
-    "PreviewUri": "@previewImages/D616mmBlankBlue.png"
+    "PreviewUri": "D616mmBlankBlue.png"
   },
   "D616mmBlankGreen": {
     "DisplayName": "D6, 16mm, Blank, Green",
@@ -27736,7 +27736,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "D616mmBlankGreen",
-    "PreviewUri": "@previewImages/D616mmBlankGreen.png"
+    "PreviewUri": "D616mmBlankGreen.png"
   },
   "D616mmBlankOrange": {
     "DisplayName": "D6, 16mm, Blank, Orange",
@@ -27771,7 +27771,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "D616mmBlankOrange",
-    "PreviewUri": "@previewImages/D616mmBlankOrange.png"
+    "PreviewUri": "D616mmBlankOrange.png"
   },
   "D616mmBlankPurple": {
     "DisplayName": "D6, 16mm, Blank, Purple",
@@ -27806,7 +27806,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "D616mmBlankPurple",
-    "PreviewUri": "@previewImages/D616mmBlankPurple.png"
+    "PreviewUri": "D616mmBlankPurple.png"
   },
   "D616mmBlankRed": {
     "DisplayName": "D6, 16mm, Blank, Red",
@@ -27841,7 +27841,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "D616mmBlankRed",
-    "PreviewUri": "@previewImages/D616mmBlankRed.png"
+    "PreviewUri": "D616mmBlankRed.png"
   },
   "D616mmBlankWhite": {
     "DisplayName": "D6, 16mm, Blank, White",
@@ -27876,7 +27876,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D616mmBlankWhite",
-    "PreviewUri": "@previewImages/D616mmBlankWhite.png"
+    "PreviewUri": "D616mmBlankWhite.png"
   },
   "D616mmBlankWoodDark": {
     "DisplayName": "D6, 16mm, Blank, Wood, Dark",
@@ -27912,7 +27912,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "D616mmBlankWoodDark",
-    "PreviewUri": "@previewImages/D616mmBlankWoodDark.png"
+    "PreviewUri": "D616mmBlankWoodDark.png"
   },
   "D616mmBlankYellow": {
     "DisplayName": "D6, 16mm, Blank, Yellow",
@@ -27947,7 +27947,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "D616mmBlankYellow",
-    "PreviewUri": "@previewImages/D616mmBlankYellow.png"
+    "PreviewUri": "D616mmBlankYellow.png"
   },
   "D616mmGreen": {
     "DisplayName": "D6, 16mm, Green",
@@ -27992,7 +27992,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "D616mmGreen",
-    "PreviewUri": "@previewImages/D616mmGreen.png"
+    "PreviewUri": "D616mmGreen.png"
   },
   "D616mmLightningBoltBlack": {
     "DisplayName": "D6, 16mm, Lightning Bolt, Black",
@@ -28018,7 +28018,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D616mmLightningBoltBlack",
-    "PreviewUri": "@previewImages/D616mmLightningBoltBlack.png"
+    "PreviewUri": "D616mmLightningBoltBlack.png"
   },
   "D616mmLightningBoltBlue": {
     "DisplayName": "D6, 16mm, Lightning Bolt, Blue",
@@ -28044,7 +28044,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D616mmLightningBoltBlue",
-    "PreviewUri": "@previewImages/D616mmLightningBoltBlue.png"
+    "PreviewUri": "D616mmLightningBoltBlue.png"
   },
   "D616mmLightningBoltBrown": {
     "DisplayName": "D6, 16mm, Lightning Bolt, Brown",
@@ -28070,7 +28070,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "D616mmLightningBoltBrown",
-    "PreviewUri": "@previewImages/D616mmLightningBoltBrown.png"
+    "PreviewUri": "D616mmLightningBoltBrown.png"
   },
   "D616mmLightningBoltGreen": {
     "DisplayName": "D6, 16mm, Lightning Bolt, Green",
@@ -28095,7 +28095,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "D616mmLightningBoltGreen",
-    "PreviewUri": "@previewImages/D616mmLightningBoltGreen.png"
+    "PreviewUri": "D616mmLightningBoltGreen.png"
   },
   "D616mmLightningBoltYellow": {
     "DisplayName": "D6, 16mm, Lightning Bolt, Yellow",
@@ -28121,7 +28121,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "D616mmLightningBoltYellow",
-    "PreviewUri": "@previewImages/D616mmLightningBoltYellow.png"
+    "PreviewUri": "D616mmLightningBoltYellow.png"
   },
   "D616mmNumeralBlack": {
     "DisplayName": "D6, 16mm, Numeral, Black",
@@ -28168,7 +28168,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D616mmNumeralBlack",
-    "PreviewUri": "@previewImages/D616mmNumeralBlack.png"
+    "PreviewUri": "D616mmNumeralBlack.png"
   },
   "D616mmPurple": {
     "DisplayName": "D6, 16mm, Purple",
@@ -28212,7 +28212,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": true,
     "Key": "D616mmPurple",
-    "PreviewUri": "@previewImages/D616mmPurple.png"
+    "PreviewUri": "D616mmPurple.png"
   },
   "D616mmRed": {
     "DisplayName": "D6, 16mm, Red",
@@ -28257,7 +28257,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "D616mmRed",
-    "PreviewUri": "@previewImages/D616mmRed.png"
+    "PreviewUri": "D616mmRed.png"
   },
   "D616mmRoundedBlackPearl": {
     "DisplayName": "D6, 16mm, Rounded, Black Pearl",
@@ -28302,7 +28302,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D616mmRoundedBlackPearl",
-    "PreviewUri": "@previewImages/D616mmRoundedBlackPearl.png"
+    "PreviewUri": "D616mmRoundedBlackPearl.png"
   },
   "D616mmRoundedBluePearl": {
     "DisplayName": "D6, 16mm, Rounded, Blue Pearl",
@@ -28347,7 +28347,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D616mmRoundedBluePearl",
-    "PreviewUri": "@previewImages/D616mmRoundedBluePearl.png"
+    "PreviewUri": "D616mmRoundedBluePearl.png"
   },
   "D616mmRoundedBrownOpaque": {
     "DisplayName": "D6, 16mm, Rounded, Brown Opaque",
@@ -28392,7 +28392,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "D616mmRoundedBrownOpaque",
-    "PreviewUri": "@previewImages/D616mmRoundedBrownOpaque.png"
+    "PreviewUri": "D616mmRoundedBrownOpaque.png"
   },
   "D616mmRoundedBrownPearl": {
     "DisplayName": "D6, 16mm, Rounded, Brown Pearl",
@@ -28489,7 +28489,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "D616mmRoundedBrownPearl",
-    "PreviewUri": "@previewImages/D616mmRoundedBrownPearl.png"
+    "PreviewUri": "D616mmRoundedBrownPearl.png"
   },
   "D616mmRoundedGreenPearl": {
     "DisplayName": "D6, 16mm, Rounded, Green Pearl",
@@ -28534,7 +28534,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "D616mmRoundedGreenPearl",
-    "PreviewUri": "@previewImages/D616mmRoundedGreenPearl.png"
+    "PreviewUri": "D616mmRoundedGreenPearl.png"
   },
   "D616mmRoundedOrangeOpaque": {
     "DisplayName": "D6, 16mm, Rounded, Orange Opaque",
@@ -28579,7 +28579,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "D616mmRoundedOrangeOpaque",
-    "PreviewUri": "@previewImages/D616mmRoundedOrangeOpaque.png"
+    "PreviewUri": "D616mmRoundedOrangeOpaque.png"
   },
   "D616mmRoundedWhitePearl": {
     "DisplayName": "D6, 16mm, Rounded, White Pearl",
@@ -28676,7 +28676,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D616mmRoundedWhitePearl",
-    "PreviewUri": "@previewImages/D616mmRoundedWhitePearl.png"
+    "PreviewUri": "D616mmRoundedWhitePearl.png"
   },
   "D616mmSichermanHigh": {
     "DisplayName": "D6, 16mm, Sicherman, High",
@@ -28701,7 +28701,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D616mmSichermanHigh",
-    "PreviewUri": "@previewImages/D616mmSichermanHigh.png"
+    "PreviewUri": "D616mmSichermanHigh.png"
   },
   "D616mmSichermanLow": {
     "DisplayName": "D6, 16mm, Sicherman, Low",
@@ -28726,7 +28726,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D616mmSichermanLow",
-    "PreviewUri": "@previewImages/D616mmSichermanLow.png"
+    "PreviewUri": "D616mmSichermanLow.png"
   },
   "D616mmSymbolIvory": {
     "DisplayName": "D6, 16mm, Symbol, Ivory",
@@ -28753,7 +28753,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "ivory",
     "IsDisabled": false,
     "Key": "D616mmSymbolIvory",
-    "PreviewUri": "@previewImages/D616mmSymbolIvory.png"
+    "PreviewUri": "D616mmSymbolIvory.png"
   },
   "D616mmWhite": {
     "DisplayName": "D6, 16mm, White",
@@ -28798,7 +28798,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D616mmWhite",
-    "PreviewUri": "@previewImages/D616mmWhite.png"
+    "PreviewUri": "D616mmWhite.png"
   },
   "D616mmWood": {
     "DisplayName": "D6, 16mm, Wood",
@@ -28844,7 +28844,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "D616mmWood",
-    "PreviewUri": "@previewImages/D616mmWood.png"
+    "PreviewUri": "D616mmWood.png"
   },
   "D625mmAnimalSymbols": {
     "DisplayName": "D6, 25mm, Animal Symbols",
@@ -28877,7 +28877,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "salmon",
     "IsDisabled": false,
     "Key": "D625mmAnimalSymbols",
-    "PreviewUri": "@previewImages/D625mmAnimalSymbols.png"
+    "PreviewUri": "D625mmAnimalSymbols.png"
   },
   "D68mmBlack": {
     "DisplayName": "D6, 8mm, Black",
@@ -28923,7 +28923,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D68mmBlack",
-    "PreviewUri": "@previewImages/D68mmBlack.png"
+    "PreviewUri": "D68mmBlack.png"
   },
   "D68mmBlue": {
     "DisplayName": "D6, 8mm, Blue",
@@ -28969,7 +28969,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D68mmBlue",
-    "PreviewUri": "@previewImages/D68mmBlue.png"
+    "PreviewUri": "D68mmBlue.png"
   },
   "D68mmGreen": {
     "DisplayName": "D6, 8mm, Green",
@@ -29015,7 +29015,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "D68mmGreen",
-    "PreviewUri": "@previewImages/D68mmGreen.png"
+    "PreviewUri": "D68mmGreen.png"
   },
   "D68mmRed": {
     "DisplayName": "D6, 8mm, Red",
@@ -29061,7 +29061,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "D68mmRed",
-    "PreviewUri": "@previewImages/D68mmRed.png"
+    "PreviewUri": "D68mmRed.png"
   },
   "D6AlienBlackonGreen": {
     "DisplayName": "D6, Alien, Black on Green",
@@ -29095,7 +29095,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "D6AlienBlackonGreen",
-    "PreviewUri": "@previewImages/D6AlienBlackonGreen.png"
+    "PreviewUri": "D6AlienBlackonGreen.png"
   },
   "D6AlienRedonGreen": {
     "DisplayName": "D6, Alien, Red on Green",
@@ -29129,7 +29129,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "D6AlienRedonGreen",
-    "PreviewUri": "@previewImages/D6AlienRedonGreen.png"
+    "PreviewUri": "D6AlienRedonGreen.png"
   },
   "D6Colors": {
     "DisplayName": "D6, Colors",
@@ -29160,7 +29160,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "D6Colors",
-    "PreviewUri": "@previewImages/D6Colors.png"
+    "PreviewUri": "D6Colors.png"
   },
   "D6Dinosaur": {
     "DisplayName": "D6, Dinosaur",
@@ -29191,7 +29191,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "D6Dinosaur",
-    "PreviewUri": "@previewImages/D6Dinosaur.png"
+    "PreviewUri": "D6Dinosaur.png"
   },
   "D6Emotion": {
     "DisplayName": "D6, Emotion",
@@ -29246,7 +29246,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "D6Emotion",
-    "PreviewUri": "@previewImages/D6Emotion.png"
+    "PreviewUri": "D6Emotion.png"
   },
   "D6IndentedBlankBlue": {
     "DisplayName": "D6, Indented, Blank, Blue",
@@ -29283,7 +29283,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D6IndentedBlankBlue",
-    "PreviewUri": "@previewImages/D6IndentedBlankBlue.png"
+    "PreviewUri": "D6IndentedBlankBlue.png"
   },
   "D6IndentedBlankDarkBlue": {
     "DisplayName": "D6, Indented, Blank, Dark Blue",
@@ -29319,7 +29319,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": true,
     "Key": "D6IndentedBlankDarkBlue",
-    "PreviewUri": "@previewImages/D6IndentedBlankDarkBlue.png"
+    "PreviewUri": "D6IndentedBlankDarkBlue.png"
   },
   "D6IndentedBlankGreen": {
     "DisplayName": "D6, Indented, Blank, Green",
@@ -29356,7 +29356,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "D6IndentedBlankGreen",
-    "PreviewUri": "@previewImages/D6IndentedBlankGreen.png"
+    "PreviewUri": "D6IndentedBlankGreen.png"
   },
   "D6IndentedBlankLavender": {
     "DisplayName": "D6, Indented, Blank, Lavender",
@@ -29394,7 +29394,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "lavender",
     "IsDisabled": false,
     "Key": "D6IndentedBlankLavender",
-    "PreviewUri": "@previewImages/D6IndentedBlankLavender.png"
+    "PreviewUri": "D6IndentedBlankLavender.png"
   },
   "D6IndentedBlankLightBlue": {
     "DisplayName": "D6, Indented, Blank, Light Blue",
@@ -29431,7 +29431,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "lightblue",
     "IsDisabled": true,
     "Key": "D6IndentedBlankLightBlue",
-    "PreviewUri": "@previewImages/D6IndentedBlankLightBlue.png"
+    "PreviewUri": "D6IndentedBlankLightBlue.png"
   },
   "D6IndentedBlankLimeGreen": {
     "DisplayName": "D6, Indented, Blank, Lime Green",
@@ -29469,7 +29469,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "limegreen",
     "IsDisabled": false,
     "Key": "D6IndentedBlankLimeGreen",
-    "PreviewUri": "@previewImages/D6IndentedBlankLimeGreen.png"
+    "PreviewUri": "D6IndentedBlankLimeGreen.png"
   },
   "D6IndentedBlankOrange": {
     "DisplayName": "D6, Indented, Blank, Orange",
@@ -29506,7 +29506,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "D6IndentedBlankOrange",
-    "PreviewUri": "@previewImages/D6IndentedBlankOrange.png"
+    "PreviewUri": "D6IndentedBlankOrange.png"
   },
   "D6IndentedBlankPurple": {
     "DisplayName": "D6, Indented, Blank, Purple",
@@ -29543,7 +29543,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "D6IndentedBlankPurple",
-    "PreviewUri": "@previewImages/D6IndentedBlankPurple.png"
+    "PreviewUri": "D6IndentedBlankPurple.png"
   },
   "D6IndentedBlankRed": {
     "DisplayName": "D6, Indented, Blank, Red",
@@ -29580,7 +29580,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "D6IndentedBlankRed",
-    "PreviewUri": "@previewImages/D6IndentedBlankRed.png"
+    "PreviewUri": "D6IndentedBlankRed.png"
   },
   "D6IndentedBlankWhite": {
     "DisplayName": "D6, Indented, Blank, White",
@@ -29617,7 +29617,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D6IndentedBlankWhite",
-    "PreviewUri": "@previewImages/D6IndentedBlankWhite.png"
+    "PreviewUri": "D6IndentedBlankWhite.png"
   },
   "D6IndentedBlankYellow": {
     "DisplayName": "D6, Indented, Blank, Yellow",
@@ -29654,7 +29654,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "D6IndentedBlankYellow",
-    "PreviewUri": "@previewImages/D6IndentedBlankYellow.png"
+    "PreviewUri": "D6IndentedBlankYellow.png"
   },
   "D6Interrogative": {
     "DisplayName": "D6, Interrogative",
@@ -29684,7 +29684,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "D6Interrogative",
-    "PreviewUri": "@previewImages/D6Interrogative.png"
+    "PreviewUri": "D6Interrogative.png"
   },
   "D6NaturalShapes": {
     "DisplayName": "D6, Natural Shapes",
@@ -29723,7 +29723,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D6NaturalShapes",
-    "PreviewUri": "@previewImages/D6NaturalShapes.png"
+    "PreviewUri": "D6NaturalShapes.png"
   },
   "D6NegativeCounter": {
     "DisplayName": "D6, Negative Counter",
@@ -29747,7 +29747,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D6NegativeCounter",
-    "PreviewUri": "@previewImages/D6NegativeCounter.png"
+    "PreviewUri": "D6NegativeCounter.png"
   },
   "D6PartsofSpeech": {
     "DisplayName": "D6, Parts of Speech",
@@ -29780,7 +29780,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "D6PartsofSpeech",
-    "PreviewUri": "@previewImages/D6PartsofSpeech.png"
+    "PreviewUri": "D6PartsofSpeech.png"
   },
   "D6PositiveCounter": {
     "DisplayName": "D6, Positive Counter",
@@ -29804,7 +29804,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D6PositiveCounter",
-    "PreviewUri": "@previewImages/D6PositiveCounter.png"
+    "PreviewUri": "D6PositiveCounter.png"
   },
   "D6Shapes": {
     "DisplayName": "D6, Shapes",
@@ -29837,7 +29837,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "D6Shapes",
-    "PreviewUri": "@previewImages/D6Shapes.png"
+    "PreviewUri": "D6Shapes.png"
   },
   "D6Species": {
     "DisplayName": "D6, Species",
@@ -29871,7 +29871,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "D6Species",
-    "PreviewUri": "@previewImages/D6Species.png"
+    "PreviewUri": "D6Species.png"
   },
   "D6Train18mmWhite": {
     "DisplayName": "D6, Train, 18mm, White",
@@ -29904,7 +29904,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D6Train18mmWhite",
-    "PreviewUri": "@previewImages/D6Train18mmWhite.png"
+    "PreviewUri": "D6Train18mmWhite.png"
   },
   "D6WoodlandAnimals": {
     "DisplayName": "D6, Woodland Animals",
@@ -29938,7 +29938,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "D6WoodlandAnimals",
-    "PreviewUri": "@previewImages/D6WoodlandAnimals.png"
+    "PreviewUri": "D6WoodlandAnimals.png"
   },
   "D8Black": {
     "DisplayName": "D8, Black",
@@ -29969,7 +29969,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D8Black",
-    "PreviewUri": "@previewImages/D8Black.png"
+    "PreviewUri": "D8Black.png"
   },
   "D8Blank": {
     "DisplayName": "D8, Blank",
@@ -30012,7 +30012,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D8Blank",
-    "PreviewUri": "@previewImages/D8Blank.png"
+    "PreviewUri": "D8Blank.png"
   },
   "D8Blue": {
     "DisplayName": "D8, Blue",
@@ -30043,7 +30043,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D8Blue",
-    "PreviewUri": "@previewImages/D8Blue.png"
+    "PreviewUri": "D8Blue.png"
   },
   "D8Compass": {
     "DisplayName": "D8, Compass",
@@ -30086,7 +30086,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D8Compass",
-    "PreviewUri": "@previewImages/D8Compass.png"
+    "PreviewUri": "D8Compass.png"
   },
   "D8Green": {
     "DisplayName": "D8, Green",
@@ -30117,7 +30117,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "D8Green",
-    "PreviewUri": "@previewImages/D8Green.png"
+    "PreviewUri": "D8Green.png"
   },
   "D8Red": {
     "DisplayName": "D8, Red",
@@ -30148,7 +30148,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "D8Red",
-    "PreviewUri": "@previewImages/D8Red.png"
+    "PreviewUri": "D8Red.png"
   },
   "D8White": {
     "DisplayName": "D8, White",
@@ -30179,7 +30179,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "D8White",
-    "PreviewUri": "@previewImages/D8White.png"
+    "PreviewUri": "D8White.png"
   },
   "D8Yellow": {
     "DisplayName": "D8, Yellow",
@@ -30210,7 +30210,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "D8Yellow",
-    "PreviewUri": "@previewImages/D8Yellow.png"
+    "PreviewUri": "D8Yellow.png"
   },
   "DarkElfSorcererFantasyTB25": {
     "DisplayName": "Dark Elf Sorcerer, Fantasy, TB25",
@@ -30235,7 +30235,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "DarkElfSorcererFantasyTB25",
-    "PreviewUri": "@previewImages/DarkElfSorcererFantasyTB25.png"
+    "PreviewUri": "DarkElfSorcererFantasyTB25.png"
   },
   "DarkWarrior1FantasyTB25": {
     "DisplayName": "Dark Warrior 1, Fantasy, TB25",
@@ -30258,7 +30258,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DarkWarrior1FantasyTB25",
-    "PreviewUri": "@previewImages/DarkWarrior1FantasyTB25.png"
+    "PreviewUri": "DarkWarrior1FantasyTB25.png"
   },
   "DarkWarrior2FantasyTB25": {
     "DisplayName": "Dark Warrior 2, Fantasy, TB25",
@@ -30280,7 +30280,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "DarkWarrior2FantasyTB25",
-    "PreviewUri": "@previewImages/DarkWarrior2FantasyTB25.png"
+    "PreviewUri": "DarkWarrior2FantasyTB25.png"
   },
   "deadEarthPlayer'sHandbook": {
     "DisplayName": "deadEarth Player's Handbook",
@@ -30301,7 +30301,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "deadEarthPlayer'sHandbook",
-    "PreviewUri": "@previewImages/deadEarthPlayer'sHandbook.png"
+    "PreviewUri": "deadEarthPlayer'sHandbook.png"
   },
   "DealerButton": {
     "DisplayName": "Dealer Button",
@@ -30326,7 +30326,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "DealerButton",
-    "PreviewUri": "@previewImages/DealerButton.png"
+    "PreviewUri": "DealerButton.png"
   },
   "DeathKnightwithPolearm": {
     "DisplayName": "Death Knight with Polearm",
@@ -30362,7 +30362,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "DeathKnightwithPolearm",
-    "PreviewUri": "@previewImages/DeathKnightwithPolearm.png"
+    "PreviewUri": "DeathKnightwithPolearm.png"
   },
   "DeathKnightwithSword": {
     "DisplayName": "Death Knight with Sword",
@@ -30398,7 +30398,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "DeathKnightwithSword",
-    "PreviewUri": "@previewImages/DeathKnightwithSword.png"
+    "PreviewUri": "DeathKnightwithSword.png"
   },
   "DeckBoxBlank": {
     "DisplayName": "Deck Box, Blank",
@@ -30431,7 +30431,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "DeckBoxBlank",
-    "PreviewUri": "@previewImages/DeckBoxBlank.png"
+    "PreviewUri": "DeckBoxBlank.png"
   },
   "DecoderStrips": {
     "DisplayName": "Decoder Strips",
@@ -30456,7 +30456,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "DecoderStrips",
-    "PreviewUri": "@previewImages/DecoderStrips.png"
+    "PreviewUri": "DecoderStrips.png"
   },
   "DesignersTableCover": {
     "DisplayName": "Designers Table Cover",
@@ -30478,7 +30478,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": true,
     "Key": "DesignersTableCover",
-    "PreviewUri": "@previewImages/DesignersTableCover.png"
+    "PreviewUri": "DesignersTableCover.png"
   },
   "DigitalTimer": {
     "DisplayName": "Digital Timer",
@@ -30502,7 +30502,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "DigitalTimer",
-    "PreviewUri": "@previewImages/DigitalTimer.png"
+    "PreviewUri": "DigitalTimer.png"
   },
   "Dindaelus:WizardwithStaff": {
     "DisplayName": "Dindaelus: Wizard with Staff",
@@ -30540,7 +30540,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "Dindaelus:WizardwithStaff",
-    "PreviewUri": "@previewImages/Dindaelus_WizardwithStaff.png"
+    "PreviewUri": "Dindaelus_WizardwithStaff.png"
   },
   "DinosaurTokenWoodBlue": {
     "DisplayName": "Dinosaur Token, Wood, Blue",
@@ -30568,7 +30568,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "DinosaurTokenWoodBlue",
-    "PreviewUri": "@previewImages/DinosaurTokenWoodBlue.png"
+    "PreviewUri": "DinosaurTokenWoodBlue.png"
   },
   "DinosaurTokenWoodGreen": {
     "DisplayName": "Dinosaur Token, Wood, Green",
@@ -30596,7 +30596,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DinosaurTokenWoodGreen",
-    "PreviewUri": "@previewImages/DinosaurTokenWoodGreen.png"
+    "PreviewUri": "DinosaurTokenWoodGreen.png"
   },
   "DinosaurTokenWoodOrange": {
     "DisplayName": "Dinosaur Token, Wood, Orange",
@@ -30624,7 +30624,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "DinosaurTokenWoodOrange",
-    "PreviewUri": "@previewImages/DinosaurTokenWoodOrange.png"
+    "PreviewUri": "DinosaurTokenWoodOrange.png"
   },
   "DinosaurTokenWoodPurple": {
     "DisplayName": "Dinosaur Token, Wood, Purple",
@@ -30652,7 +30652,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "DinosaurTokenWoodPurple",
-    "PreviewUri": "@previewImages/DinosaurTokenWoodPurple.png"
+    "PreviewUri": "DinosaurTokenWoodPurple.png"
   },
   "DinosaurTokenWoodRed": {
     "DisplayName": "Dinosaur Token, Wood, Red",
@@ -30680,7 +30680,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "DinosaurTokenWoodRed",
-    "PreviewUri": "@previewImages/DinosaurTokenWoodRed.png"
+    "PreviewUri": "DinosaurTokenWoodRed.png"
   },
   "DinosaurTokensWoodPink": {
     "DisplayName": "Dinosaur Tokens, Wood, Pink",
@@ -30708,7 +30708,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "DinosaurTokensWoodPink",
-    "PreviewUri": "@previewImages/DinosaurTokensWoodPink.png"
+    "PreviewUri": "DinosaurTokensWoodPink.png"
   },
   "DinosaurAnkylosaurus": {
     "DisplayName": "Dinosaur, Ankylosaurus",
@@ -30733,7 +30733,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DinosaurAnkylosaurus",
-    "PreviewUri": "@previewImages/DinosaurAnkylosaurus.png"
+    "PreviewUri": "DinosaurAnkylosaurus.png"
   },
   "DinosaurAnkylosaurusPink": {
     "DisplayName": "Dinosaur, Ankylosaurus, Pink",
@@ -30760,7 +30760,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "DinosaurAnkylosaurusPink",
-    "PreviewUri": "@previewImages/DinosaurAnkylosaurusPink.png"
+    "PreviewUri": "DinosaurAnkylosaurusPink.png"
   },
   "DinosaurAnkylosaurusWoodBlue": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Blue",
@@ -30786,7 +30786,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "DinosaurAnkylosaurusWoodBlue",
-    "PreviewUri": "@previewImages/DinosaurAnkylosaurusWoodBlue.png"
+    "PreviewUri": "DinosaurAnkylosaurusWoodBlue.png"
   },
   "DinosaurAnkylosaurusWoodGreen": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Green",
@@ -30812,7 +30812,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DinosaurAnkylosaurusWoodGreen",
-    "PreviewUri": "@previewImages/DinosaurAnkylosaurusWoodGreen.png"
+    "PreviewUri": "DinosaurAnkylosaurusWoodGreen.png"
   },
   "DinosaurAnkylosaurusWoodOrange": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Orange",
@@ -30838,7 +30838,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "DinosaurAnkylosaurusWoodOrange",
-    "PreviewUri": "@previewImages/DinosaurAnkylosaurusWoodOrange.png"
+    "PreviewUri": "DinosaurAnkylosaurusWoodOrange.png"
   },
   "DinosaurAnkylosaurusWoodPink": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Pink",
@@ -30864,7 +30864,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "DinosaurAnkylosaurusWoodPink",
-    "PreviewUri": "@previewImages/DinosaurAnkylosaurusWoodPink.png"
+    "PreviewUri": "DinosaurAnkylosaurusWoodPink.png"
   },
   "DinosaurAnkylosaurusWoodPurple": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Purple",
@@ -30890,7 +30890,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "DinosaurAnkylosaurusWoodPurple",
-    "PreviewUri": "@previewImages/DinosaurAnkylosaurusWoodPurple.png"
+    "PreviewUri": "DinosaurAnkylosaurusWoodPurple.png"
   },
   "DinosaurAnkylosaurusWoodRed": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, Red",
@@ -30916,7 +30916,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "DinosaurAnkylosaurusWoodRed",
-    "PreviewUri": "@previewImages/DinosaurAnkylosaurusWoodRed.png"
+    "PreviewUri": "DinosaurAnkylosaurusWoodRed.png"
   },
   "DinosaurAnkylosaurusWoodWhite": {
     "DisplayName": "Dinosaur, Ankylosaurus, Wood, White",
@@ -30942,7 +30942,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "DinosaurAnkylosaurusWoodWhite",
-    "PreviewUri": "@previewImages/DinosaurAnkylosaurusWoodWhite.png"
+    "PreviewUri": "DinosaurAnkylosaurusWoodWhite.png"
   },
   "DinosaurBrontosaurus": {
     "DisplayName": "Dinosaur, Brontosaurus",
@@ -30967,7 +30967,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DinosaurBrontosaurus",
-    "PreviewUri": "@previewImages/DinosaurBrontosaurus.png"
+    "PreviewUri": "DinosaurBrontosaurus.png"
   },
   "DinosaurPachycephalosaurus": {
     "DisplayName": "Dinosaur, Pachycephalosaurus",
@@ -30992,7 +30992,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DinosaurPachycephalosaurus",
-    "PreviewUri": "@previewImages/DinosaurPachycephalosaurus.png"
+    "PreviewUri": "DinosaurPachycephalosaurus.png"
   },
   "DinosaurPterodactyl": {
     "DisplayName": "Dinosaur, Pterodactyl",
@@ -31017,7 +31017,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DinosaurPterodactyl",
-    "PreviewUri": "@previewImages/DinosaurPterodactyl.png"
+    "PreviewUri": "DinosaurPterodactyl.png"
   },
   "DinosaurSpinosaurusOrange": {
     "DisplayName": "Dinosaur, Spinosaurus, Orange",
@@ -31044,7 +31044,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "DinosaurSpinosaurusOrange",
-    "PreviewUri": "@previewImages/DinosaurSpinosaurusOrange.png"
+    "PreviewUri": "DinosaurSpinosaurusOrange.png"
   },
   "DinosaurStegosaurus": {
     "DisplayName": "Dinosaur, Stegosaurus",
@@ -31069,7 +31069,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DinosaurStegosaurus",
-    "PreviewUri": "@previewImages/DinosaurStegosaurus.png"
+    "PreviewUri": "DinosaurStegosaurus.png"
   },
   "DinosaurStegosaurusGreen": {
     "DisplayName": "Dinosaur, Stegosaurus, Green",
@@ -31097,7 +31097,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DinosaurStegosaurusGreen",
-    "PreviewUri": "@previewImages/DinosaurStegosaurusGreen.png"
+    "PreviewUri": "DinosaurStegosaurusGreen.png"
   },
   "DinosaurTriceratops": {
     "DisplayName": "Dinosaur, Triceratops",
@@ -31122,7 +31122,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DinosaurTriceratops",
-    "PreviewUri": "@previewImages/DinosaurTriceratops.png"
+    "PreviewUri": "DinosaurTriceratops.png"
   },
   "DinosaurTriceratopsRed": {
     "DisplayName": "Dinosaur, Triceratops, Red",
@@ -31150,7 +31150,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "DinosaurTriceratopsRed",
-    "PreviewUri": "@previewImages/DinosaurTriceratopsRed.png"
+    "PreviewUri": "DinosaurTriceratopsRed.png"
   },
   "DinosaurTyrannosaurus": {
     "DisplayName": "Dinosaur, Tyrannosaurus",
@@ -31175,7 +31175,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DinosaurTyrannosaurus",
-    "PreviewUri": "@previewImages/DinosaurTyrannosaurus.png"
+    "PreviewUri": "DinosaurTyrannosaurus.png"
   },
   "DinosaurTyrannosaurusBlue": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Blue",
@@ -31208,7 +31208,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "DinosaurTyrannosaurusBlue",
-    "PreviewUri": "@previewImages/DinosaurTyrannosaurusBlue.png"
+    "PreviewUri": "DinosaurTyrannosaurusBlue.png"
   },
   "DinosaurTyrannosaurusDarkGreen": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Dark Green",
@@ -31241,7 +31241,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DinosaurTyrannosaurusDarkGreen",
-    "PreviewUri": "@previewImages/DinosaurTyrannosaurusDarkGreen.png"
+    "PreviewUri": "DinosaurTyrannosaurusDarkGreen.png"
   },
   "DinosaurTyrannosaurusGreen": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Green",
@@ -31274,7 +31274,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DinosaurTyrannosaurusGreen",
-    "PreviewUri": "@previewImages/DinosaurTyrannosaurusGreen.png"
+    "PreviewUri": "DinosaurTyrannosaurusGreen.png"
   },
   "DinosaurTyrannosaurusOrange": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Orange",
@@ -31307,7 +31307,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "DinosaurTyrannosaurusOrange",
-    "PreviewUri": "@previewImages/DinosaurTyrannosaurusOrange.png"
+    "PreviewUri": "DinosaurTyrannosaurusOrange.png"
   },
   "DinosaurTyrannosaurusPink": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Pink",
@@ -31340,7 +31340,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "DinosaurTyrannosaurusPink",
-    "PreviewUri": "@previewImages/DinosaurTyrannosaurusPink.png"
+    "PreviewUri": "DinosaurTyrannosaurusPink.png"
   },
   "DinosaurTyrannosaurusPurple": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Purple",
@@ -31373,7 +31373,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "DinosaurTyrannosaurusPurple",
-    "PreviewUri": "@previewImages/DinosaurTyrannosaurusPurple.png"
+    "PreviewUri": "DinosaurTyrannosaurusPurple.png"
   },
   "DinosaurTyrannosaurusRed": {
     "DisplayName": "Dinosaur, Tyrannosaurus, Red",
@@ -31406,7 +31406,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "DinosaurTyrannosaurusRed",
-    "PreviewUri": "@previewImages/DinosaurTyrannosaurusRed.png"
+    "PreviewUri": "DinosaurTyrannosaurusRed.png"
   },
   "DinosaurVelociraptor": {
     "DisplayName": "Dinosaur, Velociraptor",
@@ -31431,7 +31431,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DinosaurVelociraptor",
-    "PreviewUri": "@previewImages/DinosaurVelociraptor.png"
+    "PreviewUri": "DinosaurVelociraptor.png"
   },
   "DinosaurVelociraptorGray": {
     "DisplayName": "Dinosaur, Velociraptor, Gray",
@@ -31461,7 +31461,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "DinosaurVelociraptorGray",
-    "PreviewUri": "@previewImages/DinosaurVelociraptorGray.png"
+    "PreviewUri": "DinosaurVelociraptorGray.png"
   },
   "DirectionFinderTransparentBlack": {
     "DisplayName": "Direction Finder, Transparent, Black",
@@ -31486,7 +31486,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "DirectionFinderTransparentBlack",
-    "PreviewUri": "@previewImages/DirectionFinderTransparentBlack.png"
+    "PreviewUri": "DirectionFinderTransparentBlack.png"
   },
   "Disc14mmx10mmBlue": {
     "DisplayName": "Disc, 14mm x 10mm, Blue",
@@ -31531,7 +31531,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Disc14mmx10mmBlue",
-    "PreviewUri": "@previewImages/Disc14mmx10mmBlue.png"
+    "PreviewUri": "Disc14mmx10mmBlue.png"
   },
   "Disc14mmx10mmPurple": {
     "DisplayName": "Disc, 14mm x 10mm, Purple",
@@ -31576,7 +31576,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Disc14mmx10mmPurple",
-    "PreviewUri": "@previewImages/Disc14mmx10mmPurple.png"
+    "PreviewUri": "Disc14mmx10mmPurple.png"
   },
   "Disc14mmx10mmRed": {
     "DisplayName": "Disc, 14mm x 10mm, Red",
@@ -31609,7 +31609,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": true,
     "Key": "Disc14mmx10mmRed",
-    "PreviewUri": "@previewImages/Disc14mmx10mmRed.png"
+    "PreviewUri": "Disc14mmx10mmRed.png"
   },
   "Disc14mmx4mmBlack": {
     "DisplayName": "Disc, 14mm x 4mm, Black",
@@ -31654,7 +31654,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Disc14mmx4mmBlack",
-    "PreviewUri": "@previewImages/Disc14mmx4mmBlack.png"
+    "PreviewUri": "Disc14mmx4mmBlack.png"
   },
   "Disc14mmx4mmGreen": {
     "DisplayName": "Disc, 14mm x 4mm, Green",
@@ -31699,7 +31699,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Disc14mmx4mmGreen",
-    "PreviewUri": "@previewImages/Disc14mmx4mmGreen.png"
+    "PreviewUri": "Disc14mmx4mmGreen.png"
   },
   "Disc14mmx4mmLightBlue": {
     "DisplayName": "Disc, 14mm x 4mm, Light Blue",
@@ -31745,7 +31745,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "lightblue",
     "IsDisabled": false,
     "Key": "Disc14mmx4mmLightBlue",
-    "PreviewUri": "@previewImages/Disc14mmx4mmLightBlue.png"
+    "PreviewUri": "Disc14mmx4mmLightBlue.png"
   },
   "Disc14mmx4mmLightPurple": {
     "DisplayName": "Disc, 14mm x 4mm, Light Purple",
@@ -31791,7 +31791,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Disc14mmx4mmLightPurple",
-    "PreviewUri": "@previewImages/Disc14mmx4mmLightPurple.png"
+    "PreviewUri": "Disc14mmx4mmLightPurple.png"
   },
   "Disc14mmx4mmRed": {
     "DisplayName": "Disc, 14mm x 4mm, Red",
@@ -31824,7 +31824,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": true,
     "Key": "Disc14mmx4mmRed",
-    "PreviewUri": "@previewImages/Disc14mmx4mmRed.png"
+    "PreviewUri": "Disc14mmx4mmRed.png"
   },
   "Disc14mmx4mmYellow": {
     "DisplayName": "Disc, 14mm x 4mm, Yellow",
@@ -31869,7 +31869,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Disc14mmx4mmYellow",
-    "PreviewUri": "@previewImages/Disc14mmx4mmYellow.png"
+    "PreviewUri": "Disc14mmx4mmYellow.png"
   },
   "Disc15mmx5mmBlack": {
     "DisplayName": "Disc, 15mm x 5mm, Black",
@@ -31914,7 +31914,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Disc15mmx5mmBlack",
-    "PreviewUri": "@previewImages/Disc15mmx5mmBlack.png"
+    "PreviewUri": "Disc15mmx5mmBlack.png"
   },
   "Disc15mmx5mmBlue": {
     "DisplayName": "Disc, 15mm x 5mm, Blue",
@@ -31959,7 +31959,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Disc15mmx5mmBlue",
-    "PreviewUri": "@previewImages/Disc15mmx5mmBlue.png"
+    "PreviewUri": "Disc15mmx5mmBlue.png"
   },
   "Disc15mmx5mmGreen": {
     "DisplayName": "Disc, 15mm x 5mm, Green",
@@ -32004,7 +32004,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Disc15mmx5mmGreen",
-    "PreviewUri": "@previewImages/Disc15mmx5mmGreen.png"
+    "PreviewUri": "Disc15mmx5mmGreen.png"
   },
   "Disc15mmx5mmRed": {
     "DisplayName": "Disc, 15mm x 5mm, Red",
@@ -32049,7 +32049,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Disc15mmx5mmRed",
-    "PreviewUri": "@previewImages/Disc15mmx5mmRed.png"
+    "PreviewUri": "Disc15mmx5mmRed.png"
   },
   "Disc15mmx6mmLimeGreen": {
     "DisplayName": "Disc, 15mm x 6mm, Lime Green",
@@ -32095,7 +32095,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "limegreen",
     "IsDisabled": false,
     "Key": "Disc15mmx6mmLimeGreen",
-    "PreviewUri": "@previewImages/Disc15mmx6mmLimeGreen.png"
+    "PreviewUri": "Disc15mmx6mmLimeGreen.png"
   },
   "Disc15mmx6mmOrange": {
     "DisplayName": "Disc, 15mm x 6mm, Orange",
@@ -32140,7 +32140,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Disc15mmx6mmOrange",
-    "PreviewUri": "@previewImages/Disc15mmx6mmOrange.png"
+    "PreviewUri": "Disc15mmx6mmOrange.png"
   },
   "Disc15mmx6mmRed": {
     "DisplayName": "Disc, 15mm x 6mm, Red",
@@ -32185,7 +32185,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Disc15mmx6mmRed",
-    "PreviewUri": "@previewImages/Disc15mmx6mmRed.png"
+    "PreviewUri": "Disc15mmx6mmRed.png"
   },
   "Disc15mmx6mmYellow": {
     "DisplayName": "Disc, 15mm x 6mm, Yellow",
@@ -32230,7 +32230,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Disc15mmx6mmYellow",
-    "PreviewUri": "@previewImages/Disc15mmx6mmYellow.png"
+    "PreviewUri": "Disc15mmx6mmYellow.png"
   },
   "Disc16mmx10mmBlue": {
     "DisplayName": "Disc, 16mm x 10mm, Blue",
@@ -32275,7 +32275,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Disc16mmx10mmBlue",
-    "PreviewUri": "@previewImages/Disc16mmx10mmBlue.png"
+    "PreviewUri": "Disc16mmx10mmBlue.png"
   },
   "Disc16mmx10mmBrown": {
     "DisplayName": "Disc, 16mm x 10mm, Brown",
@@ -32320,7 +32320,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "Disc16mmx10mmBrown",
-    "PreviewUri": "@previewImages/Disc16mmx10mmBrown.png"
+    "PreviewUri": "Disc16mmx10mmBrown.png"
   },
   "Disc16mmx10mmGreen": {
     "DisplayName": "Disc, 16mm x 10mm, Green",
@@ -32365,7 +32365,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Disc16mmx10mmGreen",
-    "PreviewUri": "@previewImages/Disc16mmx10mmGreen.png"
+    "PreviewUri": "Disc16mmx10mmGreen.png"
   },
   "Disc16mmx10mmPurple": {
     "DisplayName": "Disc, 16mm x 10mm, Purple",
@@ -32410,7 +32410,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Disc16mmx10mmPurple",
-    "PreviewUri": "@previewImages/Disc16mmx10mmPurple.png"
+    "PreviewUri": "Disc16mmx10mmPurple.png"
   },
   "Disc16mmx10mmRed": {
     "DisplayName": "Disc, 16mm x 10mm, Red",
@@ -32455,7 +32455,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Disc16mmx10mmRed",
-    "PreviewUri": "@previewImages/Disc16mmx10mmRed.png"
+    "PreviewUri": "Disc16mmx10mmRed.png"
   },
   "Disc16mmx10mmYellow": {
     "DisplayName": "Disc, 16mm x 10mm, Yellow",
@@ -32500,7 +32500,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Disc16mmx10mmYellow",
-    "PreviewUri": "@previewImages/Disc16mmx10mmYellow.png"
+    "PreviewUri": "Disc16mmx10mmYellow.png"
   },
   "Disc16mmx4mmBlack": {
     "DisplayName": "Disc, 16mm x 4mm, Black",
@@ -32545,7 +32545,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Disc16mmx4mmBlack",
-    "PreviewUri": "@previewImages/Disc16mmx4mmBlack.png"
+    "PreviewUri": "Disc16mmx4mmBlack.png"
   },
   "Disc16mmx4mmBlue": {
     "DisplayName": "Disc, 16mm x 4mm, Blue",
@@ -32590,7 +32590,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Disc16mmx4mmBlue",
-    "PreviewUri": "@previewImages/Disc16mmx4mmBlue.png"
+    "PreviewUri": "Disc16mmx4mmBlue.png"
   },
   "Disc16mmx4mmGreen": {
     "DisplayName": "Disc, 16mm x 4mm, Green",
@@ -32635,7 +32635,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Disc16mmx4mmGreen",
-    "PreviewUri": "@previewImages/Disc16mmx4mmGreen.png"
+    "PreviewUri": "Disc16mmx4mmGreen.png"
   },
   "Disc16mmx4mmOrange": {
     "DisplayName": "Disc, 16mm x 4mm, Orange",
@@ -32680,7 +32680,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Disc16mmx4mmOrange",
-    "PreviewUri": "@previewImages/Disc16mmx4mmOrange.png"
+    "PreviewUri": "Disc16mmx4mmOrange.png"
   },
   "Disc16mmx4mmPurple": {
     "DisplayName": "Disc, 16mm x 4mm, Purple",
@@ -32725,7 +32725,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Disc16mmx4mmPurple",
-    "PreviewUri": "@previewImages/Disc16mmx4mmPurple.png"
+    "PreviewUri": "Disc16mmx4mmPurple.png"
   },
   "Disc16mmx4mmRed": {
     "DisplayName": "Disc, 16mm x 4mm, Red",
@@ -32770,7 +32770,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Disc16mmx4mmRed",
-    "PreviewUri": "@previewImages/Disc16mmx4mmRed.png"
+    "PreviewUri": "Disc16mmx4mmRed.png"
   },
   "Disc16mmx4mmWhite": {
     "DisplayName": "Disc, 16mm x 4mm, White",
@@ -32816,7 +32816,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Disc16mmx4mmWhite",
-    "PreviewUri": "@previewImages/Disc16mmx4mmWhite.png"
+    "PreviewUri": "Disc16mmx4mmWhite.png"
   },
   "Disc16mmx4mmYellow": {
     "DisplayName": "Disc, 16mm x 4mm, Yellow",
@@ -32861,7 +32861,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Disc16mmx4mmYellow",
-    "PreviewUri": "@previewImages/Disc16mmx4mmYellow.png"
+    "PreviewUri": "Disc16mmx4mmYellow.png"
   },
   "Disc16mmx6mmLightPurple": {
     "DisplayName": "Disc, 16mm x 6mm, Light Purple",
@@ -32906,7 +32906,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Disc16mmx6mmLightPurple",
-    "PreviewUri": "@previewImages/Disc16mmx6mmLightPurple.png"
+    "PreviewUri": "Disc16mmx6mmLightPurple.png"
   },
   "Disc16mmx6mmOrange": {
     "DisplayName": "Disc, 16mm x 6mm, Orange",
@@ -32951,7 +32951,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Disc16mmx6mmOrange",
-    "PreviewUri": "@previewImages/Disc16mmx6mmOrange.png"
+    "PreviewUri": "Disc16mmx6mmOrange.png"
   },
   "Disc16mmx8mmMint": {
     "DisplayName": "Disc, 16mm x 8mm, Mint",
@@ -32996,7 +32996,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "Disc16mmx8mmMint",
-    "PreviewUri": "@previewImages/Disc16mmx8mmMint.png"
+    "PreviewUri": "Disc16mmx8mmMint.png"
   },
   "Disc16mmx8mmPink": {
     "DisplayName": "Disc, 16mm x 8mm, Pink",
@@ -33041,7 +33041,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "Disc16mmx8mmPink",
-    "PreviewUri": "@previewImages/Disc16mmx8mmPink.png"
+    "PreviewUri": "Disc16mmx8mmPink.png"
   },
   "Disc16mmx8mmPurple": {
     "DisplayName": "Disc, 16mm x 8mm, Purple",
@@ -33086,7 +33086,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Disc16mmx8mmPurple",
-    "PreviewUri": "@previewImages/Disc16mmx8mmPurple.png"
+    "PreviewUri": "Disc16mmx8mmPurple.png"
   },
   "Disc16mmx8mmTan": {
     "DisplayName": "Disc, 16mm x 8mm, Tan",
@@ -33131,7 +33131,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "Disc16mmx8mmTan",
-    "PreviewUri": "@previewImages/Disc16mmx8mmTan.png"
+    "PreviewUri": "Disc16mmx8mmTan.png"
   },
   "Disc16mmx8mmYellow": {
     "DisplayName": "Disc, 16mm x 8mm, Yellow",
@@ -33176,7 +33176,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Disc16mmx8mmYellow",
-    "PreviewUri": "@previewImages/Disc16mmx8mmYellow.png"
+    "PreviewUri": "Disc16mmx8mmYellow.png"
   },
   "Disc17mmx10mmApricot": {
     "DisplayName": "Disc, 17mm x 10mm, Apricot",
@@ -33226,7 +33226,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "apricot",
     "IsDisabled": false,
     "Key": "Disc17mmx10mmApricot",
-    "PreviewUri": "@previewImages/Disc17mmx10mmApricot.png"
+    "PreviewUri": "Disc17mmx10mmApricot.png"
   },
   "Disc17mmx10mmGreen": {
     "DisplayName": "Disc, 17mm x 10mm, Green",
@@ -33274,7 +33274,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Disc17mmx10mmGreen",
-    "PreviewUri": "@previewImages/Disc17mmx10mmGreen.png"
+    "PreviewUri": "Disc17mmx10mmGreen.png"
   },
   "Disc18mmx3mmClear": {
     "DisplayName": "Disc, 18mm x 3mm, Clear",
@@ -33322,7 +33322,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "Disc18mmx3mmClear",
-    "PreviewUri": "@previewImages/Disc18mmx3mmClear.png"
+    "PreviewUri": "Disc18mmx3mmClear.png"
   },
   "Disc18mmx3mmfluorescentblue": {
     "DisplayName": "Disc, 18mm x 3mm, Fluorescent Blue",
@@ -33370,7 +33370,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Disc18mmx3mmfluorescentblue",
-    "PreviewUri": "@previewImages/Disc18mmx3mmfluorescentblue.png"
+    "PreviewUri": "Disc18mmx3mmfluorescentblue.png"
   },
   "Disc18mmx3mmFluorescentGreen": {
     "DisplayName": "Disc, 18mm x 3mm, Fluorescent Green",
@@ -33418,7 +33418,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Disc18mmx3mmFluorescentGreen",
-    "PreviewUri": "@previewImages/Disc18mmx3mmFluorescentGreen.png"
+    "PreviewUri": "Disc18mmx3mmFluorescentGreen.png"
   },
   "Disc18mmx3mmFluorescentOrange": {
     "DisplayName": "Disc, 18mm x 3mm, Fluorescent Orange",
@@ -33466,7 +33466,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Disc18mmx3mmFluorescentOrange",
-    "PreviewUri": "@previewImages/Disc18mmx3mmFluorescentOrange.png"
+    "PreviewUri": "Disc18mmx3mmFluorescentOrange.png"
   },
   "Disc18mmx3mmFluorescentRed": {
     "DisplayName": "Disc, 18mm x 3mm, Fluorescent Red",
@@ -33514,7 +33514,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Disc18mmx3mmFluorescentRed",
-    "PreviewUri": "@previewImages/Disc18mmx3mmFluorescentRed.png"
+    "PreviewUri": "Disc18mmx3mmFluorescentRed.png"
   },
   "Disc18mmx3mmFluorescentYellow": {
     "DisplayName": "Disc, 18mm x 3mm, Fluorescent Yellow",
@@ -33562,7 +33562,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Disc18mmx3mmFluorescentYellow",
-    "PreviewUri": "@previewImages/Disc18mmx3mmFluorescentYellow.png"
+    "PreviewUri": "Disc18mmx3mmFluorescentYellow.png"
   },
   "Disc18mmx3mmTransparentBlue": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent, Blue",
@@ -33610,7 +33610,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Disc18mmx3mmTransparentBlue",
-    "PreviewUri": "@previewImages/Disc18mmx3mmTransparentBlue.png"
+    "PreviewUri": "Disc18mmx3mmTransparentBlue.png"
   },
   "Disc18mmx3mmTransparentGreen": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent, Green",
@@ -33658,7 +33658,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Disc18mmx3mmTransparentGreen",
-    "PreviewUri": "@previewImages/Disc18mmx3mmTransparentGreen.png"
+    "PreviewUri": "Disc18mmx3mmTransparentGreen.png"
   },
   "Disc18mmx3mmTransparentGray": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent, Gray",
@@ -33706,7 +33706,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Disc18mmx3mmTransparentGray",
-    "PreviewUri": "@previewImages/Disc18mmx3mmTransparentGray.png"
+    "PreviewUri": "Disc18mmx3mmTransparentGray.png"
   },
   "Disc18mmx3mmTransparentOrange": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent, Orange",
@@ -33754,7 +33754,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Disc18mmx3mmTransparentOrange",
-    "PreviewUri": "@previewImages/Disc18mmx3mmTransparentOrange.png"
+    "PreviewUri": "Disc18mmx3mmTransparentOrange.png"
   },
   "Disc18mmx3mmTransparentPurple": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent, Purple",
@@ -33802,7 +33802,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Disc18mmx3mmTransparentPurple",
-    "PreviewUri": "@previewImages/Disc18mmx3mmTransparentPurple.png"
+    "PreviewUri": "Disc18mmx3mmTransparentPurple.png"
   },
   "Disc18mmx3mmTransparentRed": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent, Red",
@@ -33850,7 +33850,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Disc18mmx3mmTransparentRed",
-    "PreviewUri": "@previewImages/Disc18mmx3mmTransparentRed.png"
+    "PreviewUri": "Disc18mmx3mmTransparentRed.png"
   },
   "Disc18mmx3mmTransparentYellow": {
     "DisplayName": "Disc, 18mm x 3mm, Transparent, Yellow",
@@ -33898,7 +33898,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Disc18mmx3mmTransparentYellow",
-    "PreviewUri": "@previewImages/Disc18mmx3mmTransparentYellow.png"
+    "PreviewUri": "Disc18mmx3mmTransparentYellow.png"
   },
   "Disc18mmx5mmRed": {
     "DisplayName": "Disc, 18mm x 5mm, Red",
@@ -33943,7 +33943,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Disc18mmx5mmRed",
-    "PreviewUri": "@previewImages/Disc18mmx5mmRed.png"
+    "PreviewUri": "Disc18mmx5mmRed.png"
   },
   "Disc18mmx6mmClear": {
     "DisplayName": "Disc, 18mm x 6mm, Clear",
@@ -33991,7 +33991,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "Disc18mmx6mmClear",
-    "PreviewUri": "@previewImages/Disc18mmx6mmClear.png"
+    "PreviewUri": "Disc18mmx6mmClear.png"
   },
   "Disc18mmx6mmFluorescentBlue": {
     "DisplayName": "Disc, 18mm x 6mm, Fluorescent Blue",
@@ -34039,7 +34039,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Disc18mmx6mmFluorescentBlue",
-    "PreviewUri": "@previewImages/Disc18mmx6mmFluorescentBlue.png"
+    "PreviewUri": "Disc18mmx6mmFluorescentBlue.png"
   },
   "Disc18mmx6mmFluorescentGreen": {
     "DisplayName": "Disc, 18mm x 6mm, Fluorescent Green",
@@ -34087,7 +34087,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Disc18mmx6mmFluorescentGreen",
-    "PreviewUri": "@previewImages/Disc18mmx6mmFluorescentGreen.png"
+    "PreviewUri": "Disc18mmx6mmFluorescentGreen.png"
   },
   "Disc18mmx6mmFluorescentOrange": {
     "DisplayName": "Disc, 18mm x 6mm, Fluorescent Orange",
@@ -34135,7 +34135,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Disc18mmx6mmFluorescentOrange",
-    "PreviewUri": "@previewImages/Disc18mmx6mmFluorescentOrange.png"
+    "PreviewUri": "Disc18mmx6mmFluorescentOrange.png"
   },
   "Disc18mmx6mmFluorescentRed": {
     "DisplayName": "Disc, 18mm x 6mm, Fluorescent Red",
@@ -34183,7 +34183,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Disc18mmx6mmFluorescentRed",
-    "PreviewUri": "@previewImages/Disc18mmx6mmFluorescentRed.png"
+    "PreviewUri": "Disc18mmx6mmFluorescentRed.png"
   },
   "Disc18mmx6mmFluorescentYellow": {
     "DisplayName": "Disc, 18mm x 6mm, Fluorescent Yellow",
@@ -34231,7 +34231,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Disc18mmx6mmFluorescentYellow",
-    "PreviewUri": "@previewImages/Disc18mmx6mmFluorescentYellow.png"
+    "PreviewUri": "Disc18mmx6mmFluorescentYellow.png"
   },
   "Disc18mmx6mmTransparentBlue": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent, Blue",
@@ -34279,7 +34279,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Disc18mmx6mmTransparentBlue",
-    "PreviewUri": "@previewImages/Disc18mmx6mmTransparentBlue.png"
+    "PreviewUri": "Disc18mmx6mmTransparentBlue.png"
   },
   "Disc18mmx6mmTransparentGreen": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent, Green",
@@ -34327,7 +34327,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Disc18mmx6mmTransparentGreen",
-    "PreviewUri": "@previewImages/Disc18mmx6mmTransparentGreen.png"
+    "PreviewUri": "Disc18mmx6mmTransparentGreen.png"
   },
   "Disc18mmx6mmTransparentGray": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent, Gray",
@@ -34375,7 +34375,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Disc18mmx6mmTransparentGray",
-    "PreviewUri": "@previewImages/Disc18mmx6mmTransparentGray.png"
+    "PreviewUri": "Disc18mmx6mmTransparentGray.png"
   },
   "Disc18mmx6mmTransparentOrange": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent, Orange",
@@ -34423,7 +34423,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Disc18mmx6mmTransparentOrange",
-    "PreviewUri": "@previewImages/Disc18mmx6mmTransparentOrange.png"
+    "PreviewUri": "Disc18mmx6mmTransparentOrange.png"
   },
   "Disc18mmx6mmTransparentPurple": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent, Purple",
@@ -34471,7 +34471,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Disc18mmx6mmTransparentPurple",
-    "PreviewUri": "@previewImages/Disc18mmx6mmTransparentPurple.png"
+    "PreviewUri": "Disc18mmx6mmTransparentPurple.png"
   },
   "Disc18mmx6mmTransparentRed": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent, Red",
@@ -34519,7 +34519,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Disc18mmx6mmTransparentRed",
-    "PreviewUri": "@previewImages/Disc18mmx6mmTransparentRed.png"
+    "PreviewUri": "Disc18mmx6mmTransparentRed.png"
   },
   "Disc18mmx6mmTransparentYellow": {
     "DisplayName": "Disc, 18mm x 6mm, Transparent, Yellow",
@@ -34567,7 +34567,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Disc18mmx6mmTransparentYellow",
-    "PreviewUri": "@previewImages/Disc18mmx6mmTransparentYellow.png"
+    "PreviewUri": "Disc18mmx6mmTransparentYellow.png"
   },
   "Disc20mmx5mmPastelBlue": {
     "DisplayName": "Disc, 20mm x 5mm, Pastel Blue",
@@ -34612,7 +34612,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Disc20mmx5mmPastelBlue",
-    "PreviewUri": "@previewImages/Disc20mmx5mmPastelBlue.png"
+    "PreviewUri": "Disc20mmx5mmPastelBlue.png"
   },
   "Disc20mmx5mmPastelOrange": {
     "DisplayName": "Disc, 20mm x 5mm, Pastel Orange",
@@ -34658,7 +34658,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Disc20mmx5mmPastelOrange",
-    "PreviewUri": "@previewImages/Disc20mmx5mmPastelOrange.png"
+    "PreviewUri": "Disc20mmx5mmPastelOrange.png"
   },
   "Disc20mmx5mmPastelPurple": {
     "DisplayName": "Disc, 20mm x 5mm, Pastel Purple",
@@ -34703,7 +34703,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Disc20mmx5mmPastelPurple",
-    "PreviewUri": "@previewImages/Disc20mmx5mmPastelPurple.png"
+    "PreviewUri": "Disc20mmx5mmPastelPurple.png"
   },
   "Disc25mmx3mmClear": {
     "DisplayName": "Disc, 25mm x 3mm, Clear",
@@ -34751,7 +34751,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "Disc25mmx3mmClear",
-    "PreviewUri": "@previewImages/Disc25mmx3mmClear.png"
+    "PreviewUri": "Disc25mmx3mmClear.png"
   },
   "Disc25mmx3mmFluorescentBlue": {
     "DisplayName": "Disc, 25mm x 3mm, Fluorescent Blue",
@@ -34799,7 +34799,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Disc25mmx3mmFluorescentBlue",
-    "PreviewUri": "@previewImages/Disc25mmx3mmFluorescentBlue.png"
+    "PreviewUri": "Disc25mmx3mmFluorescentBlue.png"
   },
   "Disc25mmx3mmFluorescentGreen": {
     "DisplayName": "Disc, 25mm x 3mm, Fluorescent Green",
@@ -34847,7 +34847,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Disc25mmx3mmFluorescentGreen",
-    "PreviewUri": "@previewImages/Disc25mmx3mmFluorescentGreen.png"
+    "PreviewUri": "Disc25mmx3mmFluorescentGreen.png"
   },
   "Disc25mmx3mmFluorescentOrange": {
     "DisplayName": "Disc, 25mm x 3mm, Fluorescent Orange",
@@ -34895,7 +34895,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Disc25mmx3mmFluorescentOrange",
-    "PreviewUri": "@previewImages/Disc25mmx3mmFluorescentOrange.png"
+    "PreviewUri": "Disc25mmx3mmFluorescentOrange.png"
   },
   "Disc25mmx3mmFluorescentRed": {
     "DisplayName": "Disc, 25mm x 3mm, Fluorescent Red",
@@ -34943,7 +34943,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Disc25mmx3mmFluorescentRed",
-    "PreviewUri": "@previewImages/Disc25mmx3mmFluorescentRed.png"
+    "PreviewUri": "Disc25mmx3mmFluorescentRed.png"
   },
   "Disc25mmx3mmFluorescentYellow": {
     "DisplayName": "Disc, 25mm x 3mm, Fluorescent Yellow",
@@ -34991,7 +34991,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Disc25mmx3mmFluorescentYellow",
-    "PreviewUri": "@previewImages/Disc25mmx3mmFluorescentYellow.png"
+    "PreviewUri": "Disc25mmx3mmFluorescentYellow.png"
   },
   "Disc25mmx3mmTransparentBlue": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent, Blue",
@@ -35039,7 +35039,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Disc25mmx3mmTransparentBlue",
-    "PreviewUri": "@previewImages/Disc25mmx3mmTransparentBlue.png"
+    "PreviewUri": "Disc25mmx3mmTransparentBlue.png"
   },
   "Disc25mmx3mmTransparentGreen": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent, Green",
@@ -35087,7 +35087,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Disc25mmx3mmTransparentGreen",
-    "PreviewUri": "@previewImages/Disc25mmx3mmTransparentGreen.png"
+    "PreviewUri": "Disc25mmx3mmTransparentGreen.png"
   },
   "Disc25mmx3mmTransparentGray": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent, Gray",
@@ -35135,7 +35135,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Disc25mmx3mmTransparentGray",
-    "PreviewUri": "@previewImages/Disc25mmx3mmTransparentGray.png"
+    "PreviewUri": "Disc25mmx3mmTransparentGray.png"
   },
   "Disc25mmx3mmTransparentOrange": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent, Orange",
@@ -35183,7 +35183,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Disc25mmx3mmTransparentOrange",
-    "PreviewUri": "@previewImages/Disc25mmx3mmTransparentOrange.png"
+    "PreviewUri": "Disc25mmx3mmTransparentOrange.png"
   },
   "Disc25mmx3mmTransparentRed": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent, Red",
@@ -35231,7 +35231,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Disc25mmx3mmTransparentRed",
-    "PreviewUri": "@previewImages/Disc25mmx3mmTransparentRed.png"
+    "PreviewUri": "Disc25mmx3mmTransparentRed.png"
   },
   "Disc25mmx3mmTransparentPurple": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent, Purple",
@@ -35279,7 +35279,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Disc25mmx3mmTransparentPurple",
-    "PreviewUri": "@previewImages/Disc25mmx3mmTransparentPurple.png"
+    "PreviewUri": "Disc25mmx3mmTransparentPurple.png"
   },
   "Disc25mmx3mmTransparentYellow": {
     "DisplayName": "Disc, 25mm x 3mm, Transparent, Yellow",
@@ -35327,7 +35327,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Disc25mmx3mmTransparentYellow",
-    "PreviewUri": "@previewImages/Disc25mmx3mmTransparentYellow.png"
+    "PreviewUri": "Disc25mmx3mmTransparentYellow.png"
   },
   "Disc25mmx6mmClear": {
     "DisplayName": "Disc, 25mm x 6mm, Clear",
@@ -35375,7 +35375,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "Disc25mmx6mmClear",
-    "PreviewUri": "@previewImages/Disc25mmx6mmClear.png"
+    "PreviewUri": "Disc25mmx6mmClear.png"
   },
   "Disc25mmx6mmFluorescentBlue": {
     "DisplayName": "Disc, 25mm x 6mm, Fluorescent Blue",
@@ -35423,7 +35423,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Disc25mmx6mmFluorescentBlue",
-    "PreviewUri": "@previewImages/Disc25mmx6mmFluorescentBlue.png"
+    "PreviewUri": "Disc25mmx6mmFluorescentBlue.png"
   },
   "Disc25mmx6mmFluorescentGreen": {
     "DisplayName": "Disc, 25mm x 6mm, Fluorescent Green",
@@ -35471,7 +35471,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Disc25mmx6mmFluorescentGreen",
-    "PreviewUri": "@previewImages/Disc25mmx6mmFluorescentGreen.png"
+    "PreviewUri": "Disc25mmx6mmFluorescentGreen.png"
   },
   "Disc25mmx6mmFluorescentOrange": {
     "DisplayName": "Disc, 25mm x 6mm, Fluorescent Orange",
@@ -35519,7 +35519,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Disc25mmx6mmFluorescentOrange",
-    "PreviewUri": "@previewImages/Disc25mmx6mmFluorescentOrange.png"
+    "PreviewUri": "Disc25mmx6mmFluorescentOrange.png"
   },
   "Disc25mmx6mmFluorescentRed": {
     "DisplayName": "Disc, 25mm x 6mm, Fluorescent Red",
@@ -35567,7 +35567,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Disc25mmx6mmFluorescentRed",
-    "PreviewUri": "@previewImages/Disc25mmx6mmFluorescentRed.png"
+    "PreviewUri": "Disc25mmx6mmFluorescentRed.png"
   },
   "Disc25mmx6mmFluorescentYellow": {
     "DisplayName": "Disc, 25mm x 6mm, Fluorescent Yellow",
@@ -35615,7 +35615,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Disc25mmx6mmFluorescentYellow",
-    "PreviewUri": "@previewImages/Disc25mmx6mmFluorescentYellow.png"
+    "PreviewUri": "Disc25mmx6mmFluorescentYellow.png"
   },
   "Disc25mmx6mmTransparentBlue": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent, Blue",
@@ -35663,7 +35663,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Disc25mmx6mmTransparentBlue",
-    "PreviewUri": "@previewImages/Disc25mmx6mmTransparentBlue.png"
+    "PreviewUri": "Disc25mmx6mmTransparentBlue.png"
   },
   "Disc25mmx6mmTransparentGreen": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent, Green",
@@ -35711,7 +35711,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Disc25mmx6mmTransparentGreen",
-    "PreviewUri": "@previewImages/Disc25mmx6mmTransparentGreen.png"
+    "PreviewUri": "Disc25mmx6mmTransparentGreen.png"
   },
   "Disc25mmx6mmTransparentGray": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent, Gray",
@@ -35759,7 +35759,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Disc25mmx6mmTransparentGray",
-    "PreviewUri": "@previewImages/Disc25mmx6mmTransparentGray.png"
+    "PreviewUri": "Disc25mmx6mmTransparentGray.png"
   },
   "Disc25mmx6mmTransparentOrange": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent, Orange",
@@ -35807,7 +35807,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Disc25mmx6mmTransparentOrange",
-    "PreviewUri": "@previewImages/Disc25mmx6mmTransparentOrange.png"
+    "PreviewUri": "Disc25mmx6mmTransparentOrange.png"
   },
   "Disc25mmx6mmTransparentPurple": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent, Purple",
@@ -35855,7 +35855,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Disc25mmx6mmTransparentPurple",
-    "PreviewUri": "@previewImages/Disc25mmx6mmTransparentPurple.png"
+    "PreviewUri": "Disc25mmx6mmTransparentPurple.png"
   },
   "Disc25mmx6mmTransparentRed": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent, Red",
@@ -35903,7 +35903,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Disc25mmx6mmTransparentRed",
-    "PreviewUri": "@previewImages/Disc25mmx6mmTransparentRed.png"
+    "PreviewUri": "Disc25mmx6mmTransparentRed.png"
   },
   "Disc25mmx6mmTransparentYellow": {
     "DisplayName": "Disc, 25mm x 6mm, Transparent, Yellow",
@@ -35951,7 +35951,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Disc25mmx6mmTransparentYellow",
-    "PreviewUri": "@previewImages/Disc25mmx6mmTransparentYellow.png"
+    "PreviewUri": "Disc25mmx6mmTransparentYellow.png"
   },
   "Disc30mmx5mmBlue": {
     "DisplayName": "Disc, 30mm x 5mm, Blue",
@@ -35996,7 +35996,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Disc30mmx5mmBlue",
-    "PreviewUri": "@previewImages/Disc30mmx5mmBlue.png"
+    "PreviewUri": "Disc30mmx5mmBlue.png"
   },
   "Djin": {
     "DisplayName": "Djin",
@@ -36036,7 +36036,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "Djin",
-    "PreviewUri": "@previewImages/Djin.png"
+    "PreviewUri": "Djin.png"
   },
   "Doctor-CharacterMeeple": {
     "DisplayName": "Doctor, Character Meeple",
@@ -36062,7 +36062,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Doctor-CharacterMeeple",
-    "PreviewUri": "@previewImages/Doctor-CharacterMeeple.png"
+    "PreviewUri": "Doctor-CharacterMeeple.png"
   },
   "DogAcrylic": {
     "DisplayName": "Dog, Acrylic",
@@ -36092,7 +36092,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "DogAcrylic",
-    "PreviewUri": "@previewImages/DogAcrylic.png"
+    "PreviewUri": "DogAcrylic.png"
   },
   "DogPostApocalypseArmorTB25": {
     "DisplayName": "Dog, Post Apocalypse, Armor, TB25",
@@ -36114,7 +36114,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "DogPostApocalypseArmorTB25",
-    "PreviewUri": "@previewImages/DogPostApocalypseArmorTB25.png"
+    "PreviewUri": "DogPostApocalypseArmorTB25.png"
   },
   "DominoesSmall": {
     "DisplayName": "Dominoes, Small",
@@ -36158,7 +36158,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "DominoesSmall",
-    "PreviewUri": "@previewImages/DominoesSmall.png"
+    "PreviewUri": "DominoesSmall.png"
   },
   "DonjonPagodaBlack": {
     "DisplayName": "Donjon Pagoda, Black",
@@ -36180,7 +36180,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "DonjonPagodaBlack",
-    "PreviewUri": "@previewImages/DonjonPagodaBlack.png"
+    "PreviewUri": "DonjonPagodaBlack.png"
   },
   "DonjonPagodaBlue": {
     "DisplayName": "Donjon Pagoda, Blue",
@@ -36202,7 +36202,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "DonjonPagodaBlue",
-    "PreviewUri": "@previewImages/DonjonPagodaBlue.png"
+    "PreviewUri": "DonjonPagodaBlue.png"
   },
   "DonjonPagodaGreen": {
     "DisplayName": "Donjon Pagoda, Green",
@@ -36224,7 +36224,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DonjonPagodaGreen",
-    "PreviewUri": "@previewImages/DonjonPagodaGreen.png"
+    "PreviewUri": "DonjonPagodaGreen.png"
   },
   "DonjonPagodaOrange": {
     "DisplayName": "Donjon Pagoda, Orange",
@@ -36246,7 +36246,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "DonjonPagodaOrange",
-    "PreviewUri": "@previewImages/DonjonPagodaOrange.png"
+    "PreviewUri": "DonjonPagodaOrange.png"
   },
   "DonjonPagodaPurple": {
     "DisplayName": "Donjon Pagoda, Purple",
@@ -36268,7 +36268,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "DonjonPagodaPurple",
-    "PreviewUri": "@previewImages/DonjonPagodaPurple.png"
+    "PreviewUri": "DonjonPagodaPurple.png"
   },
   "DonjonPagodaRed": {
     "DisplayName": "Donjon Pagoda, Red",
@@ -36290,7 +36290,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "DonjonPagodaRed",
-    "PreviewUri": "@previewImages/DonjonPagodaRed.png"
+    "PreviewUri": "DonjonPagodaRed.png"
   },
   "DonjonPagodaWhite": {
     "DisplayName": "Donjon Pagoda, White",
@@ -36312,7 +36312,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "DonjonPagodaWhite",
-    "PreviewUri": "@previewImages/DonjonPagodaWhite.png"
+    "PreviewUri": "DonjonPagodaWhite.png"
   },
   "DonjonPagodaYellow": {
     "DisplayName": "Donjon Pagoda, Yellow",
@@ -36334,7 +36334,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "DonjonPagodaYellow",
-    "PreviewUri": "@previewImages/DonjonPagodaYellow.png"
+    "PreviewUri": "DonjonPagodaYellow.png"
   },
   "DonkeyWood": {
     "DisplayName": "Donkey, Wood",
@@ -36362,7 +36362,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "DonkeyWood",
-    "PreviewUri": "@previewImages/DonkeyWood.png"
+    "PreviewUri": "DonkeyWood.png"
   },
   "DoubloonMetalGold": {
     "DisplayName": "Doubloon, Metal, Gold",
@@ -36393,7 +36393,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "DoubloonMetalGold",
-    "PreviewUri": "@previewImages/DoubloonMetalGold.png"
+    "PreviewUri": "DoubloonMetalGold.png"
   },
   "DoubloonMetalSilver": {
     "DisplayName": "Doubloon, Metal, Silver",
@@ -36418,7 +36418,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "DoubloonMetalSilver",
-    "PreviewUri": "@previewImages/DoubloonMetalSilver.png"
+    "PreviewUri": "DoubloonMetalSilver.png"
   },
   "Doubloons": {
     "DisplayName": "Doubloons",
@@ -36443,7 +36443,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "Doubloons",
-    "PreviewUri": "@previewImages/Doubloons.png"
+    "PreviewUri": "Doubloons.png"
   },
   "Dove": {
     "DisplayName": "Dove",
@@ -36476,7 +36476,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Dove",
-    "PreviewUri": "@previewImages/Dove.png"
+    "PreviewUri": "Dove.png"
   },
   "DragonFamiliar": {
     "DisplayName": "Dragon Familiar",
@@ -36514,7 +36514,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "DragonFamiliar",
-    "PreviewUri": "@previewImages/DragonFamiliar.png"
+    "PreviewUri": "DragonFamiliar.png"
   },
   "DragonBlueDark": {
     "DisplayName": "Dragon, Blue, Dark",
@@ -36543,7 +36543,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "DragonBlueDark",
-    "PreviewUri": "@previewImages/DragonBlueDark.png"
+    "PreviewUri": "DragonBlueDark.png"
   },
   "DragonBlueLight": {
     "DisplayName": "Dragon, Blue, Light",
@@ -36572,7 +36572,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "DragonBlueLight",
-    "PreviewUri": "@previewImages/DragonBlueLight.png"
+    "PreviewUri": "DragonBlueLight.png"
   },
   "DragonFantasyTB15Black": {
     "DisplayName": "Dragon, Fantasy, TB15, Black",
@@ -36598,7 +36598,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "DragonFantasyTB15Black",
-    "PreviewUri": "@previewImages/DragonFantasyTB15Black.png"
+    "PreviewUri": "DragonFantasyTB15Black.png"
   },
   "DragonFantasyTB15Blue": {
     "DisplayName": "Dragon, Fantasy, TB15, Blue",
@@ -36624,7 +36624,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "DragonFantasyTB15Blue",
-    "PreviewUri": "@previewImages/DragonFantasyTB15Blue.png"
+    "PreviewUri": "DragonFantasyTB15Blue.png"
   },
   "DragonFantasyTB15Green": {
     "DisplayName": "Dragon, Fantasy, TB15, Green",
@@ -36650,7 +36650,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DragonFantasyTB15Green",
-    "PreviewUri": "@previewImages/DragonFantasyTB15Green.png"
+    "PreviewUri": "DragonFantasyTB15Green.png"
   },
   "DragonFantasyTB15Orange": {
     "DisplayName": "Dragon, Fantasy, TB15, Orange",
@@ -36676,7 +36676,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "DragonFantasyTB15Orange",
-    "PreviewUri": "@previewImages/DragonFantasyTB15Orange.png"
+    "PreviewUri": "DragonFantasyTB15Orange.png"
   },
   "DragonFantasyTB15Purple": {
     "DisplayName": "Dragon, Fantasy, TB15, Purple",
@@ -36702,7 +36702,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "DragonFantasyTB15Purple",
-    "PreviewUri": "@previewImages/DragonFantasyTB15Purple.png"
+    "PreviewUri": "DragonFantasyTB15Purple.png"
   },
   "DragonFantasyTB15Red": {
     "DisplayName": "Dragon, Fantasy, TB15, Red",
@@ -36728,7 +36728,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "DragonFantasyTB15Red",
-    "PreviewUri": "@previewImages/DragonFantasyTB15Red.png"
+    "PreviewUri": "DragonFantasyTB15Red.png"
   },
   "DragonFantasyTB15White": {
     "DisplayName": "Dragon, Fantasy, TB15, White",
@@ -36754,7 +36754,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "DragonFantasyTB15White",
-    "PreviewUri": "@previewImages/DragonFantasyTB15White.png"
+    "PreviewUri": "DragonFantasyTB15White.png"
   },
   "DragonFantasyTB15Yellow": {
     "DisplayName": "Dragon, Fantasy, TB15, Yellow",
@@ -36780,7 +36780,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "DragonFantasyTB15Yellow",
-    "PreviewUri": "@previewImages/DragonFantasyTB15Yellow.png"
+    "PreviewUri": "DragonFantasyTB15Yellow.png"
   },
   "DragonFantasyTB50": {
     "DisplayName": "Dragon, Fantasy, TB50",
@@ -36799,7 +36799,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "DragonFantasyTB50",
-    "PreviewUri": "@previewImages/DragonFantasyTB50.png"
+    "PreviewUri": "DragonFantasyTB50.png"
   },
   "DragonOrange": {
     "DisplayName": "Dragon, Orange",
@@ -36828,7 +36828,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "DragonOrange",
-    "PreviewUri": "@previewImages/DragonOrange.png"
+    "PreviewUri": "DragonOrange.png"
   },
   "DragonRed": {
     "DisplayName": "Dragon, Red",
@@ -36857,7 +36857,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "DragonRed",
-    "PreviewUri": "@previewImages/DragonRed.png"
+    "PreviewUri": "DragonRed.png"
   },
   "DragonSmallBlue": {
     "DisplayName": "Dragon, Small, Blue",
@@ -36885,7 +36885,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "DragonSmallBlue",
-    "PreviewUri": "@previewImages/DragonSmallBlue.png"
+    "PreviewUri": "DragonSmallBlue.png"
   },
   "DragonSmallGreen": {
     "DisplayName": "Dragon, Small, Green",
@@ -36913,7 +36913,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DragonSmallGreen",
-    "PreviewUri": "@previewImages/DragonSmallGreen.png"
+    "PreviewUri": "DragonSmallGreen.png"
   },
   "DragonSmallRed": {
     "DisplayName": "Dragon, Small, Red",
@@ -36941,7 +36941,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "DragonSmallRed",
-    "PreviewUri": "@previewImages/DragonSmallRed.png"
+    "PreviewUri": "DragonSmallRed.png"
   },
   "DragonSmallYellow": {
     "DisplayName": "Dragon, Small, Yellow",
@@ -36969,7 +36969,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "DragonSmallYellow",
-    "PreviewUri": "@previewImages/DragonSmallYellow.png"
+    "PreviewUri": "DragonSmallYellow.png"
   },
   "DriderFantasyTB50": {
     "DisplayName": "Drider, Fantasy, TB50",
@@ -36987,7 +36987,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "DriderFantasyTB50",
-    "PreviewUri": "@previewImages/DriderFantasyTB50.png"
+    "PreviewUri": "DriderFantasyTB50.png"
   },
   "DropBlack": {
     "DisplayName": "Drop, Black",
@@ -37011,7 +37011,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "DropBlack",
-    "PreviewUri": "@previewImages/DropBlack.png"
+    "PreviewUri": "DropBlack.png"
   },
   "DropBlue": {
     "DisplayName": "Drop, Blue",
@@ -37034,7 +37034,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "DropBlue",
-    "PreviewUri": "@previewImages/DropBlue.png"
+    "PreviewUri": "DropBlue.png"
   },
   "DropGreen": {
     "DisplayName": "Drop, Green",
@@ -37059,7 +37059,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DropGreen",
-    "PreviewUri": "@previewImages/DropGreen.png"
+    "PreviewUri": "DropGreen.png"
   },
   "DropOrange": {
     "DisplayName": "Drop, Orange",
@@ -37088,7 +37088,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "DropOrange",
-    "PreviewUri": "@previewImages/DropOrange.png"
+    "PreviewUri": "DropOrange.png"
   },
   "DropPurple": {
     "DisplayName": "Drop, Purple",
@@ -37113,7 +37113,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "DropPurple",
-    "PreviewUri": "@previewImages/DropPurple.png"
+    "PreviewUri": "DropPurple.png"
   },
   "DropRed": {
     "DisplayName": "Drop, Red",
@@ -37139,7 +37139,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "DropRed",
-    "PreviewUri": "@previewImages/DropRed.png"
+    "PreviewUri": "DropRed.png"
   },
   "DropWhite": {
     "DisplayName": "Drop, White",
@@ -37162,7 +37162,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "DropWhite",
-    "PreviewUri": "@previewImages/DropWhite.png"
+    "PreviewUri": "DropWhite.png"
   },
   "DropYellow": {
     "DisplayName": "Drop, Yellow",
@@ -37185,7 +37185,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "DropYellow",
-    "PreviewUri": "@previewImages/DropYellow.png"
+    "PreviewUri": "DropYellow.png"
   },
   "DrumstickOrange": {
     "DisplayName": "Drumstick, Orange",
@@ -37213,7 +37213,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "DrumstickOrange",
-    "PreviewUri": "@previewImages/DrumstickOrange.png"
+    "PreviewUri": "DrumstickOrange.png"
   },
   "DwarfAxeFantasyTB25": {
     "DisplayName": "Dwarf Axe, Fantasy, TB25",
@@ -37238,7 +37238,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "DwarfAxeFantasyTB25",
-    "PreviewUri": "@previewImages/DwarfAxeFantasyTB25.png"
+    "PreviewUri": "DwarfAxeFantasyTB25.png"
   },
   "DwarfFighter": {
     "DisplayName": "Dwarf Fighter",
@@ -37278,7 +37278,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "DwarfFighter",
-    "PreviewUri": "@previewImages/DwarfFighter.png"
+    "PreviewUri": "DwarfFighter.png"
   },
   "DwarfMinigunFantasyTB25": {
     "DisplayName": "Dwarf Minigun, Fantasy, TB25",
@@ -37301,7 +37301,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "DwarfMinigunFantasyTB25",
-    "PreviewUri": "@previewImages/DwarfMinigunFantasyTB25.png"
+    "PreviewUri": "DwarfMinigunFantasyTB25.png"
   },
   "DwarfPaladinFantasyTB25": {
     "DisplayName": "Dwarf Paladin, Fantasy, TB25",
@@ -37324,7 +37324,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "DwarfPaladinFantasyTB25",
-    "PreviewUri": "@previewImages/DwarfPaladinFantasyTB25.png"
+    "PreviewUri": "DwarfPaladinFantasyTB25.png"
   },
   "DwarfRiflemanFantasyTB25": {
     "DisplayName": "Dwarf Rifleman, Fantasy, TB25",
@@ -37342,7 +37342,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "DwarfRiflemanFantasyTB25",
-    "PreviewUri": "@previewImages/DwarfRiflemanFantasyTB25.png"
+    "PreviewUri": "DwarfRiflemanFantasyTB25.png"
   },
   "DwarfBlue-CharacterMeeple": {
     "DisplayName": "Dwarf, Blue, Character Meeple",
@@ -37366,7 +37366,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "DwarfBlue-CharacterMeeple",
-    "PreviewUri": "@previewImages/DwarfBlue-CharacterMeeple.png"
+    "PreviewUri": "DwarfBlue-CharacterMeeple.png"
   },
   "DwarfGreen-CharacterMeeple": {
     "DisplayName": "Dwarf, Green, Character Meeple",
@@ -37390,7 +37390,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "DwarfGreen-CharacterMeeple",
-    "PreviewUri": "@previewImages/DwarfGreen-CharacterMeeple.png"
+    "PreviewUri": "DwarfGreen-CharacterMeeple.png"
   },
   "DwarfOrange-CharacterMeeple": {
     "DisplayName": "Dwarf, Orange, Character Meeple",
@@ -37414,7 +37414,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "DwarfOrange-CharacterMeeple",
-    "PreviewUri": "@previewImages/DwarfOrange-CharacterMeeple.png"
+    "PreviewUri": "DwarfOrange-CharacterMeeple.png"
   },
   "DwarfPistolSpaceTB25": {
     "DisplayName": "Dwarf, Pistol, Space, TB25",
@@ -37432,7 +37432,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "DwarfPistolSpaceTB25",
-    "PreviewUri": "@previewImages/DwarfPistolSpaceTB25.png"
+    "PreviewUri": "DwarfPistolSpaceTB25.png"
   },
   "DwarfPurple-CharacterMeeple": {
     "DisplayName": "Dwarf, Purple, Character Meeple",
@@ -37456,7 +37456,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "DwarfPurple-CharacterMeeple",
-    "PreviewUri": "@previewImages/DwarfPurple-CharacterMeeple.png"
+    "PreviewUri": "DwarfPurple-CharacterMeeple.png"
   },
   "DwarfRed-CharacterMeeple": {
     "DisplayName": "Dwarf, Red, Character Meeple",
@@ -37480,7 +37480,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "DwarfRed-CharacterMeeple",
-    "PreviewUri": "@previewImages/DwarfRed-CharacterMeeple.png"
+    "PreviewUri": "DwarfRed-CharacterMeeple.png"
   },
   "DwarfYellow-CharacterMeeple": {
     "DisplayName": "Dwarf, Yellow, Character Meeple",
@@ -37504,7 +37504,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "DwarfYellow-CharacterMeeple",
-    "PreviewUri": "@previewImages/DwarfYellow-CharacterMeeple.png"
+    "PreviewUri": "DwarfYellow-CharacterMeeple.png"
   },
   "DwarvenIronGolem": {
     "DisplayName": "Dwarven Iron Golem",
@@ -37541,7 +37541,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "DwarvenIronGolem",
-    "PreviewUri": "@previewImages/DwarvenIronGolem.png"
+    "PreviewUri": "DwarvenIronGolem.png"
   },
   "Dynamite": {
     "DisplayName": "Dynamite",
@@ -37568,7 +37568,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": true,
     "Key": "Dynamite",
-    "PreviewUri": "@previewImages/Dynamite.png"
+    "PreviewUri": "Dynamite.png"
   },
   "EggBlue": {
     "DisplayName": "Egg, Blue",
@@ -37599,7 +37599,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "EggBlue",
-    "PreviewUri": "@previewImages/EggBlue.png"
+    "PreviewUri": "EggBlue.png"
   },
   "EggGreen": {
     "DisplayName": "Egg, Green",
@@ -37630,7 +37630,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "EggGreen",
-    "PreviewUri": "@previewImages/EggGreen.png"
+    "PreviewUri": "EggGreen.png"
   },
   "EggNatural": {
     "DisplayName": "Egg, Natural",
@@ -37662,7 +37662,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "natural",
     "IsDisabled": false,
     "Key": "EggNatural",
-    "PreviewUri": "@previewImages/EggNatural.png"
+    "PreviewUri": "EggNatural.png"
   },
   "EggPurple": {
     "DisplayName": "Egg, Purple",
@@ -37693,7 +37693,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "EggPurple",
-    "PreviewUri": "@previewImages/EggPurple.png"
+    "PreviewUri": "EggPurple.png"
   },
   "EggRose": {
     "DisplayName": "Egg, Rose",
@@ -37725,7 +37725,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "EggRose",
-    "PreviewUri": "@previewImages/EggRose.png"
+    "PreviewUri": "EggRose.png"
   },
   "EggWhite": {
     "DisplayName": "Egg, White",
@@ -37756,7 +37756,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "EggWhite",
-    "PreviewUri": "@previewImages/EggWhite.png"
+    "PreviewUri": "EggWhite.png"
   },
   "ElectricitySymbolGreen": {
     "DisplayName": "Electricity Symbol, Green",
@@ -37795,7 +37795,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": true,
     "Key": "ElectricitySymbolGreen",
-    "PreviewUri": "@previewImages/ElectricitySymbolGreen.png"
+    "PreviewUri": "ElectricitySymbolGreen.png"
   },
   "ElephantwithRiderGreen": {
     "DisplayName": "Elephant with Rider, Green",
@@ -37823,7 +37823,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "ivory",
     "IsDisabled": false,
     "Key": "ElephantwithRiderGreen",
-    "PreviewUri": "@previewImages/ElephantwithRiderGreen.png"
+    "PreviewUri": "ElephantwithRiderGreen.png"
   },
   "ElephantwithRiderGray": {
     "DisplayName": "Elephant with Rider, Gray",
@@ -37851,7 +37851,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "ivory",
     "IsDisabled": false,
     "Key": "ElephantwithRiderGray",
-    "PreviewUri": "@previewImages/ElephantwithRiderGray.png"
+    "PreviewUri": "ElephantwithRiderGray.png"
   },
   "ElephantwithRiderOrange": {
     "DisplayName": "Elephant with Rider, Orange",
@@ -37879,7 +37879,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "ivory",
     "IsDisabled": false,
     "Key": "ElephantwithRiderOrange",
-    "PreviewUri": "@previewImages/ElephantwithRiderOrange.png"
+    "PreviewUri": "ElephantwithRiderOrange.png"
   },
   "ElephantwithRiderPurple": {
     "DisplayName": "Elephant with Rider, Purple",
@@ -37907,7 +37907,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "ivory",
     "IsDisabled": false,
     "Key": "ElephantwithRiderPurple",
-    "PreviewUri": "@previewImages/ElephantwithRiderPurple.png"
+    "PreviewUri": "ElephantwithRiderPurple.png"
   },
   "ElephantwithRiderRed": {
     "DisplayName": "Elephant with Rider, Red",
@@ -37935,7 +37935,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "ivory",
     "IsDisabled": false,
     "Key": "ElephantwithRiderRed",
-    "PreviewUri": "@previewImages/ElephantwithRiderRed.png"
+    "PreviewUri": "ElephantwithRiderRed.png"
   },
   "ElephantwithRiderYellow": {
     "DisplayName": "Elephant with Rider, Yellow",
@@ -37963,7 +37963,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "ivory",
     "IsDisabled": false,
     "Key": "ElephantwithRiderYellow",
-    "PreviewUri": "@previewImages/ElephantwithRiderYellow.png"
+    "PreviewUri": "ElephantwithRiderYellow.png"
   },
   "Elf-CharacterMeeple": {
     "DisplayName": "Elf, Character Meeple",
@@ -37991,7 +37991,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Elf-CharacterMeeple",
-    "PreviewUri": "@previewImages/Elf-CharacterMeeple.png"
+    "PreviewUri": "Elf-CharacterMeeple.png"
   },
   "ElfArcher2FantasyTB25": {
     "DisplayName": "Elf Archer 2, Fantasy, TB25",
@@ -38015,7 +38015,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "ElfArcher2FantasyTB25",
-    "PreviewUri": "@previewImages/ElfArcher2FantasyTB25.png"
+    "PreviewUri": "ElfArcher2FantasyTB25.png"
   },
   "ElfArcherFantasyTB25": {
     "DisplayName": "Elf Archer, Fantasy, TB25",
@@ -38039,7 +38039,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "ElfArcherFantasyTB25",
-    "PreviewUri": "@previewImages/ElfArcherFantasyTB25.png"
+    "PreviewUri": "ElfArcherFantasyTB25.png"
   },
   "EmptyBottle": {
     "DisplayName": "Empty Bottle",
@@ -38068,7 +38068,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "EmptyBottle",
-    "PreviewUri": "@previewImages/EmptyBottle.png"
+    "PreviewUri": "EmptyBottle.png"
   },
   "EmptyVial": {
     "DisplayName": "Empty Vial",
@@ -38095,7 +38095,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "EmptyVial",
-    "PreviewUri": "@previewImages/EmptyVial.png"
+    "PreviewUri": "EmptyVial.png"
   },
   "EnchanterwithStaff": {
     "DisplayName": "Enchanter with Staff",
@@ -38127,7 +38127,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "EnchanterwithStaff",
-    "PreviewUri": "@previewImages/EnchanterwithStaff.png"
+    "PreviewUri": "EnchanterwithStaff.png"
   },
   "EuroPokerTin": {
     "DisplayName": "Euro Poker Tin",
@@ -38147,7 +38147,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "EuroPokerTin",
-    "PreviewUri": "@previewImages/EuroPokerTin.png"
+    "PreviewUri": "EuroPokerTin.png"
   },
   "EvilLordwithMace": {
     "DisplayName": "Evil Lord with Mace",
@@ -38183,7 +38183,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "EvilLordwithMace",
-    "PreviewUri": "@previewImages/EvilLordwithMace.png"
+    "PreviewUri": "EvilLordwithMace.png"
   },
   "ExclamationMark": {
     "DisplayName": "Exclamation Mark",
@@ -38220,7 +38220,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "ExclamationMark",
-    "PreviewUri": "@previewImages/ExclamationMark.png"
+    "PreviewUri": "ExclamationMark.png"
   },
   "ExplorerSetof3(AssortedColors)": {
     "DisplayName": "Explorer, Set of 3 (Assorted Colors)",
@@ -38268,7 +38268,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "ExplorerSetof3(AssortedColors)",
-    "PreviewUri": "@previewImages/ExplorerSetof3(AssortedColors).png"
+    "PreviewUri": "ExplorerSetof3(AssortedColors).png"
   },
   "FailFasterPlaytestingJournal": {
     "DisplayName": "Fail Faster Playtesting Journal",
@@ -38297,7 +38297,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "FailFasterPlaytestingJournal",
-    "PreviewUri": "@previewImages/FailFasterPlaytestingJournal.png"
+    "PreviewUri": "FailFasterPlaytestingJournal.png"
   },
   "Fang": {
     "DisplayName": "Fang",
@@ -38314,7 +38314,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Fang",
-    "PreviewUri": "@previewImages/Fang.png"
+    "PreviewUri": "Fang.png"
   },
   "FantasyCoin20": {
     "DisplayName": "Fantasy Coin 20",
@@ -38363,7 +38363,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "FantasyCoin20",
-    "PreviewUri": "@previewImages/FantasyCoin20.png"
+    "PreviewUri": "FantasyCoin20.png"
   },
   "FantasyCoin5": {
     "DisplayName": "Fantasy Coin 5",
@@ -38413,7 +38413,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "FantasyCoin5",
-    "PreviewUri": "@previewImages/FantasyCoin5.png"
+    "PreviewUri": "FantasyCoin5.png"
   },
   "FarmerFemaleBlue-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Blue, Character Meeple",
@@ -38455,7 +38455,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "FarmerFemaleBlue-CharacterMeeple",
-    "PreviewUri": "@previewImages/FarmerFemaleBlue-CharacterMeeple.png"
+    "PreviewUri": "FarmerFemaleBlue-CharacterMeeple.png"
   },
   "FarmerFemaleGreen-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Green, Character Meeple",
@@ -38497,7 +38497,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "FarmerFemaleGreen-CharacterMeeple",
-    "PreviewUri": "@previewImages/FarmerFemaleGreen-CharacterMeeple.png"
+    "PreviewUri": "FarmerFemaleGreen-CharacterMeeple.png"
   },
   "FarmerFemaleOrange-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Orange, Character Meeple",
@@ -38539,7 +38539,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "FarmerFemaleOrange-CharacterMeeple",
-    "PreviewUri": "@previewImages/FarmerFemaleOrange-CharacterMeeple.png"
+    "PreviewUri": "FarmerFemaleOrange-CharacterMeeple.png"
   },
   "FarmerFemalePurple-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Purple, Character Meeple",
@@ -38581,7 +38581,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "FarmerFemalePurple-CharacterMeeple",
-    "PreviewUri": "@previewImages/FarmerFemalePurple-CharacterMeeple.png"
+    "PreviewUri": "FarmerFemalePurple-CharacterMeeple.png"
   },
   "FarmerFemaleRed-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Red, Character Meeple",
@@ -38623,7 +38623,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FarmerFemaleRed-CharacterMeeple",
-    "PreviewUri": "@previewImages/FarmerFemaleRed-CharacterMeeple.png"
+    "PreviewUri": "FarmerFemaleRed-CharacterMeeple.png"
   },
   "FarmerFemaleYellow-CharacterMeeple": {
     "DisplayName": "Farmer, Female, Yellow, Character Meeple",
@@ -38665,7 +38665,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FarmerFemaleYellow-CharacterMeeple",
-    "PreviewUri": "@previewImages/FarmerFemaleYellow-CharacterMeeple.png"
+    "PreviewUri": "FarmerFemaleYellow-CharacterMeeple.png"
   },
   "FarmerMaleBlue-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Blue, Character Meeple",
@@ -38707,7 +38707,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "FarmerMaleBlue-CharacterMeeple",
-    "PreviewUri": "@previewImages/FarmerMaleBlue-CharacterMeeple.png"
+    "PreviewUri": "FarmerMaleBlue-CharacterMeeple.png"
   },
   "FarmerMaleGreen-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Green, Character Meeple",
@@ -38749,7 +38749,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "FarmerMaleGreen-CharacterMeeple",
-    "PreviewUri": "@previewImages/FarmerMaleGreen-CharacterMeeple.png"
+    "PreviewUri": "FarmerMaleGreen-CharacterMeeple.png"
   },
   "FarmerMaleOrange-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Orange, Character Meeple",
@@ -38791,7 +38791,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "FarmerMaleOrange-CharacterMeeple",
-    "PreviewUri": "@previewImages/FarmerMaleOrange-CharacterMeeple.png"
+    "PreviewUri": "FarmerMaleOrange-CharacterMeeple.png"
   },
   "FarmerMalePurple-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Purple, Character Meeple",
@@ -38833,7 +38833,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "FarmerMalePurple-CharacterMeeple",
-    "PreviewUri": "@previewImages/FarmerMalePurple-CharacterMeeple.png"
+    "PreviewUri": "FarmerMalePurple-CharacterMeeple.png"
   },
   "FarmerMaleRed-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Red, Character Meeple",
@@ -38875,7 +38875,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FarmerMaleRed-CharacterMeeple",
-    "PreviewUri": "@previewImages/FarmerMaleRed-CharacterMeeple.png"
+    "PreviewUri": "FarmerMaleRed-CharacterMeeple.png"
   },
   "FarmerMaleYellow-CharacterMeeple": {
     "DisplayName": "Farmer, Male, Yellow, Character Meeple",
@@ -38917,7 +38917,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FarmerMaleYellow-CharacterMeeple",
-    "PreviewUri": "@previewImages/FarmerMaleYellow-CharacterMeeple.png"
+    "PreviewUri": "FarmerMaleYellow-CharacterMeeple.png"
   },
   "FedoraPersonBlackDark": {
     "DisplayName": "Fedora Person, Black, Dark",
@@ -38949,7 +38949,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "FedoraPersonBlackDark",
-    "PreviewUri": "@previewImages/FedoraPersonBlackDark.png"
+    "PreviewUri": "FedoraPersonBlackDark.png"
   },
   "FedoraPersonBlackLight": {
     "DisplayName": "Fedora Person, Black, Light",
@@ -38981,7 +38981,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "FedoraPersonBlackLight",
-    "PreviewUri": "@previewImages/FedoraPersonBlackLight.png"
+    "PreviewUri": "FedoraPersonBlackLight.png"
   },
   "FedoraPersonBlackMedium": {
     "DisplayName": "Fedora Person, Black, Medium",
@@ -39013,7 +39013,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "FedoraPersonBlackMedium",
-    "PreviewUri": "@previewImages/FedoraPersonBlackMedium.png"
+    "PreviewUri": "FedoraPersonBlackMedium.png"
   },
   "FedoraPersonBlueDark": {
     "DisplayName": "Fedora Person, Blue, Dark",
@@ -39045,7 +39045,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "FedoraPersonBlueDark",
-    "PreviewUri": "@previewImages/FedoraPersonBlueDark.png"
+    "PreviewUri": "FedoraPersonBlueDark.png"
   },
   "FedoraPersonBlueLight": {
     "DisplayName": "Fedora Person, Blue, Light",
@@ -39077,7 +39077,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "FedoraPersonBlueLight",
-    "PreviewUri": "@previewImages/FedoraPersonBlueLight.png"
+    "PreviewUri": "FedoraPersonBlueLight.png"
   },
   "FedoraPersonBlueMedium": {
     "DisplayName": "Fedora Person, Blue, Medium",
@@ -39109,7 +39109,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "FedoraPersonBlueMedium",
-    "PreviewUri": "@previewImages/FedoraPersonBlueMedium.png"
+    "PreviewUri": "FedoraPersonBlueMedium.png"
   },
   "FedoraPersonRedDark": {
     "DisplayName": "Fedora Person, Red, Dark",
@@ -39141,7 +39141,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FedoraPersonRedDark",
-    "PreviewUri": "@previewImages/FedoraPersonRedDark.png"
+    "PreviewUri": "FedoraPersonRedDark.png"
   },
   "FedoraPersonRedLight": {
     "DisplayName": "Fedora Person, Red, Light",
@@ -39173,7 +39173,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FedoraPersonRedLight",
-    "PreviewUri": "@previewImages/FedoraPersonRedLight.png"
+    "PreviewUri": "FedoraPersonRedLight.png"
   },
   "FedoraPersonRedMedium": {
     "DisplayName": "Fedora Person, Red, Medium",
@@ -39205,7 +39205,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FedoraPersonRedMedium",
-    "PreviewUri": "@previewImages/FedoraPersonRedMedium.png"
+    "PreviewUri": "FedoraPersonRedMedium.png"
   },
   "FedoraPersonWhiteDark": {
     "DisplayName": "Fedora Person, White, Dark",
@@ -39237,7 +39237,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "FedoraPersonWhiteDark",
-    "PreviewUri": "@previewImages/FedoraPersonWhiteDark.png"
+    "PreviewUri": "FedoraPersonWhiteDark.png"
   },
   "FedoraPersonWhiteLight": {
     "DisplayName": "Fedora Person, White, Light",
@@ -39269,7 +39269,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "FedoraPersonWhiteLight",
-    "PreviewUri": "@previewImages/FedoraPersonWhiteLight.png"
+    "PreviewUri": "FedoraPersonWhiteLight.png"
   },
   "FedoraPersonWhiteMedium": {
     "DisplayName": "Fedora Person, White, Medium",
@@ -39301,7 +39301,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "FedoraPersonWhiteMedium",
-    "PreviewUri": "@previewImages/FedoraPersonWhiteMedium.png"
+    "PreviewUri": "FedoraPersonWhiteMedium.png"
   },
   "FedoraPersonYellowDark": {
     "DisplayName": "Fedora Person, Yellow, Dark",
@@ -39333,7 +39333,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FedoraPersonYellowDark",
-    "PreviewUri": "@previewImages/FedoraPersonYellowDark.png"
+    "PreviewUri": "FedoraPersonYellowDark.png"
   },
   "FedoraPersonYellowLight": {
     "DisplayName": "Fedora Person, Yellow, Light",
@@ -39365,7 +39365,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FedoraPersonYellowLight",
-    "PreviewUri": "@previewImages/FedoraPersonYellowLight.png"
+    "PreviewUri": "FedoraPersonYellowLight.png"
   },
   "FedoraPersonYellowMedium": {
     "DisplayName": "Fedora Person, Yellow, Medium",
@@ -39397,7 +39397,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FedoraPersonYellowMedium",
-    "PreviewUri": "@previewImages/FedoraPersonYellowMedium.png"
+    "PreviewUri": "FedoraPersonYellowMedium.png"
   },
   "FedoraWearerBlack": {
     "DisplayName": "Fedora Wearer, Black",
@@ -39429,7 +39429,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "FedoraWearerBlack",
-    "PreviewUri": "@previewImages/FedoraWearerBlack.png"
+    "PreviewUri": "FedoraWearerBlack.png"
   },
   "FemaleAssassinFantasyTB25": {
     "DisplayName": "Female Assassin, Fantasy, TB25",
@@ -39452,7 +39452,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "FemaleAssassinFantasyTB25",
-    "PreviewUri": "@previewImages/FemaleAssassinFantasyTB25.png"
+    "PreviewUri": "FemaleAssassinFantasyTB25.png"
   },
   "FemaleBeastMasterWarriorwithSwordandSpear": {
     "DisplayName": "Female Beast Master Warrior with Sword and Spear",
@@ -39485,7 +39485,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "FemaleBeastMasterWarriorwithSwordandSpear",
-    "PreviewUri": "@previewImages/FemaleBeastMasterWarriorwithSwordandSpear.png"
+    "PreviewUri": "FemaleBeastMasterWarriorwithSwordandSpear.png"
   },
   "FemaleElfArcherFantasyTB25": {
     "DisplayName": "Female Elf Archer, Fantasy, TB25",
@@ -39503,7 +39503,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "FemaleElfArcherFantasyTB25",
-    "PreviewUri": "@previewImages/FemaleElfArcherFantasyTB25.png"
+    "PreviewUri": "FemaleElfArcherFantasyTB25.png"
   },
   "FemaleElfMageFantasyTB25": {
     "DisplayName": "Female Elf Mage, Fantasy, TB25",
@@ -39527,7 +39527,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "FemaleElfMageFantasyTB25",
-    "PreviewUri": "@previewImages/FemaleElfMageFantasyTB25.png"
+    "PreviewUri": "FemaleElfMageFantasyTB25.png"
   },
   "FemaleFarmerGreen": {
     "DisplayName": "Female Farmer, Green",
@@ -39569,7 +39569,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "FemaleFarmerGreen",
-    "PreviewUri": "@previewImages/FemaleFarmerGreen.png"
+    "PreviewUri": "FemaleFarmerGreen.png"
   },
   "FemaleFarmerOrange": {
     "DisplayName": "Female Farmer, Orange",
@@ -39610,7 +39610,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": true,
     "Key": "FemaleFarmerOrange",
-    "PreviewUri": "@previewImages/FemaleFarmerOrange.png"
+    "PreviewUri": "FemaleFarmerOrange.png"
   },
   "FemaleFarmerPurple": {
     "DisplayName": "Female Farmer, Purple",
@@ -39652,7 +39652,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "FemaleFarmerPurple",
-    "PreviewUri": "@previewImages/FemaleFarmerPurple.png"
+    "PreviewUri": "FemaleFarmerPurple.png"
   },
   "FemaleFarmerWhite": {
     "DisplayName": "Female Farmer, White",
@@ -39693,7 +39693,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": true,
     "Key": "FemaleFarmerWhite",
-    "PreviewUri": "@previewImages/FemaleFarmerWhite.png"
+    "PreviewUri": "FemaleFarmerWhite.png"
   },
   "FemaleFarmerYellow": {
     "DisplayName": "Female Farmer, Yellow",
@@ -39735,7 +39735,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FemaleFarmerYellow",
-    "PreviewUri": "@previewImages/FemaleFarmerYellow.png"
+    "PreviewUri": "FemaleFarmerYellow.png"
   },
   "FemaleGunslingerGray": {
     "DisplayName": "Female Gunslinger, Gray",
@@ -39771,7 +39771,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "FemaleGunslingerGray",
-    "PreviewUri": "@previewImages/FemaleGunslingerGray.png"
+    "PreviewUri": "FemaleGunslingerGray.png"
   },
   "FenceWicker": {
     "DisplayName": "Fence, Wicker",
@@ -39790,7 +39790,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "FenceWicker",
-    "PreviewUri": "@previewImages/FenceWicker.png"
+    "PreviewUri": "FenceWicker.png"
   },
   "FighterShipSetof6": {
     "DisplayName": "Fighter Ship, Set of 6",
@@ -39821,7 +39821,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "FighterShipSetof6",
-    "PreviewUri": "@previewImages/FighterShipSetof6.png"
+    "PreviewUri": "FighterShipSetof6.png"
   },
   "FighterwithGreatSword": {
     "DisplayName": "Fighter with Great Sword",
@@ -39853,7 +39853,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "FighterwithGreatSword",
-    "PreviewUri": "@previewImages/FighterwithGreatSword.png"
+    "PreviewUri": "FighterwithGreatSword.png"
   },
   "FigureWoodGreen": {
     "DisplayName": "Figure, Wood, Green",
@@ -39882,7 +39882,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "FigureWoodGreen",
-    "PreviewUri": "@previewImages/FigureWoodGreen.png"
+    "PreviewUri": "FigureWoodGreen.png"
   },
   "FigureWoodWhite": {
     "DisplayName": "Figure, Wood, White",
@@ -39911,7 +39911,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "FigureWoodWhite",
-    "PreviewUri": "@previewImages/FigureWoodWhite.png"
+    "PreviewUri": "FigureWoodWhite.png"
   },
   "FiguresMissionarySetof5": {
     "DisplayName": "Figures, Missionary, Set of 5",
@@ -39950,7 +39950,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "FiguresMissionarySetof5",
-    "PreviewUri": "@previewImages/FiguresMissionarySetof5.png"
+    "PreviewUri": "FiguresMissionarySetof5.png"
   },
   "FiguresSci-FiSetof10": {
     "DisplayName": "Figures, Sci-Fi, Set of 10",
@@ -39981,7 +39981,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "FiguresSci-FiSetof10",
-    "PreviewUri": "@previewImages/FiguresSci-FiSetof10.png"
+    "PreviewUri": "FiguresSci-FiSetof10.png"
   },
   "FiguresSoldierSetof5": {
     "DisplayName": "Figures, Soldier, Set of 5",
@@ -40012,7 +40012,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "FiguresSoldierSetof5",
-    "PreviewUri": "@previewImages/FiguresSoldierSetof5.png"
+    "PreviewUri": "FiguresSoldierSetof5.png"
   },
   "FiguresSteampunkSetof14": {
     "DisplayName": "Figures, Steampunk, Set of 14",
@@ -40036,7 +40036,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "FiguresSteampunkSetof14",
-    "PreviewUri": "@previewImages/FiguresSteampunkSetof14.png"
+    "PreviewUri": "FiguresSteampunkSetof14.png"
   },
   "FillableVial": {
     "DisplayName": "Fillable Vial",
@@ -40064,7 +40064,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "FillableVial",
-    "PreviewUri": "@previewImages/FillableVial.png"
+    "PreviewUri": "FillableVial.png"
   },
   "FireAxe": {
     "DisplayName": "Fire Axe",
@@ -40097,7 +40097,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "FireAxe",
-    "PreviewUri": "@previewImages/FireAxe.png"
+    "PreviewUri": "FireAxe.png"
   },
   "FireElemental": {
     "DisplayName": "Fire Elemental",
@@ -40134,7 +40134,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "FireElemental",
-    "PreviewUri": "@previewImages/FireElemental.png"
+    "PreviewUri": "FireElemental.png"
   },
   "FireElemental-CharacterMeeple": {
     "DisplayName": "Fire Elemental, Character Meeple",
@@ -40160,7 +40160,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FireElemental-CharacterMeeple",
-    "PreviewUri": "@previewImages/FireElemental-CharacterMeeple.png"
+    "PreviewUri": "FireElemental-CharacterMeeple.png"
   },
   "FireTB25": {
     "DisplayName": "Fire, TB25",
@@ -40178,7 +40178,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "FireTB25",
-    "PreviewUri": "@previewImages/FireTB25.png"
+    "PreviewUri": "FireTB25.png"
   },
   "Firefighter-CharacterMeeple": {
     "DisplayName": "Firefighter, Character Meeple",
@@ -40204,7 +40204,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Firefighter-CharacterMeeple",
-    "PreviewUri": "@previewImages/Firefighter-CharacterMeeple.png"
+    "PreviewUri": "Firefighter-CharacterMeeple.png"
   },
   "FishWoodYellow": {
     "DisplayName": "Fish, Wood, Yellow",
@@ -40243,7 +40243,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "salmon",
     "IsDisabled": false,
     "Key": "FishWoodYellow",
-    "PreviewUri": "@previewImages/FishWoodYellow.png"
+    "PreviewUri": "FishWoodYellow.png"
   },
   "Fist": {
     "DisplayName": "Fist",
@@ -40273,7 +40273,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Fist",
-    "PreviewUri": "@previewImages/Fist.png"
+    "PreviewUri": "Fist.png"
   },
   "FlagBlack": {
     "DisplayName": "Flag, Black",
@@ -40306,7 +40306,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "FlagBlack",
-    "PreviewUri": "@previewImages/FlagBlack.png"
+    "PreviewUri": "FlagBlack.png"
   },
   "FlagBlue": {
     "DisplayName": "Flag, Blue",
@@ -40339,7 +40339,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "FlagBlue",
-    "PreviewUri": "@previewImages/FlagBlue.png"
+    "PreviewUri": "FlagBlue.png"
   },
   "FlagGreen": {
     "DisplayName": "Flag, Green",
@@ -40372,7 +40372,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "FlagGreen",
-    "PreviewUri": "@previewImages/FlagGreen.png"
+    "PreviewUri": "FlagGreen.png"
   },
   "FlagOrange": {
     "DisplayName": "Flag, Orange",
@@ -40405,7 +40405,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "FlagOrange",
-    "PreviewUri": "@previewImages/FlagOrange.png"
+    "PreviewUri": "FlagOrange.png"
   },
   "FlagPurple": {
     "DisplayName": "Flag, Purple",
@@ -40438,7 +40438,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "FlagPurple",
-    "PreviewUri": "@previewImages/FlagPurple.png"
+    "PreviewUri": "FlagPurple.png"
   },
   "FlagRed": {
     "DisplayName": "Flag, Red",
@@ -40471,7 +40471,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FlagRed",
-    "PreviewUri": "@previewImages/FlagRed.png"
+    "PreviewUri": "FlagRed.png"
   },
   "FlagWhite": {
     "DisplayName": "Flag, White",
@@ -40504,7 +40504,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "FlagWhite",
-    "PreviewUri": "@previewImages/FlagWhite.png"
+    "PreviewUri": "FlagWhite.png"
   },
   "FlagYellow": {
     "DisplayName": "Flag, Yellow",
@@ -40537,7 +40537,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FlagYellow",
-    "PreviewUri": "@previewImages/FlagYellow.png"
+    "PreviewUri": "FlagYellow.png"
   },
   "FlameBaseLogs": {
     "DisplayName": "Flame Base, Logs",
@@ -40563,7 +40563,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "FlameBaseLogs",
-    "PreviewUri": "@previewImages/FlameBaseLogs.png"
+    "PreviewUri": "FlameBaseLogs.png"
   },
   "FlameBaseSmoke": {
     "DisplayName": "Flame Base, Smoke",
@@ -40589,7 +40589,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "FlameBaseSmoke",
-    "PreviewUri": "@previewImages/FlameBaseSmoke.png"
+    "PreviewUri": "FlameBaseSmoke.png"
   },
   "FlameFree-Standing": {
     "DisplayName": "Flame, Free-Standing",
@@ -40615,7 +40615,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "FlameFree-Standing",
-    "PreviewUri": "@previewImages/FlameFree-Standing.png"
+    "PreviewUri": "FlameFree-Standing.png"
   },
   "FlatCapBlackBronze": {
     "DisplayName": "Flat Cap, Black, Bronze",
@@ -40647,7 +40647,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "FlatCapBlackBronze",
-    "PreviewUri": "@previewImages/FlatCapBlackBronze.png"
+    "PreviewUri": "FlatCapBlackBronze.png"
   },
   "FlatCapBlackGreen": {
     "DisplayName": "Flat Cap, Black, Green",
@@ -40680,7 +40680,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "FlatCapBlackGreen",
-    "PreviewUri": "@previewImages/FlatCapBlackGreen.png"
+    "PreviewUri": "FlatCapBlackGreen.png"
   },
   "FlatCapBlackPurple": {
     "DisplayName": "Flat Cap, Black, Purple",
@@ -40713,7 +40713,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "FlatCapBlackPurple",
-    "PreviewUri": "@previewImages/FlatCapBlackPurple.png"
+    "PreviewUri": "FlatCapBlackPurple.png"
   },
   "FlatCapBlueBronze": {
     "DisplayName": "Flat Cap, Blue, Bronze",
@@ -40745,7 +40745,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "FlatCapBlueBronze",
-    "PreviewUri": "@previewImages/FlatCapBlueBronze.png"
+    "PreviewUri": "FlatCapBlueBronze.png"
   },
   "FlatCapBlueGreen": {
     "DisplayName": "Flat Cap, Blue, Green",
@@ -40777,7 +40777,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "FlatCapBlueGreen",
-    "PreviewUri": "@previewImages/FlatCapBlueGreen.png"
+    "PreviewUri": "FlatCapBlueGreen.png"
   },
   "FlatCapBluePurple": {
     "DisplayName": "Flat Cap, Blue, Purple",
@@ -40809,7 +40809,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "FlatCapBluePurple",
-    "PreviewUri": "@previewImages/FlatCapBluePurple.png"
+    "PreviewUri": "FlatCapBluePurple.png"
   },
   "FlatCapRedBronze": {
     "DisplayName": "Flat Cap, Red, Bronze",
@@ -40841,7 +40841,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FlatCapRedBronze",
-    "PreviewUri": "@previewImages/FlatCapRedBronze.png"
+    "PreviewUri": "FlatCapRedBronze.png"
   },
   "FlatCapRedGreen": {
     "DisplayName": "Flat Cap, Red, Green",
@@ -40873,7 +40873,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FlatCapRedGreen",
-    "PreviewUri": "@previewImages/FlatCapRedGreen.png"
+    "PreviewUri": "FlatCapRedGreen.png"
   },
   "FlatCapRedPurple": {
     "DisplayName": "Flat Cap, Red, Purple",
@@ -40905,7 +40905,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FlatCapRedPurple",
-    "PreviewUri": "@previewImages/FlatCapRedPurple.png"
+    "PreviewUri": "FlatCapRedPurple.png"
   },
   "FlatCapWhiteBronze": {
     "DisplayName": "Flat Cap, White, Bronze",
@@ -40937,7 +40937,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "FlatCapWhiteBronze",
-    "PreviewUri": "@previewImages/FlatCapWhiteBronze.png"
+    "PreviewUri": "FlatCapWhiteBronze.png"
   },
   "FlatCapWhiteGreen": {
     "DisplayName": "Flat Cap, White, Green",
@@ -40970,7 +40970,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "FlatCapWhiteGreen",
-    "PreviewUri": "@previewImages/FlatCapWhiteGreen.png"
+    "PreviewUri": "FlatCapWhiteGreen.png"
   },
   "FlatCapWhitePurple": {
     "DisplayName": "Flat Cap, White, Purple",
@@ -41003,7 +41003,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "FlatCapWhitePurple",
-    "PreviewUri": "@previewImages/FlatCapWhitePurple.png"
+    "PreviewUri": "FlatCapWhitePurple.png"
   },
   "FlatCapYellowBronze": {
     "DisplayName": "Flat Cap, Yellow, Bronze",
@@ -41035,7 +41035,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FlatCapYellowBronze",
-    "PreviewUri": "@previewImages/FlatCapYellowBronze.png"
+    "PreviewUri": "FlatCapYellowBronze.png"
   },
   "FlatCapYellowGreen": {
     "DisplayName": "Flat Cap, Yellow, Green",
@@ -41068,7 +41068,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FlatCapYellowGreen",
-    "PreviewUri": "@previewImages/FlatCapYellowGreen.png"
+    "PreviewUri": "FlatCapYellowGreen.png"
   },
   "FlatCapYellowPurple": {
     "DisplayName": "Flat Cap, Yellow, Purple",
@@ -41100,7 +41100,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FlatCapYellowPurple",
-    "PreviewUri": "@previewImages/FlatCapYellowPurple.png"
+    "PreviewUri": "FlatCapYellowPurple.png"
   },
   "FlatStarBlack": {
     "DisplayName": "Flat Star, Black",
@@ -41135,7 +41135,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "FlatStarBlack",
-    "PreviewUri": "@previewImages/FlatStarBlack.png"
+    "PreviewUri": "FlatStarBlack.png"
   },
   "FlatStarBlue": {
     "DisplayName": "Flat Star, Blue",
@@ -41170,7 +41170,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "FlatStarBlue",
-    "PreviewUri": "@previewImages/FlatStarBlue.png"
+    "PreviewUri": "FlatStarBlue.png"
   },
   "FlatStarGreen": {
     "DisplayName": "Flat Star, Green",
@@ -41205,7 +41205,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "FlatStarGreen",
-    "PreviewUri": "@previewImages/FlatStarGreen.png"
+    "PreviewUri": "FlatStarGreen.png"
   },
   "FlatStarOrange": {
     "DisplayName": "Flat Star, Orange",
@@ -41240,7 +41240,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "FlatStarOrange",
-    "PreviewUri": "@previewImages/FlatStarOrange.png"
+    "PreviewUri": "FlatStarOrange.png"
   },
   "FlatStarPurple": {
     "DisplayName": "Flat Star, Purple",
@@ -41275,7 +41275,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "FlatStarPurple",
-    "PreviewUri": "@previewImages/FlatStarPurple.png"
+    "PreviewUri": "FlatStarPurple.png"
   },
   "FlatStarRed": {
     "DisplayName": "Flat Star, Red",
@@ -41310,7 +41310,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FlatStarRed",
-    "PreviewUri": "@previewImages/FlatStarRed.png"
+    "PreviewUri": "FlatStarRed.png"
   },
   "FlatStarWhite": {
     "DisplayName": "Flat Star, White",
@@ -41345,7 +41345,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "FlatStarWhite",
-    "PreviewUri": "@previewImages/FlatStarWhite.png"
+    "PreviewUri": "FlatStarWhite.png"
   },
   "FlatStarYellow": {
     "DisplayName": "Flat Star, Yellow",
@@ -41380,7 +41380,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FlatStarYellow",
-    "PreviewUri": "@previewImages/FlatStarYellow.png"
+    "PreviewUri": "FlatStarYellow.png"
   },
   "FlatbedTruckWoodBlack": {
     "DisplayName": "Flatbed Truck, Wood, Black",
@@ -41417,7 +41417,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": true,
     "Key": "FlatbedTruckWoodBlack",
-    "PreviewUri": "@previewImages/FlatbedTruckWoodBlack.png"
+    "PreviewUri": "FlatbedTruckWoodBlack.png"
   },
   "FluteGirlFantasyTB25": {
     "DisplayName": "Flute Girl, Fantasy, TB25",
@@ -41441,7 +41441,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "FluteGirlFantasyTB25",
-    "PreviewUri": "@previewImages/FluteGirlFantasyTB25.png"
+    "PreviewUri": "FluteGirlFantasyTB25.png"
   },
   "FootBrown": {
     "DisplayName": "Foot, Brown",
@@ -41472,7 +41472,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "FootBrown",
-    "PreviewUri": "@previewImages/FootBrown.png"
+    "PreviewUri": "FootBrown.png"
   },
   "FootmanBlue": {
     "DisplayName": "Footman, Blue",
@@ -41501,7 +41501,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "FootmanBlue",
-    "PreviewUri": "@previewImages/FootmanBlue.png"
+    "PreviewUri": "FootmanBlue.png"
   },
   "FootmanGreen": {
     "DisplayName": "Footman, Green",
@@ -41530,7 +41530,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "FootmanGreen",
-    "PreviewUri": "@previewImages/FootmanGreen.png"
+    "PreviewUri": "FootmanGreen.png"
   },
   "FootmanRed": {
     "DisplayName": "Footman, Red",
@@ -41559,7 +41559,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FootmanRed",
-    "PreviewUri": "@previewImages/FootmanRed.png"
+    "PreviewUri": "FootmanRed.png"
   },
   "FootmanYellow": {
     "DisplayName": "Footman, Yellow",
@@ -41588,7 +41588,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FootmanYellow",
-    "PreviewUri": "@previewImages/FootmanYellow.png"
+    "PreviewUri": "FootmanYellow.png"
   },
   "FourArmedTitanofTerrorw/WeaponSprue": {
     "DisplayName": "Four Armed Titan of Terror w/ Weapon Sprue",
@@ -41622,7 +41622,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": true,
     "Key": "FourArmedTitanofTerrorw/WeaponSprue",
-    "PreviewUri": "@previewImages/FourArmedTitanofTerrorw_WeaponSprue.png"
+    "PreviewUri": "FourArmedTitanofTerrorw_WeaponSprue.png"
   },
   "FragGrenade": {
     "DisplayName": "Frag Grenade",
@@ -41649,7 +41649,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "FragGrenade",
-    "PreviewUri": "@previewImages/FragGrenade.png"
+    "PreviewUri": "FragGrenade.png"
   },
   "FrogRiderBlue": {
     "DisplayName": "Frog Rider, Blue",
@@ -41684,7 +41684,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "FrogRiderBlue",
-    "PreviewUri": "@previewImages/FrogRiderBlue.png"
+    "PreviewUri": "FrogRiderBlue.png"
   },
   "FrogRiderBrown": {
     "DisplayName": "Frog Rider, Brown",
@@ -41719,7 +41719,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "FrogRiderBrown",
-    "PreviewUri": "@previewImages/FrogRiderBrown.png"
+    "PreviewUri": "FrogRiderBrown.png"
   },
   "FrogRiderGreen": {
     "DisplayName": "Frog Rider, Green",
@@ -41754,7 +41754,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "FrogRiderGreen",
-    "PreviewUri": "@previewImages/FrogRiderGreen.png"
+    "PreviewUri": "FrogRiderGreen.png"
   },
   "FrogRiderRed": {
     "DisplayName": "Frog Rider, Red",
@@ -41789,7 +41789,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FrogRiderRed",
-    "PreviewUri": "@previewImages/FrogRiderRed.png"
+    "PreviewUri": "FrogRiderRed.png"
   },
   "FrogRiderYellow": {
     "DisplayName": "Frog Rider, Yellow",
@@ -41824,7 +41824,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FrogRiderYellow",
-    "PreviewUri": "@previewImages/FrogRiderYellow.png"
+    "PreviewUri": "FrogRiderYellow.png"
   },
   "FrogfolkSpearFantasyTB25": {
     "DisplayName": "Frogfolk, Spear, Fantasy, TB25",
@@ -41843,7 +41843,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "FrogfolkSpearFantasyTB25",
-    "PreviewUri": "@previewImages/FrogfolkSpearFantasyTB25.png"
+    "PreviewUri": "FrogfolkSpearFantasyTB25.png"
   },
   "FutureCoin1": {
     "DisplayName": "Future Coin, 1",
@@ -41893,7 +41893,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "FutureCoin1",
-    "PreviewUri": "@previewImages/FutureCoin1.png"
+    "PreviewUri": "FutureCoin1.png"
   },
   "FutureCoin5": {
     "DisplayName": "Future Coin, 5",
@@ -41943,7 +41943,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FutureCoin5",
-    "PreviewUri": "@previewImages/FutureCoin5.png"
+    "PreviewUri": "FutureCoin5.png"
   },
   "FutureCubeOrange": {
     "DisplayName": "Future Cube, Orange",
@@ -41989,7 +41989,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "FutureCubeOrange",
-    "PreviewUri": "@previewImages/FutureCubeOrange.png"
+    "PreviewUri": "FutureCubeOrange.png"
   },
   "FutureCubePurple": {
     "DisplayName": "Future Cube, Purple",
@@ -42035,7 +42035,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "FutureCubePurple",
-    "PreviewUri": "@previewImages/FutureCubePurple.png"
+    "PreviewUri": "FutureCubePurple.png"
   },
   "FutureCubeRed": {
     "DisplayName": "Future Cube, Red",
@@ -42081,7 +42081,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FutureCubeRed",
-    "PreviewUri": "@previewImages/FutureCubeRed.png"
+    "PreviewUri": "FutureCubeRed.png"
   },
   "FutureCubeYellow": {
     "DisplayName": "Future Cube, Yellow",
@@ -42127,7 +42127,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FutureCubeYellow",
-    "PreviewUri": "@previewImages/FutureCubeYellow.png"
+    "PreviewUri": "FutureCubeYellow.png"
   },
   "FutureDomeBlue": {
     "DisplayName": "Future Dome, Blue",
@@ -42153,7 +42153,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "FutureDomeBlue",
-    "PreviewUri": "@previewImages/FutureDomeBlue.png"
+    "PreviewUri": "FutureDomeBlue.png"
   },
   "FutureDomeGreen": {
     "DisplayName": "Future Dome, Green",
@@ -42179,7 +42179,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "FutureDomeGreen",
-    "PreviewUri": "@previewImages/FutureDomeGreen.png"
+    "PreviewUri": "FutureDomeGreen.png"
   },
   "FutureDomeOrange": {
     "DisplayName": "Future Dome, Orange",
@@ -42205,7 +42205,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "FutureDomeOrange",
-    "PreviewUri": "@previewImages/FutureDomeOrange.png"
+    "PreviewUri": "FutureDomeOrange.png"
   },
   "FutureDomePurple": {
     "DisplayName": "Future Dome, Purple",
@@ -42231,7 +42231,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "FutureDomePurple",
-    "PreviewUri": "@previewImages/FutureDomePurple.png"
+    "PreviewUri": "FutureDomePurple.png"
   },
   "FutureDomeRed": {
     "DisplayName": "Future Dome, Red",
@@ -42257,7 +42257,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FutureDomeRed",
-    "PreviewUri": "@previewImages/FutureDomeRed.png"
+    "PreviewUri": "FutureDomeRed.png"
   },
   "FutureDomeYellow": {
     "DisplayName": "Future Dome, Yellow",
@@ -42283,7 +42283,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FutureDomeYellow",
-    "PreviewUri": "@previewImages/FutureDomeYellow.png"
+    "PreviewUri": "FutureDomeYellow.png"
   },
   "FuturePersonOrange": {
     "DisplayName": "Future Person, Orange",
@@ -42314,7 +42314,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "FuturePersonOrange",
-    "PreviewUri": "@previewImages/FuturePersonOrange.png"
+    "PreviewUri": "FuturePersonOrange.png"
   },
   "FuturePersonPurple": {
     "DisplayName": "Future Person, Purple",
@@ -42345,7 +42345,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "FuturePersonPurple",
-    "PreviewUri": "@previewImages/FuturePersonPurple.png"
+    "PreviewUri": "FuturePersonPurple.png"
   },
   "FuturePersonYellow": {
     "DisplayName": "Future Person, Yellow",
@@ -42376,7 +42376,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FuturePersonYellow",
-    "PreviewUri": "@previewImages/FuturePersonYellow.png"
+    "PreviewUri": "FuturePersonYellow.png"
   },
   "FuturePyramidGreen": {
     "DisplayName": "Future Pyramid, Green",
@@ -42409,7 +42409,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "FuturePyramidGreen",
-    "PreviewUri": "@previewImages/FuturePyramidGreen.png"
+    "PreviewUri": "FuturePyramidGreen.png"
   },
   "FuturePyramidOrange": {
     "DisplayName": "Future Pyramid, Orange",
@@ -42442,7 +42442,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "FuturePyramidOrange",
-    "PreviewUri": "@previewImages/FuturePyramidOrange.png"
+    "PreviewUri": "FuturePyramidOrange.png"
   },
   "FuturePyramidPurple": {
     "DisplayName": "Future Pyramid, Purple",
@@ -42475,7 +42475,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "FuturePyramidPurple",
-    "PreviewUri": "@previewImages/FuturePyramidPurple.png"
+    "PreviewUri": "FuturePyramidPurple.png"
   },
   "FuturePyramidRed": {
     "DisplayName": "Future Pyramid, Red",
@@ -42508,7 +42508,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FuturePyramidRed",
-    "PreviewUri": "@previewImages/FuturePyramidRed.png"
+    "PreviewUri": "FuturePyramidRed.png"
   },
   "FuturePyramidYellow": {
     "DisplayName": "Future Pyramid, Yellow",
@@ -42541,7 +42541,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FuturePyramidYellow",
-    "PreviewUri": "@previewImages/FuturePyramidYellow.png"
+    "PreviewUri": "FuturePyramidYellow.png"
   },
   "FutureSoldierTB15Black": {
     "DisplayName": "Future Soldier, TB15, Black",
@@ -42565,7 +42565,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "FutureSoldierTB15Black",
-    "PreviewUri": "@previewImages/FutureSoldierTB15Black.png"
+    "PreviewUri": "FutureSoldierTB15Black.png"
   },
   "FutureSoldierTB15Blue": {
     "DisplayName": "Future Soldier, TB15, Blue",
@@ -42589,7 +42589,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "FutureSoldierTB15Blue",
-    "PreviewUri": "@previewImages/FutureSoldierTB15Blue.png"
+    "PreviewUri": "FutureSoldierTB15Blue.png"
   },
   "FutureSoldierTB15Green": {
     "DisplayName": "Future Soldier, TB15, Green",
@@ -42613,7 +42613,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "FutureSoldierTB15Green",
-    "PreviewUri": "@previewImages/FutureSoldierTB15Green.png"
+    "PreviewUri": "FutureSoldierTB15Green.png"
   },
   "FutureSoldierTB15Orange": {
     "DisplayName": "Future Soldier, TB15, Orange",
@@ -42637,7 +42637,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "FutureSoldierTB15Orange",
-    "PreviewUri": "@previewImages/FutureSoldierTB15Orange.png"
+    "PreviewUri": "FutureSoldierTB15Orange.png"
   },
   "FutureSoldierTB15Purple": {
     "DisplayName": "Future Soldier, TB15, Purple",
@@ -42661,7 +42661,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "FutureSoldierTB15Purple",
-    "PreviewUri": "@previewImages/FutureSoldierTB15Purple.png"
+    "PreviewUri": "FutureSoldierTB15Purple.png"
   },
   "FutureSoldierTB15Red": {
     "DisplayName": "Future Soldier, TB15, Red",
@@ -42685,7 +42685,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FutureSoldierTB15Red",
-    "PreviewUri": "@previewImages/FutureSoldierTB15Red.png"
+    "PreviewUri": "FutureSoldierTB15Red.png"
   },
   "FutureSoldierTB15White": {
     "DisplayName": "Future Soldier, TB15, White",
@@ -42709,7 +42709,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "FutureSoldierTB15White",
-    "PreviewUri": "@previewImages/FutureSoldierTB15White.png"
+    "PreviewUri": "FutureSoldierTB15White.png"
   },
   "FutureSoldierTB15Yellow": {
     "DisplayName": "Future Soldier, TB15, Yellow",
@@ -42733,7 +42733,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FutureSoldierTB15Yellow",
-    "PreviewUri": "@previewImages/FutureSoldierTB15Yellow.png"
+    "PreviewUri": "FutureSoldierTB15Yellow.png"
   },
   "FutureTankBlack": {
     "DisplayName": "Future Tank, Black",
@@ -42757,7 +42757,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "FutureTankBlack",
-    "PreviewUri": "@previewImages/FutureTankBlack.png"
+    "PreviewUri": "FutureTankBlack.png"
   },
   "FutureTankBlue": {
     "DisplayName": "Future Tank, Blue",
@@ -42781,7 +42781,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "FutureTankBlue",
-    "PreviewUri": "@previewImages/FutureTankBlue.png"
+    "PreviewUri": "FutureTankBlue.png"
   },
   "FutureTankGreen": {
     "DisplayName": "Future Tank, Green",
@@ -42805,7 +42805,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "FutureTankGreen",
-    "PreviewUri": "@previewImages/FutureTankGreen.png"
+    "PreviewUri": "FutureTankGreen.png"
   },
   "FutureTankOrange": {
     "DisplayName": "Future Tank, Orange",
@@ -42829,7 +42829,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "FutureTankOrange",
-    "PreviewUri": "@previewImages/FutureTankOrange.png"
+    "PreviewUri": "FutureTankOrange.png"
   },
   "FutureTankPurple": {
     "DisplayName": "Future Tank, Purple",
@@ -42853,7 +42853,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "FutureTankPurple",
-    "PreviewUri": "@previewImages/FutureTankPurple.png"
+    "PreviewUri": "FutureTankPurple.png"
   },
   "FutureTankRed": {
     "DisplayName": "Future Tank, Red",
@@ -42877,7 +42877,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "FutureTankRed",
-    "PreviewUri": "@previewImages/FutureTankRed.png"
+    "PreviewUri": "FutureTankRed.png"
   },
   "FutureTankWhite": {
     "DisplayName": "Future Tank, White",
@@ -42901,7 +42901,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "FutureTankWhite",
-    "PreviewUri": "@previewImages/FutureTankWhite.png"
+    "PreviewUri": "FutureTankWhite.png"
   },
   "FutureTankYellow": {
     "DisplayName": "Future Tank, Yellow",
@@ -42925,7 +42925,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "FutureTankYellow",
-    "PreviewUri": "@previewImages/FutureTankYellow.png"
+    "PreviewUri": "FutureTankYellow.png"
   },
   "GalleyLongshipGreen": {
     "DisplayName": "Galley Longship, Green",
@@ -42953,7 +42953,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": true,
     "Key": "GalleyLongshipGreen",
-    "PreviewUri": "@previewImages/GalleyLongshipGreen.png"
+    "PreviewUri": "GalleyLongshipGreen.png"
   },
   "GameDesigner’sRuler": {
     "DisplayName": "Game Designer’s Ruler",
@@ -43019,7 +43019,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "GameDesigner’sRuler",
-    "PreviewUri": "@previewImages/GameDesigner’sRuler.png"
+    "PreviewUri": "GameDesigner’sRuler.png"
   },
   "GameMaster'sScreen": {
     "DisplayName": "Game Master's Screen",
@@ -43046,7 +43046,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "GameMaster'sScreen",
-    "PreviewUri": "@previewImages/GameMaster'sScreen.png"
+    "PreviewUri": "GameMaster'sScreen.png"
   },
   "GameStandBlack": {
     "DisplayName": "Game Stand, Black",
@@ -43073,7 +43073,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "GameStandBlack",
-    "PreviewUri": "@previewImages/GameStandBlack.png"
+    "PreviewUri": "GameStandBlack.png"
   },
   "GameStandBlue": {
     "DisplayName": "Game Stand, Blue",
@@ -43100,7 +43100,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "GameStandBlue",
-    "PreviewUri": "@previewImages/GameStandBlue.png"
+    "PreviewUri": "GameStandBlue.png"
   },
   "GameStandGreen": {
     "DisplayName": "Game Stand, Green",
@@ -43127,7 +43127,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "GameStandGreen",
-    "PreviewUri": "@previewImages/GameStandGreen.png"
+    "PreviewUri": "GameStandGreen.png"
   },
   "GameStandOrange": {
     "DisplayName": "Game Stand, Orange",
@@ -43154,7 +43154,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "GameStandOrange",
-    "PreviewUri": "@previewImages/GameStandOrange.png"
+    "PreviewUri": "GameStandOrange.png"
   },
   "GameStandPurple": {
     "DisplayName": "Game Stand, Purple",
@@ -43181,7 +43181,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "GameStandPurple",
-    "PreviewUri": "@previewImages/GameStandPurple.png"
+    "PreviewUri": "GameStandPurple.png"
   },
   "GameStandRed": {
     "DisplayName": "Game Stand, Red",
@@ -43208,7 +43208,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "GameStandRed",
-    "PreviewUri": "@previewImages/GameStandRed.png"
+    "PreviewUri": "GameStandRed.png"
   },
   "GameStandWhite": {
     "DisplayName": "Game Stand, White",
@@ -43235,7 +43235,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "GameStandWhite",
-    "PreviewUri": "@previewImages/GameStandWhite.png"
+    "PreviewUri": "GameStandWhite.png"
   },
   "GameStandYellow": {
     "DisplayName": "Game Stand, Yellow",
@@ -43262,7 +43262,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "GameStandYellow",
-    "PreviewUri": "@previewImages/GameStandYellow.png"
+    "PreviewUri": "GameStandYellow.png"
   },
   "GangsterBlue": {
     "DisplayName": "Gangster, Blue",
@@ -43296,7 +43296,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "GangsterBlue",
-    "PreviewUri": "@previewImages/GangsterBlue.png"
+    "PreviewUri": "GangsterBlue.png"
   },
   "GangsterGreen": {
     "DisplayName": "Gangster, Green",
@@ -43330,7 +43330,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "GangsterGreen",
-    "PreviewUri": "@previewImages/GangsterGreen.png"
+    "PreviewUri": "GangsterGreen.png"
   },
   "GangsterOrange": {
     "DisplayName": "Gangster, Orange",
@@ -43364,7 +43364,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "GangsterOrange",
-    "PreviewUri": "@previewImages/GangsterOrange.png"
+    "PreviewUri": "GangsterOrange.png"
   },
   "GangsterYellow": {
     "DisplayName": "Gangster, Yellow",
@@ -43398,7 +43398,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "GangsterYellow",
-    "PreviewUri": "@previewImages/GangsterYellow.png"
+    "PreviewUri": "GangsterYellow.png"
   },
   "Gavel": {
     "DisplayName": "Gavel",
@@ -43421,7 +43421,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "Gavel",
-    "PreviewUri": "@previewImages/Gavel.png"
+    "PreviewUri": "Gavel.png"
   },
   "Gear": {
     "DisplayName": "Gear",
@@ -43460,7 +43460,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Gear",
-    "PreviewUri": "@previewImages/Gear.png"
+    "PreviewUri": "Gear.png"
   },
   "GearBronze": {
     "DisplayName": "Gear, Bronze",
@@ -43502,7 +43502,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "GearBronze",
-    "PreviewUri": "@previewImages/GearBronze.png"
+    "PreviewUri": "GearBronze.png"
   },
   "GearGold": {
     "DisplayName": "Gear, Gold",
@@ -43544,7 +43544,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "GearGold",
-    "PreviewUri": "@previewImages/GearGold.png"
+    "PreviewUri": "GearGold.png"
   },
   "GearSilver": {
     "DisplayName": "Gear, Silver",
@@ -43586,7 +43586,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "GearSilver",
-    "PreviewUri": "@previewImages/GearSilver.png"
+    "PreviewUri": "GearSilver.png"
   },
   "Geisha-CharacterMeeple": {
     "DisplayName": "Geisha, Character Meeple",
@@ -43621,7 +43621,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Geisha-CharacterMeeple",
-    "PreviewUri": "@previewImages/Geisha-CharacterMeeple.png"
+    "PreviewUri": "Geisha-CharacterMeeple.png"
   },
   "GelatinousCube": {
     "DisplayName": "Gelatinous Monster",
@@ -43643,7 +43643,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "GelatinousCube",
-    "PreviewUri": "@previewImages/GelatinousCube.png"
+    "PreviewUri": "GelatinousCube.png"
   },
   "GemBlack": {
     "DisplayName": "Gem, Black",
@@ -43712,7 +43712,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "GemBlack",
-    "PreviewUri": "@previewImages/GemBlack.png"
+    "PreviewUri": "GemBlack.png"
   },
   "GemBlue": {
     "DisplayName": "Gem, Blue",
@@ -43780,7 +43780,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": true,
     "Key": "GemBlue",
-    "PreviewUri": "@previewImages/GemBlue.png"
+    "PreviewUri": "GemBlue.png"
   },
   "GemClear": {
     "DisplayName": "Gem, Clear",
@@ -43849,7 +43849,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "GemClear",
-    "PreviewUri": "@previewImages/GemClear.png"
+    "PreviewUri": "GemClear.png"
   },
   "GemGreen": {
     "DisplayName": "Gem, Green",
@@ -43918,7 +43918,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "GemGreen",
-    "PreviewUri": "@previewImages/GemGreen.png"
+    "PreviewUri": "GemGreen.png"
   },
   "GemLightGreen": {
     "DisplayName": "Gem, Light Green",
@@ -43987,7 +43987,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "GemLightGreen",
-    "PreviewUri": "@previewImages/GemLightGreen.png"
+    "PreviewUri": "GemLightGreen.png"
   },
   "GemOrange": {
     "DisplayName": "Gem, Orange",
@@ -44055,7 +44055,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": true,
     "Key": "GemOrange",
-    "PreviewUri": "@previewImages/GemOrange.png"
+    "PreviewUri": "GemOrange.png"
   },
   "GemPurple": {
     "DisplayName": "Gem, Purple",
@@ -44124,7 +44124,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "GemPurple",
-    "PreviewUri": "@previewImages/GemPurple.png"
+    "PreviewUri": "GemPurple.png"
   },
   "GemRed": {
     "DisplayName": "Gem, Red",
@@ -44192,7 +44192,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": true,
     "Key": "GemRed",
-    "PreviewUri": "@previewImages/GemRed.png"
+    "PreviewUri": "GemRed.png"
   },
   "GemWhite": {
     "DisplayName": "Gem, White",
@@ -44261,7 +44261,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "GemWhite",
-    "PreviewUri": "@previewImages/GemWhite.png"
+    "PreviewUri": "GemWhite.png"
   },
   "GemYellow": {
     "DisplayName": "Gem, Yellow",
@@ -44330,7 +44330,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "GemYellow",
-    "PreviewUri": "@previewImages/GemYellow.png"
+    "PreviewUri": "GemYellow.png"
   },
   "GentlemanGold": {
     "DisplayName": "Gentleman, Gold",
@@ -44369,7 +44369,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "GentlemanGold",
-    "PreviewUri": "@previewImages/GentlemanGold.png"
+    "PreviewUri": "GentlemanGold.png"
   },
   "GhostBunnyFantasyTB25": {
     "DisplayName": "Ghost Bunny, Fantasy, TB25",
@@ -44388,7 +44388,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "GhostBunnyFantasyTB25",
-    "PreviewUri": "@previewImages/GhostBunnyFantasyTB25.png"
+    "PreviewUri": "GhostBunnyFantasyTB25.png"
   },
   "GhostIVHooded": {
     "DisplayName": "Ghost IV Hooded",
@@ -44439,7 +44439,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "GhostIVHooded",
-    "PreviewUri": "@previewImages/GhostIVHooded.png"
+    "PreviewUri": "GhostIVHooded.png"
   },
   "GhostFantasyTB25": {
     "DisplayName": "Ghost, Fantasy, TB25",
@@ -44460,7 +44460,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "GhostFantasyTB25",
-    "PreviewUri": "@previewImages/GhostFantasyTB25.png"
+    "PreviewUri": "GhostFantasyTB25.png"
   },
   "GhostWhite": {
     "DisplayName": "Ghost, White",
@@ -44501,7 +44501,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "GhostWhite",
-    "PreviewUri": "@previewImages/GhostWhite.png"
+    "PreviewUri": "GhostWhite.png"
   },
   "Ghoul2FantasyTB25": {
     "DisplayName": "Ghoul 2, Fantasy, TB25",
@@ -44528,7 +44528,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Ghoul2FantasyTB25",
-    "PreviewUri": "@previewImages/Ghoul2FantasyTB25.png"
+    "PreviewUri": "Ghoul2FantasyTB25.png"
   },
   "GhoulFantasyTB25": {
     "DisplayName": "Ghoul, Fantasy, TB25",
@@ -44555,7 +44555,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "GhoulFantasyTB25",
-    "PreviewUri": "@previewImages/GhoulFantasyTB25.png"
+    "PreviewUri": "GhoulFantasyTB25.png"
   },
   "GiantRat1FantasyTB25": {
     "DisplayName": "Giant Rat 1, Fantasy, TB25",
@@ -44573,7 +44573,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "GiantRat1FantasyTB25",
-    "PreviewUri": "@previewImages/GiantRat1FantasyTB25.png"
+    "PreviewUri": "GiantRat1FantasyTB25.png"
   },
   "GiantRat2FantasyTB25": {
     "DisplayName": "Giant Rat 2, Fantasy, TB25",
@@ -44591,7 +44591,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "GiantRat2FantasyTB25",
-    "PreviewUri": "@previewImages/GiantRat2FantasyTB25.png"
+    "PreviewUri": "GiantRat2FantasyTB25.png"
   },
   "GiftCertificate$25": {
     "DisplayName": "Gift Certificate $25",
@@ -44611,7 +44611,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "GiftCertificate$25",
-    "PreviewUri": "@previewImages/GiftCertificate$25.png"
+    "PreviewUri": "GiftCertificate$25.png"
   },
   "GiftCertificate$5": {
     "DisplayName": "Gift Certificate $5",
@@ -44631,7 +44631,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "GiftCertificate$5",
-    "PreviewUri": "@previewImages/GiftCertificate$5.png"
+    "PreviewUri": "GiftCertificate$5.png"
   },
   "GlueDotsSheet": {
     "DisplayName": "Glue Dots Sheet",
@@ -44647,7 +44647,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "GlueDotsSheet",
-    "PreviewUri": "@previewImages/GlueDotsSheet.png"
+    "PreviewUri": "GlueDotsSheet.png"
   },
   "GnollArcherFantasyTB25": {
     "DisplayName": "Gnoll Archer, Fantasy, TB25",
@@ -44671,7 +44671,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "GnollArcherFantasyTB25",
-    "PreviewUri": "@previewImages/GnollArcherFantasyTB25.png"
+    "PreviewUri": "GnollArcherFantasyTB25.png"
   },
   "GnollAxeFantasyTB25": {
     "DisplayName": "Gnoll, Axe, Fantasy, TB25",
@@ -44691,7 +44691,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "GnollAxeFantasyTB25",
-    "PreviewUri": "@previewImages/GnollAxeFantasyTB25.png"
+    "PreviewUri": "GnollAxeFantasyTB25.png"
   },
   "GnollFlailFantasyTB25": {
     "DisplayName": "Gnoll, Flail, Fantasy, TB25",
@@ -44709,7 +44709,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "GnollFlailFantasyTB25",
-    "PreviewUri": "@previewImages/GnollFlailFantasyTB25.png"
+    "PreviewUri": "GnollFlailFantasyTB25.png"
   },
   "GnomeBlue": {
     "DisplayName": "Gnome, Blue",
@@ -44741,7 +44741,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "GnomeBlue",
-    "PreviewUri": "@previewImages/GnomeBlue.png"
+    "PreviewUri": "GnomeBlue.png"
   },
   "GnomeCrossbowFantasyTB25": {
     "DisplayName": "Gnome, Crossbow, Fantasy, TB25",
@@ -44759,7 +44759,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "GnomeCrossbowFantasyTB25",
-    "PreviewUri": "@previewImages/GnomeCrossbowFantasyTB25.png"
+    "PreviewUri": "GnomeCrossbowFantasyTB25.png"
   },
   "GnomeSwordFantasyTB25": {
     "DisplayName": "Gnome, Sword, Fantasy, TB25",
@@ -44777,7 +44777,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "GnomeSwordFantasyTB25",
-    "PreviewUri": "@previewImages/GnomeSwordFantasyTB25.png"
+    "PreviewUri": "GnomeSwordFantasyTB25.png"
   },
   "GnomeTB15Black": {
     "DisplayName": "Gnome, TB15, Black",
@@ -44800,7 +44800,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "GnomeTB15Black",
-    "PreviewUri": "@previewImages/GnomeTB15Black.png"
+    "PreviewUri": "GnomeTB15Black.png"
   },
   "GnomeTB15Blue": {
     "DisplayName": "Gnome, TB15, Blue",
@@ -44823,7 +44823,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "GnomeTB15Blue",
-    "PreviewUri": "@previewImages/GnomeTB15Blue.png"
+    "PreviewUri": "GnomeTB15Blue.png"
   },
   "GnomeTB15Green": {
     "DisplayName": "Gnome, TB15, Green",
@@ -44846,7 +44846,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "GnomeTB15Green",
-    "PreviewUri": "@previewImages/GnomeTB15Green.png"
+    "PreviewUri": "GnomeTB15Green.png"
   },
   "GnomeTB15Orange": {
     "DisplayName": "Gnome, TB15, Orange",
@@ -44869,7 +44869,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "GnomeTB15Orange",
-    "PreviewUri": "@previewImages/GnomeTB15Orange.png"
+    "PreviewUri": "GnomeTB15Orange.png"
   },
   "GnomeTB15Purple": {
     "DisplayName": "Gnome, TB15, Purple",
@@ -44892,7 +44892,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "GnomeTB15Purple",
-    "PreviewUri": "@previewImages/GnomeTB15Purple.png"
+    "PreviewUri": "GnomeTB15Purple.png"
   },
   "GnomeTB15Red": {
     "DisplayName": "Gnome, TB15, Red",
@@ -44915,7 +44915,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "GnomeTB15Red",
-    "PreviewUri": "@previewImages/GnomeTB15Red.png"
+    "PreviewUri": "GnomeTB15Red.png"
   },
   "GnomeTB15White": {
     "DisplayName": "Gnome, TB15, White",
@@ -44938,7 +44938,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "GnomeTB15White",
-    "PreviewUri": "@previewImages/GnomeTB15White.png"
+    "PreviewUri": "GnomeTB15White.png"
   },
   "GnomeTB15Yellow": {
     "DisplayName": "Gnome, TB15, Yellow",
@@ -44961,7 +44961,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "GnomeTB15Yellow",
-    "PreviewUri": "@previewImages/GnomeTB15Yellow.png"
+    "PreviewUri": "GnomeTB15Yellow.png"
   },
   "GnometteHammerFantasyTB25": {
     "DisplayName": "Gnomette, Hammer, Fantasy, TB25",
@@ -44979,7 +44979,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "GnometteHammerFantasyTB25",
-    "PreviewUri": "@previewImages/GnometteHammerFantasyTB25.png"
+    "PreviewUri": "GnometteHammerFantasyTB25.png"
   },
   "GnometteMageFantasyTB25": {
     "DisplayName": "Gnomette, Mage, Fantasy, TB25",
@@ -44997,7 +44997,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "GnometteMageFantasyTB25",
-    "PreviewUri": "@previewImages/GnometteMageFantasyTB25.png"
+    "PreviewUri": "GnometteMageFantasyTB25.png"
   },
   "GoatAcrylic": {
     "DisplayName": "Goat, Acrylic",
@@ -45015,7 +45015,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "GoatAcrylic",
-    "PreviewUri": "@previewImages/GoatAcrylic.png"
+    "PreviewUri": "GoatAcrylic.png"
   },
   "GoatRandom": {
     "DisplayName": "Goat, Random",
@@ -45046,7 +45046,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "GoatRandom",
-    "PreviewUri": "@previewImages/GoatRandom.png"
+    "PreviewUri": "GoatRandom.png"
   },
   "GoatmanChampion": {
     "DisplayName": "Goatman Champion",
@@ -45080,7 +45080,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "GoatmanChampion",
-    "PreviewUri": "@previewImages/GoatmanChampion.png"
+    "PreviewUri": "GoatmanChampion.png"
   },
   "GoatmanwithBow": {
     "DisplayName": "Goatman with Bow",
@@ -45115,7 +45115,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "GoatmanwithBow",
-    "PreviewUri": "@previewImages/GoatmanwithBow.png"
+    "PreviewUri": "GoatmanwithBow.png"
   },
   "GoatmanWithSpear&Shield": {
     "DisplayName": "Goatman With Spear & Shield",
@@ -45149,7 +45149,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "GoatmanWithSpear&Shield",
-    "PreviewUri": "@previewImages/GoatmanWithSpear&Shield.png"
+    "PreviewUri": "GoatmanWithSpear&Shield.png"
   },
   "GoatmanwithSwordandShield": {
     "DisplayName": "Goatman with Sword and Shield",
@@ -45183,7 +45183,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "GoatmanwithSwordandShield",
-    "PreviewUri": "@previewImages/GoatmanwithSwordandShield.png"
+    "PreviewUri": "GoatmanwithSwordandShield.png"
   },
   "GoblinArcherDrawBaldFantasyTB25": {
     "DisplayName": "Goblin Archer Draw Bald, Fantasy, TB25",
@@ -45207,7 +45207,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "GoblinArcherDrawBaldFantasyTB25",
-    "PreviewUri": "@previewImages/GoblinArcherDrawBaldFantasyTB25.png"
+    "PreviewUri": "GoblinArcherDrawBaldFantasyTB25.png"
   },
   "GoblinArcherDrawFantasyTB25": {
     "DisplayName": "Goblin Archer, Draw, Fantasy, TB25",
@@ -45230,7 +45230,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "GoblinArcherDrawFantasyTB25",
-    "PreviewUri": "@previewImages/GoblinArcherDrawFantasyTB25.png"
+    "PreviewUri": "GoblinArcherDrawFantasyTB25.png"
   },
   "GoblinChieftainFantasyTB25": {
     "DisplayName": "Goblin Chieftain, Fantasy, TB25",
@@ -45257,7 +45257,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "GoblinChieftainFantasyTB25",
-    "PreviewUri": "@previewImages/GoblinChieftainFantasyTB25.png"
+    "PreviewUri": "GoblinChieftainFantasyTB25.png"
   },
   "GoblinSling1FantasyTB25": {
     "DisplayName": "Goblin Sling 1, Fantasy, TB25",
@@ -45279,7 +45279,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "GoblinSling1FantasyTB25",
-    "PreviewUri": "@previewImages/GoblinSling1FantasyTB25.png"
+    "PreviewUri": "GoblinSling1FantasyTB25.png"
   },
   "GoblinWarlockFantasyTB25Yellow": {
     "DisplayName": "Goblin Warlock, Fantasy, TB25, Yellow",
@@ -45302,7 +45302,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "GoblinWarlockFantasyTB25Yellow",
-    "PreviewUri": "@previewImages/GoblinWarlockFantasyTB25Yellow.png"
+    "PreviewUri": "GoblinWarlockFantasyTB25Yellow.png"
   },
   "GoblinDefensiveFantasyTB25": {
     "DisplayName": "Goblin, Defensive, Fantasy, TB25",
@@ -45324,7 +45324,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "GoblinDefensiveFantasyTB25",
-    "PreviewUri": "@previewImages/GoblinDefensiveFantasyTB25.png"
+    "PreviewUri": "GoblinDefensiveFantasyTB25.png"
   },
   "GoblinJesterFantasyTB25": {
     "DisplayName": "Goblin, Jester, Fantasy, TB25",
@@ -45343,7 +45343,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "GoblinJesterFantasyTB25",
-    "PreviewUri": "@previewImages/GoblinJesterFantasyTB25.png"
+    "PreviewUri": "GoblinJesterFantasyTB25.png"
   },
   "GoblinOffensiveFantasyTB25": {
     "DisplayName": "Goblin, Offensive, Fantasy, TB25",
@@ -45361,7 +45361,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "GoblinOffensiveFantasyTB25",
-    "PreviewUri": "@previewImages/GoblinOffensiveFantasyTB25.png"
+    "PreviewUri": "GoblinOffensiveFantasyTB25.png"
   },
   "Gorilla": {
     "DisplayName": "Gorilla",
@@ -45391,7 +45391,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "Gorilla",
-    "PreviewUri": "@previewImages/Gorilla.png"
+    "PreviewUri": "Gorilla.png"
   },
   "GrabBag": {
     "DisplayName": "Grab Bag",
@@ -45419,7 +45419,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "GrabBag",
-    "PreviewUri": "@previewImages/GrabBag.png"
+    "PreviewUri": "GrabBag.png"
   },
   "GrabBagPremium": {
     "DisplayName": "Grab Bag, Premium",
@@ -45447,7 +45447,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "GrabBagPremium",
-    "PreviewUri": "@previewImages/GrabBagPremium.png"
+    "PreviewUri": "GrabBagPremium.png"
   },
   "GrainSackWood": {
     "DisplayName": "Grain Sack, Wood",
@@ -45478,7 +45478,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "GrainSackWood",
-    "PreviewUri": "@previewImages/GrainSackWood.png"
+    "PreviewUri": "GrainSackWood.png"
   },
   "GrickFantasyTB25": {
     "DisplayName": "Grick, Fantasy, TB25",
@@ -45507,7 +45507,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "GrickFantasyTB25",
-    "PreviewUri": "@previewImages/GrickFantasyTB25.png"
+    "PreviewUri": "GrickFantasyTB25.png"
   },
   "GrimReaperFantasyTB25": {
     "DisplayName": "Grim Reaper, Fantasy, TB25",
@@ -45537,7 +45537,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "GrimReaperFantasyTB25",
-    "PreviewUri": "@previewImages/GrimReaperFantasyTB25.png"
+    "PreviewUri": "GrimReaperFantasyTB25.png"
   },
   "GrizzlyBear": {
     "DisplayName": "Grizzly Bear",
@@ -45563,7 +45563,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "GrizzlyBear",
-    "PreviewUri": "@previewImages/GrizzlyBear.png"
+    "PreviewUri": "GrizzlyBear.png"
   },
   "Guard1SpaceTB25": {
     "DisplayName": "Guard 1, Space, TB25",
@@ -45581,7 +45581,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Guard1SpaceTB25",
-    "PreviewUri": "@previewImages/Guard1SpaceTB25.png"
+    "PreviewUri": "Guard1SpaceTB25.png"
   },
   "Guard2SpaceTB25": {
     "DisplayName": "Guard 2, Space, TB25",
@@ -45599,7 +45599,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Guard2SpaceTB25",
-    "PreviewUri": "@previewImages/Guard2SpaceTB25.png"
+    "PreviewUri": "Guard2SpaceTB25.png"
   },
   "GuardRobotBlack": {
     "DisplayName": "Guard Robot, Black",
@@ -45629,7 +45629,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "GuardRobotBlack",
-    "PreviewUri": "@previewImages/GuardRobotBlack.png"
+    "PreviewUri": "GuardRobotBlack.png"
   },
   "GuardRobotGreen": {
     "DisplayName": "Guard Robot, Green",
@@ -45659,7 +45659,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "GuardRobotGreen",
-    "PreviewUri": "@previewImages/GuardRobotGreen.png"
+    "PreviewUri": "GuardRobotGreen.png"
   },
   "GuardRobotRed": {
     "DisplayName": "Guard Robot, Red",
@@ -45689,7 +45689,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "GuardRobotRed",
-    "PreviewUri": "@previewImages/GuardRobotRed.png"
+    "PreviewUri": "GuardRobotRed.png"
   },
   "GuardRobotYellow": {
     "DisplayName": "Guard Robot, Yellow",
@@ -45719,7 +45719,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "GuardRobotYellow",
-    "PreviewUri": "@previewImages/GuardRobotYellow.png"
+    "PreviewUri": "GuardRobotYellow.png"
   },
   "GuardHeavySpaceTB25": {
     "DisplayName": "Guard, Heavy, Space, TB25",
@@ -45737,7 +45737,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "GuardHeavySpaceTB25",
-    "PreviewUri": "@previewImages/GuardHeavySpaceTB25.png"
+    "PreviewUri": "GuardHeavySpaceTB25.png"
   },
   "Gunpod": {
     "DisplayName": "Gunpod",
@@ -45762,7 +45762,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Gunpod",
-    "PreviewUri": "@previewImages/Gunpod.png"
+    "PreviewUri": "Gunpod.png"
   },
   "HagFantasyTB25": {
     "DisplayName": "Hag, Fantasy, TB25",
@@ -45789,7 +45789,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "HagFantasyTB25",
-    "PreviewUri": "@previewImages/HagFantasyTB25.png"
+    "PreviewUri": "HagFantasyTB25.png"
   },
   "Halfling-CharacterMeeple": {
     "DisplayName": "Halfling, Character Meeple",
@@ -45811,7 +45811,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Halfling-CharacterMeeple",
-    "PreviewUri": "@previewImages/Halfling-CharacterMeeple.png"
+    "PreviewUri": "Halfling-CharacterMeeple.png"
   },
   "HalflingPirateFantasyTB25": {
     "DisplayName": "Halfling Pirate, Fantasy, TB25",
@@ -45836,7 +45836,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "HalflingPirateFantasyTB25",
-    "PreviewUri": "@previewImages/HalflingPirateFantasyTB25.png"
+    "PreviewUri": "HalflingPirateFantasyTB25.png"
   },
   "HalflingSpaceTB25": {
     "DisplayName": "Halfling, Space, TB25",
@@ -45854,7 +45854,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "HalflingSpaceTB25",
-    "PreviewUri": "@previewImages/HalflingSpaceTB25.png"
+    "PreviewUri": "HalflingSpaceTB25.png"
   },
   "HalmaBlack": {
     "DisplayName": "Halma, Black",
@@ -45875,7 +45875,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "HalmaBlack",
-    "PreviewUri": "@previewImages/HalmaBlack.png"
+    "PreviewUri": "HalmaBlack.png"
   },
   "HalmaBlue": {
     "DisplayName": "Halma, Blue",
@@ -45896,7 +45896,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "HalmaBlue",
-    "PreviewUri": "@previewImages/HalmaBlue.png"
+    "PreviewUri": "HalmaBlue.png"
   },
   "HalmaGreen": {
     "DisplayName": "Halma, Green",
@@ -45917,7 +45917,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "HalmaGreen",
-    "PreviewUri": "@previewImages/HalmaGreen.png"
+    "PreviewUri": "HalmaGreen.png"
   },
   "HalmaLargeNatural": {
     "DisplayName": "Halma, Large, Natural",
@@ -45941,7 +45941,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "natural",
     "IsDisabled": false,
     "Key": "HalmaLargeNatural",
-    "PreviewUri": "@previewImages/HalmaLargeNatural.png"
+    "PreviewUri": "HalmaLargeNatural.png"
   },
   "HalmaOrange": {
     "DisplayName": "Halma, Orange",
@@ -45962,7 +45962,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "HalmaOrange",
-    "PreviewUri": "@previewImages/HalmaOrange.png"
+    "PreviewUri": "HalmaOrange.png"
   },
   "HalmaPurple": {
     "DisplayName": "Halma, Purple",
@@ -45983,7 +45983,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "HalmaPurple",
-    "PreviewUri": "@previewImages/HalmaPurple.png"
+    "PreviewUri": "HalmaPurple.png"
   },
   "HalmaRed": {
     "DisplayName": "Halma, Red",
@@ -46004,7 +46004,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "HalmaRed",
-    "PreviewUri": "@previewImages/HalmaRed.png"
+    "PreviewUri": "HalmaRed.png"
   },
   "HalmaStackableBlue": {
     "DisplayName": "Halma, Stackable, Blue",
@@ -46025,7 +46025,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "HalmaStackableBlue",
-    "PreviewUri": "@previewImages/HalmaStackableBlue.png"
+    "PreviewUri": "HalmaStackableBlue.png"
   },
   "HalmaStackableGreen": {
     "DisplayName": "Halma, Stackable, Green",
@@ -46046,7 +46046,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "HalmaStackableGreen",
-    "PreviewUri": "@previewImages/HalmaStackableGreen.png"
+    "PreviewUri": "HalmaStackableGreen.png"
   },
   "HalmaStackableRed": {
     "DisplayName": "Halma, Stackable, Red",
@@ -46067,7 +46067,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "HalmaStackableRed",
-    "PreviewUri": "@previewImages/HalmaStackableRed.png"
+    "PreviewUri": "HalmaStackableRed.png"
   },
   "HalmaStackableWhite": {
     "DisplayName": "Halma, Stackable, White",
@@ -46088,7 +46088,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "HalmaStackableWhite",
-    "PreviewUri": "@previewImages/HalmaStackableWhite.png"
+    "PreviewUri": "HalmaStackableWhite.png"
   },
   "HalmaStackableYellow": {
     "DisplayName": "Halma, Stackable, Yellow",
@@ -46109,7 +46109,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "HalmaStackableYellow",
-    "PreviewUri": "@previewImages/HalmaStackableYellow.png"
+    "PreviewUri": "HalmaStackableYellow.png"
   },
   "HalmaWhite": {
     "DisplayName": "Halma, White",
@@ -46130,7 +46130,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "HalmaWhite",
-    "PreviewUri": "@previewImages/HalmaWhite.png"
+    "PreviewUri": "HalmaWhite.png"
   },
   "HalmaYellow": {
     "DisplayName": "Halma, Yellow",
@@ -46151,7 +46151,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "HalmaYellow",
-    "PreviewUri": "@previewImages/HalmaYellow.png"
+    "PreviewUri": "HalmaYellow.png"
   },
   "HandmadeBrick": {
     "DisplayName": "Handmade Brick",
@@ -46181,7 +46181,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "HandmadeBrick",
-    "PreviewUri": "@previewImages/HandmadeBrick.png"
+    "PreviewUri": "HandmadeBrick.png"
   },
   "HandmadeCampfire": {
     "DisplayName": "Handmade Campfire",
@@ -46207,7 +46207,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "HandmadeCampfire",
-    "PreviewUri": "@previewImages/HandmadeCampfire.png"
+    "PreviewUri": "HandmadeCampfire.png"
   },
   "HandmadeCarrot": {
     "DisplayName": "Handmade Carrot",
@@ -46243,7 +46243,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HandmadeCarrot",
-    "PreviewUri": "@previewImages/HandmadeCarrot.png"
+    "PreviewUri": "HandmadeCarrot.png"
   },
   "HandmadeCoal": {
     "DisplayName": "Handmade Coal",
@@ -46275,7 +46275,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HandmadeCoal",
-    "PreviewUri": "@previewImages/HandmadeCoal.png"
+    "PreviewUri": "HandmadeCoal.png"
   },
   "HandmadeCorn": {
     "DisplayName": "Handmade Corn",
@@ -46303,7 +46303,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HandmadeCorn",
-    "PreviewUri": "@previewImages/HandmadeCorn.png"
+    "PreviewUri": "HandmadeCorn.png"
   },
   "HandmadeFence": {
     "DisplayName": "Handmade Fence",
@@ -46329,7 +46329,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HandmadeFence",
-    "PreviewUri": "@previewImages/HandmadeFence.png"
+    "PreviewUri": "HandmadeFence.png"
   },
   "HandmadeFish": {
     "DisplayName": "Handmade Fish",
@@ -46368,7 +46368,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "salmon",
     "IsDisabled": false,
     "Key": "HandmadeFish",
-    "PreviewUri": "@previewImages/HandmadeFish.png"
+    "PreviewUri": "HandmadeFish.png"
   },
   "HandmadeGrape": {
     "DisplayName": "Handmade Grape",
@@ -46393,7 +46393,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HandmadeGrape",
-    "PreviewUri": "@previewImages/HandmadeGrape.png"
+    "PreviewUri": "HandmadeGrape.png"
   },
   "HandmadeOilDrum": {
     "DisplayName": "Handmade Oil Drum",
@@ -46420,7 +46420,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HandmadeOilDrum",
-    "PreviewUri": "@previewImages/HandmadeOilDrum.png"
+    "PreviewUri": "HandmadeOilDrum.png"
   },
   "HandmadePumpkin": {
     "DisplayName": "Handmade Pumpkin",
@@ -46445,7 +46445,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HandmadePumpkin",
-    "PreviewUri": "@previewImages/HandmadePumpkin.png"
+    "PreviewUri": "HandmadePumpkin.png"
   },
   "HandmadeReed": {
     "DisplayName": "Handmade Reed",
@@ -46470,7 +46470,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HandmadeReed",
-    "PreviewUri": "@previewImages/HandmadeReed.png"
+    "PreviewUri": "HandmadeReed.png"
   },
   "HandmadeSheep": {
     "DisplayName": "Handmade Sheep",
@@ -46499,7 +46499,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HandmadeSheep",
-    "PreviewUri": "@previewImages/HandmadeSheep.png"
+    "PreviewUri": "HandmadeSheep.png"
   },
   "HandmadeSkull": {
     "DisplayName": "Handmade Skull",
@@ -46536,7 +46536,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HandmadeSkull",
-    "PreviewUri": "@previewImages/HandmadeSkull.png"
+    "PreviewUri": "HandmadeSkull.png"
   },
   "HandmadeSteak": {
     "DisplayName": "Handmade Steak",
@@ -46575,7 +46575,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "HandmadeSteak",
-    "PreviewUri": "@previewImages/HandmadeSteak.png"
+    "PreviewUri": "HandmadeSteak.png"
   },
   "HandmadeTrashCan": {
     "DisplayName": "Handmade Trash Can",
@@ -46603,7 +46603,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HandmadeTrashCan",
-    "PreviewUri": "@previewImages/HandmadeTrashCan.png"
+    "PreviewUri": "HandmadeTrashCan.png"
   },
   "HandmadeTrough": {
     "DisplayName": "Handmade Trough",
@@ -46624,7 +46624,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HandmadeTrough",
-    "PreviewUri": "@previewImages/HandmadeTrough.png"
+    "PreviewUri": "HandmadeTrough.png"
   },
   "HandmadeUraniumRod": {
     "DisplayName": "Handmade Uranium Rod",
@@ -46655,7 +46655,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HandmadeUraniumRod",
-    "PreviewUri": "@previewImages/HandmadeUraniumRod.png"
+    "PreviewUri": "HandmadeUraniumRod.png"
   },
   "HandmadeWheat": {
     "DisplayName": "Handmade Wheat",
@@ -46684,7 +46684,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HandmadeWheat",
-    "PreviewUri": "@previewImages/HandmadeWheat.png"
+    "PreviewUri": "HandmadeWheat.png"
   },
   "HangTabsTriangle(packof20)": {
     "DisplayName": "Hang Tabs, Triangle (pack of 20)",
@@ -46705,7 +46705,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HangTabsTriangle(packof20)",
-    "PreviewUri": "@previewImages/HangTabsTriangle(packof20).png"
+    "PreviewUri": "HangTabsTriangle(packof20).png"
   },
   "HarborBlack": {
     "DisplayName": "Harbor, Black",
@@ -46730,7 +46730,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "HarborBlack",
-    "PreviewUri": "@previewImages/HarborBlack.png"
+    "PreviewUri": "HarborBlack.png"
   },
   "HarborBlue": {
     "DisplayName": "Harbor, Blue",
@@ -46755,7 +46755,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "HarborBlue",
-    "PreviewUri": "@previewImages/HarborBlue.png"
+    "PreviewUri": "HarborBlue.png"
   },
   "HarborGreen": {
     "DisplayName": "Harbor, Green",
@@ -46780,7 +46780,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "HarborGreen",
-    "PreviewUri": "@previewImages/HarborGreen.png"
+    "PreviewUri": "HarborGreen.png"
   },
   "HarborOrange": {
     "DisplayName": "Harbor, Orange",
@@ -46805,7 +46805,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "HarborOrange",
-    "PreviewUri": "@previewImages/HarborOrange.png"
+    "PreviewUri": "HarborOrange.png"
   },
   "HarborPurple": {
     "DisplayName": "Harbor, Purple",
@@ -46830,7 +46830,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "HarborPurple",
-    "PreviewUri": "@previewImages/HarborPurple.png"
+    "PreviewUri": "HarborPurple.png"
   },
   "HarborRed": {
     "DisplayName": "Harbor, Red",
@@ -46855,7 +46855,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "HarborRed",
-    "PreviewUri": "@previewImages/HarborRed.png"
+    "PreviewUri": "HarborRed.png"
   },
   "HarborWhite": {
     "DisplayName": "Harbor, White",
@@ -46880,7 +46880,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "HarborWhite",
-    "PreviewUri": "@previewImages/HarborWhite.png"
+    "PreviewUri": "HarborWhite.png"
   },
   "HarborYellow": {
     "DisplayName": "Harbor, Yellow",
@@ -46905,7 +46905,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "HarborYellow",
-    "PreviewUri": "@previewImages/HarborYellow.png"
+    "PreviewUri": "HarborYellow.png"
   },
   "Harpy2FantasyTB25": {
     "DisplayName": "Harpy 2, Fantasy, TB25",
@@ -46926,7 +46926,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Harpy2FantasyTB25",
-    "PreviewUri": "@previewImages/Harpy2FantasyTB25.png"
+    "PreviewUri": "Harpy2FantasyTB25.png"
   },
   "HarpyFantasyTB25": {
     "DisplayName": "Harpy, Fantasy, TB25",
@@ -46947,7 +46947,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "HarpyFantasyTB25",
-    "PreviewUri": "@previewImages/HarpyFantasyTB25.png"
+    "PreviewUri": "HarpyFantasyTB25.png"
   },
   "HatmanGreen": {
     "DisplayName": "Hatman Green",
@@ -46979,7 +46979,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "HatmanGreen",
-    "PreviewUri": "@previewImages/HatmanGreen.png"
+    "PreviewUri": "HatmanGreen.png"
   },
   "Hazmat-CharacterMeeple": {
     "DisplayName": "Hazmat, Character Meeple",
@@ -47019,7 +47019,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Hazmat-CharacterMeeple",
-    "PreviewUri": "@previewImages/Hazmat-CharacterMeeple.png"
+    "PreviewUri": "Hazmat-CharacterMeeple.png"
   },
   "HeartOrganRed": {
     "DisplayName": "Heart Organ, Red",
@@ -47047,7 +47047,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": true,
     "Key": "HeartOrganRed",
-    "PreviewUri": "@previewImages/HeartOrganRed.png"
+    "PreviewUri": "HeartOrganRed.png"
   },
   "HeartFlatBlack": {
     "DisplayName": "Heart, Flat, Black",
@@ -47081,7 +47081,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "HeartFlatBlack",
-    "PreviewUri": "@previewImages/HeartFlatBlack.png"
+    "PreviewUri": "HeartFlatBlack.png"
   },
   "HeartFlatBlue": {
     "DisplayName": "Heart, Flat, Blue",
@@ -47115,7 +47115,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "HeartFlatBlue",
-    "PreviewUri": "@previewImages/HeartFlatBlue.png"
+    "PreviewUri": "HeartFlatBlue.png"
   },
   "HeartFlatGreen": {
     "DisplayName": "Heart, Flat, Green",
@@ -47149,7 +47149,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "HeartFlatGreen",
-    "PreviewUri": "@previewImages/HeartFlatGreen.png"
+    "PreviewUri": "HeartFlatGreen.png"
   },
   "HeartFlatOrange": {
     "DisplayName": "Heart, Flat, Orange",
@@ -47183,7 +47183,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "HeartFlatOrange",
-    "PreviewUri": "@previewImages/HeartFlatOrange.png"
+    "PreviewUri": "HeartFlatOrange.png"
   },
   "HeartFlatPurple": {
     "DisplayName": "Heart, Flat, Purple",
@@ -47217,7 +47217,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "HeartFlatPurple",
-    "PreviewUri": "@previewImages/HeartFlatPurple.png"
+    "PreviewUri": "HeartFlatPurple.png"
   },
   "HeartFlatRed": {
     "DisplayName": "Heart, Flat, Red",
@@ -47251,7 +47251,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "HeartFlatRed",
-    "PreviewUri": "@previewImages/HeartFlatRed.png"
+    "PreviewUri": "HeartFlatRed.png"
   },
   "HeartFlatWhite": {
     "DisplayName": "Heart, Flat, White",
@@ -47285,7 +47285,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "HeartFlatWhite",
-    "PreviewUri": "@previewImages/HeartFlatWhite.png"
+    "PreviewUri": "HeartFlatWhite.png"
   },
   "HeartFlatYellow": {
     "DisplayName": "Heart, Flat, Yellow",
@@ -47319,7 +47319,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "HeartFlatYellow",
-    "PreviewUri": "@previewImages/HeartFlatYellow.png"
+    "PreviewUri": "HeartFlatYellow.png"
   },
   "HeartWoodRed": {
     "DisplayName": "Heart, Wood, Red",
@@ -47354,7 +47354,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "HeartWoodRed",
-    "PreviewUri": "@previewImages/HeartWoodRed.png"
+    "PreviewUri": "HeartWoodRed.png"
   },
   "HelicopterAcrylic": {
     "DisplayName": "Helicopter, Acrylic",
@@ -47372,7 +47372,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "HelicopterAcrylic",
-    "PreviewUri": "@previewImages/HelicopterAcrylic.png"
+    "PreviewUri": "HelicopterAcrylic.png"
   },
   "HenhouseBlack": {
     "DisplayName": "Henhouse, Black",
@@ -47393,7 +47393,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "HenhouseBlack",
-    "PreviewUri": "@previewImages/HenhouseBlack.png"
+    "PreviewUri": "HenhouseBlack.png"
   },
   "HenhouseBlue": {
     "DisplayName": "Henhouse, Blue",
@@ -47414,7 +47414,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "HenhouseBlue",
-    "PreviewUri": "@previewImages/HenhouseBlue.png"
+    "PreviewUri": "HenhouseBlue.png"
   },
   "HenhouseGreen": {
     "DisplayName": "Henhouse, Green",
@@ -47435,7 +47435,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "HenhouseGreen",
-    "PreviewUri": "@previewImages/HenhouseGreen.png"
+    "PreviewUri": "HenhouseGreen.png"
   },
   "HenhouseOrange": {
     "DisplayName": "Henhouse, Orange",
@@ -47456,7 +47456,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "HenhouseOrange",
-    "PreviewUri": "@previewImages/HenhouseOrange.png"
+    "PreviewUri": "HenhouseOrange.png"
   },
   "HenhousePurple": {
     "DisplayName": "Henhouse, Purple",
@@ -47477,7 +47477,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "HenhousePurple",
-    "PreviewUri": "@previewImages/HenhousePurple.png"
+    "PreviewUri": "HenhousePurple.png"
   },
   "HenhouseRed": {
     "DisplayName": "Henhouse, Red",
@@ -47498,7 +47498,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "HenhouseRed",
-    "PreviewUri": "@previewImages/HenhouseRed.png"
+    "PreviewUri": "HenhouseRed.png"
   },
   "HenhouseWhite": {
     "DisplayName": "Henhouse, White",
@@ -47519,7 +47519,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "HenhouseWhite",
-    "PreviewUri": "@previewImages/HenhouseWhite.png"
+    "PreviewUri": "HenhouseWhite.png"
   },
   "HenhouseYellow": {
     "DisplayName": "Henhouse, Yellow",
@@ -47540,7 +47540,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "HenhouseYellow",
-    "PreviewUri": "@previewImages/HenhouseYellow.png"
+    "PreviewUri": "HenhouseYellow.png"
   },
   "HerbBlack": {
     "DisplayName": "Herb, Black",
@@ -47572,7 +47572,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "HerbBlack",
-    "PreviewUri": "@previewImages/HerbBlack.png"
+    "PreviewUri": "HerbBlack.png"
   },
   "HerbBlue": {
     "DisplayName": "Herb, Blue",
@@ -47604,7 +47604,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "HerbBlue",
-    "PreviewUri": "@previewImages/HerbBlue.png"
+    "PreviewUri": "HerbBlue.png"
   },
   "HerbGreen": {
     "DisplayName": "Herb, Green",
@@ -47638,7 +47638,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "HerbGreen",
-    "PreviewUri": "@previewImages/HerbGreen.png"
+    "PreviewUri": "HerbGreen.png"
   },
   "HerbOrange": {
     "DisplayName": "Herb, Orange",
@@ -47672,7 +47672,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "HerbOrange",
-    "PreviewUri": "@previewImages/HerbOrange.png"
+    "PreviewUri": "HerbOrange.png"
   },
   "HerbPurple": {
     "DisplayName": "Herb, Purple",
@@ -47708,7 +47708,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "HerbPurple",
-    "PreviewUri": "@previewImages/HerbPurple.png"
+    "PreviewUri": "HerbPurple.png"
   },
   "HerbRed": {
     "DisplayName": "Herb, Red",
@@ -47744,7 +47744,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "HerbRed",
-    "PreviewUri": "@previewImages/HerbRed.png"
+    "PreviewUri": "HerbRed.png"
   },
   "HerbWhite": {
     "DisplayName": "Herb, White",
@@ -47781,7 +47781,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "HerbWhite",
-    "PreviewUri": "@previewImages/HerbWhite.png"
+    "PreviewUri": "HerbWhite.png"
   },
   "HerbYellow": {
     "DisplayName": "Herb, Yellow",
@@ -47818,7 +47818,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "HerbYellow",
-    "PreviewUri": "@previewImages/HerbYellow.png"
+    "PreviewUri": "HerbYellow.png"
   },
   "HexNut": {
     "DisplayName": "Hex Nut",
@@ -47842,7 +47842,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "HexNut",
-    "PreviewUri": "@previewImages/HexNut.png"
+    "PreviewUri": "HexNut.png"
   },
   "HexStackerBlack": {
     "DisplayName": "Hex Stacker, Black",
@@ -47868,7 +47868,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "HexStackerBlack",
-    "PreviewUri": "@previewImages/HexStackerBlack.png"
+    "PreviewUri": "HexStackerBlack.png"
   },
   "HexStackerBlue": {
     "DisplayName": "Hex Stacker, Blue",
@@ -47894,7 +47894,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "HexStackerBlue",
-    "PreviewUri": "@previewImages/HexStackerBlue.png"
+    "PreviewUri": "HexStackerBlue.png"
   },
   "HexStackerGreen": {
     "DisplayName": "Hex Stacker, Green",
@@ -47920,7 +47920,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "HexStackerGreen",
-    "PreviewUri": "@previewImages/HexStackerGreen.png"
+    "PreviewUri": "HexStackerGreen.png"
   },
   "HexStackerOrange": {
     "DisplayName": "Hex Stacker, Orange",
@@ -47946,7 +47946,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "HexStackerOrange",
-    "PreviewUri": "@previewImages/HexStackerOrange.png"
+    "PreviewUri": "HexStackerOrange.png"
   },
   "HexStackerPurple": {
     "DisplayName": "Hex Stacker, Purple",
@@ -47972,7 +47972,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "HexStackerPurple",
-    "PreviewUri": "@previewImages/HexStackerPurple.png"
+    "PreviewUri": "HexStackerPurple.png"
   },
   "HexStackerRed": {
     "DisplayName": "Hex Stacker, Red",
@@ -47998,7 +47998,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "HexStackerRed",
-    "PreviewUri": "@previewImages/HexStackerRed.png"
+    "PreviewUri": "HexStackerRed.png"
   },
   "HexStackerWhite": {
     "DisplayName": "Hex Stacker, White",
@@ -48024,7 +48024,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "HexStackerWhite",
-    "PreviewUri": "@previewImages/HexStackerWhite.png"
+    "PreviewUri": "HexStackerWhite.png"
   },
   "HexStackerYellow": {
     "DisplayName": "Hex Stacker, Yellow",
@@ -48050,7 +48050,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "HexStackerYellow",
-    "PreviewUri": "@previewImages/HexStackerYellow.png"
+    "PreviewUri": "HexStackerYellow.png"
   },
   "Hexbox20mmBlue": {
     "DisplayName": "Hexbox, 20mm, Blue",
@@ -48075,7 +48075,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Hexbox20mmBlue",
-    "PreviewUri": "@previewImages/Hexbox20mmBlue.png"
+    "PreviewUri": "Hexbox20mmBlue.png"
   },
   "Hexbox20mmDarkRed": {
     "DisplayName": "Hexbox, 20mm, Dark Red",
@@ -48101,7 +48101,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Hexbox20mmDarkRed",
-    "PreviewUri": "@previewImages/Hexbox20mmDarkRed.png"
+    "PreviewUri": "Hexbox20mmDarkRed.png"
   },
   "Hexbox20mmMustard": {
     "DisplayName": "Hexbox, 20mm, Mustard",
@@ -48126,7 +48126,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "mustard",
     "IsDisabled": true,
     "Key": "Hexbox20mmMustard",
-    "PreviewUri": "@previewImages/Hexbox20mmMustard.png"
+    "PreviewUri": "Hexbox20mmMustard.png"
   },
   "HingedStoneDoorBlue": {
     "DisplayName": "Hinged Stone Door, Blue",
@@ -48146,7 +48146,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "HingedStoneDoorBlue",
-    "PreviewUri": "@previewImages/HingedStoneDoorBlue.png"
+    "PreviewUri": "HingedStoneDoorBlue.png"
   },
   "HingedStoneDoorBronze": {
     "DisplayName": "Hinged Stone Door, Bronze",
@@ -48166,7 +48166,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "HingedStoneDoorBronze",
-    "PreviewUri": "@previewImages/HingedStoneDoorBronze.png"
+    "PreviewUri": "HingedStoneDoorBronze.png"
   },
   "HingedStoneDoorGreen": {
     "DisplayName": "Hinged Stone Door, Green",
@@ -48186,7 +48186,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "HingedStoneDoorGreen",
-    "PreviewUri": "@previewImages/HingedStoneDoorGreen.png"
+    "PreviewUri": "HingedStoneDoorGreen.png"
   },
   "HingedStoneDoorGray": {
     "DisplayName": "Hinged Stone Door, Gray",
@@ -48206,7 +48206,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "HingedStoneDoorGray",
-    "PreviewUri": "@previewImages/HingedStoneDoorGray.png"
+    "PreviewUri": "HingedStoneDoorGray.png"
   },
   "HingedStoneDoorRed": {
     "DisplayName": "Hinged Stone Door, Red",
@@ -48226,7 +48226,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "HingedStoneDoorRed",
-    "PreviewUri": "@previewImages/HingedStoneDoorRed.png"
+    "PreviewUri": "HingedStoneDoorRed.png"
   },
   "Hippogriff": {
     "DisplayName": "Hippogriff",
@@ -48266,7 +48266,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "Hippogriff",
-    "PreviewUri": "@previewImages/Hippogriff.png"
+    "PreviewUri": "Hippogriff.png"
   },
   "HobgoblinCrossbow2FantasyTB25": {
     "DisplayName": "Hobgoblin, Crossbow 2, Fantasy, TB25",
@@ -48284,7 +48284,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "HobgoblinCrossbow2FantasyTB25",
-    "PreviewUri": "@previewImages/HobgoblinCrossbow2FantasyTB25.png"
+    "PreviewUri": "HobgoblinCrossbow2FantasyTB25.png"
   },
   "HobgoblinCrossbowFantasyTB25": {
     "DisplayName": "Hobgoblin, Crossbow, Fantasy, TB25",
@@ -48303,7 +48303,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "HobgoblinCrossbowFantasyTB25",
-    "PreviewUri": "@previewImages/HobgoblinCrossbowFantasyTB25.png"
+    "PreviewUri": "HobgoblinCrossbowFantasyTB25.png"
   },
   "HobgoblinSword2FantasyTB25": {
     "DisplayName": "Hobgoblin, Sword 2, Fantasy, TB25",
@@ -48325,7 +48325,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "HobgoblinSword2FantasyTB25",
-    "PreviewUri": "@previewImages/HobgoblinSword2FantasyTB25.png"
+    "PreviewUri": "HobgoblinSword2FantasyTB25.png"
   },
   "HobgoblinSwordFantasyTB25": {
     "DisplayName": "Hobgoblin, Sword, Fantasy, TB25",
@@ -48343,7 +48343,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "HobgoblinSwordFantasyTB25",
-    "PreviewUri": "@previewImages/HobgoblinSwordFantasyTB25.png"
+    "PreviewUri": "HobgoblinSwordFantasyTB25.png"
   },
   "HoodedStrangerFantasyTB25": {
     "DisplayName": "Hooded Stranger, Fantasy, TB25",
@@ -48369,7 +48369,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "HoodedStrangerFantasyTB25",
-    "PreviewUri": "@previewImages/HoodedStrangerFantasyTB25.png"
+    "PreviewUri": "HoodedStrangerFantasyTB25.png"
   },
   "HorseAcrylic": {
     "DisplayName": "Horse, Acrylic",
@@ -48405,7 +48405,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "HorseAcrylic",
-    "PreviewUri": "@previewImages/HorseAcrylic.png"
+    "PreviewUri": "HorseAcrylic.png"
   },
   "HotRodBlack": {
     "DisplayName": "Hot Rod, Black",
@@ -48432,7 +48432,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "HotRodBlack",
-    "PreviewUri": "@previewImages/HotRodBlack.png"
+    "PreviewUri": "HotRodBlack.png"
   },
   "HotRodBlue": {
     "DisplayName": "Hot Rod, Blue",
@@ -48459,7 +48459,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "HotRodBlue",
-    "PreviewUri": "@previewImages/HotRodBlue.png"
+    "PreviewUri": "HotRodBlue.png"
   },
   "HotRodGreen": {
     "DisplayName": "Hot Rod, Green",
@@ -48486,7 +48486,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "HotRodGreen",
-    "PreviewUri": "@previewImages/HotRodGreen.png"
+    "PreviewUri": "HotRodGreen.png"
   },
   "HotRodOrange": {
     "DisplayName": "Hot Rod, Orange",
@@ -48513,7 +48513,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "HotRodOrange",
-    "PreviewUri": "@previewImages/HotRodOrange.png"
+    "PreviewUri": "HotRodOrange.png"
   },
   "HotRodPurple": {
     "DisplayName": "Hot Rod, Purple",
@@ -48540,7 +48540,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "HotRodPurple",
-    "PreviewUri": "@previewImages/HotRodPurple.png"
+    "PreviewUri": "HotRodPurple.png"
   },
   "HotRodRed": {
     "DisplayName": "Hot Rod, Red",
@@ -48567,7 +48567,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "HotRodRed",
-    "PreviewUri": "@previewImages/HotRodRed.png"
+    "PreviewUri": "HotRodRed.png"
   },
   "HotRodWhite": {
     "DisplayName": "Hot Rod, White",
@@ -48594,7 +48594,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "HotRodWhite",
-    "PreviewUri": "@previewImages/HotRodWhite.png"
+    "PreviewUri": "HotRodWhite.png"
   },
   "HotRodYellow": {
     "DisplayName": "Hot Rod, Yellow",
@@ -48621,7 +48621,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "HotRodYellow",
-    "PreviewUri": "@previewImages/HotRodYellow.png"
+    "PreviewUri": "HotRodYellow.png"
   },
   "HotelBlack": {
     "DisplayName": "Hotel, Black",
@@ -48651,7 +48651,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "HotelBlack",
-    "PreviewUri": "@previewImages/HotelBlack.png"
+    "PreviewUri": "HotelBlack.png"
   },
   "HotelBlue": {
     "DisplayName": "Hotel, Blue",
@@ -48681,7 +48681,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "HotelBlue",
-    "PreviewUri": "@previewImages/HotelBlue.png"
+    "PreviewUri": "HotelBlue.png"
   },
   "HotelGreen": {
     "DisplayName": "Hotel, Green",
@@ -48711,7 +48711,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "HotelGreen",
-    "PreviewUri": "@previewImages/HotelGreen.png"
+    "PreviewUri": "HotelGreen.png"
   },
   "HotelOrange": {
     "DisplayName": "Hotel, Orange",
@@ -48741,7 +48741,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "HotelOrange",
-    "PreviewUri": "@previewImages/HotelOrange.png"
+    "PreviewUri": "HotelOrange.png"
   },
   "HotelPurple": {
     "DisplayName": "Hotel, Purple",
@@ -48771,7 +48771,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "HotelPurple",
-    "PreviewUri": "@previewImages/HotelPurple.png"
+    "PreviewUri": "HotelPurple.png"
   },
   "HotelRed": {
     "DisplayName": "Hotel, Red",
@@ -48801,7 +48801,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "HotelRed",
-    "PreviewUri": "@previewImages/HotelRed.png"
+    "PreviewUri": "HotelRed.png"
   },
   "HotelWhite": {
     "DisplayName": "Hotel, White",
@@ -48831,7 +48831,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "HotelWhite",
-    "PreviewUri": "@previewImages/HotelWhite.png"
+    "PreviewUri": "HotelWhite.png"
   },
   "HotelYellow": {
     "DisplayName": "Hotel, Yellow",
@@ -48861,7 +48861,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "HotelYellow",
-    "PreviewUri": "@previewImages/HotelYellow.png"
+    "PreviewUri": "HotelYellow.png"
   },
   "HouseAcrylicOpaqueBlack": {
     "DisplayName": "House, Acrylic, Opaque, Black",
@@ -48898,7 +48898,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "HouseAcrylicOpaqueBlack",
-    "PreviewUri": "@previewImages/HouseAcrylicOpaqueBlack.png"
+    "PreviewUri": "HouseAcrylicOpaqueBlack.png"
   },
   "HouseAcrylicOpaqueGold": {
     "DisplayName": "House, Acrylic, Opaque, Gold",
@@ -48935,7 +48935,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "HouseAcrylicOpaqueGold",
-    "PreviewUri": "@previewImages/HouseAcrylicOpaqueGold.png"
+    "PreviewUri": "HouseAcrylicOpaqueGold.png"
   },
   "HouseAcrylicOpaqueSilver": {
     "DisplayName": "House, Acrylic, Opaque, Silver",
@@ -48978,7 +48978,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "HouseAcrylicOpaqueSilver",
-    "PreviewUri": "@previewImages/HouseAcrylicOpaqueSilver.png"
+    "PreviewUri": "HouseAcrylicOpaqueSilver.png"
   },
   "HouseAcrylicOpaqueWhite": {
     "DisplayName": "House, Acrylic, Opaque, White",
@@ -49015,7 +49015,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "HouseAcrylicOpaqueWhite",
-    "PreviewUri": "@previewImages/HouseAcrylicOpaqueWhite.png"
+    "PreviewUri": "HouseAcrylicOpaqueWhite.png"
   },
   "HouseAcrylicTransparentBlack": {
     "DisplayName": "House, Acrylic, Transparent, Black",
@@ -49052,7 +49052,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "HouseAcrylicTransparentBlack",
-    "PreviewUri": "@previewImages/HouseAcrylicTransparentBlack.png"
+    "PreviewUri": "HouseAcrylicTransparentBlack.png"
   },
   "HouseAcrylicTransparentBlue": {
     "DisplayName": "House, Acrylic, Transparent, Blue",
@@ -49089,7 +49089,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "HouseAcrylicTransparentBlue",
-    "PreviewUri": "@previewImages/HouseAcrylicTransparentBlue.png"
+    "PreviewUri": "HouseAcrylicTransparentBlue.png"
   },
   "HouseAcrylicTransparentClear": {
     "DisplayName": "House, Acrylic, Transparent, Clear",
@@ -49126,7 +49126,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HouseAcrylicTransparentClear",
-    "PreviewUri": "@previewImages/HouseAcrylicTransparentClear.png"
+    "PreviewUri": "HouseAcrylicTransparentClear.png"
   },
   "HouseAcrylicTransparentGreen": {
     "DisplayName": "House, Acrylic, Transparent, Green",
@@ -49163,7 +49163,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "HouseAcrylicTransparentGreen",
-    "PreviewUri": "@previewImages/HouseAcrylicTransparentGreen.png"
+    "PreviewUri": "HouseAcrylicTransparentGreen.png"
   },
   "HouseAcrylicTransparentOrange": {
     "DisplayName": "House, Acrylic, Transparent, Orange",
@@ -49200,7 +49200,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "HouseAcrylicTransparentOrange",
-    "PreviewUri": "@previewImages/HouseAcrylicTransparentOrange.png"
+    "PreviewUri": "HouseAcrylicTransparentOrange.png"
   },
   "HouseAcrylicTransparentPurple": {
     "DisplayName": "House, Acrylic, Transparent, Purple",
@@ -49237,7 +49237,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "HouseAcrylicTransparentPurple",
-    "PreviewUri": "@previewImages/HouseAcrylicTransparentPurple.png"
+    "PreviewUri": "HouseAcrylicTransparentPurple.png"
   },
   "HouseAcrylicTransparentRed": {
     "DisplayName": "House, Acrylic, Transparent, Red",
@@ -49274,7 +49274,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "HouseAcrylicTransparentRed",
-    "PreviewUri": "@previewImages/HouseAcrylicTransparentRed.png"
+    "PreviewUri": "HouseAcrylicTransparentRed.png"
   },
   "HouseAcrylicTransparentYellow": {
     "DisplayName": "House, Acrylic, Transparent, Yellow",
@@ -49311,7 +49311,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "HouseAcrylicTransparentYellow",
-    "PreviewUri": "@previewImages/HouseAcrylicTransparentYellow.png"
+    "PreviewUri": "HouseAcrylicTransparentYellow.png"
   },
   "HouseBlack": {
     "DisplayName": "House, Black",
@@ -49348,7 +49348,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "HouseBlack",
-    "PreviewUri": "@previewImages/HouseBlack.png"
+    "PreviewUri": "HouseBlack.png"
   },
   "HouseBlue": {
     "DisplayName": "House, Blue",
@@ -49385,7 +49385,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "HouseBlue",
-    "PreviewUri": "@previewImages/HouseBlue.png"
+    "PreviewUri": "HouseBlue.png"
   },
   "HouseGreen": {
     "DisplayName": "House, Green",
@@ -49422,7 +49422,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "HouseGreen",
-    "PreviewUri": "@previewImages/HouseGreen.png"
+    "PreviewUri": "HouseGreen.png"
   },
   "HouseOrange": {
     "DisplayName": "House, Orange",
@@ -49459,7 +49459,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "HouseOrange",
-    "PreviewUri": "@previewImages/HouseOrange.png"
+    "PreviewUri": "HouseOrange.png"
   },
   "HousePurple": {
     "DisplayName": "House, Purple",
@@ -49496,7 +49496,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "HousePurple",
-    "PreviewUri": "@previewImages/HousePurple.png"
+    "PreviewUri": "HousePurple.png"
   },
   "HouseRed": {
     "DisplayName": "House, Red",
@@ -49533,7 +49533,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "HouseRed",
-    "PreviewUri": "@previewImages/HouseRed.png"
+    "PreviewUri": "HouseRed.png"
   },
   "HouseWhite": {
     "DisplayName": "House, White",
@@ -49570,7 +49570,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "HouseWhite",
-    "PreviewUri": "@previewImages/HouseWhite.png"
+    "PreviewUri": "HouseWhite.png"
   },
   "HouseWoodNatural": {
     "DisplayName": "House, Wood, Natural",
@@ -49608,7 +49608,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "HouseWoodNatural",
-    "PreviewUri": "@previewImages/HouseWoodNatural.png"
+    "PreviewUri": "HouseWoodNatural.png"
   },
   "HouseWoodYellow": {
     "DisplayName": "House, Wood, Yellow",
@@ -49646,7 +49646,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "HouseWoodYellow",
-    "PreviewUri": "@previewImages/HouseWoodYellow.png"
+    "PreviewUri": "HouseWoodYellow.png"
   },
   "HouseYellow": {
     "DisplayName": "House, Yellow",
@@ -49683,7 +49683,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "HouseYellow",
-    "PreviewUri": "@previewImages/HouseYellow.png"
+    "PreviewUri": "HouseYellow.png"
   },
   "HumanFigureOrange": {
     "DisplayName": "Human Figure, Orange",
@@ -49721,7 +49721,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "HumanFigureOrange",
-    "PreviewUri": "@previewImages/HumanFigureOrange.png"
+    "PreviewUri": "HumanFigureOrange.png"
   },
   "HumanFigurePurple": {
     "DisplayName": "Human Figure, Purple",
@@ -49759,7 +49759,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "HumanFigurePurple",
-    "PreviewUri": "@previewImages/HumanFigurePurple.png"
+    "PreviewUri": "HumanFigurePurple.png"
   },
   "HumanFigureRed": {
     "DisplayName": "Human Figure, Red",
@@ -49797,7 +49797,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "HumanFigureRed",
-    "PreviewUri": "@previewImages/HumanFigureRed.png"
+    "PreviewUri": "HumanFigureRed.png"
   },
   "HumanFigureYellow": {
     "DisplayName": "Human Figure, Yellow",
@@ -49835,7 +49835,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "HumanFigureYellow",
-    "PreviewUri": "@previewImages/HumanFigureYellow.png"
+    "PreviewUri": "HumanFigureYellow.png"
   },
   "HutLarge": {
     "DisplayName": "Hut, Large",
@@ -49862,7 +49862,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HutLarge",
-    "PreviewUri": "@previewImages/HutLarge.png"
+    "PreviewUri": "HutLarge.png"
   },
   "HutSmall": {
     "DisplayName": "Hut, Small",
@@ -49889,7 +49889,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "HutSmall",
-    "PreviewUri": "@previewImages/HutSmall.png"
+    "PreviewUri": "HutSmall.png"
   },
   "Hydra": {
     "DisplayName": "Hydra",
@@ -49918,7 +49918,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "Hydra",
-    "PreviewUri": "@previewImages/Hydra.png"
+    "PreviewUri": "Hydra.png"
   },
   "I-Beam": {
     "DisplayName": "I-Beam",
@@ -49946,7 +49946,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "I-Beam",
-    "PreviewUri": "@previewImages/I-Beam.png"
+    "PreviewUri": "I-Beam.png"
   },
   "IceCube10mmCopper": {
     "DisplayName": "Ice Cube, 10mm, Copper",
@@ -49989,7 +49989,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "copper",
     "IsDisabled": false,
     "Key": "IceCube10mmCopper",
-    "PreviewUri": "@previewImages/IceCube10mmCopper.png"
+    "PreviewUri": "IceCube10mmCopper.png"
   },
   "IceCube10mmOpaqueBlack": {
     "DisplayName": "Ice Cube, 10mm, Opaque, Black",
@@ -50031,7 +50031,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "IceCube10mmOpaqueBlack",
-    "PreviewUri": "@previewImages/IceCube10mmOpaqueBlack.png"
+    "PreviewUri": "IceCube10mmOpaqueBlack.png"
   },
   "IceCube10mmOpaqueGold": {
     "DisplayName": "Ice Cube, 10mm, Opaque, Gold",
@@ -50073,7 +50073,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "IceCube10mmOpaqueGold",
-    "PreviewUri": "@previewImages/IceCube10mmOpaqueGold.png"
+    "PreviewUri": "IceCube10mmOpaqueGold.png"
   },
   "IceCube10mmOpaqueSilver": {
     "DisplayName": "Ice Cube, 10mm, Opaque, Silver",
@@ -50115,7 +50115,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "IceCube10mmOpaqueSilver",
-    "PreviewUri": "@previewImages/IceCube10mmOpaqueSilver.png"
+    "PreviewUri": "IceCube10mmOpaqueSilver.png"
   },
   "IceCube10mmOpaqueWhite": {
     "DisplayName": "Ice Cube, 10mm, Opaque, White",
@@ -50157,7 +50157,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "IceCube10mmOpaqueWhite",
-    "PreviewUri": "@previewImages/IceCube10mmOpaqueWhite.png"
+    "PreviewUri": "IceCube10mmOpaqueWhite.png"
   },
   "IceCube10mmTransparentBlack": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Black",
@@ -50199,7 +50199,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "IceCube10mmTransparentBlack",
-    "PreviewUri": "@previewImages/IceCube10mmTransparentBlack.png"
+    "PreviewUri": "IceCube10mmTransparentBlack.png"
   },
   "IceCube10mmTransparentBlue": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Blue",
@@ -50241,7 +50241,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "IceCube10mmTransparentBlue",
-    "PreviewUri": "@previewImages/IceCube10mmTransparentBlue.png"
+    "PreviewUri": "IceCube10mmTransparentBlue.png"
   },
   "IceCube10mmTransparentClear": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Clear",
@@ -50283,7 +50283,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "IceCube10mmTransparentClear",
-    "PreviewUri": "@previewImages/IceCube10mmTransparentClear.png"
+    "PreviewUri": "IceCube10mmTransparentClear.png"
   },
   "IceCube10mmTransparentGreen": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Green",
@@ -50325,7 +50325,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "IceCube10mmTransparentGreen",
-    "PreviewUri": "@previewImages/IceCube10mmTransparentGreen.png"
+    "PreviewUri": "IceCube10mmTransparentGreen.png"
   },
   "IceCube10mmTransparentOrange": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Orange",
@@ -50367,7 +50367,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "IceCube10mmTransparentOrange",
-    "PreviewUri": "@previewImages/IceCube10mmTransparentOrange.png"
+    "PreviewUri": "IceCube10mmTransparentOrange.png"
   },
   "IceCube10mmTransparentPurple": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Purple",
@@ -50409,7 +50409,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "IceCube10mmTransparentPurple",
-    "PreviewUri": "@previewImages/IceCube10mmTransparentPurple.png"
+    "PreviewUri": "IceCube10mmTransparentPurple.png"
   },
   "IceCube10mmTransparentRed": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Red",
@@ -50451,7 +50451,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "IceCube10mmTransparentRed",
-    "PreviewUri": "@previewImages/IceCube10mmTransparentRed.png"
+    "PreviewUri": "IceCube10mmTransparentRed.png"
   },
   "IceCube10mmTransparentWhite": {
     "DisplayName": "Ice Cube, 10mm, Transparent, White",
@@ -50493,7 +50493,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "IceCube10mmTransparentWhite",
-    "PreviewUri": "@previewImages/IceCube10mmTransparentWhite.png"
+    "PreviewUri": "IceCube10mmTransparentWhite.png"
   },
   "IceCube10mmTransparentYellow": {
     "DisplayName": "Ice Cube, 10mm, Transparent, Yellow",
@@ -50535,7 +50535,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "IceCube10mmTransparentYellow",
-    "PreviewUri": "@previewImages/IceCube10mmTransparentYellow.png"
+    "PreviewUri": "IceCube10mmTransparentYellow.png"
   },
   "IceCube12mmOpaqueBlack": {
     "DisplayName": "Ice Cube, 12mm, Opaque, Black",
@@ -50577,7 +50577,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "IceCube12mmOpaqueBlack",
-    "PreviewUri": "@previewImages/IceCube12mmOpaqueBlack.png"
+    "PreviewUri": "IceCube12mmOpaqueBlack.png"
   },
   "IceCube12mmOpaqueGold": {
     "DisplayName": "Ice Cube, 12mm, Opaque, Gold",
@@ -50619,7 +50619,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "IceCube12mmOpaqueGold",
-    "PreviewUri": "@previewImages/IceCube12mmOpaqueGold.png"
+    "PreviewUri": "IceCube12mmOpaqueGold.png"
   },
   "IceCube12mmOpaqueSilver": {
     "DisplayName": "Ice Cube, 12mm, Opaque, Silver",
@@ -50661,7 +50661,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "IceCube12mmOpaqueSilver",
-    "PreviewUri": "@previewImages/IceCube12mmOpaqueSilver.png"
+    "PreviewUri": "IceCube12mmOpaqueSilver.png"
   },
   "IceCube12mmOpaqueWhite": {
     "DisplayName": "Ice Cube, 12mm, Opaque, White",
@@ -50703,7 +50703,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "IceCube12mmOpaqueWhite",
-    "PreviewUri": "@previewImages/IceCube12mmOpaqueWhite.png"
+    "PreviewUri": "IceCube12mmOpaqueWhite.png"
   },
   "IceCube12mmTransparentBlack": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Black",
@@ -50745,7 +50745,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "IceCube12mmTransparentBlack",
-    "PreviewUri": "@previewImages/IceCube12mmTransparentBlack.png"
+    "PreviewUri": "IceCube12mmTransparentBlack.png"
   },
   "IceCube12mmTransparentBlue": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Blue",
@@ -50793,7 +50793,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "IceCube12mmTransparentBlue",
-    "PreviewUri": "@previewImages/IceCube12mmTransparentBlue.png"
+    "PreviewUri": "IceCube12mmTransparentBlue.png"
   },
   "IceCube12mmTransparentClear": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Clear",
@@ -50835,7 +50835,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "IceCube12mmTransparentClear",
-    "PreviewUri": "@previewImages/IceCube12mmTransparentClear.png"
+    "PreviewUri": "IceCube12mmTransparentClear.png"
   },
   "IceCube12mmTransparentGreen": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Green",
@@ -50877,7 +50877,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "IceCube12mmTransparentGreen",
-    "PreviewUri": "@previewImages/IceCube12mmTransparentGreen.png"
+    "PreviewUri": "IceCube12mmTransparentGreen.png"
   },
   "IceCube12mmTransparentOrange": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Orange",
@@ -50919,7 +50919,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "IceCube12mmTransparentOrange",
-    "PreviewUri": "@previewImages/IceCube12mmTransparentOrange.png"
+    "PreviewUri": "IceCube12mmTransparentOrange.png"
   },
   "IceCube12mmTransparentPurple": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Purple",
@@ -50961,7 +50961,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "IceCube12mmTransparentPurple",
-    "PreviewUri": "@previewImages/IceCube12mmTransparentPurple.png"
+    "PreviewUri": "IceCube12mmTransparentPurple.png"
   },
   "IceCube12mmTransparentRed": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Red",
@@ -51003,7 +51003,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "IceCube12mmTransparentRed",
-    "PreviewUri": "@previewImages/IceCube12mmTransparentRed.png"
+    "PreviewUri": "IceCube12mmTransparentRed.png"
   },
   "IceCube12mmTransparentWhite": {
     "DisplayName": "Ice Cube, 12mm, Transparent, White",
@@ -51045,7 +51045,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "IceCube12mmTransparentWhite",
-    "PreviewUri": "@previewImages/IceCube12mmTransparentWhite.png"
+    "PreviewUri": "IceCube12mmTransparentWhite.png"
   },
   "IceCube12mmTransparentYellow": {
     "DisplayName": "Ice Cube, 12mm, Transparent, Yellow",
@@ -51093,7 +51093,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "IceCube12mmTransparentYellow",
-    "PreviewUri": "@previewImages/IceCube12mmTransparentYellow.png"
+    "PreviewUri": "IceCube12mmTransparentYellow.png"
   },
   "IceCube8mmCopper": {
     "DisplayName": "Ice Cube, 8mm, Copper",
@@ -51136,7 +51136,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "copper",
     "IsDisabled": false,
     "Key": "IceCube8mmCopper",
-    "PreviewUri": "@previewImages/IceCube8mmCopper.png"
+    "PreviewUri": "IceCube8mmCopper.png"
   },
   "IceCube8mmOpaqueBlack": {
     "DisplayName": "Ice Cube, 8mm, Opaque, Black",
@@ -51178,7 +51178,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "IceCube8mmOpaqueBlack",
-    "PreviewUri": "@previewImages/IceCube8mmOpaqueBlack.png"
+    "PreviewUri": "IceCube8mmOpaqueBlack.png"
   },
   "IceCube8mmOpaqueGold": {
     "DisplayName": "Ice Cube, 8mm, Opaque, Gold",
@@ -51220,7 +51220,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "IceCube8mmOpaqueGold",
-    "PreviewUri": "@previewImages/IceCube8mmOpaqueGold.png"
+    "PreviewUri": "IceCube8mmOpaqueGold.png"
   },
   "IceCube8mmOpaqueSilver": {
     "DisplayName": "Ice Cube, 8mm, Opaque, Silver",
@@ -51262,7 +51262,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "IceCube8mmOpaqueSilver",
-    "PreviewUri": "@previewImages/IceCube8mmOpaqueSilver.png"
+    "PreviewUri": "IceCube8mmOpaqueSilver.png"
   },
   "IceCube8mmOpaqueWhite": {
     "DisplayName": "Ice Cube, 8mm, Opaque, White",
@@ -51304,7 +51304,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "IceCube8mmOpaqueWhite",
-    "PreviewUri": "@previewImages/IceCube8mmOpaqueWhite.png"
+    "PreviewUri": "IceCube8mmOpaqueWhite.png"
   },
   "IceCube8mmTransparentBlack": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Black",
@@ -51346,7 +51346,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "IceCube8mmTransparentBlack",
-    "PreviewUri": "@previewImages/IceCube8mmTransparentBlack.png"
+    "PreviewUri": "IceCube8mmTransparentBlack.png"
   },
   "IceCube8mmTransparentBlue": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Blue",
@@ -51388,7 +51388,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "IceCube8mmTransparentBlue",
-    "PreviewUri": "@previewImages/IceCube8mmTransparentBlue.png"
+    "PreviewUri": "IceCube8mmTransparentBlue.png"
   },
   "IceCube8mmTransparentClear": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Clear",
@@ -51430,7 +51430,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "IceCube8mmTransparentClear",
-    "PreviewUri": "@previewImages/IceCube8mmTransparentClear.png"
+    "PreviewUri": "IceCube8mmTransparentClear.png"
   },
   "IceCube8mmTransparentGreen": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Green",
@@ -51472,7 +51472,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "IceCube8mmTransparentGreen",
-    "PreviewUri": "@previewImages/IceCube8mmTransparentGreen.png"
+    "PreviewUri": "IceCube8mmTransparentGreen.png"
   },
   "IceCube8mmTransparentOrange": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Orange",
@@ -51514,7 +51514,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "IceCube8mmTransparentOrange",
-    "PreviewUri": "@previewImages/IceCube8mmTransparentOrange.png"
+    "PreviewUri": "IceCube8mmTransparentOrange.png"
   },
   "IceCube8mmTransparentPurple": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Purple",
@@ -51556,7 +51556,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "IceCube8mmTransparentPurple",
-    "PreviewUri": "@previewImages/IceCube8mmTransparentPurple.png"
+    "PreviewUri": "IceCube8mmTransparentPurple.png"
   },
   "IceCube8mmTransparentRed": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Red",
@@ -51598,7 +51598,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "IceCube8mmTransparentRed",
-    "PreviewUri": "@previewImages/IceCube8mmTransparentRed.png"
+    "PreviewUri": "IceCube8mmTransparentRed.png"
   },
   "IceCube8mmTransparentWhite": {
     "DisplayName": "Ice Cube, 8mm, Transparent, White",
@@ -51640,7 +51640,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "IceCube8mmTransparentWhite",
-    "PreviewUri": "@previewImages/IceCube8mmTransparentWhite.png"
+    "PreviewUri": "IceCube8mmTransparentWhite.png"
   },
   "IceCube8mmTransparentYellow": {
     "DisplayName": "Ice Cube, 8mm, Transparent, Yellow",
@@ -51682,7 +51682,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "IceCube8mmTransparentYellow",
-    "PreviewUri": "@previewImages/IceCube8mmTransparentYellow.png"
+    "PreviewUri": "IceCube8mmTransparentYellow.png"
   },
   "IceElemental-CharacterMeeple": {
     "DisplayName": "Ice Elemental, Character Meeple",
@@ -51712,7 +51712,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "IceElemental-CharacterMeeple",
-    "PreviewUri": "@previewImages/IceElemental-CharacterMeeple.png"
+    "PreviewUri": "IceElemental-CharacterMeeple.png"
   },
   "ImpFantasyTB25": {
     "DisplayName": "Imp, Fantasy, TB25",
@@ -51735,7 +51735,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ImpFantasyTB25",
-    "PreviewUri": "@previewImages/ImpFantasyTB25.png"
+    "PreviewUri": "ImpFantasyTB25.png"
   },
   "IngotWoodAluminum": {
     "DisplayName": "Ingot, Wood, Aluminum",
@@ -51768,7 +51768,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "IngotWoodAluminum",
-    "PreviewUri": "@previewImages/IngotWoodAluminum.png"
+    "PreviewUri": "IngotWoodAluminum.png"
   },
   "IngotWoodBrass": {
     "DisplayName": "Ingot, Wood, Brass",
@@ -51800,7 +51800,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "copper",
     "IsDisabled": false,
     "Key": "IngotWoodBrass",
-    "PreviewUri": "@previewImages/IngotWoodBrass.png"
+    "PreviewUri": "IngotWoodBrass.png"
   },
   "IngotWoodCobalt": {
     "DisplayName": "Ingot, Wood, Cobalt",
@@ -51834,7 +51834,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "IngotWoodCobalt",
-    "PreviewUri": "@previewImages/IngotWoodCobalt.png"
+    "PreviewUri": "IngotWoodCobalt.png"
   },
   "IngotWoodCopper": {
     "DisplayName": "Ingot, Wood, Copper",
@@ -51867,7 +51867,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "IngotWoodCopper",
-    "PreviewUri": "@previewImages/IngotWoodCopper.png"
+    "PreviewUri": "IngotWoodCopper.png"
   },
   "IngotWoodGold": {
     "DisplayName": "Ingot, Wood, Gold",
@@ -51911,7 +51911,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "IngotWoodGold",
-    "PreviewUri": "@previewImages/IngotWoodGold.png"
+    "PreviewUri": "IngotWoodGold.png"
   },
   "IngotWoodIron": {
     "DisplayName": "Ingot, Wood, Iron",
@@ -51951,7 +51951,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "IngotWoodIron",
-    "PreviewUri": "@previewImages/IngotWoodIron.png"
+    "PreviewUri": "IngotWoodIron.png"
   },
   "IngotWoodSilver": {
     "DisplayName": "Ingot, Wood, Silver",
@@ -51993,7 +51993,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "IngotWoodSilver",
-    "PreviewUri": "@previewImages/IngotWoodSilver.png"
+    "PreviewUri": "IngotWoodSilver.png"
   },
   "IngotWoodSteel": {
     "DisplayName": "Ingot, Wood, Steel",
@@ -52031,7 +52031,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "IngotWoodSteel",
-    "PreviewUri": "@previewImages/IngotWoodSteel.png"
+    "PreviewUri": "IngotWoodSteel.png"
   },
   "InsectWarriorFantasyTB25": {
     "DisplayName": "Insect Warrior, Fantasy, TB25",
@@ -52049,7 +52049,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "InsectWarriorFantasyTB25",
-    "PreviewUri": "@previewImages/InsectWarriorFantasyTB25.png"
+    "PreviewUri": "InsectWarriorFantasyTB25.png"
   },
   "JewelBlue": {
     "DisplayName": "Jewel, Blue",
@@ -52118,7 +52118,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "JewelBlue",
-    "PreviewUri": "@previewImages/JewelBlue.png"
+    "PreviewUri": "JewelBlue.png"
   },
   "JewelOrange": {
     "DisplayName": "Jewel, Orange",
@@ -52187,7 +52187,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "JewelOrange",
-    "PreviewUri": "@previewImages/JewelOrange.png"
+    "PreviewUri": "JewelOrange.png"
   },
   "JewelPurple": {
     "DisplayName": "Jewel, Purple",
@@ -52256,7 +52256,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "JewelPurple",
-    "PreviewUri": "@previewImages/JewelPurple.png"
+    "PreviewUri": "JewelPurple.png"
   },
   "JewelRed": {
     "DisplayName": "Jewel, Red",
@@ -52325,7 +52325,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "JewelRed",
-    "PreviewUri": "@previewImages/JewelRed.png"
+    "PreviewUri": "JewelRed.png"
   },
   "JoystickBlack": {
     "DisplayName": "Joystick, Black",
@@ -52349,7 +52349,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "JoystickBlack",
-    "PreviewUri": "@previewImages/JoystickBlack.png"
+    "PreviewUri": "JoystickBlack.png"
   },
   "JoystickBlue": {
     "DisplayName": "Joystick, Blue",
@@ -52373,7 +52373,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "JoystickBlue",
-    "PreviewUri": "@previewImages/JoystickBlue.png"
+    "PreviewUri": "JoystickBlue.png"
   },
   "JoystickGreen": {
     "DisplayName": "Joystick, Green",
@@ -52397,7 +52397,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "JoystickGreen",
-    "PreviewUri": "@previewImages/JoystickGreen.png"
+    "PreviewUri": "JoystickGreen.png"
   },
   "JoystickHeadlessBlack": {
     "DisplayName": "Joystick, Headless, Black",
@@ -52421,7 +52421,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "JoystickHeadlessBlack",
-    "PreviewUri": "@previewImages/JoystickHeadlessBlack.png"
+    "PreviewUri": "JoystickHeadlessBlack.png"
   },
   "JoystickOrange": {
     "DisplayName": "Joystick, Orange",
@@ -52445,7 +52445,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "JoystickOrange",
-    "PreviewUri": "@previewImages/JoystickOrange.png"
+    "PreviewUri": "JoystickOrange.png"
   },
   "JoystickPurple": {
     "DisplayName": "Joystick, Purple",
@@ -52469,7 +52469,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "JoystickPurple",
-    "PreviewUri": "@previewImages/JoystickPurple.png"
+    "PreviewUri": "JoystickPurple.png"
   },
   "JoystickRed": {
     "DisplayName": "Joystick, Red",
@@ -52493,7 +52493,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "JoystickRed",
-    "PreviewUri": "@previewImages/JoystickRed.png"
+    "PreviewUri": "JoystickRed.png"
   },
   "JoystickWhite": {
     "DisplayName": "Joystick, White",
@@ -52517,7 +52517,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "JoystickWhite",
-    "PreviewUri": "@previewImages/JoystickWhite.png"
+    "PreviewUri": "JoystickWhite.png"
   },
   "JoystickYellow": {
     "DisplayName": "Joystick, Yellow",
@@ -52541,7 +52541,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "JoystickYellow",
-    "PreviewUri": "@previewImages/JoystickYellow.png"
+    "PreviewUri": "JoystickYellow.png"
   },
   "JumboSleevePack(100)": {
     "DisplayName": "Jumbo Sleeve Pack (100)",
@@ -52571,7 +52571,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "JumboSleevePack(100)",
-    "PreviewUri": "@previewImages/JumboSleevePack(100).png"
+    "PreviewUri": "JumboSleevePack(100).png"
   },
   "KeycardFluorescentBlue": {
     "DisplayName": "Keycard, Fluorescent Blue",
@@ -52604,7 +52604,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "KeycardFluorescentBlue",
-    "PreviewUri": "@previewImages/KeycardFluorescentBlue.png"
+    "PreviewUri": "KeycardFluorescentBlue.png"
   },
   "KeycardFluorescentGreen": {
     "DisplayName": "Keycard, Fluorescent Green",
@@ -52637,7 +52637,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "KeycardFluorescentGreen",
-    "PreviewUri": "@previewImages/KeycardFluorescentGreen.png"
+    "PreviewUri": "KeycardFluorescentGreen.png"
   },
   "KeycardFluorescentRed": {
     "DisplayName": "Keycard, Fluorescent Red",
@@ -52670,7 +52670,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "KeycardFluorescentRed",
-    "PreviewUri": "@previewImages/KeycardFluorescentRed.png"
+    "PreviewUri": "KeycardFluorescentRed.png"
   },
   "KeycardFluorescentYellow": {
     "DisplayName": "Keycard, Fluorescent Yellow",
@@ -52703,7 +52703,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "KeycardFluorescentYellow",
-    "PreviewUri": "@previewImages/KeycardFluorescentYellow.png"
+    "PreviewUri": "KeycardFluorescentYellow.png"
   },
   "KittenBrown": {
     "DisplayName": "Kitten, Brown",
@@ -52736,7 +52736,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "KittenBrown",
-    "PreviewUri": "@previewImages/KittenBrown.png"
+    "PreviewUri": "KittenBrown.png"
   },
   "KittenWhite": {
     "DisplayName": "Kitten, White",
@@ -52769,7 +52769,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "KittenWhite",
-    "PreviewUri": "@previewImages/KittenWhite.png"
+    "PreviewUri": "KittenWhite.png"
   },
   "KittenWhitewithBrown": {
     "DisplayName": "Kitten, White with Brown ",
@@ -52803,7 +52803,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "KittenWhitewithBrown",
-    "PreviewUri": "@previewImages/KittenWhitewithBrown.png"
+    "PreviewUri": "KittenWhitewithBrown.png"
   },
   "KnightWolfribHistoricTB25": {
     "DisplayName": "Knight Wolfrib, Historic, TB25",
@@ -52824,7 +52824,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "KnightWolfribHistoricTB25",
-    "PreviewUri": "@previewImages/KnightWolfribHistoricTB25.png"
+    "PreviewUri": "KnightWolfribHistoricTB25.png"
   },
   "KnightLanceSpaceTB25": {
     "DisplayName": "Knight, Lance, Space, TB25",
@@ -52842,7 +52842,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "KnightLanceSpaceTB25",
-    "PreviewUri": "@previewImages/KnightLanceSpaceTB25.png"
+    "PreviewUri": "KnightLanceSpaceTB25.png"
   },
   "KoboldPickaxeFantasyTB25": {
     "DisplayName": "Kobold, Pickaxe, Fantasy, TB25",
@@ -52863,7 +52863,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "KoboldPickaxeFantasyTB25",
-    "PreviewUri": "@previewImages/KoboldPickaxeFantasyTB25.png"
+    "PreviewUri": "KoboldPickaxeFantasyTB25.png"
   },
   "KrampusFantasyTB25": {
     "DisplayName": "Krampus, Fantasy, TB25",
@@ -52889,7 +52889,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "KrampusFantasyTB25",
-    "PreviewUri": "@previewImages/KrampusFantasyTB25.png"
+    "PreviewUri": "KrampusFantasyTB25.png"
   },
   "LabAssistant-CharacterMeeple": {
     "DisplayName": "Lab Assistant, Character Meeple",
@@ -52932,7 +52932,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "LabAssistant-CharacterMeeple",
-    "PreviewUri": "@previewImages/LabAssistant-CharacterMeeple.png"
+    "PreviewUri": "LabAssistant-CharacterMeeple.png"
   },
   "LaboratoryBlack": {
     "DisplayName": "Laboratory, Black",
@@ -52953,7 +52953,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "LaboratoryBlack",
-    "PreviewUri": "@previewImages/LaboratoryBlack.png"
+    "PreviewUri": "LaboratoryBlack.png"
   },
   "LaboratoryBlue": {
     "DisplayName": "Laboratory, Blue",
@@ -52974,7 +52974,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "LaboratoryBlue",
-    "PreviewUri": "@previewImages/LaboratoryBlue.png"
+    "PreviewUri": "LaboratoryBlue.png"
   },
   "LaboratoryGreen": {
     "DisplayName": "Laboratory, Green",
@@ -52995,7 +52995,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "LaboratoryGreen",
-    "PreviewUri": "@previewImages/LaboratoryGreen.png"
+    "PreviewUri": "LaboratoryGreen.png"
   },
   "LaboratoryOrange": {
     "DisplayName": "Laboratory, Orange",
@@ -53016,7 +53016,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "LaboratoryOrange",
-    "PreviewUri": "@previewImages/LaboratoryOrange.png"
+    "PreviewUri": "LaboratoryOrange.png"
   },
   "LaboratoryPurple": {
     "DisplayName": "Laboratory, Purple",
@@ -53037,7 +53037,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "LaboratoryPurple",
-    "PreviewUri": "@previewImages/LaboratoryPurple.png"
+    "PreviewUri": "LaboratoryPurple.png"
   },
   "LaboratoryRed": {
     "DisplayName": "Laboratory, Red",
@@ -53058,7 +53058,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "LaboratoryRed",
-    "PreviewUri": "@previewImages/LaboratoryRed.png"
+    "PreviewUri": "LaboratoryRed.png"
   },
   "LaboratoryWhite": {
     "DisplayName": "Laboratory, White",
@@ -53079,7 +53079,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "LaboratoryWhite",
-    "PreviewUri": "@previewImages/LaboratoryWhite.png"
+    "PreviewUri": "LaboratoryWhite.png"
   },
   "LaboratoryYellow": {
     "DisplayName": "Laboratory, Yellow",
@@ -53100,7 +53100,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "LaboratoryYellow",
-    "PreviewUri": "@previewImages/LaboratoryYellow.png"
+    "PreviewUri": "LaboratoryYellow.png"
   },
   "LadyBugWood": {
     "DisplayName": "Lady Bug, Wood",
@@ -53130,7 +53130,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "LadyBugWood",
-    "PreviewUri": "@previewImages/LadyBugWood.png"
+    "PreviewUri": "LadyBugWood.png"
   },
   "LampPost": {
     "DisplayName": "Lamp Post",
@@ -53150,7 +53150,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "LampPost",
-    "PreviewUri": "@previewImages/LampPost.png"
+    "PreviewUri": "LampPost.png"
   },
   "LandmarkBase": {
     "DisplayName": "Landmark Base",
@@ -53187,7 +53187,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": true,
     "Key": "LandmarkBase",
-    "PreviewUri": "@previewImages/LandmarkBase.png"
+    "PreviewUri": "LandmarkBase.png"
   },
   "Lantern": {
     "DisplayName": "Lantern",
@@ -53206,7 +53206,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Lantern",
-    "PreviewUri": "@previewImages/Lantern.png"
+    "PreviewUri": "Lantern.png"
   },
   "LargeStarGold": {
     "DisplayName": "Large Star, Gold",
@@ -53241,7 +53241,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "LargeStarGold",
-    "PreviewUri": "@previewImages/LargeStarGold.png"
+    "PreviewUri": "LargeStarGold.png"
   },
   "LargeStoutBox": {
     "DisplayName": "Blank Large Stout Box",
@@ -53270,7 +53270,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "LargeStoutBox",
-    "PreviewUri": "@previewImages/BlankLargeStoutBox.png"
+    "PreviewUri": "BlankLargeStoutBox.png"
   },
   "LargeTreasureChest(closed)": {
     "DisplayName": "Large Treasure Chest (closed)",
@@ -53302,7 +53302,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "LargeTreasureChest(closed)",
-    "PreviewUri": "@previewImages/LargeTreasureChest(closed).png"
+    "PreviewUri": "LargeTreasureChest(closed).png"
   },
   "LeatherBlack": {
     "DisplayName": "Leather, Black",
@@ -53340,7 +53340,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "LeatherBlack",
-    "PreviewUri": "@previewImages/LeatherBlack.png"
+    "PreviewUri": "LeatherBlack.png"
   },
   "LeatherBrown": {
     "DisplayName": "Leather, Brown",
@@ -53378,7 +53378,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "LeatherBrown",
-    "PreviewUri": "@previewImages/LeatherBrown.png"
+    "PreviewUri": "LeatherBrown.png"
   },
   "LeatherWhite": {
     "DisplayName": "Leather, White",
@@ -53416,7 +53416,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "LeatherWhite",
-    "PreviewUri": "@previewImages/LeatherWhite.png"
+    "PreviewUri": "LeatherWhite.png"
   },
   "LichwithStaff": {
     "DisplayName": "Lich with Staff",
@@ -53457,7 +53457,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "LichwithStaff",
-    "PreviewUri": "@previewImages/LichwithStaff.png"
+    "PreviewUri": "LichwithStaff.png"
   },
   "LichFantasyTB25": {
     "DisplayName": "Lich, Fantasy, TB25",
@@ -53487,7 +53487,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "LichFantasyTB25",
-    "PreviewUri": "@previewImages/LichFantasyTB25.png"
+    "PreviewUri": "LichFantasyTB25.png"
   },
   "LightBulbBlue": {
     "DisplayName": "Light Bulb, Blue",
@@ -53528,7 +53528,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "LightBulbBlue",
-    "PreviewUri": "@previewImages/LightBulbBlue.png"
+    "PreviewUri": "LightBulbBlue.png"
   },
   "LightBulbGold": {
     "DisplayName": "Light Bulb, Gold",
@@ -53569,7 +53569,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "LightBulbGold",
-    "PreviewUri": "@previewImages/LightBulbGold.png"
+    "PreviewUri": "LightBulbGold.png"
   },
   "LightBulbGreen": {
     "DisplayName": "Light Bulb, Green",
@@ -53610,7 +53610,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "LightBulbGreen",
-    "PreviewUri": "@previewImages/LightBulbGreen.png"
+    "PreviewUri": "LightBulbGreen.png"
   },
   "LightBulbSalmon": {
     "DisplayName": "Light Bulb, Salmon",
@@ -53652,7 +53652,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "salmon",
     "IsDisabled": false,
     "Key": "LightBulbSalmon",
-    "PreviewUri": "@previewImages/LightBulbSalmon.png"
+    "PreviewUri": "LightBulbSalmon.png"
   },
   "LightBulbTaupe": {
     "DisplayName": "Light Bulb, Taupe",
@@ -53694,7 +53694,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "taupe",
     "IsDisabled": false,
     "Key": "LightBulbTaupe",
-    "PreviewUri": "@previewImages/LightBulbTaupe.png"
+    "PreviewUri": "LightBulbTaupe.png"
   },
   "LightningBoltBlack": {
     "DisplayName": "Lightning Bolt, Black",
@@ -53760,7 +53760,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "LightningBoltBlack",
-    "PreviewUri": "@previewImages/LightningBoltBlack.png"
+    "PreviewUri": "LightningBoltBlack.png"
   },
   "LightningBoltBlue": {
     "DisplayName": "Lightning Bolt, Blue",
@@ -53826,7 +53826,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "LightningBoltBlue",
-    "PreviewUri": "@previewImages/LightningBoltBlue.png"
+    "PreviewUri": "LightningBoltBlue.png"
   },
   "LightningBoltGreen": {
     "DisplayName": "Lightning Bolt, Green",
@@ -53892,7 +53892,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "LightningBoltGreen",
-    "PreviewUri": "@previewImages/LightningBoltGreen.png"
+    "PreviewUri": "LightningBoltGreen.png"
   },
   "LightningBoltLargeOrange": {
     "DisplayName": "Lightning Bolt, Large, Orange",
@@ -53958,7 +53958,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "LightningBoltLargeOrange",
-    "PreviewUri": "@previewImages/LightningBoltLargeOrange.png"
+    "PreviewUri": "LightningBoltLargeOrange.png"
   },
   "LightningBoltOrange": {
     "DisplayName": "Lightning Bolt, Orange",
@@ -54024,7 +54024,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "LightningBoltOrange",
-    "PreviewUri": "@previewImages/LightningBoltOrange.png"
+    "PreviewUri": "LightningBoltOrange.png"
   },
   "LightningBoltPurple": {
     "DisplayName": "Lightning Bolt, Purple",
@@ -54090,7 +54090,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "LightningBoltPurple",
-    "PreviewUri": "@previewImages/LightningBoltPurple.png"
+    "PreviewUri": "LightningBoltPurple.png"
   },
   "LightningBoltRed": {
     "DisplayName": "Lightning Bolt, Red",
@@ -54156,7 +54156,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "LightningBoltRed",
-    "PreviewUri": "@previewImages/LightningBoltRed.png"
+    "PreviewUri": "LightningBoltRed.png"
   },
   "LightningBoltWhite": {
     "DisplayName": "Lightning Bolt, White",
@@ -54222,7 +54222,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "LightningBoltWhite",
-    "PreviewUri": "@previewImages/LightningBoltWhite.png"
+    "PreviewUri": "LightningBoltWhite.png"
   },
   "LightningBoltYellow": {
     "DisplayName": "Lightning Bolt, Yellow",
@@ -54288,7 +54288,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "LightningBoltYellow",
-    "PreviewUri": "@previewImages/LightningBoltYellow.png"
+    "PreviewUri": "LightningBoltYellow.png"
   },
   "LimoBlue": {
     "DisplayName": "Limo, Blue",
@@ -54317,7 +54317,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "LimoBlue",
-    "PreviewUri": "@previewImages/LimoBlue.png"
+    "PreviewUri": "LimoBlue.png"
   },
   "LimoGreen": {
     "DisplayName": "Limo, Green",
@@ -54346,7 +54346,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "LimoGreen",
-    "PreviewUri": "@previewImages/LimoGreen.png"
+    "PreviewUri": "LimoGreen.png"
   },
   "LimoRed": {
     "DisplayName": "Limo, Red",
@@ -54375,7 +54375,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "LimoRed",
-    "PreviewUri": "@previewImages/LimoRed.png"
+    "PreviewUri": "LimoRed.png"
   },
   "LimoYellow": {
     "DisplayName": "Limo, Yellow",
@@ -54404,7 +54404,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "LimoYellow",
-    "PreviewUri": "@previewImages/LimoYellow.png"
+    "PreviewUri": "LimoYellow.png"
   },
   "Lion": {
     "DisplayName": "Lion",
@@ -54438,7 +54438,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "Lion",
-    "PreviewUri": "@previewImages/Lion.png"
+    "PreviewUri": "Lion.png"
   },
   "LizardManonRockThrone": {
     "DisplayName": "Lizard Man on Rock Throne",
@@ -54469,7 +54469,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "LizardManonRockThrone",
-    "PreviewUri": "@previewImages/LizardManonRockThrone.png"
+    "PreviewUri": "LizardManonRockThrone.png"
   },
   "LizardManwithWarClubandShield": {
     "DisplayName": "Lizard Man with War Club and Shield",
@@ -54500,7 +54500,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "LizardManwithWarClubandShield",
-    "PreviewUri": "@previewImages/LizardManwithWarClubandShield.png"
+    "PreviewUri": "LizardManwithWarClubandShield.png"
   },
   "LizardmanJavelinFantasyTB25": {
     "DisplayName": "Lizardman, Javelin, Fantasy, TB25",
@@ -54525,7 +54525,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "LizardmanJavelinFantasyTB25",
-    "PreviewUri": "@previewImages/LizardmanJavelinFantasyTB25.png"
+    "PreviewUri": "LizardmanJavelinFantasyTB25.png"
   },
   "LocomotiveTrainEngineBlack": {
     "DisplayName": "Locomotive Train Engine, Black",
@@ -54549,7 +54549,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "LocomotiveTrainEngineBlack",
-    "PreviewUri": "@previewImages/LocomotiveTrainEngineBlack.png"
+    "PreviewUri": "LocomotiveTrainEngineBlack.png"
   },
   "LocomotiveTrainEngineGreen": {
     "DisplayName": "Locomotive Train Engine, Green",
@@ -54573,7 +54573,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "LocomotiveTrainEngineGreen",
-    "PreviewUri": "@previewImages/LocomotiveTrainEngineGreen.png"
+    "PreviewUri": "LocomotiveTrainEngineGreen.png"
   },
   "LocomotiveTrainEngineLightBlue": {
     "DisplayName": "Locomotive Train Engine, Light Blue",
@@ -54598,7 +54598,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "lightblue",
     "IsDisabled": false,
     "Key": "LocomotiveTrainEngineLightBlue",
-    "PreviewUri": "@previewImages/LocomotiveTrainEngineLightBlue.png"
+    "PreviewUri": "LocomotiveTrainEngineLightBlue.png"
   },
   "LocomotiveTrainEngineOrange": {
     "DisplayName": "Locomotive Train Engine, Orange",
@@ -54622,7 +54622,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "LocomotiveTrainEngineOrange",
-    "PreviewUri": "@previewImages/LocomotiveTrainEngineOrange.png"
+    "PreviewUri": "LocomotiveTrainEngineOrange.png"
   },
   "LocomotiveTrainEngineTan": {
     "DisplayName": "Locomotive Train Engine, Tan",
@@ -54646,7 +54646,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "LocomotiveTrainEngineTan",
-    "PreviewUri": "@previewImages/LocomotiveTrainEngineTan.png"
+    "PreviewUri": "LocomotiveTrainEngineTan.png"
   },
   "LocomotiveBlack": {
     "DisplayName": "Locomotive, Black",
@@ -54667,7 +54667,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "LocomotiveBlack",
-    "PreviewUri": "@previewImages/LocomotiveBlack.png"
+    "PreviewUri": "LocomotiveBlack.png"
   },
   "LocomotiveBlue": {
     "DisplayName": "Locomotive, Blue",
@@ -54688,7 +54688,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "LocomotiveBlue",
-    "PreviewUri": "@previewImages/LocomotiveBlue.png"
+    "PreviewUri": "LocomotiveBlue.png"
   },
   "LocomotiveGreen": {
     "DisplayName": "Locomotive, Green",
@@ -54709,7 +54709,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "LocomotiveGreen",
-    "PreviewUri": "@previewImages/LocomotiveGreen.png"
+    "PreviewUri": "LocomotiveGreen.png"
   },
   "LocomotiveOrange": {
     "DisplayName": "Locomotive, Orange",
@@ -54730,7 +54730,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "LocomotiveOrange",
-    "PreviewUri": "@previewImages/LocomotiveOrange.png"
+    "PreviewUri": "LocomotiveOrange.png"
   },
   "LocomotivePurple": {
     "DisplayName": "Locomotive, Purple",
@@ -54751,7 +54751,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "LocomotivePurple",
-    "PreviewUri": "@previewImages/LocomotivePurple.png"
+    "PreviewUri": "LocomotivePurple.png"
   },
   "LocomotiveRed": {
     "DisplayName": "Locomotive, Red",
@@ -54772,7 +54772,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "LocomotiveRed",
-    "PreviewUri": "@previewImages/LocomotiveRed.png"
+    "PreviewUri": "LocomotiveRed.png"
   },
   "LocomotiveWhite": {
     "DisplayName": "Locomotive, White",
@@ -54793,7 +54793,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "LocomotiveWhite",
-    "PreviewUri": "@previewImages/LocomotiveWhite.png"
+    "PreviewUri": "LocomotiveWhite.png"
   },
   "LocomotiveYellow": {
     "DisplayName": "Locomotive, Yellow",
@@ -54814,7 +54814,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "LocomotiveYellow",
-    "PreviewUri": "@previewImages/LocomotiveYellow.png"
+    "PreviewUri": "LocomotiveYellow.png"
   },
   "LookoutBlue": {
     "DisplayName": "Lookout, Blue",
@@ -54840,7 +54840,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "LookoutBlue",
-    "PreviewUri": "@previewImages/LookoutBlue.png"
+    "PreviewUri": "LookoutBlue.png"
   },
   "LookoutGreen": {
     "DisplayName": "Lookout, Green",
@@ -54866,7 +54866,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "LookoutGreen",
-    "PreviewUri": "@previewImages/LookoutGreen.png"
+    "PreviewUri": "LookoutGreen.png"
   },
   "LookoutOrange": {
     "DisplayName": "Lookout, Orange",
@@ -54892,7 +54892,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "LookoutOrange",
-    "PreviewUri": "@previewImages/LookoutOrange.png"
+    "PreviewUri": "LookoutOrange.png"
   },
   "LookoutRed": {
     "DisplayName": "Lookout, Red",
@@ -54918,7 +54918,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "LookoutRed",
-    "PreviewUri": "@previewImages/LookoutRed.png"
+    "PreviewUri": "LookoutRed.png"
   },
   "LookoutYellow": {
     "DisplayName": "Lookout, Yellow",
@@ -54944,7 +54944,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "LookoutYellow",
-    "PreviewUri": "@previewImages/LookoutYellow.png"
+    "PreviewUri": "LookoutYellow.png"
   },
   "Maasai-CharacterMeeple": {
     "DisplayName": "Maasai, Character Meeple",
@@ -54973,7 +54973,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Maasai-CharacterMeeple",
-    "PreviewUri": "@previewImages/Maasai-CharacterMeeple.png"
+    "PreviewUri": "Maasai-CharacterMeeple.png"
   },
   "MafiosoBurntOrange": {
     "DisplayName": "Mafioso, Burnt Orange",
@@ -55008,7 +55008,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "MafiosoBurntOrange",
-    "PreviewUri": "@previewImages/MafiosoBurntOrange.png"
+    "PreviewUri": "MafiosoBurntOrange.png"
   },
   "MafiosoGreen": {
     "DisplayName": "Mafioso, Green",
@@ -55043,7 +55043,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "MafiosoGreen",
-    "PreviewUri": "@previewImages/MafiosoGreen.png"
+    "PreviewUri": "MafiosoGreen.png"
   },
   "MafiosoPurple": {
     "DisplayName": "Mafioso, Purple",
@@ -55078,7 +55078,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "MafiosoPurple",
-    "PreviewUri": "@previewImages/MafiosoPurple.png"
+    "PreviewUri": "MafiosoPurple.png"
   },
   "MafiosoRed": {
     "DisplayName": "Mafioso, Red",
@@ -55113,7 +55113,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "MafiosoRed",
-    "PreviewUri": "@previewImages/MafiosoRed.png"
+    "PreviewUri": "MafiosoRed.png"
   },
   "MafiosoYellow": {
     "DisplayName": "Mafioso, Yellow",
@@ -55148,7 +55148,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "MafiosoYellow",
-    "PreviewUri": "@previewImages/MafiosoYellow.png"
+    "PreviewUri": "MafiosoYellow.png"
   },
   "MagnifyingGlass5X": {
     "DisplayName": "Magnifying Glass, 5X",
@@ -55181,7 +55181,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "MagnifyingGlass5X",
-    "PreviewUri": "@previewImages/MagnifyingGlass5X.png"
+    "PreviewUri": "MagnifyingGlass5X.png"
   },
   "MaleFarmerPurple": {
     "DisplayName": "Male Farmer, Purple",
@@ -55221,7 +55221,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": true,
     "Key": "MaleFarmerPurple",
-    "PreviewUri": "@previewImages/MaleFarmerPurple.png"
+    "PreviewUri": "MaleFarmerPurple.png"
   },
   "ManInBlack-CharacterMeeple": {
     "DisplayName": "Man In Black, Character Meeple",
@@ -55247,7 +55247,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ManInBlack-CharacterMeeple",
-    "PreviewUri": "@previewImages/ManInBlack-CharacterMeeple.png"
+    "PreviewUri": "ManInBlack-CharacterMeeple.png"
   },
   "ManAmericanRevolutionTB15Black": {
     "DisplayName": "Man, American Revolution, TB15, Black",
@@ -55271,7 +55271,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ManAmericanRevolutionTB15Black",
-    "PreviewUri": "@previewImages/ManAmericanRevolutionTB15Black.png"
+    "PreviewUri": "ManAmericanRevolutionTB15Black.png"
   },
   "ManAmericanRevolutionTB15Blue": {
     "DisplayName": "Man, American Revolution, TB15, Blue",
@@ -55295,7 +55295,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ManAmericanRevolutionTB15Blue",
-    "PreviewUri": "@previewImages/ManAmericanRevolutionTB15Blue.png"
+    "PreviewUri": "ManAmericanRevolutionTB15Blue.png"
   },
   "ManAmericanRevolutionTB15Green": {
     "DisplayName": "Man, American Revolution, TB15, Green",
@@ -55319,7 +55319,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ManAmericanRevolutionTB15Green",
-    "PreviewUri": "@previewImages/ManAmericanRevolutionTB15Green.png"
+    "PreviewUri": "ManAmericanRevolutionTB15Green.png"
   },
   "ManAmericanRevolutionTB15Orange": {
     "DisplayName": "Man, American Revolution, TB15, Orange",
@@ -55343,7 +55343,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ManAmericanRevolutionTB15Orange",
-    "PreviewUri": "@previewImages/ManAmericanRevolutionTB15Orange.png"
+    "PreviewUri": "ManAmericanRevolutionTB15Orange.png"
   },
   "ManAmericanRevolutionTB15Purple": {
     "DisplayName": "Man, American Revolution, TB15, Purple",
@@ -55367,7 +55367,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ManAmericanRevolutionTB15Purple",
-    "PreviewUri": "@previewImages/ManAmericanRevolutionTB15Purple.png"
+    "PreviewUri": "ManAmericanRevolutionTB15Purple.png"
   },
   "ManAmericanRevolutionTB15Red": {
     "DisplayName": "Man, American Revolution, TB15, Red",
@@ -55391,7 +55391,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ManAmericanRevolutionTB15Red",
-    "PreviewUri": "@previewImages/ManAmericanRevolutionTB15Red.png"
+    "PreviewUri": "ManAmericanRevolutionTB15Red.png"
   },
   "ManAmericanRevolutionTB15White": {
     "DisplayName": "Man, American Revolution, TB15, White",
@@ -55415,7 +55415,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ManAmericanRevolutionTB15White",
-    "PreviewUri": "@previewImages/ManAmericanRevolutionTB15White.png"
+    "PreviewUri": "ManAmericanRevolutionTB15White.png"
   },
   "ManAmericanRevolutionTB15Yellow": {
     "DisplayName": "Man, American Revolution, TB15, Yellow",
@@ -55439,7 +55439,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ManAmericanRevolutionTB15Yellow",
-    "PreviewUri": "@previewImages/ManAmericanRevolutionTB15Yellow.png"
+    "PreviewUri": "ManAmericanRevolutionTB15Yellow.png"
   },
   "ManIroquoisTB15Black": {
     "DisplayName": "Man, Iroquois, TB15, Black",
@@ -55459,7 +55459,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ManIroquoisTB15Black",
-    "PreviewUri": "@previewImages/ManIroquoisTB15Black.png"
+    "PreviewUri": "ManIroquoisTB15Black.png"
   },
   "ManIroquoisTB15Blue": {
     "DisplayName": "Man, Iroquois, TB15, Blue",
@@ -55479,7 +55479,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ManIroquoisTB15Blue",
-    "PreviewUri": "@previewImages/ManIroquoisTB15Blue.png"
+    "PreviewUri": "ManIroquoisTB15Blue.png"
   },
   "ManIroquoisTB15Green": {
     "DisplayName": "Man, Iroquois, TB15, Green",
@@ -55499,7 +55499,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ManIroquoisTB15Green",
-    "PreviewUri": "@previewImages/ManIroquoisTB15Green.png"
+    "PreviewUri": "ManIroquoisTB15Green.png"
   },
   "ManIroquoisTB15Orange": {
     "DisplayName": "Man, Iroquois, TB15, Orange",
@@ -55519,7 +55519,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ManIroquoisTB15Orange",
-    "PreviewUri": "@previewImages/ManIroquoisTB15Orange.png"
+    "PreviewUri": "ManIroquoisTB15Orange.png"
   },
   "ManIroquoisTB15Purple": {
     "DisplayName": "Man, Iroquois, TB15, Purple",
@@ -55539,7 +55539,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ManIroquoisTB15Purple",
-    "PreviewUri": "@previewImages/ManIroquoisTB15Purple.png"
+    "PreviewUri": "ManIroquoisTB15Purple.png"
   },
   "ManIroquoisTB15Red": {
     "DisplayName": "Man, Iroquois, TB15, Red",
@@ -55559,7 +55559,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ManIroquoisTB15Red",
-    "PreviewUri": "@previewImages/ManIroquoisTB15Red.png"
+    "PreviewUri": "ManIroquoisTB15Red.png"
   },
   "ManIroquoisTB15White": {
     "DisplayName": "Man, Iroquois, TB15, White",
@@ -55579,7 +55579,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ManIroquoisTB15White",
-    "PreviewUri": "@previewImages/ManIroquoisTB15White.png"
+    "PreviewUri": "ManIroquoisTB15White.png"
   },
   "ManIroquoisTB15Yellow": {
     "DisplayName": "Man, Iroquois, TB15, Yellow",
@@ -55599,7 +55599,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ManIroquoisTB15Yellow",
-    "PreviewUri": "@previewImages/ManIroquoisTB15Yellow.png"
+    "PreviewUri": "ManIroquoisTB15Yellow.png"
   },
   "ManModernChainsawTB25": {
     "DisplayName": "Man, Modern, Chainsaw, TB25",
@@ -55620,7 +55620,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "ManModernChainsawTB25",
-    "PreviewUri": "@previewImages/ManModernChainsawTB25.png"
+    "PreviewUri": "ManModernChainsawTB25.png"
   },
   "ManModernFlashlightTB25": {
     "DisplayName": "Man, Modern, Flashlight, TB25",
@@ -55640,7 +55640,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "ManModernFlashlightTB25",
-    "PreviewUri": "@previewImages/ManModernFlashlightTB25.png"
+    "PreviewUri": "ManModernFlashlightTB25.png"
   },
   "ManModernShotgunTB25": {
     "DisplayName": "Man, Modern, Shotgun, TB25",
@@ -55661,7 +55661,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "ManModernShotgunTB25",
-    "PreviewUri": "@previewImages/ManModernShotgunTB25.png"
+    "PreviewUri": "ManModernShotgunTB25.png"
   },
   "ManModernTB15Black": {
     "DisplayName": "Man, Modern, TB15, Black",
@@ -55689,7 +55689,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ManModernTB15Black",
-    "PreviewUri": "@previewImages/ManModernTB15Black.png"
+    "PreviewUri": "ManModernTB15Black.png"
   },
   "ManModernTB15Blue": {
     "DisplayName": "Man, Modern, TB15, Blue",
@@ -55717,7 +55717,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ManModernTB15Blue",
-    "PreviewUri": "@previewImages/ManModernTB15Blue.png"
+    "PreviewUri": "ManModernTB15Blue.png"
   },
   "ManModernTB15Green": {
     "DisplayName": "Man, Modern, TB15, Green",
@@ -55745,7 +55745,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ManModernTB15Green",
-    "PreviewUri": "@previewImages/ManModernTB15Green.png"
+    "PreviewUri": "ManModernTB15Green.png"
   },
   "ManModernTB15Orange": {
     "DisplayName": "Man, Modern, TB15, Orange",
@@ -55773,7 +55773,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ManModernTB15Orange",
-    "PreviewUri": "@previewImages/ManModernTB15Orange.png"
+    "PreviewUri": "ManModernTB15Orange.png"
   },
   "ManModernTB15Purple": {
     "DisplayName": "Man, Modern, TB15, Purple",
@@ -55801,7 +55801,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ManModernTB15Purple",
-    "PreviewUri": "@previewImages/ManModernTB15Purple.png"
+    "PreviewUri": "ManModernTB15Purple.png"
   },
   "ManModernTB15Red": {
     "DisplayName": "Man, Modern, TB15, Red",
@@ -55829,7 +55829,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ManModernTB15Red",
-    "PreviewUri": "@previewImages/ManModernTB15Red.png"
+    "PreviewUri": "ManModernTB15Red.png"
   },
   "ManModernTB15White": {
     "DisplayName": "Man, Modern, TB15, White",
@@ -55857,7 +55857,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ManModernTB15White",
-    "PreviewUri": "@previewImages/ManModernTB15White.png"
+    "PreviewUri": "ManModernTB15White.png"
   },
   "ManModernTB15Yellow": {
     "DisplayName": "Man, Modern, TB15, Yellow",
@@ -55885,7 +55885,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ManModernTB15Yellow",
-    "PreviewUri": "@previewImages/ManModernTB15Yellow.png"
+    "PreviewUri": "ManModernTB15Yellow.png"
   },
   "ManPostApocalypseArcherTB25": {
     "DisplayName": "Man, Post Apocalypse, Archer, TB25",
@@ -55907,7 +55907,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "ManPostApocalypseArcherTB25",
-    "PreviewUri": "@previewImages/ManPostApocalypseArcherTB25.png"
+    "PreviewUri": "ManPostApocalypseArcherTB25.png"
   },
   "ManPostApocalypseDualSMGTB25": {
     "DisplayName": "Man, Post Apocalypse, Dual SMG, TB25",
@@ -55929,7 +55929,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "ManPostApocalypseDualSMGTB25",
-    "PreviewUri": "@previewImages/ManPostApocalypseDualSMGTB25.png"
+    "PreviewUri": "ManPostApocalypseDualSMGTB25.png"
   },
   "ManPostApocalypseHammerTB25": {
     "DisplayName": "Man, Post Apocalypse, Hammer, TB25",
@@ -55951,7 +55951,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "ManPostApocalypseHammerTB25",
-    "PreviewUri": "@previewImages/ManPostApocalypseHammerTB25.png"
+    "PreviewUri": "ManPostApocalypseHammerTB25.png"
   },
   "ManPostApocalypseTB15Black": {
     "DisplayName": "Man, Post Apocalypse, TB15, Black",
@@ -55973,7 +55973,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ManPostApocalypseTB15Black",
-    "PreviewUri": "@previewImages/ManPostApocalypseTB15Black.png"
+    "PreviewUri": "ManPostApocalypseTB15Black.png"
   },
   "ManPostApocalypseTB15Blue": {
     "DisplayName": "Man, Post Apocalypse, TB15, Blue",
@@ -55995,7 +55995,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ManPostApocalypseTB15Blue",
-    "PreviewUri": "@previewImages/ManPostApocalypseTB15Blue.png"
+    "PreviewUri": "ManPostApocalypseTB15Blue.png"
   },
   "ManPostApocalypseTB15Green": {
     "DisplayName": "Man, Post Apocalypse, TB15, Green",
@@ -56017,7 +56017,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ManPostApocalypseTB15Green",
-    "PreviewUri": "@previewImages/ManPostApocalypseTB15Green.png"
+    "PreviewUri": "ManPostApocalypseTB15Green.png"
   },
   "ManPostApocalypseTB15Orange": {
     "DisplayName": "Man, Post Apocalypse, TB15, Orange",
@@ -56039,7 +56039,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ManPostApocalypseTB15Orange",
-    "PreviewUri": "@previewImages/ManPostApocalypseTB15Orange.png"
+    "PreviewUri": "ManPostApocalypseTB15Orange.png"
   },
   "ManPostApocalypseTB15Purple": {
     "DisplayName": "Man, Post Apocalypse, TB15, Purple",
@@ -56061,7 +56061,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ManPostApocalypseTB15Purple",
-    "PreviewUri": "@previewImages/ManPostApocalypseTB15Purple.png"
+    "PreviewUri": "ManPostApocalypseTB15Purple.png"
   },
   "ManPostApocalypseTB15Red": {
     "DisplayName": "Man, Post Apocalypse, TB15, Red",
@@ -56083,7 +56083,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ManPostApocalypseTB15Red",
-    "PreviewUri": "@previewImages/ManPostApocalypseTB15Red.png"
+    "PreviewUri": "ManPostApocalypseTB15Red.png"
   },
   "ManPostApocalypseTB15White": {
     "DisplayName": "Man, Post Apocalypse, TB15, White",
@@ -56105,7 +56105,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ManPostApocalypseTB15White",
-    "PreviewUri": "@previewImages/ManPostApocalypseTB15White.png"
+    "PreviewUri": "ManPostApocalypseTB15White.png"
   },
   "ManPostApocalypseTB15Yellow": {
     "DisplayName": "Man, Post Apocalypse, TB15, Yellow",
@@ -56127,7 +56127,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ManPostApocalypseTB15Yellow",
-    "PreviewUri": "@previewImages/ManPostApocalypseTB15Yellow.png"
+    "PreviewUri": "ManPostApocalypseTB15Yellow.png"
   },
   "ManSamuraiArmorTB15Black": {
     "DisplayName": "Man, Samurai Armor, TB15, Black",
@@ -56151,7 +56151,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ManSamuraiArmorTB15Black",
-    "PreviewUri": "@previewImages/ManSamuraiArmorTB15Black.png"
+    "PreviewUri": "ManSamuraiArmorTB15Black.png"
   },
   "ManSamuraiArmorTB15Blue": {
     "DisplayName": "Man, Samurai Armor, TB15, Blue",
@@ -56175,7 +56175,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ManSamuraiArmorTB15Blue",
-    "PreviewUri": "@previewImages/ManSamuraiArmorTB15Blue.png"
+    "PreviewUri": "ManSamuraiArmorTB15Blue.png"
   },
   "ManSamuraiArmorTB15Green": {
     "DisplayName": "Man, Samurai Armor, TB15, Green",
@@ -56199,7 +56199,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ManSamuraiArmorTB15Green",
-    "PreviewUri": "@previewImages/ManSamuraiArmorTB15Green.png"
+    "PreviewUri": "ManSamuraiArmorTB15Green.png"
   },
   "ManSamuraiArmorTB15Orange": {
     "DisplayName": "Man, Samurai Armor, TB15, Orange",
@@ -56223,7 +56223,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ManSamuraiArmorTB15Orange",
-    "PreviewUri": "@previewImages/ManSamuraiArmorTB15Orange.png"
+    "PreviewUri": "ManSamuraiArmorTB15Orange.png"
   },
   "ManSamuraiArmorTB15Purple": {
     "DisplayName": "Man, Samurai Armor, TB15, Purple",
@@ -56247,7 +56247,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ManSamuraiArmorTB15Purple",
-    "PreviewUri": "@previewImages/ManSamuraiArmorTB15Purple.png"
+    "PreviewUri": "ManSamuraiArmorTB15Purple.png"
   },
   "ManSamuraiArmorTB15Red": {
     "DisplayName": "Man, Samurai Armor, TB15, Red",
@@ -56271,7 +56271,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ManSamuraiArmorTB15Red",
-    "PreviewUri": "@previewImages/ManSamuraiArmorTB15Red.png"
+    "PreviewUri": "ManSamuraiArmorTB15Red.png"
   },
   "ManSamuraiArmorTB15White": {
     "DisplayName": "Man, Samurai Armor, TB15, White",
@@ -56295,7 +56295,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ManSamuraiArmorTB15White",
-    "PreviewUri": "@previewImages/ManSamuraiArmorTB15White.png"
+    "PreviewUri": "ManSamuraiArmorTB15White.png"
   },
   "ManSamuraiArmorTB15Yellow": {
     "DisplayName": "Man, Samurai Armor, TB15, Yellow",
@@ -56319,7 +56319,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ManSamuraiArmorTB15Yellow",
-    "PreviewUri": "@previewImages/ManSamuraiArmorTB15Yellow.png"
+    "PreviewUri": "ManSamuraiArmorTB15Yellow.png"
   },
   "MarkerDry-EraseFineBlack": {
     "DisplayName": "Marker, Dry-Erase, Fine, Black",
@@ -56348,7 +56348,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "MarkerDry-EraseFineBlack",
-    "PreviewUri": "@previewImages/MarkerDry-EraseFineBlack.png"
+    "PreviewUri": "MarkerDry-EraseFineBlack.png"
   },
   "MarkerDry-EraseFineBlue": {
     "DisplayName": "Marker, Dry-Erase, Fine, Blue",
@@ -56377,7 +56377,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "MarkerDry-EraseFineBlue",
-    "PreviewUri": "@previewImages/MarkerDry-EraseFineBlue.png"
+    "PreviewUri": "MarkerDry-EraseFineBlue.png"
   },
   "MarkerDry-EraseFineGreen": {
     "DisplayName": "Marker, Dry-Erase, Fine, Green",
@@ -56406,7 +56406,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "MarkerDry-EraseFineGreen",
-    "PreviewUri": "@previewImages/MarkerDry-EraseFineGreen.png"
+    "PreviewUri": "MarkerDry-EraseFineGreen.png"
   },
   "MarkerDry-EraseFineRed": {
     "DisplayName": "Marker, Dry-Erase, Fine, Red",
@@ -56435,7 +56435,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "MarkerDry-EraseFineRed",
-    "PreviewUri": "@previewImages/MarkerDry-EraseFineRed.png"
+    "PreviewUri": "MarkerDry-EraseFineRed.png"
   },
   "MarketplaceBlack": {
     "DisplayName": "Marketplace, Black",
@@ -56456,7 +56456,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "MarketplaceBlack",
-    "PreviewUri": "@previewImages/MarketplaceBlack.png"
+    "PreviewUri": "MarketplaceBlack.png"
   },
   "MarketplaceBlue": {
     "DisplayName": "Marketplace, Blue",
@@ -56477,7 +56477,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "MarketplaceBlue",
-    "PreviewUri": "@previewImages/MarketplaceBlue.png"
+    "PreviewUri": "MarketplaceBlue.png"
   },
   "MarketplaceGreen": {
     "DisplayName": "Marketplace, Green",
@@ -56498,7 +56498,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "MarketplaceGreen",
-    "PreviewUri": "@previewImages/MarketplaceGreen.png"
+    "PreviewUri": "MarketplaceGreen.png"
   },
   "MarketplaceOrange": {
     "DisplayName": "Marketplace, Orange",
@@ -56519,7 +56519,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "MarketplaceOrange",
-    "PreviewUri": "@previewImages/MarketplaceOrange.png"
+    "PreviewUri": "MarketplaceOrange.png"
   },
   "MarketplacePurple": {
     "DisplayName": "Marketplace, Purple",
@@ -56540,7 +56540,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "MarketplacePurple",
-    "PreviewUri": "@previewImages/MarketplacePurple.png"
+    "PreviewUri": "MarketplacePurple.png"
   },
   "MarketplaceRed": {
     "DisplayName": "Marketplace, Red",
@@ -56561,7 +56561,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "MarketplaceRed",
-    "PreviewUri": "@previewImages/MarketplaceRed.png"
+    "PreviewUri": "MarketplaceRed.png"
   },
   "MarketplaceWhite": {
     "DisplayName": "Marketplace, White",
@@ -56582,7 +56582,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "MarketplaceWhite",
-    "PreviewUri": "@previewImages/MarketplaceWhite.png"
+    "PreviewUri": "MarketplaceWhite.png"
   },
   "MarketplaceYellow": {
     "DisplayName": "Marketplace, Yellow",
@@ -56603,7 +56603,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "MarketplaceYellow",
-    "PreviewUri": "@previewImages/MarketplaceYellow.png"
+    "PreviewUri": "MarketplaceYellow.png"
   },
   "MechTB15Black": {
     "DisplayName": "Mech, TB15, Black",
@@ -56626,7 +56626,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "MechTB15Black",
-    "PreviewUri": "@previewImages/MechTB15Black.png"
+    "PreviewUri": "MechTB15Black.png"
   },
   "MechTB15Blue": {
     "DisplayName": "Mech, TB15, Blue",
@@ -56649,7 +56649,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "MechTB15Blue",
-    "PreviewUri": "@previewImages/MechTB15Blue.png"
+    "PreviewUri": "MechTB15Blue.png"
   },
   "MechTB15Green": {
     "DisplayName": "Mech, TB15, Green",
@@ -56672,7 +56672,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "MechTB15Green",
-    "PreviewUri": "@previewImages/MechTB15Green.png"
+    "PreviewUri": "MechTB15Green.png"
   },
   "MechTB15Orange": {
     "DisplayName": "Mech, TB15, Orange",
@@ -56695,7 +56695,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "MechTB15Orange",
-    "PreviewUri": "@previewImages/MechTB15Orange.png"
+    "PreviewUri": "MechTB15Orange.png"
   },
   "MechTB15Purple": {
     "DisplayName": "Mech, TB15, Purple",
@@ -56718,7 +56718,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "MechTB15Purple",
-    "PreviewUri": "@previewImages/MechTB15Purple.png"
+    "PreviewUri": "MechTB15Purple.png"
   },
   "MechTB15Red": {
     "DisplayName": "Mech, TB15, Red",
@@ -56741,7 +56741,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "MechTB15Red",
-    "PreviewUri": "@previewImages/MechTB15Red.png"
+    "PreviewUri": "MechTB15Red.png"
   },
   "MechTB15White": {
     "DisplayName": "Mech, TB15, White",
@@ -56764,7 +56764,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "MechTB15White",
-    "PreviewUri": "@previewImages/MechTB15White.png"
+    "PreviewUri": "MechTB15White.png"
   },
   "MechTB15Yellow": {
     "DisplayName": "Mech, TB15, Yellow",
@@ -56787,7 +56787,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "MechTB15Yellow",
-    "PreviewUri": "@previewImages/MechTB15Yellow.png"
+    "PreviewUri": "MechTB15Yellow.png"
   },
   "Medic-CharacterMeeple": {
     "DisplayName": "Medic, Character Meeple",
@@ -56813,7 +56813,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Medic-CharacterMeeple",
-    "PreviewUri": "@previewImages/Medic-CharacterMeeple.png"
+    "PreviewUri": "Medic-CharacterMeeple.png"
   },
   "MedicFantasyTB25": {
     "DisplayName": "Medic, Fantasy, TB25",
@@ -56838,7 +56838,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "MedicFantasyTB25",
-    "PreviewUri": "@previewImages/MedicFantasyTB25.png"
+    "PreviewUri": "MedicFantasyTB25.png"
   },
   "MedievalCoin2": {
     "DisplayName": "Medieval Coin 2",
@@ -56904,7 +56904,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "MedievalCoin2",
-    "PreviewUri": "@previewImages/MedievalCoin2.png"
+    "PreviewUri": "MedievalCoin2.png"
   },
   "MedievalCoin20": {
     "DisplayName": "Medieval Coin 20",
@@ -56970,7 +56970,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "MedievalCoin20",
-    "PreviewUri": "@previewImages/MedievalCoin20.png"
+    "PreviewUri": "MedievalCoin20.png"
   },
   "MediumStoutBoxBlank": {
     "DisplayName": "Medium Stout Box, Blank",
@@ -56999,7 +56999,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "MediumStoutBoxBlank",
-    "PreviewUri": "@previewImages/MediumStoutBoxBlank.png"
+    "PreviewUri": "MediumStoutBoxBlank.png"
   },
   "MeepleAcrylicOpaqueBlack": {
     "DisplayName": "Meeple, Acrylic, Opaque, Black",
@@ -57027,7 +57027,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "MeepleAcrylicOpaqueBlack",
-    "PreviewUri": "@previewImages/MeepleAcrylicOpaqueBlack.png"
+    "PreviewUri": "MeepleAcrylicOpaqueBlack.png"
   },
   "MeepleAcrylicOpaqueGold": {
     "DisplayName": "Meeple, Acrylic, Opaque, Gold",
@@ -57055,7 +57055,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "MeepleAcrylicOpaqueGold",
-    "PreviewUri": "@previewImages/MeepleAcrylicOpaqueGold.png"
+    "PreviewUri": "MeepleAcrylicOpaqueGold.png"
   },
   "MeepleAcrylicOpaqueSilver": {
     "DisplayName": "Meeple, Acrylic, Opaque, Silver",
@@ -57083,7 +57083,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "MeepleAcrylicOpaqueSilver",
-    "PreviewUri": "@previewImages/MeepleAcrylicOpaqueSilver.png"
+    "PreviewUri": "MeepleAcrylicOpaqueSilver.png"
   },
   "MeepleAcrylicOpaqueWhite": {
     "DisplayName": "Meeple, Acrylic, Opaque, White",
@@ -57111,7 +57111,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "MeepleAcrylicOpaqueWhite",
-    "PreviewUri": "@previewImages/MeepleAcrylicOpaqueWhite.png"
+    "PreviewUri": "MeepleAcrylicOpaqueWhite.png"
   },
   "MeepleAcrylicTransparentBlack": {
     "DisplayName": "Meeple, Acrylic, Transparent, Black",
@@ -57139,7 +57139,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "MeepleAcrylicTransparentBlack",
-    "PreviewUri": "@previewImages/MeepleAcrylicTransparentBlack.png"
+    "PreviewUri": "MeepleAcrylicTransparentBlack.png"
   },
   "MeepleAcrylicTransparentBlue": {
     "DisplayName": "Meeple, Acrylic, Transparent, Blue",
@@ -57167,7 +57167,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "MeepleAcrylicTransparentBlue",
-    "PreviewUri": "@previewImages/MeepleAcrylicTransparentBlue.png"
+    "PreviewUri": "MeepleAcrylicTransparentBlue.png"
   },
   "MeepleAcrylicTransparentClear": {
     "DisplayName": "Meeple, Acrylic, Transparent, Clear",
@@ -57195,7 +57195,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "MeepleAcrylicTransparentClear",
-    "PreviewUri": "@previewImages/MeepleAcrylicTransparentClear.png"
+    "PreviewUri": "MeepleAcrylicTransparentClear.png"
   },
   "MeepleAcrylicTransparentGreen": {
     "DisplayName": "Meeple, Acrylic, Transparent, Green",
@@ -57223,7 +57223,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "MeepleAcrylicTransparentGreen",
-    "PreviewUri": "@previewImages/MeepleAcrylicTransparentGreen.png"
+    "PreviewUri": "MeepleAcrylicTransparentGreen.png"
   },
   "MeepleAcrylicTransparentOrange": {
     "DisplayName": "Meeple, Acrylic, Transparent, Orange",
@@ -57251,7 +57251,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "MeepleAcrylicTransparentOrange",
-    "PreviewUri": "@previewImages/MeepleAcrylicTransparentOrange.png"
+    "PreviewUri": "MeepleAcrylicTransparentOrange.png"
   },
   "MeepleAcrylicTransparentPurple": {
     "DisplayName": "Meeple, Acrylic, Transparent, Purple",
@@ -57279,7 +57279,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "MeepleAcrylicTransparentPurple",
-    "PreviewUri": "@previewImages/MeepleAcrylicTransparentPurple.png"
+    "PreviewUri": "MeepleAcrylicTransparentPurple.png"
   },
   "MeepleAcrylicTransparentRed": {
     "DisplayName": "Meeple, Acrylic, Transparent, Red",
@@ -57307,7 +57307,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "MeepleAcrylicTransparentRed",
-    "PreviewUri": "@previewImages/MeepleAcrylicTransparentRed.png"
+    "PreviewUri": "MeepleAcrylicTransparentRed.png"
   },
   "MeepleAcrylicTransparentWhite": {
     "DisplayName": "Meeple, Acrylic, Transparent, White",
@@ -57335,7 +57335,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "MeepleAcrylicTransparentWhite",
-    "PreviewUri": "@previewImages/MeepleAcrylicTransparentWhite.png"
+    "PreviewUri": "MeepleAcrylicTransparentWhite.png"
   },
   "MeepleAcrylicTransparentYellow": {
     "DisplayName": "Meeple, Acrylic, Transparent, Yellow",
@@ -57373,7 +57373,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "MeepleAcrylicTransparentYellow",
-    "PreviewUri": "@previewImages/MeepleAcrylicTransparentYellow.png"
+    "PreviewUri": "MeepleAcrylicTransparentYellow.png"
   },
   "MeepleLargeAcrylicOpaqueBlack": {
     "DisplayName": "Meeple, Large, Acrylic, Opaque, Black",
@@ -57411,7 +57411,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "MeepleLargeAcrylicOpaqueBlack",
-    "PreviewUri": "@previewImages/MeepleLargeAcrylicOpaqueBlack.png"
+    "PreviewUri": "MeepleLargeAcrylicOpaqueBlack.png"
   },
   "MeepleLargeAcrylicOpaqueGold": {
     "DisplayName": "Meeple, Large, Acrylic, Opaque, Gold",
@@ -57449,7 +57449,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "MeepleLargeAcrylicOpaqueGold",
-    "PreviewUri": "@previewImages/MeepleLargeAcrylicOpaqueGold.png"
+    "PreviewUri": "MeepleLargeAcrylicOpaqueGold.png"
   },
   "MeepleLargeAcrylicOpaqueSilver": {
     "DisplayName": "Meeple, Large, Acrylic, Opaque, Silver",
@@ -57487,7 +57487,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "MeepleLargeAcrylicOpaqueSilver",
-    "PreviewUri": "@previewImages/MeepleLargeAcrylicOpaqueSilver.png"
+    "PreviewUri": "MeepleLargeAcrylicOpaqueSilver.png"
   },
   "MeepleLargeAcrylicOpaqueWhite": {
     "DisplayName": "Meeple, Large, Acrylic, Opaque, White",
@@ -57525,7 +57525,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "MeepleLargeAcrylicOpaqueWhite",
-    "PreviewUri": "@previewImages/MeepleLargeAcrylicOpaqueWhite.png"
+    "PreviewUri": "MeepleLargeAcrylicOpaqueWhite.png"
   },
   "MeepleLargeAcrylicTransparentBlack": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Black",
@@ -57563,7 +57563,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "MeepleLargeAcrylicTransparentBlack",
-    "PreviewUri": "@previewImages/MeepleLargeAcrylicTransparentBlack.png"
+    "PreviewUri": "MeepleLargeAcrylicTransparentBlack.png"
   },
   "MeepleLargeAcrylicTransparentBlue": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Blue",
@@ -57601,7 +57601,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "MeepleLargeAcrylicTransparentBlue",
-    "PreviewUri": "@previewImages/MeepleLargeAcrylicTransparentBlue.png"
+    "PreviewUri": "MeepleLargeAcrylicTransparentBlue.png"
   },
   "MeepleLargeAcrylicTransparentClear": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Clear",
@@ -57639,7 +57639,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "MeepleLargeAcrylicTransparentClear",
-    "PreviewUri": "@previewImages/MeepleLargeAcrylicTransparentClear.png"
+    "PreviewUri": "MeepleLargeAcrylicTransparentClear.png"
   },
   "MeepleLargeAcrylicTransparentGreen": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Green",
@@ -57677,7 +57677,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "MeepleLargeAcrylicTransparentGreen",
-    "PreviewUri": "@previewImages/MeepleLargeAcrylicTransparentGreen.png"
+    "PreviewUri": "MeepleLargeAcrylicTransparentGreen.png"
   },
   "MeepleLargeAcrylicTransparentOrange": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Orange",
@@ -57715,7 +57715,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "MeepleLargeAcrylicTransparentOrange",
-    "PreviewUri": "@previewImages/MeepleLargeAcrylicTransparentOrange.png"
+    "PreviewUri": "MeepleLargeAcrylicTransparentOrange.png"
   },
   "MeepleLargeAcrylicTransparentPurple": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Purple",
@@ -57753,7 +57753,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "MeepleLargeAcrylicTransparentPurple",
-    "PreviewUri": "@previewImages/MeepleLargeAcrylicTransparentPurple.png"
+    "PreviewUri": "MeepleLargeAcrylicTransparentPurple.png"
   },
   "MeepleLargeAcrylicTransparentRed": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Red",
@@ -57791,7 +57791,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "MeepleLargeAcrylicTransparentRed",
-    "PreviewUri": "@previewImages/MeepleLargeAcrylicTransparentRed.png"
+    "PreviewUri": "MeepleLargeAcrylicTransparentRed.png"
   },
   "MeepleLargeAcrylicTransparentWhite": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, White",
@@ -57829,7 +57829,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "MeepleLargeAcrylicTransparentWhite",
-    "PreviewUri": "@previewImages/MeepleLargeAcrylicTransparentWhite.png"
+    "PreviewUri": "MeepleLargeAcrylicTransparentWhite.png"
   },
   "MeepleLargeAcrylicTransparentYellow": {
     "DisplayName": "Meeple, Large, Acrylic, Transparent, Yellow",
@@ -57867,7 +57867,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "MeepleLargeAcrylicTransparentYellow",
-    "PreviewUri": "@previewImages/MeepleLargeAcrylicTransparentYellow.png"
+    "PreviewUri": "MeepleLargeAcrylicTransparentYellow.png"
   },
   "MeepleLargeWoodBlack": {
     "DisplayName": "Meeple, Large, Wood, Black",
@@ -57906,7 +57906,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "MeepleLargeWoodBlack",
-    "PreviewUri": "@previewImages/MeepleLargeWoodBlack.png"
+    "PreviewUri": "MeepleLargeWoodBlack.png"
   },
   "MeepleLargeWoodBlue": {
     "DisplayName": "Meeple, Large, Wood, Blue",
@@ -57945,7 +57945,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "MeepleLargeWoodBlue",
-    "PreviewUri": "@previewImages/MeepleLargeWoodBlue.png"
+    "PreviewUri": "MeepleLargeWoodBlue.png"
   },
   "MeepleLargeWoodGreen": {
     "DisplayName": "Meeple, Large, Wood, Green",
@@ -57984,7 +57984,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "MeepleLargeWoodGreen",
-    "PreviewUri": "@previewImages/MeepleLargeWoodGreen.png"
+    "PreviewUri": "MeepleLargeWoodGreen.png"
   },
   "MeepleLargeWoodOrange": {
     "DisplayName": "Meeple, Large, Wood, Orange",
@@ -58023,7 +58023,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "MeepleLargeWoodOrange",
-    "PreviewUri": "@previewImages/MeepleLargeWoodOrange.png"
+    "PreviewUri": "MeepleLargeWoodOrange.png"
   },
   "MeepleLargeWoodPurple": {
     "DisplayName": "Meeple, Large, Wood, Purple",
@@ -58062,7 +58062,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "MeepleLargeWoodPurple",
-    "PreviewUri": "@previewImages/MeepleLargeWoodPurple.png"
+    "PreviewUri": "MeepleLargeWoodPurple.png"
   },
   "MeepleLargeWoodRed": {
     "DisplayName": "Meeple, Large, Wood, Red",
@@ -58101,7 +58101,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "MeepleLargeWoodRed",
-    "PreviewUri": "@previewImages/MeepleLargeWoodRed.png"
+    "PreviewUri": "MeepleLargeWoodRed.png"
   },
   "MeepleLargeWoodWhite": {
     "DisplayName": "Meeple, Large, Wood, White",
@@ -58140,7 +58140,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "MeepleLargeWoodWhite",
-    "PreviewUri": "@previewImages/MeepleLargeWoodWhite.png"
+    "PreviewUri": "MeepleLargeWoodWhite.png"
   },
   "MeepleLargeWoodYellow": {
     "DisplayName": "Meeple, Large, Wood, Yellow",
@@ -58179,7 +58179,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "MeepleLargeWoodYellow",
-    "PreviewUri": "@previewImages/MeepleLargeWoodYellow.png"
+    "PreviewUri": "MeepleLargeWoodYellow.png"
   },
   "MeepleMiniAcrylicOpaqueBlack": {
     "DisplayName": "Meeple, Mini, Acrylic, Opaque, Black",
@@ -58215,7 +58215,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "MeepleMiniAcrylicOpaqueBlack",
-    "PreviewUri": "@previewImages/MeepleMiniAcrylicOpaqueBlack.png"
+    "PreviewUri": "MeepleMiniAcrylicOpaqueBlack.png"
   },
   "MeepleMiniAcrylicOpaqueGold": {
     "DisplayName": "Meeple, Mini, Acrylic, Opaque, Gold",
@@ -58251,7 +58251,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "MeepleMiniAcrylicOpaqueGold",
-    "PreviewUri": "@previewImages/MeepleMiniAcrylicOpaqueGold.png"
+    "PreviewUri": "MeepleMiniAcrylicOpaqueGold.png"
   },
   "MeepleMiniAcrylicOpaqueSilver": {
     "DisplayName": "Meeple, Mini, Acrylic, Opaque, Silver",
@@ -58287,7 +58287,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "MeepleMiniAcrylicOpaqueSilver",
-    "PreviewUri": "@previewImages/MeepleMiniAcrylicOpaqueSilver.png"
+    "PreviewUri": "MeepleMiniAcrylicOpaqueSilver.png"
   },
   "MeepleMiniAcrylicOpaqueWhite": {
     "DisplayName": "Meeple, Mini, Acrylic, Opaque, White",
@@ -58323,7 +58323,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "MeepleMiniAcrylicOpaqueWhite",
-    "PreviewUri": "@previewImages/MeepleMiniAcrylicOpaqueWhite.png"
+    "PreviewUri": "MeepleMiniAcrylicOpaqueWhite.png"
   },
   "MeepleMiniAcrylicTransparentBlack": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Black",
@@ -58359,7 +58359,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "MeepleMiniAcrylicTransparentBlack",
-    "PreviewUri": "@previewImages/MeepleMiniAcrylicTransparentBlack.png"
+    "PreviewUri": "MeepleMiniAcrylicTransparentBlack.png"
   },
   "MeepleMiniAcrylicTransparentBlue": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Blue",
@@ -58395,7 +58395,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "MeepleMiniAcrylicTransparentBlue",
-    "PreviewUri": "@previewImages/MeepleMiniAcrylicTransparentBlue.png"
+    "PreviewUri": "MeepleMiniAcrylicTransparentBlue.png"
   },
   "MeepleMiniAcrylicTransparentClear": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Clear",
@@ -58431,7 +58431,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "MeepleMiniAcrylicTransparentClear",
-    "PreviewUri": "@previewImages/MeepleMiniAcrylicTransparentClear.png"
+    "PreviewUri": "MeepleMiniAcrylicTransparentClear.png"
   },
   "MeepleMiniAcrylicTransparentGreen": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Green",
@@ -58467,7 +58467,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "MeepleMiniAcrylicTransparentGreen",
-    "PreviewUri": "@previewImages/MeepleMiniAcrylicTransparentGreen.png"
+    "PreviewUri": "MeepleMiniAcrylicTransparentGreen.png"
   },
   "MeepleMiniAcrylicTransparentOrange": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Orange",
@@ -58503,7 +58503,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "MeepleMiniAcrylicTransparentOrange",
-    "PreviewUri": "@previewImages/MeepleMiniAcrylicTransparentOrange.png"
+    "PreviewUri": "MeepleMiniAcrylicTransparentOrange.png"
   },
   "MeepleMiniAcrylicTransparentPurple": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Purple",
@@ -58539,7 +58539,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "MeepleMiniAcrylicTransparentPurple",
-    "PreviewUri": "@previewImages/MeepleMiniAcrylicTransparentPurple.png"
+    "PreviewUri": "MeepleMiniAcrylicTransparentPurple.png"
   },
   "MeepleMiniAcrylicTransparentRed": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Red",
@@ -58575,7 +58575,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "MeepleMiniAcrylicTransparentRed",
-    "PreviewUri": "@previewImages/MeepleMiniAcrylicTransparentRed.png"
+    "PreviewUri": "MeepleMiniAcrylicTransparentRed.png"
   },
   "MeepleMiniAcrylicTransparentYellow": {
     "DisplayName": "Meeple, Mini, Acrylic, Transparent, Yellow",
@@ -58611,7 +58611,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "MeepleMiniAcrylicTransparentYellow",
-    "PreviewUri": "@previewImages/MeepleMiniAcrylicTransparentYellow.png"
+    "PreviewUri": "MeepleMiniAcrylicTransparentYellow.png"
   },
   "MeepleMiniWoodBlack": {
     "DisplayName": "Meeple, Mini, Wood, Black",
@@ -58648,7 +58648,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "MeepleMiniWoodBlack",
-    "PreviewUri": "@previewImages/MeepleMiniWoodBlack.png"
+    "PreviewUri": "MeepleMiniWoodBlack.png"
   },
   "MeepleMiniWoodBlue": {
     "DisplayName": "Meeple, Mini, Wood, Blue",
@@ -58685,7 +58685,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "MeepleMiniWoodBlue",
-    "PreviewUri": "@previewImages/MeepleMiniWoodBlue.png"
+    "PreviewUri": "MeepleMiniWoodBlue.png"
   },
   "MeepleMiniWoodGreen": {
     "DisplayName": "Meeple, Mini, Wood, Green",
@@ -58722,7 +58722,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "MeepleMiniWoodGreen",
-    "PreviewUri": "@previewImages/MeepleMiniWoodGreen.png"
+    "PreviewUri": "MeepleMiniWoodGreen.png"
   },
   "MeepleMiniWoodOrange": {
     "DisplayName": "Meeple, Mini, Wood, Orange",
@@ -58759,7 +58759,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "MeepleMiniWoodOrange",
-    "PreviewUri": "@previewImages/MeepleMiniWoodOrange.png"
+    "PreviewUri": "MeepleMiniWoodOrange.png"
   },
   "MeepleMiniWoodPurple": {
     "DisplayName": "Meeple, Mini, Wood, Purple",
@@ -58796,7 +58796,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "MeepleMiniWoodPurple",
-    "PreviewUri": "@previewImages/MeepleMiniWoodPurple.png"
+    "PreviewUri": "MeepleMiniWoodPurple.png"
   },
   "MeepleMiniWoodRed": {
     "DisplayName": "Meeple, Mini, Wood, Red",
@@ -58833,7 +58833,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "MeepleMiniWoodRed",
-    "PreviewUri": "@previewImages/MeepleMiniWoodRed.png"
+    "PreviewUri": "MeepleMiniWoodRed.png"
   },
   "MeepleMiniWoodWhite": {
     "DisplayName": "Meeple, Mini, Wood, White",
@@ -58870,7 +58870,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "MeepleMiniWoodWhite",
-    "PreviewUri": "@previewImages/MeepleMiniWoodWhite.png"
+    "PreviewUri": "MeepleMiniWoodWhite.png"
   },
   "MeepleMiniWoodYellow": {
     "DisplayName": "Meeple, Mini, Wood, Yellow",
@@ -58907,7 +58907,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "MeepleMiniWoodYellow",
-    "PreviewUri": "@previewImages/MeepleMiniWoodYellow.png"
+    "PreviewUri": "MeepleMiniWoodYellow.png"
   },
   "MeepleThickBlue": {
     "DisplayName": "Meeple, Thick, Blue",
@@ -58943,7 +58943,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "MeepleThickBlue",
-    "PreviewUri": "@previewImages/MeepleThickBlue.png"
+    "PreviewUri": "MeepleThickBlue.png"
   },
   "MeepleThickOrange": {
     "DisplayName": "Meeple, Thick, Orange",
@@ -58979,7 +58979,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "MeepleThickOrange",
-    "PreviewUri": "@previewImages/MeepleThickOrange.png"
+    "PreviewUri": "MeepleThickOrange.png"
   },
   "MeepleThickPurple": {
     "DisplayName": "Meeple, Thick, Purple",
@@ -59015,7 +59015,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "MeepleThickPurple",
-    "PreviewUri": "@previewImages/MeepleThickPurple.png"
+    "PreviewUri": "MeepleThickPurple.png"
   },
   "MeepleThickRed": {
     "DisplayName": "Meeple, Thick, Red",
@@ -59051,7 +59051,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "MeepleThickRed",
-    "PreviewUri": "@previewImages/MeepleThickRed.png"
+    "PreviewUri": "MeepleThickRed.png"
   },
   "MeepleThickTeal": {
     "DisplayName": "Meeple, Thick, Teal",
@@ -59088,7 +59088,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "teal",
     "IsDisabled": false,
     "Key": "MeepleThickTeal",
-    "PreviewUri": "@previewImages/MeepleThickTeal.png"
+    "PreviewUri": "MeepleThickTeal.png"
   },
   "MeepleThickYellow": {
     "DisplayName": "Meeple, Thick, Yellow",
@@ -59124,7 +59124,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "MeepleThickYellow",
-    "PreviewUri": "@previewImages/MeepleThickYellow.png"
+    "PreviewUri": "MeepleThickYellow.png"
   },
   "MeepleWoodBlack": {
     "DisplayName": "Meeple, Wood, Black",
@@ -59161,7 +59161,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "MeepleWoodBlack",
-    "PreviewUri": "@previewImages/MeepleWoodBlack.png"
+    "PreviewUri": "MeepleWoodBlack.png"
   },
   "MeepleWoodBlue": {
     "DisplayName": "Meeple, Wood, Blue",
@@ -59198,7 +59198,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "MeepleWoodBlue",
-    "PreviewUri": "@previewImages/MeepleWoodBlue.png"
+    "PreviewUri": "MeepleWoodBlue.png"
   },
   "MeepleWoodGreen": {
     "DisplayName": "Meeple, Wood, Green",
@@ -59235,7 +59235,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "MeepleWoodGreen",
-    "PreviewUri": "@previewImages/MeepleWoodGreen.png"
+    "PreviewUri": "MeepleWoodGreen.png"
   },
   "MeepleWoodOrange": {
     "DisplayName": "Meeple, Wood, Orange",
@@ -59272,7 +59272,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "MeepleWoodOrange",
-    "PreviewUri": "@previewImages/MeepleWoodOrange.png"
+    "PreviewUri": "MeepleWoodOrange.png"
   },
   "MeepleWoodPurple": {
     "DisplayName": "Meeple, Wood, Purple",
@@ -59309,7 +59309,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "MeepleWoodPurple",
-    "PreviewUri": "@previewImages/MeepleWoodPurple.png"
+    "PreviewUri": "MeepleWoodPurple.png"
   },
   "MeepleWoodRed": {
     "DisplayName": "Meeple, Wood, Red",
@@ -59346,7 +59346,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "MeepleWoodRed",
-    "PreviewUri": "@previewImages/MeepleWoodRed.png"
+    "PreviewUri": "MeepleWoodRed.png"
   },
   "MeepleWoodWhite": {
     "DisplayName": "Meeple, Wood, White",
@@ -59383,7 +59383,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "MeepleWoodWhite",
-    "PreviewUri": "@previewImages/MeepleWoodWhite.png"
+    "PreviewUri": "MeepleWoodWhite.png"
   },
   "MeepleWoodYellow": {
     "DisplayName": "Meeple, Wood, Yellow",
@@ -59420,7 +59420,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "MeepleWoodYellow",
-    "PreviewUri": "@previewImages/MeepleWoodYellow.png"
+    "PreviewUri": "MeepleWoodYellow.png"
   },
   "MermaidFantasyTB25": {
     "DisplayName": "Mermaid, Fantasy, TB25",
@@ -59446,7 +59446,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "MermaidFantasyTB25",
-    "PreviewUri": "@previewImages/MermaidFantasyTB25.png"
+    "PreviewUri": "MermaidFantasyTB25.png"
   },
   "MineBlack": {
     "DisplayName": "Mine, Black",
@@ -59470,7 +59470,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "MineBlack",
-    "PreviewUri": "@previewImages/MineBlack.png"
+    "PreviewUri": "MineBlack.png"
   },
   "MineBlue": {
     "DisplayName": "Mine, Blue",
@@ -59494,7 +59494,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "MineBlue",
-    "PreviewUri": "@previewImages/MineBlue.png"
+    "PreviewUri": "MineBlue.png"
   },
   "MineGreen": {
     "DisplayName": "Mine, Green",
@@ -59518,7 +59518,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "MineGreen",
-    "PreviewUri": "@previewImages/MineGreen.png"
+    "PreviewUri": "MineGreen.png"
   },
   "MineOrange": {
     "DisplayName": "Mine, Orange",
@@ -59542,7 +59542,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "MineOrange",
-    "PreviewUri": "@previewImages/MineOrange.png"
+    "PreviewUri": "MineOrange.png"
   },
   "MinePurple": {
     "DisplayName": "Mine, Purple",
@@ -59566,7 +59566,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "MinePurple",
-    "PreviewUri": "@previewImages/MinePurple.png"
+    "PreviewUri": "MinePurple.png"
   },
   "MineRed": {
     "DisplayName": "Mine, Red",
@@ -59590,7 +59590,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "MineRed",
-    "PreviewUri": "@previewImages/MineRed.png"
+    "PreviewUri": "MineRed.png"
   },
   "MineWhite": {
     "DisplayName": "Mine, White",
@@ -59614,7 +59614,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "MineWhite",
-    "PreviewUri": "@previewImages/MineWhite.png"
+    "PreviewUri": "MineWhite.png"
   },
   "MineYellow": {
     "DisplayName": "Mine, Yellow",
@@ -59638,7 +59638,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "MineYellow",
-    "PreviewUri": "@previewImages/MineYellow.png"
+    "PreviewUri": "MineYellow.png"
   },
   "MiniSleevePack(100)": {
     "DisplayName": "Mini Sleeve Pack (100)",
@@ -59668,7 +59668,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "MiniSleevePack(100)",
-    "PreviewUri": "@previewImages/MiniSleevePack(100).png"
+    "PreviewUri": "MiniSleevePack(100).png"
   },
   "MiniStorageBoxPurple": {
     "DisplayName": "Mini Storage Box, Purple",
@@ -59699,7 +59699,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": true,
     "Key": "MiniStorageBoxPurple",
-    "PreviewUri": "@previewImages/MiniStorageBoxPurple.png"
+    "PreviewUri": "MiniStorageBoxPurple.png"
   },
   "MiniatureBase25mmHexBlack": {
     "DisplayName": "Miniature Base, 25mm Hex, Black",
@@ -59724,7 +59724,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "MiniatureBase25mmHexBlack",
-    "PreviewUri": "@previewImages/MiniatureBase25mmHexBlack.png"
+    "PreviewUri": "MiniatureBase25mmHexBlack.png"
   },
   "MiniatureBase25mmHexBlue": {
     "DisplayName": "Miniature Base, 25mm Hex, Blue",
@@ -59749,7 +59749,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "MiniatureBase25mmHexBlue",
-    "PreviewUri": "@previewImages/MiniatureBase25mmHexBlue.png"
+    "PreviewUri": "MiniatureBase25mmHexBlue.png"
   },
   "MiniatureBase25mmHexGreen": {
     "DisplayName": "Miniature Base, 25mm Hex, Green",
@@ -59774,7 +59774,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "MiniatureBase25mmHexGreen",
-    "PreviewUri": "@previewImages/MiniatureBase25mmHexGreen.png"
+    "PreviewUri": "MiniatureBase25mmHexGreen.png"
   },
   "MiniatureBase25mmHexOrange": {
     "DisplayName": "Miniature Base, 25mm Hex, Orange",
@@ -59799,7 +59799,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "MiniatureBase25mmHexOrange",
-    "PreviewUri": "@previewImages/MiniatureBase25mmHexOrange.png"
+    "PreviewUri": "MiniatureBase25mmHexOrange.png"
   },
   "MiniatureBase25mmHexPurple": {
     "DisplayName": "Miniature Base, 25mm Hex, Purple",
@@ -59824,7 +59824,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "MiniatureBase25mmHexPurple",
-    "PreviewUri": "@previewImages/MiniatureBase25mmHexPurple.png"
+    "PreviewUri": "MiniatureBase25mmHexPurple.png"
   },
   "MiniatureBase25mmHexRed": {
     "DisplayName": "Miniature Base, 25mm Hex, Red",
@@ -59849,7 +59849,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "MiniatureBase25mmHexRed",
-    "PreviewUri": "@previewImages/MiniatureBase25mmHexRed.png"
+    "PreviewUri": "MiniatureBase25mmHexRed.png"
   },
   "MiniatureBase25mmHexWhite": {
     "DisplayName": "Miniature Base, 25mm Hex, White",
@@ -59874,7 +59874,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "MiniatureBase25mmHexWhite",
-    "PreviewUri": "@previewImages/MiniatureBase25mmHexWhite.png"
+    "PreviewUri": "MiniatureBase25mmHexWhite.png"
   },
   "MiniatureBase25mmHexYellow": {
     "DisplayName": "Miniature Base, 25mm Hex, Yellow",
@@ -59899,7 +59899,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "MiniatureBase25mmHexYellow",
-    "PreviewUri": "@previewImages/MiniatureBase25mmHexYellow.png"
+    "PreviewUri": "MiniatureBase25mmHexYellow.png"
   },
   "MinotaurwithBattleAxe": {
     "DisplayName": "Minotaur with Battle Axe",
@@ -59940,7 +59940,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "MinotaurwithBattleAxe",
-    "PreviewUri": "@previewImages/MinotaurwithBattleAxe.png"
+    "PreviewUri": "MinotaurwithBattleAxe.png"
   },
   "MintTin": {
     "DisplayName": "Blank Mint Tin",
@@ -59964,7 +59964,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "MintTin",
-    "PreviewUri": "@previewImages/BlankMintTin.png"
+    "PreviewUri": "BlankMintTin.png"
   },
   "MintTinRibbon": {
     "DisplayName": "Mint Tin Ribbon",
@@ -59987,7 +59987,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "MintTinRibbon",
-    "PreviewUri": "@previewImages/MintTinRibbon.png"
+    "PreviewUri": "MintTinRibbon.png"
   },
   "MintTinTall": {
     "DisplayName": "Mint Tin, Tall",
@@ -60010,7 +60010,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "MintTinTall",
-    "PreviewUri": "@previewImages/MintTinTall.png"
+    "PreviewUri": "MintTinTall.png"
   },
   "MissionaryLargeBlue": {
     "DisplayName": "Missionary, Large, Blue",
@@ -60052,7 +60052,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "MissionaryLargeBlue",
-    "PreviewUri": "@previewImages/MissionaryLargeBlue.png"
+    "PreviewUri": "MissionaryLargeBlue.png"
   },
   "MissionaryLargeGreen": {
     "DisplayName": "Missionary, Large, Green",
@@ -60094,7 +60094,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "MissionaryLargeGreen",
-    "PreviewUri": "@previewImages/MissionaryLargeGreen.png"
+    "PreviewUri": "MissionaryLargeGreen.png"
   },
   "MissionaryLargeOrange": {
     "DisplayName": "Missionary, Large, Orange",
@@ -60136,7 +60136,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "MissionaryLargeOrange",
-    "PreviewUri": "@previewImages/MissionaryLargeOrange.png"
+    "PreviewUri": "MissionaryLargeOrange.png"
   },
   "MissionaryLargeRed": {
     "DisplayName": "Missionary, Large, Red",
@@ -60178,7 +60178,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "MissionaryLargeRed",
-    "PreviewUri": "@previewImages/MissionaryLargeRed.png"
+    "PreviewUri": "MissionaryLargeRed.png"
   },
   "MissionaryLargeYellow": {
     "DisplayName": "Missionary, Large, Yellow",
@@ -60220,7 +60220,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "MissionaryLargeYellow",
-    "PreviewUri": "@previewImages/MissionaryLargeYellow.png"
+    "PreviewUri": "MissionaryLargeYellow.png"
   },
   "MoneyPackOrange": {
     "DisplayName": "Money Pack, Orange",
@@ -60266,7 +60266,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "MoneyPackOrange",
-    "PreviewUri": "@previewImages/MoneyPackOrange.png"
+    "PreviewUri": "MoneyPackOrange.png"
   },
   "MoneyPackPink": {
     "DisplayName": "Money Pack, Pink",
@@ -60312,7 +60312,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "MoneyPackPink",
-    "PreviewUri": "@previewImages/MoneyPackPink.png"
+    "PreviewUri": "MoneyPackPink.png"
   },
   "Mongol-CharacterMeeple": {
     "DisplayName": "Mongol, Character Meeple",
@@ -60356,7 +60356,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Mongol-CharacterMeeple",
-    "PreviewUri": "@previewImages/Mongol-CharacterMeeple.png"
+    "PreviewUri": "Mongol-CharacterMeeple.png"
   },
   "MonkFantasyTB25": {
     "DisplayName": "Monk, Fantasy, TB25",
@@ -60379,7 +60379,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "MonkFantasyTB25",
-    "PreviewUri": "@previewImages/MonkFantasyTB25.png"
+    "PreviewUri": "MonkFantasyTB25.png"
   },
   "MotorBoatBlack": {
     "DisplayName": "Motor Boat, Black",
@@ -60403,7 +60403,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "MotorBoatBlack",
-    "PreviewUri": "@previewImages/MotorBoatBlack.png"
+    "PreviewUri": "MotorBoatBlack.png"
   },
   "MotorBoatBlue": {
     "DisplayName": "Motor Boat, Blue",
@@ -60427,7 +60427,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "MotorBoatBlue",
-    "PreviewUri": "@previewImages/MotorBoatBlue.png"
+    "PreviewUri": "MotorBoatBlue.png"
   },
   "MotorBoatGreen": {
     "DisplayName": "Motor Boat, Green",
@@ -60451,7 +60451,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "MotorBoatGreen",
-    "PreviewUri": "@previewImages/MotorBoatGreen.png"
+    "PreviewUri": "MotorBoatGreen.png"
   },
   "MotorBoatOrange": {
     "DisplayName": "Motor Boat, Orange",
@@ -60475,7 +60475,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "MotorBoatOrange",
-    "PreviewUri": "@previewImages/MotorBoatOrange.png"
+    "PreviewUri": "MotorBoatOrange.png"
   },
   "MotorBoatPurple": {
     "DisplayName": "Motor Boat, Purple",
@@ -60499,7 +60499,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "MotorBoatPurple",
-    "PreviewUri": "@previewImages/MotorBoatPurple.png"
+    "PreviewUri": "MotorBoatPurple.png"
   },
   "MotorBoatRed": {
     "DisplayName": "Motor Boat, Red",
@@ -60523,7 +60523,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "MotorBoatRed",
-    "PreviewUri": "@previewImages/MotorBoatRed.png"
+    "PreviewUri": "MotorBoatRed.png"
   },
   "MotorBoatWhite": {
     "DisplayName": "Motor Boat, White",
@@ -60547,7 +60547,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "MotorBoatWhite",
-    "PreviewUri": "@previewImages/MotorBoatWhite.png"
+    "PreviewUri": "MotorBoatWhite.png"
   },
   "MotorBoatYellow": {
     "DisplayName": "Motor Boat, Yellow",
@@ -60571,7 +60571,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "MotorBoatYellow",
-    "PreviewUri": "@previewImages/MotorBoatYellow.png"
+    "PreviewUri": "MotorBoatYellow.png"
   },
   "MotorcycleBlack": {
     "DisplayName": "Motorcycle, Black",
@@ -60592,7 +60592,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "MotorcycleBlack",
-    "PreviewUri": "@previewImages/MotorcycleBlack.png"
+    "PreviewUri": "MotorcycleBlack.png"
   },
   "MotorcycleBlue": {
     "DisplayName": "Motorcycle, Blue",
@@ -60613,7 +60613,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "MotorcycleBlue",
-    "PreviewUri": "@previewImages/MotorcycleBlue.png"
+    "PreviewUri": "MotorcycleBlue.png"
   },
   "MotorcycleGreen": {
     "DisplayName": "Motorcycle, Green",
@@ -60634,7 +60634,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "MotorcycleGreen",
-    "PreviewUri": "@previewImages/MotorcycleGreen.png"
+    "PreviewUri": "MotorcycleGreen.png"
   },
   "MotorcycleOrange": {
     "DisplayName": "Motorcycle, Orange",
@@ -60655,7 +60655,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "MotorcycleOrange",
-    "PreviewUri": "@previewImages/MotorcycleOrange.png"
+    "PreviewUri": "MotorcycleOrange.png"
   },
   "MotorcyclePurple": {
     "DisplayName": "Motorcycle, Purple",
@@ -60676,7 +60676,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "MotorcyclePurple",
-    "PreviewUri": "@previewImages/MotorcyclePurple.png"
+    "PreviewUri": "MotorcyclePurple.png"
   },
   "MotorcycleRed": {
     "DisplayName": "Motorcycle, Red",
@@ -60697,7 +60697,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "MotorcycleRed",
-    "PreviewUri": "@previewImages/MotorcycleRed.png"
+    "PreviewUri": "MotorcycleRed.png"
   },
   "MotorcycleWhite": {
     "DisplayName": "Motorcycle, White",
@@ -60718,7 +60718,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "MotorcycleWhite",
-    "PreviewUri": "@previewImages/MotorcycleWhite.png"
+    "PreviewUri": "MotorcycleWhite.png"
   },
   "MotorcycleYellow": {
     "DisplayName": "Motorcycle, Yellow",
@@ -60739,7 +60739,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "MotorcycleYellow",
-    "PreviewUri": "@previewImages/MotorcycleYellow.png"
+    "PreviewUri": "MotorcycleYellow.png"
   },
   "MouseAcrylic": {
     "DisplayName": "Mouse, Acrylic",
@@ -60768,7 +60768,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "MouseAcrylic",
-    "PreviewUri": "@previewImages/MouseAcrylic.png"
+    "PreviewUri": "MouseAcrylic.png"
   },
   "MouseWoodGray": {
     "DisplayName": "Mouse, Wood, Gray",
@@ -60798,7 +60798,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "MouseWoodGray",
-    "PreviewUri": "@previewImages/MouseWoodGray.png"
+    "PreviewUri": "MouseWoodGray.png"
   },
   "MuscleCarPostApocalypse": {
     "DisplayName": "Muscle Car, Post Apocalypse",
@@ -60815,7 +60815,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "MuscleCarPostApocalypse",
-    "PreviewUri": "@previewImages/MuscleCarPostApocalypse.png"
+    "PreviewUri": "MuscleCarPostApocalypse.png"
   },
   "MushroomCloud": {
     "DisplayName": "Mushroom Cloud",
@@ -60843,7 +60843,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "MushroomCloud",
-    "PreviewUri": "@previewImages/MushroomCloud.png"
+    "PreviewUri": "MushroomCloud.png"
   },
   "Musketeer": {
     "DisplayName": "Musketeer",
@@ -60865,7 +60865,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": true,
     "Key": "Musketeer",
-    "PreviewUri": "@previewImages/Musketeer.png"
+    "PreviewUri": "Musketeer.png"
   },
   "NinjaBlack-CharacterMeeple": {
     "DisplayName": "Ninja, Black, Character Meeple",
@@ -60902,7 +60902,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "NinjaBlack-CharacterMeeple",
-    "PreviewUri": "@previewImages/NinjaBlack-CharacterMeeple.png"
+    "PreviewUri": "NinjaBlack-CharacterMeeple.png"
   },
   "NinjaBlue-CharacterMeeple": {
     "DisplayName": "Ninja, Blue, Character Meeple",
@@ -60939,7 +60939,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "NinjaBlue-CharacterMeeple",
-    "PreviewUri": "@previewImages/NinjaBlue-CharacterMeeple.png"
+    "PreviewUri": "NinjaBlue-CharacterMeeple.png"
   },
   "NinjaBrown": {
     "DisplayName": "Ninja, Brown",
@@ -60975,7 +60975,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "NinjaBrown",
-    "PreviewUri": "@previewImages/NinjaBrown.png"
+    "PreviewUri": "NinjaBrown.png"
   },
   "NinjaGreen-CharacterMeeple": {
     "DisplayName": "Ninja, Green, Character Meeple",
@@ -61012,7 +61012,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "NinjaGreen-CharacterMeeple",
-    "PreviewUri": "@previewImages/NinjaGreen-CharacterMeeple.png"
+    "PreviewUri": "NinjaGreen-CharacterMeeple.png"
   },
   "NinjaOrange": {
     "DisplayName": "Ninja, Orange",
@@ -61048,7 +61048,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "NinjaOrange",
-    "PreviewUri": "@previewImages/NinjaOrange.png"
+    "PreviewUri": "NinjaOrange.png"
   },
   "NinjaOrange-CharacterMeeple": {
     "DisplayName": "Ninja, Orange, Character Meeple",
@@ -61085,7 +61085,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "NinjaOrange-CharacterMeeple",
-    "PreviewUri": "@previewImages/NinjaOrange-CharacterMeeple.png"
+    "PreviewUri": "NinjaOrange-CharacterMeeple.png"
   },
   "NinjaPurple-CharacterMeeple": {
     "DisplayName": "Ninja, Purple, Character Meeple",
@@ -61122,7 +61122,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "NinjaPurple-CharacterMeeple",
-    "PreviewUri": "@previewImages/NinjaPurple-CharacterMeeple.png"
+    "PreviewUri": "NinjaPurple-CharacterMeeple.png"
   },
   "NinjaRed-CharacterMeeple": {
     "DisplayName": "Ninja, Red, Character Meeple",
@@ -61159,7 +61159,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "NinjaRed-CharacterMeeple",
-    "PreviewUri": "@previewImages/NinjaRed-CharacterMeeple.png"
+    "PreviewUri": "NinjaRed-CharacterMeeple.png"
   },
   "NinjaWhite-CharacterMeeple": {
     "DisplayName": "Ninja, White, Character Meeple",
@@ -61196,7 +61196,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "NinjaWhite-CharacterMeeple",
-    "PreviewUri": "@previewImages/NinjaWhite-CharacterMeeple.png"
+    "PreviewUri": "NinjaWhite-CharacterMeeple.png"
   },
   "NinjaYellow-CharacterMeeple": {
     "DisplayName": "Ninja, Yellow, Character Meeple",
@@ -61233,7 +61233,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "NinjaYellow-CharacterMeeple",
-    "PreviewUri": "@previewImages/NinjaYellow-CharacterMeeple.png"
+    "PreviewUri": "NinjaYellow-CharacterMeeple.png"
   },
   "NobleBlue": {
     "DisplayName": "Noble, Blue",
@@ -61272,7 +61272,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "NobleBlue",
-    "PreviewUri": "@previewImages/NobleBlue.png"
+    "PreviewUri": "NobleBlue.png"
   },
   "NobleGreen": {
     "DisplayName": "Noble, Green",
@@ -61311,7 +61311,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "NobleGreen",
-    "PreviewUri": "@previewImages/NobleGreen.png"
+    "PreviewUri": "NobleGreen.png"
   },
   "NobleRed": {
     "DisplayName": "Noble, Red",
@@ -61350,7 +61350,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "NobleRed",
-    "PreviewUri": "@previewImages/NobleRed.png"
+    "PreviewUri": "NobleRed.png"
   },
   "NobleWhite": {
     "DisplayName": "Noble, White",
@@ -61389,7 +61389,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "NobleWhite",
-    "PreviewUri": "@previewImages/NobleWhite.png"
+    "PreviewUri": "NobleWhite.png"
   },
   "NobleYellow": {
     "DisplayName": "Noble, Yellow",
@@ -61428,7 +61428,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "NobleYellow",
-    "PreviewUri": "@previewImages/NobleYellow.png"
+    "PreviewUri": "NobleYellow.png"
   },
   "NorseMaidenFantasyTB25": {
     "DisplayName": "Norse Maiden, Fantasy, TB25",
@@ -61450,7 +61450,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "NorseMaidenFantasyTB25",
-    "PreviewUri": "@previewImages/NorseMaidenFantasyTB25.png"
+    "PreviewUri": "NorseMaidenFantasyTB25.png"
   },
   "Notepad": {
     "DisplayName": "Notepad",
@@ -61480,7 +61480,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Notepad",
-    "PreviewUri": "@previewImages/Notepad.png"
+    "PreviewUri": "Notepad.png"
   },
   "NothicFantasyTB25": {
     "DisplayName": "Nothic, Fantasy, TB25",
@@ -61506,7 +61506,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "NothicFantasyTB25",
-    "PreviewUri": "@previewImages/NothicFantasyTB25.png"
+    "PreviewUri": "NothicFantasyTB25.png"
   },
   "NoticeBoard": {
     "DisplayName": "Notice Board",
@@ -61526,7 +61526,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "NoticeBoard",
-    "PreviewUri": "@previewImages/NoticeBoard.png"
+    "PreviewUri": "NoticeBoard.png"
   },
   "NuclearSymbol": {
     "DisplayName": "Nuclear Symbol",
@@ -61563,7 +61563,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "NuclearSymbol",
-    "PreviewUri": "@previewImages/NuclearSymbol.png"
+    "PreviewUri": "NuclearSymbol.png"
   },
   "Nurse-CharacterMeeple": {
     "DisplayName": "Nurse, Character Meeple",
@@ -61591,7 +61591,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Nurse-CharacterMeeple",
-    "PreviewUri": "@previewImages/Nurse-CharacterMeeple.png"
+    "PreviewUri": "Nurse-CharacterMeeple.png"
   },
   "ObeliskTB25": {
     "DisplayName": "Obelisk, TB25",
@@ -61612,7 +61612,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "ObeliskTB25",
-    "PreviewUri": "@previewImages/ObeliskTB25.png"
+    "PreviewUri": "ObeliskTB25.png"
   },
   "ObservatoryBlack": {
     "DisplayName": "Observatory, Black",
@@ -61633,7 +61633,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ObservatoryBlack",
-    "PreviewUri": "@previewImages/ObservatoryBlack.png"
+    "PreviewUri": "ObservatoryBlack.png"
   },
   "ObservatoryBlue": {
     "DisplayName": "Observatory, Blue",
@@ -61654,7 +61654,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ObservatoryBlue",
-    "PreviewUri": "@previewImages/ObservatoryBlue.png"
+    "PreviewUri": "ObservatoryBlue.png"
   },
   "ObservatoryGreen": {
     "DisplayName": "Observatory, Green",
@@ -61675,7 +61675,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ObservatoryGreen",
-    "PreviewUri": "@previewImages/ObservatoryGreen.png"
+    "PreviewUri": "ObservatoryGreen.png"
   },
   "ObservatoryOrange": {
     "DisplayName": "Observatory, Orange",
@@ -61696,7 +61696,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ObservatoryOrange",
-    "PreviewUri": "@previewImages/ObservatoryOrange.png"
+    "PreviewUri": "ObservatoryOrange.png"
   },
   "ObservatoryPurple": {
     "DisplayName": "Observatory, Purple",
@@ -61717,7 +61717,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ObservatoryPurple",
-    "PreviewUri": "@previewImages/ObservatoryPurple.png"
+    "PreviewUri": "ObservatoryPurple.png"
   },
   "ObservatoryRed": {
     "DisplayName": "Observatory, Red",
@@ -61738,7 +61738,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ObservatoryRed",
-    "PreviewUri": "@previewImages/ObservatoryRed.png"
+    "PreviewUri": "ObservatoryRed.png"
   },
   "ObservatoryWhite": {
     "DisplayName": "Observatory, White",
@@ -61759,7 +61759,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ObservatoryWhite",
-    "PreviewUri": "@previewImages/ObservatoryWhite.png"
+    "PreviewUri": "ObservatoryWhite.png"
   },
   "ObservatoryYellow": {
     "DisplayName": "Observatory, Yellow",
@@ -61780,7 +61780,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ObservatoryYellow",
-    "PreviewUri": "@previewImages/ObservatoryYellow.png"
+    "PreviewUri": "ObservatoryYellow.png"
   },
   "Octbox10mmBlack": {
     "DisplayName": "Octbox, 10mm, Black",
@@ -61809,7 +61809,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Octbox10mmBlack",
-    "PreviewUri": "@previewImages/Octbox10mmBlack.png"
+    "PreviewUri": "Octbox10mmBlack.png"
   },
   "Octbox10mmBlue": {
     "DisplayName": "Octbox, 10mm, Blue",
@@ -61838,7 +61838,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Octbox10mmBlue",
-    "PreviewUri": "@previewImages/Octbox10mmBlue.png"
+    "PreviewUri": "Octbox10mmBlue.png"
   },
   "Octbox10mmGreen": {
     "DisplayName": "Octbox, 10mm, Green",
@@ -61867,7 +61867,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Octbox10mmGreen",
-    "PreviewUri": "@previewImages/Octbox10mmGreen.png"
+    "PreviewUri": "Octbox10mmGreen.png"
   },
   "Octbox10mmOrange": {
     "DisplayName": "Octbox, 10mm, Orange",
@@ -61896,7 +61896,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Octbox10mmOrange",
-    "PreviewUri": "@previewImages/Octbox10mmOrange.png"
+    "PreviewUri": "Octbox10mmOrange.png"
   },
   "Octbox10mmPurple": {
     "DisplayName": "Octbox, 10mm, Purple",
@@ -61925,7 +61925,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Octbox10mmPurple",
-    "PreviewUri": "@previewImages/Octbox10mmPurple.png"
+    "PreviewUri": "Octbox10mmPurple.png"
   },
   "Octbox10mmRed": {
     "DisplayName": "Octbox, 10mm, Red",
@@ -61954,7 +61954,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Octbox10mmRed",
-    "PreviewUri": "@previewImages/Octbox10mmRed.png"
+    "PreviewUri": "Octbox10mmRed.png"
   },
   "Octbox10mmWhite": {
     "DisplayName": "Octbox, 10mm, White",
@@ -61983,7 +61983,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Octbox10mmWhite",
-    "PreviewUri": "@previewImages/Octbox10mmWhite.png"
+    "PreviewUri": "Octbox10mmWhite.png"
   },
   "Octbox10mmYellow": {
     "DisplayName": "Octbox, 10mm, Yellow",
@@ -62012,7 +62012,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Octbox10mmYellow",
-    "PreviewUri": "@previewImages/Octbox10mmYellow.png"
+    "PreviewUri": "Octbox10mmYellow.png"
   },
   "Octbox7mmBlue": {
     "DisplayName": "Octbox, 10mm x 7mm, Blue",
@@ -62041,7 +62041,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Octbox7mmBlue",
-    "PreviewUri": "@previewImages/Octbox7mmBlue.png"
+    "PreviewUri": "Octbox7mmBlue.png"
   },
   "Octbox7mmGray": {
     "DisplayName": "Octbox, 10mm x 7mm, Gray",
@@ -62070,7 +62070,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Octbox7mmGray",
-    "PreviewUri": "@previewImages/Octbox7mmGray.png"
+    "PreviewUri": "Octbox7mmGray.png"
   },
   "Octbox7mmPurple": {
     "DisplayName": "Octbox, 10mm x 7mm, Purple",
@@ -62099,7 +62099,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Octbox7mmPurple",
-    "PreviewUri": "@previewImages/Octbox7mmPurple.png"
+    "PreviewUri": "Octbox7mmPurple.png"
   },
   "Octbox7mmYellow": {
     "DisplayName": "Octbox, 7mm, Yellow",
@@ -62128,7 +62128,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Octbox7mmYellow",
-    "PreviewUri": "@previewImages/Octbox7mmYellow.png"
+    "PreviewUri": "Octbox7mmYellow.png"
   },
   "OfficeWorkerBlue-CharacterMeeple": {
     "DisplayName": "Office Worker, Blue, Character Meeple",
@@ -62161,7 +62161,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "OfficeWorkerBlue-CharacterMeeple",
-    "PreviewUri": "@previewImages/OfficeWorkerBlue-CharacterMeeple.png"
+    "PreviewUri": "OfficeWorkerBlue-CharacterMeeple.png"
   },
   "OfficeWorkerPurple-CharacterMeeple": {
     "DisplayName": "Office Worker, Purple, Character Meeple",
@@ -62194,7 +62194,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "OfficeWorkerPurple-CharacterMeeple",
-    "PreviewUri": "@previewImages/OfficeWorkerPurple-CharacterMeeple.png"
+    "PreviewUri": "OfficeWorkerPurple-CharacterMeeple.png"
   },
   "OgrewithClub&Shield": {
     "DisplayName": "Ogre with Club & Shield",
@@ -62231,7 +62231,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "OgrewithClub&Shield",
-    "PreviewUri": "@previewImages/OgrewithClub&Shield.png"
+    "PreviewUri": "OgrewithClub&Shield.png"
   },
   "OgreFantasyTB25": {
     "DisplayName": "Ogre, Fantasy, TB25",
@@ -62254,7 +62254,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "OgreFantasyTB25",
-    "PreviewUri": "@previewImages/OgreFantasyTB25.png"
+    "PreviewUri": "OgreFantasyTB25.png"
   },
   "OilBarrel": {
     "DisplayName": "Oil Barrel",
@@ -62288,7 +62288,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "OilBarrel",
-    "PreviewUri": "@previewImages/OilBarrel.png"
+    "PreviewUri": "OilBarrel.png"
   },
   "OilDrumWoodBlue": {
     "DisplayName": "Oil Drum, Wood, Blue",
@@ -62322,7 +62322,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "OilDrumWoodBlue",
-    "PreviewUri": "@previewImages/OilDrumWoodBlue.png"
+    "PreviewUri": "OilDrumWoodBlue.png"
   },
   "OldWestCoinBronze": {
     "DisplayName": "Old West Coin, Bronze",
@@ -62339,7 +62339,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "OldWestCoinBronze",
-    "PreviewUri": "@previewImages/OldWestCoinBronze.png"
+    "PreviewUri": "OldWestCoinBronze.png"
   },
   "OldWestCoinGold": {
     "DisplayName": "Old West Coin, Gold",
@@ -62356,7 +62356,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "OldWestCoinGold",
-    "PreviewUri": "@previewImages/OldWestCoinGold.png"
+    "PreviewUri": "OldWestCoinGold.png"
   },
   "OldWestCoinSilver": {
     "DisplayName": "Old West Coin, Silver",
@@ -62373,7 +62373,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "OldWestCoinSilver",
-    "PreviewUri": "@previewImages/OldWestCoinSilver.png"
+    "PreviewUri": "OldWestCoinSilver.png"
   },
   "OpossumDruidFantasyTB25": {
     "DisplayName": "Opossum Druid, Fantasy, TB25",
@@ -62392,7 +62392,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "OpossumDruidFantasyTB25",
-    "PreviewUri": "@previewImages/OpossumDruidFantasyTB25.png"
+    "PreviewUri": "OpossumDruidFantasyTB25.png"
   },
   "OrcScimitarFantasyTB25": {
     "DisplayName": "Orc Scimitar, Fantasy, TB25",
@@ -62415,7 +62415,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "OrcScimitarFantasyTB25",
-    "PreviewUri": "@previewImages/OrcScimitarFantasyTB25.png"
+    "PreviewUri": "OrcScimitarFantasyTB25.png"
   },
   "OrcShamanFantasyTB25": {
     "DisplayName": "Orc Shaman, Fantasy, TB25",
@@ -62438,7 +62438,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "OrcShamanFantasyTB25",
-    "PreviewUri": "@previewImages/OrcShamanFantasyTB25.png"
+    "PreviewUri": "OrcShamanFantasyTB25.png"
   },
   "Outlaw-CharacterMeeple": {
     "DisplayName": "Outlaw, Character Meeple",
@@ -62479,7 +62479,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Outlaw-CharacterMeeple",
-    "PreviewUri": "@previewImages/Outlaw-CharacterMeeple.png"
+    "PreviewUri": "Outlaw-CharacterMeeple.png"
   },
   "OwlbearFantasyTB50": {
     "DisplayName": "Owlbear, Fantasy, TB50",
@@ -62500,7 +62500,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "OwlbearFantasyTB50",
-    "PreviewUri": "@previewImages/OwlbearFantasyTB50.png"
+    "PreviewUri": "OwlbearFantasyTB50.png"
   },
   "PadlockKeyBlack": {
     "DisplayName": "Padlock Key, Black",
@@ -62534,7 +62534,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PadlockKeyBlack",
-    "PreviewUri": "@previewImages/PadlockKeyBlack.png"
+    "PreviewUri": "PadlockKeyBlack.png"
   },
   "PadlockKeyBlue": {
     "DisplayName": "Padlock Key, Blue",
@@ -62568,7 +62568,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PadlockKeyBlue",
-    "PreviewUri": "@previewImages/PadlockKeyBlue.png"
+    "PreviewUri": "PadlockKeyBlue.png"
   },
   "PadlockKeyGreen": {
     "DisplayName": "Padlock Key, Green",
@@ -62602,7 +62602,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PadlockKeyGreen",
-    "PreviewUri": "@previewImages/PadlockKeyGreen.png"
+    "PreviewUri": "PadlockKeyGreen.png"
   },
   "PadlockKeyOrange": {
     "DisplayName": "Padlock Key, Orange",
@@ -62636,7 +62636,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "PadlockKeyOrange",
-    "PreviewUri": "@previewImages/PadlockKeyOrange.png"
+    "PreviewUri": "PadlockKeyOrange.png"
   },
   "PadlockKeyPurple": {
     "DisplayName": "Padlock Key, Purple",
@@ -62670,7 +62670,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PadlockKeyPurple",
-    "PreviewUri": "@previewImages/PadlockKeyPurple.png"
+    "PreviewUri": "PadlockKeyPurple.png"
   },
   "PadlockKeyRed": {
     "DisplayName": "Padlock Key, Red",
@@ -62704,7 +62704,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PadlockKeyRed",
-    "PreviewUri": "@previewImages/PadlockKeyRed.png"
+    "PreviewUri": "PadlockKeyRed.png"
   },
   "PadlockKeyWhite": {
     "DisplayName": "Padlock Key, White",
@@ -62738,7 +62738,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PadlockKeyWhite",
-    "PreviewUri": "@previewImages/PadlockKeyWhite.png"
+    "PreviewUri": "PadlockKeyWhite.png"
   },
   "PadlockKeyYellow": {
     "DisplayName": "Padlock Key, Yellow",
@@ -62772,7 +62772,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "PadlockKeyYellow",
-    "PreviewUri": "@previewImages/PadlockKeyYellow.png"
+    "PreviewUri": "PadlockKeyYellow.png"
   },
   "PadlockLockedBlack": {
     "DisplayName": "Padlock, Locked, Black",
@@ -62806,7 +62806,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PadlockLockedBlack",
-    "PreviewUri": "@previewImages/PadlockLockedBlack.png"
+    "PreviewUri": "PadlockLockedBlack.png"
   },
   "PadlockLockedBlue": {
     "DisplayName": "Padlock, Locked, Blue",
@@ -62840,7 +62840,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PadlockLockedBlue",
-    "PreviewUri": "@previewImages/PadlockLockedBlue.png"
+    "PreviewUri": "PadlockLockedBlue.png"
   },
   "PadlockLockedGreen": {
     "DisplayName": "Padlock, Locked, Green",
@@ -62874,7 +62874,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PadlockLockedGreen",
-    "PreviewUri": "@previewImages/PadlockLockedGreen.png"
+    "PreviewUri": "PadlockLockedGreen.png"
   },
   "PadlockLockedOrange": {
     "DisplayName": "Padlock, Locked, Orange",
@@ -62908,7 +62908,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "PadlockLockedOrange",
-    "PreviewUri": "@previewImages/PadlockLockedOrange.png"
+    "PreviewUri": "PadlockLockedOrange.png"
   },
   "PadlockLockedPurple": {
     "DisplayName": "Padlock, Locked, Purple",
@@ -62942,7 +62942,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PadlockLockedPurple",
-    "PreviewUri": "@previewImages/PadlockLockedPurple.png"
+    "PreviewUri": "PadlockLockedPurple.png"
   },
   "PadlockLockedRed": {
     "DisplayName": "Padlock, Locked, Red",
@@ -62976,7 +62976,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PadlockLockedRed",
-    "PreviewUri": "@previewImages/PadlockLockedRed.png"
+    "PreviewUri": "PadlockLockedRed.png"
   },
   "PadlockLockedWhite": {
     "DisplayName": "Padlock, Locked, White",
@@ -63010,7 +63010,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PadlockLockedWhite",
-    "PreviewUri": "@previewImages/PadlockLockedWhite.png"
+    "PreviewUri": "PadlockLockedWhite.png"
   },
   "PadlockLockedYellow": {
     "DisplayName": "Padlock, Locked, Yellow",
@@ -63044,7 +63044,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "PadlockLockedYellow",
-    "PreviewUri": "@previewImages/PadlockLockedYellow.png"
+    "PreviewUri": "PadlockLockedYellow.png"
   },
   "PadlockUnlockedBlack": {
     "DisplayName": "Padlock, Unlocked, Black",
@@ -63078,7 +63078,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PadlockUnlockedBlack",
-    "PreviewUri": "@previewImages/PadlockUnlockedBlack.png"
+    "PreviewUri": "PadlockUnlockedBlack.png"
   },
   "PadlockUnlockedBlue": {
     "DisplayName": "Padlock, Unlocked, Blue",
@@ -63112,7 +63112,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PadlockUnlockedBlue",
-    "PreviewUri": "@previewImages/PadlockUnlockedBlue.png"
+    "PreviewUri": "PadlockUnlockedBlue.png"
   },
   "PadlockUnlockedGreen": {
     "DisplayName": "Padlock, Unlocked, Green",
@@ -63146,7 +63146,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PadlockUnlockedGreen",
-    "PreviewUri": "@previewImages/PadlockUnlockedGreen.png"
+    "PreviewUri": "PadlockUnlockedGreen.png"
   },
   "PadlockUnlockedOrange": {
     "DisplayName": "Padlock, Unlocked, Orange",
@@ -63180,7 +63180,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "PadlockUnlockedOrange",
-    "PreviewUri": "@previewImages/PadlockUnlockedOrange.png"
+    "PreviewUri": "PadlockUnlockedOrange.png"
   },
   "PadlockUnlockedPurple": {
     "DisplayName": "Padlock, Unlocked, Purple",
@@ -63214,7 +63214,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PadlockUnlockedPurple",
-    "PreviewUri": "@previewImages/PadlockUnlockedPurple.png"
+    "PreviewUri": "PadlockUnlockedPurple.png"
   },
   "PadlockUnlockedRed": {
     "DisplayName": "Padlock, Unlocked, Red",
@@ -63248,7 +63248,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PadlockUnlockedRed",
-    "PreviewUri": "@previewImages/PadlockUnlockedRed.png"
+    "PreviewUri": "PadlockUnlockedRed.png"
   },
   "PadlockUnlockedWhite": {
     "DisplayName": "Padlock, Unlocked, White",
@@ -63282,7 +63282,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PadlockUnlockedWhite",
-    "PreviewUri": "@previewImages/PadlockUnlockedWhite.png"
+    "PreviewUri": "PadlockUnlockedWhite.png"
   },
   "PadlockUnlockedYellow": {
     "DisplayName": "Padlock, Unlocked, Yellow",
@@ -63316,7 +63316,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "PadlockUnlockedYellow",
-    "PreviewUri": "@previewImages/PadlockUnlockedYellow.png"
+    "PreviewUri": "PadlockUnlockedYellow.png"
   },
   "PaperMiniatureBaseSquare20mm": {
     "DisplayName": "Paper Miniature Base Square, 20mm",
@@ -63341,7 +63341,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PaperMiniatureBaseSquare20mm",
-    "PreviewUri": "@previewImages/PaperMiniatureBaseSquare20mm.png"
+    "PreviewUri": "PaperMiniatureBaseSquare20mm.png"
   },
   "PaperMiniatureBase20mmAngled": {
     "DisplayName": "Paper Miniature Base, 20mm, Angled",
@@ -63366,7 +63366,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PaperMiniatureBase20mmAngled",
-    "PreviewUri": "@previewImages/PaperMiniatureBase20mmAngled.png"
+    "PreviewUri": "PaperMiniatureBase20mmAngled.png"
   },
   "PaperMiniatureBase25mmBlack": {
     "DisplayName": "Paper Miniature Base, 25mm, Black",
@@ -63391,7 +63391,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PaperMiniatureBase25mmBlack",
-    "PreviewUri": "@previewImages/PaperMiniatureBase25mmBlack.png"
+    "PreviewUri": "PaperMiniatureBase25mmBlack.png"
   },
   "PaperMiniatureBase25mmBlue": {
     "DisplayName": "Paper Miniature Base, 25mm, Blue",
@@ -63416,7 +63416,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PaperMiniatureBase25mmBlue",
-    "PreviewUri": "@previewImages/PaperMiniatureBase25mmBlue.png"
+    "PreviewUri": "PaperMiniatureBase25mmBlue.png"
   },
   "PaperMiniatureBase25mmClear": {
     "DisplayName": "Paper Miniature Base, 25mm, Clear",
@@ -63441,7 +63441,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PaperMiniatureBase25mmClear",
-    "PreviewUri": "@previewImages/PaperMiniatureBase25mmClear.png"
+    "PreviewUri": "PaperMiniatureBase25mmClear.png"
   },
   "PaperMiniatureBase25mmGreen": {
     "DisplayName": "Paper Miniature Base, 25mm, Green",
@@ -63466,7 +63466,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PaperMiniatureBase25mmGreen",
-    "PreviewUri": "@previewImages/PaperMiniatureBase25mmGreen.png"
+    "PreviewUri": "PaperMiniatureBase25mmGreen.png"
   },
   "PaperMiniatureBase25mmOrange": {
     "DisplayName": "Paper Miniature Base, 25mm, Orange",
@@ -63491,7 +63491,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "PaperMiniatureBase25mmOrange",
-    "PreviewUri": "@previewImages/PaperMiniatureBase25mmOrange.png"
+    "PreviewUri": "PaperMiniatureBase25mmOrange.png"
   },
   "PaperMiniatureBase25mmPurple": {
     "DisplayName": "Paper Miniature Base, 25mm, Purple",
@@ -63516,7 +63516,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PaperMiniatureBase25mmPurple",
-    "PreviewUri": "@previewImages/PaperMiniatureBase25mmPurple.png"
+    "PreviewUri": "PaperMiniatureBase25mmPurple.png"
   },
   "PaperMiniatureBase25mmRed": {
     "DisplayName": "Paper Miniature Base, 25mm, Red",
@@ -63541,7 +63541,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PaperMiniatureBase25mmRed",
-    "PreviewUri": "@previewImages/PaperMiniatureBase25mmRed.png"
+    "PreviewUri": "PaperMiniatureBase25mmRed.png"
   },
   "PaperMiniatureBase25mmWhite": {
     "DisplayName": "Paper Miniature Base, 25mm, White",
@@ -63566,7 +63566,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PaperMiniatureBase25mmWhite",
-    "PreviewUri": "@previewImages/PaperMiniatureBase25mmWhite.png"
+    "PreviewUri": "PaperMiniatureBase25mmWhite.png"
   },
   "PaperMiniatureBase25mmYellow": {
     "DisplayName": "Paper Miniature Base, 25mm, Yellow",
@@ -63591,7 +63591,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "PaperMiniatureBase25mmYellow",
-    "PreviewUri": "@previewImages/PaperMiniatureBase25mmYellow.png"
+    "PreviewUri": "PaperMiniatureBase25mmYellow.png"
   },
   "PaperMiniatureFormationTray20mm10x4": {
     "DisplayName": "Paper Miniature Formation Tray, 20mm, 10 x 4",
@@ -63616,7 +63616,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PaperMiniatureFormationTray20mm10x4",
-    "PreviewUri": "@previewImages/PaperMiniatureFormationTray20mm10x4.png"
+    "PreviewUri": "PaperMiniatureFormationTray20mm10x4.png"
   },
   "PaperMiniatureFormationTray20mm5x2": {
     "DisplayName": "Paper Miniature Formation Tray, 20mm, 5 x 2",
@@ -63641,7 +63641,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PaperMiniatureFormationTray20mm5x2",
-    "PreviewUri": "@previewImages/PaperMiniatureFormationTray20mm5x2.png"
+    "PreviewUri": "PaperMiniatureFormationTray20mm5x2.png"
   },
   "PaperMiniatureFormationTray20mm5x2Angled": {
     "DisplayName": "Paper Miniature Formation Tray, 20mm, 5 x 2, Angled",
@@ -63666,7 +63666,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PaperMiniatureFormationTray20mm5x2Angled",
-    "PreviewUri": "@previewImages/PaperMiniatureFormationTray20mm5x2Angled.png"
+    "PreviewUri": "PaperMiniatureFormationTray20mm5x2Angled.png"
   },
   "PaperMiniatureFormationTray20mm5x4": {
     "DisplayName": "Paper Miniature Formation Tray, 20mm, 5 x 4",
@@ -63691,7 +63691,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PaperMiniatureFormationTray20mm5x4",
-    "PreviewUri": "@previewImages/PaperMiniatureFormationTray20mm5x4.png"
+    "PreviewUri": "PaperMiniatureFormationTray20mm5x4.png"
   },
   "PaperMiniatureFormationTray20mm5x4Angled": {
     "DisplayName": "Paper Miniature Formation Tray, 20mm, 5 x 4, Angled",
@@ -63716,7 +63716,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PaperMiniatureFormationTray20mm5x4Angled",
-    "PreviewUri": "@previewImages/PaperMiniatureFormationTray20mm5x4Angled.png"
+    "PreviewUri": "PaperMiniatureFormationTray20mm5x4Angled.png"
   },
   "PartsBagFancyGold": {
     "DisplayName": "Parts Bag, Fancy, Gold",
@@ -63746,7 +63746,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "PartsBagFancyGold",
-    "PreviewUri": "@previewImages/PartsBagFancyGold.png"
+    "PreviewUri": "PartsBagFancyGold.png"
   },
   "PartsBagFancySilver": {
     "DisplayName": "Parts Bag, Fancy, Silver",
@@ -63776,7 +63776,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "PartsBagFancySilver",
-    "PreviewUri": "@previewImages/PartsBagFancySilver.png"
+    "PreviewUri": "PartsBagFancySilver.png"
   },
   "PartsBagLargeBlack": {
     "DisplayName": "Parts Bag, Large, Black",
@@ -63806,7 +63806,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PartsBagLargeBlack",
-    "PreviewUri": "@previewImages/PartsBagLargeBlack.png"
+    "PreviewUri": "PartsBagLargeBlack.png"
   },
   "PartsBagLargeBlue": {
     "DisplayName": "Parts Bag, Large, Blue",
@@ -63836,7 +63836,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PartsBagLargeBlue",
-    "PreviewUri": "@previewImages/PartsBagLargeBlue.png"
+    "PreviewUri": "PartsBagLargeBlue.png"
   },
   "PartsBagLargeRed": {
     "DisplayName": "Parts Bag, Large, Red",
@@ -63866,7 +63866,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PartsBagLargeRed",
-    "PreviewUri": "@previewImages/PartsBagLargeRed.png"
+    "PreviewUri": "PartsBagLargeRed.png"
   },
   "PartsBagMediumBlack": {
     "DisplayName": "Parts Bag, Medium, Black",
@@ -63896,7 +63896,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PartsBagMediumBlack",
-    "PreviewUri": "@previewImages/PartsBagMediumBlack.png"
+    "PreviewUri": "PartsBagMediumBlack.png"
   },
   "PartsBagMediumBlue": {
     "DisplayName": "Parts Bag, Medium, Blue",
@@ -63926,7 +63926,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PartsBagMediumBlue",
-    "PreviewUri": "@previewImages/PartsBagMediumBlue.png"
+    "PreviewUri": "PartsBagMediumBlue.png"
   },
   "PartsBagMediumBrown": {
     "DisplayName": "Parts Bag, Medium, Brown",
@@ -63956,7 +63956,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "PartsBagMediumBrown",
-    "PreviewUri": "@previewImages/PartsBagMediumBrown.png"
+    "PreviewUri": "PartsBagMediumBrown.png"
   },
   "PartsBagMediumGreen": {
     "DisplayName": "Parts Bag, Medium, Green",
@@ -63986,7 +63986,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PartsBagMediumGreen",
-    "PreviewUri": "@previewImages/PartsBagMediumGreen.png"
+    "PreviewUri": "PartsBagMediumGreen.png"
   },
   "PartsBagMediumGray": {
     "DisplayName": "Parts Bag, Medium, Gray",
@@ -64016,7 +64016,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "PartsBagMediumGray",
-    "PreviewUri": "@previewImages/PartsBagMediumGray.png"
+    "PreviewUri": "PartsBagMediumGray.png"
   },
   "PartsBagMediumPurple": {
     "DisplayName": "Parts Bag, Medium, Purple",
@@ -64046,7 +64046,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PartsBagMediumPurple",
-    "PreviewUri": "@previewImages/PartsBagMediumPurple.png"
+    "PreviewUri": "PartsBagMediumPurple.png"
   },
   "PartsBagMediumRed": {
     "DisplayName": "Parts Bag, Medium, Red",
@@ -64076,7 +64076,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PartsBagMediumRed",
-    "PreviewUri": "@previewImages/PartsBagMediumRed.png"
+    "PreviewUri": "PartsBagMediumRed.png"
   },
   "PartsBagSmallBlack": {
     "DisplayName": "Parts Bag, Small, Black",
@@ -64106,7 +64106,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PartsBagSmallBlack",
-    "PreviewUri": "@previewImages/PartsBagSmallBlack.png"
+    "PreviewUri": "PartsBagSmallBlack.png"
   },
   "PartsBagSmallBlue": {
     "DisplayName": "Parts Bag, Small, Blue",
@@ -64136,7 +64136,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PartsBagSmallBlue",
-    "PreviewUri": "@previewImages/PartsBagSmallBlue.png"
+    "PreviewUri": "PartsBagSmallBlue.png"
   },
   "PartsBagSmallBrown": {
     "DisplayName": "Parts Bag, Small, Brown",
@@ -64166,7 +64166,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "PartsBagSmallBrown",
-    "PreviewUri": "@previewImages/PartsBagSmallBrown.png"
+    "PreviewUri": "PartsBagSmallBrown.png"
   },
   "PartsBagSmallGray": {
     "DisplayName": "Parts Bag, Small, Gray",
@@ -64196,7 +64196,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "PartsBagSmallGray",
-    "PreviewUri": "@previewImages/PartsBagSmallGray.png"
+    "PreviewUri": "PartsBagSmallGray.png"
   },
   "PartsBagSmallGreen": {
     "DisplayName": "Parts Bag, Small, Green",
@@ -64226,7 +64226,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PartsBagSmallGreen",
-    "PreviewUri": "@previewImages/PartsBagSmallGreen.png"
+    "PreviewUri": "PartsBagSmallGreen.png"
   },
   "PartsBagSmallPurple": {
     "DisplayName": "Parts Bag, Small, Purple",
@@ -64256,7 +64256,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PartsBagSmallPurple",
-    "PreviewUri": "@previewImages/PartsBagSmallPurple.png"
+    "PreviewUri": "PartsBagSmallPurple.png"
   },
   "PartsBagSmallRed": {
     "DisplayName": "Parts Bag, Small, Red",
@@ -64286,7 +64286,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PartsBagSmallRed",
-    "PreviewUri": "@previewImages/PartsBagSmallRed.png"
+    "PreviewUri": "PartsBagSmallRed.png"
   },
   "PartsBagTallBlack": {
     "DisplayName": "Parts Bag, Tall, Black",
@@ -64316,7 +64316,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PartsBagTallBlack",
-    "PreviewUri": "@previewImages/PartsBagTallBlack.png"
+    "PreviewUri": "PartsBagTallBlack.png"
   },
   "PartsBowl70mm": {
     "DisplayName": "Parts Bowl, 70mm",
@@ -64344,7 +64344,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "PartsBowl70mm",
-    "PreviewUri": "@previewImages/PartsBowl70mm.png"
+    "PreviewUri": "PartsBowl70mm.png"
   },
   "PartsTray": {
     "DisplayName": "Parts Tray",
@@ -64368,7 +64368,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PartsTray",
-    "PreviewUri": "@previewImages/PartsTray.png"
+    "PreviewUri": "PartsTray.png"
   },
   "PeasantPurple": {
     "DisplayName": "Peasant, Purple",
@@ -64400,7 +64400,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PeasantPurple",
-    "PreviewUri": "@previewImages/PeasantPurple.png"
+    "PreviewUri": "PeasantPurple.png"
   },
   "PegPawnBlack": {
     "DisplayName": "Peg Pawn, Black",
@@ -64424,7 +64424,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PegPawnBlack",
-    "PreviewUri": "@previewImages/PegPawnBlack.png"
+    "PreviewUri": "PegPawnBlack.png"
   },
   "PegPawnBlue": {
     "DisplayName": "Peg Pawn, Blue",
@@ -64448,7 +64448,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PegPawnBlue",
-    "PreviewUri": "@previewImages/PegPawnBlue.png"
+    "PreviewUri": "PegPawnBlue.png"
   },
   "PegPawnGreen": {
     "DisplayName": "Peg Pawn, Green",
@@ -64472,7 +64472,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PegPawnGreen",
-    "PreviewUri": "@previewImages/PegPawnGreen.png"
+    "PreviewUri": "PegPawnGreen.png"
   },
   "PegPawnOrange": {
     "DisplayName": "Peg Pawn, Orange",
@@ -64496,7 +64496,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "PegPawnOrange",
-    "PreviewUri": "@previewImages/PegPawnOrange.png"
+    "PreviewUri": "PegPawnOrange.png"
   },
   "PegPawnPurple": {
     "DisplayName": "Peg Pawn, Purple",
@@ -64520,7 +64520,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PegPawnPurple",
-    "PreviewUri": "@previewImages/PegPawnPurple.png"
+    "PreviewUri": "PegPawnPurple.png"
   },
   "PegPawnRed": {
     "DisplayName": "Peg Pawn, Red",
@@ -64544,7 +64544,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PegPawnRed",
-    "PreviewUri": "@previewImages/PegPawnRed.png"
+    "PreviewUri": "PegPawnRed.png"
   },
   "PegPawnWhite": {
     "DisplayName": "Peg Pawn, White",
@@ -64568,7 +64568,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PegPawnWhite",
-    "PreviewUri": "@previewImages/PegPawnWhite.png"
+    "PreviewUri": "PegPawnWhite.png"
   },
   "PegPawnYellow": {
     "DisplayName": "Peg Pawn, Yellow",
@@ -64592,7 +64592,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "PegPawnYellow",
-    "PreviewUri": "@previewImages/PegPawnYellow.png"
+    "PreviewUri": "PegPawnYellow.png"
   },
   "Pencil": {
     "DisplayName": "Pencil",
@@ -64621,7 +64621,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Pencil",
-    "PreviewUri": "@previewImages/Pencil.png"
+    "PreviewUri": "Pencil.png"
   },
   "Pentagram": {
     "DisplayName": "Pentagram",
@@ -64642,7 +64642,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Pentagram",
-    "PreviewUri": "@previewImages/Pentagram.png"
+    "PreviewUri": "Pentagram.png"
   },
   "PeopleBlack": {
     "DisplayName": "People, Black",
@@ -64671,7 +64671,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PeopleBlack",
-    "PreviewUri": "@previewImages/PeopleBlack.png"
+    "PreviewUri": "PeopleBlack.png"
   },
   "PeopleBlue": {
     "DisplayName": "People, Blue",
@@ -64700,7 +64700,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PeopleBlue",
-    "PreviewUri": "@previewImages/PeopleBlue.png"
+    "PreviewUri": "PeopleBlue.png"
   },
   "PeopleGreen": {
     "DisplayName": "People, Green",
@@ -64729,7 +64729,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PeopleGreen",
-    "PreviewUri": "@previewImages/PeopleGreen.png"
+    "PreviewUri": "PeopleGreen.png"
   },
   "PeopleOrange": {
     "DisplayName": "People, Orange",
@@ -64758,7 +64758,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "PeopleOrange",
-    "PreviewUri": "@previewImages/PeopleOrange.png"
+    "PreviewUri": "PeopleOrange.png"
   },
   "PeoplePurple": {
     "DisplayName": "People, Purple",
@@ -64787,7 +64787,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PeoplePurple",
-    "PreviewUri": "@previewImages/PeoplePurple.png"
+    "PreviewUri": "PeoplePurple.png"
   },
   "PeopleRed": {
     "DisplayName": "People, Red",
@@ -64816,7 +64816,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PeopleRed",
-    "PreviewUri": "@previewImages/PeopleRed.png"
+    "PreviewUri": "PeopleRed.png"
   },
   "PeopleThickGreen": {
     "DisplayName": "People, Thick, Green",
@@ -64845,7 +64845,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PeopleThickGreen",
-    "PreviewUri": "@previewImages/PeopleThickGreen.png"
+    "PreviewUri": "PeopleThickGreen.png"
   },
   "PeopleThickPurple": {
     "DisplayName": "People, Thick, Purple",
@@ -64874,7 +64874,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PeopleThickPurple",
-    "PreviewUri": "@previewImages/PeopleThickPurple.png"
+    "PreviewUri": "PeopleThickPurple.png"
   },
   "PeopleWhite": {
     "DisplayName": "People, White",
@@ -64903,7 +64903,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PeopleWhite",
-    "PreviewUri": "@previewImages/PeopleWhite.png"
+    "PreviewUri": "PeopleWhite.png"
   },
   "PeopleYellow": {
     "DisplayName": "People, Yellow",
@@ -64932,7 +64932,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "PeopleYellow",
-    "PreviewUri": "@previewImages/PeopleYellow.png"
+    "PreviewUri": "PeopleYellow.png"
   },
   "PerniciousPuzzle#1": {
     "DisplayName": "Pernicious Puzzle #1",
@@ -64952,7 +64952,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "PerniciousPuzzle#1",
-    "PreviewUri": "@previewImages/PerniciousPuzzle#1.png"
+    "PreviewUri": "PerniciousPuzzle#1.png"
   },
   "PersonwithHatTeal": {
     "DisplayName": "Person with Hat, Teal",
@@ -64989,7 +64989,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "teal",
     "IsDisabled": false,
     "Key": "PersonwithHatTeal",
-    "PreviewUri": "@previewImages/PersonwithHatTeal.png"
+    "PreviewUri": "PersonwithHatTeal.png"
   },
   "PigMiniBlackandWhite": {
     "DisplayName": "Pig, Mini, Black and White",
@@ -65023,7 +65023,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PigMiniBlackandWhite",
-    "PreviewUri": "@previewImages/PigMiniBlackandWhite.png"
+    "PreviewUri": "PigMiniBlackandWhite.png"
   },
   "PigMiniBrown": {
     "DisplayName": "Pig, Mini, Brown",
@@ -65057,7 +65057,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "PigMiniBrown",
-    "PreviewUri": "@previewImages/PigMiniBrown.png"
+    "PreviewUri": "PigMiniBrown.png"
   },
   "PigMiniPink": {
     "DisplayName": "Pig, Mini, Pink",
@@ -65091,7 +65091,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "PigMiniPink",
-    "PreviewUri": "@previewImages/PigMiniPink.png"
+    "PreviewUri": "PigMiniPink.png"
   },
   "PigTB15Black": {
     "DisplayName": "Pig, TB15, Black",
@@ -65115,7 +65115,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PigTB15Black",
-    "PreviewUri": "@previewImages/PigTB15Black.png"
+    "PreviewUri": "PigTB15Black.png"
   },
   "PigTB15Blue": {
     "DisplayName": "Pig, TB15, Blue",
@@ -65139,7 +65139,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PigTB15Blue",
-    "PreviewUri": "@previewImages/PigTB15Blue.png"
+    "PreviewUri": "PigTB15Blue.png"
   },
   "PigTB15Green": {
     "DisplayName": "Pig, TB15, Green",
@@ -65163,7 +65163,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PigTB15Green",
-    "PreviewUri": "@previewImages/PigTB15Green.png"
+    "PreviewUri": "PigTB15Green.png"
   },
   "PigTB15Orange": {
     "DisplayName": "Pig, TB15, Orange",
@@ -65187,7 +65187,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "PigTB15Orange",
-    "PreviewUri": "@previewImages/PigTB15Orange.png"
+    "PreviewUri": "PigTB15Orange.png"
   },
   "PigTB15Purple": {
     "DisplayName": "Pig, TB15, Purple",
@@ -65211,7 +65211,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PigTB15Purple",
-    "PreviewUri": "@previewImages/PigTB15Purple.png"
+    "PreviewUri": "PigTB15Purple.png"
   },
   "PigTB15Red": {
     "DisplayName": "Pig, TB15, Red",
@@ -65235,7 +65235,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PigTB15Red",
-    "PreviewUri": "@previewImages/PigTB15Red.png"
+    "PreviewUri": "PigTB15Red.png"
   },
   "PigTB15White": {
     "DisplayName": "Pig, TB15, White",
@@ -65259,7 +65259,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PigTB15White",
-    "PreviewUri": "@previewImages/PigTB15White.png"
+    "PreviewUri": "PigTB15White.png"
   },
   "PigTB15Yellow": {
     "DisplayName": "Pig, TB15, Yellow",
@@ -65283,7 +65283,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "PigTB15Yellow",
-    "PreviewUri": "@previewImages/PigTB15Yellow.png"
+    "PreviewUri": "PigTB15Yellow.png"
   },
   "PigWoodBlack": {
     "DisplayName": "Pig, Wood, Black",
@@ -65317,7 +65317,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PigWoodBlack",
-    "PreviewUri": "@previewImages/PigWoodBlack.png"
+    "PreviewUri": "PigWoodBlack.png"
   },
   "PigWoodPink": {
     "DisplayName": "Pig, Wood, Pink",
@@ -65351,7 +65351,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "PigWoodPink",
-    "PreviewUri": "@previewImages/PigWoodPink.png"
+    "PreviewUri": "PigWoodPink.png"
   },
   "PigfaceOrcHalberdFantasyTB25": {
     "DisplayName": "Pigface Orc Halberd, Fantasy, TB25",
@@ -65375,7 +65375,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PigfaceOrcHalberdFantasyTB25",
-    "PreviewUri": "@previewImages/PigfaceOrcHalberdFantasyTB25.png"
+    "PreviewUri": "PigfaceOrcHalberdFantasyTB25.png"
   },
   "PinheadtheBarbarian": {
     "DisplayName": "Pinhead the Barbarian",
@@ -65408,7 +65408,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "PinheadtheBarbarian",
-    "PreviewUri": "@previewImages/PinheadtheBarbarian.png"
+    "PreviewUri": "PinheadtheBarbarian.png"
   },
   "Pirate1FantasyTB25": {
     "DisplayName": "Pirate 1, Fantasy, TB25",
@@ -65432,7 +65432,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Pirate1FantasyTB25",
-    "PreviewUri": "@previewImages/Pirate1FantasyTB25.png"
+    "PreviewUri": "Pirate1FantasyTB25.png"
   },
   "Pirate2FemaleFantasyTB25": {
     "DisplayName": "Pirate 2, Female, Fantasy, TB25",
@@ -65455,7 +65455,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Pirate2FemaleFantasyTB25",
-    "PreviewUri": "@previewImages/Pirate2FemaleFantasyTB25.png"
+    "PreviewUri": "Pirate2FemaleFantasyTB25.png"
   },
   "Pirate3FantasyTB25": {
     "DisplayName": "Pirate 3, Fantasy, TB25",
@@ -65479,7 +65479,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Pirate3FantasyTB25",
-    "PreviewUri": "@previewImages/Pirate3FantasyTB25.png"
+    "PreviewUri": "Pirate3FantasyTB25.png"
   },
   "Pirate4FantasyTB25": {
     "DisplayName": "Pirate 4, Fantasy, TB25",
@@ -65503,7 +65503,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Pirate4FantasyTB25",
-    "PreviewUri": "@previewImages/Pirate4FantasyTB25.png"
+    "PreviewUri": "Pirate4FantasyTB25.png"
   },
   "PirateBlue-CharacterMeeple": {
     "DisplayName": "Pirate, Blue, Character Meeple",
@@ -65534,7 +65534,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PirateBlue-CharacterMeeple",
-    "PreviewUri": "@previewImages/PirateBlue-CharacterMeeple.png"
+    "PreviewUri": "PirateBlue-CharacterMeeple.png"
   },
   "PirateGreen-CharacterMeeple": {
     "DisplayName": "Pirate, Green, Character Meeple",
@@ -65565,7 +65565,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PirateGreen-CharacterMeeple",
-    "PreviewUri": "@previewImages/PirateGreen-CharacterMeeple.png"
+    "PreviewUri": "PirateGreen-CharacterMeeple.png"
   },
   "PirateOrange-CharacterMeeple": {
     "DisplayName": "Pirate, Orange, Character Meeple",
@@ -65596,7 +65596,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "PirateOrange-CharacterMeeple",
-    "PreviewUri": "@previewImages/PirateOrange-CharacterMeeple.png"
+    "PreviewUri": "PirateOrange-CharacterMeeple.png"
   },
   "PiratePurple-CharacterMeeple": {
     "DisplayName": "Pirate, Purple, Character Meeple",
@@ -65627,7 +65627,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PiratePurple-CharacterMeeple",
-    "PreviewUri": "@previewImages/PiratePurple-CharacterMeeple.png"
+    "PreviewUri": "PiratePurple-CharacterMeeple.png"
   },
   "PirateRed-CharacterMeeple": {
     "DisplayName": "Pirate, Red, Character Meeple",
@@ -65658,7 +65658,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PirateRed-CharacterMeeple",
-    "PreviewUri": "@previewImages/PirateRed-CharacterMeeple.png"
+    "PreviewUri": "PirateRed-CharacterMeeple.png"
   },
   "PirateYellow-CharacterMeeple": {
     "DisplayName": "Pirate, Yellow, Character Meeple",
@@ -65689,7 +65689,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "PirateYellow-CharacterMeeple",
-    "PreviewUri": "@previewImages/PirateYellow-CharacterMeeple.png"
+    "PreviewUri": "PirateYellow-CharacterMeeple.png"
   },
   "PitFiendFantasyTB50": {
     "DisplayName": "Pit Fiend, Fantasy, TB50",
@@ -65715,7 +65715,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PitFiendFantasyTB50",
-    "PreviewUri": "@previewImages/PitFiendFantasyTB50.png"
+    "PreviewUri": "PitFiendFantasyTB50.png"
   },
   "PizzaDiscYellow": {
     "DisplayName": "Pizza Disc, Yellow",
@@ -65759,7 +65759,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "PizzaDiscYellow",
-    "PreviewUri": "@previewImages/PizzaDiscYellow.png"
+    "PreviewUri": "PizzaDiscYellow.png"
   },
   "PlasticCastleRed": {
     "DisplayName": "Plastic Castle, Red",
@@ -65790,7 +65790,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PlasticCastleRed",
-    "PreviewUri": "@previewImages/PlasticCastleRed.png"
+    "PreviewUri": "PlasticCastleRed.png"
   },
   "PokerChip19mmFancyBlack": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Black",
@@ -65815,7 +65815,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PokerChip19mmFancyBlack",
-    "PreviewUri": "@previewImages/PokerChip19mmFancyBlack.png"
+    "PreviewUri": "PokerChip19mmFancyBlack.png"
   },
   "PokerChip19mmFancyBlue": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Blue",
@@ -65840,7 +65840,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PokerChip19mmFancyBlue",
-    "PreviewUri": "@previewImages/PokerChip19mmFancyBlue.png"
+    "PreviewUri": "PokerChip19mmFancyBlue.png"
   },
   "PokerChip19mmFancyGreen": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Green",
@@ -65865,7 +65865,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PokerChip19mmFancyGreen",
-    "PreviewUri": "@previewImages/PokerChip19mmFancyGreen.png"
+    "PreviewUri": "PokerChip19mmFancyGreen.png"
   },
   "PokerChip19mmFancyPurple": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Purple",
@@ -65890,7 +65890,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PokerChip19mmFancyPurple",
-    "PreviewUri": "@previewImages/PokerChip19mmFancyPurple.png"
+    "PreviewUri": "PokerChip19mmFancyPurple.png"
   },
   "PokerChip19mmFancyRed": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Red",
@@ -65915,7 +65915,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PokerChip19mmFancyRed",
-    "PreviewUri": "@previewImages/PokerChip19mmFancyRed.png"
+    "PreviewUri": "PokerChip19mmFancyRed.png"
   },
   "PokerChip19mmFancyYellow": {
     "DisplayName": "Poker Chip, 19mm, Fancy, Yellow",
@@ -65940,7 +65940,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "PokerChip19mmFancyYellow",
-    "PreviewUri": "@previewImages/PokerChip19mmFancyYellow.png"
+    "PreviewUri": "PokerChip19mmFancyYellow.png"
   },
   "PokerChipBlack": {
     "DisplayName": "Poker Chip, Black",
@@ -65965,7 +65965,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PokerChipBlack",
-    "PreviewUri": "@previewImages/PokerChipBlack.png"
+    "PreviewUri": "PokerChipBlack.png"
   },
   "PokerChipBlue": {
     "DisplayName": "Poker Chip, Blue",
@@ -65990,7 +65990,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PokerChipBlue",
-    "PreviewUri": "@previewImages/PokerChipBlue.png"
+    "PreviewUri": "PokerChipBlue.png"
   },
   "PokerChipGreen": {
     "DisplayName": "Poker Chip, Green",
@@ -66015,7 +66015,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PokerChipGreen",
-    "PreviewUri": "@previewImages/PokerChipGreen.png"
+    "PreviewUri": "PokerChipGreen.png"
   },
   "PokerChipLightBlue": {
     "DisplayName": "Poker Chip, Light Blue",
@@ -66041,7 +66041,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "lightblue",
     "IsDisabled": false,
     "Key": "PokerChipLightBlue",
-    "PreviewUri": "@previewImages/PokerChipLightBlue.png"
+    "PreviewUri": "PokerChipLightBlue.png"
   },
   "PokerChipOrange": {
     "DisplayName": "Poker Chip, Orange",
@@ -66066,7 +66066,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "PokerChipOrange",
-    "PreviewUri": "@previewImages/PokerChipOrange.png"
+    "PreviewUri": "PokerChipOrange.png"
   },
   "PokerChipPurple": {
     "DisplayName": "Poker Chip, Purple",
@@ -66091,7 +66091,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PokerChipPurple",
-    "PreviewUri": "@previewImages/PokerChipPurple.png"
+    "PreviewUri": "PokerChipPurple.png"
   },
   "PokerChipRed": {
     "DisplayName": "Poker Chip, Red",
@@ -66116,7 +66116,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PokerChipRed",
-    "PreviewUri": "@previewImages/PokerChipRed.png"
+    "PreviewUri": "PokerChipRed.png"
   },
   "PokerChipWhite": {
     "DisplayName": "Poker Chip, White",
@@ -66141,7 +66141,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PokerChipWhite",
-    "PreviewUri": "@previewImages/PokerChipWhite.png"
+    "PreviewUri": "PokerChipWhite.png"
   },
   "PokerChipYellow": {
     "DisplayName": "Poker Chip, Yellow",
@@ -66166,7 +66166,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "PokerChipYellow",
-    "PreviewUri": "@previewImages/PokerChipYellow.png"
+    "PreviewUri": "PokerChipYellow.png"
   },
   "PolarBear": {
     "DisplayName": "Polar Bear",
@@ -66192,7 +66192,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PolarBear",
-    "PreviewUri": "@previewImages/PolarBear.png"
+    "PreviewUri": "PolarBear.png"
   },
   "Police-CharacterMeeple": {
     "DisplayName": "Police, Character Meeple",
@@ -66228,7 +66228,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Police-CharacterMeeple",
-    "PreviewUri": "@previewImages/Police-CharacterMeeple.png"
+    "PreviewUri": "Police-CharacterMeeple.png"
   },
   "PremiumApple": {
     "DisplayName": "Premium Apple",
@@ -66256,7 +66256,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PremiumApple",
-    "PreviewUri": "@previewImages/PremiumApple.png"
+    "PreviewUri": "PremiumApple.png"
   },
   "PremiumAxe": {
     "DisplayName": "Premium Axe",
@@ -66289,7 +66289,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "PremiumAxe",
-    "PreviewUri": "@previewImages/PremiumAxe.png"
+    "PreviewUri": "PremiumAxe.png"
   },
   "PremiumBarrel": {
     "DisplayName": "Premium Barrel",
@@ -66323,7 +66323,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "PremiumBarrel",
-    "PreviewUri": "@previewImages/PremiumBarrel.png"
+    "PreviewUri": "PremiumBarrel.png"
   },
   "PremiumBee": {
     "DisplayName": "Premium Bee",
@@ -66355,7 +66355,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumBee",
-    "PreviewUri": "@previewImages/PremiumBee.png"
+    "PreviewUri": "PremiumBee.png"
   },
   "PremiumBlueClothBundle": {
     "DisplayName": "Premium Blue Cloth Bundle",
@@ -66383,7 +66383,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PremiumBlueClothBundle",
-    "PreviewUri": "@previewImages/PremiumBlueClothBundle.png"
+    "PreviewUri": "PremiumBlueClothBundle.png"
   },
   "PremiumBrain": {
     "DisplayName": "Premium Brain",
@@ -66424,7 +66424,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "PremiumBrain",
-    "PreviewUri": "@previewImages/PremiumBrain.png"
+    "PreviewUri": "PremiumBrain.png"
   },
   "PremiumBread": {
     "DisplayName": "Premium Bread",
@@ -66458,7 +66458,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "PremiumBread",
-    "PreviewUri": "@previewImages/PremiumBread.png"
+    "PreviewUri": "PremiumBread.png"
   },
   "PremiumBrick": {
     "DisplayName": "Premium Brick",
@@ -66488,7 +66488,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PremiumBrick",
-    "PreviewUri": "@previewImages/PremiumBrick.png"
+    "PreviewUri": "PremiumBrick.png"
   },
   "PremiumBrownSpiceSack": {
     "DisplayName": "Premium Brown Spice Sack",
@@ -66517,7 +66517,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "PremiumBrownSpiceSack",
-    "PreviewUri": "@previewImages/PremiumBrownSpiceSack.png"
+    "PreviewUri": "PremiumBrownSpiceSack.png"
   },
   "PremiumBuckler": {
     "DisplayName": "Premium Buckler",
@@ -66545,7 +66545,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumBuckler",
-    "PreviewUri": "@previewImages/PremiumBuckler.png"
+    "PreviewUri": "PremiumBuckler.png"
   },
   "PremiumCampfire": {
     "DisplayName": "Premium Campfire",
@@ -66571,7 +66571,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "wood",
     "IsDisabled": false,
     "Key": "PremiumCampfire",
-    "PreviewUri": "@previewImages/PremiumCampfire.png"
+    "PreviewUri": "PremiumCampfire.png"
   },
   "PremiumCinderBlock": {
     "DisplayName": "Premium Cinder Block",
@@ -66599,7 +66599,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "PremiumCinderBlock",
-    "PreviewUri": "@previewImages/PremiumCinderBlock.png"
+    "PreviewUri": "PremiumCinderBlock.png"
   },
   "PremiumCoal": {
     "DisplayName": "Premium Coal",
@@ -66631,7 +66631,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PremiumCoal",
-    "PreviewUri": "@previewImages/PremiumCoal.png"
+    "PreviewUri": "PremiumCoal.png"
   },
   "PremiumCopperIngot": {
     "DisplayName": "Premium Copper Ingot",
@@ -66664,7 +66664,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "PremiumCopperIngot",
-    "PreviewUri": "@previewImages/PremiumCopperIngot.png"
+    "PreviewUri": "PremiumCopperIngot.png"
   },
   "PremiumCorn": {
     "DisplayName": "Premium Corn",
@@ -66693,7 +66693,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumCorn",
-    "PreviewUri": "@previewImages/PremiumCorn.png"
+    "PreviewUri": "PremiumCorn.png"
   },
   "PremiumCow": {
     "DisplayName": "Premium Cow",
@@ -66719,7 +66719,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumCow",
-    "PreviewUri": "@previewImages/PremiumCow.png"
+    "PreviewUri": "PremiumCow.png"
   },
   "PremiumCrate": {
     "DisplayName": "Premium Crate",
@@ -66747,7 +66747,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumCrate",
-    "PreviewUri": "@previewImages/PremiumCrate.png"
+    "PreviewUri": "PremiumCrate.png"
   },
   "PremiumDog": {
     "DisplayName": "Premium Dog",
@@ -66777,7 +66777,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "PremiumDog",
-    "PreviewUri": "@previewImages/PremiumDog.png"
+    "PreviewUri": "PremiumDog.png"
   },
   "PremiumEnergyCell": {
     "DisplayName": "Premium Energy Cell",
@@ -66808,7 +66808,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumEnergyCell",
-    "PreviewUri": "@previewImages/PremiumEnergyCell.png"
+    "PreviewUri": "PremiumEnergyCell.png"
   },
   "PremiumFish": {
     "DisplayName": "Premium Fish",
@@ -66847,7 +66847,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "salmon",
     "IsDisabled": false,
     "Key": "PremiumFish",
-    "PreviewUri": "@previewImages/PremiumFish.png"
+    "PreviewUri": "PremiumFish.png"
   },
   "PremiumFurBundle": {
     "DisplayName": "Premium Fur Bundle",
@@ -66871,7 +66871,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumFurBundle",
-    "PreviewUri": "@previewImages/PremiumFurBundle.png"
+    "PreviewUri": "PremiumFurBundle.png"
   },
   "PremiumGoldIngot": {
     "DisplayName": "Premium Gold Ingot",
@@ -66914,7 +66914,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "PremiumGoldIngot",
-    "PreviewUri": "@previewImages/PremiumGoldIngot.png"
+    "PreviewUri": "PremiumGoldIngot.png"
   },
   "PremiumGoldNugget": {
     "DisplayName": "Premium Gold Nugget",
@@ -66958,7 +66958,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "PremiumGoldNugget",
-    "PreviewUri": "@previewImages/PremiumGoldNugget.png"
+    "PreviewUri": "PremiumGoldNugget.png"
   },
   "PremiumGrainSack": {
     "DisplayName": "Premium Grain Sack",
@@ -66982,7 +66982,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumGrainSack",
-    "PreviewUri": "@previewImages/PremiumGrainSack.png"
+    "PreviewUri": "PremiumGrainSack.png"
   },
   "PremiumGreenSpiceSack": {
     "DisplayName": "Premium Green Spice Sack",
@@ -67012,7 +67012,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PremiumGreenSpiceSack",
-    "PreviewUri": "@previewImages/PremiumGreenSpiceSack.png"
+    "PreviewUri": "PremiumGreenSpiceSack.png"
   },
   "PremiumHeart": {
     "DisplayName": "Premium Heart",
@@ -67047,7 +67047,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PremiumHeart",
-    "PreviewUri": "@previewImages/PremiumHeart.png"
+    "PreviewUri": "PremiumHeart.png"
   },
   "PremiumHorse": {
     "DisplayName": "Premium Horse",
@@ -67083,7 +67083,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "PremiumHorse",
-    "PreviewUri": "@previewImages/PremiumHorse.png"
+    "PreviewUri": "PremiumHorse.png"
   },
   "PremiumIronIngot": {
     "DisplayName": "Premium Iron Ingot",
@@ -67122,7 +67122,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "PremiumIronIngot",
-    "PreviewUri": "@previewImages/PremiumIronIngot.png"
+    "PreviewUri": "PremiumIronIngot.png"
   },
   "PremiumLeatherBag": {
     "DisplayName": "Premium Leather Bag",
@@ -67153,7 +67153,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "PremiumLeatherBag",
-    "PreviewUri": "@previewImages/PremiumLeatherBag.png"
+    "PreviewUri": "PremiumLeatherBag.png"
   },
   "PremiumLeatherScroll": {
     "DisplayName": "Premium Leather Scroll",
@@ -67180,7 +67180,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "PremiumLeatherScroll",
-    "PreviewUri": "@previewImages/PremiumLeatherScroll.png"
+    "PreviewUri": "PremiumLeatherScroll.png"
   },
   "PremiumLPGasCan": {
     "DisplayName": "Premium LP Gas Can",
@@ -67210,7 +67210,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PremiumLPGasCan",
-    "PreviewUri": "@previewImages/PremiumLPGasCan.png"
+    "PreviewUri": "PremiumLPGasCan.png"
   },
   "PremiumMagnifyingGlass": {
     "DisplayName": "Premium Magnifying Glass",
@@ -67243,7 +67243,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "PremiumMagnifyingGlass",
-    "PreviewUri": "@previewImages/PremiumMagnifyingGlass.png"
+    "PreviewUri": "PremiumMagnifyingGlass.png"
   },
   "PremiumMarbleTile": {
     "DisplayName": "Premium Marble Tile",
@@ -67270,7 +67270,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PremiumMarbleTile",
-    "PreviewUri": "@previewImages/PremiumMarbleTile.png"
+    "PreviewUri": "PremiumMarbleTile.png"
   },
   "PremiumOilDrum": {
     "DisplayName": "Premium Oil Drum",
@@ -67297,7 +67297,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PremiumOilDrum",
-    "PreviewUri": "@previewImages/PremiumOilDrum.png"
+    "PreviewUri": "PremiumOilDrum.png"
   },
   "PremiumOrangeClothBundle": {
     "DisplayName": "Premium Orange Cloth Bundle",
@@ -67326,7 +67326,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "PremiumOrangeClothBundle",
-    "PreviewUri": "@previewImages/PremiumOrangeClothBundle.png"
+    "PreviewUri": "PremiumOrangeClothBundle.png"
   },
   "PremiumOre": {
     "DisplayName": "Premium Ore",
@@ -67358,7 +67358,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "PremiumOre",
-    "PreviewUri": "@previewImages/PremiumOre.png"
+    "PreviewUri": "PremiumOre.png"
   },
   "PremiumPinkPig": {
     "DisplayName": "Premium Pink Pig",
@@ -67392,7 +67392,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "PremiumPinkPig",
-    "PreviewUri": "@previewImages/PremiumPinkPig.png"
+    "PreviewUri": "PremiumPinkPig.png"
   },
   "PremiumPotionBottle": {
     "DisplayName": "Premium Potion Bottle",
@@ -67431,7 +67431,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PremiumPotionBottle",
-    "PreviewUri": "@previewImages/PremiumPotionBottle.png"
+    "PreviewUri": "PremiumPotionBottle.png"
   },
   "PremiumPumpkin": {
     "DisplayName": "Premium Pumpkin",
@@ -67456,7 +67456,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "PremiumPumpkin",
-    "PreviewUri": "@previewImages/PremiumPumpkin.png"
+    "PreviewUri": "PremiumPumpkin.png"
   },
   "PremiumPurpleClothBundle": {
     "DisplayName": "Premium Purple Cloth Bundle",
@@ -67484,7 +67484,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PremiumPurpleClothBundle",
-    "PreviewUri": "@previewImages/PremiumPurpleClothBundle.png"
+    "PreviewUri": "PremiumPurpleClothBundle.png"
   },
   "PremiumRedSpiceSack": {
     "DisplayName": "Premium Red Spice Sack",
@@ -67512,7 +67512,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PremiumRedSpiceSack",
-    "PreviewUri": "@previewImages/PremiumRedSpiceSack.png"
+    "PreviewUri": "PremiumRedSpiceSack.png"
   },
   "PremiumSealedScroll": {
     "DisplayName": "Premium Sealed Scroll",
@@ -67542,7 +67542,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumSealedScroll",
-    "PreviewUri": "@previewImages/PremiumSealedScroll.png"
+    "PreviewUri": "PremiumSealedScroll.png"
   },
   "PremiumSheep": {
     "DisplayName": "Premium Sheep",
@@ -67571,7 +67571,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PremiumSheep",
-    "PreviewUri": "@previewImages/PremiumSheep.png"
+    "PreviewUri": "PremiumSheep.png"
   },
   "PremiumSkull": {
     "DisplayName": "Premium Skull",
@@ -67608,7 +67608,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PremiumSkull",
-    "PreviewUri": "@previewImages/PremiumSkull.png"
+    "PreviewUri": "PremiumSkull.png"
   },
   "PremiumSpaceCrate": {
     "DisplayName": "Premium Space Crate",
@@ -67641,7 +67641,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "PremiumSpaceCrate",
-    "PreviewUri": "@previewImages/PremiumSpaceCrate.png"
+    "PreviewUri": "PremiumSpaceCrate.png"
   },
   "PremiumSteak": {
     "DisplayName": "Premium Steak",
@@ -67681,7 +67681,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PremiumSteak",
-    "PreviewUri": "@previewImages/PremiumSteak.png"
+    "PreviewUri": "PremiumSteak.png"
   },
   "PremiumTome": {
     "DisplayName": "Premium Tome",
@@ -67709,7 +67709,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "PremiumTome",
-    "PreviewUri": "@previewImages/PremiumTome.png"
+    "PreviewUri": "PremiumTome.png"
   },
   "PremiumTrashCan": {
     "DisplayName": "Premium Trash Can",
@@ -67737,7 +67737,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "PremiumTrashCan",
-    "PreviewUri": "@previewImages/PremiumTrashCan.png"
+    "PreviewUri": "PremiumTrashCan.png"
   },
   "PremiumTreasureChest": {
     "DisplayName": "Premium Treasure Chest",
@@ -67769,7 +67769,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "PremiumTreasureChest",
-    "PreviewUri": "@previewImages/PremiumTreasureChest.png"
+    "PreviewUri": "PremiumTreasureChest.png"
   },
   "PremiumUraniumRod": {
     "DisplayName": "Premium Uranium Rod",
@@ -67800,7 +67800,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PremiumUraniumRod",
-    "PreviewUri": "@previewImages/PremiumUraniumRod.png"
+    "PreviewUri": "PremiumUraniumRod.png"
   },
   "PremiumWaterBucket": {
     "DisplayName": "Premium Water Bucket",
@@ -67829,7 +67829,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumWaterBucket",
-    "PreviewUri": "@previewImages/PremiumWaterBucket.png"
+    "PreviewUri": "PremiumWaterBucket.png"
   },
   "PremiumWhiteClothBundle": {
     "DisplayName": "Premium White Cloth Bundle",
@@ -67857,7 +67857,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PremiumWhiteClothBundle",
-    "PreviewUri": "@previewImages/PremiumWhiteClothBundle.png"
+    "PreviewUri": "PremiumWhiteClothBundle.png"
   },
   "PremiumWhiteSpiceSack": {
     "DisplayName": "Premium White Spice Sack",
@@ -67885,7 +67885,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PremiumWhiteSpiceSack",
-    "PreviewUri": "@previewImages/PremiumWhiteSpiceSack.png"
+    "PreviewUri": "PremiumWhiteSpiceSack.png"
   },
   "PremiumWood": {
     "DisplayName": "Premium Wood",
@@ -67915,7 +67915,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "PremiumWood",
-    "PreviewUri": "@previewImages/PremiumWood.png"
+    "PreviewUri": "PremiumWood.png"
   },
   "PremiumYarnBall": {
     "DisplayName": "Premium Yarn Ball",
@@ -67945,7 +67945,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumYarnBall",
-    "PreviewUri": "@previewImages/PremiumYarnBall.png"
+    "PreviewUri": "PremiumYarnBall.png"
   },
   "PumpkinWood": {
     "DisplayName": "Pumpkin, Wood",
@@ -67974,7 +67974,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "PumpkinWood",
-    "PreviewUri": "@previewImages/PumpkinWood.png"
+    "PreviewUri": "PumpkinWood.png"
   },
   "PuppyBlacklab": {
     "DisplayName": "Puppy, Black lab",
@@ -68004,7 +68004,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PuppyBlacklab",
-    "PreviewUri": "@previewImages/PuppyBlacklab.png"
+    "PreviewUri": "PuppyBlacklab.png"
   },
   "PuppyBulldog": {
     "DisplayName": "Puppy, Bulldog",
@@ -68034,7 +68034,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PuppyBulldog",
-    "PreviewUri": "@previewImages/PuppyBulldog.png"
+    "PreviewUri": "PuppyBulldog.png"
   },
   "PuppyMutt": {
     "DisplayName": "Puppy, Mutt",
@@ -68064,7 +68064,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PuppyMutt",
-    "PreviewUri": "@previewImages/PuppyMutt.png"
+    "PreviewUri": "PuppyMutt.png"
   },
   "PuppyPoodle": {
     "DisplayName": "Puppy, Poodle",
@@ -68094,7 +68094,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PuppyPoodle",
-    "PreviewUri": "@previewImages/PuppyPoodle.png"
+    "PreviewUri": "PuppyPoodle.png"
   },
   "PuppyTB15Black": {
     "DisplayName": "Puppy, TB15, Black",
@@ -68132,7 +68132,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PuppyTB15Black",
-    "PreviewUri": "@previewImages/PuppyTB15Black.png"
+    "PreviewUri": "PuppyTB15Black.png"
   },
   "PuppyTB15Blue": {
     "DisplayName": "Puppy, TB15, Blue",
@@ -68170,7 +68170,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PuppyTB15Blue",
-    "PreviewUri": "@previewImages/PuppyTB15Blue.png"
+    "PreviewUri": "PuppyTB15Blue.png"
   },
   "PuppyTB15Green": {
     "DisplayName": "Puppy, TB15, Green",
@@ -68208,7 +68208,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PuppyTB15Green",
-    "PreviewUri": "@previewImages/PuppyTB15Green.png"
+    "PreviewUri": "PuppyTB15Green.png"
   },
   "PuppyTB15Orange": {
     "DisplayName": "Puppy, TB15, Orange",
@@ -68246,7 +68246,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "PuppyTB15Orange",
-    "PreviewUri": "@previewImages/PuppyTB15Orange.png"
+    "PreviewUri": "PuppyTB15Orange.png"
   },
   "PuppyTB15Purple": {
     "DisplayName": "Puppy, TB15, Purple",
@@ -68284,7 +68284,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PuppyTB15Purple",
-    "PreviewUri": "@previewImages/PuppyTB15Purple.png"
+    "PreviewUri": "PuppyTB15Purple.png"
   },
   "PuppyTB15Red": {
     "DisplayName": "Puppy, TB15, Red",
@@ -68322,7 +68322,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PuppyTB15Red",
-    "PreviewUri": "@previewImages/PuppyTB15Red.png"
+    "PreviewUri": "PuppyTB15Red.png"
   },
   "PuppyTB15White": {
     "DisplayName": "Puppy, TB15, White",
@@ -68360,7 +68360,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PuppyTB15White",
-    "PreviewUri": "@previewImages/PuppyTB15White.png"
+    "PreviewUri": "PuppyTB15White.png"
   },
   "PuppyTB15Yellow": {
     "DisplayName": "Puppy, TB15, Yellow",
@@ -68398,7 +68398,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "PuppyTB15Yellow",
-    "PreviewUri": "@previewImages/PuppyTB15Yellow.png"
+    "PreviewUri": "PuppyTB15Yellow.png"
   },
   "PuppyTerrier": {
     "DisplayName": "Puppy, Terrier",
@@ -68428,7 +68428,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "PuppyTerrier",
-    "PreviewUri": "@previewImages/PuppyTerrier.png"
+    "PreviewUri": "PuppyTerrier.png"
   },
   "PuppyYellowlab": {
     "DisplayName": "Puppy, Yellow lab",
@@ -68458,7 +68458,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "PuppyYellowlab",
-    "PreviewUri": "@previewImages/PuppyYellowlab.png"
+    "PreviewUri": "PuppyYellowlab.png"
   },
   "PuppyYorkie": {
     "DisplayName": "Puppy, Yorkie",
@@ -68488,7 +68488,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "PuppyYorkie",
-    "PreviewUri": "@previewImages/PuppyYorkie.png"
+    "PreviewUri": "PuppyYorkie.png"
   },
   "PushCartBlack": {
     "DisplayName": "Push Cart, Black",
@@ -68513,7 +68513,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PushCartBlack",
-    "PreviewUri": "@previewImages/PushCartBlack.png"
+    "PreviewUri": "PushCartBlack.png"
   },
   "PushCartBlue": {
     "DisplayName": "Push Cart, Blue",
@@ -68538,7 +68538,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PushCartBlue",
-    "PreviewUri": "@previewImages/PushCartBlue.png"
+    "PreviewUri": "PushCartBlue.png"
   },
   "PushCartGreen": {
     "DisplayName": "Push Cart, Green",
@@ -68563,7 +68563,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PushCartGreen",
-    "PreviewUri": "@previewImages/PushCartGreen.png"
+    "PreviewUri": "PushCartGreen.png"
   },
   "PushCartOrange": {
     "DisplayName": "Push Cart, Orange",
@@ -68588,7 +68588,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "PushCartOrange",
-    "PreviewUri": "@previewImages/PushCartOrange.png"
+    "PreviewUri": "PushCartOrange.png"
   },
   "PushCartPurple": {
     "DisplayName": "Push Cart, Purple",
@@ -68613,7 +68613,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PushCartPurple",
-    "PreviewUri": "@previewImages/PushCartPurple.png"
+    "PreviewUri": "PushCartPurple.png"
   },
   "PushCartRed": {
     "DisplayName": "Push Cart, Red",
@@ -68638,7 +68638,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PushCartRed",
-    "PreviewUri": "@previewImages/PushCartRed.png"
+    "PreviewUri": "PushCartRed.png"
   },
   "PushCartWhite": {
     "DisplayName": "Push Cart, White",
@@ -68663,7 +68663,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PushCartWhite",
-    "PreviewUri": "@previewImages/PushCartWhite.png"
+    "PreviewUri": "PushCartWhite.png"
   },
   "PushCartYellow": {
     "DisplayName": "Push Cart, Yellow",
@@ -68688,7 +68688,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "PushCartYellow",
-    "PreviewUri": "@previewImages/PushCartYellow.png"
+    "PreviewUri": "PushCartYellow.png"
   },
   "PutlerTB25": {
     "DisplayName": "Putler, TB25",
@@ -68713,7 +68713,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "PutlerTB25",
-    "PreviewUri": "@previewImages/PutlerTB25.png"
+    "PreviewUri": "PutlerTB25.png"
   },
   "PyramidBlack": {
     "DisplayName": "Pyramid, Black",
@@ -68743,7 +68743,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PyramidBlack",
-    "PreviewUri": "@previewImages/PyramidBlack.png"
+    "PreviewUri": "PyramidBlack.png"
   },
   "PyramidBlue": {
     "DisplayName": "Pyramid, Blue",
@@ -68773,7 +68773,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PyramidBlue",
-    "PreviewUri": "@previewImages/PyramidBlue.png"
+    "PreviewUri": "PyramidBlue.png"
   },
   "PyramidPurple": {
     "DisplayName": "Pyramid, Purple",
@@ -68803,7 +68803,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PyramidPurple",
-    "PreviewUri": "@previewImages/PyramidPurple.png"
+    "PreviewUri": "PyramidPurple.png"
   },
   "PyramidRed": {
     "DisplayName": "Pyramid, Red",
@@ -68833,7 +68833,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PyramidRed",
-    "PreviewUri": "@previewImages/PyramidRed.png"
+    "PreviewUri": "PyramidRed.png"
   },
   "PyramidWhite": {
     "DisplayName": "Pyramid, White",
@@ -68863,7 +68863,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PyramidWhite",
-    "PreviewUri": "@previewImages/PyramidWhite.png"
+    "PreviewUri": "PyramidWhite.png"
   },
   "PyramidYellow": {
     "DisplayName": "Pyramid, Yellow",
@@ -68893,7 +68893,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "PyramidYellow",
-    "PreviewUri": "@previewImages/PyramidYellow.png"
+    "PreviewUri": "PyramidYellow.png"
   },
   "QubitBlack": {
     "DisplayName": "Qubit, Black",
@@ -68911,7 +68911,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "QubitBlack",
-    "PreviewUri": "@previewImages/QubitBlack.png"
+    "PreviewUri": "QubitBlack.png"
   },
   "QubitBlue": {
     "DisplayName": "Qubit, Blue",
@@ -68929,7 +68929,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "QubitBlue",
-    "PreviewUri": "@previewImages/QubitBlue.png"
+    "PreviewUri": "QubitBlue.png"
   },
   "QubitGreen": {
     "DisplayName": "Qubit, Green",
@@ -68947,7 +68947,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "QubitGreen",
-    "PreviewUri": "@previewImages/QubitGreen.png"
+    "PreviewUri": "QubitGreen.png"
   },
   "QubitOrange": {
     "DisplayName": "Qubit, Orange",
@@ -68965,7 +68965,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "QubitOrange",
-    "PreviewUri": "@previewImages/QubitOrange.png"
+    "PreviewUri": "QubitOrange.png"
   },
   "QubitPurple": {
     "DisplayName": "Qubit, Purple",
@@ -68983,7 +68983,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "QubitPurple",
-    "PreviewUri": "@previewImages/QubitPurple.png"
+    "PreviewUri": "QubitPurple.png"
   },
   "QubitRed": {
     "DisplayName": "Qubit, Red",
@@ -69001,7 +69001,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "QubitRed",
-    "PreviewUri": "@previewImages/QubitRed.png"
+    "PreviewUri": "QubitRed.png"
   },
   "QubitWhite": {
     "DisplayName": "Qubit, White",
@@ -69019,7 +69019,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "QubitWhite",
-    "PreviewUri": "@previewImages/QubitWhite.png"
+    "PreviewUri": "QubitWhite.png"
   },
   "QubitYellow": {
     "DisplayName": "Qubit, Yellow",
@@ -69037,7 +69037,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "QubitYellow",
-    "PreviewUri": "@previewImages/QubitYellow.png"
+    "PreviewUri": "QubitYellow.png"
   },
   "QuestionMark": {
     "DisplayName": "Question Mark",
@@ -69063,7 +69063,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "QuestionMark",
-    "PreviewUri": "@previewImages/QuestionMark.png"
+    "PreviewUri": "QuestionMark.png"
   },
   "RabbitPurple": {
     "DisplayName": "Rabbit, Purple",
@@ -69089,7 +69089,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "RabbitPurple",
-    "PreviewUri": "@previewImages/RabbitPurple.png"
+    "PreviewUri": "RabbitPurple.png"
   },
   "RaceCarBlack": {
     "DisplayName": "Race Car, Black",
@@ -69118,7 +69118,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "RaceCarBlack",
-    "PreviewUri": "@previewImages/RaceCarBlack.png"
+    "PreviewUri": "RaceCarBlack.png"
   },
   "RaceCarBlue": {
     "DisplayName": "Race Car, Blue",
@@ -69146,7 +69146,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": true,
     "Key": "RaceCarBlue",
-    "PreviewUri": "@previewImages/RaceCarBlue.png"
+    "PreviewUri": "RaceCarBlue.png"
   },
   "RaceCarGreen": {
     "DisplayName": "Race Car, Green",
@@ -69175,7 +69175,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "RaceCarGreen",
-    "PreviewUri": "@previewImages/RaceCarGreen.png"
+    "PreviewUri": "RaceCarGreen.png"
   },
   "RaceCarOrange": {
     "DisplayName": "Race Car, Orange",
@@ -69204,7 +69204,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "RaceCarOrange",
-    "PreviewUri": "@previewImages/RaceCarOrange.png"
+    "PreviewUri": "RaceCarOrange.png"
   },
   "RaceCarPurple": {
     "DisplayName": "Race Car, Purple",
@@ -69233,7 +69233,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "RaceCarPurple",
-    "PreviewUri": "@previewImages/RaceCarPurple.png"
+    "PreviewUri": "RaceCarPurple.png"
   },
   "RaceCarRed": {
     "DisplayName": "Race Car, Red",
@@ -69262,7 +69262,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "RaceCarRed",
-    "PreviewUri": "@previewImages/RaceCarRed.png"
+    "PreviewUri": "RaceCarRed.png"
   },
   "RaceCarYellow": {
     "DisplayName": "Race Car, Yellow",
@@ -69291,7 +69291,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "RaceCarYellow",
-    "PreviewUri": "@previewImages/RaceCarYellow.png"
+    "PreviewUri": "RaceCarYellow.png"
   },
   "RadiationMask": {
     "DisplayName": "Radiation Mask",
@@ -69318,7 +69318,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "RadiationMask",
-    "PreviewUri": "@previewImages/RadiationMask.png"
+    "PreviewUri": "RadiationMask.png"
   },
   "RangerArcherFantasyTB25": {
     "DisplayName": "Ranger Archer, Fantasy, TB25",
@@ -69358,7 +69358,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "RangerArcherFantasyTB25",
-    "PreviewUri": "@previewImages/RangerArcherFantasyTB25.png"
+    "PreviewUri": "RangerArcherFantasyTB25.png"
   },
   "RangerFiringBow": {
     "DisplayName": "Ranger Firing Bow",
@@ -69397,7 +69397,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "RangerFiringBow",
-    "PreviewUri": "@previewImages/RangerFiringBow.png"
+    "PreviewUri": "RangerFiringBow.png"
   },
   "RatAcrylic": {
     "DisplayName": "Rat, Acrylic",
@@ -69424,7 +69424,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "RatAcrylic",
-    "PreviewUri": "@previewImages/RatAcrylic.png"
+    "PreviewUri": "RatAcrylic.png"
   },
   "RatcatcherFantasyTB25": {
     "DisplayName": "Ratcatcher, Fantasy, TB25",
@@ -69448,7 +69448,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "RatcatcherFantasyTB25",
-    "PreviewUri": "@previewImages/RatcatcherFantasyTB25.png"
+    "PreviewUri": "RatcatcherFantasyTB25.png"
   },
   "RatfolkAssassinFantasyTB25": {
     "DisplayName": "Ratfolk, Assassin, Fantasy, TB25",
@@ -69467,7 +69467,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "RatfolkAssassinFantasyTB25",
-    "PreviewUri": "@previewImages/RatfolkAssassinFantasyTB25.png"
+    "PreviewUri": "RatfolkAssassinFantasyTB25.png"
   },
   "Renegade-CharacterMeeple": {
     "DisplayName": "Renegade, Character Meeple",
@@ -69494,7 +69494,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Renegade-CharacterMeeple",
-    "PreviewUri": "@previewImages/Renegade-CharacterMeeple.png"
+    "PreviewUri": "Renegade-CharacterMeeple.png"
   },
   "Rhinoceros": {
     "DisplayName": "Rhinoceros",
@@ -69523,7 +69523,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "Rhinoceros",
-    "PreviewUri": "@previewImages/Rhinoceros.png"
+    "PreviewUri": "Rhinoceros.png"
   },
   "Rifle": {
     "DisplayName": "Rifle",
@@ -69549,7 +69549,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "Rifle",
-    "PreviewUri": "@previewImages/Rifle.png"
+    "PreviewUri": "Rifle.png"
   },
   "RingBlack": {
     "DisplayName": "Ring, Black",
@@ -69572,7 +69572,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "RingBlack",
-    "PreviewUri": "@previewImages/RingBlack.png"
+    "PreviewUri": "RingBlack.png"
   },
   "RingBlue": {
     "DisplayName": "Ring, Blue",
@@ -69595,7 +69595,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "RingBlue",
-    "PreviewUri": "@previewImages/RingBlue.png"
+    "PreviewUri": "RingBlue.png"
   },
   "RingGreen": {
     "DisplayName": "Ring, Green",
@@ -69618,7 +69618,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "RingGreen",
-    "PreviewUri": "@previewImages/RingGreen.png"
+    "PreviewUri": "RingGreen.png"
   },
   "RingOrange": {
     "DisplayName": "Ring, Orange",
@@ -69641,7 +69641,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "RingOrange",
-    "PreviewUri": "@previewImages/RingOrange.png"
+    "PreviewUri": "RingOrange.png"
   },
   "RingPurple": {
     "DisplayName": "Ring, Purple",
@@ -69664,7 +69664,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "RingPurple",
-    "PreviewUri": "@previewImages/RingPurple.png"
+    "PreviewUri": "RingPurple.png"
   },
   "RingRed": {
     "DisplayName": "Ring, Red",
@@ -69687,7 +69687,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "RingRed",
-    "PreviewUri": "@previewImages/RingRed.png"
+    "PreviewUri": "RingRed.png"
   },
   "RingWhite": {
     "DisplayName": "Ring, White",
@@ -69710,7 +69710,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "RingWhite",
-    "PreviewUri": "@previewImages/RingWhite.png"
+    "PreviewUri": "RingWhite.png"
   },
   "RingYellow": {
     "DisplayName": "Ring, Yellow",
@@ -69733,7 +69733,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "RingYellow",
-    "PreviewUri": "@previewImages/RingYellow.png"
+    "PreviewUri": "RingYellow.png"
   },
   "RivetBlack": {
     "DisplayName": "Rivet, Black",
@@ -69767,7 +69767,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "RivetBlack",
-    "PreviewUri": "@previewImages/RivetBlack.png"
+    "PreviewUri": "RivetBlack.png"
   },
   "RobotDetectiveSpaceTB25": {
     "DisplayName": "Robot, Detective, Space, TB25",
@@ -69785,7 +69785,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "RobotDetectiveSpaceTB25",
-    "PreviewUri": "@previewImages/RobotDetectiveSpaceTB25.png"
+    "PreviewUri": "RobotDetectiveSpaceTB25.png"
   },
   "RobotSilver": {
     "DisplayName": "Robot, Silver",
@@ -69812,7 +69812,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "RobotSilver",
-    "PreviewUri": "@previewImages/RobotSilver.png"
+    "PreviewUri": "RobotSilver.png"
   },
   "RobotWizardSpaceTB25": {
     "DisplayName": "Robot, Wizard, Space, TB25",
@@ -69830,7 +69830,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "RobotWizardSpaceTB25",
-    "PreviewUri": "@previewImages/RobotWizardSpaceTB25.png"
+    "PreviewUri": "RobotWizardSpaceTB25.png"
   },
   "RocketDiceBlack": {
     "DisplayName": "Rocket Dice, Black",
@@ -69886,7 +69886,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "RocketDiceBlack",
-    "PreviewUri": "@previewImages/RocketDiceBlack.png"
+    "PreviewUri": "RocketDiceBlack.png"
   },
   "RocketDiceBlue": {
     "DisplayName": "Rocket Dice, Blue",
@@ -69942,7 +69942,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "RocketDiceBlue",
-    "PreviewUri": "@previewImages/RocketDiceBlue.png"
+    "PreviewUri": "RocketDiceBlue.png"
   },
   "RocketDiceBrown": {
     "DisplayName": "Rocket Dice, Brown",
@@ -69998,7 +69998,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "RocketDiceBrown",
-    "PreviewUri": "@previewImages/RocketDiceBrown.png"
+    "PreviewUri": "RocketDiceBrown.png"
   },
   "RocketDiceFrostWhite": {
     "DisplayName": "Rocket Dice, Frost White",
@@ -70055,7 +70055,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "RocketDiceFrostWhite",
-    "PreviewUri": "@previewImages/RocketDiceFrostWhite.png"
+    "PreviewUri": "RocketDiceFrostWhite.png"
   },
   "RocketDiceGreen": {
     "DisplayName": "Rocket Dice, Green",
@@ -70111,7 +70111,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "RocketDiceGreen",
-    "PreviewUri": "@previewImages/RocketDiceGreen.png"
+    "PreviewUri": "RocketDiceGreen.png"
   },
   "RocketDiceGray": {
     "DisplayName": "Rocket Dice, Gray",
@@ -70166,7 +70166,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": true,
     "Key": "RocketDiceGray",
-    "PreviewUri": "@previewImages/RocketDiceGray.png"
+    "PreviewUri": "RocketDiceGray.png"
   },
   "RocketDicePink": {
     "DisplayName": "Rocket Dice, Pink",
@@ -70222,7 +70222,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "RocketDicePink",
-    "PreviewUri": "@previewImages/RocketDicePink.png"
+    "PreviewUri": "RocketDicePink.png"
   },
   "RocketDicePurple": {
     "DisplayName": "Rocket Dice, Purple",
@@ -70278,7 +70278,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "RocketDicePurple",
-    "PreviewUri": "@previewImages/RocketDicePurple.png"
+    "PreviewUri": "RocketDicePurple.png"
   },
   "RocketDiceRed": {
     "DisplayName": "Rocket Dice, Red",
@@ -70334,7 +70334,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "RocketDiceRed",
-    "PreviewUri": "@previewImages/RocketDiceRed.png"
+    "PreviewUri": "RocketDiceRed.png"
   },
   "RocketDiceWhite": {
     "DisplayName": "Rocket Dice, White",
@@ -70390,7 +70390,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "RocketDiceWhite",
-    "PreviewUri": "@previewImages/RocketDiceWhite.png"
+    "PreviewUri": "RocketDiceWhite.png"
   },
   "RocketBlack": {
     "DisplayName": "Rocket, Black",
@@ -70417,7 +70417,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "RocketBlack",
-    "PreviewUri": "@previewImages/RocketBlack.png"
+    "PreviewUri": "RocketBlack.png"
   },
   "RocketBlue": {
     "DisplayName": "Rocket, Blue",
@@ -70444,7 +70444,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "RocketBlue",
-    "PreviewUri": "@previewImages/RocketBlue.png"
+    "PreviewUri": "RocketBlue.png"
   },
   "RocketGreen": {
     "DisplayName": "Rocket, Green",
@@ -70471,7 +70471,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "RocketGreen",
-    "PreviewUri": "@previewImages/RocketGreen.png"
+    "PreviewUri": "RocketGreen.png"
   },
   "RocketOrange": {
     "DisplayName": "Rocket, Orange",
@@ -70498,7 +70498,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "RocketOrange",
-    "PreviewUri": "@previewImages/RocketOrange.png"
+    "PreviewUri": "RocketOrange.png"
   },
   "RocketPurple": {
     "DisplayName": "Rocket, Purple",
@@ -70525,7 +70525,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "RocketPurple",
-    "PreviewUri": "@previewImages/RocketPurple.png"
+    "PreviewUri": "RocketPurple.png"
   },
   "RocketRed": {
     "DisplayName": "Rocket, Red",
@@ -70552,7 +70552,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "RocketRed",
-    "PreviewUri": "@previewImages/RocketRed.png"
+    "PreviewUri": "RocketRed.png"
   },
   "RocketWhite": {
     "DisplayName": "Rocket, White",
@@ -70579,7 +70579,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "RocketWhite",
-    "PreviewUri": "@previewImages/RocketWhite.png"
+    "PreviewUri": "RocketWhite.png"
   },
   "RocketYellow": {
     "DisplayName": "Rocket, Yellow",
@@ -70606,7 +70606,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "RocketYellow",
-    "PreviewUri": "@previewImages/RocketYellow.png"
+    "PreviewUri": "RocketYellow.png"
   },
   "Rogue-CharacterMeeple": {
     "DisplayName": "Rogue, Character Meeple",
@@ -70635,7 +70635,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Rogue-CharacterMeeple",
-    "PreviewUri": "@previewImages/Rogue-CharacterMeeple.png"
+    "PreviewUri": "Rogue-CharacterMeeple.png"
   },
   "RomanNumeralIBlack": {
     "DisplayName": "Roman Numeral I, Black",
@@ -70659,7 +70659,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "RomanNumeralIBlack",
-    "PreviewUri": "@previewImages/RomanNumeralIBlack.png"
+    "PreviewUri": "RomanNumeralIBlack.png"
   },
   "RomanNumeralIBlue": {
     "DisplayName": "Roman Numeral I, Blue",
@@ -70683,7 +70683,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "RomanNumeralIBlue",
-    "PreviewUri": "@previewImages/RomanNumeralIBlue.png"
+    "PreviewUri": "RomanNumeralIBlue.png"
   },
   "RomanNumeralIBrown": {
     "DisplayName": "Roman Numeral I, Brown",
@@ -70707,7 +70707,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "RomanNumeralIBrown",
-    "PreviewUri": "@previewImages/RomanNumeralIBrown.png"
+    "PreviewUri": "RomanNumeralIBrown.png"
   },
   "RomanNumeralIGreen": {
     "DisplayName": "Roman Numeral I, Green",
@@ -70731,7 +70731,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "RomanNumeralIGreen",
-    "PreviewUri": "@previewImages/RomanNumeralIGreen.png"
+    "PreviewUri": "RomanNumeralIGreen.png"
   },
   "RomanNumeralIGreyLarge": {
     "DisplayName": "Roman Numeral I, Grey, Large",
@@ -70755,7 +70755,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "RomanNumeralIGreyLarge",
-    "PreviewUri": "@previewImages/RomanNumeralIGreyLarge.png"
+    "PreviewUri": "RomanNumeralIGreyLarge.png"
   },
   "RomanNumeralIRed": {
     "DisplayName": "Roman Numeral I, Red",
@@ -70779,7 +70779,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "RomanNumeralIRed",
-    "PreviewUri": "@previewImages/RomanNumeralIRed.png"
+    "PreviewUri": "RomanNumeralIRed.png"
   },
   "RomanNumeralIYellow": {
     "DisplayName": "Roman Numeral I, Yellow",
@@ -70803,7 +70803,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "RomanNumeralIYellow",
-    "PreviewUri": "@previewImages/RomanNumeralIYellow.png"
+    "PreviewUri": "RomanNumeralIYellow.png"
   },
   "RomanNumeralIIIYellow": {
     "DisplayName": "Roman Numeral III, Yellow",
@@ -70827,7 +70827,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "RomanNumeralIIIYellow",
-    "PreviewUri": "@previewImages/RomanNumeralIIIYellow.png"
+    "PreviewUri": "RomanNumeralIIIYellow.png"
   },
   "RomanNumeralVGreen": {
     "DisplayName": "Roman Numeral V, Green",
@@ -70851,7 +70851,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "RomanNumeralVGreen",
-    "PreviewUri": "@previewImages/RomanNumeralVGreen.png"
+    "PreviewUri": "RomanNumeralVGreen.png"
   },
   "RomanNumeralVYellow": {
     "DisplayName": "Roman Numeral V, Yellow",
@@ -70875,7 +70875,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "RomanNumeralVYellow",
-    "PreviewUri": "@previewImages/RomanNumeralVYellow.png"
+    "PreviewUri": "RomanNumeralVYellow.png"
   },
   "RoosterBlack": {
     "DisplayName": "Rooster, Black",
@@ -70908,7 +70908,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "RoosterBlack",
-    "PreviewUri": "@previewImages/RoosterBlack.png"
+    "PreviewUri": "RoosterBlack.png"
   },
   "RoosterBlue": {
     "DisplayName": "Rooster, Blue",
@@ -70941,7 +70941,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "RoosterBlue",
-    "PreviewUri": "@previewImages/RoosterBlue.png"
+    "PreviewUri": "RoosterBlue.png"
   },
   "RoosterGreen": {
     "DisplayName": "Rooster, Green",
@@ -70974,7 +70974,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "RoosterGreen",
-    "PreviewUri": "@previewImages/RoosterGreen.png"
+    "PreviewUri": "RoosterGreen.png"
   },
   "RoosterOrange": {
     "DisplayName": "Rooster, Orange",
@@ -71007,7 +71007,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "RoosterOrange",
-    "PreviewUri": "@previewImages/RoosterOrange.png"
+    "PreviewUri": "RoosterOrange.png"
   },
   "RoosterPurple": {
     "DisplayName": "Rooster, Purple",
@@ -71040,7 +71040,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "RoosterPurple",
-    "PreviewUri": "@previewImages/RoosterPurple.png"
+    "PreviewUri": "RoosterPurple.png"
   },
   "RoosterRed": {
     "DisplayName": "Rooster, Red",
@@ -71073,7 +71073,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "RoosterRed",
-    "PreviewUri": "@previewImages/RoosterRed.png"
+    "PreviewUri": "RoosterRed.png"
   },
   "RoosterWhite": {
     "DisplayName": "Rooster, White",
@@ -71106,7 +71106,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "RoosterWhite",
-    "PreviewUri": "@previewImages/RoosterWhite.png"
+    "PreviewUri": "RoosterWhite.png"
   },
   "RoosterYellow": {
     "DisplayName": "Rooster, Yellow",
@@ -71139,7 +71139,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "RoosterYellow",
-    "PreviewUri": "@previewImages/RoosterYellow.png"
+    "PreviewUri": "RoosterYellow.png"
   },
   "RopeCoil": {
     "DisplayName": "Rope Coil",
@@ -71157,7 +71157,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "RopeCoil",
-    "PreviewUri": "@previewImages/RopeCoil.png"
+    "PreviewUri": "RopeCoil.png"
   },
   "RubberBands": {
     "DisplayName": "Rubber Bands",
@@ -71185,7 +71185,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "RubberBands",
-    "PreviewUri": "@previewImages/RubberBands.png"
+    "PreviewUri": "RubberBands.png"
   },
   "SackGold": {
     "DisplayName": "Sack, Gold",
@@ -71234,7 +71234,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "SackGold",
-    "PreviewUri": "@previewImages/SackGold.png"
+    "PreviewUri": "SackGold.png"
   },
   "SailboatBlack": {
     "DisplayName": "Sailboat, Black",
@@ -71267,7 +71267,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "SailboatBlack",
-    "PreviewUri": "@previewImages/SailboatBlack.png"
+    "PreviewUri": "SailboatBlack.png"
   },
   "SailboatBlue": {
     "DisplayName": "Sailboat, Blue",
@@ -71300,7 +71300,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "SailboatBlue",
-    "PreviewUri": "@previewImages/SailboatBlue.png"
+    "PreviewUri": "SailboatBlue.png"
   },
   "SailboatGreen": {
     "DisplayName": "Sailboat, Green",
@@ -71333,7 +71333,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "SailboatGreen",
-    "PreviewUri": "@previewImages/SailboatGreen.png"
+    "PreviewUri": "SailboatGreen.png"
   },
   "SailboatOrange": {
     "DisplayName": "Sailboat, Orange",
@@ -71366,7 +71366,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "SailboatOrange",
-    "PreviewUri": "@previewImages/SailboatOrange.png"
+    "PreviewUri": "SailboatOrange.png"
   },
   "SailboatPurple": {
     "DisplayName": "Sailboat, Purple",
@@ -71399,7 +71399,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "SailboatPurple",
-    "PreviewUri": "@previewImages/SailboatPurple.png"
+    "PreviewUri": "SailboatPurple.png"
   },
   "SailboatRed": {
     "DisplayName": "Sailboat, Red",
@@ -71432,7 +71432,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "SailboatRed",
-    "PreviewUri": "@previewImages/SailboatRed.png"
+    "PreviewUri": "SailboatRed.png"
   },
   "SailboatWhite": {
     "DisplayName": "Sailboat, White",
@@ -71465,7 +71465,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "SailboatWhite",
-    "PreviewUri": "@previewImages/SailboatWhite.png"
+    "PreviewUri": "SailboatWhite.png"
   },
   "SailboatYellow": {
     "DisplayName": "Sailboat, Yellow",
@@ -71498,7 +71498,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "SailboatYellow",
-    "PreviewUri": "@previewImages/SailboatYellow.png"
+    "PreviewUri": "SailboatYellow.png"
   },
   "Sake": {
     "DisplayName": "Sake",
@@ -71515,7 +71515,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Sake",
-    "PreviewUri": "@previewImages/Sake.png"
+    "PreviewUri": "Sake.png"
   },
   "SamuraiArmorHistoricTB25": {
     "DisplayName": "Samurai Armor, Historic, TB25",
@@ -71537,7 +71537,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "SamuraiArmorHistoricTB25",
-    "PreviewUri": "@previewImages/SamuraiArmorHistoricTB25.png"
+    "PreviewUri": "SamuraiArmorHistoricTB25.png"
   },
   "SandTimer10Seconds": {
     "DisplayName": "Sand Timer, 10 Seconds",
@@ -71562,7 +71562,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "SandTimer10Seconds",
-    "PreviewUri": "@previewImages/SandTimer10Seconds.png"
+    "PreviewUri": "SandTimer10Seconds.png"
   },
   "SandTimer120seconds": {
     "DisplayName": "Sand Timer, 120 seconds",
@@ -71587,7 +71587,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "SandTimer120seconds",
-    "PreviewUri": "@previewImages/SandTimer120seconds.png"
+    "PreviewUri": "SandTimer120seconds.png"
   },
   "SandTimer180seconds": {
     "DisplayName": "Sand Timer, 180 seconds",
@@ -71612,7 +71612,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "SandTimer180seconds",
-    "PreviewUri": "@previewImages/SandTimer180seconds.png"
+    "PreviewUri": "SandTimer180seconds.png"
   },
   "SandTimer30seconds": {
     "DisplayName": "Sand Timer, 30 seconds",
@@ -71637,7 +71637,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "SandTimer30seconds",
-    "PreviewUri": "@previewImages/SandTimer30seconds.png"
+    "PreviewUri": "SandTimer30seconds.png"
   },
   "SandTimer60seconds": {
     "DisplayName": "Sand Timer, 60 seconds",
@@ -71662,7 +71662,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "SandTimer60seconds",
-    "PreviewUri": "@previewImages/SandTimer60seconds.png"
+    "PreviewUri": "SandTimer60seconds.png"
   },
   "SandTimer90seconds": {
     "DisplayName": "Sand Timer, 90 seconds",
@@ -71687,7 +71687,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "SandTimer90seconds",
-    "PreviewUri": "@previewImages/SandTimer90seconds.png"
+    "PreviewUri": "SandTimer90seconds.png"
   },
   "SavageOrcChampionGreatHamm": {
     "DisplayName": "Savage Orc Champion Great Hamm",
@@ -71721,7 +71721,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "SavageOrcChampionGreatHamm",
-    "PreviewUri": "@previewImages/SavageOrcChampionGreatHamm.png"
+    "PreviewUri": "SavageOrcChampionGreatHamm.png"
   },
   "SavageOrcChieftain": {
     "DisplayName": "Savage Orc Chieftain",
@@ -71755,7 +71755,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "SavageOrcChieftain",
-    "PreviewUri": "@previewImages/SavageOrcChieftain.png"
+    "PreviewUri": "SavageOrcChieftain.png"
   },
   "ScarecrowA": {
     "DisplayName": "Scarecrow A",
@@ -71805,7 +71805,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "ScarecrowA",
-    "PreviewUri": "@previewImages/ScarecrowA.png"
+    "PreviewUri": "ScarecrowA.png"
   },
   "ScarecrowB": {
     "DisplayName": "Scarecrow B",
@@ -71855,7 +71855,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "ScarecrowB",
-    "PreviewUri": "@previewImages/ScarecrowB.png"
+    "PreviewUri": "ScarecrowB.png"
   },
   "Sci-FiCoinBronze": {
     "DisplayName": "Sci-Fi Coin, Bronze",
@@ -71873,7 +71873,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "Sci-FiCoinBronze",
-    "PreviewUri": "@previewImages/Sci-FiCoinBronze.png"
+    "PreviewUri": "Sci-FiCoinBronze.png"
   },
   "Sci-FiCoinGold": {
     "DisplayName": "Sci-Fi Coin, Gold",
@@ -71891,7 +71891,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "Sci-FiCoinGold",
-    "PreviewUri": "@previewImages/Sci-FiCoinGold.png"
+    "PreviewUri": "Sci-FiCoinGold.png"
   },
   "Sci-FiCoinSilver": {
     "DisplayName": "Sci-Fi Coin, Silver",
@@ -71909,7 +71909,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "Sci-FiCoinSilver",
-    "PreviewUri": "@previewImages/Sci-FiCoinSilver.png"
+    "PreviewUri": "Sci-FiCoinSilver.png"
   },
   "Scientist-CharacterMeeple": {
     "DisplayName": "Scientist, Character Meeple",
@@ -71952,7 +71952,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Scientist-CharacterMeeple",
-    "PreviewUri": "@previewImages/Scientist-CharacterMeeple.png"
+    "PreviewUri": "Scientist-CharacterMeeple.png"
   },
   "Screw6mmx3mmBlack": {
     "DisplayName": "Screw, 6mm x 3mm, Black",
@@ -71986,7 +71986,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Screw6mmx3mmBlack",
-    "PreviewUri": "@previewImages/Screw6mmx3mmBlack.png"
+    "PreviewUri": "Screw6mmx3mmBlack.png"
   },
   "Screw8mmx5mmBlack": {
     "DisplayName": "Screw, 8mm x 5mm, Black",
@@ -72020,7 +72020,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Screw8mmx5mmBlack",
-    "PreviewUri": "@previewImages/Screw8mmx5mmBlack.png"
+    "PreviewUri": "Screw8mmx5mmBlack.png"
   },
   "SemiTruckPostApocalypse": {
     "DisplayName": "Semi Truck, Post Apocalypse",
@@ -72037,7 +72037,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "SemiTruckPostApocalypse",
-    "PreviewUri": "@previewImages/SemiTruckPostApocalypse.png"
+    "PreviewUri": "SemiTruckPostApocalypse.png"
   },
   "Sharpies": {
     "DisplayName": "Sharpies",
@@ -72067,7 +72067,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Sharpies",
-    "PreviewUri": "@previewImages/Sharpies.png"
+    "PreviewUri": "Sharpies.png"
   },
   "Sheep": {
     "DisplayName": "Sheep",
@@ -72102,7 +72102,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Sheep",
-    "PreviewUri": "@previewImages/Sheep.png"
+    "PreviewUri": "Sheep.png"
   },
   "SheepRandom": {
     "DisplayName": "Sheep, Random",
@@ -72137,7 +72137,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "SheepRandom",
-    "PreviewUri": "@previewImages/SheepRandom.png"
+    "PreviewUri": "SheepRandom.png"
   },
   "Sheetof1\"GoldScratchOffCircleStickers": {
     "DisplayName": "Sheet of 1\" Gold Scratch Off Circle Stickers",
@@ -72156,7 +72156,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": true,
     "Key": "Sheetof1\"GoldScratchOffCircleStickers",
-    "PreviewUri": "@previewImages/Sheetof1_GoldScratchOffCircleStickers.png"
+    "PreviewUri": "Sheetof1_GoldScratchOffCircleStickers.png"
   },
   "Sheetof1\"SilverScratchOffCircleStickers": {
     "DisplayName": "Sheet of 1\" Silver Scratch Off Circle Stickers",
@@ -72175,7 +72175,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": true,
     "Key": "Sheetof1\"SilverScratchOffCircleStickers",
-    "PreviewUri": "@previewImages/Sheetof1_SilverScratchOffCircleStickers.png"
+    "PreviewUri": "Sheetof1_SilverScratchOffCircleStickers.png"
   },
   "SheetofRectangleScratchOffSitckers": {
     "DisplayName": "Sheet of Rectangle Scratch Off Sitckers",
@@ -72194,7 +72194,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": true,
     "Key": "SheetofRectangleScratchOffSitckers",
-    "PreviewUri": "@previewImages/SheetofRectangleScratchOffSitckers.png"
+    "PreviewUri": "SheetofRectangleScratchOffSitckers.png"
   },
   "Sheriff-CharacterMeeple": {
     "DisplayName": "Sheriff, Character Meeple",
@@ -72230,7 +72230,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Sheriff-CharacterMeeple",
-    "PreviewUri": "@previewImages/Sheriff-CharacterMeeple.png"
+    "PreviewUri": "Sheriff-CharacterMeeple.png"
   },
   "SheriffBadgeGold": {
     "DisplayName": "Sheriff Badge, Gold",
@@ -72274,7 +72274,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "SheriffBadgeGold",
-    "PreviewUri": "@previewImages/SheriffBadgeGold.png"
+    "PreviewUri": "SheriffBadgeGold.png"
   },
   "SheriffBadgeSilver": {
     "DisplayName": "Sheriff Badge, Silver",
@@ -72318,7 +72318,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "SheriffBadgeSilver",
-    "PreviewUri": "@previewImages/SheriffBadgeSilver.png"
+    "PreviewUri": "SheriffBadgeSilver.png"
   },
   "ShieldbearerBlue": {
     "DisplayName": "Shieldbearer, Blue",
@@ -72345,7 +72345,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": true,
     "Key": "ShieldbearerBlue",
-    "PreviewUri": "@previewImages/ShieldbearerBlue.png"
+    "PreviewUri": "ShieldbearerBlue.png"
   },
   "ShieldbearerGreen": {
     "DisplayName": "Shieldbearer, Green",
@@ -72373,7 +72373,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ShieldbearerGreen",
-    "PreviewUri": "@previewImages/ShieldbearerGreen.png"
+    "PreviewUri": "ShieldbearerGreen.png"
   },
   "ShieldbearerPurple": {
     "DisplayName": "Shieldbearer, Purple",
@@ -72400,7 +72400,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": true,
     "Key": "ShieldbearerPurple",
-    "PreviewUri": "@previewImages/ShieldbearerPurple.png"
+    "PreviewUri": "ShieldbearerPurple.png"
   },
   "ShieldbearerYellow": {
     "DisplayName": "Shieldbearer, Yellow",
@@ -72427,7 +72427,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": true,
     "Key": "ShieldbearerYellow",
-    "PreviewUri": "@previewImages/ShieldbearerYellow.png"
+    "PreviewUri": "ShieldbearerYellow.png"
   },
   "ShipAirSteampunkBlack": {
     "DisplayName": "Ship, Air, Steampunk, Black",
@@ -72450,7 +72450,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ShipAirSteampunkBlack",
-    "PreviewUri": "@previewImages/ShipAirSteampunkBlack.png"
+    "PreviewUri": "ShipAirSteampunkBlack.png"
   },
   "ShipAirSteampunkBlue": {
     "DisplayName": "Ship, Air, Steampunk, Blue",
@@ -72473,7 +72473,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ShipAirSteampunkBlue",
-    "PreviewUri": "@previewImages/ShipAirSteampunkBlue.png"
+    "PreviewUri": "ShipAirSteampunkBlue.png"
   },
   "ShipAirSteampunkGreen": {
     "DisplayName": "Ship, Air, Steampunk, Green",
@@ -72496,7 +72496,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ShipAirSteampunkGreen",
-    "PreviewUri": "@previewImages/ShipAirSteampunkGreen.png"
+    "PreviewUri": "ShipAirSteampunkGreen.png"
   },
   "ShipAirSteampunkOrange": {
     "DisplayName": "Ship, Air, Steampunk, Orange",
@@ -72519,7 +72519,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ShipAirSteampunkOrange",
-    "PreviewUri": "@previewImages/ShipAirSteampunkOrange.png"
+    "PreviewUri": "ShipAirSteampunkOrange.png"
   },
   "ShipAirSteampunkPurple": {
     "DisplayName": "Ship, Air, Steampunk, Purple",
@@ -72542,7 +72542,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ShipAirSteampunkPurple",
-    "PreviewUri": "@previewImages/ShipAirSteampunkPurple.png"
+    "PreviewUri": "ShipAirSteampunkPurple.png"
   },
   "ShipAirSteampunkRed": {
     "DisplayName": "Ship, Air, Steampunk, Red",
@@ -72565,7 +72565,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ShipAirSteampunkRed",
-    "PreviewUri": "@previewImages/ShipAirSteampunkRed.png"
+    "PreviewUri": "ShipAirSteampunkRed.png"
   },
   "ShipAirSteampunkWhite": {
     "DisplayName": "Ship, Air, Steampunk, White",
@@ -72588,7 +72588,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ShipAirSteampunkWhite",
-    "PreviewUri": "@previewImages/ShipAirSteampunkWhite.png"
+    "PreviewUri": "ShipAirSteampunkWhite.png"
   },
   "ShipAirSteampunkYellow": {
     "DisplayName": "Ship, Air, Steampunk, Yellow",
@@ -72611,7 +72611,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ShipAirSteampunkYellow",
-    "PreviewUri": "@previewImages/ShipAirSteampunkYellow.png"
+    "PreviewUri": "ShipAirSteampunkYellow.png"
   },
   "ShipModernAircraftCarrierBlack": {
     "DisplayName": "Ship, Modern, Aircraft Carrier, Black",
@@ -72637,7 +72637,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ShipModernAircraftCarrierBlack",
-    "PreviewUri": "@previewImages/ShipModernAircraftCarrierBlack.png"
+    "PreviewUri": "ShipModernAircraftCarrierBlack.png"
   },
   "ShipModernAircraftCarrierGreen": {
     "DisplayName": "Ship, Modern, Aircraft Carrier, Green",
@@ -72663,7 +72663,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ShipModernAircraftCarrierGreen",
-    "PreviewUri": "@previewImages/ShipModernAircraftCarrierGreen.png"
+    "PreviewUri": "ShipModernAircraftCarrierGreen.png"
   },
   "ShipModernAircraftCarrierOrange": {
     "DisplayName": "Ship, Modern, Aircraft Carrier, Orange",
@@ -72689,7 +72689,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ShipModernAircraftCarrierOrange",
-    "PreviewUri": "@previewImages/ShipModernAircraftCarrierOrange.png"
+    "PreviewUri": "ShipModernAircraftCarrierOrange.png"
   },
   "ShipModernAircraftCarrierPurple": {
     "DisplayName": "Ship, Modern, Aircraft Carrier, Purple",
@@ -72715,7 +72715,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ShipModernAircraftCarrierPurple",
-    "PreviewUri": "@previewImages/ShipModernAircraftCarrierPurple.png"
+    "PreviewUri": "ShipModernAircraftCarrierPurple.png"
   },
   "ShipModernAircraftCarrierWhite": {
     "DisplayName": "Ship, Modern, Aircraft Carrier, White",
@@ -72741,7 +72741,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ShipModernAircraftCarrierWhite",
-    "PreviewUri": "@previewImages/ShipModernAircraftCarrierWhite.png"
+    "PreviewUri": "ShipModernAircraftCarrierWhite.png"
   },
   "ShipModernBattleshipBlack": {
     "DisplayName": "Ship, Modern, Battleship, Black",
@@ -72767,7 +72767,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ShipModernBattleshipBlack",
-    "PreviewUri": "@previewImages/ShipModernBattleshipBlack.png"
+    "PreviewUri": "ShipModernBattleshipBlack.png"
   },
   "ShipModernBattleshipGreen": {
     "DisplayName": "Ship, Modern, Battleship, Green",
@@ -72793,7 +72793,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ShipModernBattleshipGreen",
-    "PreviewUri": "@previewImages/ShipModernBattleshipGreen.png"
+    "PreviewUri": "ShipModernBattleshipGreen.png"
   },
   "ShipModernBattleshipOrange": {
     "DisplayName": "Ship, Modern, Battleship, Orange",
@@ -72819,7 +72819,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ShipModernBattleshipOrange",
-    "PreviewUri": "@previewImages/ShipModernBattleshipOrange.png"
+    "PreviewUri": "ShipModernBattleshipOrange.png"
   },
   "ShipModernBattleshipPurple": {
     "DisplayName": "Ship, Modern, Battleship, Purple",
@@ -72845,7 +72845,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ShipModernBattleshipPurple",
-    "PreviewUri": "@previewImages/ShipModernBattleshipPurple.png"
+    "PreviewUri": "ShipModernBattleshipPurple.png"
   },
   "ShipModernBattleshipWhite": {
     "DisplayName": "Ship, Modern, Battleship, White",
@@ -72871,7 +72871,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ShipModernBattleshipWhite",
-    "PreviewUri": "@previewImages/ShipModernBattleshipWhite.png"
+    "PreviewUri": "ShipModernBattleshipWhite.png"
   },
   "ShipModernContainerBlack": {
     "DisplayName": "Ship, Modern, Container, Black",
@@ -72893,7 +72893,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ShipModernContainerBlack",
-    "PreviewUri": "@previewImages/ShipModernContainerBlack.png"
+    "PreviewUri": "ShipModernContainerBlack.png"
   },
   "ShipModernContainerGreen": {
     "DisplayName": "Ship, Modern, Container, Green",
@@ -72915,7 +72915,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ShipModernContainerGreen",
-    "PreviewUri": "@previewImages/ShipModernContainerGreen.png"
+    "PreviewUri": "ShipModernContainerGreen.png"
   },
   "ShipModernContainerOrange": {
     "DisplayName": "Ship, Modern, Container, Orange",
@@ -72937,7 +72937,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ShipModernContainerOrange",
-    "PreviewUri": "@previewImages/ShipModernContainerOrange.png"
+    "PreviewUri": "ShipModernContainerOrange.png"
   },
   "ShipModernContainerPurple": {
     "DisplayName": "Ship, Modern, Container, Purple",
@@ -72959,7 +72959,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ShipModernContainerPurple",
-    "PreviewUri": "@previewImages/ShipModernContainerPurple.png"
+    "PreviewUri": "ShipModernContainerPurple.png"
   },
   "ShipModernContainerWhite": {
     "DisplayName": "Ship, Modern, Container, White",
@@ -72981,7 +72981,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ShipModernContainerWhite",
-    "PreviewUri": "@previewImages/ShipModernContainerWhite.png"
+    "PreviewUri": "ShipModernContainerWhite.png"
   },
   "ShipModernCruiserBlack": {
     "DisplayName": "Ship, Modern, Cruiser, Black",
@@ -73007,7 +73007,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ShipModernCruiserBlack",
-    "PreviewUri": "@previewImages/ShipModernCruiserBlack.png"
+    "PreviewUri": "ShipModernCruiserBlack.png"
   },
   "ShipModernCruiserGreen": {
     "DisplayName": "Ship, Modern, Cruiser, Green",
@@ -73033,7 +73033,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ShipModernCruiserGreen",
-    "PreviewUri": "@previewImages/ShipModernCruiserGreen.png"
+    "PreviewUri": "ShipModernCruiserGreen.png"
   },
   "ShipModernCruiserOrange": {
     "DisplayName": "Ship, Modern, Cruiser, Orange",
@@ -73059,7 +73059,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ShipModernCruiserOrange",
-    "PreviewUri": "@previewImages/ShipModernCruiserOrange.png"
+    "PreviewUri": "ShipModernCruiserOrange.png"
   },
   "ShipModernCruiserPurple": {
     "DisplayName": "Ship, Modern, Cruiser, Purple",
@@ -73085,7 +73085,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ShipModernCruiserPurple",
-    "PreviewUri": "@previewImages/ShipModernCruiserPurple.png"
+    "PreviewUri": "ShipModernCruiserPurple.png"
   },
   "ShipModernCruiserWhite": {
     "DisplayName": "Ship, Modern, Cruiser, White",
@@ -73111,7 +73111,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ShipModernCruiserWhite",
-    "PreviewUri": "@previewImages/ShipModernCruiserWhite.png"
+    "PreviewUri": "ShipModernCruiserWhite.png"
   },
   "ShipModernDestroyerBlack": {
     "DisplayName": "Ship, Modern, Destroyer, Black",
@@ -73137,7 +73137,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ShipModernDestroyerBlack",
-    "PreviewUri": "@previewImages/ShipModernDestroyerBlack.png"
+    "PreviewUri": "ShipModernDestroyerBlack.png"
   },
   "ShipModernDestroyerGreen": {
     "DisplayName": "Ship, Modern, Destroyer, Green",
@@ -73163,7 +73163,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ShipModernDestroyerGreen",
-    "PreviewUri": "@previewImages/ShipModernDestroyerGreen.png"
+    "PreviewUri": "ShipModernDestroyerGreen.png"
   },
   "ShipModernDestroyerOrange": {
     "DisplayName": "Ship, Modern, Destroyer, Orange",
@@ -73189,7 +73189,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ShipModernDestroyerOrange",
-    "PreviewUri": "@previewImages/ShipModernDestroyerOrange.png"
+    "PreviewUri": "ShipModernDestroyerOrange.png"
   },
   "ShipModernDestroyerPurple": {
     "DisplayName": "Ship, Modern, Destroyer, Purple",
@@ -73215,7 +73215,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ShipModernDestroyerPurple",
-    "PreviewUri": "@previewImages/ShipModernDestroyerPurple.png"
+    "PreviewUri": "ShipModernDestroyerPurple.png"
   },
   "ShipModernDestroyerWhite": {
     "DisplayName": "Ship, Modern, Destroyer, White",
@@ -73241,7 +73241,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ShipModernDestroyerWhite",
-    "PreviewUri": "@previewImages/ShipModernDestroyerWhite.png"
+    "PreviewUri": "ShipModernDestroyerWhite.png"
   },
   "ShipModernSubmarineBlack": {
     "DisplayName": "Ship, Modern, Submarine, Black",
@@ -73267,7 +73267,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ShipModernSubmarineBlack",
-    "PreviewUri": "@previewImages/ShipModernSubmarineBlack.png"
+    "PreviewUri": "ShipModernSubmarineBlack.png"
   },
   "ShipModernSubmarineGreen": {
     "DisplayName": "Ship, Modern, Submarine, Green",
@@ -73293,7 +73293,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ShipModernSubmarineGreen",
-    "PreviewUri": "@previewImages/ShipModernSubmarineGreen.png"
+    "PreviewUri": "ShipModernSubmarineGreen.png"
   },
   "ShipModernSubmarineOrange": {
     "DisplayName": "Ship, Modern, Submarine, Orange",
@@ -73319,7 +73319,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ShipModernSubmarineOrange",
-    "PreviewUri": "@previewImages/ShipModernSubmarineOrange.png"
+    "PreviewUri": "ShipModernSubmarineOrange.png"
   },
   "ShipModernSubmarinePurple": {
     "DisplayName": "Ship, Modern, Submarine, Purple",
@@ -73345,7 +73345,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ShipModernSubmarinePurple",
-    "PreviewUri": "@previewImages/ShipModernSubmarinePurple.png"
+    "PreviewUri": "ShipModernSubmarinePurple.png"
   },
   "ShipModernSubmarineWhite": {
     "DisplayName": "Ship, Modern, Submarine, White",
@@ -73371,7 +73371,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ShipModernSubmarineWhite",
-    "PreviewUri": "@previewImages/ShipModernSubmarineWhite.png"
+    "PreviewUri": "ShipModernSubmarineWhite.png"
   },
   "ShipModernTransportBlack": {
     "DisplayName": "Ship, Modern, Transport, Black",
@@ -73397,7 +73397,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ShipModernTransportBlack",
-    "PreviewUri": "@previewImages/ShipModernTransportBlack.png"
+    "PreviewUri": "ShipModernTransportBlack.png"
   },
   "ShipModernTransportGreen": {
     "DisplayName": "Ship, Modern, Transport, Green",
@@ -73423,7 +73423,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ShipModernTransportGreen",
-    "PreviewUri": "@previewImages/ShipModernTransportGreen.png"
+    "PreviewUri": "ShipModernTransportGreen.png"
   },
   "ShipModernTransportOrange": {
     "DisplayName": "Ship, Modern, Transport, Orange",
@@ -73449,7 +73449,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ShipModernTransportOrange",
-    "PreviewUri": "@previewImages/ShipModernTransportOrange.png"
+    "PreviewUri": "ShipModernTransportOrange.png"
   },
   "ShipModernTransportPurple": {
     "DisplayName": "Ship, Modern, Transport, Purple",
@@ -73475,7 +73475,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ShipModernTransportPurple",
-    "PreviewUri": "@previewImages/ShipModernTransportPurple.png"
+    "PreviewUri": "ShipModernTransportPurple.png"
   },
   "ShipModernTransportWhite": {
     "DisplayName": "Ship, Modern, Transport, White",
@@ -73501,7 +73501,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ShipModernTransportWhite",
-    "PreviewUri": "@previewImages/ShipModernTransportWhite.png"
+    "PreviewUri": "ShipModernTransportWhite.png"
   },
   "ShipSeaBritishBlack": {
     "DisplayName": "Ship, Sea, British, Black",
@@ -73526,7 +73526,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ShipSeaBritishBlack",
-    "PreviewUri": "@previewImages/ShipSeaBritishBlack.png"
+    "PreviewUri": "ShipSeaBritishBlack.png"
   },
   "ShipSeaBritishBlue": {
     "DisplayName": "Ship, Sea, British, Blue",
@@ -73551,7 +73551,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ShipSeaBritishBlue",
-    "PreviewUri": "@previewImages/ShipSeaBritishBlue.png"
+    "PreviewUri": "ShipSeaBritishBlue.png"
   },
   "ShipSeaBritishGreen": {
     "DisplayName": "Ship, Sea, British, Green",
@@ -73576,7 +73576,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ShipSeaBritishGreen",
-    "PreviewUri": "@previewImages/ShipSeaBritishGreen.png"
+    "PreviewUri": "ShipSeaBritishGreen.png"
   },
   "ShipSeaBritishOrange": {
     "DisplayName": "Ship, Sea, British, Orange",
@@ -73601,7 +73601,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ShipSeaBritishOrange",
-    "PreviewUri": "@previewImages/ShipSeaBritishOrange.png"
+    "PreviewUri": "ShipSeaBritishOrange.png"
   },
   "ShipSeaBritishPurple": {
     "DisplayName": "Ship, Sea, British, Purple",
@@ -73626,7 +73626,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ShipSeaBritishPurple",
-    "PreviewUri": "@previewImages/ShipSeaBritishPurple.png"
+    "PreviewUri": "ShipSeaBritishPurple.png"
   },
   "ShipSeaBritishRed": {
     "DisplayName": "Ship, Sea, British, Red",
@@ -73651,7 +73651,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ShipSeaBritishRed",
-    "PreviewUri": "@previewImages/ShipSeaBritishRed.png"
+    "PreviewUri": "ShipSeaBritishRed.png"
   },
   "ShipSeaBritishWhite": {
     "DisplayName": "Ship, Sea, British, White",
@@ -73676,7 +73676,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ShipSeaBritishWhite",
-    "PreviewUri": "@previewImages/ShipSeaBritishWhite.png"
+    "PreviewUri": "ShipSeaBritishWhite.png"
   },
   "ShipSeaBritishYellow": {
     "DisplayName": "Ship, Sea, British, Yellow",
@@ -73701,7 +73701,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ShipSeaBritishYellow",
-    "PreviewUri": "@previewImages/ShipSeaBritishYellow.png"
+    "PreviewUri": "ShipSeaBritishYellow.png"
   },
   "ShipSeaPirateBlack": {
     "DisplayName": "Ship, Sea, Pirate, Black",
@@ -73733,7 +73733,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ShipSeaPirateBlack",
-    "PreviewUri": "@previewImages/ShipSeaPirateBlack.png"
+    "PreviewUri": "ShipSeaPirateBlack.png"
   },
   "ShipSeaPirateBlue": {
     "DisplayName": "Ship, Sea, Pirate, Blue",
@@ -73765,7 +73765,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ShipSeaPirateBlue",
-    "PreviewUri": "@previewImages/ShipSeaPirateBlue.png"
+    "PreviewUri": "ShipSeaPirateBlue.png"
   },
   "ShipSeaPirateGreen": {
     "DisplayName": "Ship, Sea, Pirate, Green",
@@ -73797,7 +73797,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ShipSeaPirateGreen",
-    "PreviewUri": "@previewImages/ShipSeaPirateGreen.png"
+    "PreviewUri": "ShipSeaPirateGreen.png"
   },
   "ShipSeaPirateOrange": {
     "DisplayName": "Ship, Sea, Pirate, Orange",
@@ -73829,7 +73829,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ShipSeaPirateOrange",
-    "PreviewUri": "@previewImages/ShipSeaPirateOrange.png"
+    "PreviewUri": "ShipSeaPirateOrange.png"
   },
   "ShipSeaPiratePurple": {
     "DisplayName": "Ship, Sea, Pirate, Purple",
@@ -73861,7 +73861,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ShipSeaPiratePurple",
-    "PreviewUri": "@previewImages/ShipSeaPiratePurple.png"
+    "PreviewUri": "ShipSeaPiratePurple.png"
   },
   "ShipSeaPirateRed": {
     "DisplayName": "Ship, Sea, Pirate, Red",
@@ -73893,7 +73893,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ShipSeaPirateRed",
-    "PreviewUri": "@previewImages/ShipSeaPirateRed.png"
+    "PreviewUri": "ShipSeaPirateRed.png"
   },
   "ShipSeaPirateWhite": {
     "DisplayName": "Ship, Sea, Pirate, White",
@@ -73925,7 +73925,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ShipSeaPirateWhite",
-    "PreviewUri": "@previewImages/ShipSeaPirateWhite.png"
+    "PreviewUri": "ShipSeaPirateWhite.png"
   },
   "ShipSeaPirateYellow": {
     "DisplayName": "Ship, Sea, Pirate, Yellow",
@@ -73957,7 +73957,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ShipSeaPirateYellow",
-    "PreviewUri": "@previewImages/ShipSeaPirateYellow.png"
+    "PreviewUri": "ShipSeaPirateYellow.png"
   },
   "ShipSeaVikingLongboatBlack": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Black",
@@ -73985,7 +73985,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ShipSeaVikingLongboatBlack",
-    "PreviewUri": "@previewImages/ShipSeaVikingLongboatBlack.png"
+    "PreviewUri": "ShipSeaVikingLongboatBlack.png"
   },
   "ShipSeaVikingLongboatBlue": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Blue",
@@ -74013,7 +74013,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ShipSeaVikingLongboatBlue",
-    "PreviewUri": "@previewImages/ShipSeaVikingLongboatBlue.png"
+    "PreviewUri": "ShipSeaVikingLongboatBlue.png"
   },
   "ShipSeaVikingLongboatGreen": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Green",
@@ -74041,7 +74041,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ShipSeaVikingLongboatGreen",
-    "PreviewUri": "@previewImages/ShipSeaVikingLongboatGreen.png"
+    "PreviewUri": "ShipSeaVikingLongboatGreen.png"
   },
   "ShipSeaVikingLongboatOrange": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Orange",
@@ -74069,7 +74069,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ShipSeaVikingLongboatOrange",
-    "PreviewUri": "@previewImages/ShipSeaVikingLongboatOrange.png"
+    "PreviewUri": "ShipSeaVikingLongboatOrange.png"
   },
   "ShipSeaVikingLongboatPurple": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Purple",
@@ -74097,7 +74097,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ShipSeaVikingLongboatPurple",
-    "PreviewUri": "@previewImages/ShipSeaVikingLongboatPurple.png"
+    "PreviewUri": "ShipSeaVikingLongboatPurple.png"
   },
   "ShipSeaVikingLongboatRed": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Red",
@@ -74125,7 +74125,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ShipSeaVikingLongboatRed",
-    "PreviewUri": "@previewImages/ShipSeaVikingLongboatRed.png"
+    "PreviewUri": "ShipSeaVikingLongboatRed.png"
   },
   "ShipSeaVikingLongboatWhite": {
     "DisplayName": "Ship, Sea, Viking, Longboat, White",
@@ -74153,7 +74153,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ShipSeaVikingLongboatWhite",
-    "PreviewUri": "@previewImages/ShipSeaVikingLongboatWhite.png"
+    "PreviewUri": "ShipSeaVikingLongboatWhite.png"
   },
   "ShipSeaVikingLongboatYellow": {
     "DisplayName": "Ship, Sea, Viking, Longboat, Yellow",
@@ -74181,7 +74181,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ShipSeaVikingLongboatYellow",
-    "PreviewUri": "@previewImages/ShipSeaVikingLongboatYellow.png"
+    "PreviewUri": "ShipSeaVikingLongboatYellow.png"
   },
   "ShipSpaceFighterBlack": {
     "DisplayName": "Ship, Space, Fighter, Black",
@@ -74216,7 +74216,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ShipSpaceFighterBlack",
-    "PreviewUri": "@previewImages/ShipSpaceFighterBlack.png"
+    "PreviewUri": "ShipSpaceFighterBlack.png"
   },
   "ShipSpaceFighterBlue": {
     "DisplayName": "Ship, Space, Fighter, Blue",
@@ -74251,7 +74251,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ShipSpaceFighterBlue",
-    "PreviewUri": "@previewImages/ShipSpaceFighterBlue.png"
+    "PreviewUri": "ShipSpaceFighterBlue.png"
   },
   "ShipSpaceFighterGreen": {
     "DisplayName": "Ship, Space, Fighter, Green",
@@ -74286,7 +74286,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ShipSpaceFighterGreen",
-    "PreviewUri": "@previewImages/ShipSpaceFighterGreen.png"
+    "PreviewUri": "ShipSpaceFighterGreen.png"
   },
   "ShipSpaceFighterOrange": {
     "DisplayName": "Ship, Space, Fighter, Orange",
@@ -74321,7 +74321,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ShipSpaceFighterOrange",
-    "PreviewUri": "@previewImages/ShipSpaceFighterOrange.png"
+    "PreviewUri": "ShipSpaceFighterOrange.png"
   },
   "ShipSpaceFighterPurple": {
     "DisplayName": "Ship, Space, Fighter, Purple",
@@ -74356,7 +74356,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ShipSpaceFighterPurple",
-    "PreviewUri": "@previewImages/ShipSpaceFighterPurple.png"
+    "PreviewUri": "ShipSpaceFighterPurple.png"
   },
   "ShipSpaceFighterRed": {
     "DisplayName": "Ship, Space, Fighter, Red",
@@ -74391,7 +74391,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ShipSpaceFighterRed",
-    "PreviewUri": "@previewImages/ShipSpaceFighterRed.png"
+    "PreviewUri": "ShipSpaceFighterRed.png"
   },
   "ShipSpaceFighterWhite": {
     "DisplayName": "Ship, Space, Fighter, White",
@@ -74426,7 +74426,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ShipSpaceFighterWhite",
-    "PreviewUri": "@previewImages/ShipSpaceFighterWhite.png"
+    "PreviewUri": "ShipSpaceFighterWhite.png"
   },
   "ShipSpaceFighterYellow": {
     "DisplayName": "Ship, Space, Fighter, Yellow",
@@ -74461,7 +74461,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ShipSpaceFighterYellow",
-    "PreviewUri": "@previewImages/ShipSpaceFighterYellow.png"
+    "PreviewUri": "ShipSpaceFighterYellow.png"
   },
   "ShipSpaceFreighterBlack": {
     "DisplayName": "Ship, Space, Freighter, Black",
@@ -74491,7 +74491,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ShipSpaceFreighterBlack",
-    "PreviewUri": "@previewImages/ShipSpaceFreighterBlack.png"
+    "PreviewUri": "ShipSpaceFreighterBlack.png"
   },
   "ShipSpaceFreighterBlue": {
     "DisplayName": "Ship, Space, Freighter, Blue",
@@ -74521,7 +74521,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ShipSpaceFreighterBlue",
-    "PreviewUri": "@previewImages/ShipSpaceFreighterBlue.png"
+    "PreviewUri": "ShipSpaceFreighterBlue.png"
   },
   "ShipSpaceFreighterGreen": {
     "DisplayName": "Ship, Space, Freighter, Green",
@@ -74551,7 +74551,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ShipSpaceFreighterGreen",
-    "PreviewUri": "@previewImages/ShipSpaceFreighterGreen.png"
+    "PreviewUri": "ShipSpaceFreighterGreen.png"
   },
   "ShipSpaceFreighterOrange": {
     "DisplayName": "Ship, Space, Freighter, Orange",
@@ -74581,7 +74581,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ShipSpaceFreighterOrange",
-    "PreviewUri": "@previewImages/ShipSpaceFreighterOrange.png"
+    "PreviewUri": "ShipSpaceFreighterOrange.png"
   },
   "ShipSpaceFreighterPurple": {
     "DisplayName": "Ship, Space, Freighter, Purple",
@@ -74611,7 +74611,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ShipSpaceFreighterPurple",
-    "PreviewUri": "@previewImages/ShipSpaceFreighterPurple.png"
+    "PreviewUri": "ShipSpaceFreighterPurple.png"
   },
   "ShipSpaceFreighterRed": {
     "DisplayName": "Ship, Space, Freighter, Red",
@@ -74641,7 +74641,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ShipSpaceFreighterRed",
-    "PreviewUri": "@previewImages/ShipSpaceFreighterRed.png"
+    "PreviewUri": "ShipSpaceFreighterRed.png"
   },
   "ShipSpaceFreighterWhite": {
     "DisplayName": "Ship, Space, Freighter, White",
@@ -74671,7 +74671,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ShipSpaceFreighterWhite",
-    "PreviewUri": "@previewImages/ShipSpaceFreighterWhite.png"
+    "PreviewUri": "ShipSpaceFreighterWhite.png"
   },
   "ShipSpaceFreighterYellow": {
     "DisplayName": "Ship, Space, Freighter, Yellow",
@@ -74701,7 +74701,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ShipSpaceFreighterYellow",
-    "PreviewUri": "@previewImages/ShipSpaceFreighterYellow.png"
+    "PreviewUri": "ShipSpaceFreighterYellow.png"
   },
   "ShipSpaceSmugglerBlack": {
     "DisplayName": "Ship, Space, Smuggler, Black",
@@ -74735,7 +74735,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ShipSpaceSmugglerBlack",
-    "PreviewUri": "@previewImages/ShipSpaceSmugglerBlack.png"
+    "PreviewUri": "ShipSpaceSmugglerBlack.png"
   },
   "ShipSpaceSmugglerBlue": {
     "DisplayName": "Ship, Space, Smuggler, Blue",
@@ -74769,7 +74769,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ShipSpaceSmugglerBlue",
-    "PreviewUri": "@previewImages/ShipSpaceSmugglerBlue.png"
+    "PreviewUri": "ShipSpaceSmugglerBlue.png"
   },
   "ShipSpaceSmugglerGreen": {
     "DisplayName": "Ship, Space, Smuggler, Green",
@@ -74803,7 +74803,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ShipSpaceSmugglerGreen",
-    "PreviewUri": "@previewImages/ShipSpaceSmugglerGreen.png"
+    "PreviewUri": "ShipSpaceSmugglerGreen.png"
   },
   "ShipSpaceSmugglerOrange": {
     "DisplayName": "Ship, Space, Smuggler, Orange",
@@ -74837,7 +74837,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ShipSpaceSmugglerOrange",
-    "PreviewUri": "@previewImages/ShipSpaceSmugglerOrange.png"
+    "PreviewUri": "ShipSpaceSmugglerOrange.png"
   },
   "ShipSpaceSmugglerPurple": {
     "DisplayName": "Ship, Space, Smuggler, Purple",
@@ -74871,7 +74871,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ShipSpaceSmugglerPurple",
-    "PreviewUri": "@previewImages/ShipSpaceSmugglerPurple.png"
+    "PreviewUri": "ShipSpaceSmugglerPurple.png"
   },
   "ShipSpaceSmugglerRed": {
     "DisplayName": "Ship, Space, Smuggler, Red",
@@ -74905,7 +74905,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ShipSpaceSmugglerRed",
-    "PreviewUri": "@previewImages/ShipSpaceSmugglerRed.png"
+    "PreviewUri": "ShipSpaceSmugglerRed.png"
   },
   "ShipSpaceSmugglerWhite": {
     "DisplayName": "Ship, Space, Smuggler, White",
@@ -74939,7 +74939,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ShipSpaceSmugglerWhite",
-    "PreviewUri": "@previewImages/ShipSpaceSmugglerWhite.png"
+    "PreviewUri": "ShipSpaceSmugglerWhite.png"
   },
   "ShipSpaceSmugglerYellow": {
     "DisplayName": "Ship, Space, Smuggler, Yellow",
@@ -74973,7 +74973,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ShipSpaceSmugglerYellow",
-    "PreviewUri": "@previewImages/ShipSpaceSmugglerYellow.png"
+    "PreviewUri": "ShipSpaceSmugglerYellow.png"
   },
   "ShipSpaceTransportBlack": {
     "DisplayName": "Ship, Space, Transport, Black",
@@ -74992,7 +74992,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ShipSpaceTransportBlack",
-    "PreviewUri": "@previewImages/ShipSpaceTransportBlack.png"
+    "PreviewUri": "ShipSpaceTransportBlack.png"
   },
   "ShipSpaceTransportBlue": {
     "DisplayName": "Ship, Space, Transport, Blue",
@@ -75011,7 +75011,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ShipSpaceTransportBlue",
-    "PreviewUri": "@previewImages/ShipSpaceTransportBlue.png"
+    "PreviewUri": "ShipSpaceTransportBlue.png"
   },
   "ShipSpaceTransportGreen": {
     "DisplayName": "Ship, Space, Transport, Green",
@@ -75030,7 +75030,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ShipSpaceTransportGreen",
-    "PreviewUri": "@previewImages/ShipSpaceTransportGreen.png"
+    "PreviewUri": "ShipSpaceTransportGreen.png"
   },
   "ShipSpaceTransportOrange": {
     "DisplayName": "Ship, Space, Transport, Orange",
@@ -75049,7 +75049,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ShipSpaceTransportOrange",
-    "PreviewUri": "@previewImages/ShipSpaceTransportOrange.png"
+    "PreviewUri": "ShipSpaceTransportOrange.png"
   },
   "ShipSpaceTransportPurple": {
     "DisplayName": "Ship, Space, Transport, Purple",
@@ -75068,7 +75068,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ShipSpaceTransportPurple",
-    "PreviewUri": "@previewImages/ShipSpaceTransportPurple.png"
+    "PreviewUri": "ShipSpaceTransportPurple.png"
   },
   "ShipSpaceTransportRed": {
     "DisplayName": "Ship, Space, Transport, Red",
@@ -75087,7 +75087,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ShipSpaceTransportRed",
-    "PreviewUri": "@previewImages/ShipSpaceTransportRed.png"
+    "PreviewUri": "ShipSpaceTransportRed.png"
   },
   "ShipSpaceTransportWhite": {
     "DisplayName": "Ship, Space, Transport, White",
@@ -75106,7 +75106,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ShipSpaceTransportWhite",
-    "PreviewUri": "@previewImages/ShipSpaceTransportWhite.png"
+    "PreviewUri": "ShipSpaceTransportWhite.png"
   },
   "ShipSpaceTransportYellow": {
     "DisplayName": "Ship, Space, Transport, Yellow",
@@ -75125,7 +75125,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ShipSpaceTransportYellow",
-    "PreviewUri": "@previewImages/ShipSpaceTransportYellow.png"
+    "PreviewUri": "ShipSpaceTransportYellow.png"
   },
   "ShipSpaceUFOBlack": {
     "DisplayName": "Ship, Space, UFO, Black",
@@ -75162,7 +75162,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "ShipSpaceUFOBlack",
-    "PreviewUri": "@previewImages/ShipSpaceUFOBlack.png"
+    "PreviewUri": "ShipSpaceUFOBlack.png"
   },
   "ShipSpaceUFOBlue": {
     "DisplayName": "Ship, Space, UFO, Blue",
@@ -75199,7 +75199,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "ShipSpaceUFOBlue",
-    "PreviewUri": "@previewImages/ShipSpaceUFOBlue.png"
+    "PreviewUri": "ShipSpaceUFOBlue.png"
   },
   "ShipSpaceUFOGreen": {
     "DisplayName": "Ship, Space, UFO, Green",
@@ -75236,7 +75236,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ShipSpaceUFOGreen",
-    "PreviewUri": "@previewImages/ShipSpaceUFOGreen.png"
+    "PreviewUri": "ShipSpaceUFOGreen.png"
   },
   "ShipSpaceUFOOrange": {
     "DisplayName": "Ship, Space, UFO, Orange",
@@ -75273,7 +75273,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "ShipSpaceUFOOrange",
-    "PreviewUri": "@previewImages/ShipSpaceUFOOrange.png"
+    "PreviewUri": "ShipSpaceUFOOrange.png"
   },
   "ShipSpaceUFOPurple": {
     "DisplayName": "Ship, Space, UFO, Purple",
@@ -75310,7 +75310,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "ShipSpaceUFOPurple",
-    "PreviewUri": "@previewImages/ShipSpaceUFOPurple.png"
+    "PreviewUri": "ShipSpaceUFOPurple.png"
   },
   "ShipSpaceUFORed": {
     "DisplayName": "Ship, Space, UFO, Red",
@@ -75347,7 +75347,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "ShipSpaceUFORed",
-    "PreviewUri": "@previewImages/ShipSpaceUFORed.png"
+    "PreviewUri": "ShipSpaceUFORed.png"
   },
   "ShipSpaceUFOSilver": {
     "DisplayName": "Ship, Space, UFO, Silver",
@@ -75384,7 +75384,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "ShipSpaceUFOSilver",
-    "PreviewUri": "@previewImages/ShipSpaceUFOSilver.png"
+    "PreviewUri": "ShipSpaceUFOSilver.png"
   },
   "ShipSpaceUFOWhite": {
     "DisplayName": "Ship, Space, UFO, White",
@@ -75421,7 +75421,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ShipSpaceUFOWhite",
-    "PreviewUri": "@previewImages/ShipSpaceUFOWhite.png"
+    "PreviewUri": "ShipSpaceUFOWhite.png"
   },
   "ShipSpaceUFOYellow": {
     "DisplayName": "Ship, Space, UFO, Yellow",
@@ -75458,7 +75458,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "ShipSpaceUFOYellow",
-    "PreviewUri": "@previewImages/ShipSpaceUFOYellow.png"
+    "PreviewUri": "ShipSpaceUFOYellow.png"
   },
   "Shotgun": {
     "DisplayName": "Shotgun",
@@ -75482,7 +75482,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Shotgun",
-    "PreviewUri": "@previewImages/Shotgun.png"
+    "PreviewUri": "Shotgun.png"
   },
   "Signpost": {
     "DisplayName": "Signpost",
@@ -75501,7 +75501,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Signpost",
-    "PreviewUri": "@previewImages/Signpost.png"
+    "PreviewUri": "Signpost.png"
   },
   "SkeletalCrossbowmanIII": {
     "DisplayName": "Skeletal Crossbowman III",
@@ -75539,7 +75539,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "SkeletalCrossbowmanIII",
-    "PreviewUri": "@previewImages/SkeletalCrossbowmanIII.png"
+    "PreviewUri": "SkeletalCrossbowmanIII.png"
   },
   "Skeleton-CharacterMeeple": {
     "DisplayName": "Skeleton, Character Meeple",
@@ -75562,7 +75562,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Skeleton-CharacterMeeple",
-    "PreviewUri": "@previewImages/Skeleton-CharacterMeeple.png"
+    "PreviewUri": "Skeleton-CharacterMeeple.png"
   },
   "SkeletonArcher2FantasyTB25": {
     "DisplayName": "Skeleton Archer 2, Fantasy, TB25",
@@ -75591,7 +75591,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "SkeletonArcher2FantasyTB25",
-    "PreviewUri": "@previewImages/SkeletonArcher2FantasyTB25.png"
+    "PreviewUri": "SkeletonArcher2FantasyTB25.png"
   },
   "SkeletonArcherFantasyTB25": {
     "DisplayName": "Skeleton Archer, Fantasy, TB25",
@@ -75620,7 +75620,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "SkeletonArcherFantasyTB25",
-    "PreviewUri": "@previewImages/SkeletonArcherFantasyTB25.png"
+    "PreviewUri": "SkeletonArcherFantasyTB25.png"
   },
   "SkeletonAxeFantasyTB25": {
     "DisplayName": "Skeleton Axe, Fantasy, TB25",
@@ -75644,7 +75644,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "SkeletonAxeFantasyTB25",
-    "PreviewUri": "@previewImages/SkeletonAxeFantasyTB25.png"
+    "PreviewUri": "SkeletonAxeFantasyTB25.png"
   },
   "SkeletonBattleAxe": {
     "DisplayName": "Skeleton Battle Axe",
@@ -75677,7 +75677,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "SkeletonBattleAxe",
-    "PreviewUri": "@previewImages/SkeletonBattleAxe.png"
+    "PreviewUri": "SkeletonBattleAxe.png"
   },
   "SkeletonSword2FantasyTB25": {
     "DisplayName": "Skeleton Sword 2, Fantasy, TB25",
@@ -75701,7 +75701,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "SkeletonSword2FantasyTB25",
-    "PreviewUri": "@previewImages/SkeletonSword2FantasyTB25.png"
+    "PreviewUri": "SkeletonSword2FantasyTB25.png"
   },
   "SkeletonSword3FantasyTB25": {
     "DisplayName": "Skeleton Sword 3, Fantasy, TB25",
@@ -75726,7 +75726,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "SkeletonSword3FantasyTB25",
-    "PreviewUri": "@previewImages/SkeletonSword3FantasyTB25.png"
+    "PreviewUri": "SkeletonSword3FantasyTB25.png"
   },
   "SkeletonSwordArmoredFantasyTB25": {
     "DisplayName": "Skeleton Sword, Armored, Fantasy, TB25",
@@ -75754,7 +75754,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "SkeletonSwordArmoredFantasyTB25",
-    "PreviewUri": "@previewImages/SkeletonSwordArmoredFantasyTB25.png"
+    "PreviewUri": "SkeletonSwordArmoredFantasyTB25.png"
   },
   "SkeletonSwordFantasyTB25": {
     "DisplayName": "Skeleton Sword, Fantasy, TB25",
@@ -75778,7 +75778,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "SkeletonSwordFantasyTB25",
-    "PreviewUri": "@previewImages/SkeletonSwordFantasyTB25.png"
+    "PreviewUri": "SkeletonSwordFantasyTB25.png"
   },
   "SkeletonWarriorBlack": {
     "DisplayName": "Skeleton Warrior, Black",
@@ -75803,7 +75803,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "SkeletonWarriorBlack",
-    "PreviewUri": "@previewImages/SkeletonWarriorBlack.png"
+    "PreviewUri": "SkeletonWarriorBlack.png"
   },
   "SkeletonWarriorBlue": {
     "DisplayName": "Skeleton Warrior, Blue",
@@ -75828,7 +75828,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "SkeletonWarriorBlue",
-    "PreviewUri": "@previewImages/SkeletonWarriorBlue.png"
+    "PreviewUri": "SkeletonWarriorBlue.png"
   },
   "SkeletonWarriorPink": {
     "DisplayName": "Skeleton Warrior, Pink",
@@ -75853,7 +75853,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "SkeletonWarriorPink",
-    "PreviewUri": "@previewImages/SkeletonWarriorPink.png"
+    "PreviewUri": "SkeletonWarriorPink.png"
   },
   "SkeletonWarriorTan": {
     "DisplayName": "Skeleton Warrior, Tan",
@@ -75878,7 +75878,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "SkeletonWarriorTan",
-    "PreviewUri": "@previewImages/SkeletonWarriorTan.png"
+    "PreviewUri": "SkeletonWarriorTan.png"
   },
   "Skull": {
     "DisplayName": "Skull",
@@ -75915,7 +75915,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "Skull",
-    "PreviewUri": "@previewImages/Skull.png"
+    "PreviewUri": "Skull.png"
   },
   "SliderClipBlack": {
     "DisplayName": "Slider Clip, Black",
@@ -75942,7 +75942,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "SliderClipBlack",
-    "PreviewUri": "@previewImages/SliderClipBlack.png"
+    "PreviewUri": "SliderClipBlack.png"
   },
   "SliderClipBlue": {
     "DisplayName": "Slider Clip, Blue",
@@ -75969,7 +75969,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "SliderClipBlue",
-    "PreviewUri": "@previewImages/SliderClipBlue.png"
+    "PreviewUri": "SliderClipBlue.png"
   },
   "SliderClipChipboardBlack": {
     "DisplayName": "Slider Clip, Chipboard, Black",
@@ -75996,7 +75996,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "SliderClipChipboardBlack",
-    "PreviewUri": "@previewImages/SliderClipChipboardBlack.png"
+    "PreviewUri": "SliderClipChipboardBlack.png"
   },
   "SliderClipChipboardBlue": {
     "DisplayName": "Slider Clip, Chipboard, Blue",
@@ -76023,7 +76023,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "SliderClipChipboardBlue",
-    "PreviewUri": "@previewImages/SliderClipChipboardBlue.png"
+    "PreviewUri": "SliderClipChipboardBlue.png"
   },
   "SliderClipChipboardGreen": {
     "DisplayName": "Slider Clip, Chipboard, Green",
@@ -76050,7 +76050,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "SliderClipChipboardGreen",
-    "PreviewUri": "@previewImages/SliderClipChipboardGreen.png"
+    "PreviewUri": "SliderClipChipboardGreen.png"
   },
   "SliderClipChipboardOrange": {
     "DisplayName": "Slider Clip, Chipboard, Orange",
@@ -76077,7 +76077,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "SliderClipChipboardOrange",
-    "PreviewUri": "@previewImages/SliderClipChipboardOrange.png"
+    "PreviewUri": "SliderClipChipboardOrange.png"
   },
   "SliderClipChipboardPurple": {
     "DisplayName": "Slider Clip, Chipboard, Purple",
@@ -76104,7 +76104,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "SliderClipChipboardPurple",
-    "PreviewUri": "@previewImages/SliderClipChipboardPurple.png"
+    "PreviewUri": "SliderClipChipboardPurple.png"
   },
   "SliderClipChipboardRed": {
     "DisplayName": "Slider Clip, Chipboard, Red",
@@ -76131,7 +76131,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "SliderClipChipboardRed",
-    "PreviewUri": "@previewImages/SliderClipChipboardRed.png"
+    "PreviewUri": "SliderClipChipboardRed.png"
   },
   "SliderClipChipboardWhite": {
     "DisplayName": "Slider Clip, Chipboard, White",
@@ -76158,7 +76158,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "SliderClipChipboardWhite",
-    "PreviewUri": "@previewImages/SliderClipChipboardWhite.png"
+    "PreviewUri": "SliderClipChipboardWhite.png"
   },
   "SliderClipChipboardYellow": {
     "DisplayName": "Slider Clip, Chipboard, Yellow",
@@ -76185,7 +76185,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "SliderClipChipboardYellow",
-    "PreviewUri": "@previewImages/SliderClipChipboardYellow.png"
+    "PreviewUri": "SliderClipChipboardYellow.png"
   },
   "SliderClipGreen": {
     "DisplayName": "Slider Clip, Green",
@@ -76213,7 +76213,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "SliderClipGreen",
-    "PreviewUri": "@previewImages/SliderClipGreen.png"
+    "PreviewUri": "SliderClipGreen.png"
   },
   "SliderClipOrange": {
     "DisplayName": "Slider Clip, Orange",
@@ -76240,7 +76240,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "SliderClipOrange",
-    "PreviewUri": "@previewImages/SliderClipOrange.png"
+    "PreviewUri": "SliderClipOrange.png"
   },
   "SliderClipPurple": {
     "DisplayName": "Slider Clip, Purple",
@@ -76267,7 +76267,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "SliderClipPurple",
-    "PreviewUri": "@previewImages/SliderClipPurple.png"
+    "PreviewUri": "SliderClipPurple.png"
   },
   "SliderClipRed": {
     "DisplayName": "Slider Clip, Red",
@@ -76294,7 +76294,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "SliderClipRed",
-    "PreviewUri": "@previewImages/SliderClipRed.png"
+    "PreviewUri": "SliderClipRed.png"
   },
   "SliderClipWhite": {
     "DisplayName": "Slider Clip, White",
@@ -76321,7 +76321,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "SliderClipWhite",
-    "PreviewUri": "@previewImages/SliderClipWhite.png"
+    "PreviewUri": "SliderClipWhite.png"
   },
   "SliderClipYellow": {
     "DisplayName": "Slider Clip, Yellow",
@@ -76348,7 +76348,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "SliderClipYellow",
-    "PreviewUri": "@previewImages/SliderClipYellow.png"
+    "PreviewUri": "SliderClipYellow.png"
   },
   "SmallStoutBox": {
     "DisplayName": "Blank Small Stout Box",
@@ -76377,7 +76377,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "SmallStoutBox",
-    "PreviewUri": "@previewImages/BlankSmallStoutBox.png"
+    "PreviewUri": "BlankSmallStoutBox.png"
   },
   "Snap&StackConditionMarkerBlack": {
     "DisplayName": "Snap & Stack Condition Marker, Black",
@@ -76420,7 +76420,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Snap&StackConditionMarkerBlack",
-    "PreviewUri": "@previewImages/Snap&StackConditionMarkerBlack.png"
+    "PreviewUri": "Snap&StackConditionMarkerBlack.png"
   },
   "Snap&StackConditionMarkerBlue": {
     "DisplayName": "Snap & Stack Condition Marker, Blue",
@@ -76463,7 +76463,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Snap&StackConditionMarkerBlue",
-    "PreviewUri": "@previewImages/Snap&StackConditionMarkerBlue.png"
+    "PreviewUri": "Snap&StackConditionMarkerBlue.png"
   },
   "Snap&StackConditionMarkerGreen": {
     "DisplayName": "Snap & Stack Condition Marker, Green",
@@ -76506,7 +76506,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Snap&StackConditionMarkerGreen",
-    "PreviewUri": "@previewImages/Snap&StackConditionMarkerGreen.png"
+    "PreviewUri": "Snap&StackConditionMarkerGreen.png"
   },
   "Snap&StackConditionMarkerPink": {
     "DisplayName": "Snap & Stack Condition Marker, Pink",
@@ -76549,7 +76549,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "Snap&StackConditionMarkerPink",
-    "PreviewUri": "@previewImages/Snap&StackConditionMarkerPink.png"
+    "PreviewUri": "Snap&StackConditionMarkerPink.png"
   },
   "Snap&StackConditionMarkerWhite": {
     "DisplayName": "Snap & Stack Condition Marker, White",
@@ -76592,7 +76592,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Snap&StackConditionMarkerWhite",
-    "PreviewUri": "@previewImages/Snap&StackConditionMarkerWhite.png"
+    "PreviewUri": "Snap&StackConditionMarkerWhite.png"
   },
   "Snap&StackConditionMarkerYellow": {
     "DisplayName": "Snap & Stack Condition Marker, Yellow",
@@ -76635,7 +76635,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Snap&StackConditionMarkerYellow",
-    "PreviewUri": "@previewImages/Snap&StackConditionMarkerYellow.png"
+    "PreviewUri": "Snap&StackConditionMarkerYellow.png"
   },
   "SnaplockBoxMicro": {
     "DisplayName": "Snaplock Box, Micro",
@@ -76667,7 +76667,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "SnaplockBoxMicro",
-    "PreviewUri": "@previewImages/SnaplockBoxMicro.png"
+    "PreviewUri": "SnaplockBoxMicro.png"
   },
   "SnaplockBoxMini": {
     "DisplayName": "Snaplock Box, Mini",
@@ -76699,7 +76699,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "SnaplockBoxMini",
-    "PreviewUri": "@previewImages/SnaplockBoxMini.png"
+    "PreviewUri": "SnaplockBoxMini.png"
   },
   "SnaplockBoxOrganizer": {
     "DisplayName": "Snaplock Box, Organizer",
@@ -76730,7 +76730,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "SnaplockBoxOrganizer",
-    "PreviewUri": "@previewImages/SnaplockBoxOrganizer.png"
+    "PreviewUri": "SnaplockBoxOrganizer.png"
   },
   "SnaplockBoxPoker100+Card": {
     "DisplayName": "Snaplock Box, Poker, 100+ Card",
@@ -76763,7 +76763,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "SnaplockBoxPoker100+Card",
-    "PreviewUri": "@previewImages/SnaplockBoxPoker100+Card.png"
+    "PreviewUri": "SnaplockBoxPoker100+Card.png"
   },
   "Snowman1FantasyTB25": {
     "DisplayName": "Snowman 1, Fantasy, TB25",
@@ -76782,7 +76782,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Snowman1FantasyTB25",
-    "PreviewUri": "@previewImages/Snowman1FantasyTB25.png"
+    "PreviewUri": "Snowman1FantasyTB25.png"
   },
   "Snowman2FantasyTB25": {
     "DisplayName": "Snowman 2 Fantasy, TB25",
@@ -76801,7 +76801,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Snowman2FantasyTB25",
-    "PreviewUri": "@previewImages/Snowman2FantasyTB25.png"
+    "PreviewUri": "Snowman2FantasyTB25.png"
   },
   "SoldierBlue-CharacterMeeple": {
     "DisplayName": "Soldier, Blue, Character Meeple",
@@ -76829,7 +76829,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "SoldierBlue-CharacterMeeple",
-    "PreviewUri": "@previewImages/SoldierBlue-CharacterMeeple.png"
+    "PreviewUri": "SoldierBlue-CharacterMeeple.png"
   },
   "SoldierGreen-CharacterMeeple": {
     "DisplayName": "Soldier, Green, Character Meeple",
@@ -76857,7 +76857,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "SoldierGreen-CharacterMeeple",
-    "PreviewUri": "@previewImages/SoldierGreen-CharacterMeeple.png"
+    "PreviewUri": "SoldierGreen-CharacterMeeple.png"
   },
   "SpaceRangerGuns": {
     "DisplayName": "Space Ranger Guns",
@@ -76885,7 +76885,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": true,
     "Key": "SpaceRangerGuns",
-    "PreviewUri": "@previewImages/SpaceRangerGuns.png"
+    "PreviewUri": "SpaceRangerGuns.png"
   },
   "SpaceRangerIIw/Armament": {
     "DisplayName": "Space Ranger II w/ Armament",
@@ -76913,7 +76913,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": true,
     "Key": "SpaceRangerIIw/Armament",
-    "PreviewUri": "@previewImages/SpaceRangerIIw_Armament.png"
+    "PreviewUri": "SpaceRangerIIw_Armament.png"
   },
   "SpaceRangerw/Armament": {
     "DisplayName": "Space Ranger w/ Armament",
@@ -76941,7 +76941,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": true,
     "Key": "SpaceRangerw/Armament",
-    "PreviewUri": "@previewImages/SpaceRangerw_Armament.png"
+    "PreviewUri": "SpaceRangerw_Armament.png"
   },
   "SpeedsterRed": {
     "DisplayName": "Speedster, Red",
@@ -76966,7 +76966,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "SpeedsterRed",
-    "PreviewUri": "@previewImages/SpeedsterRed.png"
+    "PreviewUri": "SpeedsterRed.png"
   },
   "Spider": {
     "DisplayName": "Spider",
@@ -77001,7 +77001,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Spider",
-    "PreviewUri": "@previewImages/Spider.png"
+    "PreviewUri": "Spider.png"
   },
   "SpiderEggs": {
     "DisplayName": "Spider Eggs",
@@ -77021,7 +77021,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "SpiderEggs",
-    "PreviewUri": "@previewImages/SpiderEggs.png"
+    "PreviewUri": "SpiderEggs.png"
   },
   "SpiderFantasyTB50": {
     "DisplayName": "Spider, Fantasy, TB50",
@@ -77059,7 +77059,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "SpiderFantasyTB50",
-    "PreviewUri": "@previewImages/SpiderFantasyTB50.png"
+    "PreviewUri": "SpiderFantasyTB50.png"
   },
   "SpinnerBlack": {
     "DisplayName": "Spinner, Black",
@@ -77080,7 +77080,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "SpinnerBlack",
-    "PreviewUri": "@previewImages/SpinnerBlack.png"
+    "PreviewUri": "SpinnerBlack.png"
   },
   "SpinnerRed": {
     "DisplayName": "Spinner, Red",
@@ -77101,7 +77101,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "SpinnerRed",
-    "PreviewUri": "@previewImages/SpinnerRed.png"
+    "PreviewUri": "SpinnerRed.png"
   },
   "SpinnerWhite": {
     "DisplayName": "Spinner, White",
@@ -77122,7 +77122,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "SpinnerWhite",
-    "PreviewUri": "@previewImages/SpinnerWhite.png"
+    "PreviewUri": "SpinnerWhite.png"
   },
   "SprueAgesBeige": {
     "DisplayName": "Sprue, Ages, Beige",
@@ -77158,7 +77158,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "SprueAgesBeige",
-    "PreviewUri": "@previewImages/SprueAgesBeige.png"
+    "PreviewUri": "SprueAgesBeige.png"
   },
   "SprueAgesBlack": {
     "DisplayName": "Sprue, Ages, Black",
@@ -77194,7 +77194,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": true,
     "Key": "SprueAgesBlack",
-    "PreviewUri": "@previewImages/SprueAgesBlack.png"
+    "PreviewUri": "SprueAgesBlack.png"
   },
   "SprueAgesPurple": {
     "DisplayName": "Sprue, Ages, Purple",
@@ -77230,7 +77230,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": true,
     "Key": "SprueAgesPurple",
-    "PreviewUri": "@previewImages/SprueAgesPurple.png"
+    "PreviewUri": "SprueAgesPurple.png"
   },
   "SprueAgesTan": {
     "DisplayName": "Sprue, Ages, Tan",
@@ -77266,7 +77266,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "SprueAgesTan",
-    "PreviewUri": "@previewImages/SprueAgesTan.png"
+    "PreviewUri": "SprueAgesTan.png"
   },
   "SprueAgesYellow": {
     "DisplayName": "Sprue, Ages, Yellow",
@@ -77302,7 +77302,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": true,
     "Key": "SprueAgesYellow",
-    "PreviewUri": "@previewImages/SprueAgesYellow.png"
+    "PreviewUri": "SprueAgesYellow.png"
   },
   "SprueCivilWarHorseBlack": {
     "DisplayName": "Sprue, Civil War Horse, Black",
@@ -77353,7 +77353,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": true,
     "Key": "SprueCivilWarHorseBlack",
-    "PreviewUri": "@previewImages/SprueCivilWarHorseBlack.png"
+    "PreviewUri": "SprueCivilWarHorseBlack.png"
   },
   "SprueCivilWarHorseBrown": {
     "DisplayName": "Sprue, Civil War Horse, Brown",
@@ -77404,7 +77404,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": true,
     "Key": "SprueCivilWarHorseBrown",
-    "PreviewUri": "@previewImages/SprueCivilWarHorseBrown.png"
+    "PreviewUri": "SprueCivilWarHorseBrown.png"
   },
   "SprueCivilWarMilitaryBlue": {
     "DisplayName": "Sprue, Civil War Military, Blue",
@@ -77435,7 +77435,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": true,
     "Key": "SprueCivilWarMilitaryBlue",
-    "PreviewUri": "@previewImages/SprueCivilWarMilitaryBlue.png"
+    "PreviewUri": "SprueCivilWarMilitaryBlue.png"
   },
   "SprueCivilWarMilitaryGray": {
     "DisplayName": "Sprue, Civil War Military, Gray",
@@ -77466,7 +77466,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": true,
     "Key": "SprueCivilWarMilitaryGray",
-    "PreviewUri": "@previewImages/SprueCivilWarMilitaryGray.png"
+    "PreviewUri": "SprueCivilWarMilitaryGray.png"
   },
   "SprueCivilWarMilitaryLtBlue": {
     "DisplayName": "Sprue, Civil War Military, Lt Blue",
@@ -77497,7 +77497,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": true,
     "Key": "SprueCivilWarMilitaryLtBlue",
-    "PreviewUri": "@previewImages/SprueCivilWarMilitaryLtBlue.png"
+    "PreviewUri": "SprueCivilWarMilitaryLtBlue.png"
   },
   "SprueCivilWarMilitaryRed": {
     "DisplayName": "Sprue, Civil War Military, Red",
@@ -77528,7 +77528,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": true,
     "Key": "SprueCivilWarMilitaryRed",
-    "PreviewUri": "@previewImages/SprueCivilWarMilitaryRed.png"
+    "PreviewUri": "SprueCivilWarMilitaryRed.png"
   },
   "SprueCivilizationBlue": {
     "DisplayName": "Sprue, Civilization, Blue",
@@ -77562,7 +77562,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": true,
     "Key": "SprueCivilizationBlue",
-    "PreviewUri": "@previewImages/SprueCivilizationBlue.png"
+    "PreviewUri": "SprueCivilizationBlue.png"
   },
   "SprueCivilizationGreen": {
     "DisplayName": "Sprue, Civilization, Green",
@@ -77596,7 +77596,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": true,
     "Key": "SprueCivilizationGreen",
-    "PreviewUri": "@previewImages/SprueCivilizationGreen.png"
+    "PreviewUri": "SprueCivilizationGreen.png"
   },
   "SprueCivilizationGray": {
     "DisplayName": "Sprue, Civilization, Gray",
@@ -77630,7 +77630,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": true,
     "Key": "SprueCivilizationGray",
-    "PreviewUri": "@previewImages/SprueCivilizationGray.png"
+    "PreviewUri": "SprueCivilizationGray.png"
   },
   "SprueCivilizationPurple": {
     "DisplayName": "Sprue, Civilization, Purple",
@@ -77664,7 +77664,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": true,
     "Key": "SprueCivilizationPurple",
-    "PreviewUri": "@previewImages/SprueCivilizationPurple.png"
+    "PreviewUri": "SprueCivilizationPurple.png"
   },
   "SprueCivilizationYellow": {
     "DisplayName": "Sprue, Civilization, Yellow",
@@ -77698,7 +77698,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": true,
     "Key": "SprueCivilizationYellow",
-    "PreviewUri": "@previewImages/SprueCivilizationYellow.png"
+    "PreviewUri": "SprueCivilizationYellow.png"
   },
   "SprueEgyptMythBrown": {
     "DisplayName": "Sprue, Egypt Myth, Brown",
@@ -77733,7 +77733,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": true,
     "Key": "SprueEgyptMythBrown",
-    "PreviewUri": "@previewImages/SprueEgyptMythBrown.png"
+    "PreviewUri": "SprueEgyptMythBrown.png"
   },
   "SprueMilitaryBeige": {
     "DisplayName": "Sprue, Military, Beige",
@@ -77784,7 +77784,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "SprueMilitaryBeige",
-    "PreviewUri": "@previewImages/SprueMilitaryBeige.png"
+    "PreviewUri": "SprueMilitaryBeige.png"
   },
   "SprueMilitaryBlue": {
     "DisplayName": "Sprue, Military, Blue",
@@ -77835,7 +77835,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": true,
     "Key": "SprueMilitaryBlue",
-    "PreviewUri": "@previewImages/SprueMilitaryBlue.png"
+    "PreviewUri": "SprueMilitaryBlue.png"
   },
   "SprueMilitaryBrown": {
     "DisplayName": "Sprue, Military, Brown",
@@ -77886,7 +77886,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": true,
     "Key": "SprueMilitaryBrown",
-    "PreviewUri": "@previewImages/SprueMilitaryBrown.png"
+    "PreviewUri": "SprueMilitaryBrown.png"
   },
   "SprueMilitaryGreen": {
     "DisplayName": "Sprue, Military, Green",
@@ -77937,7 +77937,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": true,
     "Key": "SprueMilitaryGreen",
-    "PreviewUri": "@previewImages/SprueMilitaryGreen.png"
+    "PreviewUri": "SprueMilitaryGreen.png"
   },
   "SprueMilitaryGray": {
     "DisplayName": "Sprue, Military, Gray",
@@ -77987,7 +77987,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": true,
     "Key": "SprueMilitaryGray",
-    "PreviewUri": "@previewImages/SprueMilitaryGray.png"
+    "PreviewUri": "SprueMilitaryGray.png"
   },
   "SprueMilitaryRed": {
     "DisplayName": "Sprue, Military, Red",
@@ -78038,7 +78038,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": true,
     "Key": "SprueMilitaryRed",
-    "PreviewUri": "@previewImages/SprueMilitaryRed.png"
+    "PreviewUri": "SprueMilitaryRed.png"
   },
   "SprueNorseMythDkBlue": {
     "DisplayName": "Sprue, Norse Myth, Dk Blue",
@@ -78067,7 +78067,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": true,
     "Key": "SprueNorseMythDkBlue",
-    "PreviewUri": "@previewImages/SprueNorseMythDkBlue.png"
+    "PreviewUri": "SprueNorseMythDkBlue.png"
   },
   "SprueNorseMythLtBlue": {
     "DisplayName": "Sprue, Norse Myth, Lt Blue",
@@ -78096,7 +78096,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": true,
     "Key": "SprueNorseMythLtBlue",
-    "PreviewUri": "@previewImages/SprueNorseMythLtBlue.png"
+    "PreviewUri": "SprueNorseMythLtBlue.png"
   },
   "SprueNorseMythMedBlue": {
     "DisplayName": "Sprue, Norse Myth, Med Blue",
@@ -78125,7 +78125,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": true,
     "Key": "SprueNorseMythMedBlue",
-    "PreviewUri": "@previewImages/SprueNorseMythMedBlue.png"
+    "PreviewUri": "SprueNorseMythMedBlue.png"
   },
   "StackerConeBlack": {
     "DisplayName": "Stacker Cone, Black",
@@ -78146,7 +78146,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "StackerConeBlack",
-    "PreviewUri": "@previewImages/StackerConeBlack.png"
+    "PreviewUri": "StackerConeBlack.png"
   },
   "StackerConeBlue": {
     "DisplayName": "Stacker Cone, Blue",
@@ -78167,7 +78167,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "StackerConeBlue",
-    "PreviewUri": "@previewImages/StackerConeBlue.png"
+    "PreviewUri": "StackerConeBlue.png"
   },
   "StackerConeGreen": {
     "DisplayName": "Stacker Cone, Green",
@@ -78188,7 +78188,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "StackerConeGreen",
-    "PreviewUri": "@previewImages/StackerConeGreen.png"
+    "PreviewUri": "StackerConeGreen.png"
   },
   "StackerConeOrange": {
     "DisplayName": "Stacker Cone, Orange",
@@ -78209,7 +78209,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "StackerConeOrange",
-    "PreviewUri": "@previewImages/StackerConeOrange.png"
+    "PreviewUri": "StackerConeOrange.png"
   },
   "StackerConePurple": {
     "DisplayName": "Stacker Cone, Purple",
@@ -78230,7 +78230,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "StackerConePurple",
-    "PreviewUri": "@previewImages/StackerConePurple.png"
+    "PreviewUri": "StackerConePurple.png"
   },
   "StackerConeRed": {
     "DisplayName": "Stacker Cone, Red",
@@ -78251,7 +78251,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "StackerConeRed",
-    "PreviewUri": "@previewImages/StackerConeRed.png"
+    "PreviewUri": "StackerConeRed.png"
   },
   "StackerConeWhite": {
     "DisplayName": "Stacker Cone, White",
@@ -78272,7 +78272,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "StackerConeWhite",
-    "PreviewUri": "@previewImages/StackerConeWhite.png"
+    "PreviewUri": "StackerConeWhite.png"
   },
   "StackerConeYellow": {
     "DisplayName": "Stacker Cone, Yellow",
@@ -78293,7 +78293,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "StackerConeYellow",
-    "PreviewUri": "@previewImages/StackerConeYellow.png"
+    "PreviewUri": "StackerConeYellow.png"
   },
   "Stacker19mmBlack": {
     "DisplayName": "Stacker, 19mm, Black",
@@ -78312,7 +78312,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Stacker19mmBlack",
-    "PreviewUri": "@previewImages/Stacker19mmBlack.png"
+    "PreviewUri": "Stacker19mmBlack.png"
   },
   "Stacker19mmBlue": {
     "DisplayName": "Stacker, 19mm, Blue",
@@ -78331,7 +78331,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Stacker19mmBlue",
-    "PreviewUri": "@previewImages/Stacker19mmBlue.png"
+    "PreviewUri": "Stacker19mmBlue.png"
   },
   "Stacker19mmGreen": {
     "DisplayName": "Stacker, 19mm, Green",
@@ -78350,7 +78350,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Stacker19mmGreen",
-    "PreviewUri": "@previewImages/Stacker19mmGreen.png"
+    "PreviewUri": "Stacker19mmGreen.png"
   },
   "Stacker19mmOrange": {
     "DisplayName": "Stacker, 19mm, Orange",
@@ -78369,7 +78369,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Stacker19mmOrange",
-    "PreviewUri": "@previewImages/Stacker19mmOrange.png"
+    "PreviewUri": "Stacker19mmOrange.png"
   },
   "Stacker19mmPurple": {
     "DisplayName": "Stacker, 19mm, Purple",
@@ -78388,7 +78388,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Stacker19mmPurple",
-    "PreviewUri": "@previewImages/Stacker19mmPurple.png"
+    "PreviewUri": "Stacker19mmPurple.png"
   },
   "Stacker19mmRed": {
     "DisplayName": "Stacker, 19mm, Red",
@@ -78407,7 +78407,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Stacker19mmRed",
-    "PreviewUri": "@previewImages/Stacker19mmRed.png"
+    "PreviewUri": "Stacker19mmRed.png"
   },
   "Stacker19mmWhite": {
     "DisplayName": "Stacker, 19mm, White",
@@ -78426,7 +78426,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Stacker19mmWhite",
-    "PreviewUri": "@previewImages/Stacker19mmWhite.png"
+    "PreviewUri": "Stacker19mmWhite.png"
   },
   "Stacker19mmYellow": {
     "DisplayName": "Stacker, 19mm, Yellow",
@@ -78445,7 +78445,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Stacker19mmYellow",
-    "PreviewUri": "@previewImages/Stacker19mmYellow.png"
+    "PreviewUri": "Stacker19mmYellow.png"
   },
   "StackerBlack": {
     "DisplayName": "Stacker, Black",
@@ -78473,7 +78473,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "StackerBlack",
-    "PreviewUri": "@previewImages/StackerBlack.png"
+    "PreviewUri": "StackerBlack.png"
   },
   "StackerBlue": {
     "DisplayName": "Stacker, Blue",
@@ -78501,7 +78501,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "StackerBlue",
-    "PreviewUri": "@previewImages/StackerBlue.png"
+    "PreviewUri": "StackerBlue.png"
   },
   "StackerGreen": {
     "DisplayName": "Stacker, Green",
@@ -78529,7 +78529,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "StackerGreen",
-    "PreviewUri": "@previewImages/StackerGreen.png"
+    "PreviewUri": "StackerGreen.png"
   },
   "StackerOrange": {
     "DisplayName": "Stacker, Orange",
@@ -78557,7 +78557,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "StackerOrange",
-    "PreviewUri": "@previewImages/StackerOrange.png"
+    "PreviewUri": "StackerOrange.png"
   },
   "StackerPurple": {
     "DisplayName": "Stacker, Purple",
@@ -78585,7 +78585,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "StackerPurple",
-    "PreviewUri": "@previewImages/StackerPurple.png"
+    "PreviewUri": "StackerPurple.png"
   },
   "StackerRed": {
     "DisplayName": "Stacker, Red",
@@ -78613,7 +78613,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "StackerRed",
-    "PreviewUri": "@previewImages/StackerRed.png"
+    "PreviewUri": "StackerRed.png"
   },
   "StackerWhite": {
     "DisplayName": "Stacker, White",
@@ -78641,7 +78641,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "StackerWhite",
-    "PreviewUri": "@previewImages/StackerWhite.png"
+    "PreviewUri": "StackerWhite.png"
   },
   "StackerYellow": {
     "DisplayName": "Stacker, Yellow",
@@ -78669,7 +78669,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "StackerYellow",
-    "PreviewUri": "@previewImages/StackerYellow.png"
+    "PreviewUri": "StackerYellow.png"
   },
   "StakeBedTruckBlack": {
     "DisplayName": "Stake Bed Truck, Black",
@@ -78698,7 +78698,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": true,
     "Key": "StakeBedTruckBlack",
-    "PreviewUri": "@previewImages/StakeBedTruckBlack.png"
+    "PreviewUri": "StakeBedTruckBlack.png"
   },
   "StandChipboardTB15Black": {
     "DisplayName": "Stand, Chipboard, TB15, Black",
@@ -78726,7 +78726,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "StandChipboardTB15Black",
-    "PreviewUri": "@previewImages/StandChipboardTB15Black.png"
+    "PreviewUri": "StandChipboardTB15Black.png"
   },
   "StandChipboardTB15Blue": {
     "DisplayName": "Stand, Chipboard, TB15, Blue",
@@ -78754,7 +78754,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "StandChipboardTB15Blue",
-    "PreviewUri": "@previewImages/StandChipboardTB15Blue.png"
+    "PreviewUri": "StandChipboardTB15Blue.png"
   },
   "StandChipboardTB15Green": {
     "DisplayName": "Stand, Chipboard, TB15, Green",
@@ -78782,7 +78782,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "StandChipboardTB15Green",
-    "PreviewUri": "@previewImages/StandChipboardTB15Green.png"
+    "PreviewUri": "StandChipboardTB15Green.png"
   },
   "StandChipboardTB15Orange": {
     "DisplayName": "Stand, Chipboard, TB15, Orange",
@@ -78810,7 +78810,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "StandChipboardTB15Orange",
-    "PreviewUri": "@previewImages/StandChipboardTB15Orange.png"
+    "PreviewUri": "StandChipboardTB15Orange.png"
   },
   "StandChipboardTB15Purple": {
     "DisplayName": "Stand, Chipboard, TB15, Purple",
@@ -78838,7 +78838,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "StandChipboardTB15Purple",
-    "PreviewUri": "@previewImages/StandChipboardTB15Purple.png"
+    "PreviewUri": "StandChipboardTB15Purple.png"
   },
   "StandChipboardTB15Red": {
     "DisplayName": "Stand, Chipboard, TB15, Red",
@@ -78866,7 +78866,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "StandChipboardTB15Red",
-    "PreviewUri": "@previewImages/StandChipboardTB15Red.png"
+    "PreviewUri": "StandChipboardTB15Red.png"
   },
   "StandChipboardTB15White": {
     "DisplayName": "Stand, Chipboard, TB15, White",
@@ -78894,7 +78894,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "StandChipboardTB15White",
-    "PreviewUri": "@previewImages/StandChipboardTB15White.png"
+    "PreviewUri": "StandChipboardTB15White.png"
   },
   "StandChipboardTB15Yellow": {
     "DisplayName": "Stand, Chipboard, TB15, Yellow",
@@ -78922,7 +78922,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "StandChipboardTB15Yellow",
-    "PreviewUri": "@previewImages/StandChipboardTB15Yellow.png"
+    "PreviewUri": "StandChipboardTB15Yellow.png"
   },
   "StandeeTGC": {
     "DisplayName": "Standee, TGC",
@@ -78945,7 +78945,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "StandeeTGC",
-    "PreviewUri": "@previewImages/StandeeTGC.png"
+    "PreviewUri": "StandeeTGC.png"
   },
   "StarWoodBlack": {
     "DisplayName": "Star, Wood, Black",
@@ -78981,7 +78981,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "StarWoodBlack",
-    "PreviewUri": "@previewImages/StarWoodBlack.png"
+    "PreviewUri": "StarWoodBlack.png"
   },
   "StarWoodGreen": {
     "DisplayName": "Star, Wood, Green",
@@ -79017,7 +79017,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "StarWoodGreen",
-    "PreviewUri": "@previewImages/StarWoodGreen.png"
+    "PreviewUri": "StarWoodGreen.png"
   },
   "StarWoodPurple": {
     "DisplayName": "Star, Wood, Purple",
@@ -79053,7 +79053,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "StarWoodPurple",
-    "PreviewUri": "@previewImages/StarWoodPurple.png"
+    "PreviewUri": "StarWoodPurple.png"
   },
   "StarWoodRed": {
     "DisplayName": "Star, Wood, Red",
@@ -79089,7 +79089,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "StarWoodRed",
-    "PreviewUri": "@previewImages/StarWoodRed.png"
+    "PreviewUri": "StarWoodRed.png"
   },
   "StickAcrylicOpaqueBlack": {
     "DisplayName": "Stick, Acrylic, Opaque, Black",
@@ -79112,7 +79112,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "StickAcrylicOpaqueBlack",
-    "PreviewUri": "@previewImages/StickAcrylicOpaqueBlack.png"
+    "PreviewUri": "StickAcrylicOpaqueBlack.png"
   },
   "StickAcrylicOpaqueGold": {
     "DisplayName": "Stick, Acrylic, Opaque, Gold",
@@ -79136,7 +79136,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "StickAcrylicOpaqueGold",
-    "PreviewUri": "@previewImages/StickAcrylicOpaqueGold.png"
+    "PreviewUri": "StickAcrylicOpaqueGold.png"
   },
   "StickAcrylicOpaqueSilver": {
     "DisplayName": "Stick, Acrylic, Opaque, Silver",
@@ -79160,7 +79160,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "StickAcrylicOpaqueSilver",
-    "PreviewUri": "@previewImages/StickAcrylicOpaqueSilver.png"
+    "PreviewUri": "StickAcrylicOpaqueSilver.png"
   },
   "StickAcrylicOpaqueWhite": {
     "DisplayName": "Stick, Acrylic, Opaque, White",
@@ -79183,7 +79183,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "StickAcrylicOpaqueWhite",
-    "PreviewUri": "@previewImages/StickAcrylicOpaqueWhite.png"
+    "PreviewUri": "StickAcrylicOpaqueWhite.png"
   },
   "StickAcrylicTransparentBlack": {
     "DisplayName": "Stick, Acrylic, Transparent, Black",
@@ -79206,7 +79206,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "StickAcrylicTransparentBlack",
-    "PreviewUri": "@previewImages/StickAcrylicTransparentBlack.png"
+    "PreviewUri": "StickAcrylicTransparentBlack.png"
   },
   "StickAcrylicTransparentBlue": {
     "DisplayName": "Stick, Acrylic, Transparent, Blue",
@@ -79229,7 +79229,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "StickAcrylicTransparentBlue",
-    "PreviewUri": "@previewImages/StickAcrylicTransparentBlue.png"
+    "PreviewUri": "StickAcrylicTransparentBlue.png"
   },
   "StickAcrylicTransparentClear": {
     "DisplayName": "Stick, Acrylic, Transparent, Clear",
@@ -79252,7 +79252,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "StickAcrylicTransparentClear",
-    "PreviewUri": "@previewImages/StickAcrylicTransparentClear.png"
+    "PreviewUri": "StickAcrylicTransparentClear.png"
   },
   "StickAcrylicTransparentGreen": {
     "DisplayName": "Stick, Acrylic, Transparent, Green",
@@ -79275,7 +79275,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "StickAcrylicTransparentGreen",
-    "PreviewUri": "@previewImages/StickAcrylicTransparentGreen.png"
+    "PreviewUri": "StickAcrylicTransparentGreen.png"
   },
   "StickAcrylicTransparentorange": {
     "DisplayName": "Stick, Acrylic, Transparent, orange",
@@ -79298,7 +79298,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "StickAcrylicTransparentorange",
-    "PreviewUri": "@previewImages/StickAcrylicTransparentorange.png"
+    "PreviewUri": "StickAcrylicTransparentorange.png"
   },
   "StickAcrylicTransparentPurple": {
     "DisplayName": "Stick, Acrylic, Transparent, Purple",
@@ -79321,7 +79321,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "StickAcrylicTransparentPurple",
-    "PreviewUri": "@previewImages/StickAcrylicTransparentPurple.png"
+    "PreviewUri": "StickAcrylicTransparentPurple.png"
   },
   "StickAcrylicTransparentRed": {
     "DisplayName": "Stick, Acrylic, Transparent, Red",
@@ -79344,7 +79344,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "StickAcrylicTransparentRed",
-    "PreviewUri": "@previewImages/StickAcrylicTransparentRed.png"
+    "PreviewUri": "StickAcrylicTransparentRed.png"
   },
   "StickAcrylicTransparentWhite": {
     "DisplayName": "Stick, Acrylic, Transparent, White",
@@ -79367,7 +79367,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "StickAcrylicTransparentWhite",
-    "PreviewUri": "@previewImages/StickAcrylicTransparentWhite.png"
+    "PreviewUri": "StickAcrylicTransparentWhite.png"
   },
   "StickAcrylicTransparentYellow": {
     "DisplayName": "Stick, Acrylic, Transparent, Yellow",
@@ -79390,7 +79390,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "StickAcrylicTransparentYellow",
-    "PreviewUri": "@previewImages/StickAcrylicTransparentYellow.png"
+    "PreviewUri": "StickAcrylicTransparentYellow.png"
   },
   "StickWoodBlack": {
     "DisplayName": "Stick, Wood, Black",
@@ -79414,7 +79414,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "StickWoodBlack",
-    "PreviewUri": "@previewImages/StickWoodBlack.png"
+    "PreviewUri": "StickWoodBlack.png"
   },
   "StickWoodBlue": {
     "DisplayName": "Stick, Wood, Blue",
@@ -79438,7 +79438,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "StickWoodBlue",
-    "PreviewUri": "@previewImages/StickWoodBlue.png"
+    "PreviewUri": "StickWoodBlue.png"
   },
   "StickWoodGreen": {
     "DisplayName": "Stick, Wood, Green",
@@ -79462,7 +79462,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "StickWoodGreen",
-    "PreviewUri": "@previewImages/StickWoodGreen.png"
+    "PreviewUri": "StickWoodGreen.png"
   },
   "StickWoodOrange": {
     "DisplayName": "Stick, Wood, Orange",
@@ -79486,7 +79486,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "StickWoodOrange",
-    "PreviewUri": "@previewImages/StickWoodOrange.png"
+    "PreviewUri": "StickWoodOrange.png"
   },
   "StickWoodPurple": {
     "DisplayName": "Stick, Wood, Purple",
@@ -79510,7 +79510,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "StickWoodPurple",
-    "PreviewUri": "@previewImages/StickWoodPurple.png"
+    "PreviewUri": "StickWoodPurple.png"
   },
   "StickWoodRed": {
     "DisplayName": "Stick, Wood, Red",
@@ -79534,7 +79534,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "StickWoodRed",
-    "PreviewUri": "@previewImages/StickWoodRed.png"
+    "PreviewUri": "StickWoodRed.png"
   },
   "StickWoodWhite": {
     "DisplayName": "Stick, Wood, White",
@@ -79558,7 +79558,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "StickWoodWhite",
-    "PreviewUri": "@previewImages/StickWoodWhite.png"
+    "PreviewUri": "StickWoodWhite.png"
   },
   "StickWoodYellow": {
     "DisplayName": "Stick, Wood, Yellow",
@@ -79582,7 +79582,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "StickWoodYellow",
-    "PreviewUri": "@previewImages/StickWoodYellow.png"
+    "PreviewUri": "StickWoodYellow.png"
   },
   "StickerPawnOpaqueBlack": {
     "DisplayName": "Sticker Pawn, Opaque, Black",
@@ -79606,7 +79606,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "StickerPawnOpaqueBlack",
-    "PreviewUri": "@previewImages/StickerPawnOpaqueBlack.png"
+    "PreviewUri": "StickerPawnOpaqueBlack.png"
   },
   "StickerPawnOpaqueBlue": {
     "DisplayName": "Sticker Pawn, Opaque, Blue",
@@ -79630,7 +79630,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "StickerPawnOpaqueBlue",
-    "PreviewUri": "@previewImages/StickerPawnOpaqueBlue.png"
+    "PreviewUri": "StickerPawnOpaqueBlue.png"
   },
   "StickerPawnOpaqueGreen": {
     "DisplayName": "Sticker Pawn, Opaque, Green",
@@ -79654,7 +79654,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "StickerPawnOpaqueGreen",
-    "PreviewUri": "@previewImages/StickerPawnOpaqueGreen.png"
+    "PreviewUri": "StickerPawnOpaqueGreen.png"
   },
   "StickerPawnOpaqueOrange": {
     "DisplayName": "Sticker Pawn, Opaque, Orange",
@@ -79678,7 +79678,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "StickerPawnOpaqueOrange",
-    "PreviewUri": "@previewImages/StickerPawnOpaqueOrange.png"
+    "PreviewUri": "StickerPawnOpaqueOrange.png"
   },
   "StickerPawnOpaquePurple": {
     "DisplayName": "Sticker Pawn, Opaque, Purple",
@@ -79702,7 +79702,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "StickerPawnOpaquePurple",
-    "PreviewUri": "@previewImages/StickerPawnOpaquePurple.png"
+    "PreviewUri": "StickerPawnOpaquePurple.png"
   },
   "StickerPawnOpaqueRed": {
     "DisplayName": "Sticker Pawn, Opaque, Red",
@@ -79726,7 +79726,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "StickerPawnOpaqueRed",
-    "PreviewUri": "@previewImages/StickerPawnOpaqueRed.png"
+    "PreviewUri": "StickerPawnOpaqueRed.png"
   },
   "StickerPawnOpaqueWhite": {
     "DisplayName": "Sticker Pawn, Opaque, White",
@@ -79750,7 +79750,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "StickerPawnOpaqueWhite",
-    "PreviewUri": "@previewImages/StickerPawnOpaqueWhite.png"
+    "PreviewUri": "StickerPawnOpaqueWhite.png"
   },
   "StickerPawnOpaqueYellow": {
     "DisplayName": "Sticker Pawn, Opaque, Yellow",
@@ -79774,7 +79774,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "StickerPawnOpaqueYellow",
-    "PreviewUri": "@previewImages/StickerPawnOpaqueYellow.png"
+    "PreviewUri": "StickerPawnOpaqueYellow.png"
   },
   "StickerPawnTransparentBlue": {
     "DisplayName": "Sticker Pawn, Transparent, Blue",
@@ -79798,7 +79798,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "StickerPawnTransparentBlue",
-    "PreviewUri": "@previewImages/StickerPawnTransparentBlue.png"
+    "PreviewUri": "StickerPawnTransparentBlue.png"
   },
   "StickerPawnTransparentClear": {
     "DisplayName": "Sticker Pawn, Transparent, Clear",
@@ -79823,7 +79823,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "StickerPawnTransparentClear",
-    "PreviewUri": "@previewImages/StickerPawnTransparentClear.png"
+    "PreviewUri": "StickerPawnTransparentClear.png"
   },
   "StickerPawnTransparentGreen": {
     "DisplayName": "Sticker Pawn, Transparent, Green",
@@ -79847,7 +79847,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "StickerPawnTransparentGreen",
-    "PreviewUri": "@previewImages/StickerPawnTransparentGreen.png"
+    "PreviewUri": "StickerPawnTransparentGreen.png"
   },
   "StickerPawnTransparentOrange": {
     "DisplayName": "Sticker Pawn, Transparent, Orange",
@@ -79871,7 +79871,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "StickerPawnTransparentOrange",
-    "PreviewUri": "@previewImages/StickerPawnTransparentOrange.png"
+    "PreviewUri": "StickerPawnTransparentOrange.png"
   },
   "StickerPawnTransparentPurple": {
     "DisplayName": "Sticker Pawn, Transparent, Purple",
@@ -79895,7 +79895,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "StickerPawnTransparentPurple",
-    "PreviewUri": "@previewImages/StickerPawnTransparentPurple.png"
+    "PreviewUri": "StickerPawnTransparentPurple.png"
   },
   "StickerPawnTransparentRed": {
     "DisplayName": "Sticker Pawn, Transparent, Red",
@@ -79919,7 +79919,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "StickerPawnTransparentRed",
-    "PreviewUri": "@previewImages/StickerPawnTransparentRed.png"
+    "PreviewUri": "StickerPawnTransparentRed.png"
   },
   "StickerPawnTransparentYellow": {
     "DisplayName": "Sticker Pawn, Transparent, Yellow",
@@ -79943,7 +79943,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "StickerPawnTransparentYellow",
-    "PreviewUri": "@previewImages/StickerPawnTransparentYellow.png"
+    "PreviewUri": "StickerPawnTransparentYellow.png"
   },
   "StoneArrowhead": {
     "DisplayName": "Stone Arrowhead",
@@ -79960,7 +79960,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "StoneArrowhead",
-    "PreviewUri": "@previewImages/StoneArrowhead.png"
+    "PreviewUri": "StoneArrowhead.png"
   },
   "StoneWood": {
     "DisplayName": "Stone, Wood",
@@ -79986,7 +79986,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "StoneWood",
-    "PreviewUri": "@previewImages/StoneWood.png"
+    "PreviewUri": "StoneWood.png"
   },
   "StorageJarRoundClear": {
     "DisplayName": "Storage Jar, Round, Clear",
@@ -80013,7 +80013,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "StorageJarRoundClear",
-    "PreviewUri": "@previewImages/StorageJarRoundClear.png"
+    "PreviewUri": "StorageJarRoundClear.png"
   },
   "StorageJarTin": {
     "DisplayName": "Storage Jar, Tin",
@@ -80040,7 +80040,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "StorageJarTin",
-    "PreviewUri": "@previewImages/StorageJarTin.png"
+    "PreviewUri": "StorageJarTin.png"
   },
   "SubmarineBlack": {
     "DisplayName": "Submarine, Black",
@@ -80069,7 +80069,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "SubmarineBlack",
-    "PreviewUri": "@previewImages/SubmarineBlack.png"
+    "PreviewUri": "SubmarineBlack.png"
   },
   "SubmarineBlue": {
     "DisplayName": "Submarine, Blue",
@@ -80098,7 +80098,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "SubmarineBlue",
-    "PreviewUri": "@previewImages/SubmarineBlue.png"
+    "PreviewUri": "SubmarineBlue.png"
   },
   "SubmarineGreen": {
     "DisplayName": "Submarine, Green",
@@ -80127,7 +80127,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "SubmarineGreen",
-    "PreviewUri": "@previewImages/SubmarineGreen.png"
+    "PreviewUri": "SubmarineGreen.png"
   },
   "SubmarineOrange": {
     "DisplayName": "Submarine, Orange",
@@ -80156,7 +80156,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "SubmarineOrange",
-    "PreviewUri": "@previewImages/SubmarineOrange.png"
+    "PreviewUri": "SubmarineOrange.png"
   },
   "SubmarinePurple": {
     "DisplayName": "Submarine, Purple",
@@ -80185,7 +80185,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "SubmarinePurple",
-    "PreviewUri": "@previewImages/SubmarinePurple.png"
+    "PreviewUri": "SubmarinePurple.png"
   },
   "SubmarineRed": {
     "DisplayName": "Submarine, Red",
@@ -80214,7 +80214,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "SubmarineRed",
-    "PreviewUri": "@previewImages/SubmarineRed.png"
+    "PreviewUri": "SubmarineRed.png"
   },
   "SubmarineWhite": {
     "DisplayName": "Submarine, White",
@@ -80243,7 +80243,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "SubmarineWhite",
-    "PreviewUri": "@previewImages/SubmarineWhite.png"
+    "PreviewUri": "SubmarineWhite.png"
   },
   "SubmarineYellow": {
     "DisplayName": "Submarine, Yellow",
@@ -80272,7 +80272,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "SubmarineYellow",
-    "PreviewUri": "@previewImages/SubmarineYellow.png"
+    "PreviewUri": "SubmarineYellow.png"
   },
   "SuitsClubs": {
     "DisplayName": "Suits, Clubs",
@@ -80293,7 +80293,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "SuitsClubs",
-    "PreviewUri": "@previewImages/SuitsClubs.png"
+    "PreviewUri": "SuitsClubs.png"
   },
   "SuitsDiamonds": {
     "DisplayName": "Suits, Diamonds",
@@ -80314,7 +80314,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "SuitsDiamonds",
-    "PreviewUri": "@previewImages/SuitsDiamonds.png"
+    "PreviewUri": "SuitsDiamonds.png"
   },
   "SuitsHearts": {
     "DisplayName": "Suits, Hearts",
@@ -80335,7 +80335,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "SuitsHearts",
-    "PreviewUri": "@previewImages/SuitsHearts.png"
+    "PreviewUri": "SuitsHearts.png"
   },
   "SuitsSpades": {
     "DisplayName": "Suits, Spades",
@@ -80356,7 +80356,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "SuitsSpades",
-    "PreviewUri": "@previewImages/SuitsSpades.png"
+    "PreviewUri": "SuitsSpades.png"
   },
   "SUVPostApocalypse": {
     "DisplayName": "SUV, Post Apocalypse",
@@ -80373,7 +80373,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "SUVPostApocalypse",
-    "PreviewUri": "@previewImages/SUVPostApocalypse.png"
+    "PreviewUri": "SUVPostApocalypse.png"
   },
   "Sword": {
     "DisplayName": "Sword",
@@ -80405,7 +80405,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Sword",
-    "PreviewUri": "@previewImages/Sword.png"
+    "PreviewUri": "Sword.png"
   },
   "SwordsmanBlack-CharacterMeeple": {
     "DisplayName": "Swordsman, Black, Character Meeple",
@@ -80442,7 +80442,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "SwordsmanBlack-CharacterMeeple",
-    "PreviewUri": "@previewImages/SwordsmanBlack-CharacterMeeple.png"
+    "PreviewUri": "SwordsmanBlack-CharacterMeeple.png"
   },
   "SwordsmanBlue-CharacterMeeple": {
     "DisplayName": "Swordsman, Blue, Character Meeple",
@@ -80479,7 +80479,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "SwordsmanBlue-CharacterMeeple",
-    "PreviewUri": "@previewImages/SwordsmanBlue-CharacterMeeple.png"
+    "PreviewUri": "SwordsmanBlue-CharacterMeeple.png"
   },
   "SwordsmanGreen-CharacterMeeple": {
     "DisplayName": "Swordsman, Green, Character Meeple",
@@ -80516,7 +80516,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "SwordsmanGreen-CharacterMeeple",
-    "PreviewUri": "@previewImages/SwordsmanGreen-CharacterMeeple.png"
+    "PreviewUri": "SwordsmanGreen-CharacterMeeple.png"
   },
   "SwordsmanOrange-CharacterMeeple": {
     "DisplayName": "Swordsman, Orange, Character Meeple",
@@ -80553,7 +80553,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "SwordsmanOrange-CharacterMeeple",
-    "PreviewUri": "@previewImages/SwordsmanOrange-CharacterMeeple.png"
+    "PreviewUri": "SwordsmanOrange-CharacterMeeple.png"
   },
   "SwordsmanPurple-CharacterMeeple": {
     "DisplayName": "Swordsman, Purple, Character Meeple",
@@ -80590,7 +80590,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "SwordsmanPurple-CharacterMeeple",
-    "PreviewUri": "@previewImages/SwordsmanPurple-CharacterMeeple.png"
+    "PreviewUri": "SwordsmanPurple-CharacterMeeple.png"
   },
   "SwordsmanRed-CharacterMeeple": {
     "DisplayName": "Swordsman, Red, Character Meeple",
@@ -80627,7 +80627,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "SwordsmanRed-CharacterMeeple",
-    "PreviewUri": "@previewImages/SwordsmanRed-CharacterMeeple.png"
+    "PreviewUri": "SwordsmanRed-CharacterMeeple.png"
   },
   "SwordsmanWhite-CharacterMeeple": {
     "DisplayName": "Swordsman, White, Character Meeple",
@@ -80664,7 +80664,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "SwordsmanWhite-CharacterMeeple",
-    "PreviewUri": "@previewImages/SwordsmanWhite-CharacterMeeple.png"
+    "PreviewUri": "SwordsmanWhite-CharacterMeeple.png"
   },
   "SwordsmanYellow-CharacterMeeple": {
     "DisplayName": "Swordsman, Yellow, Character Meeple",
@@ -80701,7 +80701,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "SwordsmanYellow-CharacterMeeple",
-    "PreviewUri": "@previewImages/SwordsmanYellow-CharacterMeeple.png"
+    "PreviewUri": "SwordsmanYellow-CharacterMeeple.png"
   },
   "T-BarBrown": {
     "DisplayName": "T-Bar, Brown",
@@ -80724,7 +80724,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "T-BarBrown",
-    "PreviewUri": "@previewImages/T-BarBrown.png"
+    "PreviewUri": "T-BarBrown.png"
   },
   "TableOrange": {
     "DisplayName": "Table, Orange",
@@ -80751,7 +80751,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "TableOrange",
-    "PreviewUri": "@previewImages/TableOrange.png"
+    "PreviewUri": "TableOrange.png"
   },
   "TabletStone": {
     "DisplayName": "Tablet, Stone",
@@ -80773,7 +80773,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "TabletStone",
-    "PreviewUri": "@previewImages/TabletStone.png"
+    "PreviewUri": "TabletStone.png"
   },
   "TacticalKnife": {
     "DisplayName": "Tactical Knife",
@@ -80812,7 +80812,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "TacticalKnife",
-    "PreviewUri": "@previewImages/TacticalKnife.png"
+    "PreviewUri": "TacticalKnife.png"
   },
   "TajMahalPalaceSetof5": {
     "DisplayName": "Taj Mahal Palace, Set of 5",
@@ -80839,7 +80839,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "TajMahalPalaceSetof5",
-    "PreviewUri": "@previewImages/TajMahalPalaceSetof5.png"
+    "PreviewUri": "TajMahalPalaceSetof5.png"
   },
   "TallPeopleBlack": {
     "DisplayName": "Tall People, Black",
@@ -80868,7 +80868,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "TallPeopleBlack",
-    "PreviewUri": "@previewImages/TallPeopleBlack.png"
+    "PreviewUri": "TallPeopleBlack.png"
   },
   "TallPeopleBlue": {
     "DisplayName": "Tall People, Blue",
@@ -80897,7 +80897,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "TallPeopleBlue",
-    "PreviewUri": "@previewImages/TallPeopleBlue.png"
+    "PreviewUri": "TallPeopleBlue.png"
   },
   "TallPeopleGreen": {
     "DisplayName": "Tall People, Green",
@@ -80926,7 +80926,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "TallPeopleGreen",
-    "PreviewUri": "@previewImages/TallPeopleGreen.png"
+    "PreviewUri": "TallPeopleGreen.png"
   },
   "TallPeopleOrange": {
     "DisplayName": "Tall People, Orange",
@@ -80955,7 +80955,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "TallPeopleOrange",
-    "PreviewUri": "@previewImages/TallPeopleOrange.png"
+    "PreviewUri": "TallPeopleOrange.png"
   },
   "TallPeoplePurple": {
     "DisplayName": "Tall People, Purple",
@@ -80984,7 +80984,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "TallPeoplePurple",
-    "PreviewUri": "@previewImages/TallPeoplePurple.png"
+    "PreviewUri": "TallPeoplePurple.png"
   },
   "TallPeopleRed": {
     "DisplayName": "Tall People, Red",
@@ -81013,7 +81013,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "TallPeopleRed",
-    "PreviewUri": "@previewImages/TallPeopleRed.png"
+    "PreviewUri": "TallPeopleRed.png"
   },
   "TallPeopleThickGreen": {
     "DisplayName": "Tall People, Thick, Green",
@@ -81042,7 +81042,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "TallPeopleThickGreen",
-    "PreviewUri": "@previewImages/TallPeopleThickGreen.png"
+    "PreviewUri": "TallPeopleThickGreen.png"
   },
   "TallPeopleThickGray": {
     "DisplayName": "Tall People, Thick, Gray",
@@ -81071,7 +81071,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "TallPeopleThickGray",
-    "PreviewUri": "@previewImages/TallPeopleThickGray.png"
+    "PreviewUri": "TallPeopleThickGray.png"
   },
   "TallPeopleThickPurple": {
     "DisplayName": "Tall People, Thick, Purple",
@@ -81100,7 +81100,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "TallPeopleThickPurple",
-    "PreviewUri": "@previewImages/TallPeopleThickPurple.png"
+    "PreviewUri": "TallPeopleThickPurple.png"
   },
   "TallPeopleThickRed": {
     "DisplayName": "Tall People, Thick, Red",
@@ -81129,7 +81129,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "TallPeopleThickRed",
-    "PreviewUri": "@previewImages/TallPeopleThickRed.png"
+    "PreviewUri": "TallPeopleThickRed.png"
   },
   "TallPeopleThickYellow": {
     "DisplayName": "Tall People, Thick, Yellow",
@@ -81158,7 +81158,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "TallPeopleThickYellow",
-    "PreviewUri": "@previewImages/TallPeopleThickYellow.png"
+    "PreviewUri": "TallPeopleThickYellow.png"
   },
   "TallPeopleWhite": {
     "DisplayName": "Tall People, White",
@@ -81187,7 +81187,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "TallPeopleWhite",
-    "PreviewUri": "@previewImages/TallPeopleWhite.png"
+    "PreviewUri": "TallPeopleWhite.png"
   },
   "TallPeopleYellow": {
     "DisplayName": "Tall People, Yellow",
@@ -81216,7 +81216,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "TallPeopleYellow",
-    "PreviewUri": "@previewImages/TallPeopleYellow.png"
+    "PreviewUri": "TallPeopleYellow.png"
   },
   "TankBlack": {
     "DisplayName": "Tank, Black",
@@ -81239,7 +81239,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "TankBlack",
-    "PreviewUri": "@previewImages/TankBlack.png"
+    "PreviewUri": "TankBlack.png"
   },
   "TankBlue": {
     "DisplayName": "Tank, Blue",
@@ -81262,7 +81262,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "TankBlue",
-    "PreviewUri": "@previewImages/TankBlue.png"
+    "PreviewUri": "TankBlue.png"
   },
   "TankBrown": {
     "DisplayName": "Tank, Brown",
@@ -81285,7 +81285,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "TankBrown",
-    "PreviewUri": "@previewImages/TankBrown.png"
+    "PreviewUri": "TankBrown.png"
   },
   "TankClear": {
     "DisplayName": "Tank, Clear",
@@ -81308,7 +81308,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "TankClear",
-    "PreviewUri": "@previewImages/TankClear.png"
+    "PreviewUri": "TankClear.png"
   },
   "TankGreen": {
     "DisplayName": "Tank, Green",
@@ -81331,7 +81331,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "TankGreen",
-    "PreviewUri": "@previewImages/TankGreen.png"
+    "PreviewUri": "TankGreen.png"
   },
   "TankOrange": {
     "DisplayName": "Tank, Orange",
@@ -81354,7 +81354,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "TankOrange",
-    "PreviewUri": "@previewImages/TankOrange.png"
+    "PreviewUri": "TankOrange.png"
   },
   "TankPostApocalypse": {
     "DisplayName": "Tank, Post Apocalypse",
@@ -81371,7 +81371,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "TankPostApocalypse",
-    "PreviewUri": "@previewImages/TankPostApocalypse.png"
+    "PreviewUri": "TankPostApocalypse.png"
   },
   "TankPurple": {
     "DisplayName": "Tank, Purple",
@@ -81394,7 +81394,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "TankPurple",
-    "PreviewUri": "@previewImages/TankPurple.png"
+    "PreviewUri": "TankPurple.png"
   },
   "TankRed": {
     "DisplayName": "Tank, Red",
@@ -81417,7 +81417,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "TankRed",
-    "PreviewUri": "@previewImages/TankRed.png"
+    "PreviewUri": "TankRed.png"
   },
   "TankWhite": {
     "DisplayName": "Tank, White",
@@ -81440,7 +81440,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "TankWhite",
-    "PreviewUri": "@previewImages/TankWhite.png"
+    "PreviewUri": "TankWhite.png"
   },
   "TankYellow": {
     "DisplayName": "Tank, Yellow",
@@ -81463,7 +81463,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "TankYellow",
-    "PreviewUri": "@previewImages/TankYellow.png"
+    "PreviewUri": "TankYellow.png"
   },
   "TapeMeasure": {
     "DisplayName": "Tape Measure",
@@ -81497,7 +81497,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "TapeMeasure",
-    "PreviewUri": "@previewImages/TapeMeasure.png"
+    "PreviewUri": "TapeMeasure.png"
   },
   "TarotSleevePack(100)": {
     "DisplayName": "Tarot Sleeve Pack (100)",
@@ -81527,7 +81527,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "TarotSleevePack(100)",
-    "PreviewUri": "@previewImages/TarotSleevePack(100).png"
+    "PreviewUri": "TarotSleevePack(100).png"
   },
   "TCIDLockdownMinimumSecurityPromoPack": {
     "DisplayName": "TCID Lockdown Minimum Security Promo Pack",
@@ -81548,7 +81548,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "TCIDLockdownMinimumSecurityPromoPack",
-    "PreviewUri": "@previewImages/TCIDLockdownMinimumSecurityPromoPack.png"
+    "PreviewUri": "TCIDLockdownMinimumSecurityPromoPack.png"
   },
   "TentaclePortalTB25": {
     "DisplayName": "Tentacle Portal, TB25",
@@ -81575,7 +81575,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "TentaclePortalTB25",
-    "PreviewUri": "@previewImages/TentaclePortalTB25.png"
+    "PreviewUri": "TentaclePortalTB25.png"
   },
   "TGCFollies-ShamrockPack": {
     "DisplayName": "TGC Follies - Shamrock Pack",
@@ -81591,7 +81591,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "TGCFollies-ShamrockPack",
-    "PreviewUri": "@previewImages/TGCFollies-ShamrockPack.png"
+    "PreviewUri": "TGCFollies-ShamrockPack.png"
   },
   "TheWhiteWizard": {
     "DisplayName": "The White Wizard",
@@ -81632,7 +81632,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "TheWhiteWizard",
-    "PreviewUri": "@previewImages/TheWhiteWizard.png"
+    "PreviewUri": "TheWhiteWizard.png"
   },
   "Thief-CharacterMeeple": {
     "DisplayName": "Thief, Character Meeple",
@@ -81662,7 +81662,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Thief-CharacterMeeple",
-    "PreviewUri": "@previewImages/Thief-CharacterMeeple.png"
+    "PreviewUri": "Thief-CharacterMeeple.png"
   },
   "Thimble": {
     "DisplayName": "Thimble ",
@@ -81685,7 +81685,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "Thimble",
-    "PreviewUri": "@previewImages/Thimble.png"
+    "PreviewUri": "Thimble.png"
   },
   "ThinStarGray": {
     "DisplayName": "Thin Star, Gray",
@@ -81720,7 +81720,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "ThinStarGray",
-    "PreviewUri": "@previewImages/ThinStarGray.png"
+    "PreviewUri": "ThinStarGray.png"
   },
   "TieflingFemaleMageFantasyTB25": {
     "DisplayName": "Tiefling Female Mage, Fantasy, TB25",
@@ -81755,7 +81755,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "TieflingFemaleMageFantasyTB25",
-    "PreviewUri": "@previewImages/TieflingFemaleMageFantasyTB25.png"
+    "PreviewUri": "TieflingFemaleMageFantasyTB25.png"
   },
   "TikiIdolYellow": {
     "DisplayName": "Tiki Idol, Yellow",
@@ -81781,7 +81781,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "TikiIdolYellow",
-    "PreviewUri": "@previewImages/TikiIdolYellow.png"
+    "PreviewUri": "TikiIdolYellow.png"
   },
   "TileRack": {
     "DisplayName": "Tile Rack",
@@ -81802,7 +81802,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "TileRack",
-    "PreviewUri": "@previewImages/TileRack.png"
+    "PreviewUri": "TileRack.png"
   },
   "ToiletPaper": {
     "DisplayName": "Toilet Paper",
@@ -81841,7 +81841,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "ToiletPaper",
-    "PreviewUri": "@previewImages/ToiletPaper.png"
+    "PreviewUri": "ToiletPaper.png"
   },
   "TokenChipBlack": {
     "DisplayName": "Token Chip, Black",
@@ -81867,7 +81867,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "TokenChipBlack",
-    "PreviewUri": "@previewImages/TokenChipBlack.png"
+    "PreviewUri": "TokenChipBlack.png"
   },
   "TokenChipBlue": {
     "DisplayName": "Token Chip, Blue",
@@ -81893,7 +81893,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "TokenChipBlue",
-    "PreviewUri": "@previewImages/TokenChipBlue.png"
+    "PreviewUri": "TokenChipBlue.png"
   },
   "TokenChipGreen": {
     "DisplayName": "Token Chip, Green",
@@ -81919,7 +81919,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "TokenChipGreen",
-    "PreviewUri": "@previewImages/TokenChipGreen.png"
+    "PreviewUri": "TokenChipGreen.png"
   },
   "TokenChipIndentedOrange": {
     "DisplayName": "Token Chip, Indented, Orange",
@@ -81944,7 +81944,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": true,
     "Key": "TokenChipIndentedOrange",
-    "PreviewUri": "@previewImages/TokenChipIndentedOrange.png"
+    "PreviewUri": "TokenChipIndentedOrange.png"
   },
   "TokenChipOrange": {
     "DisplayName": "Token Chip, Orange",
@@ -81970,7 +81970,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "TokenChipOrange",
-    "PreviewUri": "@previewImages/TokenChipOrange.png"
+    "PreviewUri": "TokenChipOrange.png"
   },
   "TokenChipPurple": {
     "DisplayName": "Token Chip, Purple",
@@ -81996,7 +81996,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "TokenChipPurple",
-    "PreviewUri": "@previewImages/TokenChipPurple.png"
+    "PreviewUri": "TokenChipPurple.png"
   },
   "TokenChipRed": {
     "DisplayName": "Token Chip, Red",
@@ -82022,7 +82022,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "TokenChipRed",
-    "PreviewUri": "@previewImages/TokenChipRed.png"
+    "PreviewUri": "TokenChipRed.png"
   },
   "TokenChipWhite": {
     "DisplayName": "Token Chip, White",
@@ -82048,7 +82048,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "TokenChipWhite",
-    "PreviewUri": "@previewImages/TokenChipWhite.png"
+    "PreviewUri": "TokenChipWhite.png"
   },
   "TokenChipYellow": {
     "DisplayName": "Token Chip, Yellow",
@@ -82074,7 +82074,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "TokenChipYellow",
-    "PreviewUri": "@previewImages/TokenChipYellow.png"
+    "PreviewUri": "TokenChipYellow.png"
   },
   "Tombstone": {
     "DisplayName": "Tombstone",
@@ -82094,7 +82094,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "Tombstone",
-    "PreviewUri": "@previewImages/Tombstone.png"
+    "PreviewUri": "Tombstone.png"
   },
   "TopHat": {
     "DisplayName": "Top Hat",
@@ -82129,7 +82129,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "TopHat",
-    "PreviewUri": "@previewImages/TopHat.png"
+    "PreviewUri": "TopHat.png"
   },
   "TowerStackerBlack": {
     "DisplayName": "Tower Stacker, Black",
@@ -82157,7 +82157,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "TowerStackerBlack",
-    "PreviewUri": "@previewImages/TowerStackerBlack.png"
+    "PreviewUri": "TowerStackerBlack.png"
   },
   "TowerStackerBlue": {
     "DisplayName": "Tower Stacker, Blue",
@@ -82185,7 +82185,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "TowerStackerBlue",
-    "PreviewUri": "@previewImages/TowerStackerBlue.png"
+    "PreviewUri": "TowerStackerBlue.png"
   },
   "TowerStackerGreen": {
     "DisplayName": "Tower Stacker, Green",
@@ -82213,7 +82213,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "TowerStackerGreen",
-    "PreviewUri": "@previewImages/TowerStackerGreen.png"
+    "PreviewUri": "TowerStackerGreen.png"
   },
   "TowerStackerOrange": {
     "DisplayName": "Tower Stacker, Orange",
@@ -82241,7 +82241,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "TowerStackerOrange",
-    "PreviewUri": "@previewImages/TowerStackerOrange.png"
+    "PreviewUri": "TowerStackerOrange.png"
   },
   "TowerStackerPurple": {
     "DisplayName": "Tower Stacker, Purple",
@@ -82269,7 +82269,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "TowerStackerPurple",
-    "PreviewUri": "@previewImages/TowerStackerPurple.png"
+    "PreviewUri": "TowerStackerPurple.png"
   },
   "TowerStackerRed": {
     "DisplayName": "Tower Stacker, Red",
@@ -82297,7 +82297,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "TowerStackerRed",
-    "PreviewUri": "@previewImages/TowerStackerRed.png"
+    "PreviewUri": "TowerStackerRed.png"
   },
   "TowerStackerWhite": {
     "DisplayName": "Tower Stacker, White",
@@ -82325,7 +82325,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "TowerStackerWhite",
-    "PreviewUri": "@previewImages/TowerStackerWhite.png"
+    "PreviewUri": "TowerStackerWhite.png"
   },
   "TowerStackerYellow": {
     "DisplayName": "Tower Stacker, Yellow",
@@ -82353,7 +82353,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "TowerStackerYellow",
-    "PreviewUri": "@previewImages/TowerStackerYellow.png"
+    "PreviewUri": "TowerStackerYellow.png"
   },
   "TrafficCone": {
     "DisplayName": "Traffic Cone",
@@ -82379,7 +82379,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "TrafficCone",
-    "PreviewUri": "@previewImages/TrafficCone.png"
+    "PreviewUri": "TrafficCone.png"
   },
   "TrainEngineWoodBlue": {
     "DisplayName": "Train Engine, Wood, Blue",
@@ -82409,7 +82409,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "TrainEngineWoodBlue",
-    "PreviewUri": "@previewImages/TrainEngineWoodBlue.png"
+    "PreviewUri": "TrainEngineWoodBlue.png"
   },
   "TrainEngineWoodOrange": {
     "DisplayName": "Train Engine, Wood, Orange",
@@ -82439,7 +82439,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "TrainEngineWoodOrange",
-    "PreviewUri": "@previewImages/TrainEngineWoodOrange.png"
+    "PreviewUri": "TrainEngineWoodOrange.png"
   },
   "TrainEngineWoodPurple": {
     "DisplayName": "Train Engine, Wood, Purple",
@@ -82469,7 +82469,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "TrainEngineWoodPurple",
-    "PreviewUri": "@previewImages/TrainEngineWoodPurple.png"
+    "PreviewUri": "TrainEngineWoodPurple.png"
   },
   "TrainEngineWoodRed": {
     "DisplayName": "Train Engine, Wood, Red",
@@ -82498,7 +82498,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": true,
     "Key": "TrainEngineWoodRed",
-    "PreviewUri": "@previewImages/TrainEngineWoodRed.png"
+    "PreviewUri": "TrainEngineWoodRed.png"
   },
   "TrainEngineWoodWhite": {
     "DisplayName": "Train Engine, Wood, White",
@@ -82528,7 +82528,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "TrainEngineWoodWhite",
-    "PreviewUri": "@previewImages/TrainEngineWoodWhite.png"
+    "PreviewUri": "TrainEngineWoodWhite.png"
   },
   "TrainEngineWoodYellow": {
     "DisplayName": "Train Engine, Wood, Yellow",
@@ -82558,7 +82558,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "TrainEngineWoodYellow",
-    "PreviewUri": "@previewImages/TrainEngineWoodYellow.png"
+    "PreviewUri": "TrainEngineWoodYellow.png"
   },
   "TransportShipSetof6": {
     "DisplayName": "Transport Ship, Set of 6",
@@ -82592,7 +82592,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "TransportShipSetof6",
-    "PreviewUri": "@previewImages/TransportShipSetof6.png"
+    "PreviewUri": "TransportShipSetof6.png"
   },
   "TreasureChestContainer": {
     "DisplayName": "Treasure Chest Container",
@@ -82624,7 +82624,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "TreasureChestContainer",
-    "PreviewUri": "@previewImages/TreasureChestContainer.png"
+    "PreviewUri": "TreasureChestContainer.png"
   },
   "TrellisofGrapesBlue": {
     "DisplayName": "Trellis of Grapes, Blue",
@@ -82649,7 +82649,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "TrellisofGrapesBlue",
-    "PreviewUri": "@previewImages/TrellisofGrapesBlue.png"
+    "PreviewUri": "TrellisofGrapesBlue.png"
   },
   "TrellisofGrapesGreen": {
     "DisplayName": "Trellis of Grapes, Green",
@@ -82674,7 +82674,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "TrellisofGrapesGreen",
-    "PreviewUri": "@previewImages/TrellisofGrapesGreen.png"
+    "PreviewUri": "TrellisofGrapesGreen.png"
   },
   "TrellisofGrapesOrange": {
     "DisplayName": "Trellis of Grapes, Orange",
@@ -82699,7 +82699,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "TrellisofGrapesOrange",
-    "PreviewUri": "@previewImages/TrellisofGrapesOrange.png"
+    "PreviewUri": "TrellisofGrapesOrange.png"
   },
   "TrellisofGrapesWhite": {
     "DisplayName": "Trellis of Grapes, White",
@@ -82724,7 +82724,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "TrellisofGrapesWhite",
-    "PreviewUri": "@previewImages/TrellisofGrapesWhite.png"
+    "PreviewUri": "TrellisofGrapesWhite.png"
   },
   "TriangleBlack": {
     "DisplayName": "Triangle, Black",
@@ -82754,7 +82754,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "TriangleBlack",
-    "PreviewUri": "@previewImages/TriangleBlack.png"
+    "PreviewUri": "TriangleBlack.png"
   },
   "TriangleBlue": {
     "DisplayName": "Triangle, Blue",
@@ -82784,7 +82784,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "TriangleBlue",
-    "PreviewUri": "@previewImages/TriangleBlue.png"
+    "PreviewUri": "TriangleBlue.png"
   },
   "TriangleGreen": {
     "DisplayName": "Triangle, Green",
@@ -82814,7 +82814,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "TriangleGreen",
-    "PreviewUri": "@previewImages/TriangleGreen.png"
+    "PreviewUri": "TriangleGreen.png"
   },
   "TriangleHollow": {
     "DisplayName": "Triangle, Hollow",
@@ -82845,7 +82845,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "TriangleHollow",
-    "PreviewUri": "@previewImages/TriangleHollow.png"
+    "PreviewUri": "TriangleHollow.png"
   },
   "TrianglePink": {
     "DisplayName": "Triangle, Pink",
@@ -82875,7 +82875,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "TrianglePink",
-    "PreviewUri": "@previewImages/TrianglePink.png"
+    "PreviewUri": "TrianglePink.png"
   },
   "TrollFantasyTB50": {
     "DisplayName": "Troll, Fantasy, TB50",
@@ -82898,7 +82898,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "TrollFantasyTB50",
-    "PreviewUri": "@previewImages/TrollFantasyTB50.png"
+    "PreviewUri": "TrollFantasyTB50.png"
   },
   "TrophyTB15Bronze": {
     "DisplayName": "Trophy, TB15, Bronze",
@@ -82928,7 +82928,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "bronze",
     "IsDisabled": false,
     "Key": "TrophyTB15Bronze",
-    "PreviewUri": "@previewImages/TrophyTB15Bronze.png"
+    "PreviewUri": "TrophyTB15Bronze.png"
   },
   "TrophyTB15Gold": {
     "DisplayName": "Trophy, TB15, Gold",
@@ -82960,7 +82960,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "TrophyTB15Gold",
-    "PreviewUri": "@previewImages/TrophyTB15Gold.png"
+    "PreviewUri": "TrophyTB15Gold.png"
   },
   "TrophyTB15Silver": {
     "DisplayName": "Trophy, TB15, Silver",
@@ -82992,7 +82992,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "TrophyTB15Silver",
-    "PreviewUri": "@previewImages/TrophyTB15Silver.png"
+    "PreviewUri": "TrophyTB15Silver.png"
   },
   "TruckFlatbedBlack": {
     "DisplayName": "Truck, Flatbed, Black",
@@ -83016,7 +83016,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "TruckFlatbedBlack",
-    "PreviewUri": "@previewImages/TruckFlatbedBlack.png"
+    "PreviewUri": "TruckFlatbedBlack.png"
   },
   "TruckFlatbedBlue": {
     "DisplayName": "Truck, Flatbed, Blue",
@@ -83040,7 +83040,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "TruckFlatbedBlue",
-    "PreviewUri": "@previewImages/TruckFlatbedBlue.png"
+    "PreviewUri": "TruckFlatbedBlue.png"
   },
   "TruckFlatbedGreen": {
     "DisplayName": "Truck, Flatbed, Green",
@@ -83064,7 +83064,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "TruckFlatbedGreen",
-    "PreviewUri": "@previewImages/TruckFlatbedGreen.png"
+    "PreviewUri": "TruckFlatbedGreen.png"
   },
   "TruckFlatbedOrange": {
     "DisplayName": "Truck, Flatbed, Orange",
@@ -83088,7 +83088,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "TruckFlatbedOrange",
-    "PreviewUri": "@previewImages/TruckFlatbedOrange.png"
+    "PreviewUri": "TruckFlatbedOrange.png"
   },
   "TruckFlatbedPurple": {
     "DisplayName": "Truck, Flatbed, Purple",
@@ -83112,7 +83112,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "TruckFlatbedPurple",
-    "PreviewUri": "@previewImages/TruckFlatbedPurple.png"
+    "PreviewUri": "TruckFlatbedPurple.png"
   },
   "TruckFlatbedRed": {
     "DisplayName": "Truck, Flatbed, Red",
@@ -83136,7 +83136,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "TruckFlatbedRed",
-    "PreviewUri": "@previewImages/TruckFlatbedRed.png"
+    "PreviewUri": "TruckFlatbedRed.png"
   },
   "TruckFlatbedWhite": {
     "DisplayName": "Truck, Flatbed, White",
@@ -83160,7 +83160,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "TruckFlatbedWhite",
-    "PreviewUri": "@previewImages/TruckFlatbedWhite.png"
+    "PreviewUri": "TruckFlatbedWhite.png"
   },
   "TruckFlatbedYellow": {
     "DisplayName": "Truck, Flatbed, Yellow",
@@ -83184,7 +83184,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "TruckFlatbedYellow",
-    "PreviewUri": "@previewImages/TruckFlatbedYellow.png"
+    "PreviewUri": "TruckFlatbedYellow.png"
   },
   "TruckWoodBlue": {
     "DisplayName": "Truck, Wood, Blue",
@@ -83216,7 +83216,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "TruckWoodBlue",
-    "PreviewUri": "@previewImages/TruckWoodBlue.png"
+    "PreviewUri": "TruckWoodBlue.png"
   },
   "TruckWoodGreen": {
     "DisplayName": "Truck, Wood, Green",
@@ -83248,7 +83248,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "TruckWoodGreen",
-    "PreviewUri": "@previewImages/TruckWoodGreen.png"
+    "PreviewUri": "TruckWoodGreen.png"
   },
   "TruckWoodGray": {
     "DisplayName": "Truck, Wood, Gray",
@@ -83280,7 +83280,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "TruckWoodGray",
-    "PreviewUri": "@previewImages/TruckWoodGray.png"
+    "PreviewUri": "TruckWoodGray.png"
   },
   "TruckWoodRed": {
     "DisplayName": "Truck, Wood, Red",
@@ -83312,7 +83312,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "TruckWoodRed",
-    "PreviewUri": "@previewImages/TruckWoodRed.png"
+    "PreviewUri": "TruckWoodRed.png"
   },
   "TruckWoodYellow": {
     "DisplayName": "Truck, Wood, Yellow",
@@ -83344,7 +83344,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "TruckWoodYellow",
-    "PreviewUri": "@previewImages/TruckWoodYellow.png"
+    "PreviewUri": "TruckWoodYellow.png"
   },
   "TwoHeadedOgrew/Captive": {
     "DisplayName": "Two Headed Ogre w/ Captive",
@@ -83382,7 +83382,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": true,
     "Key": "TwoHeadedOgrew/Captive",
-    "PreviewUri": "@previewImages/TwoHeadedOgrew_Captive.png"
+    "PreviewUri": "TwoHeadedOgrew_Captive.png"
   },
   "UniversalNo": {
     "DisplayName": "Universal No",
@@ -83423,7 +83423,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "UniversalNo",
-    "PreviewUri": "@previewImages/UniversalNo.png"
+    "PreviewUri": "UniversalNo.png"
   },
   "UniversalYes": {
     "DisplayName": "Universal Yes",
@@ -83464,7 +83464,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "UniversalYes",
-    "PreviewUri": "@previewImages/UniversalYes.png"
+    "PreviewUri": "UniversalYes.png"
   },
   "ValveControlStation": {
     "DisplayName": "Valve Control Station",
@@ -83486,7 +83486,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "ValveControlStation",
-    "PreviewUri": "@previewImages/ValveControlStation.png"
+    "PreviewUri": "ValveControlStation.png"
   },
   "Vampire-CharacterMeeple": {
     "DisplayName": "Vampire, Character Meeple",
@@ -83516,7 +83516,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Vampire-CharacterMeeple",
-    "PreviewUri": "@previewImages/Vampire-CharacterMeeple.png"
+    "PreviewUri": "Vampire-CharacterMeeple.png"
   },
   "VanPostApocalypse": {
     "DisplayName": "Van, Post Apocalypse",
@@ -83533,7 +83533,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "VanPostApocalypse",
-    "PreviewUri": "@previewImages/VanPostApocalypse.png"
+    "PreviewUri": "VanPostApocalypse.png"
   },
   "VialLiquidFluorescentBlue": {
     "DisplayName": "Vial Liquid, Fluorescent Blue",
@@ -83565,7 +83565,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "VialLiquidFluorescentBlue",
-    "PreviewUri": "@previewImages/VialLiquidFluorescentBlue.png"
+    "PreviewUri": "VialLiquidFluorescentBlue.png"
   },
   "VialLiquidFluorescentGreen": {
     "DisplayName": "Vial Liquid, Fluorescent Green",
@@ -83597,7 +83597,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "VialLiquidFluorescentGreen",
-    "PreviewUri": "@previewImages/VialLiquidFluorescentGreen.png"
+    "PreviewUri": "VialLiquidFluorescentGreen.png"
   },
   "VialLiquidFluorescentOrange": {
     "DisplayName": "Vial Liquid, Fluorescent Orange",
@@ -83629,7 +83629,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "VialLiquidFluorescentOrange",
-    "PreviewUri": "@previewImages/VialLiquidFluorescentOrange.png"
+    "PreviewUri": "VialLiquidFluorescentOrange.png"
   },
   "VialLiquidFluorescentRed": {
     "DisplayName": "Vial Liquid, Fluorescent Red",
@@ -83661,7 +83661,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "VialLiquidFluorescentRed",
-    "PreviewUri": "@previewImages/VialLiquidFluorescentRed.png"
+    "PreviewUri": "VialLiquidFluorescentRed.png"
   },
   "VialLiquidFluorescentYellow": {
     "DisplayName": "Vial Liquid, Fluorescent Yellow",
@@ -83693,7 +83693,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "VialLiquidFluorescentYellow",
-    "PreviewUri": "@previewImages/VialLiquidFluorescentYellow.png"
+    "PreviewUri": "VialLiquidFluorescentYellow.png"
   },
   "VialLiquidOpaqueBlack": {
     "DisplayName": "Vial Liquid, Opaque Black",
@@ -83725,7 +83725,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "VialLiquidOpaqueBlack",
-    "PreviewUri": "@previewImages/VialLiquidOpaqueBlack.png"
+    "PreviewUri": "VialLiquidOpaqueBlack.png"
   },
   "VialLiquidOpaqueBlue1": {
     "DisplayName": "Vial Liquid, Opaque Blue 1",
@@ -83757,7 +83757,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "VialLiquidOpaqueBlue1",
-    "PreviewUri": "@previewImages/VialLiquidOpaqueBlue1.png"
+    "PreviewUri": "VialLiquidOpaqueBlue1.png"
   },
   "VialLiquidOpaqueBlue2": {
     "DisplayName": "Vial Liquid, Opaque Blue 2",
@@ -83789,7 +83789,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "VialLiquidOpaqueBlue2",
-    "PreviewUri": "@previewImages/VialLiquidOpaqueBlue2.png"
+    "PreviewUri": "VialLiquidOpaqueBlue2.png"
   },
   "VialLiquidOpaqueBlue3": {
     "DisplayName": "Vial Liquid, Opaque Blue 3",
@@ -83821,7 +83821,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "VialLiquidOpaqueBlue3",
-    "PreviewUri": "@previewImages/VialLiquidOpaqueBlue3.png"
+    "PreviewUri": "VialLiquidOpaqueBlue3.png"
   },
   "VialLiquidOpaqueBrown": {
     "DisplayName": "Vial Liquid, Opaque Brown",
@@ -83853,7 +83853,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "VialLiquidOpaqueBrown",
-    "PreviewUri": "@previewImages/VialLiquidOpaqueBrown.png"
+    "PreviewUri": "VialLiquidOpaqueBrown.png"
   },
   "VialLiquidOpaqueGray": {
     "DisplayName": "Vial Liquid, Opaque Gray",
@@ -83888,7 +83888,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "VialLiquidOpaqueGray",
-    "PreviewUri": "@previewImages/VialLiquidOpaqueGray.png"
+    "PreviewUri": "VialLiquidOpaqueGray.png"
   },
   "VialLiquidOpaqueGreen": {
     "DisplayName": "Vial Liquid, Opaque Green",
@@ -83920,7 +83920,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "VialLiquidOpaqueGreen",
-    "PreviewUri": "@previewImages/VialLiquidOpaqueGreen.png"
+    "PreviewUri": "VialLiquidOpaqueGreen.png"
   },
   "VialLiquidOpaqueIvory": {
     "DisplayName": "Vial Liquid, Opaque Ivory",
@@ -83953,7 +83953,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "VialLiquidOpaqueIvory",
-    "PreviewUri": "@previewImages/VialLiquidOpaqueIvory.png"
+    "PreviewUri": "VialLiquidOpaqueIvory.png"
   },
   "VialLiquidOpaqueOrange": {
     "DisplayName": "Vial Liquid, Opaque Orange",
@@ -83985,7 +83985,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "VialLiquidOpaqueOrange",
-    "PreviewUri": "@previewImages/VialLiquidOpaqueOrange.png"
+    "PreviewUri": "VialLiquidOpaqueOrange.png"
   },
   "VialLiquidOpaquePurple": {
     "DisplayName": "Vial Liquid, Opaque Purple",
@@ -84017,7 +84017,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "VialLiquidOpaquePurple",
-    "PreviewUri": "@previewImages/VialLiquidOpaquePurple.png"
+    "PreviewUri": "VialLiquidOpaquePurple.png"
   },
   "VialLiquidOpaqueRed": {
     "DisplayName": "Vial Liquid, Opaque Red",
@@ -84049,7 +84049,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "VialLiquidOpaqueRed",
-    "PreviewUri": "@previewImages/VialLiquidOpaqueRed.png"
+    "PreviewUri": "VialLiquidOpaqueRed.png"
   },
   "VialLiquidOpaqueWhite": {
     "DisplayName": "Vial Liquid, Opaque White",
@@ -84081,7 +84081,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "VialLiquidOpaqueWhite",
-    "PreviewUri": "@previewImages/VialLiquidOpaqueWhite.png"
+    "PreviewUri": "VialLiquidOpaqueWhite.png"
   },
   "VialLiquidOpaqueYellow": {
     "DisplayName": "Vial Liquid, Opaque Yellow",
@@ -84113,7 +84113,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "VialLiquidOpaqueYellow",
-    "PreviewUri": "@previewImages/VialLiquidOpaqueYellow.png"
+    "PreviewUri": "VialLiquidOpaqueYellow.png"
   },
   "VialLiquidSilverMirror": {
     "DisplayName": "Vial Liquid, Silver Mirror",
@@ -84146,7 +84146,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "VialLiquidSilverMirror",
-    "PreviewUri": "@previewImages/VialLiquidSilverMirror.png"
+    "PreviewUri": "VialLiquidSilverMirror.png"
   },
   "VialLiquidTransparentBlack": {
     "DisplayName": "Vial Liquid, Transparent, Black",
@@ -84178,7 +84178,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "VialLiquidTransparentBlack",
-    "PreviewUri": "@previewImages/VialLiquidTransparentBlack.png"
+    "PreviewUri": "VialLiquidTransparentBlack.png"
   },
   "VialLiquidTransparentBlue": {
     "DisplayName": "Vial Liquid, Transparent, Blue",
@@ -84210,7 +84210,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "VialLiquidTransparentBlue",
-    "PreviewUri": "@previewImages/VialLiquidTransparentBlue.png"
+    "PreviewUri": "VialLiquidTransparentBlue.png"
   },
   "VialLiquidTransparentGreen": {
     "DisplayName": "Vial Liquid, Transparent, Green",
@@ -84242,7 +84242,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "VialLiquidTransparentGreen",
-    "PreviewUri": "@previewImages/VialLiquidTransparentGreen.png"
+    "PreviewUri": "VialLiquidTransparentGreen.png"
   },
   "VialLiquidTransparentOrange": {
     "DisplayName": "Vial Liquid, Transparent, Orange",
@@ -84274,7 +84274,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "VialLiquidTransparentOrange",
-    "PreviewUri": "@previewImages/VialLiquidTransparentOrange.png"
+    "PreviewUri": "VialLiquidTransparentOrange.png"
   },
   "VialLiquidTransparentPurple": {
     "DisplayName": "Vial Liquid, Transparent, Purple",
@@ -84306,7 +84306,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "VialLiquidTransparentPurple",
-    "PreviewUri": "@previewImages/VialLiquidTransparentPurple.png"
+    "PreviewUri": "VialLiquidTransparentPurple.png"
   },
   "VialLiquidTransparentRed": {
     "DisplayName": "Vial Liquid, Transparent, Red",
@@ -84338,7 +84338,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "VialLiquidTransparentRed",
-    "PreviewUri": "@previewImages/VialLiquidTransparentRed.png"
+    "PreviewUri": "VialLiquidTransparentRed.png"
   },
   "VialLiquidTransparentYellow": {
     "DisplayName": "Vial Liquid, Transparent, Yellow",
@@ -84370,7 +84370,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "VialLiquidTransparentYellow",
-    "PreviewUri": "@previewImages/VialLiquidTransparentYellow.png"
+    "PreviewUri": "VialLiquidTransparentYellow.png"
   },
   "VictorianMiniatureBlue": {
     "DisplayName": "Victorian Miniature, Blue",
@@ -84409,7 +84409,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "VictorianMiniatureBlue",
-    "PreviewUri": "@previewImages/VictorianMiniatureBlue.png"
+    "PreviewUri": "VictorianMiniatureBlue.png"
   },
   "VictorianMiniatureGreen": {
     "DisplayName": "Victorian Miniature, Green",
@@ -84448,7 +84448,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "VictorianMiniatureGreen",
-    "PreviewUri": "@previewImages/VictorianMiniatureGreen.png"
+    "PreviewUri": "VictorianMiniatureGreen.png"
   },
   "VictorianMiniatureRed": {
     "DisplayName": "Victorian Miniature, Red",
@@ -84487,7 +84487,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "VictorianMiniatureRed",
-    "PreviewUri": "@previewImages/VictorianMiniatureRed.png"
+    "PreviewUri": "VictorianMiniatureRed.png"
   },
   "VillagerBlack-CharacterMeeple": {
     "DisplayName": "Villager, Black, Character Meeple",
@@ -84510,7 +84510,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "VillagerBlack-CharacterMeeple",
-    "PreviewUri": "@previewImages/VillagerBlack-CharacterMeeple.png"
+    "PreviewUri": "VillagerBlack-CharacterMeeple.png"
   },
   "VillagerBlue-CharacterMeeple": {
     "DisplayName": "Villager, Blue, Character Meeple",
@@ -84533,7 +84533,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "VillagerBlue-CharacterMeeple",
-    "PreviewUri": "@previewImages/VillagerBlue-CharacterMeeple.png"
+    "PreviewUri": "VillagerBlue-CharacterMeeple.png"
   },
   "VillagerGreen-CharacterMeeple": {
     "DisplayName": "Villager, Green, Character Meeple",
@@ -84556,7 +84556,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "VillagerGreen-CharacterMeeple",
-    "PreviewUri": "@previewImages/VillagerGreen-CharacterMeeple.png"
+    "PreviewUri": "VillagerGreen-CharacterMeeple.png"
   },
   "VillagerOrange-CharacterMeeple": {
     "DisplayName": "Villager, Orange, Character Meeple",
@@ -84579,7 +84579,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "VillagerOrange-CharacterMeeple",
-    "PreviewUri": "@previewImages/VillagerOrange-CharacterMeeple.png"
+    "PreviewUri": "VillagerOrange-CharacterMeeple.png"
   },
   "VillagerPurple-CharacterMeeple": {
     "DisplayName": "Villager, Purple, Character Meeple",
@@ -84602,7 +84602,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "VillagerPurple-CharacterMeeple",
-    "PreviewUri": "@previewImages/VillagerPurple-CharacterMeeple.png"
+    "PreviewUri": "VillagerPurple-CharacterMeeple.png"
   },
   "VillagerRed-CharacterMeeple": {
     "DisplayName": "Villager, Red, Character Meeple",
@@ -84625,7 +84625,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "VillagerRed-CharacterMeeple",
-    "PreviewUri": "@previewImages/VillagerRed-CharacterMeeple.png"
+    "PreviewUri": "VillagerRed-CharacterMeeple.png"
   },
   "VillagerWhite-CharacterMeeple": {
     "DisplayName": "Villager, White, Character Meeple",
@@ -84648,7 +84648,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "VillagerWhite-CharacterMeeple",
-    "PreviewUri": "@previewImages/VillagerWhite-CharacterMeeple.png"
+    "PreviewUri": "VillagerWhite-CharacterMeeple.png"
   },
   "VillagerYellow-CharacterMeeple": {
     "DisplayName": "Villager, Yellow, Character Meeple",
@@ -84671,7 +84671,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "VillagerYellow-CharacterMeeple",
-    "PreviewUri": "@previewImages/VillagerYellow-CharacterMeeple.png"
+    "PreviewUri": "VillagerYellow-CharacterMeeple.png"
   },
   "WalkerDriverSpace": {
     "DisplayName": "Walker Driver, Space",
@@ -84691,7 +84691,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "WalkerDriverSpace",
-    "PreviewUri": "@previewImages/WalkerDriverSpace.png"
+    "PreviewUri": "WalkerDriverSpace.png"
   },
   "WalkerSpaceTB50": {
     "DisplayName": "Walker, Space, TB50",
@@ -84712,7 +84712,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "WalkerSpaceTB50",
-    "PreviewUri": "@previewImages/WalkerSpaceTB50.png"
+    "PreviewUri": "WalkerSpaceTB50.png"
   },
   "WallSandbags": {
     "DisplayName": "Wall, Sandbags",
@@ -84732,7 +84732,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "WallSandbags",
-    "PreviewUri": "@previewImages/WallSandbags.png"
+    "PreviewUri": "WallSandbags.png"
   },
   "WallStone": {
     "DisplayName": "Wall, Stone",
@@ -84752,7 +84752,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "WallStone",
-    "PreviewUri": "@previewImages/WallStone.png"
+    "PreviewUri": "WallStone.png"
   },
   "WarbeastwithHandler": {
     "DisplayName": "Warbeast with Handler",
@@ -84781,7 +84781,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "WarbeastwithHandler",
-    "PreviewUri": "@previewImages/WarbeastwithHandler.png"
+    "PreviewUri": "WarbeastwithHandler.png"
   },
   "WarriorMonkPurple": {
     "DisplayName": "Warrior Monk, Purple",
@@ -84818,7 +84818,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "WarriorMonkPurple",
-    "PreviewUri": "@previewImages/WarriorMonkPurple.png"
+    "PreviewUri": "WarriorMonkPurple.png"
   },
   "WarriorMonkRed": {
     "DisplayName": "Warrior Monk, Red",
@@ -84855,7 +84855,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "WarriorMonkRed",
-    "PreviewUri": "@previewImages/WarriorMonkRed.png"
+    "PreviewUri": "WarriorMonkRed.png"
   },
   "WaterMillBlack": {
     "DisplayName": "Water Mill, Black",
@@ -84875,7 +84875,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "WaterMillBlack",
-    "PreviewUri": "@previewImages/WaterMillBlack.png"
+    "PreviewUri": "WaterMillBlack.png"
   },
   "WaterMillBlue": {
     "DisplayName": "Water Mill, Blue",
@@ -84895,7 +84895,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "WaterMillBlue",
-    "PreviewUri": "@previewImages/WaterMillBlue.png"
+    "PreviewUri": "WaterMillBlue.png"
   },
   "WaterMillGreen": {
     "DisplayName": "Water Mill, Green",
@@ -84915,7 +84915,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "WaterMillGreen",
-    "PreviewUri": "@previewImages/WaterMillGreen.png"
+    "PreviewUri": "WaterMillGreen.png"
   },
   "WaterMillOrange": {
     "DisplayName": "Water Mill, Orange",
@@ -84935,7 +84935,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "WaterMillOrange",
-    "PreviewUri": "@previewImages/WaterMillOrange.png"
+    "PreviewUri": "WaterMillOrange.png"
   },
   "WaterMillPurple": {
     "DisplayName": "Water Mill, Purple",
@@ -84955,7 +84955,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "WaterMillPurple",
-    "PreviewUri": "@previewImages/WaterMillPurple.png"
+    "PreviewUri": "WaterMillPurple.png"
   },
   "WaterMillRed": {
     "DisplayName": "Water Mill, Red",
@@ -84975,7 +84975,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "WaterMillRed",
-    "PreviewUri": "@previewImages/WaterMillRed.png"
+    "PreviewUri": "WaterMillRed.png"
   },
   "WaterMillWhite": {
     "DisplayName": "Water Mill, White",
@@ -84995,7 +84995,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "WaterMillWhite",
-    "PreviewUri": "@previewImages/WaterMillWhite.png"
+    "PreviewUri": "WaterMillWhite.png"
   },
   "WaterMillYellow": {
     "DisplayName": "Water Mill, Yellow",
@@ -85015,7 +85015,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "WaterMillYellow",
-    "PreviewUri": "@previewImages/WaterMillYellow.png"
+    "PreviewUri": "WaterMillYellow.png"
   },
   "WeresharkFantasyTB25": {
     "DisplayName": "Wereshark, Fantasy, TB25",
@@ -85034,7 +85034,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "WeresharkFantasyTB25",
-    "PreviewUri": "@previewImages/WeresharkFantasyTB25.png"
+    "PreviewUri": "WeresharkFantasyTB25.png"
   },
   "WerewolfFantasyTB25": {
     "DisplayName": "Werewolf, Fantasy, TB25",
@@ -85061,7 +85061,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gold",
     "IsDisabled": false,
     "Key": "WerewolfFantasyTB25",
-    "PreviewUri": "@previewImages/WerewolfFantasyTB25.png"
+    "PreviewUri": "WerewolfFantasyTB25.png"
   },
   "WilhelmTellCrossbowmanFantasyTB25": {
     "DisplayName": "Wilhelm Tell, Crossbowman, Fantasy, TB25",
@@ -85084,7 +85084,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "WilhelmTellCrossbowmanFantasyTB25",
-    "PreviewUri": "@previewImages/WilhelmTellCrossbowmanFantasyTB25.png"
+    "PreviewUri": "WilhelmTellCrossbowmanFantasyTB25.png"
   },
   "WindmillBlack": {
     "DisplayName": "Windmill, Black",
@@ -85104,7 +85104,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "WindmillBlack",
-    "PreviewUri": "@previewImages/WindmillBlack.png"
+    "PreviewUri": "WindmillBlack.png"
   },
   "WindmillBlue": {
     "DisplayName": "Windmill, Blue",
@@ -85137,7 +85137,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "WindmillBlue",
-    "PreviewUri": "@previewImages/WindmillBlue.png"
+    "PreviewUri": "WindmillBlue.png"
   },
   "WindmillGreen": {
     "DisplayName": "Windmill, Green",
@@ -85157,7 +85157,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "WindmillGreen",
-    "PreviewUri": "@previewImages/WindmillGreen.png"
+    "PreviewUri": "WindmillGreen.png"
   },
   "WindmillOrange": {
     "DisplayName": "Windmill, Orange",
@@ -85177,7 +85177,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "WindmillOrange",
-    "PreviewUri": "@previewImages/WindmillOrange.png"
+    "PreviewUri": "WindmillOrange.png"
   },
   "WindmillPurple": {
     "DisplayName": "Windmill, Purple",
@@ -85210,7 +85210,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "WindmillPurple",
-    "PreviewUri": "@previewImages/WindmillPurple.png"
+    "PreviewUri": "WindmillPurple.png"
   },
   "WindmillRed": {
     "DisplayName": "Windmill, Red",
@@ -85243,7 +85243,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "WindmillRed",
-    "PreviewUri": "@previewImages/WindmillRed.png"
+    "PreviewUri": "WindmillRed.png"
   },
   "WindmillWhite": {
     "DisplayName": "Windmill, White",
@@ -85263,7 +85263,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "WindmillWhite",
-    "PreviewUri": "@previewImages/WindmillWhite.png"
+    "PreviewUri": "WindmillWhite.png"
   },
   "WindmillYellow": {
     "DisplayName": "Windmill, Yellow",
@@ -85283,7 +85283,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "WindmillYellow",
-    "PreviewUri": "@previewImages/WindmillYellow.png"
+    "PreviewUri": "WindmillYellow.png"
   },
   "Wink20mmBlack": {
     "DisplayName": "Wink, 20mm, Opaque, Black",
@@ -85306,7 +85306,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Wink20mmBlack",
-    "PreviewUri": "@previewImages/Wink20mmBlack.png"
+    "PreviewUri": "Wink20mmBlack.png"
   },
   "Wink20mmOpaqueWhite": {
     "DisplayName": "Wink, 20mm, Opaque, White",
@@ -85329,7 +85329,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Wink20mmOpaqueWhite",
-    "PreviewUri": "@previewImages/Wink20mmOpaqueWhite.png"
+    "PreviewUri": "Wink20mmOpaqueWhite.png"
   },
   "Wink20mmTranslucentBlue": {
     "DisplayName": "Wink, 20mm, Translucent, Blue",
@@ -85352,7 +85352,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Wink20mmTranslucentBlue",
-    "PreviewUri": "@previewImages/Wink20mmTranslucentBlue.png"
+    "PreviewUri": "Wink20mmTranslucentBlue.png"
   },
   "Wink20mmTranslucentGreen": {
     "DisplayName": "Wink, 20mm, Translucent, Green",
@@ -85374,7 +85374,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": true,
     "Key": "Wink20mmTranslucentGreen",
-    "PreviewUri": "@previewImages/Wink20mmTranslucentGreen.png"
+    "PreviewUri": "Wink20mmTranslucentGreen.png"
   },
   "Wink22mmOpaqueBlack": {
     "DisplayName": "Wink, 22mm, Opaque, Black",
@@ -85397,7 +85397,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Wink22mmOpaqueBlack",
-    "PreviewUri": "@previewImages/Wink22mmOpaqueBlack.png"
+    "PreviewUri": "Wink22mmOpaqueBlack.png"
   },
   "Wink22mmOpaqueWhite": {
     "DisplayName": "Wink, 22mm, Opaque, White",
@@ -85420,7 +85420,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Wink22mmOpaqueWhite",
-    "PreviewUri": "@previewImages/Wink22mmOpaqueWhite.png"
+    "PreviewUri": "Wink22mmOpaqueWhite.png"
   },
   "Wink22mmTranslucentBlack": {
     "DisplayName": "Wink, 22mm, Translucent Black",
@@ -85443,7 +85443,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "Wink22mmTranslucentBlack",
-    "PreviewUri": "@previewImages/Wink22mmTranslucentBlack.png"
+    "PreviewUri": "Wink22mmTranslucentBlack.png"
   },
   "Wink22mmTranslucentBlue": {
     "DisplayName": "Wink, 22mm, Translucent Blue",
@@ -85466,7 +85466,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Wink22mmTranslucentBlue",
-    "PreviewUri": "@previewImages/Wink22mmTranslucentBlue.png"
+    "PreviewUri": "Wink22mmTranslucentBlue.png"
   },
   "Wink22mmTranslucentGreen": {
     "DisplayName": "Wink, 22mm, Translucent Green",
@@ -85489,7 +85489,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Wink22mmTranslucentGreen",
-    "PreviewUri": "@previewImages/Wink22mmTranslucentGreen.png"
+    "PreviewUri": "Wink22mmTranslucentGreen.png"
   },
   "Wink22mmTranslucentOrange": {
     "DisplayName": "Wink, 22mm, Translucent Orange",
@@ -85512,7 +85512,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "Wink22mmTranslucentOrange",
-    "PreviewUri": "@previewImages/Wink22mmTranslucentOrange.png"
+    "PreviewUri": "Wink22mmTranslucentOrange.png"
   },
   "Wink22mmTranslucentPurple": {
     "DisplayName": "Wink, 22mm, Translucent Purple",
@@ -85535,7 +85535,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "Wink22mmTranslucentPurple",
-    "PreviewUri": "@previewImages/Wink22mmTranslucentPurple.png"
+    "PreviewUri": "Wink22mmTranslucentPurple.png"
   },
   "Wink22mmTranslucentRed": {
     "DisplayName": "Wink, 22mm, Translucent Red",
@@ -85558,7 +85558,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Wink22mmTranslucentRed",
-    "PreviewUri": "@previewImages/Wink22mmTranslucentRed.png"
+    "PreviewUri": "Wink22mmTranslucentRed.png"
   },
   "Wink22mmTranslucentYellow": {
     "DisplayName": "Wink, 22mm, Translucent, Yellow",
@@ -85581,7 +85581,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Wink22mmTranslucentYellow",
-    "PreviewUri": "@previewImages/Wink22mmTranslucentYellow.png"
+    "PreviewUri": "Wink22mmTranslucentYellow.png"
   },
   "WizardOldFantasyTB25": {
     "DisplayName": "Wizard Old, Fantasy, TB25",
@@ -85616,7 +85616,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "WizardOldFantasyTB25",
-    "PreviewUri": "@previewImages/WizardOldFantasyTB25.png"
+    "PreviewUri": "WizardOldFantasyTB25.png"
   },
   "WizardBlue-CharacterMeeple": {
     "DisplayName": "Wizard, Blue, Character Meeple",
@@ -85646,7 +85646,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "WizardBlue-CharacterMeeple",
-    "PreviewUri": "@previewImages/WizardBlue-CharacterMeeple.png"
+    "PreviewUri": "WizardBlue-CharacterMeeple.png"
   },
   "WizardGreen-CharacterMeeple": {
     "DisplayName": "Wizard, Green, Character Meeple",
@@ -85676,7 +85676,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "WizardGreen-CharacterMeeple",
-    "PreviewUri": "@previewImages/WizardGreen-CharacterMeeple.png"
+    "PreviewUri": "WizardGreen-CharacterMeeple.png"
   },
   "WizardOrange-CharacterMeeple": {
     "DisplayName": "Wizard, Orange, Character Meeple",
@@ -85706,7 +85706,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "WizardOrange-CharacterMeeple",
-    "PreviewUri": "@previewImages/WizardOrange-CharacterMeeple.png"
+    "PreviewUri": "WizardOrange-CharacterMeeple.png"
   },
   "WizardPurple-CharacterMeeple": {
     "DisplayName": "Wizard, Purple, Character Meeple",
@@ -85736,7 +85736,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "WizardPurple-CharacterMeeple",
-    "PreviewUri": "@previewImages/WizardPurple-CharacterMeeple.png"
+    "PreviewUri": "WizardPurple-CharacterMeeple.png"
   },
   "WizardRed-CharacterMeeple": {
     "DisplayName": "Wizard, Red, Character Meeple",
@@ -85766,7 +85766,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "WizardRed-CharacterMeeple",
-    "PreviewUri": "@previewImages/WizardRed-CharacterMeeple.png"
+    "PreviewUri": "WizardRed-CharacterMeeple.png"
   },
   "WizardYellow-CharacterMeeple": {
     "DisplayName": "Wizard, Yellow, Character Meeple",
@@ -85796,7 +85796,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "WizardYellow-CharacterMeeple",
-    "PreviewUri": "@previewImages/WizardYellow-CharacterMeeple.png"
+    "PreviewUri": "WizardYellow-CharacterMeeple.png"
   },
   "WomanHighSociety": {
     "DisplayName": "Woman, High Society",
@@ -85822,7 +85822,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "WomanHighSociety",
-    "PreviewUri": "@previewImages/WomanHighSociety.png"
+    "PreviewUri": "WomanHighSociety.png"
   },
   "WomanModernBaseballBatTB25": {
     "DisplayName": "Woman, Modern, Baseball Bat, TB25",
@@ -85843,7 +85843,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "WomanModernBaseballBatTB25",
-    "PreviewUri": "@previewImages/WomanModernBaseballBatTB25.png"
+    "PreviewUri": "WomanModernBaseballBatTB25.png"
   },
   "WomanModernHandgunTB25": {
     "DisplayName": "Woman, Modern, Handgun, TB25",
@@ -85865,7 +85865,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "WomanModernHandgunTB25",
-    "PreviewUri": "@previewImages/WomanModernHandgunTB25.png"
+    "PreviewUri": "WomanModernHandgunTB25.png"
   },
   "WomanModernTB15Black": {
     "DisplayName": "Woman, Modern, TB15, Black",
@@ -85893,7 +85893,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "WomanModernTB15Black",
-    "PreviewUri": "@previewImages/WomanModernTB15Black.png"
+    "PreviewUri": "WomanModernTB15Black.png"
   },
   "WomanModernTB15Blue": {
     "DisplayName": "Woman, Modern, TB15, Blue",
@@ -85921,7 +85921,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "WomanModernTB15Blue",
-    "PreviewUri": "@previewImages/WomanModernTB15Blue.png"
+    "PreviewUri": "WomanModernTB15Blue.png"
   },
   "WomanModernTB15Green": {
     "DisplayName": "Woman, Modern, TB15, Green",
@@ -85949,7 +85949,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "WomanModernTB15Green",
-    "PreviewUri": "@previewImages/WomanModernTB15Green.png"
+    "PreviewUri": "WomanModernTB15Green.png"
   },
   "WomanModernTB15Orange": {
     "DisplayName": "Woman, Modern, TB15, Orange",
@@ -85977,7 +85977,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "WomanModernTB15Orange",
-    "PreviewUri": "@previewImages/WomanModernTB15Orange.png"
+    "PreviewUri": "WomanModernTB15Orange.png"
   },
   "WomanModernTB15Purple": {
     "DisplayName": "Woman, Modern, TB15, Purple",
@@ -86005,7 +86005,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "WomanModernTB15Purple",
-    "PreviewUri": "@previewImages/WomanModernTB15Purple.png"
+    "PreviewUri": "WomanModernTB15Purple.png"
   },
   "WomanModernTB15Red": {
     "DisplayName": "Woman, Modern, TB15, Red",
@@ -86033,7 +86033,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "WomanModernTB15Red",
-    "PreviewUri": "@previewImages/WomanModernTB15Red.png"
+    "PreviewUri": "WomanModernTB15Red.png"
   },
   "WomanModernTB15White": {
     "DisplayName": "Woman, Modern, TB15, White",
@@ -86061,7 +86061,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "WomanModernTB15White",
-    "PreviewUri": "@previewImages/WomanModernTB15White.png"
+    "PreviewUri": "WomanModernTB15White.png"
   },
   "WomanModernTB15Yellow": {
     "DisplayName": "Woman, Modern, TB15, Yellow",
@@ -86089,7 +86089,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "WomanModernTB15Yellow",
-    "PreviewUri": "@previewImages/WomanModernTB15Yellow.png"
+    "PreviewUri": "WomanModernTB15Yellow.png"
   },
   "WomanMum": {
     "DisplayName": "Woman, Mum",
@@ -86121,7 +86121,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "WomanMum",
-    "PreviewUri": "@previewImages/WomanMum.png"
+    "PreviewUri": "WomanMum.png"
   },
   "WomanPostApocalypseBazookaTB25": {
     "DisplayName": "Woman, Post Apocalypse, Bazooka, TB25",
@@ -86146,7 +86146,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "WomanPostApocalypseBazookaTB25",
-    "PreviewUri": "@previewImages/WomanPostApocalypseBazookaTB25.png"
+    "PreviewUri": "WomanPostApocalypseBazookaTB25.png"
   },
   "WomanPostApocalypseShotgunTB25": {
     "DisplayName": "Woman, Post Apocalypse, Shotgun, TB25",
@@ -86168,7 +86168,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "WomanPostApocalypseShotgunTB25",
-    "PreviewUri": "@previewImages/WomanPostApocalypseShotgunTB25.png"
+    "PreviewUri": "WomanPostApocalypseShotgunTB25.png"
   },
   "WomanPostApocalypseTB15Black": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Black",
@@ -86191,7 +86191,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "WomanPostApocalypseTB15Black",
-    "PreviewUri": "@previewImages/WomanPostApocalypseTB15Black.png"
+    "PreviewUri": "WomanPostApocalypseTB15Black.png"
   },
   "WomanPostApocalypseTB15Blue": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Blue",
@@ -86214,7 +86214,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "WomanPostApocalypseTB15Blue",
-    "PreviewUri": "@previewImages/WomanPostApocalypseTB15Blue.png"
+    "PreviewUri": "WomanPostApocalypseTB15Blue.png"
   },
   "WomanPostApocalypseTB15Green": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Green",
@@ -86237,7 +86237,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "WomanPostApocalypseTB15Green",
-    "PreviewUri": "@previewImages/WomanPostApocalypseTB15Green.png"
+    "PreviewUri": "WomanPostApocalypseTB15Green.png"
   },
   "WomanPostApocalypseTB15Orange": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Orange",
@@ -86260,7 +86260,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "WomanPostApocalypseTB15Orange",
-    "PreviewUri": "@previewImages/WomanPostApocalypseTB15Orange.png"
+    "PreviewUri": "WomanPostApocalypseTB15Orange.png"
   },
   "WomanPostApocalypseTB15Purple": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Purple",
@@ -86283,7 +86283,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "WomanPostApocalypseTB15Purple",
-    "PreviewUri": "@previewImages/WomanPostApocalypseTB15Purple.png"
+    "PreviewUri": "WomanPostApocalypseTB15Purple.png"
   },
   "WomanPostApocalypseTB15Red": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Red",
@@ -86306,7 +86306,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "WomanPostApocalypseTB15Red",
-    "PreviewUri": "@previewImages/WomanPostApocalypseTB15Red.png"
+    "PreviewUri": "WomanPostApocalypseTB15Red.png"
   },
   "WomanPostApocalypseTB15White": {
     "DisplayName": "Woman, Post Apocalypse, TB15, White",
@@ -86329,7 +86329,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "WomanPostApocalypseTB15White",
-    "PreviewUri": "@previewImages/WomanPostApocalypseTB15White.png"
+    "PreviewUri": "WomanPostApocalypseTB15White.png"
   },
   "WomanPostApocalypseTB15Yellow": {
     "DisplayName": "Woman, Post Apocalypse, TB15, Yellow",
@@ -86352,7 +86352,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "WomanPostApocalypseTB15Yellow",
-    "PreviewUri": "@previewImages/WomanPostApocalypseTB15Yellow.png"
+    "PreviewUri": "WomanPostApocalypseTB15Yellow.png"
   },
   "WoodCabinBrown": {
     "DisplayName": "Wood Cabin, Brown",
@@ -86382,7 +86382,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "WoodCabinBrown",
-    "PreviewUri": "@previewImages/WoodCabinBrown.png"
+    "PreviewUri": "WoodCabinBrown.png"
   },
   "WoodLogs": {
     "DisplayName": "Wood Logs",
@@ -86415,7 +86415,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "WoodLogs",
-    "PreviewUri": "@previewImages/WoodLogs.png"
+    "PreviewUri": "WoodLogs.png"
   },
   "WoodPile": {
     "DisplayName": "Wood Pile",
@@ -86448,7 +86448,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "WoodPile",
-    "PreviewUri": "@previewImages/WoodPile.png"
+    "PreviewUri": "WoodPile.png"
   },
   "WorkerSingleBagBlue": {
     "DisplayName": "Worker, Single Bag, Blue",
@@ -86479,7 +86479,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "WorkerSingleBagBlue",
-    "PreviewUri": "@previewImages/WorkerSingleBagBlue.png"
+    "PreviewUri": "WorkerSingleBagBlue.png"
   },
   "WorkerSingleBagGreen": {
     "DisplayName": "Worker, Single Bag, Green",
@@ -86510,7 +86510,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "WorkerSingleBagGreen",
-    "PreviewUri": "@previewImages/WorkerSingleBagGreen.png"
+    "PreviewUri": "WorkerSingleBagGreen.png"
   },
   "WorkerSingleBagOrange": {
     "DisplayName": "Worker, Single Bag, Orange",
@@ -86541,7 +86541,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "WorkerSingleBagOrange",
-    "PreviewUri": "@previewImages/WorkerSingleBagOrange.png"
+    "PreviewUri": "WorkerSingleBagOrange.png"
   },
   "WorkerSingleBagPurple": {
     "DisplayName": "Worker, Single Bag, Purple",
@@ -86572,7 +86572,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "WorkerSingleBagPurple",
-    "PreviewUri": "@previewImages/WorkerSingleBagPurple.png"
+    "PreviewUri": "WorkerSingleBagPurple.png"
   },
   "WorkerSingleBagWhite": {
     "DisplayName": "Worker, Single Bag, White",
@@ -86603,7 +86603,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "WorkerSingleBagWhite",
-    "PreviewUri": "@previewImages/WorkerSingleBagWhite.png"
+    "PreviewUri": "WorkerSingleBagWhite.png"
   },
   "WorkerSingleBagYellow": {
     "DisplayName": "Worker, Single Bag, Yellow",
@@ -86634,7 +86634,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "WorkerSingleBagYellow",
-    "PreviewUri": "@previewImages/WorkerSingleBagYellow.png"
+    "PreviewUri": "WorkerSingleBagYellow.png"
   },
   "WraithFantasyTB25": {
     "DisplayName": "Wraith, Fantasy, TB25",
@@ -86656,7 +86656,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "WraithFantasyTB25",
-    "PreviewUri": "@previewImages/WraithFantasyTB25.png"
+    "PreviewUri": "WraithFantasyTB25.png"
   },
   "WraithHalberdFantasyTB25": {
     "DisplayName": "Wraith, Halberd, Fantasy, TB25",
@@ -86678,7 +86678,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "WraithHalberdFantasyTB25",
-    "PreviewUri": "@previewImages/WraithHalberdFantasyTB25.png"
+    "PreviewUri": "WraithHalberdFantasyTB25.png"
   },
   "WyvernII": {
     "DisplayName": "Wyvern II",
@@ -86705,7 +86705,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "WyvernII",
-    "PreviewUri": "@previewImages/WyvernII.png"
+    "PreviewUri": "WyvernII.png"
   },
   "Yeti-CharacterMeeple": {
     "DisplayName": "Yeti, Character Meeple",
@@ -86731,7 +86731,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "Yeti-CharacterMeeple",
-    "PreviewUri": "@previewImages/Yeti-CharacterMeeple.png"
+    "PreviewUri": "Yeti-CharacterMeeple.png"
   },
   "Zombie2FantasyTB25": {
     "DisplayName": "Zombie 2, Fantasy, TB25",
@@ -86762,7 +86762,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "Zombie2FantasyTB25",
-    "PreviewUri": "@previewImages/Zombie2FantasyTB25.png"
+    "PreviewUri": "Zombie2FantasyTB25.png"
   },
   "Zombie3FantasyTB25": {
     "DisplayName": "Zombie 3, Fantasy, TB25",
@@ -86797,7 +86797,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "Zombie3FantasyTB25",
-    "PreviewUri": "@previewImages/Zombie3FantasyTB25.png"
+    "PreviewUri": "Zombie3FantasyTB25.png"
   },
   "ZombieBabe": {
     "DisplayName": "Zombie Babe",
@@ -86827,7 +86827,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "ZombieBabe",
-    "PreviewUri": "@previewImages/ZombieBabe.png"
+    "PreviewUri": "ZombieBabe.png"
   },
   "ZombieCheerleader": {
     "DisplayName": "Zombie Cheerleader",
@@ -86858,7 +86858,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "ZombieCheerleader",
-    "PreviewUri": "@previewImages/ZombieCheerleader.png"
+    "PreviewUri": "ZombieCheerleader.png"
   },
   "ZombieCircusClown": {
     "DisplayName": "Zombie Circus Clown",
@@ -86888,7 +86888,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": true,
     "Key": "ZombieCircusClown",
-    "PreviewUri": "@previewImages/ZombieCircusClown.png"
+    "PreviewUri": "ZombieCircusClown.png"
   },
   "ZombieClown": {
     "DisplayName": "Zombie Clown",
@@ -86919,7 +86919,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "ZombieClown",
-    "PreviewUri": "@previewImages/ZombieClown.png"
+    "PreviewUri": "ZombieClown.png"
   },
   "ZombieDoctor": {
     "DisplayName": "Zombie Doctor",
@@ -86949,7 +86949,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "ZombieDoctor",
-    "PreviewUri": "@previewImages/ZombieDoctor.png"
+    "PreviewUri": "ZombieDoctor.png"
   },
   "ZombieDog": {
     "DisplayName": "Zombie Dog",
@@ -86982,7 +86982,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "ZombieDog",
-    "PreviewUri": "@previewImages/ZombieDog.png"
+    "PreviewUri": "ZombieDog.png"
   },
   "ZombieDude": {
     "DisplayName": "Zombie Dude",
@@ -87013,7 +87013,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "ZombieDude",
-    "PreviewUri": "@previewImages/ZombieDude.png"
+    "PreviewUri": "ZombieDude.png"
   },
   "ZombieGranny": {
     "DisplayName": "Zombie Granny",
@@ -87044,7 +87044,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "ZombieGranny",
-    "PreviewUri": "@previewImages/ZombieGranny.png"
+    "PreviewUri": "ZombieGranny.png"
   },
   "ZombieMullet": {
     "DisplayName": "Zombie Mullet",
@@ -87075,7 +87075,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "ZombieMullet",
-    "PreviewUri": "@previewImages/ZombieMullet.png"
+    "PreviewUri": "ZombieMullet.png"
   },
   "ZombieProfessor": {
     "DisplayName": "Zombie Professor",
@@ -87106,7 +87106,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "ZombieProfessor",
-    "PreviewUri": "@previewImages/ZombieProfessor.png"
+    "PreviewUri": "ZombieProfessor.png"
   },
   "ZombieThriller": {
     "DisplayName": "Zombie Thriller",
@@ -87136,7 +87136,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "ZombieThriller",
-    "PreviewUri": "@previewImages/ZombieThriller.png"
+    "PreviewUri": "ZombieThriller.png"
   },
   "ZombieFantasyTB25": {
     "DisplayName": "Zombie, Fantasy, TB25",
@@ -87167,7 +87167,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "ZombieFantasyTB25",
-    "PreviewUri": "@previewImages/ZombieFantasyTB25.png"
+    "PreviewUri": "ZombieFantasyTB25.png"
   },
   "ZombieRandom": {
     "DisplayName": "Zombie, Random",
@@ -87197,7 +87197,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "ZombieRandom",
-    "PreviewUri": "@previewImages/ZombieRandom.png"
+    "PreviewUri": "ZombieRandom.png"
   },
   "Black7PieceDiceSet": {
     "DisplayName": "Black 7 Piece Dice Set",
@@ -87215,7 +87215,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": true,
     "Key": "Black7PieceDiceSet",
-    "PreviewUri": "@previewImages/Black7PieceDiceSet.png"
+    "PreviewUri": "Black7PieceDiceSet.png"
   },
   "BlankEuroPokerCard": {
     "DisplayName": "Blank Euro Poker Card",
@@ -87245,7 +87245,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "BlankEuroPokerCard",
-    "PreviewUri": "@previewImages/BlankEuroPokerCard.png"
+    "PreviewUri": "BlankEuroPokerCard.png"
   },
   "BlankVHSBox": {
     "DisplayName": "Blank VHS Box",
@@ -87280,7 +87280,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "BlankVHSBox",
-    "PreviewUri": "@previewImages/BlankVHSBox.png"
+    "PreviewUri": "BlankVHSBox.png"
   },
   "Blue7PieceDiceSet": {
     "DisplayName": "Blue 7 Piece Dice Set",
@@ -87298,7 +87298,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": true,
     "Key": "Blue7PieceDiceSet",
-    "PreviewUri": "@previewImages/Blue7PieceDiceSet.png"
+    "PreviewUri": "Blue7PieceDiceSet.png"
   },
   "BridgeSleevePack(100)": {
     "DisplayName": "Bridge Sleeve Pack (100)",
@@ -87328,7 +87328,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "BridgeSleevePack(100)",
-    "PreviewUri": "@previewImages/BridgeSleevePack(100).png"
+    "PreviewUri": "BridgeSleevePack(100).png"
   },
   "Cube13mmBlue": {
     "DisplayName": "Cube, 13mm, Blue",
@@ -87369,7 +87369,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "Cube13mmBlue",
-    "PreviewUri": "@previewImages/Cube13mmBlue.png"
+    "PreviewUri": "Cube13mmBlue.png"
   },
   "Cube13mmGreen": {
     "DisplayName": "Cube, 13mm, Green",
@@ -87410,7 +87410,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "Cube13mmGreen",
-    "PreviewUri": "@previewImages/Cube13mmGreen.png"
+    "PreviewUri": "Cube13mmGreen.png"
   },
   "Cube13mmRed": {
     "DisplayName": "Cube, 13mm, Red",
@@ -87451,7 +87451,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "Cube13mmRed",
-    "PreviewUri": "@previewImages/Cube13mmRed.png"
+    "PreviewUri": "Cube13mmRed.png"
   },
   "Cube13mmYellow": {
     "DisplayName": "Cube, 13mm, Yellow",
@@ -87492,7 +87492,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "Cube13mmYellow",
-    "PreviewUri": "@previewImages/Cube13mmYellow.png"
+    "PreviewUri": "Cube13mmYellow.png"
   },
   "D16Purple": {
     "DisplayName": "D16, Purple",
@@ -87524,7 +87524,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": true,
     "Key": "D16Purple",
-    "PreviewUri": "@previewImages/D16Purple.png"
+    "PreviewUri": "D16Purple.png"
   },
   "D612mmCaramel": {
     "DisplayName": "D6, 12mm, Caramel",
@@ -87570,7 +87570,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "caramel",
     "IsDisabled": false,
     "Key": "D612mmCaramel",
-    "PreviewUri": "@previewImages/D612mmCaramel.png"
+    "PreviewUri": "D612mmCaramel.png"
   },
   "D614mmBlack": {
     "DisplayName": "D6, 14mm, Black",
@@ -87615,7 +87615,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D614mmBlack",
-    "PreviewUri": "@previewImages/D614mmBlack.png"
+    "PreviewUri": "D614mmBlack.png"
   },
   "D6AlchemyOrange": {
     "DisplayName": "D6, Alchemy, Orange",
@@ -87656,7 +87656,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "D6AlchemyOrange",
-    "PreviewUri": "@previewImages/D6AlchemyOrange.png"
+    "PreviewUri": "D6AlchemyOrange.png"
   },
   "D6DamageBlack": {
     "DisplayName": "D6, Damage, Black",
@@ -87695,7 +87695,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "D6DamageBlack",
-    "PreviewUri": "@previewImages/D6DamageBlack.png"
+    "PreviewUri": "D6DamageBlack.png"
   },
   "D6IndustryGray": {
     "DisplayName": "D6, Industry, Gray",
@@ -87738,7 +87738,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "D6IndustryGray",
-    "PreviewUri": "@previewImages/D6IndustryGray.png"
+    "PreviewUri": "D6IndustryGray.png"
   },
   "D6NatureGreen": {
     "DisplayName": "D6, Nature, Green",
@@ -87778,7 +87778,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "D6NatureGreen",
-    "PreviewUri": "@previewImages/D6NatureGreen.png"
+    "PreviewUri": "D6NatureGreen.png"
   },
   "D6OxygenBlue": {
     "DisplayName": "D6, Oxygen, Blue",
@@ -87819,7 +87819,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "D6OxygenBlue",
-    "PreviewUri": "@previewImages/D6OxygenBlue.png"
+    "PreviewUri": "D6OxygenBlue.png"
   },
   "D6TemperatureRed": {
     "DisplayName": "D6, Temperature, Red",
@@ -87865,7 +87865,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "D6TemperatureRed",
-    "PreviewUri": "@previewImages/D6TemperatureRed.png"
+    "PreviewUri": "D6TemperatureRed.png"
   },
   "DeckStorageClear": {
     "DisplayName": "Deck Storage, Clear",
@@ -87897,7 +87897,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "DeckStorageClear",
-    "PreviewUri": "@previewImages/DeckStorageClear.png"
+    "PreviewUri": "DeckStorageClear.png"
   },
   "Disc20mmx5mmPastelPink": {
     "DisplayName": "Disc, 20mm x 5mm, Pastel Pink",
@@ -87942,7 +87942,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "pink",
     "IsDisabled": false,
     "Key": "Disc20mmx5mmPastelPink",
-    "PreviewUri": "@previewImages/Disc20mmx5mmPastelPink.png"
+    "PreviewUri": "Disc20mmx5mmPastelPink.png"
   },
   "FutureCubeBlue": {
     "DisplayName": "Future Cube, Blue",
@@ -87988,7 +87988,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "FutureCubeBlue",
-    "PreviewUri": "@previewImages/FutureCubeBlue.png"
+    "PreviewUri": "FutureCubeBlue.png"
   },
   "FutureTankTan": {
     "DisplayName": "Future Tank, Tan",
@@ -88012,7 +88012,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "FutureTankTan",
-    "PreviewUri": "@previewImages/FutureTankTan.png"
+    "PreviewUri": "FutureTankTan.png"
   },
   "Green7PieceDiceSet": {
     "DisplayName": "Green 7 Piece Dice Set",
@@ -88030,7 +88030,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": true,
     "Key": "Green7PieceDiceSet",
-    "PreviewUri": "@previewImages/Green7PieceDiceSet.png"
+    "PreviewUri": "Green7PieceDiceSet.png"
   },
   "HalmaPlasticBlack": {
     "DisplayName": "Halma, Plastic, Black",
@@ -88051,7 +88051,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "HalmaPlasticBlack",
-    "PreviewUri": "@previewImages/HalmaPlasticBlack.png"
+    "PreviewUri": "HalmaPlasticBlack.png"
   },
   "HalmaPlasticBlue": {
     "DisplayName": "Halma, Plastic, Blue",
@@ -88072,7 +88072,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "HalmaPlasticBlue",
-    "PreviewUri": "@previewImages/HalmaPlasticBlue.png"
+    "PreviewUri": "HalmaPlasticBlue.png"
   },
   "HalmaPlasticOrange": {
     "DisplayName": "Halma, Plastic, Orange",
@@ -88093,7 +88093,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "HalmaPlasticOrange",
-    "PreviewUri": "@previewImages/HalmaPlasticOrange.png"
+    "PreviewUri": "HalmaPlasticOrange.png"
   },
   "HalmaPlasticRed": {
     "DisplayName": "Halma, Plastic, Red",
@@ -88114,7 +88114,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "HalmaPlasticRed",
-    "PreviewUri": "@previewImages/HalmaPlasticRed.png"
+    "PreviewUri": "HalmaPlasticRed.png"
   },
   "HalmaPlasticWhite": {
     "DisplayName": "Halma, Plastic, White",
@@ -88135,7 +88135,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "HalmaPlasticWhite",
-    "PreviewUri": "@previewImages/HalmaPlasticWhite.png"
+    "PreviewUri": "HalmaPlasticWhite.png"
   },
   "HalmaPlasticYellow": {
     "DisplayName": "Halma, Plastic, Yellow",
@@ -88156,7 +88156,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "HalmaPlasticYellow",
-    "PreviewUri": "@previewImages/HalmaPlasticYellow.png"
+    "PreviewUri": "HalmaPlasticYellow.png"
   },
   "HorizontalGameMaster'sScreen": {
     "DisplayName": "Horizontal Game Master's Screen",
@@ -88185,7 +88185,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "HorizontalGameMaster'sScreen",
-    "PreviewUri": "@previewImages/HorizontalGameMaster'sScreen.png"
+    "PreviewUri": "HorizontalGameMaster'sScreen.png"
   },
   "InFUNityTileHatBlack": {
     "DisplayName": "InFUNity Tile, Hat, Black",
@@ -88209,7 +88209,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": true,
     "Key": "InFUNityTileHatBlack",
-    "PreviewUri": "@previewImages/InFUNityTileHatBlack.png"
+    "PreviewUri": "InFUNityTileHatBlack.png"
   },
   "InFUNityTileHatBlue": {
     "DisplayName": "InFUNity Tile, Hat, Blue",
@@ -88233,7 +88233,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": true,
     "Key": "InFUNityTileHatBlue",
-    "PreviewUri": "@previewImages/InFUNityTileHatBlue.png"
+    "PreviewUri": "InFUNityTileHatBlue.png"
   },
   "InFUNityTileHatGreen": {
     "DisplayName": "InFUNity Tile, Hat, Green",
@@ -88257,7 +88257,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": true,
     "Key": "InFUNityTileHatGreen",
-    "PreviewUri": "@previewImages/InFUNityTileHatGreen.png"
+    "PreviewUri": "InFUNityTileHatGreen.png"
   },
   "InFUNityTileHatOrange": {
     "DisplayName": "InFUNity Tile, Hat, Orange",
@@ -88281,7 +88281,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": true,
     "Key": "InFUNityTileHatOrange",
-    "PreviewUri": "@previewImages/InFUNityTileHatOrange.png"
+    "PreviewUri": "InFUNityTileHatOrange.png"
   },
   "InFUNityTileHatPurple": {
     "DisplayName": "InFUNity Tile, Hat, Purple",
@@ -88305,7 +88305,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": true,
     "Key": "InFUNityTileHatPurple",
-    "PreviewUri": "@previewImages/InFUNityTileHatPurple.png"
+    "PreviewUri": "InFUNityTileHatPurple.png"
   },
   "InFUNityTileHatRed": {
     "DisplayName": "InFUNity Tile, Hat, Red",
@@ -88329,7 +88329,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": true,
     "Key": "InFUNityTileHatRed",
-    "PreviewUri": "@previewImages/InFUNityTileHatRed.png"
+    "PreviewUri": "InFUNityTileHatRed.png"
   },
   "InFUNityTileHatWhite": {
     "DisplayName": "InFUNity Tile, Hat, White",
@@ -88353,7 +88353,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": true,
     "Key": "InFUNityTileHatWhite",
-    "PreviewUri": "@previewImages/InFUNityTileHatWhite.png"
+    "PreviewUri": "InFUNityTileHatWhite.png"
   },
   "InFUNityTileHatYellow": {
     "DisplayName": "InFUNity Tile, Hat, Yellow",
@@ -88377,7 +88377,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": true,
     "Key": "InFUNityTileHatYellow",
-    "PreviewUri": "@previewImages/InFUNityTileHatYellow.png"
+    "PreviewUri": "InFUNityTileHatYellow.png"
   },
   "InFUNityTileTurtleBlack": {
     "DisplayName": "InFUNity Tile, Turtle, Black",
@@ -88401,7 +88401,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": true,
     "Key": "InFUNityTileTurtleBlack",
-    "PreviewUri": "@previewImages/InFUNityTileTurtleBlack.png"
+    "PreviewUri": "InFUNityTileTurtleBlack.png"
   },
   "InFUNityTileTurtleBlue": {
     "DisplayName": "InFUNity Tile, Turtle, Blue",
@@ -88425,7 +88425,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": true,
     "Key": "InFUNityTileTurtleBlue",
-    "PreviewUri": "@previewImages/InFUNityTileTurtleBlue.png"
+    "PreviewUri": "InFUNityTileTurtleBlue.png"
   },
   "InFUNityTileTurtleGreen": {
     "DisplayName": "InFUNity Tile, Turtle, Green",
@@ -88449,7 +88449,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": true,
     "Key": "InFUNityTileTurtleGreen",
-    "PreviewUri": "@previewImages/InFUNityTileTurtleGreen.png"
+    "PreviewUri": "InFUNityTileTurtleGreen.png"
   },
   "InFUNityTileTurtleOrange": {
     "DisplayName": "InFUNity Tile, Turtle, Orange",
@@ -88473,7 +88473,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": true,
     "Key": "InFUNityTileTurtleOrange",
-    "PreviewUri": "@previewImages/InFUNityTileTurtleOrange.png"
+    "PreviewUri": "InFUNityTileTurtleOrange.png"
   },
   "InFUNityTileTurtlePurple": {
     "DisplayName": "InFUNity Tile, Turtle, Purple",
@@ -88497,7 +88497,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": true,
     "Key": "InFUNityTileTurtlePurple",
-    "PreviewUri": "@previewImages/InFUNityTileTurtlePurple.png"
+    "PreviewUri": "InFUNityTileTurtlePurple.png"
   },
   "InFUNityTileTurtleRed": {
     "DisplayName": "InFUNity Tile, Turtle, Red",
@@ -88521,7 +88521,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": true,
     "Key": "InFUNityTileTurtleRed",
-    "PreviewUri": "@previewImages/InFUNityTileTurtleRed.png"
+    "PreviewUri": "InFUNityTileTurtleRed.png"
   },
   "InFUNityTileTurtleWhite": {
     "DisplayName": "InFUNity Tile, Turtle, White",
@@ -88545,7 +88545,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": true,
     "Key": "InFUNityTileTurtleWhite",
-    "PreviewUri": "@previewImages/InFUNityTileTurtleWhite.png"
+    "PreviewUri": "InFUNityTileTurtleWhite.png"
   },
   "InFUNityTileTurtleYellow": {
     "DisplayName": "InFUNity Tile, Turtle, Yellow",
@@ -88569,7 +88569,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": true,
     "Key": "InFUNityTileTurtleYellow",
-    "PreviewUri": "@previewImages/InFUNityTileTurtleYellow.png"
+    "PreviewUri": "InFUNityTileTurtleYellow.png"
   },
   "LargeBlackTin": {
     "DisplayName": "Large Black Tin",
@@ -88587,7 +88587,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "LargeBlackTin",
-    "PreviewUri": "@previewImages/LargeBlackTin.png"
+    "PreviewUri": "LargeBlackTin.png"
   },
   "LargeQuadFoldGameBoard": {
     "DisplayName": "Large Quad Fold Game Board",
@@ -88619,7 +88619,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "LargeQuadFoldGameBoard",
-    "PreviewUri": "@previewImages/LargeQuadFoldGameBoard.png"
+    "PreviewUri": "LargeQuadFoldGameBoard.png"
   },
   "LEDBlack": {
     "DisplayName": "LED, Black",
@@ -88643,7 +88643,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "LEDBlack",
-    "PreviewUri": "@previewImages/LEDBlack.png"
+    "PreviewUri": "LEDBlack.png"
   },
   "LEDBlue": {
     "DisplayName": "LED, Blue",
@@ -88667,7 +88667,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "LEDBlue",
-    "PreviewUri": "@previewImages/LEDBlue.png"
+    "PreviewUri": "LEDBlue.png"
   },
   "LEDGreen": {
     "DisplayName": "LED, Green",
@@ -88691,7 +88691,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "LEDGreen",
-    "PreviewUri": "@previewImages/LEDGreen.png"
+    "PreviewUri": "LEDGreen.png"
   },
   "LEDOrange": {
     "DisplayName": "LED, Orange",
@@ -88715,7 +88715,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "LEDOrange",
-    "PreviewUri": "@previewImages/LEDOrange.png"
+    "PreviewUri": "LEDOrange.png"
   },
   "LEDPurple": {
     "DisplayName": "LED, Purple",
@@ -88739,7 +88739,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "LEDPurple",
-    "PreviewUri": "@previewImages/LEDPurple.png"
+    "PreviewUri": "LEDPurple.png"
   },
   "LEDRed": {
     "DisplayName": "LED, Red",
@@ -88763,7 +88763,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "LEDRed",
-    "PreviewUri": "@previewImages/LEDRed.png"
+    "PreviewUri": "LEDRed.png"
   },
   "LEDWhite": {
     "DisplayName": "LED, White",
@@ -88787,7 +88787,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "LEDWhite",
-    "PreviewUri": "@previewImages/LEDWhite.png"
+    "PreviewUri": "LEDWhite.png"
   },
   "LEDYellow": {
     "DisplayName": "LED, Yellow",
@@ -88811,7 +88811,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "LEDYellow",
-    "PreviewUri": "@previewImages/LEDYellow.png"
+    "PreviewUri": "LEDYellow.png"
   },
   "MineSeaTB25": {
     "DisplayName": "Mine, Sea, TB25",
@@ -88846,7 +88846,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "MineSeaTB25",
-    "PreviewUri": "@previewImages/MineSeaTB25.png"
+    "PreviewUri": "MineSeaTB25.png"
   },
   "Orange7PieceDiceSet": {
     "DisplayName": "Orange 7 Piece Dice Set",
@@ -88864,7 +88864,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": true,
     "Key": "Orange7PieceDiceSet",
-    "PreviewUri": "@previewImages/Orange7PieceDiceSet.png"
+    "PreviewUri": "Orange7PieceDiceSet.png"
   },
   "PartsBagLargeClothBlack": {
     "DisplayName": "Parts Bag, Large Cloth, Black",
@@ -88894,7 +88894,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "PartsBagLargeClothBlack",
-    "PreviewUri": "@previewImages/PartsBagLargeClothBlack.png"
+    "PreviewUri": "PartsBagLargeClothBlack.png"
   },
   "PhaseShiftGames|Boblin'sRebellion|1-4players": {
     "DisplayName": "Phase Shift Games | Boblin's Rebellion | 1-4 players",
@@ -88911,7 +88911,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "PhaseShiftGames|Boblin'sRebellion|1-4players",
-    "PreviewUri": "@previewImages/PhaseShiftGames_Boblin'sRebellion_1-4players.png"
+    "PreviewUri": "PhaseShiftGames_Boblin'sRebellion_1-4players.png"
   },
   "PhaseShiftGames|Flutter|2-5players": {
     "DisplayName": "Phase Shift Games | Flutter | 2-5 players",
@@ -88928,7 +88928,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "PhaseShiftGames|Flutter|2-5players",
-    "PreviewUri": "@previewImages/PhaseShiftGames_Flutter_2-5players.png"
+    "PreviewUri": "PhaseShiftGames_Flutter_2-5players.png"
   },
   "PhaseShiftGames|Obelus|2players": {
     "DisplayName": "Phase Shift Games | Obelus | 2 players",
@@ -88945,7 +88945,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": true,
     "Key": "PhaseShiftGames|Obelus|2players",
-    "PreviewUri": "@previewImages/PhaseShiftGames_Obelus_2players.png"
+    "PreviewUri": "PhaseShiftGames_Obelus_2players.png"
   },
   "PokerSleevePack(100)": {
     "DisplayName": "Poker Sleeve Pack (100)",
@@ -88975,7 +88975,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PokerSleevePack(100)",
-    "PreviewUri": "@previewImages/PokerSleevePack(100).png"
+    "PreviewUri": "PokerSleevePack(100).png"
   },
   "PremiumBeerMug": {
     "DisplayName": "Premium Beer Mug",
@@ -89022,7 +89022,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumBeerMug",
-    "PreviewUri": "@previewImages/PremiumBeerMug.png"
+    "PreviewUri": "PremiumBeerMug.png"
   },
   "PremiumBloodDroplet": {
     "DisplayName": "Premium Blood Droplet",
@@ -89061,7 +89061,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PremiumBloodDroplet",
-    "PreviewUri": "@previewImages/PremiumBloodDroplet.png"
+    "PreviewUri": "PremiumBloodDroplet.png"
   },
   "PremiumBlueTome": {
     "DisplayName": "Premium Blue Tome",
@@ -89090,7 +89090,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PremiumBlueTome",
-    "PreviewUri": "@previewImages/PremiumBlueTome.png"
+    "PreviewUri": "PremiumBlueTome.png"
   },
   "PremiumBrownMushroom": {
     "DisplayName": "Premium Brown Mushroom",
@@ -89127,7 +89127,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "PremiumBrownMushroom",
-    "PreviewUri": "@previewImages/PremiumBrownMushroom.png"
+    "PreviewUri": "PremiumBrownMushroom.png"
   },
   "PremiumBullet": {
     "DisplayName": "Premium Bullet",
@@ -89160,7 +89160,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumBullet",
-    "PreviewUri": "@previewImages/PremiumBullet.png"
+    "PreviewUri": "PremiumBullet.png"
   },
   "PremiumCarrot": {
     "DisplayName": "Premium Carrot",
@@ -89196,7 +89196,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "PremiumCarrot",
-    "PreviewUri": "@previewImages/PremiumCarrot.png"
+    "PreviewUri": "PremiumCarrot.png"
   },
   "PremiumCheeseWedge": {
     "DisplayName": "Premium Cheese Wedge",
@@ -89233,7 +89233,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumCheeseWedge",
-    "PreviewUri": "@previewImages/PremiumCheeseWedge.png"
+    "PreviewUri": "PremiumCheeseWedge.png"
   },
   "PremiumCoffeeBean": {
     "DisplayName": "Premium Coffee Bean",
@@ -89263,7 +89263,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "brown",
     "IsDisabled": false,
     "Key": "PremiumCoffeeBean",
-    "PreviewUri": "@previewImages/PremiumCoffeeBean.png"
+    "PreviewUri": "PremiumCoffeeBean.png"
   },
   "PremiumDeflectorShield": {
     "DisplayName": "Premium Deflector Shield",
@@ -89288,7 +89288,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumDeflectorShield",
-    "PreviewUri": "@previewImages/PremiumDeflectorShield.png"
+    "PreviewUri": "PremiumDeflectorShield.png"
   },
   "PremiumExplosion": {
     "DisplayName": "Premium Explosion",
@@ -89322,7 +89322,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "PremiumExplosion",
-    "PreviewUri": "@previewImages/PremiumExplosion.png"
+    "PreviewUri": "PremiumExplosion.png"
   },
   "PremiumGasCan": {
     "DisplayName": "Premium Gas Can",
@@ -89349,7 +89349,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "PremiumGasCan",
-    "PreviewUri": "@previewImages/PremiumGasCan.png"
+    "PreviewUri": "PremiumGasCan.png"
   },
   "PremiumGreenLeaf": {
     "DisplayName": "Premium Green Leaf",
@@ -89393,7 +89393,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "PremiumGreenLeaf",
-    "PreviewUri": "@previewImages/PremiumGreenLeaf.png"
+    "PreviewUri": "PremiumGreenLeaf.png"
   },
   "PremiumHammer": {
     "DisplayName": "Premium Hammer",
@@ -89426,7 +89426,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumHammer",
-    "PreviewUri": "@previewImages/PremiumHammer.png"
+    "PreviewUri": "PremiumHammer.png"
   },
   "PremiumIceCrystals": {
     "DisplayName": "Premium Ice Crystals",
@@ -89454,7 +89454,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumIceCrystals",
-    "PreviewUri": "@previewImages/PremiumIceCrystals.png"
+    "PreviewUri": "PremiumIceCrystals.png"
   },
   "PremiumMedKit": {
     "DisplayName": "Premium Med Kit",
@@ -89486,7 +89486,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumMedKit",
-    "PreviewUri": "@previewImages/PremiumMedKit.png"
+    "PreviewUri": "PremiumMedKit.png"
   },
   "PremiumMilkBottle": {
     "DisplayName": "Premium Milk Bottle",
@@ -89521,7 +89521,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumMilkBottle",
-    "PreviewUri": "@previewImages/PremiumMilkBottle.png"
+    "PreviewUri": "PremiumMilkBottle.png"
   },
   "PremiumMushroom": {
     "DisplayName": "Premium Mushroom",
@@ -89562,7 +89562,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumMushroom",
-    "PreviewUri": "@previewImages/PremiumMushroom.png"
+    "PreviewUri": "PremiumMushroom.png"
   },
   "PremiumOrangeTome": {
     "DisplayName": "Premium Orange Tome",
@@ -89592,7 +89592,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "PremiumOrangeTome",
-    "PreviewUri": "@previewImages/PremiumOrangeTome.png"
+    "PreviewUri": "PremiumOrangeTome.png"
   },
   "PremiumPileofBones": {
     "DisplayName": "Premium Pile of Bones",
@@ -89619,7 +89619,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumPileofBones",
-    "PreviewUri": "@previewImages/PremiumPileofBones.png"
+    "PreviewUri": "PremiumPileofBones.png"
   },
   "PremiumPresent": {
     "DisplayName": "Premium Present",
@@ -89655,7 +89655,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumPresent",
-    "PreviewUri": "@previewImages/PremiumPresent.png"
+    "PreviewUri": "PremiumPresent.png"
   },
   "PremiumPurpleGrapes": {
     "DisplayName": "Premium Purple Grapes",
@@ -89686,7 +89686,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "PremiumPurpleGrapes",
-    "PreviewUri": "@previewImages/PremiumPurpleGrapes.png"
+    "PreviewUri": "PremiumPurpleGrapes.png"
   },
   "PremiumSmokeCloud": {
     "DisplayName": "Premium Smoke Cloud",
@@ -89711,7 +89711,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "PremiumSmokeCloud",
-    "PreviewUri": "@previewImages/PremiumSmokeCloud.png"
+    "PreviewUri": "PremiumSmokeCloud.png"
   },
   "PremiumStone": {
     "DisplayName": "Premium Stone",
@@ -89741,7 +89741,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "gray",
     "IsDisabled": false,
     "Key": "PremiumStone",
-    "PreviewUri": "@previewImages/PremiumStone.png"
+    "PreviewUri": "PremiumStone.png"
   },
   "PremiumTechTablet": {
     "DisplayName": "Premium Tech Tablet",
@@ -89770,7 +89770,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumTechTablet",
-    "PreviewUri": "@previewImages/PremiumTechTablet.png"
+    "PreviewUri": "PremiumTechTablet.png"
   },
   "PremiumTentacle": {
     "DisplayName": "Premium Tentacle",
@@ -89800,7 +89800,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumTentacle",
-    "PreviewUri": "@previewImages/PremiumTentacle.png"
+    "PreviewUri": "PremiumTentacle.png"
   },
   "PremiumToxicWaste": {
     "DisplayName": "Premium Toxic Waste",
@@ -89833,7 +89833,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumToxicWaste",
-    "PreviewUri": "@previewImages/PremiumToxicWaste.png"
+    "PreviewUri": "PremiumToxicWaste.png"
   },
   "PremiumWaterDroplet": {
     "DisplayName": "Premium Water Droplet",
@@ -89873,7 +89873,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "PremiumWaterDroplet",
-    "PreviewUri": "@previewImages/PremiumWaterDroplet.png"
+    "PreviewUri": "PremiumWaterDroplet.png"
   },
   "PremiumWheatBundle": {
     "DisplayName": "Premium Wheat Bundle",
@@ -89904,7 +89904,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "PremiumWheatBundle",
-    "PreviewUri": "@previewImages/PremiumWheatBundle.png"
+    "PreviewUri": "PremiumWheatBundle.png"
   },
   "PremiumWhiteSheaf": {
     "DisplayName": "Premium White Sheaf",
@@ -89936,7 +89936,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "PremiumWhiteSheaf",
-    "PreviewUri": "@previewImages/PremiumWhiteSheaf.png"
+    "PreviewUri": "PremiumWhiteSheaf.png"
   },
   "PremiumWrench": {
     "DisplayName": "Premium Wrench",
@@ -89968,7 +89968,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "silver",
     "IsDisabled": false,
     "Key": "PremiumWrench",
-    "PreviewUri": "@previewImages/PremiumWrench.png"
+    "PreviewUri": "PremiumWrench.png"
   },
   "Purple7PieceDiceSet": {
     "DisplayName": "Purple 7 Piece Dice Set",
@@ -89986,7 +89986,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": true,
     "Key": "Purple7PieceDiceSet",
-    "PreviewUri": "@previewImages/Purple7PieceDiceSet.png"
+    "PreviewUri": "Purple7PieceDiceSet.png"
   },
   "Red7PieceDiceSet": {
     "DisplayName": "Red 7 Piece Dice Set",
@@ -90004,7 +90004,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": true,
     "Key": "Red7PieceDiceSet",
-    "PreviewUri": "@previewImages/Red7PieceDiceSet.png"
+    "PreviewUri": "Red7PieceDiceSet.png"
   },
   "SkyscraperBlack": {
     "DisplayName": "Skyscraper, Black",
@@ -90031,7 +90031,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "SkyscraperBlack",
-    "PreviewUri": "@previewImages/SkyscraperBlack.png"
+    "PreviewUri": "SkyscraperBlack.png"
   },
   "SkyscraperBlue": {
     "DisplayName": "Skyscraper, Blue",
@@ -90058,7 +90058,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "blue",
     "IsDisabled": false,
     "Key": "SkyscraperBlue",
-    "PreviewUri": "@previewImages/SkyscraperBlue.png"
+    "PreviewUri": "SkyscraperBlue.png"
   },
   "SkyscraperGreen": {
     "DisplayName": "Skyscraper, Green",
@@ -90085,7 +90085,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "green",
     "IsDisabled": false,
     "Key": "SkyscraperGreen",
-    "PreviewUri": "@previewImages/SkyscraperGreen.png"
+    "PreviewUri": "SkyscraperGreen.png"
   },
   "SkyscraperOrange": {
     "DisplayName": "Skyscraper, Orange",
@@ -90112,7 +90112,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "orange",
     "IsDisabled": false,
     "Key": "SkyscraperOrange",
-    "PreviewUri": "@previewImages/SkyscraperOrange.png"
+    "PreviewUri": "SkyscraperOrange.png"
   },
   "SkyscraperPurple": {
     "DisplayName": "Skyscraper, Purple",
@@ -90139,7 +90139,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "purple",
     "IsDisabled": false,
     "Key": "SkyscraperPurple",
-    "PreviewUri": "@previewImages/SkyscraperPurple.png"
+    "PreviewUri": "SkyscraperPurple.png"
   },
   "SkyscraperRed": {
     "DisplayName": "Skyscraper, Red",
@@ -90166,7 +90166,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "red",
     "IsDisabled": false,
     "Key": "SkyscraperRed",
-    "PreviewUri": "@previewImages/SkyscraperRed.png"
+    "PreviewUri": "SkyscraperRed.png"
   },
   "SkyscraperWhite": {
     "DisplayName": "Skyscraper, White",
@@ -90193,7 +90193,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": false,
     "Key": "SkyscraperWhite",
-    "PreviewUri": "@previewImages/SkyscraperWhite.png"
+    "PreviewUri": "SkyscraperWhite.png"
   },
   "SkyscraperYellow": {
     "DisplayName": "Skyscraper, Yellow",
@@ -90220,7 +90220,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": false,
     "Key": "SkyscraperYellow",
-    "PreviewUri": "@previewImages/SkyscraperYellow.png"
+    "PreviewUri": "SkyscraperYellow.png"
   },
   "StandChipboard4-wayBlack": {
     "DisplayName": "Stand, Chipboard, 4-way, Black",
@@ -90253,7 +90253,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "black",
     "IsDisabled": false,
     "Key": "StandChipboard4-wayBlack",
-    "PreviewUri": "@previewImages/StandChipboard4-wayBlack.png"
+    "PreviewUri": "StandChipboard4-wayBlack.png"
   },
   "VerticalGameMaster'sScreen": {
     "DisplayName": "Vertical Game Master's Screen",
@@ -90282,7 +90282,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "none",
     "IsDisabled": false,
     "Key": "VerticalGameMaster'sScreen",
-    "PreviewUri": "@previewImages/VerticalGameMaster'sScreen.png"
+    "PreviewUri": "VerticalGameMaster'sScreen.png"
   },
   "White7PieceDiceSet": {
     "DisplayName": "White 7 Piece Dice Set",
@@ -90300,7 +90300,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "white",
     "IsDisabled": true,
     "Key": "White7PieceDiceSet",
-    "PreviewUri": "@previewImages/White7PieceDiceSet.png"
+    "PreviewUri": "White7PieceDiceSet.png"
   },
   "Yellow7PieceDiceSet": {
     "DisplayName": "Yellow 7 Piece Dice Set",
@@ -90318,7 +90318,7 @@ const STOCK_COMPONENT_INFO = {
     "Color": "yellow",
     "IsDisabled": true,
     "Key": "Yellow7PieceDiceSet",
-    "PreviewUri": "@previewImages/Yellow7PieceDiceSet.png"
+    "PreviewUri": "Yellow7PieceDiceSet.png"
   }
 }
   module.exports = { STOCK_COMPONENT_INFO }

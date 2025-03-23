@@ -6,7 +6,7 @@ import { channels } from '../../../../shared/constants';
 const { ipcRenderer } = window.require('electron');
 import { LoggedMessages } from "../SocketedConsole/LoggedMessages"
 import RenderOutputOptions from "../OutputDirectories/RenderOutputOptions";
-import { trackEvent } from "@aptabase/electron/renderer";
+// import { trackEvent } from "@aptabase/electron/renderer";
 import TemplativeAccessTools from "../TemplativeAccessTools";
 import { RenderingWorkspaceContext } from "./RenderingWorkspaceProvider";
 import { OutputDirectoriesContext } from "../OutputDirectories/OutputDirectoriesProvider";
@@ -35,7 +35,7 @@ export default function RenderPanel({ templativeRootDirectoryPath, templativeMes
         };
 
         loadComponents();
-        trackEvent("view_renderPanel");
+        // trackEvent("view_renderPanel");
     }, [templativeRootDirectoryPath]);
 
     const selectDirectoryAsync = async (directory) => {
@@ -78,7 +78,7 @@ export default function RenderPanel({ templativeRootDirectoryPath, templativeMes
         
         renderingContext.setExportOptionIndex(0);
         setIsProcessing(true);
-        trackEvent("render");
+        // trackEvent("render");
         
         await ipcRenderer.invoke(channels.TO_SERVER_PRODUCE_GAME, request);
     };

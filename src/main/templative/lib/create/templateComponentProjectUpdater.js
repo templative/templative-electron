@@ -3,7 +3,7 @@ const fs = require('fs').promises;
 const { copyFile } = require('fs').promises;
 const { aiArtGenerator } = require('../ai/aiArtGenerator');
 const { COMPONENT_INFO } = require('../../../../shared/componentInfo');
-
+const { getComponentTemplate } = require('../componentTemplateUtility');
 async function addToComponentCompose(name, type, gameRootDirectoryPath, componentComposeData, componentInfo) {
     for (let i = 0; i < componentComposeData.length; i++) {
         if (componentComposeData[i]["name"] === name) {
@@ -133,8 +133,7 @@ function resource_path(relative_path) {
 }
 
 async function createArtFiles(artTemplatesDirectoryPath, name, type, artDataTypeNames, componentAIDescription = null, artdataFiles = null) {
-    const componentTemplateFilepath = join(__dirname, '..', '..', 'lib', 'create', 'componentTemplates', `${type}.svg`);
-    
+    const componentTemplateFilepath = await getComponentTemplate(type);
     try {
         const contents = await fs.readFile(componentTemplateFilepath, 'utf8');
 

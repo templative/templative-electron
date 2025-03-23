@@ -56,7 +56,7 @@ export default function ArtdataCol(params) {
                 <ChevronHeader 
                     isExtended={false}
                     onClick={undefined}
-                    icon={artdataIcon}
+                    Icon={artdataIcon}
                     title={`${face} Art Recipe`}
                     filepath={filepath}
                     filetype="ARTDATA"
@@ -74,7 +74,7 @@ export default function ArtdataCol(params) {
             <ChevronHeader 
                 isExtended={isExtended}
                 onClick={() => toggleExtension(face)}
-                icon={artdataIcon}
+                Icon={artdataIcon}
                 title={`${face} Art Recipe`}
                 filepath={filepath}
                 filetype="ARTDATA"

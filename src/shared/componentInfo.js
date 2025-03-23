@@ -29,7 +29,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "HexShard",
-    "PreviewUri": "@previewImages/HexShard.png",
+    "PreviewUri": "HexShard.png",
     "TemplateFiles": [
       "HexShard"
     ]
@@ -64,7 +64,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "CircleShard",
-    "PreviewUri": "@previewImages/CircleShard.png",
+    "PreviewUri": "CircleShard.png",
     "TemplateFiles": [
       "CircleShard"
     ]
@@ -99,7 +99,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "SquareShard",
-    "PreviewUri": "@previewImages/SquareShard.png",
+    "PreviewUri": "SquareShard.png",
     "TemplateFiles": [
       "SquareShard"
     ]
@@ -133,7 +133,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "BusinessDeck",
-    "PreviewUri": "@previewImages/BusinessDeck.png",
+    "PreviewUri": "BusinessDeck.png",
     "TemplateFiles": [
       "BusinessDeck"
     ]
@@ -171,7 +171,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "PokerDeck",
-    "PreviewUri": "@previewImages/PokerDeck.png",
+    "PreviewUri": "PokerDeck.png",
     "TemplateFiles": [
       "PokerDeck"
     ]
@@ -205,7 +205,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "JumboDeck",
-    "PreviewUri": "@previewImages/JumboDeck.png",
+    "PreviewUri": "JumboDeck.png",
     "TemplateFiles": [
       "JumboDeck"
     ]
@@ -239,7 +239,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "MiniDeck",
-    "PreviewUri": "@previewImages/MiniDeck.png",
+    "PreviewUri": "MiniDeck.png",
     "TemplateFiles": [
       "MiniDeck"
     ]
@@ -277,7 +277,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "MicroDeck",
-    "PreviewUri": "@previewImages/MicroDeck.png",
+    "PreviewUri": "MicroDeck.png",
     "TemplateFiles": [
       "MicroDeck"
     ]
@@ -316,7 +316,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "MintTinDeck",
-    "PreviewUri": "@previewImages/MintTinDeck.png",
+    "PreviewUri": "MintTinDeck.png",
     "TemplateFiles": [
       "MintTinDeck"
     ]
@@ -350,7 +350,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "HexDeck",
-    "PreviewUri": "@previewImages/HexDeck.png",
+    "PreviewUri": "HexDeck.png",
     "TemplateFiles": [
       "HexDeck"
     ]
@@ -386,7 +386,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "SmallSquareChit",
-    "PreviewUri": "@previewImages/SmallSquareChit.png",
+    "PreviewUri": "SmallSquareChit.png",
     "TemplateFiles": [
       "SmallSquareChit"
     ]
@@ -422,7 +422,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "MediumSquareChit",
-    "PreviewUri": "@previewImages/MediumSquareChit.png",
+    "PreviewUri": "MediumSquareChit.png",
     "TemplateFiles": [
       "MediumSquareChit"
     ]
@@ -458,7 +458,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "LargeSquareChit",
-    "PreviewUri": "@previewImages/LargeSquareChit.png",
+    "PreviewUri": "LargeSquareChit.png",
     "TemplateFiles": [
       "LargeSquareChit"
     ]
@@ -494,7 +494,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "SmallCircleChit",
-    "PreviewUri": "@previewImages/SmallCircleChit.png",
+    "PreviewUri": "SmallCircleChit.png",
     "TemplateFiles": [
       "SmallCircleChit"
     ]
@@ -530,7 +530,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "MediumCircleChit",
-    "PreviewUri": "@previewImages/MediumCircleChit.png",
+    "PreviewUri": "MediumCircleChit.png",
     "TemplateFiles": [
       "MediumCircleChit"
     ]
@@ -566,7 +566,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "LargeCircleChit",
-    "PreviewUri": "@previewImages/LargeCircleChit.png",
+    "PreviewUri": "LargeCircleChit.png",
     "TemplateFiles": [
       "LargeCircleChit"
     ]
@@ -603,7 +603,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "MiniHexTile",
-    "PreviewUri": "@previewImages/MiniHexTile.png",
+    "PreviewUri": "MiniHexTile.png",
     "TemplateFiles": [
       "MiniHexTile"
     ]
@@ -640,7 +640,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "SmallHexTile",
-    "PreviewUri": "@previewImages/SmallHexTile.png",
+    "PreviewUri": "SmallHexTile.png",
     "TemplateFiles": [
       "SmallHexTile"
     ]
@@ -677,7 +677,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "MediumHexTile",
-    "PreviewUri": "@previewImages/MediumHexTile.png",
+    "PreviewUri": "MediumHexTile.png",
     "TemplateFiles": [
       "MediumHexTile"
     ]
@@ -714,7 +714,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "LargeHexTile",
-    "PreviewUri": "@previewImages/LargeHexTile.png",
+    "PreviewUri": "LargeHexTile.png",
     "TemplateFiles": [
       "LargeHexTile"
     ]
@@ -750,7 +750,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "MintTinAccordion4",
-    "PreviewUri": "@previewImages/MintTinAccordion4.png",
+    "PreviewUri": "MintTinAccordion4.png",
     "TemplateFiles": [
       "MintTinAccordion4"
     ]
@@ -785,7 +785,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "BiFoldMat",
-    "PreviewUri": "@previewImages/BiFoldMat.png",
+    "PreviewUri": "BiFoldMat.png",
     "TemplateFiles": [
       "BiFoldMat"
     ]
@@ -819,7 +819,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "DominoMat",
-    "PreviewUri": "@previewImages/DominoMat.png",
+    "PreviewUri": "DominoMat.png",
     "TemplateFiles": [
       "DominoMat"
     ]
@@ -855,7 +855,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "MintTinAccordion6",
-    "PreviewUri": "@previewImages/MintTinAccordion6.png",
+    "PreviewUri": "MintTinAccordion6.png",
     "TemplateFiles": [
       "MintTinAccordion6"
     ]
@@ -891,7 +891,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "MintTinAccordion8",
-    "PreviewUri": "@previewImages/MintTinAccordion8.png",
+    "PreviewUri": "MintTinAccordion8.png",
     "TemplateFiles": [
       "MintTinAccordion8"
     ]
@@ -926,7 +926,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "PokerFolio",
-    "PreviewUri": "@previewImages/PokerFolio.png",
+    "PreviewUri": "PokerFolio.png",
     "TemplateFiles": [
       "PokerFolioBack",
       "PokerFolioFace"
@@ -967,7 +967,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "MintTinFolio",
-    "PreviewUri": "@previewImages/MintTinFolio.png",
+    "PreviewUri": "MintTinFolio.png",
     "TemplateFiles": [
       "MintTinFolioBack",
       "MintTinFolioFace"
@@ -1002,7 +1002,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "DominoBoard",
-    "PreviewUri": "@previewImages/DominoBoard.png",
+    "PreviewUri": "DominoBoard.png",
     "TemplateFiles": [
       "DominoBoard"
     ]
@@ -1036,7 +1036,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "MintTin",
-    "PreviewUri": "@previewImages/MintTin.png",
+    "PreviewUri": "MintTin.png",
     "TemplateFiles": [
       "MintTinBottom",
       "MintTinTop"
@@ -1071,7 +1071,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "SmallStoutBox",
-    "PreviewUri": "@previewImages/SmallStoutBox.png",
+    "PreviewUri": "SmallStoutBox.png",
     "TemplateFiles": [
       "SmallStoutBoxBottom",
       "SmallStoutBoxTop"
@@ -1106,7 +1106,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "MediumStoutBox",
-    "PreviewUri": "@previewImages/MediumStoutBox.png",
+    "PreviewUri": "MediumStoutBox.png",
     "TemplateFiles": [
       "MediumStoutBoxBottom",
       "MediumStoutBoxTop"
@@ -1141,7 +1141,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "LargeStoutBox",
-    "PreviewUri": "@previewImages/LargeStoutBox.png",
+    "PreviewUri": "LargeStoutBox.png",
     "TemplateFiles": [
       "LargeStoutBoxBottom"
     ]
@@ -1173,7 +1173,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "PokerBooster",
-    "PreviewUri": "@previewImages/PokerBooster.png",
+    "PreviewUri": "PokerBooster.png",
     "TemplateFiles": [
       "PokerBooster"
     ]
@@ -1206,7 +1206,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "PokerTuckBox36",
-    "PreviewUri": "@previewImages/PokerTuckBox36.png",
+    "PreviewUri": "PokerTuckBox36.png",
     "TemplateFiles": [
       "PokerTuckBox36"
     ]
@@ -1239,7 +1239,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "PokerTuckBox54",
-    "PreviewUri": "@previewImages/PokerTuckBox54.png",
+    "PreviewUri": "PokerTuckBox54.png",
     "TemplateFiles": [
       "PokerTuckBox54"
     ]
@@ -1272,7 +1272,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "PokerTuckBox72",
-    "PreviewUri": "@previewImages/PokerTuckBox72.png",
+    "PreviewUri": "PokerTuckBox72.png",
     "TemplateFiles": [
       "PokerTuckBox72"
     ]
@@ -1305,7 +1305,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "PokerTuckBox90",
-    "PreviewUri": "@previewImages/PokerTuckBox90.png",
+    "PreviewUri": "PokerTuckBox90.png",
     "TemplateFiles": [
       "PokerTuckBox90"
     ]
@@ -1338,7 +1338,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "PokerTuckBox108",
-    "PreviewUri": "@previewImages/PokerTuckBox108.png",
+    "PreviewUri": "PokerTuckBox108.png",
     "TemplateFiles": [
       "PokerTuckBox108"
     ]
@@ -1370,7 +1370,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "AccordionBoard",
-    "PreviewUri": "@previewImages/AccordionBoard.png",
+    "PreviewUri": "AccordionBoard.png",
     "TemplateFiles": [
       "AccordionBoard"
     ]
@@ -1399,7 +1399,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "AcrylicShape125",
-    "PreviewUri": "@previewImages/AcrylicShape125.png"
+    "PreviewUri": "AcrylicShape125.png"
   },
   "AcrylicShape250": {
     "DisplayName": "Acrylic Shape 250",
@@ -1425,7 +1425,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "AcrylicShape250",
-    "PreviewUri": "@previewImages/AcrylicShape250.png"
+    "PreviewUri": "AcrylicShape250.png"
   },
   "ArrowChit": {
     "DisplayName": "Arrow Chit",
@@ -1455,7 +1455,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "ArrowChit",
-    "PreviewUri": "@previewImages/ArrowChit.png",
+    "PreviewUri": "ArrowChit.png",
     "TemplateFiles": [
       "ArrowChit"
     ]
@@ -1487,7 +1487,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "BiFoldBoard",
-    "PreviewUri": "@previewImages/BiFoldBoard.png",
+    "PreviewUri": "BiFoldBoard.png",
     "TemplateFiles": [
       "BiFoldBoard"
     ]
@@ -1519,7 +1519,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "BigMat",
-    "PreviewUri": "@previewImages/BigMat.png",
+    "PreviewUri": "BigMat.png",
     "TemplateFiles": [
       "BigMat"
     ]
@@ -1551,7 +1551,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "BridgeDeck",
-    "PreviewUri": "@previewImages/BridgeDeck.png",
+    "PreviewUri": "BridgeDeck.png",
     "TemplateFiles": [
       "BridgeDeck"
     ]
@@ -1584,7 +1584,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "BridgeFolio",
-    "PreviewUri": "@previewImages/BridgeFolio.png",
+    "PreviewUri": "BridgeFolio.png",
     "TemplateFiles": [
       "BridgeFolioBack",
       "BridgeFolioFace"
@@ -1620,7 +1620,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "BridgeHookBox108",
-    "PreviewUri": "@previewImages/BridgeHookBox108.png",
+    "PreviewUri": "BridgeHookBox108.png",
     "TemplateFiles": [
       "BridgeHookBox108Inside",
       "BridgeHookBox108Outside"
@@ -1656,7 +1656,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "BridgeHookBox54",
-    "PreviewUri": "@previewImages/BridgeHookBox54.png",
+    "PreviewUri": "BridgeHookBox54.png",
     "TemplateFiles": [
       "BridgeHookBox54Inside",
       "BridgeHookBox54Outside"
@@ -1691,7 +1691,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "BridgeTuckBox108",
-    "PreviewUri": "@previewImages/BridgeTuckBox108.png",
+    "PreviewUri": "BridgeTuckBox108.png",
     "TemplateFiles": [
       "BridgeTuckBox108"
     ]
@@ -1725,7 +1725,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "BridgeTuckBox54",
-    "PreviewUri": "@previewImages/BridgeTuckBox54.png",
+    "PreviewUri": "BridgeTuckBox54.png",
     "TemplateFiles": [
       "BridgeTuckBox54"
     ]
@@ -1758,7 +1758,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "BullseyeChit",
-    "PreviewUri": "@previewImages/BullseyeChit.png",
+    "PreviewUri": "BullseyeChit.png",
     "TemplateFiles": [
       "BullseyeChit"
     ]
@@ -1791,7 +1791,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "CardCraftingDeck",
-    "PreviewUri": "@previewImages/CardCraftingDeck.png",
+    "PreviewUri": "CardCraftingDeck.png",
     "TemplateFiles": [
       "CardCraftingDeck"
     ]
@@ -1823,7 +1823,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "CircleDeck",
-    "PreviewUri": "@previewImages/CircleDeck.png",
+    "PreviewUri": "CircleDeck.png",
     "TemplateFiles": [
       "CircleDeck"
     ]
@@ -1857,7 +1857,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "ClearCardCraftingDeck",
-    "PreviewUri": "@previewImages/ClearCardCraftingDeck.png",
+    "PreviewUri": "ClearCardCraftingDeck.png",
     "TemplateFiles": [
       "ClearCardCraftingDeck"
     ]
@@ -1891,7 +1891,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "ClearEuroPokerDeck",
-    "PreviewUri": "@previewImages/ClearEuroPokerDeck.png",
+    "PreviewUri": "ClearEuroPokerDeck.png",
     "TemplateFiles": [
       "EuroPokerDeck"
     ]
@@ -1921,7 +1921,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "StandardDie",
     "Key": "CustomColorD4",
-    "PreviewUri": "@previewImages/CustomColorD4.png",
+    "PreviewUri": "CustomColorD4.png",
     "TemplateFiles": [
       "CustomColorD4"
     ]
@@ -1953,7 +1953,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "CustomDie",
     "SimulatorCreationTask": "CustomDie",
     "Key": "CustomColorD6",
-    "PreviewUri": "@previewImages/CustomColorD6.png",
+    "PreviewUri": "CustomColorD6.png",
     "TemplateFiles": [
       "CustomColorD6"
     ]
@@ -1983,7 +1983,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "StandardDie",
     "Key": "CustomColorD8",
-    "PreviewUri": "@previewImages/CustomColorD8.png",
+    "PreviewUri": "CustomColorD8.png",
     "TemplateFiles": [
       "CustomColorD8"
     ]
@@ -2016,7 +2016,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "CustomLargeCardstock",
-    "PreviewUri": "@previewImages/CustomLargeCardstock.png",
+    "PreviewUri": "CustomLargeCardstock.png",
     "TemplateFiles": [
       "CustomLargeCardstock"
     ]
@@ -2049,7 +2049,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "CustomLargePunchout",
-    "PreviewUri": "@previewImages/CustomLargePunchout.png",
+    "PreviewUri": "CustomLargePunchout.png",
     "TemplateFiles": [
       "CustomLargePunchout"
     ]
@@ -2082,7 +2082,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "CustomLargeSticker",
-    "PreviewUri": "@previewImages/CustomLargeSticker.png"
+    "PreviewUri": "CustomLargeSticker.png"
   },
   "CustomMediumCardstock": {
     "DisplayName": "Custom Medium Cardstock",
@@ -2112,7 +2112,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "CustomMediumCardstock",
-    "PreviewUri": "@previewImages/CustomMediumCardstock.png",
+    "PreviewUri": "CustomMediumCardstock.png",
     "TemplateFiles": [
       "CustomMediumCardstock"
     ]
@@ -2145,7 +2145,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "CustomMediumPunchout",
-    "PreviewUri": "@previewImages/CustomMediumPunchout.png",
+    "PreviewUri": "CustomMediumPunchout.png",
     "TemplateFiles": [
       "CustomMediumPunchout"
     ]
@@ -2178,7 +2178,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "CustomMediumSticker",
-    "PreviewUri": "@previewImages/CustomMediumSticker.png"
+    "PreviewUri": "CustomMediumSticker.png"
   },
   "CustomMiniCardstock": {
     "DisplayName": "Custom Mini Cardstock",
@@ -2208,7 +2208,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "CustomMiniCardstock",
-    "PreviewUri": "@previewImages/CustomMiniCardstock.png",
+    "PreviewUri": "CustomMiniCardstock.png",
     "TemplateFiles": [
       "CustomMiniCardstock"
     ]
@@ -2241,7 +2241,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "CustomMiniSticker",
-    "PreviewUri": "@previewImages/CustomMiniSticker.png"
+    "PreviewUri": "CustomMiniSticker.png"
   },
   "CustomPrintedMeeple": {
     "DisplayName": "Custom Printed Meeple",
@@ -2271,7 +2271,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "Meeple",
     "SimulatorCreationTask": "DECK",
     "Key": "CustomPrintedMeeple",
-    "PreviewUri": "@previewImages/CustomPrintedMeeple.png",
+    "PreviewUri": "CustomPrintedMeeple.png",
     "TemplateFiles": [
       "CustomPrintedMeeple"
     ]
@@ -2304,7 +2304,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "CustomSmallCardstock",
-    "PreviewUri": "@previewImages/CustomSmallCardstock.png",
+    "PreviewUri": "CustomSmallCardstock.png",
     "TemplateFiles": [
       "CustomSmallCardstock"
     ]
@@ -2337,7 +2337,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "CustomSmallPunchout",
-    "PreviewUri": "@previewImages/CustomSmallPunchout.png",
+    "PreviewUri": "CustomSmallPunchout.png",
     "TemplateFiles": [
       "CustomSmallPunchout"
     ]
@@ -2370,7 +2370,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "CustomSmallSticker",
-    "PreviewUri": "@previewImages/CustomSmallSticker.png"
+    "PreviewUri": "CustomSmallSticker.png"
   },
   "CustomWoodD6": {
     "DisplayName": "Custom Wood D6",
@@ -2398,7 +2398,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "CustomDie",
     "Key": "CustomWoodD6",
-    "PreviewUri": "@previewImages/CustomWoodD6.png",
+    "PreviewUri": "CustomWoodD6.png",
     "TemplateFiles": [
       "CustomWoodD6"
     ]
@@ -2431,7 +2431,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "DeckBox",
-    "PreviewUri": "@previewImages/DeckBox.png",
+    "PreviewUri": "DeckBox.png",
     "TemplateFiles": [
       "DeckBoxBottom",
       "DeckBoxTop"
@@ -2464,7 +2464,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "DeckBoxTopAndSide",
-    "PreviewUri": "@previewImages/DeckBoxTopAndSide.png",
+    "PreviewUri": "DeckBoxTopAndSide.png",
     "TemplateFiles": [
       "DeckBoxTopAndSide"
     ]
@@ -2497,7 +2497,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "DiceSticker",
-    "PreviewUri": "@previewImages/DiceSticker.png",
+    "PreviewUri": "DiceSticker.png",
     "TemplateFiles": [
       "DiceSticker"
     ]
@@ -2529,7 +2529,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "DividerDeck",
-    "PreviewUri": "@previewImages/DividerDeck.png",
+    "PreviewUri": "DividerDeck.png",
     "TemplateFiles": [
       "DividerDeck"
     ]
@@ -2560,7 +2560,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "Document",
-    "PreviewUri": "@previewImages/Document.png",
+    "PreviewUri": "Document.png",
     "TemplateFiles": [
       "Document"
     ]
@@ -2593,7 +2593,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "DominoChit",
-    "PreviewUri": "@previewImages/DominoChit.png",
+    "PreviewUri": "DominoChit.png",
     "TemplateFiles": [
       "DominoChit"
     ]
@@ -2625,7 +2625,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "DominoDeck",
-    "PreviewUri": "@previewImages/DominoDeck.png",
+    "PreviewUri": "DominoDeck.png",
     "TemplateFiles": [
       "DominoDeck"
     ]
@@ -2659,7 +2659,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "DominoTile",
-    "PreviewUri": "@previewImages/DominoTile.png",
+    "PreviewUri": "DominoTile.png",
     "TemplateFiles": [
       "DominoTile"
     ]
@@ -2691,7 +2691,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "DualDial",
-    "PreviewUri": "@previewImages/DualDial.png",
+    "PreviewUri": "DualDial.png",
     "TemplateFiles": [
       "DualDial"
     ]
@@ -2724,7 +2724,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "EuroPokerDeck",
-    "PreviewUri": "@previewImages/EuroPokerDeck.png",
+    "PreviewUri": "EuroPokerDeck.png",
     "TemplateFiles": [
       "EuroPokerDeck"
     ]
@@ -2757,7 +2757,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "EuroSquareDeck",
-    "PreviewUri": "@previewImages/EuroSquareDeck.png",
+    "PreviewUri": "EuroSquareDeck.png",
     "TemplateFiles": [
       "EuroSquareDeck"
     ]
@@ -2789,7 +2789,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "FlowerMat",
-    "PreviewUri": "@previewImages/FlowerMat.png",
+    "PreviewUri": "FlowerMat.png",
     "TemplateFiles": [
       "FlowerMat"
     ]
@@ -2823,7 +2823,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "FoilEuroPokerDeck",
-    "PreviewUri": "@previewImages/FoilEuroPokerDeck.png",
+    "PreviewUri": "FoilEuroPokerDeck.png",
     "TemplateFiles": [
       "EuroPokerDeck"
     ]
@@ -2856,7 +2856,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "FoilPokerDeck",
-    "PreviewUri": "@previewImages/FoilPokerDeck.png",
+    "PreviewUri": "FoilPokerDeck.png",
     "TemplateFiles": [
       "PokerDeck"
     ]
@@ -2889,7 +2889,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "FoilTarotDeck",
-    "PreviewUri": "@previewImages/FoilTarotDeck.png",
+    "PreviewUri": "FoilTarotDeck.png",
     "TemplateFiles": [
       "TarotDeck"
     ]
@@ -2921,7 +2921,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "HalfBoard",
-    "PreviewUri": "@previewImages/HalfBoard.png",
+    "PreviewUri": "HalfBoard.png",
     "TemplateFiles": [
       "HalfBoard"
     ]
@@ -2953,7 +2953,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "HalfMat",
-    "PreviewUri": "@previewImages/HalfMat.png",
+    "PreviewUri": "HalfMat.png",
     "TemplateFiles": [
       "HalfMat"
     ]
@@ -2985,7 +2985,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "HexMat",
-    "PreviewUri": "@previewImages/HexMat.png",
+    "PreviewUri": "HexMat.png",
     "TemplateFiles": [
       "HexMat"
     ]
@@ -3017,7 +3017,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "InvaderMat",
-    "PreviewUri": "@previewImages/InvaderMat.png",
+    "PreviewUri": "InvaderMat.png",
     "TemplateFiles": [
       "InvaderMat"
     ]
@@ -3049,7 +3049,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "JumboBooklet",
-    "PreviewUri": "@previewImages/JumboBooklet.png",
+    "PreviewUri": "JumboBooklet.png",
     "TemplateFiles": [
       "JumboBooklet20pg",
       "JumboBooklet40pg"
@@ -3085,7 +3085,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "JumboHookBox36",
-    "PreviewUri": "@previewImages/JumboHookBox36.png",
+    "PreviewUri": "JumboHookBox36.png",
     "TemplateFiles": [
       "JumboHookBox36Inside",
       "JumboHookBox36Outside"
@@ -3121,7 +3121,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "JumboHookBox90",
-    "PreviewUri": "@previewImages/JumboHookBox90.png",
+    "PreviewUri": "JumboHookBox90.png",
     "TemplateFiles": [
       "JumboHookBox90Inside"
     ]
@@ -3155,7 +3155,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "JumboTuckBox90",
-    "PreviewUri": "@previewImages/JumboTuckBox90.png",
+    "PreviewUri": "JumboTuckBox90.png",
     "TemplateFiles": [
       "JumboTuckBox90"
     ]
@@ -3185,7 +3185,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "LargeAcrylicShape125",
-    "PreviewUri": "@previewImages/LargeAcrylicShape125.png"
+    "PreviewUri": "LargeAcrylicShape125.png"
   },
   "LargeBooklet": {
     "DisplayName": "Large Booklet",
@@ -3214,7 +3214,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "LargeBooklet",
-    "PreviewUri": "@previewImages/LargeBooklet.png",
+    "PreviewUri": "LargeBooklet.png",
     "TemplateFiles": [
       "LargeBooklet20pg",
       "LargeBooklet40pg"
@@ -3248,7 +3248,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "LargeHexMat",
-    "PreviewUri": "@previewImages/LargeHexMat.png",
+    "PreviewUri": "LargeHexMat.png",
     "TemplateFiles": [
       "LargeHexMat"
     ]
@@ -3281,7 +3281,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "LargePrototypeBox",
-    "PreviewUri": "@previewImages/LargePrototypeBox.png",
+    "PreviewUri": "LargePrototypeBox.png",
     "TemplateFiles": [
       "LargePrototypeBox"
     ]
@@ -3315,7 +3315,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "LargeRetailBox",
-    "PreviewUri": "@previewImages/LargeRetailBox.png",
+    "PreviewUri": "LargeRetailBox.png",
     "TemplateFiles": [
       "LargeRetailBox"
     ]
@@ -3349,7 +3349,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "LargeRing",
-    "PreviewUri": "@previewImages/LargeRing.png",
+    "PreviewUri": "LargeRing.png",
     "TemplateFiles": [
       "LargeRing"
     ]
@@ -3383,7 +3383,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "LargeScorePadColor",
-    "PreviewUri": "@previewImages/LargeScorePadColor.png",
+    "PreviewUri": "LargeScorePadColor.png",
     "TemplateFiles": [
       "LargeScorepadColor"
     ]
@@ -3415,7 +3415,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "LargeScreen",
-    "PreviewUri": "@previewImages/LargeScreen.png",
+    "PreviewUri": "LargeScreen.png",
     "TemplateFiles": [
       "LargeScreen"
     ]
@@ -3448,7 +3448,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "LargeSquareBoard",
-    "PreviewUri": "@previewImages/LargeSquareBoard.png",
+    "PreviewUri": "LargeSquareBoard.png",
     "TemplateFiles": [
       "LargeSquareBoard"
     ]
@@ -3481,7 +3481,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "LargeSquareMat",
-    "PreviewUri": "@previewImages/LargeSquareMat.png",
+    "PreviewUri": "LargeSquareMat.png",
     "TemplateFiles": [
       "LargeSquareMat"
     ]
@@ -3516,7 +3516,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "LargeSquareTile",
-    "PreviewUri": "@previewImages/LargeSquareTile.png",
+    "PreviewUri": "LargeSquareTile.png",
     "TemplateFiles": [
       "LargeSquareTile"
     ]
@@ -3549,7 +3549,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "LargeStandee",
-    "PreviewUri": "@previewImages/LargeStandee.png",
+    "PreviewUri": "LargeStandee.png",
     "TemplateFiles": [
       "LargeStandee"
     ]
@@ -3582,7 +3582,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "LargeStoutBoxTop",
-    "PreviewUri": "@previewImages/LargeStoutBoxTop.png",
+    "PreviewUri": "LargeStoutBoxTop.png",
     "TemplateFiles": [
       "LargeStoutBoxTop"
     ]
@@ -3615,7 +3615,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "LargeStoutBoxTopAndSide",
-    "PreviewUri": "@previewImages/LargeStoutBoxTopAndSide.png",
+    "PreviewUri": "LargeStoutBoxTopAndSide.png",
     "TemplateFiles": [
       "LargeStoutBoxTopAndSide"
     ]
@@ -3647,7 +3647,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "MediumBooklet",
-    "PreviewUri": "@previewImages/MediumBooklet.png",
+    "PreviewUri": "MediumBooklet.png",
     "TemplateFiles": [
       "MediumBooklet20pg",
       "MediumBooklet40pg"
@@ -3681,7 +3681,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "MediumFolio",
-    "PreviewUri": "@previewImages/MediumFolio.png",
+    "PreviewUri": "MediumFolio.png",
     "TemplateFiles": [
       "MediumFolioBack",
       "MediumFolioFace"
@@ -3714,7 +3714,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "MediumGameMat",
-    "PreviewUri": "@previewImages/MediumGameMat.png",
+    "PreviewUri": "MediumGameMat.png",
     "TemplateFiles": [
       "MediumGameMat"
     ]
@@ -3748,7 +3748,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "MediumMatBook",
-    "PreviewUri": "@previewImages/MediumMatBook.png"
+    "PreviewUri": "MediumMatBook.png"
   },
   "MediumProBox": {
     "DisplayName": "Medium Pro Box",
@@ -3779,7 +3779,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "MediumProBox",
-    "PreviewUri": "@previewImages/MediumProBox.png",
+    "PreviewUri": "MediumProBox.png",
     "TemplateFiles": [
       "MediumProBoxBottom",
       "MediumProBoxTop"
@@ -3813,7 +3813,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "MediumPrototypeBox",
-    "PreviewUri": "@previewImages/MediumPrototypeBox.png",
+    "PreviewUri": "MediumPrototypeBox.png",
     "TemplateFiles": [
       "MediumPrototypeBox"
     ]
@@ -3847,7 +3847,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "MediumRing",
-    "PreviewUri": "@previewImages/MediumRing.png",
+    "PreviewUri": "MediumRing.png",
     "TemplateFiles": [
       "MediumRing"
     ]
@@ -3881,7 +3881,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "MediumScorePadColor",
-    "PreviewUri": "@previewImages/MediumScorePadColor.png",
+    "PreviewUri": "MediumScorePadColor.png",
     "TemplateFiles": [
       "MediumScorePadColor"
     ]
@@ -3913,7 +3913,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "MediumScreen",
-    "PreviewUri": "@previewImages/MediumScreen.png",
+    "PreviewUri": "MediumScreen.png",
     "TemplateFiles": [
       "MediumScreen"
     ]
@@ -3946,7 +3946,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "MediumSixFoldBoard",
-    "PreviewUri": "@previewImages/MediumSixFoldBoard.png",
+    "PreviewUri": "MediumSixFoldBoard.png",
     "TemplateFiles": [
       "MediumSixFoldBoard"
     ]
@@ -3981,7 +3981,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "MediumSquareTile",
-    "PreviewUri": "@previewImages/MediumSquareTile.png",
+    "PreviewUri": "MediumSquareTile.png",
     "TemplateFiles": [
       "MediumSquareTile"
     ]
@@ -4014,7 +4014,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "MediumStandee",
-    "PreviewUri": "@previewImages/MediumStandee.png",
+    "PreviewUri": "MediumStandee.png",
     "TemplateFiles": [
       "MediumStandee"
     ]
@@ -4047,7 +4047,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "MediumStoutBoxTopAndSide",
-    "PreviewUri": "@previewImages/MediumStoutBoxTopAndSide.png",
+    "PreviewUri": "MediumStoutBoxTopAndSide.png",
     "TemplateFiles": [
       "MediumStoutBoxTopAndSide"
     ]
@@ -4081,7 +4081,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "MediumTriangleChit",
-    "PreviewUri": "@previewImages/MediumTriangleChit.png",
+    "PreviewUri": "MediumTriangleChit.png",
     "TemplateFiles": [
       "MediumTriangleChit"
     ]
@@ -4113,7 +4113,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "Meeple",
     "SimulatorCreationTask": "Meeple",
     "Key": "MeepleSticker",
-    "PreviewUri": "@previewImages/MeepleSticker.png",
+    "PreviewUri": "MeepleSticker.png",
     "TemplateFiles": [
       "MeepleSticker"
     ]
@@ -4148,7 +4148,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "MiniCircleTile",
-    "PreviewUri": "@previewImages/MiniCircleTile.png",
+    "PreviewUri": "MiniCircleTile.png",
     "TemplateFiles": [
       "MiniCircleTile"
     ]
@@ -4182,7 +4182,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "MiniSquareTile",
-    "PreviewUri": "@previewImages/MiniSquareTile.png",
+    "PreviewUri": "MiniSquareTile.png",
     "TemplateFiles": [
       "MiniSquareTile"
     ]
@@ -4216,7 +4216,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "MintTinSticker",
-    "PreviewUri": "@previewImages/MintTinSticker.png",
+    "PreviewUri": "MintTinSticker.png",
     "TemplateFiles": [
       "MintTinSticker"
     ]
@@ -4248,7 +4248,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "CustomStandee",
     "Key": "PawnSticker",
-    "PreviewUri": "@previewImages/PawnSticker.png",
+    "PreviewUri": "PawnSticker.png",
     "TemplateFiles": [
       "PawnSticker"
     ]
@@ -4280,7 +4280,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "PlacardMat",
-    "PreviewUri": "@previewImages/PlacardMat.png",
+    "PreviewUri": "PlacardMat.png",
     "TemplateFiles": [
       "PlacardMat"
     ]
@@ -4313,7 +4313,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "PlayMoney",
-    "PreviewUri": "@previewImages/PlayMoney.png",
+    "PreviewUri": "PlayMoney.png",
     "TemplateFiles": [
       "PlayMoney"
     ]
@@ -4346,7 +4346,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "PokerBoosterBox",
-    "PreviewUri": "@previewImages/PokerBoosterBox.png",
+    "PreviewUri": "PokerBoosterBox.png",
     "TemplateFiles": [
       "PokerBoosterBox"
     ]
@@ -4378,7 +4378,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "PokerEnvelope",
-    "PreviewUri": "@previewImages/PokerEnvelope.png",
+    "PreviewUri": "PokerEnvelope.png",
     "TemplateFiles": [
       "PokerEnvelope"
     ]
@@ -4413,7 +4413,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "PokerHookBox108",
-    "PreviewUri": "@previewImages/PokerHookBox108.png",
+    "PreviewUri": "PokerHookBox108.png",
     "TemplateFiles": [
       "PokerHookBox108Inside",
       "PokerHookBox108Outside"
@@ -4441,7 +4441,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "PokerHookBox36",
-    "PreviewUri": "@previewImages/PokerHookBox36.png",
+    "PreviewUri": "PokerHookBox36.png",
     "TemplateFiles": [
       "PokerHookBox36Outside", 
       "PokerHookBox36Inside"
@@ -4477,7 +4477,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "PokerHookBox18",
-    "PreviewUri": "@previewImages/PokerHookBox18.png",
+    "PreviewUri": "PokerHookBox18.png",
     "TemplateFiles": [
       "PokerHookBox18Inside",
       "PokerHookBox18Outside"
@@ -4513,7 +4513,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "PokerHookBox36",
-    "PreviewUri": "@previewImages/PokerHookBox36.png",
+    "PreviewUri": "PokerHookBox36.png",
     "TemplateFiles": [
       "PokerHookBox36Inside",
       "PokerHookBox36Outside"
@@ -4549,7 +4549,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "PokerHookBox54",
-    "PreviewUri": "@previewImages/PokerHookBox54.png",
+    "PreviewUri": "PokerHookBox54.png",
     "TemplateFiles": [
       "PokerHookBox54Inside",
       "PokerHookBox54Outside"
@@ -4585,7 +4585,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "PokerHookBox72",
-    "PreviewUri": "@previewImages/PokerHookBox72.png",
+    "PreviewUri": "PokerHookBox72.png",
     "TemplateFiles": [
       "PokerHookBox72Inside",
       "PokerHookBox72Outside"
@@ -4621,7 +4621,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "PokerHookBox90",
-    "PreviewUri": "@previewImages/PokerHookBox90.png",
+    "PreviewUri": "PokerHookBox90.png",
     "TemplateFiles": [
       "PokerHookBox90Inside",
       "PokerHookBox90Outside"
@@ -4654,7 +4654,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "PostcardMat",
-    "PreviewUri": "@previewImages/PostcardMat.png",
+    "PreviewUri": "PostcardMat.png",
     "TemplateFiles": [
       "PostcardMat"
     ]
@@ -4686,7 +4686,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "QuadFoldBoard",
-    "PreviewUri": "@previewImages/QuadFoldBoard.png",
+    "PreviewUri": "QuadFoldBoard.png",
     "TemplateFiles": [
       "QuadFoldBoard"
     ]
@@ -4719,7 +4719,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "QuadFoldMat",
-    "PreviewUri": "@previewImages/QuadFoldMat.png",
+    "PreviewUri": "QuadFoldMat.png",
     "TemplateFiles": [
       "QuadFoldMatInside",
       "QuadFoldMatOutside"
@@ -4752,7 +4752,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "QuarterBoard",
-    "PreviewUri": "@previewImages/QuarterBoard.png",
+    "PreviewUri": "QuarterBoard.png",
     "TemplateFiles": [
       "QuarterBoard"
     ]
@@ -4784,7 +4784,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "QuarterMat",
-    "PreviewUri": "@previewImages/QuarterMat.png",
+    "PreviewUri": "QuarterMat.png",
     "TemplateFiles": [
       "QuarterMat"
     ]
@@ -4816,7 +4816,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "SixFoldBoard",
-    "PreviewUri": "@previewImages/SixFoldBoard.png",
+    "PreviewUri": "SixFoldBoard.png",
     "TemplateFiles": [
       "SixFoldBoard"
     ]
@@ -4848,7 +4848,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "SkinnyBoard",
-    "PreviewUri": "@previewImages/SkinnyBoard.png",
+    "PreviewUri": "SkinnyBoard.png",
     "TemplateFiles": [
       "SkinnyBoard"
     ]
@@ -4880,7 +4880,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "SkinnyMat",
-    "PreviewUri": "@previewImages/SkinnyMat.png",
+    "PreviewUri": "SkinnyMat.png",
     "TemplateFiles": [
       "SkinnyMat"
     ]
@@ -4912,7 +4912,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "SliverBoard",
-    "PreviewUri": "@previewImages/SliverBoard.png",
+    "PreviewUri": "SliverBoard.png",
     "TemplateFiles": [
       "SliverBoard"
     ]
@@ -4944,7 +4944,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "SliverMat",
-    "PreviewUri": "@previewImages/SliverMat.png",
+    "PreviewUri": "SliverMat.png",
     "TemplateFiles": [
       "SliverMat"
     ]
@@ -4978,7 +4978,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "SlopesideBiFoldMat",
-    "PreviewUri": "@previewImages/SlopesideBiFoldMat.png",
+    "PreviewUri": "SlopesideBiFoldMat.png",
     "TemplateFiles": [
       "SlopeSideBifoldMat"
     ]
@@ -5012,7 +5012,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "SmallBiFoldMat",
-    "PreviewUri": "@previewImages/SmallBiFoldMat.png",
+    "PreviewUri": "SmallBiFoldMat.png",
     "TemplateFiles": [
       "SmallBiFoldMat"
     ]
@@ -5044,7 +5044,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "SmallBooklet",
-    "PreviewUri": "@previewImages/SmallBooklet.png",
+    "PreviewUri": "SmallBooklet.png",
     "TemplateFiles": [
       "SmallBooklet20pg",
       "SmallBooklet40pg"
@@ -5077,7 +5077,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "SmallDial",
-    "PreviewUri": "@previewImages/SmallDial.png",
+    "PreviewUri": "SmallDial.png",
     "TemplateFiles": [
       "SmallDial"
     ]
@@ -5110,7 +5110,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "SmallFolio",
-    "PreviewUri": "@previewImages/SmallFolio.png",
+    "PreviewUri": "SmallFolio.png",
     "TemplateFiles": [
       "SmallFolioBack",
       "SmallFolioFace"
@@ -5143,7 +5143,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "SmallGameMat",
-    "PreviewUri": "@previewImages/SmallGameMat.png",
+    "PreviewUri": "SmallGameMat.png",
     "TemplateFiles": [
       "SmallGameMat"
     ]
@@ -5177,7 +5177,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "SmallProBox",
-    "PreviewUri": "@previewImages/SmallProBox.png",
+    "PreviewUri": "SmallProBox.png",
     "TemplateFiles": [
       "SmallProBoxBottom",
       "SmallProBoxTop"
@@ -5212,7 +5212,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "SmallProTarotInsert",
-    "PreviewUri": "@previewImages/SmallProTarotInsert.png",
+    "PreviewUri": "SmallProTarotInsert.png",
     "TemplateFiles": [
       "SmallProTarotInsert"
     ]
@@ -5245,7 +5245,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "SmallPrototypeBox",
-    "PreviewUri": "@previewImages/SmallPrototypeBox.png",
+    "PreviewUri": "SmallPrototypeBox.png",
     "TemplateFiles": [
       "SmallPrototypeBox"
     ]
@@ -5279,7 +5279,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "SmallQuadFoldMat",
-    "PreviewUri": "@previewImages/SmallQuadFoldMat.png",
+    "PreviewUri": "SmallQuadFoldMat.png",
     "TemplateFiles": [
       "SmallQuadFoldMat"
     ]
@@ -5313,7 +5313,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "SmallRing",
-    "PreviewUri": "@previewImages/SmallRing.png",
+    "PreviewUri": "SmallRing.png",
     "TemplateFiles": [
       "SmallRing"
     ]
@@ -5347,7 +5347,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "SmallScorePadColor",
-    "PreviewUri": "@previewImages/SmallScorePadColor.png",
+    "PreviewUri": "SmallScorePadColor.png",
     "TemplateFiles": [
       "SmallScorepadColor"
     ]
@@ -5379,7 +5379,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "SmallScreen",
-    "PreviewUri": "@previewImages/SmallScreen.png",
+    "PreviewUri": "SmallScreen.png",
     "TemplateFiles": [
       "SmallScreen"
     ]
@@ -5412,7 +5412,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "SmallSquareBoard",
-    "PreviewUri": "@previewImages/SmallSquareBoard.png",
+    "PreviewUri": "SmallSquareBoard.png",
     "TemplateFiles": [
       "SmallSquareBoard"
     ]
@@ -5445,7 +5445,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "SmallSquareDeck",
-    "PreviewUri": "@previewImages/SmallSquareDeck.png",
+    "PreviewUri": "SmallSquareDeck.png",
     "TemplateFiles": [
       "SmallSquareDeck"
     ]
@@ -5478,7 +5478,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "SmallSquareMat",
-    "PreviewUri": "@previewImages/SmallSquareMat.png",
+    "PreviewUri": "SmallSquareMat.png",
     "TemplateFiles": [
       "SmallSquareMat"
     ]
@@ -5512,7 +5512,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "SmallSquareTile",
-    "PreviewUri": "@previewImages/SmallSquareTile.png",
+    "PreviewUri": "SmallSquareTile.png",
     "TemplateFiles": [
       "SmallSquareTile"
     ]
@@ -5545,7 +5545,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "SmallStandee",
-    "PreviewUri": "@previewImages/SmallStandee.png",
+    "PreviewUri": "SmallStandee.png",
     "TemplateFiles": [
       "SmallStandee"
     ]
@@ -5579,7 +5579,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "SmallStoutTarotInsert",
-    "PreviewUri": "@previewImages/SmallStoutTarotInsert.png",
+    "PreviewUri": "SmallStoutTarotInsert.png",
     "TemplateFiles": [
       "SmallStoutTarotInsert"
     ]
@@ -5611,7 +5611,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "SpinnerMat",
-    "PreviewUri": "@previewImages/SpinnerMat.png",
+    "PreviewUri": "SpinnerMat.png",
     "TemplateFiles": [
       "spinnermat"
     ]
@@ -5643,7 +5643,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "SquareBoard",
-    "PreviewUri": "@previewImages/SquareBoard.png",
+    "PreviewUri": "SquareBoard.png",
     "TemplateFiles": [
       "SquareBoard"
     ]
@@ -5675,7 +5675,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "SquareDeck",
-    "PreviewUri": "@previewImages/SquareDeck.png",
+    "PreviewUri": "SquareDeck.png",
     "TemplateFiles": [
       "SquareDeck"
     ]
@@ -5708,7 +5708,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "SquareFolio",
-    "PreviewUri": "@previewImages/SquareFolio.png",
+    "PreviewUri": "SquareFolio.png",
     "TemplateFiles": [
       "SquareFolioBack",
       "SquareFolioFace"
@@ -5743,7 +5743,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "SquareHookBox48",
-    "PreviewUri": "@previewImages/SquareHookBox48.png",
+    "PreviewUri": "SquareHookBox48.png",
     "TemplateFiles": [
       "SquareHookBox48Inside",
       "SquareHookBox48Outside"
@@ -5778,7 +5778,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "SquareHookBox96",
-    "PreviewUri": "@previewImages/SquareHookBox96.png",
+    "PreviewUri": "SquareHookBox96.png",
     "TemplateFiles": [
       "SquareHookBox96Inside",
       "SquareHookBox96Outside"
@@ -5811,7 +5811,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "SquareMat",
-    "PreviewUri": "@previewImages/SquareMat.png",
+    "PreviewUri": "SquareMat.png",
     "TemplateFiles": [
       "SquareMat"
     ]
@@ -5844,7 +5844,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "SquareTuckBox48",
-    "PreviewUri": "@previewImages/SquareTuckBox48.png",
+    "PreviewUri": "SquareTuckBox48.png",
     "TemplateFiles": [
       "SquareTuckBox48"
     ]
@@ -5877,7 +5877,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "SquareTuckBox96",
-    "PreviewUri": "@previewImages/SquareTuckBox96.png",
+    "PreviewUri": "SquareTuckBox96.png",
     "TemplateFiles": [
       "SquareTuckBox96"
     ]
@@ -5909,7 +5909,7 @@ const COMPONENT_INFO = {
     "IsPrintingDisabled": false,
     "IsDisabled": false,
     "Key": "StripBoard",
-    "PreviewUri": "@previewImages/StripBoard.png",
+    "PreviewUri": "StripBoard.png",
     "TemplateFiles": [
       "StripBoard"
     ]
@@ -5942,7 +5942,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "StripChit",
-    "PreviewUri": "@previewImages/StripChit.png",
+    "PreviewUri": "StripChit.png",
     "TemplateFiles": [
       "StripChit"
     ]
@@ -5974,7 +5974,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "StripMat",
-    "PreviewUri": "@previewImages/StripMat.png",
+    "PreviewUri": "StripMat.png",
     "TemplateFiles": [
       "StripMat"
     ]
@@ -6006,7 +6006,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "TallBooklet",
-    "PreviewUri": "@previewImages/TallBooklet.png",
+    "PreviewUri": "TallBooklet.png",
     "TemplateFiles": [
       "TallBooklet20pg",
       "TallBooklet40pg"
@@ -6039,7 +6039,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "TarotBooklet",
-    "PreviewUri": "@previewImages/TarotBooklet.png",
+    "PreviewUri": "TarotBooklet.png",
     "TemplateFiles": [
       "TarotBooklet20pg",
       "TarotBooklet40pg"
@@ -6072,7 +6072,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "TarotDeck",
-    "PreviewUri": "@previewImages/TarotDeck.png",
+    "PreviewUri": "TarotDeck.png",
     "TemplateFiles": [
       "TarotDeck"
     ]
@@ -6105,7 +6105,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "TarotFolio",
-    "PreviewUri": "@previewImages/TarotFolio.png",
+    "PreviewUri": "TarotFolio.png",
     "TemplateFiles": [
       "TarotFolioBack",
       "TarotFolioFace"
@@ -6140,7 +6140,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "TarotHookBox40",
-    "PreviewUri": "@previewImages/TarotHookBox40.png",
+    "PreviewUri": "TarotHookBox40.png",
     "TemplateFiles": [
       "TarotHookBox40Inside",
       "TarotHookBox40Outside"
@@ -6175,7 +6175,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "TarotHookBox90",
-    "PreviewUri": "@previewImages/TarotHookBox90.png",
+    "PreviewUri": "TarotHookBox90.png",
     "TemplateFiles": [
       "TarotHookBox90Inside",
       "TarotHookBox90Outside"
@@ -6209,7 +6209,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "TarotTuckBox40",
-    "PreviewUri": "@previewImages/TarotTuckBox40.png",
+    "PreviewUri": "TarotTuckBox40.png",
     "TemplateFiles": [
       "TarotTuckBox40"
     ]
@@ -6242,7 +6242,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "TarotTuckBox90",
-    "PreviewUri": "@previewImages/TarotTuckBox90.png",
+    "PreviewUri": "TarotTuckBox90.png",
     "TemplateFiles": [
       "TarotTuckBox90"
     ]
@@ -6274,7 +6274,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "TokenSticker",
-    "PreviewUri": "@previewImages/TokenSticker.png",
+    "PreviewUri": "TokenSticker.png",
     "TemplateFiles": [
       "TokenSticker"
     ]
@@ -6307,7 +6307,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "TombstoneShard",
-    "PreviewUri": "@previewImages/TombstoneShard.png",
+    "PreviewUri": "TombstoneShard.png",
     "TemplateFiles": [
       "TombstoneShard"
     ]
@@ -6339,7 +6339,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "TradingDeck",
-    "PreviewUri": "@previewImages/TradingDeck.png",
+    "PreviewUri": "TradingDeck.png",
     "TemplateFiles": [
       "TradingDeck"
     ]
@@ -6372,7 +6372,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "TriangleTile",
-    "PreviewUri": "@previewImages/TriangleTile.png",
+    "PreviewUri": "TriangleTile.png",
     "TemplateFiles": [
       "TriangleTile"
     ]
@@ -6404,7 +6404,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "USGameDeck",
-    "PreviewUri": "@previewImages/USGameDeck.png",
+    "PreviewUri": "USGameDeck.png",
     "TemplateFiles": [
       "UsGameDeck"
     ]
@@ -6436,7 +6436,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "BOARD",
     "SimulatorCreationTask": "DECK",
     "Key": "USGameMat",
-    "PreviewUri": "@previewImages/USGameMat.png",
+    "PreviewUri": "USGameMat.png",
     "TemplateFiles": [
       "USGameMat"
     ]
@@ -6471,7 +6471,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "DigestPerfectBoundBook",
-    "PreviewUri": "@previewImages/DigestPerfectBoundBook.png"
+    "PreviewUri": "DigestPerfectBoundBook.png"
   },
   "JumboCoilBook": {
     "DisplayName": "Jumbo Coil Book",
@@ -6502,7 +6502,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "JumboCoilBook",
-    "PreviewUri": "@previewImages/JumboCoilBook.png"
+    "PreviewUri": "JumboCoilBook.png"
   },
   "LargeDualLayerBoard": {
     "DisplayName": "Large Dual Layer Board",
@@ -6534,7 +6534,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "LargeDualLayerBoard",
-    "PreviewUri": "@previewImages/LargeDualLayerBoard.png",
+    "PreviewUri": "LargeDualLayerBoard.png",
     "TemplateFiles": [
       "LargeDualLayerBoardBack",
       "LargeDualLayerBoardFace",
@@ -6569,7 +6569,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "LargeQuadFoldBoard",
-    "PreviewUri": "@previewImages/LargeQuadFoldBoard.png",
+    "PreviewUri": "LargeQuadFoldBoard.png",
     "TemplateFiles": [
       "LargeQuadfoldBoard"
     ]
@@ -6604,7 +6604,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "LetterPerfectBoundBook",
-    "PreviewUri": "@previewImages/LetterPerfectBoundBook.png"
+    "PreviewUri": "LetterPerfectBoundBook.png"
   },
   "MediumCoilBook": {
     "DisplayName": "Medium Coil Book",
@@ -6635,7 +6635,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "MediumCoilBook",
-    "PreviewUri": "@previewImages/MediumCoilBook.png",
+    "PreviewUri": "MediumCoilBook.png",
     "TemplateFiles": [
       "MediumCoilBookEven",
       "MediumCoilBookOdd"
@@ -6671,7 +6671,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "MediumDualLayerBoard",
-    "PreviewUri": "@previewImages/MediumDualLayerBoard.png",
+    "PreviewUri": "MediumDualLayerBoard.png",
     "TemplateFiles": [
       "MediumDualLayerBoardBack",
       "MediumDualLayerBoardFace",
@@ -6708,7 +6708,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "SmallDualLayerBoard",
-    "PreviewUri": "@previewImages/SmallDualLayerBoard.png",
+    "PreviewUri": "SmallDualLayerBoard.png",
     "TemplateFiles": [
       "SmallDualLayerBoardBack",
       "SmallDualLayerBoardFace",
@@ -6744,7 +6744,7 @@ const COMPONENT_INFO = {
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "TallMintTin",
-    "PreviewUri": "@previewImages/TallMintTin.png",
+    "PreviewUri": "TallMintTin.png",
     "TemplateFiles": [
       "TallMintTinBottom",
       "TallMintTinTop"
@@ -6776,7 +6776,7 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "VHSBox",
-    "PreviewUri": "@previewImages/VHSBox.png",
+    "PreviewUri": "VHSBox.png",
     "TemplateFiles": [
       "VHSBox"
     ]

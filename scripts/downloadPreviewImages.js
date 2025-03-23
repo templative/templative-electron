@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 const sharp = require('sharp');
 const FormData = require('form-data');
 const chalk = require('chalk');
-const outputPath = "/Users/oliverbarnum/Documents/git/templative-electron/src/main/templative/lib/componentPreviewImages";
+const outputPath = "/Users/oliverbarnum/Documents/git/templative-electron/src/assets/images/componentPreviewImages";
 const removeBgKey = "VH3fhy1v91iG2m6VbbBWLVy1" //process.env.REMOVE_BG_KEY;
 
 // Ensure the output directory exists

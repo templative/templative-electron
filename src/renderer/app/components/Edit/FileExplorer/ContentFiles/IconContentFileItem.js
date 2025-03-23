@@ -59,9 +59,9 @@ export default class IconContentFileItem extends React.Component {
             "STUDIO_GAMEDATA": studioIcon,
             "GAMECRAFTER": gamecrafterIcon,
         }
-        var icon = rulesIcon
+        var Icon = rulesIcon
         if (icons[this.props.contentType] !== undefined) {
-            icon = icons[this.props.contentType]
+            Icon = icons[this.props.contentType]
         }
         var numberSpaces = this.props.depth || 0
 
@@ -95,7 +95,7 @@ export default class IconContentFileItem extends React.Component {
             }
             <p className={`renameable-file`}>
                 <span style={{ marginLeft: `${(numberSpaces * 16) + 8}px` }}/>
-                {(this.props.hasIcon==undefined || this.props.hasIcon) && <img src={icon} className="tab-icon"/>}
+                {(this.props.hasIcon==undefined || this.props.hasIcon) && <Icon className="tab-icon"/>}
                 {filename}
             </p>
         </div>

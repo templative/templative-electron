@@ -242,10 +242,10 @@ module.exports = [
         }
     },
     {
-        description: "Set the PreviewUri of the Component to the @previewImages/${Key}.png",
+        description: "Set the PreviewUri of the Component to the ${Key}.png",
         condition: (component) => component.Key !== undefined,
         setValue: (component) => {
-            component.PreviewUri = `@previewImages/${component.Key}.png`;
+            component.PreviewUri = `${component.Key}.png`;
             return ["PreviewUri"];
         }
     },

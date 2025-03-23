@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const path = require('path');
 
 module.exports = {
   target: 'electron-renderer',
@@ -35,36 +34,32 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpe?g|svg|gif|ico)$/,
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+        exclude: [/node_modules\//, /src\/main\//]
+      },
+      {
+        test: /\.svg$/,
+        type: 'asset/resource',
+        exclude: [/node_modules\//, /src\/renderer\//],
+        generator: {
+          filename: 'assets/[name][ext]'
+        },
+      },
+      {
+        test: /\.(png|jpe?g|gif|ico)$/,
+        exclude: [/node_modules\//],
         type: 'asset/resource',
         generator: {
           filename: 'assets/[name][ext]'
-        }
-      },
-      {
-        test: /componentTemplates\/.+\.svg$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'componentTemplates/[name][ext]'
-        }
-      },
-      {
-        test: /componentPreviewImages\/.+\.(png)$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'componentPreviewImages/[name][ext]'
-        }
+        },
       }
     ],
   },
-  resolve: {
-    extensions: ['.js', '.jsx', '.css'],
-    alias: {
-      '@templates': path.resolve(__dirname, 'src/main/templative/lib/create/componentTemplates'),
-      '@previewImages': path.resolve(__dirname, 'src/main/templative/lib/componentPreviewImages'),
-    }
-  },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ]
+    new webpack.HotModuleReplacementPlugin(),
+  ],
+  resolve: {
+    extensions: ['.js', '.jsx', '.json', '.svg', '.png']
+  }
 };

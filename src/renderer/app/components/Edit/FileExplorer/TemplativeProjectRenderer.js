@@ -16,7 +16,7 @@ const fs = require("fs/promises")
 const { exec } = require('child_process');
 
 const ResourceSection = ({ 
-    iconSource, 
+    IconSource, 
     header, 
     directory, 
     isExtended, 
@@ -30,7 +30,7 @@ const ResourceSection = ({
     return (
         <div className="resource-section">
             <ResourceHeader 
-                iconSource={iconSource}
+                IconSource={IconSource}
                 header={header} 
                 directory={directory}
                 isExtended={isExtended}
@@ -356,7 +356,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                     <div className="actual-files">
                     {this.state.templatesDirectory !== this.state.overlaysDirectory ? (
                         <ResourceSection 
-                            iconSource={artIcon}
+                            IconSource={artIcon}
                             header="Art Files"
                             directory={artDirectory}
                             isExtended={isArtExtended}
@@ -392,7 +392,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                     />
                     
                     <ResourceSection 
-                        iconSource={gamedataIcon}
+                        IconSource={gamedataIcon}
                         header="Content Files"
                         directory={gamedataDirectory}
                         isExtended={isGameDataExtended}

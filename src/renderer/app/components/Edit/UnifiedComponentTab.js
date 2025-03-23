@@ -4,7 +4,7 @@ import "./EditPanel.css"
 import "./EditPanelTabs.css"
 import ContextMenu from "../ContextMenu";
 
-import unifiedComponentIcon from "./Icons/unifiedComponentIcon.svg"
+import UnifiedComponentIcon from "./Icons/unifiedComponentIcon.svg"
 
 export default class UnifiedComponentTab extends React.Component {       
     state = {
@@ -75,7 +75,7 @@ export default class UnifiedComponentTab extends React.Component {
             }
             
             <a className={`nav-link ${isSelected && "active"} ${this.props.isItalics && "italics-tab"}`}>
-                <img className="tab-icon" src={unifiedComponentIcon} alt="Tab icon"/>
+                <UnifiedComponentIcon className="tab-icon"/>
                 {tabName}
                 {this.props.tabbedFile.canClose && 
                     <button 

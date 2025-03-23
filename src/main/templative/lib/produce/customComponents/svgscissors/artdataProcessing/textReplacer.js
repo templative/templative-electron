@@ -45,7 +45,9 @@ async function textReplaceInFile(contents, textReplacements, gamedata, productio
           // Do NOT escape XML special characters for text replacements
           // This allows XML tags like <tspan> to be properly injected
           
-          contents = contents.replace(key, value || "");
+          // Replace all occurrences of the key with the value using a global regex
+          const regex = new RegExp(escapeRegExp(key), 'g');
+          contents = contents.replace(regex, value || "");
       }
       return contents;
   } catch (error) {

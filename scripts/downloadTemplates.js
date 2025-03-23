@@ -44,7 +44,7 @@ function updateSvgDimensions(svgContent, width, height) {
 
 async function processComponents() {
   // Create the componentTemplates directory if it doesn't exist
-  const templatesDir = "/Users/oliverbarnum/Documents/git/templative-electron/src/main/templative/lib/create/componentTemplates";
+  const templatesDir = "/Users/oliverbarnum/Documents/git/templative-electron/src/assets/images/componentTemplates";
   if (!fs.existsSync(templatesDir)) {
     fs.mkdirSync(templatesDir, { recursive: true });
   }
