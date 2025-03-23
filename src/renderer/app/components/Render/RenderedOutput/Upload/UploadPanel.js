@@ -1,7 +1,7 @@
 import React from "react";
 import "./UploadPanel.css"
 import UploadControls from "./UploadControls";
-import { trackEvent } from "@aptabase/electron/renderer";
+// import { trackEvent } from "@aptabase/electron/renderer";
 import GameCrafterLoginControls from "./GameCrafterLogin";
 const { ipcRenderer } = require('electron');
 import { channels } from "../../../../../../shared/constants"
@@ -24,7 +24,7 @@ export default class UploadPanel extends React.Component {
     }
 
     componentDidMount = async () => {
-        trackEvent("view_uploadPanel")
+        // trackEvent("view_uploadPanel")
         await this.checkTgcSession()
         
         ipcRenderer.on(channels.GIVE_TGC_LOGIN_STATUS, async (_, data) => {
@@ -98,7 +98,7 @@ export default class UploadPanel extends React.Component {
         this.setState({isIncludingStock: !this.state.isIncludingStock})
     }
     upload = async () => {
-        trackEvent("upload")
+        // trackEvent("upload")
         var data = { 
             gameDirectoryRootPath: this.props.templativeRootDirectoryPath,
             outputDirectorypath: this.props.outputFolderPath,

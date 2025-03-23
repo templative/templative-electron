@@ -1,5 +1,5 @@
 import React from "react";
-import { trackEvent } from "@aptabase/electron/renderer";
+// import { trackEvent } from "@aptabase/electron/renderer";
 
 import socket from "./utility/socket";
 import { channels } from '../../shared/constants';
@@ -42,7 +42,7 @@ class App extends React.Component {
         // socket.disconnect()
     }
     async openTemplativeDirectoryPicker() {
-        trackEvent("project_change")
+        // trackEvent("project_change")
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG)
     }
     async openCreateTemplativeProjectDirectoryPicker() {
@@ -61,14 +61,14 @@ class App extends React.Component {
             this.setState({templativeRootDirectoryPath: undefined, currentView: "start"})
             return
         }
-        trackEvent("project_load_last", { directory: lastProjectDirectory })
+        // trackEvent("project_load_last", { directory: lastProjectDirectory })
         await ipcRenderer.invoke(channels.TO_SERVER_GIVE_CURRENT_PROJECT, lastProjectDirectory)
         
         this.setState({templativeRootDirectoryPath: lastProjectDirectory, currentView: "editProject"})
     }
     componentDidMount = async () => {
         ipcRenderer.on(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, (event, templativeRootDirectoryPath) => {
-            trackEvent("project_load_success", { directory: templativeRootDirectoryPath })
+            // trackEvent("project_load_success", { directory: templativeRootDirectoryPath })
             writeLastOpenedProject(templativeRootDirectoryPath)
             this.setState({
                 templativeRootDirectoryPath: templativeRootDirectoryPath,
@@ -96,11 +96,11 @@ class App extends React.Component {
             this.setState({loggedIn: false, currentView: "login"})
         })
         ipcRenderer.on(channels.GIVE_UNABLE_TO_LOG_IN, (_) => {
-            trackEvent("user_login_error", { reason: "server_error" })
+            // trackEvent("user_login_error", { reason: "server_error" })
             this.setState({loggedIn: false, loginStatus: "We were unable to log you in. Please try again later."})
         })
         ipcRenderer.on(channels.GIVE_INVALID_LOGIN_CREDENTIALS, (_) => {
-            trackEvent("user_login_error", { reason: "invalid_credentials" })
+            // trackEvent("user_login_error", { reason: "invalid_credentials" })
             this.setState({loggedIn: false, loginStatus: "Invalid login credentials."})
         })
         ipcRenderer.on(channels.GIVE_OPEN_CREATE_PROJECT_VIEW, (_) => {
@@ -120,18 +120,18 @@ class App extends React.Component {
         this.setState({currentRoute: route})
     }
     attemptLogin = async () => {    
-        trackEvent("user_login_attempt", { email: this.state.email })
+        // trackEvent("user_login_attempt", { email: this.state.email })
         await ipcRenderer.invoke(channels.TO_SERVER_LOGIN, this.state.email, this.state.password)
     }
     goToRegisterWebpage = async()=>{
-        trackEvent("user_register_click")
+        // trackEvent("user_register_click")
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_URL, "https://templative-server-84c7a76c7ddd.herokuapp.com/register")
     }
     render() {
         let element = <></>
         
         if (!this.state.loggedIn) {
-            trackEvent("view_loginView")
+            // trackEvent("view_loginView")
             element = <LoginView 
                 updateEmailCallback={this.updateEmail} 
                 updatePasswordCallback={this.updatePassword} 

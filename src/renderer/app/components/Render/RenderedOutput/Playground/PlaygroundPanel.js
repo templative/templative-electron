@@ -2,7 +2,7 @@ import React from "react";
 import "./PlaygroundPanel.css"
 import { channels } from "../../../../../../shared/constants";
 import {writeLastUseTableTopPlaygroundDirectory, getLastUsedTableTopPlaygroundDirectory} from "../../../../utility/SettingsManager"
-import { trackEvent } from "@aptabase/electron/renderer";
+// import { trackEvent } from "@aptabase/electron/renderer";
 import TemplativePurchaseButton from "../../../TemplativePurchaseButton";
 import PlaygroundOutputExplorer from "./PlaygroundOutputExplorer";
 import playgroundLogo from "./playgroundLogo.png"
@@ -19,7 +19,7 @@ export default class PlaygroundPanel extends React.Component {
     }
     
     componentDidMount = async () => {
-        trackEvent("view_playgroundPanel")
+        // trackEvent("view_playgroundPanel")
 
         ipcRenderer.on(channels.GIVE_PLAYGROUND_FOLDER, (event, playgroundFolder) => {
             writeLastUseTableTopPlaygroundDirectory(playgroundFolder)
