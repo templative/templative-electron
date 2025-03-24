@@ -10,6 +10,8 @@
  * Usage: node meepleDesigner.js --prompt "Medic" --output "./output.svg" --color "#FF0000"
  */
 
+// THIS SCRIPT RELIES ON CANVAS WHICH BREAKS THE CI/CD
+
 const fs = require('fs-extra');
 const path = require('path');
 const { DOMParser, XMLSerializer } = require('@xmldom/xmldom');
