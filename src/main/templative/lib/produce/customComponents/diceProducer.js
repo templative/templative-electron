@@ -4,26 +4,27 @@ const svgscissors = require('./svgscissors/main');
 const path = require('path');
 const defineLoader = require('../../manage/defineLoader');
 const { ComponentBackData } = require('../../manage/models/gamedata');
+const { SvgFileCache } = require('./svgscissors/modules/svgFileCache');
 
 class DiceProducer extends Producer {
-  static async createComponent(produceProperties, componentComposition, componentData, componentArtdata, fontCache) {
+  static async createComponent(produceProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache = new SvgFileCache()) {
     const piecesDataBlob = await defineLoader.loadPiecesGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"]);
     if (!piecesDataBlob || Object.keys(piecesDataBlob).length === 0) {
       console.log(`Skipping ${componentComposition.componentCompose["name"]} component due to missing pieces gamedata.`);
       return;
     }
 
-    await DiceProducer.createComponentBackDataPieces(produceProperties, componentComposition, componentData, componentArtdata, piecesDataBlob, fontCache);
+    await DiceProducer.createComponentBackDataPieces(produceProperties, componentComposition, componentData, componentArtdata, piecesDataBlob, fontCache, svgFileCache);
   }
 
-  static async createComponentBackDataPieces(produceProperties, componentComposition, componentData, componentArtdata, piecesDataBlob, fontCache) {
+  static async createComponentBackDataPieces(produceProperties, componentComposition, componentData, componentArtdata, piecesDataBlob, fontCache, svgFileCache = new SvgFileCache()) {
     const componentFolderName = componentComposition.componentCompose["name"];
     
     const componentBackOutputDirectory = await outputWriter.createComponentFolder(componentFolderName, produceProperties.outputDirectoryPath);
     await DiceProducer.writeComponentInstructions(componentComposition, componentBackOutputDirectory, componentFolderName, piecesDataBlob);
     
     const componentBackData = new ComponentBackData(componentData.studioDataBlob, componentData.gameDataBlob, componentData.componentDataBlob);
-    await svgscissors.createArtFilesForComponent(componentComposition, componentArtdata, componentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties, fontCache);
+    await svgscissors.createArtFilesForComponent(componentComposition, componentArtdata, componentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache);
   }
 
   static async writeComponentInstructions(compositions, componentBackOutputDirectory, componentFolderName, piecesGamedata) {

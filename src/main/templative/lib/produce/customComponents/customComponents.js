@@ -13,6 +13,7 @@ const { COMPONENT_INFO } = require('../../../../../shared/componentInfo');
 const { BackProducer } = require('./backProducer');
 const { FrontOnlyProducer } = require('./frontOnlyProducer');
 const { DiceProducer } = require('./diceProducer');
+const { SvgFileCache } = require('./svgscissors/modules/svgFileCache');
 
 async function getComponentArtdata(componentName, inputDirectoryPath, componentComposition) {
   const artDatas = {};
@@ -29,7 +30,7 @@ async function getComponentArtdata(componentName, inputDirectoryPath, componentC
   return new ComponentArtdata(artDatas);
 }
 
-async function produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache) {
+async function produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache = new SvgFileCache()) {
   const componentName = componentComposition.componentCompose["name"];
 
   const componentDataBlob = await defineLoader.loadComponentGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["componentGamedataFilename"]);
@@ -58,10 +59,10 @@ async function produceCustomComponent(produceProperties, gamedata, componentComp
   }
 
   console.log(`Creating art assets for ${componentName} component.`);
-  await producer.createComponent(produceProperties, componentComposition, componentData, componentArtdata, fontCache);
+  await producer.createComponent(produceProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache);
 }
 
-async function produceCustomComponentPreview(previewProperties, gamedata, componentComposition, fontCache) {
+async function produceCustomComponentPreview(previewProperties, gamedata, componentComposition, fontCache, svgFileCache = new SvgFileCache()) {
   const componentName = componentComposition.componentCompose["name"];
 
   const componentDataBlob = await defineLoader.loadComponentGamedata(previewProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["componentGamedataFilename"]);
@@ -91,7 +92,7 @@ async function produceCustomComponentPreview(previewProperties, gamedata, compon
     return;
   }
   console.log(`Creating art assets for ${componentName} component ${previewProperties.pieceName}.`);
-  await producer.createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata, fontCache);
+  await producer.createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache);
 }
 
 module.exports = { produceCustomComponent, produceCustomComponentPreview };

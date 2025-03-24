@@ -34,21 +34,7 @@ function sanitizeSvgContent(content) {
       .replace(/&(?!amp;|lt;|gt;|quot;|apos;|#\d+;|#x[0-9a-fA-F]+;)/g, '&amp;');
 }
 
-/**
- * Add newlines to content
- * @param {string} contents - SVG content
- * @returns {Promise<string>} - Content with newlines
- */
-async function addNewlines(contents) {
-  if (!contents) {
-    console.error("Warning: contents is null or undefined");
-    return "";
-  }
-  return contents.replace(/NEWLINE/g, "\n");
-}
-
 module.exports = {
   convertElementToString,
   sanitizeSvgContent,
-  addNewlines
 }; 

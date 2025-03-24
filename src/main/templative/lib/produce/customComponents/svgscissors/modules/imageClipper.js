@@ -1,13 +1,17 @@
 const chalk = require('chalk');
 const { loadSvg } = require('../../../../distribute/simulator/imageProcessing/imageUtils');
 const { JSDOM } = require('jsdom');
+const { SvgFileCache } = require('./svgFileCache.js');
 const CLIPPING_ELEMENT_ID = "clipping";
 
+// Create a default cache instance for backward compatibility
+const defaultSvgFileCache = new SvgFileCache();
+
 // Takes an svg file and clips the visibility of its contents to the bounds of the clipSvgElementId
-async function clipSvgFileToClipFile(svgFilepath, clipSvgFilepath, clipSvgElementId=CLIPPING_ELEMENT_ID) {
-    const svgContent = await loadSvg(svgFilepath);
-    const clipSvgContent = await loadSvg(clipSvgFilepath);
-    
+async function clipSvgFileToClipFile(svgFilepath, clipSvgFilepath, clipSvgElementId=CLIPPING_ELEMENT_ID, svgFileCache=defaultSvgFileCache) {
+    const svgContent = await svgFileCache.readSvgFile(svgFilepath);
+    const clipSvgContent = await svgFileCache.readSvgFile(clipSvgFilepath);
+        
     if (!svgContent || !clipSvgContent) {
         console.log(chalk.red(`!!! Failed to load SVG files for clipping.`));
         return false;
@@ -16,9 +20,10 @@ async function clipSvgFileToClipFile(svgFilepath, clipSvgFilepath, clipSvgElemen
     return clipSvgContentToElement(svgContent, clipSvgContent, clipSvgElementId);
 }
 
-async function clipSvgContentToClipFile(svgContent, clipSvgFilepath, clipSvgElementId=CLIPPING_ELEMENT_ID) {
-    const clipSvgContent = await loadSvg(clipSvgFilepath);
-    
+async function clipSvgContentToClipFile(svgContent, clipSvgFilepath, clipSvgElementId=CLIPPING_ELEMENT_ID, svgFileCache=defaultSvgFileCache) {
+
+    const clipSvgContent = await svgFileCache.readSvgFile(clipSvgFilepath);
+        
     if (!clipSvgContent) {
         console.log(chalk.red(`!!! Failed to load SVG files for clipping.`));
         return false;
@@ -122,6 +127,7 @@ async function clipSvgContentToElement(svgContent, clipSvgContent, clipSvgElemen
 }
 
 module.exports = {
+    CLIPPING_ELEMENT_ID,
     clipSvgFileToClipFile,
     clipSvgContentToClipFile,
 }

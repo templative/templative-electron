@@ -28,7 +28,7 @@
         "publishDryRun": "bash ./build.sh publishDryRun",
         "== Testing ===": "",
         "test": "node ./scripts/test-templative.js",
-        "test-distribute": "node ./scripts/test-templative.js --input=/Users/oliverbarnum/Documents/git/peace-of-westphalia",
+        "test-distribute": "node ./scripts/test-templative.js --input=/Users/oliverbarnum/Documents/git/apcw-defines",
         "test-webpack": "electron-forge start --no-launch && node ./scripts/test-templative.js",
         "test-webpack-distribute": "electron-forge start --no-launch && node ./scripts/test-templative.js --input=/Users/oliverbarnum/Documents/git/peace-of-westphalia",
         "test-giant-project": "node ./scripts/test-giant-project.js",

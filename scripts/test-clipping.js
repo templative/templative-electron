@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs').promises;
 const chalk = require('chalk');
 const { clipSvgFileToClipFile } = require('../src/main/templative/lib/produce/customComponents/svgscissors/modules/imageClipper');
-const { convertSvgToPng } = require('../src/main/templative/lib/produce/customComponents/svgscissors/modules/fileConversion/svgConverter');
+// const { convertSvgToPng } = require('../src/main/templative/lib/produce/customComponents/svgscissors/modules/fileConversion/svgConverter');
 
 // Hardcoded paths for testing
 const SVG_SOURCE_PATH = "/Users/oliverbarnum/Documents/git/peace-of-westphalia/output/westphalia_giftVersion_0.0.0_2025-03-12_06-51-50/pawnStickersTest/pawnStickersTest-green.svg";
@@ -29,7 +29,8 @@ async function runTests() {
       CLIP_ELEMENT_ID
     );
     await fs.writeFile(OUTPUT_PATH + ".svg", result);
-    await convertSvgToPng(OUTPUT_PATH + ".svg", [300, 525], OUTPUT_PATH + ".png");
+    console.error("Deprecated: convertSvgToPng");
+    // await convertSvgToPng(OUTPUT_PATH + ".svg", [300, 525], OUTPUT_PATH + ".png");
     
     if (result) {
       console.log(chalk.green('✓ SVG clipping completed successfully'));

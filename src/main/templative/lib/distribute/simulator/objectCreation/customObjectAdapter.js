@@ -2,7 +2,7 @@ const { createHash } = require('crypto');
 const chalk = require('chalk');
 const fs = require('fs').promises;
 const { clipSvgFileToClipFile } = require('../../../produce/customComponents/svgscissors/modules/imageClipper');
-const { exportSvgToImage } = require('../../../produce/customComponents/svgscissors/modules/fileConversion/svgConverter');
+const { convertSvgContentToPng } = require('../../../produce/customComponents/svgscissors/modules/fileConversion/svgConverter');
 const { createCompositeImage, placeAndUploadBackImage } = require('../imageProcessing/compositeImageCreator');
 const { safeLoadImage } = require('../imageProcessing/imageUtils');
 const { uploadToS3 } = require('../imageProcessing/imageUploader');
@@ -213,13 +213,14 @@ async function clipFrontImageAndUploadToS3(componentInstructions, instruction, c
   const outputDirectory = path.dirname(instruction.filepath)
   const componentName = componentInstructions.uniqueName || componentInstructions.name
   const clippedPngFileName = `${componentName}-${instruction.name}-clipped`
-  const clippedPngFilepath = await exportSvgToImage(clippedSvgFilepath, componentInfo.DimensionsPixels, clippedPngFileName, outputDirectory)
-  const clippedImage = await safeLoadImage(clippedPngFilepath, componentInfo.DimensionsPixels)
+  const outputFilepath = path.join(outputDirectory, `${clippedPngFileName}.png`)
+  await convertSvgContentToPng(imageContent, componentInfo.DimensionsPixels, outputFilepath)
+  const clippedImage = await safeLoadImage(outputFilepath, componentInfo.DimensionsPixels)
   
   const clippedImgurUrl = await uploadToS3(clippedImage)
   if (!clippedImgurUrl) {
     console.log(chalk.red(`!!! Failed to upload clipped image for ${componentInstructions.uniqueName}, falling back to local file.`));
-    return clippedPngFilepath;
+    return outputFilepath;
   }
   return clippedImgurUrl;
 }

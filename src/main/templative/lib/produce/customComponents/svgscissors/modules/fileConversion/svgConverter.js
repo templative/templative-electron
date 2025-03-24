@@ -1,88 +1,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 const { Resvg } = require('@resvg/resvg-js');
-const { preprocessSvgText } = require('./textWrapping/index.js');
 
-// Simple locking mechanism to prevent multiple rendering processes from conflicting
-const activeTasks = new Map();
-
-/**
- * Convert SVG to PNG
- * @param {string} svgFilepath - Path to SVG file
- * @param {number[]} imageSizePixels - Width and height in pixels
- * @param {string} outputFilepath - Path to output PNG file
- * @returns {Promise<string>} - Path to output PNG file
- */
-async function convertSvgToPng(svgFilepath, imageSizePixels, outputFilepath) {
-  try {
-    // Read SVG file
-    const svgData = await fs.readFile(svgFilepath, 'utf8');
-    
-    // Preprocess SVG to handle text wrapping and other issues
-    const processedSvgData = preprocessSvgText(svgData);
-    // Write processed SVG data to a debug file for inspection
-    // try {
-    //   const debugFilePath = `${outputFilepath}.debug.svg`;
-    //   await fs.writeFile(debugFilePath, processedSvgData, 'utf8');
-    //   // console.log(`Wrote processed SVG data to ${debugFilePath}`);
-    // } catch (debugWriteError) {
-    //   console.error(`Error writing debug SVG file: ${debugWriteError.message}`);
-    //   // Continue with conversion even if debug file writing fails
-    // }
-    // Create Resvg instance
-    let resvg;
-    try {
-      resvg = new Resvg(processedSvgData, {
-        font: {
-          loadSystemFonts: true
-        },
-        fitTo: {
-          mode: 'width',
-          value: imageSizePixels[0]
-        }
-      });
-    } catch (resvgError) {
-      console.error(`Error creating Resvg instance: ${resvgError.message}`);
-      
-      // Try to create a fallback image
-      try {
-        console.log('⚠️ Creating fallback image...');
-        
-        // Create a minimal SVG as a fallback
-        const minimalSvg = createFallbackSvg(imageSizePixels);
-        
-        resvg = new Resvg(minimalSvg, {
-          font: {
-            loadSystemFonts: true
-          },
-          fitTo: {
-            mode: 'width',
-            value: imageSizePixels[0]
-          }
-        });
-        
-        console.log('🆘 Created fallback placeholder image');
-      } catch (finalError) {
-        console.error('❌ All conversion attempts failed');
-        throw resvgError; // Throw the original error
-      }
-    }
-    
-    const pngData = resvg.render();
-    const pngBuffer = pngData.asPng();
-    
-    // Ensure output directory exists
-    await fs.ensureDir(path.dirname(outputFilepath));
-    
-    // Save PNG file
-    await fs.writeFile(outputFilepath, pngBuffer);
-    
-    return outputFilepath;
-  } catch (err) {
-    console.error(`Error converting SVG to PNG: ${err.message}`);
-    throw err;
-  }
-}
 
 /**
  * Create a fallback SVG
@@ -96,7 +15,8 @@ function createFallbackSvg(imageSizePixels) {
   return `
     <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
       <rect width="${width}" height="${height}" fill="#f0f0f0" />
-      <text x="${width/2}" y="${height/2}" font-family="Arial" font-size="24" text-anchor="middle">Error rendering SVG</text>
+      <text x="${width/2}" y="${height/2}" font-family="Arial" font-size="24" text-anchor="middle" dominant-baseline="middle">Error rendering SVG</text>
+      <text x="${width/2}" y="${height/2 + 30}" font-family="Arial" font-size="16" text-anchor="middle" dominant-baseline="middle">Please check the console for details</text>
     </svg>
   `;
 }
@@ -134,70 +54,69 @@ async function convertToJpg(absoluteOutputDirectory, name, pngFilepath) {
   }
 }
 
-/**
- * Export SVG to image (PNG and optionally JPG)
- * @param {string} artFileOutputFilepath - Path to the SVG file
- * @param {number[]} imageSizePixels - Width and height in pixels
- * @param {string} name - Base name for the output files
- * @param {string} outputDirectory - Directory to save the output files
- * @returns {Promise<void>}
- */
-async function exportSvgToImage(artFileOutputFilepath, imageSizePixels, name, outputDirectory) {
-  // Create a unique key for this task
-  const taskKey = `${outputDirectory}_${name}`;
-  
-  // Check if there's already a task running for this file
-  if (activeTasks.has(taskKey)) {
-    try {
-      // Wait for the existing task to complete
-      await activeTasks.get(taskKey);
-      return;
-    } catch (error) {
-      console.error(`Previous rendering process for ${name} failed: ${error.message}`);
-      // Continue with our own attempt
-    }
-  }
-  
-  // Create a promise that will be resolved or rejected when this task completes
-  let resolveTask, rejectTask;
-  const taskPromise = new Promise((resolve, reject) => {
-    resolveTask = resolve;
-    rejectTask = reject;
-  });
-  
-  // Register this task
-  activeTasks.set(taskKey, taskPromise);
-  
+
+async function convertSvgContentToPng(svgString, imageSizePixels, outputFilepath) {
   try {
-    const absoluteSvgFilepath = path.normalize(path.resolve(artFileOutputFilepath));
-    const absoluteOutputDirectory = path.normalize(path.resolve(outputDirectory));
-    const pngFinalFilepath = path.normalize(path.join(absoluteOutputDirectory, `${name}.png`));
-
-    // Ensure output directory exists
-    await fs.ensureDir(absoluteOutputDirectory);
-
-    // Check if the SVG file exists
-    if (!await fs.pathExists(absoluteSvgFilepath)) {
-      throw new Error(`SVG file does not exist: ${absoluteSvgFilepath}`);
+    let resvg;
+    try {
+      resvg = new Resvg(svgString, {
+        font: {
+          loadSystemFonts: true,
+          defaultFontFamily: 'Arial',
+          fallbackFamilies: ['Helvetica', 'sans-serif']
+        },
+        fitTo: {
+          mode: 'width',
+          value: imageSizePixels[0]
+        }
+      });      
+    } catch (resvgError) {
+      console.error(`Error creating Resvg instance: ${resvgError.message}`);
+      console.error(resvgError.stack);
+      
+      // Try to create a fallback image
+      try {
+        console.log('⚠️ Creating fallback image...');
+        
+        // Create a minimal SVG as a fallback
+        const minimalSvg = createFallbackSvg(imageSizePixels);
+        
+        resvg = new Resvg(minimalSvg, {
+          font: {
+            loadSystemFonts: true,
+            defaultFontFamily: 'Arial',
+            fallbackFamilies: ['Helvetica', 'sans-serif']
+          },
+          fitTo: {
+            mode: 'width',
+            value: imageSizePixels[0]
+          }
+        });
+        
+        console.log('🆘 Created fallback placeholder image');
+      } catch (finalError) {
+        console.error('❌ All conversion attempts failed');
+        throw resvgError; // Throw the original error
+      }
     }
-
-    // Convert SVG to PNG
-    await convertSvgToPng(absoluteSvgFilepath, imageSizePixels, pngFinalFilepath);
-    return pngFinalFilepath
-  } catch (error) {
-    rejectTask(error);
-    throw error;
-  } finally {
-    // Clean up the task after a delay
-    setTimeout(() => {
-      activeTasks.delete(taskKey);
-    }, 1000);
+    
+    const pngData = resvg.render();
+    const pngBuffer = pngData.asPng();
+    
+    // Ensure output directory exists - use the directory cache to avoid repeated calls
+    const outputDir = path.dirname(outputFilepath);
+    await fs.ensureDir(outputDir);
+    await fs.writeFile(outputFilepath, pngBuffer);
+    
+    return outputFilepath;
+  } catch (err) {
+    console.error(`Error converting SVG string to PNG: ${err.message}`);
+    throw err;
   }
 }
 
 module.exports = {
-  convertSvgToPng,
   createFallbackSvg,
   convertToJpg,
-  exportSvgToImage
+  convertSvgContentToPng
 }; 

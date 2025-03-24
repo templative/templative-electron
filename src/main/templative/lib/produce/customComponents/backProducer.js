@@ -8,9 +8,10 @@ const defineLoader = require('../../manage/defineLoader');
 const { COMPONENT_INFO } = require('../../../../../shared/componentInfo');
 const { ComponentBackData } = require('../../manage/models/gamedata');
 const chalk = require('chalk');
+const { SvgFileCache } = require('./svgscissors/modules/svgFileCache');
 
 class BackProducer extends Producer {
-    static async createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata, fontCache) {
+    static async createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache = new SvgFileCache()) {
         const componentTypeInfo = COMPONENT_INFO[componentComposition.componentCompose["type"]];
         const defaultPieceGamedataBlob = [{ 
             "name": componentComposition.componentCompose["name"],
@@ -42,14 +43,14 @@ class BackProducer extends Producer {
 
             uniqueComponentBackData = new ComponentBackData(componentData.studioDataBlob, componentData.gameDataBlob, componentData.componentDataBlob, componentBackDataBlob, sourcedVariableNamesSpecificToPieceOnBackArtData, uniqueHashOfSourceData);
             
-            await svgscissors.createArtFileForPiece(componentComposition, componentArtdata, uniqueComponentBackData, piecesDataBlob, previewProperties.outputDirectoryPath, previewProperties, fontCache);
+            await svgscissors.createArtFileForPiece(componentComposition, componentArtdata, uniqueComponentBackData, piecesDataBlob, previewProperties.outputDirectoryPath, previewProperties, fontCache, svgFileCache);
         }
         if (!foundPiece) {
             console.warn(chalk.yellow(`There is no piece named ${previewProperties.pieceName} in the pieces gamedata for ${componentComposition.componentCompose["name"]}.`));
         }
     }
     
-    static async createComponent(produceProperties, componentComposition, componentData, componentArtdata, fontCache) {
+    static async createComponent(produceProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache = new SvgFileCache()) {
         const componentTypeInfo = COMPONENT_INFO[componentComposition.componentCompose["type"]];
         const defaultPieceGamedataBlob = [{ 
             "name": componentComposition.componentCompose["name"], 
@@ -90,7 +91,7 @@ class BackProducer extends Producer {
                 console.log(`Skipping ${componentComposition.componentCompose['name']}${uniqueComponentBackData.pieceUniqueBackHash} due to not have pieces to make. Skipped the following peices: ${skippedPieces}`);
                 continue;
             }
-            await BackProducer.createComponentBackDataPieces(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, componentComposition, produceProperties, componentArtdata, piecesDataBlob, fontCache);
+            await BackProducer.createComponentBackDataPieces(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, componentComposition, produceProperties, componentArtdata, piecesDataBlob, fontCache, svgFileCache);
         }
     }
     
@@ -146,13 +147,13 @@ class BackProducer extends Producer {
         return createHash('md5').update(pieceBackSourceHash).digest('hex').slice(0, 8);
     }
 
-    static async createComponentBackDataPieces(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, compositions, produceProperties, componentArtdata, piecesDataBlob, fontCache) {
+    static async createComponentBackDataPieces(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, compositions, produceProperties, componentArtdata, piecesDataBlob, fontCache, svgFileCache = new SvgFileCache()) {
         const pieceUniqueBackHash = uniqueComponentBackData.pieceUniqueBackHash ? `_${uniqueComponentBackData.pieceUniqueBackHash}` : '';
         const componentFolderName = `${compositions.componentCompose['name']}${pieceUniqueBackHash}`;
 
         const componentBackOutputDirectory = await outputWriter.createComponentFolder(componentFolderName, produceProperties.outputDirectoryPath);
         await BackProducer.createUniqueComponentBackInstructions(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, compositions, componentBackOutputDirectory, componentFolderName, piecesDataBlob);
-        await svgscissors.createArtFilesForComponent(compositions, componentArtdata, uniqueComponentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties, fontCache);
+        await svgscissors.createArtFilesForComponent(compositions, componentArtdata, uniqueComponentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache);
     }
 
     static async createUniqueComponentBackInstructions(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, compositions, componentBackOutputDirectory, componentFolderName, piecesGamedata) {

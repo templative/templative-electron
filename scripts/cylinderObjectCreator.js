@@ -2,7 +2,7 @@ import {getColorValueHex, allColorVariations} from "../src/shared/stockComponent
 import { Image } from 'image-js';
 import fs from 'fs';
 import path from 'path';
-import {exportSvgToImage} from "../src/main/templative/lib/produce/customComponents/svgscissors/svgRenderer.js"
+import {convertSvgContentToPng} from "../src/main/templative/lib/produce/customComponents/svgscissors/svgRenderer.js"
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 import dotenv from 'dotenv';
 
@@ -206,7 +206,7 @@ async function createAndUploadCylinders() {
         console.log(`Created normal map SVG file: ${normalMapFilename}`);
         
         // Convert SVG normal map to PNG
-        await exportSvgToImage(normalMapFilename, 15, `cylinder_normal`, normalMapPngsDirectory);
+        await convertSvgContentToPng(normalMapContent, 15, normalMapPngFilename);
         console.log(`Created normal map PNG file: ${normalMapPngFilename}`);
     }
     
@@ -244,7 +244,7 @@ async function createAndUploadCylinders() {
             console.log(`Created texture SVG file: ${textureFilename}`);
             
             // Convert SVG texture to PNG
-            await exportSvgToImage(textureFilename, 15, `texture_${colorKey}`, texturePngsDirectory);
+            await convertSvgContentToPng(textureContent, 15, texturePngFilename);
             console.log(`Created texture PNG file: ${texturePngFilename}`);
             
             // Delete the SVG file after exporting to PNG

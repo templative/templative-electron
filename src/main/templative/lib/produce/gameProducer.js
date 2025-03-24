@@ -14,6 +14,7 @@ const PreviewProperties = require('../manage/models/produceProperties').PreviewP
 const GameData = require('../manage/models/gamedata').GameData;
 const ComponentComposition = require('../manage/models/composition');
 const FontCache = require('./customComponents/svgscissors/fontCache').FontCache;
+const { SvgFileCache } = require('./customComponents/svgscissors/modules/svgFileCache');
 
 function getPreviewsPath() {
     let base_path;
@@ -66,8 +67,11 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     await clearPreviews(outputDirectoryPath);
     const isClipped = false
     const previewProperties = new PreviewProperties(gameRootDirectoryPath, outputDirectoryPath, pieceName, language, isClipped);
+
     const fontCache = new FontCache();
-    await customComponents.produceCustomComponentPreview(previewProperties, gameData, componentComposition, fontCache);
+    const svgFileCache = new SvgFileCache();
+    
+    await customComponents.produceCustomComponentPreview(previewProperties, gameData, componentComposition, fontCache, svgFileCache);
     console.log(`Wrote previews to ${outputDirectoryPath}`);
 }
 
@@ -95,18 +99,28 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
     await outputWriter.updateLastOutputFolder(gameRootDirectoryPath, gameCompose["outputDirectory"], outputDirectoryPath);
     console.log(`Producing ${path.normalize(outputDirectoryPath)}`);
 
-    const tasks = [];
-    tasks.push(outputWriter.copyGameFromGameFolderToOutput(gameDataBlob, outputDirectoryPath));
+    const gameTasks = [];
+    gameTasks.push(outputWriter.copyGameFromGameFolderToOutput(gameDataBlob, outputDirectoryPath));
 
     const studioDataBlob = await defineLoader.loadStudio(gameRootDirectoryPath);
-    tasks.push(outputWriter.copyStudioFromGameFolderToOutput(studioDataBlob, outputDirectoryPath));
+    gameTasks.push(outputWriter.copyStudioFromGameFolderToOutput(studioDataBlob, outputDirectoryPath));
 
+    const rules = await defineLoader.loadRules(gameRootDirectoryPath);
+    gameTasks.push(rulesMarkdownProcessor.produceRulebook(rules, outputDirectoryPath));
+
+    await Promise.all(gameTasks);
+    
     const componentsCompose = await defineLoader.loadComponentCompose(gameRootDirectoryPath);
 
     const gameData = new GameData(studioDataBlob, gameDataBlob);
     const isClipped = false
     const produceProperties = new ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage, isClipped);
+    
     const fontCache = new FontCache();
+    const svgFileCache = new SvgFileCache();
+    
+    const componentTasks = [];
+    
     for (const componentCompose of componentsCompose) {
         const isProducingOneComponent = componentFilter != null;
         const isMatchingComponentFilter = isProducingOneComponent && componentCompose["name"] === componentFilter;
@@ -157,20 +171,15 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
         }
         const componentComposition = new ComponentComposition(gameCompose, componentCompose);
 
-        tasks.push(produceGameComponent(produceProperties, gameData, componentComposition, fontCache));
+        componentTasks.push(produceGameComponent(produceProperties, gameData, componentComposition, fontCache, svgFileCache));
     }
-
-    const rules = await defineLoader.loadRules(gameRootDirectoryPath);
-    tasks.push(rulesMarkdownProcessor.produceRulebook(rules, outputDirectoryPath));
-
-    await Promise.all(tasks);
-
+    
+    await Promise.all(componentTasks);
     console.log(`Done producing ${path.normalize(outputDirectoryPath)}`);
-
     return outputDirectoryPath;
 }
 
-async function produceGameComponent(produceProperties, gamedata, componentComposition, fontCache) {
+async function produceGameComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache) {
     const componentType = componentComposition.componentCompose["type"];
     const componentTypeTokens = componentType.split("_");
     const isStockComponent = componentTypeTokens[0].toUpperCase() === "STOCK";
@@ -180,7 +189,7 @@ async function produceGameComponent(produceProperties, gamedata, componentCompos
         return;
     }
 
-    await customComponents.produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache);
+    await customComponents.produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache);
 }
 
 async function produceStockComponent(componentCompose, outputDirectory) {

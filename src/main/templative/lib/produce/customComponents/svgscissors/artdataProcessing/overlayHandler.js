@@ -4,6 +4,11 @@ const { DOMParser, XMLSerializer } = require('@xmldom/xmldom');
 const { sanitizeSvgContent } = require('../modules/svgElementConverter.js');
 const chalk = require('chalk');
 const { getScopedValue } = require('./valueResolver.js');
+const { SvgFileCache } = require('../modules/svgFileCache.js');
+
+// Import the default cache instance only for backward compatibility
+const defaultSvgFileCache = new SvgFileCache();
+
 /**
  * Add overlays to SVG content
  * @param {string} contents - SVG content
@@ -11,9 +16,10 @@ const { getScopedValue } = require('./valueResolver.js');
  * @param {Object} compositions - Component compositions
  * @param {Object} pieceGamedata - Game data
  * @param {Object} productionProperties - Production properties
+ * @param {Object} svgFileCache - Optional SVG file cache instance
  * @returns {Promise<string>} - SVG content with overlays
  */
-async function addOverlays(contents, overlays, compositions, pieceGamedata, productionProperties) {
+async function addOverlays(contents, overlays, compositions, pieceGamedata, productionProperties, svgFileCache = defaultSvgFileCache) {
     if (contents === null) {
         throw new Error("contents cannot be null");
     }
@@ -46,13 +52,13 @@ async function addOverlays(contents, overlays, compositions, pieceGamedata, prod
         const overlayFilename = `${overlayName}.svg`;
         const overlayFilepath = path.normalize(path.join(overlaysFilepath, overlayFilename));
 
-        if (!await fs.pathExists(overlayFilepath)) {
-            console.log(`!!! Overlay ${overlayFilepath} does not exist.`);
+        try {
+            contents = await placeOverlay(contents, overlayFilepath, positionX, positionY, svgFileCache);
+        } catch (error) {
+            console.log(`!!! Overlay ${overlayFilepath} error: ${error.message}`);
             continue;
         }
-
-        contents = await placeOverlay(contents, overlayFilepath, positionX, positionY);
-    }
+    }    
     return contents;
 }
 
@@ -62,9 +68,10 @@ async function addOverlays(contents, overlays, compositions, pieceGamedata, prod
  * @param {string} overlayFilepath - Path to overlay file
  * @param {number} positionX - X position
  * @param {number} positionY - Y position
+ * @param {Object} svgFileCache - Optional SVG file cache instance
  * @returns {Promise<string>} - SVG content with overlay
  */
-async function placeOverlay(contents, overlayFilepath, positionX, positionY) {
+async function placeOverlay(contents, overlayFilepath, positionX, positionY, svgFileCache = defaultSvgFileCache) {
     if (!contents) {
         console.error("Warning: contents is null or undefined");
         return "";
@@ -90,7 +97,8 @@ async function placeOverlay(contents, overlayFilepath, positionX, positionY) {
         
         const mainRoot = mainDoc.documentElement;
 
-        let overlayContents = await fs.readFile(overlayFilepath, 'utf8');
+        let overlayContents = await svgFileCache.readSvgFile(overlayFilepath);
+        
         // Sanitize the overlay SVG content
         overlayContents = sanitizeSvgContent(overlayContents);
         
@@ -141,7 +149,6 @@ async function placeOverlay(contents, overlayFilepath, positionX, positionY) {
         return contents;
     }
 }
-
 
 module.exports = {
   addOverlays,
