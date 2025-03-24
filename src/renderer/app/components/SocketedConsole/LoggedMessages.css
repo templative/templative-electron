@@ -20,6 +20,10 @@
     font-size: 14px;
     margin-bottom: 0px;
     color: var(--color-light);
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
 }
 .odd-output-child {
     color: var(--color-light);

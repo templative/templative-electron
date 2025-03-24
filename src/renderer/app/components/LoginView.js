@@ -3,7 +3,7 @@ import "./LoginView.css"
 const strongPasswordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const { shell } = require('electron');
-import logo from "./logo.svg"
+import Logo from "./logo.svg"
 export default class LoginView extends React.Component {   
     
     // Ok, so my electron react app requests that my flask server begin the oauth process. The flask app uses my client id to create a login page for google that when successful sends an code to my oauth callback endpoint. The callback uses the code to get the id_token, which it uses to pull the users email. We check that the email exists and that the password checks out. If it does, then we generate a temporary login token for that user, and pass the token and email to my electron app using `templative://authorize?token={tempToken}&email={email}`. Our app's deep links intercept this, save the token and email to a safe session store, and consider us logged in.
@@ -16,7 +16,7 @@ export default class LoginView extends React.Component {
         return <div className="start-view" data-bs-theme="dark">
             <div className="welcome-modal">
                 <div className="d-grid gap-2">
-                    <img src={logo} className="login-logo"/>
+                    <Logo className="login-logo"/>
                     <p>Login</p>
                     <button onClick={this.googleLogin} className="btn btn-primary">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-google google-login-icon" viewBox="0 0 16 16">
