@@ -41,19 +41,47 @@ function make() {
 }
 
 function makeFromPackage() {
-    electron-forge make --skip-package
+    # Use the ARCH environment variable if set
+    if [ -n "$ARCH" ]; then
+        echo "Making from package for architecture: $ARCH"
+        electron-forge make --skip-package --arch=$ARCH
+    else
+        echo "Making from package with default architecture"
+        electron-forge make --skip-package
+    fi
 }
 
 function publish() {
-    electron-forge publish
+    # Use the ARCH environment variable if set
+    if [ -n "$ARCH" ]; then
+        echo "Publishing for architecture: $ARCH"
+        electron-forge publish --arch=$ARCH
+    else
+        echo "Publishing with default architecture"
+        electron-forge publish
+    fi
 }
 
 function createPublishDryRun() {
-    electron-forge publish --dry-run --enable-logging
+    # Use the ARCH environment variable if set
+    if [ -n "$ARCH" ]; then
+        echo "Creating publish dry run for architecture: $ARCH"
+        electron-forge publish --dry-run --enable-logging --arch=$ARCH
+    else
+        echo "Creating publish dry run with default architecture"
+        electron-forge publish --dry-run --enable-logging
+    fi
 }
 
 function publishDryRun() {
-    electron-forge publish --from-dry-run
+    # Use the ARCH environment variable if set
+    if [ -n "$ARCH" ]; then
+        echo "Running publish dry run for architecture: $ARCH"
+        electron-forge publish --from-dry-run --arch=$ARCH
+    else
+        echo "Running publish dry run with default architecture"
+        electron-forge publish --from-dry-run
+    fi
 }
 
 function sign() {
