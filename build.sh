@@ -95,17 +95,5 @@ function sign() {
     signtool verify -pa -v "$EXE_PATH"
 }
 
-function fullPackage() {
-    createTemplativeApp && package
-}
-
-function fullMake() {
-    createTemplativeApp && make
-}
-
-function fullPublish() {
-    createTemplativeApp && publish
-}
-
 # Run a function name in the context of this script
 eval "$@"
