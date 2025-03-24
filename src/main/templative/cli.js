@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const { program } = require('commander');
 const { version } = require('../../../../templative-js/package.json');
 // Add dotenv to load environment variables from .env file
