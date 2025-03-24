@@ -13,25 +13,45 @@ function moveSignedOsxFiles() {
     TEMP_BUCKET="s3://templative-artifacts/darwin/unsigned/$arch"
     FINAL_BUCKET="s3://templative-artifacts/darwin/$arch"
 
+    echo "Moving signed files for architecture: $arch"
     aws s3 cp $TEMP_BUCKET/Templative-darwin-$arch-$version.zip $FINAL_BUCKET/Templative-darwin-$arch-$version.zip
     aws s3 cp $TEMP_BUCKET/RELEASES.json $FINAL_BUCKET/RELEASES.json
 }
 
 function package() {
-    electron-forge package
+    # Use the ARCH environment variable if set
+    if [ -n "$ARCH" ]; then
+        echo "Packaging for architecture: $ARCH"
+        electron-forge package --arch=$ARCH
+    else
+        echo "Packaging with default architecture"
+        electron-forge package
+    fi
 }
+
 function make() {
-    electron-forge make
+    # Use the ARCH environment variable if set
+    if [ -n "$ARCH" ]; then
+        echo "Making for architecture: $ARCH"
+        electron-forge make --arch=$ARCH
+    else
+        echo "Making with default architecture"
+        electron-forge make
+    fi
 }
+
 function makeFromPackage() {
     electron-forge make --skip-package
 }
+
 function publish() {
     electron-forge publish
 }
+
 function createPublishDryRun() {
     electron-forge publish --dry-run --enable-logging
 }
+
 function publishDryRun() {
     electron-forge publish --from-dry-run
 }
@@ -50,9 +70,11 @@ function sign() {
 function fullPackage() {
     createTemplativeApp && package
 }
+
 function fullMake() {
     createTemplativeApp && make
 }
+
 function fullPublish() {
     createTemplativeApp && publish
 }

@@ -5,9 +5,8 @@ module.exports = {
     "asar": {
       "unpack": "**/{*.node,node_modules/@resvg/**/*}"
     },
-    osxUniversal: { // config options for `@electron/universal`
-      x64ArchFiles: '*' // replace with any relevant glob pattern
-    },
+    osxUniversal: false, // We'll build separate x64 and arm64 packages instead
+    arch: process.env.ARCH || undefined, // Use the ARCH environment variable
     extraResource: [
       "./src/main/templative/lib/componentTemplates",
     ],

@@ -34,7 +34,9 @@ jobs:
         id: check-s3
         run: |
           VERSION=${{steps.package-version.outputs.current-version}}
-          if aws s3 ls "s3://templative-artifacts/win32/unsigned/x64/Templative-win32-x64-${VERSION}.zip" >/dev/null 2>&1; then
+          if aws s3 ls "s3://templative-artifacts/win32/unsigned/x64/Templative-win32-x64-${VERSION}.zip" >/dev/null 2>&1 && \
+             aws s3 ls "s3://templative-artifacts/darwin/unsigned/x64/Templative-darwin-x64-${VERSION}.zip" >/dev/null 2>&1 && \
+             aws s3 ls "s3://templative-artifacts/darwin/unsigned/arm64/Templative-darwin-arm64-${VERSION}.zip" >/dev/null 2>&1; then
             echo "Version ${VERSION} already exists, skipping build"
             echo "should_build=false" >> "$GITHUB_OUTPUT"
           else
@@ -54,6 +56,8 @@ jobs:
           - windows-latest
         node:
           - 18
+        arch:
+          - x64
     steps:
       - name: Print architecture
         shell: bash
@@ -93,6 +97,11 @@ jobs:
           PACKAGE_VERSION=$(npm pkg get version --workspaces=false | tr -d \")
           echo $PACKAGE_VERSION
           echo "current-version=$PACKAGE_VERSION" >> "$GITHUB_OUTPUT"
+          
+      - name: Set architecture
+        run: |
+          echo "ARCH=${{ matrix.arch }}" >> $GITHUB_ENV
+          echo "Building for architecture: ${{ matrix.arch }}"
 
       - name: Create Package
         run: npm run package
@@ -103,6 +112,7 @@ jobs:
           TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+          ARCH: ${{ matrix.arch }}
 
       - name: Make Distributable
         run: npm run makeFromPackage
@@ -113,6 +123,7 @@ jobs:
           TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+          ARCH: ${{ matrix.arch }}
 
       - name: Create Publish Dry Run
         run: npm run createPublishDryRun
@@ -124,6 +135,7 @@ jobs:
           TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+          ARCH: ${{ matrix.arch }}
 
       - name: Publish Dry Run
         run: npm run publishDryRun
@@ -135,16 +147,17 @@ jobs:
           TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+          ARCH: ${{ matrix.arch }}
       
       - name: Move Windows Squirrel Files into directory 
         shell: bash
         run: |
           ls
-          mkdir ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
-          mv ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}-full.nupkg ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}-full.nupkg
-          mv ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe
-          mv ./out/make/squirrel.windows/x64/RELEASES ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/RELEASES
-          cd ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
+          mkdir ./Templative-win32-${{ env.ARCH }}-${{steps.package-version.outputs.current-version}}
+          mv ./out/make/squirrel.windows/${{ env.ARCH }}/templative-${{steps.package-version.outputs.current-version}}-full.nupkg ./Templative-win32-${{ env.ARCH }}-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}-full.nupkg
+          mv ./out/make/squirrel.windows/${{ env.ARCH }}/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe ./Templative-win32-${{ env.ARCH }}-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe
+          mv ./out/make/squirrel.windows/${{ env.ARCH }}/RELEASES ./Templative-win32-${{ env.ARCH }}-${{steps.package-version.outputs.current-version}}/RELEASES
+          cd ./Templative-win32-${{ env.ARCH }}-${{steps.package-version.outputs.current-version}}
           ls
           cd ..
 
@@ -153,11 +166,11 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/RELEASES s3://templative-artifacts/win32/unsigned/x64/RELEASES --region us-west-2
+        run: aws s3 cp ./Templative-win32-${{ env.ARCH }}-${{steps.package-version.outputs.current-version}}/RELEASES s3://templative-artifacts/win32/unsigned/${{ env.ARCH }}/RELEASES --region us-west-2
 
       - name: Zip Windows Squirrel Files 
         run: |
-          Compress-Archive -Path ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/* ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip 
+          Compress-Archive -Path ./Templative-win32-${{ env.ARCH }}-${{steps.package-version.outputs.current-version}}/* ./Templative-win32-${{ env.ARCH }}-${{steps.package-version.outputs.current-version}}.zip 
           dir
 
       - name: Deploy Windows to S3
@@ -165,7 +178,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip s3://templative-artifacts/win32/unsigned/x64/Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip --region us-west-2
+          aws s3 cp ./Templative-win32-${{ env.ARCH }}-${{steps.package-version.outputs.current-version}}.zip s3://templative-artifacts/win32/unsigned/${{ env.ARCH }}/Templative-win32-${{ env.ARCH }}-${{steps.package-version.outputs.current-version}}.zip --region us-west-2
           
   templative-osx:
     needs: check-version
@@ -175,11 +188,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os:
-          - macos-13
-          - macos-latest
-        node:
-          - 18
+        include:
+          - os: macos-13
+            node: 18
+            arch: x64
+          - os: macos-latest
+            node: 18
+            arch: arm64
     steps:
       - name: Print architecture
         shell: bash
@@ -249,6 +264,11 @@ jobs:
       - name: Use debugging electron
         run: export DEBUG=electron*
 
+      - name: Set architecture
+        run: |
+          echo "ARCH=${{ matrix.arch }}" >> $GITHUB_ENV
+          echo "Building for architecture: ${{ matrix.arch }}"
+
       - name: Create Package
         run: npm run package
         env: 
@@ -258,6 +278,7 @@ jobs:
           TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+          ARCH: ${{ matrix.arch }}
 
       - name: Make Distributable
         run: npm run makeFromPackage
@@ -268,6 +289,7 @@ jobs:
           TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+          ARCH: ${{ matrix.arch }}
 
       - name: Create Publish Dry Run
         run: npm run createPublishDryRun
@@ -279,6 +301,7 @@ jobs:
           TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+          ARCH: ${{ matrix.arch }}
 
       - name: Publish Dry Run
         run: npm run publishDryRun
@@ -290,18 +313,9 @@ jobs:
           TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
+          ARCH: ${{ matrix.arch }}
 
-      - name: Get runner architecture
-        id: arch
-        run: echo "::set-output name=arch::$(uname -m)"
-    
-      - name: Convert architecture to x64
-        run: |
-          if [ "${{ steps.arch.outputs.arch }}" == "x86_64" ] || [ "${{ steps.arch.outputs.arch }}" == "AMD64" ]; then
-            echo "ARCH=x64" >> $GITHUB_ENV
-          else
-            echo "ARCH=${{ steps.arch.outputs.arch }}" >> $GITHUB_ENV
-          fi
+      
     
       - name: Move signed OSX files
         run: |
