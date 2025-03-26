@@ -107,7 +107,7 @@ jobs:
       - name: Install Azure CLI
         shell: bash
         run: |
-          choco install azure-cli -y
+          npm install -g azure-cli
 
       - name: Login to Azure
         shell: bash
