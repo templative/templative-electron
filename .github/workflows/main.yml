@@ -22,7 +22,7 @@ jobs:
           [[ -z "${{ secrets.APPLE_TEAM_ID }}" ]] && missing_secrets+=("APPLE_TEAM_ID")
           
           # Windows signing
-          [[ -z "${{ secrets.AWS_SIGNING_PROFILE_ARN }}" ]] && missing_secrets+=("AWS_SIGNING_PROFILE_ARN")
+          [[ -z "${{ secrets.AWS_SIGNING_PROFILE_NAME }}" ]] && missing_secrets+=("AWS_SIGNING_PROFILE_NAME")
           
           # OSX certificates
           [[ -z "${{ secrets.CERTIFICATE_OSX_APPLICATION }}" ]] && missing_secrets+=("CERTIFICATE_OSX_APPLICATION")
@@ -186,7 +186,7 @@ jobs:
         shell: bash
         env:
           PACKAGE_VERSION: ${{steps.package-version.outputs.current-version}}
-          AWS_SIGNING_PROFILE_ARN: ${{ secrets.AWS_SIGNING_PROFILE_ARN }}
+          AWS_SIGNING_PROFILE_NAME: ${{ secrets.AWS_SIGNING_PROFILE_NAME }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
@@ -207,7 +207,7 @@ jobs:
           SIGNING_JOB_ID=$(aws signer start-signing-job \
             --source "s3={bucketName=templative-artifacts,key=temp/templative-${PACKAGE_VERSION}-Setup.exe,version=${VERSION_ID}}" \
             --destination "s3={bucketName=templative-artifacts,prefix=temp/}" \
-            --profile-name "${AWS_SIGNING_PROFILE_ARN}" \
+            --profile-name "${AWS_SIGNING_PROFILE_NAME}" \
             --region us-west-2 \
             --query 'jobId' \
             --output text)
