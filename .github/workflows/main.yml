@@ -196,16 +196,9 @@ jobs:
           echo "Uploading executable to S3 for signing"
           aws s3 cp "${TEMP_EXE_PATH}" "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe"
           
-          # Get the version ID of the uploaded object
-          VERSION_ID=$(aws s3api head-object \
-            --bucket templative-artifacts \
-            --key "temp/templative-${PACKAGE_VERSION}-Setup.exe" \
-            --query 'VersionId' \
-            --output text)
-          
           echo "Starting signing job with AWS Signer"
           SIGNING_JOB_ID=$(aws signer start-signing-job \
-            --source "s3={bucketName=templative-artifacts,key=temp/templative-${PACKAGE_VERSION}-Setup.exe,version=${VERSION_ID}}" \
+            --source "s3={bucketName=templative-artifacts,key=temp/templative-${PACKAGE_VERSION}-Setup.exe}" \
             --destination "s3={bucketName=templative-artifacts,prefix=temp/}" \
             --profile-name "${AWS_SIGNING_PROFILE_NAME}" \
             --region us-west-2 \
