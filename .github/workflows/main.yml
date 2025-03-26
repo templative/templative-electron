@@ -72,6 +72,16 @@ jobs:
           aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
           aws configure set region us-west-2
 
+      - name: Install AWS CLI v2
+        run: |
+          curl "https://awscli.amazonaws.com/AWSCLIV2.msi" -o "AWSCLIV2.msi"
+          Start-Process msiexec.exe -Wait -ArgumentList '/I AWSCLIV2.msi /quiet'
+          aws --version
+
+      - name: Install SignTool
+        run: |
+          choco install windows-sdk-10-version-2004-all
+
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
@@ -138,6 +148,47 @@ jobs:
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
       
+      - name: Sign Windows Executable with AWS KMS
+        shell: bash
+        env:
+          PACKAGE_VERSION: ${{steps.package-version.outputs.current-version}}
+          AWS_SIGNING_PROFILE_ARN: ${{ secrets.AWS_SIGNING_PROFILE_ARN }}
+        run: |
+          # Define paths
+          SETUP_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION} Setup.exe"
+          SIGNED_EXE_PATH="${SETUP_EXE_PATH}.signed"
+          
+          echo "Signing executable at: ${SETUP_EXE_PATH}"
+          
+          # Create a signing job
+          SIGNING_JOB=$(aws signer start-signing-job \
+            --source "file://${SETUP_EXE_PATH}" \
+            --destination "file://${SIGNED_EXE_PATH}" \
+            --profile-name "${AWS_SIGNING_PROFILE_ARN}")
+          
+          # Get the job ID
+          JOB_ID=$(echo $SIGNING_JOB | jq -r '.jobId')
+          echo "Started signing job with ID: ${JOB_ID}"
+          
+          # Wait for the signing job to complete
+          JOB_STATUS="IN_PROGRESS"
+          while [ "$JOB_STATUS" == "IN_PROGRESS" ]; do
+            sleep 5
+            JOB_DETAILS=$(aws signer describe-signing-job --job-id "${JOB_ID}")
+            JOB_STATUS=$(echo $JOB_DETAILS | jq -r '.status')
+            echo "Signing job status: ${JOB_STATUS}"
+          done
+          
+          if [ "$JOB_STATUS" != "SUCCEEDED" ]; then
+            echo "Error: Signing job failed with status: ${JOB_STATUS}"
+            exit 1
+          fi
+          
+          # Replace the original file with the signed one
+          mv -f "${SIGNED_EXE_PATH}" "${SETUP_EXE_PATH}"
+          
+          echo "Successfully signed Windows executable"
+
       - name: Move Windows Squirrel Files into directory 
         shell: bash
         run: |
@@ -155,7 +206,7 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/RELEASES s3://templative-artifacts/win32/unsigned/x64/RELEASES --region us-west-2
+        run: aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/RELEASES s3://templative-artifacts/win32/x64/RELEASES --region us-west-2
 
       - name: Zip Windows Squirrel Files 
         run: |
@@ -167,7 +218,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip s3://templative-artifacts/win32/unsigned/x64/Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip --region us-west-2
+          aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip s3://templative-artifacts/win32/x64/Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip --region us-west-2
           
   templative-osx:
     needs: check-version

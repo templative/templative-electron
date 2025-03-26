@@ -92,7 +92,7 @@ module.exports = {
         accessKeyId: process.env.AWS_ACCESS_KEY,
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
         keyResolver: (fileName, platform, arch) => {
-          return `${platform}/unsigned/${arch}/${fileName}`
+          return `${platform}/${arch}/${fileName}`
         }
       }
     }
