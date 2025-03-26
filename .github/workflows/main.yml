@@ -193,8 +193,16 @@ jobs:
           TEMP_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION}-Setup.exe"
           SIGNED_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION}-Setup.exe.signed"
           
+          # Check local file size
+          echo "Checking local file size..."
+          ls -la "${TEMP_EXE_PATH}"
+          
           echo "Uploading executable to S3 for signing"
           aws s3 cp "${TEMP_EXE_PATH}" "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe"
+          
+          # Check S3 file size
+          echo "Checking S3 file size..."
+          aws s3 ls --summarize --human-readable "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe"
           
           # Get the version ID of the uploaded object
           VERSION_ID=$(aws s3api head-object \
@@ -203,7 +211,19 @@ jobs:
             --query 'VersionId' \
             --output text)
           
+          echo "S3 object version ID: ${VERSION_ID}"
+          
+          # Verify S3 object details
+          echo "Verifying S3 object details:"
+          aws s3api head-object \
+            --bucket templative-artifacts \
+            --key "temp/templative-${PACKAGE_VERSION}-Setup.exe"
+          
           echo "Starting signing job with AWS Signer"
+          echo "Using signing profile: ${AWS_SIGNING_PROFILE_NAME}"
+          echo "Full signing job command:"
+          echo "aws signer start-signing-job --source \"s3={bucketName=templative-artifacts,key=temp/templative-${PACKAGE_VERSION}-Setup.exe,version=${VERSION_ID}}\" --destination \"s3={bucketName=templative-artifacts,prefix=temp/}\" --profile-name \"${AWS_SIGNING_PROFILE_NAME}\" --region us-west-2"
+          
           SIGNING_JOB_ID=$(aws signer start-signing-job \
             --source "s3={bucketName=templative-artifacts,key=temp/templative-${PACKAGE_VERSION}-Setup.exe,version=${VERSION_ID}}" \
             --destination "s3={bucketName=templative-artifacts,prefix=temp/}" \
@@ -213,6 +233,12 @@ jobs:
             --output text)
             
           echo "Signing job started with ID: ${SIGNING_JOB_ID}"
+          
+          # Get initial job details
+          echo "Initial signing job details:"
+          aws signer describe-signing-job \
+            --job-id "${SIGNING_JOB_ID}" \
+            --region us-west-2
           
           # Poll for job completion
           echo "Waiting for signing job to complete..."
@@ -241,7 +267,28 @@ jobs:
             aws s3 cp "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe.signed" "${SIGNED_EXE_PATH}"
             echo "Downloaded signed executable"
           else
+            # Get the full job details for debugging
+            echo "Full signing job details:"
+            aws signer describe-signing-job \
+              --job-id "${SIGNING_JOB_ID}" \
+              --region us-west-2
+            
+            # Get the status reason for more detailed error information
+            STATUS_REASON=$(aws signer describe-signing-job \
+              --job-id "${SIGNING_JOB_ID}" \
+              --region us-west-2 \
+              --query 'statusReason' \
+              --output text)
+            
             echo "Signing job failed or timed out with status: $STATUS"
+            echo "Reason: $STATUS_REASON"
+            
+            # Check if the source file is still accessible
+            echo "Verifying source file is still accessible in S3:"
+            aws s3api head-object \
+              --bucket templative-artifacts \
+              --key "temp/templative-${PACKAGE_VERSION}-Setup.exe" || echo "Source file not accessible!"
+            
             exit 1
           fi
           
