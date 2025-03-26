@@ -107,7 +107,7 @@ jobs:
       - name: Install Azure CLI
         shell: bash
         run: |
-          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+          choco install azure-cli -y
 
       - name: Login to Azure
         shell: bash
