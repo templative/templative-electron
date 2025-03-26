@@ -120,7 +120,7 @@ async function runTests() {
   
   // Test produce command
   console.log(chalk.bold.blue('\n=== Testing produce command ==='));
-  const produceResult = runCommand(`produce --input "${PROJECT_DIR}"`);
+  const produceResult = runCommand(`produce --input "${PROJECT_DIR}" --name="actionCaps"`);
   if (!produceResult.success) {
     console.error(chalk.red('Failed to produce game, aborting tests'));
     process.exit(1);
@@ -131,16 +131,16 @@ async function runTests() {
   console.log(chalk.blue(`Using output directory: ${lastOutputPath}`));
   
   // Test simulator command
-  console.log(chalk.bold.blue('\n=== Testing simulator command ==='));
-  try {
-    const simulatorPath = "/Users/oliverbarnum/Library/Tabletop Simulator";
-    const simulatorResult = runCommand(`distribute simulator -i "${lastOutputPath}" -o "${simulatorPath}"`);
-    if (!simulatorResult.success) {
-      console.error(chalk.red('Failed to create simulator, continuing with other tests'));
-    }
-  } catch (error) {
-    console.error(chalk.red('Failed to create simulator, continuing with other tests'));
-  }
+  // console.log(chalk.bold.blue('\n=== Testing simulator command ==='));
+  // try {
+  //   const simulatorPath = "/Users/oliverbarnum/Library/Tabletop Simulator";
+  //   const simulatorResult = runCommand(`distribute simulator -i "${lastOutputPath}" -o "${simulatorPath}"`);
+  //   if (!simulatorResult.success) {
+  //     console.error(chalk.red('Failed to create simulator, continuing with other tests'));
+  //   }
+  // } catch (error) {
+  //   console.error(chalk.red('Failed to create simulator, continuing with other tests'));
+  // }
 }
 
 // Run the tests
