@@ -216,11 +216,11 @@ jobs:
           
           # Poll for job completion
           echo "Waiting for signing job to complete..."
-          STATUS="IN_PROGRESS"
+          STATUS="InProgress"
           MAX_ATTEMPTS=30
           ATTEMPT=0
           
-          while [ "$STATUS" = "IN_PROGRESS" ] && [ $ATTEMPT -lt $MAX_ATTEMPTS ]; do
+          while [ "$STATUS" = "InProgress" ] && [ $ATTEMPT -lt $MAX_ATTEMPTS ]; do
             ATTEMPT=$((ATTEMPT+1))
             echo "Checking signing job status (attempt $ATTEMPT/$MAX_ATTEMPTS)..."
             
@@ -230,13 +230,13 @@ jobs:
               --query 'status' \
               --output text)
               
-            if [ "$STATUS" = "IN_PROGRESS" ]; then
+            if [ "$STATUS" = "InProgress" ]; then
               echo "Job still in progress, waiting 10 seconds..."
               sleep 10
             fi
           done
           
-          if [ "$STATUS" = "SUCCEEDED" ]; then
+          if [ "$STATUS" = "Succeeded" ]; then
             echo "Signing job completed successfully!"
             aws s3 cp "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe.signed" "${SIGNED_EXE_PATH}"
             echo "Downloaded signed executable"
