@@ -182,7 +182,7 @@ jobs:
           cp "${ORIGINAL_EXE_PATH}" "${TEMP_EXE_PATH}"
           echo "Prepared executable for signing"
       
-      - name: Sign Windows Executable with AWS KMS
+      - name: Sign Windows Executable with AWS Signer
         shell: bash
         env:
           PACKAGE_VERSION: ${{steps.package-version.outputs.current-version}}
@@ -191,34 +191,26 @@ jobs:
           TEMP_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION}-Setup.exe"
           SIGNED_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION}-Setup.exe.signed"
           
-          echo "Signing executable"
-          
-          # Create a signing job with the space-free filename
+          echo "Signing executable with AWS Signer"
           aws signer start-signing-job \
-            --source "fileb://${TEMP_EXE_PATH}" \
-            --destination "fileb://${SIGNED_EXE_PATH}" \
-            --profile-name "${AWS_SIGNING_PROFILE_ARN}" > signing_job.json
+            --source "s3={bucket=templative-artifacts,key=temp/templative-${PACKAGE_VERSION}-Setup.exe}" \
+            --destination "s3={bucket=templative-artifacts,key=temp/templative-${PACKAGE_VERSION}-Setup.exe.signed}" \
+            --profile-name "${AWS_SIGNING_PROFILE_ARN}" \
+            --region us-west-2
+            
+          # Upload the file to S3 for signing
+          aws s3 cp "${TEMP_EXE_PATH}" "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe"
           
-          # Get the job ID
-          JOB_ID=$(cat signing_job.json | jq -r '.jobId')
-          echo "Started signing job with ID: ${JOB_ID}"
+          # Wait for signing to complete and download the signed file
+          echo "Waiting for signing job to complete..."
+          sleep 30  # Give AWS Signer some time to process
+          aws s3 cp "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe.signed" "${SIGNED_EXE_PATH}"
           
-          # Wait for the signing job to complete
-          JOB_STATUS="IN_PROGRESS"
-          while [[ "${JOB_STATUS}" == "IN_PROGRESS" ]]; do
-            sleep 5
-            aws signer describe-signing-job --job-id "${JOB_ID}" > job_details.json
-            JOB_STATUS=$(cat job_details.json | jq -r '.status')
-            echo "Signing job status: ${JOB_STATUS}"
-          done
+          # Clean up temporary S3 files
+          aws s3 rm "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe"
+          aws s3 rm "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe.signed"
           
-          if [[ "${JOB_STATUS}" != "SUCCEEDED" ]]; then
-            echo "Error: Signing job failed with status: ${JOB_STATUS}"
-            cat job_details.json
-            exit 1
-          fi
-          
-          echo "Successfully signed Windows executable"
+          echo "Signing completed successfully"
       
       - name: Replace Original Executable with Signed Version
         shell: bash
