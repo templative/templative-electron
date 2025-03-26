@@ -5,7 +5,39 @@ permissions:
   contents: write
 
 jobs:
+  validate-secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check required secrets
+        run: |
+          missing_secrets=()
+          
+          # AWS credentials
+          [[ -z "${{ secrets.AWS_ACCESS_KEY }}" ]] && missing_secrets+=("AWS_ACCESS_KEY")
+          [[ -z "${{ secrets.AWS_SECRET_ACCESS_KEY }}" ]] && missing_secrets+=("AWS_SECRET_ACCESS_KEY")
+          
+          # Apple credentials
+          [[ -z "${{ secrets.APPLE_ID }}" ]] && missing_secrets+=("APPLE_ID")
+          [[ -z "${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}" ]] && missing_secrets+=("TEMPLATIVE_APP_SPECIFIC_PASSWORD")
+          [[ -z "${{ secrets.APPLE_TEAM_ID }}" ]] && missing_secrets+=("APPLE_TEAM_ID")
+          
+          # Windows signing
+          [[ -z "${{ secrets.AWS_SIGNING_PROFILE_ARN }}" ]] && missing_secrets+=("AWS_SIGNING_PROFILE_ARN")
+          
+          # OSX certificates
+          [[ -z "${{ secrets.CERTIFICATE_OSX_APPLICATION }}" ]] && missing_secrets+=("CERTIFICATE_OSX_APPLICATION")
+          [[ -z "${{ secrets.CERTIFICATE_PASSWORD }}" ]] && missing_secrets+=("CERTIFICATE_PASSWORD")
+          
+          if [ ${#missing_secrets[@]} -ne 0 ]; then
+            echo "Error: The following required secrets are missing:"
+            printf "  - %s\n" "${missing_secrets[@]}"
+            exit 1
+          else
+            echo "All required secrets are present."
+          fi
+
   check-version:
+    needs: validate-secrets
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.package-version.outputs.current-version }}
@@ -34,9 +66,9 @@ jobs:
         id: check-s3
         run: |
           VERSION=${{steps.package-version.outputs.current-version}}
-          if aws s3 ls "s3://templative-artifacts/win32/unsigned/x64/Templative-win32-x64-${VERSION}.zip" >/dev/null 2>&1 && \
-             aws s3 ls "s3://templative-artifacts/darwin/unsigned/x64/Templative-darwin-x64-${VERSION}.zip" >/dev/null 2>&1 && \
-             aws s3 ls "s3://templative-artifacts/darwin/unsigned/arm64/Templative-darwin-arm64-${VERSION}.zip" >/dev/null 2>&1; then
+          if aws s3 ls "s3://templative-artifacts/win32/x64/Templative-win32-x64-${VERSION}.zip" >/dev/null 2>&1 && \
+             aws s3 ls "s3://templative-artifacts/darwin/x64/Templative-darwin-x64-${VERSION}.zip" >/dev/null 2>&1 && \
+             aws s3 ls "s3://templative-artifacts/darwin/arm64/Templative-darwin-arm64-${VERSION}.zip" >/dev/null 2>&1; then
             echo "Version ${VERSION} already exists, skipping build"
             echo "should_build=false" >> "$GITHUB_OUTPUT"
           else
@@ -162,8 +194,8 @@ jobs:
           
           # Create a signing job
           SIGNING_JOB=$(aws signer start-signing-job \
-            --source "file://${SETUP_EXE_PATH}" \
-            --destination "file://${SIGNED_EXE_PATH}" \
+            --source "fileb://${SETUP_EXE_PATH}" \
+            --destination "fileb://${SIGNED_EXE_PATH}" \
             --profile-name "${AWS_SIGNING_PROFILE_ARN}")
           
           # Get the job ID
@@ -354,14 +386,3 @@ jobs:
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
           ARCH: ${{ matrix.arch }}
-
-      
-    
-      - name: Move signed OSX files
-        run: |
-          source ./build.sh
-          moveSignedOsxFiles ${{ env.ARCH }} ${{ env.CURRENT_VERSION }}
-        env:
-          CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
-          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

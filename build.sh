@@ -7,17 +7,6 @@ function templative() {
     echo "Templative"
 }
 
-function moveSignedOsxFiles() {
-    arch=$1
-    version=$2
-    TEMP_BUCKET="s3://templative-artifacts/darwin/unsigned/$arch"
-    FINAL_BUCKET="s3://templative-artifacts/darwin/$arch"
-
-    echo "Moving signed files for architecture: $arch"
-    aws s3 cp $TEMP_BUCKET/Templative-darwin-$arch-$version.zip $FINAL_BUCKET/Templative-darwin-$arch-$version.zip
-    aws s3 cp $TEMP_BUCKET/RELEASES.json $FINAL_BUCKET/RELEASES.json
-}
-
 function package() {
     # Use the ARCH environment variable if set
     if [ -n "$ARCH" ]; then
