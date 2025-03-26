@@ -186,28 +186,28 @@ jobs:
           PACKAGE_VERSION: ${{steps.package-version.outputs.current-version}}
           AWS_SIGNING_PROFILE_ARN: ${{ secrets.AWS_SIGNING_PROFILE_ARN }}
         run: |
-          # Define paths
+          # Define paths with proper quoting
           SETUP_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION} Setup.exe"
           SIGNED_EXE_PATH="${SETUP_EXE_PATH}.signed"
           
           echo "Signing executable at: ${SETUP_EXE_PATH}"
           
-          # Create a signing job
-          SIGNING_JOB=$(aws signer start-signing-job \
+          # Create a signing job with proper escaping for paths with spaces
+          aws signer start-signing-job \
             --source "fileb://${SETUP_EXE_PATH}" \
             --destination "fileb://${SIGNED_EXE_PATH}" \
-            --profile-name "${AWS_SIGNING_PROFILE_ARN}")
+            --profile-name "${AWS_SIGNING_PROFILE_ARN}" > signing_job.json
           
           # Get the job ID
-          JOB_ID=$(echo $SIGNING_JOB | jq -r '.jobId')
+          JOB_ID=$(cat signing_job.json | jq -r '.jobId')
           echo "Started signing job with ID: ${JOB_ID}"
           
           # Wait for the signing job to complete
           JOB_STATUS="IN_PROGRESS"
           while [ "$JOB_STATUS" == "IN_PROGRESS" ]; do
             sleep 5
-            JOB_DETAILS=$(aws signer describe-signing-job --job-id "${JOB_ID}")
-            JOB_STATUS=$(echo $JOB_DETAILS | jq -r '.status')
+            aws signer describe-signing-job --job-id "${JOB_ID}" > job_details.json
+            JOB_STATUS=$(cat job_details.json | jq -r '.status')
             echo "Signing job status: ${JOB_STATUS}"
           done
           
@@ -254,7 +254,7 @@ jobs:
           
   templative-osx:
     needs: check-version
-    if: needs.check-version.outputs.should_build == 'true'
+    if: false # needs.check-version.outputs.should_build == 'true'
     timeout-minutes: 20
     runs-on: ${{ matrix.os }}
     strategy:
