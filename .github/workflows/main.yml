@@ -104,15 +104,21 @@ jobs:
           aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
           aws configure set region us-west-2
 
-      - name: Install AWS CLI v2
+      - name: Install Azure CLI
+        shell: bash
         run: |
-          curl "https://awscli.amazonaws.com/AWSCLIV2.msi" -o "AWSCLIV2.msi"
-          Start-Process msiexec.exe -Wait -ArgumentList '/I AWSCLIV2.msi /quiet'
-          aws --version
+          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
-      - name: Install SignTool
+      - name: Login to Azure
+        shell: bash
         run: |
-          choco install windows-sdk-10-version-2004-all
+          az login --service-principal -u ${{ secrets.AZURE_CLIENT_ID }} -p ${{ secrets.AZURE_CLIENT_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
+
+      - name: Download and extract signtool
+        shell: bash
+        run: |
+          curl -L -o signing_temp/signtool.zip https://aka.ms/signtool-zip
+          unzip -q signing_temp/signtool.zip -d signing_temp
 
       - uses: actions/setup-node@v3
         with:
@@ -169,151 +175,6 @@ jobs:
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
 
-      - name: Prepare Windows Executable for Signing
-        shell: bash
-        env:
-          PACKAGE_VERSION: ${{steps.package-version.outputs.current-version}}
-        run: |
-          # Create a temporary copy with no spaces in the filename
-          ORIGINAL_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION} Setup.exe"
-          TEMP_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION}-Setup.exe"
-          
-          echo "Creating temporary copy without spaces: ${TEMP_EXE_PATH}"
-          cp "${ORIGINAL_EXE_PATH}" "${TEMP_EXE_PATH}"
-          echo "Prepared executable for signing"
-      
-      - name: Sign Windows Executable with AWS Signer
-        shell: bash
-        env:
-          PACKAGE_VERSION: ${{steps.package-version.outputs.current-version}}
-          AWS_SIGNING_PROFILE_NAME: ${{ secrets.AWS_SIGNING_PROFILE_NAME }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: |
-          TEMP_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION}-Setup.exe"
-          SIGNED_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION}-Setup.exe.signed"
-          
-          # Check local file size
-          echo "Checking local file size..."
-          ls -la "${TEMP_EXE_PATH}"
-          
-          echo "Uploading executable to S3 for signing"
-          aws s3 cp "${TEMP_EXE_PATH}" "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe"
-          
-          # Check S3 file size
-          echo "Checking S3 file size..."
-          aws s3 ls --summarize --human-readable "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe"
-          
-          # Get the version ID of the uploaded object
-          VERSION_ID=$(aws s3api head-object \
-            --bucket templative-artifacts \
-            --key "temp/templative-${PACKAGE_VERSION}-Setup.exe" \
-            --query 'VersionId' \
-            --output text)
-          
-          echo "S3 object version ID: ${VERSION_ID}"
-          
-          # Verify S3 object details
-          echo "Verifying S3 object details:"
-          aws s3api head-object \
-            --bucket templative-artifacts \
-            --key "temp/templative-${PACKAGE_VERSION}-Setup.exe"
-          
-          echo "Starting signing job with AWS Signer"
-          echo "Using signing profile: ${AWS_SIGNING_PROFILE_NAME}"
-          echo "Full signing job command:"
-          echo "aws signer start-signing-job --source \"s3={bucketName=templative-artifacts,key=temp/templative-${PACKAGE_VERSION}-Setup.exe,version=${VERSION_ID}}\" --destination \"s3={bucketName=templative-artifacts,prefix=temp/}\" --profile-name \"${AWS_SIGNING_PROFILE_NAME}\" --region us-west-2"
-          
-          SIGNING_JOB_ID=$(aws signer start-signing-job \
-            --source "s3={bucketName=templative-artifacts,key=temp/templative-${PACKAGE_VERSION}-Setup.exe,version=${VERSION_ID}}" \
-            --destination "s3={bucketName=templative-artifacts,prefix=temp/}" \
-            --profile-name "${AWS_SIGNING_PROFILE_NAME}" \
-            --region us-west-2 \
-            --query 'jobId' \
-            --output text)
-            
-          echo "Signing job started with ID: ${SIGNING_JOB_ID}"
-          
-          # Get initial job details
-          echo "Initial signing job details:"
-          aws signer describe-signing-job \
-            --job-id "${SIGNING_JOB_ID}" \
-            --region us-west-2
-          
-          # Poll for job completion
-          echo "Waiting for signing job to complete..."
-          STATUS="InProgress"
-          MAX_ATTEMPTS=30
-          ATTEMPT=0
-          
-          while [ "$STATUS" = "InProgress" ] && [ $ATTEMPT -lt $MAX_ATTEMPTS ]; do
-            ATTEMPT=$((ATTEMPT+1))
-            echo "Checking signing job status (attempt $ATTEMPT/$MAX_ATTEMPTS)..."
-            
-            STATUS=$(aws signer describe-signing-job \
-              --job-id "${SIGNING_JOB_ID}" \
-              --region us-west-2 \
-              --query 'status' \
-              --output text)
-              
-            if [ "$STATUS" = "InProgress" ]; then
-              echo "Job still in progress, waiting 10 seconds..."
-              sleep 10
-            fi
-          done
-          
-          if [ "$STATUS" = "Succeeded" ]; then
-            echo "Signing job completed successfully!"
-            aws s3 cp "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe.signed" "${SIGNED_EXE_PATH}"
-            echo "Downloaded signed executable"
-          else
-            # Get the full job details for debugging
-            echo "Full signing job details:"
-            aws signer describe-signing-job \
-              --job-id "${SIGNING_JOB_ID}" \
-              --region us-west-2
-            
-            # Get the status reason for more detailed error information
-            STATUS_REASON=$(aws signer describe-signing-job \
-              --job-id "${SIGNING_JOB_ID}" \
-              --region us-west-2 \
-              --query 'statusReason' \
-              --output text)
-            
-            echo "Signing job failed or timed out with status: $STATUS"
-            echo "Reason: $STATUS_REASON"
-            
-            # Check if the source file is still accessible
-            echo "Verifying source file is still accessible in S3:"
-            aws s3api head-object \
-              --bucket templative-artifacts \
-              --key "temp/templative-${PACKAGE_VERSION}-Setup.exe" || echo "Source file not accessible!"
-            
-            exit 1
-          fi
-          
-          # Clean up temporary S3 files
-          echo "Cleaning up temporary files from S3"
-          aws s3 rm "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe"
-          aws s3 rm "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe.signed"
-          
-          echo "Signing process completed successfully"
-      
-      - name: Replace Original Executable with Signed Version
-        shell: bash
-        env:
-          PACKAGE_VERSION: ${{steps.package-version.outputs.current-version}}
-        run: |
-          ORIGINAL_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION} Setup.exe"
-          TEMP_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION}-Setup.exe"
-          SIGNED_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION}-Setup.exe.signed"
-          
-          # Replace the original file with the signed one
-          mv -f "${SIGNED_EXE_PATH}" "${ORIGINAL_EXE_PATH}"
-          rm -f "${TEMP_EXE_PATH}"
-          
-          echo "Successfully replaced original executable with signed version"
-
       - name: Move Windows Squirrel Files into directory 
         shell: bash
         run: |
@@ -325,6 +186,30 @@ jobs:
           cd ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
           ls
           cd ..
+
+      - name: Create temporary directory for signing
+        shell: bash
+        run: |
+          mkdir -p signing_temp
+          cp "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe" "./signing_temp/setup.exe"
+
+      - name: Download certificate from Azure Key Vault
+        shell: bash
+        run: |
+          VAULT_NAME=$(echo ${{ secrets.AZURE_KEY_VAULT_URL }} | awk -F'https://' '{print $2}' | awk -F'.vault.azure.net' '{print $1}')
+          az keyvault certificate download-secret --vault-name $VAULT_NAME --name ${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }} --file signing_temp/cert.pfx
+
+
+      - name: Sign the Windows Setup.exe
+        shell: bash
+        run: |
+          signing_temp/signtool.exe sign /f signing_temp/cert.pfx /tr http://timestamp.digicert.com /td sha256 /fd sha256 "./signing_temp/setup.exe"
+
+      - name: Replace original file with signed version
+        shell: bash
+        run: |
+          mv "./signing_temp/setup.exe" "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe"
+          rm -rf signing_temp
 
       - name: Upload Releases
         shell: bash
