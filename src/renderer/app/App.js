@@ -1,5 +1,5 @@
 import React from "react";
-// import { trackEvent } from "@aptabase/electron/renderer";
+import { trackEvent } from "@aptabase/electron/renderer";
 
 import socket from "./utility/socket";
 import { channels } from '../../shared/constants';
@@ -42,11 +42,11 @@ class App extends React.Component {
         // socket.disconnect()
     }
     async openTemplativeDirectoryPicker() {
-        // trackEvent("project_change")
+        trackEvent("project_change")
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG)
     }
     async openCreateTemplativeProjectDirectoryPicker() {
-        // trackEvent("project_create")
+        trackEvent("project_create")
         this.setState({ currentView: "createProject" });
     }
     updatePassword = (password) => {
@@ -61,14 +61,12 @@ class App extends React.Component {
             this.setState({templativeRootDirectoryPath: undefined, currentView: "start"})
             return
         }
-        // trackEvent("project_load_last", { directory: lastProjectDirectory })
         await ipcRenderer.invoke(channels.TO_SERVER_GIVE_CURRENT_PROJECT, lastProjectDirectory)
         
         this.setState({templativeRootDirectoryPath: lastProjectDirectory, currentView: "editProject"})
     }
     componentDidMount = async () => {
         ipcRenderer.on(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, (event, templativeRootDirectoryPath) => {
-            // trackEvent("project_load_success", { directory: templativeRootDirectoryPath })
             writeLastOpenedProject(templativeRootDirectoryPath)
             this.setState({
                 templativeRootDirectoryPath: templativeRootDirectoryPath,
@@ -76,14 +74,12 @@ class App extends React.Component {
             })
         });
         ipcRenderer.on(channels.GIVE_CLOSE_PROJECT, (_) => {
-            // trackEvent("project_close")
             this.setState({
                 templativeRootDirectoryPath: undefined,
                 currentView: "start"
             })
         })
         ipcRenderer.on(channels.GIVE_LOGOUT, (_) => {
-            // trackEvent("user_logout")
             this.setState({loggedIn: false, email: "", password: "", status: "", currentView: "login"})
         })
         ipcRenderer.on(channels.GIVE_LOGGED_IN, (_, token, email) => {
@@ -96,11 +92,11 @@ class App extends React.Component {
             this.setState({loggedIn: false, currentView: "login"})
         })
         ipcRenderer.on(channels.GIVE_UNABLE_TO_LOG_IN, (_) => {
-            // trackEvent("user_login_error", { reason: "server_error" })
+            trackEvent("user_login_error", { reason: "server_error" })
             this.setState({loggedIn: false, loginStatus: "We were unable to log you in. Please try again later."})
         })
         ipcRenderer.on(channels.GIVE_INVALID_LOGIN_CREDENTIALS, (_) => {
-            // trackEvent("user_login_error", { reason: "invalid_credentials" })
+            trackEvent("user_login_error", { reason: "invalid_credentials" })
             this.setState({loggedIn: false, loginStatus: "Invalid login credentials."})
         })
         ipcRenderer.on(channels.GIVE_OPEN_CREATE_PROJECT_VIEW, (_) => {
@@ -120,18 +116,17 @@ class App extends React.Component {
         this.setState({currentRoute: route})
     }
     attemptLogin = async () => {    
-        // trackEvent("user_login_attempt", { email: this.state.email })
+        trackEvent("user_login_attempt", { email: this.state.email })
         await ipcRenderer.invoke(channels.TO_SERVER_LOGIN, this.state.email, this.state.password)
     }
     goToRegisterWebpage = async()=>{
-        // trackEvent("user_register_click")
+        trackEvent("user_register_click")
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_URL, "https://templative-server-84c7a76c7ddd.herokuapp.com/register")
     }
     render() {
         let element = <></>
         
         if (!this.state.loggedIn) {
-            // trackEvent("view_loginView")
             element = <LoginView 
                 updateEmailCallback={this.updateEmail} 
                 updatePasswordCallback={this.updatePassword} 
@@ -143,18 +138,15 @@ class App extends React.Component {
             />
         }
         else if (this.state.currentView === "createProject") {
-            // trackEvent("view_createProjectView")
             element = <CreateProjectView />
         }
         else if (this.state.templativeRootDirectoryPath === undefined || this.state.currentView === "start") {
-            // trackEvent("view_startView")
             element = <StartView 
                 openCreateTemplativeProjectDirectoryPickerCallback={this.openCreateTemplativeProjectDirectoryPicker.bind(this)}
                 openTemplativeDirectoryPickerCallback={() => this.openTemplativeDirectoryPicker()}
             />
         }
         else if (this.state.currentView === "editProject") { 
-            // trackEvent("view_editProjectView")
             element = <EditProjectView 
                 token={this.state.token}
                 email={this.state.email}    

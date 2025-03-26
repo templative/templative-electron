@@ -6,7 +6,7 @@ import TemplativeAccessTools from "../TemplativeAccessTools";
 import ComponentTypeList from "./TypeSelection/ComponentTypeList";
 import ChosenComponent from "./ChosenComponent/ChosenComponent";
 import SearchComponentsBox from "./SearchComponentsBox";
-// import { trackEvent } from "@aptabase/electron/renderer";
+import { trackEvent } from "@aptabase/electron/renderer";
 import { RenderingWorkspaceContext } from '../Render/RenderingWorkspaceProvider';
 import { COMPONENT_CATEGORIES } from "../../../../shared/componentCategories";
 
@@ -35,12 +35,12 @@ const CreatePanel = (props) => {
     };
 
     React.useEffect(() => {
-        // trackEvent("view_createPanel");
+        trackEvent("view_createPanel");
         loadComponents(props.templativeRootDirectoryPath);
     }, [props.templativeRootDirectoryPath]);
 
     const createComponent = async () => {
-        // trackEvent("component_create");
+        trackEvent("component_create");
         setIsProcessing(true);
         
         const data = { 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { trackEvent } from "@aptabase/electron/renderer";
+import { trackEvent } from "@aptabase/electron/renderer";
 const { ipcRenderer } = window.require('electron');
 import { channels } from '../../../shared/constants';
 import './CreateProjectView.css';

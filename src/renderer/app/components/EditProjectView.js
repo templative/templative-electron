@@ -11,7 +11,7 @@ import TemplativeAccessTools from "./TemplativeAccessTools";
 import { RenderingWorkspaceProvider } from "./Render/RenderingWorkspaceProvider";
 import { OutputDirectoriesProvider } from "./OutputDirectories/OutputDirectoriesProvider";
 import RulesEditor from "./Edit/Viewers/RulesEditor";
-// import { trackEvent } from "@aptabase/electron/renderer";
+import { trackEvent } from "@aptabase/electron/renderer";
 const { ipcRenderer } = window.require('electron');
 const { channels } = require("../../../shared/constants");
 const path = require("path");
@@ -137,7 +137,7 @@ export default class EditProjectView extends React.Component {
         })
     }
     updateViewedFileToUnifiedAsync = async(componentName) => {
-        // trackEvent("view_unified_component", { componentName })
+        trackEvent("view_unified_component", { componentName })
         var componentComposeFilepath = path.join(this.props.templativeRootDirectoryPath, `component-compose.json`)
         var fileExists = await EditProjectView.doesFileExist(componentComposeFilepath)
         if (!fileExists) {

@@ -1,7 +1,7 @@
 import React from "react";
 import "./PrintPanel.css"
 import CreatePrintoutButton from "./CreatePrintoutButton";
-// import { trackEvent } from "@aptabase/electron/renderer";
+import { trackEvent } from "@aptabase/electron/renderer";
 import TemplativePurchaseButton from "../../../TemplativePurchaseButton";
 import { channels } from "../../../../../../shared/constants";
 const { ipcRenderer } = require('electron');
@@ -17,7 +17,7 @@ export default class PrintPanel extends React.Component {
     }
     
     componentDidMount = async () => {
-        // trackEvent("view_printPanel")
+        trackEvent("view_printPanel")
     }
     setSize = (size) => {
         this.setState({size: size})
@@ -29,7 +29,7 @@ export default class PrintPanel extends React.Component {
         this.setState({isBackIncluded: !this.state.isBackIncluded})
     }
     createPrintout = async () => {
-        // trackEvent("print")
+        trackEvent("print")
         var data = { 
             outputDirectorypath: this.props.outputFolderPath,
             isBackIncluded: this.state.isBackIncluded,

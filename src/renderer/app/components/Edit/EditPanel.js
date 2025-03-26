@@ -9,7 +9,7 @@ import ImageViewer from "./Viewers/ImageViewer";
 import RulesEditor from "./Viewers/RulesEditor";
 import EditPanelTabs from "./EditPanelTabs";
 import RenderPreview from "./RenderPreview/RenderPreview";
-// import { trackEvent } from "@aptabase/electron/renderer";
+import { trackEvent } from "@aptabase/electron/renderer";
 import NoFileIcon from "./noFileIcon.svg"
 import "./EditPanel.css"
 import "./EditPanelTabs.css"
@@ -32,7 +32,7 @@ export default class EditPanel extends React.Component {
         this.props.clickIntoFileCallback()
     }      
     componentDidMount() {
-        // trackEvent("view_editPanel")
+        trackEvent("view_editPanel")
     }
     updateComponentComposeScrollPosition = (scrollPosition) => {
         this.setState({ componentComposeScollPosition: scrollPosition });

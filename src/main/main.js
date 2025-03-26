@@ -3,7 +3,7 @@ const {mainMenu} = require("./menuMaker")
 const {listenForRenderEvents} = require("./listenForRenderEvents")
 const {log, error, warn} = require("./logger")
 const { setupAppUpdateListener } = require("./appUpdater")
-// const { initialize } = require("@aptabase/electron/main");
+const { initialize: initializeAptabase } = require("@aptabase/electron/main");
 const { setupOauthListener } = require("./accountManager")
 const axios = require('axios');
 // const Sentry = require("@sentry/electron/main");
@@ -16,6 +16,7 @@ const fsPromises = require('fs').promises;
 //   release: `templative@${app.getVersion()}`,
 //   environment: app.isPackaged ? 'production' : 'development',
 // });
+initializeAptabase("A-US-3966824173");
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
@@ -31,43 +32,6 @@ app.setName('Templative');
 
 var templativeWindow = undefined
 
-// Add a debounce/throttle mechanism for Aptabase events
-// const aptabaseThrottleMap = new Map();
-// const APTABASE_THROTTLE_MS = 1000; // Minimum time between identical events
-
-// const initializeAptabase = () => {
-//   // Only enable analytics in production builds
-//   if (app.isPackaged) {
-//     log("Initializing Aptabase analytics for production");
-//     initialize("A-US-3966824173");
-    
-//     // Patch the track method to add throttling
-//     const originalTrack = global.aptabase?.track;
-//     if (originalTrack) {
-//       global.aptabase.track = (eventName, props) => {
-//         const key = `${eventName}-${JSON.stringify(props || {})}`;
-//         const now = Date.now();
-//         const lastTime = aptabaseThrottleMap.get(key) || 0;
-        
-//         if (now - lastTime >= APTABASE_THROTTLE_MS) {
-//           aptabaseThrottleMap.set(key, now);
-//           originalTrack(eventName, props);
-//         } else {
-//           // Skip sending to avoid rate limiting
-//           log(`Throttled Aptabase event: ${eventName}`);
-//         }
-//       };
-//     }
-//   } else {
-//     log("Aptabase analytics disabled in development mode");
-//     // Create a no-op implementation for development
-//     global.aptabase = {
-//       track: (eventName, props) => {
-//         log(`[DEV] Aptabase event (not sent): ${eventName}`);
-//       }
-//     };
-//   }
-// };
 
 const createWindow = () => {
     templativeWindow = new BrowserWindow({

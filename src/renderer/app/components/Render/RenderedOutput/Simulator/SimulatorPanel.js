@@ -2,7 +2,7 @@ import React from "react";
 import "./SimulatorPanel.css"
 import { channels } from "../../../../../../shared/constants";
 import {writeLastUseTableTopSimulatorDirectory, getLastUsedTableTopSimulatorDirectory} from "../../../../utility/SettingsManager"
-// import { trackEvent } from "@aptabase/electron/renderer";
+import { trackEvent } from "@aptabase/electron/renderer";
 import TemplativePurchaseButton from "../../../TemplativePurchaseButton";
 import SimulatorOutputExplorer from "./SimulatorOutputExplorer";
 const path = require('path');
@@ -18,7 +18,7 @@ export default class SimulatorPanel extends React.Component {
         simulatorDirectory: "",
     }
     componentDidMount = async () => {
-        // trackEvent("view_simulatorPanel")
+        trackEvent("view_simulatorPanel")
 
         ipcRenderer.on(channels.GIVE_SIMULATOR_FOLDER, (event, simulatorFolder) => {
             writeLastUseTableTopSimulatorDirectory(simulatorFolder)
@@ -55,7 +55,7 @@ export default class SimulatorPanel extends React.Component {
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG_FOR_SIMULATOR)
     }
     createSimulator = async () => {
-        // trackEvent("simulator_create")
+        trackEvent("simulator_create")
         var data = { 
             outputDirectorypath: this.props.outputFolderPath,
             tabletopSimulatorDocumentsDirectorypath: this.state.simulatorDirectory

@@ -1,6 +1,6 @@
 import React from "react";
 import "./MapPanel.css"
-// import { trackEvent } from "@aptabase/electron/renderer";
+import { trackEvent } from "@aptabase/electron/renderer";
 import Map from "./controls/Map";
 import MapSearch from "./controls/MapSearch";
 
