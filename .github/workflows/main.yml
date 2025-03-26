@@ -169,7 +169,18 @@ jobs:
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
 
-      
+      - name: Prepare Windows Executable for Signing
+        shell: bash
+        env:
+          PACKAGE_VERSION: ${{steps.package-version.outputs.current-version}}
+        run: |
+          # Create a temporary copy with no spaces in the filename
+          ORIGINAL_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION} Setup.exe"
+          TEMP_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION}-Setup.exe"
+          
+          echo "Creating temporary copy without spaces: ${TEMP_EXE_PATH}"
+          cp "${ORIGINAL_EXE_PATH}" "${TEMP_EXE_PATH}"
+          echo "Prepared executable for signing"
       
       - name: Sign Windows Executable with AWS KMS
         shell: bash
@@ -177,13 +188,8 @@ jobs:
           PACKAGE_VERSION: ${{steps.package-version.outputs.current-version}}
           AWS_SIGNING_PROFILE_ARN: ${{ secrets.AWS_SIGNING_PROFILE_ARN }}
         run: |
-          # Create a temporary copy with no spaces in the filename
-          ORIGINAL_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION} Setup.exe"
           TEMP_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION}-Setup.exe"
           SIGNED_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION}-Setup.exe.signed"
-          
-          echo "Creating temporary copy without spaces: ${TEMP_EXE_PATH}"
-          cp "${ORIGINAL_EXE_PATH}" "${TEMP_EXE_PATH}"
           
           echo "Signing executable"
           
@@ -199,24 +205,35 @@ jobs:
           
           # Wait for the signing job to complete
           JOB_STATUS="IN_PROGRESS"
-          while [ "$JOB_STATUS" == "IN_PROGRESS" ]; do
+          while [[ "${JOB_STATUS}" == "IN_PROGRESS" ]]; do
             sleep 5
             aws signer describe-signing-job --job-id "${JOB_ID}" > job_details.json
             JOB_STATUS=$(cat job_details.json | jq -r '.status')
             echo "Signing job status: ${JOB_STATUS}"
           done
           
-          if [ "$JOB_STATUS" != "SUCCEEDED" ]; then
+          if [[ "${JOB_STATUS}" != "SUCCEEDED" ]]; then
             echo "Error: Signing job failed with status: ${JOB_STATUS}"
             cat job_details.json
             exit 1
           fi
           
+          echo "Successfully signed Windows executable"
+      
+      - name: Replace Original Executable with Signed Version
+        shell: bash
+        env:
+          PACKAGE_VERSION: ${{steps.package-version.outputs.current-version}}
+        run: |
+          ORIGINAL_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION} Setup.exe"
+          TEMP_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION}-Setup.exe"
+          SIGNED_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION}-Setup.exe.signed"
+          
           # Replace the original file with the signed one
           mv -f "${SIGNED_EXE_PATH}" "${ORIGINAL_EXE_PATH}"
           rm -f "${TEMP_EXE_PATH}"
           
-          echo "Successfully signed Windows executable"
+          echo "Successfully replaced original executable with signed version"
 
       - name: Move Windows Squirrel Files into directory 
         shell: bash
