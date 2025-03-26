@@ -191,26 +191,57 @@ jobs:
           TEMP_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION}-Setup.exe"
           SIGNED_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION}-Setup.exe.signed"
           
-          echo "Signing executable with AWS Signer"
-          aws signer start-signing-job \
+          echo "Uploading executable to S3 for signing"
+          aws s3 cp "${TEMP_EXE_PATH}" "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe"
+          
+          echo "Starting signing job with AWS Signer"
+          SIGNING_JOB_ID=$(aws signer start-signing-job \
             --source "s3={bucket=templative-artifacts,key=temp/templative-${PACKAGE_VERSION}-Setup.exe}" \
             --destination "s3={bucket=templative-artifacts,key=temp/templative-${PACKAGE_VERSION}-Setup.exe.signed}" \
             --profile-name "${AWS_SIGNING_PROFILE_ARN}" \
-            --region us-west-2
+            --region us-west-2 \
+            --query 'jobId' \
+            --output text)
             
-          # Upload the file to S3 for signing
-          aws s3 cp "${TEMP_EXE_PATH}" "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe"
+          echo "Signing job started with ID: ${SIGNING_JOB_ID}"
           
-          # Wait for signing to complete and download the signed file
+          # Poll for job completion
           echo "Waiting for signing job to complete..."
-          sleep 30  # Give AWS Signer some time to process
-          aws s3 cp "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe.signed" "${SIGNED_EXE_PATH}"
+          STATUS="IN_PROGRESS"
+          MAX_ATTEMPTS=30
+          ATTEMPT=0
+          
+          while [ "$STATUS" = "IN_PROGRESS" ] && [ $ATTEMPT -lt $MAX_ATTEMPTS ]; do
+            ATTEMPT=$((ATTEMPT+1))
+            echo "Checking signing job status (attempt $ATTEMPT/$MAX_ATTEMPTS)..."
+            
+            STATUS=$(aws signer describe-signing-job \
+              --job-id "${SIGNING_JOB_ID}" \
+              --region us-west-2 \
+              --query 'status' \
+              --output text)
+              
+            if [ "$STATUS" = "IN_PROGRESS" ]; then
+              echo "Job still in progress, waiting 10 seconds..."
+              sleep 10
+            fi
+          done
+          
+          if [ "$STATUS" = "SUCCEEDED" ]; then
+            echo "Signing job completed successfully!"
+            aws s3 cp "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe.signed" "${SIGNED_EXE_PATH}"
+            echo "Downloaded signed executable"
+          else
+            echo "Signing job failed or timed out with status: $STATUS"
+            exit 1
+          fi
           
           # Clean up temporary S3 files
+          echo "Cleaning up temporary files from S3"
           aws s3 rm "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe"
           aws s3 rm "s3://templative-artifacts/temp/templative-${PACKAGE_VERSION}-Setup.exe.signed"
           
-          echo "Signing completed successfully"
+          echo "Signing process completed successfully"
       
       - name: Replace Original Executable with Signed Version
         shell: bash
