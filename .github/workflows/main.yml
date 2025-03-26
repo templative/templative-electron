@@ -186,16 +186,23 @@ jobs:
           PACKAGE_VERSION: ${{steps.package-version.outputs.current-version}}
           AWS_SIGNING_PROFILE_ARN: ${{ secrets.AWS_SIGNING_PROFILE_ARN }}
         run: |
-          # Define paths with proper quoting
-          SETUP_EXE_PATH="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION} Setup.exe"
-          SIGNED_EXE_PATH="${SETUP_EXE_PATH}.signed"
+          # Create temporary directory without spaces
+          mkdir -p temp_signing
           
-          echo "Signing executable at: ${SETUP_EXE_PATH}"
+          # Copy the file to a path without spaces
+          ORIGINAL_EXE="./out/make/squirrel.windows/x64/templative-${PACKAGE_VERSION} Setup.exe"
+          TEMP_EXE="./temp_signing/templative-setup.exe"
+          TEMP_SIGNED_EXE="./temp_signing/templative-setup-signed.exe"
           
-          # Create a signing job with proper escaping for paths with spaces
+          echo "Copying executable from: ${ORIGINAL_EXE} to ${TEMP_EXE}"
+          cp "${ORIGINAL_EXE}" "${TEMP_EXE}"
+          
+          echo "Signing executable at: ${TEMP_EXE}"
+          
+          # Create a signing job with path that has no spaces
           aws signer start-signing-job \
-            --source "fileb://${SETUP_EXE_PATH}" \
-            --destination "fileb://${SIGNED_EXE_PATH}" \
+            --source "fileb://${TEMP_EXE}" \
+            --destination "fileb://${TEMP_SIGNED_EXE}" \
             --profile-name "${AWS_SIGNING_PROFILE_ARN}" > signing_job.json
           
           # Get the job ID
@@ -213,11 +220,13 @@ jobs:
           
           if [ "$JOB_STATUS" != "SUCCEEDED" ]; then
             echo "Error: Signing job failed with status: ${JOB_STATUS}"
+            cat job_details.json
             exit 1
           fi
           
-          # Replace the original file with the signed one
-          mv -f "${SIGNED_EXE_PATH}" "${SETUP_EXE_PATH}"
+          # Copy the signed file back to the original location
+          echo "Copying signed executable back to: ${ORIGINAL_EXE}"
+          cp "${TEMP_SIGNED_EXE}" "${ORIGINAL_EXE}"
           
           echo "Successfully signed Windows executable"
 
