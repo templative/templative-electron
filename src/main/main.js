@@ -6,16 +6,18 @@ const { setupAppUpdateListener } = require("./appUpdater")
 const { initialize: initializeAptabase } = require("@aptabase/electron/main");
 const { setupOauthListener } = require("./accountManager")
 const axios = require('axios');
-// const Sentry = require("@sentry/electron/main");
+const Sentry = require("@sentry/electron/main");
 const path = require('path');
 const fsPromises = require('fs').promises;
 
-// Sentry.init({
-//   dsn: "https://ea447f3e89982daf599068c5b6bf933c@o4508842181459968.ingest.us.sentry.io/4508859562328064",
-//   enableNative: true,
-//   release: `templative@${app.getVersion()}`,
-//   environment: app.isPackaged ? 'production' : 'development',
-// });
+
+if (app.isPackaged) {
+    Sentry.init({
+        dsn: "https://ea447f3e89982daf599068c5b6bf933c@o4508842181459968.ingest.us.sentry.io/4508859562328064",
+        enableNative: true,
+        release: `templative@${app.getVersion()}`,
+      });
+}
 initializeAptabase("A-US-3966824173");
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -90,10 +92,6 @@ const initializeApp = async () => {
         await shutdown();
     }
 };
-
-// Replace the direct initialize call with the conditional version
-// initialize("A-US-3966824173");
-// initializeAptabase();
 
 app.on('ready', initializeApp);
 
