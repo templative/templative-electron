@@ -104,6 +104,7 @@ jobs:
           aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
           aws configure set region us-west-2
 
+
       - name: Install AzureSignTool
         shell: pwsh
         run: |
@@ -112,10 +113,31 @@ jobs:
       - name: Test Azure Signing
         shell: pwsh
         run: |
-          # Create a test file
-          echo "Test file for signing" > test_signing.txt
+          # Create a simple C# console application
+          mkdir TestSigningApp
+          cd TestSigningApp
           
-          # Sign the test file
+          # Create a simple C# program
+          @"
+          using System;
+          
+          namespace TestApp
+          {
+              class Program
+              {
+                  static void Main(string[] args)
+                  {
+                      Console.WriteLine("Hello World!");
+                  }
+              }
+          }
+          "@ | Out-File -FilePath Program.cs -Encoding utf8
+          
+          # Compile the program
+          dotnet new console --no-restore --force
+          dotnet build -c Release
+          
+          # Sign the executable
           AzureSignTool sign `
             -fd sha256 `
             -tr http://timestamp.digicert.com `
@@ -126,7 +148,7 @@ jobs:
             -kvs "${{ secrets.AZURE_CLIENT_SECRET }}" `
             -kvc "${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }}" `
             -v `
-            "test_signing.txt"
+            "./bin/Release/net6.0/TestSigningApp.exe"
           
           # Check if signing was successful
           if ($LASTEXITCODE -ne 0) {
@@ -135,7 +157,10 @@ jobs:
           } else {
             Write-Host "Test signing successful! Azure Key Vault signing is working correctly."
           }
-
+          
+          # Return to the original directory
+          cd ..
+          
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
