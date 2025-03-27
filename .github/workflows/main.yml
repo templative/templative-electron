@@ -104,7 +104,6 @@ jobs:
           aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
           aws configure set region us-west-2
 
-
       - name: Install AzureSignTool
         shell: pwsh
         run: |
@@ -144,14 +143,14 @@ jobs:
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
 
-      - name: Download RELEASES file from S3
-        shell: bash
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: |
-          mkdir -p ./out/make/squirrel.windows/x64/
-          aws s3 cp s3://templative-artifacts/win32/x64/RELEASES ./out/make/squirrel.windows/x64/RELEASES --region us-west-2 || echo "No RELEASES file found, will create a new one"
+      # - name: Download RELEASES file from S3
+      #   shell: bash
+      #   env:
+      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #   run: |
+      #     mkdir -p ./out/make/squirrel.windows/x64/
+      #     aws s3 cp s3://templative-artifacts/win32/x64/RELEASES ./out/make/squirrel.windows/x64/RELEASES --region us-west-2 || echo "No RELEASES file found, will create a new one"
           
       - name: Make Distributable
         run: npm run makeFromPackage
@@ -185,13 +184,6 @@ jobs:
           cd ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
           ls
           cd ..
-      
-
-      - name: Create temporary directory for signing
-        shell: bash
-        run: |
-          mkdir signing_temp
-          cp "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe" "./signing_temp/setup.exe"
 
       - name: Sign the Windows Setup.exe
         shell: pwsh
@@ -206,13 +198,23 @@ jobs:
             -kvs "${{ secrets.AZURE_CLIENT_SECRET }}" `
             -kvc "${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }}" `
             -v `
-            "./signing_temp/setup.exe"
+            "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe"
 
-      - name: Replace original file with signed version
-        shell: bash
+      - name: Verify code signing
+        shell: pwsh
         run: |
-          mv "./signing_temp/setup.exe" "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe"
-          rm -rf signing_temp
+          $setupExePath = "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe"
+          $sigCheck = Get-AuthenticodeSignature $setupExePath
+          
+          Write-Host "Signature status: $($sigCheck.Status)"
+          Write-Host "Signer: $($sigCheck.SignerCertificate.Subject)"
+          
+          if ($sigCheck.Status -ne "Valid") {
+            Write-Host "Error: Code signing verification failed!"
+            exit 1
+          } else {
+            Write-Host "Code signing verification successful!"
+          }
 
       - name: Upload Releases
         shell: bash
