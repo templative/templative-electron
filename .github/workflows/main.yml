@@ -205,8 +205,8 @@ jobs:
           SIGNTOOL_PATH=$(find "C:\Program Files (x86)\Windows Kits" -name "signtool.exe" -type f | head -1)
           echo "Using signtool at: $SIGNTOOL_PATH"
           
-          # Sign using Azure Key Vault certificate - fix parameter spacing and order
-          "$SIGNTOOL_PATH" sign /fd sha256 /tr http://timestamp.digicert.com /td sha256 /a /kva "${{ secrets.AZURE_TENANT_ID }}" /kvi "${{ secrets.AZURE_CLIENT_ID }}" /kvs "${{ secrets.AZURE_CLIENT_SECRET }}" /kvc "${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }}" /kvt "${{ secrets.AZURE_KEY_VAULT_URL }}" "./signing_temp/setup.exe"
+          # Sign using Azure Key Vault certificate - using syntax similar to previous working command
+          "$SIGNTOOL_PATH" sign -fd sha256 -tr http://timestamp.digicert.com -td sha256 -kva "${{ secrets.AZURE_TENANT_ID }}" -kvi "${{ secrets.AZURE_CLIENT_ID }}" -kvs "${{ secrets.AZURE_CLIENT_SECRET }}" -kvc "${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }}" -kvt "${{ secrets.AZURE_KEY_VAULT_URL }}" "./signing_temp/setup.exe"
 
       - name: Replace original file with signed version
         shell: bash
