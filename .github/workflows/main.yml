@@ -114,11 +114,15 @@ jobs:
         run: |
           az login --service-principal -u ${{ secrets.AZURE_CLIENT_ID }} -p ${{ secrets.AZURE_CLIENT_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
 
-      - name: Download and extract signtool
+      - name: Install SignTool
         shell: bash
         run: |
-          curl -L -o signing_temp/signtool.zip https://aka.ms/signtool-zip
-          unzip -q signing_temp/signtool.zip -d signing_temp
+          choco install windows-sdk-10-version-2004-all -y
+          # Find the signtool location and add it to PATH
+          SIGNTOOL_PATH=$(find "C:\Program Files (x86)\Windows Kits" -name "signtool.exe" -type f | head -1)
+          echo "Found signtool at: $SIGNTOOL_PATH"
+          echo "$SIGNTOOL_PATH" >> $GITHUB_PATH
+          cp "$SIGNTOOL_PATH" ./signing_temp/
 
       - uses: actions/setup-node@v3
         with:
@@ -197,13 +201,14 @@ jobs:
         shell: bash
         run: |
           VAULT_NAME=$(echo ${{ secrets.AZURE_KEY_VAULT_URL }} | awk -F'https://' '{print $2}' | awk -F'.vault.azure.net' '{print $1}')
-          az keyvault certificate download-secret --vault-name $VAULT_NAME --name ${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }} --file signing_temp/cert.pfx
-
+          az keyvault certificate download --vault-name $VAULT_NAME --name ${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }} --file signing_temp/cert.crt
+          az keyvault secret download --vault-name $VAULT_NAME --name ${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }} --file signing_temp/cert.pfx
 
       - name: Sign the Windows Setup.exe
         shell: bash
         run: |
-          signing_temp/signtool.exe sign /f signing_temp/cert.pfx /tr http://timestamp.digicert.com /td sha256 /fd sha256 "./signing_temp/setup.exe"
+          # Use the full path to signtool or rely on it being in PATH
+          signtool sign /f signing_temp/cert.pfx /tr http://timestamp.digicert.com /td sha256 /fd sha256 "./signing_temp/setup.exe"
 
       - name: Replace original file with signed version
         shell: bash
