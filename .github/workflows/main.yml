@@ -104,26 +104,37 @@ jobs:
           aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
           aws configure set region us-west-2
 
-      - name: Install Azure CLI
-        shell: bash
+      - name: Install AzureSignTool
+        shell: pwsh
         run: |
-          npm install -g azure-cli
+          dotnet tool install --global AzureSignTool
 
-      - name: Login to Azure
-        shell: bash
+      - name: Test Azure Signing
+        shell: pwsh
         run: |
-          az login --service-principal -u ${{ secrets.AZURE_CLIENT_ID }} -p ${{ secrets.AZURE_CLIENT_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
-
-      - name: Install SignTool
-        shell: bash
-        run: |
-          choco install windows-sdk-10-version-2004-all -y
-          # Find the signtool location and add it to PATH
-          SIGNTOOL_PATH=$(find "C:\Program Files (x86)\Windows Kits" -name "signtool.exe" -type f | head -1)
-          echo "Found signtool at: $SIGNTOOL_PATH"
-          echo "$(dirname "$SIGNTOOL_PATH")" >> $GITHUB_PATH
-          mkdir -p signing_temp
-          cp "$SIGNTOOL_PATH" ./signing_temp/
+          # Create a test file
+          echo "Test file for signing" > test_signing.txt
+          
+          # Sign the test file
+          AzureSignTool sign `
+            -fd sha256 `
+            -tr http://timestamp.digicert.com `
+            -td sha256 `
+            -kvu "${{ secrets.AZURE_KEY_VAULT_URL }}" `
+            -kvi "${{ secrets.AZURE_CLIENT_ID }}" `
+            -kvt "${{ secrets.AZURE_TENANT_ID }}" `
+            -kvs "${{ secrets.AZURE_CLIENT_SECRET }}" `
+            -kvc "${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }}" `
+            -v `
+            "test_signing.txt"
+          
+          # Check if signing was successful
+          if ($LASTEXITCODE -ne 0) {
+            Write-Error "Test signing failed! Please check your Azure Key Vault credentials and certificate."
+            exit 1
+          } else {
+            Write-Host "Test signing successful! Azure Key Vault signing is working correctly."
+          }
 
       - uses: actions/setup-node@v3
         with:
@@ -198,15 +209,22 @@ jobs:
         run: |
           cp "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe" "./signing_temp/setup.exe"
 
+      
+
       - name: Sign the Windows Setup.exe
-        shell: bash
+        shell: pwsh
         run: |
-          # Use the full path to signtool
-          SIGNTOOL_PATH=$(find "C:\Program Files (x86)\Windows Kits" -name "signtool.exe" -type f | head -1)
-          echo "Using signtool at: $SIGNTOOL_PATH"
-          
-          # Sign using Azure Key Vault certificate - using syntax similar to previous working command
-          "$SIGNTOOL_PATH" sign -fd sha256 -tr http://timestamp.digicert.com -td sha256 -kva "${{ secrets.AZURE_TENANT_ID }}" -kvi "${{ secrets.AZURE_CLIENT_ID }}" -kvs "${{ secrets.AZURE_CLIENT_SECRET }}" -kvc "${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }}" -kvt "${{ secrets.AZURE_KEY_VAULT_URL }}" "./signing_temp/setup.exe"
+          AzureSignTool sign `
+            -fd sha256 `
+            -tr http://timestamp.digicert.com `
+            -td sha256 `
+            -kvu "${{ secrets.AZURE_KEY_VAULT_URL }}" `
+            -kvi "${{ secrets.AZURE_CLIENT_ID }}" `
+            -kvt "${{ secrets.AZURE_TENANT_ID }}" `
+            -kvs "${{ secrets.AZURE_CLIENT_SECRET }}" `
+            -kvc "${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }}" `
+            -v `
+            "./signing_temp/setup.exe"
 
       - name: Replace original file with signed version
         shell: bash
