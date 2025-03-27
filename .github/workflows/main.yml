@@ -173,6 +173,7 @@ jobs:
           mv ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}-full.nupkg ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}-full.nupkg
           mv ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe
           mv ./out/make/squirrel.windows/x64/RELEASES ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/RELEASES
+          cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/RELEASES ./out/make/squirrel.windows/x64/RELEASES
           cd ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
           ls
           cd ..
