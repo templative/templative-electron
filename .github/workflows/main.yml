@@ -66,8 +66,8 @@ jobs:
         id: check-s3
         run: |
           VERSION=${{steps.package-version.outputs.current-version}}
-          if aws s3 ls "s3://templative-artifacts/win32/x64/Templative-win32-x64-${VERSION}.zip" >/dev/null 2>&1 && \
-             aws s3 ls "s3://templative-artifacts/darwin/x64/Templative-darwin-x64-${VERSION}.zip" >/dev/null 2>&1 && \
+          if aws s3 ls "s3://templative-artifacts/win32/x64/Templative-win32-x64-${VERSION}.zip" >/dev/null 2>&1 || \
+             aws s3 ls "s3://templative-artifacts/darwin/x64/Templative-darwin-x64-${VERSION}.zip" >/dev/null 2>&1 || \
              aws s3 ls "s3://templative-artifacts/darwin/arm64/Templative-darwin-arm64-${VERSION}.zip" >/dev/null 2>&1; then
             echo "Version ${VERSION} already exists, skipping build"
             echo "should_build=false" >> "$GITHUB_OUTPUT"
@@ -264,7 +264,7 @@ jobs:
           
   templative-osx:
     needs: check-version
-    if: false # needs.check-version.outputs.should_build == 'true'
+    if: needs.check-version.outputs.should_build == 'true'
     timeout-minutes: 20
     runs-on: ${{ matrix.os }}
     strategy:
