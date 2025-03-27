@@ -109,74 +109,6 @@ jobs:
         shell: pwsh
         run: |
           dotnet tool install --global AzureSignTool
-
-      - name: Test Azure Signing
-        shell: pwsh
-        run: |
-          # Create a simple C# console application
-          mkdir TestSigningApp
-          cd TestSigningApp
-          
-          # Create a simple C# program
-          @"
-          using System;
-          
-          namespace TestApp
-          {
-              class Program
-              {
-                  static void Main(string[] args)
-                  {
-                      Console.WriteLine("Hello World!");
-                  }
-              }
-          }
-          "@ | Out-File -FilePath Program.cs -Encoding utf8
-          
-          # Compile the program
-          dotnet new console --no-restore --force
-          dotnet build -c Release
-          
-          # Find the actual executable path
-          $exePath = Get-ChildItem -Path "./bin/Release" -Recurse -Include "*.exe" | Select-Object -First 1 -ExpandProperty FullName
-          if (-not $exePath) {
-              $dllPath = Get-ChildItem -Path "./bin/Release" -Recurse -Include "*.dll" | Select-Object -First 1 -ExpandProperty FullName
-              Write-Host "No EXE found. Found DLL at: $dllPath"
-              
-              # Try to sign the DLL instead
-              if ($dllPath) {
-                  $exePath = $dllPath
-              } else {
-                  Write-Error "No executable or DLL found to sign!"
-                  exit 1
-              }
-          }
-          
-          Write-Host "Found file to sign at: $exePath"
-          
-          # Sign the executable
-          AzureSignTool sign `
-            -fd sha256 `
-            -tr http://timestamp.digicert.com `
-            -td sha256 `
-            -kvu "${{ secrets.AZURE_KEY_VAULT_URL }}" `
-            -kvi "${{ secrets.AZURE_CLIENT_ID }}" `
-            -kvt "${{ secrets.AZURE_TENANT_ID }}" `
-            -kvs "${{ secrets.AZURE_CLIENT_SECRET }}" `
-            -kvc "${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }}" `
-            -v `
-            "$exePath"
-          
-          # Check if signing was successful
-          if ($LASTEXITCODE -ne 0) {
-            Write-Error "Test signing failed! Please check your Azure Key Vault credentials and certificate."
-            exit 1
-          } else {
-            Write-Host "Test signing successful! Azure Key Vault signing is working correctly."
-          }
-          
-          # Return to the original directory
-          cd ..
           
       - uses: actions/setup-node@v3
         with:
@@ -249,9 +181,8 @@ jobs:
       - name: Create temporary directory for signing
         shell: bash
         run: |
+          mkdir signing_temp
           cp "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe" "./signing_temp/setup.exe"
-
-      
 
       - name: Sign the Windows Setup.exe
         shell: pwsh
