@@ -198,20 +198,25 @@ jobs:
         run: |
           cp "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe" "./signing_temp/setup.exe"
 
-      - name: Download certificate from Azure Key Vault
-        shell: bash
-        run: |
-          VAULT_NAME=$(echo ${{ secrets.AZURE_KEY_VAULT_URL }} | awk -F'https://' '{print $2}' | awk -F'.vault.azure.net' '{print $1}')
-          az keyvault certificate download --vault-name $VAULT_NAME --name ${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }} --file signing_temp/cert.crt
-          az keyvault secret download --vault-name $VAULT_NAME --name ${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }} --file signing_temp/cert.pfx
-
       - name: Sign the Windows Setup.exe
         shell: bash
         run: |
           # Use the full path to signtool
           SIGNTOOL_PATH=$(find "C:\Program Files (x86)\Windows Kits" -name "signtool.exe" -type f | head -1)
           echo "Using signtool at: $SIGNTOOL_PATH"
-          "$SIGNTOOL_PATH" sign /f signing_temp/cert.pfx /tr http://timestamp.digicert.com /td sha256 /fd sha256 "./signing_temp/setup.exe"
+          
+          # Sign using Azure Key Vault certificate
+          "$SIGNTOOL_PATH" sign \
+          /fd sha256 \
+          /a \
+          /kva "${{ secrets.AZURE_TENANT_ID }}" \
+          /kvi "${{ secrets.AZURE_CLIENT_ID }}" \
+          /kvs "${{ secrets.AZURE_CLIENT_SECRET }}" \
+          /kvc "${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }}" \
+          /kvt "${{ secrets.AZURE_KEY_VAULT_URL }}" \
+          /tr http://timestamp.digicert.com \
+          /td sha256 \
+          "./signing_temp/setup.exe"
 
       - name: Replace original file with signed version
         shell: bash
