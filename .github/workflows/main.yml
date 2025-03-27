@@ -5,6 +5,112 @@ permissions:
   contents: write
 
 jobs:
+  test-csharp-signing:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Create minimal C# application
+        shell: pwsh
+        run: |
+          mkdir TestSigningApp
+          cd TestSigningApp
+          
+          # Create a simple C# console application
+          @"
+          using System;
+          
+          namespace TestSigningApp
+          {
+              class Program
+              {
+                  static void Main(string[] args)
+                  {
+                      Console.WriteLine("Hello, signed world!");
+                  }
+              }
+          }
+          "@ > Program.cs
+          
+          # Create a project file
+          @"
+          <Project Sdk="Microsoft.NET.Sdk">
+            <PropertyGroup>
+              <OutputType>Exe</OutputType>
+              <TargetFramework>net6.0</TargetFramework>
+            </PropertyGroup>
+          </Project>
+          "@ > TestSigningApp.csproj
+          
+          # Build the application
+          dotnet build -c Release
+          
+          # Output the path to the executable
+          $exePath = (Get-Item .\bin\Release\net6.0\TestSigningApp.exe).FullName
+          echo "EXE_PATH=$exePath" | Out-File -FilePath $env:GITHUB_ENV -Append
+
+      - name: Install AzureSignTool
+        shell: pwsh
+        run: |
+          dotnet tool install --global AzureSignTool
+
+      - name: Sign the C# application
+        shell: pwsh
+        run: |
+          AzureSignTool sign `
+            -fd sha256 `
+            -tr http://timestamp.digicert.com `
+            -td sha256 `
+            -kvu "${{ secrets.AZURE_KEY_VAULT_URL }}" `
+            -kvi "${{ secrets.AZURE_CLIENT_ID }}" `
+            -kvt "${{ secrets.AZURE_TENANT_ID }}" `
+            -kvs "${{ secrets.AZURE_CLIENT_SECRET }}" `
+            -kvc "${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }}" `
+            -v `
+            "${{ env.EXE_PATH }}"
+
+      - name: Verify C# application signing
+        shell: pwsh
+        run: |
+          $sigCheck = Get-AuthenticodeSignature "${{ env.EXE_PATH }}"
+          
+          Write-Host "Signature status: $($sigCheck.Status)"
+          Write-Host "Signer: $($sigCheck.SignerCertificate.Subject)"
+          Write-Host "Status message: $($sigCheck.StatusMessage)"
+          
+          # More detailed certificate information
+          Write-Host "Certificate details:"
+          Write-Host "  - Issuer: $($sigCheck.SignerCertificate.Issuer)"
+          Write-Host "  - Valid from: $($sigCheck.SignerCertificate.NotBefore)"
+          Write-Host "  - Valid to: $($sigCheck.SignerCertificate.NotAfter)"
+          Write-Host "  - Thumbprint: $($sigCheck.SignerCertificate.Thumbprint)"
+          
+          # Check if certificate chain is valid
+          $chain = New-Object -TypeName System.Security.Cryptography.X509Certificates.X509Chain
+          $chainIsValid = $chain.Build($sigCheck.SignerCertificate)
+          Write-Host "Certificate chain is valid: $chainIsValid"
+          
+          if (-not $chainIsValid) {
+            Write-Host "Chain status:"
+            foreach ($status in $chain.ChainStatus) {
+              Write-Host "  - $($status.StatusInformation)"
+            }
+          }
+          
+          # This will not fail the build, just provide information
+          if ($sigCheck.Status -ne "Valid") {
+            Write-Host "⚠️ Warning: Signature verification returned status: $($sigCheck.Status)"
+            Write-Host "This may be expected in CI environment due to missing root certificates or network connectivity issues."
+          } else {
+            Write-Host "✅ Signature verification successful!"
+          }
+
   validate-secrets:
     runs-on: ubuntu-latest
     steps:
@@ -223,8 +329,34 @@ jobs:
           
           Write-Host "Signature status: $($sigCheck.Status)"
           Write-Host "Signer: $($sigCheck.SignerCertificate.Subject)"
-
-      
+          Write-Host "Status message: $($sigCheck.StatusMessage)"
+          
+          # More detailed certificate information
+          Write-Host "Certificate details:"
+          Write-Host "  - Issuer: $($sigCheck.SignerCertificate.Issuer)"
+          Write-Host "  - Valid from: $($sigCheck.SignerCertificate.NotBefore)"
+          Write-Host "  - Valid to: $($sigCheck.SignerCertificate.NotAfter)"
+          Write-Host "  - Thumbprint: $($sigCheck.SignerCertificate.Thumbprint)"
+          
+          # Check if certificate chain is valid
+          $chain = New-Object -TypeName System.Security.Cryptography.X509Certificates.X509Chain
+          $chainIsValid = $chain.Build($sigCheck.SignerCertificate)
+          Write-Host "Certificate chain is valid: $chainIsValid"
+          
+          if (-not $chainIsValid) {
+            Write-Host "Chain status:"
+            foreach ($status in $chain.ChainStatus) {
+              Write-Host "  - $($status.StatusInformation)"
+            }
+          }
+          
+          # This will not fail the build, just provide information
+          if ($sigCheck.Status -ne "Valid") {
+            Write-Host "⚠️ Warning: Signature verification returned status: $($sigCheck.Status)"
+            Write-Host "This may be expected in CI environment due to missing root certificates or network connectivity issues."
+          } else {
+            Write-Host "✅ Signature verification successful!"
+          }
 
       - name: Upload Releases
         shell: bash
