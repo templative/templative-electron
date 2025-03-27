@@ -122,6 +122,7 @@ jobs:
           SIGNTOOL_PATH=$(find "C:\Program Files (x86)\Windows Kits" -name "signtool.exe" -type f | head -1)
           echo "Found signtool at: $SIGNTOOL_PATH"
           echo "$SIGNTOOL_PATH" >> $GITHUB_PATH
+          mkdir -p signing_temp
           cp "$SIGNTOOL_PATH" ./signing_temp/
 
       - uses: actions/setup-node@v3
@@ -194,7 +195,6 @@ jobs:
       - name: Create temporary directory for signing
         shell: bash
         run: |
-          mkdir -p signing_temp
           cp "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe" "./signing_temp/setup.exe"
 
       - name: Download certificate from Azure Key Vault
