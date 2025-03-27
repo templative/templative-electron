@@ -121,7 +121,7 @@ jobs:
           # Find the signtool location and add it to PATH
           SIGNTOOL_PATH=$(find "C:\Program Files (x86)\Windows Kits" -name "signtool.exe" -type f | head -1)
           echo "Found signtool at: $SIGNTOOL_PATH"
-          echo "$SIGNTOOL_PATH" >> $GITHUB_PATH
+          echo "$(dirname "$SIGNTOOL_PATH")" >> $GITHUB_PATH
           mkdir -p signing_temp
           cp "$SIGNTOOL_PATH" ./signing_temp/
 
@@ -191,6 +191,7 @@ jobs:
           cd ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
           ls
           cd ..
+      
 
       - name: Create temporary directory for signing
         shell: bash
@@ -207,8 +208,10 @@ jobs:
       - name: Sign the Windows Setup.exe
         shell: bash
         run: |
-          # Use the full path to signtool or rely on it being in PATH
-          signtool sign /f signing_temp/cert.pfx /tr http://timestamp.digicert.com /td sha256 /fd sha256 "./signing_temp/setup.exe"
+          # Use the full path to signtool
+          SIGNTOOL_PATH=$(find "C:\Program Files (x86)\Windows Kits" -name "signtool.exe" -type f | head -1)
+          echo "Using signtool at: $SIGNTOOL_PATH"
+          "$SIGNTOOL_PATH" sign /f signing_temp/cert.pfx /tr http://timestamp.digicert.com /td sha256 /fd sha256 "./signing_temp/setup.exe"
 
       - name: Replace original file with signed version
         shell: bash
