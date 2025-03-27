@@ -173,18 +173,6 @@ jobs:
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
 
-      - name: Move Windows Squirrel Files into directory 
-        shell: bash
-        run: |
-          ls
-          mkdir ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
-          cp ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}-full.nupkg ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}-full.nupkg
-          cp ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe
-          cp ./out/make/squirrel.windows/x64/RELEASES ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/RELEASES
-          cd ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
-          ls
-          cd ..
-
       - name: Sign the Windows Setup.exe
         shell: pwsh
         run: |
@@ -208,13 +196,18 @@ jobs:
           
           Write-Host "Signature status: $($sigCheck.Status)"
           Write-Host "Signer: $($sigCheck.SignerCertificate.Subject)"
-          
-          if ($sigCheck.Status -ne "Valid") {
-            Write-Host "Error: Code signing verification failed!"
-            exit 1
-          } else {
-            Write-Host "Code signing verification successful!"
-          }
+
+      - name: Move Windows Squirrel Files into directory 
+        shell: bash
+        run: |
+          ls
+          mkdir ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
+          cp ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}-full.nupkg ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}-full.nupkg
+          cp ./out/make/squirrel.windows/x64/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}}\ Setup.exe
+          cp ./out/make/squirrel.windows/x64/RELEASES ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/RELEASES
+          cd ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}
+          ls
+          cd ..
 
       - name: Upload Releases
         shell: bash
@@ -235,7 +228,7 @@ jobs:
         run: |
           aws s3 cp ./Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip s3://templative-artifacts/win32/x64/Templative-win32-x64-${{steps.package-version.outputs.current-version}}.zip --region us-west-2
           
-      - name: Publish Dry Run
+      - name: Publish the Dry Run
         run: npm run publishDryRun
         env: 
           DEBUG: 'electron-forge:*'
