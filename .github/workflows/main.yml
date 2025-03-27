@@ -173,6 +173,21 @@ jobs:
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
 
+      - name: Show contents directory
+        shell: bash
+        run: |
+          ls -la
+          echo "Checking for Windows Setup.exe file..."
+          SETUP_FILE="./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe"
+          if [ -f "$SETUP_FILE" ]; then
+            echo "✅ Setup.exe file exists at: $SETUP_FILE"
+            ls -la "$SETUP_FILE"
+          else
+            echo "❌ Setup.exe file does not exist at: $SETUP_FILE"
+            echo "Contents of directory:"
+            ls -la "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/" || echo "Directory does not exist"
+          fi
+
       - name: Sign the Windows Setup.exe
         shell: pwsh
         run: |
