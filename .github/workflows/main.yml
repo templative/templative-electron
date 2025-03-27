@@ -137,6 +137,23 @@ jobs:
           dotnet new console --no-restore --force
           dotnet build -c Release
           
+          # Find the actual executable path
+          $exePath = Get-ChildItem -Path "./bin/Release" -Recurse -Include "*.exe" | Select-Object -First 1 -ExpandProperty FullName
+          if (-not $exePath) {
+              $dllPath = Get-ChildItem -Path "./bin/Release" -Recurse -Include "*.dll" | Select-Object -First 1 -ExpandProperty FullName
+              Write-Host "No EXE found. Found DLL at: $dllPath"
+              
+              # Try to sign the DLL instead
+              if ($dllPath) {
+                  $exePath = $dllPath
+              } else {
+                  Write-Error "No executable or DLL found to sign!"
+                  exit 1
+              }
+          }
+          
+          Write-Host "Found file to sign at: $exePath"
+          
           # Sign the executable
           AzureSignTool sign `
             -fd sha256 `
@@ -148,7 +165,7 @@ jobs:
             -kvs "${{ secrets.AZURE_CLIENT_SECRET }}" `
             -kvc "${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }}" `
             -v `
-            "./bin/Release/net6.0/TestSigningApp.exe"
+            "$exePath"
           
           # Check if signing was successful
           if ($LASTEXITCODE -ne 0) {
