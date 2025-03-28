@@ -4,6 +4,7 @@ import EditableViewerJson from "../EditableViewerJson";
 import TemplativeAccessTools from "../../../TemplativeAccessTools";
 import "./UnifiedComponentViewer.css"
 import CompositionControlsRow from "./CompositionControlsRow";
+import CompositionSettingsModal from "./EditComposition/CompositionSettingsModal";
 import path from "path";
 
 export default class UnifiedComponentViewer extends React.Component { 
@@ -17,7 +18,8 @@ export default class UnifiedComponentViewer extends React.Component {
             piece: []
         },
         gamedataColumnWidth: 50,
-        isResizing: false
+        isResizing: false,
+        showFileModal: false
     }
     componentDidMount = async () => {
         await this.load();
@@ -102,6 +104,7 @@ export default class UnifiedComponentViewer extends React.Component {
             isBackExtended: false,
             isDieFaceExtended: true,
             loadedSubfiles: true,
+            hasPiecesGamedata: componentInfo["piecesGamedataFilename"] !== undefined,
             hasFrontArtdata: false,
             hasBackArtdata: false,
             hasDieFaceArtdata: false,
@@ -239,6 +242,60 @@ export default class UnifiedComponentViewer extends React.Component {
         }
     }
     
+    handleOpenFileModal = () => {
+        this.setState({ showFileModal: true });
+    }
+    
+    handleCloseFileModal = () => {
+        this.setState({ showFileModal: false });
+    }
+    
+    handleSaveFileChanges = async (selectedFiles, selectedType, isDisabled) => {
+        const { componentInfo, compositionIndex } = this.state;
+        
+        // Create a batch of updates
+        const updates = [];
+        
+        if (selectedType !== componentInfo.type) {
+            updates.push(["type", selectedType]);
+        }
+        
+        if (isDisabled !== componentInfo.disabled) {
+            updates.push(["disabled", isDisabled]);
+        }
+        
+        if (selectedFiles.componentGamedataFilename !== componentInfo.componentGamedataFilename) {
+            updates.push(["componentGamedataFilename", selectedFiles.componentGamedataFilename]);
+        }
+        
+        if (selectedFiles.piecesGamedataFilename !== componentInfo.piecesGamedataFilename) {
+            updates.push(["piecesGamedataFilename", selectedFiles.piecesGamedataFilename]);
+        }
+        
+        if (selectedFiles.artdataFrontFilename !== componentInfo.artdataFrontFilename) {
+            updates.push(["artdataFrontFilename", selectedFiles.artdataFrontFilename]);
+        }
+        
+        if (selectedFiles.artdataBackFilename !== componentInfo.artdataBackFilename) {
+            updates.push(["artdataBackFilename", selectedFiles.artdataBackFilename]);
+        }
+        
+        if (selectedFiles.artdataDieFaceFilename !== componentInfo.artdataDieFaceFilename) {
+            updates.push(["artdataDieFaceFilename", selectedFiles.artdataDieFaceFilename]);
+        }
+        
+        // Apply all updates
+        for (const [field, value] of updates) {
+            await this.props.updateComponentComposeFieldAsync(compositionIndex, field, value);
+        }
+        
+        // Reload component info if there were changes
+        if (updates.length > 0) {
+            await this.loadSubfiles(this.props.componentCompose[compositionIndex]);
+            await this.loadDataSources();
+        }
+    }
+    
     render() {
         return (
             <>
@@ -251,13 +308,13 @@ export default class UnifiedComponentViewer extends React.Component {
                         quantity={this.state.componentInfo["quantity"]}
                         updateQuantity={this.updateQuantity}
                         isDisabled={this.state.componentInfo["disabled"]}
-                        updateIsDisabled={this.updateIsDisabled}
                         renderComponent={this.props.renderComponent}
                         isProcessing={this.state.isProcessing}
                         componentTypesCustomInfo={this.props.componentTypesCustomInfo}
                         componentTypesStockInfo={this.props.componentTypesStockInfo}
                         updateRouteCallback={this.props.updateRouteCallback}
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        onOpenFileModal={this.handleOpenFileModal}
                     />
                 }
                 
@@ -288,6 +345,26 @@ export default class UnifiedComponentViewer extends React.Component {
                         updateCompositionFilepathCallback={this.updateFile}
                     />
                 } 
+                {this.state.componentInfo && 
+                    <CompositionSettingsModal
+                        show={this.state.showFileModal}
+                        onHide={this.handleCloseFileModal}
+                        name={this.state.componentInfo["name"]}
+                        currentFiles={{
+                            componentGamedataFilename: this.state.componentInfo.componentGamedataFilename,
+                            piecesGamedataFilename: this.state.hasPiecesGamedata ? this.state.componentInfo.piecesGamedataFilename : null,
+                            artdataFrontFilename: this.state.hasFrontArtdata ? this.state.componentInfo.artdataFrontFilename : null,
+                            artdataBackFilename: this.state.hasBackArtdata ? this.state.componentInfo.artdataBackFilename : null,
+                            artdataDieFaceFilename: this.state.hasDieFaceArtdata ? this.state.componentInfo.artdataDieFaceFilename : null
+                        }}
+                        isDisabled={this.state.componentInfo.disabled}
+                        componentType={this.state.componentInfo.type}
+                        componentTypesCustomInfo={this.props.componentTypesCustomInfo}
+                        componentTypesStockInfo={this.props.componentTypesStockInfo}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        onSaveChanges={this.handleSaveFileChanges}
+                    />
+                }
             </>
         );
     }

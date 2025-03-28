@@ -22,7 +22,7 @@ import { STOCK_COMPONENT_INFO } from "../../../shared/stockComponentInfo";
 export default class EditProjectView extends React.Component {
   
     state = {
-        currentRoute: "create",
+        currentRoute: "edit",
         tabbedFiles: [
             // new TabbedFile("COMPONENTS", path.join(this.props.templativeRootDirectoryPath, "component-compose.json"), true),
         ],

@@ -1,17 +1,7 @@
 import React, { useContext } from "react";
 import ComponentOutputContainer from "./ComponentOutputContainer";
 import { OutputDirectoriesContext } from "../../../OutputDirectories/OutputDirectoriesProvider";
-
-const addSpaces = (str) => {
-    return str
-        .replace(/D(4|6|8|10|12|20)(\d+)/g, 'D$1 $2')
-        .replace(/(\d+)(mm|cm)/g, '$1$2')
-        .replace(/([a-z])([A-Z])/g, '$1 $2')
-        .replace(/([a-zA-Z])(\d)/g, '$1 $2')
-        .replace(/\s+/g, ' ')
-        .replace(/D ?(4|6|8|10|12|20)/g, 'D$1')
-        .trim();
-};
+import { addSpaces } from "../../../../utility/addSpaces";
 
 export default function RenderedImages({ templativeRootDirectoryPath, changeTabsToEditAFileCallback }) {
     const { typeQuantities, groupedComponents } = useContext(OutputDirectoriesContext);

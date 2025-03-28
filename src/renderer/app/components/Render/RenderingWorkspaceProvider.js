@@ -33,6 +33,7 @@ class RenderingWorkspaceProvider extends React.Component {
         fileExplorerColumnWidth: 20,
         renderControlsColumnWidth: 20,
         isPreviewVisible: false,
+        lastViewedContentType: "Piece Content", // Default to Piece Content
     };
   }
 
@@ -104,6 +105,32 @@ class RenderingWorkspaceProvider extends React.Component {
     this.setState({ isPreviewVisible: true });
   }
 
+  setLastViewedContentType = (contentType) => {
+    this.setState({ lastViewedContentType: contentType });
+  };
+
+  selectContentTypeForComposition = (availableContentTypes) => {
+    const { lastViewedContentType } = this.state;
+    
+    // If the last viewed content type is available, use it
+    if (availableContentTypes.includes(lastViewedContentType)) {
+      return lastViewedContentType;
+    }
+    
+    // Otherwise, try to use Piece Content
+    if (availableContentTypes.includes("Piece Content")) {
+      return "Piece Content";
+    }
+    
+    // If Piece Content is not available, try Component Content
+    if (availableContentTypes.includes("Component Content")) {
+      return "Component Content";
+    }
+    
+    // If neither is available, use the first available content type
+    return availableContentTypes.length > 0 ? availableContentTypes[0] : null;
+  };
+
   render() {
     return (
       <RenderingWorkspaceContext.Provider
@@ -124,7 +151,10 @@ class RenderingWorkspaceProvider extends React.Component {
           setFileExplorerColumnWidth: this.setFileExplorerColumnWidth,
           setRenderControlsColumnWidth: this.setRenderControlsColumnWidth,
           togglePreviewVisibility: this.togglePreviewVisibility,
-          showPreview: this.showPreview
+          showPreview: this.showPreview,
+          lastViewedContentType: this.state.lastViewedContentType,
+          setLastViewedContentType: this.setLastViewedContentType,
+          selectContentTypeForComposition: this.selectContentTypeForComposition
         }}
       >
         {this.props.children}

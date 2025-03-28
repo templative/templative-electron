@@ -87,9 +87,12 @@
 }
 .artdata-type-header {
     font-size: 14px;
-    margin-top: 1em;
+    /* margin-top: 1em; */
 }
 
+.artdata-viewer .vertical-input-group {
+    margin-bottom: 0.5em;
+}
 .scope-icon-container {
     background-color: var(--color-content) !important;
     border-color: var(--color-gray) !important;

@@ -1,6 +1,5 @@
 import React from "react";
-import GamedataCol from "./GamedataCol";
-import ArtdataRows from "./ArtdataCol";
+import UnifiedCol from "./UnifiedCol";
 
 export default function EditCompositionRow(props) {    
     const {
@@ -24,35 +23,34 @@ export default function EditCompositionRow(props) {
         availableDataSources,
         updateViewedFileUsingTabAsyncCallback,
         updateCompositionFilepathCallback,
+        updateViewedFileUsingExplorerAsyncCallback,
     } = props;
     return (
         <div className="row g-0 unified-viewer">
-            <GamedataCol 
-                gamedataColumnWidth={gamedataColumnWidth}
-                isResizing={isResizing}
-                startResize={startResize}
+            <UnifiedCol 
                 templativeRootDirectoryPath={templativeRootDirectoryPath}
                 componentName={componentName}
+                
+                // Gamedata props
                 studioGamedataFilepath={studioGamedataFilepath}
                 gameGamedataFilepath={gameGamedataFilepath}
                 componentGamedataFilepath={componentGamedataFilepath}
                 piecesGamedataFilepath={piecesGamedataFilepath}
                 showPreviewCallback={showPreviewCallback}
-                handleFileSave={handleFileSave}
-                updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
-                updateCompositionFilepathCallback={updateCompositionFilepathCallback}
-            />
-            <ArtdataRows 
+                
+                // Artdata props
                 frontArtdataFilepath={frontArtdataFilepath}
                 backArtdataFilepath={backArtdataFilepath}
                 dieFaceArtdataFilepath={dieFaceArtdataFilepath}
                 hasFrontArtdata={hasFrontArtdata}
                 hasBackArtdata={hasBackArtdata}
                 hasDieFaceArtdata={hasDieFaceArtdata}
-                templativeRootDirectoryPath={templativeRootDirectoryPath}
-                handleFileSave={handleFileSave}
                 availableDataSources={availableDataSources}
+                
+                // Common props
+                handleFileSave={handleFileSave}
                 updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
+                updateViewedFileUsingExplorerAsyncCallback={updateViewedFileUsingExplorerAsyncCallback}
                 updateCompositionFilepathCallback={updateCompositionFilepathCallback}
             />
         </div>

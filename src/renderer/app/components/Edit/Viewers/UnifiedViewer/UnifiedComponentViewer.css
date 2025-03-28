@@ -7,7 +7,7 @@
 }
 .unified-viewer > .col {
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 .gamedata-column {
     position: relative;
@@ -25,15 +25,26 @@
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+.unified-column {
+    position: relative;
+    min-width: 200px;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
 .artdata-column > * {
     margin-left: 0.5em;
 }
-.artdata-column > * > p, .gamedata-column > * > p {
+.artdata-column > * > p, .gamedata-column > * > p, .unified-column > * > p {
     border-bottom: 1px var(--color-dark-3) solid;
     font-size: 18px;
 }
 .artdata-column > *:not(.unselecteable-artdata) > p:hover,
-.gamedata-column > *:not(.unselecteable-artdata) > p:hover {
+.gamedata-column > *:not(.unselecteable-artdata) > p:hover,
+.unified-column > *:not(.unselecteable-artdata) > p:hover {
     cursor: pointer;
     font-size: 18px;
     background-color: var(--color-content-surface);
@@ -46,24 +57,17 @@
     font-size:12px;
 }
 .content-container {
-    background-color: var(--color-content-surface);
-    border-radius: 4px;
-    /* Creates a shadow effect on the content container */
-    /* 2px - Horizontal offset of the shadow */
-    /* 2px - Vertical offset of the shadow */
-    /* 4px - Blur radius makes the shadow fuzzy/soft around the edges */
-    /* 4px - Spread radius expands/contracts the shadow's size outward */
-    /* rgba(0, 0, 0, 0.5) - Black shadow color at 50% opacity */
-    box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
-    border: 1px var(--color-border) solid;
     margin-bottom: 10px;
     margin-right: 6px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
 }
 .universal-file-content {
     padding-top: 12px;
     padding-bottom: 6px;
-    padding-left: 12px;
-    padding-right: 12px;
+    height: calc(100% - 40px);
 }
 .drop-down-chevron {
     margin-left: 6px;
@@ -114,4 +118,42 @@
 .game-gamedata-header:hover > .subfile-filepath,
 .component-gamedata-header:hover > .subfile-filepath {
     color: var(--color-text);
+}
+
+.same-file-message {
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-left: 3px solid var(--color-accent);
+    background-color: var(--color-dark-2);
+}
+
+.floating-action-bar {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    z-index: 100;
+}
+
+.floating-action-bar button {
+    background-color: var(--color-dark-3);
+    border-color: var(--color-border);
+    color: var(--color-text);
+    padding: 4px 10px;
+    border-radius: var(--bs-border-radius);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.floating-action-bar button:hover {
+    opacity: 1;
+    background-color: var(--color-content-surface);
+    border-color: var(--color-accent);
+}
+.comp-controls-gear-btn {
+    padding-bottom: 8px !important;
+    color: var(--color-text) !important;
 }
