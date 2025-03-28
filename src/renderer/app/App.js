@@ -56,7 +56,7 @@ class App extends React.Component {
         this.setState({email: email, loginStatus: undefined})
     }
     attemptToLoadLastTemplativeProject = async () => {
-        var lastProjectDirectory = getLastProjectDirectory()
+        var lastProjectDirectory = await getLastProjectDirectory()
         if (lastProjectDirectory === undefined) {
             this.setState({templativeRootDirectoryPath: undefined, currentView: "start"})
             return
@@ -66,8 +66,8 @@ class App extends React.Component {
         this.setState({templativeRootDirectoryPath: lastProjectDirectory, currentView: "editProject"})
     }
     componentDidMount = async () => {
-        ipcRenderer.on(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, (event, templativeRootDirectoryPath) => {
-            writeLastOpenedProject(templativeRootDirectoryPath)
+        ipcRenderer.on(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, async (event, templativeRootDirectoryPath) => {
+            await writeLastOpenedProject(templativeRootDirectoryPath)
             this.setState({
                 templativeRootDirectoryPath: templativeRootDirectoryPath,
                 currentView: "editProject"

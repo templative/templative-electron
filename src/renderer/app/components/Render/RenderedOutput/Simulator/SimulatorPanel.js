@@ -15,18 +15,18 @@ export default class SimulatorPanel extends React.Component {
     state={
         selectedSaveFilepath: undefined,
         isCreating: false,
-        simulatorDirectory: "",
+        simulatorDirectory: undefined,
     }
     componentDidMount = async () => {
         trackEvent("view_simulatorPanel")
 
-        ipcRenderer.on(channels.GIVE_SIMULATOR_FOLDER, (event, simulatorFolder) => {
-            writeLastUseTableTopSimulatorDirectory(simulatorFolder)
+        ipcRenderer.on(channels.GIVE_SIMULATOR_FOLDER, async (event, simulatorFolder) => {
+            await writeLastUseTableTopSimulatorDirectory(simulatorFolder)
             if (simulatorFolder !== undefined) {
                 this.pullExportedInformation(simulatorFolder)
             }
         });
-        var lastUsedTableTopSimulatorDirectory = getLastUsedTableTopSimulatorDirectory()
+        var lastUsedTableTopSimulatorDirectory = await getLastUsedTableTopSimulatorDirectory()
         if (lastUsedTableTopSimulatorDirectory !== undefined) {
             this.pullExportedInformation(lastUsedTableTopSimulatorDirectory)
         }
@@ -39,11 +39,11 @@ export default class SimulatorPanel extends React.Component {
             selectedSaveFilepath: selectedSaveExists ? selectedSaveFilepath : undefined
         })
     }
-    componentDidUpdate = (prevProps, prevState) => {
+    componentDidUpdate = async (prevProps, prevState) => {
         if (this.props.outputFolderPath === prevProps.outputFolderPath) {
             return
         }
-        var lastUsedTableTopSimulatorDirectory = getLastUsedTableTopSimulatorDirectory()
+        var lastUsedTableTopSimulatorDirectory = await getLastUsedTableTopSimulatorDirectory()
         if (lastUsedTableTopSimulatorDirectory !== undefined) {
             this.pullExportedInformation(lastUsedTableTopSimulatorDirectory)
         }
@@ -74,7 +74,7 @@ export default class SimulatorPanel extends React.Component {
     render() {
         var buttonMessage = this.state.isCreating ? "Creating Simulator Save..." : "Create Simulator Save"
         
-        var isCreateDisabled = this.state.isCreating || this.props.outputFolderPath === undefined
+        var isCreateDisabled = this.state.isCreating || this.props.outputFolderPath === undefined || this.state.simulatorDirectory === undefined
         var isSaveCreated = this.state.simulatorDirectory !== undefined && this.state.selectedSaveFilepath !== undefined
         return <React.Fragment>
             {isSaveCreated ?

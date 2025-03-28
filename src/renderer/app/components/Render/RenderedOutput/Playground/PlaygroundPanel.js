@@ -15,19 +15,19 @@ export default class PlaygroundPanel extends React.Component {
         outputFolderPath: undefined,
         selectedPackageDirectory: undefined,
         isCreating: false,
-        playgroundDirectory: "",
+        playgroundDirectory: undefined,
     }
     
     componentDidMount = async () => {
         trackEvent("view_playgroundPanel")
 
-        ipcRenderer.on(channels.GIVE_PLAYGROUND_FOLDER, (event, playgroundFolder) => {
-            writeLastUseTableTopPlaygroundDirectory(playgroundFolder)
+        ipcRenderer.on(channels.GIVE_PLAYGROUND_FOLDER, async (event, playgroundFolder) => {
+            await writeLastUseTableTopPlaygroundDirectory(playgroundFolder)
             if (playgroundFolder !== undefined) {
                 this.pullExportedInformation(playgroundFolder)
             }
         });
-        var lastUsedTableTopPlaygroundDirectory = getLastUsedTableTopPlaygroundDirectory()
+        var lastUsedTableTopPlaygroundDirectory = await getLastUsedTableTopPlaygroundDirectory()
         if (lastUsedTableTopPlaygroundDirectory !== undefined) {
             this.pullExportedInformation(lastUsedTableTopPlaygroundDirectory)
         }
@@ -41,11 +41,11 @@ export default class PlaygroundPanel extends React.Component {
             selectedPackageDirectory: selectedPackageExists ? selectedPackageDirectory : undefined
         })
     }
-    componentDidUpdate = (prevProps, prevState) => {
+    componentDidUpdate = async (prevProps, prevState) => {
         if (this.props.outputFolderPath === prevProps.outputFolderPath) {
             return
         }
-        var lastUsedTableTopPlaygroundDirectory = getLastUsedTableTopPlaygroundDirectory()
+        var lastUsedTableTopPlaygroundDirectory = await getLastUsedTableTopPlaygroundDirectory()
         if (lastUsedTableTopPlaygroundDirectory !== undefined) {
             this.pullExportedInformation(lastUsedTableTopPlaygroundDirectory)
         }
@@ -76,7 +76,7 @@ export default class PlaygroundPanel extends React.Component {
     }
     render() {
         var buttonMessage = this.state.isCreating ? "Creating Playground Package..." : "Create Playground Package"
-        var isCreateDisabled = this.state.isCreating || this.props.outputFolderPath === undefined
+        var isCreateDisabled = this.state.isCreating || this.props.outputFolderPath === undefined || this.state.playgroundDirectory === undefined
         var isPackageCreated = this.state.playgroundDirectory !== undefined && this.state.selectedPackageDirectory !== undefined
         
         return <React.Fragment>

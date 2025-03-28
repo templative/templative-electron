@@ -1,81 +1,108 @@
 const os = require('os')
 const path = require('path')
-const fs = require("fs")
+const fsPromises = require("fs/promises")
 
-function readOrCreateSettingsFile() {
+async function folderExists(directory) {
+    try {
+        await fsPromises.access(directory);
+        return true;
+    } catch (error) {
+        return false;
+    }
+}
+async function readOrCreateSettingsFile() {
     var templativeSettingsDirectoryPath = path.join(os.homedir() , "Documents/Templative")
-    if (!fs.existsSync(templativeSettingsDirectoryPath)) {
-        fs.mkdir(templativeSettingsDirectoryPath, { recursive: true }, (err) => {});
+    if (!await folderExists(templativeSettingsDirectoryPath)) {
+        await fsPromises.mkdir(templativeSettingsDirectoryPath, { recursive: true });
     }
     var templativeSettingsPath = path.join(templativeSettingsDirectoryPath, "settings.json")
-    if (!fs.existsSync(templativeSettingsPath)) {
-        fs.writeFileSync(templativeSettingsPath, "{}", 'utf-8');
+    if (!await folderExists(templativeSettingsPath)) {
+        await fsPromises.writeFile(templativeSettingsPath, "{}", 'utf-8');
         return {}
     } 
-    return JSON.parse(fs.readFileSync(templativeSettingsPath, 'utf8'));
+    return JSON.parse(await fsPromises.readFile(templativeSettingsPath, 'utf8'));
 }
 
-function writeToSettingsFile(newFileContents) {
+async function writeToSettingsFile(newFileContents) {
     var templativeSettingsDirectoryPath = path.join(os.homedir() , "Documents/Templative")
     var templativeSettingsPath = path.join(templativeSettingsDirectoryPath, "settings.json")
-    fs.writeFileSync(templativeSettingsPath, newFileContents, 'utf-8');
+    await fsPromises.writeFile(templativeSettingsPath, newFileContents, 'utf-8');
 }
 
-export function getLastProjectDirectory () {
-    var settings = readOrCreateSettingsFile()
+export async function getLastProjectDirectory () {
+    var settings = await readOrCreateSettingsFile()
     const lastProjectDirectory = settings["lastProjectDirectory"]
-    if (!fs.existsSync(lastProjectDirectory)) {
+    if (!await folderExists(lastProjectDirectory)) {
         return undefined
     }
     return lastProjectDirectory
 }
 
-export function writeLastOpenedProject (lastProjectDirectory) {
-    var settings = readOrCreateSettingsFile()
+export async function writeLastOpenedProject (lastProjectDirectory) {
+    var settings = await readOrCreateSettingsFile()
     settings["lastProjectDirectory"] = lastProjectDirectory
     var newFileContents = JSON.stringify(settings, null, 4)
-    writeToSettingsFile(newFileContents)
+    await writeToSettingsFile(newFileContents)
 }
 
-export function getLastUsedGameCrafterUsername () {
-    var settings = readOrCreateSettingsFile()
-    return settings["lastTheGameCrafterUsername"]
+export async function getLastUsedTableTopPlaygroundDirectory () {
+    var settings = await readOrCreateSettingsFile()
+    
+    // Check if we already have a saved directory
+    if (settings["lastTableTopPlaygroundDirectory"] && await folderExists(settings["lastTableTopPlaygroundDirectory"])) {
+        return settings["lastTableTopPlaygroundDirectory"];
+    }
+    
+    // If not, try to find the default directory based on OS
+    let defaultDirectory
+    if (process.platform === 'win32') {
+        defaultDirectory = path.join('C:', 'Program Files (x86)', 'Steam', 'steamapps', 'common', 'TabletopPlayground', 'TabletopPlayground', 'PersistentDownloadDir')
+    } else if (process.platform === 'darwin') {
+        defaultDirectory = path.join(os.homedir(), 'Library', 'Application Support', 'Steam', 'steamapps', 'common', 'TabletopPlayground', 'TabletopPlayground', 'PersistentDownloadDir')
+    }
+    
+    if (defaultDirectory && await folderExists(defaultDirectory)) {
+        settings["lastTableTopPlaygroundDirectory"] = defaultDirectory
+        await writeToSettingsFile(JSON.stringify(settings, null, 4))
+        return defaultDirectory
+    }
+    
+    return undefined
 }
-export function writeLastUseGameCrafterUsername (lastGameCrafterUsername) {
-    var settings = readOrCreateSettingsFile()
-    settings["lastTheGameCrafterUsername"] = lastGameCrafterUsername
-    var newFileContents = JSON.stringify(settings, null, 4)
-    writeToSettingsFile(newFileContents)
-}
-
-export function getLastUsedGameCrafterApiKey () {
-    var settings = readOrCreateSettingsFile()
-    return settings["lastTheGameCrafterApiKey"]
-}
-export function writeLastUseGameCrafterApiKey (lastGameCrafterApiKey) {
-    var settings = readOrCreateSettingsFile()
-    settings["lastTheGameCrafterApiKey"] = lastGameCrafterApiKey
-    var newFileContents = JSON.stringify(settings, null, 4)
-    writeToSettingsFile(newFileContents)
-}
-
-export function getLastUsedTableTopPlaygroundDirectory () {
-    var settings = readOrCreateSettingsFile()
-    return settings["lastTableTopPlaygroundDirectory"]
-}
-export function writeLastUseTableTopPlaygroundDirectory (lastTableTopPlaygroundDirectory) {
-    var settings = readOrCreateSettingsFile()
+export async function writeLastUseTableTopPlaygroundDirectory (lastTableTopPlaygroundDirectory) {
+    var settings = await readOrCreateSettingsFile()
     settings["lastTableTopPlaygroundDirectory"] = lastTableTopPlaygroundDirectory
     var newFileContents = JSON.stringify(settings, null, 4)
-    writeToSettingsFile(newFileContents)
+    await writeToSettingsFile(newFileContents)
 }
-export function getLastUsedTableTopSimulatorDirectory () {
-    var settings = readOrCreateSettingsFile()
-    return settings["lastTableTopSimulatorDirectory"]
+
+export async function getLastUsedTableTopSimulatorDirectory () {
+    var settings = await readOrCreateSettingsFile()
+    
+    // Check if we already have a saved directory
+    if (settings["lastTableTopSimulatorDirectory"] && await folderExists(settings["lastTableTopSimulatorDirectory"])) {
+        return settings["lastTableTopSimulatorDirectory"];
+    }
+    
+    // If not, try to find the default directory based on OS
+    let defaultDirectory
+    if (process.platform === 'win32') {
+        defaultDirectory = path.join(os.homedir(), 'Documents', 'My Games', 'Tabletop Simulator')
+    } else if (process.platform === 'darwin') {
+        defaultDirectory = path.join(os.homedir(), 'Library', 'Tabletop Simulator')
+    }
+    
+    if (defaultDirectory && await folderExists(defaultDirectory)) {
+        settings["lastTableTopSimulatorDirectory"] = defaultDirectory
+        await writeToSettingsFile(JSON.stringify(settings, null, 4))
+        return defaultDirectory
+    }
+    
+    return undefined
 }
-export function writeLastUseTableTopSimulatorDirectory (lastTableTopSimulatorDirectory) {
-    var settings = readOrCreateSettingsFile()
+export async function writeLastUseTableTopSimulatorDirectory (lastTableTopSimulatorDirectory) {
+    var settings = await readOrCreateSettingsFile()
     settings["lastTableTopSimulatorDirectory"] = lastTableTopSimulatorDirectory
     var newFileContents = JSON.stringify(settings, null, 4)
-    writeToSettingsFile(newFileContents)
+    await writeToSettingsFile(newFileContents)
 }
