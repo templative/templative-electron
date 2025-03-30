@@ -29,7 +29,7 @@ async function getComponentTemplate(type) {
         return templatePath;
     } catch (error) {
         console.error(`Template file not found: ${templatePath}`);
-        throw new Error(`Component template for type "${type}" not found`);
+        throw new Error(`Component template for type "${type}" not found at ${templatePath}`);
     }
 }
 

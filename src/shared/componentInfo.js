@@ -143,10 +143,6 @@ const COMPONENT_INFO = {
       825,
       1125
     ],
-    "MarginsPixels": [
-      40,
-      40
-    ],
     "DimensionsInches": [
       2.5,
       3.5
@@ -249,10 +245,6 @@ const COMPONENT_INFO = {
       450,
       600
     ],
-    "MarginsPixels": [
-      40,
-      40
-    ],
     "DimensionsInches": [
       1.25,
       1.75
@@ -286,10 +278,6 @@ const COMPONENT_INFO = {
     "DimensionsPixels": [
       750,
       1125
-    ],
-    "MarginsPixels": [
-      70,
-      50
     ],
     "DimensionsInches": [
       2.04724409448819,
@@ -936,10 +924,6 @@ const COMPONENT_INFO = {
     "DimensionsPixels": [
       2625,
       1050
-    ],
-    "MarginsPixels": [
-      45,
-      40
     ],
     "DimensionsInches": [
       8.5,

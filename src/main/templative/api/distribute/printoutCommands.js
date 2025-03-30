@@ -6,13 +6,12 @@ const printout = new Command('printout')
   .description('Create a prototyping printout of the game')
   .option('-i, --input <path>', 'The directory of the produced game. Defaults to last produced directory.')
   .option('-s, --size <size>', 'The size of the file, either `Letter` or `Tabloid`.', 'Letter')
-  .option('-m, --margins', 'Whether to include margins.', false)
-  .option('-d, --double-sided', 'Print on both front and back.', true)
+  .option('-f, --front-only', 'Print on front side only.')
+  .option('-fb, --front-back', 'Print on both front and back.', true)
   .action(async (options) => {
     let inputPath = options.input;
     const size = options.size;
-    const margins = options.margins;
-    const doubleSided = options.doubleSided;
+    const doubleSided = options.frontBack && !options.frontOnly;
     
     if (!inputPath) {
       inputPath = await getLastOutputFileDirectory();
@@ -28,7 +27,7 @@ const printout = new Command('printout')
       return;
     }
     
-    await createPdfForPrinting(inputPath, doubleSided, size, margins);
+    await createPdfForPrinting(inputPath, doubleSided, size);
   });
 
 module.exports = printout; 

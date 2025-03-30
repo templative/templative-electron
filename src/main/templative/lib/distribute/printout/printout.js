@@ -1,6 +1,5 @@
-const { readdir, readFile, mkdir } = require('fs/promises');
+const { readdir, readFile, mkdir, writeFile } = require('fs/promises');
 const { join, basename, dirname } = require('path');
-const { existsSync, readFileSync } = require('fs');
 const { jsPDF } = require('jspdf');
 const chalk = require('chalk');
 const { COMPONENT_INFO } = require('../../../../../shared/componentInfo.js');
@@ -8,22 +7,25 @@ const { COMPONENT_INFO } = require('../../../../../shared/componentInfo.js');
 // Constants
 const diceTypes = ["CustomColorD6", "CustomWoodD6"];
 const unsupportedDiceTypes = ["CustomColorD4", "CustomColorD8"];
-const marginInches = 0.5;
-const pieceMarginInches = 0.11811 * 1/3;
+const pagePaddingInches = 0.5;
 const fpdfSizes = {
     "Letter": "letter",
     "Tabloid": "a3",
 };
 // Adjust the printout play area to account for margins
 const printoutPlayAreaChoices = {
-    "Letter": [8.5 - (marginInches * 2), 11 - (marginInches * 2)],
-    "Tabloid": [11 - (marginInches * 2), 17 - (marginInches * 2)]
+    "Letter": [8.5 - (pagePaddingInches * 2), 11 - (pagePaddingInches * 2)],
+    "Tabloid": [11 - (pagePaddingInches * 2), 17 - (pagePaddingInches * 2)]
 };
+const printoutTotalSize = {
+    "Letter": [8.5, 11],
+    "Tabloid": [11, 17]
+}
 
 /**
  * Main function to create a PDF for printing
  */
-async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size, areMarginsIncluded) {
+async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size) {
     if (!fpdfSizes[size] || !printoutPlayAreaChoices[size]) {
         console.log(chalk.red(`!!! Cannot create size ${size}.`));
         return;
@@ -61,7 +63,6 @@ async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size,
             isBackIncluded,
             pageWidthInches,
             pageHeightInches,
-            areMarginsIncluded,
             nextAvailablePage
         );
         
@@ -69,25 +70,55 @@ async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size,
         
         // Update the next available page
         if (componentCommands.length > 0) {
-            const maxPage = Math.max(...componentCommands.map(cmd => cmd.page));
+            const maxPage = Math.max(...componentCommands.map(cmd => cmd.pageIndex));
             nextAvailablePage = maxPage + 1;
         }
     }
     
     // Create PDF and apply all placement commands
-    const pdf = new jsPDF("p", "in", fpdfSizes[size]);
-    await applyPlacementCommandsToPdf(pdf, placementCommands, size);
+    let pdf = await createPdfUsingPlacementCommands(placementCommands, size);
     
     // Save the PDF
     const outputPath = join(producedDirectoryPath, "printout.pdf");
     console.log(`Writing printout to ${outputPath}`);
-    
-    // Replace pdf.save() with direct file writing
     const pdfOutput = pdf.output('arraybuffer');
-    const fs = require('fs');
-    fs.writeFileSync(outputPath, Buffer.from(pdfOutput));
+    await writeFile(outputPath, Buffer.from(pdfOutput));
     
     return 1;
+}
+
+async function getPageInformationForComponentType(componentType, pageWidthInches, pageHeightInches) {
+    const componentInfo = COMPONENT_INFO[componentType];
+    const isDie = diceTypes.includes(componentType);
+    let componentSizeInches = [...componentInfo.DimensionsInches];    
+    if (isDie) {
+        const flangeSize = componentSizeInches[1] * 0.15;
+        componentSizeInches = [
+            (componentSizeInches[0] * 3) + (flangeSize * 2),
+            (componentSizeInches[1] * 4 + flangeSize * 2)
+        ];
+    }
+    
+    let columns = Math.floor(pageWidthInches / componentSizeInches[0]);
+    let rows = Math.floor(pageHeightInches / componentSizeInches[1]);
+    
+    let isRotated = false;
+    const rotatedColumns = rows;
+    const rotatedRows = columns;
+    
+    if (rotatedColumns * rotatedRows > columns * rows) {        
+        isRotated = true;
+        columns = rotatedColumns; 
+        rows = rotatedRows;
+        componentSizeInches = [componentSizeInches[1], componentSizeInches[0]];
+    }
+    
+    return {
+        columns,
+        rows,
+        isRotated,
+        componentSizeInches
+    }
 }
 
 /**
@@ -100,183 +131,75 @@ async function generatePlacementCommandsForComponentType(
     isBackIncluded,
     pageWidthInches,
     pageHeightInches,
-    areMarginsIncluded,
     startingPageIndex
 ) {
     const commands = [];
+    const pageInfo = await getPageInformationForComponentType(componentType, pageWidthInches, pageHeightInches);
+    const { columns, rows, isRotated, componentSizeInches } = pageInfo;
+
     const isDie = diceTypes.includes(componentType);
-    
-    // Get component dimensions
-    let componentSizeInches = [...componentInfo.DimensionsInches];
-    
-    // Adjust for margins if needed
-    const marginsPixels = areMarginsIncluded && componentInfo.MarginsPixels ? componentInfo.MarginsPixels : null;
-    if (marginsPixels && componentInfo.DimensionsPixels) {
-        const dimensionsPixels = componentInfo.DimensionsPixels;
-        const sizeOfContentPixels = [
-            dimensionsPixels[0] - (marginsPixels[0] * 2), 
-            dimensionsPixels[1] - (marginsPixels[1] * 2)
-        ];
-        const accountForMarginsFactor = [
-            dimensionsPixels[0] / sizeOfContentPixels[0], 
-            dimensionsPixels[1] / sizeOfContentPixels[1]
-        ];
-        componentSizeInches = [
-            componentSizeInches[0] * accountForMarginsFactor[0], 
-            componentSizeInches[1] * accountForMarginsFactor[1]
-        ];
-    }
-    
-    // Calculate piece size with margins
-    let pieceSizeInches;
-    if (isDie) {
-        // Special handling for dice
-        const flangeSize = componentSizeInches[1] * 0.15;  // Match the flange size ratio
-        pieceSizeInches = [
-            (componentSizeInches[0] * 3) + pieceMarginInches + (flangeSize * 2),
-            (componentSizeInches[1] * 4 + flangeSize * 2) + pieceMarginInches
-        ];
-    } else {
-        pieceSizeInches = [
-            componentSizeInches[0] + pieceMarginInches, 
-            componentSizeInches[1] + pieceMarginInches
-        ];
-    }
-    
-    // Calculate layout - use the usable area (page dimensions minus margins)
-    // Try both orientations for non-dice components
-    let columns = Math.floor(pageWidthInches / pieceSizeInches[0]);
-    let rows = Math.floor(pageHeightInches / pieceSizeInches[1]);
-    let isRotated = false;
-    
-    if (!isDie) {
-        const rotatedColumns = Math.floor(pageWidthInches / pieceSizeInches[1]);
-        const rotatedRows = Math.floor(pageHeightInches / pieceSizeInches[0]);
-        
-        // Check if rotating the components allows us to fit more on the page
-        // Compare total pieces that fit in normal vs rotated orientation
-        // Normal: columns * rows pieces
-        // Rotated: rotatedColumns * rotatedRows pieces
-        if (rotatedColumns * rotatedRows > columns * rows) {
-            // Rotating allows more pieces to fit, so use rotated layout            
-            isRotated = true;
-            columns = rotatedColumns; 
-            rows = rotatedRows;
-            pieceSizeInches = [pieceSizeInches[1], pieceSizeInches[0]];
-            componentSizeInches = [componentSizeInches[1], componentSizeInches[0]];
-        }
-    }
-    
-    
     if (rows === 0 || columns === 0) {
         console.log(chalk.red(`Skipping ${componentType} as it's too large for the print space.`));
         return commands;
     }
-    
-    // Calculate horizontal and vertical offsets for centering
-    // Start from the page margin and add extra space to center the grid
-    const horizontalOffset = marginInches + (pageWidthInches - (columns * pieceSizeInches[0])) / 2;
-    const verticalOffset = marginInches + (pageHeightInches - (rows * pieceSizeInches[1])) / 2;
-    
-
-    
-    // Process each component and generate placement commands
+    // const exampleComponentList = [
+    //     {
+    //       filepath: '/Users/oliverbarnum/Documents/git/templative-electron/scripts/test-project/output/GameName_Template_0.0.0_2025-03-28_09-29-25/PokerDeck/PokerDeck-PokerDeck.png',
+    //       quantity: 12,
+    //       isDie: false,
+    //       backFilepath: '/Users/oliverbarnum/Documents/git/templative-electron/scripts/test-project/output/GameName_Template_0.0.0_2025-03-28_09-29-25/PokerDeck/PokerDeck-back.png'
+    //     }
+    //   ]
+    const itemsPerPage = columns * rows;
     let itemIndex = 0;
     
     for (const component of componentList) {
-        if (component.isDie && isDie) {
-            // Handle dice
-            const dieImages = Array.isArray(component.filepath) ? component.filepath : [component.filepath];
+        for (let i = 0; i < component.quantity; i++) {
+            const pageIndex = startingPageIndex + Math.floor(itemIndex / itemsPerPage);
+            const itemIndexOnPage = itemIndex % itemsPerPage;
+            const col = itemIndexOnPage % columns;
+            const row = Math.floor(itemIndexOnPage / columns);
             
-            for (let i = 0; i < component.quantity; i++) {
-                // For dice, we need to create a cross layout
-                const pageIndex = Math.floor(itemIndex / (columns * rows)) + startingPageIndex;
-                const itemIndexOnPage = itemIndex % (columns * rows);
-                const col = itemIndexOnPage % columns;
-                const row = Math.floor(itemIndexOnPage / columns);
+            // Calculate front page index
+            // When backs are included, use even pages for fronts (0, 2, 4...)
+            // When backs are not included, use sequential pages (0, 1, 2...)
+            const frontPageIndex = isBackIncluded ? pageIndex * 2 : pageIndex;
+
+            commands.push({
+                pageIndex: frontPageIndex,
+                placementIndex: [col, row],
+                filepath: component.filepath,
+                isRotated: isRotated,
+                columns: columns,
+                rows: rows,
+                isFront: true,
+                componentSizeInches: componentSizeInches,
+                type: component.isDie ? "die" : "regular",
+            });
+            
+            // Add command for back if needed
+            if (isBackIncluded && component.backFilepath) {
+                // For backs, we need to mirror the position horizontally
+                // to account for double-sided printing
+                const reversedCol = columns - 1 - col;
                 
-                const xPos = horizontalOffset + (col * pieceSizeInches[0]);
-                const yPos = verticalOffset + (row * pieceSizeInches[1]);
+                // Back page is always odd number (1, 3, 5...) in zero-based indexing
+                const backPageIndex = frontPageIndex + 1;
                 
-                // Add command for die cross layout
                 commands.push({
-                    page: pageIndex,
-                    type: 'die',
-                    filepaths: dieImages,
-                    x: xPos,
-                    y: yPos,
-                    width: componentSizeInches[isRotated ? 1 : 0],
-                    height: componentSizeInches[isRotated ? 0 : 1],
+                    pageIndex: backPageIndex,
+                    placementIndex: [reversedCol, row],
+                    columns: columns,
+                    rows: rows,
+                    filepath: component.backFilepath,
                     isRotated: isRotated,
-                    componentType: componentType,
-                    isFront: true
+                    isFront: false,
+                    componentSizeInches: componentSizeInches,
+                    type: "regular" // Note: Dice don't have backs
                 });
-                
-                itemIndex++;
             }
-        } else {
-            // Handle regular components
-            for (let i = 0; i < component.quantity; i++) {
-                const pageIndex = Math.floor(itemIndex / (columns * rows)) + startingPageIndex;
-                const itemIndexOnPage = itemIndex % (columns * rows);
-                const col = itemIndexOnPage % columns;
-                const row = Math.floor(itemIndexOnPage / columns);
-                
-                const xPos = horizontalOffset + (col * pieceSizeInches[0]);
-                const yPos = verticalOffset + (row * pieceSizeInches[1]);
-                
-                // Calculate front page index
-                // When backs are included, use even pages for fronts (0, 2, 4...)
-                // When backs are not included, use sequential pages (0, 1, 2...)
-                const frontPageIndex = isBackIncluded ? pageIndex * 2 : pageIndex;
-                
-                // Add command for front
-                commands.push({
-                    page: frontPageIndex,
-                    type: 'regular',
-                    filepath: component.filepath,
-                    x: xPos,
-                    y: yPos,
-                    width: componentSizeInches[isRotated ? 1 : 0],
-                    height: componentSizeInches[isRotated ? 0 : 1],
-                    isRotated: isRotated,
-                    componentType: componentType,
-                    isFront: true,
-                    marginsInfo: marginsPixels ? {
-                        pixels: marginsPixels,
-                        dimensionsPixels: componentInfo.DimensionsPixels
-                    } : null
-                });
-                
-                // Add command for back if needed
-                if (isBackIncluded && component.backFilepath) {
-                    // For backs, we need to mirror the position horizontally
-                    // to account for double-sided printing
-                    const reversedCol = columns - 1 - col;
-                    const backXPos = horizontalOffset + (reversedCol * pieceSizeInches[0]);
-                    
-                    // Back page is always odd number (1, 3, 5...) in zero-based indexing
-                    // (even pages when printed: 2, 4, 6...)
-                    commands.push({
-                        page: frontPageIndex + 1, // Always on next page after front
-                        type: 'regular',
-                        filepath: component.backFilepath,
-                        x: backXPos,
-                        y: yPos,
-                        width: componentSizeInches[isRotated ? 1 : 0],
-                        height: componentSizeInches[isRotated ? 0 : 1],
-                        isRotated: isRotated,
-                        componentType: componentType,
-                        isFront: false,
-                        marginsInfo: marginsPixels ? {
-                            pixels: marginsPixels,
-                            dimensionsPixels: componentInfo.DimensionsPixels
-                        } : null
-                    });
-                }
-                
-                itemIndex++;
-            }
+            
+            itemIndex++;
         }
     }
     
@@ -286,68 +209,69 @@ async function generatePlacementCommandsForComponentType(
 /**
  * Apply all placement commands to the PDF
  */
-async function applyPlacementCommandsToPdf(pdf, commands, size) {
+async function createPdfUsingPlacementCommands(commands, size) {
+
     if (commands.length === 0) {
         console.log(chalk.yellow("No pieces to print."));
-        return;
+        return new jsPDF("p", "in", fpdfSizes[size]);
     }
+    var pdf = new jsPDF("p", "in", fpdfSizes[size]);
     
     // Set a cross-platform compatible font
     pdf.setFont("helvetica");
     
-    // Sort commands by page
-    commands.sort((a, b) => {
-        if (a.page !== b.page) return a.page - b.page;
-        // If on same page, fronts before backs
-        return a.isFront ? -1 : 1;
-    });
+    // Sort commands by page index
+    commands.sort((a, b) => a.pageIndex - b.pageIndex);
     
-    let currentPage = 0;
+    let currentPageIndex = 0;
     
     for (let i = 0; i < commands.length; i++) {
         const command = commands[i];
         
-        // Add new page if needed (but not for the first command)
-        if (command.page > currentPage) {
-            for (let p = 0; p < (command.page - currentPage); p++) {
+        // Add new pages if needed (but not for the first command)
+        if (command.pageIndex > currentPageIndex) {
+            for (let p = 0; p < (command.pageIndex - currentPageIndex); p++) {
                 pdf.addPage();
             }
-            currentPage = command.page;
+            drawPageMarginLines(pdf, size);
+            currentPageIndex = command.pageIndex;
         }
+        
+        // Set the current page
+        if (command.pageIndex > 0) {
+            pdf.setPage(command.pageIndex + 1); // setPage is 1-indexed
+        }
+        
+        // Draw margin lines on the current page
+        drawPageMarginLines(pdf, size);
         
         try {
             if (command.type === 'die') {
                 // Handle die cross layout
-                await addDieCrossLayoutToPdf(pdf, command);
+                // await addDieCrossLayoutToPdf(pdf, size, command);
             } else {
                 // Handle regular component
-                await addComponentToPdf(pdf, command);
+                await addComponentToPdf(pdf, size, command);
             }
         } catch (error) {
             console.error(`Error adding component to PDF:`, error);
-            // Add error indicator
+            // Add error indicator on the current page
             pdf.setFillColor(255, 200, 200);
-            pdf.rect(command.x, command.y, command.width, command.height, 'F');
+            const x = pagePaddingInches + (command.placementIndex[0] * command.componentSizeInches[0]);
+            const y = pagePaddingInches + (command.placementIndex[1] * command.componentSizeInches[1]);
+            pdf.rect(x, y, command.componentSizeInches[0], command.componentSizeInches[1], 'F');
             pdf.setTextColor(200, 0, 0);
-            pdf.setFont("helvetica");
             pdf.setFontSize(12);
             pdf.text(
                 `Error: ${error.message.substring(0, 20)}...`, 
-                command.x + (command.width / 2), 
-                command.y + (command.height / 2),
+                x + (command.componentSizeInches[0] / 2), 
+                y + (command.componentSizeInches[1] / 2),
                 { align: 'center' }
             );
         }
     }
     
-    // Draw margin lines on all pages
-    const totalPages = currentPage + 1;
-    for (let page = 0; page < totalPages; page++) {
-        if (page > 0) {
-            pdf.setPage(page + 1); // setPage is 1-indexed
-        }
-        drawPageMarginLines(pdf, size);
-    }
+    return pdf;
 }
 
 /**
@@ -365,8 +289,8 @@ function drawPageMarginLines(pdf, size) {
     
     // Draw rectangle around the printable area
     pdf.rect(
-        marginInches,
-        marginInches, 
+        pagePaddingInches,
+        pagePaddingInches, 
         width,
         height
     );
@@ -378,92 +302,45 @@ function drawPageMarginLines(pdf, size) {
 /**
  * Add a regular component to the PDF
  */
-async function addComponentToPdf(pdf, command) {
-    // Check if file exists
-    if (!existsSync(command.filepath)) {
-        throw new Error(`File not found: ${command.filepath}`);
-    }
-    
-    // Read the file
-    const imageData = readFileSync(command.filepath);
-    const base64Image = Buffer.from(imageData).toString('base64');
-    const dataUrl = `data:image/png;base64,${base64Image}`;
-    
-    // Calculate corrected positions for rotated images
-    let xPos = command.x;
-    let yPos = command.y;
-    
-    // When rotating 90 degrees, adjust coordinates to maintain top-left position
-    if (command.isRotated) {
-        xPos = command.x + command.height; // Move right by the height of the image
-        yPos = command.y - command.width; // Move up by the width of the image
-    }
-    
-    // Add image to PDF
-    pdf.addImage(
-        dataUrl, 
-        'PNG', 
-        xPos, 
-        yPos, 
-        command.width, 
-        command.height, 
-        '', 
-        'FAST',
-        command.isRotated ? 90 : 0
-    );
-    
-    // Add cut guides if margins info is available
-    if (command.marginsInfo) {
-        addCutGuides(pdf, command);
-    }
-}
+async function addComponentToPdf(pdf, size, command) {
 
-/**
- * Add cut guides around a component
- */
-function addCutGuides(pdf, command) {
-    const { marginsInfo } = command;
-    if (!marginsInfo) return;
-    
-    // Ensure font is set to a cross-platform compatible font
-    pdf.setFont("helvetica");
-    
-    const { pixels, dimensionsPixels } = marginsInfo;
-    const marginRatioX = pixels[0] / dimensionsPixels[0];
-    const marginRatioY = pixels[1] / dimensionsPixels[1];
-    
-    const lineLength = 0.1; // inches
-    pdf.setDrawColor(0, 128, 0); // Green
-    pdf.setLineWidth(0.01);
-    
-    // Calculate margin positions
-    const marginLeft = command.x + (command.width * marginRatioX);
-    const marginRight = command.x + command.width - (command.width * marginRatioX);
-    const marginTop = command.y + (command.height * marginRatioY);
-    const marginBottom = command.y + command.height - (command.height * marginRatioY);
-    
-    // Draw corner marks
-    // Top left
-    pdf.line(marginLeft, command.y, marginLeft, command.y + lineLength);
-    pdf.line(command.x, marginTop, command.x + lineLength, marginTop);
-    
-    // Top right
-    pdf.line(marginRight, command.y, marginRight, command.y + lineLength);
-    pdf.line(command.x + command.width, marginTop, command.x + command.width - lineLength, marginTop);
-    
-    // Bottom left
-    pdf.line(marginLeft, command.y + command.height, marginLeft, command.y + command.height - lineLength);
-    pdf.line(command.x, marginBottom, command.x + lineLength, marginBottom);
-    
-    // Bottom right
-    pdf.line(marginRight, command.y + command.height, marginRight, command.y + command.height - lineLength);
-    pdf.line(command.x + command.width, marginBottom, command.x + command.width - lineLength, marginBottom);
+    try {
+        const pageSizeInches = printoutTotalSize[size]
+        const imageData = await readFile(command.filepath);
+        const base64Image = Buffer.from(imageData).toString('base64');
+        const dataUrl = `data:image/png;base64,${base64Image}`;
+        var isRotated = false
+        var isFront = command.isFront
+        const rotatedWidth = command.componentSizeInches[isRotated ? 1 : 0]
+        const rotatedHeight = command.componentSizeInches[isRotated ? 0 : 1]
+        var xPos = (pageSizeInches[0]/2) - (command.columns * rotatedWidth / 2) + (command.placementIndex[0] * rotatedWidth)
+        var yPos = (pageSizeInches[1]/2) - (command.rows * rotatedHeight / 2) + (command.placementIndex[1] * rotatedHeight)
+        if (isRotated) {
+            if (isFront) {
+                xPos += rotatedWidth 
+                yPos -= rotatedHeight/2
+            }
+            else {
+                xPos += 0
+                yPos -= rotatedWidth
+            }
+        }
+        pdf.addImage(
+            dataUrl, 'PNG', 
+            xPos, yPos, 
+            command.componentSizeInches[0], command.componentSizeInches[1], 
+            '', 'FAST',
+            (isRotated ? 90 : 0) * (isFront ? 1 : -1)
+        );
+    } catch (error) {
+        throw new Error(`Issue placing: ${command.filepath}`);
+    }
 }
 
 /**
  * Add a die cross layout to the PDF
  */
-async function addDieCrossLayoutToPdf(pdf, command) {
+async function addDieCrossLayoutToPdf(pdf, size, command) {
     const { filepaths, x, y, width, height } = command;
     
     // Calculate dimensions for each face
@@ -508,32 +385,31 @@ async function addDieCrossLayoutToPdf(pdf, command) {
         const filepath = filepaths[i];
         const [colIndex, rowIndex] = positions[i];
         
-        // Check if file exists
-        if (!existsSync(filepath)) {
-            console.log(chalk.red(`Warning: Die face file not found: ${filepath}`));
+        try {
+            // Read the file asynchronously
+            const imageData = await readFile(filepath);
+            const base64Image = Buffer.from(imageData).toString('base64');
+            const dataUrl = `data:image/png;base64,${base64Image}`;
+            
+            // Calculate position
+            const faceX = x + (colIndex * faceWidth);
+            const faceY = y + (rowIndex * faceHeight);
+            
+            // Add image to PDF
+            pdf.addImage(
+                dataUrl, 
+                'PNG', 
+                faceX, 
+                faceY, 
+                faceWidth, 
+                faceHeight, 
+                '', 
+                'FAST'
+            );
+        } catch (error) {
+            console.log(chalk.red(`Issue placing die: ${filepath}`));
             continue;
         }
-        
-        // Read the file
-        const imageData = readFileSync(filepath);
-        const base64Image = Buffer.from(imageData).toString('base64');
-        const dataUrl = `data:image/png;base64,${base64Image}`;
-        
-        // Calculate position
-        const faceX = x + (colIndex * faceWidth);
-        const faceY = y + (rowIndex * faceHeight);
-        
-        // Add image to PDF
-        pdf.addImage(
-            dataUrl, 
-            'PNG', 
-            faceX, 
-            faceY, 
-            faceWidth, 
-            faceHeight, 
-            '', 
-            'FAST'
-        );
     }
 }
 
@@ -583,6 +459,11 @@ async function collectFilepathQuantitiesForComponent(componentInstructions) {
     
     if (componentInstructions.type.startsWith("STOCK_")) {
         return componentTypeFilepathAndQuantity;
+    }
+
+    const componentInfo = COMPONENT_INFO[componentInstructions.type]
+    if (componentInfo.IsDisabled) {
+        return componentTypeFilepathAndQuantity
     }
 
     // Special handling for dice
