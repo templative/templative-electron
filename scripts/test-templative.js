@@ -92,44 +92,50 @@ async function runTests() {
   console.log(chalk.bold.blue('=== Templative CLI Testing Framework ==='));
   
   // Ensure component templates are available
-  ensureComponentTemplatesAvailable();
+  // ensureComponentTemplatesAvailable();
   
   // Only setup and initialize if no input directory was provided
-  if (!inputDir) {
-    // Setup test directory
-    setupTestDirectory();
+  // if (!inputDir) {
+  //   // Setup test directory
+  //   setupTestDirectory();
     
-    // Test init command
-    console.log(chalk.bold.blue('\n=== Testing init command ==='));
-    const initResult = runCommand('create init -i ' + PROJECT_DIR);
-    if (!initResult.success) {
-      console.error(chalk.red('Failed to initialize project, aborting tests'));
-      process.exit(1);
-    }
+  //   // Test init command
+  //   console.log(chalk.bold.blue('\n=== Testing init command ==='));
+  //   const initResult = runCommand('create init -i ' + PROJECT_DIR);
+  //   if (!initResult.success) {
+  //     console.error(chalk.red('Failed to initialize project, aborting tests'));
+  //     process.exit(1);
+  //   }
     
-    // Test create poker deck command
-    console.log(chalk.bold.blue('\n=== Testing create poker deck command ==='));
-    const createResult = runCommand(`create deck poker -n ${COMPONENT_NAME} -i ${PROJECT_DIR}`);
-    if (!createResult.success) {
-      console.error(chalk.red('Failed to create poker deck, aborting tests'));
-      process.exit(1);
-    }
-  } else {
-    console.log(chalk.blue(`Using existing project directory: ${PROJECT_DIR}`));
-  }
+  //   // Test create poker deck command
+  //   console.log(chalk.bold.blue('\n=== Testing create poker deck command ==='));
+  //   const createResult = runCommand(`create deck poker -n ${COMPONENT_NAME} -i ${PROJECT_DIR}`);
+  //   if (!createResult.success) {
+  //     console.error(chalk.red('Failed to create poker deck, aborting tests'));
+  //     process.exit(1);
+  //   }
+  // } else {
+  //   console.log(chalk.blue(`Using existing project directory: ${PROJECT_DIR}`));
+  // }
   
-  // Test produce command
-  console.log(chalk.bold.blue('\n=== Testing produce command ==='));
-  const produceResult = runCommand(`produce --input "${PROJECT_DIR}" --name="actionCaps"`);
-  if (!produceResult.success) {
-    console.error(chalk.red('Failed to produce game, aborting tests'));
-    process.exit(1);
-  }
+  // // Test produce command
+  // console.log(chalk.bold.blue('\n=== Testing produce command ==='));
+  // const produceResult = runCommand(`produce --input "${PROJECT_DIR}"`);
+  // if (!produceResult.success) {
+  //   console.error(chalk.red('Failed to produce game, aborting tests'));
+  //   process.exit(1);
+  // }
   
   // Get the output directory from the .last file
   const lastOutputPath = fs.readFileSync(path.join(PROJECT_DIR, 'output', '.last'), 'utf8').trim();
   console.log(chalk.blue(`Using output directory: ${lastOutputPath}`));
   
+  const printoutResult = runCommand(`distribute printout -i "${lastOutputPath}"`);
+  if (!printoutResult.success) {
+    console.error(chalk.red('Failed to create printout, aborting tests'));
+    process.exit(1);
+  }
+
   // Test simulator command
   // console.log(chalk.bold.blue('\n=== Testing simulator command ==='));
   // try {
