@@ -1,6 +1,6 @@
 const colors = ["lime green", "red", "blue", "green", "yellow", "mustard", "purple", "orange", "pink", "brown", "gray", "black", "white", "apricot", "teal", "caramel", "ivory", "wood", "limegreen", 'lavender', "salmon", "taupe", "natural", "rose", "tan", "mint"];
 const metals = ["gold", "silver", "bronze", "copper", "golden"]
-const shades = ["light", "dark"];
+const shades = ["light", "dark", 'bright'];
 const allColorVariations = [
   ...shades.flatMap(shade => colors.map(color => `${shade}${color}`)),
   ...shades.flatMap(shade => metals.map(metal => `${shade}${metal}`)),
@@ -14,8 +14,9 @@ const getColorValueHex = (colorName) => {
   const color = colorName.toLowerCase();
   
   // Handle special cases and compound colors
-  if (color.includes('light')) {
+  if (color.includes('light') || color.includes('bright')) {
       const baseColor = color.replace('light', '');
+      baseColor = baseColor.replace('bright', '');
       switch (baseColor) {
           case 'red': return '#ff9999';
           case 'blue': return '#99ccff';

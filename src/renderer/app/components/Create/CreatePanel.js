@@ -18,7 +18,7 @@ var path = require('path');
 // Extract major categories from COMPONENT_CATEGORIES structure
 const customMajorCategoryOrder = [  "deck", "die", "token", "board",  "mat", "packaging", "document", "stickers","blank", "screen", "dial"];
 
-const stockMajorCategoryOrder = ["dice", "premium", "packaging", 'sleeve', 'baggies', "cube", "tube", "blank", "building", "meeple", "TB", "minifig", "figurine", "animal", "vehicle", "casino", "money", "utility", "vial", "symbol", "bodypart", "resource"];
+const stockMajorCategoryOrder = ["dice","cube", "tube", "meeple"];
 
 // Convert to functional component
 const CreatePanel = (props) => {

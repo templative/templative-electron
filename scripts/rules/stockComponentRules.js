@@ -16,6 +16,9 @@ const symbolPrefixes = [ "Universal No", "Universal Yes", "Question Mark", "Excl
 const money = ["Coin", "Doubloon"]
 const casino =["Poker Chip", "Suits"]
 
+const disabledTags= [
+    "premium", "sleeve", "baggies", "TB", "minifig", "clear", "multicolored", "rounded", "pearl", "money", "utility", 'casino', 'vehicle', 'animal', 'figurine', 'building', 'blank', 'packaging', 'meeple', 'vial', 'symbol', 'bodypart', 'resource','symbol', 'bodypart', 'resource'
+]
 
 
 const undoMeeple = ["Avatar", "Flat Cap", "Fedora Person", "Hatman Green", "Future Person"]
@@ -633,5 +636,94 @@ module.exports = [
             return ["SimulatorCreationTask", "PlaygroundCreationTask"];
         }
     },
+    {
+        description: "If component DisplayName includes 'Clear' tag it as clear",
+        condition: (component) => component.DisplayName && component.DisplayName.includes("Clear") && !component.Tags.includes("clear"),
+        setValue: (component) => {
+            component.Tags.push("clear");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "If component DisplayName includes 'Pearl' and it has the tag 'dice' tag it as pearl",
+        condition: (component) => component.DisplayName && component.DisplayName.includes("Pearl") && component.Tags.includes("dice") && !component.Tags.includes("pearl"),
+        setValue: (component) => {
+            component.Tags.push("pearl");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "If component DisplayName contains 'Future Cube' or 'Qubit' then disable it",
+        condition: (component) => component.DisplayName && (component.DisplayName.includes("Future Cube") || component.DisplayName.includes("Qubit")),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            return ["IsDisabled"];
+        }
+    },
+    {
+        description: "If component DisplayName contains 'Transparent' then disable it",
+        condition: (component) => component.DisplayName && component.DisplayName.includes("Transparent"),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            return ["IsDisabled"];
+        }
+    },
+    {
+        description: "If component DisplayName includes 'Rounded' and it has the tag 'dice' tag it as rounded",
+        condition: (component) => component.DisplayName && component.DisplayName.includes("Rounded") && component.Tags.includes("dice") && !component.Tags.includes("rounded"),
+        setValue: (component) => {
+            component.Tags.push("rounded");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "If component DisplayName includes ' on ' and it has the tag 'dice' tag it as multicolored",
+        condition: (component) => component.DisplayName && component.DisplayName.includes(" on ") && component.Tags.includes("dice") && !component.Tags.includes("multicolored"),
+        setValue: (component) => {
+            component.Tags.push("multicolored");
+            return ["Tags"];
+        }
+    },
+    {
+        description: "If component DisplayName includes 'Numeral' and it has the tag 'dice' disable it",
+        condition: (component) => component.DisplayName && component.DisplayName.includes("Numeral") && component.Tags.includes("dice") && !component.Tags.includes("multicolored"),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            return ["IsDisabled"];
+        }
+    },
+    {
+        description: "If component DisplayName includes 'Transparent' and it has the tag 'dice' disable it and tag it 'transparent'",
+        condition: (component) => component.DisplayName && component.DisplayName.includes("Transparent") && component.Tags.includes("dice"),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            component.Tags.push("transparent");
+            return ["IsDisabled", "Tags"];
+        }
+    },
+    {
+        description: "If component DisplayName includes 'Lightning Bolt' or 'Rocket Dice' and it has the tag 'dice' disable it",
+        condition: (component) => component.DisplayName && (component.DisplayName.includes("Lightning Bolt") || component.DisplayName.includes("Rocket Dice")) && component.Tags.includes("dice"),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            return ["IsDisabled"];
+        }
+    },
+    {
+        description: "Components tagged with any of the following should be disabled: " + disabledTags.join(", "),
+        condition: (component) => disabledTags.some(tag => component.Tags && component.Tags.includes(tag)),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            return ["IsDisabled"];
+        }
+    },
+    {
+        description: "Components tagged meeple whose DisplayName included 'Meeple, Wood' should be enabled",
+        condition: (component) => component.Tags && component.Tags.includes("meeple") && component.DisplayName && component.DisplayName.includes("Meeple, Wood"),
+        setValue: (component) => {
+            component.IsDisabled = false;
+            return ["IsDisabled"];
+        }
+    }
     
 ];

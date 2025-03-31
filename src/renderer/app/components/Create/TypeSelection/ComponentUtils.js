@@ -229,16 +229,17 @@ export const colorExtractionRules = [
         }
     },
     
-    // Improved rule: Handle "Light Color" and "Dark Color" patterns without changing the base name
+    // Improved rule: Handle "Light Color", "Dark Color", and "Bright Color" patterns without changing the base name
     {
-        name: "light-dark-color-variation",
+        name: "light-dark-bright-color-variation",
         test: (str) => {
             const parts = str.split(', ');
             
             return parts.some(part => 
-                /^(Light|Dark) [A-Za-z]+$/.test(part) || 
+                /^(Light|Dark|Bright) [A-Za-z]+$/.test(part) || 
                 part.includes('Light ') || 
-                part.includes('Dark ')
+                part.includes('Dark ') ||
+                part.includes('Bright ')
             );
         },
         extract: (str) => {
@@ -247,19 +248,20 @@ export const colorExtractionRules = [
             for (let i = 0; i < parts.length; i++) {
                 const part = parts[i];
                 
-                // Check for "Light Color" or "Dark Color" pattern
-                const variationMatch = part.match(/^(Light|Dark) ([A-Za-z]+)$/);
+                // Check for "Light Color", "Dark Color", or "Bright Color" pattern
+                const variationMatch = part.match(/^(Light|Dark|Bright) ([A-Za-z]+)$/);
                 if (variationMatch) {
-                    const variation = variationMatch[1]; // "Light" or "Dark"
+                    const variation = variationMatch[1]; // "Light", "Dark", or "Bright"
                     const baseColor = variationMatch[2]; // The base color
                     
-                    // Keep the full color name (e.g., "Light Blue") as the color
+                    // Keep the full color name (e.g., "Light Blue", "Bright Yellow") as the color
                     const fullColor = `${variation} ${baseColor}`;
                     
                     // Check if this is a valid color variation
                     const isValidColor = colorsAndMetals.some(c => 
                         fullColor.toLowerCase() === ("dark " + c.toLowerCase()) || 
-                        fullColor.toLowerCase() === ("light " + c.toLowerCase())
+                        fullColor.toLowerCase() === ("light " + c.toLowerCase()) ||
+                        fullColor.toLowerCase() === ("bright " + c.toLowerCase())
                     );
                     
                     if (isValidColor) {
@@ -271,7 +273,7 @@ export const colorExtractionRules = [
                             color: fullColor
                         };
                         
-                        // Keep the original base name structure without adding Light/Dark to it
+                        // Keep the original base name structure without adding Light/Dark/Bright to it
                         return result;
                     }
                 }
@@ -516,14 +518,15 @@ export const extractBaseNameAndColor = (name, displayName) => {
 
 // Modified function to process base name with compound colors
 export const cleanBaseName = (originalName, size, color) => {
-    // Special handling for "Light" and "Dark" prefixed colors
+    // Special handling for "Light", "Dark", and "Bright" prefixed colors
     let baseColor = null;
     let colorPrefix = null;
     
     if (color) {
-        // Check if this is a compound color with Light/Dark prefix
+        // Check if this is a compound color with Light/Dark/Bright prefix
         const lightMatch = color.match(/^Light\s+([A-Za-z]+)$/i);
         const darkMatch = color.match(/^Dark\s+([A-Za-z]+)$/i);
+        const brightMatch = color.match(/^Bright\s+([A-Za-z]+)$/i);
         
         if (lightMatch) {
             baseColor = lightMatch[1];
@@ -531,6 +534,9 @@ export const cleanBaseName = (originalName, size, color) => {
         } else if (darkMatch) {
             baseColor = darkMatch[1];
             colorPrefix = "Dark";
+        } else if (brightMatch) {
+            baseColor = brightMatch[1];
+            colorPrefix = "Bright";
         }
     }
     
@@ -569,7 +575,7 @@ export const cleanBaseName = (originalName, size, color) => {
                     return `${onMatch[1]} on Color`;
                 }
                 
-                // For compound colors like "Light Blue" or "Dark Green"
+                // For compound colors like "Light Blue", "Dark Green", or "Bright Yellow"
                 if (colorPrefix && baseColor) {
                     // Replace the entire color phrase with nothing to create a clean base name
                     return part.replace(new RegExp(`${colorPrefix} ${baseColor}`, 'i'), '').trim();
@@ -621,14 +627,17 @@ export const compareSizes = (a, b) => {
 export const getBaseColor = (color) => {
     if (!color) return null;
     
-    // First check if this is a Light/Dark prefixed color
+    // First check if this is a Light/Dark/Bright prefixed color
     const lightMatch = color.match(/^Light\s+([A-Za-z]+)$/i);
     const darkMatch = color.match(/^Dark\s+([A-Za-z]+)$/i);
+    const brightMatch = color.match(/^Bright\s+([A-Za-z]+)$/i);
     
     if (lightMatch) {
         return lightMatch[1]; // Return the base color without "Light"
     } else if (darkMatch) {
         return darkMatch[1]; // Return the base color without "Dark"
+    } else if (brightMatch) {
+        return brightMatch[1]; // Return the base color without "Bright"
     }
     
     // Convert to lowercase for comparison
@@ -648,14 +657,17 @@ export const getBaseColor = (color) => {
 export const getColorPrefix = (color) => {
     if (!color) return null;
     
-    // Check for Light/Dark prefixes first
+    // Check for Light/Dark/Bright prefixes first
     const lightMatch = color.match(/^(Light)\s+[A-Za-z]+$/i);
     const darkMatch = color.match(/^(Dark)\s+[A-Za-z]+$/i);
+    const brightMatch = color.match(/^(Bright)\s+[A-Za-z]+$/i);
     
     if (lightMatch) {
         return lightMatch[1];
     } else if (darkMatch) {
         return darkMatch[1];
+    } else if (brightMatch) {
+        return brightMatch[1];
     }
     
     // Get the base color

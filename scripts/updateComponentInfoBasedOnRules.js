@@ -1,5 +1,6 @@
 import { COMPONENT_INFO } from "../src/shared/componentInfo.js";
 import { STOCK_COMPONENT_INFO } from "../src/shared/stockComponentInfo.js";
+import { DISABLED_STOCK_COMPONENT_INFO } from "../src/shared/disabledStockComponentInfo.js";
 import fs from 'fs';
 import componentRules from "./rules/customComponentRules.js";
 import stockComponentRules from "./rules/stockComponentRules.js";
@@ -102,15 +103,16 @@ function processComponents() {
     }
     
     // Process stock components
-    const stockComponentUpdates = applyRulesToComponents(STOCK_COMPONENT_INFO, stockComponentRules, "stock component");
+    const stockComponentInfo = {...STOCK_COMPONENT_INFO, ...DISABLED_STOCK_COMPONENT_INFO};
+    const stockComponentUpdates = applyRulesToComponents(stockComponentInfo, stockComponentRules, "stock component");
     // Deduplicate tags in stock components
-    const stockComponentTagDedupes = deduplicateTags(STOCK_COMPONENT_INFO);
+    const stockComponentTagDedupes = deduplicateTags(stockComponentInfo);
     
     // Add Key field to each stock component
     console.log("\n=== ADDING KEY FIELD TO STOCK COMPONENTS ===");
     let keyFieldAddedCount = 0;
     
-    for (const [componentKey, componentData] of Object.entries(STOCK_COMPONENT_INFO)) {
+    for (const [componentKey, componentData] of Object.entries(stockComponentInfo)) {
         if (!componentData.Key) {
             componentData.Key = componentKey;
             keyFieldAddedCount++;
@@ -121,12 +123,36 @@ function processComponents() {
     console.log(`\nTotal stock components with Key field added: ${keyFieldAddedCount}`);
     
     if (stockComponentUpdates > 0 || stockComponentTagDedupes > 0) {
-        console.log('\nSaving updates to stock component info file...');
+        console.log('\nSaving updates to stock component info files...');
+        
+        // Split components based on IsDisabled property
+        const enabledComponents = {};
+        const disabledComponents = {};
+        
+        // Categorize components
+        Object.entries(stockComponentInfo).forEach(([key, component]) => {
+            if (component.IsDisabled === true) {
+                disabledComponents[key] = component;
+            } else {
+                enabledComponents[key] = component;
+            }
+        });
+        
+        // Save enabled components to the main file
         saveComponentInfo(
-            STOCK_COMPONENT_INFO,
+            enabledComponents,
             "/Users/oliverbarnum/Documents/git/templative-electron/src/shared/stockComponentInfo.js",
             "STOCK_COMPONENT_INFO"
         );
+        
+        // Save disabled components to a separate file
+        saveComponentInfo(
+            disabledComponents,
+            "/Users/oliverbarnum/Documents/git/templative-electron/src/shared/disabledStockComponentInfo.js",
+            "DISABLED_STOCK_COMPONENT_INFO"
+        );
+        
+        console.log(`Split components: ${Object.keys(enabledComponents).length} enabled, ${Object.keys(disabledComponents).length} disabled`);
     }
     
     if (componentUpdates === 0 && stockComponentUpdates === 0 && 

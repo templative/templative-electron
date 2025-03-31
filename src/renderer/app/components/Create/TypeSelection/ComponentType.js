@@ -22,6 +22,9 @@ const ComponentType = ({
     for (const size in componentInfo) {
         for (const color in componentInfo[size]) {
             const component = componentTypeInformation[componentInfo[size][color]];
+            if (component == undefined) {
+                continue
+            }
             if (component.IsDisabled) {
                 continue;
             }

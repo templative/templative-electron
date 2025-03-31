@@ -991,7 +991,6 @@ const COMPONENT_INFO = {
       "DominoBoard"
     ]
   },
-  
   "MintTin": {
     "DimensionsPixels": [
       750,
@@ -4404,31 +4403,39 @@ const COMPONENT_INFO = {
     ]
   },
   "PokerHookBox36": {
+    "DisplayName": "Poker Hook Box 36",
     "DimensionsPixels": [
       2700,
-      1125
+      3150
     ],
-    "GameCrafterUploadTask": "HOOKBOX",
-    "HasPieceData": false,
+    "DimensionsInches": [
+      2.57,
+      3.59
+    ],
+    "GameCrafterUploadTask": "hookbox",
+    "GameCrafterPackagingDepthMillimeters": 15.5194,
+    "HasPieceData": true,
+    "HasPieceQuantity": true,
     "ArtDataTypeNames": [
       "Front",
       "Back"
     ],
-    "DisplayName": "Poker HookBox 36",
     "Tags": [
       "packaging",
-      "hookbox",
-      "poker"
+      "hook",
+      "box",
+      "poker",
+      "hookbox"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
-    "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
+    "PlaygroundCreationTask": "none",
     "Key": "PokerHookBox36",
     "PreviewUri": "PokerHookBox36.png",
     "TemplateFiles": [
-      "PokerHookBox36Outside", 
-      "PokerHookBox36Inside"
+      "PokerHookBox36Inside",
+      "PokerHookBox36Outside"
     ]
   },
   "PokerHookBox18": {
@@ -4465,42 +4472,6 @@ const COMPONENT_INFO = {
     "TemplateFiles": [
       "PokerHookBox18Inside",
       "PokerHookBox18Outside"
-    ]
-  },
-  "PokerHookBox36": {
-    "DisplayName": "Poker Hook Box 36",
-    "DimensionsPixels": [
-      2700,
-      3150
-    ],
-    "DimensionsInches": [
-      2.57,
-      3.59
-    ],
-    "GameCrafterUploadTask": "hookbox",
-    "GameCrafterPackagingDepthMillimeters": 15.5194,
-    "HasPieceData": true,
-    "HasPieceQuantity": true,
-    "ArtDataTypeNames": [
-      "Front",
-      "Back"
-    ],
-    "Tags": [
-      "packaging",
-      "hook",
-      "box",
-      "poker",
-      "hookbox"
-    ],
-    "IsPrintingDisabled": false,
-    "IsDisabled": false,
-    "SimulatorCreationTask": "none",
-    "PlaygroundCreationTask": "none",
-    "Key": "PokerHookBox36",
-    "PreviewUri": "PokerHookBox36.png",
-    "TemplateFiles": [
-      "PokerHookBox36Inside",
-      "PokerHookBox36Outside"
     ]
   },
   "PokerHookBox54": {
