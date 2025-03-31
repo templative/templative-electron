@@ -7,8 +7,11 @@ const { createProjectInDirectory } = require('./lib/create/projectCreator');
 const { convertToTabletopPlayground } = require('./lib/distribute/playground/playground');
 const { createPdfForPrinting } = require('./lib/distribute/printout/printout');
 const { convertToTabletopSimulator } = require('./lib/distribute/simulator/simulator');
-
+const { listDesigners } = require('./lib/distribute/gameCrafter/accountManagement/accountManagement');
+const { createSessionFromLogin } = require('./lib/distribute/gameCrafter/util/gameCrafterSession');
+const { uploadGame } = require('./lib/distribute/gameCrafter/client');
 const { withLogCapture } = require('./logStore');
+const { getTgcSession } = require('../../main/sessionStore');
 
 const createTemplativeComponent = withLogCapture(async (event, data) => {
   try {
@@ -109,8 +112,13 @@ const createSimulatorSave = withLogCapture(async (event, data) => {
 
 const listGameCrafterDesigners = withLogCapture(async (event, data) => {
   try {
-    // gameCrafterSession = await createSessionFromLogin(id, userId)
-    // designers = await listDesigners(gameCrafterSession)
+    const session = await getTgcSession();
+    if (!session) {
+      return { success: false, error: 'Not logged into TheGameCrafter' };
+    }
+    
+    const gameCrafterSession = await createSessionFromLogin(session.id, session.userId);
+    const designers = await listDesigners(gameCrafterSession);
     return { success: true, designers };
   }
   catch(error) {
@@ -121,11 +129,26 @@ const listGameCrafterDesigners = withLogCapture(async (event, data) => {
 
 const uploadTemplativeProjectToGameCrafter = withLogCapture(async (event, data) => {
   try {
-    const { gameRootDirectoryPath, outputDirectory, isPublish, isStock, isProofed, designerId } = data;
+    const { gameDirectoryRootPath, outputDirectorypath, isPublish, isIncludingStock, isProofed, designerId } = data;
     
-    // const result = await uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirectory, isPublish, isStock, isProofed, designerId);
+    const session = await getTgcSession();
+    if (!session) {
+      return { success: false, error: 'Not logged into TheGameCrafter' };
+    }
     
-    return { success: true, message: 'Game uploaded' };
+    const gameCrafterSession = await createSessionFromLogin(session.id, session.userId);
+    
+    const gameUrl = await uploadGame(
+      gameCrafterSession, 
+      gameDirectoryRootPath, 
+      outputDirectorypath, 
+      isPublish, 
+      isIncludingStock, 
+      isProofed, 
+      designerId
+    );
+    
+    return { success: true, message: 'Game uploaded', gameUrl };
   } catch (error) {
     console.error('Error uploading game:', error);
     return { success: false, error: error.message };

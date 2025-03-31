@@ -14,7 +14,7 @@ async function login(gameCrafterSession, publicApiKey, userName, userPassword) {
 async function logout(gameCrafterSession) {
     const url = `${gameCrafterBaseUrl}/session/${gameCrafterSession.sessionId}`;
     await httpClient.delete(gameCrafterSession, url);
-    await gameCrafterSession.httpSession.close();
+    await gameCrafterSession.close();
 }
 
 async function postFolder(gameCrafterSession, name, folderParentId) {
@@ -27,11 +27,11 @@ async function postFolder(gameCrafterSession, name, folderParentId) {
     });
 }
 
-async function postFile(gameCrafterSession, file, filename, folderId) {
+async function postFile(gameCrafterSession, filepath, filename, folderId) {
     const url = `${gameCrafterBaseUrl}/file`;
     return await httpClient.post(gameCrafterSession, url, {
         session_id: gameCrafterSession.sessionId,
-        file: file,
+        file: filepath,
         name: filename,
         folder_id: folderId
     });
@@ -45,9 +45,9 @@ async function postGame(gameCrafterSession, name, designerId, shortDescription, 
         designer_id: designerId,
         short_description: shortDescription,
         description: longDescription,
-        cool_factor_1: coolFactors[0],
-        cool_factor_2: coolFactors[1],
-        cool_factor_3: coolFactors[2],
+        cool_factor_1: coolFactors[0] || "",
+        cool_factor_2: coolFactors[1] || "",
+        cool_factor_3: coolFactors[2] || "",
         logo_id: logoFileId,
         backdrop_id: backdropFileId,
         advertisement_id: advertisementFileId,

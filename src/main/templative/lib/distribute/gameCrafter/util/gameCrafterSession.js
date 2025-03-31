@@ -27,12 +27,12 @@ async function login(publicApiKey, userName, userPassword) {
   const gameCrafterSession = new GameCrafterSession();
 
   try {
-    const loginResult = await gameCrafterLogin(gameCrafterSession, publicApiKey, userName, userPassword);
+    const loginResult = await gameCrafterLogin(gameCrafterSession, publicApiKey, userName, userPassword);    
     gameCrafterSession.login(loginResult.id, loginResult.user_id);
     return gameCrafterSession;
   } catch (e) {
     await gameCrafterSession.close();
-    throw e;
+    throw new Error(`Failed to log in to GameCrafter: ${e.message}`);
   }
 }
 

@@ -162,8 +162,19 @@ async function handleDeepLink(url) {
 }
 
 async function getTgcSessionFromStore() {
-    const session = await getTgcSession();
-    return { isLoggedIn: session !== null };
+    try {
+        const session = await getTgcSession();
+        return { 
+            isLoggedIn: session !== null,
+            sessionInfo: session ? {
+                hasId: !!session.id,
+                hasUserId: !!session.userId
+            } : null
+        };
+    } catch (error) {
+        console.error("Error getting TGC session:", error);
+        return { isLoggedIn: false, error: error.message };
+    }
 }
 
 async function logoutTgc() {

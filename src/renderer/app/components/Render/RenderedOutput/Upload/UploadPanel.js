@@ -30,13 +30,16 @@ export default class UploadPanel extends React.Component {
         ipcRenderer.on(channels.GIVE_TGC_LOGIN_STATUS, async (_, data) => {
             var newState = { 
                 isLoggedIn: data.isLoggedIn,
-                hasGottenFirstSessionPollResponse: true
+                hasGottenFirstSessionPollResponse: true,
+                designers: []
             }
             if (data.isLoggedIn) {
                 var designersResult = await this.fetchDesigners()
-                newState["designers"] = designersResult.designers
-            } else {
-                newState["designers"] = []
+                if (designersResult.success && designersResult.designers) {
+                    newState.designers = designersResult.designers
+                } else {
+                    console.error("Error fetching designers:", designersResult.error || "Unknown error")
+                }
             }
             if (newState.designers.length > 0) {
                 if (this.state.designerId === undefined || !newState.designers.find(d => d.id === this.state.designerId)) {
@@ -44,7 +47,6 @@ export default class UploadPanel extends React.Component {
                 }
             }
             this.setState(newState)
-            
         })
     }
 
@@ -58,31 +60,53 @@ export default class UploadPanel extends React.Component {
 
     setSession = async (sessionStatus) => {
         var isLoggedIn = sessionStatus.isLoggedIn
-        var designerResult = await this.fetchDesigners()
-        if (!designerResult.isLoggedIn) {
-            isLoggedIn = false
+        var designers = []
+        
+        if (isLoggedIn) {
+            var designerResult = await this.fetchDesigners()
+            if (designerResult.success && designerResult.designers) {
+                designers = designerResult.designers
+            } else {
+                console.error("Error fetching designers:", designerResult.error || "Unknown error")
+                // If we can't get designers due to an auth issue, we might not be logged in
+                if (designerResult.error && designerResult.error.includes('Not logged into TheGameCrafter')) {
+                    isLoggedIn = false
+                }
+            }
         }
+        
         var newState = { 
             isLoggedIn: isLoggedIn, 
-            designers: designerResult.designers,
+            designers: designers,
             hasGottenFirstSessionPollResponse: true 
         }
+        
         if (newState.designers.length > 0) {
             if (this.state.designerId === undefined || !newState.designers.find(d => d.id === this.state.designerId)) {
                 newState.designerId = newState.designers[0].id
             }
         }
+        
         this.setState(newState)
     }
 
     checkTgcSession = async () => {
-        const sessionStatus = await ipcRenderer.invoke(channels.TO_SERVER_GET_TGC_SESSION)
-        console.log(sessionStatus)
-        if (!sessionStatus.isLoggedIn) {
-            this.setState({hasGottenFirstSessionPollResponse: true})
-            return
+        try {
+            const sessionStatus = await ipcRenderer.invoke(channels.TO_SERVER_GET_TGC_SESSION)
+            
+            if (!sessionStatus.isLoggedIn) {
+                this.setState({hasGottenFirstSessionPollResponse: true})
+                return
+            }
+            
+            await this.setSession(sessionStatus)
+        } catch (error) {
+            console.error("Error checking TGC session:", error)
+            this.setState({
+                hasGottenFirstSessionPollResponse: true,
+                isLoggedIn: false
+            })
         }
-        this.setSession(sessionStatus)
     }
 
     updateIsAsync = (isAsync) => {
@@ -108,13 +132,35 @@ export default class UploadPanel extends React.Component {
             isProofed: this.state.isProofed ? 1:0,
             designerId: this.state.designerId
         }
+        
+        if (!this.state.designerId) {
+            console.error("No designer ID selected");
+            return;
+        }
+        
         try {
             this.setState({isCreating: true})
-            const uploadStatus = await ipcRenderer.invoke(channels.TO_SERVER_UPLOAD_GAME, data)
-            this.setState({isCreating: false, isLoggedIn: uploadStatus.isLoggedIn})
+            const response = await ipcRenderer.invoke(channels.TO_SERVER_UPLOAD_GAME, data)
+            this.setState({isCreating: false})
+            
+            if (response.success) {
+                // Update with game URL if available
+                if (response.gameUrl) {
+                    this.setState({ gameCrafterUrl: response.gameUrl })
+                }
+            } else {
+                console.error("Upload failed:", response.error)
+                // If not logged in, update login state and refresh
+                if (response.error && response.error.includes('Not logged into TheGameCrafter')) {
+                    await this.checkTgcSession();
+                }
+            }
         }
         catch(e) {
-            console.error(e)
+            console.error("Exception during upload:", e)
+            this.setState({isCreating: false})
+            // Check session on errors to ensure login state is current
+            await this.checkTgcSession();
         }
     }
 

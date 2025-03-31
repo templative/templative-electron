@@ -130,11 +130,11 @@ async function runTests() {
   const lastOutputPath = fs.readFileSync(path.join(PROJECT_DIR, 'output', '.last'), 'utf8').trim();
   console.log(chalk.blue(`Using output directory: ${lastOutputPath}`));
   
-  const printoutResult = runCommand(`distribute printout -i "${lastOutputPath}"`);
-  if (!printoutResult.success) {
-    console.error(chalk.red('Failed to create printout, aborting tests'));
-    process.exit(1);
-  }
+  // const printoutResult = runCommand(`distribute printout -i "${lastOutputPath}"`);
+  // if (!printoutResult.success) {
+  //   console.error(chalk.red('Failed to create printout, aborting tests'));
+  //   process.exit(1);
+  // }
 
   // Test simulator command
   // console.log(chalk.bold.blue('\n=== Testing simulator command ==='));
@@ -147,6 +147,8 @@ async function runTests() {
   // } catch (error) {
   //   console.error(chalk.red('Failed to create simulator, continuing with other tests'));
   // }
+  const gameCrafterResponse = runCommand(`distribute gamecrafter upload -i ${PROJECT_DIR} -r "${lastOutputPath}" -d "AA9F2900-5B68-11E5-8112-B32D36CD926D"`);
+  console.log(gameCrafterResponse);
 }
 
 // Run the tests

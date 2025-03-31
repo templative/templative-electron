@@ -1,4 +1,4 @@
-const { httpOperations } = require('../util/httpOperations.js');
+const httpOperations = require('../util/httpOperations.js');
 
 /**
  * Simple function to format data into an ASCII table

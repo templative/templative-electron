@@ -1,6 +1,6 @@
 const os = require('os');
-const path = require('path');
-const fs = require('fs');
+const path = require("path")
+const fs = require("fs")
 const httpOperations = require('./util/httpOperations.js');
 const COMPONENT_INFO = require('../../../../../shared/componentInfo.js').COMPONENT_INFO;
 const STOCK_COMPONENT_INFO = require('../../../../../shared/stockComponentInfo.js').STOCK_COMPONENT_INFO;
@@ -9,12 +9,12 @@ const fileFolderManager = require('./fileFolderManager.js');
 const chalk = require('chalk'); 
 
 async function createRules(gameCrafterSession, gameRootDirectoryPath, cloudGame, folderId) {
-    const filepath = os.path.join(gameRootDirectoryPath, "rules.pdf");
-    if (!os.path.exists(filepath)) {
+    const filepath = path.join(gameRootDirectoryPath, "rules.pdf");
+    if (!fs.existsSync(filepath)) {
         console.log(chalk.red("!!! Rules file does not exist at %s"), filepath);
         return;
     }
-    console.log("Uploading %s", filepath);
+    console.log(`Uploading ${path.basename(filepath)}`);
     const cloudFile = await fileFolderManager.postFile(gameCrafterSession, filepath, folderId);
     const document = await httpOperations.postDownloadableDocument(gameCrafterSession, cloudGame["id"], cloudFile["id"]);
 }
@@ -24,13 +24,22 @@ async function createComponents(gameCrafterSession, outputDirectory, cloudGame, 
         throw new Error("outputDirectory cannot be None");
     }
 
-    for (const directoryPath of Object.keys(os.walk(outputDirectory).next().value[1])) {
-        const componentDirectoryPath = `${outputDirectory}/${directoryPath}`;
-        try {
-            await createComponent(gameCrafterSession, componentDirectoryPath, cloudGame, cloudGameFolderId, isPublish, isStock, isProofed);
-        } catch (e) {
-            console.log(`!!! Error creating component in ${componentDirectoryPath}: ${e.toString()}`);
+    try {
+        const directories = fs.readdirSync(outputDirectory, { withFileTypes: true })
+            .filter(dirent => dirent.isDirectory())
+            .map(dirent => dirent.name);
+        
+        for (const directoryName of directories) {
+            const componentDirectoryPath = path.join(outputDirectory, directoryName);
+            try {
+                await createComponent(gameCrafterSession, componentDirectoryPath, cloudGame, cloudGameFolderId, isPublish, isStock, isProofed);
+            } catch (e) {
+                console.log(`!!! Error creating component in ${componentDirectoryPath}: ${e.toString()}`);
+            }
         }
+    } catch (error) {
+        console.error(chalk.red(`Failed to read component directories: ${error.message}`));
+        throw error;
     }
 }
 
@@ -161,11 +170,11 @@ async function createTwoSided(gameCrafterSession, component, identity, cloudGame
     }
     const frontInstructions = component["frontInstructions"];
     const backInstructions = component["backInstructions"];
-    if (!os.path.isfile(backInstructions["filepath"])) {
+    if (!fs.existsSync(backInstructions["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing ${backInstructions['filepath']}`);
         return;
     }
-    console.log("Uploading %s %s %s(s)", quantity, componentName, identity);
+    console.log(`Uploading ${quantity} ${componentName} ${identity}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
 
@@ -188,11 +197,11 @@ async function createTwoSidedPiece(gameCrafterSession, instructions, setId, clou
     if (parseInt(quantity) === 0) {
         return;
     }
-    if (!os.path.isfile(filepath)) {
+    if (!fs.existsSync(filepath)) {
         console.log(`!!! Cannot create two sided piece, no file at ${filepath}`);
         return;
     }
-    console.log("Uploading %s", filepath);
+    console.log(`Uploading ${path.basename(filepath)}`);
     const cloudFile = await fileFolderManager.postFile(gameCrafterSession, filepath, cloudComponentFolderId);
     const twoSided = await httpOperations.postTwoSided(gameCrafterSession, name, setId, quantity, cloudFile["id"], isProofed);
 }
@@ -206,7 +215,7 @@ async function createTwoSidedSlugged(gameCrafterSession, component, identity, cl
     const frontInstructions = component["frontInstructions"];
     const backInstructions = component["backInstructions"];
 
-    if (!os.path.isfile(backInstructions["filepath"])) {
+    if (!fs.existsSync(backInstructions["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing ${backInstructions['filepath']}`);
         return;
     }
@@ -233,11 +242,11 @@ async function createTwoSidedSluggedPiece(gameCrafterSession, instructions, setI
     if (parseInt(quantity) === 0) {
         return;
     }
-    if (!os.path.isfile(filepath)) {
+    if (!fs.existsSync(filepath)) {
         console.log(`!!! Cannot create two sided slugged piece, no file at ${filepath}`);
         throw new Error();
     }
-    console.log("Uploading %s", filepath);
+    console.log(`Uploading ${path.basename(filepath)}`);
     const cloudFile = await fileFolderManager.postFile(gameCrafterSession, filepath, cloudComponentFolderId);
     const twoSidedSlugged = await httpOperations.postTwoSidedSlugged(gameCrafterSession, name, setId, quantity, cloudFile["id"], isProofed);
 }
@@ -250,11 +259,11 @@ async function createTwoSidedBox(gameCrafterSession, component, identity, cloudG
     }
     const frontInstructions = component["frontInstructions"];
     const backInstructions = component["backInstructions"];
-    if (!os.path.isfile(frontInstructions[0]["filepath"])) {
+    if (!fs.existsSync(frontInstructions[0]["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing ${frontInstructions[0]['filepath']}`);
         return;
     }
-    if (!os.path.isfile(backInstructions["filepath"])) {
+    if (!fs.existsSync(backInstructions["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing ${backInstructions['filepath']}`);
         return;
     }
@@ -277,11 +286,11 @@ async function createHookbox(gameCrafterSession, component, identity, cloudGameI
     const frontInstructions = component["frontInstructions"];  // Outside
     const backInstructions = component["backInstructions"];    // Inside
 
-    if (!os.path.isfile(frontInstructions[0]["filepath"])) {
+    if (!fs.existsSync(frontInstructions[0]["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing outside image ${frontInstructions[0]['filepath']}`);
         return;
     }
-    if (!os.path.isfile(backInstructions["filepath"])) {
+    if (!fs.existsSync(backInstructions["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing inside image ${backInstructions['filepath']}`);
         return;
     }
@@ -322,7 +331,7 @@ async function createBoxface(gameCrafterSession, component, identity, cloudGameI
     }
     const frontInstructions = component["frontInstructions"];  // Face image
 
-    if (!os.path.isfile(frontInstructions[0]["filepath"])) {
+    if (!fs.existsSync(frontInstructions[0]["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing face image ${frontInstructions[0]['filepath']}`);
         return;
     }
@@ -356,7 +365,7 @@ async function createTuckBox(gameCrafterSession, component, identity, cloudGameI
     }
     const frontInstructions = component["frontInstructions"];
 
-    if (!os.path.isfile(frontInstructions[0]["filepath"])) {
+    if (!fs.existsSync(frontInstructions[0]["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing ${frontInstructions[0]['filepath']}`);
         return;
     }
@@ -378,7 +387,7 @@ async function createDeck(gameCrafterSession, component, identity, cloudGameId, 
     const frontInstructions = component["frontInstructions"];
     const backInstructions = component["backInstructions"];
 
-    if (!os.path.isfile(backInstructions["filepath"])) {
+    if (!fs.existsSync(backInstructions["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing ${backInstructions['filepath']}`);
         return;
     }
@@ -405,11 +414,11 @@ async function createDeckCard(gameCrafterSession, instructions, deckId, cloudCom
     if (parseInt(quantity) === 0) {
         return;
     }
-    if (!os.path.isfile(filepath)) {
+    if (!fs.existsSync(filepath)) {
         console.log(`!!! Cannot create deck card, no file at ${filepath}`);
         return;
     }
-    console.log("Uploading %s", filepath);
+    console.log(`Uploading ${path.basename(filepath)}`);
     const cloudFile = await fileFolderManager.postFile(gameCrafterSession, filepath, cloudComponentFolderId);
     const pokerCard = await httpOperations.postDeckCard(gameCrafterSession, name, deckId, quantity, cloudFile["id"], isProofed);
 }
@@ -423,12 +432,12 @@ async function createCustomPlasticDie(gameCrafterSession, componentInstructionsO
     const dieFaceFilepaths = componentInstructionsOutput["dieFaceFilepaths"];
 
     for (const dieFaceFilepath of dieFaceFilepaths) {
-        if (!os.path.isfile(dieFaceFilepath)) {
+        if (!fs.existsSync(dieFaceFilepath)) {
             console.log(`!!! Cannot create ${componentName}, missing ${dieFaceFilepath}`);
             return;
         }
     }
-    console.log("Uploading %s %s %s(s)", quantity, componentName, identity);
+    console.log(`Uploading ${quantity} ${componentName} ${identity}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
 
@@ -460,7 +469,7 @@ async function createOneSidedSlugged(gameCrafterSession, component, identity, cl
     }
     const frontInstructions = component["frontInstructions"];
     
-    console.log("Uploading %s %s %s(s)", quantity, componentName, identity);
+    console.log(`Uploading ${quantity} ${componentName} ${identity}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
     
@@ -481,11 +490,11 @@ async function createOneSidedSluggedPiece(gameCrafterSession, instructions, setI
     if (parseInt(quantity) === 0) {
         return;
     }
-    if (!os.path.isfile(filepath)) {
+    if (!fs.existsSync(filepath)) {
         console.log(`!!! Cannot create one sided slugged piece, no file at ${filepath}`);
         return;
     }
-    console.log("Uploading %s", filepath);
+    console.log(`Uploading ${path.basename(filepath)}`);
     const cloudFile = await fileFolderManager.postFile(gameCrafterSession, filepath, cloudComponentFolderId);
     const oneSidedSlugged = await httpOperations.postOneSidedSlugged(gameCrafterSession, name, setId, quantity, cloudFile["id"], isProofed);
 }
@@ -499,12 +508,12 @@ async function createCustomWoodDie(gameCrafterSession, componentInstructionsOutp
     const dieFaceFilepaths = componentInstructionsOutput["dieFaceFilepaths"];
 
     for (const dieFaceFilepath of dieFaceFilepaths) {
-        if (!os.path.isfile(dieFaceFilepath)) {
+        if (!fs.existsSync(dieFaceFilepath)) {
             console.log(`!!! Cannot create ${componentName}, missing ${dieFaceFilepath}`);
             return;
         }
     }
-    console.log("Uploading %s %s %s(s)", quantity, componentName, identity);
+    console.log(`Uploading ${quantity} ${componentName} ${identity}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
 
@@ -526,15 +535,15 @@ async function createTwoSidedBoxGloss(gameCrafterSession, component, identity, c
     const frontInstructions = component["frontInstructions"];
     const backInstructions = component["backInstructions"];
 
-    if (!os.path.isfile(frontInstructions[0]["filepath"])) {
+    if (!fs.existsSync(frontInstructions[0]["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing ${frontInstructions[0]['filepath']}`);
         return;
     }
-    if (!os.path.isfile(backInstructions["filepath"])) {
+    if (!fs.existsSync(backInstructions["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing ${backInstructions['filepath']}`);
         return;
     }
-    console.log("Uploading %s %s %s(s)", quantity, componentName, component["type"]);
+    console.log(`Uploading ${quantity} ${componentName} ${component["type"]}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
 
@@ -552,11 +561,11 @@ async function createScorePad(gameCrafterSession, component, identity, cloudGame
     }
     const frontInstructions = component["frontInstructions"];
 
-    if (!os.path.isfile(frontInstructions[0]["filepath"])) {
+    if (!fs.existsSync(frontInstructions[0]["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing ${frontInstructions[0]['filepath']}`);
         return;
     }
-    console.log("Uploading %s %s %s(s)", quantity, componentName, component["type"]);
+    console.log(`Uploading ${quantity} ${componentName} ${component["type"]}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
     
@@ -589,11 +598,11 @@ async function createOneSided(gameCrafterSession, component, identity, cloudGame
     }
     const frontInstructions = component["frontInstructions"];
 
-    if (!os.path.isfile(frontInstructions[0]["filepath"])) {
+    if (!fs.existsSync(frontInstructions[0]["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing ${frontInstructions[0]['filepath']}`);
         return;
     }
-    console.log("Uploading %s %s %s(s)", quantity, componentName, component["type"]);
+    console.log(`Uploading ${quantity} ${componentName} ${component["type"]}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
     
@@ -619,18 +628,18 @@ async function createOneSidedGloss(gameCrafterSession, component, identity, clou
     const frontInstructions = component["frontInstructions"];
     const spotGlossInstructions = component["spotGlossInstructions"] !== undefined ? component["spotGlossInstructions"] : null;
 
-    if (!os.path.isfile(frontInstructions[0]["filepath"])) {
+    if (!fs.existsSync(frontInstructions[0]["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing ${frontInstructions[0]['filepath']}`);
         return;
     }
-    console.log("Uploading %s %s %s(s)", quantity, componentName, component["type"]);
+    console.log(`Uploading ${quantity} ${componentName} ${component["type"]}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
     
     const imageId = await fileFolderManager.createFileInFolder(gameCrafterSession, frontInstructions[0]["name"], frontInstructions[0]["filepath"], cloudComponentFolder["id"]);
     
     let spotGlossId = null;
-    if (spotGlossInstructions && os.path.isfile(spotGlossInstructions["filepath"])) {
+    if (spotGlossInstructions && fs.existsSync(spotGlossInstructions["filepath"])) {
         spotGlossId = await fileFolderManager.createFileInFolder(
             gameCrafterSession, 
             spotGlossInstructions["name"], 
@@ -659,11 +668,11 @@ async function createDial(gameCrafterSession, component, identity, cloudGameId, 
     }
     const frontInstructions = component["frontInstructions"];  // Outside image
 
-    if (!os.path.isfile(frontInstructions[0]["filepath"])) {
+    if (!fs.existsSync(frontInstructions[0]["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing outside image ${frontInstructions[0]['filepath']}`);
         return;
     }
-    console.log("Uploading %s %s %s(s)", quantity, componentName, component["type"]);
+    console.log(`Uploading ${quantity} ${componentName} ${component["type"]}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
     
@@ -695,11 +704,11 @@ async function createCustomPrintedMeeple(gameCrafterSession, component, identity
     const backInstructions = component["backInstructions"] !== undefined ? component["backInstructions"] : null;  // Side 2 (optional)
     const diecolor = component["diecolor"] !== undefined ? component["diecolor"] : "white";  // Optional color specification
 
-    if (!os.path.isfile(frontInstructions[0]["filepath"])) {
+    if (!fs.existsSync(frontInstructions[0]["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing side 1 image ${frontInstructions[0]['filepath']}`);
         return;
     }
-    console.log("Uploading %s %s %s(s)", quantity, componentName, component["type"]);
+    console.log(`Uploading ${quantity} ${componentName} ${component["type"]}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
     
@@ -713,7 +722,7 @@ async function createCustomPrintedMeeple(gameCrafterSession, component, identity
     
     // Upload side 2 image if provided
     let side2ImageId = null;
-    if (backInstructions && os.path.isfile(backInstructions["filepath"])) {
+    if (backInstructions && fs.existsSync(backInstructions["filepath"])) {
         side2ImageId = await fileFolderManager.createFileInFolder(
             gameCrafterSession, 
             backInstructions["name"], 
@@ -742,11 +751,11 @@ async function createBoxTop(gameCrafterSession, component, identity, cloudGameId
     }
     const frontInstructions = component["frontInstructions"];  // Top image
 
-    if (!os.path.isfile(frontInstructions[0]["filepath"])) {
+    if (!fs.existsSync(frontInstructions[0]["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing top image ${frontInstructions[0]['filepath']}`);
         return;
     }
-    console.log("Uploading %s %s %s(s)", quantity, componentName, component["type"]);
+    console.log(`Uploading ${quantity} ${componentName} ${component["type"]}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
     
@@ -777,11 +786,11 @@ async function createBoxTopGloss(gameCrafterSession, component, identity, cloudG
     const frontInstructions = component["frontInstructions"];  // Top image
     const spotGlossInstructions = component["spotGlossInstructions"] !== undefined ? component["spotGlossInstructions"] : null;
 
-    if (!os.path.isfile(frontInstructions[0]["filepath"])) {
+    if (!fs.existsSync(frontInstructions[0]["filepath"])) {
         console.log(`!!! Cannot create ${componentName}, missing top image ${frontInstructions[0]['filepath']}`);
         return;
     }
-    console.log("Uploading %s %s %s(s)", quantity, componentName, component["type"]);
+    console.log(`Uploading ${quantity} ${componentName} ${component["type"]}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
     
@@ -793,7 +802,7 @@ async function createBoxTopGloss(gameCrafterSession, component, identity, cloudG
     );
     
     let spotGlossId = null;
-    if (spotGlossInstructions && os.path.isfile(spotGlossInstructions["filepath"])) {
+    if (spotGlossInstructions && fs.existsSync(spotGlossInstructions["filepath"])) {
         spotGlossId = await fileFolderManager.createFileInFolder(
             gameCrafterSession, 
             spotGlossInstructions["name"], 

@@ -79,12 +79,21 @@ const saveTgcSession = async (id, userId) => {
 }
 
 const getTgcSession = async () => {
-    const id = await storage.getItem('tgcSessionId');
-    const userId = await storage.getItem('tgcUserId');
-    if (id === undefined || userId === undefined) {
+    try {
+        const id = await storage.getItem('tgcSessionId');
+        const userId = await storage.getItem('tgcUserId');
+        
+        // Check for undefined, null, or empty values
+        if (!id || !userId) {
+            console.log("Missing TGC session data:", { id: id || "missing", userId: userId || "missing" });
+            return null;
+        }
+        
+        return { id, userId };
+    } catch (error) {
+        console.error("Error retrieving TGC session:", error);
         return null;
     }
-    return { id, userId };
 }
 
 const clearTgcSession = async () => {

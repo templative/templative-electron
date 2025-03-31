@@ -1,6 +1,6 @@
 import React from "react";
 import "./AdPanel.css"
-import gameContentIcon from "../../../Edit/Icons/gameIcon.svg"
+import GameContentIcon from "../../../Edit/Icons/gameIcon.svg"
 const {shell} = require('electron')
 const path = require("path")
 const { ipcRenderer } = require('electron');
@@ -61,7 +61,7 @@ export default class AdPanel extends React.Component {
                         </button>
                         }
                         <button onClick={this.props.editGameJsonCallback} className="btn btn-sm btn-dark d-flex align-items-center gap-2 nowrap">
-                            Edit Game Content <img src={gameContentIcon} alt="Game Content Icon" width="16" height="16" />
+                            Edit Game Content <GameContentIcon alt="Game Content Icon" width="16" height="16" />
                         </button>
                         <button onClick={this.props.openFolder} className="btn btn-sm btn-dark">
                             Open Store Page Images Folder <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-up-right" viewBox="0 0 16 16">
