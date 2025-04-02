@@ -1,7 +1,6 @@
 const { readdir, readFile, mkdir, writeFile } = require('fs/promises');
 const { join, basename, dirname } = require('path');
 const { jsPDF } = require('jspdf');
-const chalk = require('chalk');
 const { COMPONENT_INFO } = require('../../../../../shared/componentInfo.js');
 
 // Constants
@@ -27,9 +26,11 @@ const printoutTotalSize = {
  */
 async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size) {
     if (!fpdfSizes[size] || !printoutPlayAreaChoices[size]) {
-        console.log(chalk.red(`!!! Cannot create size ${size}.`));
+        console.log(`!!! Cannot create size ${size}.`);
         return;
     }
+    isBackIncluded = false;
+    console.log(`Creating printout for ${basename(producedDirectoryPath)} ${isBackIncluded ? "with backs" : "without backs"} on ${size} paper.`)
     
     const componentTypeFilepathsAndQuantity = await getDictionaryOfImageFilepathsAndQuantityGroupedByComponentType(producedDirectoryPath);
 
@@ -46,13 +47,13 @@ async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size)
         }
         
         if (!(componentType in COMPONENT_INFO)) {
-            console.log(chalk.yellow(`!!! Missing ${componentType} type description, skipping.`));
+            console.log(`!!! Missing ${componentType} type description, skipping.`);
             continue;
         }
         
         const componentInfo = COMPONENT_INFO[componentType];
         if (!componentInfo.DimensionsInches) {
-            console.log(chalk.yellow(`!!! Skipping ${componentType} because its inch size isn't defined.`));
+            console.log(`!!! Skipping ${componentType} because its inch size isn't defined.`);
             continue;
         }
         
@@ -74,6 +75,7 @@ async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size)
             nextAvailablePage = maxPage + 1;
         }
     }
+    placementCommands.sort((a, b) => a.pageIndex - b.pageIndex);
     
     // Create PDF and apply all placement commands
     let pdf = await createPdfUsingPlacementCommands(placementCommands, size);
@@ -110,7 +112,6 @@ async function getPageInformationForComponentType(componentType, pageWidthInches
         isRotated = true;
         columns = rotatedColumns; 
         rows = rotatedRows;
-        componentSizeInches = [componentSizeInches[1], componentSizeInches[0]];
     }
     
     return {
@@ -139,7 +140,7 @@ async function generatePlacementCommandsForComponentType(
 
     const isDie = diceTypes.includes(componentType);
     if (rows === 0 || columns === 0) {
-        console.log(chalk.red(`Skipping ${componentType} as it's too large for the print space.`));
+        console.log(`Skipping ${componentType} as it's too large for the print space.`);
         return commands;
     }
     // const exampleComponentList = [
@@ -150,20 +151,23 @@ async function generatePlacementCommandsForComponentType(
     //       backFilepath: '/Users/oliverbarnum/Documents/git/templative-electron/scripts/test-project/output/GameName_Template_0.0.0_2025-03-28_09-29-25/PokerDeck/PokerDeck-back.png'
     //     }
     //   ]
+
     const itemsPerPage = columns * rows;
-    let itemIndex = 0;
+    let totalItemIndex = 0;
     
     for (const component of componentList) {
         for (let i = 0; i < component.quantity; i++) {
-            const pageIndex = startingPageIndex + Math.floor(itemIndex / itemsPerPage);
-            const itemIndexOnPage = itemIndex % itemsPerPage;
+            const pageIndex = Math.floor(totalItemIndex / itemsPerPage);
+            const itemIndexOnPage = totalItemIndex % itemsPerPage;
             const col = itemIndexOnPage % columns;
             const row = Math.floor(itemIndexOnPage / columns);
             
             // Calculate front page index
             // When backs are included, use even pages for fronts (0, 2, 4...)
             // When backs are not included, use sequential pages (0, 1, 2...)
-            const frontPageIndex = isBackIncluded ? pageIndex * 2 : pageIndex;
+            const frontPageIndex = isBackIncluded ? 
+                startingPageIndex + (pageIndex * 2) : 
+                startingPageIndex + pageIndex;
 
             commands.push({
                 pageIndex: frontPageIndex,
@@ -199,9 +203,23 @@ async function generatePlacementCommandsForComponentType(
                 });
             }
             
-            itemIndex++;
+            totalItemIndex++;
         }
     }
+    
+    // Sort commands by pageIndex, then by row (placementIndex[1]), then by column (placementIndex[0])
+    commands.sort((a, b) => {
+        // First sort by page
+        if (a.pageIndex !== b.pageIndex) {
+            return a.pageIndex - b.pageIndex;
+        }
+        // Then sort by row
+        if (a.placementIndex[1] !== b.placementIndex[1]) {
+            return a.placementIndex[1] - b.placementIndex[1];
+        }
+        // Finally sort by column
+        return a.placementIndex[0] - b.placementIndex[0];
+    });
     
     return commands;
 }
@@ -210,9 +228,8 @@ async function generatePlacementCommandsForComponentType(
  * Apply all placement commands to the PDF
  */
 async function createPdfUsingPlacementCommands(commands, size) {
-
     if (commands.length === 0) {
-        console.log(chalk.yellow("No pieces to print."));
+        console.log("No pieces to print.");
         return new jsPDF("p", "in", fpdfSizes[size]);
     }
     var pdf = new jsPDF("p", "in", fpdfSizes[size]);
@@ -220,30 +237,27 @@ async function createPdfUsingPlacementCommands(commands, size) {
     // Set a cross-platform compatible font
     pdf.setFont("helvetica");
     
-    // Sort commands by page index
-    commands.sort((a, b) => a.pageIndex - b.pageIndex);
+    // Draw margin lines on the first page
+    drawPageMarginLines(pdf, size);
     
-    let currentPageIndex = 0;
+    // Track the highest page index we've seen
+    let highestPageIndex = 0;
     
     for (let i = 0; i < commands.length; i++) {
         const command = commands[i];
         
-        // Add new pages if needed (but not for the first command)
-        if (command.pageIndex > currentPageIndex) {
-            for (let p = 0; p < (command.pageIndex - currentPageIndex); p++) {
+        // If this is a new page higher than any we've seen before
+        if (command.pageIndex > highestPageIndex) {
+            // Add exactly the right number of pages
+            for (let p = highestPageIndex + 1; p <= command.pageIndex; p++) {
                 pdf.addPage();
+                drawPageMarginLines(pdf, size);
             }
-            drawPageMarginLines(pdf, size);
-            currentPageIndex = command.pageIndex;
+            highestPageIndex = command.pageIndex;
         }
         
-        // Set the current page
-        if (command.pageIndex > 0) {
-            pdf.setPage(command.pageIndex + 1); // setPage is 1-indexed
-        }
-        
-        // Draw margin lines on the current page
-        drawPageMarginLines(pdf, size);
+        // Set the current page (jsPDF pages are 1-indexed)
+        pdf.setPage(command.pageIndex + 1);
         
         try {
             if (command.type === 'die') {
@@ -309,28 +323,21 @@ async function addComponentToPdf(pdf, size, command) {
         const imageData = await readFile(command.filepath);
         const base64Image = Buffer.from(imageData).toString('base64');
         const dataUrl = `data:image/png;base64,${base64Image}`;
-        var isRotated = false
-        var isFront = command.isFront
+        var isRotated = command.isRotated
         const rotatedWidth = command.componentSizeInches[isRotated ? 1 : 0]
         const rotatedHeight = command.componentSizeInches[isRotated ? 0 : 1]
         var xPos = (pageSizeInches[0]/2) - (command.columns * rotatedWidth / 2) + (command.placementIndex[0] * rotatedWidth)
         var yPos = (pageSizeInches[1]/2) - (command.rows * rotatedHeight / 2) + (command.placementIndex[1] * rotatedHeight)
         if (isRotated) {
-            if (isFront) {
-                xPos += rotatedWidth 
-                yPos -= rotatedHeight/2
-            }
-            else {
-                xPos += 0
-                yPos -= rotatedWidth
-            }
+            xPos += rotatedWidth 
+            yPos -= rotatedHeight/2
         }
         pdf.addImage(
             dataUrl, 'PNG', 
             xPos, yPos, 
             command.componentSizeInches[0], command.componentSizeInches[1], 
             '', 'FAST',
-            (isRotated ? 90 : 0) * (isFront ? 1 : -1)
+            isRotated ? 90 : 0
         );
     } catch (error) {
         throw new Error(`Issue placing: ${command.filepath}`);
@@ -407,7 +414,7 @@ async function addDieCrossLayoutToPdf(pdf, size, command) {
                 'FAST'
             );
         } catch (error) {
-            console.log(chalk.red(`Issue placing die: ${filepath}`));
+            console.log(`!!! Issue placing die: ${filepath}`);
             continue;
         }
     }
@@ -418,15 +425,13 @@ async function addDieCrossLayoutToPdf(pdf, size, command) {
  */
 async function getDictionaryOfImageFilepathsAndQuantityGroupedByComponentType(producedDirectoryPath) {
     const componentTypeFilepathAndQuantity = {};
-    const directoryPathsInOutputFolder = await readdir(producedDirectoryPath, { withFileTypes: true });
-    
+    const directoryPathsInOutputFolder = (await readdir(producedDirectoryPath, { withFileTypes: true })).filter(dir => dir.isDirectory());
     for (const directoryPath of directoryPathsInOutputFolder) {
-        if (directoryPath.isDirectory()) {
-            const directoryComponentTypeFilepathAndQuantity = await loadFilepathsForComponent(producedDirectoryPath, directoryPath.name);
-            mergeDictsRecursive(componentTypeFilepathAndQuantity, directoryComponentTypeFilepathAndQuantity);
-        }
+        const directoryComponentTypeFilepathAndQuantity = await loadFilepathsForComponent(producedDirectoryPath, directoryPath.name);
+        mergeDictsRecursive(componentTypeFilepathAndQuantity, directoryComponentTypeFilepathAndQuantity);
+        
     }
-    
+
     return componentTypeFilepathAndQuantity;
 }
 
@@ -471,12 +476,12 @@ async function collectFilepathQuantitiesForComponent(componentInstructions) {
     if (isDie) {
         // Skip unsupported dice types
         if (unsupportedDiceTypes.includes(componentInstructions.type)) {
-            console.log(chalk.yellow(`!!! Skipping ${componentInstructions.name} because ${componentInstructions.type} is not supported for printing due to its complexity.`));
+            console.log(`!!! Skipping ${componentInstructions.name} because ${componentInstructions.type} is not supported for printing due to its complexity.`);
             return componentTypeFilepathAndQuantity;
         }
             
         if (!componentInstructions.dieFaceFilepaths) {
-            console.log(chalk.red(`!!! Skipping ${componentInstructions.name} because it lacks 'dieFaceFilepaths'.`));
+            console.log(`!!! Skipping ${componentInstructions.name} because it lacks 'dieFaceFilepaths'.`);
             return componentTypeFilepathAndQuantity;
         }
         
@@ -490,14 +495,15 @@ async function collectFilepathQuantitiesForComponent(componentInstructions) {
     }
 
     if (!componentInstructions.frontInstructions) {
-        console.log(chalk.yellow(`!!! Skipping ${componentInstructions.name} because it lacks 'frontInstructions'.`));
+        console.log(`!!! Skipping ${componentInstructions.name} because it lacks 'frontInstructions'.`);
         return componentTypeFilepathAndQuantity;
     }
     
     for (const instruction of componentInstructions.frontInstructions) {
+        const quantity = instruction.quantity * componentInstructions.quantity;
         const frontBack = {
             filepath: instruction.filepath,
-            quantity: instruction.quantity * componentInstructions.quantity,
+            quantity: quantity,
             isDie: isDie
         };
         if (componentInstructions.backInstructions) {
@@ -516,14 +522,19 @@ async function collectFilepathQuantitiesForComponent(componentInstructions) {
 function mergeDictsRecursive(dict1, dict2) {
     for (const [key, value] of Object.entries(dict2)) {
         if (key in dict1) {
-            if (typeof dict1[key] === 'object' && typeof value === 'object') {
+            if (Array.isArray(dict1[key]) && Array.isArray(value)) {
+                // For arrays (like component lists), concatenate them
+                dict1[key] = dict1[key].concat(value);
+            } else if (typeof dict1[key] === 'object' && !Array.isArray(dict1[key]) && 
+                       typeof value === 'object' && !Array.isArray(value)) {
+                // For nested objects (not arrays), recursively merge
                 mergeDictsRecursive(dict1[key], value);
-            } else if (Array.isArray(dict1[key]) && Array.isArray(value)) {
-                dict1[key].push(...value);
             } else {
+                // For other types, replace
                 dict1[key] = value;
             }
         } else {
+            // Key doesn't exist yet, just assign it
             dict1[key] = value;
         }
     }
