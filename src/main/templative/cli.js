@@ -1,5 +1,4 @@
 const { program } = require('commander');
-const { version } = require('../../../../templative-js/package.json');
 // Add dotenv to load environment variables from .env file
 require('dotenv').config();
 
@@ -7,9 +6,7 @@ require('dotenv').config();
 const { create, produce, manage, distribute } = require('./api/index');
 
 program
-  .name('templative')
-  .description('Templative game development toolkit')
-  .version(version);
+  .name('Templative')
 
 
 // Add templative commands
