@@ -7,7 +7,7 @@ const { COMPONENT_INFO } = require('../../../../../shared/componentInfo.js');
 // Constants
 const diceTypes = ["CustomColorD6", "CustomWoodD6"];
 const unsupportedDiceTypes = ["CustomColorD4", "CustomColorD8"];
-const pagePaddingInches = 0.5;
+const pagePaddingInches = 0.25;
 const fpdfSizes = {
     "Letter": "letter",
     "Tabloid": "a3",
