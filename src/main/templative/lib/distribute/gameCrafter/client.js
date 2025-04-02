@@ -61,7 +61,7 @@ async function uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirec
             await createComponents(gameCrafterSession, outputDirectory, cloudGame, cloudGameFolder["id"], isPublish, isStock, isProofed);
             
             const gameUrl = `${gameCrafterBaseUrl}/make/games/${cloudGame["id"]}`;
-            console.log(chalk.green(`✓ Upload finished for ${cloudGame["name"]}, visit ${gameUrl}`));
+            console.log(`Upload finished for ${cloudGame["name"]}, visit ${gameUrl}`);
         
             await writeGameUrlToDirectory(game, gameUrl, outputDirectory);
             

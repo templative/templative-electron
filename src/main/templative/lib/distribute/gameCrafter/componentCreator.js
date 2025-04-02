@@ -11,7 +11,7 @@ const chalk = require('chalk');
 async function createRules(gameCrafterSession, gameRootDirectoryPath, cloudGame, folderId) {
     const filepath = path.join(gameRootDirectoryPath, "rules.pdf");
     if (!fs.existsSync(filepath)) {
-        console.log(chalk.red("!!! Rules file does not exist at %s"), filepath);
+        console.log(`!!! Rules file does not exist at ${filepath}`);
         return;
     }
     console.log(`Uploading ${path.basename(filepath)}`);
@@ -53,13 +53,13 @@ async function createComponent(gameCrafterSession, componentDirectoryPath, cloud
 
         const isDebugInfo = componentFile["isDebugInfo"] !== undefined ? componentFile["isDebugInfo"] : false;
         if (isDebugInfo && isPublish) {
-            console.log(chalk.red("!!! Skipping %s. It is debug only and we are publishing."), componentFile["name"]);
+            console.log(`!!! Skipping ${componentFile["name"]}. It is debug only and we are publishing.`);
             return;
         }
         
         const componentType = componentFile["type"];
         if (componentFile["quantity"] === 0) {
-            console.log("%s has 0 quantity, skipping.", componentFile["name"]);
+            console.log(`${componentFile["name"]} has 0 quantity, skipping.`);
             return;
         }
         
@@ -91,7 +91,7 @@ async function createComponent(gameCrafterSession, componentDirectoryPath, cloud
 
 async function createCustomComponent(gameCrafterSession, componentType, componentFile, cloudGameId, cloudGameFolderId, isProofed) {
     if (!(componentType in COMPONENT_INFO)) {
-        console.log(chalk.red("!!! Missing component info for %s."), componentType);
+        console.log(`!!! Missing component info for ${componentType}`);
         return;
     }
     
@@ -122,12 +122,12 @@ async function createCustomComponent(gameCrafterSession, componentType, componen
     };
 
     if (!("GameCrafterUploadTask" in component)) {
-        console.log("Skipping %s with undefined 'GameCrafterUploadTask'", componentType);
+        console.log(`Skipping ${componentType} with undefined 'GameCrafterUploadTask'`);
         return;
     }
 
     if (!(component["GameCrafterUploadTask"] in componentTasks)) {
-        console.log(chalk.red("!!! Skipping %s since we don't know how to upload it yet."), componentType);
+        console.log(`!!! Skipping ${componentType} since we don't know how to upload it yet.`);
         return;
     }
     
@@ -141,20 +141,20 @@ async function createStockPart(gameCrafterSession, component, cloudGameId) {
     const componentTypeTokens = componentType.split("_");
     const isStockComponent = componentTypeTokens[0].toUpperCase() === "STOCK"; 
     if (!isStockComponent) {
-        console.log(chalk.red("!!! %s is not a stock part!"), componentName);
+        console.log(`!!! ${componentName} is not a stock part!`);
         return;
     }
     const stockPartId = componentTypeTokens[1];
     const quantity = component["quantity"];
 
     if (!(stockPartId in STOCK_COMPONENT_INFO)) {
-        console.log(chalk.red("!!! Skipping missing stock component %s."), stockPartId);
+        console.log(`!!! Skipping missing stock component ${stockPartId}`);
         return;
     }
     const stockComponentInfo = STOCK_COMPONENT_INFO[stockPartId];
 
     if (!("GameCrafterGuid" in stockComponentInfo)) {
-        console.log(chalk.red("!!! Skipping stock part %s with missing GameCrafterGuid."), stockPartId);
+        console.log(`!!! Skipping stock part ${stockPartId} with missing GameCrafterGuid.`);
         return;
     }
     const gameCrafterGuid = stockComponentInfo["GameCrafterGuid"];
@@ -219,7 +219,7 @@ async function createTwoSidedSlugged(gameCrafterSession, component, identity, cl
         console.log(`!!! Cannot create ${componentName}, missing ${backInstructions['filepath']}`);
         return;
     }
-    console.log("Uploading %s %s %s(s)", quantity, componentName, identity);
+    console.log(`Uploading ${quantity} ${componentName} ${identity}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
 
@@ -267,7 +267,7 @@ async function createTwoSidedBox(gameCrafterSession, component, identity, cloudG
         console.log(`!!! Cannot create ${componentName}, missing ${backInstructions['filepath']}`);
         return;
     }
-    console.log("Uploading %s %s %s(s)", quantity, componentName, component["type"]);
+    console.log(`Uploading ${quantity} ${componentName} ${component["type"]}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
 
@@ -294,7 +294,7 @@ async function createHookbox(gameCrafterSession, component, identity, cloudGameI
         console.log(`!!! Cannot create ${componentName}, missing inside image ${backInstructions['filepath']}`);
         return;
     }
-    console.log("Uploading %s %s %s(s)", quantity, componentName, component["type"]);
+    console.log(`Uploading ${quantity} ${componentName} ${component["type"]}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
 
@@ -335,7 +335,7 @@ async function createBoxface(gameCrafterSession, component, identity, cloudGameI
         console.log(`!!! Cannot create ${componentName}, missing face image ${frontInstructions[0]['filepath']}`);
         return;
     }
-    console.log("Uploading %s %s %s(s)", quantity, componentName, component["type"]);
+    console.log(`Uploading ${quantity} ${componentName} ${component["type"]}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
 
@@ -369,7 +369,7 @@ async function createTuckBox(gameCrafterSession, component, identity, cloudGameI
         console.log(`!!! Cannot create ${componentName}, missing ${frontInstructions[0]['filepath']}`);
         return;
     }
-    console.log("Uploading %s %s %s(s)", quantity, componentName, component["type"]);
+    console.log(`Uploading ${quantity} ${componentName} ${component["type"]}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
     
@@ -391,7 +391,7 @@ async function createDeck(gameCrafterSession, component, identity, cloudGameId, 
         console.log(`!!! Cannot create ${componentName}, missing ${backInstructions['filepath']}`);
         return;
     }
-    console.log("Uploading %s %s %s(s)", quantity, componentName, component["type"]);
+    console.log(`Uploading ${quantity} ${componentName} ${component["type"]}`);
 
     const cloudComponentFolder = await httpOperations.postFolder(gameCrafterSession, componentName, cloudGameFolderId);
 

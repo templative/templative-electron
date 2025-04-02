@@ -1,4 +1,4 @@
-const { httpOperations } = require('./util/httpOperations.js');
+const httpOperations = require('./util/httpOperations.js');
 const { createFileInFolder } = require('./fileFolderManager.js');
 const path = require('path');
 const fs = require('fs').promises;
