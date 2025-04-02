@@ -1,10 +1,9 @@
-import { COMPONENT_INFO } from "../src/shared/componentInfo.js";
-import { STOCK_COMPONENT_INFO } from "../src/shared/stockComponentInfo.js";
-import { DISABLED_STOCK_COMPONENT_INFO } from "../src/shared/disabledStockComponentInfo.js";
-import fs from 'fs';
-import componentRules from "./rules/customComponentRules.js";
-import stockComponentRules from "./rules/stockComponentRules.js";
-
+const { COMPONENT_INFO } = require("../src/shared/componentInfo.js");
+const { STOCK_COMPONENT_INFO } = require("../src/shared/stockComponentInfo.js");
+const { DISABLED_STOCK_COMPONENT_INFO } = require("../src/shared/disabledStockComponentInfo.js");
+const fs = require('fs');
+const componentRules = require("./rules/customComponentRules.js");
+const stockComponentRules = require("./rules/stockComponentRules.js");
 
 // Function to apply rules and set values for a specific type of component
 function applyRulesToComponents(componentInfo, rules, componentType) {

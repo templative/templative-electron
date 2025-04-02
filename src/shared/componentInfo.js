@@ -1455,7 +1455,7 @@ const COMPONENT_INFO = {
     ],
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
-    "GameCrafterUploadTask": "onesidedgloss",
+    "GameCrafterUploadTask": "onesided",
     "GameCrafterPackagingDepthMillimeters": 1.651,
     "HasPieceData": true,
     "HasPieceQuantity": true,
@@ -2396,7 +2396,7 @@ const COMPONENT_INFO = {
       4.17,
       8.45
     ],
-    "GameCrafterUploadTask": "deck",
+    "GameCrafterUploadTask": "twosidedbox",
     "GameCrafterPackagingDepthMillimeters": 80.772,
     "HasPieceData": true,
     "HasPieceQuantity": true,
@@ -2405,7 +2405,6 @@ const COMPONENT_INFO = {
       "Back"
     ],
     "Tags": [
-      "deck",
       "packaging",
       "box"
     ],
@@ -2430,7 +2429,7 @@ const COMPONENT_INFO = {
       4.17,
       8.45
     ],
-    "GameCrafterUploadTask": "deck",
+    "GameCrafterUploadTask": "boxtop",
     "GameCrafterPackagingDepthMillimeters": 80.772,
     "HasPieceData": true,
     "HasPieceQuantity": true,
@@ -2438,7 +2437,6 @@ const COMPONENT_INFO = {
       "Front"
     ],
     "Tags": [
-      "deck",
       "packaging",
       "box"
     ],
@@ -4325,7 +4323,7 @@ const COMPONENT_INFO = {
       "booster"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "PokerBoosterBox",
@@ -5159,13 +5157,13 @@ const COMPONENT_INFO = {
       "small",
       "tarot",
       "pro",
-      "deck",
+      "packaging",
       "insert"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
-    "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK",
+    "IsDisabled": true,
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Key": "SmallProTarotInsert",
     "PreviewUri": "SmallProTarotInsert.png",
     "TemplateFiles": [
@@ -5526,13 +5524,13 @@ const COMPONENT_INFO = {
       "stout",
       "small",
       "tarot",
-      "deck",
+      "packaging",
       "insert"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
-    "PlaygroundCreationTask": "DECK",
-    "SimulatorCreationTask": "DECK",
+    "IsDisabled": true,
+    "PlaygroundCreationTask": "none",
+    "SimulatorCreationTask": "none",
     "Key": "SmallStoutTarotInsert",
     "PreviewUri": "SmallStoutTarotInsert.png",
     "TemplateFiles": [
@@ -6485,7 +6483,7 @@ const COMPONENT_INFO = {
       "board"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "LargeDualLayerBoard",
@@ -6622,7 +6620,7 @@ const COMPONENT_INFO = {
       "medium"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "MediumDualLayerBoard",
@@ -6659,7 +6657,7 @@ const COMPONENT_INFO = {
       "board"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "DECK",
     "SimulatorCreationTask": "DECK",
     "Key": "SmallDualLayerBoard",

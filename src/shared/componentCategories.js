@@ -407,6 +407,16 @@ const COMPONENT_CATEGORIES = {
           "Colorless": "BridgeTuckBox108"
         }
       },
+      "Deck Box": {
+        "Sizeless": {
+          "Colorless": "DeckBox"
+        }
+      },
+      "Deck Box Top And Side": {
+        "Sizeless": {
+          "Colorless": "DeckBoxTopAndSide"
+        }
+      },
       "Jumbo Hook Box": {
         "36": {
           "Colorless": "JumboHookBox36"
@@ -490,6 +500,16 @@ const COMPONENT_CATEGORIES = {
         },
         "108": {
           "Colorless": "PokerHookBox108"
+        }
+      },
+      "Pro Tarot Insert": {
+        "Small": {
+          "Colorless": "SmallProTarotInsert"
+        }
+      },
+      "Stout Tarot Insert": {
+        "Small": {
+          "Colorless": "SmallStoutTarotInsert"
         }
       },
       "Square Hook Box": {
@@ -623,16 +643,6 @@ const COMPONENT_CATEGORIES = {
           "Colorless": "ClearEuroPokerDeck"
         }
       },
-      "Deck Box": {
-        "Sizeless": {
-          "Colorless": "DeckBox"
-        }
-      },
-      "Deck Box Top And Side": {
-        "Sizeless": {
-          "Colorless": "DeckBoxTopAndSide"
-        }
-      },
       "Divider Deck": {
         "Sizeless": {
           "Colorless": "DividerDeck"
@@ -673,22 +683,12 @@ const COMPONENT_CATEGORIES = {
           "Colorless": "PlayMoney"
         }
       },
-      "Pro Tarot Insert": {
-        "Small": {
-          "Colorless": "SmallProTarotInsert"
-        }
-      },
       "Square Deck": {
         "Small": {
           "Colorless": "SmallSquareDeck"
         },
         "Sizeless": {
           "Colorless": "SquareDeck"
-        }
-      },
-      "Stout Tarot Insert": {
-        "Small": {
-          "Colorless": "SmallStoutTarotInsert"
         }
       },
       "Tarot Deck": {
