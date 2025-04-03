@@ -20,7 +20,7 @@ export default function RenderedImages({ templativeRootDirectoryPath, changeTabs
                 }
             </div>
             
-            {Object.entries(groupedComponents).length > 0 ? (
+            {Object.entries(groupedComponents).length > 0 && (
                 Object.entries(groupedComponents).map(([name, data]) => (
                     <ComponentOutputContainer 
                         key={name} 
@@ -32,10 +32,6 @@ export default function RenderedImages({ templativeRootDirectoryPath, changeTabs
                         changeTabsToEditAFileCallback={changeTabsToEditAFileCallback}
                     />
                 ))
-            ) : (
-                <div className="no-components-message">
-                    No rendered components found
-                </div>
             )}
         </React.Fragment>
     );
