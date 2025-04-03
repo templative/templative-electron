@@ -6,13 +6,14 @@ const { convertSvgContentToPng } = require('./modules/fileConversion/svgConverte
 
 const { addNewlines } = require("./artdataProcessing/newlineInserter.js");
 const { createArtfile} = require("./modules/artFileCreator.js");
-const { addOverlays} = require("./artdataProcessing/overlayHandler.js");
+const { addOverlays, collectOverlayFiles} = require("./artdataProcessing/overlayHandler.js");
 const { textReplaceInFile} = require("./artdataProcessing/textReplacer.js");
 const { updateStylesInFile} = require("./artdataProcessing/styleUpdater.js");
 const { clipSvgContentToClipFile, CLIPPING_ELEMENT_ID } = require("./modules/imageClipper.js");
 const { getComponentTemplate } = require("../../../componentTemplateUtility.js");
 const { preprocessSvgText } = require('./modules/fileConversion/textWrapping/index.js');
 const { SvgFileCache } = require('./modules/svgFileCache.js');
+const { ArtCache } = require('./modules/artCache.js');
 
 // Helper function to create a unique hash for a piece
 function createUniqueBackHashForPiece(pieceSpecificBackArtDataSources, pieceGamedata) {
@@ -131,9 +132,9 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
     }
     const component = COMPONENT_INFO[componentType];
   
-    let contents = null;
+    let templateContent = null;
     try {
-      contents = await svgFileCache.readSvgFile(artFilepath);
+      templateContent = await svgFileCache.readSvgFile(artFilepath);
     } catch (e) {
       console.log(`!!! Template art file ${artFilepath} cannot be parsed. Error: ${e}`);
       return;
@@ -143,6 +144,44 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
     const imageSizePixels = component["DimensionsPixels"];
   
     try {
+      const pieceUniqueHash = gamedata.pieceUniqueBackHash !== '' ? `_${gamedata.pieceUniqueBackHash}` : '';
+      const artFileOutputName = `${compositions.componentCompose['name']}${pieceUniqueHash}-${pieceName}`;
+
+      const overlayFiles = await collectOverlayFiles(
+          artdata["overlays"] || [], 
+          compositions, 
+          gamedata, 
+          productionProperties,
+          svgFileCache
+      );
+
+      // Create cache key from all inputs including overlays
+      const artCache = new ArtCache();
+      const inputHash = await artCache.createInputHash({
+          artdata,
+          gamedata,
+          productionProperties,
+          templateContent,
+          templateFilePath: artFilepath,
+          overlayFiles
+      });
+
+      // Check cache
+      const cachedFiles = await artCache.getCachedFiles(inputHash);
+      const absoluteOutputDirectory = path.normalize(path.resolve(componentBackOutputDirectory));
+      const absoluteArtFileOutputFilepath = path.join(absoluteOutputDirectory, `${artFileOutputName}.png`);
+
+      if (cachedFiles) {
+
+        const absoluteArtFileOutputSvgFilepath = path.join(absoluteOutputDirectory, `${artFileOutputName}.svg`);
+        console.log(`Using cached version of ${pieceName}`);
+        await fsExtra.copy(cachedFiles.svgPath, absoluteArtFileOutputSvgFilepath);
+        await fsExtra.copy(cachedFiles.pngPath, absoluteArtFileOutputFilepath);
+        return;
+      }
+
+      // If not cached, generate new files
+      let contents = templateContent;
       contents = await addOverlays(contents, artdata["overlays"], compositions, gamedata, productionProperties, svgFileCache);
       contents = await textReplaceInFile(contents, artdata["textReplacements"], gamedata, productionProperties);
       contents = await updateStylesInFile(contents, artdata["styleUpdates"], gamedata);
@@ -150,25 +189,22 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       contents = await preprocessSvgText(contents);
       
       if (productionProperties.isClipped) {
-        const clipSvgFilepath = await getComponentTemplate(componentType);
-        contents = await clipSvgContentToClipFile(contents, clipSvgFilepath, CLIPPING_ELEMENT_ID, svgFileCache);
+          const clipSvgFilepath = await getComponentTemplate(componentType);
+          contents = await clipSvgContentToClipFile(contents, clipSvgFilepath, CLIPPING_ELEMENT_ID, svgFileCache);
       }
       
-      const pieceUniqueHash = gamedata.pieceUniqueBackHash !== '' ? `_${gamedata.pieceUniqueBackHash}` : '';
-      const artFileOutputName = `${compositions.componentCompose['name']}${pieceUniqueHash}-${pieceName}`;
+      
       
       await createArtfile(contents, artFileOutputName, imageSizePixels, componentBackOutputDirectory);
-      
-      const absoluteOutputDirectory = path.normalize(path.resolve(componentBackOutputDirectory))
-      const absoluteArtFileOutputFilepath = path.join(absoluteOutputDirectory, `${artFileOutputName}.png`)
       await convertSvgContentToPng(contents, imageSizePixels, absoluteArtFileOutputFilepath);
 
-      console.log(`Produced ${pieceName}.`);
+      await artCache.cacheFiles(inputHash, contents, absoluteArtFileOutputFilepath);
+      console.log(`Produced ${pieceName}`);
     } catch (error) {
       console.error(`Error producing ${pieceName}: ${error.message}`);
       console.error(error.stack);
     }
-  }
+}
 
 
 module.exports = { createArtFileForPiece, createArtFilesForComponent, createArtFileOfPiece };

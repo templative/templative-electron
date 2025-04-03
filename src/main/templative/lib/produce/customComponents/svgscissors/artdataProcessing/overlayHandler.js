@@ -150,8 +150,46 @@ async function placeOverlay(contents, overlayFilepath, positionX, positionY, svg
     }
 }
 
+async function collectOverlayFiles(overlays, compositions, pieceGamedata, productionProperties, svgFileCache) {
+    const overlayFiles = [];
+    const overlayFilesDirectory = compositions.gameCompose["artInsertsDirectory"];
+
+    for (const overlay of overlays) {
+        const isComplex = overlay.isComplex ?? false;
+        if (isComplex && productionProperties.isSimple) {
+            continue;
+        }
+
+        const isDebug = overlay.isDebugInfo ?? false;
+        if (isDebug && productionProperties.isPublish) {
+            continue;
+        }
+
+        const overlayName = await getScopedValue(overlay, pieceGamedata);
+        if (!overlayName) {
+            continue;
+        }
+
+        const overlaysFilepath = path.resolve(path.join(productionProperties.inputDirectoryPath, overlayFilesDirectory));
+        const overlayFilename = `${overlayName}.svg`;
+        const overlayFilepath = path.normalize(path.join(overlaysFilepath, overlayFilename));
+
+        try {
+            const content = await svgFileCache.readSvgFile(overlayFilepath);
+            overlayFiles.push({
+                path: overlayFilepath,
+                content
+            });
+        } catch (error) {
+            console.log(`!!! Overlay ${overlayFilepath} error: ${error.message}`);
+            continue;
+        }
+    }
+    return overlayFiles;
+}
 module.exports = {
   addOverlays,
   placeOverlay,
-  getScopedValue
+  getScopedValue,
+  collectOverlayFiles
 }; 
