@@ -209,5 +209,21 @@ module.exports = [
             component.IsDisabled = true;
             return ["IsDisabled"];
         }
+    },
+    {
+        description: "Components whose DisplayName contains 'Dual Layer Board' should be disabled",
+        condition: (component) => component.DisplayName && component.DisplayName.includes("Dual Layer Board"),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            return ["IsDisabled"];
+        }
+    },
+    {
+        description: "Components with `Custom Color D4` in their DisplayName should be disabled.",
+        condition: (component) => component.DisplayName && component.DisplayName.includes("Custom Color D4"),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            return ["IsDisabled"];
+        }
     }
   ];

@@ -724,6 +724,15 @@ module.exports = [
             component.IsDisabled = false;
             return ["IsDisabled"];
         }
+    },
+    {
+        description: "Components tagged meeple should have the SimulatorCreationTask and PlaygroundCreationTask set to 'StockMeeple'",
+        condition: (component) => component.Tags && component.Tags.includes("meeple"),
+        setValue: (component) => {
+            component.SimulatorCreationTask = "StockMeeple";
+            component.PlaygroundCreationTask = "StockMeeple";
+            return ["SimulatorCreationTask", "PlaygroundCreationTask"];
+        }
     }
     
 ];
