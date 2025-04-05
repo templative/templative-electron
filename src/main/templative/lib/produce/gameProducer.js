@@ -44,7 +44,7 @@ async function clearPreviews(directoryPath) {
     await Promise.all(files.map(deleteFile));
 }
 
-async function producePiecePreview(gameRootDirectoryPath, componentName, pieceName, language) {
+async function producePiecePreview(gameRootDirectoryPath, componentName, pieceName, language, isClipping=false) {
     if (!gameRootDirectoryPath) {
         throw new Error("Game root directory path is invalid.");
     }
@@ -65,8 +65,7 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     const gameData = new GameData(studioDataBlob, gameDataBlob);
     const outputDirectoryPath = getPreviewsPath();
     await clearPreviews(outputDirectoryPath);
-    const isClipped = false
-    const previewProperties = new PreviewProperties(gameRootDirectoryPath, outputDirectoryPath, pieceName, language, isClipped);
+    const previewProperties = new PreviewProperties(gameRootDirectoryPath, outputDirectoryPath, pieceName, language, isClipping);
 
     const fontCache = new FontCache();
     const svgFileCache = new SvgFileCache();
@@ -75,7 +74,7 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     console.log(`Wrote previews to ${outputDirectoryPath}`);
 }
 
-async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage) {
+async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage, isClipping=false) {
     const startTime = performance.now();
     
     if (!gameRootDirectoryPath) {
@@ -115,8 +114,7 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
     const componentsCompose = await defineLoader.loadComponentCompose(gameRootDirectoryPath);
 
     const gameData = new GameData(studioDataBlob, gameDataBlob);
-    const isClipped = false
-    const produceProperties = new ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage, isClipped);
+    const produceProperties = new ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage, isClipping);
     
     const fontCache = new FontCache();
     const svgFileCache = new SvgFileCache();
