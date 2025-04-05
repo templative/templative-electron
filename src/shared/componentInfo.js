@@ -1900,11 +1900,14 @@ const COMPONENT_INFO = {
       "plastic"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": true,
+    "IsDisabled": false,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "StandardDie",
     "Key": "CustomColorD4",
     "PreviewUri": "CustomColorD4.png",
+    "ArtDataTypeNames": [
+      "DieFace"
+    ],
     "TemplateFiles": [
       "CustomColorD4"
     ]
@@ -1960,6 +1963,9 @@ const COMPONENT_INFO = {
       "die",
       "plastic",
       "d8"
+    ],
+    "ArtDataTypeNames": [
+      "DieFace"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
@@ -2375,6 +2381,9 @@ const COMPONENT_INFO = {
       "d6",
       "die",
       "wooden"
+    ],
+    "ArtDataTypeNames": [
+      "DieFace"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
