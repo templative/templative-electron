@@ -64,7 +64,8 @@ const CreatePanel = (props) => {
         context.setSelectedComponentType(undefined);
         context.setComponentAIDescription("");
         
-        if (!originalType.startsWith("STOCK_")) {
+        // Only change views for custom components, not stock components
+        if (context.isToggledToComponents) {
             props.changeTabsToEditAFileCallback(
                 "UNIFIED_COMPONENT", 
                 path.join(props.templativeRootDirectoryPath, `component-compose.json#${context.componentName}`)

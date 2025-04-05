@@ -1,5 +1,5 @@
 import React from 'react';
-
+const {STOCK_COMPONENT_INFO} = require("../../../../shared/stockComponentInfo");
 const RenderingWorkspaceContext = React.createContext();
 
 const PostRenderOptions = [
@@ -76,12 +76,26 @@ class RenderingWorkspaceProvider extends React.Component {
       selectedMajorCategory: undefined,
       selectedBaseComponent: undefined,
       selectedSize: undefined,
-      selectedColor: undefined
+      selectedColor: undefined,
+      componentName: "" // Reset component name when toggling between custom and stock
     }));
   };
 
   selectComponent = (category, baseComponent, size, color, type) => {
     console.log("selectComponent", category, baseComponent, size, color, type);
+    
+    // Check if this is a stock component (stock components start with "STOCK_")
+    const isStockComponent = !this.state.isToggledToComponents;
+    
+    if (isStockComponent && type !== this.state.selectedComponentType) {
+      // For stock components, update the component name with the display name
+      
+      const componentTypeInfo = STOCK_COMPONENT_INFO[type];
+      if (componentTypeInfo && componentTypeInfo.DisplayName) {
+        this.setState({ componentName: componentTypeInfo.DisplayName });
+      }
+    }
+    
     this.setState(prevState => ({
       selectedComponentType: prevState.selectedComponentType === type ? undefined : type,
       selectedMajorCategory: category,
