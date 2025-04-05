@@ -39,6 +39,10 @@ const login = async (_, email, password) => {
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, response.token, email);
 }
 const giveLoginInformation = async () => {
+    // if (!app.isPackaged) {
+    //     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, "Fakeasstoken", "oliverbarnum32@gmail.com");
+    //     return
+    // }
     var token = await getSessionToken()
     var email = await getEmail()
     if (!token || !email) {
