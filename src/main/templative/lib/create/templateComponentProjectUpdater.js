@@ -133,14 +133,12 @@ function resource_path(relative_path) {
 }
 
 async function createArtFiles(artTemplatesDirectoryPath, name, type, artDataTypeNames, componentAIDescription = null, artdataFiles = null) {
-    const componentTemplateFilepath = await getComponentTemplate(type);
     try {
-        const contents = await fs.readFile(componentTemplateFilepath, 'utf8');
-
         const artFiles = [];
         for (const artDataTypeName of artDataTypeNames) {
-            const artSideName = `${name}${artDataTypeName}`;
-            const artSideNameFilepath = join(artTemplatesDirectoryPath, `${artSideName}.svg`);
+            const componentTemplateFilepath = await getComponentTemplate(type, artDataTypeName);
+            const contents = await fs.readFile(componentTemplateFilepath, 'utf8');
+            const artSideNameFilepath = join(artTemplatesDirectoryPath, `${name}${artDataTypeName}.svg`);
 
             await copyFile(componentTemplateFilepath, artSideNameFilepath);
             artFiles.push({
@@ -151,24 +149,11 @@ async function createArtFiles(artTemplatesDirectoryPath, name, type, artDataType
         }
         return artFiles;
     } catch (error) {
-        console.warn(`Template file not found at ${componentTemplateFilepath}. Creating a blank SVG.`);
+        console.warn(`Template file not found at for ${type}. Creating a blank SVG.`);
         
         const width = 750;
         const height = 1050;
-        const blankSvg = `<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   version="1.1"
-   id="YOUR_ARTWORK_HERE"
-   x="0px"
-   y="0px"
-   width="${width}"
-   height="${height}"
-   viewBox="0 0 ${width} ${height}"
-   enable-background="new 0 0 ${width} ${height}"
-   xml:space="preserve"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-</svg>`;
+        const blankSvg = `<?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg version="1.1" id="YOUR_ARTWORK_HERE" x="0px" y="0px" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" enable-background="new 0 0 ${width} ${height}" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"> </svg>`;
 
         const artFiles = [];
         for (const artDataTypeName of artDataTypeNames) {
