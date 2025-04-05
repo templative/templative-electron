@@ -28,7 +28,7 @@ function processTextElements(document) {
 function processTextElementForShapeInside(textElement, shapeMap) {
   // Skip text elements that have already been processed
   if (textElement.getAttribute('data-processed') === 'true') {
-    // console.log(chalk.blue('Skipping already processed text element'));
+    // console.log('Skipping already processed text element');
     return;
   }
   
@@ -43,13 +43,13 @@ function processTextElementForShapeInside(textElement, shapeMap) {
     const shapeId = shapeInsideMatch[1];
     const shapeElement = shapeMap.get(shapeId);
     if (!shapeElement) {
-      // console.log(chalk.yellow(`Shape element not found for shape-inside reference to #${shapeId}`));
+      // console.log(`Shape element not found for shape-inside reference to #${shapeId}`);
       return;
     }
     processShapeInsideText(textElement, shapeElement, styleAttr);  
   }
   catch(error) {
-    console.log(chalk.red(error))
+    console.log(error)
     return;
   }
   finally {
@@ -71,7 +71,7 @@ function processShapeInsideText(textElement, shapeElement, styleAttr) {
   const shapeBounds = getShapeBounds(shapeElement);
   
   if (!shapeBounds) {
-    // console.log(chalk.yellow(`Shape bounds not found for shape-inside reference to #${shapeElement.id}`));
+    // console.log(`Shape bounds not found for shape-inside reference to #${shapeElement.id}`);
     return;
   }
   const textData = initializeTextContent(textElement);
@@ -128,8 +128,8 @@ function initializeTextContent(textElement) {
           continue
         }
         plainContent += tspan.textContent + '';
-        // console.log(chalk.cyan("Tspan"))
-        // console.log(chalk.cyan(tspan.textContent))
+        // console.log("Tspan")
+        // console.log(tspan.textContent)
         
         // Capture formatting information if available
         const fontWeight = tspan.getAttribute('font-weight') || 
@@ -170,8 +170,8 @@ function initializeTextContent(textElement) {
   if (rootTextContent.length > 0) {
     // console.log(`Text element has direct content: "${rootTextContent}"`);
   }
-  // console.log(chalk.yellow("Plain content"))
-  // console.log(chalk.yellow(plainContent))
+  // console.log("Plain content")
+  // console.log(plainContent)
   
   return { plainContent, formattingRanges, rootTextContent };
 }
@@ -573,7 +573,7 @@ function createWrappedTextElement(textElement, textBounds, plainContent, formatt
   //       } else if (isItalic) {
   //         process.stdout.write(chalk.red.italic(char));
   //       } else {
-  //         process.stdout.write(chalk.red(char));
+  //         process.stdout.write(char);
   //       }
   //     }
   //     console.log(); // New line after printing the text
@@ -588,7 +588,7 @@ function createWrappedTextElement(textElement, textBounds, plainContent, formatt
     }
     
     // Always wrap each line to fit the width, regardless of whether there are explicit newlines
-    // console.log(chalk.green(hasExplicitNewlines ? "Has explicit newlines, wrapping each line" : "No explicit newlines, wrapping text"))
+    // console.log(hasExplicitNewlines ? "Has explicit newlines, wrapping each line" : "No explicit newlines, wrapping text")
     
     // Create font info object
     const fontInfo = {

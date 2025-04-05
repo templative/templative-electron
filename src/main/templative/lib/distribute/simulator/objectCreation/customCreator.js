@@ -21,7 +21,7 @@ async function createCustom(tabletopSimulatorImageDirectoryPath, componentInstru
   // Check if SimulatorCreationTask is specified
   if (!componentInfo.hasOwnProperty("SimulatorCreationTask") || 
       componentInfo["SimulatorCreationTask"] === "none") {
-    console.log(chalk.yellow(`Skipping ${componentInstructions.uniqueName || componentInstructions.name} due to no SimulatorCreationTask.`));
+    console.log(`Skipping ${componentInstructions.uniqueName || componentInstructions.name} due to no SimulatorCreationTask.`);
     return null;
   }
   
@@ -30,7 +30,7 @@ async function createCustom(tabletopSimulatorImageDirectoryPath, componentInstru
   // Get the appropriate adapter function
   const adapter = getAdapter(simulatorCreationTask);
   if (!adapter) {
-    console.log(chalk.red(`!!! Unsupported SimulatorCreationTask: ${simulatorCreationTask}`));
+    console.log(`!!! Unsupported SimulatorCreationTask: ${simulatorCreationTask}`);
     return null;
   }
 

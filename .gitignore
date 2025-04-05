@@ -8,6 +8,7 @@ bigass-test-project/
 previews/
 /node_modules
 /.pnp
+/.templativeCache
 .pnp.js
 bin/*
 # testing

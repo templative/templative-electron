@@ -95,7 +95,10 @@ function createComponentLibraryChest(componentStates=[], name = "ComponentLibrar
   };
 }
 
-function createDeckObjectState(deckPrefix, name, imageUrls, dimensions, layout, cardQuantities, deckType = 0) {
+function createDeckObjectState(deckPrefix, name, imageUrls, dimensions, layout, cardQuantities, deckType = 0, isSingleCard = false) {
+  if (isSingleCard) {
+    return createCardObjectState(deckPrefix, name, imageUrls, dimensions, layout, cardQuantities, deckType);
+  }
   console.log(`Creating deck ${name}.`);
   if (deckPrefix === null || deckPrefix === undefined || typeof deckPrefix !== "number") {
     throw new Error(`Deck prefix is null, undefined, or not a number for ${name}`);
@@ -267,7 +270,7 @@ function createCardObjectState(guid, cardPrefix, name, imageUrls, simulatorCompo
       b: 0.713235259
     },
     LayoutGroupSortIndex: 0,
-    Value: 0,    
+    Value: 0,
     HideWhenFaceDown: true,
     Hands: true,
     CardID: parseInt(`${cardPrefix}00`),

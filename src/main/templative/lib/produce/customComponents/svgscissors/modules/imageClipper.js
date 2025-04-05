@@ -13,7 +13,7 @@ async function clipSvgFileToClipFile(svgFilepath, clipSvgFilepath, clipSvgElemen
     const clipSvgContent = await svgFileCache.readSvgFile(clipSvgFilepath);
         
     if (!svgContent || !clipSvgContent) {
-        console.log(chalk.red(`!!! Failed to load SVG files for clipping.`));
+        console.log(`!!! Failed to load SVG files for clipping.`);
         return false;
     }
 
@@ -25,7 +25,7 @@ async function clipSvgContentToClipFile(svgContent, clipSvgFilepath, clipSvgElem
     const clipSvgContent = await svgFileCache.readSvgFile(clipSvgFilepath);
         
     if (!clipSvgContent) {
-        console.log(chalk.red(`!!! Failed to load SVG files for clipping.`));
+        console.log(`!!! Failed to load SVG files for clipping.`);
         return false;
     }
     return clipSvgContentToElement(svgContent, clipSvgContent, clipSvgElementId);
@@ -34,7 +34,7 @@ async function clipSvgContentToClipFile(svgContent, clipSvgFilepath, clipSvgElem
 // Clips SVG content using another SVG's element as a clipping path
 async function clipSvgContentToElement(svgContent, clipSvgContent, clipSvgElementId=CLIPPING_ELEMENT_ID) {
     if (!svgContent || !clipSvgContent) {
-        console.log(chalk.red(`!!! Invalid SVG content provided for clipping.`));
+        console.log(`!!! Invalid SVG content provided for clipping.`);
         return svgContent;
     }
     
@@ -50,7 +50,7 @@ async function clipSvgContentToElement(svgContent, clipSvgContent, clipSvgElemen
         const clipElement = clipDoc.getElementById(clipSvgElementId);
         
         if (!clipElement) {
-            console.log(chalk.red(`Could not find element with id "${clipSvgElementId}" in clip SVG.`));
+            console.log(`Could not find element with id "${clipSvgElementId}" in clip SVG.`);
             return svgContent;
         }
         
@@ -59,12 +59,12 @@ async function clipSvgContentToElement(svgContent, clipSvgContent, clipSvgElemen
         const clipRoot = clipDoc.querySelector('svg');
         
         if (!svgRoot) {
-            console.log(chalk.red(`Could not find SVG root element in source file.`));
+            console.log(`Could not find SVG root element in source file.`);
             return svgContent;
         }
         
         if (!clipRoot) {
-            console.log(chalk.red(`Could not find SVG root element in clip file.`));
+            console.log(`Could not find SVG root element in clip file.`);
             return svgContent;
         }
         
@@ -121,7 +121,7 @@ async function clipSvgContentToElement(svgContent, clipSvgContent, clipSvgElemen
         const modifiedSvg = serializer.serializeToString(svgDoc);        
         return modifiedSvg;
     } catch (error) {
-        console.log(chalk.red(`Error clipping SVG: ${error.message}`));
+        console.log(`Error clipping SVG: ${error.message}`);
         return false;
     }
 }

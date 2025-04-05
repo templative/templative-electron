@@ -22,7 +22,7 @@ function escapeRegExp(string) {
  */
 function wrapText(text, fontSize, containerWidth, fontInfo = {}, formattingRanges = [], characterPositionForFormatting = 0) {
   if (!text) {
-    // console.log(chalk.red("text is empty"))
+    // console.log("text is empty")
     return [];
   }
 
@@ -37,7 +37,7 @@ function wrapText(text, fontSize, containerWidth, fontInfo = {}, formattingRange
   // Process each paragraph
   for (const paragraph of paragraphs) {
     if (paragraph.trim().length === 0) {
-      // console.log(chalk.red("paragraph is empty"))
+      // console.log("paragraph is empty")
       lines.push(''); // Preserve empty paragraphs
       absolutePosition += 1; // Account for the newline
       continue;
@@ -55,7 +55,7 @@ function wrapText(text, fontSize, containerWidth, fontInfo = {}, formattingRange
     
     // Process each word
     for (const word of words) {
-      // console.log(chalk.cyan(`Processing word: "${word}" (length: ${word.length})`));
+      // console.log(`Processing word: "${word}" (length: ${word.length}`));
       
       // Calculate the width of this word with its formatting
       const wordWithSpace = currentLine.length === 0 ? word : ' ' + word;

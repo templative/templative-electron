@@ -28,7 +28,7 @@ const { getColorValueRGB, getColorValueHex } = require('../../../../../../shared
  */
 function standardDieAdapter(componentInstructions, stockPartInfo) {
   if (!stockPartInfo.hasOwnProperty("Color")) {
-    console.log(chalk.red(`!!! Missing Color for ${componentInstructions.type}`));
+    console.log(`!!! Missing Color for ${componentInstructions.type}`);
     return null;
   }
 
@@ -47,9 +47,9 @@ function standardDieAdapter(componentInstructions, stockPartInfo) {
   let numberSides = 6;
   if (dieTypeMatch) {
     numberSides = parseInt(dieTypeMatch[1]);
-    // console.log(chalk.blue(`Detected die with ${numberSides} sides from type: ${stockType}`));
+    // console.log(`Detected die with ${numberSides} sides from type: ${stockType}`);
   } else {
-    console.log(chalk.yellow(`Could not detect die type from ${stockType}, defaulting to D6`));
+    console.log(`Could not detect die type from ${stockType}, defaulting to D6`);
   }
 // console.log(stockPartInfo.Color)
   return {
@@ -70,7 +70,7 @@ function standardDieAdapter(componentInstructions, stockPartInfo) {
  */
 function customDieAdapter(componentInstructions, stockPartInfo) {
   if (!stockPartInfo.hasOwnProperty("ImageUrl")) {
-    console.log(chalk.red(`!!! Missing ImageUrl for custom die ${componentInstructions.type}`));
+    console.log(`!!! Missing ImageUrl for custom die ${componentInstructions.type}`);
     return null;
   }
 
@@ -82,13 +82,13 @@ function customDieAdapter(componentInstructions, stockPartInfo) {
   // Simplified pattern to just match the die type
   const dieTypeMatch = stockType.match(/D(4|6|8|10|12|20)/);
   if (!dieTypeMatch) {
-    console.log(chalk.red(`!!! Invalid custom die type: ${stockType}. Expected D4, D6, D8, D10, D12, or D20`));
+    console.log(`!!! Invalid custom die type: ${stockType}. Expected D4, D6, D8, D10, D12, or D20`);
     return null;
   }
 
   const numberSides = parseInt(dieTypeMatch[1]);
   if (!validSides.includes(numberSides)) {
-    console.log(chalk.red(`!!! Unsupported die type: D${numberSides}. Only D4, D6, D8, D10, D12, and D20 are supported.`));
+    console.log(`!!! Unsupported die type: D${numberSides}. Only D4, D6, D8, D10, D12, and D20 are supported.`);
     return null;
   }
 
@@ -108,7 +108,7 @@ function customDieAdapter(componentInstructions, stockPartInfo) {
  */
 function stockCubeAdapter(componentInstructions, stockPartInfo) {
   if (!stockPartInfo.hasOwnProperty("Color")) {
-    console.log(chalk.red(`!!! Missing Color for ${componentInstructions.type}`));
+    console.log(`!!! Missing Color for ${componentInstructions.type}`);
     return null;
   }
 
@@ -117,7 +117,7 @@ function stockCubeAdapter(componentInstructions, stockPartInfo) {
   
   // Accept both Cube* and Block* formats
   if (!stockType.includes("Cube") && !stockType.includes("Block")) {
-    console.log(chalk.red(`!!! Invalid cube/block type: ${stockType}. Expected Cube* or Block*`));
+    console.log(`!!! Invalid cube/block type: ${stockType}. Expected Cube* or Block*`);
     return null;
   }
 
@@ -127,7 +127,7 @@ function stockCubeAdapter(componentInstructions, stockPartInfo) {
     sizeStr = stockType.slice(4).split("mm")[0];
     // Ensure we have a valid number for Cube types
     if (!sizeStr || isNaN(parseFloat(sizeStr))) {
-      console.log(chalk.yellow(`Warning: Could not extract valid size from ${stockType}, using default 16mm`));
+      console.log(`Warning: Could not extract valid size from ${stockType}, using default 16mm`);
       sizeStr = '16'; // Default if no valid size is found
     }
   } else { // Block format
@@ -145,7 +145,7 @@ function stockCubeAdapter(componentInstructions, stockPartInfo) {
   const sizeInches = parseFloat(sizeStr) / 25.4; // Convert mm to inches
   
   if (isNaN(sizeInches)) {
-    console.log(chalk.red(`!!! Invalid size value for ${componentInstructions.type}: ${sizeStr}`));
+    console.log(`!!! Invalid size value for ${componentInstructions.type}: ${sizeStr}`);
     return null;
   }
 
@@ -190,7 +190,7 @@ function stockModelAdapter(componentInstructions, stockPartInfo) {
     !stockPartInfo["3DModel"].hasOwnProperty("TextureUrl") || 
     !stockPartInfo["3DModel"].hasOwnProperty("NormalMapUrl")
   ) {
-    console.log(chalk.red(`!!! Missing 3D model information for ${componentInstructions.type}`));
+    console.log(`!!! Missing 3D model information for ${componentInstructions.type}`);
     return null;
   }
 
@@ -218,7 +218,7 @@ function standeeAdapter(componentInstructions, stockPartInfo) {
   } else if (stockPartInfo.hasOwnProperty("FrontImageUrl")) {
     frontImageUrl = stockPartInfo.FrontImageUrl;
   } else {
-    console.log(chalk.red(`!!! Missing image URL for standee ${componentInstructions.type}`));
+    console.log(`!!! Missing image URL for standee ${componentInstructions.type}`);
     return null;
   }
 
@@ -251,18 +251,18 @@ function standeeAdapter(componentInstructions, stockPartInfo) {
 function tokenWithDefinedShapeAdapter(componentInstructions, stockPartInfo) {
 
   if (!stockPartInfo.hasOwnProperty("FrontImageUrl")) {
-    console.log(chalk.red(`!!! Missing FrontImageUrl for token ${componentInstructions.type}`));
+    console.log(`!!! Missing FrontImageUrl for token ${componentInstructions.type}`);
     return null;
   }
 
   if (!stockPartInfo.hasOwnProperty("Shape")) {
-    console.log(chalk.red(`!!! Missing Shape for token ${componentInstructions.type}`));
+    console.log(`!!! Missing Shape for token ${componentInstructions.type}`);
     return null;
   }
 
   const validShapes = ["Box", "Hex", "Circle", "Rounded"];
   if (!validShapes.includes(stockPartInfo.Shape)) {
-    console.log(chalk.red(`!!! Invalid shape: ${stockPartInfo.Shape}. Expected one of: ${validShapes.join(", ")}`));
+    console.log(`!!! Invalid shape: ${stockPartInfo.Shape}. Expected one of: ${validShapes.join(", ")}`);
     return null;
   }
 
@@ -281,7 +281,7 @@ function tokenWithDefinedShapeAdapter(componentInstructions, stockPartInfo) {
 
 function tokenWithTransparencyBasedShapeAdapter(componentInstructions, stockPartInfo) {
   if (!stockPartInfo.hasOwnProperty("PreviewUri")) {
-    console.log(chalk.red(`!!! Missing PreviewUri for token ${componentInstructions.type}`));
+    console.log(`!!! Missing PreviewUri for token ${componentInstructions.type}`);
     return null;
   }
 
@@ -306,7 +306,7 @@ function tokenWithTransparencyBasedShapeAdapter(componentInstructions, stockPart
  */
 function customPDFAdapter(componentInstructions, stockPartInfo) {
   if (!stockPartInfo.hasOwnProperty("PDFUrl")) {
-    console.log(chalk.red(`!!! Missing PDFUrl for custom PDF ${componentInstructions.type}`));
+    console.log(`!!! Missing PDFUrl for custom PDF ${componentInstructions.type}`);
     return null;
   }
 
@@ -373,7 +373,7 @@ function pokerChipAdapter(componentInstructions, stockPartInfo) {
     // Extract chip value from the type if not explicitly provided
     const typeMatch = componentInstructions.type.match(/CHIP_(\d+)/i);
     if (!typeMatch) {
-      console.log(chalk.red(`!!! Missing ChipValue for poker chip ${componentInstructions.type}`));
+      console.log(`!!! Missing ChipValue for poker chip ${componentInstructions.type}`);
       return null;
     }
     stockPartInfo.ChipValue = parseInt(typeMatch[1]);
@@ -401,7 +401,7 @@ function cylinderAdapter(componentInstructions, stockPartInfo) {
   }
   let colorHex = getColorValueHex(color);
   if (colorHex === null) {
-    console.log(chalk.yellow(`!!! Invalid color: ${color}. Using white instead.`));
+    console.log(`!!! Invalid color: ${color}. Using white instead.`);
     colorHex = "ffffff";
   }
   if (stockPartInfo.hasOwnProperty("DisplayName")) {
@@ -438,7 +438,7 @@ function cylinderAdapter(componentInstructions, stockPartInfo) {
     }
     
     if (!dimensions) {
-      console.log(chalk.yellow(`!!! Could not extract dimensions from ${stockPartInfo.DisplayName}. Using defaults.`));
+      console.log(`!!! Could not extract dimensions from ${stockPartInfo.DisplayName}. Using defaults.`);
     }
   }
   return {

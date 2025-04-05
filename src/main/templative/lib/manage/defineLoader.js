@@ -75,7 +75,7 @@ async function attemptToLoadPieceCsvFile(piecesDirectory, piecesGamedataFilename
     const varNames = new Set();
     for (const piece of gamedata) {
         if (!piece.name) {
-            console.log(chalk.red("!!! Error parsing piece."));
+            console.log("!!! Error parsing piece.");
             console.log(piece);
             return null;
         }

@@ -20,7 +20,7 @@ async function convertToTabletopSimulator(producedDirectoryPath, tabletopSimulat
   try {
     await fs.access(tabletopSimulatorDirectoryPath);
   } catch {
-    console.log(chalk.red(`!!! Tabletop Simulator directory at ${tabletopSimulatorDirectoryPath} does not exist.`));
+    console.log(`!!! Tabletop Simulator directory at ${tabletopSimulatorDirectoryPath} does not exist.`);
     return 0
   }
 
@@ -65,7 +65,7 @@ async function createSaveFile(uniqueGameName, objectStates, tabletopSimulatorDir
   try {
     await fs.access(savesDir);
   } catch {
-    console.log(chalk.yellow(`Creating Saves directory at ${savesDir}`));
+    console.log(`Creating Saves directory at ${savesDir}`);
     await fs.mkdir(savesDir, { recursive: true });
   }
 

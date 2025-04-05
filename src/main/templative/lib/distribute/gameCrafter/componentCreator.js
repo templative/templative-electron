@@ -38,7 +38,7 @@ async function createComponents(gameCrafterSession, outputDirectory, cloudGame, 
             }
         }
     } catch (error) {
-        console.error(chalk.red(`Failed to read component directories: ${error.message}`));
+        console.error(`Failed to read component directories: ${error.message}`);
         throw error;
     }
 }
@@ -381,7 +381,7 @@ async function createDeck(gameCrafterSession, component, identity, cloudGameId, 
     const componentName = component["name"];
     const quantity = component["quantity"];
     if (parseInt(quantity) === 0) {
-        console.log(chalk.red("!!! Deck has no quantity, skipping."));
+        console.log("!!! Deck has no quantity, skipping.");
         return;
     }
     const frontInstructions = component["frontInstructions"];

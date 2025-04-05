@@ -52,7 +52,7 @@ async function createCompositeImage(componentName, componentType, quantity, fron
     const uniqueCardCount = frontInstructions.length;
 
     if (uniqueCardCount > 69) {
-      console.log(chalk.red("!!! Components larger than 69 unique cards aren't parsed correctly at the moment."));
+      console.log("!!! Components larger than 69 unique cards aren't parsed correctly at the moment.");
       return [null, 0, 0, 0];
     }
 
@@ -63,7 +63,7 @@ async function createCompositeImage(componentName, componentType, quantity, fron
     rows = Math.max(rows, 2);
 
     if (!componentInfo.hasOwnProperty("DimensionsPixels")) {
-      console.log(chalk.red(`!!! Skipping ${componentType} that has no DimensionsPixels.`));
+      console.log(`!!! Skipping ${componentType} that has no DimensionsPixels.`);
       return [null, 0, 0, 0];
     }
     const pixelDimensions = componentInfo.DimensionsPixels;
@@ -124,7 +124,7 @@ async function createCompositeImage(componentName, componentType, quantity, fron
         
         cardIndex += 1;
       } catch (error) {
-        console.log(chalk.red(`!!! Error processing image ${instruction.filepath}: ${error}`));
+        console.log(`!!! Error processing image ${instruction.filepath}: ${error}`);
         let placeholderImage = createPlaceholderImage(pixelDimensions[0], pixelDimensions[1]);
         if (scaleFactor !== 1.0) {
           const newSize = [Math.floor(pixelDimensions[0] * scaleFactor), Math.floor(pixelDimensions[1] * scaleFactor)];
@@ -174,7 +174,7 @@ async function createCompositeImage(componentName, componentType, quantity, fron
     // Upload the image to S3
     var url = await uploadToS3(tiledImage);
     if (!url) {
-      console.log(chalk.red(`!!! Failed to upload composite image for ${componentName}, falling back to local file.`));
+      console.log(`!!! Failed to upload composite image for ${componentName}, falling back to local file.`);
       url = frontImageFilepath
     }
 
@@ -183,7 +183,7 @@ async function createCompositeImage(componentName, componentType, quantity, fron
     
     return [url, totalCount, columns, rows];
   } catch (error) {
-    console.log(chalk.red(`!!! Error creating composite image for ${componentName}: ${error}`));
+    console.log(`!!! Error creating composite image for ${componentName}: ${error}`);
     return [null, 0, 0, 0];
   }
 }
@@ -200,7 +200,7 @@ async function createCompositeImage(componentName, componentType, quantity, fron
 async function placeAndUploadBackImage(name, componentType, backInstructions, tabletopSimulatorImageDirectoryPath, componentInfo) {
   try {
     if (!componentInfo.hasOwnProperty("DimensionsPixels")) {
-      console.log(chalk.red(`!!! Skipping ${componentType} that has no DimensionsPixels.`));
+      console.log(`!!! Skipping ${componentType} that has no DimensionsPixels.`);
       return null;
     }
     
@@ -219,13 +219,13 @@ async function placeAndUploadBackImage(name, componentType, backInstructions, ta
     // Upload the image to S3
     const url = await uploadToS3(image);
     if (!url) {
-      console.log(chalk.red(`!!! Failed to upload back image for ${name}, falling back to local file.`));
+      console.log(`!!! Failed to upload back image for ${name}, falling back to local file.`);
       return backInstructions.filepath;
     }
     
     return url;
   } catch (error) {
-    console.log(chalk.red(`!!! Error processing back image for ${name}: ${error}`));
+    console.log(`!!! Error processing back image for ${name}: ${error}`);
     return null;
   }
 }
@@ -243,7 +243,7 @@ async function copyBackImageToImages(componentName, backInstructions, tabletopSi
     const backImageFilepath = path.join(tabletopSimulatorImageDirectoryPath, backImageName);
     await copyFile(backInstructions.filepath, backImageFilepath);
   } catch (error) {
-    console.log(chalk.red(`!!! Error copying back image for ${componentName}: ${error}`));
+    console.log(`!!! Error copying back image for ${componentName}: ${error}`);
   }
 }
 
@@ -305,7 +305,7 @@ async function createD6CompositeImage(name, color, filepaths, tabletopSimulatorI
           // Paint the resized face onto the base image
           paintImageOnto(baseImage, resizedFaceImage, x, y);
         } catch (error) {
-          console.log(chalk.yellow(`Warning: Could not load die face ${i+1} from ${filepaths[i]}: ${error}`));
+          console.log(`Warning: Could not load die face ${i+1} from ${filepaths[i]}: ${error}`);
           // Continue with other faces
         }
       }
@@ -314,12 +314,12 @@ async function createD6CompositeImage(name, color, filepaths, tabletopSimulatorI
     await baseImage.save(localImageFilepath);
     const imageUrl = await uploadToS3(baseImage);
     if (!imageUrl) {
-      console.log(chalk.red(`!!! Failed to upload die image for ${name}, falling back to local file.`));
+      console.log(`!!! Failed to upload die image for ${name}, falling back to local file.`);
       return localImageFilepath;
     }
     return imageUrl;
   } catch (error) {
-    console.log(chalk.red(`!!! Error creating D6 composite image for ${name}: ${error}`));
+    console.log(`!!! Error creating D6 composite image for ${name}: ${error}`);
     return null;
   }
 }

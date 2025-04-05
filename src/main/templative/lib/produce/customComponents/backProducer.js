@@ -46,7 +46,7 @@ class BackProducer extends Producer {
             await svgscissors.createArtFileForPiece(componentComposition, componentArtdata, uniqueComponentBackData, piecesDataBlob, previewProperties.outputDirectoryPath, previewProperties, fontCache, svgFileCache);
         }
         if (!foundPiece) {
-            console.warn(chalk.yellow(`There is no piece named ${previewProperties.pieceName} in the pieces gamedata for ${componentComposition.componentCompose["name"]}.`));
+            console.warn(`There is no piece named ${previewProperties.pieceName} in the pieces gamedata for ${componentComposition.componentCompose["name"]}.`);
         }
     }
     

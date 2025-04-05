@@ -23,7 +23,7 @@ async function createObjectStates(producedDirectoryPath, tabletopSimulatorDirect
   try {
     await fs.access(tabletopSimulatorImageDirectoryPath);
   } catch {
-    console.log(chalk.red(`!!! TTS images directory at ${tabletopSimulatorImageDirectoryPath} does not exist.`));
+    console.log(`!!! TTS images directory at ${tabletopSimulatorImageDirectoryPath} does not exist.`);
     return []
   }
   
@@ -61,11 +61,11 @@ async function createObjectState(componentDirectoryPath, tabletopSimulatorDirect
     if (isStockComponent) {
       const stockComponentInfo = STOCK_COMPONENT_INFO[componentTypeTokens[1]];
       if (!stockComponentInfo) {
-        console.log(chalk.red(`!!! Missing stock info for ${componentTypeTokens[1]}.`));
+        console.log(`!!! Missing stock info for ${componentTypeTokens[1]}.`);
         return null;
       }
       if (stockComponentInfo.hasOwnProperty("IsDisabled") && stockComponentInfo.IsDisabled) {
-        console.log(chalk.yellow(`Skipping ${componentInstructions.name} because it is disabled.`));
+        console.log(`Skipping ${componentInstructions.name} because it is disabled.`);
         return null;
       }
       
@@ -73,12 +73,12 @@ async function createObjectState(componentDirectoryPath, tabletopSimulatorDirect
     }
 
     if (!COMPONENT_INFO.hasOwnProperty(componentInstructions.type)) {
-      console.log(chalk.red(`!!! Missing component info for ${componentInstructions.type}.`));
+      console.log(`!!! Missing component info for ${componentInstructions.type}.`);
       return null;
     }
     const componentInfo = COMPONENT_INFO[componentInstructions.type];
     if (componentInfo.hasOwnProperty("IsDisabled") && componentInfo.IsDisabled) {
-      console.log(chalk.yellow(`Skipping ${componentInstructions.uniqueName || componentInstructions.name} because it is disabled.`));
+      console.log(`Skipping ${componentInstructions.uniqueName || componentInstructions.name} because it is disabled.`);
       return null;
     }
 
@@ -96,7 +96,7 @@ async function createObjectState(componentDirectoryPath, tabletopSimulatorDirect
     // Use the new createCustom function for all custom components
     return await createCustom(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal);
   } catch (error) {
-    console.log(chalk.red(`!!! Error creating object state for ${componentDirectoryPath}.`));
+    console.log(`!!! Error creating object state for ${componentDirectoryPath}.`);
     console.log(error.message);
     return null;
   }

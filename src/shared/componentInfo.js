@@ -1893,7 +1893,9 @@ const COMPONENT_INFO = {
     "GameCrafterPackagingDepthMillimeters": 17.272000000000002,
     "HasPieceData": true,
     "HasPieceQuantity": false,
-    "ArtDataTypeNames": [],
+    "ArtDataTypeNames": [
+      "DieFace"
+    ],
     "Tags": [
       "d4",
       "die",
@@ -1905,9 +1907,6 @@ const COMPONENT_INFO = {
     "SimulatorCreationTask": "StandardDie",
     "Key": "CustomColorD4",
     "PreviewUri": "CustomColorD4.png",
-    "ArtDataTypeNames": [
-      "DieFace"
-    ],
     "TemplateFiles": [
       "CustomColorD4"
     ]
@@ -1958,14 +1957,13 @@ const COMPONENT_INFO = {
     "GameCrafterPackagingDepthMillimeters": 17.475199999999997,
     "HasPieceData": true,
     "HasPieceQuantity": false,
-    "ArtDataTypeNames": [],
+    "ArtDataTypeNames": [
+      "DieFace"
+    ],
     "Tags": [
       "die",
       "plastic",
       "d8"
-    ],
-    "ArtDataTypeNames": [
-      "DieFace"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
@@ -2375,15 +2373,14 @@ const COMPONENT_INFO = {
     "GameCrafterPackagingDepthMillimeters": 16.000000000000007,
     "HasPieceData": true,
     "HasPieceQuantity": false,
-    "ArtDataTypeNames": [],
+    "ArtDataTypeNames": [
+      "DieFace"
+    ],
     "Tags": [
       "wood",
       "d6",
       "die",
       "wooden"
-    ],
-    "ArtDataTypeNames": [
-      "DieFace"
     ],
     "IsPrintingDisabled": false,
     "IsDisabled": false,
@@ -2546,7 +2543,7 @@ const COMPONENT_INFO = {
       "document"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "Document",
@@ -3035,7 +3032,7 @@ const COMPONENT_INFO = {
       "jumbo"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "JumboBooklet",
@@ -3200,7 +3197,7 @@ const COMPONENT_INFO = {
       "document"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "LargeBooklet",
@@ -3633,7 +3630,7 @@ const COMPONENT_INFO = {
       "medium"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "MediumBooklet",
@@ -5002,7 +4999,7 @@ const COMPONENT_INFO = {
       "small"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "SmallBooklet",
@@ -5964,7 +5961,7 @@ const COMPONENT_INFO = {
       "tall"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "TallBooklet",
@@ -5997,7 +5994,7 @@ const COMPONENT_INFO = {
       "tarot"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "TarotBooklet",

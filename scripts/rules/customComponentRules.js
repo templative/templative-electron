@@ -219,8 +219,8 @@ module.exports = [
         }
     },
     {
-        description: "Components with `Custom Color D4` in their DisplayName should be disabled.",
-        condition: (component) => component.DisplayName && component.DisplayName.includes("Custom Color D4"),
+        description: "Components tagged document with 'Document' or 'Booklet' in their DisplayName should be disabled",
+        condition: (component) => component.Tags && component.Tags.includes("document") && (component.DisplayName.includes("Document") || component.DisplayName.includes("Booklet")),
         setValue: (component) => {
             component.IsDisabled = true;
             return ["IsDisabled"];

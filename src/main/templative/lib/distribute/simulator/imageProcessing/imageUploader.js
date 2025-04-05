@@ -40,7 +40,7 @@ async function uploadToS3(image) {
     
     if (!presignedResponse.ok) {
       const errorData = await presignedResponse.text();
-      console.log(chalk.red(`!!! Failed to get presigned URL: ${errorData}`));
+      console.log(`!!! Failed to get presigned URL: ${errorData}`);
       return null;
     }
     
@@ -48,7 +48,7 @@ async function uploadToS3(image) {
     
     // If the image already exists, just return the URL
     if (presignedData.exists) {
-      // console.log(chalk.green(`Image already exists, no need to upload`));
+      // console.log(`Image already exists, no need to upload`);
       return presignedData.url;
     }
     
@@ -62,12 +62,12 @@ async function uploadToS3(image) {
     });
     
     if (!uploadResponse.ok) {
-      console.log(chalk.red(`!!! Failed to upload to S3: ${uploadResponse.status} ${uploadResponse.statusText}`));
+      console.log(`!!! Failed to upload to S3: ${uploadResponse.status} ${uploadResponse.statusText}`);
       return null;
     }
     return presignedData.final_url;
   } catch (error) {
-    console.log(chalk.red(`!!! Error uploading image: ${error}`));
+    console.log(`!!! Error uploading image: ${error}`);
     return null;
   }
 }
@@ -99,11 +99,11 @@ async function uploadThroughServer(image) {
       return data.url;
     } else {
       const errorData = await response.text();
-      console.log(chalk.red(`!!! Failed to upload image to server: ${errorData}`));
+      console.log(`!!! Failed to upload image to server: ${errorData}`);
       return null;
     }
   } catch (error) {
-    console.log(chalk.red(`!!! Error uploading image: ${error}`));
+    console.log(`!!! Error uploading image: ${error}`);
     return null;
   }
 }

@@ -384,7 +384,7 @@ class FontCache {
     
     // Fallback to a simple estimation if fontkit fails
     // Use different multipliers based on the character width
-    // console.log(chalk.red(`Fallback to a simple estimation for character "${char}" using fontkit`));
+    // console.log(`Fallback to a simple estimation for character "${char}" using fontkit`);
     let charWidthMultiplier = 0.6; // Default for normal text
     
     // Adjust multiplier based on font weight

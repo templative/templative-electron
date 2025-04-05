@@ -92,7 +92,8 @@ class RenderingWorkspaceProvider extends React.Component {
       
       const componentTypeInfo = STOCK_COMPONENT_INFO[type];
       if (componentTypeInfo && componentTypeInfo.DisplayName) {
-        this.setState({ componentName: componentTypeInfo.DisplayName });
+        var name = componentTypeInfo.DisplayName.replace(/[<>:"/\\|?*]/g, '');
+        this.setState({ componentName: name });
       }
     }
     

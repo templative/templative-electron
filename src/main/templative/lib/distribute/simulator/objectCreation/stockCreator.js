@@ -1,4 +1,3 @@
-const chalk = require('chalk');
 const { 
   createStandardDie, 
   createCustomDie,
@@ -25,14 +24,14 @@ async function createStock(componentInstructions, stockPartInfo) {
   // console.log(stockPartInfo);
   if (!stockPartInfo.hasOwnProperty("SimulatorCreationTask") || 
       stockPartInfo["SimulatorCreationTask"] === "none") {
-    console.log(chalk.yellow(`Skipping ${componentInstructions.name} due to no SimulatorCreationTask.`));
+    console.log(`Skipping ${componentInstructions.name} due to no SimulatorCreationTask.`);
     return null;
   }
   const simulatorCreationTask = stockPartInfo["SimulatorCreationTask"];
   // Get the appropriate adapter function
   const adapter = getAdapter(simulatorCreationTask);
   if (!adapter) {
-    console.log(chalk.red(`!!! Unsupported SimulatorCreationTask: ${simulatorCreationTask}`));
+    console.log(`!!! Unsupported SimulatorCreationTask: ${simulatorCreationTask}`);
     return null;
   }
 
@@ -59,7 +58,7 @@ async function createStock(componentInstructions, stockPartInfo) {
 
   const createFunction = functions[simulatorCreationTask];
   if (!createFunction) {
-    console.log(chalk.red(`!!! Unsupported SimulatorCreationTask: ${simulatorCreationTask}`));
+    console.log(`!!! Unsupported SimulatorCreationTask: ${simulatorCreationTask}`);
     return null;
   }
   return createFunction(...Object.values(params));

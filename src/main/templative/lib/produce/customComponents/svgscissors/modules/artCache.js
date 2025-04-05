@@ -39,10 +39,11 @@ class ArtCache {
         hash.update(JSON.stringify(hashableProductionProperties || {}));
 
         hash.update(inputs.templateContent || '');
-
+        // console.log(inputs.overlayFiles);
         if (inputs.overlayFiles) {
             for (const overlayFile of inputs.overlayFiles) {
                 try {
+                    
                     hash.update(overlayFile.content || '');
                 } catch (e) { continue; }
             }

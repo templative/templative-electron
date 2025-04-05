@@ -20,7 +20,7 @@ async function uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirec
         const studio = await instructionsLoader.loadStudioInstructions(outputDirectory);
         
         if (designerId === null && (!("gameCrafterDesignerId" in studio) || studio["gameCrafterDesignerId"] === "")) {
-            console.log(chalk.red("!!! Missing 'gameCrafterDesignerId' in studio.json."));
+            console.log("!!! Missing 'gameCrafterDesignerId' in studio.json.");
             return;
         }
         const gameCrafterDesignerId = designerId !== null ? designerId : studio["gameCrafterDesignerId"];
@@ -34,7 +34,7 @@ async function uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirec
             const user = await httpOperations.getUser(gameCrafterSession);
             console.log(`Verified GameCrafter session for user: ${user.username || user.email || user.id}`);
         } catch (sessionError) {
-            console.error(chalk.red(`!!! Session validation error: ${sessionError.message}`));
+            console.error(`!!! Session validation error: ${sessionError.message}`);
             throw new Error(`Invalid GameCrafter session. Please check your credentials. Error: ${sessionError.message}`);
         }
         
@@ -67,11 +67,11 @@ async function uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirec
             
             return gameUrl;
         } catch (uploadError) {
-            console.error(chalk.red(`!!! Upload process error: ${uploadError.message}`));
+            console.error(`!!! Upload process error: ${uploadError.message}`);
             throw new Error(`Error during game upload process: ${uploadError.message}`);
         }
     } catch (error) {
-        console.error(chalk.red(`!!! Error uploading game: ${error.message}`));
+        console.error(`!!! Error uploading game: ${error.message}`);
         throw error;
     }
 }

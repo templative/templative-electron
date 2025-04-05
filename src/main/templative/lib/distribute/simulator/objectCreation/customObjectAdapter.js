@@ -26,10 +26,9 @@ async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstruc
     const totalUniqueCards = componentInstructions.frontInstructions.length;
     const isSingleCard = totalUniqueCards === 1 && (componentInstructions.frontInstructions[0].quantity * componentInstructions.quantity) === 1;
 
-    // if (isSingleCard) {
-    //   console.log()
-    //   return await singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal);
-    // }
+    if (isSingleCard) {
+      return await singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal);
+    }
 
     let deckType = 0;
     if (componentInfo.Tags.includes("hex")) {
@@ -51,7 +50,7 @@ async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstruc
     );
     
     if (!result || result[0] === null) {
-      console.log(chalk.red(`!!! Failed to create composite image for ${componentUniqueName}`));
+      console.log(`!!! Failed to create composite image for ${componentUniqueName}`);
       return null;
     }
 
@@ -66,17 +65,15 @@ async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstruc
     );
     
     if (backImageImgurUrl === null) {
-      console.log(chalk.red(`!!! Failed to upload back image for ${componentUniqueName}`));
+      console.log(`!!! Failed to upload back image for ${componentUniqueName}`);
       return null;
     }
-
-    const relativeWidth = componentInfo.DimensionsInches[0] / 2.5;
-    const relativeHeight = relativeWidth;
-    const thickness = 1.0;
-
+    
     const imageUrls = new SimulatorTilesetUrls(imgurUrl, backImageImgurUrl);
-
-    const dimensions = new SimulatorDimensions(relativeWidth, relativeHeight, thickness);
+    
+    const scale = calculateScaleBasedOnComponentHeightInInches(componentInfo.DimensionsInches[1]);
+    const thickness = 1.0;
+    const dimensions = new SimulatorDimensions(scale, scale, thickness);
     const layout = new SimulatorTilesetLayout(totalCount, cardColumnCount, cardRowCount);
 
     const cardQuantities = componentInstructions.frontInstructions.map(instruction => instruction.quantity * componentInstructions.quantity);
@@ -87,10 +84,11 @@ async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstruc
       dimensions: dimensions,
       layout: layout,
       cardQuantities: cardQuantities,
-      deckType: deckType
+      deckType: deckType,
+      isSingleCard: false
     };
   } catch (error) {
-    console.log(chalk.red(`!!! Error creating deck for ${componentInstructions.uniqueName}: ${error}`));
+    console.log(`!!! Error creating deck for ${componentInstructions.uniqueName}: ${error}`);
     return null;
   }
 }
@@ -117,7 +115,7 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
     // Upload front and back images directly without tiling
     const frontImage = await safeLoadImage(componentInstructions.frontInstructions[0].filepath, componentInfo.DimensionsPixels);
     if (!frontImage) {
-      console.log(chalk.red(`!!! Failed to load front image for ${componentInstructions.uniqueName}`));
+      console.log(`!!! Failed to load front image for ${componentInstructions.uniqueName}`);
       return null;
     }
 
@@ -126,27 +124,25 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
       componentInfo.DimensionsPixels
     );
     if (!backImage) {
-      console.log(chalk.red(`!!! Failed to load back image for ${componentInstructions.uniqueName}`));
+      console.log(`!!! Failed to load back image for ${componentInstructions.uniqueName}`);
       return null;
     }
     
     var frontUrl = await uploadToS3(frontImage);
     if (!frontUrl) {
-      console.log(chalk.red(`!!! Failed to upload front image for ${componentInstructions.uniqueName}, falling back to local file.`));
+      console.log(`!!! Failed to upload front image for ${componentInstructions.uniqueName}, falling back to local file.`);
       frontUrl = componentInstructions.frontInstructions[0].filepath;
     }
     
     var backUrl = await uploadToS3(backImage);
     if (!backUrl) {
-      console.log(chalk.red(`!!! Failed to upload back image for ${componentInstructions.uniqueName}, falling back to local file.`));
+      console.log(`!!! Failed to upload back image for ${componentInstructions.uniqueName}, falling back to local file.`);
       backUrl = componentInstructions.backInstructions.filepath;
     }
     
     const componentGuid = createHash('md5').update(componentInstructions.uniqueName).digest('hex').slice(0, 6);
     
-    const relativeWidth = componentInfo.DimensionsInches[0] / 2.5;
-    const relativeHeight = componentInfo.DimensionsInches[1] / 3.5;
-    const thickness = 1.0;
+    
     
     const imageUrls = new SimulatorTilesetUrls(frontUrl, backUrl);
     
@@ -156,7 +152,9 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
     const height = 1.5;
     
     const simulatorComponentPlacement = new SimulatorComponentPlacement(boxPositionIndexX, height, boxPositionIndexZ, columns, rows);
-    const dimensions = new SimulatorDimensions(relativeWidth, relativeHeight, thickness);
+    const scale = calculateScaleBasedOnComponentHeightInInches(componentInfo.DimensionsInches[1]);
+    const thickness = 1.0;
+    const dimensions = new SimulatorDimensions(scale, scale, thickness);
     
     return {
       guid: componentGuid,
@@ -165,10 +163,11 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
       imageUrls: imageUrls,
       simulatorComponentPlacement: simulatorComponentPlacement,
       dimensions: dimensions,
-      deckType: deckType
+      deckType: deckType,
+      isSingleCard: true
     };
   } catch (error) {
-    console.log(chalk.red(`!!! Error creating single card for ${componentInstructions.uniqueName}: ${error}`));
+    console.log(`!!! Error creating single card for ${componentInstructions.uniqueName || componentInstructions.name}: ${error}`);
     return null;
   }
 }
@@ -184,7 +183,7 @@ async function customDieAdapter(tabletopSimulatorImageDirectoryPath, componentIn
   try {
     let color = componentInstructions.Color || "white";
     if (!componentInstructions.Color) {
-      console.log(chalk.yellow("!!! Multi colored custom dice are not currently supported. Using white."));
+      console.log("!!! Multi colored custom dice are not currently supported. Using white.");
     }
     const colorHex = getColorValueHex(color);
     const imageUrl = await createD6CompositeImage(componentInstructions["name"], colorHex, componentInstructions["dieFaceFilepaths"], tabletopSimulatorImageDirectoryPath);
@@ -196,7 +195,7 @@ async function customDieAdapter(tabletopSimulatorImageDirectoryPath, componentIn
       numberSides: 6
     };
   } catch (error) {
-    console.log(chalk.red(`!!! Error creating dice from preview for ${componentInstructions.name}: ${error}`));
+    console.log(`!!! Error creating dice from preview for ${componentInstructions.name}: ${error}`);
     return null;
   }
 }
@@ -219,7 +218,7 @@ async function clipFrontImageAndUploadToS3(componentInstructions, instruction, c
   
   const clippedImgurUrl = await uploadToS3(clippedImage)
   if (!clippedImgurUrl) {
-    console.log(chalk.red(`!!! Failed to upload clipped image for ${componentInstructions.uniqueName}, falling back to local file.`));
+    console.log(`!!! Failed to upload clipped image for ${componentInstructions.uniqueName}, falling back to local file.`);
     return outputFilepath;
   }
   return clippedImgurUrl;
@@ -231,7 +230,7 @@ async function clipAndGatherUrls(tabletopSimulatorImageDirectoryPath, componentI
     const standeesNameQuantityUrls = []
     let clippedBackUrl = null
     if (componentInstructions.backInstructions) {
-      console.log(chalk.red("Has back instructions!"))
+      console.log("Has back instructions!")
       clippedBackUrl = await clipFrontImageAndUploadToS3(componentInstructions, componentInstructions.backInstructions, componentInfo)
     }
     
@@ -253,7 +252,7 @@ async function clipAndGatherUrls(tabletopSimulatorImageDirectoryPath, componentI
       standeesNameQuantityUrls
     };
   } catch (error) {
-    console.log(chalk.red(`!!! Error creating standees for ${componentInstructions.name}: ${error}`));
+    console.log(`!!! Error creating standees for ${componentInstructions.name}: ${error}`);
     return null;
   }
 }
@@ -272,7 +271,7 @@ function standardDieAdapter(tabletopSimulatorImageDirectoryPath, componentInstru
   if (dieTypeMatch) {
     numberSides = parseInt(dieTypeMatch[1]);
   } else {
-    console.log(chalk.yellow(`Could not detect die type from ${componentInstructions.type}, defaulting to D6`));
+    console.log(`Could not detect die type from ${componentInstructions.type}, defaulting to D6`);
   }
   const whiteColorOutOfOne = [1,1,1]
   return {
@@ -283,6 +282,19 @@ function standardDieAdapter(tabletopSimulatorImageDirectoryPath, componentInstru
     colorRGBOutOfOne: whiteColorOutOfOne,
     isMetal: false
   };
+}
+
+const calculateScaleBasedOnComponentHeightInInches = (heightInches) => {  
+  // Component          | Pixels WxH    | Inches WxH | Scale        | Scale/Width | Scale/Height
+  // Spinner            | 2475x2475     | 8x8        | 2.61136246   | 0.326       | 0.326
+  // Poker card         | 825x1125      | 2.5x3.5    | 1.1523807    | 0.461       | 0.329
+  // Poker Folio        | 3075x1125     | 10x3.5     | 1.1523807    | 0.115       | 0.329
+  // Small Hex Tile     | 675x600       | 2x1.75     | 0.547053337  | 0.274       | 0.313
+  
+  // The consistent pattern appears to be with the height dimension:
+  // Scale / Height(inches) is consistently around 0.32-0.33
+  const scaleFactor = 0.33;
+  return scaleFactor * heightInches;
 }
 
 /**
@@ -307,5 +319,6 @@ module.exports = {
   deckAdapter,
   singleCardAdapter,
   customDieAdapter,
-  getAdapter
+  getAdapter,
+  calculateScaleBasedOnComponentHeightInInches
 }; 
