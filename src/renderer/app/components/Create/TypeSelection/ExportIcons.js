@@ -21,11 +21,11 @@ const ExportIcons = ({ componentInfo, isStock }) => {
             available: !!componentInfo.SimulatorCreationTask && componentInfo.SimulatorCreationTask !== "none",
             icon: TabletopSimulatorIcon
         },
-        {
-            name: "Tabletop Playground",
-            available: !!componentInfo.PlaygroundCreationTask && componentInfo.PlaygroundCreationTask !== "none",
-            icon: TabletopPlaygroundIcon,
-        },
+        // {
+        //     name: "Tabletop Playground",
+        //     available: !!componentInfo.PlaygroundCreationTask && componentInfo.PlaygroundCreationTask !== "none",
+        //     icon: TabletopPlaygroundIcon,
+        // },
         {
             name: "Print",
             available: !isStock && 

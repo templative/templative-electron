@@ -1,19 +1,299 @@
-<!--?xml version="1.0" encoding="utf-8"?--><!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><!DOCTYPE svg><html><head></head><body><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="3375" height="5175" viewBox="0 0 3375 5175" enable-background="new 0 0 810 1242" xml:space="preserve">
-<g>
-	<g id="Cut_1">
-		<line fill="none" stroke="#6EBD45" stroke-miterlimit="10" x1="404.5" y1="-0.5" x2="404.5" y2="1241.5"></line>
-	</g>
-	<g>
-		<path opacity="0.5" fill="#221F1F" stroke="#FFFFFF" stroke-miterlimit="10" enable-background="new    " d="M809.5-0.5h-810v1242
-			h810V-0.5z M800.5,8.5v1224H8.5V8.5H800.5z"></path>
-	</g>
-	
-		<rect x="17.5" y="17.5" fill="none" stroke="#29A9E1" stroke-miterlimit="10" stroke-dasharray="4.924,4.924" width="774" height="1206"></rect>
-	<g>
-		<rect x="8.5" y="8.5" fill="none" stroke="#EC2024" stroke-miterlimit="10" width="792" height="1224"></rect>
-		<line fill="none" stroke="#EC2024" stroke-miterlimit="10" x1="800.5" y1="620.5" x2="404.5" y2="620.5"></line>
-		<line fill="none" stroke="#6EBD45" stroke-miterlimit="10" x1="8.5" y1="620.5" x2="404.5" y2="620.5"></line>
-	</g>
-</g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+     id="Layer_1"
+     data-name="Layer 1"
+     viewBox="0 0 3375 5175"
+     width="3375"
+     height="5175"
+     version="1.1"
+     sodipodi:docname="QuadFoldMatOutside.svg"
+     inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <defs
+         id="defs184">
+        <defs
+             id="defs1">
+            <style
+                 id="style1">
+      .cls-1 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-2 {
+        letter-spacing: .02em;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14 {
+        stroke-width: 0px;
+      }
+
+      .cls-4, .cls-15 {
+        fill: #f9a51a;
+      }
+
+      .cls-16 {
+        letter-spacing: .05em;
+      }
+
+      .cls-17 {
+        fill: #221f1f;
+        isolation: isolate;
+        opacity: 1;
+        stroke: #fff;
+      }
+
+      .cls-17, .cls-18, .cls-19, .cls-20 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-21 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-5, .cls-22, .cls-23, .cls-24, .cls-18, .cls-25, .cls-19, .cls-20 {
+        fill: none;
+      }
+
+      .cls-26 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-27 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-28 {
+        letter-spacing: .01em;
+      }
+
+      .cls-6 {
+        fill: #d0d2d3;
+      }
+
+      .cls-29 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-30 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-7, .cls-11 {
+        fill: #4c4849;
+      }
+
+      .cls-31, .cls-15, .cls-32, .cls-33, .cls-34, .cls-35 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .cls-31, .cls-15, .cls-33, .cls-35, .cls-36 {
+        font-size: 9.99px;
+      }
+
+      .cls-31, .cls-8 {
+        fill: #ec1e28;
+      }
+
+      .cls-32, .cls-37, .cls-38 {
+        font-size: 11.99px;
+      }
+
+      .cls-32, .cls-38, .cls-36 {
+        fill: #231f20;
+      }
+
+      .cls-39 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-33 {
+        fill: #2ba6de;
+      }
+
+      .cls-22 {
+        stroke: #2ba6de;
+        stroke-dasharray: 0 1.44;
+      }
+
+      .cls-9 {
+        fill: #b7d333;
+      }
+
+      .cls-9, .cls-11, .cls-12, .cls-14 {
+        fill-rule: evenodd;
+      }
+
+      .cls-23 {
+        stroke: #929497;
+      }
+
+      .cls-40 {
+        letter-spacing: 0em;
+      }
+
+      .cls-24 {
+        stroke: #f9a51a;
+      }
+
+      .cls-34 {
+        fill: #0a0;
+        font-size: 9.99px;
+      }
+
+      .cls-18 {
+        stroke: #29a9e1;
+        stroke-dasharray: 0 0 4.92 4.92;
+      }
+
+      .cls-41 {
+        letter-spacing: .03em;
+      }
+
+      .cls-42 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-10, .cls-37, .cls-14 {
+        fill: #000;
+      }
+
+      .cls-43 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-44 {
+        letter-spacing: 0em;
+      }
+
+      .cls-37, .cls-38, .cls-36 {
+        font-family: Arial-Black, 'Arial Black';
+        font-weight: 800;
+      }
+
+      .cls-45 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-46 {
+        letter-spacing: 0em;
+      }
+
+      .cls-25 {
+        stroke: #ec1e28;
+      }
+
+      .cls-47 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-48 {
+        letter-spacing: 0em;
+      }
+
+      .cls-12, .cls-13 {
+        fill: #fff;
+      }
+
+      .cls-19 {
+        stroke: #6ebd45;
+      }
+
+      .cls-20 {
+        stroke: #ec2024;
+      }
+
+      .cls-35 {
+        fill: #929497;
+      }
+
+      .cls-49 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-50 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-51 {
+        letter-spacing: .02em;
+      }
+
+      .cls-52 {
+        letter-spacing: .02em;
+      }
+    </style>
+        </defs>
+    </defs>
+    <sodipodi:namedview
+         id="namedview184"
+         pagecolor="#505050"
+         bordercolor="#eeeeee"
+         borderopacity="1"
+         inkscape:showpageshadow="0"
+         inkscape:pageopacity="0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:zoom="0.69565217"
+         inkscape:cx="2945.4375"
+         inkscape:cy="2381.9375"
+         inkscape:window-width="1872"
+         inkscape:window-height="1027"
+         inkscape:window-x="62"
+         inkscape:window-y="25"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="Layer_1" />
+    <path
+         class="cls-17"
+         d="M 3375,1.47e-5 H 1.15e-5 V 5175 H 3375 Z"
+         id="path1"
+         style="stroke:none;stroke-width:4.16667"
+         sodipodi:nodetypes="ccccc" />
+    <rect
+         class="cls-20"
+         x="48.59819"
+         y="35.386028"
+         width="3297.9644"
+         height="5100"
+         id="clipping"
+         style="stroke-width:4.16538;fill:#656565;fill-opacity:1;stroke:none" />
+    <rect
+         class="cls-18"
+         x="86.075058"
+         y="72.886024"
+         width="3223.0105"
+         height="5025"
+         id="rect1"
+         style="stroke-width:4.16538;stroke:none;fill:#b5b5b5;fill-opacity:1" />
+    <line
+         class="cls-19"
+         x1="1697.5803"
+         y1="-2.1139705"
+         x2="1697.5803"
+         y2="5172.8857"
+         id="line1"
+         style="stroke-width:4.16538;fill:none;fill-opacity:1" />
+    <line
+         class="cls-20"
+         x1="48.59819"
+         y1="2585.386"
+         x2="1697.5803"
+         y2="2585.386"
+         id="line2"
+         style="stroke-width:4.16538" />
+    <line
+         class="cls-19"
+         x1="3346.5623"
+         y1="2585.386"
+         x2="1697.5803"
+         y2="2585.386"
+         id="line3"
+         style="stroke-width:4.16538" />
 </svg>
-</body></html>
