@@ -1900,7 +1900,7 @@ const COMPONENT_INFO = {
       "plastic"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "StandardDie",
     "Key": "CustomColorD4",
@@ -4323,7 +4323,7 @@ const COMPONENT_INFO = {
       "booster"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": true,
+    "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "PokerBoosterBox",
@@ -5161,7 +5161,7 @@ const COMPONENT_INFO = {
       "insert"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": true,
+    "IsDisabled": false,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "SmallProTarotInsert",
@@ -5528,7 +5528,7 @@ const COMPONENT_INFO = {
       "insert"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": true,
+    "IsDisabled": false,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "SmallStoutTarotInsert",
