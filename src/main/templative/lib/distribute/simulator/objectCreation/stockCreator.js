@@ -4,6 +4,7 @@ const {
   createCustomDie,
   createStockCube, 
   createStockModel, 
+  createStockMeeple,
   createStandeeFromNameImageUrlAndQuantities, 
   createTokenWithDefinedShape, 
   createStockCylinder,
