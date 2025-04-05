@@ -16,9 +16,7 @@ import './Inputs.css';
 import {writeLastOpenedProject, getLastProjectDirectory} from "./utility/SettingsManager"
 const { ipcRenderer } = require('electron');
 
-
 class App extends React.Component {
-    
     state = {
         templativeRootDirectoryPath: undefined,
         loggedIn: false,

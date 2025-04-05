@@ -449,6 +449,14 @@ function cylinderAdapter(componentInstructions, stockPartInfo) {
     heightMillimeters: heightMillimeters
   };
 }
+function meepleAdapter(componentInstructions, stockPartInfo) {
+  let color = stockPartInfo.hasOwnProperty("Color") ? stockPartInfo.Color : "white";
+  return {
+    name: componentInstructions.name,
+    quantity: componentInstructions.quantity,
+    color: color,
+  };
+}
 
 /**
  * Get the appropriate adapter function based on the simulator creation task
@@ -469,7 +477,8 @@ function getAdapter(simulatorCreationTask) {
     "Domino": dominoAdapter,
     "Baggie": baggieAdapter,
     "PokerChip": pokerChipAdapter,
-    "StockCylinder": cylinderAdapter
+    "StockCylinder": cylinderAdapter,
+    "StockMeeple": meepleAdapter
   };
 
   return adapters[simulatorCreationTask] || null;

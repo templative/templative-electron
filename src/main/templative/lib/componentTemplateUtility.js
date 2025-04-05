@@ -14,7 +14,9 @@ async function getComponentTemplate(type) {
             console.log(`Packaged path: ${templatePath}`);
         } else {
             // In development with Electron
-            templatePath = path.join(__dirname, 'componentTemplates', `${type}.svg`);
+            // Fix for __dirname being undefined in dev mode
+            const currentDir = path.dirname(new URL(import.meta.url).pathname);
+            templatePath = path.join(currentDir, 'componentTemplates', `${type}.svg`);
             console.log(`Development path: ${templatePath}`);
         }
     } else {

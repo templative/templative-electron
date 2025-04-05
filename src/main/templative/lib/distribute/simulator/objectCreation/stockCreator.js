@@ -48,6 +48,7 @@ async function createStock(componentInstructions, stockPartInfo) {
     "CustomDie": createCustomDie,
     "StockCube": createStockCube,
     "StockCylinder": createStockCylinder,
+    "StockMeeple": createStockMeeple,
     "StockModel": createStockModel,
     "Standee": createStandeeFromNameImageUrlAndQuantities,
     "TokenWithDefinedShape": createTokenWithDefinedShape,

@@ -683,7 +683,47 @@ function createStockCylinder(name, quantity, colorHex, widthMillimeters, heightM
   }
   return createBagForObject(model, quantity, `${longName} Bag`, colorDiffuse);
 }
-
+function createStockMeeple(name, quantity, color) {
+  if (typeof name !== "string" || name === "") {
+    throw new Error(`Name is not a string or is empty for meeple`);
+  } 
+  var tokens = []
+  for (var i = 0; i < quantity; i++) {
+    const guid = md5(name).slice(0, 6);
+    const scale = 0.25
+      tokens.push({
+      GUID: guid,
+      Name: "Custom_Token",
+      Transform: {
+        posX: 0, posY: 0, posZ: 0, rotX: 0, rotY: 0, rotZ: 0,
+        scaleX: scale, scaleY: scale, scaleZ: scale
+      },
+      Nickname: name,
+      ColorDiffuse: WHITE_COLOR_DIFFUSE,
+      LayoutGroupSortIndex: 0,
+      Value: 0,
+      Locked: false,    
+      HideWhenFaceDown: false,
+      Hands: false,
+      CustomImage: {
+        ImageURL: `https://templative-simulator-images.s3.us-west-2.amazonaws.com/meeple-${color}.png`,
+        ImageScalar: 1.0,
+        WidthScale: 0.0,
+        CustomToken: {
+          Thickness: 1,
+          MergeDistancePixels: 15.0,
+          StandUp: true,
+          Stackable: false
+        }
+      },
+      ...STANDARD_ATTRIBUTES
+    })
+  }
+  if (tokens.length === 1) {
+    return tokens[0];
+  }
+  return createBag(componentName, tokens) 
+}
 function createTokenWithTransparencyBasedShape(name, frontImageUrl, thickness = 0.2, isStandUp = false, isStackable = true) {
   // console.log(`Creating a token with a transparency based shape ${name}`);
   if (typeof name !== "string" || name === "") {
@@ -1043,6 +1083,7 @@ module.exports = {
   createThickTokenWithTransparencyBasedShape,
   createCustomPDF,
   createStockCylinder,
+  createStockMeeple,
   createDomino,
   createBaggie,
   createPokerChip
