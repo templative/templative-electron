@@ -76,6 +76,8 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
 }
 
 async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage) {
+    const startTime = performance.now();
+    
     if (!gameRootDirectoryPath) {
         throw new Error("Game root directory path is invalid.");
     }
@@ -175,7 +177,13 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
     }
     
     await Promise.all(componentTasks);
-    console.log(`Done producing ${path.normalize(outputDirectoryPath)}`);
+    
+    const endTime = performance.now();
+    const totalTimeMs = endTime - startTime;
+    const totalTimeSec = (totalTimeMs / 1000).toFixed(2);
+    
+    console.log(`Done producing ${path.normalize(path.basename(outputDirectoryPath))} in ${totalTimeSec} seconds`);
+    
     return outputDirectoryPath;
 }
 
