@@ -29,7 +29,6 @@ async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size)
         console.log(`!!! Cannot create size ${size}.`);
         return;
     }
-    isBackIncluded = false;
     console.log(`Creating printout for ${basename(producedDirectoryPath)} ${isBackIncluded ? "with backs" : "without backs"} on ${size} paper.`)
     
     const componentTypeFilepathsAndQuantity = await getDictionaryOfImageFilepathsAndQuantityGroupedByComponentType(producedDirectoryPath);
