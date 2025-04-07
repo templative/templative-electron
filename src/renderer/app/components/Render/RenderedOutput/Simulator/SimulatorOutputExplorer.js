@@ -6,7 +6,8 @@ import FrontBackImages from "./FrontBackImages";
 import FrontOnlyImage from "./FrontOnlyImage";
 import { ipcRenderer } from "electron";
 import { channels } from "../../../../../../shared/constants";
-
+import SimulatorStockComponent from "./SimulatorStockComponent";
+import SimulatorStockComponentBag from "./SimulatorStockComponentBag";
 const fs = require("fs/promises");
 const path = require('path');
 const fsOld = require('fs');
@@ -33,28 +34,49 @@ export default class SimulatorOutputExplorer extends EditableViewerJson {
         const customDeck = customDeckKey ? objectState["CustomDeck"][customDeckKey] : null;
         const customImage = objectState["CustomImage"];
         const containedObjects = objectState["ContainedObjects"] || [];
-
-        return <div className="object-state" key={objectState["GUID"]}>
-            <p className="object-state-header">
-                {objectState["Nickname"]} · {objectState["Name"]} 
-                <span className="object-state-guid"> {objectState["GUID"]}</span>
-            </p>     
-            {customDeck && 
+        let content = null;
+        var isLeaf = true;
+        if (customDeck) {
+            content = (
                 <FrontBackImages 
                     frontImageUrl={customDeck["FaceURL"]} 
                     backImageUrl={customDeck["BackURL"]}
                 />
-            }
-            {customImage && objectState["Name"] === "Custom_Dice" &&
+            );
+        } else if (customImage && objectState["Name"] === "Custom_Dice") {
+            content = (
                 <FrontOnlyImage 
                     imageUrl={customImage["ImageURL"]} 
                 />
-            }
-            {containedObjects.length > 0 && 
+            );
+        } else if (objectState["Name"] === "Bag" && objectState["Nickname"] !== "ComponentLibrary") {
+            content = (
+                <SimulatorStockComponentBag 
+                    quantity={containedObjects.length} 
+                    name={objectState["Nickname"]}
+                    type={objectState["TemplativeType"]}
+                />
+            );
+        } else if (objectState["TemplativeType"] && objectState["TemplativeType"].startsWith("STOCK_")) {
+            content = (
+                <SimulatorStockComponent 
+                    type={objectState["TemplativeType"]}
+                />
+            );
+        } else if (containedObjects.length > 0) {
+            isLeaf = false;
+            content = (
                 <div className="contained-objects">
                     {containedObjects.map(this.renderObjectState)}
                 </div>
-            }
+            );
+        }
+        return <div className={`object-state ${isLeaf ? "leaf" : ""}`} key={objectState["GUID"]}>
+            <p className="object-state-header">
+                {objectState["Nickname"]} · {objectState["Name"]} 
+                <span className="object-state-guid"> {objectState["GUID"]}</span>
+            </p>     
+            {content}
         </div>
     }
 

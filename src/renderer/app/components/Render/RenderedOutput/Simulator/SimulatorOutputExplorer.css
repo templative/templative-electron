@@ -28,8 +28,10 @@
 }
 .object-states {
     width: 100% !important;
-    height: calc(100% - 2em) !important;
+    height: calc(100% - 50px) !important;
     overflow-y: scroll;
+    padding-bottom:2em;
+    font-size: 0; /* Remove whitespace between inline-block elements */
 }
 .simulator-json-content {
     width: 100% !important;
@@ -39,13 +41,20 @@
 }
 .object-state {
     padding: 6px;
+    vertical-align: top !important;
     margin-bottom: 0.5em;
+    overflow: hidden;
+}
+.object-state.leaf {
+    display: inline-block;
+    width: 24%;
+    /* height: 250px; */
 }
 .object-state-header {
     font-size: 14px;
 }
 .object-state-guid {
-    color: var(--color-light);
+    color: var(--color-text-muted);
     font-style: italic;
     font-size: 12px;
 }
@@ -53,10 +62,6 @@
     display: flex;
     width: 100%;
     align-items: center; /* Ensures both images align at the same height */
-}
-
-.simulator-tiled-container {
-    width: 100%;
     overflow: hidden;
 }
 

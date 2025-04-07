@@ -3,6 +3,7 @@ import PdfIcon from './TypeIcons/PdfIcon';
 import TabletopPlaygroundIcon from './TypeIcons/TabletopPlaygroundIcon';
 import TabletopSimulatorIcon from './TypeIcons/TabletopSimulatorIcon';
 import TheGameCrafterIcon from './TypeIcons/theGameCrafterIcon';
+import PrintIcon from './TypeIcons/print.svg?react';
 import "./ComponentType.css";
 
 
@@ -28,11 +29,11 @@ const ExportIcons = ({ componentInfo, isStock }) => {
         // },
         {
             name: "Print",
-            available: !isStock && 
+            available: !componentInfo.IsPrintingDisabled && !isStock && 
                       componentInfo.DimensionsInches && 
                       componentInfo.DimensionsInches[0] <= 17 && 
                       componentInfo.DimensionsInches[1] <= 11,
-            icon: PdfIcon
+            icon: PrintIcon
         }
     ]
    

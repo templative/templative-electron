@@ -80,6 +80,7 @@ async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstruc
     return {
       deckPrefix: componentIndex + 1,
       name: componentInstructions.uniqueName || componentInstructions.name,
+      type: componentInstructions.type,
       imageUrls: imageUrls,
       dimensions: dimensions,
       layout: layout,
@@ -162,6 +163,7 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
       guid: componentGuid,
       cardPrefix: componentIndex + 1,
       name: componentInstructions.uniqueName || componentInstructions.name,
+      type: componentInstructions.type,
       imageUrls: imageUrls,
       simulatorComponentPlacement: simulatorComponentPlacement,
       dimensions: dimensions,
@@ -193,6 +195,7 @@ async function customDieAdapter(tabletopSimulatorImageDirectoryPath, componentIn
     return {
       name: componentInstructions["name"],
       quantity: componentInstructions["quantity"],
+      type: componentInstructions.type,
       imageUrl: imageUrl,
       numberSides: 6
     };
@@ -251,6 +254,7 @@ async function clipAndGatherUrls(tabletopSimulatorImageDirectoryPath, componentI
     
     return {
       name: componentInstructions["name"],
+      type: componentInstructions.type,
       standeesNameQuantityUrls
     };
   } catch (error) {
@@ -279,6 +283,7 @@ function standardDieAdapter(tabletopSimulatorImageDirectoryPath, componentInstru
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     numberSides: numberSides,
     sizeInches: sizeInches,
     colorRGBOutOfOne: whiteColorOutOfOne,

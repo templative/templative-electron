@@ -55,6 +55,7 @@ function standardDieAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     numberSides: numberSides,
     sizeInches: sizeInches,
     colorRGBOutOfOne: getColorValueRGB(stockPartInfo.Color),
@@ -95,6 +96,7 @@ function customDieAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     imageUrl: stockPartInfo.ImageUrl,
     numberSides: numberSides
   };
@@ -172,6 +174,7 @@ function stockCubeAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     sizeInchesXYZ: sizeInchesXYZ,
     color: getColorValueRGB(stockPartInfo.Color)
   };
@@ -197,6 +200,7 @@ function stockModelAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     objUrl: stockPartInfo["3DModel"]["ObjUrl"],
     textureUrl: stockPartInfo["3DModel"]["TextureUrl"],
     normalMapUrl: stockPartInfo["3DModel"]["NormalMapUrl"]
@@ -231,6 +235,7 @@ function standeeAdapter(componentInstructions, stockPartInfo) {
 
   return {
     name: componentInstructions.name,
+    type: componentInstructions.type,
     standeesNameQuantityUrls: [
       {
         quantity: componentInstructions.quantity,
@@ -273,6 +278,7 @@ function tokenWithDefinedShapeAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     frontImageUrl: stockPartInfo.FrontImageUrl,
     backImageUrl: backImageUrl,
     shape: stockPartInfo.Shape
@@ -287,6 +293,7 @@ function tokenWithTransparencyBasedShapeAdapter(componentInstructions, stockPart
 
   return {
     componentName: componentInstructions.name, 
+    type: componentInstructions.type,
     nameQuantityUrls: [
       {
         name: componentInstructions.name,
@@ -335,6 +342,7 @@ function dominoAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     colorDiffuse: colorDiffuse,
     meshIndex: stockPartInfo.MeshIndex || 14,
     materialIndex: stockPartInfo.MaterialIndex || 0
@@ -357,6 +365,7 @@ function baggieAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     colorDiffuse: colorDiffuse,
     isInfinite: stockPartInfo.IsInfinite || false
   };
@@ -388,6 +397,7 @@ function pokerChipAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     chipValue: stockPartInfo.ChipValue,
     colorDiffuse: colorDiffuse
   };
@@ -444,6 +454,7 @@ function cylinderAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     colorHex: colorHex,
     widthMillimeters: widthMillimeters,
     heightMillimeters: heightMillimeters

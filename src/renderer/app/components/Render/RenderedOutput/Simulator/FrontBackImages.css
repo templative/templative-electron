@@ -1,0 +1,13 @@
+.simulator-tiled-container {
+    display: flex;
+    width: 100%;
+}
+
+.image-container {
+    display: flex;
+    width: 100%;
+}
+
+.object-state-image {
+    height: auto;
+}

@@ -58,7 +58,8 @@ const ComponentType = ({
     const simulatorTask = highlightedComponent["SimulatorCreationTask"] ? highlightedComponent["SimulatorCreationTask"] : "";
     const gamecrafterUploadTask = highlightedComponent["GameCrafterUploadTask"] ? highlightedComponent["GameCrafterUploadTask"] : "";
     const variations = components.length > 1 ? `${components.length} variation${components.length > 1 ? 's' : ''}` : "";
-    const descriptor = [simulatorTask, gamecrafterUploadTask, dimensions, variations].filter(Boolean).join(' · ');
+    // const descriptor = [simulatorTask, gamecrafterUploadTask, dimensions, variations].filter(Boolean).join(' · ');
+    const descriptor = [dimensions, variations].filter(Boolean).join(' · ');
     return (
         <div className="component-type-wrapper">
             <button type="button" 

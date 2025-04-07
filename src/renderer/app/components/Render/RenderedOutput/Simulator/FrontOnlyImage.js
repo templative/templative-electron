@@ -1,4 +1,5 @@
 import React from "react";
+import "./FrontBackImages.css";
 
 export default class FrontOnlyImage extends React.Component {   
     constructor(props) {
@@ -41,8 +42,8 @@ export default class FrontOnlyImage extends React.Component {
 
     render() {  
         return (
-            <div className="simulator-tiled-container" style={{ display: 'flex', width: '100%' }}>
-                <div className="image-container" style={{ display: 'flex', width: '100%' }}>
+            <div className="simulator-tiled-container">
+                <div className="image-container">
                     <img 
                         ref={this.imageRef} 
                         className="object-state-image" 
