@@ -23,12 +23,13 @@
     font-size: 14px;
     margin-bottom: 0px;
 }
+.simulator-save-file-path-container {
+    height: 2em;
+}
 .object-states {
     width: 100% !important;
-    height: 100%;
+    height: calc(100% - 2em) !important;
     overflow-y: scroll;
-    margin-bottom:1em;
-    padding-bottom: 0.5em;
 }
 .simulator-json-content {
     width: 100% !important;
@@ -69,4 +70,9 @@
     height: auto;
     width: 50%;
     object-fit: cover;
+}
+.simulator-save-file-path{
+    margin-right: 1em;
+    font-size: 14px;
+    font-weight: bold;
 }

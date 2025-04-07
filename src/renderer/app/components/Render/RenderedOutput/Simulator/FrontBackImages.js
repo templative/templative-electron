@@ -60,13 +60,15 @@ export default class FrontBackImages extends React.Component {
                         style={this.state.greaterImageStyles}
                         alt="Front"
                     />
-                    <img 
-                        ref={this.lesserImageRef} 
-                        className="object-state-image lesser-image" 
-                        src={this.props.backImageUrl}
-                        style={this.state.lesserImageStyles}
-                        alt="Back"
-                    />
+                    {this.props.backImageUrl &&
+                        <img 
+                            ref={this.lesserImageRef} 
+                            className="object-state-image lesser-image" 
+                            src={this.props.backImageUrl}
+                            style={this.state.lesserImageStyles}
+                            alt="Back"
+                        />
+                    }
                 </div>
             </div>
         );
