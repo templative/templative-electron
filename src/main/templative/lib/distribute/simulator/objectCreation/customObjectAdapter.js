@@ -93,18 +93,26 @@ async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstruc
   }
 }
 
-/**
- * Adapter for creating a single card object
- * @param {string} tabletopSimulatorImageDirectoryPath - Path to TTS image directory
- * @param {Object} componentInstructions - Component instructions
- * @param {Object} componentInfo - Component information
- * @param {number} componentIndex - Index of the component
- * @param {number} componentCountTotal - Total number of components
- * @returns {Promise<Object|null>} - Parameters for createCardObjectState or null if invalid
- */
+async function loadAndUploadImage(instruction, dimensions, componentName, side) {
+  if (!instruction) return null;
+  
+  const image = await safeLoadImage(instruction.filepath, dimensions);
+  if (!image) {
+    console.log(`!!! Failed to load ${side} image for ${componentName}`);
+    return null;
+  }
+
+  const url = await uploadToS3(image);
+  if (!url) {
+    console.log(`!!! Failed to upload ${side} image for ${componentName}, falling back to local file.`);
+    return instruction.filepath;
+  }
+  return url;
+}
+
+
 async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal) {
   try {
-    // Determine component type based on tags
     let deckType = 0;  // default type
     if (componentInfo.Tags.includes("hex")) {
       deckType = 3;
@@ -112,37 +120,31 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
       deckType = 4;
     }
 
-    // Upload front and back images directly without tiling
-    const frontImage = await safeLoadImage(componentInstructions.frontInstructions[0].filepath, componentInfo.DimensionsPixels);
-    if (!frontImage) {
-      console.log(`!!! Failed to load front image for ${componentInstructions.uniqueName}`);
-      return null;
-    }
-
-    const backImage = await safeLoadImage(
-      componentInstructions.backInstructions ? componentInstructions.backInstructions.filepath : null, 
-      componentInfo.DimensionsPixels
+    const componentName = componentInstructions.uniqueName || componentInstructions.name;
+    
+    const frontUrl = await loadAndUploadImage(
+      componentInstructions.frontInstructions[0],
+      componentInfo.DimensionsPixels,
+      componentName,
+      'front'
     );
-    if (!backImage) {
-      console.log(`!!! Failed to load back image for ${componentInstructions.uniqueName}`);
-      return null;
-    }
-    
-    var frontUrl = await uploadToS3(frontImage);
     if (!frontUrl) {
-      console.log(`!!! Failed to upload front image for ${componentInstructions.uniqueName}, falling back to local file.`);
-      frontUrl = componentInstructions.frontInstructions[0].filepath;
-    }
-    
-    var backUrl = await uploadToS3(backImage);
+      console.log(`!!! Failed to upload front image for ${componentName}, skipping.`);
+      return null;
+    };
+
+    var backUrl = await loadAndUploadImage(
+      componentInstructions.backInstructions,
+      componentInfo.DimensionsPixels,
+      componentName,
+      'back'
+    );
     if (!backUrl) {
-      console.log(`!!! Failed to upload back image for ${componentInstructions.uniqueName}, falling back to local file.`);
-      backUrl = componentInstructions.backInstructions.filepath;
-    }
-    
+      console.log(`!!! Failed to upload back image for ${componentName}, falling back to front image.`);
+      backUrl = frontUrl;
+    };
+
     const componentGuid = createHash('md5').update(componentInstructions.uniqueName).digest('hex').slice(0, 6);
-    
-    
     
     const imageUrls = new SimulatorTilesetUrls(frontUrl, backUrl);
     
