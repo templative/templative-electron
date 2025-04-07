@@ -46,13 +46,21 @@ async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size)
         }
         
         if (!(componentType in COMPONENT_INFO)) {
-            console.log(`!!! Missing ${componentType} type description, skipping.`);
+            console.log(`!!! Missing ${componentType} type info, skipping.`);
             continue;
         }
         
         const componentInfo = COMPONENT_INFO[componentType];
         if (!componentInfo.DimensionsInches) {
             console.log(`!!! Skipping ${componentType} because its inch size isn't defined.`);
+            continue;
+        }
+        if (componentInfo.IsDisabled) {
+            console.log(`!!! Skipping ${componentType} because it's disabled.`);
+            continue;
+        }
+        if (componentInfo.Tags.includes("packaging")) {
+            console.log(`!!! Skipping ${componentType} because it's a packaging component.`);
             continue;
         }
         
