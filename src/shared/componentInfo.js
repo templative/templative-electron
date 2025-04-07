@@ -1737,7 +1737,7 @@ const COMPONENT_INFO = {
       "bullseye"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "BullseyeChit",
