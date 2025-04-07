@@ -90,22 +90,22 @@ async function createAdvertisments(gameCrafterSession, gameRootDirectoryPath, cl
     const backupFilesDirectoryPath = path.join(__dirname, "testImages");
     
     const logoImageFileId = await advertisementCreator.createAdvertismentImageInFolder(gameCrafterSession, 
-        path.resolve(path.join(gameRootDirectoryPath, "gamecrafter/logo.png")), 
+        path.join(gameRootDirectoryPath, "gamecrafter/logo.png"), 
         path.join(backupFilesDirectoryPath, "logo.png"), 
         advertismentFolderId);
     
     const backdropImageFileId = await advertisementCreator.createAdvertismentImageInFolder(gameCrafterSession, 
-        path.resolve(path.join(gameRootDirectoryPath, "./gamecrafter/backdrop.png")),
+        path.join(gameRootDirectoryPath, "gamecrafter/backdrop.png"),
         path.join(backupFilesDirectoryPath, "backdrop.png"), 
         advertismentFolderId);
 
     const advertisementImageFileId = await advertisementCreator.createAdvertismentImageInFolder(gameCrafterSession, 
-        path.resolve(path.join(gameRootDirectoryPath, "./gamecrafter/advertisement.png")),
+        path.join(gameRootDirectoryPath, "gamecrafter/advertisement.png"),
         path.join(backupFilesDirectoryPath, "advertisement.png"), 
         advertismentFolderId);
 
     const actionShotImageFileId = await advertisementCreator.createAdvertismentImageInFolder(gameCrafterSession, 
-        path.resolve(path.join(gameRootDirectoryPath, "./gamecrafter/actionShot.png")),
+        path.join(gameRootDirectoryPath, "gamecrafter/actionShot.png"),
         path.join(backupFilesDirectoryPath, "actionShot.png"), 
         advertismentFolderId);
     
