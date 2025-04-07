@@ -1,6 +1,6 @@
 import React from "react";
 import "./StartView.css"
-import Logo from "./logo.svg"
+import Logo from "./logo.svg?react"
 export default class StartView extends React.Component {   
     render() {
         return <div className="start-view" data-bs-theme="dark">

@@ -12,11 +12,11 @@ import PieceGamedataViewer from "../../GamedataViewer/PieceGamedataViewer";
 import ArtdataViewer from "../../ArtdataViewer/ArtdataViewer";
 
 // Icons
-import StudioIcon from "../../../Icons/colorless/colorlessStudioIcon.svg"
-import GameIcon from "../../../Icons/colorless/colorlessGameIcon.svg"
-import ComponentIcon from "../../../Icons/colorless/colorlessComponentIcon.svg"
-import PieceIcon from "../../../Icons/colorless/colorlessPieceIcon.svg"
-import ArtdataIcon from "../../../Icons/colorless/colorlessArtdataIcon.svg";
+import StudioIcon from "../../../Icons/colorless/colorlessStudioIcon.svg?react"
+import GameIcon from "../../../Icons/colorless/colorlessGameIcon.svg?react"
+import ComponentIcon from "../../../Icons/colorless/colorlessComponentIcon.svg?react"
+import PieceIcon from "../../../Icons/colorless/colorlessPieceIcon.svg?react"
+import ArtdataIcon from "../../../Icons/colorless/colorlessArtdataIcon.svg?react";
 
 export default function UnifiedCol(params) {
     const {

@@ -6,7 +6,7 @@ import ArtdataAddButton from "./ArtdataAddButton"
 import EditableViewerJson from "../EditableViewerJson";
 import TemplativeAccessTools from "../../../TemplativeAccessTools";
 import FilepathsAutocompleteInput from "../ComponentsViewer/ComponentItems/FilepathsAutocompleteInput";
-import pieceIcon from "../../Icons/pieceIcon.svg"
+import pieceIcon from "../../Icons/pieceIcon.svg?react"
 const path = require("path")
 
 const DEFAULT_ARTDATA_ITEMS = {
@@ -60,7 +60,7 @@ export default class ArtdataViewer extends EditableViewerJson {
             return
         }
         const gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json")
-        const templateFilepath = path.join(this.props.templativeRootDirectoryPath, gameCompose["artTemplatesDirectory"], this.state.content.templateFilename) + ".svg"
+        const templateFilepath = path.join(this.props.templativeRootDirectoryPath, gameCompose["artTemplatesDirectory"], this.state.content.templateFilename) + ".svg?react"
         if (!await TemplativeAccessTools.doesFileExistAsync(templateFilepath)) {
             this.setState({
                 templateFileExists: false,
@@ -156,7 +156,7 @@ export default class ArtdataViewer extends EditableViewerJson {
             return
         }
         const gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json")
-        const templateFilepath = path.join(this.props.templativeRootDirectoryPath, gameCompose["artTemplatesDirectory"], templateFilename) + ".svg"
+        const templateFilepath = path.join(this.props.templativeRootDirectoryPath, gameCompose["artTemplatesDirectory"], templateFilename) + ".svg?react"
         await this.props.updateViewedFileUsingExplorerAsyncCallback("ART", templateFilepath)
     }
 

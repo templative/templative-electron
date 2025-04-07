@@ -35,16 +35,21 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        use: ['@svgr/webpack'],
-        exclude: [/node_modules\//, /src\/main\//]
-      },
-      {
-        test: /\.svg$/,
-        type: 'asset/resource',
-        exclude: [/node_modules\//, /src\/renderer\//],
-        generator: {
-          filename: 'assets/[name][ext]'
-        },
+        oneOf: [
+          {
+            // For SVG imports in JS/JSX files that should be components
+            resourceQuery: /react/, // matches ?react
+            use: ['@svgr/webpack'],
+          },
+          {
+            // For all other SVG imports
+            type: 'asset/resource',
+            generator: {
+              filename: 'assets/[name][ext]'
+            },
+          }
+        ],
+        exclude: [/node_modules\//]
       },
       {
         test: /\.(png|jpe?g|gif|ico)$/,

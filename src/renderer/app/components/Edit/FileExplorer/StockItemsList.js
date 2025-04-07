@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ResourceHeader from "./ContentFiles/ResourceHeader";
-import stockIcon from "../Icons/stockIcon.svg"
+import stockIcon from "../Icons/stockIcon.svg?react"
 import CompositionItem from "./CompositionItem";
 const path = require("path")
 

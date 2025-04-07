@@ -3,11 +3,11 @@ import ContextMenu from "../../../ContextMenu";
 
 import "./ContentFiles.css"
 
-import componentComposeIcon from "../../Icons/componentComposeIcon.svg"
-import gameIcon from "../../Icons/gameIcon.svg"
-import studioIcon from "../../Icons/studioIcon.svg"
-import gamecrafterIcon from "../../Icons/gameCrafterIcon.svg"
-import rulesIcon from "../../Icons/rulesIcon.svg"
+import componentComposeIcon from "../../Icons/componentComposeIcon.svg?react"
+import gameIcon from "../../Icons/gameIcon.svg?react"
+import studioIcon from "../../Icons/studioIcon.svg?react"
+import gamecrafterIcon from "../../Icons/gameCrafterIcon.svg?react"
+import rulesIcon from "../../Icons/rulesIcon.svg?react"
 
 const path = require("path");
 const shell = require('electron').shell;

@@ -10,7 +10,7 @@ import RulesEditor from "./Viewers/RulesEditor";
 import EditPanelTabs from "./EditPanelTabs";
 import RenderPreview from "./RenderPreview/RenderPreview";
 import { trackEvent } from "@aptabase/electron/renderer";
-import NoFileIcon from "./noFileIcon.svg"
+import NoFileIcon from "./noFileIcon.svg?react"
 import "./EditPanel.css"
 import "./EditPanelTabs.css"
 import StudioGamedataViewer from "./Viewers/GamedataViewer/StudioGamedataViewer";

@@ -1,6 +1,6 @@
 import React from "react";
 import "./AdPanel.css"
-import GameContentIcon from "../../../Edit/Icons/gameIcon.svg"
+import GameContentIcon from "../../../Edit/Icons/gameIcon.svg?react"
 const {shell} = require('electron')
 const path = require("path")
 const { ipcRenderer } = require('electron');

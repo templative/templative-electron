@@ -4,9 +4,9 @@ import path from 'path';
 import TemplativeAccessTools from '../../../../TemplativeAccessTools';
 import './CompositionSettingsModal.css';
 import { addSpaces } from "../../../../../utility/addSpaces";
-import ArtdataIcon from "../../../Icons/artDataIcon.svg";
-import ComponentIcon from "../../../Icons/componentIcon.svg"
-import PieceIcon from "../../../Icons/pieceIcon.svg"
+import ArtdataIcon from "../../../Icons/artDataIcon.svg?react";
+import ComponentIcon from "../../../Icons/componentIcon.svg?react"
+import PieceIcon from "../../../Icons/pieceIcon.svg?react"
 
 const CompositionSettingsModal = ({ 
     show, 

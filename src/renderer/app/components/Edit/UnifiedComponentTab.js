@@ -4,7 +4,7 @@ import "./EditPanel.css"
 import "./EditPanelTabs.css"
 import ContextMenu from "../ContextMenu";
 
-import UnifiedComponentIcon from "./Icons/unifiedComponentIcon.svg"
+import UnifiedComponentIcon from "./Icons/unifiedComponentIcon.svg?react"
 
 export default class UnifiedComponentTab extends React.Component {       
     state = {

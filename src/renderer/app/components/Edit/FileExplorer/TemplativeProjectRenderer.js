@@ -3,8 +3,8 @@ import TemplativeAccessTools from "../../TemplativeAccessTools";
 import ContentFileList from "./ContentFiles/ContentFileList";
 import "./TemplativeProjectRenderer.css"
 import IconContentFileItem from "./ContentFiles/IconContentFileItem";
-import artIcon from "../Icons/artIcon.svg"
-import gamedataIcon from "../Icons/gamedataIcon.svg"
+import artIcon from "../Icons/artIcon.svg?react"
+import gamedataIcon from "../Icons/gamedataIcon.svg?react"
 import ResourceHeader from "./ContentFiles/ResourceHeader";
 import GitRow from "./Git/GitRow";
 import CompositionsList from "./CompositionsList";

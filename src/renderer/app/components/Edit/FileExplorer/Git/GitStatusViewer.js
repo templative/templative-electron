@@ -7,14 +7,14 @@ const os = require('os');
 import { channels } from '../../../../../../shared/constants';
 import { ipcRenderer } from 'electron';
 
-import artdataIcon from "../../Icons/artDataIcon.svg"
-import pieceIcon from "../../Icons/pieceIcon.svg"
-import componentIcon from "../../Icons/componentIcon.svg"
-import componentComposeIcon from "../../Icons/componentComposeIcon.svg"
-import rulesIcon from "../../Icons/rulesIcon.svg"
-import artIcon from "../../Icons/artIcon.svg"
-import gameIcon from "../../Icons/gameIcon.svg"
-import studioIcon from "../../Icons/studioIcon.svg"
+import artdataIcon from "../../Icons/artDataIcon.svg?react"
+import pieceIcon from "../../Icons/pieceIcon.svg?react"
+import componentIcon from "../../Icons/componentIcon.svg?react"
+import componentComposeIcon from "../../Icons/componentComposeIcon.svg?react"
+import rulesIcon from "../../Icons/rulesIcon.svg?react"
+import artIcon from "../../Icons/artIcon.svg?react"
+import gameIcon from "../../Icons/gameIcon.svg?react"
+import studioIcon from "../../Icons/studioIcon.svg?react"
 
 export default class GitStatusViewer extends React.Component {
     state = {

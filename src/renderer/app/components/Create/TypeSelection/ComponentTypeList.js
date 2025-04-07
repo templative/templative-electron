@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import ComponentTypeFolder from "./ComponentTypeFolder";
-import NoFileIcon from "../../Edit/noFileIcon.svg";
+import NoFileIcon from "../../Edit/noFileIcon.svg?react";
 import { RenderingWorkspaceContext } from "../../Render/RenderingWorkspaceProvider";
 
 const ComponentTypeList = ({ 

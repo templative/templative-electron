@@ -4,16 +4,16 @@ import "./EditPanel.css"
 import "./EditPanelTabs.css"
 import ContextMenu from "../ContextMenu";
 
-import artDataIcon from "./Icons/artDataIcon.svg"
-import artIcon from "./Icons/artIcon.svg"
-import componentComposeIcon from "./Icons/componentComposeIcon.svg"
-import pieceIcon from "./Icons/pieceIcon.svg"
-import gameCrafterIcon from "./Icons/gameCrafterIcon.svg"
-import gameIcon from "./Icons/gameIcon.svg"
-import studioIcon from "./Icons/studioIcon.svg"
-import componentIcon from "./Icons/componentIcon.svg"
-import rulesIcon from "./Icons/rulesIcon.svg"
-import settingsIcon from "./Icons/settingsIcon.svg"
+import artDataIcon from "./Icons/artDataIcon.svg?react"
+import artIcon from "./Icons/artIcon.svg?react"
+import componentComposeIcon from "./Icons/componentComposeIcon.svg?react"
+import pieceIcon from "./Icons/pieceIcon.svg?react"
+import gameCrafterIcon from "./Icons/gameCrafterIcon.svg?react"
+import gameIcon from "./Icons/gameIcon.svg?react"
+import studioIcon from "./Icons/studioIcon.svg?react"
+import componentIcon from "./Icons/componentIcon.svg?react"
+import rulesIcon from "./Icons/rulesIcon.svg?react"
+import settingsIcon from "./Icons/settingsIcon.svg?react"
 
 const path = require("path");
 const shell = require('electron').shell;

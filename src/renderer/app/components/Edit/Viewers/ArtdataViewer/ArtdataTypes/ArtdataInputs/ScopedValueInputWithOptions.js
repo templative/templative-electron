@@ -1,11 +1,11 @@
 import React from "react";
 import "../../ArtdataViewer.css"
 
-import studioIcon from "../../../../Icons/studioIcon.svg"
-import gameIcon from "../../../../Icons/gameIcon.svg"
-import componentIcon from "../../../../Icons/componentIcon.svg"
-import pieceIcon from "../../../../Icons/pieceIcon.svg"
-import staticValueIcon from "../../../../Icons/staticValueIcon.svg"
+import studioIcon from "../../../../Icons/studioIcon.svg?react"
+import gameIcon from "../../../../Icons/gameIcon.svg?react"
+import componentIcon from "../../../../Icons/componentIcon.svg?react"
+import pieceIcon from "../../../../Icons/pieceIcon.svg?react"
+import staticValueIcon from "../../../../Icons/staticValueIcon.svg?react"
 
 export default class ScopedValueInputWithOptions extends React.Component {   
     getFlattenedOptions = () => {
