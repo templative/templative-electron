@@ -59,8 +59,8 @@ async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size)
             console.log(`!!! Skipping ${componentType} because it's disabled.`);
             continue;
         }
-        if (componentInfo.Tags.includes("packaging")) {
-            console.log(`!!! Skipping ${componentType} because it's a packaging component.`);
+        if (componentInfo.IsPrintingDisabled) {
+            console.log(`!!! Skipping ${componentType} because it's a component that shouldn't be printed.`);
             continue;
         }
         

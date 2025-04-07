@@ -2,6 +2,7 @@ const { COMPONENT_INFO } = require("../src/shared/componentInfo.js");
 const { STOCK_COMPONENT_INFO } = require("../src/shared/stockComponentInfo.js");
 const { DISABLED_STOCK_COMPONENT_INFO } = require("../src/shared/disabledStockComponentInfo.js");
 const fs = require('fs');
+const os = require('os');
 const componentRules = require("./rules/customComponentRules.js");
 const stockComponentRules = require("./rules/stockComponentRules.js");
 
@@ -96,7 +97,7 @@ function processComponents() {
         console.log('\nSaving updates to component info file...');
         saveComponentInfo(
             COMPONENT_INFO, 
-            "/Users/oliverbarnum/Documents/git/templative-electron/src/shared/componentInfo.js",
+            `${os.homedir()}/Documents/git/templative-electron/src/shared/componentInfo.js`,
             "COMPONENT_INFO"
         );
     }
@@ -140,14 +141,14 @@ function processComponents() {
         // Save enabled components to the main file
         saveComponentInfo(
             enabledComponents,
-            "/Users/oliverbarnum/Documents/git/templative-electron/src/shared/stockComponentInfo.js",
+            `${os.homedir()}/Documents/git/templative-electron/src/shared/stockComponentInfo.js`,
             "STOCK_COMPONENT_INFO"
         );
         
         // Save disabled components to a separate file
         saveComponentInfo(
             disabledComponents,
-            "/Users/oliverbarnum/Documents/git/templative-electron/src/shared/disabledStockComponentInfo.js",
+            `${os.homedir()}/Documents/git/templative-electron/src/shared/disabledStockComponentInfo.js`,
             "DISABLED_STOCK_COMPONENT_INFO"
         );
         
