@@ -43,7 +43,9 @@ const openSimulatorFolder = async(event, args) => {
 }
 
 const openProjectLocationFolder = async(event, args) => {
-    var result = await dialog.showOpenDialog({ properties: ['openDirectory'] })
+    var result = await dialog.showOpenDialog({ 
+        properties: ['openDirectory', 'createDirectory']
+    })
     if (result.filePaths.length === 0) {
         console.warn("Chose nothing!")
         return { canceled: true }
