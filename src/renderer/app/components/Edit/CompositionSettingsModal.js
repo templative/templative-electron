@@ -37,7 +37,7 @@ const CompositionSettingsModal = ({
     const [selectedType, setSelectedType] = useState('');
     const [selectedDisabled, setSelectedDisabled] = useState(false);
     const [nameField, setNameField] = useState(name || '');
-    const [quantity, setQuantity] = useState(1);
+    const [quantity, setQuantity] = useState(quantity);
     const [hasChanges, setHasChanges] = useState(false);
 
     useEffect(() => {

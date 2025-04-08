@@ -170,6 +170,7 @@ export default function CompositionItem(props) {
                     componentTypesStockInfo={props.componentTypesStockInfo}
                     templativeRootDirectoryPath={props.templativeRootDirectoryPath}
                     onSaveChanges={handleSaveFileChanges}
+                    quantity={quantity}
                 />
             }
         </div>
