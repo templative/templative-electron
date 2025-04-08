@@ -293,7 +293,7 @@ export default class EditProjectView extends React.Component {
         }
     }
     closeTabAtIndexAsync = async (index) => {
-        var newTabbedFiles = Object.assign(this.state.tabbedFiles)
+        var newTabbedFiles = [...this.state.tabbedFiles]
         if (index < 0 || index >= newTabbedFiles.length) {
             return
         }
@@ -351,73 +351,31 @@ export default class EditProjectView extends React.Component {
     }
     
     updateComponentComposeFieldAsync = async (index, field, value) => {
-        try {
-            const updatedContent = [...this.state.componentCompose];
-            if (updatedContent[index] === undefined) {
-                console.warn("Component not found at index:", index);
-                return
-            }
+        const oldComponents = JSON.parse(JSON.stringify(this.state.componentCompose));
+        const newComponents = oldComponents.map((component, i) => 
+            i === index ? { ...component, [field]: value } : component
+        );
 
-            const oldName = updatedContent[index].name;
-            const isChangingName = field === "name" && value !== oldName;
-            
-            // Update the value in component compose
-            updatedContent[index][field] = value;
-
-            // Only process tab and filepath updates if we're changing a name
-            if (isChangingName) {
-                const newTabbedFiles = this.state.tabbedFiles.map(tab => {
-                    if (tab.filetype !== "UNIFIED_COMPONENT") {
-                        return tab;
-                    }
-                    const [basePath, componentName] = tab.filepath.split("#");
-                    if (componentName === oldName) {
-                        return new TabbedFile(
-                            tab.filetype,
-                            `${basePath}#${value}`,
-                            tab.canClose
-                        );
-                    }
-                    return tab;
-                });
-
-                // Update current filepath if it's a unified component
-                let newCurrentFilepath = this.state.currentFilepath;
-                if (this.state.currentFileType === "UNIFIED_COMPONENT") {
-                    const [basePath, componentName] = this.state.currentFilepath.split("#");
-                    if (componentName === oldName) {
-                        newCurrentFilepath = `${basePath}#${value}`;
-                    }
-                }
-
-                // Update italics tab filepath if it's a unified component
-                let newItalicsTabFilepath = this.state.italicsTabFilepath;
-                if (this.state.italicsTabFilepath?.includes("#")) {
-                    const [basePath, componentName] = this.state.italicsTabFilepath.split("#");
-                    if (componentName === oldName) {
-                        newItalicsTabFilepath = `${basePath}#${value}`;
-                    }
-                }
-
-                // Save and update state with all changes
-                const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
-                await this.saveFileAsync(filepath, JSON.stringify(updatedContent, null, 2));
-
-                this.setState({
-                    componentCompose: updatedContent,
-                    tabbedFiles: newTabbedFiles,
-                    currentFilepath: newCurrentFilepath,
-                    italicsTabFilepath: newItalicsTabFilepath
-                });
-            } else {
-                // For non-name changes, just update component compose
-                const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
-                await this.saveFileAsync(filepath, JSON.stringify(updatedContent, null, 2));
-                this.setState({ componentCompose: updatedContent });
-            }
-        } catch (error) {
-            console.error("Error saving component-compose.json:", error);
-        }
+        await this.saveComponentComposeAsync(newComponents);
+    }
+    deleteCompositionAsync = async (index) => {
+        const newComponents = [...this.state.componentCompose];
+        newComponents.splice(index, 1);
+        await this.saveComponentComposeAsync(newComponents);
+    }
+    
+    duplicateCompositionAsync = async (index) => {
+        const newComponents = [...this.state.componentCompose];
+        const componentToDuplicate = { ...newComponents[index] };
+        componentToDuplicate.name = `${componentToDuplicate.name} Copy`;
+        newComponents.splice(index + 1, 0, componentToDuplicate);
+        await this.saveComponentComposeAsync(newComponents);
+    }
+    
+    toggleDisableCompositionAsync = async (index) => {
+        const newComponents = [...this.state.componentCompose];
+        newComponents[index].disabled = !newComponents[index].disabled;
+        await this.saveComponentComposeAsync(newComponents);
     }
     render() {
         return <RenderingWorkspaceProvider key={this.props.templativeRootDirectoryPath}>
@@ -482,6 +440,9 @@ export default class EditProjectView extends React.Component {
                         componentCompose={this.state.componentCompose}
                         saveComponentComposeAsync={this.saveComponentComposeAsync}
                         updateComponentComposeFieldAsync={this.updateComponentComposeFieldAsync}
+                        deleteCompositionAsync={this.deleteCompositionAsync}
+                        duplicateCompositionAsync={this.duplicateCompositionAsync}
+                        toggleDisableCompositionAsync={this.toggleDisableCompositionAsync}
                     />
                     )}
 

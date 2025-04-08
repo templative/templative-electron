@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { promises as fs } from 'fs';
 import path from 'path';
-import TemplativeAccessTools from '../../../../TemplativeAccessTools';
+import TemplativeAccessTools from '../TemplativeAccessTools';
 import './CompositionSettingsModal.css';
-import { addSpaces } from "../../../../../utility/addSpaces";
-import ArtdataIcon from "../../../Icons/artDataIcon.svg?react";
-import ComponentIcon from "../../../Icons/componentIcon.svg?react"
-import PieceIcon from "../../../Icons/pieceIcon.svg?react"
+import { addSpaces } from "../../utility/addSpaces";
+import ArtdataIcon from "./Icons/artDataIcon.svg?react";
+import ComponentIcon from "./Icons/componentIcon.svg?react"
+import PieceIcon from "./Icons/pieceIcon.svg?react"
 
 const CompositionSettingsModal = ({ 
     show, 
@@ -36,6 +36,8 @@ const CompositionSettingsModal = ({
     
     const [selectedType, setSelectedType] = useState('');
     const [selectedDisabled, setSelectedDisabled] = useState(false);
+    const [nameField, setNameField] = useState(name || '');
+    const [quantity, setQuantity] = useState(1);
     const [hasChanges, setHasChanges] = useState(false);
 
     useEffect(() => {
@@ -91,9 +93,10 @@ const CompositionSettingsModal = ({
         };
 
         if (show) {
+            setNameField(name || '');
             loadFiles();
         }
-    }, [show, templativeRootDirectoryPath, currentFiles, componentType, isDisabled]);
+    }, [show, templativeRootDirectoryPath, currentFiles, componentType, isDisabled, name]);
 
     const handleFileSelect = (key, value) => {
         setSelectedFiles(prev => ({
@@ -112,9 +115,18 @@ const CompositionSettingsModal = ({
         setSelectedDisabled(value);
         setHasChanges(true);
     };
+    
+    const handleQuantityChange = (value) => {
+        setQuantity(value);
+        setHasChanges(true);
+    };
+    const handleNameChange = (value) => {
+        setNameField(value);
+        setHasChanges(true);
+    };
 
     const handleSave = () => {
-        onSaveChanges(selectedFiles, selectedType, selectedDisabled);
+        onSaveChanges(selectedFiles, selectedType, selectedDisabled, nameField, quantity);
         onHide();
     };
 
@@ -134,6 +146,13 @@ const CompositionSettingsModal = ({
                     <button className="close-button" onClick={onHide}>×</button>
                 </div>
                 <div className="modal-body">
+                    <div className="input-group input-group-sm" data-bs-theme="dark">
+                        <span className="input-group-text soft-label">Name</span>
+                        <input type="text" className="form-control no-left-border no-right-border" placeholder="Name" aria-label="Search" value={nameField} onChange={async (e) => await handleNameChange(e.target.value)} />
+                        <span className="input-group-text soft-label">Quantity</span>
+                        <input type="number" className="form-control no-left-border quantity-input" placeholder={0} aria-label="Search" value={quantity} onChange={async (e) => await handleQuantityChange(e.target.value)} />                    
+                    </div>
+                        
                     <div className="disabled-toggle-container">
                         <label className="disabled-toggle-label">
                             <input 

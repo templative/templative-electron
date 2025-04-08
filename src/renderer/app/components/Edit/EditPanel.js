@@ -84,6 +84,10 @@ export default class EditPanel extends React.Component {
                         updateRouteCallback={this.props.updateRouteCallback}
                         componentCompose={this.props.componentCompose}
                         saveComponentComposeAsync={this.props.saveComponentComposeAsync}
+                        deleteCompositionAsync={this.props.deleteCompositionAsync}
+                        duplicateCompositionAsync={this.props.duplicateCompositionAsync}
+                        toggleDisableCompositionAsync={this.props.toggleDisableCompositionAsync}
+                        updateComponentComposeFieldAsync={this.props.updateComponentComposeFieldAsync}
                     />
                 </div>
                 <div className='col viewer'>

@@ -120,7 +120,6 @@ export default class TemplativeProjectRenderer extends React.Component {
         componentGamedataDirectory: undefined,
         hasGit: false,
         githubToken: false,
-        componentCompose: undefined
     }
 
     createFileAsync = async (filepath, contents) => {
@@ -195,7 +194,6 @@ export default class TemplativeProjectRenderer extends React.Component {
     }
     #parseComponentComposeAsync = async () => {
         var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json");
-        var componentCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "component-compose.json");
         await this.#saveComponentComposeFileCountAsync()
         
         this.#closeComponentComposeListener()
@@ -208,7 +206,6 @@ export default class TemplativeProjectRenderer extends React.Component {
         
         this.setState({
             gameCompose: gameCompose,
-            componentCompose: componentCompose,
             gameCrafterAdsDirectory: path.join(this.props.templativeRootDirectoryPath, "gamecrafter"),
             templatesDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.artTemplatesDirectory),
             overlaysDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.artInsertsDirectory),
@@ -286,29 +283,6 @@ export default class TemplativeProjectRenderer extends React.Component {
             default:
                 return "";
         }
-    }
-    deleteComposition = async (index) => {
-        const newComponents = [...this.props.componentCompose]
-        newComponents.splice(index, 1)
-        await this.props.saveComponentComposeAsync(newComponents)
-    }
-
-    duplicateComposition = async (index) => {
-        const newComponents = [...this.props.componentCompose]
-        const newComponent = { ...this.props.componentCompose[index] }
-        let newName = newComponent.name
-        while (newComponents.some(c => c.name === newName)) {
-            newName = `${newName}Copy`
-        }
-        newComponent.name = newName
-        newComponents.push(newComponent)
-        await this.props.saveComponentComposeAsync(newComponents)
-    }
-
-    toggleDisableComposition = async (index) => {
-        const newComponents = [...this.props.componentCompose]
-        newComponents[index].disabled = !newComponents[index].disabled
-        await this.props.saveComponentComposeAsync(newComponents)
     }
 
     render() {
@@ -415,9 +389,10 @@ export default class TemplativeProjectRenderer extends React.Component {
                             currentFilepath={this.props.currentFilepath}
                             updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
                             updateRouteCallback={this.props.updateRouteCallback}
-                            deleteCompositionCallbackAsync={this.deleteComposition}
-                            duplicateCompositionCallbackAsync={this.duplicateComposition}
-                            toggleDisableCompositionCallbackAsync={this.toggleDisableComposition}
+                            deleteCompositionCallbackAsync={this.props.deleteCompositionAsync}
+                            duplicateCompositionCallbackAsync={this.props.duplicateCompositionAsync}
+                            toggleDisableCompositionCallbackAsync={this.props.toggleDisableCompositionAsync}
+                            updateComponentComposeFieldAsync={this.props.updateComponentComposeFieldAsync}
                         />
                         <StockItemsList 
                             templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
@@ -426,9 +401,9 @@ export default class TemplativeProjectRenderer extends React.Component {
                             currentFilepath={this.props.currentFilepath}
                             updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
                             updateRouteCallback={this.props.updateRouteCallback}
-                            deleteCompositionCallbackAsync={this.deleteComposition}
-                            duplicateCompositionCallbackAsync={this.duplicateComposition}
-                            toggleDisableCompositionCallbackAsync={this.toggleDisableComposition}
+                            deleteCompositionCallbackAsync={this.props.deleteCompositionAsync}
+                            duplicateCompositionCallbackAsync={this.props.duplicateCompositionAsync}
+                            toggleDisableCompositionCallbackAsync={this.props.toggleDisableCompositionAsync}
                         />
                     </div>
                 </div>

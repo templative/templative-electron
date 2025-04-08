@@ -4,7 +4,7 @@ import EditableViewerJson from "../EditableViewerJson";
 import TemplativeAccessTools from "../../../TemplativeAccessTools";
 import "./UnifiedComponentViewer.css"
 import CompositionControlsRow from "./CompositionControlsRow";
-import CompositionSettingsModal from "./EditComposition/CompositionSettingsModal";
+import CompositionSettingsModal from "../../CompositionSettingsModal";
 import path from "path";
 
 export default class UnifiedComponentViewer extends React.Component { 
@@ -55,18 +55,13 @@ export default class UnifiedComponentViewer extends React.Component {
         }, async () => await this.loadSubfiles(componentInfo));
     }
 
-    async componentDidUpdate(prevProps, prevState) {
-        // Check if the viewed file has changed
-        if (this.props.viewedFile !== prevProps.viewedFile) {
-            await this.checkAndReloadDataSources(this.props.viewedFile);
-        }
-
+    async componentDidUpdate(prevProps) {
+        // Only check for component name changes - file changes are handled by EditProjectView
         const isChangingComponentName = prevProps.componentName !== this.props.componentName;
-        if (!isChangingComponentName) {
-            return;
+        const isComponentComposeChanged = JSON.stringify(prevProps.componentCompose) !== JSON.stringify(this.props.componentCompose);
+        if (isChangingComponentName || isComponentComposeChanged) {
+            await this.load();
         }
-
-        await this.load();
     }
     
     loadSubfiles = async (componentInfo) => {
@@ -264,24 +259,19 @@ export default class UnifiedComponentViewer extends React.Component {
             updates.push(["disabled", isDisabled]);
         }
         
-        if (selectedFiles.componentGamedataFilename !== componentInfo.componentGamedataFilename) {
-            updates.push(["componentGamedataFilename", selectedFiles.componentGamedataFilename]);
-        }
-        
-        if (selectedFiles.piecesGamedataFilename !== componentInfo.piecesGamedataFilename) {
-            updates.push(["piecesGamedataFilename", selectedFiles.piecesGamedataFilename]);
-        }
-        
-        if (selectedFiles.artdataFrontFilename !== componentInfo.artdataFrontFilename) {
-            updates.push(["artdataFrontFilename", selectedFiles.artdataFrontFilename]);
-        }
-        
-        if (selectedFiles.artdataBackFilename !== componentInfo.artdataBackFilename) {
-            updates.push(["artdataBackFilename", selectedFiles.artdataBackFilename]);
-        }
-        
-        if (selectedFiles.artdataDieFaceFilename !== componentInfo.artdataDieFaceFilename) {
-            updates.push(["artdataDieFaceFilename", selectedFiles.artdataDieFaceFilename]);
+        // File updates
+        const fileFields = {
+            componentGamedataFilename: selectedFiles.componentGamedataFilename,
+            piecesGamedataFilename: selectedFiles.piecesGamedataFilename,
+            artdataFrontFilename: selectedFiles.artdataFrontFilename,
+            artdataBackFilename: selectedFiles.artdataBackFilename,
+            artdataDieFaceFilename: selectedFiles.artdataDieFaceFilename
+        };
+
+        for (const [field, value] of Object.entries(fileFields)) {
+            if (value !== componentInfo[field]) {
+                updates.push([field, value]);
+            }
         }
         
         // Apply all updates
@@ -289,17 +279,13 @@ export default class UnifiedComponentViewer extends React.Component {
             await this.props.updateComponentComposeFieldAsync(compositionIndex, field, value);
         }
         
-        // Reload component info if there were changes
-        if (updates.length > 0) {
-            await this.loadSubfiles(this.props.componentCompose[compositionIndex]);
-            await this.loadDataSources();
-        }
+        this.handleCloseFileModal();
     }
     
     render() {
         return (
             <>
-                {this.state.componentInfo && 
+                {/* {this.state.componentInfo && 
                     <CompositionControlsRow 
                         componentName={this.state.componentInfo["name"]}
                         updateComponentName={this.updateComponentName}
@@ -316,7 +302,7 @@ export default class UnifiedComponentViewer extends React.Component {
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         onOpenFileModal={this.handleOpenFileModal}
                     />
-                }
+                } */}
                 
                 {this.state.loadedSubfiles &&
                     <EditCompositionRow 

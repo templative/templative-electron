@@ -5,6 +5,7 @@ const { ipcRenderer } = window.require('electron');
 import {addSpaces} from "../../../utility/addSpaces"
 const path = require("path");
 const shell = require('electron').shell;
+import CompositionSettingsModal from "../CompositionSettingsModal";
 
 
 export default function CompositionItem(props) {
@@ -16,12 +17,20 @@ export default function CompositionItem(props) {
         deleteCompositionCallbackAsync,
         duplicateCompositionCallbackAsync,
         toggleDisableCompositionCallbackAsync,
-        isStock
+        isStock,
+        componentGamedataFilename,
+        piecesGamedataFilename,
+        artdataFrontFilename,
+        artdataBackFilename,
+        artdataDieFaceFilename,
+        updateComponentComposeFieldAsync,
+        originalIndex
     } = props;
     const [isHovering, setIsHovering] = useState(false);
     const [isShowingContextMenu, setIsShowingContextMenu] = useState(false);
     const [contextCoordinates, setContextCoordinates] = useState({ x: 0, y: 0 });
     const [isRenamingFile, setIsRenamingFile] = useState(false);
+    const [showFileModal, setShowFileModal] = useState(false);
 
     const handleMouseOver = () => {
         setIsHovering(true);
@@ -66,9 +75,53 @@ export default function CompositionItem(props) {
         updateRouteCallback("render")
     };
 
+    const handleOpenFileModal = () => {
+        setShowFileModal(true);
+    };
+
+    const handleCloseFileModal = () => {
+        setShowFileModal(false);
+    };
+
+    const handleSaveFileChanges = async (selectedFiles, selectedType, isDisabled, nameChange, quantityChange) => {
+        // Update component fields
+        if (selectedType !== type) {
+            await updateComponentComposeFieldAsync(originalIndex, "type", selectedType);
+        }
+        if (nameChange !== compositionName) {
+            await updateComponentComposeFieldAsync(originalIndex, "name", nameChange);
+        }
+        if (quantityChange !== quantity) {
+            await updateComponentComposeFieldAsync(originalIndex, "quantity", quantityChange);
+        }
+        
+
+        if (isDisabled !== props.isDisabled) {
+            await updateComponentComposeFieldAsync(originalIndex, "disabled", isDisabled);
+        }
+
+        // Update file references
+        const fileFields = {
+            componentGamedataFilename: selectedFiles.componentGamedataFilename,
+            piecesGamedataFilename: selectedFiles.piecesGamedataFilename,
+            artdataFrontFilename: selectedFiles.artdataFrontFilename,
+            artdataBackFilename: selectedFiles.artdataBackFilename,
+            artdataDieFaceFilename: selectedFiles.artdataDieFaceFilename
+        };
+
+        for (const [field, value] of Object.entries(fileFields)) {
+            if (value !== props[field]) {
+                await updateComponentComposeFieldAsync(originalIndex, field, value);
+            }
+        }
+
+        handleCloseFileModal();
+    };
+
     const commands = [
         {name: "Open", callback: openFileAsyncCallback},
         {name: "Open in Default App", callback: openInDefaultAppAsync},
+        {name: "Edit Settings", callback: handleOpenFileModal},
         {name: "Render", callback: renderCompositionAsyncCallback},
         {name: "Duplicate", callback: duplicateCompositionCallbackAsync},
         {name: isDisabled ? "Enable" : "Disable", callback: toggleDisableCompositionCallbackAsync},
@@ -99,6 +152,26 @@ export default function CompositionItem(props) {
                 <span style={{ marginLeft: `24px` }}/>
                 <span className={isDisabled ? "disabled-composition-item" : "" + "composition-item"}>{quantity}x <span className="composition-item-name">{compositionName}</span> {addSpaces(type.replace("STOCK_", ""))}</span>
             </p>
+            {showFileModal && 
+                <CompositionSettingsModal
+                    show={showFileModal}
+                    onHide={handleCloseFileModal}
+                    name={compositionName}
+                    currentFiles={{
+                        componentGamedataFilename: componentGamedataFilename,
+                        piecesGamedataFilename: piecesGamedataFilename || null,
+                        artdataFrontFilename: artdataFrontFilename || null,
+                        artdataBackFilename: artdataBackFilename || null,
+                        artdataDieFaceFilename: artdataDieFaceFilename || null
+                    }}
+                    isDisabled={isDisabled}
+                    componentType={type}
+                    componentTypesCustomInfo={props.componentTypesCustomInfo}
+                    componentTypesStockInfo={props.componentTypesStockInfo}
+                    templativeRootDirectoryPath={props.templativeRootDirectoryPath}
+                    onSaveChanges={handleSaveFileChanges}
+                />
+            }
         </div>
     );
 };
