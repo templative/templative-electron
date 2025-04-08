@@ -3,11 +3,11 @@ import { trackEvent } from "@aptabase/electron/renderer";
 const { ipcRenderer } = window.require('electron');
 import { channels } from '../../../shared/constants';
 import './CreateProjectView.css';
-import TheSvg from './Icons/the.svg';
-import LegallyDistinctemonSvg from './Icons/legallyDistinctemon.svg';
-import SettlersOfKachingSvg from './Icons/settlersOfKaching.svg';
-import BigMallet50kSvg from './Icons/bigMallet50k.svg';
-import SickleSvg from './Icons/sickle.svg';
+import TheSvg from './Icons/the.svg?react';
+import LegallyDistinctemonSvg from './Icons/legallyDistinctemon.svg?react';
+import SettlersOfKachingSvg from './Icons/settlersOfKaching.svg?react';
+import BigMallet50kSvg from './Icons/bigMallet50k.svg?react';
+import SickleSvg from './Icons/sickle.svg?react';
 
 const templates = [
     {
