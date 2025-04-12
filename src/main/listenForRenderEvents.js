@@ -1,5 +1,5 @@
 const { ipcMain, shell } = require('electron')
-const { setCurrentFolder, openFolder, createTemplativeProjectWithDialog, openPlaygroundFolder, openSimulatorFolder, openProjectLocationFolder, createTemplativeProjectWithName } = require("./dialogMaker")
+const { openFolder, openPlaygroundFolder, openSimulatorFolder, openProjectLocationFolder, createTemplativeProjectWithName } = require("./dialogMaker")
 const { channels } = require('../shared/constants');
 const { login, giveLoginInformation, getTgcSessionFromStore, logoutTgc, clearGithubAuth, giveGithubAuth, pollGithubAuth } = require("./accountManager")
 const { 
@@ -13,6 +13,7 @@ const {
     listGameCrafterDesigners,
     uploadTemplativeProjectToGameCrafter
 } = require("./templative/index")
+const { setCurrentTemplativeRootDirectory, getCurrentTemplativeRootDirectory } = require("./templativeProjectManager");
 
 var openUrl = async (event, url) => {
     shell.openExternal(url);
@@ -31,7 +32,8 @@ function listenForRenderEvents(window) {
     ipcMain.handle(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG_FOR_PLAYGROUND, openPlaygroundFolder);
     ipcMain.handle(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG_FOR_SIMULATOR, openSimulatorFolder);
     ipcMain.handle(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG, openFolder);
-    ipcMain.handle(channels.TO_SERVER_GIVE_CURRENT_PROJECT, setCurrentFolder);
+    ipcMain.handle(channels.TO_SERVER_GIVE_CURRENT_PROJECT, setCurrentTemplativeRootDirectory);
+    ipcMain.handle(channels.TO_SERVER_GET_CURRENT_PROJECT, getCurrentTemplativeRootDirectory);
 
     ipcMain.handle(channels.TO_SERVER_OPEN_URL, openUrl)
     ipcMain.handle(channels.TO_SERVER_OPEN_FILEPATH, openFilepath)

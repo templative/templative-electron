@@ -3,6 +3,7 @@ const { COMPONENT_INFO } = require('../../shared/componentInfo');
 const { STOCK_COMPONENT_INFO } = require('../../shared/stockComponentInfo');
 const { createComponentByType } = require('./lib/create/componentCreator');
 const { produceGame, getPreviewsPath, producePiecePreview } = require('./lib/produce/gameProducer');
+const { watchAndProduceGameFiles } = require('./lib/produce/cachePreProducerWatcher');
 const { createProjectInDirectory } = require('./lib/create/projectCreator');
 const { convertToTabletopPlayground } = require('./lib/distribute/playground/playground');
 const { createPdfForPrinting } = require('./lib/distribute/printout/printout');
@@ -155,6 +156,10 @@ const uploadTemplativeProjectToGameCrafter = withLogCapture(async (event, data) 
   }
 });
 
+const watchAndProduceTemplativeProject = async (gameDirectoryRootPath) => {
+  await watchAndProduceGameFiles(gameDirectoryRootPath);
+}
+
 module.exports = {
   createTemplativeComponent,
   produceTemplativeProject,
@@ -165,5 +170,6 @@ module.exports = {
   createPrintout,
   createSimulatorSave,
   listGameCrafterDesigners,
-  uploadTemplativeProjectToGameCrafter
+  uploadTemplativeProjectToGameCrafter,
+  watchAndProduceTemplativeProject
 } 

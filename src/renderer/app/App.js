@@ -13,7 +13,6 @@ import './Theme.css';
 import './App.css';
 import './Inputs.css';
 
-import {writeLastOpenedProject, getLastProjectDirectory} from "./utility/SettingsManager"
 const { ipcRenderer } = require('electron');
 
 class App extends React.Component {
@@ -54,22 +53,19 @@ class App extends React.Component {
         this.setState({email: email, loginStatus: undefined})
     }
     attemptToLoadLastTemplativeProject = async () => {
-        var lastProjectDirectory = await getLastProjectDirectory()
-        if (lastProjectDirectory === undefined) {
-            this.setState({templativeRootDirectoryPath: undefined, currentView: "start"})
-            return
+        var lastProjectDirectory = await ipcRenderer.invoke(channels.TO_SERVER_GET_CURRENT_PROJECT);
+        if (!lastProjectDirectory) {
+            this.setState({templativeRootDirectoryPath: undefined, currentView: "start"});
+            return;
         }
-        await ipcRenderer.invoke(channels.TO_SERVER_GIVE_CURRENT_PROJECT, lastProjectDirectory)
-        
-        this.setState({templativeRootDirectoryPath: lastProjectDirectory, currentView: "editProject"})
+        this.setState({templativeRootDirectoryPath: lastProjectDirectory, currentView: "editProject"});
     }
     componentDidMount = async () => {
-        ipcRenderer.on(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, async (event, templativeRootDirectoryPath) => {
-            await writeLastOpenedProject(templativeRootDirectoryPath)
+        ipcRenderer.on(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, (event, templativeRootDirectoryPath) => {
             this.setState({
                 templativeRootDirectoryPath: templativeRootDirectoryPath,
                 currentView: "editProject"
-            })
+            });
         });
         ipcRenderer.on(channels.GIVE_CLOSE_PROJECT, (_) => {
             this.setState({
@@ -106,8 +102,9 @@ class App extends React.Component {
         //     var newMessages = messages.split('\n').map(message => message.trim()).filter(message => message !== "")
         //     this.setState({templativeMessages:  [...this.state.templativeMessages, ...newMessages]})
         // });
-        await this.attemptToLoadLastTemplativeProject()
-        await ipcRenderer.invoke(channels.TO_SERVER_IS_LOGGED_IN)
+
+        await this.attemptToLoadLastTemplativeProject();
+        await ipcRenderer.invoke(channels.TO_SERVER_IS_LOGGED_IN);
     }
     
     updateRoute = (route) => {

@@ -1,7 +1,5 @@
-const { Producer } = require('./producer');
 const outputWriter = require('../outputWriter');
 const svgscissors = require('./svgscissors/main');
-const os = require('os');
 const { createHash } = require('crypto');
 const path = require('path');
 const defineLoader = require('../../manage/defineLoader');
@@ -10,7 +8,7 @@ const { ComponentBackData } = require('../../manage/models/gamedata');
 const chalk = require('chalk');
 const { SvgFileCache } = require('./svgscissors/modules/svgFileCache');
 
-class BackProducer extends Producer {
+class BackProducer {
     static async createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache = new SvgFileCache()) {
         const componentTypeInfo = COMPONENT_INFO[componentComposition.componentCompose["type"]];
         const defaultPieceGamedataBlob = [{ 
@@ -157,6 +155,9 @@ class BackProducer extends Producer {
     }
 
     static async createUniqueComponentBackInstructions(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, compositions, componentBackOutputDirectory, componentFolderName, piecesGamedata) {
+        if (!componentBackOutputDirectory) {
+            return;
+        }
         const componentInstructionFilepath = path.join(componentBackOutputDirectory, "component.json");
         const frontInstructionSets = await BackProducer.getInstructionSetsForFilesForBackArtdataHash(uniqueComponentBackData.pieceUniqueBackHash, sourcedVariableNamesSpecificToPieceOnBackArtData, componentFolderName, piecesGamedata, componentBackOutputDirectory);
         const backInstructionSetFilepath = await BackProducer.getBackInstructionSetFilepath(componentFolderName, componentBackOutputDirectory);

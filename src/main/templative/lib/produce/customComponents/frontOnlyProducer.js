@@ -1,4 +1,3 @@
-const { Producer } = require('./producer');
 const outputWriter = require('../outputWriter');
 const svgscissors = require('./svgscissors/main');
 const os = require('os');
@@ -7,7 +6,7 @@ const defineLoader = require('../../manage/defineLoader');
 const { ComponentBackData } = require('../../manage/models/gamedata');
 const { SvgFileCache } = require('./svgscissors/modules/svgFileCache');
 
-class FrontOnlyProducer extends Producer {
+class FrontOnlyProducer {
     static async createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache = new SvgFileCache()) {
         const piecesDataBlob = await defineLoader.loadPiecesGamedata(previewProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"]);
         if (!piecesDataBlob || Object.keys(piecesDataBlob).length === 0) {
@@ -43,6 +42,9 @@ class FrontOnlyProducer extends Producer {
     }
 
     static async writeComponentInstructions(compositions, componentBackOutputDirectory, componentFolderName, piecesGamedata) {
+        if (!componentBackOutputDirectory) {
+            return;
+        }
         const componentInstructionFilepath = path.join(componentBackOutputDirectory, "component.json");
         const frontInstructions = await FrontOnlyProducer.getInstructionSetsForFilesForBackArtdataHash(componentFolderName, piecesGamedata, componentBackOutputDirectory);
         

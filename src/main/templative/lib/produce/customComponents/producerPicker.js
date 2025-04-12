@@ -1,20 +1,26 @@
-const outputWriter = require('../outputWriter');
-const os = require('os');
-const path = require('path');
 
-const { ProduceProperties, PreviewProperties } = require('../../manage/models/produceProperties');
-const { StudioData, GameData, ComponentData, ComponentBackData, PieceData } = require('../../manage/models/gamedata');
-const ComponentComposition = require('../../manage/models/composition');
+const { ComponentData,  } = require('../../manage/models/gamedata');
 const ComponentArtdata = require('../../manage/models/artdata');
 const defineLoader = require('../../manage/defineLoader');
 
 const { COMPONENT_INFO } = require('../../../../../shared/componentInfo');
 
+const { SvgFileCache } = require('./svgscissors/modules/svgFileCache');
 const { BackProducer } = require('./backProducer');
 const { FrontOnlyProducer } = require('./frontOnlyProducer');
 const { DiceProducer } = require('./diceProducer');
-const { SvgFileCache } = require('./svgscissors/modules/svgFileCache');
 
+function getProducer(componentArtdata) {
+  if ("Front" in componentArtdata.artDataBlobDictionary && Object.keys(componentArtdata.artDataBlobDictionary).length === 1) {
+    return FrontOnlyProducer;
+  } else if ("Back" in componentArtdata.artDataBlobDictionary) {
+    return BackProducer;
+  } else if ("DieFace" in componentArtdata.artDataBlobDictionary && Object.keys(componentArtdata.artDataBlobDictionary).length === 1) {
+    return DiceProducer;
+  } else {
+    return null;
+  }
+}
 async function getComponentArtdata(componentName, inputDirectoryPath, componentComposition) {
   const artDatas = {};
   const componentType = componentComposition.componentCompose["type"];
@@ -32,7 +38,6 @@ async function getComponentArtdata(componentName, inputDirectoryPath, componentC
 
 async function produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache = new SvgFileCache()) {
   const componentName = componentComposition.componentCompose["name"];
-
   const componentDataBlob = await defineLoader.loadComponentGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["componentGamedataFilename"]);
   if (!componentDataBlob || Object.keys(componentDataBlob).length === 0) {
     console.log(`Skipping ${componentName} component due to missing component gamedata.`);
@@ -43,17 +48,10 @@ async function produceCustomComponent(produceProperties, gamedata, componentComp
   if (componentArtdata === null) {
     return;
   }
-
   const componentData = new ComponentData(gamedata.studioDataBlob, gamedata.gameDataBlob, componentDataBlob);
+  const producer = getProducer(componentArtdata);
 
-  let producer = null;
-  if ("Front" in componentArtdata.artDataBlobDictionary && Object.keys(componentArtdata.artDataBlobDictionary).length === 1) {
-    producer = FrontOnlyProducer;
-  } else if ("Back" in componentArtdata.artDataBlobDictionary) {
-    producer = BackProducer;
-  } else if ("DieFace" in componentArtdata.artDataBlobDictionary && Object.keys(componentArtdata.artDataBlobDictionary).length === 1) {
-    producer = DiceProducer;
-  } else {
+  if (!producer) {
     console.log(`No production instructions for ${componentComposition.componentCompose["type"]} ${componentComposition.componentCompose["name"]}.`);
     return;
   }
@@ -64,7 +62,6 @@ async function produceCustomComponent(produceProperties, gamedata, componentComp
 
 async function produceCustomComponentPreview(previewProperties, gamedata, componentComposition, fontCache, svgFileCache = new SvgFileCache()) {
   const componentName = componentComposition.componentCompose["name"];
-
   const componentDataBlob = await defineLoader.loadComponentGamedata(previewProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["componentGamedataFilename"]);
   if (!componentDataBlob || Object.keys(componentDataBlob).length === 0) {
     console.log(`Skipping ${componentName} component due to missing component gamedata.`);
@@ -75,24 +72,22 @@ async function produceCustomComponentPreview(previewProperties, gamedata, compon
   if (componentArtdata === null) {
     return;
   }
-
   const componentData = new ComponentData(gamedata.studioDataBlob, gamedata.gameDataBlob, componentDataBlob);
+  const producer = getProducer(componentArtdata);
 
-  let producer = null;
-  if ("Front" in componentArtdata.artDataBlobDictionary && Object.keys(componentArtdata.artDataBlobDictionary).length === 1) {
-    producer = FrontOnlyProducer;
-  } else if ("Back" in componentArtdata.artDataBlobDictionary) {
-    producer = BackProducer;
-  } else if ("DieFace" in componentArtdata.artDataBlobDictionary && Object.keys(componentArtdata.artDataBlobDictionary).length === 1) {
-    producer = DiceProducer;
-    console.log("Previews for dice are disabled since they dont piece filtering");
-    return;
-  } else {
+  if (!producer) {
     console.log(`No production instructions for ${componentComposition.componentCompose["type"]} ${componentComposition.componentCompose["name"]}.`);
     return;
   }
+
+  if (producer === DiceProducer) {
+    console.log("Previews for dice are disabled since they don't support piece filtering.");
+    return;
+  }
+
   console.log(`Creating art assets for ${componentName} component ${previewProperties.pieceName}.`);
   await producer.createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache);
 }
 
+module.exports = { produceCustomComponent, produceCustomComponentPreview };
 module.exports = { produceCustomComponent, produceCustomComponentPreview };

@@ -13,6 +13,7 @@ program
 program.addCommand(create);
 program.addCommand(produce.produce);
 program.addCommand(produce.preview);
+program.addCommand(produce.watch);
 program.addCommand(manage);
 program.addCommand(distribute);
 

@@ -21,6 +21,9 @@ async function updateLastOutputFolder(gameRootDirectoryPath, outputDirectory, ga
 }
 
 async function createComponentFolder(name, outputDirectory) {
+    if (!outputDirectory) {
+        return null;
+    }
     const componentDirectory = path.join(outputDirectory, name);
     await fs.mkdir(componentDirectory, { recursive: true });
     return componentDirectory;

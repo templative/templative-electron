@@ -1,5 +1,6 @@
 const { Command } = require('commander');
 const { produceGame, producePiecePreview } = require('../../lib/produce/gameProducer');
+const { CachePreProducerWatcher } = require('../../lib/produce/cachePreProducerWatcher');
 
 // Example usage:
 // templative produce --name "actionCaps" --input "/Users/oliverbarnum/Documents/git/apcw-defines"
@@ -38,8 +39,18 @@ const previewCommand = new Command('preview')
       options.language
     );
   });
+  
+const watchCommand = new Command('watch')
+  .description('Watch the game and produce it when it changes')
+  .option('--input <path>', 'The directory of the templative project.', './')
+  .action(async (options) => {
+    var cachePreProducer = new CachePreProducerWatcher(options.input);
+    await cachePreProducer.openWatchers();
+  });
+  
 
 module.exports = {
   produce: produceCommand,
-  preview: previewCommand
+  preview: previewCommand,
+  watch: watchCommand
 }; 

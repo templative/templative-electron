@@ -65,7 +65,10 @@ async function createArtFilesForComponent(compositions, componentArtdata, unique
     const tasks = [];
 
     // Create output directory once at the beginning
-    await fsExtra.ensureDir(componentBackOutputDirectory);
+
+    if (!produceProperties.isCacheOnly) {
+        await fsExtra.ensureDir(componentBackOutputDirectory);
+    }
 
     for (const pieceGamedata of piecesDataBlob) {
         const pieceHash = createUniqueBackHashForPiece(uniqueComponentBackData.sourcedVariableNamesSpecificToPieceOnBackArtData, pieceGamedata);
@@ -102,23 +105,13 @@ async function createArtFilesForComponent(compositions, componentArtdata, unique
     await Promise.all(tasks);
 }
 
-/**
- * Create an art file of a piece
- * @param {Object} compositions - Component compositions
- * @param {Object} artdata - Art data
- * @param {Object} gamedata - Game data
- * @param {string} componentBackOutputDirectory - Output directory
- * @param {Object} productionProperties - Production properties
- * @param {Object} fontCache - Font cache instance
- * @param {Object} svgFileCache - SVG file cache instance
- * @returns {Promise<void>}
- */
 async function createArtFileOfPiece(compositions, artdata, gamedata, componentBackOutputDirectory, productionProperties, fontCache, svgFileCache = new SvgFileCache()) {
     const templateFilesDirectory = compositions.gameCompose["artTemplatesDirectory"];
     if (artdata === null) {
       console.log(`!!! Missing artdata ${gamedata.componentDataBlob["name"]}`);
       return;
     }
+    const isCachingWithoutOutput = productionProperties.isCacheOnly || componentBackOutputDirectory === null;
     const artFilename = `${artdata["templateFilename"]}.svg`;
     const artFilepath = path.normalize(path.join(productionProperties.inputDirectoryPath, templateFilesDirectory, artFilename));
     if (!await fsExtra.pathExists(artFilepath)) {
@@ -168,15 +161,16 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
 
       // Check cache
       const cachedFiles = await artCache.getCachedFiles(inputHash);
-      const absoluteOutputDirectory = path.normalize(path.resolve(componentBackOutputDirectory));
-      const absoluteArtFileOutputFilepath = path.join(absoluteOutputDirectory, `${artFileOutputName}.png`);
+      var absoluteOutputDirectory = path.normalize(path.resolve(componentBackOutputDirectory || artCache.cacheDir));
+      var absoluteArtFileOutputFilepath = path.join(absoluteOutputDirectory, `${artFileOutputName}.png`);
 
       if (cachedFiles) {
-
-        const absoluteArtFileOutputSvgFilepath = path.join(absoluteOutputDirectory, `${artFileOutputName}.svg`);
-        console.log(`Using cached version of ${pieceName}`);
-        await fsExtra.copy(cachedFiles.svgPath, absoluteArtFileOutputSvgFilepath);
-        await fsExtra.copy(cachedFiles.pngPath, absoluteArtFileOutputFilepath);
+        if (!isCachingWithoutOutput) {
+            const absoluteArtFileOutputSvgFilepath = path.join(absoluteOutputDirectory, `${artFileOutputName}.svg`);
+            console.log(`Using cached version of ${pieceName}`);
+            await fsExtra.copy(cachedFiles.svgPath, absoluteArtFileOutputSvgFilepath);
+            await fsExtra.copy(cachedFiles.pngPath, absoluteArtFileOutputFilepath);
+        }
         return;
       }
 
@@ -192,10 +186,8 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
           const clipSvgFilepath = await getComponentTemplate(componentType);
           contents = await clipSvgContentToClipFile(contents, clipSvgFilepath, CLIPPING_ELEMENT_ID, svgFileCache);
       }
-      
-      
-      
-      await createArtfile(contents, artFileOutputName, imageSizePixels, componentBackOutputDirectory);
+      // Create and cache the files
+      await createArtfile(contents, artFileOutputName, imageSizePixels, absoluteOutputDirectory);
       await convertSvgContentToPng(contents, imageSizePixels, absoluteArtFileOutputFilepath);
 
       await artCache.cacheFiles(inputHash, contents, absoluteArtFileOutputFilepath);

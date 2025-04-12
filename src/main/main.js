@@ -7,9 +7,7 @@ const { initialize: initializeAptabase } = require("@aptabase/electron/main");
 const { setupOauthListener } = require("./accountManager")
 const axios = require('axios');
 const Sentry = require("@sentry/electron/main");
-const path = require('path');
-const fsPromises = require('fs').promises;
-
+const { loadLastProject } = require("./templativeProjectManager");
 
 if (app.isPackaged) {
     Sentry.init({
@@ -84,7 +82,7 @@ const initializeApp = async () => {
         setupAppUpdateListener();
         listenForRenderEvents(templativeWindow);
         setupOauthListener(templativeWindow);
-
+        await loadLastProject();
     } catch (err) {
         await logError(err, 'app_initialization');
         error(err);
@@ -97,7 +95,6 @@ app.on('ready', initializeApp);
 
 const shutdown = async () => {
     try {
-        // Prevent multiple shutdown attempts
         if (isQuitting) {
             return;
         }

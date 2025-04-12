@@ -36,6 +36,7 @@ class ArtCache {
         var hashableProductionProperties = Object.assign({}, inputs.productionProperties);
         delete hashableProductionProperties.inputDirectoryPath;
         delete hashableProductionProperties.outputDirectoryPath;
+        delete hashableProductionProperties.isCacheOnly;
         hash.update(JSON.stringify(hashableProductionProperties || {}));
 
         hash.update(inputs.templateContent || '');
@@ -73,7 +74,7 @@ class ArtCache {
     async cacheFiles(hash, svgContent, pngPath) {
         const cacheSvgPath = this.getCachedFilePath(hash, 'svg');
         const cachePngPath = this.getCachedFilePath(hash, 'png');
-
+        // console.log(`Caching ${cachePngPath}`);
         await fsExtra.writeFile(cacheSvgPath, svgContent);
         await fsExtra.copy(pngPath, cachePngPath);
     }

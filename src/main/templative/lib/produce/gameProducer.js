@@ -8,7 +8,7 @@ const chalk = require('chalk');
 const outputWriter = require('./outputWriter');
 const rulesMarkdownProcessor = require('./rulesMarkdownProcessor');
 const defineLoader = require('../manage/defineLoader');
-const customComponents = require('./customComponents/customComponents');
+const producerPicker = require('./customComponents/producerPicker');
 const ProduceProperties = require('../manage/models/produceProperties').ProduceProperties;
 const PreviewProperties = require('../manage/models/produceProperties').PreviewProperties;
 const GameData = require('../manage/models/gamedata').GameData;
@@ -71,11 +71,11 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     const fontCache = new FontCache();
     const svgFileCache = new SvgFileCache();
     
-    await customComponents.produceCustomComponentPreview(previewProperties, gameData, componentComposition, fontCache, svgFileCache);
+    await producerPicker.produceCustomComponentPreview(previewProperties, gameData, componentComposition, fontCache, svgFileCache);
     console.log(`Wrote previews to ${outputDirectoryPath}`);
 }
 
-async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage) {
+async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage, isClipped=false, isCacheOnly=false) {
     const startTime = performance.now();
     
     if (!gameRootDirectoryPath) {
@@ -84,39 +84,42 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
 
     const gameDataBlob = await defineLoader.loadGame(gameRootDirectoryPath);
 
-    const timestamp = new Date().toISOString().replace(/T/, '_').replace(/\..+/, '').replace(/:/g, '-'); 
     let componentFilterString = "";
     if (componentFilter != null) {
         componentFilterString = `_${componentFilter}`;
     }
-    const uniqueGameName = `${gameDataBlob['name']}_${gameDataBlob['versionName']}_${gameDataBlob['version']}_${timestamp}${componentFilterString}`.replace(/\s/g, "");
     
-    // This stuff isnt typically stored in the game.json, but it is for exporting
-    gameDataBlob["timestamp"] = timestamp;
-    gameDataBlob["componentFilter"] = componentFilter;
-
     const gameCompose = await defineLoader.loadGameCompose(gameRootDirectoryPath);
 
-    const outputDirectoryPath = await outputWriter.createGameFolder(gameRootDirectoryPath, gameCompose["outputDirectory"], uniqueGameName);
-    await outputWriter.updateLastOutputFolder(gameRootDirectoryPath, gameCompose["outputDirectory"], outputDirectoryPath);
-    console.log(`Producing ${path.normalize(outputDirectoryPath)}`);
-
-    const gameTasks = [];
-    gameTasks.push(outputWriter.copyGameFromGameFolderToOutput(gameDataBlob, outputDirectoryPath));
-
+    console.log(`Producing ${path.basename(gameRootDirectoryPath)}.`);
     const studioDataBlob = await defineLoader.loadStudio(gameRootDirectoryPath);
-    gameTasks.push(outputWriter.copyStudioFromGameFolderToOutput(studioDataBlob, outputDirectoryPath));
+    
+    var outputDirectoryPath = null;
+    if (!isCacheOnly) {
+        const timestamp = new Date().toISOString().replace(/T/, '_').replace(/\..+/, '').replace(/:/g, '-'); 
+        const uniqueGameName = `${gameDataBlob['name']}_${gameDataBlob['versionName']}_${gameDataBlob['version']}_${timestamp}${componentFilterString}`.replace(/\s/g, "");
+        
+        // This stuff isnt typically stored in the game.json, but it is for exporting
+        gameDataBlob["timestamp"] = timestamp;
+        gameDataBlob["componentFilter"] = componentFilter;
+        
+        outputDirectoryPath = await outputWriter.createGameFolder(gameRootDirectoryPath, gameCompose["outputDirectory"], uniqueGameName);
+        await outputWriter.updateLastOutputFolder(gameRootDirectoryPath, gameCompose["outputDirectory"], outputDirectoryPath);
+        
+        const gameTasks = [];
+        gameTasks.push(outputWriter.copyGameFromGameFolderToOutput(gameDataBlob, outputDirectoryPath));
 
-    const rules = await defineLoader.loadRules(gameRootDirectoryPath);
-    gameTasks.push(rulesMarkdownProcessor.produceRulebook(rules, outputDirectoryPath));
+        gameTasks.push(outputWriter.copyStudioFromGameFolderToOutput(studioDataBlob, outputDirectoryPath));
 
-    await Promise.all(gameTasks);
+        const rules = await defineLoader.loadRules(gameRootDirectoryPath);
+        gameTasks.push(rulesMarkdownProcessor.produceRulebook(rules, outputDirectoryPath));
+        await Promise.all(gameTasks);
+    }
     
     const componentsCompose = await defineLoader.loadComponentCompose(gameRootDirectoryPath);
 
     const gameData = new GameData(studioDataBlob, gameDataBlob);
-    const isClipped = false
-    const produceProperties = new ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage, isClipped);
+    const produceProperties = new ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage, isClipped, isCacheOnly);
     
     const fontCache = new FontCache();
     const svgFileCache = new SvgFileCache();
@@ -182,7 +185,7 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
     const totalTimeMs = endTime - startTime;
     const totalTimeSec = (totalTimeMs / 1000).toFixed(2);
     
-    console.log(`Done producing ${path.normalize(path.basename(outputDirectoryPath))} in ${totalTimeSec} seconds`);
+    console.log(`Done producing${outputDirectoryPath ? ` ${path.basename(outputDirectoryPath)} ` : ""} in ${totalTimeSec} seconds`);
     
     return outputDirectoryPath;
 }
@@ -192,12 +195,12 @@ async function produceGameComponent(produceProperties, gamedata, componentCompos
     const componentTypeTokens = componentType.split("_");
     const isStockComponent = componentTypeTokens[0].toUpperCase() === "STOCK";
 
-    if (isStockComponent) {
+    if (isStockComponent && produceProperties.outputDirectoryPath !== null && !produceProperties.isCacheOnly) {
         await produceStockComponent(componentComposition.componentCompose, produceProperties.outputDirectoryPath);
         return;
     }
 
-    await customComponents.produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache);
+    await producerPicker.produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache);
 }
 
 async function produceStockComponent(componentCompose, outputDirectory) {
