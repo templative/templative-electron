@@ -28,18 +28,17 @@ const CompositionSettingsModal = ({
     });
     
     const [selectedFiles, setSelectedFiles] = useState({
-        componentGamedataFilename: '',
-        piecesGamedataFilename: '',
-        artdataFrontFilename: '',
-        artdataBackFilename: '',
-        artdataDieFaceFilename: ''
+        componentGamedataFilename: currentFiles.componentGamedataFilename || '',
+        piecesGamedataFilename: currentFiles.piecesGamedataFilename || '',
+        artdataFrontFilename: currentFiles.artdataFrontFilename || null,
+        artdataBackFilename: currentFiles.artdataBackFilename || null,
+        artdataDieFaceFilename: currentFiles.artdataDieFaceFilename || null
     });
     
     const [selectedType, setSelectedType] = useState('');
     const [selectedDisabled, setSelectedDisabled] = useState(false);
     const [nameField, setNameField] = useState(name || '');
     const [quantityField, setQuantityField] = useState(quantity);
-    const [hasChanges, setHasChanges] = useState(false);
 
     useEffect(() => {
         const loadFiles = async () => {
@@ -80,14 +79,13 @@ const CompositionSettingsModal = ({
                 setSelectedFiles({
                     componentGamedataFilename: currentFiles.componentGamedataFilename || '',
                     piecesGamedataFilename: currentFiles.piecesGamedataFilename || '',
-                    artdataFrontFilename: currentFiles.artdataFrontFilename || '',
-                    artdataBackFilename: currentFiles.artdataBackFilename || '',
-                    artdataDieFaceFilename: currentFiles.artdataDieFaceFilename || ''
+                    artdataFrontFilename: currentFiles.artdataFrontFilename || null,
+                    artdataBackFilename: currentFiles.artdataBackFilename || null,
+                    artdataDieFaceFilename: currentFiles.artdataDieFaceFilename || null
                 });
                 
                 setSelectedType(componentType || '');
                 setSelectedDisabled(isDisabled || false);
-                setHasChanges(false);
             } catch (error) {
                 console.error('Error loading files:', error);
             }
@@ -104,26 +102,21 @@ const CompositionSettingsModal = ({
             ...prev,
             [key]: value
         }));
-        setHasChanges(true);
     };
 
     const handleTypeChange = (value) => {
         setSelectedType(value);
-        setHasChanges(true);
     };
 
     const handleDisabledChange = (value) => {
         setSelectedDisabled(value);
-        setHasChanges(true);
     };
     
     const handleQuantityChange = (value) => {
         setQuantityField(value);
-        setHasChanges(true);
     };
     const handleNameChange = (value) => {
         setNameField(value);
-        setHasChanges(true);
     };
 
     const handleSave = () => {
@@ -136,9 +129,32 @@ const CompositionSettingsModal = ({
         ...Object.keys(componentTypesCustomInfo || {}),
         ...Object.keys(componentTypesStockInfo || {})
     ];
+    
+    const handleReset = () => {
+        setSelectedFiles(prev => ({
+            ...prev,
+            componentGamedataFilename: currentFiles.componentGamedataFilename,
+            piecesGamedataFilename: currentFiles.piecesGamedataFilename,
+            artdataFrontFilename: currentFiles.artdataFrontFilename,
+            artdataBackFilename: currentFiles.artdataBackFilename,
+            artdataDieFaceFilename: currentFiles.artdataDieFaceFilename
+        }));
+        setSelectedType(componentType);
+        setSelectedDisabled(isDisabled);
+        setQuantityField(quantity);
+        setNameField(name);
+    };
 
 
     if (!show) return null;
+    const hasArtdataChanges = 
+        currentFiles.piecesGamedataFilename !== selectedFiles.piecesGamedataFilename ||
+        currentFiles.componentGamedataFilename !== selectedFiles.componentGamedataFilename ||
+        currentFiles.artdataFrontFilename !== selectedFiles.artdataFrontFilename ||
+        currentFiles.artdataBackFilename !== selectedFiles.artdataBackFilename || 
+        currentFiles.artdataDieFaceFilename !== selectedFiles.artdataDieFaceFilename;
+    
+    const hasChanges = quantityField !== quantity || nameField !== name || selectedDisabled !== isDisabled || hasArtdataChanges;
     return (
         <div className="modal-overlay" onClick={onHide}>
             <div className="modal-content modal-content-large" onClick={e => e.stopPropagation()}>
@@ -151,7 +167,7 @@ const CompositionSettingsModal = ({
                         <span className="input-group-text soft-label">Name</span>
                         <input type="text" className="form-control no-left-border no-right-border" placeholder="Name" aria-label="Search" value={nameField} onChange={async (e) => await handleNameChange(e.target.value)} />
                         <span className="input-group-text soft-label">Quantity</span>
-                        <input type="number" className="form-control no-left-border quantity-input" placeholder={0} aria-label="Search" value={quantityField} onChange={async (e) => await handleQuantityChange(e.target.value)} />                    
+                        <input type="number" className="form-control no-left-border quantity-input" placeholder={0} min={0} aria-label="Search" value={quantityField} onChange={async (e) => await handleQuantityChange(Math.max(0, e.target.value))} />                    
                     </div>
                         
                     <div className="disabled-toggle-container">
@@ -276,6 +292,13 @@ const CompositionSettingsModal = ({
                     )}
                     
                     <div className="modal-footer">
+                        <button 
+                            className="cancel-button" 
+                            onClick={handleReset}
+                            disabled={!hasChanges}
+                        >
+                            Reset to Original
+                        </button>
                         <button 
                             className="cancel-button" 
                             onClick={onHide}

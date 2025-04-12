@@ -92,9 +92,9 @@ export default function CompositionItem(props) {
             await updateComponentComposeFieldAsync(originalIndex, "name", nameChange);
         }
         if (quantityChange !== quantity) {
+            quantityChange = parseInt(quantityChange);
             await updateComponentComposeFieldAsync(originalIndex, "quantity", quantityChange);
-        }
-        
+        }        
 
         if (isDisabled !== props.isDisabled) {
             await updateComponentComposeFieldAsync(originalIndex, "disabled", isDisabled);
@@ -104,10 +104,16 @@ export default function CompositionItem(props) {
         const fileFields = {
             componentGamedataFilename: selectedFiles.componentGamedataFilename,
             piecesGamedataFilename: selectedFiles.piecesGamedataFilename,
-            artdataFrontFilename: selectedFiles.artdataFrontFilename,
-            artdataBackFilename: selectedFiles.artdataBackFilename,
-            artdataDieFaceFilename: selectedFiles.artdataDieFaceFilename
         };
+        if (selectedFiles.artdataFrontFilename) {
+            fileFields.artdataFrontFilename = selectedFiles.artdataFrontFilename;
+        }
+        if (selectedFiles.artdataBackFilename) {
+            fileFields.artdataBackFilename = selectedFiles.artdataBackFilename;
+        }
+        if (selectedFiles.artdataDieFaceFilename) {
+            fileFields.artdataDieFaceFilename = selectedFiles.artdataDieFaceFilename;
+        }
 
         for (const [field, value] of Object.entries(fileFields)) {
             if (value !== props[field]) {
