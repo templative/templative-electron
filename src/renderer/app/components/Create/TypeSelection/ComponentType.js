@@ -55,11 +55,12 @@ const ComponentType = ({
     }, [highlightedComponent, isShowingTemplates]);
 
     const dimensions = highlightedComponent["DimensionsPixels"] ? `${parseInt(highlightedComponent["DimensionsPixels"][0])} x ${parseInt(highlightedComponent["DimensionsPixels"][1])}px` : "";
+    const dimensionsInches = highlightedComponent["DimensionsInches"] ? `${parseInt(highlightedComponent["DimensionsInches"][0])} x ${parseInt(highlightedComponent["DimensionsInches"][1])}"` : "";
     const simulatorTask = highlightedComponent["SimulatorCreationTask"] ? highlightedComponent["SimulatorCreationTask"] : "";
     const gamecrafterUploadTask = highlightedComponent["GameCrafterUploadTask"] ? highlightedComponent["GameCrafterUploadTask"] : "";
     const variations = components.length > 1 ? `${components.length} variation${components.length > 1 ? 's' : ''}` : "";
     // const descriptor = [simulatorTask, gamecrafterUploadTask, dimensions, variations].filter(Boolean).join(' · ');
-    const descriptor = [dimensions, variations].filter(Boolean).join(' · ');
+    const descriptor = [dimensions, dimensionsInches, variations].filter(Boolean).join(' · ');
     return (
         <div className="component-type-wrapper">
             <button type="button" 
