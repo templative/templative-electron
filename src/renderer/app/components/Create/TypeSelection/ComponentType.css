@@ -211,6 +211,8 @@
 } 
 .component-type-descriptor {
     font-size: 12px;
+    margin-left: 4px;
+    font-weight: normal;
     color: var(--color-accent-disabled);
 }
 .export-icons-label {
