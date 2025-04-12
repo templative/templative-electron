@@ -1,10 +1,7 @@
 import React from "react";
 import EditCompositionRow from "./EditComposition/EditCompositionRow";
-import EditableViewerJson from "../EditableViewerJson";
 import TemplativeAccessTools from "../../../TemplativeAccessTools";
 import "./UnifiedComponentViewer.css"
-import CompositionControlsRow from "./CompositionControlsRow";
-import CompositionSettingsModal from "../../CompositionSettingsModal";
 import path from "path";
 
 export default class UnifiedComponentViewer extends React.Component { 
@@ -281,77 +278,35 @@ export default class UnifiedComponentViewer extends React.Component {
         
         this.handleCloseFileModal();
     }
-    
     render() {
-        return (
-            <>
-                {/* {this.state.componentInfo && 
-                    <CompositionControlsRow 
-                        componentName={this.state.componentInfo["name"]}
-                        updateComponentName={this.updateComponentName}
-                        type={this.state.componentInfo["type"]}
-                        updateComponentType={this.updateComponentType}
-                        quantity={this.state.componentInfo["quantity"]}
-                        updateQuantity={this.updateQuantity}
-                        isDisabled={this.state.componentInfo["disabled"]}
-                        renderComponent={this.props.renderComponent}
-                        isProcessing={this.state.isProcessing}
-                        componentTypesCustomInfo={this.props.componentTypesCustomInfo}
-                        componentTypesStockInfo={this.props.componentTypesStockInfo}
-                        updateRouteCallback={this.props.updateRouteCallback}
-                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                        onOpenFileModal={this.handleOpenFileModal}
-                    />
-                } */}
+        if (!this.state.loadedSubfiles) {
+            return null;
+        }
+        return <EditCompositionRow 
+            frontArtdataFilepath={this.state.frontArtdataFilepath}
+            backArtdataFilepath={this.state.backArtdataFilepath}
+            dieFaceArtdataFilepath={this.state.dieFaceArtdataFilepath}
+            hasFrontArtdata={this.state.hasFrontArtdata}
+            hasBackArtdata={this.state.hasBackArtdata}
+            hasDieFaceArtdata={this.state.hasDieFaceArtdata}
+            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+            handleFileSave={this.handleFileSave}
+            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
+            availableDataSources={this.state.availableDataSources}
+            
+            gamedataColumnWidth={this.state.gamedataColumnWidth}
+            isResizing={this.state.isResizing}
+            startResize={this.startResize}
+            
+            componentName={this.state.componentInfo["name"]}
+            studioGamedataFilepath={this.state.studioGamedataFilepath}
+            gameGamedataFilepath={this.state.gameGamedataFilepath}
+            componentGamedataFilepath={this.state.componentGamedataFilepath}
+            piecesGamedataFilepath={this.state.piecesGamedataFilepath}
+            showPreviewCallback={this.props.showPreviewCallback}
+            updateViewedFileUsingTabAsyncCallback={this.props.updateViewedFileUsingTabAsyncCallback}
+            updateCompositionFilepathCallback={this.updateFile}
+        />
                 
-                {this.state.loadedSubfiles &&
-                    <EditCompositionRow 
-                        frontArtdataFilepath={this.state.frontArtdataFilepath}
-                        backArtdataFilepath={this.state.backArtdataFilepath}
-                        dieFaceArtdataFilepath={this.state.dieFaceArtdataFilepath}
-                        hasFrontArtdata={this.state.hasFrontArtdata}
-                        hasBackArtdata={this.state.hasBackArtdata}
-                        hasDieFaceArtdata={this.state.hasDieFaceArtdata}
-                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                        handleFileSave={this.handleFileSave}
-                        updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                        availableDataSources={this.state.availableDataSources}
-                        
-                        gamedataColumnWidth={this.state.gamedataColumnWidth}
-                        isResizing={this.state.isResizing}
-                        startResize={this.startResize}
-                        
-                        componentName={this.state.componentInfo["name"]}
-                        studioGamedataFilepath={this.state.studioGamedataFilepath}
-                        gameGamedataFilepath={this.state.gameGamedataFilepath}
-                        componentGamedataFilepath={this.state.componentGamedataFilepath}
-                        piecesGamedataFilepath={this.state.piecesGamedataFilepath}
-                        showPreviewCallback={this.props.showPreviewCallback}
-                        updateViewedFileUsingTabAsyncCallback={this.props.updateViewedFileUsingTabAsyncCallback}
-                        updateCompositionFilepathCallback={this.updateFile}
-                    />
-                } 
-                {this.state.componentInfo && 
-                    <CompositionSettingsModal
-                        show={this.state.showFileModal}
-                        onHide={this.handleCloseFileModal}
-                        name={this.state.componentInfo["name"]}
-                        currentFiles={{
-                            componentGamedataFilename: this.state.componentInfo.componentGamedataFilename,
-                            piecesGamedataFilename: this.state.hasPiecesGamedata ? this.state.componentInfo.piecesGamedataFilename : null,
-                            artdataFrontFilename: this.state.hasFrontArtdata ? this.state.componentInfo.artdataFrontFilename : null,
-                            artdataBackFilename: this.state.hasBackArtdata ? this.state.componentInfo.artdataBackFilename : null,
-                            artdataDieFaceFilename: this.state.hasDieFaceArtdata ? this.state.componentInfo.artdataDieFaceFilename : null
-                        }}
-                        isDisabled={this.state.componentInfo.disabled}
-                        componentType={this.state.componentInfo.type}
-                        componentTypesCustomInfo={this.props.componentTypesCustomInfo}
-                        componentTypesStockInfo={this.props.componentTypesStockInfo}
-                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                        onSaveChanges={this.handleSaveFileChanges}
-                    />
-                }
-            </>
-        );
     }
 }

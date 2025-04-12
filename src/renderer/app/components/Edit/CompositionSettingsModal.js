@@ -12,6 +12,7 @@ const CompositionSettingsModal = ({
     show, 
     onHide, 
     name,
+    quantity,
     currentFiles,
     templativeRootDirectoryPath,
     onSaveChanges,
@@ -37,7 +38,7 @@ const CompositionSettingsModal = ({
     const [selectedType, setSelectedType] = useState('');
     const [selectedDisabled, setSelectedDisabled] = useState(false);
     const [nameField, setNameField] = useState(name || '');
-    const [quantity, setQuantity] = useState(quantity);
+    const [quantityField, setQuantityField] = useState(quantity);
     const [hasChanges, setHasChanges] = useState(false);
 
     useEffect(() => {
@@ -117,7 +118,7 @@ const CompositionSettingsModal = ({
     };
     
     const handleQuantityChange = (value) => {
-        setQuantity(value);
+        setQuantityField(value);
         setHasChanges(true);
     };
     const handleNameChange = (value) => {
@@ -126,7 +127,7 @@ const CompositionSettingsModal = ({
     };
 
     const handleSave = () => {
-        onSaveChanges(selectedFiles, selectedType, selectedDisabled, nameField, quantity);
+        onSaveChanges(selectedFiles, selectedType, selectedDisabled, nameField, quantityField);
         onHide();
     };
 
@@ -150,7 +151,7 @@ const CompositionSettingsModal = ({
                         <span className="input-group-text soft-label">Name</span>
                         <input type="text" className="form-control no-left-border no-right-border" placeholder="Name" aria-label="Search" value={nameField} onChange={async (e) => await handleNameChange(e.target.value)} />
                         <span className="input-group-text soft-label">Quantity</span>
-                        <input type="number" className="form-control no-left-border quantity-input" placeholder={0} aria-label="Search" value={quantity} onChange={async (e) => await handleQuantityChange(e.target.value)} />                    
+                        <input type="number" className="form-control no-left-border quantity-input" placeholder={0} aria-label="Search" value={quantityField} onChange={async (e) => await handleQuantityChange(e.target.value)} />                    
                     </div>
                         
                     <div className="disabled-toggle-container">
