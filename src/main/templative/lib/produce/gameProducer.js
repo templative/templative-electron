@@ -108,11 +108,9 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
         
         const gameTasks = [];
         gameTasks.push(outputWriter.copyGameFromGameFolderToOutput(gameDataBlob, outputDirectoryPath));
-
         gameTasks.push(outputWriter.copyStudioFromGameFolderToOutput(studioDataBlob, outputDirectoryPath));
-
-        const rules = await defineLoader.loadRules(gameRootDirectoryPath);
-        gameTasks.push(rulesMarkdownProcessor.produceRulebook(rules, outputDirectoryPath));
+        gameTasks.push(produceRules(gameRootDirectoryPath, outputDirectoryPath));
+        
         await Promise.all(gameTasks);
     }
     
@@ -188,6 +186,15 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
     console.log(`Done producing${outputDirectoryPath ? ` ${path.basename(outputDirectoryPath)} ` : ""} in ${totalTimeSec} seconds`);
     
     return outputDirectoryPath;
+}
+
+async function produceRules(gameRootDirectoryPath, outputDirectoryPath) {
+    try {
+        const rules = await defineLoader.loadRules(gameRootDirectoryPath);
+        await rulesMarkdownProcessor.produceRulebook(rules, outputDirectoryPath);
+    } catch (error) {
+        console.error(`Error producing rules:`, error);
+    }
 }
 
 async function produceGameComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache) {

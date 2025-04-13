@@ -7,9 +7,15 @@ const { SvgFileCache } = require('./svgscissors/modules/svgFileCache');
 
 class DiceProducer {
   static async createComponent(produceProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache = new SvgFileCache()) {
-    const piecesDataBlob = await defineLoader.loadPiecesGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"]);
-    if (!piecesDataBlob || Object.keys(piecesDataBlob).length === 0) {
-      console.log(`Skipping ${componentComposition.componentCompose["name"]} component due to missing pieces gamedata.`);
+    let piecesDataBlob = null;
+    try {
+      piecesDataBlob = await defineLoader.loadPiecesGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"]);
+      if (!piecesDataBlob || Object.keys(piecesDataBlob).length === 0) {
+        console.log(`Skipping ${componentComposition.componentCompose["name"]} component due to missing pieces gamedata.`);
+        return;
+      }
+    } catch (error) {
+      console.error(`Error producing custom component ${componentComposition.componentCompose["name"]}:`, error);
       return;
     }
 

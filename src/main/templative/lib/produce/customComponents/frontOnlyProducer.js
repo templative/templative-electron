@@ -8,9 +8,15 @@ const { SvgFileCache } = require('./svgscissors/modules/svgFileCache');
 
 class FrontOnlyProducer {
     static async createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache = new SvgFileCache()) {
-        const piecesDataBlob = await defineLoader.loadPiecesGamedata(previewProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"]);
-        if (!piecesDataBlob || Object.keys(piecesDataBlob).length === 0) {
-            console.log(`Skipping ${componentComposition.componentCompose["name"]} component due to missing pieces gamedata.`);
+        let piecesDataBlob = null;
+        try {
+            piecesDataBlob = await defineLoader.loadPiecesGamedata(previewProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"]);
+            if (!piecesDataBlob || Object.keys(piecesDataBlob).length === 0) {
+                console.log(`Skipping ${componentComposition.componentCompose["name"]} component due to missing pieces gamedata.`);
+                return;
+            }
+        } catch (error) {
+            console.error(`Error producing custom component ${componentComposition.componentCompose["name"]}:`, error);
             return;
         }
         await FrontOnlyProducer.createPiece(previewProperties, componentComposition, componentData, componentArtdata, piecesDataBlob, fontCache, svgFileCache);

@@ -56,9 +56,14 @@ class BackProducer {
         }];
         let piecesDataBlob = defaultPieceGamedataBlob;
         if (componentTypeInfo["HasPieceData"]) {
-            piecesDataBlob = await defineLoader.loadPiecesGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"]);
-            if (!piecesDataBlob || Object.keys(piecesDataBlob).length === 0) {
-                console.log(`Skipping ${componentComposition.componentCompose["name"]} component due to missing pieces gamedata.`);
+            try {
+                piecesDataBlob = await defineLoader.loadPiecesGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"]);
+                if (!piecesDataBlob || Object.keys(piecesDataBlob).length === 0) {
+                    console.log(`Skipping ${componentComposition.componentCompose["name"]} component due to missing pieces gamedata.`);
+                    return;
+                }
+            } catch (error) {
+                console.error(`Error producing custom component ${componentComposition.componentCompose["name"]}:`, error);
                 return;
             }
         }
@@ -86,7 +91,7 @@ class BackProducer {
                     }
                     skippedPieces.push(piece["name"]);
                 }
-                console.log(`Skipping ${componentComposition.componentCompose['name']}${uniqueComponentBackData.pieceUniqueBackHash} due to not have pieces to make. Skipped the following peices: ${skippedPieces}`);
+                // console.log(`Skipping ${componentComposition.componentCompose['name']}${uniqueComponentBackData.pieceUniqueBackHash} due to not have pieces to make. Skipped the following peices: ${skippedPieces}`);
                 continue;
             }
             await BackProducer.createComponentBackDataPieces(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, componentComposition, produceProperties, componentArtdata, piecesDataBlob, fontCache, svgFileCache);

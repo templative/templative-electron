@@ -38,14 +38,23 @@ async function getComponentArtdata(componentName, inputDirectoryPath, componentC
 
 async function produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache = new SvgFileCache()) {
   const componentName = componentComposition.componentCompose["name"];
-  const componentDataBlob = await defineLoader.loadComponentGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["componentGamedataFilename"]);
-  if (!componentDataBlob || Object.keys(componentDataBlob).length === 0) {
-    console.log(`Skipping ${componentName} component due to missing component gamedata.`);
+  let componentDataBlob = null;
+  try {
+    componentDataBlob = await defineLoader.loadComponentGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["componentGamedataFilename"]);
+    if (!componentDataBlob || Object.keys(componentDataBlob).length === 0) {
+      console.log(`Skipping ${componentName} component due to missing component gamedata.`);
+      return;
+    }
+  } catch (error) {
+    console.error(`Error producing custom component ${componentName}:`, error);
     return;
   }
 
-  const componentArtdata = await getComponentArtdata(componentName, produceProperties.inputDirectoryPath, componentComposition);
-  if (componentArtdata === null) {
+  let componentArtdata = null;
+  try {
+    componentArtdata = await getComponentArtdata(componentName, produceProperties.inputDirectoryPath, componentComposition);
+  } catch (error) {
+    console.error(`Error producing custom component ${componentName}:`, error);
     return;
   }
   const componentData = new ComponentData(gamedata.studioDataBlob, gamedata.gameDataBlob, componentDataBlob);
@@ -68,7 +77,13 @@ async function produceCustomComponentPreview(previewProperties, gamedata, compon
     return;
   }
 
-  const componentArtdata = await getComponentArtdata(componentName, previewProperties.inputDirectoryPath, componentComposition);
+  let componentArtdata = null;
+  try {
+    componentArtdata = await getComponentArtdata(componentName, previewProperties.inputDirectoryPath, componentComposition);
+  } catch (error) {
+    console.error(`Error producing custom component ${componentName}:`, error);
+    return;
+  }
   if (componentArtdata === null) {
     return;
   }

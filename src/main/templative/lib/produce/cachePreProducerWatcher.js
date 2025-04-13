@@ -4,6 +4,9 @@ const fs = require('fs');
 const { produceGame } = require('./gameProducer');
 const defineLoader = require('../manage/defineLoader');
 
+// This ties us to electron
+const mainProcess = require('electron').app;
+
 const SIMPLE = false;
 const NOT_PUBLISHED = false;
 const ENGLISH = "en";
@@ -24,16 +27,37 @@ class CachePreProducerWatcher {
 
     async openWatchers() {
         console.log(`Watching ${path.normalize(this.gameRootDirectoryPath)}`);
-        this.gameCompose = await defineLoader.loadGameCompose(this.gameRootDirectoryPath);
+        try {
+            this.gameCompose = await defineLoader.loadGameCompose(this.gameRootDirectoryPath);
+        } catch (error) {
+            console.error(`Error loading game compose:`, error);
+            return;
+        }
 
         const componentComposeFilepath = path.join(this.gameRootDirectoryPath, "component-compose.json");
-        console.log(componentComposeFilepath);
+        try {
+            await fsPromises.access(componentComposeFilepath, fs.constants.R_OK);
+        } catch (error) {
+            console.log(`Component compose file ${componentComposeFilepath} does not exist, skipping watcher setup...`);
+            return;
+        }
         this.componentComposeContents = await fsPromises.readFile(componentComposeFilepath, 'utf8');
         this.components = JSON.parse(this.componentComposeContents);
 
         const noComponentFilter = null;
-        // Do not await this, it will block the main thread
-        produceGame(this.gameRootDirectoryPath, noComponentFilter, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
+        if (mainProcess.isRendering) {
+            return;
+        }
+
+        mainProcess.isRendering = true;
+
+        try {
+            produceGame(this.gameRootDirectoryPath, noComponentFilter, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
+        } catch (error) {
+            console.error(`Error producing game from cache pre-producer watcher:`, error);
+        } finally {
+            mainProcess.isRendering = false; // Reset the flag after rendering is complete
+        }
 
         await this.setupArtWatchers();
         await this.setupComponentWatchers();
@@ -47,32 +71,80 @@ class CachePreProducerWatcher {
         this.artTemplatesWatcher = fs.watch(artTemplatesDirectory, async (eventType) => {
             if (eventType === 'change') {
                 console.log(`Art template file changed, triggering full rebuild...`);
-                // Do not await this, it will block the main thread
-                produceGame(this.gameRootDirectoryPath, null, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
+                if (mainProcess.isRendering) {
+                    return;
+                }
+                mainProcess.isRendering = true;
+
+                try {
+                    // Do not await this, it will block the main thread
+                    produceGame(this.gameRootDirectoryPath, null, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
+                } catch (error) {
+                    console.error(`Error producing game from art templates watcher:`, error);
+                } finally {
+                    mainProcess.isRendering = false;
+                }
             }
         });
 
         this.artInsertsWatcher = fs.watch(artInsertsDirectory, async (eventType) => {
             if (eventType === 'change') {
                 console.log(`Art insert file changed, triggering full rebuild...`);
-                // Do not await this, it will block the main thread
-                produceGame(this.gameRootDirectoryPath, null, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
+                if (mainProcess.isRendering) {
+                    return;
+                }
+                mainProcess.isRendering = true;
+                
+                try {
+                    // Do not await this, it will block the main thread
+                    produceGame(this.gameRootDirectoryPath, null, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
+                } catch (error) {
+                    console.error(`Error producing game from art inserts watcher:`, error);
+                } finally {
+                    mainProcess.isRendering = false;
+                }
             }
         });
     }
 
     async setupComponentWatchers() {
         const filePathsAndTheComponentsThatCareAboutThem = await this.getFilepathsAndTheComponentsThatCareAboutThem();
+        
         for (const [filepath, components] of Object.entries(filePathsAndTheComponentsThatCareAboutThem)) {
-            console.log(`Watching ${filepath} for changes...`, Array.from(components));
-            const watcher = fs.watch(filepath, this.debounce(async (eventType) => {
-                if (eventType !== 'change') {
-                    return;
-                }
-                console.log(`File ${filepath} changed, triggering rebuild for components: ${Array.from(components).join(', ')}`);
-                for (const componentName of components) {
-                    // Do not await this, it will block the main thread
-                    produceGame(this.gameRootDirectoryPath, componentName, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
+            // console.log(`Watching ${filepath} for changes...`, Array.from(components));
+            try {
+                await fsPromises.access(filepath, fs.constants.R_OK);
+            } catch (error) {
+                console.log(`File ${filepath} does not exist, skipping watcher setup for ${Array.from(components).join(', ')}...`);
+                continue;
+            }
+            let previousContents = await fsPromises.readFile(filepath, 'utf8');
+            const watcher = fs.watch(filepath, this.debounce(async () => {
+                try {
+                    const currentContents = await fsPromises.readFile(filepath, 'utf8');
+                    if (currentContents === previousContents) {
+                        return;
+                    }
+                    previousContents = currentContents;
+                    console.log(`File ${filepath} contents changed, triggering rebuild for components: ${Array.from(components).join(', ')}`);
+
+                    if (mainProcess.isRendering) {
+                        return;
+                    }
+                    mainProcess.isRendering = true;
+
+                    for (const componentName of components) {
+                        try {
+                            // Do not await this, it will block the main thread
+                            produceGame(this.gameRootDirectoryPath, componentName, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
+                        } catch (error) {
+                            console.error(`Error producing game from component ${componentName} watcher:`, error);
+                        } finally {
+                            mainProcess.isRendering = false; // Reset the flag after rendering is complete
+                        }
+                    }
+                } catch (error) {
+                    console.error(`Error reading file ${filepath}:`, error);
                 }
             }, 5000));
             this.componentWatchers[filepath] = watcher;
@@ -82,6 +154,10 @@ class CachePreProducerWatcher {
     async getFilepathsAndTheComponentsThatCareAboutThem() {
         const filePathsAndTheComponentsThatCareAboutThem = {};
         for (const component of this.components) {
+            const componentType = component.type;
+            if (componentType.startsWith("STOCK_")) {
+                continue;
+            }
             const filepathsComponentCaresAbout = await this.getFilepathsForComponent(component);
             for (const filepath of filepathsComponentCaresAbout) {
                 if (!filePathsAndTheComponentsThatCareAboutThem[filepath]) {
@@ -134,8 +210,19 @@ class CachePreProducerWatcher {
                 await this.setupComponentWatchers();
 
                 console.log(`Component compose file ${filename} contents changed, triggering rebuild...`);
-                // Do not await this, it will block the main thread
-                produceGame(this.gameRootDirectoryPath, null, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
+                if (mainProcess.isRendering) {
+                    return;
+                }
+
+                mainProcess.isRendering = true;
+
+                try {
+                    produceGame(this.gameRootDirectoryPath, null, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
+                } catch (error) {
+                    console.error(`Error producing game from component compose file watcher:`, error);
+                } finally {
+                    mainProcess.isRendering = false;
+                }
             } catch (err) {
                 console.error(`Error accessing component compose file: ${err}`);
             }
