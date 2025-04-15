@@ -302,7 +302,7 @@ export default class EditProjectView extends React.Component {
     }
     closeTabsToLeftAsync = async (index) => {
         var newTabbedFiles = Object.assign(this.state.tabbedFiles)
-        newTabbedFiles.splice(4, Math.max(0,index-4))
+        newTabbedFiles.splice(0, Math.max(0,index))
         this.setState({tabbedFiles: newTabbedFiles}, async () => await this.checkForCurrentTabRemovedAsync());
     }
     closeTabsToRightAsync = async (index) => {
@@ -314,7 +314,7 @@ export default class EditProjectView extends React.Component {
         var newTabbedFiles = []
         for (let index = 0; index < this.state.tabbedFiles.length; index++) {
             const tabbedFile = this.state.tabbedFiles[index];
-            if (index <= 3 || index === butIndex) {
+            if (index === butIndex) {
                 newTabbedFiles.push(tabbedFile)
             }
         }
@@ -322,12 +322,6 @@ export default class EditProjectView extends React.Component {
     }
     closeAllTabsAsync = async () => {
         var newTabbedFiles = []
-        for (let index = 0; index < this.state.tabbedFiles.length; index++) {
-            const tabbedFile = this.state.tabbedFiles[index];
-            if (index <= 3) {
-                newTabbedFiles.push(tabbedFile)
-            }
-        }
         this.setState({tabbedFiles: newTabbedFiles}, async () => await this.checkForCurrentTabRemovedAsync());
     }
     loadComponentComposeAsync = async () => {
