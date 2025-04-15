@@ -168,6 +168,22 @@ module.exports = [
         }
     },
     {
+        description: "Disable components tagged 'screen' or 'dial'",
+        condition: (component) => component.Tags && (component.Tags.includes("screen") || component.Tags.includes("dial")),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            return ["IsDisabled"];
+        }
+    },
+    {
+        description: "Disable components tagged 'stickers'",
+        condition: (component) => component.Tags && component.Tags.includes("stickers"),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            return ["IsDisabled"];
+        }
+    },
+    {
         description: "Components whose DisplayName contains 'Book' are tagged 'document'",
         condition: (component) => component.DisplayName && component.DisplayName.includes("Book") && !component.Tags.includes("document"),
         setValue: (component) => {

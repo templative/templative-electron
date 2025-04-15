@@ -16,7 +16,7 @@ const { channels } = require('../../../shared/constants');
 var path = require('path');
 
 // Extract major categories from COMPONENT_CATEGORIES structure
-const customMajorCategoryOrder = [  "deck", "die", "token", "board",  "mat", "packaging", "document", "stickers","blank", "screen", "dial"];
+const customMajorCategoryOrder = [  "deck", "die", "token", "board",  "mat", "packaging", "document", "blank"];
 
 const stockMajorCategoryOrder = ["dice","cube", "tube", "meeple"];
 

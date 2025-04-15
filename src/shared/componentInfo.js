@@ -2480,7 +2480,7 @@ const COMPONENT_INFO = {
       "stickers"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "DiceSticker",
@@ -2674,7 +2674,7 @@ const COMPONENT_INFO = {
       "dual"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "DualDial",
@@ -3398,7 +3398,7 @@ const COMPONENT_INFO = {
       "screen"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "LargeScreen",
@@ -3896,7 +3896,7 @@ const COMPONENT_INFO = {
       "medium"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "MediumScreen",
@@ -4096,7 +4096,7 @@ const COMPONENT_INFO = {
       "stickers"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "Meeple",
     "SimulatorCreationTask": "Meeple",
     "Key": "MeepleSticker",
@@ -4199,7 +4199,7 @@ const COMPONENT_INFO = {
       "stickers"
     ],
     "IsPrintingDisabled": true,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "MintTinSticker",
@@ -4231,7 +4231,7 @@ const COMPONENT_INFO = {
       "stickers"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "CustomStandee",
     "Key": "PawnSticker",
@@ -5031,7 +5031,7 @@ const COMPONENT_INFO = {
       "small"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "SmallDial",
@@ -5333,7 +5333,7 @@ const COMPONENT_INFO = {
       "small"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
     "Key": "SmallScreen",
@@ -6228,7 +6228,7 @@ const COMPONENT_INFO = {
       "stickers"
     ],
     "IsPrintingDisabled": false,
-    "IsDisabled": false,
+    "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "DECK",
     "Key": "TokenSticker",
