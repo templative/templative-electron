@@ -62,7 +62,7 @@ module.exports = {
       name: '@electron-forge/plugin-webpack',
       config: {
         mainConfig: './webpack.main.config.js',
-        devContentSecurityPolicy: "connect-src 'self' * 'unsafe-eval'",
+        devContentSecurityPolicy: "connect-src 'self' * 'unsafe-eval' sentry-ipc:",
         devServer: {
           hot: true,
           liveReload: false

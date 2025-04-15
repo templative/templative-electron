@@ -1,15 +1,17 @@
+import * as Sentry from "@sentry/electron/renderer";
 import { createRoot } from 'react-dom/client';
 import React from 'react';
 import App from './App';
 import ErrorBoundary from './ErrorBoundary';
 import 'bootstrap/dist/css/bootstrap.css';
-import axios from 'axios';
+import { ipcRenderer } from 'electron';
 
-// import * as Sentry from "@sentry/electron/renderer";
-
-// Sentry.init({
-//   dsn: "https://ea447f3e89982daf599068c5b6bf933c@o4508842181459968.ingest.us.sentry.io/4508859562328064",
-// });
+ipcRenderer.invoke('get-app-is-packaged').then(isPackaged => {
+    if (!isPackaged) {
+        return
+    }
+    Sentry.init({ dsn: "https://ea447f3e89982daf599068c5b6bf933c@o4508842181459968.ingest.us.sentry.io/4508859562328064" });
+});
 
 let root = null;
 

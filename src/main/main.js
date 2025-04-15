@@ -16,8 +16,11 @@ if (app.isPackaged) {
         release: `templative@${app.getVersion()}`,
       });
 }
+ipcMain.handle('get-app-is-packaged', () => {
+    return app.isPackaged;
+});
+    
 initializeAptabase("A-US-3966824173");
-
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // Ensure we only try to quit once
@@ -41,7 +44,7 @@ const createWindow = () => {
       webPreferences: {
         nodeIntegration: true,
         contextIsolation: false,
-        devTools: true,
+        devTools: !app.isPackaged,
         webSecurity: false,
       },
       backgroundColor: '#282c34'
@@ -49,7 +52,9 @@ const createWindow = () => {
     
     Menu.setApplicationMenu(mainMenu);
     templativeWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
-    // templativeWindow.webContents.openDevTools();
+    if (!app.isPackaged) {
+        templativeWindow.webContents.openDevTools();
+    }
     templativeWindow.on("close", async () => {
         await shutdown()
     })
