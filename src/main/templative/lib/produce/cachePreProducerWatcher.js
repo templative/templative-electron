@@ -68,43 +68,29 @@ class CachePreProducerWatcher {
         const artTemplatesDirectory = path.join(this.gameRootDirectoryPath, this.gameCompose["artTemplatesDirectory"]);
         const artInsertsDirectory = path.join(this.gameRootDirectoryPath, this.gameCompose["artInsertsDirectory"]);
 
-        this.artTemplatesWatcher = fs.watch(artTemplatesDirectory, async (eventType) => {
-            if (eventType === 'change') {
-                console.log(`Art template file changed, triggering full rebuild...`);
-                if (mainProcess.isRendering) {
-                    return;
-                }
-                mainProcess.isRendering = true;
-
-                try {
-                    // Do not await this, it will block the main thread
-                    produceGame(this.gameRootDirectoryPath, null, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
-                } catch (error) {
-                    console.error(`Error producing game from art templates watcher:`, error);
-                } finally {
-                    mainProcess.isRendering = false;
-                }
+        const fullRebuild = this.debounce(async (eventType) => {
+            if (eventType !== 'change') {
+                return
             }
-        });
-
-        this.artInsertsWatcher = fs.watch(artInsertsDirectory, async (eventType) => {
-            if (eventType === 'change') {
-                console.log(`Art insert file changed, triggering full rebuild...`);
-                if (mainProcess.isRendering) {
-                    return;
-                }
-                mainProcess.isRendering = true;
-                
-                try {
-                    // Do not await this, it will block the main thread
-                    produceGame(this.gameRootDirectoryPath, null, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
-                } catch (error) {
-                    console.error(`Error producing game from art inserts watcher:`, error);
-                } finally {
-                    mainProcess.isRendering = false;
-                }
+            if (mainProcess.isRendering) {
+                return;
             }
-        });
+            console.log(`Arts file changed, triggering full rebuild...`);
+            mainProcess.isRendering = true;
+            try {
+                // Do not await this, it will block the main thread
+                produceGame(this.gameRootDirectoryPath, null, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
+            } catch (error) {
+                console.error(`Error producing game from art inserts watcher:`, error);
+            } finally {
+                mainProcess.isRendering = false;
+            }
+        }, 5000)
+        
+        this.artTemplatesWatcher = fs.watch(artTemplatesDirectory, fullRebuild);
+        if (artTemplatesDirectory != artInsertsDirectory) {
+            this.artInsertsWatcher = fs.watch(artInsertsDirectory, fullRebuild);
+        }
     }
 
     async setupComponentWatchers() {
@@ -193,7 +179,7 @@ class CachePreProducerWatcher {
     }
 
     watchComponentComposeFile(componentComposeFilepath) {
-        this.componentComposeWatcher = fs.watch(componentComposeFilepath, async (_, filename) => {
+        const fullRebuildWithRewiring = this.debounce(async (_, filename) => {
             try {
                 await fsPromises.access(componentComposeFilepath, fs.constants.R_OK);
                 console.log(`Component compose file ${filename} changed, checking for content changes...`);
@@ -226,7 +212,8 @@ class CachePreProducerWatcher {
             } catch (err) {
                 console.error(`Error accessing component compose file: ${err}`);
             }
-        });
+        }, 5000)
+        this.componentComposeWatcher = fs.watch(componentComposeFilepath, fullRebuildWithRewiring);
     }
 
     debounce(func, wait) {
