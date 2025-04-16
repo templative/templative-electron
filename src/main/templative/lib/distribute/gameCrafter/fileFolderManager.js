@@ -28,27 +28,35 @@ async function createFolderAtRoot(gameCrafterSession, name) {
 }
 
 async function postFile(gameCrafterSession, filepath, folderId) {
-  try {
-    const stats = await fs.stat(filepath);
-    if (!stats.isFile()) {
-      throw new Error(`Not a file: ${filepath}`);
-    }
-  } catch (error) {
-    throw new Error(`File does not exist or cannot be accessed: ${filepath}`);
-  }
-
   const filename = path.basename(filepath);
   return await httpOperations.postFile(gameCrafterSession, filepath, filename, folderId);
 }
 
-async function createFileInFolder(gameCrafterSession, name, filepath, cloudComponentFolderId) {
-  const cloudFile = await postFile(gameCrafterSession, filepath, cloudComponentFolderId);
+async function attemptPostFile(gameCrafterSession, filepath, folderId) {
+  try {
+    return await postFile(gameCrafterSession, filepath, folderId);
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      console.log(`!!! File does not exist at ${filepath}.`);
+      return null;
+    }
+    throw error;
+  }
+}
+
+
+async function attemptCreateFileInFolder(gameCrafterSession, name, filepath, cloudComponentFolderId) {
+  const cloudFile = await attemptPostFile(gameCrafterSession, filepath, cloudComponentFolderId);
+  if (!cloudFile) {
+    console.log(`!!! File does not exist at ${filepath}.`);
+    return null;
+  }
   return cloudFile.id;
 }
 
 module.exports = {
   createGame,
   createFolderAtRoot,
-  postFile,
-  createFileInFolder
+  attemptPostFile,
+  attemptCreateFileInFolder,
 };

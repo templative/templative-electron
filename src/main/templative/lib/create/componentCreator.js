@@ -37,7 +37,15 @@ async function createCustomComponent(gameRootDirectoryPath, name, type, componen
     const componentInfo = COMPONENT_INFO[type];
 
     const gameCompose = await loadGameCompose(gameRootDirectoryPath);
+    if (!gameCompose) {
+        console.log("!!! game-compose.json not found.");
+        return;
+    }
     const componentComposeData = await loadComponentCompose(gameRootDirectoryPath);
+    if (!componentComposeData) {
+        console.log("!!! component-compose.json not found.");
+        return;
+    }
     await templateComponentProjectUpdater.addToComponentCompose(name, type, gameRootDirectoryPath, componentComposeData, componentInfo);
 
     const piecesDirectoryPath = join(gameRootDirectoryPath, gameCompose["piecesGamedataDirectory"]);
@@ -93,8 +101,11 @@ async function createStockComponent(gameRootDirectoryPath, name, stockPartId) {
         return;
     }
 
-    const gameCompose = await loadGameCompose(gameRootDirectoryPath);
     const componentComposeData = await loadComponentCompose(gameRootDirectoryPath);
+    if (!componentComposeData) {
+        console.log("!!! component-compose.json not found.");
+        return;
+    }
     await templateComponentProjectUpdater.addStockComponentToComponentCompose(name, stockPartId, gameRootDirectoryPath, componentComposeData);
 }
 

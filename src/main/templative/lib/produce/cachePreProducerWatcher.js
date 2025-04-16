@@ -3,6 +3,7 @@ const fsPromises = require('fs').promises;
 const fs = require('fs');
 const { produceGame } = require('./gameProducer');
 const defineLoader = require('../manage/defineLoader');
+const Sentry = require('@sentry/electron/main');
 
 // This ties us to electron
 const mainProcess = require('electron').app;
@@ -27,21 +28,20 @@ class CachePreProducerWatcher {
 
     async openWatchers() {
         console.log(`Watching ${path.normalize(this.gameRootDirectoryPath)}`);
-        try {
-            this.gameCompose = await defineLoader.loadGameCompose(this.gameRootDirectoryPath);
-        } catch (error) {
-            console.error(`Error loading game compose:`, error);
+        
+        this.gameCompose = await defineLoader.loadGameCompose(this.gameRootDirectoryPath);
+        if (!this.gameCompose) {
+            console.log("!!! game-compose.json not found.");
             return;
         }
 
         const componentComposeFilepath = path.join(this.gameRootDirectoryPath, "component-compose.json");
         try {
-            await fsPromises.access(componentComposeFilepath, fs.constants.R_OK);
+            this.componentComposeContents = await fsPromises.readFile(componentComposeFilepath, 'utf8');
         } catch (error) {
             console.log(`Component compose file ${componentComposeFilepath} does not exist, skipping watcher setup...`);
             return;
         }
-        this.componentComposeContents = await fsPromises.readFile(componentComposeFilepath, 'utf8');
         this.components = JSON.parse(this.componentComposeContents);
 
         const noComponentFilter = null;
@@ -55,6 +55,7 @@ class CachePreProducerWatcher {
             produceGame(this.gameRootDirectoryPath, noComponentFilter, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
         } catch (error) {
             console.error(`Error producing game from cache pre-producer watcher:`, error);
+            Sentry.captureException(error);
         } finally {
             mainProcess.isRendering = false; // Reset the flag after rendering is complete
         }
@@ -82,6 +83,7 @@ class CachePreProducerWatcher {
                 produceGame(this.gameRootDirectoryPath, null, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
             } catch (error) {
                 console.error(`Error producing game from art inserts watcher:`, error);
+                Sentry.captureException(error);
             } finally {
                 mainProcess.isRendering = false;
             }
@@ -125,6 +127,7 @@ class CachePreProducerWatcher {
                             produceGame(this.gameRootDirectoryPath, componentName, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
                         } catch (error) {
                             console.error(`Error producing game from component ${componentName} watcher:`, error);
+                            Sentry.captureException(error);
                         } finally {
                             mainProcess.isRendering = false; // Reset the flag after rendering is complete
                         }
@@ -206,6 +209,7 @@ class CachePreProducerWatcher {
                     produceGame(this.gameRootDirectoryPath, null, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
                 } catch (error) {
                     console.error(`Error producing game from component compose file watcher:`, error);
+                    Sentry.captureException(error);
                 } finally {
                     mainProcess.isRendering = false;
                 }

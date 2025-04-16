@@ -1,4 +1,3 @@
-const chalk = require('chalk');
 const { loadSvg } = require('../../../../distribute/simulator/imageProcessing/imageUtils');
 const { JSDOM } = require('jsdom');
 const { SvgFileCache } = require('./svgFileCache.js');
@@ -10,10 +9,15 @@ const defaultSvgFileCache = new SvgFileCache();
 // Takes an svg file and clips the visibility of its contents to the bounds of the clipSvgElementId
 async function clipSvgFileToClipFile(svgFilepath, clipSvgFilepath, clipSvgElementId=CLIPPING_ELEMENT_ID, svgFileCache=defaultSvgFileCache) {
     const svgContent = await svgFileCache.readSvgFile(svgFilepath);
+    if (!svgContent) {
+        const shortPath = path.basename(path.dirname(svgFilepath)) + path.sep + path.basename(svgFilepath);
+        console.log(`!!! SVG file ${shortPath} does not exist.`);
+        return false;
+    }
     const clipSvgContent = await svgFileCache.readSvgFile(clipSvgFilepath);
-        
-    if (!svgContent || !clipSvgContent) {
-        console.log(`!!! Failed to load SVG files for clipping.`);
+    if (!clipSvgContent) {
+        const shortPath = path.basename(path.dirname(clipSvgFilepath)) + path.sep + path.basename(clipSvgFilepath);
+        console.log(`!!! Clip SVG file ${shortPath} does not exist.`);
         return false;
     }
 
@@ -25,7 +29,8 @@ async function clipSvgContentToClipFile(svgContent, clipSvgFilepath, clipSvgElem
     const clipSvgContent = await svgFileCache.readSvgFile(clipSvgFilepath);
         
     if (!clipSvgContent) {
-        console.log(`!!! Failed to load SVG files for clipping.`);
+        const shortPath = path.basename(path.dirname(clipSvgFilepath)) + path.sep + path.basename(clipSvgFilepath);
+        console.log(`!!! Clip SVG file ${shortPath} does not exist.`);
         return false;
     }
     return clipSvgContentToElement(svgContent, clipSvgContent, clipSvgElementId);

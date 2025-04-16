@@ -1,5 +1,4 @@
 const { createHash } = require('crypto');
-const chalk = require('chalk');
 const fs = require('fs').promises;
 const { clipSvgFileToClipFile } = require('../../../produce/customComponents/svgscissors/modules/imageClipper');
 const { convertSvgContentToPng } = require('../../../produce/customComponents/svgscissors/modules/fileConversion/svgConverter');
@@ -11,6 +10,7 @@ const { SimulatorTilesetUrls, SimulatorComponentPlacement, SimulatorDimensions, 
 const { createD6CompositeImage } = require('../imageProcessing/compositeImageCreator');
 const { getColorValueHex } = require('../../../../../../shared/stockComponentColors');
 const path = require('path');
+const Sentry = require('@sentry/electron/main');
 
 /**
  * Adapter for creating a deck object
@@ -90,6 +90,7 @@ async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstruc
     };
   } catch (error) {
     console.log(`!!! Error creating deck for ${componentInstructions.uniqueName}: ${error}`);
+    Sentry.captureException(error);
     return null;
   }
 }
@@ -172,6 +173,7 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
     };
   } catch (error) {
     console.log(`!!! Error creating single card for ${componentInstructions.uniqueName || componentInstructions.name}: ${error}`);
+    Sentry.captureException(error);
     return null;
   }
 }
@@ -201,6 +203,7 @@ async function customDieAdapter(tabletopSimulatorImageDirectoryPath, componentIn
     };
   } catch (error) {
     console.log(`!!! Error creating dice from preview for ${componentInstructions.name}: ${error}`);
+    Sentry.captureException(error);
     return null;
   }
 }
@@ -259,6 +262,7 @@ async function clipAndGatherUrls(tabletopSimulatorImageDirectoryPath, componentI
     };
   } catch (error) {
     console.log(`!!! Error creating standees for ${componentInstructions.name}: ${error}`);
+    Sentry.captureException(error);
     return null;
   }
 }

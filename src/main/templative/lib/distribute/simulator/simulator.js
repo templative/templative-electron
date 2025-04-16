@@ -1,9 +1,8 @@
 const path = require('path');
 const fs = require('fs').promises;
-const chalk = require('chalk');
 const instructionsLoader = require('../../manage/instructionsLoader.js');
 const { createSave } = require('./simulatorTemplates/save.js');
-const { fileExists, lookForSimulatorFile, writeSimulatorFile, getSimulatorDirectory } = require('./utils/fileUtils.js');
+const { lookForSimulatorFile, writeSimulatorFile, getSimulatorDirectory } = require('./utils/fileUtils.js');
 const { createObjectStates, createComponentLibrary } = require('./objectCreation/objectStateFactory.js');
 
 /**
@@ -18,16 +17,19 @@ async function convertToTabletopSimulator(producedDirectoryPath, tabletopSimulat
 
   // Ensure the TTS directory exists
   try {
-    await fs.access(tabletopSimulatorDirectoryPath);
-  } catch {
-    console.log(`!!! Tabletop Simulator directory at ${tabletopSimulatorDirectoryPath} does not exist.`);
-    return 0
+    await fs.mkdir(tabletopSimulatorDirectoryPath, { recursive: true });
+  } catch (err) {
+    if (err.code !== 'EEXIST') {
+      throw err;
+    }
   }
 
-  const game = await instructionsLoader.loadGameInstructions(producedDirectoryPath);
-  const studio = await instructionsLoader.loadStudioInstructions(producedDirectoryPath);
-
-  console.log(`Converting ${game.name} into a Tabletop Simulator save.`);
+  const gameInstructions = await instructionsLoader.loadGameInstructions(producedDirectoryPath);
+  if (!gameInstructions) {
+    console.log("!!! game.json not found.");
+    return;
+  }
+  console.log(`Converting ${gameInstructions.name} into a Tabletop Simulator save.`);
 
   const uniqueGameName = path.basename(producedDirectoryPath);
 
@@ -36,10 +38,11 @@ async function convertToTabletopSimulator(producedDirectoryPath, tabletopSimulat
   let rulesContent = "";
   const rulesPath = path.join(producedDirectoryPath, "rules.md");
   try {
-    await fs.access(rulesPath);
     rulesContent = await fs.readFile(rulesPath, 'utf8');
   } catch (err) {
-    // Ignore if rules.md doesn't exist
+    if (err.code !== 'ENOENT') {
+      throw err;
+    }
   }
 
   const playerCount = 8;
@@ -63,10 +66,11 @@ async function createSaveFile(uniqueGameName, objectStates, tabletopSimulatorDir
   const savesDir = path.join(tabletopSimulatorDirectoryPath, "Saves");
   
   try {
-    await fs.access(savesDir);
-  } catch {
-    console.log(`Creating Saves directory at ${savesDir}`);
     await fs.mkdir(savesDir, { recursive: true });
+  } catch (err) {
+    if (err.code !== 'EEXIST') {
+      throw err;
+    }
   }
 
   const saveFilepath = path.join(savesDir, `${uniqueGameName}.json`);

@@ -1,4 +1,3 @@
-const chalk = require('chalk');
 const { fontCache, extractFontAttributes } = require('./fontHandler');
 /**
  * Escape special characters in a string for use in a regular expression

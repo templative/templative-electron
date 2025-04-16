@@ -3,20 +3,14 @@ const fs = require('fs').promises;
 const { copyFile } = require('fs').promises;
 const { createHash } = require('crypto');
 
-// Helper function to check if a directory exists
-async function directoryExists(directoryPath) {
-  try {
-    await fs.access(directoryPath);
-    return true;
-  } catch (error) {
-    return false;
-  }
-}
-
 async function createPackageDirectories(gameName, packagesDirectoryPath) {
     const packageDirectoryPath = path.join(packagesDirectoryPath, gameName);
-    if (!(await directoryExists(packageDirectoryPath))) {
+    try {
         await fs.mkdir(packageDirectoryPath, { recursive: true });
+    } catch (error) {
+        if (error.code !== 'EEXIST') {
+            throw error;
+        }
     }
 
     const subDirectoryNames = [
@@ -25,10 +19,13 @@ async function createPackageDirectories(gameName, packagesDirectoryPath) {
 
     for (const subDirectoryName of subDirectoryNames) {
         const subDirectoryPath = path.join(packageDirectoryPath, subDirectoryName);
-        if (await directoryExists(subDirectoryPath)) {
-            continue;
+        try {
+            await fs.mkdir(subDirectoryPath, { recursive: true });
+        } catch (error) {
+            if (error.code !== 'EEXIST') {
+                throw error;
+            }
         }
-        await fs.mkdir(subDirectoryPath, { recursive: true });
     }
 
     return packageDirectoryPath;

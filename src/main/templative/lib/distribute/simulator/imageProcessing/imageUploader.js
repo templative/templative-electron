@@ -1,6 +1,6 @@
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
-const chalk = require('chalk');
 const crypto = require('crypto');
+const Sentry = require('@sentry/electron/main');
 
 /**
  * Calculate MD5 hash from image buffer
@@ -67,6 +67,7 @@ async function uploadToS3(image) {
     }
     return presignedData.final_url;
   } catch (error) {
+    Sentry.captureException(error);
     console.log(`!!! Error uploading image: ${error}`);
     return null;
   }
@@ -103,6 +104,7 @@ async function uploadThroughServer(image) {
       return null;
     }
   } catch (error) {
+    Sentry.captureException(error);
     console.log(`!!! Error uploading image: ${error}`);
     return null;
   }

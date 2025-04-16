@@ -1,11 +1,11 @@
 const fs = require('fs').promises;
 const path = require('path');
-const chalk = require('chalk');
 const { createCustom } = require('./customCreator.js');
 const { createStock } = require('./stockCreator.js');
 const { createComponentLibraryChest } = require('../simulatorTemplates/objectState.js');
 const COMPONENT_INFO = require('../../../../../../shared/componentInfo.js').COMPONENT_INFO;
 const STOCK_COMPONENT_INFO = require('../../../../../../shared/stockComponentInfo.js').STOCK_COMPONENT_INFO;
+const Sentry = require('@sentry/electron/main');
 
 /**
  * Create object states for all components in a directory
@@ -22,7 +22,10 @@ async function createObjectStates(producedDirectoryPath, tabletopSimulatorDirect
   const tabletopSimulatorImageDirectoryPath = path.join(tabletopSimulatorDirectoryPath, "Mods/Images");
   try {
     await fs.access(tabletopSimulatorImageDirectoryPath);
-  } catch {
+  } catch (err) {
+    if (err.code !== 'ENOENT') {
+      throw err;
+    }
     console.log(`!!! TTS images directory at ${tabletopSimulatorImageDirectoryPath} does not exist.`);
     return []
   }
@@ -97,6 +100,7 @@ async function createObjectState(componentDirectoryPath, tabletopSimulatorDirect
     return await createCustom(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal);
   } catch (error) {
     console.log(`!!! Error creating object state for ${componentDirectoryPath}.`);
+    Sentry.captureException(error);
     console.log(error.message);
     return null;
   }

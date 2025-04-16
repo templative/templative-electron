@@ -60,15 +60,30 @@ class ArtCache {
     async getCachedFiles(hash) {
         const svgPath = this.getCachedFilePath(hash, 'svg');
         const pngPath = this.getCachedFilePath(hash, 'png');
-
-        if (await fsExtra.pathExists(svgPath) && await fsExtra.pathExists(pngPath)) {
-            return {
-                svg: await fsExtra.readFile(svgPath, 'utf8'),
-                svgPath,
-                pngPath
-            };
+        let svgContent = null;
+        try {
+            svgContent = await fsExtra.readFile(svgPath, 'utf8');
+        } catch (e) {
+            if (e.code !== 'ENOENT') {
+                throw e;
+            }
+            return null;
         }
-        return null;
+        try {
+            // This is us checking
+            await fsExtra.readFile(pngPath, 'utf8');
+        } catch (e) {
+            if (e.code !== 'ENOENT') {
+                throw e;
+            }
+            return null;
+        }
+        
+        return {
+            svg: svgContent,
+            svgPath,
+            pngPath
+        };
     }
 
     async cacheFiles(hash, svgContent, pngPath) {

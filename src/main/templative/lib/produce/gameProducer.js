@@ -3,7 +3,7 @@ const path = require('path');
 const fsPromises = require('fs').promises;
 const fs = require('fs');
 const glob = require('glob');
-const chalk = require('chalk');
+const Sentry = require('@sentry/electron/main');
 
 const outputWriter = require('./outputWriter');
 const rulesMarkdownProcessor = require('./rulesMarkdownProcessor');
@@ -16,7 +16,7 @@ const ComponentComposition = require('../manage/models/composition');
 const FontCache = require('./customComponents/svgscissors/fontCache').FontCache;
 const { SvgFileCache } = require('./customComponents/svgscissors/modules/svgFileCache');
 
-function getPreviewsPath() {
+async function getPreviewsPath() {
     let base_path;
     if (process.resourcesPath) {
         base_path = process.resourcesPath;
@@ -25,23 +25,23 @@ function getPreviewsPath() {
     }
 
     const previewsPath = path.join(base_path, "previews");
-    if (!fs.existsSync(previewsPath)) {
-        fs.mkdirSync(previewsPath, { recursive: true });
+    try {
+        await fsPromises.mkdir(previewsPath, { recursive: true });
+    } catch (err) {
+        if (err.code !== 'EEXIST') {
+            throw err;
+        }
     }
     return previewsPath;
 }
 
-async function deleteFile(file) {
-    try {
-        await fsPromises.unlink(file);
-    } catch (e) {
-        console.log(`Error deleting ${file}: ${e}`);
-    }
-}
-
 async function clearPreviews(directoryPath) {
     const files = glob.sync(path.join(directoryPath, '*'));
-    await Promise.all(files.map(deleteFile));
+    await Promise.all(files.map(filepath => fsPromises.unlink(filepath).catch(err => {
+        if (err.code !== 'ENOENT') {
+            throw err;
+        }
+    })));
 }
 
 async function producePiecePreview(gameRootDirectoryPath, componentName, pieceName, language) {
@@ -53,6 +53,11 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     const gameDataBlob = await defineLoader.loadGame(gameRootDirectoryPath);
     const studioDataBlob = await defineLoader.loadStudio(gameRootDirectoryPath);
     const componentsCompose = await defineLoader.loadComponentCompose(gameRootDirectoryPath);
+    if (!gameCompose || !gameDataBlob || !studioDataBlob || !componentsCompose) {
+        console.log(`!!! Malformed Templative Project. ${path.basename(gameRootDirectoryPath)} is missing: ${gameCompose ? "" : "game-compose.json "}${gameDataBlob ? "" : "game.json "}${studioDataBlob ? "" : "studio.json "}${componentsCompose ? "" : "component-compose.json "}`);
+        return;
+    }
+    
     let component = null;
     for (const componentCompose of componentsCompose) {
         const isMatchingComponentFilter = componentCompose["name"] === componentName;
@@ -63,7 +68,7 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     }
     const componentComposition = new ComponentComposition(gameCompose, component);
     const gameData = new GameData(studioDataBlob, gameDataBlob);
-    const outputDirectoryPath = getPreviewsPath();
+    const outputDirectoryPath = await getPreviewsPath();
     await clearPreviews(outputDirectoryPath);
     const isClipped = false
     const previewProperties = new PreviewProperties(gameRootDirectoryPath, outputDirectoryPath, pieceName, language, isClipped);
@@ -82,17 +87,22 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
         throw new Error("Game root directory path is invalid.");
     }
 
-    const gameDataBlob = await defineLoader.loadGame(gameRootDirectoryPath);
-
+    
     let componentFilterString = "";
     if (componentFilter != null) {
         componentFilterString = `_${componentFilter}`;
     }
     
     const gameCompose = await defineLoader.loadGameCompose(gameRootDirectoryPath);
-
-    console.log(`Producing ${path.basename(gameRootDirectoryPath)}.`);
+    const gameDataBlob = await defineLoader.loadGame(gameRootDirectoryPath);
     const studioDataBlob = await defineLoader.loadStudio(gameRootDirectoryPath);
+    const componentsCompose = await defineLoader.loadComponentCompose(gameRootDirectoryPath);
+    if (!gameCompose || !gameDataBlob || !studioDataBlob || !componentsCompose) {
+        console.log(`!!! Malformed Templative Project. ${path.basename(gameRootDirectoryPath)} is missing: ${gameCompose ? "" : "game-compose.json "}${gameDataBlob ? "" : "game.json "}${studioDataBlob ? "" : "studio.json "}${componentsCompose ? "" : "component-compose.json "}`);
+        return;
+    }
+    
+    console.log(`Producing ${path.basename(gameRootDirectoryPath)}.`);
     
     var outputDirectoryPath = null;
     if (!isCacheOnly) {
@@ -114,7 +124,6 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
         await Promise.all(gameTasks);
     }
     
-    const componentsCompose = await defineLoader.loadComponentCompose(gameRootDirectoryPath);
 
     const gameData = new GameData(studioDataBlob, gameDataBlob);
     const produceProperties = new ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage, isClipped, isCacheOnly);
@@ -191,8 +200,13 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
 async function produceRules(gameRootDirectoryPath, outputDirectoryPath) {
     try {
         const rules = await defineLoader.loadRules(gameRootDirectoryPath);
+        if (!rules) {
+            console.log("!!! rules.md not found.");
+            return;
+        }
         await rulesMarkdownProcessor.produceRulebook(rules, outputDirectoryPath);
     } catch (error) {
+        Sentry.captureException(error);
         console.error(`Error producing rules:`, error);
     }
 }
@@ -229,7 +243,6 @@ async function produceStockComponent(componentCompose, outputDirectory) {
 
 module.exports = {
     getPreviewsPath,
-    deleteFile,
     clearPreviews,
     producePiecePreview,
     produceGame,

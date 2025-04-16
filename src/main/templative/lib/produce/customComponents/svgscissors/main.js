@@ -10,7 +10,7 @@ const { addOverlays, collectOverlayFiles} = require("./artdataProcessing/overlay
 const { textReplaceInFile} = require("./artdataProcessing/textReplacer.js");
 const { updateStylesInFile} = require("./artdataProcessing/styleUpdater.js");
 const { clipSvgContentToClipFile, CLIPPING_ELEMENT_ID } = require("./modules/imageClipper.js");
-const { getComponentTemplate } = require("../../../componentTemplateUtility.js");
+const { getComponentTemplateFilepath } = require("../../../componentTemplateUtility.js");
 const { preprocessSvgText } = require('./modules/fileConversion/textWrapping/index.js');
 const { SvgFileCache } = require('./modules/svgFileCache.js');
 const { ArtCache } = require('./modules/artCache.js');
@@ -114,23 +114,18 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
     const isCachingWithoutOutput = productionProperties.isCacheOnly || componentBackOutputDirectory === null;
     const artFilename = `${artdata["templateFilename"]}.svg`;
     const artFilepath = path.normalize(path.join(productionProperties.inputDirectoryPath, templateFilesDirectory, artFilename));
-    if (!await fsExtra.pathExists(artFilepath)) {
-      console.log(`!!! Template art file ${artFilepath} does not exist.`);
-      return;
-    }
+
     const componentType = compositions.componentCompose["type"]
-  
     if (!(componentType in COMPONENT_INFO)) {
       throw new Error(`No image size for ${componentType}`);
     }
     const component = COMPONENT_INFO[componentType];
   
-    let templateContent = null;
-    try {
-      templateContent = await svgFileCache.readSvgFile(artFilepath);
-    } catch (e) {
-      console.log(`!!! Template art file ${artFilepath} cannot be parsed. Error: ${e}`);
-      return;
+    let templateContent = await svgFileCache.readSvgFile(artFilepath);
+    if (!templateContent) {
+        const shortPath = path.basename(path.dirname(artFilepath)) + path.sep + path.basename(artFilepath);
+        console.log(`!!! Template art file ${shortPath} does not exist.`);
+        return;
     }
   
     const pieceName = gamedata.pieceData ? gamedata.pieceData["name"] : gamedata.componentBackDataBlob["name"];
@@ -183,8 +178,15 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       contents = await preprocessSvgText(contents);
       
       if (productionProperties.isClipped) {
-          const clipSvgFilepath = await getComponentTemplate(componentType);
-          contents = await clipSvgContentToClipFile(contents, clipSvgFilepath, CLIPPING_ELEMENT_ID, svgFileCache);
+          const potentialPaths = await getComponentTemplateFilepath(componentType);
+          const clipSvgFilepath = path.join(potentialPaths, `${componentType}.svg`);
+          try {
+            contents = await clipSvgContentToClipFile(contents, clipSvgFilepath, CLIPPING_ELEMENT_ID, svgFileCache);
+          } catch (error) {
+            if (error.code !== 'ENOENT') {
+              throw error;
+            }
+          }
       }
       // Create and cache the files
       await createArtfile(contents, artFileOutputName, imageSizePixels, absoluteOutputDirectory);

@@ -1,4 +1,3 @@
-const chalk = require('chalk');
 const { extractFontSize, estimateLineHeight, extractNumericPropertyFromStyle, fontCache, extractFontAttributes, calculateLineHeightForLine } = require('./fontHandler');
 const { wrapText, estimateContainerWidth } = require('./textWrapper');
 const { getShapeBounds } = require('./shapeProcessor');

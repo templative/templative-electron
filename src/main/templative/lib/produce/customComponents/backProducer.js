@@ -5,8 +5,8 @@ const path = require('path');
 const defineLoader = require('../../manage/defineLoader');
 const { COMPONENT_INFO } = require('../../../../../shared/componentInfo');
 const { ComponentBackData } = require('../../manage/models/gamedata');
-const chalk = require('chalk');
 const { SvgFileCache } = require('./svgscissors/modules/svgFileCache');
+const Sentry = require('@sentry/electron/main');
 
 class BackProducer {
     static async createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache = new SvgFileCache()) {
@@ -64,6 +64,7 @@ class BackProducer {
                 }
             } catch (error) {
                 console.error(`Error producing custom component ${componentComposition.componentCompose["name"]}:`, error);
+                Sentry.captureException(error);
                 return;
             }
         }

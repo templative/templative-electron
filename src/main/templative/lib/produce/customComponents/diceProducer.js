@@ -4,6 +4,7 @@ const path = require('path');
 const defineLoader = require('../../manage/defineLoader');
 const { ComponentBackData } = require('../../manage/models/gamedata');
 const { SvgFileCache } = require('./svgscissors/modules/svgFileCache');
+const Sentry = require('@sentry/electron/main');
 
 class DiceProducer {
   static async createComponent(produceProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache = new SvgFileCache()) {
@@ -16,6 +17,7 @@ class DiceProducer {
       }
     } catch (error) {
       console.error(`Error producing custom component ${componentComposition.componentCompose["name"]}:`, error);
+      Sentry.captureException(error);
       return;
     }
 

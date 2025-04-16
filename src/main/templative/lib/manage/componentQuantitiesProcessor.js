@@ -4,13 +4,17 @@ async function listComponentQuantities(gameRootDirectoryPath) {
     if (!gameRootDirectoryPath) {
         throw new Error("Game root directory path is invalid.");
     }
-
-    const game = await defineLoader.loadGame(gameRootDirectoryPath);
     const gameCompose = await defineLoader.loadGameCompose(gameRootDirectoryPath);
-    const studioCompose = await defineLoader.loadStudio(gameRootDirectoryPath);
+    if (!gameCompose) {
+        console.log("!!! game-compose.json not found.");
+        return;
+    }
     const componentCompose = await defineLoader.loadComponentCompose(gameRootDirectoryPath);
-
-    console.log(`${game["name"]} by ${studioCompose["name"]}`);
+    if (!componentCompose) {
+        console.log("!!! component-compose.json not found.");
+        return;
+    }
+    
     await printGameComponentQuantities(gameRootDirectoryPath, gameCompose, componentCompose);
 }
 

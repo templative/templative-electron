@@ -1,7 +1,7 @@
-const fs = require('fs-extra');
+const fsExtra = require('fs-extra');
 const path = require('path');
 const { Resvg } = require('@resvg/resvg-js');
-
+const Sentry = require('@sentry/electron/main');
 
 /**
  * Create a fallback SVG
@@ -32,14 +32,21 @@ async function convertToJpg(absoluteOutputDirectory, name, pngFilepath) {
   try {
     const { Image } = require('image-js');
     
-    // Check if PNG file exists before attempting to load it
-    if (!await fs.pathExists(pngFilepath)) {
-      throw new Error(`PNG file does not exist: ${pngFilepath}`);
+    // Load PNG image
+    
+    let image;
+    try {
+      image = await Image.load(pngFilepath);
+    } catch (e) {
+      if (e.code !== 'ENOENT') {
+        throw e;
+      }
+      console.log(`!!! PNG file ${pngFilepath} does not exist.`);
+      Sentry.captureException(e);
+      return null;
     }
     
-    // Load PNG image
-    const image = await Image.load(pngFilepath);
-    
+
     // Convert to JPG
     const jpgImage = image.rgba8().background({ r: 255, g: 255, b: 255 });
     
@@ -54,6 +61,33 @@ async function convertToJpg(absoluteOutputDirectory, name, pngFilepath) {
   }
 }
 
+async function createFallbackPng(imageSizePixels) {
+  try {
+    console.log('⚠️ Creating fallback image...');
+    
+    // Create a minimal SVG as a fallback
+    const minimalSvg = createFallbackSvg(imageSizePixels);
+    
+    resvg = new Resvg(minimalSvg, {
+      font: {
+        loadSystemFonts: true,
+        defaultFontFamily: 'Arial',
+        fallbackFamilies: ['Helvetica', 'sans-serif']
+      },
+      fitTo: {
+        mode: 'width',
+        value: imageSizePixels[0]
+      }
+    });
+    
+    console.log('🆘 Created fallback placeholder image');
+  } catch (finalError) {
+    console.error('❌ All conversion attempts failed');
+    Sentry.captureException(finalError);
+    throw finalError; // Throw the original error
+  }
+  return resvg;
+}
 
 async function convertSvgContentToPng(svgString, imageSizePixels, outputFilepath) {
   try {
@@ -73,40 +107,15 @@ async function convertSvgContentToPng(svgString, imageSizePixels, outputFilepath
     } catch (resvgError) {
       console.error(`Error creating Resvg instance: ${resvgError.message}`);
       console.error(resvgError.stack);
+      Sentry.captureException(resvgError);
       
       // Try to create a fallback image
-      try {
-        console.log('⚠️ Creating fallback image...');
-        
-        // Create a minimal SVG as a fallback
-        const minimalSvg = createFallbackSvg(imageSizePixels);
-        
-        resvg = new Resvg(minimalSvg, {
-          font: {
-            loadSystemFonts: true,
-            defaultFontFamily: 'Arial',
-            fallbackFamilies: ['Helvetica', 'sans-serif']
-          },
-          fitTo: {
-            mode: 'width',
-            value: imageSizePixels[0]
-          }
-        });
-        
-        console.log('🆘 Created fallback placeholder image');
-      } catch (finalError) {
-        console.error('❌ All conversion attempts failed');
-        throw resvgError; // Throw the original error
-      }
+      resvg = await createFallbackPng(imageSizePixels);
     }
     
     const pngData = resvg.render();
     const pngBuffer = pngData.asPng();
-    
-    // Ensure output directory exists - use the directory cache to avoid repeated calls
-    const outputDir = path.dirname(outputFilepath);
-    await fs.ensureDir(outputDir);
-    await fs.writeFile(outputFilepath, pngBuffer);
+    await fsExtra.outputFile(outputFilepath, pngBuffer);
     
     return outputFilepath;
   } catch (err) {

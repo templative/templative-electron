@@ -3,11 +3,14 @@ const path = require('path');
 
 async function lookForAnimationFile() {
     const animationFileLocation = "./.animation";
-    if (!await fs.exists(animationFileLocation)) {
-        return null;
+    try {
+        return await fs.readFile(animationFileLocation, 'utf8');
+    } catch (error) {
+        if (error.code === 'ENOENT') {
+            return null;
+        }
+        throw error;
     }
-    
-    return await fs.readFile(animationFileLocation, 'utf8');
 }
 
 async function writeAnimationFile(outputPath) {

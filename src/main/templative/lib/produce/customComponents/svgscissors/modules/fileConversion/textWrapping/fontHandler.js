@@ -123,7 +123,7 @@ class FontCache {
    * @param {string} fontFamily - Font family to find
    * @returns {string|null} - Path to font file or null if not found
    */
-  findFontFile(fontFamily) {
+  async findFontFile(fontFamily) {
     const normalizedFontFamily = this.normalizeFontFamily(fontFamily);
     
     // Check if we already have a path for this font
@@ -170,15 +170,17 @@ class FontCache {
     }
     
     // Try to find the font in the font directories
-    for (const dir of fontDirs) {
-      if (!fs.existsSync(dir)) continue;
-      
+    for (const dir of fontDirs) {      
       for (const variation of variations) {
         const fontPath = path.join(dir, variation);
-        if (fs.existsSync(fontPath)) {
-          // Cache the path for future use
+        try {
+          await fsPromises.access(fontPath);
           this.fontPaths[normalizedFontFamily] = fontPath;
           return fontPath;
+        } catch (err) {
+          if (err.code !== 'ENOENT') {
+            throw err;
+          }
         }
       }
     }
@@ -209,21 +211,20 @@ class FontCache {
       if (this.fontkitAvailable) {
         for (const [fontName, fontPath] of Object.entries(this.fontPaths)) {
           try {
-            if (fs.existsSync(fontPath)) {
-              // console.log(`Loading font ${fontName} from ${fontPath}`);
-              const font = fontkit.openSync(fontPath);
-              
-              // Test if the font has the expected methods
-              if (font && typeof font.layout === 'function') {
-                this.fontkitFonts.set(fontName, font);
-                // console.log(`Successfully loaded font ${fontName} with fontkit`);
-              } else {
-                // console.warn(`Font ${fontName} loaded but doesn't have expected methods`);
-              }
+            // console.log(`Loading font ${fontName} from ${fontPath}`);
+            const font = await fontkit.open(fontPath);
+            
+            // Test if the font has the expected methods
+            if (font && typeof font.layout === 'function') {
+              this.fontkitFonts.set(fontName, font);
+              // console.log(`Successfully loaded font ${fontName} with fontkit`);
             } else {
-              // console.warn(`Font file not found: ${fontPath}`);
+              // console.warn(`Font ${fontName} loaded but doesn't have expected methods`);
             }
           } catch (err) {
+            if (err.code !== 'ENOENT') {
+              throw err;
+            }
             console.error(`Error loading font ${fontName} with fontkit:`, err);
           }
         }
@@ -264,7 +265,7 @@ class FontCache {
    * @param {string} fontFamily - Font family
    * @returns {Object|null} - Fontkit font object or null if not found
    */
-  getFontkitFont(fontFamily) {
+  async getFontkitFont(fontFamily) {
     if (!this.initialized) {
       this.initialize();
     }
@@ -284,16 +285,16 @@ class FontCache {
     let fontPath = this.fontPaths[normalizedFontFamily];
     
     // If not found in predefined paths, try to find it on the system
-    if (!fontPath || !fs.existsSync(fontPath)) {
-      fontPath = this.findFontFile(normalizedFontFamily);
+    if (!fontPath) {
+      fontPath = await this.findFontFile(normalizedFontFamily);
     }
     
     // If we found a font path, try to load it with fontkit
-    if (fontPath && fs.existsSync(fontPath)) {
+    if (fontPath) {
       try {
         // For TrueType Collection (.ttc) files
         if (fontPath.toLowerCase().endsWith('.ttc') || fontPath.toLowerCase().endsWith('.dfont')) {
-          const collection = fontkit.openSync(fontPath);
+          const collection = await fontkit.open(fontPath);
           
           // First try to get the font by postscript name
           try {
@@ -330,6 +331,9 @@ class FontCache {
           return font;
         }
       } catch (err) {
+        if (err.code !== 'ENOENT') {
+          throw err;
+        }
         console.error(`Error loading font ${normalizedFontFamily}:`, err);
       }
     }
@@ -359,8 +363,8 @@ class FontCache {
    * @param {string} fontStyle - Font style
    * @returns {number} - Character width
    */
-  calculateCharWidth(char, fontFamily, fontSize, fontWeight = 'normal', fontStyle = 'normal') {
-    const font = this.getFontkitFont(fontFamily);
+  async calculateCharWidth(char, fontFamily, fontSize, fontWeight = 'normal', fontStyle = 'normal') {
+    const font = await this.getFontkitFont(fontFamily);
     
     if (font && typeof font.layout === 'function') {
       try {
@@ -413,8 +417,8 @@ class FontCache {
    * @param {string} fontStyle - Font style
    * @returns {number} - Character height
    */
-  calculateCharHeight(char, fontFamily, fontSize, fontWeight = 'normal', fontStyle = 'normal') {
-    const font = this.getFontkitFont(fontFamily);
+  async calculateCharHeight(char, fontFamily, fontSize, fontWeight = 'normal', fontStyle = 'normal') {
+    const font = await this.getFontkitFont(fontFamily);
     
     if (font && typeof font.layout === 'function') {
       try {
@@ -508,7 +512,7 @@ class FontCache {
    * @param {number} offset - Offset of this text within the overall content
    * @returns {number} - Text width
    */
-  calculateTextWidth(text, formattingRanges = [], defaultFontSize = 12, defaultFontFamily = 'Arial', offset = 0) {
+  async calculateTextWidth(text, formattingRanges = [], defaultFontSize = 12, defaultFontFamily = 'Arial', offset = 0) {
     if (!text) return 0;
     
     let totalWidth = 0;
@@ -529,7 +533,7 @@ class FontCache {
         const fontWeight = formattingRanges.length === 1 ? (formattingRanges[0].fontWeight || 'normal') : 'normal';
         const fontStyle = formattingRanges.length === 1 ? (formattingRanges[0].fontStyle || 'normal') : 'normal';
         
-        const font = this.getFontkitFont(fontFamily);
+        const font = await this.getFontkitFont(fontFamily);
         if (font && typeof font.layout === 'function') {
           try {
             const run = font.layout(text);

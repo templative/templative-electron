@@ -1,11 +1,10 @@
 const path = require('path');
 const { Image } = require('image-js');
-const chalk = require('chalk');
 const { safeLoadImage, createPlaceholderImage } = require('./imageUtils');
 const { uploadToS3 } = require('./imageUploader');
-const { fileExists } = require('../utils/fileUtils');
 const { findBoxiestShape } = require('../utils/geometryUtils');
 const { copyFile } = require('../utils/fileUtils');
+const Sentry = require('@sentry/electron/main');
 
 /**
  * Paint one image onto another at the specified position
@@ -124,6 +123,7 @@ async function createCompositeImage(componentName, componentType, quantity, fron
         
         cardIndex += 1;
       } catch (error) {
+        Sentry.captureException(error);
         console.log(`!!! Error processing image ${instruction.filepath}: ${error}`);
         let placeholderImage = createPlaceholderImage(pixelDimensions[0], pixelDimensions[1]);
         if (scaleFactor !== 1.0) {
@@ -183,6 +183,7 @@ async function createCompositeImage(componentName, componentType, quantity, fron
     
     return [url, totalCount, columns, rows];
   } catch (error) {
+    Sentry.captureException(error);
     console.log(`!!! Error creating composite image for ${componentName}: ${error}`);
     return [null, 0, 0, 0];
   }
@@ -212,8 +213,16 @@ async function placeAndUploadBackImage(name, componentType, backInstructions, ta
       pixelDimensions
     );
     
-    if (backInstructions && await fileExists(backInstructions.filepath)) {
-      await copyBackImageToImages(name, backInstructions, tabletopSimulatorImageDirectoryPath);
+    if (backInstructions) {
+      try { 
+        await copyBackImageToImages(name, backInstructions, tabletopSimulatorImageDirectoryPath);
+      } catch (error) {
+        if (error.code === 'ENOENT') {
+          console.log(`!!! Back image for ${name} not found.`);
+          return null;
+        }
+        throw error;
+      }
     }
     
     // Upload the image to S3
@@ -225,6 +234,7 @@ async function placeAndUploadBackImage(name, componentType, backInstructions, ta
     
     return url;
   } catch (error) {
+    Sentry.captureException(error);
     console.log(`!!! Error processing back image for ${name}: ${error}`);
     return null;
   }
@@ -238,13 +248,9 @@ async function placeAndUploadBackImage(name, componentType, backInstructions, ta
  * @returns {Promise<void>}
  */
 async function copyBackImageToImages(componentName, backInstructions, tabletopSimulatorImageDirectoryPath) {
-  try {
     const backImageName = `${componentName}-back.png`;
     const backImageFilepath = path.join(tabletopSimulatorImageDirectoryPath, backImageName);
     await copyFile(backInstructions.filepath, backImageFilepath);
-  } catch (error) {
-    console.log(`!!! Error copying back image for ${componentName}: ${error}`);
-  }
 }
 
 async function createD6CompositeImage(name, color, filepaths, tabletopSimulatorImageDirectoryPath) {
@@ -305,6 +311,7 @@ async function createD6CompositeImage(name, color, filepaths, tabletopSimulatorI
           // Paint the resized face onto the base image
           paintImageOnto(baseImage, resizedFaceImage, x, y);
         } catch (error) {
+          Sentry.captureException(error);
           console.log(`Warning: Could not load die face ${i+1} from ${filepaths[i]}: ${error}`);
           // Continue with other faces
         }
@@ -319,6 +326,7 @@ async function createD6CompositeImage(name, color, filepaths, tabletopSimulatorI
     }
     return imageUrl;
   } catch (error) {
+    Sentry.captureException(error);
     console.log(`!!! Error creating D6 composite image for ${name}: ${error}`);
     return null;
   }

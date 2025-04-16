@@ -2,9 +2,18 @@ const { writeFile } = require('fs/promises');
 const { join } = require('path');
 const { mdToPdf } = require('md-to-pdf');
 const fs = require('fs');
+const fsPromises = require('fs').promises;
 const path = require('path');
+const Sentry = require('@sentry/electron/main');
 
 async function produceRulebook(rulesMdContent, gameFolderPath) {
+  if (!rulesMdContent) {
+    console.log("!!! rulesMdContent is blank.");
+    return;
+  }
+  if (!gameFolderPath) {
+    throw new Error("gameFolderPath is blank.");
+  }
   try {
     // Diagnostic checks
     const cwd = process.cwd();
@@ -45,10 +54,11 @@ async function produceRulebook(rulesMdContent, gameFolderPath) {
     `;
     
     try {
-      fs.writeFileSync(tempCssPath, cssContent);
+      await fsPromises.writeFile(tempCssPath, cssContent);
       tempFiles.push(tempCssPath);
     } catch (cssError) {
       console.warn(`Warning: Could not create temporary CSS file: ${cssError.message}`);
+      Sentry.captureException(cssError);
     }
     
     // 2. Create both possible styles directories
@@ -58,14 +68,16 @@ async function produceRulebook(rulesMdContent, gameFolderPath) {
     ];
     
     // Create all possible styles directories
-    stylesDirs.forEach(dir => {
-      if (!fs.existsSync(dir)) {
+    stylesDirs.forEach(async (dir) => {
         try {
-          fs.mkdirSync(dir, { recursive: true });
+          await fsPromises.mkdir(dir, { recursive: true });
         } catch (dirError) {
+          if (dirError.code !== 'EEXIST') {
+            throw dirError;
+          }
           console.warn(`Warning: Could not create styles directory ${dir}: ${dirError.message}`);
+          Sentry.captureException(dirError);
         }
-      }
     });
     
     // Add github.css to both possible locations
@@ -151,13 +163,14 @@ async function produceRulebook(rulesMdContent, gameFolderPath) {
     `;
     
     // Create github.css in all possible locations
-    stylesDirs.forEach(dir => {
+    stylesDirs.forEach(async (dir) => {
       const githubCssPath = path.join(dir, 'github.css');
       try {
-        fs.writeFileSync(githubCssPath, githubCssContent);
+        await fsPromises.writeFile(githubCssPath, githubCssContent);
         tempFiles.push(githubCssPath);
       } catch (githubCssError) {
         console.warn(`Warning: Could not create GitHub CSS file at ${githubCssPath}: ${githubCssError.message}`);
+        Sentry.captureException(githubCssError);
       }
     });
 
@@ -167,7 +180,12 @@ async function produceRulebook(rulesMdContent, gameFolderPath) {
     
     // Try to resolve the specific bundle path structure
     const bundlePath = path.join(cwd, '.webpack', 'main');
-    const isBundled = fs.existsSync(bundlePath);
+    var isBundled;
+    try {
+        isBundled = await fsPromises.access(bundlePath);
+    } catch (err) {
+        isBundled = false;
+    }
     
     // Create PDF with explicit options
     const pdfOptions = { 
@@ -194,22 +212,23 @@ async function produceRulebook(rulesMdContent, gameFolderPath) {
       await writeFile(outputFilepath, pdf.content);
       
       // Clean up temporary files
-      tempFiles.forEach(file => {
+      tempFiles.forEach(async (file) => {
         try {
-          fs.unlinkSync(file);
+          await fsPromises.unlink(file);
         } catch (cleanupError) {
           console.warn(`Warning: Could not remove temporary file ${file}: ${cleanupError.message}`);
+          Sentry.captureException(cleanupError);
         }
       });
       
       // Remove the styles directories we created
-      stylesDirs.forEach(dir => {
-        if (fs.existsSync(dir)) {
+      stylesDirs.forEach(async (dir) => {
           try {
-            fs.rmdirSync(dir);
+            await fsPromises.rmdir(dir);
           } catch (rmDirError) {
-            console.warn(`Warning: Could not remove temporary styles directory ${dir}: ${rmDirError.message}`);
-          }
+            if (rmDirError.code !== 'ENOENT') {
+              throw rmDirError;
+            }
         }
       });
       
@@ -220,6 +239,7 @@ async function produceRulebook(rulesMdContent, gameFolderPath) {
   } catch (error) {
     console.error(`Error in produceRulebook: ${error.message}`);
     console.error(`Stack: ${error.stack}`);
+    Sentry.captureException(error);
     return null;
   }
 }

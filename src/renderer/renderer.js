@@ -6,12 +6,7 @@ import ErrorBoundary from './ErrorBoundary';
 import 'bootstrap/dist/css/bootstrap.css';
 import { ipcRenderer } from 'electron';
 
-ipcRenderer.invoke('get-app-is-packaged').then(isPackaged => {
-    if (!isPackaged) {
-        return
-    }
-    Sentry.init({ dsn: "https://ea447f3e89982daf599068c5b6bf933c@o4508842181459968.ingest.us.sentry.io/4508859562328064" });
-});
+Sentry.init({ dsn: "https://ea447f3e89982daf599068c5b6bf933c@o4508842181459968.ingest.us.sentry.io/4508859562328064" });
 
 let root = null;
 

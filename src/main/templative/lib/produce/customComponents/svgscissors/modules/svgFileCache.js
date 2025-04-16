@@ -11,13 +11,17 @@ class SvgFileCache {
             return this.cache.get(filePath);
         }
         
-        if (!await fsExtra.pathExists(filePath)) {
-            throw new Error(`SVG file ${filePath} does not exist.`);
+        try {
+            const fileContent = await fs.readFile(filePath, 'utf8');
+            this.cache.set(filePath, fileContent);
+            return fileContent;
+        } catch (error) {
+            if (error.code === 'ENOENT') {
+                return null;
+            }
+            console.error(`Error reading SVG file ${filePath}: ${error}`);
+            return null;
         }
-        
-        const fileContent = await fs.readFile(filePath, 'utf8');
-        this.cache.set(filePath, fileContent);
-        return fileContent;
     }
 
     isCached(filePath) {

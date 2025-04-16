@@ -18,7 +18,6 @@
  * needed by the objectState.js functions.
  */
 
-const chalk = require('chalk');
 const { getColorValueRGB, getColorValueHex } = require('../../../../../../shared/stockComponentColors');
 /**
  * Adapter for createStandardDie

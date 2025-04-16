@@ -1,13 +1,13 @@
 const fs = require('fs').promises;
 const path = require('path');
+const { attemptToLoadJsonFile } = require('../fileManagement/fileLoader');
 
 async function loadGameInstructions(gameRootDirectoryPath) {
     if (!gameRootDirectoryPath) {
         throw new Error("Game root directory path cannot be None");
     }
     
-    const gameFile = await fs.readFile(path.join(gameRootDirectoryPath, "game.json"), 'utf8');
-    return JSON.parse(gameFile);
+    return attemptToLoadJsonFile(path.join(gameRootDirectoryPath, "game.json"));
 }
 
 async function loadStudioInstructions(gameRootDirectoryPath) {
@@ -15,8 +15,7 @@ async function loadStudioInstructions(gameRootDirectoryPath) {
         throw new Error("Game root directory path cannot be None");
     }
 
-    const studioFile = await fs.readFile(path.join(gameRootDirectoryPath, "studio.json"), 'utf8');
-    return JSON.parse(studioFile);
+    return attemptToLoadJsonFile(path.join(gameRootDirectoryPath, "studio.json"));
 }
 
 async function loadComponentInstructions(componentDirectoryPath) {
@@ -24,25 +23,25 @@ async function loadComponentInstructions(componentDirectoryPath) {
         throw new Error("componentDirectoryPath cannot be None");
     }
 
-    const componentFile = await fs.readFile(path.join(componentDirectoryPath, "component.json"), 'utf8');
-    return JSON.parse(componentFile);
+    return attemptToLoadJsonFile(path.join(componentDirectoryPath, "component.json"));
 }
 
 async function loadGameCompose() {
-    const gameComposeFile = await fs.readFile("game-compose.json", 'utf8');
-    return JSON.parse(gameComposeFile);
+    return attemptToLoadJsonFile(path.join(gameRootDirectoryPath, "game-compose.json"));
 }
 
 async function getLastOutputFileDirectory() {
     const gameCompose = await loadGameCompose();
     const outputDirectory = gameCompose["outputDirectory"];
     const lastFileDirectory = path.join(outputDirectory, ".last");
-
-    if (!fs.existsSync(lastFileDirectory)) {
+    try {
+        return await fs.readFile(lastFileDirectory, 'utf8');
+    } catch (err) {
+        if (err.code !== 'ENOENT') {
+            throw err;
+        }
         return null;
     }
-
-    return await fs.readFile(lastFileDirectory, 'utf8');
 }
 
 module.exports = {

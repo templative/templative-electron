@@ -1,4 +1,4 @@
-
+const Sentry = require('@sentry/electron/main');
 const { ComponentData,  } = require('../../manage/models/gamedata');
 const ComponentArtdata = require('../../manage/models/artdata');
 const defineLoader = require('../../manage/defineLoader');
@@ -28,7 +28,7 @@ async function getComponentArtdata(componentName, inputDirectoryPath, componentC
     const artDataTypeFilepath = componentComposition.componentCompose[`artdata${artDataTypeName}Filename`];
     const artData = await defineLoader.loadArtdata(inputDirectoryPath, componentComposition.gameCompose["artdataDirectory"], artDataTypeFilepath);
     if (!artData) {
-      console.log(`Skipping ${componentName} component due to missing ${artDataTypeName} art metadata.`);
+      console.log(`Skipping ${componentName} component due to missing ${artDataTypeName} art recipe.`);
     }
     artDatas[artDataTypeName] = artData;
   }
@@ -47,6 +47,7 @@ async function produceCustomComponent(produceProperties, gamedata, componentComp
     }
   } catch (error) {
     console.error(`Error producing custom component ${componentName}:`, error);
+    Sentry.captureException(error);
     return;
   }
 

@@ -3,7 +3,8 @@ const fs = require('fs').promises;
 const { copyFile } = require('fs').promises;
 const { aiArtGenerator } = require('../ai/aiArtGenerator');
 const { COMPONENT_INFO } = require('../../../../shared/componentInfo');
-const { getComponentTemplate } = require('../componentTemplateUtility');
+const { getComponentTemplateFilepath } = require('../componentTemplateUtility');
+
 async function addToComponentCompose(name, type, gameRootDirectoryPath, componentComposeData, componentInfo) {
     for (let i = 0; i < componentComposeData.length; i++) {
         if (componentComposeData[i]["name"] === name) {
@@ -136,39 +137,57 @@ async function createArtFiles(artTemplatesDirectoryPath, name, type, artDataType
     try {
         const artFiles = [];
         for (const artDataTypeName of artDataTypeNames) {
-            const componentTemplateFilepath = await getComponentTemplate(type, artDataTypeName);
-            const contents = await fs.readFile(componentTemplateFilepath, 'utf8');
-            const artSideNameFilepath = join(artTemplatesDirectoryPath, `${name}${artDataTypeName}.svg`);
+            const templatePath = await getComponentTemplateFilepath(type, artDataTypeName);
+            const potentialPaths = [
+                path.join(templatePath, `${type}${artDataTypeName}.svg`),
+                path.join(templatePath, `${type}.svg`)
+            ];
+            let contents = null;
+            for (const componentTemplateFilepath of potentialPaths) {
+                try {
+                    contents = await fs.readFile(componentTemplateFilepath, 'utf8');
+                    break; // Exit loop if file is successfully read
+                } catch (err) {
+                    if (err.code !== 'ENOENT') {
+                        throw err; // Re-throw if error is not ENOENT
+                    }
+                }
+            }
+            
+            if (contents === null) {
+                console.warn(`Template file not found for ${type}. Creating a blank SVG.`);
+                
+                const width = 750;
+                const height = 1050;
+                const blankSvg = `<?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg version="1.1" id="YOUR_ARTWORK_HERE" x="0px" y="0px" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" enable-background="new 0 0 ${width} ${height}" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"> </svg>`;
 
-            await copyFile(componentTemplateFilepath, artSideNameFilepath);
-            artFiles.push({
-                "type": `art_${artDataTypeName}`,
-                "filepath": artSideNameFilepath,
-                "contents": contents
-            });
+                const artFiles = [];
+                for (const artDataTypeName of artDataTypeNames) {
+                    const artSideName = `${name}${artDataTypeName}`;
+                    const artSideNameFilepath = join(artTemplatesDirectoryPath, `${artSideName}.svg`);
+
+                    console.warn(`Creating blank template at ${artSideNameFilepath}`);
+                    await fs.writeFile(artSideNameFilepath, blankSvg);
+                    artFiles.push({
+                        "type": `art_${artDataTypeName}`,
+                        "filepath": artSideNameFilepath,
+                        "contents": blankSvg
+                    });
+                }
+                return artFiles;
+            } else {
+                const artSideNameFilepath = join(artTemplatesDirectoryPath, `${name}${artDataTypeName}.svg`);
+                await copyFile(componentTemplateFilepath, artSideNameFilepath);
+                artFiles.push({
+                    "type": `art_${artDataTypeName}`,
+                    "filepath": artSideNameFilepath,
+                    "contents": contents
+                });
+            }
         }
         return artFiles;
     } catch (error) {
-        console.warn(`Template file not found at for ${type}. Creating a blank SVG.`);
-        
-        const width = 750;
-        const height = 1050;
-        const blankSvg = `<?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg version="1.1" id="YOUR_ARTWORK_HERE" x="0px" y="0px" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" enable-background="new 0 0 ${width} ${height}" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"> </svg>`;
-
-        const artFiles = [];
-        for (const artDataTypeName of artDataTypeNames) {
-            const artSideName = `${name}${artDataTypeName}`;
-            const artSideNameFilepath = join(artTemplatesDirectoryPath, `${artSideName}.svg`);
-
-            console.warn(`Creating blank template at ${artSideNameFilepath}`);
-            await fs.writeFile(artSideNameFilepath, blankSvg);
-            artFiles.push({
-                "type": `art_${artDataTypeName}`,
-                "filepath": artSideNameFilepath,
-                "contents": blankSvg
-            });
-        }
-        return artFiles;
+        console.error(`Error creating art files: ${error.message}`);
     }
 }
 
