@@ -1,4 +1,5 @@
 import React from "react";
+import path from "path";
 export default class CoordinateImage extends React.Component {
     constructor(props) {
         super(props);
@@ -47,7 +48,7 @@ export default class CoordinateImage extends React.Component {
 
         return <React.Fragment>
             <div className="preview-image-filename">
-                {this.props.filepath.split('/').pop()}
+                {path.basename(this.props.filepath)}
             </div>
             <div style={{ position: 'relative' }}>
                 <img 

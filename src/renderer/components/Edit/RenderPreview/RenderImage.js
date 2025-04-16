@@ -1,5 +1,5 @@
 import React from "react";
-
+import path from "path";
 export default class RenderImage extends React.Component {
     state = {
         isHovering: false
@@ -16,7 +16,7 @@ export default class RenderImage extends React.Component {
     render() {
         return <React.Fragment>
             <div className="preview-image-filename">
-                {this.props.filepath.split('/').pop()}
+                {path.basename(this.props.filepath)}
             </div>
             <img 
                 className="preview-image" 
