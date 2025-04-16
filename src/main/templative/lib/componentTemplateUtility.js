@@ -1,7 +1,7 @@
 const path = require('path');
 const { app } = require('electron');
 
-async function getComponentTemplateFilepath() {   
+async function getComponentTemplatesDirectoryPath() {   
     // Check if we're in Electron or in a Node.js script
     if (!app) {
         return path.join(__dirname, 'componentTemplates');
@@ -17,4 +17,4 @@ async function getComponentTemplateFilepath() {
     
 }
 
-module.exports = { getComponentTemplateFilepath };
+module.exports = { getComponentTemplatesDirectoryPath };

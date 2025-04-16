@@ -1,9 +1,11 @@
 const { channels } = require("../shared/constants");
 const { createTemplativeProject } = require("./templative/index");
-var axios = require('axios');
 var path = require('path');
 const { dialog, BrowserWindow } = require('electron');
+const { setCurrentTemplativeRootDirectory, checkIfFolderIsValidTemplativeProject } = require('./templativeProjectManager');
+
 const { updateToast } = require('./toastNotifier');
+
 
 const openFolder = async(event) => {
     const result = await dialog.showOpenDialog({ properties: ['openDirectory'] });
@@ -12,6 +14,13 @@ const openFolder = async(event) => {
         return;
     }
     var chosenDirectory = result.filePaths[0];
+    const isInvalidProject = !await checkIfFolderIsValidTemplativeProject(event, chosenDirectory);
+    if (isInvalidProject) {
+        console.warn("Invalid project selected");
+        const directory = path.basename(chosenDirectory);
+        updateToast(`/${directory} is an invalid Templative project.`, "error");
+        return;
+    }
     await setCurrentTemplativeRootDirectory(event, chosenDirectory);
     updateToast(`/${path.basename(chosenDirectory)} loaded.`, "success");
 }

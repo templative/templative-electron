@@ -10,7 +10,7 @@ const { addOverlays, collectOverlayFiles} = require("./artdataProcessing/overlay
 const { textReplaceInFile} = require("./artdataProcessing/textReplacer.js");
 const { updateStylesInFile} = require("./artdataProcessing/styleUpdater.js");
 const { clipSvgContentToClipFile, CLIPPING_ELEMENT_ID } = require("./modules/imageClipper.js");
-const { getComponentTemplateFilepath } = require("../../../componentTemplateUtility.js");
+const { getComponentTemplatesDirectoryPath } = require("../../../componentTemplateUtility.js");
 const { preprocessSvgText } = require('./modules/fileConversion/textWrapping/index.js');
 const { SvgFileCache } = require('./modules/svgFileCache.js');
 const { ArtCache } = require('./modules/artCache.js');
@@ -178,7 +178,7 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       contents = await preprocessSvgText(contents);
       
       if (productionProperties.isClipped) {
-          const potentialPaths = await getComponentTemplateFilepath(componentType);
+          const potentialPaths = await getComponentTemplatesDirectoryPath(componentType);
           const clipSvgFilepath = path.join(potentialPaths, `${componentType}.svg`);
           try {
             contents = await clipSvgContentToClipFile(contents, clipSvgFilepath, CLIPPING_ELEMENT_ID, svgFileCache);

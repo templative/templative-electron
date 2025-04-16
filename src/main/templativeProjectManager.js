@@ -6,7 +6,38 @@ const { channels } = require('../shared/constants');
 // Get the main process
 const { CachePreProducerWatcher } = require('./templative/lib/produce/cachePreProducerWatcher');
 const mainProcess = require('electron').app;
-const { watchAndProduceTemplativeProject } = require('./templative/index');
+
+const checkIfFolderIsValidTemplativeProject = async(event, folderPath) => {
+    try {
+        await fsPromises.readFile(path.join(folderPath, 'component-compose.json'), 'utf8');
+        console.log("component-compose.json found");
+        await fsPromises.readFile(path.join(folderPath, 'game.json'), 'utf8');
+        console.log("game.json found");
+        await fsPromises.readFile(path.join(folderPath, 'studio.json'), 'utf8');
+        console.log("studio.json found");
+        const gameCompose = await fsPromises.readFile(path.join(folderPath, 'game-compose.json'), 'utf8');
+        console.log("game-compose.json found");
+        const gameComposeJson = JSON.parse(gameCompose);
+        console.log("game-compose.json parsed");
+        const checkFolders= [
+            path.join(folderPath, gameComposeJson.piecesGamedataDirectory),
+            path.join(folderPath, gameComposeJson.componentGamedataDirectory),
+            path.join(folderPath, gameComposeJson.artdataDirectory),
+            path.join(folderPath, gameComposeJson.artTemplatesDirectory),
+            path.join(folderPath, gameComposeJson.artInsertsDirectory)
+        ]
+        for (const checkFolder of checkFolders) {
+            if (!await fsPromises.stat(checkFolder)) {
+                console.log(`${checkFolder} not found`);
+                return false;
+            }
+        }
+        return true;
+    } catch (error) {
+        console.log("error", error);
+        return false
+    }
+}
 
 async function folderExists(directory) {
     if (!directory) return false;
@@ -149,5 +180,6 @@ module.exports = {
     setCurrentTemplativeRootDirectory,
     getCurrentTemplativeRootDirectory,
     clearCurrentTemplativeRootDirectory,
-    loadLastProject
+    loadLastProject,
+    checkIfFolderIsValidTemplativeProject
 };
