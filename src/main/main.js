@@ -13,7 +13,7 @@ Sentry.init({
     dsn: "https://ea447f3e89982daf599068c5b6bf933c@o4508842181459968.ingest.us.sentry.io/4508859562328064",
     enableNative: true,
     release: `templative@${app.getVersion()}`,
-    });
+});
 
 ipcMain.handle('get-app-is-packaged', () => {
     return app.isPackaged;

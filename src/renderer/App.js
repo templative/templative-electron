@@ -12,6 +12,7 @@ import CreateProjectView from "./components/CreateProjectView";
 import './Theme.css';
 import './App.css';
 import './Inputs.css';
+import Toast from './components/Toast/Toast';
 
 const { ipcRenderer } = require('electron');
 
@@ -24,7 +25,12 @@ class App extends React.Component {
         token: undefined,
         loginStatus: undefined,
         templativeMessages: [],
-        currentView: "start"
+        currentView: "start",
+        toast: {
+            message: '',
+            type: 'info',
+            visible: false
+        }
     }    
     componentWillUnmount() {
         ipcRenderer.removeAllListeners(channels.GIVE_TEMPLATIVE_ROOT_FOLDER);
@@ -35,8 +41,6 @@ class App extends React.Component {
         ipcRenderer.removeAllListeners(channels.GIVE_UNABLE_TO_LOG_IN);
         ipcRenderer.removeAllListeners(channels.GIVE_INVALID_LOGIN_CREDENTIALS);
         ipcRenderer.removeAllListeners(channels.GIVE_OPEN_CREATE_PROJECT_VIEW);
-        // socket.off("printStatement");
-        // socket.disconnect()
     }
     async openTemplativeDirectoryPicker() {
         trackEvent("project_change")
@@ -67,6 +71,9 @@ class App extends React.Component {
                 currentView: "editProject"
             });
         });
+        ipcRenderer.on(channels.GIVE_TOAST_MESSAGE, (event, message, type) => {
+            this.showToast(message, type);
+        })
         ipcRenderer.on(channels.GIVE_CLOSE_PROJECT, (_) => {
             this.setState({
                 templativeRootDirectoryPath: undefined,
@@ -118,6 +125,24 @@ class App extends React.Component {
         trackEvent("user_register_click")
         await ipcRenderer.invoke(channels.TO_SERVER_OPEN_URL, "https://templative-server-84c7a76c7ddd.herokuapp.com/register")
     }
+    showToast = (message, type = 'info') => {
+        this.setState({
+            toast: {
+                message,
+                type,
+                visible: true
+            }
+        });
+    }
+    hideToast = () => {
+        this.setState({
+            toast: {
+                message: '',
+                type: 'info',
+                visible: false
+            }
+        });
+    }
     render() {
         let element = <></>
         
@@ -155,6 +180,13 @@ class App extends React.Component {
             <div className="container-fluid">
                 {element}
             </div>
+            {this.state.toast.visible && (
+                <Toast 
+                    message={this.state.toast.message}
+                    type={this.state.toast.type}
+                    onClose={this.hideToast}
+                />
+            )}
         </div>
     }
 }

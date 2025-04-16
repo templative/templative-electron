@@ -6,6 +6,7 @@ const { channels } = require("../shared/constants");
 const { verifyCredentials, isTokenValid, verifyCredentialsGoogle, loginIntoGameCrafter } = require("./templativeWebsiteClient")
 const { clearSessionToken, clearEmail, saveSessionToken, saveEmail, getSessionToken, getEmail, getTgcSession, saveTgcSession, clearTgcSession, getGithubToken, saveGithubToken, clearGithubToken } = require("./sessionStore")
 let mainWindow;
+const { updateToast } = require("./toastNotifier");
 
 const goToAccount = async(event, args) => {
     shell.openExternal("https://templative.net/");
@@ -36,6 +37,7 @@ const login = async (_, email, password) => {
     }
     await saveSessionToken(response.token);
     await saveEmail(email)
+    updateToast("Logged in successfully.", "success");
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, response.token, email);
 }
 const giveLoginInformation = async () => {
@@ -140,6 +142,7 @@ async function handleDeepLink(url) {
         }
         const data = await loginIntoGameCrafter(ssoId);
         await saveTgcSession(data["result"]["id"], data["result"]["user_id"]);
+        updateToast("Logged into TheGameCrafter successfully.", "success");
         BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TGC_LOGIN_STATUS, { isLoggedIn: true });
         return;
     }
