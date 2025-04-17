@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import ContentToggle from "./ContentToggle";
 import { RenderingWorkspaceContext } from "../../../../Render/RenderingWorkspaceProvider";
-
+import path from "path";
 // Gamedata viewers
 import StudioGamedataViewer from "../../GamedataViewer/StudioGamedataViewer";
 import GameGamedataViewer from "../../GamedataViewer/GameGamedataViewer";
@@ -51,17 +51,19 @@ export default function UnifiedCol(params) {
     // Create unified content options
     const contentOptions = [
         // Gamedata options
-        { name: "Studio Content", color: "#9e4ddf", icon: StudioIcon },
-        { name: "Game Content", color: "#426ac3", icon: GameIcon },
-        { name: "Component Content", color: "#5f9edf", icon: ComponentIcon },
-        { name: "Piece Content", color: "#69d1d2", icon: PieceIcon },
+        { selectKey: "Studio Content", name: "Studio", color: "#9e4ddf", icon: StudioIcon, selectable: true },
+        { selectKey: "Game Content", name: "Game", color: "#426ac3", icon: GameIcon, selectable: true },
+        { selectKey: "Component Content", name: `Component · ${path.basename(componentGamedataFilepath, '.json')}`, color: "#5f9edf", icon: ComponentIcon, selectable: true },
+        { selectKey: "Piece Content", name: `Piece · ${path.basename(piecesGamedataFilepath, '.json')}`, color: "#69d1d2", icon: PieceIcon, selectable: true },
     ];
     
     // Add artdata options conditionally
     if (hasFrontArtdata) {
         contentOptions.push({
-            name: "Front Art Recipe",
+            selectKey: "Front Art Recipe",
+            name: `Front · ${path.basename(frontArtdataFilepath, '.json')}`,
             color: "#e8b24e",
+            selectable: true,
             icon: ArtdataIcon
         });
     }
@@ -69,22 +71,26 @@ export default function UnifiedCol(params) {
     if (hasBackArtdata) {
         const suffix = backArtdataFilepath === frontArtdataFilepath ? " (Same as Front)" : "";
         contentOptions.push({
-            name: "Back Art Recipe" + suffix,
+            selectKey: "Back Art Recipe",
+            name: `Back · ${path.basename(backArtdataFilepath, '.json')}${suffix}`,
             color: "#e8b24e",
+            selectable: backArtdataFilepath !== frontArtdataFilepath,
             icon: ArtdataIcon
         });
     }
     
     if (hasDieFaceArtdata) {
         contentOptions.push({
-            name: "DieFace Art Recipe",
+            selectKey: "DieFace Art Recipe",
+            name: `DieFace · ${path.basename(dieFaceArtdataFilepath, '.json')}`,
             color: "#e8b24e",
+            selectable: true,
             icon: ArtdataIcon
         });
     }
 
     // Get available content types
-    const availableContentTypes = contentOptions.map(option => option.name);
+    const availableContentTypes = contentOptions.map(option => option.selectKey);
     
     // Initialize selected content based on last viewed content and available options
     const [selectedContent, setSelectedContent] = useState(() => 

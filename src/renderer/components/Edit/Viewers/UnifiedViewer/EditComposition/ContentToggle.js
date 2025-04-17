@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ContentToggle.css';
-
+import ToggleableFile from './ToggleableFile';
 /**
  * ContentToggle component for displaying selectable options with icons
  * 
@@ -21,22 +21,7 @@ const ContentToggle = ({ options = [], onChange, defaultSelected, typeOfContent 
   return (
     <div className="content-toggle">
       {options.map((option) => {
-        const isSelected = selected === option.name;
-        return (
-          <div
-            key={option.name}
-            className={`toggle-option ${isSelected ? 'active' : ''}`}
-            onClick={() => handleSelect(option.name)}
-        >
-          <option.icon 
-            className="toggle-icon" 
-            style={{ color: isSelected ? option.color : 'var(--color-text-muted)'}} 
-          />
-          <span className={`toggle-label ${isSelected ? 'active' : ''}`}>
-            {option.name} {typeOfContent || ""}
-          </span>
-        </div>
-        );
+        return <ToggleableFile key={option.name} {...option} Icon={option.icon} handleSelect={handleSelect} selected={selected} typeOfContent={typeOfContent} />
       })}
     </div>
   );

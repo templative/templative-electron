@@ -196,7 +196,7 @@ const CompositionSettingsModal = ({
 
                     <div className="file-group-header component-header">
                         <ComponentIcon className="replacement-modal-icon" alt="Component" />
-                        <h4>Component Gamedata</h4>
+                        <h4>Component Content</h4>
                     </div>
                     <select 
                         className="file-option"
@@ -213,7 +213,7 @@ const CompositionSettingsModal = ({
                 
                     <div className="file-group-header piece-header">
                         <PieceIcon className="replacement-modal-icon" alt="Piece" />
-                        <h4>Piece Gamedata</h4>
+                        <h4>Piece Content</h4>
                     </div>
                     <select 
                         className="file-option"
@@ -232,7 +232,7 @@ const CompositionSettingsModal = ({
                         <>
                             <div className="file-group-header artdata-header">
                                 <ArtdataIcon className="replacement-modal-icon" alt="Artdata" />
-                                <h4>Front Art Data</h4>
+                                <h4>Front Art Recipe</h4>
                             </div>
                             <select 
                                 className="file-option"
@@ -253,7 +253,7 @@ const CompositionSettingsModal = ({
                         <>
                             <div className="file-group-header artdata-header">
                                 <ArtdataIcon className="replacement-modal-icon" alt="Artdata" />
-                                <h4>Back Art Data</h4>
+                                <h4>Back Art Recipe</h4>
                             </div>
                             <select 
                                 className="file-option"
@@ -274,7 +274,7 @@ const CompositionSettingsModal = ({
                         <>
                             <div className="file-group-header artdata-header">
                                 <ArtdataIcon className="replacement-modal-icon" alt="Artdata" />
-                                <h4>Die Face Art Data</h4>
+                                <h4>Die Face Art Recipe</h4>
                             </div>
                             <select 
                                 className="file-option"
