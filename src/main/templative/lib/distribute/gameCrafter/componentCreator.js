@@ -200,7 +200,7 @@ async function createTwoSided(gameCrafterSession, component, identity, cloudGame
     const res = await Promise.all(tasks);
 }
 
-async function createTwoSidedPiece(gameCrafterSession, instructions, setId, cloudComponentFolderId, isProofed) {
+async function createTwoSidedPiece(gameCrafterSession, instructions, setId, folderId, isProofed) {
     const name = instructions["name"];
     const filepath = instructions["filepath"];
     const quantity = instructions["quantity"];
@@ -246,7 +246,7 @@ async function createTwoSidedSlugged(gameCrafterSession, component, identity, cl
     const res = await Promise.all(tasks);
 }
 
-async function createTwoSidedSluggedPiece(gameCrafterSession, instructions, setId, cloudComponentFolderId, isProofed) {
+async function createTwoSidedSluggedPiece(gameCrafterSession, instructions, setId, folderId, isProofed) {
     const name = instructions["name"];
     const filepath = instructions["filepath"];
     const quantity = instructions["quantity"];
@@ -420,7 +420,7 @@ async function createDeck(gameCrafterSession, component, identity, cloudGameId, 
     const res = await Promise.all(tasks);
 }
 
-async function createDeckCard(gameCrafterSession, instructions, deckId, cloudComponentFolderId, isProofed) {
+async function createDeckCard(gameCrafterSession, instructions, deckId, folderId, isProofed) {
     const name = instructions["name"];
     const filepath = instructions["filepath"];
     const quantity = instructions["quantity"];

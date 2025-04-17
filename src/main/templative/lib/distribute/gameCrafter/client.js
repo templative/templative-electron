@@ -37,8 +37,7 @@ async function uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirec
     
     // First, verify session is valid by making a simple API call
     try {
-        const user = await httpOperations.getUser(gameCrafterSession);
-        console.log(`Verified GameCrafter session for user: ${user.username || user.email || user.id}`);
+        await httpOperations.getUser(gameCrafterSession);
     } catch (sessionError) {
         console.error(`!!! Session validation error: ${sessionError.message}`);
         throw new Error(`Invalid GameCrafter session. Please check your credentials. Error: ${sessionError.message}`);
@@ -46,10 +45,14 @@ async function uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirec
     
     try {
         const cloudGameFolder = await createFolderAtRoot(gameCrafterSession, uniqueGameName);
-        
+        const gameFolderId = cloudGameFolder["id"];
+        if (!gameFolderId) {
+            console.log("!!! Game folder ID not found.");
+            return;
+        }
         var logoImageFileId, backdropImageFileId, advertisementImageFileId, actionShotImageFileId;
         try {
-            [logoImageFileId, backdropImageFileId, advertisementImageFileId, actionShotImageFileId] = await createAdvertisments(gameCrafterSession, gameRootDirectoryPath, cloudGameFolder["id"]);
+            [logoImageFileId, backdropImageFileId, advertisementImageFileId, actionShotImageFileId] = await createAdvertisments(gameCrafterSession, gameRootDirectoryPath, gameFolderId);
         } catch (error) {
             if (error.code !== 'ENOENT') {
                 throw error;
@@ -72,8 +75,8 @@ async function uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirec
 
         await advertisementCreator.createActionShot(gameCrafterSession, cloudGame["id"], actionShotImageFileId);
         
-        await createRules(gameCrafterSession, outputDirectory, cloudGame, cloudGameFolder["id"]);            
-        await createComponents(gameCrafterSession, outputDirectory, cloudGame, cloudGameFolder["id"], isPublish, isStock, isProofed);
+        await createRules(gameCrafterSession, outputDirectory, cloudGame, gameFolderId);            
+        await createComponents(gameCrafterSession, outputDirectory, cloudGame, gameFolderId, isPublish, isStock, isProofed);
         
         const gameUrl = `${gameCrafterBaseUrl}/make/games/${cloudGame["id"]}`;
         console.log(`Upload finished for ${cloudGame["name"]}, visit ${gameUrl}`);
