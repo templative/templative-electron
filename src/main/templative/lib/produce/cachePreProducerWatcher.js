@@ -69,13 +69,39 @@ class CachePreProducerWatcher {
         const artTemplatesDirectory = path.join(this.gameRootDirectoryPath, this.gameCompose["artTemplatesDirectory"]);
         const artInsertsDirectory = path.join(this.gameRootDirectoryPath, this.gameCompose["artInsertsDirectory"]);
 
-        const fullRebuild = this.debounce(async (eventType) => {
+        // Track the latest modification time for each directory
+        let lastTemplatesModTime = await this.getLatestModificationTime(artTemplatesDirectory);
+        let lastInsertsModTime = artTemplatesDirectory === artInsertsDirectory ? 
+            lastTemplatesModTime : 
+            await this.getLatestModificationTime(artInsertsDirectory);
+
+        const fullRebuild = this.debounce(async (eventType, directoryPath, isTemplates) => {
             if (eventType !== 'change') {
-                return
+                return;
             }
             if (mainProcess.isRendering) {
                 return;
             }
+
+            // Check if any file in the directory has a newer modification time
+            const currentModTime = await this.getLatestModificationTime(directoryPath);
+            const lastModTime = isTemplates ? lastTemplatesModTime : lastInsertsModTime;
+            
+            if (currentModTime <= lastModTime) {
+                console.log(`No actual file changes detected in ${directoryPath}, skipping rebuild`);
+                return;
+            }
+            
+            // Update the stored modification time
+            if (isTemplates) {
+                lastTemplatesModTime = currentModTime;
+                if (artTemplatesDirectory === artInsertsDirectory) {
+                    lastInsertsModTime = currentModTime;
+                }
+            } else {
+                lastInsertsModTime = currentModTime;
+            }
+            
             console.log(`Arts file changed, triggering full rebuild...`);
             mainProcess.isRendering = true;
             try {
@@ -87,11 +113,52 @@ class CachePreProducerWatcher {
             } finally {
                 mainProcess.isRendering = false;
             }
-        }, 5000)
+        }, 5000);
         
-        this.artTemplatesWatcher = fs.watch(artTemplatesDirectory, fullRebuild);
+        this.artTemplatesWatcher = fs.watch(artTemplatesDirectory, (eventType) => 
+            fullRebuild(eventType, artTemplatesDirectory, true));
+        
         if (artTemplatesDirectory != artInsertsDirectory) {
-            this.artInsertsWatcher = fs.watch(artInsertsDirectory, fullRebuild);
+            this.artInsertsWatcher = fs.watch(artInsertsDirectory, (eventType) => 
+                fullRebuild(eventType, artInsertsDirectory, false));
+        }
+    }
+
+    // Helper method to get the latest modification time of any file in a directory
+    async getLatestModificationTime(directoryPath) {
+        try {
+            let latestTime = 0;
+            
+            // Recursive function to scan directory and find latest modification time
+            const scanDirectory = async (dirPath) => {
+                const entries = await fsPromises.readdir(dirPath, { withFileTypes: true });
+                
+                for (const entry of entries) {
+                    const fullPath = path.join(dirPath, entry.name);
+                    
+                    try {
+                        const stats = await fsPromises.stat(fullPath);
+                        
+                        if (stats.isDirectory()) {
+                            // Recursively scan subdirectories
+                            await scanDirectory(fullPath);
+                        } else {
+                            // Update latest time if this file is newer
+                            if (stats.mtimeMs > latestTime) {
+                                latestTime = stats.mtimeMs;
+                            }
+                        }
+                    } catch (err) {
+                        console.log(`Error accessing ${fullPath}: ${err.message}`);
+                    }
+                }
+            };
+            
+            await scanDirectory(directoryPath);
+            return latestTime;
+        } catch (error) {
+            console.error(`Error scanning directory ${directoryPath}:`, error);
+            return 0;
         }
     }
 
