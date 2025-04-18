@@ -136,10 +136,12 @@ function resource_path(relative_path) {
 
 async function createArtfile(artTemplatesDirectoryPath, name, type, artDataTypeName) {
     const componentTemplatesDirectoryPath = await getComponentTemplatesDirectoryPath();
+    
     const potentialPaths = [
         path.join(componentTemplatesDirectoryPath, `${type}${artDataTypeName}.svg`),
         path.join(componentTemplatesDirectoryPath, `${type}.svg`)
     ];
+    
     var contents = null;
     var chosenPath = null;
     for (const potentialPath of potentialPaths) {
@@ -153,7 +155,14 @@ async function createArtfile(artTemplatesDirectoryPath, name, type, artDataTypeN
             }
         }
     }
+    if (chosenPath === null) {
+        const err = new Error(`Template file not found for ${type}`);
+        err.code = 'ENOENT';
+        throw err;
+    }
+    
     const artSideNameFilepath = join(artTemplatesDirectoryPath, `${name}${artDataTypeName}.svg`);
+    
     await copyFile(chosenPath, artSideNameFilepath);
     return {
         "type": `art_${artDataTypeName}`,
