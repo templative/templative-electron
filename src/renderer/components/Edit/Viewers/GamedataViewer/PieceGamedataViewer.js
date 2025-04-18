@@ -92,9 +92,10 @@ export default class PieceGamedataViewer extends EditableViewerJson {
     }
     duplicatePieceByIndex = (index) => {
         const duplicate = { ...this.state.content[index] }
+        let hasName;
         do {
             duplicate["name"] = duplicate["name"] + "_copy"
-            let hasName = false
+            hasName = false;
             for (let index = 0; index < this.state.content.length; index++) {
                 const element = this.state.content[index];
                 if (duplicate["name"] === element["name"]) {
