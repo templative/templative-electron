@@ -2,7 +2,7 @@
   /* Core palette */
   --color-accent: #878ec4;
   --color-accent-hover: hsl(233, 33%, 75%);
-  --color-accent-disabled: hsl(233, 20%, 45%);
+  --color-accent-disabled: hsl(233, 10%, 45%);
 
   /* Semantic colors */
   --color-error: hsl(340, 57%, 64%);

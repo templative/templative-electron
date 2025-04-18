@@ -36,12 +36,25 @@ async function getPreviewsPath() {
 }
 
 async function clearPreviews(directoryPath) {
-    const files = glob.sync(path.join(directoryPath, '*'));
-    await Promise.all(files.map(filepath => fsPromises.unlink(filepath).catch(err => {
-        if (err.code !== 'ENOENT') {
-            throw err;
+    try {
+        // Read all files in the directory
+        const files = await fsPromises.readdir(directoryPath);
+        
+        // Delete each file
+        for (const file of files) {
+            const filePath = path.join(directoryPath, file);
+            try {
+                await fsPromises.unlink(filePath);
+            } catch (err) {
+                if (err.code !== 'ENOENT') {
+                    console.error(`Error deleting file ${filePath}:`, err);
+                }
+            }
         }
-    })));
+    } catch (err) {
+        console.error(`Error clearing directory ${directoryPath}:`, err);
+        throw err;
+    }
 }
 
 async function producePiecePreview(gameRootDirectoryPath, componentName, pieceName, language) {
@@ -70,7 +83,7 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     const gameData = new GameData(studioDataBlob, gameDataBlob);
     const outputDirectoryPath = await getPreviewsPath();
     await clearPreviews(outputDirectoryPath);
-    const isClipped = false
+    const isClipped = true
     const previewProperties = new PreviewProperties(gameRootDirectoryPath, outputDirectoryPath, pieceName, language, isClipped);
 
     const fontCache = new FontCache();

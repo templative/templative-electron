@@ -159,6 +159,7 @@ input, textarea, select {
 .App .btn-primary:disabled {
   background-color: var(--color-accent-disabled);
   border-color: var(--color-accent-disabled);
+  color: var(--color-content);
 }
 
 .App .btn-outline-primary {
