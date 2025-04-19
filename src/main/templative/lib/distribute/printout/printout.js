@@ -10,15 +10,27 @@ const unsupportedDiceTypes = ["CustomColorD4", "CustomColorD8"];
 const pagePaddingInches = 0.25;
 const fpdfSizes = {
     "Letter": "letter",
-    "Tabloid": "a3",
+    "A3": "a3",
+    "A4": "a4",
+    "A5": "a5",
+    "Legal": "legal",
+    "Tabloid": "tabloid"
 };
 // Adjust the printout play area to account for margins
 const printoutPlayAreaChoices = {
     "Letter": [8.5 - (pagePaddingInches * 2), 11 - (pagePaddingInches * 2)],
+    "A3": [11 - (pagePaddingInches * 2), 17 - (pagePaddingInches * 2)],
+    "A4": [8.27 - (pagePaddingInches * 2), 11.69 - (pagePaddingInches * 2)],
+    "A5": [5.83 - (pagePaddingInches * 2), 8.27 - (pagePaddingInches * 2)],
+    "Legal": [8.5 - (pagePaddingInches * 2), 14 - (pagePaddingInches * 2)],
     "Tabloid": [11 - (pagePaddingInches * 2), 17 - (pagePaddingInches * 2)]
 };
 const printoutTotalSize = {
     "Letter": [8.5, 11],
+    "A3": [11, 17],
+    "A4": [8.27, 11.69],
+    "A5": [5.83, 8.27],
+    "Legal": [8.5, 14],
     "Tabloid": [11, 17]
 }
 
@@ -307,8 +319,7 @@ function drawPageMarginLines(pdf, size) {
     pdf.setLineDashPattern([0.05, 0.05], 0); // Dashed line
     
     // Get the size from the current page
-    const pageSize = size ? 'Letter' : 'Tabloid';
-    const [width, height] = printoutPlayAreaChoices[pageSize];
+    const [width, height] = printoutPlayAreaChoices[size];
     
     // Draw rectangle around the printable area
     pdf.rect(

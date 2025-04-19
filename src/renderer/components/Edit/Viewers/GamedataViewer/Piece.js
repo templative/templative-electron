@@ -49,6 +49,11 @@ export default class Piece extends React.Component {
             .filter((key) => {
                 return this.props.lockedKey === undefined || key === this.props.lockedKey
             })
+            .sort((a, b) => {
+                if (a === "") return 1;
+                if (b === "") return -1;
+                return 0;
+            })
             .map((key) => {
                 return <KeyValueInput 
                     key={key}

@@ -1,6 +1,6 @@
 // Try to require fontkit, but don't fail if it's not available
 const fontkit = require('fontkit');
-const fs = require('fs');
+const fsPromises = require('fs').promises;
 const path = require('path');
 const os = require('os');
 
@@ -102,7 +102,6 @@ class FontCache {
       // Windows
       const winFontDir = 'C:\\Windows\\Fonts\\';
       fontPaths['Arial'] = winFontDir + 'arial.ttf';
-      fontPaths['Helvetica'] = winFontDir + 'helvetica.ttf';
       fontPaths['Times New Roman'] = winFontDir + 'times.ttf';
       fontPaths['Courier New'] = winFontDir + 'cour.ttf';
       fontPaths['Verdana'] = winFontDir + 'verdana.ttf';
@@ -364,12 +363,15 @@ class FontCache {
    * @returns {number} - Character width
    */
   async calculateCharWidth(char, fontFamily, fontSize, fontWeight = 'normal', fontStyle = 'normal') {
+    // Decode HTML entities to Unicode characters
+    const decodedChar = char.replace(/&#x([0-9A-Fa-f]+);/g, (match, hex) => String.fromCharCode(parseInt(hex, 16)));
+
     const font = await this.getFontkitFont(fontFamily);
     
     if (font && typeof font.layout === 'function') {
       try {
         // Use the layout method to get the glyph run
-        const run = font.layout(char);
+        const run = font.layout(decodedChar);
         
         if (run && run.glyphs && run.glyphs.length > 0) {
           // Get the advance width of the glyph
@@ -383,6 +385,8 @@ class FontCache {
         }
       } catch (err) {
         console.error(`Error calculating width for character "${char}" using fontkit:`, err);
+        
+        return await this.calculateCharWidth("W", "Arial", fontSize, fontWeight, fontStyle);
       }
     }
     
