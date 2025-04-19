@@ -5,7 +5,7 @@ const path = require('path');
 const defineLoader = require('../../manage/defineLoader');
 const { ComponentBackData } = require('../../manage/models/gamedata');
 const { SvgFileCache } = require('./svgscissors/modules/svgFileCache');
-const Sentry = require('@sentry/electron/main');
+const {captureMessage, captureException } = require("../../sentryElectronWrapper");
 
 class FrontOnlyProducer {
     static async createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache = new SvgFileCache()) {
@@ -18,7 +18,7 @@ class FrontOnlyProducer {
             }
         } catch (error) {
             console.error(`Error producing custom component ${componentComposition.componentCompose["name"]}:`, error);
-            Sentry.captureException(error);
+            captureException(error);
             return;
         }
         await FrontOnlyProducer.createPiece(previewProperties, componentComposition, componentData, componentArtdata, piecesDataBlob, fontCache, svgFileCache);

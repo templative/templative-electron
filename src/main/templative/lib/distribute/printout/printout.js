@@ -2,7 +2,7 @@ const { readdir, readFile, mkdir, writeFile } = require('fs/promises');
 const { join, basename, dirname } = require('path');
 const { jsPDF } = require('jspdf');
 const { COMPONENT_INFO } = require('../../../../../shared/componentInfo.js');
-const Sentry = require('@sentry/electron/main');
+const {captureMessage, captureException } = require("../../sentryElectronWrapper");
 
 // Constants
 const diceTypes = ["CustomColorD6", "CustomWoodD6"];
@@ -276,7 +276,7 @@ async function createPdfUsingPlacementCommands(commands, size) {
                 await addComponentToPdf(pdf, size, command);
             }
         } catch (error) {
-            Sentry.captureException(error);
+            captureException(error);
             console.error(`Error adding component to PDF:`, error);
             // Add error indicator on the current page
             pdf.setFillColor(255, 200, 200);
@@ -423,7 +423,7 @@ async function addDieCrossLayoutToPdf(pdf, size, command) {
                 'FAST'
             );
         } catch (error) {
-            Sentry.captureException(error);
+            captureException(error);
             console.log(`!!! Issue placing die: ${filepath}`);
             continue;
         }
@@ -458,7 +458,7 @@ async function loadFilepathsForComponent(producedDirectoryPath, directoryPath) {
         const componentTypeFilepathAndQuantity = await collectFilepathQuantitiesForComponent(componentInstructions);
         return componentTypeFilepathAndQuantity;
     } catch (error) {
-        Sentry.captureException(error);
+        captureException(error);
         console.error(`Error loading component from ${componentDirectoryPath}:`, error.message);
         return {};
     }

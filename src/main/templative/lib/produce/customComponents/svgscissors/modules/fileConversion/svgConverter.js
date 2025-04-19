@@ -1,7 +1,7 @@
 const fsExtra = require('fs-extra');
 const path = require('path');
 const { Resvg } = require('@resvg/resvg-js');
-const Sentry = require('@sentry/electron/main');
+const {captureMessage, captureException } = require("../../../../../sentryElectronWrapper");
 
 /**
  * Create a fallback SVG
@@ -42,7 +42,7 @@ async function convertToJpg(absoluteOutputDirectory, name, pngFilepath) {
         throw e;
       }
       console.log(`!!! PNG file ${pngFilepath} does not exist.`);
-      Sentry.captureException(e);
+      captureException(e);
       return null;
     }
     
@@ -83,7 +83,7 @@ async function createFallbackPng(imageSizePixels) {
     console.log('🆘 Created fallback placeholder image');
   } catch (finalError) {
     console.error('❌ All conversion attempts failed');
-    Sentry.captureException(finalError);
+    captureException(finalError);
     throw finalError; // Throw the original error
   }
   return resvg;
@@ -107,7 +107,7 @@ async function convertSvgContentToPng(svgString, imageSizePixels, outputFilepath
     } catch (resvgError) {
       console.error(`Error creating Resvg instance: ${resvgError.message}`);
       console.error(resvgError.stack);
-      Sentry.captureException(resvgError);
+      captureException(resvgError);
       
       // Try to create a fallback image
       resvg = await createFallbackPng(imageSizePixels);

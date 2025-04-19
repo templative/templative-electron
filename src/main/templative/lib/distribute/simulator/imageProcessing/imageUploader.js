@@ -1,6 +1,6 @@
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const crypto = require('crypto');
-const Sentry = require('@sentry/electron/main');
+const {captureMessage, captureException } = require("../../../sentryElectronWrapper");
 
 /**
  * Calculate MD5 hash from image buffer
@@ -67,7 +67,7 @@ async function uploadToS3(image) {
     }
     return presignedData.final_url;
   } catch (error) {
-    Sentry.captureException(error);
+    captureException(error);
     console.log(`!!! Error uploading image: ${error}`);
     return null;
   }
@@ -104,7 +104,7 @@ async function uploadThroughServer(image) {
       return null;
     }
   } catch (error) {
-    Sentry.captureException(error);
+    captureException(error);
     console.log(`!!! Error uploading image: ${error}`);
     return null;
   }

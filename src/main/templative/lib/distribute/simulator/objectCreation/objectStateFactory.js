@@ -5,7 +5,7 @@ const { createStock } = require('./stockCreator.js');
 const { createComponentLibraryChest } = require('../simulatorTemplates/objectState.js');
 const COMPONENT_INFO = require('../../../../../../shared/componentInfo.js').COMPONENT_INFO;
 const STOCK_COMPONENT_INFO = require('../../../../../../shared/stockComponentInfo.js').STOCK_COMPONENT_INFO;
-const Sentry = require('@sentry/electron/main');
+const {captureMessage, captureException } = require("../../../sentryElectronWrapper");
 
 /**
  * Create object states for all components in a directory
@@ -100,7 +100,7 @@ async function createObjectState(componentDirectoryPath, tabletopSimulatorDirect
     return await createCustom(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal);
   } catch (error) {
     console.log(`!!! Error creating object state for ${componentDirectoryPath}.`);
-    Sentry.captureException(error);
+    captureException(error);
     console.log(error.message);
     return null;
   }

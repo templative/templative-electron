@@ -1,4 +1,4 @@
-const Sentry = require('@sentry/electron/main');
+const {captureMessage, captureException } = require("../../sentryElectronWrapper");
 const { ComponentData,  } = require('../../manage/models/gamedata');
 const ComponentArtdata = require('../../manage/models/artdata');
 const defineLoader = require('../../manage/defineLoader');
@@ -47,7 +47,7 @@ async function produceCustomComponent(produceProperties, gamedata, componentComp
     }
   } catch (error) {
     console.error(`Error producing custom component ${componentName}:`, error);
-    Sentry.captureException(error);
+    captureException(error);
     return;
   }
 

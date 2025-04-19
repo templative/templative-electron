@@ -3,7 +3,7 @@ const fsPromises = require('fs').promises;
 const fs = require('fs');
 const { produceGame } = require('./gameProducer');
 const defineLoader = require('../manage/defineLoader');
-const Sentry = require('@sentry/electron/main');
+const {captureMessage, captureException } = require("../sentryElectronWrapper");
 
 // This ties us to electron
 const mainProcess = require('electron').app;
@@ -55,7 +55,7 @@ class CachePreProducerWatcher {
             produceGame(this.gameRootDirectoryPath, noComponentFilter, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
         } catch (error) {
             console.error(`Error producing game from cache pre-producer watcher:`, error);
-            Sentry.captureException(error);
+            captureException(error);
         } finally {
             mainProcess.isRendering = false; // Reset the flag after rendering is complete
         }
@@ -109,7 +109,7 @@ class CachePreProducerWatcher {
                 produceGame(this.gameRootDirectoryPath, null, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
             } catch (error) {
                 console.error(`Error producing game from art inserts watcher:`, error);
-                Sentry.captureException(error);
+                captureException(error);
             } finally {
                 mainProcess.isRendering = false;
             }
@@ -194,7 +194,7 @@ class CachePreProducerWatcher {
                             produceGame(this.gameRootDirectoryPath, componentName, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
                         } catch (error) {
                             console.error(`Error producing game from component ${componentName} watcher:`, error);
-                            Sentry.captureException(error);
+                            captureException(error);
                         } finally {
                             mainProcess.isRendering = false; // Reset the flag after rendering is complete
                         }
@@ -276,7 +276,7 @@ class CachePreProducerWatcher {
                     produceGame(this.gameRootDirectoryPath, null, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, CACHE_ONLY);
                 } catch (error) {
                     console.error(`Error producing game from component compose file watcher:`, error);
-                    Sentry.captureException(error);
+                    captureException(error);
                 } finally {
                     mainProcess.isRendering = false;
                 }

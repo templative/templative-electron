@@ -3,7 +3,7 @@ const path = require('path');
 const fsPromises = require('fs').promises;
 const fs = require('fs');
 const glob = require('glob');
-const Sentry = require('@sentry/electron/main');
+const {captureMessage, captureException } = require("../sentryElectronWrapper");
 
 const outputWriter = require('./outputWriter');
 const rulesMarkdownProcessor = require('./rulesMarkdownProcessor');
@@ -219,7 +219,7 @@ async function produceRules(gameRootDirectoryPath, outputDirectoryPath) {
         }
         await rulesMarkdownProcessor.produceRulebook(rules, outputDirectoryPath);
     } catch (error) {
-        Sentry.captureException(error);
+        captureException(error);
         console.error(`Error producing rules:`, error);
     }
 }

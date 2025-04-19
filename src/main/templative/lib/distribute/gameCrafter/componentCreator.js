@@ -6,7 +6,7 @@ const COMPONENT_INFO = require('../../../../../shared/componentInfo.js').COMPONE
 const STOCK_COMPONENT_INFO = require('../../../../../shared/stockComponentInfo.js').STOCK_COMPONENT_INFO;
 const instructionsLoader = require('../../manage/instructionsLoader.js');
 const fileFolderManager = require('./fileFolderManager.js');
-const Sentry = require('@sentry/electron/main');
+const {captureMessage, captureException } = require("../../sentryElectronWrapper");
 
 async function createRules(gameCrafterSession, gameRootDirectoryPath, cloudGame, folderId) {
     const filepath = path.join(gameRootDirectoryPath, "rules.pdf");
@@ -39,7 +39,7 @@ async function createComponents(gameCrafterSession, outputDirectory, cloudGame, 
         }
     } catch (error) {
         console.error(`Failed to read component directories: ${error.message}`);
-        Sentry.captureException(error);
+        captureException(error);
         throw error;
     }
 }
@@ -54,7 +54,7 @@ async function createComponent(gameCrafterSession, componentDirectoryPath, cloud
         if (!componentFile) {
             const errorMessage = `!!! Skipping ${componentDirectoryPath} because it has no component instructions.`;
             console.log(errorMessage);
-            Sentry.captureMessage(errorMessage);
+            captureMessage(errorMessage);
             return;
         }
         const isDebugInfo = componentFile["isDebugInfo"] !== undefined ? componentFile["isDebugInfo"] : false;
@@ -79,7 +79,7 @@ async function createComponent(gameCrafterSession, componentDirectoryPath, cloud
             try {
                 await createStockPart(gameCrafterSession, componentFile, cloudGame["id"]);
             } catch (e) {
-                Sentry.captureException(e);
+                captureException(e);
                 console.log(`!!! Error creating stock part ${componentFile['name']}: ${e.toString()}`);
             }
             return;
@@ -88,12 +88,12 @@ async function createComponent(gameCrafterSession, componentDirectoryPath, cloud
         try {
             await createCustomComponent(gameCrafterSession, componentType, componentFile, cloudGame["id"], cloudGameFolderId, isProofed);
         } catch (e) {
-            Sentry.captureException(e);
+            captureException(e);
             console.log(`!!! Error creating custom component ${componentFile['name']}: ${e.toString()}`);
         }
             
     } catch (e) {
-        Sentry.captureException(e);
+        captureException(e);
         console.log(`!!! Error processing component in ${componentDirectoryPath}: ${e.toString()}`);
     }
 }

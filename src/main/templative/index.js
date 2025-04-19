@@ -13,7 +13,7 @@ const { createSessionFromLogin } = require('./lib/distribute/gameCrafter/util/ga
 const { uploadGame } = require('./lib/distribute/gameCrafter/client');
 const { withLogCapture } = require('./logStore');
 const { getTgcSession } = require('../../main/sessionStore');
-const Sentry = require('@sentry/electron/main');
+const {captureMessage, captureException } = require("./lib/sentryElectronWrapper");
 const { updateToast } = require('../toastNotifier');
 const path = require('path');
 
@@ -27,7 +27,7 @@ const createTemplativeComponent = withLogCapture(async (event, data) => {
     return { success: true };
   } catch (error) {
     console.error('Error creating component:', error);
-    Sentry.captureException(error);
+    captureException(error);
     updateToast(error.message, "error");
     return { success: false, error: error.message };
   }
@@ -43,7 +43,7 @@ const produceTemplativeProject = withLogCapture(async (event, request) => {
     return { success: true, outputDirectoryPath };
   } catch (error) {
     console.error('Error producing game:', error);
-    Sentry.captureException(error);
+    captureException(error);
     updateToast(error.message, "error");
     return { success: false, error: error.message };
   }
@@ -54,7 +54,7 @@ const getPreviewsDirectory = withLogCapture(async (event) => {
     return { previewsDirectory: await getPreviewsPath() };
   } catch (error) {
     console.error('Error getting previews directory:', error);
-    Sentry.captureException(error);
+    captureException(error);
     return { success: false, error: error.message };
   }
 });
@@ -69,7 +69,7 @@ const previewPiece = withLogCapture(async (event, data) => {
     return { success: true, message: 'Piece preview generated' };
   } catch (error) {
     console.error('Error previewing piece:', error);
-    Sentry.captureException(error); 
+    captureException(error); 
     updateToast(error.message, "error");
     return { success: false, error: error.message };
   }
@@ -82,7 +82,7 @@ const createTemplativeProject = withLogCapture(async (directoryPath, projectName
     return { success: true, message: 'Project created' };
   } catch (error) {
     console.error('Error creating project:', error);
-    Sentry.captureException(error);
+    captureException(error);
     updateToast(error.message, "error");
     return { success: false, error: error.message };
   }
@@ -97,7 +97,7 @@ const createPlaygroundPackage = withLogCapture(async (event, data) => {
     return { success: result === 1, message: 'Playground package created' };
   } catch (error) {
     console.error('Error creating Playground package:', error);
-    Sentry.captureException(error); 
+    captureException(error); 
     updateToast(error.message, "error");
     return { success: false, error: error.message };
   }
@@ -112,7 +112,7 @@ const createPrintout = withLogCapture(async (event, data) => {
     return { success: result === 1, message: 'Printout PDF created' };
   } catch (error) {
     console.error('Error creating printout:', error);
-    Sentry.captureException(error);
+    captureException(error);
     updateToast(error.message, "error");
     return { success: false, error: error.message };
   }
@@ -127,7 +127,7 @@ const createSimulatorSave = withLogCapture(async (event, data) => {
     return { success: result === 1, message: 'Simulator save created' };
   } catch (error) {
     console.error('Error creating simulator save:', error);
-    Sentry.captureException(error);
+    captureException(error);
     updateToast(error.message, "error");
     return { success: false, error: error.message };
   }
@@ -146,7 +146,7 @@ const listGameCrafterDesigners = withLogCapture(async (event, data) => {
   }
   catch(error) {
     console.error('Error listing designers:', error);
-    Sentry.captureException(error);
+    captureException(error);
     updateToast(error.message, "error");
     return { success: false, error: error.message };
   }
@@ -176,7 +176,7 @@ const uploadTemplativeProjectToGameCrafter = withLogCapture(async (event, data) 
     return { success: true, message: 'Game uploaded', gameUrl };
   } catch (error) {
     console.error('Error uploading game:', error);
-    Sentry.captureException(error);
+    captureException(error);
     updateToast(error.message, "error");
     return { success: false, error: error.message };
   }

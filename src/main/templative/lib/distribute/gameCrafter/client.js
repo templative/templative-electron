@@ -6,7 +6,7 @@ const advertisementCreator = require('./advertisementCreator.js');
 const { createComponents, createRules } = require('./componentCreator.js');
 const { createGame, createFolderAtRoot } = require('./fileFolderManager.js');
 const httpOperations = require('./util/httpOperations.js');
-const Sentry = require('@sentry/electron/main');
+const {captureMessage, captureException } = require("../../sentryElectronWrapper");
 
 const gameCrafterBaseUrl = "https://www.thegamecrafter.com";
 
@@ -86,7 +86,7 @@ async function uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirec
         return gameUrl;
     } catch (uploadError) {
         console.error(`!!! Upload process error: ${uploadError.message}`);
-        Sentry.captureException(uploadError);
+        captureException(uploadError);
         throw new Error(`Error during game upload process: ${uploadError.message}`);
     }
 }

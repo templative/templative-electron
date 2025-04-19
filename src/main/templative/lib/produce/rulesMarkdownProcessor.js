@@ -2,7 +2,7 @@ const { writeFile } = require('fs/promises');
 const { join } = require('path');
 const fsPromises = require('fs').promises;
 const path = require('path');
-const Sentry = require('@sentry/electron/main');
+const {captureMessage, captureException } = require("../sentryElectronWrapper");
 const { markdownToPdf } = require('./markdownToPdf');
 
 async function produceRulebook(rulesMdContent, gameFolderPath) {
@@ -29,7 +29,7 @@ async function produceRulebook(rulesMdContent, gameFolderPath) {
   } catch (error) {
     console.error(`Error in produceRulebook: ${error.message}`);
     console.error(`Stack: ${error.stack}`);
-    Sentry.captureException(error);
+    captureException(error);
     return null;
   }
 }
