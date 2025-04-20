@@ -91,6 +91,9 @@ export default class StudioGamedataViewer extends EditableViewerJson {
             return null;
         }
 
+        if (Array.isArray(this.state.content)) {
+            return <FileLoadFailure templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} filepath={this.state.filepath} errorMessage="It is not a valid Studio Content file." />;
+        }
         var keys = Object.keys(this.state.content)
         keys = keys.sort()
         keys = keys.filter((key) => {

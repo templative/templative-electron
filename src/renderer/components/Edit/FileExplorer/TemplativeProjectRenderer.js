@@ -204,6 +204,10 @@ export default class TemplativeProjectRenderer extends React.Component {
         var gameCompose;
         try {
             gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json");
+            if (!Array.isArray(gameCompose)) {
+                this.setState({ failedToLoad: true, failedToLoadMessage: "The game-compose.json file is not a valid array." })
+                return
+            }
             this.setState({ failedToLoad: false, failedToLoadMessage: null })
         }
         catch (error) {

@@ -144,6 +144,12 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         var rows = []
         if (this.state.hasLoaded && this.state.content !== undefined) {
             if (this.state.viewMode === 'list') {
+                
+                // If this.state.content is not an array, return []
+                if (!Array.isArray(this.state.content)) {
+                    return <FileLoadFailure templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} filepath={this.state.filepath} errorMessage="It is not a valid Piece Content file." />;
+                }
+                
                 rows = this.state.content.map((piece, index) => {
                     return <Piece 
                         key={index} 

@@ -37,6 +37,11 @@ const CreatePanel = (props) => {
                 templativeRootDirectoryPath, 
                 "component-compose.json"
             );
+            if (!Array.isArray(components)) {
+                setFailedToLoadComponents(true);
+                setFailedToLoadMessage("The component-compose.json file is not a valid array.")
+                return
+            }
             setComponents(components);
             setLoadedComponents(true);
             setFailedToLoadComponents(false);

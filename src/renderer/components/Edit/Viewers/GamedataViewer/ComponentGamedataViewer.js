@@ -87,6 +87,9 @@ export default class ComponentGamedataViewer extends EditableViewerJson {
         }
 
         var rows = [];
+        if (Array.isArray(this.state.content)) {
+            return <FileLoadFailure templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} filepath={this.state.filepath} errorMessage="It is not a valid Component Content file." />;
+        }
         var keys = Object.keys(this.state.content)
         keys = keys.sort()
         keys = keys.filter((key) => {

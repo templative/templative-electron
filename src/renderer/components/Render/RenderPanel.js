@@ -33,6 +33,10 @@ export default function RenderPanel({ templativeRootDirectoryPath, templativeMes
                     templativeRootDirectoryPath, 
                     "component-compose.json"
                 );
+                if (!Array.isArray(components)) {
+                    setComponents([]);
+                    return
+                }
                 setComponents(components);
             }
             catch (error) {
