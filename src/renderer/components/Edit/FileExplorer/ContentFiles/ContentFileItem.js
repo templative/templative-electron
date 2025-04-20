@@ -1,7 +1,7 @@
 import React from "react";
 import ContextMenu from "../../../ContextMenu";
 import RenameableFile from "./RenameableFile";
-
+import {relative} from "path";
 import "./ContentFiles.css"
 
 const path = require("path");
@@ -62,6 +62,11 @@ export default class ContentFileItem extends React.Component {
         }
         shell.openPath(this.props.filepath);
     }
+    deleteFileAreYouSure = async () => {
+        if (window.confirm(`Are you sure you want to delete the file "${relative(this.props.templativeRootDirectoryPath, this.props.filepath)}"?`)) {
+            await this.props.deleteFileAsyncCallback(this.props.filepath);
+        }
+    }
     render() {
         var openFileAsyncCallback = async () => await this.props.updateViewedFileUsingExplorerAsyncCallback(this.props.contentType, this.props.filepath)
         return <div 
@@ -80,7 +85,7 @@ export default class ContentFileItem extends React.Component {
                         {name: "Open in Default App", callback: this.openInDefaultAppAsync},
                         {name: "Duplicate", callback: async () => await this.props.duplicateFileAsyncCallback(this.props.filepath)},
                         {name: "Rename", callback: this.startRenamingFileAsync},
-                        {name: "Delete", callback: async () => await this.props.deleteFileAsyncCallback(this.props.filepath)},
+                        {name: "Delete", callback: this.deleteFileAreYouSure},
                     ]}
                     closeContextMenuCallback={this.closeContextMenu}
                 />

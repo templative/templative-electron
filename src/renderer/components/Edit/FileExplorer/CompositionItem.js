@@ -126,6 +126,12 @@ export default function CompositionItem(props) {
 
         handleCloseFileModal();
     };
+    
+    const deleteCompositionAreYouSure = async () => {
+        if (window.confirm(`Are you sure you want to delete "${compositionName}"?`)) {
+            await deleteCompositionCallbackAsync();
+        }
+    }
 
     const commands = [
         {name: "Open", callback: openFileAsyncCallback},
@@ -134,12 +140,12 @@ export default function CompositionItem(props) {
         {name: "Render", callback: renderCompositionAsyncCallback},
         {name: "Duplicate", callback: duplicateCompositionCallbackAsync},
         {name: isDisabled ? "Enable" : "Disable", callback: toggleDisableCompositionCallbackAsync},
-        {name: "Delete", callback: deleteCompositionCallbackAsync},
+        {name: "Delete", callback: deleteCompositionAreYouSure},
     ]
     const stockCommands = [
         {name: "Duplicate", callback: duplicateCompositionCallbackAsync},
         {name: isDisabled ? "Enable" : "Disable", callback: toggleDisableCompositionCallbackAsync},
-        {name: "Delete", callback: deleteCompositionCallbackAsync},
+        {name: "Delete", callback: deleteCompositionAreYouSure},
     ]
     return (
         <div 

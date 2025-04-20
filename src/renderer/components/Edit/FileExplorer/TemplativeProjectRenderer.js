@@ -48,6 +48,7 @@ const ResourceSection = ({
                         directoryPath={directories.templatesDirectory}
                         baseFilepath={directories.templatesDirectory}
                         filetype={"TEMPLATES"}    
+                        templativeRootDirectoryPath={templativeRootDirectoryPath}
                     />
                     <ContentFileList
                         {...contentFileListProps}
@@ -57,6 +58,7 @@ const ResourceSection = ({
                         directoryPath={directories.overlaysDirectory}
                         baseFilepath={directories.overlaysDirectory}
                         filetype={"OVERLAYS"}    
+                        templativeRootDirectoryPath={templativeRootDirectoryPath}
                     />
                 </React.Fragment>
             )}
@@ -69,21 +71,24 @@ const ResourceSection = ({
                     directoryPath={directories.artdataDirectory}
                     baseFilepath={directories.artdataDirectory}
                     filetype={"ARTDATA"}    
+                    templativeRootDirectoryPath={templativeRootDirectoryPath}
                 />
             )}
             {isExtended && header === "Content Files" && (
                 <React.Fragment>
                     <ContentFileList
                         {...contentFileListProps}
+                        templativeRootDirectoryPath={templativeRootDirectoryPath}
                         header="Component" 
                         contentType="COMPONENT_GAMEDATA" 
                         baseDepth={1}
                         directoryPath={directories.componentGamedataDirectory}
                         baseFilepath={directories.componentGamedataDirectory}
-                        filetype={"COMPONENT_GAMEDATA"}    
+                        filetype={"COMPONENT_GAMEDATA"}           
                     />
                     <ContentFileList
                         {...contentFileListProps}
+                        templativeRootDirectoryPath={templativeRootDirectoryPath}
                         header="Piece" 
                         contentType="PIECE_GAMEDATA" 
                         baseDepth={1}
@@ -393,6 +398,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                             directoryPath={this.state.templatesDirectory}
                             baseFilepath={this.state.templatesDirectory}
                             filetype={"ART"}      
+                            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         />
                     )}
                     <ContentFileList
@@ -403,6 +409,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                         directoryPath={artRecipeDirectory}
                         baseFilepath={artRecipeDirectory}
                         filetype={"ARTDATA"}    
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                     />
                     
                     <ResourceSection 

@@ -10,15 +10,15 @@ const mainProcess = require('electron').app;
 const checkIfFolderIsValidTemplativeProject = async(event, folderPath) => {
     try {
         await fsPromises.readFile(path.join(folderPath, 'component-compose.json'), 'utf8');
-        console.log("component-compose.json found");
+        // console.log("component-compose.json found");
         await fsPromises.readFile(path.join(folderPath, 'game.json'), 'utf8');
-        console.log("game.json found");
+        // console.log("game.json found");
         await fsPromises.readFile(path.join(folderPath, 'studio.json'), 'utf8');
-        console.log("studio.json found");
+        // console.log("studio.json found");
         const gameCompose = await fsPromises.readFile(path.join(folderPath, 'game-compose.json'), 'utf8');
-        console.log("game-compose.json found");
+        // console.log("game-compose.json found");
         const gameComposeJson = JSON.parse(gameCompose);
-        console.log("game-compose.json parsed");
+        // console.log("game-compose.json parsed");
         const checkFolders= [
             path.join(folderPath, gameComposeJson.piecesGamedataDirectory),
             path.join(folderPath, gameComposeJson.componentGamedataDirectory),

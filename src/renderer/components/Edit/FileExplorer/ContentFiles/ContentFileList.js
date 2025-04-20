@@ -164,6 +164,7 @@ export default class ContentFileList extends React.Component {
             var isSelected = this.props.currentFilepath !== undefined && path.normalize(this.props.currentFilepath) === path.normalize(fileItem.absoluteFilepath)
             if (fileItem.isDirectory) {
                 divs.push(<ContentFolderItem 
+                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                     contentType={this.props.contentType}
                     isSelected={isSelected} 
                     key={fileItem.absoluteFilepath} 
@@ -191,6 +192,7 @@ export default class ContentFileList extends React.Component {
                 directoryPath={this.props.directoryPath}
                 filepath={fileItem.absoluteFilepath}
                 depth={effectiveDepth}
+                templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                 duplicateFileAsyncCallback={this.props.duplicateFileAsyncCallback}
                 updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback} 
                 deleteFileAsyncCallback={this.props.deleteFileAsyncCallback}

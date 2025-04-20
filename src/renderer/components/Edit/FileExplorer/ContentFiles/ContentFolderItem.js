@@ -2,7 +2,7 @@ import React from "react";
 import ContextMenu from "../../../ContextMenu.js";
 import RenameableFolder from "./RenameableFolder.js";
 import "./ContentFiles.css"
-
+import {relative} from "path";
 const path = require("path");
 const shell = require('electron').shell;
 
@@ -81,6 +81,11 @@ export default class ContentFolderItem extends React.Component {
         if (event.button !== 0) { return }
         await this.props.changeExtendedDirectoryAsyncCallback(!this.props.isExtended, this.props.filepath)
     }
+    deleteFolderAreYouSure = async () => {
+        if (window.confirm(`Are you sure you want to delete the folder "${relative(this.props.templativeRootDirectoryPath, this.props.filepath)}"?`)) {
+            await this.props.deleteFolderAsyncCallback(this.props.filepath);
+        }
+    }
     render() {        
         return <div 
             className={`content-file-item-wrapper ${this.props.isSelected && "selected-content-file-item-wrapper"}`} 
@@ -97,7 +102,7 @@ export default class ContentFolderItem extends React.Component {
                     commands={[
                         {name: "Open Folder", callback: this.openFolderAsync},
                         {name: "Rename", callback: this.startRenamingFolderAsync},
-                        {name: "Delete", callback: async () => await this.props.deleteFolderAsyncCallback(this.props.filepath)},
+                        {name: "Delete", callback: this.deleteFolderAreYouSure},
                     ]}
                     closeContextMenuCallback={this.closeContextMenu}
                 />
