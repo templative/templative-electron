@@ -15,6 +15,18 @@ export default class TextReplacement extends React.Component {
     handleMouseOut = () => {
         this.setState({isHovering: false})
     }
+    updateKey = (event) => {
+        var newKey = event.target.value.trim()
+        // Remove leading '{' by slicing from index 1 to end (-1 means end)
+        if (newKey.startsWith("{") ) {
+            newKey = newKey.slice(1, -1)
+        }
+        // Remove trailing '}' by slicing from start (0) to second-to-last char (-1)
+        if (newKey.endsWith("}")) {
+            newKey = newKey.slice(0, -1)
+        }
+        this.props.updateArtdataFieldCallback("textReplacements", this.props.index, "key", newKey)
+    }
     render() {
         var isDebug = this.props.artdataItem.isDebug === true
         var isComplex = this.props.artdataItem.isComplex === true
@@ -25,7 +37,7 @@ export default class TextReplacement extends React.Component {
             <span className="input-group-text soft-label" title={`What text are you replacing?`}>Replace</span>
 
             <input type="text" className="form-control text-replacement-key-field no-left-border" 
-                onChange={(event)=>this.props.updateArtdataFieldCallback("textReplacements", this.props.index, "key", event.target.value)} 
+                onChange={this.updateKey} 
                 value={this.props.artdataItem.key} 
                 placeholder="{some text}"
                 title={this.props.artdataItem.key === "" ? 
