@@ -60,11 +60,14 @@ export function OutputDirectoriesProvider({ children, templativeRootDirectoryPat
     };
 
     const getOutputDirectoryNames = async () => {
-        if (!templativeRootDirectoryPath) return;
+        if (!templativeRootDirectoryPath) {
+            return;
+        }
         
         var dirs;
         try {
             dirs = await TemplativeAccessTools.getOutputDirectoriesAsync(templativeRootDirectoryPath);
+            setDirectories(dirs);
         }
         catch (error) {
             if (error.code === "ENOENT") {
