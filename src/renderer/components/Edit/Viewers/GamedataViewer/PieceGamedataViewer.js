@@ -179,6 +179,7 @@ export default class PieceGamedataViewer extends EditableViewerJson {
             <div className="input-group pieces-controls-input-group">
                 <button 
                     onClick={() => this.addPiece()} 
+                    disabled={!this.state.hasLoaded}
                     className="btn btn-outline-primary add-field-button" 
                     type="button"
                 >
@@ -190,6 +191,7 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                 {this.state.lockedKey === undefined &&
                     <button 
                         onClick={() => this.addBlankKeyValuePair()} 
+                        disabled={!this.state.hasLoaded}
                         className="btn btn-outline-primary add-field-button" 
                         type="button"
                     >
