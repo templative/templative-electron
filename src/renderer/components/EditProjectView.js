@@ -202,10 +202,7 @@ export default class EditProjectView extends React.Component {
     
     
     componentDidMount = async () => {
-        ipcRenderer.on(channels.GIVE_OPEN_SETTINGS, () => {
-            var settingsPath = path.join(require('os').homedir(), "Documents", "Templative", "settings.json")
-            this.changeTabsToEditAFile("SETTINGS", settingsPath)
-        });
+        ipcRenderer.on(channels.GIVE_OPEN_SETTINGS, this.handleOpenSettings);
 
         await this.loadComponentComposeAsync();
     }
@@ -223,6 +220,16 @@ export default class EditProjectView extends React.Component {
 
         await this.loadComponentComposeAsync();
     }
+
+    componentWillUnmount() {
+        ipcRenderer.removeAllListeners(channels.GIVE_OPEN_SETTINGS);
+    }
+
+    handleOpenSettings = () => {
+        var settingsPath = path.join(require('os').homedir(), "Documents", "Templative", "settings.json");
+        this.changeTabsToEditAFile("SETTINGS", settingsPath);
+    }
+
     updateRoute = (route) => {
         this.setState({currentRoute: route})
     }

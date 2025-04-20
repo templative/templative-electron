@@ -41,6 +41,7 @@ class App extends React.Component {
         ipcRenderer.removeAllListeners(channels.GIVE_UNABLE_TO_LOG_IN);
         ipcRenderer.removeAllListeners(channels.GIVE_INVALID_LOGIN_CREDENTIALS);
         ipcRenderer.removeAllListeners(channels.GIVE_OPEN_CREATE_PROJECT_VIEW);
+        ipcRenderer.removeAllListeners(channels.GIVE_TOAST_MESSAGE);
     }
     async openTemplativeDirectoryPicker() {
         trackEvent("project_change")

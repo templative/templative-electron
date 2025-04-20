@@ -51,7 +51,7 @@ export default class UploadPanel extends React.Component {
     }
 
     componentWillUnmount() {
-        ipcRenderer.removeAllListeners(channels.TGC_LOGIN_STATUS_CHANGED)
+        ipcRenderer.removeAllListeners(channels.GIVE_TGC_LOGIN_STATUS)
     }
 
     fetchDesigners = async () => {
