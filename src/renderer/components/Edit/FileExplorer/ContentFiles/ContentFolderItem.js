@@ -58,6 +58,9 @@ export default class ContentFolderItem extends React.Component {
         })
     }
     static convertToOsPath = (filepath) => {
+        if (filepath === undefined) {
+            return null
+        }
         if (filepath.split(path.sep).length === 1) {
             var seperatedBy = path.sep === "//" ? "\\" : "/" 
             return filepath.replaceAll(seperatedBy, path.sep)
@@ -65,7 +68,14 @@ export default class ContentFolderItem extends React.Component {
         return filepath
     }
     openFolderAsync = async () => {
-        shell.openPath(ContentFolderItem.convertToOsPath(this.props.filepath));
+        if (this.props.filepath === undefined) {
+            return
+        }
+        const safePath = ContentFolderItem.convertToOsPath(this.props.filepath)
+        if (safePath === null) {
+            return
+        }
+        shell.openPath(safePath);
     }
     handleMouseDownAsync = async (event) => {
         if (event.button !== 0) { return }

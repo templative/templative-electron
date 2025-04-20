@@ -57,6 +57,9 @@ export default function CompositionItem(props) {
     };
 
     const openInDefaultAppAsync = async () => {
+        if (filepath === undefined) {
+            return
+        }
         shell.openPath(filepath.split("#")[0]);
     };
 

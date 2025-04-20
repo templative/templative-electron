@@ -31,7 +31,14 @@ const RenderOutputOption = ({
     const getDirectoryPath = () => path.join(directory.path, directory.name);
 
     const openFolderAsync = async () => {
-        shell.openPath(getDirectoryPath());
+        if (directory === undefined) {
+            return
+        }
+        const safePath = getDirectoryPath()
+        if (safePath === null) {
+            return
+        }
+        shell.openPath(safePath);
     }
 
     const handleDelete = async () => {

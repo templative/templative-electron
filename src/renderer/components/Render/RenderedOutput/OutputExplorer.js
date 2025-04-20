@@ -27,7 +27,15 @@ export default function OutputExplorer({ outputFolderPath, templativeRootDirecto
         : {};
 
     const openGameCrafterFolder = () => {
-        shell.openPath(path.join(templativeRootDirectoryPath, "gamecrafter"));
+        if (templativeRootDirectoryPath === undefined) {
+            return
+        }
+        try {
+            shell.openPath(path.join(templativeRootDirectoryPath, "gamecrafter"));
+        }
+        catch (error) {
+            console.error("Error opening gamecrafter folder:", error);
+        }
     }
 
     const outputName = outputFolderPath 

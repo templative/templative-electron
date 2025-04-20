@@ -38,6 +38,9 @@ export default class ResourceHeader extends React.Component {
         this.setState({isHovering: false})
     }
     async openFolderAsync() {
+        if (this.props.directory === undefined) {
+            return
+        }
         shell.openPath(this.props.directory);
     }
     render() {

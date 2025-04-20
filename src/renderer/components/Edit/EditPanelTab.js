@@ -58,9 +58,15 @@ export default class EditPanelTab extends React.Component {
         await this.props.updateViewedFileUsingTabAsyncCallback(this.props.tabbedFile.filetype, this.props.tabbedFile.filepath)
     }
     openInDefaultApplicationAsync = async () => {
+        if (this.props.tabbedFile === undefined || this.props.tabbedFile.filepath === undefined) {
+            return
+        }
         shell.openPath(this.props.tabbedFile.filepath);
     }
     openDirectoryAsync = async () => {
+        if (this.props.tabbedFile === undefined || this.props.tabbedFile.filepath === undefined) {
+            return
+        }
         shell.openPath(path.parse(this.props.tabbedFile.filepath).dir)
     }
     render() {

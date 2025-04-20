@@ -46,6 +46,9 @@ export default class IconContentFileItem extends React.Component {
         return path.relative(this.props.directoryPath, this.props.filepath).split(".")[0]
     }
     openInDefaultAppAsync = async () => {
+        if (this.props.filepath === undefined) {
+            return
+        }
         shell.openPath(this.props.filepath);
     }
     render() {

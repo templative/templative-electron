@@ -14,6 +14,12 @@ export default class DirectoryOption extends React.Component {
         this.setState({isHovering: false})
     }
     openFolder() {
+        if (this.props.directory === undefined) {
+            return
+        }
+        if (this.props.directory.path === undefined || this.props.directory.name === undefined) {
+            return
+        }
         shell.openPath(path.join(this.props.directory.path, this.props.directory.name));
     }
     getDirectoryPath = () => path.join(this.props.directory.path, this.props.directory.name)

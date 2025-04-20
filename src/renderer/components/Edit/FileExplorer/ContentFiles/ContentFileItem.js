@@ -57,6 +57,9 @@ export default class ContentFileItem extends React.Component {
         })
     }
     openInDefaultAppAsync = async () => {
+        if (this.props.filepath === undefined) {
+            return
+        }
         shell.openPath(this.props.filepath);
     }
     render() {
