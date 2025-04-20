@@ -79,6 +79,9 @@ export default class ComponentGamedataViewer extends EditableViewerJson {
     }
     
     render() {
+        if (this.state.failedToLoad) {
+            return <FileLoadFailure templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} filepath={this.state.filepath} errorMessage={this.state.errorMessage} />
+        }
         if (!this.state.hasLoaded || this.state.content === undefined) {
             return null;
         }

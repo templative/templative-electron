@@ -1,6 +1,6 @@
 import React from "react";
 const fs = require('fs');
-
+import FileLoadFailure from "./FileLoadFailure";
 import "./ImageViewer.css";
 
 export default class ImageViewer extends React.Component {
@@ -10,20 +10,22 @@ export default class ImageViewer extends React.Component {
             remountKey: 0, // A key to trigger re-renders
             timestamp: Date.now(), // Used to bust the browser cache
             rotation: 0, // Add rotation state
+            failedToLoad: false,
+            errorMessage: null,
         };
         this.fileWatcher = null;
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         // Start watching the file for changes
-        this.startFileWatcher();
+        await this.startFileWatcher();
     }
 
-    componentDidUpdate(prevProps) {
+    async componentDidUpdate(prevProps) {
         if (prevProps.filepath !== this.props.filepath) {
             // If the file path changes, restart the file watcher and reset rotation
             this.setState({ rotation: 0 });
-            this.startFileWatcher();
+            await this.startFileWatcher();
         }
     }
 
@@ -32,22 +34,40 @@ export default class ImageViewer extends React.Component {
         this.stopFileWatcher();
     }
 
-    startFileWatcher() {
+    async startFileWatcher() {
         // Stop any existing watcher
         this.stopFileWatcher();
 
         // Set up a new file watcher
-        if (this.props.filepath) {
+        if (!this.props.filepath) {
+            return
+        }
+        
+        try {
             this.fileWatcher = fs.watch(this.props.filepath, (eventType, filename) => {
-                if (eventType === "change") {
-                    // When the file changes, update the remountKey and timestamp to trigger a re-render and bust the cache
-                    this.setState({
-                        remountKey: this.state.remountKey + 1,
-                        timestamp: Date.now(), // Update the timestamp to force cache busting
-                    });
+                if (eventType !== "change") {
+                    return
                 }
+                this.setState({
+                    remountKey: this.state.remountKey + 1,
+                    timestamp: Date.now(), // Update the timestamp to force cache busting
+                });
             });
         }
+        catch (error) {
+            if (error.code === "ENOENT") {
+                this.setState({
+                    failedToLoad: true,
+                    errorMessage: "File not found.",
+                });
+                return;
+            }
+            this.setState({
+                failedToLoad: true,
+                errorMessage: null,
+            });
+            
+        }        
     }
 
     stopFileWatcher() {
@@ -67,6 +87,10 @@ export default class ImageViewer extends React.Component {
     render() {
         const { filepath } = this.props;
         const { timestamp, rotation } = this.state;
+        
+        if (this.state.failedToLoad) {
+            return <FileLoadFailure templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} filepath={this.props.filepath} errorMessage={this.state.errorMessage} />
+        }
 
         // Calculate if we need to swap dimensions (at 90° or 270°)
         const isVertical = rotation % 180 !== 0;

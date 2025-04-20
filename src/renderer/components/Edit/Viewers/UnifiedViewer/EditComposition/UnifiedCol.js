@@ -113,6 +113,7 @@ export default function UnifiedCol(params) {
                         <StudioGamedataViewer 
                             filepath={studioGamedataFilepath} 
                             saveFileAsyncCallback={handleFileSave}
+                            templativeRootDirectoryPath={templativeRootDirectoryPath}
                         />
                     );
                 case "Game Content":
@@ -120,6 +121,7 @@ export default function UnifiedCol(params) {
                         <GameGamedataViewer 
                             filepath={gameGamedataFilepath} 
                             saveFileAsyncCallback={handleFileSave}
+                            templativeRootDirectoryPath={templativeRootDirectoryPath}
                         />
                     );
                 case "Component Content":
@@ -127,6 +129,7 @@ export default function UnifiedCol(params) {
                         <ComponentGamedataViewer 
                             filepath={componentGamedataFilepath} 
                             saveFileAsyncCallback={handleFileSave}
+                            templativeRootDirectoryPath={templativeRootDirectoryPath}
                         />
                     );
                 case "Piece Content":

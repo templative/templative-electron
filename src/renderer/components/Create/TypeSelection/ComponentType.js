@@ -10,6 +10,7 @@ const ComponentType = ({
     selectTypeCallback,
     selectedComponentType,
     isShowingTemplates,
+    hasLoadedComponents,
     search,
     isStock
 }) => {
@@ -68,7 +69,8 @@ const ComponentType = ({
     return (
         <div className="component-type-wrapper">
             <button type="button" 
-                className={`btn btn-outline-primary component-type-card ${isSelected && "selected-component-type"}`} 
+                className={`btn btn-outline-primary component-type-card ${isSelected && "selected-component-type"}`}
+                disabled={!hasLoadedComponents}
                 onClick={() => selectTypeCallback(selectedBaseComponent, selectedSize, selectedColor, highlightedComponent.Key)}
             >
                 <div className="component-type-content">

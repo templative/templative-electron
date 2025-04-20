@@ -10,7 +10,8 @@ const ComponentTypeFolder = ({
     category, 
     categoryInfo, 
     selectedComponentType, 
-    isStock
+    isStock,
+    hasLoadedComponents
 }) => {
     const [isExtended, setIsExtended] = useState(true);
     
@@ -45,6 +46,7 @@ const ComponentTypeFolder = ({
     }
     const components = filteredComponents.map(([baseName, componentInfo]) => 
         <ComponentType
+            hasLoadedComponents={hasLoadedComponents}
             key={baseName}
             isStock={isStock}
             name={baseName}

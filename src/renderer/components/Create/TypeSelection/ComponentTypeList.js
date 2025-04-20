@@ -11,7 +11,8 @@ const ComponentTypeList = ({
     selectTypeCallback,
     selectedComponentType,
     isStock,
-    isShowingTemplates=false
+    isShowingTemplates=false,
+    hasLoadedComponents
 }) => {   
     const context = useContext(RenderingWorkspaceContext);
 
@@ -19,6 +20,7 @@ const ComponentTypeList = ({
         const categoryInfo = componentMajorCategories[category];        
         return <ComponentTypeFolder 
             key={category} 
+            hasLoadedComponents={hasLoadedComponents}
             search={search} 
             isShowingTemplates={isShowingTemplates}
             selectTypeCallback={selectTypeCallback} 

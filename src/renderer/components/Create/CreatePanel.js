@@ -9,9 +9,11 @@ import SearchComponentsBox from "./SearchComponentsBox";
 import { trackEvent } from "@aptabase/electron/renderer";
 import { RenderingWorkspaceContext } from '../Render/RenderingWorkspaceProvider';
 import { COMPONENT_CATEGORIES } from "../../../shared/componentCategories";
+import ErrorIcon from "../Toast/error.svg?react";
 
 const { ipcRenderer } = window.require('electron');
 const { channels } = require('../../../shared/constants');
+
 
 var path = require('path');
 
@@ -25,13 +27,36 @@ const CreatePanel = (props) => {
     const context = React.useContext(RenderingWorkspaceContext);
     const [components, setComponents] = React.useState([]);
     const [isProcessing, setIsProcessing] = React.useState(false);
+    const [hasLoadedComponents, setLoadedComponents] = React.useState(false);
+    const [failedToLoadComponents, setFailedToLoadComponents] = React.useState(false);
+    const [failedToLoadMessage, setFailedToLoadMessage] = React.useState(null);
 
     const loadComponents = async (templativeRootDirectoryPath) => {
-        const components = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(
-            templativeRootDirectoryPath, 
-            "component-compose.json"
-        );
-        setComponents(components);
+        try {
+            const components = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(
+                templativeRootDirectoryPath, 
+                "component-compose.json"
+            );
+            setComponents(components);
+            setLoadedComponents(true);
+            setFailedToLoadComponents(false);
+            setFailedToLoadMessage(null);
+        }
+        catch (error) {
+            if (error.code === "ENOENT") {
+                console.error("component-compose.json file does not exist. Please create the file and try again.")
+                setFailedToLoadComponents(true);
+                setFailedToLoadMessage("component-compose.json file does not exist. Please create the file and try again.")
+                return
+            }
+            else if (error.code === "INVALID_JSON") {
+                console.error("Invalid component-compose.json file. Please fix the file and try again.")
+                setFailedToLoadComponents(true);
+                setFailedToLoadMessage("Invalid component-compose.json file. Please fix the file and try again.")
+                return
+            }
+            throw error
+        }
     };
 
     React.useEffect(() => {
@@ -72,6 +97,17 @@ const CreatePanel = (props) => {
             );
         }
     };
+    
+    if (failedToLoadComponents) {
+        return (
+            <div className='mainBody'>
+                <div className="create-panel-project-didnt-load-container">
+                    <ErrorIcon className="create-panel-project-didnt-load-icon"/>
+                    <p>Failed to load your project. { failedToLoadMessage !== null ? failedToLoadMessage : ""}</p>
+                </div>
+            </div>
+        )
+    }
 
     // Get component types based on categories
     const componentTypesCustomInfo = props.componentTypesCustomInfo || {};
@@ -89,6 +125,7 @@ const CreatePanel = (props) => {
                 setComponentTypeSearch={context.setComponentTypeSearch}
             />
             <ComponentTypeList 
+                hasLoadedComponents={hasLoadedComponents}
                 majorCategoryOrder={currentMajorCategoryOrder}
                 componentMajorCategories={componentMajorCategories}
                 selectedTags={[]}  

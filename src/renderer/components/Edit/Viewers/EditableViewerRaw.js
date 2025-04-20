@@ -9,6 +9,8 @@ export default class EditableViewerRaw extends React.Component {
         this.state = {
             content: undefined,
             hasLoaded: false,
+            failedToLoad: false,
+            errorMessage: undefined,
             filepath: undefined,
             lastKnownFileContents: undefined
         }
@@ -48,9 +50,32 @@ export default class EditableViewerRaw extends React.Component {
         this.saveIntervalId = setIntervalAsync(this.autosave, 10*1000)
     }
 
+    handleLoadError = (filepath, message) => {
+        this.setState({
+            failedToLoad: true,
+            filepath: filepath,
+            errorMessage: message,
+            content: undefined,
+            lastKnownFileContents: undefined
+        })
+    }
+
     loadContentAndStartAutoSave = async () => {
         const filepath = this.getFilePath(this.props)
-        const content = await this.loadFileContent(filepath)
+        let content;
+        try {
+            content = await this.loadFileContent(filepath)
+        } catch (error) {
+            if (error.code === "NO_FILEPATH_GIVEN" || error.code === "ENOENT") {
+                this.handleLoadError(filepath, "File does not exist.")
+                return
+            }
+            if (error.code === "INVALID_JSON") {
+                this.handleLoadError(filepath, "File is invalid.")
+                return
+            }
+            throw error
+        }
         
         this.setState({ 
             content: content, 
@@ -66,7 +91,21 @@ export default class EditableViewerRaw extends React.Component {
         if (!this.state.filepath) return;
         
         try {
-            const currentFileContent = await this.loadFileContent(this.state.filepath)
+            
+            var currentFileContent;
+            try {
+                currentFileContent = await this.loadFileContent(this.state.filepath)
+            } catch (error) {
+                if (error.code === "NO_FILEPATH_GIVEN" || error.code === "ENOENT") {
+                    this.handleLoadError(this.state.filepath, "File does not exist.")
+                    return
+                }
+                if (error.code === "INVALID_JSON") {
+                    this.handleLoadError(this.state.filepath, "File is invalid.")
+                    return
+                }
+                throw error
+            }
             
             if (currentFileContent !== this.state.lastKnownFileContents) {
                 this.setState({ 

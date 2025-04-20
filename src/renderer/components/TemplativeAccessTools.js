@@ -3,7 +3,7 @@ const path = require("path");
 
 export default class TemplativeAccessTools {
     
-    static loadFileContentsAsJson = async (filepath) => {
+    static loadFileContentsAsJson = async (filepath) => {        
         if (filepath === undefined || filepath.trim() === "") {
             console.error("No filepath given to loadFileContentsAsJson.")
         }
@@ -14,9 +14,18 @@ export default class TemplativeAccessTools {
         var fileContents = fileContentsBuffer.toString()
         if (fileContents.trim() === "") {
             console.error(`${filepath} is invalid json: ${fileContents.trim()}`)
-            return undefined;
+            var error = new Error(`${filepath} is invalid json: ${fileContents.trim()}`)
+            error.code = "INVALID_JSON"
+            throw error
         }        
-        return JSON.parse(fileContents);
+        try {
+            return JSON.parse(fileContents)
+        } catch (error) {
+            console.error(`${filepath} is invalid json: ${fileContents.trim()}`)
+            var error = new Error(`${filepath} is invalid json: ${fileContents.trim()}`)
+            error.code = "INVALID_JSON"
+            throw error
+        }
     }
 
     static readFileContentsFromTemplativeProjectAsJsonAsync = async (templativeRootDirectoryPath, fileName) => {

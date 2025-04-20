@@ -25,12 +25,28 @@ export default function RenderPanel({ templativeRootDirectoryPath, templativeMes
 
     useEffect(() => {
         const loadComponents = async () => {
-            if (templativeRootDirectoryPath) {
+            if (!templativeRootDirectoryPath) {
+                return
+            }
+            try {
                 const components = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(
                     templativeRootDirectoryPath, 
                     "component-compose.json"
                 );
                 setComponents(components);
+            }
+            catch (error) {
+                if (error.code === "ENOENT") {
+                    console.error("component-compose.json file does not exist. Please create the file and try again.")
+                    setComponents([])
+                    return
+                }
+                else if (error.code === "INVALID_JSON") {
+                    console.error("Invalid component-compose.json file. Please fix the file and try again.")
+                    setComponents([])
+                    return
+                }
+                throw error
             }
         };
 
@@ -149,6 +165,7 @@ export default function RenderPanel({ templativeRootDirectoryPath, templativeMes
                             {componentDirectoryDivs}
                         </div>
                         <RenderButton 
+                            hasComponents={components.length > 0}
                             selectedComponent={renderingContext.selectedComponentFilter} 
                             selectedLanguage={selectedLanguage} 
                             isDebugRendering={isDebugRendering}

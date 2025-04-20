@@ -170,3 +170,23 @@
     border-color: var(--color-accent);
     box-shadow: 0 0 0 0.2rem rgba(var(--color-accent-rgb), 0.25);
 }
+.create-panel-project-didnt-load-container {
+    height: 100%;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.create-panel-project-didnt-load-icon {
+    color: var(--color-error);
+    width: 200px;
+    height: 200px;
+}
+.create-panel-project-didnt-load-container > p {
+    font-size: 18px;
+    text-align: center;
+}

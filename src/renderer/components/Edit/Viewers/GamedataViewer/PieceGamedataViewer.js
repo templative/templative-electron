@@ -138,6 +138,9 @@ export default class PieceGamedataViewer extends EditableViewerJson {
     }
 
     render() {
+        if (this.state.failedToLoad) {
+            return <FileLoadFailure templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} filepath={this.state.filepath} errorMessage={this.state.errorMessage} />
+        }
         var rows = []
         if (this.state.hasLoaded && this.state.content !== undefined) {
             if (this.state.viewMode === 'list') {

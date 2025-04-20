@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import TemplativeAccessTools from "../../TemplativeAccessTools";
 import ContentFileList from "./ContentFiles/ContentFileList";
 import "./TemplativeProjectRenderer.css"
@@ -9,6 +9,8 @@ import ResourceHeader from "./ContentFiles/ResourceHeader";
 import GitRow from "./Git/GitRow";
 import CompositionsList from "./CompositionsList";
 import StockItemsList from "./StockItemsList";
+
+import ErrorIcon from "../../Toast/error.svg?react"
 
 const fsOld = require('fs');
 const path = require("path")
@@ -112,6 +114,8 @@ const ResourceSection = ({
 export default class TemplativeProjectRenderer extends React.Component {   
     state = {
         gameCompose: undefined,
+        failedToLoad: false,
+        failedToLoadMessage: null,
         filenameReferenceCounts: {},
         templatesDirectory: undefined,
         overlaysDirectory: undefined,
@@ -193,7 +197,25 @@ export default class TemplativeProjectRenderer extends React.Component {
         await this.#parseComponentComposeAsync()
     }
     #parseComponentComposeAsync = async () => {
-        var gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json");
+        var gameCompose;
+        try {
+            gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json");
+            this.setState({ failedToLoad: false, failedToLoadMessage: null })
+        }
+        catch (error) {
+            if (error.code === "ENOENT") {
+                console.error("game-compose.json file does not exist. Please create the file and try again.")
+                this.setState({ failedToLoad: true, failedToLoadMessage: "game-compose.json file does not exist. Please create the file and try again." })
+                return
+            }
+            if (error.code === "INVALID_JSON") {
+                console.error("Invalid game-compose.json file. Please fix the file and try again.")
+                this.setState({ failedToLoad: true, failedToLoadMessage: "Invalid game-compose.json file. Please fix the file and try again." })
+                return
+            }
+            this.setState({ failedToLoad: true, failedToLoadMessage: "An unknown error occurred." })
+            return;
+        }
         await this.#saveComponentComposeFileCountAsync()
         
         this.#closeComponentComposeListener()
@@ -286,6 +308,16 @@ export default class TemplativeProjectRenderer extends React.Component {
     }
 
     render() {
+        if (this.state.failedToLoad) {
+            return <div className="row file-explorer-row g-0">
+                <div className="col file-explorer-col">
+                    <div className="project-didnt-load-container">
+                        <ErrorIcon className="project-didnt-load-icon"/>
+                        <p>Failed to load your project. { this.state.failedToLoadMessage !== null ? this.state.failedToLoadMessage : ""}</p>
+                    </div>
+                </div>
+            </div>
+        }
         if (this.state.gameCompose === undefined) {
             return null
         }

@@ -21,8 +21,9 @@ export default class FileViewer extends React.Component {
     }
     render() {
         var tokens = []
+        var elements = []
         if (this.state.fileContents !== undefined) {
-            this.props.fileContents.split("\n")
+            tokens = this.state.fileContents.split("\n")
             var i = 0
             var elements = tokens.map((element)=>{
                 i++

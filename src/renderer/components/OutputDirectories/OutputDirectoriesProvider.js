@@ -62,9 +62,21 @@ export function OutputDirectoriesProvider({ children, templativeRootDirectoryPat
     const getOutputDirectoryNames = async () => {
         if (!templativeRootDirectoryPath) return;
         
-        const dirs = await TemplativeAccessTools.getOutputDirectoriesAsync(templativeRootDirectoryPath);
-        setDirectories(dirs);
-        
+        var dirs;
+        try {
+            dirs = await TemplativeAccessTools.getOutputDirectoriesAsync(templativeRootDirectoryPath);
+        }
+        catch (error) {
+            if (error.code === "ENOENT") {
+                console.error("Output directories do not exist. Please create the output directories and try again.")
+                return []
+            }
+            if (error.code === "INVALID_JSON") {
+                console.error("Invalid output directories. Please fix the output directories and try again.")
+                return []
+            }
+            throw error
+        }
         // Get metadata for each directory
         for (const directory of dirs) {
             const fullPath = path.join(directory.path, directory.name);

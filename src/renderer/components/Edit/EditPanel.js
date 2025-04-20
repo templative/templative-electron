@@ -1,4 +1,5 @@
 import React from "react";
+import {relative} from "path"
 import TemplativeProjectRenderer from "./FileExplorer/TemplativeProjectRenderer"
 import ArtdataViewer from "./Viewers/ArtdataViewer/ArtdataViewer"
 import PieceGamedataViewer from "./Viewers/GamedataViewer/PieceGamedataViewer"
@@ -61,7 +62,11 @@ export default class EditPanel extends React.Component {
         document.addEventListener('mouseup', stopResize);
     }
     render () {
-        var filepathSplit = this.props.currentFilepath !== undefined ? this.props.currentFilepath.replace(/\\/g,"/").replace(/^\/|\/$/g, '').split("/").join(" > ") : ""
+        var filepathSplit = ""
+        if (this.props.currentFilepath !== undefined) {
+            const usefulFilepath = relative(this.props.templativeRootDirectoryPath, this.props.currentFilepath)
+            filepathSplit = usefulFilepath.replace(/\\/g,"/").replace(/^\/|\/$/g, '').split("/").join(" > ")
+        }
         return <div className='mainBody'>
             <div className="row g-0">
                 <div className='col-3 col-xl-2 left-column' style={{width: `${this.context.fileExplorerColumnWidth}%`}}>
@@ -132,7 +137,7 @@ export default class EditPanel extends React.Component {
                             />
                         }
                         {(this.props.currentFileType === "ART" || this.props.currentFileType === "GAMECRAFTER") &&
-                            <ImageViewer filepath={this.props.currentFilepath}/>
+                            <ImageViewer filepath={this.props.currentFilepath} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
                         }
                         {this.props.currentFileType === "PIECE_GAMEDATA" &&
                             <PieceGamedataViewer 
@@ -145,13 +150,13 @@ export default class EditPanel extends React.Component {
                             />
                         }
                         {this.props.currentFileType === "COMPONENT_GAMEDATA" &&
-                            <ComponentGamedataViewer filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
+                            <ComponentGamedataViewer templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
                         }
                         {this.props.currentFileType === "STUDIO_GAMEDATA" &&
-                            <StudioGamedataViewer filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
+                            <StudioGamedataViewer templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
                         }
                         {this.props.currentFileType === "GAME_GAMEDATA" &&
-                            <GameGamedataViewer filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
+                            <GameGamedataViewer templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
                         }
                         {this.props.currentFileType === "UNIFIED_COMPONENT" && 
                             <UnifiedComponentViewer 
