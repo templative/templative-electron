@@ -90,9 +90,11 @@ export default class EditProjectView extends React.Component {
         }
         return result;
     }
+    
     updateViewedFileUsingTabAsync = async (filetype, filepath) => {
         var fileExists = await EditProjectView.doesFileExist(filepath)
         if (!fileExists) {
+            this.closeTabIfOpenByFilepath(filepath);
             return
         }
         this.setState({
@@ -192,13 +194,9 @@ export default class EditProjectView extends React.Component {
         await fs.writeFile(filepath, stringFileContents, 'utf-8')
     }
     closeTabIfOpenByFilepath = (filepath) => {
-        for (let index = 0; index < this.state.tabbedFiles.length; index++) {
-            const tabbedFile = this.state.tabbedFiles[index];
-            if (tabbedFile.filepath !== filepath) {
-                continue
-            }
-            this.closeTabAtIndex(index)
-            return
+        const tabIndex = this.state.tabbedFiles.findIndex(tab => tab.filepath === filepath);
+        if (tabIndex !== -1) {
+            this.closeTabAtIndexAsync(tabIndex);
         }
     }
     
@@ -472,4 +470,5 @@ export default class EditProjectView extends React.Component {
         </RenderingWorkspaceProvider>
         
     }
+    
 }

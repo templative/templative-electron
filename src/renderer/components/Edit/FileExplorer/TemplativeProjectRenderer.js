@@ -140,16 +140,20 @@ export default class TemplativeProjectRenderer extends React.Component {
             await fs.rm(filepath, { recursive: true, force: true });
             return
         }
-        await fs.unlink(filepath, (err) => {
-            if (err !== null) {
-                console.error(err);
+        try {
+            await fs.unlink(filepath);
+        }
+        catch (error) {
+            if (error.code === "ENOENT") {
+                console.error("File does not exist:", filepath);
                 return
             }
-            if (this.props.currentFilepath === filepath) {
-                this.props.clearViewedFileCallback()
-            }
-            this.props.closeTabIfOpenByFilepathCallback(filepath)
-        });
+            throw error
+        }
+        if (this.props.currentFilepath === filepath) {
+            this.props.clearViewedFileCallback()
+        }
+        this.props.closeTabIfOpenByFilepathCallback(filepath)
     }
     #attemptAddFileReferenceCountAsync = async (filenameReferenceCounts, filepath) => {
         var fileExists = TemplativeProjectRenderer.#doesFileExist(filepath)
