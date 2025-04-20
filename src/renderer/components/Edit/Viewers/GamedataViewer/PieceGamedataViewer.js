@@ -5,6 +5,10 @@ import EditableViewerJson from "../EditableViewerJson";
 import PieceTable from "./PieceTable";
 import TransposedTable from "./TransposedTable";
 
+import TableIcon from "./PiecesTypeIcons/TableIcon.svg?react";
+import JsonListIcon from "./PiecesTypeIcons/JsonListIcon.svg?react";
+import TableRotatedIcon from "./PiecesTypeIcons/TableRotatedIcon.svg?react";
+
 export default class PieceGamedataViewer extends EditableViewerJson {   
     state = {
         trackedKey: undefined,
@@ -127,14 +131,10 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         this.setState({lockedKey: key})
     }
 
-    toggleViewMode = () => {
-        this.setState(prevState => ({
-            viewMode: prevState.viewMode === 'list' 
-                ? 'table' 
-                : prevState.viewMode === 'table' 
-                    ? 'transposed' 
-                    : 'list'
-        }));
+    toggleViewMode = (mode) => {
+        this.setState({
+            viewMode: mode
+        });
     }
 
     render() {
@@ -202,29 +202,34 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                     </button>
                 }
             </div>
-            {/* <button 
-                onClick={this.toggleViewMode} 
-                className="btn btn-outline-secondary btn-sm" 
-                data-bs-theme="dark"
-            >
-                {this.state.viewMode === 'list' ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-table" viewBox="0 0 16 16">
-                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 2h-4v3h4zm0 4h-4v3h4zm0 4h-4v3h3a1 1 0 0 0 1-1zm-5 3v-3H6v3zm-5 0v-3H1v2a1 1 0 0 0 1 1zm-4-4h4V8H1zm0-4h4V4H1zm5-3v3h4V4zm4 4H6v3h4z"/>
-                    </svg>
-                ) : this.state.viewMode === 'table' ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-left-right" viewBox="0 0 16 16">
-                        <path fillRule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l3.146-3.147 3.146 3.147a.5.5 0 0 0 .708-.708l-3.146-3.147 3.146-3.146a.5.5 0 0 0-.708-.708l-3.146 3.146-3.147-3.146a.5.5 0 0 0-.708.708l3.147 3.146-3.146 3.147a.5.5 0 0 0-.708.708l-3.147-3.146z"/>
-                    </svg>
-                ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
-                        <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-                    </svg>
-                )}
-            </button> */}
+            
+            {/* <div className="view-mode-toggle">
+                <button 
+                    onClick={() => this.toggleViewMode('list')} 
+                    className={`btn btn-outline-primary btn-sm view-mode-toggle-button ${this.state.viewMode === 'list' ? 'selected' : ''}`}
+                >
+                    <JsonListIcon className="view-mode-icon"/>
+                    Json List
+                </button>
+                <button 
+                    onClick={() => this.toggleViewMode('table')} 
+                    className={`btn btn-outline-primary btn-sm view-mode-toggle-button ${this.state.viewMode === 'table' ? 'selected' : ''}`}
+                >
+                    <TableIcon className="view-mode-icon"/>
+                    Table
+                </button>
+                <button 
+                    onClick={() => this.toggleViewMode('transposed')} 
+                    className={`btn btn-outline-primary btn-sm view-mode-toggle-button ${this.state.viewMode === 'transposed' ? 'selected' : ''}`}
+                >
+                    <TableRotatedIcon className="view-mode-icon"/>
+                    Table Rotated
+                </button>
+            </div> */}
+
             <div className="pieces-gamedata-row">
-                {rows}
-                {/* {this.state.viewMode === 'list' ? (
-                    
+                {this.state.viewMode === 'list' ? (
+                    rows
                 ) : this.state.viewMode === 'table' ? (
                     <PieceTable 
                         content={this.state.content}
@@ -239,7 +244,7 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                         deletePiece={this.deletePiece}
                         duplicatePieceByIndex={this.duplicatePieceByIndex}
                     />
-                )} */}
+                )}
             </div> 
         </div> 
     }
