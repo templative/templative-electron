@@ -22,7 +22,7 @@ import { STOCK_COMPONENT_INFO } from "../../shared/stockComponentInfo";
 export default class EditProjectView extends React.Component {
   
     state = {
-        currentRoute: "edit",
+        currentRoute: "create",
         tabbedFiles: [
             // new TabbedFile("COMPONENTS", path.join(this.props.templativeRootDirectoryPath, "component-compose.json"), true),
         ],
@@ -328,17 +328,28 @@ export default class EditProjectView extends React.Component {
         try {
             const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
             const content = await TemplativeAccessTools.loadFileContentsAsJson(filepath);
-            this.setState({ componentCompose: content });
+            const setTheRouteToCreateIfThereAreNoComponents = content.length === 0 ? "create" : "edit"
+            this.setState({ componentCompose: content, currentRoute: setTheRouteToCreateIfThereAreNoComponents });
         } catch (error) {
-            console.error("Error loading component-compose.json:", error);
-            this.setState({ componentCompose: [] });
+            if (error.code === "ENOENT") {
+                console.error("component-compose.json file does not exist. Please create the file and try again.")
+                this.setState({ componentCompose: [], currentRoute: "create" });
+                return
+            }
+            else if (error.code === "INVALID_JSON") {
+                console.error("Invalid component-compose.json file. Please fix the file and try again.")
+                this.setState({ componentCompose: [], currentRoute: "create" });
+                return
+            }
+            throw error
         }
     }
     saveComponentComposeAsync = async (updatedContent) => {
         try {
             const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
             await this.saveFileAsync(filepath, JSON.stringify(updatedContent, null, 2));
-            this.setState({ componentCompose: updatedContent });
+            const setTheRouteToCreateIfThereAreNoComponents = updatedContent.length === 0 ? "create" : "edit"
+            this.setState({ componentCompose: updatedContent, currentRoute: setTheRouteToCreateIfThereAreNoComponents });
         } catch (error) {
             console.error("Error saving component-compose.json:", error);
         }
@@ -373,7 +384,7 @@ export default class EditProjectView extends React.Component {
     }
     render() {
         return <RenderingWorkspaceProvider key={this.props.templativeRootDirectoryPath}>
-            <TopNavbar topNavbarItems={TOP_NAVBAR_ITEMS} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
+            <TopNavbar hasAComponent={this.state.componentCompose.length > 0} topNavbarItems={TOP_NAVBAR_ITEMS} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
             <OutputDirectoriesProvider templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}>
                 {this.state.currentRoute === 'create' && (
                     <CreatePanel

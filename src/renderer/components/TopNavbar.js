@@ -8,7 +8,12 @@ class TopNavbar extends React.Component {
             var isSelectedRoute = this.props.currentRoute === topNavbarItem.route;
             var buttonClasses = `btn btn-secondary sidebar-button ${isSelectedRoute && "current-sidebar-button"}`;
             return (
-                <button key={topNavbarItem.name} className={buttonClasses} onClick={() => { this.props.updateRouteCallback(topNavbarItem.route) }}>
+                <button 
+                    key={topNavbarItem.name} 
+                    className={buttonClasses} 
+                    onClick={() => { this.props.updateRouteCallback(topNavbarItem.route) }}
+                    disabled={topNavbarItem.route !== "create" && !this.props.hasAComponent}
+                >
                     {topNavbarItem.svg}
                     <span className="top-navbar-item-label"><br/>{topNavbarItem.name}</span>
                 </button>
