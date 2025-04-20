@@ -1,0 +1,55 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 715px;
+    height: 616px;
+    text-align: center;
+}
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+.drop-area {
+    border: 2px dashed #ccc;
+    padding-top: 200px;
+    margin: 20px 0;
+    height: 460px;
+    cursor: pointer;
+}
+.drop-area:hover, .drop-area.highlight {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+.import-warning {
+    color: var(--color-error);
+    text-align: left;
+    font-size: 16px;
+    margin-top: 0px;
+}
+
+.close-button {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+

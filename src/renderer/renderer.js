@@ -13,10 +13,10 @@ Sentry.init({ dsn: "https://ea447f3e89982daf599068c5b6bf933c@o4508842181459968.i
 if (!window.__REACT_ROOT__) {
     const rootElement = document.getElementById('root');
     if (rootElement) {
-        console.log('Creating new React root');
+        // console.log('Creating new React root');
         window.__REACT_ROOT__ = createRoot(rootElement);
     } else {
-        console.error('Root element not found');
+        // console.error('Root element not found');
     }
 }
 
@@ -24,7 +24,7 @@ if (!window.__REACT_ROOT__) {
 const root = window.__REACT_ROOT__;
 
 const render = () => {
-    console.log('Rendering with root:', root);
+    // console.log('Rendering with root:', root);
     
     if (root) {
         root.render(
@@ -35,7 +35,7 @@ const render = () => {
             </React.StrictMode>
         );
     } else {
-        console.error('Cannot render: Root is null');
+        // console.error('Cannot render: Root is null');
     }
 };
 
@@ -45,13 +45,13 @@ render();
 if (module.hot) {
     // Accept CSS updates without refreshing the page
     module.hot.accept('bootstrap/dist/css/bootstrap.css', () => {
-        console.log('CSS updated without refresh');
+        // console.log('CSS updated without refresh');
     });
     
     // Accept App component updates and re-render without creating a new root
     module.hot.accept('./App', () => {
-        console.log('App component updated, re-rendering');
-        console.log('Current root:', root);
+        // console.log('App component updated, re-rendering');
+        // console.log('Current root:', root);
         render();
     });
     

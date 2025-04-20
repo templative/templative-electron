@@ -1,20 +1,32 @@
 import React from "react";
+import Papa from 'papaparse';
+import * as XLSX from 'xlsx';
+import path from 'path';
+
 import Piece from "./Piece";
-import "./GamedataViewer.css"
+import fsPromises from 'fs/promises';
 import EditableViewerJson from "../EditableViewerJson";
 import PieceTable from "./PieceTable";
 import TransposedTable from "./TransposedTable";
+import ImportCsvModal from './ImportCsvModal';
 
 import TableIcon from "./PiecesTypeIcons/TableIcon.svg?react";
 import JsonListIcon from "./PiecesTypeIcons/JsonListIcon.svg?react";
 import TableRotatedIcon from "./PiecesTypeIcons/TableRotatedIcon.svg?react";
+import KeyIcon from "./PiecesTypeIcons/KeyIcon.svg?react";
+import DownloadIcon from "./PiecesTypeIcons/DownloadIcon.svg?react";
+import PlusIcon from "./PiecesTypeIcons/PlusIcon.svg?react";
+import SyncIcon from "./PiecesTypeIcons/SyncIcon.svg?react";
+
+import "./GamedataViewer.css"
 
 export default class PieceGamedataViewer extends EditableViewerJson {   
     state = {
         trackedKey: undefined,
         currentUpdateValue: undefined,
         lockedKey: undefined,
-        viewMode: 'list'
+        viewMode: 'list',
+        isImportModalOpen: false
     }
 
     getFilePath = (props) => {
@@ -137,6 +149,69 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         });
     }
 
+    
+    
+    handleFileDropAsync = async (filepath) => {
+        console.log('File dropped:', filepath);
+        
+        const fileExtension = path.extname(filepath).toLowerCase();
+        let data = [];
+        
+        var fileContents;
+        try {
+            // Read file as a binary buffer for XLSX files
+            const encoding = fileExtension === '.xlsx' ? null : 'utf8';
+            fileContents = await fsPromises.readFile(filepath, encoding);
+        } catch (error) {
+            if (error.code === 'ENOENT') {
+                console.error('File does not exist:', filepath);
+                return;
+            }
+            console.error('Error reading file:', error);
+            return;
+        }
+        
+        if (fileExtension === '.csv') {
+            // Parse CSV file
+            console.log("csv");
+            const parsedData = Papa.parse(fileContents, { header: true, skipEmptyLines: true });
+            data = parsedData.data;
+        } else if (fileExtension === '.xlsx') {
+            // Parse XLSX file
+            console.log("xlsx");
+            const workbook = XLSX.read(fileContents, { type: 'buffer' });
+            const firstSheetName = workbook.SheetNames[0];
+            const worksheet = workbook.Sheets[firstSheetName];
+            
+            // Log the worksheet to check its content
+            console.log('Worksheet:', worksheet);
+            
+            data = XLSX.utils.sheet_to_json(worksheet, { defval: "" });
+            
+            // Log the data to verify the conversion
+            console.log('Parsed Data:', data);
+        } else {
+            console.error('Unsupported file type:', fileExtension);
+            return;
+        }
+
+        // Ensure every entry has every column
+        const allKeys = new Set(data.flatMap(Object.keys));
+        data = data.map(entry => {
+            const completeEntry = {};
+            allKeys.forEach(key => {
+                completeEntry[key] = entry[key] || "";
+            });
+            return completeEntry;
+        });
+        console.log(data);
+
+        this.setState({ 
+            content: data,
+            isImportModalOpen: false 
+        }, async () => this.autosave());
+    };
+
     render() {
         if (this.state.failedToLoad) {
             return <FileLoadFailure templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} filepath={this.state.filepath} errorMessage={this.state.errorMessage} />
@@ -176,31 +251,47 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         }
         
         return <div className="pieces-viewer">
-            <div className="input-group pieces-controls-input-group">
-                <button 
-                    onClick={() => this.addPiece()} 
-                    disabled={!this.state.hasLoaded}
-                    className="btn btn-outline-primary add-field-button" 
-                    type="button"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg add-field-plus" viewBox="0 0 16 16">
-                        <path fillRule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                    </svg>
-                    Create a new Piece
-                </button>
-                {this.state.lockedKey === undefined &&
+            <div className="pieces-controls-input-group">
+                <div>
                     <button 
-                        onClick={() => this.addBlankKeyValuePair()} 
+                        onClick={() => this.addPiece()} 
                         disabled={!this.state.hasLoaded}
                         className="btn btn-outline-primary add-field-button" 
                         type="button"
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg add-field-plus" viewBox="0 0 16 16">
-                            <path fillRule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                        </svg>
-                        Add a Field to all Pieces
+                        <PlusIcon className="add-field-icon"/>
+                        Create a new Piece
                     </button>
-                }
+                    <button 
+                        onClick={() => this.addBlankKeyValuePair()} 
+                        disabled={!this.state.hasLoaded || this.state.lockedKey !== undefined}
+                        className="btn btn-outline-primary add-field-button" 
+                        type="button"
+                    >
+                        <KeyIcon className="add-field-icon"/>
+                        Add a Field
+                    </button>
+                </div>
+                <div>
+                    <button 
+                        onClick={() => this.setState({ isImportModalOpen: true })} 
+                        disabled={!this.state.hasLoaded || this.state.lockedKey !== undefined}
+                        className="btn btn-outline-primary add-field-button" 
+                        type="button"
+                    >
+                        <DownloadIcon className="add-field-icon"/>
+                        Import CSV / Excel / Sheets
+                    </button>
+                    {/* <button 
+                        // onClick={() => this.setState({ isImportModalOpen: true })} 
+                        disabled={!this.state.hasLoaded || this.state.lockedKey !== undefined}
+                        className="btn btn-outline-primary add-field-button" 
+                        type="button"
+                    >
+                        <SyncIcon className="add-field-icon"/>
+                        Sync with Sheet
+                    </button> */}
+                </div>
             </div>
             
             {/* <div className="view-mode-toggle">
@@ -246,6 +337,12 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                     />
                 )}
             </div> 
+            <ImportCsvModal 
+                isOpen={this.state.isImportModalOpen} 
+                filenameWeAreOverwriting={path.relative(this.props.templativeRootDirectoryPath, this.props.filepath)}
+                onClose={() => this.setState({ isImportModalOpen: false })}
+                handleFileDropAsync={this.handleFileDropAsync}
+            />
         </div> 
     }
 }

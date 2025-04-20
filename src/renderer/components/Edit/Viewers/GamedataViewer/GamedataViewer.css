@@ -17,7 +17,7 @@
     border-bottom-style: solid;
 }
 .pieces-gamedata-row {
-    height: calc(100% - 40px);
+    height: calc(100% - 28px);
     overflow-y: auto;
     padding-bottom: 12px;
     padding-right: 12px;
@@ -107,15 +107,21 @@ tr {
     margin-bottom: 3px;
 }
 .pieces-controls-input-group {
-    margin-bottom: 12px;
+    margin-bottom: 0px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-border);
     display: flex;
+    flex-direction: row;
+    gap: 6px;
+    justify-content: space-between;
     width: 100%;
 }
-
-.pieces-controls-input-group .btn {
-    flex: 1;
-    white-space: nowrap;
+.pieces-controls-input-group > div {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
 }
+
 .key-value-control-button {
     border-bottom-width: 1px !important;
     border-left:none !important;
@@ -163,3 +169,18 @@ tr {
     border-top-left-radius: 0px !important;
     border-bottom-left-radius: 0px !important;
 }   
+.pieces-controls-input-group .btn {
+    /* flex: 1; */
+}
+.App .add-field-button {
+    white-space: nowrap;
+    font-size: 12px !important;
+    height: 30px;
+    border: none;
+}
+.add-field-icon {
+    margin-right: 4px;
+    margin-bottom: 2px;
+    width: 12px;
+    height: 12px;
+}

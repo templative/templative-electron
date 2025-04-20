@@ -1,5 +1,5 @@
-const { ipcMain, shell } = require('electron')
-const { openFolder, openPlaygroundFolder, openSimulatorFolder, openProjectLocationFolder, createTemplativeProjectWithName } = require("./dialogMaker")
+const { ipcMain, shell, dialog } = require('electron')
+const { openFolder, openPlaygroundFolder, openSimulatorFolder, openProjectLocationFolder, createTemplativeProjectWithName, openFileDialog } = require("./dialogMaker")
 const { channels } = require('../shared/constants');
 const { login, giveLoginInformation, getTgcSessionFromStore, logoutTgc, clearGithubAuth, giveGithubAuth, pollGithubAuth } = require("./accountManager")
 const { 
@@ -58,5 +58,9 @@ function listenForRenderEvents(window) {
     ipcMain.handle(channels.TO_SERVER_CREATE_SIMULATOR_SAVE, createSimulatorSave);
     ipcMain.handle(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG_FOR_PROJECT_LOCATION, openProjectLocationFolder);
     ipcMain.handle(channels.TO_SERVER_CREATE_PROJECT, createTemplativeProjectWithName);
+
+    ipcMain.handle(channels.TO_SERVER_OPEN_FILE_DIALOG, async (event, filters) => {
+        return await openFileDialog(window, filters);
+    });
 }
 module.exports = { listenForRenderEvents }

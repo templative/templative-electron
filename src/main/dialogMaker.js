@@ -77,10 +77,19 @@ const createTemplativeProjectWithName = async(event, { projectLocation, projectN
     }
 }
 
+const openFileDialog = async (window, filters) => {
+    const result = await dialog.showOpenDialog(window, {
+        properties: ['openFile'],
+        filters: filters
+    });
+    return result.filePaths[0];
+}
+
 module.exports = { 
     openPlaygroundFolder,
     openSimulatorFolder,
     openFolder,
     openProjectLocationFolder,
-    createTemplativeProjectWithName
+    createTemplativeProjectWithName,
+    openFileDialog
 };
