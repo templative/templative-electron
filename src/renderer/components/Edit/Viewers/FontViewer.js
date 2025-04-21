@@ -28,12 +28,13 @@ class FontTTFViewer extends React.Component {
 const Glyph = ({fontFamily, glyphName, unicode, d, unitsPerEm}) => {
     const [isHovering, setIsHovering] = useState(false);
     const [clicked, setClicked] = useState(false);
-    const glyphInsert = `<iconGlyph font-family='${fontFamily}' glyph='${glyphName}'/>`;
+    const glyphInsert = `<iconGlyph font-family='${fontFamily}' ${glyphName ? `glyph='${glyphName}'` : `unicode='${unicode}'`}/>`;
     
     const copyUnicode = () => {
         navigator.clipboard.writeText(glyphInsert);
         setClicked(true);
     }
+    const name = glyphName || unicode;
     return <div className="glyph" onClick={() => copyUnicode()} 
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => {
@@ -46,7 +47,7 @@ const Glyph = ({fontFamily, glyphName, unicode, d, unitsPerEm}) => {
                 <g><path fill="#878ec4" d={d} /></g>
             </svg>
             
-            <p>{ clicked ? "Copied!" : (isHovering ? "Copy" : glyphName)}</p>
+            <p>{ clicked ? "Copied!" : (isHovering ? "Copy" : name)}</p>
         </div>
     </div>
 }
@@ -64,11 +65,11 @@ class FontSvgViewer extends React.Component {
         if (!fontElement) {
             return <div>No font element</div>
         }
+        const fontFamily = fontElement.getAttribute('id');
         const fontFaceElement = fontElement.querySelector('font-face');
         if (!fontFaceElement) {
             return <div>No font face element</div>
         }
-        const fontFamily = fontFaceElement.getAttribute('font-family');
         const unitsPerEm = fontFaceElement.getAttribute('units-per-em');
         if (!unitsPerEm) {
             return <div>No units per em</div>
@@ -84,21 +85,29 @@ class FontSvgViewer extends React.Component {
         Array.from(fontElement.querySelectorAll('glyph')).forEach(glyph => {
             
             const glyphName = glyph.getAttribute('glyph-name');
-            const unicode = glyph.getAttribute('unicode');
+            const unicode = glyph.getAttribute('unicode')
             const d = glyph.getAttribute('d');
-            if (!glyphName || !unicode || !d) {
-                return;
+            
+            // Convert unicode to string representation
+            let unicodeStr = "";
+            if (unicode) {
+                try {
+                    unicodeStr = unicode.codePointAt(0).toString(16).replace("&#x","").replace(";", "");
+                } catch (e) {
+                    console.warn("Failed to convert unicode for glyph:", glyphName);
+                }
             }
+            
             glyphs.push({
                 glyphName: glyphName,
-                unicode: unicode,
+                unicode: unicodeStr,
                 d: d
             });
         });
         
         // Create SVGs for each glyph
         var glyphElements = glyphs
-            .filter(glyph => !glyph.glyphName.endsWith("-1"))
+            .filter(glyph => !(glyph.glyphName && glyph.glyphName.endsWith("-1")))
             .map(glyph => 
                 <Glyph key={glyph.glyphName} fontFamily={fontFamily} glyphName={glyph.glyphName} unicode={glyph.unicode} d={glyph.d} unitsPerEm={unitsPerEm} />
             );

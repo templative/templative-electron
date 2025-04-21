@@ -14,9 +14,10 @@ async function preprocessSvgTextAsync(svgData, inputDirectoryPath) {
     }
 
     let document;
+    var dom;
     try {
         // Parse the SVG using JSDOM
-        const dom = new JSDOM(svgData, { contentType: 'image/svg+xml' });
+        dom = new JSDOM(svgData, { contentType: 'image/svg+xml' });
         document = dom.window.document;
     } catch (error) {
         console.error(`Error parsing SVG with JSDOM: ${error.message}`);
@@ -29,7 +30,7 @@ async function preprocessSvgTextAsync(svgData, inputDirectoryPath) {
         await processIconGlyphsAsync(document, inputDirectoryPath);
     } catch (error) {
         console.error(`Error processing icon glyphs: ${error.message}`);
-        // console.error(error.stack);
+        console.error(error.stack);
         return svgData;
     }
 
