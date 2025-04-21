@@ -55,9 +55,15 @@ async function getPUACharFromUnicode(fontTffPath, unicodeString) {
     if (!fontTffPath.endsWith('.ttf')) {
         throw new Error('Font path must be a .ttf file');
     }
+    var font;
     try {
         font = await opentype.load(fontTffPath);
-
+    }
+    catch (error) {
+        console.error('Error loading font:', error.message);
+        return ""
+    }
+    try {
         // Convert the unicode value to a character
         const unicodeNumber = unicodeStringToNumber(unicodeString);
         const char = String.fromCodePoint(unicodeNumber);
@@ -75,7 +81,7 @@ async function getPUACharFromUnicode(fontTffPath, unicodeString) {
     }
     catch (error) {
         console.error('Error loading font:', error);
-        throw error;
+        return "";
     }
 }
 

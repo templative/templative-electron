@@ -7,6 +7,7 @@ import ComponentGamedataViewer from "./Viewers/GamedataViewer/ComponentGamedataV
 import GameGamedataViewer from "./Viewers/GamedataViewer/GameGamedataViewer";
 import SettingsViewer from "./Viewers/SettingsViewer";
 import ImageViewer from "./Viewers/ImageViewer";
+import FontViewer from "./Viewers/FontViewer";
 import RulesEditor from "./Viewers/RulesEditor";
 import EditPanelTabs from "./EditPanelTabs";
 import RenderPreview from "./RenderPreview/RenderPreview";
@@ -136,8 +137,15 @@ export default class EditPanel extends React.Component {
                                 saveFileAsyncCallback={this.props.saveFileAsyncCallback}
                             />
                         }
-                        {(this.props.currentFileType === "ART" || this.props.currentFileType === "GAMECRAFTER") &&
+                        {(this.props.currentFileType === "ART" || this.props.currentFileType === "GAMECRAFTER_ADS") &&
                             <ImageViewer filepath={this.props.currentFilepath} templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
+                        }
+                        {this.props.currentFileType === "FONTS" &&
+                            <FontViewer 
+                                filepath={this.props.currentFilepath} 
+                                templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                                saveFileAsyncCallback={this.props.saveFileAsyncCallback}
+                            />
                         }
                         {this.props.currentFileType === "PIECE_GAMEDATA" &&
                             <PieceGamedataViewer 

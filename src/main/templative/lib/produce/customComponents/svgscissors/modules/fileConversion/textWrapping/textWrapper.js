@@ -92,7 +92,7 @@ async function wrapTextAsync(text, fontSize, containerWidth, fontInfo = {}, form
       // console.log(`Word "${wordWithSpace}" width: ${wordWidth}, current line width: ${currentLineWidth}, container width: ${containerWidth}`);
       
       // If adding this word would exceed the line width
-      console.log(`Current line: "${currentLine}", Next word: "${word}", Width: ${currentLineWidth + wordWidth}, Container width: ${containerWidth}`);
+      // console.log(`Current line: "${currentLine}", Next word: "${word}", Width: ${currentLineWidth + wordWidth}, Container width: ${containerWidth}`);
       if (currentLineWidth + wordWidth > containerWidth && currentLine.length > 0) {
         // console.log(`Line would exceed container width, creating new line`);
         lines.push(currentLine);

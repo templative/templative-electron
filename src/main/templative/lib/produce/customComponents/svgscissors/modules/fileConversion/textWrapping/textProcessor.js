@@ -93,7 +93,7 @@ async function processShapeInsideTextAsync(textElement, shapeElement, styleAttr)
   textData.formattingRanges = formattingData.formattingRanges;
   
   const textTransform = textElement.hasAttribute('transform') ? textElement.getAttribute('transform') : '';
-  console.log(textBounds, textData.plainContent, textData.formattingRanges, textTransform)
+  
   await createWrappedTextElementAsync(textElement, textBounds, textData.plainContent, textData.formattingRanges, textTransform);
 }
 
@@ -601,7 +601,6 @@ async function createWrappedTextElementAsync(textElement, textBounds, plainConte
     try {
       // Pass formatting ranges to wrapTextAsync
       const wrapped = await wrapTextAsync(line, fontSize, textBounds.width, fontInfo, formattingRanges, characterPositionForFormatting);
-      console.log(wrapped)
       wrappedLines.push(...wrapped);
     } catch (err) {
       console.error('Error wrapping text:', err);

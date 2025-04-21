@@ -14,6 +14,8 @@ import studioIcon from "./Icons/studioIcon.svg?react"
 import componentIcon from "./Icons/componentIcon.svg?react"
 import rulesIcon from "./Icons/rulesIcon.svg?react"
 import settingsIcon from "./Icons/settingsIcon.svg?react"
+import fontIcon from "./Icons/fontIcon.svg?react"
+import gameCrafterAdsIcon from "./Icons/theGameCrafterAds.svg?react"
 
 const path = require("path");
 const shell = require('electron').shell;
@@ -81,6 +83,8 @@ export default class EditPanelTab extends React.Component {
             "STUDIO_GAMEDATA": studioIcon,
             "GAME_GAMEDATA": gameIcon,
             "SETTINGS": settingsIcon,
+            "FONTS": fontIcon,
+            "GAMECRAFTER_ADS": gameCrafterAdsIcon,
         }
         var IconElement = icons[this.props.tabbedFile.filetype]
         

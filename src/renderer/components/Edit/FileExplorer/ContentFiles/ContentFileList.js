@@ -4,6 +4,8 @@ import ContentFileItem from "./ContentFileItem"
 import ResourceHeader from "./ResourceHeader";
 import NewFileInput from "./NewFileInput"
 
+import FontsIcon from "../../Icons/fontIcon.svg?react"
+import TheGameCrafterAdsIcon from "../../Icons/theGameCrafterAds.svg?react"
 import artDataIcon from "../../Icons/artDataIcon.svg?react"
 import artIcon from "../../Icons/artIcon.svg?react"
 import componentIcon from "../../Icons/componentIcon.svg?react"
@@ -86,11 +88,24 @@ export default class ContentFileList extends React.Component {
         await this.#watchBasepathAsync()
     }
     #watchBasepathAsync = async () => {
-        this.#stopWatchingBasepath()                
-        this.componentComposeWatcher = fsOld.watch(this.props.baseFilepath, {recursive: true}, async (event, filename) => {
-            await this.#requestNewFilesNamesAsync()
-        })
-            
+        this.#stopWatchingBasepath()  
+        try {
+            fs.mkdir(this.props.baseFilepath, {recursive: true})
+        }
+        catch (error) {
+            if (error.code !== "EEXIST") {
+                throw error;
+            }
+        }
+        try {
+            this.componentComposeWatcher = fsOld.watch(this.props.baseFilepath, {recursive: true}, async (event, filename) => {
+                await this.#requestNewFilesNamesAsync()
+            })
+        }
+        catch (error) {
+            console.error(`Error watching basepath ${this.props.baseFilepath}:`, error);
+        }
+        
         await this.#requestNewFilesNamesAsync()
     }
     
@@ -147,6 +162,14 @@ export default class ContentFileList extends React.Component {
         for(var i = 0; i < this.state.fileItems.length; i++) {
             var fileItem = this.state.fileItems[i]
             
+            const acceptedFileExtensions = this.props.acceptedFileExtensions
+            if (acceptedFileExtensions.length > 0) {
+                const ext = path.extname(fileItem.absoluteFilepath)
+                if (!acceptedFileExtensions.includes(ext)) {
+                    continue
+                }
+            }
+            
             const effectiveDepth = fileItem.depthRelativeToBasepath + (this.props.baseDepth || 0);
             
             var isVisible = false
@@ -180,9 +203,12 @@ export default class ContentFileList extends React.Component {
                 />)
                 continue
             }
-            var referenceCount = this.props.filenameReferenceCounts[path.normalize(fileItem.absoluteFilepath)]
-            if (referenceCount === undefined) {
-                referenceCount = 0
+            var referenceCount = 1
+            if (this.props.filenameReferenceCounts !== undefined) {
+                referenceCount = this.props.filenameReferenceCounts[path.normalize(fileItem.absoluteFilepath)]
+                if (referenceCount === undefined) {
+                    referenceCount = 0
+                }
             }
             divs.push(<ContentFileItem 
                 contentType={this.props.contentType} 
@@ -205,25 +231,18 @@ export default class ContentFileList extends React.Component {
             startCreatingNewFileAsyncCallback = async () => await this.startCreatingNewFileAsync()
         }
 
-        var IconSource = componentComposeIcon
-        if (this.props.contentType === "RULES") {
-            IconSource = rulesIcon
+        const iconMap = {
+            "RULES": rulesIcon,
+            "COMPONENTS": componentComposeIcon,
+            "COMPONENT_GAMEDATA": componentIcon,
+            "PIECE_GAMEDATA": pieceIcon,
+            "ART": artIcon,
+            "ARTDATA": artDataIcon,
+            "GAMECRAFTER_ADS": TheGameCrafterAdsIcon,
+            "FONTS": FontsIcon
         }
-        if (this.props.contentType === "COMPONENTS") {
-            IconSource = componentComposeIcon
-        }
-        if (this.props.contentType === "COMPONENT_GAMEDATA") {
-            IconSource = componentIcon
-        }
-        if (this.props.contentType === "PIECE_GAMEDATA") {
-            IconSource = pieceIcon
-        }
-        if (this.props.contentType === "ART") {
-            IconSource = artIcon
-        }
-        if (this.props.contentType === "ARTDATA") {
-            IconSource = artDataIcon
-        }
+
+        var IconSource = iconMap[this.props.contentType] || componentComposeIcon
         var isExtended = this.props.extendedFileTypes.has(this.props.filetype)
         return <div className="content-file-list">
             <ResourceHeader 

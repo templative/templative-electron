@@ -49,7 +49,8 @@ const watchCommand = new Command('watch')
     var cachePreProducer = new CachePreProducerWatcher(options.input);
     await cachePreProducer.openWatchers();
   });
-  
+
+// node ./src/main/templative/cli.js iconfont --name game-icons --input "C:\Users\olive\Documents\git\templative-electron\scripts\data\1x1" --output "C:\Users\olive\Documents\git\templative-electron\scripts\data\stuff"
 const iconFontCommand = new Command('iconfont')
   .description('Create an icon font from SVG files')
   .option('--name <name>', 'The name of the icon font.', null)
@@ -66,6 +67,7 @@ const iconFontCommand = new Command('iconfont')
   });
 
 // node ./src/main/templative/cli.js pua --font "./scripts/data/stuff/gameicons.ttf" --unicode "&#xEA01;"
+// node ./src/main/templative/cli.js pua --font "./scripts/data/stuff/game-icons.ttf" --unicode "&#xEA02;"
 const getPUACharFromUnicodeCommand = new Command('pua')
   .description('Get the PUA character from a Unicode string')
   .option('--font <path>', 'The path to the font file.', null)

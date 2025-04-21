@@ -1,7 +1,7 @@
 {
     "name": "Templative",
     "description": "Electron frontend for the Templative CLI.",
-    "version": "1.0.38",
+    "version": "1.0.39",
     "private": true,
     "main": ".webpack/main",
     "author": {
@@ -78,6 +78,7 @@
         "dotenv": "^16.3.1",
         "electron-log": "^5.0.3",
         "electron-squirrel-startup": "^1.0.0",
+        "font-list": "^1.5.1",
         "fontkit": "^2.0.4",
         "fs": "^0.0.1-security",
         "fs-extra": "^11.1.1",

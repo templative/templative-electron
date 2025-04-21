@@ -9,6 +9,8 @@ import ResourceHeader from "./ContentFiles/ResourceHeader";
 import GitRow from "./Git/GitRow";
 import CompositionsList from "./CompositionsList";
 import StockItemsList from "./StockItemsList";
+import AssetsIcon from "../Icons/assetsIcon.svg?react"
+
 
 import ErrorIcon from "../../Toast/error.svg?react"
 
@@ -22,6 +24,7 @@ const ResourceSection = ({
     header, 
     directory, 
     isExtended, 
+    baseDepth,
     contentFileListProps, 
     changeExtendedDirectoryAsyncCallback,
     templativeRootDirectoryPath,
@@ -36,7 +39,7 @@ const ResourceSection = ({
                 header={header} 
                 directory={directory}
                 isExtended={isExtended}
-                depth={0}
+                depth={baseDepth}
                 toggleExtendedAsyncCallback={() => changeExtendedDirectoryAsyncCallback(!isExtended, directory)}/>
             {isExtended && header === "Art Files" && (
                 <React.Fragment>
@@ -44,7 +47,8 @@ const ResourceSection = ({
                         {...contentFileListProps}
                         header="Templates" 
                         contentType="ART" 
-                        baseDepth={1}
+                        acceptedFileExtensions={[".svg"]}
+                        baseDepth={baseDepth + 1}
                         directoryPath={directories.templatesDirectory}
                         baseFilepath={directories.templatesDirectory}
                         filetype={"TEMPLATES"}    
@@ -54,7 +58,8 @@ const ResourceSection = ({
                         {...contentFileListProps}
                         header="Overlays" 
                         contentType="ART" 
-                        baseDepth={1}
+                        acceptedFileExtensions={[".svg"]}
+                        baseDepth={baseDepth + 1}
                         directoryPath={directories.overlaysDirectory}
                         baseFilepath={directories.overlaysDirectory}
                         filetype={"OVERLAYS"}    
@@ -67,7 +72,8 @@ const ResourceSection = ({
                     {...contentFileListProps}
                     header="Art Recipe Files" 
                     contentType="ARTDATA"
-                    baseDepth={0}
+                    baseDepth={baseDepth + 1}
+                    acceptedFileExtensions={[".json"]}
                     directoryPath={directories.artdataDirectory}
                     baseFilepath={directories.artdataDirectory}
                     filetype={"ARTDATA"}    
@@ -81,7 +87,8 @@ const ResourceSection = ({
                         templativeRootDirectoryPath={templativeRootDirectoryPath}
                         header="Component" 
                         contentType="COMPONENT_GAMEDATA" 
-                        baseDepth={1}
+                        baseDepth={baseDepth + 1}
+                        acceptedFileExtensions={[".json"]}
                         directoryPath={directories.componentGamedataDirectory}
                         baseFilepath={directories.componentGamedataDirectory}
                         filetype={"COMPONENT_GAMEDATA"}           
@@ -91,21 +98,22 @@ const ResourceSection = ({
                         templativeRootDirectoryPath={templativeRootDirectoryPath}
                         header="Piece" 
                         contentType="PIECE_GAMEDATA" 
-                        baseDepth={1}
+                        baseDepth={baseDepth + 1}
+                        acceptedFileExtensions={[".json"]}
                         directoryPath={directories.piecesGamedataDirectory}
                         baseFilepath={directories.piecesGamedataDirectory}
                         filetype={"PIECE_GAMEDATA"}    
                     />
                     <IconContentFileItem
                         contentType={"STUDIO_GAMEDATA"}
-                        depth={1}
+                        depth={baseDepth + 1}
                         currentFilepath={currentFilepath}
                         filepath={path.join(templativeRootDirectoryPath, "studio.json")}
                         updateViewedFileUsingExplorerAsyncCallback={updateViewedFileUsingExplorerAsyncCallback}
                     />
                     <IconContentFileItem
                         contentType={"GAME_GAMEDATA"}
-                        depth={1}
+                        depth={baseDepth + 1}
                         currentFilepath={currentFilepath}
                         filepath={path.join(templativeRootDirectoryPath, "game.json")}
                         updateViewedFileUsingExplorerAsyncCallback={updateViewedFileUsingExplorerAsyncCallback}
@@ -129,6 +137,9 @@ export default class TemplativeProjectRenderer extends React.Component {
         componentGamedataDirectory: undefined,
         hasGit: false,
         githubToken: false,
+        isAssetsExtended: false,
+        isFontsExtended: false,
+        isGameCrafterAdsExtended: false,
     }
 
     createFileAsync = async (filepath, contents) => {
@@ -241,8 +252,9 @@ export default class TemplativeProjectRenderer extends React.Component {
         
         this.setState({
             gameCompose: gameCompose,
-            gameCrafterAdsDirectory: path.join(this.props.templativeRootDirectoryPath, "gamecrafter"),
             templatesDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.artTemplatesDirectory),
+            fontsDirectory: path.join(this.props.templativeRootDirectoryPath, "fonts"),
+            gameCrafterAdsDirectory: path.join(this.props.templativeRootDirectoryPath, "gamecrafter"),
             overlaysDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.artInsertsDirectory),
             artdataDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.artdataDirectory),
             piecesGamedataDirectory: path.join(this.props.templativeRootDirectoryPath, gameCompose.piecesGamedataDirectory),
@@ -351,7 +363,6 @@ export default class TemplativeProjectRenderer extends React.Component {
             currentFilepath: this.props.currentFilepath,
             extendedFileTypes: this.props.extendedFileTypes,
             extendedDirectories: this.props.extendedDirectories,
-            filenameReferenceCounts: this.state.filenameReferenceCounts
         }
 
         const contentFileListProps = {
@@ -371,93 +382,132 @@ export default class TemplativeProjectRenderer extends React.Component {
         
         return <div className="row file-explorer-row g-0">
             <div className="col file-explorer-col">
-                <div className="content-files-container">
-                    <div className="actual-files">
-                    {this.state.templatesDirectory !== this.state.overlaysDirectory ? (
-                        <ResourceSection 
-                            IconSource={artIcon}
-                            header="Art Files"
-                            directory={artDirectory}
-                            isExtended={isArtExtended}
-                            contentFileListProps={contentFileListProps}
-                            changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
-                            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                            currentFilepath={this.props.currentFilepath}
-                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                            directories={{
-                                templatesDirectory: this.state.templatesDirectory,
-                                overlaysDirectory: this.state.overlaysDirectory,
-                            }}
-                        />
-                    ) : (
-                        <ContentFileList
-                            {...contentFileListProps}
-                            header="Art Files" 
-                            contentType="ART"
-                            baseDepth={0}
-                            directoryPath={this.state.templatesDirectory}
-                            baseFilepath={this.state.templatesDirectory}
-                            filetype={"ART"}      
-                            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                        />
-                    )}
-                    <ContentFileList
-                        {...contentFileListProps}
-                        header="Art Recipe Files" 
-                        contentType="ARTDATA"
-                        baseDepth={0}
-                        directoryPath={artRecipeDirectory}
-                        baseFilepath={artRecipeDirectory}
-                        filetype={"ARTDATA"}    
-                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                    />
-                    
-                    <ResourceSection 
-                        IconSource={gamedataIcon}
-                        header="Content Files"
-                        directory={gamedataDirectory}
-                        isExtended={isGameDataExtended}
-                        contentFileListProps={contentFileListProps}
-                        changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
-                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                        currentFilepath={this.props.currentFilepath}
-                        updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                        directories={{
-                            componentGamedataDirectory: this.state.componentGamedataDirectory,
-                            piecesGamedataDirectory: this.state.piecesGamedataDirectory
+                
+                
+                <CompositionsList 
+                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    componentCompose={this.props.componentCompose}
+                    saveComponentComposeAsync={this.props.saveComponentComposeAsync}
+                    currentFilepath={this.props.currentFilepath}
+                    updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                    updateRouteCallback={this.props.updateRouteCallback}
+                    deleteCompositionCallbackAsync={this.props.deleteCompositionAsync}
+                    duplicateCompositionCallbackAsync={this.props.duplicateCompositionAsync}
+                    toggleDisableCompositionCallbackAsync={this.props.toggleDisableCompositionAsync}
+                    updateComponentComposeFieldAsync={this.props.updateComponentComposeFieldAsync}
+                />
+                <StockItemsList 
+                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    componentCompose={this.props.componentCompose}
+                    saveComponentComposeAsync={this.props.saveComponentComposeAsync}
+                    currentFilepath={this.props.currentFilepath}
+                    updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                    updateRouteCallback={this.props.updateRouteCallback}
+                    deleteCompositionCallbackAsync={this.props.deleteCompositionAsync}
+                    duplicateCompositionCallbackAsync={this.props.duplicateCompositionAsync}
+                    toggleDisableCompositionCallbackAsync={this.props.toggleDisableCompositionAsync}
+                />
+                <div className="content-file-list">
+                    <ResourceHeader 
+                        IconSource={AssetsIcon}
+                        header="Assets"
+                        isExtended={this.state.isAssetsExtended}
+                        toggleExtendedAsyncCallback={() => {
+                            this.setState({ isAssetsExtended: !this.state.isAssetsExtended })
                         }}
                     />
-                    </div>
-                    <div className="compositions">
-                        <CompositionsList 
-                            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                            componentCompose={this.props.componentCompose}
-                            saveComponentComposeAsync={this.props.saveComponentComposeAsync}
-                            currentFilepath={this.props.currentFilepath}
-                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                            updateRouteCallback={this.props.updateRouteCallback}
-                            deleteCompositionCallbackAsync={this.props.deleteCompositionAsync}
-                            duplicateCompositionCallbackAsync={this.props.duplicateCompositionAsync}
-                            toggleDisableCompositionCallbackAsync={this.props.toggleDisableCompositionAsync}
-                            updateComponentComposeFieldAsync={this.props.updateComponentComposeFieldAsync}
-                        />
-                        <StockItemsList 
-                            templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                            componentCompose={this.props.componentCompose}
-                            saveComponentComposeAsync={this.props.saveComponentComposeAsync}
-                            currentFilepath={this.props.currentFilepath}
-                            updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
-                            updateRouteCallback={this.props.updateRouteCallback}
-                            deleteCompositionCallbackAsync={this.props.deleteCompositionAsync}
-                            duplicateCompositionCallbackAsync={this.props.duplicateCompositionAsync}
-                            toggleDisableCompositionCallbackAsync={this.props.toggleDisableCompositionAsync}
-                        />
-                    </div>
+                    {this.state.isAssetsExtended && (
+                        <div className="assets-container">
+                            <ContentFileList
+                                {...contentFileListProps}
+                                header="Fonts" 
+                                contentType="FONTS"
+                                filetype={"FONTS"}      
+                                baseDepth={1}
+                                acceptedFileExtensions={[".ttf", ".svg"]}
+                                directoryPath={this.state.fontsDirectory}
+                                baseFilepath={this.state.fontsDirectory}
+                                templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                            />
+                            <ContentFileList
+                                {...contentFileListProps}
+                                header="TheGameCrafter Store Page Images" 
+                                contentType="GAMECRAFTER_ADS"
+                                filetype={"GAMECRAFTER_ADS"}      
+                                baseDepth={1}
+                                acceptedFileExtensions={[".png"]}
+                                directoryPath={this.state.gameCrafterAdsDirectory}
+                                baseFilepath={this.state.gameCrafterAdsDirectory}
+                                templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                            />
+                            {this.state.templatesDirectory !== this.state.overlaysDirectory ? (
+                                <ResourceSection 
+                                    IconSource={artIcon}
+                                    header="Art Files"
+                                    baseDepth={1}
+                                    directory={artDirectory}
+                                    filenameReferenceCounts={this.state.filenameReferenceCounts}
+                                    isExtended={isArtExtended}
+                                    contentFileListProps={contentFileListProps}
+                                    changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
+                                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                                    currentFilepath={this.props.currentFilepath}
+                                    updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                                    directories={{
+                                        templatesDirectory: this.state.templatesDirectory,
+                                        overlaysDirectory: this.state.overlaysDirectory,
+                                    }}
+                                />
+                            ) : (
+                                <ContentFileList
+                                    {...contentFileListProps}
+                                    header="Art Files" 
+                                    contentType="ART"
+                                    baseDepth={1}
+                                    filenameReferenceCounts={this.state.filenameReferenceCounts}
+                                    acceptedFileExtensions={[".svg"]}
+                                    directoryPath={this.state.templatesDirectory}
+                                    baseFilepath={this.state.templatesDirectory}
+                                    filetype={"ART"}      
+                                    templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                                />
+                            )}
+                            <ContentFileList
+                                {...contentFileListProps}
+                                header="Art Recipe Files" 
+                                contentType="ARTDATA"
+                                baseDepth={1}
+                                directoryPath={artRecipeDirectory}
+                                filenameReferenceCounts={this.state.filenameReferenceCounts}
+                                baseFilepath={artRecipeDirectory}
+                                filetype={"ARTDATA"}    
+                                acceptedFileExtensions={[".json"]}
+                                templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                            />
+                            
+                            <ResourceSection 
+                                IconSource={gamedataIcon}
+                                header="Content Files"
+                                baseDepth={1}
+                                directory={gamedataDirectory}
+                                isExtended={isGameDataExtended}
+                                filenameReferenceCounts={this.state.filenameReferenceCounts}
+                                contentFileListProps={contentFileListProps}
+                                changeExtendedDirectoryAsyncCallback={this.props.changeExtendedDirectoryAsyncCallback}
+                                templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                                currentFilepath={this.props.currentFilepath}
+                                updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
+                                directories={{
+                                    componentGamedataDirectory: this.state.componentGamedataDirectory,
+                                    piecesGamedataDirectory: this.state.piecesGamedataDirectory
+                                }}
+                            />
+                        </div>
+                    )}
                 </div>
-                
-                <GitRow templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
             </div>
             
+            <GitRow templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
         </div>   
     }
 }

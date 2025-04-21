@@ -5,9 +5,6 @@ import "./RenameableFile.css"
 const path = require("path");
 
 export default class RenameableFile extends React.Component {  
-    state = {
-        filename: path.relative(this.props.directoryPath, this.props.filepath).split(".")[0]
-    }  
     updateFilename(filename) {
         this.setState({filename: filename})
     }
@@ -16,6 +13,10 @@ export default class RenameableFile extends React.Component {
         await this.props.renameFileCallback(this.props.filepath, newFilepath)
     }
     render() {
+        var filename = path.basename(this.props.filepath, path.extname(this.props.filepath))
+        if (this.props.contentType === "FONTS") {
+            filename = path.basename(this.props.filepath)
+        }
         var shouldDarkenName = this.props.contentType !== "ART" && this.props.referenceCount === 0
         return <div className="renameable-file-wrapper" onClick={this.props.onClickCallback}>
             {this.props.isRenaming ? 
@@ -34,12 +35,12 @@ export default class RenameableFile extends React.Component {
                                 this.props.cancelRenamingCallback()
                             }
                         }}
-                        value={this.state.filename}
+                        value={filename}
                     />
                 </div>
                 :
                 <p className={`renameable-file ${shouldDarkenName && "unused-file"}`}>
-                    <span style={{ marginLeft: `${(this.props.depth * 16)+8}px` }}/>{path.parse(this.props.filepath).name}
+                    <span style={{ marginLeft: `${(this.props.depth * 16)+8}px` }}/>{filename}
                 </p>
             }
         </div>
