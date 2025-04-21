@@ -60,8 +60,10 @@ async function getPUACharFromUnicode(fontTffPath, unicodeString) {
         font = await opentype.load(fontTffPath);
     }
     catch (error) {
-        console.error('Error loading font:', error.message);
-        return ""
+        if (error.code === 'ENOENT') {
+            console.warn(`Font ${fontTffPath} not found`);
+        }
+        throw error;
     }
     try {
         // Convert the unicode value to a character

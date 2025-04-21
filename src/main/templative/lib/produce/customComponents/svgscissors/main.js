@@ -175,7 +175,7 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       contents = await textReplaceInFile(contents, artdata["textReplacements"], gamedata, productionProperties);
       contents = await updateStylesInFile(contents, artdata["styleUpdates"], gamedata);
       contents = await addNewlines(contents);
-      contents = await preprocessSvgTextAsync(contents);
+      contents = await preprocessSvgTextAsync(contents, productionProperties.inputDirectoryPath);
       
       if (productionProperties.isClipped) {
           const potentialPaths = await getComponentTemplatesDirectoryPath(componentType);
