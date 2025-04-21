@@ -464,7 +464,7 @@ class FontCache {
    * @param {number} offset - Starting position of the text within the full content
    * @returns {number} - Maximum character height
    */
-  calculateMaxCharHeight(text, formattingRanges = [], defaultFontSize = 12, defaultFontFamily = 'Arial', offset = 0) {
+  async calculateMaxCharHeight(text, formattingRanges = [], defaultFontSize = 12, defaultFontFamily = 'Arial', offset = 0) {
     if (!text || text.length === 0) {
       return defaultFontSize * 1.5;
     }
@@ -493,7 +493,7 @@ class FontCache {
       }
       
       // Calculate height for this character
-      const charHeight = this.calculateCharHeight(
+      const charHeight = await this.calculateCharHeight(
         char,
         fontFamily,
         fontSize,
@@ -684,13 +684,13 @@ function estimateLineHeight(textElement) {
  * @param {number} offset - Starting position of the line within the full content
  * @returns {number} - Line height based on tallest character
  */
-function calculateLineHeightForLine(line, fontSize, formattingRanges = [], fontInfo = {}, offset = 0) {
+async function calculateLineHeightForLine(line, fontSize, formattingRanges = [], fontInfo = {}, offset = 0) {
   if (!line || line.trim().length === 0) {
     return fontSize * (fontInfo.lineHeight || 1.2); // Default for empty lines
   }
   
   // Get the maximum character height in the line
-  const maxCharHeight = fontCache.calculateMaxCharHeight(
+  const maxCharHeight = await fontCache.calculateMaxCharHeight(
     line,
     formattingRanges,
     fontSize,

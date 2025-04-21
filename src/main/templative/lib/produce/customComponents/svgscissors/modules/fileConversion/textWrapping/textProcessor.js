@@ -6,7 +6,7 @@ const { getShapeBounds } = require('./shapeProcessor');
  * @param {Document} document - DOM document
  * @param {boolean} force_rewrap - Force rewrapping of text
  */
-function processTextElements(document) {
+async function processTextElements(document) {
   // Find all rect, path, etc. elements that might be referenced
   const shapeMap = new Map();
   const shapeElements = document.querySelectorAll('rect, path, circle, ellipse, polygon, polyline');
@@ -19,12 +19,12 @@ function processTextElements(document) {
   // Find and process all text elements with shape-inside
   let textElements = document.querySelectorAll('text');
   
-  textElements.forEach(textElement => {
-    processTextElementForShapeInside(textElement, shapeMap);
-  });
+  for (const textElement of textElements) {
+    await processTextElementForShapeInside(textElement, shapeMap);
+  }
 }
 
-function processTextElementForShapeInside(textElement, shapeMap) {
+async function processTextElementForShapeInside(textElement, shapeMap) {
   // Skip text elements that have already been processed
   if (textElement.getAttribute('data-processed') === 'true') {
     // console.log('Skipping already processed text element');
@@ -45,7 +45,7 @@ function processTextElementForShapeInside(textElement, shapeMap) {
       // console.log(`Shape element not found for shape-inside reference to #${shapeId}`);
       return;
     }
-    processShapeInsideText(textElement, shapeElement, styleAttr);  
+    await processShapeInsideText(textElement, shapeElement, styleAttr);  
   }
   catch(error) {
     console.log(error)
@@ -62,7 +62,7 @@ function processTextElementForShapeInside(textElement, shapeMap) {
  * @param {Element} shapeElement - Shape element
  * @param {string} styleAttr - Style attribute of text element
  */
-function processShapeInsideText(textElement, shapeElement, styleAttr) {
+async function processShapeInsideText(textElement, shapeElement, styleAttr) {
   if (shouldPreserveLayout(textElement, styleAttr)) {
     return;
   }
@@ -93,7 +93,7 @@ function processShapeInsideText(textElement, shapeElement, styleAttr) {
   textData.formattingRanges = formattingData.formattingRanges;
   
   const textTransform = textElement.hasAttribute('transform') ? textElement.getAttribute('transform') : '';
-  createWrappedTextElement(textElement, textBounds, textData.plainContent, textData.formattingRanges, textTransform);
+  await createWrappedTextElement(textElement, textBounds, textData.plainContent, textData.formattingRanges, textTransform);
 }
 
 function initializeTextContent(textElement) {
@@ -500,7 +500,7 @@ function processNestedTspansForFormatting(parentElement, plainContent, formattin
  * @param {string} textTransform - Text transform
  * @returns {Element} - New text element
  */
-function createWrappedTextElement(textElement, textBounds, plainContent, formattingRanges, textTransform) {
+async function createWrappedTextElement(textElement, textBounds, plainContent, formattingRanges, textTransform) {
   const svgNS = 'http://www.w3.org/2000/svg';
   let newTextElement = textElement.ownerDocument.createElementNS(svgNS, 'text');
   
@@ -625,7 +625,7 @@ function createWrappedTextElement(textElement, textBounds, plainContent, formatt
   }
   
   // Add wrapped text as tspan elements
-  addWrappedTextAsTspans(newTextElement, wrappedLines, textBounds, fontSize, formattingRanges);
+  await addWrappedTextAsTspans(newTextElement, wrappedLines, textBounds, fontSize, formattingRanges);
   
   // Replace the original text element with the new one
   textElement.parentNode.replaceChild(newTextElement, textElement);
@@ -792,7 +792,7 @@ function addFontAttributes(newTextElement, originalTextElement, formattingRanges
  * @param {number} fontSize - Font size
  * @param {Array} formattingRanges - Array of formatting ranges
  */
-function addWrappedTextAsTspans(textElement, wrappedLines, textBounds, fontSize, formattingRanges = []) {
+async function addWrappedTextAsTspans(textElement, wrappedLines, textBounds, fontSize, formattingRanges = []) {
   const document = textElement.ownerDocument;
   
   // Extract font info for line height calculations
@@ -814,7 +814,7 @@ function addWrappedTextAsTspans(textElement, wrappedLines, textBounds, fontSize,
   // and the absolute position of each line within the full text
   const lineHeights = [];
   for (const line of wrappedLines) {
-    const lineHeight = calculateLineHeightForLine(
+    const lineHeight = await calculateLineHeightForLine(
       line, 
       fontSize, 
       formattingRanges, 
@@ -989,7 +989,7 @@ function addWrappedTextAsTspans(textElement, wrappedLines, textBounds, fontSize,
  * Rewrap text in a text element
  * @param {Element} textElement - Text element to rewrap
  */
-function rewrapTextElement(textElement) {
+async function rewrapTextElement(textElement) {
   // Get text content and formatting
   let plainContent = '';
   let formattingRanges = [];
@@ -1040,7 +1040,7 @@ function rewrapTextElement(textElement) {
   }
   
   // Add the wrapped text as tspans
-  addWrappedTextAsTspans(
+  await addWrappedTextAsTspans(
     textElement, 
     wrappedLines, 
     shapeBounds, 
@@ -1178,6 +1178,5 @@ function rewrapTextElement(textElement) {
 
 module.exports = {
   processTextElements,
-  processShapeInsideText,
   rewrapTextElement
 }; 

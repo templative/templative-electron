@@ -1,8 +1,8 @@
 const { JSDOM } = require('jsdom');
-const { cleanupSvgNamespaces, fallbackPreprocessing, cleanupUnusedDefs } = require('./svgPreprocessor');
+const { cleanupSvgNamespaces, cleanupUnusedDefs } = require('./svgPreprocessor');
 const { processTextElements } = require('./textProcessor');
 
-function preprocessSvgText(svgData) {
+async function preprocessSvgText(svgData) {
     try {
       // Check if this looks like an Inkscape SVG with shape-inside
       if (svgData.includes('shape-inside:url(#')) {
@@ -15,7 +15,7 @@ function preprocessSvgText(svgData) {
         const document = dom.window.document;
         
         // Process text elements with shape-inside
-        processTextElements(document);        
+        await processTextElements(document);        
         return cleanupUnusedDefs(dom.serialize());
       }
       

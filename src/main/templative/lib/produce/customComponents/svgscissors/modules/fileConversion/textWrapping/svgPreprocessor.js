@@ -51,7 +51,7 @@ function cleanupSvgNamespaces(svgData) {
  * @param {boolean} force_rewrap - Force rewrapping of text
  * @returns {string} - Processed SVG data
  */
-function fallbackPreprocessing(svgData, force_rewrap) {
+async function fallbackPreprocessing(svgData, force_rewrap) {
   try {
     // Parse the SVG using JSDOM
     const { JSDOM } = require('jsdom');
@@ -59,7 +59,7 @@ function fallbackPreprocessing(svgData, force_rewrap) {
     const document = dom.window.document;
     
     // Process text elements
-    processTextElements(document, force_rewrap);
+    await processTextElements(document, force_rewrap);
     
     // Add font styles
     const { addFontStyles } = require('./fontHandler');
