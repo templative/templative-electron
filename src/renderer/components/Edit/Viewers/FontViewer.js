@@ -80,11 +80,21 @@ class FontSvgViewer extends React.Component {
         const descent = fontFaceElement.getAttribute('descent');
         
         // Extract glyphs
-        const glyphs = Array.from(fontElement.querySelectorAll('glyph')).map(glyph => ({
-            glyphName: glyph.getAttribute('glyph-name'),
-            unicode: glyph.getAttribute('unicode'),
-            d: glyph.getAttribute('d')
-        }));
+        const glyphs = []
+        Array.from(fontElement.querySelectorAll('glyph')).forEach(glyph => {
+            
+            const glyphName = glyph.getAttribute('glyph-name');
+            const unicode = glyph.getAttribute('unicode');
+            const d = glyph.getAttribute('d');
+            if (!glyphName || !unicode || !d) {
+                return;
+            }
+            glyphs.push({
+                glyphName: glyphName,
+                unicode: unicode,
+                d: d
+            });
+        });
         
         // Create SVGs for each glyph
         var glyphElements = glyphs
