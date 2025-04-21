@@ -1,12 +1,12 @@
-const { extractFontSize, estimateLineHeight, extractNumericPropertyFromStyle, fontCache, extractFontAttributes, calculateLineHeightForLine } = require('./fontHandler');
-const { wrapText, estimateContainerWidth } = require('./textWrapper');
-const { getShapeBounds } = require('./shapeProcessor');
+const { extractFontSizeAsync, estimateLineHeightAsync, extractNumericPropertyFromStyleAsync, fontCache, extractFontAttributesAsync, calculateLineHeightForLineAsync } = require('./fontHandler');
+const { wrapTextAsync, estimateContainerWidthAsync, calculateXPositionAsync } = require('./textWrapper');
+const { getShapeBoundsAsync } = require('./shapeProcessor');
 /**
  * Process text elements in the document
  * @param {Document} document - DOM document
  * @param {boolean} force_rewrap - Force rewrapping of text
  */
-async function processTextElements(document) {
+async function processTextElementsAsync(document) {
   // Find all rect, path, etc. elements that might be referenced
   const shapeMap = new Map();
   const shapeElements = document.querySelectorAll('rect, path, circle, ellipse, polygon, polyline');
@@ -20,11 +20,11 @@ async function processTextElements(document) {
   let textElements = document.querySelectorAll('text');
   
   for (const textElement of textElements) {
-    await processTextElementForShapeInside(textElement, shapeMap);
+    await processTextElementForShapeInsideAsync(textElement, shapeMap);
   }
 }
 
-async function processTextElementForShapeInside(textElement, shapeMap) {
+async function processTextElementForShapeInsideAsync(textElement, shapeMap) {
   // Skip text elements that have already been processed
   if (textElement.getAttribute('data-processed') === 'true') {
     // console.log('Skipping already processed text element');
@@ -45,7 +45,7 @@ async function processTextElementForShapeInside(textElement, shapeMap) {
       // console.log(`Shape element not found for shape-inside reference to #${shapeId}`);
       return;
     }
-    await processShapeInsideText(textElement, shapeElement, styleAttr);  
+    await processShapeInsideTextAsync(textElement, shapeElement, styleAttr);  
   }
   catch(error) {
     console.log(error)
@@ -62,23 +62,23 @@ async function processTextElementForShapeInside(textElement, shapeMap) {
  * @param {Element} shapeElement - Shape element
  * @param {string} styleAttr - Style attribute of text element
  */
-async function processShapeInsideText(textElement, shapeElement, styleAttr) {
-  if (shouldPreserveLayout(textElement, styleAttr)) {
+async function processShapeInsideTextAsync(textElement, shapeElement, styleAttr) {
+  if (await shouldPreserveLayoutAsync(textElement, styleAttr)) {
     return;
   }
   // console.log(`Processing text with shape-inside reference to #${shapeElement.id}`);
-  const shapeBounds = getShapeBounds(shapeElement);
+  const shapeBounds = await getShapeBoundsAsync(shapeElement);
   
   if (!shapeBounds) {
     // console.log(`Shape bounds not found for shape-inside reference to #${shapeElement.id}`);
     return;
   }
-  const textData = initializeTextContent(textElement);
+  const textData = await initializeTextContentAsync(textElement);
 
-  const textBounds = calculateTextBounds(shapeBounds, styleAttr);
-  const { hasStructuredLines, topLevelTspans } = analyzeTextStructure(textElement);
+  const textBounds = await calculateTextBoundsAsync(shapeBounds, styleAttr);
+  const { hasStructuredLines, topLevelTspans } = await analyzeTextStructureAsync(textElement);
   
-  const formattingData = extractFormattingFromElement(
+  const formattingData = await extractFormattingFromElementAsync(
     textElement, 
     textData.plainContent, 
     textData.formattingRanges, 
@@ -93,10 +93,11 @@ async function processShapeInsideText(textElement, shapeElement, styleAttr) {
   textData.formattingRanges = formattingData.formattingRanges;
   
   const textTransform = textElement.hasAttribute('transform') ? textElement.getAttribute('transform') : '';
-  await createWrappedTextElement(textElement, textBounds, textData.plainContent, textData.formattingRanges, textTransform);
+  console.log(textBounds, textData.plainContent, textData.formattingRanges, textTransform)
+  await createWrappedTextElementAsync(textElement, textBounds, textData.plainContent, textData.formattingRanges, textTransform);
 }
 
-function initializeTextContent(textElement) {
+async function initializeTextContentAsync(textElement) {
   let plainContent = '';
   let formattingRanges = [];
   let rootTextContent = '';
@@ -175,7 +176,7 @@ function initializeTextContent(textElement) {
   return { plainContent, formattingRanges, rootTextContent };
 }
 
-function analyzeTextStructure(textElement) {
+async function analyzeTextStructureAsync(textElement) {
   const topLevelTspans = Array.from(textElement.children).filter(child => 
     child.tagName.toLowerCase() === 'tspan' && !child.parentNode.tagName.toLowerCase().includes('tspan')
   );
@@ -195,7 +196,7 @@ function analyzeTextStructure(textElement) {
   return { hasStructuredLines, topLevelTspans };
 }
 
-function shouldPreserveLayout(textElement, styleAttr) {
+async function shouldPreserveLayoutAsync(textElement, styleAttr) {
   const existingTspans = textElement.querySelectorAll('tspan');
   const positionedTspans = Array.from(existingTspans).filter(
     tspan => tspan.hasAttribute('x') && tspan.hasAttribute('y')
@@ -226,8 +227,8 @@ function shouldPreserveLayout(textElement, styleAttr) {
   return false;
 }
 
-function calculateTextBounds(shapeBounds, styleAttr) {
-  const shapePadding = extractNumericPropertyFromStyle(styleAttr, 'shape-padding') || 0;
+async function calculateTextBoundsAsync(shapeBounds, styleAttr) {
+  const shapePadding = await extractNumericPropertyFromStyleAsync(styleAttr, 'shape-padding') || 0;
   
   return {
     x: shapeBounds.x + shapePadding,
@@ -246,7 +247,7 @@ function calculateTextBounds(shapeBounds, styleAttr) {
  * @param {Array} topLevelTspans - Array of top-level tspan elements
  * @param {string} rootTextContent - Root text content
  */
-function extractFormattingFromElement(textElement, plainContent, formattingRanges, hasStructuredLines, topLevelTspans, rootTextContent) {  
+async function extractFormattingFromElementAsync(textElement, plainContent, formattingRanges, hasStructuredLines, topLevelTspans, rootTextContent) {  
   // Clear existing formatting ranges
   formattingRanges.length = 0;
   
@@ -317,11 +318,11 @@ function extractFormattingFromElement(textElement, plainContent, formattingRange
       
       if (position >= 0) {
         // Add formatting for this tspan
-        addFormattingForElement(tspan, position, position + tspanText.length, formattingRanges);
+        await addFormattingForElementAsync(tspan, position, position + tspanText.length, formattingRanges);
         currentPosition = position + tspanText.length;
         
         // Process nested tspans for additional formatting
-        processNestedTspansForFormatting(tspan, plainContent, formattingRanges, seenElements);
+        await processNestedTspansForFormattingAsync(tspan, plainContent, formattingRanges, seenElements);
       }
     }
   } else {
@@ -333,7 +334,7 @@ function extractFormattingFromElement(textElement, plainContent, formattingRange
         const position = plainContent.indexOf(tspanText);
         
         if (position >= 0) {
-          addFormattingForElement(tspan, position, position + tspanText.length, formattingRanges);
+          await addFormattingForElementAsync(tspan, position, position + tspanText.length, formattingRanges);
         }
       }
     }
@@ -360,7 +361,7 @@ function extractFormattingFromElement(textElement, plainContent, formattingRange
  * @param {number} end - End index in the plain content
  * @param {Array} formattingRanges - Array of formatting ranges
  */
-function addFormattingForElement(element, start, end, formattingRanges) {
+async function addFormattingForElementAsync(element, start, end, formattingRanges) {
   const fontWeight = element.getAttribute('font-weight') || 
                     (element.getAttribute('style') || '').match(/font-weight\s*:\s*([^;]+)/)?.[1] || 'normal';
   const fontStyle = element.getAttribute('font-style') || 
@@ -435,7 +436,7 @@ function addFormattingForElement(element, start, end, formattingRanges) {
  * @param {Array} formattingRanges - Array of formatting ranges
  * @param {Set} seenElements - Set of seen elements
  */
-function processNestedTspansForFormatting(parentElement, plainContent, formattingRanges, seenElements) {
+async function processNestedTspansForFormattingAsync(parentElement, plainContent, formattingRanges, seenElements) {
   const nestedTspans = parentElement.querySelectorAll('tspan');
   for (const tspan of nestedTspans) {
     if (!seenElements.has(tspan)) {
@@ -449,7 +450,7 @@ function processNestedTspansForFormatting(parentElement, plainContent, formattin
       const position = plainContent.indexOf(tspanText);
       if (position >= 0) {
         // Add formatting for this tspan
-        addFormattingForElement(tspan, position, position + tspanText.length, formattingRanges);
+        await addFormattingForElementAsync(tspan, position, position + tspanText.length, formattingRanges);
         
         // Check for special font-size attributes in the tspan
         const fontSize = tspan.getAttribute('font-size') || 
@@ -500,7 +501,7 @@ function processNestedTspansForFormatting(parentElement, plainContent, formattin
  * @param {string} textTransform - Text transform
  * @returns {Element} - New text element
  */
-async function createWrappedTextElement(textElement, textBounds, plainContent, formattingRanges, textTransform) {
+async function createWrappedTextElementAsync(textElement, textBounds, plainContent, formattingRanges, textTransform) {
   const svgNS = 'http://www.w3.org/2000/svg';
   let newTextElement = textElement.ownerDocument.createElementNS(svgNS, 'text');
   
@@ -510,21 +511,21 @@ async function createWrappedTextElement(textElement, textBounds, plainContent, f
   }
   
   // Copy attributes from original text element
-  copyPreservedAttributes(textElement, newTextElement);
+  await copyPreservedAttributesAsync(textElement, newTextElement);
   
   // Add font attributes to the text element
   addFontAttributes(newTextElement, textElement, formattingRanges);
   
   // Get font size for line wrapping calculation
-  const fontSize = extractFontSize(textElement);
+  const fontSize = await extractFontSizeAsync(textElement);
   
   // Get font attributes for the text element
-  const fontAttrs = extractFontAttributes(textElement);
+  const fontAttrs = await extractFontAttributesAsync(textElement);
   
   // Initialize fontkit if not already initialized
   if (!fontCache.initialized) {
     try {
-      fontCache.initialize();
+      await fontCache.initialize();
     } catch (err) {
       console.error('Error initializing font cache:', err);
     }
@@ -598,8 +599,9 @@ async function createWrappedTextElement(textElement, textBounds, plainContent, f
     };
     
     try {
-      // Pass formatting ranges to wrapText
-      const wrapped = wrapText(line, fontSize, textBounds.width, fontInfo, formattingRanges, characterPositionForFormatting);
+      // Pass formatting ranges to wrapTextAsync
+      const wrapped = await wrapTextAsync(line, fontSize, textBounds.width, fontInfo, formattingRanges, characterPositionForFormatting);
+      console.log(wrapped)
       wrappedLines.push(...wrapped);
     } catch (err) {
       console.error('Error wrapping text:', err);
@@ -625,7 +627,7 @@ async function createWrappedTextElement(textElement, textBounds, plainContent, f
   }
   
   // Add wrapped text as tspan elements
-  await addWrappedTextAsTspans(newTextElement, wrappedLines, textBounds, fontSize, formattingRanges);
+  await addWrappedTextAsTspansAsync(newTextElement, wrappedLines, textBounds, fontSize, formattingRanges);
   
   // Replace the original text element with the new one
   textElement.parentNode.replaceChild(newTextElement, textElement);
@@ -636,9 +638,9 @@ async function createWrappedTextElement(textElement, textBounds, plainContent, f
  * @param {Element} sourceElement - Source element to copy attributes from
  * @param {Element} targetElement - Target element to copy attributes to
  */
-function copyPreservedAttributes(sourceElement, targetElement) {
+async function copyPreservedAttributesAsync(sourceElement, targetElement) {
   const preserveAttrs = ['style', 'class', 'id', 'fill', 'font-family', 'font-size', 'font-weight'];
-  preserveAttrs.forEach(attr => {
+  preserveAttrs.forEach(async attr => {
     if (sourceElement.hasAttribute(attr)) {
       let value = sourceElement.getAttribute(attr);
       // Remove shape-inside and related properties from style
@@ -792,17 +794,18 @@ function addFontAttributes(newTextElement, originalTextElement, formattingRanges
  * @param {number} fontSize - Font size
  * @param {Array} formattingRanges - Array of formatting ranges
  */
-async function addWrappedTextAsTspans(textElement, wrappedLines, textBounds, fontSize, formattingRanges = []) {
+async function addWrappedTextAsTspansAsync(textElement, wrappedLines, textBounds, fontSize, formattingRanges = []) {
   const document = textElement.ownerDocument;
   
-  // Extract font info for line height calculations
-  const fontAttrs = extractFontAttributes(textElement);
+  // Extract font info including text alignment
+  const fontAttrs = await extractFontAttributesAsync(textElement);
   const fontInfo = {
     fontFamily: fontAttrs.fontFamily,
     fontSize: fontAttrs.fontSize,
     fontWeight: fontAttrs.fontWeight,
     fontStyle: fontAttrs.fontStyle,
-    lineHeight: fontAttrs.lineHeight
+    lineHeight: fontAttrs.lineHeight,
+    textAlign: fontAttrs.textAlign
   };
   
   // console.log(`Font info for text element:`, fontInfo);
@@ -814,7 +817,7 @@ async function addWrappedTextAsTspans(textElement, wrappedLines, textBounds, fon
   // and the absolute position of each line within the full text
   const lineHeights = [];
   for (const line of wrappedLines) {
-    const lineHeight = await calculateLineHeightForLine(
+    const lineHeight = await calculateLineHeightForLineAsync(
       line, 
       fontSize, 
       formattingRanges, 
@@ -878,118 +881,147 @@ async function addWrappedTextAsTspans(textElement, wrappedLines, textBounds, fon
   currentPosition = 0;
   
   // Process each wrapped line
-  wrappedLines.forEach((line, index) => {
-    // console.log(`Processing line ${index}: "${line}" (current position: ${currentPosition})`);
-    
+  for (let index = 0; index < wrappedLines.length; index++) {
+    const line = wrappedLines[index];
     if (!line.trim()) {
-      // Skip empty lines but increment position
-      currentPosition += 1; // For the newline
-      // console.log(`Skipping empty line ${index}`);
-      return;
+      currentPosition += 1;
+      continue;
     }
-    
-    // Create a tspan for the line
+
     const lineTspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
-    lineTspan.setAttribute('x', textBounds.x.toString());
-    lineTspan.setAttribute('y', yPositions[index].toString());
-    textElement.appendChild(lineTspan);
     
-    // Check if this line has any special formatting by looking at the formatting ranges
+    // Calculate x position based on alignment
+    const xPos = await calculateXPositionAsync(
+      line,
+      textBounds.width,
+      textBounds,
+      fontInfo.textAlign,
+      fontSize,
+      fontInfo,
+      formattingRanges,
+      currentPosition
+    );
+    
+    lineTspan.setAttribute('x', xPos.toString());
+    lineTspan.setAttribute('y', yPositions[index].toString());
+
     // Calculate the absolute position range for this line
     const lineStart = currentPosition;
     const lineEnd = currentPosition + line.length;
-    
+
     // Find all formatting ranges that overlap with this line
     const lineFormattingRanges = formattingRanges.filter(range => 
       range.start < lineEnd && range.end > lineStart
     );
-    
-    // Check if the entire line has the same formatting
-    const hasSingleFormatting = lineFormattingRanges.length === 1 && 
-                               lineFormattingRanges[0].start <= lineStart && 
-                               lineFormattingRanges[0].end >= lineEnd;
-    
-    if (hasSingleFormatting) {
-      // The entire line has the same formatting
-      const range = lineFormattingRanges[0];
-      const tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
-      
-      if (range.fontWeight === 'bold') {
-        tspan.setAttribute('font-weight', 'bold');
-      }
-      
-      if (range.fontStyle === 'italic') {
-        tspan.setAttribute('font-style', 'italic');
-      }
-      
-      tspan.textContent = line;
-      lineTspan.appendChild(tspan);
-    } else if (lineFormattingRanges.length > 0) {
-      // This line has mixed formatting
-      // Sort the formatting ranges by their start position
-      lineFormattingRanges.sort((a, b) => a.start - b.start);
-      
-      // Create an array of segments with their formatting
-      const segments = [];
-      let currentPos = lineStart;
-      
-      // Process each character in the line
-      for (let i = 0; i < line.length; i++) {
-        const charPos = lineStart + i;
+
+    // Handle justified text
+    if (fontInfo.textAlign === 'justify' && 
+        index < wrappedLines.length - 1 && // Not last line
+        line.includes(' ')) {
+      // Split into words and calculate spacing
+      const words = line.split(' ');
+      const totalSpaces = words.length - 1;
+      if (totalSpaces > 0) {
+        const spaceWidth = (textBounds.width - 
+          await fontCache.calculateTextWidthAsync(line.replace(/\s+/g, ''), formattingRanges, fontSize, fontInfo.fontFamily, currentPosition)) / totalSpaces;
         
-        // Find the formatting range that applies to this character
-        const applicableRange = lineFormattingRanges.find(range => 
-          charPos >= range.start && charPos < range.end
-        );
-        
-        // Get the current segment or create a new one
-        let currentSegment = segments.length > 0 ? segments[segments.length - 1] : null;
-        
-        if (!currentSegment || 
-            currentSegment.fontWeight !== (applicableRange?.fontWeight || 'normal') || 
-            currentSegment.fontStyle !== (applicableRange?.fontStyle || 'normal')) {
-          // Create a new segment
-          currentSegment = {
-            text: line[i],
-            fontWeight: applicableRange?.fontWeight || 'normal',
-            fontStyle: applicableRange?.fontStyle || 'normal'
-          };
-          segments.push(currentSegment);
-        } else {
-          // Add to the current segment
-          currentSegment.text += line[i];
+        // Add words with calculated spacing and formatting
+        for (let wordIndex = 0; wordIndex < words.length; wordIndex++) {
+          const word = words[wordIndex];
+          const wordTspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
+          
+          // Apply formatting if any
+          const wordStart = line.indexOf(word, wordIndex === 0 ? 0 : line.indexOf(words[wordIndex - 1]) + words[wordIndex - 1].length);
+          const wordEnd = wordStart + word.length;
+          const absoluteWordStart = lineStart + wordStart;
+          const absoluteWordEnd = lineStart + wordEnd;
+
+          // Find formatting for this word
+          const wordFormatting = lineFormattingRanges.find(range => 
+            range.start <= absoluteWordEnd && range.end > absoluteWordStart
+          );
+
+          if (wordFormatting) {
+            if (wordFormatting.fontWeight) {
+              wordTspan.setAttribute('font-weight', wordFormatting.fontWeight);
+            }
+            if (wordFormatting.fontStyle) {
+              wordTspan.setAttribute('font-style', wordFormatting.fontStyle);
+            }
+          }
+
+          wordTspan.textContent = word;
+          if (wordIndex > 0) {
+            wordTspan.setAttribute('dx', spaceWidth.toString());
+          }
+          lineTspan.appendChild(wordTspan);
         }
-      }
-      
-      // Create tspans for each segment
-      for (const segment of segments) {
-        const tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
-        
-        if (segment.fontWeight === 'bold') {
-          tspan.setAttribute('font-weight', 'bold');
-        }
-        
-        if (segment.fontStyle === 'italic') {
-          tspan.setAttribute('font-style', 'italic');
-        }
-        
-        tspan.textContent = segment.text;
-        lineTspan.appendChild(tspan);
+      } else {
+        await applyFormattingAsync(lineTspan, line, lineStart, lineEnd, lineFormattingRanges);
       }
     } else {
-      // This is a normal line with no special formatting
-      lineTspan.textContent = line;
+      // Handle non-justified text with formatting
+      await applyFormattingAsync(lineTspan, line, lineStart, lineEnd, lineFormattingRanges);
     }
+
+    textElement.appendChild(lineTspan);
+    currentPosition += line.length + 1;
+  }
+}
+
+// Helper function to apply formatting to text
+async function applyFormattingAsync(tspan, text, start, end, formattingRanges) {
+  const document = tspan.ownerDocument; // Get document from the tspan element
+  
+  if (formattingRanges.length === 0) {
+    tspan.textContent = text;
+    return;
+  }
+
+  // Sort ranges by start position
+  const sortedRanges = [...formattingRanges].sort((a, b) => a.start - b.start);
+
+  let currentPos = 0;
+  for (const range of sortedRanges) {
+    if (range.start > end || range.end <= start) continue;
+
+    const rangeStart = Math.max(0, range.start - start);
+    const rangeEnd = Math.min(text.length, range.end - start);
     
-    currentPosition += line.length + 1; // +1 for the newline
-  });
+    if (rangeStart > currentPos) {
+      // Add unformatted text before this range
+      const plainTspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
+      plainTspan.textContent = text.substring(currentPos, rangeStart);
+      tspan.appendChild(plainTspan);
+    }
+
+    // Add formatted text
+    const formattedTspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
+    if (range.fontWeight) {
+      formattedTspan.setAttribute('font-weight', range.fontWeight);
+    }
+    if (range.fontStyle) {
+      formattedTspan.setAttribute('font-style', range.fontStyle);
+    }
+    formattedTspan.textContent = text.substring(rangeStart, rangeEnd);
+    tspan.appendChild(formattedTspan);
+
+    currentPos = rangeEnd;
+  }
+
+  // Add any remaining unformatted text
+  if (currentPos < text.length) {
+    const plainTspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
+    plainTspan.textContent = text.substring(currentPos);
+    tspan.appendChild(plainTspan);
+  }
 }
 
 /**
  * Rewrap text in a text element
  * @param {Element} textElement - Text element to rewrap
  */
-async function rewrapTextElement(textElement) {
+async function rewrapTextAsyncElementAsync(textElement) {
   // Get text content and formatting
   let plainContent = '';
   let formattingRanges = [];
@@ -999,34 +1031,34 @@ async function rewrapTextElement(textElement) {
   const topLevelTspans = Array.from(textElement.children).filter(child => child.tagName === 'tspan');
   
   // Initialize text content
-  const textContentInfo = initializeTextContent(textElement);
+  const textContentInfo = await initializeTextContentAsync(textElement);
   plainContent = textContentInfo.plainContent;
   
   // Extract formatting information
-  const formattingInfo = extractFormattingFromElement(
+  const formattingInfo = await extractFormattingFromElementAsync(
     textElement, 
     plainContent, 
     formattingRanges, 
     hasStructuredLines, 
     topLevelTspans, 
-    plainContent
+    textContentInfo.rootTextContent
   );
   
   // Get the text bounds
   const styleAttr = textElement.getAttribute('style') || '';
-  const shapeBounds = calculateTextBounds(null, styleAttr);
+  const shapeBounds = await calculateTextBoundsAsync(null, styleAttr);
   
   // Determine the container width
-  const containerWidth = estimateContainerWidth(textElement);
+  const containerWidth = await estimateContainerWidthAsync(textElement);
   
   // Extract font size
-  const fontSize = extractFontSize(textElement);
+  const fontSize = await extractFontSizeAsync(textElement);
   
   // Extract font attributes
-  const fontAttrs = extractFontAttributes(textElement);
+  const fontAttrs = await extractFontAttributesAsync(textElement);
   
   // Wrap the text
-  const wrappedLines = wrapText(
+  const wrappedLines = await wrapTextAsync(
     plainContent, 
     fontSize, 
     containerWidth, 
@@ -1040,7 +1072,7 @@ async function rewrapTextElement(textElement) {
   }
   
   // Add the wrapped text as tspans
-  await addWrappedTextAsTspans(
+  await addWrappedTextAsTspansAsync(
     textElement, 
     wrappedLines, 
     shapeBounds, 
@@ -1055,128 +1087,7 @@ async function rewrapTextElement(textElement) {
   textElement.setAttribute('data-processed', 'true');
 }
 
-// /**
-//  * Extract text content from a text element
-//  * @param {Element} textElement - Text element
-//  * @returns {Object} - Object with plainContent, formattingRanges, and rootTextContent
-//  */
-// function extractTextContent(textElement) {
-//   let plainContent = '';
-//   let formattingRanges = [];
-//   let rootTextContent = '';
-  
-//   // First check for direct text content in the text element
-//   for (let node of textElement.childNodes) {
-//     if (node.nodeType === 3) { // Text node
-//       rootTextContent += node.nodeValue;
-//     }
-//   }
-  
-//   // Track the current position in the text
-//   let currentPosition = 0;
-//   // Keep track of processed nodes to avoid duplicates
-//   const processedNodes = new Set();
-  
-//   // Process all tspans recursively
-//   function processTspan(tspan, parentFormatting = {}) {
-//     // Skip if already processed
-//     if (processedNodes.has(tspan)) {
-//       return;
-//     }
-//     processedNodes.add(tspan);
-    
-//     // Get the text content
-//     let text = '';
-    
-//     // Check for direct text content
-//     for (let node of tspan.childNodes) {
-//       if (node.nodeType === 3) { // Text node
-//         text += node.nodeValue;
-//       }
-//     }
-    
-//     // Get formatting attributes
-//     const fontWeight = tspan.getAttribute('font-weight') || 
-//                       (tspan.getAttribute('style') || '').match(/font-weight\s*:\s*([^;]+)/)?.[1] || 
-//                       parentFormatting.fontWeight || 'normal';
-    
-//     const fontStyle = tspan.getAttribute('font-style') || 
-//                      (tspan.getAttribute('style') || '').match(/font-style\s*:\s*([^;]+)/)?.[1] || 
-//                      parentFormatting.fontStyle || 'normal';
-    
-//     const fontFamily = tspan.getAttribute('font-family') || 
-//                       (tspan.getAttribute('style') || '').match(/font-family\s*:\s*([^;]+)/)?.[1] || 
-//                       parentFormatting.fontFamily || '';
-    
-//     // If this tspan has direct text content, add it to the plain content
-//     if (text.trim().length > 0) {
-//       plainContent += text;
-      
-//       // Add formatting range
-//       formattingRanges.push({
-//         start: currentPosition,
-//         end: currentPosition + text.length,
-//         fontWeight,
-//         fontStyle,
-//         fontFamily
-//       });
-      
-//       // Update current position
-//       currentPosition += text.length;
-//     }
-    
-//     // Process nested tspans if any, but only direct children
-//     const nestedTspans = Array.from(tspan.childNodes)
-//       .filter(node => node.nodeType === 1 && node.tagName.toLowerCase() === 'tspan');
-    
-//     for (const nestedTspan of nestedTspans) {
-//       processTspan(nestedTspan, { fontWeight, fontStyle, fontFamily });
-//     }
-//   }
-  
-//   // Process all top-level tspans
-//   const topLevelTspans = Array.from(textElement.childNodes)
-//     .filter(node => node.nodeType === 1 && node.tagName.toLowerCase() === 'tspan');
-  
-//   for (const tspan of topLevelTspans) {
-//     processTspan(tspan);
-    
-//     // Add a space between top-level tspans if needed
-//     if (plainContent.length > 0 && !plainContent.endsWith(' ') && tspan !== topLevelTspans[topLevelTspans.length - 1]) {
-//       plainContent += ' ';
-//       currentPosition += 1;
-//     }
-//   }
-  
-//   // If no content found in tspans, use the root text content
-//   if (plainContent.trim().length === 0 && rootTextContent.trim().length > 0) {
-//     plainContent = rootTextContent.trim();
-    
-//     // Add basic formatting for the root content
-//     formattingRanges.push({
-//       start: 0,
-//       end: plainContent.length,
-//       fontWeight: textElement.getAttribute('font-weight') || 
-//                  (textElement.getAttribute('style') || '').match(/font-weight\s*:\s*([^;]+)/)?.[1] || 'normal',
-//       fontStyle: textElement.getAttribute('font-style') || 
-//                 (textElement.getAttribute('style') || '').match(/font-style\s*:\s*([^;]+)/)?.[1] || 'normal',
-//       fontFamily: textElement.getAttribute('font-family') || 
-//                  (textElement.getAttribute('style') || '').match(/font-family\s*:\s*([^;]+)/)?.[1] || ''
-//     });
-//   }
-  
-//   // If still no content, try to get the full textContent as a fallback
-//   if (plainContent.trim().length === 0) {
-//     plainContent = textElement.textContent.trim();
-//   }  
-//   return { plainContent, formattingRanges, rootTextContent: rootTextContent.trim() };
-// }
-
-
-
-
-
 module.exports = {
-  processTextElements,
-  rewrapTextElement
+  processTextElementsAsync,
+  rewrapTextAsyncElementAsync
 }; 

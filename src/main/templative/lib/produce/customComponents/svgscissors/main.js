@@ -11,7 +11,7 @@ const { textReplaceInFile} = require("./artdataProcessing/textReplacer.js");
 const { updateStylesInFile} = require("./artdataProcessing/styleUpdater.js");
 const { clipSvgContentToClipFile, CLIPPING_ELEMENT_ID } = require("./modules/imageClipper.js");
 const { getComponentTemplatesDirectoryPath } = require("../../../componentTemplateUtility.js");
-const { preprocessSvgText } = require('./modules/fileConversion/textWrapping/index.js');
+const { preprocessSvgTextAsync } = require('./modules/fileConversion/textWrapping/index.js');
 const { SvgFileCache } = require('./modules/svgFileCache.js');
 const { ArtCache } = require('./modules/artCache.js');
 
@@ -175,7 +175,7 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       contents = await textReplaceInFile(contents, artdata["textReplacements"], gamedata, productionProperties);
       contents = await updateStylesInFile(contents, artdata["styleUpdates"], gamedata);
       contents = await addNewlines(contents);
-      contents = await preprocessSvgText(contents);
+      contents = await preprocessSvgTextAsync(contents);
       
       if (productionProperties.isClipped) {
           const potentialPaths = await getComponentTemplatesDirectoryPath(componentType);

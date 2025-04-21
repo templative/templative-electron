@@ -1,4 +1,4 @@
-const { fontCache, extractFontAttributes } = require('./fontHandler');
+const { fontCache, extractFontAttributesAsync } = require('./fontHandler');
 /**
  * Escape special characters in a string for use in a regular expression
  * @param {string} string - String to escape
@@ -19,11 +19,14 @@ function escapeRegExp(string) {
  * @param {Array} formattingRanges - Array of formatting ranges
  * @returns {string[]} - Array of wrapped lines
  */
-function wrapText(text, fontSize, containerWidth, fontInfo = {}, formattingRanges = [], characterPositionForFormatting = 0) {
+async function wrapTextAsync(text, fontSize, containerWidth, fontInfo = {}, formattingRanges = [], characterPositionForFormatting = 0) {
   if (!text) {
     // console.log("text is empty")
     return [];
   }
+
+  // Add text alignment to font info if not present
+  fontInfo.textAlign = fontInfo.textAlign || 'start';
 
   // Split text into paragraphs first (by newlines)
   const paragraphs = text.split(/\r?\n/);
@@ -73,7 +76,7 @@ function wrapText(text, fontSize, containerWidth, fontInfo = {}, formattingRange
       // Calculate the width of the word with its formatting
       let wordWidth;
       try {
-        wordWidth = fontCache.calculateTextWidth(
+        wordWidth = await fontCache.calculateTextWidthAsync(
           wordWithSpace, 
           wordFormattingRanges, 
           fontSize, 
@@ -89,6 +92,7 @@ function wrapText(text, fontSize, containerWidth, fontInfo = {}, formattingRange
       // console.log(`Word "${wordWithSpace}" width: ${wordWidth}, current line width: ${currentLineWidth}, container width: ${containerWidth}`);
       
       // If adding this word would exceed the line width
+      console.log(`Current line: "${currentLine}", Next word: "${word}", Width: ${currentLineWidth + wordWidth}, Container width: ${containerWidth}`);
       if (currentLineWidth + wordWidth > containerWidth && currentLine.length > 0) {
         // console.log(`Line would exceed container width, creating new line`);
         lines.push(currentLine);
@@ -96,7 +100,7 @@ function wrapText(text, fontSize, containerWidth, fontInfo = {}, formattingRange
         currentLine = word;
         // Calculate the width of just the word (without space)
         try {
-          currentLineWidth = fontCache.calculateTextWidth(
+          currentLineWidth = await fontCache.calculateTextWidthAsync(
             word, 
             wordFormattingRanges, 
             fontSize, 
@@ -133,7 +137,7 @@ function wrapText(text, fontSize, containerWidth, fontInfo = {}, formattingRange
  * @param {Element} textElement - Text element
  * @returns {number} - Container width
  */
-function estimateContainerWidth(textElement) {
+async function estimateContainerWidthAsync(textElement) {
   // Try to get width from textLength attribute
   const textLength = textElement.getAttribute('textLength');
   if (textLength) {
@@ -153,8 +157,66 @@ function estimateContainerWidth(textElement) {
   return 200;
 }
 
+// Add new function to calculate x position based on alignment
+async function calculateXPositionAsync(line, containerWidth, textBounds, textAlign, fontSize, fontInfo, formattingRanges = [], offset = 0) {
+  switch(textAlign) {
+    case 'center':
+    case 'middle': {
+      // Calculate line width to center it
+      const lineWidth = await fontCache.calculateTextWidthAsync(
+        line,
+        formattingRanges,
+        fontSize,
+        fontInfo.fontFamily || 'Arial',
+        offset
+      );
+      const xPos = textBounds.x + (containerWidth - lineWidth) / 2;
+      if (isNaN(xPos)) {
+        console.warn(`calculateXPositionAsync first: ${textBounds.x} + ${containerWidth} - ${lineWidth} / 2`);
+      }
+      return xPos;
+    }
+    case 'end':
+    case 'right': {
+      // Calculate line width to right-align it
+      const lineWidth = await fontCache.calculateTextWidthAsync(
+        line,
+        formattingRanges,
+        fontSize,
+        fontInfo.fontFamily || 'Arial',
+        offset
+      );
+      const xPos = textBounds.x + (containerWidth - lineWidth);
+      if (isNaN(xPos)) {
+        console.warn(`calculateXPositionAsync second: ${textBounds.x} + ${containerWidth} - ${lineWidth}`);
+      }
+      return xPos;
+    }
+    case 'justify': {
+      // Only justify if not the last line and line has spaces
+      if (line.includes(' ')) {
+        const xPos = textBounds.x;
+        if (isNaN(xPos)) {
+          console.warn(`calculateXPositionAsync third: ${textBounds.x}`);
+        }
+        return xPos;
+      }
+      // Fall through to start alignment if no spaces
+    }
+    case 'start':
+    case 'left':
+    default:
+      const xPos = textBounds.x;
+      if (isNaN(xPos)) {
+        console.warn(`calculateXPositionAsync fourth: ${textBounds.x}`);
+      }
+      return xPos;
+  }
+}
+
 module.exports = {
   escapeRegExp,
-  wrapText,
-  estimateContainerWidth
+  wrapTextAsync,
+  estimateContainerWidthAsync,
+  calculateXPositionAsync
 }; 

@@ -4,16 +4,16 @@
  * @param {string} shapeType - Type of shape
  * @returns {Object|null} - Bounds object with x, y, width, height
  */
-function extractShapeBounds(shapeElement, shapeType) {
+async function extractShapeBoundsAsync(shapeElement, shapeType) {
   switch (shapeType) {
     case 'rect':
-      return extractRectBounds(shapeElement);
+      return await extractRectBoundsAsync(shapeElement);
     case 'circle':
-      return extractCircleBounds(shapeElement);
+      return await extractCircleBoundsAsync(shapeElement);
     case 'ellipse':
-      return extractEllipseBounds(shapeElement);
+      return await extractEllipseBoundsAsync(shapeElement);
     case 'path':
-      return extractPathBounds(shapeElement);
+      return await extractPathBoundsAsync(shapeElement);
     default:
       return null;
   }
@@ -24,7 +24,7 @@ function extractShapeBounds(shapeElement, shapeType) {
  * @param {Element} rectElement - Rect element
  * @returns {Object} - Bounds object with x, y, width, height
  */
-function extractRectBounds(rectElement) {
+async function extractRectBoundsAsync(rectElement) {
   const x = parseFloat(rectElement.getAttribute('x') || 0);
   const y = parseFloat(rectElement.getAttribute('y') || 0);
   const width = parseFloat(rectElement.getAttribute('width') || 0);
@@ -38,7 +38,7 @@ function extractRectBounds(rectElement) {
  * @param {Element} circleElement - Circle element
  * @returns {Object} - Bounds object with x, y, width, height
  */
-function extractCircleBounds(circleElement) {
+async function extractCircleBoundsAsync(circleElement) {
   const cx = parseFloat(circleElement.getAttribute('cx') || 0);
   const cy = parseFloat(circleElement.getAttribute('cy') || 0);
   const r = parseFloat(circleElement.getAttribute('r') || 0);
@@ -56,7 +56,7 @@ function extractCircleBounds(circleElement) {
  * @param {Element} ellipseElement - Ellipse element
  * @returns {Object} - Bounds object with x, y, width, height
  */
-function extractEllipseBounds(ellipseElement) {
+async function extractEllipseBoundsAsync(ellipseElement) {
   const cx = parseFloat(ellipseElement.getAttribute('cx') || 0);
   const cy = parseFloat(ellipseElement.getAttribute('cy') || 0);
   const rx = parseFloat(ellipseElement.getAttribute('rx') || 0);
@@ -75,7 +75,7 @@ function extractEllipseBounds(ellipseElement) {
  * @param {Element} pathElement - Path element
  * @returns {Object} - Bounds object with x, y, width, height
  */
-function extractPathBounds(pathElement) {
+async function extractPathBoundsAsync(pathElement) {
   // This is a more comprehensive implementation
   try {
     // First try to use getBBox if available (works in browser environments)
@@ -187,27 +187,27 @@ function extractPathBounds(pathElement) {
  * @param {Element} shapeElement - Shape element
  * @returns {Object|null} - Bounds object with x, y, width, height
  */
-function getShapeBounds(shapeElement) {
+async function getShapeBoundsAsync(shapeElement) {
   const tagName = shapeElement.tagName.toLowerCase();
   
   switch (tagName) {
     case 'rect':
-      return extractShapeBounds(shapeElement, 'rect');
+      return await extractShapeBoundsAsync(shapeElement, 'rect');
     case 'circle':
-      return extractShapeBounds(shapeElement, 'circle');
+      return await extractShapeBoundsAsync(shapeElement, 'circle');
     case 'ellipse':
-      return extractShapeBounds(shapeElement, 'ellipse');
+      return await extractShapeBoundsAsync(shapeElement, 'ellipse');
     case 'path':
-      return extractShapeBounds(shapeElement, 'path');
+      return await extractShapeBoundsAsync(shapeElement, 'path');
     default:
       return null;
   }
 }
 
 module.exports = {
-  extractRectBounds,
-  extractCircleBounds,
-  extractEllipseBounds,
-  extractPathBounds,
-  getShapeBounds
+  extractRectBoundsAsync,
+  extractCircleBoundsAsync,
+  extractEllipseBoundsAsync,
+  extractPathBoundsAsync,
+  getShapeBoundsAsync
 }; 

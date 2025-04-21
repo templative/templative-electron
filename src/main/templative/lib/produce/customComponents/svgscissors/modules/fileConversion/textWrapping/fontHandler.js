@@ -10,7 +10,7 @@ const os = require('os');
  * @param {string} propertyName - Property name
  * @returns {number|null} - Numeric value or null if not found
  */
-function extractNumericPropertyFromStyle(style, propertyName) {
+async function extractNumericPropertyFromStyleAsync(style, propertyName) {
   if (!style) return null;
   
   const regex = new RegExp(`${propertyName}\\s*:\\s*([\\d.]+)`, 'i');
@@ -28,7 +28,7 @@ function extractNumericPropertyFromStyle(style, propertyName) {
  * @param {string} svgData - SVG content as string
  * @returns {string} - SVG with font styles
  */
-function addFontStyles(svgData) {
+async function addFontStylesAsync(svgData) {
   // Check if we already have a style element
   if (svgData.includes('<style>') || svgData.includes('<style ')) {
     return svgData;
@@ -122,8 +122,8 @@ class FontCache {
    * @param {string} fontFamily - Font family to find
    * @returns {string|null} - Path to font file or null if not found
    */
-  async findFontFile(fontFamily) {
-    const normalizedFontFamily = this.normalizeFontFamily(fontFamily);
+  async findFontFileAsync(fontFamily) {
+    const normalizedFontFamily = await this.normalizeFontFamilyAsync(fontFamily);
     
     // Check if we already have a path for this font
     if (this.fontPaths[normalizedFontFamily]) {
@@ -243,13 +243,13 @@ class FontCache {
    * @param {string} fontFamily - Font family
    * @returns {Object} - Font information
    */
-  getFontInfo(fontFamily) {
+  async getFontInfoAsync(fontFamily) {
     if (!this.initialized) {
       console.warn('Font cache not initialized');
       return { avgCharWidth: 0.6, lineHeight: 1.2 };
     }
     
-    const normalizedFontFamily = this.normalizeFontFamily(fontFamily);
+    const normalizedFontFamily = await this.normalizeFontFamilyAsync(fontFamily);
     
     if (this.fonts.has(normalizedFontFamily)) {
       return this.fonts.get(normalizedFontFamily);
@@ -264,16 +264,16 @@ class FontCache {
    * @param {string} fontFamily - Font family
    * @returns {Object|null} - Fontkit font object or null if not found
    */
-  async getFontkitFont(fontFamily) {
+  async getFontkitFontAsync(fontFamily) {
     if (!this.initialized) {
-      this.initialize();
+      await this.initialize();
     }
     
     if (!this.fontkitAvailable) {
       return null;
     }
     
-    const normalizedFontFamily = this.normalizeFontFamily(fontFamily);
+    const normalizedFontFamily = await this.normalizeFontFamilyAsync(fontFamily);
     
     // Check if we already have the font loaded
     if (this.fontkitFonts.has(normalizedFontFamily)) {
@@ -285,7 +285,7 @@ class FontCache {
     
     // If not found in predefined paths, try to find it on the system
     if (!fontPath) {
-      fontPath = await this.findFontFile(normalizedFontFamily);
+      fontPath = await this.findFontFileAsync(normalizedFontFamily);
     }
     
     // If we found a font path, try to load it with fontkit
@@ -325,7 +325,7 @@ class FontCache {
           }
         } else {
           // Regular font file
-          const font = fontkit.openSync(fontPath);
+          const font = await fontkit.open(fontPath);
           this.fontkitFonts.set(normalizedFontFamily, font);
           return font;
         }
@@ -362,11 +362,11 @@ class FontCache {
    * @param {string} fontStyle - Font style
    * @returns {number} - Character width
    */
-  async calculateCharWidth(char, fontFamily, fontSize, fontWeight = 'normal', fontStyle = 'normal') {
+  async calculateCharWidthAsync(char, fontFamily, fontSize, fontWeight = 'normal', fontStyle = 'normal') {
     // Decode HTML entities to Unicode characters
     const decodedChar = char.replace(/&#x([0-9A-Fa-f]+);/g, (match, hex) => String.fromCharCode(parseInt(hex, 16)));
 
-    const font = await this.getFontkitFont(fontFamily);
+    const font = await this.getFontkitFontAsync(fontFamily);
     
     if (font && typeof font.layout === 'function') {
       try {
@@ -386,7 +386,7 @@ class FontCache {
       } catch (err) {
         console.error(`Error calculating width for character "${char}" using fontkit:`, err);
         
-        return await this.calculateCharWidth("W", "Arial", fontSize, fontWeight, fontStyle);
+        return await this.calculateCharWidthAsync("W", "Arial", fontSize, fontWeight, fontStyle);
       }
     }
     
@@ -421,8 +421,8 @@ class FontCache {
    * @param {string} fontStyle - Font style
    * @returns {number} - Character height
    */
-  async calculateCharHeight(char, fontFamily, fontSize, fontWeight = 'normal', fontStyle = 'normal') {
-    const font = await this.getFontkitFont(fontFamily);
+  async calculateCharHeightAsync(char, fontFamily, fontSize, fontWeight = 'normal', fontStyle = 'normal') {
+    const font = await this.getFontkitFontAsync(fontFamily);
     
     if (font && typeof font.layout === 'function') {
       try {
@@ -464,7 +464,7 @@ class FontCache {
    * @param {number} offset - Starting position of the text within the full content
    * @returns {number} - Maximum character height
    */
-  async calculateMaxCharHeight(text, formattingRanges = [], defaultFontSize = 12, defaultFontFamily = 'Arial', offset = 0) {
+  async calculateMaxCharHeightAsync(text, formattingRanges = [], defaultFontSize = 12, defaultFontFamily = 'Arial', offset = 0) {
     if (!text || text.length === 0) {
       return defaultFontSize * 1.5;
     }
@@ -493,7 +493,7 @@ class FontCache {
       }
       
       // Calculate height for this character
-      const charHeight = await this.calculateCharHeight(
+      const charHeight = await this.calculateCharHeightAsync(
         char,
         fontFamily,
         fontSize,
@@ -516,7 +516,7 @@ class FontCache {
    * @param {number} offset - Offset of this text within the overall content
    * @returns {number} - Text width
    */
-  async calculateTextWidth(text, formattingRanges = [], defaultFontSize = 12, defaultFontFamily = 'Arial', offset = 0) {
+  async calculateTextWidthAsync(text, formattingRanges = [], defaultFontSize = 12, defaultFontFamily = 'Arial', offset = 0) {
     if (!text) return 0;
     
     let totalWidth = 0;
@@ -537,7 +537,7 @@ class FontCache {
         const fontWeight = formattingRanges.length === 1 ? (formattingRanges[0].fontWeight || 'normal') : 'normal';
         const fontStyle = formattingRanges.length === 1 ? (formattingRanges[0].fontStyle || 'normal') : 'normal';
         
-        const font = await this.getFontkitFont(fontFamily);
+        const font = await this.getFontkitFontAsync(fontFamily);
         if (font && typeof font.layout === 'function') {
           try {
             const run = font.layout(text);
@@ -585,7 +585,7 @@ class FontCache {
       
       try {
         // Calculate width for this character
-        const charWidth = this.calculateCharWidth(char, fontFamily, fontSize, fontWeight, fontStyle);
+        const charWidth = await this.calculateCharWidthAsync(char, fontFamily, fontSize, fontWeight, fontStyle);
         totalWidth += charWidth;
       } catch (err) {
         // Fallback to a simple estimation
@@ -612,7 +612,7 @@ class FontCache {
    * @param {string} fontFamily - Font family
    * @returns {string} - Normalized font family
    */
-  normalizeFontFamily(fontFamily) {
+  async normalizeFontFamilyAsync(fontFamily) {
     if (!fontFamily) return 'Arial';
     
     // Remove quotes and extra spaces
@@ -635,7 +635,7 @@ const fontCache = new FontCache();
  * @param {Element} textElement - Text element
  * @returns {number} - Font size
  */
-function extractFontSize(textElement) {
+async function extractFontSizeAsync(textElement) {
   const style = textElement.getAttribute('style') || '';
   const fontSizeMatch = style.match(/font-size:([^;]+)/);
   
@@ -655,8 +655,8 @@ function extractFontSize(textElement) {
  * @param {Element} textElement - Text element
  * @returns {number} - Line height
  */
-function estimateLineHeight(textElement) {
-  const fontSize = extractFontSize(textElement);
+async function estimateLineHeightAsync(textElement) {
+  const fontSize = await extractFontSizeAsync(textElement);
   const style = textElement.getAttribute('style') || '';
   const lineHeightMatch = style.match(/line-height:([^;]+)/);
   
@@ -684,18 +684,18 @@ function estimateLineHeight(textElement) {
  * @param {number} offset - Starting position of the line within the full content
  * @returns {number} - Line height based on tallest character
  */
-async function calculateLineHeightForLine(line, fontSize, formattingRanges = [], fontInfo = {}, offset = 0) {
+async function calculateLineHeightForLineAsync(line, fontSize, formattingRanges = [], fontInfo = {}, offset = 0) {
   if (!line || line.trim().length === 0) {
     return fontSize * (fontInfo.lineHeight || 1.2); // Default for empty lines
   }
   
   // Get the maximum character height in the line
-  const maxCharHeight = await fontCache.calculateMaxCharHeight(
+  const maxCharHeight = await fontCache.calculateMaxCharHeightAsync(
     line,
     formattingRanges,
     fontSize,
     fontInfo.fontFamily || 'Arial',
-    offset // Pass the offset to calculateMaxCharHeight
+    offset // Pass the offset to calculateMaxCharHeightAsync
   );
   
   // For lines with normal text, use the line-height parameter from the SVG
@@ -721,7 +721,7 @@ async function calculateLineHeightForLine(line, fontSize, formattingRanges = [],
  * @param {Element} element - Text element or tspan
  * @returns {Object} - Font attributes
  */
-function extractFontAttributes(element) {
+async function extractFontAttributesAsync(element) {
   const style = element.getAttribute('style') || '';
   
   // Extract font attributes from style
@@ -729,7 +729,7 @@ function extractFontAttributes(element) {
     style.match(/font-family:\s*([^;]+)/)[1].trim() : 
     element.getAttribute('font-family') || 'Arial';
   
-  const fontSize = extractFontSize(element);
+  const fontSize = await extractFontSizeAsync(element);
   
   const fontWeight = style.match(/font-weight:\s*([^;]+)/) ? 
     style.match(/font-weight:\s*([^;]+)/)[1].trim() : 
@@ -754,22 +754,28 @@ function extractFontAttributes(element) {
     // console.log(`Extracted line-height: ${lineHeight} from element`);
   }
   
+  // Extract text-align from style or attribute
+  const textAlign = style.match(/text-align:\s*([^;]+)/) ? 
+    style.match(/text-align:\s*([^;]+)/)[1].trim() : 
+    element.getAttribute('text-anchor') || 'start';
+
   return {
     fontFamily,
     fontSize,
     fontWeight,
     fontStyle,
-    lineHeight
+    lineHeight,
+    textAlign
   };
 }
 
 module.exports = {
-  extractNumericPropertyFromStyle,
-  addFontStyles,
+  extractNumericPropertyFromStyleAsync,
+  addFontStylesAsync,
   FontCache,
   fontCache,
-  estimateLineHeight,
-  extractFontSize,
-  calculateLineHeightForLine,
-  extractFontAttributes
+  estimateLineHeightAsync,
+  extractFontSizeAsync,
+  calculateLineHeightForLineAsync,
+  extractFontAttributesAsync
 }; 

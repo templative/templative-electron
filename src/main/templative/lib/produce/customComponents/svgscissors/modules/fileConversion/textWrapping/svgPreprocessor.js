@@ -1,4 +1,4 @@
-const { processTextElements } = require('./textProcessor');
+const { processTextElementsAsync } = require('./textProcessor');
 /**
  * Preprocess SVG text to remove SVG 2.0 features that aren't compatible with resvg-js
  * @param {string} svgData - SVG content as string
@@ -12,7 +12,7 @@ const { processTextElements } = require('./textProcessor');
  * @param {string} svgData - SVG content as string
  * @returns {string} - Cleaned SVG data
  */
-function cleanupSvgNamespaces(svgData) {
+async function cleanupSvgNamespacesAsync(svgData) {
   // Ensure we have the SVG namespace defined in the root element
   if (!svgData.includes('xmlns="http://www.w3.org/2000/svg"')) {
     svgData = svgData.replace(/<svg/i, '<svg xmlns="http://www.w3.org/2000/svg"');
@@ -51,7 +51,7 @@ function cleanupSvgNamespaces(svgData) {
  * @param {boolean} force_rewrap - Force rewrapping of text
  * @returns {string} - Processed SVG data
  */
-async function fallbackPreprocessing(svgData, force_rewrap) {
+async function fallbackPreprocessingAsync(svgData, force_rewrap) {
   try {
     // Parse the SVG using JSDOM
     const { JSDOM } = require('jsdom');
@@ -59,15 +59,15 @@ async function fallbackPreprocessing(svgData, force_rewrap) {
     const document = dom.window.document;
     
     // Process text elements
-    await processTextElements(document, force_rewrap);
+    await processTextElementsAsync(document, force_rewrap);
     
     // Add font styles
-    const { addFontStyles } = require('./fontHandler');
-    svgData = addFontStyles(dom.serialize());
+    const { addFontStylesAsync } = require('./fontHandler');
+    svgData = await addFontStylesAsync(dom.serialize());
     
     return svgData;
   } catch (error) {
-    console.error(`Error in fallbackPreprocessing: ${error.message}`);
+    console.error(`Error in fallbackPreprocessingAsync: ${error.message}`);
     return svgData;
   }
 }
@@ -77,9 +77,8 @@ async function fallbackPreprocessing(svgData, force_rewrap) {
  * @param {string} svgData - SVG content as string
  * @returns {string} - Cleaned SVG data
  */
-function cleanupUnusedDefs(svgData) {
+async function cleanupUnusedDefsAsync(svgData) {
   try {
-    // Parse the SVG
     const { JSDOM } = require('jsdom');
     const dom = new JSDOM(svgData, { contentType: 'image/svg+xml' });
     const document = dom.window.document;
@@ -134,7 +133,7 @@ function cleanupUnusedDefs(svgData) {
 }
 
 module.exports = {
-  cleanupSvgNamespaces,
-  fallbackPreprocessing,
-  cleanupUnusedDefs
+  cleanupSvgNamespacesAsync,
+  fallbackPreprocessingAsync,
+  cleanupUnusedDefsAsync
 }; 
