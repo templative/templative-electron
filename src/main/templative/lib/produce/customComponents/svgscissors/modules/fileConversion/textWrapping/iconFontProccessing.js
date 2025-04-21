@@ -6,7 +6,7 @@ const { JSDOM } = require('jsdom');
 async function processIconGlyphsAsync(document, inputDirectoryPath) {
     let iconGlyphs = document.querySelectorAll('iconGlyph');
     
-    console.log("Found", iconGlyphs.length, "iconGlyphs");
+    // console.log("Found", iconGlyphs.length, "iconGlyphs");
     const svgDomCache = {}
     for (const iconGlyph of iconGlyphs) {
       await processGlyph(iconGlyph, inputDirectoryPath, svgDomCache);
@@ -55,7 +55,7 @@ async function processGlyph(iconGlyph, inputDirectoryPath, svgDomCache) {
     const unicode = `&#x${glyph.getAttribute('unicode').codePointAt(0).toString(16).toUpperCase()};`;
     var puaChar;
     try {
-        console.log(`Getting PUA char from ${fontPath} ${unicode}`);
+        // console.log(`Getting PUA char from ${fontPath} ${unicode}`);
         puaChar = await getPUACharFromUnicode(fontPath, unicode);
     }
     catch (error){
@@ -70,7 +70,7 @@ async function processGlyph(iconGlyph, inputDirectoryPath, svgDomCache) {
         iconGlyph.parentNode.replaceChild(textNode, iconGlyph);
         return
     }
-    console.log(`Processing glyph ${glyphName} from font ${fontFamily} unicode: ${unicode} puaChar: ${puaChar}`);
+    // console.log(`Processing glyph ${glyphName} from font ${fontFamily} unicode: ${unicode} puaChar: ${puaChar}`);
     
     const textNode = svgDom.window.document.createTextNode(puaChar);
     iconGlyph.parentNode.replaceChild(textNode, iconGlyph);

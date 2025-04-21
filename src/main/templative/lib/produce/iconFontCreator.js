@@ -25,7 +25,7 @@ async function createIconFont(name, inputDir, outputDir) {
         await fs.writeFile(path.join(outputDir, `${name}.ttf`), result.ttf);
         await fs.writeFile(path.join(outputDir, `${name}.svg`), result.svg);
 
-        console.log('Icon font created successfully!');
+        // console.log('Icon font created successfully!');
     } catch (error) {
         console.error('Error creating icon font:', error);
     }
