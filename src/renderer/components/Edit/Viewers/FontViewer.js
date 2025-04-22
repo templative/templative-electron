@@ -30,6 +30,10 @@ const Glyph = ({fontFamily, glyphName, unicode, d, unitsPerEm}) => {
     const [clicked, setClicked] = useState(false);
     const glyphInsert = `<iconGlyph font-family='${fontFamily}' ${glyphName ? `glyph='${glyphName}'` : `unicode='${unicode}'`}/>`;
     
+    if (!glyphName && unicode == "20") {
+        return null;
+    }
+
     const copyUnicode = () => {
         navigator.clipboard.writeText(glyphInsert);
         setClicked(true);
