@@ -3,8 +3,6 @@ import { ipcRenderer } from 'electron';
 import './ImportCsvModal.css';
 import path from 'path';
 import { channels } from '../../../../../shared/constants';
-const { google } = require('googleapis');
-const sheets = google.sheets('v4');
 
 const ImportCsvModal = ({ filenameWeAreOverwriting, isOpen, onClose, handleFileDropAsync }) => {
     if (!isOpen) return null;
