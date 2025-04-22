@@ -48,6 +48,7 @@
 }
 .glyph-svg {
     rotate: 180deg;
+    transform: scaleX(-1);
     margin-bottom: 4px;
     margin: 0 auto;
 }

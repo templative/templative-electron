@@ -46,7 +46,8 @@ const Glyph = ({fontFamily, glyphName, unicode, d, unitsPerEm}) => {
             <svg className="glyph-svg" xmlns="http://www.w3.org/2000/svg" width="75px" height="75px" viewBox={`0 0 ${unitsPerEm} ${unitsPerEm}`}>
                 <g><path fill="#878ec4" d={d} /></g>
             </svg>
-            
+            {/* unicode is a string like "e20", we need to add &#xe20; to make it unicode */}
+            {/* <span style={{fontFamily: fontFamily}}>{String.fromCodePoint(parseInt(unicode, 16))}</span> */}
             <p>{ clicked ? "Copied!" : (isHovering ? "Copy" : name)}</p>
         </div>
     </div>
