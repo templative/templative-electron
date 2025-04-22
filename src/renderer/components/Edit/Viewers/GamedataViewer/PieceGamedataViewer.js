@@ -190,7 +190,10 @@ export default class PieceGamedataViewer extends EditableViewerJson {
     
     handleFileDropAsync = async (newSyncPath) => {
         // console.log('File dropped:', newSyncPath);
-        
+        if (!newSyncPath) {
+            console.warn("No new path provided for importing.")
+            return
+        }
         const relativeFilepath = getSyncKey(this.props.templativeRootDirectoryPath,this.props.gameCompose, this.props.filepath)
         const currentSyncPath = this.props.gameCompose["syncKeys"][relativeFilepath];
         if (newSyncPath.includes("google.com") && currentSyncPath !== newSyncPath) {

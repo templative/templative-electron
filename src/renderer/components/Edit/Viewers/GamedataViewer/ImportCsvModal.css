@@ -14,7 +14,7 @@
 
 .modal-content {
     position: relative;
-    background-color: white;
+    /* background-color: white; */
     padding: 20px;
     border-radius: 5px;
     width: 715px;
@@ -27,7 +27,7 @@
 }
 .drop-area {
     border: 2px dashed #ccc;
-    padding-top: 200px;
+    padding-top: 170px;
     margin: 20px 0;
     height: 460px;
     cursor: pointer;
@@ -36,11 +36,14 @@
     border-color: var(--color-accent);
     color: var(--color-accent);
 }
-.import-warning {
-    color: var(--color-error);
+.import-modal-description {
     text-align: left;
     font-size: 16px;
     margin-top: 0px;
+}
+.import-warning {
+    color: var(--color-error);
+    
 }
 
 .close-button {
@@ -52,4 +55,10 @@
     font-size: 24px;
     cursor: pointer;
 }
-
+.App .import-modal-header {
+    margin-bottom: 0.5em;
+}
+.google-sheet-url-input, .google-sheet-url-input:focus, .google-sheet-url-input:active {
+    background-color: rgb(24, 30, 37) !important;
+    color: var(--color-text) !important;
+}

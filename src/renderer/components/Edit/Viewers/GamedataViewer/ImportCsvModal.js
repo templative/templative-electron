@@ -81,11 +81,13 @@ const ImportCsvModal = ({ filenameWeAreOverwriting, isOpen, onClose, handleFileD
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                 <button className="close-button" onClick={onClose}>×</button>
-                <h2>Import and Replace your Pieces Content from a csv or xlsx File</h2>
+                <h2 className="import-modal-header">Import Pieces Content</h2>
+                <p className="import-modal-description">Connect a public Google Sheet to automatically sync your data or import a local file. <span className="import-warning">This will overwrite everything in {filenameWeAreOverwriting}!</span></p>
+                
                 <div className="input-group">
                     <span className="input-group-text soft-label">Google Sheets Url</span>
-                    <input type="text" className="form-control value-field no-left-border" placeholder="https://docs.google.com/spreadsheets/d/1234567890/edit#gid=0" value={googleSheetUrl} onChange={(e) => setGoogleSheetUrl(e.target.value)} />
-                    <button disabled={googleSheetUrl === ''} className="btn btn-primary" onClick={confirmImportFromGoogleSheet}>Import</button>
+                    <input type="text" className="form-control no-left-border google-sheet-url-input" placeholder="https://docs.google.com/spreadsheets/d/1234567890/edit#gid=0" value={googleSheetUrl} onChange={(e) => setGoogleSheetUrl(e.target.value)} />
+                    <button disabled={googleSheetUrl === ''} className="btn btn-primary" onClick={confirmImportFromGoogleSheet}>Setup Sync Url</button>
                 </div>
                 <div 
                     className={`drop-area ${isDragging ? 'highlight' : ''}`} 
@@ -95,9 +97,8 @@ const ImportCsvModal = ({ filenameWeAreOverwriting, isOpen, onClose, handleFileD
                     onDrop={handleDrop}
                     onClick={handleClick}
                 >
-                    {isDragging ? "🤤" : "Drop your a .csv or .xlsx file here or click to select"}
+                    {isDragging ? "🤤" : "Drop your a .csv or .xlsx file here or click to select."}
                 </div>
-                <p className="import-warning">This will overwrite everything in {filenameWeAreOverwriting}!</p>
                 <button className="btn btn-primary" onClick={confirmImport} disabled={selectedFilePath === null}>Import{selectedFilePath && ` ${path.basename(selectedFilePath)}`}</button>
             </div>
         </div>
