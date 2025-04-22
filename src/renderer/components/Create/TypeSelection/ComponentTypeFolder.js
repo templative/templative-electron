@@ -9,6 +9,7 @@ const ComponentTypeFolder = ({
     selectTypeCallback, 
     category, 
     categoryInfo, 
+    unit,
     selectedComponentType, 
     isStock,
     hasLoadedComponents
@@ -56,6 +57,7 @@ const ComponentTypeFolder = ({
             existingQuantity={0}
             isShowingTemplates={isShowingTemplates || false}
             search={search}
+            unit={unit}
         />
     );
     

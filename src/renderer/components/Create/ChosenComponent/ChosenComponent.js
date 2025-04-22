@@ -7,7 +7,7 @@ import { COMPONENT_INFO } from "../../../../shared/componentInfo";
 import { STOCK_COMPONENT_INFO } from "../../../../shared/stockComponentInfo";
 import { COMPONENT_CATEGORIES } from "../../../../shared/componentCategories";
 
-const ChosenComponent = ({ isProcessing, createComponent, isToggledToComponents }) => {
+const ChosenComponent = ({ isProcessing, createComponent, isToggledToComponents, unit }) => {
     const context = useContext(RenderingWorkspaceContext);
     const isCreateButtonDisabled = isProcessing || context.componentName === "" || context.selectedComponentType === undefined;
 
@@ -44,7 +44,7 @@ const ChosenComponent = ({ isProcessing, createComponent, isToggledToComponents 
     return (
         <div className="create-component-name-row">
             <div className="chosen-component-preview">
-                <ComponentPreview selectedComponentInfo={selectedComponentInfo} />
+                <ComponentPreview selectedComponentInfo={selectedComponentInfo} unit={unit} />
             </div>
             <div className="chosen-component-settings">
                 {variations}

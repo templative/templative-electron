@@ -12,6 +12,7 @@ const ComponentType = ({
     isShowingTemplates,
     hasLoadedComponents,
     search,
+    unit,
     isStock
 }) => {
     let highlightedComponent = null;
@@ -55,17 +56,21 @@ const ComponentType = ({
         return null;
     }, [highlightedComponent, isShowingTemplates]);
 
-    const dimensions = highlightedComponent["DimensionsPixels"] ? `${parseInt(highlightedComponent["DimensionsPixels"][0])}x${parseInt(highlightedComponent["DimensionsPixels"][1])}px` : "";
-    
-    
-    
-    const dimensionsInches = highlightedComponent["DimensionsInches"] ? `${parseFloat(highlightedComponent["DimensionsInches"][0]).toFixed(1)}x${parseFloat(highlightedComponent["DimensionsInches"][1]).toFixed(1)}"` : "";
+    var dimensions = highlightedComponent["DimensionsPixels"] ? `${parseInt(highlightedComponent["DimensionsPixels"][0])}x${parseInt(highlightedComponent["DimensionsPixels"][1])}px` : "";
+    const unitType = unit || "px";
+    if (unitType === "in") {
+        dimensions = highlightedComponent["DimensionsInches"] ? `${parseFloat(highlightedComponent["DimensionsInches"][0]).toFixed(1)}x${parseFloat(highlightedComponent["DimensionsInches"][1]).toFixed(1)}"` : "";
+    } else if (unitType === "mm") {
+        dimensions = highlightedComponent["DimensionsInches"] ? `${(highlightedComponent["DimensionsInches"][0] * 25.4).toFixed(1)}x${(highlightedComponent["DimensionsInches"][1] * 25.4).toFixed(1)}mm` : "";
+    } else if (unitType === "cm") {
+        dimensions = highlightedComponent["DimensionsInches"] ? `${(highlightedComponent["DimensionsInches"][0] * 2.54).toFixed(1)}x${(highlightedComponent["DimensionsInches"][1] * 2.54).toFixed(1)}cm` : "";
+    }
     
     const simulatorTask = highlightedComponent["SimulatorCreationTask"] ? highlightedComponent["SimulatorCreationTask"] : "";
     const gamecrafterUploadTask = highlightedComponent["GameCrafterUploadTask"] ? highlightedComponent["GameCrafterUploadTask"] : "";
     const variations = components.length > 1 ? `${components.length} variation${components.length > 1 ? 's' : ''}` : "";
     // const descriptor = [simulatorTask, gamecrafterUploadTask, dimensions, variations].filter(Boolean).join(' · ');
-    const descriptor = [dimensions, dimensionsInches, variations].filter(Boolean).join(' · ');
+    const descriptor = [dimensions, variations].filter(Boolean).join(' · ');
     return (
         <div className="component-type-wrapper">
             <button type="button" 

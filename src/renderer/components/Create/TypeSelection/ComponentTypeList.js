@@ -8,6 +8,7 @@ const ComponentTypeList = ({
     componentMajorCategories,
     typeInfo,
     search,
+    unit,
     selectTypeCallback,
     selectedComponentType,
     isStock,
@@ -20,6 +21,7 @@ const ComponentTypeList = ({
         const categoryInfo = componentMajorCategories[category];        
         return <ComponentTypeFolder 
             key={category} 
+            unit={unit}
             hasLoadedComponents={hasLoadedComponents}
             search={search} 
             isShowingTemplates={isShowingTemplates}

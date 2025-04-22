@@ -16,7 +16,7 @@
 }
 
 .create-component-name-row {
-    height: var(--component-name-row-height);
+    height: 240px;
     background-color: var(--color-content-surface);
     display: block;
     padding:0.5em;
@@ -38,7 +38,7 @@
 }
 
 .component-type-picking-row.has-selected-component {
-    height: calc(100% - var(--component-name-row-height) - var(--search-components-box-height) - 30px);
+    height: calc(100% - 345px);
 }
 
 .component-type-picking-row > * {
@@ -130,7 +130,7 @@
     padding-left: 24px;
     padding-right: 24px;
     padding-top: 1em;
-    height: var(--search-components-box-height);
+    height: 95px;
 }
   
 .component-tabs {

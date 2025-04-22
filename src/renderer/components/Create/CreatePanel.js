@@ -128,6 +128,8 @@ const CreatePanel = (props) => {
                 toggleCustomOrStock={context.toggleCustomOrStock}
                 componentTypeSearch={context.componentTypeSearch}
                 setComponentTypeSearch={context.setComponentTypeSearch}
+                unit={context.unit}
+                setUnit={context.setUnit}
             />
             <ComponentTypeList 
                 hasLoadedComponents={hasLoadedComponents}
@@ -140,11 +142,13 @@ const CreatePanel = (props) => {
                 selectedComponentType={context.selectedComponentType}  
                 isStock={!context.isToggledToComponents}
                 isShowingTemplates={false}
+                unit={context.unit}
             />  
             <ChosenComponent 
                 isProcessing={isProcessing}
                 createComponent={createComponent}
                 isToggledToComponents={context.isToggledToComponents}
+                unit={context.unit}
             /> 
         </div>
     );

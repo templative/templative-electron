@@ -34,6 +34,7 @@ class RenderingWorkspaceProvider extends React.Component {
         renderControlsColumnWidth: 20,
         isPreviewVisible: false,
         lastViewedContentType: "Piece Content", // Default to Piece Content
+        unit: "px",
     };
   }
 
@@ -146,6 +147,10 @@ class RenderingWorkspaceProvider extends React.Component {
     return availableContentTypes.length > 0 ? availableContentTypes[0] : null;
   };
 
+  setUnit = (unit) => {
+    this.setState({ unit: unit });
+  };
+
   render() {
     return (
       <RenderingWorkspaceContext.Provider
@@ -169,7 +174,8 @@ class RenderingWorkspaceProvider extends React.Component {
           showPreview: this.showPreview,
           lastViewedContentType: this.state.lastViewedContentType,
           setLastViewedContentType: this.setLastViewedContentType,
-          selectContentTypeForComposition: this.selectContentTypeForComposition
+          selectContentTypeForComposition: this.selectContentTypeForComposition,
+          setUnit: this.setUnit,
         }}
       >
         {this.props.children}
