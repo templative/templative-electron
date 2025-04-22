@@ -32,6 +32,7 @@ export default class EditProjectView extends React.Component {
 
         extendedFileTypes: new Set(),
         extendedDirectories: new Set(),
+        gameCompose: {},
         componentCompose: [], // Store the parsed component-compose.json
     }
     changeExtendedDirectoryAsync = (isExtended, directory) => {
@@ -200,11 +201,31 @@ export default class EditProjectView extends React.Component {
         }
     }
     
-    
+    loadGameComposeAsync = async () => {
+        const filepath = path.join(this.props.templativeRootDirectoryPath, "game-compose.json");
+        const content = await TemplativeAccessTools.loadFileContentsAsJson(filepath);
+        if (!content["syncUrls"]) {
+            content["syncUrls"] = {};
+        }
+        this.setState({ gameCompose: content });
+    }
+    saveGameComposeAsync = async (gameCompose) => {
+        const filepath = path.join(this.props.templativeRootDirectoryPath, "game-compose.json");
+        await this.saveFileAsync(filepath, JSON.stringify(gameCompose, null, 2));
+    }
+    addGameComposeSyncUrlAsync = async (pieceContentName, syncUrl) => {
+        const gameCompose = this.state.gameCompose;
+        if (!gameCompose["syncUrls"]) {
+            gameCompose["syncUrls"] = {};
+        }
+        gameCompose["syncUrls"][pieceContentName] = syncUrl;
+        await this.saveGameComposeAsync(gameCompose);
+    }
     componentDidMount = async () => {
         ipcRenderer.on(channels.GIVE_OPEN_SETTINGS, this.handleOpenSettings);
 
         await this.loadComponentComposeAsync();
+        await this.loadGameComposeAsync();
     }
 
     componentDidUpdate = async (prevProps) => {
@@ -453,6 +474,8 @@ export default class EditProjectView extends React.Component {
                         deleteCompositionAsync={this.deleteCompositionAsync}
                         duplicateCompositionAsync={this.duplicateCompositionAsync}
                         toggleDisableCompositionAsync={this.toggleDisableCompositionAsync}
+                        gameCompose={this.state.gameCompose}
+                        addGameComposeSyncUrlAsync={this.addGameComposeSyncUrlAsync}
                     />
                     )}
 

@@ -82,9 +82,8 @@ const ImportCsvModal = ({ filenameWeAreOverwriting, isOpen, onClose, handleFileD
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                 <button className="close-button" onClick={onClose}>×</button>
                 <h2>Import and Replace your Pieces Content from a csv or xlsx File</h2>
-                <p>Import from a Google Sheet</p>
                 <div className="input-group">
-                    <span className="input-group-text soft-label">Google Sheets Share Url</span>
+                    <span className="input-group-text soft-label">Google Sheets Url</span>
                     <input type="text" className="form-control value-field no-left-border" placeholder="https://docs.google.com/spreadsheets/d/1234567890/edit#gid=0" value={googleSheetUrl} onChange={(e) => setGoogleSheetUrl(e.target.value)} />
                     <button disabled={googleSheetUrl === ''} className="btn btn-primary" onClick={confirmImportFromGoogleSheet}>Import</button>
                 </div>

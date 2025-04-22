@@ -28,8 +28,6 @@ export default function UnifiedCol(params) {
         gameGamedataFilepath,
         componentGamedataFilepath,
         piecesGamedataFilepath,
-        piecesGamedataSyncUrl,
-        handleUpdatePiecesGamedataSyncUrlAsyncCallback,
         showPreviewCallback,
         
         // Artdata props
@@ -45,7 +43,10 @@ export default function UnifiedCol(params) {
         handleFileSave,
         updateViewedFileUsingTabAsyncCallback,
         updateViewedFileUsingExplorerAsyncCallback,
-        updateCompositionFilepathCallback
+        updateCompositionFilepathCallback,
+        
+        gameCompose,
+        addGameComposeSyncUrlAsync,
     } = params;
 
     const { lastViewedContentType, setLastViewedContentType, selectContentTypeForComposition } = useContext(RenderingWorkspaceContext);
@@ -142,9 +143,9 @@ export default function UnifiedCol(params) {
                             showPreviewCallback={showPreviewCallback}
                             isPreviewEnabled={true}
                             componentName={componentName}
-                            handleUpdatePiecesGamedataSyncUrlAsyncCallback={handleUpdatePiecesGamedataSyncUrlAsyncCallback}
-                            piecesGamedataSyncUrl={piecesGamedataSyncUrl}
                             templativeRootDirectoryPath={templativeRootDirectoryPath}
+                            gameCompose={gameCompose}
+                            addGameComposeSyncUrlAsync={addGameComposeSyncUrlAsync}
                         />
                     );
                 default:

@@ -155,6 +155,8 @@ export default class EditPanel extends React.Component {
                                 isPreviewEnabled={false} 
                                 filepath={this.props.currentFilepath} 
                                 saveFileAsyncCallback={this.props.saveFileAsyncCallback}
+                                gameCompose={this.props.gameCompose}
+                                addGameComposeSyncUrlAsync={this.props.addGameComposeSyncUrlAsync}
                             />
                         }
                         {this.props.currentFileType === "COMPONENT_GAMEDATA" &&
@@ -180,6 +182,8 @@ export default class EditPanel extends React.Component {
                                 updateRouteCallback={this.props.updateRouteCallback}     
                                 updateComponentComposeFieldAsync={this.props.updateComponentComposeFieldAsync}
                                 updateViewedFileUsingTabAsyncCallback={this.props.updateViewedFileUsingTabAsyncCallback}
+                                gameCompose={this.props.gameCompose}
+                                addGameComposeSyncUrlAsync={this.props.addGameComposeSyncUrlAsync}
                             />
                         }
                         {this.props.currentFileType === undefined && 

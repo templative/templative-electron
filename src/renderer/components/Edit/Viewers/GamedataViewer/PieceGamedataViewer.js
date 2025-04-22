@@ -17,6 +17,7 @@ import KeyIcon from "./PiecesTypeIcons/KeyIcon.svg?react";
 import DownloadIcon from "./PiecesTypeIcons/DownloadIcon.svg?react";
 import PlusIcon from "./PiecesTypeIcons/PlusIcon.svg?react";
 import SyncIcon from "./PiecesTypeIcons/SyncIcon.svg?react";
+import BreakSyncIcon from "./PiecesTypeIcons/BreakSyncIcon.svg?react";
 
 import "./GamedataViewer.css"
 
@@ -149,15 +150,11 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         });
     }
 
-    syncWithSheet = async () => {
-        if (!this.props.piecesGamedataSyncUrl) {
-            return
-        }
-        await this.handleFileDropAsync(this.props.piecesGamedataSyncUrl)
+    syncWithSheet = async (syncUrl) => {
+        await this.handleFileDropAsync(syncUrl)
     }
     
     loadCsvFromSheet = async (url) => {
-    
         const response = await fetch(url);
         if (!response.ok) {
             throw new Error('Failed to fetch data from Google Sheets');
@@ -177,21 +174,27 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         const fileContents = await fsPromises.readFile(filepath, encoding);
         return { fileContents, fileExtension }
     }
+
+    removeSyncUrl = async () => {
+        await this.props.addGameComposeSyncUrlAsync(path.basename(this.props.filepath, ".json"), undefined)
+    }
     
-    handleFileDropAsync = async (filepath) => {
-        console.log('File dropped:', filepath);
+    handleFileDropAsync = async (newSyncPath) => {
+        console.log('File dropped:', newSyncPath);
         
-        if (filepath.includes("google.com") && this.props.piecesGamedataSyncUrl !== filepath && this.props.handleUpdatePiecesGamedataSyncUrlAsyncCallback !== undefined) {
-            return await this.props.handleUpdatePiecesGamedataSyncUrlAsyncCallback(filepath)
+        const filename = path.basename(this.props.filepath, ".json")
+        const currentSyncPath = this.props.gameCompose["syncUrls"][filename];
+        if (newSyncPath.includes("google.com") && currentSyncPath !== newSyncPath) {
+            await this.props.addGameComposeSyncUrlAsync(filename, newSyncPath)
         }
         
         var fileContents, fileExtension;
         try {
-            ({fileContents, fileExtension} = await this.loadFileContentsFromPath(filepath))
+            ({fileContents, fileExtension} = await this.loadFileContentsFromPath(newSyncPath))
         } catch (error) {
             if (error.code === 'ENOENT') {
-                console.error('File does not exist:', filepath);
-                window.confirm("File does not exist: " + filepath);
+                console.error('File does not exist:', newSyncPath);
+                window.confirm("File does not exist: " + newSyncPath);
                 return;
             }
             console.error('Error loading file:', error);
@@ -270,7 +273,9 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                 })
             }
         }
-        
+        const filename = path.basename(this.props.filepath, ".json")
+        const syncUrl = this.props.gameCompose["syncUrls"][filename];
+        const hasSyncUrl = syncUrl !== undefined;
         return <div className="pieces-viewer">
             <div className="pieces-controls-input-group">
                 <div>
@@ -303,16 +308,25 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                         <DownloadIcon className="add-field-icon"/>
                         Import CSV / Excel / Sheets
                     </button>
-                    {this.props.piecesGamedataSyncUrl && (
+                    {hasSyncUrl && (
+                        <>
                         <button 
-                            onClick={() => this.syncWithSheet()} 
-                            disabled={this.state.lockedKey !== undefined}
+                            onClick={() => this.syncWithSheet(syncUrl)}
                             className="btn btn-outline-primary add-field-button" 
                             type="button"
                         >
                             <SyncIcon className="add-field-icon"/>
                             Sync
                         </button>
+                        <button 
+                            onClick={() => this.removeSyncUrl()} 
+                            className="btn btn-outline-primary add-field-button" 
+                            type="button"
+                        >
+                            <BreakSyncIcon className="add-field-icon"/>
+                            Remove Sync
+                        </button>
+                        </>
                     )}
                 </div>
             </div>

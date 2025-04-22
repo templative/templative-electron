@@ -12,8 +12,6 @@ export default function EditCompositionRow(props) {
         gameGamedataFilepath,
         componentGamedataFilepath,
         piecesGamedataFilepath,
-        piecesGamedataSyncUrl,
-        handleUpdatePiecesGamedataSyncUrlAsyncCallback,
         showPreviewCallback,
         handleFileSave,
         frontArtdataFilepath,
@@ -26,6 +24,8 @@ export default function EditCompositionRow(props) {
         updateViewedFileUsingTabAsyncCallback,
         updateCompositionFilepathCallback,
         updateViewedFileUsingExplorerAsyncCallback,
+        gameCompose,
+        addGameComposeSyncUrlAsync,
     } = props;
     return (
         <div className="row g-0 unified-viewer">
@@ -38,8 +38,6 @@ export default function EditCompositionRow(props) {
                 gameGamedataFilepath={gameGamedataFilepath}
                 componentGamedataFilepath={componentGamedataFilepath}
                 piecesGamedataFilepath={piecesGamedataFilepath}
-                piecesGamedataSyncUrl={piecesGamedataSyncUrl}
-                handleUpdatePiecesGamedataSyncUrlAsyncCallback={handleUpdatePiecesGamedataSyncUrlAsyncCallback}
                 showPreviewCallback={showPreviewCallback}
                 
                 // Artdata props
@@ -56,6 +54,10 @@ export default function EditCompositionRow(props) {
                 updateViewedFileUsingTabAsyncCallback={updateViewedFileUsingTabAsyncCallback}
                 updateViewedFileUsingExplorerAsyncCallback={updateViewedFileUsingExplorerAsyncCallback}
                 updateCompositionFilepathCallback={updateCompositionFilepathCallback}
+
+                // Game compose props
+                gameCompose={gameCompose}
+                addGameComposeSyncUrlAsync={addGameComposeSyncUrlAsync}
             />
         </div>
     );
