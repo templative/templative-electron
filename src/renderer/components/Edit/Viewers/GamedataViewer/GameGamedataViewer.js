@@ -5,6 +5,7 @@ import "./GamedataViewer.css"
 const ignoredControlGamedataKeys = [
     "name", "quantity", "category", "longDescription", "shortDescription", "maxPlayers", "minPlayers", "minAge", "playTime", "version", "versionName", "coolFactors"
 ]
+import FileLoadFailure  from "../FileLoadFailure";
 export default class GameGamedataViewer extends EditableViewerJson {   
     state = {
         trackedKey: undefined,

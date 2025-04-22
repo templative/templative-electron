@@ -9,6 +9,10 @@ import EditableViewerJson from "../EditableViewerJson";
 import PieceTable from "./PieceTable";
 import TransposedTable from "./TransposedTable";
 import ImportCsvModal from './ImportCsvModal';
+import { ipcRenderer } from 'electron';
+import { channels } from "../../../../../shared/constants";
+import { getSyncKey } from "./PieceSyncingManager";
+import FileLoadFailure from "../FileLoadFailure";
 
 import TableIcon from "./PiecesTypeIcons/TableIcon.svg?react";
 import JsonListIcon from "./PiecesTypeIcons/JsonListIcon.svg?react";
@@ -18,6 +22,7 @@ import DownloadIcon from "./PiecesTypeIcons/DownloadIcon.svg?react";
 import PlusIcon from "./PiecesTypeIcons/PlusIcon.svg?react";
 import SyncIcon from "./PiecesTypeIcons/SyncIcon.svg?react";
 import BreakSyncIcon from "./PiecesTypeIcons/BreakSyncIcon.svg?react";
+import GoToLinkIcon from "./PiecesTypeIcons/GoToLinkIcon.svg?react";
 
 import "./GamedataViewer.css"
 
@@ -150,8 +155,8 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         });
     }
 
-    syncWithSheet = async (syncUrl) => {
-        await this.handleFileDropAsync(syncUrl)
+    syncWithSheet = async (syncKey) => {
+        await this.handleFileDropAsync(`https://spreadsheets.google.com/feeds/download/spreadsheets/Export?key=${syncKey}&exportFormat=csv`)
     }
     
     loadCsvFromSheet = async (url) => {
@@ -175,17 +180,21 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         return { fileContents, fileExtension }
     }
 
-    removeSyncUrl = async () => {
-        await this.props.addGameComposeSyncUrlAsync(path.basename(this.props.filepath, ".json"), undefined)
+    removeSyncKey = async () => {
+        if (!window.confirm("Are you sure you want to remove the synced sheet?")) {
+            return
+        }
+        const relativeFilepath = getSyncKey(this.props.templativeRootDirectoryPath, this.props.gameCompose, this.props.filepath)
+        await this.props.addGameComposeSyncKeyAsync(relativeFilepath, undefined)
     }
     
     handleFileDropAsync = async (newSyncPath) => {
-        console.log('File dropped:', newSyncPath);
+        // console.log('File dropped:', newSyncPath);
         
-        const filename = path.basename(this.props.filepath, ".json")
-        const currentSyncPath = this.props.gameCompose["syncUrls"][filename];
+        const relativeFilepath = getSyncKey(this.props.templativeRootDirectoryPath,this.props.gameCompose, this.props.filepath)
+        const currentSyncPath = this.props.gameCompose["syncKeys"][relativeFilepath];
         if (newSyncPath.includes("google.com") && currentSyncPath !== newSyncPath) {
-            await this.props.addGameComposeSyncUrlAsync(filename, newSyncPath)
+            await this.props.addGameComposeSyncKeyAsync(relativeFilepath, newSyncPath)
         }
         
         var fileContents, fileExtension;
@@ -205,12 +214,12 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         
         if (fileExtension === '.csv') {
             // Parse CSV file
-            console.log("csv");
+            // console.log("csv");
             const parsedData = Papa.parse(fileContents, { header: true, skipEmptyLines: true });
             data = parsedData.data;
         } else if (fileExtension === '.xlsx') {
             // Parse XLSX file
-            console.log("xlsx");
+            // console.log("xlsx");
             const workbook = XLSX.read(fileContents, { type: 'buffer' });
             const firstSheetName = workbook.SheetNames[0];
             const worksheet = workbook.Sheets[firstSheetName];
@@ -235,6 +244,10 @@ export default class PieceGamedataViewer extends EditableViewerJson {
             isImportModalOpen: false 
         }, async () => this.autosave());
     };
+    openSheet = async (syncKey) => {
+        const url = `https://docs.google.com/spreadsheets/d/${syncKey}`
+        await ipcRenderer.invoke(channels.TO_SERVER_OPEN_URL, url)
+    }
 
     render() {
         if (this.state.failedToLoad) {
@@ -273,9 +286,9 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                 })
             }
         }
-        const filename = path.basename(this.props.filepath, ".json")
-        const syncUrl = this.props.gameCompose["syncUrls"][filename];
-        const hasSyncUrl = syncUrl !== undefined;
+        const relativeFilepath = getSyncKey(this.props.templativeRootDirectoryPath, this.props.gameCompose, this.props.filepath)
+        const syncKey = this.props.gameCompose["syncKeys"][relativeFilepath];
+        const hasSyncKey = syncKey !== undefined;
         return <div className="pieces-viewer">
             <div className="pieces-controls-input-group">
                 <div>
@@ -299,19 +312,10 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                     </button>
                 </div>
                 <div>
-                    <button 
-                        onClick={() => this.setState({ isImportModalOpen: true })} 
-                        disabled={!this.state.hasLoaded || this.state.lockedKey !== undefined}
-                        className="btn btn-outline-primary add-field-button" 
-                        type="button"
-                    >
-                        <DownloadIcon className="add-field-icon"/>
-                        Import CSV / Excel / Sheets
-                    </button>
-                    {hasSyncUrl && (
+                    {hasSyncKey ? (
                         <>
                         <button 
-                            onClick={() => this.syncWithSheet(syncUrl)}
+                            onClick={() => this.syncWithSheet(syncKey)}
                             className="btn btn-outline-primary add-field-button" 
                             type="button"
                         >
@@ -319,7 +323,15 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                             Sync
                         </button>
                         <button 
-                            onClick={() => this.removeSyncUrl()} 
+                            onClick={() => this.openSheet(syncKey)}
+                            className="btn btn-outline-primary add-field-button" 
+                            type="button"
+                        >
+                            <GoToLinkIcon className="add-field-icon"/>
+                            Open Sheet
+                        </button>
+                        <button 
+                            onClick={() => this.removeSyncKey()} 
                             className="btn btn-outline-primary add-field-button" 
                             type="button"
                         >
@@ -327,7 +339,17 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                             Remove Sync
                         </button>
                         </>
-                    )}
+                    ) :
+                    <button 
+                        onClick={() => this.setState({ isImportModalOpen: true })} 
+                        disabled={!this.state.hasLoaded || this.state.lockedKey !== undefined}
+                        className="btn btn-outline-primary add-field-button" 
+                        type="button"
+                    >
+                        <DownloadIcon className="add-field-icon"/>
+                        Import Data
+                    </button>
+                    }
                 </div>
             </div>
             

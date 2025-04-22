@@ -46,7 +46,7 @@ export default function UnifiedCol(params) {
         updateCompositionFilepathCallback,
         
         gameCompose,
-        addGameComposeSyncUrlAsync,
+        addGameComposeSyncKeyAsync,
     } = params;
 
     const { lastViewedContentType, setLastViewedContentType, selectContentTypeForComposition } = useContext(RenderingWorkspaceContext);
@@ -145,7 +145,7 @@ export default function UnifiedCol(params) {
                             componentName={componentName}
                             templativeRootDirectoryPath={templativeRootDirectoryPath}
                             gameCompose={gameCompose}
-                            addGameComposeSyncUrlAsync={addGameComposeSyncUrlAsync}
+                            addGameComposeSyncKeyAsync={addGameComposeSyncKeyAsync}
                         />
                     );
                 default:

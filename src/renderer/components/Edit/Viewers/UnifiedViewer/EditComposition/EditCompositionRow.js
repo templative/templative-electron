@@ -25,7 +25,7 @@ export default function EditCompositionRow(props) {
         updateCompositionFilepathCallback,
         updateViewedFileUsingExplorerAsyncCallback,
         gameCompose,
-        addGameComposeSyncUrlAsync,
+        addGameComposeSyncKeyAsync,
     } = props;
     return (
         <div className="row g-0 unified-viewer">
@@ -57,7 +57,7 @@ export default function EditCompositionRow(props) {
 
                 // Game compose props
                 gameCompose={gameCompose}
-                addGameComposeSyncUrlAsync={addGameComposeSyncUrlAsync}
+                addGameComposeSyncKeyAsync={addGameComposeSyncKeyAsync}
             />
         </div>
     );

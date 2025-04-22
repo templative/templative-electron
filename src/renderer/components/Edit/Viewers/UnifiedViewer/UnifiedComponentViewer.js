@@ -307,7 +307,7 @@ export default class UnifiedComponentViewer extends React.Component {
             updateViewedFileUsingTabAsyncCallback={this.props.updateViewedFileUsingTabAsyncCallback}
             updateCompositionFilepathCallback={this.updateFile}
             gameCompose={this.props.gameCompose}
-            addGameComposeSyncUrlAsync={this.props.addGameComposeSyncUrlAsync}
+            addGameComposeSyncKeyAsync={this.props.addGameComposeSyncKeyAsync}
         />
                 
     }

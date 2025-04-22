@@ -13,6 +13,7 @@ import { OutputDirectoriesProvider } from "./OutputDirectories/OutputDirectories
 import RulesEditor from "./Edit/Viewers/RulesEditor";
 import { trackEvent } from "@aptabase/electron/renderer";
 const { ipcRenderer } = window.require('electron');
+const { getSyncKey } = require("./Edit/Viewers/GamedataViewer/PieceSyncingManager");
 const { channels } = require("../../shared/constants");
 const path = require("path");
 const fs = require("fs/promises");
@@ -204,8 +205,8 @@ export default class EditProjectView extends React.Component {
     loadGameComposeAsync = async () => {
         const filepath = path.join(this.props.templativeRootDirectoryPath, "game-compose.json");
         const content = await TemplativeAccessTools.loadFileContentsAsJson(filepath);
-        if (!content["syncUrls"]) {
-            content["syncUrls"] = {};
+        if (!content["syncKeys"]) {
+            content["syncKeys"] = {};
         }
         this.setState({ gameCompose: content });
     }
@@ -213,12 +214,22 @@ export default class EditProjectView extends React.Component {
         const filepath = path.join(this.props.templativeRootDirectoryPath, "game-compose.json");
         await this.saveFileAsync(filepath, JSON.stringify(gameCompose, null, 2));
     }
-    addGameComposeSyncUrlAsync = async (pieceContentName, syncUrl) => {
+    addGameComposeSyncKeyAsync = async (pieceContentName, syncKey) => {
         const gameCompose = this.state.gameCompose;
-        if (!gameCompose["syncUrls"]) {
-            gameCompose["syncUrls"] = {};
+        if (!gameCompose["syncKeys"]) {
+            gameCompose["syncKeys"] = {};
         }
-        gameCompose["syncUrls"][pieceContentName] = syncUrl;
+
+        if (!syncKey) {
+            delete gameCompose["syncKeys"][pieceContentName]
+        }
+        else {
+            // Extract just the key from the Google Sheets URL
+            const keyMatch = syncKey.match(/key=([^&]+)/);
+            const key = keyMatch ? keyMatch[1] : syncKey;
+            gameCompose["syncKeys"][pieceContentName] = key;
+        }
+        
         await this.saveGameComposeAsync(gameCompose);
     }
     componentDidMount = async () => {
@@ -408,6 +419,25 @@ export default class EditProjectView extends React.Component {
         newComponents[index].disabled = !newComponents[index].disabled;
         await this.saveComponentComposeAsync(newComponents);
     }
+    trackChangedFilepathAsync = async (originalFilepath, newFilepath) => {
+        const gameCompose = this.state.gameCompose;
+        const piecesGamedataDirectory = gameCompose["piecesGamedataDirectory"];
+        const isDescendantOfPiecesGamedata = originalFilepath.startsWith(path.join(this.props.templativeRootDirectoryPath, piecesGamedataDirectory));
+        if (!isDescendantOfPiecesGamedata) {
+            console.log(`${originalFilepath} is not in the piecesGamedataDirectory`)
+            return
+        }
+        const keyOfOriginalFilepath = getSyncKey(this.props.templativeRootDirectoryPath, gameCompose, originalFilepath);
+        if (gameCompose["syncKeys"][keyOfOriginalFilepath] === undefined) {
+            console.log(`${keyOfOriginalFilepath} is not in the syncKeys`)
+            return
+        }
+        const keyOfNewFilepath = getSyncKey(this.props.templativeRootDirectoryPath, gameCompose, newFilepath);
+        console.log(`${keyOfNewFilepath}: ${gameCompose["syncKeys"][keyOfOriginalFilepath]}`)
+        gameCompose["syncKeys"][keyOfNewFilepath] = gameCompose["syncKeys"][keyOfOriginalFilepath];
+        delete gameCompose["syncKeys"][keyOfOriginalFilepath];
+        await this.saveGameComposeAsync(gameCompose);
+    }
     render() {
         return <RenderingWorkspaceProvider key={this.props.templativeRootDirectoryPath}>
             <TopNavbar hasAComponent={this.state.componentCompose.length > 0} topNavbarItems={TOP_NAVBAR_ITEMS} currentRoute={this.state.currentRoute} updateRouteCallback={this.updateRoute}/>
@@ -475,7 +505,8 @@ export default class EditProjectView extends React.Component {
                         duplicateCompositionAsync={this.duplicateCompositionAsync}
                         toggleDisableCompositionAsync={this.toggleDisableCompositionAsync}
                         gameCompose={this.state.gameCompose}
-                        addGameComposeSyncUrlAsync={this.addGameComposeSyncUrlAsync}
+                        addGameComposeSyncKeyAsync={this.addGameComposeSyncKeyAsync}
+                        trackChangedFilepathAsync={this.trackChangedFilepathAsync}
                     />
                     )}
 

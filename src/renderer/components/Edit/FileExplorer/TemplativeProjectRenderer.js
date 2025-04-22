@@ -288,6 +288,7 @@ export default class TemplativeProjectRenderer extends React.Component {
         const possibleCreatedDirectory = path.parse(newFilepath).dir
         await fs.mkdir(possibleCreatedDirectory, {recursive: true})
         await fs.rename(originalFilepath, newFilepath)
+        await this.props.trackChangedFilepathAsync(originalFilepath, newFilepath)
             
         if (this.props.currentFilepath === originalFilepath) {
             await this.props.updateViewedFileUsingExplorerAsyncCallback(this.props.currentFileType, newFilepath)

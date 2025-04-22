@@ -2,6 +2,7 @@ import React from "react";
 import KeyValueInput from "./KeyValueInput"
 import EditableViewerJson from "../EditableViewerJson";
 import "./GamedataViewer.css"
+import FileLoadFailure from "../FileLoadFailure";
 const ignoredControlGamedataKeys = [
     "name"
 ]
