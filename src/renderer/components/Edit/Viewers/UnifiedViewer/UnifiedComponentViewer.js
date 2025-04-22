@@ -88,6 +88,7 @@ export default class UnifiedComponentViewer extends React.Component {
             gameGamedataFilepath,
             componentGamedataFilepath,
             piecesGamedataFilepath,
+            piecesGamedataSyncUrl: componentInfo["piecesGamedataSyncUrl"],
             isStudioExtended: false,
             isGameExtended: false,
             isComponentExtended: false,
@@ -242,6 +243,11 @@ export default class UnifiedComponentViewer extends React.Component {
         this.setState({ showFileModal: false });
     }
     
+    handleUpdatePiecesGamedataSyncUrlAsync = async (filepath) => {
+        const { compositionIndex } = this.state;
+        await this.props.updateComponentComposeFieldAsync(compositionIndex, "piecesGamedataSyncUrl", filepath);
+    }
+    
     handleSaveFileChanges = async (selectedFiles, selectedType, isDisabled) => {
         const { componentInfo, compositionIndex } = this.state;
         
@@ -303,6 +309,8 @@ export default class UnifiedComponentViewer extends React.Component {
             gameGamedataFilepath={this.state.gameGamedataFilepath}
             componentGamedataFilepath={this.state.componentGamedataFilepath}
             piecesGamedataFilepath={this.state.piecesGamedataFilepath}
+            handleUpdatePiecesGamedataSyncUrlAsyncCallback={this.handleUpdatePiecesGamedataSyncUrlAsync}
+            piecesGamedataSyncUrl={this.state.piecesGamedataSyncUrl}
             showPreviewCallback={this.props.showPreviewCallback}
             updateViewedFileUsingTabAsyncCallback={this.props.updateViewedFileUsingTabAsyncCallback}
             updateCompositionFilepathCallback={this.updateFile}

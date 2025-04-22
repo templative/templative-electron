@@ -12,6 +12,8 @@ export default function EditCompositionRow(props) {
         gameGamedataFilepath,
         componentGamedataFilepath,
         piecesGamedataFilepath,
+        piecesGamedataSyncUrl,
+        handleUpdatePiecesGamedataSyncUrlAsyncCallback,
         showPreviewCallback,
         handleFileSave,
         frontArtdataFilepath,
@@ -36,6 +38,8 @@ export default function EditCompositionRow(props) {
                 gameGamedataFilepath={gameGamedataFilepath}
                 componentGamedataFilepath={componentGamedataFilepath}
                 piecesGamedataFilepath={piecesGamedataFilepath}
+                piecesGamedataSyncUrl={piecesGamedataSyncUrl}
+                handleUpdatePiecesGamedataSyncUrlAsyncCallback={handleUpdatePiecesGamedataSyncUrlAsyncCallback}
                 showPreviewCallback={showPreviewCallback}
                 
                 // Artdata props

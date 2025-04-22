@@ -28,6 +28,8 @@ export default function UnifiedCol(params) {
         gameGamedataFilepath,
         componentGamedataFilepath,
         piecesGamedataFilepath,
+        piecesGamedataSyncUrl,
+        handleUpdatePiecesGamedataSyncUrlAsyncCallback,
         showPreviewCallback,
         
         // Artdata props
@@ -140,6 +142,8 @@ export default function UnifiedCol(params) {
                             showPreviewCallback={showPreviewCallback}
                             isPreviewEnabled={true}
                             componentName={componentName}
+                            handleUpdatePiecesGamedataSyncUrlAsyncCallback={handleUpdatePiecesGamedataSyncUrlAsyncCallback}
+                            piecesGamedataSyncUrl={piecesGamedataSyncUrl}
                             templativeRootDirectoryPath={templativeRootDirectoryPath}
                         />
                     );

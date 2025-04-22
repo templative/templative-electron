@@ -3,11 +3,15 @@ import { ipcRenderer } from 'electron';
 import './ImportCsvModal.css';
 import path from 'path';
 import { channels } from '../../../../../shared/constants';
+const { google } = require('googleapis');
+const sheets = google.sheets('v4');
+
 const ImportCsvModal = ({ filenameWeAreOverwriting, isOpen, onClose, handleFileDropAsync }) => {
     if (!isOpen) return null;
 
     const [isDragging, setIsDragging] = useState(false);
     const [selectedFilePath, setSelectedFilePath] = useState(null);
+    const [googleSheetUrl, setGoogleSheetUrl] = useState('');
 
     const checkFile = async (filePath) => {
         if (filePath === undefined) {
@@ -64,12 +68,28 @@ const ImportCsvModal = ({ filenameWeAreOverwriting, isOpen, onClose, handleFileD
             handleFileDropAsync(selectedFilePath);
         }
     }
-
+    
+    // Url for entire sheet is https://docs.google.com/spreadsheets/d/1x3uniNmn1bsay_q94PQq0dIwbNfD9RbGUOVcDfolaNY/edit?gid=373228906#gid=373228906
+    // Url for share link is https://docs.google.com/spreadsheets/d/1x3uniNmn1bsay_q94PQq0dIwbNfD9RbGUOVcDfolaNY/pub?output=csv
+    // https://spreadsheets.google.com/feeds/download/spreadsheets/Export?key=1x3uniNmn1bsay_q94PQq0dIwbNfD9RbGUOVcDfolaNY&exportFormat=csv
+    const confirmImportFromGoogleSheet = async () => {
+        if (googleSheetUrl && window.confirm("Are you sure you want to import this file? This will overwrite everything in " + filenameWeAreOverwriting + "!")) {
+            const documentId = googleSheetUrl.split('/d/')[1].split('/')[0];
+            await handleFileDropAsync(`https://spreadsheets.google.com/feeds/download/spreadsheets/Export?key=${documentId}&exportFormat=csv`);
+        }
+    }
+    
     return (
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                 <button className="close-button" onClick={onClose}>×</button>
                 <h2>Import and Replace your Pieces Content from a csv or xlsx File</h2>
+                <p>Import from a Google Sheet</p>
+                <div className="input-group">
+                    <span className="input-group-text soft-label">Google Sheets Share Url</span>
+                    <input type="text" className="form-control value-field no-left-border" placeholder="https://docs.google.com/spreadsheets/d/1234567890/edit#gid=0" value={googleSheetUrl} onChange={(e) => setGoogleSheetUrl(e.target.value)} />
+                    <button disabled={googleSheetUrl === ''} className="btn btn-primary" onClick={confirmImportFromGoogleSheet}>Import</button>
+                </div>
                 <div 
                     className={`drop-area ${isDragging ? 'highlight' : ''}`} 
                     onDragOver={(e) => e.preventDefault()} 

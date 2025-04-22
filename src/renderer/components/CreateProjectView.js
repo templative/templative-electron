@@ -119,7 +119,7 @@ const CreateProjectView = () => {
             <h1>Create a Templative Project</h1>
             {error && <div className="alert alert-danger">{error}</div>}
             <div className="input-group project-name-input-group">
-                <span className="input-group-text input-group-text soft-label">Name</span>
+                <span className="input-group-text soft-label">Name</span>
                 <input type="text" className="form-control value-field no-left-border"
                     onChange={(event)=> setProjectName(event.target.value)} 
                     title="Project Name"
@@ -128,7 +128,7 @@ const CreateProjectView = () => {
                     />
             </div>
             <div className="input-group location-input-group">
-                <span className="input-group-text input-group-text soft-label">Project Location</span>
+                <span className="input-group-text soft-label">Project Location</span>
                 <input type="text" className="form-control value-field no-left-border project-location-input"
                     onChange={(event)=> setProjectLocation(event.target.value)} 
                     title="Project Location"

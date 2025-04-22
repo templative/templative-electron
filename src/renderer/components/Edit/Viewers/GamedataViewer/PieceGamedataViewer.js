@@ -149,27 +149,56 @@ export default class PieceGamedataViewer extends EditableViewerJson {
         });
     }
 
+    syncWithSheet = async () => {
+        if (!this.props.piecesGamedataSyncUrl) {
+            return
+        }
+        await this.handleFileDropAsync(this.props.piecesGamedataSyncUrl)
+    }
     
+    loadCsvFromSheet = async (url) => {
+    
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Failed to fetch data from Google Sheets');
+        }
+
+        return { fileContents: await response.text(), fileExtension: ".csv" }
+        
+    }
+    
+    loadFileContentsFromPath = async (filepath) => {
+        if (filepath.includes("google.com")) {
+            return await this.loadCsvFromSheet(filepath)
+        }
+        
+        const fileExtension = path.extname(filepath).toLowerCase();
+        const encoding = fileExtension === '.xlsx' ? null : 'utf8';
+        const fileContents = await fsPromises.readFile(filepath, encoding);
+        return { fileContents, fileExtension }
+    }
     
     handleFileDropAsync = async (filepath) => {
         console.log('File dropped:', filepath);
         
-        const fileExtension = path.extname(filepath).toLowerCase();
-        let data = [];
+        if (filepath.includes("google.com") && this.props.piecesGamedataSyncUrl !== filepath && this.props.handleUpdatePiecesGamedataSyncUrlAsyncCallback !== undefined) {
+            return await this.props.handleUpdatePiecesGamedataSyncUrlAsyncCallback(filepath)
+        }
         
-        var fileContents;
+        var fileContents, fileExtension;
         try {
-            // Read file as a binary buffer for XLSX files
-            const encoding = fileExtension === '.xlsx' ? null : 'utf8';
-            fileContents = await fsPromises.readFile(filepath, encoding);
+            ({fileContents, fileExtension} = await this.loadFileContentsFromPath(filepath))
         } catch (error) {
             if (error.code === 'ENOENT') {
                 console.error('File does not exist:', filepath);
+                window.confirm("File does not exist: " + filepath);
                 return;
             }
-            console.error('Error reading file:', error);
+            console.error('Error loading file:', error);
+            window.confirm("Error loading file: " + error.message);
             return;
         }
+        let data = [];
         
         if (fileExtension === '.csv') {
             // Parse CSV file
@@ -182,14 +211,7 @@ export default class PieceGamedataViewer extends EditableViewerJson {
             const workbook = XLSX.read(fileContents, { type: 'buffer' });
             const firstSheetName = workbook.SheetNames[0];
             const worksheet = workbook.Sheets[firstSheetName];
-            
-            // Log the worksheet to check its content
-            console.log('Worksheet:', worksheet);
-            
             data = XLSX.utils.sheet_to_json(worksheet, { defval: "" });
-            
-            // Log the data to verify the conversion
-            console.log('Parsed Data:', data);
         } else {
             console.error('Unsupported file type:', fileExtension);
             return;
@@ -204,7 +226,6 @@ export default class PieceGamedataViewer extends EditableViewerJson {
             });
             return completeEntry;
         });
-        console.log(data);
 
         this.setState({ 
             content: data,
@@ -282,15 +303,17 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                         <DownloadIcon className="add-field-icon"/>
                         Import CSV / Excel / Sheets
                     </button>
-                    {/* <button 
-                        // onClick={() => this.setState({ isImportModalOpen: true })} 
-                        disabled={!this.state.hasLoaded || this.state.lockedKey !== undefined}
-                        className="btn btn-outline-primary add-field-button" 
-                        type="button"
-                    >
-                        <SyncIcon className="add-field-icon"/>
-                        Sync with Sheet
-                    </button> */}
+                    {this.props.piecesGamedataSyncUrl && (
+                        <button 
+                            onClick={() => this.syncWithSheet()} 
+                            disabled={this.state.lockedKey !== undefined}
+                            className="btn btn-outline-primary add-field-button" 
+                            type="button"
+                        >
+                            <SyncIcon className="add-field-icon"/>
+                            Sync
+                        </button>
+                    )}
                 </div>
             </div>
             
