@@ -76,8 +76,10 @@ async function processGlyph(iconGlyph, inputDirectoryPath, svgDomCache) {
     }
     // console.log(`Processing glyph ${glyphName} from font ${fontFamily} unicode: ${unicode} puaChar: ${puaChar}`);
     
-    const textNode = svgDom.window.document.createTextNode(puaChar);
-    iconGlyph.parentNode.replaceChild(textNode, iconGlyph);
+    const puaElement = svgDom.window.document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
+    puaElement.setAttribute('style', `font-family:${fontFamily};`);
+    puaElement.textContent = puaChar;
+    iconGlyph.parentNode.replaceChild(puaElement, iconGlyph);
 }
 module.exports = {
     processIconGlyphsAsync
