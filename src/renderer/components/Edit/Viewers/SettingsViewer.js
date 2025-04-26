@@ -2,11 +2,49 @@ import React from "react";
 import EditableViewerJson from "./EditableViewerJson";
 import "./SettingsViewer.css"
 
+const settingsFile = {
+    isGitEnabled: { 
+        title: "Is Git Enabled?",
+        section: "Collaboration", 
+        defaultValue: false, 
+        type: "boolean", 
+        description: "If true, Templative will show a Git area in the file explorer. This is useful if you're using Templative as part of a larger development workflow. This is disabled due to unsafe behavior.",
+        isDisabled: true,
+        requiresRestart: false,
+        
+    },
+    isCacheIgnored: { 
+        title: "Is the Rendering Cache Ignored?", 
+        section: "Rendering",
+        defaultValue: false, 
+        type: "boolean", 
+        description: "If true, Templative will always re-render your art files, even if they haven't changed. This is useful if you're changing font files, for example, as Templative will not detect that kind of change.",
+        isDisabled: false,
+        requiresRestart: false,
+    },
+    isOnChangeRenderingDisabled: {
+        title: "Is On-Change Rendering Disabled?",
+        section: "Rendering",
+        defaultValue: false,
+        type: "boolean",
+        description: "If true, Templative will not re-render components as they change. This is useful if the background rendering is taxing your computer, but it means creating a render will be slower. Changing this setting won't take effect until you restart Templative.",
+        isDisabled: false,
+        requiresRestart: true,
+    }
+}
+
 export default class SettingsViewer extends EditableViewerJson {       
     
-    updateValue(key, newValue) {
-        const newGamedataFileContents = { ...this.state.content }
+    updateBooleanValue(key, newValue, requiresRestart) {
+        this.updateValue(key, newValue === "true", requiresRestart);
+    }
+    
+    updateValue(key, newValue, requiresRestart) {
+        const newGamedataFileContents = Object.assign({}, this.state.content)
         newGamedataFileContents[key] = newValue
+        if (requiresRestart) {
+            window.confirm("This setting will take effect after you restart Templative.");
+        }
         this.setState({
             content: newGamedataFileContents
         }, async () => this.autosave())
@@ -20,15 +58,41 @@ export default class SettingsViewer extends EditableViewerJson {
         if (!this.state.hasLoaded || this.state.content === undefined) {
             return null;
         }       
-        
-        return <React.Fragment><div className="input-group input-group-sm mb-3" data-bs-theme="dark">
-                <span className="input-group-text soft-label">Is Git Enabled?</span>
-                    
-                <select value={this.state.content["isGitEnabled"] || "false"} onChange={(event)=>this.updateValue("isGitEnabled", event.target.value)} className="form-select scope-select no-left-border">
-                    <option value="true">True</option>
-                    <option value="false">False</option>
-                </select>
+
+        const settingsSections = new Set();
+        for (const key in settingsFile) {
+            // console.log(key, settingsFile[key]);
+            settingsSections.add(settingsFile[key].section);
+        }
+        const settingsSectionsArray = Array.from(settingsSections);
+        console.log(settingsSectionsArray);
+        return <div className="settings-viewer">
+            <div className="settings-viewer-container">
+                {settingsSectionsArray.map((section) => {
+                    const relevantSettings = Object.keys(settingsFile).filter((key) => settingsFile[key].section === section);
+                    return <div className="settings-section-container">
+                        <p className="settings-section-title">{section}</p>
+                        {relevantSettings.map((key) => (
+                            <div key={key}>
+                                <p className="settings-viewer-title">{settingsFile[key].title}</p>
+                                <p className="settings-viewer-description">{settingsFile[key].description}</p>
+                                <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
+                                    <select 
+                                        value={(this.state.content[key] || settingsFile[key].defaultValue).toString()} 
+                                        onChange={(event)=>this.updateBooleanValue(key, event.target.value, settingsFile[key].requiresRestart)} 
+                                        className={`form-select scope-select ${settingsFile[key].isDisabled ? "disabled" : ""}`}
+                                        disabled={settingsFile[key].isDisabled}
+                                    >
+                                        <option value="true">True</option>
+                                        <option value="false">False</option>
+                                    </select>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                })}
+                
             </div>
-        </React.Fragment>
+        </div>
     }
 }

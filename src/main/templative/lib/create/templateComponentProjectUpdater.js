@@ -134,7 +134,7 @@ function resource_path(relative_path) {
     }
 }
 
-async function createArtfile(artTemplatesDirectoryPath, name, type, artDataTypeName) {
+async function createTemplateArtfile(artTemplatesDirectoryPath, name, type, artDataTypeName) {
     const componentTemplatesDirectoryPath = await getComponentTemplatesDirectoryPath();
     
     const potentialPaths = [
@@ -205,7 +205,7 @@ async function createArtFiles(artTemplatesDirectoryPath, name, type, artDataType
     try {
         const artFiles = [];
         for (const artDataTypeName of artDataTypeNames) {
-            await createArtfile(artTemplatesDirectoryPath, name, type, artDataTypeName);
+            await createTemplateArtfile(artTemplatesDirectoryPath, name, type, artDataTypeName);
         }
         return artFiles;
     }

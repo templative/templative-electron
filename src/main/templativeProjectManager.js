@@ -49,6 +49,13 @@ async function folderExists(directory) {
     }
 }
 
+const DEFAULT_SETTINGS = {
+    lastProjectDirectory: null,
+    isOnChangeRenderingDisabled: false,
+    isCacheIgnored: false,
+    isGitEnabled: false
+}
+
 async function readOrCreateSettingsFile() {
     const templativeSettingsDirectoryPath = path.join(os.homedir(), "Documents/Templative");
     try {
@@ -57,15 +64,20 @@ async function readOrCreateSettingsFile() {
         }
         const templativeSettingsPath = path.join(templativeSettingsDirectoryPath, "settings.json");
         if (!await folderExists(templativeSettingsPath)) {
-            const defaultSettings = { lastProjectDirectory: null };
-            await fsPromises.writeFile(templativeSettingsPath, JSON.stringify(defaultSettings, null, 4), 'utf-8');
-            return defaultSettings;
+            await fsPromises.writeFile(templativeSettingsPath, JSON.stringify(DEFAULT_SETTINGS, null, 4), 'utf-8');
+            return DEFAULT_SETTINGS;
         } 
         const fileContent = await fsPromises.readFile(templativeSettingsPath, 'utf8');
-        return fileContent ? JSON.parse(fileContent) : { lastProjectDirectory: null };
+        const settings = JSON.parse(fileContent);
+        for (const key in DEFAULT_SETTINGS) {
+            if (settings[key] === undefined) {
+                settings[key] = DEFAULT_SETTINGS[key];
+            }
+        }
+        return settings;
     } catch (error) {
         console.error('Error reading settings file:', error);
-        return { lastProjectDirectory: null };
+        return DEFAULT_SETTINGS;
     }
 }
 
@@ -121,7 +133,15 @@ async function setCurrentTemplativeRootDirectory(event, newTemplativeRootDirecto
         mainProcess.currentTemplativeRootDirectory = newTemplativeRootDirectory;
         
         // Begin watching the new project for file changes
-        await startWatchingProjectForFileChangesToPreProduceCache(newTemplativeRootDirectory);
+        var settings = await readOrCreateSettingsFile();
+        if (!settings.isOnChangeRenderingDisabled) {
+            console.log("Starting to watch for file changes to pre-produce the cache");
+            await startWatchingProjectForFileChangesToPreProduceCache(newTemplativeRootDirectory);
+        }
+        else {
+            console.log("Not watching for file changes to pre-produce the cache");
+        }
+        
         
         // Update window title
         updateWindowTitle(newTemplativeRootDirectory);
@@ -181,5 +201,6 @@ module.exports = {
     getCurrentTemplativeRootDirectory,
     clearCurrentTemplativeRootDirectory,
     loadLastProject,
-    checkIfFolderIsValidTemplativeProject
+    checkIfFolderIsValidTemplativeProject,
+    readOrCreateSettingsFile
 };

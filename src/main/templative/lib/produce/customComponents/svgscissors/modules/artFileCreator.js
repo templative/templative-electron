@@ -10,7 +10,7 @@ const { DOMParser, XMLSerializer } = require('@xmldom/xmldom');
  * @param {string} outputDirectory - Output directory
  * @returns {Promise<string>} - Path to output file
  */
-async function createArtfile(contents, artFileOutputName, imageSizePixels, outputDirectory) {
+async function outputSvgArtFile(contents, artFileOutputName, imageSizePixels, outputDirectory) {
   if (contents === null) {
     throw new Error("Contents cannot be null");
   }
@@ -45,5 +45,5 @@ async function createArtfile(contents, artFileOutputName, imageSizePixels, outpu
 
 
 module.exports = {
-  createArtfile
+  outputSvgArtFile
 }; 

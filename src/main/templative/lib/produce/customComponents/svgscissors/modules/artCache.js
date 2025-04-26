@@ -7,6 +7,10 @@ const { getScopedValue } = require('../artdataProcessing/valueResolver');
 
 class ArtCache {
     constructor() {
+        this.cacheDir = ArtCache.getCacheDir();
+        fsExtra.ensureDirSync(this.cacheDir);
+    }
+    static getCacheDir() {
         let userDataPath;
         if (typeof electron !== 'undefined' && (electron.app || electron.remote?.app)) {
             userDataPath = (electron.app || electron.remote.app).getPath('userData');
@@ -14,8 +18,7 @@ class ArtCache {
             userDataPath = path.join(process.cwd(), '.templativeCache');
             fsExtra.ensureDirSync(userDataPath)
         }
-        this.cacheDir = path.join(userDataPath, 'art-cache');
-        fsExtra.ensureDirSync(this.cacheDir);
+        return path.join(userDataPath, 'art-cache');
     }
     async createInputHash(inputs) {
         const hash = createHash('sha256');
@@ -36,7 +39,7 @@ class ArtCache {
         var hashableProductionProperties = Object.assign({}, inputs.productionProperties);
         delete hashableProductionProperties.inputDirectoryPath;
         delete hashableProductionProperties.outputDirectoryPath;
-        delete hashableProductionProperties.isCacheOnly;
+        delete hashableProductionProperties.renderMode;
         hash.update(JSON.stringify(hashableProductionProperties || {}));
 
         hash.update(inputs.templateContent || '');

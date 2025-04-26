@@ -15,6 +15,7 @@ const GameData = require('../manage/models/gamedata').GameData;
 const ComponentComposition = require('../manage/models/composition');
 const FontCache = require('./customComponents/svgscissors/fontCache').FontCache;
 const { SvgFileCache } = require('./customComponents/svgscissors/modules/svgFileCache');
+const { RENDER_MODE } = require('../manage/models/produceProperties');
 
 async function getPreviewsPath() {
     let base_path;
@@ -93,7 +94,7 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     console.log(`Wrote previews to ${outputDirectoryPath}`);
 }
 
-async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage, isClipped=false, isCacheOnly=false) {
+async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage, isClipped=false, renderMode=RENDER_MODE.RENDER_EXPORT_USING_CACHE) {
     const startTime = performance.now();
     
     if (!gameRootDirectoryPath) {
@@ -118,7 +119,7 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
     console.log(`Producing ${path.basename(gameRootDirectoryPath)}.`);
     
     var outputDirectoryPath = null;
-    if (!isCacheOnly) {
+    if (renderMode !== RENDER_MODE.RENDER_TO_CACHE) {
         const timestamp = new Date().toISOString().replace(/T/, '_').replace(/\..+/, '').replace(/:/g, '-'); 
         const uniqueGameName = `${gameDataBlob['name']}_${gameDataBlob['versionName']}_${gameDataBlob['version']}_${timestamp}${componentFilterString}`.replace(/\s/g, "");
         
@@ -139,7 +140,7 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
     
 
     const gameData = new GameData(studioDataBlob, gameDataBlob);
-    const produceProperties = new ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage, isClipped, isCacheOnly);
+    const produceProperties = new ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage, isClipped, renderMode);
     
     const fontCache = new FontCache();
     const svgFileCache = new SvgFileCache();
@@ -229,7 +230,7 @@ async function produceGameComponent(produceProperties, gamedata, componentCompos
     const componentTypeTokens = componentType.split("_");
     const isStockComponent = componentTypeTokens[0].toUpperCase() === "STOCK";
 
-    if (isStockComponent && produceProperties.outputDirectoryPath !== null && !produceProperties.isCacheOnly) {
+    if (isStockComponent && produceProperties.outputDirectoryPath !== null && produceProperties.renderMode !== RENDER_MODE.RENDER_TO_CACHE) {
         await produceStockComponent(componentComposition.componentCompose, produceProperties.outputDirectoryPath);
         return;
     }

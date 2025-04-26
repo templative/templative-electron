@@ -5,7 +5,7 @@ const { COMPONENT_INFO } = require('../../../../../../shared/componentInfo.js');
 const { convertSvgContentToPng } = require('./modules/fileConversion/svgConverter.js');
 
 const { addNewlines } = require("./artdataProcessing/newlineInserter.js");
-const { createArtfile} = require("./modules/artFileCreator.js");
+const { outputSvgArtFile} = require("./modules/artFileCreator.js");
 const { addOverlays, collectOverlayFiles} = require("./artdataProcessing/overlayHandler.js");
 const { textReplaceInFile} = require("./artdataProcessing/textReplacer.js");
 const { updateStylesInFile} = require("./artdataProcessing/styleUpdater.js");
@@ -14,6 +14,7 @@ const { getComponentTemplatesDirectoryPath } = require("../../../componentTempla
 const { preprocessSvgTextAsync } = require('./modules/fileConversion/textWrapping/index.js');
 const { SvgFileCache } = require('./modules/svgFileCache.js');
 const { ArtCache } = require('./modules/artCache.js');
+const { RENDER_MODE } = require('../../../manage/models/produceProperties');
 
 // Helper function to create a unique hash for a piece
 function createUniqueBackHashForPiece(pieceSpecificBackArtDataSources, pieceGamedata) {
@@ -66,7 +67,7 @@ async function createArtFilesForComponent(compositions, componentArtdata, unique
 
     // Create output directory once at the beginning
 
-    if (!produceProperties.isCacheOnly) {
+    if (produceProperties.renderMode !== RENDER_MODE.RENDER_TO_CACHE) {
         await fsExtra.ensureDir(componentBackOutputDirectory);
     }
 
@@ -111,7 +112,6 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       console.log(`!!! Missing artdata ${gamedata.componentDataBlob["name"]}`);
       return;
     }
-    const isCachingWithoutOutput = productionProperties.isCacheOnly || componentBackOutputDirectory === null;
     const artFilename = `${artdata["templateFilename"]}.svg`;
     const artFilepath = path.normalize(path.join(productionProperties.inputDirectoryPath, templateFilesDirectory, artFilename));
 
@@ -156,19 +156,26 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
 
       // Check cache
       const cachedFiles = await artCache.getCachedFiles(inputHash);
-      var absoluteOutputDirectory = path.normalize(path.resolve(componentBackOutputDirectory || artCache.cacheDir));
-      var absoluteArtFileOutputFilepath = path.join(absoluteOutputDirectory, `${artFileOutputName}.png`);
-
-      if (cachedFiles) {
-        if (!isCachingWithoutOutput) {
-            const absoluteArtFileOutputSvgFilepath = path.join(absoluteOutputDirectory, `${artFileOutputName}.svg`);
-            console.log(`Using cached version of ${pieceName}`);
-            await fsExtra.copy(cachedFiles.svgPath, absoluteArtFileOutputSvgFilepath);
-            await fsExtra.copy(cachedFiles.pngPath, absoluteArtFileOutputFilepath);
+      const hasCachedFiles = cachedFiles !== null;
+      
+      if (hasCachedFiles) {
+        if (productionProperties.renderMode === RENDER_MODE.RENDER_TO_CACHE || componentBackOutputDirectory === null) {
+            // We already have these files cached, and we are not export them
+            return;
         }
-        return;
+        const hasOutputDirectory = componentBackOutputDirectory !== null;
+        if(productionProperties.renderMode !== RENDER_MODE.RENDER_EXPORT_WITHOUT_CACHE && hasOutputDirectory) {
+            console.log(`Using cached version of ${pieceName}`);
+            var absoluteOutputDirectoryPath = path.normalize(path.resolve(componentBackOutputDirectory));
+            var outputArtFileOutputFilepath = path.join(absoluteOutputDirectoryPath, `${artFileOutputName}.png`);
+            var outputArtFileOutputSvgFilepath = path.join(absoluteOutputDirectoryPath, `${artFileOutputName}.svg`);
+            await fsExtra.copy(cachedFiles.svgPath, outputArtFileOutputSvgFilepath);
+            await fsExtra.copy(cachedFiles.pngPath, outputArtFileOutputFilepath);
+            return;
+        }
       }
-
+      var absoluteEndResultDirectoryPath = path.normalize(path.resolve(componentBackOutputDirectory || artCache.cacheDir));
+      
       // If not cached, generate new files
       let contents = templateContent;
       contents = await addOverlays(contents, artdata["overlays"], compositions, gamedata, productionProperties, svgFileCache);
@@ -189,10 +196,11 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
           }
       }
       // Create and cache the files
-      await createArtfile(contents, artFileOutputName, imageSizePixels, absoluteOutputDirectory);
-      await convertSvgContentToPng(contents, imageSizePixels, absoluteArtFileOutputFilepath);
+      await outputSvgArtFile(contents, artFileOutputName, imageSizePixels, absoluteEndResultDirectoryPath);
+      var absolutePngFilepath = path.join(absoluteEndResultDirectoryPath, `${artFileOutputName}.png`);
+      await convertSvgContentToPng(contents, imageSizePixels, absolutePngFilepath);
 
-      await artCache.cacheFiles(inputHash, contents, absoluteArtFileOutputFilepath);
+      await artCache.cacheFiles(inputHash, contents, absolutePngFilepath);
       console.log(`Produced ${pieceName}`);
     } catch (error) {
       console.error(`Error producing ${pieceName}: ${error.message}`);
@@ -201,4 +209,4 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
 }
 
 
-module.exports = { createArtFileForPiece, createArtFilesForComponent, createArtFileOfPiece };
+module.exports = { createArtFileForPiece, createArtFilesForComponent };
