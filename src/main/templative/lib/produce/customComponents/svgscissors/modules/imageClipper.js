@@ -1,5 +1,6 @@
 const { loadSvg } = require('../../../../distribute/simulator/imageProcessing/imageUtils');
 const { JSDOM } = require('jsdom');
+const path = require('path');
 const { SvgFileCache } = require('./svgFileCache.js');
 const CLIPPING_ELEMENT_ID = "clipping";
 

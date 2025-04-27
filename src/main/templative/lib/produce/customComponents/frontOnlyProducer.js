@@ -35,6 +35,12 @@ class FrontOnlyProducer {
             console.log(`Skipping ${componentComposition.componentCompose["name"]} component due to missing pieces gamedata.`);
             return;
         }
+        for (const piece of piecesDataBlob) {
+            if (!("quantity" in piece)) {
+                console.log(`!!! ${componentComposition.componentCompose["name"]} has a piece with no quantity. Make sure to define the 'quantity' field for each piece.`);
+                return;
+            }
+        }
 
         await FrontOnlyProducer.createComponentPieces(produceProperties, componentComposition, componentData, componentArtdata, piecesDataBlob, fontCache, svgFileCache);
     }

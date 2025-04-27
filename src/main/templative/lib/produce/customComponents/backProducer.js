@@ -77,8 +77,13 @@ class BackProducer {
             const uniqueComponentBackData = uniqueComponentBackDatas[key];
             let needsToProduceAPiece = false;
             for (const piece of piecesDataBlob) {
+                console.log(piece);
                 const pieceHash = BackProducer.createUniqueBackHashForPiece(sourcedVariableNamesSpecificToPieceOnBackArtData, piece);
-                if (pieceHash === uniqueComponentBackData.pieceUniqueBackHash && "quantity" in piece && piece["quantity"] > 0) {
+                if (!("quantity" in piece)) {
+                    console.log(`!!! ${componentComposition.componentCompose["name"]} has a piece with no quantity. Make sure to define the 'quantity' field for each piece.`);
+                    return;
+                }
+                if (pieceHash === uniqueComponentBackData.pieceUniqueBackHash) {
                     needsToProduceAPiece = true;
                     break;
                 }
@@ -92,7 +97,7 @@ class BackProducer {
                     }
                     skippedPieces.push(piece["name"]);
                 }
-                // console.log(`Skipping ${componentComposition.componentCompose['name']}${uniqueComponentBackData.pieceUniqueBackHash} due to not have pieces to make. Skipped the following peices: ${skippedPieces}`);
+                console.log(`Skipping ${componentComposition.componentCompose['name']}${uniqueComponentBackData.pieceUniqueBackHash} due to not have pieces to make. Skipped the following peices: ${skippedPieces}`);
                 continue;
             }
             await BackProducer.createComponentBackDataPieces(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, componentComposition, produceProperties, componentArtdata, piecesDataBlob, fontCache, svgFileCache);
