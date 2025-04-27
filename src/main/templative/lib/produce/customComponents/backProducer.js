@@ -77,7 +77,7 @@ class BackProducer {
             const uniqueComponentBackData = uniqueComponentBackDatas[key];
             let needsToProduceAPiece = false;
             for (const piece of piecesDataBlob) {
-                console.log(piece);
+                // console.log(piece);
                 const pieceHash = BackProducer.createUniqueBackHashForPiece(sourcedVariableNamesSpecificToPieceOnBackArtData, piece);
                 if (!("quantity" in piece)) {
                     console.log(`!!! ${componentComposition.componentCompose["name"]} has a piece with no quantity. Make sure to define the 'quantity' field for each piece.`);
