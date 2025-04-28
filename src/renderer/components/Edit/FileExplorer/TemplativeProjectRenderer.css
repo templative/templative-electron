@@ -103,4 +103,14 @@
     text-align: center;
 }
 
-
+.composition-item-type {
+    color: var(--color-text-muted);
+}
+.stock-composition-item-rename-container {
+    width: 100%;
+    height: 100%;
+}
+.stock-composition-item-rename-input {
+    height: 100%;
+    width: 100%;
+}

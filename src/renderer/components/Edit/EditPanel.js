@@ -17,6 +17,7 @@ import "./EditPanel.css"
 import "./EditPanelTabs.css"
 import StudioGamedataViewer from "./Viewers/GamedataViewer/StudioGamedataViewer";
 import UnifiedComponentViewer from "./Viewers/UnifiedViewer/UnifiedComponentViewer";
+import StockComponentsViewer from "./Viewers/UnifiedStockViewer/StockComponentsViewer";
 import { RenderingWorkspaceContext } from '../Render/RenderingWorkspaceProvider';
 
 export default class EditPanel extends React.Component { 
@@ -91,6 +92,10 @@ export default class EditPanel extends React.Component {
                         componentCompose={this.props.componentCompose}
                         saveComponentComposeAsync={this.props.saveComponentComposeAsync}
                         deleteCompositionAsync={this.props.deleteCompositionAsync}
+                        deleteStockCompositionsWithNameAsync={this.props.deleteStockCompositionsWithNameAsync}
+                        toggleDisableStockCompositionAsync={this.props.toggleDisableStockCompositionAsync}
+                        duplicateStockCompositionAsync={this.props.duplicateStockCompositionAsync}
+                        renameStockCompositionAsync={this.props.renameStockCompositionAsync}
                         duplicateCompositionAsync={this.props.duplicateCompositionAsync}
                         toggleDisableCompositionAsync={this.props.toggleDisableCompositionAsync}
                         updateComponentComposeFieldAsync={this.props.updateComponentComposeFieldAsync}
@@ -169,7 +174,7 @@ export default class EditPanel extends React.Component {
                         {this.props.currentFileType === "GAME_GAMEDATA" &&
                             <GameGamedataViewer templativeRootDirectoryPath={this.props.templativeRootDirectoryPath} filepath={this.props.currentFilepath} saveFileAsyncCallback={this.props.saveFileAsyncCallback}/>
                         }
-                        {this.props.currentFileType === "UNIFIED_COMPONENT" && 
+                        {(this.props.currentFileType === "UNIFIED_COMPONENT") && 
                             <UnifiedComponentViewer 
                                 componentCompose={this.props.componentCompose}
                                 saveComponentComposeAsync={this.props.saveComponentComposeAsync}
@@ -185,6 +190,14 @@ export default class EditPanel extends React.Component {
                                 updateViewedFileUsingTabAsyncCallback={this.props.updateViewedFileUsingTabAsyncCallback}
                                 gameCompose={this.props.gameCompose}
                                 addGameComposeSyncKeyAsync={this.props.addGameComposeSyncKeyAsync}
+                            />
+                        }
+                        {(this.props.currentFileType === "UNIFIED_STOCK") && 
+                            <StockComponentsViewer 
+                                componentCompose={this.props.componentCompose}
+                                componentName={this.props.currentFilepath.split("#")[1]}
+                                updateStockComponentsWithNameAsync={this.props.updateStockComponentsWithNameAsync}
+                                changeStockComponentQuantityByTypeAsync={this.props.changeStockComponentQuantityByTypeAsync}
                             />
                         }
                         {this.props.currentFileType === undefined && 

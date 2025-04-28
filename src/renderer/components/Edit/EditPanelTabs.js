@@ -8,10 +8,10 @@ export default class EditPanelTabs extends React.Component {
     render() {
         return <div className="nav nav-tabs d-flex flex-nowrap edit-panel-tabs">
             {this.props.tabbedFiles.map((tabbedFile, index) => {
-                if (tabbedFile.filetype === "UNIFIED_COMPONENT") {
+                if (tabbedFile.filetype === "UNIFIED_COMPONENT" || tabbedFile.filetype === "UNIFIED_STOCK") {
                     return <UnifiedComponentTab 
                         isItalics={this.props.italicsTabFilepath === tabbedFile.filepath}
-                        key={tabbedFile.filepath} 
+                        key={tabbedFile.filepath + "_" + index} 
                         index={index}
                         closeAllTabsAsyncCallback={this.props.closeAllTabsAsyncCallback}
                         closeTabAtIndexAsyncCallback={this.props.closeTabAtIndexAsyncCallback}
@@ -25,7 +25,7 @@ export default class EditPanelTabs extends React.Component {
                 }
                 return <EditPanelTab 
                     isItalics={this.props.italicsTabFilepath === tabbedFile.filepath}
-                    key={tabbedFile.filepath} 
+                    key={tabbedFile.filepath + "_" + index} 
                     index={index}
                     closeAllTabsAsyncCallback={this.props.closeAllTabsAsyncCallback}
                     closeTabAtIndexAsyncCallback={this.props.closeTabAtIndexAsyncCallback}

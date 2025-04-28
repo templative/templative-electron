@@ -157,3 +157,9 @@
     padding-bottom: 8px !important;
     color: var(--color-text) !important;
 }
+.stock-components-viewer {
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}

@@ -1,20 +1,60 @@
 import React, { useState } from "react";
 import ResourceHeader from "./ContentFiles/ResourceHeader";
 import stockIcon from "../Icons/stockIcon.svg?react"
-import CompositionItem from "./CompositionItem";
+import StockCompositionItem from "./StockCompositionItem";
 const path = require("path")
+import { getInvertedCategories } from "../../../../shared/componentCategories";
 
-const StockItemsList = (props) => {
+const StockItemsList = ({
+    componentCompose,
+    templativeRootDirectoryPath,
+    currentFilepath,
+    updateViewedFileUsingExplorerAsyncCallback,
+    deleteStockCompositionsWithNameAsync,
+    toggleDisableStockCompositionAsync,
+    duplicateStockCompositionAsync,
+    renameStockCompositionAsync 
+}) => {
     const [isExtended, setIsExtended] = useState(true);
     
     const toggleExtendedAsync = () => {
         setIsExtended(prev => !prev);
     }
-
-    const stockItems = props.componentCompose
+    
+    const stockItems = componentCompose
         .map((composition, index) => ({ ...composition, originalIndex: index }))
         .filter(composition => composition.type.includes("STOCK_"));
     
+    var invertedCategories = getInvertedCategories()
+    var uniqueParentageComponents = {}
+    stockItems.forEach(stockItem => {
+        const stockLessComponentType = stockItem.type.replace("STOCK_", "")
+        const parentage = invertedCategories[stockLessComponentType]
+        if (!parentage) {
+            console.log(`${stockItem.type} has no parentage`)
+            return
+        }
+        const collectedType = parentage.slice(2).slice(0,-1).join(" ")
+        const uniqueIdentifier = `${stockItem.name} ${collectedType}` 
+        console.log(uniqueIdentifier)
+        
+        if (uniqueIdentifier in uniqueParentageComponents) {
+            uniqueParentageComponents[uniqueIdentifier].quantity += stockItem.quantity
+        }
+        else {
+            uniqueParentageComponents[uniqueIdentifier] = {
+                name: stockItem.name,
+                type: stockItem.type,
+                uniqueIdentifier: uniqueIdentifier,
+                quantity: stockItem.quantity,
+                disabled: stockItem.disabled,
+                originalIndex: stockItem.originalIndex
+            }
+        }
+    });
+    uniqueParentageComponents = Object.values(uniqueParentageComponents)
+    console.log(uniqueParentageComponents)
+        
     return (
         <div className="content-file-list unified-viewer-list">
             <ResourceHeader 
@@ -25,21 +65,21 @@ const StockItemsList = (props) => {
             />
             {isExtended &&
                 <>
-                    {stockItems.map((composition) => 
-                        <CompositionItem
+                    {uniqueParentageComponents.map((composition) => 
+                        <StockCompositionItem
                             key={composition.name + composition.originalIndex}
                             type={composition.type}
-                            templativeRootDirectoryPath={props.templativeRootDirectoryPath}
+                            templativeRootDirectoryPath={templativeRootDirectoryPath}
                             quantity={composition.quantity}
                             compositionName={composition.name}
                             isDisabled={composition.disabled}
-                            currentFilepath={props.currentFilepath}
-                            filepath={path.join(props.templativeRootDirectoryPath, `component-compose.json#${composition.name}`)}
-                            updateViewedFileUsingExplorerAsyncCallback={props.updateViewedFileUsingExplorerAsyncCallback}
-                            updateRouteCallback={props.updateRouteCallback}
-                            deleteCompositionCallbackAsync={() => props.deleteCompositionCallbackAsync(composition.originalIndex)}
-                            duplicateCompositionCallbackAsync={() => props.duplicateCompositionCallbackAsync(composition.originalIndex)}
-                            toggleDisableCompositionCallbackAsync={() => props.toggleDisableCompositionCallbackAsync(composition.originalIndex)}
+                            currentFilepath={currentFilepath}
+                            filepath={path.join(templativeRootDirectoryPath, `component-compose.json#${composition.name}`)}
+                            updateViewedFileUsingExplorerAsyncCallback={updateViewedFileUsingExplorerAsyncCallback}
+                            deleteStockCompositionsWithNameCallbackAsync={() => deleteStockCompositionsWithNameAsync(composition.name)}
+                            duplicateStockCompositionCallbackAsync={() => duplicateStockCompositionAsync(composition.name)}
+                            toggleDisableStockCompositionCallbackAsync={() => toggleDisableStockCompositionAsync(composition.name)}
+                            renameStockCompositionCallbackAsync={(newName) => renameStockCompositionAsync(composition.name, newName)}
                             isStock={true}
                         />
                     )}

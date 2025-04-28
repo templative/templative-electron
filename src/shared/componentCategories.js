@@ -1261,4 +1261,21 @@ const COMPONENT_CATEGORIES = {
     }
   }
 }
-  module.exports = { COMPONENT_CATEGORIES }
+const getInvertedCategories  = () => {
+  const categories = Object.assign({}, COMPONENT_CATEGORIES);
+  var invertedCategories = {};
+
+  const traverse = (obj, path = []) => {
+      for (const key in obj) {
+          if (typeof obj[key] === 'object') {
+              traverse(obj[key], [...path, key]);
+          } else {
+              invertedCategories[obj[key]] = [...path, key];
+          }
+      }
+  };
+
+  traverse(categories);
+  return invertedCategories;
+}
+module.exports = { COMPONENT_CATEGORIES, getInvertedCategories }

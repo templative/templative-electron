@@ -404,9 +404,10 @@ export default class TemplativeProjectRenderer extends React.Component {
                     currentFilepath={this.props.currentFilepath}
                     updateViewedFileUsingExplorerAsyncCallback={this.props.updateViewedFileUsingExplorerAsyncCallback}
                     updateRouteCallback={this.props.updateRouteCallback}
-                    deleteCompositionCallbackAsync={this.props.deleteCompositionAsync}
-                    duplicateCompositionCallbackAsync={this.props.duplicateCompositionAsync}
-                    toggleDisableCompositionCallbackAsync={this.props.toggleDisableCompositionAsync}
+                    deleteStockCompositionsWithNameAsync={this.props.deleteStockCompositionsWithNameAsync}
+                    toggleDisableStockCompositionAsync={this.props.toggleDisableStockCompositionAsync}
+                    duplicateStockCompositionAsync={this.props.duplicateStockCompositionAsync}
+                    renameStockCompositionAsync={this.props.renameStockCompositionAsync}
                 />
                 <div className="content-file-list">
                     <ResourceHeader 

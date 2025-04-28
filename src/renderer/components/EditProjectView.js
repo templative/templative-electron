@@ -147,7 +147,12 @@ export default class EditProjectView extends React.Component {
         if (!fileExists) {
             return
         }
-        const filetype = "UNIFIED_COMPONENT"
+        var filetype = "UNIFIED_COMPONENT"
+        this.state.componentCompose.forEach(element => {
+            if (element.name === componentName && element.type.startsWith("STOCK_")) {
+                filetype = "UNIFIED_STOCK"
+            }
+        });
         const filepath = `${componentComposeFilepath}#${componentName}`
         await this.updateViewFileAsync(filetype, filepath, componentName)        
     }
@@ -317,7 +322,7 @@ export default class EditProjectView extends React.Component {
             }
             else {
                 var newTab = this.state.tabbedFiles[0]
-                if (newTab.filetype === "UNIFIED_COMPONENT") {
+                if (newTab.filetype === "UNIFIED_COMPONENT" || newTab.filetype === "UNIFIED_STOCK") {
                     await this.updateViewedFileToUnifiedAsync(newTab.filepath.split("#")[1])
                 }
                 else {
@@ -405,6 +410,15 @@ export default class EditProjectView extends React.Component {
         newComponents.splice(index, 1);
         await this.saveComponentComposeAsync(newComponents);
     }
+    deleteStockCompositionsWithNameAsync = async (name) => {
+        var newComponents = [...this.state.componentCompose]
+        
+        newComponents = newComponents.filter(component => 
+            !(component.type.startsWith("STOCK_") && component.name === name)
+        );
+        
+        await this.saveComponentComposeAsync(newComponents);
+    }
     
     duplicateCompositionAsync = async (index) => {
         const newComponents = [...this.state.componentCompose];
@@ -424,19 +438,103 @@ export default class EditProjectView extends React.Component {
         const piecesGamedataDirectory = gameCompose["piecesGamedataDirectory"];
         const isDescendantOfPiecesGamedata = originalFilepath.startsWith(path.join(this.props.templativeRootDirectoryPath, piecesGamedataDirectory));
         if (!isDescendantOfPiecesGamedata) {
-            console.log(`${originalFilepath} is not in the piecesGamedataDirectory`)
+            // console.log(`${originalFilepath} is not in the piecesGamedataDirectory`)
             return
         }
         const keyOfOriginalFilepath = getSyncKey(this.props.templativeRootDirectoryPath, gameCompose, originalFilepath);
         if (gameCompose["syncKeys"][keyOfOriginalFilepath] === undefined) {
-            console.log(`${keyOfOriginalFilepath} is not in the syncKeys`)
+            // console.log(`${keyOfOriginalFilepath} is not in the syncKeys`)
             return
         }
         const keyOfNewFilepath = getSyncKey(this.props.templativeRootDirectoryPath, gameCompose, newFilepath);
-        console.log(`${keyOfNewFilepath}: ${gameCompose["syncKeys"][keyOfOriginalFilepath]}`)
+        // console.log(`${keyOfNewFilepath}: ${gameCompose["syncKeys"][keyOfOriginalFilepath]}`)
         gameCompose["syncKeys"][keyOfNewFilepath] = gameCompose["syncKeys"][keyOfOriginalFilepath];
         delete gameCompose["syncKeys"][keyOfOriginalFilepath];
         await this.saveGameComposeAsync(gameCompose);
+    }
+    updateStockComponentsWithNameAsync = async (name, field, value) => {
+        console.log(name, field, value)
+        const components = [... this.state.componentCompose]
+        for (var c = 0; c < components.length; c++) {
+            var component = components[c];
+            if (!component.type.includes("STOCK_")) {
+                continue
+            }
+            if (component.name !== name) {
+                continue
+            }
+            component[field] = value
+        }
+        await this.saveComponentComposeAsync(components)
+    }
+    changeStockComponentQuantityByTypeAsync = async (name, type, quantity) => {
+        console.log(name, type, quantity)
+        const components = [... this.state.componentCompose]
+        var found = false;
+        for (var c = 0; c < components.length; c++) {
+            var component = components[c];
+            if (component.type !== `STOCK_${type}`) {
+                continue
+            }
+            if (component.name !== name) {
+                continue
+            }
+            found = true
+            component.quantity = quantity
+        }
+        if (!found && quantity > 0) {
+            components.push({
+                name: name,
+                type: `STOCK_${type}`,
+                quantity: quantity
+            })
+        }
+        await this.saveComponentComposeAsync(components)   
+    }
+    toggleDisableStockCompositionAsync = async (name) => {
+        const newComponents = [...this.state.componentCompose];
+        for (var c = 0; c < newComponents.length; c++) {
+            var component = newComponents[c];
+            if (!component.type.includes("STOCK_")) {
+                continue
+            }
+            if (component.name !== name) {
+                continue
+            }
+            component.disabled = !component.disabled;
+        }
+        await this.saveComponentComposeAsync(newComponents);
+    }
+    renameStockCompositionAsync = async (oldName, newName) => {
+        const newComponents = [...this.state.componentCompose];
+        for (var c = 0; c < newComponents.length; c++) {
+            var component = newComponents[c];
+            if (!component.type.includes("STOCK_")) {
+                continue
+            }
+            if (component.name !== oldName) {
+                continue
+            }
+            component.name = newName;
+        }
+        await this.saveComponentComposeAsync(newComponents);
+    }
+    duplicateStockCompositionAsync = async (name) => {
+        const newComponents = [...this.state.componentCompose];
+        for (var c = 0; c < this.state.componentCompose.length; c++) {
+            var component = this.state.componentCompose[c];
+            if (!component.type.includes("STOCK_")) {
+                continue
+            }
+            if (component.name !== name) {
+                continue
+            }
+            newComponents.push({
+                ...component,
+                name: `${component.name} Copy`
+            })
+        }
+        await this.saveComponentComposeAsync(newComponents);
     }
     render() {
         return <RenderingWorkspaceProvider key={this.props.templativeRootDirectoryPath}>
@@ -507,6 +605,12 @@ export default class EditProjectView extends React.Component {
                         gameCompose={this.state.gameCompose}
                         addGameComposeSyncKeyAsync={this.addGameComposeSyncKeyAsync}
                         trackChangedFilepathAsync={this.trackChangedFilepathAsync}
+                        renameStockCompositionAsync={this.renameStockCompositionAsync}
+                        deleteStockCompositionsWithNameAsync={this.deleteStockCompositionsWithNameAsync}
+                        toggleDisableStockCompositionAsync={this.toggleDisableStockCompositionAsync}
+                        duplicateStockCompositionAsync={this.duplicateStockCompositionAsync}
+                        updateStockComponentsWithNameAsync={this.updateStockComponentsWithNameAsync}
+                        changeStockComponentQuantityByTypeAsync={this.changeStockComponentQuantityByTypeAsync}
                     />
                     )}
 

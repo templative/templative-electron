@@ -5,6 +5,7 @@ import "./EditPanelTabs.css"
 import ContextMenu from "../ContextMenu";
 
 import UnifiedComponentIcon from "./Icons/unifiedComponentIcon.svg?react"
+import StockIcon from "./Icons/stockIcon.svg?react"
 
 export default class UnifiedComponentTab extends React.Component {       
     state = {
@@ -51,7 +52,8 @@ export default class UnifiedComponentTab extends React.Component {
         var shouldShowX = (this.state.isHovering || isSelected) && this.props.tabbedFile.canClose
         
         var tabName = this.props.tabbedFile.filepath.split("#")[1]
-                
+        var IconElement = this.props.tabbedFile.filetype === "UNIFIED_COMPONENT" ? UnifiedComponentIcon : StockIcon
+
         return <li 
             className="nav-item"
             onClick={this.viewTabFileAsync}
@@ -75,7 +77,7 @@ export default class UnifiedComponentTab extends React.Component {
             }
             
             <a className={`nav-link ${isSelected && "active"} ${this.props.isItalics && "italics-tab"}`}>
-                <UnifiedComponentIcon className="tab-icon"/>
+                <IconElement className="tab-icon"/>
                 {tabName}
                 {this.props.tabbedFile.canClose && 
                     <button 

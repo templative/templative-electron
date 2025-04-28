@@ -7,7 +7,6 @@ const path = require("path");
 const shell = require('electron').shell;
 import CompositionSettingsModal from "../CompositionSettingsModal";
 
-
 export default function CompositionItem(props) {
     const { type, quantity, compositionName, isDisabled, 
         directoryPath, filepath, currentFilepath,
@@ -17,7 +16,6 @@ export default function CompositionItem(props) {
         deleteCompositionCallbackAsync,
         duplicateCompositionCallbackAsync,
         toggleDisableCompositionCallbackAsync,
-        isStock,
         componentGamedataFilename,
         piecesGamedataFilename,
         artdataFrontFilename,
@@ -142,11 +140,6 @@ export default function CompositionItem(props) {
         {name: isDisabled ? "Enable" : "Disable", callback: toggleDisableCompositionCallbackAsync},
         {name: "Delete", callback: deleteCompositionAreYouSure},
     ]
-    const stockCommands = [
-        {name: "Duplicate", callback: duplicateCompositionCallbackAsync},
-        {name: isDisabled ? "Enable" : "Disable", callback: toggleDisableCompositionCallbackAsync},
-        {name: "Delete", callback: deleteCompositionAreYouSure},
-    ]
     return (
         <div 
             className={`icon-content-file-item-wrapper ${isSelected && "selected-content-file-item-wrapper"}`} 
@@ -159,13 +152,13 @@ export default function CompositionItem(props) {
                 <ContextMenu 
                     left={contextCoordinates.x} 
                     top={contextCoordinates.y}
-                    commands={isStock ? stockCommands : commands}
+                    commands={commands}
                     closeContextMenuCallback={closeContextMenu}
                 />
             }
             <p className={`renameable-file`}>
                 <span style={{ marginLeft: `24px` }}/>
-                <span className={isDisabled ? "disabled-composition-item" : "" + "composition-item"}>{quantity}x <span className="composition-item-name">{compositionName}</span> {addSpaces(type.replace("STOCK_", ""))}</span>
+                <span className={isDisabled ? "disabled-composition-item" : "" + "composition-item"}>{quantity}x <span className="composition-item-name">{compositionName}</span> {addSpaces(type)}</span>
             </p>
             {showFileModal && 
                 <CompositionSettingsModal

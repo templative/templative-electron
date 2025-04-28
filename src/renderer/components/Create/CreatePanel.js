@@ -97,7 +97,7 @@ const CreatePanel = (props) => {
         // Only change views for custom components, not stock components
         if (context.isToggledToComponents) {
             props.changeTabsToEditAFileCallback(
-                "UNIFIED_COMPONENT", 
+                `UNIFIED_${context.isToggledToComponents ? "COMPONENT" : "STOCK"}`, 
                 path.join(props.templativeRootDirectoryPath, `component-compose.json#${context.componentName}`)
             );
         }
