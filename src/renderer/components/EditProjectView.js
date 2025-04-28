@@ -399,26 +399,98 @@ export default class EditProjectView extends React.Component {
     
     updateComponentComposeFieldAsync = async (index, field, value) => {
         const oldComponents = JSON.parse(JSON.stringify(this.state.componentCompose));
+        const updatedComponent = oldComponents[index]
+        if (updatedComponent.type.includes("STOCK_")) {
+            console.error("Used the wrong function to update a stock composition")
+            return;
+        }
+        if (field === "name") {
+            await this.updateCompositionNameAsync(index, value)
+            return;
+        }
         const newComponents = oldComponents.map((component, i) => 
             i === index ? { ...component, [field]: value } : component
         );
 
         await this.saveComponentComposeAsync(newComponents);
     }
+    updateCompositionNameAsync = async (index, name) => {
+        var newComponents = [...this.state.componentCompose];
+        const oldName = newComponents[index].name
+        newComponents[index].name = name
+        const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
+        
+        const newTabbedFiles = [...this.state.tabbedFiles]
+        var updatedContent = {
+            componentCompose: newComponents
+        }
+        var wereTabbedFilesUpdated = false
+        for (var c = 0; c < this.state.tabbedFiles.length; c++) {
+            var tabbedFile = this.state.tabbedFiles[c];
+            if(tabbedFile.filetype !== "UNIFIED_COMPONENT") {
+                continue
+            }
+            const filepathName = tabbedFile.filepath.split("#")[1]
+            const isOldName = filepathName === oldName
+            const newFilepath = tabbedFile.filepath.replace(oldName, name)
+            if (isOldName) {
+                if (this.state.currentFilepath === tabbedFile.filepath) {
+                    updatedContent["currentFilepath"] = newFilepath
+                    updatedContent["currentFileType"] = tabbedFile.filetype
+                }
+                tabbedFile.filepath = newFilepath
+                wereTabbedFilesUpdated = true
+                console.log(this.state.currentFilepath, tabbedFile.filepath)
+            }
+        }
+        if (wereTabbedFilesUpdated) {
+            updatedContent["tabbedFiles"] = newTabbedFiles
+        }
+        await this.saveFileAsync(filepath, JSON.stringify(newComponents, null, 2));
+        this.setState(updatedContent);
+    }
     deleteCompositionAsync = async (index) => {
+        const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
         const newComponents = [...this.state.componentCompose];
+        const deletedComponent = newComponents[index]
+        const deletedComponentFilepath = `${filepath}#${deletedComponent.name}`
+        
         newComponents.splice(index, 1);
-        await this.saveComponentComposeAsync(newComponents);
+        const updatedContent = {
+            componentCompose: newComponents
+        }
+        const newTabbedFiles = [...this.state.tabbedFiles]
+        var wereTabbedFilesUpdated = false
+        for (var c = newTabbedFiles.length - 1; c >= 0; c--) {
+            var tabbedFile = newTabbedFiles[c];
+            if (tabbedFile.filetype !== "UNIFIED_COMPONENT") {
+                continue;
+            }
+            const isCurrentFilepath = this.state.currentFilepath === tabbedFile.filepath;
+            const isTabBeingDeleted = tabbedFile.filepath === deletedComponentFilepath;
+            if (isTabBeingDeleted) {
+                newTabbedFiles.splice(c, 1);
+                wereTabbedFilesUpdated = true;
+                const hasAnotherTab = newTabbedFiles.length > 0;
+                if (isCurrentFilepath) {
+                    if(hasAnotherTab) {
+                        updatedContent["currentFilepath"] = newTabbedFiles[0].filepath
+                        updatedContent["currentFileType"] = newTabbedFiles[0].filetype
+                    }
+                    else {
+                        updatedContent["currentFilepath"] = undefined
+                        updatedContent["currentFileType"] = undefined
+                    }    
+                }
+            }
+        }
+        if (wereTabbedFilesUpdated) {
+            updatedContent["tabbedFiles"] = newTabbedFiles
+        }
+        await this.saveFileAsync(filepath, JSON.stringify(newComponents, null, 2));
+        this.setState(updatedContent);
     }
-    deleteStockCompositionsWithNameAsync = async (name) => {
-        var newComponents = [...this.state.componentCompose]
-        
-        newComponents = newComponents.filter(component => 
-            !(component.type.startsWith("STOCK_") && component.name === name)
-        );
-        
-        await this.saveComponentComposeAsync(newComponents);
-    }
+    
     
     duplicateCompositionAsync = async (index) => {
         const newComponents = [...this.state.componentCompose];
@@ -452,8 +524,54 @@ export default class EditProjectView extends React.Component {
         delete gameCompose["syncKeys"][keyOfOriginalFilepath];
         await this.saveGameComposeAsync(gameCompose);
     }
+    deleteStockCompositionsWithNameAsync = async (name) => {
+        var newComponents = [...this.state.componentCompose]
+        
+        newComponents = newComponents.filter(component => 
+            !(component.type.startsWith("STOCK_") && component.name === name)
+        );
+        const updatedContent = {
+            componentCompose: newComponents
+        }
+        const newTabbedFiles = [...this.state.tabbedFiles]
+        var wereTabbedFilesUpdated = false
+        for (var c = newTabbedFiles.length - 1; c >= 0; c--) {
+            var tabbedFile = newTabbedFiles[c];
+            if (tabbedFile.filetype !== "UNIFIED_STOCK") {
+                continue;
+            }
+            const filepathName = tabbedFile.filepath.split("#")[1];
+            const isCurrentFilepath = this.state.currentFilepath === tabbedFile.filepath;
+            const isTabBeingDeleted = filepathName === name;
+            if (isTabBeingDeleted) {
+                newTabbedFiles.splice(c, 1);
+                wereTabbedFilesUpdated = true;
+                const hasAnotherTab = newTabbedFiles.length > 0;
+                if (isCurrentFilepath) {
+                    if( hasAnotherTab) {
+                        updatedContent["currentFilepath"] = newTabbedFiles[0].filepath
+                        updatedContent["currentFileType"] = newTabbedFiles[0].filetype
+                    }
+                    else {
+                        updatedContent["currentFilepath"] = undefined
+                        updatedContent["currentFileType"] = undefined
+                    }    
+                }
+                
+            }
+        }
+        if (wereTabbedFilesUpdated) {
+            updatedContent["tabbedFiles"] = newTabbedFiles
+        }
+        const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
+        await this.saveFileAsync(filepath, JSON.stringify(newComponents, null, 2));
+        this.setState(updatedContent);
+    }
     updateStockComponentsWithNameAsync = async (name, field, value) => {
-        console.log(name, field, value)
+        if (field === "name") {
+            await this.renameStockCompositionAsync(name, value)
+            return
+        }
         const components = [... this.state.componentCompose]
         for (var c = 0; c < components.length; c++) {
             var component = components[c];
@@ -468,7 +586,6 @@ export default class EditProjectView extends React.Component {
         await this.saveComponentComposeAsync(components)
     }
     changeStockComponentQuantityByTypeAsync = async (name, type, quantity) => {
-        console.log(name, type, quantity)
         const components = [... this.state.componentCompose]
         var found = false;
         for (var c = 0; c < components.length; c++) {
@@ -505,19 +622,47 @@ export default class EditProjectView extends React.Component {
         }
         await this.saveComponentComposeAsync(newComponents);
     }
+    
     renameStockCompositionAsync = async (oldName, newName) => {
         const newComponents = [...this.state.componentCompose];
         for (var c = 0; c < newComponents.length; c++) {
             var component = newComponents[c];
             if (!component.type.includes("STOCK_")) {
-                continue
+                continue;
             }
             if (component.name !== oldName) {
-                continue
+                continue;
             }
             component.name = newName;
         }
-        await this.saveComponentComposeAsync(newComponents);
+        var updatedContent = {
+            componentCompose: newComponents
+        }
+        
+        const newTabbedFiles = [...this.state.tabbedFiles]
+        var wereTabbedFilesUpdated = false
+        for (var c = 0; c < this.state.tabbedFiles.length; c++) {
+            var tabbedFile = this.state.tabbedFiles[c];
+            if(tabbedFile.filetype === "UNIFIED_STOCK") {
+                const filepathName = tabbedFile.filepath.split("#")[1]
+                const isOldName = filepathName === oldName
+                const newFilepath = tabbedFile.filepath.replace(oldName, newName)
+                if (isOldName) {
+                    if (this.state.currentFilepath === tabbedFile.filepath) {
+                        updatedContent["currentFilepath"] = newFilepath
+                        updatedContent["currentFileType"] = tabbedFile.filetype
+                    }
+                    tabbedFile.filepath = newFilepath
+                    wereTabbedFilesUpdated = true
+                }
+            }
+        }
+        if (wereTabbedFilesUpdated) {
+            updatedContent["tabbedFiles"] = newTabbedFiles
+        }
+        const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
+        await this.saveFileAsync(filepath, JSON.stringify(newComponents, null, 2));
+        this.setState(updatedContent);
     }
     duplicateStockCompositionAsync = async (name) => {
         const newComponents = [...this.state.componentCompose];

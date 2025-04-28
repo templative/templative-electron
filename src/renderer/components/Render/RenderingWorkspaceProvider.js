@@ -83,20 +83,7 @@ class RenderingWorkspaceProvider extends React.Component {
   };
 
   selectComponent = (category, baseComponent, size, color, type) => {
-    console.log("selectComponent", category, baseComponent, size, color, type);
-    
-    // Check if this is a stock component (stock components start with "STOCK_")
-    const isStockComponent = !this.state.isToggledToComponents;
-    
-    if (isStockComponent && type !== this.state.selectedComponentType) {
-      // For stock components, update the component name with the display name
-      
-      const componentTypeInfo = STOCK_COMPONENT_INFO[type];
-      if (componentTypeInfo && componentTypeInfo.DisplayName) {
-        var name = componentTypeInfo.DisplayName.replace(/[<>:"/\\|?*]/g, '');
-        this.setState({ componentName: name });
-      }
-    }
+    // console.log("selectComponent", category, baseComponent, size, color, type);
     
     this.setState(prevState => ({
       selectedComponentType: prevState.selectedComponentType === type ? undefined : type,

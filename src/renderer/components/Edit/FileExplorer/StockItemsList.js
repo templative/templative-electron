@@ -36,7 +36,6 @@ const StockItemsList = ({
         }
         const collectedType = parentage.slice(2).slice(0,-1).join(" ")
         const uniqueIdentifier = `${stockItem.name} ${collectedType}` 
-        console.log(uniqueIdentifier)
         
         if (uniqueIdentifier in uniqueParentageComponents) {
             uniqueParentageComponents[uniqueIdentifier].quantity += stockItem.quantity
@@ -53,7 +52,6 @@ const StockItemsList = ({
         }
     });
     uniqueParentageComponents = Object.values(uniqueParentageComponents)
-    console.log(uniqueParentageComponents)
         
     return (
         <div className="content-file-list unified-viewer-list">

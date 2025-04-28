@@ -6,6 +6,7 @@
 .component-type-list {
     padding: 0px 0px 0px 8px !important;
     overflow-y: scroll;
+    overflow-x: hidden;
     height: calc(100% - 25px);
     margin: 0px 0px 0px 0px;
 }

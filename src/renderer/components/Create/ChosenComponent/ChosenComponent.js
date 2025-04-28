@@ -54,6 +54,7 @@ const ChosenComponent = ({ isProcessing, createComponent, isToggledToComponents,
                     <span className="input-group-text soft-label">Composition Name</span>
                     <input 
                         type="text" 
+                        autoFocus={true}
                         className="form-control no-left-border" 
                         onChange={(event) => context.setComponentName(event.target.value.replace(/[<>:"/\\|?*]/g, ''))} 
                         placeholder="Player Roles or Emperor Token, etc" 
