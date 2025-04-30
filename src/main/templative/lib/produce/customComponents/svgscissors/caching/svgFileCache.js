@@ -1,5 +1,4 @@
 const fs = require('fs/promises');
-const fsExtra = require('fs-extra');
 
 class SvgFileCache {
     constructor(name) {

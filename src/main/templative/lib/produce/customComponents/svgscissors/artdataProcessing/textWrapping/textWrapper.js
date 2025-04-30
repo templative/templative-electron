@@ -1,4 +1,4 @@
-const { fontCache, extractFontAttributesAsync } = require('./fontHandler');
+const { fontCache } = require('./fontHandler');
 /**
  * Escape special characters in a string for use in a regular expression
  * @param {string} string - String to escape
@@ -7,8 +7,6 @@ const { fontCache, extractFontAttributesAsync } = require('./fontHandler');
 function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
-
-
 
 /**
  * Wrap text to fit within a container width
@@ -43,11 +41,6 @@ async function wrapTextAsync(text, fontSize, containerWidth, fontInfo = {}, form
       lines.push(''); // Preserve empty paragraphs
       absolutePosition += 1; // Account for the newline
       continue;
-    }
-    
-    // Initialize fontkit if not already initialized
-    if (!fontCache.initialized) {
-      fontCache.initialize();
     }
     
     // Split paragraph into words

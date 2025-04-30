@@ -5,7 +5,7 @@ const defineLoader = require('../../manage/defineLoader');
 
 const { COMPONENT_INFO } = require('../../../../../shared/componentInfo');
 
-const { SvgFileCache } = require('./svgscissors/modules/svgFileCache');
+const { SvgFileCache } = require('./svgscissors/caching/svgFileCache');
 const { BackProducer } = require('./backProducer');
 const { FrontOnlyProducer } = require('./frontOnlyProducer');
 const { DiceProducer } = require('./diceProducer');

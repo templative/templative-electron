@@ -53,7 +53,8 @@ const DEFAULT_SETTINGS = {
     lastProjectDirectory: null,
     isOnChangeRenderingDisabled: false,
     isCacheIgnored: false,
-    isGitEnabled: false
+    isGitEnabled: false,
+    renderProgram: "Templative"
 }
 
 async function readOrCreateSettingsFile() {

@@ -204,10 +204,4 @@ async function getShapeBoundsAsync(shapeElement) {
   }
 }
 
-module.exports = {
-  extractRectBoundsAsync,
-  extractCircleBoundsAsync,
-  extractEllipseBoundsAsync,
-  extractPathBoundsAsync,
-  getShapeBoundsAsync
-}; 
+module.exports = { getShapeBoundsAsync };

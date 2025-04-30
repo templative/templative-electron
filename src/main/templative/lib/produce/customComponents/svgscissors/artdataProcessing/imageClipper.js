@@ -1,7 +1,7 @@
-const { loadSvg } = require('../../../../distribute/simulator/imageProcessing/imageUtils');
+const { loadSvg } = require('../../../../distribute/simulator/imageProcessing/imageUtils.js');
 const { JSDOM } = require('jsdom');
 const path = require('path');
-const { SvgFileCache } = require('./svgFileCache.js');
+const { SvgFileCache } = require('../caching/svgFileCache.js');
 const CLIPPING_ELEMENT_ID = "clipping";
 
 // Create a default cache instance for backward compatibility

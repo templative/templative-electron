@@ -1,25 +1,7 @@
 const fsExtra = require('fs-extra');
 const path = require('path');
 const { Resvg } = require('@resvg/resvg-js');
-const {captureMessage, captureException } = require("../../../../../sentryElectronWrapper");
-
-/**
- * Create a fallback SVG
- * @param {number[]} imageSizePixels - Width and height in pixels
- * @returns {string} - Fallback SVG content
- */
-function createFallbackSvg(imageSizePixels) {
-  const width = imageSizePixels[0];
-  const height = imageSizePixels[1];
-  
-  return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
-      <rect width="${width}" height="${height}" fill="#f0f0f0" />
-      <text x="${width/2}" y="${height/2}" font-family="Arial" font-size="24" text-anchor="middle" dominant-baseline="middle">Error rendering SVG</text>
-      <text x="${width/2}" y="${height/2 + 30}" font-family="Arial" font-size="16" text-anchor="middle" dominant-baseline="middle">Please check the console for details</text>
-    </svg>
-  `;
-}
+const {captureMessage, captureException } = require("../../../../sentryElectronWrapper");
 
 /**
  * Convert PNG to JPG
@@ -61,35 +43,7 @@ async function convertToJpg(absoluteOutputDirectory, name, pngFilepath) {
   }
 }
 
-async function createFallbackPng(imageSizePixels) {
-  try {
-    console.log('⚠️ Creating fallback image...');
-    
-    // Create a minimal SVG as a fallback
-    const minimalSvg = createFallbackSvg(imageSizePixels);
-    
-    resvg = new Resvg(minimalSvg, {
-      font: {
-        loadSystemFonts: true,
-        defaultFontFamily: 'Arial',
-        fallbackFamilies: ['Helvetica', 'sans-serif']
-      },
-      fitTo: {
-        mode: 'width',
-        value: imageSizePixels[0]
-      }
-    });
-    
-    console.log('🆘 Created fallback placeholder image');
-  } catch (finalError) {
-    console.error('❌ All conversion attempts failed');
-    captureException(finalError);
-    throw finalError; // Throw the original error
-  }
-  return resvg;
-}
-
-async function convertSvgContentToPng(svgString, imageSizePixels, outputFilepath) {
+async function convertSvgContentToPngUsingResvg(svgString, imageSizePixels, outputFilepath) {
   try {
     let resvg;
     try {
@@ -108,9 +62,6 @@ async function convertSvgContentToPng(svgString, imageSizePixels, outputFilepath
       console.error(`Error creating Resvg instance: ${resvgError.message}`);
       console.error(resvgError.stack);
       captureException(resvgError);
-      
-      // Try to create a fallback image
-      resvg = await createFallbackPng(imageSizePixels);
     }
     
     const pngData = resvg.render();
@@ -125,7 +76,6 @@ async function convertSvgContentToPng(svgString, imageSizePixels, outputFilepath
 }
 
 module.exports = {
-  createFallbackSvg,
   convertToJpg,
-  convertSvgContentToPng
+  convertSvgContentToPngUsingResvg
 }; 

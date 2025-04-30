@@ -5,7 +5,7 @@ const path = require('path');
 const defineLoader = require('../../manage/defineLoader');
 const { COMPONENT_INFO } = require('../../../../../shared/componentInfo');
 const { ComponentBackData } = require('../../manage/models/gamedata');
-const { SvgFileCache } = require('./svgscissors/modules/svgFileCache');
+const { SvgFileCache } = require('./svgscissors/caching/svgFileCache');
 const {captureMessage, captureException } = require("../../sentryElectronWrapper");
 
 class BackProducer {

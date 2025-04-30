@@ -1,7 +1,7 @@
 const { createHash } = require('crypto');
 const fs = require('fs').promises;
-const { clipSvgFileToClipFile } = require('../../../produce/customComponents/svgscissors/modules/imageClipper');
-const { convertSvgContentToPng } = require('../../../produce/customComponents/svgscissors/modules/fileConversion/svgConverter');
+const { clipSvgFileToClipFile } = require('../../../produce/customComponents/svgscissors/artdataProcessing/imageClipper');
+const { convertSvgContentToPng } = require('../../../produce/customComponents/svgscissors/fileConversion/svgToRasterConverter');
 const { createCompositeImage, placeAndUploadBackImage } = require('../imageProcessing/compositeImageCreator');
 const { safeLoadImage } = require('../imageProcessing/imageUtils');
 const { uploadToS3 } = require('../imageProcessing/imageUploader');

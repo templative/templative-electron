@@ -3,7 +3,7 @@ const svgscissors = require('./svgscissors/main');
 const path = require('path');
 const defineLoader = require('../../manage/defineLoader');
 const { ComponentBackData } = require('../../manage/models/gamedata');
-const { SvgFileCache } = require('./svgscissors/modules/svgFileCache');
+const { SvgFileCache } = require('./svgscissors/caching/svgFileCache');
 const {captureMessage, captureException } = require("../../sentryElectronWrapper");
 
 class DiceProducer {

@@ -13,9 +13,9 @@ const ProduceProperties = require('../manage/models/produceProperties').ProduceP
 const PreviewProperties = require('../manage/models/produceProperties').PreviewProperties;
 const GameData = require('../manage/models/gamedata').GameData;
 const ComponentComposition = require('../manage/models/composition');
-const FontCache = require('./customComponents/svgscissors/fontCache').FontCache;
-const { SvgFileCache } = require('./customComponents/svgscissors/modules/svgFileCache');
-const { RENDER_MODE } = require('../manage/models/produceProperties');
+const FontCache = require('./customComponents/svgscissors/caching/fontCache').FontCache;
+const { SvgFileCache } = require('./customComponents/svgscissors/caching/svgFileCache');
+const { RENDER_MODE, RENDER_PROGRAM } = require('../manage/models/produceProperties');
 
 async function getPreviewsPath() {
     let base_path;
@@ -58,7 +58,7 @@ async function clearPreviews(directoryPath) {
     }
 }
 
-async function producePiecePreview(gameRootDirectoryPath, componentName, pieceName, language) {
+async function producePiecePreview(gameRootDirectoryPath, componentName, pieceName, language, renderProgram=RENDER_PROGRAM.TEMPLATIVE) {
     if (!gameRootDirectoryPath) {
         throw new Error("Game root directory path is invalid.");
     }
@@ -85,7 +85,7 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     const outputDirectoryPath = await getPreviewsPath();
     await clearPreviews(outputDirectoryPath);
     const isClipped = true
-    const previewProperties = new PreviewProperties(gameRootDirectoryPath, outputDirectoryPath, pieceName, language, isClipped);
+    const previewProperties = new PreviewProperties(gameRootDirectoryPath, outputDirectoryPath, pieceName, language, isClipped, renderProgram);
 
     const fontCache = new FontCache();
     const svgFileCache = new SvgFileCache();
@@ -94,7 +94,7 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     console.log(`Wrote previews to ${outputDirectoryPath}`);
 }
 
-async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage, isClipped=false, renderMode=RENDER_MODE.RENDER_EXPORT_USING_CACHE) {
+async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage, isClipped=false, renderMode=RENDER_MODE.RENDER_EXPORT_USING_CACHE, renderProgram=RENDER_PROGRAM.TEMPLATIVE) {
     const startTime = performance.now();
     
     if (!gameRootDirectoryPath) {
@@ -140,7 +140,7 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
     
 
     const gameData = new GameData(studioDataBlob, gameDataBlob);
-    const produceProperties = new ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage, isClipped, renderMode);
+    const produceProperties = new ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage, isClipped, renderMode, renderProgram);
     
     const fontCache = new FontCache();
     const svgFileCache = new SvgFileCache();
@@ -154,6 +154,7 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
             if (!isProducingOneComponent) {
                 console.log(`Skipping disabled ${componentCompose["name"]} component.`);
             }
+            // console.log(`Skipping disabled ${componentCompose["name"]} component.`);
             continue;
         }
 
@@ -164,6 +165,7 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
         }
 
         if (isProducingOneComponent && !isMatchingComponentFilter) {
+            // console.log(`Skipping ${componentCompose["name"]} component as it is not the one we are producing.`);
             continue;
         }
         

@@ -17,7 +17,7 @@ const {captureMessage, captureException } = require("./lib/sentryElectronWrapper
 const { updateToast } = require('../toastNotifier');
 const { readOrCreateSettingsFile } = require('../templativeProjectManager');
 const path = require('path');
-const { RENDER_MODE } = require('./lib/manage/models/produceProperties');
+const { RENDER_MODE, RENDER_PROGRAM } = require('./lib/manage/models/produceProperties');
 
 
 const createTemplativeComponent = withLogCapture(async (event, data) => {
@@ -43,8 +43,9 @@ const produceTemplativeProject = withLogCapture(async (event, request) => {
     const NOT_PUBLISHED = false;
     const settings = await readOrCreateSettingsFile();
     const isCacheIgnored = settings.isCacheIgnored;
+    const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;
     const renderMode = isCacheIgnored ? RENDER_MODE.RENDER_EXPORT_WITHOUT_CACHE : RENDER_MODE.RENDER_EXPORT_USING_CACHE;
-    const outputDirectoryPath = await produceGame(directoryPath, componentFilter, !isComplex, NOT_PUBLISHED, language, NOT_CLIPPED, renderMode)
+    const outputDirectoryPath = await produceGame(directoryPath, componentFilter, !isComplex, NOT_PUBLISHED, language, NOT_CLIPPED, renderMode, renderProgram)
 
     updateToast(`/${path.basename(outputDirectoryPath)} render complete.`, "brush");
     return { success: true, outputDirectoryPath };
@@ -69,8 +70,9 @@ const getPreviewsDirectory = withLogCapture(async (event) => {
 const previewPiece = withLogCapture(async (event, data) => {
   try {
     const { componentFilter, pieceFilter, language, directoryPath } = data;
-
-    await producePiecePreview(directoryPath, componentFilter, pieceFilter, language)
+    const settings = await readOrCreateSettingsFile();
+    const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;
+    await producePiecePreview(directoryPath, componentFilter, pieceFilter, language, renderProgram)
     updateToast(`${componentFilter} preview complete.`, "brush");
     
     return { success: true, message: 'Piece preview generated' };

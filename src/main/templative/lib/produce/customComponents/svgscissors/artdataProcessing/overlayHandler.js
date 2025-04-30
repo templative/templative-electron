@@ -1,9 +1,9 @@
 const fs = require('fs-extra');
 const path = require('path');
 const { DOMParser, XMLSerializer } = require('@xmldom/xmldom');
-const { sanitizeSvgContent } = require('../modules/svgElementConverter.js');
+const { sanitizeSvgContent } = require('./svgCleaner.js');
 const { getScopedValue } = require('./valueResolver.js');
-const { SvgFileCache } = require('../modules/svgFileCache.js');
+const { SvgFileCache } = require('../caching/svgFileCache.js');
 
 // Import the default cache instance only for backward compatibility
 const defaultSvgFileCache = new SvgFileCache();

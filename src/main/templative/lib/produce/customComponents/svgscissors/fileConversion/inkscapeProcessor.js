@@ -4,9 +4,6 @@ const fs = require('fs').promises;
 const { spawn } = require('child_process');
 const tmp = require('tmp-promise');
 
-// Simple locking mechanism to prevent multiple Inkscape processes from conflicting
-const activeTasks = new Map();
-
 async function searchWindowsRegistryForInkscape() {
   try {
     const { Registry } = require('rage-edit');
@@ -69,7 +66,7 @@ async function findInkscape() {
     const which = require('which');
     const inkscapePath = await which('inkscape');
     if (inkscapePath) {
-      console.log(`Found Inkscape in PATH at: ${inkscapePath}`);
+      // console.log(`Found Inkscape in PATH at: ${inkscapePath}`);
       return inkscapePath;
     }
   } catch (error) {
@@ -102,28 +99,6 @@ async function findInkscape() {
       return inkscapePath;
     }
   }
-
-  console.error("\n===== INKSCAPE NOT FOUND =====");
-  console.error("Inkscape is required for this application to work properly.");
-  console.error("Please install Inkscape from https://inkscape.org/");
-  
-  if (platform === 'darwin') {
-    console.error("\nOn macOS, you can install Inkscape using:");
-    console.error("  - Download from https://inkscape.org/release/");
-    console.error("  - Or use Homebrew: brew install --cask inkscape");
-  } else if (platform === 'win32') {
-    console.error("\nOn Windows, you can install Inkscape using:");
-    console.error("  - Download from https://inkscape.org/release/");
-    console.error("  - Or use Chocolatey: choco install inkscape");
-  } else {
-    console.error("\nOn Linux, you can install Inkscape using your package manager:");
-    console.error("  - Ubuntu/Debian: sudo apt install inkscape");
-    console.error("  - Fedora: sudo dnf install inkscape");
-    console.error("  - Arch: sudo pacman -S inkscape");
-  }
-  
-  console.error("\nAfter installation, make sure Inkscape is in your PATH or in one of the common locations.");
-  console.error("===============================\n");
   
   return null;
 }
@@ -242,123 +217,40 @@ async function convertToJpg(absoluteOutputDirectory, name, pngFilepath) {
   await runCommands(convertCommands);
 }
 
-async function exportSvgToImage(artFileOutputFilepath, imageSizePixels, name, outputDirectory) {
-  // Create a unique key for this task
-  const taskKey = `${outputDirectory}_${name}`;
-  
-  // Check if there's already a task running for this file
-  if (activeTasks.has(taskKey)) {
-    try {
-      // Wait for the existing task to complete
-      await activeTasks.get(taskKey);
-      return;
-    } catch (error) {
-      console.error(`Previous Inkscape process for ${name} failed: ${error.message}`);
-      // Continue with our own attempt
+async function exportSvgToPngUsingInkscape(svgFilepath, outputPngFilepath) {
+  // Ensure output directory exists
+  try {
+    await fs.mkdir(path.dirname(outputPngFilepath), { recursive: true });
+  } catch (error) {
+    if (error.code !== 'EEXIST') {
+      throw new Error(`Failed to create output directory: ${error.message}`);
     }
   }
-  
-  // Create a promise that will be resolved or rejected when this task completes
-  let resolveTask, rejectTask;
-  const taskPromise = new Promise((resolve, reject) => {
-    resolveTask = resolve;
-    rejectTask = reject;
-  });
-  
-  // Register this task
-  activeTasks.set(taskKey, taskPromise);
-  
+
+  const inkscapePath = await findInkscape();
+  if (!inkscapePath) {
+    throw new Error("You are using Inkscape for rendering. Please install Inkscape from https://inkscape.org/ or use the Templative renderer.");
+  }
+
+  // Check if the SVG file exists
   try {
-    const absoluteSvgFilepath = path.normalize(path.resolve(artFileOutputFilepath));
-    const absoluteOutputDirectory = path.normalize(path.resolve(outputDirectory));
-    const pngTempFilepath = path.normalize(path.join(absoluteOutputDirectory, `${name}_temp.png`));
-    const pngFinalFilepath = path.normalize(path.join(absoluteOutputDirectory, `${name}.png`));
-
-    // Ensure output directory exists
-    try {
-      await fs.mkdir(absoluteOutputDirectory, { recursive: true });
-    } catch (error) {
-      if (error.code !== 'EEXIST') {
-        throw new Error(`Failed to create output directory: ${error.message}`);
-      }
-    }
-
-    const inkscapePath = await findInkscape();
-    if (!inkscapePath) {
-      throw new Error("Inkscape is required but not found. Please install Inkscape and ensure it's accessible.");
-    }
-
-    // Check if the SVG file exists
-    try {
-      await fs.access(absoluteSvgFilepath);
-    } catch (error) {
-      throw new Error(`SVG file does not exist: ${absoluteSvgFilepath}`);
-    }
-    
-    // Check if the output PNG already exists - if so, we can skip this process
-    try {
-      await fs.access(pngFinalFilepath);
-      console.log(`PNG file already exists for ${name}, skipping export.`);
-      resolveTask();
-      return;
-    } catch (error) {
-      // File doesn't exist, continue with export
-    }
-
-    // Try to remove any existing temp file before starting
-    try {
-      await fs.unlink(pngTempFilepath);
-    } catch (error) {
-      // Ignore errors if the file doesn't exist
-    }
-
-    const createPngCommands = [
-      `"${inkscapePath}"`,
-      `"${absoluteSvgFilepath}"`,
-      `--export-filename="${pngTempFilepath}"`,
-      '--export-dpi=300',
-      '--export-background-opacity=0',
-    ];
-
-    const returnCode = await runCommands(createPngCommands);
-
-    if (returnCode !== 0) {
-      throw new Error(`Inkscape failed to export ${path.basename(absoluteSvgFilepath)} to PNG. Return code: ${returnCode}`);
-    }
-
-    // Check if the temp PNG file was created
-    try {
-      await fs.access(pngTempFilepath);
-      
-      // Check if the file has content (not empty)
-      const stats = await fs.stat(pngTempFilepath);
-      if (stats.size === 0) {
-        throw new Error(`Exported PNG file is empty: ${pngTempFilepath}`);
-      }
-      
-      await fs.rename(pngTempFilepath, pngFinalFilepath);
-      resolveTask();
-    } catch (error) {
-      throw new Error(`Failed to access or rename temp PNG file (${pngTempFilepath}): ${error.message}`);
-    }
+    await fs.access(svgFilepath);
   } catch (error) {
-    console.error(`\n===== ERROR EXPORTING SVG TO IMAGE =====`);
-    console.error(error.message);
-    console.error(`For file: ${path.basename(artFileOutputFilepath)}`);
-    console.error(`Make sure Inkscape is properly installed and accessible.`);
-    console.error(`=========================================\n`);
-    
-    // Reject the task promise
-    rejectTask(error);
-    
-    // Re-throw the error to ensure calling code knows there was a problem
-    throw error;
-  } finally {
-    // Remove the task from the active tasks map after a short delay
-    // to ensure any waiting tasks have a chance to see the result
-    setTimeout(() => {
-      activeTasks.delete(taskKey);
-    }, 100);
+    throw new Error(`SVG file does not exist: ${svgFilepath}`);
+  }
+
+  const createPngCommands = [
+    `"${inkscapePath}"`,
+    `"${svgFilepath}"`,
+    `--export-filename="${outputPngFilepath}"`,
+    '--export-dpi=300',
+    '--export-background-opacity=0',
+  ];
+
+  const returnCode = await runCommands(createPngCommands);
+
+  if (returnCode !== 0) {
+    throw new Error(`Inkscape failed to export ${path.basename(absoluteSvgFilepath)} to PNG. Return code: ${returnCode}`);
   }
 }
 
@@ -366,5 +258,5 @@ module.exports = {
   findInkscape,
   runCommands,
   convertToJpg,
-  exportSvgToImage,
+  exportSvgToPngUsingInkscape,
 };

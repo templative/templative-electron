@@ -1,9 +1,9 @@
-const { getPUACharFromUnicode } = require('../.././../../../iconFontCreator');
+const { getPUACharFromUnicode } = require('../../../iconFontCreator');
 const path = require('path');
 const fs = require('fs').promises;
 const { JSDOM } = require('jsdom');
 
-async function processIconGlyphsAsync(document, inputDirectoryPath) {
+async function replaceIconGlyphWithPuaCharsAsync(document, inputDirectoryPath) {
     let iconGlyphs = document.querySelectorAll('iconGlyph');
     
     // console.log("Found", iconGlyphs.length, "iconGlyphs");
@@ -82,5 +82,5 @@ async function processGlyph(iconGlyph, inputDirectoryPath, svgDomCache) {
     iconGlyph.parentNode.replaceChild(puaElement, iconGlyph);
 }
 module.exports = {
-    processIconGlyphsAsync
+    replaceIconGlyphWithPuaCharsAsync
 }

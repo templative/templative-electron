@@ -1,5 +1,5 @@
 // Users can write <i>...</i> or <b>...</b> or <strong>...</strong> or <em>...</em> instead of writing <tspan style="font-style:italic">...</tspan> or <tspan style="font-weight:bold">...</tspan>
-async function processFormattingShortcuts(document) {    
+async function replaceFormattingShortcutElementsWithTspansAsync(document) {    
     const formattingShortcuts = {
         'i': 'italic',
         'b': 'bold',
@@ -25,5 +25,5 @@ async function processFormattingShortcuts(document) {
 }
 
 module.exports = {
-    processFormattingShortcuts
+    replaceFormattingShortcutElementsWithTspansAsync
 }

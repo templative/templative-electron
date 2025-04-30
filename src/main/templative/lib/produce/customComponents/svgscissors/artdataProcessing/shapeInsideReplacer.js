@@ -1,15 +1,16 @@
-const { extractFontSizeAsync, estimateLineHeightAsync, extractNumericPropertyFromStyleAsync, fontCache, extractFontAttributesAsync, calculateLineHeightForLineAsync } = require('./fontHandler');
-const { wrapTextAsync, estimateContainerWidthAsync, calculateXPositionAsync } = require('./textWrapper');
-const { getShapeBoundsAsync } = require('./shapeProcessor');
-/**
- * Process text elements in the document
- * @param {Document} document - DOM document
- * @param {boolean} force_rewrap - Force rewrapping of text
- */
-async function processTextElementsAsync(document) {
-  // Find all rect, path, etc. elements that might be referenced
+const { estimateLineHeightAsync, calculateLineHeightForLineAsync } = require('./textWrapping/fontHandler');
+const { fontCache } = require('./textWrapping/fontCache');
+const { wrapTextAsync, estimateContainerWidthAsync, calculateXPositionAsync } = require('./textWrapping/textWrapper');
+const {getShapeBoundsAsync} = require('./textWrapping/svgElementIntepretaton/getShapeBounds');
+const { extractFontSizeAsync, extractNumericPropertyFromStyleAsync, extractFontAttributesAsync, DEFAULT_FONT_SIZE } = require('./textWrapping/svgElementIntepretaton/styleExtraction');
+
+async function replaceShapeInsideTextElementsWithPositionedTspans(document) {
   const shapeMap = new Map();
-  const shapeElements = document.querySelectorAll('rect, path, circle, ellipse, polygon, polyline');
+  
+  // To support all shapes, use this query:
+  // const queryForAll = 'rect, path, circle, ellipse, polygon, polyline';
+  const queryForRects = 'rect';
+  const shapeElements = document.querySelectorAll(queryForRects);
   shapeElements.forEach(shape => {
     if (shape.id) {
       shapeMap.set(shape.id, shape);
@@ -20,49 +21,28 @@ async function processTextElementsAsync(document) {
   let textElements = document.querySelectorAll('text');
   
   for (const textElement of textElements) {
-    await processTextElementForShapeInsideAsync(textElement, shapeMap);
-  }
-}
-
-async function processTextElementForShapeInsideAsync(textElement, shapeMap) {
-  // Skip text elements that have already been processed
-  if (textElement.getAttribute('data-processed') === 'true') {
-    // console.log('Skipping already processed text element');
-    return;
-  }
-  
-  // Check if this text element has shape-inside
-  let styleAttr = textElement.getAttribute('style') || '';
-  const shapeInsideMatch = styleAttr.match(/shape-inside\s*:\s*url\(#([^)]+)\)/);
-  
-  try {
+    if (textElement.getAttribute('data-processed') === 'true') {
+      continue;
+    }
+    let styleAttr = textElement.getAttribute('style') || '';
+    const shapeInsideMatch = styleAttr.match(/shape-inside\s*:\s*url\(#([^)]+)\)/);
     if (!shapeInsideMatch) {
-      return;
+      textElement.setAttribute('data-processed', 'true');
+      continue;
     }
     const shapeId = shapeInsideMatch[1];
     const shapeElement = shapeMap.get(shapeId);
+    const id = textElement.id;
     if (!shapeElement) {
-      // console.log(`Shape element not found for shape-inside reference to #${shapeId}`);
-      return;
+      console.warn(`Cannot wrap text for ${id} as shape #${shapeId} is not found in the svg.`);
+      textElement.setAttribute('data-processed', 'true');
+      continue;
     }
-    await processShapeInsideTextAsync(textElement, shapeElement, styleAttr);  
-  }
-  catch(error) {
-    console.log(error)
-    return;
-  }
-  finally {
-    textElement.setAttribute('data-processed', 'true');
+    await replaceShapeInsideTextElementWithPositionedTspans(textElement, shapeElement, styleAttr);  
   }
 }
 
-/**
- * Process text with shape-inside attribute
- * @param {Element} textElement - Text element to process
- * @param {Element} shapeElement - Shape element
- * @param {string} styleAttr - Style attribute of text element
- */
-async function processShapeInsideTextAsync(textElement, shapeElement, styleAttr) {
+async function replaceShapeInsideTextElementWithPositionedTspans(textElement, shapeElement, styleAttr) {
   if (await shouldPreserveLayoutAsync(textElement, styleAttr)) {
     return;
   }
@@ -70,12 +50,11 @@ async function processShapeInsideTextAsync(textElement, shapeElement, styleAttr)
   const shapeBounds = await getShapeBoundsAsync(shapeElement);
   
   if (!shapeBounds) {
-    // console.log(`Shape bounds not found for shape-inside reference to #${shapeElement.id}`);
+    console.log(`Shape bounds not found for shape-inside reference to #${shapeElement.id}`);
     return;
   }
   const textData = await initializeTextContentAsync(textElement);
 
-  const textBounds = await calculateTextBoundsAsync(shapeBounds, styleAttr);
   const { hasStructuredLines, topLevelTspans } = await analyzeTextStructureAsync(textElement);
   
   const formattingData = await extractFormattingFromElementAsync(
@@ -94,7 +73,7 @@ async function processShapeInsideTextAsync(textElement, shapeElement, styleAttr)
   
   const textTransform = textElement.hasAttribute('transform') ? textElement.getAttribute('transform') : '';
   
-  await createWrappedTextElementAsync(textElement, textBounds, textData.plainContent, textData.formattingRanges, textTransform);
+  await createWrappedTextElementAsync(textElement, shapeBounds, textData.plainContent, textData.formattingRanges, textTransform);
 }
 
 async function initializeTextContentAsync(textElement) {
@@ -184,15 +163,6 @@ async function analyzeTextStructureAsync(textElement) {
   let hasStructuredLines = topLevelTspans.length > 0 && 
                          topLevelTspans.filter(tspan => tspan.hasAttribute('y')).length === topLevelTspans.length;
   
-  if (textElement.getAttribute('style')?.includes('shape-inside')) {
-    // console.log('Forcing text rewrap due to shape-inside attribute');
-    hasStructuredLines = false;
-  }
-  
-  if (hasStructuredLines) {
-    // console.log(`Text appears to have ${topLevelTspans.length} structured lines with y-coordinates`);
-  }
-  
   return { hasStructuredLines, topLevelTspans };
 }
 
@@ -227,17 +197,6 @@ async function shouldPreserveLayoutAsync(textElement, styleAttr) {
   return false;
 }
 
-async function calculateTextBoundsAsync(shapeBounds, styleAttr) {
-  const shapePadding = await extractNumericPropertyFromStyleAsync(styleAttr, 'shape-padding') || 0;
-  
-  return {
-    x: shapeBounds.x + shapePadding,
-    y: shapeBounds.y + shapePadding,
-    width: shapeBounds.width - (shapePadding * 2),
-    height: shapeBounds.height - (shapePadding * 2)
-  };
-}
-
 /**
  * Extract formatting from a text element
  * @param {Element} textElement - Text element
@@ -254,56 +213,49 @@ async function extractFormattingFromElementAsync(textElement, plainContent, form
   // Process the text to extract formatting information
   const seenElements = new Set();
   
-  // First, check for any direct tspans with font-size attributes or italic style
+  // First, check for any direct tspans with formatting attributes
   const allTspans = textElement.querySelectorAll('tspan');
   for (const tspan of allTspans) {
-    // Check for font-size in style attribute or as a direct attribute
-    const fontSizeStyle = (tspan.getAttribute('style') || '').match(/font-size\s*:\s*([^;]+)/)?.[1];
-    const fontSizeAttr = tspan.getAttribute('font-size');
+    // Get all attributes from the tspan
+    const attributes = tspan.attributes;
+    const style = tspan.getAttribute('style') || '';
     
-    // Check for italic style
-    const fontStyleStyle = (tspan.getAttribute('style') || '').match(/font-style\s*:\s*([^;]+)/)?.[1];
-    const fontStyleAttr = tspan.getAttribute('font-style');
-    const fontStyle = fontStyleAttr || fontStyleStyle || 'normal';
-    
-    // Check for font-weight
-    const fontWeightStyle = (tspan.getAttribute('style') || '').match(/font-weight\s*:\s*([^;]+)/)?.[1];
-    const fontWeightAttr = tspan.getAttribute('font-weight');
-    const fontWeight = fontWeightAttr || fontWeightStyle || 'normal';
-    
-    // Check if this tspan has any special formatting
-    if (fontSizeStyle || fontSizeAttr || fontStyle === 'italic' || fontWeight === 'bold') {
-      const fontSize = fontSizeStyle || fontSizeAttr || '';
-      
-      // Only log if there's special formatting (bold or italic)
-      if (fontStyle === 'italic' || fontWeight === 'bold') {
-        // console.log(`Found tspan with font-size: ${fontSize}, font-style: ${fontStyle}, font-weight: ${fontWeight} for text: "${tspan.textContent}"`);
+    // Parse style attribute into individual properties
+    const styleProps = {};
+    style.split(';').forEach(prop => {
+      const [key, value] = prop.split(':').map(s => s.trim());
+      if (key && value) {
+        styleProps[key] = value;
       }
-      
-      // Extract numeric value from string like "90px"
-      let fontSizeValue = fontSize;
-      if (typeof fontSize === 'string') {
-        const fontSizeMatch = fontSize.match(/(\d+(\.\d+)?)/);
-        if (fontSizeMatch) {
-          fontSizeValue = parseFloat(fontSizeMatch[1]);
-        }
+    });
+
+    // Create formatting object with all style properties and attributes
+    const formatting = {};
+    
+    // Add direct attributes
+    for (let i = 0; i < attributes.length; i++) {
+      const attr = attributes[i];
+      if (attr.name !== 'style') {
+        formatting[attr.name] = attr.value;
       }
-      
-      // Find this tspan's text within the plainContent
-      const tspanText = tspan.textContent;
-      if (tspanText && tspanText.trim().length > 0) {
-        const position = plainContent.indexOf(tspanText);
-        if (position >= 0) {
-          formattingRanges.push({
-            start: position,
-            end: position + tspanText.length,
-            fontFamily: tspan.getAttribute('font-family') || 
-                       (tspan.getAttribute('style') || '').match(/font-family\s*:\s*([^;]+)/)?.[1] || '',
-            fontWeight: fontWeight,
-            fontStyle: fontStyle,
-            fontSize: fontSizeValue
-          });
-        }
+    }
+    
+    // Add style properties
+    Object.entries(styleProps).forEach(([key, value]) => {
+      // Convert kebab-case to camelCase for consistency
+      const camelKey = key.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
+      formatting[camelKey] = value;
+    });
+
+    // Only add formatting if there are style properties
+    if (Object.keys(formatting).length > 0) {
+      const startIndex = plainContent.indexOf(tspan.textContent);
+      if (startIndex >= 0) {
+        formattingRanges.push({
+          start: startIndex,
+          end: startIndex + tspan.textContent.length,
+          ...formatting
+        });
       }
     }
   }
@@ -517,19 +469,10 @@ async function createWrappedTextElementAsync(textElement, textBounds, plainConte
   addFontAttributes(newTextElement, textElement, formattingRanges);
   
   // Get font size for line wrapping calculation
-  const fontSize = await extractFontSizeAsync(textElement);
+  const fontSize = await extractFontSizeAsync(textElement) || DEFAULT_FONT_SIZE;
   
   // Get font attributes for the text element
   const fontAttrs = await extractFontAttributesAsync(textElement);
-  
-  // Initialize fontkit if not already initialized
-  if (!fontCache.initialized) {
-    try {
-      await fontCache.initialize();
-    } catch (err) {
-      console.error('Error initializing font cache:', err);
-    }
-  }
   
   const hasExplicitNewlines = plainContent.includes('\n');
   // First, split by explicit newlines
@@ -970,7 +913,7 @@ async function addWrappedTextAsTspansAsync(textElement, wrappedLines, textBounds
 
 // Helper function to apply formatting to text
 async function applyFormattingAsync(tspan, text, start, end, formattingRanges) {
-  const document = tspan.ownerDocument; // Get document from the tspan element
+  const document = tspan.ownerDocument;
   
   if (formattingRanges.length === 0) {
     tspan.textContent = text;
@@ -996,12 +939,16 @@ async function applyFormattingAsync(tspan, text, start, end, formattingRanges) {
 
     // Add formatted text
     const formattedTspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
-    if (range.fontWeight) {
-      formattedTspan.setAttribute('font-weight', range.fontWeight);
+    
+    // Copy all style attributes from the range
+    for (const [key, value] of Object.entries(range)) {
+      if (key !== 'start' && key !== 'end' && value) {
+        // Convert camelCase to kebab-case for attribute names
+        const attrName = key.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+        formattedTspan.setAttribute(attrName, value);
+      }
     }
-    if (range.fontStyle) {
-      formattedTspan.setAttribute('font-style', range.fontStyle);
-    }
+
     formattedTspan.textContent = text.substring(rangeStart, rangeEnd);
     tspan.appendChild(formattedTspan);
 
@@ -1016,77 +963,6 @@ async function applyFormattingAsync(tspan, text, start, end, formattingRanges) {
   }
 }
 
-/**
- * Rewrap text in a text element
- * @param {Element} textElement - Text element to rewrap
- */
-async function rewrapTextAsyncElementAsync(textElement) {
-  // Get text content and formatting
-  let plainContent = '';
-  let formattingRanges = [];
-  
-  // Extract text content
-  const hasStructuredLines = textElement.querySelectorAll('tspan').length > 0;
-  const topLevelTspans = Array.from(textElement.children).filter(child => child.tagName === 'tspan');
-  
-  // Initialize text content
-  const textContentInfo = await initializeTextContentAsync(textElement);
-  plainContent = textContentInfo.plainContent;
-  
-  // Extract formatting information
-  const formattingInfo = await extractFormattingFromElementAsync(
-    textElement, 
-    plainContent, 
-    formattingRanges, 
-    hasStructuredLines, 
-    topLevelTspans, 
-    textContentInfo.rootTextContent
-  );
-  
-  // Get the text bounds
-  const styleAttr = textElement.getAttribute('style') || '';
-  const shapeBounds = await calculateTextBoundsAsync(null, styleAttr);
-  
-  // Determine the container width
-  const containerWidth = await estimateContainerWidthAsync(textElement);
-  
-  // Extract font size
-  const fontSize = await extractFontSizeAsync(textElement);
-  
-  // Extract font attributes
-  const fontAttrs = await extractFontAttributesAsync(textElement);
-  
-  // Wrap the text
-  const wrappedLines = await wrapTextAsync(
-    plainContent, 
-    fontSize, 
-    containerWidth, 
-    fontAttrs, 
-    formattingRanges
-  );
-  
-  // Clear the text element
-  while (textElement.firstChild) {
-    textElement.removeChild(textElement.firstChild);
-  }
-  
-  // Add the wrapped text as tspans
-  await addWrappedTextAsTspansAsync(
-    textElement, 
-    wrappedLines, 
-    shapeBounds, 
-    fontSize, 
-    formattingRanges
-  );
-  
-  // Add font attributes to the text element
-  addFontAttributes(textElement, textElement, formattingRanges);
-  
-  // Mark as processed
-  textElement.setAttribute('data-processed', 'true');
-}
-
 module.exports = {
-  processTextElementsAsync,
-  rewrapTextAsyncElementAsync
+  replaceShapeInsideTextElementsWithPositionedTspans
 }; 

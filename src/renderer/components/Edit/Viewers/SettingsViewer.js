@@ -13,6 +13,16 @@ const settingsFile = {
         requiresRestart: false,
         
     },
+    renderProgram: {
+        title: "Which Rendering Program Should Templative Use?",
+        section: "Rendering",
+        defaultValue: "Templative",
+        type: "select",
+        options: ["Templative", "Inkscape"],
+        description: "Whether to use Templative's svg renderer or Inkscape's svg renderer. Inkscape has more sophisticated text wrapping than Templative, but naturally you need to have Inkscape installed to use it. Download it for free at inkscape.org/download",
+        isDisabled: false,
+        requiresRestart: false,
+    },
     isCacheIgnored: { 
         title: "Is the Rendering Cache Ignored?", 
         section: "Rendering",
@@ -61,11 +71,9 @@ export default class SettingsViewer extends EditableViewerJson {
 
         const settingsSections = new Set();
         for (const key in settingsFile) {
-            // console.log(key, settingsFile[key]);
             settingsSections.add(settingsFile[key].section);
         }
         const settingsSectionsArray = Array.from(settingsSections);
-        console.log(settingsSectionsArray);
         return <div className="settings-viewer">
             <div className="settings-viewer-container">
                 {settingsSectionsArray.map((section) => {
@@ -77,15 +85,29 @@ export default class SettingsViewer extends EditableViewerJson {
                                 <p className="settings-viewer-title">{settingsFile[key].title}</p>
                                 <p className="settings-viewer-description">{settingsFile[key].description}</p>
                                 <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
-                                    <select 
-                                        value={(this.state.content[key] || settingsFile[key].defaultValue).toString()} 
-                                        onChange={(event)=>this.updateBooleanValue(key, event.target.value, settingsFile[key].requiresRestart)} 
-                                        className={`form-select scope-select ${settingsFile[key].isDisabled ? "disabled" : ""}`}
-                                        disabled={settingsFile[key].isDisabled}
-                                    >
-                                        <option value="true">True</option>
-                                        <option value="false">False</option>
-                                    </select>
+                                    {settingsFile[key].type === "boolean" && 
+                                        <select 
+                                            value={(this.state.content[key] || settingsFile[key].defaultValue).toString()} 
+                                            onChange={(event)=>this.updateBooleanValue(key, event.target.value, settingsFile[key].requiresRestart)} 
+                                            className={`form-select scope-select ${settingsFile[key].isDisabled ? "disabled" : ""}`}
+                                            disabled={settingsFile[key].isDisabled}
+                                        >
+                                            <option value="true">True</option>
+                                            <option value="false">False</option>
+                                        </select>
+                                    }
+                                    {settingsFile[key].type === "select" && 
+                                        <select 
+                                            value={(this.state.content[key] || settingsFile[key].defaultValue).toString()} 
+                                            onChange={(event)=>this.updateValue(key, event.target.value, settingsFile[key].requiresRestart)} 
+                                            className={`form-select scope-select ${settingsFile[key].isDisabled ? "disabled" : ""}`}
+                                            disabled={settingsFile[key].isDisabled}
+                                        >
+                                            {settingsFile[key].options.map((option) => (
+                                                <option key={key + option} value={option}>{option}</option>
+                                            ))}
+                                        </select>
+                }
                                 </div>
                             </div>
                         ))}

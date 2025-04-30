@@ -1,20 +1,25 @@
 const { createHash } = require('crypto');
 const path = require('path');
 const fsExtra = require('fs-extra');
+const { JSDOM } = require('jsdom');
 const { COMPONENT_INFO } = require('../../../../../../shared/componentInfo.js');
-const { convertSvgContentToPng } = require('./modules/fileConversion/svgConverter.js');
-
+const { convertSvgContentToPngUsingResvg } = require('./fileConversion/svgToRasterConverter.js');
 const { addNewlines } = require("./artdataProcessing/newlineInserter.js");
-const { outputSvgArtFile} = require("./modules/artFileCreator.js");
+const { outputSvgArtFile} = require("./fileConversion/svgArtExporter.js");
 const { addOverlays, collectOverlayFiles} = require("./artdataProcessing/overlayHandler.js");
 const { textReplaceInFile} = require("./artdataProcessing/textReplacer.js");
 const { updateStylesInFile} = require("./artdataProcessing/styleUpdater.js");
-const { clipSvgContentToClipFile, CLIPPING_ELEMENT_ID } = require("./modules/imageClipper.js");
+const { clipSvgContentToClipFile, CLIPPING_ELEMENT_ID } = require("./artdataProcessing/imageClipper.js");
 const { getComponentTemplatesDirectoryPath } = require("../../../componentTemplateUtility.js");
-const { preprocessSvgTextAsync } = require('./modules/fileConversion/textWrapping/index.js');
-const { SvgFileCache } = require('./modules/svgFileCache.js');
-const { ArtCache } = require('./modules/artCache.js');
-const { RENDER_MODE } = require('../../../manage/models/produceProperties');
+const { SvgFileCache } = require('./caching/svgFileCache.js');
+const { createInputHash, getCachedFiles, getRenderedPiecesCacheDir, cacheFiles } = require('./caching/renderedPiecesCache.js');
+const { RENDER_MODE, RENDER_PROGRAM } = require('../../../manage/models/produceProperties');
+const { cleanupSvgNamespacesAsync, cleanupUnusedDefs } = require('./artdataProcessing/svgCleaner.js');
+const { replaceShapeInsideTextElementsWithPositionedTspans } = require('./artdataProcessing/shapeInsideReplacer.js');
+const { replaceIconGlyphWithPuaCharsAsync } = require('./artdataProcessing/iconGlyphReplacer');
+const { replaceFormattingShortcutElementsWithTspansAsync } = require('./artdataProcessing/formattingShortcutReplacer');
+const { captureException } = require('../../../sentryElectronWrapper.js');
+const { exportSvgToPngUsingInkscape } = require('./fileConversion/inkscapeProcessor.js');
 
 // Helper function to create a unique hash for a piece
 function createUniqueBackHashForPiece(pieceSpecificBackArtDataSources, pieceGamedata) {
@@ -144,8 +149,7 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       );
 
       // Create cache key from all inputs including overlays
-      const artCache = new ArtCache();
-      const inputHash = await artCache.createInputHash({
+      const inputHash = await createInputHash({
           artdata,
           gamedata,
           productionProperties,
@@ -155,7 +159,7 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       });
 
       // Check cache
-      const cachedFiles = await artCache.getCachedFiles(inputHash);
+      const cachedFiles = await getCachedFiles(inputHash);
       const hasCachedFiles = cachedFiles !== null;
       
       if (hasCachedFiles) {
@@ -174,7 +178,7 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
             return;
         }
       }
-      var absoluteEndResultDirectoryPath = path.normalize(path.resolve(componentBackOutputDirectory || artCache.cacheDir));
+      var absoluteEndResultDirectoryPath = path.normalize(path.resolve(componentBackOutputDirectory || getRenderedPiecesCacheDir()));
       
       // If not cached, generate new files
       let contents = templateContent;
@@ -182,25 +186,41 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       contents = await textReplaceInFile(contents, artdata["textReplacements"], gamedata, productionProperties);
       contents = await updateStylesInFile(contents, artdata["styleUpdates"], gamedata);
       contents = await addNewlines(contents);
-      contents = await preprocessSvgTextAsync(contents, productionProperties.inputDirectoryPath);
+      contents = await cleanupSvgNamespacesAsync(contents);
+      const dom = new JSDOM(contents, { contentType: 'image/svg+xml' });
+      const document = dom.window.document;
+      
+      await replaceFormattingShortcutElementsWithTspansAsync(document);
+      await replaceIconGlyphWithPuaCharsAsync(document, productionProperties.inputDirectoryPath);
+    //   if (productionProperties.renderProgram === RENDER_PROGRAM.TEMPLATIVE && contents.includes('shape-inside:url(#')) {
+    //     await replaceShapeInsideTextElementsWithPositionedTspans(document);
+    //   }
+      await cleanupUnusedDefs(document);
+      contents = dom.serialize();
       
       if (productionProperties.isClipped) {
-          const potentialPaths = await getComponentTemplatesDirectoryPath(componentType);
-          const clipSvgFilepath = path.join(potentialPaths, `${componentType}.svg`);
-          try {
-            contents = await clipSvgContentToClipFile(contents, clipSvgFilepath, CLIPPING_ELEMENT_ID, svgFileCache);
-          } catch (error) {
-            if (error.code !== 'ENOENT') {
-              throw error;
-            }
+        const potentialPaths = await getComponentTemplatesDirectoryPath(componentType);
+        const clipSvgFilepath = path.join(potentialPaths, `${componentType}.svg`);
+        try {
+          contents = await clipSvgContentToClipFile(contents, clipSvgFilepath, CLIPPING_ELEMENT_ID, svgFileCache);
+        } catch (error) {
+          if (error.code !== 'ENOENT') {
+            throw error;
           }
+        }
       }
       // Create and cache the files
       await outputSvgArtFile(contents, artFileOutputName, imageSizePixels, absoluteEndResultDirectoryPath);
+      const absoluteSvgFilepath = path.join(absoluteEndResultDirectoryPath, `${artFileOutputName}.svg`);
       var absolutePngFilepath = path.join(absoluteEndResultDirectoryPath, `${artFileOutputName}.png`);
-      await convertSvgContentToPng(contents, imageSizePixels, absolutePngFilepath);
+      if (productionProperties.renderProgram === RENDER_PROGRAM.INKSCAPE) {
+        await exportSvgToPngUsingInkscape(absoluteSvgFilepath, absolutePngFilepath);
+      }
+      else {
+        await convertSvgContentToPngUsingResvg(contents, imageSizePixels, absolutePngFilepath);
+      }
 
-      await artCache.cacheFiles(inputHash, contents, absolutePngFilepath);
+      await cacheFiles(inputHash, contents, absolutePngFilepath);
       console.log(`Produced ${pieceName}`);
     } catch (error) {
       console.error(`Error producing ${pieceName}: ${error.message}`);

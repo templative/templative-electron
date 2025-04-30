@@ -1,12 +1,3 @@
-const { processTextElementsAsync } = require('./textProcessor');
-/**
- * Preprocess SVG text to remove SVG 2.0 features that aren't compatible with resvg-js
- * @param {string} svgData - SVG content as string
- * @param {boolean} force_rewrap - Force rewrapping of text even if it has positioned tspans
- * @returns {string} - Processed SVG data
- */
-
-
 /**
  * Clean up SVG namespaces and remove problematic attributes
  * @param {string} svgData - SVG content as string
@@ -46,43 +37,12 @@ async function cleanupSvgNamespacesAsync(svgData) {
 }
 
 /**
- * Fallback preprocessing for SVGs that don't need special handling
- * @param {string} svgData - SVG content as string
- * @param {boolean} force_rewrap - Force rewrapping of text
- * @returns {string} - Processed SVG data
- */
-async function fallbackPreprocessingAsync(svgData, force_rewrap) {
-  try {
-    // Parse the SVG using JSDOM
-    const { JSDOM } = require('jsdom');
-    const dom = new JSDOM(svgData, { contentType: 'image/svg+xml' });
-    const document = dom.window.document;
-    
-    // Process text elements
-    await processTextElementsAsync(document, force_rewrap);
-    
-    // Add font styles
-    const { addFontStylesAsync } = require('./fontHandler');
-    svgData = await addFontStylesAsync(dom.serialize());
-    
-    return svgData;
-  } catch (error) {
-    console.error(`Error in fallbackPreprocessingAsync: ${error.message}`);
-    return svgData;
-  }
-}
-
-/**
  * Clean up unused definitions in SVG
  * @param {string} svgData - SVG content as string
  * @returns {string} - Cleaned SVG data
  */
-async function cleanupUnusedDefsAsync(svgData) {
-  try {
-    const { JSDOM } = require('jsdom');
-    const dom = new JSDOM(svgData, { contentType: 'image/svg+xml' });
-    const document = dom.window.document;
-    
+async function cleanupUnusedDefs(document) {
+  try {    
     // Find all defs elements
     const defsElements = document.querySelectorAll('defs');
     
@@ -119,21 +79,31 @@ async function cleanupUnusedDefsAsync(svgData) {
           removedElements++;
         }
       });
-    });
-    
-    if (removedElements > 0) {
-      // console.log(`Removed ${removedElements} unused elements from defs`);
-    }
-    
-    return dom.serialize();
+    })    
   } catch (error) {
     console.error(`Error cleaning up unused defs: ${error.message}`);
-    return svgData;
   }
 }
+function sanitizeSvgContent(content) {
+  if (!content) return "";
+  
+  // Fix common XML issues
+  return content
+      // Ensure XML declaration is correct
+      .replace(/^<\?xml[^>]*\?>/, '<?xml version="1.0" encoding="UTF-8" standalone="no"?>')
+      // Fix self-closing tags
+      .replace(/<([a-zA-Z][a-zA-Z0-9]*)\s+([^>]*)\/>/g, '<$1 $2></$1>')
+      // Remove any control characters
+      .replace(/[\x00-\x09\x0B\x0C\x0E-\x1F\x7F]/g, '')
+      // Fix unclosed CDATA sections
+      .replace(/<!\[CDATA\[([^\]]*)(?!\]\]>)/g, '<![CDATA[$1]]>')
+      // Fix unescaped ampersands
+      .replace(/&(?!amp;|lt;|gt;|quot;|apos;|#\d+;|#x[0-9a-fA-F]+;)/g, '&amp;');
+}
+
 
 module.exports = {
   cleanupSvgNamespacesAsync,
-  fallbackPreprocessingAsync,
-  cleanupUnusedDefsAsync
+  cleanupUnusedDefs,
+  sanitizeSvgContent
 }; 
