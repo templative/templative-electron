@@ -18,7 +18,7 @@ const { updateToast } = require('../toastNotifier');
 const { readOrCreateSettingsFile } = require('../templativeProjectManager');
 const path = require('path');
 const { RENDER_MODE, RENDER_PROGRAM } = require('./lib/manage/models/produceProperties');
-
+const { getSessionToken } = require('../sessionStore');
 
 const createTemplativeComponent = withLogCapture(async (event, data) => {
   try {
@@ -130,8 +130,11 @@ const createPrintout = withLogCapture(async (event, data) => {
 const createSimulatorSave = withLogCapture(async (event, data) => {
   try {
     const { outputDirectorypath, tabletopSimulatorDocumentsDirectorypath } = data;
-    
-    const result = await convertToTabletopSimulator(outputDirectorypath, tabletopSimulatorDocumentsDirectorypath);
+    const templativeToken = await getSessionToken();
+    if (!templativeToken) {
+      return { success: false, error: 'You must be logged into Templative to create a Tabletop Simulator save.' };
+    }
+    const result = await convertToTabletopSimulator(outputDirectorypath, tabletopSimulatorDocumentsDirectorypath, templativeToken);
     updateToast(`/${path.basename(outputDirectorypath)} Simulator save created.`, "success");
     return { success: result === 1, message: 'Simulator save created' };
   } catch (error) {

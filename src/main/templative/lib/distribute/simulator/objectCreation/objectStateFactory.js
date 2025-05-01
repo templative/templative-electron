@@ -13,7 +13,7 @@ const {captureMessage, captureException } = require("../../../sentryElectronWrap
  * @param {string} tabletopSimulatorDirectoryPath - Path to the TTS directory
  * @returns {Promise<Array>} - Array of object states
  */
-async function createObjectStates(producedDirectoryPath, tabletopSimulatorDirectoryPath) {
+async function createObjectStates(producedDirectoryPath, tabletopSimulatorDirectoryPath, templativeToken) {
   const objectStates = [];
   let index = 0;
   const directories = await fs.readdir(producedDirectoryPath, { withFileTypes: true });
@@ -33,7 +33,7 @@ async function createObjectStates(producedDirectoryPath, tabletopSimulatorDirect
   for (const directory of directories) {
     if (directory.isDirectory()) {
       const componentDirectoryPath = path.join(producedDirectoryPath, directory.name);
-      const objectState = await createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPath, tabletopSimulatorImageDirectoryPath, index, directories.length);
+      const objectState = await createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPath, tabletopSimulatorImageDirectoryPath, index, directories.length, templativeToken);
       index++;
       if (objectState === null) {
         continue;
@@ -53,7 +53,7 @@ async function createObjectStates(producedDirectoryPath, tabletopSimulatorDirect
  * @param {number} componentCountTotal - Total number of components
  * @returns {Promise<Object|null>} - Object state or null if failed
  */
-async function createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPath, tabletopSimulatorImageDirectoryPath, componentIndex, componentCountTotal) {
+async function createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPath, tabletopSimulatorImageDirectoryPath, componentIndex, componentCountTotal, templativeToken) {
   try {    
     const componentInstructionsFilepath = path.join(componentDirectoryPath, "component.json");
     const componentInstructions = JSON.parse(await fs.readFile(componentInstructionsFilepath, 'utf8'));
@@ -72,7 +72,7 @@ async function createObjectState(componentDirectoryPath, tabletopSimulatorDirect
         return null;
       }
       
-      return await createStock(componentInstructions, stockComponentInfo);
+      return await createStock(componentInstructions, stockComponentInfo, templativeToken);
     }
 
     if (!COMPONENT_INFO.hasOwnProperty(componentInstructions.type)) {
@@ -97,7 +97,7 @@ async function createObjectState(componentDirectoryPath, tabletopSimulatorDirect
     }
 
     // Use the new createCustom function for all custom components
-    return await createCustom(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal);
+    return await createCustom(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal, templativeToken);
   } catch (error) {
     console.log(`!!! Error creating object state for ${componentDirectoryPath}.`);
     captureException(error);

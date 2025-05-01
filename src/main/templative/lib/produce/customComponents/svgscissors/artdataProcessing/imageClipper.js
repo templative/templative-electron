@@ -1,4 +1,3 @@
-const { loadSvg } = require('../../../../distribute/simulator/imageProcessing/imageUtils.js');
 const { JSDOM } = require('jsdom');
 const path = require('path');
 const { SvgFileCache } = require('../caching/svgFileCache.js');

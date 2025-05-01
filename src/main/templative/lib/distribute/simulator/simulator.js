@@ -11,7 +11,8 @@ const { createObjectStates, createComponentLibrary } = require('./objectCreation
  * @param {string} tabletopSimulatorDirectoryPath - Path to the Tabletop Simulator directory
  * @returns {Promise<number>} - 1 if successful
  */
-async function convertToTabletopSimulator(producedDirectoryPath, tabletopSimulatorDirectoryPath) {
+async function convertToTabletopSimulator(producedDirectoryPath, tabletopSimulatorDirectoryPath, templativeToken) {
+
   producedDirectoryPath = path.resolve(producedDirectoryPath);
   tabletopSimulatorDirectoryPath = path.resolve(tabletopSimulatorDirectoryPath);
 
@@ -33,7 +34,7 @@ async function convertToTabletopSimulator(producedDirectoryPath, tabletopSimulat
 
   const uniqueGameName = path.basename(producedDirectoryPath);
 
-  const objectStates = await createObjectStates(producedDirectoryPath, tabletopSimulatorDirectoryPath);
+  const objectStates = await createObjectStates(producedDirectoryPath, tabletopSimulatorDirectoryPath, templativeToken);
 
   let rulesContent = "";
   const rulesPath = path.join(producedDirectoryPath, "rules.md");
