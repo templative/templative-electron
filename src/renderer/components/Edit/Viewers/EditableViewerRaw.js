@@ -91,7 +91,6 @@ export default class EditableViewerRaw extends React.Component {
         if (!this.state.filepath) return;
         
         try {
-            
             var currentFileContent;
             try {
                 currentFileContent = await this.loadFileContent(this.state.filepath)
@@ -108,13 +107,14 @@ export default class EditableViewerRaw extends React.Component {
             }
             
             if (currentFileContent !== this.state.lastKnownFileContents) {
-                this.setState({ 
-                    lastKnownFileContents: currentFileContent
-                })
-                
                 if (this.state.content === this.state.lastKnownFileContents) {
-                    this.setState({
-                        content: currentFileContent
+                    this.setState({ 
+                        content: currentFileContent,
+                        lastKnownFileContents: currentFileContent
+                    })
+                } else {
+                    this.setState({ 
+                        lastKnownFileContents: currentFileContent
                     })
                 }
             }

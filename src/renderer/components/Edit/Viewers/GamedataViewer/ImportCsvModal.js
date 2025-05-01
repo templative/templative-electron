@@ -71,7 +71,12 @@ const ImportCsvModal = ({ filenameWeAreOverwriting, isOpen, onClose, handleFileD
     // Url for share link is https://docs.google.com/spreadsheets/d/1x3uniNmn1bsay_q94PQq0dIwbNfD9RbGUOVcDfolaNY/pub?output=csv
     // https://spreadsheets.google.com/feeds/download/spreadsheets/Export?key=1x3uniNmn1bsay_q94PQq0dIwbNfD9RbGUOVcDfolaNY&exportFormat=csv
     const confirmImportFromGoogleSheet = async () => {
-        if (googleSheetUrl && window.confirm("Are you sure you want to import this file? This will overwrite everything in " + filenameWeAreOverwriting + "!")) {
+        const isValid = googleSheetUrl.startsWith('https://docs.google.com/spreadsheets/d/') || googleSheetUrl.startsWith('https://docs.google.com/spreadsheets/d/')
+        if (!isValid) {
+            alert('Please enter a valid Google Sheets URL. For example: https://docs.google.com/spreadsheets/d/.../edit#gid=...')
+            return
+        }
+        if (window.confirm("Are you sure you want to import this file? This will overwrite everything in " + filenameWeAreOverwriting + "!")) {
             const documentId = googleSheetUrl.split('/d/')[1].split('/')[0];
             await handleFileDropAsync(`https://spreadsheets.google.com/feeds/download/spreadsheets/Export?key=${documentId}&exportFormat=csv`);
         }

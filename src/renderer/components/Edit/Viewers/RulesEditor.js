@@ -10,12 +10,11 @@ export default class RulesEditor extends EditableViewerRaw {
         return path.join(props.templativeRootDirectoryPath, "rules.md")
     }
     updateContent = (value) => {
-        if (!this.state.hasLoaded) {
-            return
+        if (this.state.content !== value) {
+            this.setState({content: value}, async () => {
+                await this.autosave()
+            })
         }
-        this.setState({content: value}, async () => {
-            await this.autosave()
-        })
     }
     render() {
         if (this.state.failedToLoad) {
@@ -27,7 +26,7 @@ export default class RulesEditor extends EditableViewerRaw {
         
         return <div className="rules-body">
             <MarkdownEditor 
-                value={this.state.hasLoaded ? this.state.content : ""} 
+                value={this.state.content || ""} 
                 onChange={(value, _) => this.updateContent(value)}
             />
         </div>
