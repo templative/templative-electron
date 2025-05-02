@@ -73,7 +73,6 @@ const previewPiece = withLogCapture(async (event, data) => {
     const { componentFilter, pieceFilter, language, directoryPath } = data;
     const settings = await readOrCreateSettingsFile();
     const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;
-    const overlappingRenderingTasks = settings.overlappingRenderingTasks || "All at Once";
     await producePiecePreview(directoryPath, componentFilter, pieceFilter, language, renderProgram)
     updateToast(`${componentFilter} preview complete.`, "brush");
     
