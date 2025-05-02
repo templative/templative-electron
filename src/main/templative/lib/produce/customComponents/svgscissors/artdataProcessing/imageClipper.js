@@ -8,30 +8,58 @@ const defaultSvgFileCache = new SvgFileCache();
 
 // Takes an svg file and clips the visibility of its contents to the bounds of the clipSvgElementId
 async function clipSvgFileToClipFile(svgFilepath, clipSvgFilepath, clipSvgElementId=CLIPPING_ELEMENT_ID, svgFileCache=defaultSvgFileCache) {
-    const svgContent = await svgFileCache.readSvgFile(svgFilepath);
-    if (!svgContent) {
-        const shortPath = path.basename(path.dirname(svgFilepath)) + path.sep + path.basename(svgFilepath);
-        console.log(`!!! SVG file ${shortPath} does not exist.`);
-        return false;
+    if (!svgFilepath) {
+        console.log(`!!! SVG file path is required.`);
+        throw new Error(`!!! SVG file path is required.`);
     }
-    const clipSvgContent = await svgFileCache.readSvgFile(clipSvgFilepath);
-    if (!clipSvgContent) {
-        const shortPath = path.basename(path.dirname(clipSvgFilepath)) + path.sep + path.basename(clipSvgFilepath);
-        console.log(`!!! Clip SVG file ${shortPath} does not exist.`);
-        return false;
+    if (!clipSvgFilepath) {
+        console.log(`!!! Clip SVG file path is required.`);
+        throw new Error(`!!! Clip SVG file path is required.`);
+    }
+    let svgContent;
+    try {
+        svgContent = await svgFileCache.readSvgFile(svgFilepath);
+    } catch (error) {
+        if (error.message.includes("ENOENT")) {
+            const shortPath = path.basename(path.dirname(svgFilepath)) + path.sep + path.basename(svgFilepath);
+            console.log(`!!! SVG file ${shortPath} does not exist.`);
+            return false;
+        } else {
+            throw error;
+        }
+    }
+    let clipSvgContent;
+    try {
+        clipSvgContent = await svgFileCache.readSvgFile(clipSvgFilepath);
+    } catch (error) {
+        if (error.message.includes("ENOENT")) {
+            const shortPath = path.basename(path.dirname(clipSvgFilepath)) + path.sep + path.basename(clipSvgFilepath);
+            console.log(`!!! Clip SVG file ${shortPath} does not exist.`);
+            return false;
+        } else {
+            throw error;
+        }
     }
 
     return clipSvgContentToElement(svgContent, clipSvgContent, clipSvgElementId);
 }
 
 async function clipSvgContentToClipFile(svgContent, clipSvgFilepath, clipSvgElementId=CLIPPING_ELEMENT_ID, svgFileCache=defaultSvgFileCache) {
-
-    const clipSvgContent = await svgFileCache.readSvgFile(clipSvgFilepath);
-        
-    if (!clipSvgContent) {
-        const shortPath = path.basename(path.dirname(clipSvgFilepath)) + path.sep + path.basename(clipSvgFilepath);
-        console.log(`!!! Clip SVG file ${shortPath} does not exist.`);
-        return false;
+    if (!clipSvgFilepath) {
+        console.log(`!!! Clip SVG file path is required.`);
+        throw new Error(`!!! Clip SVG file path is required.`);
+    }
+    let clipSvgContent;
+    try {
+        clipSvgContent = await svgFileCache.readSvgFile(clipSvgFilepath);
+    } catch (error) {
+        if (error.message.includes("ENOENT")) {
+            const shortPath = path.basename(path.dirname(clipSvgFilepath)) + path.sep + path.basename(clipSvgFilepath);
+            console.log(`!!! Clip SVG file ${shortPath} does not exist.`);
+            throw new Error(`!!! Clip SVG file ${shortPath} does not exist.`);
+        } else {
+            throw error;
+        }
     }
     return clipSvgContentToElement(svgContent, clipSvgContent, clipSvgElementId);
 }
