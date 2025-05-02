@@ -1,5 +1,5 @@
 class ProduceProperties {
-  constructor(inputDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage, isClipped=false, renderMode=RENDER_MODE.RENDER_EXPORT_WITHOUT_CACHE, renderProgram=RENDER_PROGRAM.TEMPLATIVE) {
+  constructor(inputDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage, isClipped=false, renderMode=RENDER_MODE.RENDER_EXPORT_WITHOUT_CACHE, renderProgram=RENDER_PROGRAM.TEMPLATIVE, overlappingRenderingTasks=OVERLAPPING_RENDERING_TASKS.ONE_AT_A_TIME) {
     this.inputDirectoryPath = inputDirectoryPath;
     this.outputDirectoryPath = outputDirectoryPath;
     this.isPublish = isPublish;
@@ -8,6 +8,7 @@ class ProduceProperties {
     this.isClipped = isClipped;
     this.renderMode = renderMode;
     this.renderProgram = renderProgram;
+    this.overlappingRenderingTasks = overlappingRenderingTasks;
   }
 }
 
@@ -19,6 +20,10 @@ const RENDER_MODE = {
 const RENDER_PROGRAM = {
   TEMPLATIVE: 'Templative',
   INKSCAPE: 'Inkscape'
+}
+const OVERLAPPING_RENDERING_TASKS = {
+  ONE_AT_A_TIME: 'One at a Time',
+  ALL_AT_ONCE: 'All at Once'
 }
 
 class PreviewProperties {
@@ -32,12 +37,14 @@ class PreviewProperties {
     this.isClipped = isClipped;
     this.renderMode = RENDER_MODE.RENDER_EXPORT_WITHOUT_CACHE;
     this.renderProgram = renderProgram;
+    this.overlappingRenderingTasks = OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE;
   }
 }
 
 module.exports = {
   RENDER_MODE,
   RENDER_PROGRAM,
+  OVERLAPPING_RENDERING_TASKS,
   ProduceProperties,
   PreviewProperties
 };

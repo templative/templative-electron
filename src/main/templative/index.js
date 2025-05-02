@@ -17,7 +17,7 @@ const {captureMessage, captureException } = require("./lib/sentryElectronWrapper
 const { updateToast } = require('../toastNotifier');
 const { readOrCreateSettingsFile } = require('../templativeProjectManager');
 const path = require('path');
-const { RENDER_MODE, RENDER_PROGRAM } = require('./lib/manage/models/produceProperties');
+const { RENDER_MODE, RENDER_PROGRAM, OVERLAPPING_RENDERING_TASKS } = require('./lib/manage/models/produceProperties');
 const { getSessionToken } = require('../sessionStore');
 
 const createTemplativeComponent = withLogCapture(async (event, data) => {
@@ -44,8 +44,9 @@ const produceTemplativeProject = withLogCapture(async (event, request) => {
     const settings = await readOrCreateSettingsFile();
     const isCacheIgnored = settings.isCacheIgnored;
     const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;
+    const overlappingRenderingTasks = settings.overlappingRenderingTasks || OVERLAPPING_RENDERING_TASKS.ONE_AT_A_TIME;
     const renderMode = isCacheIgnored ? RENDER_MODE.RENDER_EXPORT_WITHOUT_CACHE : RENDER_MODE.RENDER_EXPORT_USING_CACHE;
-    const outputDirectoryPath = await produceGame(directoryPath, componentFilter, !isComplex, NOT_PUBLISHED, language, NOT_CLIPPED, renderMode, renderProgram)
+    const outputDirectoryPath = await produceGame(directoryPath, componentFilter, !isComplex, NOT_PUBLISHED, language, NOT_CLIPPED, renderMode, renderProgram, overlappingRenderingTasks)
 
     updateToast(`/${path.basename(outputDirectoryPath)} render complete.`, "brush");
     return { success: true, outputDirectoryPath };
@@ -72,6 +73,7 @@ const previewPiece = withLogCapture(async (event, data) => {
     const { componentFilter, pieceFilter, language, directoryPath } = data;
     const settings = await readOrCreateSettingsFile();
     const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;
+    const overlappingRenderingTasks = settings.overlappingRenderingTasks || "All at Once";
     await producePiecePreview(directoryPath, componentFilter, pieceFilter, language, renderProgram)
     updateToast(`${componentFilter} preview complete.`, "brush");
     

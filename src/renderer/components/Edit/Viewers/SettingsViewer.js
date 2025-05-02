@@ -40,6 +40,16 @@ const settingsFile = {
         description: "If true, Templative will not re-render components as they change. This is useful if the background rendering is taxing your computer, but it means creating a render will be slower. Changing this setting won't take effect until you restart Templative.",
         isDisabled: false,
         requiresRestart: true,
+    },
+    overlappingRenderingTasks: {
+        title: "Overlapping Rendering Tasks",
+        section: "Rendering",
+        defaultValue: "One at a Time",
+        type: "select",
+        options: ["One at a Time", "All at Once"],
+        description: "If One at a Time, Templative will render each component, and each file for each component, one at a time. If All at Once, Templative will render all components and files for each component at the same time. This has the potential to better utilize your computer's resources, but it also has the potential to crash Templative, use at your own risk.",
+        isDisabled: false,
+        requiresRestart: false,
     }
 }
 

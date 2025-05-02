@@ -52,16 +52,29 @@ async function createArtFileForPiece(compositions, componentArtdata, uniqueCompo
 
         if ("Front" in componentArtdata.artDataBlobDictionary) {
             const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Front"], pieceData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache);
-            tasks.push(task);
+            if (previewProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
+                tasks.push(task);
+            } else {
+                await task;
+            }
         }
         if ("DieFace" in componentArtdata.artDataBlobDictionary) {
             const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["DieFace"], pieceData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache);
-            tasks.push(task);
+            if (previewProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
+                tasks.push(task);
+            } else {
+                await task;
+            }
         }
     }
     uniqueComponentBackData.componentBackDataBlob.name = "back";
     if ("Back" in componentArtdata.artDataBlobDictionary) {
-        tasks.push(createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Back"], uniqueComponentBackData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache));
+        const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Back"], uniqueComponentBackData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache);
+        if (previewProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
+            tasks.push(task);
+        } else {
+            await task;
+        }
     }
 
     await Promise.all(tasks);   
@@ -95,23 +108,38 @@ async function createArtFilesForComponent(compositions, componentArtdata, unique
 
         if ("Front" in componentArtdata.artDataBlobDictionary) {
             const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Front"], pieceData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache);
-            tasks.push(task);
+            if (produceProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
+                tasks.push(task);
+            } else {
+                await task;
+            }
         }
         if ("DieFace" in componentArtdata.artDataBlobDictionary) {
             const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["DieFace"], pieceData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache);
-            tasks.push(task);
+            if (produceProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
+                tasks.push(task);
+            } else {
+                await task;
+            }
         }
     }
 
     uniqueComponentBackData.componentBackDataBlob.name = "back";
     if ("Back" in componentArtdata.artDataBlobDictionary) {
-        tasks.push(createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Back"], uniqueComponentBackData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache));
+        const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Back"], uniqueComponentBackData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache);
+        if (produceProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
+            tasks.push(task);
+        } else {
+            await task;
+        }
     }
 
     await Promise.all(tasks);
 }
 
 async function createArtFileOfPiece(compositions, artdata, gamedata, componentBackOutputDirectory, productionProperties, fontCache, svgFileCache = new SvgFileCache()) {
+    const initialMemory = process.memoryUsage();  // Optional: for memory tracking
+    
     const templateFilesDirectory = compositions.gameCompose["artTemplatesDirectory"];
     if (artdata === null) {
       console.log(`!!! Missing artdata ${gamedata.componentDataBlob["name"]}`);
@@ -222,6 +250,14 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
 
       await cacheFiles(inputHash, contents, absolutePngFilepath);
       console.log(`Produced ${pieceName}`);
+      
+      // Optional: Log memory usage
+      const finalMemory = process.memoryUsage();
+      console.debug('Memory usage (MB):', {
+          heapDiff: (finalMemory.heapUsed - initialMemory.heapUsed) / 1024 / 1024,
+          current: finalMemory.heapUsed / 1024 / 1024,
+      });
+      
     } catch (error) {
       console.error(`Error producing ${pieceName}: ${error.message}`);
       console.error(error.stack);

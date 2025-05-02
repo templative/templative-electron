@@ -54,7 +54,8 @@ const DEFAULT_SETTINGS = {
     isOnChangeRenderingDisabled: false,
     isCacheIgnored: false,
     isGitEnabled: false,
-    renderProgram: "Templative"
+    renderProgram: "Templative",
+    overlappingRenderingTasks: "One at a Time"
 }
 
 async function readOrCreateSettingsFile() {

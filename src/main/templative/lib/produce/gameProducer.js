@@ -15,7 +15,7 @@ const GameData = require('../manage/models/gamedata').GameData;
 const ComponentComposition = require('../manage/models/composition');
 const FontCache = require('./customComponents/svgscissors/caching/fontCache').FontCache;
 const { SvgFileCache } = require('./customComponents/svgscissors/caching/svgFileCache');
-const { RENDER_MODE, RENDER_PROGRAM } = require('../manage/models/produceProperties');
+const { RENDER_MODE, RENDER_PROGRAM, OVERLAPPING_RENDERING_TASKS } = require('../manage/models/produceProperties');
 
 async function getPreviewsPath() {
     let base_path;
@@ -94,7 +94,7 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     console.log(`Wrote previews to ${outputDirectoryPath}`);
 }
 
-async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage, isClipped=false, renderMode=RENDER_MODE.RENDER_EXPORT_USING_CACHE, renderProgram=RENDER_PROGRAM.TEMPLATIVE) {
+async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage, isClipped=false, renderMode=RENDER_MODE.RENDER_EXPORT_USING_CACHE, renderProgram=RENDER_PROGRAM.TEMPLATIVE, overlappingRenderingTasks=OVERLAPPING_RENDERING_TASKS.ONE_AT_A_TIME) {
     const startTime = performance.now();
     
     if (!gameRootDirectoryPath) {
@@ -140,7 +140,7 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
     
 
     const gameData = new GameData(studioDataBlob, gameDataBlob);
-    const produceProperties = new ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage, isClipped, renderMode, renderProgram);
+    const produceProperties = new ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage, isClipped, renderMode, renderProgram, overlappingRenderingTasks);
     
     const fontCache = new FontCache();
     const svgFileCache = new SvgFileCache();
@@ -198,11 +198,16 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
             }
         }
         const componentComposition = new ComponentComposition(gameCompose, componentCompose);
-
-        componentTasks.push(produceGameComponent(produceProperties, gameData, componentComposition, fontCache, svgFileCache));
+        const componentTask = produceGameComponent(produceProperties, gameData, componentComposition, fontCache, svgFileCache);
+        if (produceProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ONE_AT_A_TIME) {
+            await componentTask;
+        } else {
+            componentTasks.push(componentTask);
+        }
     }
     
     await Promise.all(componentTasks);
+    
     
     const endTime = performance.now();
     const totalTimeMs = endTime - startTime;
