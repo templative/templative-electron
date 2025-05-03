@@ -11,6 +11,7 @@ function package() {
     # Use the ARCH environment variable if set
     if [ -n "$ARCH" ]; then
         echo "Packaging for architecture: $ARCH"
+        DEBUG=electron-forge:* \
         electron-forge package --arch=$ARCH
     else
         echo "Packaging with default architecture"
@@ -22,9 +23,11 @@ function make() {
     # Use the ARCH environment variable if set
     if [ -n "$ARCH" ]; then
         echo "Making for architecture: $ARCH"
+        DEBUG=electron-forge:* \
         electron-forge make --arch=$ARCH
     else
         echo "Making with default architecture"
+        DEBUG=electron-forge:* \
         electron-forge make
     fi
 }
@@ -33,9 +36,11 @@ function makeFromPackage() {
     # Use the ARCH environment variable if set
     if [ -n "$ARCH" ]; then
         echo "Making from package for architecture: $ARCH"
+        DEBUG=electron-forge:* \
         electron-forge make --skip-package --arch=$ARCH
     else
         echo "Making from package with default architecture"
+        DEBUG=electron-forge:* \
         electron-forge make --skip-package
     fi
 }
