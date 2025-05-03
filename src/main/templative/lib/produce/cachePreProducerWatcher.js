@@ -4,8 +4,9 @@ const fs = require('fs');
 const { produceGame } = require('./gameProducer');
 const defineLoader = require('../manage/defineLoader');
 const {captureMessage, captureException } = require("../sentryElectronWrapper");
-const { RENDER_MODE } = require('../manage/models/produceProperties');
+const { RENDER_MODE, RENDER_PROGRAM, OVERLAPPING_RENDERING_TASKS } = require('../manage/models/produceProperties');
 // This ties us to electron
+const { readOrCreateSettingsFile } = require('../../../settingsManager');
 const mainProcess = require('electron').app;
 
 const SIMPLE = false;
@@ -51,7 +52,8 @@ class CachePreProducerWatcher {
         mainProcess.isRendering = true;
 
         try {
-            produceGame(this.gameRootDirectoryPath, noComponentFilter, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, RENDER_MODE.RENDER_TO_CACHE);
+            const settings = await readOrCreateSettingsFile();
+            const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;
         } catch (error) {
             console.error(`Error producing game from cache pre-producer watcher:`, error);
             captureException(error);
@@ -105,7 +107,8 @@ class CachePreProducerWatcher {
             mainProcess.isRendering = true;
             try {
                 // Do not await this, it will block the main thread
-                produceGame(this.gameRootDirectoryPath, null, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, RENDER_MODE.RENDER_TO_CACHE);
+                const settings = await readOrCreateSettingsFile();
+                const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;  
             } catch (error) {
                 console.error(`Error producing game from art inserts watcher:`, error);
                 captureException(error);
@@ -190,7 +193,9 @@ class CachePreProducerWatcher {
                     for (const componentName of components) {
                         try {
                             // Do not await this, it will block the main thread
-                            produceGame(this.gameRootDirectoryPath, componentName, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, RENDER_MODE.RENDER_TO_CACHE);
+                            const settings = await readOrCreateSettingsFile();
+                            const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;
+                            
                         } catch (error) {
                             console.error(`Error producing game from component ${componentName} watcher:`, error);
                             captureException(error);
@@ -272,7 +277,8 @@ class CachePreProducerWatcher {
                 mainProcess.isRendering = true;
 
                 try {
-                    produceGame(this.gameRootDirectoryPath, null, SIMPLE, NOT_PUBLISHED, ENGLISH, NOT_CLIPPED, RENDER_MODE.RENDER_TO_CACHE);
+                    const settings = await readOrCreateSettingsFile();
+                    const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;
                 } catch (error) {
                     console.error(`Error producing game from component compose file watcher:`, error);
                     captureException(error);
