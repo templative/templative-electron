@@ -777,7 +777,7 @@ export default class EditProjectView extends React.Component {
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                     />
                 )} */}
-                <TutorialModal name="One Vision"/>
+                {/* <TutorialModal name="One Vision"/> */}
             </OutputDirectoriesProvider>
         </RenderingWorkspaceProvider>
         
