@@ -14,9 +14,8 @@
 }
 .App input::placeholder, .App textarea::placeholder {
     color: var(--color-text-muted) !important;
-    opacity: 0.7;
+    opacity: 0.2;
 }
-
 
 .input-group .btn:hover {
   background-color: var(--color-accent-hover);

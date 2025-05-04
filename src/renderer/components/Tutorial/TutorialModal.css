@@ -96,3 +96,30 @@
     margin-left: 1em;
 }
 
+.selectable-tutorial-icon {
+    cursor: help;
+    width: 24px;
+    height: 24px;
+    margin-top: 3px;
+}
+.back-button, .forward-button {
+    width: 24px;
+    height: 24px;
+    /* margin-top: 3px; */
+    color: var(--color-accent);
+}
+.back-button:hover:not(.disabled), .forward-button:hover:not(.disabled) {
+    color: var(--color-accent-hover);
+    cursor: pointer;
+}
+.back-button.disabled, .forward-button.disabled {
+    color: var(--color-content) !important;
+}
+.tutorial-link {
+    cursor: help;
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+.tutorial-link:hover {
+    color: var(--color-accent-hover);
+}
