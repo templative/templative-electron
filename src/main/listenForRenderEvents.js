@@ -63,4 +63,6 @@ function listenForRenderEvents(window) {
         return await openFileDialog(window, filters);
     });
 }
+
+
 module.exports = { listenForRenderEvents }

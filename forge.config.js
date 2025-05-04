@@ -2,8 +2,8 @@ module.exports = {
   packagerConfig: {
     name: 'Templative',
 		executableName: 'Templative',
-    "asar": {
-      "unpack": "**/{*.node,node_modules/@resvg/**/*}"
+    asar: {
+      unpack: "**/*"
     },
     osxUniversal: false, // We'll build separate x64 and arm64 packages instead
     arch: process.env.ARCH || undefined, // Use the ARCH environment variable

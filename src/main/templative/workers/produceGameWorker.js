@@ -1,6 +1,5 @@
 const { parentPort, workerData } = require('worker_threads');
-const { produceGame } = require('../lib/produce/gameProducer');
-const path = require('path');
+const { produceGame } = require("../lib/produce/gameProducer");
 
 async function runProduction() {
   try {

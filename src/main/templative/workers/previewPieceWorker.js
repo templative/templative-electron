@@ -1,6 +1,5 @@
 const { parentPort, workerData } = require('worker_threads');
-const { producePiecePreview } = require('../lib/produce/gameProducer');
-const { updateToast } = require('../../toastNotifier');
+const { producePiecePreview } = require("../lib/produce/gameProducer");
 
 async function runPreviewPiece() {
   try {
@@ -12,7 +11,6 @@ async function runPreviewPiece() {
       originalConsoleLog.apply(console, args);
     };
     await producePiecePreview(directoryPath, componentFilter, pieceFilter, language, renderProgram);
-    updateToast(`${componentFilter} preview complete.`, "brush");
     parentPort.postMessage({ success: true, data: {} });
   } catch (error) {
     parentPort.postMessage({ success: false, error: error.message });

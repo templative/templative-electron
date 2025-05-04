@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   entry: './src/main/main.js',
   mode: 'development',
@@ -7,12 +9,24 @@ module.exports = {
       config: [__filename]
     }
   },
+  node: {
+    __dirname: false,
+  },
   module: {
     rules: [
       {
         test: /\.node$/,
         use: 'node-loader',
       },
+
+      {
+        test: /src\/main\/templative\/.*\.js$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'src/main/templative/[name][ext]'
+        }
+      },
+      
       {
         test: /\.(m?js|node)$/,
         parser: { amd: false },
@@ -22,7 +36,9 @@ module.exports = {
             outputAssetBase: 'native_modules',
           },
         },
-        exclude: /node_modules/
+        exclude: [
+          /node_modules/
+        ]
       },
       {
         test: /\.svg$/,

@@ -7,7 +7,7 @@ const { RENDER_MODE, RENDER_PROGRAM, OVERLAPPING_RENDERING_TASKS } = require('..
 // This ties us to electron
 const { readOrCreateSettingsFile } = require('../../../settingsManager');
 const mainProcess = require('electron').app;
-const { createWorker } = require('../../workerThread');
+const { createProduceGameWorker } = require('../../workerThread');
 
 
 const SIMPLE = false;
@@ -56,7 +56,7 @@ class CachePreProducerWatcher {
             const settings = await readOrCreateSettingsFile();
             const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;
             
-            await createWorker('produceGameWorker', {
+            await createProduceGameWorker({
                 directoryPath: this.gameRootDirectoryPath,
                 componentFilter: noComponentFilter,
                 isSimple: SIMPLE,
@@ -123,7 +123,7 @@ class CachePreProducerWatcher {
                 const settings = await readOrCreateSettingsFile();
                 const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;  
                 
-                await createWorker('produceGameWorker', {
+                await createProduceGameWorker({
                     directoryPath: this.gameRootDirectoryPath,
                     componentFilter: null,
                     isSimple: SIMPLE,
@@ -221,7 +221,7 @@ class CachePreProducerWatcher {
                             const settings = await readOrCreateSettingsFile();
                             const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;
                             
-                            await createWorker('produceGameWorker', {
+                            await createProduceGameWorker({
                                 directoryPath: this.gameRootDirectoryPath,
                                 componentFilter: componentName,
                                 isSimple: SIMPLE,
@@ -315,7 +315,7 @@ class CachePreProducerWatcher {
                 try {
                     const settings = await readOrCreateSettingsFile();
                     const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;
-                    await createWorker('produceGameWorker', {
+                    await createProduceGameWorker({
                         directoryPath: this.gameRootDirectoryPath,
                         componentFilter: noComponentFilter,
                         isSimple: SIMPLE,
