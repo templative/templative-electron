@@ -156,7 +156,7 @@ const CompositionSettingsModal = ({
     
     const hasChanges = quantityField !== quantity || nameField !== name || selectedDisabled !== isDisabled || hasArtdataChanges;
     return (
-        <div className="modal-overlay" onClick={onHide}>
+        <div className="modal-overlay modal-overlay-composition-settings" onClick={onHide}>
             <div className="modal-content modal-content-large" onClick={e => e.stopPropagation()}>
                 <div className="modal-header unified-modal-header">
                     <h3 className="modal-title">{name} Composition Settings</h3>
