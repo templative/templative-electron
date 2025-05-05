@@ -184,3 +184,7 @@ tr {
     width: 12px;
     height: 12px;
 }
+
+.pieces-controls-input-group .selectable-tutorial-icon{
+    color: hsl(214, 21%, 30%);
+}

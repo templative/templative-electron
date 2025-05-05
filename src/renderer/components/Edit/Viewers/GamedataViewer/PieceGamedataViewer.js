@@ -23,7 +23,7 @@ import PlusIcon from "./PiecesTypeIcons/PlusIcon.svg?react";
 import SyncIcon from "./PiecesTypeIcons/SyncIcon.svg?react";
 import BreakSyncIcon from "./PiecesTypeIcons/BreakSyncIcon.svg?react";
 import GoToLinkIcon from "./PiecesTypeIcons/GoToLinkIcon.svg?react";
-
+import TutorialModal from "../../../Tutorial/TutorialModal";
 import "./GamedataViewer.css"
 
 export default class PieceGamedataViewer extends EditableViewerJson {   
@@ -313,6 +313,7 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                         <KeyIcon className="add-field-icon"/>
                         Add a Field
                     </button>
+                    {/* <TutorialModal name="One Vision" /> */}
                 </div>
                 <div>
                     {hasSyncKey ? (
@@ -341,17 +342,21 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                             <BreakSyncIcon className="add-field-icon"/>
                             Remove Sync
                         </button>
+                        <TutorialModal name="Piece Content" />
                         </>
                     ) :
-                    <button 
-                        onClick={() => this.setState({ isImportModalOpen: true })} 
-                        disabled={!this.state.hasLoaded || this.state.lockedKey !== undefined}
-                        className="btn btn-outline-primary add-field-button" 
-                        type="button"
-                    >
-                        <DownloadIcon className="add-field-icon"/>
-                        Import Data
-                    </button>
+                    <>
+                        <button 
+                            onClick={() => this.setState({ isImportModalOpen: true })} 
+                            disabled={!this.state.hasLoaded || this.state.lockedKey !== undefined}
+                            className="btn btn-outline-primary add-field-button" 
+                            type="button"
+                        >
+                            <DownloadIcon className="add-field-icon"/>
+                            Import Data
+                        </button>
+                        <TutorialModal name="Piece Content" />
+                    </>
                     }
                 </div>
             </div>

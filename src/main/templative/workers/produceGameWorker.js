@@ -1,7 +1,6 @@
 const { parentPort, workerData } = require('worker_threads');
 const { produceGame } = require('../lib/produce/gameProducer');
 
-
 async function runProduction() {
   try {
     const { directoryPath, componentFilter, isSimple, isPublished, language, isClipped, renderMode, renderProgram, overlappingRenderingTasks } = workerData;
