@@ -59,7 +59,14 @@ export default class ArtdataViewer extends EditableViewerJson {
         if (!this.state.hasLoaded) {
             return
         }
+        if (this.state.content === undefined) {
+            return
+        }
+        if (this.state.content.templateFilename === "") {
+            return
+        }
         const gameCompose = await TemplativeAccessTools.readFileContentsFromTemplativeProjectAsJsonAsync(this.props.templativeRootDirectoryPath, "game-compose.json")
+        
         const templateFilepath = path.join(this.props.templativeRootDirectoryPath, gameCompose["artTemplatesDirectory"], this.state.content.templateFilename) + ".svg?react"
         if (!await TemplativeAccessTools.doesFileExistAsync(templateFilepath)) {
             this.setState({
@@ -92,6 +99,9 @@ export default class ArtdataViewer extends EditableViewerJson {
     addArtdataItem(artdataType) {
         const newArtdataContents = { ...this.state.content }
         const newArtdataItem = structuredClone(DEFAULT_ARTDATA_ITEMS[artdataType])
+        if (!newArtdataContents[artdataType]) {
+            newArtdataContents[artdataType] = []
+        }
         newArtdataContents[artdataType].push(newArtdataItem)
         this.setState({
             content: newArtdataContents
