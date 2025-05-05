@@ -1,5 +1,25 @@
+const path = require('path');
+
 module.exports = {
-  entry: './src/main/main.js',
+  entry: 
+  {
+    index: './src/main/main.js',
+    produceGameWorker: './src/main/templative/workers/produceGameWorker.js',
+    previewPieceWorker: './src/main/templative/workers/previewPieceWorker.js'
+  },
+  output: {
+    filename: (pathData) => {
+      if (pathData.chunk.name === 'produceGameWorker') {
+        return 'produceGameWorker.bundle.js';
+      } else if (pathData.chunk.name === 'previewPieceWorker') {
+        return 'previewPieceWorker.bundle.js';
+      }
+      return '[name].js';
+    },
+    path: path.resolve(__dirname, '.webpack/main')
+  },
+  
+
   mode: 'development',
   cache: {
     type: 'filesystem',
@@ -30,12 +50,26 @@ module.exports = {
         generator: {
           filename: 'src/main/templative/lib/componentTemplates/[name][ext]'
         }
+      },
+      {
+        test: /src\/main\/templative\/workerThread.js$/,
+        loader: 'string-replace-loader',
+        options: {
+          search: 'produceGameWorker.js',
+          replace: 'produceGameWorker.bundle.js'
+        }
+      },
+      {
+        test: /src\/main\/templative\/workerThread.js$/,
+        loader: 'string-replace-loader',
+        options: {
+          search: 'previewPieceWorker.js',
+          replace: 'previewPieceWorker.bundle.js'
+        }
       }
     ],
   },
-  plugins: [
-  
-  ],
+  plugins: [],
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.svg', '.png']
   },

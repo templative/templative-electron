@@ -19,6 +19,7 @@ const { readOrCreateSettingsFile } = require('../templativeProjectManager');
 const path = require('path');
 const { RENDER_MODE, RENDER_PROGRAM, OVERLAPPING_RENDERING_TASKS } = require('./lib/manage/models/produceProperties');
 const { getSessionToken } = require('../sessionStore');
+const { createProduceGameWorker, createPreviewPieceWorker } = require('./workerThread');
 
 const createTemplativeComponent = withLogCapture(async (event, data) => {
   try {
@@ -46,10 +47,22 @@ const produceTemplativeProject = withLogCapture(async (event, request) => {
     const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;
     const overlappingRenderingTasks = settings.overlappingRenderingTasks || OVERLAPPING_RENDERING_TASKS.ONE_AT_A_TIME;
     const renderMode = isCacheIgnored ? RENDER_MODE.RENDER_EXPORT_WITHOUT_CACHE : RENDER_MODE.RENDER_EXPORT_USING_CACHE;
-    const outputDirectoryPath = await produceGame(directoryPath, componentFilter, !isComplex, NOT_PUBLISHED, language, NOT_CLIPPED, renderMode, renderProgram, overlappingRenderingTasks)
+    const toastResolver = (data) => {
+      updateToast(`/${path.basename(data.outputDirectoryPath)} render complete.`, "brush");
+    }
+    await createProduceGameWorker({
+        directoryPath,
+        componentFilter,
+        isSimple: !isComplex,
+        isPublished: NOT_PUBLISHED,
+        language,
+        isClipped: NOT_CLIPPED,
+        renderMode,
+        renderProgram,
+        overlappingRenderingTasks
+    }, toastResolver);
 
-    updateToast(`/${path.basename(outputDirectoryPath)} render complete.`, "brush");
-    return { success: true, outputDirectoryPath };
+    return { success: true };
   } catch (error) {
     console.error('Error producing game:', error);
     captureException(error);
@@ -73,9 +86,10 @@ const previewPiece = withLogCapture(async (event, data) => {
     const { componentFilter, pieceFilter, language, directoryPath } = data;
     const settings = await readOrCreateSettingsFile();
     const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;
-    await producePiecePreview(directoryPath, componentFilter, pieceFilter, language, renderProgram)
-    updateToast(`${componentFilter} preview complete.`, "brush");
-    
+    const toastResolver = (data) => { 
+      updateToast(`${componentFilter} preview complete.`, "brush");
+    }
+    await createPreviewPieceWorker({directoryPath, componentFilter, pieceFilter, language, renderProgram}, toastResolver);
     return { success: true, message: 'Piece preview generated' };
   } catch (error) {
     console.error('Error previewing piece:', error);
