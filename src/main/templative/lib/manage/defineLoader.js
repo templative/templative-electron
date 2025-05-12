@@ -1,17 +1,14 @@
 const fs = require('fs').promises;
-const fsSync = require('fs');
 const path = require('path');
 const csv = require('csv-parse/sync');
-const chalk = require('chalk');
+const { attemptToLoadJsonFile } = require('../fileManagement/fileLoader');
 
 async function loadGameCompose(gameRootDirectoryPath) {
     if (!gameRootDirectoryPath) {
         throw new Error("Game root directory path cannot be None");
     }
 
-    const gameComposePath = path.join(gameRootDirectoryPath, "game-compose.json");
-    const gameCompose = await fs.readFile(gameComposePath, 'utf8');
-    return JSON.parse(gameCompose);
+    return attemptToLoadJsonFile(path.join(gameRootDirectoryPath, "game-compose.json"));
 }
 
 async function loadComponentCompose(gameRootDirectoryPath) {
@@ -19,9 +16,7 @@ async function loadComponentCompose(gameRootDirectoryPath) {
         throw new Error("Game root directory path cannot be None");
     }
 
-    const componentComposePath = path.join(gameRootDirectoryPath, "component-compose.json");
-    const componentCompose = await fs.readFile(componentComposePath, 'utf8');
-    return JSON.parse(componentCompose);
+    return attemptToLoadJsonFile(path.join(gameRootDirectoryPath, "component-compose.json"));
 }
 
 async function loadGame(gameRootDirectoryPath) {
@@ -29,9 +24,7 @@ async function loadGame(gameRootDirectoryPath) {
         throw new Error("Game root directory path cannot be None");
     }
 
-    const gamePath = path.join(gameRootDirectoryPath, "game.json");
-    const game = await fs.readFile(gamePath, 'utf8');
-    return JSON.parse(game);
+    return attemptToLoadJsonFile(path.join(gameRootDirectoryPath, "game.json"));
 }
 
 async function loadStudio(gameRootDirectoryPath) {
@@ -39,36 +32,43 @@ async function loadStudio(gameRootDirectoryPath) {
         throw new Error("Game root directory path cannot be None");
     }
 
-    const studioPath = path.join(gameRootDirectoryPath, "studio.json");
-    const studio = await fs.readFile(studioPath, 'utf8');
-    return JSON.parse(studio);
+    return attemptToLoadJsonFile(path.join(gameRootDirectoryPath, "studio.json"));
 }
 
 async function attemptToLoadPieceJsonFile(piecesDirectory, piecesGamedataFilename) {
     const filepath = path.join(piecesDirectory, `${piecesGamedataFilename}.json`);
-    if (!fsSync.existsSync(filepath)) {
+    try {
+        const gamedataFile = await fs.readFile(filepath, 'utf8');
+        const data = JSON.parse(gamedataFile);
+        const gamedata = data.map(item => item);
+
+        const varNames = new Set();
+        for (const piece of gamedata) {
+            if (varNames.has(piece.name)) {
+                console.log(`!!! Duplicate piece ${piece.name}.`);
+            }
+            varNames.add(piece.name);
+            }
+        return gamedata;
+    } catch (err) {
+        if (err.code !== 'ENOENT') {
+            throw err;
+        }
         return null;
     }
-    const gamedataFile = await fs.readFile(filepath, 'utf8');
-    const data = JSON.parse(gamedataFile);
-    const gamedata = data.map(item => item);
-
-    const varNames = new Set();
-    for (const piece of gamedata) {
-        if (varNames.has(piece.name)) {
-            console.log(`!!! Duplicate piece ${piece.name}.`);
-        }
-        varNames.add(piece.name);
-    }
-    return gamedata;
 }
 
 async function attemptToLoadPieceCsvFile(piecesDirectory, piecesGamedataFilename) {
     const filepath = path.join(piecesDirectory, `${piecesGamedataFilename}.csv`);
-    if (!fsSync.existsSync(filepath)) {
+    var gamedataFile;
+    try {
+        gamedataFile = await fs.readFile(filepath, 'utf8');
+    } catch (err) {
+        if (err.code !== 'ENOENT') {
+            throw err;
+        }
         return null;
     }
-    const gamedataFile = await fs.readFile(filepath, 'utf8');
     const data = csv.parse(gamedataFile, {columns: true});
     const gamedata = data.map(item => item);
 
@@ -116,8 +116,7 @@ async function loadComponentGamedata(gameRootDirectoryPath, gameCompose, compone
     const componentGamedataDirectory = gameCompose.componentGamedataDirectory;
     const componentGamedataFilenameWithExtension = `${componentGamedataFilename}.json`;
     const filepath = path.join(gameRootDirectoryPath, componentGamedataDirectory, componentGamedataFilenameWithExtension);
-    const componentGamedata = await fs.readFile(filepath, 'utf8');
-    return JSON.parse(componentGamedata);
+    return attemptToLoadJsonFile(filepath);
 }
 
 async function loadArtdata(gameRootDirectoryPath, artdataDirectory, artdataFilename) {
@@ -127,12 +126,7 @@ async function loadArtdata(gameRootDirectoryPath, artdataDirectory, artdataFilen
 
     const artdataPath = path.join(gameRootDirectoryPath, artdataDirectory);
     const filepath = path.join(artdataPath, `${artdataFilename}.json`);
-    if (!fsSync.existsSync(filepath)) {
-        return {};
-    }
-    
-    const metadataFile = await fs.readFile(filepath, 'utf8');
-    return JSON.parse(metadataFile);
+    return attemptToLoadJsonFile(filepath);
 }
 
 async function loadRules(gameRootDirectoryPath) {
@@ -141,7 +135,15 @@ async function loadRules(gameRootDirectoryPath) {
     }
 
     const filepath = path.join(gameRootDirectoryPath, "rules.md");
-    return await fs.readFile(filepath, 'utf8');
+    try {
+        return await fs.readFile(filepath, 'utf8');
+    }
+    catch (error) {
+        if (error.code !== 'ENOENT') {
+            throw error;
+        }
+        return null;
+    }
 }
 
 module.exports = {

@@ -1,0 +1,52 @@
+.stock-components-viewer-main-name {
+    color: var(--color-accent);
+}
+.stock-components-viewer-main-type {
+    color: var(--color-text-muted);
+}
+.stock-components-viewer-sisters {
+    width: 100%;
+    padding: 0em 0.5em 0.5em 0.5em;
+    height: calc(100% - 36px - 16px);
+    overflow-y: auto;
+}
+.stock-components-viewer-sister {
+    width: 100px;
+    height: 160px;
+    display: inline-block;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: var(--color-content-surface);
+    border-radius: var(--bs-border-radius);
+    padding: 8px;
+    align-items: center;
+    vertical-align: top;
+}
+.stock-components-viewer-sister-image-container {
+    /* The width minus both left and right padding */
+    width: calc(100px - 8px - 8px);
+    height: calc(100px - 8px - 8px);
+    padding: 6px;
+    margin-bottom: 8px;
+}
+.stock-components-viewer-sister-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.5));
+}
+.stock-components-viewer-sister-name {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.stock-components-viewer-sister-name-container {
+    /* Double the font size and same room */
+    height: 24px;
+}
+.stock-components-viewer-sister-quantity {
+    color: var(--color-text) !important;
+}
+.stock-components-viewer-sister-quantity:focus {
+    background-color: rgb(24, 30, 37) !important;
+}

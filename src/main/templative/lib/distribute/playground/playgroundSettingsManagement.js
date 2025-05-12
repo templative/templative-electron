@@ -13,11 +13,14 @@ async function getPlaygroundDirectory(inputedPlaygroundDirectory) {
     }
     
     const playgroundFileLocation = "./.playground";
-    if (!fs.existsSync(playgroundFileLocation)) {
+    try {
+        return await fsPromises.readFile(playgroundFileLocation, 'utf8');
+    } catch (error) {
+        if (error.code !== 'ENOENT') {
+            throw error;
+        }
         return undefined;
     }
-    
-    return await fsPromises.readFile(playgroundFileLocation, 'utf8');
 }
 
 module.exports = {

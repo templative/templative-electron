@@ -1,0 +1,190 @@
+.pieces-viewer {
+    height: 100%;
+}
+.add-piece-button {
+    width: 100%;
+    margin-top:6px;
+    margin-bottom: 12px;
+}
+.pieces-viewer > .col {
+    height: 100%;
+    overflow-y: hidden;
+}
+.add-pieces-gamedata-row {
+    height: 40px;
+    border-color: var(--color-dark-3) !important;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+.pieces-gamedata-row {
+    height: calc(100% - 28px);
+    overflow-y: auto;
+    padding-bottom: 12px;
+    padding-right: 12px;
+}
+th {
+    font-size: 12px;
+}
+tr {
+    font-size: 12px;
+}
+.table,table {
+    width: 100% !important;
+}
+.tableContainer {
+    height: 100%;
+    overflow-y: auto;
+}
+.key-field {
+    max-width: 15em;
+}
+.locked-key-text {
+    min-width: 15em;
+}
+.piece-row {
+    margin-bottom: 0.1em;
+}
+.piece-control-input > * { 
+    border-bottom: 3px solid #535962 !important;
+}
+.add-piece-key {
+    height: 0px !important;
+    transition: height 300ms ease-in;
+    overflow: hidden;
+}
+.show-add-piece-key {
+    height: 30px !important;
+}
+.add-field-plus {
+    margin-bottom:4px;
+    margin-right: 4px;
+}
+.value-text-area {
+    padding-top:6px !important;
+    padding-bottom: 0px !important;
+}
+.table-responsive-horizontal {
+    overflow-x: auto;
+    overflow-y: visible;
+    margin-bottom: 1rem;
+}
+.table-responsive-horizontal .table {
+    margin-bottom: 0;
+}
+.table-responsive-horizontal th:first-child {
+    position: sticky;
+    left: 0;
+    background-color: var(--bs-table-bg);
+    z-index: 1;
+}
+.table-input-dark {
+    background-color: var(--color-content) !important;
+    color: var(--color-light) !important;
+    border-color: var(--color-gray) !important;
+    /* padding: 0 !important; */
+    border-radius: 0 !important;
+    margin: 0 !important;
+    /* border: none !important; */
+    width: 100% !important;
+    height: 100% !important;
+}
+.table-input-dark:focus {
+    background-color: var(--color-content) !important;
+    color: var(--color-light) !important;
+}
+.table td {
+    padding: 0 !important;
+}
+/* .preview-piece-button {
+    background-color: var(--color-content-surface)!important;
+    border-color: var(--color-gray) !important;
+    color: var(--color-light) !important;
+}
+.preview-piece-button:hover {
+    background-color: var(--color-dark-3)!important;
+} */
+.render-piece-icon {
+    margin-bottom: 3px;
+}
+.pieces-controls-input-group {
+    margin-bottom: 0px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    justify-content: space-between;
+    width: 100%;
+}
+.pieces-controls-input-group > div {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.key-value-control-button {
+    border-bottom-width: 1px !important;
+    border-left:none !important;
+}
+.key-value-control-button:first-of-type {
+    border-right:none !important;
+}
+
+.piece-controls-and-keys:has(> .piece-control-input:only-child) {
+    margin-bottom: 1em;
+}
+.gamedata-quantity-input {
+    max-width: 8ch;
+}
+.App .piece-controls-row > * {
+    border-bottom: 4px solid var(--color-surface-cover-hover) !important;
+}
+.view-mode-toggle-button {
+    display: flex;
+    align-items: center;
+    /* gap: 30px; */
+    flex-direction: row;
+}
+.view-mode-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+}
+.view-mode-toggle-button.selected {
+    background-color: var(--color-accent) !important;
+    color: var(--color-content) !important;
+}
+.view-mode-toggle-button:first-of-type {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+.view-mode-toggle-button:not(:first-of-type):not(:last-of-type) {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+ }
+.view-mode-toggle-button:last-of-type {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}   
+.pieces-controls-input-group .btn {
+    /* flex: 1; */
+}
+.App .add-field-button {
+    white-space: nowrap;
+    font-size: 12px !important;
+    height: 30px;
+    border: none;
+}
+.add-field-icon {
+    margin-right: 4px;
+    margin-bottom: 2px;
+    width: 12px;
+    height: 12px;
+}
+
+.pieces-controls-input-group .selectable-tutorial-icon{
+    color: hsl(214, 21%, 30%);
+}

@@ -1,83 +1,95 @@
 const { channels } = require("../shared/constants");
 const { createTemplativeProject } = require("./templative/index");
-const { dialog, BrowserWindow, app  } = require('electron')
-var axios  = require('axios');
 var path = require('path');
+const { dialog, BrowserWindow } = require('electron');
+const { setCurrentTemplativeRootDirectory, checkIfFolderIsValidTemplativeProject } = require('./templativeProjectManager');
 
-const setCurrentFolder = async (event, projectDirectory) => {
-    let mainWindow = BrowserWindow.getAllWindows()[0];
-    var directoryName = path.basename(projectDirectory);
-    mainWindow.setTitle(`Templative v${app.getVersion()} - ${directoryName}`);
+const { updateToast } = require('./toastNotifier');
+
+
+const openFolder = async(event) => {
+    const result = await dialog.showOpenDialog({ properties: ['openDirectory'] });
+    if (result.filePaths.length === 0) {
+        console.warn("No directory selected");
+        return;
+    }
+    var chosenDirectory = result.filePaths[0];
+    const isInvalidProject = !await checkIfFolderIsValidTemplativeProject(event, chosenDirectory);
+    if (isInvalidProject) {
+        console.warn("Invalid project selected");
+        const directory = path.basename(chosenDirectory);
+        updateToast(`/${directory} is an invalid Templative project.`, "error");
+        return;
+    }
+    await setCurrentTemplativeRootDirectory(event, chosenDirectory);
+    updateToast(`/${path.basename(chosenDirectory)} loaded.`, "success");
 }
 
-const openFolder = async(event, args) => {
-    var result = await dialog.showOpenDialog({ properties: ['openDirectory'] })
+const openPlaygroundFolder = async(event) => {
+    var result = await dialog.showOpenDialog({ properties: ['openDirectory'] });
     if (result.filePaths.length === 0) {
-        console.warn("Chose nothing!")
-        return
+        console.warn("No directory selected");
+        return;
     }
-    var chosenDirectory = result.filePaths[0]
-    var directoryName = path.basename(chosenDirectory);
-    let mainWindow = BrowserWindow.getAllWindows()[0];
-    mainWindow.setTitle(`Templative v${app.getVersion()} - ${directoryName}`);
-    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, chosenDirectory)
+    var chosenDirectory = result.filePaths[0];
+    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_PLAYGROUND_FOLDER, chosenDirectory);
 }
 
-const openPlaygroundFolder = async(event, args) => {
-    var result = await dialog.showOpenDialog({ properties: ['openDirectory'] })
+const openSimulatorFolder = async(event) => {
+    var result = await dialog.showOpenDialog({ properties: ['openDirectory'] });
     if (result.filePaths.length === 0) {
-        console.warn("Chose nothing!")
-        return
+        console.warn("No directory selected");
+        return;
     }
-    var chosenDirectory = result.filePaths[0]
-    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_PLAYGROUND_FOLDER, chosenDirectory)
-}
-const openSimulatorFolder = async(event, args) => {
-    var result = await dialog.showOpenDialog({ properties: ['openDirectory'] })
-    if (result.filePaths.length === 0) {
-        console.warn("Chose nothing!")
-        return
-    }
-    var chosenDirectory = result.filePaths[0]
-    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_SIMULATOR_FOLDER, chosenDirectory)
+    var chosenDirectory = result.filePaths[0];
+    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_SIMULATOR_FOLDER, chosenDirectory);
 }
 
-const openProjectLocationFolder = async(event, args) => {
-    var result = await dialog.showOpenDialog({ properties: ['openDirectory'] })
+const openProjectLocationFolder = async(event) => {
+    var result = await dialog.showOpenDialog({ 
+        properties: ['openDirectory', 'createDirectory']
+    });
     if (result.filePaths.length === 0) {
-        console.warn("Chose nothing!")
-        return { canceled: true }
+        console.warn("No directory selected");
+        return { canceled: true };
     }
-    var chosenDirectory = result.filePaths[0]
-    return { canceled: false, filePaths: [chosenDirectory] }
+    return { canceled: false, filePaths: [result.filePaths[0]] };
 }
 
 const createTemplativeProjectWithName = async(event, { projectLocation, projectName, templateName }) => {
     if (!projectLocation || !projectName) {
-        console.warn("Missing required project information")
-        return { success: false, error: "Missing required project information" }
+        console.warn("Missing required project information");
+        return { success: false, error: "Missing required project information" };
     }
 
-    console.log(`Creating project at: ${projectLocation} with template: ${templateName || 'blank'}`)
+    console.log(`Creating project at: ${projectLocation} with template: ${templateName || 'blank'}`);
     
     try {
-        var creationResult = await createTemplativeProject(projectLocation, projectName, templateName)
+        var creationResult = await createTemplativeProject(projectLocation, projectName, templateName);
         if (!creationResult.success) {
-            return { success: false, error: creationResult.error }
+            return { success: false, error: creationResult.error };
         }
-        BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, projectLocation)
-        return { success: true, projectDirectory: projectLocation }
+        await setCurrentTemplativeRootDirectory(event, projectLocation);
+        return { success: true, projectDirectory: projectLocation };
     } catch (error) {
-        console.error("Error creating project:", error)
-        return { success: false, error: error.message }
+        console.error("Error creating project:", error);
+        return { success: false, error: error.message };
     }
+}
+
+const openFileDialog = async (window, filters) => {
+    const result = await dialog.showOpenDialog(window, {
+        properties: ['openFile'],
+        filters: filters
+    });
+    return result.filePaths[0];
 }
 
 module.exports = { 
     openPlaygroundFolder,
-    setCurrentFolder,
     openSimulatorFolder,
     openFolder,
     openProjectLocationFolder,
-    createTemplativeProjectWithName
-}
+    createTemplativeProjectWithName,
+    openFileDialog
+};

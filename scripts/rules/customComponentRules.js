@@ -84,8 +84,16 @@ module.exports = [
         }
     },
     {
-        description: "Components tagged 'book' have IsPrintingDisabled set to true",
-        condition: (component) => component.Tags && component.Tags.includes("book"),
+        description: "Components tagged 'book' or 'packaging' have IsPrintingDisabled set to true",
+        condition: (component) => component.Tags && (component.Tags.includes("book") || component.Tags.includes("packaging")),
+        setValue: (component) => {
+            component.IsPrintingDisabled = true;
+            return ["IsPrintingDisabled"];
+        }
+    },
+    {
+        description: "Components named 'Custom Color D4' or 'Custom Color D8' have IsPrintingDisabled set to true",
+        condition: (component) => component.DisplayName && (component.DisplayName === "Custom Color D4" || component.DisplayName === "Custom Color D8"),
         setValue: (component) => {
             component.IsPrintingDisabled = true;
             return ["IsPrintingDisabled"];
@@ -157,6 +165,22 @@ module.exports = [
         setValue: (component) => {
             component.Tags = [...component.Tags, "stickers"];
             return ["Tags"];
+        }
+    },
+    {
+        description: "Disable components tagged 'screen' or 'dial'",
+        condition: (component) => component.Tags && (component.Tags.includes("screen") || component.Tags.includes("dial")),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            return ["IsDisabled"];
+        }
+    },
+    {
+        description: "Disable components tagged 'stickers'",
+        condition: (component) => component.Tags && component.Tags.includes("stickers"),
+        setValue: (component) => {
+            component.IsDisabled = true;
+            return ["IsDisabled"];
         }
     },
     {

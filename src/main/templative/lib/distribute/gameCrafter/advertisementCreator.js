@@ -1,5 +1,5 @@
 const httpOperations = require('./util/httpOperations.js');
-const { createFileInFolder } = require('./fileFolderManager.js');
+const { attemptCreateFileInFolder } = require('./fileFolderManager.js');
 const path = require('path');
 const fs = require('fs').promises;
 
@@ -9,15 +9,13 @@ async function createAdvertisementFolder(gameCrafterSession, rootFolderId) {
 }
 
 async function createAdvertismentImageInFolder(gameCrafterSession, filepath, backupFilepath, folderId) {
-    let filepathUsed = filepath;
-    try {
-        await fs.access(filepath);
-    } catch (error) {
-        filepathUsed = backupFilepath;
+    const filenameWithoutExtension = path.parse(filepath).name;
+    const fileId = await attemptCreateFileInFolder(gameCrafterSession, filenameWithoutExtension, filepath, folderId);
+    if (!fileId) {
         console.log(`!!! Advertising file ${filepath} doesn't exist, using default ${backupFilepath}`);
+        const backupFilenameWithoutExtension = path.parse(backupFilepath).name;
+        fileId = await attemptCreateFileInFolder(gameCrafterSession, backupFilenameWithoutExtension, backupFilepath, folderId);
     }
-    const filenameWithoutExtension = path.parse(filepathUsed).name;
-    const fileId = await createFileInFolder(gameCrafterSession, filenameWithoutExtension, filepathUsed, folderId);
     return fileId;
 }
 

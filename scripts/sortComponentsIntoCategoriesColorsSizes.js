@@ -754,14 +754,14 @@ const areColorVariations = (component1, component2) => {
 }; 
 
 // Ensure the output directory exists
-if (!fs.existsSync(outputPath)) {
-  fs.mkdirSync(outputPath, { recursive: true });
-}
+// if (!fs.existsSync(outputPath)) {
+//   fs.mkdirSync(outputPath, { recursive: true });
+// }
 const {COMPONENT_INFO} = require("../src/shared/componentInfo.js");
 const {STOCK_COMPONENT_INFO} = require("../src/shared/stockComponentInfo.js");
 
 const customMajorCategories = [
-  "packaging","stickers", "deck", "die", "premium", "board","token","mat","document", "blank", "screen", "dial"
+  "packaging","deck", "die", "premium", "board","token","mat","document", "blank",
 ]
 
 const stockMajorCategories = [

@@ -1,0 +1,44 @@
+.content-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle-option {
+  display: flex;
+  align-items: center;
+  padding: 6px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.toggle-option:hover:not(.active):not(.unselectable) .toggle-label {
+  color: var(--color-text);
+}
+.toggle-option.unselectable {
+  cursor: default;
+}
+
+.toggle-option.active {
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}
+
+.toggle-icon {
+  margin-right: 6px;
+  display: flex;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+.toggle-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+.toggle-label {
+    color: var(--color-text-muted);
+}
+.toggle-label.active {
+    color: var(--color-text);
+}

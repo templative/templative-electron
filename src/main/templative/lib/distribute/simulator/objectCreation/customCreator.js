@@ -1,4 +1,3 @@
-const chalk = require('chalk');
 const { 
   createDeckObjectState,
   createCustomDie,
@@ -17,7 +16,7 @@ const { getAdapter } = require('./customObjectAdapter');
  * @param {number} componentCountTotal - Total number of components
  * @returns {Promise<Object|null>} - Custom object state or null if failed
  */
-async function createCustom(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal) {
+async function createCustom(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal, templativeToken) {
   // Check if SimulatorCreationTask is specified
   if (!componentInfo.hasOwnProperty("SimulatorCreationTask") || 
       componentInfo["SimulatorCreationTask"] === "none") {
@@ -34,8 +33,8 @@ async function createCustom(tabletopSimulatorImageDirectoryPath, componentInstru
     return null;
   }
 
-  // Use the adapter to convert componentInstructions and componentInfo into parameters
-  const params = await adapter(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal);
+  // Pass templativeToken to adapter
+  const params = await adapter(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal, templativeToken);
   if (!params) {
     // Adapter already logged the error
     return null;

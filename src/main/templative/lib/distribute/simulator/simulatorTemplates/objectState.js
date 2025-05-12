@@ -1,10 +1,10 @@
 const { createHash } = require('crypto');
-const chalk = require('chalk');
 
 function md5(str) {
   return createHash('md5').update(str).digest('hex');
 }
 const { getColorValueRGB, getColorValueHex } = require('../../../../../../shared/stockComponentColors');
+const { type } = require('os');
 const WHITE_COLOR_DIFFUSE = { r: 1.0, g: 1.0, b: 1.0}
 const CLEAR_COLOR_DIFFUSE = { r: 0.0, g: 0.0, b: 0.0, a: 0.0 }
 
@@ -31,7 +31,7 @@ const STANDARD_TRANSFORM = { posX: 0, posY: 0, posZ: 0, rotX: 0, rotY: 0, rotZ: 
 const tableLength = 7.5;
 const shrinkFactor = 0.75;
 
-function createBagForObject(object, quantity, name, colorDiffuse = WHITE_COLOR_DIFFUSE) {
+function createBagForObject(object, quantity, name, type, colorDiffuse = WHITE_COLOR_DIFFUSE) {
   if (object === undefined || object === null) {
     throw new Error(`Object is undefined or null for ${name}`);
   }
@@ -46,19 +46,20 @@ function createBagForObject(object, quantity, name, colorDiffuse = WHITE_COLOR_D
     return object;
   }
   return {
+    GUID: "bag" + md5(name).slice(0, 6),
+    Nickname: name,
     Name: "Bag",
+    TemplativeType: type,
     Transform: {
       posX: 0, posY: 3, posZ: -20, 
       rotX: 0, rotY: 180, rotZ: 0, 
       scaleX: 1, scaleY: 1, scaleZ: 1
     },
-    Nickname: name,
     ColorDiffuse: colorDiffuse,
     Locked: true,    
     HideWhenFaceDown: false,
     Hands: false,
     ContainedObjects: Array(quantity).fill().map(() => ({...object, GUID: md5(name + Math.random()).slice(0, 6)})),
-    GUID: "chest" + md5(name).slice(0, 6),
     ...STANDARD_ATTRIBUTES
   }
 }
@@ -95,9 +96,9 @@ function createComponentLibraryChest(componentStates=[], name = "ComponentLibrar
   };
 }
 
-function createDeckObjectState(deckPrefix, name, imageUrls, dimensions, layout, cardQuantities, deckType = 0, isSingleCard = false) {
+function createDeckObjectState(deckPrefix, name, type, imageUrls, dimensions, layout, cardQuantities, deckType = 0, isSingleCard = false) {
   if (isSingleCard) {
-    return createCardObjectState(deckPrefix, name, imageUrls, dimensions, layout, cardQuantities, deckType);
+    return createCardObjectState(deckPrefix, name, type, imageUrls, dimensions, layout, cardQuantities, deckType);
   }
   console.log(`Creating deck ${name}.`);
   if (deckPrefix === null || deckPrefix === undefined || typeof deckPrefix !== "number") {
@@ -167,6 +168,7 @@ function createDeckObjectState(deckPrefix, name, imageUrls, dimensions, layout, 
       containedObjects.push({
         GUID: `${guid}_${objectIndex}`,
         Name: "Card",
+        TemplativeType: type,
         Transform: transform,
         Nickname: cardId,
         ColorDiffuse: {
@@ -190,6 +192,7 @@ function createDeckObjectState(deckPrefix, name, imageUrls, dimensions, layout, 
 
   const deckState = {
     Name: "DeckCustom",
+    TemplativeType: type,
     Transform: transform,
     Nickname: name,    
     ColorDiffuse: WHITE_COLOR_DIFFUSE,
@@ -219,7 +222,7 @@ function createDeckObjectState(deckPrefix, name, imageUrls, dimensions, layout, 
   return deckState;
 }
 
-function createCardObjectState(guid, cardPrefix, name, imageUrls, simulatorComponentPlacement, dimensions, deckType = 0) {
+function createCardObjectState(guid, cardPrefix, name, type, imageUrls, simulatorComponentPlacement, dimensions, deckType = 0) {
   // console.log('createCardObjectState params:', { guid, cardPrefix, name, imageUrls, simulatorComponentPlacement, dimensions, deckType });
   if (guid === null || guid === undefined || typeof guid !== "string" || guid === "") {
     throw new Error(`GUID is null, undefined, not a string, or empty for ${name}`);
@@ -262,6 +265,7 @@ function createCardObjectState(guid, cardPrefix, name, imageUrls, simulatorCompo
 
   return {
     Name: "CardCustom",
+    TemplativeType: type,
     Transform: transform,
     Nickname: name,
     ColorDiffuse: {
@@ -293,7 +297,7 @@ function createCardObjectState(guid, cardPrefix, name, imageUrls, simulatorCompo
   };
 }
 
-function createStandardDie(name, quantity, numberSides, sizeInches, colorRGBOutOfOne, isMetal=false) {
+function createStandardDie(name, quantity, type, numberSides, sizeInches, colorRGBOutOfOne, isMetal=false) {
   console.log(`Creating a standard d${numberSides} die ${name}`);
   if (typeof name !== "string" || name === "") {
     throw new Error(`Name is not a string or is empty for die`);
@@ -323,6 +327,7 @@ function createStandardDie(name, quantity, numberSides, sizeInches, colorRGBOutO
   };
   const die = {
     Name: `Die_${numberSides}`,
+    TemplativeType: type,
     Transform: {
       posX: 0, posY: 2, posZ: 0, 
       rotX: 0, rotY: 0, rotZ: 0, 
@@ -340,10 +345,10 @@ function createStandardDie(name, quantity, numberSides, sizeInches, colorRGBOutO
     RotationValues: getDieRotationValues(numberSides),
     ...STANDARD_ATTRIBUTES
   };
-  return createBagForObject(die, quantity, `${name} Bag`, colorDiffuse);
+  return createBagForObject(die, quantity, `${name} Bag`, type, colorDiffuse);
 }
 
-function createStockCube(name, quantity, sizeInchesXYZ, colorRGBOutOfOne) {
+function createStockCube(name, quantity, type, sizeInchesXYZ, colorRGBOutOfOne) {
   console.log(`Creating a stock cube ${name}`);
   if (typeof name !== "string" || name === "") {
     throw new Error(`Name is not a string or is empty for cube`);
@@ -366,6 +371,7 @@ function createStockCube(name, quantity, sizeInchesXYZ, colorRGBOutOfOne) {
   };
   const cube = {
     Name: "BlockSquare",
+    TemplativeType: type,
     Transform: {
       posX: 0, posY: 2, posZ: 0, 
       rotX: 0, rotY: 0, rotZ: 0, 
@@ -379,10 +385,10 @@ function createStockCube(name, quantity, sizeInchesXYZ, colorRGBOutOfOne) {
     GUID: guid,
     ...STANDARD_ATTRIBUTES
   };
-  return createBagForObject(cube, quantity, `${name} Bag`, colorDiffuse);
+  return createBagForObject(cube, quantity, `${name} Bag`, type, colorDiffuse);
 }
 
-function createStockModel(name, quantity, objUrl, textureUrl, normalMapUrl) {
+function createStockModel(name, quantity, type, objUrl, textureUrl, normalMapUrl) {
   console.log(`Creating a stock model ${name}`);
   if (typeof name !== "string" || name === "") {
     throw new Error(`Name is not a string or is empty for model`);
@@ -404,6 +410,7 @@ function createStockModel(name, quantity, objUrl, textureUrl, normalMapUrl) {
   const model =  {
     GUID: guid,
     Name: "Custom_Model",
+    TemplativeType: type,
     Transform: STANDARD_TRANSFORM,
     Nickname: name,
     ColorDiffuse: {
@@ -427,10 +434,10 @@ function createStockModel(name, quantity, objUrl, textureUrl, normalMapUrl) {
     },
     ...STANDARD_ATTRIBUTES
   }
-  return createBagForObject(model, quantity, `${name} Bag`, WHITE_COLOR_DIFFUSE);
+  return createBagForObject(model, quantity, `${name} Bag`, type, WHITE_COLOR_DIFFUSE);
 }
 
-function createStandee(name, frontImageUrl, backImageUrl) {
+function createStandee(name, type, frontImageUrl, backImageUrl) {
   if (typeof name !== "string" || name === "") {
     throw new Error(`Name is not a string or is empty for standee`);
   }
@@ -445,6 +452,7 @@ function createStandee(name, frontImageUrl, backImageUrl) {
   const scale = 0.750000238;
   return {
     GUID: guid,
+    TemplativeType: type,
     Name: "Figurine_Custom",
     Transform: {
       posX: 0, posY: 0, posZ: 0, rotX: 0, rotY: 0, rotZ: 0,
@@ -466,7 +474,7 @@ function createStandee(name, frontImageUrl, backImageUrl) {
   }
   
 }
-function createBag(name, contents){
+function createBag(name, type, contents){
   if (typeof name !== "string" || name === "") {
     throw new Error(`Name is not a string or is empty for bag`);
   }
@@ -476,6 +484,7 @@ function createBag(name, contents){
   
   return {
     Name: "Bag",
+    TemplativeType: type,
     Transform: {
       posX: 0, posY: 3, posZ: -20, 
       rotX: 0, rotY: 180, rotZ: 0, 
@@ -492,7 +501,7 @@ function createBag(name, contents){
   }
 }
 
-function createStandeeFromNameImageUrlAndQuantities(name, standeesNameQuantityUrls) {
+function createStandeeFromNameImageUrlAndQuantities(name, type, standeesNameQuantityUrls) {
   console.log(`Creating standees for ${name}`);
   if (typeof name !== "string" || name === "") {
     throw new Error(`Name is not a string or is empty for standee collection`);
@@ -514,15 +523,15 @@ function createStandeeFromNameImageUrlAndQuantities(name, standeesNameQuantityUr
     if (typeof quantity !== "number" || quantity <= 0) {
       throw new Error(`Quantity is not a number or not positive for standee ${name}`);
     }
-    return Array(quantity).fill().map(() => createStandee(name, frontImageUrl, backImageUrl));
+    return Array(quantity).fill().map(() => createStandee(name, type, frontImageUrl, backImageUrl));
   });
   if (standees.length === 1) {
     return standees[0];
   }
-  return createBag(name, standees)
+  return createBag(name, type, standees)
 }
 
-function createTokenWithDefinedShape(name, quantity, frontImageUrl, backImageUrl, shape) {
+function createTokenWithDefinedShape(name, quantity, type, frontImageUrl, backImageUrl, shape) {
   console.log(`Creating a token for ${name}`);
   if (typeof name !== "string" || name === "") {
     throw new Error(`Name is not a string or is empty for token`);
@@ -551,6 +560,7 @@ function createTokenWithDefinedShape(name, quantity, frontImageUrl, backImageUrl
   const model = {
     GUID: guid,
     Name: "Custom_Tile",
+    TemplativeType: type,
     Transform: STANDARD_TRANSFORM,
     Nickname: name,
     ColorDiffuse: {
@@ -577,10 +587,10 @@ function createTokenWithDefinedShape(name, quantity, frontImageUrl, backImageUrl
     },
     ...STANDARD_ATTRIBUTES
   }
-  return createBagForObject(model, quantity, `${name} Bag`, WHITE_COLOR_DIFFUSE);
+  return createBagForObject(model, quantity, `${name} Bag`, type, WHITE_COLOR_DIFFUSE);
 }
 
-function createFlatTokenWithTransparencyBasedShape(componentName, nameQuantityUrls) {
+function createFlatTokenWithTransparencyBasedShape(componentName, type, nameQuantityUrls) {
   if (typeof componentName !== "string" || componentName === "") {
     throw new Error(`Component name is not a string or is empty for flat token collection`);
   }
@@ -604,9 +614,9 @@ function createFlatTokenWithTransparencyBasedShape(componentName, nameQuantityUr
   if (tokens.length === 1) {
     return tokens[0];
   }
-  return createBag(componentName, tokens) 
+  return createBag(componentName, type, tokens) 
 }
-function createThickTokenWithTransparencyBasedShape(componentName, nameQuantityUrls) {
+function createThickTokenWithTransparencyBasedShape(componentName, type, nameQuantityUrls) {
   if (typeof componentName !== "string" || componentName === "") {
     throw new Error(`Component name is not a string or is empty for thick token collection`);
   }
@@ -630,9 +640,9 @@ function createThickTokenWithTransparencyBasedShape(componentName, nameQuantityU
   if (tokens.length === 1) {
     return tokens[0];
   }
-  return createBag(componentName, tokens) 
+  return createBag(componentName, type, tokens) 
 }
-function createStockCylinder(name, quantity, colorHex, widthMillimeters, heightMillimeters) {
+function createStockCylinder(name, quantity, type, colorHex, widthMillimeters, heightMillimeters) {
   if (typeof name !== "string" || name === "") {
     throw new Error(`Name is not a string or is empty for cylinder`);
   }
@@ -660,7 +670,8 @@ function createStockCylinder(name, quantity, colorHex, widthMillimeters, heightM
   };
   const model = {
     GUID: guid,
-    Name: "Custom_Model",
+    Name: "Custom_Model", 
+    TemplativeType: type,
     Transform: {
       posX: 0, posY: 0, posZ: 0, rotX: 0, rotY: 0, rotZ: 0,
       scaleX: 1, scaleY: 1, scaleZ: 1
@@ -684,9 +695,9 @@ function createStockCylinder(name, quantity, colorHex, widthMillimeters, heightM
       },
     ...STANDARD_ATTRIBUTES
   }
-  return createBagForObject(model, quantity, `${longName} Bag`, colorDiffuse);
+  return createBagForObject(model, quantity, `${longName} Bag`, type, colorDiffuse);
 }
-function createStockMeeple(name, quantity, color) {
+function createStockMeeple(name, quantity, type, color) {
   if (typeof name !== "string" || name === "") {
     throw new Error(`Name is not a string or is empty for meeple`);
   } 
@@ -697,6 +708,7 @@ function createStockMeeple(name, quantity, color) {
       tokens.push({
       GUID: guid,
       Name: "Custom_Token",
+      TemplativeType: type,
       Transform: {
         posX: 0, posY: 0, posZ: 0, rotX: 0, rotY: 0, rotZ: 0,
         scaleX: scale, scaleY: scale, scaleZ: scale
@@ -727,7 +739,7 @@ function createStockMeeple(name, quantity, color) {
   }
   return createBag(componentName, tokens) 
 }
-function createTokenWithTransparencyBasedShape(name, frontImageUrl, thickness = 0.2, isStandUp = false, isStackable = true) {
+function createTokenWithTransparencyBasedShape(name, type, frontImageUrl, thickness = 0.2, isStandUp = false, isStackable = true) {
   // console.log(`Creating a token with a transparency based shape ${name}`);
   if (typeof name !== "string" || name === "") {
     throw new Error(`Name is not a string or is empty for transparency token`);
@@ -750,6 +762,7 @@ function createTokenWithTransparencyBasedShape(name, frontImageUrl, thickness = 
   return {
     GUID: guid,
     Name: "Custom_Token",
+    TemplativeType: type,
     Transform: {
       posX: 0, posY: 0, posZ: 0, rotX: 0, rotY: 0, rotZ: 0,
       scaleX: scale, scaleY: scale, scaleZ: scale
@@ -776,7 +789,7 @@ function createTokenWithTransparencyBasedShape(name, frontImageUrl, thickness = 
   }
 }
 
-function createCustomDie(name, quantity, imageUrl, numberSides) {
+function createCustomDie(name, quantity, type, imageUrl, numberSides) {
   console.log(`Creating a custom die ${name}`);
   if (typeof name !== "string" || name === "") {
     throw new Error(`Name is not a string or is empty for custom die`);
@@ -811,6 +824,7 @@ function createCustomDie(name, quantity, imageUrl, numberSides) {
   const model = {
     GUID: guid,
     Name: "Custom_Dice",
+    TemplativeType: type,
     Transform: STANDARD_TRANSFORM,
     Nickname: name,
     ColorDiffuse: WHITE_COLOR_DIFFUSE,
@@ -831,7 +845,7 @@ function createCustomDie(name, quantity, imageUrl, numberSides) {
     RotationValues: rotationValues,
     ...STANDARD_ATTRIBUTES
   };
-  return createBagForObject(model, quantity, `${name} Bag`, WHITE_COLOR_DIFFUSE);
+  return createBagForObject(model, quantity, `${name} Bag`, type, WHITE_COLOR_DIFFUSE);
 }
 
 function getDieRotationValues(numberSides) {
@@ -988,10 +1002,10 @@ function createDomino(name) {
     Hands: true,
     ...STANDARD_ATTRIBUTES
   };
-  return createBagForObject(model, 1, `${name} Bag`, WHITE_COLOR_DIFFUSE);
+  return createBagForObject(model, 1, `${name} Bag`, type, WHITE_COLOR_DIFFUSE);
 }
 
-function createBaggie(name, quantity, colorDiffuse = null, isInfinite = false) {
+function createBaggie(name, quantity, type, colorDiffuse = null, isInfinite = false) {
   if (typeof name !== "string" || name === "") {
     throw new Error(`Name is not a string or is empty for baggie`);
   }
@@ -1009,6 +1023,7 @@ function createBaggie(name, quantity, colorDiffuse = null, isInfinite = false) {
   const bag = {
     GUID: guid,
     Name: "Bag",
+    TemplativeType: type,
     Transform: {
       posX: 0, posY: 1, posZ: 0, 
       rotX: 0, rotY: 0, rotZ: 0, 
@@ -1030,9 +1045,9 @@ function createBaggie(name, quantity, colorDiffuse = null, isInfinite = false) {
     },
     ...STANDARD_ATTRIBUTES
   };
-  return createBagForObject(bag, quantity, `${name} Bag`, colorDiffuse);
+  return createBagForObject(bag, quantity, `${name} Bag`, type, colorDiffuse);
 }
-function createPokerChip(name, quantity, chipValue, colorDiffuse = null) {
+function createPokerChip(name, quantity, type, chipValue, colorDiffuse = null) {
   if (typeof name !== "string" || name === "") {
     throw new Error(`Name is not a string or is empty for poker chip`);
   }
@@ -1054,6 +1069,7 @@ function createPokerChip(name, quantity, chipValue, colorDiffuse = null) {
   }
   const model = {
     GUID: guid,
+    TemplativeType: type,
     Name: `Chip_${chipValue}`,
     Transform: {
       posX: 0, posY: 1, posZ: 0, 
@@ -1069,7 +1085,7 @@ function createPokerChip(name, quantity, chipValue, colorDiffuse = null) {
     Hands: false,
     ...STANDARD_ATTRIBUTES
   };
-  return createBagForObject(model, quantity, `${name} Bag`, diffuse);
+  return createBagForObject(model, quantity, `${name} Bag`, type, diffuse);
 }
 
 module.exports = { 

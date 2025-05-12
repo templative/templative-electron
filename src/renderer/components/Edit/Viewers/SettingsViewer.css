@@ -1,0 +1,36 @@
+.settings-viewer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 715px;
+    height: 100%;
+    overflow-y: auto;
+    margin: 0 auto;
+}
+.settings-viewer p {
+    margin-bottom: 0px;
+}
+.settings-viewer-title {
+    font-size: 12px;
+    font-weight: 500;
+}
+.settings-viewer-container .settings-viewer-description {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    margin-bottom: 4px;
+}
+.settings-viewer-container select.disabled {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+}
+.settings-section-container {
+    margin-bottom: 12px;
+}
+.settings-section-container > .settings-section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}

@@ -1,5 +1,8 @@
 const { Command } = require('commander');
 const { produceGame, producePiecePreview } = require('../../lib/produce/gameProducer');
+const { CachePreProducerWatcher } = require('../../lib/produce/cachePreProducerWatcher');
+const { createIconFont, getPUACharFromUnicode } = require('../../lib/produce/iconFontCreator');
+const path = require('path');
 
 // Example usage:
 // templative produce --name "actionCaps" --input "/Users/oliverbarnum/Documents/git/apcw-defines"
@@ -42,8 +45,46 @@ const previewCommand = new Command('preview')
       options.clip
     );
   });
+  
+const watchCommand = new Command('watch')
+  .description('Watch the game and produce it when it changes')
+  .option('--input <path>', 'The directory of the templative project.', './')
+  .action(async (options) => {
+    var cachePreProducer = new CachePreProducerWatcher(options.input);
+    await cachePreProducer.openWatchers();
+  });
+
+// node ./src/main/templative/cli.js iconfont --name game-icons --input "C:\Users\olive\Documents\git\templative-electron\scripts\data\1x1" --output "C:\Users\olive\Documents\git\templative-electron\scripts\data\stuff"
+const iconFontCommand = new Command('iconfont')
+  .description('Create an icon font from SVG files')
+  .option('--name <name>', 'The name of the icon font.', null)
+  .option('--input <path>', 'The directory containing SVG files.', null)
+  .option('--output <path>', 'The directory to output the icon font.', null)
+  .action(async (options) => {
+    if (!options.input || !options.name || !options.output) {
+      console.error('Missing required options: --input, --name, and --output are required.');
+      return;
+    }
+    const inputPath = path.resolve(options.input);
+    const outputPath = path.resolve(options.output);
+    await createIconFont(options.name, inputPath, outputPath);
+  });
+
+// node ./src/main/templative/cli.js pua --font "./scripts/data/stuff/gameicons.ttf" --unicode "&#xEA01;"
+// node ./src/main/templative/cli.js pua --font "./scripts/data/stuff/game-icons.ttf" --unicode "&#xEA02;"
+const getPUACharFromUnicodeCommand = new Command('pua')
+  .description('Get the PUA character from a Unicode string')
+  .option('--font <path>', 'The path to the font file.', null)
+  .option('--unicode <unicode>', 'The Unicode string to convert.', null)
+  .action(async (options) => {
+    const puaChar = await getPUACharFromUnicode(options.font, options.unicode);
+    console.log(puaChar);
+  });
 
 module.exports = {
   produce: produceCommand,
-  preview: previewCommand
+  preview: previewCommand,
+  watch: watchCommand,
+  iconfont: iconFontCommand,
+  pua: getPUACharFromUnicodeCommand
 }; 

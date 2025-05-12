@@ -1,5 +1,4 @@
 const { Image } = require('image-js');
-const chalk = require('chalk');
 const { fileExists } = require('../utils/fileUtils');
 const fs = require('fs/promises');
 

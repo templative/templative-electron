@@ -18,7 +18,6 @@
  * needed by the objectState.js functions.
  */
 
-const chalk = require('chalk');
 const { getColorValueRGB, getColorValueHex } = require('../../../../../../shared/stockComponentColors');
 /**
  * Adapter for createStandardDie
@@ -26,7 +25,7 @@ const { getColorValueRGB, getColorValueHex } = require('../../../../../../shared
  * @param {Object} stockPartInfo - Stock part information
  * @returns {Object|null} - Parameters for createStandardDie or null if invalid
  */
-function standardDieAdapter(componentInstructions, stockPartInfo) {
+function standardDieAdapter(componentInstructions, stockPartInfo, templativeToken) {
   if (!stockPartInfo.hasOwnProperty("Color")) {
     console.log(`!!! Missing Color for ${componentInstructions.type}`);
     return null;
@@ -55,6 +54,7 @@ function standardDieAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     numberSides: numberSides,
     sizeInches: sizeInches,
     colorRGBOutOfOne: getColorValueRGB(stockPartInfo.Color),
@@ -68,7 +68,7 @@ function standardDieAdapter(componentInstructions, stockPartInfo) {
  * @param {Object} stockPartInfo - Stock part information
  * @returns {Object|null} - Parameters for createCustomDie or null if invalid
  */
-function customDieAdapter(componentInstructions, stockPartInfo) {
+function customDieAdapter(componentInstructions, stockPartInfo, templativeToken) {
   if (!stockPartInfo.hasOwnProperty("ImageUrl")) {
     console.log(`!!! Missing ImageUrl for custom die ${componentInstructions.type}`);
     return null;
@@ -95,6 +95,7 @@ function customDieAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     imageUrl: stockPartInfo.ImageUrl,
     numberSides: numberSides
   };
@@ -106,7 +107,7 @@ function customDieAdapter(componentInstructions, stockPartInfo) {
  * @param {Object} stockPartInfo - Stock part information
  * @returns {Object|null} - Parameters for createStockCube or null if invalid
  */
-function stockCubeAdapter(componentInstructions, stockPartInfo) {
+function stockCubeAdapter(componentInstructions, stockPartInfo, templativeToken) {
   if (!stockPartInfo.hasOwnProperty("Color")) {
     console.log(`!!! Missing Color for ${componentInstructions.type}`);
     return null;
@@ -172,6 +173,7 @@ function stockCubeAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     sizeInchesXYZ: sizeInchesXYZ,
     color: getColorValueRGB(stockPartInfo.Color)
   };
@@ -183,7 +185,7 @@ function stockCubeAdapter(componentInstructions, stockPartInfo) {
  * @param {Object} stockPartInfo - Stock part information
  * @returns {Object|null} - Parameters for createStockModel or null if invalid
  */
-function stockModelAdapter(componentInstructions, stockPartInfo) {
+function stockModelAdapter(componentInstructions, stockPartInfo, templativeToken) {
   if (
     !stockPartInfo.hasOwnProperty("3DModel") || 
     !stockPartInfo["3DModel"].hasOwnProperty("ObjUrl") || 
@@ -197,6 +199,7 @@ function stockModelAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     objUrl: stockPartInfo["3DModel"]["ObjUrl"],
     textureUrl: stockPartInfo["3DModel"]["TextureUrl"],
     normalMapUrl: stockPartInfo["3DModel"]["NormalMapUrl"]
@@ -209,7 +212,7 @@ function stockModelAdapter(componentInstructions, stockPartInfo) {
  * @param {Object} stockPartInfo - Stock part information
  * @returns {Object|null} - Parameters for createStandee or null if invalid
  */
-function standeeAdapter(componentInstructions, stockPartInfo) {
+function standeeAdapter(componentInstructions, stockPartInfo, templativeToken) {
   let frontImageUrl = null;
   let backImageUrl = null;
 
@@ -231,6 +234,7 @@ function standeeAdapter(componentInstructions, stockPartInfo) {
 
   return {
     name: componentInstructions.name,
+    type: componentInstructions.type,
     standeesNameQuantityUrls: [
       {
         quantity: componentInstructions.quantity,
@@ -248,7 +252,7 @@ function standeeAdapter(componentInstructions, stockPartInfo) {
  * @param {Object} stockPartInfo - Stock part information
  * @returns {Object|null} - Parameters for createTokenWithDefinedShape or null if invalid
  */
-function tokenWithDefinedShapeAdapter(componentInstructions, stockPartInfo) {
+function tokenWithDefinedShapeAdapter(componentInstructions, stockPartInfo, templativeToken) {
 
   if (!stockPartInfo.hasOwnProperty("FrontImageUrl")) {
     console.log(`!!! Missing FrontImageUrl for token ${componentInstructions.type}`);
@@ -273,13 +277,14 @@ function tokenWithDefinedShapeAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     frontImageUrl: stockPartInfo.FrontImageUrl,
     backImageUrl: backImageUrl,
     shape: stockPartInfo.Shape
   };
 }
 
-function tokenWithTransparencyBasedShapeAdapter(componentInstructions, stockPartInfo) {
+function tokenWithTransparencyBasedShapeAdapter(componentInstructions, stockPartInfo, templativeToken) {
   if (!stockPartInfo.hasOwnProperty("PreviewUri")) {
     console.log(`!!! Missing PreviewUri for token ${componentInstructions.type}`);
     return null;
@@ -287,6 +292,7 @@ function tokenWithTransparencyBasedShapeAdapter(componentInstructions, stockPart
 
   return {
     componentName: componentInstructions.name, 
+    type: componentInstructions.type,
     nameQuantityUrls: [
       {
         name: componentInstructions.name,
@@ -304,7 +310,7 @@ function tokenWithTransparencyBasedShapeAdapter(componentInstructions, stockPart
  * @param {Object} stockPartInfo - Stock part information
  * @returns {Object|null} - Parameters for createCustomPDF or null if invalid
  */
-function customPDFAdapter(componentInstructions, stockPartInfo) {
+function customPDFAdapter(componentInstructions, stockPartInfo, templativeToken) {
   if (!stockPartInfo.hasOwnProperty("PDFUrl")) {
     console.log(`!!! Missing PDFUrl for custom PDF ${componentInstructions.type}`);
     return null;
@@ -325,7 +331,7 @@ function customPDFAdapter(componentInstructions, stockPartInfo) {
  * @param {Object} stockPartInfo - Stock part information
  * @returns {Object|null} - Parameters for createDomino or null if invalid
  */
-function dominoAdapter(componentInstructions, stockPartInfo) {
+function dominoAdapter(componentInstructions, stockPartInfo, templativeToken) {
   let colorDiffuse = null;
   
   if (stockPartInfo.hasOwnProperty("Color")) {
@@ -335,6 +341,7 @@ function dominoAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     colorDiffuse: colorDiffuse,
     meshIndex: stockPartInfo.MeshIndex || 14,
     materialIndex: stockPartInfo.MaterialIndex || 0
@@ -347,7 +354,7 @@ function dominoAdapter(componentInstructions, stockPartInfo) {
  * @param {Object} stockPartInfo - Stock part information
  * @returns {Object|null} - Parameters for createBag or null if invalid
  */
-function baggieAdapter(componentInstructions, stockPartInfo) {
+function baggieAdapter(componentInstructions, stockPartInfo, templativeToken) {
   let colorDiffuse = null;
   
   if (stockPartInfo.hasOwnProperty("Color")) {
@@ -357,6 +364,7 @@ function baggieAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     colorDiffuse: colorDiffuse,
     isInfinite: stockPartInfo.IsInfinite || false
   };
@@ -368,7 +376,7 @@ function baggieAdapter(componentInstructions, stockPartInfo) {
  * @param {Object} stockPartInfo - Stock part information
  * @returns {Object|null} - Parameters for createPokerChip or null if invalid
  */
-function pokerChipAdapter(componentInstructions, stockPartInfo) {
+function pokerChipAdapter(componentInstructions, stockPartInfo, templativeToken) {
   if (!stockPartInfo.hasOwnProperty("ChipValue")) {
     // Extract chip value from the type if not explicitly provided
     const typeMatch = componentInstructions.type.match(/CHIP_(\d+)/i);
@@ -388,11 +396,12 @@ function pokerChipAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     chipValue: stockPartInfo.ChipValue,
     colorDiffuse: colorDiffuse
   };
 }
-function cylinderAdapter(componentInstructions, stockPartInfo) {
+function cylinderAdapter(componentInstructions, stockPartInfo, templativeToken) {
   let color = "white";
   let widthMillimeters = 10;
   let heightMillimeters = 10;
@@ -444,12 +453,13 @@ function cylinderAdapter(componentInstructions, stockPartInfo) {
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     colorHex: colorHex,
     widthMillimeters: widthMillimeters,
     heightMillimeters: heightMillimeters
   };
 }
-function meepleAdapter(componentInstructions, stockPartInfo) {
+function meepleAdapter(componentInstructions, stockPartInfo, templativeToken) {
   let color = stockPartInfo.hasOwnProperty("Color") ? stockPartInfo.Color : "white";
   return {
     name: componentInstructions.name,

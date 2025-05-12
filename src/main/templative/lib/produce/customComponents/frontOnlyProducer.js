@@ -1,17 +1,24 @@
-const { Producer } = require('./producer');
 const outputWriter = require('../outputWriter');
 const svgscissors = require('./svgscissors/main');
 const os = require('os');
 const path = require('path');
 const defineLoader = require('../../manage/defineLoader');
 const { ComponentBackData } = require('../../manage/models/gamedata');
-const { SvgFileCache } = require('./svgscissors/modules/svgFileCache');
+const { SvgFileCache } = require('./svgscissors/caching/svgFileCache');
+const {captureMessage, captureException } = require("../../sentryElectronWrapper");
 
-class FrontOnlyProducer extends Producer {
+class FrontOnlyProducer {
     static async createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache = new SvgFileCache()) {
-        const piecesDataBlob = await defineLoader.loadPiecesGamedata(previewProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"]);
-        if (!piecesDataBlob || Object.keys(piecesDataBlob).length === 0) {
-            console.log(`Skipping ${componentComposition.componentCompose["name"]} component due to missing pieces gamedata.`);
+        let piecesDataBlob = null;
+        try {
+            piecesDataBlob = await defineLoader.loadPiecesGamedata(previewProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"]);
+            if (!piecesDataBlob || Object.keys(piecesDataBlob).length === 0) {
+                console.log(`Skipping ${componentComposition.componentCompose["name"]} component due to missing pieces gamedata.`);
+                return;
+            }
+        } catch (error) {
+            console.error(`Error producing custom component ${componentComposition.componentCompose["name"]}:`, error);
+            captureException(error);
             return;
         }
         await FrontOnlyProducer.createPiece(previewProperties, componentComposition, componentData, componentArtdata, piecesDataBlob, fontCache, svgFileCache);
@@ -28,6 +35,12 @@ class FrontOnlyProducer extends Producer {
             console.log(`Skipping ${componentComposition.componentCompose["name"]} component due to missing pieces gamedata.`);
             return;
         }
+        for (const piece of piecesDataBlob) {
+            if (!("quantity" in piece)) {
+                console.log(`!!! ${componentComposition.componentCompose["name"]} has a piece with no quantity. Make sure to define the 'quantity' field for each piece.`);
+                return;
+            }
+        }
 
         await FrontOnlyProducer.createComponentPieces(produceProperties, componentComposition, componentData, componentArtdata, piecesDataBlob, fontCache, svgFileCache);
     }
@@ -43,6 +56,9 @@ class FrontOnlyProducer extends Producer {
     }
 
     static async writeComponentInstructions(compositions, componentBackOutputDirectory, componentFolderName, piecesGamedata) {
+        if (!componentBackOutputDirectory) {
+            return;
+        }
         const componentInstructionFilepath = path.join(componentBackOutputDirectory, "component.json");
         const frontInstructions = await FrontOnlyProducer.getInstructionSetsForFilesForBackArtdataHash(componentFolderName, piecesGamedata, componentBackOutputDirectory);
         

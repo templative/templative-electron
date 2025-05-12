@@ -1,19 +1,25 @@
 const { createHash } = require('crypto');
 const path = require('path');
 const fsExtra = require('fs-extra');
+const { JSDOM } = require('jsdom');
 const { COMPONENT_INFO } = require('../../../../../../shared/componentInfo.js');
-const { convertSvgContentToPng } = require('./modules/fileConversion/svgConverter.js');
-
+const { convertSvgContentToPngUsingResvg } = require('./fileConversion/svgToRasterConverter.js');
 const { addNewlines } = require("./artdataProcessing/newlineInserter.js");
-const { createArtfile} = require("./modules/artFileCreator.js");
+const { outputSvgArtFile} = require("./fileConversion/svgArtExporter.js");
 const { addOverlays, collectOverlayFiles} = require("./artdataProcessing/overlayHandler.js");
 const { textReplaceInFile} = require("./artdataProcessing/textReplacer.js");
 const { updateStylesInFile} = require("./artdataProcessing/styleUpdater.js");
-const { clipSvgContentToClipFile, CLIPPING_ELEMENT_ID } = require("./modules/imageClipper.js");
-const { getComponentTemplate } = require("../../../componentTemplateUtility.js");
-const { preprocessSvgText } = require('./modules/fileConversion/textWrapping/index.js');
-const { SvgFileCache } = require('./modules/svgFileCache.js');
-const { ArtCache } = require('./modules/artCache.js');
+const { clipSvgContentToClipFile, CLIPPING_ELEMENT_ID } = require("./artdataProcessing/imageClipper.js");
+const { getComponentTemplatesDirectoryPath } = require("../../../componentTemplateUtility.js");
+const { SvgFileCache } = require('./caching/svgFileCache.js');
+const { createInputHash, getCachedFiles, getRenderedPiecesCacheDir, cacheFiles } = require('./caching/renderedPiecesCache.js');
+const { RENDER_MODE, RENDER_PROGRAM, OVERLAPPING_RENDERING_TASKS } = require('../../../manage/models/produceProperties');
+const { cleanupSvgNamespacesAsync, cleanupUnusedDefs } = require('./artdataProcessing/svgCleaner.js');
+const { replaceShapeInsideTextElementsWithPositionedTspans } = require('./artdataProcessing/shapeInsideReplacer.js');
+const { replaceIconGlyphWithPuaCharsAsync } = require('./artdataProcessing/iconGlyphReplacer');
+const { replaceFormattingShortcutElementsWithTspansAsync } = require('./artdataProcessing/formattingShortcutReplacer');
+const { captureException } = require('../../../sentryElectronWrapper.js');
+const { exportSvgToPngUsingInkscape } = require('./fileConversion/inkscapeProcessor.js');
 
 // Helper function to create a unique hash for a piece
 function createUniqueBackHashForPiece(pieceSpecificBackArtDataSources, pieceGamedata) {
@@ -46,16 +52,29 @@ async function createArtFileForPiece(compositions, componentArtdata, uniqueCompo
 
         if ("Front" in componentArtdata.artDataBlobDictionary) {
             const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Front"], pieceData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache);
-            tasks.push(task);
+            if (previewProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
+                tasks.push(task);
+            } else {
+                await task;
+            }
         }
         if ("DieFace" in componentArtdata.artDataBlobDictionary) {
             const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["DieFace"], pieceData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache);
-            tasks.push(task);
+            if (previewProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
+                tasks.push(task);
+            } else {
+                await task;
+            }
         }
     }
     uniqueComponentBackData.componentBackDataBlob.name = "back";
     if ("Back" in componentArtdata.artDataBlobDictionary) {
-        tasks.push(createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Back"], uniqueComponentBackData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache));
+        const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Back"], uniqueComponentBackData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache);
+        if (previewProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
+            tasks.push(task);
+        } else {
+            await task;
+        }
     }
 
     await Promise.all(tasks);   
@@ -65,7 +84,10 @@ async function createArtFilesForComponent(compositions, componentArtdata, unique
     const tasks = [];
 
     // Create output directory once at the beginning
-    await fsExtra.ensureDir(componentBackOutputDirectory);
+
+    if (produceProperties.renderMode !== RENDER_MODE.RENDER_TO_CACHE) {
+        await fsExtra.ensureDir(componentBackOutputDirectory);
+    }
 
     for (const pieceGamedata of piecesDataBlob) {
         const pieceHash = createUniqueBackHashForPiece(uniqueComponentBackData.sourcedVariableNamesSpecificToPieceOnBackArtData, pieceGamedata);
@@ -86,34 +108,38 @@ async function createArtFilesForComponent(compositions, componentArtdata, unique
 
         if ("Front" in componentArtdata.artDataBlobDictionary) {
             const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Front"], pieceData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache);
-            tasks.push(task);
+            if (produceProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
+                tasks.push(task);
+            } else {
+                await task;
+            }
         }
         if ("DieFace" in componentArtdata.artDataBlobDictionary) {
             const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["DieFace"], pieceData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache);
-            tasks.push(task);
+            if (produceProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
+                tasks.push(task);
+            } else {
+                await task;
+            }
         }
     }
 
     uniqueComponentBackData.componentBackDataBlob.name = "back";
     if ("Back" in componentArtdata.artDataBlobDictionary) {
-        tasks.push(createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Back"], uniqueComponentBackData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache));
+        const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Back"], uniqueComponentBackData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache);
+        if (produceProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
+            tasks.push(task);
+        } else {
+            await task;
+        }
     }
 
     await Promise.all(tasks);
 }
 
-/**
- * Create an art file of a piece
- * @param {Object} compositions - Component compositions
- * @param {Object} artdata - Art data
- * @param {Object} gamedata - Game data
- * @param {string} componentBackOutputDirectory - Output directory
- * @param {Object} productionProperties - Production properties
- * @param {Object} fontCache - Font cache instance
- * @param {Object} svgFileCache - SVG file cache instance
- * @returns {Promise<void>}
- */
 async function createArtFileOfPiece(compositions, artdata, gamedata, componentBackOutputDirectory, productionProperties, fontCache, svgFileCache = new SvgFileCache()) {
+    const initialMemory = process.memoryUsage();  // Optional: for memory tracking
+    
     const templateFilesDirectory = compositions.gameCompose["artTemplatesDirectory"];
     if (artdata === null) {
       console.log(`!!! Missing artdata ${gamedata.componentDataBlob["name"]}`);
@@ -121,23 +147,18 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
     }
     const artFilename = `${artdata["templateFilename"]}.svg`;
     const artFilepath = path.normalize(path.join(productionProperties.inputDirectoryPath, templateFilesDirectory, artFilename));
-    if (!await fsExtra.pathExists(artFilepath)) {
-      console.log(`!!! Template art file ${artFilepath} does not exist.`);
-      return;
-    }
+
     const componentType = compositions.componentCompose["type"]
-  
     if (!(componentType in COMPONENT_INFO)) {
       throw new Error(`No image size for ${componentType}`);
     }
     const component = COMPONENT_INFO[componentType];
   
-    let templateContent = null;
-    try {
-      templateContent = await svgFileCache.readSvgFile(artFilepath);
-    } catch (e) {
-      console.log(`!!! Template art file ${artFilepath} cannot be parsed. Error: ${e}`);
-      return;
+    let templateContent = await svgFileCache.readSvgFile(artFilepath);
+    if (!templateContent) {
+        const shortPath = path.basename(path.dirname(artFilepath)) + path.sep + path.basename(artFilepath);
+        console.log(`!!! Template art file ${shortPath} does not exist.`);
+        return;
     }
   
     const pieceName = gamedata.pieceData ? gamedata.pieceData["name"] : gamedata.componentBackDataBlob["name"];
@@ -156,8 +177,7 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       );
 
       // Create cache key from all inputs including overlays
-      const artCache = new ArtCache();
-      const inputHash = await artCache.createInputHash({
+      const inputHash = await createInputHash({
           artdata,
           gamedata,
           productionProperties,
@@ -167,39 +187,77 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       });
 
       // Check cache
-      const cachedFiles = await artCache.getCachedFiles(inputHash);
-      const absoluteOutputDirectory = path.normalize(path.resolve(componentBackOutputDirectory));
-      const absoluteArtFileOutputFilepath = path.join(absoluteOutputDirectory, `${artFileOutputName}.png`);
-
-      if (cachedFiles) {
-
-        const absoluteArtFileOutputSvgFilepath = path.join(absoluteOutputDirectory, `${artFileOutputName}.svg`);
-        console.log(`Using cached version of ${pieceName}`);
-        await fsExtra.copy(cachedFiles.svgPath, absoluteArtFileOutputSvgFilepath);
-        await fsExtra.copy(cachedFiles.pngPath, absoluteArtFileOutputFilepath);
-        return;
+      const cachedFiles = await getCachedFiles(inputHash);
+      const hasCachedFiles = cachedFiles !== null;
+      
+      if (hasCachedFiles) {
+        if (productionProperties.renderMode === RENDER_MODE.RENDER_TO_CACHE || componentBackOutputDirectory === null) {
+            // We already have these files cached, and we are not export them
+            return;
+        }
+        const hasOutputDirectory = componentBackOutputDirectory !== null;
+        if(productionProperties.renderMode !== RENDER_MODE.RENDER_EXPORT_WITHOUT_CACHE && hasOutputDirectory) {
+            console.log(`Using cached version of ${pieceName}`);
+            var absoluteOutputDirectoryPath = path.normalize(path.resolve(componentBackOutputDirectory));
+            var outputArtFileOutputFilepath = path.join(absoluteOutputDirectoryPath, `${artFileOutputName}.png`);
+            var outputArtFileOutputSvgFilepath = path.join(absoluteOutputDirectoryPath, `${artFileOutputName}.svg`);
+            await fsExtra.copy(cachedFiles.svgPath, outputArtFileOutputSvgFilepath);
+            await fsExtra.copy(cachedFiles.pngPath, outputArtFileOutputFilepath);
+            return;
+        }
       }
-
+      var absoluteEndResultDirectoryPath = path.normalize(path.resolve(componentBackOutputDirectory || getRenderedPiecesCacheDir()));
+      
       // If not cached, generate new files
       let contents = templateContent;
       contents = await addOverlays(contents, artdata["overlays"], compositions, gamedata, productionProperties, svgFileCache);
       contents = await textReplaceInFile(contents, artdata["textReplacements"], gamedata, productionProperties);
       contents = await updateStylesInFile(contents, artdata["styleUpdates"], gamedata);
       contents = await addNewlines(contents);
-      contents = await preprocessSvgText(contents);
+      contents = await cleanupSvgNamespacesAsync(contents);
+      const dom = new JSDOM(contents, { contentType: 'image/svg+xml' });
+      const document = dom.window.document;
+      
+      await replaceFormattingShortcutElementsWithTspansAsync(document);
+      await replaceIconGlyphWithPuaCharsAsync(document, productionProperties.inputDirectoryPath);
+    //   if (productionProperties.renderProgram === RENDER_PROGRAM.TEMPLATIVE && contents.includes('shape-inside:url(#')) {
+    //     await replaceShapeInsideTextElementsWithPositionedTspans(document);
+    //   }
+      await cleanupUnusedDefs(document);
+      contents = dom.serialize();
       
       if (productionProperties.isClipped) {
-          const clipSvgFilepath = await getComponentTemplate(componentType);
+        const potentialPaths = await getComponentTemplatesDirectoryPath(componentType);
+        const clipSvgFilepath = path.join(potentialPaths, `${componentType}.svg`);
+        try {
           contents = await clipSvgContentToClipFile(contents, clipSvgFilepath, CLIPPING_ELEMENT_ID, svgFileCache);
+        } catch (error) {
+          if (error.code !== 'ENOENT') {
+            throw error;
+          }
+        }
       }
-      
-      
-      
-      await createArtfile(contents, artFileOutputName, imageSizePixels, componentBackOutputDirectory);
-      await convertSvgContentToPng(contents, imageSizePixels, absoluteArtFileOutputFilepath);
+      // Create and cache the files
+      await outputSvgArtFile(contents, artFileOutputName, imageSizePixels, absoluteEndResultDirectoryPath);
+      const absoluteSvgFilepath = path.join(absoluteEndResultDirectoryPath, `${artFileOutputName}.svg`);
+      var absolutePngFilepath = path.join(absoluteEndResultDirectoryPath, `${artFileOutputName}.png`);
+      if (productionProperties.renderProgram === RENDER_PROGRAM.INKSCAPE) {
+        await exportSvgToPngUsingInkscape(absoluteSvgFilepath, absolutePngFilepath);
+      }
+      else {
+        await convertSvgContentToPngUsingResvg(contents, imageSizePixels, absolutePngFilepath);
+      }
 
-      await artCache.cacheFiles(inputHash, contents, absoluteArtFileOutputFilepath);
+      await cacheFiles(inputHash, contents, absolutePngFilepath);
       console.log(`Produced ${pieceName}`);
+      
+      // Optional: Log memory usage
+      const finalMemory = process.memoryUsage();
+      console.debug('Memory usage (MB):', {
+          heapDiff: (finalMemory.heapUsed - initialMemory.heapUsed) / 1024 / 1024,
+          current: finalMemory.heapUsed / 1024 / 1024,
+      });
+      
     } catch (error) {
       console.error(`Error producing ${pieceName}: ${error.message}`);
       console.error(error.stack);
@@ -207,4 +265,4 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
 }
 
 
-module.exports = { createArtFileForPiece, createArtFilesForComponent, createArtFileOfPiece };
+module.exports = { createArtFileForPiece, createArtFilesForComponent };

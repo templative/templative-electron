@@ -2,7 +2,6 @@ const fs = require('fs').promises;
 const path = require('path');
 const { pipeline } = require('stream/promises');
 const { createReadStream, createWriteStream } = require('fs');
-const chalk = require('chalk');
 
 /**
  * Check if a file exists
@@ -25,10 +24,11 @@ async function fileExists(filePath) {
 async function lookForSimulatorFile() {
   const simulatorFileLocation = "./.simulator";
   try {
-    await fs.access(simulatorFileLocation);
-    const simulator = await fs.readFile(simulatorFileLocation, 'utf8');
-    return simulator;
+    return await fs.readFile(simulatorFileLocation, 'utf8');
   } catch (err) {
+    if (err.code !== 'ENOENT') {
+      throw err;
+    }
     return null;
   }
 }

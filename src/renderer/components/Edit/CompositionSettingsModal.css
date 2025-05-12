@@ -1,0 +1,227 @@
+.modal-overlay-composition-settings {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.App .modal-overlay-composition-settings .modal-content {
+    padding: 0.5em 1em;
+    background-color: var(--color-content-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: var(--bs-border-radius);
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+}
+
+.modal-overlay-composition-settings .modal-content-large {
+    width: 90% !important;
+    max-width: 800px !important;
+}
+
+.modal-overlay-composition-settings .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 1rem;
+}
+.modal-overlay-composition-settings .replacement-modal-icon {
+    width: 24px;
+    height: 24px;
+}
+.modal-overlay-composition-settings .modal-title {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.modal-overlay-composition-settings .close-button {
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    padding-right: 0px;
+}
+
+.modal-overlay-composition-settings .close-button:hover {
+    color: var(--color-accent-hover);
+}
+
+.modal-overlay-composition-settings .modal-body {
+    padding: 1rem;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.modal-overlay-composition-settings .current-file {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: var(--color-surface-cover);
+    border: 1px solid var(--color-border);
+    border-radius: var(--bs-border-radius);
+}
+
+.modal-overlay-composition-settings .file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.modal-overlay-composition-settings .file-option {
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    background-color: var(--color-content-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    padding: 0.5rem;
+    border-radius: var(--bs-border-radius);
+    cursor: pointer;
+    height: 38px;
+    font-size: 0.9rem;
+}
+
+.modal-overlay-composition-settings .file-option:hover {
+    background-color: var(--color-content-surface-hover);
+    border-color: var(--color-accent-hover);
+    color: var(--color-text);
+}
+
+.modal-overlay-composition-settings .file-option:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: var(--color-content-surface);
+    color: var(--color-text-muted);
+}
+
+.modal-overlay-composition-settings .file-selection-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-overlay-composition-settings .file-selection-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--bs-border-radius);
+    padding: 1rem;
+    background-color: var(--color-dark-2);
+}
+
+.modal-overlay-composition-settings .file-group-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    /* margin-top: 1rem; */
+}
+
+.modal-overlay-composition-settings .file-group-header:first-of-type {
+    margin-top: 0;
+}
+
+.modal-overlay-composition-settings .file-group-header h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.modal-overlay-composition-settings .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.modal-overlay-composition-settings .cancel-button, .modal-overlay-composition-settings .save-button {
+    padding: 0.5rem 1rem;
+    border-radius: var(--bs-border-radius);
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.modal-overlay-composition-settings .cancel-button {
+    background-color: var(--color-dark-3);
+    color: var(--color-text);
+}
+
+.modal-overlay-composition-settings .save-button {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.modal-overlay-composition-settings .save-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: var(--color-dark-3);
+}
+
+.modal-overlay-composition-settings .component-modal-header, .modal-overlay-composition-settings .component-header {
+    border-bottom: 1px hsl(221, 52%, 51%, 0.5) solid !important;
+}
+
+.modal-overlay-composition-settings .piece-modal-header, .modal-overlay-composition-settings .piece-header {
+    border-bottom: 1px hsl(175, 70%, 59%, 0.5) solid !important;
+}
+
+.modal-overlay-composition-settings .artdata-modal-header, .modal-overlay-composition-settings .artdata-header {
+    border-bottom: 1px hsl(39, 77%, 61%, 0.5) solid !important;
+}
+
+.modal-overlay-composition-settings .unified-modal-header {
+    background: none;
+    border-bottom: 1px solid transparent !important;
+    border-image: linear-gradient(to right, 
+        hsl(221, 52%, 51%, 0.5) 0%,
+        hsl(175, 70%, 59%, 0.5) 50%,
+        hsl(39, 77%, 61%, 0.5) 100%
+    ) 1 !important;
+}
+
+.modal-overlay-composition-settings .artdata-filename {
+    color: hsl(39, 77%, 61%);
+}
+.modal-overlay-composition-settings .component-filename {
+    color: hsl(221, 52%, 51%);
+}
+.modal-overlay-composition-settings .piece-filename {
+    color: hsl(175, 70%, 59%);
+}
+
+.modal-overlay-composition-settings select.file-option {
+    appearance: auto;
+    height: auto;
+    padding: 0.4rem 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.modal-overlay-composition-settings .disabled-toggle-container {
+    margin-bottom: 0.25rem;
+}
+.modal-overlay-composition-settings .disabled-toggle-container {
+    font-size: 14px;
+}
+.modal-overlay-composition-settings .disabled-toggle-label > input {
+    margin-right: 6px;
+    margin-left: 4px;
+}

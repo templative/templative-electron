@@ -28,23 +28,36 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-react']
+            presets: [
+              '@babel/preset-react',
+              ['@babel/preset-env', {
+                modules: false,
+                targets: {
+                  esmodules: true
+                }
+              }]
+            ]
           }
         },
-        exclude: /node_modules/
+        exclude: /node_modules\/(?!(@uiw)\/).*/
       },
       {
         test: /\.svg$/,
-        use: ['@svgr/webpack'],
-        exclude: [/node_modules\//, /src\/main\//]
-      },
-      {
-        test: /\.svg$/,
-        type: 'asset/resource',
-        exclude: [/node_modules\//, /src\/renderer\//],
-        generator: {
-          filename: 'assets/[name][ext]'
-        },
+        oneOf: [
+          {
+            // For SVG imports in JS/JSX files that should be components
+            resourceQuery: /react/, // matches ?react
+            use: ['@svgr/webpack'],
+          },
+          {
+            // For all other SVG imports
+            type: 'asset/resource',
+            generator: {
+              filename: 'assets/[name][ext]'
+            },
+          }
+        ],
+        exclude: [/node_modules\//]
       },
       {
         test: /\.(png|jpe?g|gif|ico)$/,
@@ -60,6 +73,13 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
   ],
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.svg', '.png']
+    extensions: ['.js', '.jsx', '.json', '.svg', '.png'],
+    extensionAlias: {
+      '.js': ['.js', '.ts', '.jsx'],
+      '.mjs': ['.mjs', '.mts']
+    }
+  },
+  experiments: {
+    topLevelAwait: true
   }
 };

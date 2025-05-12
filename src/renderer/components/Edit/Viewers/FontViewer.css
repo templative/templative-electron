@@ -1,0 +1,92 @@
+.font-body {
+    height: 100%;
+    display: inline-block;
+    width: 100%;
+    padding: 0em 0em 0 0em;
+}
+.font-loading-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.font-loading {
+    font-size: 24px;
+    text-align: center;
+}
+.glyphs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    grid-template-rows: repeat(auto-fill, 116px);
+    gap: 12px;
+    justify-content: center;
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.glyph p {
+    font-size: 12px;
+    text-align: center;
+}
+.glyph {
+    cursor: pointer;
+    background-color: var(--color-content-surface);
+    border-radius: 16px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.glyph p {
+    margin-bottom: 0px;
+}
+.glyph:hover {
+    background-color: var(--color-content-surface-hover);
+}
+.glyph-svg {
+    rotate: 180deg;
+    transform: scaleX(-1);
+    margin-bottom: 4px;
+    margin: 0 auto;
+}
+.iconfont-glyph-svg {
+    width: 16px;
+    height: 16px;
+    color: var(--color-accent) !important;
+}
+.ttf-font-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.font-installed-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+}
+.font-installed-icon {
+    width: 100px;
+    height: 100px;
+}
+.example-font-usage {
+    text-align: center;
+}
+.example-font-usage p {
+    margin-bottom: 0px;
+}
+.example-font-usage-text span {
+    color: var(--color-accent);
+}
+.example-font-usage-text {
+    font-size: 12px;
+}
+.font-not-installed-container {
+    text-align: center;
+}

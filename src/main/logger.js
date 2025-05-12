@@ -7,9 +7,14 @@ const { app } = require('electron');
 const logDir = path.join(os.homedir(), 'Documents', 'Templative');
 const logFilePath = path.join(logDir, 'log.log');
 
-if (!fs.existsSync(logDir)) {
+try {
     fs.mkdirSync(logDir, { recursive: true });
+} catch (err) {
+    if (err.code !== 'EEXIST') {
+        throw err;
+    }
 }
+
 
 console.log(`Writing logs to ${logFilePath}`);
 

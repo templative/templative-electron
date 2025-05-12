@@ -10,6 +10,10 @@ async function calculateComponentsDepth(gameRootDirectoryPath) {
   const gameCompose = await defineLoader.loadGameCompose(gameRootDirectoryPath);
   const studioCompose = await defineLoader.loadStudio(gameRootDirectoryPath);
   const componentCompose = await defineLoader.loadComponentCompose(gameRootDirectoryPath);
+  if (!gameCompose || !gameDataBlob || !studioDataBlob || !componentsCompose) {
+    console.log(`!!! Malformed Templative Project. ${path.basename(gameRootDirectoryPath)} is missing: ${gameCompose ? "" : "game-compose.json "}${gameDataBlob ? "" : "game.json "}${studioDataBlob ? "" : "studio.json "}${componentsCompose ? "" : "component-compose.json "}`);
+    return;
+}
 
   console.log(`${game["name"]} by ${studioCompose["name"]}`);
   await printGameComponentDepth(gameRootDirectoryPath, gameCompose, componentCompose);

@@ -3,20 +3,21 @@ const path = require('path');
 const fsPromises = require('fs').promises;
 const fs = require('fs');
 const glob = require('glob');
-const chalk = require('chalk');
+const {captureMessage, captureException } = require("../sentryElectronWrapper");
 
 const outputWriter = require('./outputWriter');
 const rulesMarkdownProcessor = require('./rulesMarkdownProcessor');
 const defineLoader = require('../manage/defineLoader');
-const customComponents = require('./customComponents/customComponents');
+const producerPicker = require('./customComponents/producerPicker');
 const ProduceProperties = require('../manage/models/produceProperties').ProduceProperties;
 const PreviewProperties = require('../manage/models/produceProperties').PreviewProperties;
 const GameData = require('../manage/models/gamedata').GameData;
 const ComponentComposition = require('../manage/models/composition');
-const FontCache = require('./customComponents/svgscissors/fontCache').FontCache;
-const { SvgFileCache } = require('./customComponents/svgscissors/modules/svgFileCache');
+const FontCache = require('./customComponents/svgscissors/caching/fontCache').FontCache;
+const { SvgFileCache } = require('./customComponents/svgscissors/caching/svgFileCache');
+const { RENDER_MODE, RENDER_PROGRAM, OVERLAPPING_RENDERING_TASKS } = require('../manage/models/produceProperties');
 
-function getPreviewsPath() {
+async function getPreviewsPath() {
     let base_path;
     if (process.resourcesPath) {
         base_path = process.resourcesPath;
@@ -25,26 +26,38 @@ function getPreviewsPath() {
     }
 
     const previewsPath = path.join(base_path, "previews");
-    if (!fs.existsSync(previewsPath)) {
-        fs.mkdirSync(previewsPath, { recursive: true });
+    try {
+        await fsPromises.mkdir(previewsPath, { recursive: true });
+    } catch (err) {
+        if (err.code !== 'EEXIST') {
+            throw err;
+        }
     }
     return previewsPath;
 }
-
-async function deleteFile(file) {
+async function clearPreviews(directoryPath) {
     try {
-        await fsPromises.unlink(file);
-    } catch (e) {
-        console.log(`Error deleting ${file}: ${e}`);
+        // Read all files in the directory
+        const files = await fsPromises.readdir(directoryPath);
+        
+        // Delete each file
+        for (const file of files) {
+            const filePath = path.join(directoryPath, file);
+            try {
+                await fsPromises.unlink(filePath);
+            } catch (err) {
+                if (err.code !== 'ENOENT') {
+                    console.error(`Error deleting file ${filePath}:`, err);
+                }
+            }
+        }
+    } catch (err) {
+        console.error(`Error clearing directory ${directoryPath}:`, err);
+        throw err;
     }
 }
 
-async function clearPreviews(directoryPath) {
-    const files = glob.sync(path.join(directoryPath, '*'));
-    await Promise.all(files.map(deleteFile));
-}
-
-async function producePiecePreview(gameRootDirectoryPath, componentName, pieceName, language, isClipping=false) {
+async function producePiecePreview(gameRootDirectoryPath, componentName, pieceName, language, renderProgram=RENDER_PROGRAM.TEMPLATIVE) {
     if (!gameRootDirectoryPath) {
         throw new Error("Game root directory path is invalid.");
     }
@@ -53,6 +66,11 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     const gameDataBlob = await defineLoader.loadGame(gameRootDirectoryPath);
     const studioDataBlob = await defineLoader.loadStudio(gameRootDirectoryPath);
     const componentsCompose = await defineLoader.loadComponentCompose(gameRootDirectoryPath);
+    if (!gameCompose || !gameDataBlob || !studioDataBlob || !componentsCompose) {
+        console.log(`!!! Malformed Templative Project. ${path.basename(gameRootDirectoryPath)} is missing: ${gameCompose ? "" : "game-compose.json "}${gameDataBlob ? "" : "game.json "}${studioDataBlob ? "" : "studio.json "}${componentsCompose ? "" : "component-compose.json "}`);
+        return;
+    }
+    
     let component = null;
     for (const componentCompose of componentsCompose) {
         const isMatchingComponentFilter = componentCompose["name"] === componentName;
@@ -63,58 +81,65 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     }
     const componentComposition = new ComponentComposition(gameCompose, component);
     const gameData = new GameData(studioDataBlob, gameDataBlob);
-    const outputDirectoryPath = getPreviewsPath();
+    const outputDirectoryPath = await getPreviewsPath();
     await clearPreviews(outputDirectoryPath);
-    const previewProperties = new PreviewProperties(gameRootDirectoryPath, outputDirectoryPath, pieceName, language, isClipping);
+    const isClipped = true
+    const previewProperties = new PreviewProperties(gameRootDirectoryPath, outputDirectoryPath, pieceName, language, isClipped, renderProgram);
 
     const fontCache = new FontCache();
     const svgFileCache = new SvgFileCache();
     
-    await customComponents.produceCustomComponentPreview(previewProperties, gameData, componentComposition, fontCache, svgFileCache);
+    await producerPicker.produceCustomComponentPreview(previewProperties, gameData, componentComposition, fontCache, svgFileCache);
     console.log(`Wrote previews to ${outputDirectoryPath}`);
 }
 
-async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage, isClipping=false) {
+async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage, isClipped=false, renderMode=RENDER_MODE.RENDER_EXPORT_USING_CACHE, renderProgram=RENDER_PROGRAM.TEMPLATIVE, overlappingRenderingTasks=OVERLAPPING_RENDERING_TASKS.ONE_AT_A_TIME) {
     const startTime = performance.now();
     
     if (!gameRootDirectoryPath) {
         throw new Error("Game root directory path is invalid.");
     }
 
-    const gameDataBlob = await defineLoader.loadGame(gameRootDirectoryPath);
-
-    const timestamp = new Date().toISOString().replace(/T/, '_').replace(/\..+/, '').replace(/:/g, '-'); 
+    
     let componentFilterString = "";
     if (componentFilter != null) {
         componentFilterString = `_${componentFilter}`;
     }
-    const uniqueGameName = `${gameDataBlob['name']}_${gameDataBlob['versionName']}_${gameDataBlob['version']}_${timestamp}${componentFilterString}`.replace(/\s/g, "");
     
-    // This stuff isnt typically stored in the game.json, but it is for exporting
-    gameDataBlob["timestamp"] = timestamp;
-    gameDataBlob["componentFilter"] = componentFilter;
-
     const gameCompose = await defineLoader.loadGameCompose(gameRootDirectoryPath);
-
-    const outputDirectoryPath = await outputWriter.createGameFolder(gameRootDirectoryPath, gameCompose["outputDirectory"], uniqueGameName);
-    await outputWriter.updateLastOutputFolder(gameRootDirectoryPath, gameCompose["outputDirectory"], outputDirectoryPath);
-    console.log(`Producing ${path.normalize(outputDirectoryPath)}`);
-
-    const gameTasks = [];
-    gameTasks.push(outputWriter.copyGameFromGameFolderToOutput(gameDataBlob, outputDirectoryPath));
-
+    const gameDataBlob = await defineLoader.loadGame(gameRootDirectoryPath);
     const studioDataBlob = await defineLoader.loadStudio(gameRootDirectoryPath);
-    gameTasks.push(outputWriter.copyStudioFromGameFolderToOutput(studioDataBlob, outputDirectoryPath));
-
-    const rules = await defineLoader.loadRules(gameRootDirectoryPath);
-    gameTasks.push(rulesMarkdownProcessor.produceRulebook(rules, outputDirectoryPath));
-
-    await Promise.all(gameTasks);
-    
     const componentsCompose = await defineLoader.loadComponentCompose(gameRootDirectoryPath);
+    if (!gameCompose || !gameDataBlob || !studioDataBlob || !componentsCompose) {
+        console.log(`!!! Malformed Templative Project. ${path.basename(gameRootDirectoryPath)} is missing: ${gameCompose ? "" : "game-compose.json "}${gameDataBlob ? "" : "game.json "}${studioDataBlob ? "" : "studio.json "}${componentsCompose ? "" : "component-compose.json "}`);
+        return;
+    }
+    
+    console.log(`Producing ${path.basename(gameRootDirectoryPath)}.`);
+    
+    var outputDirectoryPath = null;
+    if (renderMode !== RENDER_MODE.RENDER_TO_CACHE) {
+        const timestamp = new Date().toISOString().replace(/T/, '_').replace(/\..+/, '').replace(/:/g, '-'); 
+        const uniqueGameName = `${gameDataBlob['name']}_${gameDataBlob['versionName']}_${gameDataBlob['version']}_${timestamp}${componentFilterString}`.replace(/\s/g, "");
+        
+        // This stuff isnt typically stored in the game.json, but it is for exporting
+        gameDataBlob["timestamp"] = timestamp;
+        gameDataBlob["componentFilter"] = componentFilter;
+        
+        outputDirectoryPath = await outputWriter.createGameFolder(gameRootDirectoryPath, gameCompose["outputDirectory"], uniqueGameName);
+        await outputWriter.updateLastOutputFolder(gameRootDirectoryPath, gameCompose["outputDirectory"], outputDirectoryPath);
+        
+        const gameTasks = [];
+        gameTasks.push(outputWriter.copyGameFromGameFolderToOutput(gameDataBlob, outputDirectoryPath));
+        gameTasks.push(outputWriter.copyStudioFromGameFolderToOutput(studioDataBlob, outputDirectoryPath));
+        gameTasks.push(produceRules(gameRootDirectoryPath, outputDirectoryPath));
+        
+        await Promise.all(gameTasks);
+    }
+    
 
     const gameData = new GameData(studioDataBlob, gameDataBlob);
-    const produceProperties = new ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage, isClipping);
+    const produceProperties = new ProduceProperties(gameRootDirectoryPath, outputDirectoryPath, isPublish, isSimple, targetLanguage, isClipped, renderMode, renderProgram, overlappingRenderingTasks);
     
     const fontCache = new FontCache();
     const svgFileCache = new SvgFileCache();
@@ -128,6 +153,7 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
             if (!isProducingOneComponent) {
                 console.log(`Skipping disabled ${componentCompose["name"]} component.`);
             }
+            // console.log(`Skipping disabled ${componentCompose["name"]} component.`);
             continue;
         }
 
@@ -138,6 +164,7 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
         }
 
         if (isProducingOneComponent && !isMatchingComponentFilter) {
+            // console.log(`Skipping ${componentCompose["name"]} component as it is not the one we are producing.`);
             continue;
         }
         
@@ -170,19 +197,38 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
             }
         }
         const componentComposition = new ComponentComposition(gameCompose, componentCompose);
-
-        componentTasks.push(produceGameComponent(produceProperties, gameData, componentComposition, fontCache, svgFileCache));
+        const componentTask = produceGameComponent(produceProperties, gameData, componentComposition, fontCache, svgFileCache);
+        if (produceProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ONE_AT_A_TIME) {
+            await componentTask;
+        } else {
+            componentTasks.push(componentTask);
+        }
     }
     
     await Promise.all(componentTasks);
+    
     
     const endTime = performance.now();
     const totalTimeMs = endTime - startTime;
     const totalTimeSec = (totalTimeMs / 1000).toFixed(2);
     
-    console.log(`Done producing ${path.normalize(path.basename(outputDirectoryPath))} in ${totalTimeSec} seconds`);
+    console.log(`Done producing${outputDirectoryPath ? ` ${path.basename(outputDirectoryPath)} ` : ""} in ${totalTimeSec} seconds`);
     
     return outputDirectoryPath;
+}
+
+async function produceRules(gameRootDirectoryPath, outputDirectoryPath) {
+    try {
+        const rules = await defineLoader.loadRules(gameRootDirectoryPath);
+        if (!rules) {
+            console.log("!!! rules.md not found.");
+            return;
+        }
+        await rulesMarkdownProcessor.produceRulebook(rules, outputDirectoryPath);
+    } catch (error) {
+        captureException(error);
+        console.error(`Error producing rules:`, error);
+    }
 }
 
 async function produceGameComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache) {
@@ -190,12 +236,12 @@ async function produceGameComponent(produceProperties, gamedata, componentCompos
     const componentTypeTokens = componentType.split("_");
     const isStockComponent = componentTypeTokens[0].toUpperCase() === "STOCK";
 
-    if (isStockComponent) {
+    if (isStockComponent && produceProperties.outputDirectoryPath !== null && produceProperties.renderMode !== RENDER_MODE.RENDER_TO_CACHE) {
         await produceStockComponent(componentComposition.componentCompose, produceProperties.outputDirectoryPath);
         return;
     }
 
-    await customComponents.produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache);
+    await producerPicker.produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache);
 }
 
 async function produceStockComponent(componentCompose, outputDirectory) {
@@ -217,7 +263,6 @@ async function produceStockComponent(componentCompose, outputDirectory) {
 
 module.exports = {
     getPreviewsPath,
-    deleteFile,
     clearPreviews,
     producePiecePreview,
     produceGame,

@@ -1,16 +1,14 @@
-const { Producer } = require('./producer');
 const outputWriter = require('../outputWriter');
 const svgscissors = require('./svgscissors/main');
-const os = require('os');
 const { createHash } = require('crypto');
 const path = require('path');
 const defineLoader = require('../../manage/defineLoader');
 const { COMPONENT_INFO } = require('../../../../../shared/componentInfo');
 const { ComponentBackData } = require('../../manage/models/gamedata');
-const chalk = require('chalk');
-const { SvgFileCache } = require('./svgscissors/modules/svgFileCache');
+const { SvgFileCache } = require('./svgscissors/caching/svgFileCache');
+const {captureMessage, captureException } = require("../../sentryElectronWrapper");
 
-class BackProducer extends Producer {
+class BackProducer {
     static async createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache = new SvgFileCache()) {
         const componentTypeInfo = COMPONENT_INFO[componentComposition.componentCompose["type"]];
         const defaultPieceGamedataBlob = [{ 
@@ -58,9 +56,15 @@ class BackProducer extends Producer {
         }];
         let piecesDataBlob = defaultPieceGamedataBlob;
         if (componentTypeInfo["HasPieceData"]) {
-            piecesDataBlob = await defineLoader.loadPiecesGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"]);
-            if (!piecesDataBlob || Object.keys(piecesDataBlob).length === 0) {
-                console.log(`Skipping ${componentComposition.componentCompose["name"]} component due to missing pieces gamedata.`);
+            try {
+                piecesDataBlob = await defineLoader.loadPiecesGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"]);
+                if (!piecesDataBlob || Object.keys(piecesDataBlob).length === 0) {
+                    console.log(`Skipping ${componentComposition.componentCompose["name"]} component due to missing pieces gamedata.`);
+                    return;
+                }
+            } catch (error) {
+                console.error(`Error producing custom component ${componentComposition.componentCompose["name"]}:`, error);
+                captureException(error);
                 return;
             }
         }
@@ -73,8 +77,13 @@ class BackProducer extends Producer {
             const uniqueComponentBackData = uniqueComponentBackDatas[key];
             let needsToProduceAPiece = false;
             for (const piece of piecesDataBlob) {
+                // console.log(piece);
                 const pieceHash = BackProducer.createUniqueBackHashForPiece(sourcedVariableNamesSpecificToPieceOnBackArtData, piece);
-                if (pieceHash === uniqueComponentBackData.pieceUniqueBackHash && "quantity" in piece && piece["quantity"] > 0) {
+                if (!("quantity" in piece)) {
+                    console.log(`!!! ${componentComposition.componentCompose["name"]} has a piece with no quantity. Make sure to define the 'quantity' field for each piece.`);
+                    return;
+                }
+                if (pieceHash === uniqueComponentBackData.pieceUniqueBackHash) {
                     needsToProduceAPiece = true;
                     break;
                 }
@@ -157,6 +166,9 @@ class BackProducer extends Producer {
     }
 
     static async createUniqueComponentBackInstructions(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, compositions, componentBackOutputDirectory, componentFolderName, piecesGamedata) {
+        if (!componentBackOutputDirectory) {
+            return;
+        }
         const componentInstructionFilepath = path.join(componentBackOutputDirectory, "component.json");
         const frontInstructionSets = await BackProducer.getInstructionSetsForFilesForBackArtdataHash(uniqueComponentBackData.pieceUniqueBackHash, sourcedVariableNamesSpecificToPieceOnBackArtData, componentFolderName, piecesGamedata, componentBackOutputDirectory);
         const backInstructionSetFilepath = await BackProducer.getBackInstructionSetFilepath(componentFolderName, componentBackOutputDirectory);

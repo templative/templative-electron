@@ -1,4 +1,3 @@
-const chalk = require('chalk');
 
 /**
  * Resolves a scoped value from game data

@@ -1,6 +1,6 @@
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
-const chalk = require('chalk');
 const crypto = require('crypto');
+const {captureMessage, captureException } = require("../../../sentryElectronWrapper");
 
 /**
  * Calculate MD5 hash from image buffer
@@ -14,9 +14,10 @@ function calculateMd5Hash(buffer) {
 /**
  * Upload an image directly to S3 using presigned URL
  * @param {Image} image - The image to upload
+ * @param {string} token - The authentication token
  * @returns {Promise<string|null>} - The URL of the uploaded image or null if upload failed
  */
-async function uploadToS3(image) {
+async function uploadToS3(image, token) {
   try {
     // Convert image to buffer
     const buffer = await image.toBuffer({ format: 'png' });
@@ -27,11 +28,12 @@ async function uploadToS3(image) {
     const isDev = false;
     const baseUrl = isDev ? "http://127.0.0.1:5000" : "https://api.templative.net/";
     
-    // Request a presigned URL from the server
+    // Request a presigned URL from the server with auth token
     const presignedResponse = await fetch(`${baseUrl}/simulator/image/presigned-url`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
       },
       body: JSON.stringify({
         md5_hash: md5Hash
@@ -67,6 +69,7 @@ async function uploadToS3(image) {
     }
     return presignedData.final_url;
   } catch (error) {
+    captureException(error);
     console.log(`!!! Error uploading image: ${error}`);
     return null;
   }
@@ -103,6 +106,7 @@ async function uploadThroughServer(image) {
       return null;
     }
   } catch (error) {
+    captureException(error);
     console.log(`!!! Error uploading image: ${error}`);
     return null;
   }

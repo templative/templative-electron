@@ -16,7 +16,7 @@ bin/*
 .package-lock.json
 # production
 /build
-
+.templativeCache/
 # misc
 /temp
 .env

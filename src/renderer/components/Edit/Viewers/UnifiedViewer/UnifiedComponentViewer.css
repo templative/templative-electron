@@ -1,0 +1,165 @@
+.composition-controls-row {
+    margin-bottom: 10px;
+}
+.unified-viewer {
+    height: 100%;
+    overflow-y: hidden;
+}
+.unified-viewer > .col {
+    height: 100%;
+    overflow-y: hidden;
+}
+.gamedata-column {
+    position: relative;
+    min-width: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 0 0 auto !important;
+    max-width: none !important;
+}
+
+.artdata-column {
+    position: relative;
+    min-width: 200px;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.unified-column {
+    position: relative;
+    min-width: 200px;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.artdata-column > * {
+    margin-left: 0.5em;
+}
+.artdata-column > * > p, .gamedata-column > * > p, .unified-column > * > p {
+    border-bottom: 1px var(--color-dark-3) solid;
+    font-size: 18px;
+}
+.artdata-column > *:not(.unselecteable-artdata) > p:hover,
+.gamedata-column > *:not(.unselecteable-artdata) > p:hover,
+.unified-column > *:not(.unselecteable-artdata) > p:hover {
+    cursor: pointer;
+    font-size: 18px;
+    background-color: var(--color-content-surface);
+}
+.unselecteable-artdata > p {
+    color: var(--color-text-muted);
+}
+.subfile-filepath {
+    color: var(--color-text-muted);
+    font-size:12px;
+}
+.content-container {
+    margin-bottom: 10px;
+    margin-right: 6px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+.universal-file-content {
+    padding-top: 12px;
+    padding-bottom: 6px;
+    height: calc(100% - 40px);
+}
+.drop-down-chevron {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.viewer-resize-handle {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 10px;
+    height: 100%;
+    cursor: col-resize;
+    z-index: 10;
+    opacity: 0;
+}
+.viewer-resize-handle:hover, .viewer-resize-handle.active {
+    background-color: var(--color-accent);
+    opacity: 0.5;
+}
+.quantity-input {
+    max-width: 8ch !important;
+}
+.studio-gamedata-header, .game-gamedata-header, .component-gamedata-header, .pieces-gamedata-header, .artdata-header {
+    background-color: var(--color-content-surface);
+    margin-bottom: 0px !important;
+}
+.studio-gamedata-header:hover, .game-gamedata-header:hover, .component-gamedata-header:hover, .pieces-gamedata-header:hover, .artdata-header:hover {
+    background-color: var(--color-content-surface-hover);
+}
+.studio-gamedata-header {
+    border-bottom: 1px hsl(273, 70%, 59%, 0.5) solid !important;
+}
+.game-gamedata-header {
+    border-bottom: 1px hsl(221, 52%, 51%, 0.5) solid !important;
+}
+.component-gamedata-header {
+    border-bottom: 1px hsl(221, 52%, 51%, 0.5) solid !important;
+}
+.pieces-gamedata-header {
+    border-bottom: 1px hsl(175, 70%, 59%, 0.5) solid !important;
+}
+.artdata-header {
+    border-bottom: 1px hsl(39, 77%, 61%, 0.5) solid !important;
+}
+.artdata-header:hover > .subfile-filepath,
+.pieces-gamedata-header:hover > .subfile-filepath,
+.studio-gamedata-header:hover > .subfile-filepath,
+.game-gamedata-header:hover > .subfile-filepath,
+.component-gamedata-header:hover > .subfile-filepath {
+    color: var(--color-text);
+}
+
+.same-file-message {
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-left: 3px solid var(--color-accent);
+    background-color: var(--color-dark-2);
+}
+
+.floating-action-bar {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    z-index: 100;
+}
+
+.floating-action-bar button {
+    background-color: var(--color-dark-3);
+    border-color: var(--color-border);
+    color: var(--color-text);
+    padding: 4px 10px;
+    border-radius: var(--bs-border-radius);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.floating-action-bar button:hover {
+    opacity: 1;
+    background-color: var(--color-content-surface);
+    border-color: var(--color-accent);
+}
+.comp-controls-gear-btn {
+    padding-bottom: 8px !important;
+    color: var(--color-text) !important;
+}
+.stock-components-viewer {
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}

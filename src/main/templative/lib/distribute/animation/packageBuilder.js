@@ -5,6 +5,10 @@ const { copyFile } = require('fs').promises;
 
 async function createPackage(input, output) {
   const instructions = await instructionsLoader.loadGameInstructions(input);
+  if (!instructions) {
+    console.log("!!! game.json not found.");
+    return;
+  }
   const gameVersionName = instructions.name;
 
   console.log(`Creating typescript package for ${gameVersionName}.`);
@@ -46,6 +50,10 @@ async function createComponentPackages(input, newPackageDirectoryPath) {
 
 async function createComponentPackage(componentSourceDirectoryPath, outputDirectoryPath) {
   const componentInstructions = await instructionsLoader.loadComponentInstructions(componentSourceDirectoryPath);
+  if (!componentInstructions) {
+    console.log(`!!! Skipping ${componentSourceDirectoryPath} because it has no component instructions.`);
+    return;
+  }
   const componentName = componentInstructions.name;
 
   const componentOutputDirectory = `${outputDirectoryPath}/${componentName}`;

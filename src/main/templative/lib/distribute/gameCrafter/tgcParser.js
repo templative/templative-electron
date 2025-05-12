@@ -222,22 +222,27 @@ async function uploadToS3(filePaths, componentName) {
         const s3Urls = {};
 
         for (const [fileType, filePath] of Object.entries(filePaths)) {
-            if (fs.existsSync(filePath)) {
-                const key = `game_components_3d/${componentName}/${path.basename(filePath)}`;
-                
-                const command = new PutObjectCommand({
-                    Bucket: s3Bucket,
-                    Key: key,
-                    Body: fs.createReadStream(filePath)
-                });
-                
-                await s3Client.send(command);
-                
-                s3Urls[fileType] = `https://${s3Bucket}.s3.amazonaws.com/${key}`;
-                console.log(`Uploaded ${fileType} to S3: ${s3Urls[fileType]}`);
-            } else {
-                console.warn(`File not found: ${filePath}`);
+            var stream;
+            try {
+                stream = fs.createReadStream(filePath)
+            } catch (err) {
+                if (err.code !== 'ENOENT') {
+                    throw err;
+                }
+                console.log(`!!! Cannot upload ${componentName}, missing ${fileType} ${filePath}`);
+                continue;
             }
+            const key = `game_components_3d/${componentName}/${path.basename(filePath)}`;
+            const command = new PutObjectCommand({
+                Bucket: s3Bucket,
+                Key: key,
+                Body: stream
+            });
+            
+            await s3Client.send(command);
+            
+            s3Urls[fileType] = `https://${s3Bucket}.s3.amazonaws.com/${key}`;
+            console.log(`Uploaded ${fileType} to S3: ${s3Urls[fileType]}`);
         }
 
         return {
@@ -269,16 +274,17 @@ async function downloadAllPreviewImages(stockInfo, concurrencyLimit = 5, rateLim
 
     const downloadedComponents = {};
     const progressFile = './download_progress.json';
-
-    if (fs.existsSync(progressFile)) {
-        try {
-            const data = fs.readFileSync(progressFile, 'utf8');
-            Object.assign(downloadedComponents, JSON.parse(data));
-            console.log(`Resuming from previous download progress (${Object.keys(downloadedComponents).length} already downloaded)`);
-        } catch (err) {
-            console.warn("Could not load download progress, starting fresh");
+    var data;
+    try {
+        data = fs.readFileSync(progressFile, 'utf8');
+    } catch (err) {
+        if (err.code !== 'ENOENT') {
+            throw err;
         }
+        console.warn("Could not load download progress, starting fresh");
     }
+    Object.assign(downloadedComponents, JSON.parse(data));
+    console.log(`Resuming from previous download progress (${Object.keys(downloadedComponents).length} already downloaded)`);
 
     async function downloadWithRateLimit(componentName, previewUrl) {
         await semaphore.acquire();

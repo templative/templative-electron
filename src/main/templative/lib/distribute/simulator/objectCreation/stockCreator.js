@@ -18,7 +18,7 @@ const { getAdapter } = require('./stockObjectAdapter');
  * @param {Object} stockPartInfo - Stock part information
  * @returns {Promise<Object|null>} - Stock object state or null if failed
  */
-async function createStock(componentInstructions, stockPartInfo) {
+async function createStock(componentInstructions, stockPartInfo, templativeToken) {
   // Check if SimulatorCreationTask is specified
   // console.log(componentInstructions);
   // console.log(stockPartInfo);
@@ -36,7 +36,7 @@ async function createStock(componentInstructions, stockPartInfo) {
   }
 
   // Use the adapter to convert componentInstructions and stockPartInfo into parameters
-  const params = adapter(componentInstructions, stockPartInfo);
+  const params = adapter(componentInstructions, stockPartInfo, templativeToken);
   if (!params) {
     // Adapter already logged the error
     return null;

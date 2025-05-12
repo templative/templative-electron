@@ -2,6 +2,7 @@ const { readdir, readFile, mkdir, writeFile } = require('fs/promises');
 const { join, basename, dirname } = require('path');
 const { jsPDF } = require('jspdf');
 const { COMPONENT_INFO } = require('../../../../../shared/componentInfo.js');
+const {captureMessage, captureException } = require("../../sentryElectronWrapper");
 
 // Constants
 const diceTypes = ["CustomColorD6", "CustomWoodD6"];
@@ -9,15 +10,27 @@ const unsupportedDiceTypes = ["CustomColorD4", "CustomColorD8"];
 const pagePaddingInches = 0.25;
 const fpdfSizes = {
     "Letter": "letter",
-    "Tabloid": "a3",
+    "A3": "a3",
+    "A4": "a4",
+    "A5": "a5",
+    "Legal": "legal",
+    "Tabloid": "tabloid"
 };
 // Adjust the printout play area to account for margins
 const printoutPlayAreaChoices = {
     "Letter": [8.5 - (pagePaddingInches * 2), 11 - (pagePaddingInches * 2)],
+    "A3": [11 - (pagePaddingInches * 2), 17 - (pagePaddingInches * 2)],
+    "A4": [8.27 - (pagePaddingInches * 2), 11.69 - (pagePaddingInches * 2)],
+    "A5": [5.83 - (pagePaddingInches * 2), 8.27 - (pagePaddingInches * 2)],
+    "Legal": [8.5 - (pagePaddingInches * 2), 14 - (pagePaddingInches * 2)],
     "Tabloid": [11 - (pagePaddingInches * 2), 17 - (pagePaddingInches * 2)]
 };
 const printoutTotalSize = {
     "Letter": [8.5, 11],
+    "A3": [11, 17],
+    "A4": [8.27, 11.69],
+    "A5": [5.83, 8.27],
+    "Legal": [8.5, 14],
     "Tabloid": [11, 17]
 }
 
@@ -29,7 +42,6 @@ async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size)
         console.log(`!!! Cannot create size ${size}.`);
         return;
     }
-    isBackIncluded = false;
     console.log(`Creating printout for ${basename(producedDirectoryPath)} ${isBackIncluded ? "with backs" : "without backs"} on ${size} paper.`)
     
     const componentTypeFilepathsAndQuantity = await getDictionaryOfImageFilepathsAndQuantityGroupedByComponentType(producedDirectoryPath);
@@ -47,13 +59,21 @@ async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size)
         }
         
         if (!(componentType in COMPONENT_INFO)) {
-            console.log(`!!! Missing ${componentType} type description, skipping.`);
+            console.log(`!!! Missing ${componentType} type info, skipping.`);
             continue;
         }
         
         const componentInfo = COMPONENT_INFO[componentType];
         if (!componentInfo.DimensionsInches) {
             console.log(`!!! Skipping ${componentType} because its inch size isn't defined.`);
+            continue;
+        }
+        if (componentInfo.IsDisabled) {
+            console.log(`!!! Skipping ${componentType} because it's disabled.`);
+            continue;
+        }
+        if (componentInfo.IsPrintingDisabled) {
+            console.log(`!!! Skipping ${componentType} because it's a component that shouldn't be printed.`);
             continue;
         }
         
@@ -268,6 +288,7 @@ async function createPdfUsingPlacementCommands(commands, size) {
                 await addComponentToPdf(pdf, size, command);
             }
         } catch (error) {
+            captureException(error);
             console.error(`Error adding component to PDF:`, error);
             // Add error indicator on the current page
             pdf.setFillColor(255, 200, 200);
@@ -298,8 +319,7 @@ function drawPageMarginLines(pdf, size) {
     pdf.setLineDashPattern([0.05, 0.05], 0); // Dashed line
     
     // Get the size from the current page
-    const pageSize = size ? 'Letter' : 'Tabloid';
-    const [width, height] = printoutPlayAreaChoices[pageSize];
+    const [width, height] = printoutPlayAreaChoices[size];
     
     // Draw rectangle around the printable area
     pdf.rect(
@@ -414,6 +434,7 @@ async function addDieCrossLayoutToPdf(pdf, size, command) {
                 'FAST'
             );
         } catch (error) {
+            captureException(error);
             console.log(`!!! Issue placing die: ${filepath}`);
             continue;
         }
@@ -448,6 +469,7 @@ async function loadFilepathsForComponent(producedDirectoryPath, directoryPath) {
         const componentTypeFilepathAndQuantity = await collectFilepathQuantitiesForComponent(componentInstructions);
         return componentTypeFilepathAndQuantity;
     } catch (error) {
+        captureException(error);
         console.error(`Error loading component from ${componentDirectoryPath}:`, error.message);
         return {};
     }

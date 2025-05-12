@@ -6,6 +6,10 @@ const { produceRulebook } = require('../produce/rulesMarkdownProcessor.js');
 
 async function convertRulesToPdf(gameRootDirectoryPath) {
     const rules = await loadRules(gameRootDirectoryPath);
+    if (!rules) {
+        console.log("!!! rules.md not found.");
+        return;
+    }
     await produceRulebook(rules, gameRootDirectoryPath);
     const pdfFilePath = path.join(gameRootDirectoryPath, "rules.pdf");
     console.log(`PDF rules file created at ${pdfFilePath}`);
@@ -13,14 +17,22 @@ async function convertRulesToPdf(gameRootDirectoryPath) {
 
 async function convertRulesMdToHtml(gameRootDirectoryPath) {
     const rules = await loadRules(gameRootDirectoryPath);
+    if (!rules) {
+        console.log("!!! rules.md not found.");
+        return;
+    }
     const htmlContent = marked(rules);
     const htmlFilePath = path.join(gameRootDirectoryPath, "rules.html");
-    fs.writeFileSync(htmlFilePath, htmlContent, 'utf-8');
+    await fs.writeFile(htmlFilePath, htmlContent, 'utf-8');
     console.log(`HTML rules file created at ${htmlFilePath}`);
 }
 
 async function convertRulesMdToSpans(gameRootDirectoryPath) {
     const rules = await loadRules(gameRootDirectoryPath);
+    if (!rules) {
+        console.log("!!! rules.md not found.");
+        return;
+    }
     await convertRulesMdToSpansRaw(rules, gameRootDirectoryPath);
 }
 
@@ -61,7 +73,7 @@ async function convertRulesMdToSpansRaw(rules, gameFolderPath) {
     htmlContent = htmlContent.replace(/<\/em>/g, "</tspan>");
 
     const svgFilePath = path.join(gameFolderPath, "rules.svg.txt");
-    fs.writeFileSync(svgFilePath, htmlContent, 'utf-8');
+    await fs.writeFile(svgFilePath, htmlContent, 'utf-8');
     console.log(`SVG tspans file created at ${svgFilePath}`);
 }
 

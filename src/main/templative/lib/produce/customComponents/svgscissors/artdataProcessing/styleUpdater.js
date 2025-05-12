@@ -1,6 +1,6 @@
 const { DOMParser, XMLSerializer } = require('@xmldom/xmldom');
 const { getScopedValue } = require('./valueResolver.js');
-const { sanitizeSvgContent } = require('../modules/svgElementConverter.js');
+const { sanitizeSvgContent } = require('./svgCleaner.js');
 
 /**
  * Update styles in SVG content

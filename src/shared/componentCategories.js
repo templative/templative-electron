@@ -550,38 +550,6 @@ const COMPONENT_CATEGORIES = {
         }
       }
     },
-    "stickers": {
-      "Custom Large Sticker": {
-        "Sizeless": {
-          "Colorless": "CustomLargeSticker"
-        }
-      },
-      "Custom Medium Sticker": {
-        "Sizeless": {
-          "Colorless": "CustomMediumSticker"
-        }
-      },
-      "Custom Mini Sticker": {
-        "Sizeless": {
-          "Colorless": "CustomMiniSticker"
-        }
-      },
-      "Custom Small Sticker": {
-        "Sizeless": {
-          "Colorless": "CustomSmallSticker"
-        }
-      },
-      "Meeple Sticker": {
-        "Sizeless": {
-          "Colorless": "MeepleSticker"
-        }
-      },
-      "Pawn Sticker": {
-        "Sizeless": {
-          "Colorless": "PawnSticker"
-        }
-      }
-    },
     "deck": {
       "Business Deck": {
         "Sizeless": {
@@ -676,11 +644,6 @@ const COMPONENT_CATEGORIES = {
       "Foil Tarot Deck": {
         "Sizeless": {
           "Colorless": "FoilTarotDeck"
-        }
-      },
-      "Play Money": {
-        "Sizeless": {
-          "Colorless": "PlayMoney"
         }
       },
       "Square Deck": {
@@ -1190,31 +1153,6 @@ const COMPONENT_CATEGORIES = {
       }
     },
     "blank": {},
-    "screen": {
-      "Screen": {
-        "Large": {
-          "Colorless": "LargeScreen"
-        },
-        "Medium": {
-          "Colorless": "MediumScreen"
-        },
-        "Small": {
-          "Colorless": "SmallScreen"
-        }
-      }
-    },
-    "dial": {
-      "Dual Dial": {
-        "Sizeless": {
-          "Colorless": "DualDial"
-        }
-      },
-      "Dial": {
-        "Small": {
-          "Colorless": "SmallDial"
-        }
-      }
-    },
     "NO_CATEGORY": {
       "Acrylic Shape": {
         "125": {
@@ -1234,6 +1172,11 @@ const COMPONENT_CATEGORIES = {
           "Colorless": "CustomLargePunchout"
         }
       },
+      "Custom Large Sticker": {
+        "Sizeless": {
+          "Colorless": "CustomLargeSticker"
+        }
+      },
       "Custom Medium Cardstock": {
         "Sizeless": {
           "Colorless": "CustomMediumCardstock"
@@ -1244,9 +1187,19 @@ const COMPONENT_CATEGORIES = {
           "Colorless": "CustomMediumPunchout"
         }
       },
+      "Custom Medium Sticker": {
+        "Sizeless": {
+          "Colorless": "CustomMediumSticker"
+        }
+      },
       "Custom Mini Cardstock": {
         "Sizeless": {
           "Colorless": "CustomMiniCardstock"
+        }
+      },
+      "Custom Mini Sticker": {
+        "Sizeless": {
+          "Colorless": "CustomMiniSticker"
         }
       },
       "Custom Small Cardstock": {
@@ -1259,12 +1212,70 @@ const COMPONENT_CATEGORIES = {
           "Colorless": "CustomSmallPunchout"
         }
       },
+      "Custom Small Sticker": {
+        "Sizeless": {
+          "Colorless": "CustomSmallSticker"
+        }
+      },
+      "Dual Dial": {
+        "Sizeless": {
+          "Colorless": "DualDial"
+        }
+      },
       "Acrylic Shape 125": {
         "Large": {
           "Colorless": "LargeAcrylicShape125"
+        }
+      },
+      "Screen": {
+        "Large": {
+          "Colorless": "LargeScreen"
+        },
+        "Medium": {
+          "Colorless": "MediumScreen"
+        },
+        "Small": {
+          "Colorless": "SmallScreen"
+        }
+      },
+      "Meeple Sticker": {
+        "Sizeless": {
+          "Colorless": "MeepleSticker"
+        }
+      },
+      "Pawn Sticker": {
+        "Sizeless": {
+          "Colorless": "PawnSticker"
+        }
+      },
+      "Play Money": {
+        "Sizeless": {
+          "Colorless": "PlayMoney"
+        }
+      },
+      "Dial": {
+        "Small": {
+          "Colorless": "SmallDial"
         }
       }
     }
   }
 }
-  module.exports = { COMPONENT_CATEGORIES }
+const getInvertedCategories  = () => {
+  const categories = Object.assign({}, COMPONENT_CATEGORIES);
+  var invertedCategories = {};
+
+  const traverse = (obj, path = []) => {
+      for (const key in obj) {
+          if (typeof obj[key] === 'object') {
+              traverse(obj[key], [...path, key]);
+          } else {
+              invertedCategories[obj[key]] = [...path, key];
+          }
+      }
+  };
+
+  traverse(categories);
+  return invertedCategories;
+}
+module.exports = { COMPONENT_CATEGORIES, getInvertedCategories }

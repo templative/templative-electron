@@ -1,8 +1,7 @@
 const { createHash } = require('crypto');
-const chalk = require('chalk');
 const fs = require('fs').promises;
-const { clipSvgFileToClipFile } = require('../../../produce/customComponents/svgscissors/modules/imageClipper');
-const { convertSvgContentToPng } = require('../../../produce/customComponents/svgscissors/modules/fileConversion/svgConverter');
+const { clipSvgFileToClipFile } = require('../../../produce/customComponents/svgscissors/artdataProcessing/imageClipper');
+const { convertSvgContentToPng } = require('../../../produce/customComponents/svgscissors/fileConversion/svgToRasterConverter');
 const { createCompositeImage, placeAndUploadBackImage } = require('../imageProcessing/compositeImageCreator');
 const { safeLoadImage } = require('../imageProcessing/imageUtils');
 const { uploadToS3 } = require('../imageProcessing/imageUploader');
@@ -11,6 +10,7 @@ const { SimulatorTilesetUrls, SimulatorComponentPlacement, SimulatorDimensions, 
 const { createD6CompositeImage } = require('../imageProcessing/compositeImageCreator');
 const { getColorValueHex } = require('../../../../../../shared/stockComponentColors');
 const path = require('path');
+const {captureMessage, captureException } = require("../../../sentryElectronWrapper");
 
 /**
  * Adapter for creating a deck object
@@ -21,7 +21,7 @@ const path = require('path');
  * @param {number} componentCountTotal - Total number of components
  * @returns {Promise<Object|null>} - Parameters for createDeckObjectState or null if invalid
  */
-async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal) {
+async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal, templativeToken) {
   try {
     const totalUniqueCards = componentInstructions.frontInstructions.length;
     const isSingleCard = totalUniqueCards === 1 && (componentInstructions.frontInstructions[0].quantity * componentInstructions.quantity) === 1;
@@ -46,7 +46,8 @@ async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstruc
       componentInstructions.frontInstructions, 
       componentInstructions.backInstructions, 
       tabletopSimulatorImageDirectoryPath,
-      componentInfo
+      componentInfo,
+      templativeToken
     );
     
     if (!result || result[0] === null) {
@@ -61,7 +62,8 @@ async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstruc
       componentInstructions.type, 
       componentInstructions.backInstructions, 
       tabletopSimulatorImageDirectoryPath,
-      componentInfo
+      componentInfo,
+      templativeToken
     );
     
     if (backImageImgurUrl === null) {
@@ -80,6 +82,7 @@ async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstruc
     return {
       deckPrefix: componentIndex + 1,
       name: componentInstructions.uniqueName || componentInstructions.name,
+      type: componentInstructions.type,
       imageUrls: imageUrls,
       dimensions: dimensions,
       layout: layout,
@@ -89,22 +92,31 @@ async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstruc
     };
   } catch (error) {
     console.log(`!!! Error creating deck for ${componentInstructions.uniqueName}: ${error}`);
+    captureException(error);
     return null;
   }
 }
 
-/**
- * Adapter for creating a single card object
- * @param {string} tabletopSimulatorImageDirectoryPath - Path to TTS image directory
- * @param {Object} componentInstructions - Component instructions
- * @param {Object} componentInfo - Component information
- * @param {number} componentIndex - Index of the component
- * @param {number} componentCountTotal - Total number of components
- * @returns {Promise<Object|null>} - Parameters for createCardObjectState or null if invalid
- */
-async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal) {
+async function loadAndUploadImage(instruction, dimensions, componentName, side, templativeToken) {
+  if (!instruction) return null;
+  
+  const image = await safeLoadImage(instruction.filepath, dimensions);
+  if (!image) {
+    console.log(`!!! Failed to load ${side} image for ${componentName}`);
+    return null;
+  }
+
+  const url = await uploadToS3(image, templativeToken);
+  if (!url) {
+    console.log(`!!! Failed to upload ${side} image for ${componentName}, falling back to local file.`);
+    return instruction.filepath;
+  }
+  return url;
+}
+
+
+async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal, templativeToken) {
   try {
-    // Determine component type based on tags
     let deckType = 0;  // default type
     if (componentInfo.Tags.includes("hex")) {
       deckType = 3;
@@ -112,37 +124,33 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
       deckType = 4;
     }
 
-    // Upload front and back images directly without tiling
-    const frontImage = await safeLoadImage(componentInstructions.frontInstructions[0].filepath, componentInfo.DimensionsPixels);
-    if (!frontImage) {
-      console.log(`!!! Failed to load front image for ${componentInstructions.uniqueName}`);
-      return null;
-    }
-
-    const backImage = await safeLoadImage(
-      componentInstructions.backInstructions ? componentInstructions.backInstructions.filepath : null, 
-      componentInfo.DimensionsPixels
+    const componentName = componentInstructions.uniqueName || componentInstructions.name;
+    
+    const frontUrl = await loadAndUploadImage(
+      componentInstructions.frontInstructions[0],
+      componentInfo.DimensionsPixels,
+      componentName,
+      'front',
+      templativeToken
     );
-    if (!backImage) {
-      console.log(`!!! Failed to load back image for ${componentInstructions.uniqueName}`);
-      return null;
-    }
-    
-    var frontUrl = await uploadToS3(frontImage);
     if (!frontUrl) {
-      console.log(`!!! Failed to upload front image for ${componentInstructions.uniqueName}, falling back to local file.`);
-      frontUrl = componentInstructions.frontInstructions[0].filepath;
-    }
-    
-    var backUrl = await uploadToS3(backImage);
+      console.log(`!!! Failed to upload front image for ${componentName}, skipping.`);
+      return null;
+    };
+
+    var backUrl = await loadAndUploadImage(
+      componentInstructions.backInstructions,
+      componentInfo.DimensionsPixels,
+      componentName,
+      'back',
+      templativeToken
+    );
     if (!backUrl) {
-      console.log(`!!! Failed to upload back image for ${componentInstructions.uniqueName}, falling back to local file.`);
-      backUrl = componentInstructions.backInstructions.filepath;
-    }
-    
+      console.log(`!!! Failed to upload back image for ${componentName}, falling back to front image.`);
+      backUrl = frontUrl;
+    };
+
     const componentGuid = createHash('md5').update(componentInstructions.uniqueName).digest('hex').slice(0, 6);
-    
-    
     
     const imageUrls = new SimulatorTilesetUrls(frontUrl, backUrl);
     
@@ -160,6 +168,7 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
       guid: componentGuid,
       cardPrefix: componentIndex + 1,
       name: componentInstructions.uniqueName || componentInstructions.name,
+      type: componentInstructions.type,
       imageUrls: imageUrls,
       simulatorComponentPlacement: simulatorComponentPlacement,
       dimensions: dimensions,
@@ -168,6 +177,7 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
     };
   } catch (error) {
     console.log(`!!! Error creating single card for ${componentInstructions.uniqueName || componentInstructions.name}: ${error}`);
+    captureException(error);
     return null;
   }
 }
@@ -179,28 +189,30 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
  * @param {Object} componentInfo - Component information
  * @returns {Promise<Object|null>} - Parameters for createCustomDie or null if invalid
  */
-async function customDieAdapter(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo) {
+async function customDieAdapter(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, templativeToken) {
   try {
     let color = componentInstructions.Color || "white";
     if (!componentInstructions.Color) {
       console.log("!!! Multi colored custom dice are not currently supported. Using white.");
     }
     const colorHex = getColorValueHex(color);
-    const imageUrl = await createD6CompositeImage(componentInstructions["name"], colorHex, componentInstructions["dieFaceFilepaths"], tabletopSimulatorImageDirectoryPath);
+    const imageUrl = await createD6CompositeImage(componentInstructions["name"], colorHex, componentInstructions["dieFaceFilepaths"], tabletopSimulatorImageDirectoryPath, templativeToken);
 
     return {
       name: componentInstructions["name"],
       quantity: componentInstructions["quantity"],
+      type: componentInstructions.type,
       imageUrl: imageUrl,
       numberSides: 6
     };
   } catch (error) {
     console.log(`!!! Error creating dice from preview for ${componentInstructions.name}: ${error}`);
+    captureException(error);
     return null;
   }
 }
 
-async function clipFrontImageAndUploadToS3(componentInstructions, instruction, componentInfo){
+async function clipFrontImageAndUploadToS3(componentInstructions, instruction, componentInfo, templativeToken){
   
   const svgFilepath = instruction.filepath.replace(".png", ".svg")
   const clipFilepath = path.join(__dirname, `../../../create/componentTemplates/${componentInfo.Key}.svg`)
@@ -216,7 +228,7 @@ async function clipFrontImageAndUploadToS3(componentInstructions, instruction, c
   await convertSvgContentToPng(imageContent, componentInfo.DimensionsPixels, outputFilepath)
   const clippedImage = await safeLoadImage(outputFilepath, componentInfo.DimensionsPixels)
   
-  const clippedImgurUrl = await uploadToS3(clippedImage)
+  const clippedImgurUrl = await uploadToS3(clippedImage, templativeToken)
   if (!clippedImgurUrl) {
     console.log(`!!! Failed to upload clipped image for ${componentInstructions.uniqueName}, falling back to local file.`);
     return outputFilepath;
@@ -225,17 +237,17 @@ async function clipFrontImageAndUploadToS3(componentInstructions, instruction, c
 }
 
 
-async function clipAndGatherUrls(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo) {
+async function clipAndGatherUrls(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, templativeToken) {
   try {
     const standeesNameQuantityUrls = []
     let clippedBackUrl = null
     if (componentInstructions.backInstructions) {
       console.log("Has back instructions!")
-      clippedBackUrl = await clipFrontImageAndUploadToS3(componentInstructions, componentInstructions.backInstructions, componentInfo)
+      clippedBackUrl = await clipFrontImageAndUploadToS3(componentInstructions, componentInstructions.backInstructions, componentInfo, templativeToken)
     }
     
     const tasks = componentInstructions.frontInstructions.map(async (instruction) => {
-      const frontClippedS3Url = await clipFrontImageAndUploadToS3(componentInstructions, instruction, componentInfo)
+      const frontClippedS3Url = await clipFrontImageAndUploadToS3(componentInstructions, instruction, componentInfo, templativeToken)
       
       standeesNameQuantityUrls.push({
         name: instruction.name,
@@ -249,14 +261,16 @@ async function clipAndGatherUrls(tabletopSimulatorImageDirectoryPath, componentI
     
     return {
       name: componentInstructions["name"],
+      type: componentInstructions.type,
       standeesNameQuantityUrls
     };
   } catch (error) {
     console.log(`!!! Error creating standees for ${componentInstructions.name}: ${error}`);
+    captureException(error);
     return null;
   }
 }
-function standardDieAdapter(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo) {
+function standardDieAdapter(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, templativeToken) {
   // First let's extract size if present
   const sizeMillimeters = 12
   const millimetersToInches = 25.4
@@ -277,6 +291,7 @@ function standardDieAdapter(tabletopSimulatorImageDirectoryPath, componentInstru
   return {
     name: componentInstructions.name,
     quantity: componentInstructions.quantity,
+    type: componentInstructions.type,
     numberSides: numberSides,
     sizeInches: sizeInches,
     colorRGBOutOfOne: whiteColorOutOfOne,

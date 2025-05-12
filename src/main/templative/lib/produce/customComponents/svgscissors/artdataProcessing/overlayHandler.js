@@ -1,10 +1,9 @@
 const fs = require('fs-extra');
 const path = require('path');
 const { DOMParser, XMLSerializer } = require('@xmldom/xmldom');
-const { sanitizeSvgContent } = require('../modules/svgElementConverter.js');
-const chalk = require('chalk');
+const { sanitizeSvgContent } = require('./svgCleaner.js');
 const { getScopedValue } = require('./valueResolver.js');
-const { SvgFileCache } = require('../modules/svgFileCache.js');
+const { SvgFileCache } = require('../caching/svgFileCache.js');
 
 // Import the default cache instance only for backward compatibility
 const defaultSvgFileCache = new SvgFileCache();
@@ -98,7 +97,11 @@ async function placeOverlay(contents, overlayFilepath, positionX, positionY, svg
         const mainRoot = mainDoc.documentElement;
 
         let overlayContents = await svgFileCache.readSvgFile(overlayFilepath);
-        
+        if (!overlayContents) {
+            const shortPath = path.basename(path.dirname(overlayFilepath)) + path.sep + path.basename(overlayFilepath);
+            console.error(`Overlay ${shortPath} does not exist.`);
+            return contents;
+        }
         // Sanitize the overlay SVG content
         overlayContents = sanitizeSvgContent(overlayContents);
         
@@ -174,16 +177,17 @@ async function collectOverlayFiles(overlays, compositions, pieceGamedata, produc
         const overlayFilename = `${overlayName}.svg`;
         const overlayFilepath = path.normalize(path.join(overlaysFilepath, overlayFilename));
 
-        try {
-            const content = await svgFileCache.readSvgFile(overlayFilepath);
-            overlayFiles.push({
-                path: overlayFilepath,
-                content
-            });
-        } catch (error) {
-            console.log(`!!! Overlay ${overlayFilepath} error: ${error.message}`);
+        const content = await svgFileCache.readSvgFile(overlayFilepath);
+        if (!content) {
+            const shortPath = path.basename(path.dirname(overlayFilepath)) + path.sep + path.basename(overlayFilepath);
+            console.error(`Overlay ${shortPath} does not exist.`);
             continue;
         }
+        overlayFiles.push({
+            path: overlayFilepath,
+            content
+        });
+        
     }
     return overlayFiles;
 }

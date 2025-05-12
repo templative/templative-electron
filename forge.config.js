@@ -62,7 +62,7 @@ module.exports = {
       name: '@electron-forge/plugin-webpack',
       config: {
         mainConfig: './webpack.main.config.js',
-        devContentSecurityPolicy: "connect-src 'self' * 'unsafe-eval'",
+        devContentSecurityPolicy: "connect-src 'self' * 'unsafe-eval' sentry-ipc:",
         devServer: {
           hot: true,
           liveReload: false
@@ -72,8 +72,8 @@ module.exports = {
           config: './webpack.renderer.config.js',
           entryPoints: [
             {
-              html: './src/renderer/app/index.html',
-              js: './src/renderer/app/renderer.js',
+              html: './src/renderer/index.html',
+              js: './src/renderer/renderer.js',
               name: 'main_window'
             }
           ],
