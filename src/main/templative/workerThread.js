@@ -5,7 +5,7 @@ const createPreviewPieceWorker = (workerData, onSuccessCallback = () => {}) => {
   return new Promise((resolve, reject) => {
     try {
       const workerPath = path.join(__dirname, 'previewPieceWorker.bundle.js');
-      console.log(`Loading worker from: ${workerPath}`);
+      // console.log(`Loading worker from: ${workerPath}`);
       const worker = new Worker(workerPath, {
         workerData
       });
@@ -45,7 +45,7 @@ const createProduceGameWorker = (workerData, onSuccessCallback = () => {}) => {
   return new Promise((resolve, reject) => {
     try {
       const workerPath = path.join(__dirname, 'produceGameWorker.bundle.js');
-      console.log(`Loading worker from: ${workerPath}`);
+      // console.log(`Loading worker from: ${workerPath}`);
       const worker = new Worker(workerPath, {
         workerData
       });

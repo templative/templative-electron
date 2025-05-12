@@ -1,4 +1,5 @@
 const path = require('path');
+const StringReplacePlugin = require('string-replace-webpack-plugin');
 
 module.exports = {
   entry: 
@@ -18,7 +19,6 @@ module.exports = {
     },
     path: path.resolve(__dirname, '.webpack/main')
   },
-  
 
   mode: 'development',
   cache: {
@@ -50,26 +50,23 @@ module.exports = {
         generator: {
           filename: 'src/main/templative/lib/componentTemplates/[name][ext]'
         }
-      },
-      {
-        test: /src\/main\/templative\/workerThread.js$/,
-        loader: 'string-replace-loader',
-        options: {
-          search: 'produceGameWorker.js',
-          replace: 'produceGameWorker.bundle.js'
-        }
-      },
-      {
-        test: /src\/main\/templative\/workerThread.js$/,
-        loader: 'string-replace-loader',
-        options: {
-          search: 'previewPieceWorker.js',
-          replace: 'previewPieceWorker.bundle.js'
-        }
       }
     ],
   },
-  plugins: [],
+  plugins: [
+    new StringReplacePlugin({
+      replacements: [
+        {
+          pattern: /produceGameWorker\.js/g,
+          replacement: () => 'produceGameWorker.bundle.js'
+        },
+        {
+          pattern: /previewPieceWorker\.js/g,
+          replacement: () => 'previewPieceWorker.bundle.js'
+        }
+      ]
+    })
+  ],
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.svg', '.png']
   },
@@ -79,7 +76,8 @@ module.exports = {
     'path',
     'os',
     'crypto',
-    'child_process'
+    'child_process',
+    'worker_threads'
   ],
   devtool: 'eval-cheap-module-source-map'
 };

@@ -149,5 +149,4 @@ module.exports = {
     clearCurrentTemplativeRootDirectory,
     loadLastProject,
     checkIfFolderIsValidTemplativeProject,
-    readOrCreateSettingsFile
 };

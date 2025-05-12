@@ -91,7 +91,7 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     const svgFileCache = new SvgFileCache();
     
     await producerPicker.produceCustomComponentPreview(previewProperties, gameData, componentComposition, fontCache, svgFileCache);
-    console.log(`Wrote previews to ${outputDirectoryPath}`);
+    // console.log(`Wrote previews to ${outputDirectoryPath}`);
 }
 
 async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage, isClipped=false, renderMode=RENDER_MODE.RENDER_EXPORT_USING_CACHE, renderProgram=RENDER_PROGRAM.TEMPLATIVE, overlappingRenderingTasks=OVERLAPPING_RENDERING_TASKS.ONE_AT_A_TIME) {
