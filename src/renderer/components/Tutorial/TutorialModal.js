@@ -19,7 +19,7 @@ const tutorialAcknowledgements = {
 const TutorialModal = ({  
     name,
 }) => {
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(false);
     
     const onHide = () => {
         setShow(false);

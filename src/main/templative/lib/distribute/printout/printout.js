@@ -2,7 +2,8 @@ const { readdir, readFile, mkdir, writeFile } = require('fs/promises');
 const { join, basename, dirname } = require('path');
 const { jsPDF } = require('jspdf');
 const { COMPONENT_INFO } = require('../../../../../shared/componentInfo.js');
-const {captureMessage, captureException } = require("../../sentryElectronWrapper");
+const path = require('path');
+const { captureException } = require("../../sentryElectronWrapper.js");
 
 // Constants
 const diceTypes = ["CustomColorD6", "CustomWoodD6"];
@@ -360,7 +361,8 @@ async function addComponentToPdf(pdf, size, command) {
             isRotated ? 90 : 0
         );
     } catch (error) {
-        throw new Error(`Issue placing: ${command.filepath}`);
+        captureException(error);
+        throw new Error(`Issue placing ${path.basename(command.filepath)}`);
     }
 }
 

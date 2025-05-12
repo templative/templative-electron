@@ -50,6 +50,7 @@ const createWindow = () => {
     })
     
     Menu.setApplicationMenu(mainMenu);
+    
     templativeWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
     if (!app.isPackaged) {
         templativeWindow.webContents.openDevTools();
@@ -82,10 +83,10 @@ const logError = async (error, route, additionalContext = {}) => {
 
 const initializeApp = async () => {
     try {        
-        createWindow();
-        setupAppUpdateListener();
         listenForRenderEvents(templativeWindow);
         setupOauthListener(templativeWindow);
+        createWindow();
+        setupAppUpdateListener();
         await loadLastProject();
     } catch (err) {
         await logError(err, 'app_initialization');
