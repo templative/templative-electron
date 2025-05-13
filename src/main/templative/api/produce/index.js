@@ -36,9 +36,11 @@ const previewCommand = new Command('preview')
   .option('--language <language>', 'Target language of the output. https://developers.google.com/admin-sdk/directory/v1/languages', 'en')
   .option('--clip', 'Enable clipping for component images.', false)
   .option('--input <path>', 'The directory of the templative project.', './')
+  .option('--output <path>', 'The directory to output the preview.', './')
   .action(async (options) => {
     await producePiecePreview(
       options.input, 
+      options.output,
       options.component, 
       options.piece, 
       options.language,

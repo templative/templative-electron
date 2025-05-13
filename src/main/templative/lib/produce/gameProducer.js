@@ -57,7 +57,7 @@ async function clearPreviews(directoryPath) {
     }
 }
 
-async function producePiecePreview(gameRootDirectoryPath, componentName, pieceName, language, renderProgram=RENDER_PROGRAM.TEMPLATIVE) {
+async function producePiecePreview(gameRootDirectoryPath, outputDirectoryPath, componentName, pieceName, language, renderProgram=RENDER_PROGRAM.TEMPLATIVE) {
     if (!gameRootDirectoryPath) {
         throw new Error("Game root directory path is invalid.");
     }
@@ -81,7 +81,6 @@ async function producePiecePreview(gameRootDirectoryPath, componentName, pieceNa
     }
     const componentComposition = new ComponentComposition(gameCompose, component);
     const gameData = new GameData(studioDataBlob, gameDataBlob);
-    const outputDirectoryPath = await getPreviewsPath();
     await clearPreviews(outputDirectoryPath);
     const isClipped = true
     const previewProperties = new PreviewProperties(gameRootDirectoryPath, outputDirectoryPath, pieceName, language, isClipped, renderProgram);

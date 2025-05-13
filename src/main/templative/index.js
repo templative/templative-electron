@@ -73,7 +73,8 @@ const produceTemplativeProject = withLogCapture(async (event, request) => {
 
 const getPreviewsDirectory = withLogCapture(async (event) => {
   try {
-    return { previewsDirectory: await getPreviewsPath() };
+    const directory = await getPreviewsPath()
+    return { previewsDirectory: directory };
   } catch (error) {
     console.error('Error getting previews directory:', error);
     captureException(error);
@@ -84,12 +85,13 @@ const getPreviewsDirectory = withLogCapture(async (event) => {
 const previewPiece = withLogCapture(async (event, data) => {
   try {
     const { componentFilter, pieceFilter, language, directoryPath } = data;
+    const previewsDirectory = await getPreviewsPath();
     const settings = await readOrCreateSettingsFile();
     const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;
     const toastResolver = (data) => { 
       updateToast(`${componentFilter} preview complete.`, "brush");
     }
-    await createPreviewPieceWorker({directoryPath, componentFilter, pieceFilter, language, renderProgram}, toastResolver);
+    await createPreviewPieceWorker({directoryPath, previewsDirectory, componentFilter, pieceFilter, language, renderProgram}, toastResolver);
     return { success: true, message: 'Piece preview generated' };
   } catch (error) {
     console.error('Error previewing piece:', error);
