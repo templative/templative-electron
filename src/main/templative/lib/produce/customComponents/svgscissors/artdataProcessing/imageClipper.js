@@ -28,6 +28,10 @@ async function clipSvgFileToClipFile(svgFilepath, clipSvgFilepath, clipSvgElemen
             throw error;
         }
     }
+    if (!svgContent) {
+        console.log(`!!! SVG file ${svgFilepath} is missing.`);
+        return false;
+    }
     let clipSvgContent;
     try {
         clipSvgContent = await svgFileCache.readSvgFile(clipSvgFilepath);
@@ -45,6 +49,10 @@ async function clipSvgFileToClipFile(svgFilepath, clipSvgFilepath, clipSvgElemen
 }
 
 async function clipSvgContentToClipFile(svgContent, clipSvgFilepath, clipSvgElementId=CLIPPING_ELEMENT_ID, svgFileCache=defaultSvgFileCache) {
+    if (!svgContent) {
+        console.log(`!!! SVG content is required.`);
+        throw new Error(`!!! SVG content is required.`);
+    }
     if (!clipSvgFilepath) {
         console.log(`!!! Clip SVG file path is required.`);
         throw new Error(`!!! Clip SVG file path is required.`);
@@ -66,8 +74,13 @@ async function clipSvgContentToClipFile(svgContent, clipSvgFilepath, clipSvgElem
 
 // Clips SVG content using another SVG's element as a clipping path
 async function clipSvgContentToElement(svgContent, clipSvgContent, clipSvgElementId=CLIPPING_ELEMENT_ID) {
-    if (!svgContent || !clipSvgContent) {
-        console.log(`!!! Invalid SVG content provided for clipping.`);
+    if (!svgContent) {
+        console.log(`!!! Invalid source SVG content provided for clipping.`);
+        return svgContent;
+    }
+    
+    if (!clipSvgContent) {
+        console.log(`!!! Invalid clip SVG content provided for clipping.`);
         return svgContent;
     }
     
@@ -155,7 +168,7 @@ async function clipSvgContentToElement(svgContent, clipSvgContent, clipSvgElemen
         return modifiedSvg;
     } catch (error) {
         console.log(`Error clipping SVG: ${error.message}`);
-        return false;
+        return svgContent;
     }
 }
 

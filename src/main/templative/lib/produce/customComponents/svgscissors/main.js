@@ -232,9 +232,10 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
         try {
           contents = await clipSvgContentToClipFile(contents, clipSvgFilepath, CLIPPING_ELEMENT_ID, svgFileCache);
         } catch (error) {
-          if (error.code !== 'ENOENT') {
-            throw error;
-          }
+            captureException(error);
+            if (error.code !== 'ENOENT') {
+                throw error;
+            }
         }
       }
       // Create and cache the files
@@ -260,7 +261,8 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       
     } catch (error) {
       console.error(`Error producing ${pieceName}: ${error.message}`);
-      console.error(error.stack);
+    //   console.error(error.stack);
+      captureException(error);
     }
 }
 
