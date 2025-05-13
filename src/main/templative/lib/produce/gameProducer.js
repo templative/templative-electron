@@ -91,6 +91,18 @@ async function producePiecePreview(gameRootDirectoryPath, outputDirectoryPath, c
     await producerPicker.produceCustomComponentPreview(previewProperties, gameData, componentComposition, fontCache, svgFileCache);
     // console.log(`Wrote previews to ${outputDirectoryPath}`);
 }
+async function getTimestamp() {
+    const now = new Date();
+    // Format date using local time instead of UTC
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    
+    return `${year}-${month}-${day}_${hours}-${minutes}-${seconds}`;
+}
 
 async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isPublish, targetLanguage, isClipped=false, renderMode=RENDER_MODE.RENDER_EXPORT_USING_CACHE, renderProgram=RENDER_PROGRAM.TEMPLATIVE, overlappingRenderingTasks=OVERLAPPING_RENDERING_TASKS.ONE_AT_A_TIME) {
     const startTime = performance.now();
@@ -117,8 +129,8 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
     console.log(`Producing ${path.basename(gameRootDirectoryPath)}.`);
     
     var outputDirectoryPath = null;
-    if (renderMode !== RENDER_MODE.RENDER_TO_CACHE) {
-        const timestamp = new Date().toISOString().replace(/T/, '_').replace(/\..+/, '').replace(/:/g, '-'); 
+    if (renderMode !== RENDER_MODE.RENDER_TO_CACHE) {   
+        const timestamp = await getTimestamp();
         const uniqueGameName = `${gameDataBlob['name']}_${gameDataBlob['versionName']}_${gameDataBlob['version']}_${timestamp}${componentFilterString}`.replace(/\s/g, "");
         
         // This stuff isnt typically stored in the game.json, but it is for exporting
