@@ -79,7 +79,7 @@ jobs:
   templative-windows:
     needs: check-version
     if: needs.check-version.outputs.should_build == 'true'
-    timeout-minutes: 20
+    # timeout-minutes: 20
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
