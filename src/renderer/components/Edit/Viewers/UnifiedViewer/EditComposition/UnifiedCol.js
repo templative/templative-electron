@@ -54,8 +54,8 @@ export default function UnifiedCol(params) {
     // Create unified content options
     const contentOptions = [
         // Gamedata options
-        { selectKey: "Studio Content", name: "Studio", color: "#9e4ddf", icon: StudioIcon, selectable: true },
-        { selectKey: "Game Content", name: "Game", color: "#426ac3", icon: GameIcon, selectable: true },
+        // { selectKey: "Studio Content", name: "Studio", color: "#9e4ddf", icon: StudioIcon, selectable: true },
+        // { selectKey: "Game Content", name: "Game", color: "#426ac3", icon: GameIcon, selectable: true },
         { selectKey: "Component Content", name: `Component · ${path.basename(componentGamedataFilepath, '.json')}`, color: "#5f9edf", icon: ComponentIcon, selectable: true },
         { selectKey: "Piece Content", name: `Piece · ${path.basename(piecesGamedataFilepath, '.json')}`, color: "#69d1d2", icon: PieceIcon, selectable: true },
     ];

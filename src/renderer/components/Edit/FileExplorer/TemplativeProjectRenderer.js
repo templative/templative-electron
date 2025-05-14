@@ -104,7 +104,7 @@ const ResourceSection = ({
                         baseFilepath={directories.piecesGamedataDirectory}
                         filetype={"PIECE_GAMEDATA"}    
                     />
-                    <IconContentFileItem
+                    {/* <IconContentFileItem
                         contentType={"STUDIO_GAMEDATA"}
                         depth={baseDepth + 1}
                         currentFilepath={currentFilepath}
@@ -117,7 +117,7 @@ const ResourceSection = ({
                         currentFilepath={currentFilepath}
                         filepath={path.join(templativeRootDirectoryPath, "game.json")}
                         updateViewedFileUsingExplorerAsyncCallback={updateViewedFileUsingExplorerAsyncCallback}
-                    />
+                    /> */}
                 </React.Fragment>
             )}
         </div>

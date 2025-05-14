@@ -1,0 +1,21 @@
+.project-panel {
+    height: 100%;
+    display: inline-block;
+    width: calc(100% - 80px) !important;
+    transform: translateY(-5px);
+    padding: 0em 0em 0 0em;
+}
+.project-content-container {
+    max-width: 715px;
+    height: 100%;
+    margin: 0 auto;
+    padding-top:1em;
+}
+.project-content-container-section {
+    height: calc(100% - 52px);
+    overflow-y: auto;
+    padding-bottom: 1em;
+}
+.project-content-container-section .tableContainer {
+    height: auto;
+}

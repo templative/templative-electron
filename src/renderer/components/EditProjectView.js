@@ -19,6 +19,7 @@ const path = require("path");
 const fs = require("fs/promises");
 import { COMPONENT_INFO } from "../../shared/componentInfo";
 import { STOCK_COMPONENT_INFO } from "../../shared/stockComponentInfo";
+import ProjectPanel from "./Project/ProjectPanel";
 
 export default class EditProjectView extends React.Component {
   
@@ -694,22 +695,14 @@ export default class EditProjectView extends React.Component {
                         saveComponentComposeAsync={this.saveComponentComposeAsync}
                     />
                 )}
-                {this.state.currentRoute === 'project' && (
-                    <ComponentsViewer 
-                        updateViewedFileUsingExplorerAsyncCallback ={this.updateViewedFileUsingExplorerAsync}
-                        updateViewedFileToUnifiedAsyncCallback={this.updateViewedFileToUnifiedAsync}
-                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
-                        saveFileAsyncCallback={this.saveFileAsync}
-                        componentTypesCustomInfo={COMPONENT_INFO}
-                        componentTypesStockInfo={STOCK_COMPONENT_INFO}
-                        
-                        componentComposeScollPosition={this.state.componentComposeScollPosition}     
-                        updateComponentComposeScrollPositionCallback={this.updateComponentComposeScrollPosition}         
-                        updateRouteCallback={this.props.updateRouteCallback}
-                    />
-                )}
                 {this.state.currentRoute === 'rules' && (
                     <RulesEditor 
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                        saveFileAsyncCallback={this.saveFileAsync}
+                    />
+                )}
+                {this.state.currentRoute === 'project' && (
+                    <ProjectPanel 
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         saveFileAsyncCallback={this.saveFileAsync}
                     />
