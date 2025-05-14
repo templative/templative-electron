@@ -77,7 +77,14 @@ module.exports = {
     'os',
     'crypto',
     'child_process',
-    'worker_threads'
+    'worker_threads',
+    'stream',
+    'zlib',
+    'buffer',
+    'pdfkit',
+    'sharp',
+    '@sentry/electron',
+    '@sentry/electron/main'
   ],
   devtool: 'eval-cheap-module-source-map'
 };

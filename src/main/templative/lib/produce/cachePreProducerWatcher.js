@@ -14,6 +14,7 @@ const SIMPLE = false;
 const NOT_PUBLISHED = false;
 const ENGLISH = "en";
 const NOT_CLIPPED = false;
+const NO_COMPONENT_FILTER = null;
 
 class CachePreProducerWatcher {
     constructor(gameRootDirectoryPath) {
@@ -45,7 +46,6 @@ class CachePreProducerWatcher {
         }
         this.components = JSON.parse(this.componentComposeContents);
 
-        const noComponentFilter = null;
         if (mainProcess.isRendering) {
             return;
         }
@@ -58,7 +58,7 @@ class CachePreProducerWatcher {
             
             await createProduceGameWorker({
                 directoryPath: this.gameRootDirectoryPath,
-                componentFilter: noComponentFilter,
+                componentFilter: NO_COMPONENT_FILTER,
                 isSimple: SIMPLE,
                 isPublished: NOT_PUBLISHED,
                 language: ENGLISH,
@@ -125,7 +125,7 @@ class CachePreProducerWatcher {
                 
                 await createProduceGameWorker({
                     directoryPath: this.gameRootDirectoryPath,
-                    componentFilter: null,
+                    componentFilter: NO_COMPONENT_FILTER,
                     isSimple: SIMPLE,
                     isPublished: NOT_PUBLISHED,
                     language: ENGLISH,
@@ -317,7 +317,7 @@ class CachePreProducerWatcher {
                     const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;
                     await createProduceGameWorker({
                         directoryPath: this.gameRootDirectoryPath,
-                        componentFilter: noComponentFilter,
+                        componentFilter: NO_COMPONENT_FILTER,
                         isSimple: SIMPLE,
                         isPublished: NOT_PUBLISHED,
                         language: ENGLISH,
