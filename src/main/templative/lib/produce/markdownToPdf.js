@@ -156,15 +156,14 @@ async function markdownToPdf(markdown, options = {}) {
 
   const pdfOptions = { ...defaultPdfOptions, ...options };
   const html = markdownToHtml(markdown);
-
-  // Use Electron if available, otherwise fall back to Puppeteer
-  if (electron) {
-    return generatePdfWithElectron(html, pdfOptions);
-  } else if (puppeteer) {
+  // if (electron) {
+  //   return generatePdfWithElectron(html, pdfOptions);
+  // }
+  if(puppeteer) {
     return generatePdfWithPuppeteer(html, pdfOptions);
-  } else {
-    throw new Error('Neither Electron nor Puppeteer is available for PDF generation');
   }
+  throw new Error('Neither Electron nor Puppeteer is available for PDF generation');
+  
 }
 
 module.exports = {
