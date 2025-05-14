@@ -19,7 +19,6 @@ const path = require("path");
 const fs = require("fs/promises");
 import { COMPONENT_INFO } from "../../shared/componentInfo";
 import { STOCK_COMPONENT_INFO } from "../../shared/stockComponentInfo";
-import TutorialModal from "./Tutorial/TutorialModal";
 
 export default class EditProjectView extends React.Component {
   

@@ -23,7 +23,7 @@ import PlusIcon from "./PiecesTypeIcons/PlusIcon.svg?react";
 import SyncIcon from "./PiecesTypeIcons/SyncIcon.svg?react";
 import BreakSyncIcon from "./PiecesTypeIcons/BreakSyncIcon.svg?react";
 import GoToLinkIcon from "./PiecesTypeIcons/GoToLinkIcon.svg?react";
-import TutorialModal from "../../../Tutorial/TutorialModal";
+import TutorialQuestionMark from "../../../Tutorial/TutorialQuestionMark";
 import "./GamedataViewer.css"
 
 export default class PieceGamedataViewer extends EditableViewerJson {   
@@ -313,7 +313,6 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                         <KeyIcon className="add-field-icon"/>
                         Add a Field
                     </button>
-                    {/* <TutorialModal name="One Vision" /> */}
                 </div>
                 <div>
                     {hasSyncKey ? (
@@ -342,7 +341,7 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                             <BreakSyncIcon className="add-field-icon"/>
                             Remove Sync
                         </button>
-                        <TutorialModal name="Piece Content" />
+                        <TutorialQuestionMark tutorialName="Piece Content" />
                         </>
                     ) :
                     <>
@@ -355,7 +354,7 @@ export default class PieceGamedataViewer extends EditableViewerJson {
                             <DownloadIcon className="add-field-icon"/>
                             Import Data
                         </button>
-                        <TutorialModal name="Piece Content" />
+                        <TutorialQuestionMark tutorialName="Piece Content" />
                     </>
                     }
                 </div>

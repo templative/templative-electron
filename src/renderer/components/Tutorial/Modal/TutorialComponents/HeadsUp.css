@@ -1,0 +1,15 @@
+.heads-up {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #343941;
+    border-radius: 16px;
+    padding: 1em 1em 1em 1em;
+    margin-bottom:1em;
+}
+.heads-up > * {
+    margin-right: 1em;
+}
+.heads-up > p {
+    margin: 0px !important;
+}

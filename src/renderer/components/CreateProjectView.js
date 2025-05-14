@@ -8,11 +8,12 @@ import LegallyDistinctemonSvg from './Icons/legallyDistinctemon.svg?react';
 import SettlersOfKachingSvg from './Icons/settlersOfKaching.svg?react';
 import BigMallet50kSvg from './Icons/bigMallet50k.svg?react';
 import SickleSvg from './Icons/sickle.svg?react';
-
+import TutorialQuestionMark from "./Tutorial/TutorialQuestionMark";
+import BackButton from "./backButton.svg?react";
 const templates = [
     {
         name: "Blank Project",
-        description: "A blank project with no components.",
+        description: "A blank project.",
         icon: <TheSvg width="90" height="90" />,
         template: "",
         isDisabled: false,
@@ -48,7 +49,7 @@ const templates = [
 ]
 
 
-const CreateProjectView = () => {
+const CreateProjectView = ({ goBackCallback }) => {
   const [projectName, setProjectName] = useState("");
   const [projectLocation, setProjectLocation] = useState("");
   const [selectedTemplateName, setSelectedTemplateName] = useState(templates[0].name);
@@ -116,28 +117,42 @@ const CreateProjectView = () => {
   return (
     <div className="create-project-view">
         <div className="create-project-form">
-            <h1>Create a Templative Project</h1>
+            <div className="create-project-header">
+                <BackButton 
+                    className="back-button" 
+                    onClick={goBackCallback}
+                    title="Back to Start"
+                />
+                <h1>Create a Templative Project</h1>
+            </div>
             {error && <div className="alert alert-danger">{error}</div>}
-            <div className="input-group project-name-input-group">
-                <span className="input-group-text soft-label">Name</span>
-                <input type="text" className="form-control value-field no-left-border"
-                    onChange={(event)=> setProjectName(event.target.value)} 
-                    title="Project Name"
-                    value={projectName}
-                    placeholder="My Project"
-                    />
+            <div className="create-project-name-and-tutorial-container">
+              <div className="input-group project-name-input-group">
+                  <span className="input-group-text soft-label">Name</span>
+                  <input type="text" className="form-control value-field no-left-border"
+                      onChange={(event)=> setProjectName(event.target.value)} 
+                      title="Project Name"
+                      value={projectName}
+                      placeholder="My Project"
+                      />
+              </div>
+              <div className="tutorial-question-mark-container">
+                <TutorialQuestionMark tutorialName="Creating your First Game"/>
+              </div>
             </div>
             <div className="input-group location-input-group">
                 <span className="input-group-text soft-label">Project Location</span>
-                <input type="text" className="form-control value-field no-left-border project-location-input"
-                    onChange={(event)=> setProjectLocation(event.target.value)} 
-                    title="Project Location"
-                    value={projectLocation}
-                    disabled
-                    readOnly
-                    placeholder={`Perhaps ~/Documents/Templative/Projects${projectName !== "" ? `/${projectName}` : ""}?`}
-                />
-                <button className="btn btn-outline-secondary browse-button" 
+                {projectLocation && 
+                  <input type="text" className="form-control value-field no-left-border project-location-input"
+                      onChange={(event)=> setProjectLocation(event.target.value)} 
+                      title="Project Location"
+                      value={projectLocation}
+                      disabled
+                      readOnly
+                      placeholder={`Perhaps ~/Documents/Templative/Projects${projectName !== "" ? `/${projectName}` : ""}?`}
+                  />
+                }
+                <button className={`btn btn-outline-secondary browse-button ${projectLocation ? "shrink-browse-button" : ""}`} 
                     type="button" 
                     onClick={handleBrowseLocation}>
                     Browse...

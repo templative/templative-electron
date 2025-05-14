@@ -144,6 +144,9 @@ class App extends React.Component {
             }
         });
     }
+    goBackToStartView = () => {
+        this.setState({ currentView: "start" });
+    }
     render() {
         let element = <></>
         
@@ -159,7 +162,9 @@ class App extends React.Component {
             />
         }
         else if (this.state.currentView === "createProject") {
-            element = <CreateProjectView />
+            element = <CreateProjectView 
+                goBackCallback={this.goBackToStartView}
+            />
         }
         else if (this.state.templativeRootDirectoryPath === undefined || this.state.currentView === "start") {
             element = <StartView 

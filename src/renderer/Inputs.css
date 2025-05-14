@@ -2,32 +2,32 @@
   --color-input-background-odd: var(--color-content);
   --color-input-background-even: hsl(215, 21%, 14%);
 }
-.App input, .App textarea, .App select, .App button, .App .form-check-input {
+body input, body textarea, body select, body button, body .form-check-input {
   outline: none !important;
   box-shadow: none !important;
   border-color: var(--color-border) !important;
 }
-.input-group .btn {
+/* body .input-group .btn {
   background-color: var(--color-accent);
   border-color: var(--color-accent);
   color: var(--color-text);
-}
-.App input::placeholder, .App textarea::placeholder {
+} */
+body input::placeholder, body textarea::placeholder {
     color: var(--color-text-muted) !important;
     opacity: 0.2;
 }
 
-.input-group .btn:hover {
+body .input-group .btn:hover {
   background-color: var(--color-accent-hover);
   border-color: var(--color-accent-hover);
 }
 
-.App input:active, .App textarea:active, .App select:active, .App button:active {
+body input:active, body textarea:active, body select:active, body button:active {
   outline: none !important;
   box-shadow: none !important;
 }
 
-.App input:focus, .App textarea:focus, .App select:focus, .App button:focus, .App .form-check-input:focus {
+body input:focus, body textarea:focus, body select:focus, body button:focus, body .form-check-input:focus {
   outline: none !important;
   box-shadow: none !important;
 }
@@ -66,10 +66,10 @@
 }
 
 /* Input Group Base Styles */
-.input-group .form-control,
-.input-group .form-select,
-.input-group .soft-label,
-.input-group .input-group-text {
+body .input-group .form-control,
+body .input-group .form-select,
+body .input-group .soft-label,
+body .input-group .input-group-text {
   background-color: var(--color-input-background-odd);
 }
 
@@ -108,13 +108,13 @@
 }
 
 /* Updated soft-label styles */
-.App .soft-label,
+body .soft-label,
 .input-group-text {
   color: var(--color-light) !important;
   border-color: var(--color-border) !important;
   border-right-width: 0 !important;
 }
-.App .soft-label {
+body .soft-label {
   color: var(--color-text-muted) !important;
 }
 
@@ -128,118 +128,118 @@
   background-color: var(--color-input-background-even) !important;
 }
 
-.bi-trash3 {
+body .bi-trash3 {
   /* fill: inherit; */
   transition: fill 0.2s ease !important;
 }
 
-input, textarea, select {
+body input, body textarea, body select {
   user-select: text;
 }
-.form-check-input {
+body .form-check-input {
   cursor: pointer;
 }
-.App .btn-primary {
+body .btn-primary {
   background-color: var(--color-accent);
   border-color: var(--color-accent);
   color: var(--color-content);
   font-weight: bold;
 }
-.App .btn-primary:hover {
+body .btn-primary:hover {
   background-color: var(--color-accent-hover);
   border-color: var(--color-accent-hover);
   color: var(--color-content);
 }
-.App .btn-primary:active {
+body .btn-primary:active {
   background-color: var(--color-accent-hover) !important;
   border-color: var(--color-accent-hover) !important;
   color: var(--color-content) !important;
 }
-.App .btn-primary:disabled {
+body .btn-primary:disabled {
   background-color: var(--color-accent-disabled);
   border-color: var(--color-accent-disabled);
   color: var(--color-content);
 }
 
-.App .btn-outline-primary {
+body .btn-outline-primary {
   background-color: var(--color-content-surface);
   border-color: var(--color-accent) !important;
   color: var(--color-accent);
 }
 
-.App .btn-outline-primary:hover {
+body .btn-outline-primary:hover {
   background-color: var(--color-accent-hover);
   border-color: var(--color-accent-hover);
   color: var(--color-content);
 }
 
-.App .btn-outline-primary:active {
+body .btn-outline-primary:active {
   background-color: var(--color-accent) !important;
   border-color: var(--color-accent) !important;
   color: var(--color-content) !important;
 }
 
-.App .btn-outline-primary:disabled {
+body .btn-outline-primary:disabled {
   background-color: var(--color-content-surface);
   border-color: var(--color-accent-disabled);
   color: var(--color-accent-disabled);
 }
 
-.App .btn-secondary {
+body .btn-secondary {
   background-color: var(--color-surface-cover);
   border-color: var(--color-surface-cover);
   color: var(--color-text);
 }
 
-.App .btn-secondary:hover {
+body .btn-secondary:hover {
   background-color: var(--color-surface-cover-hover);
   border-color: var(--color-surface-cover-hover);
   color: var(--color-text);
 }
 
-.App .btn-secondary:active {
+body .btn-secondary:active {
   background-color: var(--color-surface-cover) !important;
   border-color: var(--color-surface-cover) !important;
   color: var(--color-text) !important;
 }
 
-.App .btn-secondary:disabled {
+body .btn-secondary:disabled {
   background-color: var(--color-content);
   border-color: var(--color-border);
   color: var(--color-text-muted);
 }
-.App .btn-outline-secondary {
+body .btn-outline-secondary {
   background-color: var(--color-content);
   border-color: var(--color-surface-cover);
   color: var(--color-text);
 }
-.App .btn-outline-secondary:hover {
+body .btn-outline-secondary:hover {
   background-color: var(--color-surface-cover-hover);
   border-color: var(--color-surface-cover-hover);
   color: var(--color-text);
 }
-.App .btn-outline-secondary:active {
+body .btn-outline-secondary:active {
   background-color: var(--color-surface-cover) !important;
   border-color: var(--color-surface-cover) !important;
   color: var(--color-text) !important;
 }
-.App .btn-secondary-outline:disabled {
+body .btn-secondary-outline:disabled {
   background-color: var(--color-content);
   border-color: var(--color-border);
   color: var(--color-text-muted);
 }
 
-.App .form-check-input:checked {
+body .form-check-input:checked {
   background-color: var(--color-accent) !important;
   border-color: var(--color-accent) !important;
 }
 
-.App .form-check-input:checked:focus {
+body .form-check-input:checked:focus {
   background-color: var(--color-accent) !important;
   border-color: var(--color-accent) !important;
 }
 
-.App .form-check-input:checked:hover {
+body .form-check-input:checked:hover {
   background-color: var(--color-accent-hover) !important;
   border-color: var(--color-accent-hover) !important;
 }

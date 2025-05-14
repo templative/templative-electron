@@ -13,14 +13,6 @@
     width:100%;
 }
 
-.trash-button, .add-button {
-    /* padding-top: 0px !important;
-    background-color: var(--color-content-surface)!important;
-    border-color: var(--color-gray) !important;
-    color: var(--color-light) !important; */
-}
-.trash-button:hover, .add-button:hover {
-}
 .artdata-crud-control {
     background-color: var(--color-content) !important;
     border-color: var(--color-gray) !important;

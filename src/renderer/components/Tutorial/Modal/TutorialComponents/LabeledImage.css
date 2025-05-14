@@ -1,0 +1,34 @@
+.labeled-image {
+    width: calc(100% - 10em);
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 6px;
+    display: block;
+}
+
+.image-caption {
+    margin-left: 6.5em;
+    margin-right: 6.5em;
+    color: gray;
+    text-align: center;
+    font-style: italic;
+}
+@media (max-width: 768px) {
+    .labeled-image {
+        width: 100%;
+    }
+    .image-caption {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+.col-md-6 .labeled-image {
+    width: 100% !important;
+}
+.col-md-6 .image-caption {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
