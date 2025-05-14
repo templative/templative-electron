@@ -43,7 +43,7 @@ const createWindow = () => {
       webPreferences: {
         nodeIntegration: true,
         contextIsolation: false,
-        devTools: !app.isPackaged,
+        devTools: true,
         webSecurity: false,
       },
       backgroundColor: '#282c34'

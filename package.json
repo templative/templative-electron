@@ -1,7 +1,7 @@
 {
     "name": "Templative",
     "description": "Electron frontend for the Templative CLI.",
-    "version": "1.0.60",
+    "version": "1.0.61",
     "private": true,
     "main": ".webpack/main",
     "author": {
@@ -101,7 +101,7 @@
         "os": "^0.1.2",
         "papaparse": "^5.5.2",
         "path": "^0.12.7",
-        "puppeteer-core": "^21.0.0",
+        "pdfkit": "^0.17.1",
         "rage-edit": "^1.2.0",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
