@@ -1,18 +1,7 @@
 const unpackAsar = `**/{${[
   "*.node",
-  "*.dll",
-  "*.so",
-  "*.dylib",
-  "node_modules/sharp/**/*",
-  "node_modules/pdfkit/**/*",
   "node_modules/@resvg/**/*",
-  "node_modules/fontkit/**/*",
-  "node_modules/opentype.js/**/*",
-  "node_modules/canvas/**/*",
-  "node_modules/image-js/**/*"
 ].join(",")}}`;
-// unpack asar should be:
-//"**/{*.node,node_modules/@resvg/**/*,node_modules/pdfkit/**/*,node_modules/sharp/**/*,node_modules/fontkit/**/*,node_modules/opentype.js/**/*,node_modules/canvas/**/*,node_modules/image-js/**/*}"
 
 module.exports = {
   packagerConfig: {
