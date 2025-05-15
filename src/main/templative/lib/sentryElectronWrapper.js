@@ -14,14 +14,18 @@ function captureException(error) {
     return;
   }
   const {captureException } = require("@sentry/electron/main");
-  captureException(error);
+  if (typeof captureException === "function") {
+    captureException(error);
+  }
 }
 function captureMessage(message) {
   if (! isElectron()) {
     return;
   }
   const {captureMessage } = require("@sentry/electron/main");
-  captureMessage(message);
+  if (typeof captureMessage === "function") {
+    captureMessage(message);
+  }
 }
 module.exports = {
   captureException,

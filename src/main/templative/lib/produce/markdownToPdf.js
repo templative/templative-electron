@@ -82,7 +82,6 @@ async function markdownToPdf(templativeRootDirectoryPath, markdown, options = {}
       const tokens = marked.lexer(markdown);
       
       // Debug: Log all tokens to see what's being parsed
-      console.log("Markdown tokens:", JSON.stringify(tokens, null, 2));
       
       let currentY = margins.top;
       
