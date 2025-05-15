@@ -65,7 +65,7 @@ module.exports = {
           replacement: () => 'previewPieceWorker.bundle.js'
         }
       ]
-    })
+    }),
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.svg', '.png']
@@ -77,14 +77,7 @@ module.exports = {
     'os',
     'crypto',
     'child_process',
-    'worker_threads',
-    'stream',
-    'zlib',
-    'buffer',
-    'pdfkit',
-    'sharp',
-    '@sentry/electron',
-    '@sentry/electron/main'
+    'worker_threads'
   ],
   devtool: 'eval-cheap-module-source-map'
 };
