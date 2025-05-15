@@ -81,7 +81,6 @@ module.exports = {
     'stream',
     'zlib',
     'buffer',
-    'pdfkit',
     'sharp',
     '@sentry/electron',
     '@sentry/electron/main'

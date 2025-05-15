@@ -5,9 +5,41 @@ const path = require('path');
 const https = require('https');
 const http = require('http');
 const sharp = require('sharp');
+const os = require('os');
 
 // To test, run:
 // node /Users/oliverbarnum/Documents/git/templative-electron/src/main/templative/lib/produce/tests/testMarkdownToPdf.js
+
+// Get the appropriate font family based on OS
+function getSystemFont() {
+  const platform = os.platform();
+  if (platform === 'darwin') {
+    return {
+      regular: 'Helvetica',
+      bold: 'Helvetica-Bold',
+      italic: 'Helvetica-Oblique',
+      boldItalic: 'Helvetica-BoldOblique'
+    };
+  } else if (platform === 'win32') {
+    return {
+      regular: 'Arial',
+      bold: 'Arial-Bold',
+      italic: 'Arial-Italic',
+      boldItalic: 'Arial-BoldItalic'
+    };
+  } else {
+    // Default for other platforms
+    return {
+      regular: 'Helvetica',
+      bold: 'Helvetica-Bold',
+      italic: 'Helvetica-Oblique',
+      boldItalic: 'Helvetica-BoldOblique'
+    };
+  }
+}
+
+// Store the system font names for reuse
+const SYSTEM_FONTS = getSystemFont();
 
 async function markdownToPdf(markdown, options = {}) {
   return new Promise((resolve, reject) => {
@@ -46,7 +78,7 @@ async function markdownToPdf(markdown, options = {}) {
       });
       
       // Set up document styling
-      doc.font('Helvetica');
+      doc.font(SYSTEM_FONTS.regular);
       
       // Process the HTML content
       const tokens = marked.lexer(markdown);
@@ -322,10 +354,11 @@ function renderHeading(doc, token) {
   
   doc.moveDown(1.5);
   
-  // Use standard font with bold styling instead of Helvetica-Bold
+  // Use system font with bold styling
   doc.fontSize(fontSizes[token.depth] || 11)
-     .text(token.text, { continued: false, font: 'Helvetica', bold: true })
-     .fontSize(11);
+     .text(token.text, { continued: false, font: SYSTEM_FONTS.bold })
+     .fontSize(11)
+     .font(SYSTEM_FONTS.regular);
   
   doc.moveDown(0.5);
 }
@@ -423,14 +456,14 @@ function renderInlineTokens(doc, tokens, opts) {
         // Check if token contains nested em tokens
         if (token.tokens && token.tokens.some(t => t.type === 'em')) {
           // Handle bold+italic text
-          doc.font('Helvetica-BoldOblique')
+          doc.font(SYSTEM_FONTS.boldItalic)
              .text(token.raw.replace(/\*\*\*|\*\*|\*|___|\__|_/g, ''), { continued: true })
-             .font('Helvetica');
+             .font(SYSTEM_FONTS.regular);
         } else {
           // Apply bold styling
-          doc.font('Helvetica-Bold')
+          doc.font(SYSTEM_FONTS.bold)
              .text(token.text, { continued: true })
-             .font('Helvetica');
+             .font(SYSTEM_FONTS.regular);
         }
         break;
         
@@ -444,14 +477,14 @@ function renderInlineTokens(doc, tokens, opts) {
         // Check if token contains nested strong tokens
         if (token.tokens && token.tokens.some(t => t.type === 'strong')) {
           // Handle italic+bold text
-          doc.font('Helvetica-BoldOblique')
+          doc.font(SYSTEM_FONTS.boldItalic)
              .text(token.raw.replace(/\*\*\*|\*\*|\*|___|\__|_/g, ''), { continued: true })
-             .font('Helvetica');
+             .font(SYSTEM_FONTS.regular);
         } else {
           // Apply italic styling
-          doc.font('Helvetica-Oblique')
+          doc.font(SYSTEM_FONTS.italic)
              .text(token.text, { continued: true })
-             .font('Helvetica');
+             .font(SYSTEM_FONTS.regular);
         }
         break;
         
@@ -465,9 +498,9 @@ function renderInlineTokens(doc, tokens, opts) {
         }
         
         // Apply bold and italic styling
-        doc.font('Helvetica-BoldOblique')
+        doc.font(SYSTEM_FONTS.boldItalic)
            .text(token.text || token.raw.replace(/\*\*\*|\*\*|\*|___|\__|_/g, ''), { continued: true })
-           .font('Helvetica');
+           .font(SYSTEM_FONTS.regular);
         break;
         
       case 'link':
@@ -651,17 +684,20 @@ function renderTable(doc, token) {
   let startX = doc.page.margins.left;
   let startY = doc.y;
   
-  // Draw header - use standard font with bold styling
+  // Draw header - use system font with bold styling
   table.header.forEach((cell, i) => {
     // Convert cell content to string if it's an object
     const cellText = typeof cell === 'object' && cell !== null ? 
       (cell.text || JSON.stringify(cell)) : String(cell);
     
-    doc.text(cellText, 
+    doc.font(SYSTEM_FONTS.bold)
+       .text(cellText, 
              startX + (i * colWidth) + cellPadding, 
              startY + cellPadding, 
-             { width: colWidth - (2 * cellPadding), font: 'Helvetica', bold: true });
+             { width: colWidth - (2 * cellPadding) });
   });
+  
+  doc.font(SYSTEM_FONTS.regular);
   
   // Move to next row
   startY += lineHeight + (2 * cellPadding);
