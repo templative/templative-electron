@@ -5,7 +5,7 @@ const path = require('path');
 const {captureMessage, captureException } = require("../sentryElectronWrapper");
 const { markdownToPdf } = require('./markdownToPdf');
 
-async function produceRulebook(rulesMdContent, gameFolderPath) {
+async function produceRulebook(templativeRootDirectoryPath, rulesMdContent, gameFolderPath) {
   if (!rulesMdContent) {
     console.log("!!! rulesMdContent is blank.");
     return;
@@ -16,7 +16,7 @@ async function produceRulebook(rulesMdContent, gameFolderPath) {
   try {
     const outputFilepath = join(gameFolderPath, 'rules.pdf');
     
-    const pdfBuffer = await markdownToPdf(rulesMdContent);
+    const pdfBuffer = await markdownToPdf(templativeRootDirectoryPath, rulesMdContent);
 
     if (!pdfBuffer) {
       throw new Error('Failed to produce rulebook: No PDF content generated');

@@ -9,9 +9,10 @@ const { markdownToPdf } = require('../markdownToPdf.js');
 async function runTest() {
   try {
     console.log('Converting Markdown to PDF...');
-    const sampleMarkdownPath = "/Users/oliverbarnum/Documents/git/blank-templative-project/rules.md"
+    const templativeRootDirectoryPath = "/Users/oliverbarnum/Documents/git/blank-templative-project";
+    const sampleMarkdownPath = path.join(templativeRootDirectoryPath, 'rules.md');
     const sampleMarkdown = fs.readFileSync(sampleMarkdownPath, 'utf8');
-    const pdfBuffer = await markdownToPdf(sampleMarkdown, {
+    const pdfBuffer = await markdownToPdf(templativeRootDirectoryPath, sampleMarkdown, {
       info: {
         Title: 'Test Document',
         Author: 'Test Script'

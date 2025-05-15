@@ -235,7 +235,7 @@ async function produceRules(gameRootDirectoryPath, outputDirectoryPath) {
             console.log("!!! rules.md not found.");
             return;
         }
-        await rulesMarkdownProcessor.produceRulebook(rules, outputDirectoryPath);
+        await rulesMarkdownProcessor.produceRulebook(gameRootDirectoryPath, rules, outputDirectoryPath);
     } catch (error) {
         captureException(error);
         console.error(`Error producing rules:`, error);

@@ -1,802 +1,945 @@
 const { marked } = require('marked');
-// const PDFDocument = require('pdfkit');
+const { jsPDF } = require('jspdf');
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const http = require('http');
-// const sharp = require('sharp');
 const os = require('os');
 
 // To test, run:
 // node /Users/oliverbarnum/Documents/git/templative-electron/src/main/templative/lib/produce/tests/testMarkdownToPdf.js
 
-// Get the appropriate font family based on OS
+const PAGE_PADDING_HORIZONTAL = 30;
+const PAGE_PADDING_VERTICAL = 40;
+const PAGE_SIZE = 'a4';
+const PAGE_NUMBER_FONT_SIZE = 8;
+
+const FONT_SIZE = 12;
+const LINE_HEIGHT_MULTIPLIER = 1.2;
+const TOTAL_LINE_HEIGHT = FONT_SIZE * LINE_HEIGHT_MULTIPLIER;
+const SPACE_BEFORE_HEADING = 20;
+const SPACE_AFTER_HEADING = 0;
+const SPACE_AFTER_TOKEN = 0;
+const SPACE_BEFORE_PARAGRAPH = 10;
+const SPACE_AFTER_PARAGRAPH = 10;
+const CELL_PADDING = 6;
+
 function getSystemFont() {
   const platform = os.platform();
   if (platform === 'darwin') {
-    return {
-      regular: 'Helvetica',
-      bold: 'Helvetica-Bold',
-      italic: 'Helvetica-Oblique',
-      boldItalic: 'Helvetica-BoldOblique'
-    };
+    return 'Helvetica';
   } else if (platform === 'win32') {
-    return {
-      regular: 'Arial',
-      bold: 'Arial-Bold',
-      italic: 'Arial-Italic',
-      boldItalic: 'Arial-BoldItalic'
-    };
-  } else {
-    // Default for other platforms
-    return {
-      regular: 'Helvetica',
-      bold: 'Helvetica-Bold',
-      italic: 'Helvetica-Oblique',
-      boldItalic: 'Helvetica-BoldOblique'
-    };
+    return 'Arial';
   }
+  return 'Helvetica';
 }
 
 // Store the system font names for reuse
-const SYSTEM_FONTS = getSystemFont();
+const SYSTEM_FONT = getSystemFont();
 
-async function markdownToPdf(markdown, options = {}) {
-//   return new Promise((resolve, reject) => {
-//     const defaultPdfOptions = {
-//       format: 'a4',
-//       margin: {
-//         top: 30,
-//         right: 40,
-//         bottom: 30,
-//         left: 40
-//       },
-//       info: {
-//         Title: 'rules'
-//       }
-//     };
+async function markdownToPdf(templativeRootDirectoryPath, markdown, options = {}) {
+  return new Promise((resolve, reject) => {
+    const defaultPdfOptions = {
+      format: PAGE_SIZE,
+      margin: {
+        top: PAGE_PADDING_VERTICAL,
+        right: PAGE_PADDING_HORIZONTAL,
+        bottom: PAGE_PADDING_VERTICAL,
+        left: PAGE_PADDING_HORIZONTAL
+      },
+      info: {
+        Title: 'rules'
+      }
+    };
 
-//     const pdfOptions = { ...defaultPdfOptions, ...options };
+    const pdfOptions = { ...defaultPdfOptions, ...options };
     
-//     try {      
-//       // Create a PDF document
-//       const doc = new PDFDocument({
-//         size: pdfOptions.format,
-//         margin: pdfOptions.margin,
-//         info: pdfOptions.info,
-//         bufferPages: true
-//       });
+    try {      
+      const doc = new jsPDF({
+        orientation: 'portrait',
+        unit: 'pt',
+        format: pdfOptions.format
+      });
       
-//       // Collect PDF data chunks
-//       const chunks = [];
-//       doc.on('data', chunk => chunks.push(chunk));
+      doc.setProperties({
+        title: pdfOptions.info.Title,
+        subject: pdfOptions.info.Subject || '',
+        author: pdfOptions.info.Author || '',
+        keywords: pdfOptions.info.Keywords || '',
+        creator: pdfOptions.info.Creator || 'Templative'
+      });
       
-//       // Resolve with the complete PDF buffer when done
-//       doc.on('end', () => {
-//         const pdfBuffer = Buffer.concat(chunks);
-//         resolve(pdfBuffer);
-//       });
+      doc.setFont(SYSTEM_FONT);
+      doc.setFontSize(FONT_SIZE);
       
-//       // Set up document styling
-//       doc.font(SYSTEM_FONTS.regular);
+      const margins = {
+        left: pdfOptions.margin.left,
+        top: pdfOptions.margin.top,
+        right: pdfOptions.margin.right,
+        bottom: pdfOptions.margin.bottom
+      };
       
-//       // Process the HTML content
-//       const tokens = marked.lexer(markdown);
+      const tokens = marked.lexer(markdown);
       
-//       // Process tokens and handle images asynchronously
-//       processTokensWithImages(doc, tokens, pdfOptions.basePath || process.cwd())
-//         .then(() => {
-//           // Add page numbers
-//           const pageCount = doc.bufferedPageRange().count;
-//           for (let i = 0; i < pageCount; i++) {
-//             doc.switchToPage(i);
-//             doc.fontSize(8);
-//             doc.text(
-//               `Page ${i + 1} of ${pageCount}`,
-//               doc.page.margins.left,
-//               doc.page.height - doc.page.margins.bottom - 12,
-//               { align: 'center', width: doc.page.width - doc.page.margins.left - doc.page.margins.right }
-//             );
-//           }
-          
-//           // Finalize the PDF
-//           doc.end();
-//         })
-//         .catch(error => {
-//           console.error("Error processing markdown with images:", error);
-//           doc.end();
-//           reject(error);
-//         });
-//     } catch (error) {
-//       console.log("!!! Could not create the rules PDF due to an error", error);
-//       reject(error);
-//     }
-//   });
+      // Debug: Log all tokens to see what's being parsed
+      console.log("Markdown tokens:", JSON.stringify(tokens, null, 2));
+      
+      let currentY = margins.top;
+      
+      // Create a cache for downloaded images
+      const imageCache = {};
+      
+      processTokens(templativeRootDirectoryPath, doc, tokens, {
+        margins: margins,
+        currentY: currentY,
+        pageWidth: doc.internal.pageSize.width,
+        pageHeight: doc.internal.pageSize.height,
+        imageCache: imageCache
+      }).then(() => {
+        // Add page numbers
+        const pageCount = doc.getNumberOfPages();
+        for (let i = 1; i <= pageCount; i++) {
+          doc.setPage(i);
+          doc.setFontSize(PAGE_NUMBER_FONT_SIZE);
+          doc.text(
+            `Page ${i} of ${pageCount}`,
+            doc.internal.pageSize.width / 2,
+            doc.internal.pageSize.height - margins.bottom,
+            { align: 'center' }
+          );
+        }
+        
+        const pdfBuffer = Buffer.from(doc.output('arraybuffer'));
+        resolve(pdfBuffer);
+      }).catch(error => {
+        console.log("!!! Could not create the rules PDF due to an error", error);
+        reject(error);
+      });
+      
+    } catch (error) {
+      console.log("!!! Could not create the rules PDF due to an error", error);
+      reject(error);
+    }
+  });
 }
 
-// Process tokens and handle images asynchronously
+async function processTokens(templativeRootDirectoryPath, doc, tokens, context) {
+  let { margins, currentY, pageWidth, pageHeight, imageCache } = context;
 
-// async function processTokensWithImages(doc, tokens, basePath, options = {}) {
-//   const opts = { ...{ indent: 0, listCounter: 0 }, ...options };
   
-//   for (let i = 0; i < tokens.length; i++) {
-//     const token = tokens[i];
+  for (let i = 0; i < tokens.length; i++) {
+    const token = tokens[i];
     
-//     switch (token.type) {
-//       case 'heading':
-//         renderHeading(doc, token);
-//         break;
+    // Check if we need a new page
+    if (currentY > pageHeight - margins.bottom - 50) {
+      doc.addPage();
+      currentY = margins.top;
+    }
+    
+    switch (token.type) {
+      case 'heading':
+        currentY = renderHeading(doc, token, currentY, margins, pageWidth);
+        break;
       
-//       case 'paragraph':
-//         // Check if paragraph contains an image
-//         if (token.tokens && token.tokens.some(t => t.type === 'image')) {
-//           await renderParagraphWithImages(doc, token, opts, basePath);
-//         } else {
-//           renderParagraph(doc, token, opts);
-//         }
-//         break;
+      case 'paragraph':
+        // Check if this paragraph contains an image
+        if (token.tokens && token.tokens.some(t => t.type === 'image')) {
+          // Extract image tokens and process them
+          for (const inlineToken of token.tokens) {
+            if (inlineToken.type === 'image') {
+              currentY = await renderImage(templativeRootDirectoryPath, doc, inlineToken, currentY, margins, pageWidth, imageCache);
+            }
+          }
+        } else {
+          currentY = renderParagraph(doc, token, currentY, margins, pageWidth);
+        }
+        break;
       
-//       case 'list':
-//         renderList(doc, token, opts);
-//         break;
+      case 'list':
+        currentY = renderList(doc, token, currentY, margins, pageWidth);
+        break;
       
-//       case 'blockquote':
-//         renderBlockquote(doc, token, opts);
-//         break;
+      case 'blockquote':
+        currentY = renderBlockquote(doc, token, currentY, margins, pageWidth);
+        break;
       
-//       case 'code':
-//         renderCode(doc, token, opts);
-//         break;
+      case 'code':
+        currentY = renderCode(doc, token, currentY, margins, pageWidth);
+        break;
       
-//       case 'hr':
-//         renderHorizontalRule(doc);
-//         break;
+      case 'hr':
+        currentY = renderHorizontalRule(doc, currentY, margins, pageWidth);
+        break;
       
-//       case 'table':
-//         renderTable(doc, token);
-//         break;
+      case 'table':
+        currentY = renderTable(doc, token, currentY, margins, pageWidth);
+        break;
       
-//       case 'html':
-//         // Skip HTML content or implement HTML parsing if needed
-//         break;
+      case 'space':
+        currentY += SPACE_AFTER_TOKEN;
+        break;
       
-//       case 'space':
-//         doc.moveDown();
-//         break;
+      case 'image':
+        currentY = await renderImage(templativeRootDirectoryPath, doc, token, currentY, margins, pageWidth, imageCache);
+        break;
       
-//       default:
-//         // Handle other token types or skip them
-//         break;
-//     }
-//   }
-// }
+      default:
+        break;
+    }
+    
+    // Update context
+    context.currentY = currentY;
+  }
+  
+  return context.currentY;
+}
 
-// // New function to handle paragraphs with images
-// async function renderParagraphWithImages(doc, token, opts, basePath) {
-//   doc.moveDown(1);
+function renderHeading(doc, token, y, margins, pageWidth) {
+  const fontSizes = {
+    1: FONT_SIZE + 14,
+    2: FONT_SIZE + 10,
+    3: FONT_SIZE + 6,
+    4: FONT_SIZE + 4,
+    5: FONT_SIZE + 2,
+    6: FONT_SIZE
+  };
   
-//   for (const inlineToken of token.tokens) {
-//     if (inlineToken.type === 'image') {
-//       await renderImage(doc, inlineToken, opts, basePath);
-//     } else {
-//       // For non-image tokens, render them normally
-//       const tempTokens = [inlineToken];
-//       renderInlineTokens(doc, tempTokens, opts);
-//     }
-//   }
-  
-//   doc.moveDown(0.5);
-// }
+  y += SPACE_BEFORE_HEADING;
 
-// // Function to render images
-// async function renderImage(doc, token, opts, basePath) {
-//   try {
-//     const { href: src, text: alt, title } = token;
-    
-//     // Get image data
-//     const imageData = await loadImage(src, basePath);
-//     if (!imageData) {
-//       console.warn(`Failed to load image: ${src}`);
-//       doc.text(`[Image: ${alt || src}]`, { indent: opts.indent });
-//       return;
-//     }
-    
-//     // Get image dimensions using Sharp
-//     const dimensions = await getImageDimensions(imageData);
-    
-//     // Calculate image dimensions to fit within page width
-//     const maxWidth = doc.page.width - doc.page.margins.left - doc.page.margins.right - opts.indent;
-//     const { width, height } = calculateImageDimensions(dimensions, maxWidth);
-    
-//     // Check if we need to add a page break
-//     if (doc.y + height > doc.page.height - doc.page.margins.bottom) {
-//       doc.addPage();
-//     }
-    
-//     // Save current Y position
-//     const startY = doc.y;
-    
-//     // Render the image
-//     doc.image(imageData, doc.page.margins.left + opts.indent, startY, {
-//       width: width,
-//       height: height
-//     });
-    
-//     // Manually update the Y position to be after the image
-//     doc.y = startY + height;
-    
-//     // Add caption if title is provided
-//     if (title) {
-//       doc.moveDown(0.5);
-//       doc.fontSize(9)
-//          .text(title, { 
-//            align: 'center', 
-//            width: maxWidth,
-//            indent: opts.indent
-//          })
-//          .fontSize(11);
-//     }
-    
-//     // Add extra space after the image
-//     doc.moveDown(1);
-    
-//   } catch (error) {
-//     console.error(`Error rendering image: ${error.message}`);
-//     doc.text(`[Image: ${token.text || token.href}]`, { indent: opts.indent });
-//   }
-// }
+  doc.setFont(SYSTEM_FONT);
+  doc.setFontSize(fontSizes[token.depth] || FONT_SIZE);
+  
+  const textWidth = pageWidth - margins.left - margins.right;
+  const textLines = doc.splitTextToSize(token.text, textWidth);
+  
+  doc.text(textLines, margins.left, y);
+  
+  y += (textLines.length * (fontSizes[token.depth] * LINE_HEIGHT_MULTIPLIER)) + SPACE_AFTER_HEADING;
+  
+  doc.setFont(SYSTEM_FONT);
+  doc.setFontSize(FONT_SIZE);
+  
+  return y;
+}
 
-// // Helper function to get image dimensions using Sharp
-// async function getImageDimensions(imageData) {
-//   try {
-//     const metadata = await sharp(imageData).metadata();
-//     return {
-//       width: metadata.width,
-//       height: metadata.height
-//     };
-//   } catch (error) {
-//     console.error("Error getting image dimensions:", error);
-//     // Return default dimensions if Sharp fails
-//     return { width: 400, height: 300 };
-//   }
-// }
+function renderParagraph(doc, token, y, margins, pageWidth) {
+  y += SPACE_BEFORE_PARAGRAPH;
+  
+  const textWidth = pageWidth - margins.left - margins.right;
+  
+  // Process inline tokens instead of just joining text
+  if (token.tokens) {
+    y = renderInlineTokens(doc, token.tokens, y, margins, textWidth);
+  } else {
+    const textLines = doc.splitTextToSize(token.text, textWidth);
+    doc.text(textLines, margins.left, y);
+    y += (textLines.length * TOTAL_LINE_HEIGHT);
+  }
+  
+  y += SPACE_AFTER_PARAGRAPH;
+  
+  return y;
+}
 
-// // Helper function to calculate image dimensions while preserving aspect ratio
-// function calculateImageDimensions(dimensions, maxWidth) {
-//   const { width: originalWidth, height: originalHeight } = dimensions;
+// Add this new function to handle inline tokens
+function renderInlineTokens(doc, tokens, y, margins, textWidth) {
+  let currentText = '';
+  let currentX = margins.left;
+  let startY = y;
   
-//   // If image is smaller than maxWidth, use original size
-//   if (originalWidth <= maxWidth) {
-//     return { width: originalWidth, height: originalHeight };
-//   }
-  
-//   // Calculate scaled dimensions to maintain aspect ratio
-//   const aspectRatio = originalHeight / originalWidth;
-//   const width = maxWidth;
-//   const height = Math.round(width * aspectRatio);
-  
-//   // Limit maximum height to avoid extremely tall images
-//   const maxHeight = 800;
-//   if (height > maxHeight) {
-//     return {
-//       width: Math.round(maxHeight / aspectRatio),
-//       height: maxHeight
-//     };
-//   }
-  
-//   return { width, height };
-// }
-
-// function renderTokens(doc, tokens, options = {}) {
-//   const defaultOptions = {
-//     indent: 0,
-//     listCounter: 0
-//   };
-  
-//   const opts = { ...defaultOptions, ...options };
-  
-//   for (let i = 0; i < tokens.length; i++) {
-//     const token = tokens[i];
+  for (let i = 0; i < tokens.length; i++) {
+    const token = tokens[i];
     
-//     switch (token.type) {
-//       case 'heading':
-//         renderHeading(doc, token);
-//         break;
+    // Handle different token types
+    switch (token.type) {
+      case 'text':
+        currentText += token.text || '';
+        break;
+        
+      case 'link':
+        // Flush any pending text with normal style
+        if (currentText) {
+          const lines = doc.splitTextToSize(currentText, textWidth - (currentX - margins.left));
+          doc.text(lines, currentX, y);
+          currentX += doc.getTextWidth(lines[0]);
+          if (lines.length > 1) {
+            y += (lines.length - 1) * TOTAL_LINE_HEIGHT;
+            currentX = margins.left;
+          }
+          currentText = '';
+        }
+        
+        // Get link text and URL
+        const linkText = token.text || token.href;
+        const linkUrl = token.href;
+        
+        // Set link style (blue and underlined)
+        doc.setTextColor(0, 0, 255);
+        
+        // Render the link text
+        const linkLines = doc.splitTextToSize(linkText, textWidth - (currentX - margins.left));
+        doc.text(linkLines, currentX, y);
+        
+        // Add link annotation
+        const linkWidth = doc.getTextWidth(linkLines[0]);
+        doc.link(
+          currentX, 
+          y - FONT_SIZE, 
+          linkWidth,
+          FONT_SIZE * 1.2,
+          { url: linkUrl }
+        );
+        
+        currentX += linkWidth;
+        if (linkLines.length > 1) {
+          y += (linkLines.length - 1) * TOTAL_LINE_HEIGHT;
+          currentX = margins.left;
+        }
+        
+        // Reset to normal style
+        doc.setTextColor(0, 0, 0);
+        break;
+        
+      case 'strong':
+        // Flush any pending text with normal style
+        if (currentText) {
+          const lines = doc.splitTextToSize(currentText, textWidth - (currentX - margins.left));
+          doc.text(lines, currentX, y);
+          currentX += doc.getTextWidth(lines[0]);
+          if (lines.length > 1) {
+            y += (lines.length - 1) * TOTAL_LINE_HEIGHT;
+            currentX = margins.left;
+          }
+          currentText = '';
+        }
+        
+        // Check if this is a nested token with both bold and italic
+        if (token.tokens && token.tokens.some(t => t.type === 'em')) {
+          // Set bold and italic style
+          doc.setFont(SYSTEM_FONT, 'bolditalic');
+          
+          // Extract the text from the em token
+          const emText = token.tokens.map(t => t.text || '').join('');
+          const boldItalicLines = doc.splitTextToSize(emText, textWidth - (currentX - margins.left));
+          
+          doc.text(boldItalicLines, currentX, y);
+          currentX += doc.getTextWidth(boldItalicLines[0]);
+          if (boldItalicLines.length > 1) {
+            y += (boldItalicLines.length - 1) * TOTAL_LINE_HEIGHT;
+            currentX = margins.left;
+          }
+        } else {
+          // Regular bold text
+          doc.setFont(SYSTEM_FONT, 'bold');
+          const boldText = token.text || '';
+          const boldLines = doc.splitTextToSize(boldText, textWidth - (currentX - margins.left));
+          
+          doc.text(boldLines, currentX, y);
+          currentX += doc.getTextWidth(boldLines[0]);
+          if (boldLines.length > 1) {
+            y += (boldLines.length - 1) * TOTAL_LINE_HEIGHT;
+            currentX = margins.left;
+          }
+        }
+        
+        // Reset to normal style
+        doc.setFont(SYSTEM_FONT, 'normal');
+        break;
+        
+      case 'em':
+        // Flush any pending text with normal style
+        if (currentText) {
+          const lines = doc.splitTextToSize(currentText, textWidth - (currentX - margins.left));
+          doc.text(lines, currentX, y);
+          currentX += doc.getTextWidth(lines[0]);
+          if (lines.length > 1) {
+            y += (lines.length - 1) * TOTAL_LINE_HEIGHT;
+            currentX = margins.left;
+          }
+          currentText = '';
+        }
+        
+        // Check if this is a nested token with both italic and bold
+        if (token.tokens && token.tokens.some(t => t.type === 'strong')) {
+          // Set bold and italic style
+          doc.setFont(SYSTEM_FONT, 'bolditalic');
+          
+          // Extract the text from the strong token
+          const strongText = token.tokens.map(t => t.text || '').join('');
+          const boldItalicLines = doc.splitTextToSize(strongText, textWidth - (currentX - margins.left));
+          
+          doc.text(boldItalicLines, currentX, y);
+          currentX += doc.getTextWidth(boldItalicLines[0]);
+          if (boldItalicLines.length > 1) {
+            y += (boldItalicLines.length - 1) * TOTAL_LINE_HEIGHT;
+            currentX = margins.left;
+          }
+        } else {
+          // Regular italic text
+          doc.setFont(SYSTEM_FONT, 'italic');
+          const italicText = token.text || '';
+          const italicLines = doc.splitTextToSize(italicText, textWidth - (currentX - margins.left));
+          
+          doc.text(italicLines, currentX, y);
+          currentX += doc.getTextWidth(italicLines[0]);
+          if (italicLines.length > 1) {
+            y += (italicLines.length - 1) * TOTAL_LINE_HEIGHT;
+            currentX = margins.left;
+          }
+        }
+        
+        // Reset to normal style
+        doc.setFont(SYSTEM_FONT, 'normal');
+        break;
+        
+      case 'strong_em':
+      case 'em_strong':
+        // Flush any pending text with normal style
+        if (currentText) {
+          const lines = doc.splitTextToSize(currentText, textWidth - (currentX - margins.left));
+          doc.text(lines, currentX, y);
+          currentX += doc.getTextWidth(lines[0]);
+          if (lines.length > 1) {
+            y += (lines.length - 1) * TOTAL_LINE_HEIGHT;
+            currentX = margins.left;
+          }
+          currentText = '';
+        }
+        
+        // Set bold and italic style
+        doc.setFont(SYSTEM_FONT, 'bolditalic');
+        const boldItalicText = token.text || '';
+        const boldItalicLines = doc.splitTextToSize(boldItalicText, textWidth - (currentX - margins.left));
+        doc.text(boldItalicLines, currentX, y);
+        currentX += doc.getTextWidth(boldItalicLines[0]);
+        if (boldItalicLines.length > 1) {
+          y += (boldItalicLines.length - 1) * TOTAL_LINE_HEIGHT;
+          currentX = margins.left;
+        }
+        
+        // Reset to normal style
+        doc.setFont(SYSTEM_FONT, 'normal');
+        break;
+        
+      case 'image':
+        // Flush any pending text with normal style
+        if (currentText) {
+          const lines = doc.splitTextToSize(currentText, textWidth - (currentX - margins.left));
+          doc.text(lines, currentX, y);
+          currentX += doc.getTextWidth(lines[0]);
+          if (lines.length > 1) {
+            y += (lines.length - 1) * TOTAL_LINE_HEIGHT;
+            currentX = margins.left;
+          }
+          currentText = '';
+        }
+        
+        // For inline images, we'll just add a placeholder text
+        const imgText = `[Image: ${token.text || 'image'}]`;
+        doc.setFont(SYSTEM_FONT, 'italic');
+        doc.text(imgText, currentX, y);
+        currentX += doc.getTextWidth(imgText);
+        doc.setFont(SYSTEM_FONT, 'normal');
+        break;
+        
+      default:
+        if (token.text) {
+          currentText += token.text;
+        }
+        break;
+    }
+  }
+  
+  // Flush any remaining text
+  if (currentText) {
+    const lines = doc.splitTextToSize(currentText, textWidth - (currentX - margins.left));
+    doc.text(lines, currentX, y);
+    if (lines.length > 1) {
+      y += (lines.length - 1) * TOTAL_LINE_HEIGHT;
+    }
+  }
+  
+  // Ensure we advance at least one line height
+  if (y <= startY) {
+    y += TOTAL_LINE_HEIGHT;
+  }
+  
+  return y;
+}
+
+function renderList(doc, token, y, margins, pageWidth) {
+  y += SPACE_BEFORE_PARAGRAPH;
+  
+  const listIndent = 15;
+  const textWidth = pageWidth - margins.left - margins.right - listIndent;
+  
+  // Recursive function to handle nested lists
+  function processListItems(items, level = 0) {
+    const currentIndent = listIndent * level;
+    const currentTextWidth = pageWidth - margins.left - margins.right - currentIndent - listIndent;
+    
+    items.forEach((item, index) => {
+      const bullet = token.ordered ? `${index + 1}.` : '•';
       
-//       case 'paragraph':
-//         renderParagraph(doc, token, opts);
-//         break;
+      // Check if we need a new page
+      if (y + TOTAL_LINE_HEIGHT > doc.internal.pageSize.height - margins.bottom) {
+        doc.addPage();
+        y = margins.top;
+      }
       
-//       case 'list':
-//         renderList(doc, token, opts);
-//         break;
+      doc.text(bullet, margins.left + currentIndent, y);
       
-//       case 'blockquote':
-//         renderBlockquote(doc, token, opts);
-//         break;
+      // Process inline tokens for list items
+      if (item.tokens) {
+        const listMargins = { ...margins, left: margins.left + currentIndent + listIndent };
+        
+        // Process each token in the list item
+        for (const token of item.tokens) {
+          if (token.type === 'text' || token.type === 'strong' || token.type === 'em') {
+            y = renderInlineTokens(doc, [token], y, listMargins, currentTextWidth);
+          } else if (token.type === 'list') {
+            // Handle nested list
+            y += TOTAL_LINE_HEIGHT;
+            processListItems(token.items, level + 1);
+          } else {
+            // For other token types, render as appropriate
+            const textLines = doc.splitTextToSize(token.text || '', currentTextWidth);
+            doc.text(textLines, margins.left + currentIndent + listIndent, y);
+            y += (textLines.length * TOTAL_LINE_HEIGHT);
+          }
+        }
+      } else {
+        const textLines = doc.splitTextToSize(item.text, currentTextWidth);
+        doc.text(textLines, margins.left + currentIndent + listIndent, y);
+        y += (textLines.length * TOTAL_LINE_HEIGHT);
+      }
       
-//       case 'code':
-//         renderCode(doc, token, opts);
-//         break;
+      // Process any nested lists in this item
+      if (item.items && item.items.length > 0) {
+        processListItems(item.items, level + 1);
+      }
       
-//       case 'hr':
-//         renderHorizontalRule(doc);
-//         break;
-      
-//       case 'table':
-//         renderTable(doc, token);
-//         break;
-      
-//       case 'html':
-//         // Skip HTML content or implement HTML parsing if needed
-//         break;
-      
-//       case 'space':
-//         doc.moveDown();
-//         break;
-      
-//       default:
-//         // Handle other token types or skip them
-//         break;
-//     }
-//   }
-// }
+      y += SPACE_AFTER_PARAGRAPH;
+    });
+  }
+  
+  // Start processing the list
+  processListItems(token.items);
+  
+  return y;
+}
 
-// function renderHeading(doc, token) {
-//   // Set font size based on heading level
-//   const fontSizes = {
-//     1: 24,
-//     2: 20,
-//     3: 16,
-//     4: 14,
-//     5: 12,
-//     6: 11
-//   };
+function renderBlockquote(doc, token, y, margins, pageWidth) {
+  y += SPACE_BEFORE_PARAGRAPH;
   
-//   doc.moveDown(1.5);
-  
-//   // Use system font with bold styling
-//   doc.fontSize(fontSizes[token.depth] || 11)
-//      .text(token.text, { continued: false, font: SYSTEM_FONTS.bold })
-//      .fontSize(11)
-//      .font(SYSTEM_FONTS.regular);
-  
-//   doc.moveDown(0.5);
-// }
+  let text = '';
+  if (token.tokens) {
+    text = token.tokens.map(t => {
+      if (t.tokens) {
+        return t.tokens.map(st => st.text || '').join('');
+      }
+      return t.text || '';
+    }).join('\n');
+  } else {
+    text = token.text;
+  }
 
-// function renderParagraph(doc, token, opts) {
-//   doc.moveDown(1);
+  const quoteIndent = 10;
+  const textWidth = pageWidth - margins.left - margins.right - quoteIndent - 5;
+  const textLines = doc.splitTextToSize(text, textWidth);
   
-//   // Process inline tokens (bold, italic, etc.)
-//   if (token.tokens) {
-//     // Check for line breaks in the raw text
-//     const lines = token.raw.split(/  \n|\n/g);
+  const startY = y - (TOTAL_LINE_HEIGHT * 1);
+  const endY = y + ((textLines.length-1) * TOTAL_LINE_HEIGHT);
+  
+  doc.setDrawColor(200, 200, 200);
+  doc.setLineWidth(3);
+  doc.line(margins.left + 3, startY, margins.left + 3, endY);
+  
+  doc.setTextColor(68, 68, 68);
+  doc.text(textLines, margins.left + quoteIndent, y);
+  doc.setTextColor(0, 0, 0);
+  
+  y = endY + 10;
+  
+  return y;
+}
+
+function renderCode(doc, token, y, margins, pageWidth) {
+  y += SPACE_BEFORE_PARAGRAPH;
+  
+  const codeLines = token.text.split('\n');
+  
+  const blockHeight = codeLines.length * TOTAL_LINE_HEIGHT + 20;
+  
+  // Check if we need a new page to fit the code block
+  if (y + blockHeight > doc.internal.pageSize.height - margins.bottom) {
+    doc.addPage();
+    y = margins.top;
+  }
+  
+  doc.setFillColor(240, 240, 240);
+  doc.rect(margins.left, y - (TOTAL_LINE_HEIGHT * 1.5), pageWidth - margins.left - margins.right, blockHeight, 'F');
+  
+  doc.setFont('Courier');
+  doc.setFontSize(FONT_SIZE);
+  
+  codeLines.forEach((line, index) => {
+    doc.text(line, margins.left + 10, y + (index * TOTAL_LINE_HEIGHT));
+  });
+  
+  doc.setFont(SYSTEM_FONT);
+  doc.setFontSize(FONT_SIZE);
+  
+  y += blockHeight + SPACE_AFTER_PARAGRAPH;
+  
+  return y;
+}
+
+function renderHorizontalRule(doc, y, margins, pageWidth) {
+  y += SPACE_BEFORE_PARAGRAPH;
+  
+  doc.setDrawColor(200, 200, 200);
+  doc.setLineWidth(1);
+  doc.line(margins.left, y, pageWidth - margins.right, y);
+  doc.setDrawColor(0, 0, 0);
+  
+  y += SPACE_AFTER_PARAGRAPH;
+  
+  return y;
+}
+
+function renderTable(doc, token, y, margins, pageWidth) {
+  y += SPACE_BEFORE_PARAGRAPH;
+  
+  const table = token;
+  const colCount = table.header.length;
+  const rowCount = table.rows.length;
+  const colWidth = (pageWidth - margins.left - margins.right) / colCount;
+  const cellPadding = CELL_PADDING;
+  const lineHeight = FONT_SIZE * LINE_HEIGHT_MULTIPLIER;
+  
+  // Calculate total table height to check if we need a new page
+  const headerHeight = lineHeight + (2 * cellPadding);
+  const rowHeight = lineHeight + (2 * cellPadding);
+  const totalTableHeight = headerHeight + (rowHeight * rowCount) + SPACE_AFTER_PARAGRAPH;
+  
+  // Check if we need a new page to fit the table
+  if (y + totalTableHeight > doc.internal.pageSize.height - margins.bottom) {
+    doc.addPage();
+    y = margins.top;
+  }
+  
+  doc.setFont(SYSTEM_FONT);
+  table.header.forEach((cell, i) => {
+    const cellText = typeof cell === 'object' && cell !== null ? 
+      (cell.text || JSON.stringify(cell)) : String(cell);
     
-//     if (lines.length > 1) {
-//       // Handle multiple lines with line breaks
-//       for (let i = 0; i < lines.length; i++) {
-//         if (lines[i].trim() === '') continue;
-        
-//         // Create a subset of tokens for this line
-//         const lineTokens = filterTokensForLine(token.tokens, lines[i]);
-        
-//         // Render the line
-//         renderInlineTokens(doc, lineTokens, opts);
-        
-//         // Add line break if not the last line
-//         if (i < lines.length - 1) {
-//           doc.moveDown(0.5);
-//         }
-//       }
-//     } else {
-//       // Single line, render normally
-//       renderInlineTokens(doc, token.tokens, opts);
-//     }
-//   } else {
-//     // Check for line breaks in the text
-//     const lines = token.text.split(/  \n|\n/g);
+    doc.text(
+      cellText, 
+      margins.left + (i * colWidth) + cellPadding, 
+      y + cellPadding
+    );
+  });
+  
+  doc.setFont(SYSTEM_FONT);
+  
+  y += lineHeight + (2 * cellPadding);
+  
+  doc.setDrawColor(0, 0, 0);
+  doc.setLineWidth(1);
+  doc.line(margins.left, y - cellPadding, pageWidth - margins.right, y - cellPadding);
+  
+  table.rows.forEach((row, rowIndex) => {
+    if (y + lineHeight > doc.internal.pageSize.height - margins.bottom) {
+      doc.addPage();
+      y = margins.top;
+    }
     
-//     if (lines.length > 1) {
-//       // Handle multiple lines with line breaks
-//       for (let i = 0; i < lines.length; i++) {
-//         if (lines[i].trim() === '') continue;
-        
-//         doc.text(lines[i], { indent: opts.indent });
-        
-//         // Add line break if not the last line
-//         if (i < lines.length - 1) {
-//           doc.moveDown(0.5);
-//         }
-//       }
-//     } else {
-//       // Single line, render normally
-//       doc.text(token.text, { indent: opts.indent });
-//     }
-//   }
-  
-//   doc.moveDown(0.5);
-// }
-
-// // Helper function to filter tokens for a specific line
-// function filterTokensForLine(tokens, line) {
-//   // This is a simplified approach - for complex documents with mixed formatting
-//   // across line breaks, a more sophisticated algorithm would be needed
-//   if (!line || line.trim() === '') return [];
-  
-//   // Find tokens that belong to this line
-//   return tokens.filter(token => {
-//     if (token.type === 'text') {
-//       return token.text && line.includes(token.text);
-//     }
-//     if (token.text) {
-//       return line.includes(token.text);
-//     }
-//     if (token.raw) {
-//       return line.includes(token.raw.replace(/\*\*\*|\*\*|\*|___|\__|_/g, ''));
-//     }
-//     return false;
-//   });
-// }
-
-// function renderInlineTokens(doc, tokens, opts) {
-//   let currentText = '';
-  
-//   for (const token of tokens) {
-//     switch (token.type) {
-//       case 'text':
-//         currentText += token.text;
-//         break;
-        
-//       case 'strong':
-//         // First output any accumulated text
-//         if (currentText) {
-//           doc.text(currentText, { continued: true, indent: opts.indent });
-//           currentText = '';
-//         }
-        
-//         // Check if token contains nested em tokens
-//         if (token.tokens && token.tokens.some(t => t.type === 'em')) {
-//           // Handle bold+italic text
-//           doc.font(SYSTEM_FONTS.boldItalic)
-//              .text(token.raw.replace(/\*\*\*|\*\*|\*|___|\__|_/g, ''), { continued: true })
-//              .font(SYSTEM_FONTS.regular);
-//         } else {
-//           // Apply bold styling
-//           doc.font(SYSTEM_FONTS.bold)
-//              .text(token.text, { continued: true })
-//              .font(SYSTEM_FONTS.regular);
-//         }
-//         break;
-        
-//       case 'em':
-//         // First output any accumulated text
-//         if (currentText) {
-//           doc.text(currentText, { continued: true, indent: opts.indent });
-//           currentText = '';
-//         }
-        
-//         // Check if token contains nested strong tokens
-//         if (token.tokens && token.tokens.some(t => t.type === 'strong')) {
-//           // Handle italic+bold text
-//           doc.font(SYSTEM_FONTS.boldItalic)
-//              .text(token.raw.replace(/\*\*\*|\*\*|\*|___|\__|_/g, ''), { continued: true })
-//              .font(SYSTEM_FONTS.regular);
-//         } else {
-//           // Apply italic styling
-//           doc.font(SYSTEM_FONTS.italic)
-//              .text(token.text, { continued: true })
-//              .font(SYSTEM_FONTS.regular);
-//         }
-//         break;
-        
-//       // Add support for combined bold and italic
-//       case 'strong_em':
-//       case 'em_strong':
-//         // First output any accumulated text
-//         if (currentText) {
-//           doc.text(currentText, { continued: true, indent: opts.indent });
-//           currentText = '';
-//         }
-        
-//         // Apply bold and italic styling
-//         doc.font(SYSTEM_FONTS.boldItalic)
-//            .text(token.text || token.raw.replace(/\*\*\*|\*\*|\*|___|\__|_/g, ''), { continued: true })
-//            .font(SYSTEM_FONTS.regular);
-//         break;
-        
-//       case 'link':
-//         // First output any accumulated text
-//         if (currentText) {
-//           doc.text(currentText, { continued: true, indent: opts.indent });
-//           currentText = '';
-//         }
-        
-//         doc.fillColor('blue')
-//            .text(token.text, { continued: true, link: token.href, underline: true });
-//         doc.fillColor('black');
-//         break;
-        
-//       case 'code':
-//         // First output any accumulated text
-//         if (currentText) {
-//           doc.text(currentText, { continued: true, indent: opts.indent });
-//           currentText = '';
-//         }
-        
-//         // Use Courier which is a standard font in PDFKit
-//         doc.font('Courier')
-//            .text(token.text, { continued: true });
-//         doc.font('Helvetica');
-//         break;
-        
-//       default:
-//         if (token.text) {
-//           currentText += token.text;
-//         }
-//         break;
-//     }
-//   }
-  
-//   // Output any remaining text
-//   if (currentText.length > 0) {
-//     doc.text(currentText, { indent: opts.indent, continued: false });
-//   } else {
-//     // End the text flow if we've output special tokens but no final text
-//     doc.text('', { continued: false });
-//   }
-// }
-
-// function renderList(doc, token, opts) {
-//   doc.moveDown(1);
-  
-//   const newIndent = opts.indent + 15;
-//   const listType = token.ordered ? 'ordered' : 'unordered';
-  
-//   token.items.forEach((item, index) => {
-//     // Create appropriate bullet
-//     let bullet = listType === 'ordered' ? `${index + 1}.` : '• ';
-
-//     // Regular list item
-//     doc.text(bullet, { indent: opts.indent, continued: true });
-    
-//     if (item.tokens) {
-//       const firstToken = item.tokens[0];
+    row.forEach((cell, colIndex) => {
+      const cellText = typeof cell === 'object' && cell !== null ? 
+        (cell.text || JSON.stringify(cell)) : String(cell);
       
-//       if (firstToken.type === 'text') {
-//         doc.text(firstToken.text);
-//       } else {
-//         doc.text(' ');
-//         renderTokens(doc, item.tokens, { ...opts, indent: newIndent });
-//       }
+      doc.text(
+        cellText, 
+        margins.left + (colIndex * colWidth) + cellPadding, 
+        y + cellPadding
+      );
+    });
+    
+    y += lineHeight + (2 * cellPadding);
+    
+    if (rowIndex < rowCount - 1) {
+      doc.setDrawColor(200, 200, 200);
+      doc.setLineWidth(0.5);
+      doc.line(margins.left, y - cellPadding, pageWidth - margins.right, y - cellPadding);
+    }
+  });
+  
+  doc.setDrawColor(0, 0, 0);
+  
+  y += SPACE_AFTER_PARAGRAPH;
+  
+  return y;
+}
+
+// Function to download an image and return it as base64
+function downloadImage(url) {
+  return new Promise((resolve, reject) => {
+    
+    // Check if it's a local file path
+    if (url.startsWith('file://') || !url.startsWith('http')) {
+      let filePath = url;
+      if (url.startsWith('file://')) {
+        filePath = url.replace('file://', '');
+      }
       
-//       // Handle nested tokens (excluding the first one we just processed)
-//       if (item.tokens.length > 1) {
-//         renderTokens(doc, item.tokens.slice(1), { ...opts, indent: newIndent });
-//       }
-//     } else {
-//       doc.text(' ' + item.text);
-//     }
-    
-//     doc.moveDown(0.5);
-//   });
-// }
-
-// function renderBlockquote(doc, token, opts) {
-//   // Check if we need to add a page break to avoid splitting the blockquote header
-//   const minHeightNeeded = 40; // Minimum space needed for the first line and some content
-//   if (doc.y + minHeightNeeded > doc.page.height - doc.page.margins.bottom) {
-//     doc.addPage();
-//   }
-  
-//   doc.moveDown(1);
-  
-//   const quoteIndent = 10;
-//   const totalIndent = opts.indent + quoteIndent;
-  
-//   // Process the blockquote content
-//   if (token.tokens && token.tokens.length > 0) {
-//     // Save current position to calculate height later
-//     const startY = doc.y;
-    
-//     // Render the blockquote content with increased indent
-//     renderTokens(doc, token.tokens, { 
-//       ...opts, 
-//       indent: totalIndent 
-//     });
-    
-//     // Calculate the height of the rendered content
-//     const endY = doc.y;
-//     const blockHeight = endY - startY;
-    
-//     // Draw the vertical line
-//     doc.strokeColor('#cccccc')
-//        .lineWidth(3)
-//        .moveTo(doc.page.margins.left + opts.indent + 3, startY)
-//        .lineTo(doc.page.margins.left + opts.indent + 3, startY + blockHeight)
-//        .stroke();
-    
-//     // Reset stroke color
-//     doc.strokeColor('black');
-//   } else {
-//     // If there are no tokens, just render the text
-//     doc.fillColor('#444444')
-//        .text(token.text, { indent: totalIndent })
-//        .fillColor('black');
-//   }
-  
-//   doc.moveDown(0.5);
-// }
-
-// function renderCode(doc, token, opts) {
-//   doc.moveDown(1);
-  
-//   // Draw code block background
-//   const originalY = doc.y;
-//   const codeText = token.text.split('\n');
-//   const lineHeight = doc.currentLineHeight();
-//   const blockHeight = lineHeight * (codeText.length + 1);
-  
-//   // Use the current indent for the background rectangle
-//   doc.rect(doc.page.margins.left + opts.indent, originalY - 5, 
-//            doc.page.width - doc.page.margins.right - doc.page.margins.left - opts.indent - 10, 
-//            blockHeight)
-//      .fill('#f0f0f0');
-  
-//   // Render code with monospace font
-//   doc.font('Courier')
-//      .fontSize(10)
-//      .fillColor('black');
-  
-//   codeText.forEach(line => {
-//     doc.text(line, { indent: opts.indent + 10 });
-//   });
-  
-//   doc.font('Helvetica')
-//      .fontSize(11);
-  
-//   doc.moveDown(1);
-// }
-
-// function renderHorizontalRule(doc) {
-//   doc.moveDown(1);
-  
-//   const y = doc.y;
-//   doc.strokeColor('#cccccc')
-//      .lineWidth(1)
-//      .moveTo(doc.page.margins.left, y)
-//      .lineTo(doc.page.width - doc.page.margins.right, y)
-//      .stroke();
-  
-//   doc.strokeColor('black');
-//   doc.moveDown(1);
-// }
-
-// function renderTable(doc, token) {
-//   doc.moveDown(1);
-  
-//   const table = token;
-//   const colCount = table.header.length;
-//   const rowCount = table.rows.length;
-//   const colWidth = (doc.page.width - doc.page.margins.left - doc.page.margins.right) / colCount;
-//   const cellPadding = 5;
-//   const lineHeight = doc.currentLineHeight();
-  
-//   // Calculate positions
-//   let startX = doc.page.margins.left;
-//   let startY = doc.y;
-  
-//   // Draw header - use system font with bold styling
-//   table.header.forEach((cell, i) => {
-//     // Convert cell content to string if it's an object
-//     const cellText = typeof cell === 'object' && cell !== null ? 
-//       (cell.text || JSON.stringify(cell)) : String(cell);
-    
-//     doc.font(SYSTEM_FONTS.bold)
-//        .text(cellText, 
-//              startX + (i * colWidth) + cellPadding, 
-//              startY + cellPadding, 
-//              { width: colWidth - (2 * cellPadding) });
-//   });
-  
-//   doc.font(SYSTEM_FONTS.regular);
-  
-//   // Move to next row
-//   startY += lineHeight + (2 * cellPadding);
-  
-//   // Draw separator line
-//   doc.strokeColor('#000000')
-//      .lineWidth(1)
-//      .moveTo(startX, startY)
-//      .lineTo(startX + (colWidth * colCount), startY)
-//      .stroke();
-  
-//   // Draw rows
-//   table.rows.forEach((row, rowIndex) => {
-//     const rowY = startY + (rowIndex * (lineHeight + (2 * cellPadding)));
-    
-//     row.forEach((cell, colIndex) => {
-//       // Convert cell content to string if it's an object
-//       const cellText = typeof cell === 'object' && cell !== null ? 
-//         (cell.text || JSON.stringify(cell)) : String(cell);
-      
-//       doc.text(cellText, 
-//                startX + (colIndex * colWidth) + cellPadding, 
-//                rowY + cellPadding, 
-//                { width: colWidth - (2 * cellPadding) });
-//     });
-    
-//     // Draw row separator
-//     if (rowIndex < rowCount - 1) {
-//       const lineY = rowY + lineHeight + (2 * cellPadding);
-//       doc.strokeColor('#cccccc')
-//          .lineWidth(0.5)
-//          .moveTo(startX, lineY)
-//          .lineTo(startX + (colWidth * colCount), lineY)
-//          .stroke();
-//     }
-//   });
-  
-//   // Reset stroke color
-//   doc.strokeColor('black');
-  
-//   // Move past the table
-//   const finalY = startY + (rowCount * (lineHeight + (2 * cellPadding)));
-  
-//   // Reset cursor position to left margin and move down
-//   doc.x = doc.page.margins.left;
-//   doc.y = finalY;
-//   doc.moveDown(1);
-// }
-
-// // Helper function to load image data from URL or local file
-// async function loadImage(src, basePath) {
-//   return new Promise((resolve, reject) => {
-//     // Check if it's a URL
-//     if (src.startsWith('http://') || src.startsWith('https://')) {
-//       // Load from URL
-//       const protocol = src.startsWith('https') ? https : http;
-      
-//       protocol.get(src, (response) => {
-//         if (response.statusCode !== 200) {
-//           return reject(new Error(`Failed to load image: ${response.statusCode}`));
-//         }
+      try {
+        if (!fs.existsSync(filePath)) {
+          console.error(`Local image file not found: ${filePath}`);
+          return resolve(null);
+        }
         
-//         const chunks = [];
-//         response.on('data', chunk => chunks.push(chunk));
-//         response.on('end', () => resolve(Buffer.concat(chunks)));
-//         response.on('error', err => reject(err));
-//       }).on('error', err => reject(err));
+        const data = fs.readFileSync(filePath);
+        const extension = path.extname(filePath).substring(1).toLowerCase() || 'jpeg';
+        const base64 = `data:image/${extension};base64,${data.toString('base64')}`;
+        resolve(base64);
+      } catch (error) {
+        console.error('Error reading local image:', error);
+        resolve(null);
+      }
+      return;
+    }
+    
+    // For remote URLs, use a temporary file approach
+    const protocol = url.startsWith('https') ? https : http;
+    
+    // Create a temporary file to store the image
+    const tempFilePath = path.join(os.tmpdir(), `templative-image-${Date.now()}-${Math.random().toString(36).substring(2, 15)}`);
+    const fileStream = fs.createWriteStream(tempFilePath);
+    
+    const request = protocol.get(url, (response) => {
+      // Check if the request was successful
+      if (response.statusCode !== 200) {
+        console.error(`Failed to download image: HTTP ${response.statusCode}`);
+        fileStream.close();
+        fs.unlink(tempFilePath, () => {}); // Clean up
+        resolve(null);
+        return;
+      }
       
-//     } else {
-//       // Load from local file
-//       try {
-//         // Handle absolute and relative paths
-//         let imagePath = src;
-//         if (!path.isAbsolute(src)) {
-//           imagePath = path.join(basePath, src);
-//         }
+      // Get the content type to determine image format
+      const contentType = response.headers['content-type'] || 'image/jpeg';
+      
+      // Pipe the response to the file
+      response.pipe(fileStream);
+      
+      fileStream.on('finish', () => {
+        fileStream.close();
         
-//         // Check if file exists
-//         if (!fs.existsSync(imagePath)) {
-//           console.warn(`Image file not found: ${imagePath}`);
-//           return resolve(null);
-//         }
+        try {
+          // Read the file back as base64
+          const data = fs.readFileSync(tempFilePath);
+          const base64 = `data:${contentType};base64,${data.toString('base64')}`;
+          
+          // Clean up the temporary file
+          fs.unlink(tempFilePath, (err) => {
+            if (err) console.error('Error deleting temp file:', err);
+          });
+          
+          resolve(base64);
+        } catch (error) {
+          console.error('Error processing downloaded image:', error);
+          // Clean up the temporary file
+          fs.unlink(tempFilePath, () => {});
+          resolve(null);
+        }
+      });
+    });
+    
+    request.on('error', (error) => {
+      console.error('Error downloading image:', error);
+      fileStream.close();
+      fs.unlink(tempFilePath, () => {}); // Clean up
+      resolve(null);
+    });
+    
+    // Set a timeout for the request
+    request.setTimeout(10000, () => {
+      console.error('Image download timed out');
+      request.abort();
+      fileStream.close();
+      fs.unlink(tempFilePath, () => {}); // Clean up
+      resolve(null);
+    });
+    
+    fileStream.on('error', (error) => {
+      console.error('Error writing to temp file:', error);
+      request.abort();
+      fileStream.close();
+      fs.unlink(tempFilePath, () => {}); // Clean up
+      resolve(null);
+    });
+  });
+}
+
+async function renderImage(templativeRootDirectoryPath, doc, token, y, margins, pageWidth, imageCache) {
+  y += SPACE_BEFORE_PARAGRAPH;
+  
+  let imageUrl = token.href;
+  const altText = token.text || '';
+  const maxWidth = pageWidth - margins.left - margins.right;
+
+  
+  try {
+    // Resolve relative paths using templativeRootDirectoryPath
+    if (imageUrl && !imageUrl.startsWith('http') && !imageUrl.startsWith('file://') && !path.isAbsolute(imageUrl)) {
+      // This is a relative path - resolve it against templativeRootDirectoryPath
+      imageUrl = path.resolve(templativeRootDirectoryPath, imageUrl);
+    }
+    
+    // Check if image is already in cache
+    let imageData;
+    if (imageCache[imageUrl]) {
+      imageData = imageCache[imageUrl];
+    } else {
+      // Download the image
+      imageData = await downloadImage(imageUrl);
+      
+      // Log the first 100 characters of the image data to verify it's valid
+      if (imageData) {
+        imageCache[imageUrl] = imageData;
+      } else {
+      }
+    }
+    
+    if (!imageData) {
+      // If image couldn't be downloaded, show alt text
+      doc.setFont(SYSTEM_FONT, 'italic');
+      doc.text(`[Image: ${altText || imageUrl}]`, margins.left, y);
+      doc.setFont(SYSTEM_FONT, 'normal');
+      return y + TOTAL_LINE_HEIGHT + SPACE_AFTER_PARAGRAPH;
+    }
+    
+    // Add the image to the PDF
+    try {
+      // Try to get image properties to determine dimensions
+      let imgWidth, imgHeight;
+      
+      try {
+        // Get image properties
+        const imgProps = doc.getImageProperties(imageData);
         
-//         // Read the file
-//         fs.readFile(imagePath, (err, data) => {
-//           if (err) {
-//             console.error(`Error reading image file: ${err.message}`);
-//             return resolve(null);
-//           }
-//           resolve(data);
-//         });
-//       } catch (error) {
-//         console.error(`Error processing image path: ${error.message}`);
-//         resolve(null);
-//       }
-//     }
-//   });
-// }
+        // Calculate dimensions to maintain aspect ratio
+        imgWidth = maxWidth;
+        imgHeight = (imgProps.height * maxWidth) / imgProps.width;
+        
+      } catch (propsError) {
+        console.error('Error getting image properties:', propsError);
+        // Use default dimensions if we can't get properties
+        imgWidth = maxWidth;
+        imgHeight = maxWidth * 0.75; // Assume a reasonable aspect ratio
+      }
+      
+      // Check if image would go off the page
+      const totalImageHeight = imgHeight + (altText ? 20 + FONT_SIZE * LINE_HEIGHT_MULTIPLIER : 0);
+      if (y + totalImageHeight > doc.internal.pageSize.height - margins.bottom) {
+        doc.addPage();
+        y = margins.top;
+      }
+      
+      // Try a simpler approach first - directly add the image
+      try {
+        doc.addImage(
+          imageData,
+          null, // Let jsPDF determine the type
+          margins.left,
+          y,
+          imgWidth,
+          imgHeight
+        );
+        
+        y += imgHeight; // Update y position
+        
+        // Add caption if alt text is provided
+        if (altText) {
+          const captionY = y + 10;
+          doc.setFont(SYSTEM_FONT, 'italic');
+          doc.setFontSize(FONT_SIZE - 2);
+          
+          const captionLines = doc.splitTextToSize(altText, maxWidth);
+          doc.text(captionLines, pageWidth / 2, captionY, { align: 'center' });
+          
+          doc.setFont(SYSTEM_FONT, 'normal');
+          doc.setFontSize(FONT_SIZE);
+          
+          y = captionY + (captionLines.length * (FONT_SIZE - 2) * LINE_HEIGHT_MULTIPLIER);
+        }
+      } catch (directError) {
+        console.error('Error with image insertion, trying fallback method:', directError);
+        
+        // Try with explicit format
+        try {
+          // Extract the format from the data URL
+          const formatMatch = imageData.match(/^data:image\/(\w+);base64,/);
+          const format = formatMatch ? formatMatch[1].toUpperCase() : 'JPEG';
+          
+          doc.addImage(
+            imageData,
+            format,
+            margins.left,
+            y,
+            imgWidth,
+            imgHeight
+          );
+          
+          y += imgHeight;
+          
+          // Add caption if alt text is provided
+          if (altText) {
+            const captionY = y + 10;
+            doc.setFont(SYSTEM_FONT, 'italic');
+            doc.setFontSize(FONT_SIZE - 2);
+            
+            const captionLines = doc.splitTextToSize(altText, maxWidth);
+            doc.text(captionLines, pageWidth / 2, captionY, { align: 'center' });
+            
+            doc.setFont(SYSTEM_FONT, 'normal');
+            doc.setFontSize(FONT_SIZE);
+            
+            y = captionY + (captionLines.length * (FONT_SIZE - 2) * LINE_HEIGHT_MULTIPLIER);
+          }
+          
+        } catch (finalError) {
+          console.error('All image insertion methods failed:', finalError);
+          // Fallback to alt text
+          doc.setFont(SYSTEM_FONT, 'italic');
+          doc.text(`[Image: ${altText || imageUrl}]`, margins.left, y);
+          doc.setFont(SYSTEM_FONT, 'normal');
+          y += TOTAL_LINE_HEIGHT;
+        }
+      }
+    } catch (error) {
+      console.error('Error in renderImage:', error);
+      // Fallback to alt text
+      doc.setFont(SYSTEM_FONT, 'italic');
+      doc.text(`[Image: ${altText || imageUrl}]`, margins.left, y);
+      doc.setFont(SYSTEM_FONT, 'normal');
+      y += TOTAL_LINE_HEIGHT;
+    }
+    
+  } catch (error) {
+    console.error('Error in renderImage:', error);
+    // Fallback to alt text
+    doc.setFont(SYSTEM_FONT, 'italic');
+    doc.text(`[Image: ${altText || imageUrl}]`, margins.left, y);
+    doc.setFont(SYSTEM_FONT, 'normal');
+    y += TOTAL_LINE_HEIGHT;
+  }
+  
+  y += SPACE_AFTER_PARAGRAPH;
+  
+  return y;
+}
 
 module.exports = {
   markdownToPdf
