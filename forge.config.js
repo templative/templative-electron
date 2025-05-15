@@ -1,9 +1,25 @@
+const unpackAsar = `**/{${[
+  "*.node",
+  "*.dll",
+  "*.so",
+  "*.dylib",
+  "node_modules/sharp/**/*",
+  "node_modules/pdfkit/**/*",
+  "node_modules/@resvg/**/*",
+  "node_modules/fontkit/**/*",
+  "node_modules/opentype.js/**/*",
+  "node_modules/canvas/**/*",
+  "node_modules/image-js/**/*"
+].join(",")}}`;
+// unpack asar should be:
+//"**/{*.node,node_modules/@resvg/**/*,node_modules/pdfkit/**/*,node_modules/sharp/**/*,node_modules/fontkit/**/*,node_modules/opentype.js/**/*,node_modules/canvas/**/*,node_modules/image-js/**/*}"
+
 module.exports = {
   packagerConfig: {
     name: 'Templative',
-		executableName: 'Templative',
+    executableName: 'Templative',
     "asar": {
-      "unpack": "**/{*.node,node_modules/@resvg/**/*}"
+      "unpack": unpackAsar
     },
     osxUniversal: false, // We'll build separate x64 and arm64 packages instead
     arch: process.env.ARCH || undefined, // Use the ARCH environment variable
