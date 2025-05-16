@@ -43,14 +43,14 @@ async function createInputHash(inputs) {
     return hashString;
 }
 
-function getCachedFilePath(hash, extension) {
-    const cacheDir = getRenderedPiecesCacheDir();
+async function getCachedFilePath(hash, extension) {
+    const cacheDir = await getRenderedPiecesCacheDir();
     return path.join(cacheDir, `${hash}.${extension}`);
 }
 
 async function getCachedFiles(hash) {
-    const svgPath = getCachedFilePath(hash, 'svg');
-    const pngPath = getCachedFilePath(hash, 'png');
+    const svgPath = await getCachedFilePath(hash, 'svg');
+    const pngPath = await getCachedFilePath(hash, 'png');
     let svgContent = null;
     try {
         svgContent = await fsExtra.readFile(svgPath, 'utf8');
@@ -77,10 +77,10 @@ async function getCachedFiles(hash) {
 }
 
 async function cacheFiles(hash, svgContent, pngPath) {
-    const cacheSvgPath = getCachedFilePath(hash, 'svg');
-    const cachePngPath = getCachedFilePath(hash, 'png');
+    const cacheSvgPath = await getCachedFilePath(hash, 'svg');
+    const cachePngPath = await getCachedFilePath(hash, 'png');
     await fsExtra.writeFile(cacheSvgPath, svgContent);
     await fsExtra.copy(pngPath, cachePngPath);
 }
 
-module.exports = { createInputHash, getCachedFilePath, getCachedFiles, cacheFiles, getRenderedPiecesCacheDir }; 
+module.exports = { createInputHash, getCachedFiles, cacheFiles, getRenderedPiecesCacheDir }; 

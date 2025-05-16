@@ -34,7 +34,7 @@
     margin-bottom:0px;
 }
 .preview-image:hover {
-    cursor:pointer;
+    cursor: crosshair !important;
 }
 .preview-image-giganto {
     position: fixed;

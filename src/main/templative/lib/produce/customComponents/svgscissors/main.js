@@ -206,7 +206,7 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
             return;
         }
       }
-      var absoluteEndResultDirectoryPath = path.normalize(path.resolve(componentBackOutputDirectory || getRenderedPiecesCacheDir()));
+      var absoluteEndResultDirectoryPath = path.normalize(path.resolve(componentBackOutputDirectory || await getRenderedPiecesCacheDir()));
       
       // If not cached, generate new files
       let contents = templateContent;
