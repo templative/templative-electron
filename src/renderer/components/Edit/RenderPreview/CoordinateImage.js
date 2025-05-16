@@ -11,6 +11,8 @@ export default class CoordinateImage extends React.Component {
             imageHeight: 0,
             rotation: 0
         };
+        this.imageRef = React.createRef();
+        this.containerRef = React.createRef();
     }
 
     handleMouseMove = (e) => {
@@ -55,13 +57,53 @@ export default class CoordinateImage extends React.Component {
         this.setState({
             imageWidth: e.target.naturalWidth,
             imageHeight: e.target.naturalHeight
-        });
+        }, this.adjustImageSize);
     }
 
     rotateImage = () => {
         this.setState(prevState => ({
             rotation: (prevState.rotation + 90) % 360
-        }));
+        }), this.adjustImageSize);
+    }
+
+    adjustImageSize = () => {
+        if (!this.imageRef.current || !this.containerRef.current) return;
+        
+        const containerWidth = this.containerRef.current.clientWidth;
+        const { imageWidth, imageHeight, rotation } = this.state;
+        
+        // Determine if we're in portrait or landscape orientation after rotation
+        const isRotated90or270 = rotation === 90 || rotation === 270;
+        
+        if (isRotated90or270) {
+            // For 90° or 270° rotation, we need to consider the inverted aspect ratio
+            const aspectRatio = imageHeight / imageWidth; // Inverted for rotation
+            
+            // Calculate the height that would maintain aspect ratio at full container width
+            const idealHeight = containerWidth * aspectRatio;
+            
+            // Set the image size to fit within the container
+            this.imageRef.current.style.width = 'auto';
+            this.imageRef.current.style.height = `${containerWidth}px`;
+            this.imageRef.current.style.maxWidth = 'none';
+            
+            // Set container height to match the rotated image width
+            this.containerRef.current.style.height = `${idealHeight}px`;
+        } else {
+            // For 0° or 180° rotation, reset to normal sizing
+            this.imageRef.current.style.width = 'auto';
+            this.imageRef.current.style.height = 'auto';
+            this.imageRef.current.style.maxWidth = '100%';
+            this.containerRef.current.style.height = 'auto';
+        }
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.adjustImageSize);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.adjustImageSize);
     }
 
     render() {
@@ -78,19 +120,16 @@ export default class CoordinateImage extends React.Component {
         const pixelX = Math.floor((this.state.adjustedX/100) * (this.state.imageWidth));
         const pixelY = Math.floor((this.state.adjustedY/100) * (this.state.imageHeight));
         
-        // Determine if we need to use vertical orientation class
-        const isVertical = this.state.rotation === 90 || this.state.rotation === 270;
+        // Adjust shadow direction based on rotation
+        let shadowDirection;
+        switch(this.state.rotation) {
+            case 0: shadowDirection = '4px 4px 0px'; break;
+            case 90: shadowDirection = '4px -4px 0px'; break;
+            case 180: shadowDirection = '-4px -4px 0px'; break;
+            case 270: shadowDirection = '-4px 4px 0px'; break;
+            default: shadowDirection = '4px 4px 0px';
+        }
         
-        // Get rotation class for shadow direction
-        const getRotationClass = () => {
-            switch(this.state.rotation) {
-                case 90: return 'rotate-90';
-                case 180: return 'rotate-180';
-                case 270: return 'rotate-270';
-                default: return '';
-            }
-        };
-
         return <React.Fragment>
             <div className="preview-image-filename">
                 {path.basename(this.props.filepath)}
@@ -98,10 +137,18 @@ export default class CoordinateImage extends React.Component {
                     ⟲
                 </button>
             </div>
-            <div className={`preview-image-container ${isVertical ? 'vertical-orientation' : ''}`}>
+            <div 
+                className="preview-image-container"
+                ref={this.containerRef}
+            >
                 <div className="image-wrapper">
                     <img 
-                        className={`preview-image ${getRotationClass()}`}
+                        ref={this.imageRef}
+                        className="preview-image"
+                        style={{
+                            transform: `rotate(${this.state.rotation}deg)`,
+                            filter: `drop-shadow(${shadowDirection} rgba(0, 0, 0, 0.5))`
+                        }}
                         src={`file://${this.props.filepath}?${this.props.imageHash}`}
                         onMouseMove={this.handleMouseMove}
                         onMouseLeave={this.handleMouseLeave}
