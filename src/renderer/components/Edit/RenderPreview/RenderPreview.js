@@ -4,7 +4,6 @@ import { channels } from '../../../../shared/constants';
 const { ipcRenderer } = window.require('electron');
 
 import "./RenderPreview.css"
-import RenderImage from "./RenderImage";
 import CoordinateImage from "./CoordinateImage";
 
 const fsOld = require('fs');

@@ -100,9 +100,24 @@ async function clipSvgContentToElement(svgContent, clipSvgContent, clipSvgElemen
             return svgContent;
         }
         
-        // Get the root SVG element
-        const svgRoot = svgDoc.querySelector('svg');
-        const clipRoot = clipDoc.querySelector('svg');
+        // Get the root SVG element - handle both namespaced and non-namespaced elements
+        let svgRoot = svgDoc.querySelector('svg') || svgDoc.querySelector('svg\\:svg');
+        let clipRoot = clipDoc.querySelector('svg') || clipDoc.querySelector('svg\\:svg');
+        
+        // If still not found, try getElementsByTagName which handles namespaces better
+        if (!svgRoot) {
+            const svgElements = svgDoc.getElementsByTagName('svg');
+            if (svgElements.length > 0) {
+                svgRoot = svgElements[0];
+            }
+        }
+        
+        if (!clipRoot) {
+            const clipElements = clipDoc.getElementsByTagName('svg');
+            if (clipElements.length > 0) {
+                clipRoot = clipElements[0];
+            }
+        }
         
         if (!svgRoot) {
             console.log(`Could not find SVG root element in source file.`);
