@@ -2,20 +2,11 @@ const { createHash } = require('crypto');
 const path = require('path');
 const fsExtra = require('fs-extra');
 const fsPromises = require('fs').promises;
-const electron = require('electron');
 const { getScopedValue } = require('../artdataProcessing/valueResolver');
 
 
 function getRenderedPiecesCacheDir() {
-    let userDataPath;
-    if (typeof electron !== 'undefined' && (electron.app || electron.remote?.app)) {
-        userDataPath = (electron.app || electron.remote.app).getPath('userData');
-    } else {
-        userDataPath = path.join(process.cwd(), '.templativeCache');
-        
-    }
-    const cacheDir = path.join(userDataPath, 'art-cache');
-    return cacheDir;
+    return path.join(process.cwd(), '.templativeCache', 'art-cache');
 }
 
 async function createInputHash(inputs) {
