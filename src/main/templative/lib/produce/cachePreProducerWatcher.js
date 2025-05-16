@@ -6,7 +6,7 @@ const {captureMessage, captureException } = require("../sentryElectronWrapper");
 const { RENDER_MODE, RENDER_PROGRAM, OVERLAPPING_RENDERING_TASKS } = require('../manage/models/produceProperties');
 // This ties us to electron
 const { readOrCreateSettingsFile } = require('../../../settingsManager');
-const mainProcess = require('electron').app;
+// const mainProcess = require('electron').app;
 const { createProduceGameWorker } = require('../../workerThread');
 
 
@@ -46,11 +46,11 @@ class CachePreProducerWatcher {
         }
         this.components = JSON.parse(this.componentComposeContents);
 
-        if (mainProcess.isRendering) {
-            return;
-        }
+        // if (mainProcess.isRendering) {
+        //     return;
+        // }
 
-        mainProcess.isRendering = true;
+        // mainProcess.isRendering = true;
 
         try {
             const settings = await readOrCreateSettingsFile();
@@ -71,7 +71,7 @@ class CachePreProducerWatcher {
             console.error(`Error producing game from cache pre-producer watcher:`, error);
             captureException(error);
         } finally {
-            mainProcess.isRendering = false; // Reset the flag after rendering is complete
+            // mainProcess.isRendering = false; // Reset the flag after rendering is complete
         }
 
         await this.setupArtWatchers();
@@ -93,9 +93,9 @@ class CachePreProducerWatcher {
             if (eventType !== 'change') {
                 return;
             }
-            if (mainProcess.isRendering) {
-                return;
-            }
+            // if (mainProcess.isRendering) {
+            //     return;
+            // }
 
             // Check if any file in the directory has a newer modification time
             const currentModTime = await this.getLatestModificationTime(directoryPath);
@@ -117,7 +117,7 @@ class CachePreProducerWatcher {
             }
             
             console.log(`Arts file changed, triggering full rebuild...`);
-            mainProcess.isRendering = true;
+            // mainProcess.isRendering = true;
             try {
                 // Do not await this, it will block the main thread
                 const settings = await readOrCreateSettingsFile();
@@ -138,7 +138,7 @@ class CachePreProducerWatcher {
                 console.error(`Error producing game from art inserts watcher:`, error);
                 captureException(error);
             } finally {
-                mainProcess.isRendering = false;
+                // mainProcess.isRendering = false;
             }
         }, 5000);
         
@@ -210,10 +210,10 @@ class CachePreProducerWatcher {
                     previousContents = currentContents;
                     console.log(`File ${filepath} contents changed, triggering rebuild for components: ${Array.from(components).join(', ')}`);
 
-                    if (mainProcess.isRendering) {
-                        return;
-                    }
-                    mainProcess.isRendering = true;
+                    // if (mainProcess.isRendering) {
+                    //     return;
+                    // }
+                    // mainProcess.isRendering = true;
 
                     for (const componentName of components) {
                         try {
@@ -236,7 +236,7 @@ class CachePreProducerWatcher {
                             console.error(`Error producing game from component ${componentName} watcher:`, error);
                             captureException(error);
                         } finally {
-                            mainProcess.isRendering = false; // Reset the flag after rendering is complete
+                            // mainProcess.isRendering = false; // Reset the flag after rendering is complete
                         }
                     }
                 } catch (error) {
@@ -306,11 +306,11 @@ class CachePreProducerWatcher {
                 await this.setupComponentWatchers();
 
                 console.log(`Component compose file ${filename} contents changed, triggering rebuild...`);
-                if (mainProcess.isRendering) {
-                    return;
-                }
+                // if (mainProcess.isRendering) {
+                //     return;
+                // }
 
-                mainProcess.isRendering = true;
+                // mainProcess.isRendering = true;
 
                 try {
                     const settings = await readOrCreateSettingsFile();
@@ -330,7 +330,7 @@ class CachePreProducerWatcher {
                     console.error(`Error producing game from component compose file watcher:`, error);
                     captureException(error);
                 } finally {
-                    mainProcess.isRendering = false;
+                    // mainProcess.isRendering = false;
                 }
             } catch (err) {
                 console.error(`Error accessing component compose file: ${err}`);

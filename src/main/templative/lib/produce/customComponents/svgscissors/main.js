@@ -227,8 +227,9 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       contents = dom.serialize();
       
       if (productionProperties.isClipped) {
-        const potentialPaths = await getComponentTemplatesDirectoryPath(componentType);
-        const clipSvgFilepath = path.join(potentialPaths, `${componentType}.svg`);
+        const componentTemplatesDirectoryPath = await getComponentTemplatesDirectoryPath(componentType);
+        // console.log(`componentTemplatesDirectoryPath: ${componentTemplatesDirectoryPath}`);
+        const clipSvgFilepath = path.join(componentTemplatesDirectoryPath, `${componentType}.svg`);
         try {
           contents = await clipSvgContentToClipFile(contents, clipSvgFilepath, CLIPPING_ELEMENT_ID, svgFileCache);
         } catch (error) {
