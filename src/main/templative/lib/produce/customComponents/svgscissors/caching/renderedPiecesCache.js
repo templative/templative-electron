@@ -3,10 +3,12 @@ const path = require('path');
 const fsExtra = require('fs-extra');
 const fsPromises = require('fs').promises;
 const { getScopedValue } = require('../artdataProcessing/valueResolver');
+const os = require('os');
 
-
-function getRenderedPiecesCacheDir() {
-    return path.join(process.cwd(), '.templativeCache', 'art-cache');
+async function getRenderedPiecesCacheDir() {
+    const cacheDir = path.join(os.homedir(), 'Documents', 'Templative', 'art-cache');
+    await fsExtra.mkdirs(cacheDir);
+    return cacheDir;
 }
 
 async function createInputHash(inputs) {
