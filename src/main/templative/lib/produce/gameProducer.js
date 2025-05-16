@@ -18,14 +18,7 @@ const { SvgFileCache } = require('./customComponents/svgscissors/caching/svgFile
 const { RENDER_MODE, RENDER_PROGRAM, OVERLAPPING_RENDERING_TASKS } = require('../manage/models/produceProperties');
 
 async function getPreviewsPath() {
-    let base_path;
-    if (process.resourcesPath) {
-        base_path = process.resourcesPath;
-    } else {
-        base_path = path.resolve(".");
-    }
-
-    const previewsPath = path.join(base_path, "previews");
+    const previewsPath = path.join(os.homedir(), 'Documents', 'Templative', 'previews');
     try {
         await fsPromises.mkdir(previewsPath, { recursive: true });
     } catch (err) {

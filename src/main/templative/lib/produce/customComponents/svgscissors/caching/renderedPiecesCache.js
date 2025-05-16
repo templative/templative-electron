@@ -7,7 +7,14 @@ const os = require('os');
 
 async function getRenderedPiecesCacheDir() {
     const cacheDir = path.join(os.homedir(), 'Documents', 'Templative', 'art-cache');
-    await fsExtra.mkdirs(cacheDir);
+    
+    try {
+        await fsExtra.mkdirs(cacheDir, { recursive: true });
+    } catch (err) {
+        if (err.code !== 'EEXIST') {
+            throw err;
+        }
+    }
     return cacheDir;
 }
 
