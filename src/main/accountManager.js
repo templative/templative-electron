@@ -3,8 +3,27 @@ const axios = require("axios");
 const os = require("os");
 const {  shell, BrowserWindow,BrowserView, app } = require('electron')
 const { channels } = require("../shared/constants");
-const { verifyCredentials, isTokenValid, verifyCredentialsGoogle, loginIntoGameCrafter } = require("./templativeWebsiteClient")
-const { clearSessionToken, clearEmail, saveSessionToken, saveEmail, getSessionToken, getEmail, getTgcSession, saveTgcSession, clearTgcSession, getGithubToken, saveGithubToken, clearGithubToken } = require("./sessionStore")
+const { verifyCredentials, isTokenValid, initiateGoogleOAuth, refreshToken, logout, loginIntoGameCrafter, checkProductOwnership } = require("./templativeWebsiteClient")
+const { 
+    clearSessionToken, 
+    clearEmail, 
+    saveSessionToken, 
+    saveEmail, 
+    getSessionToken, 
+    getEmail, 
+    getTgcSession, 
+    saveTgcSession, 
+    clearTgcSession, 
+    getGithubToken, 
+    saveGithubToken, 
+    clearGithubToken,
+    saveUser,
+    getUser,
+    clearUser,
+    saveOAuthState,
+    getOAuthState,
+    clearOAuthState
+} = require("./sessionStore")
 let mainWindow;
 const { updateToast } = require("./toastNotifier");
 
@@ -20,11 +39,30 @@ const giveFeedback = async(event, args) => {
 const viewDocumentation = async(event, args) => {
     shell.openExternal("https://templative.net/docs");
 }
+
 const giveLogout = async (event, args) => {
-    await clearSessionToken()
-    await clearEmail()
-    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGOUT);
+    try {
+        // Call the logout endpoint
+        await logout();
+        
+        // Clear all stored authentication data
+        await clearSessionToken()
+        await clearEmail()
+        await clearUser()
+        await clearOAuthState()
+        
+        BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGOUT);
+    } catch (error) {
+        console.error('Logout error:', error);
+        // Still clear local data even if server call fails
+        await clearSessionToken()
+        await clearEmail()
+        await clearUser()
+        await clearOAuthState()
+        BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGOUT);
+    }
 }
+
 const login = async (_, email, password) => {
     var response = await verifyCredentials(email, password)
     if (response.statusCode === axios.HttpStatusCode.Unauthorized || response.statusCode === axios.HttpStatusCode.Forbidden ) {
@@ -35,11 +73,38 @@ const login = async (_, email, password) => {
         BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_UNABLE_TO_LOG_IN);
         return
     }
+    
+    // Save the new JWT token and user data
     await saveSessionToken(response.token);
-    await saveEmail(email)
+    await saveEmail(response.user.email);
+    await saveUser(response.user);
+    
     updateToast("Logged in successfully.", "success");
-    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, response.token, email);
+    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, response.token, response.user.email);
 }
+
+const initiateGoogleLogin = async () => {
+    try {
+        const response = await initiateGoogleOAuth();
+        
+        if (response.statusCode !== axios.HttpStatusCode.Ok) {
+            console.error('AccountManager: OAuth initiation failed with status:', response.statusCode);
+            BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_UNABLE_TO_LOG_IN);
+            return { success: false, error: 'OAuth initiation failed' };
+        }
+        
+        await saveOAuthState(response.state);
+        shell.openExternal(response.authUrl);
+        
+        return { success: true, message: 'OAuth flow initiated' };
+        
+    } catch (error) {
+        console.error('AccountManager: Google OAuth initiation failed:', error);
+        BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_UNABLE_TO_LOG_IN);
+        return { success: false, error: error.message };
+    }
+}
+
 const giveLoginInformation = async () => {
     // if (!app.isPackaged) {
     //     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, "Fakeasstoken", "oliverbarnum32@gmail.com");
@@ -47,29 +112,64 @@ const giveLoginInformation = async () => {
     // }
     var token = await getSessionToken()
     var email = await getEmail()
+    
     if (!token || !email) {
         // console.warn("GIVE_NOT_LOGGED_IN because no saved token")
         BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_NOT_LOGGED_IN);
         return
     }
-    var response = await isTokenValid(email, token)
+    
+    var response = await isTokenValid(token)
     if (response.statusCode !== axios.HttpStatusCode.Ok) {
         // console.warn("GIVE_NOT_LOGGED_IN because bad status code checking token validity", response.status)
         BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_NOT_LOGGED_IN);
         return
     }
+    
     if (!response.isValid) {
         // console.warn("GIVE_NOT_LOGGED_IN because invalid token, clear session token")
         await clearSessionToken()
         await clearEmail()
+        await clearUser()
         BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_NOT_LOGGED_IN);
         return
     }
+    
+    // Update stored user data if it's different
+    if (response.user) {
+        await saveUser(response.user);
+        await saveEmail(response.user.email);
+    }
+    
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, token, email);
 }
+
+const attemptTokenRefresh = async () => {
+    try {
+        const token = await getSessionToken();
+        if (!token) {
+            return false;
+        }
+        
+        const response = await refreshToken(token);
+        if (response.success && response.token) {
+            await saveSessionToken(response.token);
+            await saveUser(response.user);
+            await saveEmail(response.user.email);
+            return true;
+        }
+        
+        return false;
+    } catch (error) {
+        console.error('Token refresh failed:', error);
+        return false;
+    }
+}
+
 const giveGithubAuth = async (_) => {
     return await getGithubToken();
 }
+
 function setupOauthListener(window) {
     mainWindow = window;
 
@@ -111,8 +211,94 @@ function setupOauthListener(window) {
                 }
                 mainWindow.focus();
                 await handleDeepLink(url);
+            } else {
+                console.error('AccountManager: No mainWindow available for deep link handling');
             }
         });
+    }
+}
+
+async function handleDeepLink(url) {
+    console.log('AccountManager: Handling deep link:', url);
+    var parsedUrl = new URL(url);
+    const protocol = parsedUrl.protocol.toLowerCase();
+    
+    // Handle Google OAuth callback - check for oauth-callback in hostname or search params
+    if (protocol === 'templative:' && (
+        parsedUrl.hostname === 'oauth-callback' || 
+        parsedUrl.pathname === '//oauth-callback' ||
+        parsedUrl.pathname === '/oauth-callback' ||
+        url.includes('oauth-callback')
+    )) {
+        const token = parsedUrl.searchParams.get('token');
+        const userParam = parsedUrl.searchParams.get('user');
+        const error = parsedUrl.searchParams.get('error');
+        
+        if (error) {
+            console.error('AccountManager: OAuth error:', error);
+            updateToast("Google login failed: " + error, "error");
+            BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_UNABLE_TO_LOG_IN);
+            return;
+        }
+        
+        if (token && userParam) {
+            try {
+                const user = JSON.parse(decodeURIComponent(userParam));
+                
+                // Save the authentication data
+                await saveSessionToken(token);
+                await saveEmail(user.email);
+                await saveUser(user);
+                await clearOAuthState(); // Clear the stored state
+                
+                updateToast("Logged in with Google successfully.", "success");
+                BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, token, user.email);
+            } catch (parseError) {
+                console.error('AccountManager: Error parsing user data:', parseError);
+                updateToast("Google login failed: Invalid user data", "error");
+                BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_UNABLE_TO_LOG_IN);
+            }
+        } else {
+            console.error('AccountManager: Missing token or user data in OAuth callback');
+        }
+        return;
+    }
+    
+    // Handle TheGameCrafter SSO callback - make sure it's the right protocol
+    if (protocol === 'templative:' && parsedUrl.searchParams.has('sso_id')) {
+        const ssoId = parsedUrl.searchParams.get('sso_id');
+        if (!ssoId) {
+            console.error("AccountManager: No SSO ID found in TGC callback");
+            return;
+        }
+        const data = await loginIntoGameCrafter(ssoId);
+        await saveTgcSession(data["result"]["id"], data["result"]["user_id"]);
+        updateToast("Logged into TheGameCrafter successfully.", "success");
+        BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TGC_LOGIN_STATUS, { isLoggedIn: true });
+        return;
+    }
+
+    // Legacy Templative OAuth callback (keeping for backward compatibility)
+    if (protocol === 'templative:' && !parsedUrl.searchParams.has('sso_id') && !parsedUrl.pathname.includes('oauth-callback')) {
+        // For some reason, on Windows, the URL is missing a trailing =
+        if (os.platform() === "win32") {
+            url = url + "="
+        }
+        parsedUrl = new URL(url);
+        
+        const data = parsedUrl.searchParams.get('data');
+        if (!data) {
+            console.error("AccountManager: No data parameter found in the URL");
+            return;
+        }
+        const { token, email } = grabTokenAndEmail(data);
+        if (!(token && email)) {
+            console.error("AccountManager: Missing info token and email.");
+            return;
+        }
+        await saveSessionToken(token);
+        await saveEmail(email);
+        mainWindow.webContents.send(channels.GIVE_LOGGED_IN, token, email);
     }
 }
 
@@ -125,47 +311,6 @@ function grabTokenAndEmail(data) {
     const token = decodeBase64(encodedToken);
     const email = decodeBase64(encodedEmail);
     return { token, email };
-}
-
-
-
-async function handleDeepLink(url) {
-    var parsedUrl = new URL(url);
-    const protocol = parsedUrl.protocol.toLowerCase();
-    console.log("Deep Link URL", url)
-    // Handle TheGameCrafter SSO callback - make sure it's the right protocol
-    if (protocol === 'templative:' && parsedUrl.searchParams.has('sso_id')) {
-        const ssoId = parsedUrl.searchParams.get('sso_id');
-        if (!ssoId) {
-            console.error("No SSO ID found in TGC callback");
-            return;
-        }
-        const data = await loginIntoGameCrafter(ssoId);
-        await saveTgcSession(data["result"]["id"], data["result"]["user_id"]);
-        updateToast("Logged into TheGameCrafter successfully.", "success");
-        BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_TGC_LOGIN_STATUS, { isLoggedIn: true });
-        return;
-    }
-
-    // For some reason, on Windows, the URL is missing a trailing =
-    if (os.platform() === "win32") {
-        url = url + "="
-    }
-    parsedUrl = new URL(url);
-    // Handle Templative.net OAuth callback
-    const data = parsedUrl.searchParams.get('data');
-    if (!data) {
-        console.error("No data parameter found in the URL");
-        return;
-    }
-    const { token, email } = grabTokenAndEmail(data);
-    if (!(token && email)) {
-        console.error("Missing info token and email.");
-        return;
-    }
-    await saveSessionToken(token);
-    await saveEmail(email);
-    mainWindow.webContents.send(channels.GIVE_LOGGED_IN, token, email);
 }
 
 async function getTgcSessionFromStore() {
@@ -255,12 +400,41 @@ async function pollGithubAuth(_, deviceCode) {
     }, pollDelay);
 }
 
+// Add this function for testing deep links
+const testDeepLink = async () => {
+    const testUrl = 'templative://oauth-callback?token=test-token&user=' + encodeURIComponent(JSON.stringify({
+        id: 'test-id',
+        email: 'test@example.com',
+        name: 'Test User'
+    }));
+    await handleDeepLink(testUrl);
+}
+
+const checkTemplativeOwnership = async () => {
+    try {
+        const token = await getSessionToken();
+        const email = await getEmail();
+        
+        if (!token || !email) {
+            return { hasProduct: false, statusCode: 401 };
+        }
+        
+        const response = await checkProductOwnership(email, "TEMPLATIVE", token);
+        return response;
+    } catch (error) {
+        console.error('Error checking Templative ownership:', error);
+        return { hasProduct: false, statusCode: 500 };
+    }
+}
+
 module.exports = {
     setupOauthListener,
     login,  
+    initiateGoogleLogin,
     goToAccount,
     giveLogout,
     giveLoginInformation,
+    attemptTokenRefresh,
     getTgcSessionFromStore,
     logoutTgc,
     pollGithubAuth,
@@ -268,5 +442,7 @@ module.exports = {
     clearGithubAuth,
     reportBug,
     giveFeedback,
-    viewDocumentation
+    viewDocumentation,
+    testDeepLink,
+    checkTemplativeOwnership
 }

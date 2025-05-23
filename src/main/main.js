@@ -83,9 +83,9 @@ const logError = async (error, route, additionalContext = {}) => {
 
 const initializeApp = async () => {
     try {        
+        createWindow();
         listenForRenderEvents(templativeWindow);
         setupOauthListener(templativeWindow);
-        createWindow();
         setupAppUpdateListener();
         await loadLastProject();
     } catch (err) {

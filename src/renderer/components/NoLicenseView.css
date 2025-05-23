@@ -1,0 +1,87 @@
+.start-view {
+    width: 100%;
+    height: 100%;
+}
+.welcome-modal {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: var(--color-content-surface);
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 3em;
+    border-radius: 12px;
+}
+.login-logo {
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.login-logo {
+    animation: float 3s ease-in-out infinite;
+}
+.wankah-image {
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 1em;
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 0.25em;
+}
+
+.button-container .btn {
+    white-space: nowrap;
+}
+
+.button-container .buy-license, .button-container .check-license {
+    flex-grow: 1;
+}
+
+.button-container .logout {
+    flex-shrink: 1;
+}
+.hovering-check-license svg {
+    transform: rotate(45deg);
+}
+.check-license-icon {
+    transition: transform 0.3s ease-in-out;
+}
+.wankah-text {
+    margin-bottom: 0px;
+}
+.license-hypnosis {
+    font-size: 14px;
+}
+.account-email {
+    color: var(--color-text-muted);
+    text-align: left;
+    font-size: 14px;
+    margin-top: 1em;
+}
+.account-email svg {
+    margin-right: 5px;
+    margin-bottom: 2px;
+}

@@ -39,3 +39,13 @@
 .login-logo {
     animation: float 3s ease-in-out infinite;
 }
+.or-text {
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+.login-input-label {
+    font-size: 14px;
+    margin-bottom: 0px;
+    color: var(--color-text-muted);
+    text-align: left;
+}

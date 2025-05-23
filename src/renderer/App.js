@@ -13,12 +13,14 @@ import './Theme.css';
 import './App.css';
 import './Inputs.css';
 import Toast from './components/Toast/Toast';
+import NoLicenseView from "./components/NoLicenseView";
 
 const { ipcRenderer } = require('electron');
 
 class App extends React.Component {
     state = {
         templativeRootDirectoryPath: undefined,
+        ownsTemplative: false,
         loggedIn: false,
         email: "",
         password: "",
@@ -65,6 +67,22 @@ class App extends React.Component {
         }
         this.setState({templativeRootDirectoryPath: lastProjectDirectory, currentView: "editProject"});
     }
+    checkTemplativeOwnership = async () => {
+        try {
+            const ownershipResult = await ipcRenderer.invoke(channels.TO_SERVER_CHECK_TEMPLATIVE_OWNERSHIP);
+            
+            if (ownershipResult.hasProduct) {
+                this.setState({ ownsTemplative: true });
+                await this.attemptToLoadLastTemplativeProject();
+            } else {
+                this.setState({ ownsTemplative: false, currentView: "noLicense" });
+            }
+        } catch (error) {
+            console.error('Error checking Templative ownership:', error);
+            // If there's an error checking ownership, assume they don't own it
+            this.setState({ ownsTemplative: false, currentView: "noLicense" });
+        }
+    }
     componentDidMount = async () => {
         ipcRenderer.on(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, (event, templativeRootDirectoryPath) => {
             this.setState({
@@ -85,9 +103,10 @@ class App extends React.Component {
             this.setState({loggedIn: false, email: "", password: "", status: "", currentView: "login"})
         })
         ipcRenderer.on(channels.GIVE_LOGGED_IN, (_, token, email) => {
-            this.setState({loggedIn: true, token: token, email: email, password: "", status: ""}, () => {
-                // After login, check if there's a last project to load
-                this.attemptToLoadLastTemplativeProject();
+            this.setState({loggedIn: true, token: token, email: email, password: "", status: ""}, async () => {
+                await this.checkTemplativeOwnership();
+                // After login, check if user owns Templative
+                await this.checkTemplativeOwnership();
             });
         })
         ipcRenderer.on(channels.GIVE_NOT_LOGGED_IN, (_) => {
@@ -124,7 +143,7 @@ class App extends React.Component {
     }
     goToRegisterWebpage = async()=>{
         trackEvent("user_register_click")
-        await ipcRenderer.invoke(channels.TO_SERVER_OPEN_URL, "https://templative-server-84c7a76c7ddd.herokuapp.com/register")
+        await ipcRenderer.invoke(channels.TO_SERVER_OPEN_URL, "https://templative.net/register")
     }
     showToast = (message, type = 'info') => {
         this.setState({
@@ -147,9 +166,21 @@ class App extends React.Component {
     goBackToStartView = () => {
         this.setState({ currentView: "start" });
     }
+    
+    handleOwnershipConfirmed = async () => {
+        // When ownership is confirmed, update state and load the last project
+        this.setState({ ownsTemplative: true });
+        await this.attemptToLoadLastTemplativeProject();
+    }
+    
+    handleLogout = async () => {
+        // Trigger logout through IPC
+        await ipcRenderer.invoke(channels.TO_SERVER_LOGOUT);
+    }
+    
     render() {
         let element = <></>
-        
+
         if (!this.state.loggedIn) {
             element = <LoginView 
                 updateEmailCallback={this.updateEmail} 
@@ -159,6 +190,14 @@ class App extends React.Component {
                 password={this.state.password}
                 attemptLoginCallback={this.attemptLogin}
                 loginStatus={this.state.loginStatus}
+            />
+        }
+        else if (this.state.currentView === "noLicense" || !this.state.ownsTemplative) {
+            element = <NoLicenseView 
+                email={this.state.email}
+                goBackToStartView={this.goBackToStartView}
+                handleOwnershipConfirmed={this.handleOwnershipConfirmed}
+                handleLogout={this.handleLogout}
             />
         }
         else if (this.state.currentView === "createProject") {
