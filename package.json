@@ -11,7 +11,7 @@
     },
     "scripts": {
         "== Electron App ===": "",
-        "start": "electron-forge start",
+        "start": "kill-port 9000 && electron-forge start",
         "package": "bash ./build.sh package",
         "package-local": "SKIP_SIGNING=true bash ./build.sh package",
         "make": "bash ./build.sh make",
