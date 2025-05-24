@@ -5,17 +5,85 @@
     transform: translateY(-5px);
     padding: 0em 0em 0 0em;
 }
-.project-content-container {
-    max-width: 715px;
+.project-workspace {
+    display: flex;
     height: 100%;
+}
+.project-sidebar {
+    width: 150px;
+    padding: 3em 1em 0.5em 0em;
+    font-size: 14px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.project-content-container {
+    flex: 1;
+    height: 100%;
+    overflow-y: hidden;
+    padding-right: 0.5em;
     margin: 0 auto;
     padding-top:1em;
 }
 .project-content-container-section {
     height: calc(100% - 52px);
+    padding-right: 0.5em;
     overflow-y: auto;
     padding-bottom: 1em;
 }
 .project-content-container-section .tableContainer {
     height: auto;
+}
+.gamecrafter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.gamecrafter-header h2 {
+    margin: 0;
+}
+.open-folder-btn {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.2s;
+}
+.open-folder-btn:hover {
+    background-color: #005a9e;
+}
+.open-folder-btn:active {
+    background-color: #004578;
+}
+.gamecrafter-image-item {
+    width: 50%;
+    display: inline-block;
+}
+.gamecrafter-image-item img {
+    width: 100%;
+    height: auto;
+}
+.gamecrafter-header-title {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.project-sidebar-item:hover {
+    cursor: pointer;
+}
+.project-sidebar-item.active {
+    color: var(--color-accent);
+    cursor: default !important;
+}
+.gamecrafter-images {
+    height: calc(100% - 100px);
+    overflow-y: auto;
 }

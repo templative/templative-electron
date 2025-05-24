@@ -20,6 +20,10 @@ class RenderingWorkspaceProvider extends React.Component {
         selectedOutputDirectory: undefined, 
         selectedComponentFilter: undefined,
         exportOptionIndex: 0,
+
+        selectedProjectTab: "Game Content",
+        selectedFontTab: "Fonts",
+
         // Create
         componentName: "", //"citizens",
         selectedComponentType: undefined, //"CustomPrintedMeeple",
@@ -138,6 +142,14 @@ class RenderingWorkspaceProvider extends React.Component {
     this.setState({ unit: unit });
   };
 
+  setSelectedProjectTab = (tab) => {
+    this.setState({ selectedProjectTab: tab });
+  };
+
+  setSelectedFontTab = (tab) => {
+    this.setState({ selectedFontTab: tab });
+  };
+
   render() {
     return (
       <RenderingWorkspaceContext.Provider
@@ -163,6 +175,8 @@ class RenderingWorkspaceProvider extends React.Component {
           setLastViewedContentType: this.setLastViewedContentType,
           selectContentTypeForComposition: this.selectContentTypeForComposition,
           setUnit: this.setUnit,
+          setSelectedProjectTab: this.setSelectedProjectTab,
+          setSelectedFontTab: this.setSelectedFontTab,
         }}
       >
         {this.props.children}
