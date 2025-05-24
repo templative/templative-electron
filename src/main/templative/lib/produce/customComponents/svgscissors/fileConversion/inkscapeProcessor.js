@@ -121,8 +121,8 @@ async function runCommands(commands) {
     env.LSUIElement = '1';
     env.DISPLAY = '';
     env.NSDocumentRevisionsDebugMode = '1';
-    env.INKSCAPE_PREFERENCES_PATH = tempDir;
-    env.INKSCAPE_PROFILE_DIR = tempDir;
+    // env.INKSCAPE_PREFERENCES_PATH = tempDir; // LIKELY FONT ISSUE
+    // env.INKSCAPE_PROFILE_DIR = tempDir; // LIKELY FONT ISSUE
     env.GTK_DEBUG = 'no-gtk-init';
     env.GDK_BACKEND = 'none';
     env.QT_QPA_PLATFORM = 'minimal';
@@ -132,8 +132,8 @@ async function runCommands(commands) {
     env.GTK_IM_MODULE = 'none';
     env.GTK_RECENT_FILES_DISABLED = '1';
     env.GSETTINGS_BACKEND = 'memory';
-    env.HOME = tempDir;
-    env.XDG_CONFIG_HOME = tempDir;
+    // env.HOME = tempDir; // MOST LIKELY FONT ISSUE - prevents access to user fonts
+    // env.XDG_CONFIG_HOME = tempDir; // LIKELY FONT ISSUE - font config
     env.XDG_CACHE_HOME = tempDir;
     env.XDG_RUNTIME_DIR = tempDir;
     
@@ -247,8 +247,9 @@ async function exportSvgToPngUsingInkscape(svgFilepath, outputPngFilepath) {
     '--export-background-opacity=0',
   ];
 
+  const command = createPngCommands.join(' ');
+  console.log(command);
   const returnCode = await runCommands(createPngCommands);
-
   if (returnCode !== 0) {
     throw new Error(`Inkscape failed to export ${path.basename(absoluteSvgFilepath)} to PNG. Return code: ${returnCode}`);
   }
