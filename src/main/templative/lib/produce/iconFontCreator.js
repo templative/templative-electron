@@ -10,7 +10,6 @@ async function createIconFont(name, inputDir, outputDir) {
             files: svgGlobPattern,
             fontName: name,
             formats: ['woff', 'woff2', 'ttf', 'svg'],
-            template: 'css',
         });
 
         // Write the generated font files to the output directory

@@ -1,0 +1,237 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+}
+
+.create-icon-font-modal {
+    background: var(--color-content-surface);
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--color-border);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--color-text);
+    padding: 0;
+    width: 32px;
+    margin-right: 0.5em;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.close-button:hover {
+    color: var(--color-text);
+}
+
+.create-icon-font-modal form {
+    padding: 24px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background: var(--color-input-bg);
+    color: var(--color-text);
+    font-size: 14px;
+}
+
+.form-group input[type="text"]:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(var(--color-accent-rgb), 0.1);
+}
+
+.drop-zone {
+    border: 2px dashed var(--color-border);
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: var(--color-input-bg);
+}
+
+.drop-zone:hover {
+    border-color: var(--color-accent);
+    background: var(--color-content-surface-hover);
+}
+
+.drop-zone.drag-over {
+    border-color: var(--color-accent);
+    background: rgba(var(--color-accent-rgb), 0.05);
+    border-style: solid;
+}
+
+.drop-zone-content p {
+    margin: 4px 0;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+.drop-zone-content p:first-child {
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.file-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid var(--color-border);
+    gap: 12px;
+}
+
+.file-item:last-child {
+    border-bottom: none;
+}
+
+.file-preview {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    fill: var(--color-accent);
+    overflow: hidden;
+}
+
+.svg-preview {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: var(--color-accent);
+    fill: var(--color-accent);
+    align-items: center;
+    justify-content: center;
+}
+
+.svg-preview svg {
+    max-width: 24px;
+    max-height: 24px;
+    fill: var(--color-text);
+}
+
+.svg-preview-loading,
+.svg-preview-error {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+}
+
+.svg-preview-error {
+    color: var(--color-danger);
+    font-weight: bold;
+}
+
+.file-name {
+    font-size: 14px;
+    color: var(--color-text);
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.remove-file-btn {
+    background: none;
+    border: none;
+    color: white !important;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.remove-file-btn:hover {
+    background: var(--color-danger);
+    color: white;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+}
+
+.modal-actions .btn {
+    min-width: 100px;
+} 
+.form-group-label {
+    font-size: 14px;
+}
+.svg-file-instructions {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    margin-bottom: 1em;
+}
+.create-icon-font-modal h2 {
+    margin-top: 1em;
+    margin-left: 1.25em;
+}

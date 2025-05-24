@@ -1,0 +1,203 @@
+.fonts-body {
+    height: 100%;
+    display: inline-block;
+    width: calc(100% - 80px) !important;
+    transform: translateY(-5px);
+    padding: 0em 0em 0 0em;
+}
+.fonts-workspace {
+    display: flex;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.fonts-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 150px;
+    padding: 3em 1em 0.5em 2em;
+    font-size: 14px;
+    text-align: right;
+}
+.fonts-content {
+    /* max-width: 715px; */
+    flex: 1;
+    padding: 1em 0;
+    height: 100%;
+}
+
+.fonts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-right: 0.5em;
+    height: calc(100% - 56px);
+    overflow-y: auto;
+}
+
+.font-family {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.fonts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.fonts-header-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.font-family-header {
+    margin: 0 0 4px 0;
+    color: var(--color-text);
+    font-size: 16px;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.font-family-action:hover {
+    background-color: var(--color-primary-hover, #005a9e);
+}
+
+.font-variants {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.font-item {
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.font-item p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.variant-name {
+    font-weight: bold;
+    color: var(--color-text);
+    min-width: 100px;
+    font-size: 14px;
+
+    text-transform: capitalize;
+}
+
+.font-example {
+    font-size: 14px;
+    flex: 1;
+}
+.fonts-sidebar-item.active {
+    color: var(--color-accent);
+    cursor: default !important;
+}
+.fonts-sidebar-item:hover {
+    cursor: pointer;
+}
+
+/* Icon Fonts Styles */
+.icon-fonts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-right: 0.5em;
+    height: calc(100% - 56px);
+    overflow-y: auto;
+}
+
+.icon-font {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--color-content-surface);
+}
+
+.icon-font-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--color-border);
+}
+
+.icon-font-name {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.icon-font-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.glyphs-container-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 80px);
+    grid-template-rows: repeat(auto-fill, 96px);
+    gap: 8px;
+    justify-content: start;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.glyphs-container-small .glyph {
+    cursor: pointer;
+    background-color: var(--color-content-surface);
+    border-radius: 8px;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-border);
+}
+
+.glyphs-container-small .glyph:hover {
+    background-color: var(--color-content-surface-hover);
+    border-color: var(--color-accent);
+}
+
+.glyphs-container-small .glyph-svg {
+    width: 50px;
+    height: 50px;
+    rotate: 180deg;
+    transform: scaleX(-1);
+    margin-bottom: 4px;
+}
+
+.glyphs-container-small .glyph p {
+    font-size: 10px;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+.fonts-list-empty {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    text-align: center;
+    padding: 1em;
+    max-width: 715px;
+    margin-left: auto;
+    margin-right: auto;
+}

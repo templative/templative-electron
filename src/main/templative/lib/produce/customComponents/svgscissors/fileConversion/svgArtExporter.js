@@ -2,19 +2,10 @@ const fs = require('fs-extra');
 const path = require('path');
 const { DOMParser, XMLSerializer } = require('@xmldom/xmldom');
 
-/**
- * Create an art file from SVG contents
- * @param {string} contents - SVG content
- * @param {string} artFileOutputName - Output file name
- * @param {number[]} imageSizePixels - Width and height in pixels
- * @param {string} outputDirectory - Output directory
- * @returns {Promise<string>} - Path to output file
- */
-async function outputSvgArtFile(contents, artFileOutputName, imageSizePixels, outputDirectory) {
+async function scaleSvg(contents, imageSizePixels) {
   if (contents === null) {
     throw new Error("Contents cannot be null");
   }
-
   const parser = new DOMParser();
   const doc = parser.parseFromString(contents, 'image/svg+xml');
   const root = doc.documentElement;
@@ -36,6 +27,13 @@ async function outputSvgArtFile(contents, artFileOutputName, imageSizePixels, ou
 
   const serializer = new XMLSerializer();
   contents = serializer.serializeToString(doc);
+  return contents;
+}
+
+async function outputSvgArtFile(contents, artFileOutputName, outputDirectory) {
+  if (contents === null) {
+    throw new Error("Contents cannot be null");
+  } 
 
   const artFileOutputFileName = `${artFileOutputName}.svg`;
   const artFileOutputFilepath = path.join(outputDirectory, artFileOutputFileName);
@@ -45,5 +43,6 @@ async function outputSvgArtFile(contents, artFileOutputName, imageSizePixels, ou
 
 
 module.exports = {
-  outputSvgArtFile
+  outputSvgArtFile,
+  scaleSvg
 }; 

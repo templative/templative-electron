@@ -11,6 +11,7 @@ const { convertToTabletopSimulator } = require('./lib/distribute/simulator/simul
 const { listDesigners } = require('./lib/distribute/gameCrafter/accountManagement/accountManagement');
 const { createSessionFromLogin } = require('./lib/distribute/gameCrafter/util/gameCrafterSession');
 const { uploadGame } = require('./lib/distribute/gameCrafter/client');
+const { createIconFont } = require('./lib/produce/iconFontCreator');
 const { withLogCapture } = require('./logStore');
 const { getTgcSession } = require('../sessionStore');
 const { captureException } = require("./lib/sentryElectronWrapper");
@@ -215,6 +216,47 @@ const watchAndProduceTemplativeProject = async (gameDirectoryRootPath) => {
   await watchAndProduceGameFiles(gameDirectoryRootPath);
 }
 
+const createTemplativeIconFont = withLogCapture(async (event, data) => {
+  try {
+    const { name, svgFiles, outputPath } = data;
+    
+    // Create a temporary directory for the SVG files since createIconFont expects a directory
+    const fs = require('fs').promises;
+    const os = require('os');
+    const tempDir = path.join(os.tmpdir(), `templative-icon-font-${Date.now()}`);
+    
+    try {
+      // Create temp directory
+      await fs.mkdir(tempDir, { recursive: true });
+      
+      // Copy SVG files to temp directory
+      for (const svgFilePath of svgFiles) {
+        const fileName = path.basename(svgFilePath);
+        const destPath = path.join(tempDir, fileName);
+        await fs.copyFile(svgFilePath, destPath);
+      }
+      
+      // Create the icon font
+      await createIconFont(name, tempDir, outputPath);
+      
+      updateToast(`Created ${name} icon font`, "success");
+      return { success: true, message: 'Icon font created successfully' };
+    } finally {
+      // Clean up temp directory
+      try {
+        await fs.rm(tempDir, { recursive: true });
+      } catch (cleanupError) {
+        console.warn('Failed to clean up temp directory:', cleanupError);
+      }
+    }
+  } catch (error) {
+    console.error('Error creating icon font:', error);
+    captureException(error);
+    updateToast(error.message, "error");
+    return { success: false, error: error.message };
+  }
+});
+
 module.exports = {
   createTemplativeComponent,
   produceTemplativeProject,
@@ -226,5 +268,6 @@ module.exports = {
   createSimulatorSave,
   listGameCrafterDesigners,
   uploadTemplativeProjectToGameCrafter,
-  watchAndProduceTemplativeProject
+  watchAndProduceTemplativeProject,
+  createTemplativeIconFont
 } 

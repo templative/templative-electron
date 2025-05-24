@@ -12,6 +12,8 @@ import { RenderingWorkspaceProvider } from "./Render/RenderingWorkspaceProvider"
 import { OutputDirectoriesProvider } from "./OutputDirectories/OutputDirectoriesProvider";
 import RulesEditor from "./Edit/Viewers/RulesEditor";
 import { trackEvent } from "@aptabase/electron/renderer";
+import AccountView from "./Account/AccountView";
+import FontsView from "./Fonts/FontsView";
 const { ipcRenderer } = window.require('electron');
 const { getSyncKey } = require("./Edit/Viewers/GamedataViewer/PieceSyncingManager");
 const { channels } = require("../../shared/constants");
@@ -759,6 +761,18 @@ export default class EditProjectView extends React.Component {
                         changeTabsToEditAFileCallback={this.changeTabsToEditAFile}
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         templativeMessages={this.props.templativeMessages}
+                    />
+                )}
+                {this.state.currentRoute === 'font' && (
+                    <FontsView
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    />
+                )}
+                {this.state.currentRoute === 'account' && (
+                    <AccountView
+                        email={this.props.email}
+                        token={this.props.token}
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                     />
                 )}
 

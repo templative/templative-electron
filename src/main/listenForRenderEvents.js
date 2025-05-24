@@ -11,7 +11,8 @@ const {
     createPrintout,
     createSimulatorSave,
     listGameCrafterDesigners,
-    uploadTemplativeProjectToGameCrafter
+    uploadTemplativeProjectToGameCrafter,
+    createTemplativeIconFont
 } = require("./templative/index")
 const { setCurrentTemplativeRootDirectory, getCurrentTemplativeRootDirectory } = require("./templativeProjectManager");
 
@@ -63,6 +64,7 @@ function listenForRenderEvents(window) {
     ipcMain.handle(channels.TO_SERVER_CREATE_SIMULATOR_SAVE, createSimulatorSave);
     ipcMain.handle(channels.TO_SERVER_OPEN_DIRECTORY_DIALOG_FOR_PROJECT_LOCATION, openProjectLocationFolder);
     ipcMain.handle(channels.TO_SERVER_CREATE_PROJECT, createTemplativeProjectWithName);
+    ipcMain.handle(channels.TO_SERVER_CREATE_ICON_FONT, createTemplativeIconFont);
 
     ipcMain.handle(channels.TO_SERVER_OPEN_FILE_DIALOG, async (event, filters) => {
         return await openFileDialog(window, filters);

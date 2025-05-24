@@ -1,86 +1,63 @@
-const { getPUACharFromUnicode } = require('../../../iconFontCreator');
-const path = require('path');
-const fs = require('fs').promises;
-const { JSDOM } = require('jsdom');
-
-async function replaceIconGlyphWithPuaCharsAsync(document, inputDirectoryPath) {
+async function replaceIconGlyphWithPuaCharsAsync(document) {
+    // First, extract unicode values from raw content before JSDOM processes them    
     let iconGlyphs = document.querySelectorAll('iconGlyph');
+    const placeholders = {};
     
-    // console.log("Found", iconGlyphs.length, "iconGlyphs");
-    const svgDomCache = {}
     for (const iconGlyph of iconGlyphs) {
-      await processGlyph(iconGlyph, inputDirectoryPath, svgDomCache);
+        await processGlyph(iconGlyph, document, placeholders);
     }
+    
+    return placeholders;
 }
 
-async function getUnicodeFromGlyph(glyphName, svgDom) {
-    const glyph = svgDom.window.document.querySelector(`glyph[glyph-name="${glyphName}"]`);
-    const unicode = `&#x${glyph.getAttribute('unicode').codePointAt(0).toString(16).toUpperCase()};`;
-    return unicode;
-}
-
-async function processGlyph(iconGlyph, inputDirectoryPath, svgDomCache) {
+async function processGlyph(iconGlyph, document, placeholders) {
     const fontFamily = iconGlyph.getAttribute('font-family');
     if (!fontFamily) {
-        const textNode = svgDom.window.document.createTextNode(`!bad font-family!`);
+        const textNode = document.createTextNode(`!bad font-family!`);
         iconGlyph.parentNode.replaceChild(textNode, iconGlyph);
-        return
-    }
-    const fontSvgPath = path.join(inputDirectoryPath, 'fonts', `${fontFamily}.svg`);
+        return null;
+    }    
     
-    // Load the svg, find the <glyph> with glyph-name="glyph", get its unicode
-    var svgDom;
-
-    if (svgDomCache[fontSvgPath]) {
-        svgDom = svgDomCache[fontSvgPath];
-    } else {
-        var fontSvg = await fs.readFile(fontSvgPath, 'utf8');
-        svgDom = new JSDOM(fontSvg)
-        svgDomCache[fontSvgPath] = svgDom;
-    }
-    
-    
-        
-    const glyphName = iconGlyph.getAttribute('glyph');
     var unicode = iconGlyph.getAttribute('unicode');
-    if (unicode) {
-        unicode = "&#x" + unicode + ";";
-        console.log(unicode);
+    if (!unicode) {
+        return null;
     }
-    else {
-        if (!glyphName) {
-            const textNode = svgDom.window.document.createTextNode("!bad glyph!");
-            iconGlyph.parentNode.replaceChild(textNode, iconGlyph);
-            return;
-        }
-        unicode = await getUnicodeFromGlyph(glyphName, svgDom);
+    const placeholder = `__UNICODE_PLACEHOLDER_${Math.random().toString(36).substr(2, 9)}__`;
+    unicode = `&#x${unicode.codePointAt(0).toString(16).toUpperCase()};`;
+    if (placeholders[unicode] === undefined) {
+        placeholders[unicode] = [];
     }
-        
-    const fontPath = path.join(inputDirectoryPath, 'fonts', `${fontFamily}.ttf`);
-    var puaChar;
-    try {
-        // console.log(`Getting PUA char from ${fontPath} ${unicode}`);
-        puaChar = await getPUACharFromUnicode(fontPath, unicode);
-    }
-    catch (error){
-        if (error.code === 'ENOENT') {
-            console.warn(`Font ${fontPath} not found`);
-            const textNode = svgDom.window.document.createTextNode("!missing font!");
-            iconGlyph.parentNode.replaceChild(textNode, iconGlyph);
-            return
-        }
-        console.error(`Error getting PUA char from unicode: ${error}`);
-        const textNode = svgDom.window.document.createTextNode("!bad font!");
-        iconGlyph.parentNode.replaceChild(textNode, iconGlyph);
-        return
-    }
-    // console.log(`Processing glyph ${glyphName} from font ${fontFamily} unicode: ${unicode} puaChar: ${puaChar}`);
+    placeholders[unicode].push(placeholder);
     
-    const puaElement = svgDom.window.document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
-    puaElement.setAttribute('style', `font-family:${fontFamily};`);
-    puaElement.textContent = puaChar;
+    const puaElement = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
+    puaElement.setAttribute('font-family', fontFamily);
+    
+    // Copy all attributes except unicode, glyphname and font-family
+    const attributes = iconGlyph.attributes;
+    for (let i = 0; i < attributes.length; i++) {
+        const attr = attributes[i];
+        if (attr.name !== 'unicode' && attr.name !== 'glyph-name' && attr.name !== 'font-family') {
+            puaElement.setAttribute(attr.name, attr.value);
+        }
+    }
+    
+    // Set a unique placeholder that we can replace later
+    puaElement.textContent = placeholder;
+    
     iconGlyph.parentNode.replaceChild(puaElement, iconGlyph);
 }
+
+function replacePlaceholdersWithUnicodeEntities(svgContent, placeholders) {
+    let result = svgContent;
+    for (const unicode in placeholders) {   
+        for (const placeholder of placeholders[unicode]) {
+            result = result.replace(placeholder, unicode);
+        }
+    }
+    return result;
+}
+
 module.exports = {
-    replaceIconGlyphWithPuaCharsAsync
+    replaceIconGlyphWithPuaCharsAsync,
+    replacePlaceholdersWithUnicodeEntities
 }

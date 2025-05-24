@@ -5,7 +5,7 @@ const { JSDOM } = require('jsdom');
 const { COMPONENT_INFO } = require('../../../../../../shared/componentInfo.js');
 const { convertSvgContentToPngUsingResvg } = require('./fileConversion/svgToRasterConverter.js');
 const { addNewlines } = require("./artdataProcessing/newlineInserter.js");
-const { outputSvgArtFile} = require("./fileConversion/svgArtExporter.js");
+const { outputSvgArtFile, scaleSvg } = require("./fileConversion/svgArtExporter.js");
 const { addOverlays, collectOverlayFiles} = require("./artdataProcessing/overlayHandler.js");
 const { textReplaceInFile} = require("./artdataProcessing/textReplacer.js");
 const { updateStylesInFile} = require("./artdataProcessing/styleUpdater.js");
@@ -16,7 +16,7 @@ const { createInputHash, getCachedFiles, getRenderedPiecesCacheDir, cacheFiles }
 const { RENDER_MODE, RENDER_PROGRAM, OVERLAPPING_RENDERING_TASKS } = require('../../../manage/models/produceProperties');
 const { cleanupSvgNamespacesAsync, cleanupUnusedDefs } = require('./artdataProcessing/svgCleaner.js');
 const { replaceShapeInsideTextElementsWithPositionedTspans } = require('./artdataProcessing/shapeInsideReplacer.js');
-const { replaceIconGlyphWithPuaCharsAsync } = require('./artdataProcessing/iconGlyphReplacer');
+const { replaceIconGlyphWithPuaCharsAsync, replacePlaceholdersWithUnicodeEntities } = require('./artdataProcessing/iconGlyphReplacer');
 const { replaceFormattingShortcutElementsWithTspansAsync } = require('./artdataProcessing/formattingShortcutReplacer');
 const { captureException } = require('../../../sentryElectronWrapper.js');
 const { exportSvgToPngUsingInkscape } = require('./fileConversion/inkscapeProcessor.js');
@@ -219,10 +219,12 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       const document = dom.window.document;
       
       await replaceFormattingShortcutElementsWithTspansAsync(document);
-      await replaceIconGlyphWithPuaCharsAsync(document, productionProperties.inputDirectoryPath);
-    //   if (productionProperties.renderProgram === RENDER_PROGRAM.TEMPLATIVE && contents.includes('shape-inside:url(#')) {
+      const iconGlyphPlaceholders = await replaceIconGlyphWithPuaCharsAsync(document);
+    
+      //   if (productionProperties.renderProgram === RENDER_PROGRAM.TEMPLATIVE && contents.includes('shape-inside:url(#')) {
     //     await replaceShapeInsideTextElementsWithPositionedTspans(document);
     //   }
+
       await cleanupUnusedDefs(document);
       contents = dom.serialize();
       
@@ -239,8 +241,11 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
             }
         }
       }
+      contents = await scaleSvg(contents, imageSizePixels);
+      contents = replacePlaceholdersWithUnicodeEntities(contents, iconGlyphPlaceholders);
+
       // Create and cache the files
-      await outputSvgArtFile(contents, artFileOutputName, imageSizePixels, absoluteEndResultDirectoryPath);
+      await outputSvgArtFile(contents, artFileOutputName, absoluteEndResultDirectoryPath);
       const absoluteSvgFilepath = path.join(absoluteEndResultDirectoryPath, `${artFileOutputName}.svg`);
       var absolutePngFilepath = path.join(absoluteEndResultDirectoryPath, `${artFileOutputName}.png`);
       if (productionProperties.renderProgram === RENDER_PROGRAM.INKSCAPE) {
