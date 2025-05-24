@@ -30,7 +30,7 @@ export default class NoLicenseView extends React.Component {
                     this.props.handleOwnershipConfirmed();
                 }
             } else {
-                // Show a toast message that they still don't have a license
+                // Show a message that they still don't have a license
                 console.log("No Templative license found. Please purchase a license first.");
             }
         } catch (error) {
