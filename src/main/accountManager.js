@@ -80,7 +80,8 @@ const login = async (_, email, password) => {
     await saveUser(response.user);
     
     updateToast("Logged in successfully.", "success");
-    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, response.token, response.user.email);
+    // Send login success with ownership information
+    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, response.token, response.user.email, response.ownership);
 }
 
 const initiateGoogleLogin = async () => {
@@ -141,7 +142,8 @@ const giveLoginInformation = async () => {
         await saveEmail(response.user.email);
     }
     
-    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, token, email);
+    // Send login success with ownership information
+    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, token, email, response.ownership);
 }
 
 const attemptTokenRefresh = async () => {
@@ -245,6 +247,16 @@ async function handleDeepLink(url) {
             try {
                 const user = JSON.parse(decodeURIComponent(userParam));
                 
+                // Check ownership for OAuth users
+                let ownershipInfo = { hasProduct: false };
+                try {
+                    const ownershipResponse = await checkProductOwnership(user.email, "TEMPLATIVE", token);
+                    ownershipInfo = { hasProduct: ownershipResponse.hasProduct };
+                } catch (ownershipError) {
+                    console.error('Error checking ownership during OAuth callback:', ownershipError);
+                    // Don't fail login if ownership check fails
+                }
+                
                 // Save the authentication data
                 await saveSessionToken(token);
                 await saveEmail(user.email);
@@ -252,7 +264,7 @@ async function handleDeepLink(url) {
                 await clearOAuthState(); // Clear the stored state
                 
                 updateToast("Logged in with Google successfully.", "success");
-                BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, token, user.email);
+                BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, token, user.email, ownershipInfo);
             } catch (parseError) {
                 console.error('AccountManager: Error parsing user data:', parseError);
                 updateToast("Google login failed: Invalid user data", "error");
@@ -296,9 +308,20 @@ async function handleDeepLink(url) {
             console.error("AccountManager: Missing info token and email.");
             return;
         }
+        
+        // Check ownership for legacy OAuth users
+        let ownershipInfo = { hasProduct: false };
+        try {
+            const ownershipResponse = await checkProductOwnership(email, "TEMPLATIVE", token);
+            ownershipInfo = { hasProduct: ownershipResponse.hasProduct };
+        } catch (ownershipError) {
+            console.error('Error checking ownership during legacy OAuth callback:', ownershipError);
+            // Don't fail login if ownership check fails
+        }
+        
         await saveSessionToken(token);
         await saveEmail(email);
-        mainWindow.webContents.send(channels.GIVE_LOGGED_IN, token, email);
+        mainWindow.webContents.send(channels.GIVE_LOGGED_IN, token, email, ownershipInfo);
     }
 }
 

@@ -102,11 +102,21 @@ class App extends React.Component {
         ipcRenderer.on(channels.GIVE_LOGOUT, (_) => {
             this.setState({loggedIn: false, email: "", password: "", status: "", currentView: "login"})
         })
-        ipcRenderer.on(channels.GIVE_LOGGED_IN, (_, token, email) => {
-            this.setState({loggedIn: true, token: token, email: email, password: "", status: ""}, async () => {
-                await this.checkTemplativeOwnership();
-                // After login, check if user owns Templative
-                await this.checkTemplativeOwnership();
+        ipcRenderer.on(channels.GIVE_LOGGED_IN, (_, token, email, ownership) => {
+            this.setState({
+                loggedIn: true, 
+                token: token, 
+                email: email, 
+                password: "", 
+                status: "",
+                ownsTemplative: ownership ? ownership.hasProduct : false
+            }, async () => {
+                // If user owns Templative, load the last project, otherwise show start view
+                if (ownership && ownership.hasProduct) {
+                    await this.attemptToLoadLastTemplativeProject();
+                } else {
+                    this.setState({ currentView: "noLicense" });
+                }
             });
         })
         ipcRenderer.on(channels.GIVE_NOT_LOGGED_IN, (_) => {
