@@ -247,8 +247,6 @@ async function exportSvgToPngUsingInkscape(svgFilepath, outputPngFilepath) {
     '--export-background-opacity=0',
   ];
 
-  const command = createPngCommands.join(' ');
-  console.log(command);
   const returnCode = await runCommands(createPngCommands);
   if (returnCode !== 0) {
     throw new Error(`Inkscape failed to export ${path.basename(absoluteSvgFilepath)} to PNG. Return code: ${returnCode}`);
