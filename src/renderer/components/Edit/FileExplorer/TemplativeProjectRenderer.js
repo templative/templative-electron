@@ -6,7 +6,7 @@ import IconContentFileItem from "./ContentFiles/IconContentFileItem";
 import artIcon from "../Icons/artIcon.svg?react"
 import gamedataIcon from "../Icons/gamedataIcon.svg?react"
 import ResourceHeader from "./ContentFiles/ResourceHeader";
-import GitRow from "./Git/GitRow";
+// import GitRow from "./Git/GitRow";
 import CompositionsList from "./CompositionsList";
 import StockItemsList from "./StockItemsList";
 import AssetsIcon from "../Icons/assetsIcon.svg?react"
@@ -509,7 +509,7 @@ export default class TemplativeProjectRenderer extends React.Component {
                 </div>
             </div>
             
-            <GitRow templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/>
+            {/* <GitRow templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}/> */}
         </div>   
     }
 }
