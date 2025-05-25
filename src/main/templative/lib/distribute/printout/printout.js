@@ -5,6 +5,8 @@ const { COMPONENT_INFO } = require('../../../../../shared/componentInfo.js');
 const path = require('path');
 const { captureException } = require("../../sentryElectronWrapper.js");
 const { Jimp } = require('jimp');
+const { glob } = require('glob');
+
 // Constants
 const diceTypes = ["CustomColorD6", "CustomWoodD6"];
 const unsupportedDiceTypes = ["CustomColorD4", "CustomColorD8"];
@@ -107,6 +109,13 @@ async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size,
     console.log(`Writing printout to ${outputPath}`);
     const pdfOutput = pdf.output('arraybuffer');
     await writeFile(outputPath, Buffer.from(pdfOutput));
+
+    // Clean up temporary rotation files
+    const tempFiles = await glob('**/*_temp.png', { cwd: producedDirectoryPath });
+    for (const file of tempFiles) {
+        const fullPath = join(producedDirectoryPath, file);
+        await unlink(fullPath);
+    }
     
     return 1;
 }
@@ -349,7 +358,7 @@ async function rotateImage(filepath, rotationDegrees) {
     }
     const directory = dirname(filepath);
     const filename = basename(filepath, '.png');
-    var outputPath = join(directory, `${filename}_${rotationDegrees}.png`)
+    var outputPath = join(directory, `${filename}_${rotationDegrees}_temp.png`)
     if (await fileExists(outputPath)) {
         return;
     }
@@ -363,7 +372,7 @@ async function getImageBufferWithRotation(filepath, rotationDegrees) {
     if (rotationDegrees !== 0) {
         const directory = dirname(filepath);
         const filename = basename(filepath, '.png');
-        outputPath = join(directory, `${filename}_${rotationDegrees}.png`)
+        outputPath = join(directory, `${filename}_${rotationDegrees}_temp.png`)
     }
     const imageData = await readFile(outputPath);
     const base64Image = Buffer.from(imageData).toString('base64');
