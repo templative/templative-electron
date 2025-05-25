@@ -104,11 +104,23 @@ jobs:
           aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
           aws configure set region us-west-2
 
-      - name: Install AzureSignTool
-        shell: pwsh
+      - name: Setup DigiCert Software Trust Manager
+        uses: digicert/ssm-code-signing@v1.0.0
+
+      - name: Setup DigiCert Certificate
         run: |
-          dotnet tool install --global AzureSignTool
-          
+          echo "${{ secrets.SM_CLIENT_CERT_FILE_B64 }}" | base64 --decode > /d/Certificate_pkcs12.p12
+        shell: bash
+
+      - name: Set DigiCert Variables
+        id: variables
+        run: |
+          echo "SM_HOST=${{ secrets.SM_HOST }}" >> "$GITHUB_ENV"
+          echo "SM_API_KEY=${{ secrets.SM_API_KEY }}" >> "$GITHUB_ENV"
+          echo "SM_CLIENT_CERT_FILE=D:\\Certificate_pkcs12.p12" >> "$GITHUB_ENV"
+          echo "SM_CLIENT_CERT_PASSWORD=${{ secrets.SM_CLIENT_CERT_PASSWORD }}" >> "$GITHUB_ENV"
+        shell: bash
+
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
@@ -200,20 +212,10 @@ jobs:
             ls -la "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/" || echo "Directory does not exist"
           fi
 
-      - name: Sign the Windows Setup.exe
-        shell: pwsh
+      - name: Sign the Windows Setup.exe with DigiCert
+        shell: cmd
         run: |
-          AzureSignTool sign `
-            -fd sha256 `
-            -tr http://timestamp.digicert.com `
-            -td sha256 `
-            -kvu "${{ secrets.AZURE_KEY_VAULT_URL }}" `
-            -kvi "${{ secrets.AZURE_CLIENT_ID }}" `
-            -kvt "${{ secrets.AZURE_TENANT_ID }}" `
-            -kvs "${{ secrets.AZURE_CLIENT_SECRET }}" `
-            -kvc "${{ secrets.AZURE_KEY_VAULT_CERTIFICATE }}" `
-            -v `
-            "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe"
+          smctl sign --fingerprint ${{ secrets.SM_CODE_SIGNING_CERT_SHA1_HASH }} --input "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe" --timestamp --verbose
 
       - name: Verify code signing
         shell: pwsh
@@ -231,6 +233,11 @@ jobs:
           Write-Host "  - Valid from: $($sigCheck.SignerCertificate.NotBefore)"
           Write-Host "  - Valid to: $($sigCheck.SignerCertificate.NotAfter)"
           Write-Host "  - Thumbprint: $($sigCheck.SignerCertificate.Thumbprint)"
+
+      - name: Verify code signing
+        shell: cmd
+        run: |
+          signtool verify /v /pa "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe"
 
       - name: Upload Releases
         shell: bash
