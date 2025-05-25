@@ -43,7 +43,8 @@ async function testEveryComponent() {
 
     const isBackIncluded = false;
     const size = "Letter"
-    await createPdfForPrinting(outputDir, isBackIncluded, size);
+    const areBordersDrawn = false;
+    await createPdfForPrinting(outputDir, isBackIncluded, size, areBordersDrawn);
 
     await convertToTabletopSimulator(outputDir, TABLETOP_SIMULATOR_DIR); 
 }

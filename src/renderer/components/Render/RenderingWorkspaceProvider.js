@@ -41,6 +41,11 @@ class RenderingWorkspaceProvider extends React.Component {
         unit: "px",
         isCompositionsExtended: true,
         isStockCompositionsExtended: true,
+        
+        // Print settings
+        printSize: "Letter",
+        isPrintBackIncluded: false,
+        arePrintBordersDrawn: false,
     };
   }
 
@@ -74,6 +79,22 @@ class RenderingWorkspaceProvider extends React.Component {
 
   setComponentTypeSearch = (search) => {
     this.setState({ componentTypeSearch: search });
+  };
+
+  setPrintSize = (size) => {
+    this.setState({ printSize: size });
+  };
+
+  toggleIsPrintBackIncluded = () => {
+    this.setState(prevState => ({
+      isPrintBackIncluded: !prevState.isPrintBackIncluded
+    }));
+  };
+
+  toggleArePrintBordersDrawn = () => {
+    this.setState(prevState => ({
+      arePrintBordersDrawn: !prevState.arePrintBordersDrawn
+    }));
   };
 
   toggleCustomOrStock = () => {
@@ -177,6 +198,9 @@ class RenderingWorkspaceProvider extends React.Component {
           setIsToggledToComponents: this.setIsToggledToComponents,
           setComponentAIDescription: this.setComponentAIDescription,
           setComponentTypeSearch: this.setComponentTypeSearch,
+          setPrintSize: this.setPrintSize,
+          toggleIsPrintBackIncluded: this.toggleIsPrintBackIncluded,
+          toggleArePrintBordersDrawn: this.toggleArePrintBordersDrawn,
           toggleCustomOrStock: this.toggleCustomOrStock,
           selectComponent: this.selectComponent,
           fileExplorerColumnWidth: this.state.fileExplorerColumnWidth,

@@ -4,12 +4,13 @@ const { jsPDF } = require('jspdf');
 const { COMPONENT_INFO } = require('../../../../../shared/componentInfo.js');
 const path = require('path');
 const { captureException } = require("../../sentryElectronWrapper.js");
-
+const { Jimp } = require('jimp');
 // Constants
 const diceTypes = ["CustomColorD6", "CustomWoodD6"];
 const unsupportedDiceTypes = ["CustomColorD4", "CustomColorD8"];
-const pagePaddingInches = 0.25;
-const fpdfSizes = {
+const PAGE_PADDING_INCHES = 0.25;
+const DOUBLE_PAGE_PADDING = PAGE_PADDING_INCHES * 2
+const PAGE_SIZES = {
     "Letter": "letter",
     "A3": "a3",
     "A4": "a4",
@@ -18,15 +19,15 @@ const fpdfSizes = {
     "Tabloid": "tabloid"
 };
 // Adjust the printout play area to account for margins
-const printoutPlayAreaChoices = {
-    "Letter": [8.5 - (pagePaddingInches * 2), 11 - (pagePaddingInches * 2)],
-    "A3": [11 - (pagePaddingInches * 2), 17 - (pagePaddingInches * 2)],
-    "A4": [8.27 - (pagePaddingInches * 2), 11.69 - (pagePaddingInches * 2)],
-    "A5": [5.83 - (pagePaddingInches * 2), 8.27 - (pagePaddingInches * 2)],
-    "Legal": [8.5 - (pagePaddingInches * 2), 14 - (pagePaddingInches * 2)],
-    "Tabloid": [11 - (pagePaddingInches * 2), 17 - (pagePaddingInches * 2)]
+const PRINTOUT_PLAYAREA_CHOICES = {
+    "Letter": [8.5 - DOUBLE_PAGE_PADDING, 11 - DOUBLE_PAGE_PADDING],
+    "A3": [11 - DOUBLE_PAGE_PADDING, 17 - DOUBLE_PAGE_PADDING],
+    "A4": [8.27 - DOUBLE_PAGE_PADDING, 11.69 - DOUBLE_PAGE_PADDING],
+    "A5": [5.83 - DOUBLE_PAGE_PADDING, 8.27 - DOUBLE_PAGE_PADDING],
+    "Legal": [8.5 - DOUBLE_PAGE_PADDING, 14 - DOUBLE_PAGE_PADDING],
+    "Tabloid": [11 - DOUBLE_PAGE_PADDING, 17 - DOUBLE_PAGE_PADDING]
 };
-const printoutTotalSize = {
+const PRINTOUT_TOTAL_SIZE = {
     "Letter": [8.5, 11],
     "A3": [11, 17],
     "A4": [8.27, 11.69],
@@ -38,8 +39,8 @@ const printoutTotalSize = {
 /**
  * Main function to create a PDF for printing
  */
-async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size) {
-    if (!fpdfSizes[size] || !printoutPlayAreaChoices[size]) {
+async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size, areBordersDrawn=false) {
+    if (!PAGE_SIZES[size] || !PRINTOUT_PLAYAREA_CHOICES[size]) {
         console.log(`!!! Cannot create size ${size}.`);
         return;
     }
@@ -48,8 +49,8 @@ async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size)
     const componentTypeFilepathsAndQuantity = await getDictionaryOfImageFilepathsAndQuantityGroupedByComponentType(producedDirectoryPath);
 
     const placementCommands = [];
-    const pageWidthInches = printoutPlayAreaChoices[size][0];
-    const pageHeightInches = printoutPlayAreaChoices[size][1];
+    const pageWidthInches = PRINTOUT_PLAYAREA_CHOICES[size][0];
+    const pageHeightInches = PRINTOUT_PLAYAREA_CHOICES[size][1];
     
     let nextAvailablePage = 0;
     
@@ -99,7 +100,7 @@ async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size)
     placementCommands.sort((a, b) => a.pageIndex - b.pageIndex);
     
     // Create PDF and apply all placement commands
-    let pdf = await createPdfUsingPlacementCommands(placementCommands, size);
+    let pdf = await createPdfUsingPlacementCommands(placementCommands, size, areBordersDrawn);
     
     // Save the PDF
     const outputPath = join(producedDirectoryPath, "printout.pdf");
@@ -248,12 +249,12 @@ async function generatePlacementCommandsForComponentType(
 /**
  * Apply all placement commands to the PDF
  */
-async function createPdfUsingPlacementCommands(commands, size) {
+async function createPdfUsingPlacementCommands(commands, size, areBordersDrawn) {
     if (commands.length === 0) {
         console.log("No pieces to print.");
-        return new jsPDF("p", "in", fpdfSizes[size]);
+        return new jsPDF("p", "in", PAGE_SIZES[size]);
     }
-    var pdf = new jsPDF("p", "in", fpdfSizes[size]);
+    var pdf = new jsPDF("p", "in", PAGE_SIZES[size]);
     
     // Set a cross-platform compatible font
     pdf.setFont("helvetica");
@@ -286,15 +287,15 @@ async function createPdfUsingPlacementCommands(commands, size) {
                 // await addDieCrossLayoutToPdf(pdf, size, command);
             } else {
                 // Handle regular component
-                await addComponentToPdf(pdf, size, command);
+                await addComponentToPdf(pdf, size, command, areBordersDrawn);
             }
         } catch (error) {
             captureException(error);
             console.error(`Error adding component to PDF:`, error);
             // Add error indicator on the current page
             pdf.setFillColor(255, 200, 200);
-            const x = pagePaddingInches + (command.placementIndex[0] * command.componentSizeInches[0]);
-            const y = pagePaddingInches + (command.placementIndex[1] * command.componentSizeInches[1]);
+            const x = PAGE_PADDING_INCHES + (command.placementIndex[0] * command.componentSizeInches[0]);
+            const y = PAGE_PADDING_INCHES + (command.placementIndex[1] * command.componentSizeInches[1]);
             pdf.rect(x, y, command.componentSizeInches[0], command.componentSizeInches[1], 'F');
             pdf.setTextColor(200, 0, 0);
             pdf.setFontSize(12);
@@ -320,12 +321,12 @@ function drawPageMarginLines(pdf, size) {
     pdf.setLineDashPattern([0.05, 0.05], 0); // Dashed line
     
     // Get the size from the current page
-    const [width, height] = printoutPlayAreaChoices[size];
+    const [width, height] = PRINTOUT_PLAYAREA_CHOICES[size];
     
     // Draw rectangle around the printable area
     pdf.rect(
-        pagePaddingInches,
-        pagePaddingInches, 
+        PAGE_PADDING_INCHES,
+        PAGE_PADDING_INCHES, 
         width,
         height
     );
@@ -334,36 +335,93 @@ function drawPageMarginLines(pdf, size) {
     pdf.setLineDashPattern([], 0);
 }
 
+async function fileExists(filepath) {
+    try {
+        await access(filepath);
+        return true;
+    } catch {
+        return false;
+    }
+}
+async function rotateImage(filepath, rotationDegrees) {
+    if (rotationDegrees === 0) {
+        return;
+    }
+    const directory = dirname(filepath);
+    const filename = basename(filepath, '.png');
+    var outputPath = join(directory, `${filename}_${rotationDegrees}.png`)
+    if (await fileExists(outputPath)) {
+        return;
+    }
+    const image = await Jimp.read(filepath);
+    image.rotate(rotationDegrees);
+    
+    await image.write(outputPath);
+}
+async function getImageBufferWithRotation(filepath, rotationDegrees) {
+    var outputPath = filepath;
+    if (rotationDegrees !== 0) {
+        const directory = dirname(filepath);
+        const filename = basename(filepath, '.png');
+        outputPath = join(directory, `${filename}_${rotationDegrees}.png`)
+    }
+    const imageData = await readFile(outputPath);
+    const base64Image = Buffer.from(imageData).toString('base64');
+    const dataUrl = `data:image/png;base64,${base64Image}`;
+    return dataUrl;
+}
 /**
  * Add a regular component to the PDF
  */
-async function addComponentToPdf(pdf, size, command) {
-
+async function addComponentToPdf(pdf, size, command, areBordersDrawn) {
     try {
-        const pageSizeInches = printoutTotalSize[size]
-        const imageData = await readFile(command.filepath);
-        const base64Image = Buffer.from(imageData).toString('base64');
-        const dataUrl = `data:image/png;base64,${base64Image}`;
-        var isRotated = command.isRotated
-        const rotatedWidth = command.componentSizeInches[isRotated ? 1 : 0]
-        const rotatedHeight = command.componentSizeInches[isRotated ? 0 : 1]
-        var xPos = (pageSizeInches[0]/2) - (command.columns * rotatedWidth / 2) + (command.placementIndex[0] * rotatedWidth)
-        var yPos = (pageSizeInches[1]/2) - (command.rows * rotatedHeight / 2) + (command.placementIndex[1] * rotatedHeight)
-        if (isRotated) {
-            xPos += rotatedWidth 
-            yPos -= rotatedHeight/2
+        const pageSizeInches = PRINTOUT_TOTAL_SIZE[size]
+        var imageRotationDegrees = (command.isRotated ? 90 : 0) * (command.isFront ? 1 : -1)
+        await rotateImage(command.filepath, imageRotationDegrees);
+        const dataUrl = await getImageBufferWithRotation(command.filepath, imageRotationDegrees);
+        
+        const isRotated = command.isRotated;
+        const originalWidth = command.componentSizeInches[0];
+        const originalHeight = command.componentSizeInches[1];
+        
+        // Calculate the grid cell dimensions (space allocated for each component)
+        const cellWidth = isRotated ? originalHeight : originalWidth;
+        const cellHeight = isRotated ? originalWidth : originalHeight;
+        
+        // Calculate base position (top-left of the grid cell)
+        let xPos = PAGE_PADDING_INCHES + (command.placementIndex[0] * cellWidth);
+        let yPos = PAGE_PADDING_INCHES + (command.placementIndex[1] * cellHeight);
+        
+        // Handle mirroring for back pages
+        if (!command.isFront) {
+            xPos = pageSizeInches[0] - PAGE_PADDING_INCHES - ((command.columns - 1 - command.placementIndex[0]) * cellWidth) - cellWidth;
         }
+        
         pdf.addImage(
             dataUrl, 'PNG', 
             xPos, yPos, 
-            command.componentSizeInches[0], command.componentSizeInches[1], 
+            cellWidth, cellHeight, 
             '', 'FAST',
-            isRotated ? 90 : 0
+            0
         );
+        if (areBordersDrawn) {
+            await drawBorder(pdf, size, !command.isFront, command.placementIndex, cellWidth, cellHeight, command.columns);
+        }
     } catch (error) {
         captureException(error);
-        throw new Error(`Issue placing ${path.basename(command.filepath)}`);
+        throw new Error(`Issue placing ${path.basename(command.filepath)}, error: ${error.message}`);
     }
+}
+
+async function drawBorder(pdf, size, isBack, placementCoordinations, width, height, columns) {
+    pdf.setDrawColor(255, 0, 0);
+    pdf.setLineWidth(0.01);
+    var xPos = PAGE_PADDING_INCHES + (placementCoordinations[0] * width)
+    var yPos = PAGE_PADDING_INCHES + (placementCoordinations[1] * height)
+    if (isBack) {
+        xPos = PRINTOUT_TOTAL_SIZE[size][0] - PAGE_PADDING_INCHES - ((columns - 1 - placementCoordinations[0]) * width) - width;
+    }
+    pdf.rect(xPos, yPos, width, height);
 }
 
 /**

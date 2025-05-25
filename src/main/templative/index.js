@@ -132,9 +132,9 @@ const createPlaygroundPackage = withLogCapture(async (event, data) => {
 
 const createPrintout = withLogCapture(async (event, data) => {
   try {
-    const { outputDirectorypath, isBackIncluded, size, areMarginsIncluded } = data;
+    const { outputDirectorypath, isBackIncluded, size, areBordersDrawn } = data;
     
-    const result = await createPdfForPrinting(outputDirectorypath, isBackIncluded, size, areMarginsIncluded);
+    const result = await createPdfForPrinting(outputDirectorypath, isBackIncluded, size, areBordersDrawn);
     updateToast(`/${path.basename(outputDirectorypath)} Printout PDF created.`, "success");
     return { success: result === 1, message: 'Printout PDF created' };
   } catch (error) {

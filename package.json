@@ -1,7 +1,7 @@
 {
     "name": "Templative",
     "description": "Electron frontend for the Templative CLI.",
-    "version": "1.0.75",
+    "version": "1.0.76",
     "private": true,
     "main": ".webpack/main",
     "author": {
@@ -90,6 +90,7 @@
         "glob": "^10.3.10",
         "highlight.js": "^11.8.0",
         "image-js": "^0.35.5",
+        "jimp": "^1.6.0",
         "jsdom": "^22.1.0",
         "jspdf": "^2.5.1",
         "kill-port": "^2.0.1",

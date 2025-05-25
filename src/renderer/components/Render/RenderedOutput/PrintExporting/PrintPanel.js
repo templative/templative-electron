@@ -4,14 +4,14 @@ import CreatePrintoutButton from "./CreatePrintoutButton";
 import { trackEvent } from "@aptabase/electron/renderer";
 import TemplativePurchaseButton from "../../../TemplativePurchaseButton";
 import { channels } from "../../../../../shared/constants";
+import { RenderingWorkspaceContext } from "../../RenderingWorkspaceProvider";
 const { ipcRenderer } = require('electron');
 const fs = require("fs");
 
 export default class PrintPanel extends React.Component {   
+    static contextType = RenderingWorkspaceContext;
+    
     state={
-        size: "Letter",
-        isBackIncluded: false,
-        areMarginsDrawn: false,
         rerenderIframeKey: 0,
         isCreatingPrintout: false,
     }
@@ -19,22 +19,14 @@ export default class PrintPanel extends React.Component {
     componentDidMount = async () => {
         trackEvent("view_printPanel")
     }
-    setSize = (size) => {
-        this.setState({size: size})
-    }
-    toggleAreMarginsDrawn = () => {
-        this.setState({areMarginsDrawn: !this.state.areMarginsDrawn})
-    }
-    toggleIsBackIncluded = () => {
-        this.setState({isBackIncluded: !this.state.isBackIncluded})
-    }
+    
     createPrintout = async () => {
         trackEvent("print")
         var data = { 
             outputDirectorypath: this.props.outputFolderPath,
-            isBackIncluded: this.state.isBackIncluded,
-            size: this.state.size,
-            areMarginsIncluded: this.state.areMarginsDrawn
+            isBackIncluded: this.context.isPrintBackIncluded,
+            size: this.context.printSize,
+            areBordersDrawn: this.context.arePrintBordersDrawn
         }
         try {
             this.setState({isCreatingPrintout: true})
@@ -52,13 +44,13 @@ export default class PrintPanel extends React.Component {
             <CreatePrintoutButton 
                     isCreatingPrintout={this.state.isCreatingPrintout}
                     hasOutputDirectoryValue={this.props.outputFolderPath !== undefined}
-                    areMarginsIncluded={this.state.areMarginsIncluded}
-                    size={this.state.size}
-                    isBackIncluded={this.state.isBackIncluded}
+                    areBordersDrawn={this.context.arePrintBordersDrawn}
+                    size={this.context.printSize}
+                    isBackIncluded={this.context.isPrintBackIncluded}
                     createPrintoutCallback={this.createPrintout}
-                    toggleAreMarginsDrawnCallback={this.toggleAreMarginsDrawn}
-                    toggleIsBackIncludedCallback={this.toggleIsBackIncluded}
-                    setSizeCallback={this.setSize}
+                    toggleAreBordersDrawnCallback={this.context.toggleArePrintBordersDrawn}
+                    toggleIsBackIncludedCallback={this.context.toggleIsPrintBackIncluded}
+                    setSizeCallback={this.context.setPrintSize}
                 />
             {(showPDF) && 
                 <iframe key={this.state.rerenderIframeKey} title="printout.pdf" src={`file://${printoutFilepath}`} className="printout-pdf-iframe" />

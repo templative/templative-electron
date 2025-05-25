@@ -8,6 +8,7 @@ const printout = new Command('printout')
   .option('-s, --size <size>', 'The size of the file, either `Letter` or `Tabloid`.', 'Letter')
   .option('-f, --front-only', 'Print on front side only.')
   .option('-fb, --front-back', 'Print on both front and back.', true)
+  .option('-b, --borders', 'Draw borders on the printout.', false)
   .action(async (options) => {
     let inputPath = options.input;
     const size = options.size;
@@ -27,7 +28,7 @@ const printout = new Command('printout')
       return;
     }
     
-    await createPdfForPrinting(inputPath, doubleSided, size);
+    await createPdfForPrinting(inputPath, doubleSided, size, areBordersDrawn);
   });
 
 module.exports = printout; 
