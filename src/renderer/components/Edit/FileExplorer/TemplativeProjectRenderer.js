@@ -10,6 +10,7 @@ import ResourceHeader from "./ContentFiles/ResourceHeader";
 import CompositionsList from "./CompositionsList";
 import StockItemsList from "./StockItemsList";
 import AssetsIcon from "../Icons/assetsIcon.svg?react"
+import { RenderingWorkspaceContext } from '../../Render/RenderingWorkspaceProvider';
 
 
 import ErrorIcon from "../../Toast/error.svg?react"
@@ -125,6 +126,8 @@ const ResourceSection = ({
 };
 
 export default class TemplativeProjectRenderer extends React.Component {   
+    static contextType = RenderingWorkspaceContext;
+
     state = {
         gameCompose: undefined,
         failedToLoad: false,
@@ -172,7 +175,7 @@ export default class TemplativeProjectRenderer extends React.Component {
         this.props.closeTabIfOpenByFilepathCallback(filepath)
     }
     #attemptAddFileReferenceCountAsync = async (filenameReferenceCounts, filepath) => {
-        var fileExists = TemplativeProjectRenderer.#doesFileExist(filepath)
+        var fileExists = await TemplativeProjectRenderer.#doesFileExist(filepath)
         if (!fileExists) {
             return filenameReferenceCounts
         }
@@ -216,6 +219,27 @@ export default class TemplativeProjectRenderer extends React.Component {
     componentDidMount = async () => {
         await this.#parseComponentComposeAsync()
     }
+    #ensureDirectoriesExistAsync = async (gameCompose) => {
+        const directories = [
+            path.join(this.props.templativeRootDirectoryPath, gameCompose.artTemplatesDirectory),
+            path.join(this.props.templativeRootDirectoryPath, gameCompose.artInsertsDirectory),
+            path.join(this.props.templativeRootDirectoryPath, gameCompose.artdataDirectory),
+            path.join(this.props.templativeRootDirectoryPath, gameCompose.piecesGamedataDirectory),
+            path.join(this.props.templativeRootDirectoryPath, gameCompose.componentGamedataDirectory),
+            path.join(this.props.templativeRootDirectoryPath, "fonts"),
+            path.join(this.props.templativeRootDirectoryPath, "gamecrafter"),
+        ]
+        
+        for (const directory of directories) {
+            try {
+                await fs.mkdir(directory, { recursive: true });
+            } catch (error) {
+                if (error.code !== "EEXIST") {
+                    console.error(`Failed to create directory ${directory}:`, error);
+                }
+            }
+        }
+    }
     #parseComponentComposeAsync = async () => {
         var gameCompose;
         try {
@@ -241,6 +265,7 @@ export default class TemplativeProjectRenderer extends React.Component {
             return;
         }
         await this.#saveComponentComposeFileCountAsync()
+        await this.#ensureDirectoriesExistAsync(gameCompose)
         
         this.#closeComponentComposeListener()
         var componentComposeFilepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json")        
@@ -383,8 +408,6 @@ export default class TemplativeProjectRenderer extends React.Component {
         
         return <div className="row file-explorer-row g-0">
             <div className="col file-explorer-col">
-                
-                
                 <CompositionsList 
                     templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                     componentCompose={this.props.componentCompose}
@@ -396,6 +419,8 @@ export default class TemplativeProjectRenderer extends React.Component {
                     duplicateCompositionCallbackAsync={this.props.duplicateCompositionAsync}
                     toggleDisableCompositionCallbackAsync={this.props.toggleDisableCompositionAsync}
                     updateComponentComposeFieldAsync={this.props.updateComponentComposeFieldAsync}
+                    isExtended={this.context.isCompositionsExtended}
+                    toggleExtendedCallback={this.context.toggleCompositionsExtended}
                 />
                 <StockItemsList 
                     templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
@@ -408,6 +433,8 @@ export default class TemplativeProjectRenderer extends React.Component {
                     toggleDisableStockCompositionAsync={this.props.toggleDisableStockCompositionAsync}
                     duplicateStockCompositionAsync={this.props.duplicateStockCompositionAsync}
                     renameStockCompositionAsync={this.props.renameStockCompositionAsync}
+                    isExtended={this.context.isStockCompositionsExtended}
+                    toggleExtendedCallback={this.context.toggleStockCompositionsExtended}
                 />
                 
                             

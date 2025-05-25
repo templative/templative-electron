@@ -90,7 +90,7 @@ export default class ContentFileList extends React.Component {
     #watchBasepathAsync = async () => {
         this.#stopWatchingBasepath()  
         try {
-            fs.mkdir(this.props.baseFilepath, {recursive: true})
+            await fs.mkdir(this.props.baseFilepath, {recursive: true})
         }
         catch (error) {
             if (error.code !== "EEXIST") {
@@ -163,7 +163,7 @@ export default class ContentFileList extends React.Component {
             var fileItem = this.state.fileItems[i]
             
             const acceptedFileExtensions = this.props.acceptedFileExtensions
-            if (acceptedFileExtensions.length > 0) {
+            if (acceptedFileExtensions.length > 0 && !fileItem.isDirectory) {
                 const ext = path.extname(fileItem.absoluteFilepath)
                 if (!acceptedFileExtensions.includes(ext)) {
                     continue

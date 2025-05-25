@@ -5,14 +5,20 @@ const path = require("path")
 import CompositionItem from "./CompositionItem";
 import { COMPONENT_INFO } from "../../../../shared/componentInfo";
 import { STOCK_COMPONENT_INFO } from "../../../../shared/stockComponentInfo";
-const CompositionsList = (props) => {
-    const [isExtended, setIsExtended] = useState(true);
-    
-    const toggleExtendedAsync = () => {
-        setIsExtended(prev => !prev);
-    }
-
-    const compositions = props.componentCompose
+const CompositionsList = ({
+    componentCompose,
+    templativeRootDirectoryPath,
+    currentFilepath,
+    updateViewedFileUsingExplorerAsyncCallback,
+    updateRouteCallback,
+    deleteCompositionCallbackAsync,
+    duplicateCompositionCallbackAsync,
+    toggleDisableCompositionCallbackAsync,
+    updateComponentComposeFieldAsync,
+    isExtended,
+    toggleExtendedCallback
+}) => {
+    const compositions = componentCompose
         .map((composition, index) => ({ ...composition, originalIndex: index }))
         .filter(composition => !composition.type.includes("STOCK_"));
     
@@ -22,28 +28,28 @@ const CompositionsList = (props) => {
                 IconSource={componentComposeIcon}
                 header="Compositions"
                 isExtended={isExtended}
-                toggleExtendedAsyncCallback={toggleExtendedAsync}
+                toggleExtendedAsyncCallback={toggleExtendedCallback}
             />
             {isExtended &&<>
                 {compositions.map((composition) => <CompositionItem
                     key={composition.name + composition.originalIndex}
                     type={composition.type}
-                    templativeRootDirectoryPath={props.templativeRootDirectoryPath}
+                    templativeRootDirectoryPath={templativeRootDirectoryPath}
                     quantity={composition.quantity}
                     compositionName={composition.name}
                     isDisabled={composition.disabled}
-                    currentFilepath={props.currentFilepath}
-                    filepath={path.join(props.templativeRootDirectoryPath, `component-compose.json#${composition.name}`)}
-                    updateViewedFileUsingExplorerAsyncCallback={props.updateViewedFileUsingExplorerAsyncCallback}
-                    updateRouteCallback={props.updateRouteCallback}
-                    deleteCompositionCallbackAsync={() => props.deleteCompositionCallbackAsync(composition.originalIndex)}
-                    duplicateCompositionCallbackAsync={() => props.duplicateCompositionCallbackAsync(composition.originalIndex)}
-                    toggleDisableCompositionCallbackAsync={() => props.toggleDisableCompositionCallbackAsync(composition.originalIndex)}
+                    currentFilepath={currentFilepath}
+                    filepath={path.join(templativeRootDirectoryPath, `component-compose.json#${composition.name}`)}
+                    updateViewedFileUsingExplorerAsyncCallback={updateViewedFileUsingExplorerAsyncCallback}
+                    updateRouteCallback={updateRouteCallback}
+                    deleteCompositionCallbackAsync={() => deleteCompositionCallbackAsync(composition.originalIndex)}
+                    duplicateCompositionCallbackAsync={() => duplicateCompositionCallbackAsync(composition.originalIndex)}
+                    toggleDisableCompositionCallbackAsync={() => toggleDisableCompositionCallbackAsync(composition.originalIndex)}
                     isStock={false}
                     originalIndex={composition.originalIndex}
                     componentTypesCustomInfo={COMPONENT_INFO}
                     componentTypesStockInfo={STOCK_COMPONENT_INFO}
-                    updateComponentComposeFieldAsync={props.updateComponentComposeFieldAsync}
+                    updateComponentComposeFieldAsync={updateComponentComposeFieldAsync}
                     artdataBackFilename={composition.artdataBackFilename}
                     artdataFrontFilename={composition.artdataFrontFilename}
                     artdataDieFaceFilename={composition.artdataDieFaceFilename}

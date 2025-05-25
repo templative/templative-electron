@@ -28,7 +28,9 @@ const checkIfFolderIsValidTemplativeProject = async(event, folderPath) => {
             path.join(folderPath, gameComposeJson.artInsertsDirectory)
         ]
         for (const checkFolder of checkFolders) {
-            if (!await fsPromises.stat(checkFolder)) {
+            try {
+                await fsPromises.stat(checkFolder);
+            } catch (statError) {
                 console.log(`${checkFolder} not found`);
                 return false;
             }

@@ -39,6 +39,8 @@ class RenderingWorkspaceProvider extends React.Component {
         isPreviewVisible: false,
         lastViewedContentType: "Piece Content", // Default to Piece Content
         unit: "px",
+        isCompositionsExtended: true,
+        isStockCompositionsExtended: true,
     };
   }
 
@@ -150,6 +152,18 @@ class RenderingWorkspaceProvider extends React.Component {
     this.setState({ selectedFontTab: tab });
   };
 
+  toggleCompositionsExtended = async () => {
+    this.setState(prevState => ({
+      isCompositionsExtended: !prevState.isCompositionsExtended
+    }));
+  };
+
+  toggleStockCompositionsExtended = async () => {
+    this.setState(prevState => ({
+      isStockCompositionsExtended: !prevState.isStockCompositionsExtended
+    }));
+  };
+
   render() {
     return (
       <RenderingWorkspaceContext.Provider
@@ -177,6 +191,8 @@ class RenderingWorkspaceProvider extends React.Component {
           setUnit: this.setUnit,
           setSelectedProjectTab: this.setSelectedProjectTab,
           setSelectedFontTab: this.setSelectedFontTab,
+          toggleCompositionsExtended: this.toggleCompositionsExtended,
+          toggleStockCompositionsExtended: this.toggleStockCompositionsExtended,
         }}
       >
         {this.props.children}

@@ -12,15 +12,11 @@ const StockItemsList = ({
     updateViewedFileUsingExplorerAsyncCallback,
     deleteStockCompositionsWithNameAsync,
     toggleDisableStockCompositionAsync,
-    duplicateStockCompositionAsync,
-    renameStockCompositionAsync 
-}) => {
-    const [isExtended, setIsExtended] = useState(true);
-    
-    const toggleExtendedAsync = () => {
-        setIsExtended(prev => !prev);
-    }
-    
+    duplicateStockCompositionAsync, 
+    renameStockCompositionAsync,
+    isExtended,
+    toggleExtendedCallback
+}) => {    
     const stockItems = componentCompose
         .map((composition, index) => ({ ...composition, originalIndex: index }))
         .filter(composition => composition.type.includes("STOCK_"));
@@ -59,7 +55,7 @@ const StockItemsList = ({
                 IconSource={stockIcon}
                 header="Stock Items"
                 isExtended={isExtended}
-                toggleExtendedAsyncCallback={toggleExtendedAsync}
+                toggleExtendedAsyncCallback={toggleExtendedCallback}
             />
             {isExtended &&
                 <>
