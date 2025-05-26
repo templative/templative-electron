@@ -80,8 +80,9 @@ async function producePiecePreview(gameRootDirectoryPath, outputDirectoryPath, c
 
     const fontCache = new FontCache();
     const svgFileCache = new SvgFileCache();
+    const glyphUnicodeMap = {};
     
-    await producerPicker.produceCustomComponentPreview(previewProperties, gameData, componentComposition, fontCache, svgFileCache);
+    await producerPicker.produceCustomComponentPreview(previewProperties, gameData, componentComposition, fontCache, svgFileCache, glyphUnicodeMap);
     // console.log(`Wrote previews to ${outputDirectoryPath}`);
 }
 async function getTimestamp() {
@@ -147,6 +148,7 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
     
     const fontCache = new FontCache();
     const svgFileCache = new SvgFileCache();
+    const glyphUnicodeMap = {};
     
     const componentTasks = [];
     
@@ -201,7 +203,7 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
             }
         }
         const componentComposition = new ComponentComposition(gameCompose, componentCompose);
-        const componentTask = produceGameComponent(produceProperties, gameData, componentComposition, fontCache, svgFileCache);
+        const componentTask = produceGameComponent(produceProperties, gameData, componentComposition, fontCache, svgFileCache, glyphUnicodeMap);
         if (produceProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ONE_AT_A_TIME) {
             await componentTask;
         } else {
@@ -235,7 +237,7 @@ async function produceRules(gameRootDirectoryPath, outputDirectoryPath) {
     }
 }
 
-async function produceGameComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache) {
+async function produceGameComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache, glyphUnicodeMap) {
     const componentType = componentComposition.componentCompose["type"];
     const componentTypeTokens = componentType.split("_");
     const isStockComponent = componentTypeTokens[0].toUpperCase() === "STOCK";
@@ -245,7 +247,7 @@ async function produceGameComponent(produceProperties, gamedata, componentCompos
         return;
     }
 
-    await producerPicker.produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache);
+    await producerPicker.produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache, glyphUnicodeMap);
 }
 
 async function produceStockComponent(componentCompose, outputDirectory) {

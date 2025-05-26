@@ -36,7 +36,7 @@ async function getComponentArtdata(componentName, inputDirectoryPath, componentC
   return new ComponentArtdata(artDatas);
 }
 
-async function produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache = new SvgFileCache()) {
+async function produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}) {
   const componentName = componentComposition.componentCompose["name"];
   let componentDataBlob = null;
   try {
@@ -67,10 +67,10 @@ async function produceCustomComponent(produceProperties, gamedata, componentComp
   }
 
   console.log(`Creating art assets for ${componentName} component.`);
-  await producer.createComponent(produceProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache);
+  await producer.createComponent(produceProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache, glyphUnicodeMap);
 }
 
-async function produceCustomComponentPreview(previewProperties, gamedata, componentComposition, fontCache, svgFileCache = new SvgFileCache()) {
+async function produceCustomComponentPreview(previewProperties, gamedata, componentComposition, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}) {
   const componentName = componentComposition.componentCompose["name"];
   const componentDataBlob = await defineLoader.loadComponentGamedata(previewProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["componentGamedataFilename"]);
   if (!componentDataBlob || Object.keys(componentDataBlob).length === 0) {
@@ -102,8 +102,7 @@ async function produceCustomComponentPreview(previewProperties, gamedata, compon
   }
 
   console.log(`Creating art assets for ${componentName} component ${previewProperties.pieceName}.`);
-  await producer.createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache);
+  await producer.createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache, glyphUnicodeMap);
 }
 
-module.exports = { produceCustomComponent, produceCustomComponentPreview };
 module.exports = { produceCustomComponent, produceCustomComponentPreview };
