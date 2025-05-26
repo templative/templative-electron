@@ -216,16 +216,19 @@ jobs:
       - name: Sign the test executable with DigiCert
         shell: cmd
         run: |
-          echo "Attempting to sign test executable using the config file created by DigiCert action..."
-          echo "Using config file path from DigiCert documentation..."
-          smctl sign --fingerprint 621754072a51a303e1d744400a0e9eeebca8ae33 --input "test_signing.exe" --config-file "C:\Users\RUNNER~1\AppData\Local\Temp\smtools-windows-x64\pkcs11properties.cfg" --verbose
+          echo "Attempting to sign test executable using PKCS11 module..."
+          echo "Quick check for DigiCert installation..."
+          if exist "C:\Program Files\DigiCert" (echo "DigiCert directory found") else (echo "DigiCert directory not found")
+          echo "Let's try with keypair alias instead of fingerprint..."
+          smctl sign --keypair-alias key_1259041222 --input "test_signing.exe" --verbose
           if %errorlevel% neq 0 (
-            echo "Config file signing failed. Let's try with keypair alias..."
-            smctl sign --keypair-alias key_1259041222 --input "test_signing.exe" --config-file "C:\Users\RUNNER~1\AppData\Local\Temp\smtools-windows-x64\pkcs11properties.cfg" --verbose
+            echo "Keypair alias failed. Let's try creating proper PKCS11 config..."
+            echo name=DigiCert-SSM > pkcs11.conf
+            echo library=C:\Program Files\DigiCert\SSM\ssm-pkcs11.dll >> pkcs11.conf
+            echo slot=0 >> pkcs11.conf
+            smctl sign --keypair-alias key_1259041222 --config-file pkcs11.conf --input "test_signing.exe" --verbose
             if %errorlevel% neq 0 (
-              echo "Both attempts failed. Checking if config file exists..."
-              dir "C:\Users\RUNNER~1\AppData\Local\Temp\smtools-windows-x64\" 2>nul || echo "Temp directory not found"
-              echo "Environment debug info:"
+              echo "All attempts failed. Environment debug info:"
               dir test_signing.exe
               echo SM_HOST=%SM_HOST%
               echo SM_CLIENT_CERT_FILE=%SM_CLIENT_CERT_FILE%
