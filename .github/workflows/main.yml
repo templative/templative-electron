@@ -216,23 +216,26 @@ jobs:
       - name: Sign the test executable with DigiCert
         shell: cmd
         run: |
-          echo "Attempting to sign test executable with correct SHA1 fingerprint from certificate list"
-          echo "Using jsign tool to access DigiCert HSM instead of Windows signtool..."
-          smctl sign --tool jsign --fingerprint 621754072a51a303e1d744400a0e9eeebca8ae33 --input "test_signing.exe" --verbose
+          echo "Attempting to sign test executable using PKCS11 module..."
+          echo "First, let's check what DigiCert PKCS11 libraries are available..."
+          dir "C:\Program Files\DigiCert" /s *.dll 2>nul || echo "DigiCert directory not found"
+          dir "C:\Program Files (x86)\DigiCert" /s *.dll 2>nul || echo "DigiCert x86 directory not found"
+          echo "Checking Windows System32 for PKCS11 libraries..."
+          dir "C:\Windows\System32" | findstr /i pkcs 2>nul || echo "No PKCS11 libraries in System32"
+          echo "Let's try with keypair alias instead of fingerprint..."
+          smctl sign --keypair-alias key_1259041222 --input "test_signing.exe" --verbose
           if %errorlevel% neq 0 (
-            echo "jsign failed. Let's try with keypair alias instead of fingerprint..."
-            smctl sign --tool jsign --keypair-alias key_1259041222 --input "test_signing.exe" --verbose
+            echo "Keypair alias failed. Let's try creating proper PKCS11 config..."
+            echo name=DigiCert-SSM > pkcs11.conf
+            echo library=C:\Program Files\DigiCert\SSM\ssm-pkcs11.dll >> pkcs11.conf
+            echo slot=0 >> pkcs11.conf
+            smctl sign --keypair-alias key_1259041222 --config-file pkcs11.conf --input "test_signing.exe" --verbose
             if %errorlevel% neq 0 (
-              echo "Both attempts failed. Let's try without specifying tool..."
-              smctl sign --keypair-alias key_1259041222 --input "test_signing.exe" --verbose
-              if %errorlevel% neq 0 (
-                echo "All attempts failed. Checking file and environment..."
-                dir test_signing.exe
-                echo "Environment variables:"
-                echo SM_HOST=%SM_HOST%
-                echo SM_CLIENT_CERT_FILE=%SM_CLIENT_CERT_FILE%
-                exit /b %errorlevel%
-              )
+              echo "All attempts failed. Environment debug info:"
+              dir test_signing.exe
+              echo SM_HOST=%SM_HOST%
+              echo SM_CLIENT_CERT_FILE=%SM_CLIENT_CERT_FILE%
+              exit /b %errorlevel%
             )
           )
           echo "Signing successful!"
