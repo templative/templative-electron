@@ -167,7 +167,7 @@ jobs:
       - name: Create unsigned test executable
         shell: pwsh
         run: |
-          $source = '@
+          $source = @'
           using System;
           class Program {
               static void Main() {
