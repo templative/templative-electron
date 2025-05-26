@@ -123,6 +123,26 @@ jobs:
           echo "SM_CLIENT_CERT_PASSWORD=${{ secrets.SM_CLIENT_CERT_PASSWORD }}" >> "$GITHUB_ENV"
         shell: bash
 
+      - name: Verify DigiCert Certificate File and Environment
+        shell: pwsh
+        run: |
+          Write-Host "Checking certificate file..."
+          $certPath = "D:\Certificate_pkcs12.p12"
+          if (Test-Path $certPath) {
+            Write-Host "✅ Certificate file exists at: $certPath"
+            $fileInfo = Get-Item $certPath
+            Write-Host "File size: $($fileInfo.Length) bytes"
+            Write-Host "Created: $($fileInfo.CreationTime)"
+          } else {
+            Write-Host "❌ Certificate file does not exist at: $certPath"
+          }
+          
+          Write-Host "Environment variables:"
+          Write-Host "SM_HOST: $env:SM_HOST"
+          Write-Host "SM_API_KEY: $(if($env:SM_API_KEY) { '***SET***' } else { 'NOT SET' })"
+          Write-Host "SM_CLIENT_CERT_FILE: $env:SM_CLIENT_CERT_FILE"
+          Write-Host "SM_CLIENT_CERT_PASSWORD: $(if($env:SM_CLIENT_CERT_PASSWORD) { '***SET***' } else { 'NOT SET' })"
+
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
@@ -214,9 +234,37 @@ jobs:
             ls -la "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/" || echo "Directory does not exist"
           fi
 
+      - name: Verify DigiCert setup
+        shell: cmd
+        run: smctl certs list
+
+      - name: Debug DigiCert Authentication
+        shell: cmd
+        run: |
+          echo "Testing DigiCert authentication..."
+          smctl keypair list
+          echo "Listing available certificates..."
+          smctl certs list --format=json
+
+      - name: Debug Certificate Fingerprint
+        shell: pwsh
+        run: |
+          Write-Host "Expected fingerprint from secret: ${{ secrets.SM_CODE_SIGNING_CERT_SHA1_HASH }}"
+          Write-Host "Available certificates:"
+          $certsOutput = & smctl certs list --format=json | ConvertFrom-Json
+          foreach ($cert in $certsOutput) {
+            Write-Host "Certificate ID: $($cert.id)"
+            Write-Host "Subject: $($cert.subjectDN)"
+            Write-Host "Issuer: $($cert.issuerDN)"
+            Write-Host "Fingerprint (SHA1): $($cert.fingerprint)"
+            Write-Host "Status: $($cert.status)"
+            Write-Host "---"
+          }
+
       - name: Sign the Windows Setup.exe with DigiCert
         shell: cmd
         run: |
+          echo "Attempting to sign with fingerprint: ${{ secrets.SM_CODE_SIGNING_CERT_SHA1_HASH }}"
           smctl sign --fingerprint ${{ secrets.SM_CODE_SIGNING_CERT_SHA1_HASH }} --input "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe" --timestamp --verbose
           if %errorlevel% neq 0 exit /b %errorlevel%
 
@@ -237,11 +285,6 @@ jobs:
           Write-Host "  - Valid to: $($sigCheck.SignerCertificate.NotAfter)"
           Write-Host "  - Thumbprint: $($sigCheck.SignerCertificate.Thumbprint)"
 
-      - name: Verify DigiCert setup
-        shell: cmd
-        run: smctl list certs
-
-      
       - name: Exit workflow
         shell: bash
         run: |
