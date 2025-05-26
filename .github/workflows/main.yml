@@ -142,6 +142,85 @@ jobs:
           Write-Host "SM_API_KEY: $(if($env:SM_API_KEY) { '***SET***' } else { 'NOT SET' })"
           Write-Host "SM_CLIENT_CERT_FILE: $env:SM_CLIENT_CERT_FILE"
           Write-Host "SM_CLIENT_CERT_PASSWORD: $(if($env:SM_CLIENT_CERT_PASSWORD) { '***SET***' } else { 'NOT SET' })"
+          
+      - name: Verify DigiCert setup
+        shell: cmd
+        run: smctl certificate list
+
+      - name: Debug DigiCert Authentication
+        shell: cmd
+        run: |
+          echo "Testing DigiCert authentication..."
+          smctl keypair list
+          echo "Listing available certificates..."
+          smctl certificate list
+
+      - name: Debug Certificate Fingerprint
+        shell: pwsh
+        run: |
+          Write-Host "Expected fingerprint from secret: ${{ secrets.SM_CODE_SIGNING_CERT_SHA1_HASH }}"
+          Write-Host "Available certificates:"
+          $certsOutput = & smctl certificate list --cert-hash-alg=SHA1
+          Write-Host $certsOutput
+
+      # Create a simple test executable for code signing
+      - name: Create test executable
+        shell: pwsh
+        run: |
+          # Copy a simple Windows utility to use as a test file
+          # notepad.exe is a good candidate that exists on all Windows systems
+          Copy-Item "C:\Windows\System32\notepad.exe" -Destination "test_signing.exe"
+          
+          # Verify the file was copied
+          if (Test-Path "test_signing.exe") {
+            Write-Host "✅ Test executable created successfully"
+            Get-Item "test_signing.exe" | Format-List Name, Length, CreationTime
+            
+            # Check if it's already signed
+            $originalSig = Get-AuthenticodeSignature "test_signing.exe"
+            Write-Host "Original signature status: $($originalSig.Status)"
+          } else {
+            Write-Host "❌ Failed to create test file"
+            exit 1
+          }
+
+      - name: Sign the test executable with DigiCert
+        shell: cmd
+        run: |
+          echo "Attempting to sign test executable with fingerprint: ${{ secrets.SM_CODE_SIGNING_CERT_SHA1_HASH }}"
+          smctl sign --fingerprint ${{ secrets.SM_CODE_SIGNING_CERT_SHA1_HASH }} --input "test_signing.exe" --timestamp --verbose
+          if %errorlevel% neq 0 exit /b %errorlevel%
+
+      - name: Verify test file signature
+        shell: pwsh
+        run: |
+          $sigCheck = Get-AuthenticodeSignature "test_signing.exe"
+          
+          Write-Host "=== SIGNATURE VERIFICATION RESULTS ==="
+          Write-Host "Signature status: $($sigCheck.Status)"
+          Write-Host "Signer: $($sigCheck.SignerCertificate.Subject)"
+          Write-Host "Status message: $($sigCheck.StatusMessage)"
+          
+          # More detailed certificate information
+          Write-Host "`n=== CERTIFICATE DETAILS ==="
+          Write-Host "  - Issuer: $($sigCheck.SignerCertificate.Issuer)"
+          Write-Host "  - Valid from: $($sigCheck.SignerCertificate.NotBefore)"
+          Write-Host "  - Valid to: $($sigCheck.SignerCertificate.NotAfter)"
+          Write-Host "  - Thumbprint: $($sigCheck.SignerCertificate.Thumbprint)"
+          
+          # Check if signature is valid
+          if ($sigCheck.Status -eq "Valid") {
+            Write-Host "`n✅ SUCCESS: File is properly signed!"
+          } else {
+            Write-Host "`n❌ FAILED: Signature is not valid"
+            exit 1
+          }
+
+      - name: Exit workflow early after testing
+        shell: bash
+        run: |
+          echo "Code signing test completed successfully!"
+          exit 0
 
       - uses: actions/setup-node@v3
         with:
@@ -233,33 +312,6 @@ jobs:
             echo "Contents of directory:"
             ls -la "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/" || echo "Directory does not exist"
           fi
-
-      - name: Verify DigiCert setup
-        shell: cmd
-        run: smctl certs list
-
-      - name: Debug DigiCert Authentication
-        shell: cmd
-        run: |
-          echo "Testing DigiCert authentication..."
-          smctl keypair list
-          echo "Listing available certificates..."
-          smctl certs list --format=json
-
-      - name: Debug Certificate Fingerprint
-        shell: pwsh
-        run: |
-          Write-Host "Expected fingerprint from secret: ${{ secrets.SM_CODE_SIGNING_CERT_SHA1_HASH }}"
-          Write-Host "Available certificates:"
-          $certsOutput = & smctl certs list --format=json | ConvertFrom-Json
-          foreach ($cert in $certsOutput) {
-            Write-Host "Certificate ID: $($cert.id)"
-            Write-Host "Subject: $($cert.subjectDN)"
-            Write-Host "Issuer: $($cert.issuerDN)"
-            Write-Host "Fingerprint (SHA1): $($cert.fingerprint)"
-            Write-Host "Status: $($cert.status)"
-            Write-Host "---"
-          }
 
       - name: Sign the Windows Setup.exe with DigiCert
         shell: cmd
