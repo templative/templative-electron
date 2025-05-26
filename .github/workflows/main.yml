@@ -167,14 +167,14 @@ jobs:
       - name: Create unsigned test executable
         shell: pwsh
         run: |
-          $source = @"
+          $source = '@
           using System;
           class Program {
               static void Main() {
                   Console.WriteLine("Test");
               }
           }
-"@
+          '@
           Add-Type -TypeDefinition $source -OutputAssembly "test_signing.exe"
           Write-Host "Created test_signing.exe"
           Get-Item "test_signing.exe" | Select-Object Name, Length
