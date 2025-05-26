@@ -217,8 +217,26 @@ jobs:
         shell: cmd
         run: |
           echo "Attempting to sign test executable with correct SHA1 fingerprint from certificate list"
-          smctl sign --fingerprint 621754072a51a303e1d744400a0e9eeebca8ae33 --input "test_signing.exe" --timestamp
-          if %errorlevel% neq 0 exit /b %errorlevel%
+          echo "First, let's try with verbose logging to see detailed error..."
+          smctl sign --fingerprint 621754072a51a303e1d744400a0e9eeebca8ae33 --input "test_signing.exe" --verbose
+          if %errorlevel% neq 0 (
+            echo "Signing failed. Let's check if we need a PKCS11 config file..."
+            echo "Checking current directory for any config files..."
+            dir *.conf *.config *.properties 2>nul || echo "No config files found"
+            echo "Trying to create a basic PKCS11 config file..."
+            echo library-path=%SM_CLIENT_CERT_FILE% > pkcs11.conf
+            echo slot-list-index=0 >> pkcs11.conf
+            smctl sign --fingerprint 621754072a51a303e1d744400a0e9eeebca8ae33 --input "test_signing.exe" --config-file pkcs11.conf --verbose
+            if %errorlevel% neq 0 (
+              echo "Both attempts failed. Checking file and environment..."
+              dir test_signing.exe
+              echo "Environment variables:"
+              echo SM_HOST=%SM_HOST%
+              echo SM_CLIENT_CERT_FILE=%SM_CLIENT_CERT_FILE%
+              exit /b %errorlevel%
+            )
+          )
+          echo "Signing successful!"
 
       - name: Verify test file signature
         shell: pwsh
