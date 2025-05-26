@@ -4,7 +4,6 @@ const fsExtra = require('fs-extra');
 const { JSDOM } = require('jsdom');
 const { COMPONENT_INFO } = require('../../../../../../shared/componentInfo.js');
 const { convertSvgContentToPngUsingResvg } = require('./fileConversion/svgToRasterConverter.js');
-const { addNewlines } = require("./artdataProcessing/newlineInserter.js");
 const { outputSvgArtFile, scaleSvg } = require("./fileConversion/svgArtExporter.js");
 const { addOverlays, collectOverlayFiles} = require("./artdataProcessing/overlayHandler.js");
 const { textReplaceInFile} = require("./artdataProcessing/textReplacer.js");
@@ -14,7 +13,7 @@ const { getComponentTemplatesDirectoryPath } = require("../../../componentTempla
 const { SvgFileCache } = require('./caching/svgFileCache.js');
 const { createInputHash, getCachedFiles, getRenderedPiecesCacheDir, cacheFiles } = require('./caching/renderedPiecesCache.js');
 const { RENDER_MODE, RENDER_PROGRAM, OVERLAPPING_RENDERING_TASKS } = require('../../../manage/models/produceProperties');
-const { cleanupSvgNamespacesAsync, cleanupUnusedDefs } = require('./artdataProcessing/svgCleaner.js');
+const { cleanupUnusedDefs } = require('./artdataProcessing/svgCleaner.js');
 const { replaceShapeInsideTextElementsWithPositionedTspans } = require('./artdataProcessing/shapeInsideReplacer.js');
 const { replaceIconGlyphWithPuaCharsAsync, replacePlaceholdersWithUnicodeEntities } = require('./artdataProcessing/iconGlyphReplacer');
 const { replaceFormattingShortcutElementsWithTspansAsync } = require('./artdataProcessing/formattingShortcutReplacer');
@@ -210,30 +209,27 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       
       // If not cached, generate new files
       let contents = templateContent;
-      contents = await addOverlays(contents, artdata["overlays"], compositions, gamedata, productionProperties, svgFileCache);
-      contents = await textReplaceInFile(contents, artdata["textReplacements"], gamedata, productionProperties);
-      contents = await updateStylesInFile(contents, artdata["styleUpdates"], gamedata);
-      contents = await addNewlines(contents);
-      contents = await cleanupSvgNamespacesAsync(contents);
+
       const dom = new JSDOM(contents, { contentType: 'image/svg+xml' });
       const document = dom.window.document;
       
+      await addOverlays(document, artdata["overlays"], compositions, gamedata, productionProperties, svgFileCache);
+      await textReplaceInFile(document, artdata["textReplacements"], gamedata, productionProperties);
+      await updateStylesInFile(document, artdata["styleUpdates"], gamedata);
       await replaceFormattingShortcutElementsWithTspansAsync(document);
       const iconGlyphPlaceholders = await replaceIconGlyphWithPuaCharsAsync(document, productionProperties.inputDirectoryPath, glyphUnicodeMap);
-    
-      //   if (productionProperties.renderProgram === RENDER_PROGRAM.TEMPLATIVE && contents.includes('shape-inside:url(#')) {
+      
+    //   if (productionProperties.renderProgram === RENDER_PROGRAM.TEMPLATIVE && document.querySelector('[style*="shape-inside:url(#"]')) {
     //     await replaceShapeInsideTextElementsWithPositionedTspans(document);
     //   }
 
       await cleanupUnusedDefs(document);
-      contents = dom.serialize();
       
       if (productionProperties.isClipped) {
         const componentTemplatesDirectoryPath = await getComponentTemplatesDirectoryPath(componentType);
-        // console.log(`componentTemplatesDirectoryPath: ${componentTemplatesDirectoryPath}`);
         const clipSvgFilepath = path.join(componentTemplatesDirectoryPath, `${componentType}.svg`);
         try {
-          contents = await clipSvgContentToClipFile(contents, clipSvgFilepath, CLIPPING_ELEMENT_ID, svgFileCache);
+          await clipSvgContentToClipFile(document, clipSvgFilepath, CLIPPING_ELEMENT_ID, svgFileCache);
         } catch (error) {
             captureException(error);
             if (error.code !== 'ENOENT') {
@@ -241,7 +237,9 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
             }
         }
       }
-      contents = await scaleSvg(contents, imageSizePixels);
+      await scaleSvg(document, imageSizePixels);
+      
+      contents = dom.serialize();
       contents = replacePlaceholdersWithUnicodeEntities(contents, iconGlyphPlaceholders);
 
       // Create and cache the files

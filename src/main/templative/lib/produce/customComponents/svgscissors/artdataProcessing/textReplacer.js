@@ -1,17 +1,10 @@
 const { getScopedValue } = require('./valueResolver.js');
+const { JSDOM } = require('jsdom');
 
-/**
- * Replace text in SVG content
- * @param {string} contents - SVG content
- * @param {Array} textReplacements - Array of text replacements
- * @param {Object} gamedata - Game data
- * @param {Object} productionProperties - Production properties
- * @returns {Promise<string>} - SVG content with text replacements
- */
-async function textReplaceInFile(contents, textReplacements, gamedata, productionProperties) {
-  if (!contents) {
-      console.error("Warning: contents is null or undefined");
-      return "";
+async function textReplaceInFile(document, textReplacements, gamedata, productionProperties) {
+  if (!document) {
+      console.error("Warning: document is null or undefined");
+      return;
   }
 
   try {
@@ -41,27 +34,47 @@ async function textReplaceInFile(contents, textReplacements, gamedata, productio
                   console.log(`Could not translate ${value}`);
               }
           }
-          
-          // Do NOT escape XML special characters for text replacements
-          // This allows XML tags like <tspan> to be properly injected
-          
-          // Replace all occurrences of the key with the value using a global regex
-          const regex = new RegExp(escapeRegExp(key), 'g');
-          contents = contents.replace(regex, value || "");
+          const mainRoot = document.documentElement || 
+                document.querySelector('svg') || 
+                document.querySelector('svg\\:svg');
+          if (!mainRoot) {
+              throw new Error("Failed to find main root element in document");
+          }
+          // Replace text in DOM using TreeWalker for efficient text node traversal
+          const walker = document.createTreeWalker(
+              mainRoot,
+              4, // NodeFilter.SHOW_TEXT
+              null,
+              false
+          );
+
+          const textNodes = [];
+          let node;
+          while (node = walker.nextNode()) {
+              if (node.nodeValue && node.nodeValue.includes(key)) {
+                  textNodes.push(node);
+              }
+          }
+
+          // Replace text in collected text nodes
+          for (const textNode of textNodes) {
+              const newValue = textNode.nodeValue.replace(new RegExp(escapeRegExp(key), 'g'), value || "");
+              
+              // Check if the replacement value contains XML/HTML elements
+              if (newValue.includes('<') && newValue.includes('>')) {
+                  // Replace with actual XML elements
+                  await replaceTextNodeWithXmlContent(textNode, newValue, document);
+              } else {
+                  // Simple text replacement
+                  textNode.nodeValue = newValue;
+              }
+          }
       }
-      return contents;
   } catch (error) {
-      console.error(`Error in text replacement: ${error.message}`);
-      return contents;
+      console.error(`Error in DOM text replacement: ${error.message}`);
   }
 }
 
-/**
- * Process value filters
- * @param {string} value - Value to process
- * @param {Object} textReplacement - Text replacement object
- * @returns {Promise<string>} - Processed value
- */
 async function processValueFilters(value, textReplacement) {
   if ("filters" in textReplacement) {
       for (const filter of textReplacement["filters"]) {
@@ -71,6 +84,41 @@ async function processValueFilters(value, textReplacement) {
       }
   }
   return String(value);
+}
+
+async function replaceTextNodeWithXmlContent(textNode, xmlContent, document) {
+  try {
+    const parent = textNode.parentNode;
+    if (!parent) return;
+    
+    // Wrap the content in an SVG element for proper parsing
+    const wrappedContent = `<svg xmlns="http://www.w3.org/2000/svg">${xmlContent}</svg>`;
+    
+    // Parse using JSDOM
+    const tempDom = new JSDOM(wrappedContent, { contentType: 'image/svg+xml' });
+    const tempDoc = tempDom.window.document;
+    const tempRoot = tempDoc.documentElement;
+    
+    // Import and insert each child from the parsed content
+    const childNodes = Array.from(tempRoot.childNodes);
+    for (const child of childNodes) {
+      if (child.nodeType === 1) { // Element node
+        const importedElement = document.importNode(child, true);
+        parent.insertBefore(importedElement, textNode);
+      } else if (child.nodeType === 3) { // Text node
+        const textContent = document.createTextNode(child.nodeValue);
+        parent.insertBefore(textContent, textNode);
+      }
+    }
+    
+    // Remove the original text node
+    parent.removeChild(textNode);
+    
+  } catch (error) {
+    console.error(`Error replacing text node with XML content: ${error.message}`);
+    // Fallback to text replacement
+    textNode.nodeValue = xmlContent;
+  }
 }
 
 /**
@@ -83,7 +131,5 @@ function escapeRegExp(string) {
 }
 
 module.exports = {
-  textReplaceInFile,
-  processValueFilters,
-  escapeRegExp
+  textReplaceInFile
 }; 

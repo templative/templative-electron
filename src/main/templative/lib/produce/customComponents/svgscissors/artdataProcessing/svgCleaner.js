@@ -1,42 +1,4 @@
 /**
- * Clean up SVG namespaces and remove problematic attributes
- * @param {string} svgData - SVG content as string
- * @returns {string} - Cleaned SVG data
- */
-async function cleanupSvgNamespacesAsync(svgData) {
-  // Ensure we have the SVG namespace defined in the root element
-  if (!svgData.includes('xmlns="http://www.w3.org/2000/svg"')) {
-    svgData = svgData.replace(/<svg/i, '<svg xmlns="http://www.w3.org/2000/svg"');
-  }
-  
-  // Ensure any SVG prefix is properly namespaced
-  if (svgData.includes('<svg:')) {
-    // If we have svg: prefixes but no namespace, add it
-    if (!svgData.includes('xmlns:svg="http://www.w3.org/2000/svg"')) {
-      svgData = svgData.replace(/<svg/i, '<svg xmlns:svg="http://www.w3.org/2000/svg"');
-    }
-  }
-  
-  // Fix duplicate namespaces if they exist
-  svgData = svgData.replace(/xmlns:svg="http:\/\/www.w3.org\/2000\/svg"\s+xmlns:svg="http:\/\/www.w3.org\/2000\/svg"/g, 
-                          'xmlns:svg="http://www.w3.org/2000/svg"');
-  
-  // Remove namespace declarations that might cause problems
-  svgData = svgData.replace(/xmlns:sodipodi="[^"]*"/g, '')
-             .replace(/xmlns:inkscape="[^"]*"/g, '');
-  
-  // IMPORTANT: Remove all sodipodi and inkscape elements
-  svgData = svgData.replace(/<sodipodi:[^>]*\/>|<sodipodi:[^>]*>[\s\S]*?<\/sodipodi:[^>]*>/g, '')
-             .replace(/<inkscape:[^>]*\/>|<inkscape:[^>]*>[\s\S]*?<\/inkscape:[^>]*>/g, '');
-  
-  // Remove all sodipodi and inkscape attributes
-  svgData = svgData.replace(/sodipodi:[a-zA-Z0-9\-_]+="[^"]*"/g, '')
-             .replace(/inkscape:[a-zA-Z0-9\-_]+="[^"]*"/g, '');
-             
-  return svgData;
-}
-
-/**
  * Clean up unused definitions in SVG
  * @param {string} svgData - SVG content as string
  * @returns {string} - Cleaned SVG data
@@ -103,7 +65,6 @@ function sanitizeSvgContent(content) {
 
 
 module.exports = {
-  cleanupSvgNamespacesAsync,
   cleanupUnusedDefs,
   sanitizeSvgContent
 }; 
