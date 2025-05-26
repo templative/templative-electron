@@ -217,11 +217,8 @@ jobs:
         shell: cmd
         run: |
           echo "Attempting to sign test executable using PKCS11 module..."
-          echo "First, let's check what DigiCert PKCS11 libraries are available..."
-          dir "C:\Program Files\DigiCert" /s *.dll 2>nul || echo "DigiCert directory not found"
-          dir "C:\Program Files (x86)\DigiCert" /s *.dll 2>nul || echo "DigiCert x86 directory not found"
-          echo "Checking Windows System32 for PKCS11 libraries..."
-          dir "C:\Windows\System32" | findstr /i pkcs 2>nul || echo "No PKCS11 libraries in System32"
+          echo "Quick check for DigiCert installation..."
+          if exist "C:\Program Files\DigiCert" (echo "DigiCert directory found") else (echo "DigiCert directory not found")
           echo "Let's try with keypair alias instead of fingerprint..."
           smctl sign --keypair-alias key_1259041222 --input "test_signing.exe" --verbose
           if %errorlevel% neq 0 (
