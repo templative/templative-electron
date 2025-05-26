@@ -3,6 +3,7 @@ const { produceGame, producePiecePreview } = require('../../lib/produce/gameProd
 const { CachePreProducerWatcher } = require('../../lib/produce/cachePreProducerWatcher');
 const { createIconFont, getPUACharFromUnicode } = require('../../lib/produce/iconFontCreator');
 const path = require('path');
+const { RENDER_PROGRAM } = require('../../lib/manage/models/produceProperties');
 
 // Example usage:
 // templative produce --name "actionCaps" --input "/Users/oliverbarnum/Documents/git/apcw-defines"
@@ -36,7 +37,8 @@ const previewCommand = new Command('preview')
   .option('--language <language>', 'Target language of the output. https://developers.google.com/admin-sdk/directory/v1/languages', 'en')
   .option('--clip', 'Enable clipping for component images.', false)
   .option('--input <path>', 'The directory of the templative project.', './')
-  .option('--output <path>', 'The directory to output the preview.', './')
+  .option('--output <path>', 'The directory to output the preview.', './previews')
+  .option('--inkscape', 'Use inkscape to produce the preview.', false)
   .action(async (options) => {
     await producePiecePreview(
       options.input, 
@@ -44,7 +46,7 @@ const previewCommand = new Command('preview')
       options.component, 
       options.piece, 
       options.language,
-      options.clip
+      options.inkscape ? RENDER_PROGRAM.INKSCAPE : RENDER_PROGRAM.TEMPLATIVE
     );
   });
   
