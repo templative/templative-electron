@@ -216,8 +216,8 @@ jobs:
       - name: Sign the test executable with DigiCert
         shell: cmd
         run: |
-          echo "Attempting to sign test executable with SHA256 fingerprint from certificate list output"
-          smctl sign --fingerprint a3d1e6b9c19b63a7cbf8b5d0491646b3dc82273a413528ec804bfd750e640ada --input "test_signing.exe" --timestamp
+          echo "Attempting to sign test executable with correct SHA1 fingerprint from certificate list"
+          smctl sign --fingerprint 621754072a51a303e1d744400a0e9eeebca8ae33 --input "test_signing.exe" --timestamp
           if %errorlevel% neq 0 exit /b %errorlevel%
 
       - name: Verify test file signature
@@ -345,8 +345,8 @@ jobs:
       - name: Sign the Windows Setup.exe with DigiCert
         shell: cmd
         run: |
-          echo "Attempting to sign with SHA256 fingerprint from certificate list output"
-          smctl sign --fingerprint a3d1e6b9c19b63a7cbf8b5d0491646b3dc82273a413528ec804bfd750e640ada --input "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe" --timestamp
+          echo "Attempting to sign with correct SHA1 fingerprint from certificate list"
+          smctl sign --fingerprint 621754072a51a303e1d744400a0e9eeebca8ae33 --input "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe" --timestamp
           if %errorlevel% neq 0 exit /b %errorlevel%
 
       - name: Verify code signing
