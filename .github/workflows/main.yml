@@ -157,8 +157,6 @@ jobs:
           echo "Checking certificate details with different formats..."
           smctl certificate list --cert-hash-alg=SHA1
           smctl certificate list --cert-hash-alg=SHA256
-          echo "Checking account status..."
-          smctl account status
 
       - name: Debug Certificate Fingerprint
         shell: pwsh
