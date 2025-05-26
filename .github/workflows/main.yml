@@ -164,23 +164,65 @@ jobs:
           Write-Host $certsOutput
 
       # Create a simple test executable for code signing
-      - name: Create test executable
+      - name: Create unsigned test executable
         shell: pwsh
         run: |
-          # Copy a simple Windows utility to use as a test file
-          # notepad.exe is a good candidate that exists on all Windows systems
-          Copy-Item "C:\Windows\System32\notepad.exe" -Destination "test_signing.exe"
-          
-          # Verify the file was copied
-          if (Test-Path "test_signing.exe") {
-            Write-Host "✅ Test executable created successfully"
-            Get-Item "test_signing.exe" | Format-List Name, Length, CreationTime
+          # Method 1: Create a minimal valid PE executable using .NET
+          try {
+            # This creates a simple console app that's guaranteed to be unsigned
+            $code = @'
+            using System;
+            namespace TestApp {
+                public class Program {
+                    public static void Main(string[] args) {
+                        Console.WriteLine("DigiCert Code Signing Test");
+                        Console.WriteLine("Company: YOUR_COMPANY_NAME_HERE");
+                    }
+                }
+            }
+'@
             
-            # Check if it's already signed
-            $originalSig = Get-AuthenticodeSignature "test_signing.exe"
-            Write-Host "Original signature status: $($originalSig.Status)"
+            # Create a temporary C# file
+            $code | Out-File -FilePath "temp.cs" -Encoding UTF8
+            
+            # Compile using csc.exe (C# compiler) - this creates unsigned executables
+            $cscPath = Get-ChildItem -Path "${env:ProgramFiles*}" -Filter "csc.exe" -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
+            
+            if ($cscPath) {
+              Write-Host "Found C# compiler at: $($cscPath.FullName)"
+              & $cscPath.FullName /out:test_signing.exe temp.cs
+            } else {
+              Write-Host "C# compiler not found, using Add-Type method..."
+              Add-Type -TypeDefinition $code -OutputAssembly "test_signing.exe"
+            }
+            
+            # Clean up
+            Remove-Item "temp.cs" -ErrorAction SilentlyContinue
+            
+          } catch {
+            Write-Host "Primary method failed: $($_.Exception.Message)"
+            Write-Host "Using fallback method..."
+            
+            # Fallback: Create a simple DLL and rename it (DLLs can also be signed)
+            Add-Type -TypeDefinition 'public class Test { public static void Main() { } }' -OutputAssembly "test_signing.exe"
+          }
+          
+          # Verify file creation and check signature
+          if (Test-Path "test_signing.exe") {
+            $fileInfo = Get-Item "test_signing.exe"
+            Write-Host "✅ Created: $($fileInfo.Name) ($($fileInfo.Length) bytes)"
+            
+            $sig = Get-AuthenticodeSignature "test_signing.exe"
+            Write-Host "Signature Status: $($sig.Status)"
+            
+            if ($sig.Status -eq "NotSigned") {
+              Write-Host "✅ Perfect! File is unsigned and ready for testing."
+            } else {
+              Write-Host "⚠️  File has signature: $($sig.SignerCertificate.Subject)"
+              Write-Host "Will test signing anyway - DigiCert should overwrite it."
+            }
           } else {
-            Write-Host "❌ Failed to create test file"
+            Write-Host "❌ Failed to create executable"
             exit 1
           }
 
