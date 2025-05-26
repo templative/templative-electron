@@ -154,6 +154,11 @@ jobs:
           smctl keypair list
           echo "Listing available certificates..."
           smctl certificate list
+          echo "Checking certificate details with different formats..."
+          smctl certificate list --cert-hash-alg=SHA1
+          smctl certificate list --cert-hash-alg=SHA256
+          echo "Checking account status..."
+          smctl account status
 
       - name: Debug Certificate Fingerprint
         shell: pwsh
@@ -162,6 +167,37 @@ jobs:
           Write-Host "Available certificates:"
           $certsOutput = & smctl certificate list --cert-hash-alg=SHA1
           Write-Host $certsOutput
+          
+          Write-Host "`nTrying SHA256 format as well:"
+          $certsOutputSHA256 = & smctl certificate list --cert-hash-alg=SHA256
+          Write-Host $certsOutputSHA256
+          
+          Write-Host "`nCertificate details with full output:"
+          $fullOutput = & smctl certificate list --verbose
+          Write-Host $fullOutput
+
+      - name: Normalize fingerprint and verify match
+        shell: pwsh
+        run: |
+          $secretFingerprint = "${{ secrets.SM_CODE_SIGNING_CERT_SHA1_HASH }}"
+          Write-Host "Secret fingerprint: '$secretFingerprint'"
+          
+          # Remove any colons, spaces, and convert to uppercase
+          $normalizedSecret = $secretFingerprint -replace '[:\s]', '' | ForEach-Object { $_.ToUpper() }
+          Write-Host "Normalized secret: '$normalizedSecret'"
+          
+          # Get the available certificates and extract fingerprints
+          $certsOutput = & smctl certificate list --cert-hash-alg=SHA1
+          Write-Host "Raw certificate output:"
+          Write-Host $certsOutput
+          
+          # Check if our normalized fingerprint appears in the output
+          if ($certsOutput -match $normalizedSecret) {
+            Write-Host "✅ Fingerprint match found!"
+          } else {
+            Write-Host "❌ Fingerprint not found in available certificates"
+            Write-Host "Available fingerprints should be checked manually against: $normalizedSecret"
+          }
 
       # Create a simple test executable for code signing
       - name: Create unsigned test executable
@@ -374,6 +410,16 @@ jobs:
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
           
+      - name: Check certificate requests and templates
+        shell: cmd
+        run: |
+          echo "Checking certificate requests..."
+          smctl certificate request list
+          echo "Checking available certificate templates..."
+          smctl certificate template list
+          echo "Checking if we need to create a certificate..."
+          smctl certificate create --help
+
   templative-osx:
     # needs: check-version
     if: false # needs.check-version.outputs.should_build == 'true'
