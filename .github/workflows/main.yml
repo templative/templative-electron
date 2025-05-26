@@ -6,7 +6,6 @@ permissions:
 
 jobs:
   validate-secrets:
-    if: false
     runs-on: ubuntu-latest
     steps:
       - name: Check required secrets
@@ -38,7 +37,6 @@ jobs:
           fi
 
   check-version:
-    if: false
     needs: validate-secrets
     runs-on: ubuntu-latest
     outputs:
@@ -79,9 +77,8 @@ jobs:
           fi
 
   templative-windows:
-    # needs: check-version
-    # if: needs.check-version.outputs.should_build == 'true'
-    # timeout-minutes: 20
+    needs: check-version
+    if: needs.check-version.outputs.should_build == 'true'
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -197,76 +194,7 @@ jobs:
             Write-Host "Available fingerprints should be checked manually against: $normalizedSecret"
           }
 
-      # Create a simple test executable for code signing
-      - name: Create unsigned test executable
-        shell: pwsh
-        run: |
-          $source = @'
-          using System;
-          class Program {
-              static void Main() {
-                  Console.WriteLine("Test");
-              }
-          }
-          '@
-          Add-Type -TypeDefinition $source -OutputAssembly "test_signing.exe"
-          Write-Host "Created test_signing.exe"
-          Get-Item "test_signing.exe" | Select-Object Name, Length
 
-      - name: Sign the test executable with DigiCert
-        shell: cmd
-        run: |
-          echo "Attempting to sign test executable using PKCS11 module..."
-          echo "Quick check for DigiCert installation..."
-          if exist "C:\Program Files\DigiCert" (echo "DigiCert directory found") else (echo "DigiCert directory not found")
-          echo "Let's try with keypair alias instead of fingerprint..."
-          smctl sign --keypair-alias key_1259041222 --input "test_signing.exe" --verbose
-          if %errorlevel% neq 0 (
-            echo "Keypair alias failed. Let's try creating proper PKCS11 config..."
-            echo name=DigiCert-SSM > pkcs11.conf
-            echo library=C:\Program Files\DigiCert\SSM\ssm-pkcs11.dll >> pkcs11.conf
-            echo slot=0 >> pkcs11.conf
-            smctl sign --keypair-alias key_1259041222 --config-file pkcs11.conf --input "test_signing.exe" --verbose
-            if %errorlevel% neq 0 (
-              echo "All attempts failed. Environment debug info:"
-              dir test_signing.exe
-              echo SM_HOST=%SM_HOST%
-              echo SM_CLIENT_CERT_FILE=%SM_CLIENT_CERT_FILE%
-              exit /b %errorlevel%
-            )
-          )
-          echo "Signing successful!"
-
-      - name: Verify test file signature
-        shell: pwsh
-        run: |
-          $sigCheck = Get-AuthenticodeSignature "test_signing.exe"
-          
-          Write-Host "=== SIGNATURE VERIFICATION RESULTS ==="
-          Write-Host "Signature status: $($sigCheck.Status)"
-          Write-Host "Signer: $($sigCheck.SignerCertificate.Subject)"
-          Write-Host "Status message: $($sigCheck.StatusMessage)"
-          
-          # More detailed certificate information
-          Write-Host "`n=== CERTIFICATE DETAILS ==="
-          Write-Host "  - Issuer: $($sigCheck.SignerCertificate.Issuer)"
-          Write-Host "  - Valid from: $($sigCheck.SignerCertificate.NotBefore)"
-          Write-Host "  - Valid to: $($sigCheck.SignerCertificate.NotAfter)"
-          Write-Host "  - Thumbprint: $($sigCheck.SignerCertificate.Thumbprint)"
-          
-          # Check if signature is valid
-          if ($sigCheck.Status -eq "Valid") {
-            Write-Host "`n✅ SUCCESS: File is properly signed!"
-          } else {
-            Write-Host "`n❌ FAILED: Signature is not valid"
-            exit 1
-          }
-
-      - name: Exit workflow early after testing
-        shell: bash
-        run: |
-          echo "Code signing test completed successfully!"
-          exit 0
 
       - uses: actions/setup-node@v3
         with:
@@ -301,15 +229,6 @@ jobs:
           TEMPLATIVE_APP_SPECIFIC_PASSWORD: ${{ secrets.TEMPLATIVE_APP_SPECIFIC_PASSWORD }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
-
-      # - name: Download RELEASES file from S3
-      #   shell: bash
-      #   env:
-      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
-      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #   run: |
-      #     mkdir -p ./out/make/squirrel.windows/x64/
-      #     aws s3 cp s3://templative-artifacts/win32/x64/RELEASES ./out/make/squirrel.windows/x64/RELEASES --region us-west-2 || echo "No RELEASES file found, will create a new one"
           
       - name: Make Distributable
         run: npm run makeFromPackage
@@ -362,9 +281,23 @@ jobs:
       - name: Sign the Windows Setup.exe with DigiCert
         shell: cmd
         run: |
-          echo "Attempting to sign with correct SHA1 fingerprint from certificate list"
-          smctl sign --fingerprint 621754072a51a303e1d744400a0e9eeebca8ae33 --input "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe" --timestamp
-          if %errorlevel% neq 0 exit /b %errorlevel%
+          echo "Signing Windows Setup.exe using keypair alias method..."
+          smctl sign --keypair-alias key_1259041222 --input "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe" --verbose --timestamp
+          if %errorlevel% neq 0 (
+            echo "Keypair alias failed. Let's try creating proper PKCS11 config..."
+            echo name=DigiCert-SSM > pkcs11.conf
+            echo library=C:\Program Files\DigiCert\SSM\ssm-pkcs11.dll >> pkcs11.conf
+            echo slot=0 >> pkcs11.conf
+            smctl sign --keypair-alias key_1259041222 --config-file pkcs11.conf --input "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe" --verbose --timestamp
+            if %errorlevel% neq 0 (
+              echo "All signing attempts failed. Environment debug info:"
+              dir "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/"
+              echo SM_HOST=%SM_HOST%
+              echo SM_CLIENT_CERT_FILE=%SM_CLIENT_CERT_FILE%
+              exit /b %errorlevel%
+            )
+          )
+          echo "Signing successful!"
 
       - name: Verify code signing
         shell: pwsh
@@ -372,23 +305,25 @@ jobs:
           $setupExePath = "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe"
           $sigCheck = Get-AuthenticodeSignature $setupExePath
           
+          Write-Host "=== SIGNATURE VERIFICATION RESULTS ==="
           Write-Host "Signature status: $($sigCheck.Status)"
           Write-Host "Signer: $($sigCheck.SignerCertificate.Subject)"
           Write-Host "Status message: $($sigCheck.StatusMessage)"
           
           # More detailed certificate information
-          Write-Host "Certificate details:"
+          Write-Host "`n=== CERTIFICATE DETAILS ==="
           Write-Host "  - Issuer: $($sigCheck.SignerCertificate.Issuer)"
           Write-Host "  - Valid from: $($sigCheck.SignerCertificate.NotBefore)"
           Write-Host "  - Valid to: $($sigCheck.SignerCertificate.NotAfter)"
           Write-Host "  - Thumbprint: $($sigCheck.SignerCertificate.Thumbprint)"
-
-      - name: Exit workflow
-        shell: bash
-        run: |
-          echo "Exiting workflow early for testing"
-          exit 0
-
+          
+          # Check if signature is valid
+          if ($sigCheck.Status -eq "Valid") {
+            Write-Host "`n✅ SUCCESS: Setup.exe is properly signed!"
+          } else {
+            Write-Host "`n❌ FAILED: Signature is not valid"
+            exit 1
+          }
 
       - name: Verify code signing
         shell: cmd
@@ -436,8 +371,8 @@ jobs:
           smctl certificate create --help
 
   templative-osx:
-    # needs: check-version
-    if: false # needs.check-version.outputs.should_build == 'true'
+    needs: check-version
+    if: needs.check-version.outputs.should_build == 'true'
     # timeout-minutes: 20
     runs-on: ${{ matrix.os }}
     strategy:
