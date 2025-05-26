@@ -6,6 +6,7 @@ permissions:
 
 jobs:
   validate-secrets:
+    if: false
     runs-on: ubuntu-latest
     steps:
       - name: Check required secrets
@@ -37,6 +38,7 @@ jobs:
           fi
 
   check-version:
+    if: false
     needs: validate-secrets
     runs-on: ubuntu-latest
     outputs:
@@ -77,7 +79,7 @@ jobs:
           fi
 
   templative-windows:
-    needs: check-version
+    # needs: check-version
     if: needs.check-version.outputs.should_build == 'true'
     # timeout-minutes: 20
     runs-on: ${{ matrix.os }}
@@ -216,6 +218,7 @@ jobs:
         shell: cmd
         run: |
           smctl sign --fingerprint ${{ secrets.SM_CODE_SIGNING_CERT_SHA1_HASH }} --input "./Templative-win32-x64-${{steps.package-version.outputs.current-version}}/templative-${{steps.package-version.outputs.current-version}} Setup.exe" --timestamp --verbose
+          if %errorlevel% neq 0 exit /b %errorlevel%
 
       - name: Verify code signing
         shell: pwsh
@@ -233,6 +236,18 @@ jobs:
           Write-Host "  - Valid from: $($sigCheck.SignerCertificate.NotBefore)"
           Write-Host "  - Valid to: $($sigCheck.SignerCertificate.NotAfter)"
           Write-Host "  - Thumbprint: $($sigCheck.SignerCertificate.Thumbprint)"
+
+      - name: Verify DigiCert setup
+        shell: cmd
+        run: smctl list certs
+
+      
+      - name: Exit workflow
+        shell: bash
+        run: |
+          echo "Exiting workflow early for testing"
+          exit 0
+
 
       - name: Verify code signing
         shell: cmd
@@ -270,8 +285,8 @@ jobs:
           CURRENT_VERSION: ${{steps.package-version.outputs.current-version}}
           
   templative-osx:
-    needs: check-version
-    if: needs.check-version.outputs.should_build == 'true'
+    # needs: check-version
+    if: false # needs.check-version.outputs.should_build == 'true'
     # timeout-minutes: 20
     runs-on: ${{ matrix.os }}
     strategy:
