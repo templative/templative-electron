@@ -1,11 +1,11 @@
-import React from "react";
-import MarkdownEditor from '@uiw/react-markdown-editor';
-import EditableViewerRaw from "./EditableViewerRaw";
-import "./RulesEditor.css"
-import FileLoadFailure from "./FileLoadFailure";
-const path = require("path")
+import React, { useState } from "react";
+import MarkdownEditor from "./MarkdownEditor";
+import "./RulesView.css"
+import EditableViewerRaw from "../Edit/Viewers/EditableViewerRaw";
+import FileLoadFailure from "../Edit/Viewers/FileLoadFailure";
+import path from "path";
 
-export default class RulesEditor extends EditableViewerRaw {       
+export default class RulesView extends EditableViewerRaw {       
     getFilePath = (props) => {
         return path.join(props.templativeRootDirectoryPath, "rules.md")
     }
@@ -23,11 +23,10 @@ export default class RulesEditor extends EditableViewerRaw {
         if (!this.state.hasLoaded) {
             return null
         }        
-        
         return <div className="rules-body">
             <MarkdownEditor 
-                value={this.state.content || ""} 
-                onChange={(value, _) => this.updateContent(value)}
+                markdownContent={this.state.content}
+                onContentChange={this.updateContent}
             />
         </div>
     }

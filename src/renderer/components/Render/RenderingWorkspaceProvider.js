@@ -49,11 +49,28 @@ class RenderingWorkspaceProvider extends React.Component {
 
         // Preview
         isGeneratingPreview: false,
+
+        // Markdown Editor State
+        markdownEditorScrollPosition: 0,
+        markdownPreviewScrollPosition: 0,
+        markdownPreviewOpen: false,
     };
   }
 
   setIsGeneratingPreview = (isGenerating) => {
     this.setState({ isGeneratingPreview: isGenerating });
+  }
+
+  setMarkdownEditorScrollPosition = (position) => {
+    this.setState({ markdownEditorScrollPosition: position });
+  }
+
+  setMarkdownPreviewScrollPosition = (position) => {
+    this.setState({ markdownPreviewScrollPosition: position });
+  }
+
+  setMarkdownPreviewOpen = (isOpen) => {
+    this.setState({ markdownPreviewOpen: isOpen });
   }
 
   setSelectedOutputFolder = (folder) => {
@@ -198,6 +215,9 @@ class RenderingWorkspaceProvider extends React.Component {
         value={{
           ...this.state,
           setIsGeneratingPreview: this.setIsGeneratingPreview,
+          setMarkdownEditorScrollPosition: this.setMarkdownEditorScrollPosition,
+          setMarkdownPreviewScrollPosition: this.setMarkdownPreviewScrollPosition,
+          setMarkdownPreviewOpen: this.setMarkdownPreviewOpen,
           setSelectedOutputFolder: this.setSelectedOutputFolder,
           setSelectedComponentFilter: this.setSelectedComponentFilter,
           setExportOptionIndex: this.setExportOptionIndex,

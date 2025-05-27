@@ -1,0 +1,9 @@
+.rules-body {
+    /* Do not modify this */ 
+    height: 100%;
+    display: inline-block;
+    width: calc(100% - 60px) !important;
+    transform: translateY(-5px);
+    padding: 0em 0em 0 0em;
+    /* Do not modify this */ 
+}

@@ -10,7 +10,6 @@ import { TabbedFile } from "./Edit/TabbedFile";
 import TemplativeAccessTools from "./TemplativeAccessTools";
 import { RenderingWorkspaceProvider } from "./Render/RenderingWorkspaceProvider";
 import { OutputDirectoriesProvider } from "./OutputDirectories/OutputDirectoriesProvider";
-import RulesEditor from "./Edit/Viewers/RulesEditor";
 import { trackEvent } from "@aptabase/electron/renderer";
 import AccountView from "./Account/AccountView";
 import FontsView from "./Fonts/FontsView";
@@ -22,6 +21,7 @@ const fs = require("fs/promises");
 import { COMPONENT_INFO } from "../../shared/componentInfo";
 import { STOCK_COMPONENT_INFO } from "../../shared/stockComponentInfo";
 import ProjectPanel from "./Project/ProjectPanel";
+import RulesView from "./Rules/RulesView";
 
 export default class EditProjectView extends React.Component {
   
@@ -698,7 +698,7 @@ export default class EditProjectView extends React.Component {
                     />
                 )}
                 {this.state.currentRoute === 'rules' && (
-                    <RulesEditor 
+                    <RulesView 
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                         saveFileAsyncCallback={this.saveFileAsync}
                     />
