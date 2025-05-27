@@ -57,6 +57,17 @@
   color: var(--color-text);
   margin: 0;
 }
+.App .create-project-view {
+  height: 100%;
+  overflow-y: hidden;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.App .create-project-view .create-project-form {
+  height: 100%;
+  overflow-y: auto;
+  padding: 1em;
+}
 .App .create-project-view .template-item .template-icon {
   color: var(--color-accent)
 }
