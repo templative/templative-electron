@@ -118,6 +118,29 @@ async function placeOverlay(document, mainRoot, overlayFilepath, positionX, posi
         
         const overlayRoot = overlayDoc.documentElement;
 
+        // Handle defs merging first
+        const overlayDefs = overlayRoot.querySelector('defs');
+        if (overlayDefs) {
+            let mainDefs = mainRoot.querySelector('defs');
+            if (!mainDefs) {
+                // Create main defs if it doesn't exist
+                mainDefs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+                // Insert defs as first child of main SVG
+                mainRoot.insertBefore(mainDefs, mainRoot.firstChild);
+            }
+            
+            // Import all children from overlay defs to main defs
+            const defsChildren = Array.from(overlayDefs.childNodes);
+            for (const defsChild of defsChildren) {
+                try {
+                    const importedDefsChild = document.importNode(defsChild, true);
+                    mainDefs.appendChild(importedDefsChild);
+                } catch (e) {
+                    console.error(`Error importing defs child: ${e.message}`);
+                }
+            }
+        }
+
         const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 
         const viewBox = mainRoot.getAttribute('viewBox')?.split(/\s+/).map(parseFloat) ?? [];
@@ -138,9 +161,14 @@ async function placeOverlay(document, mainRoot, overlayFilepath, positionX, posi
             }
         }
 
-        // Import and move all children from overlay root to group
+        // Import and move all children from overlay root to group, EXCEPT defs
         const childrenToImport = Array.from(overlayRoot.childNodes);
         for (const child of childrenToImport) {
+            // Skip defs elements as they've already been handled above
+            if (child.nodeType === 1 && child.tagName === 'defs') {
+                continue;
+            }
+            
             try {
                 const importedChild = document.importNode(child, true);
                 group.appendChild(importedChild);

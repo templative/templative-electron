@@ -1,51 +1,3 @@
-/**
- * Clean up unused definitions in SVG
- * @param {string} svgData - SVG content as string
- * @returns {string} - Cleaned SVG data
- */
-async function cleanupUnusedDefs(document) {
-  try {    
-    // Find all defs elements
-    const defsElements = document.querySelectorAll('defs');
-    
-    // Find all elements with id attributes
-    const allElements = document.querySelectorAll('[id]');
-    const usedIds = new Set();
-    
-    // Find all url() references in the document
-    const allElementsWithAttrs = document.querySelectorAll('*');
-    allElementsWithAttrs.forEach(el => {
-      // Check all attributes for url() references
-      Array.from(el.attributes).forEach(attr => {
-        const value = attr.value;
-        const urlMatches = value.match(/url\(#([^)]+)\)/g);
-        if (urlMatches) {
-          urlMatches.forEach(match => {
-            const idMatch = match.match(/url\(#([^)]+)\)/);
-            if (idMatch && idMatch[1]) {
-              usedIds.add(idMatch[1]);
-            }
-          });
-        }
-      });
-    });
-    
-    // Check for elements that are referenced by id but not used in url()
-    let removedElements = 0;
-    defsElements.forEach(defs => {
-      const children = Array.from(defs.children);
-      children.forEach(child => {
-        if (child.id && !usedIds.has(child.id)) {
-          // This element is not referenced anywhere
-          child.parentNode.removeChild(child);
-          removedElements++;
-        }
-      });
-    })    
-  } catch (error) {
-    console.error(`Error cleaning up unused defs: ${error.message}`);
-  }
-}
 function sanitizeSvgContent(content) {
   if (!content) return "";
   
@@ -63,8 +15,20 @@ function sanitizeSvgContent(content) {
       .replace(/&(?!amp;|lt;|gt;|quot;|apos;|#\d+;|#x[0-9a-fA-F]+;)/g, '&amp;');
 }
 
+/*
+Removes stuff like this:
+<sodipodi:namedview id="namedview726" pagecolor="#ffffff" bordercolor="#999999" borderopacity="1" showgrid="false" inkscape:showpageshadow="0" inkscape:pageopacity="0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:zoom="0.84852812" inkscape:cx="463.74421" inkscape:cy="344.12531" inkscape:window-width="1872" inkscape:window-height="1027" inkscape:window-x="62" inkscape:window-y="25" inkscape:window-maximized="1" inkscape:current-layer="template"/> 
+*/
+function removeNamedViews(document) {
+  // Use namespace-aware selector to avoid pseudo-class error
+  const namedViews = document.getElementsByTagNameNS('*', 'namedview');
+  Array.from(namedViews).forEach(view => {
+    view.parentNode.removeChild(view);
+  });
+}
+
 
 module.exports = {
-  cleanupUnusedDefs,
+  removeNamedViews,
   sanitizeSvgContent
 }; 

@@ -13,7 +13,7 @@ const { getComponentTemplatesDirectoryPath } = require("../../../componentTempla
 const { SvgFileCache } = require('./caching/svgFileCache.js');
 const { createInputHash, getCachedFiles, getRenderedPiecesCacheDir, cacheFiles } = require('./caching/renderedPiecesCache.js');
 const { RENDER_MODE, RENDER_PROGRAM, OVERLAPPING_RENDERING_TASKS } = require('../../../manage/models/produceProperties');
-const { cleanupUnusedDefs } = require('./artdataProcessing/svgCleaner.js');
+const { removeNamedViews } = require('./artdataProcessing/svgCleaner.js');
 const { replaceShapeInsideTextElementsWithPositionedTspans } = require('./artdataProcessing/shapeInsideReplacer.js');
 const { replaceIconGlyphWithPuaCharsAsync, replacePlaceholdersWithUnicodeEntities } = require('./artdataProcessing/iconGlyphReplacer');
 const { replaceFormattingShortcutElementsWithTspansAsync } = require('./artdataProcessing/formattingShortcutReplacer');
@@ -218,12 +218,11 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       await updateStylesInFile(document, artdata["styleUpdates"], gamedata);
       await replaceFormattingShortcutElementsWithTspansAsync(document);
       const iconGlyphPlaceholders = await replaceIconGlyphWithPuaCharsAsync(document, productionProperties.inputDirectoryPath, glyphUnicodeMap);
+      await removeNamedViews(document);
       
     //   if (productionProperties.renderProgram === RENDER_PROGRAM.TEMPLATIVE && document.querySelector('[style*="shape-inside:url(#"]')) {
     //     await replaceShapeInsideTextElementsWithPositionedTspans(document);
     //   }
-
-      await cleanupUnusedDefs(document);
       
       if (productionProperties.isClipped) {
         const componentTemplatesDirectoryPath = await getComponentTemplatesDirectoryPath(componentType);

@@ -28,9 +28,13 @@ async function scaleSvg(document, imageSizePixels) {
   const wrapper = document.createElementNS('http://www.w3.org/2000/svg', 'g');
   wrapper.setAttribute('transform', `scale(${scale_factor})`);
 
-  // Move all children to wrapper
+  // Move all children to wrapper, EXCEPT defs which should stay at root level
   const childrenToMove = Array.from(root.childNodes);
   for (const child of childrenToMove) {
+    // Skip defs elements - they should remain at the root level unscaled
+    if (child.nodeType === 1 && child.tagName === 'defs') {
+      continue;
+    }
     wrapper.appendChild(child);
   }
   
