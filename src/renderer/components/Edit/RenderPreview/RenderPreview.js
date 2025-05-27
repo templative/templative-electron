@@ -2,15 +2,17 @@ import React from "react";
 import TemplativeAccessTools from "../../TemplativeAccessTools";
 import { channels } from '../../../../shared/constants';
 const { ipcRenderer } = window.require('electron');
-
+import MakingPreviewImage from "./previewing.svg?react"
 import "./RenderPreview.css"
 import CoordinateImage from "./CoordinateImage";
+import { RenderingWorkspaceContext } from "../../Render/RenderingWorkspaceProvider";
 
 const fsOld = require('fs');
 const path = require("path");
 const fs = require("fs/promises");
 
 export default class RenderPreview extends React.Component {
+    static contextType = RenderingWorkspaceContext;
     state = {
         componentOptions: [],
         piecesOptions: [],
@@ -46,6 +48,11 @@ export default class RenderPreview extends React.Component {
 
             // const preloadImages = filepaths.map(src => this.#preloadImage(src));
             // await Promise.all(preloadImages);
+            const hasNoImagesCurrently = this.state.imageSources.length === 0;
+            const hasImagesNow = filepaths.length > 0;
+            if (hasNoImagesCurrently && hasImagesNow) {
+                this.context.setIsGeneratingPreview(false);
+            }
             this.setState({
                 imageSources: filepaths,
                 loadingImages: false,
@@ -54,15 +61,6 @@ export default class RenderPreview extends React.Component {
         } catch (error) {
             console.error("Error in #loadImages:", error);
         }
-    }
-
-    #preloadImage = (src) => {
-        return new Promise((resolve, reject) => {
-            const img = new Image();
-            img.src = src;
-            img.onload = resolve;
-            img.onerror = reject;
-        });
     }
 
     #parseComponentCompose = async () => {
@@ -183,6 +181,14 @@ export default class RenderPreview extends React.Component {
         if (this.state.loadingImages) {
             return <p className="preview-loading">Loading images...</p>;
         }
+
+        // If we're generating a preview, show the making preview image
+        if (this.context.isGeneratingPreview) {
+            return <div className="awaiting-previews">
+                <MakingPreviewImage className="preview-making-image" />
+                <p>Creating previews...</p>
+            </div>
+        }
         
         if (this.state.imageSources.length === 0) {
             return <p className="preview-loading">No preview images. Press the preview button on a piece from within the edit component view to preview it.</p>;
@@ -207,26 +213,6 @@ export default class RenderPreview extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <p className="preview-title">Preview</p>
-                {/* <div className="vertical-input-group">
-                    <div className="input-group input-group-sm preview-select" data-bs-theme="dark">
-                        <span className="input-group-text soft-label">Component</span>
-                        <select value={this.state.chosenComponentName} onChange={this.updateChosenComponentName} className="form-select  no-left-border">
-                            {this.state.componentOptions.map(componentOption => (
-                                <option key={componentOption} value={componentOption}>{componentOption}</option>
-                            ))}
-                        </select>
-                    </div>
-                    <div className="input-group input-group-sm preview-select" data-bs-theme="dark">
-                        <span className="input-group-text soft-label">Piece</span>
-                        <select value={this.state.chosenPieceName} onChange={this.updateChosenPieceName} className="form-select  no-left-border">
-                            {this.state.piecesOptions.map(piecesOption => (
-                                <option key={piecesOption} value={piecesOption}>{piecesOption}</option>
-                            ))}
-                        </select>
-                    </div>
-                </div> */}
-                {/* <button className="btn preview-button" onClick={this.preview}>Preview</button> */}
                 <div className="preview-images">
                     {this.renderPreviewImages()}
                 </div>

@@ -4,13 +4,14 @@ import "./GamedataViewer.css"
 import PieceControls from "./PieceControls.js";
 import { channels } from "../../../../../shared/constants";
 const { ipcRenderer } = require('electron');
-
+import { RenderingWorkspaceContext } from "../../../Render/RenderingWorkspaceProvider.js";
 
 const ignoredControlGamedataKeys = [
     "name","quantity"
 ]
 
-export default class Piece extends React.Component {   
+export default class Piece extends React.Component { 
+    static contextType = RenderingWorkspaceContext;
     state = {
         isHovering: false
     }
@@ -28,6 +29,7 @@ export default class Piece extends React.Component {
             directoryPath: this.props.templativeRootDirectoryPath
         }
         try {
+            this.context.setIsGeneratingPreview(true);
             this.props.showPreviewCallback()
             await ipcRenderer.invoke(channels.TO_SERVER_PREVIEW_PIECE, data);
         } catch (error) {

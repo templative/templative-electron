@@ -46,7 +46,14 @@ class RenderingWorkspaceProvider extends React.Component {
         printSize: "Letter",
         isPrintBackIncluded: false,
         arePrintBordersDrawn: false,
+
+        // Preview
+        isGeneratingPreview: false,
     };
+  }
+
+  setIsGeneratingPreview = (isGenerating) => {
+    this.setState({ isGeneratingPreview: isGenerating });
   }
 
   setSelectedOutputFolder = (folder) => {
@@ -190,6 +197,7 @@ class RenderingWorkspaceProvider extends React.Component {
       <RenderingWorkspaceContext.Provider
         value={{
           ...this.state,
+          setIsGeneratingPreview: this.setIsGeneratingPreview,
           setSelectedOutputFolder: this.setSelectedOutputFolder,
           setSelectedComponentFilter: this.setSelectedComponentFilter,
           setExportOptionIndex: this.setExportOptionIndex,
