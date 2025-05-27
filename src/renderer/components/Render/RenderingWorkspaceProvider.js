@@ -1,6 +1,7 @@
 import React from 'react';
-const {STOCK_COMPONENT_INFO} = require("../../../shared/stockComponentInfo");
+const { channels } = require("../../../shared/constants");
 const RenderingWorkspaceContext = React.createContext();
+const { ipcRenderer } = require('electron');
 
 const PostRenderOptions = [
     "Images",
@@ -57,6 +58,20 @@ class RenderingWorkspaceProvider extends React.Component {
     };
   }
 
+  async componentDidMount() {
+    try {
+      const settings = await ipcRenderer.invoke(channels.TO_SERVER_GET_SETTINGS);
+      if (settings) {
+        this.setState({
+          printSize: settings.printSize || "Letter",
+          unit: settings.unit || "px"
+        });
+      }
+    } catch (error) {
+      console.error('Error loading settings:', error);
+    }
+  }
+
   setIsGeneratingPreview = (isGenerating) => {
     this.setState({ isGeneratingPreview: isGenerating });
   }
@@ -105,8 +120,13 @@ class RenderingWorkspaceProvider extends React.Component {
     this.setState({ componentTypeSearch: search });
   };
 
-  setPrintSize = (size) => {
+  setPrintSize = async (size) => {
     this.setState({ printSize: size });
+    try {
+      await ipcRenderer.invoke(channels.TO_SERVER_UPDATE_SETTING, 'printSize', size);
+    } catch (error) {
+      console.error('Error updating printSize setting:', error);
+    }
   };
 
   toggleIsPrintBackIncluded = () => {
@@ -185,8 +205,13 @@ class RenderingWorkspaceProvider extends React.Component {
     return availableContentTypes.length > 0 ? availableContentTypes[0] : null;
   };
 
-  setUnit = (unit) => {
+  setUnit = async (unit) => {
     this.setState({ unit: unit });
+    try {
+      await ipcRenderer.invoke(channels.TO_SERVER_UPDATE_SETTING, 'unit', unit);
+    } catch (error) {
+      console.error('Error updating unit setting:', error);
+    }
   };
 
   setSelectedProjectTab = (tab) => {

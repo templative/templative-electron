@@ -2,6 +2,7 @@ const { ipcMain, shell, dialog } = require('electron')
 const { openFolder, openPlaygroundFolder, openSimulatorFolder, openProjectLocationFolder, createTemplativeProjectWithName, openFileDialog } = require("./dialogMaker")
 const { channels } = require('../shared/constants');
 const { login, initiateGoogleLogin, giveLoginInformation, getTgcSessionFromStore, logoutTgc, clearGithubAuth, giveGithubAuth, pollGithubAuth, testDeepLink, checkTemplativeOwnership, giveLogout } = require("./accountManager")
+const { readOrCreateSettingsFile, updateSetting } = require("./settingsManager")
 const { 
     createTemplativeComponent,
     produceTemplativeProject,
@@ -72,6 +73,14 @@ function listenForRenderEvents(window) {
 
     ipcMain.handle(channels.TO_SERVER_LOGOUT, async (event) => {
         return await giveLogout();
+    });
+
+    ipcMain.handle(channels.TO_SERVER_GET_SETTINGS, async (event) => {
+        return await readOrCreateSettingsFile();
+    });
+
+    ipcMain.handle(channels.TO_SERVER_UPDATE_SETTING, async (event, key, value) => {
+        return await updateSetting(key, value);
     });
 }
 module.exports = { listenForRenderEvents }

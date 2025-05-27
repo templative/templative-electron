@@ -18,7 +18,9 @@ const DEFAULT_SETTINGS = {
     isCacheIgnored: false,
     isGitEnabled: false,
     renderProgram: "Templative",
-    overlappingRenderingTasks: "One at a Time"
+    overlappingRenderingTasks: "One at a Time",
+    printSize: "Letter",
+    unit: "px"
 }
 
 async function readOrCreateSettingsFile() {
@@ -58,8 +60,22 @@ async function writeToSettingsFile(settings) {
         console.error('Error writing settings file:', error);
     }
 }
+
+async function updateSetting(key, value) {
+    try {
+        const settings = await readOrCreateSettingsFile();
+        settings[key] = value;
+        await writeToSettingsFile(settings);
+        return settings;
+    } catch (error) {
+        console.error('Error updating setting:', error);
+        return null;
+    }
+}
+
 module.exports = {
     readOrCreateSettingsFile,
     writeToSettingsFile,
+    updateSetting,
     folderExists
 }
