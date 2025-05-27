@@ -178,3 +178,151 @@
     height: 50px;
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
 }
+.preview-image-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+.preview-image-control-button {
+    background: none;
+    border: none;
+    padding:0px;
+    height: 24px;
+    width: 24px;
+    border-radius: 4px;
+}
+.preview-image-control-button svg {
+    fill: var(--color-accent);
+    width: 100%;
+    height: 100%;
+    margin-bottom: 8px;
+    margin-left: 4px;
+}
+.preview-image-control-button:hover {
+    cursor: pointer;
+    background: var(--color-content-surface-hover);
+}
+
+.preview-image-control-button.copied-image {
+    background: #1e6f3b !important;
+}
+
+.preview-image-control-button.copied-image svg {
+    fill: var(--color-text) !important;
+}
+
+/* Zoom Modal Styles */
+.zoom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.zoom-modal-content {
+    background: var(--color-content-surface);
+    border-radius: 8px;
+    max-width: 90vw;
+    max-height: 90vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.zoom-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--color-content-surface);
+    border-bottom: 1px solid var(--color-light);
+    flex-shrink: 0;
+}
+
+.zoom-modal-filename {
+    font-size: 14px;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.zoom-modal-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.zoom-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--color-accent);
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    line-height: 1;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zoom-modal-close:hover {
+    background: var(--color-content-surface-hover);
+}
+
+.zoom-modal-image-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 1rem;
+    min-height: 0;
+}
+
+.zoom-modal-image-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.zoom-modal-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease;
+    cursor: crosshair;
+}
+
+/* Handle rotated images in modal */
+.zoom-modal-image-container .zoom-modal-image {
+    object-fit: contain;
+}
+
+/* Ensure rotated images fit properly in modal */
+@media (min-width: 768px) {
+    .zoom-modal-content {
+        max-width: 85vw;
+        max-height: 85vh;
+    }
+}
