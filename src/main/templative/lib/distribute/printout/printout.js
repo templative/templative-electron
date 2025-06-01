@@ -13,35 +13,36 @@ const unsupportedDiceTypes = ["CustomColorD4", "CustomColorD8"];
 const PAGE_PADDING_INCHES = 0.25;
 const DOUBLE_PAGE_PADDING = PAGE_PADDING_INCHES * 2
 const PAGE_SIZES = {
-    "Letter": "letter",
-    "A3": "a3",
-    "A4": "a4",
-    "A5": "a5",
-    "Legal": "legal",
-    "Tabloid": "tabloid"
+    "LETTER": "LETTER",
+    "A3": "A3",
+    "A4": "A4",
+    "A5": "A5",
+    "LEGAL": "LEGAL",
+    "TABLOID": "TABLOID"
 };
 // Adjust the printout play area to account for margins
 const PRINTOUT_PLAYAREA_CHOICES = {
-    "Letter": [8.5 - DOUBLE_PAGE_PADDING, 11 - DOUBLE_PAGE_PADDING],
+    "LETTER": [8.5 - DOUBLE_PAGE_PADDING, 11 - DOUBLE_PAGE_PADDING],
     "A3": [11 - DOUBLE_PAGE_PADDING, 17 - DOUBLE_PAGE_PADDING],
     "A4": [8.27 - DOUBLE_PAGE_PADDING, 11.69 - DOUBLE_PAGE_PADDING],
     "A5": [5.83 - DOUBLE_PAGE_PADDING, 8.27 - DOUBLE_PAGE_PADDING],
-    "Legal": [8.5 - DOUBLE_PAGE_PADDING, 14 - DOUBLE_PAGE_PADDING],
-    "Tabloid": [11 - DOUBLE_PAGE_PADDING, 17 - DOUBLE_PAGE_PADDING]
+    "LEGAL": [8.5 - DOUBLE_PAGE_PADDING, 14 - DOUBLE_PAGE_PADDING],
+    "TABLOID": [11 - DOUBLE_PAGE_PADDING, 17 - DOUBLE_PAGE_PADDING]
 };
 const PRINTOUT_TOTAL_SIZE = {
-    "Letter": [8.5, 11],
+    "LETTER": [8.5, 11],
     "A3": [11, 17],
     "A4": [8.27, 11.69],
     "A5": [5.83, 8.27],
-    "Legal": [8.5, 14],
-    "Tabloid": [11, 17]
+    "LEGAL": [8.5, 14],
+    "TABLOID": [11, 17]
 }
 
 /**
  * Main function to create a PDF for printing
  */
 async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size, areBordersDrawn=false) {
+    size = size.toUpperCase();
     if (!PAGE_SIZES[size] || !PRINTOUT_PLAYAREA_CHOICES[size]) {
         console.log(`!!! Cannot create size ${size}.`);
         return;

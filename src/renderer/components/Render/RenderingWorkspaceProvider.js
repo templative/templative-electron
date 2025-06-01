@@ -44,7 +44,7 @@ class RenderingWorkspaceProvider extends React.Component {
         isStockCompositionsExtended: true,
         
         // Print settings
-        printSize: "Letter",
+        printSize: "LETTER",
         isPrintBackIncluded: false,
         arePrintBordersDrawn: false,
 
@@ -63,7 +63,7 @@ class RenderingWorkspaceProvider extends React.Component {
       const settings = await ipcRenderer.invoke(channels.TO_SERVER_GET_SETTINGS);
       if (settings) {
         this.setState({
-          printSize: settings.printSize || "Letter",
+          printSize: (settings.printSize || "LETTER").toUpperCase(),
           unit: settings.unit || "px"
         });
       }

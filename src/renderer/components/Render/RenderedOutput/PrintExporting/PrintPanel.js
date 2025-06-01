@@ -42,16 +42,16 @@ export default class PrintPanel extends React.Component {
         var showPDF = this.props.outputFolderPath !== undefined && fs.existsSync(printoutFilepath)
         return <div className='print-control'>
             <CreatePrintoutButton 
-                    isCreatingPrintout={this.state.isCreatingPrintout}
-                    hasOutputDirectoryValue={this.props.outputFolderPath !== undefined}
-                    areBordersDrawn={this.context.arePrintBordersDrawn}
-                    size={this.context.printSize}
-                    isBackIncluded={this.context.isPrintBackIncluded}
-                    createPrintoutCallback={this.createPrintout}
-                    toggleAreBordersDrawnCallback={this.context.toggleArePrintBordersDrawn}
-                    toggleIsBackIncludedCallback={this.context.toggleIsPrintBackIncluded}
-                    setSizeCallback={this.context.setPrintSize}
-                />
+                isCreatingPrintout={this.state.isCreatingPrintout}
+                hasOutputDirectoryValue={this.props.outputFolderPath !== undefined}
+                areBordersDrawn={this.context.arePrintBordersDrawn}
+                size={this.context.printSize}
+                isBackIncluded={this.context.isPrintBackIncluded}
+                createPrintoutCallback={this.createPrintout}
+                toggleAreBordersDrawnCallback={this.context.toggleArePrintBordersDrawn}
+                toggleIsBackIncludedCallback={this.context.toggleIsPrintBackIncluded}
+                setSizeCallback={this.context.setPrintSize}
+            />
             {(showPDF) && 
                 <iframe key={this.state.rerenderIframeKey} title="printout.pdf" src={`file://${printoutFilepath}`} className="printout-pdf-iframe" />
             }

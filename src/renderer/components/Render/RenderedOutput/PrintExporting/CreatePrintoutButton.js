@@ -14,12 +14,12 @@ export default class CreatePrintoutButton extends React.Component {
         return <div className='vertical-input-group printout-controls'>
             <div className="input-group input-group-sm printout-button-controls" data-bs-theme="dark">
                 <select value={this.props.size} onChange={(e)=>{this.props.setSizeCallback(e.target.value)}} className="form-select" id="inputGroupSelect01">
-                    <option value="Letter">Letter</option>
-                    <option value="Tabloid">Tabloid</option>
+                    <option value="LETTER">Letter</option>
+                    <option value="TABLOID">Tabloid</option>
                     <option value="A3">A3</option>
                     <option value="A4">A4</option>
                     <option value="A5">A5</option>
-                    <option value="Legal">Legal</option>
+                    <option value="LEGAL">Legal</option>
                 </select>
                 
             </div>
