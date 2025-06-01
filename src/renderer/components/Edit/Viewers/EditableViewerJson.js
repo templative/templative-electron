@@ -10,9 +10,17 @@ export default class EditableViewerJson extends EditableViewerRaw {
         if (filepath === undefined || content === undefined) {
             return
         }
-        const newFileContents = JSON.stringify(content, null, 4)
-        await this.props.saveFileAsyncCallback(filepath, newFileContents)
-        this.setState({ lastKnownFileContents: content })
+        try {
+            // Validate that content can be stringified
+            const newFileContents = JSON.stringify(content, null, 4)
+            // Validate that the stringified content can be parsed back
+            JSON.parse(newFileContents)
+            await this.props.saveFileAsyncCallback(filepath, newFileContents)
+            this.setState({ lastKnownFileContents: content })
+        } catch (error) {
+            console.error("Failed to save JSON:", error)
+            // You might want to show an error to the user here
+        }
     }
 
     loadFileContent = async (filepath) => {
