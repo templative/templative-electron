@@ -65,6 +65,9 @@
 }
 .gamecrafter-image-item {
     width: 50%;
+    height: calc(49.75% - 0.25em);
+    padding-right: 0.25em;
+    padding-bottom: 0.25em;
     display: inline-block;
 }
 .gamecrafter-image-item img {
@@ -85,5 +88,5 @@
 }
 .gamecrafter-images {
     height: calc(100% - 100px);
-    overflow-y: auto;
+    overflow-y:visible;
 }

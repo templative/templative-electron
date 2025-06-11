@@ -4,7 +4,7 @@ const { clipSvgFileToClipFile } = require('../../../produce/customComponents/svg
 const { convertSvgContentToPng } = require('../../../produce/customComponents/svgscissors/fileConversion/svgToRasterConverter');
 const { createCompositeImage, placeAndUploadBackImage } = require('../imageProcessing/compositeImageCreator');
 const { safeLoadImage } = require('../imageProcessing/imageUtils');
-const { uploadToS3 } = require('../imageProcessing/imageUploader');
+const { uploadImageToS3 } = require('../../../../../../shared/TemplativeApiClient');
 const { findBoxiestShape } = require('../utils/geometryUtils');
 const { SimulatorTilesetUrls, SimulatorComponentPlacement, SimulatorDimensions, SimulatorTilesetLayout } = require('../structs');
 const { createD6CompositeImage } = require('../imageProcessing/compositeImageCreator');
@@ -22,6 +22,10 @@ const {captureMessage, captureException } = require("../../../sentryElectronWrap
  * @returns {Promise<Object|null>} - Parameters for createDeckObjectState or null if invalid
  */
 async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal, templativeToken) {
+  if (!templativeToken) {
+    console.log("!!! No templative token provided, skipping deck adapter.");
+    return null;
+  }
   try {
     const totalUniqueCards = componentInstructions.frontInstructions.length;
     const isSingleCard = totalUniqueCards === 1 && (componentInstructions.frontInstructions[0].quantity * componentInstructions.quantity) === 1;
@@ -106,7 +110,7 @@ async function loadAndUploadImage(instruction, dimensions, componentName, side, 
     return null;
   }
 
-  const url = await uploadToS3(image, templativeToken);
+  const url = await uploadImageToS3(image, templativeToken);
   if (!url) {
     console.log(`!!! Failed to upload ${side} image for ${componentName}, falling back to local file.`);
     return instruction.filepath;
@@ -212,7 +216,7 @@ async function customDieAdapter(tabletopSimulatorImageDirectoryPath, componentIn
   }
 }
 
-async function clipFrontImageAndUploadToS3(componentInstructions, instruction, componentInfo, templativeToken){
+async function clipFrontImageAnduploadImageToS3(componentInstructions, instruction, componentInfo, templativeToken){
   
   const svgFilepath = instruction.filepath.replace(".png", ".svg")
   const clipFilepath = path.join(__dirname, `../../../create/componentTemplates/${componentInfo.Key}.svg`)
@@ -228,7 +232,7 @@ async function clipFrontImageAndUploadToS3(componentInstructions, instruction, c
   await convertSvgContentToPng(imageContent, componentInfo.DimensionsPixels, outputFilepath)
   const clippedImage = await safeLoadImage(outputFilepath, componentInfo.DimensionsPixels)
   
-  const clippedImgurUrl = await uploadToS3(clippedImage, templativeToken)
+  const clippedImgurUrl = await uploadImageToS3(clippedImage, templativeToken)
   if (!clippedImgurUrl) {
     console.log(`!!! Failed to upload clipped image for ${componentInstructions.uniqueName}, falling back to local file.`);
     return outputFilepath;
@@ -243,11 +247,11 @@ async function clipAndGatherUrls(tabletopSimulatorImageDirectoryPath, componentI
     let clippedBackUrl = null
     if (componentInstructions.backInstructions) {
       console.log("Has back instructions!")
-      clippedBackUrl = await clipFrontImageAndUploadToS3(componentInstructions, componentInstructions.backInstructions, componentInfo, templativeToken)
+      clippedBackUrl = await clipFrontImageAnduploadImageToS3(componentInstructions, componentInstructions.backInstructions, componentInfo, templativeToken)
     }
     
     const tasks = componentInstructions.frontInstructions.map(async (instruction) => {
-      const frontClippedS3Url = await clipFrontImageAndUploadToS3(componentInstructions, instruction, componentInfo, templativeToken)
+      const frontClippedS3Url = await clipFrontImageAnduploadImageToS3(componentInstructions, instruction, componentInfo, templativeToken)
       
       standeesNameQuantityUrls.push({
         name: instruction.name,

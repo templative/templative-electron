@@ -60,26 +60,7 @@ const createWindow = () => {
     })
 }
 
-const logError = async (error, route, additionalContext = {}) => {
-    try {
-        await axios.post('https://api.templative.net/logging', {
-            error: {
-                type: error.name,
-                message: error.message,
-                stacktrace: error.stack
-            },
-            route: route,
-            additionalContext: {
-                ...additionalContext,
-                application_layer: 'electron',
-                electron_version: process.versions.electron,
-                app_version: app.getVersion()
-            }
-        });
-    } catch (err) {
-        console.error('Failed to log error:', err);
-    }
-};
+
 
 const initializeApp = async () => {
     try {        
@@ -89,7 +70,6 @@ const initializeApp = async () => {
         setupAppUpdateListener();
         await loadLastProject();
     } catch (err) {
-        await logError(err, 'app_initialization');
         error(err);
         await sleep(2000);
         await shutdown();
@@ -147,17 +127,18 @@ process.on('SIGINT', async () => {
 });
 
 process.on('uncaughtException', async (err) => {
-    await logError(err, 'process_uncaught_exception');
+    error(`Uncaught Exception: ${err}`);
+    Sentry.captureException(err);
     await shutdown();
 });
 
 process.on('unhandledRejection', async (err) => {
-    await logError(err, 'process_unhandled_rejection');
+    error(`Unhandled Rejection: ${err}`);
+    Sentry.captureException(err);
     await shutdown();
 });
 
-ipcMain.on('error', async (event, error) => {
-    await logError(error, 'ipc_error', {
-        sender: event.sender.getTitle()
-    });
+ipcMain.on('error', async (event, errorData) => {
+    error(`Renderer Error: ${errorData}`);
+    Sentry.captureException(new Error(errorData));
 });

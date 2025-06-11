@@ -14,6 +14,10 @@ const {captureMessage, captureException } = require("../../../sentryElectronWrap
  * @returns {Promise<Array>} - Array of object states
  */
 async function createObjectStates(producedDirectoryPath, tabletopSimulatorDirectoryPath, templativeToken) {
+  if (!templativeToken) {
+    console.log("!!! No templative token provided, skipping object state creation.");
+    return null;
+  }
   const objectStates = [];
   let index = 0;
   const directories = await fs.readdir(producedDirectoryPath, { withFileTypes: true });
@@ -54,6 +58,10 @@ async function createObjectStates(producedDirectoryPath, tabletopSimulatorDirect
  * @returns {Promise<Object|null>} - Object state or null if failed
  */
 async function createObjectState(componentDirectoryPath, tabletopSimulatorDirectoryPath, tabletopSimulatorImageDirectoryPath, componentIndex, componentCountTotal, templativeToken) {
+  if (!templativeToken) {
+    console.log("!!! No templative token provided, skipping object state creation.");
+    return null;
+  }
   try {    
     const componentInstructionsFilepath = path.join(componentDirectoryPath, "component.json");
     const componentInstructions = JSON.parse(await fs.readFile(componentInstructionsFilepath, 'utf8'));

@@ -30,7 +30,12 @@ const simulator = new Command('simulator')
     }
     
     await writeSimulatorFile(simulatorDirectory);
-    return await convertToTabletopSimulator(inputPath, simulatorDirectory);
+    // const templativeToken = await getSessionToken();
+    // if (!templativeToken) {
+    //   return { success: false, error: 'You must be logged into Templative to create a Tabletop Simulator save.' };
+    // }
+    const templativeToken = null;
+    return await convertToTabletopSimulator(inputPath, simulatorDirectory, templativeToken);
   });
 
 

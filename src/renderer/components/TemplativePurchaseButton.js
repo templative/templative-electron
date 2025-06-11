@@ -16,7 +16,7 @@ export default class TemplativePurchaseButton extends React.Component {
         this.setState({isHovering: false})
     }
     goToTemplativeWebsite = async () => {
-        await ipcRenderer.invoke(channels.TO_SERVER_OPEN_URL, "https://www.templative.net/purchase")
+        await ipcRenderer.invoke(channels.TO_SERVER_OPEN_URL, "https://www.templative.net/pricing")
     }
     render() {
         return <button 

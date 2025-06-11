@@ -1,8 +1,7 @@
 import React from "react";
 import ReactMarkdown from 'react-markdown';
 import "./MapSearch.css"
-import TemplativePurchaseButton from "../../TemplativePurchaseButton";
-import TemplativeClient from "../../utility/TemplativeClient"
+import {searchForAPublisher} from "../../../../shared/TemplativeApiClient"
 
 
 const settings = {
@@ -59,7 +58,7 @@ export default class MapSearch extends React.Component {
             idealPlayerCount: this.state.idealPlayerCount,
             openToCrowdfunding: this.state.openToCrowdfunding,
         }
-        var message = await TemplativeClient.searchForAPublisher(this.props.email, this.props.token, JSON.stringify(content))
+        var message = await searchForAPublisher(this.props.email, this.props.token, JSON.stringify(content))
         this.setState({response: message, isLoading: false, ended: Date.now()})
     }
     searchForAPublisher = async () => {
@@ -110,7 +109,7 @@ export default class MapSearch extends React.Component {
                 <button 
                     className="btn btn-outline-warning publisher-search-button" 
                     disabled={disabled} 
-                    onClick={this.searchForAPublisher}
+                    onClick={() => this.searchForAPublisher()}
                 >
                     Search for a Publisher
                 </button>

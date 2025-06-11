@@ -17,6 +17,10 @@ const { getAdapter } = require('./customObjectAdapter');
  * @returns {Promise<Object|null>} - Custom object state or null if failed
  */
 async function createCustom(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal, templativeToken) {
+  if (!templativeToken) {
+    console.log("!!! No templative token provided, skipping custom object creation.");
+    return null;
+  }
   // Check if SimulatorCreationTask is specified
   if (!componentInfo.hasOwnProperty("SimulatorCreationTask") || 
       componentInfo["SimulatorCreationTask"] === "none") {

@@ -12,6 +12,10 @@ const { createObjectStates, createComponentLibrary } = require('./objectCreation
  * @returns {Promise<number>} - 1 if successful
  */
 async function convertToTabletopSimulator(producedDirectoryPath, tabletopSimulatorDirectoryPath, templativeToken) {
+  if (!templativeToken) {
+    console.log("!!! No templative token provided, skipping Tabletop Simulator conversion.");
+    return;
+  }
 
   producedDirectoryPath = path.resolve(producedDirectoryPath);
   tabletopSimulatorDirectoryPath = path.resolve(tabletopSimulatorDirectoryPath);

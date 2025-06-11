@@ -1,5 +1,6 @@
 import React from 'react';
-import axios from 'axios';
+import * as Sentry from "@sentry/electron/renderer";
+const templativeApiClient = require('../shared/TemplativeApiClient');
 
 class ErrorBoundary extends React.Component {
     state = {
@@ -10,18 +11,11 @@ class ErrorBoundary extends React.Component {
 
     async logError(error, errorInfo) {
         try {
-            await axios.post('https://api.templative.net/logging', {
-                error: {
-                    type: error.name,
-                    message: error.message,
-                    stacktrace: error.stack
-                },
-                route: 'react_error_boundary',
-                additionalContext: {
-                    application_layer: 'react',
-                    componentStack: errorInfo?.componentStack,
-                    reactVersion: React.version
-                }
+            // Report error to Sentry
+            Sentry.withScope((scope) => {
+                scope.setTag('errorBoundary', true);
+                scope.setContext('errorInfo', errorInfo);
+                Sentry.captureException(error);
             });
         } catch (err) {
             console.error('Failed to log error:', err);
@@ -34,6 +28,7 @@ class ErrorBoundary extends React.Component {
 
     componentDidCatch(error, errorInfo) {
         this.setState({ errorInfo });
+        // Log the error to Sentry
         this.logError(error, errorInfo);
     }
 

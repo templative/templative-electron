@@ -1,7 +1,7 @@
 const path = require('path');
 const { Image } = require('image-js');
 const { safeLoadImage, createPlaceholderImage } = require('./imageUtils');
-const { uploadToS3 } = require('./imageUploader');
+const { uploadImageToS3 } = require('../../../../../../shared/TemplativeApiClient');
 const { findBoxiestShape } = require('../utils/geometryUtils');
 const { copyFile } = require('../utils/fileUtils');
 const {captureMessage, captureException } = require("../../../sentryElectronWrapper");
@@ -47,7 +47,13 @@ function paintImageOnto(targetImage, sourceImage, x, y) {
  * @returns {Promise<Array|null>} - [imgurUrl, totalCount, cardColumnCount, cardRowCount] or null if failed
  */
 async function createCompositeImage(componentName, componentType, quantity, frontInstructions, backInstructions, tabletopSimulatorImageDirectoryPath, componentInfo, templativeToken) {
+  if (!templativeToken) {
+    console.log("!!! No templative token provided, skipping composite image creation.");
+    return [null, 0, 0, 0];
+  }
+  
   try {
+    
     const uniqueCardCount = frontInstructions.length;
 
     if (uniqueCardCount > 69) {
@@ -172,7 +178,7 @@ async function createCompositeImage(componentName, componentType, quantity, fron
     await tiledImage.save(frontImageFilepath);
 
     // Upload the image to S3
-    var url = await uploadToS3(tiledImage, templativeToken);
+    var url = await uploadImageToS3(tiledImage, templativeToken);
     if (!url) {
       console.log(`!!! Failed to upload composite image for ${componentName}, falling back to local file.`);
       url = frontImageFilepath
@@ -199,6 +205,10 @@ async function createCompositeImage(componentName, componentType, quantity, fron
  * @returns {Promise<string|null>} - URL of the uploaded image or null if failed
  */
 async function placeAndUploadBackImage(name, componentType, backInstructions, tabletopSimulatorImageDirectoryPath, componentInfo, templativeToken) {
+  if (!templativeToken) {
+    console.log("!!! No templative token provided, skipping back image upload.");
+    return null;
+  }
   try {
     if (!componentInfo.hasOwnProperty("DimensionsPixels")) {
       console.log(`!!! Skipping ${componentType} that has no DimensionsPixels.`);
@@ -226,7 +236,7 @@ async function placeAndUploadBackImage(name, componentType, backInstructions, ta
     }
     
     // Upload the image to S3
-    const url = await uploadToS3(image, templativeToken);
+    const url = await uploadImageToS3(image, templativeToken);
     if (!url) {
       console.log(`!!! Failed to upload back image for ${name}, falling back to local file.`);
       return backInstructions.filepath;
@@ -254,6 +264,10 @@ async function copyBackImageToImages(componentName, backInstructions, tabletopSi
 }
 
 async function createD6CompositeImage(name, color, filepaths, tabletopSimulatorImageDirectoryPath, templativeToken) {
+  if (!templativeToken) {
+    console.log("!!! No templative token provided, skipping D6 composite image creation.");
+    return null;
+  }
   try {
     // Create a square image 2048x2048px with the specified color
     const imageSize = 2048;
@@ -319,7 +333,7 @@ async function createD6CompositeImage(name, color, filepaths, tabletopSimulatorI
     }
     const localImageFilepath = path.join(tabletopSimulatorImageDirectoryPath, `${name}-d6.png`);
     await baseImage.save(localImageFilepath);
-    const imageUrl = await uploadToS3(baseImage, templativeToken);
+    const imageUrl = await uploadImageToS3(baseImage, templativeToken);
     if (!imageUrl) {
       console.log(`!!! Failed to upload die image for ${name}, falling back to local file.`);
       return localImageFilepath;

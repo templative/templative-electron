@@ -1,4 +1,4 @@
-const { updateTemplativeFileForDescription, promptChatGPT } = require('../storefrontClient');
+const { updateTemplativeFileForDescription, promptChatGPT } = require('../../../../shared/TemplativeApiClient');
 
 // You might want to move these to a config file
 const AUTH_TOKEN = "arijaerg";

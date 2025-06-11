@@ -3,7 +3,7 @@ const axios = require("axios");
 const os = require("os");
 const {  shell, BrowserWindow,BrowserView, app } = require('electron')
 const { channels } = require("../shared/constants");
-const { verifyCredentials, isTokenValid, initiateGoogleOAuth, refreshToken, logout, loginIntoGameCrafter, checkProductOwnership } = require("./templativeWebsiteClient")
+const { loginUsingEmailAndPassword, isTokenValid, initiateGoogleOAuth, refreshToken, logout, loginIntoGameCrafter, doesUserOwnTemplative } = require("../shared/TemplativeApiClient")
 const { 
     clearSessionToken, 
     clearEmail, 
@@ -64,7 +64,7 @@ const giveLogout = async (event, args) => {
 }
 
 const login = async (_, email, password) => {
-    var response = await verifyCredentials(email, password)
+    var response = await loginUsingEmailAndPassword(email, password)
     if (response.statusCode === axios.HttpStatusCode.Unauthorized || response.statusCode === axios.HttpStatusCode.Forbidden ) {
         BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_INVALID_LOGIN_CREDENTIALS);
         return
@@ -250,7 +250,7 @@ async function handleDeepLink(url) {
                 // Check ownership for OAuth users
                 let ownershipInfo = { hasProduct: false };
                 try {
-                    const ownershipResponse = await checkProductOwnership(user.email, "TEMPLATIVE", token);
+                    const ownershipResponse = await doesUserOwnTemplative(user.email, token);
                     ownershipInfo = { hasProduct: ownershipResponse.hasProduct };
                 } catch (ownershipError) {
                     console.error('Error checking ownership during OAuth callback:', ownershipError);
@@ -312,7 +312,7 @@ async function handleDeepLink(url) {
         // Check ownership for legacy OAuth users
         let ownershipInfo = { hasProduct: false };
         try {
-            const ownershipResponse = await checkProductOwnership(email, "TEMPLATIVE", token);
+            const ownershipResponse = await doesUserOwnTemplative(email, token);
             ownershipInfo = { hasProduct: ownershipResponse.hasProduct };
         } catch (ownershipError) {
             console.error('Error checking ownership during legacy OAuth callback:', ownershipError);
@@ -442,7 +442,7 @@ const checkTemplativeOwnership = async () => {
             return { hasProduct: false, statusCode: 401 };
         }
         
-        const response = await checkProductOwnership(email, "TEMPLATIVE", token);
+        const response = await doesUserOwnTemplative(email, token);
         return response;
     } catch (error) {
         console.error('Error checking Templative ownership:', error);
