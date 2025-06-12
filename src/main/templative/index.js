@@ -40,8 +40,9 @@ const createTemplativeComponent = withLogCapture(async (event, data) => {
 
 const produceTemplativeProject = withLogCapture(async (event, request) => {
   try {
-    const { isDebug, isComplex, componentFilter, language, directoryPath } = request;
-    const NOT_CLIPPED = false;
+    const {  isClipping, componentFilter,  directoryPath } = request;
+    const COMPLEX = true;
+    const ENGLISH = "en";
     const NOT_PUBLISHED = false;
     const settings = await readOrCreateSettingsFile();
     const isCacheIgnored = settings.isCacheIgnored;
@@ -54,10 +55,10 @@ const produceTemplativeProject = withLogCapture(async (event, request) => {
     await createProduceGameWorker({
         directoryPath,
         componentFilter,
-        isSimple: !isComplex,
+        isSimple: !COMPLEX,
         isPublished: NOT_PUBLISHED,
-        language,
-        isClipped: NOT_CLIPPED,
+        language: ENGLISH,
+        isClipped: isClipping,
         renderMode,
         renderProgram,
         overlappingRenderingTasks

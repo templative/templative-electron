@@ -84,8 +84,8 @@ module.exports = [
         }
     },
     {
-        description: "Components tagged 'book' or 'packaging' have IsPrintingDisabled set to true",
-        condition: (component) => component.Tags && (component.Tags.includes("book") || component.Tags.includes("packaging")),
+        description: "Components tagged 'book' have IsPrintingDisabled set to true",
+        condition: (component) => component.Tags && (component.Tags.includes("book")),
         setValue: (component) => {
             component.IsPrintingDisabled = true;
             return ["IsPrintingDisabled"];

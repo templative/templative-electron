@@ -1014,7 +1014,7 @@ const COMPONENT_INFO = {
       "packaging",
       "mint"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
@@ -1049,7 +1049,7 @@ const COMPONENT_INFO = {
       "packaging",
       "small"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -1084,7 +1084,7 @@ const COMPONENT_INFO = {
       "packaging",
       "medium"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -1119,7 +1119,7 @@ const COMPONENT_INFO = {
       "large",
       "packaging"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -1151,7 +1151,7 @@ const COMPONENT_INFO = {
       "packaging",
       "booster"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
@@ -1184,7 +1184,7 @@ const COMPONENT_INFO = {
       "tuck",
       "box"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -1217,7 +1217,7 @@ const COMPONENT_INFO = {
       "tuck",
       "box"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -1250,7 +1250,7 @@ const COMPONENT_INFO = {
       "tuck",
       "box"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -1283,7 +1283,7 @@ const COMPONENT_INFO = {
       "tuck",
       "box"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -1316,7 +1316,7 @@ const COMPONENT_INFO = {
       "tuck",
       "box"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -1598,7 +1598,7 @@ const COMPONENT_INFO = {
       "bridge",
       "hookbox"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -1634,7 +1634,7 @@ const COMPONENT_INFO = {
       "bridge",
       "hookbox"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -1669,7 +1669,7 @@ const COMPONENT_INFO = {
       "bridge",
       "hookbox"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -1703,7 +1703,7 @@ const COMPONENT_INFO = {
       "bridge",
       "hookbox"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -2414,7 +2414,7 @@ const COMPONENT_INFO = {
       "packaging",
       "box"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
@@ -2446,7 +2446,7 @@ const COMPONENT_INFO = {
       "packaging",
       "box"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
@@ -3067,7 +3067,7 @@ const COMPONENT_INFO = {
       "box",
       "hookbox"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -3103,7 +3103,7 @@ const COMPONENT_INFO = {
       "box",
       "hookbox"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -3137,7 +3137,7 @@ const COMPONENT_INFO = {
       "box",
       "tuckbox"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -3263,7 +3263,7 @@ const COMPONENT_INFO = {
       "packaging",
       "prototype"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -3297,7 +3297,7 @@ const COMPONENT_INFO = {
       "retail",
       "packaging"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -3564,7 +3564,7 @@ const COMPONENT_INFO = {
       "large",
       "packaging"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -3597,7 +3597,7 @@ const COMPONENT_INFO = {
       "large",
       "packaging"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -3761,7 +3761,7 @@ const COMPONENT_INFO = {
       "pro",
       "medium"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -3795,7 +3795,7 @@ const COMPONENT_INFO = {
       "medium",
       "prototype"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -4029,7 +4029,7 @@ const COMPONENT_INFO = {
       "packaging",
       "medium"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -4198,7 +4198,7 @@ const COMPONENT_INFO = {
       "sticker",
       "stickers"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": true,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
@@ -4327,7 +4327,7 @@ const COMPONENT_INFO = {
       "box",
       "booster"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -4359,7 +4359,7 @@ const COMPONENT_INFO = {
       "packaging",
       "envelope"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
@@ -4394,7 +4394,7 @@ const COMPONENT_INFO = {
       "poker",
       "hookbox"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -4430,7 +4430,7 @@ const COMPONENT_INFO = {
       "poker",
       "hookbox"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -4466,7 +4466,7 @@ const COMPONENT_INFO = {
       "poker",
       "hookbox"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -4502,7 +4502,7 @@ const COMPONENT_INFO = {
       "poker",
       "hookbox"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -4538,7 +4538,7 @@ const COMPONENT_INFO = {
       "poker",
       "hookbox"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -4574,7 +4574,7 @@ const COMPONENT_INFO = {
       "poker",
       "hookbox"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -5130,7 +5130,7 @@ const COMPONENT_INFO = {
       "small",
       "pro"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -5165,7 +5165,7 @@ const COMPONENT_INFO = {
       "packaging",
       "insert"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
@@ -5198,7 +5198,7 @@ const COMPONENT_INFO = {
       "small",
       "prototype"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -5532,7 +5532,7 @@ const COMPONENT_INFO = {
       "packaging",
       "insert"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
@@ -5696,7 +5696,7 @@ const COMPONENT_INFO = {
       "hook",
       "square"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -5731,7 +5731,7 @@ const COMPONENT_INFO = {
       "hook",
       "square"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -5797,7 +5797,7 @@ const COMPONENT_INFO = {
       "tuck",
       "square"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -5830,7 +5830,7 @@ const COMPONENT_INFO = {
       "tuck",
       "square"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -6093,7 +6093,7 @@ const COMPONENT_INFO = {
       "hook",
       "tarot"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -6128,7 +6128,7 @@ const COMPONENT_INFO = {
       "hook",
       "tarot"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -6162,7 +6162,7 @@ const COMPONENT_INFO = {
       "tuck",
       "tarot"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -6195,7 +6195,7 @@ const COMPONENT_INFO = {
       "tuck",
       "tarot"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
@@ -6697,7 +6697,7 @@ const COMPONENT_INFO = {
       "tall",
       "packaging"
     ],
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "IsDisabled": false,
     "PlaygroundCreationTask": "none",
     "SimulatorCreationTask": "none",
@@ -6730,7 +6730,7 @@ const COMPONENT_INFO = {
       "box"
     ],
     "IsDisabled": false,
-    "IsPrintingDisabled": true,
+    "IsPrintingDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
     "Key": "VHSBox",

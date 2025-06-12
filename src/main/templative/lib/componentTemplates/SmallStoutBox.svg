@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-     viewBox="0 0 3600 3000"
-     width="3600"
-     height="3000"
-     version="1.1"
-     id="svg193"
-     sodipodi:docname="SmallStoutBoxTop.svg"
-     inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
-     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:svg="http://www.w3.org/2000/svg">
+   viewBox="0 0 3600 3000"
+   width="3600"
+   height="3000"
+   version="1.1"
+   id="svg193"
+   sodipodi:docname="SmallStoutBox.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs193">
     <defs
-         id="defs193">
-        <defs
-             id="defs1">
-            <style
-                 id="style1">
+       id="defs1">
+      <style
+         id="style1">
       .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18 {
         fill: none;
       }
@@ -245,333 +245,334 @@
         letter-spacing: -.026em;
       }
     </style>
-        </defs>
     </defs>
-    <sodipodi:namedview
-         id="namedview193"
-         pagecolor="#505050"
-         bordercolor="#eeeeee"
-         borderopacity="1"
-         inkscape:showpageshadow="0"
-         inkscape:pageopacity="0"
-         inkscape:pagecheckerboard="0"
-         inkscape:deskcolor="#d1d1d1"
-         inkscape:zoom="0.21056069"
-         inkscape:cx="1811.8292"
-         inkscape:cy="2203.6402"
-         inkscape:window-width="1872"
-         inkscape:window-height="1027"
-         inkscape:window-x="62"
-         inkscape:window-y="25"
-         inkscape:window-maximized="1"
-         inkscape:current-layer="svg193" />
-    <path
-         class="cls-49"
-         d="M -1.44e-5,-1.2e-5 V 3000 H 3600 V -1.2e-5 Z"
-         id="path1"
-         style="stroke-width:4.16667"
-         sodipodi:nodetypes="ccccc" />
-    <polygon
-         class="cls-12"
-         points="207.344,653.582 214.544,653.582 218.796,702.761 645.204,702.761 649.456,653.582 656.656,653.582 660.908,649.33 713.752,649.33 713.751,564.606 649.455,502.503 804.2,500.344 804.2,496.092 850.999,496.092 850.999,223.908 804.2,223.908 804.2,219.656 649.455,217.497 713.751,155.394 713.752,70.67 660.908,70.67 656.656,66.418 649.456,66.418 645.204,17.239 218.796,17.239 214.544,66.418 207.344,66.418 203.092,70.67 150.248,70.67 150.249,155.394 214.545,217.497 59.8,219.656 59.8,223.908 13.001,223.908 13.001,496.092 59.8,496.092 59.8,500.344 214.545,502.503 150.249,564.606 150.248,649.33 203.092,649.33 "
-         id="clipping"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)"
-         style="fill:#888888;fill-opacity:1;stroke:none" />
-    <polyline
-         class="cls-13"
-         points="226.045 493.503 223.545 493.503 223.545 491.003"
-         id="polyline1"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-9"
-         x1="931.4375"
-         y1="2025.2458"
-         x2="931.4375"
-         y2="964.45001"
-         id="line1"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="223.545 228.997 223.545 226.497 226.045 226.497"
-         id="polyline2"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-6"
-         x1="962.53333"
-         y1="943.73749"
-         x2="2647.8083"
-         y2="943.73749"
-         id="line2"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="637.955 226.497 640.455 226.497 640.455 228.997"
-         id="polyline3"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-9"
-         x1="2668.5625"
-         y1="974.75"
-         x2="2668.5625"
-         y2="2035.5459"
-         id="line3"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="640.455 491.003 640.455 493.503 637.955 493.503"
-         id="polyline4"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-6"
-         x1="2637.4668"
-         y1="2056.2625"
-         x2="952.19165"
-         y2="2056.2625"
-         id="line4"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="226.046 208.497 223.546 208.497 223.546 205.997"
-         id="polyline5"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-14"
-         x1="931.44171"
-         y1="837.72498"
-         x2="931.44171"
-         y2="353.75"
-         id="line5"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="223.546 82.428 223.546 79.928 226.046 79.928"
-         id="polyline6"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-7"
-         x1="962.53333"
-         y1="333.03333"
-         x2="2647.8042"
-         y2="333.03333"
-         id="line6"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="637.954 79.928 640.454 79.928 640.454 82.428"
-         id="polyline7"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-14"
-         x1="2668.5583"
-         y1="364.04584"
-         x2="2668.5583"
-         y2="848.02081"
-         id="line7"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="640.454 205.997 640.454 208.497 637.954 208.497"
-         id="polyline8"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-7"
-         x1="2637.4668"
-         y1="868.73749"
-         x2="952.1958"
-         y2="868.73749"
-         id="line8"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="226.046 640.073 223.546 640.073 223.546 637.573"
-         id="polyline9"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-14"
-         x1="931.44171"
-         y1="2635.9583"
-         x2="931.44171"
-         y2="2151.9834"
-         id="line9"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="223.546 514.004 223.546 511.504 226.046 511.504"
-         id="polyline10"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-7"
-         x1="962.53333"
-         y1="2131.2666"
-         x2="2647.8042"
-         y2="2131.2666"
-         id="line10"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="637.954 511.504 640.454 511.504 640.454 514.004"
-         id="polyline11"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-14"
-         x1="2668.5583"
-         y1="2162.2793"
-         x2="2668.5583"
-         y2="2646.2542"
-         id="line11"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="640.454 637.573 640.454 640.073 637.954 640.073"
-         id="polyline12"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-7"
-         x1="2637.4668"
-         y1="2666.9709"
-         x2="952.1958"
-         y2="2666.9709"
-         id="line12"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="79.219 491.392 76.719 491.354 76.719 488.854"
-         id="polyline13"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-10"
-         x1="319.66251"
-         y1="2015.8167"
-         x2="319.66251"
-         y2="972.62915"
-         id="line13"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="76.719 230.902 76.719 228.402 79.219 228.367"
-         id="polyline14"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-5"
-         x1="350.71664"
-         y1="951.24579"
-         x2="835.70416"
-         y2="944.54169"
-         id="line14"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="203.045 226.656 205.545 226.622 205.545 229.122"
-         id="polyline15"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-2"
-         x1="856.4375"
-         y1="975.25"
-         x2="856.4375"
-         y2="2034.9667"
-         id="line15"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="205.545 490.861 205.545 493.361 203.045 493.322"
-         id="polyline16"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-4"
-         x1="825.3833"
-         y1="2055.1875"
-         x2="340.39581"
-         y2="2047.6292"
-         id="line16"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="784.948 228.59 787.447 228.629 787.447 231.129"
-         id="polyline17"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-10"
-         x1="3281.0293"
-         y1="984.11249"
-         x2="3281.0293"
-         y2="2027.3"
-         id="line17"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="787.447 489.081 787.447 491.581 784.948 491.616"
-         id="polyline18"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-5"
-         x1="3249.9792"
-         y1="2048.6833"
-         x2="2764.9917"
-         y2="2055.3875"
-         id="line18"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="661.122 493.327 658.622 493.361 658.622 490.861"
-         id="polyline19"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-2"
-         x1="2744.2583"
-         y1="2024.6792"
-         x2="2744.2583"
-         y2="964.96252"
-         id="line19"
-         style="stroke-width:4.16667" />
-    <polyline
-         class="cls-13"
-         points="658.622 229.122 658.622 226.622 661.121 226.661"
-         id="polyline20"
-         transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
-    <line
-         class="cls-4"
-         x1="2775.3125"
-         y1="944.7417"
-         x2="3260.2959"
-         y2="952.29999"
-         id="line20"
-         style="stroke-width:4.16667" />
-    <rect
-         class="cls-3"
-         x="893.9375"
-         y="906.23749"
-         width="1812.125"
-         height="1187.5292"
-         id="rect20" />
-    <rect
-         class="cls-17"
-         x="893.94171"
-         y="2093.7625"
-         width="1812.1208"
-         height="610.70837"
-         id="rect21" />
-    <rect
-         class="cls-18"
-         x="893.94171"
-         y="295.53333"
-         width="1812.1208"
-         height="610.70416"
-         id="rect22" />
-    <line
-         class="cls-11"
-         x1="3317.8376"
-         y1="915.77917"
-         x2="3317.8376"
-         y2="2085.3125"
-         id="line22"
-         style="stroke-width:4.16667" />
-    <line
-         class="cls-11"
-         x1="282.16251"
-         y1="914.6875"
-         x2="282.16251"
-         y2="2084.2209"
-         id="line23"
-         style="stroke-width:4.16667" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview193"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.42112138"
+     inkscape:cx="1818.953"
+     inkscape:cy="1630.1713"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg193" />
+  <path
+     class="cls-49"
+     d="M -1.44e-5,-1.2e-5 V 3000 H 3600 V -1.2e-5 Z"
+     id="path1"
+     style="stroke-width:4.16667"
+     sodipodi:nodetypes="ccccc" />
+  <polygon
+     class="cls-12"
+     points="207.344,653.582 214.544,653.582 218.796,702.761 645.204,702.761 649.456,653.582 656.656,653.582 660.908,649.33 713.752,649.33 713.751,564.606 649.455,502.503 804.2,500.344 804.2,496.092 850.999,496.092 850.999,223.908 804.2,223.908 804.2,219.656 649.455,217.497 713.751,155.394 713.752,70.67 660.908,70.67 656.656,66.418 649.456,66.418 645.204,17.239 218.796,17.239 214.544,66.418 207.344,66.418 203.092,70.67 150.248,70.67 150.249,155.394 214.545,217.497 59.8,219.656 59.8,223.908 13.001,223.908 13.001,496.092 59.8,496.092 59.8,500.344 214.545,502.503 150.249,564.606 150.248,649.33 203.092,649.33 "
+     id="clipping"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)"
+     style="fill:#888888;fill-opacity:1;stroke:none" />
+  <rect
+     class="cls-3"
+     x="893.9375"
+     y="906.23749"
+     width="1812.125"
+     height="1187.5292"
+     id="actualSize"
+     style="fill:#b7b7b7;fill-opacity:1;stroke:none" />
+  <polyline
+     class="cls-13"
+     points="226.045 493.503 223.545 493.503 223.545 491.003"
+     id="polyline1"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-9"
+     x1="931.4375"
+     y1="2025.2458"
+     x2="931.4375"
+     y2="964.45001"
+     id="line1"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="223.545 228.997 223.545 226.497 226.045 226.497"
+     id="polyline2"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-6"
+     x1="962.53333"
+     y1="943.73749"
+     x2="2647.8083"
+     y2="943.73749"
+     id="line2"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="637.955 226.497 640.455 226.497 640.455 228.997"
+     id="polyline3"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-9"
+     x1="2668.5625"
+     y1="974.75"
+     x2="2668.5625"
+     y2="2035.5459"
+     id="line3"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="640.455 491.003 640.455 493.503 637.955 493.503"
+     id="polyline4"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-6"
+     x1="2637.4668"
+     y1="2056.2625"
+     x2="952.19165"
+     y2="2056.2625"
+     id="line4"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="226.046 208.497 223.546 208.497 223.546 205.997"
+     id="polyline5"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-14"
+     x1="931.44171"
+     y1="837.72498"
+     x2="931.44171"
+     y2="353.75"
+     id="line5"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="223.546 82.428 223.546 79.928 226.046 79.928"
+     id="polyline6"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-7"
+     x1="962.53333"
+     y1="333.03333"
+     x2="2647.8042"
+     y2="333.03333"
+     id="line6"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="637.954 79.928 640.454 79.928 640.454 82.428"
+     id="polyline7"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-14"
+     x1="2668.5583"
+     y1="364.04584"
+     x2="2668.5583"
+     y2="848.02081"
+     id="line7"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="640.454 205.997 640.454 208.497 637.954 208.497"
+     id="polyline8"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-7"
+     x1="2637.4668"
+     y1="868.73749"
+     x2="952.1958"
+     y2="868.73749"
+     id="line8"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="226.046 640.073 223.546 640.073 223.546 637.573"
+     id="polyline9"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-14"
+     x1="931.44171"
+     y1="2635.9583"
+     x2="931.44171"
+     y2="2151.9834"
+     id="line9"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="223.546 514.004 223.546 511.504 226.046 511.504"
+     id="polyline10"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-7"
+     x1="962.53333"
+     y1="2131.2666"
+     x2="2647.8042"
+     y2="2131.2666"
+     id="line10"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="637.954 511.504 640.454 511.504 640.454 514.004"
+     id="polyline11"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-14"
+     x1="2668.5583"
+     y1="2162.2793"
+     x2="2668.5583"
+     y2="2646.2542"
+     id="line11"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="640.454 637.573 640.454 640.073 637.954 640.073"
+     id="polyline12"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-7"
+     x1="2637.4668"
+     y1="2666.9709"
+     x2="952.1958"
+     y2="2666.9709"
+     id="line12"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="79.219 491.392 76.719 491.354 76.719 488.854"
+     id="polyline13"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-10"
+     x1="319.66251"
+     y1="2015.8167"
+     x2="319.66251"
+     y2="972.62915"
+     id="line13"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="76.719 230.902 76.719 228.402 79.219 228.367"
+     id="polyline14"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-5"
+     x1="350.71664"
+     y1="951.24579"
+     x2="835.70416"
+     y2="944.54169"
+     id="line14"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="203.045 226.656 205.545 226.622 205.545 229.122"
+     id="polyline15"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-2"
+     x1="856.4375"
+     y1="975.25"
+     x2="856.4375"
+     y2="2034.9667"
+     id="line15"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="205.545 490.861 205.545 493.361 203.045 493.322"
+     id="polyline16"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-4"
+     x1="825.3833"
+     y1="2055.1875"
+     x2="340.39581"
+     y2="2047.6292"
+     id="line16"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="784.948 228.59 787.447 228.629 787.447 231.129"
+     id="polyline17"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-10"
+     x1="3281.0293"
+     y1="984.11249"
+     x2="3281.0293"
+     y2="2027.3"
+     id="line17"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="787.447 489.081 787.447 491.581 784.948 491.616"
+     id="polyline18"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-5"
+     x1="3249.9792"
+     y1="2048.6833"
+     x2="2764.9917"
+     y2="2055.3875"
+     id="line18"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="661.122 493.327 658.622 493.361 658.622 490.861"
+     id="polyline19"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-2"
+     x1="2744.2583"
+     y1="2024.6792"
+     x2="2744.2583"
+     y2="964.96252"
+     id="line19"
+     style="stroke-width:4.16667" />
+  <polyline
+     class="cls-13"
+     points="658.622 229.122 658.622 226.622 661.121 226.661"
+     id="polyline20"
+     transform="matrix(4.1666667,0,0,4.1666667,-1.44e-5,-1.2e-5)" />
+  <line
+     class="cls-4"
+     x1="2775.3125"
+     y1="944.7417"
+     x2="3260.2959"
+     y2="952.29999"
+     id="line20"
+     style="stroke-width:4.16667" />
+  <rect
+     class="cls-17"
+     x="893.94171"
+     y="2093.7625"
+     width="1812.1208"
+     height="610.70837"
+     id="rect21" />
+  <rect
+     class="cls-18"
+     x="893.94171"
+     y="295.53333"
+     width="1812.1208"
+     height="610.70416"
+     id="rect22" />
+  <line
+     class="cls-11"
+     x1="3317.8376"
+     y1="915.77917"
+     x2="3317.8376"
+     y2="2085.3125"
+     id="line22"
+     style="stroke-width:4.16667" />
+  <line
+     class="cls-11"
+     x1="282.16251"
+     y1="914.6875"
+     x2="282.16251"
+     y2="2084.2209"
+     id="line23"
+     style="stroke-width:4.16667" />
 </svg>

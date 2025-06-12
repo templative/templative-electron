@@ -185,15 +185,30 @@ async function getTemplateScalingRatio(componentType) {
         c 0,-62.13334 50.366671,-112.5 112.500001,-112.5 62.13333,0 112.5,50.36666 112.5,112.5 0,62.13333 -50.36667,112.5 -112.5,112.5 -62.13333,0 -112.500001,-50.36667 -112.500001,-112.5
         z
         */
-        const templateFileName = componentInfo.TemplateFiles[0];
-        // console.log(__dirname);
-        if (__dirname.includes('app.asar')) {
-            templatePath = join(__dirname, '../../../componentTemplates', `${templateFileName}.svg`);
-        } else {
-            templatePath = join(__dirname, '../../src/main/templative/lib/componentTemplates', `${templateFileName}.svg`);
+        const filenamesToAttempt = [...componentInfo.TemplateFiles, componentType];
+        let svgContent = null;
+        let templatePath = null;
+        let found = false;
+        for (const templateFileName of filenamesToAttempt) {
+            if (!templateFileName) continue;
+            try {
+                if (__dirname.includes('app.asar')) {
+                    templatePath = join(__dirname, '../../../componentTemplates', `${templateFileName}.svg`);
+                } else {
+                    templatePath = join(__dirname, '../../src/main/templative/lib/componentTemplates', `${templateFileName}.svg`);
+                }
+                svgContent = await readFile(templatePath, 'utf8');
+                found = true;
+                break;
+            } catch (err) {
+                // File not found, try next
+                continue;
+            }
         }
-        // console.log(`Template path: ${templatePath}`);
-        const svgContent = await readFile(templatePath, 'utf8');
+        if (!found) {
+            // No template file found, use default scaling
+            return { widthRatio: 1, heightRatio: 1 };
+        }
         const parser = new DOMParser();
         const svgDoc = parser.parseFromString(svgContent, 'image/svg+xml');
         
@@ -295,9 +310,6 @@ async function getScaledComponentSize(componentType, baseSizeInches) {
 }
 
 module.exports = {
-    calculatePathBoundingBox,
     getTemplateScalingRatio,
-    getScaledComponentSize,
-    ACTUAL_SIZE_ELEMENT_ID,
-    CLIPPING_ELEMENT_ID
+    getScaledComponentSize
 };

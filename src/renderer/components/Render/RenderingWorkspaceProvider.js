@@ -55,6 +55,11 @@ class RenderingWorkspaceProvider extends React.Component {
         markdownEditorScrollPosition: 0,
         markdownPreviewScrollPosition: 0,
         markdownPreviewOpen: false,
+
+        // Render
+        isClipping: false,
+        isComplexRendering: true,
+        isDebugRendering: false,
     };
   }
 
@@ -234,6 +239,18 @@ class RenderingWorkspaceProvider extends React.Component {
     }));
   };
 
+  toggleClipping = () => {
+    this.setState(prevState => ({ isClipping: !prevState.isClipping }));
+  };
+
+  toggleComplexRendering = () => {
+    this.setState(prevState => ({ isComplexRendering: !prevState.isComplexRendering }));
+  };
+
+  toggleDebugRendering = () => {
+    this.setState(prevState => ({ isDebugRendering: !prevState.isDebugRendering }));
+  };
+
   render() {
     return (
       <RenderingWorkspaceContext.Provider
@@ -270,6 +287,9 @@ class RenderingWorkspaceProvider extends React.Component {
           setSelectedFontTab: this.setSelectedFontTab,
           toggleCompositionsExtended: this.toggleCompositionsExtended,
           toggleStockCompositionsExtended: this.toggleStockCompositionsExtended,
+          toggleClipping: this.toggleClipping,
+          toggleComplexRendering: this.toggleComplexRendering,
+          toggleDebugRendering: this.toggleDebugRendering,
         }}
       >
         {this.props.children}

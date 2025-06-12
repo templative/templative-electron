@@ -16,9 +16,6 @@ export default function RenderPanel({ templativeRootDirectoryPath, templativeMes
     const renderingContext = useContext(RenderingWorkspaceContext);
     const outputContext = useContext(OutputDirectoriesContext);
     
-    const [isDebugRendering, setIsDebugRendering] = useState(false);
-    const [isComplexRendering, setIsComplexRendering] = useState(true);
-    const [selectedLanguage, setSelectedLanguage] = useState("en");
     const [isProcessing, setIsProcessing] = useState(false);
     const [isResizing, setIsResizing] = useState(false);
     const [components, setComponents] = useState([]);
@@ -89,10 +86,8 @@ export default function RenderPanel({ templativeRootDirectoryPath, templativeMes
 
     const renderTemplativeProject = async () => {
         const request = {
-            isDebug: isDebugRendering,
-            isComplex: isComplexRendering,
+            isClipping: renderingContext.isClipping,
             componentFilter: renderingContext.selectedComponentFilter,
-            language: selectedLanguage,
             directoryPath: templativeRootDirectoryPath,
         };
         
@@ -171,13 +166,7 @@ export default function RenderPanel({ templativeRootDirectoryPath, templativeMes
                         <RenderButton 
                             hasComponents={components.length > 0}
                             selectedComponent={renderingContext.selectedComponentFilter} 
-                            selectedLanguage={selectedLanguage} 
-                            isDebugRendering={isDebugRendering}
-                            isComplexRendering={isComplexRendering}
-                            toggleDebugCallback={() => setIsDebugRendering(!isDebugRendering)}
-                            toggleComplexCallback={() => setIsComplexRendering(!isComplexRendering)}
                             renderTemplativeProjectCallback={renderTemplativeProject}
-                            setLanguageCallback={(e) => setSelectedLanguage(e.target.value)}
                         />
                     </div>
                     <LoggedMessages 
