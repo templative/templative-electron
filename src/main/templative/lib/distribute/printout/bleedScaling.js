@@ -166,13 +166,13 @@ async function getTemplateScalingRatio(componentType) {
     try {
         const componentInfo = COMPONENT_INFO[componentType];
         if (!componentInfo || !componentInfo.TemplateFiles || componentInfo.TemplateFiles.length === 0) {
-            console.log(`No template file found for ${componentType}, using default scaling`);
+            // console.log(`No template file found for ${componentType}, using default scaling`);
             return { widthRatio: 1, heightRatio: 1 };
         }
         const sizePixels = componentInfo.DimensionsPixels ;
         const sizeInches = componentInfo.DimensionsInches;
-        console.log(`Size: ${sizePixels[0]} x ${sizePixels[1]} pixels`);
-        console.log(`Size: ${sizeInches[0]} x ${sizeInches[1]} inches`);
+        // console.log(`Size: ${sizePixels[0]} x ${sizePixels[1]} pixels`);
+        // console.log(`Size: ${sizeInches[0]} x ${sizeInches[1]} inches`);
         
         /*
         Actual pixel size: 300x300px
@@ -186,13 +186,13 @@ async function getTemplateScalingRatio(componentType) {
         z
         */
         const templateFileName = componentInfo.TemplateFiles[0];
-        console.log(__dirname);
+        // console.log(__dirname);
         if (__dirname.includes('app.asar')) {
             templatePath = join(__dirname, '../../../componentTemplates', `${templateFileName}.svg`);
         } else {
             templatePath = join(__dirname, '../../src/main/templative/lib/componentTemplates', `${templateFileName}.svg`);
         }
-        console.log(`Template path: ${templatePath}`);
+        // console.log(`Template path: ${templatePath}`);
         const svgContent = await readFile(templatePath, 'utf8');
         const parser = new DOMParser();
         const svgDoc = parser.parseFromString(svgContent, 'image/svg+xml');
@@ -209,11 +209,11 @@ async function getTemplateScalingRatio(componentType) {
             elementChosen = CLIPPING_ELEMENT_ID;
             clippingElement = svgDoc.getElementById(elementChosen);
             if (!clippingElement) {
-                console.log(`No sizing element found in template for ${componentType}, using default scaling`);
+                // console.log(`No sizing element found in template for ${componentType}, using default scaling`);
                 return { widthRatio: 1, heightRatio: 1 };
             }
         }
-        console.log(`Using ${elementChosen} for ${componentType}`);
+        // console.log(`Using ${elementChosen} for ${componentType}`);
         
         let clippingWidth, clippingHeight;
         
@@ -228,12 +228,12 @@ async function getTemplateScalingRatio(componentType) {
             // For path elements, calculate bounding box
             const pathData = clippingElement.getAttribute('d');
             if (!pathData) {
-                console.log(`Path element has no 'd' attribute for ${componentType}, using default scaling`);
+                // console.log(`Path element has no 'd' attribute for ${componentType}, using default scaling`);
                 return { widthRatio: 1, heightRatio: 1 };
             }
             
             const boundingBox = calculatePathBoundingBox(pathData);
-            console.log(`Bounding box: boundingBox.x: ${boundingBox.x}, boundingBox.y: ${boundingBox.y}, boundingBox.width: ${boundingBox.width}, boundingBox.height: ${boundingBox.height}`);
+            // console.log(`Bounding box: boundingBox.x: ${boundingBox.x}, boundingBox.y: ${boundingBox.y}, boundingBox.width: ${boundingBox.width}, boundingBox.height: ${boundingBox.height}`);
             clippingWidth = boundingBox.width;
             clippingHeight = boundingBox.height;
         } else if (tagName === 'circle') {
@@ -247,16 +247,16 @@ async function getTemplateScalingRatio(componentType) {
             clippingWidth = rx * 2;
             clippingHeight = ry * 2;
         } else {
-            console.log(`Unsupported clipping element type '${tagName}' for ${componentType}, using default scaling`);
+            // console.log(`Unsupported clipping element type '${tagName}' for ${componentType}, using default scaling`);
             return { widthRatio: 1, heightRatio: 1 };
         }
         
         if (!clippingWidth || !clippingHeight || clippingWidth <= 0 || clippingHeight <= 0) {
-            console.log(`Invalid clipping dimensions for ${componentType}, using default scaling`);
+            // console.log(`Invalid clipping dimensions for ${componentType}, using default scaling`);
             return { widthRatio: 1, heightRatio: 1 };
         }
         
-        console.log(`${componentType}: ${clippingWidth} / ${totalWidth}, ${clippingHeight} / ${totalHeight}px`);
+        // console.log(`${componentType}: ${clippingWidth} / ${totalWidth}, ${clippingHeight} / ${totalHeight}px`);
         
         // Calculate the ratios (clipping area / total area)
         const clippingWidthRatio = clippingWidth / totalWidth;
@@ -267,7 +267,7 @@ async function getTemplateScalingRatio(componentType) {
         const widthScalingRatio = 1 / clippingWidthRatio;
         const heightScalingRatio = 1 / clippingHeightRatio;
         
-        console.log(`Template scaling for ${componentType}: width ratio ${widthScalingRatio.toFixed(3)}, height ratio ${heightScalingRatio.toFixed(3)} (clipping element: ${tagName})`);
+        // console.log(`Template scaling for ${componentType}: width ratio ${widthScalingRatio.toFixed(3)}, height ratio ${heightScalingRatio.toFixed(3)} (clipping element: ${tagName})`);
         
         return { 
             widthRatio: widthScalingRatio, 

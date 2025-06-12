@@ -15,8 +15,12 @@ async function createGame(gameCrafterSession, uniqueGameName, gameInfo, designer
 async function createFolderAtRoot(gameCrafterSession, name) {
   try {
     const user = await httpOperations.getUser(gameCrafterSession);
-    if (!user || !user.root_folder_id) {
-      console.error('Error: User information or root_folder_id is missing.');
+    if (!user) {
+      console.error('Error: User information is missing.');
+      throw new Error('Cannot create folder: User information not available.');
+    }
+    if (!user.root_folder_id) {
+      console.error('Error: root_folder_id is missing.');
       throw new Error('Cannot create folder: User root folder ID not available.');
     }
     return await httpOperations.postFolder(gameCrafterSession, name, user.root_folder_id);
