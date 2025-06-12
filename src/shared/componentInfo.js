@@ -4473,8 +4473,8 @@ const COMPONENT_INFO = {
     "Key": "PokerHookBox18",
     "PreviewUri": "PokerHookBox18.png",
     "TemplateFiles": [
-      "PokerHookBox18Inside",
-      "PokerHookBox18Outside"
+      "PokerHookBox18Front",
+      "PokerHookBox18Back"
     ]
   },
   "PokerHookBox54": {

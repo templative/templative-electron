@@ -1,4 +1,4 @@
-const { readdir, readFile, mkdir, writeFile } = require('fs/promises');
+const { readdir, readFile, mkdir, writeFile, access, unlink } = require('fs/promises');
 const { join, basename, dirname } = require('path');
 const { jsPDF } = require('jspdf');
 const { COMPONENT_INFO } = require('../../../../../shared/componentInfo.js');
@@ -6,6 +6,7 @@ const path = require('path');
 const { captureException } = require("../../sentryElectronWrapper.js");
 const { Jimp } = require('jimp');
 const { glob } = require('glob');
+const { getScaledComponentSize } = require('./bleedScaling');
 
 // Constants
 const diceTypes = ["CustomColorD6", "CustomWoodD6"];
@@ -124,7 +125,10 @@ async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size,
 async function getPageInformationForComponentType(componentType, pageWidthInches, pageHeightInches) {
     const componentInfo = COMPONENT_INFO[componentType];
     const isDie = diceTypes.includes(componentType);
-    let componentSizeInches = [...componentInfo.DimensionsInches];    
+    
+    // Apply template-based scaling to get the actual print size
+    let componentSizeInches = await getScaledComponentSize(componentType, componentInfo.DimensionsInches);
+    
     if (isDie) {
         const flangeSize = componentSizeInches[1] * 0.15;
         componentSizeInches = [
@@ -632,5 +636,7 @@ function mergeDictsRecursive(dict1, dict2) {
     }
     return dict1;
 }
+
+
 
 module.exports = { createPdfForPrinting }; 
