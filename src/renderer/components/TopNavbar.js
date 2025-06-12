@@ -7,12 +7,15 @@ class TopNavbar extends React.Component {
         var elements = this.props.topNavbarItems.map((topNavbarItem) => {
             var isSelectedRoute = this.props.currentRoute === topNavbarItem.route;
             var buttonClasses = `btn btn-secondary sidebar-button ${isSelectedRoute && "current-sidebar-button"}`;
+            var isRestrictingAccessToEditTools = !this.props.hasAComponent;
+            var validRoutesWhenRestricted = ["create", "project"];
+            var isRestrictedRoute = isRestrictingAccessToEditTools && !validRoutesWhenRestricted.includes(topNavbarItem.route);
             return (
                 <button 
                     key={topNavbarItem.name} 
                     className={buttonClasses} 
                     onClick={() => { this.props.updateRouteCallback(topNavbarItem.route) }}
-                    disabled={topNavbarItem.route !== "create" && !this.props.hasAComponent}
+                    disabled={isRestrictedRoute}
                 >
                     {topNavbarItem.svg}
                     <span className="top-navbar-item-label"><br/>{topNavbarItem.name}</span>

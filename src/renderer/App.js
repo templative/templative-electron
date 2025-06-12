@@ -14,6 +14,7 @@ import './App.css';
 import './Inputs.css';
 import Toast from './components/Toast/Toast';
 import NoLicenseView from "./components/NoLicenseView";
+import LoadingView from "./components/LoadingView";
 
 const { ipcRenderer } = require('electron');
 
@@ -28,6 +29,7 @@ class App extends React.Component {
         loginStatus: undefined,
         templativeMessages: [],
         currentView: "start",
+        loading: true,
         toast: {
             message: '',
             type: 'info',
@@ -62,32 +64,35 @@ class App extends React.Component {
     attemptToLoadLastTemplativeProject = async () => {
         var lastProjectDirectory = await ipcRenderer.invoke(channels.TO_SERVER_GET_CURRENT_PROJECT);
         if (!lastProjectDirectory) {
-            this.setState({templativeRootDirectoryPath: undefined, currentView: "start"});
-            return;
+            return { hasProject: false, projectPath: undefined };
         }
-        this.setState({templativeRootDirectoryPath: lastProjectDirectory, currentView: "editProject"});
+        return { hasProject: true, projectPath: lastProjectDirectory };
     }
     checkTemplativeOwnership = async () => {
         try {
             const ownershipResult = await ipcRenderer.invoke(channels.TO_SERVER_CHECK_TEMPLATIVE_OWNERSHIP);
-            
-            if (ownershipResult.hasProduct) {
-                this.setState({ ownsTemplative: true });
-                await this.attemptToLoadLastTemplativeProject();
-            } else {
-                this.setState({ ownsTemplative: false, currentView: "noLicense" });
-            }
+            return ownershipResult;
         } catch (error) {
             console.error('Error checking Templative ownership:', error);
-            // If there's an error checking ownership, assume they don't own it
-            this.setState({ ownsTemplative: false, currentView: "noLicense" });
+            return { hasProduct: false };
         }
     }
+    
+    initializeAppState = async () => {
+        this.setState({ loading: true });
+        
+        // First check if user is logged in
+        await ipcRenderer.invoke(channels.TO_SERVER_IS_LOGGED_IN);
+        // The response will be handled by the IPC listeners
+        // We don't set loading to false here because the IPC listeners will handle the full flow
+    }
+    
     componentDidMount = async () => {
         ipcRenderer.on(channels.GIVE_TEMPLATIVE_ROOT_FOLDER, (event, templativeRootDirectoryPath) => {
             this.setState({
                 templativeRootDirectoryPath: templativeRootDirectoryPath,
-                currentView: "editProject"
+                currentView: "editProject",
+                loading: false
             });
         });
         ipcRenderer.on(channels.GIVE_TOAST_MESSAGE, (event, message, type) => {
@@ -100,9 +105,16 @@ class App extends React.Component {
             })
         })
         ipcRenderer.on(channels.GIVE_LOGOUT, (_) => {
-            this.setState({loggedIn: false, email: "", password: "", status: "", currentView: "login"})
+            this.setState({
+                loggedIn: false, 
+                email: "", 
+                password: "", 
+                status: "", 
+                currentView: "login",
+                loading: false
+            })
         })
-        ipcRenderer.on(channels.GIVE_LOGGED_IN, (_, token, email, ownership) => {
+        ipcRenderer.on(channels.GIVE_LOGGED_IN, async (_, token, email, ownership) => {
             this.setState({
                 loggedIn: true, 
                 token: token, 
@@ -110,25 +122,54 @@ class App extends React.Component {
                 password: "", 
                 status: "",
                 ownsTemplative: ownership ? ownership.hasProduct : false
-            }, async () => {
-                // If user owns Templative, load the last project, otherwise show start view
-                if (ownership && ownership.hasProduct) {
-                    await this.attemptToLoadLastTemplativeProject();
-                } else {
-                    this.setState({ currentView: "noLicense" });
-                }
             });
+            
+            // Now that we're logged in, determine the appropriate view
+            if (ownership && ownership.hasProduct) {
+                // User owns Templative, check for last project
+                const projectInfo = await this.attemptToLoadLastTemplativeProject();
+                if (projectInfo.hasProject) {
+                    this.setState({
+                        templativeRootDirectoryPath: projectInfo.projectPath,
+                        currentView: "editProject",
+                        loading: false
+                    });
+                } else {
+                    this.setState({
+                        currentView: "start",
+                        loading: false
+                    });
+                }
+            } else {
+                // User doesn't own Templative
+                this.setState({
+                    currentView: "noLicense",
+                    loading: false
+                });
+            }
         })
         ipcRenderer.on(channels.GIVE_NOT_LOGGED_IN, (_) => {
-            this.setState({loggedIn: false, currentView: "login"})
+            this.setState({
+                loggedIn: false, 
+                currentView: "login",
+                loading: false
+            })
         })
         ipcRenderer.on(channels.GIVE_UNABLE_TO_LOG_IN, (_) => {
             trackEvent("user_login_error", { reason: "server_error" })
-            this.setState({loggedIn: false, loginStatus: "We were unable to log you in. Please try again later."})
+            this.setState({
+                loggedIn: false, 
+                loginStatus: "We were unable to log you in. Please try again later.",
+                loading: false
+            })
         })
         ipcRenderer.on(channels.GIVE_INVALID_LOGIN_CREDENTIALS, (_) => {
             trackEvent("user_login_error", { reason: "invalid_credentials" })
-            this.setState({loggedIn: false, loginStatus: "Invalid login credentials."})
+            this.setState({
+                loggedIn: false, 
+                loginStatus: "Invalid login credentials.",
+                loading: false
+            })
         })
         ipcRenderer.on(channels.GIVE_OPEN_CREATE_PROJECT_VIEW, (_) => {
             this.setState({ currentView: "createProject" })
@@ -140,8 +181,8 @@ class App extends React.Component {
         //     this.setState({templativeMessages:  [...this.state.templativeMessages, ...newMessages]})
         // });
 
-        await this.attemptToLoadLastTemplativeProject();
-        await ipcRenderer.invoke(channels.TO_SERVER_IS_LOGGED_IN);
+        // Initialize the app state
+        await this.initializeAppState();
     }
     
     updateRoute = (route) => {
@@ -179,8 +220,21 @@ class App extends React.Component {
     
     handleOwnershipConfirmed = async () => {
         // When ownership is confirmed, update state and load the last project
-        this.setState({ ownsTemplative: true });
-        await this.attemptToLoadLastTemplativeProject();
+        this.setState({ ownsTemplative: true, loading: true });
+        
+        const projectInfo = await this.attemptToLoadLastTemplativeProject();
+        if (projectInfo.hasProject) {
+            this.setState({
+                templativeRootDirectoryPath: projectInfo.projectPath,
+                currentView: "editProject",
+                loading: false
+            });
+        } else {
+            this.setState({
+                currentView: "start",
+                loading: false
+            });
+        }
     }
     
     handleLogout = async () => {
@@ -189,7 +243,23 @@ class App extends React.Component {
     }
     
     render() {
-        let element = <></>
+        // Show loading view while collecting initial information
+        if (this.state.loading) {
+            return <div className="App">
+                <div className="container-fluid">
+                    <LoadingView/>
+                </div>
+                {this.state.toast.visible && (
+                    <Toast 
+                        message={this.state.toast.message}
+                        type={this.state.toast.type}
+                        onClose={this.hideToast}
+                    />
+                )}
+            </div>
+        }
+
+        let element = <LoadingView/>
 
         if (!this.state.loggedIn) {
             element = <LoginView 

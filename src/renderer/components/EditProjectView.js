@@ -26,7 +26,7 @@ import RulesView from "./Rules/RulesView";
 export default class EditProjectView extends React.Component {
   
     state = {
-        currentRoute: "create",
+        currentRoute: "edit",
         tabbedFiles: [
             // new TabbedFile("COMPONENTS", path.join(this.props.templativeRootDirectoryPath, "component-compose.json"), true),
         ],
