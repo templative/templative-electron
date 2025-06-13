@@ -183,6 +183,9 @@ function setupOauthListener(window) {
         app.setAsDefaultProtocolClient('templative');
     }
 
+    // Start token validation interval
+    const tokenValidationInterval = startTokenValidationInterval();
+
     // Ensure we only have one instance of the app running
     const gotTheLock = app.requestSingleInstanceLock();
 
@@ -448,6 +451,43 @@ const checkTemplativeOwnership = async () => {
         console.error('Error checking Templative ownership:', error);
         return { hasProduct: false, statusCode: 500 };
     }
+}
+
+// Add this new function before the module.exports
+const startTokenValidationInterval = () => {
+    // Check token validity every 5 minutes
+    const INTERVAL_IS_NOW_HOURS = 1000 * 60 * 60;
+    const ONE_HOUR = 1 * INTERVAL_IS_NOW_HOURS;
+    const VALIDATION_INTERVAL = ONE_HOUR;
+    
+    return setInterval(async () => {
+        try {
+            const token = await getSessionToken();
+            if (!token) {
+                // No token found, ensure we're on login screen
+                BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_NOT_LOGGED_IN);
+                return;
+            }
+            
+            const response = await isTokenValid(token);
+            if (!response.isValid) {
+                // Token is invalid, attempt to refresh
+                const refreshSuccess = await attemptTokenRefresh();
+                if (!refreshSuccess) {
+                    // If refresh fails, log the user out and show login screen
+                    await clearSessionToken();
+                    await clearEmail();
+                    await clearUser();
+                    await clearOAuthState();
+                    BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_NOT_LOGGED_IN);
+                }
+            }
+        } catch (error) {
+            console.error('Error in token validation interval:', error);
+            // On any error, ensure we're on login screen
+            BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_NOT_LOGGED_IN);
+        }
+    }, VALIDATION_INTERVAL);
 }
 
 module.exports = {
