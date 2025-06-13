@@ -1,6 +1,6 @@
 .image-controls { 
     position: absolute;
-    bottom: 5px;
+    bottom: 0px;
     width: 100%;
     height: 25px;
     /* display: flex; */
@@ -28,4 +28,106 @@
 }
 .enlarge-image-magnifying-glass {
     cursor: pointer;
+}
+.component-output-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.component-output-header-left {
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.component-output-header-right {
+    flex:1;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+.component-output-header-right > * {
+    color: var(--color-accent);
+}
+.component-output-header-right > *:hover {
+    cursor: pointer;
+    color: var(--color-accent-hover);
+}
+.component-output-chevron {
+    margin-left: 4px;
+}
+.open-subcomponent-folder {
+    height: 18px;
+    width: 18px;
+    margin-right: 4px;
+    margin-left: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.open-subcomponent-folder > svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+    color: var(--color-accent);
+}
+.open-subcomponent-folder:hover > svg {
+    color: var(--color-accent-hover);
+    cursor: pointer;
+}
+.rendered-subcomponent-subdirectory-title {
+    color: var(--color-text-muted);
+}
+.output-image-container {
+    position: relative;
+    display: inline-block;
+    max-width: calc(24%) !important;
+    overflow: hidden !important;
+}
+
+.output-image-container-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.output-image {
+    border-style: solid;
+    /* border-radius: 6px; */
+    border-width: 1px;
+    border-color: var(--color-content-surface);
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease;
+}
+
+.output-image.rotated {
+    max-height: none;
+}
+
+/* Special handling for vertical orientation (90° or 270°) */
+.output-image-container-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+/* For extremely tall images (like 1:2 ratio) */
+@media (min-width: 768px) {
+    .output-image.tall-image.rotated {
+        max-width: 20%;
+    }
 }
