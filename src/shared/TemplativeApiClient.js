@@ -321,10 +321,6 @@ async function uploadImageToS3(image, token) {
         // Calculate MD5 hash locally
         const md5Hash = calculateMd5Hash(buffer);
         
-        console.log(`DEBUG: Token being sent (first 20 chars): ${token ? token.substring(0, 20) : 'undefined'}...`);
-        console.log(`DEBUG: Token type: ${typeof token}`);
-        console.log(`DEBUG: Token length: ${token ? token.length : 'N/A'}`);
-        
         // Request a presigned URL from the server with auth token
         const presignedResponse = await fetch(`${BASE_URL}/simulator/image/presigned-url`, {
             method: 'POST',
@@ -337,13 +333,9 @@ async function uploadImageToS3(image, token) {
             })
         });
         
-        console.log(`DEBUG: Response status: ${presignedResponse.status}`);
-        console.log(`DEBUG: Response status text: ${presignedResponse.statusText}`);
-        
         if (!presignedResponse.ok) {
             const errorData = await presignedResponse.text();
             console.log(`!!! Failed to get presigned URL: ${errorData}`);
-            console.log(`DEBUG: Full error response: ${errorData}`);
             return null;
         }
         

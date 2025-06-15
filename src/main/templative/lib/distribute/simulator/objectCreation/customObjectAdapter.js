@@ -31,7 +31,7 @@ async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstruc
     const isSingleCard = totalUniqueCards === 1 && (componentInstructions.frontInstructions[0].quantity * componentInstructions.quantity) === 1;
 
     if (isSingleCard) {
-      return await singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal);
+      return await singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal, templativeToken);
     }
 
     let deckType = 0;
@@ -104,6 +104,11 @@ async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstruc
 async function loadAndUploadImage(instruction, dimensions, componentName, side, templativeToken) {
   if (!instruction) return null;
   
+  if (!templativeToken) {
+    console.log(`!!! No templative token provided for ${side} image upload of ${componentName}`);
+    return null;
+  }
+  
   const image = await safeLoadImage(instruction.filepath, dimensions);
   if (!image) {
     console.log(`!!! Failed to load ${side} image for ${componentName}`);
@@ -121,6 +126,13 @@ async function loadAndUploadImage(instruction, dimensions, componentName, side, 
 
 async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentInstructions, componentInfo, componentIndex, componentCountTotal, templativeToken) {
   try {
+    if (!templativeToken) {
+      console.log("!!! No templative token provided in singleCardAdapter");
+      return null;
+    }
+
+    console.log(`DEBUG: Token in singleCardAdapter (first 20 chars): ${templativeToken.substring(0, 20)}...`);
+    
     let deckType = 0;  // default type
     if (componentInfo.Tags.includes("hex")) {
       deckType = 3;
