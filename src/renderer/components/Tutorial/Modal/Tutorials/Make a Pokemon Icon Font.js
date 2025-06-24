@@ -22,7 +22,7 @@ import typeContent from "./Images/IconFonts/typeContent.png"
 import giveItAOnceOver from "./Images/IconFonts/giveItAOnceOver.png"
 import coloredIcon from "./Images/IconFonts/coloredIcon.png"
 
-export default function CreatingAPokemonIconFont({goToTutorial, goToExternalLink}) {
+export default function MakeAPokemonIconFont({goToTutorial, goToExternalLink}) {
     return <>        
         <p>Create svgs in Inkscape or Illustrator or your favorite vector editor. Learn how I use Inkscape by watching this video.</p>
         

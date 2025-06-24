@@ -517,7 +517,7 @@ export default function MarkdownEditor({ markdownContent, onContentChange }) {
                     >
                         <EyeIcon/>
                     </button>
-                    <TutorialQuestionMark tutorialName="Make Your Rulebook" />
+                    <TutorialQuestionMark tutorialName="Make a Rulebook" />
                 </div>
                 </div>
             </div>

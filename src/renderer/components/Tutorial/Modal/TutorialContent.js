@@ -7,7 +7,7 @@ import CreateAProject from './Tutorials/Create a Project';
 import EditCompositions from "./Tutorials/Edit Compositions";
 import ExportToTabletopSimulator from "./Tutorials/Export to Tabletop Simulator";
 import GameContent from "./Tutorials/Game Content";
-import MakeAPokemonFont from './Tutorials/Make a Pokemon Font';
+import MakeAPokemonIconFont from './Tutorials/Make a Pokemon Icon Font';
 import MakeARulebook from "./Tutorials/Make a Rulebook";
 import ManageFonts from "./Tutorials/Manage Fonts";
 import ManageContent from "./Tutorials/Manage Content";
@@ -37,7 +37,7 @@ const TutorialElements = {
     "Upload to TheGameCrafter": UploadToTheGameCrafter,
     "Manage Fonts": ManageFonts,
     "Use Icon Fonts": UseIconFonts,
-    "Make a Pokemon Font": MakeAPokemonFont,
+    "Make a Pokemon Icon Font": MakeAPokemonIconFont,
 };
 
 const tutorialGroups = {
@@ -74,7 +74,7 @@ const tutorialGroups = {
     "Fonts": [
         "Manage Fonts",
         "Use Icon Fonts",
-        "Make a Pokemon Font",
+        "Make a Pokemon Icon Font",
     ],
 }
 
@@ -88,7 +88,7 @@ const tutorialAcknowledgements = {
     "Edit Compositions": "I will edit my compositions",
     "Export to Tabletop Simulator": "I will export to Tabletop Simulator",
     "Game Content": "I will describe my game",
-    "Make a Pokemon Font": "I will create my own icon font",
+    "Make a Pokemon Icon Font": "I will create my own icon font",
     "Make a Rulebook": "I will write some rules",
     "Manage Content": "I will add some content to my game",
     "Manage Fonts": "I will install some fonts",

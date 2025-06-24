@@ -152,7 +152,7 @@ const CreateProjectView = ({ goBackCallback }) => {
                       placeholder={`Perhaps ~/Documents/Templative/Projects${projectName !== "" ? `/${projectName}` : ""}?`}
                   />
                 }
-                <button className={`btn btn-outline-secondary browse-button ${projectLocation ? "shrink-browse-button" : ""}`} 
+                <button className={`btn btn-outline-primary browse-button ${projectLocation ? "shrink-browse-button" : ""}`} 
                     type="button" 
                     onClick={handleBrowseLocation}>
                     Browse...

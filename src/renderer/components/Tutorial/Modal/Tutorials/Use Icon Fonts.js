@@ -29,7 +29,7 @@ export default function IconFonts({goToTutorial, goToExternalLink}) {
         
         <HeadsUp message="Templative and Inkscape do not support multicolored icon fonts or multicolored emojis."/>
              
-        <p>Follow along as I create an Icon Font step by step in the <span className="tutorial-link" onClick={() => goToTutorial("Make a Pokemon Font")}>Creating a Pokemon Icon Font</span> tutorial.</p>
+        <p>Follow along as I create an Icon Font step by step in the <span className="tutorial-link" onClick={() => goToTutorial("Make a Pokemon Icon Font")}>Creating a Pokemon Icon Font</span> tutorial.</p>
         
         <HeadsUp message="Templative caches your art renders and doesn't know about fonts on your system. So cached results of your art may use old font settings."/>
         

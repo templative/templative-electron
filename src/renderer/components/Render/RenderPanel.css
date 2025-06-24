@@ -38,7 +38,7 @@
     flex: 0 0 auto;
 }
 .component-filter-container {
-    height: 270px;
+    height: 275px;
 }
 .component-filter-options {
     height: 185px;
@@ -49,9 +49,32 @@
     height: calc(100% - 600px);
 }
 .render-controls-column > .console-messages {
-    margin-top: 0.5em !important;
+    /* margin-top: 0.5em !important; */
     margin-bottom: 0.5em !important;
     height: 305px;
+}
+.render-controls {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    background-color: rgb(24, 30, 37);
+    height: 64px !important;
+}
+.render-controls > * {
+    border-bottom: 0.8px solid var(--color-border) !important;
+}
+.render-controls-left {
+    flex: 1;
+    height: 64px !important;
+}
+.render-controls-right {
+    width: 40px;
+    height: 64px !important;
+    border-top: 0.8px solid var(--color-border);
+}
+.render-controls-right > .tutorial-question-mark {
+    margin-top: 0.6em !important;
+    margin-left: 6px !important;
 }
 .header-wrapper {
     width: 100%;
@@ -67,6 +90,10 @@
 }
 .render-input-group {
     margin-bottom:0px !important;
+    border-bottom: none !important;
+}
+.render-input-group > * {
+    border-bottom: none !important;
 }
 .render-input-group:first-child,.render-input-group:first-child > * {
     /* border-bottom-left-radius: 0px !important;
@@ -76,6 +103,8 @@
 }
 .render-button {
     width: calc(100%);
+    margin-left: 8px;
+    z-index: auto !important;
 }
 .error-components-row {
     padding: 0.5em 1em 1em 1em;
@@ -299,11 +328,11 @@
 .resize-handle {
     position: absolute;
     top: 0;
+    z-index: auto !important;
     right: -5px;
     width: 10px;
     height: 100%;
     cursor: col-resize;
-    z-index: 10;
     opacity: 0;
 }
 
