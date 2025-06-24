@@ -48,7 +48,13 @@ module.exports = {
         test: /\.svg$/,
         type: 'asset/resource',
         generator: {
-          filename: 'src/main/templative/lib/componentTemplates/[name][ext]'
+          filename: (pathData) => {
+            const filename = pathData.filename;
+            if (filename.includes('componentTemplateOutlines')) {
+              return 'src/main/templative/lib/componentTemplateOutlines/[name][ext]';
+            }
+            return 'src/main/templative/lib/componentTemplates/[name][ext]';
+          }
         }
       }
     ],

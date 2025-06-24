@@ -9,6 +9,7 @@ module.exports = {
     arch: process.env.ARCH || undefined, // Use the ARCH environment variable
     extraResource: [
       "./src/main/templative/lib/componentTemplates",
+      "./src/main/templative/lib/componentTemplateOutlines",
     ],
     icon: "src/assets/images/icon",
     osxSign: process.env.SKIP_SIGNING === 'true' ? false : {
