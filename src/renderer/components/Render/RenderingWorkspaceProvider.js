@@ -60,6 +60,11 @@ class RenderingWorkspaceProvider extends React.Component {
         isClipping: false,
         isComplexRendering: true,
         isDebugRendering: false,
+
+        // Tutorial State
+        currentTutorialName: "Start a Project",
+        currentTutorialIndex: 0,
+        tutorialHistory: ["Start a Project"],
     };
   }
 
@@ -251,6 +256,57 @@ class RenderingWorkspaceProvider extends React.Component {
     this.setState(prevState => ({ isDebugRendering: !prevState.isDebugRendering }));
   };
 
+  // Tutorial State Management
+  setCurrentTutorialName = (name) => {
+    this.setState({ currentTutorialName: name });
+  };
+
+  setCurrentTutorialIndex = (index) => {
+    this.setState({ currentTutorialIndex: index });
+  };
+
+  setTutorialHistory = (history) => {
+    this.setState({ tutorialHistory: history });
+  };
+
+  goToTutorial = (name) => {
+    this.setState(prevState => {
+      const newIndex = prevState.currentTutorialIndex + 1;
+      const newHistory = [...prevState.tutorialHistory.slice(0, prevState.currentTutorialIndex + 1), name];
+      return {
+        currentTutorialName: name,
+        currentTutorialIndex: newIndex,
+        tutorialHistory: newHistory
+      };
+    });
+  };
+
+  goBackATutorial = () => {
+    this.setState(prevState => {
+      if (prevState.currentTutorialIndex > 0) {
+        const newIndex = prevState.currentTutorialIndex - 1;
+        return {
+          currentTutorialIndex: newIndex,
+          currentTutorialName: prevState.tutorialHistory[newIndex]
+        };
+      }
+      return prevState;
+    });
+  };
+
+  goForwardATutorial = () => {
+    this.setState(prevState => {
+      if (prevState.currentTutorialIndex < prevState.tutorialHistory.length - 1) {
+        const newIndex = prevState.currentTutorialIndex + 1;
+        return {
+          currentTutorialIndex: newIndex,
+          currentTutorialName: prevState.tutorialHistory[newIndex]
+        };
+      }
+      return prevState;
+    });
+  };
+
   render() {
     return (
       <RenderingWorkspaceContext.Provider
@@ -290,6 +346,15 @@ class RenderingWorkspaceProvider extends React.Component {
           toggleClipping: this.toggleClipping,
           toggleComplexRendering: this.toggleComplexRendering,
           toggleDebugRendering: this.toggleDebugRendering,
+          currentTutorialName: this.state.currentTutorialName,
+          currentTutorialIndex: this.state.currentTutorialIndex,
+          tutorialHistory: this.state.tutorialHistory,
+          setCurrentTutorialName: this.setCurrentTutorialName,
+          setCurrentTutorialIndex: this.setCurrentTutorialIndex,
+          setTutorialHistory: this.setTutorialHistory,
+          goToTutorial: this.goToTutorial,
+          goBackATutorial: this.goBackATutorial,
+          goForwardATutorial: this.goForwardATutorial,
         }}
       >
         {this.props.children}

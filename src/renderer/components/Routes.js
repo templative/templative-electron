@@ -1,6 +1,7 @@
 import React from "react"
 import FontIcon from "./TopBar/FontIcon.svg?react"
 import RulesIcon from "./TopBar/RulesIcon.svg?react"
+import LearnIcon from "./TopBar/LearnIcon.svg?react"
 export const TOP_NAVBAR_ITEMS = [
     // {
     //     name:"Plan",
@@ -10,6 +11,11 @@ export const TOP_NAVBAR_ITEMS = [
     //     name:"Prototype",
     //     route:"/create"
     // },
+    {
+        name:"Learn",
+        route:"learn",
+        svg: <LearnIcon className="topbar-icon" />
+    },
     {
         name:"Project",
         route:"project",

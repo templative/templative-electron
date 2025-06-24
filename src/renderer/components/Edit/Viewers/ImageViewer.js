@@ -137,7 +137,7 @@ export default class ImageViewer extends React.Component {
                         <button className="rotate-button" onClick={this.rotateImage} title="Rotate Image">{rotateIcon}</button>
                         <button className="rotate-button" onClick={this.openImageFolder} title="Open Image Folder">{openFolderIcon}</button>
                         <button className="rotate-button" onClick={this.openImageInDefaultApp} title="Open Image in Default App">{openInDefaultAppIcon}</button>
-                        <TutorialQuestionMark tutorialName="Image Viewer" />
+                        <TutorialQuestionMark tutorialName="Art" />
                     </div>
                     <div className="image-viewer-container">
                         {isVertical ? (

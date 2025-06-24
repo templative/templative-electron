@@ -1,5 +1,5 @@
 import React from 'react';
-
+import TutorialQuestionMark from '../Tutorial/TutorialQuestionMark';
 const SearchComponentsBox = ({ 
   isToggledToComponents, 
   toggleCustomOrStock, 
@@ -35,6 +35,7 @@ const SearchComponentsBox = ({
             <option value="cm">cm</option>
           </select>
         </div>
+        <TutorialQuestionMark tutorialName="Add Compositions" />
        </div>
       <div className="component-tabs">
         <button 

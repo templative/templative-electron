@@ -1,4 +1,4 @@
-.labeled-image {
+.App .labeled-image {
     width: calc(100% - 10em);
     margin-left: auto;
     margin-right: auto;
@@ -7,6 +7,7 @@
     object-fit: contain;
     border-radius: 6px;
     display: block;
+    cursor: zoom-in !important;
 }
 
 .image-caption {
@@ -16,6 +17,68 @@
     text-align: center;
     font-style: italic;
 }
+
+/* Modal Styles */
+.image-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.image-modal-content {
+    position: relative;
+    padding: 1em;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.image-modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.image-modal-close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.image-modal-overlay .image-modal-content .image-modal-image {
+    max-width: calc(90vw - 2em) !important;
+    max-height: calc(90vh - 2em) !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    cursor: zoom-out;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: block !important;
+}
+
 @media (max-width: 768px) {
     .labeled-image {
         width: 100%;
@@ -24,7 +87,18 @@
         margin-left: 0px;
         margin-right: 0px;
     }
+    
+    .image-modal-overlay {
+        padding: 10px;
+    }
+    
+    .image-modal-close {
+        top: -35px;
+        right: 0;
+        font-size: 1.5rem;
+    }
 }
+
 .col-md-6 .labeled-image {
     width: 100% !important;
 }

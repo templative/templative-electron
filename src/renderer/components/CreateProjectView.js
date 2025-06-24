@@ -137,7 +137,7 @@ const CreateProjectView = ({ goBackCallback }) => {
                       />
               </div>
               <div className="tutorial-question-mark-container">
-                <TutorialQuestionMark tutorialName="Creating your First Game"/>
+                <TutorialQuestionMark tutorialName="Create a Project"/>
               </div>
             </div>
             <div className="input-group location-input-group">

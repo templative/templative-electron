@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import fs from "fs/promises";
 import path from "path";
+import TutorialQuestionMark from "../Tutorial/TutorialQuestionMark";
 const { shell } = window.require("electron");
 
 export default function RegularFonts({templativeRootDirectoryPath}) {
@@ -235,8 +236,9 @@ export default function RegularFonts({templativeRootDirectoryPath}) {
                 <h1>Fonts</h1>
             </div>
             <div className="fonts-header-actions">
-                <button className="btn btn-outline-primary" onClick={openFontsDirectory}>Open Fonts Directory</button>
-                <button className="btn btn-primary" onClick={installAllVariants}>Install All</button>
+                <button className="btn btn-outline-primary btn-sm" onClick={openFontsDirectory}>Open Fonts Directory</button>
+                <button className="btn btn-primary btn-sm" onClick={installAllVariants}>Install All</button>
+                <TutorialQuestionMark tutorialName="Manage Fonts" />
             </div>
                 
         </div>
@@ -249,7 +251,7 @@ export default function RegularFonts({templativeRootDirectoryPath}) {
                         <div className="font-family-header">
                             <h2 className="font-family-name">{familyName}</h2>
                             <div className="font-family-actions">
-                                <button className="btn btn-outline-primary" onClick={() => {
+                                <button className="btn btn-outline-primary btn-sm" onClick={() => {
                                     installVariants(variants);
                                 }}>
                                     Install

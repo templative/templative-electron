@@ -8,7 +8,7 @@ class TopNavbar extends React.Component {
             var isSelectedRoute = this.props.currentRoute === topNavbarItem.route;
             var buttonClasses = `btn btn-secondary sidebar-button ${isSelectedRoute && "current-sidebar-button"}`;
             var isRestrictingAccessToEditTools = !this.props.hasAComponent;
-            var validRoutesWhenRestricted = ["create", "project"];
+            var validRoutesWhenRestricted = ["learn", "create", "project"];
             var isRestrictedRoute = isRestrictingAccessToEditTools && !validRoutesWhenRestricted.includes(topNavbarItem.route);
             return (
                 <button 

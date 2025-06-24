@@ -4,7 +4,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,12 +32,19 @@
     margin-bottom: 1rem;
     text-align: left;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
-    justify-content:left;
+    justify-content:space-between;
 }
-.tutorial-modal .modal-header > * {
-    display:inline-block;
+.tutorial-modal .modal-header-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 3px;
+}
+.tutorial-modal .modal-header-right {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
 }
 .modal-header .direction-button {
     height: 32px;
@@ -46,7 +52,7 @@
     color: var(--color-accent)
 }
 .modal-header .direction-button.disabled {
-    color: var(--color-content)
+    color: var(--color-accent-disabled)
 }
 .tutorial-modal .modal-title {
     margin: 0;
@@ -59,7 +65,7 @@
     color: var(--color-text);
     font-size: 1.5rem;
     cursor: pointer;
-    padding: 0.5rem;
+    margin: 0;
 }
 .tutorial-modal .tutorial-icon {
     width: 32px;
@@ -110,16 +116,57 @@
     display: inline-block;
     color: var(--color-accent);
     cursor: help;
+}
+.tutorial-question-mark:hover:not(.disabled) {
+    color: var(--color-accent-hover);
+}
+.tutorial-question-mark.unread:not(.disabled) {
+    --color-glow: hsla(234, 69%, 86%, 0.3);
+    /* Add a glowing effect to the unread tutorial question mark */
+    animation: tutorial-glow 1.2s infinite alternate;
+    filter: drop-shadow(0 0 4px var(--color-glow)) drop-shadow(0 0 8px var(--color-glow));
+}
+.tutorial-question-mark.disabled {
+    color: var(--color-text-muted);
+    cursor: not-allowed;
+}
 
+@keyframes tutorial-glow {
+    from {
+        filter: drop-shadow(0 0 2px var(--color-glow)) drop-shadow(0 0 4px var(--color-glow));
+    }
+    to {
+        filter: drop-shadow(0 0 8px var(--color-glow)) drop-shadow(0 0 12px var(--color-glow));
+    }
 }
 .tutorial-link {
     text-decoration: underline;
     color: var(--color-accent);
+}
+.tutorial-link:hover {
     cursor:help;
+    color: var(--color-accent-hover);
 }
 .external-link {
     text-decoration: underline;
     color: var(--color-info);
 
     cursor:pointer;
+}
+
+.tutorial-portal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tutorial-library-link-button {
+    margin-right: 4px;
+    margin-bottom: 4px;
 }

@@ -7,6 +7,7 @@ import EditableViewerJson from "../EditableViewerJson";
 import TemplativeAccessTools from "../../../TemplativeAccessTools";
 import FilepathsAutocompleteInput from "../ComponentsViewer/ComponentItems/FilepathsAutocompleteInput";
 import pieceIcon from "../../Icons/pieceIcon.svg?react"
+import TutorialQuestionMark from "../../../Tutorial/TutorialQuestionMark";
 const path = require("path")
 
 const DEFAULT_ARTDATA_ITEMS = {
@@ -237,6 +238,7 @@ export default class ArtdataViewer extends EditableViewerJson {
                             ariaLabel="Template Filename"
                             gameComposeDirectory="artTemplatesDirectory"
                         />
+                        <TutorialQuestionMark tutorialName="Art Recipes" />
                     </div>
                     {overlays}
                     <ArtdataAddButton addArtdataCallback={()=>this.addArtdataItem("overlays")} whatToAdd={"an Overlay"}/>

@@ -3,7 +3,7 @@ import "./GameCrafterLogin.css"
 const { ipcRenderer } = require('electron');
 import { channels } from "../../../../../shared/constants"
 import tgcLogo from "./theGameCrafterLogo.png"
-
+import TutorialQuestionMark from "../../../Tutorial/TutorialQuestionMark";
 export default class GameCrafterLoginControls extends React.Component {   
     login = async () => {
         const apiKey = "2BE78AA0-48C4-11EA-8F73-9878C15BC0AE"
@@ -30,11 +30,14 @@ export default class GameCrafterLoginControls extends React.Component {
     render() {
         return <div className="game-crafter-login-controls">
             <img src={tgcLogo} alt="TheGameCrafter Logo" className="tgc-logo" />
-            <button  
-                type="button" 
-                className="btn login-tgc-button" 
-                onClick={async () => await this.login()}
-            >Login to TheGameCrafter ↗</button>
+            <div className="game-crafter-login-controls-container">
+                <button  
+                    type="button" 
+                    className="btn login-tgc-button" 
+                    onClick={async () => await this.login()}
+                >Login to TheGameCrafter ↗</button>
+                <TutorialQuestionMark tutorialName="Upload to TheGameCrafter" />
+            </div>
         </div>
     }
 }

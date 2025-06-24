@@ -3,6 +3,7 @@ import KeyValueInput from "./KeyValueInput"
 import EditableViewerJson from "../EditableViewerJson";
 import "./GamedataViewer.css"
 import FileLoadFailure from "../FileLoadFailure";
+import TutorialQuestionMark from "../../../Tutorial/TutorialQuestionMark";
 const ignoredControlGamedataKeys = [
     "name"
 ]
@@ -120,13 +121,14 @@ export default class StudioGamedataViewer extends EditableViewerJson {
             />
         });
         
-        return <div className="tableContainer">
+        return <div className="tableContainer studio-gamedata-viewer">
             <div className="vertical-input-group">
                 <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
                     <span className="input-group-text input-group-text soft-label">name</span>
                     <input type="text" className="form-control value-field no-left-border" 
                         onChange={(event)=> this.updateValue("name", event.target.value.replace(/[<>:"/\\|?*]/g, ""))} 
                         value={this.state.content["name"]}/>     
+                    <TutorialQuestionMark tutorialName="Studio Content" /> 
                 </div>
             </div>
             

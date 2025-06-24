@@ -22,6 +22,8 @@ import { COMPONENT_INFO } from "../../shared/componentInfo";
 import { STOCK_COMPONENT_INFO } from "../../shared/stockComponentInfo";
 import ProjectPanel from "./Project/ProjectPanel";
 import RulesView from "./Rules/RulesView";
+import LearnView from "./Learn/LearnView";
+import './Tutorial/Tutorial.css';
 
 export default class EditProjectView extends React.Component {
   
@@ -765,6 +767,11 @@ export default class EditProjectView extends React.Component {
                 )}
                 {this.state.currentRoute === 'font' && (
                     <FontsView
+                        templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
+                    />
+                )}
+                {this.state.currentRoute === 'learn' && (
+                    <LearnView
                         templativeRootDirectoryPath={this.props.templativeRootDirectoryPath}
                     />
                 )}

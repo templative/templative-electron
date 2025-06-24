@@ -20,7 +20,8 @@ const DEFAULT_SETTINGS = {
     renderProgram: "Templative",
     overlappingRenderingTasks: "One at a Time",
     printSize: "Letter",
-    unit: "px"
+    unit: "px",
+    readTutorials: [],
 }
 
 async function readOrCreateSettingsFile() {

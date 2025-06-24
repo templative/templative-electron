@@ -10,6 +10,7 @@
     border-left: none !important;
 }
 .add-button {
+    z-index: auto !important;
     width:100%;
 }
 
@@ -117,4 +118,7 @@
 
 .artdata-up-arrow {
     border-left: 1px var(--color-gray) solid !important;
+}
+.artdata-viewer .tutorial-question-mark {
+    margin-left: 4px !important;
 }

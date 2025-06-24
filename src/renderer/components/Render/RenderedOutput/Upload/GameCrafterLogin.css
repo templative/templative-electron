@@ -37,3 +37,10 @@
     transform: translateY(-1px);
     filter: drop-shadow(2px 8px 6px rgba(0, 0, 0, 0.406));
 }
+.game-crafter-login-controls-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}

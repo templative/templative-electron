@@ -90,3 +90,8 @@
     height: calc(100% - 100px);
     overflow-y:visible;
 }
+.gamecrafter-header-buttons-right {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+}

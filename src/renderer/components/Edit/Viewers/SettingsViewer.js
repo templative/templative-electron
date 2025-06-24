@@ -13,6 +13,7 @@ const settingsFile = {
         requiresRestart: false,
         
     },
+    
     renderProgram: {
         title: "Which Rendering Program Should Templative Use?",
         section: "Rendering",
@@ -88,7 +89,7 @@ export default class SettingsViewer extends EditableViewerJson {
             <div className="settings-viewer-container">
                 {settingsSectionsArray.map((section) => {
                     const relevantSettings = Object.keys(settingsFile).filter((key) => settingsFile[key].section === section);
-                    return <div className="settings-section-container">
+                    return <div className="settings-section-container" key={section}>
                         <p className="settings-section-title">{section}</p>
                         {relevantSettings.map((key) => (
                             <div key={key}>

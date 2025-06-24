@@ -8,7 +8,9 @@ const TutorialPortal = ({ tutorialName, onHide, show }) => {
   
   // Use React's createPortal to render at the document body level
   return ReactDOM.createPortal(
-    <TutorialModal tutorialName={tutorialName} onHide={onHide} />,
+    <div className={`tutorial-portal-container`} onClick={onHide}>
+      <TutorialModal tutorialName={tutorialName} onHide={onHide} />
+    </div>,
     document.body
   );
 };

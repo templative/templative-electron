@@ -1,6 +1,6 @@
 import React from "react";
 import "./PrintPanel.css"
-
+import TutorialQuestionMark from "../../../Tutorial/TutorialQuestionMark";
 export default class CreatePrintoutButton extends React.Component {   
 
     render() {
@@ -11,9 +11,10 @@ export default class CreatePrintoutButton extends React.Component {
         else if (this.props.hasOutputDirectoryValue) {
             buttonMessage = "Create Printout"
         }
-        return <div className='vertical-input-group printout-controls'>
+        return <div className="printout-controls-container">
+            <div className='vertical-input-group printout-controls'>
             <div className="input-group input-group-sm printout-button-controls" data-bs-theme="dark">
-                <select value={this.props.size} onChange={(e)=>{this.props.setSizeCallback(e.target.value)}} className="form-select" id="inputGroupSelect01">
+                <select value={this.props.size} onChange={(e)=>{this.props.setSizeCallback(e.target.value)}} className="form-select printout-size-select" id="inputGroupSelect01">
                     <option value="LETTER">Letter</option>
                     <option value="TABLOID">Tabloid</option>
                     <option value="A3">A3</option>
@@ -36,6 +37,8 @@ export default class CreatePrintoutButton extends React.Component {
             <div className="input-group input-group-sm printout-button-controls " data-bs-theme="dark">
                 <button disabled={this.props.isCreatingPrintout || !this.props.hasOutputDirectoryValue} type="button" className="btn btn-primary create-printout-button" onClick={() => this.props.createPrintoutCallback()}>{buttonMessage}</button>            
             </div>
+        </div>
+        <TutorialQuestionMark tutorialName="Create a Print and Play" />
         </div>
     }
 }

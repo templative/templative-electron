@@ -41,6 +41,9 @@ export default class PrintPanel extends React.Component {
         var printoutFilepath = `${this.props.outputFolderPath}/printout.pdf`
         var showPDF = this.props.outputFolderPath !== undefined && fs.existsSync(printoutFilepath)
         return <div className='print-control'>
+            {(showPDF) && 
+                <iframe key={this.state.rerenderIframeKey} title="printout.pdf" src={`file://${printoutFilepath}`} className="printout-pdf-iframe" />
+            }
             <CreatePrintoutButton 
                 isCreatingPrintout={this.state.isCreatingPrintout}
                 hasOutputDirectoryValue={this.props.outputFolderPath !== undefined}
@@ -52,9 +55,7 @@ export default class PrintPanel extends React.Component {
                 toggleIsBackIncludedCallback={this.context.toggleIsPrintBackIncluded}
                 setSizeCallback={this.context.setPrintSize}
             />
-            {(showPDF) && 
-                <iframe key={this.state.rerenderIframeKey} title="printout.pdf" src={`file://${printoutFilepath}`} className="printout-pdf-iframe" />
-            }
+            
             
         </div>
     }

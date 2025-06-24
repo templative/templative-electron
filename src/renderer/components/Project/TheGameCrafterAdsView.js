@@ -1,5 +1,6 @@
 import React from "react";
 import path from "path";
+import TutorialQuestionMark from '../Tutorial/TutorialQuestionMark';
 const { ipcRenderer } = window.require('electron');
 const { channels } = require('../../../shared/constants');
 
@@ -20,14 +21,19 @@ export default function TheGameCrafterAdsView({ templativeRootDirectoryPath }) {
     return (
         <>
             <div className="gamecrafter-header">
-                <p className="gamecrafter-header-title">TheGameCrafter Store Images</p>
-                <button 
-                    className="btn btn-outline-primary open-folder-btn" 
-                    onClick={openGamecrafterFolder}
-                    title="Open gamecrafter folder"
-                >
-                    Open GameCrafter Ads Folder
-                </button>
+                <div className="gamecrafter-header-buttons-left">
+                    <p className="gamecrafter-header-title">TheGameCrafter Store Images</p>
+                </div>
+                <div className="gamecrafter-header-buttons-right">
+                    <button 
+                        className="btn btn-outline-primary btn-sm open-folder-btn" 
+                        onClick={openGamecrafterFolder}
+                        title="Open gamecrafter folder"
+                    >
+                        Open GameCrafter Ads Folder
+                    </button>
+                    <TutorialQuestionMark tutorialName="Upload to TheGameCrafter" />
+                </div>
             </div>
             <div className="gamecrafter-images">
                 {images.map((image) => {

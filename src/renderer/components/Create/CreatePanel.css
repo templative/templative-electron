@@ -160,6 +160,10 @@
 
 .search-components-box {
     width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.25em;
 }
 
 .search-components-box .form-control {

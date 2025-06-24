@@ -12,6 +12,7 @@ import EyeIcon from "./Icons/Eye.svg?react";
 import NumberedListIcon from "./Icons/NumberedList.svg?react";
 import UnorderedListIcon from "./Icons/UnorderedList.svg?react";
 import QuoteIcon from "./Icons/Quote.svg?react";
+import TutorialQuestionMark from "../Tutorial/TutorialQuestionMark";
 
 export default function MarkdownEditor({ markdownContent, onContentChange }) {
     const {
@@ -516,6 +517,7 @@ export default function MarkdownEditor({ markdownContent, onContentChange }) {
                     >
                         <EyeIcon/>
                     </button>
+                    <TutorialQuestionMark tutorialName="Make Your Rulebook" />
                 </div>
                 </div>
             </div>

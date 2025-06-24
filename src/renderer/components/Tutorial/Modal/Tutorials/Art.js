@@ -1,29 +1,49 @@
 import React, { useState, useEffect } from 'react';
-import LabeledImage from "../TutorialComponents/LabeledImage";
+import { TemplativeLabeledImage, LocalLabeledImage } from "../TutorialComponents/LabeledImage";
+import RelatedTutorials from "../TutorialComponents/RelatedTutorials";
+import XmlEditorExplanation from "./Explanations/xmlEditor";
 
-export default function Art({goToTutorial}) {
+import OverlayCombining from "./Images/OverlayCombining.png";
+import OverlaySeperating from "./Images/OverlaySeperating.png";
+
+export default function Art({goToTutorial, goToExternalLink}) {
     return <>
-        <p>Create art files so that your <span className="tutorial-link" onClick={() => goToTutorial("Art Recipes")}>Art Recipes</span> and modify it using your <span className="tutorial-link" onClick={() => goToTutorial("Content")}>Content files</span>.</p>
+        <p>Assemble final art for your <span className="tutorial-link" onClick={() => goToTutorial("Edit Compositions")}>compositions</span> by creating <span className="external-link" onClick={() => goToExternalLink("https://www.w3.org/TR/SVG11/")}>.svg</span> art files that your <span className="tutorial-link" onClick={() => goToTutorial("Art Recipes")}>art recipes</span> and <span className="tutorial-link" onClick={() => goToTutorial("Manage Content")}>content</span> files can modify. Place your svg art files in the <code>/art</code> directory. Use only <span className="external-link" onClick={() => goToExternalLink("https://www.w3.org/TR/SVG11/")}>svg</span> art files, and include any <code>.png</code> or <code>.jpg</code> files inside your svg files.</p>
         
-        <p>Templative places it's art files in the `/art/templates` and `/art/graphicalInserts` directories by default. The templates folder is used to as the starter art files for compositions, and the graphicalInserts directory is for files that will be overlaid on top of template art files.</p>
-        <p>Templative expects all art files it interacts with to be SVGs. Raster art can be included in the seperate svg.</p>
+        <p>Use programs like Inkscape or Adobe Illustrator to create your art files.</p>
+        
+        <h3>Use Templative to Assemble Art</h3>
+        
+        <p>Rather than manually writing <code>"Artillery, 10 health points, blue"</code> in the artwork, write <code>{"{name}"}</code> <code>{"{health}"}</code> and <code>{"{description}"}</code> in the artwork and add a text replacement art recipe command.</p>
+        
+        <p>Mock up a final version of your card, seperate it into different svg files, and use overlay commands in the art recipes to combine them.</p>
+        
+        <p>Instead of changing the color of the team emblem once for each player, add a style update to the art recipe to change the color of the team emblem.</p>
+        <LocalLabeledImage
+            src={OverlaySeperating}
+            caption="The basic card plus two overlays."
+        />
+        
+        <LocalLabeledImage
+            src={OverlayCombining}
+            caption="The final card, using the first overlay."
+        />
+        
 
         <h2>Art File Sizing</h2>
-        <p>Svg files must be sized pixel for pixel with the pixel sizing that TheGameCrafter expects. In most cases this is handled for you by Templative, but in the cases where you create art files yourself, the viewbox of your svgs and size of your art files must match the <em>pixel</em> dimensions TheGameCrafter asks for. For poker cards that 825x1125px.</p>
-        <LabeledImage
+        <p>Utilize Templative's default svg file size for the bottommost svg art file of your compositions, as they are setup to mirror the pixel dimensions that TheGameCrafter expects. In most cases this is handled for you by Templative, but in the cases where you create art files yourself, the viewbox of your svgs and size of your art files must match the <em>pixel</em> dimensions TheGameCrafter asks for (for poker cards that <code>825x1125px</code> with a scale of 1.</p>
+        <TemplativeLabeledImage
             src="/sizing.png"
             alt="Art Recipes operation examples"
             caption="Art files must match TheGameCrafter's pixel dimensions"
         />
         
         <h2>DPI</h2>
-        <p>Templative handles the resizing and output of our svgs into raster art for printing while maintaining the 300 DPI expected for print jobs. We set the sizing of our svgs to standardize the ways art files interact.</p>
+        <p>Rest easy knowing Templative handles the resizing and output of your svgs into raster art for printing while maintaining the 300 DPI expected for print jobs.</p>
         
         <h2>CMYK vs RGB</h2>
-        <p>Templative outputs art files as pngs, which do not support CYMK color profiles, instead using the RGB color space. Inkscape does not support support CYMK.</p>
-        <p>In practice this means that some colors can look slightly off when printed.</p>
+        <p>Note that Templative outputs art files as pngs, which only supports the RGB color profile, instead of the typical CYMK color profile used in printing. If you are concerned about the color safety of your output, pull the final svgs created by Templative into Illustrator and <span className="external-link" onClick={() => goToExternalLink("https://www.wikihow.com/Change-Adobe-Illustrator-to-CMYK")}>export using its CMYK color profile</span>.</p>
         
-        <h3>Maintaining CYMK Color Profiles for Final Printing</h3>
-        <p>Templative outputs both a final png <em>and a final svg</em>. If you are concerned about the color safety of your output, pull your final svgs into Illustrator and export using its CMYK color profile.</p>
+        <RelatedTutorials tutorialNames={["Art Recipes", "Manage Content"]} goToTutorial={goToTutorial} />
         </>
 }

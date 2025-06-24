@@ -5,7 +5,7 @@ const { shell, ipcRenderer } = window.require("electron");
 import { channels } from "../../../../shared/constants";
 import CreateIconFontModal from "./CreateIconFontModal";
 import IconFont from "./IconFont";
-
+import TutorialQuestionMark from "../../Tutorial/TutorialQuestionMark";
 
 export default function IconFonts({templativeRootDirectoryPath}) {
     const [iconFonts, setIconFonts] = useState([]);
@@ -112,17 +112,18 @@ export default function IconFonts({templativeRootDirectoryPath}) {
                 <h1>Icon Fonts</h1>
             </div>
             <div className="fonts-header-actions">
-                <button className="btn btn-outline-primary" onClick={openFontsDirectory}>
+                <button className="btn btn-outline-primary btn-sm" onClick={openFontsDirectory}>
                     Open Fonts Directory
                 </button>
-                <button className="btn btn-primary" onClick={() => setShowCreateModal(true)}>
+                <button className="btn btn-primary btn-sm" onClick={() => setShowCreateModal(true)}>
                     Create Icon Font
                 </button>
                 {iconFonts.length > 0 && (
-                    <button className="btn btn-primary" onClick={installAllIconFonts}>
+                    <button className="btn btn-primary btn-sm" onClick={installAllIconFonts}>
                         Install All
                     </button>
                 )}
+                <TutorialQuestionMark tutorialName="Use Icon Fonts" />
             </div>
         </div>
         

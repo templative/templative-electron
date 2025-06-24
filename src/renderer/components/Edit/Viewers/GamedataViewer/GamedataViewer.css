@@ -1,5 +1,6 @@
 .pieces-viewer {
     height: 100%;
+    overflow: visible;
 }
 .add-piece-button {
     width: 100%;
@@ -64,8 +65,8 @@ tr {
     padding-bottom: 0px !important;
 }
 .table-responsive-horizontal {
-    overflow-x: auto;
-    overflow-y: visible;
+    overflow-x: hidden;
+    overflow-y: auto;
     margin-bottom: 1rem;
 }
 .table-responsive-horizontal .table {
@@ -115,6 +116,7 @@ tr {
     gap: 6px;
     justify-content: space-between;
     width: 100%;
+    overflow: visible;
 }
 .pieces-controls-input-group > div {
     display: flex;
@@ -187,4 +189,8 @@ tr {
 
 .pieces-controls-input-group .selectable-tutorial-icon{
     color: hsl(214, 21%, 30%);
+}
+
+.studio-gamedata-viewer .tutorial-question-mark, .gamedata-viewer .tutorial-question-mark, .component-gamedata-viewer .tutorial-question-mark {
+    margin-left: 4px !important;
 }

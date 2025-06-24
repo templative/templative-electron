@@ -2,6 +2,7 @@ import React from "react";
 import KeyValueInput from "./KeyValueInput"
 import EditableViewerJson from "../EditableViewerJson";
 import "./GamedataViewer.css"
+import TutorialQuestionMark from "../../../Tutorial/TutorialQuestionMark";
 const ignoredControlGamedataKeys = [
     "name", "quantity", "category", "longDescription", "shortDescription", "maxPlayers", "minPlayers", "minAge", "playTime", "version", "versionName", "coolFactors"
 ]
@@ -127,6 +128,7 @@ export default class GameGamedataViewer extends EditableViewerJson {
                     <input type="text" className="form-control value-field no-left-border" 
                         onChange={(event)=> this.updateValue("name", event.target.value.replace(/[<>:"/\\|?*]/g, ""))} 
                         value={this.state.content["name"]}/>
+                    <TutorialQuestionMark tutorialName="Game Content" />
                 </div>
                 <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
 

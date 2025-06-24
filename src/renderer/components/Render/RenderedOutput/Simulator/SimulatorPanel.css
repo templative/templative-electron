@@ -7,7 +7,11 @@
     padding: 0.5em;
 }
 .simulator-package-controls {
-    width: 100%;
+    max-width: 715px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    height: 100%;
 }
 .create-simulator-button {
     width: 100%;
@@ -65,8 +69,10 @@
 /* .tabletop-simulator-saves.selected:hover {
     background-color: var(--color-content-surface);
 } */
- 
 .simulator-save-controls {
+    height: 100%;
+}
+.simulator-controls-container {
     max-width: 715px;
     margin-left: auto;
     margin-right: auto;
@@ -89,4 +95,10 @@
 .simulator-logo-container {
     height: calc(100% - 120px);
     width: 100%;
+}
+.simulator-save-controls .tutorial-question-mark {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    left: auto;
 }

@@ -8,6 +8,7 @@ import { ipcRenderer } from "electron";
 import { channels } from "../../../../../shared/constants";
 import SimulatorStockComponent from "./SimulatorStockComponent";
 import SimulatorStockComponentBag from "./SimulatorStockComponentBag";
+import TutorialQuestionMark from "../../../Tutorial/TutorialQuestionMark";
 const fs = require("fs/promises");
 const path = require('path');
 const fsOld = require('fs');
@@ -85,8 +86,13 @@ export default class SimulatorOutputExplorer extends EditableViewerJson {
             {this.state.hasLoaded && 
             <React.Fragment>
                 <div className="simulator-save-file-path-container">
-                    <span className="simulator-save-file-path">{path.basename(this.props.selectedSaveFilepath)}</span>
-                    <button className="btn btn-primary" onClick={() => this.openSimulatorSaveFile()}>Open Save File</button>
+                    <div className="simulator-save-file-path-container-left">
+                        <span className="simulator-save-file-path">{path.basename(this.props.selectedSaveFilepath)}</span>
+                    </div>
+                    <div className="simulator-save-file-path-container-right">
+                        <button className="btn btn-outline-primary btn-sm" onClick={() => this.openSimulatorSaveFile()}>Open Save File</button>
+                        <TutorialQuestionMark tutorialName="Export to Tabletop Simulator" />
+                    </div>
                 </div>
                 <div className="object-states">
                     {this.state.content["ObjectStates"].map(this.renderObjectState)}         

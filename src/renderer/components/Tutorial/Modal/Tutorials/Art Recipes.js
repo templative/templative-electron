@@ -1,118 +1,73 @@
 import React, { useState, useEffect } from 'react';
 import HeadsUp from "../TutorialComponents/HeadsUp";
-import LabeledImage from "../TutorialComponents/LabeledImage";
-
+import { TemplativeLabeledImage, LocalLabeledImage } from "../TutorialComponents/LabeledImage";
+import Charizard from "./Images/charizard.png";
+import RelatedTutorials from "../TutorialComponents/RelatedTutorials";
 export default function ArtRecipes({goToTutorial}) {
     return <>
-        <p>Use art recipes files to tell Templative how to modify <span className="tutorial-link" onClick={() => goToTutorial("Art")}>Art</span> using your <span className="tutorial-link" onClick={() => goToTutorial("Content")}>Content files</span>.</p>
-        <p>Each component has one to two pieces of art recipes. Usually there is a front art recipe, and a back art recipe. Art Recipes files themselves can be reused across compositions, but it is not atypical for every single composition to have its own art recipes.</p>
+        <p>Create the final art for your <span className="tutorial-link" onClick={() => goToTutorial("Edit Compositions")}>compositions</span> by using front and back art recipes that assemble your <span className="tutorial-link" onClick={() => goToTutorial("Art")}>art</span> files using your <span className="tutorial-link" onClick={() => goToTutorial("Manage Content")}>content</span> files.</p>
+        
+        
 
         <h2>Operations</h2>
-        <p>Art Recipes commands are seperated into overlays, style updates, and text replacements.</p>
+        <p>Use overlays, style updates, and text replacements to assemble your final art.</p>
         
-        <LabeledImage
+        <TemplativeLabeledImage
             src="/operations.png"
             alt="Art Recipes operation examples"
-            caption="Different types of art recipe operations"
+            caption="Different types of art recipe operations."
         />
-        <p>These operations are done in order, starting with loading the template art file specified at the top. By default, Templative looks for the starter template files in the `/art/templates` folder.</p>
-        <LabeledImage
-            src="/atTheTop.png"
-            alt="An example art recipes file"
-            caption="Sample art recipe configuration"
-        />
-
-        <p>As an example, if we wanted to change the background color to the `teamColor` value of the deck, we could create a style update that finds the element in the art file with the id "background" and set it's `fill` property to the value stored in the `teamColor` field of the deck's component content.</p>
-        <LabeledImage
-            src="/backgroundColorUpdate.png"
-            alt="Image of replacing the color"
-            caption="Updating background color through art recipes"
-        />
+        <p>Note that Templative executes these operations in order, starting with loading the template art file specified at the top, then the overlays, the style updates, and finally the text replacements. Find the template and overlay files in the <code>/art</code> folder.</p>
+        
+        <p>Consider the best Pokemon, Charizard.</p>
+        
+        <LocalLabeledImage src={Charizard} alt="Charizard" caption="Pokemon cards are complicated, don't do them by hand." />
+        
+        <p>Assemble Charizard by starting with a blank template svg file, overlaying the Charizard graphic, then overlaying the standard Pokemon card overlay, and finally the evolution graphic (Charmeleon). From there, update the styling of the border and background to fit with Charizard's fire theme. There are many text replacements to make: update the name, HP, type, height, stage, artist name, company name, year, etc.</p>
 
         <h3>Overlays</h3>
-        <p>Use overlays to layer svg files on top of one another. By default, Templative looks for overlays in the `art/graphicalInserts` directory.</p>
-        <LabeledImage
-            src="/artFiles.png"
-            alt="Graphic inserts directory"
-            caption="Directory structure for graphic overlays"
-        />
-        <p>In practice, this means copying the underlying template art file into a new document saved into the graphicInserts directory.</p>
-        <p>By default, the top left corner of overlay is placed at the top left corner of the template document. But we can also manually specify the position of the top left corner of our overlay. To make sure you like its position, copy the x,y positions of the overlay in the main template file and pass those values to Templative.</p>
-        <LabeledImage
+        <p>Layer svg files on top of one another using overlays. Place overlay files in the <code>/art</code> directory. </p>
+        
+        <p>Overlays need a filename; choose whether to input a static filename or to source it from a field in your <span className="tutorial-link" onClick={() => goToTutorial("Manage Content")}>Content</span> files. Templative automatically appends <code>~/.../Project/art/</code> to whatever value you give it, so to overlay the <code>/art/deckOverlay.svg</code> file, simply write <code>deckOverlay</code>.</p>
+
+        
+        <p>Choose whether you'd like to reuse these art recipes files across compositions or to create unique recipes for each composition. Often each piece in a composition has a unique overlay, to achieve this, add an overlay that pulls from the <span className="tutorial-link" onClick={() => goToTutorial("Piece Content")}>piece's graphic field</span>, or another similarly named field. To reuse an art recipe for each player's deck but with different graphics for each player, pull the <code>graphic</code> filename from the <span className="tutorial-link" onClick={() => goToTutorial("Component Content")}>component content</span> file, with a unique component content file for each composition. If you want the value to be global to all compositions, decide whether to source the filename of the overlay from the <span className="tutorial-link" onClick={() => goToTutorial("Game Content")}>game content</span>, <span className="tutorial-link" onClick={() => goToTutorial("Studio Content")}>studio content</span>, or as a static value in the art recipe. Choose whichever is most convenient.</p>
+        
+        <p>Control where the overlay is placed using the <code>x</code> and <code>y</code> properties, by default the top left corner of the overlay is placed in the top left corner of the template file.</p>
+        <TemplativeLabeledImage
             src="/positioning.png"
             alt="Pulling the xy positions from Inkscape"
             caption="Setting overlay position coordinates"
         />
 
         <h3>Style Updates</h3>
-        <p>Vector art is made up of shapes that have styling applied to them, such as what color it is `fill`'d with. It works very similarly to the <a href="https://www.w3schools.com/css/">CSS styling of html documents</a>.</p>
+        <p>Update the styling of your elements using <span className="external-link" onClick={() => goToExternalLink("https://www.w3schools.com/css/")}>CSS</span> properties, which are fields like <code>fill</code> and <code>stroke</code>—the color of the shape and the color of the border respectively—that manage how your shapes look.</p>
 
-        <p>We use style updates predominantly to change the fill, stroke color, font-size, and size of object in our files. To create a style update, we pick the element we want to change by it's ID {"("}see below{")"}, pick which style property we want to change, and then select which value goes in that style property.</p>
+        <p>For instance, to change the background color to the <code>teamColor</code> value of the deck, create a style update for the element with the id <code>background</code> and set its <code>fill</code> property to the value stored in the <code>teamColor</code> field of the deck's <span className="tutorial-link" onClick={() => goToTutorial("Component Content")}>component content</span>.</p>
 
         <h4>Assigning ids in Inkscape</h4>
-        <p>SVG files are simply <a href="https://aws.amazon.com/what-is/xml/#:~:text=An%20Extensible%20Markup%20Language%20(XML,similar%20to%20other%20text%20files.">xml files</a> under the hood. xml is a common "human readable" data format, like JSON. Inkscape provides a useful in app xml editor for our svg files.</p>
-
-        <LabeledImage
+        <p>Assign each of your svg elements an id that Templative can recognize using Inkscape, Illustrator, or any text editor. In Inkscape, go to Edit {">"} XML Editor.</p>
+ 
+        <TemplativeLabeledImage
             src="/findingXmlEditor.png"
             alt="Dropdown to access xml editor"
             caption="Accessing Inkscape's XML editor"
         />
 
-        <p>Select an object in your art file, note that the corresponding xml element is selected in the xml editor. From here, we can select the id attribute of the element, rename it, and press enter.</p>
+        <p>Select an object in your svg file and watch as the corresponding xml element is selected in the xml editor. Select the id attribute of the element, rename it, and press enter.</p>
         
-        <LabeledImage
+        <TemplativeLabeledImage
             src="/renamingId.png"
             alt="xml id attribute"
             caption="Editing element IDs in the XML editor"
         />
+        
+        <p>Now refer to that id in style updates.</p>
+        <HeadsUp message="Make sure that the id's within the overlay files are unique, otherwise Templative may perform unexpected operations."/>
 
         <h3>Text Replacements</h3>
-        <p>Use text replacements to pipe text data into your art files. Instead of manually writing your content into your art files, instead write {"{name}"} in your art file.</p>
+        <p>Pipe text data into your art files using text replacements. Instead of manually writing content, place <code>{"{name}"}</code> in your art file, and <code>name</code> and what to replace it with, a static value or a field from your <span className="tutorial-link" onClick={() => goToTutorial("Manage Content")}>Content</span> files.</p>
         
-        <h3>Text Replacements within Text Replacements</h3>
-        <p>A text replacement can contain a curly brace wrapped text within it. For instance, the rules value of a piece might be "Upgrade the power by {"{powerLevel}"}" which is followed by a text replacement for that powerlevel.</p>
-
-        <h2>Piping Content into your Art Recipes</h2>
-        <p>In Templative, a singular piece, such as a single poker card, has unique data associated with it. That piece in turn has data associated with it at the <em>component</em> level. It also by extension has access to any data about the game and studio it is a part of.</p>
-        <p>All of this information is easily accessible within Templative. If I want to set the value of an overlay, style update, or text replacement to a field in the content of the piece, component, game, studio, give the field and the source it's from to Templative.</p>
-        <LabeledImage
-            src="/sourcingData.png"
-            alt="Pulling the displayName of the game"
-            caption="Accessing game data in art recipes"
-        />
-        <p>In this example we pull the name of the game from the `Game` source and the `displayName` field.</p>
-        <p>See the <span className="tutorial-link" onClick={() => goToTutorial("Content")}>Content files</span> article for more information on how content works.</p>
-    
-        <h2>Art Recipes Tricks</h2>
-        <p>Inkscape is confusing at first, but once learned is very powerful.</p>
-        
-        <h3>Unique Backs</h3>
-        <p>Rather than make a new component per unique back, Templative is capable of creating new components per unique back in a component. For instance, if a component with 12 cards in it has only three unique faces, but has four unique backColor's, Templative will split this component into four seperate components for you.</p>
-
-        <h4>Modifying Gradients in Templative</h4>
-        <p>Gradients are handled by seperate xml entities from objects they color. Usually, an object's fill is set to a hexcode like #ffffff. When an object's background is set to a gradient however, the fill is set to the id of the gradient. The seperate gradient object in the svg file has style properties for the beginning and end colors of the gradient.</p>
-
-        <LabeledImage
-            src="/referenceToGradient.png"
-            alt="The seperate gradient object"
-            caption="Gradient definition in SVG structure"
-        />
-
-        <p>To modify a gradient from Templative therefore, rather than grabbing the id of the object whose fill is a gradient, we grab the id of the gradient object itself, and manually set the beginning and end stop colors.</p>
-
-        <LabeledImage
-            src="/stopColorStyle.png"
-            alt="The stop color in xml"
-            caption="Gradient stop color configuration"
-        />
-        <p>With this information, we can set the stop color in Templative:</p>
-        <LabeledImage
-            src="/assigningStopColor.png"
-            alt="Assigning the end color"
-            caption="Setting gradient colors in art recipes"
-        />
-
-        <HeadsUp message="Modifying drop shadows in Templative works similarly to gradients, can you figure it out?"/>
-        
+        <RelatedTutorials tutorialNames={["Manage Content", "Art"]} goToTutorial={goToTutorial} />
     </>
 }
