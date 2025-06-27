@@ -1,0 +1,24 @@
+{
+    "name": "Allies",
+    "templateFilename": "UnitBack",
+    "textReplacements": [
+        {
+            "key": "name",
+            "scope": "component",
+            "source": "name",
+            "isComplex": false,
+            "isDebug": false
+        }
+    ],
+    "styleUpdates": [
+        {
+            "id": "background",
+            "cssValue": "fill",
+            "scope": "component",
+            "source": "color",
+            "isComplex": false,
+            "isDebug": false
+        }
+    ],
+    "overlays": []
+}

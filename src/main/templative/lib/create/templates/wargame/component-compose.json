@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Map",
+    "type": "SixFoldBoard",
+    "quantity": 1,
+    "componentGamedataFilename": "Map",
+    "disabled": false,
+    "piecesGamedataFilename": "Map",
+    "artdataFrontFilename": "MapFront"
+  },
+  {
+    "name": "Foes",
+    "type": "MediumSquareChit",
+    "quantity": 1,
+    "componentGamedataFilename": "Foes",
+    "disabled": false,
+    "piecesGamedataFilename": "Foes",
+    "artdataFrontFilename": "UnitFront",
+    "artdataBackFilename": "UnitBack"
+  },
+  {
+    "name": "Friends",
+    "type": "MediumSquareChit",
+    "quantity": 1,
+    "componentGamedataFilename": "Friends",
+    "disabled": false,
+    "piecesGamedataFilename": "Friends",
+    "artdataFrontFilename": "UnitFront",
+    "artdataBackFilename": "UnitBack"
+  },
+  {
+    "name": "Dice",
+    "type": "STOCK_D68mmWhite",
+    "quantity": 2,
+    "disabled": false
+  }
+]

@@ -1,0 +1,15 @@
+{
+    "name": "Map",
+    "templateFilename": "MapFront",
+    "textReplacements": [
+        {
+            "key": "gameName",
+            "scope": "game",
+            "source": "name",
+            "isComplex": false,
+            "isDebug": false
+        }
+    ],
+    "styleUpdates": [],
+    "overlays": []
+}

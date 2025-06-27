@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Airborne",
+        "quantity": 1,
+        "attack": "3",
+        "defense": "2",
+        "movement": "3",
+        "graphic": "Airborne"
+    },
+    {
+        "name": "Tank",
+        "quantity": 1,
+        "attack": "2",
+        "defense": "1",
+        "movement": "6",
+        "graphic": "Tank"
+    },
+    {
+        "name": "Infantry",
+        "quantity": 1,
+        "attack": "1",
+        "defense": "1",
+        "movement": "1",
+        "graphic": "Infantry"
+    }
+]

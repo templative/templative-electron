@@ -17,6 +17,8 @@ import StartAProject from './Tutorials/Start a Project';
 import StudioContent from "./Tutorials/Studio Content";
 import UploadToTheGameCrafter from "./Tutorials/Upload to TheGameCrafter";
 import UseIconFonts from "./Tutorials/Use Icon Fonts";
+import FoesFriends from "./Tutorials/TemplateTutorials/Foes & Friends";
+import Blokemon from "./Tutorials/TemplateTutorials/Blokemon";
 
 const TutorialElements = {
     "Create a Project": CreateAProject,
@@ -38,6 +40,8 @@ const TutorialElements = {
     "Manage Fonts": ManageFonts,
     "Use Icon Fonts": UseIconFonts,
     "Make a Pokemon Icon Font": MakeAPokemonIconFont,
+    "Foes & Friends": FoesFriends,
+    "Blokemon": Blokemon,
 };
 
 const tutorialGroups = {
@@ -76,6 +80,10 @@ const tutorialGroups = {
         "Use Icon Fonts",
         "Make a Pokemon Icon Font",
     ],
+    "Templates": [
+        "Foes & Friends",
+        "Blokemon",
+    ],
 }
 
 const tutorialAcknowledgements = {
@@ -98,6 +106,8 @@ const tutorialAcknowledgements = {
     "Studio Content": "I will describe my studio",
     "Upload to TheGameCrafter": "I will upload to TheGameCrafter",
     "Use Icon Fonts": "I will use some icon fonts",
+    "Foes & Friends": "I will make some units",
+    "Blokemon": "I will make some trading cards",
 };
 
 export { TutorialElements, tutorialAcknowledgements, tutorialGroups };

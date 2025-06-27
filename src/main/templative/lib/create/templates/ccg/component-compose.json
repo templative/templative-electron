@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Booster Box",
+    "type": "PokerBoosterBox",
+    "quantity": 1,
+    "componentGamedataFilename": "Booster Box",
+    "disabled": false,
+    "piecesGamedataFilename": "Booster Box",
+    "artdataFrontFilename": "Booster BoxFront"
+  },
+  {
+    "name": "Booster",
+    "type": "PokerBooster",
+    "quantity": 1,
+    "componentGamedataFilename": "Booster",
+    "disabled": false,
+    "piecesGamedataFilename": "Booster",
+    "artdataFrontFilename": "BoosterFront"
+  },
+  {
+    "name": "Blokes",
+    "type": "PokerDeck",
+    "quantity": 1,
+    "componentGamedataFilename": "Blokes",
+    "disabled": false,
+    "piecesGamedataFilename": "Bokemon",
+    "artdataFrontFilename": "BokemonFront",
+    "artdataBackFilename": "BokemonBack"
+  }
+]

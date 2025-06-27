@@ -21,7 +21,11 @@ async function testEveryComponent() {
     if (fs.existsSync(PROJECT_DIR)) {
         fs.rmSync(PROJECT_DIR, { recursive: true, force: true });
     }
-    await createProjectInDirectory(PROJECT_DIR);
+    const success = await createProjectInDirectory(PROJECT_DIR);
+    if (!success) {
+        console.error("Failed to create project");
+        return;
+    }
     var componentCount = 0;
     for (const componentKey in COMPONENT_INFO) {
         if (COMPONENT_INFO[componentKey].IsDisabled) {

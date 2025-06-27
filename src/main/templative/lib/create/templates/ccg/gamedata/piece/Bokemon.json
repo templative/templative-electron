@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Bloke",
+        "quantity": 1,
+        "types": "<iconGlyph fill=\"red\" font-family='BokemonTypes' glyph='type_fairy'/>",
+        "graphic": "Bloke",
+        "rules": "Attack to win the game.",
+        "attack": "3",
+        "defense": "1",
+        "type": "Bingo Bongle"
+    }
+]

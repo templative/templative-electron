@@ -10,6 +10,7 @@ module.exports = {
     extraResource: [
       "./src/main/templative/lib/componentTemplates",
       "./src/main/templative/lib/componentTemplateOutlines",
+      "./src/main/templative/lib/create/templates",
     ],
     icon: "src/assets/images/icon",
     osxSign: process.env.SKIP_SIGNING === 'true' ? false : {

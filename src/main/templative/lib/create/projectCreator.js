@@ -1,4 +1,5 @@
 const fs = require('fs');
+const fsPromises = require('fs').promises;
 const path = require('path');
 const { Image } = require('image-js');
 
@@ -79,7 +80,22 @@ async function createGameCrafterImage(directory) {
   await createImage(directory, "logo", 350, 150);
 }
 
+async function copyTemplate(directory, templateName) {
+  var templatePath = null;
+  if (__dirname.includes('app.asar')) {
+    templatePath = path.join(__dirname, `../../../templates`, templateName);
+  } else {
+      templatePath = path.join(__dirname, `../../src/main/templative/lib/create/templates`, templateName);
+  }
+  console.log(`Copying template from ${templatePath} to ${directory}`);
+  await fsPromises.cp(templatePath, directory, { recursive: true, force: true });
+}
+
 async function createProjectInDirectory(directory, projectName, templateName) {
+  if (fs.existsSync(path.join(directory, "component-compose.json"))) {
+    throw new Error("Directory already contains a project. Please delete the directory and try again.");
+  }
+
   fs.mkdirSync(directory, { recursive: true });
   createStudio(directory);
   createRulesFile(directory);
@@ -100,6 +116,10 @@ async function createProjectInDirectory(directory, projectName, templateName) {
   fs.mkdirSync(path.join(directory, "artdata"), { recursive: true });
 
   fs.mkdirSync(path.join(directory, "art"), { recursive: true });
+  
+  if (templateName) {
+    await copyTemplate(directory, templateName);
+  }
 
   return 1;
 }

@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Tank",
+        "quantity": 1,
+        "attack": "2",
+        "defense": "2",
+        "movement": "6",
+        "graphic": "Tank"
+    },
+    {
+        "name": "Parachute",
+        "quantity": 1,
+        "attack": "3",
+        "defense": "2",
+        "movement": "3",
+        "graphic": "Parachute"
+    },
+    {
+        "name": "Airborne",
+        "quantity": 1,
+        "attack": "4",
+        "defense": "5",
+        "movement": "3",
+        "graphic": "Airborne"
+    },
+    {
+        "name": "Infantry",
+        "quantity": 1,
+        "attack": "1",
+        "defense": "2",
+        "movement": "1",
+        "graphic": "Infantry"
+    }
+]

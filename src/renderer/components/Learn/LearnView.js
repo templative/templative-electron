@@ -41,6 +41,14 @@ export default function LearnView(props) {
         };
     }, [currentTutorialIndex, tutorialHistory.length, goBackATutorial, goForwardATutorial]);
 
+    // Scroll to top when tutorial changes
+    useEffect(() => {
+        const tutorialBody = document.querySelector('.tutorial-body');
+        if (tutorialBody) {
+            tutorialBody.scrollTop = 0;
+        }
+    }, [currentTutorialName]);
+
     const goToExternalLink = (url) => {
         const { shell } = window.require('electron');
         shell.openExternal(url);
@@ -52,6 +60,12 @@ export default function LearnView(props) {
             return;
         }
         goToTutorial(name);
+        
+        // Scroll to top immediately for better UX
+        const tutorialBody = document.querySelector('.tutorial-body');
+        if (tutorialBody) {
+            tutorialBody.scrollTop = 0;
+        }
     };
 
     const TutorialElement = TutorialElements[currentTutorialName] || (() => (

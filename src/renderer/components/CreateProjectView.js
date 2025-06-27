@@ -10,6 +10,7 @@ import BigMallet50kSvg from './Icons/bigMallet50k.svg?react';
 import SickleSvg from './Icons/sickle.svg?react';
 import TutorialQuestionMark from "./Tutorial/TutorialQuestionMark";
 import BackButton from "./backButton.svg?react";
+import WargameSvg from "./Icons/wargame.svg?react";
 const templates = [
     {
         name: "Blank Project",
@@ -19,11 +20,18 @@ const templates = [
         isDisabled: false,
     },
     {
-        name: "Legally Distinctemon",
-        description: "A collectible card game.",
+        name: "Foes & Friends",
+        description: "A wargame with hexes and tiles. Includes square chits for units, a six-fold map with hexes, and two dice.",
+        icon: <WargameSvg width="90" height="90" />,
+        template: "wargame",
+        isDisabled: false,
+    },
+    {
+        name: "Blokemon",
+        description: "A collectible card game. Includes a deck of poker cards, a booster pack, and a booster pack box.",
         icon: <LegallyDistinctemonSvg width="90" height="90" />,
-        template: "legally-distinctemon",
-        isDisabled: true,
+        template: "ccg",
+        isDisabled: false,
     },
     {
         name: "Big Mallet 50k", 
@@ -53,6 +61,7 @@ const CreateProjectView = ({ goBackCallback }) => {
   const [projectName, setProjectName] = useState("");
   const [projectLocation, setProjectLocation] = useState("");
   const [selectedTemplateName, setSelectedTemplateName] = useState(templates[0].name);
+  const [selectedTemplate, setSelectedTemplate] = useState(templates[0].template);
   const [isCreating, setIsCreating] = useState(false);
   const [error, setError] = useState("");
   
@@ -79,9 +88,9 @@ const CreateProjectView = ({ goBackCallback }) => {
     setError("");
     
     ipcRenderer.invoke(channels.TO_SERVER_CREATE_PROJECT, {
-      projectName,
-      projectLocation,
-      selectedTemplateName
+      projectName: projectName,
+      projectLocation: projectLocation,
+      templateName: selectedTemplate
     })
     .then(result => {
       setIsCreating(false);
@@ -100,10 +109,16 @@ const CreateProjectView = ({ goBackCallback }) => {
 
   const templateButtons = templates.map(template => {
     const className = `btn btn-outline-secondary template-item ${selectedTemplateName === template.name ? 'selected' : ''} ${template.isDisabled ? 'disabled' : ''}`;
+    const onClick = () => {
+      if (!template.isDisabled) {
+        setSelectedTemplateName(template.name);
+        setSelectedTemplate(template.template);
+      }
+    }
     return <div 
             key={template.name}
             className={className}
-            onClick={() => !template.isDisabled && setSelectedTemplateName(template.name)}
+            onClick={onClick}
         >
             <div className="template-icon">
                 {template.icon}
