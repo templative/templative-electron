@@ -3,7 +3,7 @@ const { produceGame, producePiecePreview } = require('../../lib/produce/gameProd
 const { CachePreProducerWatcher } = require('../../lib/produce/cachePreProducerWatcher');
 const { createIconFont, getPUACharFromUnicode } = require('../../lib/produce/iconFontCreator');
 const path = require('path');
-const { RENDER_PROGRAM } = require('../../lib/manage/models/produceProperties');
+const { RENDER_PROGRAM, RENDER_MODE } = require('../../lib/manage/models/produceProperties');
 
 // Example usage:
 // templative produce --name "actionCaps" --input "/Users/oliverbarnum/Documents/git/apcw-defines"
@@ -25,7 +25,9 @@ const produceCommand = new Command('produce')
       options.simple || !options.complex,
       options.publish || !options.debug,
       options.language,
-      options.clip
+      options.clip,
+      RENDER_MODE.RENDER_EXPORT_USING_CACHE,
+      RENDER_PROGRAM.INKSCAPE
     );
   });
 

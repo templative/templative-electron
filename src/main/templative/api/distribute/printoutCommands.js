@@ -28,7 +28,7 @@ const printout = new Command('printout')
       return;
     }
     
-    await createPdfForPrinting(inputPath, doubleSided, size, areBordersDrawn);
+    await createPdfForPrinting(inputPath, doubleSided, size, options.borders);
   });
 
 module.exports = printout; 
