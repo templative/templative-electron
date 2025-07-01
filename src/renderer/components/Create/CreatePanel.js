@@ -77,7 +77,8 @@ const CreatePanel = (props) => {
             componentName: context.componentName,
             componentType: context.selectedComponentType,
             directoryPath: props.templativeRootDirectoryPath,
-            componentAIDescription: context.componentAIDescription
+            componentAIDescription: context.componentAIDescription,
+            componentCount: context.componentCount
         };
         
         await ipcRenderer.invoke(channels.TO_SERVER_CREATE_COMPONENT, data);
@@ -89,16 +90,15 @@ const CreatePanel = (props) => {
 
         setIsProcessing(false);
         
-        const originalType = context.selectedComponentType;
+        const originalName = context.componentName;
         context.setComponentName("");
-        context.setSelectedComponentType(undefined);
         context.setComponentAIDescription("");
-        
-        // Only change views for custom components, not stock components
-        if (context.isToggledToComponents) {
+        context.setComponentCount(1);
+        if (!context.createAnother) {
+            context.setSelectedComponentType(undefined);
             props.changeTabsToEditAFileCallback(
                 `UNIFIED_${context.isToggledToComponents ? "COMPONENT" : "STOCK"}`, 
-                path.join(props.templativeRootDirectoryPath, `component-compose.json#${context.componentName}`)
+                path.join(props.templativeRootDirectoryPath, `component-compose.json#${originalName}`)
             );
         }
     };

@@ -24,9 +24,9 @@ const { createProduceGameWorker, createPreviewPieceWorker } = require('./workerT
 
 const createTemplativeComponent = withLogCapture(async (event, data) => {
   try {
-    const { componentName, componentType, directoryPath, componentAIDescription } = data;
+    const { componentName, componentType, directoryPath, componentAIDescription, componentCount } = data;
     
-    await createComponentByType(directoryPath, componentName, componentType, componentAIDescription)
+    await createComponentByType(directoryPath, componentName, componentType, componentAIDescription, componentCount)
     updateToast(`Created ${componentName}.`, "success");
     
     return { success: true };

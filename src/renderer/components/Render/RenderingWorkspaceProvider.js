@@ -35,6 +35,8 @@ class RenderingWorkspaceProvider extends React.Component {
         isToggledToComponents: true,
         componentAIDescription: "",//"This is a deck of people. There are thirty cards in it. Each card has a shirt color, hat color, and pants color. The background of the card is three rectangles stacked on top of each other, with the top taking the hat color, the middle taking the shirt color, and the bottom taking the pants color. The name of each card is a random first name.",
         componentTypeSearch: "",
+        componentCount: 1,
+        createAnother: false,
         fileExplorerColumnWidth: 20,
         renderControlsColumnWidth: 20,
         isPreviewVisible: false,
@@ -130,6 +132,14 @@ class RenderingWorkspaceProvider extends React.Component {
     this.setState({ componentTypeSearch: search });
   };
 
+  setComponentCount = (count) => {
+    this.setState({ componentCount: Math.max(1, Math.min(Math.floor(count), 1000)) });
+  };
+
+  setCreateAnother = (createAnother) => {
+    this.setState({ createAnother: createAnother });
+  };
+
   setPrintSize = async (size) => {
     this.setState({ printSize: size });
     try {
@@ -159,7 +169,8 @@ class RenderingWorkspaceProvider extends React.Component {
       selectedBaseComponent: undefined,
       selectedSize: undefined,
       selectedColor: undefined,
-      componentName: "" // Reset component name when toggling between custom and stock
+      componentName: "", // Reset component name when toggling between custom and stock
+      componentCount: 1 // Reset component count when toggling between custom and stock
     }));
   };
 
@@ -324,6 +335,8 @@ class RenderingWorkspaceProvider extends React.Component {
           setIsToggledToComponents: this.setIsToggledToComponents,
           setComponentAIDescription: this.setComponentAIDescription,
           setComponentTypeSearch: this.setComponentTypeSearch,
+          setComponentCount: this.setComponentCount,
+          setCreateAnother: this.setCreateAnother,
           setPrintSize: this.setPrintSize,
           toggleIsPrintBackIncluded: this.toggleIsPrintBackIncluded,
           toggleArePrintBordersDrawn: this.toggleArePrintBordersDrawn,

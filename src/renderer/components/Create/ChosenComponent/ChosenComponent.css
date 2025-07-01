@@ -86,3 +86,9 @@
     width: 100%;
     margin-bottom: 10px;
 }
+.create-component-name-row .toggle-checkbox {
+    /* margin-right: 5px; */
+}
+.create-component-name-row .toggle-text {
+    /* margin-left: 5px; */
+}

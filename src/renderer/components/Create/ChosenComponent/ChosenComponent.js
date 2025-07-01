@@ -50,27 +50,45 @@ const ChosenComponent = ({ isProcessing, createComponent, isToggledToComponents,
                 {variations}
             </div>
             <div className="create-component-output-options">
-                <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
-                    <span className="input-group-text soft-label">Composition Name</span>
-                    <input 
-                        type="text" 
-                        autoFocus={true}
-                        className="form-control no-left-border" 
-                        onChange={(event) => context.setComponentName(event.target.value.replace(/[<>:"/\\|?*]/g, ''))} 
-                        placeholder="Player Roles or Emperor Token, etc" 
-                        value={context.componentName}
-                    />
-                </div>
-                <button 
-                        disabled={isCreateButtonDisabled}
-                        className="btn btn-outline-primary create-component-button btn-block" 
-                        type="button" 
-                        id="button-addon1"
-                        onClick={() => createComponent()}
-                    >
+                <div className="vertical-input-group">
+                    
+                    <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
+                        <span className="input-group-text soft-label">Composition Name</span>
+                        <input 
+                            type="text" 
+                            autoFocus={true}
+                            className="form-control no-left-border" 
+                            onChange={(event) => context.setComponentName(event.target.value.replace(/[<>:"/\\|?*]/g, ''))} 
+                            placeholder="Player Roles or Emperor Token, etc" 
+                            value={context.componentName}
+                        />
+                    </div>
+                    <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
+                        <span className="input-group-text soft-label">Quantity</span>
+                        <input 
+                            type="number" 
+                            className="form-control no-left-border" 
+                            onChange={(event) => context.setComponentCount(event.target.value)} 
+                            placeholder="1" 
+                            value={context.componentCount}
+                        />
+                        <span className="input-group-text soft-label flex-grow-1">Create Another?</span>
+                        <div className="input-group-text soft-label no-left-border">
+                            <input className="form-check-input mt-0 no-left-border" type="checkbox" value="" onChange={()=>{ context.setCreateAnother(!context.createAnother)}} checked={context.createAnother} title="If true, hides the bleed area. Useful for printing."/>
+                        </div>
+                    
+                    </div>
+                    <button 
+                            disabled={isCreateButtonDisabled}
+                            className="btn btn-outline-primary create-component-button btn-block" 
+                            type="button" 
+                            id="button-addon1"
+                            onClick={() => createComponent()}
+                        >
                         {isProcessing && <span className="spinner-border spinner-border-sm creating-spinner"></span>}
                         Create
                     </button>
+                </div>
             </div>
         </div>
     );

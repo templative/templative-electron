@@ -177,7 +177,7 @@ const CompositionSettingsModal = ({
                                 checked={selectedDisabled}
                                 onChange={(e) => handleDisabledChange(e.target.checked)}
                             />
-                            <span className="disabled-toggle-text">Disable {name}.</span>
+                            <span className="toggle-text">Disable {name}.</span>
                         </label>
                     </div>
                     <select 

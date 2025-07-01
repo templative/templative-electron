@@ -5,21 +5,21 @@ const { COMPONENT_INFO } = require('../../../../shared/componentInfo');
 const { STOCK_COMPONENT_INFO } = require('../../../../shared/stockComponentInfo');
 const { join } = require('path');
 
-async function createComponentByType(gameRootDirectoryPath, name, type, componentAIDescription) {
+async function createComponentByType(gameRootDirectoryPath, name, type, componentAIDescription, componentCount = 1) {
     if (COMPONENT_INFO[type]) {
-        await createCustomComponent(gameRootDirectoryPath, name, type, componentAIDescription);
+        await createCustomComponent(gameRootDirectoryPath, name, type, componentAIDescription, componentCount);
         return;
     }
     
     if (STOCK_COMPONENT_INFO[type]) {
-        await createStockComponent(gameRootDirectoryPath, name, type);
+        await createStockComponent(gameRootDirectoryPath, name, type, componentCount);
         return;
     }
     
     console.log(`Skipping ${name} component as we don't have component info on ${type}`);
 }
 
-async function createCustomComponent(gameRootDirectoryPath, name, type, componentAIDescription) {
+async function createCustomComponent(gameRootDirectoryPath, name, type, componentAIDescription, componentCount) {
     if (name == null || name === "") {
         console.log("Must include a name.");
         return;
@@ -46,7 +46,7 @@ async function createCustomComponent(gameRootDirectoryPath, name, type, componen
         console.log("!!! component-compose.json not found.");
         return;
     }
-    await templateComponentProjectUpdater.addToComponentCompose(name, type, gameRootDirectoryPath, componentComposeData, componentInfo);
+    await templateComponentProjectUpdater.addToComponentCompose(name, type, gameRootDirectoryPath, componentComposeData, componentInfo, componentCount);
 
     const piecesDirectoryPath = join(gameRootDirectoryPath, gameCompose["piecesGamedataDirectory"]);
     const componentGamedataDirectoryPath = join(gameRootDirectoryPath, gameCompose["componentGamedataDirectory"]);
@@ -86,7 +86,7 @@ async function createCustomComponent(gameRootDirectoryPath, name, type, componen
     await templateComponentProjectUpdater.createOverlayFiles(artOverlaysDirectoryPath, type, {}, []);
 }
 
-async function createStockComponent(gameRootDirectoryPath, name, stockPartId) {
+async function createStockComponent(gameRootDirectoryPath, name, stockPartId, componentCount) {
     if (name == null || name === "") {
         console.log("Must include a name.");
         return;
@@ -106,7 +106,7 @@ async function createStockComponent(gameRootDirectoryPath, name, stockPartId) {
         console.log("!!! component-compose.json not found.");
         return;
     }
-    await templateComponentProjectUpdater.addStockComponentToComponentCompose(name, stockPartId, gameRootDirectoryPath, componentComposeData);
+    await templateComponentProjectUpdater.addStockComponentToComponentCompose(name, stockPartId, gameRootDirectoryPath, componentComposeData, componentCount);
 }
 
 module.exports = {

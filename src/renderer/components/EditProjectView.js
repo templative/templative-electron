@@ -395,7 +395,7 @@ export default class EditProjectView extends React.Component {
         try {
             const filepath = path.join(this.props.templativeRootDirectoryPath, "component-compose.json");
             await this.saveFileAsync(filepath, JSON.stringify(updatedContent, null, 2));
-            const setTheRouteToCreateIfThereAreNoComponents = updatedContent.length === 0 ? "create" : "edit"
+            const setTheRouteToCreateIfThereAreNoComponents = updatedContent.length === 0 ? "create" : this.state.currentRoute
             this.setState({ componentCompose: updatedContent, currentRoute: setTheRouteToCreateIfThereAreNoComponents });
         } catch (error) {
             console.error("Error saving component-compose.json:", error);

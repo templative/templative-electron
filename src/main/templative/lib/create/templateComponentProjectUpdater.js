@@ -6,7 +6,7 @@ const { COMPONENT_INFO } = require('../../../../shared/componentInfo');
 const { getComponentTemplatesDirectoryPath } = require('../componentTemplateUtility');
 const path = require('path');
 
-async function addToComponentCompose(name, type, gameRootDirectoryPath, componentComposeData, componentInfo) {
+async function addToComponentCompose(name, type, gameRootDirectoryPath, componentComposeData, componentInfo, componentCount = 1) {
     for (let i = 0; i < componentComposeData.length; i++) {
         if (componentComposeData[i]["name"] === name) {
             componentComposeData.splice(i, 1);
@@ -17,7 +17,7 @@ async function addToComponentCompose(name, type, gameRootDirectoryPath, componen
     const componentComposition = {
         "name": name,
         "type": type,
-        "quantity": 1,
+        "quantity": componentCount,
         "componentGamedataFilename": name,
         "disabled": false
     };
@@ -34,7 +34,7 @@ async function addToComponentCompose(name, type, gameRootDirectoryPath, componen
     await fs.writeFile(join(gameRootDirectoryPath, 'component-compose.json'), JSON.stringify(componentComposeData, null, 4));
 }
 
-async function addStockComponentToComponentCompose(name, stockPartId, gameRootDirectoryPath, componentComposeData) {
+async function addStockComponentToComponentCompose(name, stockPartId, gameRootDirectoryPath, componentComposeData, componentCount = 1) {
     for (let i = 0; i < componentComposeData.length; i++) {
         if (componentComposeData[i]["name"] === name) {
             componentComposeData.splice(i, 1);
@@ -45,7 +45,7 @@ async function addStockComponentToComponentCompose(name, stockPartId, gameRootDi
     componentComposeData.push({
         "name": name,
         "type": `STOCK_${stockPartId}`,
-        "quantity": 1,
+        "quantity": componentCount,
         "disabled": false
     });
     await fs.writeFile(join(gameRootDirectoryPath, 'component-compose.json'), JSON.stringify(componentComposeData, null, 4));
