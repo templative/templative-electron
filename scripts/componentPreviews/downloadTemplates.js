@@ -1,4 +1,4 @@
-import { COMPONENT_INFO } from "../src/shared/componentInfo.js";
+import { COMPONENT_INFO } from "../../src/shared/componentInfo.js";
 import fs from 'fs';
 import path from 'path';
 import { JSDOM } from 'jsdom';

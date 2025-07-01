@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { COMPONENT_INFO } = require('../src/shared/componentInfo');
+const { COMPONENT_INFO } = require('../../src/shared/componentInfo');
 const { JSDOM } = require('jsdom');
 // Path to the guidelines directory
 const guidelinesDir = path.join(__dirname, '../src/main/templative/lib/create/guidelines');

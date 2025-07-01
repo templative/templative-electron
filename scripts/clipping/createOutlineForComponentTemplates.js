@@ -4,8 +4,8 @@ const path = require('path');
 const fs = require('fs').promises;
 const { DOMParser, XMLSerializer } = require('@xmldom/xmldom');
 
-const SOURCE_DIR = path.join(__dirname, '..', 'src/main/templative/lib/componentTemplates');
-const TARGET_DIR = path.join(__dirname, '..', 'src/main/templative/lib/componentTemplateOutlines');
+const SOURCE_DIR = path.join(__dirname, '../../', 'src/main/templative/lib/componentTemplates');
+const TARGET_DIR = path.join(__dirname, '../../', 'src/main/templative/lib/componentTemplateOutlines');
 
 async function processSvgFile(filePath) {
   try {

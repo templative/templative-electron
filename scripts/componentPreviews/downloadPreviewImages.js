@@ -12,7 +12,7 @@ if (!fs.existsSync(outputPath)) {
   fs.mkdirSync(outputPath, { recursive: true });
 }
 
-const {COMPONENT_INFO} = require("../src/shared/componentInfo.js");
+const {COMPONENT_INFO} = require("../../src/shared/componentInfo.js");
 
 async function removeBg(imageBuffer) {
   const formData = new FormData();

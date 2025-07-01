@@ -1,5 +1,5 @@
-import { COMPONENT_INFO } from "../src/shared/componentInfo.js";
-import { STOCK_COMPONENT_INFO } from "../src/shared/stockComponentInfo.js";
+import { COMPONENT_INFO } from "../../src/shared/componentInfo.js";
+import { STOCK_COMPONENT_INFO } from "../../src/shared/stockComponentInfo.js";
 import fs from 'fs';
 import componentRules from "./rules/customComponentRules.js";
 import stockComponentRules from "./rules/stockComponentRules.js";

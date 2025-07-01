@@ -11,7 +11,7 @@ if (!fs.existsSync(outputPath)) {
   fs.mkdirSync(outputPath, { recursive: true });
 }
 
-const {STOCK_COMPONENT_INFO} = require("../src/shared/stockComponentInfo.js");
+const {STOCK_COMPONENT_INFO} = require("../../src/shared/stockComponentInfo.js");
 
 
 async function downloadImages() {

@@ -11,17 +11,17 @@ const inputDirArg = args.find(arg => arg.startsWith('--input='));
 const inputDir = inputDirArg ? inputDirArg.split('=')[1] : null;
 
 // Configuration
-const TEST_DIR = path.join(__dirname, 'test-project');
-const CLI_PATH = path.join(__dirname, '../src/main/templative/cli.js');
+const TEST_DIR = "C:/Users/olive/Documents/git/bokemon";
+const CLI_PATH = path.join(__dirname, '../../src/main/templative/cli.js');
 const COMPONENT_NAME = 'PokerDeck';
 const PROJECT_DIR = inputDir || TEST_DIR;
 
 // Ensure component template files are accessible for tests
 function ensureComponentTemplatesAvailable() {
-  const templatesDir = path.join(__dirname, '../src/assets/images/componentTemplates');
+  const templatesDir = path.join(__dirname, '../../src/assets/images/componentTemplates');
   
   // Create a temporary symlink to the templates directory if needed
-  const tempTemplatesDir = path.join(__dirname, '../.webpack/main/assets/images/componentTemplates');
+  const tempTemplatesDir = path.join(__dirname, '../../.webpack/main/assets/images/componentTemplates');
   
   if (!fs.existsSync(path.dirname(tempTemplatesDir))) {
     fs.mkdirSync(path.dirname(tempTemplatesDir), { recursive: true });
@@ -118,13 +118,13 @@ async function runTests() {
   //   console.log(chalk.blue(`Using existing project directory: ${PROJECT_DIR}`));
   // }
   
-  // // Test produce command
-  // console.log(chalk.bold.blue('\n=== Testing produce command ==='));
-  // const produceResult = runCommand(`produce --input "${PROJECT_DIR}"`);
-  // if (!produceResult.success) {
-  //   console.error(chalk.red('Failed to produce game, aborting tests'));
-  //   process.exit(1);
-  // }
+  // Test produce command
+  console.log(chalk.bold.blue('\n=== Testing produce command ==='));
+  const produceResult = runCommand(`produce --input "${PROJECT_DIR}" --name Blokes`);
+  if (!produceResult.success) {
+    console.error(chalk.red('Failed to produce game, aborting tests'));
+    process.exit(1);
+  }
   
   // Get the output directory from the .last file
   const lastOutputPath = fs.readFileSync(path.join(PROJECT_DIR, 'output', '.last'), 'utf8').trim();
@@ -137,18 +137,20 @@ async function runTests() {
   // }
 
   // Test simulator command
-  // console.log(chalk.bold.blue('\n=== Testing simulator command ==='));
-  // try {
-  //   const simulatorPath = "/Users/oliverbarnum/Library/Tabletop Simulator";
-  //   const simulatorResult = runCommand(`distribute simulator -i "${lastOutputPath}" -o "${simulatorPath}"`);
-  //   if (!simulatorResult.success) {
-  //     console.error(chalk.red('Failed to create simulator, continuing with other tests'));
-  //   }
-  // } catch (error) {
-  //   console.error(chalk.red('Failed to create simulator, continuing with other tests'));
-  // }
-  const gameCrafterResponse = runCommand(`distribute gamecrafter upload -i ${PROJECT_DIR} -r "${lastOutputPath}" -d "AA9F2900-5B68-11E5-8112-B32D36CD926D"`);
-  console.log(gameCrafterResponse);
+  console.log(chalk.bold.blue('\n=== Testing simulator command ==='));
+  try {
+    const simulatorPath = "C:/Users/olive/Documents/My Games/Tabletop Simulator";
+    const simulatorResult = runCommand(`distribute simulator -i "${lastOutputPath}" -o "${simulatorPath}"`);
+    if (!simulatorResult.success) {
+      console.error(chalk.red('Failed to create simulator, continuing with other tests'));
+    }
+  } catch (error) {
+    console.error(chalk.red('Failed to create simulator, continuing with other tests'));
+  }
+  
+  
+  // const gameCrafterResponse = runCommand(`distribute gamecrafter upload -i ${PROJECT_DIR} -r "${lastOutputPath}" -d "AA9F2900-5B68-11E5-8112-B32D36CD926D"`);
+  // console.log(gameCrafterResponse);
 }
 
 // Run the tests

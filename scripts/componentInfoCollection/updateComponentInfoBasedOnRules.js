@@ -1,6 +1,6 @@
-const { COMPONENT_INFO } = require("../src/shared/componentInfo.js");
-const { STOCK_COMPONENT_INFO } = require("../src/shared/stockComponentInfo.js");
-const { DISABLED_STOCK_COMPONENT_INFO } = require("../src/shared/disabledStockComponentInfo.js");
+const { COMPONENT_INFO } = require("../../src/shared/componentInfo.js");
+const { STOCK_COMPONENT_INFO } = require("../../src/shared/stockComponentInfo.js");
+const { DISABLED_STOCK_COMPONENT_INFO } = require("../../src/shared/disabledStockComponentInfo.js");
 const fs = require('fs');
 const os = require('os');
 const componentRules = require("./rules/customComponentRules.js");

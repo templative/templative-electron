@@ -1,4 +1,4 @@
-import {getColorValueHex, allColorVariations} from "../src/shared/stockComponentColors.js";
+import {getColorValueHex, allColorVariations} from "../../src/shared/stockComponentColors.js";
 import { Image } from 'image-js';
 import fs from 'fs';
 import path from 'path';

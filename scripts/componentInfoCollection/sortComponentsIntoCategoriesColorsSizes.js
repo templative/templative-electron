@@ -1,4 +1,4 @@
-const { allColorVariations,colorsAndMetals } = require('../src/shared/stockComponentColors.js');
+const { allColorVariations,colorsAndMetals } = require('../../src/shared/stockComponentColors.js');
 const fs = require('fs');
 const path = require('path');
 const chalk = require('chalk');
@@ -757,8 +757,8 @@ const areColorVariations = (component1, component2) => {
 // if (!fs.existsSync(outputPath)) {
 //   fs.mkdirSync(outputPath, { recursive: true });
 // }
-const {COMPONENT_INFO} = require("../src/shared/componentInfo.js");
-const {STOCK_COMPONENT_INFO} = require("../src/shared/stockComponentInfo.js");
+const {COMPONENT_INFO} = require("../../src/shared/componentInfo.js");
+const {STOCK_COMPONENT_INFO} = require("../../src/shared/stockComponentInfo.js");
 
 const customMajorCategories = [
   "packaging","deck", "die", "premium", "board","token","mat","document", "blank",

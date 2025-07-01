@@ -1,14 +1,14 @@
 const path = require('path');
 const fs = require('fs');
 const os = require('os');
-const { COMPONENT_INFO } = require('../src/shared/componentInfo');
-const { STOCK_COMPONENT_INFO } = require('../src/shared/stockComponentInfo');
-const { createCustomComponent } = require('../src/main/templative/lib/create/componentCreator');
-const { createStockComponent } = require('../src/main/templative/lib/create/componentCreator');
-const { createProjectInDirectory } = require('../src/main/templative/lib/create/projectCreator');
-const { produceGame } = require('../src/main/templative/lib/produce/gameProducer');
-const { convertToTabletopSimulator } = require('../src/main/templative/lib/distribute/simulator/simulator.js');
-const { createPdfForPrinting } = require("../src/main/templative/lib/distribute/printout/printout.js")
+const { COMPONENT_INFO } = require('../../src/shared/componentInfo.js');
+const { STOCK_COMPONENT_INFO } = require('../../src/shared/stockComponentInfo.js');
+const { createCustomComponent } = require('../../src/main/templative/lib/create/componentCreator.js');
+const { createStockComponent } = require('../../src/main/templative/lib/create/componentCreator.js');
+const { createProjectInDirectory } = require('../../src/main/templative/lib/create/projectCreator.js');
+const { produceGame } = require('../../src/main/templative/lib/produce/gameProducer.js');
+const { convertToTabletopSimulator } = require('../../src/main/templative/lib/distribute/simulator/simulator.js');
+const { createPdfForPrinting } = require("../../src/main/templative/lib/distribute/printout/printout.js")
 
 const TEST_DIR = path.join(__dirname, '../test-project');
 const PROJECT_DIR = TEST_DIR;

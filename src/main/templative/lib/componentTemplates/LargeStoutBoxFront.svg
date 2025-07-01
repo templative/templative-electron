@@ -23,13 +23,13 @@
    inkscape:pageopacity="0"
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#d1d1d1"
-   inkscape:zoom="1.2633642"
-   inkscape:cx="4191.1906"
-   inkscape:cy="1539.1445"
-   inkscape:window-width="2560"
-   inkscape:window-height="1351"
-   inkscape:window-x="-9"
-   inkscape:window-y="-9"
+   inkscape:zoom="0.15792053"
+   inkscape:cx="3090.162"
+   inkscape:cy="2396.7752"
+   inkscape:window-width="1920"
+   inkscape:window-height="1009"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
    inkscape:window-maximized="1"
    inkscape:current-layer="Layer_1" />
 <style
@@ -90,12 +90,11 @@
    d="M 5925,5925 H 0 V 0 h 5925 z"
    id="path1-5-5"
    style="fill:#131313;fill-opacity:1;stroke-width:4.16667"
-   sodipodi:nodetypes="ccccc" /><polyline
-   class="st6"
-   points="1337.2,310.7 1111,310.7 1195.9,225.9 1195.9,89.8 1116,89.8 1110.9,84.8 1105.9,12.8 315.7,12.8   310.6,84.8 305.6,89.8 225.9,89.8 225.9,225.9 310.6,310.6 310.6,310.9 310.6,311 84.8,311 12.8,316 12.8,1106.2 84.8,1111.3   310.7,1111.3 225.9,1196.1 225.9,1332.2 305.8,1332.2 310.9,1337.2 315.9,1409.2 1106.1,1409.2 1111.1,1337.2 1116.2,1332.2   1195.9,1332.2 1195.9,1196.1 1111.1,1111.4 1111.1,1111 1337.2,1111 1409.2,1106 1409.2,315.8 1337.2,310.7 "
+   sodipodi:nodetypes="ccccc" /><path
    id="clipping"
-   transform="matrix(4.1666667,0,0,4.1666667,-2.37e-5,-2.37e-5)"
-   style="stroke:none;fill:#696969;fill-opacity:1" /><path
+   style="fill:#696969;stroke:none;stroke-width:4.13375;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+   class="st6"
+   d="m 5571.6667,1294.5833 h -942.5 l 353.75,-353.33334 V 374.16662 H 4650 l -21.25,-20.83333 -20.8333,-300.000003 h -3292.5 l -21.25,300.000003 -20.8334,20.83333 H 941.25 v 567.08334 l 352.9167,352.91664 v 1.25 0.4167 H 353.3333 l -300,20.8333 v 3292.5 l 300,21.25 h 941.25 L 941.25,4983.75 v 567.0833 h 332.9167 l 21.25,20.8334 20.8333,300 h 3292.5 l 20.8334,-300 21.25,-20.8334 h 332.0833 V 4983.75 l -353.3333,-352.9167 v -1.6667 h 942.0833 l 300,-20.8333 v -3292.5 l -300,-21.25" /><path
    id="path1-5"
    style="fill:#7f7f7f;fill-opacity:1;stroke-width:4.16667"
    class="st0"
