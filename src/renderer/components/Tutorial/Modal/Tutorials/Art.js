@@ -5,7 +5,7 @@ import XmlEditorExplanation from "./Explanations/xmlEditor";
 
 import OverlayCombining from "./Images/OverlayCombining.png";
 import OverlaySeperating from "./Images/OverlaySeperating.png";
-
+import ArtTemplateExample from "../../../../../main/templative/lib/componentTemplates/PokerDeck.svg"
 export default function Art({goToTutorial, goToExternalLink}) {
     return <>
         <p>Assemble final art for your <span className="tutorial-link" onClick={() => goToTutorial("Edit Compositions")}>compositions</span> by creating <span className="external-link" onClick={() => goToExternalLink("https://www.w3.org/TR/SVG11/")}>.svg</span> art files that your <span className="tutorial-link" onClick={() => goToTutorial("Art Recipes")}>art recipes</span> and <span className="tutorial-link" onClick={() => goToTutorial("Manage Content")}>content</span> files can modify. Place your svg art files in the <code>/art</code> directory. Use only <span className="external-link" onClick={() => goToExternalLink("https://www.w3.org/TR/SVG11/")}>svg</span> art files, and include any <code>.png</code> or <code>.jpg</code> files inside your svg files.</p>
@@ -29,6 +29,12 @@ export default function Art({goToTutorial, goToExternalLink}) {
             caption="The final card, using the first overlay."
         />
         
+        <h2>Art Templates</h2>
+        <p>Use the colors of the templates to correctly place the art in your compositions. Stretch colors into the black area to fill the entire art, place borders and other non-essential art in the dark gray area, and use the actual content of your art file in the light gray areas.</p>
+        <LocalLabeledImage
+            src={ArtTemplateExample}
+            caption="The art template of a Poker card"
+        />
 
         <h2>Art File Sizing</h2>
         <p>Utilize Templative's default svg file size for the bottommost svg art file of your compositions, as they are setup to mirror the pixel dimensions that TheGameCrafter expects. In most cases this is handled for you by Templative, but in the cases where you create art files yourself, the viewbox of your svgs and size of your art files must match the <em>pixel</em> dimensions TheGameCrafter asks for (for poker cards that <code>825x1125px</code> with a scale of 1.</p>
