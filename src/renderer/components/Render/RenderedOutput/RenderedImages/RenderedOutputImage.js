@@ -47,6 +47,7 @@ const RenderOutputImage = ({imagePath, componentType, componentDirectoryName, na
         >
             <React.Fragment>
                 <RotatableImage
+                    componentType={componentType}
                     imageUrl={imageUrl}
                     isRotated={isRotated}
                     aspectRatio={aspectRatio}

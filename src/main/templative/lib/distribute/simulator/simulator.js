@@ -4,14 +4,14 @@ const instructionsLoader = require('../../manage/instructionsLoader.js');
 const { createSave } = require('./simulatorTemplates/save.js');
 const { lookForSimulatorFile, writeSimulatorFile, getSimulatorDirectory } = require('./utils/fileUtils.js');
 const { createObjectStates, createComponentLibrary } = require('./objectCreation/objectStateFactory.js');
-
+const { recutOutput } = require('../../produce/gameProducer.js');
 /**
  * Convert a produced game directory to Tabletop Simulator format
  * @param {string} producedDirectoryPath - Path to the produced game directory
  * @param {string} tabletopSimulatorDirectoryPath - Path to the Tabletop Simulator directory
  * @returns {Promise<number>} - 1 if successful
  */
-async function convertToTabletopSimulator(producedDirectoryPath, tabletopSimulatorDirectoryPath, templativeToken) {
+async function convertToTabletopSimulator(producedDirectoryPath, tabletopSimulatorDirectoryPath, templativeToken, renderProgram=RENDER_PROGRAM.TEMPLATIVE) {
   if (!templativeToken) {
     console.log("!!! No templative token provided, skipping Tabletop Simulator conversion.");
     return;
@@ -37,7 +37,7 @@ async function convertToTabletopSimulator(producedDirectoryPath, tabletopSimulat
   console.log(`Converting ${gameInstructions.name} into a Tabletop Simulator save.`);
 
   const uniqueGameName = path.basename(producedDirectoryPath);
-
+  await recutOutput(producedDirectoryPath, renderProgram);
   const objectStates = await createObjectStates(producedDirectoryPath, tabletopSimulatorDirectoryPath, templativeToken);
 
   let rulesContent = "";

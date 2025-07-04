@@ -9,6 +9,7 @@ const { createProjectInDirectory } = require('../../src/main/templative/lib/crea
 const { produceGame } = require('../../src/main/templative/lib/produce/gameProducer.js');
 const { convertToTabletopSimulator } = require('../../src/main/templative/lib/distribute/simulator/simulator.js');
 const { createPdfForPrinting } = require("../../src/main/templative/lib/distribute/printout/printout.js")
+const { RENDER_PROGRAM } = require('../../src/main/templative/lib/produce/gameProducer.js');
 
 const TEST_DIR = path.join(__dirname, '../test-project');
 const PROJECT_DIR = TEST_DIR;
@@ -48,9 +49,9 @@ async function testEveryComponent() {
     const isBackIncluded = false;
     const size = "Letter"
     const areBordersDrawn = false;
-    await createPdfForPrinting(outputDir, isBackIncluded, size, areBordersDrawn);
+    await createPdfForPrinting(outputDir, isBackIncluded, size, areBordersDrawn, RENDER_PROGRAM.INKSCAPE);
 
-    await convertToTabletopSimulator(outputDir, TABLETOP_SIMULATOR_DIR); 
+    await convertToTabletopSimulator(outputDir, TABLETOP_SIMULATOR_DIR, null, RENDER_PROGRAM.INKSCAPE); 
 }
 
 testEveryComponent().catch(console.error);

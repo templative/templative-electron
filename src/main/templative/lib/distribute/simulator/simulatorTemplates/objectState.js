@@ -29,7 +29,7 @@ const STANDARD_ATTRIBUTES = {
 const STANDARD_TRANSFORM = { posX: 0, posY: 0, posZ: 0, rotX: 0, rotY: 0, rotZ: 0, scaleX: 1, scaleY: 1, scaleZ: 1 }
 
 const tableLength = 7.5;
-const shrinkFactor = 0.75;
+const shrinkFactor = 1; // 0.75;
 
 function createBagForObject(object, quantity, name, type, colorDiffuse = WHITE_COLOR_DIFFUSE) {
   if (object === undefined || object === null) {

@@ -32,6 +32,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "HexShard.png",
     "TemplateFiles": [
       "HexShard"
+    ],
+    "DimensionsPixelsClipped": [
+      223,
+      195
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "CircleShard": {
@@ -67,6 +75,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "CircleShard.png",
     "TemplateFiles": [
       "CircleShard"
+    ],
+    "DimensionsPixelsClipped": [
+      225,
+      225
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SquareShard": {
@@ -102,6 +118,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SquareShard.png",
     "TemplateFiles": [
       "SquareShard"
+    ],
+    "DimensionsPixelsClipped": [
+      225,
+      225
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "BusinessDeck": {
@@ -136,6 +160,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "BusinessDeck.png",
     "TemplateFiles": [
       "BusinessDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      600,
+      1050
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "PokerDeck": {
@@ -170,6 +202,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "PokerDeck.png",
     "TemplateFiles": [
       "PokerDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      750,
+      1050
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "JumboDeck": {
@@ -204,6 +244,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "JumboDeck.png",
     "TemplateFiles": [
       "JumboDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      1051,
+      1649
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MiniDeck": {
@@ -238,6 +286,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MiniDeck.png",
     "TemplateFiles": [
       "MiniDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      525,
+      750
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MicroDeck": {
@@ -272,6 +328,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MicroDeck.png",
     "TemplateFiles": [
       "MicroDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      375,
+      525
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MintTinDeck": {
@@ -307,6 +371,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MintTinDeck.png",
     "TemplateFiles": [
       "MintTinDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      614,
+      1028
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "HexDeck": {
@@ -341,6 +413,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "HexDeck.png",
     "TemplateFiles": [
       "HexDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      1109,
+      974
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallSquareChit": {
@@ -377,6 +457,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallSquareChit.png",
     "TemplateFiles": [
       "SmallSquareChit"
+    ],
+    "DimensionsPixelsClipped": [
+      150,
+      150
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MediumSquareChit": {
@@ -413,6 +501,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MediumSquareChit.png",
     "TemplateFiles": [
       "MediumSquareChit"
+    ],
+    "DimensionsPixelsClipped": [
+      225,
+      225
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "LargeSquareChit": {
@@ -449,6 +545,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "LargeSquareChit.png",
     "TemplateFiles": [
       "LargeSquareChit"
+    ],
+    "DimensionsPixelsClipped": [
+      300,
+      300
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallCircleChit": {
@@ -485,6 +589,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallCircleChit.png",
     "TemplateFiles": [
       "SmallCircleChit"
+    ],
+    "DimensionsPixelsClipped": [
+      150,
+      150
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MediumCircleChit": {
@@ -521,6 +633,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MediumCircleChit.png",
     "TemplateFiles": [
       "MediumCircleChit"
+    ],
+    "DimensionsPixelsClipped": [
+      225,
+      225
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "LargeCircleChit": {
@@ -557,6 +677,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "LargeCircleChit.png",
     "TemplateFiles": [
       "LargeCircleChit"
+    ],
+    "DimensionsPixelsClipped": [
+      300,
+      300
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MiniHexTile": {
@@ -594,6 +722,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MiniHexTile.png",
     "TemplateFiles": [
       "MiniHexTile"
+    ],
+    "DimensionsPixelsClipped": [
+      371,
+      325
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallHexTile": {
@@ -631,6 +767,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallHexTile.png",
     "TemplateFiles": [
       "SmallHexTile"
+    ],
+    "DimensionsPixelsClipped": [
+      596,
+      520
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MediumHexTile": {
@@ -668,6 +812,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MediumHexTile.png",
     "TemplateFiles": [
       "MediumHexTile"
+    ],
+    "DimensionsPixelsClipped": [
+      753,
+      659
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "LargeHexTile": {
@@ -705,6 +857,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "LargeHexTile.png",
     "TemplateFiles": [
       "LargeHexTile"
+    ],
+    "DimensionsPixelsClipped": [
+      1121,
+      974
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MintTinAccordion4": {
@@ -741,6 +901,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MintTinAccordion4.png",
     "TemplateFiles": [
       "MintTinAccordion4"
+    ],
+    "DimensionsPixelsClipped": [
+      2577,
+      1154
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "BiFoldMat": {
@@ -776,6 +944,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "BiFoldMat.png",
     "TemplateFiles": [
       "BiFoldMat"
+    ],
+    "DimensionsPixelsClipped": [
+      2400,
+      2400
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "DominoMat": {
@@ -810,6 +986,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "DominoMat.png",
     "TemplateFiles": [
       "DominoMat"
+    ],
+    "DimensionsPixelsClipped": [
+      1200,
+      2400
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MintTinAccordion6": {
@@ -846,6 +1030,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MintTinAccordion6.png",
     "TemplateFiles": [
       "MintTinAccordion6"
+    ],
+    "DimensionsPixelsClipped": [
+      3806,
+      1152
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MintTinAccordion8": {
@@ -882,6 +1074,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MintTinAccordion8.png",
     "TemplateFiles": [
       "MintTinAccordion8"
+    ],
+    "DimensionsPixelsClipped": [
+      5032,
+      1142
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "PokerFolio": {
@@ -917,7 +1117,15 @@ const COMPONENT_INFO = {
     "PreviewUri": "PokerFolio.png",
     "TemplateFiles": [
       "PokerFolioBack",
-      "PokerFolioFace"
+      "PokerFolioFront"
+    ],
+    "DimensionsPixelsClipped": [
+      3000,
+      1050
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MintTinFolio": {
@@ -955,6 +1163,14 @@ const COMPONENT_INFO = {
     "TemplateFiles": [
       "MintTinFolioBack",
       "MintTinFolioFace"
+    ],
+    "DimensionsPixelsClipped": [
+      2550,
+      937
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "DominoBoard": {
@@ -989,6 +1205,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "DominoBoard.png",
     "TemplateFiles": [
       "DominoBoard"
+    ],
+    "DimensionsPixelsClipped": [
+      1200,
+      2400
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MintTin": {
@@ -1021,8 +1245,16 @@ const COMPONENT_INFO = {
     "Key": "MintTin",
     "PreviewUri": "MintTin.png",
     "TemplateFiles": [
-      "MintTinBottom",
-      "MintTinTop"
+      "MintTinBack",
+      "MintTinFront"
+    ],
+    "DimensionsPixelsClipped": [
+      628,
+      1051
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallStoutBox": {
@@ -1056,8 +1288,16 @@ const COMPONENT_INFO = {
     "Key": "SmallStoutBox",
     "PreviewUri": "SmallStoutBox.png",
     "TemplateFiles": [
-      "SmallStoutBoxBottom",
-      "SmallStoutBoxTop"
+      "SmallStoutBoxBack",
+      "SmallStoutBoxFront"
+    ],
+    "DimensionsPixelsClipped": [
+      3492,
+      2856
+    ],
+    "PrintingSizeUpRatio": [
+      1.9268354004276746,
+      2.4052811779280883
     ]
   },
   "MediumStoutBox": {
@@ -1091,8 +1331,16 @@ const COMPONENT_INFO = {
     "Key": "MediumStoutBox",
     "PreviewUri": "MediumStoutBox.png",
     "TemplateFiles": [
-      "MediumStoutBoxBottom",
-      "MediumStoutBoxTop"
+      "MediumStoutBoxBack",
+      "MediumStoutBoxFront"
+    ],
+    "DimensionsPixelsClipped": [
+      3600,
+      4500
+    ],
+    "PrintingSizeUpRatio": [
+      2.00836808879397,
+      1.6666666666666667
     ]
   },
   "LargeStoutBox": {
@@ -1126,7 +1374,15 @@ const COMPONENT_INFO = {
     "Key": "LargeStoutBox",
     "PreviewUri": "LargeStoutBox.png",
     "TemplateFiles": [
-      "LargeStoutBoxBottom"
+      "LargeStoutBoxBack"
+    ],
+    "DimensionsPixelsClipped": [
+      5751,
+      5751
+    ],
+    "PrintingSizeUpRatio": [
+      1.7603354053898692,
+      1.7603305711662076
     ]
   },
   "PokerBooster": {
@@ -1159,6 +1415,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "PokerBooster.png",
     "TemplateFiles": [
       "PokerBooster"
+    ],
+    "DimensionsPixelsClipped": [
+      885,
+      1275
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "PokerTuckBox36": {
@@ -1192,6 +1456,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "PokerTuckBox36.png",
     "TemplateFiles": [
       "PokerTuckBox36"
+    ],
+    "DimensionsPixelsClipped": [
+      1982,
+      1688
+    ],
+    "PrintingSizeUpRatio": [
+      2.598906237377049,
+      1.5890202409411762
     ]
   },
   "PokerTuckBox54": {
@@ -1225,6 +1497,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "PokerTuckBox54.png",
     "TemplateFiles": [
       "PokerTuckBox54"
+    ],
+    "DimensionsPixelsClipped": [
+      2216,
+      1844
+    ],
+    "PrintingSizeUpRatio": [
+      2.9217594998271275,
+      1.7358457575369695
     ]
   },
   "PokerTuckBox72": {
@@ -1258,6 +1538,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "PokerTuckBox72.png",
     "TemplateFiles": [
       "PokerTuckBox72"
+    ],
+    "DimensionsPixelsClipped": [
+      2459,
+      1856
+    ],
+    "PrintingSizeUpRatio": [
+      3.2244863081967208,
+      1.7471247715315619
     ]
   },
   "PokerTuckBox90": {
@@ -1291,6 +1579,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "PokerTuckBox90.png",
     "TemplateFiles": [
       "PokerTuckBox90"
+    ],
+    "DimensionsPixelsClipped": [
+      2702,
+      2018
+    ],
+    "PrintingSizeUpRatio": [
+      3.5430531105720307,
+      1.8996043066271877
     ]
   },
   "PokerTuckBox108": {
@@ -1324,6 +1620,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "PokerTuckBox108.png",
     "TemplateFiles": [
       "PokerTuckBox108"
+    ],
+    "DimensionsPixelsClipped": [
+      2927,
+      2168
+    ],
+    "PrintingSizeUpRatio": [
+      3.838271694734334,
+      2.040780391529412
     ]
   },
   "AccordionBoard": {
@@ -1356,6 +1660,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "AccordionBoard.png",
     "TemplateFiles": [
       "AccordionBoard"
+    ],
+    "DimensionsPixelsClipped": [
+      2400,
+      4800
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "AcrylicShape125": {
@@ -1441,6 +1753,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "ArrowChit.png",
     "TemplateFiles": [
       "ArrowChit"
+    ],
+    "DimensionsPixelsClipped": [
+      18,
+      55
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "BiFoldBoard": {
@@ -1473,6 +1793,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "BiFoldBoard.png",
     "TemplateFiles": [
       "BiFoldBoard"
+    ],
+    "DimensionsPixelsClipped": [
+      2700,
+      5399
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "BigMat": {
@@ -1505,6 +1833,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "BigMat.png",
     "TemplateFiles": [
       "BigMat"
+    ],
+    "DimensionsPixelsClipped": [
+      3000,
+      4800
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "BridgeDeck": {
@@ -1537,6 +1873,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "BridgeDeck.png",
     "TemplateFiles": [
       "BridgeDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      675,
+      1050
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "BridgeFolio": {
@@ -1571,6 +1915,14 @@ const COMPONENT_INFO = {
     "TemplateFiles": [
       "BridgeFolioBack",
       "BridgeFolioFace"
+    ],
+    "DimensionsPixelsClipped": [
+      2700,
+      1050
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "BridgeHookBox108": {
@@ -1677,6 +2029,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "BridgeTuckBox108.png",
     "TemplateFiles": [
       "BridgeTuckBox108"
+    ],
+    "DimensionsPixelsClipped": [
+      2795,
+      2180
+    ],
+    "PrintingSizeUpRatio": [
+      4.089718910795355,
+      2.0601652012494367
     ]
   },
   "BridgeTuckBox54": {
@@ -1711,6 +2071,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "BridgeTuckBox54.png",
     "TemplateFiles": [
       "BridgeTuckBox54"
+    ],
+    "DimensionsPixelsClipped": [
+      2066,
+      1694
+    ],
+    "PrintingSizeUpRatio": [
+      3.0229147500507474,
+      1.6009385852811604
     ]
   },
   "BullseyeChit": {
@@ -1744,6 +2112,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "BullseyeChit.png",
     "TemplateFiles": [
       "BullseyeChit"
+    ],
+    "DimensionsPixelsClipped": [
+      300,
+      862
+    ],
+    "PrintingSizeUpRatio": [
+      0.9999999966666667,
+      2.874986993333333
     ]
   },
   "CardCraftingDeck": {
@@ -1777,6 +2153,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "CardCraftingDeck.png",
     "TemplateFiles": [
       "CardCraftingDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      803,
+      1416
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "CircleDeck": {
@@ -1809,6 +2193,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "CircleDeck.png",
     "TemplateFiles": [
       "CircleDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      1050,
+      1050
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "ClearCardCraftingDeck": {
@@ -1843,6 +2235,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "ClearCardCraftingDeck.png",
     "TemplateFiles": [
       "ClearCardCraftingDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      797,
+      1411
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "ClearEuroPokerDeck": {
@@ -1877,6 +2277,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "ClearEuroPokerDeck.png",
     "TemplateFiles": [
       "EuroPokerDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      746,
+      1043
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "CustomColorD4": {
@@ -1909,6 +2317,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "CustomColorD4.png",
     "TemplateFiles": [
       "CustomColorD4"
+    ],
+    "DimensionsPixelsClipped": [
+      220,
+      185
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "CustomColorD6": {
@@ -1941,6 +2357,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "CustomColorD6.png",
     "TemplateFiles": [
       "CustomColorD6"
+    ],
+    "DimensionsPixelsClipped": [
+      180,
+      180
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "CustomColorD8": {
@@ -1973,6 +2397,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "CustomColorD8.png",
     "TemplateFiles": [
       "CustomColorD8"
+    ],
+    "DimensionsPixelsClipped": [
+      155,
+      130
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "CustomLargeCardstock": {
@@ -2006,6 +2438,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "CustomLargeCardstock.png",
     "TemplateFiles": [
       "CustomLargeCardstock"
+    ],
+    "DimensionsPixelsClipped": [
+      2475,
+      3150
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "CustomLargePunchout": {
@@ -2039,6 +2479,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "CustomLargePunchout.png",
     "TemplateFiles": [
       "CustomLargePunchout"
+    ],
+    "DimensionsPixelsClipped": [
+      2475,
+      3150
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "CustomLargeSticker": {
@@ -2102,6 +2550,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "CustomMediumCardstock.png",
     "TemplateFiles": [
       "CustomMediumCardstock"
+    ],
+    "DimensionsPixelsClipped": [
+      2400,
+      1350
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "CustomMediumPunchout": {
@@ -2135,6 +2591,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "CustomMediumPunchout.png",
     "TemplateFiles": [
       "CustomMediumPunchout"
+    ],
+    "DimensionsPixelsClipped": [
+      2400,
+      1350
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "CustomMediumSticker": {
@@ -2198,6 +2662,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "CustomMiniCardstock.png",
     "TemplateFiles": [
       "CustomMiniCardstock"
+    ],
+    "DimensionsPixelsClipped": [
+      750,
+      1050
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "CustomMiniSticker": {
@@ -2261,6 +2733,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "CustomPrintedMeeple.png",
     "TemplateFiles": [
       "CustomPrintedMeeple"
+    ],
+    "DimensionsPixelsClipped": [
+      208,
+      198
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "CustomSmallCardstock": {
@@ -2294,6 +2774,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "CustomSmallCardstock.png",
     "TemplateFiles": [
       "CustomSmallCardstock"
+    ],
+    "DimensionsPixelsClipped": [
+      975,
+      1575
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "CustomSmallPunchout": {
@@ -2327,6 +2815,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "CustomSmallPunchout.png",
     "TemplateFiles": [
       "CustomSmallPunchout"
+    ],
+    "DimensionsPixelsClipped": [
+      975,
+      1575
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "CustomSmallSticker": {
@@ -2390,6 +2886,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "CustomWoodD6.png",
     "TemplateFiles": [
       "CustomWoodD6"
+    ],
+    "DimensionsPixelsClipped": [
+      150,
+      150
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "DeckBox": {
@@ -2421,8 +2925,16 @@ const COMPONENT_INFO = {
     "Key": "DeckBox",
     "PreviewUri": "DeckBox.png",
     "TemplateFiles": [
-      "DeckBoxBottom",
-      "DeckBoxTop"
+      "DeckBoxBack",
+      "DeckBoxFront"
+    ],
+    "DimensionsPixelsClipped": [
+      864,
+      1170
+    ],
+    "PrintingSizeUpRatio": [
+      0.6998312710045568,
+      0.4642857142857142
     ]
   },
   "DeckBoxTopAndSide": {
@@ -2435,7 +2947,7 @@ const COMPONENT_INFO = {
       4.17,
       8.45
     ],
-    "GameCrafterUploadTask": "boxtop",
+    "GameCrafterUploadTask": "boxFront",
     "GameCrafterPackagingDepthMillimeters": 80.772,
     "HasPieceData": true,
     "HasPieceQuantity": true,
@@ -2454,6 +2966,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "DeckBoxTopAndSide.png",
     "TemplateFiles": [
       "DeckBoxTopAndSide"
+    ],
+    "DimensionsPixelsClipped": [
+      864,
+      1170
+    ],
+    "PrintingSizeUpRatio": [
+      0.6998312710045568,
+      0.4642857142857142
     ]
   },
   "DiceSticker": {
@@ -2487,6 +3007,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "DiceSticker.png",
     "TemplateFiles": [
       "DiceSticker"
+    ],
+    "DimensionsPixelsClipped": [
+      153,
+      153
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "DividerDeck": {
@@ -2519,6 +3047,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "DividerDeck.png",
     "TemplateFiles": [
       "DividerDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      900,
+      1050
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "Document": {
@@ -2550,6 +3086,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "Document.png",
     "TemplateFiles": [
       "Document"
+    ],
+    "DimensionsPixelsClipped": [
+      2401,
+      3150
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "DominoChit": {
@@ -2583,6 +3127,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "DominoChit.png",
     "TemplateFiles": [
       "DominoChit"
+    ],
+    "DimensionsPixelsClipped": [
+      300,
+      600
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "DominoDeck": {
@@ -2615,6 +3167,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "DominoDeck.png",
     "TemplateFiles": [
       "DominoDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      525,
+      1050
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "DominoTile": {
@@ -2649,6 +3209,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "DominoTile.png",
     "TemplateFiles": [
       "DominoTile"
+    ],
+    "DimensionsPixelsClipped": [
+      600,
+      1200
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "DualDial": {
@@ -2681,6 +3249,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "DualDial.png",
     "TemplateFiles": [
       "DualDial"
+    ],
+    "DimensionsPixelsClipped": [
+      2622,
+      1942
+    ],
+    "PrintingSizeUpRatio": [
+      3.253073064442516,
+      1.232867211159062
     ]
   },
   "EuroPokerDeck": {
@@ -2714,6 +3290,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "EuroPokerDeck.png",
     "TemplateFiles": [
       "EuroPokerDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      746,
+      1043
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "EuroSquareDeck": {
@@ -2747,6 +3331,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "EuroSquareDeck.png",
     "TemplateFiles": [
       "EuroSquareDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      827,
+      827
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "FlowerMat": {
@@ -2779,6 +3371,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "FlowerMat.png",
     "TemplateFiles": [
       "FlowerMat"
+    ],
+    "DimensionsPixelsClipped": [
+      180,
+      187
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "FoilEuroPokerDeck": {
@@ -2813,6 +3413,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "FoilEuroPokerDeck.png",
     "TemplateFiles": [
       "EuroPokerDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      746,
+      1043
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "FoilPokerDeck": {
@@ -2846,6 +3454,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "FoilPokerDeck.png",
     "TemplateFiles": [
       "PokerDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      750,
+      1050
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "FoilTarotDeck": {
@@ -2879,6 +3495,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "FoilTarotDeck.png",
     "TemplateFiles": [
       "TarotDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      825,
+      1424
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "HalfBoard": {
@@ -2911,6 +3535,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "HalfBoard.png",
     "TemplateFiles": [
       "HalfBoard"
+    ],
+    "DimensionsPixelsClipped": [
+      1500,
+      3000
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "HalfMat": {
@@ -2943,6 +3575,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "HalfMat.png",
     "TemplateFiles": [
       "HalfMat"
+    ],
+    "DimensionsPixelsClipped": [
+      1500,
+      3000
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "HexMat": {
@@ -2975,6 +3615,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "HexMat.png",
     "TemplateFiles": [
       "HexMat"
+    ],
+    "DimensionsPixelsClipped": [
+      1575,
+      1350
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "InvaderMat": {
@@ -3007,6 +3655,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "InvaderMat.png",
     "TemplateFiles": [
       "InvaderMat"
+    ],
+    "DimensionsPixelsClipped": [
+      1200,
+      1039
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "JumboBooklet": {
@@ -3040,6 +3696,14 @@ const COMPONENT_INFO = {
     "TemplateFiles": [
       "JumboBooklet20pg",
       "JumboBooklet40pg"
+    ],
+    "DimensionsPixelsClipped": [
+      2400,
+      3000
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "JumboHookBox36": {
@@ -3145,6 +3809,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "JumboTuckBox90.png",
     "TemplateFiles": [
       "JumboTuckBox90"
+    ],
+    "DimensionsPixelsClipped": [
+      3302,
+      2618
+    ],
+    "PrintingSizeUpRatio": [
+      3.119684886634023,
+      1.5788944153208273
     ]
   },
   "LargeAcrylicShape125": {
@@ -3205,6 +3877,14 @@ const COMPONENT_INFO = {
     "TemplateFiles": [
       "LargeBooklet20pg",
       "LargeBooklet40pg"
+    ],
+    "DimensionsPixelsClipped": [
+      1500,
+      2400
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "LargeHexMat": {
@@ -3238,6 +3918,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "LargeHexMat.png",
     "TemplateFiles": [
       "LargeHexMat"
+    ],
+    "DimensionsPixelsClipped": [
+      2850,
+      2475
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "LargePrototypeBox": {
@@ -3247,10 +3935,10 @@ const COMPONENT_INFO = {
       5925
     ],
     "DimensionsInches": [
-      10.625,
-      9.375
+      9.375,
+      10.625
     ],
-    "GameCrafterUploadTask": "boxtop",
+    "GameCrafterUploadTask": "boxFront",
     "GameCrafterPackagingDepthMillimeters": 57.15,
     "HasPieceData": true,
     "HasPieceQuantity": true,
@@ -3271,6 +3959,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "LargePrototypeBox.png",
     "TemplateFiles": [
       "LargePrototypeBox"
+    ],
+    "DimensionsPixelsClipped": [
+      7281,
+      5714
+    ],
+    "PrintingSizeUpRatio": [
+      2.658246437193457,
+      1.8517536660122844
     ]
   },
   "LargeRetailBox": {
@@ -3305,6 +4001,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "LargeRetailBox.png",
     "TemplateFiles": [
       "LargeRetailBox"
+    ],
+    "DimensionsPixelsClipped": [
+      3919,
+      4650
+    ],
+    "PrintingSizeUpRatio": [
+      1.3866667773033063,
+      1.3052408796145039
     ]
   },
   "LargeRing": {
@@ -3339,6 +4043,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "LargeRing.png",
     "TemplateFiles": [
       "LargeRing"
+    ],
+    "DimensionsPixelsClipped": [
+      375,
+      375
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "LargeScorePadColor": {
@@ -3373,6 +4085,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "LargeScorePadColor.png",
     "TemplateFiles": [
       "LargeScorepadColor"
+    ],
+    "DimensionsPixelsClipped": [
+      2400,
+      3000
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "LargeScreen": {
@@ -3405,6 +4125,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "LargeScreen.png",
     "TemplateFiles": [
       "LargeScreen"
+    ],
+    "DimensionsPixelsClipped": [
+      4800,
+      3000
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "LargeSquareBoard": {
@@ -3438,6 +4166,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "LargeSquareBoard.png",
     "TemplateFiles": [
       "LargeSquareBoard"
+    ],
+    "DimensionsPixelsClipped": [
+      3000,
+      3000
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "LargeSquareMat": {
@@ -3471,6 +4207,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "LargeSquareMat.png",
     "TemplateFiles": [
       "LargeSquareMat"
+    ],
+    "DimensionsPixelsClipped": [
+      3000,
+      3000
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "LargeSquareTile": {
@@ -3506,6 +4250,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "LargeSquareTile.png",
     "TemplateFiles": [
       "LargeSquareTile"
+    ],
+    "DimensionsPixelsClipped": [
+      1050,
+      1050
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "LargeStandee": {
@@ -3539,10 +4291,18 @@ const COMPONENT_INFO = {
     "PreviewUri": "LargeStandee.png",
     "TemplateFiles": [
       "LargeStandee"
+    ],
+    "DimensionsPixelsClipped": [
+      298,
+      895
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1.333317653784067
     ]
   },
-  "LargeStoutBoxTop": {
-    "DisplayName": "Large Stout Box Top",
+  "LargeStoutBoxFront": {
+    "DisplayName": "Large Stout Box Front",
     "DimensionsPixels": [
       3450,
       3450
@@ -3551,7 +4311,7 @@ const COMPONENT_INFO = {
       11,
       11
     ],
-    "GameCrafterUploadTask": "boxtop",
+    "GameCrafterUploadTask": "boxFront",
     "GameCrafterPackagingDepthMillimeters": 82.042,
     "HasPieceData": true,
     "HasPieceQuantity": true,
@@ -3568,10 +4328,18 @@ const COMPONENT_INFO = {
     "IsDisabled": false,
     "SimulatorCreationTask": "none",
     "PlaygroundCreationTask": "none",
-    "Key": "LargeStoutBoxTop",
+    "Key": "LargeStoutBoxFront",
     "PreviewUri": "LargeStoutBoxTop.png",
     "TemplateFiles": [
-      "LargeStoutBoxTop"
+      "LargeStoutBoxFront"
+    ],
+    "DimensionsPixelsClipped": [
+      5818,
+      5818
+    ],
+    "PrintingSizeUpRatio": [
+      1.7444097464643624,
+      1.7452818636670417
     ]
   },
   "LargeStoutBoxTopAndSide": {
@@ -3605,6 +4373,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "LargeStoutBoxTopAndSide.png",
     "TemplateFiles": [
       "LargeStoutBoxTopAndSide"
+    ],
+    "DimensionsPixelsClipped": [
+      3388,
+      3388
+    ],
+    "PrintingSizeUpRatio": [
+      1.7444096475158812,
+      1.7452818680355175
     ]
   },
   "MediumBooklet": {
@@ -3638,6 +4414,14 @@ const COMPONENT_INFO = {
     "TemplateFiles": [
       "MediumBooklet20pg",
       "MediumBooklet40pg"
+    ],
+    "DimensionsPixelsClipped": [
+      1050,
+      1500
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MediumFolio": {
@@ -3672,6 +4456,14 @@ const COMPONENT_INFO = {
     "TemplateFiles": [
       "MediumFolioBack",
       "MediumFolioFace"
+    ],
+    "DimensionsPixelsClipped": [
+      4800,
+      2400
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MediumGameMat": {
@@ -3704,6 +4496,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MediumGameMat.png",
     "TemplateFiles": [
       "MediumGameMat"
+    ],
+    "DimensionsPixelsClipped": [
+      7200,
+      4200
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MediumMatBook": {
@@ -3768,8 +4568,16 @@ const COMPONENT_INFO = {
     "Key": "MediumProBox",
     "PreviewUri": "MediumProBox.png",
     "TemplateFiles": [
-      "MediumProBoxBottom",
-      "MediumProBoxTop"
+      "MediumProBoxBack",
+      "MediumProBoxFront"
+    ],
+    "DimensionsPixelsClipped": [
+      3225,
+      4245
+    ],
+    "PrintingSizeUpRatio": [
+      2.1655469551455298,
+      1.6708503482410824
     ]
   },
   "MediumPrototypeBox": {
@@ -3779,10 +4587,10 @@ const COMPONENT_INFO = {
       5400
     ],
     "DimensionsInches": [
-      9.625,
-      6.875
+      6.875,
+      9.625
     ],
-    "GameCrafterUploadTask": "boxtop",
+    "GameCrafterUploadTask": "boxFront",
     "GameCrafterPackagingDepthMillimeters": 49.2125,
     "HasPieceData": true,
     "HasPieceQuantity": true,
@@ -3803,6 +4611,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MediumPrototypeBox.png",
     "TemplateFiles": [
       "MediumPrototypeBox"
+    ],
+    "DimensionsPixelsClipped": [
+      5700,
+      5250
+    ],
+    "PrintingSizeUpRatio": [
+      2.7598181134609647,
+      1.810116820228923
     ]
   },
   "MediumRing": {
@@ -3837,6 +4653,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MediumRing.png",
     "TemplateFiles": [
       "MediumRing"
+    ],
+    "DimensionsPixelsClipped": [
+      300,
+      300
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MediumScorePadColor": {
@@ -3871,6 +4695,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MediumScorePadColor.png",
     "TemplateFiles": [
       "MediumScorePadColor"
+    ],
+    "DimensionsPixelsClipped": [
+      1350,
+      2400
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MediumScreen": {
@@ -3903,6 +4735,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MediumScreen.png",
     "TemplateFiles": [
       "MediumScreen"
+    ],
+    "DimensionsPixelsClipped": [
+      4800,
+      1350
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MediumSixFoldBoard": {
@@ -3936,6 +4776,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MediumSixFoldBoard.png",
     "TemplateFiles": [
       "MediumSixFoldBoard"
+    ],
+    "DimensionsPixelsClipped": [
+      4800,
+      4800
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MediumSquareTile": {
@@ -3971,6 +4819,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MediumSquareTile.png",
     "TemplateFiles": [
       "MediumSquareTile"
+    ],
+    "DimensionsPixelsClipped": [
+      750,
+      750
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MediumStandee": {
@@ -4004,6 +4860,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MediumStandee.png",
     "TemplateFiles": [
       "MediumStandee"
+    ],
+    "DimensionsPixelsClipped": [
+      225,
+      690
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1.3731314279574973
     ]
   },
   "MediumStoutBoxTopAndSide": {
@@ -4016,7 +4880,7 @@ const COMPONENT_INFO = {
       6.125,
       9
     ],
-    "GameCrafterUploadTask": "boxtop",
+    "GameCrafterUploadTask": "boxFront",
     "GameCrafterPackagingDepthMillimeters": 57.15,
     "HasPieceData": true,
     "HasPieceQuantity": true,
@@ -4037,6 +4901,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MediumStoutBoxTopAndSide.png",
     "TemplateFiles": [
       "MediumStoutBoxTopAndSide"
+    ],
+    "DimensionsPixelsClipped": [
+      3600,
+      4500
+    ],
+    "PrintingSizeUpRatio": [
+      2.0083681055303706,
+      1.6666666796296297
     ]
   },
   "MediumTriangleChit": {
@@ -4071,6 +4943,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MediumTriangleChit.png",
     "TemplateFiles": [
       "MediumTriangleChit"
+    ],
+    "DimensionsPixelsClipped": [
+      231,
+      200
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MeepleSticker": {
@@ -4103,6 +4983,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MeepleSticker.png",
     "TemplateFiles": [
       "MeepleSticker"
+    ],
+    "DimensionsPixelsClipped": [
+      150,
+      167
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MiniCircleTile": {
@@ -4138,6 +5026,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MiniCircleTile.png",
     "TemplateFiles": [
       "MiniCircleTile"
+    ],
+    "DimensionsPixelsClipped": [
+      375,
+      375
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MiniSquareTile": {
@@ -4172,6 +5068,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MiniSquareTile.png",
     "TemplateFiles": [
       "MiniSquareTile"
+    ],
+    "DimensionsPixelsClipped": [
+      375,
+      375
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MintTinSticker": {
@@ -4206,6 +5110,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "MintTinSticker.png",
     "TemplateFiles": [
       "MintTinSticker"
+    ],
+    "DimensionsPixelsClipped": [
+      614,
+      1028
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "PawnSticker": {
@@ -4238,6 +5150,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "PawnSticker.png",
     "TemplateFiles": [
       "PawnSticker"
+    ],
+    "DimensionsPixelsClipped": [
+      188,
+      397
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "PlacardMat": {
@@ -4270,6 +5190,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "PlacardMat.png",
     "TemplateFiles": [
       "PlacardMat"
+    ],
+    "DimensionsPixelsClipped": [
+      1200,
+      900
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "PlayMoney": {
@@ -4302,6 +5230,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "PlayMoney.png",
     "TemplateFiles": [
       "PlayMoney"
+    ],
+    "DimensionsPixelsClipped": [
+      600,
+      1050
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "PokerBoosterBox": {
@@ -4311,8 +5247,8 @@ const COMPONENT_INFO = {
       4875
     ],
     "DimensionsInches": [
-      5.21,
-      5.78
+      5.78,
+      5.21
     ],
     "GameCrafterUploadTask": "tuckbox",
     "GameCrafterPackagingDepthMillimeters": 60.198,
@@ -4335,6 +5271,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "PokerBoosterBox.png",
     "TemplateFiles": [
       "PokerBoosterBox"
+    ],
+    "DimensionsPixelsClipped": [
+      3363,
+      4740
+    ],
+    "PrintingSizeUpRatio": [
+      1.949577366376812,
+      3.0980336249651215
     ]
   },
   "PokerEnvelope": {
@@ -4367,6 +5311,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "PokerEnvelope.png",
     "TemplateFiles": [
       "PokerEnvelope"
+    ],
+    "DimensionsPixelsClipped": [
+      881,
+      1350
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "PokerHookBox108": {
@@ -4475,6 +5427,14 @@ const COMPONENT_INFO = {
     "TemplateFiles": [
       "PokerHookBox18Front",
       "PokerHookBox18Back"
+    ],
+    "DimensionsPixelsClipped": [
+      2373,
+      2911
+    ],
+    "PrintingSizeUpRatio": [
+      3.1017905866840065,
+      2.7301386627677973
     ]
   },
   "PokerHookBox54": {
@@ -4615,6 +5575,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "PostcardMat.png",
     "TemplateFiles": [
       "PostcardMat"
+    ],
+    "DimensionsPixelsClipped": [
+      1800,
+      1200
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "QuadFoldBoard": {
@@ -4647,6 +5615,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "QuadFoldBoard.png",
     "TemplateFiles": [
       "QuadFoldBoard"
+    ],
+    "DimensionsPixelsClipped": [
+      5423,
+      5423
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "QuadFoldMat": {
@@ -4713,6 +5689,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "QuarterBoard.png",
     "TemplateFiles": [
       "QuarterBoard"
+    ],
+    "DimensionsPixelsClipped": [
+      1500,
+      1500
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "QuarterMat": {
@@ -4745,6 +5729,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "QuarterMat.png",
     "TemplateFiles": [
       "QuarterMat"
+    ],
+    "DimensionsPixelsClipped": [
+      1500,
+      1500
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SixFoldBoard": {
@@ -4777,6 +5769,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SixFoldBoard.png",
     "TemplateFiles": [
       "SixFoldBoard"
+    ],
+    "DimensionsPixelsClipped": [
+      8064,
+      5367
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SkinnyBoard": {
@@ -4809,6 +5809,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SkinnyBoard.png",
     "TemplateFiles": [
       "SkinnyBoard"
+    ],
+    "DimensionsPixelsClipped": [
+      1197,
+      2999
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SkinnyMat": {
@@ -4841,6 +5849,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SkinnyMat.png",
     "TemplateFiles": [
       "SkinnyMat"
+    ],
+    "DimensionsPixelsClipped": [
+      1197,
+      2999
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SliverBoard": {
@@ -4873,6 +5889,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SliverBoard.png",
     "TemplateFiles": [
       "SliverBoard"
+    ],
+    "DimensionsPixelsClipped": [
+      600,
+      2400
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SliverMat": {
@@ -4905,6 +5929,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SliverMat.png",
     "TemplateFiles": [
       "SliverMat"
+    ],
+    "DimensionsPixelsClipped": [
+      600,
+      2400
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SlopesideBiFoldMat": {
@@ -4939,6 +5971,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SlopesideBiFoldMat.png",
     "TemplateFiles": [
       "SlopeSideBifoldMat"
+    ],
+    "DimensionsPixelsClipped": [
+      2100,
+      1050
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallBiFoldMat": {
@@ -4973,6 +6013,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallBiFoldMat.png",
     "TemplateFiles": [
       "SmallBiFoldMat"
+    ],
+    "DimensionsPixelsClipped": [
+      2076,
+      3252
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallBooklet": {
@@ -5006,6 +6054,14 @@ const COMPONENT_INFO = {
     "TemplateFiles": [
       "SmallBooklet20pg",
       "SmallBooklet40pg"
+    ],
+    "DimensionsPixelsClipped": [
+      750,
+      1050
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallDial": {
@@ -5038,6 +6094,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallDial.png",
     "TemplateFiles": [
       "SmallDial"
+    ],
+    "DimensionsPixelsClipped": [
+      263,
+      596
+    ],
+    "PrintingSizeUpRatio": [
+      0.7499999935897437,
+      1.6973077048279641
     ]
   },
   "SmallFolio": {
@@ -5072,6 +6136,14 @@ const COMPONENT_INFO = {
     "TemplateFiles": [
       "SmallFolioBack",
       "SmallFolioFace"
+    ],
+    "DimensionsPixelsClipped": [
+      4200,
+      1650
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallGameMat": {
@@ -5104,6 +6176,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallGameMat.png",
     "TemplateFiles": [
       "SmallGameMat"
+    ],
+    "DimensionsPixelsClipped": [
+      3017,
+      4817
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallProBox": {
@@ -5137,8 +6217,16 @@ const COMPONENT_INFO = {
     "Key": "SmallProBox",
     "PreviewUri": "SmallProBox.png",
     "TemplateFiles": [
-      "SmallProBoxBottom",
-      "SmallProBoxTop"
+      "SmallProBoxBack",
+      "SmallProBoxFront"
+    ],
+    "DimensionsPixelsClipped": [
+      2816,
+      2205
+    ],
+    "PrintingSizeUpRatio": [
+      1.6181950597279915,
+      1.9250353067277428
     ]
   },
   "SmallProTarotInsert": {
@@ -5173,6 +6261,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallProTarotInsert.png",
     "TemplateFiles": [
       "SmallProTarotInsert"
+    ],
+    "DimensionsPixelsClipped": [
+      2278,
+      4464
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallPrototypeBox": {
@@ -5182,10 +6278,10 @@ const COMPONENT_INFO = {
       4500
     ],
     "DimensionsInches": [
-      5.9375,
-      4
+      4,
+      5.9375
     ],
-    "GameCrafterUploadTask": "boxtop",
+    "GameCrafterUploadTask": "boxFront",
     "GameCrafterPackagingDepthMillimeters": 58.419999999999995,
     "HasPieceData": true,
     "HasPieceQuantity": true,
@@ -5206,6 +6302,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallPrototypeBox.png",
     "TemplateFiles": [
       "SmallPrototypeBox"
+    ],
+    "DimensionsPixelsClipped": [
+      4290,
+      4420
+    ],
+    "PrintingSizeUpRatio": [
+      3.5625553909421277,
+      2.706199678360746
     ]
   },
   "SmallQuadFoldMat": {
@@ -5240,6 +6344,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallQuadFoldMat.png",
     "TemplateFiles": [
       "SmallQuadFoldMat"
+    ],
+    "DimensionsPixelsClipped": [
+      2101,
+      3299
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallRing": {
@@ -5274,6 +6386,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallRing.png",
     "TemplateFiles": [
       "SmallRing"
+    ],
+    "DimensionsPixelsClipped": [
+      225,
+      225
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallScorePadColor": {
@@ -5308,6 +6428,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallScorePadColor.png",
     "TemplateFiles": [
       "SmallScorepadColor"
+    ],
+    "DimensionsPixelsClipped": [
+      1050,
+      1650
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallScreen": {
@@ -5340,6 +6468,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallScreen.png",
     "TemplateFiles": [
       "SmallScreen"
+    ],
+    "DimensionsPixelsClipped": [
+      3001,
+      1050
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallSquareBoard": {
@@ -5373,6 +6509,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallSquareBoard.png",
     "TemplateFiles": [
       "SmallSquareBoard"
+    ],
+    "DimensionsPixelsClipped": [
+      1197,
+      1201
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallSquareDeck": {
@@ -5406,6 +6550,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallSquareDeck.png",
     "TemplateFiles": [
       "SmallSquareDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      750,
+      750
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallSquareMat": {
@@ -5439,6 +6591,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallSquareMat.png",
     "TemplateFiles": [
       "SmallSquareMat"
+    ],
+    "DimensionsPixelsClipped": [
+      1197,
+      1201
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallSquareTile": {
@@ -5473,6 +6633,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallSquareTile.png",
     "TemplateFiles": [
       "SmallSquareTile"
+    ],
+    "DimensionsPixelsClipped": [
+      600,
+      600
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallStandee": {
@@ -5506,6 +6674,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallStandee.png",
     "TemplateFiles": [
       "SmallStandee"
+    ],
+    "DimensionsPixelsClipped": [
+      150,
+      450
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1.3342708631627638
     ]
   },
   "SmallStoutTarotInsert": {
@@ -5540,6 +6716,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SmallStoutTarotInsert.png",
     "TemplateFiles": [
       "SmallStoutTarotInsert"
+    ],
+    "DimensionsPixelsClipped": [
+      3418,
+      4621
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SpinnerMat": {
@@ -5572,6 +6756,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SpinnerMat.png",
     "TemplateFiles": [
       "spinnermat"
+    ],
+    "DimensionsPixelsClipped": [
+      3600,
+      3600
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SquareBoard": {
@@ -5604,6 +6796,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SquareBoard.png",
     "TemplateFiles": [
       "SquareBoard"
+    ],
+    "DimensionsPixelsClipped": [
+      2400,
+      2400
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SquareDeck": {
@@ -5636,6 +6836,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SquareDeck.png",
     "TemplateFiles": [
       "SquareDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      1049,
+      1049
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SquareFolio": {
@@ -5670,6 +6878,14 @@ const COMPONENT_INFO = {
     "TemplateFiles": [
       "SquareFolioBack",
       "SquareFolioFace"
+    ],
+    "DimensionsPixelsClipped": [
+      4199,
+      1050
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SquareHookBox48": {
@@ -5772,6 +6988,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SquareMat.png",
     "TemplateFiles": [
       "SquareMat"
+    ],
+    "DimensionsPixelsClipped": [
+      2400,
+      2400
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SquareTuckBox48": {
@@ -5805,6 +7029,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SquareTuckBox48.png",
     "TemplateFiles": [
       "SquareTuckBox48"
+    ],
+    "DimensionsPixelsClipped": [
+      2735,
+      1715
+    ],
+    "PrintingSizeUpRatio": [
+      2.5839445688853817,
+      1.5135293586159202
     ]
   },
   "SquareTuckBox96": {
@@ -5838,6 +7070,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "SquareTuckBox96.png",
     "TemplateFiles": [
       "SquareTuckBox96"
+    ],
+    "DimensionsPixelsClipped": [
+      3383,
+      2147
+    ],
+    "PrintingSizeUpRatio": [
+      3.196220252521559,
+      1.894702072664584
     ]
   },
   "StripBoard": {
@@ -5870,6 +7110,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "StripBoard.png",
     "TemplateFiles": [
       "StripBoard"
+    ],
+    "DimensionsPixelsClipped": [
+      600,
+      3000
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "StripChit": {
@@ -5903,6 +7151,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "StripChit.png",
     "TemplateFiles": [
       "StripChit"
+    ],
+    "DimensionsPixelsClipped": [
+      300,
+      900
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "StripMat": {
@@ -5935,6 +7191,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "StripMat.png",
     "TemplateFiles": [
       "StripMat"
+    ],
+    "DimensionsPixelsClipped": [
+      600,
+      3000
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "TallBooklet": {
@@ -5968,6 +7232,14 @@ const COMPONENT_INFO = {
     "TemplateFiles": [
       "TallBooklet20pg",
       "TallBooklet40pg"
+    ],
+    "DimensionsPixelsClipped": [
+      1350,
+      2400
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "TarotBooklet": {
@@ -6001,6 +7273,14 @@ const COMPONENT_INFO = {
     "TemplateFiles": [
       "TarotBooklet20pg",
       "TarotBooklet40pg"
+    ],
+    "DimensionsPixelsClipped": [
+      825,
+      1425
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "TarotDeck": {
@@ -6033,6 +7313,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "TarotDeck.png",
     "TemplateFiles": [
       "TarotDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      825,
+      1424
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "TarotFolio": {
@@ -6067,6 +7355,14 @@ const COMPONENT_INFO = {
     "TemplateFiles": [
       "TarotFolioBack",
       "TarotFolioFace"
+    ],
+    "DimensionsPixelsClipped": [
+      3300,
+      1425
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "TarotHookBox40": {
@@ -6170,6 +7466,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "TarotTuckBox40.png",
     "TemplateFiles": [
       "TarotTuckBox40"
+    ],
+    "DimensionsPixelsClipped": [
+      2177,
+      1943
+    ],
+    "PrintingSizeUpRatio": [
+      2.6119919190965013,
+      1.355811022298553
     ]
   },
   "TarotTuckBox90": {
@@ -6203,6 +7507,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "TarotTuckBox90.png",
     "TemplateFiles": [
       "TarotTuckBox90"
+    ],
+    "DimensionsPixelsClipped": [
+      2852,
+      2393
+    ],
+    "PrintingSizeUpRatio": [
+      3.4048573506691384,
+      1.6649275624347828
     ]
   },
   "TokenSticker": {
@@ -6235,6 +7547,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "TokenSticker.png",
     "TemplateFiles": [
       "TokenSticker"
+    ],
+    "DimensionsPixelsClipped": [
+      300,
+      300
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "TombstoneShard": {
@@ -6268,6 +7588,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "TombstoneShard.png",
     "TemplateFiles": [
       "TombstoneShard"
+    ],
+    "DimensionsPixelsClipped": [
+      225,
+      337
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "TradingDeck": {
@@ -6300,6 +7628,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "TradingDeck.png",
     "TemplateFiles": [
       "TradingDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      750,
+      1050
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "TriangleTile": {
@@ -6333,6 +7669,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "TriangleTile.png",
     "TemplateFiles": [
       "TriangleTile"
+    ],
+    "DimensionsPixelsClipped": [
+      592,
+      512
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "USGameDeck": {
@@ -6365,6 +7709,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "USGameDeck.png",
     "TemplateFiles": [
       "UsGameDeck"
+    ],
+    "DimensionsPixelsClipped": [
+      661,
+      1028
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "USGameMat": {
@@ -6397,6 +7749,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "USGameMat.png",
     "TemplateFiles": [
       "USGameMat"
+    ],
+    "DimensionsPixelsClipped": [
+      975,
+      1350
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "DigestPerfectBoundBook": {
@@ -6497,6 +7857,14 @@ const COMPONENT_INFO = {
       "LargeDualLayerBoardBack",
       "LargeDualLayerBoardFace",
       "LargeDualLayerBoardInner"
+    ],
+    "DimensionsPixelsClipped": [
+      2400,
+      3000
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "LargeQuadFoldBoard": {
@@ -6530,6 +7898,14 @@ const COMPONENT_INFO = {
     "PreviewUri": "LargeQuadFoldBoard.png",
     "TemplateFiles": [
       "LargeQuadfoldBoard"
+    ],
+    "DimensionsPixelsClipped": [
+      6000,
+      6000
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "LetterPerfectBoundBook": {
@@ -6597,6 +7973,14 @@ const COMPONENT_INFO = {
     "TemplateFiles": [
       "MediumCoilBookEven",
       "MediumCoilBookOdd"
+    ],
+    "DimensionsPixelsClipped": [
+      1500,
+      2250
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "MediumDualLayerBoard": {
@@ -6634,6 +8018,14 @@ const COMPONENT_INFO = {
       "MediumDualLayerBoardBack",
       "MediumDualLayerBoardFace",
       "MediumDualLayerBoardInner"
+    ],
+    "DimensionsPixelsClipped": [
+      2400,
+      1200
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "SmallDualLayerBoard": {
@@ -6671,6 +8063,14 @@ const COMPONENT_INFO = {
       "SmallDualLayerBoardBack",
       "SmallDualLayerBoardFace",
       "SmallDualLayerBoardInner"
+    ],
+    "DimensionsPixelsClipped": [
+      1050,
+      1650
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "TallMintTin": {
@@ -6704,8 +8104,16 @@ const COMPONENT_INFO = {
     "Key": "TallMintTin",
     "PreviewUri": "TallMintTin.png",
     "TemplateFiles": [
-      "TallMintTinBottom",
-      "TallMintTinTop"
+      "TallMintTinBack",
+      "TallMintTinFront"
+    ],
+    "DimensionsPixelsClipped": [
+      626,
+      1051
+    ],
+    "PrintingSizeUpRatio": [
+      1,
+      1
     ]
   },
   "VHSBox": {
@@ -6737,7 +8145,16 @@ const COMPONENT_INFO = {
     "PreviewUri": "VHSBox.png",
     "TemplateFiles": [
       "VHSBox"
+    ],
+    "DimensionsPixelsClipped": [
+      3087,
+      2298
+    ],
+    "PrintingSizeUpRatio": [
+      2.2454991816693943,
+      0.9999999647519594
     ]
   }
-}
-module.exports = { COMPONENT_INFO }
+};
+
+module.exports = { COMPONENT_INFO };

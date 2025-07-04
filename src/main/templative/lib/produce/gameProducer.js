@@ -4,6 +4,7 @@ const fsPromises = require('fs').promises;
 const fs = require('fs');
 const glob = require('glob');
 const {captureMessage, captureException } = require("../sentryElectronWrapper");
+const { access } = require('fs').promises;
 
 const outputWriter = require('./outputWriter');
 const rulesMarkdownProcessor = require('./rulesMarkdownProcessor');
@@ -16,6 +17,12 @@ const ComponentComposition = require('../manage/models/composition');
 const FontCache = require('./customComponents/svgscissors/caching/fontCache').FontCache;
 const { SvgFileCache } = require('./customComponents/svgscissors/caching/svgFileCache');
 const { RENDER_MODE, RENDER_PROGRAM, OVERLAPPING_RENDERING_TASKS } = require('../manage/models/produceProperties');
+const { COMPONENT_INFO } = require('../../../../shared/componentInfo');
+const { clipAndScaleSvgContentToElement, CLIPPING_ELEMENT_ID } = require('./customComponents/svgscissors/artdataProcessing/imageClipper');
+const { processInkscapeShellCommands, createInkscapeShellExportCommand } = require('./customComponents/svgscissors/fileConversion/inkscapeProcessor');
+const { convertSvgFileToPngUsingResvg } = require('./customComponents/svgscissors/fileConversion/svgToRasterConverter');
+const { cacheFiles } = require('./customComponents/svgscissors/caching/renderedPiecesCache');
+
 
 async function getPreviewsPath() {
     const previewsPath = path.join(os.homedir(), 'Documents', 'Templative', 'previews');
@@ -75,15 +82,20 @@ async function producePiecePreview(gameRootDirectoryPath, outputDirectoryPath, c
     const componentComposition = new ComponentComposition(gameCompose, component);
     const gameData = new GameData(studioDataBlob, gameDataBlob);
     await clearPreviews(outputDirectoryPath);
-    const isClipped = true
-    const previewProperties = new PreviewProperties(gameRootDirectoryPath, outputDirectoryPath, pieceName, language, isClipped, renderProgram);
+    const CLIPPED = true;
+    const previewProperties = new PreviewProperties(gameRootDirectoryPath, outputDirectoryPath, pieceName, language, CLIPPED, renderProgram);
 
     const fontCache = new FontCache();
     const svgFileCache = new SvgFileCache();
     const glyphUnicodeMap = {};
     
-    await producerPicker.produceCustomComponentPreview(previewProperties, gameData, componentComposition, fontCache, svgFileCache, glyphUnicodeMap);
-    // console.log(`Wrote previews to ${outputDirectoryPath}`);
+    var commands = await producerPicker.produceCustomComponentPreview(previewProperties, gameData, componentComposition, fontCache, svgFileCache, glyphUnicodeMap);
+
+    await processExportToPngCommands(commands, renderProgram);
+    for (const command of commands) {
+        await cacheFiles(command.hash, command.svgFilepath, command.pngFilepath);
+    }
+    console.log(`Wrote previews to ${outputDirectoryPath}`);
 }
 async function getTimestamp() {
     const now = new Date();
@@ -151,6 +163,7 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
     const glyphUnicodeMap = {};
     
     const componentTasks = [];
+    const exportToPngCommands = [];
     
     for (const componentCompose of componentsCompose) {
         const isProducingOneComponent = componentFilter != null;
@@ -205,13 +218,23 @@ async function produceGame(gameRootDirectoryPath, componentFilter, isSimple, isP
         const componentComposition = new ComponentComposition(gameCompose, componentCompose);
         const componentTask = produceGameComponent(produceProperties, gameData, componentComposition, fontCache, svgFileCache, glyphUnicodeMap);
         if (produceProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ONE_AT_A_TIME) {
-            await componentTask;
+            const commands = await componentTask;
+            if (commands) exportToPngCommands.push(...commands);
         } else {
             componentTasks.push(componentTask);
         }
     }
     
-    await Promise.all(componentTasks);
+    const componentResults = await Promise.all(componentTasks);
+    for (const commands of componentResults) {
+        if (commands) exportToPngCommands.push(...commands);
+    }
+    
+    await processExportToPngCommands(exportToPngCommands, renderProgram);
+    for (const command of exportToPngCommands) {
+        await cacheFiles(command.hash, command.svgFilepath, command.pngFilepath);
+    }
+    
     
     
     const endTime = performance.now();
@@ -244,10 +267,10 @@ async function produceGameComponent(produceProperties, gamedata, componentCompos
 
     if (isStockComponent && produceProperties.outputDirectoryPath !== null && produceProperties.renderMode !== RENDER_MODE.RENDER_TO_CACHE) {
         await produceStockComponent(componentComposition.componentCompose, produceProperties.outputDirectoryPath);
-        return;
+        return [];
     }
 
-    await producerPicker.produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache, glyphUnicodeMap);
+    return await producerPicker.produceCustomComponent(produceProperties, gamedata, componentComposition, fontCache, svgFileCache, glyphUnicodeMap);
 }
 
 async function produceStockComponent(componentCompose, outputDirectory) {
@@ -267,11 +290,115 @@ async function produceStockComponent(componentCompose, outputDirectory) {
     await outputWriter.dumpInstructions(componentInstructionFilepath, stockPartInstructions);
 }
 
+async function loadSvgClipFile(componentType, sourcedStuff) {
+    if (sourcedStuff[componentType]) {
+        return sourcedStuff[componentType];
+    }
+    var clipDirectory = __dirname.includes('app.asar') ? 
+        path.join(__dirname, '../../../componentTemplates') :
+        path.join(__dirname, '../../src/main/templative/lib/componentTemplates');
+    const clipFilepath = path.join(clipDirectory, `${componentType}.svg`)
+    const clipFileContent = await fsPromises.readFile(clipFilepath, 'utf8');
+    sourcedStuff[componentType] = clipFileContent;
+    return clipFileContent;
+}
+async function fileExists(filepath) {
+    try {
+        await access(filepath);
+        return true;
+    } catch {
+        return false;
+    }
+}
+async function clipSvgFile(svgFilePath, clipSvgContent, imageSizePixels, renderProgram=RENDER_PROGRAM.TEMPLATIVE) {
+    var svgContent = await fsPromises.readFile(svgFilePath, 'utf8');
+    const isClippingBorder = renderProgram === RENDER_PROGRAM.INKSCAPE;
+    svgContent = await clipAndScaleSvgContentToElement(svgContent, clipSvgContent, CLIPPING_ELEMENT_ID, isClippingBorder);
+    const clippedSvgFilePath = svgFilePath.replace(".svg", "_clipped.svg");
+    const clippedPngFilePath = svgFilePath.replace(".svg", "_clipped.png");
+    await fsPromises.writeFile(clippedSvgFilePath, svgContent);
+    return {
+        imageSizePixels: imageSizePixels,
+        svgFilepath: clippedSvgFilePath,
+        pngFilepath: clippedPngFilePath
+    }
+}
+
+async function recutOutput(outputDirectoryPath, renderProgram=RENDER_PROGRAM.TEMPLATIVE) {
+    const outputFolders = await fsPromises.readdir(outputDirectoryPath);
+    
+    var componentTemplates = {};
+    var exportToPngCommands = []
+    for (const outputFolder of outputFolders) {
+        // If its not a folder continue
+        if (!fs.statSync(path.join(outputDirectoryPath, outputFolder)).isDirectory()) {
+            continue;
+        }
+        
+        const outputFolderPath = path.join(outputDirectoryPath, outputFolder);
+        const compositionFilepath = path.join(outputFolderPath, "component.json");
+        const composition = await fsPromises.readFile(compositionFilepath, 'utf8');
+        const compositionType = JSON.parse(composition)["type"];
+        const isStockComponent = compositionType.startsWith("STOCK");
+        const componentInfo = COMPONENT_INFO[compositionType];
+        if (isStockComponent) {
+            continue;
+        }
+        const clipSvgContent = await loadSvgClipFile(compositionType, componentTemplates);
+        
+        // Read every svg file in outputFolder
+        
+        const svgFiles = await fsPromises.readdir(outputFolderPath);
+        for (const svgFile of svgFiles) {
+            if (!svgFile.endsWith(".svg")) {
+                continue;
+            }
+            if (svgFile.endsWith("_clipped.svg")) {
+                continue;
+            }
+            const svgFilePath = path.join(outputFolderPath, svgFile);
+            var newSvgFilePath = svgFilePath.replace(".svg", "_clipped.svg");
+            const doesFileExist = await fileExists(newSvgFilePath)
+            if (doesFileExist) {
+                continue;
+            }
+            
+            // console.log(`Clipping ${svgFilePath.split("\\").pop().split(".")[0]} to size.`);
+            exportToPngCommands.push(await clipSvgFile(svgFilePath, clipSvgContent, componentInfo["DimensionsPixels"], renderProgram));
+        }
+    }
+    await processExportToPngCommands(exportToPngCommands, renderProgram);
+    
+    
+}
+
+async function processExportToPngCommands(exportToPngCommands, renderProgram) {
+    if (exportToPngCommands.length === 0) {
+        return;
+    }
+    if (renderProgram === RENDER_PROGRAM.INKSCAPE) {
+        const inkscapeCommands = [];
+        for (const command of exportToPngCommands) {
+            inkscapeCommands.push(await createInkscapeShellExportCommand(command.svgFilepath, command.pngFilepath));
+        }
+        await processInkscapeShellCommands(inkscapeCommands);
+    }
+    else if (renderProgram === RENDER_PROGRAM.TEMPLATIVE) {
+        for (const command of exportToPngCommands) {
+            await convertSvgFileToPngUsingResvg(command.svgFilepath, command.imageSizePixels, command.pngFilepath) 
+        }
+    }
+    else {
+        throw new Error(`Invalid render program: ${renderProgram}`);
+    }
+}
+
 module.exports = {
     getPreviewsPath,
     clearPreviews,
     producePiecePreview,
     produceGame,
     produceGameComponent,
-    produceStockComponent
+    produceStockComponent,
+    recutOutput
 };

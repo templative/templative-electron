@@ -67,11 +67,11 @@ async function createCompositeImage(componentName, componentType, quantity, fron
     columns = Math.max(columns, 2);
     rows = Math.max(rows, 2);
 
-    if (!componentInfo.hasOwnProperty("DimensionsPixels")) {
-      console.log(`!!! Skipping ${componentType} that has no DimensionsPixels.`);
+    if (!componentInfo.hasOwnProperty("DimensionsPixelsClipped")) {
+      console.log(`!!! Skipping ${componentType} that has no DimensionsPixelsClipped.`);
       return [null, 0, 0, 0];
     }
-    const pixelDimensions = componentInfo.DimensionsPixels;
+    const pixelDimensions = componentInfo.DimensionsPixelsClipped;
 
     let totalWidth = pixelDimensions[0] * columns;
     let totalHeight = pixelDimensions[1] * rows;
@@ -112,7 +112,8 @@ async function createCompositeImage(componentName, componentType, quantity, fron
       const xIndex = cardIndex % columns;
       const yIndex = Math.floor(cardIndex / columns);
       try {
-        let image = await safeLoadImage(instruction.filepath, pixelDimensions);
+        const filepath = instruction["filepath"].replace(".png", "_clipped.png");
+        let image = await safeLoadImage(filepath, pixelDimensions);
         
         if (scaleFactor !== 1.0) {
           const newSize = [Math.floor(pixelDimensions[0] * scaleFactor), Math.floor(pixelDimensions[1] * scaleFactor)];
@@ -130,7 +131,7 @@ async function createCompositeImage(componentName, componentType, quantity, fron
         cardIndex += 1;
       } catch (error) {
         captureException(error);
-        console.log(`!!! Error processing image ${instruction.filepath}: ${error}`);
+        console.log(`!!! Error processing image ${instruction["filepath"]}: ${error}`);
         let placeholderImage = createPlaceholderImage(pixelDimensions[0], pixelDimensions[1]);
         if (scaleFactor !== 1.0) {
           const newSize = [Math.floor(pixelDimensions[0] * scaleFactor), Math.floor(pixelDimensions[1] * scaleFactor)];
@@ -150,8 +151,9 @@ async function createCompositeImage(componentName, componentType, quantity, fron
     }
 
     // Handle back image
+    const backFilepath = backInstructions ? backInstructions["filepath"].replace(".png", "_clipped.png") : null;
     let backImage = await safeLoadImage(
-      backInstructions ? backInstructions.filepath : null, 
+      backFilepath, 
       pixelDimensions
     );
 
@@ -173,7 +175,7 @@ async function createCompositeImage(componentName, componentType, quantity, fron
     );
 
     // Save the composite image
-    const frontImageName = `${componentName}-front.png`;
+    const frontImageName = `${componentName}-front_clipped.png`;
     const frontImageFilepath = path.join(tabletopSimulatorImageDirectoryPath, frontImageName);
     await tiledImage.save(frontImageFilepath);
 
@@ -210,16 +212,17 @@ async function placeAndUploadBackImage(name, componentType, backInstructions, ta
     return null;
   }
   try {
-    if (!componentInfo.hasOwnProperty("DimensionsPixels")) {
-      console.log(`!!! Skipping ${componentType} that has no DimensionsPixels.`);
+    if (!componentInfo.hasOwnProperty("DimensionsPixelsClipped")) {
+      console.log(`!!! Skipping ${componentType} that has no DimensionsPixelsClipped.`);
       return null;
     }
     
-    const pixelDimensions = componentInfo.DimensionsPixels;
+    const pixelDimensions = componentInfo.DimensionsPixelsClipped;
     
-    // Use safeLoadImage to handle errors gracefully
+    const filepath = backInstructions ? backInstructions["filepath"].replace(".png", "_clipped.png") : null;
+
     const image = await safeLoadImage(
-      backInstructions ? backInstructions.filepath : null, 
+      filepath, 
       pixelDimensions
     );
     
@@ -239,7 +242,8 @@ async function placeAndUploadBackImage(name, componentType, backInstructions, ta
     const url = await uploadImageToS3(image, templativeToken);
     if (!url) {
       console.log(`!!! Failed to upload back image for ${name}, falling back to local file.`);
-      return backInstructions.filepath;
+      const clippedBackInstructions = backInstructions["filepath"].replace(".png", "_clipped.png");
+      return clippedBackInstructions;
     }
     
     return url;
@@ -260,7 +264,9 @@ async function placeAndUploadBackImage(name, componentType, backInstructions, ta
 async function copyBackImageToImages(componentName, backInstructions, tabletopSimulatorImageDirectoryPath) {
     const backImageName = `${componentName}-back.png`;
     const backImageFilepath = path.join(tabletopSimulatorImageDirectoryPath, backImageName);
-    await copyFile(backInstructions.filepath, backImageFilepath);
+    const clippedBackImageFilepath = backInstructions["filepath"].replace(".png", "_clipped.png");
+    console.log("Copy back image",clippedBackImageFilepath, backImageFilepath)
+    await copyFile(clippedBackImageFilepath, backImageFilepath);
 }
 
 async function createD6CompositeImage(name, color, filepaths, tabletopSimulatorImageDirectoryPath, templativeToken) {
@@ -304,7 +310,8 @@ async function createD6CompositeImage(name, color, filepaths, tabletopSimulatorI
       if (i < filepaths.length) {
         try {
           // Load the die face image
-          const faceImage = await safeLoadImage(filepaths[i], [cellSize, cellSize]);
+          const clippedFilepath = filepaths[i].replace(".png", "_clipped.png");
+          const faceImage = await safeLoadImage(clippedFilepath, [cellSize, cellSize]);
           
           // Resize the image to fit the cell size
           let resizedFaceImage = faceImage.resize({

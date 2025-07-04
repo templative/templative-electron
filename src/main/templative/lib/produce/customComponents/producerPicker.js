@@ -43,12 +43,12 @@ async function produceCustomComponent(produceProperties, gamedata, componentComp
     componentDataBlob = await defineLoader.loadComponentGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["componentGamedataFilename"]);
     if (!componentDataBlob || Object.keys(componentDataBlob).length === 0) {
       console.log(`Skipping ${componentName} component due to missing component gamedata.`);
-      return;
+      return [];
     }
   } catch (error) {
     console.error(`Error producing custom component ${componentName}:`, error);
     captureException(error);
-    return;
+    return [];
   }
 
   let componentArtdata = null;
@@ -56,18 +56,18 @@ async function produceCustomComponent(produceProperties, gamedata, componentComp
     componentArtdata = await getComponentArtdata(componentName, produceProperties.inputDirectoryPath, componentComposition);
   } catch (error) {
     console.error(`Error producing custom component ${componentName}:`, error);
-    return;
+    return [];
   }
   const componentData = new ComponentData(gamedata.studioDataBlob, gamedata.gameDataBlob, componentDataBlob);
   const producer = getProducer(componentArtdata);
 
   if (!producer) {
     console.log(`No production instructions for ${componentComposition.componentCompose["type"]} ${componentComposition.componentCompose["name"]}.`);
-    return;
+    return [];
   }
 
   console.log(`Creating art assets for ${componentName} component.`);
-  await producer.createComponent(produceProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache, glyphUnicodeMap);
+  return await producer.createComponent(produceProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache, glyphUnicodeMap);
 }
 
 async function produceCustomComponentPreview(previewProperties, gamedata, componentComposition, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}) {
@@ -75,7 +75,7 @@ async function produceCustomComponentPreview(previewProperties, gamedata, compon
   const componentDataBlob = await defineLoader.loadComponentGamedata(previewProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["componentGamedataFilename"]);
   if (!componentDataBlob || Object.keys(componentDataBlob).length === 0) {
     console.log(`Skipping ${componentName} component due to missing component gamedata.`);
-    return;
+    return [];
   }
 
   let componentArtdata = null;
@@ -83,26 +83,26 @@ async function produceCustomComponentPreview(previewProperties, gamedata, compon
     componentArtdata = await getComponentArtdata(componentName, previewProperties.inputDirectoryPath, componentComposition);
   } catch (error) {
     console.error(`Error producing custom component ${componentName}:`, error);
-    return;
+    return [];
   }
   if (componentArtdata === null) {
-    return;
+    return [];
   }
   const componentData = new ComponentData(gamedata.studioDataBlob, gamedata.gameDataBlob, componentDataBlob);
   const producer = getProducer(componentArtdata);
 
   if (!producer) {
     console.log(`No production instructions for ${componentComposition.componentCompose["type"]} ${componentComposition.componentCompose["name"]}.`);
-    return;
+    return [];
   }
 
   if (producer === DiceProducer) {
     console.log("Previews for dice are disabled since they don't support piece filtering.");
-    return;
+    return [];
   }
 
   console.log(`Creating art assets for ${componentName} component ${previewProperties.pieceName}.`);
-  await producer.createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache, glyphUnicodeMap);
+  return await producer.createPiecePreview(previewProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache, glyphUnicodeMap);
 }
 
 module.exports = { produceCustomComponent, produceCustomComponentPreview };

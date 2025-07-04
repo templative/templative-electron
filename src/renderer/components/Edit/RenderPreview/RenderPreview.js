@@ -206,6 +206,7 @@ export default class RenderPreview extends React.Component {
                 key={filepath} 
                 filepath={filepath} 
                 imageHash={this.state.imageHash}
+                componentType={this.state.chosenComponentName}
             />
         ));
     }

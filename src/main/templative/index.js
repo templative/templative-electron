@@ -40,8 +40,9 @@ const createTemplativeComponent = withLogCapture(async (event, data) => {
 
 const produceTemplativeProject = withLogCapture(async (event, request) => {
   try {
-    const {  isClipping, componentFilter,  directoryPath } = request;
+    const { componentFilter,  directoryPath } = request;
     const COMPLEX = true;
+    const NOT_CLIPPING = false;
     const ENGLISH = "en";
     const NOT_PUBLISHED = false;
     const settings = await readOrCreateSettingsFile();
@@ -58,7 +59,7 @@ const produceTemplativeProject = withLogCapture(async (event, request) => {
         isSimple: !COMPLEX,
         isPublished: NOT_PUBLISHED,
         language: ENGLISH,
-        isClipped: isClipping,
+        isClipped: NOT_CLIPPING,
         renderMode,
         renderProgram,
         overlappingRenderingTasks
@@ -67,9 +68,15 @@ const produceTemplativeProject = withLogCapture(async (event, request) => {
     return { success: true };
   } catch (error) {
     console.error('Error producing game:', error);
+    if (error.stack) {
+      console.error('Stack trace:', error.stack);
+    }
+    if (error.details) {
+      console.error('Error details:', error.details);
+    }
     captureException(error);
     updateToast(error.message, "error");
-    return { success: false, error: error.message };
+    return { success: false, error: error.message, stack: error.stack };
   }
 });
 
@@ -97,6 +104,12 @@ const previewPiece = withLogCapture(async (event, data) => {
     return { success: true, message: 'Piece preview generated' };
   } catch (error) {
     console.error('Error previewing piece:', error);
+    if (error.stack) {
+      console.error('Stack trace:', error.stack);
+    }
+    if (error.details) {
+      console.error('Error details:', error.details);
+    }
     captureException(error); 
     updateToast(error.message, "error");
     return { success: false, error: error.message };
@@ -134,8 +147,9 @@ const createPlaygroundPackage = withLogCapture(async (event, data) => {
 const createPrintout = withLogCapture(async (event, data) => {
   try {
     const { outputDirectorypath, isBackIncluded, size, areBordersDrawn } = data;
-    
-    const result = await createPdfForPrinting(outputDirectorypath, isBackIncluded, size, areBordersDrawn);
+    const settings = await readOrCreateSettingsFile();
+    const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;
+    const result = await createPdfForPrinting(outputDirectorypath, isBackIncluded, size, areBordersDrawn, renderProgram);
     updateToast(`/${path.basename(outputDirectorypath)} Printout PDF created.`, "success");
     return { success: result === 1, message: 'Printout PDF created' };
   } catch (error) {
@@ -153,7 +167,9 @@ const createSimulatorSave = withLogCapture(async (event, data) => {
     if (!templativeToken) {
       return { success: false, error: 'You must be logged into Templative to create a Tabletop Simulator save.' };
     }
-    const result = await convertToTabletopSimulator(outputDirectorypath, tabletopSimulatorDocumentsDirectorypath, templativeToken);
+    const settings = await readOrCreateSettingsFile();
+    const renderProgram = settings.renderProgram || RENDER_PROGRAM.TEMPLATIVE;
+    const result = await convertToTabletopSimulator(outputDirectorypath, tabletopSimulatorDocumentsDirectorypath, templativeToken, renderProgram);
     updateToast(`/${path.basename(outputDirectorypath)} Simulator save created.`, "success");
     return { success: result === 1, message: 'Simulator save created' };
   } catch (error) {

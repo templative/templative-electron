@@ -98,7 +98,7 @@ export default function CreatingYourGame({goToTutorial}) {
         <p>Get started by <span className='tutorial-link' onClick={()=>goToTutorial("Add Compositions")}>adding your first composition</span>.</p>
         
         <h3>Rendering with Inkscape</h3>
-        <p>To get access to Inkscape unique features such as text wrapping and patterns, install <span className="external-link" onClick={() => goToExternalLink("https://inkscape.org/")}>Inkscape</span> and then go to <code>Edit {">"} Edit Settings</code> and change <code>Which Rendering Program Should Templative Use?</code> to <code>Inkscape</code>. See the <span className="tutorial-link" onClick={() => goToTutorial("Render a Project")}>Render a Project</span> tutorial for more information.</p>
+        <p>To get access to Inkscape unique features such as text wrapping, patterns, clipping border, and high dpi, install <span className="external-link" onClick={() => goToExternalLink("https://inkscape.org/")}>Inkscape</span> and then go to <code>Edit {">"} Edit Settings</code> and change <code>Which Rendering Program Should Templative Use?</code> to <code>Inkscape</code>. See the <span className="tutorial-link" onClick={() => goToTutorial("Render a Project")}>Render a Project</span> tutorial for more information.</p>
         
         <RelatedTutorials tutorialNames={["Edit Compositions", "Art Recipes", "Manage Content", "Art", "Render a Project", "Create a Print and Play", "Upload to TheGameCrafter", "Export to Tabletop Simulator"]} goToTutorial={goToTutorial}/>
     </>

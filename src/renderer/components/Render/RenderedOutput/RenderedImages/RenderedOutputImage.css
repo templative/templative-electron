@@ -94,7 +94,10 @@
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* transition: height 0.3s ease; */
 }
 
 .output-image {
@@ -107,7 +110,7 @@
     height: auto;
     display: block;
     transform-origin: center center;
-    transition: transform 0.3s ease;
+    /* transition: transform 0.3s ease; */
 }
 
 .output-image.rotated {
@@ -122,7 +125,37 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    transition: height 0.3s ease;
+    /* transition: height 0.3s ease; */
+}
+
+.image-with-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.template-outline-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border: none;
+}
+
+.template-outline-overlay.rotated {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(var(--rotation-degrees));
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 /* For extremely tall images (like 1:2 ratio) */

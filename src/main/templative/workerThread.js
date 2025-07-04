@@ -17,10 +17,23 @@ const createPreviewPieceWorker = (workerData, onSuccessCallback = () => {}) => {
             
             resolve(message.data);
           } else {
-            reject(new Error(message.error));
+            // Create a more detailed error with stack trace if available
+            const error = new Error(message.error);
+            if (message.stack) {
+              error.stack = message.stack;
+            }
+            if (message.name) {
+              error.name = message.name;
+            }
+            if (message.details) {
+              error.details = message.details;
+            }
+            reject(error);
           }
         } else if (message.type === 'log') {
           console.log(message.log);
+        } else if (message.type === 'error') {
+          console.error(message.log);
         }
       });
 
@@ -57,10 +70,23 @@ const createProduceGameWorker = (workerData, onSuccessCallback = () => {}) => {
             
             resolve(message.data);
           } else {
-            reject(new Error(message.error));
+            // Create a more detailed error with stack trace if available
+            const error = new Error(message.error);
+            if (message.stack) {
+              error.stack = message.stack;
+            }
+            if (message.name) {
+              error.name = message.name;
+            }
+            if (message.details) {
+              error.details = message.details;
+            }
+            reject(error);
           }
         } else if (message.type === 'log') {
           console.log(message.log);
+        } else if (message.type === 'error') {
+          console.error(message.log);
         }
       });
 

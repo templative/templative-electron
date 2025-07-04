@@ -83,10 +83,10 @@ async function getCachedFiles(hash) {
     };
 }
 
-async function cacheFiles(hash, svgContent, pngPath) {
+async function cacheFiles(hash, svgPath, pngPath) {
     const cacheSvgPath = await getCachedFilePath(hash, 'svg');
     const cachePngPath = await getCachedFilePath(hash, 'png');
-    await fsExtra.writeFile(cacheSvgPath, svgContent);
+    await fsExtra.copy(svgPath, cacheSvgPath);
     await fsExtra.copy(pngPath, cachePngPath);
 }
 

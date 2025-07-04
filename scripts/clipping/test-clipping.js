@@ -26,7 +26,8 @@ async function runTests() {
     const result = await clipSvgFileToClipFile(
       SVG_SOURCE_PATH,
       CLIP_SVG_PATH,
-      CLIP_ELEMENT_ID
+      CLIP_ELEMENT_ID,
+      true
     );
     await fs.writeFile(OUTPUT_PATH + ".svg", result);
     console.error("Deprecated: convertSvgToPng");

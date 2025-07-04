@@ -30,6 +30,9 @@ const ComponentTypeFolder = ({
         for (const size in componentInfo) {
             for (const color in componentInfo[size]) {
                 const component = componentTypeInformation[componentInfo[size][color]];
+                if (!component) {
+                    continue;
+                }
                 if (component.IsDisabled) {
                     continue;
                 }

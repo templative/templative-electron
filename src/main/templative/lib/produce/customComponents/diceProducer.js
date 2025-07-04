@@ -13,25 +13,25 @@ class DiceProducer {
       piecesDataBlob = await defineLoader.loadPiecesGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"]);
       if (!piecesDataBlob || Object.keys(piecesDataBlob).length === 0) {
         console.log(`Skipping ${componentComposition.componentCompose["name"]} component due to missing pieces gamedata.`);
-        return;
+        return [];
       }
     } catch (error) {
       console.error(`Error producing custom component ${componentComposition.componentCompose["name"]}:`, error);
       captureException(error);
-      return;
+      return [];
     }
 
-    await DiceProducer.createComponentBackDataPieces(produceProperties, componentComposition, componentData, componentArtdata, piecesDataBlob, fontCache, svgFileCache, glyphUnicodeMap);
+    return await DiceProducer.createSvgArtAndGetExportCommandsForComponentBackDataPieces(produceProperties, componentComposition, componentData, componentArtdata, piecesDataBlob, fontCache, svgFileCache, glyphUnicodeMap);
   }
 
-  static async createComponentBackDataPieces(produceProperties, componentComposition, componentData, componentArtdata, piecesDataBlob, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}) {
+  static async createSvgArtAndGetExportCommandsForComponentBackDataPieces(produceProperties, componentComposition, componentData, componentArtdata, piecesDataBlob, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}) {
     const componentFolderName = componentComposition.componentCompose["name"];
     
     const componentBackOutputDirectory = await outputWriter.createComponentFolder(componentFolderName, produceProperties.outputDirectoryPath);
     await DiceProducer.writeComponentInstructions(componentComposition, componentBackOutputDirectory, componentFolderName, piecesDataBlob);
     
     const componentBackData = new ComponentBackData(componentData.studioDataBlob, componentData.gameDataBlob, componentData.componentDataBlob);
-    await svgscissors.createArtFilesForComponent(componentComposition, componentArtdata, componentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache, glyphUnicodeMap);
+    return await svgscissors.createSvgArtFilesForComponentAndGiveExportCommands(componentComposition, componentArtdata, componentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache, glyphUnicodeMap);
   }
 
   static async writeComponentInstructions(compositions, componentBackOutputDirectory, componentFolderName, piecesGamedata) {

@@ -43,6 +43,11 @@ async function convertToJpg(absoluteOutputDirectory, name, pngFilepath) {
   }
 }
 
+async function convertSvgFileToPngUsingResvg(svgFilepath, imageSizePixels, outputFilepath) {
+  const svgString = await fsExtra.readFile(svgFilepath, 'utf8');
+  return convertSvgContentToPngUsingResvg(svgString, imageSizePixels, outputFilepath);
+}
+
 async function convertSvgContentToPngUsingResvg(svgString, imageSizePixels, outputFilepath) {
   try {
     let resvg;
@@ -77,5 +82,6 @@ async function convertSvgContentToPngUsingResvg(svgString, imageSizePixels, outp
 
 module.exports = {
   convertToJpg,
-  convertSvgContentToPngUsingResvg
+  convertSvgContentToPngUsingResvg,
+  convertSvgFileToPngUsingResvg
 }; 

@@ -20,7 +20,7 @@ class BackProducer {
             piecesDataBlob = await defineLoader.loadPiecesGamedata(previewProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"]);
             if (!piecesDataBlob || Object.keys(piecesDataBlob).length === 0) {
                 console.log(`Skipping ${componentComposition.componentCompose["name"]} component due to missing pieces gamedata.`);
-                return;
+                return [];
             }
         }
 
@@ -28,6 +28,7 @@ class BackProducer {
 
         let uniqueComponentBackData = {};
         var foundPiece = false;
+        const commands = [];
         for (const pieceGamedata of piecesDataBlob) {
             if (pieceGamedata["name"] !== previewProperties.pieceName) {
                 continue;
@@ -40,12 +41,13 @@ class BackProducer {
             }
 
             uniqueComponentBackData = new ComponentBackData(componentData.studioDataBlob, componentData.gameDataBlob, componentData.componentDataBlob, componentBackDataBlob, sourcedVariableNamesSpecificToPieceOnBackArtData, uniqueHashOfSourceData);
-            
-            await svgscissors.createArtFileForPiece(componentComposition, componentArtdata, uniqueComponentBackData, piecesDataBlob, previewProperties.outputDirectoryPath, previewProperties, fontCache, svgFileCache, glyphUnicodeMap);
+            const additionalCommands = await svgscissors.createSvgArtFilesForPieceAndGiveExportCommands(componentComposition, componentArtdata, uniqueComponentBackData, piecesDataBlob, previewProperties.outputDirectoryPath, previewProperties, fontCache, svgFileCache, glyphUnicodeMap);
+            if (additionalCommands) commands.push(...additionalCommands);
         }
         if (!foundPiece) {
             console.warn(`There is no piece named ${previewProperties.pieceName} in the pieces gamedata for ${componentComposition.componentCompose["name"]}.`);
         }
+        return commands;
     }
     
     static async createComponent(produceProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}) {
@@ -60,12 +62,12 @@ class BackProducer {
                 piecesDataBlob = await defineLoader.loadPiecesGamedata(produceProperties.inputDirectoryPath, componentComposition.gameCompose, componentComposition.componentCompose["piecesGamedataFilename"]);
                 if (!piecesDataBlob || Object.keys(piecesDataBlob).length === 0) {
                     console.log(`Skipping ${componentComposition.componentCompose["name"]} component due to missing pieces gamedata.`);
-                    return;
+                    return [];
                 }
             } catch (error) {
                 console.error(`Error producing custom component ${componentComposition.componentCompose["name"]}:`, error);
                 captureException(error);
-                return;
+                return [];
             }
         }
 
@@ -73,6 +75,7 @@ class BackProducer {
         
         const uniqueComponentBackDatas = BackProducer.createNewComponentBackPerUniqueBackGamedata(sourcedVariableNamesSpecificToPieceOnBackArtData, componentData, piecesDataBlob);
        
+        const allCommands = [];
         for (const key in uniqueComponentBackDatas) {
             const uniqueComponentBackData = uniqueComponentBackDatas[key];
             let needsToProduceAPiece = false;
@@ -81,7 +84,7 @@ class BackProducer {
                 const pieceHash = BackProducer.createUniqueBackHashForPiece(sourcedVariableNamesSpecificToPieceOnBackArtData, piece);
                 if (!("quantity" in piece)) {
                     console.log(`!!! ${componentComposition.componentCompose["name"]} has a piece with no quantity. Make sure to define the 'quantity' field for each piece.`);
-                    return;
+                    return [];
                 }
                 if (pieceHash === uniqueComponentBackData.pieceUniqueBackHash) {
                     needsToProduceAPiece = true;
@@ -100,8 +103,10 @@ class BackProducer {
                 console.log(`Skipping ${componentComposition.componentCompose['name']}${uniqueComponentBackData.pieceUniqueBackHash} due to not have pieces to make. Skipped the following peices: ${skippedPieces}`);
                 continue;
             }
-            await BackProducer.createComponentBackDataPieces(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, componentComposition, produceProperties, componentArtdata, piecesDataBlob, fontCache, svgFileCache, glyphUnicodeMap);
+            const commands = await BackProducer.createSvgArtAndGetExportCommandsForComponentBackDataPieces(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, componentComposition, produceProperties, componentArtdata, piecesDataBlob, fontCache, svgFileCache, glyphUnicodeMap);
+            if (commands) allCommands.push(...commands);
         }
+        return allCommands;
     }
     
     static getSourcedVariableNamesSpecificToPieceOnBackArtdata(componentBackArtdata) {
@@ -156,13 +161,13 @@ class BackProducer {
         return createHash('md5').update(pieceBackSourceHash).digest('hex').slice(0, 8);
     }
 
-    static async createComponentBackDataPieces(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, compositions, produceProperties, componentArtdata, piecesDataBlob, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}) {
+    static async createSvgArtAndGetExportCommandsForComponentBackDataPieces(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, compositions, produceProperties, componentArtdata, piecesDataBlob, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}) {
         const pieceUniqueBackHash = uniqueComponentBackData.pieceUniqueBackHash ? `_${uniqueComponentBackData.pieceUniqueBackHash}` : '';
         const componentFolderName = `${compositions.componentCompose['name']}${pieceUniqueBackHash}`;
 
         const componentBackOutputDirectory = await outputWriter.createComponentFolder(componentFolderName, produceProperties.outputDirectoryPath);
         await BackProducer.createUniqueComponentBackInstructions(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, compositions, componentBackOutputDirectory, componentFolderName, piecesDataBlob);
-        await svgscissors.createArtFilesForComponent(compositions, componentArtdata, uniqueComponentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache, glyphUnicodeMap);
+        return await svgscissors.createSvgArtFilesForComponentAndGiveExportCommands(compositions, componentArtdata, uniqueComponentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache, glyphUnicodeMap);
     }
 
     static async createUniqueComponentBackInstructions(uniqueComponentBackData, sourcedVariableNamesSpecificToPieceOnBackArtData, compositions, componentBackOutputDirectory, componentFolderName, piecesGamedata) {

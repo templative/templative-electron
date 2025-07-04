@@ -13,6 +13,14 @@ async function runProduction() {
       originalConsoleLog.apply(console, args);
     };
 
+    // Override console.error to capture error logs
+    const originalConsoleError = console.error;
+    console.error = function(...args) {
+      const message = args.map(arg => (typeof arg === 'object' ? JSON.stringify(arg) : String(arg))).join(' ');
+      parentPort.postMessage({ type: 'error', log: message });
+      originalConsoleError.apply(console, args);
+    };
+
     const outputDirectoryPath = await produceGame(
       directoryPath, 
       componentFilter, 
@@ -27,7 +35,18 @@ async function runProduction() {
 
     parentPort.postMessage({ success: true, data: {outputDirectoryPath} });
   } catch (error) {
-    parentPort.postMessage({ success: false, error: error.message });
+    // Send detailed error information including stack trace
+    parentPort.postMessage({ 
+      success: false, 
+      error: error.message,
+      stack: error.stack,
+      name: error.name,
+      details: {
+        message: error.message,
+        stack: error.stack,
+        name: error.name
+      }
+    });
   }
 }
 

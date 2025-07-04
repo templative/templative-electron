@@ -9,6 +9,7 @@ const simulator = new Command('simulator')
   .description('Convert a produced game into a tabletop simulator game')
   .requiredOption('-i, --input <path>', 'The directory of the produced game. Defaults to last produced directory.')
   .requiredOption('-o, --output <path>', 'The Tabletop Simulator packages directory. Such as "~/Library/Documents/My Games/Tabletop Simulator" or "C:/Users/User/Documents/My Games/Tabletop Simulator"')
+  .option('-r, --render-program <renderProgram>', 'The render program to use. Defaults to `TEMPLATIVE`.', 'TEMPLATIVE')
   .action(async (options) => {
     let inputPath = options.input;
     const outputPath = options.output;
@@ -35,7 +36,7 @@ const simulator = new Command('simulator')
     //   return { success: false, error: 'You must be logged into Templative to create a Tabletop Simulator save.' };
     // }
     const templativeToken = null;
-    return await convertToTabletopSimulator(inputPath, simulatorDirectory, templativeToken);
+    return await convertToTabletopSimulator(inputPath, simulatorDirectory, templativeToken, options.renderProgram);
   });
 
 

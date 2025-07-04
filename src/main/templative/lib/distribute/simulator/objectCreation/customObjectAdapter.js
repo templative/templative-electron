@@ -1,7 +1,4 @@
 const { createHash } = require('crypto');
-const fs = require('fs').promises;
-const { clipSvgFileToClipFile } = require('../../../produce/customComponents/svgscissors/artdataProcessing/imageClipper');
-const { convertSvgContentToPng } = require('../../../produce/customComponents/svgscissors/fileConversion/svgToRasterConverter');
 const { createCompositeImage, placeAndUploadBackImage } = require('../imageProcessing/compositeImageCreator');
 const { safeLoadImage } = require('../imageProcessing/imageUtils');
 const { uploadImageToS3 } = require('../../../../../../shared/TemplativeApiClient');
@@ -9,8 +6,7 @@ const { findBoxiestShape } = require('../utils/geometryUtils');
 const { SimulatorTilesetUrls, SimulatorComponentPlacement, SimulatorDimensions, SimulatorTilesetLayout } = require('../structs');
 const { createD6CompositeImage } = require('../imageProcessing/compositeImageCreator');
 const { getColorValueHex } = require('../../../../../../shared/stockComponentColors');
-const path = require('path');
-const {captureMessage, captureException } = require("../../../sentryElectronWrapper");
+const { captureException } = require("../../../sentryElectronWrapper");
 
 /**
  * Adapter for creating a deck object
@@ -77,7 +73,7 @@ async function deckAdapter(tabletopSimulatorImageDirectoryPath, componentInstruc
     
     const imageUrls = new SimulatorTilesetUrls(imgurUrl, backImageImgurUrl);
     
-    const scale = calculateScaleBasedOnComponentHeightInInches(componentInfo.DimensionsInches[1]);
+    const scale = calculateScaleBasedOnComponentHeightInInches(componentInfo.DimensionsInches[1] * componentInfo.PrintingSizeUpRatio[1]);
     const thickness = 1.0;
     const dimensions = new SimulatorDimensions(scale, scale, thickness);
     const layout = new SimulatorTilesetLayout(totalCount, cardColumnCount, cardRowCount);
@@ -109,7 +105,8 @@ async function loadAndUploadImage(instruction, dimensions, componentName, side, 
     return null;
   }
   
-  const image = await safeLoadImage(instruction.filepath, dimensions);
+  const filepath = instruction["filepath"].replace(".png", "_clipped.png");
+  const image = await safeLoadImage(filepath, dimensions);
   if (!image) {
     console.log(`!!! Failed to load ${side} image for ${componentName}`);
     return null;
@@ -118,7 +115,7 @@ async function loadAndUploadImage(instruction, dimensions, componentName, side, 
   const url = await uploadImageToS3(image, templativeToken);
   if (!url) {
     console.log(`!!! Failed to upload ${side} image for ${componentName}, falling back to local file.`);
-    return instruction.filepath;
+    return instruction["filepath"];
   }
   return url;
 }
@@ -131,7 +128,7 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
       return null;
     }
 
-    console.log(`DEBUG: Token in singleCardAdapter (first 20 chars): ${templativeToken.substring(0, 20)}...`);
+    // console.log(`DEBUG: Token in singleCardAdapter (first 20 chars): ${templativeToken.substring(0, 20)}...`);
     
     let deckType = 0;  // default type
     if (componentInfo.Tags.includes("hex")) {
@@ -142,9 +139,10 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
 
     const componentName = componentInstructions.uniqueName || componentInstructions.name;
     
+    
     const frontUrl = await loadAndUploadImage(
       componentInstructions.frontInstructions[0],
-      componentInfo.DimensionsPixels,
+      componentInfo.DimensionsPixelsClipped,
       componentName,
       'front',
       templativeToken
@@ -156,7 +154,7 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
 
     var backUrl = await loadAndUploadImage(
       componentInstructions.backInstructions,
-      componentInfo.DimensionsPixels,
+      componentInfo.DimensionsPixelsClipped,
       componentName,
       'back',
       templativeToken
@@ -169,14 +167,13 @@ async function singleCardAdapter(tabletopSimulatorImageDirectoryPath, componentI
     const componentGuid = createHash('md5').update(componentInstructions.uniqueName).digest('hex').slice(0, 6);
     
     const imageUrls = new SimulatorTilesetUrls(frontUrl, backUrl);
-    
     const [columns, rows] = findBoxiestShape(componentCountTotal);
     const boxPositionIndexX = componentIndex % columns;
     const boxPositionIndexZ = Math.floor(componentIndex / columns);
     const height = 1.5;
     
     const simulatorComponentPlacement = new SimulatorComponentPlacement(boxPositionIndexX, height, boxPositionIndexZ, columns, rows);
-    const scale = calculateScaleBasedOnComponentHeightInInches(componentInfo.DimensionsInches[1]);
+    const scale = calculateScaleBasedOnComponentHeightInInches(componentInfo.DimensionsInches[1] * componentInfo.PrintingSizeUpRatio[1]);
     const thickness = 1.0;
     const dimensions = new SimulatorDimensions(scale, scale, thickness);
     
@@ -229,20 +226,8 @@ async function customDieAdapter(tabletopSimulatorImageDirectoryPath, componentIn
 }
 
 async function clipFrontImageAnduploadImageToS3(componentInstructions, instruction, componentInfo, templativeToken){
-  
-  const svgFilepath = instruction.filepath.replace(".png", ".svg")
-  const clipFilepath = path.join(__dirname, `../../../create/componentTemplates/${componentInfo.Key}.svg`)
-  const imageContent = await clipSvgFileToClipFile(svgFilepath, clipFilepath)
-
-  const clippedSvgFilepath = instruction.filepath.replace(".png", "-clipped.svg")
-  await fs.writeFile(clippedSvgFilepath, imageContent)
-  
-  const outputDirectory = path.dirname(instruction.filepath)
-  const componentName = componentInstructions.uniqueName || componentInstructions.name
-  const clippedPngFileName = `${componentName}-${instruction.name}-clipped`
-  const outputFilepath = path.join(outputDirectory, `${clippedPngFileName}.png`)
-  await convertSvgContentToPng(imageContent, componentInfo.DimensionsPixels, outputFilepath)
-  const clippedImage = await safeLoadImage(outputFilepath, componentInfo.DimensionsPixels)
+  const filepath = instruction["filepath"].replace(".png", "_clipped.png");
+  const clippedImage = await safeLoadImage(filepath, componentInfo.DimensionsPixelsClipped)
   
   const clippedImgurUrl = await uploadImageToS3(clippedImage, templativeToken)
   if (!clippedImgurUrl) {

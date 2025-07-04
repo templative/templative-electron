@@ -11,14 +11,13 @@ const { updateStylesInFile} = require("./artdataProcessing/styleUpdater.js");
 const { clipSvgContentToClipFile, CLIPPING_ELEMENT_ID } = require("./artdataProcessing/imageClipper.js");
 const { getComponentTemplatesDirectoryPath } = require("../../../componentTemplateUtility.js");
 const { SvgFileCache } = require('./caching/svgFileCache.js');
-const { createInputHash, getCachedFiles, getRenderedPiecesCacheDir, cacheFiles } = require('./caching/renderedPiecesCache.js');
+const { createInputHash, getCachedFiles, getRenderedPiecesCacheDir } = require('./caching/renderedPiecesCache.js');
 const { RENDER_MODE, RENDER_PROGRAM, OVERLAPPING_RENDERING_TASKS } = require('../../../manage/models/produceProperties');
 const { removeNamedViews } = require('./artdataProcessing/svgCleaner.js');
 const { replaceShapeInsideTextElementsWithPositionedTspans } = require('./artdataProcessing/shapeInsideReplacer.js');
 const { replaceIconGlyphWithPuaCharsAsync, replacePlaceholdersWithUnicodeEntities } = require('./artdataProcessing/iconGlyphReplacer');
 const { replaceFormattingShortcutElementsWithTspansAsync } = require('./artdataProcessing/formattingShortcutReplacer');
 const { captureException } = require('../../../sentryElectronWrapper.js');
-const { exportSvgToPngUsingInkscape } = require('./fileConversion/inkscapeProcessor.js');
 
 // Helper function to create a unique hash for a piece
 function createUniqueBackHashForPiece(pieceSpecificBackArtDataSources, pieceGamedata) {
@@ -36,51 +35,59 @@ function createUniqueBackHashForPiece(pieceSpecificBackArtDataSources, pieceGame
     return createHash('md5').update(pieceBackSourceHash).digest('hex').slice(0, 8);
 }
 
-async function createArtFileForPiece(compositions, componentArtdata, uniqueComponentBackData, piecesDataBlob, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}) {
+async function createSvgArtFilesForPieceAndGiveExportCommands(compositions, componentArtdata, uniqueComponentBackData, piecesDataBlob, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}) {
     const tasks = [];
+    var commands = [];
     for (const pieceGamedata of piecesDataBlob) {
         if (pieceGamedata.name !== previewProperties.pieceName) {
             continue;
         }
-        
         // Create a pieceData object with the same properties as uniqueComponentBackData plus pieceData
         const pieceData = {
             ...uniqueComponentBackData,
             pieceData: pieceGamedata
         };
-
         if ("Front" in componentArtdata.artDataBlobDictionary) {
-            const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Front"], pieceData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache, glyphUnicodeMap);
+            const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["Front"], pieceData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache, glyphUnicodeMap);
             if (previewProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
                 tasks.push(task);
             } else {
-                await task;
+                const command = await task;
+                if (command) commands.push(command);
             }
         }
         if ("DieFace" in componentArtdata.artDataBlobDictionary) {
-            const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["DieFace"], pieceData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache, glyphUnicodeMap);
+            const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["DieFace"], pieceData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache, glyphUnicodeMap);
             if (previewProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
                 tasks.push(task);
             } else {
-                await task;
+                const command = await task;
+                if (command) commands.push(command);
             }
         }
     }
     uniqueComponentBackData.componentBackDataBlob.name = "back";
     if ("Back" in componentArtdata.artDataBlobDictionary) {
-        const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Back"], uniqueComponentBackData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache, glyphUnicodeMap);
+        const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["Back"], uniqueComponentBackData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache, glyphUnicodeMap);
         if (previewProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
             tasks.push(task);
         } else {
-            await task;
+            const command = await task;
+            if (command) commands.push(command);
         }
     }
-
-    await Promise.all(tasks);   
+    if (tasks.length > 0) {
+        const taskResults = await Promise.all(tasks);
+        for (const result of taskResults) {
+            if (result) commands.push(result);
+        }
+    }
+    return commands;
 }
         
-async function createArtFilesForComponent(compositions, componentArtdata, uniqueComponentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}) {
+async function createSvgArtFilesForComponentAndGiveExportCommands(compositions, componentArtdata, uniqueComponentBackData, piecesDataBlob, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}) {
     const tasks = [];
+    var commands = [];
 
     // Create output directory once at the beginning
 
@@ -106,43 +113,52 @@ async function createArtFilesForComponent(compositions, componentArtdata, unique
         };
 
         if ("Front" in componentArtdata.artDataBlobDictionary) {
-            const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Front"], pieceData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache, glyphUnicodeMap);
+            const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["Front"], pieceData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache, glyphUnicodeMap);
             if (produceProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
                 tasks.push(task);
             } else {
-                await task;
+                const command = await task;
+                if (command) commands.push(command);
             }
         }
         if ("DieFace" in componentArtdata.artDataBlobDictionary) {
-            const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["DieFace"], pieceData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache, glyphUnicodeMap);
+            const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["DieFace"], pieceData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache, glyphUnicodeMap);
             if (produceProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
                 tasks.push(task);
             } else {
-                await task;
+                const command = await task;
+                if (command) commands.push(command);
             }
         }
     }
 
     uniqueComponentBackData.componentBackDataBlob.name = "back";
     if ("Back" in componentArtdata.artDataBlobDictionary) {
-        const task = createArtFileOfPiece(compositions, componentArtdata.artDataBlobDictionary["Back"], uniqueComponentBackData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache, glyphUnicodeMap);
+        const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["Back"], uniqueComponentBackData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache, glyphUnicodeMap);
         if (produceProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
             tasks.push(task);
         } else {
-            await task;
+            const command = await task;
+            if (command) commands.push(command);
         }
     }
 
-    await Promise.all(tasks);
+    const taskResults = await Promise.all(tasks);
+    // Collect commands from tasks that returned them
+    for (const result of taskResults) {
+        if (result) commands.push(result);
+    }
+
+    return commands;
 }
 
-async function createArtFileOfPiece(compositions, artdata, gamedata, componentBackOutputDirectory, productionProperties, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}) {
+async function createSvgArtFileOfPieceAndGiveCommand(compositions, artdata, gamedata, componentBackOutputDirectory, productionProperties, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}) {
     const initialMemory = process.memoryUsage();  // Optional: for memory tracking
     
     const templateFilesDirectory = compositions.gameCompose["artTemplatesDirectory"];
     if (artdata === null) {
       console.log(`!!! Missing artdata ${gamedata.componentDataBlob["name"]}`);
-      return;
+      return null;
     }
     const artFilename = `${artdata["templateFilename"]}.svg`;
     const artFilepath = path.normalize(path.join(productionProperties.inputDirectoryPath, templateFilesDirectory, artFilename));
@@ -157,7 +173,7 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
     if (!templateContent) {
         const shortPath = path.basename(path.dirname(artFilepath)) + path.sep + path.basename(artFilepath);
         console.log(`!!! Template art file ${shortPath} does not exist.`);
-        return;
+        return null;
     }
   
     const pieceName = gamedata.pieceData ? gamedata.pieceData["name"] : gamedata.componentBackDataBlob["name"];
@@ -192,7 +208,7 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       if (hasCachedFiles) {
         if (productionProperties.renderMode === RENDER_MODE.RENDER_TO_CACHE || componentBackOutputDirectory === null) {
             // We already have these files cached, and we are not export them
-            return;
+            return null;
         }
         const hasOutputDirectory = componentBackOutputDirectory !== null;
         if(productionProperties.renderMode !== RENDER_MODE.RENDER_EXPORT_WITHOUT_CACHE && hasOutputDirectory) {
@@ -202,7 +218,7 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
             var outputArtFileOutputSvgFilepath = path.join(absoluteOutputDirectoryPath, `${artFileOutputName}.svg`);
             await fsExtra.copy(cachedFiles.svgPath, outputArtFileOutputSvgFilepath);
             await fsExtra.copy(cachedFiles.pngPath, outputArtFileOutputFilepath);
-            return;
+            return null;
         }
       }
       var absoluteEndResultDirectoryPath = path.normalize(path.resolve(componentBackOutputDirectory || await getRenderedPiecesCacheDir()));
@@ -223,12 +239,13 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
     //   if (productionProperties.renderProgram === RENDER_PROGRAM.TEMPLATIVE && document.querySelector('[style*="shape-inside:url(#"]')) {
     //     await replaceShapeInsideTextElementsWithPositionedTspans(document);
     //   }
-      
+      const isClippingBorder = productionProperties.renderProgram === RENDER_PROGRAM.INKSCAPE;
       if (productionProperties.isClipped) {
         const componentTemplatesDirectoryPath = await getComponentTemplatesDirectoryPath(componentType);
         const clipSvgFilepath = path.join(componentTemplatesDirectoryPath, `${componentType}.svg`);
         try {
-          await clipSvgContentToClipFile(document, clipSvgFilepath, CLIPPING_ELEMENT_ID, svgFileCache);
+            
+          await clipSvgContentToClipFile(document, clipSvgFilepath, CLIPPING_ELEMENT_ID, svgFileCache, isClippingBorder);
         } catch (error) {
             captureException(error);
             if (error.code !== 'ENOENT') {
@@ -236,7 +253,9 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
             }
         }
       }
-      await scaleSvg(document, imageSizePixels);
+      if (productionProperties.renderProgram === RENDER_PROGRAM.INKSCAPE) {
+        await scaleSvg(document, imageSizePixels);
+      }
       
       contents = dom.serialize();
       contents = replacePlaceholdersWithUnicodeEntities(contents, iconGlyphPlaceholders);
@@ -245,29 +264,21 @@ async function createArtFileOfPiece(compositions, artdata, gamedata, componentBa
       await outputSvgArtFile(contents, artFileOutputName, absoluteEndResultDirectoryPath);
       const absoluteSvgFilepath = path.join(absoluteEndResultDirectoryPath, `${artFileOutputName}.svg`);
       var absolutePngFilepath = path.join(absoluteEndResultDirectoryPath, `${artFileOutputName}.png`);
-      if (productionProperties.renderProgram === RENDER_PROGRAM.INKSCAPE) {
-        await exportSvgToPngUsingInkscape(absoluteSvgFilepath, absolutePngFilepath);
-      }
-      else {
-        await convertSvgContentToPngUsingResvg(contents, imageSizePixels, absolutePngFilepath);
-      }
-
-      await cacheFiles(inputHash, contents, absolutePngFilepath);
-      console.log(`Produced ${pieceName}`);
       
-      // Optional: Log memory usage
-      const finalMemory = process.memoryUsage();
-      console.debug('Memory usage (MB):', {
-          heapDiff: (finalMemory.heapUsed - initialMemory.heapUsed) / 1024 / 1024,
-          current: finalMemory.heapUsed / 1024 / 1024,
-      });
-      
+      return {
+        hash: inputHash,
+        imageSizePixels: imageSizePixels,
+        svgFilepath: absoluteSvgFilepath,
+        pngFilepath: absolutePngFilepath
+      }
     } catch (error) {
       console.error(`Error producing ${pieceName}: ${error.message}`);
     //   console.error(error.stack);
       captureException(error);
+      return null;
     }
 }
 
 
-module.exports = { createArtFileForPiece, createArtFilesForComponent };
+module.exports = { createSvgArtFilesForPieceAndGiveExportCommands, createSvgArtFilesForComponentAndGiveExportCommands };
+module.exports = { createSvgArtFilesForPieceAndGiveExportCommands, createSvgArtFilesForComponentAndGiveExportCommands };

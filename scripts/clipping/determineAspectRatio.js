@@ -3,7 +3,7 @@
 const path = require('path');
 const fs = require('fs').promises;
 const { DOMParser, XMLSerializer } = require('@xmldom/xmldom');
-const { calculatePathBoundingBox } = require('../../src/main/templative/lib/distribute/printout/bleedScaling.js');
+const { calculatePathBoundingBox } = require('../../src/main/templative/lib/produce/customComponents/svgscissors/artdataProcessing/imageClipper.js');
 const SOURCE_DIR = path.join(__dirname, '../..', 'src/main/templative/lib/componentTemplates');
 const { COMPONENT_INFO } = require('../../src/shared/componentInfo.js');
 

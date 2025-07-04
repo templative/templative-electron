@@ -6,7 +6,7 @@ const path = require('path');
 const { captureException } = require("../../sentryElectronWrapper.js");
 const { Jimp } = require('jimp');
 const { glob } = require('glob');
-const { getScaledComponentSize } = require('./bleedScaling');
+const { recutOutput } = require('../../produce/gameProducer.js');
 
 // Constants
 const diceTypes = ["CustomColorD6", "CustomWoodD6"];
@@ -15,6 +15,9 @@ const PAGE_PADDING_INCHES = 0.25;
 const DOUBLE_PAGE_PADDING = PAGE_PADDING_INCHES * 2
 const PAGE_SIZES = {
     "LETTER": "LETTER",
+    "A0": "A0",
+    "A1": "A1",
+    "A2": "A2",
     "A3": "A3",
     "A4": "A4",
     "A5": "A5",
@@ -24,7 +27,10 @@ const PAGE_SIZES = {
 // Adjust the printout play area to account for margins
 const PRINTOUT_PLAYAREA_CHOICES = {
     "LETTER": [8.5 - DOUBLE_PAGE_PADDING, 11 - DOUBLE_PAGE_PADDING],
-    "A3": [11 - DOUBLE_PAGE_PADDING, 17 - DOUBLE_PAGE_PADDING],
+    "A0": [33.1 - DOUBLE_PAGE_PADDING, 46.68 - DOUBLE_PAGE_PADDING],
+    "A1": [23.38 - DOUBLE_PAGE_PADDING, 33.1 - DOUBLE_PAGE_PADDING],
+    "A2": [16.5 - DOUBLE_PAGE_PADDING, 23.38 - DOUBLE_PAGE_PADDING],
+    "A3": [11.7 - DOUBLE_PAGE_PADDING, 16.5 - DOUBLE_PAGE_PADDING],
     "A4": [8.27 - DOUBLE_PAGE_PADDING, 11.69 - DOUBLE_PAGE_PADDING],
     "A5": [5.83 - DOUBLE_PAGE_PADDING, 8.27 - DOUBLE_PAGE_PADDING],
     "LEGAL": [8.5 - DOUBLE_PAGE_PADDING, 14 - DOUBLE_PAGE_PADDING],
@@ -32,7 +38,10 @@ const PRINTOUT_PLAYAREA_CHOICES = {
 };
 const PRINTOUT_TOTAL_SIZE = {
     "LETTER": [8.5, 11],
-    "A3": [11, 17],
+    "A0": [33.1, 46.68],
+    "A1": [23.38, 33.1],
+    "A2": [16.5, 23.38],
+    "A3": [11.7, 16.5],
     "A4": [8.27, 11.69],
     "A5": [5.83, 8.27],
     "LEGAL": [8.5, 14],
@@ -42,7 +51,8 @@ const PRINTOUT_TOTAL_SIZE = {
 /**
  * Main function to create a PDF for printing
  */
-async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size, areBordersDrawn=false) {
+async function createPdfForPrinting(producedDirectoryPath, isBackIncluded, size, areBordersDrawn=false, renderProgram=RENDER_PROGRAM.TEMPLATIVE) {
+    await recutOutput(producedDirectoryPath, renderProgram);
     size = size.toUpperCase();
     if (!PAGE_SIZES[size] || !PRINTOUT_PLAYAREA_CHOICES[size]) {
         console.log(`!!! Cannot create size ${size}.`);
@@ -127,8 +137,8 @@ async function getPageInformationForComponentType(componentType, pageWidthInches
     const isDie = diceTypes.includes(componentType);
     
     // Apply template-based scaling to get the actual print size
-    let componentSizeInches = await getScaledComponentSize(componentType, componentInfo.DimensionsInches);
-    
+    let scaling = componentInfo.PrintingSizeUpRatio || [1,1];
+    let componentSizeInches = [componentInfo.DimensionsInches[0] * scaling[0], componentInfo.DimensionsInches[1] * scaling[1]];
     if (isDie) {
         const flangeSize = componentSizeInches[1] * 0.15;
         componentSizeInches = [
@@ -264,11 +274,12 @@ async function generatePlacementCommandsForComponentType(
  * Apply all placement commands to the PDF
  */
 async function createPdfUsingPlacementCommands(commands, size, areBordersDrawn) {
+    const pageSize = PRINTOUT_TOTAL_SIZE[size.toUpperCase()];
     if (commands.length === 0) {
         console.log("No pieces to print.");
-        return new jsPDF("p", "in", PAGE_SIZES[size]);
+        return new jsPDF("p", "in", pageSize);
     }
-    var pdf = new jsPDF("p", "in", PAGE_SIZES[size]);
+    var pdf = new jsPDF("p", "in", pageSize);
     
     // Set a cross-platform compatible font
     pdf.setFont("helvetica");
@@ -314,7 +325,7 @@ async function createPdfUsingPlacementCommands(commands, size, areBordersDrawn) 
             pdf.setTextColor(200, 0, 0);
             pdf.setFontSize(12);
             pdf.text(
-                `Error: ${error.message.substring(0, 20)}...`, 
+                `${error.message.substring(0, 20)}...`, 
                 x + (command.componentSizeInches[0] / 2), 
                 y + (command.componentSizeInches[1] / 2),
                 { align: 'center' }
@@ -335,8 +346,7 @@ function drawPageMarginLines(pdf, size) {
     pdf.setLineDashPattern([0.05, 0.05], 0); // Dashed line
     
     // Get the size from the current page
-    const [width, height] = PRINTOUT_PLAYAREA_CHOICES[size];
-    
+    const [width, height] = PRINTOUT_PLAYAREA_CHOICES[size.toUpperCase()];
     // Draw rectangle around the printable area
     pdf.rect(
         PAGE_PADDING_INCHES,
@@ -391,8 +401,9 @@ async function addComponentToPdf(pdf, size, command, areBordersDrawn) {
     try {
         const pageSizeInches = PRINTOUT_TOTAL_SIZE[size]
         var imageRotationDegrees = (command.isRotated ? 90 : 0) * (command.isFront ? 1 : -1)
-        await rotateImage(command.filepath, imageRotationDegrees);
-        const dataUrl = await getImageBufferWithRotation(command.filepath, imageRotationDegrees);
+        var clippedFilepath = command.filepath.replace(".png", "_clipped.png");
+        await rotateImage(clippedFilepath, imageRotationDegrees);
+        const dataUrl = await getImageBufferWithRotation(clippedFilepath, imageRotationDegrees);
         
         const isRotated = command.isRotated;
         const originalWidth = command.componentSizeInches[0];
@@ -423,7 +434,7 @@ async function addComponentToPdf(pdf, size, command, areBordersDrawn) {
         }
     } catch (error) {
         captureException(error);
-        throw new Error(`Issue placing ${path.basename(command.filepath)}, error: ${error.message}`);
+        throw new Error(`Issue placing ${path.basename(clippedFilepath)}, error: ${error.message}`);
     }
 }
 
