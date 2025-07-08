@@ -386,10 +386,38 @@ async function processInkscapeShellCommands(commands) {
     return 0;
   }
 
+  const { path: tempDir, cleanup } = await tmp.dir({ unsafeCleanup: true });
+
+  const env = {
+    ...process.env,
+    XDG_DATA_HOME: tempDir,
+    DBUS_SESSION_BUS_ADDRESS: '/dev/null',
+    GTK_DEBUG: 'fatal-warnings',
+  };
+
+  if (process.platform === 'darwin') {
+    // More aggressive GUI suppression for macOS
+    env.LSUIElement = '1';
+    env.DISPLAY = '';
+    env.NSDocumentRevisionsDebugMode = '1';
+    env.GTK_DEBUG = 'no-gtk-init';
+    env.GDK_BACKEND = 'none';
+    env.QT_QPA_PLATFORM = 'minimal';
+    env.GTK_PATH = '';
+    env.GTK2_RC_FILES = '';
+    env.GTK_EXE_PREFIX = '';
+    env.GTK_IM_MODULE = 'none';
+    env.GTK_RECENT_FILES_DISABLED = '1';
+    env.GSETTINGS_BACKEND = 'memory';
+    env.XDG_CACHE_HOME = tempDir;
+    env.XDG_RUNTIME_DIR = tempDir;
+  }
+
   try {
     const child = spawn(`"${inkscapePath}"`, ['--shell'], {
       shell: true,
       stdio: ['pipe', 'pipe', 'pipe'], // stdin, stdout, stderr
+      env,
     });
 
     // Join all commands with newlines and add quit at the end
@@ -450,8 +478,10 @@ async function processInkscapeShellCommands(commands) {
       // console.log(`Successfully processed ${commands.length} Inkscape export commands`);
     }
 
+    await cleanup();
     return exitCode;
   } catch (error) {
+    await cleanup();
     console.error('Error in processInkscapeShellCommands:', error);
     throw error;
   }
