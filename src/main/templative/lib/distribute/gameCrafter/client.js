@@ -63,7 +63,11 @@ async function uploadGame(gameCrafterSession, gameRootDirectoryPath, outputDirec
 
         const shortDescription = await pullAdvertDataFromGameJsonButAllowDefault(game, "shortDescription", "It was a good game.");
         const longDescription = await pullAdvertDataFromGameJsonButAllowDefault(game, "longDescription", "Generated using templative.lib.");
-        const coolFactors = await pullAdvertDataFromGameJsonButAllowDefault(game, "coolFactors", ["Mechanically Built", "Humans Need Not Apply", "Auto-generated"]);
+        var coolFactors = await pullAdvertDataFromGameJsonButAllowDefault(game, "coolFactors", ["Mechanically Built", "Humans Need Not Apply", "Auto-generated"]);
+        if (typeof coolFactors === "string") {
+            coolFactors = coolFactors.split(",").map(factor => factor.trim()).filter(factor => factor !== "");
+        }
+
         const category = await pullAdvertDataFromGameJsonButAllowDefault(game, "category", "Board Games");
         const websiteUrl = await pullAdvertDataFromGameJsonButAllowDefault(game, "websiteUrl", "");
         const minAge = await pullAdvertDataFromGameJsonButAllowDefault(game, "minAge", "12+");

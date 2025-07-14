@@ -48,6 +48,13 @@ export default class AdPanel extends React.Component {
                     </td>
                 </tr>
             })
+        var coolFactors = ["Cool Factor 1", "Cool Factor 2", "Cool Factor 3"]
+        if (typeof this.props.game.coolFactors === "string") {
+            coolFactors = this.props.game.coolFactors.split(",").map(factor => factor.trim()).filter(factor => factor !== "")
+        }
+        else if (Array.isArray(this.props.game.coolFactors)) {
+            coolFactors = this.props.game.coolFactors
+        }
         return (
             <div className="gamecrafter-preview-container" data-bs-theme="dark">
                 <div className="preview-header d-flex justify-content-between align-items-center">
@@ -140,7 +147,7 @@ export default class AdPanel extends React.Component {
                             <div className="cool-factors mt-3">
                                 <h5>Why buy this?</h5>
                                 <ul className="list-unstyled">
-                                    {this.props.game.coolFactors.map((factor, index) => (
+                                    {coolFactors.map((factor, index) => (
                                         <li key={index} className="cool-factor-item">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right-circle" viewBox="0 0 16 16">
                                                 <path fillRule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
