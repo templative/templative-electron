@@ -10,7 +10,8 @@ const os = require('os');
 // node /Users/oliverbarnum/Documents/git/templative-electron/src/main/templative/lib/produce/tests/testMarkdownToPdf.js
 
 const PAGE_PADDING_HORIZONTAL = 30;
-const PAGE_PADDING_VERTICAL = 40;
+const PAGE_PADDING_TOP = 40;
+const PAGE_PADDING_BOTTOM = 60;
 const PAGE_SIZE = 'a4';
 const PAGE_NUMBER_FONT_SIZE = 8;
 
@@ -42,9 +43,9 @@ async function markdownToPdf(templativeRootDirectoryPath, markdown, options = {}
     const defaultPdfOptions = {
       format: PAGE_SIZE,
       margin: {
-        top: PAGE_PADDING_VERTICAL,
+        top: PAGE_PADDING_TOP,
         right: PAGE_PADDING_HORIZONTAL,
-        bottom: PAGE_PADDING_VERTICAL,
+        bottom: PAGE_PADDING_BOTTOM,
         left: PAGE_PADDING_HORIZONTAL
       },
       info: {
