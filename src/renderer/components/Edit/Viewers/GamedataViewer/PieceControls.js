@@ -29,14 +29,15 @@ export default class PieceControls extends React.Component {
                 <>
                     <span className="input-group-text input-group-text soft-label">quantity</span>
                     <input type="number" className="form-control value-field gamedata-quantity-input no-left-border" 
+                        min={0}
                         onKeyDown={(e) => PieceControls.preventNonNumbers(e)}
                 onChange={(event) => {
                     const value = event.target.value;
-                    if (value === '-' || value === '') {
+                    if (value === '') {
                         this.props.updateValueCallback("quantity", value)
                     } else {
                         const numValue = parseInt(value);
-                        if (!isNaN(numValue)) {
+                        if (!isNaN(numValue) && numValue >= 0) {
                             this.props.updateValueCallback("quantity", numValue)
                         }
                     }

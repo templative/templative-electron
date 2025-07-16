@@ -40,7 +40,7 @@ export default function CompositionControlsRow(props) {
             <div className="input-group input-group-sm" data-bs-theme="dark">
             
             <span className="input-group-text soft-label">Quantity</span>
-            <input type="number" className="form-control no-left-border quantity-input" placeholder={0} aria-label="Search" value={quantity} onChange={async (e) => await updateQuantity(e.target.value)} />
+            <input type="number" className="form-control no-left-border quantity-input" placeholder={0} min={0} aria-label="Search" value={quantity} onChange={async (e) => await updateQuantity(e.target.value)} />
             
             <span className="input-group-text soft-label">Name</span>
             <input type="text" className="form-control no-left-border no-right-border" placeholder="Name" aria-label="Search" value={componentName} onChange={async (e) => await updateComponentName(e.target.value)} />

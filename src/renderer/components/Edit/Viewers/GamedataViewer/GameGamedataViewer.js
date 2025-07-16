@@ -162,13 +162,13 @@ export default class GameGamedataViewer extends EditableViewerJson {
                 </div>
                 <div className="input-group input-group-sm mb-3" data-bs-theme="dark">
                     <span className="input-group-text input-group-text soft-label">minPlayers</span>
-                    <input type="number" className="form-control value-field no-left-border" 
-                        onChange={(event)=> this.updateValue("minPlayers",event.target.value.toString())} 
+                    <input type="number" min="1" className="form-control value-field no-left-border" 
+                        onChange={(event)=> this.updateValue("minPlayers", Math.max(1, event.target.value.toString()))} 
                         value={this.state.content["minPlayers"]}/>
 
                     <span className="input-group-text input-group-text soft-label">maxPlayers</span>
-                    <input type="number" className="form-control value-field no-left-border" 
-                        onChange={(event)=>this.updateValue("maxPlayers", event.target.value.toString())} 
+                    <input type="number" min="1" className="form-control value-field no-left-border" 
+                        onChange={(event)=>this.updateValue("maxPlayers", Math.max(1, event.target.value.toString()))} 
                         value={this.state.content["maxPlayers"]}/>
                 </div>
             </div>

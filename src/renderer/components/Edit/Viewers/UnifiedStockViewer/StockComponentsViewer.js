@@ -93,6 +93,7 @@ const StockComponentsViewer = ({
                     <div className="input-group input-group-sm">
                         <input 
                             type="number" 
+                            min={0}
                             className="form-control stock-components-viewer-sister-quantity" 
                             value={stockComponentTypeInfo.quantity} 
                             onChange={(e) => changeStockComponentQuantityByTypeAsync(componentName, stockComponentTypeInfo.type, parseInt(e.target.value))}

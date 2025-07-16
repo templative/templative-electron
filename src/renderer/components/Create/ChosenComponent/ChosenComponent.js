@@ -67,9 +67,10 @@ const ChosenComponent = ({ isProcessing, createComponent, isToggledToComponents,
                         <span className="input-group-text soft-label">Quantity</span>
                         <input 
                             type="number" 
+                            min={1}
                             className="form-control no-left-border" 
                             onChange={(event) => context.setComponentCount(event.target.value)} 
-                            placeholder="1" 
+                            placeholder={1} 
                             value={context.componentCount}
                         />
                         <span className="input-group-text soft-label flex-grow-1">Create Another?</span>

@@ -602,7 +602,7 @@ export default class EditProjectView extends React.Component {
                 continue
             }
             found = true
-            component.quantity = quantity
+            component.quantity = Math.max(0, quantity)
         }
         if (!found && quantity > 0) {
             components.push({
