@@ -61,7 +61,7 @@
     margin-right: 6px;
     height: 100%;
     overflow-x: hidden !important;
-    overflow-y: auto;
+    overflow-y: hidden;
     position: relative;
 }
 .universal-file-content {
