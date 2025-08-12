@@ -48,7 +48,7 @@ async function createSvgArtFilesForPieceAndGiveExportCommands(compositions, comp
             pieceData: pieceGamedata
         };
         if ("Front" in componentArtdata.artDataBlobDictionary) {
-            const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["Front"], pieceData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache, glyphUnicodeMap);
+            const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["Front"], pieceData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache, glyphUnicodeMap, "Front");
             if (previewProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
                 tasks.push(task);
             } else {
@@ -57,7 +57,7 @@ async function createSvgArtFilesForPieceAndGiveExportCommands(compositions, comp
             }
         }
         if ("DieFace" in componentArtdata.artDataBlobDictionary) {
-            const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["DieFace"], pieceData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache, glyphUnicodeMap);
+            const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["DieFace"], pieceData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache, glyphUnicodeMap, "DieFace");
             if (previewProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
                 tasks.push(task);
             } else {
@@ -65,10 +65,25 @@ async function createSvgArtFilesForPieceAndGiveExportCommands(compositions, comp
                 if (command) commands.push(command);
             }
         }
+        const needsPieceNameAsBackName = uniqueComponentBackData.sourcedVariableNamesSpecificToPieceOnBackArtData.includes("name");
+        if (needsPieceNameAsBackName) {
+            uniqueComponentBackData.componentBackDataBlob.name = pieceGamedata["name"];
+        } else {
+            uniqueComponentBackData.componentBackDataBlob.name = "back";
+        }
     }
-    uniqueComponentBackData.componentBackDataBlob.name = "back";
+    
     if ("Back" in componentArtdata.artDataBlobDictionary) {
-        const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["Back"], uniqueComponentBackData, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache, glyphUnicodeMap);
+        const backNeedsPieceName = Array.isArray(uniqueComponentBackData.sourcedVariableNamesSpecificToPieceOnBackArtData)
+            && uniqueComponentBackData.sourcedVariableNamesSpecificToPieceOnBackArtData.includes("name");
+        // For previews, we only have one selected piece; find it for data access
+        const selected = piecesDataBlob.find(p => p.name === previewProperties.pieceName);
+        const backGamedata = backNeedsPieceName && selected
+            ? { ...uniqueComponentBackData, pieceData: selected }
+            : uniqueComponentBackData;
+        // Keep filename as "back"
+        backGamedata.componentBackDataBlob.name = "back";
+        const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["Back"], backGamedata, componentBackOutputDirectory, previewProperties, fontCache, svgFileCache, glyphUnicodeMap, "Back");
         if (previewProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
             tasks.push(task);
         } else {
@@ -113,7 +128,7 @@ async function createSvgArtFilesForComponentAndGiveExportCommands(compositions, 
         };
 
         if ("Front" in componentArtdata.artDataBlobDictionary) {
-            const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["Front"], pieceData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache, glyphUnicodeMap);
+            const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["Front"], pieceData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache, glyphUnicodeMap, "Front");
             if (produceProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
                 tasks.push(task);
             } else {
@@ -122,7 +137,7 @@ async function createSvgArtFilesForComponentAndGiveExportCommands(compositions, 
             }
         }
         if ("DieFace" in componentArtdata.artDataBlobDictionary) {
-            const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["DieFace"], pieceData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache, glyphUnicodeMap);
+            const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["DieFace"], pieceData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache, glyphUnicodeMap, "DieFace");
             if (produceProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
                 tasks.push(task);
             } else {
@@ -130,11 +145,29 @@ async function createSvgArtFilesForComponentAndGiveExportCommands(compositions, 
                 if (command) commands.push(command);
             }
         }
+        
+        // If needsPieceNameAsBackName, that means that this componentBack has only 1 item in it, so we can use the piece name as the back name
+        const needsPieceNameAsBackName = uniqueComponentBackData.sourcedVariableNamesSpecificToPieceOnBackArtData.includes("name");
+        if (needsPieceNameAsBackName) {
+            uniqueComponentBackData.componentBackDataBlob.name = pieceGamedata["name"];
+        } else {
+            uniqueComponentBackData.componentBackDataBlob.name = "back";
+        }
     }
 
-    uniqueComponentBackData.componentBackDataBlob.name = "back";
     if ("Back" in componentArtdata.artDataBlobDictionary) {
-        const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["Back"], uniqueComponentBackData, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache, glyphUnicodeMap);
+        const backNeedsPieceName = Array.isArray(uniqueComponentBackData.sourcedVariableNamesSpecificToPieceOnBackArtData)
+            && uniqueComponentBackData.sourcedVariableNamesSpecificToPieceOnBackArtData.includes("name");
+        let backGamedata = uniqueComponentBackData;
+        if (backNeedsPieceName) {
+            // Provide piece data context while keeping filename as "back"
+            const representativePiece = piecesDataBlob.find(p => createUniqueBackHashForPiece(uniqueComponentBackData.sourcedVariableNamesSpecificToPieceOnBackArtData, p) === uniqueComponentBackData.pieceUniqueBackHash);
+            if (representativePiece) {
+                backGamedata = { ...uniqueComponentBackData, pieceData: representativePiece };
+            }
+        }
+        backGamedata.componentBackDataBlob.name = "back";
+        const task = createSvgArtFileOfPieceAndGiveCommand(compositions, componentArtdata.artDataBlobDictionary["Back"], backGamedata, componentBackOutputDirectory, produceProperties, fontCache, svgFileCache, glyphUnicodeMap, "Back");
         if (produceProperties.overlappingRenderingTasks === OVERLAPPING_RENDERING_TASKS.ALL_AT_ONCE) {
             tasks.push(task);
         } else {
@@ -152,7 +185,7 @@ async function createSvgArtFilesForComponentAndGiveExportCommands(compositions, 
     return commands;
 }
 
-async function createSvgArtFileOfPieceAndGiveCommand(compositions, artdata, gamedata, componentBackOutputDirectory, productionProperties, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}) {
+async function createSvgArtFileOfPieceAndGiveCommand(compositions, artdata, gamedata, componentBackOutputDirectory, productionProperties, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}, artType = null) {
     const initialMemory = process.memoryUsage();  // Optional: for memory tracking
     
     const templateFilesDirectory = compositions.gameCompose["artTemplatesDirectory"];
@@ -176,7 +209,10 @@ async function createSvgArtFileOfPieceAndGiveCommand(compositions, artdata, game
         return null;
     }
   
-    const pieceName = gamedata.pieceData ? gamedata.pieceData["name"] : gamedata.componentBackDataBlob["name"];
+    const isBackArt = artType === "Back";
+    const pieceName = isBackArt
+        ? gamedata.componentBackDataBlob["name"]
+        : (gamedata.pieceData ? gamedata.pieceData["name"] : gamedata.componentBackDataBlob["name"]);
     const imageSizePixels = component["DimensionsPixels"];
   
     try {
