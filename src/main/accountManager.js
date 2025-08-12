@@ -3,7 +3,7 @@ const axios = require("axios");
 const os = require("os");
 const {  shell, BrowserWindow,BrowserView, app } = require('electron')
 const { channels } = require("../shared/constants");
-const { loginUsingEmailAndPassword, isTokenValid, initiateGoogleOAuth, refreshToken, logout, loginIntoGameCrafter, doesUserOwnTemplative } = require("../shared/TemplativeApiClient")
+const { loginUsingEmailAndPassword, isTokenValid, initiateGoogleOAuth, refreshToken, logout, loginIntoGameCrafter, doesUserOwnTemplative, sendLoginCodeEmail, verifyLoginCodeForElectron } = require("../shared/TemplativeApiClient")
 const { 
     clearSessionToken, 
     clearEmail, 
@@ -82,6 +82,51 @@ const login = async (_, email, password) => {
     updateToast("Logged in successfully.", "success");
     // Send login success with ownership information
     BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, response.token, response.user.email, response.ownership);
+}
+
+// Step 1: Request server to send a login code to the given email
+const sendLoginCode = async (_event, email) => {
+    try {
+        const response = await sendLoginCodeEmail(email);
+        if (response.statusCode === axios.HttpStatusCode.Ok) {
+            return { success: true };
+        }
+        if (response.statusCode === axios.HttpStatusCode.NotFound) {
+            // Email does not exist
+            return { success: false, error: 'No account found with this email' };
+        }
+        return { success: false, error: 'Failed to send login code' };
+    } catch (error) {
+        console.error('sendLoginCode error:', error);
+        return { success: false, error: 'Failed to send login code' };
+    }
+}
+
+// Step 2: Verify the code with the server and complete login
+const verifyLoginCodeAndLogin = async (_event, email, code) => {
+    try {
+        const response = await verifyLoginCodeForElectron(email, code);
+        // Expect server to return { statusCode, token, user, ownership } on success
+        if (response.statusCode === axios.HttpStatusCode.Ok && response.token && response.user) {
+            await saveSessionToken(response.token);
+            await saveEmail(response.user.email);
+            await saveUser(response.user);
+            const ownershipInfo = response.ownership || { hasProduct: false };
+            updateToast("Logged in successfully.", "success");
+            BrowserWindow.getAllWindows()[0].webContents.send(channels.GIVE_LOGGED_IN, response.token, response.user.email, ownershipInfo);
+            return { success: true };
+        }
+        if (response.statusCode === axios.HttpStatusCode.NotFound) {
+            return { success: false, error: 'No account found with this email' };
+        }
+        if (response.statusCode === axios.HttpStatusCode.Unauthorized) {
+            return { success: false, error: 'Invalid or expired code' };
+        }
+        return { success: false, error: 'Unable to verify code' };
+    } catch (error) {
+        console.error('verifyLoginCodeAndLogin error:', error);
+        return { success: false, error: 'Unable to verify code' };
+    }
 }
 
 const initiateGoogleLogin = async () => {
@@ -494,6 +539,8 @@ module.exports = {
     setupOauthListener,
     login,  
     initiateGoogleLogin,
+    sendLoginCode,
+    verifyLoginCodeAndLogin,
     goToAccount,
     giveLogout,
     giveLoginInformation,

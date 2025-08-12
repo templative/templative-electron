@@ -22,6 +22,7 @@ const DEFAULT_SETTINGS = {
     printSize: "Letter",
     unit: "px",
     readTutorials: [],
+    lastUsedEmail: null,
 }
 
 async function readOrCreateSettingsFile() {
