@@ -292,9 +292,13 @@ jobs:
           }
           $sigDir = Split-Path $signtool.FullName -Parent
           Write-Host "Using signtool at: $sigDir"
+          # Make signtool available to subsequent steps and this step
           "$sigDir" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+          $env:PATH = "$sigDir;$env:PATH"
           Write-Host "signtool version check:"
-          signtool.exe -? | Select-Object -First 1 | Write-Host
+          $exe = Join-Path $sigDir 'signtool.exe'
+          $help = & $exe -? 2>&1
+          $help | Select-Object -First 1 | Write-Host
 
       - name: Sign the Windows Setup.exe with DigiCert
         shell: pwsh
