@@ -26,7 +26,7 @@ class FrontOnlyProducer {
     
     static async createPiece(previewProperties, componentComposition, componentData, componentArtdata, piecesDataBlob, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}) {        
         const componentBackData = new ComponentBackData(componentData.studioDataBlob, componentData.gameDataBlob, componentData.componentDataBlob);
-        await svgscissors.createSvgArtFilesForPieceAndGiveExportCommands(componentComposition, componentArtdata, componentBackData, piecesDataBlob, previewProperties.outputDirectoryPath, previewProperties, fontCache, svgFileCache, glyphUnicodeMap);
+        return await svgscissors.createSvgArtFilesForPieceAndGiveExportCommands(componentComposition, componentArtdata, componentBackData, piecesDataBlob, previewProperties.outputDirectoryPath, previewProperties, fontCache, svgFileCache, glyphUnicodeMap);
     }
 
     static async createComponent(produceProperties, componentComposition, componentData, componentArtdata, fontCache, svgFileCache = new SvgFileCache(), glyphUnicodeMap = {}) {
