@@ -5,7 +5,7 @@ const crypto = require('crypto');
 // Configuration
 const BASE_URL = "https://templative.net/api";
 const IS_DEV = false;
-// const BASE_URL = "http://127.0.0.1:5000"; // Uncomment for local development
+// const BASE_URL = "http://127.0.0.1:5000/api"; // Uncomment for local development
 // const IS_DEV = true;
 
 // ========================
@@ -147,6 +147,41 @@ async function initiateGoogleOAuth() {
             console.error('Error', error.message);
         }
         return { statusCode: error.response ? error.response.status : 500, authUrl: null };
+    }
+}
+
+async function sendLoginCodeEmail(email) {
+    try {
+        const response = await axios.post(`${BASE_URL}/auth/send-login-code`, { email });
+        return { statusCode: response.status };
+    } catch (error) {
+        return { statusCode: error.response ? error.response.status : 500 };
+    }
+}
+
+async function verifyLoginCodeForElectron(email, code) {
+    try {
+        const response = await axios.post(`${BASE_URL}/auth/electron/login-code`, { email, code });
+        // Optionally, check ownership here similar to password login
+        let ownershipInfo = { hasProduct: false };
+        if (response.status === 200 && response.data.token) {
+            try {
+                const ownershipResponse = await checkProductOwnership(email, "TEMPLATIVE", response.data.token);
+                ownershipInfo = { hasProduct: ownershipResponse.hasProduct };
+            } catch (ownershipError) {
+                console.error('Error checking ownership after code login:', ownershipError);
+            }
+        }
+        return {
+            statusCode: response.status,
+            token: response.data.token,
+            user: response.data.user,
+            ownership: ownershipInfo,
+        };
+    } catch (error) {
+        return {
+            statusCode: error.response ? error.response.status : 500,
+        };
     }
 }
 
@@ -404,6 +439,8 @@ module.exports = {
     isTokenValid,
     refreshToken,
     initiateGoogleOAuth,
+    sendLoginCodeEmail,
+    verifyLoginCodeForElectron,
     
     // Product & ownership functions
     checkProductOwnership,

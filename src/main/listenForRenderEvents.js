@@ -1,7 +1,7 @@
 const { ipcMain, shell, dialog } = require('electron')
 const { openFolder, openPlaygroundFolder, openSimulatorFolder, openProjectLocationFolder, createTemplativeProjectWithName, openFileDialog } = require("./dialogMaker")
 const { channels } = require('../shared/constants');
-const { login, initiateGoogleLogin, giveLoginInformation, getTgcSessionFromStore, logoutTgc, clearGithubAuth, giveGithubAuth, pollGithubAuth, testDeepLink, checkTemplativeOwnership, giveLogout } = require("./accountManager")
+const { login, initiateGoogleLogin, giveLoginInformation, getTgcSessionFromStore, logoutTgc, clearGithubAuth, giveGithubAuth, pollGithubAuth, testDeepLink, checkTemplativeOwnership, giveLogout, sendLoginCode, verifyLoginCodeAndLogin } = require("./accountManager")
 const { readOrCreateSettingsFile, updateSetting } = require("./settingsManager")
 const { 
     createTemplativeComponent,
@@ -43,6 +43,8 @@ function listenForRenderEvents(window) {
     ipcMain.handle(channels.TO_SERVER_GET_TGC_SESSION, getTgcSessionFromStore)
     ipcMain.handle(channels.TO_SERVER_GET_TGC_DESIGNERS, listGameCrafterDesigners)
     ipcMain.handle(channels.TO_SERVER_LOGIN, login)
+    ipcMain.handle(channels.TO_SERVER_SEND_LOGIN_CODE, sendLoginCode)
+    ipcMain.handle(channels.TO_SERVER_VERIFY_LOGIN_CODE, verifyLoginCodeAndLogin)
     ipcMain.handle(channels.TO_SERVER_GOOGLE_LOGIN, initiateGoogleLogin)
     ipcMain.handle(channels.TO_SERVER_IS_LOGGED_IN, giveLoginInformation)
     ipcMain.handle(channels.TO_SERVER_UPLOAD_GAME, uploadTemplativeProjectToGameCrafter)
@@ -81,6 +83,16 @@ function listenForRenderEvents(window) {
 
     ipcMain.handle(channels.TO_SERVER_UPDATE_SETTING, async (event, key, value) => {
         return await updateSetting(key, value);
+    });
+
+    // Last used email helpers
+    ipcMain.handle(channels.TO_SERVER_GET_LAST_USED_EMAIL, async () => {
+        const settings = await readOrCreateSettingsFile();
+        return settings.lastUsedEmail || null;
+    });
+    ipcMain.handle(channels.TO_SERVER_SET_LAST_USED_EMAIL, async (_event, email) => {
+        await updateSetting('lastUsedEmail', email || null);
+        return { success: true };
     });
 }
 module.exports = { listenForRenderEvents }

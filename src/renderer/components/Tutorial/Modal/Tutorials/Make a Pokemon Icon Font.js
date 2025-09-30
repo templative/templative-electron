@@ -56,7 +56,7 @@ export default function MakeAPokemonIconFont({goToTutorial, goToExternalLink}) {
         <p>Paste it into a field of a Piece in your <span className="tutorial-link" onClick={() => goToTutorial("Piece Content")}>Piece Content</span>. If you want more than one icon you paste it multiple times.</p>
         <LocalLabeledImage src={typeContent} caption="A Pokemon card in a Euro deck with type Fairy"/>
         <p>Update the art file that will take the type content.</p>
-        <LocalLabeledImage src={art} caption="Our art ready to recieve the type content"/>
+        <LocalLabeledImage src={art} caption="Our art ready to receive the type content"/>
         <p>Update the <span className="tutorial-link" onClick={() => goToTutorial("Art Recipes")}>Art Recipe</span> to use the type from the Piece Content.</p>
         <LocalLabeledImage src={artRecipe} caption="Replace {type} with the Piece's type"/>
         <p>Render your Pokemon card, and voila! Our card now has a type.</p>

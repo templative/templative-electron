@@ -4,7 +4,7 @@ import { trackEvent } from "@aptabase/electron/renderer";
 import socket from "./utility/socket";
 import { channels } from '../shared/constants';
 
-import LoginView from "./components/LoginView";
+import LoginView from "./components/Login/LoginView";
 import StartView from "./components/StartView";
 import EditProjectView from "./components/EditProjectView";
 import BootstrapSizeIndicator from "./utility/SizeIndicator";
@@ -188,9 +188,37 @@ class App extends React.Component {
     updateRoute = (route) => {
         this.setState({currentRoute: route})
     }
-    attemptLogin = async () => {    
-        trackEvent("user_login_attempt", { email: this.state.email })
-        await ipcRenderer.invoke(channels.TO_SERVER_LOGIN, this.state.email, this.state.password)
+    // Passwordless: step 1 - send email code via server
+    sendLoginCode = async (email) => {
+        try {
+            trackEvent("user_login_code_send", { email });
+            const result = await ipcRenderer.invoke(channels.TO_SERVER_SEND_LOGIN_CODE, email);
+            // Expect { success: true } or { success: false, error }
+            if (!result || result.success === false) {
+                this.setState({ loginStatus: (result && result.error) || 'Failed to send login code' });
+            }
+            return result;
+        } catch (err) {
+            this.setState({ loginStatus: 'Failed to send login code' });
+            return { success: false, error: 'IPC error' };
+        }
+    }
+
+    // Passwordless: step 2 - verify code and login
+    verifyLoginCode = async (email, code) => {
+        try {
+            trackEvent("user_login_code_verify", { email });
+            const result = await ipcRenderer.invoke(channels.TO_SERVER_VERIFY_LOGIN_CODE, email, code);
+            // The main process should, on success, emit GIVE_LOGGED_IN which our listener handles.
+            if (!result || result.success === false) {
+                const errorMsg = (result && result.error) || 'Invalid or expired code';
+                this.setState({ loginStatus: errorMsg });
+            }
+            return result;
+        } catch (err) {
+            this.setState({ loginStatus: 'Invalid or expired code' });
+            return { success: false, error: 'IPC error' };
+        }
     }
     goToRegisterWebpage = async()=>{
         trackEvent("user_register_click")
@@ -263,13 +291,12 @@ class App extends React.Component {
 
         if (!this.state.loggedIn) {
             element = <LoginView 
-                updateEmailCallback={this.updateEmail} 
-                updatePasswordCallback={this.updatePassword} 
+                updateEmailCallback={this.updateEmail}
                 clickRegisterCallback={this.goToRegisterWebpage}
-                email={this.state.email} 
-                password={this.state.password}
-                attemptLoginCallback={this.attemptLogin}
+                email={this.state.email}
                 loginStatus={this.state.loginStatus}
+                sendLoginCodeCallback={this.sendLoginCode}
+                verifyLoginCodeCallback={this.verifyLoginCode}
             />
         }
         else if (this.state.currentView === "noLicense" || !this.state.ownsTemplative) {

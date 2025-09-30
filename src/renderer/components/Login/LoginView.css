@@ -1,5 +1,11 @@
+.login-view .welcome-modal {
+    width: 450px;
+    height: 720px; /* width * 1.6 */
+}
+
 .need-templative-account {
     font-size: 14px;
+    margin-top: 20px;
 }
 .register-now {
     text-decoration: underline;
@@ -13,16 +19,29 @@
     color:var(--color-error);
     font-size: 12px;
     margin-bottom: 0px;
+    /* Reserve space even when empty */
+    min-height: 18px;
+    line-height: 18px;
+}
+.resend-code {
+    text-decoration: underline;
+    color: var(--color-accent);
+    font-size: 12px;
+    margin-top: 8px;
+}
+.resend-code:hover {
+    cursor: pointer;
 }
 .google-login-icon {
     margin-bottom:3px;
     margin-right: 0.5em;
 }
 .login-logo {
-    width: 200px;
-    height: 200px;
+    width: 150px !important;
+    height: 150px !important;
     margin-left: auto;
     margin-right: auto;
+    animation: float 3s ease-in-out infinite;
 }
 @keyframes float {
     0% {
@@ -36,9 +55,6 @@
     }
 }
 
-.login-logo {
-    animation: float 3s ease-in-out infinite;
-}
 .or-text {
     font-size: 14px;
     margin-bottom: 0px;
@@ -48,4 +64,19 @@
     margin-bottom: 0px;
     color: var(--color-text-muted);
     text-align: left;
+}
+.google-login-button {
+    /* border-radius: 30px !important; */
+}
+.login-view .back-link {
+    text-decoration: underline;
+    color: var(--color-accent);
+    font-size: 12px;
+    margin-top: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.input-code-instructions {
+    font-size: 14px;
+    margin-bottom: 0px;
 }
